@@ -54,7 +54,7 @@ end
 
 -- Northwards to the Sea introduction
 -- based on the Ynglinga saga and on the Indo-European migration according to the Kurgan hypothesis
-AddTrigger(
+AddTrigger("northwards-to-the-sea-introduction",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -80,7 +80,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("northwards-to-the-sea-natives-sighted",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -160,7 +160,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("northwards-to-the-sea-victory",
 	function()
 		if (GameCycle == 0) then
 			return false

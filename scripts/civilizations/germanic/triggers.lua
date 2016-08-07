@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-AddTrigger(
+AddTrigger("the-curved-swords",
 	function()
 		if (SyncRand(10000) ~= 0) then -- 0.01% this will trigger every time it is checked
 			return false
@@ -48,5 +48,6 @@ AddTrigger(
 				SetPlayerData(player, "Resources", "gold", GetPlayerData(player, "Resources", "gold") + 100)
 			end}
 		)
+		return false
 	end
 )

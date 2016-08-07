@@ -96,7 +96,7 @@ if (LoadedGame == false) then
 end
 
 -- The Sack of Iuvavum introduction
-AddTrigger(
+AddTrigger("the-sack-of-iuvavum-introduction",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -133,7 +133,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("the-sack-of-iuvavum-victory",
 	function()
 		if (GameCycle == 0) then
 			return false

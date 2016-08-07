@@ -110,7 +110,7 @@ end
 
 RemovePlayerObjective(GetFactionPlayer("Brising Clan"), "- Defeat your enemies")
 
-AddTrigger(
+AddTrigger("the-binding-of-grafvitnir-introduction",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -189,7 +189,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("the-binding-of-grafvitnir-grafvitnir-found",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -259,7 +259,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("the-binding-of-grafvitnir-victory",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -327,7 +327,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("the-binding-of-grafvitnir-modsognir-dies",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -345,7 +345,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("the-binding-of-grafvitnir-durin-dies",
 	function()
 		if (GameCycle == 0) then
 			return false

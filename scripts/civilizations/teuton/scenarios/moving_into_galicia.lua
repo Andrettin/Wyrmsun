@@ -66,7 +66,7 @@ if (LoadedGame == false) then
 end
 
 -- Moving into Galicia introduction
-AddTrigger(
+AddTrigger("moving-into-galicia-introduction",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -100,7 +100,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("moving-into-galicia-victory",
 	function()
 		if (GameCycle == 0) then
 			return false

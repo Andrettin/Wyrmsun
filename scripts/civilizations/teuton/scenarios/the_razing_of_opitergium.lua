@@ -61,7 +61,7 @@ if (LoadedGame == false) then
 end
 
 -- The Razing of Opitergium introduction
-AddTrigger(
+AddTrigger("the-razing-of-opitergium-introduction",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -98,7 +98,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("the-razing-of-opitergium-victory",
 	function()
 		if (GameCycle == 0) then
 			return false

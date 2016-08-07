@@ -64,7 +64,7 @@ end
 
 RemovePlayerObjective(GetFactionPlayer("Annwn (Arawn)"), "- Defeat your enemies")
 
-AddTrigger(
+AddTrigger("the-two-kingds-of-annwn-introduction",
 	function()
 		if (FindHero("Hafgan", GetFactionPlayer("Annwn (Hafgan)")) == nil) then
 			player = GetThisPlayer()
@@ -78,7 +78,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("the-two-kingds-of-annwn-victory",
 	function()
 		if (PlayerHasObjective(GetThisPlayer(), "- Arawn must survive") and FindHero("Arawn", GetThisPlayer()) == nil) then
 			player = GetThisPlayer()

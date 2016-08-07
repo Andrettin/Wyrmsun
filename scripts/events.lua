@@ -26,14 +26,14 @@
 --
 
 function EventTriggers()
---	Load("scripts/civilizations/germanic/triggers.lua")
+	Load("scripts/civilizations/germanic/triggers.lua")
 
 	-- Greebo's Shinies
 	-- based on elements from the Descending into Darkness scenario of the Under the Burning Suns campaign from Battle for Wesnoth
 	-- only appears in terrains which exist in Nidavellir (substitute for checking if there is a goblin faction, as a goblin civilization hasn't yet been implemented)
 	-- Greebo inhabits a cave, so he can only appear in the map if there is a sufficient number of rocks in it
 	if ((GetCurrentTileset() == "swamp" or GetCurrentTileset() == "cave") and GetTileTerrainFlagCount("rock") >= 2048) then
-		AddTrigger(
+		AddTrigger("greebos-shinies",
 			function()
 				if (GameCycle == 0) then
 					return false
@@ -72,7 +72,7 @@ function EventTriggers()
 				)
 
 				-- Greebo's speech
-				AddTrigger(
+				AddTrigger("greebo-speech",
 					function()
 						if (PlayerHasObjective(GetThisPlayer(), "- Kill Greebo (optional)")) then
 							local uncount = 0
@@ -114,7 +114,7 @@ function EventTriggers()
 
 						-- Greebo's End
 						-- based on elements from the Descending into Darkness scenario of the Under the Burning Suns campaign from Battle for Wesnoth
-						AddTrigger(
+						AddTrigger("greebos-end",
 							function()
 								if (GameCycle == 0) then
 									return false
@@ -158,7 +158,7 @@ function EventTriggers()
 	-- based on Norse mythology
 	-- Andvari lives near a waterfall, so he can only appear in the map if there is a sufficient number of water in it
 	if (GetTileTerrainFlagCount("water") >= 1024) then
-		AddTrigger(
+		AddTrigger("andvaris-gold",
 			function()
 				if (GameCycle == 0) then
 					return false
@@ -230,7 +230,7 @@ function EventTriggers()
 		)
 
 		-- Andvari's Gold is Ours!
-		AddTrigger(
+		AddTrigger("andvaris-gold-is-ours",
 			function()
 				if (GameCycle == 0) then
 					return false
@@ -265,7 +265,7 @@ function EventTriggers()
 	
 	if (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {256, 256}) >= 1) then
 		-- Soldier offers training
-		AddTrigger(
+		AddTrigger("swordsman-freed",
 			function()
 				if (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {256, 256}) >= 1) then
 					local uncount = 0
@@ -304,7 +304,7 @@ function EventTriggers()
 	end
 				
 	-- The King's Sparrow
-	AddTrigger(
+	AddTrigger("the-kings-sparrow",
 		function()
 			if (GameCycle == 0) then
 				return false
@@ -333,7 +333,7 @@ function EventTriggers()
 	)
 
 	-- Varva Burns
-	AddTrigger(
+	AddTrigger("varva-burns",
 		function()
 			if (GameCycle == 0) then
 				return false
@@ -364,7 +364,7 @@ function EventTriggers()
 	)
 
 	-- Marauding Finland
-	AddTrigger(
+	AddTrigger("marauding-finland",
 		function()
 			if (GameCycle == 0) then
 				return false
@@ -393,7 +393,7 @@ function EventTriggers()
 	)
 
 	-- Finland is Plundered
-	AddTrigger(
+	AddTrigger("finland-is-plundered",
 		function()
 			if (GameCycle == 0) then
 				return false
@@ -420,7 +420,7 @@ function EventTriggers()
 	)
 
 	-- The Golden Hanging
-	AddTrigger(
+	AddTrigger("the-golden-hanging",
 		function()
 			if (GameCycle == 0) then
 				return false
@@ -451,7 +451,7 @@ function EventTriggers()
 
 	if (mapinfo.description == "East Prussia") then
 		-- The Fall of the Island Fortress briefing; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 343.
-		AddTrigger(
+		AddTrigger("the-fall-of-the-island-fortress",
 			function()
 				if (GameCycle == 0) then
 					return false
@@ -483,7 +483,7 @@ end
 function FlavorDialogueTriggers()
 	-- random bed dialogue
 	--[[
-	AddTrigger(
+	AddTrigger("random-bed-dialogue",
 		function()
 			local uncount = GetUnits("any")
 			for unit1 = 1,table.getn(uncount) do 
@@ -530,7 +530,7 @@ function FlavorDialogueTriggers()
 	--]]
 end
 
-function Event(speaker, event_description, player, options, option_effects, event_icon, event_image, continue_automatically)
+function Event(speaker, event_description, player, options, option_effects, event_icon, event_image, continue_automatically, option_tooltips)
 	if (
 		(
 			(GrandStrategy and not GameRunning and GameResult == GameNoResult and player == GetPlayerFactionName())
@@ -604,7 +604,7 @@ function Event(speaker, event_description, player, options, option_effects, even
 				option_hotkey = string.lower(option_hotkey)
 			end
 
-			menu:addFullButton(_(options[i]), option_hotkey, 176 - (224 / 2), 352 - 40 * (table.getn(options) - (i - 1)),
+			local option_b = menu:addFullButton(_(options[i]), option_hotkey, 176 - (224 / 2), 352 - 40 * (table.getn(options) - (i - 1)),
 				function(s)
 					if (GameRunning and not IsNetworkGame()) then
 						SetGamePaused(false)

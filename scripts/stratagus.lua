@@ -281,7 +281,7 @@ DefineVariables(
 --    (FIXME: must be combined with game types)
 
 function SinglePlayerTriggers()
-	AddTrigger(
+	AddTrigger("default-defeat",
 		function()
 			local total_units = GetPlayerData(GetThisPlayer(), "TotalNumUnitsConstructed") - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-goblin-glider")
 			total_units = total_units - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-gold-mine") - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-silver-mine") - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-copper-mine")
@@ -290,6 +290,8 @@ function SinglePlayerTriggers()
 			end
 			if (total_units <= 0 and PlayerHasObjective(GetThisPlayer(), "- Defeat the Norlunds") == false and (GameCycle > 1000 or mapinfo.description ~= "Caverns of Flame" or GetPlayerData(GetThisPlayer(), "Name") ~= "Shinsplitter Clan")) then
 				return true
+			else
+				return false
 			end
 		end,
 		function()
@@ -297,11 +299,13 @@ function SinglePlayerTriggers()
 		end
 	)
 
-	AddTrigger(
+	AddTrigger("default-victory",
 --		function() return GetNumOpponents(GetThisPlayer()) == 0 end,
 		function()
 			if (GetNumRivals(GetThisPlayer()) == 0 and PlayerHasObjective(GetThisPlayer(), "- Defeat your enemies")) then
 				return true
+			else
+				return false
 			end
 		end,
 		function()
@@ -310,7 +314,7 @@ function SinglePlayerTriggers()
 	)
 
 	if (GrandStrategy and GrandStrategyEventMap == false) then
-		AddTrigger(
+		AddTrigger("grand-strategy-battle-message",
 			function()
 				return true
 			end,
@@ -421,7 +425,7 @@ end
 function StandardTriggers()
 	local RandomNumber = 0
 
-	AddTrigger(
+	AddTrigger("modify-units",
 		function()
 			if (GameCycle == 0) then
 				return false
@@ -602,7 +606,7 @@ function StandardTriggers()
 		end
 	)
 
-	AddTrigger(
+	AddTrigger("ai-attack-with-surghans",
 		function()
 			if (GameCycle == 0) then
 				return false
@@ -642,7 +646,7 @@ function StandardTriggers()
 	-- Tips
 	if (wyr.preferences.ShowTips and not IsReplayGame() and not IsNetworkGame()) then
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Level Up") == false) then
-			AddTrigger(
+			AddTrigger("tip-level-up",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "LevelUp") >= 1 and GetUnitVariable(GetSelectedUnits()[1], "Player") == GetThisPlayer()) then
 						return true
@@ -658,7 +662,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Experience") == false) then
-			AddTrigger(
+			AddTrigger("tip-experience",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and GetUnitBoolFlag(GetSelectedUnits()[1], "organic") and GetUnitVariable(GetSelectedUnits()[1], "Player") == GetThisPlayer()) then
 						return true
@@ -674,7 +678,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Persistent Heroes") == false) then
-			AddTrigger(
+			AddTrigger("tip-persistent-heroes",
 				function()
 					if (
 						table.getn(GetSelectedUnits()) > 0
@@ -698,7 +702,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Bura") == false) then
-			AddTrigger(
+			AddTrigger("tip-bura",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-germanic-worker") then
 						return true
@@ -714,7 +718,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Erala") == false) then
-			AddTrigger(
+			AddTrigger("tip-erala",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-germanic-warrior") then
 						return true
@@ -730,7 +734,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Skutan") == false) then
-			AddTrigger(
+			AddTrigger("tip-skutan",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-germanic-archer") then
 						return true
@@ -746,7 +750,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Chieftain's Hall") == false) then
-			AddTrigger(
+			AddTrigger("tip-chieftains-hall",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-germanic-town-hall") then
 						return true
@@ -762,7 +766,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "War Lodge") == false) then
-			AddTrigger(
+			AddTrigger("tip-war-lodge",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-germanic-barracks") then
 						return true
@@ -778,7 +782,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Carpenter's Shop") == false) then
-			AddTrigger(
+			AddTrigger("tip-carpenters-shop",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-germanic-carpenters-shop") then
 						return true
@@ -794,7 +798,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Smithy") == false) then
-			AddTrigger(
+			AddTrigger("tip-smithy",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-germanic-smithy" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-teuton-smithy" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-latin-smithy" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-smithy" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-brising-smithy")) then
 						return true
@@ -810,7 +814,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Temple") == false) then
-			AddTrigger(
+			AddTrigger("tip-temple",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-teuton-temple" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-smithy")) then
 						return true
@@ -826,7 +830,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Krieger") == false) then
-			AddTrigger(
+			AddTrigger("tip-krieger",
 				function()
 					if (
 						table.getn(GetSelectedUnits()) > 0
@@ -849,7 +853,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Catapult") == false) then
-			AddTrigger(
+			AddTrigger("tip-catapult",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-teuton-catapult") then
 						return true
@@ -865,7 +869,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Watch Tower") == false) then
-			AddTrigger(
+			AddTrigger("tip-watch-tower",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-teuton-watch-tower" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-goblin-watch-tower")) then
 						return true
@@ -881,7 +885,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Guard Tower") == false) then
-			AddTrigger(
+			AddTrigger("tip-guard-tower",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-teuton-guard-tower" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-guard-tower" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-goblin-guard-tower")) then
 						return true
@@ -897,7 +901,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Miner") == false) then
-			AddTrigger(
+			AddTrigger("tip-miner",
 				function()
 					if (
 						table.getn(GetSelectedUnits()) > 0
@@ -919,7 +923,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Axefighter") == false) then
-			AddTrigger(
+			AddTrigger("tip-axefighter",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-axefighter") then
 						return true
@@ -935,7 +939,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Scout") == false) then
-			AddTrigger(
+			AddTrigger("tip-scout",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-scout") then
 						return true
@@ -951,7 +955,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Ballista") == false) then
-			AddTrigger(
+			AddTrigger("tip-ballista",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-ballista") then
 						return true
@@ -967,7 +971,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Mead Hall") == false) then
-			AddTrigger(
+			AddTrigger("tip-mead-hall",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-town-hall")) then
 						return true
@@ -983,7 +987,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "War Hall") == false) then
-			AddTrigger(
+			AddTrigger("tip-war-hall",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-barracks") then
 						return true
@@ -999,7 +1003,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Lumber Mill") == false) then
-			AddTrigger(
+			AddTrigger("tip-lumber-mill",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-lumber-mill" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-teuton-lumber-mill" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-goblin-lumber-mill")) then
 						return true
@@ -1015,7 +1019,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Sentry Tower") == false) then
-			AddTrigger(
+			AddTrigger("tip-sentry-tower",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-sentry-tower") then
 						return true
@@ -1031,7 +1035,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Scavenger") == false) then
-			AddTrigger(
+			AddTrigger("tip-scavenger",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-gnomish-worker" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-deep-gnomish-worker" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-forest-gnomish-worker" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-derro-worker")) then
 						return true
@@ -1047,7 +1051,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Recruit") == false) then
-			AddTrigger(
+			AddTrigger("tip-recruit",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-gnomish-recruit" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-deep-gnomish-recruit" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-forest-gnomish-recruit")) then
 						return true
@@ -1063,7 +1067,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Herbalist") == false) then
-			AddTrigger(
+			AddTrigger("tip-herbalist",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-gnomish-herbalist" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-deep-gnomish-herbalist" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-forest-gnomish-herbalist")) then
 						return true
@@ -1079,7 +1083,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "War Machine") == false) then
-			AddTrigger(
+			AddTrigger("tip-war-machine",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-goblin-war-machine") then
 						return true
@@ -1095,7 +1099,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Wyrm") == false) then
-			AddTrigger(
+			AddTrigger("tip-wyrm",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-wyrm") then
 						return true
@@ -1111,7 +1115,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Mercenary Camp") == false) then
-			AddTrigger(
+			AddTrigger("tip-mercenary-camp",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-mercenary-camp") then
 						return true
@@ -1127,7 +1131,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Gold Rock") == false) then
-			AddTrigger(
+			AddTrigger("tip-gold-rock",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-gold-rock") then
 						return true
@@ -1143,7 +1147,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Gold Deposit") == false) then
-			AddTrigger(
+			AddTrigger("tip-gold-deposit",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-gold-deposit") then
 						return true
@@ -1159,7 +1163,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Silver Rock") == false) then
-			AddTrigger(
+			AddTrigger("tip-silver-rock",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-silver-rock") then
 						return true
@@ -1175,7 +1179,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Silver Deposit") == false) then
-			AddTrigger(
+			AddTrigger("tip-silver-deposit",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-silver-deposit") then
 						return true
@@ -1191,7 +1195,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Copper Rock") == false) then
-			AddTrigger(
+			AddTrigger("tip-copper-rock",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-copper-rock") then
 						return true
@@ -1207,7 +1211,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Copper Deposit") == false) then
-			AddTrigger(
+			AddTrigger("tip-copper-deposit",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-copper-deposit") then
 						return true
@@ -1223,7 +1227,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Wood Pile") == false) then
-			AddTrigger(
+			AddTrigger("tip-wood-pile",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-wood-pile") then
 						return true
@@ -1239,7 +1243,7 @@ function StandardTriggers()
 		end		
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Log") == false) then
-			AddTrigger(
+			AddTrigger("tip-log",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-log") then
 						return true
@@ -1255,7 +1259,7 @@ function StandardTriggers()
 		end		
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Tree Stump") == false) then
-			AddTrigger(
+			AddTrigger("tip-tree-stump",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-tree-stump") then
 						return true
@@ -1271,7 +1275,7 @@ function StandardTriggers()
 		end		
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Hole") == false) then
-			AddTrigger(
+			AddTrigger("tip-hole",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-hole") then
 						return true
@@ -1287,7 +1291,7 @@ function StandardTriggers()
 		end		
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Raft") == false) then
-			AddTrigger(
+			AddTrigger("tip-raft",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-raft") then
 						return true
@@ -1303,7 +1307,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Food") == false) then
-			AddTrigger(
+			AddTrigger("tip-food",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-cheese" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-carrots")) then
 						return true
@@ -1319,7 +1323,7 @@ function StandardTriggers()
 		end
 		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Potion of Healing") == false) then
-			AddTrigger(
+			AddTrigger("tip-potion-of-healing",
 				function()
 					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-potion-of-healing") then
 						return true

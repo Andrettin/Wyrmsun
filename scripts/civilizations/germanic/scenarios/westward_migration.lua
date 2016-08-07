@@ -106,7 +106,7 @@ end
 
 -- Westward Migration introduction
 -- based on the Ynglinga saga and on the Indo-European migration according to the Kurgan hypothesis
-AddTrigger(
+AddTrigger("westward-migration-introduction",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -132,7 +132,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("westward-migration-buras-killed",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -159,7 +159,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("westward-migration-natives-sighted",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -223,7 +223,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("westward-migration-native-settlement-sighted",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -279,7 +279,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("westward-migration-victory",
 	function()
 		if (GameCycle == 0) then
 			return false

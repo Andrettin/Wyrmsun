@@ -80,7 +80,7 @@ if (LoadedGame == false) then
 end
 
 -- The Battle of Magetobria introduction
-AddTrigger(
+AddTrigger("the-battle-of-magetobria-introduction",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -106,7 +106,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("the-battle-of-magetobria-victory",
 	function()
 		if (GameCycle == 0) then
 			return false

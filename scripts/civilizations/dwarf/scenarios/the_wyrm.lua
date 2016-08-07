@@ -34,7 +34,7 @@ if (LoadedGame == false) then
 end
 
 -- If Rugnur dies, any quests of the Scepter of Fire campaign currently being pursued fail
-AddTrigger(
+AddTrigger("the-wyrm-rugnur-dies",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -62,7 +62,7 @@ AddTrigger(
 )
 
 -- If Baglur dies, any quests of the Scepter of Fire campaign currently being pursued fail
-AddTrigger(
+AddTrigger("the-wyrm-baglur-dies",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -101,7 +101,7 @@ AddTrigger(
 )
 
 -- If Thursagan dies, any quests of the Scepter of Fire campaign currently being pursued fail
-AddTrigger(
+AddTrigger("the-wyrm-thursagan-dies",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -127,7 +127,7 @@ AddTrigger(
 
 -- The Wyrm initial dialogue
 -- based on The Dragon scenario of the Sceptre of Fire campaign from Battle for Wesnoth
-AddTrigger(
+AddTrigger("the-wyrm-introduction",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -221,7 +221,7 @@ AddTrigger(
 )
 
 -- make the Shinsplitter and kobold units chase Rugnur's dwarves
-AddTrigger(
+AddTrigger("the-wyrm-shinsplitter-and-kobold-chase",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -275,7 +275,7 @@ AddTrigger(
 )
 
 -- make the Norlunds move to the smithy
-AddTrigger(
+AddTrigger("the-wyrm-norlunds-move-to-smithy",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -319,7 +319,7 @@ AddTrigger(
 )
 
 -- event when Svafnir is sighted
-AddTrigger(
+AddTrigger("the-wyrm-svafnir-sighted",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -367,7 +367,7 @@ AddTrigger(
 )
 
 -- event when a Surghan Mercenary is sighted
-AddTrigger(
+AddTrigger("the-wyrm-surghan-mercenary-sighted",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -407,7 +407,7 @@ AddTrigger(
 )
 
 -- event when the Gryphon Rider sees the forge
-AddTrigger(
+AddTrigger("the-wyrm-gryphon-rider-sees-forge",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -451,7 +451,7 @@ AddTrigger(
 )
 
 -- event when Thursagan reaches the forge
-AddTrigger(
+AddTrigger("the-wyrm-thursagan-reaches-forge",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -480,7 +480,7 @@ AddTrigger(
 )
 
 -- kobolds come to Svafnir's rescue if it is attacked
-AddTrigger(
+AddTrigger("the-wyrm-kobolds-defend-svafnir",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -556,7 +556,7 @@ AddTrigger(
 )
 
 -- Thursagan completes the Scepter of Fire
-AddTrigger(
+AddTrigger("the-wyrm-victory",
 	function()
 		if (GameCycle == 0) then
 			return false

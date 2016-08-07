@@ -72,7 +72,7 @@ if (LoadedGame == false) then
 end
 
 -- The Blue Danube introduction
-AddTrigger(
+AddTrigger("the-blue-danube-introduction",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -106,7 +106,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("the-blue-danube-victory",
 	function()
 		if (GameCycle == 0) then
 			return false

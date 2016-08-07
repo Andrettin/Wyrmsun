@@ -5841,29 +5841,6 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 			SetPlayerData(3, "Name", passive_dungeon_player_name)
 			SetAiType(3, "passive")
 		end
-		
-		-- run next dungeon level if a unit is on the stairs
-		--AddTrigger(
-		--	function()
-		--		if (GameCycle == 0) then
-		--			return false
-		--		end
-		--		return true
-		--	end,
-		--	function()
-		--		local uncount = 0
-		--		uncount = GetUnits("any")
-		--		for unit1 = 1,table.getn(uncount) do 
-		--			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-stairs") then
-		--				local people_quantity = GetNumUnitsAt(GetThisPlayer(), "units", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
-		--				if (people_quantity > 0) then
-		--					ActionVictory()					
-		--				end
-		--			end
-		--		end
-		--		return true
-		--	end
-		--)
 	end
 end
 

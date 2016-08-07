@@ -83,7 +83,7 @@ end
 
 RemovePlayerObjective(GetFactionPlayer("Brising Clan"), "- Defeat your enemies")
 
-AddTrigger(
+AddTrigger("a-rocky-home-introduction",
 	function()
 		if (GameCycle >= 1000 and GetFactionExists("Brising Clan")) then
 			player = GetFactionPlayer("Brising Clan")
@@ -97,7 +97,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("a-rocky-home-yales-hunted",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -114,7 +114,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("a-rocky-home-materials-collected",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -131,7 +131,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("a-rocky-home-modsognir-dies",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -149,7 +149,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("a-rocky-home-durin-dies",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -168,7 +168,7 @@ AddTrigger(
 )
 
 -- it is always day during this scenario
-AddTrigger(
+AddTrigger("a-rocky-home-always-day",
 	function()
 		if (GameCycle == 0) then
 			return false

@@ -102,7 +102,7 @@ end
 
 RemovePlayerObjective(GetFactionPlayer("Brising Clan"), "- Defeat your enemies")
 
-AddTrigger(
+AddTrigger("the-necklace-of-the-brisings-introduction",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -172,7 +172,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("the-necklace-of-the-brisings-victory",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -216,7 +216,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("the-necklace-of-the-brisings-modsognir-dies",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -234,7 +234,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("the-necklace-of-the-brisings-durin-dies",
 	function()
 		if (GameCycle == 0) then
 			return false

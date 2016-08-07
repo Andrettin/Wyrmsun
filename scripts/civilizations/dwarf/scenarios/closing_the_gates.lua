@@ -80,7 +80,7 @@ if (LoadedGame == false) then
 end
 
 -- If Rugnur dies, any quests of the Scepter of Fire campaign currently being pursued fail
-AddTrigger(
+AddTrigger("closing-the-gates-rugnur-dies",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -122,7 +122,7 @@ AddTrigger(
 
 -- Closing the Gates initial dialogue
 -- based on the Closing the Gates scenario of the Sceptre of Fire campaign from Battle for Wesnoth
-AddTrigger(
+AddTrigger("closing-the-gates-introduction",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -344,7 +344,7 @@ AddTrigger(
 )
 
 -- If there is one unit on each glyph
-AddTrigger(
+AddTrigger("closing-the-gates-glyphs-activated",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -652,7 +652,7 @@ AddTrigger(
 )
 
 -- If the Norlund Clan's mead hall has been destroyed, then the Shinsplitters manage to get the gold and win
-AddTrigger(
+AddTrigger("closing-the-gates-shinsplitter-victory",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -681,7 +681,7 @@ AddTrigger(
 )
 
 -- If Baglur dies, any quests of the Scepter of Fire campaign currently being pursued fail
-AddTrigger(
+AddTrigger("closing-the-gates-baglur-dies",
 	function()
 		if (GameCycle == 0) then
 			return false

@@ -43,7 +43,7 @@ end
 
 -- A Bargain is Struck initial dialogue
 -- based on the A Bargain is Struck scenario of the Sceptre of Fire campaign from Battle for Wesnoth
-AddTrigger(
+AddTrigger("a-bargain-is-struck-introduction",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -383,7 +383,7 @@ AddTrigger(
 		)
 
 		-- Follow-up of the A Bargain is Struck initial dialogue
-		AddTrigger(
+		AddTrigger("a-bargain-is-struck-introduction-2",
 			function()
 				if (GameCycle == 0) then
 					return false
@@ -563,7 +563,7 @@ AddTrigger(
 )
 
 -- The Gnomish Envoy arrives with the stone
-AddTrigger(
+AddTrigger("a-bargain-is-struck-gnomish-envoy-arrives",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -643,7 +643,7 @@ AddTrigger(
 )
 
 -- The last caravan arrives with the silver
-AddTrigger(
+AddTrigger("a-bargain-is-struck-caravans-arrived",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -716,7 +716,7 @@ AddTrigger(
 )
 
 -- This event makes the player complete the quest in the case that the caravans or the recruit arrive first but then are moved, and when the recruit or the caravans finally arrive the quest completion doesn't happen
-AddTrigger(
+AddTrigger("a-bargain-is-struck-quest-completion",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -773,7 +773,7 @@ AddTrigger(
 )
 
 -- If a caravan has been destroyed, the A Bargain is Struck quest fails
-AddTrigger(
+AddTrigger("a-bargain-is-struck-caravan-destroyed",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -810,7 +810,7 @@ AddTrigger(
 )
 
 -- If a caravan's cargo has been dropped, the A Bargain is Struck quest fails
-AddTrigger(
+AddTrigger("a-bargain-is-struck-caravan-cargo-dropped",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -857,7 +857,7 @@ AddTrigger(
 )
 
 -- If all caravans have been destroyed, then the raiders win, if they are human-controlled
-AddTrigger(
+AddTrigger("a-bargain-is-struck-raiders-victory",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -879,7 +879,7 @@ AddTrigger(
 )
 
 -- If Rugnur dies the quest will fail
-AddTrigger(
+AddTrigger("a-bargain-is-struck-rugnur-dies",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -912,7 +912,7 @@ AddTrigger(
 )
 
 -- If the Gnomish Envoy dies, any quests of the Scepter of Fire campaign currently being pursued fail
-AddTrigger(
+AddTrigger("a-bargain-is-struck-gnomish-envoy-dies",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -933,7 +933,7 @@ AddTrigger(
 )
 
 -- If the gnomish monarch dies, the first quest of the Scepter of Fire campaign fails
---AddTrigger(
+--AddTrigger("a-bargain-is-struck-gnomish-monarch-dies",
 --	function()
 --		if (GameCycle == 0) then
 --			return false
@@ -960,7 +960,7 @@ AddTrigger(
 --)
 
 -- if the raiders have been destroyed, grant the corresponding achievement
-AddTrigger(
+AddTrigger("a-bargain-is-struck-safe-passage-achievement",
 	function()
 		if (GameCycle == 0) then
 			return false

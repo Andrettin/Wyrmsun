@@ -156,7 +156,7 @@ if (LoadedGame == false) then
 end
 
 -- The Home of the Boii introduction
-AddTrigger(
+AddTrigger("the-home-of-the-boii-introduction",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -201,7 +201,7 @@ AddTrigger(
 )
 
 -- Marbod speaks about his ambition to found a great realm, and the difficulties of doing so nearer to the Romans
-AddTrigger(
+AddTrigger("the-home-of-the-boii-marbods-ambition",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -226,7 +226,7 @@ AddTrigger(
 )
 
 -- Marbod speaks about his time in Rome
-AddTrigger(
+AddTrigger("the-home-of-the-boii-marbods-time-in-rome",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -256,7 +256,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("the-home-of-the-boii-victory",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -287,7 +287,7 @@ AddTrigger(
 )
 
 -- if Marbod dies, the quest is lost
-AddTrigger(
+AddTrigger("the-home-of-the-boii-marbod-dies",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -306,7 +306,7 @@ AddTrigger(
 )
 
 -- dialogue when the Marcomanni find the Vandals (Lugii)
-AddTrigger(
+AddTrigger("the-home-of-the-boii-vandals-found",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -369,7 +369,7 @@ AddTrigger(
 )
 
 -- dialogue when the Marcomanni find the Suebi (Semnones)
-AddTrigger(
+AddTrigger("the-home-of-the-boii-suebi-found",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -433,7 +433,7 @@ AddTrigger(
 
 
 -- dialogue when the Marcomanni find the Lombards
-AddTrigger(
+AddTrigger("the-home-of-the-boii-lombards-found",
 	function()
 		if (GameCycle == 0) then
 			return false

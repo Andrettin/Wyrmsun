@@ -70,7 +70,7 @@ end
 
 -- Gylve's Realm introduction
 -- based on the Ynglinga saga and on the Indo-European migration according to the Kurgan hypothesis
-AddTrigger(
+AddTrigger("gylves-realm-introduction",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -96,7 +96,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("gylves-realm-victory",
 	function()
 		if (GameCycle == 0) then
 			return false

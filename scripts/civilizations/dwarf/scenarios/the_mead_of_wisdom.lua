@@ -54,7 +54,7 @@ end
 -- The Mead of Wisdom initial dialogue
 -- based on the Norse myth of the Mead of Poetry
 --[[
-AddTrigger(
+AddTrigger("the-mead-of-wisdom-introduction-old",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -115,7 +115,7 @@ AddTrigger(
 )
 --]]
 
-AddTrigger(
+AddTrigger("the-mead-of-wisdom-introduction",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -157,7 +157,7 @@ AddTrigger(
 )
 
 -- Fjalar and Galar found
-AddTrigger(
+AddTrigger("the-mead-of-wisdom-fjalar-and-galar-found",
 	function()
 		if (PlayerHasObjective(GetThisPlayer(), "- Bring Fjalar and Galar to the clan's justice")) then
 			local uncount = 0
@@ -231,7 +231,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("the-mead-of-wisdom-victory",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -269,7 +269,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("the-mead-of-wisdom-durin-dies",
 	function()
 		if (GameCycle == 0) then
 			return false

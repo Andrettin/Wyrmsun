@@ -32,7 +32,7 @@ if (LoadedGame == false) then
 end
 
 -- If Rugnur dies, any quests of the Scepter of Fire campaign currently being pursued fail
-AddTrigger(
+AddTrigger("hills-of-the-shorbear-clan-rugnur-dies",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -60,7 +60,7 @@ AddTrigger(
 )
 
 -- If the Gnomish Envoy dies, any quests of the Scepter of Fire campaign currently being pursued fail
-AddTrigger(
+AddTrigger("hills-of-the-shorbear-clan-gnomish-envoy-dies",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -87,7 +87,7 @@ AddTrigger(
 )
 
 -- If Baglur dies, any quests of the Scepter of Fire campaign currently being pursued fail
-AddTrigger(
+AddTrigger("hills-of-the-shorbear-clan-baglur-dies",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -123,7 +123,7 @@ AddTrigger(
 )
 
 -- If Thursagan dies, any quests of the Scepter of Fire campaign currently being pursued fail
-AddTrigger(
+AddTrigger("hills-of-the-shorbear-clan-thursagan-dies",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -150,7 +150,7 @@ AddTrigger(
 -- Hills of the Shorbear Clan initial dialogue
 -- based on the Hills of the Shorbear Clan scenario of the Sceptre of Fire campaign from Battle for Wesnoth
 
-AddTrigger(
+AddTrigger("hills-of-the-shorbear-clan-introduction",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -459,7 +459,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("hills-of-the-shorbear-clan-shinsplitters-arrive",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -579,7 +579,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("hills-of-the-shorbear-clan-glonoin-dies",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -678,7 +678,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("hills-of-the-shorbear-clan-gates-sealed",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -824,7 +824,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("hills-of-the-shorbear-clan-new-objectives",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -1051,7 +1051,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("hills-of-the-shorbear-clan-gnomish-envoy-escapes",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -1083,7 +1083,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("hills-of-the-shorbear-clan-rugnur-escapes",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -1111,7 +1111,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("hills-of-the-shorbear-clan-victory",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -1137,7 +1137,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("hills-of-the-shorbear-clan-shinsplitter-ending",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -1169,7 +1169,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("hills-of-the-shorbear-clan-shorbear-ending",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -1200,7 +1200,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("hills-of-the-shorbear-clan-shinsplitter-victory",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -1233,7 +1233,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("hills-of-the-shorbear-clan-shorbear-victory",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -1267,7 +1267,7 @@ AddTrigger(
 )
 
 -- If Durstorn dies, any quests of the Scepter of Fire campaign currently being pursued fail
-AddTrigger(
+AddTrigger("hills-of-the-shorbear-clan-durstorn-dies",
 	function()
 		if (GameCycle == 0) then
 			return false

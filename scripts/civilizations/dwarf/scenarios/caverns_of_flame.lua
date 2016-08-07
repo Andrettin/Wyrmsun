@@ -126,7 +126,7 @@ if (LoadedGame == false) then
 end
 
 -- If Rugnur dies, any quests of the Scepter of Fire campaign currently being pursued fail
-AddTrigger(
+AddTrigger("caverns-of-flame-rugnur-dies",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -146,7 +146,7 @@ AddTrigger(
 )
 
 -- If Baglur dies, any quests of the Scepter of Fire campaign currently being pursued fail
-AddTrigger(
+AddTrigger("caverns-of-flame-baglur-dies",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -185,7 +185,7 @@ AddTrigger(
 )
 
 -- If Thursagan dies, any quests of the Scepter of Fire campaign currently being pursued fail
-AddTrigger(
+AddTrigger("caverns-of-flame-thursagan-dies",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -211,7 +211,7 @@ AddTrigger(
 
 -- Caverns of Flame initial dialogue
 -- based on the Caverns of Flame scenario of the Sceptre of Fire campaign from Battle for Wesnoth
-AddTrigger(
+AddTrigger("caverns-of-flame-introduction",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -311,7 +311,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("caverns-of-flame-shinsplitters-caught-up",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -522,7 +522,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("caverns-of-flame-goblin-guards",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -563,7 +563,7 @@ AddTrigger(
 )
 
 -- make the Shinsplitter units chase Rugnur's dwarves
-AddTrigger(
+AddTrigger("caverns-of-flame-shinsplitter-chase",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -592,8 +592,8 @@ AddTrigger(
 	end
 )
 
--- make the Rugnur's dwarves step onto the glyph
-AddTrigger(
+-- make Rugnur's dwarves step onto the glyph
+AddTrigger("caverns-of-flame-rugnurs-dwarves-move-to-glyph",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -630,7 +630,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("caverns-of-flame-glyph-triggered",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -701,7 +701,7 @@ AddTrigger(
 )
 
 --[[
-AddTrigger(
+AddTrigger("caverns-of-flame-shinsplitters-acknowledge-eruption",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -729,7 +729,7 @@ AddTrigger(
 )
 --]]
 
-AddTrigger(
+AddTrigger("caverns-of-flame-shinsplitters-eruption-death",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -772,7 +772,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("caverns-of-flame-ending",
 	function()
 		if (GameCycle == 0) then
 			return false

@@ -64,7 +64,7 @@ end
 
 RemovePlayerObjective(GetFactionPlayer("Untersberg"), "- Defeat your enemies")
 
-AddTrigger(
+AddTrigger("pypos-gold-victory",
 	function()
 		if (GetNumRivals(GetThisPlayer()) == 0) then
 			player = GetThisPlayer()
@@ -81,7 +81,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("pypos-gold-pypo-dies",
 	function()
 		if (PlayerHasObjective(GetThisPlayer(), "- Pypo must survive") and FindHero("Pypo", GetThisPlayer()) == nil) then
 			player = GetThisPlayer()

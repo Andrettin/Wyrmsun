@@ -30,7 +30,7 @@ if (LoadedGame == false) then
 end
 
 -- If Rugnur dies, any quests of the Scepter of Fire campaign currently being pursued fail
-AddTrigger(
+AddTrigger("searching-for-the-runecrafter-rugnur-dies",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -58,7 +58,7 @@ AddTrigger(
 )
 
 -- If the Gnomish Envoy dies, any quests of the Scepter of Fire campaign currently being pursued fail
-AddTrigger(
+AddTrigger("searching-for-the-runecrafter-gnomish-envoy-dies",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -85,7 +85,7 @@ AddTrigger(
 )
 
 -- If Baglur dies, any quests of the Scepter of Fire campaign currently being pursued fail
-AddTrigger(
+AddTrigger("searching-for-the-runecrafter-baglur-dies",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -125,7 +125,7 @@ AddTrigger(
 
 -- Searching for the Runecrafter initial dialogue
 -- based on the Searching for the Runecrafter scenario of the Sceptre of Fire campaign from Battle for Wesnoth
-AddTrigger(
+AddTrigger("searching-for-the-runecrafter-introduction",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -216,7 +216,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("searching-for-the-runecrafter-create-enemies",
 	function()
 		if (GameCycle > 7500) then
 			return true
@@ -231,7 +231,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("searching-for-the-runecrafter-create-enemies-2",
 	function()
 		if (GameCycle > 22500) then
 			return true
@@ -246,7 +246,7 @@ AddTrigger(
 )
 
 -- move gryphon riders nearer to Rugnur's base when someone from Rugnur's side steps near enough them
-AddTrigger(
+AddTrigger("searching-for-the-runecrafter-move-gryphon-riders",
 	function()
 		local uncount = 0
 		uncount = GetUnits(GetFactionPlayer("Gryphon Riders"))
@@ -268,7 +268,7 @@ AddTrigger(
 )
 		
 -- Find Gryphon Riders
-AddTrigger(
+AddTrigger("searching-for-the-runecrafter-gryphon-riders-found",
 	function()
 		local uncount = 0
 		uncount = GetUnits(GetFactionPlayer("Gryphon Riders"))
@@ -367,7 +367,7 @@ AddTrigger(
 )
 
 -- if Thursagan's smithy is found by a gryphon rider
-AddTrigger(
+AddTrigger("searching-for-the-runecrafter-thursagan-found-gryphon-rider",
 	function()
 		for i=0,14 do
 			if (PlayerHasObjective(i, "- Find Thursagan and bring him to your Mead Hall") and IfNearUnit(i, ">=", 1, "units", "unit-dwarven-smithy")) then
@@ -408,7 +408,7 @@ AddTrigger(
 )
 
 -- if Thursagan's smithy is found by a non-gryphon rider
-AddTrigger(
+AddTrigger("searching-for-the-runecrafter-thursagan-found",
 	function()
 		for i=0,14 do
 			if (PlayerHasObjective(i, "- Find Thursagan and bring him to your Mead Hall") and IfNearUnit(i, ">=", 1, "units", "unit-dwarven-smithy")) then
@@ -511,7 +511,7 @@ AddTrigger(
 																NorthernWastelandsEnemy(54, 2)
 																NorthernWastelandsEnemy(54, 65)
 															end
-															AddTrigger(
+															AddTrigger("searching-for-the-runecrafter-thursagan-dies",
 																function()
 																	if (PlayerHasObjective(GetThisPlayer(), "- Find Thursagan and bring him to your Mead Hall") and FindHero("Thursagan", GetThisPlayer()) == nil) then
 																		player = GetThisPlayer()
@@ -555,7 +555,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("searching-for-the-runecrafter-victory",
 	function()
 		for i=0,14 do
 			if (
@@ -776,7 +776,7 @@ AddTrigger(
 )
 
 -- If Thursagan dies, any quests of the Scepter of Fire campaign currently being pursued fail
-AddTrigger(
+AddTrigger("searching-for-the-runecrafter-thursagan-dies-2",
 	function()
 		if (GameCycle == 0) then
 			return false

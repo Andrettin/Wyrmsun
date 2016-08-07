@@ -108,7 +108,7 @@ end
 
 -- On the Vanaquisl introduction
 -- based on the Ynglinga saga and on the Indo-European migration according to the Kurgan hypothesis
-AddTrigger(
+AddTrigger("on-the-vanaquisl-introduction",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -143,7 +143,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("on-the-vanaquisl-vana-sighted",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -217,7 +217,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("on-the-vanaquisl-vanaquisl-sighted",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -273,7 +273,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("on-the-vanaquisl-vana-hall-destroyed",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -327,7 +327,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("on-the-vanaquisl-victory",
 	function()
 		if (GameCycle == 0) then
 			return false

@@ -258,7 +258,7 @@ UI.Resources[6].TextX = 154 + 225 + 18
 UI.Resources[6].TextY = 1
 
 -- If Rugnur dies, any quests of the Scepter of Fire campaign currently being pursued fail
-AddTrigger(
+AddTrigger("gathering-materials-rugnur-dies",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -286,7 +286,7 @@ AddTrigger(
 )
 
 -- If Baglur dies, any quests of the Scepter of Fire campaign currently being pursued fail
-AddTrigger(
+AddTrigger("gathering-materials-baglur-dies",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -326,7 +326,7 @@ AddTrigger(
 
 -- Gathering Materials initial dialogue
 
-AddTrigger(
+AddTrigger("gathering-materials-introduction",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -413,7 +413,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("gathering-materials-miners-reminder",
 	function()
 		if (GameCycle > 3000) then
 			for i=0,14 do
@@ -441,7 +441,7 @@ AddTrigger(
 )
 
 -- coal found
-AddTrigger(
+AddTrigger("gathering-materials-coal-found",
 	function()
 		local uncount = 0
 		uncount = GetUnits(15)
@@ -470,7 +470,7 @@ AddTrigger(
 )
 
 -- gold found
-AddTrigger(
+AddTrigger("gathering-materials-gold-found",
 	function()
 		local uncount = 0
 		uncount = GetUnits(15)
@@ -498,7 +498,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("gathering-materials-coal-collected",
 	function()
 		for i=0,14 do
 			if (PlayerHasObjective(i, "- Collect 10000 gold and 20000 coal") and GetPlayerData(i, "Resources", "coal") >= 20000) then
@@ -826,7 +826,7 @@ end},
 	end
 )
 
-AddTrigger(
+AddTrigger("gathering-materials-resources-collected",
 	function()
 		for i=0,14 do
 			if (PlayerHasObjective(i, "- Collect 10000 gold and 20000 coal") and GetPlayerData(i, "Resources", "coal") >= 20000 and GetPlayerData(i, "Resources", "gold") >= 10000) then
@@ -1144,7 +1144,7 @@ AddTrigger(
 )
 
 -- If Thursagan dies, any quests of the Scepter of Fire campaign currently being pursued fail
-AddTrigger(
+AddTrigger("gathering-materials-thursagan-dies",
 	function()
 		if (GameCycle == 0) then
 			return false

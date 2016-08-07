@@ -82,7 +82,7 @@ end
 
 RemovePlayerObjective(GetFactionPlayer("Brising Clan"), "- Defeat your enemies")
 
-AddTrigger(
+AddTrigger("the-treasures-of-svarinshaug-introduction",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -139,7 +139,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("the-treasures-of-svarinshaug-victory",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -210,7 +210,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("the-treasures-of-svarinshaug-brokk-or-eitri-dies",
 	function()
 		if (GameCycle == 0) then
 			return false

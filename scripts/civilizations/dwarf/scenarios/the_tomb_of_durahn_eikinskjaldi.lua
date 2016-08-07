@@ -39,7 +39,7 @@ if (LoadedGame == false) then
 	end
 end
 
-AddTrigger(
+AddTrigger("the-tomb-of-durahn-eikinskjaldi-introduction",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -69,7 +69,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("the-tomb-of-durahn-eikinskjaldi-gnomish-raiders-found",
 	function()
 		local uncount = 0
 		uncount = GetUnits(GetFactionPlayer("Raiders"))
@@ -97,7 +97,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("the-tomb-of-durahn-eikinskjaldi-ceiling-mosaic",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -129,7 +129,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("the-tomb-of-durahn-eikinskjaldi-wall-niches",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -153,7 +153,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("the-tomb-of-durahn-eikinskjaldi-isuldan-found",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -177,7 +177,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("the-tomb-of-durahn-eikinskjaldi-gnomish-raider-leader-found",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -218,7 +218,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("the-tomb-of-durahn-eikinskjaldi-gneissus-found",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -242,7 +242,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("the-tomb-of-durahn-eikinskjaldi-merchant-contacts",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -266,7 +266,7 @@ AddTrigger(
 	end
 )
 
-AddTrigger(
+AddTrigger("the-tomb-of-durahn-eikinskjaldi-victory",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -297,7 +297,7 @@ AddTrigger(
 )
 
 -- If Baglur dies, the quest fails
-AddTrigger(
+AddTrigger("the-tomb-of-durahn-eikinskjaldi-baglur-dies",
 	function()
 		if (GameCycle == 0) then
 			return false
@@ -316,7 +316,7 @@ AddTrigger(
 )
 
 -- If Durstorn dies, the quest fails
-AddTrigger(
+AddTrigger("the-tomb-of-durahn-eikinskjaldi-durstorn-dies",
 	function()
 		if (GameCycle == 0) then
 			return false
