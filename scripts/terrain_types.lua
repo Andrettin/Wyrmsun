@@ -27,7 +27,7 @@
 
 DefineTerrainType("dirt", {
 	Name = "Dirt",
-	Flags = {"land", "no-building", "dirt"},
+	Flags = {"land", "dirt"},
 	Graphics = "terrain/dirt.png",
 	SolidTiles = {4, 5, 6},
 	AdjacentTransitionTiles = {
@@ -261,7 +261,7 @@ DefineTerrainType("shallow-water-swamp", {
 	Name = "Shallow Water",
 	Flags = {"water"},
 --	InnerBorderTerrains = {"dirt", "mud", "rockbound-cave-floor", "cave-floor"},
-	InnerBorderTerrains = {"mud"},
+	InnerBorderTerrains = {"mud", "dirt"},
 	Graphics = "terrain/shallow_water.png",
 	SolidTiles = {17, 20, 23},
 	TransitionTiles = {
@@ -304,7 +304,7 @@ DefineTerrainType("gray-shallow-water", {
 	Name = "Gray Shallow Water",
 	Flags = {"water"},
 --	InnerBorderTerrains = {"dirt", "mud", "rockbound-cave-floor", "cave-floor"},
-	InnerBorderTerrains = {"rockbound-cave-floor"},
+	InnerBorderTerrains = {"rockbound-cave-floor", "dirt"},
 	Graphics = "terrain/gray_shallow_water.png",
 	SolidTiles = {17, 20, 23},
 	TransitionTiles = {
@@ -347,7 +347,7 @@ DefineTerrainType("floor", {
 	Name = "Floor",
 	Buildable = true,
 	Flags = {"land", "stone-floor"},
-	OuterBorderTerrains = {"rockbound-cave-floor"},
+	OuterBorderTerrains = {"rockbound-cave-floor", "cave-floor", "dirt", "grass", "dry-mud"},
 	Graphics = "terrain/floor.png",
 	SolidTiles = {17, 20, 23, 26},
 	AdjacentTransitionTiles = {

@@ -105,6 +105,10 @@ https://github.com/Andrettin/Wyrmsun
 - Goblin Barbarians and Warlords are now present in the Caverns of Flame quest.
 - Goblin custom heroes can now be used for dwarven quests.
 
+* Terrain
+- Added new dirt transitions (by Exidelo).
+- Dirt tiles can now be built upon.
+
 * Units
 - Added Goblin Barbarian (upgrade of the Swordsman) (icon by Jesse Crider, modified from b_o's and Leo's Goblin Swordsman icon).
 - Added Goblin Warlord (upgrade of the Barbarian) (icon by Jesse Crider).
