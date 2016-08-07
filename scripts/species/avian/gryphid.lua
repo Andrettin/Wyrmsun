@@ -47,7 +47,7 @@ DefineSpecies("gryphon", {
 	Genus = "gryphus",
 	Species = "leo", -- "lion" in Latin
 	Homeworld = "Nidavellir",
-	Environments = {"swamp"}, -- should be dark plains
+	Terrains = {"dry-mud", "mud", "flamefood-tree", "rock-swamp"}, -- should be dark dirt instead of dry mud and mud
 	EvolvesFrom = {"hoatzin"}, -- the Gryphon has a common ancestor with eagles
 	Era = "holocene",
 	ChildUpgrade = "upgrade-gryphon-child"
@@ -59,7 +59,7 @@ DefineSpecies("hippogryph", {
 	Genus = "hippogryphus",
 	Species = "equus", -- "horse" in Latin (the "horse" element is already present in the "hippo" of the genus, but since there it is Greek and here Latin, it doesn't look too repetitive)
 	Homeworld = "Alfheim",
-	Environments = {"fairlimbed-forest"},
+	Terrains = {"grass", "dirt", "fairlimbed-tree", "rock"},
 	EvolvesFrom = {"hoatzin"}, -- the Hippogryph has a common ancestor with eagles
 	Era = "holocene",
 	ChildUpgrade = "upgrade-gryphon-child"

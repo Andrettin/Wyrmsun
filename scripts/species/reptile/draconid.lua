@@ -145,7 +145,7 @@ DefineSpecies("wyrm", {
 	Name = "Wyrm",
 	Genus = "vurmus",
 	Homeworld = "Nidavellir",
-	Environments = {"swamp", "cave"},
+	Terrains = {"cave-floor", "rockbound-cave-floor", "dry-mud", "mud"}, -- correct?
 	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
 	Era = "holocene",
 	ChildUpgrade = "upgrade-wyrm-child"

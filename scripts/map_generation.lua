@@ -1326,26 +1326,36 @@ function CreateCritters(arg)
 			if (
 				species ~= ""
 				and GetUnitTypeData(unit_type_list[i], "Fauna")
-				and GetArrayIncludes(GetSpeciesData(species, "Environments"), GetCurrentTileset())
 				and (MapWorld == "" or MapWorld == "Random" or MapWorld == GetSpeciesData(species, "Homeworld"))
 				and (GetUnitTypeData(unit_type_list[i], "Predator") == false or not arg.NoPredators)
 				and (GetUnitTypeData(unit_type_list[i], "Type") ~= "fly" or GetUnitTypeData(unit_type_list[i], "Predator") == false or not arg.NoFlyingCreeps)
 				and (GetUnitTypeData(unit_type_list[i], "Level") < 3 or GetUnitTypeData(unit_type_list[i], "Predator") == false or not arg.NoMightyCreeps)
 				and (GetSpeciesData(species, "Prehistoric") == false or (GetCurrentQuest() == "" and GrandStrategy == false)) -- don't generate prehistoric fauna if playing a quest or the grand strategy mode
 			) then
-				local critter_unit_type = unit_type_list[i]
-				-- if there is a species this one can evolve from, use it instead, but only if we aren't playing a quest or in the grand strategy mode; in custom maps species can evolve to descendants
-				if (GetCurrentQuest() == "" and GrandStrategy == false) then
-					local evolves_from_list = GetSpeciesData(species, "EvolvesFrom")
-					while (table.getn(evolves_from_list) > 0) do
-						species = evolves_from_list[SyncRand(table.getn(evolves_from_list)) + 1]
-						if (GetSpeciesData(species, "Type") ~= "") then
-							critter_unit_type = GetSpeciesData(species, "Type")
-						end
-						evolves_from_list = GetSpeciesData(species, "EvolvesFrom")
+				local has_terrain = false
+				local species_terrains = GetSpeciesData(species, "Terrains")
+				for j=1,table.getn(species_terrains) do
+					if (GetTileTerrainCount(species_terrains[j])) then
+						has_terrain = true
+						break
 					end
 				end
-				table.insert(critter_types, critter_unit_type)
+				
+				if (has_terrain) then
+					local critter_unit_type = unit_type_list[i]
+					-- if there is a species this one can evolve from, use it instead, but only if we aren't playing a quest or in the grand strategy mode; in custom maps species can evolve to descendants
+					if (GetCurrentQuest() == "" and GrandStrategy == false) then
+						local evolves_from_list = GetSpeciesData(species, "EvolvesFrom")
+						while (table.getn(evolves_from_list) > 0) do
+							species = evolves_from_list[SyncRand(table.getn(evolves_from_list)) + 1]
+							if (GetSpeciesData(species, "Type") ~= "") then
+								critter_unit_type = GetSpeciesData(species, "Type")
+							end
+							evolves_from_list = GetSpeciesData(species, "EvolvesFrom")
+						end
+					end
+					table.insert(critter_types, critter_unit_type)
+				end
 			end
 		end
 
@@ -1363,10 +1373,13 @@ function CreateCritters(arg)
 			RandomX = SyncRand(Map.Info.MapWidth)
 			RandomY = SyncRand(Map.Info.MapHeight)
 			if (
-				(GetUnitTypeData(critter_unit_type, "Type") == "land" and GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false)
-				or (GetUnitTypeData(critter_unit_type, "Type") == "naval" and GetTileTerrainHasFlag(RandomX, RandomY, "water") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false)
-				or (GetUnitTypeData(critter_unit_type, "Type") == "fly-low" and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false)
-				or (GetUnitTypeData(critter_unit_type, "Type") == "fly" and GetTileTerrainHasFlag(RandomX, RandomY, "air-unpassable") == false)
+				((
+					GetUnitTypeData(critter_unit_type, "Type") == "land" and GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false)
+					or (GetUnitTypeData(critter_unit_type, "Type") == "naval" and GetTileTerrainHasFlag(RandomX, RandomY, "water") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false)
+					or (GetUnitTypeData(critter_unit_type, "Type") == "fly-low" and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false)
+					or (GetUnitTypeData(critter_unit_type, "Type") == "fly" and GetTileTerrainHasFlag(RandomX, RandomY, "air-unpassable") == false)
+				)
+				and GetArrayIncludes(GetSpeciesData(GetUnitTypeData(critter_unit_type, "Species"), "Terrains"), GetTileTerrainName(RandomX, RandomY))
 			) then
 				local unit_quantity = 0
 				for i=0,14 do
@@ -2785,8 +2798,21 @@ function FindUnusedPlayerSlot()
 	end
 end
 
-function GetTileTerrainFlagCount(flag)
+function GetTileTerrainCount(terrain)
+	local tile_terrain_count = 0
 
+	for x=0,(Map.Info.MapWidth - 1) do
+		for y=0,(Map.Info.MapHeight - 1) do
+			if (GetTileTerrainName(x, y) == terrain) then
+				tile_terrain_count = tile_terrain_count + 1
+			end
+		end
+	end
+
+	return tile_terrain_count
+end
+
+function GetTileTerrainFlagCount(flag)
 	local tile_flag_count = 0
 
 	for x=0,(Map.Info.MapWidth - 1) do
@@ -2798,7 +2824,6 @@ function GetTileTerrainFlagCount(flag)
 	end
 
 	return tile_flag_count
-	
 end
 
 function AdjustRawMapTileIrregularities(min_x, max_x, min_y, max_y, count, adjust_transitions)

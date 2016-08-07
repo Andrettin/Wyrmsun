@@ -76,7 +76,7 @@ DefineSpecies("chalicotherium-grande", { -- Source: Mauricio Antón and Jorge Mo
 	Genus = "chalicotherium",
 	Species = "grande",
 	Homeworld = "Earth",
-	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"palaeotherium"},
 	Era = "miocene", -- Middle Miocene
 	Prehistoric = true,

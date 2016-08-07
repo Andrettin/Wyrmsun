@@ -93,7 +93,7 @@ DefineSpecies("bald-eagle", { -- Source: http://www.itis.gov/servlet/SingleRpt/S
 	Genus = "haliaeetus",
 	Species = "leucocephalus",
 	Homeworld = "Earth",
---	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
+--	Terrains = {"grass", "dirt", "pine-tree", "rock"}, -- correct?
 	EvolvesFrom = {"hoatzin"},
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"
@@ -102,7 +102,7 @@ DefineSpecies("bald-eagle", { -- Source: http://www.itis.gov/servlet/SingleRpt/S
 DefineSpecies("bird", {
 	Name = "Bird",
 	Homeworld = "Earth",
-	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
+	Terrains = {"grass", "dirt", "pine-tree", "rock", "rock-swamp", "shallow-water", "shallow-water-swamp", "dry-mud", "mud"}, -- correct?
 	EvolvesFrom = {"ichthyornis", "presbyornis"}, -- seems sensible, given the songbird is set to descend from these
 	ChildUpgrade = "upgrade-child"
 })
@@ -110,7 +110,7 @@ DefineSpecies("bird", {
 DefineSpecies("crow", {
 	Name = "Crow",
 	Homeworld = "Earth",
-	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
+	Terrains = {"grass", "dirt", "pine-tree", "rock"}, -- correct?
 	EvolvesFrom = {"ichthyornis", "presbyornis"}, -- seems sensible, given the songbird is set to descend from these
 	ChildUpgrade = "upgrade-child"
 })

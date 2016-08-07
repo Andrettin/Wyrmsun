@@ -117,7 +117,7 @@ DefineSpecies("cainotherium-miocaenicum", { -- Source: Mauricio Antón and Jorge
 	Genus = "cainotherium",
 	Species = "miocaenicum",
 	Homeworld = "Earth",
-	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
 	Era = "miocene", -- Middle Aragonian
 	Prehistoric = true,
@@ -129,7 +129,7 @@ DefineSpecies("dorcatherium-crassum", { -- Source: Mauricio Antón and Jorge Mor
 	Genus = "dorcatherium",
 	Species = "crassum",
 	Homeworld = "Earth",
-	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
 	Era = "miocene", -- Lower Miocene to the Lower Pliocene
 	Prehistoric = true,
@@ -164,7 +164,7 @@ DefineSpecies("micromeryx-azanzae", { -- Source: Mauricio Antón and Jorge Moral
 	Genus = "micromeryx",
 	Species = "azanzae",
 	Homeworld = "Earth",
-	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
 	Era = "miocene", -- end of the Middle Miocene and beginning of the Upper Miocene
 	Prehistoric = true,
@@ -191,7 +191,7 @@ DefineSpecies("triceromeryx-pachecoi", { -- Source: Mauricio Antón and Jorge Mo
 	Genus = "triceromeryx",
 	Species = "pachecoi",
 	Homeworld = "Earth",
-	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
 	Era = "miocene", -- Middle Miocene
 	Prehistoric = true,

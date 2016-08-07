@@ -41,7 +41,7 @@ DefineSpecies("protictitherium-crassum", { -- Source: Mauricio Antón and Jorge 
 	Genus = "protictitherium",
 	Species = "crassum",
 	Homeworld = "Earth",
-	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 --	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"},
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes", "miacis"},
 	Era = "miocene", -- Middle and Upper Miocene

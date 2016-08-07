@@ -91,7 +91,7 @@ DefineSpecies("felis-attica", { -- Source: Mauricio Antón and Jorge Morales, "M
 	Genus = "felis",
 	Species = "attica",
 	Homeworld = "Earth",
-	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
 	Era = "miocene", -- Upper Miocene
 	Prehistoric = true,
@@ -106,7 +106,7 @@ DefineSpecies("machairodus-aphanistus", { -- Source: Mauricio Antón and Jorge M
 	Genus = "machairodus",
 	Species = "aphanistus",
 	Homeworld = "Earth",
-	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
 	Era = "miocene", -- Upper Miocene
 	Prehistoric = true,
@@ -123,7 +123,7 @@ DefineSpecies("pristinosmilus-ogygia", { -- Source: Mauricio Antón and Jorge Mo
 	Genus = "pristinosmilus",
 	Species = "ogygia",
 	Homeworld = "Earth",
-	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
 	Era = "miocene", -- Upper Miocene
 	Prehistoric = true,
@@ -155,7 +155,7 @@ DefineSpecies("schizaelurus-lorteti", { -- Source: Mauricio Antón and Jorge Mor
 	Genus = "schizaelurus",
 	Species = "lorteti",
 	Homeworld = "Earth",
-	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
 	Era = "miocene", -- Middle Miocene
 	Prehistoric = true,

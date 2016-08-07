@@ -86,7 +86,7 @@ DefineSpecies("megacricetodon-collongensis", { -- Source: Mauricio Antón and Jo
 	Genus = "megacricetodon",
 	Species = "collongensis",
 	Homeworld = "Earth",
-	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"ischyromys"},
 	Era = "miocene", -- Middle Miocene
 	Prehistoric = true,
@@ -107,7 +107,7 @@ DefineSpecies("carrat", { -- rodent with the morphology akin to that of a canid;
 	Name = "Carrat",
 --	Family = "muridae", -- same as rats
 	Homeworld = "Nidavellir",
-	Environments = {"cave", "swamp"},
+	Terrains = {"cave-floor", "rockbound-cave-floor", "dry-mud", "mud"}, -- correct?
 	EvolvesFrom = {"megacricetodon-collongensis"}, -- shares a common ancestor with rats
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"
@@ -125,7 +125,7 @@ DefineSpecies("rat", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRp
 	Genus = "rattus",
 	Species = "norvegicus",
 	Homeworld = "Earth",
-	Environments = {"conifer-forest-summer", "conifer-forest-autumn", "cave"}, -- correct?
+	Terrains = {"grass", "dirt", "cave-floor", "rockbound-cave-floor"}, -- correct?
 	EvolvesFrom = {"megacricetodon-collongensis"}, -- earlier rodent
 	ChildUpgrade = "upgrade-child"
 })

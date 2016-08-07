@@ -348,7 +348,19 @@ DefineIcon({
 	Size = {46, 38},
 	File = "neutral/icons/adelobasileus_cromptoni.png"
 })
-	
+
+DefineIcon({
+	Name = "icon-rat",
+	Size = {46, 38},
+	File = "neutral/icons/rat.png"
+})
+
+DefineIcon({
+	Name = "icon-rat-swamp",
+	Size = {46, 38},
+	File = "neutral/icons/rat_swamp.png"
+})
+
 DefineIcon({
 	Name = "icon-horse",
 	Size = {46, 38},
@@ -761,12 +773,6 @@ DefineIcon({
 
 if (GetCurrentTileset() == "swamp" or GetCurrentTileset() == "dungeon") then
 	DefineIcon({
-		Name = "icon-rat",
-		Size = {46, 38},
-		File = "tilesets/swamp/neutral/icons/rat.png"
-	})
-
-	DefineIcon({
 		Name = "icon-glyph",
 		Size = {46, 38},
 		File = "tilesets/swamp/neutral/icons/glyph.png"
@@ -827,12 +833,6 @@ if (GetCurrentTileset() == "swamp" or GetCurrentTileset() == "dungeon") then
 	})
 elseif (GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest") then
 	DefineIcon({
-		Name = "icon-rat",
-		Size = {46, 38},
-		File = "tilesets/forest/neutral/icons/rat.png"
-	})
-
-	DefineIcon({
 		Name = "icon-glyph",
 		Size = {46, 38},
 		File = "tilesets/forest/neutral/icons/glyph.png"
@@ -892,12 +892,6 @@ elseif (GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() ==
 		File = "tilesets/forest/neutral/icons/wyrm_skeleton.png"
 	})
 else	
-	DefineIcon({
-		Name = "icon-rat",
-		Size = {46, 38},
-		File = "tilesets/forest/neutral/icons/rat.png"
-	})
-
 	DefineIcon({
 		Name = "icon-glyph",
 		Size = {46, 38},

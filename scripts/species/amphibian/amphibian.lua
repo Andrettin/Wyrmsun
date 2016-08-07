@@ -172,7 +172,7 @@ DefineSpecies("hylonomus", {
 DefineSpecies("frog", {
 	Name = "Frog",
 	Homeworld = "Earth",
-	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
+	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- correct?
 	EvolvesFrom = {"peltobatrachus", "platyhystrix"},
 	ChildUpgrade = "upgrade-child"
 })

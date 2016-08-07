@@ -50,7 +50,7 @@ DefineSpecies("aceratherium-incisivum", { -- Source: Mauricio Antón and Jorge M
 	Genus = "aceratherium",
 	Species = "incisivum",
 	Homeworld = "Earth",
-	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"palaeotherium"},
 	Era = "miocene",
 	Prehistoric = true,
@@ -65,7 +65,7 @@ DefineSpecies("hispanotherium-matritense", { -- Source: Mauricio Antón and Jorg
 	Genus = "hispanotherium",
 	Species = "matritense",
 	Homeworld = "Earth",
-	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"palaeotherium"},
 	Era = "miocene", -- Middle and Upper Miocene
 	Prehistoric = true,

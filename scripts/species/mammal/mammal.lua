@@ -458,7 +458,7 @@ DefineSpecies("camel", {
 DefineSpecies("bat", {
 	Name = "Bat",
 	Homeworld = "Earth",
-	Environments = {"cave"}, -- correct?
+	Terrains = {"cave-floor", "rockbound-cave-floor"}, -- correct?
 	EvolvesFrom = {"leptictidium", "zalambdalestes"},
 	ChildUpgrade = "upgrade-child"
 })
@@ -466,7 +466,7 @@ DefineSpecies("bat", {
 DefineSpecies("blood-bat", {
 	Name = "Blood Bat",
 	Homeworld = "Nidavellir",
-	Environments = {"cave", "swamp"},
+	Terrains = {"cave-floor", "rockbound-cave-floor", "dry-mud", "mud"}, -- correct?
 	EvolvesFrom = {"leptictidium", "zalambdalestes"}, -- has a common ancestor with bats
 	ChildUpgrade = "upgrade-child"
 })
@@ -474,7 +474,7 @@ DefineSpecies("blood-bat", {
 DefineSpecies("dread-bat", {
 	Name = "Dread Bat",
 	Homeworld = "Nidavellir",
-	Environments = {"cave", "swamp"}, -- correct?
+	Terrains = {"cave-floor", "rockbound-cave-floor", "dry-mud", "mud"}, -- correct?
 	EvolvesFrom = {"leptictidium", "zalambdalestes"}, -- has a common ancestor with bats
 	ChildUpgrade = "upgrade-child"
 })
@@ -572,7 +572,7 @@ DefineSpecies("galerix-exilis", { -- Source: Mauricio Antón and Jorge Morales, 
 	Genus = "galerix",
 	Species = "exilis",
 	Homeworld = "Earth",
-	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"adelobasileus-cromptoni"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
 	Era = "miocene", -- Middle and Upper Miocene
 	Prehistoric = true,

@@ -51,7 +51,7 @@ DefineSpecies("heteroprox-moralesi", { -- Source: Mauricio Antón and Jorge Mora
 	Genus = "heteroprox",
 	Species = "moralesi",
 	Homeworld = "Earth",
-	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
 	Era = "miocene", -- Middle Miocene
 	Prehistoric = true,
@@ -66,7 +66,7 @@ DefineSpecies("procervulus-dichotomus", { -- Source: Mauricio Antón and Jorge M
 	Genus = "procervulus",
 	Species = "dichotomus",
 	Homeworld = "Earth",
-	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
 	Era = "miocene", -- Middle Miocene
 	Prehistoric = true,

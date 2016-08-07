@@ -39,56 +39,56 @@ DefineSpeciesPhylum("chordata", { -- Source: http://www.itis.gov/servlet/SingleR
 DefineSpecies("bee", {
 	Name = "Bee",
 	Homeworld = "Earth",
-	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
+	Terrains = {"grass", "dirt"}, -- correct?
 	ChildUpgrade = "upgrade-bee-child"
 })
 
 DefineSpecies("bug", {
 	Name = "Bug",
 	Homeworld = "Earth",
-	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
+	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- correct?
 	ChildUpgrade = "upgrade-bee-child"
 })
 
 DefineSpecies("fly", {
 	Name = "Fly",
 	Homeworld = "Earth",
-	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
+	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- correct?
 	ChildUpgrade = "upgrade-bee-child"
 })
 
 DefineSpecies("slime", {
 	Name = "Slime",
 	Homeworld = "Nidavellir",
-	Environments = {"cave", "swamp"},
+	Terrains = {"cave-floor", "rockbound-cave-floor", "dry-mud", "mud"}, -- correct?
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("slug", {
 	Name = "Slug",
 	Homeworld = "Earth",
-	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
+	Terrains = {"grass", "dirt"}, -- correct?
 	ChildUpgrade = "upgrade-bee-child"
 })
 
 DefineSpecies("snail", {
 	Name = "Snail",
 	Homeworld = "Earth",
-	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
+	Terrains = {"grass", "dirt"}, -- correct?
 	ChildUpgrade = "upgrade-bee-child"
 })
 
 DefineSpecies("snigill", {
 	Name = "Snigill",
 	Homeworld = "Nidavellir",
-	Environments = {"swamp", "cave"},
+	Terrains = {"cave-floor", "rockbound-cave-floor", "dry-mud", "mud"}, -- correct?
 	ChildUpgrade = "upgrade-bee-child"
 })
 
 DefineSpecies("worm", {
 	Name = "Worm",
 	Homeworld = "Earth",
-	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
+	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- correct?
 	ChildUpgrade = "upgrade-bee-child"
 })
 

@@ -126,7 +126,7 @@ DefineSpecies("anchitherium-cursor", { -- Source: Mauricio Antón and Jorge Mora
 	Genus = "anchitherium",
 	Species = "cursor",
 	Homeworld = "Earth",
-	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"mesohippus"}, -- earlier equid
 	Era = "miocene", -- Middle Miocene
 	Prehistoric = true,
@@ -141,7 +141,7 @@ DefineSpecies("hipparion-primigenium", { -- Source: Mauricio Antón and Jorge Mo
 	Genus = "hipparion",
 	Species = "primigenium",
 	Homeworld = "Earth",
-	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"mesohippus"}, -- earlier equid
 	Era = "miocene", -- Upper Miocene
 	Prehistoric = true,
@@ -201,7 +201,7 @@ DefineSpecies("horse", { -- Source: http://www.itis.gov/servlet/SingleRpt/Single
 	Genus = "equus",
 	Species = "caballus",
 	Homeworld = "Earth",
-	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
+	Terrains = {"grass", "dirt"}, -- correct?
 	EvolvesFrom = {"anchitherium-cursor", "hipparion-primigenium", "merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
 	ChildUpgrade = "upgrade-child"
 })
@@ -231,7 +231,7 @@ DefineSpecies("unicorn", {
 	Name = "Unicorn",
 	Genus = "unicornis",
 	Homeworld = "Alfheim",
-	Environments = {"fairlimbed-forest"},
+	Terrains = {"grass"}, -- unicorns live in woodlands
 	EvolvesFrom = {"anchitherium-cursor", "hipparion-primigenium", "merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"

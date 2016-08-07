@@ -46,7 +46,7 @@ DefineSpecies("hemicyon-sansaniense", { -- Source: Mauricio Antón and Jorge Mor
 	Genus = "hemicyon",
 	Species = "sansaniense",
 	Homeworld = "Earth",
-	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
 	Era = "miocene", -- Middle Miocene
 	Prehistoric = true,

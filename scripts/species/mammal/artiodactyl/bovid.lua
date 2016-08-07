@@ -71,7 +71,7 @@ DefineSpecies("tethytragus-langai", { -- Source: Mauricio Antón and Jorge Moral
 	Genus = "tethytragus",
 	Species = "langai",
 	Homeworld = "Earth",
-	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
 	Era = "miocene", -- Middle Miocene
 	Prehistoric = true,
@@ -94,7 +94,7 @@ DefineSpecies("yale", {
 	Name = "Yale",
 	Genus = "eale",
 	Homeworld = "Nidavellir",
-	Environments = {"swamp"}, -- should be dark plains
+	Terrains = {"dry-mud", "mud"}, -- should be dark dirt instead of dry-mud and mud
 	EvolvesFrom = {"aragoral"}, -- oldest member of the Caprinae subfamily
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"

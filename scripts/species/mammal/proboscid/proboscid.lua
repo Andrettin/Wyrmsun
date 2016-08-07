@@ -94,7 +94,7 @@ DefineSpecies("gomphotherium-angustidens", { -- Source: Mauricio Antón and Jorg
 	Genus = "gomphotherium",
 	Species = "angustidens",
 	Homeworld = "Earth",
-	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"numidotherium-koholense", "phiomia"}, -- earlier proboscids
 	Era = "miocene", -- Miocene and Pliocene
 	Prehistoric = true,
@@ -111,7 +111,7 @@ DefineSpecies("tetralophodon-longirostris", { -- Source: Mauricio Antón and Jor
 	Genus = "tetralophodon",
 	Species = "longirostris",
 	Homeworld = "Earth",
-	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"numidotherium-koholense", "phiomia"}, -- earlier proboscids
 	Era = "miocene", -- Miocene and Pliocene
 	Prehistoric = true,

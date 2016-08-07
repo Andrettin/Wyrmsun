@@ -2213,7 +2213,7 @@ DefineUnitType("unit-miasma", { Name = _("Miasma"),
 --	Sounds = {} } )
 
 DefineUnitType("unit-destroyed-2x2-place", { Name = "Destroyed 2x2 Place",
-	Image = {"file", "tilesets/swamp/neutral/buildings/destroyed_site.png", "size", {64, 64}},
+	Image = {"file", "neutral/buildings/destroyed_site.png", "size", {64, 64}},
 	Animations = "animations-destroyed-place", Icon = "icon-dwarven-miner",
 	Speed = 0,
 	HitPoints = 255,
@@ -2229,7 +2229,7 @@ DefineUnitType("unit-destroyed-2x2-place", { Name = "Destroyed 2x2 Place",
 } )
 
 DefineUnitType("unit-destroyed-3x3-place", { Name = "Destroyed 3x3 Place",
-	Image = {"file", "tilesets/swamp/neutral/buildings/destroyed_site.png", "size", {64, 64}},
+	Image = {"file", "neutral/buildings/destroyed_site.png", "size", {64, 64}},
 	Animations = "animations-destroyed-place", Icon = "icon-dwarven-miner",
 	Speed = 0,
 	HitPoints = 255,
@@ -2259,7 +2259,7 @@ DefineUnitType("unit-destroyed-3x3-place", { Name = "Destroyed 3x3 Place",
 --	Sounds = {} } )
 
 DefineUnitType("unit-destroyed-4x4-place", { Name = "Destroyed 4x4 Place",
-	Image = {"file", "tilesets/swamp/neutral/buildings/destroyed_site.png", "size", {64, 64}},
+	Image = {"file", "neutral/buildings/destroyed_site.png", "size", {64, 64}},
 	Animations = "animations-destroyed-place", Icon = "icon-dwarven-miner",
 	Speed = 0,
 	HitPoints = 255,
