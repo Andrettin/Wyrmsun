@@ -119,6 +119,7 @@ https://github.com/Andrettin/Wyrmsun
 - Goblin Gliders are now mechanical units.
 - Dwarven Pathfinders can now upgrade to Gryphon Riders when leveling up.
 - Fixed issue with destroyed doors not being passable after loading a saved game.
+- Fauna units now prefer to move to terrain types that they are native to.
 
 * Upgrades
 - Added goblin Broad Sword and Long Sword upgrades (icons by Jinn).

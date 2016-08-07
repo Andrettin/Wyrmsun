@@ -158,7 +158,7 @@ DefineTerrainType("grass", {
 	Name = "Grass",
 	Buildable = true,
 	Flags = {"land", "grass"},
-	OuterBorderTerrains = {"dirt"},
+	OuterBorderTerrains = {"dirt", "dry-mud"},
 	Graphics = "terrain/grass.png",
 	SolidTiles = {1, 2, 3},
 	AdjacentTransitionTiles = {
@@ -604,11 +604,11 @@ DefineTerrainType("cave-wall", {
 
 DefineTerrainType("rock", {
 	Name = "Rock",
-	BaseTerrains = {"dirt", "mud"},
+	BaseTerrains = {"dirt", "mud", "dry-mud", "rockbound-cave-floor", "cave-floor"},
 	Overlay = true,
 	Flags = {"land", "rock", "unpassable"},
 	Graphics = "terrain/rock.png",
-	SolidTiles = {1, 2, 3},
+	SolidTiles = {4, 5, 6},
 	DestroyedTiles = {56, 57, 58},
 	TransitionTiles = {
 		"any", "north", 22,
