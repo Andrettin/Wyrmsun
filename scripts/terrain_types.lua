@@ -27,6 +27,7 @@
 
 DefineTerrainType("dirt", {
 	Name = "Dirt",
+	Character = "d",
 	Flags = {"land", "dirt"},
 	Graphics = "terrain/dirt.png",
 	SolidTiles = {4, 5, 6},
@@ -52,6 +53,7 @@ DefineTerrainType("dirt", {
 
 DefineTerrainType("mud", {
 	Name = "Mud",
+	Character = "m",
 	Flags = {"land", "no-building", "mud"},
 	InnerBorderTerrains = {"dirt"},
 	Graphics = "terrain/mud.png",
@@ -68,6 +70,7 @@ DefineTerrainType("rockbound-cave-floor", {
 
 DefineTerrainType("cave-floor", {
 	Name = "Cave Floor",
+	Character = "c",
 	Buildable = true,
 	Flags = {"land", "stone-floor"},
 	InnerBorderTerrains = {"dirt"},
@@ -156,6 +159,7 @@ DefineTerrainType("dry-mud", {
 
 DefineTerrainType("grass", {
 	Name = "Grass",
+	Character = "g",
 	Buildable = true,
 	Flags = {"land", "grass"},
 	OuterBorderTerrains = {"dirt", "dry-mud"},
@@ -207,6 +211,7 @@ DefineTerrainType("grass", {
 
 DefineTerrainType("shallow-water", {
 	Name = "Shallow Water",
+	Character = "w",
 	Flags = {"water"},
 --	InnerBorderTerrains = {"dirt", "mud", "rockbound-cave-floor", "cave-floor"},
 	InnerBorderTerrains = {"dirt"},
@@ -345,6 +350,7 @@ DefineTerrainType("gray-shallow-water", {
 
 DefineTerrainType("floor", {
 	Name = "Floor",
+	Character = "f",
 	Buildable = true,
 	Flags = {"land", "stone-floor"},
 	OuterBorderTerrains = {"rockbound-cave-floor", "cave-floor", "dirt", "grass", "dry-mud"},
@@ -604,6 +610,7 @@ DefineTerrainType("cave-wall", {
 
 DefineTerrainType("rock", {
 	Name = "Rock",
+	Character = "r",
 	BaseTerrains = {"dirt", "mud", "dry-mud", "rockbound-cave-floor", "cave-floor"},
 	Overlay = true,
 	Flags = {"land", "rock", "unpassable"},
@@ -754,6 +761,7 @@ DefineTerrainType("flamefood-tree", {
 
 DefineTerrainType("pine-tree", {
 	Name = "Pine Tree",
+	Character = "t",
 	BaseTerrains = {"grass"},
 	Overlay = true,
 	Flags = {"land", "forest", "unpassable"},

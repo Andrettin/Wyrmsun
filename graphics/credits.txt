@@ -401,6 +401,9 @@ Exidelo (Leo):
 /graphics/tilesets/forest/terrain/rock.png (licensed under the CC0)
 /graphics/tilesets/forest/terrain/water.png (licensed under the CC0)
 /graphics/ui/status_effects/bleeding.png (licensed under the CC0)
+/graphics/ui/status_effects/precision.png (licensed under the CC0)
+/graphics/ui/status_effects/precision_extra_1.png (licensed under the CC0)
+/graphics/ui/status_effects/scouting.png (licensed under the CC0)
 
 Cuzco:
 /graphics/missiles/siege_projectile_impact.png (later modified by Jinn) (licensed under the CC0)

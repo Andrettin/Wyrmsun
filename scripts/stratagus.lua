@@ -295,7 +295,8 @@ function SinglePlayerTriggers()
 			end
 		end,
 		function()
-			return ActionDefeat()
+			ActionDefeat()
+			return true
 		end
 	)
 
@@ -309,7 +310,8 @@ function SinglePlayerTriggers()
 			end
 		end,
 		function()
-			return ActionVictory()
+			ActionVictory()
+			return true
 		end
 	)
 
@@ -2057,6 +2059,7 @@ Load("scripts/quests.lua")
 Load("scripts/events.lua")
 Load("scripts/achievements.lua")
 Load("scripts/texts.lua")
+Load("scripts/map_templates.lua")
 Load("scripts/grand_strategy/grand_strategy_map_generation.lua")
 Load("scripts/grand_strategy/grand_strategy_factions.lua")
 Load("scripts/grand_strategy/grand_strategy_provinces.lua")
@@ -2065,5 +2068,3 @@ Load("scripts/grand_strategy/grand_strategy_events.lua")
 Load("scripts/0_ad_equivalencies.lua")
 
 DebugPrint("... ready!\n")
-
---Convert0ADMap("maps/The Massacre of Delphi.xml")
