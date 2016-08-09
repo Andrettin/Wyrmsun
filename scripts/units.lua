@@ -2625,7 +2625,10 @@ DefineUnitType("unit-template-heroic-shooter", { Name = _("Heroic Shooter"),
 	Accuracy = 12,
 	Points = 120,
 	Level = 3,
+	Mana = {Enable = true, Max = 225, Value = 225, Increase = 1},
 	Inventory = true,
+	CanCastSpell = {"spell-precise-shot"},
+	AutoCastActive = {"spell-precise-shot"},
 	DropAffixes = {"upgrade-item-prefix-impregnable", "upgrade-item-suffix-of-thorns"}
 } )
 
@@ -2794,6 +2797,7 @@ DefineUnitType("unit-template-flying-rider", { Name = _("Flying Rider"),
 	Level = 3,
 	Demand = 2,
 	Upkeep = 50,
+	Mana = {Enable = true, Max = 225, Value = 225, Increase = 1},
 	Gender = "male",
 	Type = "fly",
 	RightMouseAction = "attack",

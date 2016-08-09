@@ -334,6 +334,18 @@ DefineButton( { Pos = 8, Level = 1, Icon = "icon-puncture",
 	}
 } )
 
+DefineButton( { Pos = 8, Level = 1, Icon = "icon-precise-shot",
+	Action = "learn-ability", Value = "upgrade-precise-shot",
+	Key = "r", Hint = "Learn P~!recise Shot", Popup = "popup-commands",
+	Description = "Precise Shot is an active ability which deals a critical hit. Only usable with ranged weapons.",
+	ForUnit = {
+		"unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
+		"unit-germanic-archer",
+		"unit-teuton-archer",
+		"unit-goblin-shadowstalker"
+	}
+} )
+
 DefineButton( { Pos = 9, Level = 1, Icon = "icon-leadership",
 	Action = "learn-ability", Value = "upgrade-leadership",
 	Key = "l", Hint = "Learn ~!Leadership Aura", Popup = "popup-commands",
@@ -478,6 +490,18 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-puncture",
 		"unit-dwarven-guard",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-forest-gnomish-master-at-arms", "unit-derro-shadowguard",
 		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman"
+	}
+})
+
+DefineButton( { Pos = 6, Level = 0, Icon = "icon-precise-shot",
+	Action = "cast-spell", Value = "spell-precise-shot",
+	Description = "Deals an attack which always results in a critical hit. Only usable with ranged weapons.",
+	Key = "r", Hint = _("P~!recise Shot"), Popup = "popup-research",
+	ForUnit = {
+		"unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
+		"unit-germanic-archer",
+		"unit-teuton-archer",
+		"unit-goblin-shadowstalker"
 	}
 })
 

@@ -377,6 +377,7 @@ Exidelo (Leo):
 /graphics/latin/icons/javelineer.png (licensed under the CC0)
 /graphics/neutral/decorations/volcanic_crater.png (licensed under the CC0)
 /graphics/neutral/icons/masonry.png (licensed under the CC0)
+/graphics/neutral/icons/precise_shot.png (licensed under the CC0)
 /graphics/neutral/icons/puncture.png (licensed under the CC0)
 /graphics/neutral/icons/puncture_extra_1.png (licensed under the CC0)
 /graphics/neutral/icons/scouting.png (licensed under the CC0)
@@ -402,8 +403,8 @@ Exidelo (Leo):
 /graphics/tilesets/forest/terrain/rock.png (licensed under the CC0)
 /graphics/tilesets/forest/terrain/water.png (licensed under the CC0)
 /graphics/ui/status_effects/bleeding.png (licensed under the CC0)
+/graphics/ui/status_effects/precise_shot.png (licensed under the CC0)
 /graphics/ui/status_effects/precision.png (licensed under the CC0)
-/graphics/ui/status_effects/precision_extra_1.png (licensed under the CC0)
 /graphics/ui/status_effects/scouting.png (licensed under the CC0)
 
 Cuzco:

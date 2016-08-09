@@ -196,6 +196,24 @@ DefineSpell("spell-stun",
 	"depend-upgrade", "upgrade-stun"
 )
 
+DefineSpell("spell-precise-shot",
+	"showname", _("Precise Shot"),
+	"manacost", 50,
+	"range", 5,
+	"target", "unit",
+	"action", {
+--		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
+		{"spawn-missile", "missile", "missile-none", "start-point", {"base", "caster"}, "use-unit-var", "always-critical"}
+	},
+	"condition", {
+		"organic", "only",
+		"Building", "false"
+	},
+	"autocast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only"}},
+	"ai-cast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only"}},
+	"depend-upgrade", "upgrade-precise-shot"
+)
+
 DefineSpell("spell-puncture",
 	"showname", _("Puncture"),
 	"manacost", 50,

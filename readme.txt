@@ -63,7 +63,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * Abilities
 - Fixed close-quarters pathing issue for units' autocast for abilities like Stun.
-- Added Scouting learnable ability (increases sight), available for ranged units. Dwarven Scouts, Pathfinders and Explorers start with this ability already learned.
+- Added Precise Shot active learnable ability (deals an attack that has 100% chance of resulting in a critical hit).
+- Added Scouting passive learnable ability (increases sight), available for ranged units. Dwarven Scouts, Pathfinders and Explorers start with this ability already learned (icon by Exidelo).
 
 * Buildings
 - Rally points are now correctly stored when saving a game.

@@ -266,6 +266,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-precise-shot",
+	Size = {46, 38},
+	File = "neutral/icons/precise_shot.png"
+})
+
+DefineIcon({
 	Name = "icon-puncture",
 	Size = {46, 38},
 	File = "neutral/icons/puncture.png"

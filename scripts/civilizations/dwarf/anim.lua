@@ -107,13 +107,7 @@ DefineAnimations("animations-dwarven-scout", {
 		"frame 0", "wait 18", "frame 0",
 		"unbreakable end", "wait 1",
 	},
-	Death = ScoutDeath,
-	SpellCast = {
-		"unbreakable begin",
-		"attack",
-		"unbreakable end",
-		"wait 1",
-	}
+	Death = ScoutDeath
 })
 
 --
