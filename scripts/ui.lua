@@ -75,6 +75,7 @@ if not (ui_loaded_first_time) then
 	end
 	DefineSprites({Name = "sprite-leadership", File = "ui/status_effects/leadership.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-inspire", File = "ui/status_effects/inspire.png", Offset = {1, 1}, Size = {16, 16}})
+	DefineSprites({Name = "sprite-precision", File = "ui/status_effects/precision.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-slow", File = "ui/status_effects/slow.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-stun", File = "ui/status_effects/stun.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-bleeding", File = "ui/status_effects/bleeding.png", Offset = {1, 1}, Size = {16, 16}})
@@ -86,6 +87,8 @@ if not (ui_loaded_first_time) then
 	  Offset = {0, 0}, Method = {"static-sprite", {"sprite-leadership", 0}}})
 	DefineDecorations({Index = "Inspire", ShowOpponent = true, ShowWhenMax = true,
 	  Offset = {0, 0}, Method = {"static-sprite", {"sprite-inspire", 0}}})
+	DefineDecorations({Index = "Precision", ShowOpponent = true, ShowWhenMax = true,
+	  Offset = {0, 0}, Method = {"static-sprite", {"sprite-precision", 0}}})
 	DefineDecorations({Index = "Slow", ShowOpponent = true, ShowWhenMax = true,
 	  Offset = {0, 16}, Method = {"static-sprite", {"sprite-slow", 0}}})
 	DefineDecorations({Index = "Stun", ShowOpponent = true, ShowWhenMax = true,

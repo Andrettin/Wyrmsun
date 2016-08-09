@@ -75,7 +75,8 @@ DefineDeityDomain("chaos", {
 })
 
 DefineDeityDomain("order", {
-	Name = "Order"
+	Name = "Order",
+	Abilities = {"upgrade-precision"}
 })
 
 -- Life and Death
@@ -169,7 +170,8 @@ DefineDeityDomain("wrath", {
 -- Skills
 
 DefineDeityDomain("archery", {
-	Name = "Archery"
+	Name = "Archery",
+	Abilities = {"upgrade-precision"}
 })
 
 DefineDeityDomain("metalworking", {

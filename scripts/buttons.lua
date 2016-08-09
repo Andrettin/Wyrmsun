@@ -363,6 +363,12 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-healing",
 	ForUnit = {"unit-dwarven-witness"}
 })
 
+DefineButton( { Pos = 2, Level = 1, Icon = "icon-precision",
+	Action = "learn-ability", Value = "upgrade-precision",
+	Key = "r", Hint = _("Learn P~!recision"), Popup = "popup-commands",
+	ForUnit = {"unit-teuton-priest", "unit-dwarven-witness"}
+})
+
 DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 	Action = "button", Value = 0,
 	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
@@ -444,28 +450,35 @@ DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-inspire",
 	Action = "cast-spell", Value = "spell-inspire",
-	Description = "Inspires an organic unit to deal 50% more damage.",
+	Description = "Inspires an organic unit to deal 50% more damage",
 	Key = "i", Hint = _("~!Inspire"), Popup = "popup-commands",
 	ForUnit = {"unit-dwarven-witness"}
 })
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-terror",
 	Action = "cast-spell", Value = "spell-terror",
-	Description = "Makes a unit flee in terror.",
+	Description = "Makes a unit flee in terror",
 	Key = "t", Hint = _("~!Terror"), Popup = "popup-commands",
 	ForUnit = {"unit-goblin-shaman"}
 })
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-healing",
 	Action = "cast-spell", Value = "spell-healing",
-	Description = "Heals an organic unit.",
+	Description = "Heals an organic unit",
 	Key = "h", Hint = _("~!Healing"), Popup = "popup-commands",
+	ForUnit = {"unit-teuton-priest", "unit-dwarven-witness"}
+})
+
+DefineButton( { Pos = 6, Level = 0, Icon = "icon-precision",
+	Action = "cast-spell", Value = "spell-precision",
+	Description = "Doubles the accuracy of an organic unit while in combat",
+	Key = "r", Hint = _("P~!recision"), Popup = "popup-commands",
 	ForUnit = {"unit-teuton-priest", "unit-dwarven-witness"}
 })
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-stun",
 	Action = "cast-spell", Value = "spell-stun",
-	Description = "Does a stunning attack on a target, leaving it paralyzed for a few moments.",
+	Description = "Does a stunning attack on a target, leaving it paralyzed for a few moments",
 	Key = "u", Hint = _("St~!un"), Popup = "popup-research",
 	ForUnit = {
 		"unit-dwarven-thane",
@@ -482,7 +495,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-stun",
 
 DefineButton( { Pos = 7, Level = 0, Icon = "icon-puncture",
 	Action = "cast-spell", Value = "spell-puncture",
-	Description = "Makes the target bleed for a certain duration. Only usable with melee weapons capable of doing thrusting attacks.",
+	Description = "Makes the target bleed for a certain duration. Only usable with melee weapons capable of doing thrusting attacks",
 	Key = "r", Hint = _("Punctu~!re"), Popup = "popup-research",
 	ForUnit = {
 		"unit-germanic-warrior", "unit-germanic-spearman",
@@ -495,7 +508,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-puncture",
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-precise-shot",
 	Action = "cast-spell", Value = "spell-precise-shot",
-	Description = "Deals an attack which always results in a critical hit. Only usable with ranged weapons.",
+	Description = "Deals an attack which always results in a critical hit. Only usable with ranged weapons",
 	Key = "r", Hint = _("P~!recise Shot"), Popup = "popup-research",
 	ForUnit = {
 		"unit-dwarven-explorer", "unit-dwarven-gryphon-rider",

@@ -88,6 +88,12 @@ DefineUpgrade("upgrade-precise-shot", {
 	Ability = true
 })
 
+DefineUpgrade("upgrade-precision", {
+	Name = _("Precision"),
+	Icon = "icon-precision",
+	Ability = true
+})
+
 DefineUpgrade("upgrade-puncture", {
 	Name = _("Puncture"),
 	Icon = "icon-puncture",

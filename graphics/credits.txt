@@ -378,6 +378,7 @@ Exidelo (Leo):
 /graphics/neutral/decorations/volcanic_crater.png (licensed under the CC0)
 /graphics/neutral/icons/masonry.png (licensed under the CC0)
 /graphics/neutral/icons/precise_shot.png (licensed under the CC0)
+/graphics/neutral/icons/precision.png (licensed under the CC0)
 /graphics/neutral/icons/puncture.png (licensed under the CC0)
 /graphics/neutral/icons/puncture_extra_1.png (licensed under the CC0)
 /graphics/neutral/icons/scouting.png (licensed under the CC0)

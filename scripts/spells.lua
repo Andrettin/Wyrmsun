@@ -106,6 +106,25 @@ DefineSpell("spell-inspire",
 	"ai-cast", {"range", 6, "attacker", "only", "condition", {"Coward", "false", "alliance", "only"}}
 )
 
+DefineSpell("spell-precision",
+	"showname", _("Precision"),
+	"manacost", 50,
+	"range", 6,
+	"target", "unit",
+	"action", {
+		{"adjust-variable", {Precision = 1000}},
+		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
+	},
+	"condition", {
+		"organic", "only",
+		"Precision", {ExactValue = 0}
+	},
+	"sound-when-cast", "magic-holy",
+	"depend-upgrade", "upgrade-precision",
+	"autocast", {"range", 6, "attacker", "only", "condition", {"Coward", "false", "alliance", "only"}},
+	"ai-cast", {"range", 6, "attacker", "only", "condition", {"Coward", "false", "alliance", "only"}}
+)
+
 DefineSpell("spell-slow",
 	"showname", _("slow"),
 	"manacost", 50,
