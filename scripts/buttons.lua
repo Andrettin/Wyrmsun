@@ -308,6 +308,18 @@ DefineButton( { Pos = 7, Level = 1, Icon = "icon-stun",
 	}
 } )
 
+DefineButton( { Pos = 7, Level = 1, Icon = "icon-scouting",
+	Action = "learn-ability", Value = "upgrade-scouting",
+	Key = "s", Hint = "Learn ~!Scouting", Popup = "popup-commands",
+	Description = "Scouting is a passive ability that increases sight by 1.",
+	ForUnit = {
+		"unit-dwarven-gryphon-rider",
+		"unit-germanic-archer",
+		"unit-teuton-archer",
+		"unit-goblin-shadowstalker"
+	}
+} )
+
 DefineButton( { Pos = 8, Level = 1, Icon = "icon-puncture",
 	Action = "learn-ability", Value = "upgrade-puncture",
 	Key = "r", Hint = "Learn Punctu~!re", Popup = "popup-commands",

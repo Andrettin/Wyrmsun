@@ -88,6 +88,12 @@ DefineUpgrade("upgrade-puncture", {
 	Ability = true
 })
 
+DefineUpgrade("upgrade-scouting", {
+	Name = _("Scouting"),
+	Icon = "icon-scouting",
+	Ability = true
+})
+
 DefineUpgrade("upgrade-spear-mastery", {
 	Name = _("spear Mastery"),
 	Icon = "icon-spear-mastery",
@@ -136,6 +142,10 @@ DefineModifier("upgrade-leadership",
 
 DefineModifier("upgrade-mace-mastery",
 	{"BasicDamage", 2}
+)
+
+DefineModifier("upgrade-scouting",
+	{"SightRange", 1}
 )
 
 DefineModifier("upgrade-spear-mastery",

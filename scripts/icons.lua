@@ -212,6 +212,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-scouting",
+	Size = {46, 38},
+	File = "neutral/icons/scouting.png"
+})
+
+DefineIcon({
 	Name = "icon-terror",
 	Size = {46, 38},
 	File = "neutral/icons/terror.png"

@@ -481,7 +481,8 @@ DefineUnitType("unit-dwarven-guard", { Name = _("Guard"),
 	}
 } )
 
-DefineUnitType("unit-dwarven-scout", { Name = _("Scout"),
+DefineUnitType("unit-dwarven-scout", {
+	Name = _("Scout"),
 	Parent = "unit-template-archer",
 	Civilization = "dwarf",
 --	Description = "Dwarven scouts use their lighter armor to their advantage, ranging ahead of the main force and reporting back on troop movements and dispositions, or securing important objectives. Outside of battle, they are often used to relay messages between dwarven communities. These scouts were instrumental for pathfinding during the migration of the group of dwarves led by Dvalin, who left the Heart Mountains, passed through swamps, and finally established themselves in a desert.", -- use the latter part of this for the pathfinder
@@ -497,13 +498,13 @@ DefineUnitType("unit-dwarven-scout", { Name = _("Scout"),
 	Missile = "missile-throwing-axe",
 	FireMissile = "missile-flaming-throwing-axe",
 	MaxAttackRange = 4,
-	SightRange = 6,
 	Corpse = "unit-dwarven-dead-body",
 	TechnologyPointCost = 1,
 	WeaponClasses = {"throwing-axe"},
 	HackDamage = true,
 	ButtonKey = "s",
 	ButtonHint = _("Train ~!Scout"),
+	StartingAbilities = {"upgrade-scouting"},
 	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Variations = {
 		{
@@ -562,10 +563,10 @@ DefineUnitType("unit-dwarven-pathfinder", { Name = _("Pathfinder"),
 	Missile = "missile-throwing-axe",
 	FireMissile = "missile-flaming-throwing-axe",
 	MaxAttackRange = 4,
-	SightRange = 6,
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClasses = {"throwing-axe"},
 	HackDamage = true,
+	StartingAbilities = {"upgrade-scouting"},
 	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Variations = {
 		{
@@ -607,10 +608,10 @@ DefineUnitType("unit-dwarven-explorer", { Name = _("Explorer"),
 	Missile = "missile-throwing-axe",
 	FireMissile = "missile-flaming-throwing-axe",
 	MaxAttackRange = 4,
-	SightRange = 6,
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClasses = {"throwing-axe"},
 	HackDamage = true,
+	StartingAbilities = {"upgrade-scouting"},
 	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Variations = {
 		{
