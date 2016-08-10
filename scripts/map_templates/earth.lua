@@ -29,5 +29,11 @@ DefineMapTemplate("earth", {
 	Name = "Earth",
 	Width = 8192,
 	Height = 4096,
-	TerrainFile = "scripts/map_templates/earth.map"
+	TerrainFile = "scripts/map_templates/earth.map",
+	GeneratedTerrains = {
+		"rock", "medium",
+		"grass", "extremely-high",
+		"dirt", "medium",
+		"pine-tree", "very-high"
+	}
 })
