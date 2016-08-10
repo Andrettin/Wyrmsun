@@ -92,3 +92,5 @@ SetMapTemplateTileTerrain("earth", "shallow-water", 4050, 758)
 SetMapTemplateTileTerrain("earth", "shallow-water", 4050, 759)
 SetMapTemplateTileTerrain("earth", "shallow-water", 4051, 758)
 SetMapTemplateTileTerrain("earth", "shallow-water", 4051, 759)
+
+SetMapTemplateHistoricalUnit("earth", "unit-germanic-town-hall", "Skeldung Tribe", {4112, 784}, -2800) -- Leidre / Lejre; Funnel Beaker culture ended in Zealand in 2800 BC and the Corded Ware culture (neolithic) began; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 38. In the Ynglinga Saga, Odin set his son Skjöldr to rule in Leidre after their people (who here we equate with the cultural ancestors of the Germanics who migrated to Scandinavia) conquered the land
