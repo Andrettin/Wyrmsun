@@ -89,6 +89,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Grand Strategy
 - Added Du'urdin province (Nidavellir).
+- Fixed the position of the "No Day/Night Cycle" and "Battle Base Building" options in the Grand Strategy menu, so that they no longer occupy the same position.
 
 * Heroes
 - Goblin custom heroes can now be created.

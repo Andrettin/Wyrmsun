@@ -326,7 +326,7 @@ function RunGrandStrategyGameSetupMenu()
 	)
 	no_randomness:setMarked(wyr.preferences.NoRandomness)
   
-	no_time_of_day = menu:addImageCheckBox(_("No Day/Night Cycle"), offx + 640 - 224 - 16, offy + 10 + 220 + 3,
+	no_time_of_day = menu:addImageCheckBox(_("No Day/Night Cycle"), offx + 220, offy + 10 + 220 + 3,
 		function()
 			wyr.preferences.NoTimeOfDay = no_time_of_day:isMarked()
 			SavePreferences()
