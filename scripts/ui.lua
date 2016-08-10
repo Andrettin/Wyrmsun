@@ -279,6 +279,12 @@ b.Y = 16 + 12 + 38 + 24
 b.Style = FindButtonStyle("icon")
 UI.LevelUpUnitButton = b
 
+b = CUIButton:new()
+b.X = Video.Width - 12 - 46
+b.Y = 16 + 12 + (38 * 2) + (24 * 2)
+b.Style = FindButtonStyle("icon")
+UI.CustomHeroUnitButton = b
+
 UI.CompletedBarColorRGB = CColor(48, 100, 4)
 UI.CompletedBarShadow = false
 

@@ -94,6 +94,7 @@ https://github.com/Andrettin/Wyrmsun
 * Heroes
 - Goblin custom heroes can now be created.
 - Fixed issue with heroes' stats increasing with every save/load while playing a scenario.
+- Added a button on the right part of the screen to make it easier to select the custom hero.
 
 * Items
 - Fixed issue which caused a crash when a gryphon rider read a Scroll of Forgetfulness or a Book of Retraining.
