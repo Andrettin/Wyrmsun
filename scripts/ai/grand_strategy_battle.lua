@@ -137,6 +137,7 @@ local land_funcs = {
 	"unit-goblin-war-machine", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-goblin-war-machine"),
 	"unit-goblin-glider", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-goblin-glider"),
 	"unit-kobold-footpad", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-kobold-footpad"),
+	"unit-ettin", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-ettin"),
 	"unit-surghan-mercenary-steelclad", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-surghan-mercenary-steelclad"),
 	"unit-surghan-mercenary-thane", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-surghan-mercenary-thane")
   }, true) end,

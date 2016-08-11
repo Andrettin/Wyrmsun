@@ -158,6 +158,7 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-level-up",
 		"unit-derro-thug", "unit-derro-executioner", "unit-derro-shadowguard",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shadowstalker", "unit-goblin-shaman",
 		"unit-kobold-footpad",
+		"unit-ettin",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
 	}
 } )
@@ -247,6 +248,7 @@ DefineButton( { Pos = 5, Level = 1, Icon = "icon-critical-strike",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-forest-gnomish-master-at-arms", "unit-derro-shadowguard",
 		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-shadowstalker",
 		"unit-kobold-footpad",
+		"unit-ettin",
 		"unit-surghan-mercenary-thane"
 	}
 } )
@@ -266,6 +268,7 @@ DefineButton( { Pos = 5, Level = 1, Icon = "icon-deadly-precision",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-forest-gnomish-master-at-arms", "unit-derro-shadowguard",
 		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-shadowstalker",
 		"unit-kobold-footpad",
+		"unit-ettin",
 		"unit-surghan-mercenary-thane"
 	}
 } )
@@ -286,6 +289,7 @@ DefineButton( { Pos = 6, Level = 1, Icon = "icon-eagle-eye",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-forest-gnomish-master-at-arms", "unit-derro-shadowguard",
 		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-shadowstalker",
 		"unit-kobold-footpad",
+		"unit-ettin",
 		"unit-surghan-mercenary-thane"
 	}
 } )
@@ -304,6 +308,7 @@ DefineButton( { Pos = 7, Level = 1, Icon = "icon-stun",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-forest-gnomish-master-at-arms", "unit-derro-shadowguard",
 		"unit-goblin-warlord",
 		"unit-kobold-footpad",
+		"unit-ettin",
 		"unit-surghan-mercenary-thane"
 	}
 } )
@@ -353,6 +358,7 @@ DefineButton( { Pos = 9, Level = 1, Icon = "icon-leadership",
 	ForUnit = {
 		"unit-dwarven-thane",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-forest-gnomish-master-at-arms",
+		"unit-ettin",
 		"unit-surghan-mercenary-thane"
 	}
 } )
@@ -389,6 +395,7 @@ DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 		"unit-derro-thug", "unit-derro-executioner", "unit-derro-shadowguard",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shadowstalker", "unit-goblin-shaman",
 		"unit-kobold-footpad",
+		"unit-ettin",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
 	} 
 } )
@@ -417,6 +424,7 @@ DefineButton( { Pos = 14, Level = 0, Icon = "icon-inventory",
 		"unit-derro-thug", "unit-derro-executioner", "unit-derro-shadowguard",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shadowstalker", "unit-goblin-shaman",
 		"unit-kobold-footpad",
+		"unit-ettin",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
 	}
 } )
@@ -442,6 +450,7 @@ DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
 		"unit-derro-thug", "unit-derro-executioner", "unit-derro-shadowguard",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shadowstalker", "unit-goblin-shaman",
 		"unit-kobold-footpad",
+		"unit-ettin",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
 	} 
 } )
@@ -489,6 +498,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-stun",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-forest-gnomish-master-at-arms", "unit-derro-shadowguard",
 		"unit-goblin-warlord",
 		"unit-kobold-footpad",
+		"unit-ettin",
 		"unit-surghan-mercenary-thane"
 	}
 })

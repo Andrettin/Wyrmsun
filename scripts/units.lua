@@ -104,6 +104,7 @@ Units = {
 	"unit-kobold-footpad",
 	"unit-elven-swordsman",
 	"unit-orc-spearthrower", "unit-orc-sea-orc", "unit-orc-shaman",
+	"unit-ettin",
 	"unit-adelobasileus-cromptoni", "unit-rat", "unit-horse",
 	"unit-slime", "unit-yale", "unit-gryphon", "unit-wyrm", "unit-water-elemental",
 	"unit-unicorn",
@@ -2518,7 +2519,8 @@ DefineUnitType("unit-template-veteran-infantry", { Name = _("Veteran Infantry"),
 	DropAffixes = {"upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-thorns"}
 } )
 
-DefineUnitType("unit-template-heroic-infantry", { Name = _("Heroic Infantry"),
+DefineUnitType("unit-template-heroic-infantry", {
+	Name = _("Heroic Infantry"),
 	Parent = "unit-template-veteran-infantry",
 	Class = "heroic-infantry",
 	Costs = {"time", 0, "gold", 0},
@@ -3316,6 +3318,7 @@ DefineUnitType("unit-template-dock", {
 -- Load the different civilizations
 Load("scripts/civilizations/celt/units.lua")
 Load("scripts/civilizations/dwarf/units.lua")
+Load("scripts/civilizations/ettin/units.lua")
 Load("scripts/civilizations/germanic/units.lua")
 Load("scripts/civilizations/gnome/units.lua")
 Load("scripts/civilizations/goblin/units.lua")
