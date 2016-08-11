@@ -30,6 +30,7 @@ DefineFaction("Asa Tribe", {
 	Type = "tribe",
 	Colors = {"orange", "red"},
 	FactionUpgrade = "upgrade-asa-tribe-faction",
+	StartView = {4243, 692}, -- Sigtun / Segiztûna
 	SplitsTo = {"Skeldung Tribe", "Volsung Tribe"},
 	Description = "The Asa are the legendary progenitors of the Germanic peoples.",
 	Background = "In the Ynglinga Saga, the Asa (another name for the Aesir) were Odin's people, who originally lived in Asaland (identified with Asia), a realm centered in the city of Asgard. They went forth from their original lands to Scandinavia and northern Central Europe, establishing themselves in those regions.",
@@ -46,6 +47,7 @@ DefineFaction("Skeldung Tribe", { -- Skjoldung in the original Norse sagas, here
 --	DevelopsTo = {"Dane Tribe", "Goth Tribe", "Herulian Tribe", "Jute Tribe"}
 	DevelopsTo = {"Dane Tribe", "Goth Tribe", "Herulian Tribe"},
 	FactionUpgrade = "upgrade-skeldung-tribe-faction",
+	StartView = {4112, 784}, -- Leidre / Lejre
 	HistoricalFactionDerivations = {-2800, "germanic", "Asa Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-germanic-bronze-shield", -1100, -- bronze shields found in the Danish bogs began to be made; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/

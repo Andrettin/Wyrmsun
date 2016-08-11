@@ -152,7 +152,7 @@ DefineCivilization("ettin", {
 	DefaultColor = "black",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
-		"stop", "icon-dwarven-shield-1",
+		"stop", "icon-goblin-wooden-shield",
 		"attack", "icon-dwarven-battle-axe",
 		"patrol", "icon-dwarven-patrol-land",
 		"stand-ground", "icon-dwarven-stand-ground",
@@ -236,7 +236,7 @@ DefineCivilization("goblin", {
 	YearLabel = "YU", -- Years Untersberg
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
-		"stop", "icon-dwarven-shield-1",
+		"stop", "icon-goblin-wooden-shield",
 		"attack", "icon-goblin-short-sword",
 		"patrol", "icon-goblin-patrol-land",
 		"stand-ground", "icon-germanic-stand-ground",
@@ -286,7 +286,7 @@ DefineCivilization("orc", {
 	DefaultColor = "red",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
-		"stop", "icon-dwarven-shield-1",
+		"stop", "icon-goblin-wooden-shield",
 		"attack", "icon-dwarven-battle-axe",
 		"patrol", "icon-goblin-patrol-land",
 		"stand-ground", "icon-dwarven-stand-ground",

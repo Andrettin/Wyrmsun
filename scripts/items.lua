@@ -219,12 +219,18 @@ DefineUnitType("unit-bearded-throwing-axe", { Name = _("Bearded Throwing Axe"),
 	BasicDamage = 4
 } )
 
-DefineUnitType("unit-wooden-shield", { Name = _("Wooden Shield"),
+DefineUnitType("unit-wooden-shield", {
+	Name = _("Wooden Shield"),
 	Parent = "unit-template-item",
 	Image = {"file", "dwarf/items/round_shield.png", "size", {13, 13}},
 	Icon = "icon-germanic-wooden-oblong-shield",
 	ItemClass = "shield",
 	Armor = 0
+} )
+
+DefineUnitType("unit-goblin-wooden-shield", {
+	Parent = "unit-wooden-shield",
+	Icon = "icon-goblin-wooden-shield"
 } )
 
 DefineUnitType("unit-bronze-shield", { Name = _("Bronze Shield"),
