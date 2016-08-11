@@ -685,36 +685,35 @@ DefineUnitType("unit-yale", {
 	Excrement = "unit-yale-excrement",
 	BluntDamage = true,
 	Variations = {
-		--[[
 		{
-			"variation-id", "brown-fur",
---			"file", "neutral/units/yale_young.png",
-			"frame-size", {36, 36},
+--			"variation-id", "brown-fur",
+			"variation-id", "child",
+			"file", "neutral/units/yale_young.png",
+			"frame-size", {54, 54},
 			"upgrade-required", "upgrade-child"
 		},
-		--]]
 		{
 			"variation-id", "brown-fur",
-			"icon", "icon-yale"
---			"upgrade-forbidden", "upgrade-child"
+			"icon", "icon-yale",
+			"upgrade-forbidden", "upgrade-child"
 		},
 		{
 			"variation-id", "gray-brown-fur",
 			"file", "neutral/units/yale_gray_brown_fur.png",
-			"icon", "icon-yale-gray-brown-fur"
---			"upgrade-forbidden", "upgrade-child"
+			"icon", "icon-yale-gray-brown-fur",
+			"upgrade-forbidden", "upgrade-child"
 		},
 		{
 			"variation-id", "gray-fur",
 			"file", "neutral/units/yale_gray_fur.png",
-			"icon", "icon-yale-gray-fur"
---			"upgrade-forbidden", "upgrade-child"
+			"icon", "icon-yale-gray-fur",
+			"upgrade-forbidden", "upgrade-child"
 		},
 		{
 			"variation-id", "white-fur",
 			"file", "neutral/units/yale_white_fur.png",
-			"icon", "icon-yale-white-fur"
---			"upgrade-forbidden", "upgrade-child"
+			"icon", "icon-yale-white-fur",
+			"upgrade-forbidden", "upgrade-child"
 		}
 	},
 	Sounds = {

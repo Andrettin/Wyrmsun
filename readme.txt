@@ -131,6 +131,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue with destroyed doors not being passable after loading a saved game.
 - Fauna units now prefer to move to terrain types that they are native to.
 - Added Ettin (icon by Jinn, unit graphics by Jinn, modified from b_o's dwarven graphics) (currently only available through the map editor).
+- Added graphics for young yales (modification of b_o's yale by Jinn).
 
 * Upgrades
 - Added goblin Broad Sword and Long Sword upgrades (icons by Jinn).

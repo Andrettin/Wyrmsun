@@ -168,6 +168,7 @@ function HandleCheats(str)
 				SetUnitVariable(uncount[unit1], "IndividualUpgrade", GetSpeciesData(GetUnitVariable(uncount[unit1], "Ident"), "ChildUpgrade"), true)
 			end
 		end
+		AddMessage(_("All animals are now young"))
 
   elseif (str == "famine") then
 		local uncount = 0
