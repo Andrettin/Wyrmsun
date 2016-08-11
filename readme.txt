@@ -105,6 +105,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - Updated the visual guide to include guidelines for ship graphics.
+- Fixed minimap viewport rectangle issue which caused it to be 1 pixel smaller in both width and height than it should be.
 
 * Quests
 - Goblin Barbarians and Warlords are now present in the Caverns of Flame quest.

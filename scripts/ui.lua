@@ -995,6 +995,12 @@ if not (ui_loaded_first_time) then
 				{ 	HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
 				}, 
+				{ 	Margin = {1, 1}, Condition = {ButtonAction = "cast-spell"},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {ButtonAction = "cast-spell"},
+					More = {"Costs", {Font = PopupFont}}, HighlightColor = "yellow",
+				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
