@@ -93,10 +93,20 @@ SetMapTemplateTileTerrain("earth", "shallow-water", 4050, 759)
 SetMapTemplateTileTerrain("earth", "shallow-water", 4051, 758)
 SetMapTemplateTileTerrain("earth", "shallow-water", 4051, 759)
 
-SetMapTemplateResource("earth", "unit-copper-deposit", {3634, 1067}) -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
-SetMapTemplateResource("earth", "unit-copper-deposit", {3722, 905}) -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
+SetMapTemplateResource("earth", "unit-copper-deposit", {3695, 1079}) -- Tin deposits; Source: "Atlas de História Mundial", 2001, p. 41.
+SetMapTemplateResource("earth", "unit-copper-deposit", {3727, 902}) -- Tin deposits; Source: "Atlas de História Mundial", 2001, p. 41.
 SetMapTemplateResource("earth", "unit-copper-deposit", {3749, 956}) -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
-SetMapTemplateResource("earth", "unit-copper-deposit", {4156, 886}) -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
+SetMapTemplateResource("earth", "unit-copper-deposit", {4142, 907}) -- Tin deposits; Source: "Atlas de História Mundial", 2001, p. 41.
+
+SetMapTemplateResource("earth", "unit-copper-deposit", {3655, 1192}) -- Iron deposits; Source: http://www.lib.utexas.edu/maps/europe/portugal_econ_1972.jpg
+SetMapTemplateResource("earth", "unit-copper-deposit", {3680, 1109}) -- Iron deposits; Source: http://www.lib.utexas.edu/maps/europe/portugal_econ_1972.jpg
+
+SetMapTemplateResource("earth", "unit-copper-deposit", {3675, 1201}) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
+SetMapTemplateResource("earth", "unit-copper-deposit", {3684, 1195}) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
+SetMapTemplateResource("earth", "unit-copper-deposit", {3686, 1201}) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
+SetMapTemplateResource("earth", "unit-copper-deposit", {3687, 1194}) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
+SetMapTemplateResource("earth", "unit-copper-deposit", {3695, 1201}) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
+SetMapTemplateResource("earth", "unit-copper-deposit", {3792, 1194}) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
 
 SetMapTemplateHistoricalUnit("earth", "unit-germanic-town-hall", "Asa Tribe", {4243, 692}, -2800) -- Sigtun / Segiztûna; in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples; "Segiztûna" is a rendering of "Sigtun" in Proto-Germanic, since the Ynglinga saga the city was founded when the cultural ancestors of the Germanic peoples (= Odin's people) first settled Scandinavia
 
