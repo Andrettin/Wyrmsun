@@ -35,6 +35,11 @@ DefineMapTemplate("earth", {
 		"grass", "extremely-high",
 		"dirt", "high",
 		"pine-tree", "high"
+	},
+	GeneratedResources = {
+		"unit-gold-deposit", 8,
+		"unit-silver-deposit", 8,
+		"unit-copper-deposit", 8
 	}
 })
 
