@@ -42,4 +42,4 @@ DefineMapTemplate("nidavellir", {
 	}
 })
 
-SetMapTemplateHistoricalUnit("nidavellir", "unit-dwarven-town-hall", "Brising Clan", {128, 128}, -3000)
+Load("scripts/map_templates/caverns_of_chaincolt_city.lua")
