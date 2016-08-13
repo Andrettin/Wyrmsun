@@ -1,0 +1,5 @@
+-- Stratagus Map Presentation
+
+DefinePlayerTypes("person")
+PresentMap("Nidavellir", 1, 256, 256, 1)
+MapWorld = "Nidavellir"

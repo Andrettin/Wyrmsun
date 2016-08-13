@@ -32,7 +32,7 @@ DefineMapTemplate("nidavellir", {
 	BaseTerrain = "dry-mud",
 	GeneratedTerrains = {
 		"mud", "very-high",
-		"rock-swamp", "medium",
+		"rock-swamp", "high",
 		"flamefood-tree", "high"
 	},
 	GeneratedResources = {
@@ -41,3 +41,5 @@ DefineMapTemplate("nidavellir", {
 		"unit-copper-deposit", 8
 	}
 })
+
+SetMapTemplateHistoricalUnit("nidavellir", "unit-dwarven-town-hall", "Brising Clan", {128, 128}, -3000)

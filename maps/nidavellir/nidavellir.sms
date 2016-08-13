@@ -1,0 +1,19 @@
+-- Stratagus Map Setup
+
+LoadTileModels("scripts/tilesets/swamp.lua")
+
+ApplyMapTemplate("nidavellir")
+
+SetStartView(0, 76, 75)
+SetPlayerData(0, "RaceName", "dwarf")
+SetAiType(0, "land-attack")
+SetPlayerData(15, "RaceName", "neutral")
+
+unit = CreateUnit("unit-dwarven-axefighter", 0, {37, 48})
+SetUnitVariable(unit, "Active", false)
+unit = CreateUnit("unit-dwarven-axefighter", 0, {39, 48})
+SetUnitVariable(unit, "Active", false)
+unit = CreateUnit("unit-dwarven-miner", 0, {37, 50})
+unit = CreateUnit("unit-dwarven-miner", 0, {39, 50})
+
+CreateCritters()
