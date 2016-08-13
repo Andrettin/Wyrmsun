@@ -27,11 +27,11 @@
 
 AddTrigger("the-curved-swords", -- Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-roerby-swords/
 	function()
-		if (SyncRand(10000) ~= 0) then -- 0.01% chance this will trigger every time it is checked
+		if (SyncRand(100) ~= 0) then -- 1% chance this will trigger every time it is checked (and 1% for each player it is checked for, for a chance of 0.01% for a player that matches the conditions
 			return false
 		end
 		for i=0,14 do
-			if (GetPlayerData(i, "RaceName") == "germanic" and GetPlayerData(i, "UnitTypesCount", "unit-germanic-smithy") >= 1) then
+			if (SyncRand(100) == 0 and GetPlayerData(i, "RaceName") == "germanic" and GetPlayerData(i, "UnitTypesCount", "unit-germanic-smithy") >= 1) then
 				trigger_player = i
 				return true
 			end
@@ -60,11 +60,11 @@ AddTrigger("the-curved-swords", -- Source: http://natmus.dk/en/historical-knowle
 
 AddTrigger("the-sun-chariot", -- Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-sun-chariot/
 	function()
-		if (SyncRand(10000) ~= 0) then -- 0.01% chance this will trigger every time it is checked
+		if (SyncRand(100) ~= 0) then -- 0.01% chance this will trigger every time it is checked
 			return false
 		end
 		for i=0,14 do
-			if (GetPlayerData(i, "RaceName") == "germanic" and GetPlayerData(i, "UnitTypesCount", "unit-germanic-smithy") >= 1) then
+			if (SyncRand(100) == 0 and GetPlayerData(i, "RaceName") == "germanic" and GetPlayerData(i, "UnitTypesCount", "unit-germanic-smithy") >= 1) then
 				trigger_player = i
 				return true
 			end
@@ -93,11 +93,11 @@ AddTrigger("the-sun-chariot", -- Source: http://natmus.dk/en/historical-knowledg
 
 AddTrigger("the-sun-shields", -- Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
 	function()
-		if (SyncRand(10000) ~= 0) then -- 0.01% chance this will trigger every time it is checked
+		if (SyncRand(100) ~= 0) then -- 0.01% chance this will trigger every time it is checked
 			return false
 		end
 		for i=0,14 do
-			if (GetPlayerData(i, "RaceName") == "germanic" and GetPlayerData(i, "UnitTypesCount", "unit-germanic-smithy") >= 1 and GetPlayerData(i, "Allow", "upgrade-germanic-bronze-shield")) then
+			if (SyncRand(100) == 0 and GetPlayerData(i, "RaceName") == "germanic" and GetPlayerData(i, "UnitTypesCount", "unit-germanic-smithy") >= 1 and GetPlayerData(i, "Allow", "upgrade-germanic-bronze-shield")) then
 				trigger_player = i
 				return true
 			end
