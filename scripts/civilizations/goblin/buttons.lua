@@ -78,6 +78,22 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-long-sword",
 	ForUnit = {"unit-goblin-smithy"}
 } )
 
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-goblin-rimmed-shield",
+	Action = "research", Value = "upgrade-goblin-rimmed-shield",
+	Allowed = "check-single-research",
+	Key = "s", Hint = _("Research Rimmed ~!Shield"), Popup = "popup-research",
+	Description = _("+2 Armor for Swordsmen, Barbarians, Warlords, and Spearmen."),
+	ForUnit = {"unit-goblin-smithy"}
+} )
+
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-goblin-embossed-shield",
+	Action = "research", Value = "upgrade-goblin-embossed-shield",
+	Allowed = "check-single-research",
+	Key = "s", Hint = _("Research Embossed ~!Shield"), Popup = "popup-research",
+	Description = _("+2 Armor for Swordsmen, Barbarians, Warlords, and Spearmen."),
+	ForUnit = {"unit-goblin-smithy"}
+} )
+
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-2",
 	Action = "research", Value = "upgrade-goblin-catapult-projectile-1",
 	Allowed = "check-single-research",

@@ -41,6 +41,24 @@ DefineUpgrade("upgrade-goblin-long-sword", {
 	Item = "unit-goblin-long-sword"
 })
 
+DefineUpgrade("upgrade-goblin-rimmed-shield", {
+	Name = _("Rimmed Shield"),
+	Parent = "upgrade-bronze-shield",
+	Icon = "icon-goblin-rimmed-shield",
+	Civilization = "goblin",
+	Description = _("The addition of a metal rim to a wooden shield significantly improves its capability from fending off blows from swords and the like.\n\nEffect: +2 Armor for Swordsmen, Barbarians, Warlords, and Spearmen."),
+	Item = "unit-goblin-rimmed-shield"
+})
+
+DefineUpgrade("upgrade-goblin-embossed-shield", {
+	Name = _("Embossed Shield"),
+	Parent = "upgrade-iron-shield",
+	Icon = "icon-goblin-embossed-shield",
+	Civilization = "goblin",
+	Description = _("The shield boss, or metal centerpiece, made the shield better capable of deflecting attacks.\n\nEffect: +2 Armor for Swordsmen, Barbarians, Warlords, and Spearmen."),
+	Item = "unit-goblin-embossed-shield"
+})
+
 DefineUpgrade("upgrade-goblin-long-spear", {
 	Parent = "upgrade-long-spear",
 	Civilization = "goblin",
@@ -117,8 +135,24 @@ DefineModifier("upgrade-goblin-broad-sword",
 DefineModifier("upgrade-goblin-long-sword",
 	{"BasicDamage", 2},
 	{"Points", 10},
-	{"apply-to", "unit-goblin-militia"}, 
+	{"apply-to", "unit-goblin-militia"},
 	{"apply-to", "unit-goblin-swordsman"}, {"apply-to", "unit-goblin-barbarian"}, {"apply-to", "unit-goblin-warlord"}
+)
+
+DefineModifier("upgrade-goblin-rimmed-shield",
+	{"Armor", 2},
+	{"Points", 10},
+	{"apply-to", "unit-goblin-militia"},
+	{"apply-to", "unit-goblin-swordsman"}, {"apply-to", "unit-goblin-barbarian"}, {"apply-to", "unit-goblin-warlord"},
+	{"apply-to", "unit-goblin-spearman"}
+)
+
+DefineModifier("upgrade-goblin-embossed-shield",
+	{"Armor", 2},
+	{"Points", 10},
+	{"apply-to", "unit-goblin-militia"},
+	{"apply-to", "unit-goblin-swordsman"}, {"apply-to", "unit-goblin-barbarian"}, {"apply-to", "unit-goblin-warlord"},
+	{"apply-to", "unit-goblin-spearman"}
 )
 
 DefineModifier("upgrade-goblin-long-spear",
@@ -201,6 +235,10 @@ DefineDependency("upgrade-goblin-long-sword",
 	{"upgrade-goblin-broad-sword"}
 )
 
+DefineDependency("upgrade-goblin-embossed-shield",
+	{"upgrade-goblin-embossed-shield"}
+)
+
 DefineDependency("unit-goblin-guard-tower",
 	{"unit-goblin-lumber-mill", "upgrade-goblin-masonry"}
 )
@@ -209,7 +247,8 @@ DefineDependency("unit-goblin-war-machine",
 	{"unit-goblin-smithy", "unit-goblin-lumber-mill"})
 
 DefineDependency("unit-goblin-glider",
-	{"unit-goblin-lumber-mill"})
+	{"unit-goblin-lumber-mill"}
+)
 
 DefineDependency("upgrade-goblin-pike",
 	{"upgrade-goblin-long-spear"}

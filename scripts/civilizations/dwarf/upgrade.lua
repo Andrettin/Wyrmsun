@@ -61,7 +61,7 @@ DefineUpgrade("upgrade-dwarven-shield-1", {
 	Parent = "upgrade-bronze-shield",
 	Icon = "icon-dwarven-shield-2",
 	Civilization = "dwarf",
-	Description = _("Earlier shields provided little more than a minimal degree of protection. With the development of heater shields, dwarven soldiers have a greater chance of survival in battle.\n\nEffect: +2 Armor for Axefighters, Steelclads, Stonelords and Yale Riders."),
+	Description = _("Earlier shields provided little more than a minimal degree of protection. With the development of heater shields, dwarven soldiers have a greater chance of survival in battle.\n\nEffect: +2 Armor for Axefighters, Steelclads, Stonelords, Guards and Yale Riders."),
 	Item = "unit-heater-shield"
 })
 
@@ -70,7 +70,7 @@ DefineUpgrade("upgrade-dwarven-shield-2", {
 	Parent = "upgrade-iron-shield",
 	Icon = "icon-dwarven-shield-3",
 	Civilization = "dwarf",
-	Description = _("As shield-making techniques improved, the creation of thrymgjol shields became possible. These shields receive their name from the impregnable gate crafted by the sons of the dwarf Solblindi, due to the mighty protection they give their users.\n\nEffect: +2 Armor for Axefighters, Steelclads, Stonelords and Yale Riders."),
+	Description = _("As shield-making techniques improved, the creation of thrymgjol shields became possible. These shields receive their name from the impregnable gate crafted by the sons of the dwarf Solblindi, due to the mighty protection they give their users.\n\nEffect: +2 Armor for Axefighters, Steelclads, Stonelords, Guards and Yale Riders."),
 	Background = _("The Thrymgjol gate and its makers, the sons of the dwarf Solblindi, are mentioned in the ~<Svipdagsmol~> of Norse mythology. The name \"Thrymgjol\" means \"loud-clanging\"."),
 	Quote = _("\"Thrymgjol they call it; 'twas made by the three,\nThe sons of Solblindi;\nAnd fast as a fetter the farer it holds,\nWhoever shall lift the latch.\"\n- Dwarven Traditional Poetry (The Warder)"),
 	Item = "unit-thrymgjol-shield"

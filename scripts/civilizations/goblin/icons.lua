@@ -200,6 +200,18 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-goblin-rimmed-shield",
+	Size = {46, 38},
+	File = "goblin/icons/rimmed_shield.png"
+})
+
+DefineIcon({
+	Name = "icon-goblin-embossed-shield",
+	Size = {46, 38},
+	File = "goblin/icons/embossed_shield.png"
+})
+
+DefineIcon({
 	Name = "icon-goblin-patrol-land",
 	Size = {46, 38},
 	File = "goblin/icons/patrol_land.png"

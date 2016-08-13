@@ -25,5 +25,19 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-Load("scripts/map_templates/earth.lua")
-Load("scripts/map_templates/nidavellir.lua")
+DefineMapTemplate("nidavellir", {
+	Name = "Nidavellir",
+	Width = 256,
+	Height = 256,
+	BaseTerrain = "dry-mud",
+	GeneratedTerrains = {
+		"mud", "very-high",
+		"rock-swamp", "medium",
+		"flamefood-tree", "high"
+	},
+	GeneratedResources = {
+		"unit-gold-deposit", 8,
+		"unit-silver-deposit", 8,
+		"unit-copper-deposit", 8
+	}
+})

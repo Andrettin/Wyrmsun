@@ -82,7 +82,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-2",
 	Action = "research", Value = "upgrade-dwarven-shield-1",
 	Allowed = "check-single-research",
 	Key = "s", Hint = _("Research Heater ~!Shield"), Popup = "popup-research",
-	Description = _("+2 Armor for Axefighters, Steelclads, Stonelords and Yale Riders."),
+	Description = _("+2 Armor for Axefighters, Steelclads, Stonelords, Guards and Yale Riders."),
 	ForUnit = {"unit-dwarven-smithy", "unit-brising-smithy"}
 } )
 
@@ -90,7 +90,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-3",
 	Action = "research", Value = "upgrade-dwarven-shield-2",
 	Allowed = "check-single-research",
 	Key = "s", Hint = _("Research Thrymgjol ~!Shield"), Popup = "popup-research",
-	Description = _("+2 Armor for Axefighters, Steelclads, Stonelords and Yale Riders."),
+	Description = _("+2 Armor for Axefighters, Steelclads, Stonelords, Guards and Yale Riders."),
 	ForUnit = {"unit-dwarven-smithy", "unit-brising-smithy"}
 } )
 

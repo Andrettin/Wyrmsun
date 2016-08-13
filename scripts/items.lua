@@ -241,10 +241,28 @@ DefineUnitType("unit-bronze-shield", { Name = _("Bronze Shield"),
 	Armor = 2
 } )
 
+DefineUnitType("unit-goblin-rimmed-shield", {
+	Name = _("Rimmed Shield"),
+	Parent = "unit-template-item",
+	Image = {"file", "dwarf/items/round_shield.png", "size", {13, 13}},
+	Icon = "icon-goblin-rimmed-shield",
+	ItemClass = "shield",
+	Armor = 2
+} )
+
 DefineUnitType("unit-iron-shield", { Name = _("Iron Shield"),
 	Parent = "unit-template-item",
 	Image = {"file", "teuton/items/saxon_shield.png", "size", {32, 32}},
 	Icon = "icon-teuton-iron-shield",
+	ItemClass = "shield",
+	Armor = 4
+} )
+
+DefineUnitType("unit-goblin-embossed-shield", {
+	Name = _("Embossed Shield"),
+	Parent = "unit-template-item",
+	Image = {"file", "dwarf/items/round_shield.png", "size", {13, 13}},
+	Icon = "icon-goblin-embossed-shield",
 	ItemClass = "shield",
 	Armor = 4
 } )
