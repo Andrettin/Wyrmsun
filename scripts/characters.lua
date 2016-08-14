@@ -60,7 +60,6 @@ function DefineCharacter(character, data)
 	OldDefineCharacter(character, data)
 end
 
-Load("scripts/civilizations/egyptian/characters.lua")
 Load("scripts/civilizations/finnish/characters.lua")
 Load("scripts/civilizations/germanic/characters.lua")
 Load("scripts/civilizations/gnome/characters.lua")

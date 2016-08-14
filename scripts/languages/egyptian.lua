@@ -28,7 +28,8 @@
 DefineLanguageWord("Amenofis", { -- male personal name; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 112.
 	Language = "egyptian",
 	Type = "noun",
-	Meanings = {}
+	Meanings = {},
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Ankh", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 67, 71, 76.
@@ -130,7 +131,8 @@ DefineLanguageWord("Irto", { -- name of a serpent in Egyptian mythology; Source:
 DefineLanguageWord("Isi", { -- male personal name; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 81.
 	Language = "egyptian",
 	Type = "noun",
-	Meanings = {}
+	Meanings = {},
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Iuf", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 61.
@@ -196,7 +198,8 @@ DefineLanguageWord("Sekhem", { -- Source: Claude Traunecker, "Os Deuses do Egito
 DefineLanguageWord("Seti", { -- male personal name; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 90.
 	Language = "egyptian",
 	Type = "noun",
-	Meanings = {}
+	Meanings = {},
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Uas", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 67, 76.

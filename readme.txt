@@ -82,7 +82,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused magic affixes set to items to not be saved if the item type didn't have any uniques.
 - Fixed issue which caused a crash when viewing the properties of amulets and books.
 - Which literary work a scroll or book contains can now be set in the editor.
-- Terrain types are no longer limited to a tileset, and can now be placed in any map.
+- Terrain types are no longer limited to a tileset, and can now be placed on any map.
 
 * Factions
 - Added Du'urdin gnomish polity.

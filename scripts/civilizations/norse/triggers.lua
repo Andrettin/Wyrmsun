@@ -114,50 +114,6 @@ AddTrigger("the-winter-abode-end", -- Source: Snorri Sturlson, "Heimskringla", 1
 	end
 )
 
-AddTrigger("the-chieftains-sparrow", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 231-232.
-	function()
-		if (SyncRand(100) ~= 0) then -- 1% chance this will trigger every time it is checked (and 1% for each player it is checked for, for a chance of 0.01% for a player that matches the conditions
-			return false
-		end
-		for i=0,14 do
-			if (SyncRand(100) == 0 and (GetPlayerData(i, "Faction") == "Yngling Tribe" or GetPlayerData(i, "Faction") == "Swede Tribe")) then
-				trigger_player = i
-				return true
-			end
-		end
-		return false
-	end,
-	function()
-		Event(
-			"The Chieftain's Sparrow",
-			"My chieftain, I bring sad news of your beloved trained sparrow. A few days ago it flew to a farm called Varva in Reidgotaland. Upon seeing the bird close to his crops, a peasant threw a stone and killed it! What are we to do?",
-			trigger_player,
-			{"~!Varva shall burn", "It was just a bird..."},
-			{function(s)
-				-- function for adding quest
-			end},
-			nil,
-			nil,
-			false,
-			{
-				OptionTooltips = {"Receive the The Chieftain's Sparrow quest"}
-			}
-		)
-		return false
-	end
-)
-
-AddTrigger("the-chieftains-sparrow-end", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 231-232.
-	function()
-		-- should check if the player has the quest, and also if Varva has been destroyed
-		return false
-	end,
-	function()
-		-- should set that the quest has been completed
-		return false
-	end
-)
-
 AddTrigger("marauding-finland", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 233.
 	function()
 		if (SyncRand(100) ~= 0) then -- 1% chance this will trigger every time it is checked (and 1% for each player it is checked for, for a chance of 0.01% for a player that matches the conditions
