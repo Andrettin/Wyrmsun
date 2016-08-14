@@ -135,6 +135,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Upgrades
 - Added goblin Broad Sword and Long Sword upgrades (icons by Jinn).
+- Added goblin Rimmed Shield and Embossed Shield upgrades (icons by Exidelo).
 
 -----------------------------------------------------------------------
 - 2.3.1
