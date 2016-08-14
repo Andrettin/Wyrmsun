@@ -303,35 +303,6 @@ function EventTriggers()
 		)
 	end
 				
-	-- The King's Sparrow
-	AddTrigger("the-kings-sparrow",
-		function()
-			if (GameCycle == 0) then
-				return false
-			end
-			if ((SyncRand(100) + 1) <= 1 and GetFactionExists("Gothland")) then
-				for i=0,14 do
-					if (GetPlayerData(i, "RaceName") == "norse" and GetPlayerData(i, "Name") == "Sweden") then
-						player = i
-						return true
-					end
-				end
-			end
-			return false
-		end,
-		function() 
-			Event(
-				"The King's Sparrow",
-				"Our king Dag, from the line of Swegde, has sent his trained sparrow to the land of the Goths, but the bird has failed to return... Upon inquiring about it, the king has learned that the bird had been killed at a farm called Varva, by a peasant who was angry that the bird was eating his grain. The king, furious at the loss of his sparrow, has given order for an army to be sent to the land of the Goths and plunder the farm.",
-				player,
-				{"~!OK"},
-				{function(s)
-				end}
-			)
-			return false
-		end
-	)
-
 	-- Varva Burns
 	AddTrigger("varva-burns",
 		function()
@@ -357,92 +328,6 @@ function EventTriggers()
 				player,
 				{"~!OK"},
 				{function(s)
-				end}
-			)
-			return false
-		end
-	)
-
-	-- Marauding Finland
-	AddTrigger("marauding-finland",
-		function()
-			if (GameCycle == 0) then
-				return false
-			end
-			if ((SyncRand(100) + 1) <= 1 and GetFactionExists("Finland")) then
-				for i=0,14 do
-					if (GetPlayerData(i, "RaceName") == "norse" and GetPlayerData(i, "Name") == "Sweden") then
-						player = i
-						return true
-					end
-				end
-			end
-			return false
-		end,
-		function() 
-			Event(
-				"Marauding Finland",
-				"Our king Agne desires to gather an army and sail forth to Finland to raid it. We have been told that a local chieftain called Froste is gathering the Finns to resist our attempt upon them. Let's get their riches!",
-				player,
-				{"~!OK"},
-				{function(s)
-				end}
-			)
-			return false
-		end
-	)
-
-	-- Finland is Plundered
-	AddTrigger("finland-is-plundered",
-		function()
-			if (GameCycle == 0) then
-				return false
-			end
-			for i=0,14 do
-				if (GetPlayerData(i, "RaceName") == "norse" and GetPlayerData(i, "Name") == "Sweden") then
-					player = i
-					return true
-				end
-			end
-			return false
-		end,
-		function() 
-			Event(
-				"Finland is Plundered",
-				"We have raided Finland, and it is now time to get the riches which we have found back to Sweden. The king has gotten for himself a golden necklace which he keeps on him at all times. He's also taking Skjalv - Froste's daughter - back to Sweden, and has decided to marry the lady. Bring our forces back to one of our sentry towers.",
-				player,
-				{"~!OK"},
-				{function(s)
-				end}
-			)
-			return false
-		end
-	)
-
-	-- The Golden Hanging
-	AddTrigger("the-golden-hanging",
-		function()
-			if (GameCycle == 0) then
-				return false
-			end
-			for i=0,14 do
-				if (GetPlayerData(i, "RaceName") == "norse" and GetPlayerData(i, "Name") == "Sweden") then
-					player = i
-					return true
-				end
-			end
-			return false
-		end,
-		function() 
-			Event(
-				"The Golden Hanging",
-				"Our king has been found hanged by the very golden necklace which he had plundered from the Finns! Skjalv has been seen along with other captive Finns, taking to ships to return to her homeland... We hope that at least the death of our king will sate the Finns' thirst for revenge.",
-				player,
-				{"~!OK"},
-				{function(s)
-					if (mapinfo.description == "Finland") then
-						ActionVictory()
-					end
 				end}
 			)
 			return false

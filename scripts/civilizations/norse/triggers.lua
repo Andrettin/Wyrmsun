@@ -39,16 +39,11 @@ AddTrigger("the-journey-to-godheim", -- Source: Snorri Sturlson, "Heimskringla",
 		return false
 	end,
 	function()
-		local hero_name = ""
-		local odin_name = GetDeityData("odin", "CulturalName", GetPlayerData(trigger_player, "RaceName"))
-		if (odin_name == "") then
-			odin_name = GetDeityData("odin", "Name")
-		end
 		Event(
 			"The Journey to Asaland",
-			"The hero " .. hero_name .. " has made a solemn vow to seek the fabled home of our ancestors, Asaland, where our god " .. odin_name .. " is said to dwell.",
+			"The fabled home of our ancestors, Asaland, lies far to the southeast beyond the great Vanaquisl river. Sending a party to travel there could grant us valuable insight on our heritage.",
 			trigger_player,
-			{"~!Off we go!"},
+			{"~!Off we go!", "It is too ~!perilous"},
 			{function(s)
 				-- function for adding quest
 			end},
@@ -91,9 +86,9 @@ AddTrigger("the-winter-abode", -- Source: Snorri Sturlson, "Heimskringla", 1844,
 		local hero_name = ""
 		Event(
 			"The Winter Abode",
-			"The hero " .. hero_name .. " has decided to take up his winter abode in Finland with a local sage.", -- in the original, with Snio the Old
+			"Snio the Old has invited you to send one of your champions to take up their winter abode in Finland with him, in a place of honor.",
 			trigger_player,
-			{"~!Off we go!"},
+			{"~!Accept", "~!Decline"},
 			{function(s)
 				-- function for adding quest
 			end},
@@ -101,7 +96,7 @@ AddTrigger("the-winter-abode", -- Source: Snorri Sturlson, "Heimskringla", 1844,
 			nil,
 			false,
 			{
-				OptionTooltips = {"Receive the The Winter Abode quest"}
+				OptionTooltips = {"Receive the The Winter Abode quest", ""}
 			}
 		)
 		return false
@@ -135,7 +130,7 @@ AddTrigger("the-chieftains-sparrow", -- Source: Snorri Sturlson, "Heimskringla",
 	function()
 		Event(
 			"The Chieftain's Sparrow",
-			"My chieftain, I bring sad news of your beloved and well-traveled sparrow. A few days ago it flew to a farm called Varva in Reidgotaland. Upon seeing the bird close to his crops, a peasant threw a stone and killed it! What are we to do?",
+			"My chieftain, I bring sad news of your beloved trained sparrow. A few days ago it flew to a farm called Varva in Reidgotaland. Upon seeing the bird close to his crops, a peasant threw a stone and killed it! What are we to do?",
 			trigger_player,
 			{"~!Varva shall burn", "It was just a bird..."},
 			{function(s)
@@ -182,7 +177,7 @@ AddTrigger("marauding-finland", -- Source: Snorri Sturlson, "Heimskringla", 1844
 			"Marauding Finland",
 			"Finland is ripe for plundering this summer. Although the locals are united under their chieftain, the Finnish forces are no match for ours. Shall we proceed with the raid?",
 			trigger_player,
-			{"~!Blood and plunder!", "Give ~!peace a chance"},
+			{"Their ~!riches shall be ours!", "Give ~!peace a chance"},
 			{function(s)
 				-- function for adding quest
 			end},
