@@ -41,7 +41,7 @@ DefineQuest("trors-inheritance", {
 
 DefineQuest("the-chieftains-sparrow", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 231-232.
 	Name = "The Chieftain's Sparrow",
-	Icon = "icon-gryphon",
+	Icon = "icon-gryphon", -- should be a sparrow
 	Description = "My chieftain, I bring sad news of your beloved trained sparrow. A few days ago it flew to a farm called Varva in Reidgotaland. Upon seeing the bird close to his crops, a peasant threw a stone and killed it! Shall we take revenge and burn Varva to the ground?",
 	World = "Earth",
 	Civilization = "norse",
