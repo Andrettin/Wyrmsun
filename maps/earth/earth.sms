@@ -8,16 +8,16 @@ end
 
 ApplyMapTemplate("earth", 4022, 667)
 
-SetStartView(0, 76, 75)
+SetStartView(0, 16, 16)
 SetPlayerData(0, "RaceName", "germanic")
 SetAiType(0, "land-attack")
 SetPlayerData(15, "RaceName", "neutral")
 
-unit = CreateUnit("unit-germanic-warrior", 0, {37, 48})
+unit = CreateUnit("unit-germanic-warrior", 0, {16, 16})
 SetUnitVariable(unit, "Active", false)
-unit = CreateUnit("unit-germanic-warrior", 0, {39, 48})
+unit = CreateUnit("unit-germanic-warrior", 0, {16, 16})
 SetUnitVariable(unit, "Active", false)
-unit = CreateUnit("unit-germanic-worker", 0, {37, 50})
-unit = CreateUnit("unit-germanic-worker", 0, {39, 50})
+unit = CreateUnit("unit-germanic-worker", 0, {16, 16})
+unit = CreateUnit("unit-germanic-worker", 0, {16, 16})
 
 CreateCritters()

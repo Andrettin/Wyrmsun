@@ -36,10 +36,18 @@ DefineMapTemplate("earth", {
 		"dirt", "high",
 		"pine-tree", "high"
 	},
+	PlayerLocationGeneratedTerrains = {
+		"grass", "extremely-high",
+		"pine-tree", "high",
+		"rock", "low"
+	},
 	GeneratedResources = {
 		"unit-gold-deposit", 8,
 		"unit-silver-deposit", 8,
 		"unit-copper-deposit", 8
+	},
+	PlayerLocationGeneratedResources = {
+		"unit-gold-deposit", 1
 	}
 })
 
@@ -533,6 +541,3 @@ SetMapTemplateResource("earth", "unit-silver-deposit", {4194, 928}, 0, "smitna")
 SetMapTemplateHistoricalUnit("earth", "unit-germanic-town-hall", "Asa Tribe", {4243, 692}, -2800) -- Sigtun / Segiztûna; in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples; "Segiztûna" is a rendering of "Sigtun" in Proto-Germanic, since the Ynglinga saga the city was founded when the cultural ancestors of the Germanic peoples (= Odin's people) first settled Scandinavia
 
 SetMapTemplateHistoricalUnit("earth", "unit-germanic-town-hall", "Skeldung Tribe", {4112, 784}, -2800) -- Leidre / Lejre; Funnel Beaker culture ended in Zealand in 2800 BC and the Corded Ware culture (neolithic) began; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 38. In the Ynglinga Saga, Odin set his son Skjöldr to rule in Leidre after their people (who here we equate with the cultural ancestors of the Germanics who migrated to Scandinavia) conquered the land
-
-SetMapTemplateResource("earth", "unit-gold-deposit", {4237, 696}) -- gold mine for the Asa Tribe's starting location
-SetMapTemplateResource("earth", "unit-gold-deposit", {4112, 791}) -- gold mine for the Skeldung Tribe's starting location
