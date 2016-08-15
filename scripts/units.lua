@@ -3535,6 +3535,7 @@ DefineUnitType("unit-dungeon-wall", {
 	ExplodeWhenKilled = "missile-explosion",
 	Type = "land",
 	Indestructible = true, Building = true, VisibleUnderFog = true, Wall = true,
+	HiddenInEditor = true,
 	Sounds = {
 		"dead", "building-destroyed"
 	}

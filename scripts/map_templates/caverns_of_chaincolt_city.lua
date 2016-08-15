@@ -36,8 +36,9 @@ DefineMapTemplate("caverns-of-chaincolt-city", { -- From Battle for Wesnoth: The
 		"rockbound-cave-floor", "medium",
 		"cave-wall", "high"
 	},
-	GeneratedResources = {
-		"unit-gold-deposit", 1 -- starting gold mine for the Norlund Clan
+	PlayerLocationGeneratedResources = {
+		"unit-gold-deposit", 1,
+		"unit-wood-pile", 16
 	}
 })
 
