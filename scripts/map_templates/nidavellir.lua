@@ -32,12 +32,13 @@ DefineMapTemplate("nidavellir", {
 	BaseTerrain = "dry-mud",
 	GeneratedTerrains = {
 		"mud", "very-high",
+		"shallow-water-swamp", "medium",
 		"rock-swamp", "high",
 		"flamefood-tree", "high"
 	},
 	PlayerLocationGeneratedTerrains = {
 		"dry-mud", "extremely-high",
-		"flamefood-tree", "high",
+		"flamefood-tree", "low",
 		"rock-swamp", "low"
 	},
 	GeneratedResources = {
@@ -50,4 +51,12 @@ DefineMapTemplate("nidavellir", {
 	}
 })
 
-Load("scripts/map_templates/caverns_of_chaincolt_city.lua")
+SetMapTemplateUnit("nidavellir", "unit-dwarven-town-hall", "Brising Clan", {-1, -1})
+SetMapTemplateUnit("nidavellir", "unit-gnomish-town-hall", "Acthnic Tribe", {-1, -1})
+SetMapTemplateUnit("nidavellir", "unit-gnomish-town-hall", "Cubital Tribe", {-1, -1})
+SetMapTemplateUnit("nidavellir", "unit-gnomish-town-hall", "Sagan Tribe", {-1, -1})
+SetMapTemplateUnit("nidavellir", "unit-gnomish-town-hall", "Vulcan Tribe", {-1, -1})
+SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "Khag Tribe", {-1, -1})
+SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "Lggi Tribe", {-1, -1})
+
+--Load("scripts/map_templates/caverns_of_chaincolt_city.lua")

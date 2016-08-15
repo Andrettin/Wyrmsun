@@ -266,7 +266,7 @@ DefineTerrainType("shallow-water-swamp", {
 	Name = "Shallow Water",
 	Flags = {"water"},
 --	InnerBorderTerrains = {"dirt", "mud", "rockbound-cave-floor", "cave-floor"},
-	InnerBorderTerrains = {"mud", "dirt"},
+	InnerBorderTerrains = {"mud"},
 	Graphics = "terrain/shallow_water.png",
 	SolidTiles = {17, 20, 23},
 	TransitionTiles = {
