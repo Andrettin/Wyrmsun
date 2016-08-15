@@ -231,7 +231,7 @@ DefineSpecies("unicorn", {
 	Name = "Unicorn",
 	Genus = "unicornis",
 	Homeworld = "Alfheim",
-	Terrains = {"grass"}, -- unicorns live in woodlands
+--	Terrains = {"grass"}, -- unicorns live in woodlands
 	EvolvesFrom = {"anchitherium-cursor", "hipparion-primigenium", "merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"
