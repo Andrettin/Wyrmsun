@@ -817,7 +817,8 @@ DefineUnitType("unit-gryphon", {
 	}
 } )
 
-DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
+DefineUnitType("unit-wyrm", {
+	Name = _("Wyrm"),
 	Parent = "unit-template-fauna-unit",
 	Species = "wyrm",
 	Class = "large-predator",
