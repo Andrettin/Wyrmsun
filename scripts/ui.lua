@@ -1006,7 +1006,7 @@ if not (ui_loaded_first_time) then
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
 				{ 	Condition = {HasDescription = true}, HighlightColor = "yellow",
-					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
 				}, 
 				-- Move  hint
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "move", Speed = "only"}, -- speed as a proxy for not being a building

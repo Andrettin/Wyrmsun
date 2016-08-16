@@ -541,6 +541,28 @@ DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 	}
 })
 
+-- Quest Buttons
+
+--[[
+DefineButton( { Pos = 9, Level = 0,
+	Action = "quest", Value = 0,
+	Key = "", Hint = _("Quest"), Popup = "popup-commands",
+	ForUnit = {"unit-latin-barracks", "unit-germanic-barracks", "unit-teuton-barracks", "unit-dwarven-barracks", "unit-gnomish-barracks", "unit-goblin-barracks"}
+})
+
+DefineButton( { Pos = 10, Level = 0,
+	Action = "quest", Value = 1,
+	Key = "", Hint = _("Quest"), Popup = "popup-commands",
+	ForUnit = {"unit-latin-barracks", "unit-germanic-barracks", "unit-teuton-barracks", "unit-dwarven-barracks", "unit-gnomish-barracks", "unit-goblin-barracks"}
+})
+
+DefineButton( { Pos = 11, Level = 0,
+	Action = "quest", Value = 2,
+	Key = "", Hint = _("Quest"), Popup = "popup-commands",
+	ForUnit = {"unit-latin-barracks", "unit-germanic-barracks", "unit-teuton-barracks", "unit-dwarven-barracks", "unit-gnomish-barracks", "unit-goblin-barracks"}
+})
+--]]
+
 -- Load the buttons of all civilizations
 
 Load("scripts/civilizations/celt/buttons.lua")
