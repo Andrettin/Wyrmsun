@@ -36,18 +36,14 @@ DefineMapTemplate("earth", {
 		"dirt", "high",
 		"pine-tree", "high"
 	},
-	PlayerLocationGeneratedTerrains = {
-		"grass", "extremely-high",
-		"pine-tree", "high",
-		"rock", "low"
-	},
 	GeneratedResources = {
 		"unit-gold-deposit", 8,
 		"unit-silver-deposit", 8,
 		"unit-copper-deposit", 8
 	},
 	PlayerLocationGeneratedResources = {
-		"unit-gold-deposit", 1
+		"unit-gold-deposit", 1,
+		"unit-wood-pile", 16
 	}
 })
 
