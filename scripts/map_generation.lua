@@ -1379,7 +1379,6 @@ function CreateCritters(arg)
 					or (GetUnitTypeData(critter_unit_type, "Type") == "fly-low" and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false)
 					or (GetUnitTypeData(critter_unit_type, "Type") == "fly" and GetTileTerrainHasFlag(RandomX, RandomY, "air-unpassable") == false)
 				)
-				and GetArrayIncludes(GetSpeciesData(GetUnitTypeData(critter_unit_type, "Species"), "Terrains"), GetTileTerrainName(RandomX, RandomY))
 			) then
 				local unit_quantity = 0
 				for i=0,14 do
