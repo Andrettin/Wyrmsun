@@ -1321,6 +1321,7 @@ function CreateCritters(arg)
 		
 		local unit_type_list = GetUnitTypes()
 		local critter_types = {}
+		local critter_terrains = {}
 		for i=1,table.getn(unit_type_list) do
 			local species = GetUnitTypeData(unit_type_list[i], "Species")
 			if (
@@ -1355,6 +1356,7 @@ function CreateCritters(arg)
 						end
 					end
 					table.insert(critter_types, critter_unit_type)
+					table.insert(critter_terrains, species_terrains)
 				end
 			end
 		end
@@ -1365,7 +1367,8 @@ function CreateCritters(arg)
 		
 		-- create critters
 		while (Count > 0 and WhileCount < critter_number * 1000) do
-			local critter_unit_type = critter_types[SyncRand(table.getn(critter_types)) + 1]
+			local chosen_critter = SyncRand(table.getn(critter_types)) + 1
+			local critter_unit_type = critter_types[chosen_critter]
 			if (critter_unit_type == "") then
 				Count = 0
 				break
@@ -1379,6 +1382,7 @@ function CreateCritters(arg)
 					or (GetUnitTypeData(critter_unit_type, "Type") == "fly-low" and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false)
 					or (GetUnitTypeData(critter_unit_type, "Type") == "fly" and GetTileTerrainHasFlag(RandomX, RandomY, "air-unpassable") == false)
 				)
+				and (GetArrayIncludes(critter_terrains[chosen_critter], GetTileTerrainName(RandomX, RandomY)) or GetArrayIncludes(GetSpeciesData(GetUnitTypeData(critter_unit_type, "Species"), "Terrains"), GetTileTerrainName(RandomX, RandomY)))
 			) then
 				local unit_quantity = 0
 				for i=0,14 do
