@@ -53,7 +53,11 @@ DefineQuest("the-chieftains-sparrow", { -- Source: Snorri Sturlson, "Heimskringl
 			return false
 		end
 	end,
+	CompletionEffects = function(s)
+		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 500)
+	end,
 	Objectives = {"- Destroy Varva"},
+	Rewards = "+500 Gold",
 	Hidden = true
 })
 
