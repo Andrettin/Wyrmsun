@@ -154,9 +154,9 @@ DefineCivilization("ettin", {
 		"move", "icon-dwarven-boots",
 		"stop", "icon-goblin-wooden-shield",
 		"attack", "icon-dwarven-battle-axe",
-		"patrol", "icon-dwarven-patrol-land",
-		"stand-ground", "icon-dwarven-stand-ground",
-		"return-goods", "icon-dwarven-return-goods"
+		"patrol", "icon-goblin-patrol-land",
+		"stand-ground", "icon-goblin-stand-ground",
+		"return-goods", "icon-goblin-return-goods"
 	},
 	UIFillers = {
 		"dwarf/ui/filler_bottom.png", 380, -181,
@@ -239,7 +239,7 @@ DefineCivilization("goblin", {
 		"stop", "icon-goblin-wooden-shield",
 		"attack", "icon-goblin-short-sword",
 		"patrol", "icon-goblin-patrol-land",
-		"stand-ground", "icon-germanic-stand-ground",
+		"stand-ground", "icon-goblin-stand-ground",
 		"return-goods", "icon-goblin-return-goods"
 	},
 	UIFillers = {
@@ -263,7 +263,7 @@ DefineCivilization("kobold", {
 	YearLabel = "YU", -- Years Untersberg
 	ButtonIcons = {
 		"attack", "icon-gnomish-thrusting-sword-1",
-		"stand-ground", "icon-germanic-stand-ground"
+		"stand-ground", "icon-goblin-stand-ground"
 	},
 	Description = _("Kobolds live in the deep caves of Nidavellir, and worship wyrms as sacred ancestors. They share the dwarven passion for mining and metals, but not their technological advancement. Although kobolds can be inventive, their isolation from other communities has made the spread of progress to their lands more difficult. Being the sole intelligent reptilian race in Nidavellir, they feel threatened by the presence of dwarves, gnomes and goblins - all of which they call \"breastlings\".")
 })

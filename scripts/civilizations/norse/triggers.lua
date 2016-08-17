@@ -41,7 +41,7 @@ AddTrigger("the-journey-to-godheim", -- Source: Snorri Sturlson, "Heimskringla",
 	function()
 		Event(
 			"The Journey to Asaland",
-			"The fabled home of our ancestors, Asaland, lies far to the southeast beyond the great Vanaquisl river. Sending a party to travel there could grant us valuable insight on our heritage.",
+			"The fabled home of our ancestors, Asaland, lies far to the southeast beyond the great Vanaquisl river. Sending a party to travel there could grant us valuable insight into our heritage.",
 			trigger_player,
 			{"~!Off we go!", "It is too ~!perilous"},
 			{function(s)

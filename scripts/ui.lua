@@ -1001,6 +1001,12 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {ButtonAction = "cast-spell"},
 					More = {"Costs", {Font = PopupFont}}, HighlightColor = "yellow",
 				},
+				{ 	Margin = {1, 1}, Condition = {ButtonAction = "quest"},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {ButtonAction = "quest"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = _("Click to accept quest"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
@@ -1040,7 +1046,7 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {ButtonAction = "cast-spell", AutoCast = "only"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = _("~<CTRL~>-click on the button toggles autocast"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
-				}
+				},
 		}	
 	})
 

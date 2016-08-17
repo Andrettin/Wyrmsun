@@ -103,6 +103,18 @@ UnitMove = {"unbreakable begin",
 	"frame 20", "move 3", "wait 1", "frame 0", "move 2", "goto end",
 	"label end", "unbreakable end", "wait 1",
 }
+
+UnitMoveNewMovement = {"unbreakable begin", 
+	"label speed_10", -- 16 waits (this is the reference speed for other ones)
+	"frame 5", "move 3", "wait 2", "frame 5", "move 3", "wait 1",
+    "frame 10", "move 3", "wait 2", "frame 10", "move 2", "wait 1",
+    "frame 10", "move 3", "wait 1", "frame 15", "move 2", "wait 1",
+    "frame 15", "move 3", "wait 2", "frame 20", "move 3", "wait 1",
+    "frame 20", "move 3", "wait 2", "frame 20", "move 2", "wait 1",
+    "frame 25", "move 3", "wait 1", "frame 25", "move 2", "goto end",
+	"label end", "unbreakable end", "wait 1",
+}
+
 UnitMeleeAttack = {
 	"unbreakable begin",
   	"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
@@ -114,6 +126,12 @@ UnitMeleeAttackNew = {
     "frame 40", "attack", "wait 5", "frame 45", "wait 3",
     "frame 25", "wait 10", "frame 25", "unbreakable end", "wait 1",
 }
+UnitMeleeAttackNewMovement = {
+	"unbreakable begin",
+  	"frame 30", "wait 3", "frame 35", "wait 3", "frame 40", "wait 3",
+  	"frame 45", "attack", "wait 5", "frame 0", "wait 10", "frame 0",
+	"unbreakable end", "wait 1",
+}
 WorkerAttack = {
 	"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
     "frame 40", "attack", "wait 5", "frame 45", "wait 3",
@@ -122,6 +140,11 @@ WorkerAttack = {
 UnitDeath = {
 	"unbreakable begin",
 	"frame 45", "wait 3", "frame 50", "wait 3", "frame 55", "wait 100", "frame 55",
+	"unbreakable end", "wait 1",
+}
+UnitDeathNewMovement = {
+	"unbreakable begin",
+	"frame 50", "wait 3", "frame 55", "wait 3", "frame 60", "wait 100", "frame 60",
 	"unbreakable end", "wait 1",
 }
 WorkerDeath = {
@@ -191,6 +214,13 @@ DefineAnimations("animations-melee-unit-new", {
 	Move = UnitMove,
 	Attack = UnitMeleeAttackNew,
 	Death = WorkerDeath
+})
+
+DefineAnimations("animations-melee-unit-new-movement", {
+	Still = UnitStill,
+	Move = UnitMoveNewMovement,
+	Attack = UnitMeleeAttackNewMovement,
+	Death = UnitDeathNewMovement
 })
 
 DefineAnimations("animations-worker", {
