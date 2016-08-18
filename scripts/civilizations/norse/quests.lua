@@ -121,6 +121,29 @@ DefineQuest("revenge-for-gudlog", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Hidden = true
 })
 
+DefineQuest("the-roadmaker", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 247-248.
+	Name = "The Roadmaker", -- Onund Roadmaker was a Swedish king known for building roads through all of Sweden
+	Icon = "icon-teuton-swordsman", -- should be a road
+	Description = "Our realm has many uninhabited wildernesses which take a long time to journey through. If we are to increase our settled areas, roads should be built throughout the land.",
+	World = "Earth",
+	Civilization = "norse",
+	PlayerColor = "blue",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "Yngling Tribe" or GetPlayerData(trigger_player, "Faction") == "Swede Tribe" or GetPlayerData(trigger_player, "Faction") == "Sweden") then
+			return true
+		end
+		-- should check if the player can build roads, and perhaps if there are towns not connected by roads (or alternatively, if there have been too few roads built by the player)
+		return false
+	end,
+	CompletionEffects = function(s)
+		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 500)
+		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 250)
+	end,
+	Objectives = {"- Build 20 Roads"}, -- 20 road tiles
+	Rewards = "+500 Gold, +250 Lumber",
+	Hidden = true
+})
+
 DefineQuest("ottars-lineage", {
 	Name = "Ottar's Lineage",
 	Icon = "icon-teuton-swordsman",
