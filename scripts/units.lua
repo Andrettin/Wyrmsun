@@ -765,31 +765,17 @@ DefineUnitType("unit-flowers", { Name = "Flowers",
 	Vegetable = true,
 	Variations = {
 		{
-			"variation-id", "conifer-forest-autumn",
-			"tileset", "Conifer Forest (Autumn)"
-		},
-		{
-			"variation-id", "conifer-forest-summer",
-			"tileset", "Conifer Forest (Summer)"
-		},
-		{
-			"variation-id", "fairlimbed-forest",
-			"tileset", "Fairlimbed Forest"
+			"variation-id", "forest",
+			"terrain", "grass",
+			"terrain", "dirt"
 		},
 		{
 			"variation-id", "swamp",
 			"file", "tilesets/swamp/neutral/decorations/flowers.png",
-			"tileset", "Swamp"
-		},
-		{
-			"variation-id", "cave",
-			"file", "tilesets/swamp/neutral/decorations/flowers.png",
-			"tileset", "Cave"
-		},
-		{
-			"variation-id", "dungeon",
-			"file", "tilesets/swamp/neutral/decorations/flowers.png",
-			"tileset", "Dungeon"
+			"terrain", "dry-mud",
+			"terrain", "mud",
+			"terrain", "cave-floor",
+			"terrain", "rockbound-cave-floor"
 		}
 	},
 	Sounds = {}
@@ -815,31 +801,17 @@ DefineUnitType("unit-large-flower", { Name = "Large Flower",
 	Vegetable = true,
 	Variations = {
 		{
-			"variation-id", "conifer-forest-autumn",
-			"tileset", "Conifer Forest (Autumn)"
-		},
-		{
-			"variation-id", "conifer-forest-summer",
-			"tileset", "Conifer Forest (Summer)"
-		},
-		{
-			"variation-id", "fairlimbed-forest",
-			"tileset", "Fairlimbed Forest"
+			"variation-id", "forest",
+			"terrain", "grass",
+			"terrain", "dirt"
 		},
 		{
 			"variation-id", "swamp",
 			"file", "tilesets/swamp/neutral/decorations/large_flower.png",
-			"tileset", "Swamp"
-		},
-		{
-			"variation-id", "cave",
-			"file", "tilesets/swamp/neutral/decorations/large_flower.png",
-			"tileset", "Cave"
-		},
-		{
-			"variation-id", "dungeon",
-			"file", "tilesets/swamp/neutral/decorations/large_flower.png",
-			"tileset", "Dungeon"
+			"terrain", "dry-mud",
+			"terrain", "mud",
+			"terrain", "cave-floor",
+			"terrain", "rockbound-cave-floor"
 		}
 	},
 	Sounds = {}
@@ -865,31 +837,17 @@ DefineUnitType("unit-fern", { Name = "Fern",
 	Vegetable = true,
 	Variations = {
 		{
-			"variation-id", "conifer-forest-autumn",
-			"tileset", "Conifer Forest (Autumn)"
-		},
-		{
-			"variation-id", "conifer-forest-summer",
-			"tileset", "Conifer Forest (Summer)"
-		},
-		{
-			"variation-id", "fairlimbed-forest",
-			"tileset", "Fairlimbed Forest"
+			"variation-id", "forest",
+			"terrain", "grass",
+			"terrain", "dirt"
 		},
 		{
 			"variation-id", "swamp",
 			"file", "tilesets/swamp/neutral/decorations/fern.png",
-			"tileset", "Swamp"
-		},
-		{
-			"variation-id", "cave",
-			"file", "tilesets/swamp/neutral/decorations/fern.png",
-			"tileset", "Cave"
-		},
-		{
-			"variation-id", "dungeon",
-			"file", "tilesets/swamp/neutral/decorations/fern.png",
-			"tileset", "Dungeon"
+			"terrain", "dry-mud",
+			"terrain", "mud",
+			"terrain", "cave-floor",
+			"terrain", "rockbound-cave-floor"
 		}
 	},
 	Sounds = {}
