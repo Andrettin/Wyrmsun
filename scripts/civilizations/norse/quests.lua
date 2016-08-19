@@ -64,7 +64,7 @@ DefineQuest("the-chieftains-sparrow", { -- Source: Snorri Sturlson, "Heimskringl
 
 DefineQuest("the-roadmaker", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 247-248.
 	Name = "The Roadmaker", -- Onund Roadmaker was a Swedish king known for building roads through all of Sweden
-	Icon = "icon-teuton-swordsman", -- should be a road
+	Icon = "icon-germanic-worker", -- should be a Norse worker
 	Description = "Our realm has many uninhabited wildernesses which take a long time to journey through. If we are to increase our settled areas, roads should be built throughout the land.",
 	World = "Earth",
 	Civilization = "norse",

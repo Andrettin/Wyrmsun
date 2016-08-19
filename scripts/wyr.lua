@@ -178,7 +178,7 @@ function SetPlayerData(player, data, arg1, arg2)
 		if (GameSettings.Resources == 1) then
 			res = {2000, 2000, 2000, 0, 2000, 0, 0, 0, 0, 0, 0, 0, 0}
 		elseif (GameSettings.Resources == 2 or (GrandStrategy and GrandStrategyBattleBaseBuilding)) then
-			res = {5000, 4000, 4000, 0, 4000, 0, 0, 0, 0, 0, 0, 0, 0}
+			res = {5000, 5000, 5000, 0, 5000, 0, 0, 0, 0, 0, 0, 0, 0}
 		elseif (GameSettings.Resources == 3) then
 			res = {10000, 10000, 10000, 0, 10000, 0, 0, 0, 0, 0, 0, 0, 0}
 		end

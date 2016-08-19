@@ -39,7 +39,7 @@ DefineFaction("Frank Tribe", {
 		"dlcs/frankish_faction_flair/graphics/ui/buttonpanel.png", -256, -200,
 		"dlcs/frankish_faction_flair/graphics/ui/infopanel.png", 0, -200
 	},
-	HistoricalFactionDerivations = {150, "germanic", "Skeldung Tribe"},
+	HistoricalFactionDerivations = {150, "germanic", "Herminone Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-frank-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}

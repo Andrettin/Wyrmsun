@@ -35,10 +35,6 @@ DefineUpgrade("upgrade-skeldung-tribe-faction", {
 	Name = _("Skeldung Tribe Faction")
 })
 
-DefineUpgrade("upgrade-volsung-tribe-faction", {
-	Name = _("Volsung Tribe Faction")
-})
-
 DefineUpgrade("upgrade-yngling-tribe-faction", {
 	Name = _("Yngling Tribe Faction")
 })
@@ -53,12 +49,6 @@ DefineModifier("upgrade-asa-tribe-faction",
 DefineModifier("upgrade-skeldung-tribe-faction",
 	{"BasicDamage", 1},
 	{"Armor", 1},
-	{"Points", 10},
-	{"apply-to", "unit-germanic-warrior"}
-)
-
-DefineModifier("upgrade-volsung-tribe-faction",
-	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-germanic-warrior"}
 )

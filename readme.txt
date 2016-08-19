@@ -106,6 +106,7 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - Updated the visual guide to include guidelines for ship graphics.
 - Fixed minimap viewport rectangle issue which caused it to be 1 pixel smaller in both width and height than it should be.
+- If there is a gold deposit in an unsettled area, a new tribe may split off from an existing one to occupy it.
 
 * Quests
 - Goblin Barbarians and Warlords are now present in the Caverns of Flame quest.

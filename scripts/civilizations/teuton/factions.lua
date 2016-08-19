@@ -37,7 +37,7 @@ DefineFaction("Suebi Tribe", {
 	SplitsTo = {"Buri Tribe", "Marcomanni Tribe", "Quadi Tribe", "Semnone Tribe"},
 	FactionUpgrade = "upgrade-suebi-tribe-faction",
 	Description = _("The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there."),
-	HistoricalFactionDerivations = {-264, "germanic", "Skeldung Tribe"},
+	HistoricalFactionDerivations = {-264, "germanic", "Istaevone Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}
@@ -50,7 +50,7 @@ DefineFaction("Saxon Tribe", {
 	Colors = {"pink"},
 	DevelopsTo = {"Saxony", "Brandenburg", "Essex", "Wessex", "England", "Prussia"},
 	FactionUpgrade = "upgrade-saxon-tribe-faction",
-	HistoricalFactionDerivations = {-264, "germanic", "Skeldung Tribe"},
+	HistoricalFactionDerivations = {-264, "germanic", "Ingaevone Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}
@@ -82,7 +82,7 @@ DefineFaction("Ampsivarii Tribe", {
 	Type = "tribe",
 	Colors = {"cyan"},
 	DevelopsTo = {"Drenthe", "Netherlands"}, -- same general area
-	HistoricalFactionDerivations = {-27, "germanic", "Skeldung Tribe"},
+	HistoricalFactionDerivations = {-27, "germanic", "Herminone Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}
@@ -96,7 +96,7 @@ DefineFaction("Angle Tribe", {
 	DevelopsTo = {"England", "Bernicia", "Deira", "East Anglia", "Mercia", "Middle Anglia", "Northumbria", "Scotland"},
 	SplitsTo = {"Bernice Tribe", "Dere Tribe"},
 	FactionUpgrade = "upgrade-angle-tribe-faction",
-	HistoricalFactionDerivations = {-264, "germanic", "Skeldung Tribe"},
+	HistoricalFactionDerivations = {-264, "germanic", "Ingaevone Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}
@@ -115,7 +115,7 @@ DefineFaction("Batavian Tribe", {
 	Type = "tribe",
 	Colors = {"orange"},
 	DevelopsTo = {"Holland", "Netherlands"}, -- same general area
-	HistoricalFactionDerivations = {-264, "germanic", "Skeldung Tribe"},
+	HistoricalFactionDerivations = {-264, "germanic", "Herminone Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}
@@ -136,7 +136,7 @@ DefineFaction("Chamavi Tribe", {
 	Type = "tribe",
 	Colors = {"pink"},
 	DevelopsTo = {"Overijssel", "Netherlands"}, -- same general area
-	HistoricalFactionDerivations = {-27, "germanic", "Skeldung Tribe"},
+	HistoricalFactionDerivations = {-27, "germanic", "Herminone Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}
@@ -148,7 +148,7 @@ DefineFaction("Charude Tribe", {
 	Type = "tribe",
 	Colors = {"purple"},
 	DevelopsTo = {"Jutland"}, -- same general area
-	HistoricalFactionDerivations = {-27, "germanic", "Skeldung Tribe"},
+	HistoricalFactionDerivations = {-27, "germanic", "Ingaevone Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}
@@ -160,7 +160,7 @@ DefineFaction("Chatti Tribe", {
 	Type = "tribe",
 	Colors = {"yellow"},
 	DevelopsTo = {"Hesse"}, -- same general area
-	HistoricalFactionDerivations = {-264, "germanic", "Skeldung Tribe"},
+	HistoricalFactionDerivations = {-264, "germanic", "Herminone Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}
@@ -172,7 +172,7 @@ DefineFaction("Chauci Tribe", {
 	Type = "tribe",
 	Colors = {"black"},
 	DevelopsTo = {"Bremen"}, -- same general area
-	HistoricalFactionDerivations = {-264, "germanic", "Skeldung Tribe"},
+	HistoricalFactionDerivations = {-264, "germanic", "Ingaevone Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}
@@ -184,7 +184,7 @@ DefineFaction("Cherusci Tribe", {
 	Type = "tribe",
 	Colors = {"teal"},
 	DevelopsTo = {"Brunswick", "Magdeburg"}, -- same general area
-	HistoricalFactionDerivations = {-264, "germanic", "Skeldung Tribe"},
+	HistoricalFactionDerivations = {-264, "germanic", "Ingaevone Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}
@@ -197,7 +197,7 @@ DefineFaction("Frisian Tribe", {
 	Colors = {"violet", "purple"}, -- change to a better one?
 	DevelopsTo = {"Friesland", "Netherlands"},
 	FactionUpgrade = "upgrade-frisian-tribe-faction",
-	HistoricalFactionDerivations = {-264, "germanic", "Skeldung Tribe"},
+	HistoricalFactionDerivations = {-264, "germanic", "Ingaevone Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}
@@ -209,7 +209,7 @@ DefineFaction("Hermunduri Tribe", {
 	Type = "tribe",
 	Colors = {"blue"},
 	DevelopsTo = {"Thuringia"}, -- same general area
-	HistoricalFactionDerivations = {-264, "germanic", "Skeldung Tribe"},
+	HistoricalFactionDerivations = {-264, "germanic", "Istaevone Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}
@@ -230,7 +230,7 @@ DefineFaction("Lombard Tribe", {
 	Colors = {"green"},
 	DevelopsTo = {"Lombardy"},
 	FactionUpgrade = "upgrade-lombard-tribe-faction",
-	HistoricalFactionDerivations = {-264, "germanic", "Skeldung Tribe"},
+	HistoricalFactionDerivations = {-264, "germanic", "Istaevone Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}
@@ -305,7 +305,7 @@ DefineFaction("Sugambri Tribe", {
 	Type = "tribe",
 	Colors = {"black"},
 	DevelopsTo = {"Westphalia"}, -- same general area
-	HistoricalFactionDerivations = {-264, "germanic", "Skeldung Tribe"},
+	HistoricalFactionDerivations = {-264, "germanic", "Herminone Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}
@@ -317,7 +317,7 @@ DefineFaction("Teuton Tribe", {
 	Type = "tribe",
 	Colors = {"orange"},
 	DevelopsTo = {"Jutland"}, -- same general area
-	HistoricalFactionDerivations = {-264, "germanic", "Skeldung Tribe"},
+	HistoricalFactionDerivations = {-264, "germanic", "Ingaevone Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}
@@ -346,7 +346,7 @@ DefineFaction("Varini Tribe", {
 	Type = "tribe",
 	Colors = {"brown"},
 	DevelopsTo = {"Mecklenburg"}, -- same general area
-	HistoricalFactionDerivations = {-264, "germanic", "Skeldung Tribe"},
+	HistoricalFactionDerivations = {-264, "germanic", "Ingaevone Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}
