@@ -318,7 +318,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 																				function(s)
 																					SetDiplomacy(gnomish_monarch_player, "neutral", player)
 																					SetDiplomacy(player, "neutral", gnomish_monarch_player)
-																					KillUnitAt("unit-revealer", player, 1, {0, 0}, {256, 256})
+																					KillUnitAt("unit-revealer", player, 1, {0, 0}, {512, 512})
 																					ActionDraw()
 																				end}
 																			)
@@ -353,7 +353,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 
 									Players[GetFactionPlayer("Shinsplitter Clan")].Type = PlayerNeutral
 
-									KillUnitAt("unit-revealer", player, 1, {0, 0}, {256, 256})
+									KillUnitAt("unit-revealer", player, 1, {0, 0}, {512, 512})
 									if (GrandStrategy) then -- if is grand strategy, begin war between Norlund Clan and Untersberg if Rugnur decided to attack the gnomish monarch
 										SetFactionDiplomacyState("dwarf", "Norlund Clan", "gnome", "Untersberg", "war")
 									end
@@ -531,7 +531,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 												SetDiplomacy(player, "enemy", second_bandit_player)
 												SetDiplomacy(bandit_player, "allied", second_bandit_player)
 												SetDiplomacy(second_bandit_player, "allied", bandit_player)
-												KillUnitAt("unit-revealer", player, 2, {0, 0}, {256, 256})
+												KillUnitAt("unit-revealer", player, 2, {0, 0}, {512, 512})
 												if (GrandStrategy) then
 													SetFactionDiplomacyState("dwarf", "Norlund Clan", "dwarf", "Shinsplitter Clan", "war") -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
 													ChangeFactionResource("gnome", "Untersberg", "gold", -2500) -- decrease gnomish treasury by 5000 silver (considering for our purposes silver to be worth half as much as gold)

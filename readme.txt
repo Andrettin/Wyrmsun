@@ -134,6 +134,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Ettin (icon by Jinn, unit graphics by Jinn, modified from b_o's dwarven graphics) (currently only available through the map editor).
 - Added graphics for young yales (modification of b_o's yale by Jinn).
 - Goblin Thieves now correctly have 11 speed.
+- Goblin Gliders can now patrol.
 
 * Upgrades
 - Added goblin Broad Sword and Long Sword upgrades (icons by Jinn).

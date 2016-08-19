@@ -331,7 +331,7 @@ AddTrigger("gathering-materials-introduction",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Collect 10000 gold and 20000 coal") == false and GetNumUnitsAt(-1, "unit-gold-deposit", {0, 0}, {256, 256}) >= 1 and GetNumUnitsAt(-1, "unit-coal-mine", {0, 0}, {256, 256}) >= 2) then
+		if (PlayerHasObjective(GetThisPlayer(), "- Collect 10000 gold and 20000 coal") == false and GetNumUnitsAt(-1, "unit-gold-deposit", {0, 0}, {512, 512}) >= 1 and GetNumUnitsAt(-1, "unit-coal-mine", {0, 0}, {512, 512}) >= 2) then
 			for i=0,14 do
 				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= "Shinsplitter Clan" and FindHero("Rugnur", i) ~= nil and FindHero("Baglur", i) ~= nil and FindHero("Thursagan", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
 					player = i

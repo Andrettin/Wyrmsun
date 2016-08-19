@@ -7,6 +7,7 @@ else
 end
 
 ApplyMapTemplate("earth", 4022, 667)
+--ApplyMapTemplate("earth", 3766, 667) -- for the larger map
 
 SetStartView(0, 16, 16)
 SetPlayerData(0, "RaceName", "germanic")

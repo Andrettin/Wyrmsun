@@ -99,7 +99,7 @@ if (LoadedGame == false) then
 	for unit1 = 1,table.getn(uncount) do 
 		if (GetUnitVariable(uncount[unit1], "Ident") == "unit-glyph") then
 			unit = CreateUnit("unit-revealer", GetFactionPlayer("Asa Tribe"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
-			KillUnitAt("unit-revealer", GetFactionPlayer("Asa Tribe"), 1, {0, 0}, {256, 256})
+			KillUnitAt("unit-revealer", GetFactionPlayer("Asa Tribe"), 1, {0, 0}, {512, 512})
 		end
 	end
 end

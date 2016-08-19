@@ -115,7 +115,7 @@ function HandleCheats(str)
     ActionDefeat()
 
   elseif (str == "fenrir") then
-	KillUnitAt("any", GetThisPlayer(), GetPlayerData(GetThisPlayer(), "TotalNumUnits"), {0, 0}, {256, 256})
+	KillUnitAt("any", GetThisPlayer(), GetPlayerData(GetThisPlayer(), "TotalNumUnits"), {0, 0}, {512, 512})
   
   elseif (str == "hroptatyr") then
     if (godcheat) then

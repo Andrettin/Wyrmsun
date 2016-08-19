@@ -1118,7 +1118,7 @@ function VolcanicCraterSpit(unit) -- this is called every second
 				local target_y = GetUnitVariable(unit,"PosY") + SyncRand(GetUnitVariable(unit,"AttackRange") + GetUnitTypeData(GetUnitVariable(unit, "Ident"), "TileHeight") + GetUnitVariable(unit,"AttackRange")) - GetUnitVariable(unit,"AttackRange")
 				OrderUnit(GetUnitVariable(unit, "Player"), GetUnitVariable(unit, "Ident"), {GetUnitVariable(unit, "PosX"), GetUnitVariable(unit, "PosY")}, {target_x, target_y}, "attack-ground")
 			else
-				if (GetNumUnitsAt(15, "unit-miasma", {0, 0}, {256, 256}) < GetNumUnitsAt(15, "unit-volcanic-crater", {0, 0}, {256, 256})) then
+				if (GetNumUnitsAt(15, "unit-miasma", {0, 0}, {512, 512}) < GetNumUnitsAt(15, "unit-volcanic-crater", {0, 0}, {512, 512})) then
 					CreateUnit("unit-miasma", 15, {GetUnitVariable(unit, "PosX"), GetUnitVariable(unit, "PosY")})
 				end
 			end

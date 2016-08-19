@@ -755,17 +755,17 @@ AddTrigger("caverns-of-flame-shinsplitters-eruption-death",
 			event_player,
 			{"~!Continue"},
 			{function(s)
-				KillUnitAt("unit-dwarven-axefighter", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-axefighter"), {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-steelclad", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-steelclad"), {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-thane"), {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-scout"), {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-pathfinder", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-pathfinder"), {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-explorer", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-explorer"), {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-yale-rider", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-yale-rider"), {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-yale-lord", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-yale-lord"), {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-ballista", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-ballista"), {0, 0}, {256, 256})
-				KillUnitAt("unit-surghan-mercenary-steelclad", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-surghan-mercenary-steelclad"), {0, 0}, {256, 256})
-				KillUnitAt("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-surghan-mercenary-thane"), {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-axefighter", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-axefighter"), {0, 0}, {512, 512})
+				KillUnitAt("unit-dwarven-steelclad", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-steelclad"), {0, 0}, {512, 512})
+				KillUnitAt("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-thane"), {0, 0}, {512, 512})
+				KillUnitAt("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-scout"), {0, 0}, {512, 512})
+				KillUnitAt("unit-dwarven-pathfinder", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-pathfinder"), {0, 0}, {512, 512})
+				KillUnitAt("unit-dwarven-explorer", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-explorer"), {0, 0}, {512, 512})
+				KillUnitAt("unit-dwarven-yale-rider", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-yale-rider"), {0, 0}, {512, 512})
+				KillUnitAt("unit-dwarven-yale-lord", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-yale-lord"), {0, 0}, {512, 512})
+				KillUnitAt("unit-dwarven-ballista", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-ballista"), {0, 0}, {512, 512})
+				KillUnitAt("unit-surghan-mercenary-steelclad", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-surghan-mercenary-steelclad"), {0, 0}, {512, 512})
+				KillUnitAt("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-surghan-mercenary-thane"), {0, 0}, {512, 512})
 			end}
 		)
 		return false
@@ -790,17 +790,17 @@ AddTrigger("caverns-of-flame-ending",
 			player,
 			{"~!Continue"},
 			{function(s)
-			KillUnitAt("unit-dwarven-axefighter", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-axefighter"), {0, 0}, {256, 256})
-			KillUnitAt("unit-dwarven-steelclad", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-steelclad"), {0, 0}, {256, 256})
-			KillUnitAt("unit-dwarven-thane", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-thane"), {0, 0}, {256, 256})
-			KillUnitAt("unit-dwarven-scout", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-scout"), {0, 0}, {256, 256})
-			KillUnitAt("unit-dwarven-pathfinder", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-pathfinder"), {0, 0}, {256, 256})
-			KillUnitAt("unit-dwarven-explorer", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-explorer"), {0, 0}, {256, 256})
-			KillUnitAt("unit-dwarven-yale-rider", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-yale-rider"), {0, 0}, {256, 256})
-			KillUnitAt("unit-dwarven-yale-lord", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-yale-lord"), {0, 0}, {256, 256})
-			KillUnitAt("unit-dwarven-ballista", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-ballista"), {0, 0}, {256, 256})
-			KillUnitAt("unit-surghan-mercenary-steelclad", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-surghan-mercenary-steelclad"), {0, 0}, {256, 256})
-			KillUnitAt("unit-surghan-mercenary-thane", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-surghan-mercenary-thane"), {0, 0}, {256, 256})
+			KillUnitAt("unit-dwarven-axefighter", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-axefighter"), {0, 0}, {512, 512})
+			KillUnitAt("unit-dwarven-steelclad", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-steelclad"), {0, 0}, {512, 512})
+			KillUnitAt("unit-dwarven-thane", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-thane"), {0, 0}, {512, 512})
+			KillUnitAt("unit-dwarven-scout", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-scout"), {0, 0}, {512, 512})
+			KillUnitAt("unit-dwarven-pathfinder", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-pathfinder"), {0, 0}, {512, 512})
+			KillUnitAt("unit-dwarven-explorer", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-explorer"), {0, 0}, {512, 512})
+			KillUnitAt("unit-dwarven-yale-rider", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-yale-rider"), {0, 0}, {512, 512})
+			KillUnitAt("unit-dwarven-yale-lord", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-yale-lord"), {0, 0}, {512, 512})
+			KillUnitAt("unit-dwarven-ballista", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-ballista"), {0, 0}, {512, 512})
+			KillUnitAt("unit-surghan-mercenary-steelclad", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-surghan-mercenary-steelclad"), {0, 0}, {512, 512})
+			KillUnitAt("unit-surghan-mercenary-thane", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-surghan-mercenary-thane"), {0, 0}, {512, 512})
 			Event(
 				FindUnit("unit-dwarven-gryphon-rider", GetFactionPlayer("Norlund Clan")),
 				"Hm... I'll leave now!",

@@ -587,8 +587,8 @@ AddTrigger("the-wyrm-victory",
 				{"~!Continue"},
 				{function(s)
 					if (GrandStrategy) then
-						KillUnitAt("unit-dwarven-guard-tower", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-guard-tower"), {0, 0}, {256, 256})
-						KillUnitAt("unit-dwarven-scout", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-scout"), {0, 0}, {256, 256})
+						KillUnitAt("unit-dwarven-guard-tower", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-guard-tower"), {0, 0}, {512, 512})
+						KillUnitAt("unit-dwarven-scout", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-scout"), {0, 0}, {512, 512})
 					end
 					if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 						ActionVictory()

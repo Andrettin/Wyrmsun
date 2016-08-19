@@ -39,7 +39,7 @@ function EventTriggers()
 					return false
 				end
 				-- requires the existence of a sufficient number of farms which would be the origin of Greebo's loot
-				if ((SyncRand(100) + 1) <= 1 and GetNumUnitsAt(-1, "unit-dwarven-mushroom-farm", {0, 0}, {256, 256}) >= 10) then
+				if ((SyncRand(100) + 1) <= 1 and GetNumUnitsAt(-1, "unit-dwarven-mushroom-farm", {0, 0}, {512, 512}) >= 10) then
 					player = GetThisPlayer()
 					return true
 				end
@@ -165,7 +165,7 @@ function EventTriggers()
 				end
 				-- only appears if there is a dwarven settlement in existence; it also requires a number of dwarven farms, so that there is enough population to make Andvari's move to the wilderness (perhaps out of crowdedness) seem more plausible
 				-- requires 6 gold mines for the reason that the area should have a particularly high quantity of gold available for Andvari to be able to make his hoard
-				if ((SyncRand(100) + 1) <= 1 and GetNumUnitsAt(-1, "unit-dwarven-town-hall", {0, 0}, {256, 256}) >= 1 and GetNumUnitsAt(-1, "unit-dwarven-mushroom-farm", {0, 0}, {256, 256}) >= 16 and GetNumUnitsAt(-1, "unit-dwarven-town-hall", {0, 0}, {256, 256}) >= 6) then
+				if ((SyncRand(100) + 1) <= 1 and GetNumUnitsAt(-1, "unit-dwarven-town-hall", {0, 0}, {512, 512}) >= 1 and GetNumUnitsAt(-1, "unit-dwarven-mushroom-farm", {0, 0}, {512, 512}) >= 16 and GetNumUnitsAt(-1, "unit-dwarven-town-hall", {0, 0}, {512, 512}) >= 6) then
 					player = GetThisPlayer()
 					return true
 				end
@@ -263,11 +263,11 @@ function EventTriggers()
 		)
 	end
 	
-	if (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {256, 256}) >= 1) then
+	if (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {512, 512}) >= 1) then
 		-- Soldier offers training
 		AddTrigger("swordsman-freed",
 			function()
-				if (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {256, 256}) >= 1) then
+				if (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {512, 512}) >= 1) then
 					local uncount = 0
 					uncount = GetUnits("any")
 					for unit1 = 1,table.getn(uncount) do 
