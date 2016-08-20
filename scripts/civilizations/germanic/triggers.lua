@@ -90,36 +90,3 @@ AddTrigger("the-sun-chariot", -- Source: http://natmus.dk/en/historical-knowledg
 		return false
 	end
 )
-
-AddTrigger("the-sun-shields", -- Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
-	function()
-		if (SyncRand(100) ~= 0) then -- 0.01% chance this will trigger every time it is checked
-			return false
-		end
-		for i=0,14 do
-			if (SyncRand(100) == 0 and GetPlayerData(i, "RaceName") == "germanic" and GetPlayerData(i, "UnitTypesCount", "unit-germanic-smithy") >= 1 and GetPlayerData(i, "Allow", "upgrade-germanic-bronze-shield")) then
-				trigger_player = i
-				return true
-			end
-		end
-		return false
-	end,
-	function() 
-		Event(
-			"The Sun Shields",
-			"Our artisans have produced a series of circular bronze shields, often made to symbolize the sun and the cycle of the seasons.",
-			trigger_player,
-			{"~!Marvelous!"},
-			{function(s)
-				SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 100)
-			end},
-			nil,
-			nil,
-			false,
-			{
-				OptionTooltips = {"+100 Gold"}
-			}
-		)
-		return false
-	end
-)

@@ -64,6 +64,11 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - The default "Defeat your enemies" objective now displays in custom games on the upper-left part of the screen.
 
+* Quests
+- Added the possibility of accepting in-game quests at barracks-type buildings.
+- Added "The Good Seasons" quest for the Germanics.
+- Added "The Sun Shields" quest for the Germanics, and removed the equivalent trigger.
+
 -----------------------------------------------------------------------
 - 2.4.0
 -----------------------------------------------------------------------

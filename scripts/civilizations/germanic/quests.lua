@@ -125,6 +125,28 @@ DefineQuest("the-good-seasons", { -- Source: Snorri Sturlson, "Heimskringla", 18
 	end,
 	Objectives = {"- Build 2 Farms"},
 	Rewards = "+750 Gold",
-	Hint = "Select a Bura, press the Build Structure button and then click on the Farm button to build a farm.",
+	Hint = "Select a Bura, press the Build Structure button and then click on the Build Farm button to build a farm.",
 	BuildUnits = {"unit-germanic-farm", 2}
+})
+
+DefineQuest("the-sun-shields", { -- Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
+	Name = "The Sun Shields", -- the Swedes believed their chieftain Yngve (identified with Freyr) provided them good seasons
+	Icon = "icon-germanic-bronze-shield",
+	Description = "Our artisans have plans to produce circular bronze shields, embellished with details symbolizing the sun and the cycle of the seasons. However, they require investments in order to bring those plans to fruition.",
+	World = "Earth",
+	Civilization = "germanic",
+	PlayerColor = "orange",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "RaceName") == "germanic" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-smithy") > 0 and GetPlayerData(trigger_player, "Allow", "upgrade-germanic-bronze-shield") == "A") then -- the historical shields were produced in Jutland
+			return true
+		end
+		return false
+	end,
+	CompletionEffects = function(s)
+		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 500)
+	end,
+	Objectives = {"- Research Bronze Shield"},
+	Rewards = "+500 Gold",
+	Hint = "Select a Smithy and then click on the Research Bronze Shield button to research the technology required for this quest.",
+	ResearchUpgrades = {"upgrade-germanic-bronze-shield"}
 })
