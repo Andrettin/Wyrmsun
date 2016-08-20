@@ -92,7 +92,7 @@ DefineQuest("the-great-temple-at-upsal", { -- Source: Snorri Sturlson, "Heimskri
 	Civilization = "germanic",
 	PlayerColor = "blue",
 	Conditions = function(s)
-		if ((GetPlayerData(trigger_player, "Faction") == "Yngling Tribe" or GetPlayerData(trigger_player, "Faction") == "Asa Tribe") and CheckDependency(trigger_player, "unit-teuton-temple") then
+		if ((GetPlayerData(trigger_player, "Faction") == "Yngling Tribe" or GetPlayerData(trigger_player, "Faction") == "Asa Tribe") and CheckDependency(trigger_player, "unit-teuton-temple")) then
 			return true
 		end
 		return false
