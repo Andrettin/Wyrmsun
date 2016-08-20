@@ -70,6 +70,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added the possibility of accepting in-game quests at barracks-type buildings.
 - Added "The Good Seasons" in-game quest for the Germanics.
 - Added "The Sun Shields" in-game quest for the Germanics, and removed the equivalent trigger.
+- Added the "Mushroom Fields" in-game quest for the Dwarves.
 
 -----------------------------------------------------------------------
 - 2.4.0
