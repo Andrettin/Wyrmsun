@@ -452,7 +452,8 @@ DefineUnitType("unit-goblin-shadowstalker", {
 	}
 } )
 
-DefineUnitType("unit-goblin-shaman", { Name = _("Shaman"),
+DefineUnitType("unit-goblin-shaman", {
+	Name = _("Shaman"),
 	Parent = "unit-template-priest",
 	Civilization = "goblin",
 	Description = _("Adorned with skulls and bones, goblin shamans are steeped in the mysteries of life and death. Each shaman must choose his own path, whether it be taming the savage force of life or dealing in dark magics."),
@@ -471,7 +472,6 @@ DefineUnitType("unit-goblin-shaman", { Name = _("Shaman"),
 	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-flaming", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-trickery"},
 	HackDamage = true,
-	ButtonPos = 2,
 	ButtonKey = "s",
 	ButtonHint = _("Train ~!Shaman"),
 	Sounds = {

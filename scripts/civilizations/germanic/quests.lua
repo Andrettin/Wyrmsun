@@ -83,3 +83,25 @@ DefineQuest("gylves-realm", {
 	LoadingMusic = "GermanicLoading",
 --	MapMusic = "GermanicTheme4"
 })
+
+DefineQuest("the-good-seasons", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 225.
+	Name = "The Good Seasons", -- the Swedes believed their chieftain Yngve (identified with Freyr) provided them good seasons
+	Icon = "icon-germanic-farm",
+	Description = "My chieftain, our lands have been blessed with good seasons, which our people ascribe to you. We should build more farms to take advantage of these fortunate times.",
+	World = "Earth",
+	Civilization = "germanic",
+	PlayerColor = "blue",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "Yngling Tribe" or GetPlayerData(trigger_player, "Faction") == "Swede Tribe") then
+			return true
+		end
+		return false
+	end,
+	CompletionEffects = function(s)
+		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 500)
+	end,
+	Objectives = {"- Build 2 Farms"},
+	Rewards = "+500 Gold",
+	Hint = "Select a worker, press the Build Structure button and then click on the Farm button to build a farm.",
+	BuildUnits = {"unit-germanic-farm", 2}
+})

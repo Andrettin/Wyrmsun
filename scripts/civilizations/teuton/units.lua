@@ -404,7 +404,8 @@ DefineUnitType("unit-teuton-ritter", { Name = _("Ritter"),
 	}
 } )
 
-DefineUnitType("unit-teuton-priest", { Name = _("Cleric"),
+DefineUnitType("unit-teuton-priest", {
+	Name = _("Cleric"),
 	Parent = "unit-template-priest",
 	Civilization = "teuton",
 	Description = _("Teuton clerics attend to the spiritual needs of their congregation. They store religious and secular knowledge, including prayers and medicinal techniques."),

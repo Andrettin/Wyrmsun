@@ -90,7 +90,7 @@ function RunQuestMenu(world)
 	local item_y = 1
 	local quests = GetQuests()
 	for i=1, table.getn(quests) do
-		if (GetQuestData(quests[i], "Hidden") == false and GetQuestData(quests[i], "World") == world) then
+		if (GetQuestData(quests[i], "Hidden") == false and GetQuestData(quests[i], "World") == world and GetQuestData(quests[i], "Map") ~= "") then
 			total_quest_quantity = total_quest_quantity + 1
 			if (GetQuestData(quests[i], "RequiredQuest") == "" or GetQuestData(GetQuestData(quests[i], "RequiredQuest"), "Completed") or GetQuestData(quests[i], "Completed")) then
 				if (GetQuestData(quests[i], "RequiredTechnology") == "" or GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetQuestData(quests[i], "RequiredTechnology"))) then

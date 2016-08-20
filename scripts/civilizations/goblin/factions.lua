@@ -73,10 +73,11 @@ DefineFaction("Ezmarria", { -- invented by Jesse Crider
 	Colors = {"white"},
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "republic",
+	FactionUpgrade = "upgrade-ezmarria-faction",
 	Titles = {
 		"republic", "duchy", "Syndicate"
 	},
-	Description = _("The Ezmarrian Syndicate is known for its dedication to scientific progress, which often results in the neglection of economic and military power. Many goblin technological breakthroughs were made in Ezmarria, this knowledge being sold at a hefty price to other nations.")
+	Description = _("The Ezmarrian Syndicate is known for its dedication to scientific progress, which often results in the neglect of economic and military power. Many goblin technological breakthroughs were made in Ezmarria, this knowledge being sold at a hefty price to other nations.")
 })
 
 DefineFaction("Myridia", { -- invented by Jesse Crider
@@ -85,6 +86,7 @@ DefineFaction("Myridia", { -- invented by Jesse Crider
 	Colors = {"cyan"},
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "republic",
+	FactionUpgrade = "upgrade-myridia-faction",
 	Titles = {
 		"republic", "duchy", "Syndicate"
 	},
@@ -97,6 +99,7 @@ DefineFaction("Stilgar", { -- invented by Jesse Crider
 	Colors = {"blue"},
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "republic",
+	FactionUpgrade = "upgrade-stilgar-faction",
 	Titles = {
 		"republic", "duchy", "Syndicate"
 	},
@@ -109,6 +112,7 @@ DefineFaction("Tenebris", { -- invented by Jesse Crider
 	Colors = {"black"},
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "republic",
+	FactionUpgrade = "upgrade-tenebris-faction",
 	Titles = {
 		"republic", "duchy", "Syndicate"
 	},

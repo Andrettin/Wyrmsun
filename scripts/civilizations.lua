@@ -247,7 +247,8 @@ DefineCivilization("goblin", {
 		"goblin/ui/resource.png", 0, 0,
 		"goblin/ui/buttonpanel.png", -256, -200,
 		"goblin/ui/infopanel.png", 0, -200
-	}
+	},
+	Description = _("Goblins dwell in the caves and highlands of Nidavellir. The frequency of goblin raids into dwarven and gnomish territory has fostered a history of hatred with those races. The emergence of the goblin merchant syndicates has changed this relationship, however. The goblin merchants have become an indispensable part of Nidavellir's trade network, though the dwarves and gnomes do hold grudges against their practices, specially their suspected support of piracy...")
 })
 
 DefineCivilization("kobold", {
