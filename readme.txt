@@ -70,7 +70,7 @@ https://github.com/Andrettin/Wyrmsun
 * Quests
 - Fixed issue which prevented quest triggers from being properly activated when restarting a game.
 - Fixed issue with the Closing the Gates quest which caused gryphons to be generated in it.
-- Added the possibility of accepting in-game quests at barracks-type buildings.
+- Added the possibility of accepting in-game quests at town-hall-type buildings in custom games.
 - Added "The Good Seasons" in-game quest for the Germanics.
 - Added "The Sun Shields" in-game quest for the Germanics, and removed the equivalent trigger.
 - Added the "Mushroom Fields" in-game quest for the dwarves.
