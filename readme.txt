@@ -65,9 +65,11 @@ https://github.com/Andrettin/Wyrmsun
 - The default "Defeat your enemies" objective now displays in custom games on the upper-left part of the screen.
 
 * Quests
+- Fixed issue which prevented quest triggers from being properly activated when restarting a game.
+- Fixed issue with the Closing the Gates quest which caused gryphons to be generated in it.
 - Added the possibility of accepting in-game quests at barracks-type buildings.
-- Added "The Good Seasons" quest for the Germanics.
-- Added "The Sun Shields" quest for the Germanics, and removed the equivalent trigger.
+- Added "The Good Seasons" in-game quest for the Germanics.
+- Added "The Sun Shields" in-game quest for the Germanics, and removed the equivalent trigger.
 
 -----------------------------------------------------------------------
 - 2.4.0
