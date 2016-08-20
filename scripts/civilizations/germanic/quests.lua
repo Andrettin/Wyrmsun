@@ -84,6 +84,28 @@ DefineQuest("gylves-realm", {
 --	MapMusic = "GermanicTheme4"
 })
 
+DefineQuest("the-great-temple-at-upsal", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 225.
+	Name = "The Great Temple", -- the great temple built by Freyr (Yngve) in the Ynglinga saga in Upsal
+	Icon = "icon-germanic-farm",
+	Description = "My chieftain, we should buy a new, great temple for our people. Not only will it give them a new place of worship, but the wise priests it will host shall help us with tax collection.",
+	World = "Earth",
+	Civilization = "germanic",
+	PlayerColor = "blue",
+	Conditions = function(s)
+		if ((GetPlayerData(trigger_player, "Faction") == "Yngling Tribe" or GetPlayerData(trigger_player, "Faction") == "Asa Tribe") and CheckDependency(trigger_player, "unit-teuton-temple") then
+			return true
+		end
+		return false
+	end,
+	CompletionEffects = function(s)
+		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 2000)
+	end,
+	Objectives = {"- Build a Temple"},
+	Rewards = "+2000 Gold",
+	Hint = "Select a Bura, press the Build Structure button and then click on the Temple button to build a temple.",
+	BuildUnits = {"unit-teuton-temple", 1} -- should be a Germanic Temple, of course
+})
+
 DefineQuest("the-good-seasons", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 225.
 	Name = "The Good Seasons", -- the Swedes believed their chieftain Yngve (identified with Freyr) provided them good seasons
 	Icon = "icon-germanic-farm",
@@ -92,16 +114,17 @@ DefineQuest("the-good-seasons", { -- Source: Snorri Sturlson, "Heimskringla", 18
 	Civilization = "germanic",
 	PlayerColor = "blue",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "Yngling Tribe" or GetPlayerData(trigger_player, "Faction") == "Swede Tribe") then
+--		if (GetPlayerData(trigger_player, "Faction") == "Yngling Tribe" or GetPlayerData(trigger_player, "Faction") == "Asa Tribe") then
+		if (GetPlayerData(trigger_player, "RaceName") == "germanic") then -- allow for all Germanic tribes for now, since they don't have quests
 			return true
 		end
 		return false
 	end,
 	CompletionEffects = function(s)
-		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 500)
+		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 750)
 	end,
 	Objectives = {"- Build 2 Farms"},
-	Rewards = "+500 Gold",
-	Hint = "Select a worker, press the Build Structure button and then click on the Farm button to build a farm.",
+	Rewards = "+750 Gold",
+	Hint = "Select a Bura, press the Build Structure button and then click on the Farm button to build a farm.",
 	BuildUnits = {"unit-germanic-farm", 2}
 })

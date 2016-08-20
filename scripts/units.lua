@@ -3114,7 +3114,8 @@ DefineUnitType("unit-template-stables", {
 	}
 } )
 
-DefineUnitType("unit-template-temple", { Name = _("Temple"),
+DefineUnitType("unit-template-temple", {
+	Name = _("Temple"),
 	Parent = "unit-template-building",
 	Class = "temple",
 	Costs = {"time", 175, "gold", 900, "lumber", 1500},
