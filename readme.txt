@@ -61,6 +61,9 @@ https://github.com/Andrettin/Wyrmsun
 - 2.4.1
 -----------------------------------------------------------------------
 
+* Editor
+- Fixed issue which sometimes caused a crash when placing certain types of terrain in the editor.
+
 * Miscellaneous
 - The default "Defeat your enemies" objective now displays in custom games on the upper-left part of the screen.
 
