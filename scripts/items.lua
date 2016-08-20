@@ -371,7 +371,8 @@ DefineUnitType("unit-arrows", { Name = _("Arrows"),
 	BasicDamage = 0
 } )
 
-DefineUnitType("unit-barbed-arrows", { Name = _("Barbed Arrows"),
+DefineUnitType("unit-barbed-arrows", {
+	Name = _("Barbed Arrows"),
 	Parent = "unit-template-item",
 	Image = {"file", "neutral/items/arrow.png", "size", {32, 32}},
 	Icon = "icon-germanic-barbed-arrow",
@@ -380,7 +381,8 @@ DefineUnitType("unit-barbed-arrows", { Name = _("Barbed Arrows"),
 	BasicDamage = 2
 } )
 
-DefineUnitType("unit-bodkin-arrows", { Name = _("Bodkin Arrows"),
+DefineUnitType("unit-bodkin-arrows", {
+	Name = _("Bodkin Arrows"),
 	Parent = "unit-template-item",
 	Image = {"file", "neutral/items/arrow.png", "size", {32, 32}},
 	Icon = "icon-bodkin-arrow",

@@ -65,7 +65,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-barbed-arrow",
 	Action = "research", Value = "upgrade-germanic-barbed-arrow",
 	Allowed = "check-single-research",
 	Key = "a", Hint = _("Research Barbed ~!Arrow"), Popup = "popup-research",
-	Description = "+1 Damage for Skutans and Schutzes.",
+	Description = "+2 Damage for Skutans and Schutzes.",
 	ForUnit = {"unit-germanic-carpenters-shop", "unit-teuton-lumber-mill"}
 } )
   

@@ -126,6 +126,22 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-pike",
 	ForUnit = {"unit-goblin-lumber-mill"}
 } )
 
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-barbed-arrow",
+	Action = "research", Value = "upgrade-goblin-barbed-arrow",
+	Allowed = "check-single-research",
+	Key = "a", Hint = _("Research Barbed ~!Arrow"), Popup = "popup-research",
+	Description = "+2 Damage for Archers, Headhunters and Shadowstalkers.",
+	ForUnit = {"unit-goblin-lumber-mill"}
+} )
+
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-bodkin-arrow",
+	Action = "research", Value = "upgrade-goblin-bodkin-arrow",
+	Allowed = "check-single-research",
+	Key = "a", Hint = _("Research Bodkin ~!Arrow"), Popup = "popup-research",
+	Description = "+2 Damage for Archers, Headhunters and Shadowstalkers.",
+	ForUnit = {"unit-goblin-lumber-mill"}
+} )
+
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-wood-plow",
 	Action = "research", Value = "upgrade-goblin-wood-plow",
 	Allowed = "check-single-research",

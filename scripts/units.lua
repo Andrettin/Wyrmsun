@@ -97,6 +97,7 @@ Units = {
 	"unit-goblin-dock",
 	"upgrade-goblin-broad-sword", "upgrade-goblin-long-sword", "upgrade-goblin-rimmed-shield", "upgrade-goblin-embossed-shield",
 	"upgrade-goblin-long-spear", "upgrade-goblin-pike",
+	"upgrade-goblin-barbed-arrow", "upgrade-goblin-bodkin-arrow",
 	"upgrade-goblin-catapult-projectile-1", "upgrade-goblin-catapult-projectile-2",
 	"upgrade-goblin-wood-plow", "upgrade-goblin-iron-tipped-wood-plow",
 	"upgrade-goblin-masonry",

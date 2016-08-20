@@ -139,7 +139,7 @@ function ApplyTechLevels()
 	local bronze_upgrades = {
 		"upgrade-dwarven-broad-axe", "upgrade-dwarven-long-spear", "upgrade-dwarven-shield-1", "upgrade-dwarven-sharp-throwing-axe",
 		"upgrade-germanic-broad-sword", "upgrade-germanic-long-spear", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow",
-		"upgrade-goblin-broad-sword", "upgrade-goblin-long-spear", "upgrade-goblin-rimmed-shield",
+		"upgrade-goblin-broad-sword", "upgrade-goblin-long-spear", "upgrade-goblin-rimmed-shield", "upgrade-goblin-barbed-arrow",
 		"upgrade-dwarven-wood-plow",
 		"upgrade-goblin-wood-plow",
 		"upgrade-germanic-wood-plow"
@@ -152,7 +152,7 @@ function ApplyTechLevels()
 		"upgrade-dwarven-great-axe", "upgrade-dwarven-pike", "upgrade-dwarven-shield-2", "upgrade-dwarven-bearded-throwing-axe",
 		"upgrade-dwarven-ballista-bolt-1", "upgrade-dwarven-ballista-bolt-2",
 		"upgrade-dwarven-iron-tipped-wood-plow",
-		"upgrade-goblin-long-sword", "upgrade-goblin-pike", "upgrade-goblin-embossed-shield",
+		"upgrade-goblin-long-sword", "upgrade-goblin-pike", "upgrade-goblin-embossed-shield", "upgrade-goblin-bodkin-arrow",
 		"upgrade-goblin-catapult-projectile-1", "upgrade-goblin-catapult-projectile-2",
 		"upgrade-goblin-iron-tipped-wood-plow"
 	}

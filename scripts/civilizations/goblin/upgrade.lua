@@ -74,6 +74,26 @@ DefineUpgrade("upgrade-goblin-pike", {
 	Item = "unit-pike"
 })
 
+DefineUpgrade("upgrade-goblin-barbed-arrow", {
+	Name = _("Barbed Arrow"),
+	Parent = "upgrade-ranged-projectile-1",
+	Icon = "icon-germanic-barbed-arrow",
+	Civilization = "goblin",
+	Description = _("An improvement over the basic triangular-shaped arrow, the barbed arrow is much harder to be removed from the wound after puncturing an enemy.\n\nEffect: +2 Damage for Archers, Headhunters and Shadowstalkers."),
+	Arrows = true,
+	Item = "unit-barbed-arrows"
+})
+
+DefineUpgrade("upgrade-goblin-bodkin-arrow", {
+	Name = _("Bodkin Arrow"),
+	Parent = "upgrade-ranged-projectile-2",
+	Icon = "icon-bodkin-arrow",
+	Civilization = "goblin",
+	Description = _("Bodkin arrows focus pressure on a single point, greatly enhancing their piercing capability.\n\nEffect: +2 Damage for Archers, Headhunters and Shadowstalkers."),
+	Arrows = true,
+	Item = "unit-bodkin-arrows"
+})
+
 DefineUpgrade("upgrade-goblin-catapult-projectile-1", {
 	Parent = "upgrade-catapult-granite-projectile",
 	Civilization = "goblin",
@@ -167,6 +187,18 @@ DefineModifier("upgrade-goblin-pike",
 	{"apply-to", "unit-goblin-spearman"}
 )
 
+DefineModifier("upgrade-goblin-barbed-arrow",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-goblin-archer"}, {"apply-to", "unit-goblin-headhunter"}, {"apply-to", "unit-goblin-shadowstalker"}
+)
+
+DefineModifier("upgrade-goblin-bodkin-arrow",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-goblin-archer"}, {"apply-to", "unit-goblin-headhunter"}, {"apply-to", "unit-goblin-shadowstalker"}
+)
+
 DefineModifier("upgrade-goblin-catapult-projectile-1",
 	{"BasicDamage", 15},
 	{"Points", 10},
@@ -236,7 +268,7 @@ DefineDependency("upgrade-goblin-long-sword",
 )
 
 DefineDependency("upgrade-goblin-embossed-shield",
-	{"upgrade-goblin-embossed-shield"}
+	{"upgrade-goblin-rimmed-shield"}
 )
 
 DefineDependency("unit-goblin-guard-tower",
@@ -264,6 +296,10 @@ DefineDependency("unit-goblin-dock",
 
 DefineDependency("unit-goblin-stronghold",
 	{"unit-goblin-mess-hall", "upgrade-goblin-masonry"}
+)
+
+DefineDependency("upgrade-goblin-bodkin-arrow",
+	{"upgrade-goblin-barbed-arrow"}
 )
 
 DefineDependency("upgrade-goblin-catapult-projectile-1",
