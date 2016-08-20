@@ -103,5 +103,6 @@ DefineQuest("the-good-seasons", { -- Source: Snorri Sturlson, "Heimskringla", 18
 	Objectives = {"- Build 2 Farms"},
 	Rewards = "+500 Gold",
 	Hint = "Select a worker, press the Build Structure button and then click on the Farm button to build a farm.",
-	BuildUnits = {"unit-germanic-farm", 2}
+	BuildUnits = {"unit-germanic-farm", 2},
+	Hidden = true
 })
