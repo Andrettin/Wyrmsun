@@ -1523,7 +1523,7 @@ end
 function FindUnit(unit_type, player)
 	local uncount = 0
 	
-	if (player) then
+	if (player ~= nil) then
 		uncount = GetUnits(player)
 	else
 		uncount = GetUnits("any")

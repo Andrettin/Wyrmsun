@@ -111,6 +111,28 @@ DefineQuest("the-tomb-of-durahn-eikinskjaldi", {
 	PlayerColor = "brown"
 })
 
+DefineQuest("shorbear-hold", {
+	Name = "Shorbear Hold",
+	Icon = "icon-dwarven-stronghold",
+	Description = "Our clan is renowned for its toolmaking and engineering prowess. Our skills would be well put to use in the construction of a stronghold to protect us against our enemies.",
+	World = "Nidavellir",
+	Civilization = "dwarf",
+	PlayerColor = "blue",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "Shorbear Clan" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-stronghold") == 0 and CheckDependency(trigger_player, "unit-dwarven-stronghold") and GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-town-hall") > 0 and GetUniqueItemData("shorbear-hold", "CanDrop")) then
+			return true
+		end
+		return false
+	end,
+	CompletionEffects = function(s)
+		SetUnitVariable(FindUnit("unit-dwarven-stronghold", trigger_player), "Unique", "shorbear-hold")
+	end,
+	Objectives = {"- Build a Bastion"},
+	Rewards = "The Bastion will become the Shorbear Hold unique building",
+	Hint = "Select a Mead Hall and then click on the Upgrade to Bastion button to transform it into a bastion.",
+	BuildUnits = {"unit-dwarven-stronghold", 1}
+})
+
 DefineQuest("a-bargain-is-struck", {
 	Name = "A Bargain is Struck",
 	Icon = "icon-rugnur",
@@ -256,7 +278,7 @@ DefineQuest("fafnirs-hoard", {
 DefineQuest("mushroom-fields", { -- inspired by the dialogue in Battle for Wesnoth: Northern Rebirth (Infested Caves)
 	Name = "Mushroom Fields",
 	Icon = "icon-dwarven-mushroom-farm",
-	Description = "The harsh soil of Nidavellir supports little life. Long ago, our people learned how to grow mushrooms as a nutritive source of sustenance. Their taste may be foul, but it has allowed us to survive and multiply. We would do well to build a few mushroom farms to support ourselves here.",
+	Description = "The harsh soil of Nidavellir supports little life. Long ago, our people learned how to grow mushrooms as a nutritive source of sustenance. Their taste may not be the best, but it has allowed us to survive and multiply. We would do well to build a few mushroom farms to support ourselves here.",
 	World = "Nidavellir",
 	Civilization = "dwarf",
 	PlayerColor = "red",
