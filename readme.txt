@@ -72,6 +72,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added "The Sun Shields" in-game quest for the Germanics, and removed the equivalent trigger.
 - Added the "Mushroom Fields" in-game quest for the Dwarves.
 
+* Terrain
+- Fixed issue which sometimes caused ferns and flowers to appear as black squares.
+
 -----------------------------------------------------------------------
 - 2.4.0
 -----------------------------------------------------------------------

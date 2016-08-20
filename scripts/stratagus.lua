@@ -440,17 +440,6 @@ function StandardTriggers()
 			uncount = GetUnits("any")
 			for unit1 = 1,table.getn(uncount) do 
 
-				-- set the graphics variation for individual units of certain unit types
-				if (GetUnitVariable(uncount[unit1],"GraphicsVariation") == 0) then
-					if ((GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and GetCurrentTileset() == "swamp")) then
-						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(12) + 1))
-					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-fern" and GetCurrentTileset() == "swamp")) then
-						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(4) + 1))
-					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and GetCurrentTileset() == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and (GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest"))) then
-						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(3) + 1))
-					end
-				end
-
 				-- grow mushrooms
 				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom" or GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then
 					if (GameCycle >= GetUnitVariable(uncount[unit1], "LastCycle") + 750) then
@@ -1450,16 +1439,8 @@ function GetNumPlayers()
 end
 
 function InitializeUnit(unit)
-	if (GetUnitVariable(unit,"GraphicsVariation") == 0) then
-		if ((GetUnitVariable(unit, "Ident") == "unit-large-flower" and GetCurrentTileset() == "swamp")) then
-			SetUnitVariable(unit, "GraphicsVariation", (SyncRand(12) + 1))
-		elseif ((GetUnitVariable(unit, "Ident") == "unit-fern" and GetCurrentTileset() == "swamp")) then
-			SetUnitVariable(unit, "GraphicsVariation", (SyncRand(4) + 1))
-		elseif ((GetUnitVariable(unit, "Ident") == "unit-flowers" and GetCurrentTileset() == "swamp") or (GetUnitVariable(unit, "Ident") == "unit-large-flower" and (GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest"))) then
-			SetUnitVariable(unit, "GraphicsVariation", (SyncRand(3) + 1))
-		elseif (GetUnitVariable(unit, "Ident") == "unit-mushroom" or GetUnitVariable(unit, "Ident") == "unit-mushroom-patch") then
-			SetUnitVariable(unit, "LifeStage", (SyncRand(13) + 1))
-		end
+	if (GetUnitVariable(unit, "Ident") == "unit-mushroom" or GetUnitVariable(unit, "Ident") == "unit-mushroom-patch") then
+		SetUnitVariable(unit, "LifeStage", (SyncRand(13) + 1))
 	end
 end
 

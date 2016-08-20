@@ -746,9 +746,10 @@ DefineUnitType("unit-mushroom-patch", { Name = "Mushroom Patch",
 	Sounds = {} }
 )
 
-DefineUnitType("unit-flowers", { Name = "Flowers",
-	Image = {"file", "tilesets/forest/neutral/decorations/flowers.png", "size", {32, 32}},
-	Animations = "animations-decoration-old", Icon = "icon-flowers",
+DefineUnitType("unit-flowers", {
+	Name = "Flowers",
+	Image = {"file", "neutral/decorations/flowers.png", "size", {32, 32}},
+	Animations = "animations-building", Icon = "icon-flowers",
 	Speed = 0,
 	HitPoints = 0,
 	DrawLevel = 5,
@@ -772,7 +773,23 @@ DefineUnitType("unit-flowers", { Name = "Flowers",
 		},
 		{
 			"variation-id", "swamp",
-			"file", "tilesets/swamp/neutral/decorations/flowers.png",
+			"file", "neutral/decorations/flowers_swamp_1.png",
+			"terrain", "dry-mud",
+			"terrain", "mud",
+			"terrain", "cave-floor",
+			"terrain", "rockbound-cave-floor"
+		},
+		{
+			"variation-id", "swamp",
+			"file", "neutral/decorations/flowers_swamp_2.png",
+			"terrain", "dry-mud",
+			"terrain", "mud",
+			"terrain", "cave-floor",
+			"terrain", "rockbound-cave-floor"
+		},
+		{
+			"variation-id", "swamp",
+			"file", "neutral/decorations/flowers_swamp_3.png",
 			"terrain", "dry-mud",
 			"terrain", "mud",
 			"terrain", "cave-floor",
@@ -782,9 +799,10 @@ DefineUnitType("unit-flowers", { Name = "Flowers",
 	Sounds = {}
 } )
 
-DefineUnitType("unit-large-flower", { Name = "Large Flower",
-	Image = {"file", "tilesets/forest/neutral/decorations/large_flower.png", "size", {32, 32}},
-	Animations = "animations-decoration-old", Icon = "icon-large-flower",
+DefineUnitType("unit-large-flower", {
+	Name = "Large Flower",
+	Image = {"file", "neutral/decorations/large_flower_1.png", "size", {32, 32}},
+	Animations = "animations-building", Icon = "icon-large-flower",
 	Speed = 0,
 	HitPoints = 0,
 	DrawLevel = 5,
@@ -807,8 +825,108 @@ DefineUnitType("unit-large-flower", { Name = "Large Flower",
 			"terrain", "dirt"
 		},
 		{
+			"variation-id", "forest",
+			"file", "neutral/decorations/large_flower_2.png",
+			"terrain", "grass",
+			"terrain", "dirt"
+		},
+		{
+			"variation-id", "forest",
+			"file", "neutral/decorations/large_flower_3.png",
+			"terrain", "grass",
+			"terrain", "dirt"
+		},
+		{
 			"variation-id", "swamp",
-			"file", "tilesets/swamp/neutral/decorations/large_flower.png",
+			"file", "neutral/decorations/large_flower_swamp_1.png",
+			"terrain", "dry-mud",
+			"terrain", "mud",
+			"terrain", "cave-floor",
+			"terrain", "rockbound-cave-floor"
+		},
+		{
+			"variation-id", "swamp",
+			"file", "neutral/decorations/large_flower_swamp_2.png",
+			"terrain", "dry-mud",
+			"terrain", "mud",
+			"terrain", "cave-floor",
+			"terrain", "rockbound-cave-floor"
+		},
+		{
+			"variation-id", "swamp",
+			"file", "neutral/decorations/large_flower_swamp_3.png",
+			"terrain", "dry-mud",
+			"terrain", "mud",
+			"terrain", "cave-floor",
+			"terrain", "rockbound-cave-floor"
+		},
+		{
+			"variation-id", "swamp",
+			"file", "neutral/decorations/large_flower_swamp_4.png",
+			"terrain", "dry-mud",
+			"terrain", "mud",
+			"terrain", "cave-floor",
+			"terrain", "rockbound-cave-floor"
+		},
+		{
+			"variation-id", "swamp",
+			"file", "neutral/decorations/large_flower_swamp_5.png",
+			"terrain", "dry-mud",
+			"terrain", "mud",
+			"terrain", "cave-floor",
+			"terrain", "rockbound-cave-floor"
+		},
+		{
+			"variation-id", "swamp",
+			"file", "neutral/decorations/large_flower_swamp_6.png",
+			"terrain", "dry-mud",
+			"terrain", "mud",
+			"terrain", "cave-floor",
+			"terrain", "rockbound-cave-floor"
+		},
+		{
+			"variation-id", "swamp",
+			"file", "neutral/decorations/large_flower_swamp_7.png",
+			"terrain", "dry-mud",
+			"terrain", "mud",
+			"terrain", "cave-floor",
+			"terrain", "rockbound-cave-floor"
+		},
+		{
+			"variation-id", "swamp",
+			"file", "neutral/decorations/large_flower_swamp_8.png",
+			"terrain", "dry-mud",
+			"terrain", "mud",
+			"terrain", "cave-floor",
+			"terrain", "rockbound-cave-floor"
+		},
+		{
+			"variation-id", "swamp",
+			"file", "neutral/decorations/large_flower_swamp_9.png",
+			"terrain", "dry-mud",
+			"terrain", "mud",
+			"terrain", "cave-floor",
+			"terrain", "rockbound-cave-floor"
+		},
+		{
+			"variation-id", "swamp",
+			"file", "neutral/decorations/large_flower_swamp_10.png",
+			"terrain", "dry-mud",
+			"terrain", "mud",
+			"terrain", "cave-floor",
+			"terrain", "rockbound-cave-floor"
+		},
+		{
+			"variation-id", "swamp",
+			"file", "neutral/decorations/large_flower_swamp_11.png",
+			"terrain", "dry-mud",
+			"terrain", "mud",
+			"terrain", "cave-floor",
+			"terrain", "rockbound-cave-floor"
+		},
+		{
+			"variation-id", "swamp",
+			"file", "neutral/decorations/large_flower_swamp_12.png",
 			"terrain", "dry-mud",
 			"terrain", "mud",
 			"terrain", "cave-floor",
@@ -819,8 +937,8 @@ DefineUnitType("unit-large-flower", { Name = "Large Flower",
 } )
 
 DefineUnitType("unit-fern", { Name = "Fern",
-	Image = {"file", "tilesets/forest/neutral/decorations/fern.png", "size", {48, 48}},
-	Animations = "animations-decoration-old", Icon = "icon-fern",
+	Image = {"file", "neutral/decorations/fern.png", "size", {48, 48}},
+	Animations = "animations-building", Icon = "icon-fern",
 	Speed = 0,
 	HitPoints = 0,
 	DrawLevel = 5,
@@ -844,7 +962,31 @@ DefineUnitType("unit-fern", { Name = "Fern",
 		},
 		{
 			"variation-id", "swamp",
-			"file", "tilesets/swamp/neutral/decorations/fern.png",
+			"file", "neutral/decorations/fern_swamp_1.png",
+			"terrain", "dry-mud",
+			"terrain", "mud",
+			"terrain", "cave-floor",
+			"terrain", "rockbound-cave-floor"
+		},
+		{
+			"variation-id", "swamp",
+			"file", "neutral/decorations/fern_swamp_2.png",
+			"terrain", "dry-mud",
+			"terrain", "mud",
+			"terrain", "cave-floor",
+			"terrain", "rockbound-cave-floor"
+		},
+		{
+			"variation-id", "swamp",
+			"file", "neutral/decorations/fern_swamp_3.png",
+			"terrain", "dry-mud",
+			"terrain", "mud",
+			"terrain", "cave-floor",
+			"terrain", "rockbound-cave-floor"
+		},
+		{
+			"variation-id", "swamp",
+			"file", "neutral/decorations/fern_swamp_4.png",
 			"terrain", "dry-mud",
 			"terrain", "mud",
 			"terrain", "cave-floor",
