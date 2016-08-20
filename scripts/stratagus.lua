@@ -35,7 +35,7 @@ DebugPrint("Stratagus default config file loading ...\n")
 wyrmsun = {}
 
 wyrmsun.Name = "Wyrmsun"
-wyrmsun.Version = "2.4.0"
+wyrmsun.Version = "2.4.1"
 wyrmsun.Homepage = ""
 wyrmsun.Licence = "GPL 2.0"
 wyrmsun.Copyright = "Copyright (c) 2013-2016 by Andrettin"
@@ -344,7 +344,8 @@ function SinglePlayerTriggers()
 		end
 
 		for key, value in pairs(CustomPlayerData) do
-			CustomPlayerData[key].Objectives = {_("- Defeat your enemies")}
+			CustomPlayerData[key].Objectives = {}
+			AddPlayerObjective(CustomPlayerData[key].Number, "- Defeat your enemies")
 		end
 	end
 	
