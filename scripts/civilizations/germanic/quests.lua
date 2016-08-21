@@ -121,10 +121,10 @@ DefineQuest("the-good-seasons", { -- Source: Snorri Sturlson, "Heimskringla", 18
 		return false
 	end,
 	CompletionEffects = function(s)
-		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 750)
+		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 1000)
 	end,
 	Objectives = {"- Build 2 Farms"},
-	Rewards = "+750 Gold",
+	Rewards = "+1000 Gold",
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Farm button to build a farm.",
 	BuildUnits = {"unit-germanic-farm", 2}
 })

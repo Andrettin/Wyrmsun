@@ -4,9 +4,6 @@ LoadTileModels("scripts/tilesets/swamp.lua")
 
 ApplyMapTemplate("nidavellir")
 
-SetStartView(0, 16, 16)
-SetPlayerData(0, "RaceName", "dwarf")
-SetAiType(0, "land-attack")
 SetPlayerData(15, "RaceName", "neutral")
 
 unit = CreateUnit("unit-dwarven-axefighter", 0, {16, 16})
