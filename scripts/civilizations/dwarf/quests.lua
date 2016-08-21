@@ -98,6 +98,102 @@ DefineQuest("the-binding-of-grafvitnir", {
 	PlayerColor = "black"
 })
 
+DefineQuest("the-dripping-hall", { -- based on the lay of Alvis from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 144.
+	Name = "The Dripping Hall",
+	Icon = "icon-dwarven-gryphon-rider",
+	Description = "We call the sky \"the dripping hall\", for the water that falls from it from time to time. The loremaster Alvis asks you to train a gryphon rider, so that we may better explore the skies.",
+	World = "Nidavellir",
+	Civilization = "dwarf",
+	PlayerColor = "red",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "RaceName") == "dwarf" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-gryphon-rider") == 0 and CheckDependency(trigger_player, "unit-dwarven-gryphon-rider")) then -- should be made to require Alvis in the future, when he is added as a hero and there are more dwarven quests in general
+			return true
+		end
+		return false
+	end,
+	CompletionEffects = function(s)
+		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 1000)
+		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
+		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
+	end,
+	Objectives = {"- Train a Gryphon Rider"}, -- could be changed to exploring a % of the skies? (or unpassable terrain)
+	Rewards = "+1000 Gold, +1000 Lumber, +500 Stone",
+	Hint = "Select a War Hall and then click on the Train Gryphon Rider button to train a gryphon rider.",
+	BuildUnits = {"unit-dwarven-gryphon-rider", 1}
+})
+
+DefineQuest("the-deep", { -- based on the lay of Alvis from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 145.
+	Name = "The Deep",
+	Icon = "icon-dwarven-dock",
+	Description = "We call the sea \"the deep\", for the profoundity of its waters. The loremaster Alvis asks you to build a dock, so that we may better explore the seas.",
+	World = "Nidavellir",
+	Civilization = "dwarf",
+	PlayerColor = "red",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "RaceName") == "dwarf" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-dock") == 0 and CheckDependency(trigger_player, "unit-dwarven-dock")) then -- should be made to require Alvis in the future, when he is added as a hero and there are more dwarven quests in general
+			return true
+		end
+		return false
+	end,
+	CompletionEffects = function(s)
+		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 1000)
+		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
+		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
+	end,
+	Objectives = {"- Build a Dock"}, -- could be changed to be about exploring a % of the seas, or finding a certain neutral building in the seas or shores
+	Rewards = "+1000 Gold, +1000 Lumber, +500 Stone",
+	Hint = "Select a Miner, press the Build Structure button and then click on the Build Dock button to build a dock.",
+	BuildUnits = {"unit-dwarven-dock", 1}
+})
+
+DefineQuest("the-burner", { -- based on the lay of Alvis from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 145.
+	Name = "The Burner",
+	Icon = "icon-cauldron",
+	Description = "We call fire \"the burner\", for the damage it inflicts on the body. The loremaster Alvis asks you to instigate our sages to discover the secrets of making potent flammable liquids.",
+	World = "Nidavellir",
+	Civilization = "dwarf",
+	PlayerColor = "red",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "RaceName") == "dwarf" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-stronghold") > 0 and GetPlayerData(trigger_player, "Allow", "upgrade-dwarven-alchemy") == "A" and CheckDependency(trigger_player, "upgrade-dwarven-alchemy")) then -- should be made to require Alvis in the future, when he is added as a hero and there are more dwarven quests in general
+			return true
+		end
+		return false
+	end,
+	CompletionEffects = function(s)
+		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 1000)
+		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
+		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
+	end,
+	Objectives = {"- Research Alchemy"},
+	Rewards = "+1000 Gold, +1000 Lumber, +500 Stone",
+	Hint = "Select a Bastion and then click on the Research Alchemy button to research the technology required for this quest.",
+	ResearchUpgrades = {"upgrade-dwarven-alchemy"}
+})
+
+DefineQuest("the-weaver-of-dreams", { -- based on the lay of Alvis from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 145.
+	Name = "The Weaver of Dreams",
+	Icon = "icon-dwarven-temple",
+	Description = "We call the night \"the weaver of dreams\", for the figments wrought into our minds as we sleep at night. The loremaster Alvis asks you to build a temple, so that we may train priests skilled in discerning visions from the dreamworld.",
+	World = "Nidavellir",
+	Civilization = "dwarf",
+	PlayerColor = "red",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "RaceName") == "dwarf" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-temple") == 0 and CheckDependency(trigger_player, "unit-dwarven-temple")) then -- should be made to require Alvis in the future, when he is added as a hero and there are more dwarven quests in general
+			return true
+		end
+		return false
+	end,
+	CompletionEffects = function(s)
+		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 1000)
+		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
+		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
+	end,
+	Objectives = {"- Build a Temple"},
+	Rewards = "+1000 Gold, +1000 Lumber, +500 Stone",
+	Hint = "Select a Miner, press the Build Structure button and then click on the Build Temple button to build a temple.",
+	BuildUnits = {"unit-dwarven-temple", 1}
+})
+
 DefineQuest("the-tomb-of-durahn-eikinskjaldi", {
 	Name = "The Tomb of Durahn Eikinskjaldi",
 	Icon = "icon-dwarven-shield-3",
@@ -278,7 +374,7 @@ DefineQuest("fafnirs-hoard", {
 DefineQuest("mushroom-fields", { -- inspired by the dialogue in Battle for Wesnoth: Northern Rebirth (Infested Caves)
 	Name = "Mushroom Fields",
 	Icon = "icon-dwarven-mushroom-farm",
-	Description = "The harsh soil of Nidavellir supports little life. Long ago, our people learned how to grow mushrooms as a nutritive source of sustenance. Their taste may not be the best, but it has allowed us to survive and multiply. We would do well to build a few mushroom farms to support ourselves here.",
+	Description = "The harsh soil of Nidavellir supports little life. Long ago, our people learned how to grow mushrooms as a nutritive source of sustenance, which has allowed us to survive and multiply. We would do well to build a few mushroom farms to support ourselves here.",
 	World = "Nidavellir",
 	Civilization = "dwarf",
 	PlayerColor = "red",
@@ -290,10 +386,10 @@ DefineQuest("mushroom-fields", { -- inspired by the dialogue in Battle for Wesno
 		return false
 	end,
 	CompletionEffects = function(s)
-		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 1125)
+		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 1500)
 	end,
 	Objectives = {"- Build 3 Mushroom Farms"},
-	Rewards = "+1125 Gold",
+	Rewards = "+1500 Gold",
 	Hint = "Select a Miner, press the Build Structure button and then click on the Build Mushroom Farm button to build a mushroom farm.",
 	BuildUnits = {"unit-dwarven-mushroom-farm", 3}
 })
