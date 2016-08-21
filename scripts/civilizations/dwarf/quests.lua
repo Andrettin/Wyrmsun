@@ -175,13 +175,13 @@ DefineQuest("the-days-refuge", { -- based on the lay of Alvis from Norse mytholo
 
 DefineQuest("the-deep", { -- based on the lay of Alvis from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 145.
 	Name = "The Deep",
-	Icon = "icon-dwarven-dock",
-	Description = "We call the sea \"the deep\", for the profoundity of its waters. The loremaster Alvis asks you to build a dock, so that we may better explore the seas.",
+	Icon = "icon-dwarven-transport-ship",
+	Description = "We call the sea \"the deep\", for the profoundity of its waters. The loremaster Alvis asks you to build a ship, so that we may better explore the seas.",
 	World = "Nidavellir",
 	Civilization = "dwarf",
 	PlayerColor = "red",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "RaceName") == "dwarf" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-dock") == 0 and CheckDependency(trigger_player, "unit-dwarven-dock")) then -- should be made to require Alvis in the future, when he is added as a hero and there are more dwarven quests in general
+		if (GetPlayerData(trigger_player, "RaceName") == "dwarf" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-dock") > 0 and GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-transport-ship") == 0 and CheckDependency(trigger_player, "unit-dwarven-transport-ship")) then -- should be made to require Alvis in the future, when he is added as a hero and there are more dwarven quests in general
 			return true
 		end
 		return false
@@ -191,10 +191,10 @@ DefineQuest("the-deep", { -- based on the lay of Alvis from Norse mythology; Sou
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
 		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
 	end,
-	Objectives = {"- Build a Dock"}, -- could be changed to be about exploring a % of the seas, or finding a certain neutral building in the seas or shores
+	Objectives = {"- Build a Transport"}, -- could be changed to be about exploring a % of the seas, or finding a certain neutral building in the seas or shores
 	Rewards = "+1000 Gold, +1000 Lumber, +500 Stone",
-	Hint = "Select a Miner, press the Build Structure button and then click on the Build Dock button to build a dock.",
-	BuildUnits = {"unit-dwarven-dock", 1}
+	Hint = "Select a Dock and then click on the Build Transport button to build a transport ship.",
+	BuildUnits = {"unit-dwarven-transport-ship", 1}
 })
 
 DefineQuest("the-burner", { -- based on the lay of Alvis from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 145.

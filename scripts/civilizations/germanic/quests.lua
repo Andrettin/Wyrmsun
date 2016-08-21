@@ -143,10 +143,11 @@ DefineQuest("the-sun-shields", { -- Source: http://en.natmus.dk/historical-knowl
 		return false
 	end,
 	CompletionEffects = function(s)
-		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 500)
+		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 1000)
+		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 500)
 	end,
 	Objectives = {"- Research Bronze Shield"},
-	Rewards = "+500 Gold",
+	Rewards = "+1000 Gold, +500 Lumber",
 	Hint = "Select a Smithy and then click on the Research Bronze Shield button to research the technology required for this quest.",
 	ResearchUpgrades = {"upgrade-germanic-bronze-shield"}
 })
