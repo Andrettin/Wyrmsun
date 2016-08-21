@@ -63,6 +63,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Editor
 - Fixed issue which sometimes caused a crash when placing certain types of terrain in the editor.
+- Fixed issue with the "Trains" and "Drops" drop-downs in the unit properties of the editor occupying the same space.
 
 * Miscellaneous
 - The default "Defeat your enemies" objective now displays in custom games on the upper-left part of the screen.

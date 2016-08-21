@@ -2144,7 +2144,13 @@ function EditUnitTypePropertiesTraining(unit_type)
 	menu:resize(sizeX, sizeY)
 	menu:addLabel(_(GetUnitTypeName(unit_type)) .. " " .. _("Properties"), sizeX / 2, 11)
 
-	local unit_type_list = GetUnitTypes()
+	local potential_unit_type_list = GetUnitTypes()
+	local unit_type_list = {}
+	for i=1,table.getn(potential_unit_type_list) do
+		if (GetUnitTypeData(potential_unit_type_list[i], "Icon") ~= "" and GetUnitTypeData(potential_unit_type_list[i], "Vanishes") == false and GetUnitTypeData(potential_unit_type_list[i], "HiddenInEditor") == false) then
+			table.insert(unit_type_list, potential_unit_type_list[i])
+		end
+	end
 	local trained_unit_type_list = GetUnitTypeData(unit_type, "Trains", Map.Info.Filename)
 	local dropped_unit_type_list = GetUnitTypeData(unit_type, "AiDrops", Map.Info.Filename)
 	
@@ -2179,12 +2185,12 @@ function EditUnitTypePropertiesTraining(unit_type)
 		end
 	end)
 
-	drops_label = menu:addLabel(_("Drops:"), 10, 14 + 36 * 1, Fonts["game"], false)
-	drops = menu:addDropDown(unit_type_list, (sizeX / 2) - 60 - 10, 11 + 36 * 1, function(dd) DroppedUnitTypeChanged() end)
+	drops_label = menu:addLabel(_("Drops:"), 10, 14 + 36 * 2, Fonts["game"], false)
+	drops = menu:addDropDown(unit_type_list, (sizeX / 2) - 60 - 10, 11 + 36 * 2, function(dd) DroppedUnitTypeChanged() end)
 	drops:setSize(236 - 19 - 10, 20)
 	drops:setSelected(0)
 	
-	drops_checkbox = menu:addImageCheckBox("", sizeX - 19 - 10, 11 + 36 * 1,
+	drops_checkbox = menu:addImageCheckBox("", sizeX - 19 - 10, 11 + 36 * 2,
 	function()
 		if (drops_checkbox:isMarked()) then
 			if (GetArrayIncludes(dropped_unit_type_list, unit_type_list[drops:getSelected() + 1]) == false) then
@@ -2198,14 +2204,14 @@ function EditUnitTypePropertiesTraining(unit_type)
 	TrainedUnitTypeChanged()
 	DroppedUnitTypeChanged()
 	
-	menu:addLabel(_("Button Pos:"), 10, 12 + 36 * 2, Fonts["game"], false)
-	local button_pos_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ButtonPos"), (sizeX / 2) - 60 - 10, 11 + 36 * 2, 60)
+	menu:addLabel(_("Button Pos:"), 10, 12 + 36 * 3, Fonts["game"], false)
+	local button_pos_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ButtonPos"), (sizeX / 2) - 60 - 10, 11 + 36 * 3, 60)
 
-	menu:addLabel(_("Hotkey:"), (sizeX / 2) + 10, 12 + 36 * 2, Fonts["game"], false)
-	local button_key_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ButtonKey"), sizeX - 60 - 10, 11 + 36 * 2, 60)
+	menu:addLabel(_("Hotkey:"), (sizeX / 2) + 10, 12 + 36 * 3, Fonts["game"], false)
+	local button_key_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ButtonKey"), sizeX - 60 - 10, 11 + 36 * 3, 60)
 
-	menu:addLabel(_("Hint:"), 10, 12 + 36 * 3, Fonts["game"], false)
-	local button_hint_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ButtonHint"), (sizeX / 2) - 60 - 10, 11 + 36 * 3, 180)
+	menu:addLabel(_("Hint:"), 10, 12 + 36 * 4, Fonts["game"], false)
+	local button_hint_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ButtonHint"), (sizeX / 2) - 60 - 10, 11 + 36 * 4, 180)
 
 	menu:addHalfButton("~!OK", "o", 20 + 48, sizeY - 40,
 		function()
