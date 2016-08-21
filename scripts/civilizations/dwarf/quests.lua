@@ -122,6 +122,57 @@ DefineQuest("the-dripping-hall", { -- based on the lay of Alvis from Norse mytho
 	BuildUnits = {"unit-dwarven-gryphon-rider", 1}
 })
 
+DefineQuest("the-gleamer", { -- based on the lay of Alvis from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 144.
+	Name = "The Gleamer",
+	Icon = "icon-cauldron",
+	Description = "We call our moon \"the Gleamer\", for its reflection of light, and our sun \"Dvalin's Deceiver\", for the dangers Dvalin faced during the day outside the safety of our underground homes. The loremaster Alvis asks you to instigate our sages to discover the secrets of the moon, the sun and the stars.",
+	World = "Nidavellir",
+	Civilization = "dwarf",
+	PlayerColor = "red",
+	Conditions = function(s)
+--		if (GetPlayerData(trigger_player, "RaceName") == "dwarf" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-astrology") > 0 and GetPlayerData(trigger_player, "Allow", "upgrade-dwarven-astrology") == "A" and CheckDependency(trigger_player, "upgrade-dwarven-astrology")) then -- should be made to require Alvis in the future, when he is added as a hero and there are more dwarven quests in general
+		if (GetPlayerData(trigger_player, "RaceName") == "dwarf" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-stronghold") > 0 and GetPlayerData(trigger_player, "Allow", "upgrade-dwarven-runewriting") == "A" and CheckDependency(trigger_player, "upgrade-dwarven-runewriting")) then -- should be made to require Alvis in the future, when he is added as a hero and there are more dwarven quests in general
+			return true
+		end
+		return false
+	end,
+	CompletionEffects = function(s)
+		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 1000)
+		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
+		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
+	end,
+	Objectives = {"- Research Astrology"}, -- this technology could improve farm output, to represent better knowledge of the seasons which knowing about celestial bodies provided; that might make farms give too much food though, so it might be better for it to give a bonus to dwarven priests
+	Rewards = "+1000 Gold, +1000 Lumber, +500 Stone",
+	Hint = "Select a Temple and then click on the Research Astrology button to research the technology required for this quest.",
+--	ResearchUpgrades = {"upgrade-dwarven-astrology"},
+	Hidden = true
+})
+
+DefineQuest("the-days-refuge", { -- based on the lay of Alvis from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 144-145.
+	Name = "The Day's Refuge",
+	Icon = "icon-norse-runewriting",
+	Description = "We call the calm \"the day's refuge\", for the peace and safety enjoyed under the earth in our homes. The loremaster Alvis asks you to promote the invention of a system of writing, so that we may write treatises and learn more about the art of diplomacy and peace-making.",
+	World = "Nidavellir",
+	Civilization = "dwarf",
+	PlayerColor = "red",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "RaceName") == "dwarf" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-stronghold") > 0 and GetPlayerData(trigger_player, "Allow", "upgrade-dwarven-runewriting") == "A" and CheckDependency(trigger_player, "upgrade-dwarven-runewriting")) then -- should be made to require Alvis in the future, when he is added as a hero and there are more dwarven quests in general
+			return true
+		end
+		return false
+	end,
+	CompletionEffects = function(s)
+		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 1000)
+		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
+		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
+	end,
+	Objectives = {"- Research Dvalic Runewriting"},
+	Rewards = "+1000 Gold, +1000 Lumber, +500 Stone",
+	Hint = "Select a Bastion and then click on the Research Dvalic Runewriting button to research the technology required for this quest.",
+	ResearchUpgrades = {"upgrade-dwarven-runewriting"},
+	Hidden = true
+})
+
 DefineQuest("the-deep", { -- based on the lay of Alvis from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 145.
 	Name = "The Deep",
 	Icon = "icon-dwarven-dock",
