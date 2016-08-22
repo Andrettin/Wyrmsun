@@ -1,0 +1,12 @@
+[Desktop Entry]
+Categories=Game;StrategyGame;
+Exec=wyrmgus -d /usr/share/wyrmsun
+GenericName=Mythologic realtime-strategy game
+GenericName[de]=Mythologisches Echtzeitstrategiespiel
+Icon=wyrmsun
+Name=Wyrmsun
+Name[de]=Wyrmsun
+StartupNotify=true
+Terminal=false
+Type=Application
+Version=1.0
