@@ -65,6 +65,9 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which sometimes caused a crash when placing certain types of terrain in the editor.
 - Fixed issue with the "Trains" and "Drops" drop-downs in the unit properties of the editor occupying the same space.
 
+* Factions
+- Fixed issue which caused split-off factions to appear as neutral.
+
 * Miscellaneous
 - The default "Defeat your enemies" objective now displays in custom games on the upper-left part of the screen.
 
