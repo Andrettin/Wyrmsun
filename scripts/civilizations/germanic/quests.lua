@@ -103,7 +103,8 @@ DefineQuest("the-great-temple-at-upsal", { -- Source: Snorri Sturlson, "Heimskri
 	Objectives = {"- Build a Temple"},
 	Rewards = "+2000 Gold",
 	Hint = "Select a Bura, press the Build Structure button and then click on the Temple button to build a temple.",
-	BuildUnits = {"unit-teuton-temple", 1} -- should be a Germanic Temple, of course
+	BuildUnits = {"unit-teuton-temple", 1}, -- should be a Germanic Temple, of course
+	Hidden = true
 })
 
 DefineQuest("the-good-seasons", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 225.
@@ -127,6 +128,28 @@ DefineQuest("the-good-seasons", { -- Source: Snorri Sturlson, "Heimskringla", 18
 	Rewards = "+1000 Gold",
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Farm button to build a farm.",
 	BuildUnits = {"unit-germanic-farm", 2}
+})
+
+DefineQuest("eralas-bravery", { -- based on the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 22-24.
+	Name = "Erala's Bravery", -- in the Song of Rig, Rig (the God Heimdall) fathers Thrall, Karl and Jarl, each of which originates a class of the Norse world; namely serfs, peasants and warriors; "jarl" is a reflex of "erala"
+	Icon = "icon-germanic-warrior",
+	Description = "Our traditions tell us that the legendary hero Erala, the son of Fader, founded our warrior class, which receives his name. To honor the great conqueror and protect our homeland, we should train a few eralas.", -- "Fadēr" is the word which gave origin to "Fathir", the name of the character in Old Norse; what is the original word for "Mothir"?
+	World = "Earth",
+	Civilization = "germanic",
+	PlayerColor = "orange",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "RaceName") == "germanic" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-barracks") > 0 and CheckDependency(trigger_player, "unit-germanic-warrior")) then
+			return true
+		end
+		return false
+	end,
+	CompletionEffects = function(s)
+		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 1500)
+	end,
+	Objectives = {"- Train 3 Eralas"},
+	Rewards = "+1500 Gold",
+	Hint = "Select a War Lodge and then click on the Train Erala button to train the unit required for this quest.",
+	BuildUnits = {"unit-germanic-warrior", 3}
 })
 
 DefineQuest("the-sun-shields", { -- Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
