@@ -410,7 +410,7 @@ function RunEditorPlayerProperties()
 	local types = {"neutral", "nobody", "computer", "person", "rescue-passive", "rescue-active"}
 	local civilization_names = GetCivilizations()
 	local faction_list = {}
-	local ais = { "passive", "land-attack", "northern-wastelands-goblins" }
+	local ais = { "passive", "land-attack", "northern-wastelands-goblins", "grand-strategy-battle" }
 
 	local player_list = {}
 	local player_properties = {}

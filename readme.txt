@@ -58,6 +58,22 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 2.4.2
+-----------------------------------------------------------------------
+
+* Editor
+- The grand strategy battle AI is now available for selection in the editor.
+
+* Quests
+- Added the possibility of accepting in-game quests at town-hall-type buildings in custom games.
+- Added "The Great Temple" and "The Good Seasons" in-game quests for the Germanics.
+- Added "The Sun Shields" in-game quest for the Germanics, and removed the equivalent trigger.
+- Added the "Mushroom Fields", "The Dripping Hall", "The Deep", "The Burner" and "The Weaver of Dreams" in-game quests for the dwarves.
+- Added the "Shorbear Hold" in-game quest for the Shorbear Clan.
+- Added the "Agniss' Mysticism", "Dremac's Wealth", "Ioun's Tactics" and "Orza's Scholarship" in-game quests for the goblins.
+
+
+-----------------------------------------------------------------------
 - 2.4.1
 -----------------------------------------------------------------------
 
