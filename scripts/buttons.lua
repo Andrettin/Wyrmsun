@@ -543,6 +543,7 @@ DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 
 -- Quest Buttons
 
+--[[
 DefineButton( { Pos = 9, Level = 0, Icon = "icon-level-up",
 	Action = "quest", Value = 0,
 	Key = "", Hint = _("Quest"), Popup = "popup-commands",
@@ -560,6 +561,7 @@ DefineButton( { Pos = 11, Level = 0, Icon = "icon-level-up",
 	Key = "", Hint = _("Quest"), Popup = "popup-commands",
 	ForUnit = {"unit-latin-town-hall", "unit-germanic-town-hall", "unit-teuton-town-hall", "unit-teuton-stronghold", "unit-dwarven-town-hall", "unit-dwarven-stronghold", "unit-gnomish-town-hall", "unit-goblin-town-hall", "unit-goblin-stronghold"}
 })
+--]]
 
 -- Load the buttons of all civilizations
 
