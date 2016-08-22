@@ -932,6 +932,7 @@ João Victor G. Costa (Jinn):
 /graphics/neutral/icons/level_up.png (licensed under the CC0)
 /graphics/neutral/icons/long_swordsman.png (licensed under the CC0)
 /graphics/neutral/icons/potion_red.png (licensed under the CC0)
+/graphics/neutral/icons/quest.png (licensed under the CC0)
 /graphics/neutral/icons/rally_point.png (licensed under the CC0)
 /graphics/neutral/icons/rat.png (licensed under the CC0)
 /graphics/neutral/icons/rat_swamp.png (licensed under the CC0)

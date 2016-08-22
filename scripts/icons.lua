@@ -146,6 +146,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-quest",
+	Size = {46, 38},
+	File = "neutral/icons/quest.png"
+})
+
+DefineIcon({
 	Name = "icon-axe-mastery",
 	Size = {46, 38},
 	File = "neutral/icons/axe_mastery.png"
