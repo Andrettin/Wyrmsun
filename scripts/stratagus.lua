@@ -1234,6 +1234,22 @@ function StandardTriggers()
 			)
 		end		
 		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Stone Pile") == false) then
+			AddTrigger("tip-stone-pile",
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-stone-pile") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Stone Pile", "Stone piles can be harvested for stone. When a building that costs stone is destroyed, it has a chance to spawn a stone pile.")
+					return false
+				end
+			)
+		end		
+		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Log") == false) then
 			AddTrigger("tip-log",
 				function()

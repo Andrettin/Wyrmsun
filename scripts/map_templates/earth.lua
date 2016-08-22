@@ -43,7 +43,8 @@ DefineMapTemplate("earth", {
 	},
 	PlayerLocationGeneratedResources = {
 		"unit-gold-deposit", 1,
-		"unit-wood-pile", 16
+		"unit-wood-pile", 16,
+		"unit-stone-pile", 8
 	}
 })
 

@@ -969,6 +969,7 @@ DefineUnitType("unit-dwarven-town-hall", { Name = _("Mead Hall"),
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
 	ButtonHint = _("Build Mead ~!Hall"),
+	Drops = {"unit-stone-pile"},
 	AiDrops = {"unit-boots"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill"},
 	Variations = {
@@ -1031,7 +1032,7 @@ DefineUnitType("unit-dwarven-mushroom-farm", { Name = _("Mushroom Farm"),
 	FireResistance = 20,
 	ButtonHint = _("Build Mushroom ~!Farm"),
 	Trains = {"unit-cheese"},
-	Drops = {"unit-wood-pile"},
+	Drops = {"unit-wood-pile", "unit-stone-pile"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
@@ -1051,6 +1052,7 @@ DefineUnitType("unit-dwarven-barracks", { Name = _("War Hall"),
 	ButtonKey = "w",
 	ButtonHint = _("Build ~!War Hall"),
 	Trains = {"unit-dwarven-axefighter", "unit-dwarven-guard", "unit-dwarven-scout", "unit-dwarven-yale-rider", "unit-dwarven-ballista", "unit-dwarven-gryphon-rider"},
+	Drops = {"unit-stone-pile"},
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill"},
 	Sounds = {
@@ -1071,6 +1073,7 @@ DefineUnitType("unit-dwarven-lumber-mill", { Name = _("Lumber Mill"),
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
 	TechnologyPointCost = 1,
+	Drops = {"unit-stone-pile"},
 	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe"},
 	DropAffixes = {"upgrade-item-prefix-storm", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-the-snigill"},
 	Sounds = {
@@ -1094,6 +1097,7 @@ DefineUnitType("unit-dwarven-smithy", { Name = _("Smithy"),
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
 	TechnologyPointCost = 1,
+	Drops = {"unit-stone-pile"},
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-spatha"}, -- drops Spatha to allow dropping dwarven unique swords
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-aedi",  "upgrade-item-suffix-of-othola"}, -- has flaming prefix to allow dropping The Hammer of Thursagan; Aedi and Othola are Norse runes
 	Sounds = {
@@ -1116,7 +1120,7 @@ DefineUnitType("unit-dwarven-yale-pen", {
 	TechnologyPointCost = 1,
 	ButtonKey = "y",
 	ButtonHint = _("Build ~!Yale Pen"),
-	Drops = {"unit-yale"},
+	Drops = {"unit-stone-pile", "unit-yale"},
 	Sounds = {
 		"selected", "yale-pen-selected",
 		"help", "basic-dwarf-voices-help-town"
@@ -1135,6 +1139,7 @@ DefineUnitType("unit-dwarven-temple", { Name = _("Temple"),
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
 	Trains = {"unit-dwarven-witness", "unit-potion-of-healing"},
+	Drops = {"unit-stone-pile"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
@@ -1186,6 +1191,7 @@ DefineUnitType("unit-dwarven-dock", { Name = _("Dock"),
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
 	Trains = {"unit-dwarven-transport-ship"},
+--	Drops = {"unit-stone-pile"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}

@@ -728,6 +728,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-stone-pile",
+	Size = {46, 38},
+	File = "neutral/icons/stone_pile.png"
+})
+
+DefineIcon({
 	Name = "icon-stalagmites",
 	Size = {46, 38},
 	File = "neutral/icons/stalagmites.png"

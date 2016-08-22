@@ -416,7 +416,7 @@ DefineUnitType("unit-gold-rock", { Name = _("Gold Rock"),
 	Costs = {"time", 150},
 	Speed = 0,
 	HitPoints = 25500,
-	DrawLevel = 30,
+	DrawLevel = 40,
 	TileSize = {1, 1}, BoxSize = {31, 31},
 	SightRange = 1,
 	Armor = 20, Missile = "missile-none",
@@ -467,7 +467,7 @@ DefineUnitType("unit-silver-rock", { Name = _("Silver Rock"),
 	Costs = {"time", 150},
 	Speed = 0,
 	HitPoints = 25500,
-	DrawLevel = 30,
+	DrawLevel = 40,
 	TileSize = {1, 1}, BoxSize = {31, 31},
 	SightRange = 1,
 	Armor = 20, Missile = "missile-none",
@@ -517,7 +517,7 @@ DefineUnitType("unit-copper-rock", { Name = _("Copper Rock"),
 	Costs = {"time", 150},
 	Speed = 0,
 	HitPoints = 25500,
-	DrawLevel = 30,
+	DrawLevel = 40,
 	TileSize = {1, 1}, BoxSize = {31, 31},
 	SightRange = 1,
 	Armor = 20, Missile = "missile-none",
@@ -558,14 +558,15 @@ DefineUnitType("unit-copper-rock", { Name = _("Copper Rock"),
 	}
 } )
 
-DefineUnitType("unit-wood-pile", { Name = _("Wood Pile"),
+DefineUnitType("unit-wood-pile", {
+	Name = _("Wood Pile"),
 	Image = {"file", "neutral/buildings/wood_pile.png", "size", {43, 43}},
 	Animations = "animations-decoration", Icon = "icon-wood-pile",
 	NeutralMinimapColor = {165, 42, 42},
 	Costs = {"time", 150},
 	Speed = 0,
 	HitPoints = 25500,
-	DrawLevel = 30,
+	DrawLevel = 40,
 	TileSize = {1, 1}, BoxSize = {31, 31},
 	SightRange = 1,
 	Armor = 20, Missile = "missile-none",
@@ -599,7 +600,51 @@ DefineUnitType("unit-wood-pile", { Name = _("Wood Pile"),
 	}
 } )
 
-DefineUnitType("unit-tree-stump", { Name = _("Tree Stump"),
+DefineUnitType("unit-stone-pile", {
+	Name = _("Stone Pile"),
+	Image = {"file", "neutral/buildings/stone_pile.png", "size", {43, 43}},
+	Shadow = {"file", "neutral/buildings/stone_pile_shadow.png", "size", {43, 43}},
+	Animations = "animations-decoration", Icon = "icon-stone-pile",
+	NeutralMinimapColor = {92, 92, 92},
+	Costs = {"time", 150},
+	Speed = 0,
+	HitPoints = 25500,
+	DrawLevel = 40,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 1,
+	Armor = 20, Missile = "missile-none",
+	Priority = 0,
+--	Corpse = "unit-destroyed-3x3-place",
+	Type = "land",
+	StartingResources = 400,
+	Building = true, VisibleUnderFog = true,
+	GivesResource = "stone", CanHarvest = true,
+	HarvestFromOutside = true,
+	Variations = {
+		{
+			"variation-id", "1"
+		},
+		{
+			"variation-id", "2"
+		},
+		{
+			"variation-id", "3"
+		},
+		{
+			"variation-id", "4"
+		}
+	},
+	Sounds = {
+		"selected", "click",
+--		"acknowledge", "gold-mine-acknowledge",
+--		"ready", "gold-mine-ready",
+--		"help", "gold-mine-help",
+--		"dead", "building-destroyed"
+	}
+} )
+
+DefineUnitType("unit-tree-stump", {
+	Name = _("Tree Stump"),
 	Image = {"file", "neutral/buildings/tree_stump.png", "size", {72, 72}},
 	NeutralMinimapColor = {128, 128, 0},
 	Animations = "animations-tree-stump", Icon = "icon-tree-stump",
@@ -3057,6 +3102,7 @@ DefineUnitType("unit-template-stronghold", {
 	AttackFromTransporter = true,
 	SaveCargo = true,
 	TechnologyPointCost = 1,
+	Drops = {"unit-stone-pile"},
 	AiDrops = {}, -- worker-related items, as well as those we would expect a center of administration to have; and military ones, since this is a stronghold
 	Affixes = {"upgrade-item-suffix-of-the-colossus"},
 	DropAffixes = {"upgrade-item-suffix-of-slaughter", "upgrade-item-suffix-of-victory"},
@@ -3321,7 +3367,7 @@ DefineUnitType("unit-template-watch-tower", { Name = _("Watch Tower"),
 	AttackFromTransporter = true,
 	SaveCargo = true,
 	BuilderOutside = true,
-	Drops = {"unit-wood-pile"},
+	Drops = {"unit-wood-pile", "unit-stone-pile"},
 	RightMouseAction = "attack",
 	CanAttack = true,
 	BurnPercent = 50,
@@ -3364,7 +3410,7 @@ DefineUnitType("unit-template-guard-tower", { Name = _("Guard Tower"),
 	CanTransport = {"LandUnit", "only", "organic", "only"},
 	AttackFromTransporter = true,
 	SaveCargo = true,
-	Drops = {"unit-wood-pile"},
+	Drops = {"unit-wood-pile", "unit-stone-pile"},
 	RightMouseAction = "attack",
 	CanAttack = true,
 	BurnPercent = 50,
