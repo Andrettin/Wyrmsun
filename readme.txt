@@ -74,12 +74,6 @@ https://github.com/Andrettin/Wyrmsun
 * Quests
 - Fixed issue which prevented quest triggers from being properly activated when restarting a game.
 - Fixed issue with the Closing the Gates quest which caused gryphons to be generated in it.
-- Added the possibility of accepting in-game quests at town-hall-type buildings in custom games.
-- Added "The Great Temple" and "The Good Seasons" in-game quests for the Germanics.
-- Added "The Sun Shields" in-game quest for the Germanics, and removed the equivalent trigger.
-- Added the "Mushroom Fields", "The Dripping Hall", "The Deep", "The Burner" and "The Weaver of Dreams" in-game quests for the dwarves.
-- Added the "Shorbear Hold" in-game quest for the Shorbear Clan.
-- Added the "Agniss' Mysticism", "Dremac's Wealth", "Ioun's Tactics" and "Orza's Scholarship" in-game quests for the goblins.
 
 * Terrain
 - Fixed issue which sometimes caused ferns and flowers to appear as black squares.
