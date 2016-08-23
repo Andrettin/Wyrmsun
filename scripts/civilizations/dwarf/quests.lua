@@ -277,7 +277,8 @@ DefineQuest("shorbear-hold", {
 	Objectives = {"- Build a Bastion"},
 	Rewards = "The Bastion will become the Shorbear Hold unique building",
 	Hint = "Select a Mead Hall and then click on the Upgrade to Bastion button to transform it into a bastion.",
-	BuildUnits = {"unit-dwarven-stronghold", 1}
+	BuildUnits = {"unit-dwarven-stronghold", 1},
+	Competitive = true
 })
 
 DefineQuest("a-bargain-is-struck", {
