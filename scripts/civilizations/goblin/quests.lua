@@ -25,6 +25,29 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineQuest("gathaarls-children", { -- based on the description of Gathaarl in Tyrant
+	Name = "Gathaarl's Children",
+	Icon = "icon-goblin-farm",
+	Description = "One of the main doctrines of our god Gathaarl is that we should multiply ourselves to outnumber our enemies. Build some farms to feed our people... and let's begin covering the land in goblin green.",
+	World = "Nidavellir",
+	Civilization = "goblin",
+	PlayerColor = "teal",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "RaceName") == "goblin" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-goblin-worker") > 0 and CheckDependency(trigger_player, "unit-goblin-farm")) then -- should be made to require Gathaarl being worshiped in the future
+			return true
+		end
+		return false
+	end,
+	CompletionEffects = function(s)
+		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 1000)
+		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
+		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
+	end,
+	Objectives = {"- Build 3 Farms"},
+	Rewards = "+1000 Gold, +1000 Lumber, +500 Stone",
+	Hint = "Select a Worker, press the Build Structure button and then click on the Build Farm button to build the building required for this quest.",
+	BuildUnits = {"unit-goblin-farm", 3}
+})
 DefineQuest("agniss-mysticism", { -- based on the description of Agniss Tenebris by Jesse Crider
 	Name = "Agniss' Mysticism",
 	Icon = "icon-goblin-temple",
@@ -33,7 +56,7 @@ DefineQuest("agniss-mysticism", { -- based on the description of Agniss Tenebris
 	Civilization = "goblin",
 	PlayerColor = "black",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "RaceName") == "goblin" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-goblin-temple") == 0 and CheckDependency(trigger_player, "unit-goblin-temple")) then -- should be made to require Agniss in the future, and be specific to the Tenebris Syndicate
+		if (GetPlayerData(trigger_player, "RaceName") == "goblin" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-goblin-worker") > 0 and GetPlayerData(trigger_player, "UnitTypesCount", "unit-goblin-temple") == 0 and CheckDependency(trigger_player, "unit-goblin-temple")) then -- should be made to require Agniss in the future, and be specific to the Tenebris Syndicate
 			return true
 		end
 		return false
@@ -81,7 +104,7 @@ DefineQuest("iouns-tactics", { -- based on the description of Ioun Stilgar by Je
 	Civilization = "goblin",
 	PlayerColor = "blue",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "RaceName") == "goblin" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-goblin-mess-hall") == 0 and CheckDependency(trigger_player, "unit-goblin-mess-hall")) then -- should be made to require Agniss in the future, and be specific to the Tenebris Syndicate
+		if (GetPlayerData(trigger_player, "RaceName") == "goblin" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-goblin-worker") > 0 and GetPlayerData(trigger_player, "UnitTypesCount", "unit-goblin-mess-hall") == 0 and CheckDependency(trigger_player, "unit-goblin-mess-hall")) then -- should be made to require Agniss in the future, and be specific to the Tenebris Syndicate
 			return true
 		end
 		return false

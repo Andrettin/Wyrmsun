@@ -73,7 +73,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added "The Sun Shields" in-game quest for the Germanics, and removed the equivalent trigger.
 - Added the "Mushroom Fields", "The Dripping Hall", "The Deep", "The Burner" and "The Weaver of Dreams" in-game quests for the dwarves.
 - Added the "Shorbear Hold" in-game quest for the Shorbear Clan.
-- Added the "Agniss' Mysticism", "Dremac's Wealth", "Ioun's Tactics" and "Orza's Scholarship" in-game quests for the goblins.
+- Added the "Gathaarl's Children", "Agniss' Mysticism", "Dremac's Wealth", "Ioun's Tactics" and "Orza's Scholarship" in-game quests for the goblins.
 
 * Units
 - Decreased the rate at which workers gain experience by gathering and building.
