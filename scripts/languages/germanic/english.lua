@@ -561,6 +561,7 @@ DefineLanguageWord("Charles", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
+	DerivesFrom = {"old-english", "noun", "Ceorl"}, -- presumably (alternatively it could come as a loanword from a cognate of Ceorl)
 	NameTypes = {"person-male"}
 })
 
@@ -600,6 +601,14 @@ DefineLanguageWord("Christopher", {
 	Meanings = {},
 	Gender = "masculine",
 	NameTypes = {"person-male"}
+})
+
+DefineLanguageWord("Churl", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Churl"},
+	DerivesFrom = {"old-english", "noun", "Ceorl"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 29.
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Cold", {

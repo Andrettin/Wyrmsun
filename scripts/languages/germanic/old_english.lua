@@ -313,10 +313,19 @@ DefineLanguageWord("Cên", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Ceorl", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 29.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Freeman", "Husband"}, -- source gives the German "gemeinfreier Mann, Ehemann" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Karla"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Ceorlisc", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 100.
 	Language = "old-english",
 	Type = "adjective",
-	Meanings = {"Of a Churl", "Common"}
+	Meanings = {"Of a Churl", "Common"},
+	DerivesFrom = {"proto-germanic", "noun", "Karla"} -- presumably
 })
 
 DefineLanguageWord("Cēosan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 2.

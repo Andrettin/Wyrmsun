@@ -916,6 +916,13 @@ DefineLanguageWord("Jung", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	DerivesFrom = {"proto-indo-european", "adjective", "Yehw"}
 })
 
+DefineLanguageWord("Karal", { -- source also gives the alternative form "karl"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 29.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Man", "Husband", "Paramour"}, -- source gives the German "Mann, Ehemann, Buhle" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Karla"}
+})
+
 DefineLanguageWord("Kind", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
 	Language = "old-high-german",
 	Type = "noun",

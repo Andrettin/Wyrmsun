@@ -1400,7 +1400,20 @@ DefineLanguageWord("Karl", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {},
+	DerivesFrom = {"old-high-german", "noun", "Karal"}, -- presumably
 	NameTypes = {"person-male"}
+})
+
+DefineLanguageWord("Kerl", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Chap", "Guy", "Lad", "Servant"},
+	DerivesFrom = {"old-high-german", "noun", "Karal"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 29.
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Kerls",
+		"plural", "nominative", "Kerle"
+	}
 })
 
 DefineLanguageWord("Kettenhemd", {

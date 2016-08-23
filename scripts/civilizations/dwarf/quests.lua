@@ -118,7 +118,7 @@ DefineQuest("the-dripping-hall", { -- based on the lay of Alvis from Norse mytho
 	end,
 	Objectives = {"- Train a Gryphon Rider"}, -- could be changed to exploring a % of the skies? (or unpassable terrain)
 	Rewards = "+1000 Gold, +1000 Lumber, +500 Stone",
-	Hint = "Select a War Hall and then click on the Train Gryphon Rider button to train a gryphon rider.",
+	Hint = "Select a War Hall and then click on the Train Gryphon Rider button to train the unit required for this quest.",
 	BuildUnits = {"unit-dwarven-gryphon-rider", 1}
 })
 
@@ -193,7 +193,7 @@ DefineQuest("the-deep", { -- based on the lay of Alvis from Norse mythology; Sou
 	end,
 	Objectives = {"- Build a Transport"}, -- could be changed to be about exploring a % of the seas, or finding a certain neutral building in the seas or shores
 	Rewards = "+1000 Gold, +1000 Lumber, +500 Stone",
-	Hint = "Select a Dock and then click on the Build Transport button to build a transport ship.",
+	Hint = "Select a Dock and then click on the Build Transport button to build the ship required for this quest.",
 	BuildUnits = {"unit-dwarven-transport-ship", 1}
 })
 
@@ -241,7 +241,7 @@ DefineQuest("the-weaver-of-dreams", { -- based on the lay of Alvis from Norse my
 	end,
 	Objectives = {"- Build a Temple"},
 	Rewards = "+1000 Gold, +1000 Lumber, +500 Stone",
-	Hint = "Select a Miner, press the Build Structure button and then click on the Build Temple button to build a temple.",
+	Hint = "Select a Miner, press the Build Structure button and then click on the Build Temple button to build the building required for this quest.",
 	BuildUnits = {"unit-dwarven-temple", 1}
 })
 
@@ -441,7 +441,7 @@ DefineQuest("mushroom-fields", { -- inspired by the dialogue in Battle for Wesno
 	end,
 	Objectives = {"- Build 3 Mushroom Farms"},
 	Rewards = "+1500 Gold",
-	Hint = "Select a Miner, press the Build Structure button and then click on the Build Mushroom Farm button to build a mushroom farm.",
+	Hint = "Select a Miner, press the Build Structure button and then click on the Build Mushroom Farm button to build the building required for this quest.",
 	BuildUnits = {"unit-dwarven-mushroom-farm", 3}
 })
 

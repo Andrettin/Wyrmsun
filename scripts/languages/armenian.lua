@@ -38,6 +38,12 @@ DefineLanguageWord("Atamn", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	DerivesFrom = {"proto-indo-european", "noun", "Dont"}
 })
 
+DefineLanguageWord("Cer", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 29.
+	Language = "armenian",
+	Type = "noun",
+	Meanings = {"Old Man"} -- source gives the German "Greis" as the meaning
+})
+
 DefineLanguageWord("Hur", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
 	Language = "armenian",
 	Type = "noun",

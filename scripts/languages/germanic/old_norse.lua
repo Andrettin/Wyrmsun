@@ -990,6 +990,21 @@ DefineLanguageWord("Jǫrmuni", { -- Source: August Fick and Alf Torp, "Wortschat
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Karl", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 29.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Old Man", "Mature Man", "Husband", "Commoner"}, -- source gives the German "alter Mann, reifer Mann, Ehemann, Mann aus dem Volke" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Karla"}
+})
+
+DefineLanguageWord("Kerling", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 29.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Old Woman"}, -- source gives the German "altes Weib" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Karla"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Koma", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "old-norse",
 	Type = "verb",

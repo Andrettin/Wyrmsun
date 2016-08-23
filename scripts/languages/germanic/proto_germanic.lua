@@ -788,6 +788,13 @@ DefineLanguageWord("Isti", { -- this is the singular first person present; Sourc
 	}
 })
 
+DefineLanguageWord("Karla", { -- source gives "kar(a)la"; source also gives the alternative form "ker(a)la"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 29.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Old Man", "Mature Man"}, -- source gives the German "alter Mann, reifer Mann" as the meaning
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Kenþa", { -- source also gives the alternative form "kenda"; also a participle passive meaning (in German) "geboren"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
 	Language = "proto-germanic",
 	Type = "noun",

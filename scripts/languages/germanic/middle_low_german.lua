@@ -161,6 +161,13 @@ DefineLanguageWord("Kên", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Meanings = {"Resinous Wood"}
 })
 
+DefineLanguageWord("Kerle", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 29.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "noun", "Karla"}
+})
+
 DefineLanguageWord("Knecht", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
 	Language = "middle-low-german",
 	Type = "noun",

@@ -45,7 +45,7 @@ DefineQuest("agniss-mysticism", { -- based on the description of Agniss Tenebris
 	end,
 	Objectives = {"- Build a Temple"},
 	Rewards = "+1000 Gold, +1000 Lumber, +500 Stone",
-	Hint = "Select a Worker, press the Build Structure button and then click on the Build Temple button to build a temple.",
+	Hint = "Select a Worker, press the Build Structure button and then click on the Build Temple button to build the building required for this quest.",
 	BuildUnits = {"unit-goblin-temple", 1}
 })
 
@@ -93,7 +93,7 @@ DefineQuest("iouns-tactics", { -- based on the description of Ioun Stilgar by Je
 	end,
 	Objectives = {"- Build a Mess Hall"},
 	Rewards = "+1000 Gold, +1000 Lumber, +500 Stone",
-	Hint = "Select a Worker, press the Build Structure button and then click on the Build Mess Hall button to build a mess hall.",
+	Hint = "Select a Worker, press the Build Structure button and then click on the Build Mess Hall button to build the building required for this quest.",
 	BuildUnits = {"unit-goblin-mess-hall", 1}
 })
 

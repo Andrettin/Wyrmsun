@@ -237,6 +237,12 @@ DefineLanguageWord("Ésti", { -- this is the singular first person present; Sour
 	}
 })
 
+DefineLanguageWord("Γηραλέος", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 29.
+	Language = "greek",
+	Type = "adjective",
+	Meanings = {"Old"} -- source gives the German "alt" as the meaning
+})
+
 DefineLanguageWord("Hēélios", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
 	Language = "greek",
 	Type = "noun",

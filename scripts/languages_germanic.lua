@@ -264,7 +264,6 @@ DefineLanguage("english", {
 		"Heinrich", "Henry",
 		"Hessen", "Hesse",
 		"Johann", "John",
-		"Karl", "Charles",
 		"Ludwig", "Lewis",
 		"Peter", "Peter",
 		"Thuringen", "Thuringia",
