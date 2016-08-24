@@ -64,8 +64,12 @@ https://github.com/Andrettin/Wyrmsun
 * Editor
 - The grand strategy battle AI is now available for selection in the editor.
 
+* Items
+- Fixed an issue which caused an item to lose its name after loading a saved game.
+
 * Miscellaneous
 - Added Stone Pile (graphics by Jinn), which can be harvested for stone. It occasionally drops when buildings which cost stone are destroyed.
+- Fixed a crash cause.
 
 * Quests
 - Added the possibility of accepting in-game quests at town-hall-type buildings in custom games (quest icon by Jinn).
