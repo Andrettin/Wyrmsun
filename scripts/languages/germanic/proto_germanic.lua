@@ -80,6 +80,13 @@ DefineLanguageWord("Alma", { -- source also gives the alternative form "elma"; S
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Ammôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 17.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Mother", "Motherly Person"}, -- source gives the German "Mutter, mutterliche Person" as the meaning
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Ansu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 16.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -123,6 +130,20 @@ DefineLanguageWord("Austrô", { -- source gives "Austrô(n)"; Source: August Fic
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"a Spring Goddess"},
+	Gender = "feminine"
+})
+
+DefineLanguageWord("Avan", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Grandfather"}, -- source gives the German "Großvater" as the meaning
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Avôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Grandmother"}, -- source gives the German "Großmutter" as the meaning
 	Gender = "feminine"
 })
 
@@ -1604,11 +1625,11 @@ DefineLanguageWord("Reχtaz", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Meanings = {"Right", "Straight"}
 })
 
-DefineLanguageWord("Twiznaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 6.
+DefineLanguageWord("Þrahila", { -- source also gives the alternative form "þregila"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 101.
 	Language = "proto-germanic",
-	Type = "adjective",
-	Meanings = {"Twofold"} -- source actually gives "two each" (je zwei) as the meaning in p. 6, but later there is an equivalent Proto-Germanic word for "threefold" which is noted as "je drei"; and besides, in p. 1 "Twofold" is given as a possible meaning
-	 -- maybe is an adverb instead?
+	Type = "noun",
+	Meanings = {"Servant"}, -- source gives the German "Diener, Knecht" as the meaning
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Þrizna", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
@@ -1622,6 +1643,13 @@ DefineLanguageWord("Þrsúz", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "proto-germanic",
 	Type = "adjective",
 	Meanings = {"Dry"}
+})
+
+DefineLanguageWord("Twiznaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 6.
+	Language = "proto-germanic",
+	Type = "adjective",
+	Meanings = {"Twofold"} -- source actually gives "two each" (je zwei) as the meaning in p. 6, but later there is an equivalent Proto-Germanic word for "threefold" which is noted as "je drei"; and besides, in p. 1 "Twofold" is given as a possible meaning
+	 -- maybe is an adverb instead?
 })
 
 DefineLanguageWord("Χwat", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.

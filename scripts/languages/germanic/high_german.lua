@@ -1869,6 +1869,36 @@ DefineLanguageWord("Nuss", { -- Source: http://www.duden.de/rechtschreibung/Nuss
 	AffixNameTypes = {"compound", "prefix", "singular", "terrain-hills"} -- example: "Nussberg"
 })
 
+DefineLanguageWord("Oheim", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Uncle"},
+	DerivesFrom = {"middle-high-german", "noun", "Ôheim"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Oheims",
+		"plural", "nominative", "Oheime",
+		"plural", "accusative", "Oheime",
+		"plural", "dative", "Oheimen",
+		"plural", "genitive", "Oheime"
+	}
+})
+
+DefineLanguageWord("Ohm", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Uncle"},
+	DerivesFrom = {"middle-high-german", "noun", "Ôheim"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Ohmes", -- alternatively also "Ohms"
+		"plural", "nominative", "Ohme",
+		"plural", "accusative", "Ohme",
+		"plural", "dative", "Ohmen",
+		"plural", "genitive", "Ohme"
+	}
+})
+
 DefineLanguageWord("Ort", {
 	Language = "high-german",
 	Type = "noun",

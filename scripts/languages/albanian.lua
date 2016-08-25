@@ -25,6 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Amε", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 17.
+	Language = "albanian",
+	Type = "noun",
+	Meanings = {"Aunt"} -- source gives the German "Tante" as the meaning
+})
+
 DefineLanguageWord("Perendī́", { -- source also gives the alternative form "perndī́"; Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, pp. 35-36.
 	Language = "albanian",
 	Type = "noun",

@@ -61,6 +61,14 @@ DefineLanguageWord("Altern", { -- this is the plural; source also gives the alte
 	}
 })
 
+DefineLanguageWord("Amme", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 17.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Mother", "Wet Nurse", "Foster Mother"}, -- source gives the German "Mutter, Amme" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Amma"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Bach", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
 	Language = "middle-high-german",
 	Type = "noun",
@@ -698,6 +706,13 @@ DefineLanguageWord("Nuz̨", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"Nut"}, -- source gives the German "Nuß"
 	DerivesFrom = {"old-high-german", "noun", "Hnuz̨"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Ôheim", { -- source also gives the alternative form "œheim"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Uncle"}, -- source (apparently) gives the German "Oheim, Ohm" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Ôheim"}
 })
 
 DefineLanguageWord("Ort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.

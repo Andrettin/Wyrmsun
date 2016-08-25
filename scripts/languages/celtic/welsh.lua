@@ -90,6 +90,12 @@ DefineLanguageWord("Erw", { -- this is the genitive; Source: Winfred P. Lehmann,
 	}
 })
 
+DefineLanguageWord("Ewythr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
+	Language = "welsh",
+	Type = "noun",
+	Meanings = {"Uncle"} -- source gives the German "Oheim" as the meaning
+})
+
 DefineLanguageWord("Gwas", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 120.
 	Language = "welsh",
 	Type = "noun",

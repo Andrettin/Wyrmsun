@@ -171,6 +171,14 @@ DefineLanguageWord("Aviliuþ", { -- Source: August Fick and Alf Torp, "Wortschat
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Avô", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Grandmother"}, -- source gives the German "Großmutter" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Avôn"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Bagms", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 134.
 	Language = "gothic",
 	Type = "noun",

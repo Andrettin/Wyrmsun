@@ -32,3 +32,5 @@ DefineCharacter("Sækmime", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Civilization = "ettin",
 --	ProvinceOfOrigin = -- ?
 })
+
+-- Hraesvelg; giant who took the form of an eagle in Norse mythology (could be an ettin roc rider); Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 18, 245.

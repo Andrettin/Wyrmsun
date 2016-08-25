@@ -176,6 +176,12 @@ DefineLanguageWord("Svins", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Meanings = {"of Pig"}
 })
 
+DefineLanguageWord("Ujĭ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
+	Language = "old-church-slavonic",
+	Type = "noun",
+	Meanings = {"Uncle"} -- source gives the German "Oheim" as the meaning
+})
+
 DefineLanguageWord("Večerŭ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
 	Language = "old-church-slavonic",
 	Type = "noun",

@@ -27,7 +27,7 @@
 
 -- Horses
 
-DefineCharacter("Alsviðr", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 99.
+DefineCharacter("Alsviðr", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 99; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 19.
 	Name = "Alsviðr", -- One of the sun horses from Norse mythology (name means "All-Swift", as given by both sources); also a constellation
 	NameElements = {
 		"compound", "prefix", "old-icelandic", "affix", "Al",
@@ -36,7 +36,7 @@ DefineCharacter("Alsviðr", { -- Source: Richard Cleasby and Gudbrand Vigfusson,
 	Type = "unit-horse"
 })
 
-DefineCharacter("Arvak", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 99.
+DefineCharacter("Arvak", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 99; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 19.
 	Name = "Arvak", -- One of the sun horses from Norse mythology (name means "Early Waker")
 	NameElements = {
 		"compound", "prefix", "old-icelandic", "adjective", "Ar",
@@ -111,7 +111,7 @@ DefineCharacter("Gullfaxi", { -- The giant Hrungnir's horse in Norse mythology; 
 	Type = "unit-horse"
 })
 
-DefineCharacter("Gulltoppr", { -- Heimdall's horse from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 96-97; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 220-221, 636.
+DefineCharacter("Gulltoppr", { -- Heimdall's horse from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 96-97; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 220-221, 636; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 18.
 	Name = "Gulltoppr", -- as given by Cleasby (meaning "gold-tuft"); Bellows gives Golltop instead (meaning "Gold-Topped"); both are likely the same horse
 	NameElements = {
 		"compound", "prefix", "old-icelandic", "noun", "Gull",
@@ -126,8 +126,8 @@ DefineCharacter("Gyllir", { -- Horse from Norse mythology (name means "Golden");
 	Type = "unit-horse"
 })
 
-DefineCharacter("Hrímfaxi", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 145.
-	Name = "Hrímfaxi", -- Horse from Norse mythology (from the Edda)
+DefineCharacter("Hrímfaxi", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 145; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 19.
+	Name = "Hrímfaxi", -- Horse from Norse mythology (from the Edda), which was the mount of Night
 	NameElements = {
 --		"compound", "prefix", "old-icelandic", -- ?
 		"compound", "suffix", "old-icelandic", "noun", "Faxi"
@@ -187,8 +187,8 @@ DefineCharacter("Skeiðbrímir", { -- Source: Henry Adams Bellows (transl.), "Th
 	Type = "unit-horse"
 })
 
-DefineCharacter("Skinfaxi", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 71; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 145, 547.
-	Name = "Skinfaxi", -- Sun-horse from Norse mythology (according to Bellows the name means "Shining-Mane"; Cleasby gives the meaning as "Sheen-mane" instead)
+DefineCharacter("Skinfaxi", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 71; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 145, 547; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 19.
+	Name = "Skinfaxi", -- Sun-horse from Norse mythology (according to Bellows the name means "Shining-Mane"; Cleasby gives the meaning as "Sheen-mane" instead), which was the mount of Day
 	NameElements = {
 		"compound", "prefix", "old-icelandic", "adjective", "Skin",
 		"compound", "suffix", "old-icelandic", "noun", "Faxi"

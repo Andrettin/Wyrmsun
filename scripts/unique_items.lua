@@ -150,6 +150,16 @@ DefineUniqueItem("draupnir", { -- Source: Kevin Crossley-Holland, "The Norse Myt
 	Quote = "\"The ring I wish not, though burned it was\nOf old with Hroptatyr's son;\nIn my home is no lack of gold\nIn the wealth my father wields.\"\n- Dwarven Traditional Poetry"
 } )
 
+--[[
+DefineUniqueItem("gjall", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 18, 243.
+	Name = "Gjall",
+	Type = "unit-horn",
+	Prefix = "upgrade-item-prefix-jinns",
+	Suffix = "upgrade-item-suffix-of-swiftness",
+	Background = "In Norse mythology, Gjall (\"the Ringing Horn\") was the horn of the god Heimdall, which was heard in all nine worlds when soared."
+} )
+--]]
+
 DefineUniqueItem("thusagans-book", { -- From Battle for Wesnoth: The Hammer of Thursagan
 	Name = "Thursagan's Book",
 	Type = "unit-book",
@@ -369,38 +379,6 @@ DefineUniqueItem("na-slovanech-monastery", { -- Alena Ježková, "77 Prague Lege
 -- "The Chateau"; smallest house in the Golden Lane, which had once been inhabited by an elderly nobleman; Source: Alena Ježková, "77 Prague Legends", 2006, p. 93.
 -- Faust's House; Source: Alena Ježková, "77 Prague Legends", 2006, p. 126.
 -- U Myslíků ("At the Myslíks"); the protestant owner of this house and his family had to flee Prague after the Battle of the White Mountain in 1620; Source: Alena Ježková, "77 Prague Legends", 2006, pp. 131-132.
-
--- Unique streets in Prague
--- Tomášská Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 70.
--- Mostecká Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 72.
--- Karmelitská Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 74.
--- Liliová Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 21.
--- Řetězová Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 22.
--- Karlova Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 23.
--- Platnéřská Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 25.
--- Dlouhá Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 33.
--- Husourea Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 40.
--- Seminářská Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 42.
--- Komeiktská Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 58.
--- Karoliny Světle Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 58.
--- Nerudova Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 62.
--- Ostruhová Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 62.
--- Golden Lane (called "Zlatá" - "golden"); Source: Alena Ježková, "77 Prague Legends", 2006, pp. 92, 117.
--- Široká Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 105.
--- Nekázanka (street); Source: Alena Ježková, "77 Prague Legends", 2006, p. 125.
--- Jindřišská Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 125.
--- Myslíkova Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 131.
--- Spálená Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 131.
-
--- Unique squares in Prague
--- Malé náměstí ("Small Square"); Source: Alena Ježková, "77 Prague Legends", 2006, p. 19.
--- Mariánské Square; Source: Alena Ježková, "77 Prague Legends", 2006, p. 26.
--- Loretánské Square; the Černín Palace was located in it; Source: Alena Ježková, "77 Prague Legends", 2006, p. 94.
--- Karlova náměstí ("Charles Square"); Source: Alena Ježková, "77 Prague Legends", 2006, p. 126.
-
--- Nový svět ("New World"); district in Hradčany (in or nearby Prague); Source: Alena Ježková, "77 Prague Legends", 2006, p. 98.
--- Josefo; Jewish quarter in Prague; Source: Alena Ježková, "77 Prague Legends", 2006, p. 101.
--- Malá Strana ("Lesser Town") (in or nearby Prague); Source: Alena Ježková, "77 Prague Legends", 2006, p. 124.
 
 -- Judita Bridge, unique bridge; first stone bridge built across the Vltava in Prague (built in 1158 at the orders of Judita, wife of Vladislav II); the bridge was 500m long, being the largest in Central Europe when built; the bridge was destroyed by a great flood in 1342; Source: Alena Ježková, "77 Prague Legends", 2006, p. 45.
 -- Charles Bridge: built to replace Judita Bridge, had its foundation stone laid by Emperor and King Charles IV in the 9th of July 1357; its construction was entrusted to Petr Parléř, who had built St Vitus' Cathedral; the bridge had wine, raw eggs and cream cheese added to the mortar; Source: Alena Ježková, "77 Prague Legends", 2006, pp. 45-46.

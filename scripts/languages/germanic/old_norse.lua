@@ -56,6 +56,14 @@ DefineLanguageWord("Af", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Ge
 	DerivesFrom = {"proto-germanic", "adposition", "Af"}
 })
 
+DefineLanguageWord("Afi", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Grandfather"}, -- source gives the German "Großvater" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Avan"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Ala", { -- source also gives the alternative form "Ôl"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
 	Language = "old-norse",
 	Type = "verb",
@@ -118,6 +126,14 @@ DefineLanguageWord("Almr", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	NumberCaseInflections = {
 		"singular", "no-case", "Alm", -- presumably (assuming the "-r" ending here is the nominative ending)
 	}
+})
+
+DefineLanguageWord("Amma", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 17.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Grandmother"}, -- source gives the German "Großmutter" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Ammôn"},
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Anga", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, p. 228.
@@ -1611,6 +1627,14 @@ DefineLanguageWord("Þorp", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"Flock", "Crowd", "Farmstead"}, -- Fick gives the German "Schar, Menschenhaufen, kleineres Gehöft" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Þurpa"}, -- as given by Fick
 	Gender = "neuter" -- as given by Fick
+})
+
+DefineLanguageWord("Þræll", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 101.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Servant", "Serf"}, -- source gives the German "Knecht, der Unfreie" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Þrahila"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Þrennr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.

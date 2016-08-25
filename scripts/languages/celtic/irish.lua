@@ -31,6 +31,12 @@ DefineLanguageWord("Áer", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch 
 	Meanings = {"Verbal Invective"} -- source gives the German "verbale Schmähung" as the meaning
 })
 
+DefineLanguageWord("Ammait", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 17.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"Wet Nurse", "Foster Mother"} -- source gives the German "Amme" as the meaning
+})
+
 DefineLanguageWord("Arget", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 217.
 	Language = "irish",
 	Type = "noun",

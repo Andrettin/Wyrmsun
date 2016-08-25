@@ -130,10 +130,32 @@ DefineQuest("the-good-seasons", { -- Source: Snorri Sturlson, "Heimskringla", 18
 	BuildUnits = {"unit-germanic-farm", 2}
 })
 
+DefineQuest("thralls-logging", { -- based on the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 19.
+	Name = "Thrahila's Logging", -- in the Song of Rig, Rig (the God Heimdall) fathers Thrall, Karl and Jarl, each of which originates a class of the Norse world; namely serfs, peasants and warriors; "thrall" is a reflex of Proto-Germanic "þrahila"
+	Icon = "icon-germanic-carpenters-shop",
+	Description = "The robust serf Thrahila meekly suggests that we gather some wood for our people to warm themselves and build new homes.",
+	World = "Earth",
+	Civilization = "germanic",
+	PlayerColor = "orange",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "RaceName") == "germanic" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-worker") > 0) then
+			return true
+		end
+		return false
+	end,
+	CompletionEffects = function(s)
+		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 1000)
+	end,
+	Objectives = {"- Gather 2000 Lumber"},
+	Rewards = "+1000 Gold",
+	Hint = "Select a Bura and right-click on a tree or wood pile to begin gathering lumber.",
+	GatherResources = {"lumber", 2000}
+})
+
 DefineQuest("karls-dutifulness", { -- based on the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 22-24.
-	Name = "Karla's Dutifulness", -- in the Song of Rig, Rig (the God Heimdall) fathers Thrall, Karl and Jarl, each of which originates a class of the Norse world; namely serfs, peasants and warriors; "karl" is a reflex of "karla"
+	Name = "Karla's Dutifulness", -- in the Song of Rig, Rig (the God Heimdall) fathers Thrall, Karl and Jarl, each of which originates a class of the Norse world; namely serfs, peasants and warriors; "karl" is a reflex of Proto-Germanic "karla"
 	Icon = "icon-germanic-worker",
-	Description = "Our legends say that in ages past Karla founded our peasant class. As a homage to the ancestral tiller of the land, and to enhance our labor yield, we should train a few industrious buras.",
+	Description = "Our legends say that in ages past Karla, the son of Afi and Ammon, founded our peasant class. As a homage to the ancestral tiller of the land, and to enhance our labor yield, we should train a few industrious buras.", -- they were "Afi" and "Amma" in the Old Norse original, which are (respectively) reflexes of Proto-Germanic "Avan" and "Ammôn"
 	World = "Earth",
 	Civilization = "germanic",
 	PlayerColor = "orange",
@@ -155,7 +177,7 @@ DefineQuest("karls-dutifulness", { -- based on the Song of Rig; Source: Kevin Cr
 })
 
 DefineQuest("jarls-bravery", { -- based on the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 22-24.
-	Name = "Erala's Bravery", -- in the Song of Rig, Rig (the God Heimdall) fathers Thrall, Karl and Jarl, each of which originates a class of the Norse world; namely serfs, peasants and warriors; "jarl" is a reflex of "erala"
+	Name = "Erala's Bravery", -- in the Song of Rig, Rig (the God Heimdall) fathers Thrall, Karl and Jarl, each of which originates a class of the Norse world; namely serfs, peasants and warriors; "jarl" is a reflex of Proto-Germanic "erala"
 	Icon = "icon-germanic-warrior",
 	Description = "Our traditions tell us that the legendary hero Erala, the son of Fader, founded our warrior class, which receives his name. To honor the great conqueror and protect our homeland, we should train a few brave eralas.", -- "Fadēr" is the word which gave origin to "Fathir", the name of the character in Old Norse; what is the original word for "Mothir"?
 	World = "Earth",

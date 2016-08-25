@@ -45,7 +45,7 @@ DefineQuest("gathaarls-children", { -- based on the description of Gathaarl in T
 	end,
 	Objectives = {"- Build 3 Farms"},
 	Rewards = "+1000 Gold, +1000 Lumber, +500 Stone",
-	Hint = "Select a Worker, press the Build Structure button and then click on the Build Farm button to build the building required for this quest.",
+	Hint = "Select a Drudge, press the Build Structure button and then click on the Build Farm button to build the building required for this quest.",
 	BuildUnits = {"unit-goblin-farm", 3}
 })
 DefineQuest("agniss-mysticism", { -- based on the description of Agniss Tenebris by Jesse Crider
@@ -68,7 +68,7 @@ DefineQuest("agniss-mysticism", { -- based on the description of Agniss Tenebris
 	end,
 	Objectives = {"- Build a Temple"},
 	Rewards = "+1000 Gold, +1000 Lumber, +500 Stone",
-	Hint = "Select a Worker, press the Build Structure button and then click on the Build Temple button to build the building required for this quest.",
+	Hint = "Select a Drudge, press the Build Structure button and then click on the Build Temple button to build the building required for this quest.",
 	BuildUnits = {"unit-goblin-temple", 1}
 })
 
@@ -116,7 +116,7 @@ DefineQuest("iouns-tactics", { -- based on the description of Ioun Stilgar by Je
 	end,
 	Objectives = {"- Build a Mess Hall"},
 	Rewards = "+1000 Gold, +1000 Lumber, +500 Stone",
-	Hint = "Select a Worker, press the Build Structure button and then click on the Build Mess Hall button to build the building required for this quest.",
+	Hint = "Select a Drudge, press the Build Structure button and then click on the Build Mess Hall button to build the building required for this quest.",
 	BuildUnits = {"unit-goblin-mess-hall", 1}
 })
 

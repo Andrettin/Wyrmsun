@@ -32,10 +32,10 @@
 --
 
 DefineUnitType("unit-goblin-worker", {
-	Name = _("Worker"),
+	Name = _("Drudge"),
 	Parent = "unit-template-worker",
 	Civilization = "goblin",
-	Description = _("Goblin workers do not live an enviable life. Those that have the opportunity seek to become warriors instead, a position in which they can obtain much better food and everyday commodities by raiding."),
+	Description = _("Goblin drudges do not live an enviable life. Those that have the opportunity seek to become warriors instead, a position in which they can obtain much better food and everyday commodities by raiding."),
 	Image = {"file", "goblin/units/goblin_worker.png", "size", {72, 72}},
 	Animations = "animations-gnomish-worker", Icon = "icon-goblin-worker",
 	DefaultEquipment = {
@@ -48,6 +48,8 @@ DefineUnitType("unit-goblin-worker", {
 	Corpse = "unit-goblin-dead-body",
 	WeaponClasses = {"mace"},
 	BluntDamage = true,
+	ButtonKey = "d",
+	ButtonHint = _("Train ~!Drudge"),
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
 	CanGatherResources = {
 		{

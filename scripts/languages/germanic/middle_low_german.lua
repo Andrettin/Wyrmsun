@@ -97,6 +97,13 @@ DefineLanguageWord("Darm", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	DerivesFrom = {"old-saxon", "noun", "Tharm"}
 })
 
+DefineLanguageWord("Drelle", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 101.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Serf"}, -- source gives the Latin "servus" as the meaning
+	DerivesFrom = {"old-norse", "noun", "Þræll"} -- Fick mentions this as a possibility
+})
+
 DefineLanguageWord("Gnîden", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
 	Language = "middle-low-german",
 	Type = "verb", -- (apparently) a strong verb

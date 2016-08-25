@@ -63,6 +63,14 @@ DefineLanguageWord("Altiron", { -- this is the plural; source also gives the alt
 	}
 })
 
+DefineLanguageWord("Amma", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 17.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Mother", "Wet Nurse", "Foster Mother"}, -- source gives the German "Mutter, Amme" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Ammôn"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Anafalz", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 124.
 	Language = "old-high-german",
 	Type = "noun",
@@ -369,6 +377,13 @@ DefineLanguageWord("Dorf", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Meanings = {"Village"}, -- source gives the German "Dorf" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Þurpa"},
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Drigil", { -- source also gives the alternative forms "dregil", "trikil" and "trigil"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 101.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Servant"}, -- source gives the German "Diener" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Þrahila"}
 })
 
 DefineLanguageWord("Durri", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -1157,6 +1172,13 @@ DefineLanguageWord("Nord", { -- source also gives the alternative form "Nort"; S
 	Meanings = {"North"}, -- source gives the German "Norden" as the meaning
 	DerivesFrom = {"proto-germanic", "adverb", "Nurþa"},
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Ôheim", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Uncle"}, -- source (apparently) gives the German "Oheim, Ohm" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Avan"}
 })
 
 DefineLanguageWord("Orlac", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.

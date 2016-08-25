@@ -50,6 +50,12 @@ DefineLanguageWord("Alucitae", { -- this is the plural; Source: Alaric Hall, "Th
 	}
 })
 
+DefineLanguageWord("Amîta", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 17.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Father's Sister"} -- source gives the German "Vaters Schwester" as the meaning
+})
+
 DefineLanguageWord("Amphora", { -- Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, pp. xxxiii-xxxiv.
 	Language = "latin",
 	Type = "noun",
