@@ -374,6 +374,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-galerix-exilis",
+	Size = {46, 38},
+	File = "neutral/icons/galerix_exilis.png"
+})
+
+DefineIcon({
 	Name = "icon-rat",
 	Size = {46, 38},
 	File = "neutral/icons/rat.png"

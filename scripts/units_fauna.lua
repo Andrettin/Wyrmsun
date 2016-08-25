@@ -450,6 +450,56 @@ DefineUnitType("unit-adelobasileus-cromptoni", {
 	}
 } )
 
+DefineUnitType("unit-galerix-exilis", {
+	Name = "Galerix",
+	Parent = "unit-template-fauna-unit",
+	Species = "galerix-exilis",
+	Description = _("The Galerix was an ancient small mammal, who lived off insects."),
+	Image = {"file", "neutral/units/rat_light_gray_fur_short_tail.png", "size", {72, 72}},
+	Animations = "animations-rat", Icon = "icon-galerix-exilis",
+	Strength = 2, -- same as the rat
+	Dexterity = 15, -- same as the rat
+	Intelligence = 2, -- same as the rat
+	Charisma = 2, -- same as the rat
+	Speed = 8,
+	HitPoints = 5,
+	DrawLevel = 35,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 3,
+	BasicDamage = 1, Missile = "missile-none",
+	MaxAttackRange = 1,
+	Accuracy = 14,
+	Evasion = 15,
+	Priority = 7,
+	Points = 1,
+	Demand = 1,
+	Type = "land",
+	RightMouseAction = "move",
+	CanAttack = true,
+	CanTargetLand = true,
+	RandomMovementProbability = 1,
+	RandomMovementDistance = 3,
+	Flesh = true,
+	Insectivore = true,
+	PierceDamage = true,
+	Coward = true,
+	Sounds = {
+		"selected", "click",
+--		"acknowledge", "critter-acknowledge",
+--		"ready", "critter-ready",
+--		"help", "critter-help",
+		"dead", "rat-dead",
+		"hit", "bite-attack",
+		"miss", "attack-miss",
+		"step", "step-dirt",
+		"step-dirt", "step-dirt",
+		"step-gravel", "step-gravel",
+		"step-mud", "step-mud",
+		"step-stone", "step-stone",
+		"step-grass", "step-leaves"
+	}
+} )
+
 DefineUnitType("unit-rat", {
 	Name = "Rat",
 	Parent = "unit-template-fauna-unit",
