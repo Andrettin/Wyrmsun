@@ -389,7 +389,7 @@ function SinglePlayerTriggers()
 		if (GrandStrategy) then
 			for i=0,14 do
 				if (GetPlayerData(i, "Name") == Attacker or (GetPlayerData(i, "Name") == Defender and GetProvinceOwner(AttackedProvince.Name) ~= "")) then
-					if (GetPlayerData(i, "TotalNumUnits") > 0 and GetFactionFromName(GetPlayerData(i, "Name")) ~= nil) then
+					if (GetFactionFromName(GetPlayerData(i, "Name")) ~= nil) then
 						for j, unitName in ipairs(Units) do -- if in grand strategy mode, apply upgrades researched
 							if (string.find(unitName, "upgrade-") ~= nil) then
 								if (GetFactionTechnology(GetPlayerData(i, "RaceName"), GetPlayerData(i, "Name"), unitName)) then
