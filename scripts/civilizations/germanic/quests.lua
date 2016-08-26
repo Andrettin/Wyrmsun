@@ -174,28 +174,26 @@ DefineQuest("thralls-hut", { -- based on the Song of Rig; Source: Kevin Crossley
 	BuildUnits = {"unit-germanic-farm", 1}
 })
 
-DefineQuest("karls-dutifulness", { -- based on the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 22-24.
-	Name = "Karla's Dutifulness", -- in the Song of Rig, Rig (the God Heimdall) fathers Thrall, Karl and Jarl, each of which originates a class of the Norse world; namely serfs, peasants and warriors; "karl" is a reflex of Proto-Germanic "karla"
-	Icon = "icon-germanic-worker",
-	Description = "Our legends say that in ages past Karla, the son of Afi and Ammon, founded our peasant class. As a homage to the ancestral tiller of the land, and to enhance our labor yield, we should train a few industrious buras.", -- they were "Afi" and "Amma" in the Old Norse original, which are (respectively) reflexes of Proto-Germanic "Avan" and "Ammôn"
+DefineQuest("karls-farm", { -- based on the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 21.
+	Name = "Karla's Farm", -- in the Song of Rig, Rig (the God Heimdall) fathers Thrall, Karl and Jarl, each of which originates a class of the Norse world; namely serfs, peasants and warriors; "karl" is a reflex of Proto-Germanic "karla"
+	Icon = "icon-germanic-farm",
+	Description = "The young peasant Karla, son of Avan and Ammon, is a rapid learner. He is mastering the construction of huts and farms, and proposes the erection of a new farm to complete his learning process.", -- his parents were "Afi" and "Amma" in the Old Norse original, which are (respectively) reflexes of Proto-Germanic "Avan" and "Ammôn"
 	World = "Earth",
 	Civilization = "germanic",
 	PlayerColor = "orange",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "RaceName") == "germanic" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-town-hall") > 0 and CheckDependency(trigger_player, "unit-germanic-worker")) then
+		if (GetPlayerData(trigger_player, "RaceName") == "germanic" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-worker") > 0 and CheckDependency(trigger_player, "unit-germanic-farm")) then
 			return true
 		end
 		return false
 	end,
 	CompletionEffects = function(s)
-		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 1000)
-		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
-		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
+		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 750)
 	end,
-	Objectives = {"- Train 5 Buras"},
-	Rewards = "+1000 Gold, +1000 Lumber, +500 Stone",
-	Hint = "Select a Chieftain's Hall and then click on the Train Bura button to train the unit required for this quest.",
-	BuildUnits = {"unit-germanic-worker", 5}
+	Objectives = {"- Build a Farm"},
+	Rewards = "+750 Gold",
+	Hint = "Select a Bura, press the Build Structure button and then click on the Build Farm button to build the building required for this quest.",
+	BuildUnits = {"unit-germanic-farm", 1}
 })
 
 DefineQuest("jarls-bravery", { -- based on the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 22-24.

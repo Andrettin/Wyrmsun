@@ -33,6 +33,14 @@ DefineAchievement("the-settlement-of-scandinavia", {
 	RequiredQuests = {"on-the-vanaquisl", "westward-migration", "northwards-to-the-sea", "gylves-realm"}
 })
 
+DefineAchievement("the-song-of-rig", {
+	Name = "The Song of Rig",
+	Icon = "icon-germanic-worker",
+	Description = "Complete all quests related to Thrahila, Karla and Erala.",
+	PlayerColor = "orange",
+	RequiredQuests = {"thralls-logging", "thralls-hut", "karls-farm", "gylves-realm"}
+})
+
 DefineAchievement("the-marcomannic-wars", {
 	Name = "The Marcomannic Wars",
 	Icon = "icon-suebi-swordsman",

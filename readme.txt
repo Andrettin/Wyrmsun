@@ -73,6 +73,7 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - Added Stone Pile (graphics by Jinn), which can be harvested for stone. It occasionally drops when buildings which cost stone are destroyed.
 - Fixed a crash cause.
+- Added "The Song of Rig" achievement.
 
 * Quests
 - Added the possibility of accepting in-game quests at town-hall-type buildings in custom games (quest icon by Jinn).
