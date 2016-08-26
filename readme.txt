@@ -64,6 +64,9 @@ https://github.com/Andrettin/Wyrmsun
 * Editor
 - The grand strategy battle AI is now available for selection in the editor.
 
+* Grand Strategy
+- Fixed issue which caused technologies to not be properly applied when playing grand strategy battles.
+
 * Items
 - Fixed an issue which caused an item to lose its name after loading a saved game.
 
