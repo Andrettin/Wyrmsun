@@ -914,6 +914,20 @@ DefineLanguageWord("Horn", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Hreimr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 60.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Noise", "Roar"}, -- source gives the Latin "sonitus, fremitus" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Hri"}
+})
+
+DefineLanguageWord("Hrîna", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 60.
+	Language = "old-norse",
+	Type = "verb",
+	Meanings = {"Pig Shout"}, -- source gives the German "schreien, vom Schweine" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Hri"}
+})
+
 DefineLanguageWord("Hrǫnn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Language = "old-norse",
 	Type = "noun",
@@ -1019,6 +1033,14 @@ DefineLanguageWord("Kerling", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Meanings = {"Old Woman"}, -- source gives the German "altes Weib" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Karla"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Kleggi", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 38.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Horse-Fly"}, -- source gives the German "Viehbremse" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Klajja"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Koma", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.

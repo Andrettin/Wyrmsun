@@ -286,6 +286,13 @@ DefineLanguageWord("Inghuis", { -- is this really a noun? Source: B. H. Slicher 
 	}
 })
 
+DefineLanguageWord("Klei", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 38.
+	Language = "dutch",
+	Type = "noun",
+	Meanings = {"Clay"}, -- source gives the German "Lehm" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Klajja"}
+})
+
 DefineLanguageWord("Kote", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
 	Type = "noun",

@@ -44,6 +44,12 @@ DefineLanguageWord("Ausztrìnis", { -- Source: August Fick and Alf Torp, "Wortsc
 	Meanings = {"East Wind"} -- source gives the German "Ostwind" as the meaning
 })
 
+DefineLanguageWord("Avýnas", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
+	Language = "lithuanian",
+	Type = "noun",
+	Meanings = {"Uncle"} -- source gives the German "Oheim" as the meaning
+})
+
 DefineLanguageWord("Barzdà", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	Language = "lithuanian",
 	Type = "noun",

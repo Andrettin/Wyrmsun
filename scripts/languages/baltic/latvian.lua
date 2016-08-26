@@ -25,12 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Avýnas", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
-	Language = "latvian",
-	Type = "noun",
-	Meanings = {"Uncle"} -- source gives the German "Oheim" as the meaning
-})
-
 DefineLanguageWord("Cūdō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
 	Language = "latvian",
 	Type = "verb",
@@ -42,6 +36,12 @@ DefineLanguageWord("Gnīde", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Sharp and Scabby Skin"}, -- source gives the German "eine scharfe, schäbige Haut" as the meaning
 	DerivesFrom = {"proto-indo-european", "noun", "Ghni"}
+})
+
+DefineLanguageWord("Krina", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 60.
+	Language = "latvian",
+	Type = "noun",
+	Meanings = {"Sow"} -- source gives the German "Sau" as the meaning
 })
 
 DefineLanguageWord("Kukurs", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.

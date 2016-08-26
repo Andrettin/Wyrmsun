@@ -1789,6 +1789,14 @@ DefineLanguageWord("Þorp", { -- source also gives the alternative form "Þrop";
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Clæ̂g", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 38.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Clay"}, -- source gives the German "Lehm" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Klajja"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Þræ̂l", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 101.
 	Language = "old-english",
 	Type = "noun",

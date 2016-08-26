@@ -175,6 +175,13 @@ DefineLanguageWord("Kerle", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	DerivesFrom = {"proto-germanic", "noun", "Karla"}
 })
 
+DefineLanguageWord("Klei", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 38.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Clay"}, -- source gives the German "Lehm" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Klajja"}
+})
+
 DefineLanguageWord("Knecht", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
 	Language = "middle-low-german",
 	Type = "noun",

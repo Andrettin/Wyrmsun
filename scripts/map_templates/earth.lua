@@ -516,6 +516,8 @@ SetMapTemplateTileTerrain("earth", "shallow-water", 4159, 701)
 SetMapTemplateTileTerrain("earth", "shallow-water", 4159, 704)
 SetMapTemplateTileTerrain("earth", "shallow-water", 4160, 704)
 
+SetMapTemplateTileLabel("earth", "The Weald", {3843, 886})
+
 SetMapTemplateResource("earth", "unit-copper-deposit", {3695, 1079}) -- Tin deposits; Source: "Atlas de História Mundial", 2001, p. 41.
 SetMapTemplateResource("earth", "unit-copper-deposit", {3727, 902}) -- Tin deposits; Source: "Atlas de História Mundial", 2001, p. 41.
 SetMapTemplateResource("earth", "unit-copper-deposit", {3749, 956}) -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.

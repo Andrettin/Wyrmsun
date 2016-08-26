@@ -73,7 +73,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Quests
 - Added the possibility of accepting in-game quests at town-hall-type buildings in custom games (quest icon by Jinn).
-- Added "The Good Seasons", "Thrahila's Logging", "Karla's Dutifulness" and "Erala's Bravery" in-game quests for the Germanics.
+- Added "The Good Seasons", "Thrahila's Logging", "Thrahila's Hut", "Karla's Dutifulness" and "Erala's Bravery" in-game quests for the Germanics.
 - Added "The Sun Shields" in-game quest for the Germanics, and removed the equivalent trigger.
 - Added the "Mushroom Fields", "The Dripping Hall", "The Deep", "The Burner" and "The Weaver of Dreams" in-game quests for the dwarves.
 - Added the "Shorbear Hold" in-game quest for the Shorbear Clan.

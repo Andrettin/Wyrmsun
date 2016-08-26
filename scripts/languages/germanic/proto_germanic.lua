@@ -760,6 +760,12 @@ DefineLanguageWord("Hraznō", { -- Source: Sean Crist, "An Analysis of *z loss i
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Hri", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 60.
+	Language = "proto-germanic",
+	Type = "verb",
+	Meanings = {"Shout"} -- source gives the German "schreien" as the meaning
+})
+
 DefineLanguageWord("Hunhru", { -- source also gives the alternative form "hungru"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 44.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -826,6 +832,13 @@ DefineLanguageWord("Kizna", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Resinous Wood"},
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Klajja", { -- source gives "klajja(n)"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 38.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Clay"}, -- source gives the German "Lehm" as the meaning
 	Gender = "masculine"
 })
 

@@ -111,6 +111,14 @@ DefineLanguageWord("Kind", { -- dialectal; Source: August Fick and Alf Torp, "Wo
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Kli", { -- vernacular; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 38.
+	Language = "norwegian",
+	Type = "noun",
+	Meanings = {"Clay"}, -- source gives the German "Lehm" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Klajja"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Simla", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
 	Language = "norwegian", -- source gives New Norwegian
 	Type = "noun",
