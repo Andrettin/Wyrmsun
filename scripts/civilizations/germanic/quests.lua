@@ -196,10 +196,10 @@ DefineQuest("karls-farm", { -- based on the Song of Rig; Source: Kevin Crossley-
 	BuildUnits = {"unit-germanic-farm", 1}
 })
 
-DefineQuest("jarls-bravery", { -- based on the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 22-24.
-	Name = "Erala's Bravery", -- in the Song of Rig, Rig (the God Heimdall) fathers Thrall, Karl and Jarl, each of which originates a class of the Norse world; namely serfs, peasants and warriors; "jarl" is a reflex of Proto-Germanic "erala"
+DefineQuest("jarls-swordsmanship", { -- based on the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 22-24.
+	Name = "Erala's Swordsmanship", -- in the Song of Rig, Rig (the God Heimdall) fathers Thrall, Karl and Jarl, each of which originates a class of the Norse world; namely serfs, peasants and warriors; "jarl" is a reflex of Proto-Germanic "erala"
 	Icon = "icon-germanic-warrior",
-	Description = "Our traditions tell us that the legendary hero Erala, the son of Fader, founded our warrior class, which receives his name. To honor the great conqueror and protect our homeland, we should train a few brave eralas.", -- "Fadēr" is the word which gave origin to "Fathir", the name of the character in Old Norse; what is the original word for "Mothir"?
+	Description = "The young warrior Erala, the son of Fader and Moder, was fast to master the art of the sword. He proposes to train a few brave warriors to protect our homeland.", -- in the original myth his parents were "Fathir" and "Mothir"; "Fadēr" is the word which gave origin to "Fathir", while "Môder" gave origin to "Mothir"
 	World = "Earth",
 	Civilization = "germanic",
 	PlayerColor = "orange",
