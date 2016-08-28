@@ -212,7 +212,7 @@ DefineQuest("jarls-swordsmanship", { -- based on the Song of Rig; Source: Kevin 
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 1500)
 	end,
-	Objectives = {"- Train 3 Eralas"},
+	Objectives = {"- Train 3 Eralas"}, -- when Erala is added as a hero, this should be changed to him acquiring the Sword Mastery ability
 	Rewards = "+1500 Gold",
 	Hint = "Select a War Lodge and then click on the Train Erala button to train the unit required for this quest.",
 	BuildUnits = {"unit-germanic-warrior", 3}
@@ -226,7 +226,7 @@ DefineQuest("jarls-hall", { -- based on the Song of Rig; Source: Kevin Crossley-
 	Civilization = "germanic",
 	PlayerColor = "orange",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "RaceName") == "germanic" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-worker") > 0 and CheckDependency(trigger_player, "unit-germanic-town-hall")) then
+		if (GetPlayerData(trigger_player, "CompletedQuest", "jarls-swordsmanship") and GetPlayerData(trigger_player, "RaceName") == "germanic" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-worker") > 0 and CheckDependency(trigger_player, "unit-germanic-town-hall")) then
 			return true
 		end
 		return false
