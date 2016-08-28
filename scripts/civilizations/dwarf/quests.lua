@@ -241,7 +241,7 @@ DefineQuest("the-weaver-of-dreams", { -- based on the lay of Alvis from Norse my
 	end,
 	Objectives = {"- Build a Temple"},
 	Rewards = "+1000 Gold, +1000 Lumber, +500 Stone",
-	Hint = "Select a Miner, press the Build Structure button and then click on the Build Temple button to build the building required for this quest.",
+	Hint = "Select a Miner, press the Build Structure button and then click on the Build Temple button to build the structure required for this quest.",
 	BuildUnits = {"unit-dwarven-temple", 1}
 })
 
@@ -442,7 +442,7 @@ DefineQuest("mushroom-fields", { -- inspired by the dialogue in Battle for Wesno
 	end,
 	Objectives = {"- Build 3 Mushroom Farms"},
 	Rewards = "+1500 Gold",
-	Hint = "Select a Miner, press the Build Structure button and then click on the Build Mushroom Farm button to build the building required for this quest.",
+	Hint = "Select a Miner, press the Build Structure button and then click on the Build Mushroom Farm button to build the structure required for this quest.",
 	BuildUnits = {"unit-dwarven-mushroom-farm", 3}
 })
 

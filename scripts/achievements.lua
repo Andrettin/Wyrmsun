@@ -38,7 +38,7 @@ DefineAchievement("the-song-of-rig", {
 	Icon = "icon-germanic-worker",
 	Description = "Complete all quests related to Thrahila, Karla and Erala.",
 	PlayerColor = "orange",
-	RequiredQuests = {"thralls-logging", "thralls-hut", "karls-farm", "jarls-swordsmanship"}
+	RequiredQuests = {"thralls-logging", "thralls-hut", "karls-farm", "jarls-swordsmanship", "jarls-hall"}
 })
 
 DefineAchievement("the-marcomannic-wars", {

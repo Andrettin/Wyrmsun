@@ -102,7 +102,7 @@ DefineQuest("the-great-temple-at-upsal", { -- Source: Snorri Sturlson, "Heimskri
 	end,
 	Objectives = {"- Build a Temple"},
 	Rewards = "+2000 Gold",
-	Hint = "Select a Bura, press the Build Structure button and then click on the Temple button to build the building required for this quest.",
+	Hint = "Select a Bura, press the Build Structure button and then click on the Temple button to build the structure required for this quest.",
 	BuildUnits = {"unit-teuton-temple", 1}, -- should be a Germanic Temple, of course
 	Hidden = true
 })
@@ -126,7 +126,7 @@ DefineQuest("the-good-seasons", { -- Source: Snorri Sturlson, "Heimskringla", 18
 	end,
 	Objectives = {"- Build 2 Farms"},
 	Rewards = "+1000 Gold",
-	Hint = "Select a Bura, press the Build Structure button and then click on the Build Farm button to build the building required for this quest.",
+	Hint = "Select a Bura, press the Build Structure button and then click on the Build Farm button to build the structure required for this quest.",
 	BuildUnits = {"unit-germanic-farm", 2}
 })
 
@@ -170,7 +170,7 @@ DefineQuest("thralls-hut", { -- based on the Song of Rig; Source: Kevin Crossley
 	end,
 	Objectives = {"- Build a Farm"},
 	Rewards = "+750 Gold",
-	Hint = "Select a Bura, press the Build Structure button and then click on the Build Farm button to build the building required for this quest.",
+	Hint = "Select a Bura, press the Build Structure button and then click on the Build Farm button to build the structure required for this quest.",
 	BuildUnits = {"unit-germanic-farm", 1}
 })
 
@@ -192,7 +192,7 @@ DefineQuest("karls-farm", { -- based on the Song of Rig; Source: Kevin Crossley-
 	end,
 	Objectives = {"- Build a Farm"},
 	Rewards = "+750 Gold",
-	Hint = "Select a Bura, press the Build Structure button and then click on the Build Farm button to build the building required for this quest.",
+	Hint = "Select a Bura, press the Build Structure button and then click on the Build Farm button to build the structure required for this quest.",
 	BuildUnits = {"unit-germanic-farm", 1}
 })
 
@@ -216,6 +216,30 @@ DefineQuest("jarls-swordsmanship", { -- based on the Song of Rig; Source: Kevin 
 	Rewards = "+1500 Gold",
 	Hint = "Select a War Lodge and then click on the Train Erala button to train the unit required for this quest.",
 	BuildUnits = {"unit-germanic-warrior", 3}
+})
+
+DefineQuest("jarls-hall", { -- based on the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 22-24.
+	Name = "Erala's Hall",
+	Icon = "icon-germanic-town-hall",
+	Description = "The fierce warrior Erala, the son of Fader and Moder, seeks your support in establishing a hall for himself.",
+	World = "Earth",
+	Civilization = "germanic",
+	PlayerColor = "orange",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "RaceName") == "germanic" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-worker") > 0 and CheckDependency(trigger_player, "unit-germanic-town-hall")) then
+			return true
+		end
+		return false
+	end,
+	CompletionEffects = function(s)
+		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 1000)
+		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
+		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
+	end,
+	Objectives = {"- Build a Chieftain's Hall"},
+	Rewards = "+1000 Gold, +1000 Lumber, +500 Stone",
+	Hint = "Select a Bura, press the Build Structure button and then click on the Build Chieftain's Hall button to build the structure required for this quest.",
+	BuildUnits = {"unit-germanic-town-hall", 1}
 })
 
 DefineQuest("the-sun-shields", { -- Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
