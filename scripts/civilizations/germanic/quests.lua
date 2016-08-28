@@ -226,7 +226,7 @@ DefineQuest("jarls-hall", { -- based on the Song of Rig; Source: Kevin Crossley-
 	Civilization = "germanic",
 	PlayerColor = "orange",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "CompletedQuest", "jarls-swordsmanship") and GetPlayerData(trigger_player, "RaceName") == "germanic" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-worker") > 0 and CheckDependency(trigger_player, "unit-germanic-town-hall")) then
+		if (GetPlayerData(trigger_player, "CompletedQuest", "jarls-swordsmanship") and GetPlayerData(trigger_player, "RaceName") == "germanic" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-worker") > 0 and CheckDependency(trigger_player, "unit-germanic-town-hall")) then -- when Erala gets added as a hero, change the requirement for Erala's Swordsmanship to be completed to one that requires him to have the Sword Mastery ability
 			return true
 		end
 		return false
