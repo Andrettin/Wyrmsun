@@ -25,11 +25,10 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Graa", { -- gryphon name in Wesnoth
+DefineLanguageWord("Graa", { -- gryphon name in Battle for Wesnoth
 	Language = "gryphon",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"species-gryphon"}
+	Meanings = {}
 })
 
 DefineLanguageWord("Graak", { -- name of a gryphon in Battle for Wesnoth: Heir to the Throne
@@ -44,18 +43,16 @@ DefineLanguageWord("Graik", { -- name of a gryphon in Battle for Wesnoth: Heir t
 	Meanings = {}
 })
 
-DefineLanguageWord("Greaa", { -- gryphon name in Wesnoth
+DefineLanguageWord("Greaa", { -- gryphon name in Battle for Wesnoth
 	Language = "gryphon",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"species-gryphon"}
+	Meanings = {}
 })
 
-DefineLanguageWord("Gree", { -- gryphon name in Wesnoth
+DefineLanguageWord("Gree", { -- gryphon name in Battle for Wesnoth
 	Language = "gryphon",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"species-gryphon"}
+	Meanings = {}
 })
 
 DefineLanguageWord("Griak", { -- name of a gryphon in Battle for Wesnoth: Heir to the Throne
@@ -76,25 +73,22 @@ DefineLanguageWord("Gruak", { -- name of a gryphon in Battle for Wesnoth: Heir t
 	Meanings = {}
 })
 
-DefineLanguageWord("Kaaa", { -- gryphon name in Wesnoth
+DefineLanguageWord("Kaaa", { -- gryphon name in Battle for Wesnoth
 	Language = "gryphon",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"species-gryphon"}
+	Meanings = {}
 })
 
-DefineLanguageWord("Kaasa", { -- gryphon name in Wesnoth
+DefineLanguageWord("Kaasa", { -- gryphon name in Battle for Wesnoth
 	Language = "gryphon",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"species-gryphon"}
+	Meanings = {}
 })
 
-DefineLanguageWord("Kassshh", { -- gryphon name in Wesnoth
+DefineLanguageWord("Kassshh", { -- gryphon name in Battle for Wesnoth
 	Language = "gryphon",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"species-gryphon"}
+	Meanings = {}
 })
 
 DefineLanguageWord("Kawn", { -- name of a gryphon in Battle for Wesnoth: The Sceptre of Fire
@@ -103,53 +97,46 @@ DefineLanguageWord("Kawn", { -- name of a gryphon in Battle for Wesnoth: The Sce
 	Meanings = {}
 })
 
-DefineLanguageWord("Kayya", { -- gryphon name in Wesnoth
+DefineLanguageWord("Kayya", { -- gryphon name in Battle for Wesnoth
 	Language = "gryphon",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"species-gryphon"}
+	Meanings = {}
 })
 
-DefineLanguageWord("Kessshh", { -- gryphon name in Wesnoth
+DefineLanguageWord("Kessshh", { -- gryphon name in Battle for Wesnoth
 	Language = "gryphon",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"species-gryphon"}
+	Meanings = {}
 })
 
-DefineLanguageWord("Keyya", { -- gryphon name in Wesnoth
+DefineLanguageWord("Keyya", { -- gryphon name in Battle for Wesnoth
 	Language = "gryphon",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"species-gryphon"}
+	Meanings = {}
 })
 
-DefineLanguageWord("Kiira", { -- gryphon name in Wesnoth
+DefineLanguageWord("Kiira", { -- gryphon name in Battle for Wesnoth
 	Language = "gryphon",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"species-gryphon"}
+	Meanings = {}
 })
 
-DefineLanguageWord("Korra", { -- gryphon name in Wesnoth
+DefineLanguageWord("Korra", { -- gryphon name in Battle for Wesnoth
 	Language = "gryphon",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"species-gryphon"}
+	Meanings = {}
 })
 
-DefineLanguageWord("Korro", { -- gryphon name in Wesnoth
+DefineLanguageWord("Korro", { -- gryphon name in Battle for Wesnoth
 	Language = "gryphon",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"species-gryphon"}
+	Meanings = {}
 })
 
-DefineLanguageWord("Kraa", { -- gryphon name in Wesnoth
+DefineLanguageWord("Kraa", { -- gryphon name in Battle for Wesnoth
 	Language = "gryphon",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"species-gryphon"}
+	Meanings = {}
 })
 
 DefineLanguageWord("Krawg", { -- name of a gryphon in Battle for Wesnoth: The Sceptre of Fire
@@ -158,23 +145,20 @@ DefineLanguageWord("Krawg", { -- name of a gryphon in Battle for Wesnoth: The Sc
 	Meanings = {}
 })
 
-DefineLanguageWord("Kuu", { -- gryphon name in Wesnoth
+DefineLanguageWord("Kuu", { -- gryphon name in Battle for Wesnoth
 	Language = "gryphon",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"species-gryphon"}
+	Meanings = {}
 })
 
-DefineLanguageWord("Kzaaa", { -- gryphon name in Wesnoth
+DefineLanguageWord("Kzaaa", { -- gryphon name in Battle for Wesnoth
 	Language = "gryphon",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"species-gryphon"}
+	Meanings = {}
 })
 
-DefineLanguageWord("Kzuuu", { -- gryphon name in Wesnoth
+DefineLanguageWord("Kzuuu", { -- gryphon name in Battle for Wesnoth
 	Language = "gryphon",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"species-gryphon"}
+	Meanings = {}
 })

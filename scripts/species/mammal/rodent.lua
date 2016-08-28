@@ -136,6 +136,10 @@ DefineSpecies("squirrel", { -- Source: http://www.itis.gov/servlet/SingleRpt/Sin
 	Species = "vulgaris",
 	Homeworld = "Earth",
 	EvolvesFrom = {"megacricetodon-collongensis"}, -- earlier rodent
-	ChildUpgrade = "upgrade-child"
+	ChildUpgrade = "upgrade-child",
+	PersonalNameElements = {
+		"compound", "prefix", "old-icelandic", "noun", "genitive", "Rati", -- Ratatoskr is a squirrel in Norse mythology; Cleasby gives the meaning of the name as "Tusk the traveller" or "the climber Tusk", while Bellows gives the meaning as "The Swift-Tusked"; "rata" is presumably the genitive form; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 317, 483, 638; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 97.
+		"compound", "suffix", "old-icelandic", "noun", "Toskr"
+	}
 })
 

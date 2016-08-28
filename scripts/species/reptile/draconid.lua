@@ -148,7 +148,23 @@ DefineSpecies("wyrm", {
 	Terrains = {"cave-floor", "rockbound-cave-floor", "dry-mud", "mud"}, -- correct?
 	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
 	Era = "holocene",
-	ChildUpgrade = "upgrade-wyrm-child"
+	ChildUpgrade = "upgrade-wyrm-child",
+	PersonalNameElements = {
+		"word", "old-icelandic", "noun", "Goin", -- Wyrm/dragon in Norse mythology
+		"compound", "prefix", "old-icelandic", "adjective", "Gra", -- Grabak is a wyrm/dragon in Norse mythology
+		"compound", "suffix", "old-icelandic", "noun", "Bak",
+		"compound", "prefix", "old-icelandic", "noun", "Graf", -- Grafvitnir is a wyrm/dragon in Norse mythology
+		"compound", "suffix", "old-icelandic", "noun", "Vitnir",
+		"compound", "prefix", "old-icelandic", "noun", "Graf", -- Grafvolluth is a wyrm/dragon in Norse mythology
+		"compound", "suffix", "old-icelandic", "noun", "Volluth",
+		"word", "old-icelandic", "noun", "Jormungand", -- Wyrm/dragon in Norse mythology
+		"word", "greek", "noun", "Ladon", -- Wyrm/dragon in Greek mythology
+		"word", "old-icelandic", "noun", "Moin", -- Wyrm/dragon in Norse mythology
+		"compound", "prefix", "old-icelandic", "noun", "Nid", -- Nidhogg is a wyrm/dragon in Norse mythology
+		"compound", "suffix", "old-icelandic", "noun", "Hogg",
+		"word", "old-icelandic", "noun", "Ofnir", -- Wyrm/dragon in Norse mythology
+		"word", "old-icelandic", "noun", "Svafnir" -- Wyrm/dragon in Norse mythology
+	}
 })
 
 DefineSpecies("wyvern", {

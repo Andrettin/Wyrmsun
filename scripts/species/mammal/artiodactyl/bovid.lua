@@ -36,6 +36,12 @@ DefineSpeciesGenus("aragoral", { -- Source: http://fossilworks.org/bridge.pl?act
 	Subfamily = "caprinae"
 })
 
+DefineSpeciesGenus("bos", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=183837
+	Name = "Bos",
+	Family = "bovidae",
+	Subfamily = "bovinae"
+})
+	
 DefineSpeciesGenus("capra", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180714
 	Name = "Capra",
 	Family = "bovidae",
@@ -78,6 +84,21 @@ DefineSpecies("tethytragus-langai", { -- Source: Mauricio Antón and Jorge Moral
 	ChildUpgrade = "upgrade-child"
 	-- 70cm shoulder height
 	-- lived in Spain
+})
+
+DefineSpecies("cow", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=183838
+	Name = "Cow",
+	Genus = "bos",
+	Species = "taurus",
+	Homeworld = "Earth",
+	EvolvesFrom = {"ilingoceros"}, -- shares a common ancestor with the bison
+	Era = "holocene",
+	ChildUpgrade = "upgrade-child",
+	MalePersonalNameElements = {
+		"word", "egyptian", "noun", "Apis", -- name of a bull in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 119.
+		"word", "egyptian", "noun", "Buchis", -- name of a bull in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 119.
+		"word", "egyptian", "noun", "Mnevis" -- name of a bull in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 119.
+	}
 })
 
 DefineSpecies("goat", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180715

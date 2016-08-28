@@ -563,17 +563,6 @@ DefineUnitType("unit-rat", {
 	}
 } )
 
-DefineUnitType("unit-squirrel", {
-	Name = "Squirrel",
-	Parent = "unit-rat",
-	Species = "squirrel",
-	Strength = 2, -- same as the rat
-	Dexterity = 15, -- same as the rat
-	Intelligence = 2, -- same as the rat
-	Charisma = 2, -- same as the rat
-	HiddenInEditor = true
-})
-
 DefineUnitType("unit-horse", {
 	Name = "Horse",
 	Parent = "unit-template-fauna-unit",
