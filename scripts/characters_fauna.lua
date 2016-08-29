@@ -27,105 +27,6 @@
 
 -- Horses
 
-DefineCharacter("Alsviðr", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 99; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 19.
-	Name = "Alsviðr", -- One of the sun horses from Norse mythology (name means "All-Swift", as given by both sources); also a constellation
-	NameElements = {
-		"compound", "prefix", "old-icelandic", "affix", "Al",
-		"compound", "suffix", "old-icelandic", "adjective", "Sviðr"
-	},
-	Type = "unit-horse"
-})
-
-DefineCharacter("Arvak", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 99; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 19.
-	Name = "Arvak", -- One of the sun horses from Norse mythology (name means "Early Waker")
-	NameElements = {
-		"compound", "prefix", "old-icelandic", "adjective", "Ar",
-		"compound", "suffix", "old-icelandic", "adjective", "Vakr" -- presumably
-	},
-	Type = "unit-horse"
-})
-
-DefineCharacter("Falhófnir", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 96-97; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 139.
-	Name = "Falhófnir", -- Horse from Norse mythology (name means "barrel-hoof" or "hollow-hoof" according to Cleasby and "Hollow-Hoofed" according to Bellows); Bellows gives "Falhofnir" instead
-	NameElements = {
-		"compound", "prefix", "old-icelandic", "noun", "Fal",
-		"compound", "suffix", "old-icelandic", "noun", "Hófnir"
-	},
-	Type = "unit-horse"
-})
-
-DefineCharacter("Freyfaxi", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 145.
-	Name = "Freyfaxi", -- Horse from Norse mythology (from the Hrafnkels Saga)
-	NameElements = {
---		"compound", "prefix", "old-icelandic", -- ?
-		"compound", "suffix", "old-icelandic", "noun", "Faxi"
-	},
-	Type = "unit-horse"
-})
-
-DefineCharacter("Gisl", { -- Horse from Norse mythology (name means "Gleaming"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
-	Name = "Gisl",
-	NameElements = {"word", "old-icelandic", "adjective", "Gisl"},
-	Type = "unit-horse"
-})
-
-DefineCharacter("Glath", { -- Horse from Norse mythology (name means "Joyous"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
-	Name = "Glath",
-	NameElements = {"word", "old-icelandic", "adjective", "Glath"},
-	Type = "unit-horse"
-})
-
-DefineCharacter("Glaum", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 493.
-	Name = "Glaum", -- The horse of Atli (Attila) in Norse mythology
-	NameElements = {"word", "old-icelandic", "noun", "Glaumr"}, -- presumably
-	Type = "unit-horse"
-})
-
-DefineCharacter("Gler", { -- Horse from Norse mythology (name means "Shining"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
-	Name = "Gler",
-	NameElements = {"word", "old-icelandic", "adjective", "Gler"},
-	Type = "unit-horse"
-})
-
-DefineCharacter("Glófaxi", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 145.
-	Name = "Glófaxi", -- Horse (presumably) from Norse mythology
-	NameElements = {
---		"compound", "prefix", "old-icelandic", -- ?
-		"compound", "suffix", "old-icelandic", "noun", "Faxi"
-	},
-	Type = "unit-horse"
-})
-
-DefineCharacter("Gráni", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 259, 303, 342; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 212.
-	Name = "Gráni", -- Sigurd's horse in Norse mythology; Cleasby gives "Gráni", while Bellows gives "Grani"
-	NameElements = {"word", "old-icelandic", "noun", "Gráni"},
-	Type = "unit-horse"
-})
-
-DefineCharacter("Gullfaxi", { -- The giant Hrungnir's horse in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 126; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 145.
-	Name = "Gullfaxi", -- "gold-mane" (as given by Cleasby)
-	NameElements = {
-		"compound", "prefix", "old-icelandic", "noun", "Gull",
-		"compound", "suffix", "old-icelandic", "noun", "Faxi"
-	},
-	Type = "unit-horse"
-})
-
-DefineCharacter("Gulltoppr", { -- Heimdall's horse from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 96-97; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 220-221, 636; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 18.
-	Name = "Gulltoppr", -- as given by Cleasby (meaning "gold-tuft"); Bellows gives Golltop instead (meaning "Gold-Topped"); both are likely the same horse
-	NameElements = {
-		"compound", "prefix", "old-icelandic", "noun", "Gull",
-		"compound", "suffix", "old-icelandic", "noun", "Toppr"
-	},
-	Type = "unit-horse"
-})
-
-DefineCharacter("Gyllir", { -- Horse from Norse mythology (name means "Golden"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
-	Name = "Gyllir",
-	NameElements = {"word", "old-icelandic", "adjective", "Gyllir"},
-	Type = "unit-horse"
-})
-
 DefineCharacter("Hrímfaxi", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 145; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 19.
 	Name = "Hrímfaxi", -- Horse from Norse mythology (from the Edda), which was the mount of Night
 	NameElements = {
@@ -154,19 +55,6 @@ DefineCharacter("Mylnir", { -- Source: Henry Adams Bellows (transl.), "The Poeti
 	Name = "Mylnir", -- Horse from Norse mythology (name means "The Biter")
 	NameElements = {"word", "old-icelandic", "noun", "Mylnir"},
 	Type = "unit-horse"
-})
-
-DefineCharacter("Raven", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 245.
-	Name = "Raven", -- horse of Adils (Yngling) of Sweden; the name was probably translated to English in the Heimskringla translation
-	Type = "unit-horse",
-	ProvinceOfOrigin = "Sweden" -- presumably
-})
-
-DefineCharacter("Raven of the Uplands", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 245.
-	Name = "Raven", -- horse of king Ali of the Uplands; the name was probably translated to English in the Heimskringla translation
-	ExtraName = "of the Uplands", -- to differentiate him
-	Type = "unit-horse",
-	ProvinceOfOrigin = "Sweden" -- presumably
 })
 
 DefineCharacter("Silfrintoppr", { -- Horse from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 528, 636.
