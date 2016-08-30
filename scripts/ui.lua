@@ -685,7 +685,7 @@ DefinePanelContents(
   {
   Ident = "panel-building-contents",
   Pos = {info_panel_x, info_panel_y}, DefaultFont = "game",
-  Condition = {ShowOpponent = false, HideNeutral = true, Center = "false", Build = "false", Supply = "only", Training = "false", UpgradeTo = "false"},
+  Condition = {ShowOpponent = false, HideNeutral = true, TownHall = "false", Build = "false", Supply = "only", Training = "false", UpgradeTo = "false"},
   Contents = {
 -- Food building
 	{ Pos = {9, 103}, More = {"Text", "Usage"} },
@@ -705,7 +705,7 @@ DefinePanelContents(
   {
   Ident = "panel-center-contents",
   Pos = {info_panel_x, info_panel_y}, DefaultFont = "game",
-  Condition = {ShowOpponent = false, HideNeutral = true, Center = "only", Build = "false", Supply = "only", Training = "false", UpgradeTo = "false", Research = "false"},
+  Condition = {ShowOpponent = false, HideNeutral = true, TownHall = "only", Build = "false", Supply = "only", Training = "false", UpgradeTo = "false", Research = "false"},
   Contents = {
 	{ Pos = {9, 103}, More = {"Text", "Processing"} },
 	{ Pos = {9, 116}, More = { "Text", {Text = "Gold:"}}},
@@ -737,7 +737,7 @@ DefinePanelContents(
    {
   Ident = "panel-resimrove-contents",
   Pos = {info_panel_x, info_panel_y}, DefaultFont = "game",
-  Condition = {ShowOpponent = false, HideNeutral = true, Center = "false", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
+  Condition = {ShowOpponent = false, HideNeutral = true, TownHall = "false", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
   Contents = {
 	{ Pos = {9, 103}, Condition = {LumberImprove = "only"}, More = {"Text", "Processing"} },
 	{ Pos = {9, 103}, Condition = {StoneImprove = "only"}, More = {"Text", "Processing"} },

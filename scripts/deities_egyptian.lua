@@ -90,13 +90,13 @@ DefineDeity("anubis", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 --	Description = "Anubis is a god of embalming and guards over necropolises. He appears as an anthropomorphic canine."
 })
 
-DefineDeity("anuquis", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 66.
+DefineDeity("anuquis", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 66, 122.
 	Name = "Anuquis",
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
-	Gender = "male",
+	Gender = "female",
 	Domains = {},
---	Description = "Anuquis is a god who is known to take the form of a gazelle."
+--	Description = "Anuquis is a goddess who is known to take the form of a gazelle. She is particularly worshiped by stone workers."
 })
 
 DefineDeity("atum", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 64, 94.
@@ -281,22 +281,22 @@ DefineDeity("merekhet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 19
 --	Description = "Merekhet is a goddess of ointments."
 })
 
-DefineDeity("min", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 40, 66.
+DefineDeity("min", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 40, 66, 122.
 	Name = "Min",
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {"lightning"},
---	Description = "Min is a god of lightning who appears as a mummy."
+--	Description = "Min is a god of lightning who appears as a mummy. Many stone workers worship him."
 })
 
-DefineDeity("montu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 73.
+DefineDeity("montu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 73, 122.
 	Name = "Montu",
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {},
---	Description = "Montu is a warrior god."
+--	Description = "Montu is a warrior god, often worshiped by the medjaiu, who police the Egyptian deserts."
 })
 
 DefineDeity("mut", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 74, 77.
@@ -401,7 +401,7 @@ DefineDeity("pakhet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 --	Description = "\"The dilacerator\", Pakhet is a goddess who takes the form of a lioness."
 })
 
-DefineDeity("ptah", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 66, 83, 100.
+DefineDeity("ptah", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 66, 83, 100, 122.
 	Name = "Ptah",
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
@@ -428,13 +428,22 @@ DefineDeity("sekhet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 --	Description = "Sekhet is a goddess of hunting and of the production of swamps."
 })
 
-DefineDeity("sekhmet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 86.
+DefineDeity("sekhmet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 86, 122.
 	Name = "Sekhmet",
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
 	Domains = {"wrath"},
---	Description = "Sekhmet is a raging, bloodthirsty goddess. She takes the form of a lioness and was a skilled archer."
+--	Description = "Sekhmet is a raging, bloodthirsty goddess. She takes the form of a lioness and is a skilled archer. She is also the goddess of physicians."
+})
+
+DefineDeity("selqet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 122.
+	Name = "Selqet",
+	Civilizations = {"egyptian"},
+	Religions = {"paganism"},
+	Gender = "female",
+	Domains = {"life"},
+--	Description = "Selqet is a scorpion-shaped goddess of healers."
 })
 
 DefineDeity("seth", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 95-96.
@@ -520,13 +529,13 @@ DefineDeity("tenmu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992,
 --	Description = "Tenmu is a primordial deity of disorder."
 })
 
-DefineDeity("thot", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 55, 64, 66, 68.
+DefineDeity("thot", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 55, 64, 66, 68, 122.
 	Name = "Thot",
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {},
---	Description = "Thot is a god of writing and knowledge. He appears as an anthropomorphic ibis, equipped with a scribe's utensil. Sometimes Thot takes the form of an ibis itself, or even a baboon."
+--	Description = "Thot is a god of writing and knowledge. He appears as an anthropomorphic ibis, equipped with a scribe's utensil. Sometimes Thot takes the form of an ibis itself, or even a baboon. Given his portfolio, Thot is often worshiped by scribes."
 })
 
 DefineDeity("uadjit", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 42, 78.
