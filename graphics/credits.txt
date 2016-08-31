@@ -910,6 +910,7 @@ João Victor G. Costa (Jinn):
 /graphics/neutral/icons/deadly_precision.png (licensed under the CC0)
 /graphics/neutral/icons/eagle_eye.png (licensed under the CC0)
 /graphics/neutral/icons/food.png (licensed under the CC0)
+/graphics/neutral/icons/garrison.png (licensed under the CC0)
 /graphics/neutral/icons/gold.png (licensed under the CC0)
 /graphics/neutral/icons/gryphon.png (licensed under the CC0)
 /graphics/neutral/icons/gryphon_blue_feathers.png (modified by b_o from the gryphon icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
