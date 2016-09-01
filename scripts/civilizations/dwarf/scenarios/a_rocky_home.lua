@@ -33,7 +33,6 @@ if (LoadedGame == false) then
 	SetPlayerData(0, "Resources", "lumber", 0)
 	SetPlayerData(0, "Resources", "stone", 0)
 	SetPlayerData(0, "Resources", "oil", 0)
-	SetPlayerData(0, "RaceName", "dwarf")
 	SetPlayerData(0, "Faction", "Brising Clan")
 	
 	if not (GrandStrategy) then
