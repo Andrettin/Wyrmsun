@@ -66,6 +66,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Grand Strategy
 - Fixed issue which caused technologies to not be properly applied when playing grand strategy battles.
+- Fixed issue which caused a crash when hovering the mouse over the edge of the map while playing with 1920 resolution width.
 
 * Items
 - Fixed an issue which caused an item to lose its name after loading a saved game.
@@ -82,6 +83,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added the "Mushroom Fields", "The Dripping Hall", "The Deep", "The Burner" and "The Weaver of Dreams" in-game quests for the dwarves.
 - Added the "Shorbear Hold" in-game quest for the Shorbear Clan.
 - Added the "Gathaarl's Children", "Agniss' Mysticism", "Dremac's Wealth", "Ioun's Tactics" and "Orza's Scholarship" in-game quests for the goblins.
+- Fixed issue which caused the AI to randomly not behave properly in the "The Necklace of the Brisings" mission (dwarf).
 
 * Units
 - Decreased the rate at which workers gain experience by gathering and building.
