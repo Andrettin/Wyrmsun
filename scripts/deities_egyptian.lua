@@ -27,6 +27,7 @@
 
 DefineDeity("aton", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 113-114.
 	Name = "Aton",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"}, -- actually a form of monotheism in which the existence of other deities was sometimes accepted as well (was it henotheism?)
 	Gender = "male",
@@ -37,6 +38,7 @@ DefineDeity("aton", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, 
 
 DefineDeity("ra", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 41, 104.
 	Name = "Ra",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -47,6 +49,7 @@ DefineDeity("ra", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp
 
 DefineDeity("akhsu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 85.
 	Name = "Akhsu",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian", "wose"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -56,6 +59,7 @@ DefineDeity("akhsu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992,
 
 DefineDeity("amon", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 44, 61, 64, 66, 77.
 	Name = "Amon",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -65,6 +69,7 @@ DefineDeity("amon", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, 
 
 DefineDeity("andjety", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 68.
 	Name = "Andjety",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -74,6 +79,7 @@ DefineDeity("andjety", { -- Source: Claude Traunecker, "Os Deuses do Egito", 199
 
 DefineDeity("antyui", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 77.
 	Name = "Antyui",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -83,6 +89,7 @@ DefineDeity("antyui", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 
 DefineDeity("anubis", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 64, 72.
 	Name = "Anubis",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -92,6 +99,7 @@ DefineDeity("anubis", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 
 DefineDeity("anuquis", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 66, 122.
 	Name = "Anuquis",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
@@ -101,6 +109,7 @@ DefineDeity("anuquis", { -- Source: Claude Traunecker, "Os Deuses do Egito", 199
 
 DefineDeity("atum", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 64, 94.
 	Name = "Atum",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -110,6 +119,7 @@ DefineDeity("atum", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, 
 
 DefineDeity("bes", { -- Source: Warren R. Dawson, "Pygmies and Dwarfs in Ancient Egypt", 1938, p. 186; Source: Kamyar Abdi, "Bes in the Achaemenid Empire", 1999, p. 114.
 	Name = "Bes",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"dwarf", "egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -119,6 +129,7 @@ DefineDeity("bes", { -- Source: Warren R. Dawson, "Pygmies and Dwarfs in Ancient
 
 DefineDeity("geb", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 30, 91, 96.
 	Name = "Geb",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -126,17 +137,19 @@ DefineDeity("geb", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p
 --	Description = "Geb is a god of earth and fate. Geb is the son of Shu and Tefnut."
 })
 
-DefineDeity("hathor", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 13, 29, 61, 68, 74.
+DefineDeity("hathor", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 13, 29, 61, 68, 74, 129.
 	Name = "Hathor",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian", "minotaur"},
 	Religions = {"paganism"},
 	Gender = "female",
 	Domains = {"air", "lust"},
---	Description = "Hathor is a celestial goddess. She appears in the form of a cow, and is held as a goddess of happiness, love and lust. On Earth Hathor is worshiped by the Egyptians, and she also enjoys a priesthood amongst the minotaurs of Jotunheim. One of Hathor's symbols was the papyrus reed."
+--	Description = "Hathor is a celestial goddess. She appears in the form of a cow, and is held as a goddess of happiness, love and lust. On Earth Hathor is worshiped by the Egyptians, and she also enjoys a priesthood amongst the minotaurs of Jotunheim. One of Hathor's symbols was the papyrus reed. She is known as the Lady of Turquoise."
 })
 
 DefineDeity("heb", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 85.
 	Name = "Heb",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -146,6 +159,7 @@ DefineDeity("heb", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p
 
 DefineDeity("hedjhotep", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 73-74, 85.
 	Name = "Hedjhotep",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -155,6 +169,7 @@ DefineDeity("hedjhotep", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1
 
 DefineDeity("hehu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 92.
 	Name = "Hehu",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male", -- correct?
@@ -165,6 +180,7 @@ DefineDeity("hehu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, 
 
 DefineDeity("heka", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 44.
 	Name = "Heka",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -183,6 +199,7 @@ DefineDeity("heket", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992,
 
 DefineDeity("horus", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 41, 55, 66, 96.
 	Name = "Horus",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -192,6 +209,7 @@ DefineDeity("horus", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992,
 
 DefineDeity("hu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 44, 78.
 	Name = "Hu",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -201,6 +219,7 @@ DefineDeity("hu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp
 
 DefineDeity("imenhy", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 85.
 	Name = "Imenhy",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -210,6 +229,7 @@ DefineDeity("imenhy", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 
 DefineDeity("isis", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 55, 95-96.
 	Name = "Isis",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
@@ -219,6 +239,7 @@ DefineDeity("isis", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, 
 
 DefineDeity("keku", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 92.
 	Name = "Keku",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male", -- correct?
@@ -229,6 +250,7 @@ DefineDeity("keku", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, 
 
 DefineDeity("khentiamenti", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 64.
 	Name = "Khentiamenti",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -238,6 +260,7 @@ DefineDeity("khentiamenti", { -- Source: Claude Traunecker, "Os Deuses do Egito"
 
 DefineDeity("khnum", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 66, 73, 100.
 	Name = "Khnum",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -247,6 +270,7 @@ DefineDeity("khnum", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992,
 
 DefineDeity("khonsu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 44, 66, 77.
 	Name = "Khonsu",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -256,6 +280,7 @@ DefineDeity("khonsu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 
 DefineDeity("mafdet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 44.
 	Name = "Mafdet",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
@@ -263,8 +288,19 @@ DefineDeity("mafdet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 --	Description = "\"The runner\", Mafdet is a goddess who takes the shape of a panther."
 })
 
+DefineDeity("mandulis", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 132.
+	Name = "Mandulis",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
+	Civilizations = {"egyptian"},
+	Religions = {"paganism"},
+	Gender = "male",
+	Domains = {"fire"},
+--	Description = "Mandulis is a solar god, who takes the shape of a flowery falcon."
+})
+
 DefineDeity("menket", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 85.
 	Name = "Menket",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
@@ -274,6 +310,7 @@ DefineDeity("menket", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 
 DefineDeity("merekhet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 85.
 	Name = "Merekhet",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
@@ -281,17 +318,19 @@ DefineDeity("merekhet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 19
 --	Description = "Merekhet is a goddess of ointments."
 })
 
-DefineDeity("min", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 40, 66, 122.
+DefineDeity("min", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 40, 66, 122, 129.
 	Name = "Min",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {"lightning"},
---	Description = "Min is a god of lightning who appears as a mummy. Many stone workers worship him."
+	Domains = {"lightning", "life"},
+--	Description = "Min is a god of lightning who appears as a mummy. Many stoneworkers worship him. He is known as the Lord of Life for his protection of prospectors and stoneworkers amidst the desert."
 })
 
 DefineDeity("montu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 73, 122.
 	Name = "Montu",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -301,6 +340,7 @@ DefineDeity("montu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992,
 
 DefineDeity("mut", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 74, 77.
 	Name = "Mut",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
@@ -310,6 +350,7 @@ DefineDeity("mut", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p
 
 DefineDeity("neferhotep", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 75-76.
 	Name = "Neferhotep",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -319,6 +360,7 @@ DefineDeity("neferhotep", { -- Source: Claude Traunecker, "Os Deuses do Egito", 
 
 DefineDeity("nefertum", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 85.
 	Name = "Nefertum",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -328,6 +370,7 @@ DefineDeity("nefertum", { -- Source: Claude Traunecker, "Os Deuses do Egito", 19
 
 DefineDeity("neftis", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 95-96.
 	Name = "Neftis",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
@@ -337,6 +380,7 @@ DefineDeity("neftis", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 
 DefineDeity("neith", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 40, 104.
 	Name = "Neith",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
@@ -347,6 +391,7 @@ DefineDeity("neith", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992,
 
 DefineDeity("nekhbet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 42, 78, 86, 91.
 	Name = "Nekhbet",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -356,6 +401,7 @@ DefineDeity("nekhbet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 199
 
 DefineDeity("neper", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 85.
 	Name = "Neper",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -365,6 +411,7 @@ DefineDeity("neper", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992,
 
 DefineDeity("nu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 92.
 	Name = "Nu",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female", -- correct?
@@ -375,6 +422,7 @@ DefineDeity("nu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p.
 
 DefineDeity("nut", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 47, 50, 91, 96.
 	Name = "Nut",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
@@ -384,6 +432,7 @@ DefineDeity("nut", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p
 
 DefineDeity("osiris", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 51, 61, 66, 68, 96, 109-110.
 	Name = "Osiris",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -394,6 +443,7 @@ DefineDeity("osiris", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 
 DefineDeity("pakhet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 44.
 	Name = "Pakhet",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
@@ -403,6 +453,7 @@ DefineDeity("pakhet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 
 DefineDeity("ptah", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 66, 83, 100, 122.
 	Name = "Ptah",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -412,6 +463,7 @@ DefineDeity("ptah", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, 
 
 DefineDeity("renenutet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 85.
 	Name = "Renenutet",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
@@ -421,6 +473,7 @@ DefineDeity("renenutet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1
 
 DefineDeity("sekhet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 85.
 	Name = "Sekhet",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
@@ -430,6 +483,7 @@ DefineDeity("sekhet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 
 DefineDeity("sekhmet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 86, 122.
 	Name = "Sekhmet",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
@@ -439,6 +493,7 @@ DefineDeity("sekhmet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 199
 
 DefineDeity("selqet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 122.
 	Name = "Selqet",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
@@ -446,17 +501,19 @@ DefineDeity("selqet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 --	Description = "Selqet is a scorpion-shaped goddess of healers."
 })
 
-DefineDeity("seth", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 95-96.
+DefineDeity("seth", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 95-96, 129.
 	Name = "Seth",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {"chaos"},
---	Description = "Seth is a god associated with brutal strength and with the wilderness. He is the son of Geb and Nut."
+--	Description = "Seth is a god associated with brutal strength and with the desertic wildernesses. He is the son of Geb and Nut."
 })
 
 DefineDeity("shesmu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 85.
 	Name = "Shesmu",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -466,6 +523,7 @@ DefineDeity("shesmu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 
 DefineDeity("shu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 48, 91, 94.
 	Name = "Shu",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -475,6 +533,7 @@ DefineDeity("shu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p
 
 DefineDeity("sia", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 44, 78.
 	Name = "Sia",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -484,6 +543,7 @@ DefineDeity("sia", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p
 
 DefineDeity("sobek", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 25.
 	Name = "Sobek",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -493,6 +553,7 @@ DefineDeity("sobek", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992,
 
 DefineDeity("tait", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 85.
 	Name = "Tait",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
@@ -502,6 +563,7 @@ DefineDeity("tait", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, 
 
 DefineDeity("tefnut", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 94.
 	Name = "Tefnut",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
@@ -512,6 +574,7 @@ DefineDeity("tefnut", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 
 DefineDeity("tenmet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 85.
 	Name = "Tenmet",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
@@ -521,6 +584,7 @@ DefineDeity("tenmet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 
 DefineDeity("tenmu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 92.
 	Name = "Tenmu",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male", -- correct?
@@ -531,6 +595,7 @@ DefineDeity("tenmu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992,
 
 DefineDeity("thot", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 55, 64, 66, 68, 122.
 	Name = "Thot",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -540,6 +605,7 @@ DefineDeity("thot", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, 
 
 DefineDeity("uadjit", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 42, 78.
 	Name = "Uadjit",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
@@ -549,6 +615,7 @@ DefineDeity("uadjit", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 
 DefineDeity("upuaut", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 44.
 	Name = "Upuaut",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
