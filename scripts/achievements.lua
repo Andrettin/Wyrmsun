@@ -82,6 +82,14 @@ DefineAchievement("the-first-dwarves", {
 	RequiredQuests = {"a-rocky-home", "the-mead-of-wisdom", "the-treasures-of-svarinshaug", "the-necklace-of-the-brisings", "the-binding-of-grafvitnir"}
 })
 
+DefineAchievement("the-lay-of-alvis", {
+	Name = "The Lay of Alvis",
+	Icon = "icon-dwarven-witness",
+	Description = "Complete all quests related to Alvis.",
+	PlayerColor = "red",
+	RequiredQuests = {"the-dripping-hall", "the-deep", "the-burner", "the-weaver-of-dreams"}
+})
+
 DefineAchievement("safe-passage", {
 	Name = "Safe Passage",
 	Icon = "icon-dwarven-steelclad",
