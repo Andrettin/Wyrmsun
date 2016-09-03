@@ -107,7 +107,17 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-rally-point",
 		"unit-goblin-watch-tower", "unit-goblin-guard-tower"
 	}
 } )
-  
+
+DefineButton( { Pos = 14, Level = 0, Icon = "icon-garrison",
+	Action = "button", Value = 1,
+	Allowed = "check-unit-variable", AllowArg = {"Transport", "Value", ">=", "1"},
+	Key = "g", Hint = _("See ~!Garrison"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-teuton-stronghold",
+		"unit-dwarven-stronghold",
+		"unit-goblin-stronghold",
+	}
+})
 
 -- General Cancel Buttons ------------------------------------------------------
 
@@ -453,6 +463,16 @@ DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
 		"unit-ettin",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
 	} 
+} )
+
+DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
+	Action = "button", Value = 0,
+	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
+	ForUnit = {
+		"unit-teuton-stronghold",
+		"unit-dwarven-stronghold",
+		"unit-goblin-stronghold",
+	}
 } )
 
 -- Special Abilities ---------------------------------------------------

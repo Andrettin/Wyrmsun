@@ -61,6 +61,9 @@ https://github.com/Andrettin/Wyrmsun
 - 2.4.2
 -----------------------------------------------------------------------
 
+* Buildings
+- The garrison of stronghold-type buildings is now contained in a submenu accessible through the "See Garrison" button (icon graphics by Jinn).
+
 * Editor
 - The grand strategy battle AI is now available for selection in the editor.
 
