@@ -25,6 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineUpgrade("upgrade-work-pedair-cainc-y-mabinogi", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 100-101.
+	Name = _("The Four Branches of the Mabinogi"),
+	Work = "book",
+	Civilization = "celt"
+})
+
 DefineUpgrade("upgrade-work-de-mensura-orbis-terrae", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 40.
 	Name = _("De Mensura Orbis Terrae"),
 	Work = "book",
@@ -33,3 +39,8 @@ DefineUpgrade("upgrade-work-de-mensura-orbis-terrae", { -- Source: Snorri Sturls
 	Year = 825
 	-- should probably have some other requirements, like any Norwegian province being Norse-cultured (or even better, the one from which those attackers actually were)
 })
+
+DefineModifier("upgrade-work-pedair-cainc-y-mabinogi",
+	{"KnowledgeWarfare", 2},
+	{"KnowledgeMagic", 1}
+)
