@@ -27,7 +27,6 @@
 
 DefineCharacter("Pypo", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 13.
 	Name = "Pypo",
-	NameElements = {"word", "gnomish", "noun", "Pypo"},
 	Gender = "male",
 	Type = "unit-gnomish-master-at-arms",
 	Civilization = "gnome",
@@ -42,7 +41,6 @@ DefineCharacter("Pypo", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, p
 
 DefineCharacter("Bimbam", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 79, 103-104.
 	Name = "Bimbam",
-	NameElements = {"word", "gnomish", "noun", "Bimbam"},
 	Gender = "male",
 	Type = "unit-gnomish-master-at-arms", -- king
 	Civilization = "gnome",
@@ -57,7 +55,6 @@ DefineCharacter("Bimbam", { -- Source: Franz Hartmann, "Among the Gnomes", 1895,
 
 DefineCharacter("Cravatu", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 96-97.
 	Name = "Cravatu",
-	NameElements = {"word", "gnomish", "noun", "Cravatu"},
 	Gender = "male",
 	Type = "unit-gnomish-herbalist",
 	Civilization = "gnome",
@@ -70,7 +67,6 @@ DefineCharacter("Cravatu", { -- Source: Franz Hartmann, "Among the Gnomes", 1895
 
 DefineCharacter("Adalga", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 78-79, 148-149, 172.
 	Name = "Adalga",
-	NameElements = {"word", "gnomish", "noun", "Adalga"},
 	Gender = "female",
 	Type = "unit-gnomish-herbalist", -- actually a princess
 	Civilization = "gnome",
@@ -84,7 +80,6 @@ DefineCharacter("Adalga", { -- Source: Franz Hartmann, "Among the Gnomes", 1895,
 
 DefineCharacter("Kalutho", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 104.
 	Name = "Kalutho",
-	NameElements = {"word", "gnomish", "noun", "Kalutho"},
 	Gender = "male",
 	Type = "unit-gnomish-herbalist", -- part of his duties was tending to the roots of plants on the eastern side of Untersberg
 	Civilization = "gnome",
@@ -93,7 +88,6 @@ DefineCharacter("Kalutho", { -- Source: Franz Hartmann, "Among the Gnomes", 1895
 
 DefineCharacter("Clavo", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 106.
 	Name = "Clavo",
-	NameElements = {"word", "gnomish", "noun", "Clavo"},
 	Gender = "male",
 	Type = "unit-gnomish-master-at-arms", -- general
 	Civilization = "gnome",

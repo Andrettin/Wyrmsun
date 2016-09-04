@@ -31,43 +31,13 @@ DefineLanguageWord("Acthna", { -- Source: Franz Hartmann, "Among the Gnomes", 18
 	Meanings = {"Subterranean Fire"}
 })
 
-DefineLanguageWord("Adalga", { -- name of a female gnome; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 79.
-	Language = "gnomish",
-	Type = "noun",
-	Meanings = {}
-})
-
 DefineLanguageWord("Berg", { -- appears in "Untersberg", which is given as the "mountain of the lower world"; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 1.
 	Language = "gnomish",
 	Type = "noun",
 	Meanings = {"Mountain"}
 })
 
-DefineLanguageWord("Bimbam", { -- name of a male gnome; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 79.
-	Language = "gnomish",
-	Type = "noun",
-	Meanings = {}
-})
-
-DefineLanguageWord("Clavo", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 106.
-	Language = "gnomish",
-	Type = "noun",
-	Meanings = {}
-})
-
-DefineLanguageWord("Cravatu", { -- name of a male gnome; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 97.
-	Language = "gnomish",
-	Type = "noun",
-	Meanings = {}
-})
-
 DefineLanguageWord("Gnana", { -- name of the capital of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 179.
-	Language = "gnomish",
-	Type = "noun",
-	Meanings = {}
-})
-
-DefineLanguageWord("Kalutho", { -- name of an (apparently male) gnome; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 13.
 	Language = "gnomish",
 	Type = "noun",
 	Meanings = {}
@@ -77,19 +47,6 @@ DefineLanguageWord("Leffas", { -- Source: Franz Hartmann, "Among the Gnomes", 18
 	Language = "gnomish",
 	Type = "noun",
 	Meanings = {"Plant Soul", "Stone Soul", "Tree Soul"}
-})
-
-DefineLanguageWord("Pypo", { -- name of a male gnome; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 13.
-	Language = "gnomish",
-	Type = "noun",
-	Meanings = {}
-})
-
-DefineLanguageWord("Rubezahl", {
-	Language = "gnomish",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Unter", { -- appears in "Untersberg", which is given as the "mountain of the lower world"; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 1.

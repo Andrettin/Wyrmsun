@@ -25,13 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Amenofis", { -- male personal name; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 112.
-	Language = "egyptian",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
-})
-
 DefineLanguageWord("Ankh", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 67, 71, 76.
 	Language = "egyptian",
 	Type = "noun",
@@ -146,13 +139,6 @@ DefineLanguageWord("Irto", { -- name of a serpent in Egyptian mythology; Source:
 	Meanings = {"One Who Made the Earth"}
 })
 
-DefineLanguageWord("Isi", { -- male personal name; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 81.
-	Language = "egyptian",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
-})
-
 DefineLanguageWord("Iuf", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 61.
 	Language = "egyptian",
 	Type = "noun",
@@ -217,13 +203,6 @@ DefineLanguageWord("Sekhem", { -- Source: Claude Traunecker, "Os Deuses do Egito
 	Language = "egyptian",
 	Type = "noun",
 	Meanings = {"Force"} -- apparently
-})
-
-DefineLanguageWord("Seti", { -- male personal name; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 90.
-	Language = "egyptian",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Uas", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 67, 76.

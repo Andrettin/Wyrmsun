@@ -222,7 +222,16 @@ DefineCivilization("gnome", {
 		"stand-ground", "icon-germanic-stand-ground",
 		"return-goods", "icon-dwarven-return-goods"
 	},
-	Description = _("Gnomes usually live in the hills and forests of Nidavellir, and often seek contact with nature. Although they have a different outlook on life than the dwarves, not rarely both two peoples live side by side, with gnomish minorities permeating dwarven settlements and vice-versa. These contacts have brought much benefit to both of them, both through trade and via the spread of gnomish technologies northwards.")
+	Description = _("Gnomes usually live in the hills and forests of Nidavellir, and often seek contact with nature. Although they have a different outlook on life than the dwarves, not rarely both two peoples live side by side, with gnomish minorities permeating dwarven settlements and vice-versa. These contacts have brought much benefit to both of them, both through trade and via the spread of gnomish technologies northwards."),
+	PersonalNames = {
+		"female", "Adalga", -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 79.
+		"male", "Bimbam", -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 79.
+		"male", "Clavo", -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 106.
+		"male", "Cravatu", -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 97.
+		"male", "Kalutho", -- name of an (apparently male) gnome; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 13.
+		"male", "Pypo", -- king of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 13.
+		"male", "Rubezahl"
+	}
 })
 
 DefineCivilization("goblin", {
@@ -654,7 +663,12 @@ DefineCivilization("egyptian", {
 	ParentCivilization = "greek",
 	Adjective = "Egyptian",
 	Playable = false,
-	DefaultColor = "yellow"
+	DefaultColor = "yellow",
+	PersonalNames = {
+		"male", "Amenofis", -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 112.
+		"male", "Isi", -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 81.
+		"male", "Seti" -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 90.
+	}
 })
 
 DefineCivilization("hittite", {
