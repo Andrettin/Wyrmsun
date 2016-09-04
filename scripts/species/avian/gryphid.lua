@@ -50,32 +50,7 @@ DefineSpecies("gryphon", {
 	Terrains = {"dry-mud", "mud", "flamefood-tree", "rock-swamp"}, -- should be dark dirt instead of dry mud and mud
 	EvolvesFrom = {"hoatzin"}, -- the Gryphon has a common ancestor with eagles
 	Era = "holocene",
-	ChildUpgrade = "upgrade-gryphon-child",
-	PersonalNameElements = {
-		"word", "gryphon", "noun", "Graa", -- gryphon name in Battle for Wesnoth
-		"word", "gryphon", "noun", "Graak", -- gryphon in Battle for Wesnoth: Heir to the Throne
-		"word", "gryphon", "noun", "Graik", -- gryphon in Battle for Wesnoth: Heir to the Throne
-		"word", "gryphon", "noun", "Greaa", -- gryphon name in Battle for Wesnoth
-		"word", "gryphon", "noun", "Gree", -- gryphon name in Battle for Wesnoth
-		"word", "gryphon", "noun", "Griak", -- gryphon in Battle for Wesnoth: Heir to the Throne
-		"word", "gryphon", "noun", "Grook", -- gryphon in Battle for Wesnoth: Heir to the Throne
-		"word", "gryphon", "noun", "Gruak", -- gryphon in Battle for Wesnoth: Heir to the Throne
-		"word", "gryphon", "noun", "Kaaa", -- gryphon name in Battle for Wesnoth
-		"word", "gryphon", "noun", "Kaasa", -- gryphon name in Battle for Wesnoth
-		"word", "gryphon", "noun", "Kassshh", -- gryphon name in Battle for Wesnoth
-		"word", "gryphon", "noun", "Kawn", -- gryphon in Battle for Wesnoth: The Sceptre of Fire
-		"word", "gryphon", "noun", "Kayya", -- gryphon name in Battle for Wesnoth
-		"word", "gryphon", "noun", "Kessshh", -- gryphon name in Battle for Wesnoth
-		"word", "gryphon", "noun", "Keyya", -- gryphon name in Battle for Wesnoth
-		"word", "gryphon", "noun", "Kiira", -- gryphon name in Battle for Wesnoth
-		"word", "gryphon", "noun", "Korra", -- gryphon name in Battle for Wesnoth
-		"word", "gryphon", "noun", "Korro", -- gryphon name in Battle for Wesnoth
-		"word", "gryphon", "noun", "Kraa", -- gryphon name in Battle for Wesnoth
-		"word", "gryphon", "noun", "Krawg", -- gryphon in Battle for Wesnoth: The Sceptre of Fire
-		"word", "gryphon", "noun", "Kuu", -- gryphon name in Battle for Wesnoth
-		"word", "gryphon", "noun", "Kzaaa", -- gryphon name in Battle for Wesnoth
-		"word", "gryphon", "noun", "Kzuuu" -- gryphon name in Battle for Wesnoth
-	}
+	ChildUpgrade = "upgrade-gryphon-child"
 	-- in mythology, a gryphon is half-eagle and half-lion; but in the Wyrmsun universe, it is entirely avian, although with the body built like a gryphon
 })
 

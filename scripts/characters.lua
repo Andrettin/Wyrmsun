@@ -107,6 +107,3 @@ DefineCharacter("Tutu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 19
 	Gender = "female",
 	Type = "unit-yale" -- change this later
 })
-
--- load the unique animals
-Load("scripts/characters_fauna.lua")

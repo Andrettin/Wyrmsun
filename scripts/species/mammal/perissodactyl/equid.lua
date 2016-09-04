@@ -203,36 +203,7 @@ DefineSpecies("horse", { -- Source: http://www.itis.gov/servlet/SingleRpt/Single
 	Homeworld = "Earth",
 	Terrains = {"grass", "dirt"}, -- correct?
 	EvolvesFrom = {"anchitherium-cursor", "hipparion-primigenium", "merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
-	ChildUpgrade = "upgrade-child",
-	PersonalNameElements = {
-		 -- Alsviðr was one of the (male) sun horses from Norse mythology (name means "All-Swift", as given by both sources); also a constellation; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 99; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 19.
-		"compound", "prefix", "old-icelandic", "affix", "Al",
-		"compound", "suffix", "old-icelandic", "adjective", "Sviðr",
-		-- Arvak was one of the (male) sun horses from Norse mythology (name means "Early Waker"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 99; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 19.
-		"compound", "prefix", "old-icelandic", "adjective", "Ar",
-		"compound", "suffix", "old-icelandic", "adjective", "Vakr", -- presumably
-		-- Falhófnir was a horse from Norse mythology (name means "barrel-hoof" or "hollow-hoof" according to Cleasby and "Hollow-Hoofed" according to Bellows); Bellows gives "Falhofnir" instead; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 96-97; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 139.
-		"compound", "prefix", "old-icelandic", "noun", "Fal",
-		"compound", "suffix", "old-icelandic", "noun", "Hófnir",
-		-- Freyfaxi was a horse from Norse mythology (from the Hrafnkels Saga); Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 145.
---		"compound", "prefix", "old-icelandic", -- ?
-		"compound", "suffix", "old-icelandic", "noun", "Faxi",
-		"word", "old-icelandic", "adjective", "Gisl", -- Horse from Norse mythology (name means "Gleaming"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
-		"word", "old-icelandic", "adjective", "Glath", -- Horse from Norse mythology (name means "Joyous"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
-		"word", "old-icelandic", "noun", "Glaumr", -- presumably this word; Glaum was the horse of Atli (Attila) in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 493.
-		"word", "old-icelandic", "adjective", "Gler", -- Horse from Norse mythology (name means "Shining"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
-		-- Glófaxi was a horse (presumably) from Norse mythology; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 145.
---		"compound", "prefix", "old-icelandic", -- ?
-		"compound", "suffix", "old-icelandic", "noun", "Faxi",
-		"word", "old-icelandic", "noun", "Gráni", -- Sigurd's horse in Norse mythology; Cleasby gives "Gráni", while Bellows gives "Grani"; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 259, 303, 342; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 212.
-		-- Gullfaxi was the giant Hrungnir's horse in Norse mythology; name given by Cleasby as meaning "gold-mane"; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 126; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 145.
-		"compound", "prefix", "old-icelandic", "noun", "Gull",
-		"compound", "suffix", "old-icelandic", "noun", "Faxi",
-		-- Gulltoppr was Heimdall's (male) horse from Norse mythology; Cleasby gives Gulltoppr (meaning "gold-tuft"); Bellows gives Golltop instead (meaning "Gold-Topped"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 96-97; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 220-221, 636; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 18.
-		"compound", "prefix", "old-icelandic", "noun", "Gull",
-		"compound", "suffix", "old-icelandic", "noun", "Toppr",
-		"word", "old-icelandic", "adjective", "Gyllir" -- Horse from Norse mythology (name means "Golden"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
-	}
+	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("pegasus", {
