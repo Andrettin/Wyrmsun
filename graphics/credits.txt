@@ -363,6 +363,7 @@ Exidelo (Leo):
 /graphics/germanic/icons/arrow.png (licensed under the CC0)
 /graphics/germanic/icons/barbed_arrow.png (licensed under the CC0)
 /graphics/germanic/icons/broad_sword.png (licensed under the CC0)
+/graphics/germanic/icons/bronze_lur.png (licensed under the CC0)
 /graphics/germanic/icons/bronze_shield.png (licensed under the CC0)
 /graphics/germanic/icons/patrol_land.png (licensed under the CC0)
 /graphics/germanic/icons/return_goods.png (licensed under the CC0)

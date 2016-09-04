@@ -324,6 +324,14 @@ DefineUnitType("unit-thrymgjol-shield", { Name = _("Thrymgjol Shield"),
 	Armor = 4
 } )
 
+DefineUnitType("unit-horn", {
+	Name = _("Horn"),
+	Parent = "unit-template-item",
+	Image = {"file", "dwarf/items/round_shield.png", "size", {13, 13}},
+	Icon = "icon-germanic-bronze-lur",
+	ItemClass = "horn"
+} )
+
 DefineUnitType("unit-boots", { Name = _("Boots"),
 	Parent = "unit-template-item",
 	Image = {"file", "neutral/items/boots.png", "size", {32, 32}},
@@ -348,14 +356,16 @@ DefineUnitType("unit-furry-wool-shoes", { Name = _("Furry Wool Shoes"),
 	Speed = 0
 } )
 
-DefineUnitType("unit-amulet", { Name = _("Amulet"),
+DefineUnitType("unit-amulet", {
+	Name = _("Amulet"),
 	Parent = "unit-template-item",
 	Image = {"file", "neutral/items/amulet.png", "size", {32, 32}},
 	Icon = "icon-amulet",
 	ItemClass = "amulet"
 } )
 
-DefineUnitType("unit-ring", { Name = _("Ring"),
+DefineUnitType("unit-ring", {
+	Name = _("Ring"),
 	Parent = "unit-template-item",
 	Image = {"file", "neutral/items/ring.png", "size", {32, 32}},
 	Icon = "icon-ring",

@@ -73,6 +73,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * Items
 - Fixed an issue which caused an item to lose its name after loading a saved game.
+- Added Horn item type (graphics by Leo). The horn can be equipped in the offhand slot, for any unit using a one-handed weapon (including ranged ones such as the dwarven Scout). As with rings and amulets, horns always have a magic affix.
+- Added Gjall (unique horn).
 
 * Miscellaneous
 - Added Stone Pile (graphics by Jinn), which can be harvested for stone. It occasionally drops when buildings which cost stone are destroyed.

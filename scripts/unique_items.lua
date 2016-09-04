@@ -150,7 +150,6 @@ DefineUniqueItem("draupnir", { -- Source: Kevin Crossley-Holland, "The Norse Myt
 	Quote = "\"The ring I wish not, though burned it was\nOf old with Hroptatyr's son;\nIn my home is no lack of gold\nIn the wealth my father wields.\"\n- Dwarven Traditional Poetry"
 } )
 
---[[
 DefineUniqueItem("gjall", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 18, 243.
 	Name = "Gjall",
 	Type = "unit-horn",
@@ -158,7 +157,6 @@ DefineUniqueItem("gjall", { -- Source: Kevin Crossley-Holland, "The Norse Myths"
 	Suffix = "upgrade-item-suffix-of-swiftness",
 	Background = "In Norse mythology, Gjall (\"the Ringing Horn\") was the horn of the god Heimdall, which was heard in all nine worlds when soared."
 } )
---]]
 
 DefineUniqueItem("thusagans-book", { -- From Battle for Wesnoth: The Hammer of Thursagan
 	Name = "Thursagan's Book",

@@ -28,7 +28,7 @@
 DefineUpgrade("upgrade-item-prefix-accurate", {
 	Name = _("Accurate"),
 	MagicPrefix = true,
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "horn", true},
 	MagicLevel = 1
 })
 
@@ -55,7 +55,7 @@ DefineUpgrade("upgrade-item-prefix-dwindling", {
 DefineUpgrade("upgrade-item-prefix-flaming", { -- example: Flaming Sword (from Wesnoth)
 	Name = _("Flaming"),
 	MagicPrefix = true,
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "horn", true, "amulet", true, "ring", true}, -- so that Brisingamen and Draupnir can drop
 	MagicLevel = 3
 })
 
@@ -89,7 +89,7 @@ DefineUpgrade("upgrade-item-prefix-industrious", {
 DefineUpgrade("upgrade-item-prefix-jinns", {
 	Name = _("Jinn's"),
 	MagicPrefix = true,
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "horn", true},
 	MagicLevel = 3
 })
 
@@ -137,7 +137,7 @@ DefineUpgrade("upgrade-item-prefix-swift", {
 DefineUpgrade("upgrade-item-prefix-vicious", {
 	Name = _("Vicious"),
 	MagicPrefix = true,
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "ring", true}, -- allowed for rings to allow Andvaranaut to drop, but its prefix should be changed later
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "horn", true, "ring", true}, -- allowed for rings to allow Andvaranaut to drop, but its prefix should be changed later
 	MagicLevel = 2
 })
 
