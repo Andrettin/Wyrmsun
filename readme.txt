@@ -96,6 +96,7 @@ https://github.com/Andrettin/Wyrmsun
 * Units
 - Decreased the rate at which workers gain experience by gathering and building.
 - Renamed the goblin Worker to Drudge.
+- Added Unicorn (icon by Mrmo Tarius, modified from Jinn's horse icon).
 
 -----------------------------------------------------------------------
 - 2.4.1
