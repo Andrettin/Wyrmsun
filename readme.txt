@@ -81,6 +81,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed a crash cause.
 - Added "The Song of Rig" and "The Lay of Alvis" achievements.
 - The Gold Rock graphics have been updated (by Jinn).
+- Gold Rocks now have graphics for when holding less resources (by Jinn).
 
 * Quests
 - Added the possibility of accepting in-game quests at town-hall-type buildings in custom games (quest icon by Jinn).

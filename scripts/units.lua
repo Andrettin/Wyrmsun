@@ -212,7 +212,7 @@ DefineUnitType("unit-template-deposit", { Name = _("Deposit"),
 	Corpse = "unit-destroyed-3x3-place",
 	ExplodeWhenKilled = "missile-explosion",
 	Type = "land",
-	StartingResources = 50000,
+	StartingResources = {50000},
 	Affixes = {"upgrade-item-prefix-dwindling", "upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-replenishing", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-replenishment", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 		"selected", "gold-mine-selected",
@@ -425,23 +425,43 @@ DefineUnitType("unit-gold-rock", {
 --	Corpse = "unit-destroyed-3x3-place",
 --	ExplodeWhenKilled = "missile-explosion",
 	Type = "land",
-	StartingResources = 1000,
+	StartingResources = {500, 1000},
 	NumDirections = 1,
 	Building = false, VisibleUnderFog = true,
 	GivesResource = "gold", CanHarvest = true,
 	HarvestFromOutside = true,
 	Variations = {
 		{
-			"variation-id", "1"
+			"variation-id", "1",
+			"resource-min", 501
 		},
 		{
-			"variation-id", "2"
+			"variation-id", "2",
+			"resource-min", 501
 		},
 		{
-			"variation-id", "3"
+			"variation-id", "3",
+			"resource-min", 501
 		},
 		{
-			"variation-id", "4"
+			"variation-id", "4",
+			"resource-min", 501
+		},
+		{
+			"variation-id", "small-1",
+			"resource-max", 500
+		},
+		{
+			"variation-id", "small-2",
+			"resource-max", 500
+		},
+		{
+			"variation-id", "small-3",
+			"resource-max", 500
+		},
+		{
+			"variation-id", "small-4",
+			"resource-max", 500
 		}
 	},
 	Sounds = {
@@ -470,7 +490,7 @@ DefineUnitType("unit-silver-rock", {
 	Priority = 0,
 --	Corpse = "unit-destroyed-3x3-place",
 	Type = "land",
-	StartingResources = 1000,
+	StartingResources = {1000},
 	NumDirections = 1,
 	Building = false, VisibleUnderFog = true,
 	GivesResource = "silver", CanHarvest = true,
@@ -521,7 +541,7 @@ DefineUnitType("unit-copper-rock", {
 	Priority = 0,
 --	Corpse = "unit-destroyed-3x3-place",
 	Type = "land",
-	StartingResources = 1000,
+	StartingResources = {1000},
 	NumDirections = 1,
 	Building = false, VisibleUnderFog = true,
 	GivesResource = "copper", CanHarvest = true,
@@ -570,7 +590,7 @@ DefineUnitType("unit-wood-pile", {
 	Priority = 0,
 --	Corpse = "unit-destroyed-3x3-place",
 	Type = "land",
-	StartingResources = 400,
+	StartingResources = {400},
 	Building = true, VisibleUnderFog = true,
 	GivesResource = "lumber", CanHarvest = true,
 	HarvestFromOutside = true,
@@ -613,22 +633,42 @@ DefineUnitType("unit-stone-pile", {
 	Priority = 0,
 --	Corpse = "unit-destroyed-3x3-place",
 	Type = "land",
-	StartingResources = 400,
+	StartingResources = {200, 400},
 	Building = true, VisibleUnderFog = true,
 	GivesResource = "stone", CanHarvest = true,
 	HarvestFromOutside = true,
 	Variations = {
 		{
-			"variation-id", "1"
+			"variation-id", "1",
+			"resource-min", 201
 		},
 		{
-			"variation-id", "2"
+			"variation-id", "2",
+			"resource-min", 201
 		},
 		{
-			"variation-id", "3"
+			"variation-id", "3",
+			"resource-min", 201
 		},
 		{
-			"variation-id", "4"
+			"variation-id", "4",
+			"resource-min", 201
+		},
+		{
+			"variation-id", "small-1",
+			"resource-max", 200
+		},
+		{
+			"variation-id", "small-2",
+			"resource-max", 200
+		},
+		{
+			"variation-id", "small-3",
+			"resource-max", 200
+		},
+		{
+			"variation-id", "small-4",
+			"resource-max", 200
 		}
 	},
 	Sounds = {
@@ -659,7 +699,7 @@ DefineUnitType("unit-tree-stump", {
 	MaxOnBoard = 1,
 	CanTransport = {"organic", "only", "Mounted", "false"},
 	SaveCargo = true,
-	StartingResources = 200,
+	StartingResources = {200},
 	GivesResource = "lumber", CanHarvest = true,
 	HarvestFromOutside = true,
 	RightMouseAction = "rally-point",
@@ -1149,7 +1189,7 @@ DefineUnitType("unit-log", { Name = "Log",
 	Type = "land",
 	NumDirections = 1,
 	VisibleUnderFog = true,
-	StartingResources = 400,
+	StartingResources = {400},
 	GivesResource = "lumber", CanHarvest = true,
 	HarvestFromOutside = true,
 	Sounds = {
@@ -1777,7 +1817,7 @@ DefineUnitType("unit-gold-coins", { Name = _("Gold Coins"),
 	NumDirections = 1,	
 	PowerUp = true,
 	GivesResource = "gold",
-	StartingResources = 5,
+	StartingResources = {5},
 	Sounds = {
 		"selected", "click",
 		"used", "gold-coins"
@@ -1801,7 +1841,7 @@ DefineUnitType("unit-gold-sack", {
 	NumDirections = 1,	
 	PowerUp = true,
 	GivesResource = "gold",
-	StartingResources = 100,
+	StartingResources = {100},
 	Sounds = {
 		"selected", "click",
 		"used", "gold-coins"
