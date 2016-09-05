@@ -408,10 +408,11 @@ DefineUnitType("unit-coal-mine", { Name = _("Coal Mine"),
 --		"help", "gold-mine-help",
 		"dead", "building-destroyed"} } )
 
-DefineUnitType("unit-gold-rock", { Name = _("Gold Rock"),
-	Image = {"file", "neutral/buildings/gold_rock_1.png", "size", {43, 43}},
-	Shadow = {"file", "neutral/buildings/gold_rock_1_shadow.png", "size", {43, 43}},
-	Animations = "animations-building", Icon = "icon-gold-rock",
+DefineUnitType("unit-gold-rock", {
+	Name = _("Gold Rock"),
+	Image = {"file", "neutral/buildings/gold_rock.png", "size", {43, 43}},
+	Shadow = {"file", "neutral/buildings/gold_rock_shadow.png", "size", {43, 43}},
+	Animations = "animations-decoration", Icon = "icon-gold-rock",
 	NeutralMinimapColor = {255, 255, 0},
 	Costs = {"time", 150},
 	Speed = 0,
@@ -434,19 +435,13 @@ DefineUnitType("unit-gold-rock", { Name = _("Gold Rock"),
 			"variation-id", "1"
 		},
 		{
-			"variation-id", "2",
-			"file", "neutral/buildings/gold_rock_2.png",
-			"shadow-file", "neutral/buildings/gold_rock_2_shadow.png"
+			"variation-id", "2"
 		},
 		{
-			"variation-id", "3",
-			"file", "neutral/buildings/gold_rock_3.png",
-			"shadow-file", "neutral/buildings/gold_rock_3_shadow.png"
+			"variation-id", "3"
 		},
 		{
-			"variation-id", "4",
-			"file", "neutral/buildings/gold_rock_4.png",
-			"shadow-file", "neutral/buildings/gold_rock_4_shadow.png"
+			"variation-id", "4"
 		}
 	},
 	Sounds = {
@@ -458,7 +453,8 @@ DefineUnitType("unit-gold-rock", { Name = _("Gold Rock"),
 	}
 } )
 
-DefineUnitType("unit-silver-rock", { Name = _("Silver Rock"),
+DefineUnitType("unit-silver-rock", {
+	Name = _("Silver Rock"),
 	Image = {"file", "neutral/buildings/silver_rock_1.png", "size", {43, 43}},
 	Shadow = {"file", "neutral/buildings/silver_rock_1_shadow.png", "size", {43, 43}},
 	Animations = "animations-building", Icon = "icon-silver-rock",
@@ -508,7 +504,8 @@ DefineUnitType("unit-silver-rock", { Name = _("Silver Rock"),
 	}
 } )
 
-DefineUnitType("unit-copper-rock", { Name = _("Copper Rock"),
+DefineUnitType("unit-copper-rock", {
+	Name = _("Copper Rock"),
 	Image = {"file", "neutral/buildings/copper_rock_1.png", "size", {43, 43}},
 	Shadow = {"file", "neutral/buildings/copper_rock_1_shadow.png", "size", {43, 43}},
 	Animations = "animations-building", Icon = "icon-copper-rock",

@@ -226,7 +226,7 @@ DefineCivilization("gnome", {
 	PersonalNames = {
 		"female", "Adalga", -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 79.
 		"male", "Bimbam", -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 79.
-		"male", "Clavo", -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 106.
+		"male", "Clavo", -- name of a (male) gnome general; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 106.
 		"male", "Cravatu", -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 97.
 		"male", "Kalutho", -- name of an (apparently male) gnome; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 13.
 		"male", "Pypo", -- king of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 13.

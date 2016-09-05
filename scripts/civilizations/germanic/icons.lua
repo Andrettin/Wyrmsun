@@ -152,7 +152,7 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-germanic-bronze-lur",
+	Name = "icon-germanic-bronze-lur", -- based on the bronze lurs of the Nordic Bronze Age found in Denmark
 	Size = {46, 38},
 	File = "germanic/icons/bronze_lur.png"
 })

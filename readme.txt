@@ -80,6 +80,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Stone Pile (graphics by Jinn), which can be harvested for stone. It occasionally drops when buildings which cost stone are destroyed.
 - Fixed a crash cause.
 - Added "The Song of Rig" and "The Lay of Alvis" achievements.
+- The Gold Rock graphics have been updated (by Jinn).
 
 * Quests
 - Added the possibility of accepting in-game quests at town-hall-type buildings in custom games (quest icon by Jinn).
