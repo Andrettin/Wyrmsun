@@ -82,6 +82,7 @@ if not (ui_loaded_first_time) then
 	DefineSprites({Name = "sprite-regeneration", File = "ui/status_effects/regeneration.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-terror", File = "ui/status_effects/terror.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-level-up", File = "ui/status_effects/level_up.png", Offset = {1, 1}, Size = {16, 16}})
+	DefineSprites({Name = "sprite-quest", File = "ui/status_effects/quest.png", Offset = {1, 1}, Size = {16, 16}})
 
 	DefineDecorations({Index = "Leadership", ShowOpponent = true, ShowWhenMax = true,
 	  Offset = {0, 0}, Method = {"static-sprite", {"sprite-leadership", 0}}})
@@ -101,6 +102,8 @@ if not (ui_loaded_first_time) then
 	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-terror", 0}}})
 	DefineDecorations({Index = "LevelUp", ShowOpponent = false, HideAllied = true, ShowWhenMax = true,
 	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-level-up", 0}}})
+	DefineDecorations({Index = "AvailableQuests", ShowOpponent = false, HideAllied = true, ShowWhenMax = true,
+	  Offset = {64, 16}, CenterX = true, Method = {"static-sprite", {"sprite-quest", 0}}})
 end
 
 LoadingBarSetBackgrounds({

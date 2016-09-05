@@ -427,9 +427,11 @@ Exidelo (Leo):
 /graphics/tilesets/forest/terrain/pine_tree.png (licensed under the CC0)
 /graphics/tilesets/forest/terrain/rock.png (licensed under the CC0)
 /graphics/tilesets/forest/terrain/water.png (licensed under the CC0)
+/graphics/ui/icons/question_mark.png (licensed under the CC0)
 /graphics/ui/status_effects/bleeding.png (licensed under the CC0)
 /graphics/ui/status_effects/precise_shot.png (licensed under the CC0)
 /graphics/ui/status_effects/precision.png (licensed under the CC0)
+/graphics/ui/status_effects/quest.png (licensed under the CC0)
 /graphics/ui/status_effects/scouting.png (licensed under the CC0)
 
 Cuzco:

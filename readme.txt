@@ -63,6 +63,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Buildings
 - The garrison of stronghold-type buildings is now contained in a submenu accessible through the "See Garrison" button (icon graphics by Jinn).
+- A quest symbol is now displayed on top of town hall-type and stronghold-type buildings if there are quests available (quest symbol by Exidelo).
 
 * Editor
 - The grand strategy battle AI is now available for selection in the editor.
@@ -73,7 +74,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Items
 - Fixed an issue which caused an item to lose its name after loading a saved game.
-- Added Horn item type (graphics by Leo). The horn can be equipped in the offhand slot, for any unit using a one-handed weapon (including ranged ones such as the dwarven Scout). As with rings and amulets, horns always have a magic affix.
+- Added Horn item type (graphics by Exidelo). The horn can be equipped in the offhand slot, for any unit using a one-handed weapon (including ranged ones such as the dwarven Scout). As with rings and amulets, horns always have a magic affix.
 - Added Gjall (unique horn).
 
 * Miscellaneous
