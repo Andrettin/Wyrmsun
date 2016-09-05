@@ -450,12 +450,6 @@ function StandardTriggers()
 						end
 						SetUnitVariable(uncount[unit1], "LastCycle", GameCycle)
 					end
-					
-					local critter_quantity = GetNumUnitsAt(15, "unit-critter", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 1, GetUnitVariable(uncount[unit1],"PosY") + 1})
-					if (critter_quantity > 0 and GetUnitVariable(uncount[unit1], "LifeStage") < 8) then
-						SetUnitVariable(uncount[unit1], "LifeStage", 13)
-						SetUnitVariable(uncount[unit1], "LastCycle", GameCycle)
-					end
 				end
 
 				-- change 96x96 neutral building ownership depending on nearby player units
@@ -487,7 +481,7 @@ function StandardTriggers()
 				end
 				
 				-- make AI strongholds be filled with defenders
-				if (GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "AiEnabled") and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == "stronghold"  and GetUnitVariable(uncount[unit1], "Transport") < 3) then
+				if (GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "AiEnabled") and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == "stronghold" and GetUnitVariable(uncount[unit1], "Transport") < 3) then
 					unit = CreateUnitInTransporter(GetCivilizationClassUnitType("shooter", GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Civilization")), GetUnitVariable(uncount[unit1], "Player"), uncount[unit1])
 					SetUnitVariable(unit, "Active", false) -- set garrisoned unit to passive AI (so that they are not counted for attack participation)
 				end
@@ -516,21 +510,6 @@ function StandardTriggers()
 						end
 					end
 				end
-
-				-- make certain critters retaliate if people get too near
-				-- is not working (neutral player critters don't attack no matter what)
---				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-critter") then
---					local people_quantity = GetNumUnitsAt(-1, "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 1, GetUnitVariable(uncount[unit1],"PosY") + 1})
---					if (people_quantity > 0) then
---						local nearby_uncount = 0
---						nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 1, false)
---						for unit2 = 1,table.getn(nearby_uncount) do 
---							if (GetUnitVariable(nearby_uncount[unit2], "Player") ~= 15) then
---								OrderUnit("any", "unit-critter", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(nearby_uncount[unit2],"PosX"), GetUnitVariable(nearby_uncount[unit2],"PosY")}, "attack")
---							end
---						end
---					end
---				end
 
 				if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Trap") and GetUnitVariable(uncount[unit1], "HitPoints") > 0) then
 					local people_quantity = GetNumUnitsAt(-1, "units", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
