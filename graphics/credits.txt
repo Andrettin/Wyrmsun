@@ -374,6 +374,7 @@ Exidelo (Leo):
 /graphics/germanic/icons/stand_ground.png (licensed under the CC0)
 /graphics/germanic/icons/wooden_oblong_shield.png (licensed under the CC0)
 /graphics/germanic/icons/worker.png (licensed under the CC0)
+/graphics/germanic/items/bronze_lur.png (licensed under the CC0)
 /graphics/germanic/ui/cursors/germanic_hand.png (licensed under the CC0)
 /graphics/gnome/icons/boots.png (licensed under the CC0)
 /graphics/gnome/icons/boots_fur.png (licensed under the CC0)

@@ -327,12 +327,13 @@ DefineUnitType("unit-thrymgjol-shield", { Name = _("Thrymgjol Shield"),
 DefineUnitType("unit-horn", {
 	Name = _("Horn"),
 	Parent = "unit-template-item",
-	Image = {"file", "dwarf/items/round_shield.png", "size", {13, 13}},
+	Image = {"file", "germanic/items/bronze_lur.png", "size", {17, 15}},
 	Icon = "icon-germanic-bronze-lur",
 	ItemClass = "horn"
 } )
 
-DefineUnitType("unit-boots", { Name = _("Boots"),
+DefineUnitType("unit-boots", {
+	Name = _("Boots"),
 	Parent = "unit-template-item",
 	Image = {"file", "neutral/items/boots.png", "size", {32, 32}},
 	Icon = "icon-dwarven-boots",
@@ -340,7 +341,8 @@ DefineUnitType("unit-boots", { Name = _("Boots"),
 	Speed = 0
 } )
 
-DefineUnitType("unit-wool-shoes", { Name = _("Wool Shoes"),
+DefineUnitType("unit-wool-shoes", {
+	Name = _("Wool Shoes"),
 	Parent = "unit-template-item",
 	Image = {"file", "neutral/items/boots.png", "size", {32, 32}},
 	Icon = "icon-gnomish-boots",
@@ -348,7 +350,8 @@ DefineUnitType("unit-wool-shoes", { Name = _("Wool Shoes"),
 	Speed = 0
 } )
 
-DefineUnitType("unit-furry-wool-shoes", { Name = _("Furry Wool Shoes"),
+DefineUnitType("unit-furry-wool-shoes", {
+	Name = _("Furry Wool Shoes"),
 	Parent = "unit-template-item",
 	Image = {"file", "neutral/items/boots.png", "size", {32, 32}},
 	Icon = "icon-gnomish-boots-fur",
@@ -372,7 +375,8 @@ DefineUnitType("unit-ring", {
 	ItemClass = "ring"
 } )
 
-DefineUnitType("unit-arrows", { Name = _("Arrows"),
+DefineUnitType("unit-arrows", {
+	Name = _("Arrows"),
 	Parent = "unit-template-item",
 	Image = {"file", "neutral/items/arrow.png", "size", {32, 32}},
 	Icon = "icon-germanic-arrow",
@@ -401,7 +405,8 @@ DefineUnitType("unit-bodkin-arrows", {
 	BasicDamage = 4
 } )
 
-DefineUnitType("unit-potion-of-healing", { Name = _("Potion of Healing"),
+DefineUnitType("unit-potion-of-healing", {
+	Name = _("Potion of Healing"),
 	Parent = "unit-template-item",
 	Image = {"file", "neutral/items/potion_red.png", "size", {16, 16}},
 	Animations = "animations-potion", Icon = "icon-red-potion",
@@ -438,7 +443,8 @@ DefineUnitType("unit-book", {
 	} 
 } )
 
-DefineUnitType("unit-cheese", { Name = _("Cheese"),
+DefineUnitType("unit-cheese", {
+	Name = _("Cheese"),
 	Parent = "unit-template-item",
 	Image = {"file", "neutral/items/cheese.png", "size", {15, 12}},
 	Icon = "icon-cheese",
