@@ -1345,16 +1345,6 @@ function CreateCritters(arg)
 				if (has_terrain) then
 					local critter_unit_type = unit_type_list[i]
 					-- if there is a species this one can evolve from, use it instead, but only if we aren't playing a quest or in the grand strategy mode; in custom maps species can evolve to descendants
-					if (GetCurrentQuest() == "" and GrandStrategy == false) then
-						local evolves_from_list = GetSpeciesData(species, "EvolvesFrom")
-						while (table.getn(evolves_from_list) > 0) do
-							species = evolves_from_list[SyncRand(table.getn(evolves_from_list)) + 1]
-							if (GetSpeciesData(species, "Type") ~= "") then
-								critter_unit_type = GetSpeciesData(species, "Type")
-							end
-							evolves_from_list = GetSpeciesData(species, "EvolvesFrom")
-						end
-					end
 					table.insert(critter_types, critter_unit_type)
 					table.insert(critter_terrains, species_terrains)
 				end
