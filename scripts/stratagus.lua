@@ -440,40 +440,6 @@ function StandardTriggers()
 			uncount = GetUnits("any")
 			for unit1 = 1,table.getn(uncount) do 
 
-				-- grow mushrooms
-				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom" or GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then
-					if (GameCycle >= GetUnitVariable(uncount[unit1], "LastCycle") + 750) then
-						if (GetUnitVariable(uncount[unit1], "LifeStage") < 13) then
-							SetUnitVariable(uncount[unit1], "LifeStage", GetUnitVariable(uncount[unit1], "LifeStage") + 1)
-						else
-							SetUnitVariable(uncount[unit1], "LifeStage", 1)
-						end
-						SetUnitVariable(uncount[unit1], "LastCycle", GameCycle)
-					end
-				end
-
-				-- change 96x96 neutral building ownership depending on nearby player units
-				if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Capturable")) then
-					local mercenary_camp_player = 15
-					for i=0,14 do
-						if (GetNumUnitsAt(i, "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}) > 0) then
-							if (mercenary_camp_player ~= 15) then
-								mercenary_camp_player = 16
-							else
-								mercenary_camp_player = i
-							end
-						end
-					end
-					if (mercenary_camp_player < 15 and mercenary_camp_player ~= GetUnitVariable(uncount[unit1], "Player")) then
-						for i=-1,3 do
-							for j=-1,3 do
-								OrderUnit(mercenary_camp_player, "units", {GetUnitVariable(uncount[unit1],"PosX") + i, GetUnitVariable(uncount[unit1],"PosY") + j}, {GetUnitVariable(uncount[unit1],"PosX") + i, GetUnitVariable(uncount[unit1],"PosY") + j}, "move")
-							end
-						end
-						ChangeUnitOwner(uncount[unit1], mercenary_camp_player)
-					end
-				end
-				
 				-- make AI guard towers be filled with defenders
 				if (GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "AiEnabled") and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == "guard-tower"  and GetUnitVariable(uncount[unit1], "Transport") < 2) then
 					unit = CreateUnitInTransporter(GetCivilizationClassUnitType("shooter", GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Civilization")), GetUnitVariable(uncount[unit1], "Player"), uncount[unit1])

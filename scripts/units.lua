@@ -277,7 +277,8 @@ DefineUnitType("unit-gold-deposit", { Name = _("Gold Deposit"),
 	GivesResource = "gold"
 } )
 
-DefineUnitType("unit-gold-mine", { Name = _("Gold Mine"),
+DefineUnitType("unit-gold-mine", {
+	Name = _("Gold Mine"),
 	Parent = "unit-template-mine",
 	Class = "gold-mine",
 	Description = _("Gold is a crucial metal for most societies, as it serves both as a durable stock of value, and as a means of exchange with which a myriad of goods and services can be traded for."),
@@ -294,7 +295,8 @@ DefineUnitType("unit-gold-mine", { Name = _("Gold Mine"),
 	ButtonHint = _("Build ~!Gold Mine")
 } )
 
-DefineUnitType("unit-silver-deposit", { Name = _("Silver Deposit"),
+DefineUnitType("unit-silver-deposit", {
+	Name = _("Silver Deposit"),
 	Parent = "unit-template-deposit",
 	Description = _("Silver deposits often contain deep veins of silver, which can be gainfully mined after the proper infrastructure is put into place."),
 	Image = {"file", "neutral/buildings/silver_deposit.png", "size", {96, 96}},
@@ -316,7 +318,8 @@ DefineUnitType("unit-silver-deposit", { Name = _("Silver Deposit"),
 	GivesResource = "silver"
 } )
 
-DefineUnitType("unit-silver-mine", { Name = _("Silver Mine"),
+DefineUnitType("unit-silver-mine", {
+	Name = _("Silver Mine"),
 	Parent = "unit-template-mine",
 	Class = "silver-mine",
 	Description = _("Silver is a crucial metal for most societies, as it serves both as a durable stock of value, and as a means of exchange with which a myriad of goods and services can be traded for. Although not as valuable as gold, silver is still a highly sought-after metal."),
@@ -332,7 +335,8 @@ DefineUnitType("unit-silver-mine", { Name = _("Silver Mine"),
 	ButtonHint = _("Build Sil~!ver Mine")
 } )
 
-DefineUnitType("unit-copper-deposit", { Name = _("Copper Deposit"),
+DefineUnitType("unit-copper-deposit", {
+	Name = _("Copper Deposit"),
 	Parent = "unit-template-deposit",
 	Description = _("Copper deposits contain deep veins of copper, which can be gainfully mined after the proper infrastructure is put into place."),
 	Image = {"file", "neutral/buildings/copper_deposit.png", "size", {96, 96}},
@@ -354,7 +358,8 @@ DefineUnitType("unit-copper-deposit", { Name = _("Copper Deposit"),
 	GivesResource = "copper"
 } )
 
-DefineUnitType("unit-copper-mine", { Name = _("Copper Mine"),
+DefineUnitType("unit-copper-mine", {
+	Name = _("Copper Mine"),
 	Parent = "unit-template-mine",
 	Class = "copper-mine",
 	Description = _("More common than either gold or silver, copper has a multitude of uses. It not only serves as a stock of value and means of exchange, but also as a material for utensils and as an ingredient to the making of bronze."),
@@ -760,7 +765,8 @@ DefineUnitType("unit-hole", { Name = _("Hole"),
 	}
 } )		
 	
-DefineUnitType("unit-mushroom", { Name = "Mushroom",
+DefineUnitType("unit-mushroom", {
+	Name = "Mushroom",
 	Image = {"file", "neutral/decorations/mushroom.png", "size", {32, 32}},
 	Animations = "animations-mushroom-patch", Icon = "icon-mushroom",
 	Speed = 0,
@@ -791,10 +797,11 @@ DefineUnitType("unit-mushroom", { Name = "Mushroom",
 			"variation-id", "yellow"
 		}
 	},
-	Sounds = {} }
-)
+	Sounds = {}
+})
 
-DefineUnitType("unit-mushroom-patch", { Name = "Mushroom Patch",
+DefineUnitType("unit-mushroom-patch", {
+	Name = "Mushroom Patch",
 	Image = {"file", "neutral/decorations/mushrooms.png", "size", {32, 32}},
 	Animations = "animations-mushroom-patch", Icon = "icon-mushroom",
 	Speed = 0,
@@ -825,8 +832,8 @@ DefineUnitType("unit-mushroom-patch", { Name = "Mushroom Patch",
 			"variation-id", "yellow"
 		}
 	},
-	Sounds = {} }
-)
+	Sounds = {}
+})
 
 DefineUnitType("unit-flowers", {
 	Name = "Flowers",

@@ -339,7 +339,9 @@ DefineCivilization("teuton", {
 	ProvinceNameSuffixes = {
 		"falen" -- example: "Westfalen" (Westphalia)
 	},
+	--]]
 	SettlementNames = {
+		"Altsohl",
 		"Botzen",
 		"Bregenz",
 		"Brünn",
@@ -348,24 +350,42 @@ DefineCivilization("teuton", {
 		"Cilli",
 		"Eger",
 		"Franzensfeste",
+		"Frohsdorf",
 		"Gabel",
 		"Gastein",
+		"Gänserndorf",
 		"Glurns",
 		"Görz",
 		"Graz", -- from the same Slavic root as "Grad"
+		"Hamburg",
+		"Innsbruck",
 		"Ischl",
+		"Josefstadt",
+		"Karlsbad",
 		"Krems",
 		"Kremsier",
+		"Kronstadt",
 		"Kufstein",
+		"Lemberg",
+		"Leopoldstadt",
 		"Linz",
+		"Marburg",
 		"München",
+		"Münchengrätz",
+		"Neusohl",
+		"Nikolsburg",
+		"Ödenburg",
 		"Olmütz",
 		"Passau",
 		"Pilsen",
 		"Prag",
+		"Presburg",
+		"Regensburg",
 		"Sadowa",
+		"Schässburg",
 		"Schweinschädel",
 		"Steinamanger",
+		"Stuhlweissenburg",
 		"Teplitz",
 		"Teschen",
 		"Tobitschau",
@@ -373,33 +393,9 @@ DefineCivilization("teuton", {
 		"Troppau",
 		"Villach",
 		"Wels",
-		"Werschitz"
+		"Werschitz",
+		"Zillertal"
 	},
-	SettlementNamePrefixes = {
-		"Frohs", -- example: "Frohsdorf"
-		"Gänsern", -- "Gänse = "Geese" ("Gänsern" is presumably a variation thereof); example: "Gänserndorf"
-		"Ham", -- example: "Hamburg"
-		"Inns", -- "Inns" = "Inn's" (related to the Inn river); example: "Innsbruck"
---			"Josef", -- example: "Josefstadt"
-		"Karls", -- "Karls" = "Charles'"; example: "Karlsbad"
-		"Kron", -- example: "Kronstadt"
-		"Lem", -- example: "Lemberg"
---			"Leopold", -- example: "Leopoldstadt"
-		"Mar", -- example: "Marburg"
-		"München", -- example: "Münchengrätz"
---			"Nikols", -- "Nikols" = "Nicholas'"; example: "Nikolsburg"
-		"Öden", -- example: "Ödenburg"
-		"Pres", -- example: "Presburg"
-		"Regens", -- example: "Regensburg"
-		"Schäss", -- example: "Schässburg"
-		"Ziller" -- example: "Zillertal"
-	},
-	SettlementNameSuffixes = {
-		"grätz", -- examples: "Königgrätz", "Münchengrätz"
-		"sohl", -- examples: "Altsohl", "Neusohl"
-		"weissenburg" -- "weissenburg" = "white castle"; example: "Stuhlweissenburg"
-	},
-	--]]
 	Description = _("During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). Eventually, West Germanic peoples would come to identify themselves with the demonym \"deutsch\", a term often latinized as \"teutonicus\"."),
 	Months = { -- Anglo-Saxon months; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 97-98.
 		"january", "Giuli", -- first month of the Anglo-Saxon year; the modern Yule, the name was used for both the last and first month of the year; the year began on the 25th of December, during the night of which the "Modra nect" ("the night of the mothers") was celebrated
@@ -437,7 +433,6 @@ DefineCivilization("latin", {
 	Playable = false,
 	DefaultColor = "red",
 	CivilizationUpgrade = "upgrade-latin-civilization",
-	--[[
 	SettlementNames = {
 		"Agrigentum",
 		"Alba",
@@ -452,6 +447,7 @@ DefineCivilization("latin", {
 		"Bracara Augusta", -- Braga
 		"Brundisium",
 		"Buxentum",
+		"Caesaraugusta",
 		"Capua",
 		"Caralis",
 		"Circeii",
@@ -475,6 +471,7 @@ DefineCivilization("latin", {
 		"Luceria",
 		"Lucus Augusti",
 		"Mariana",
+		"Mediolanum", -- Milan
 		"Minturnae",
 		"Mutina",
 		"Narnia",
@@ -514,19 +511,9 @@ DefineCivilization("latin", {
 		"Velitrae",
 		"Venusia",
 		"Vibo Valentia",
+		"Vindobona", -- Vienna
 		"Vulturnus"
 	},
-	SettlementNamePrefixes = {
-		"Caesar", -- example: "Caesaraugusta"
-		"Medio", -- example: "Mediolanum" (Milan)
-		"Vindo" -- example: "Vindobona" (Vienna)
-	},
-	SettlementNameSuffixes = {
-		"augusta", -- example: Caesaraugusta
-		"bona", -- example: "Vindobona" (Vienna)
-		"lanum" -- example: "Mediolanum" (Milan)
-	}
-	--]]
 	Description = _("During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. One group of Indo-Europeans spoke a dialect which would later develop into the Celtic and Italic languages. Latins were an Italic people who inhabited Central Italy and who founded many cities, one of them being Rome. With the expansion of consolidation of Roman power, most of Italy would be latinized, and eventually large areas of the Roman empire would speak Latin as their mother tongue.")
 })
 
@@ -570,7 +557,6 @@ DefineCivilization("greek", {
 	ParentCivilization = "latin",
 	Adjective = "Greek",
 	Playable = false,
-	--[[
 	SettlementNames = {
 		"Apollonia",
 		"Argos",
@@ -651,8 +637,7 @@ DefineCivilization("greek", {
 		"Trapezus",
 		"Zacynthus", -- Saguntum
 		"Zancle" -- Messana
-	}
-	--]]
+	},
 	Description = _("During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. Those who migrated to Greece spoke their own dialect of Indo-European, which eventually would develop into Ancient Greek. Initially a backwater in comparison to the Near East, Greece would eventually become one of the main centers of civilization in antiquity, being widely renowned for the achievements of its people. The rise of the Macedonian empire spread the influence of Greek culture through much of the eastern Mediterranean, Persia, and beyond, and even after the Roman conquest Greek remained widely spoken (both as a mother tongue and as a lingua franca) in the eastern half of the Mediterranean.")
 })
 

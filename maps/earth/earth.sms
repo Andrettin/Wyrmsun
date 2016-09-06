@@ -6,8 +6,8 @@ else
 	LoadTileModels("scripts/tilesets/conifer_forest_autumn.lua")
 end
 
-ApplyMapTemplate("earth", 4022, 667)
---ApplyMapTemplate("earth", 3766, 667) -- for the larger map
+--ApplyMapTemplate("earth", 4022, 667)
+ApplyMapTemplate("earth", 3766, 667) -- for the larger map
 
 SetPlayerData(15, "RaceName", "neutral")
 

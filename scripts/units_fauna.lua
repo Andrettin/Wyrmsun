@@ -857,29 +857,29 @@ DefineUnitType("unit-gryphon", {
 	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	PierceDamage = true,
 	PersonalNames = {
-		"Graa", -- gryphon name in Battle for Wesnoth
+		"female", "Kaasa", -- female gryphon name in Battle for Wesnoth
+		"female", "Kayya", -- female gryphon name in Battle for Wesnoth
+		"female", "Keyya", -- female gryphon name in Battle for Wesnoth
+		"female", "Kiira", -- female gryphon name in Battle for Wesnoth
+		"female", "Korra", -- female gryphon name in Battle for Wesnoth
+		"male", "Graa", -- male gryphon name in Battle for Wesnoth
+		"male", "Greaa", -- male gryphon name in Battle for Wesnoth
+		"male", "Gree", -- male gryphon name in Battle for Wesnoth
+		"male", "Kaaa", -- male gryphon name in Battle for Wesnoth
+		"male", "Kassshh", -- male gryphon name in Battle for Wesnoth
+		"male", "Kessshh", -- male gryphon name in Battle for Wesnoth
+		"male", "Korro", -- male gryphon name in Battle for Wesnoth
+		"male", "Kraa", -- male gryphon name in Battle for Wesnoth
+		"male", "Kuu", -- male gryphon name in Battle for Wesnoth
+		"male", "Kzaaa", -- male gryphon name in Battle for Wesnoth
+		"male", "Kzuuu", -- male gryphon name in Battle for Wesnoth
 		"Graak", -- gryphon in Battle for Wesnoth: Heir to the Throne
 		"Graik", -- gryphon in Battle for Wesnoth: Heir to the Throne
-		"Greaa", -- gryphon name in Battle for Wesnoth
-		"Gree", -- gryphon name in Battle for Wesnoth
 		"Griak", -- gryphon in Battle for Wesnoth: Heir to the Throne
 		"Grook", -- gryphon in Battle for Wesnoth: Heir to the Throne
 		"Gruak", -- gryphon in Battle for Wesnoth: Heir to the Throne
-		"Kaaa", -- gryphon name in Battle for Wesnoth
-		"Kaasa", -- gryphon name in Battle for Wesnoth
-		"Kassshh", -- gryphon name in Battle for Wesnoth
 		"Kawn", -- gryphon in Battle for Wesnoth: The Sceptre of Fire
-		"Kayya", -- gryphon name in Battle for Wesnoth
-		"Kessshh", -- gryphon name in Battle for Wesnoth
-		"Keyya", -- gryphon name in Battle for Wesnoth
-		"Kiira", -- gryphon name in Battle for Wesnoth
-		"Korra", -- gryphon name in Battle for Wesnoth
-		"Korro", -- gryphon name in Battle for Wesnoth
-		"Kraa", -- gryphon name in Battle for Wesnoth
-		"Krawg", -- gryphon in Battle for Wesnoth: The Sceptre of Fire
-		"Kuu", -- gryphon name in Battle for Wesnoth
-		"Kzaaa", -- gryphon name in Battle for Wesnoth
-		"Kzuuu" -- gryphon name in Battle for Wesnoth
+		"Krawg" -- gryphon in Battle for Wesnoth: The Sceptre of Fire
 	},
 	Variations = {
 		--[[
