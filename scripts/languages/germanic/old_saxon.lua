@@ -750,7 +750,7 @@ DefineLanguageWord("Stên", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Language = "old-saxon",
 	Type = "noun",
 	Meanings = {"Stone"}, -- source (apparently) gives the German "Stein" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Staina"},
+	DerivesFrom = {"proto-germanic", "noun", "Staynas"},
 	Gender = "masculine"
 })
 

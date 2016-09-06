@@ -64,6 +64,12 @@ DefineLanguageWord("Mygg", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Meanings = {"Midge"}
 })
 
+DefineLanguageWord("Strāta", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.3.
+	Language = "old-swedish",
+	Type = "noun",
+	Meanings = {"Street"}
+})
+
 DefineLanguageWord("Tuar", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "old-swedish",
 	Type = "numeral",

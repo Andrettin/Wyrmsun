@@ -37,12 +37,6 @@ DefineLanguageWord("Berg", { -- appears in "Untersberg", which is given as the "
 	Meanings = {"Mountain"}
 })
 
-DefineLanguageWord("Gnana", { -- name of the capital of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 179.
-	Language = "gnomish",
-	Type = "noun",
-	Meanings = {}
-})
-
 DefineLanguageWord("Leffas", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 159.
 	Language = "gnomish",
 	Type = "noun",

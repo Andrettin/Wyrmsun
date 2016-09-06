@@ -858,7 +858,7 @@ DefineLanguageWord("Stein", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Language = "middle-high-german",
 	Type = "noun",
 	Meanings = {"Stone"}, -- source gives the German "Stein" as the meaning
-	DerivesFrom = {"old-high-german", "noun", "Stein"},
+	DerivesFrom = {"old-high-german", "noun", "Steinn"},
 	Gender = "masculine"
 })
 

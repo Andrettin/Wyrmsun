@@ -943,6 +943,14 @@ DefineLanguageWord("Es", {
 	Archaic = true
 })
 
+DefineLanguageWord("Eye", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Eye"},
+	Gender = "neuter",
+	DerivesFrom = {"old-english", "noun", "Ēage"} -- presumably
+})
+
 DefineLanguageWord("Fair", {
 	Language = "english",
 	Type = "adjective",
@@ -2097,6 +2105,13 @@ DefineLanguageWord("Oliver", {
 	NameTypes = {"person-male"}
 })
 
+DefineLanguageWord("One", {
+	Language = "english",
+	Type = "numeral",
+	Number = 1,
+	DerivesFrom = {"old-english", "numeral", "Ān"} -- presumably
+})
+
 DefineLanguageWord("Orange", {
 	Language = "english",
 	Type = "adjective",
@@ -2765,7 +2780,7 @@ DefineLanguageWord("Stone", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Stone"},
-	DerivesFrom = {"old-english", "noun", "Stân"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
+	DerivesFrom = {"old-english", "noun", "Stān"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
 	Gender = "neuter",
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "settlement", -- example: "Stonehaven"; Source: "Philip's International School Atlas", 2006, p. 64.
@@ -2778,7 +2793,7 @@ DefineLanguageWord("Stone", {
 	Language = "english",
 	Type = "adjective",
 	Meanings = {"Stone"},
-	DerivesFrom = {"old-english", "noun", "Stân"}, -- presumably, since the corresponding noun does
+	DerivesFrom = {"old-english", "noun", "Stān"}, -- presumably, since the corresponding noun does
 	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
 })
 
@@ -2786,7 +2801,7 @@ DefineLanguageWord("Stony", {
 	Language = "english",
 	Type = "adjective",
 	Meanings = {"Stony"},
-	DerivesFrom = {"old-english", "noun", "Stân"}, -- presumably, since the noun "stone" does
+	DerivesFrom = {"old-english", "noun", "Stān"}, -- presumably, since the noun "stone" does
 	AffixNameTypes = {
 		"separate", "prefix", "terrain-mountains", -- example: "Stony Cove Pike"
 		"separate", "infix", "terrain-mountains" -- example: "Great Stony Hill"
@@ -2863,6 +2878,13 @@ DefineLanguageWord("Theodore", {
 	Meanings = {},
 	Gender = "masculine",
 	NameTypes = {"person-male"}
+})
+
+DefineLanguageWord("Thief", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Thief"},
+	DerivesFrom = {"old-english", "noun", "Þīof"} -- presumably
 })
 
 DefineLanguageWord("Thomas", {

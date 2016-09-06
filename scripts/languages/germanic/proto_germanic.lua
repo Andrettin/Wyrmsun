@@ -147,6 +147,18 @@ DefineLanguageWord("Avôn", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Awgan", { -- source gives "awgan-"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Eye"}
+})
+
+DefineLanguageWord("Aynos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4.
+	Language = "proto-germanic",
+	Type = "numeral",
+	Number = 1
+})
+
 DefineLanguageWord("Bagma", { -- source also gives the alternative form "bauma"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 134.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -246,6 +258,12 @@ DefineLanguageWord("Blôma", { -- source also gives the alternative (masculine) 
 	Type = "noun",
 	Meanings = {"Flower"}, -- source gives the German "Blume" as the meaning
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Bōkān", { -- source gives "bōkān-"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.3.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Beech"}
 })
 
 DefineLanguageWord("Bōks", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 2-3.
@@ -1232,11 +1250,11 @@ DefineLanguageWord("Snaigva", { -- source also gives the forms "Snaiva", "Snaigv
 	Uncountable = true -- seems likely to be uncountable
 })
 
-DefineLanguageWord("Staina", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
+DefineLanguageWord("Staynas", { -- as given by Lehmann; Fick gives "staina" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Stone"}, -- source gives the German "Stein" as the meaning
-	Gender = "masculine"
+	Meanings = {"Stone"}, -- as given by both sources; Fick gives the German "Stein" as the meaning
+	Gender = "masculine" -- as given by Fick
 })
 
 DefineLanguageWord("Stapula", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 241.
@@ -1636,6 +1654,12 @@ DefineLanguageWord("Reχtaz", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "proto-germanic",
 	Type = "adjective",
 	Meanings = {"Right", "Straight"}
+})
+
+DefineLanguageWord("Þewb", { -- source gives "þewb-"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Thief"}
 })
 
 DefineLanguageWord("Þrahila", { -- source also gives the alternative form "þregila"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 101.

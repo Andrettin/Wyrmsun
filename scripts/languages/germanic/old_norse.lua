@@ -487,6 +487,13 @@ DefineLanguageWord("Egg", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-G
 	Meanings = {"Egg"}
 })
 
+DefineLanguageWord("Einn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4.
+	Language = "old-norse",
+	Type = "numeral",
+	Number = 1, -- apparently
+	DerivesFrom = {"proto-germanic", "numeral", "Aynos"}
+})
+
 DefineLanguageWord("Eir", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 11.
 	Language = "old-norse",
 	Type = "noun",
@@ -1548,7 +1555,7 @@ DefineLanguageWord("Steinn", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Stone"}, -- source (apparently) gives the German "Stein" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Staina"},
+	DerivesFrom = {"proto-germanic", "noun", "Staynas"},
 	Gender = "masculine"
 })
 

@@ -414,6 +414,13 @@ DefineLanguageWord("Eiie", { -- this is the dative singular; Source: Winfred P. 
 	}
 })
 
+DefineLanguageWord("Ein", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4.
+	Language = "old-high-german",
+	Type = "numeral",
+	Number = 1, -- apparently
+	DerivesFrom = {"proto-germanic", "numeral", "Aynos"}
+})
+
 DefineLanguageWord("Elina", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
 	Language = "old-high-german",
 	Type = "noun",
@@ -1225,16 +1232,23 @@ DefineLanguageWord("Ôstar", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	DerivesFrom = {"proto-germanic", "adverb", "Austa"}
 })
 
-DefineLanguageWord("Ouga", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
+DefineLanguageWord("Ouga", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Eye"}
+	Meanings = {"Eye"}, -- as given by both Runge and Lehmann
+	DerivesFrom = {"proto-germanic", "noun", "Awgan"} -- as given by Lehmann
 })
 
 DefineLanguageWord("Ouh", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Language = "old-high-german",
 	Type = "adverb",
 	Meanings = {"Also"} -- source gives translation as the German word "auch"
+})
+
+DefineLanguageWord("Pfāl", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.3.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Pole"}
 })
 
 DefineLanguageWord("Pfeife", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
@@ -1314,10 +1328,10 @@ DefineLanguageWord("Saga", { -- source also gives the alternative form "sega"; S
 	Gender = "feminine"
 })
 
-DefineLanguageWord("Sāt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageWord("Sāt", { -- given as "sāt" in 2.2 and as "saat" in 2.7.4; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2, 2.7.4.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Seed"}, -- derived from the Proto-Germanic "Sēþiz", which means "Seed"
+	Meanings = {"Seed"},
 	DerivesFrom = {"proto-germanic", "noun", "Sēþiz"}
 })
 
@@ -1499,12 +1513,12 @@ DefineLanguageWord("Staphal", { -- source also gives the alternative forms "staf
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Stein", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
+DefineLanguageWord("Steinn", { -- as given by Lehmann; Fick gives "stein" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Stone"}, -- source gives the German "Stein" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Staina"},
-	Gender = "masculine"
+	Meanings = {"Stone"}, -- as given by Lehmann
+	DerivesFrom = {"proto-germanic", "noun", "Staynas"}, -- as given by both Lehmann and Fick
+	Gender = "masculine" -- as given by Fick
 })
 
 DefineLanguageWord("Stīgan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2, 2.7.1.
@@ -1521,6 +1535,12 @@ DefineLanguageWord("Stōzan", { -- Source: Richard M. Runge, "The Phonetic Reali
 	Language = "old-high-german",
 	Type = "verb",
 	Meanings = {"Push"} -- source gives translation as the German word "stoßen"
+})
+
+DefineLanguageWord("Strāza", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.3.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Street"}
 })
 
 DefineLanguageWord("Suht", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
@@ -1600,6 +1620,13 @@ DefineLanguageWord("Teil", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Meanings = {"Part"}
 })
 
+DefineLanguageWord("Thiob", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Thief"},
+	DerivesFrom = {"proto-germanic", "noun", "Þewb"}
+})
+
 DefineLanguageWord("Tiuf", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
 	Type = "adjective",
@@ -1644,6 +1671,12 @@ DefineLanguageWord("Truhtîn", { -- source also gives the alternative form "troh
 	Meanings = {"Lord", "Warlord", "Lord (God)"}, -- source gives the German "Herr, Kriegsherr, meist von Gott als Herrn der Heerscharen" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Druhtîna"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Tuonouwa", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.3.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Danube"}
 })
 
 DefineLanguageWord("Ubir", { -- Lehmann also gives the alternative form "ubar"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2, 2.7.2.

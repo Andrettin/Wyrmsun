@@ -655,6 +655,13 @@ DefineLanguageWord("Eduard", {
 	Meanings = {}
 })
 
+DefineLanguageWord("Eins", {
+	Language = "high-german",
+	Type = "numeral",
+	Number = 1,
+	DerivesFrom = {"old-high-german", "numeral", "Ein"} -- presumably
+})
+
 DefineLanguageWord("Eisen", {
 	Language = "high-german",
 	Type = "noun",

@@ -51,6 +51,13 @@ DefineLanguageWord("Ainlif", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Number = 11
 })
 
+DefineLanguageWord("Áins", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4.
+	Language = "gothic",
+	Type = "numeral",
+	Number = 1, -- apparently
+	DerivesFrom = {"proto-germanic", "numeral", "Aynos"}
+})
+
 DefineLanguageWord("Airmana", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18.
 	Language = "gothic",
 	Type = "noun",
@@ -138,10 +145,11 @@ DefineLanguageWord("Aufto", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	Meanings = {"Perhaps"}
 })
 
-DefineLanguageWord("Augo", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
+DefineLanguageWord("Áugō", { -- as given by Lehmann; Runge gives "augo" instead; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Eye"}
+	Meanings = {"Eye"}, -- as given by both Lehmann and Runge
+	DerivesFrom = {"proto-germanic", "noun", "Awgan"} -- as given by Lehmann
 })
 
 DefineLanguageWord("Auk", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
@@ -340,6 +348,12 @@ DefineLanguageWord("Dius", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Animal"}
+})
+
+DefineLanguageWord("Dōnawi", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.3.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Danube"}
 })
 
 DefineLanguageWord("Eisarn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
@@ -1083,12 +1097,12 @@ DefineLanguageWord("Speiwan", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Meanings = {"Spit"}
 })
 
-DefineLanguageWord("Stains", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
+DefineLanguageWord("Stáins", { -- as given by Lehmann; Fick gives "stains" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Stone"}, -- source (apparently) gives the German "Stein" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Staina"},
-	Gender = "masculine"
+	Meanings = {"Stone"}, -- as given by Lehmann
+	DerivesFrom = {"proto-germanic", "noun", "Staynas"}, -- as given by both Lehmann and Fick
+	Gender = "masculine" -- as given by Fick
 })
 
 DefineLanguageWord("Standan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
@@ -1166,6 +1180,13 @@ DefineLanguageWord("Þeihan", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Type = "verb",
 	Meanings = {"Thrive"},
 	DerivesFrom = {"proto-germanic", "verb", "Þinχanan"}
+})
+
+DefineLanguageWord("Þiubs", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Thief"},
+	DerivesFrom = {"proto-germanic", "noun", "Þewb"}
 })
 
 DefineLanguageWord("Þiuda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 99.

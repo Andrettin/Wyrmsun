@@ -349,6 +349,14 @@ DefineLanguageWord("Cildisc", { -- Source: Alaric Hall, "The Meanings of Elf and
 	Meanings = {"Childish"}
 })
 
+DefineLanguageWord("Clæ̂g", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 38.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Clay"}, -- source gives the German "Lehm" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Klajja"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Cniht", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
 	Language = "old-english",
 	Type = "noun",
@@ -514,6 +522,20 @@ DefineLanguageWord("Éasterra", { -- source also gives the alternative form "Éa
 	Type = "adjective",
 	Meanings = {},
 	DerivesFrom = {"proto-germanic", "adverb", "Austa"}
+})
+
+DefineLanguageWord("Ān", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4.
+	Language = "old-english",
+	Type = "numeral",
+	Number = 1, -- apparently
+	DerivesFrom = {"proto-germanic", "numeral", "Aynos"}
+})
+
+DefineLanguageWord("Ēage", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Eye"},
+	DerivesFrom = {"proto-germanic", "noun", "Awgan"}
 })
 
 DefineLanguageWord("Elm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 23.
@@ -1367,6 +1389,12 @@ DefineLanguageWord("Orlæg", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Pāl", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.3.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Pole"}
+})
+
 DefineLanguageWord("Plegestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
 	Language = "old-english",
 	Type = "noun",
@@ -1646,12 +1674,12 @@ DefineLanguageWord("Spinelhealf", { -- Source: Alaric Hall, "The Meanings of Elf
 	Meanings = {"Spindle-Side"}
 })
 
-DefineLanguageWord("Stân", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
+DefineLanguageWord("Stān", { -- as given by Lehmann; Fick gives "stân" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
 	Language = "old-english",
 	Type = "noun",
-	Meanings = {"Stone"}, -- source (apparently) gives the German "Stein" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Staina"},
-	Gender = "masculine"
+	Meanings = {"Stone"}, -- as given by Lehmann
+	DerivesFrom = {"proto-germanic", "noun", "Staynas"}, -- as given by both Lehmann and Fick
+	Gender = "masculine" -- as given by Fick
 })
 
 DefineLanguageWord("Standan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
@@ -1781,19 +1809,18 @@ DefineLanguageWord("Þéod", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Þīof", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Thief"},
+	DerivesFrom = {"proto-germanic", "noun", "Þewb"}
+})
+
 DefineLanguageWord("Þorp", { -- source also gives the alternative form "Þrop"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Manor", "Village"}, -- source gives the German "Landgut, Dorf" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Þurpa"},
-	Gender = "masculine"
-})
-
-DefineLanguageWord("Clæ̂g", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 38.
-	Language = "old-english",
-	Type = "noun",
-	Meanings = {"Clay"}, -- source gives the German "Lehm" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Klajja"},
 	Gender = "masculine"
 })
 

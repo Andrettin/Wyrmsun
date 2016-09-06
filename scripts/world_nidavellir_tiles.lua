@@ -71,7 +71,7 @@ DefineWorldMapTile({-1, -1}, { -- having no coordinates means it will be randoml
 	Province = "Untersberg",
 	Capital = true,
 	CulturalSettlementNames = {
-		"gnome", "Gnana"--, "name-elements", {"word", "gnomish", "noun", "Gnana"} -- capital of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 179.
+		"gnome", "Gnana" -- capital of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 179.
 	}
 })
 

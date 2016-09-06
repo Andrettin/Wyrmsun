@@ -25,6 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Āga", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Eye"},
+	DerivesFrom = {"proto-germanic", "noun", "Awgan"}
+})
+
 DefineLanguageWord("Âster", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
 	Language = "old-frisian",
 	Type = "adverb",
@@ -521,12 +528,12 @@ DefineLanguageWord("Stapul", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	DerivesFrom = {"proto-germanic", "noun", "Stapula"}
 })
 
-DefineLanguageWord("Stên", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
+DefineLanguageWord("Stēn", { -- as given by Lehmann; Fick gives "stên" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
 	Language = "old-frisian",
 	Type = "noun",
-	Meanings = {"Stone"}, -- source (apparently) gives the German "Stein" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Staina"},
-	Gender = "masculine"
+	Meanings = {"Stone"}, -- as given by Lehmann
+	DerivesFrom = {"proto-germanic", "noun", "Staynas"}, -- as given by both Lehmann and Fick
+	Gender = "masculine" -- as given by Fick
 })
 
 DefineLanguageWord("Sumur", { -- Fick also gives the alternative forms "Summer" and "Somer"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223; Source: http://www.cnrtl.fr/definition/sombre//3
