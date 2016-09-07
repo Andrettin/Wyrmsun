@@ -63,6 +63,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - Fixed issue which caused Germanic players to have the Teuton Civilization upgrade researched at scenario start when restarting the scenario after having developed the Teuton civilization.
+- New See Garrison button icon (by Jinn).
 
 -----------------------------------------------------------------------
 - 2.4.2
