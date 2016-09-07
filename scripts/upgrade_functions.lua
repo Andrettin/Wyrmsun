@@ -99,7 +99,7 @@ function DefineAllowNormalUnits(flags)
 						PlayerUnitFlag[j] = string.sub(flags, j + 1, j + 1)
 					end
 				else
-					if (unitName == GetCivilizationData(GetPlayerData(j, "RaceName"), "CivilizationUpgrade")) then
+					if (flags == "AAAAAAAAAAAAAAAA" and unitName == GetCivilizationData(GetPlayerData(j, "RaceName"), "CivilizationUpgrade")) then
 						PlayerUnitFlag[j] = "R"
 					else
 						PlayerUnitFlag[j] = string.sub(flags, j + 1, j + 1)
@@ -113,7 +113,6 @@ end
 
 InitFuncs:add(function()
 	DefineAllowNormalUnits("FFFFFFFFFFFFFFFF")
-	DefineAllowNormalUnits("AAAAAAAAAAAAAAAA")
 end)
 
 function ApplyTechLevels()
