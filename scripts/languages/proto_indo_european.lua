@@ -229,6 +229,12 @@ DefineLanguageWord("Kwneχ", { -- source gives "(s)kw-n-eχ-"; Source: Winfred P
 	Meanings = {}
 })
 
+DefineLanguageWord("Leg", { -- source gives "leg-"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.9.
+	Language = "proto-indo-european",
+	Type = "noun", -- correct?
+	Meanings = {}
+})
+
 DefineLanguageWord("Lēut", { -- source also gives the alternative form "lēudh"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
 	Language = "proto-indo-european",
 	Type = "noun",
@@ -347,6 +353,12 @@ DefineLanguageWord("Vl̥qo", { -- from the root "vel"; Source: August Fick and A
 	Language = "proto-indo-european",
 	Type = "noun",
 	Meanings = {}
+})
+
+DefineLanguageWord("Wékʷos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.9.
+	Language = "proto-indo-european",
+	Type = "noun",
+	Meanings = {"Word"}
 })
 
 DefineLanguageWord("Wiros", { -- the source also later gives "wir-"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6, 2.7.1.

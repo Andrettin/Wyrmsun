@@ -357,6 +357,12 @@ DefineLanguageWord("Pī́van", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	DerivesFrom = {"proto-indo-european", "noun", "Spyxwon"}
 })
 
+DefineLanguageWord("Pitā́", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.9.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Father"}
+})
+
 DefineLanguageWord("Prīnā́ti", { -- source gives "is pleased" as the meaning, so this is presumably the past form; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
 	Language = "sanskrit",
 	Type = "verb",

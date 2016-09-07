@@ -318,10 +318,18 @@ DefineLanguageWord("Λύχος", { -- Source: August Fick and Alf Torp, "Wortsch
 	DerivesFrom = {"proto-indo-european", "noun", "Vl̥qo"}
 })
 
-DefineLanguageWord("Ladon", { -- name of a wyrm/dragon in Greek mythology
+DefineLanguageWord("Légō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.9.
+	Language = "greek",
+	Type = "verb",
+	Meanings = {"Read"},
+	DerivesFrom = {"proto-indo-european", "noun", "Leg"}
+})
+
+DefineLanguageWord("Lógos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.9.
 	Language = "greek",
 	Type = "noun",
-	Meanings = {}
+	Meanings = {"Word"},
+	DerivesFrom = {"proto-indo-european", "noun", "Leg"}
 })
 
 DefineLanguageWord("Μάρη", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 167.
@@ -444,7 +452,7 @@ DefineLanguageWord("Pan", { -- appears in the name of a goat
 	Meanings = {"All"} -- presumably, since "Aegipan" means "Goat-Pan" or "Goat-All"
 })
 
-DefineLanguageWord("Patḗr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Patḗr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.3, 2.9.
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Father"}
