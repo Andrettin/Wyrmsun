@@ -110,10 +110,6 @@ DefineLanguage("coptic", {
 	Name = "Coptic"
 })
 
-DefineLanguage("gryphon", { -- not an actual language, but the sounds gryphons make with their beaks, and from which they receive their names
-	Name = "Gryphon"
-})
-
 DefineLanguage("illyrian", {
 	Name = "Illyrian"
 })

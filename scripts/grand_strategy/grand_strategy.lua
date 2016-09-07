@@ -213,7 +213,9 @@ function RunGrandStrategyGameSetupMenu()
 			
 			for x=0,GetWorldMapWidth() - 1 do
 				for y=0,GetWorldMapHeight() - 1 do
-					CalculateWorldMapTileGraphicTile(x, y)
+					if (GetWorldMapTileTerrain(x, y) ~= "") then
+						CalculateWorldMapTileGraphicTile(x, y)
+					end
 				end
 			end
 			
@@ -1448,7 +1450,9 @@ function RunGrandStrategyLoadGameMenu()
 			GrandStrategyMonth = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyMonth
 			for x=0,GetWorldMapWidth() - 1 do
 				for y=0,GetWorldMapHeight() - 1 do
-					CalculateWorldMapTileGraphicTile(x, y)
+					if (GetWorldMapTileTerrain(x, y) ~= "") then
+						CalculateWorldMapTileGraphicTile(x, y)
+					end
 				end
 			end
 			

@@ -146,7 +146,6 @@ DefineCharacter("Móda", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 
 DefineCharacter("Magan", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Magan", -- "Magi" in the source; this is a Proto-Germanic rendering of the name
-	NameElements = {"word", "proto-germanic", "noun", "Magan"},
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
@@ -429,7 +428,6 @@ DefineCharacter("Beldeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 
 DefineCharacter("Branda", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
 	Name = "Branda", -- "Brandr" in the source; this is a Proto-Germanic rendering of the name
-	NameElements = {"word", "proto-germanic", "noun", "Branda"},
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
@@ -497,7 +495,6 @@ DefineCharacter("Rerir", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 DefineCharacter("Skeldu", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 221.
 	-- ancestor of the Danish kings; from him spring the Skjoldungs
 	Name = "Skeldu", -- "Skjöldr" in the source; this is a Proto-Germanic rendering of the name
-	NameElements = {"word", "proto-germanic", "noun", "Skeldu"},
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",

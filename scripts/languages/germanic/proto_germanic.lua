@@ -546,8 +546,7 @@ DefineLanguageWord("Gastiz", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Guest"},
-	Gender = "masculine",
-	AffixNameTypes = {"compound", "suffix", "singular", "person-male"} -- examples: "Hlewagastiz", "Holtagastiz" (the latter needs confirmation from a source; the source I got it from I have lost the reference to)
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Gavja", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 68.
@@ -756,11 +755,10 @@ DefineLanguageWord("Hezdōn", { -- apparently the same as "Hezdon", though Torp 
 	Uncountable = true -- as a material, it is likely to be uncountable
 })
 
-DefineLanguageWord("Hlewa", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+DefineLanguageWord("Hlewa", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 1.2.
 	Language = "proto-germanic", -- from the Gallehus inscription, is it really Proto-Germanic?
 	Type = "noun",
-	Meanings = {"Glory"}, -- meaning given in another source, which I have lost the reference to
-	AffixNameTypes = {"compound", "prefix", "singular", "person-male"} -- example: "Hlewagastiz"
+	Meanings = {"Glory"} -- meaning given in another source, which I have lost the reference to
 })
 
 DefineLanguageWord("Hnut", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 58.
@@ -1106,8 +1104,7 @@ DefineLanguageWord("Rîka", { -- source also gives the alternative form "Rîkia"
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Ruler"}, -- source gives the German "Herrscher" as the meaning
-	DerivesFrom = {"proto-indo-european", "noun", "Reĝ"},
-	AffixNameTypes = {"compound", "suffix", "singular", "person-male"} -- example (from another, now unknown, source): "Theudariks" (presuming "riks" to equal "rîka")
+	DerivesFrom = {"proto-indo-european", "noun", "Reĝ"}
 })
 
 DefineLanguageWord("Rîka", { -- source also gives the alternative form "Rîkia"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
@@ -1369,8 +1366,7 @@ DefineLanguageWord("Þeudô", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"People"}, -- source gives the German "Volk" as the meaning
-	Gender = "feminine",
-	AffixNameTypes = {"compound", "prefix", "singular", "person-male"} -- example: "Theudariks" (from a source I lost the reference to) (presuming "Theuda" to equal "Þeudô")
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Þinχanan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
@@ -1707,76 +1703,4 @@ DefineLanguageWord("Anafalta", { -- Source: August Fick and Alf Torp, "Wortschat
 		"suffix", "proto-germanic", "noun", "Falta"
 	},
 	Gender = "masculine"
-})
-
--- Must re-check to see if actually correct
-
-DefineLanguageWord("Godagaz", {
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Goody", "Good One"},
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Hadu", {
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Battle"},
-	AffixNameTypes = {"compound", "prefix", "singular", "person-male"} -- example: "Hadulaikaz"
-})
-
-DefineLanguageWord("Hagu", {
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Small Property"},
-	AffixNameTypes = {"compound", "prefix", "singular", "person-male"} -- example: "Hagustaldaz"
-})
-
-DefineLanguageWord("Holta", {
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Wood"},
-	AffixNameTypes = {"compound", "prefix", "singular", "person-male"} -- example: "Holtagastiz"
-})
-
-DefineLanguageWord("Laikaz", {
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Dancer"},
-	AffixNameTypes = {"compound", "suffix", "singular", "person-male"} -- example: Hadulaikaz
-})
-
-DefineLanguageWord("Ridaz", {
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Rider"},
-	AffixNameTypes = {"compound", "suffix", "singular", "person-male"} -- example: Woduridaz
-})
-
-DefineLanguageWord("Staldaz", {
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Owner"},
-	AffixNameTypes = {"compound", "suffix", "singular", "person-male"} -- example: Hagustaldaz
-})
-
-DefineLanguageWord("Wagigaz", {
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"One Who Moves Along Impetuously"},
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Wiwaz", {
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Darter"},
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Wodu", {
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Fury"},
-	AffixNameTypes = {"compound", "prefix", "singular", "person-male"} -- example: Woduridaz
 })

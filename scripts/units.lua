@@ -3047,14 +3047,28 @@ DefineUnitType("unit-template-siege-engine", {
 	}
 } )
 
-DefineUnitType("unit-template-transport-ship", { Name = _("Transport"),
+DefineUnitType("unit-template-ship", {
+	Name = _("Ship"),
 	Parent = "unit-template-unit",
+	RepairHp = 4,
+	RepairCosts = {"gold", 1, "lumber", 1},
+--	Corpse = "unit-dead-sea-body",
+	Type = "naval",
+	Sounds = {
+		"selected", "ship-selected",
+		"ready", "ship-selected",
+		"acknowledge", "ship-move",
+		"dead", "ship-destroyed"
+	}
+})
+
+DefineUnitType("unit-template-transport-ship", {
+	Name = _("Transport"),
+	Parent = "unit-template-ship",
 	Class = "transport-ship",
 	Animations = "animations-transport-ship", 
 --	Costs = {"time", 70, "gold", 600, "lumber", 200, "oil", 500},
 	Costs = {"time", 70, "gold", 600, "lumber", 2100},
-	RepairHp = 4,
-	RepairCosts = {"gold", 1, "lumber", 1},
 	Speed = 10,
 	HitPoints = 150,
 	MaxOnBoard = 3,
@@ -3067,8 +3081,6 @@ DefineUnitType("unit-template-transport-ship", { Name = _("Transport"),
 	Points = 50,
 	Demand = 2,
 	Upkeep = 50, -- should be more?
---	Corpse = "unit-dead-sea-body",
-	Type = "naval",
 	CanTargetLand = true, CanTargetSea = true, CanTargetAir = true,
 	RightMouseAction = "attack",
 	CanTransport = {"LandUnit", "only"},
@@ -3080,13 +3092,7 @@ DefineUnitType("unit-template-transport-ship", { Name = _("Transport"),
 	ButtonPos = 1,
 	ButtonKey = "t",
 	ButtonHint = _("Build ~!Transport"),
-	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-vulnerability"},
-	Sounds = {
-		"selected", "ship-selected",
-		"ready", "ship-selected",
-		"acknowledge", "ship-move",
-		"dead", "ship-destroyed"
-	}
+	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-vulnerability"}
 })
 
 DefineUnitType("unit-template-town-hall", {
