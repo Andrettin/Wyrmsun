@@ -570,7 +570,7 @@ DefineTerrainType("dungeon-wall", {
 
 DefineTerrainType("cave-wall", {
 	Name = "Cave Wall",
-	BaseTerrains = {"rockbound-cave-floor"},
+	BaseTerrains = {"rockbound-cave-floor", "cave-floor"},
 	Overlay = true,
 	Flags = {"land", "rock", "unpassable", "air-unpassable"},
 	Graphics = "terrain/cave_wall.png",
@@ -663,7 +663,7 @@ DefineTerrainType("rock", {
 
 DefineTerrainType("rock-swamp", {
 	Name = "Rock",
-	BaseTerrains = {"mud"},
+	BaseTerrains = {"mud", "dry-mud", "dirt", "rockbound-cave-floor", "cave-floor"},
 	Overlay = true,
 	Flags = {"land", "rock", "unpassable"},
 	Graphics = "terrain/rock_swamp.png",
