@@ -451,31 +451,6 @@ function StandardTriggers()
 					unit = CreateUnitInTransporter(GetCivilizationClassUnitType("shooter", GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Civilization")), GetUnitVariable(uncount[unit1], "Player"), uncount[unit1])
 					SetUnitVariable(unit, "Active", false) -- set garrisoned unit to passive AI (so that they are not counted for attack participation)
 				end
-				
-				-- AI units inside tree stumps get out to attack if an enemy is near
-				if ((GetUnitVariable(uncount[unit1], "Ident") == "unit-tree-stump" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hole") and GetUnitVariable(uncount[unit1], "Transport") > 0) then
-					local inside_uncount = 0
-					inside_uncount = GetUnitsInsideUnit(uncount[unit1])
-					for unit2 = 1,table.getn(inside_uncount) do
-						if (GetPlayerData(GetUnitVariable(inside_uncount[unit2], "Player"), "AiEnabled")) then
-							local nearby_uncount = 0
-							nearby_uncount = GetUnitsAroundUnit(uncount[unit1], GetUnitVariable(inside_uncount[unit2], "SightRange") / 2, true)
-							for unit3 = 1,table.getn(nearby_uncount) do 
-								if (Players[GetUnitVariable(inside_uncount[unit2], "Player")]:IsEnemy(Players[GetUnitVariable(nearby_uncount[unit3],"Player")])) then
-									OrderUnit(15, GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(nearby_uncount[unit3],"PosX"), GetUnitVariable(nearby_uncount[unit3],"PosY")}, "unload")
-								end
-							end
-						elseif (GetUnitVariable(inside_uncount[unit2], "Player") == 15 and GetUnitTypeData(GetUnitVariable(inside_uncount[unit2], "Ident"), "Fauna")) then -- animals hiding within holes or stumps exit if a faction's unit is nearby
-							local unit_quantity = 0
-							for i=0,14 do
-								unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {GetUnitVariable(uncount[unit1],"PosX") - (GetUnitVariable(inside_uncount[unit2], "SightRange") / 2), GetUnitVariable(uncount[unit1],"PosY") - (GetUnitVariable(inside_uncount[unit2], "SightRange") / 2)}, {GetUnitVariable(uncount[unit1],"PosX") + (GetUnitVariable(inside_uncount[unit2], "SightRange") / 2) + 1, GetUnitVariable(uncount[unit1],"PosY") + (GetUnitVariable(inside_uncount[unit2], "SightRange") / 2) + 1})
-							end
-							if (unit_quantity > 0) then
-								OrderUnit(15, GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, "unload")
-							end
-						end
-					end
-				end
 			end
 			return true
 		end
