@@ -436,20 +436,24 @@ function StandardTriggers()
 			return true
 		end,
 		function()
-			local uncount = 0
-			uncount = GetUnits("any")
-			for unit1 = 1,table.getn(uncount) do 
+			for i=0,14 do
+				if (GetPlayerData(i, "AiEnabled")) then
+					local uncount = 0
+					uncount = GetUnits(i)
+					for unit1 = 1,table.getn(uncount) do 
 
-				-- make AI guard towers be filled with defenders
-				if (GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "AiEnabled") and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == "guard-tower"  and GetUnitVariable(uncount[unit1], "Transport") < 2) then
-					unit = CreateUnitInTransporter(GetCivilizationClassUnitType("shooter", GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Civilization")), GetUnitVariable(uncount[unit1], "Player"), uncount[unit1])
-					SetUnitVariable(unit, "Active", false) -- set garrisoned unit to passive AI (so that they are not counted for attack participation)
-				end
-				
-				-- make AI strongholds be filled with defenders
-				if (GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "AiEnabled") and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == "stronghold" and GetUnitVariable(uncount[unit1], "Transport") < 3) then
-					unit = CreateUnitInTransporter(GetCivilizationClassUnitType("shooter", GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Civilization")), GetUnitVariable(uncount[unit1], "Player"), uncount[unit1])
-					SetUnitVariable(unit, "Active", false) -- set garrisoned unit to passive AI (so that they are not counted for attack participation)
+						-- make AI guard towers be filled with defenders
+						if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == "guard-tower"  and GetUnitVariable(uncount[unit1], "Transport") < 2) then
+							unit = CreateUnitInTransporter(GetCivilizationClassUnitType("shooter", GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Civilization")), i, uncount[unit1])
+							SetUnitVariable(unit, "Active", false) -- set garrisoned unit to passive AI (so that they are not counted for attack participation)
+						end
+						
+						-- make AI strongholds be filled with defenders
+						if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == "stronghold" and GetUnitVariable(uncount[unit1], "Transport") < 3) then
+							unit = CreateUnitInTransporter(GetCivilizationClassUnitType("shooter", GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Civilization")), i, uncount[unit1])
+							SetUnitVariable(unit, "Active", false) -- set garrisoned unit to passive AI (so that they are not counted for attack participation)
+						end
+					end
 				end
 			end
 			return true
@@ -468,24 +472,28 @@ function StandardTriggers()
 				return false
 			end
 			
-			local uncount = 0
-			uncount = GetUnits("any")
-			for unit1 = 1,table.getn(uncount) do 
-				if (GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "AiEnabled") and (GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-thane") and GetUnitVariable(uncount[unit1], "Idle")) then
+			for i=0,14 do
+				if (GetPlayerData(i, "AiEnabled")) then
+					local uncount = 0
+					uncount = GetUnits(i)
+					for unit1 = 1,table.getn(uncount) do 
+						if ((GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-thane") and GetUnitVariable(uncount[unit1], "Idle")) then
 
-					local enemy_unit = nil
+							local enemy_unit = nil
 
-					local surghan_uncount = 0
-					surghan_uncount = GetUnits("any")
-					for surghan_unit1 = 1,table.getn(surghan_uncount) do 
-						if (Players[GetUnitVariable(uncount[unit1], "Player")]:IsEnemy(Players[GetUnitVariable(surghan_uncount[surghan_unit1],"Player")])) then
-							enemy_unit = surghan_uncount[surghan_unit1]
-							break
+							local surghan_uncount = 0
+							surghan_uncount = GetUnits("any")
+							for surghan_unit1 = 1,table.getn(surghan_uncount) do 
+								if (Players[i]:IsEnemy(Players[GetUnitVariable(surghan_uncount[surghan_unit1],"Player")])) then
+									enemy_unit = surghan_uncount[surghan_unit1]
+									break
+								end
+							end
+
+							if (enemy_unit ~= nil) then
+								OrderUnit(i, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(enemy_unit,"PosX"), GetUnitVariable(enemy_unit,"PosY")}, "attack")
+							end
 						end
-					end
-
-					if (enemy_unit ~= nil) then
-						OrderUnit(GetUnitVariable(uncount[unit1], "Player"), GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(enemy_unit,"PosX"), GetUnitVariable(enemy_unit,"PosY")}, "attack")
 					end
 				end
 			end
