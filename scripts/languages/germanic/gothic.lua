@@ -310,10 +310,10 @@ DefineLanguageWord("Daddjan", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	DerivesFrom = {"proto-indo-european", "noun", "Dheʔ"}
 })
 
-DefineLanguageWord("Dags", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
+DefineLanguageWord("Dags", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.4, 3.A.1; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Day"}, -- as given by Lehmann and Fick (the latter gives the German "Tag" as the meaning)
+	Meanings = {"Day"}, -- as given by Lehmann; Fick likewise gives the German "Tag" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Dag"}, -- as given by Lehmann and Fick
 	Gender = "masculine" -- as given by Fick
 })
@@ -424,6 +424,18 @@ DefineLanguageWord("Flōdus", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	DerivesFrom = {"proto-germanic", "noun", "Flōduz"}
 })
 
+DefineLanguageWord("Frijōndi", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 3.1.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Woman Friend"}
+})
+
+DefineLanguageWord("Frijōnds", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 3.1.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Friend"}
+})
+
 DefineLanguageWord("Friþa", { -- maybe is another form or an inflection of "Friþôn"? Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
 	Language = "gothic",
 	Type = "noun", -- correct?
@@ -524,6 +536,12 @@ DefineLanguageWord("Guþ", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	NumberCaseInflections = {
 		"plural", "nominative", "Guda"
 	}
+})
+
+DefineLanguageWord("Háidus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 3.A.1.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Manner"}
 })
 
 DefineLanguageWord("Haims", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
@@ -880,6 +898,18 @@ DefineLanguageWord("Niman", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Type = "verb",
 	Meanings = {"Take", "Accept"},
 	DerivesFrom = {"proto-indo-european", "verb", "Nem"}
+})
+
+DefineLanguageWord("Niþjis", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 3.1.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Male Relative"}
+})
+
+DefineLanguageWord("Niþjō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 3.1.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Female Relative"}
 })
 
 DefineLanguageWord("Niujus", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 153.
@@ -1302,11 +1332,11 @@ DefineLanguageWord("Wairþan", { -- Source: Richard M. Runge, "The Phonetic Real
 	Meanings = {"Become"}
 })
 
-DefineLanguageWord("Waurms", { -- Fick gives "Vaúrms" instead"; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+DefineLanguageWord("Waúrms", { -- as given by Lehmann; Runge gives "waurms", while Fick gives "vaúrms" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 3.A.1; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Worm", "Serpent"}, -- probably could be extended to mean "wyrm" as well
-	DerivesFrom = {"proto-germanic", "noun", "Vurma"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Meanings = {"Worm", "Serpent"}, -- as given by Runge; Lehmann gives the meaning of "worm"; probably could be extended to mean "wyrm" as well
+	DerivesFrom = {"proto-germanic", "noun", "Vurma"}, -- as given by Fick
 	Gender = "masculine"
 })
 

@@ -87,7 +87,7 @@ DefineLanguageWord("Caesaries", { -- Source: Sean Crist, "An Analysis of *z loss
 	Meanings = {"Head Hair"}
 })
 
-DefineLanguageWord("Caper", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
+DefineLanguageWord("Caper", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 1.9.
 	Language = "latin",
 	Type = "noun",
 	Meanings = {"Male Goat"}
@@ -500,6 +500,12 @@ DefineLanguageWord("Veniō", { -- alternatively written as "Venio" by the source
 	Type = "verb",
 	Meanings = {"Come"},
 	DerivesFrom = {"proto-indo-european", "verb", "Gʷem"}
+})
+
+DefineLanguageWord("Vermis", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 3.A.1.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Worm"}
 })
 
 DefineLanguageWord("Verus", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 99.

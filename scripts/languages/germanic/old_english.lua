@@ -57,6 +57,13 @@ DefineLanguageWord("Æþela", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Ān", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4.
+	Language = "old-english",
+	Type = "numeral",
+	Number = 1, -- apparently
+	DerivesFrom = {"proto-germanic", "numeral", "Aynos"}
+})
+
 DefineLanguageWord("Ândaga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
 	Language = "old-english",
 	Type = "noun",
@@ -524,13 +531,6 @@ DefineLanguageWord("Éasterra", { -- source also gives the alternative form "Éa
 	DerivesFrom = {"proto-germanic", "adverb", "Austa"}
 })
 
-DefineLanguageWord("Ān", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4.
-	Language = "old-english",
-	Type = "numeral",
-	Number = 1, -- apparently
-	DerivesFrom = {"proto-germanic", "numeral", "Aynos"}
-})
-
 DefineLanguageWord("Ēage", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4.
 	Language = "old-english",
 	Type = "noun",
@@ -633,7 +633,7 @@ DefineLanguageWord("Ford", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Fōt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageWord("Fōt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Foot"}, -- derived from Proto-Germanic "Fōts", which has the meaning of "foot"

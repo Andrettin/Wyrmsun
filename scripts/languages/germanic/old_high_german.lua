@@ -769,6 +769,12 @@ DefineLanguageWord("Heira", { -- accusative; Source: August Fick and Alf Torp, "
 	Accusative = "Heira"
 })
 
+DefineLanguageWord("Heit", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 3.A.1.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Rank", "State", "Condition"}
+})
+
 DefineLanguageWord("Helfan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Language = "old-high-german",
 	Type = "verb",
