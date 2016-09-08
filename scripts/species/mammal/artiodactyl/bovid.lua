@@ -106,6 +106,7 @@ DefineSpecies("goat", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleR
 	Genus = "capra",
 	Species = "hircus",
 	Homeworld = "Earth",
+	Terrains = {"grass", "dirt"},
 	EvolvesFrom = {"aragoral"}, -- oldest member of the Caprinae subfamily
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"

@@ -68,6 +68,7 @@ https://github.com/Andrettin/Wyrmsun
 * Units
 - Ships now receive individual names.
 - Personal name epithets are no longer generated for fauna units.
+- Added Goat (unit graphics by Jinn, based on b_o's yale; icon by Exidelo).
 
 -----------------------------------------------------------------------
 - 2.4.2

@@ -122,6 +122,12 @@ DefineLanguageWord("Alan", { -- source also gives the alternative forms "Ôl" an
 	DerivesFrom = {"proto-germanic", "verb", "Al"}
 })
 
+DefineLanguageWord("Alds", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.9.2b.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Age"}
+})
+
 DefineLanguageWord("Aljan", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
 	Language = "gothic",
 	Type = "verb",
@@ -132,11 +138,11 @@ DefineLanguageWord("Aljan", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	}
 })
 
-DefineLanguageWord("Alþeis", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
+DefineLanguageWord("Alþeis", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.9.2b; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
 	Language = "gothic",
 	Type = "adjective",
-	Meanings = {"Old"}, -- source gives the German "alt" as the meaning
-	DerivesFrom = {"proto-germanic", "adjective", "Alda"}
+	Meanings = {"Old"}, -- as given by Lehmann; Fick likewise gives the German "alt" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Alda"} -- as given by Fick
 })
 
 DefineLanguageWord("Aufto", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
@@ -1153,6 +1159,12 @@ DefineLanguageWord("Tagr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Meanings = {"Tear"}
 })
 
+DefineLanguageWord("Taíhun", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.9.2b.
+	Language = "gothic",
+	Type = "numeral",
+	Number = 10
+})
+
 DefineLanguageWord("Talzjan", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
 	Language = "gothic",
 	Type = "verb",
@@ -1201,6 +1213,12 @@ DefineLanguageWord("Þiudans", { -- Source: D. H. Green, "From Germania to Europ
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"King"}
+})
+
+DefineLanguageWord("Tigjus", { -- source gives "-tigjus"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.9.2b.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Decade"}
 })
 
 DefineLanguageWord("Tiuhan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

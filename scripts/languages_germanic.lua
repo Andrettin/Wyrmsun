@@ -50,7 +50,9 @@ DefineLanguage("old-norse", {
 		"Thrahila", "Thrall",
 		-- Proto-Germanic Settlement Names
 		"Ansugardiz", "Asgard",
-		"Segiztuna", "Sigtun"
+		"Segiztuna", "Sigtun",
+		-- "Runic" (Northwest Germanic?) Personal Names
+		"Hlewagastiz", "Hliugast" -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.9.2b.
 	}
 })
 

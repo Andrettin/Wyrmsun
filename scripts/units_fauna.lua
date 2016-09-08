@@ -688,9 +688,9 @@ DefineUnitType("unit-goat", {
 	Parent = "unit-template-fauna-unit",
 	Species = "goat",
 	Class = "grazer",
---	Description = _("Goats are one of the most common farm animals on Earth, being used both for dairy and meat."),
-	Image = {"file", "neutral/units/yale.png", "size", {72, 72}},
-	Animations = "animations-yale", Icon = "icon-yale",
+	Description = _("Goats are one of the most common farm animals on Earth, being used both for dairy and meat."),
+	Image = {"file", "neutral/units/goat.png", "size", {54, 54}},
+	Animations = "animations-yale", Icon = "icon-goat",
 	Strength = 13,
 	Dexterity = 13,
 	Intelligence = 2,
@@ -715,9 +715,7 @@ DefineUnitType("unit-goat", {
 	RandomMovementDistance = 6,
 	Flesh = true,
 	Herbivore = true,
-	Excrement = "unit-yale-excrement",
 	BluntDamage = true,
-	HiddenInEditor = true,
 	PersonalNames = {
 		"Aegipan", -- Aegipan was a figure from Greek mythology which is represented by the constellation Capricorn; name means "Goat-Pan" or "Goat-All"
 		"female", "Amaltheia", -- Amaltheia was a female goat from Greek mythology who fed child Zeus
@@ -726,6 +724,11 @@ DefineUnitType("unit-goat", {
 		"male", "Tanngrisnir", -- Tanngrisnir was one of the goats who pulls Thor's chariot; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 625.
 	},
 	Sounds = {
+--		"selected", "yale-selected",
+--		"acknowledge", "yale-acknowledge",
+--		"idle", "yale-acknowledge",
+--		"ready", "yale-selected",
+--		"dead", "yale-dead",
 		"hit", "club-attack",
 		"miss", "attack-miss",
 		"step", "step-dirt",
@@ -750,7 +753,6 @@ DefineUnitType("unit-yale", {
 	BasicDamage = 3,
 	Points = 15,
 	PeopleAversion = true,
-	HiddenInEditor = false,
 	Excrement = "unit-yale-excrement",
 	Variations = {
 		{
