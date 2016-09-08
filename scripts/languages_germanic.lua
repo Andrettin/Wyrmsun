@@ -40,8 +40,17 @@ DefineLanguage("old-norse", {
 	Family = "germanic",
 	NameTranslations = {
 		"Airmanareiks", "Jormunrek", -- "Jǫrmunrekr" is the Old Norse equivalent of the Gothic name "Airmanareiks; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18
-		-- Proto-Germanic
-		"Karla", "Karl"
+		-- Proto-Germanic Personal Names
+		"Branda", "Brand",
+		"Erala", "Jarl",
+		"Gudavulfa", "Gudolf",
+		"Karla", "Karl",
+		"Magan", "Magi",
+		"Skeldu", "Skjold",
+		"Thrahila", "Thrall",
+		-- Proto-Germanic Settlement Names
+		"Ansugardiz", "Asgard",
+		"Segiztuna", "Sigtun"
 	}
 })
 
@@ -145,7 +154,7 @@ DefineLanguage("high-german", { -- define High German early to prevent some type
 		"Mediolanum", "Mailand",
 		"Vindobona", "Vienna",
 		"Airmanareiks", "Ermenrich", -- "Ermenrich" is the German form of the Gothic name "Airmanareiks"
-		"Theodoric", "Dietrich" -- "Dietrich" is the German form of the Gothic name Theodoric
+		"Theodoric", "Dietrich", -- "Dietrich" is the German form of the Gothic name Theodoric
 		-- Old High German
 		"Karal", "Karl"
 	}
