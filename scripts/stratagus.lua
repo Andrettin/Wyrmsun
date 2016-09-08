@@ -476,68 +476,6 @@ function StandardTriggers()
 						end
 					end
 				end
-
-				if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Trap") and GetUnitVariable(uncount[unit1], "HitPoints") > 0) then
-					local people_quantity = GetNumUnitsAt(-1, "units", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
-					if (people_quantity > 0) then
-						local nearby_uncount = 0
-						nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 0, true)
-						for unit2 = 1,table.getn(nearby_uncount) do 
-							if ((GetUnitVariable(uncount[unit1], "BasicDamage") > 0 or GetUnitVariable(uncount[unit1], "PiercingDamage") > 0) and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Type") ~= "fly" and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Type") ~= "fly-low" and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "organic")) then
-								local hp_lost = GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "BasicDamage") + GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "PiercingDamage")
-								-- apply resistances
-								if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HackDamage")) then
-									hp_lost = math.floor(hp_lost * (100 - GetUnitVariable(nearby_uncount[unit2], "HackResistance")) / 100)
-								elseif (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "PierceDamage")) then
-									hp_lost = math.floor(hp_lost * (100 - GetUnitVariable(nearby_uncount[unit2], "PierceResistance")) / 100)
-								elseif (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "BluntDamage")) then
-									hp_lost = math.floor(hp_lost * (100 - GetUnitVariable(nearby_uncount[unit2], "BluntResistance")) / 100)
-								end
-								if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetThisPlayer()) then
-									AddMessage(GetUnitVariable(uncount[unit1], "Name") .. _(" suffered ") .. hp_lost .. _(" HP loss"))
-								end
---								SetUnitVariable(nearby_uncount[unit2], "HitPoints", GetUnitVariable(nearby_uncount[unit2], "HitPoints") + hp_lost)
-								DamageUnit(uncount[unit1], nearby_uncount[unit2], hp_lost)
-								DamageUnit(nearby_uncount[unit2], uncount[unit1], GetUnitVariable(uncount[unit1], "HitPoints"))
-								return true
-							end
-						end
-					end
-				end
-
-				-- gives gold if a unit is near a gold chest
-				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-chest" or GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-and-gems-chest") then
-					if (GetUnitVariable(uncount[unit1], "GraphicsVariation") == 2) then
-						local people_quantity = GetNumUnitsAt(-1, "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 1, GetUnitVariable(uncount[unit1],"PosY") + 1})
-						if (people_quantity > 0) then
-							for i=0,14 do
-								if (GetNumUnitsAt(i, "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 1, GetUnitVariable(uncount[unit1],"PosY") + 1}) > 0) then
-									ChangeUnitOwner(uncount[unit1], i)
-								end
-							end
-							local nearby_uncount = 0
-							nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 1, false)
-							for unit2 = 1,table.getn(nearby_uncount) do 
-								if (GetUnitVariable(nearby_uncount[unit2], "Player") ~= 15) then
-									if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-chest") then
-										AddMessage("You found 500 gold in the chest.")
-										SetUnitVariable(uncount[unit1], "GraphicsVariation", 1)
-										PlaySound("gold-coins")
-										SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold", GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold") + 500)
-									elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-and-gems-chest") then
-										AddMessage("You found 500 gold in the chest, plus gems worth 250 gold.")
-										SetUnitVariable(uncount[unit1], "GraphicsVariation", 1)
-										PlaySound("gold-coins")
-										SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold", GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold") + 750)
-									end
-       								break
-								end
-							end
-						end
-					elseif (GetUnitVariable(uncount[unit1], "GraphicsVariation") == 1) then
-						ChangeUnitOwner(uncount[unit1], 15)
-					end
-				end
 			end
 			return true
 		end

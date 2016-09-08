@@ -11,11 +11,11 @@ ApplyMapTemplate("earth", 3766, 667) -- for the larger map
 
 SetPlayerData(15, "RaceName", "neutral")
 
-unit = CreateUnit("unit-adelobasileus-cromptoni", 0, {16, 16})
+unit = CreateUnit("unit-adelobasileus-cromptoni", 0, {0, 64})
 SetUnitVariable(unit, "Active", false)
-unit = CreateUnit("unit-germanic-warrior", 0, {16, 16})
+unit = CreateUnit("unit-germanic-warrior", 0, {0, 64})
 SetUnitVariable(unit, "Active", false)
-unit = CreateUnit("unit-germanic-worker", 0, {16, 16})
-unit = CreateUnit("unit-germanic-worker", 0, {16, 16})
+unit = CreateUnit("unit-germanic-worker", 0, {0, 64})
+unit = CreateUnit("unit-germanic-worker", 0, {0, 64})
 
 CreateCritters()

@@ -2284,7 +2284,7 @@ DefineUnitType("unit-trap", { Name = _("Trap"),
 	PierceDamage = true,
 	Sounds = {
 		"selected", "click",
-		"dead", "axe-attack"
+		"hit", "axe-attack"
 	} 
 } )
 
