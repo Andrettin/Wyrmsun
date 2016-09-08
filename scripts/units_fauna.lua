@@ -668,26 +668,43 @@ DefineUnitType("unit-horse", {
 
 DefineUnitType("unit-unicorn", {
 	Name = "Unicorn",
-	Parent = "unit-template-fauna-unit",
+	Parent = "unit-horse",
 	Species = "unicorn",
-	Class = "grazer",
 	Description = _("Unicorns inhabit the woods of Alfheim, frequently being used by elves as mounts."),
 	Image = {"file", "neutral/units/unicorn.png", "size", {72, 72}},
-	Animations = "animations-yale", Icon = "icon-unicorn",
+	Icon = "icon-unicorn",
 	Strength = 20,
 	Dexterity = 17,
-	Intelligence = 2, -- same as a horse
-	Charisma = 6, -- same as a horse
-	Speed = 13,
 	HitPoints = 45, -- more resilient than a horse, +15 hit points
-	TileSize = {1, 1}, BoxSize = {31, 31},
-	SightRange = 4,
-	BasicDamage = 4, Missile = "missile-none",
-	MaxAttackRange = 1,
+	BasicDamage = 4,
 	Accuracy = 12, -- more dextrous than a horse
 	Evasion = 12, -- more dextrous than a horse
-	Priority = 37,
 	Points = 25,
+	Variations = {}
+} )
+
+DefineUnitType("unit-goat", {
+	Name = "Goat",
+	Parent = "unit-template-fauna-unit",
+	Species = "goat",
+	Class = "grazer",
+--	Description = _("Goats are one of the most common farm animals on Earth, being used both for dairy and meat."),
+	Image = {"file", "neutral/units/yale.png", "size", {72, 72}},
+	Animations = "animations-yale", Icon = "icon-yale",
+	Strength = 13,
+	Dexterity = 13,
+	Intelligence = 2,
+	Charisma = 4,
+	Speed = 13,
+	HitPoints = 15,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 4,
+	BasicDamage = 2, Missile = "missile-none",
+	MaxAttackRange = 1,
+	Accuracy = 10,
+	Evasion = 10,
+	Priority = 37,
+	Points = 5,
 	Demand = 1,
 	Type = "land",
 	RightMouseAction = "move",
@@ -699,16 +716,17 @@ DefineUnitType("unit-unicorn", {
 	Flesh = true,
 	Herbivore = true,
 	Excrement = "unit-yale-excrement",
-	PiercingDamage = true,
+	BluntDamage = true,
+	HiddenInEditor = true,
+	PersonalNames = {
+		"Aegipan", -- Aegipan was a figure from Greek mythology which is represented by the constellation Capricorn; name means "Goat-Pan" or "Goat-All"
+		"female", "Amaltheia", -- Amaltheia was a female goat from Greek mythology who fed child Zeus
+		"female", "Heidrun", -- Heidrun was a female goat from Norse mythology
+		"male", "Tanngnjost", -- Tanngnjóstr was one of Thor's male goats; the name means "teeth-gnasher"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 207.
+		"male", "Tanngrisnir", -- Tanngrisnir was one of the goats who pulls Thor's chariot; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 625.
+	},
 	Sounds = {
-		"selected", "horse-selected",
-		"acknowledge", "horse-idle",
-		"attack", "horse-attack",
-		"idle", "horse-idle",
-		"ready", "horse-idle",
---		"help", "critter-help",
-		"dead", "horse-dead",
-		"hit", "bite-attack",
+		"hit", "club-attack",
 		"miss", "attack-miss",
 		"step", "step-dirt",
 		"step-dirt", "step-dirt",
@@ -717,43 +735,23 @@ DefineUnitType("unit-unicorn", {
 		"step-stone", "step-stone",
 		"step-grass", "step-leaves"
 	}
-} )
+})
 
 DefineUnitType("unit-yale", {
 	Name = "Yale",
-	Parent = "unit-template-fauna-unit",
+	Parent = "unit-goat",
 	Species = "yale",
-	Class = "grazer",
 	Description = _("Yales are caprid creatures who inhabit Nidavellir. They have sturdy, golden tusks and horns, and their fur is covered by golden spots. Dwarves often use them as mounts or as beasts of carry."),
 	Image = {"file", "neutral/units/yale.png", "size", {72, 72}},
 	Animations = "animations-yale", Icon = "icon-yale",
 	Strength = 12, -- somewhat weaker than the horse
 	Dexterity = 13, -- same as the horse
-	Intelligence = 2, -- same as the horse
-	Charisma = 6, -- same as the horse
-	Speed = 13,
 	HitPoints = 30,
-	TileSize = {1, 1}, BoxSize = {31, 31},
-	SightRange = 4,
-	BasicDamage = 3, Missile = "missile-none",
-	MaxAttackRange = 1,
-	Accuracy = 10,
-	Evasion = 10,
-	Priority = 37,
+	BasicDamage = 3,
 	Points = 15,
-	Demand = 1,
-	Type = "land",
-	RightMouseAction = "move",
-	CanAttack = true,
-	CanTargetLand = true,
-	RandomMovementProbability = 1,
-	BoardSize = 100, -- to prevent this unit from being loaded into transporters
-	RandomMovementDistance = 6,
 	PeopleAversion = true,
-	Flesh = true,
-	Herbivore = true,
+	HiddenInEditor = false,
 	Excrement = "unit-yale-excrement",
-	BluntDamage = true,
 	Variations = {
 		{
 --			"variation-id", "brown-fur",
@@ -791,33 +789,9 @@ DefineUnitType("unit-yale", {
 		"acknowledge", "yale-acknowledge",
 		"idle", "yale-acknowledge",
 		"ready", "yale-selected",
---		"help", "critter-help",
-		"dead", "yale-dead",
-		"hit", "club-attack",
-		"miss", "attack-miss",
-		"step", "step-dirt",
-		"step-dirt", "step-dirt",
-		"step-gravel", "step-gravel",
-		"step-mud", "step-mud",
-		"step-stone", "step-stone",
-		"step-grass", "step-leaves"
+		"dead", "yale-dead"
 	}
 } )
-
-DefineUnitType("unit-goat", {
-	Name = "Goat",
-	Parent = "unit-yale",
-	Species = "goat",
-	Class = "grazer",
-	HiddenInEditor = true,
-	PersonalNames = {
-		"Aegipan", -- Aegipan was a figure from Greek mythology which is represented by the constellation Capricorn; name means "Goat-Pan" or "Goat-All"
-		"female", "Amaltheia", -- Amaltheia was a female goat from Greek mythology who fed child Zeus
-		"female", "Heidrun", -- Heidrun was a female goat from Norse mythology
-		"male", "Tanngnjost", -- Tanngnjóstr was one of Thor's male goats; the name means "teeth-gnasher"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 207.
-		"male", "Tanngrisnir", -- Tanngrisnir was one of the goats who pulls Thor's chariot; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 625.
-	}
-})
 
 DefineUnitType("unit-gryphon", {
 	Name = _("Gryphon"),

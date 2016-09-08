@@ -3054,6 +3054,10 @@ DefineUnitType("unit-template-ship", {
 	RepairCosts = {"gold", 1, "lumber", 1},
 --	Corpse = "unit-dead-sea-body",
 	Type = "naval",
+	PersonalNames = {
+		"Naglfar", -- ship of the giants in Norse mythology, whose helmsman is Hrym; made of dead men's nails
+		"Skidbladnir" -- ship built by dwarves in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 101.
+	},
 	Sounds = {
 		"selected", "ship-selected",
 		"ready", "ship-selected",

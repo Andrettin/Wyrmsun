@@ -65,6 +65,10 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused Germanic players to have the Teuton Civilization upgrade researched at scenario start when restarting the scenario after having developed the Teuton civilization.
 - New See Garrison button icon (by Jinn).
 
+* Units
+- Ships now receive individual names.
+- Personal name epithets are no longer generated for fauna units.
+
 -----------------------------------------------------------------------
 - 2.4.2
 -----------------------------------------------------------------------

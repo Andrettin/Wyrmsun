@@ -69,7 +69,6 @@ DefineUniqueItem("gram", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 DefineUniqueItem("hrotti", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 385.
 	Name = "Hrotti",
 	Type = "unit-spatha",
-	NameElements = {"word", "dwarven", "noun", "Hrotti"},
 	Prefix = "upgrade-item-prefix-penetrating",
 	Suffix = "upgrade-item-suffix-of-perfuration",
 	Background = "In Norse mythology, Hrotti (\"Thruster\") was Fafnir's sword, which was taken by Sigurd.",
@@ -80,7 +79,6 @@ DefineUniqueItem("hrotti", { -- Source: Henry Adams Bellows (transl.), "The Poet
 DefineUniqueItem("rithil", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 380.
 	Name = "Rithil",
 	Type = "unit-spatha",
-	NameElements = {"word", "dwarven", "adjective", "Rithil"},
 	Prefix = "upgrade-item-prefix-swift",
 	Suffix = "upgrade-item-suffix-of-betrayal",
 	Background = "In Norse mythology, Rithil (\"Swift-Moving\") was Regin's sword, which he used to slay his brother Fafnir. One source gives the alternate name Refil (\"Serpent\") for the sword.",
@@ -117,10 +115,6 @@ DefineUniqueItem("svalin", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 DefineUniqueItem("brisingamen", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 177.
 	Name = "Brisingamen",
 	Type = "unit-amulet",
-	NameElements = {
-		"compound", "prefix", "dwarven", "noun", "singular", "genitive", "Brising",
-		"compound", "suffix", "dwarven", "noun", "singular", "Men"
-	},
 	Prefix = "upgrade-item-prefix-flaming",
 	Suffix = "upgrade-item-suffix-of-swiftness",
 	Background = "In Norse mythology, Brisingamen (\"The Necklace of the Brisings\") was a golden necklace crafted by four dwarven smiths for the goddess Freyja.",
@@ -130,10 +124,6 @@ DefineUniqueItem("brisingamen", { -- Source: Henry Adams Bellows (transl.), "The
 DefineUniqueItem("andvaranaut", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 114, 360; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 21.
 	Name = "Andvaranaut",
 	Type = "unit-ring",
-	NameElements = {
-		"compound", "prefix", "dwarven", "noun", "singular", "genitive", "Andvari",
-		"compound", "suffix", "dwarven", "noun", "singular", "Naut"
-	},
 	Prefix = "upgrade-item-prefix-vicious",
 	Suffix = "upgrade-item-suffix-of-betrayal",
 	Background = "In Norse mythology, Andvaranaut (\"Andvari's Booty\") was a gold ring owned by Andvari and forcibly taken from him by Loki. Upon the ring's theft, Andvari cursed whoever would come to own it. The ring had the power to make gold.",
@@ -143,7 +133,6 @@ DefineUniqueItem("andvaranaut", { -- Source: Henry Adams Bellows (transl.), "The
 DefineUniqueItem("draupnir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 241; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 114.
 	Name = "Draupnir",
 	Type = "unit-ring",
-	NameElements = {"word", "dwarven", "noun", "Draupnir"},
 	Prefix = "upgrade-item-prefix-flaming",
 	Suffix = "upgrade-item-suffix-of-power",
 	Background = "In Norse mythology, Draupnir (\"Dropper\") was a gold arm-ring crafted by the dwarves Brokk and Eitri for the Aesir. Eight rings with the same weight in gold as Draupnir dropped from it every ninth night. Draupnir was burned with Odin's son Balder in his funeral pyre.",
@@ -205,10 +194,6 @@ DefineUniqueItem("shorbear-hold", {
 DefineUniqueItem("skidbladnir", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 101.
 	Name = "Skidbladnir",
 	Type = "unit-dwarven-transport-ship",
---	NameElements = {
---		"compound", "prefix", "dwarven", "noun", "Skid",
---		"compound", "suffix", "dwarven", "adjective", "Bladnir"
---	},
 	Prefix = "upgrade-item-prefix-impregnable",
 	Suffix = "upgrade-item-suffix-of-swiftness",
 	Description = "Skidbladnir was a ship built by the sons of Ivaldi for Modsognir. Its magnificent sail provided the sleek ship with great speed.",
