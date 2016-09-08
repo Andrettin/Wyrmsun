@@ -39,7 +39,9 @@ DefineLanguage("old-norse", {
 	Name = "Old Norse",
 	Family = "germanic",
 	NameTranslations = {
-		"Airmanareiks", "Jǫrmunrekr" -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18
+		"Airmanareiks", "Jormunrek", -- "Jǫrmunrekr" is the Old Norse equivalent of the Gothic name "Airmanareiks; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18
+		-- Proto-Germanic
+		"Karla", "Karl"
 	}
 })
 
@@ -83,14 +85,18 @@ DefineLanguage("west-germanic", {
 
 DefineLanguage("old-high-german", {
 	Name = "Old High German",
-	Family = "germanic"
+	Family = "germanic",
+	NameTranslations = {
+		-- Proto-Germanic
+		"Karla", "Karal"
+	}
 })
 
 DefineLanguage("middle-high-german", {
 	Name = "Middle High German",
 	Family = "germanic",
 	NameTranslations = {
-		"Airmanareiks", "Ermenrîch" -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18
+		"Airmanareiks", "Ermenrich" -- "Ermenrîch" is the Middle High German equivalent of the Gothic name "Airmanareiks"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18
 	}
 })
 
@@ -136,16 +142,12 @@ DefineLanguage("high-german", { -- define High German early to prevent some type
 		"indefinite", "genitive", "no-number", "no-gender", "en"
 	},
 	NameTranslations = {
-		"Bûra", "Bauer", -- from Proto-Germanic to German
-		"Dverga", "Zwerg", -- from Proto-Germanic to German
-		"Gastiz", "Gast", -- from Proto-Germanic to German
-		"Lanum", "Land", -- example: "Mediolanum" -> "Mailand" (Milan)
-		"Medio", "Mai", -- example: "Mediolanum" -> "Mailand" (Milan)
-		"Smiþu", "Schmied", -- from Proto-Germanic to German
-		"Vindobona", "Wien", -- "Wien" = "Vienna"; from the Latin name "Vindobona"
-		"Walakuzjōn", "Walküre", -- from Proto-Germanic to German
-		"Airmanareiks", "Ermenrich", -- "Ermenrich" is the German form of the Gothic name Airmanareiks
+		"Mediolanum", "Mailand",
+		"Vindobona", "Vienna",
+		"Airmanareiks", "Ermenrich", -- "Ermenrich" is the German form of the Gothic name "Airmanareiks"
 		"Theodoric", "Dietrich" -- "Dietrich" is the German form of the Gothic name Theodoric
+		-- Old High German
+		"Karal", "Karl"
 	}
 })
 
@@ -198,7 +200,7 @@ DefineLanguage("old-english", {
 	Name = "Old English",
 	Family = "germanic",
 	NameTranslations = {
-		"Airmanareiks", "Eormenrîc" -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18
+		"Airmanareiks", "Eormenric" -- "Eormenrîc" is the Old English equivalent of the Gothic name "Airmanareiks"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18
 	}
 })
 
@@ -220,58 +222,50 @@ DefineLanguage("english", {
 		"plural", "genitive", "compound", "s"
 	},
 	NameTranslations = {
-		-- Old English to English
-		"Abban", "Abing", -- Abbandun -> Abingdon; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		-- Old English Settlement Names
 		"Abbandun", "Abingdon", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Abbodes", "Abbots", -- Abbodesbyrig -> Abbotsbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Abbodesbyrig", "Abbotsbury", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Ægeles", "Ayles", -- Ægelesburg -> Aylesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Ægeles", "Ayles", -- Ægelesford -> Aylesford; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Ægelesburg", "Aylesbury", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Ægelesford", "Aylesford", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Æthelingaig", "Athelney", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Aegelesburg", "Aylesbury", -- Ægelesburg -> Aylesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Aegelesford", "Aylesford", -- Ægelesford -> Aylesford; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Aethelingaig", "Athelney", -- Æthelingaig -> Athelney; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Alre", "Aller", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Ambres", "Ames", -- Ambresbyrig -> Amesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Ambresbyrig", "Amesbury", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Andeferas", "Andover", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Apuldre", "Appledore", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Arwe", "Orwell", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Assan", "Ashing", -- Assandun -> Ashingdon; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Assandun", "Ashingdon", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Badecanwiellon", "Bakewell", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Bænesing", "Bensing", -- Bænesingtun -> Bensington; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Bænesingtun", "Bensington", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Baenesingtun", "Bensington", -- Bænesingtun -> Bensington; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Bancornaburg", "Bangor", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Bardan", "Barn", -- Bardanstapol -> Barnstaple; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Bardanstapol", "Barnstaple", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Basengum", "Basing", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Bathum", "Bath", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Beam", "Ben", -- Beamfleot -> Benfleet; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Beamfleot", "Benfleet", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Burg", "Bury", -- Ægelesburg -> Aylesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Byrig", "Bury", -- Abbodesbyrig -> Abbotsbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Byrig", "Bury", -- Ambresbyrig -> Amesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Dun", "Don", -- Abbandun -> Abingdon; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Dun", "Don", -- Assandun -> Ashingdon; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Fleot", "Fleet", -- Beamfleot -> Benfleet; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Stapol", "Staple", -- Bardanstapol -> Barnstaple; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Tun", "Ton", -- Bænesingtun -> Bensington; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		-- German to English
+		-- German Personal Names
 		"Bernhard", "Bernard",
 		"Franz", "Francis",
 		"Friedrich", "Frederick",
-		"Hannover", "Hanover",
 		"Heinrich", "Henry",
-		"Hessen", "Hesse",
 		"Johann", "John",
+		"Karl", "Charles",
 		"Ludwig", "Lewis",
 		"Peter", "Peter",
-		"Thuringen", "Thuringia",
-		"Westphalien", "Westphalia",
-		"Wien", "Vienna",
 		"Wilhelm", "William",
+		-- German Settlement Names
+		"Hannover", "Hanover",
+		"Wien", "Vienna",
 		"Württemberg", "Wurtemberg",
-		-- Portuguese to English
+		-- Portuguese Personal Names
+		"Bernardo", "Bernard",
+		"Carlos", "Charles",
+		"Francisco", "Francis",
+		"Frederico", "Frederick",
+		"Guilherme", "William",
+		"Henrique", "Henry",
+		"Joao", "John", -- João -> John
+		"Luis", "Lewis", -- Luís -> Lewis
+		"Pedro", "Peter",
+		-- Portuguese Settlement Names
 		"Lisboa", "Lisbon"
 	}
 })

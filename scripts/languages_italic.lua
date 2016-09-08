@@ -33,11 +33,7 @@ DefineLanguage("old-latin", {
 DefineLanguage("latin", {
 	Name = "Latin",
 	Family = "italic",
-	SkipNameTypeInheritance = true,
-	NameTranslations = {
-		"Nea", "Nea", -- example: "Neapolis" -> "Neapolis" (Naples); name remained with no change
-		"Polis", "Polis" -- example: "Neapolis" -> "Neapolis" (Naples); name remained with no change
-	}
+	SkipNameTypeInheritance = true
 })
 
 DefineLanguage("late-latin", {
