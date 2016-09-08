@@ -195,22 +195,26 @@ DefineCivilization("germanic", {
 	},
 	Description = _("During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. Those who migrated to Scandinavia spoke their own dialect of Indo-European, which eventually would develop into Germanic. Contact with the Celtic peoples to their south was beneficial to the Germanics, as they were able to incorporate more advanced techniques from Central Europe in areas such as metalworking."),
 	PersonalNames = {
-		"Branda", -- Proto-Germanic rendering of "Brandr" (son of Beldeg), descendant of Vóden, who settled Scandinavia in the Prose Edda; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
-		"Erala", -- Proto-Germanic rendering of "Jarl", the ancestor of the class of warriors in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 22-24.
-		"Godagaz", -- correct?
-		"Gudavulfa", -- Proto-Germanic rendering of "Gudólfr" (son of Ját), ancestor of Vóden, who settled Scandinavia in the Prose Edda; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
-		"Hadulaikaz", -- correct?
-		"Hagustaldaz", -- correct?
-		"Hlewagastiz", -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 1.2.
-		"Holtagastiz", -- correct?
-		"Karla", -- Proto-Germanic rendering of "Karl", the ancestor of the class of peasants in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 21.
-		"Magan", -- Proto-Germanic rendering of "Magi" (son of Móda), ancestor of Vóden, who settled Scandinavia in the Prose Edda; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
-		"Skeldu", -- Proto-Germanic rendering of "Skjöldr", son of Vóden and ancestor of the Danish kings; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 221.
-		"Theudariks", -- correct?
-		"Thrahila", -- Proto-Germanic rendering of "Thrall", the ancestor of the class of thralls in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 19-20.
-		"Wagigaz", -- correct?
-		"Wiwaz", -- correct?
-		"Woduridaz" -- correct?
+		"female", "Ammon", -- Proto-Germanic rendering of "Amma", Karl's mother in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 21.
+		"female", "Moder", -- Proto-Germanic rendering of "Mothir", Jarl's mother in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 22.
+		"male", "Avan", -- Proto-Germanic rendering of "Afi", Karl's (presumed) father in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 21.
+		"male", "Branda", -- Proto-Germanic rendering of "Brandr" (son of Beldeg), descendant of Vóden, who settled Scandinavia in the Prose Edda; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+		"male", "Erala", -- Proto-Germanic rendering of "Jarl", the ancestor of the class of warriors in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 22-24.
+		"male", "Fader", -- Proto-Germanic rendering of "Fathir", Jarl's (presumed) father in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 22.
+		"male", "Godagaz", -- correct?
+		"male", "Gudavulfa", -- Proto-Germanic rendering of "Gudólfr" (son of Ját), ancestor of Vóden, who settled Scandinavia in the Prose Edda; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+		"male", "Hadulaikaz", -- correct?
+		"male", "Hagustaldaz", -- correct?
+		"male", "Hlewagastiz", -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 1.2.
+		"male", "Holtagastiz", -- correct?
+		"male", "Karla", -- Proto-Germanic rendering of "Karl", the ancestor of the class of peasants in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 21.
+		"male", "Magan", -- Proto-Germanic rendering of "Magi" (son of Móda), ancestor of Vóden, who settled Scandinavia in the Prose Edda; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+		"male", "Skeldu", -- Proto-Germanic rendering of "Skjöldr", son of Vóden and ancestor of the Danish kings; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 221.
+		"male", "Theudariks", -- correct?
+		"male", "Thrahila", -- Proto-Germanic rendering of "Thrall", the ancestor of the class of thralls in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 19-20.
+		"male", "Wagigaz", -- correct?
+		"male", "Wiwaz", -- correct?
+		"male", "Woduridaz" -- correct?
 	},
 	SettlementNames = {
 		"Ansugardiz", -- "Ansugárdiz" is a rendering of rendering of "Asgard" in Proto-Germanic, as in the Ynglinga saga's story Asgard is the settlement in "Asia" in which Odin's people (here understood as the Indo-Europeans who went on to settle Scandinavia and become speakers of Proto-Germanic) used to live until they migrated to Scandinavia; shouldn't be in the location of Astrakhan, but instead where modern Assor is (where?), or alternatively Chasgar (again, where?); Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
