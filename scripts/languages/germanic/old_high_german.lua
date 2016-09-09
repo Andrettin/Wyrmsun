@@ -518,12 +518,12 @@ DefineLanguageWord("Fogal", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Meanings = {"Bird"}
 })
 
-DefineLanguageWord("Fuir", { -- source also gives the alternate form "Fiur"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
+DefineLanguageWord("Fiur", { -- as given by Lehmann and Fick; Fick also gives the alternate form "fuir"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 3.2.1; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Fire"}, -- source gives "Feuer" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Fûir"},
-	Gender = "neuter"
+	Meanings = {"Fire"}, -- as given by Lehmann; Fick likewise gives the German "Feuer" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Fōr"},
+	Gender = "neuter" -- as given by Fick
 })
 
 DefineLanguageWord("Fūl", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

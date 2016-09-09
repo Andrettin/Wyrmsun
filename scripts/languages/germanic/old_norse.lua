@@ -575,11 +575,20 @@ DefineLanguageWord("Fogl", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Meanings = {"Bird"}
 })
 
-DefineLanguageWord("Fōtr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageWord("Fōtr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2, 3.2.1.
 	Language = "old-norse",
 	Type = "noun",
-	Meanings = {"Foot"}, -- derived from Proto-Germanic "Fōts", which has the meaning of "foot"
-	DerivesFrom = {"proto-germanic", "noun", "Fōts"}
+	Meanings = {"Foot"},
+	DerivesFrom = {"proto-germanic", "noun", "Fōts"},
+	NumberCaseInflections = {
+		"singular", "accusative", "Fōt",
+		"singular", "dative", "Fœte",
+		"singular", "genitive", "Fōtar",
+		"plural", "nominative", "Fœtr",
+		"plural", "accusative", "Fœtr",
+		"plural", "dative", "Fōtum",
+		"plural", "genitive", "Fōta"
+	}
 })
 
 DefineLanguageWord("Friđr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
@@ -613,12 +622,12 @@ DefineLanguageWord("Fūll", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-germanic", "adjective", "Fūla"}
 })
 
-DefineLanguageWord("Fŷrr", { -- source also gives the alternate form "Fûrr"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
+DefineLanguageWord("Fūrr", { -- as given by Lehmann; Lehmann also gives the alternative forms "fȳrr" and "funi"; Fick gives "fŷrr" and "fûrr" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 3.2.1; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
 	Language = "old-norse",
 	Type = "noun",
-	Meanings = {"Fire"}, -- source gives "Feuer" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Fûir"},
-	Gender = "masculine"
+	Meanings = {"Fire"}, -- as given by Lehmann; Fick likewise gives the German "Feuer" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Fōr"},
+	Gender = "masculine" -- as given by Fick
 })
 
 DefineLanguageWord("Gaddr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.

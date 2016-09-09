@@ -1014,7 +1014,7 @@ DefineLanguageWord("Fire", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Fire"},
-	DerivesFrom = {"old-english", "noun", "Fŷr"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
+	DerivesFrom = {"old-english", "noun", "Fȳr"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
 	Gender = "neuter"
 })
 

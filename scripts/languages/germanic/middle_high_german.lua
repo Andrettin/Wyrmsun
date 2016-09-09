@@ -922,7 +922,7 @@ DefineLanguageWord("Viur", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Language = "middle-high-german",
 	Type = "noun",
 	Meanings = {"Fire"}, -- source gives "Feuer" as the meaning
-	DerivesFrom = {"old-high-german", "noun", "Fuir"},
+	DerivesFrom = {"old-high-german", "noun", "Fiur"},
 	Gender = "neuter"
 })
 

@@ -424,6 +424,17 @@ DefineLanguageWord("Flōdus", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	DerivesFrom = {"proto-germanic", "noun", "Flōduz"}
 })
 
+DefineLanguageWord("Fōn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 3.2.1.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Fire"},
+	DerivesFrom = {"proto-germanic", "noun", "Fōr"},
+	NumberCaseInflections = {
+		"singular", "dative", "Funin",
+		"singular", "genitive", "Funins"
+	}
+})
+
 DefineLanguageWord("Frijōndi", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 3.1.
 	Language = "gothic",
 	Type = "noun",

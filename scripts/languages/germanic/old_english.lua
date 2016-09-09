@@ -633,11 +633,19 @@ DefineLanguageWord("Ford", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Fōt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2.
+DefineLanguageWord("Fōt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2, 3.2.1.
 	Language = "old-english",
 	Type = "noun",
-	Meanings = {"Foot"}, -- derived from Proto-Germanic "Fōts", which has the meaning of "foot"
-	DerivesFrom = {"proto-germanic", "noun", "Fōts"}
+	Meanings = {"Foot"},
+	DerivesFrom = {"proto-germanic", "noun", "Fōts"},
+	NumberCaseInflections = {
+		"singular", "dative", "Fēt",
+		"singular", "genitive", "Fōtes",
+		"plural", "nominative", "Fēt",
+		"plural", "accusative", "Fēt",
+		"plural", "dative", "Fōtum",
+		"plural", "genitive", "Fōta"
+	}
 })
 
 DefineLanguageWord("Friþu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
@@ -660,12 +668,12 @@ DefineLanguageWord("Fūl", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-germanic", "adjective", "Fūla"}
 })
 
-DefineLanguageWord("Fŷr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
+DefineLanguageWord("Fȳr", { -- as given by Lehmann; Fick gives "fŷr" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 3.2.1; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
 	Language = "old-english",
 	Type = "noun",
-	Meanings = {"Fire"}, -- source gives "Feuer" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Fûir"},
-	Gender = "neuter"
+	Meanings = {"Fire"}, -- as given by Lehmann; Fick likewise gives the German "Feuer" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Fōr"},
+	Gender = "neuter" -- as given by Fick
 })
 
 DefineLanguageWord("Gēar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

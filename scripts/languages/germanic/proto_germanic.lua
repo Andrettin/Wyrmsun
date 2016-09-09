@@ -505,10 +505,19 @@ DefineLanguageWord("Flōduz", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Meanings = {"Flood"}
 })
 
-DefineLanguageWord("Fōts", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2.
+DefineLanguageWord("Fōts", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2, 3.2.1.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Foot"}
+	Meanings = {"Foot"},
+	NumberCaseInflections = {
+		"singular", "accusative", "Fōtun",
+		"singular", "dative", "Fōti",
+		"singular", "genitive", "Fōtez",
+		"plural", "nominative", "Fōtez",
+		"plural", "accusative", "Fōtunz",
+		"plural", "dative", "Fōtmiz",
+		"plural", "genitive", "Fōtōn"
+	}
 })
 
 DefineLanguageWord("Friþu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
@@ -518,11 +527,16 @@ DefineLanguageWord("Friþu", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Fûir", { -- source also gives the alternate form "Fûr"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
+DefineLanguageWord("Fōr", { -- as given by Lehmann; Fick gives "fûir" and "fûr" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 3.2.1; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Fire"}, -- source gives "Feuer" as the meaning
-	Gender = "neuter"
+	Meanings = {"Fire"}, -- as given by Lehmann; Fick likewise gives the German "Feuer" as the meaning
+	Gender = "neuter", -- as given by Fick
+	NumberCaseInflections = { -- as given by Lehmann
+		"singular", "accusative", "Fuir",
+		"singular", "dative", "Funi",
+		"singular", "genitive", "Funis"
+	}
 })
 
 DefineLanguageWord("Furdu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 120.

@@ -235,7 +235,7 @@ DefineLanguageWord("Fiur", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Language = "old-saxon",
 	Type = "noun",
 	Meanings = {"Fire"}, -- source gives "Feuer" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Fûir"},
+	DerivesFrom = {"proto-germanic", "noun", "Fōr"},
 	Gender = "neuter"
 })
 
