@@ -111,6 +111,7 @@ DefineSpecies("boar", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleR
 	Genus = "sus",
 	Species = "scrofa",
 	Homeworld = "Earth",
+	Terrains = {"grass"},
 	EvolvesFrom = {"bunolistriodon-lockarti", "conohyus-simorrense", "microstonyx-major"}, -- earlier suids
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"

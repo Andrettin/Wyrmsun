@@ -712,7 +712,7 @@ DefineUnitType("unit-goat", {
 	CanTargetLand = true,
 	RandomMovementProbability = 1,
 	BoardSize = 100, -- to prevent this unit from being loaded into transporters
-	RandomMovementDistance = 6,
+	RandomMovementDistance = 5,
 	Flesh = true,
 	Herbivore = true,
 	BluntDamage = true,
@@ -794,6 +794,58 @@ DefineUnitType("unit-yale", {
 		"dead", "yale-dead"
 	}
 } )
+
+DefineUnitType("unit-boar", {
+	Name = "Boar",
+	Parent = "unit-template-fauna-unit",
+	Species = "boar",
+	Class = "grazer",
+	Description = _("Boars live in woodlands, and are often hunted for meat."),
+	Image = {"file", "neutral/units/boar.png", "size", {72, 72}},
+	Animations = "animations-melee-unit-new-movement", Icon = "icon-boar",
+	Strength = 15,
+	Dexterity = 10,
+	Intelligence = 2,
+	Charisma = 4,
+	Speed = 13,
+	HitPoints = 15,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 4,
+	BasicDamage = 2, Missile = "missile-none",
+	MaxAttackRange = 1,
+	Accuracy = 10,
+	Evasion = 10,
+	Priority = 37,
+	Points = 5,
+	Demand = 1,
+	Type = "land",
+	RightMouseAction = "move",
+	CanAttack = true,
+	CanTargetLand = true,
+	RandomMovementProbability = 1,
+	BoardSize = 100, -- to prevent this unit from being loaded into transporters
+	RandomMovementDistance = 5,
+	Flesh = true,
+	Herbivore = true,
+	BluntDamage = true,
+	PersonalNames = {
+	},
+	Sounds = {
+--		"selected", "yale-selected",
+--		"acknowledge", "yale-acknowledge",
+--		"idle", "yale-acknowledge",
+--		"ready", "yale-selected",
+--		"dead", "yale-dead",
+		"hit", "club-attack",
+		"miss", "attack-miss",
+		"step", "step-dirt",
+		"step-dirt", "step-dirt",
+		"step-gravel", "step-gravel",
+		"step-mud", "step-mud",
+		"step-stone", "step-stone",
+		"step-grass", "step-leaves"
+	}
+})
 
 DefineUnitType("unit-gryphon", {
 	Name = _("Gryphon"),

@@ -400,6 +400,7 @@ Exidelo (Leo):
 /graphics/goblin/icons/wooden_shield.png (licensed under the CC0)
 /graphics/latin/icons/javelineer.png (licensed under the CC0)
 /graphics/neutral/decorations/volcanic_crater.png (licensed under the CC0)
+/graphics/neutral/icons/boar.png (licensed under the CC0)
 /graphics/neutral/icons/goat.png (licensed under the CC0)
 /graphics/neutral/icons/masonry.png (licensed under the CC0)
 /graphics/neutral/icons/precise_shot.png (licensed under the CC0)

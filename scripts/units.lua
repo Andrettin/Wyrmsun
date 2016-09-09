@@ -106,7 +106,7 @@ Units = {
 	"unit-elven-swordsman",
 	"unit-orc-spearthrower", "unit-orc-sea-orc", "unit-orc-shaman",
 	"unit-ettin",
-	"unit-adelobasileus-cromptoni", "unit-galerix-exilis", "unit-rat", "unit-goat", "unit-horse",
+	"unit-adelobasileus-cromptoni", "unit-galerix-exilis", "unit-rat", "unit-goat", "unit-boar", "unit-horse",
 	"unit-slime", "unit-yale", "unit-gryphon", "unit-wyrm", "unit-water-elemental",
 	"unit-unicorn",
 	"unit-gold-rock", "unit-gold-deposit", "unit-gold-mine",
