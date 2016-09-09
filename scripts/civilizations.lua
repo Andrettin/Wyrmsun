@@ -93,6 +93,472 @@ DefineCivilization("dwarf", {
 		"dwarf/ui/infopanel.png", 0, -200
 	},
 	Description = _("Dwarves live in the world of Nidavellir, where gnomes, goblins and kobolds also dwell. They usually prefer living in mountainous terrain or underground, and build their dwellings mostly out of stone. Dwarves are particularly talented at smithing, and ownership of precious metals is a passion for many of them."),
+	PersonalNames = {
+		"female", "Gneissus", -- from Dyson Logos' The Tomb of Durâhn Oakenshield, which the author agreed to release under the GPLv2
+		"male", "Ai", -- dwarf from Norse mythology who was a settler of Joruvellir
+		"male", "Aigaithas", -- from Battle for Wesnoth
+		"male", "Aigaithil", -- from Battle for Wesnoth
+		"male", "Aigaithing", -- from Battle for Wesnoth
+		"male", "Aigaithol", -- from Battle for Wesnoth
+		"male", "Aigalas", -- from Battle for Wesnoth
+		"male", "Aigaling", -- from Battle for Wesnoth
+		"male", "Aigalis", -- from Battle for Wesnoth
+		"male", "Aigalol", -- from Battle for Wesnoth
+		"male", "Aigalsil", -- from Battle for Wesnoth
+		"male", "Aigatas", -- from Battle for Wesnoth
+		"male", "Aigatis", -- from Battle for Wesnoth
+		"male", "Aigatlos", -- from Battle for Wesnoth
+		"male", "Aigatsil", -- from Battle for Wesnoth
+		"male", "Aigatsol", -- from Battle for Wesnoth
+		"male", "Aigatus", -- from Battle for Wesnoth
+		"male", "Aigcatas", -- from Battle for Wesnoth
+		"male", "Aigcatil", -- from Battle for Wesnoth
+		"male", "Aigcating", -- from Battle for Wesnoth
+		"male", "Aigcatis", -- from Battle for Wesnoth
+		"male", "Aigcatsil", -- from Battle for Wesnoth
+		"male", "Aigcatsol", -- from Battle for Wesnoth
+		"male", "Aigcatus", -- from Battle for Wesnoth
+		"male", "Aigdring", -- from Battle for Wesnoth
+		"male", "Aigdris", -- from Battle for Wesnoth
+		"male", "Aigdrlos", -- from Battle for Wesnoth
+		"male", "Aigdrsil", -- from Battle for Wesnoth
+		"male", "Aigdrsol", -- from Battle for Wesnoth
+		"male", "Aigduras", -- from Battle for Wesnoth
+		"male", "Aigdurlos", -- from Battle for Wesnoth
+		"male", "Aigdursol", -- from Battle for Wesnoth
+		"male", "Aiglondur", -- dwarven hero in Battle for Wesnoth: The Hammer of Thursagan
+		"male", "Aigthaing", -- from Battle for Wesnoth
+		"male", "Aigthais", -- from Battle for Wesnoth
+		"male", "Aigthasil", -- from Battle for Wesnoth
+		"male", "Aigthaus", -- from Battle for Wesnoth
+		"male", "Alaithas", -- from Battle for Wesnoth
+		"male", "Alaithis", -- from Battle for Wesnoth
+		"male", "Alaithlos", -- from Battle for Wesnoth
+		"male", "Alaithol", -- from Battle for Wesnoth
+		"male", "Alaithsol", -- from Battle for Wesnoth
+		"male", "Alaithus", -- from Battle for Wesnoth
+		"male", "Alalas", -- from Battle for Wesnoth
+		"male", "Alalil", -- from Battle for Wesnoth
+		"male", "Alalol", -- from Battle for Wesnoth
+		"male", "Alalsol", -- from Battle for Wesnoth
+		"male", "Alalus", -- from Battle for Wesnoth
+		"male", "Alatas", -- from Battle for Wesnoth
+		"male", "Alatil", -- from Battle for Wesnoth
+		"male", "Alating", -- from Battle for Wesnoth
+		"male", "Alatlos", -- from Battle for Wesnoth
+		"male", "Alatsil", -- from Battle for Wesnoth
+		"male", "Alberich", -- dwarf from German sagas
+		"male", "Alcatil", -- from Battle for Wesnoth
+		"male", "Alcatis", -- from Battle for Wesnoth
+		"male", "Alcatlos", -- from Battle for Wesnoth
+		"male", "Alcatsil", -- from Battle for Wesnoth
+		"male", "Aldras", -- from Battle for Wesnoth
+		"male", "Aldril", -- from Battle for Wesnoth
+		"male", "Aldring", -- from Battle for Wesnoth
+		"male", "Aldris", -- from Battle for Wesnoth
+		"male", "Aldrlos", -- from Battle for Wesnoth
+		"male", "Aldrol", -- from Battle for Wesnoth
+		"male", "Aldrsol", -- from Battle for Wesnoth
+		"male", "Alduras", -- from Battle for Wesnoth
+		"male", "Aldurlos", -- from Battle for Wesnoth
+		"male", "Aldurol", -- from Battle for Wesnoth
+		"male", "Alf", -- dwarf from Norse mythology who was a settler of Joruvellir
+		"male", "Alfrigg", -- dwarf from Norse mythology
+		"male", "Alsvid", -- dwarf from Norse mythology
+		"male", "Althaas", -- from Battle for Wesnoth
+		"male", "Althail", -- from Battle for Wesnoth
+		"male", "Althalos", -- from Battle for Wesnoth
+		"male", "Althaol", -- from Battle for Wesnoth
+		"male", "Althasil", -- from Battle for Wesnoth
+		"male", "Althasol", -- from Battle for Wesnoth
+		"male", "Althaus", -- from Battle for Wesnoth
+		"male", "Althjof", -- "mighty thief", dwarf from Norse mythology
+		"male", "Alvis", -- "all-knowing"/"all-wise", dwarf from Norse mythology
+		"male", "Anaithas", -- from Battle for Wesnoth
+		"male", "Anaithil", -- from Battle for Wesnoth
+		"male", "Anaithing", -- from Battle for Wesnoth
+		"male", "Anaithis", -- from Battle for Wesnoth
+		"male", "Anaithsil", -- from Battle for Wesnoth
+		"male", "Anaithus", -- from Battle for Wesnoth
+		"male", "Analil", -- from Battle for Wesnoth
+		"male", "Anallos", -- from Battle for Wesnoth
+		"male", "Analol", -- from Battle for Wesnoth
+		"male", "Analsil", -- from Battle for Wesnoth
+		"male", "Analus", -- from Battle for Wesnoth
+		"male", "Anatas", -- from Battle for Wesnoth
+		"male", "Anating", -- from Battle for Wesnoth
+		"male", "Anatis", -- from Battle for Wesnoth
+		"male", "Anatol", -- from Battle for Wesnoth
+		"male", "Anatsol", -- from Battle for Wesnoth
+		"male", "Ancatas", -- from Battle for Wesnoth
+		"male", "Ancatil", -- from Battle for Wesnoth
+		"male", "Ancatol", -- from Battle for Wesnoth
+		"male", "Ancatus", -- from Battle for Wesnoth
+		"male", "Andril", -- from Battle for Wesnoth
+		"male", "Andris", -- from Battle for Wesnoth
+		"male", "Andrlos", -- from Battle for Wesnoth
+		"male", "Andrus", -- from Battle for Wesnoth
+		"male", "Anduril", -- from Battle for Wesnoth
+		"male", "Andurol", -- from Battle for Wesnoth
+		"male", "Andursol", -- from Battle for Wesnoth
+		"male", "Andurus", -- from Battle for Wesnoth
+		"male", "Andvari", -- dwarf from Norse mythology who possessed a lot of gold, including a golden ring (Andvaranaut) which was stolen by Loki; was possibly one of the settlers of Joruvellir; son of Oin
+		"male", "Angarthing", -- dwarf from Battle for Wesnoth: The Hammer of Thursagan
+		"male", "Anthaas", -- from Battle for Wesnoth
+		"male", "Anthaing", -- from Battle for Wesnoth
+		"male", "Anthais", -- from Battle for Wesnoth
+		"male", "Anthaol", -- from Battle for Wesnoth
+		"male", "Anthasil", -- from Battle for Wesnoth
+		"male", "Anthasol", -- from Battle for Wesnoth
+		"male", "Anthaus", -- from Battle for Wesnoth
+		"male", "Augaithas", -- from Battle for Wesnoth
+		"male", "Augaithing", -- from Battle for Wesnoth
+		"male", "Augaithsil", -- from Battle for Wesnoth
+		"male", "Augaithus", -- from Battle for Wesnoth
+		"male", "Augalas", -- from Battle for Wesnoth
+		"male", "Augaling", -- from Battle for Wesnoth
+		"male", "Augalol", -- from Battle for Wesnoth
+		"male", "Augating", -- from Battle for Wesnoth
+		"male", "Augatlos", -- from Battle for Wesnoth
+		"male", "Augatol", -- from Battle for Wesnoth
+		"male", "Augatsil", -- from Battle for Wesnoth
+		"male", "Augatsol", -- from Battle for Wesnoth
+		"male", "Augcatas", -- from Battle for Wesnoth
+		"male", "Augcatil", -- from Battle for Wesnoth
+		"male", "Augcatis", -- from Battle for Wesnoth
+		"male", "Augcatol", -- from Battle for Wesnoth
+		"male", "Augcatsil", -- from Battle for Wesnoth
+		"male", "Augcatus", -- from Battle for Wesnoth
+		"male", "Augdras", -- from Battle for Wesnoth
+		"male", "Augdris", -- from Battle for Wesnoth
+		"male", "Augdrsil", -- from Battle for Wesnoth
+		"male", "Augdrus", -- from Battle for Wesnoth
+		"male", "Augduras", -- from Battle for Wesnoth
+		"male", "Augduril", -- from Battle for Wesnoth
+		"male", "Augduring", -- from Battle for Wesnoth
+		"male", "Augdurol", -- from Battle for Wesnoth
+		"male", "Augdursol", -- from Battle for Wesnoth
+		"male", "Augdurus", -- from Battle for Wesnoth
+		"male", "Augthail", -- from Battle for Wesnoth
+		"male", "Augthais", -- from Battle for Wesnoth
+		"male", "Augthalos", -- from Battle for Wesnoth
+		"male", "Augthaol", -- from Battle for Wesnoth
+		"male", "Aurvang", -- dwarf from Norse mythology
+		"male", "Austri", -- dwarf from Norse mythology (name means "the Eastern"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 101; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771.
+		"male", "Bafur", -- dwarf from Norse mythology
+		"male", "Baglur", -- dwarf from Battle for Wesnoth: The Sceptre of Fire
+		"male", "Bari", -- dwarf from Norse mythology
+		"male", "Berling", -- dwarf from Norse mythology
+		"male", "Bibung", -- dwarf from Norse mythology
+		"male", "Bifur", -- dwarf from Norse mythology
+		"male", "Bombor", -- dwarf from Norse mythology
+		"male", "Brokk", -- dwarf from Norse mythology who was an expert smith and brother of Eitri
+		"male", "Burin", -- dwarf from Battle for Wesnoth: The Rise of Wesnoth
+		"male", "Dain", -- dwarven mastersmith from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 100.
+		"male", "Delling", -- dwarf from Norse mythology
+		"male", "Delling", -- dwarf from Norse mythology
+		"male", "Dolgthvari", -- dwarf from Norse mythology
+		"male", "Dori", -- dwarf from Norse mythology
+		"male", "Draupnir", -- dwarf from Norse mythology
+		"male", "Duf", -- dwarf from Norse mythology
+		"male", "Dulaithil", -- from Battle for Wesnoth
+		"male", "Dulaithing", -- from Battle for Wesnoth
+		"male", "Dulaithlos", -- from Battle for Wesnoth
+		"male", "Dulaithsil", -- from Battle for Wesnoth
+		"male", "Dulaithsol", -- from Battle for Wesnoth
+		"male", "Dulalas", -- from Battle for Wesnoth
+		"male", "Dulaling", -- from Battle for Wesnoth
+		"male", "Dulalis", -- from Battle for Wesnoth
+		"male", "Dulalsil", -- from Battle for Wesnoth
+		"male", "Dulatil", -- from Battle for Wesnoth
+		"male", "Dulating", -- from Battle for Wesnoth
+		"male", "Dulatol", -- from Battle for Wesnoth
+		"male", "Dulatsol", -- from Battle for Wesnoth
+		"male", "Dulatus", -- from Battle for Wesnoth
+		"male", "Dulcatil", -- from Battle for Wesnoth
+		"male", "Dulcating", -- from Battle for Wesnoth
+		"male", "Dulcatlos", -- from Battle for Wesnoth
+		"male", "Dulcatol", -- from Battle for Wesnoth
+		"male", "Dulcatsil", -- from Battle for Wesnoth
+		"male", "Dulcatsol", -- from Battle for Wesnoth
+		"male", "Dulcatulos", -- from Battle for Wesnoth: The Hammer of Thursagan
+		"male", "Duldril", -- from Battle for Wesnoth
+		"male", "Duldris", -- from Battle for Wesnoth
+		"male", "Duldrlos", -- from Battle for Wesnoth
+		"male", "Duldrol", -- from Battle for Wesnoth
+		"male", "Duldrsil", -- from Battle for Wesnoth
+		"male", "Duldrus", -- from Battle for Wesnoth
+		"male", "Dulduras", -- from Battle for Wesnoth
+		"male", "Dulduring", -- from Battle for Wesnoth
+		"male", "Duldursil", -- from Battle for Wesnoth
+		"male", "Duldurus", -- from Battle for Wesnoth
+		"male", "Dulsi", -- dwarf from Norse mythology; not entirely clear if this is the name of a particular dwarf, or if it means "dwarf"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 109.
+		"male", "Dulthalos", -- from Battle for Wesnoth
+		"male", "Dulthasil", -- from Battle for Wesnoth
+		"male", "Dulthasol", -- from Battle for Wesnoth
+		"male", "Dulthaus", -- from Battle for Wesnoth
+		"male", "Durahn", -- "Durâhn"; from Dyson Logos' The Tomb of Durâhn Oakenshield, which the author agreed to release under the GPLv2
+		"male", "Durin", -- dwarf from Norse mythology who was the deputy of Modsognir
+		"male", "Dursil", -- dwarf from Battle for Wesnoth: The Rise of Wesnoth
+		"male", "Durstorn", -- dwarf from Battle for Wesnoth: The Sceptre of Fire
+		"male", "Dvalin", -- dwarf from Norse mythology; gave the knowledge of runes to the dwarves; one of the four who crafted the Necklace of the Brisings
+		"male", "Eggerich", -- dwarf from German sagas
+		"male", "Eikinskjaldi", -- dwarf from Norse mythology
+		"male", "Eitri", -- dwarf from Norse mythology; expert smith and brother of Brokk
+		"male", "Fal", -- dwarf from Norse mythology
+		"male", "Fid", -- dwarf from Norse mythology
+		"male", "Fili", -- dwarf from Norse mythology
+		"male", "Fjalar", -- dwarf from Norse mythology who, with the help of his brother Galar, brew Kvasir's blood into the Mead of Poetry
+		"male", "Frag", -- dwarf from Norse mythology
+		"male", "Frar", -- dwarf from Norse mythology
+		"male", "Frosti", -- dwarf from Norse mythology
+		"male", "Fundin", -- dwarf from Norse mythology
+		"male", "Galar", -- dwarf from Norse mythology who, with the help of his brother Fjalar, brew Kvasir's blood into the Mead of Poetry
+		"male", "Gandalf", -- dwarf from Norse mythology
+		"male", "Ginnar", -- dwarf from Norse mythology
+		"male", "Glamaithil", -- from Battle for Wesnoth
+		"male", "Glamaithis", -- from Battle for Wesnoth
+		"male", "Glamaithol", -- from Battle for Wesnoth
+		"male", "Glamaithsol", -- from Battle for Wesnoth
+		"male", "Glamalil", -- from Battle for Wesnoth
+		"male", "Glamaling", -- from Battle for Wesnoth
+		"male", "Glamalis", -- from Battle for Wesnoth
+		"male", "Glamallos", -- from Battle for Wesnoth
+		"male", "Glamalsil", -- from Battle for Wesnoth
+		"male", "Glamalus", -- from Battle for Wesnoth
+		"male", "Glamatil", -- from Battle for Wesnoth
+		"male", "Glamatus", -- from Battle for Wesnoth
+		"male", "Glamcatas", -- from Battle for Wesnoth
+		"male", "Glamcatil", -- from Battle for Wesnoth
+		"male", "Glamcating", -- from Battle for Wesnoth
+		"male", "Glamcatsil", -- from Battle for Wesnoth
+		"male", "Glamcatus", -- from Battle for Wesnoth
+		"male", "Glamdras", -- from Battle for Wesnoth
+		"male", "Glamdril", -- from Battle for Wesnoth
+		"male", "Glamdrlos", -- from Battle for Wesnoth
+		"male", "Glamdrsol", -- from Battle for Wesnoth
+		"male", "Glamduras", -- from Battle for Wesnoth
+		"male", "Glamduril", -- from Battle for Wesnoth
+		"male", "Glamduring", -- from Battle for Wesnoth
+		"male", "Glamduris", -- from Battle for Wesnoth
+		"male", "Glamdursol", -- from Battle for Wesnoth
+		"male", "Glamthaas", -- from Battle for Wesnoth
+		"male", "Glamthaol", -- from Battle for Wesnoth
+		"male", "Glamthasil", -- from Battle for Wesnoth
+		"male", "Glamthasol", -- from Battle for Wesnoth
+		"male", "Glamthaus", -- from Battle for Wesnoth
+		"male", "Glinar", -- dwarf from Battle for Wesnoth: The Sceptre of Fire
+		"male", "Gloin", -- dwarf from Norse mythology
+		"male", "Glomin", -- from Battle for Wesnoth
+		"male", "Glonoin", -- dwarf from Battle for Wesnoth: The Sceptre of Fire
+		"male", "Goldemar", -- dwarf from German sagas
+		"male", "Gomaithas", -- from Battle for Wesnoth
+		"male", "Gomaithil", -- from Battle for Wesnoth
+		"male", "Gomaithol", -- from Battle for Wesnoth
+		"male", "Gomaithsol", -- from Battle for Wesnoth
+		"male", "Gomalil", -- from Battle for Wesnoth
+		"male", "Gomalis", -- from Battle for Wesnoth
+		"male", "Gomalus", -- from Battle for Wesnoth
+		"male", "Gomatas", -- from Battle for Wesnoth
+		"male", "Gomatil", -- from Battle for Wesnoth
+		"male", "Gomating", -- from Battle for Wesnoth
+		"male", "Gomatis", -- from Battle for Wesnoth
+		"male", "Gomatlos", -- from Battle for Wesnoth
+		"male", "Gomatol", -- from Battle for Wesnoth
+		"male", "Gomcatil", -- from Battle for Wesnoth
+		"male", "Gomcatis", -- from Battle for Wesnoth
+		"male", "Gomcatlos", -- from Battle for Wesnoth
+		"male", "Gomdras", -- from Battle for Wesnoth
+		"male", "Gomdril", -- from Battle for Wesnoth
+		"male", "Gomdring", -- from Battle for Wesnoth
+		"male", "Gomdris", -- from Battle for Wesnoth
+		"male", "Gomdrol", -- from Battle for Wesnoth
+		"male", "Gomdrsil", -- from Battle for Wesnoth
+		"male", "Gomduris", -- from Battle for Wesnoth
+		"male", "Gomdurlos", -- from Battle for Wesnoth
+		"male", "Gomdursil", -- from Battle for Wesnoth
+		"male", "Gomdursol", -- from Battle for Wesnoth
+		"male", "Gomdurus", -- from Battle for Wesnoth
+		"male", "Gomthaas", -- from Battle for Wesnoth
+		"male", "Gomthalos", -- from Battle for Wesnoth
+		"male", "Gomthasol", -- from Battle for Wesnoth
+		"male", "Grerr", -- dwarf from Norse mythology
+		"male", "Grimnir", -- dwarven pathfinder from Battle for Wesnoth: Under the Burning Suns
+		"male", "Hamel", -- dwarf from Battle for Wesnoth: Northern Rebirth and Battle for Wesnoth: The Hammer of Thursagan
+		"male", "Hannar", -- "Hannarr"; dwarf from Norse mythology; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 239.
+		"male", "Har", -- dwarf from Norse mythology
+		"male", "Haur", -- dwarf from Norse mythology
+		"male", "Heptifili", -- dwarf from Norse mythology
+		"male", "Hledjolf", -- dwarf from Norse mythology; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 272.
+		"male", "Hornbori", -- dwarf from Norse mythology
+		"male", "Hugstari", -- dwarf from Norse mythology
+		"male", "Ingi", -- dwarf from Norse mythology
+		"male", "Iri", -- dwarf from Norse mythology
+		"male", "Isuldan", -- from Dyson Logos' The Tomb of Durâhn Oakenshield, which the author agreed to release under the GPLv2
+		"male", "Ivaldi", -- dwarf from Norse mythology whose sons were mastersmiths; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63.
+		"male", "Jari", -- dwarf from Norse mythology
+		"male", "Karrag", -- dwarf from Battle for Wesnoth: The Hammer of Thursagan
+		"male", "Kili", -- dwarf from Norse mythology
+		"male", "Kinan", -- dwarf from Battle for Wesnoth: The Sceptre of Fire
+		"male", "Kuhnar", -- dwarf from Battle for Wesnoth: The Sceptre of Fire
+		"male", "Laurin", -- dwarf from German sagas
+		"male", "Lit", -- dwarf from Norse mythology
+		"male", "Lofar", -- dwarf from Norse mythology who was a descendant of the settlers of Joruvellir
+		"male", "Loni", -- dwarf from Norse mythology
+		"male", "Mjodvitnir", -- dwarf from Norse mythology
+		"male", "Modsognir", -- dwarf from Norse mythology who was the first dwarf
+		"male", "Nabbi", -- dwarven mastersmith from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 100.
+		"male", "Nain", -- dwarf from Norse mythology
+		"male", "Naraithil", -- from Battle for Wesnoth
+		"male", "Naraithing", -- from Battle for Wesnoth
+		"male", "Naraithol", -- from Battle for Wesnoth
+		"male", "Naraithsil", -- from Battle for Wesnoth
+		"male", "Naraithsol", -- from Battle for Wesnoth
+		"male", "Naraithus", -- from Battle for Wesnoth
+		"male", "Naralas", -- from Battle for Wesnoth
+		"male", "Naralil", -- from Battle for Wesnoth
+		"male", "Naralsil", -- from Battle for Wesnoth
+		"male", "Naralus", -- from Battle for Wesnoth
+		"male", "Naratlos", -- from Battle for Wesnoth
+		"male", "Naratol", -- from Battle for Wesnoth
+		"male", "Naratsil", -- from Battle for Wesnoth
+		"male", "Narcating", -- from Battle for Wesnoth
+		"male", "Narcatis", -- from Battle for Wesnoth
+		"male", "Narcatol", -- from Battle for Wesnoth
+		"male", "Narcatsil", -- from Battle for Wesnoth
+		"male", "Narcatsol", -- from Battle for Wesnoth
+		"male", "Nardras", -- from Battle for Wesnoth
+		"male", "Nardril", -- from Battle for Wesnoth
+		"male", "Nardring", -- from Battle for Wesnoth
+		"male", "Nardris", -- from Battle for Wesnoth
+		"male", "Nardrol", -- from Battle for Wesnoth
+		"male", "Nardrsil", -- from Battle for Wesnoth
+		"male", "Nardrsol", -- from Battle for Wesnoth
+		"male", "Nardrus", -- from Battle for Wesnoth
+		"male", "Narduras", -- from Battle for Wesnoth
+		"male", "Narduril", -- from Battle for Wesnoth
+		"male", "Nardurol", -- from Battle for Wesnoth
+		"male", "Narthalos", -- from Battle for Wesnoth
+		"male", "Narthaol", -- from Battle for Wesnoth
+		"male", "Nefi", -- dwarf from Norse mythology
+		"male", "Neglur", -- dwarf from Battle for Wesnoth: The Sceptre of Fire
+		"male", "Nidi", -- dwarf from Norse mythology
+		"male", "Nidjung", -- dwarf from Norse mythology; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 454.
+		"male", "Niping", -- dwarf from Norse mythology
+		"male", "Noiraran", -- dwarf from Battle for Wesnoth: The Sceptre of Fire
+		"male", "Nordri", -- dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 101.
+		"male", "Nori", -- dwarf from Norse mythology
+		"male", "Nyi", -- dwarf from Norse mythology
+		"male", "Nyr", -- dwarf from Norse mythology
+		"male", "Nyrad", -- dwarf from Norse mythology
+		"male", "Oin", -- dwarf from Norse mythology who was the father of Andvari
+		"male", "Olurf", -- dwarf from Battle for Wesnoth: The Legend of Wesmere
+		"male", "Ori", -- dwarf from Norse mythology
+		"male", "Pelaithas", -- from Battle for Wesnoth
+		"male", "Pelaithil", -- from Battle for Wesnoth
+		"male", "Pelaithing", -- from Battle for Wesnoth
+		"male", "Pelaithis", -- from Battle for Wesnoth
+		"male", "Pelaithlos", -- from Battle for Wesnoth
+		"male", "Pelaithol", -- from Battle for Wesnoth
+		"male", "Pelaithsil", -- from Battle for Wesnoth
+		"male", "Pelaithsol", -- from Battle for Wesnoth
+		"male", "Pelalil", -- from Battle for Wesnoth
+		"male", "Pelaling", -- from Battle for Wesnoth
+		"male", "Pelalis", -- from Battle for Wesnoth
+		"male", "Pelalsil", -- from Battle for Wesnoth
+		"male", "Pelalsol", -- from Battle for Wesnoth
+		"male", "Pelalus", -- from Battle for Wesnoth
+		"male", "Pelatil", -- from Battle for Wesnoth
+		"male", "Pelating", -- from Battle for Wesnoth
+		"male", "Pelatis", -- from Battle for Wesnoth
+		"male", "Pelatol", -- from Battle for Wesnoth
+		"male", "Pelatsil", -- from Battle for Wesnoth
+		"male", "Pelatus", -- from Battle for Wesnoth
+		"male", "Pelcating", -- from Battle for Wesnoth
+		"male", "Pelcatlos", -- from Battle for Wesnoth
+		"male", "Pelcatol", -- from Battle for Wesnoth
+		"male", "Pelcatsil", -- from Battle for Wesnoth
+		"male", "Peldras", -- from Battle for Wesnoth
+		"male", "Peldril", -- from Battle for Wesnoth
+		"male", "Peldrsol", -- from Battle for Wesnoth
+		"male", "Peldrus", -- from Battle for Wesnoth
+		"male", "Pelduril", -- from Battle for Wesnoth
+		"male", "Pelduring", -- from Battle for Wesnoth
+		"male", "Pelduris", -- from Battle for Wesnoth
+		"male", "Peldurol", -- from Battle for Wesnoth
+		"male", "Peldursol", -- from Battle for Wesnoth
+		"male", "Peldurus", -- from Battle for Wesnoth
+		"male", "Pelthaas", -- from Battle for Wesnoth
+		"male", "Pelthail", -- from Battle for Wesnoth
+		"male", "Pelthasil", -- from Battle for Wesnoth
+		"male", "Radsvid", -- dwarf from Norse mythology
+		"male", "Regin", -- skilled smith; in Norse mythology was the brother of the dragon Fafnir
+		"male", "Rekk", -- dwarf from Norse mythology
+		"male", "Relgorn", -- dwarf from Battle for Wesnoth: Heir to the Throne and Battle for Wesnoth: Delfador's Memoirs
+		"male", "Rugnur", -- dwarf from Battle for Wesnoth: The Sceptre of Fire
+		"male", "Rynan", -- dwarf from Battle for Wesnoth: The Sceptre of Fire
+		"male", "Skavid", -- dwarf from Norse mythology
+		"male", "Skirvir", -- dwarf from Norse mythology
+		"male", "Solblindi", -- dwarf from Norse mythology
+		"male", "Sudri", -- dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 101.
+		"male", "Svarin", -- dwarf from Norse mythology
+		"male", "Sviar", -- dwarf from Norse mythology
+		"male", "Sviur", -- dwarf from Norse mythology
+		"male", "Theganli", -- dwarf from Battle for Wesnoth: The Sceptre of Fire; jeweler of Durstorn's clan
+		"male", "Thekk", -- dwarf from Norse mythology
+		"male", "Thjodrorir", -- a dwarf who knew a charm of power to the gods in Norse mythology
+		"male", "Thorin", -- dwarf from Norse mythology
+		"male", "Thrain", -- dwarf from Norse mythology
+		"male", "Thror", -- dwarf from Norse mythology
+		"male", "Thursagan", -- dwarf from Battle for Wesnoth: The Sceptre of Fire
+		"male", "Trithaithas", -- from Battle for Wesnoth
+		"male", "Trithaithil", -- from Battle for Wesnoth
+		"male", "Trithaithis", -- from Battle for Wesnoth
+		"male", "Trithaithlos", -- from Battle for Wesnoth
+		"male", "Trithaithol", -- from Battle for Wesnoth
+		"male", "Trithaithsil", -- from Battle for Wesnoth
+		"male", "Trithaithsol", -- from Battle for Wesnoth
+		"male", "Trithaithus", -- from Battle for Wesnoth
+		"male", "Trithalis", -- from Battle for Wesnoth
+		"male", "Trithalol", -- from Battle for Wesnoth
+		"male", "Trithatas", -- from Battle for Wesnoth
+		"male", "Trithatil", -- from Battle for Wesnoth
+		"male", "Trithatlos", -- from Battle for Wesnoth
+		"male", "Trithatsol", -- from Battle for Wesnoth
+		"male", "Trithcatlos", -- from Battle for Wesnoth
+		"male", "Trithcatsol", -- from Battle for Wesnoth
+		"male", "Trithcatus", -- from Battle for Wesnoth
+		"male", "Trithdril", -- from Battle for Wesnoth
+		"male", "Trithdring", -- from Battle for Wesnoth
+		"male", "Trithdris", -- from Battle for Wesnoth
+		"male", "Trithdrlos", -- from Battle for Wesnoth
+		"male", "Trithdrol", -- from Battle for Wesnoth
+		"male", "Trithdrsol", -- from Battle for Wesnoth
+		"male", "Trithdrus", -- from Battle for Wesnoth
+		"male", "Trithduril", -- from Battle for Wesnoth
+		"male", "Trithduring", -- from Battle for Wesnoth
+		"male", "Trithdurlos", -- from Battle for Wesnoth
+		"male", "Trithdurol", -- from Battle for Wesnoth
+		"male", "Trithdursil", -- from Battle for Wesnoth
+		"male", "Trithdurus", -- from Battle for Wesnoth
+		"male", "Triththaas", -- from Battle for Wesnoth
+		"male", "Triththail", -- from Battle for Wesnoth
+		"male", "Triththaing", -- from Battle for Wesnoth
+		"male", "Triththasol", -- from Battle for Wesnoth
+		"male", "Triththaus", -- from Battle for Wesnoth
+		"male", "Tuta", -- dwarf from Norse mythology; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 645.
+		"male", "Ulrek", -- dwarf from Battle for Wesnoth: Delfador's Memoirs
+		"male", "Uni", -- dwarf from Norse mythology
+		"male", "Vali", -- dwarf from Norse mythology
+		"male", "Var", -- dwarf from Norse mythology
+		"male", "Vegdrasil", -- dwarf from Norse mythology
+		"male", "Vestri", -- dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 101.
+		"male", "Vig", -- dwarf from Norse mythology
+		"male", "Vigdvalin", -- "Víg-dvalinn"; dwarf from Norse mythology; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 715.
+		"male", "Vindalf", -- dwarf from Norse mythology
+		"male", "Virfir", -- dwarf from Norse mythology
+		"male", "Vit", -- dwarf from Norse mythology
+	},
 	SettlementNames = {
 		"Kal Kartha", -- from Battle for Wesnoth: The Hammer of Thursagan
 		"Knalga", -- from Battle for Wesnoth

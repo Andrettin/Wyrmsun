@@ -158,6 +158,17 @@ DefineLanguageWord("Áugō", { -- as given by Lehmann; Runge gives "augo" instea
 	DerivesFrom = {"proto-germanic", "noun", "Awgan"} -- as given by Lehmann
 })
 
+DefineLanguageWord("Auhsa", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 3.2.2.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Ox"},
+	NumberCaseInflections = {
+		"singular", "dative", "Auhsin",
+		"plural", "nominative", "Auhsans",
+		"plural", "genitive", "Auhsne"
+	}
+})
+
 DefineLanguageWord("Auk", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Language = "gothic",
 	Type = "adverb",
@@ -531,11 +542,20 @@ DefineLanguageWord("Gulþ", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Guma", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
+DefineLanguageWord("Guma", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2, 3.2.3.
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Man"},
-	DerivesFrom = {"proto-germanic", "noun", "Gumn"}
+	DerivesFrom = {"proto-germanic", "noun", "Gumō"},
+	NumberCaseInflections = {
+		"singular", "accusative", "Guman",
+		"singular", "dative", "Gumin",
+		"singular", "genitive", "Gumins",
+		"plural", "nominative", "Gumans",
+		"plural", "accusative", "Gumans",
+		"plural", "dative", "Gumam",
+		"plural", "genitive", "Gumanē"
+	}
 })
 
 DefineLanguageWord("Guþ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.

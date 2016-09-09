@@ -652,10 +652,19 @@ DefineLanguageWord("Gulþa", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Gumn", { -- source gives "gumn-"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
+DefineLanguageWord("Gumō", { -- Lehmann also gives "gumn-" in another instance; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2, 3.2.3.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Man"}
+	Meanings = {"Man"},
+	NumberCaseInflections = {
+		"singular", "accusative", "Gumanun",
+		"singular", "dative", "Gumeni",
+		"singular", "genitive", "Gumenaz",
+		"plural", "nominative", "Gumaniz",
+		"plural", "accusative", "Gumanunz",
+		"plural", "dative", "Gumanmiz",
+		"plural", "genitive", "Gumanōn"
+	}
 })
 
 DefineLanguageWord("Haima", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.

@@ -805,11 +805,20 @@ DefineLanguageWord("Grīs", { -- Source: http://www.cnrtl.fr/definition/gris
 	DerivesFrom = {"proto-germanic", "adjective", "Grîsa"} -- presumably
 })
 
-DefineLanguageWord("Gume", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
+DefineLanguageWord("Guma", { -- given by Lehmann as "gume" in 2.7.2; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2, 3.2.3.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Man"},
-	DerivesFrom = {"proto-germanic", "noun", "Gumn"}
+	DerivesFrom = {"proto-germanic", "noun", "Gumō"},
+	NumberCaseInflections = {
+		"singular", "accusative", "Guman",
+		"singular", "dative", "Guman",
+		"singular", "genitive", "Guman",
+		"plural", "nominative", "Guman",
+		"plural", "accusative", "Guman",
+		"plural", "dative", "Gumum",
+		"plural", "genitive", "Gumena"
+	}
 })
 
 DefineLanguageWord("Gyden", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.

@@ -604,11 +604,20 @@ DefineLanguageWord("Gold", { -- source also gives the alternative form "Cold"; S
 	DerivesFrom = {"proto-germanic", "noun", "Gulþa"}
 })
 
-DefineLanguageWord("Gomo", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
+DefineLanguageWord("Gomo", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2, 3.2.3.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Man"},
-	DerivesFrom = {"proto-germanic", "noun", "Gumn"}
+	DerivesFrom = {"proto-germanic", "noun", "Gumō"},
+	NumberCaseInflections = {
+		"singular", "accusative", "Gomon",
+		"singular", "dative", "Gomon",
+		"singular", "genitive", "Gomen",
+		"plural", "nominative", "Gomon",
+		"plural", "accusative", "Gomon",
+		"plural", "dative", "Gomōm",
+		"plural", "genitive", "Gomōno"
+	}
 })
 
 DefineLanguageWord("Got", { -- Fick also gives the alternative form "Cot"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.

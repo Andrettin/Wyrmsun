@@ -731,11 +731,20 @@ DefineLanguageWord("Gull", { -- source also gives the alternative form "goll"; S
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Gume", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
+DefineLanguageWord("Gume", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2, 3.2.3.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Man"},
-	DerivesFrom = {"proto-germanic", "noun", "Gumn"}
+	DerivesFrom = {"proto-germanic", "noun", "Gumō"},
+	NumberCaseInflections = {
+		"singular", "accusative", "Guma",
+		"singular", "dative", "Guma",
+		"singular", "genitive", "Guma",
+		"plural", "nominative", "Gumar",
+		"plural", "accusative", "Guma",
+		"plural", "dative", "Gumom",
+		"plural", "genitive", "Guma"
+	}
 })
 
 DefineLanguageWord("Gydja", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.

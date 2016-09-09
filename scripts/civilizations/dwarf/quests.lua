@@ -400,7 +400,7 @@ DefineQuest("andvaris-gold", {
 	World = "Nidavellir",
 	Civilization = "dwarf",
 	RequiredQuest = "the-binding-of-grafvitnir", -- this happens long after Modsognir's time
-	QuestGiver = "Regin",
+--	QuestGiver = "Regin",
 	Area = "Andvari's Falls",
 	StartSpeech = "Listen... there is a dwarf who lives near here, called Andvari. He has gathered a large gold hoard, by methods unknown. For me alone, it would be too risky to wrest the gold from Andvari. But with your help... can I count on it?",
 	InProgressSpeech = "We shall be very wealthy!",
@@ -415,7 +415,7 @@ DefineQuest("fafnirs-hoard", {
 	World = "Nidavellir",
 	Civilization = "dwarf",
 	RequiredQuest = "andvaris-gold",
-	QuestGiver = "Regin",
+--	QuestGiver = "Regin",
 	Area = "Gnitaheith",
 	StartSpeech = "Andvari's gold hoard was taken by a group of treacherous kobolds, who took it to the lair of their wyrm, Fafnir. To recover the precious metal, we must enter the wyrm's lair.",
 	InProgressSpeech = "Fafnir is a vicious creature - be on your guard!",

@@ -72,6 +72,17 @@ DefineLanguageWord("Ainos", { -- should be written as the original Greek name (w
 	NameTypes = {"settlement"} -- example: "Ainos"
 })
 
+DefineLanguageWord("Ákmōn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 3.2.2.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Stone"},
+	NumberCaseInflections = {
+		"singular", "dative", "Ákmoni",
+		"plural", "nominative", "Ákmones",
+		"plural", "genitive", "Akmónōn"
+	}
+})
+
 DefineLanguageWord("Alalia", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
 	Type = "noun",
@@ -104,6 +115,17 @@ DefineLanguageWord("Amphi", { -- should be written as the original Greek name (w
 	Type = "noun",
 	Meanings = {},
 	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Amphipolis"
+})
+
+DefineLanguageWord("Ársēn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 3.2.2.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Male"},
+	NumberCaseInflections = {
+		"singular", "dative", "Árseni",
+		"plural", "nominative", "Ársenes",
+		"plural", "genitive", "Arsénōn"
+	}
 })
 
 DefineLanguageWord("Baínō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
