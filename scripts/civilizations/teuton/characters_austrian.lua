@@ -37,7 +37,6 @@ DefineCharacter("Adalram", { -- Source: James Westfall Thompson, "Medieval Germa
 
 DefineCharacter("Peter von Salzgeber", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
 	Name = "Peter",
-	NameElements = {"word", "high-german", "noun", "Peter"},
 	FamilyName = "von Salzgeber",
 	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
 	PlaceNameDerivedFamilyName = true, -- presumably
@@ -56,7 +55,6 @@ DefineCharacter("Peter von Salzgeber", { -- Source: Waltraud Heindl, "Josephinis
 
 DefineCharacter("Wilhelmina von Salzgeber", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
 	Name = "Wilhelmina",
-	NameElements = {"word", "high-german", "noun", "Wilhelmina"},
 	FamilyName = "von Salzgeber", -- this is her name after marrying Peter von Salzgeber; should be set to her maiden name instead
 	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
 	PlaceNameDerivedFamilyName = true, -- presumably
@@ -73,10 +71,6 @@ DefineCharacter("Wilhelmina von Salzgeber", { -- Source: Waltraud Heindl, "Josep
 
 DefineCharacter("Joseph Anton von Lasser", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
 	Name = "Joseph Anton",
-	NameElements = {
-		"word", "high-german", "noun", "Joseph",
-		"word", "high-german", "noun", "Anton"
-	},
 	FamilyName = "von Lasser",
 	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
 	PlaceNameDerivedFamilyName = true, -- presumably
@@ -92,7 +86,6 @@ DefineCharacter("Joseph Anton von Lasser", { -- Source: Waltraud Heindl, "Joseph
 
 DefineCharacter("Leopold Hasner", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
 	Name = "Leopold",
-	NameElements = {"word", "high-german", "noun", "Leopold"},
 	FamilyName = "Hasner", -- apparently
 	Gender = "male",
 	Type = "unit-teuton-ritter", -- bureaucrat of the Finanzlandesdirektion in Prague; later bureaucrat of the Hofkammerprokuratur of Vienna; in the 1860s professor of political sciences in the University of Vienna and was head (Leiter) of the Department of Education (Unterrichtsdepartement) (which was in effect the education ministry) during the government of Prince (Fürst) Karl Auersperg
@@ -109,7 +102,6 @@ DefineCharacter("Leopold Hasner", { -- Source: Waltraud Heindl, "Josephinische M
 
 DefineCharacter("Wilhelmina the Younger von Salzgeber", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
 	Name = "Wilhelmina",
-	NameElements = {"word", "high-german", "noun", "Wilhelmina"},
 	ExtraName = "the Younger", -- to differentiate her from her mother
 	FamilyName = "von Salzgeber",
 	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
@@ -127,7 +119,6 @@ DefineCharacter("Wilhelmina the Younger von Salzgeber", { -- Source: Waltraud He
 
 DefineCharacter("Josef Russegger", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
 	Name = "Josef",
-	NameElements = {"word", "high-german", "noun", "Josef"},
 	FamilyName = "Russegger",
 	Gender = "male",
 	Type = "unit-teuton-ritter", -- bureaucrat, literate, geological researcher (also did geological scientific travels), worked as saline director in various mines in Austria (such as Wieliczka in Galicia)
@@ -157,10 +148,6 @@ DefineCharacter("von Pillersdorf", { -- Source: Waltraud Heindl, "Josephinische 
 
 DefineCharacter("Franz Joseph von Habsburg", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 48.
 	Name = "Franz Joseph",
-	NameElements = {
-		"word", "high-german", "noun", "Franz",
-		"word", "high-german", "noun", "Joseph"
-	},
 	FamilyName = "von Habsburg",
 	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
 	PlaceNameDerivedFamilyName = true, -- presumably
@@ -178,7 +165,6 @@ DefineCharacter("Franz Joseph von Habsburg", { -- Source: Waltraud Heindl, "Jose
 
 DefineCharacter("Victor Andrian-Werburg", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 46; Source: A.J.P. Taylor, The Habsburg Monarchy, 1809-1918, 1964, pp. 55-56.
 	Name = "Victor",
-	NameElements = {"word", "high-german", "noun", "Victor"},
 	FamilyName = "Andrian-Werburg", -- presumably
 	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
 	PlaceNameDerivedFamilyName = true, -- presumably
@@ -194,10 +180,6 @@ DefineCharacter("Victor Andrian-Werburg", { -- Source: Waltraud Heindl, "Josephi
 
 DefineCharacter("Franz Seraph Stadion", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, pp. 50, 54-55.
 	Name = "Franz Seraph",
-	NameElements = {
-		"word", "high-german", "noun", "Franz",
-		"word", "high-german", "noun", "Seraph"
-	},
 	FamilyName = "Stadion",
 	Gender = "male",
 	Type = "unit-teuton-ritter",
@@ -214,7 +196,6 @@ DefineCharacter("Franz Seraph Stadion", { -- Source: Waltraud Heindl, "Josephini
 
 DefineCharacter("Alexander von Bach", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, pp. 50, 58.
 	Name = "Alexander",
-	NameElements = {"word", "high-german", "noun", "Alexander"},
 	FamilyName = "von Bach",
 	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
 	PlaceNameDerivedFamilyName = true, -- presumably
@@ -234,7 +215,6 @@ DefineCharacter("Alexander von Bach", { -- Source: Waltraud Heindl, "Josephinisc
 
 DefineCharacter("Eduard von Bach", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 52.
 	Name = "Eduard",
-	NameElements = {"word", "high-german", "noun", "Eduard"},
 	FamilyName = "von Bach", -- source gives him as "Eduard Bach"; it is not clear if he and his brother had the "von" predicate from birth or not
 	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
 	PlaceNameDerivedFamilyName = true, -- presumably
@@ -252,7 +232,6 @@ DefineCharacter("Eduard von Bach", { -- Source: Waltraud Heindl, "Josephinische 
 
 DefineCharacter("Anton Hye von Glunek", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, pp. 60-61.
 	Name = "Anton Hye",
-	NameElements = {"word", "high-german", "noun", "Anton"},
 	FamilyName = "von Glunek",
 	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
 	PlaceNameDerivedFamilyName = true, -- presumably
@@ -270,7 +249,6 @@ DefineCharacter("Anton Hye von Glunek", { -- Source: Waltraud Heindl, "Josephini
 
 DefineCharacter("Adolph Pratobevera von Wiesborn",  { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 61.
 	Name = "Adolph Pratobevera",
-	NameElements = {"word", "high-german", "noun", "Adolph"},
 	FamilyName = "von Wiesborn",
 	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
 	PlaceNameDerivedFamilyName = true, -- presumably
@@ -290,10 +268,6 @@ DefineCharacter("Adolph Pratobevera von Wiesborn",  { -- Source: Waltraud Heindl
 
 DefineCharacter("Johann Baptist von Hoffinger", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
 	Name = "Johann Baptist",
-	NameElements = {
-		"word", "high-german", "noun", "Johann",
-		"word", "high-german", "noun", "Baptist"
-	},
 	FamilyName = "von Hoffinger",
 	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
 	PlaceNameDerivedFamilyName = true, -- presumably
@@ -309,7 +283,6 @@ DefineCharacter("Johann Baptist von Hoffinger", { -- Source: Waltraud Heindl, "J
 
 DefineCharacter("Carl von Hock",  { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 61.
 	Name = "Carl",
-	NameElements = {"word", "high-german", "noun", "Carl"},
 	FamilyName = "von Hock",
 	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
 	PlaceNameDerivedFamilyName = true, -- presumably
@@ -343,7 +316,6 @@ DefineCharacter("Bissingen", { -- Source: Waltraud Heindl, "Josephinische Mandar
 
 DefineCharacter("Georg von Toggenburg", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 64.
 	Name = "Georg",
-	NameElements = {"word", "high-german", "noun", "Georg"},
 	FamilyName = "von Toggenburg",
 	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
 	PlaceNameDerivedFamilyName = true, -- presumably
@@ -361,7 +333,6 @@ DefineCharacter("Georg von Toggenburg", { -- Source: Waltraud Heindl, "Josephini
 
 DefineCharacter("Otto Friedländer", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 26.
 	Name = "Otto",
-	NameElements = {"word", "high-german", "noun", "Otto"},
 	FamilyName = "Friedländer",
 	FamilyNameElements = {
 		"compound", "prefix", "high-german", "noun", "Fried",

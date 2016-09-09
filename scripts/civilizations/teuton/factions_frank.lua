@@ -39,6 +39,26 @@ DefineFaction("Frank Tribe", {
 		"dlcs/frankish_faction_flair/graphics/ui/buttonpanel.png", -256, -200,
 		"dlcs/frankish_faction_flair/graphics/ui/infopanel.png", 0, -200
 	},
+	PersonalNames = {
+		"female", "Bertha", -- Bertha of Paris, Frankish noblewoman related to or a part of the Merovingians; married Æthelberht of Kent; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 79.
+		"male", "Answald", -- Old Frankish name; Source: http://www.cnrtl.fr/definition/lourdaud//1
+		"male", "Berchar", -- Mayor of the Palace of Neustria; Source: "Medieval Warfare V.2", 2013, p. 7.
+		"male", "Carloman", -- son of Charles Martel; Source: "Medieval Warfare V.2", 2013, p. 7.
+		"male", "Carloman", -- son of Pepin the Short; Source: "Medieval Warfare V.2", 2013, p. 7.
+		"male", "Charles", -- Charles Martel, Mayor of the Palace of Francia (the Old Frankish form of "Charles" should be used instead); Source: "Medieval Warfare V.2", 2013, p. 7.
+		"male", "Charles", -- Charles the Great, or Charlemagne, son of Pepin the Short and King of the Franks (the Old Frankish form of "Charles" should be used instead); Source: "Medieval Warfare V.2", 2013, pp. 7-9.
+		"male", "Chlodio", -- Frankish king; Source: "Medieval Warfare V.2", 2013, p. 6.
+		"male", "Clovis", -- Frankish king, son of Merovech; married Clothilda (daughter of the Burgundian king Chilperic); he converted to Christianity; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 97, 99; Source: "Medieval Warfare V.2", 2013, p. 6.
+		"male", "Dagobert", -- King of the Franks as Dagobert I; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 81; Source: "Medieval Warfare V.2", 2013, p. 7.
+		"male", "Drogo", -- son of Carloman and grandson of Charles Martel; Source: "Medieval Warfare V.2", 2013, p. 7.
+		"male", "Grifo", -- son of Charles Martel; Source: "Medieval Warfare V.2", 2013, p. 7.
+		"male", "Grimwald", -- Old Frankish name; Source: http://www.cnrtl.fr/definition/lourdaud//1
+		"male", "Merovech", -- Frankish king, son of Chlodio and founder of the Merovingian dynasty; Source: "Medieval Warfare V.2", 2013, p. 6.
+		"male", "Louis", -- Louis the Pious, son of Charlemagne (the Old Frankish form of "Louis" should be used instead); Source: "Medieval Warfare V.2", 2013, p. 9.
+		"male", "Pepin", -- Pepin of Herstal, Mayor of the Palace of Austrasia; Source: "Medieval Warfare V.2", 2013, p. 7.
+		"male", "Pepin", -- Pepin the Short, son of Charles Martel who later became king of the Franks; Source: "Medieval Warfare V.2", 2013, p. 7.
+		"male", "Theoderic", -- King of the Franks as Theoderic IV; Source: "Medieval Warfare V.2", 2013, p. 7.
+	},
 	HistoricalFactionDerivations = {150, "germanic", "Herminone Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-frank-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.

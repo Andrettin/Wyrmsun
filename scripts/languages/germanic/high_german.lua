@@ -31,13 +31,6 @@ DefineLanguageWord("Acht", {
 	Number = 8
 })
 
-DefineLanguageWord("Adalbert", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
-})
-
 DefineLanguageWord("Adel", {
 	Language = "high-german",
 	Type = "noun",
@@ -60,32 +53,6 @@ DefineLanguageWord("Adler", {
 		"singular", "genitive", "Adlers",
 		"plural", "dative", "Adlern"
 	}
-})
-
-DefineLanguageWord("Adolph", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {}
-})
-
-DefineLanguageWord("Albert", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Albrecht", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Alexander", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {}
 })
 
 DefineLanguageWord("Alp", {
@@ -132,24 +99,11 @@ DefineLanguageWord("Amboss", {
 	}
 })
 
-DefineLanguageWord("Anton", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {}
-})
-
 DefineLanguageWord("Arl", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {},
 	AffixNameTypes = {"compound", "prefix", "singular", "terrain-mountains"} -- example: "Arlberg"
-})
-
-DefineLanguageWord("Arnulf", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Au", { -- Source: http://www.duden.de/rechtschreibung/Au_feuchte_Niederung
@@ -219,12 +173,6 @@ DefineLanguageWord("Baden", {
 		"present", "Badend",
 		"past", "Gebadet"
 	}
-})
-
-DefineLanguageWord("Baptist", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {}
 })
 
 DefineLanguageWord("Bär", { -- Source: http://www.duden.de/rechtschreibung/Baer_Raubtier
@@ -315,12 +263,6 @@ DefineLanguageWord("Bergen", {
 	Language = "high-german",
 	Type = "verb",
 	Meanings = {"Salvage"}
-})
-
-DefineLanguageWord("Bern", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {}
 })
 
 DefineLanguageWord("Blau", {
@@ -528,19 +470,6 @@ DefineLanguageWord("Busch", {
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Carl", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {}
-})
-
-DefineLanguageWord("Christian", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
-})
-
 DefineLanguageWord("Darm", {
 	Language = "high-german",
 	Type = "noun",
@@ -568,13 +497,6 @@ DefineLanguageWord("Das", {
 	Dative = "Dem",
 	Genitive = "Des",
 	Gender = "neuter"
-})
-
-DefineLanguageWord("David", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Der", {
@@ -649,12 +571,6 @@ DefineLanguageWord("Drei", {
 	Number = 3
 })
 
-DefineLanguageWord("Eduard", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {}
-})
-
 DefineLanguageWord("Eins", {
 	Language = "high-german",
 	Type = "numeral",
@@ -695,13 +611,6 @@ DefineLanguageWord("Eltern", { -- this is the plural
 	}
 })
 
-DefineLanguageWord("Ernst", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
-})
-
 DefineLanguageWord("Erz", {
 	Language = "high-german",
 	Type = "noun",
@@ -732,13 +641,6 @@ DefineLanguageWord("Esse", {
 	}
 })
 
-DefineLanguageWord("Fabian", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
-})
-
 DefineLanguageWord("Falz", {
 	Language = "high-german",
 	Type = "noun",
@@ -762,13 +664,6 @@ DefineLanguageWord("Feld", {
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Fürstenfeld"
 })
 
-DefineLanguageWord("Ferdinand", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
-})
-
 DefineLanguageWord("Feuer", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
 	Language = "high-german",
 	Type = "noun",
@@ -790,13 +685,6 @@ DefineLanguageWord("Fisch", { -- Source: http://www.duden.de/rechtschreibung/Fis
 	Meanings = {"Fish"},
 	DerivesFrom = {"old-high-german", "noun", "Fisk"},
 	Gender = "masculine"
-})
-
-DefineLanguageWord("Franz", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Frei", {
@@ -861,12 +749,6 @@ DefineLanguageWord("Furt", { -- Source: http://www.duden.de/rechtschreibung/Furt
 	}
 })
 
-DefineLanguageWord("Gang", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {}
-})
-
 DefineLanguageWord("Gart", {
 	Language = "high-german",
 	Type = "noun",
@@ -907,19 +789,6 @@ DefineLanguageWord("Gelb", {
 	Language = "high-german",
 	Type = "adjective",
 	Meanings = {"Yellow"}
-})
-
-DefineLanguageWord("Georg", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {}
-})
-
-DefineLanguageWord("Gerhard", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Glänzend", {
@@ -1028,20 +897,6 @@ DefineLanguageWord("Grün", {
 	DerivesFrom = {"middle-high-german", "adjective", "Grüene"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 80.
 })
 
-DefineLanguageWord("Gunther", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Gustav", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
-})
-
 DefineLanguageWord("Hacken", {
 	Language = "high-german",
 	Type = "noun",
@@ -1073,17 +928,6 @@ DefineLanguageWord("Hacken", {
 		"present", "Hackend",
 		"past", "Gehackt"
 	}
-})
-
-DefineLanguageWord("Hagen", { -- Source: http://www.duden.de/rechtschreibung/Hagen
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {}, -- personal name
-	Gender = "masculine",
-	NumberCaseInflections = {
-		"singular", "genitive", "Hagens"
-	},
-	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Halb", {
@@ -1125,21 +969,6 @@ DefineLanguageWord("Hammer", {
 		"plural", "genitive", "Hämmer"
 	},
 	Gender = "masculine"
-})
-
-DefineLanguageWord("Hans", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Hard", {
-	Language = "high-german",
-	Type = "adjective",
-	Meanings = {},
-	DerivesFrom = {"middle-high-german", "adjective", "Hart"}, -- presumably
-	Archaic = true
 })
 
 DefineLanguageWord("Hart", { -- Source: http://www.duden.de/rechtschreibung/hart
@@ -1205,25 +1034,6 @@ DefineLanguageWord("Heimisch", {
 	}
 })
 
-DefineLanguageWord("Hein", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {}
-})
-
-DefineLanguageWord("Heinz", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Hel", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {}
-})
-
 DefineLanguageWord("Helm", {
 	Language = "high-german",
 	Type = "noun",
@@ -1239,33 +1049,12 @@ DefineLanguageWord("Helm", {
 	}
 })
 
-DefineLanguageWord("Her", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {}
-})
-
 DefineLanguageWord("Herd", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Stove"}, -- source gives "Herd" as the meaning
 	DerivesFrom = {"middle-high-german", "noun", "Hert"},
 	Gender = "masculine"
-})
-
-DefineLanguageWord("Hermann", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Hilde", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	DerivesFrom = {"old-high-german", "noun", "Hiltja"}, -- presumably
-	NameTypes = {"person-female"}
 })
 
 DefineLanguageWord("Hinter", {
@@ -1367,31 +1156,6 @@ DefineLanguageWord("Hunger", { -- Source: http://www.duden.de/rechtschreibung/Hu
 	AffixNameTypes = {"compound", "prefix", "singular", "terrain-hills"} -- example: "Hungerberg"
 })
 
-DefineLanguageWord("Jakob", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Johann", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {}
-})
-
-DefineLanguageWord("Josef", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {}
-})
-
-DefineLanguageWord("Joseph", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {}
-})
-
 DefineLanguageWord("Kaiser", {
 	Language = "high-german",
 	Type = "noun",
@@ -1401,14 +1165,6 @@ DefineLanguageWord("Kaiser", {
 		"plural", "dative", "Kaisern"
 	},
 	Gender = "masculine"
-})
-
-DefineLanguageWord("Karl", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	DerivesFrom = {"old-high-german", "noun", "Karal"}, -- presumably
-	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Kerl", {
@@ -1463,13 +1219,6 @@ DefineLanguageWord("Klage", { -- Source: http://www.duden.de/rechtschreibung/Kla
 		"plural", "genitive", "Klagen"
 	},
 	Gender = "feminine"
-})
-
-DefineLanguageWord("Klaus", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Klause", { -- Source: http://www.duden.de/rechtschreibung/Klause
@@ -1588,13 +1337,6 @@ DefineLanguageWord("Kupfern", {
 	Meanings = {"Copper"}
 })
 
-DefineLanguageWord("Kurt", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
-})
-
 DefineLanguageWord("Lai", { -- Source: http://www.duden.de/rechtschreibung/Lai
 	Language = "high-german",
 	Type = "noun",
@@ -1620,46 +1362,12 @@ DefineLanguageWord("Land", {
 	AffixNameTypes = {"compound", "suffix", "singular", "province"} -- examples: "Burgenland"
 })
 
-DefineLanguageWord("Leopold", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {}
-})
-
 DefineLanguageWord("Lot", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Lot"},
 	DerivesFrom = {"middle-high-german", "noun", "Lôt"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
 	Gender = "neuter"
-})
-
-DefineLanguageWord("Lothar", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Ludwig", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Luitpold", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Lukas", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Magen", {
@@ -1677,13 +1385,6 @@ DefineLanguageWord("Magisch", {
 	Language = "high-german",
 	Type = "adjective",
 	Meanings = {"Magic"}
-})
-
-DefineLanguageWord("Manfred", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Mann", {
@@ -1711,7 +1412,6 @@ DefineLanguageWord("Mark", {
 		"plural", "dative", "Marken",
 		"plural", "genitive", "Marken"
 	},
-	NameTypes = {"person-male"},
 	AffixNameTypes = {"compound", "suffix", "singular", "province"} -- example: "Ostmark"
 })
 
@@ -1735,20 +1435,6 @@ DefineLanguageWord("Marke", {
 		"plural", "dative", "Marken",
 		"plural", "genitive", "Marken"
 	}
-})
-
-DefineLanguageWord("Matthias", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Maximilian", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Meise", {
@@ -1777,13 +1463,6 @@ DefineLanguageWord("Messingen", {
 	Language = "high-german",
 	Type = "adjective",
 	Meanings = {"Brass"}
-})
-
-DefineLanguageWord("Michael", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Mittel", {
@@ -1930,39 +1609,6 @@ DefineLanguageWord("Osten", {
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Otto", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {}
-})
-
-DefineLanguageWord("Paul", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Peter", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {}
-})
-
-DefineLanguageWord("Philipp", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Pippin", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
-})
-
 DefineLanguageWord("Rat", {
 	Language = "high-german",
 	Type = "noun",
@@ -2000,14 +1646,6 @@ DefineLanguageWord("Reich", {
 	DerivesFrom = {"middle-high-german", "adjective", "Rîche"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
 })
 
-DefineLanguageWord("Rich", {
-	Language = "high-german",
-	Type = "adjective",
-	Meanings = {},
-	DerivesFrom = {"middle-high-german", "adjective", "Rîche"}, -- presumably, since the adjective "reich" does as well
-	Archaic = true
-})
-
 DefineLanguageWord("Rose", { -- Source: http://www.duden.de/rechtschreibung/Rose_Pflanze_Bluete_Verdickung
 	Language = "high-german",
 	Type = "noun",
@@ -2029,13 +1667,6 @@ DefineLanguageWord("Rostig", {
 	Language = "high-german",
 	Type = "adjective",
 	Meanings = {"Rusty"}
-})
-
-DefineLanguageWord("Rudolf", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Säge", { -- Source: http://www.duden.de/rechtschreibung/Saege
@@ -2196,12 +1827,6 @@ DefineLanguageWord("See", {
 		"singular", "genitive", "Sees",
 		"plural", "nominative", "Seen"
 	}
-})
-
-DefineLanguageWord("Seraph", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {}
 })
 
 DefineLanguageWord("Sieg", {
@@ -2428,27 +2053,6 @@ DefineLanguageWord("Teufel", {
 	AffixNameTypes = {"compound", "prefix", "singular", "genitive", "terrain-mountains"} -- example: "Teufelshorn"
 })
 
-DefineLanguageWord("Theodor", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Thomas", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Tobias", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
-})
-
 DefineLanguageWord("Turm", {
 	Language = "high-german",
 	Type = "noun",
@@ -2468,12 +2072,6 @@ DefineLanguageWord("Verrostet", {
 	Language = "high-german",
 	Type = "adjective",
 	Meanings = {"Rusty"}
-})
-
-DefineLanguageWord("Victor", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {}
 })
 
 DefineLanguageWord("Vier", {
@@ -2522,13 +2120,6 @@ DefineLanguageWord("Wald", {
 	}
 })
 
-DefineLanguageWord("Walter", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
-})
-
 DefineLanguageWord("Wasser", {
 	Language = "high-german",
 	Type = "noun",
@@ -2557,32 +2148,12 @@ DefineLanguageWord("Werben", {
 	DerivesFrom = {"old-high-german", "verb", "Hwerfan"} -- Source: http://www.cnrtl.fr/definition/barguigner
 })
 
-DefineLanguageWord("Werner", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
-})
-
 DefineLanguageWord("West", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"West"},
 	DerivesFrom = {"old-high-german", "noun", "West"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
 	Gender = "masculine"
-})
-
-DefineLanguageWord("Wilhelm", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Wilhelmina", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {}
 })
 
 DefineLanguageWord("Wolf", {
@@ -2726,125 +2297,6 @@ DefineLanguageWord("Sieben", {
 
 -- compounds
 
-DefineLanguageWord("Alphart", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	CompoundElements = {
-		"prefix", "high-german", "noun", "Alp",
-		"suffix", "high-german", "adjective", "Hart" -- correct?
-	},
-	Archaic = true,
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Bernard", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	CompoundElements = {
-		"prefix", "high-german", "noun", "Bern",
-		"suffix", "high-german", "adjective", "Hard" -- correct?
-	},
-	Archaic = true,
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Friedrich", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	CompoundElements = {
-		"prefix", "high-german", "noun", "Fried",
-		"suffix", "high-german", "adjective", "Rich"
-	},
-	Archaic = true,
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Gottfried", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	CompoundElements = {
-		"prefix", "high-german", "noun", "Gott",
-		"suffix", "high-german", "noun", "Fried"
-	},
-	Archaic = true,
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Heinrich", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	CompoundElements = {
-		"prefix", "high-german", "noun", "Hein",
-		"suffix", "high-german", "adjective", "Rich"
-	},
-	Archaic = true,
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Helmut", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	CompoundElements = {
-		"prefix", "high-german", "noun", "Hel",
-		"suffix", "high-german", "noun", "Mut"
-	},
-	Archaic = true,
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Hermann", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	CompoundElements = {
-		"prefix", "high-german", "noun", "Her",
-		"suffix", "high-german", "noun", "Mann"
-	},
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Hildebrand", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	CompoundElements = {
-		"prefix", "high-german", "noun", "Hilde",
-		"suffix", "high-german", "noun", "Brand"
-	},
-	Archaic = true,
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Karlmann", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	CompoundElements = {
-		"prefix", "high-german", "noun", "Karl",
-		"suffix", "high-german", "noun", "Mann"
-	},
-	Archaic = true,
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Richard", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	CompoundElements = {
-		"prefix", "high-german", "adjective", "Rich",
-		"suffix", "high-german", "adjective", "Hard" -- correct?
-	},
-	Archaic = true,
-	NameTypes = {"person-male"}
-})
-
 DefineLanguageWord("Schlossberg", { -- Source: http://www.duden.de/rechtschreibung/Schlossberg
 	Language = "high-german",
 	Type = "noun",
@@ -2856,37 +2308,3 @@ DefineLanguageWord("Schlossberg", { -- Source: http://www.duden.de/rechtschreibu
 	Gender = "masculine",
 	NameTypes = {"terrain-hills"} -- example: "Schlossberg" (Graz)
 })
-
-DefineLanguageWord("Siegfried", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	CompoundElements = {
-		"prefix", "high-german", "noun", "Sieg",
-		"suffix", "high-german", "noun", "Fried"
-	},
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Wolfgang", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	CompoundElements = {
-		"prefix", "high-german", "noun", "Wolf",
-		"suffix", "high-german", "noun", "Gang"
-	},
-	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Wolfhart", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	CompoundElements = {
-		"prefix", "high-german", "noun", "Wolf",
-		"suffix", "high-german", "adjective", "Hart"
-	},
-	NameTypes = {"person-male"}
-})
-

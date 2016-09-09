@@ -31,13 +31,6 @@ DefineLanguageWord("Aδalarjo", { -- source also gives the alternative form "Ada
 	Meanings = {"Eagle"} -- source gives the French "aigle" as the meaning
 })
 
-DefineLanguageWord("Ans", { -- http://www.cnrtl.fr/definition/lourdaud//1
-	Language = "old-frankish",
-	Type = "noun", -- correct?
-	Meanings = {},
-	AffixNameTypes = {"compound", "prefix", "singular", "person-male"} -- examples: "Answald"
-})
-
 DefineLanguageWord("Bergan", { -- Source: http://www.cnrtl.fr/definition/haubert
 	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
 	Type = "verb",
@@ -107,13 +100,6 @@ DefineLanguageWord("Gart", { -- source also gives the alternative form "Gardo"; 
 	Type = "noun",
 	Meanings = {"Enclosure"}, -- source gives the French "clôture" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Gárdiz"} -- presumably
-})
-
-DefineLanguageWord("Grim", { -- http://www.cnrtl.fr/definition/lourdaud//1
-	Language = "old-frankish",
-	Type = "noun", -- correct?
-	Meanings = {},
-	AffixNameTypes = {"compound", "prefix", "singular", "person-male"} -- examples: "Grimwald"
 })
 
 DefineLanguageWord("Grîs", { -- Source: http://www.cnrtl.fr/definition/gris
@@ -273,8 +259,7 @@ DefineLanguageWord("Waidanjan", { -- Source: http://www.cnrtl.fr/definition/barg
 DefineLanguageWord("Wald", { -- a suffix, from the verb "walden"; http://www.cnrtl.fr/definition/lourdaud//1
 	Language = "old-frankish",
 	Type = "noun", -- correct? maybe should be "walden"'s participle instead
-	Meanings = {},
-	AffixNameTypes = {"compound", "suffix", "singular", "person-male"} -- examples: "Answald", "Grimwald"
+	Meanings = {}
 })
 
 DefineLanguageWord("Walden", { -- http://www.cnrtl.fr/definition/lourdaud//1

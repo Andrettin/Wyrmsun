@@ -97,7 +97,7 @@ function CustomHeroCreationMenu(world, quest_menu)
 			language = new_language
 			local generated_personal_name = ""
 			while (generated_personal_name == "" or GetArrayIncludes(GetCustomHeroes(), generated_personal_name)) do
-				generated_personal_name = GeneratePersonalName(language, hero_class_ident_list[hero_class:getSelected() + 1])
+				generated_personal_name = GeneratePersonalName(hero_class_ident_list[hero_class:getSelected() + 1])
 			end
 			hero_name:setText(generated_personal_name)
 		end
@@ -227,7 +227,7 @@ function CustomHeroCivilizationAdvancementMenu(world, quest_menu)
 			if (GetUnitTypeData(hero_type, "Faction") ~= "") then
 				language = GetFactionData(string.lower(hero_civilization_list[hero_civilization:getSelected() + 1]), GetUnitTypeData(hero_type, "Faction"), "Language")
 			end
-			generated_personal_name = GeneratePersonalName(language, hero_type)
+			generated_personal_name = GeneratePersonalName(hero_type)
 		end
 		hero_name:setText(generated_personal_name)
 	end

@@ -826,6 +826,89 @@ DefineCivilization("teuton", {
 	DefaultColor = "yellow",
 	CivilizationUpgrade = "upgrade-teuton-civilization",
 	DevelopsFrom = {"germanic"},
+	Description = _("During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). Eventually, West Germanic peoples would come to identify themselves with the demonym \"deutsch\", a term often latinized as \"teutonicus\"."),
+	Months = { -- Anglo-Saxon months; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 97-98.
+		"january", "Giuli", -- first month of the Anglo-Saxon year; the modern Yule, the name was used for both the last and first month of the year; the year began on the 25th of December, during the night of which the "Modra nect" ("the night of the mothers") was celebrated
+		"february", "Solmonath", -- second month of the Anglo-Saxon year; known as the month of cakes, in which those were offered to the gods
+		"march", "Hrethmonath", -- third month of the Anglo-Saxon year, named after the goddess Hretha
+		"april", "Eosturmonath", -- fourth month of the Anglo-Saxon year, named after the goddess Eostre
+		"may", "Thrimilci", -- fifth month of the Anglo-Saxon year, so named because cows were supposedly milked three times a day during this month
+		"june", "Litha", -- sixth and seventh month of the Anglo-Saxon year, the word supposedly means "moon"
+		"july", "Litha", -- sixth and seventh month of the Anglo-Saxon year, the word supposedly means "moon"
+		"august", "Weodmonath", -- eight month of the Anglo-Saxon year, the name means "the month of weeds"
+		"september", "Halegmonath", -- ninth month of the Anglo-Saxon year, the name means "the month of offerings", due to a festival made at the end of the harvest
+		"october", "Wintirfyllith", -- tenth month of the Anglo-Saxon year, begins with the first winter full moon
+		"november", "Blotmonath", -- eleventh month of the Anglo-Saxon year, "the month of sacrifice", in which animals were sacrificed to the gods
+		"december", "Giuli" -- last month of the Anglo-Saxon year; the modern Yule, the name was used for both the last and first month of the year
+	},
+	PersonalNames = {
+		"female", "Hilde",
+		"female", "Wilhelmina",
+		"male", "Adalbert",
+		"male", "Albert",
+		"male", "Albrecht",
+		"male", "Alexander",
+		"male", "Alphart",
+		"male", "Anton",
+		"male", "Arnulf",
+		"male", "Bernard",
+		"male", "Carl",
+		"male", "Christian",
+		"male", "David",
+		"male", "Eduard",
+		"male", "Ernst",
+		"male", "Fabian",
+		"male", "Ferdinand",
+		"male", "Franz",
+		"male", "Friedrich",
+		"male", "Georg",
+		"male", "Gerhard",
+		"male", "Gottfried",
+		"male", "Gunther",
+		"male", "Gustav",
+		"male", "Hagen",
+		"male", "Hans",
+		"male", "Heinrich",
+		"male", "Heinz",
+		"male", "Helmut",
+		"male", "Hermann",
+		"male", "Hildebrand",
+		"male", "Jakob",
+		"male", "Johann",
+		"male", "Josef",
+		"male", "Joseph",
+		"male", "Karl",
+		"male", "Karlmann",
+		"male", "Klaus",
+		"male", "Kurt",
+		"male", "Leopold",
+		"male", "Lothar",
+		"male", "Ludwig",
+		"male", "Luitpold",
+		"male", "Lukas",
+		"male", "Manfred",
+		"male", "Mark",
+		"male", "Matthias",
+		"male", "Maximilian",
+		"male", "Michael",
+		"male", "Otto",
+		"male", "Paul",
+		"male", "Peter",
+		"male", "Philipp",
+		"male", "Pippin",
+		"male", "Richard",
+		"male", "Rudolf",
+		"male", "Siegfried",
+		"male", "Theodor",
+		"male", "Thomas",
+		"male", "Tobias",
+		"male", "Victor",
+		"male", "Walter",
+		"male", "Werner",
+		"male", "Wilhelm",
+		"male", "Wolfgang",
+		"male", "Wolfhart"
+	},
 	--[[
 	ProvinceNames = {
 		"Bayern", -- "Bayern" = "Bavaria"
@@ -901,21 +984,6 @@ DefineCivilization("teuton", {
 		"Wels",
 		"Werschitz",
 		"Zillertal"
-	},
-	Description = _("During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). Eventually, West Germanic peoples would come to identify themselves with the demonym \"deutsch\", a term often latinized as \"teutonicus\"."),
-	Months = { -- Anglo-Saxon months; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 97-98.
-		"january", "Giuli", -- first month of the Anglo-Saxon year; the modern Yule, the name was used for both the last and first month of the year; the year began on the 25th of December, during the night of which the "Modra nect" ("the night of the mothers") was celebrated
-		"february", "Solmonath", -- second month of the Anglo-Saxon year; known as the month of cakes, in which those were offered to the gods
-		"march", "Hrethmonath", -- third month of the Anglo-Saxon year, named after the goddess Hretha
-		"april", "Eosturmonath", -- fourth month of the Anglo-Saxon year, named after the goddess Eostre
-		"may", "Thrimilci", -- fifth month of the Anglo-Saxon year, so named because cows were supposedly milked three times a day during this month
-		"june", "Litha", -- sixth and seventh month of the Anglo-Saxon year, the word supposedly means "moon"
-		"july", "Litha", -- sixth and seventh month of the Anglo-Saxon year, the word supposedly means "moon"
-		"august", "Weodmonath", -- eight month of the Anglo-Saxon year, the name means "the month of weeds"
-		"september", "Halegmonath", -- ninth month of the Anglo-Saxon year, the name means "the month of offerings", due to a festival made at the end of the harvest
-		"october", "Wintirfyllith", -- tenth month of the Anglo-Saxon year, begins with the first winter full moon
-		"november", "Blotmonath", -- eleventh month of the Anglo-Saxon year, "the month of sacrifice", in which animals were sacrificed to the gods
-		"december", "Giuli" -- last month of the Anglo-Saxon year; the modern Yule, the name was used for both the last and first month of the year
 	}
 })
 
