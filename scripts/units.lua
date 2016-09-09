@@ -3060,6 +3060,7 @@ DefineUnitType("unit-template-ship", {
 	Type = "naval",
 	PersonalNames = {
 		"Naglfar", -- ship of the giants in Norse mythology, whose helmsman is Hrym; made of dead men's nails
+		"Ringhorn", -- Balder's ship in Norse mythology in which he was cremanted; ; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 155, 249.
 		"Skidbladnir" -- ship built by dwarves in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 101.
 	},
 	Sounds = {
