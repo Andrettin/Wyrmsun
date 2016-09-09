@@ -128,6 +128,10 @@ function DefineUnitType(unit_type, data)
 		town_hall = true
 	end
 	
+	if (data.Parent and GetUnitTypeData(data.Parent, "Type") == "naval" and GetUnitTypeData(data.Parent, "organic") == false and not data.PersonalNames and data.Civilization and table.getn(GetCivilizationData(data.Civilization, "ShipNames")) > 0) then -- if is a ship, and its civilization has ship names, then don't inherit personal names of ships from the parent unit type
+		data.PersonalNames = {}
+	end
+	
 	if (data.Parent ~= nil) then
 		OldDefineUnitType(unit_type, {Parent = data.Parent})
 		data.Parent = nil

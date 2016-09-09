@@ -33,7 +33,8 @@
 --	NOTE: Save can generate this table.
 --
 
-DefineUnitType("unit-celt-farm", { Name = _("Farm"),
+DefineUnitType("unit-celt-farm", {
+	Name = _("Farm"),
 	Parent = "unit-template-farm",
 	Civilization = "celt",
 	Description = _("Farms are essential for supporting a settlement's population."),
