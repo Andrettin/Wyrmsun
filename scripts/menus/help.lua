@@ -142,7 +142,6 @@ local tips = {
 	
 	-- Fauna-related tips
 	"Yales are territorial creatures.",
-	"Slimes can breed asexually.",
 	"Wild gryphons are dangerous predators.",
 	"There is a chance animals will escape from destroyed stables or pens.",
 	

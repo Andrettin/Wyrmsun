@@ -330,19 +330,3 @@ DefineCharacter("Georg von Toggenburg", { -- Source: Waltraud Heindl, "Josephini
 		"governor", 1860, 1866, "Venetia" -- was Statthalter (governor) of Venice from 1860 to 1866
 	}
 })
-
-DefineCharacter("Otto Friedländer", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 26.
-	Name = "Otto",
-	FamilyName = "Friedländer",
-	FamilyNameElements = {
-		"compound", "prefix", "high-german", "noun", "Fried",
-		"compound", "suffix", "high-german", "noun", "plural", "Land"
-	},
-	Gender = "male",
-	Type = "unit-teuton-worker", -- bureaucrat of the Viennese Chamber of Commerce (during the First Republic period)
-	Civilization = "teuton",
-	Faction = "Austria",
-	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
-	Year = 1889, -- born
-	DeathYear = 1963 -- died
-})
