@@ -62,7 +62,7 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Buildings
-- Temples now correctly have a rally point button.
+- Temples and docks now correctly have a rally point button.
 
 * Factions
 - Revamped Frankish personal names.
