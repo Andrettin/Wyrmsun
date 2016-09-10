@@ -66,16 +66,6 @@ DefineCharacter("Clovis Merovingian", { -- Source: Norman Davies, "Vanished King
 	}
 })
 
-DefineCharacter("Bertha", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 79.
-	Name = "Bertha", -- Bertha of Paris; wife of Æthelberht of Kent; was either a Merovingian or had family links to them
-	Gender = "female",
-	Type = "unit-teuton-archer",
-	Civilization = "teuton", -- probably a Frank
-	Faction = "Francia",
-	ProvinceOfOrigin = "France", -- possibly
-	DateReferenceCharacter = "Æthelberht"
-})
-
 DefineCharacter("Dagobert Merovingian", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 81; Source: "Medieval Warfare V.2", 2013, p. 7.
 	Name = "Dagobert", -- kinsman of Edwin of Deira's wife
 	FamilyName = "Merovingian",

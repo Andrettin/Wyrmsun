@@ -159,7 +159,6 @@ DefineCharacter("Judith von Babenberg", { -- Source: James Westfall Thompson, "M
 	-- was abducted by and married to Duke Břetislav I of Bohemia
 })
 
-Load("scripts/civilizations/teuton/characters_english.lua")
 Load("scripts/civilizations/teuton/characters_frank.lua")
 Load("scripts/civilizations/teuton/characters_saxon.lua")
 Load("scripts/civilizations/teuton/characters_suebi.lua")

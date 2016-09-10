@@ -26,7 +26,6 @@
 --
 
 Load("scripts/civilizations/celt/characters_briton.lua")
-Load("scripts/civilizations/celt/characters_gaul.lua")
 
 DefineCharacter("Aedan mac Gabrain", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 77, 86.
 	Name = "Aedan", -- the king of a kingdom founded in Argyll by Irish settlers
@@ -43,19 +42,6 @@ DefineCharacter("Aedan mac Gabrain", { -- Source: Frank Stenton, "Anglo-Saxon En
 	}
 })
 
-DefineCharacter("Certic", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 80.
-	Name = "Certic",
-	Gender = "male",
-	Type = "unit-germanic-warrior",
-	Civilization = "celt",
-	Faction = "Elmet",
---	ProvinceOfOrigin = ?
-	DateReferenceCharacter = "Edwin", -- was a contemporary of Edwin of Deira, who conquered his kingdom
-	HistoricalTitles = {
-		"head-of-state", 0, 0, "celt", "Elmet" -- king of Elmet
-	}
-})
-
 DefineCharacter("Bruide mac Beli", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 87-88.
 	Name = "Bruide mac Beli",
 	Gender = "male",
@@ -69,14 +55,3 @@ DefineCharacter("Bruide mac Beli", { -- Source: Frank Stenton, "Anglo-Saxon Engl
 		"head-of-state", 672, 693, "celt", "Pict Tribe" -- became king of the Picts in 672
 	}
 })
-
-DefineCharacter("Dicuil", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 40.
-	Name = "Dicuil", -- Irish monk who became notable for his scholarship
-	Gender = "male",
-	Type = "unit-germanic-warrior", -- should be priest
-	Civilization = "celt", -- presumably
-	ProvinceOfOrigin = "Leinster", -- correct?
-	Year = 825, -- wrote "De Mensura Orbis Terrae"
-	AuthoredWorks = {"upgrade-work-de-mensura-orbis-terrae"}
-})
-
