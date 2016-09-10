@@ -96,6 +96,63 @@ DefineFaction("Angle Tribe", {
 	DevelopsTo = {"England", "Bernicia", "Deira", "East Anglia", "Mercia", "Middle Anglia", "Northumbria", "Scotland"},
 	SplitsTo = {"Bernice Tribe", "Dere Tribe"},
 	FactionUpgrade = "upgrade-angle-tribe-faction",
+	PersonalNames = { -- Old English names, not Angle ones per se
+		"female", "Eanflaed", -- "Eanflæd"; daughter of Edwin of Deira who married Oswiu of Bernicia; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 81.
+		"male", "Aelfwald", -- "Ælfwald"; grandson of Eadberht of Northumbria; king of Northumbria; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 90, 93.
+		"male", "Aelle", -- "Ælle"; first recorded king of Deira; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
+		"male", "Aethelbald", -- "Æthelbald"; king of Mercia; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 92.
+		"male", "Aethelberht", -- "Æthelberht"; king of Kent; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 79.
+		"male", "Aethelfrith", -- "Æthelfrith"; king of Bernicia and Deira, and son of Æthelric; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 75, 78.
+		"male", "Aethelhere", -- "Æthelhere"; king of East Anglia; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 83-84.
+		"male", "Aethelred", -- "Æthelred"; son of Penda of Mercia; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 85.
+		"male", "Aethelred", -- "Æthelred Moll"; son of Æthelwald Moll; king of Northumbria; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 93-94.
+		"male", "Aethelric", -- "Æthelric"; king of Bernicia who acquired the kingdom of Deira after Ælle's death; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 75-76.
+		"male", "Aethelwald", -- "Æthelwald"; son of Oswald of Bernicia and chosen by the Deirans to become their king; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 83.
+		"male", "Aethelwald", -- "Æthelwald Moll"; became king of Northumbria; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 92.
+		"male", "Alcuin", -- Northumbrian scholar who made the school of York famous; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 90.
+		"male", "Aldfrith", -- son of Oswiu and successor to his brother Ecgfrith as king of Northumbria; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 88.
+		"male", "Aldhelm", -- abbot of Malmesbury who composed the "Helleborus" riddle; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 89; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 98.
+		"male", "Alhred", -- descendant of Ida of Bernicia and king of Northumbria; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 90, 92-93.
+		"male", "Bede", -- wrote the "Historia Ecclesiastica Venerabilis Bedae" around 731 AD; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 34.
+		"male", "Beornhaeth", -- "Beornhæth"; Northumbrian ealdorman who quelled a Pictish rebellion with Ecgfrith of Northumbria; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 88.
+		"male", "Beorhtfrith", -- Northumbrian ealdorman; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 88.
+		"male", "Ceawlin", -- king of Wessex; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 76.
+		"male", "Cenwalh", -- king of Wessex; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
+		"male", "Cenwulf", -- king of Mercia; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 94.
+		"male", "Ceolwulf", -- king of Northumbria; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 91.
+		"male", "Cynegils", -- king of Wessex; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 81.
+		"male", "Eadberht", -- succeeded Ceolwulf as king of Northumbria; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 92.
+		"male", "Eadfrith", -- son of Edwin of Deira; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 81.
+		"male", "Eanfrith", -- son of Æthelfrith and king of Bernicia after Edwin's death; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 81.
+		"male", "Eanred", -- son of Eardwulf and king of Northumbria; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 95.
+		"male", "Eardwulf", -- king of Northumbria; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 94-95.
+		"male", "Ecgfrith", -- son of Oswiu and king of Northumbria; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 85, 88.
+		"male", "Edwin", -- heir to Deira who regained his kingdom from Æthelfrith, afterwards also ruling over Bernicia; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 78-81.
+		"male", "Egbert", -- archbishop of York and brother of Eadberht of Northumbria; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 92.
+		"male", "Egbert", -- king of Wessex; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 95.
+		"male", "Hereric", -- son of a nephew of Edwin of Deira's; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 80.
+		"male", "Ida", -- first king of Bernicia; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 76.
+		"male", "Lilla", -- thegn of Edwin of Deira; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 79.
+		"male", "Offa", -- son of Aldfrith of Northumbria; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 92.
+		"male", "Offa", -- king of Mercia; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 93.
+		"male", "Osfrith", -- son of Edwin of Deira; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 80-81.
+		"male", "Osred", -- son of Aldfrith and king of Northumbria; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 91.
+		"male", "Osric", -- cousin of Edwin and his successor as king of Deira; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 81.
+		"male", "Oswald", -- brother of Eanfrith of Bernicia who succeeded him as king; took over Deira as well; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 81-82.
+		"male", "Oswine", -- son of Osric of Deira; king of Deira; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 82-83.
+		"male", "Oswiu", -- brother and successor of Oswald of Bernicia; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 81-85.
+		"male", "Oswulf", -- son of Eadberht of Northumbria; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 92.
+		"male", "Peada", -- king of the Middle Angles and son of Penda of Mercia; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
+		"male", "Penda", -- king of Mercia; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 75, 80-81, 83-84.
+		"male", "Raedwald", -- "Rædwald"; king of East Anglia; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 78-79.
+		"male", "Sigeberht", -- king of Essex; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
+		"male", "Talorcan", -- son of Eanfrith of Bernicia who became king of the Picts; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 87.
+		"male", "Theodric", -- son of Ida of Bernicia; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 76.
+		"male", "Torhtmund", -- Minister of the Northumbrian king Æthelred Moll; Torhtmund killed the king's murderer; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 90.
+		"male", "Wulfhere", -- king of Mercia and son of Penda; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 84-85.
+		"male", "Wuscfrea", -- son of Edwin of Deira; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 81.
+		"male", "Yffi", -- grandson of Edwin of Deira; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 81.
+	},
 	HistoricalFactionDerivations = {-264, "germanic", "Ingaevone Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
@@ -481,7 +538,54 @@ DefineFaction("England", {
 	Type = "polity",
 	Language = "english",
 	Colors = {"red", "white"},
-	DefaultTier = "kingdom"
+	DefaultTier = "kingdom",
+	PersonalNames = {
+		"male", "Adam",
+		"male", "Alexander",
+		"male", "Alf",
+		"male", "Alfred",
+		"male", "Arthur",
+		"male", "Benjamin",
+		"male", "Bernard",
+		"male", "Charles",
+		"male", "Christopher",
+		"male", "David",
+		"male", "Donald",
+		"male", "Edgar",
+		"male", "Edmund",
+		"male", "Edward",
+		"male", "Elias",
+		"male", "Francis",
+		"male", "Frederick",
+		"male", "George",
+		"male", "Godfrey",
+		"male", "Harold",
+		"male", "Harrison",
+		"male", "Harry",
+		"male", "Henry",
+		"male", "Jack",
+		"male", "James",
+		"male", "John",
+		"male", "Joseph",
+		"male", "Kenneth",
+		"male", "Lewis",
+		"male", "Malcolm",
+		"male", "Mark",
+		"male", "Matthew",
+		"male", "Michael",
+		"male", "Nathan",
+		"male", "Nicolas",
+		"male", "Oliver",
+		"male", "Peter",
+		"male", "Philip",
+		"male", "Richard",
+		"male", "Robert",
+		"male", "Sebastian",
+		"male", "Stephen",
+		"male", "Theodore",
+		"male", "Thomas",
+		"male", "William"
+	}
 })
 
 DefineFaction("Friesland", {

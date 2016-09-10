@@ -53,10 +53,6 @@ DefineCharacter("Ida", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, 
 
 DefineCharacter("Theodric", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 76.
 	Name = "Theodric", -- in his age, the Anglo-Saxons suffered a siege in Holy Island for three days
-	NameElements = {
-		"compound", "prefix", "old-english", "noun", "Þéod", -- presumably
---		"compound", "suffix", "old-english", -- ?
-	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
@@ -136,10 +132,6 @@ DefineCharacter("Edwin", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 
 DefineCharacter("Rædwald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 78-79.
 	Name = "Rædwald",
-	NameElements = {
-		"compound", "prefix", "old-english", "noun", "Ræ̂d", -- presumably
---		"compound", "suffix", "old-english", -- ?
-	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
@@ -397,10 +389,6 @@ DefineCharacter("Æthelhere", { -- Source: Frank Stenton, "Anglo-Saxon England",
 
 DefineCharacter("Sigeberht", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
 	Name = "Sigeberht",
-	NameElements = {
-		"compound", "prefix", "old-english", "noun", "Sige", -- presumably
---		"compound", "suffix", "old-english", -- ?
-	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
@@ -444,10 +432,6 @@ DefineCharacter("Peada", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 
 DefineCharacter("Wulfhere", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 84-85.
 	Name = "Wulfhere",
-	NameElements = {
-		"compound", "prefix", "old-english", "noun", "Wulf", -- presumably
---		"compound", "suffix", "old-english", -- ?
-	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
@@ -518,10 +502,6 @@ DefineCharacter("Aldfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 
 DefineCharacter("Aldhelm", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 89; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 98.
 	Name = "Aldhelm", -- abbot of Malmesbury, composed the "Helleborus" riddle
-	NameElements = {
---		"compound", "prefix", "old-english", -- ?
-		"compound", "suffix", "old-english", "noun", "Helm" -- presumably
-	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman", -- should be something more appropriate for the composer of a riddle?
 	Civilization = "teuton",
@@ -559,10 +539,6 @@ DefineCharacter("Beorhtfrith", { -- Source: Frank Stenton, "Anglo-Saxon England"
 
 DefineCharacter("Ceolwulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 91.
 	Name = "Ceolwulf",
-	NameElements = {
---		"compound", "prefix", "old-english", -- ?
-		"compound", "suffix", "old-english", "noun", "Wulf" -- presumably
-	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
@@ -695,10 +671,6 @@ DefineCharacter("Æthelred Moll", { -- Source: Frank Stenton, "Anglo-Saxon Engla
 
 DefineCharacter("Ælfwald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 90, 93.
 	Name = "Ælfwald", -- grandson of Eadberht
-	NameElements = {
-		"compound", "prefix", "old-english", "noun", "Ælf", -- presumably
---		"compound", "suffix", "old-english", -- ?
-	},
 	Trait = "upgrade-pious", -- considered just and pious
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -748,10 +720,6 @@ DefineCharacter("Torhtmund", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 
 DefineCharacter("Eardwulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 94-95.
 	Name = "Eardwulf",
-	NameElements = {
---		"compound", "prefix", "old-english", -- ?
-		"compound", "suffix", "old-english", "noun", "Wulf" -- presumably
-	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
@@ -767,10 +735,6 @@ DefineCharacter("Eardwulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 
 DefineCharacter("Cenwulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 94.
 	Name = "Cenwulf",
-	NameElements = {
-		"compound", "prefix", "old-english", "noun", "Cên", -- presumably
-		"compound", "suffix", "old-english", "noun", "Wulf" -- presumably
-	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
@@ -822,33 +786,10 @@ DefineCharacter("Ethelred", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 
 DefineCharacter("Nicolas Breakspear", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 126.
 	Name = "Nicolas", -- son of a peasant employed in the Benedictine monastery of Saint Albans in Hertfordshire; was educated by the monks there; later became a cardinal and was sent on a mission to Norway to settle the Church there; was elected Pope in 1154 AD under the title of Hadrian IV
-	NameElements = {"word", "english", "noun", "Nicolas"},
 	ExtraName = "Breakspear", -- I assume this isn't his family name, but a nickname or something of the sort?
 	Gender = "male",
 	Type = "unit-teuton-priest",
 	Civilization = "teuton", -- should be English
 	ProvinceOfOrigin = "Essex", -- Hertfordshire (since his father worked there, he's probably from there)
 	Year = 1154 -- elected Pope
-})
-
-DefineCharacter("John Williamson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 159.
-	Name = "John",
-	NameElements = {"word", "english", "noun", "John"},
-	ExtraName = "Williamson",
-	Gender = "male",
-	Type = "unit-teuton-priest",
-	Civilization = "teuton", -- should be English
-	ProvinceOfOrigin = "Essex", -- English (so put him in the capital province of England for lack of more precise information)
-	Year = 1429 -- became bishop of Holum (in Iceland) in 1429
-})
-
-DefineCharacter("John Garrickson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 159.
-	Name = "John",
-	NameElements = {"word", "english", "noun", "John"},
-	ExtraName = "Garrickson",
-	Gender = "male",
-	Type = "unit-teuton-priest",
-	Civilization = "teuton", -- should be English
-	ProvinceOfOrigin = "Essex", -- English (so put him in the capital province of England for lack of more precise information)
-	Year = 1430 -- was bishop of Skalholt (in Iceland) in 1430
 })
