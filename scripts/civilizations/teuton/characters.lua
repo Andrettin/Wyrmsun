@@ -162,6 +162,4 @@ DefineCharacter("Judith von Babenberg", { -- Source: James Westfall Thompson, "M
 Load("scripts/civilizations/teuton/characters_frank.lua")
 Load("scripts/civilizations/teuton/characters_saxon.lua")
 Load("scripts/civilizations/teuton/characters_suebi.lua")
-Load("scripts/civilizations/teuton/characters_bavarian.lua")
 Load("scripts/civilizations/teuton/characters_austrian.lua")
-Load("scripts/civilizations/teuton/characters_lombard.lua")

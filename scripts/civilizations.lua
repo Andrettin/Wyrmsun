@@ -639,6 +639,10 @@ DefineCivilization("ettin", {
 		"dwarf/ui/infopanel.png", 0, -200
 	},
 --	Description = "The ettins of Jotunheim are one of the most ancient sentient peoples to have existed. They possess deep knowledge of mystic forces, passed on by their sages from generation to generation. One of their mystics once discovered another plane of existence - Asgard - during a trance. They sought more and more knowledge about those strange lands, until they were able to construct a massive portal leading to the new realm. There they found a group of powerful beings, and soon hostilities erupted between them and the invaders. Though few in number, with their sword and sorcery each of the Asgardians slew scores of ettins. The invasion ended in disaster. Those remaining of the gigantic creatures squirreled towards the portal, as the Asgardians used their powers to destroy it.\n\nDespite the failure of their campaign, the ettins had made a phenomenal advance in their mystic knowledge. Their portal had been destroyed, but the ability to create a new one was now theirs - forever. And as their magic wisdom and their martial prowess grew, they would eventually bring forth heroes capable of taking on the Asgardians.",
+	PersonalNames = {
+		"male", "Hraesvelg", -- giant who took the form of an eagle in Norse mythology (could be an ettin roc rider if made into a hero latero on); Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 18, 245.
+		"male", "Saekmime" -- "Sækmime"; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 228.
+	},
 	ShipNames = {
 		"Naglfar" -- ship of the giants in Norse mythology, whose helmsman is Hrym; made of dead men's nails; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 21.
 	}
@@ -747,10 +751,10 @@ DefineCivilization("gnome", {
 	},
 	Description = _("Gnomes usually live in the hills and forests of Nidavellir, and often seek contact with nature. Although they have a different outlook on life than the dwarves, not rarely both two peoples live side by side, with gnomish minorities permeating dwarven settlements and vice-versa. These contacts have brought much benefit to both of them, both through trade and via the spread of gnomish technologies northwards."),
 	PersonalNames = {
-		"female", "Adalga", -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 79.
-		"male", "Bimbam", -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 79.
-		"male", "Clavo", -- name of a (male) gnome general; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 106.
-		"male", "Cravatu", -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 97.
+		"female", "Adalga", -- daughter of Bimbam I of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 79.
+		"male", "Bimbam", -- Bimbam I of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 79.
+		"male", "Clavo", -- commanding general of the army of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 106.
+		"male", "Cravatu", -- Prince Cravatu, minister to King Bimbam I of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 97.
 		"male", "Kalutho", -- name of an (apparently male) gnome; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 13.
 		"male", "Pypo", -- king of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 13.
 		"male", "Rubezahl"
@@ -1341,7 +1345,10 @@ DefineCivilization("persian", {
 	Language = "avestan",
 	ParentCivilization = "greek",
 	Adjective = "Persian",
-	Playable = false
+	Playable = false,
+	PersonalNames = {
+		"male", "Vologaeses" -- Parthian king Vologaeses IV; Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
 })
 
 DefineCivilization("phoenician", {

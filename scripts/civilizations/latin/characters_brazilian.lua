@@ -25,30 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCharacter("Mauá", { -- Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", pp. 6-7.
-	Name = "Mauá", -- this was the name of his barony title, not his actual name
-	Gender = "male",
-	Type = "unit-teuton-worker", -- businessman
-	Civilization = "latin",
-	ProvinceOfOrigin = "Rio de Janeiro", -- had businesses in Rio de Janeiro
-	Year = 1861, -- became president of the Companhia de Carris de Ferro da Cidade à Boavista (tram company), in Rio de Janeiro
-	HistoricalTitles = {
-		"head-of-state", 0, 0, "latin", "Maua" -- was Baron of Mauá
-	}
-})
-
-DefineCharacter("Rio Negro", { -- Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 9.
-	Name = "Rio Negro", -- this was the name of his barony title, not his actual name
-	Gender = "male",
-	Type = "unit-teuton-worker", -- had businesses
-	Civilization = "latin",
-	ProvinceOfOrigin = "Rio de Janeiro", -- had businesses in Rio de Janeiro
-	Year = 1868, -- received authorization to reactivate the Companhia de Carris de Ferro da Cidade à Boavista (tram company), in Rio de Janeiro
-	HistoricalTitles = {
-		"head-of-state", 0, 0, "latin", "Rio Negro" -- was Baron of Rio Negro
-	}
-})
-
 DefineCharacter("Rodrigues Alves", { -- Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 21.
 	Name = "Rodrigues Alves", -- this was actually his surname
 	Gender = "male",

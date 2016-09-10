@@ -37,6 +37,11 @@ DefineFaction("Suebi Tribe", {
 	SplitsTo = {"Buri Tribe", "Marcomanni Tribe", "Quadi Tribe", "Semnone Tribe"},
 	FactionUpgrade = "upgrade-suebi-tribe-faction",
 	Description = _("The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there."),
+	PersonalNames = {
+		"male", "Ariovistus", -- chieftain of the Suebi who fought against Caesar; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 222.
+		"male", "Marbod", -- chieftain of the Marcomanni
+		"male", "Tassilo" -- Bavarian ruler who revolted against Frankish dominion; Source: "Medieval Warfare V.2", 2013, p. 8.
+	},
 	HistoricalFactionDerivations = {-264, "germanic", "Istaevone Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
@@ -287,6 +292,9 @@ DefineFaction("Lombard Tribe", {
 	Colors = {"green"},
 	DevelopsTo = {"Lombardy"},
 	FactionUpgrade = "upgrade-lombard-tribe-faction",
+	PersonalNames = {
+		"male", "Desiderius" -- king of the Lombards; Source: "Medieval Warfare V.2", 2013, p. 7.
+	},
 	HistoricalFactionDerivations = {-264, "germanic", "Istaevone Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
