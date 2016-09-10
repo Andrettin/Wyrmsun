@@ -61,6 +61,9 @@ https://github.com/Andrettin/Wyrmsun
 - 2.4.3
 -----------------------------------------------------------------------
 
+* Buildings
+- Temples now correctly have a rally point button.
+
 * Factions
 - Revamped Frankish personal names.
 - Revamped Anglo-Saxon personal names.

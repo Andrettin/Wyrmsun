@@ -95,15 +95,18 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-rally-point",
 		"unit-germanic-town-hall",
 		"unit-germanic-barracks",
 		"unit-teuton-town-hall", "unit-teuton-stronghold",
+		"unit-teuton-temple",
 		"unit-teuton-barracks",
 		"unit-teuton-watch-tower", "unit-teuton-guard-tower",
 		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
 		"unit-dwarven-barracks",
+		"unit-dwarven-temple",
 		"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower",
 		"unit-gnomish-town-hall",
 		"unit-gnomish-barracks",
 		"unit-goblin-town-hall", "unit-goblin-stronghold",
 		"unit-goblin-barracks",
+		"unit-goblin-temple",
 		"unit-goblin-watch-tower", "unit-goblin-guard-tower"
 	}
 } )
