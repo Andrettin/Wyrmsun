@@ -377,6 +377,8 @@ DefineUnitType("unit-germanic-archer", {
 	Mana = {Enable = true, Max = 75, Value = 75, Increase = 1},
 	WeaponClasses = {"bow"},
 	PierceDamage = true,
+	CanCastSpell = {"spell-precise-shot"},
+	AutoCastActive = {"spell-precise-shot"},
 	ButtonKey = "s",
 	ButtonHint = _("Train ~!Skutan"),
 	AiDrops = {"unit-arrows", "unit-barbed-arrows", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},

@@ -22,7 +22,6 @@ function LoadGame(s)
 	SetCurrentQuest("")
 	
 	InitGameSettings()
-	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 	RunningScenario = false
 end
 
