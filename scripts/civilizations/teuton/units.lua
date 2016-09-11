@@ -320,7 +320,8 @@ DefineUnitType("unit-teuton-spearman", { Name = _("Speerkampfer"),
 	}
 } )
 
-DefineUnitType("unit-teuton-archer", { Name = _("Schutze"),
+DefineUnitType("unit-teuton-archer", {
+	Name = _("Schutze"),
 	Parent = "unit-template-archer",
 	Civilization = "teuton",
 	Description = _("Teuton archers are a perilous lot. They excel at ambushing enemies in the forests of their homelands."),
@@ -349,6 +350,7 @@ DefineUnitType("unit-teuton-archer", { Name = _("Schutze"),
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
 	BonusAgainstAir = 50,
+	Mana = {Enable = true, Max = 75, Value = 75, Increase = 1},
 	WeaponClasses = {"bow"},
 	PierceDamage = true,
 	ButtonKey = "s",

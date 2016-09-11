@@ -342,7 +342,8 @@ DefineUnitType("unit-germanic-spearman", { Name = _("Spearman"),
 	}
 } )
 
-DefineUnitType("unit-germanic-archer", { Name = _("Skutan"),
+DefineUnitType("unit-germanic-archer", {
+	Name = _("Skutan"),
 	Parent = "unit-template-archer",
 	Civilization = "germanic",
 	Description = _("These warriors specialize in the art of archery, which they employ against their enemies with great lethality."),
@@ -373,6 +374,7 @@ DefineUnitType("unit-germanic-archer", { Name = _("Skutan"),
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
 	BonusAgainstAir = 50,
+	Mana = {Enable = true, Max = 75, Value = 75, Increase = 1},
 	WeaponClasses = {"bow"},
 	PierceDamage = true,
 	ButtonKey = "s",
