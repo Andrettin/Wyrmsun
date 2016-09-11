@@ -61,12 +61,19 @@ https://github.com/Andrettin/Wyrmsun
 - 2.4.3
 -----------------------------------------------------------------------
 
+* Abilities
+- The learning buttons for Healing and Precision now correctly display descriptions for them.
+
 * Buildings
 - Temples and docks now correctly have a rally point button.
 
 * Factions
 - Revamped Frankish personal names.
 - Revamped Anglo-Saxon personal names.
+
+* Items
+- Fixed an issue which caused units without inventory to clear their order queue after picking up a healing item.
+- Fixed an issue which caused healing item auto-use to clear the unit's order queue.
 
 * Miscellaneous
 - Fixed issue which caused Germanic players to have the Teuton Civilization upgrade researched at scenario start when restarting the scenario after having developed the Teuton civilization.
