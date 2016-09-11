@@ -64,6 +64,9 @@ https://github.com/Andrettin/Wyrmsun
 * Abilities
 - The learning buttons for Healing and Precision now correctly display descriptions for them.
 
+* AI
+- Made the AI easier on Easy difficulty.
+
 * Buildings
 - Temples and docks now correctly have a rally point button.
 
