@@ -71,24 +71,24 @@ function AiLandAttack()
 	if (CheckDependency(AiPlayer(), GetAiUnitType("worker")) and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) < 1) then
 		AiSet(GetAiUnitType("worker"), 1)
 	end
-	if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) < 5) then
+	if (CheckDependency(AiPlayer(), GetAiUnitType("worker")) and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) < 5) then
 		AiSet(GetAiUnitType("worker"), 5)
 	end
 	
 	if (
 		town_halls >= 1
-		and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) >= 5
+		and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) >= 4
 	) then -- only begin building more structures if there is at least one town hall and a minimum quantity of workers is present
-		if (CheckDependency(AiPlayer(), GetAiUnitType("barracks")) and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) < 1 and (GameCycle >= 2500 or GameSettings.Difficulty ~= 1)) then -- wait a bit with doing things for easy difficulty
+		if (CheckDependency(AiPlayer(), GetAiUnitType("barracks")) and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) < 1) then -- wait a bit with doing things for easy difficulty
 			AiSet(GetAiUnitType("barracks"), 1)
 		end
 		if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) >= 5 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) < (10 * town_halls)) then
 			AiSet(GetAiUnitType("worker"), (10 * town_halls)) -- 10 workers per town hall
 		end
-		if (CheckDependency(AiPlayer(), GetAiUnitType("lumber-mill")) and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) >= 10 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("lumber-mill")) < 1 and (GameCycle >= 5000 or GameSettings.Difficulty ~= 1)) then
+		if (CheckDependency(AiPlayer(), GetAiUnitType("lumber-mill")) and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) >= 10 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("lumber-mill")) < 1) then
 			AiSet(GetAiUnitType("lumber-mill"), 1)
 		end
-		if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) >= 10 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("lumber-mill")) >= 1 and (GameCycle >= 7500 or GameSettings.Difficulty ~= 1)) then
+		if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) >= 10 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("lumber-mill")) >= 1) then
 			if (water_build[AiPlayer()] and GetAiUnitType("dock") ~= nil and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("dock")) < 1) then
 				AiSet(GetAiUnitType("dock"), 1)
 			end
@@ -104,7 +104,6 @@ function AiLandAttack()
 			CheckDependency(AiPlayer(), GetAiUnitType("smithy"))
 			and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 2
 			and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) >= 10 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("smithy")) < 1
-			and (GameCycle >= 10000 or GameSettings.Difficulty ~= 1)
 		) then
 			AiSet(GetAiUnitType("smithy"), 1)
 		end
@@ -152,7 +151,6 @@ function AiLandAttack()
 			and (GetAiUnitType("iron-shield") == nil or GetPlayerData(AiPlayer(), "Allow", GetAiUnitType("iron-shield")) == "R")
 			and (GetAiUnitType("ranged-projectile-2") == nil or GetPlayerData(AiPlayer(), "Allow", GetAiUnitType("ranged-projectile-2")) == "R")
 			and (GetAiUnitType("iron-tipped-wood-plow") == nil or GetPlayerData(AiPlayer(), "Allow", GetAiUnitType("iron-tipped-wood-plow")) == "R")
-			and (GameCycle >= 15000 or GameSettings.Difficulty ~= 1)
 		) then -- research masonry and upgrade to stronghold
 			if (GetAiUnitType("masonry") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("masonry"))) then
 				AiResearch(GetAiUnitType("masonry"))
