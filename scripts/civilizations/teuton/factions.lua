@@ -548,6 +548,11 @@ DefineFaction("England", {
 	Colors = {"red", "white"},
 	DefaultTier = "kingdom",
 	PersonalNames = {
+		"female", "Catherine",
+		"female", "Charlotte",
+		"female", "Elizabeth",
+		"female", "Mary",
+		"female", "Victoria",
 		"male", "Adam",
 		"male", "Alexander",
 		"male", "Alf",
