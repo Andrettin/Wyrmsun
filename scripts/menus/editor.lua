@@ -619,7 +619,7 @@ function RunEditorLanguageProperties()
 
 	local word_type_list = {"noun", "verb", "adjective", "pronoun", "adverb", "conjunction", "adposition", "article"}
 	local gender_list = {"masculine", "feminine", "neuter", "no-gender"}
-	local name_type_list = {"person-male", "person-female", "province", "settlement", "terrain-hills", "terrain-mountains", "unit-class-barracks", "unit-class-dock", "unit-class-farm", "unit-class-lumber-mill", "unit-class-smithy", "unit-class-stables", "unit-class-temple", "unit-class-town-hall", "unit-class-watch-tower", "unit-class-siege-engine"}
+	local name_type_list = {"province", "settlement", "terrain-hills", "terrain-mountains", "unit-class-barracks", "unit-class-dock", "unit-class-farm", "unit-class-lumber-mill", "unit-class-smithy", "unit-class-stables", "unit-class-temple", "unit-class-town-hall", "unit-class-watch-tower", "unit-class-siege-engine"}
 	local word_junction_type_list = {"compound", "separate"}
 	local affix_type_list = {"prefix", "infix", "suffix"}
 
