@@ -93,6 +93,7 @@ local land_funcs = {
 	function() return AiSet(GetAiUnitType("worker"), 20) end,
 	function() return AiWaitForce(1) end,
 	function() return AiAttackWithForce(1) end,
+	function() if (GetAiUnitType("cavalry") == nil) then stratagus.gameData.AIState.index[AiPlayer() + 1] = stratagus.gameData.AIState.index[AiPlayer() + 1] - 6; end return false; end, -- if has no cavalry, keep redoing infantry attacks
 
 -- NOW UPGRADING
 
@@ -315,6 +316,12 @@ local land_funcs = {
 	function() return AiLoop(end_loop_funcs, stratagus.gameData.AIState.loop_index) end,
 }
 
-function AiLandAttack() AiLoop(land_funcs, stratagus.gameData.AIState.index); end
+function AiLandAttack()^
+	if (GameSettings.Difficulty == 1 and (ai_call_counter[AiPlayer()] % 100) ~= 0) then -- on easy difficulty, the AI is slower to do things
+		return;
+	end
+
+	AiLoop(land_funcs, stratagus.gameData.AIState.index);
+end
 
 DefineAi("land-attack", "*", "land-attack", AiLandAttack)
