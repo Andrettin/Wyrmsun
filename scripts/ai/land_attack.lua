@@ -93,18 +93,62 @@ local land_funcs = {
 	function() return AiSet(GetAiUnitType("worker"), 20) end,
 	function() return AiWaitForce(1) end,
 	function() return AiAttackWithForce(1) end,
-	function() if (GetAiUnitType("cavalry") == nil) then stratagus.gameData.AIState.index[AiPlayer() + 1] = stratagus.gameData.AIState.index[AiPlayer() + 1] - 6; end return false; end, -- if has no cavalry, keep redoing infantry attacks
+	function() -- if has no cavalry, keep redoing infantry attacks
+		if (AiGetRace() ~= "germanic" and GetAiUnitType("cavalry") == nil) then
+			stratagus.gameData.AIState.index[AiPlayer() + 1] = stratagus.gameData.AIState.index[AiPlayer() + 1] - 6;
+		end
+		return false;
+	end,
 
 -- NOW UPGRADING
 
 	function() return AiNeed(GetAiUnitType("lumber-mill")) end, -- needed for the stronghold
 	function() return AiWait(GetAiUnitType("lumber-mill")) end,
+	function()
+		if (AiGetRace() == "germanic") then
+			return AiResearch(GetAiUnitType("wood-plow"));
+		end
+		return false;
+	end,
+	function()
+		if (AiGetRace() == "germanic") then
+			return AiResearch(GetAiUnitType("ranged-projectile-1"));
+		end
+		return false;
+	end,
+	function()
+		if (AiGetRace() == "germanic") then
+			return AiResearch("upgrade-teuton-civilization");
+		end
+		return false;
+	end,
+	function()
+		if (AiGetRace() == "germanic") then
+			return AiWait("upgrade-teuton-civilization");
+		end
+		return false;
+	end,
+	function()
+		if (AiGetRace() == "teuton") then
+			return AiResearch(GetAiUnitType("melee-weapon-2")); -- research this now, since Teutons couldn't before
+		end
+		return false;
+	end,
+	function()
+		if (AiGetRace() == "teuton") then
+			return AiResearch(GetAiUnitType("iron-shield")); -- research this now, since Teutons couldn't before
+		end
+		return false;
+	end,
 	function() return AiResearch(GetAiUnitType("masonry")) end, -- needed for the stronghold
+	function() return AiWait(GetAiUnitType("masonry")) end,
 	
 	function() return AiUpgradeTo(GetAiUnitType("stronghold")) end,
 	function() return AiWait(GetAiUnitType("stronghold")) end,
 	function() return AiSet(GetAiUnitType("worker"), 25) end,
+	function() return AiResearch(GetAiUnitType("coinage")) end, -- research coinage to improve gold processing
 	function() return AiNeed(GetAiUnitType("stables")) end,
+	function() return AiResearch(GetAiUnitType("writing")) end, -- research writing to become a polity
 
 -- BUILDING A DEFENSE
 	function() return AiForce(0, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("cavalry"), 2, GetAiUnitType("siege-engine"), 0}) end,
@@ -144,7 +188,7 @@ local land_funcs = {
 
 	function() return AiNeed(GetAiUnitType("town-hall")) end,
 	function() return AiNeed(GetAiUnitType("barracks")) end,
-
+	
 -- ATTACK!!
 
 	function() return AiWaitForce(4) end,
@@ -195,6 +239,7 @@ local land_funcs = {
 --	function() return AiResearch(AiUpgradeEliteShooter1()) end,
 --	function() return AiResearch(AiUpgradeEliteShooter2()) end,
 --	function() return AiResearch(AiUpgradeEliteShooter3()) end,
+	function() return AiResearch(GetAiUnitType("alchemy")) end, -- research alchemy to improve shooters
 
 	function() return AiSet(GetAiUnitType("worker"), 40) end,
 	function() return AiNeed(GetAiUnitType("town-hall")) end,
@@ -316,7 +361,7 @@ local land_funcs = {
 	function() return AiLoop(end_loop_funcs, stratagus.gameData.AIState.loop_index) end,
 }
 
-function AiLandAttack()^
+function AiLandAttack()
 	if (GameSettings.Difficulty == 1 and (ai_call_counter[AiPlayer()] % 100) ~= 0) then -- on easy difficulty, the AI is slower to do things
 		return;
 	end
