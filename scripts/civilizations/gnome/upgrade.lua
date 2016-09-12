@@ -32,7 +32,7 @@ DefineDependency("unit-gnomish-worker",
 )
 
 DefineDependency("unit-gnomish-recruit",
-	{"upgrade-acthnic-tribe-faction", 0, "upgrade-derro-tribe-faction", "upgrade-sagan-tribe-faction", 0}
+	{"upgrade-acthnic-tribe-faction", 0, "upgrade-derro-tribe-faction", 0, "upgrade-sagan-tribe-faction", 0}
 )
 
 DefineDependency("unit-gnomish-herbalist",

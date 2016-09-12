@@ -89,6 +89,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Boar (unit graphics by Jinn, based on the boar model by Wildfire Games; icon by Exidelo).
 - Removed fauna breeding to improve performance, and because it didn't serve much of a purpose (breeding was relatively rare).
 - Skutans and Schutzes now correctly have mana.
+- Fixed issue which caused some Gnomish factions to not be able to train Recruits.
 
 -----------------------------------------------------------------------
 - 2.4.2
