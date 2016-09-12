@@ -36,44 +36,6 @@ DefineCharacter("Caesar", { -- Source: Heiko Steuer, "Warrior bands, war lords a
 	AuthoredWorks = {"upgrade-work-de-bello-gallico"}
 })
 
-DefineCharacter("Seneca", { -- Source: "Ancient Warfare VII.6", 2013, p. 9.
-	Name = "Seneca",
-	Gender = "male",
-	Type = "unit-teuton-priest", -- philosopher, of the school of Roman Stoicism
-	Civilization = "latin",
-	Faction = "Rome",
-	ProvinceOfOrigin = "Latium", -- put him in Rome's province since we don't have information on his actual province of origin
-	Year = -1, -- born
-	DeathYear = 65 -- died
-})
-
-DefineCharacter("Antoninus Pius", { -- Source: "Ancient Warfare VII.6", 2013, p. 6.
-	Name = "Antoninus Pius",
-	Gender = "male",
-	Type = "unit-teuton-swordsman",
-	Civilization = "latin",
-	Faction = "Rome",
-	ProvinceOfOrigin = "Latium", -- put him in Rome's province since we don't have information on his actual province of origin
-	Year = 138, -- reign began
-	DeathYear = 161, -- died
-	HistoricalTitles = {
-		"head-of-state", 138, 161, "latin", "Rome" -- Roman Emperor from 138 to 161
-	}
-})
-
-DefineCharacter("Faustina the Younger", { -- Source: "Ancient Warfare VII.6", 2013, pp. 6, 8.
-	Name = "Faustina",
-	ExtraName = "the Younger",
-	Gender = "female",
-	Type = "unit-teuton-priest", -- correct?
-	Civilization = "latin",
-	Faction = "Rome",
-	ProvinceOfOrigin = "Latium", -- put her in Rome's province since we don't have information on her actual province of origin
-	Father = "Antoninus Pius",
-	DeathYear = 176 -- died
-	-- married to Marcus Aurelius
-})
-
 DefineCharacter("Marcus Aurelius", { -- Source: "Ancient Warfare VII.6", 2013, pp. 6, 8, 10.
 	Name = "Marcus Aurelius",
 	Gender = "male",
@@ -104,46 +66,6 @@ DefineCharacter("Lucius Verus", { -- Source: "Ancient Warfare VII.6", 2013, pp. 
 	DeathYear = 168, -- died (apparently) in 168 of a stroke
 	HistoricalTitles = {
 		-- Roman Emperor from 161 (as co-emperor to Marcus Aurelius, but Marcus Aurelius seemed to be the one who held more power)
-	}
-})
-
-DefineCharacter("Commodus", { -- Source: "Ancient Warfare VII.6", 2013, p. 6.
-	Name = "Commodus",
-	Gender = "male",
-	Type = "unit-teuton-swordsman",
-	Civilization = "latin",
-	Faction = "Rome",
-	ProvinceOfOrigin = "Latium", -- put him in Rome's province since we don't have information on his actual province of origin
-	Father = "Marcus Aurelius",
-	Mother = "Faustina the Younger",
-	HistoricalTitles = {
-		"head-of-state", 0, 0, "latin", "Rome" -- succeeded his father as Roman Emperor
-	}
-})
-
-DefineCharacter("Severianus", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	Name = "Severianus",
-	Gender = "male",
-	Type = "unit-teuton-swordsman",
-	Civilization = "latin",
-	Faction = "Rome",
-	ProvinceOfOrigin = "Latium", -- put him in Rome's province since we don't have information on his actual province of origin
-	Year = 161,
-	HistoricalTitles = {
---		"governor", 0, 161, "Armenia" -- was governor of Armenia until 161, when the Parthians conquered it (although Armenia was a vassal state rather than a Roman province - more research on this is necessary)
-	}
-})
-
-DefineCharacter("Attidius Cornelianus", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	Name = "Attidius Cornelianus",
-	Gender = "male",
-	Type = "unit-teuton-swordsman",
-	Civilization = "latin",
-	Faction = "Rome",
-	ProvinceOfOrigin = "Latium", -- put him in Rome's province since we don't have information on his actual province of origin
-	Year = 161,
-	HistoricalTitles = {
---		"governor", 0, 161, "Syria" -- was governor of Syria until 161, when the Parthians conquered it
 	}
 })
 
@@ -186,25 +108,6 @@ DefineCharacter("Zeno", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of D
 	HistoricalTitles = {
 		"head-of-state", 480, 0, "latin", "Rome"
 	}
-})
-
-DefineCharacter("Sidonius Apollinaris", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
-	Name = "Sidonius Apollinaris", -- Gallo-Roman writer
-	Gender = "male",
-	Type = "unit-teuton-swordsman",
-	Civilization = "latin",
-	ProvinceOfOrigin = "Provence",
-	Year = 452 -- 20 years old, met Burgundians at his home city of Lugdunum
-})
-
-DefineCharacter("Avitus", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 99.
-	Name = "Avitus", -- Archbishop Avitus of Vienne; corresponded with the Burgundian king Sigismund c. 494-523, and was his chief advisor
-	Gender = "male",
-	Type = "unit-teuton-priest",
-	Civilization = "latin",
-	ProvinceOfOrigin = "Provence", -- Vienne
-	Year = 494, -- began corresponding with Sigismund
-	DeathYear = 523 -- ended corresponding with Sigismund
 })
 
 DefineCharacter("Geofrei Gaimar", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 76.
