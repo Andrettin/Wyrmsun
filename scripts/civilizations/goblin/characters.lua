@@ -99,7 +99,6 @@ DefineCharacter("Orza Chahax", { -- invented by Jesse Crider
 
 DefineCharacter("Greebo", {
 	Name = "Greebo",
-	NameElements = {"word", "goblin", "noun", "Greebo"},
 	Gender = "male",
 	Type = "unit-goblin-spearman",
 	Civilization = "goblin",

@@ -787,7 +787,39 @@ DefineCivilization("goblin", {
 		"goblin/ui/buttonpanel.png", -256, -200,
 		"goblin/ui/infopanel.png", 0, -200
 	},
-	Description = _("Goblins dwell in the caves and highlands of Nidavellir. The frequency of goblin raids into dwarven and gnomish territory has fostered a history of hatred with those races. The emergence of the goblin merchant syndicates has changed this relationship, however. The goblin merchants have become an indispensable part of Nidavellir's trade network, though the dwarves and gnomes do hold grudges against their practices, specially their suspected support of piracy...")
+	Description = _("Goblins dwell in the caves and highlands of Nidavellir. The frequency of goblin raids into dwarven and gnomish territory has fostered a history of hatred with those races. The emergence of the goblin merchant syndicates has changed this relationship, however. The goblin merchants have become an indispensable part of Nidavellir's trade network, though the dwarves and gnomes do hold grudges against their practices, specially their suspected support of piracy..."),
+	PersonalNames = {
+		"male", "Belragor", -- invented by Jesse Crider
+		"male", "Dran",
+		"male", "Erdog",
+		"male", "Fal", -- Fal Khag, goblin from Battle for Wesnoth
+		"male", "Gashnok",
+		"male", "Gatrakh",
+		"male", "Gorokh",
+		"male", "Greebo",
+		"male", "Grogor-Tuk",
+		"male", "Hrugt",
+		"male", "Kardur",
+		"male", "Kartrog",
+		"male", "Krung",
+		"male", "Myrtos", -- invented by Jesse Crider
+		"male", "Odrun",
+		"male", "Orhtib",
+		"male", "Ozdul",
+		"male", "Panok",
+		"male", "Pruol",
+		"male", "Sbrak",
+		"male", "Sdrul",
+		"male", "Thurg",
+		"male", "T'shar", -- T'shar Lggi, goblin from Battle for Wesnoth
+		"male", "Uhmit",
+		"male", "Urdum",
+		"male", "Utrub",
+		"male", "Vrag",
+		"male", "Vrunt",
+		"male", "Zhuk",
+		"male", "Zuzerd",
+	}
 })
 
 DefineCivilization("kobold", {
@@ -805,7 +837,14 @@ DefineCivilization("kobold", {
 		"attack", "icon-gnomish-thrusting-sword-1",
 		"stand-ground", "icon-goblin-stand-ground"
 	},
-	Description = _("Kobolds live in the deep caves of Nidavellir, and worship wyrms as sacred ancestors. They share the dwarven passion for mining and metals, but not their technological advancement. Although kobolds can be inventive, their isolation from other communities has made the spread of progress to their lands more difficult. Being the sole intelligent reptilian race in Nidavellir, they feel threatened by the presence of dwarves, gnomes and goblins - all of which they call \"breastlings\".")
+	Description = _("Kobolds live in the deep caves of Nidavellir, and worship wyrms as sacred ancestors. They share the dwarven passion for mining and metals, but not their technological advancement. Although kobolds can be inventive, their isolation from other communities has made the spread of progress to their lands more difficult. Being the sole intelligent reptilian race in Nidavellir, they feel threatened by the presence of dwarves, gnomes and goblins - all of which they call \"breastlings\"."),
+	PersonalNames = {
+		"Hodeke", -- Source: Jacob Grimm, "Deutsche Mythologie", pp. 392, 1049, 1080.
+		"Hoidike", -- Source: Jacob Grimm, "Deutsche Mythologie", p. 392.
+		"Napfhans", -- urce: Jacob Grimm, "Deutsche Mythologie", p. 393.
+		"Pumphut", -- Source: Jacob Grimm, "Deutsche Mythologie", p. 1049.
+		"Shellycoat", -- Source: Jacob Grimm, "Deutsche Mythologie", p. 394.
+	}
 })
 
 DefineCivilization("minotaur", {
