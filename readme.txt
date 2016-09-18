@@ -86,7 +86,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused the autosave to remain active even after deactivating it in the options.
 
 * Terrain
-- Improvements to the (swamp) rock and cave wall tiles (by Jinn).
+- Improvements to the (swamp) rock, cave wall, dry mud and cave floor tile transitions (by Jinn).
 
 * Units
 - Ships now receive individual names.

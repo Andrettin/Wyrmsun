@@ -118,7 +118,7 @@ DefineTerrainType("dry-mud", {
 	Buildable = true,
 	Flags = {"land", "mud"},
 	InnerBorderTerrains = {"dirt"},
-	OuterBorderTerrains = {"mud"},
+	OuterBorderTerrains = {"mud", "cave-floor"},
 	Graphics = "terrain/dry_mud.png",
 	SolidTiles = {17, 20, 23},
 	AdjacentTransitionTiles = {
