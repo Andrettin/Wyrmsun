@@ -70,6 +70,7 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Temples and docks now correctly have a rally point button.
 - The goblin Dock now correctly the same quantity of under construction frames as those of the other civilizations (new frame by Jinn).
+- Revamped Lumber Mill and Smithy names.
 
 * Factions
 - Revamped Frankish personal names.

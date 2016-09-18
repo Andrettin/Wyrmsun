@@ -54,10 +54,7 @@ DefineLanguageWord("Aur", { -- "Aurr" in Old Icelandic; Source: Richard Cleasby 
 DefineLanguageWord("Bladnir", {
 	Language = "dwarven",
 	Type = "adjective",
-	Meanings = {"Bladed"},
-	AffixNameTypes = {
-		"separate", "prefix", "unit-class-smithy" -- seems sensible
-	}
+	Meanings = {"Bladed"}
 })
 
 DefineLanguageWord("Bodn", {
@@ -79,9 +76,7 @@ DefineLanguageWord("Brising", { -- also name of a group of four dwarves (or the 
 		"compound", "prefix", "singular", "settlement", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "province", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-hills", -- no examples, but seems sensible in face of a general lack of examples
-		"compound", "prefix", "singular", "terrain-mountains", -- no examples, but seems sensible in face of a general lack of examples
-		"separate", "prefix", "unit-class-smithy", -- seems sensible
-		"separate", "suffix", "unit-class-smithy" -- seems sensible
+		"compound", "prefix", "singular", "terrain-mountains" -- no examples, but seems sensible in face of a general lack of examples
 	}
 })
 
@@ -94,9 +89,7 @@ DefineLanguageWord("Dain", {
 	},
 	Gender = "masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 97.
 	AffixNameTypes = {
-		"compound", "prefix", "singular", "genitive", "item-sword", -- example: "Dainsleif"
-		"separate", "prefix", "unit-class-lumber-mill", -- seems sensible
-		"separate", "prefix", "unit-class-smithy" -- seems sensible
+		"compound", "prefix", "singular", "genitive", "item-sword" -- example: "Dainsleif"
 	}
 })
 
@@ -195,8 +188,7 @@ DefineLanguageWord("Leif", {
 	Meanings = {"Patrimony"}, -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 381.
 	Gender = "feminine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 381.
 	AffixNameTypes = {
-		"compound", "suffix", "singular", "item-sword", -- example: "Dainsleif"
-		"separate", "suffix", "unit-class-smithy" -- seems sensible
+		"compound", "suffix", "singular", "item-sword" -- example: "Dainsleif"
 	}
 })
 
@@ -237,16 +229,6 @@ DefineLanguageWord("Naglering", { -- possibly "Nagle-ring"?
 	Type = "noun",
 	Meanings = {},
 	NameTypes = {"item-sword"} -- example: "Naglering" (sword forged by the dwarf Alberich)
-})
-
-DefineLanguageWord("Naut", {
-	Language = "dwarven",
-	Type = "noun",
-	Meanings = {"A Gift or Booty from a Person"}, -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 447.
-	Gender = "masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 447.
-	AffixNameTypes = {
-		"separate", "suffix", "unit-class-smithy" -- seems sensible
-	}
 })
 
 DefineLanguageWord("Nid", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 454.
@@ -290,26 +272,6 @@ DefineLanguageWord("Rad", {
 	},
 })
 
-DefineLanguageWord("Rithil", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 380.
-	Language = "dwarven",
-	Type = "adjective",
-	Meanings = {"Swift-Moving"},
-	AffixNameTypes = {
-		"separate", "prefix", "unit-class-lumber-mill", -- seems sensible
-		"separate", "prefix", "unit-class-smithy" -- seems sensible
-	}
-})
-
-DefineLanguageWord("Skid", {
-	Language = "dwarven",
-	Type = "noun",
-	Meanings = {"Wood"},
-	Gender = "neuter", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 550.
-	AffixNameTypes = {
-		"separate", "suffix", "unit-class-lumber-mill" -- seems sensible
-	}
-})
-
 DefineLanguageWord("Sol", {
 	Language = "dwarven",
 	Type = "noun",
@@ -317,8 +279,7 @@ DefineLanguageWord("Sol", {
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "province", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-hills", -- no examples, but seems sensible in face of a general lack of examples
-		"compound", "prefix", "singular", "terrain-mountains", -- no examples, but seems sensible in face of a general lack of examples
-		"separate", "prefix", "unit-class-smithy" -- seems sensible
+		"compound", "prefix", "singular", "terrain-mountains" -- no examples, but seems sensible in face of a general lack of examples
 	}
 })
 
@@ -347,9 +308,7 @@ DefineLanguageWord("Thjod", { -- Source: Richard Cleasby and Gudbrand Vigfusson,
 		"compound", "prefix", "singular", "settlement", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "province", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-hills", -- no examples, but seems sensible in face of a general lack of examples
-		"compound", "prefix", "singular", "terrain-mountains", -- no examples, but seems sensible in face of a general lack of examples
-		"separate", "prefix", "unit-class-smithy", -- seems sensible
-		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
+		"compound", "prefix", "singular", "terrain-mountains" -- no examples, but seems sensible in face of a general lack of examples
 	}
 })
 
@@ -393,8 +352,6 @@ DefineLanguageWord("Vind", {
 		"compound", "prefix", "singular", "province", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "settlement", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-hills", -- no examples, but seems sensible in face of a general lack of examples
-		"compound", "prefix", "singular", "terrain-mountains", -- no examples, but seems sensible in face of a general lack of examples
-		"separate", "prefix", "unit-class-lumber-mill", -- seems sensible
-		"separate", "prefix", "unit-class-smithy" -- seems sensible
+		"compound", "prefix", "singular", "terrain-mountains" -- no examples, but seems sensible in face of a general lack of examples
 	}
 })

@@ -232,60 +232,6 @@ DefineLanguageWord("Huis", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Pr
 	}
 })
 
-DefineLanguageWord("Ing", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, pp. 331, 335.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "unit-class-farm" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, pp. 331, 335.
-	}
-})
-
-DefineLanguageWord("Ingakker", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "unit-class-farm" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	}
-})
-
-DefineLanguageWord("Ingen", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "unit-class-farm" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	}
-})
-
-DefineLanguageWord("Inggoed", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "unit-class-farm" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	}
-})
-
-DefineLanguageWord("Ingheim", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "unit-class-farm" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	}
-})
-
-DefineLanguageWord("Inghuis", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "unit-class-farm" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	}
-})
-
 DefineLanguageWord("Klei", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 38.
 	Language = "dutch",
 	Type = "noun",

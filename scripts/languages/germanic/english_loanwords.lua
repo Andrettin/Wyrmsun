@@ -41,7 +41,6 @@ DefineLanguageWord("Hauberk", {
 	Type = "noun",
 	Meanings = {"Hauberk"},
 	DerivesFrom = {"old-french", "noun", "Halberc"}, -- Merriam-Webster gives "Hauberc" instead; Source: http://www.merriam-webster.com/dictionary/hauberk
-	Gender = "neuter",
-	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-smithy"} -- seems sensible
+	Gender = "neuter"
 })
 
