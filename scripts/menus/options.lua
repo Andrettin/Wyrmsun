@@ -527,10 +527,10 @@ function RunGameplayOptionsMenu()
 		function()
 			if (wyr.preferences.Autosave == false) then
 				wyr.preferences.Autosave = true
-				Preference.Autosave = 5
+				Preference.AutosaveMinutes = 5
 			else
 				wyr.preferences.Autosave = false
-				Preference.Autosave = 0
+				Preference.AutosaveMinutes = 0
 			end
 			menu:stop()
 			RunGameplayOptionsMenu()

@@ -1875,9 +1875,9 @@ UI.ButtonPanel.ShowCommandKey = wyr.preferences.ShowCommandKey
 Preference.ShowPathlines = wyr.preferences.ShowPathlines
 Preference.ShowMessages = wyr.preferences.ShowMessages
 if (wyr.preferences.Autosave) then
-	Preference.Autosave = 5
+	Preference.AutosaveMinutes = 5
 else
-	Preference.Autosave = 0
+	Preference.AutosaveMinutes = 0
 end
 Preference.PlayerColorCircle = wyr.preferences.PlayerColorCircle
 Preference.HotkeySetup = wyr.preferences.HotkeySetup

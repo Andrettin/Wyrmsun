@@ -198,7 +198,7 @@ DefineQuest("karls-farm", { -- based on the Song of Rig; Source: Kevin Crossley-
 
 DefineQuest("jarls-swordsmanship", { -- based on the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 22-24.
 	Name = "Erala's Swordsmanship", -- in the Song of Rig, Rig (the God Heimdall) fathers Thrall, Karl and Jarl, each of which originates a class of the Norse world; namely serfs, peasants and warriors; "jarl" is a reflex of Proto-Germanic "erala"
-	Icon = "icon-germanic-warrior",
+	Icon = "icon-jarl",
 	Description = "The young warrior Erala, the son of Fader and Moder, was fast to master the art of the sword. He proposes to train a few brave warriors to protect our homeland.", -- in the original myth his parents were "Fathir" and "Mothir"; "Fadēr" is the word which gave origin to "Fathir", while "Môder" gave origin to "Mothir"
 	World = "Earth",
 	Civilization = "germanic",

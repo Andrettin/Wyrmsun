@@ -69,10 +69,12 @@ https://github.com/Andrettin/Wyrmsun
 
 * Buildings
 - Temples and docks now correctly have a rally point button.
+- The goblin Dock now correctly the same quantity of under construction frames as those of the other civilizations (new frame by Jinn).
 
 * Factions
 - Revamped Frankish personal names.
 - Revamped Anglo-Saxon personal names.
+- Revamped Lombardic personal names.
 
 * Items
 - Fixed an issue which caused units without inventory to clear their order queue after picking up a healing item.
@@ -81,6 +83,10 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - Fixed issue which caused Germanic players to have the Teuton Civilization upgrade researched at scenario start when restarting the scenario after having developed the Teuton civilization.
 - New See Garrison button icon (by Jinn).
+- Fixed issue which caused the autosave to remain active even after deactivating it in the options.
+
+* Terrain
+- Improvements to the (swamp) rock and cave wall tiles (by Jinn).
 
 * Units
 - Ships now receive individual names.

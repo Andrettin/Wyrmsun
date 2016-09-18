@@ -25,22 +25,25 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineMapTemplate("nidavellir", {
-	Name = "Nidavellir",
-	Width = 256,
-	Height = 256,
-	BaseTerrain = "shallow-water-swamp",
+DefineMapTemplate("untersberg", {
+	Name = "Untersberg",
+	MainTemplate = "nidavellir",
+	Width = 64,
+	Height = 64,
+	BaseTerrain = "dry-mud",
 	GeneratedTerrains = {
-		"mud", "very-high",
-		"dry-mud", "high",
+		"mud", "low",
 		"shallow-water-swamp", "low",
-		"rock-swamp", "low",
-		"flamefood-tree", "low"
+		"rock-swamp", "high",
+		"flamefood-tree", "medium"
+	},
+	ExternalGeneratedTerrains = {
+		"mud", "medium"
 	},
 	GeneratedResources = {
-		"unit-gold-deposit", 8,
-		"unit-silver-deposit", 8,
-		"unit-copper-deposit", 8
+		"unit-gold-deposit", 4,
+		"unit-silver-deposit", 4,
+		"unit-copper-deposit", 4
 	},
 	PlayerLocationGeneratedResources = {
 		"unit-gold-deposit", 1,
@@ -49,11 +52,7 @@ DefineMapTemplate("nidavellir", {
 	}
 })
 
-SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "Khag Tribe", {-1, -1})
-SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "Lggi Tribe", {-1, -1})
-
-Load("scripts/map_templates/aurvang.lua")
-Load("scripts/map_templates/joruvellir.lua")
-Load("scripts/map_templates/svarinshaug.lua")
-Load("scripts/map_templates/untersberg.lua")
---Load("scripts/map_templates/caverns_of_chaincolt_city.lua")
+SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "Acthnic Tribe", {-1, -1})
+SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "Cubital Tribe", {-1, -1})
+SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "Sagan Tribe", {-1, -1})
+SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "Vulcan Tribe", {-1, -1})

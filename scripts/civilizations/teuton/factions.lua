@@ -293,7 +293,16 @@ DefineFaction("Lombard Tribe", {
 	DevelopsTo = {"Lombardy"},
 	FactionUpgrade = "upgrade-lombard-tribe-faction",
 	PersonalNames = {
-		"male", "Desiderius" -- king of the Lombards; Source: "Medieval Warfare V.2", 2013, p. 7.
+		"male", "Agilulf", -- king of the Lombards (from 591 to 616); Source: "Medieval Warfare IV.6", 2013, p. 18.
+		"male", "Aistulf", -- king of the Lombards (from 749 to 756); Source: "Medieval Warfare IV.6", 2013, p. 9.
+		"male", "Alboin", -- king of the Lombards (from 560 to 572); Source: "Medieval Warfare IV.6", 2013, p. 8.
+		"male", "Arichis", -- Lombard duke of Benevento; Source: "Medieval Warfare IV.6", 2013, p. 18.
+		"male", "Ariulf", -- Lombard duke of Spoleto; Source: "Medieval Warfare IV.6", 2013, p. 18.
+		"male", "Authari", -- king of the Lombards (from 584 to 590); Source: "Medieval Warfare IV.6", 2013, p. 16.
+		"male", "Desiderius", -- king of the Lombards; Source: "Medieval Warfare V.2", 2013, p. 7.
+		"male", "Gisulf", -- Source: "Medieval Warfare IV.6", 2013, p. 8.
+		"male", "Liutprand", -- king of the Lombards (from 712 to 744); Source: "Medieval Warfare IV.6", 2013, p. 9.
+		"male", "Nordulf" -- Lombard mercenary; Source: "Medieval Warfare IV.6", 2013, p. 18.
 	},
 	HistoricalFactionDerivations = {-264, "germanic", "Istaevone Tribe"},
 	HistoricalTechnologies = {

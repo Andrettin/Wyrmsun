@@ -25,22 +25,25 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineMapTemplate("nidavellir", {
-	Name = "Nidavellir",
-	Width = 256,
-	Height = 256,
-	BaseTerrain = "shallow-water-swamp",
+DefineMapTemplate("svarinshaug", {
+	Name = "Svarinshaug",
+	MainTemplate = "nidavellir",
+	Width = 64,
+	Height = 64,
+	BaseTerrain = "dry-mud",
 	GeneratedTerrains = {
-		"mud", "very-high",
-		"dry-mud", "high",
+		"mud", "medium",
 		"shallow-water-swamp", "low",
-		"rock-swamp", "low",
+		"rock-swamp", "high",
 		"flamefood-tree", "low"
 	},
+	ExternalGeneratedTerrains = {
+		"mud", "medium"
+	},
 	GeneratedResources = {
-		"unit-gold-deposit", 8,
-		"unit-silver-deposit", 8,
-		"unit-copper-deposit", 8
+		"unit-gold-deposit", 2,
+		"unit-silver-deposit", 2,
+		"unit-copper-deposit", 2
 	},
 	PlayerLocationGeneratedResources = {
 		"unit-gold-deposit", 1,
@@ -49,11 +52,4 @@ DefineMapTemplate("nidavellir", {
 	}
 })
 
-SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "Khag Tribe", {-1, -1})
-SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "Lggi Tribe", {-1, -1})
-
-Load("scripts/map_templates/aurvang.lua")
-Load("scripts/map_templates/joruvellir.lua")
-Load("scripts/map_templates/svarinshaug.lua")
-Load("scripts/map_templates/untersberg.lua")
---Load("scripts/map_templates/caverns_of_chaincolt_city.lua")
+SetMapTemplateUnit("svarinshaug", "unit-dwarven-town-hall", "Brising Clan", {-1, -1})
