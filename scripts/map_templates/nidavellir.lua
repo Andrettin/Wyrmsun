@@ -41,16 +41,11 @@ DefineMapTemplate("nidavellir", {
 		"unit-gold-deposit", 8,
 		"unit-silver-deposit", 8,
 		"unit-copper-deposit", 8
-	},
-	PlayerLocationGeneratedResources = {
-		"unit-gold-deposit", 1,
-		"unit-wood-pile", 16,
-		"unit-stone-pile", 16
 	}
 })
 
-SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "Khag Tribe", {-1, -1})
-SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "Lggi Tribe", {-1, -1})
+--SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "Khag Tribe", {-1, -1})
+--SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "Lggi Tribe", {-1, -1})
 
 Load("scripts/map_templates/aurvang.lua")
 Load("scripts/map_templates/joruvellir.lua")
