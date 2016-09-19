@@ -42,6 +42,11 @@ DefineCivilization("neutral", {
 		"dwarf/ui/resource.png", 0, 0,
 		"dwarf/ui/buttonpanel.png", -256, -200,
 		"dwarf/ui/infopanel.png", 0, -200
+	},
+	ShipNames = {
+		"Naglfar", -- ship of the giants in Norse mythology, whose helmsman is Hrym; made of dead men's nails; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 21.
+		"Ringhorn", -- Balder's ship in Norse mythology in which he was cremanted; ; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 155, 249.
+		"Skidbladnir" -- ship built by dwarves in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 101.
 	}
 })
 
@@ -73,6 +78,7 @@ DefineCivilization("dwarf", {
 	Display = "Dwarf",
 	Visible = true,
 	Species = "dwarf",
+	ParentCivilization = "neutral",
 	Language = "dwarven",
 	Adjective = "Dwarven",
 	DefaultColor = "red",
@@ -573,6 +579,7 @@ DefineCivilization("elf", {
 	Display = "Elf",
 	Visible = true,
 	Species = "elf",
+	ParentCivilization = "neutral",
 --	Language = "elven",
 	Adjective = "Elven",
 	--[[
@@ -620,6 +627,7 @@ DefineCivilization("ettin", {
 	Display = "Ettin",
 	Visible = true,
 	Species = "ettin",
+	ParentCivilization = "neutral",
 --	Language = "ettin",
 	Adjective = "Ettin",
 	Playable = false,
@@ -652,6 +660,7 @@ DefineCivilization("germanic", {
 	Display = "Germanic",
 	Visible = true,
 	Species = "human",
+	ParentCivilization = "neutral",
 	Language = "proto-germanic",
 	Adjective = "Germanic",
 	DefaultColor = "orange",
@@ -771,6 +780,7 @@ DefineCivilization("goblin", {
 	Display = "Goblin",
 	Visible = true,
 	Species = "goblin",
+	ParentCivilization = "neutral",
 	Language = "goblin",
 	Adjective = "Goblin",
 	DefaultColor = "teal",
@@ -854,6 +864,7 @@ DefineCivilization("minotaur", {
 	Display = "Minotaur",
 	Visible = true,
 	Species = "minotaur",
+	ParentCivilization = "neutral",
 	Adjective = "Minotaur",
 	Playable = false,
 	DefaultColor = "red"
@@ -863,6 +874,7 @@ DefineCivilization("orc", {
 	Display = "Orc",
 	Visible = true,
 	Species = "orc",
+	ParentCivilization = "neutral",
 	Adjective = "Orc",
 	Playable = false,
 	DefaultColor = "red",
@@ -1450,6 +1462,7 @@ DefineCivilization("wose", {
 	Display = "Wose",
 	Visible = true,
 	Species = "wose",
+	ParentCivilization = "neutral",
 	Adjective = "Wose",
 	Playable = false,
 	DefaultColor = "green"

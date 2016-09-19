@@ -128,10 +128,6 @@ function DefineUnitType(unit_type, data)
 		town_hall = true
 	end
 	
-	if (data.Parent and GetUnitTypeData(data.Parent, "Type") == "naval" and GetUnitTypeData(data.Parent, "organic") == false and not data.PersonalNames and data.Civilization and table.getn(GetCivilizationData(data.Civilization, "ShipNames")) > 0) then -- if is a ship, and its civilization has ship names, then don't inherit personal names of ships from the parent unit type
-		data.PersonalNames = {}
-	end
-	
 	if (data.Parent ~= nil) then
 		OldDefineUnitType(unit_type, {Parent = data.Parent})
 		data.Parent = nil
@@ -3058,11 +3054,6 @@ DefineUnitType("unit-template-ship", {
 	RepairCosts = {"gold", 1, "lumber", 1},
 --	Corpse = "unit-dead-sea-body",
 	Type = "naval",
-	PersonalNames = {
-		"Naglfar", -- ship of the giants in Norse mythology, whose helmsman is Hrym; made of dead men's nails
-		"Ringhorn", -- Balder's ship in Norse mythology in which he was cremanted; ; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 155, 249.
-		"Skidbladnir" -- ship built by dwarves in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 101.
-	},
 	Sounds = {
 		"selected", "ship-selected",
 		"ready", "ship-selected",
