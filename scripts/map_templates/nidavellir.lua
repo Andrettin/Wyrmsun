@@ -33,14 +33,13 @@ DefineMapTemplate("nidavellir", {
 	GeneratedTerrains = {
 		"mud", "very-high",
 		"dry-mud", "high",
-		"shallow-water-swamp", "low",
 		"rock-swamp", "low",
 		"flamefood-tree", "low"
 	},
 	GeneratedResources = {
-		"unit-gold-deposit", 8,
-		"unit-silver-deposit", 8,
-		"unit-copper-deposit", 8
+		"unit-gold-deposit", 2,
+		"unit-silver-deposit", 2,
+		"unit-copper-deposit", 2
 	}
 })
 

@@ -728,6 +728,9 @@ DefineCivilization("celt", { -- has to be defined after the germanic civilizatio
 		"male", "Pryderi", -- prince of Dyfed; son of Pwyll and Rhiannon; had golden yellow hair; also known as "Gwri"; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 31, 33-35.
 		"male", "Pwyll", -- prince of Dyfed, lord of the seven Cantrefis of Dyfed; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 9.
 		"male", "Solomon", -- king of Powys; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 78.
+	},
+	SettlementNames = {
+		"Moridunum" -- the modern Carmarthen; main settlement of the Demetae (ancient Briton people); Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
 	}
 })
 

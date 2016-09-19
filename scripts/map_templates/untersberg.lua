@@ -31,6 +31,7 @@ DefineMapTemplate("untersberg", {
 	Width = 64,
 	Height = 64,
 	BaseTerrain = "dry-mud",
+	SurroundingTerrain = "mud",
 	GeneratedTerrains = {
 		"mud", "low",
 		"shallow-water-swamp", "low",
@@ -38,7 +39,10 @@ DefineMapTemplate("untersberg", {
 		"flamefood-tree", "medium"
 	},
 	ExternalGeneratedTerrains = {
-		"mud", "medium"
+		"mud", "high",
+		"dry-mud", "high",
+		"rock-swamp", "high",
+		"flamefood-tree", "medium"
 	},
 	GeneratedResources = {
 		"unit-gold-deposit", 4,

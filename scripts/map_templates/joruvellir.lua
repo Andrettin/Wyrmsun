@@ -31,18 +31,22 @@ DefineMapTemplate("joruvellir", {
 	Width = 64,
 	Height = 64,
 	BaseTerrain = "dry-mud",
+	SurroundingTerrain = "mud",
 	GeneratedTerrains = {
 		"mud", "low",
 		"rock-swamp", "medium",
 		"flamefood-tree", "low"
 	},
 	ExternalGeneratedTerrains = {
-		"mud", "medium"
+		"mud", "high",
+		"dry-mud", "high",
+		"rock-swamp", "medium",
+		"flamefood-tree", "low"
 	},
 	GeneratedResources = {
-		"unit-gold-deposit", 2,
-		"unit-silver-deposit", 2,
-		"unit-copper-deposit", 2
+		"unit-gold-deposit", 1,
+		"unit-silver-deposit", 1,
+		"unit-copper-deposit", 1
 	},
 	PlayerLocationGeneratedResources = {
 		"unit-gold-deposit", 1,
