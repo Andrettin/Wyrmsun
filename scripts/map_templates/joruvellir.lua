@@ -43,12 +43,14 @@ DefineMapTemplate("joruvellir", {
 		"rock-swamp", "medium",
 		"flamefood-tree", "low"
 	},
-	GeneratedResources = {
+	GeneratedNeutralUnits = {
 		"unit-gold-deposit", 1,
 		"unit-silver-deposit", 1,
-		"unit-copper-deposit", 1
+		"unit-copper-deposit", 1,
+		"unit-yale", 8,
+		"unit-gryphon", 2
 	},
-	PlayerLocationGeneratedResources = {
+	PlayerLocationGeneratedNeutralUnits = {
 		"unit-gold-deposit", 1,
 		"unit-wood-pile", 16,
 		"unit-stone-pile", 16

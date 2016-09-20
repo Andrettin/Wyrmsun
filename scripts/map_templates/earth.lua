@@ -37,12 +37,25 @@ DefineMapTemplate("earth", {
 		"dirt", "high",
 		"pine-tree", "high"
 	},
-	GeneratedResources = {
+	GeneratedNeutralUnits = {
 		"unit-gold-deposit", 8,
 		"unit-silver-deposit", 8,
-		"unit-copper-deposit", 8
+		"unit-copper-deposit", 8,
+		"unit-bee", 64,
+		"unit-fly", 64,
+		"unit-bug", 64,
+		"unit-worm", 64,
+		"unit-snail", 64,
+		"unit-slug", 64,
+		"unit-frog", 64,
+		"unit-bird", 64,
+		"unit-crow", 64,
+		"unit-rat", 64,
+		"unit-goat", 32,
+		"unit-boar", 32,
+		"unit-horse", 16
 	},
-	PlayerLocationGeneratedResources = {
+	PlayerLocationGeneratedNeutralUnits = {
 		"unit-gold-deposit", 1,
 		"unit-wood-pile", 16,
 		"unit-stone-pile", 8

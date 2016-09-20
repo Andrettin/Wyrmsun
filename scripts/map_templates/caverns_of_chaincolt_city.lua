@@ -36,7 +36,7 @@ DefineMapTemplate("caverns-of-chaincolt-city", { -- From Battle for Wesnoth: The
 		"rockbound-cave-floor", "medium",
 		"cave-wall", "high"
 	},
-	PlayerLocationGeneratedResources = {
+	PlayerLocationGeneratedNeutralUnits = {
 		"unit-gold-deposit", 1,
 		"unit-wood-pile", 16,
 		"unit-stone-pile", 16

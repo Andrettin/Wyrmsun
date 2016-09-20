@@ -52,7 +52,8 @@ DefineUnitType("unit-template-diminutive-fauna-unit", {
 	BoardSize = 0,
 })
 
-DefineUnitType("unit-bee", { Name = _("Bee"),
+DefineUnitType("unit-bee", {
+	Name = _("Bee"),
 	Parent = "unit-template-diminutive-fauna-unit",
 	Species = "bee",
 	Image = {"file", "neutral/units/bee.png", "size", {6, 6}},
@@ -86,7 +87,8 @@ DefineUnitType("unit-bee", { Name = _("Bee"),
 	}
 } )
 
-DefineUnitType("unit-fly", { Name = _("Fly"),
+DefineUnitType("unit-fly", {
+	Name = _("Fly"),
 	Parent = "unit-template-diminutive-fauna-unit",
 	Species = "fly",
 	Image = {"file", "neutral/units/fly.png", "size", {6, 6}},
@@ -119,7 +121,8 @@ DefineUnitType("unit-fly", { Name = _("Fly"),
 	}
 } )
 
-DefineUnitType("unit-bug", { Name = _("Bug"),
+DefineUnitType("unit-bug", {
+	Name = _("Bug"),
 	Parent = "unit-template-diminutive-fauna-unit",
 	Species = "bug",
 	Image = {"file", "neutral/units/bug.png", "size", {6, 6}},
@@ -151,7 +154,8 @@ DefineUnitType("unit-bug", { Name = _("Bug"),
 	}
 } )
 
-DefineUnitType("unit-worm", { Name = _("Worm"),
+DefineUnitType("unit-worm", {
+	Name = _("Worm"),
 	Parent = "unit-template-diminutive-fauna-unit",
 	Species = "worm",
 	Image = {"file", "neutral/units/worm.png", "size", {72, 72}},
@@ -184,7 +188,8 @@ DefineUnitType("unit-worm", { Name = _("Worm"),
 	}
 } )
 
-DefineUnitType("unit-snail", { Name = _("Snail"),
+DefineUnitType("unit-snail", {
+	Name = _("Snail"),
 	Parent = "unit-template-fauna-unit",
 	Species = "snail",
 	Image = {"file", "neutral/units/snail.png", "size", {32, 32}},
@@ -226,7 +231,8 @@ DefineUnitType("unit-snail", { Name = _("Snail"),
 	}
 } )
 
-DefineUnitType("unit-slug", { Name = _("Slug"),
+DefineUnitType("unit-slug", {
+	Name = _("Slug"),
 	Parent = "unit-template-fauna-unit",
 	Species = "slug",
 	Image = {"file", "neutral/units/slug.png", "size", {32, 32}},
@@ -287,7 +293,8 @@ DefineUnitType("unit-slug", { Name = _("Slug"),
 	}
 } )
 
-DefineUnitType("unit-snigill", { Name = _("Baby Snigill"),
+DefineUnitType("unit-snigill", {
+	Name = _("Baby Snigill"),
 	Parent = "unit-template-fauna-unit",
 	Species = "snigill",
 	Image = {"file", "neutral/units/snail_blue_purple_shell.png", "size", {32, 32}},
@@ -329,7 +336,8 @@ DefineUnitType("unit-snigill", { Name = _("Baby Snigill"),
 	}
 } )
 
-DefineUnitType("unit-frog", { Name = _("Frog"),
+DefineUnitType("unit-frog", {
+	Name = _("Frog"),
 	Parent = "unit-template-fauna-unit",
 	Species = "frog",
 	--Description = _("Frog"),
@@ -1189,7 +1197,8 @@ DefineUnitType("unit-slime", {
 	}
 } )
 
-DefineUnitType("unit-bird", { Name = _("Bird"),
+DefineUnitType("unit-bird", {
+	Name = _("Bird"),
 	Parent = "unit-template-fauna-unit",
 	Species = "bird",
 	Image = {"file", "neutral/units/bird_brown.png", "size", {32, 32}},
@@ -1245,7 +1254,8 @@ DefineUnitType("unit-bird", { Name = _("Bird"),
 	}
 } )
 
-DefineUnitType("unit-crow", { Name = _("Crow"),
+DefineUnitType("unit-crow", {
+	Name = _("Crow"),
 	Parent = "unit-template-fauna-unit",
 	Species = "crow",
 	Image = {"file", "neutral/units/bird_black.png", "size", {32, 32}},
@@ -1289,7 +1299,8 @@ DefineUnitType("unit-crow", { Name = _("Crow"),
 	}
 } )
 
-DefineUnitType("unit-bat", { Name = _("Bat"),
+DefineUnitType("unit-bat", {
+	Name = _("Bat"),
 	Parent = "unit-template-fauna-unit",
 	Species = "bat",
 	Image = {"file", "neutral/units/bat.png", "size", {32, 32}},
@@ -1334,7 +1345,8 @@ DefineUnitType("unit-bat", { Name = _("Bat"),
 	}
 } )
 
-DefineUnitType("unit-blood-bat", { Name = _("Blood Bat"),
+DefineUnitType("unit-blood-bat", {
+	Name = _("Blood Bat"),
 	Parent = "unit-template-fauna-unit",
 	Species = "blood-bat",
 	Image = {"file", "neutral/units/blood_bat.png", "size", {64, 64}},
@@ -1381,7 +1393,8 @@ DefineUnitType("unit-blood-bat", { Name = _("Blood Bat"),
 	}
 } )
 
-DefineUnitType("unit-dread-bat", { Name = _("Dread Bat"),
+DefineUnitType("unit-dread-bat", {
+	Name = _("Dread Bat"),
 	Parent = "unit-template-fauna-unit",
 	Species = "dread-bat",
 	Image = {"file", "neutral/units/dread_bat.png", "size", {64, 64}},

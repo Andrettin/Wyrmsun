@@ -44,12 +44,14 @@ DefineMapTemplate("untersberg", {
 		"rock-swamp", "high",
 		"flamefood-tree", "medium"
 	},
-	GeneratedResources = {
+	GeneratedNeutralUnits = {
 		"unit-gold-deposit", 4,
 		"unit-silver-deposit", 4,
-		"unit-copper-deposit", 4
+		"unit-copper-deposit", 4,
+		"unit-snigill", 16,
+		"unit-slime", 4
 	},
-	PlayerLocationGeneratedResources = {
+	PlayerLocationGeneratedNeutralUnits = {
 		"unit-gold-deposit", 1,
 		"unit-wood-pile", 16,
 		"unit-stone-pile", 16

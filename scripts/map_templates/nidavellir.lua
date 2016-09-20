@@ -36,10 +36,17 @@ DefineMapTemplate("nidavellir", {
 		"rock-swamp", "low",
 		"flamefood-tree", "low"
 	},
-	GeneratedResources = {
+	GeneratedNeutralUnits = {
 		"unit-gold-deposit", 2,
 		"unit-silver-deposit", 2,
-		"unit-copper-deposit", 2
+		"unit-copper-deposit", 2,
+		"unit-snigill", 64,
+		"unit-slime", 32,
+		"unit-blood-bat", 32,
+		"unit-yale", 16,
+		"unit-dread-bat", 16,
+		"unit-gryphon", 8,
+		"unit-wyrm", 4
 	}
 })
 

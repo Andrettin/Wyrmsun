@@ -17,5 +17,3 @@ unit = CreateUnit("unit-germanic-warrior", 0, {0, 64})
 SetUnitVariable(unit, "Active", false)
 unit = CreateUnit("unit-germanic-worker", 0, {0, 64})
 unit = CreateUnit("unit-germanic-worker", 0, {0, 64})
-
-CreateCritters()
