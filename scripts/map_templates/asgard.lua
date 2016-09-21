@@ -25,6 +25,15 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-Load("scripts/map_templates/earth.lua")
-Load("scripts/map_templates/nidavellir.lua")
-Load("scripts/map_templates/asgard.lua")
+DefineMapTemplate("asgard", {
+	Name = "Asgard",
+	Width = 64,
+	Height = 64,
+	BaseTerrain = "dirt",
+	GeneratedTerrains = {
+		"rock", "low",
+		"shallow-water", "low",
+		"grass", "extremely-high",
+		"pine-tree", "high"
+	}
+})

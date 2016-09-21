@@ -158,33 +158,10 @@ function HandleCheats(str)
 			end
 		end
 	end
-
-  elseif (str == "fountain of youth") then
-		local uncount = 0
-		uncount = GetUnits("any")
-		for unit1 = 1,table.getn(uncount) do
-			local species = GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Species")
-			if (GetUnitBoolFlag(uncount[unit1], "Fauna") and species ~= "" and GetUnitVariable(uncount[unit1], "IndividualUpgrade", GetSpeciesData(species, "ChildUpgrade")) == false) then
-				SetUnitVariable(uncount[unit1], "IndividualUpgrade", GetSpeciesData(GetUnitVariable(uncount[unit1], "Ident"), "ChildUpgrade"), true)
-			end
-		end
-		AddMessage(_("All animals are now young"))
-
-  elseif (str == "famine") then
-		local uncount = 0
-		uncount = GetUnits("any")
-		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitBoolFlag(uncount[unit1], "Fauna")) then
-				SetUnitVariable(uncount[unit1], "Hunger", 1000)
-			end
-		end
-
-  elseif (str == "horserider") then
-		unit = CreateUnit("unit-teuton-ritter", GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
-
   elseif (str == "alsvid") then
 		GameTimeOfDay = 2
-
+  elseif (string.sub(str, 0, 7) == "bifrost") then
+	ChangeCurrentMapLayer(tonumber(string.sub(str, 9)))
   else
     return false
   end
