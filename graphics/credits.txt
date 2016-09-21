@@ -1297,6 +1297,7 @@ Mrmo Tarius:
 /graphics/neutral/icons/book_blue.png (licensed under the CC0)
 /graphics/neutral/icons/book_red.png (licensed under the CC0)
 /graphics/neutral/icons/galerix_exilis.png (licensed under the CC0)
+/graphics/neutral/icons/megacricetodon_collongensis.png (licensed under the CC0)
 /graphics/neutral/icons/printing_press.png (licensed under the CC0)
 /graphics/neutral/icons/serfdom.png (licensed under the CC0)
 /graphics/neutral/icons/unicorn.png (modified from Jinn's horse icon) (licensed under the CC0)
