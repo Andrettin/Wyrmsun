@@ -86,6 +86,9 @@ https://github.com/Andrettin/Wyrmsun
 - New See Garrison button icon (by Jinn).
 - Fixed issue which caused the autosave to remain active even after deactivating it in the options.
 
+* Quests
+- The player now receives a notification when new in-game quests are available, instead of a quest symbol hovering over the town hall.
+
 * Terrain
 - Improvements to the (swamp) rock, cave wall, dry mud and cave floor tile transitions (by Jinn).
 
