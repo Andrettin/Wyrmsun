@@ -47,9 +47,12 @@ function ConvertUnitType(unittype, civilization, terrain)
 end
 
 -- Convert unit type to the player's race
-function CreateUnit(unittype, player, pos)
+function CreateUnit(unittype, player, pos, z)
+	if (z == nil) then
+		z = 0
+	end
 	if (GameCycle ~= 0) then
-		return OldCreateUnit(unittype, player, pos)
+		return OldCreateUnit(unittype, player, pos, z)
 	end
 
 	-- Don't add any units if the player setup the units to use, and don't add scenario units if in a grand strategy game
@@ -84,7 +87,7 @@ function CreateUnit(unittype, player, pos)
 		unittype = ConvertUnitType(unittype, GetPlayerData(player, "RaceName"), GetCurrentTileset())
 	end
 
-	return OldCreateUnit(unittype, player, pos)
+	return OldCreateUnit(unittype, player, pos, z)
 end
 
 if (OldSetPlayerData == nil) then

@@ -35,5 +35,10 @@ DefineMapTemplate("asgard", {
 		"shallow-water", "low",
 		"grass", "extremely-high",
 		"pine-tree", "high"
+	},
+	GeneratedNeutralUnits = {
+		"unit-yale", 4,
+		"unit-goat", 8,
+		"unit-horse", 4
 	}
 })

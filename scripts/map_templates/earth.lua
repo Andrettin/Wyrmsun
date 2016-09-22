@@ -32,7 +32,6 @@ DefineMapTemplate("earth", {
 	TerrainFile = "scripts/map_templates/earth.map",
 	GeneratedTerrains = {
 		"rock", "medium",
-		"rock-swamp", "low",
 		"grass", "extremely-high",
 		"dirt", "high",
 		"pine-tree", "high"
