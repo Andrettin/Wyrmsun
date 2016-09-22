@@ -60,3 +60,9 @@ DefineIcon({
 	Size = {46, 38},
 	File = "latin/icons/stables.png"
 })
+
+DefineIcon({
+	Name = "icon-latin-pilum",
+	Size = {46, 38},
+	File = "latin/icons/pilum.png"
+})
