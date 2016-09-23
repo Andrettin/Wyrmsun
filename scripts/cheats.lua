@@ -159,7 +159,7 @@ function HandleCheats(str)
 		end
 	end
   elseif (str == "alsvid") then
-		GameTimeOfDay = 2
+		SetTimeOfDay(2)
   elseif (string.sub(str, 0, 7) == "bifrost") then
 	ChangeCurrentMapLayer(tonumber(string.sub(str, 9)))
   else

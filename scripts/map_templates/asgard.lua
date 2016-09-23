@@ -29,6 +29,7 @@ DefineMapTemplate("asgard", {
 	Name = "Asgard",
 	Width = 64,
 	Height = 64,
+	TimeOfDaySeconds = 0, -- always day
 	BaseTerrain = "dirt",
 	GeneratedTerrains = {
 		"rock", "low",

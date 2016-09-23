@@ -77,7 +77,7 @@ if (LoadedGame == false) then
 	SetPlayerData(0, "Allow", "unit-copper-mine", "F")
 	SetPlayerData(0, "Allow", "unit-brising-miner", "F")
 	
-	GameTimeOfDay = 2
+	SetTimeOfDay(2)
 end
 
 RemovePlayerObjective(GetFactionPlayer("Brising Clan"), "- Defeat your enemies")
@@ -175,7 +175,7 @@ AddTrigger("a-rocky-home-always-day",
 		return true
 	end,
 	function()
-		GameTimeOfDay = 2
+		SetTimeOfDay(2)
 		return true
 	end
 )
