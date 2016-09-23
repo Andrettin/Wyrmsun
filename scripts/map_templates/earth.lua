@@ -27,6 +27,7 @@
 
 DefineMapTemplate("earth", {
 	Name = "Earth",
+	World = "Earth",
 	Width = 8192,
 	Height = 4096,
 	TerrainFile = "scripts/map_templates/earth.map",

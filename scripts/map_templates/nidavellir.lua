@@ -27,6 +27,7 @@
 
 DefineMapTemplate("nidavellir", {
 	Name = "Nidavellir",
+	World = "Nidavellir",
 	Width = 256,
 	Height = 256,
 	BaseTerrain = "shallow-water-swamp",

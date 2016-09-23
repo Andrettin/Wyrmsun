@@ -27,6 +27,7 @@
 
 DefineMapTemplate("asgard", {
 	Name = "Asgard",
+	Plane = "Asgard",
 	Width = 64,
 	Height = 64,
 	TimeOfDaySeconds = 0, -- always day
