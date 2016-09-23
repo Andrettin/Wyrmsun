@@ -557,3 +557,5 @@ SetMapTemplateUnit("earth", "unit-germanic-town-hall", "Ingaevone Tribe", {4054,
 SetMapTemplateUnit("earth", "unit-germanic-town-hall", "Skeldung Tribe", {4112, 784}, -2800) -- Leidre / Lejre; Funnel Beaker culture ended in Zealand in 2800 BC and the Corded Ware culture (neolithic) began; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 38. In the Ynglinga Saga, Odin set his son Skjöldr to rule in Leidre after their people (who here we equate with the cultural ancestors of the Germanics who migrated to Scandinavia) conquered the land
 
 SetMapTemplateUnit("earth", "unit-latin-town-hall", "Rome", {4126, 1096}, -500) -- Rome had been founded and was independent by 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+
+SetMapTemplateLayerConnector("earth", "unit-glyph", {3766, 667 + 70}, "Asgard")
