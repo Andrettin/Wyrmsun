@@ -559,3 +559,5 @@ SetMapTemplateUnit("earth", "unit-germanic-town-hall", "Skeldung Tribe", {4112, 
 SetMapTemplateUnit("earth", "unit-latin-town-hall", "Rome", {4126, 1096}, -500) -- Rome had been founded and was independent by 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 
 SetMapTemplateLayerConnector("earth", "unit-glyph", {3766, 667 + 70}, "Asgard")
+
+-- In Welsh legends, Gorsedd Arberth (a hill/burial mound near Arberth) was a gateway to Annwn; thus it could be a portal that leads to Annwn in Alfheim; ; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 124.
