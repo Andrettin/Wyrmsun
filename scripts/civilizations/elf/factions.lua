@@ -30,7 +30,7 @@ DefineFaction("Annwn", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der 
 	Type = "polity",
 	Colors = {"brown"},
 	DefaultTier = "kingdom", -- Arawn was king of Annwn
-	Description = "Annwn is an elven kingdom, famous for the civil war fought between Arawn and Hafgan for its throne."
+	Description = "Annwn is an elven island kingdom, famous for the civil war fought between Arawn and Hafgan for its throne."
 })
 
 DefineFaction("Lintanir", {

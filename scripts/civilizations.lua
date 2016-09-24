@@ -739,7 +739,20 @@ DefineCivilization("celt", { -- has to be defined after the germanic civilizatio
 		"male", "Solomon", -- king of Powys; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 78.
 	},
 	SettlementNames = {
-		"Moridunum" -- the modern Carmarthen; main settlement of the Demetae (ancient Briton people); Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
+		"Arberth", -- city in Dyfed (Wales), perhaps the modern Narberth; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
+		"Moridunum", -- the modern Carmarthen; main settlement of the Demetae (ancient Briton people); Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
+		"Pen Llwyn Diarwya" -- city in Dyfed (Wales); Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 118.
+	},
+	ProvinceNames = {
+		"Cemais", -- cantref (administrative division) of Dyfed; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
+		"Demetia", -- land of the Demetae, an ancient Briton people; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
+		"Deugledyff", -- cantref (administrative division) of Dyfed; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
+		"Dyfed", -- Welsh kingdom -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
+		"Emlyn", -- cantref (administrative division) of Dyfed; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
+		"Gwarthaf", -- cantref (administrative division) of Dyfed; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
+		"Pebidiog", -- cantref (administrative division) of Dyfed; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
+		"Penfro", -- cantref (administrative division) of Dyfed; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
+		"Rhos" -- cantref (administrative division) of Dyfed; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
 	}
 })
 
@@ -987,26 +1000,9 @@ DefineCivilization("teuton", {
 		"male", "Wolfgang",
 		"male", "Wolfhart"
 	},
-	--[[
-	ProvinceNames = {
-		"Bayern", -- "Bayern" = "Bavaria"
-		"Holstein",
-		"Kärnten", -- "Kärnten" = "Carinthia"
-		"Preussen",
-		"Sachsen", -- "Sachsen" = "Saxony"
-		"Schlesien",
-		"Schleswig",
-		"Tirol" -- "Tirol" = "Tyrol"
+	FamilyNames = {
+		"Muhlhausen" -- "Mühlhausen"; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 104.
 	},
-	ProvinceNamePrefixes = {
-		"Mecklen", -- example: "Mecklenburg"
-		"Steier" -- example: "Steiermark" (Styria)
---		"Vorarl" -- example: "Vorarlberg"
-	},
-	ProvinceNameSuffixes = {
-		"falen" -- example: "Westfalen" (Westphalia)
-	},
-	--]]
 	SettlementNames = {
 		"Altsohl",
 		"Botzen",
@@ -1062,6 +1058,20 @@ DefineCivilization("teuton", {
 		"Wels",
 		"Werschitz",
 		"Zillertal"
+	},
+	ProvinceNames = {
+		"Bavaria", -- "Bayern"
+		"Carinthia", -- "Kärnten"
+		"Holstein",
+		"Mecklenburg",
+		"Prussia", -- "Preussen"
+		"Saxony", -- "Sachsen"
+		"Schlesien",
+		"Schleswig",
+		"Styria", -- "Steiermark"
+		"Tyrol", -- "Tirol"
+		"Vorarlberg",
+		"Westphalia" -- "Westfalen"
 	}
 })
 
