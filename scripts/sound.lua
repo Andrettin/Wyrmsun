@@ -851,6 +851,23 @@ MakeSound("horse-dead", {
 })
 SetSoundRange("horse-dead", 32)
 
+MakeSound("goat", {
+	"neutral/goat/goat_10.wav",
+	"neutral/goat/goat_11.wav",
+	"neutral/goat/goat_12.wav",
+	"neutral/goat/goat_13.wav",
+	"neutral/goat/goat_14.wav",
+	"neutral/goat/goat_15.wav"
+})
+SetSoundRange("goat", 32)
+
+MakeSound("pig", {
+	"neutral/pig/pig_10.wav",
+	"neutral/pig/pig_11.wav",
+	"neutral/pig/pig_12.wav"
+})
+SetSoundRange("pig", 32)
+
 Load("scripts/civilizations/orc/sound.lua")
 
 --	Define sounds used by the game

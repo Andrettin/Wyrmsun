@@ -732,11 +732,11 @@ DefineUnitType("unit-goat", {
 		"male", "Tanngrisnir", -- Tanngrisnir was one of the goats who pulls Thor's chariot; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 625.
 	},
 	Sounds = {
---		"selected", "yale-selected",
---		"acknowledge", "yale-acknowledge",
---		"idle", "yale-acknowledge",
---		"ready", "yale-selected",
---		"dead", "yale-dead",
+		"selected", "goat",
+		"acknowledge", "goat",
+		"idle", "goat",
+		"ready", "goat",
+		"dead", "goat",
 		"hit", "club-attack",
 		"miss", "attack-miss",
 		"step", "step-dirt",
@@ -839,11 +839,11 @@ DefineUnitType("unit-boar", {
 	PersonalNames = {
 	},
 	Sounds = {
---		"selected", "yale-selected",
---		"acknowledge", "yale-acknowledge",
---		"idle", "yale-acknowledge",
---		"ready", "yale-selected",
---		"dead", "yale-dead",
+		"selected", "pig",
+		"acknowledge", "pig",
+		"idle", "pig",
+		"ready", "pig",
+		"dead", "pig",
 		"hit", "club-attack",
 		"miss", "attack-miss",
 		"step", "step-dirt",

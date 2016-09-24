@@ -523,6 +523,12 @@ Wildfire Games (http://www.wildfiregames.com/):
 /sounds/missiles/shield_metal/shieldimpmetal_213.wav (licensed under the CC-BY-SA 3.0)
 /sounds/missiles/shield_metal/shieldimpmetal_214.wav (licensed under the CC-BY-SA 3.0)
 /sounds/missiles/shield_metal/shieldimpmetal_215.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/goat/goat_10.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/goat/goat_11.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/goat/goat_12.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/goat/goat_13.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/goat/goat_14.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/goat/goat_15.wav (licensed under the CC-BY-SA 3.0)
 /sounds/neutral/horse/horse_11.wav (licensed under the CC-BY-SA 3.0)
 /sounds/neutral/horse/horse_attack1.wav (licensed under the CC-BY-SA 3.0)
 /sounds/neutral/horse/horse_attack2.wav (licensed under the CC-BY-SA 3.0)
@@ -538,6 +544,9 @@ Wildfire Games (http://www.wildfiregames.com/):
 /sounds/neutral/horse/horse_select2.wav (licensed under the CC-BY-SA 3.0)
 /sounds/neutral/horse/horse_select3.wav (licensed under the CC-BY-SA 3.0)
 /sounds/neutral/onager_shooting.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/pig/pig_10.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/pig/pig_11.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/pig/pig_12.wav (licensed under the CC-BY-SA 3.0)
 
 Wolfgang Kohler:
 /sounds/buildings/lumbermill.wav (licensed under the GPL 2.0)

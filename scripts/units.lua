@@ -1383,7 +1383,8 @@ DefineUnitType("unit-volcanic-crater", { Name = _("Volcanic Crater"),
 	Sounds = {} }
 )
 
-DefineUnitType("unit-glyph", { Name = _("Glyph"),
+DefineUnitType("unit-glyph", {
+	Name = _("Glyph"),
 	Image = {"file", "neutral/buildings/glyph.png", "size", {32, 32}},
 	NeutralMinimapColor = {128, 128, 0},
 	Animations = "animations-decoration", Icon = "icon-glyph",
@@ -1476,11 +1477,13 @@ DefineUnitType("unit-glyph", { Name = _("Glyph"),
 	},
 	Sounds = {
 		"selected", "click",
+		"used", "magic-holy",
 --		"acknowledge", "gold-mine-acknowledge",
 --		"ready", "gold-mine-ready",
 --		"help", "gold-mine-help",
-		"dead", "building-destroyed"} }
-)
+		"dead", "building-destroyed"
+	}
+})
 
 DefineUnitType("unit-stairs", { Name = _("Stairs"),
 	Image = {"file", "neutral/buildings/stairs.png", "size", {32, 32}},
