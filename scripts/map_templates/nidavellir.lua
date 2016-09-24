@@ -28,14 +28,14 @@
 DefineMapTemplate("nidavellir", {
 	Name = "Nidavellir",
 	World = "Nidavellir",
-	Width = 256,
-	Height = 256,
-	BaseTerrain = "shallow-water-swamp",
+	Width = 128,
+	Height = 128,
+	BaseTerrain = "dry-mud",
 	GeneratedTerrains = {
-		"mud", "very-high",
-		"dry-mud", "high",
-		"rock-swamp", "low",
-		"flamefood-tree", "low"
+		"mud", "medium",
+		"shallow-water-swamp", "medium",
+		"rock-swamp", "high",
+		"flamefood-tree", "medium"
 	},
 	GeneratedNeutralUnits = {
 		"unit-gold-deposit", 2,
@@ -51,11 +51,17 @@ DefineMapTemplate("nidavellir", {
 	}
 })
 
---SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "Khag Tribe", {-1, -1})
---SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "Lggi Tribe", {-1, -1})
+SetMapTemplateUnit("nidavellir", "unit-dwarven-town-hall", "Brising Clan", {-1, -1})
+SetMapTemplateUnit("nidavellir", "unit-gnomish-town-hall", "Acthnic Tribe", {-1, -1})
+SetMapTemplateUnit("nidavellir", "unit-gnomish-town-hall", "Cubital Tribe", {-1, -1})
+SetMapTemplateUnit("nidavellir", "unit-gnomish-town-hall", "Sagan Tribe", {-1, -1})
+SetMapTemplateUnit("nidavellir", "unit-gnomish-town-hall", "Vulcan Tribe", {-1, -1})
+SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "Khag Tribe", {-1, -1})
+SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "Lggi Tribe", {-1, -1})
+SetMapTemplateLayerConnector("nidavellir", "unit-glyph", {-1, -1}, "Asgard")
 
-Load("scripts/map_templates/aurvang.lua")
-Load("scripts/map_templates/joruvellir.lua")
-Load("scripts/map_templates/svarinshaug.lua")
-Load("scripts/map_templates/untersberg.lua")
+--Load("scripts/map_templates/aurvang.lua")
+--Load("scripts/map_templates/joruvellir.lua")
+--Load("scripts/map_templates/svarinshaug.lua")
+--Load("scripts/map_templates/untersberg.lua")
 --Load("scripts/map_templates/caverns_of_chaincolt_city.lua")

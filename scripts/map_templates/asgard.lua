@@ -46,3 +46,4 @@ DefineMapTemplate("asgard", {
 })
 
 SetMapTemplateLayerConnector("asgard", "unit-glyph", {-1, -1}, "Earth")
+SetMapTemplateLayerConnector("asgard", "unit-glyph", {-1, -1}, "Nidavellir")
