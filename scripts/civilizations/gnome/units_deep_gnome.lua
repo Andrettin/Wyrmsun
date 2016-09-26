@@ -53,15 +53,20 @@ DefineUnitType("unit-deep-gnomish-worker", {
 		},
 		{
 			"layer", "hair",
+			"variation-id", "blue-gray-hair",
+			"hair-color", "blue-gray"
+		},
+		{
+			"layer", "hair",
 			"variation-id", "brown-hair",
 			"upgrade-forbidden", "upgrade-old",
 			"hair-color", "brown"
 		},
 		{
 			"layer", "hair",
-			"variation-id", "dark-blond-hair",
+			"variation-id", "green-blond-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"hair-color", "dark-blond"
+			"hair-color", "green-blond"
 		},
 		{
 			"layer", "hair",
@@ -113,15 +118,20 @@ DefineUnitType("unit-deep-gnomish-recruit", {
 		},
 		{
 			"layer", "hair",
+			"variation-id", "blue-gray-hair",
+			"hair-color", "blue-gray"
+		},
+		{
+			"layer", "hair",
 			"variation-id", "brown-hair",
 			"upgrade-forbidden", "upgrade-old",
 			"hair-color", "brown"
 		},
 		{
 			"layer", "hair",
-			"variation-id", "dark-blond-hair",
+			"variation-id", "green-blond-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"hair-color", "dark-blond"
+			"hair-color", "green-blond"
 		},
 		{
 			"layer", "hair",
@@ -205,15 +215,20 @@ DefineUnitType("unit-deep-gnomish-duelist", {
 		},
 		{
 			"layer", "hair",
+			"variation-id", "blue-gray-hair",
+			"hair-color", "blue-gray"
+		},
+		{
+			"layer", "hair",
 			"variation-id", "brown-hair",
 			"upgrade-forbidden", "upgrade-old",
 			"hair-color", "brown"
 		},
 		{
 			"layer", "hair",
-			"variation-id", "dark-blond-hair",
+			"variation-id", "green-blond-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"hair-color", "dark-blond"
+			"hair-color", "green-blond"
 		},
 		{
 			"layer", "hair",
@@ -297,15 +312,20 @@ DefineUnitType("unit-deep-gnomish-master-at-arms", {
 		},
 		{
 			"layer", "hair",
+			"variation-id", "blue-gray-hair",
+			"hair-color", "blue-gray"
+		},
+		{
+			"layer", "hair",
 			"variation-id", "brown-hair",
 			"upgrade-forbidden", "upgrade-old",
 			"hair-color", "brown"
 		},
 		{
 			"layer", "hair",
-			"variation-id", "dark-blond-hair",
+			"variation-id", "green-blond-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"hair-color", "dark-blond"
+			"hair-color", "green-blond"
 		},
 		{
 			"layer", "hair",
@@ -373,15 +393,20 @@ DefineUnitType("unit-deep-gnomish-herbalist", {
 		},
 		{
 			"layer", "hair",
+			"variation-id", "blue-gray-hair",
+			"hair-color", "blue-gray"
+		},
+		{
+			"layer", "hair",
 			"variation-id", "brown-hair",
 			"upgrade-forbidden", "upgrade-old",
 			"hair-color", "brown"
 		},
 		{
 			"layer", "hair",
-			"variation-id", "dark-blond-hair",
+			"variation-id", "green-blond-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"hair-color", "dark-blond"
+			"hair-color", "green-blond"
 		},
 		{
 			"layer", "hair",

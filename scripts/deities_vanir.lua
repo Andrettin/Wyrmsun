@@ -69,6 +69,17 @@ DefineDeity("gullveig", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 --	Description = "A gold-loving goddess, Gullveig was burned alive during a visit to the Aesir for her greed. Three times she was burned, and three times she was reborn. The Asgardian treatment of the goddess caused the Aesir-Vanir War. Gullveig is feared for her work of dark magic."
 })
 
+DefineDeity("kvasir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 8.
+	Name = "Gullveig",
+	Pantheon = "Vanir",
+	HomePlane = "Vanaheim",
+	Civilizations = {"elf", "norse"}, -- Alaric Hall proposes that the Vanir are more or less identical with the elves, so it makes sense to make Kvasir an elven deity as well; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 135.
+	Religions = {"paganism"},
+	Gender = "male",
+	Domains = {"wisdom"},
+--	Description = "The wisest of the Vanir, Kvasir was sent to live with the Aesir in Asgard as a result of the peace treaty which concluded the Aesir-Vanir War."
+})
+
 DefineDeity("njord", { -- Husband of Skadi; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 248; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 135.
 	Name = "Njord",
 	Pantheon = "Vanir",

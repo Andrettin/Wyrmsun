@@ -25,6 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineDeity("gobannonos", { -- ancient Celtic god of smithing; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 143-144.
+	Name = "Gobannonos",
+	Civilizations = {"celt"},
+	Religions = {"paganism"},
+	Gender = "male",
+	Domains = {"metalworking"}
+})
+
 DefineDeity("maponos", { -- Celtic god; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 129.
 	Name = "Maponos",
 	Civilizations = {"celt"},

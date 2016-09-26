@@ -90,7 +90,8 @@ https://github.com/Andrettin/Wyrmsun
 - The player now receives a notification when new in-game quests are available, instead of a quest symbol hovering over the town hall.
 
 * Terrain
-- Improvements to the (swamp) rock, cave wall, dry mud and cave floor tile transitions (by Jinn).
+- Improvements to the rock, cave wall, dry mud and cave floor tile transitions (by Jinn).
+- The forest tileset now again uses the previous dirt and rock tiles used for it (by Jinn).
 
 * Units
 - Ships now receive individual names.

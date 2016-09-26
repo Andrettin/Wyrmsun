@@ -35,13 +35,13 @@ DefineMapTemplate("svarinshaug", {
 	GeneratedTerrains = {
 		"mud", "medium",
 		"shallow-water-swamp", "low",
-		"rock-swamp", "high",
+		"rock", "high",
 		"flamefood-tree", "low"
 	},
 	ExternalGeneratedTerrains = {
 		"mud", "high",
 		"dry-mud", "medium",
-		"rock-swamp", "high",
+		"rock", "high",
 		"flamefood-tree", "low"
 	},
 	GeneratedNeutralUnits = {

@@ -34,7 +34,7 @@ DefineMapTemplate("nidavellir", {
 	GeneratedTerrains = {
 		"mud", "medium",
 		"shallow-water-swamp", "medium",
-		"rock-swamp", "high",
+		"rock", "high",
 		"flamefood-tree", "medium"
 	},
 	GeneratedNeutralUnits = {

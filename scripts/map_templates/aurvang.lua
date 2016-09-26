@@ -35,13 +35,13 @@ DefineMapTemplate("aurvang", {
 	GeneratedTerrains = {
 		"mud", "high",
 		"shallow-water-swamp", "medium",
-		"rock-swamp", "low",
+		"rock", "low",
 		"flamefood-tree", "medium"
 	},
 	ExternalGeneratedTerrains = {
 		"mud", "high",
 		"dry-mud", "low",
-		"rock-swamp", "low",
+		"rock", "low",
 		"flamefood-tree", "medium"
 	},
 	GeneratedNeutralUnits = {

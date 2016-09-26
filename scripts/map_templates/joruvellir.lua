@@ -34,13 +34,13 @@ DefineMapTemplate("joruvellir", {
 	SurroundingTerrain = "mud",
 	GeneratedTerrains = {
 		"mud", "low",
-		"rock-swamp", "medium",
+		"rock", "medium",
 		"flamefood-tree", "low"
 	},
 	ExternalGeneratedTerrains = {
 		"mud", "high",
 		"dry-mud", "high",
-		"rock-swamp", "medium",
+		"rock", "medium",
 		"flamefood-tree", "low"
 	},
 	GeneratedNeutralUnits = {
