@@ -34,7 +34,7 @@ DefineMapTemplate("earth", {
 	GeneratedTerrains = {
 		"rock", "low",
 		"grass", "extremely-high",
-		"dirt", "high",
+		"dirt", "medium",
 		"pine-tree", "high"
 	},
 	GeneratedNeutralUnits = {

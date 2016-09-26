@@ -102,6 +102,7 @@ https://github.com/Andrettin/Wyrmsun
 - Skutans and Schutzes now correctly have mana.
 - Fixed issue which caused some Gnomish factions to not be able to train Recruits.
 - Animal idle sounds are now played less frequently.
+- The owner of goblin Thieves is now hidden (they appear as if they were neutral to other players).
 
 -----------------------------------------------------------------------
 - 2.4.2

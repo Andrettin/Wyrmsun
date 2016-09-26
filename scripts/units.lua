@@ -188,6 +188,7 @@ DefineUnitType("unit-template-building", { Name = _("Building"),
 
 DefineUnitType("unit-template-sapient-unit", { Name = _("Sapient Unit"),
 	Parent = "unit-template-unit",
+	NeutralMinimapColor = {192, 192, 192},
 	Strength = 10,
 	Dexterity = 10,
 	Intelligence = 10,
@@ -2828,7 +2829,8 @@ DefineUnitType("unit-template-heroic-shooter", { Name = _("Heroic Shooter"),
 	DropAffixes = {"upgrade-item-prefix-impregnable", "upgrade-item-suffix-of-thorns"}
 } )
 
-DefineUnitType("unit-template-thief", { Name = _("Thief"),
+DefineUnitType("unit-template-thief", {
+	Name = _("Thief"),
 	Parent = "unit-template-sapient-unit",
 	Class = "thief",
 	Costs = {"time", 0, "gold", 400},
@@ -2854,6 +2856,7 @@ DefineUnitType("unit-template-thief", { Name = _("Thief"),
 	CanAttack = true,
 	CanTargetLand = true,
 	Flesh = true,
+	HiddenOwnership = true,
 	CanCastSpell = {"spell-puncture"},
 	AutoCastActive = {"spell-puncture"},
 	DropAffixes = {"upgrade-item-prefix-accurate", "upgrade-item-prefix-cruel", "upgrade-item-prefix-frail", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-swift", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-accuracy", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
