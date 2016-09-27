@@ -48,6 +48,11 @@ DefineMapTemplate("nidavellir", {
 		"unit-dread-bat", 16,
 		"unit-gryphon", 8,
 		"unit-wyrm", 4
+	},
+	PlayerLocationGeneratedNeutralUnits = {
+		"unit-gold-deposit", 1,
+		"unit-wood-pile", 16,
+		"unit-stone-pile", 16
 	}
 })
 
