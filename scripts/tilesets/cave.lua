@@ -41,7 +41,7 @@ DefineTileset("name", "Cave",
 			"growing-tree", { -1, -1, },
 			"top-one-rock", 48, "mid-one-rock", 64, "bot-one-rock", 80,
 			"removed-rock", 16, },
-			"solid", { "unused",
+		"solid", { "unused",
 			{}},								-- 000
 		"solid", { "gray-shallow-water", "water",
 			{ 400, 401, 402, 400 }},						-- 010
