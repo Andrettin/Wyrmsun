@@ -88,7 +88,8 @@ DefineUnitType("unit-germanic-worker", { Name = _("Bura"), -- Bûra = "Bauer" in
 	}
 } )
 
-DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior" in Proto-Germanic, according to the "Wortschatz der Germanischen Spracheinheit" by August Fick
+DefineUnitType("unit-germanic-warrior", {
+	Name = _("Erala"), -- Erala = "Warrior" in Proto-Germanic, according to the "Wortschatz der Germanischen Spracheinheit" by August Fick
 	Parent = "unit-template-infantry",
 	Civilization = "germanic",
 	Description = _("Germanic tribes are known for their fierceness in combat, and these sword-wielding warriors act accordingly."),
@@ -115,6 +116,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 		{"shield", "unit-wooden-shield"},
 		{"boots", "unit-boots"}
 	},
+	HairColor = "blond",
 	Costs = {"time", 50, "gold", 600},
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
@@ -136,19 +138,19 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 		{
 			"variation-id", "brown-hair",
 			"layer-file", "hair", "human/units/brown_hair_warrior.png",
-			"icon", "icon-germanic-warrior-brown-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "light-brown"
 		},
 		{
 			"variation-id", "gray-hair",
 			"layer-file", "hair", "human/units/gray_hair_warrior.png",
-			"icon", "icon-germanic-warrior-gray-hair"
+			"hair-color", "gray"
 		},
 		{
 			"variation-id", "red-hair",
 			"layer-file", "hair", "human/units/red_hair_warrior.png",
-			"icon", "icon-germanic-warrior-red-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "orange"
 		},
 		{
 			"layer", "left-arm",
@@ -227,7 +229,8 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 	}
 } )
 
-DefineUnitType("unit-germanic-spearman", { Name = _("Spearman"),
+DefineUnitType("unit-germanic-spearman", {
+	Name = _("Spearman"),
 	Parent = "unit-template-spearman",
 	Civilization = "germanic",
 	Class = "", -- because the unit is not ready for being playable
@@ -260,24 +263,25 @@ DefineUnitType("unit-germanic-spearman", { Name = _("Spearman"),
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-quenching", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-trickery", "upgrade-item-suffix-of-victory"}, -- allow more affixes than normal for the unit's level, to compensate for the unit not being upgradeable
 	Variations = {
 		{
+			"layer", "hair",
 			"variation-id", "blond-hair",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
+			"layer", "hair",
 			"variation-id", "brown-hair",
-			"layer-file", "hair", "human/units/brown_hair_warrior.png",
-			"icon", "icon-germanic-warrior-brown-hair",
+			"file", "human/units/brown_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
+			"layer", "hair",
 			"variation-id", "gray-hair",
-			"layer-file", "hair", "human/units/gray_hair_warrior.png",
-			"icon", "icon-germanic-warrior-gray-hair"
+			"file", "human/units/gray_hair_warrior.png"
 		},
 		{
+			"layer", "hair",
 			"variation-id", "red-hair",
-			"layer-file", "hair", "human/units/red_hair_warrior.png",
-			"icon", "icon-germanic-warrior-red-hair",
+			"file", "human/units/red_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{

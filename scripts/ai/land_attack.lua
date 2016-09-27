@@ -361,7 +361,13 @@ local land_funcs = {
 	function() return AiLoop(end_loop_funcs, stratagus.gameData.AIState.loop_index) end,
 }
 
+local ai_call_counter = {}
+
 function AiLandAttack()
+	if (ai_call_counter[AiPlayer()] == nil) then
+		ai_call_counter[AiPlayer()] = 0
+	end
+	ai_call_counter[AiPlayer()] = ai_call_counter[AiPlayer()] + 1
 	if (GameSettings.Difficulty == 1 and (ai_call_counter[AiPlayer()] % 100) ~= 0) then -- on easy difficulty, the AI is slower to do things
 		return;
 	end
