@@ -34,7 +34,7 @@ DefineMapTemplate("untersberg", {
 	SurroundingTerrain = "mud",
 	GeneratedTerrains = {
 		"mud", "low",
-		"shallow-water-swamp", "low",
+		"shallow-water", "low",
 		"rock", "high",
 		"flamefood-tree", "medium"
 	},

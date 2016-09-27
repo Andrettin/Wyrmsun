@@ -42,7 +42,7 @@ DefineTileset("name", "Swamp",
     "removed-rock", 16, },
   "solid", { "unused",
     {}},								-- 000
-  "solid", { "shallow-water-swamp", "water",
+  "solid", { "shallow-water", "water",
     { 324, 325, 325, 326}},						-- 010
   "solid", { "unused",
     {}},								-- 020
@@ -72,7 +72,7 @@ DefineTileset("name", "Swamp",
     {}},								-- 0E0
   "solid", { "unused",
     {}},								-- 0F0
-  "mixed", { "deep-water", "shallow-water-swamp", "water",
+  "mixed", { "deep-water", "shallow-water", "water",
     { 296, 296},							-- 100
     { 297, 297},							-- 110
     { 298, 299, 300},							-- 120
@@ -89,7 +89,7 @@ DefineTileset("name", "Swamp",
     { 322, 323},							-- 1D0
     {},									-- 1E0
     {}},								-- 1F0
-  "mixed", { "shallow-water-swamp", "mud", "coast",
+  "mixed", { "shallow-water", "mud", "coast",
     { 201, 202, 201},							-- 200
     { 203, 204, 203},							-- 210
     { 205, 206, 207},							-- 220

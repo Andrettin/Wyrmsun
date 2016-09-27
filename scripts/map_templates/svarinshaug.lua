@@ -34,7 +34,7 @@ DefineMapTemplate("svarinshaug", {
 	SurroundingTerrain = "mud",
 	GeneratedTerrains = {
 		"mud", "medium",
-		"shallow-water-swamp", "low",
+		"shallow-water", "low",
 		"rock", "high",
 		"flamefood-tree", "low"
 	},

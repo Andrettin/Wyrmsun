@@ -34,7 +34,7 @@ DefineMapTemplate("aurvang", {
 	SurroundingTerrain = "mud",
 	GeneratedTerrains = {
 		"mud", "high",
-		"shallow-water-swamp", "medium",
+		"shallow-water", "medium",
 		"rock", "low",
 		"flamefood-tree", "medium"
 	},
