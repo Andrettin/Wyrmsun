@@ -26,6 +26,7 @@
 --
 
 function EventTriggers()
+	Load("scripts/civilizations/dwarf/triggers.lua")
 	Load("scripts/civilizations/germanic/triggers.lua")
 
 	-- Greebo's Shinies

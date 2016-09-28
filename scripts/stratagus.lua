@@ -419,6 +419,10 @@ function SinglePlayerTriggers()
 		Load(GetQuestData(GetCurrentQuest(), "Scenario"))
 	end
 
+	if (GetCurrentCampaign() ~= "" and GetCampaignData(GetCurrentCampaign(), "Sandbox") == false) then
+		RemovePlayerObjective(GetThisPlayer(), "- Defeat your enemies")
+	end
+	
 	-- for now events are limited to single player
 	if (not IsNetworkGame() and GetCurrentQuest() == "" and GrandStrategy == false) then -- only in custom games
 		EventTriggers()

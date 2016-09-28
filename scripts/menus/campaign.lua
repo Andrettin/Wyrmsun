@@ -97,7 +97,7 @@ function RunCampaignMenu()
 		SetCurrentCampaign(campaign_ident_list[1])
 	end
 
-	menu:addFullButton(_("Start ~!Campaign"), "c", offx + 208, offy + 212 + (36 * 4),
+	menu:addFullButton(_("~!Start Campaign"), "s", offx + 208, offy + 212 + (36 * 4),
 		function()
 			RunningScenario = true
 			GetMapInfo("maps/earth/earth.smp")

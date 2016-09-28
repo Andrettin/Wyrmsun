@@ -446,3 +446,14 @@ DefineQuest("mushroom-fields", { -- inspired by the dialogue in Battle for Wesno
 	BuildUnits = {"unit-dwarven-mushroom-farm", 3}
 })
 
+DefineQuest("the-mead-of-poetry-kill-kvasir", {
+	Name = "Kill Kvasir",
+	Icon = "icon-dwarven-witness",
+--	World = "Nidavellir",
+--	Civilization = "dwarf",
+	PlayerColor = "black",
+	Unobtainable = true,
+	Objectives = {"- Find your way to Asgard", "- Kill Kvasir"},
+	DestroyUnits = {"unit-dwarven-witness", "Brising Clan", 1} -- placeholder
+})
+

@@ -53,7 +53,12 @@ DefineDialogue("the-mead-of-poetry-fjalar-and-galar-conspire", {
 		},
 		{
 			"speaker", "character", "Fjalar",
-			"text", "To kill a god... an immensely dangerous feat, but one which shall be extremely rewarding."
+			"text", "To kill a god... an immensely dangerous feat, but one which shall be extremely rewarding.",
+			"option-effects", {
+				function(s)
+					SetPlayerData(trigger_player, "AcceptQuest", "the-mead-of-poetry-kill-kvasir")
+				end
+			}
 		}
 	}
 })
