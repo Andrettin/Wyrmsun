@@ -247,6 +247,8 @@ function addQuestIcon(quest, menu, x, y)
 		questicon = CIcon:Get(GetQuestData(quest, "Icon")).G
 	end
 	b = PlayerColorImageButton("", GetQuestData(quest, "PlayerColor"))
+	b:setSkinColor(GetQuestData(quest, "SkinColor"))
+	b:setHairColor(GetQuestData(quest, "HairColor"))
 	local quest_icon_x_origin = (quest_icon_frame * 46) % questicon:getGraphicWidth()
 	local quest_icon_y_origin = math.floor((quest_icon_frame * 46) / questicon:getGraphicWidth()) * 38
 	b:setActionCallback(

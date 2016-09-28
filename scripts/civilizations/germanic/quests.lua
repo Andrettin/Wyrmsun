@@ -35,6 +35,7 @@ DefineQuest("on-the-vanaquisl", {
 	Map = "maps/earth/tanais.smp",
 	Scenario = "scripts/civilizations/germanic/scenarios/on_the_vanaquisl.lua",
 	PlayerColor = "orange",
+	HairColor = "blond",
 	LoadingMusic = "GermanicLoading",
 	MapMusic = "GermanicTheme"
 })

@@ -30,6 +30,7 @@ DefineAchievement("the-settlement-of-scandinavia", {
 	Icon = "icon-germanic-warrior",
 	Description = "Complete the On the Vanaquisl, Westward Migration, Northwards to the Sea and Gylve's Realm missions.",
 	PlayerColor = "orange",
+	HairColor = "blond",
 	RequiredQuests = {"on-the-vanaquisl", "westward-migration", "northwards-to-the-sea", "gylves-realm"}
 })
 

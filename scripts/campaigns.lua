@@ -30,5 +30,6 @@ DefineCampaign("the-mead-of-poetry", {
 	Description = "The dwarven brothers Fjalar and Galar conspire to kill the wise god Kvasir",
 	Civilization = "dwarf",
 	Faction = "Shadowcharm Clan",
-	Year = -3000
+--	Year = -3000
+	Year = -2800 -- so that Earth is already properly populated
 })

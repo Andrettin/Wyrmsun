@@ -67,6 +67,8 @@ function addAchievementIcon(achievement, menu, x, y)
 	if (GetAchievementData(achievement, "Obtained") == false) then
 		b:setTransparency(66)
 	end
+	b:setSkinColor(GetAchievementData(achievement, "SkinColor"))
+	b:setHairColor(GetAchievementData(achievement, "HairColor"))
 	local achievement_icon_x_origin = (achievement_icon_frame * 46) % achievement_icon:getGraphicWidth()
 	local achievement_icon_y_origin = math.floor((achievement_icon_frame * 46) / achievement_icon:getGraphicWidth()) * 38
 --	b:setHotKey("")
