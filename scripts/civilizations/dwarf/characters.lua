@@ -64,6 +64,36 @@ DefineCharacter("Durin", { -- deputy of Modsognir
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })
 
+DefineCharacter("Fjalar", {
+	Name = "Fjalar",
+	Gender = "male",
+	Type = "unit-dwarven-steelclad", -- should be a thief
+	Civilization = "dwarf",
+	Faction = "Shadowcharm Clan",
+	Description = _("The greedy Fjalar is joint chieftain of the Shadowcharm Clan together with his brother Galar. He is adept at deception and stealth."),
+	Icon = "icon-modsognir",
+	HairVariation = "brown-hair",
+	Trait = "upgrade-cruel",
+	Year = -3000,
+	Persistent = true,
+	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
+})
+
+DefineCharacter("Galar", {
+	Name = "Galar",
+	Gender = "male",
+	Type = "unit-dwarven-steelclad", -- should be a thief
+	Civilization = "dwarf",
+	Faction = "Shadowcharm Clan",
+	Description = _("The envious Galar is joint chieftain of the Shadowcharm Clan together with his brother Fjalar. He is known for his thieving skills and his dabbling in magic."),
+	Icon = "icon-modsognir",
+	HairVariation = "brown-hair",
+	Trait = "upgrade-cruel",
+	Year = -3000,
+	Persistent = true,
+	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
+})
+
 DefineCharacter("Thursagan", { -- from "The Sceptre of Fire" campaign of "Battle for Wesnoth"; master runesmith who crafted the Sceptre of Fire
 	Name = "Thursagan",
 	Gender = "male",

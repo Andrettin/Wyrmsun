@@ -908,7 +908,15 @@ function RunSinglePlayerGameMenu()
 	local offy = (Video.Height - 480) / 2
 
 	menu:addLabel(_("~<Single Player~>"), offx + 320, offy + 212 - 25 - (36 * 1))
-	menu:addFullButton(_("~!Quests"), "q", offx + 208, offy + 104 + 36*2,
+	menu:addFullButton(_("Ca~!mpaign"), "m", offx + 208, offy + 104 + 36*2,
+		function()
+			RunCampaignMenu();
+			if (RunningScenario) then
+				menu:stop()
+			end
+		end
+	)
+	menu:addFullButton(_("~!Quests"), "q", offx + 208, offy + 104 + 36*3,
 		function()
 			RunQuestWorldMenu();
 			if (RunningScenario) then
@@ -916,7 +924,7 @@ function RunSinglePlayerGameMenu()
 			end
 		end
 	)
-	menu:addFullButton(_("~!Custom Game"), "c", offx + 208, offy + 104 + 36*3,
+	menu:addFullButton(_("~!Custom Game"), "c", offx + 208, offy + 104 + 36*4,
 		function()
 			RunSinglePlayerCustomGameMenu()
 			if (RunningScenario) then
@@ -924,15 +932,15 @@ function RunSinglePlayerGameMenu()
 			end
 		end
 	)
-	menu:addFullButton(_("~!Load Game"), "l", offx + 208, offy + 104 + 36*4,
+	menu:addFullButton(_("~!Load Game"), "l", offx + 208, offy + 104 + 36*5,
 		function()
 			RunLoadGameMenu();
 			menu:stop(1)
 		end
 	)
-	menu:addFullButton(_("~!Tech Tree"), "t", offx + 208, offy + 104 + 36*5,
+	menu:addFullButton(_("~!Tech Tree"), "t", offx + 208, offy + 104 + 36*6,
 		function() RunTechTreeMenu(0) end)
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + 36*6,
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + 36*7,
 		function() menu:stop() end)
 	return menu:run()
 end
@@ -1435,6 +1443,7 @@ Load("scripts/menus/endscenario.lua")
 Load("scripts/menus/diplomacy.lua")
 Load("scripts/menus/results.lua")
 Load("scripts/menus/network.lua")
+Load("scripts/menus/campaign.lua")
 Load("scripts/menus/techtree.lua")
 Load("scripts/menus/quests.lua")
 Load("scripts/menus/achievements.lua")

@@ -57,6 +57,9 @@ DefineMapTemplate("nidavellir", {
 })
 
 SetMapTemplateUnit("nidavellir", "unit-dwarven-town-hall", "Brising Clan", {-1, -1})
+SetMapTemplateUnit("nidavellir", "unit-dwarven-town-hall", "Shadowcharm Clan", {-1, -1})
+SetMapTemplateHero("nidavellir", "Fjalar", "Shadowcharm Clan", {-1, -1})
+SetMapTemplateHero("nidavellir", "Galar", "Shadowcharm Clan", {-1, -1})
 SetMapTemplateUnit("nidavellir", "unit-gnomish-town-hall", "Acthnic Tribe", {-1, -1})
 SetMapTemplateUnit("nidavellir", "unit-gnomish-town-hall", "Cubital Tribe", {-1, -1})
 SetMapTemplateUnit("nidavellir", "unit-gnomish-town-hall", "Sagan Tribe", {-1, -1})

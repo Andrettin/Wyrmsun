@@ -30,7 +30,7 @@ DefineFaction("Brising Clan", {
 	Type = "tribe",
 	Colors = {"red", "orange", "fire"},
 	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
-	SplitsTo = {"Eikinskjaldi Clan", "Norlund Clan", "Shinsplitter Clan", "Shorbear Clan"},
+	SplitsTo = {"Eikinskjaldi Clan", "Norlund Clan", "Shadowcharm Clan", "Shinsplitter Clan", "Shorbear Clan"},
 	FactionUpgrade = "upgrade-brising-clan-faction",
 	ButtonIcons = {
 		"stop", "icon-brising-round-shield"
@@ -85,6 +85,27 @@ DefineFaction("Norlund Clan", {
 		"upgrade-dwarven-shield-1", -1, -- bronze age technologies had already been obtained by the dwarves by this point
 		"upgrade-dwarven-sharp-throwing-axe", -1, -- bronze age technologies had already been obtained by the dwarves by this point
 		"upgrade-dwarven-masonry", 25, -- dwarves already had castles built of stone masonry by then
+	}
+})
+
+DefineFaction("Shadowcharm Clan", {
+	Civilization = "dwarf",
+	Type = "tribe",
+	Colors = {"black"},
+	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
+	FactionUpgrade = "upgrade-shinsplitter-clan-faction",
+	Description = _("The Shadowcharm clan is known for its skilled exercise in subtlety. Foes of this clan may well find themselves assassinated by a seemingly-loyal subordinate."),
+	HistoricalTechnologies = {
+		"upgrade-dwarven-wood-plow", -3000, -- give plow technology to the dwarven factions
+		"upgrade-dwarven-broad-axe", -1, -- bronze age technologies had already been obtained by the dwarves by this point
+		"upgrade-dwarven-shield-1", -1, -- bronze age technologies had already been obtained by the dwarves by this point
+		"upgrade-dwarven-sharp-throwing-axe", -1, -- bronze age technologies had already been obtained by the dwarves by this point
+		"upgrade-dwarven-masonry", 25, -- dwarves already had castles built of stone masonry by then
+		"upgrade-dwarven-coinage", 400, -- the dwarves should already have Coinage technology by then
+		"upgrade-dwarven-great-axe", 550, -- late iron age technologies already obtained by the dwarves by this point
+		"upgrade-dwarven-shield-2", 550, -- late iron age technologies already obtained by the dwarves by this point
+		"upgrade-dwarven-bearded-throwing-axe", 550, -- late iron age technologies already obtained by the dwarves by this point
+		"upgrade-dwarven-ballista-bolt-1", 550, -- late iron age technologies already obtained by the dwarves by this point
 	}
 })
 

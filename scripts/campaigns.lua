@@ -25,9 +25,10 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-player = 0
-
-Load("scripts/civilizations/dwarf/dialogues.lua")
-Load("scripts/civilizations/dwarf/dialogues_the_mead_of_poetry.lua")
-Load("scripts/civilizations/elf/dialogues.lua")
-Load("scripts/civilizations/gnome/dialogues.lua")
+DefineCampaign("the-mead-of-poetry", {
+	Name = "The Mead of Poetry",
+	Description = "The dwarven brothers Fjalar and Galar conspire to kill the wise god Kvasir",
+	Civilization = "dwarf",
+	Faction = "Shadowcharm Clan",
+	Year = -3000
+})
