@@ -92,6 +92,7 @@ https://github.com/Andrettin/Wyrmsun
 * Terrain
 - Improvements to the rock, cave wall, dry mud and cave floor tile transitions (by Jinn).
 - The forest tileset now again uses the previous dirt and rock tiles used for it (by Jinn).
+- Improvements to the water tile transitions (by Jinn).
 
 * Units
 - Ships now receive individual names.
