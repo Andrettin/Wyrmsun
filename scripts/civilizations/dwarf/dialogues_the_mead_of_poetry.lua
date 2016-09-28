@@ -49,7 +49,7 @@ DefineDialogue("the-mead-of-poetry-fjalar-and-galar-conspire", {
 		},
 		{
 			"speaker", "character", "Galar",
-			"text", "We must act quickly - if the other deities see us and intervene as we slay Kvasir, then we shall face untold wrath."
+			"text", "We must act quickly - if the other deities realize what is happening and intervene as we slay Kvasir, then we shall face untold wrath. Thankfully we have our potions of invisibility to help us with the task."
 		},
 		{
 			"speaker", "character", "Fjalar",
