@@ -97,16 +97,17 @@ DefineDialogue("the-mead-of-poetry-gilling-appears", {
 		{
 			"speaker", "character", "Galar",
 			"text", "This isn't good, Fjalar. If he felt when we used the rainbow bridge, he may have some knowledge of what transpired in Asgard afterwards. If the gods learn of this...",
-			"options", {"Time for him to die", "Offer the mead for his silence", "Leave him alone"},
+--			"options", {"Time for him to die", "Offer the mead for his silence", "Leave him alone"},
+			"options", {"Time for him to die", "Offer the mead for his silence"},
 			"option-effects", {
 				function(s)
 				end,
 				function(s)
 					CallDialogue("the-mead-of-poetry-offer-gilling-the-mead", player)
-				end,
-				function(s)
-					CallDialogue("the-mead-of-poetry-leave-gilling-alone", player)
 				end
+--				function(s)
+--					CallDialogue("the-mead-of-poetry-leave-gilling-alone", player)
+--				end
 			}
 		}
 	}
