@@ -78,13 +78,13 @@ function RunCampaignMenu()
 			table.insert(campaign_ident_list, potential_campaigns[i])
 		end
 	end
-	table.sort(campaign_ident_list)
 	for i=1,table.getn(campaign_ident_list) do
 		table.insert(campaign_list, GetCampaignData(campaign_ident_list[i], "Name"))
 	end
 	menu:addLabel(_("Campaign:"), offx + 30, offy + (10 + 300) - 20, Fonts["game"], false)
 	campaign_dd = menu:addDropDown(campaign_list, offx + 30, offy + 10 + 300,
 		function(dd)
+			SetCurrentCampaign(campaign_ident_list[campaign_dd:getSelected() + 1])
 			menu:stop()
 			RunCampaignMenu()
 		end

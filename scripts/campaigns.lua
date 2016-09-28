@@ -33,3 +33,11 @@ DefineCampaign("the-mead-of-poetry", {
 --	Year = -3000
 	Year = -2800 -- so that Earth is already properly populated
 })
+
+DefineCampaign("the-bronze-age", {
+	Name = "The Bronze Age (Sandbox)",
+	Civilization = "germanic",
+	Faction = "Yngling Tribe", -- should change to a choosable faction list later
+	Sandbox = true,
+	Year = -1700 -- time the bronze age began in southern Scandinavia
+})
