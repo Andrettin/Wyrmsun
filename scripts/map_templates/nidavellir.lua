@@ -56,10 +56,86 @@ DefineMapTemplate("nidavellir", {
 	}
 })
 
-SetMapTemplateUnit("nidavellir", "unit-dwarven-town-hall", "Brising Clan", {-1, -1})
-SetMapTemplateUnit("nidavellir", "unit-dwarven-town-hall", "Shadowcharm Clan", {-1, -1})
-SetMapTemplateHero("nidavellir", "Fjalar", "Shadowcharm Clan", {-1, -1})
-SetMapTemplateHero("nidavellir", "Galar", "Shadowcharm Clan", {-1, -1})
+DefineMapTemplate("nidavellir-underground-1", {
+	Name = "Nidavellir Underground 1",
+	World = "Nidavellir",
+	Layer = 1,
+	Width = 128,
+	Height = 128,
+	BaseTerrain = "rockbound-cave-floor",
+	BorderTerrain = "cave-wall",
+	GeneratedTerrains = {
+		"cave-wall", "very-high",
+		"cave-floor", "very-high",
+		"gray-shallow-water", "low"
+	},
+	GeneratedNeutralUnits = {
+		"unit-gold-deposit", 2,
+		"unit-silver-deposit", 2,
+		"unit-copper-deposit", 2,
+		"unit-wood-pile", 64,
+		"unit-wood-pile", 64,
+		"unit-wood-pile", 64,
+		"unit-wood-pile", 64,
+		"unit-wood-pile", 64,
+		"unit-wood-pile", 64,
+		"unit-wood-pile", 64,
+		"unit-wood-pile", 64,
+		"unit-snigill", 64,
+		"unit-slime", 32,
+		"unit-blood-bat", 32,
+		"unit-dread-bat", 16,
+		"unit-wyrm", 4
+	},
+	PlayerLocationGeneratedNeutralUnits = {
+		"unit-gold-deposit", 1,
+		"unit-wood-pile", 16,
+		"unit-stone-pile", 16
+	}
+})
+
+DefineMapTemplate("nidavellir-underground-2", {
+	Name = "Nidavellir Underground 2",
+	World = "Nidavellir",
+	Layer = 2,
+	Width = 128,
+	Height = 128,
+	BaseTerrain = "rockbound-cave-floor",
+	BorderTerrain = "cave-wall",
+	GeneratedTerrains = {
+		"cave-wall", "very-high",
+		"cave-floor", "very-high",
+		"gray-shallow-water", "low"
+	},
+	GeneratedNeutralUnits = {
+		"unit-gold-deposit", 2,
+		"unit-silver-deposit", 2,
+		"unit-copper-deposit", 2,
+		"unit-wood-pile", 64,
+		"unit-wood-pile", 64,
+		"unit-wood-pile", 64,
+		"unit-wood-pile", 64,
+		"unit-wood-pile", 64,
+		"unit-wood-pile", 64,
+		"unit-wood-pile", 64,
+		"unit-wood-pile", 64,
+		"unit-snigill", 64,
+		"unit-slime", 32,
+		"unit-blood-bat", 32,
+		"unit-dread-bat", 16,
+		"unit-wyrm", 4
+	},
+	PlayerLocationGeneratedNeutralUnits = {
+		"unit-gold-deposit", 1,
+		"unit-wood-pile", 16,
+		"unit-stone-pile", 16
+	}
+})
+
+SetMapTemplateUnit("nidavellir-underground-1", "unit-dwarven-town-hall", "Brising Clan", {-1, -1})
+SetMapTemplateUnit("nidavellir-underground-1", "unit-dwarven-town-hall", "Shadowcharm Clan", {-1, -1})
+SetMapTemplateHero("nidavellir-underground-1", "Fjalar", "Shadowcharm Clan", {-1, -1})
+SetMapTemplateHero("nidavellir-underground-1", "Galar", "Shadowcharm Clan", {-1, -1})
 SetMapTemplateUnit("nidavellir", "unit-gnomish-town-hall", "Acthnic Tribe", {-1, -1})
 SetMapTemplateUnit("nidavellir", "unit-gnomish-town-hall", "Cubital Tribe", {-1, -1})
 SetMapTemplateUnit("nidavellir", "unit-gnomish-town-hall", "Sagan Tribe", {-1, -1})

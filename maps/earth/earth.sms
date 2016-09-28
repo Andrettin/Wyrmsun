@@ -8,7 +8,9 @@ end
 
 ApplyMapTemplate("earth", 3766, 667)
 ApplyMapTemplate("nidavellir", 0, 0, 0, 0, 1)
-ApplyMapTemplate("asgard", 0, 0, 0, 0, 2)
+ApplyMapTemplate("nidavellir-underground-1", 0, 0, 0, 0, 2)
+ApplyMapTemplate("nidavellir-underground-2", 0, 0, 0, 0, 3)
+ApplyMapTemplate("asgard", 0, 0, 0, 0, 4)
 
 SetPlayerData(15, "RaceName", "neutral")
 
