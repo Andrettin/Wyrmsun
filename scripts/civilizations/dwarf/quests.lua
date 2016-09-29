@@ -446,6 +446,36 @@ DefineQuest("mushroom-fields", { -- inspired by the dialogue in Battle for Wesno
 	BuildUnits = {"unit-dwarven-mushroom-farm", 3}
 })
 
+DefineQuest("the-mead-of-poetry-brew-potions-of-invisibility", {
+	Name = "Brew Potions of Invisibility",
+	Icon = "icon-red-potion",
+--	World = "Nidavellir",
+--	Civilization = "dwarf",
+	PlayerColor = "black",
+	Unobtainable = true,
+	CompletionEffects = function(s)
+		CallDialogue("the-mead-of-poetry-potions-of-invisibility-ready", trigger_player)
+	end,
+--	Objectives = {"- Kill a Gryphon to obtain the Gryphon Feathers", "- Brew the Potions of Invisibility"},
+	Objectives = {"- Kill a Gryphon to obtain the Gryphon Feathers"},
+	DestroyUnits = {"unit-gryphon", "", 1}
+})
+
+DefineQuest("the-mead-of-poetry-brew-potions-of-ethereal-vision", {
+	Name = "Brew Potions of Ethereal Vision",
+	Icon = "icon-red-potion",
+--	World = "Nidavellir",
+--	Civilization = "dwarf",
+	PlayerColor = "black",
+	Unobtainable = true,
+	CompletionEffects = function(s)
+		CallDialogue("the-mead-of-poetry-potions-of-ethereal-vision-ready", trigger_player)
+	end,
+--	Objectives = {"- Kill a Wyrm to obtain the Wyrm Eyes", "- Brew the Potions of Ethereal Vision"},
+	Objectives = {"- Kill a Wyrm to obtain the Wyrm Eyes"},
+	DestroyUnits = {"unit-wyrm", "", 1}
+})
+
 DefineQuest("the-mead-of-poetry-kill-kvasir", {
 	Name = "Kill Kvasir",
 	Icon = "icon-dwarven-witness",
@@ -453,6 +483,9 @@ DefineQuest("the-mead-of-poetry-kill-kvasir", {
 --	Civilization = "dwarf",
 	PlayerColor = "black",
 	Unobtainable = true,
+	CompletionEffects = function(s)
+		CallDialogue("the-mead-of-poetry-kvasir-assassinated", trigger_player)
+	end,
 	Objectives = {"- Find your way to Asgard", "- Kill Kvasir"},
 	DestroyUnits = {"unit-dwarven-witness", "Brising Clan", 1} -- placeholder
 })

@@ -45,20 +45,56 @@ DefineDialogue("the-mead-of-poetry-fjalar-and-galar-conspire", {
 		},
 		{
 			"speaker", "character", "Fjalar",
-			"text", "Aye! Then we shall gain all his ancient wisdom. Many speak of the gateway to the realm of the gods, but few can actually see it. The both of us, however, are attuned to that which is mystical. We can see beyond the material, we can see the rainbow bridge... And we can use it to reach Asgard, the realm of the race of gods known as Aesir."
+			"text", "Aye! Then we shall gain all his ancient wisdom. To kill a god... an immensely dangerous feat, but one which shall be extremely rewarding. First, however, we would need to reach Asgard, the realm of the race of gods known as Aesir. Many speak of the gateway to that plane, but who has actually seen it?"
 		},
 		{
 			"speaker", "character", "Galar",
-			"text", "We must act quickly - if the other deities realize what is happening and intervene as we slay Kvasir, then we shall face untold wrath. Thankfully we have our potions of invisibility to help us with the task."
+			"text", "With a potion of ethereal vision we can attune ourselves to that which is mystical. Then we will be able to see the rainbow bridge... And use it to reach Asgard."
 		},
 		{
 			"speaker", "character", "Fjalar",
-			"text", "To kill a god... an immensely dangerous feat, but one which shall be extremely rewarding.",
+			"text", "Once we are in the divine plane, we must act quickly - if the other deities realize what is happening and intervene as we slay Kvasir, then we shall face untold wrath. Thankfully ye can brew us potions of invisibility to help us with the task."
+		},
+		{
+			"speaker", "character", "Galar",
+			"text", "We will need, then, the ingredients for the potions. Four gryphon feathers for the potions of invisibility, and two wyrm eyes for the potions of ethereal vision.",
 			"option-effects", {
 				function(s)
+					SetPlayerData(trigger_player, "AcceptQuest", "the-mead-of-poetry-brew-potions-of-invisibility")
+					SetPlayerData(trigger_player, "AcceptQuest", "the-mead-of-poetry-brew-potions-of-ethereal-vision")
 					SetPlayerData(trigger_player, "AcceptQuest", "the-mead-of-poetry-kill-kvasir")
 				end
 			}
+		}
+	}
+})
+
+DefineDialogue("the-mead-of-poetry-potions-of-invisibility-ready", {
+	Nodes = {
+		{
+			"speaker", "character", "Galar",
+			"text", "The gryphon feathers are ours! Now I can brew us our potions of invisibility... We should use them just before entering Asgard. Remember, the potion's magic will wear off as soon as we attack Kvasir. I am preparing four potions for us - two to be used to get to Kvasir unseen, and another pair for us to drink in order to get out of there safely."
+		}
+	}
+})
+
+DefineDialogue("the-mead-of-poetry-potions-of-ethereal-vision-ready", {
+	Nodes = {
+		{
+			"speaker", "character", "Galar",
+			"text", "We have all the ingredients for the potions of ethereal vision! There... soon they shall be ready. The potion's effect only lasts for a limited duration, so we should only drink it when we feel we have come to the right place."
+		},
+		{
+			"speaker", "character", "Fjalar",
+			"text", "The rainbow bridge is said to stand on the surface of Nidavellir. That's where we should begin our search."
+		},
+		{
+			"speaker", "character", "Galar",
+			"text", "Indeed, dear brother. We must also not linger for too long in Asgard, lest the potion's effect wear out and we be left stranded there."
+		},
+		{
+			"speaker", "character", "Fjalar",
+			"text", "That would be a most fatal mistake."
 		}
 	}
 })
@@ -181,7 +217,7 @@ DefineDialogue("the-mead-of-poetry-offer-suttung-the-mead", {
 	Nodes = {
 		{
 			"speaker", "character", "Fjalar",
-			"text", "We offer you our most valuable possession as the blood price for your father's death. If you let us live, we'll give it to you."
+			"text", "We offer ye our most valuable possession as the blood price for yer father's death. If ye let us live, we'll give it to ye."
 		},
 		{
 			"speaker", "character", "Suttung",
@@ -189,7 +225,7 @@ DefineDialogue("the-mead-of-poetry-offer-suttung-the-mead", {
 		},
 		{
 			"speaker", "character", "Fjalar",
-			"text", "Much better than that. We have our magic mead... the mead of poetry. We brew it out of the blood of the wise Vanir god, Kvasir. Anyone who takes a sip becomes a sage. That is why your father felt our planewalking to Asgard... we went there to slay Kvasir."
+			"text", "Much better than that. We have our magic mead... the mead of poetry. We brew it out of the blood of the wise Vanir god, Kvasir. Anyone who takes a sip becomes a sage. That is why yer father felt our planewalking to Asgard... we went there to slay Kvasir."
 		},
 		{
 			"speaker", "character", "Suttung",
