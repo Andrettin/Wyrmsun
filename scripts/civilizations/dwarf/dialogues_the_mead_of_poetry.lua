@@ -75,7 +75,7 @@ DefineDialogue("the-mead-of-poetry-kvasir-assassinated", {
 		},
 		{
 			"speaker", "character", "Fjalar",
-			"text", "We must tell no one what has transpired. If word gets out, we will have to face the ire of the gods."
+			"text", "We must tell no one what has transpired. If word gets out, we will have to face the ire of the Aesir."
 		},
 		{
 			"speaker", "character", "Galar",
@@ -103,10 +103,10 @@ DefineDialogue("the-mead-of-poetry-gilling-appears", {
 				function(s)
 				end,
 				function(s)
-					CallDialogue("the-mead-of-poetry-offer-gilling-the-mead", player)
+					CallDialogue("the-mead-of-poetry-offer-gilling-the-mead", trigger_player)
 				end
 --				function(s)
---					CallDialogue("the-mead-of-poetry-leave-gilling-alone", player)
+--					CallDialogue("the-mead-of-poetry-leave-gilling-alone", trigger_player)
 --				end
 			}
 		}
@@ -151,3 +151,50 @@ DefineDialogue("the-mead-of-poetry-gillings-boastfulness", {
 		}
 	}
 })
+
+DefineDialogue("the-mead-of-poetry-suttung-wants-revenge", {
+	Nodes = {
+		{
+			"speaker", "character", "Galar",
+			"text", "Another ettin...?"
+		},
+		{
+			"speaker", "character", "Suttung",
+			"text", "My father's head... on a pike! You little creatures, you murdered him! I, Suttung, the son of Gilling, shall be your end!"
+		},
+		{
+			"speaker", "character", "Galar",
+			"text", "My brother... this ettin looks much stronger than his father. Skillful as we may be, I don't think we'll be much of a match for him.",
+			"options", {"Offer him the mead for our lives", "Fight Suttung"},
+			"option-effects", {
+				function(s)
+					CallDialogue("the-mead-of-poetry-offer-suttung-the-mead", trigger_player)
+				end,
+				function(s)
+				end
+			}
+		}
+	}
+})
+
+DefineDialogue("the-mead-of-poetry-offer-suttung-the-mead", {
+	Nodes = {
+		{
+			"speaker", "character", "Fjalar",
+			"text", "We offer you our most valuable possession as the blood price for your father's death. If you let us live, we'll give it to you."
+		},
+		{
+			"speaker", "character", "Suttung",
+			"text", "Ha! And what is it, tableware of hammered gold? That is not enough to pay for the death of my father."
+		},
+		{
+			"speaker", "character", "Fjalar",
+			"text", "Much better than that. We have our magic mead... the mead of poetry. We brew it out of the blood of the wise Vanir god, Kvasir. Anyone who takes a sip becomes a sage. That is why your father felt our planewalking to Asgard... we went there to slay Kvasir."
+		},
+		{
+			"speaker", "character", "Suttung",
+			"text", "Give that mead to me, and you live."
+		}
+	}
+})
+
