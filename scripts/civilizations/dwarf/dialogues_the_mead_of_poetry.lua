@@ -33,7 +33,7 @@ DefineDialogue("the-mead-of-poetry-fjalar-and-galar-conspire", {
 		},
 		{
 			"speaker", "character", "Galar",
-			"text", "Aye. It is said that he has complete grasp of the truth of all things, giving direct and precise answers to any inquiries made of them. Even those who seek not the facts, but help in deciding the best course of action they should take are aided by Kvasir's wisdom. He asks them the right questions, so that they may find the answers to their troubles inside themselves."
+			"text", "Aye. It is said that he has complete grasp of the truth of all things, giving direct and precise answers to any inquiries made of them. Even those who seek not the facts, but help in deciding the best course of action are aided by Kvasir's wisdom. He asks them the right questions back, so that they may find the answers to their troubles inside themselves."
 		},
 		{
 			"speaker", "character", "Fjalar",
@@ -45,7 +45,7 @@ DefineDialogue("the-mead-of-poetry-fjalar-and-galar-conspire", {
 		},
 		{
 			"speaker", "character", "Fjalar",
-			"text", "Aye! Then we shall gain all his ancient wisdom. To kill a god... an immensely dangerous feat, but one which shall be extremely rewarding. First, however, we would need to reach Asgard, the realm of the race of gods known as Aesir. Many speak of the gateway to that plane, but who has actually seen it?"
+			"text", "Aye! Then we should gain all his ancient wisdom. To kill a god... an immensely dangerous feat, but one which shall be extremely rewarding. First, however, we would need to reach Asgard, the realm of the race of gods known as Aesir. Many speak of the gateway to that plane, but who has actually seen it?"
 		},
 		{
 			"speaker", "character", "Galar",
@@ -53,7 +53,7 @@ DefineDialogue("the-mead-of-poetry-fjalar-and-galar-conspire", {
 		},
 		{
 			"speaker", "character", "Fjalar",
-			"text", "Once we are in the divine plane, we must act quickly - if the other deities realize what is happening and intervene as we slay Kvasir, then we shall face untold wrath. Thankfully ye can brew us potions of invisibility to help us with the task."
+			"text", "Once we are in the divine plane, we must act quickly - if the other deities realize what is happening and intervene as we slay Kvasir, then we shall face untold wrath. Thankfully we can brew potions of invisibility to help us with the task."
 		},
 		{
 			"speaker", "character", "Galar",
@@ -73,7 +73,7 @@ DefineDialogue("the-mead-of-poetry-potions-of-invisibility-ready", {
 	Nodes = {
 		{
 			"speaker", "character", "Galar",
-			"text", "The gryphon feathers are ours! Now I can brew us our potions of invisibility... We should use them just before entering Asgard. Remember, the potion's magic will wear off as soon as we attack Kvasir. I am preparing four potions for us - two to be used to get to Kvasir unseen, and another pair for us to drink in order to get out of there safely."
+			"text", "The gryphon feathers are ours! Now we can brew our potions of invisibility... We should use them just before entering Asgard. Remember, the potion's magic will wear off as soon as we attack Kvasir. I am preparing four potions for us - two to be used to get to Kvasir unseen, and another pair for us to drink in order to get out of there safely."
 		}
 	}
 })
@@ -90,7 +90,7 @@ DefineDialogue("the-mead-of-poetry-potions-of-ethereal-vision-ready", {
 		},
 		{
 			"speaker", "character", "Galar",
-			"text", "Indeed, dear brother. We must also not linger for too long in Asgard, lest the potion's effect wear out and we be left stranded there."
+			"text", "Indeed, dear brother. We must also not linger for too long in Asgard, lest the potion's effect wear off and we be left stranded there."
 		},
 		{
 			"speaker", "character", "Fjalar",
@@ -128,22 +128,21 @@ DefineDialogue("the-mead-of-poetry-gilling-appears", {
 		},
 		{
 			"speaker", "character", "Gilling",
-			"text", "I am Gilling, ettin traveler of worlds. I was scrying when I felt the fabric of reality being breached by planewalkers to reach Asgard, and I have finally located the origin of the event to this world. Amongst ettins, planewalking is a rare but not unheard of gift. But here, I suppose it is the first time that it happens. Curious, a realm of tiny people..."
+			"text", "I am Gilling, ettin traveler of worlds. I was scrying Asgard when I happened to see one of the plane's gateways being breached. I found the portal used in this world, and followed the trail of the realm travelers to these caves. Amongst ettins, planewalking is a rare but not unheard of gift. But in this strange world of tiny people, I suppose it is the first time that it happens."
 		},
 		{
 			"speaker", "character", "Galar",
-			"text", "This isn't good, Fjalar. If he felt when we used the rainbow bridge, he may have some knowledge of what transpired in Asgard afterwards. If the gods learn of this...",
---			"options", {"Time for him to die", "Offer the mead for his silence", "Leave him alone"},
-			"options", {"Time for him to die", "Offer the mead for his silence"},
+			"text", "This isn't good, Fjalar. If the gods learn of this...",
+			"options", {"Time for him to die", "Offer the mead for his silence", "Leave him alone"},
 			"option-effects", {
 				function(s)
 				end,
 				function(s)
 					CallDialogue("the-mead-of-poetry-offer-gilling-the-mead", trigger_player)
+				end,
+				function(s)
+					CallDialogue("the-mead-of-poetry-leave-gilling-alone", trigger_player)
 				end
---				function(s)
---					CallDialogue("the-mead-of-poetry-leave-gilling-alone", trigger_player)
---				end
 			}
 		}
 	}
@@ -152,8 +151,12 @@ DefineDialogue("the-mead-of-poetry-gilling-appears", {
 DefineDialogue("the-mead-of-poetry-offer-gilling-the-mead", {
 	Nodes = {
 		{
+			"speaker", "character", "Fjalar",
+			"text", "We offer ye what we have of most precious - this mead which makes those who drink it a sage - for yer silence."
+		},
+		{
 			"speaker", "character", "Gilling",
-			"text", "You want me to take your mead in exchange for not telling others that I felt the breach? I don't see why not."
+			"text", "An interesting offer. I will take it."
 		}
 	}
 })
@@ -179,7 +182,20 @@ DefineDialogue("the-mead-of-poetry-gillings-boastfulness", {
 	Nodes = {
 		{
 			"speaker", "character", "Galar",
-			"text", "Brother... Gilling took our mead, but he has not kept his mouth shut. He has spread the word that we gave him the mead to not tell others about the use of the rainbow bridge. It is now obvious to the Aesir that we must have been the ones to murder Kvasir. Through their priests, they have turned the other dwarven clans against us. Our chance of defeating the other clans is pitiful. We will be slaughtered."
+			"text", "Brother... Gilling took our mead, but he has not kept his mouth shut. He has spread the word that we gave him the mead to not tell others about our use of the rainbow bridge. It is now obvious to the Aesir that we must have been the ones to murder Kvasir. Through their priests, they have turned the other dwarven clans against us. Our chance of defeating the other clans is pitiful. We will be slaughtered."
+		},
+		{
+			"speaker", "character", "Fjalar",
+			"text", "Have some nerve, Galar. We still have one choice. We can go further underground, deep into uncharted caves, where no one will be able to find us. It will be extremely perilous, but we don't have much chance of surviving while staying here, do we?"
+		}
+	}
+})
+
+DefineDialogue("the-mead-of-poetry-gillings-tale", {
+	Nodes = {
+		{
+			"speaker", "character", "Galar",
+			"text", "Brother... Gilling may not have accused us of being the ones who travelled to Asgard to our face, but in his home world he spread the tale that he met two tiny planewalkers in our caves. It is now obvious to the Aesir that we must have been the ones to murder Kvasir. Through their priests, they have turned the other dwarven clans against us. Our chance of defeating the other clans is pitiful. We will be slaughtered."
 		},
 		{
 			"speaker", "character", "Fjalar",

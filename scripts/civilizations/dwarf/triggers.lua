@@ -40,19 +40,3 @@ AddTrigger("the-mead-of-poetry-fjalar-and-galar-conspire",
 		return false
 	end
 )
-
-AddTrigger("the-mead-of-poetry-kvasir-assassinated",
-	function()
-		for i=0,14 do
-			if (FindHero("Fjalar", i) ~= nil and FindHero("Galar", i) ~= nil and GetPlayerData(i, "CompletedQuest", "the-mead-of-poetry-kill-kvasir")) then
-				trigger_player = i
-				return true
-			end
-		end
-		return false
-	end,
-	function()
-		CallDialogue("the-mead-of-poetry-kvasir-assassinated", trigger_player)
-		return false
-	end
-)
