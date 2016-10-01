@@ -250,3 +250,15 @@ DefineDialogue("the-mead-of-poetry-offer-suttung-the-mead", {
 	}
 })
 
+DefineDialogue("the-mead-of-poetry-suttungs-boastfulness", {
+	Nodes = {
+		{
+			"speaker", "character", "Galar",
+			"text", "I bear grave news. After Suttung took our mead, he began to boast of his deed. He has spread the full story of the mead to the four winds, including our hidden acts! The Aesir now know we are Kvasir's killers... Although their priority is in sending champions to recover the mead from Suttung's homeworld of Jotunheim, they have not forgotten what we have done. Through their priests, they have turned the other dwarven clans against us. Our chance of defeating the other clans is pitiful. We will be slaughtered."
+		},
+		{
+			"speaker", "character", "Fjalar",
+			"text", "Have some nerve, Galar. We still have one choice. We can go further underground, deep into uncharted caves, where no one will be able to find us. It will be extremely perilous, but we don't have much chance of surviving while staying here, do we?"
+		}
+	}
+})
