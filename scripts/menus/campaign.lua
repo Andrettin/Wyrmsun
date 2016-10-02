@@ -100,11 +100,11 @@ function RunCampaignMenu()
 	menu:addFullButton(_("~!Start Campaign"), "s", offx + 208, offy + 212 + (36 * 4),
 		function()
 			RunningScenario = true
-			GetMapInfo("maps/earth/earth.smp")
+			GetMapInfo("scripts/map_templates/campaign.smp")
 			GameSettings.NoRandomness = wyr.preferences.NoRandomness
 			GameSettings.NoTimeOfDay = wyr.preferences.NoTimeOfDay
 			GameSettings.Difficulty = wyr.preferences.Difficulty
-			mapname = "maps/earth/earth.smp"
+			mapname = "scripts/map_templates/campaign.smp"
 			RunMap(mapname)
 			menu:stop()
 			if not (LoadGameFile) then

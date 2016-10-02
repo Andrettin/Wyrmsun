@@ -486,7 +486,7 @@ DefineQuest("the-mead-of-poetry-kill-kvasir", {
 	CompletionEffects = function(s)
 		CallDialogue("the-mead-of-poetry-kvasir-assassinated", trigger_player)
 	end,
-	Objectives = {"- Find your way to Asgard", "- Kill Kvasir"},
+	Objectives = {"- Find your way to Asgard", "- Kill Kvasir", "- Fjalar and Galar must survive"},
 	DestroyUnits = {"unit-dwarven-witness", "Brising Clan", 1} -- placeholder
 })
 
