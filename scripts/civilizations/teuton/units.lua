@@ -107,7 +107,7 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 		{"layer", "helmet", "file", "teuton/units/iron_helm.png"},
 		{"layer", "weapon", "file", "teuton/units/long_iron_sword.png"}
 	},
-	Animations = "animations-melee-unit-new", Icon = "icon-teuton-swordsman",
+	Animations = "animations-melee-unit-new", Icon = "icon-odin",
 	DefaultEquipment = {
 		{"weapon", "unit-short-sword"},
 		{"shield", "unit-wooden-shield"},
@@ -632,7 +632,7 @@ DefineUnitType("unit-teuton-smithy", {
 	Shadow = {"file", "teuton/buildings/smithy_shadow.png", "size", {96, 96}},
 	Icon = "icon-teuton-smithy",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield"},
-	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery", "upgrade-item-suffix-of-os"}, -- "Os" is an Anglo-Saxon rune
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery", "upgrade-item-suffix-of-os", "upgrade-item-suffix-of-sigel"}, -- "Os" and "Sigel" are Anglo-Saxon runes
 	Variations = {
 		{
 			"variation-id", "smithy",

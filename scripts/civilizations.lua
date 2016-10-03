@@ -582,14 +582,6 @@ DefineCivilization("elf", {
 	ParentCivilization = "neutral",
 --	Language = "elven",
 	Adjective = "Elven",
-	--[[
-	PersonalNames = {
-		"Aendan", "Amadrieriand", "Amáril", "Amelad", "Ameldor", "Amendel", "Ameng", "Amilmaldur", "Amilmalith", "Amilmandir", "Amind", "Amiol", "Amiorion", "Amithrarion", "Amóldor", "Amorfimir", "Amorfir", "Amowyn", "Amulas", "Amundil", "Anán", "Anebrin", "Anebrir", "Anémbor", "Anénduil", "Anerion", "Anilad", "Anil-Gawyn", "Anilmambor", "Anilmariand", "Anior", "Anithranduil", "Anol", "Anon", "Anorfing", "Anundil", "Asaeri", "Belán", "Belandil", "Belarandel", "Belel", "Belén", "Belil-Gandil", "Belilmand", "Belilmang", "Beliondil", "Beliril", "Belithraldor", "Belithrawyn", "Belólad", "Belómir", "Belondel", "Belyrion", "Cadriembor", "Cadrieriand", "Cálad", "Caladrielas", "Calándel", "Caldur", "Cáldur", "Calebrindel", "Calebrindir", "Calénduil", "Calil-Gandir", "Calil-Gawyn", "Calioriand", "Caliril", "Calónduil", "Caloril", "Cándir", "Canduil", "Caraldur", "Carang", "Célad", "Celadrieriand", "Celang", "Celaral", "Celarandil", "Celáriand", "Celebririon", "Celelas", "Celendel", "Celér", "Celilmalas", "Celiondir", "Celior", "Celiorion", "Celong", "Celór", "Celóril", "Celorion", "Celundir", "Celuwyn", "Celyndel", "Cénduil", "Cindil", "Ciong", "Cithralad", "Cithraldur", "Cithrand", "Cithrandel", "Cithraril", "Col", "Corfil", "Corfildur", "Cówyn", "Crintil", "Cun", "Cundir", "Cylas", "Dain", "Delán", "Delánd", "Delandel", "Delaraldur", "Deláril", "Delawyn", "Deléng", "Delilmaldor", "Deliol", "Delithrar", "Deliwyn", "Delóldor", "Delorfilad", "Delorfilith", "Delorion", "Delundil", "Ealin", "Eäradriendel", "Eäradrier", "Eäránduil", "Eäraralad", "Eärebrindel", "Eäréldor", "Eäreng", "Eärérion", "Eärithrandil", "Eäromir", "Eärorfiriand", "Eäryldur", "Eäryriand", "Eladrieng", "Elálith", "Elánd", "Elándil", "Elebrildor", "Elebrindel", "Elebriril", "Elélas", "Elémbor", "Elemir", "Elen", "Elil-Garil", "Elilmaldur", "Eliomir", "Eliondil", "Elolas", "Elólas", "Elor", "Elorfilad", "Elradrien", "Elralith", "Elran", "Elreldur", "Elrilmand", "Elrioldor", "Elriolith", "Elrithralith", "Elrithranduil", "Elrorfir", "Elval", "Elvandir", "Elvaramir", "Elváwyn", "Elvebrind", "Elvebrindel", "Elvélith", "Elvémir", "Elverion", "Elvil-Garion", "Elvilmaldur", "Elvilmaril", "Elvioldur", "Elvombor", "Elvónduil", "Elvorfimir", "Elvorfiriand", "Elvorfiril", "Elvóriand", "Elvund", "Elyldor", "Elyrion", "Eowambor", "Eowanduil", "Eowar", "Eowaraldor", "Eowaran", "Eowarar", "Eowariand", "Eowarion", "Eowebrind", "Eowémir", "Eowil-Garion", "Eowimbor", "Eowiomir", "Eowithrawyn", "Eowóldur", "Eoworfildor", "Eowówyn", "Eowylas", "Erlornas", "Fadriendel", "Fandel", "Farandir", "Fáwyn", "Fendel", "Fer", "Filman", "Fioril", "Fithraril", "Forfilas", "Fyrion", "Gadriendil", "Gadrieng", "Gaelir", "Gaenlar", "Galadrieldor", "Galálad", "Galálas", "Galalith", "Galar", "Galelas", "Galeldur", "Galelith", "Galémbor", "Galithrariand", "Galoldur", "Galtrid", "Galuldur", "Galur", "Galurion", "Gambor", "Gán", "Ganduil", "Garaldor", "Gararil", "Gelad", "Géril", "Gil-Gandel", "Gil-Gang", "Giombor", "Githral", "Githralad", "Gladriendil", "Glal", "Glámbor", "Glandil", "Glarang", "Glararil", "Glildur", "Glilmal", "Glimir", "Glinan", "Glindur", "Glior", "Glólas", "Gloldor", "Glómir", "Glon", "Glul", "Golad", "Gor", "Gumbor", "Gyl", "Gymbor", "Gyn", "Harariand", "Háriand", "Hebril", "Hemir", "Hénduil", "Hilas", "Hil-Garion", "Hilmariand", "Hiong", "Hirion", "Hithrandel", "Horfilad", "Horfindel", "Hundel", "Hymir", "Hyrion", "Hywyn", "Isadrieng", "Isándir", "Isarandel", "Isarar", "Iselas", "Isér", "Isilmandel", "Isirion", "Isithral", "Isól", "Isóndel", "Isóng", "Isorfilad", "Isorfindir", "Isuwyn", "Isyndel", "Kalenz", "Kalnar", "Landar", "Legal", "Legaran", "Legémir", "Legéril", "Legilad", "Legil-Gal", "Legiondel", "Legithralith", "Legorfindil", "Legorfirion", "Legówyn", "Legyl", "Legyn", "Linduilas", "Lómadrieril", "Lómarand", "Lomarfel", "Lómariand", "Lómebrilad", "Lómebrind", "Lómémbor", "Lómilmaril", "Lómiriand", "Lómorfindil", "Lómowyn", "Losnin", "Lyndar", "Madrieril", "Maldur", "Mánduil", "Maraldur", "Mebrin", "Méng", "Mérion", "Miolith", "Miomir", "Mithrand", "Mondir", "Móndir", "Morfilas", "Morfin", "Morfiriand", "Mylith", "Nadrieldor", "Nalith", "Nán", "Nél", "Nil-Galas", "Nil-Galith", "Nil-Gar", "Nilmar", "Nóndel", "Norfildor", "Norfilith", "Norfindil", "Norfindir", "Numbor", "Nyldur", "Padrieriand", "Padrieril", "Pamir", "Paraldor", "Parariand", "Pilmalad", "Pindir", "Pór", "Porfildur", "Pumbor", "Pyldur", "Raesil", "Rebrir", "Réndir", "Rilmandil", "Rithrandil", "Ról", "Róldor", "Roldur", "Róldur", "Rorfilad", "Rorfindil", "Rówyn", "Ryn", "Sadrielas", "Salira", "Sebrin", "Sebriril", "Sénd", "Sil-Gal",  "Sólad", "Sorfind", "Sóriand", "Tadriendir", "Taral", "Taraldur", "Táriand", "Tendel", "Téwyn", "Thradrieriand", "Thrambor", "Thraral", "Threbring", "Thrélad", "Thréldur", "Thril-Gamir", "Thril-Gandir", "Thril-Gar", "Thrilmandel", "Thrimir", "Thrion", "Thrithran", "Throlas", "Thrón", "Thróng", "Thrund", "Thryriand", "Til-Gan", "Tilmalad", "Tilmalas", "Tinandir", "Tinarambor", "Tinarariand", "Tinén", "Tinil-Ganduil", "Tinilmand", "Tinilmawyn", "Tinimir", "Tinindil", "Tinithrar", "Tinoldor", "Tinond", "Tinorfind", "Tinorfiriand", "Tinóriand", "Tinowyn", "Tinun", "Tinyl", "Tion", "Tolas", "Torfildur", "Tówyn", "Tylad", "Unadrieldor", "Unadrier", "Unál", "Unalas", "Unálas", "Unaraldur", "Unaril", "Unárion", "Unebrin", "Unebrind", "Uneldor", "Unil", "Unil-Gan", "Uniolith", "Unioril", "Unólith", "Unombor", "Unóndel", "Unondir", "Unorfildor", "Unorfiril", "Unorfiwyn", "Unulad", "Uradredia", "Uradrielas", "Uradrierion", "Urálas", "Urálith", "Urambor", "Urér", "Uril-Gambor", "Urilmalith", "Uróldor", "Urorfildor", "Urul", "Urymir", "Válad", "Ván", "Vándel", "Vandir", "Varalas", "Vararion", "Vebril", "Vebrilas", "Vebrinduil", "Vel", "Velon", "Vilith", "Vol", "Vólas", "Vóldur", "Vondel", "Vorfin", "Vorfindil", "Vulas", "Vuldur", "Vunduil", "Vylas", "Vyldor",
-		"Egil", -- elven archer from Norse mythology, brother of Slagfid and Volund
-		"Slagfid", -- from Norse mythology, brother of Egil and Volund
-		"Volund" -- elven smith from Norse mythology, brother of Slagfid and Egil
-	},
-	--]]
 	Playable = false,
 	DefaultColor = "teal",
 	ButtonIcons = {
@@ -607,7 +599,526 @@ DefineCivilization("elf", {
 		"germanic/ui/infopanel.png", 0, -200
 	},
 	Description = "The lush world of Alfheim contains a myriad forests, many of which are inhabited by elves. Being a subtle folk, elves hold magical skills in great steem, and they are more prone to intrigue than open warfare.",
-	Background = "The elves of Wyrmsun incorporate elements both of the elves of Norse mythology and the Celtic fairies. This follows the amalgamation of the two types of beings in English folklore."
+	Background = "The elves of Wyrmsun incorporate elements of both the elves of Norse mythology and the Celtic fairies. This follows the amalgamation of the two types of beings in English folklore.",
+	PersonalNames = {
+		"male", "Aendan",
+		"male", "Amadrieriand", -- from Battle for Wesnoth
+		"male", "Amáril", -- from Battle for Wesnoth
+		"male", "Amelad", -- from Battle for Wesnoth
+		"male", "Ameldor", -- from Battle for Wesnoth
+		"male", "Amendel", -- from Battle for Wesnoth
+		"male", "Ameng", -- from Battle for Wesnoth
+		"male", "Amilmaldur", -- from Battle for Wesnoth
+		"male", "Amilmalith", -- from Battle for Wesnoth
+		"male", "Amilmandir", -- from Battle for Wesnoth
+		"male", "Amind", -- from Battle for Wesnoth
+		"male", "Amiol", -- from Battle for Wesnoth
+		"male", "Amiorion", -- from Battle for Wesnoth
+		"male", "Amithrarion", -- from Battle for Wesnoth
+		"male", "Amóldor", -- from Battle for Wesnoth
+		"male", "Amorfimir", -- from Battle for Wesnoth
+		"male", "Amorfir", -- from Battle for Wesnoth
+		"male", "Amowyn", -- from Battle for Wesnoth
+		"male", "Amulas", -- from Battle for Wesnoth
+		"male", "Amundil", -- from Battle for Wesnoth
+		"male", "Anán", -- from Battle for Wesnoth
+		"male", "Anebrin", -- from Battle for Wesnoth
+		"male", "Anebrir", -- from Battle for Wesnoth
+		"male", "Anémbor", -- from Battle for Wesnoth
+		"male", "Anénduil", -- from Battle for Wesnoth
+		"male", "Anerion", -- from Battle for Wesnoth
+		"male", "Anilad", -- from Battle for Wesnoth
+		"male", "Anil-Gawyn", -- from Battle for Wesnoth
+		"male", "Anilmambor", -- from Battle for Wesnoth
+		"male", "Anilmariand", -- from Battle for Wesnoth
+		"male", "Anior", -- from Battle for Wesnoth
+		"male", "Anithranduil", -- from Battle for Wesnoth
+		"male", "Anol", -- from Battle for Wesnoth
+		"male", "Anon", -- from Battle for Wesnoth
+		"male", "Anorfing", -- from Battle for Wesnoth
+		"male", "Anundil", -- from Battle for Wesnoth
+		"male", "Asaeri",
+		"male", "Belán", -- from Battle for Wesnoth
+		"male", "Belandil", -- from Battle for Wesnoth
+		"male", "Belarandel", -- from Battle for Wesnoth
+		"male", "Belel", -- from Battle for Wesnoth
+		"male", "Belén", -- from Battle for Wesnoth
+		"male", "Belil-Gandil", -- from Battle for Wesnoth
+		"male", "Belilmand", -- from Battle for Wesnoth
+		"male", "Belilmang", -- from Battle for Wesnoth
+		"male", "Beliondil", -- from Battle for Wesnoth
+		"male", "Beliril", -- from Battle for Wesnoth
+		"male", "Belithraldor", -- from Battle for Wesnoth
+		"male", "Belithrawyn", -- from Battle for Wesnoth
+		"male", "Belólad", -- from Battle for Wesnoth
+		"male", "Belómir", -- from Battle for Wesnoth
+		"male", "Belondel", -- from Battle for Wesnoth
+		"male", "Belyrion", -- from Battle for Wesnoth
+		"male", "Cadriembor", -- from Battle for Wesnoth
+		"male", "Cadrieriand", -- from Battle for Wesnoth
+		"male", "Cálad", -- from Battle for Wesnoth
+		"male", "Caladrielas", -- from Battle for Wesnoth
+		"male", "Calándel", -- from Battle for Wesnoth
+		"male", "Caldur", -- from Battle for Wesnoth
+		"male", "Cáldur", -- from Battle for Wesnoth
+		"male", "Calebrindel", -- from Battle for Wesnoth
+		"male", "Calebrindir", -- from Battle for Wesnoth
+		"male", "Calénduil", -- from Battle for Wesnoth
+		"male", "Calil-Gandir", -- from Battle for Wesnoth
+		"male", "Calil-Gawyn", -- from Battle for Wesnoth
+		"male", "Calioriand", -- from Battle for Wesnoth
+		"male", "Caliril", -- from Battle for Wesnoth
+		"male", "Calónduil", -- from Battle for Wesnoth
+		"male", "Caloril", -- from Battle for Wesnoth
+		"male", "Cándir", -- from Battle for Wesnoth
+		"male", "Canduil", -- from Battle for Wesnoth
+		"male", "Caraldur", -- from Battle for Wesnoth
+		"male", "Carang", -- from Battle for Wesnoth
+		"male", "Célad", -- from Battle for Wesnoth
+		"male", "Celadrieriand", -- from Battle for Wesnoth
+		"male", "Celang", -- from Battle for Wesnoth
+		"male", "Celaral", -- from Battle for Wesnoth
+		"male", "Celarandil", -- from Battle for Wesnoth
+		"male", "Celáriand", -- from Battle for Wesnoth
+		"male", "Celebririon", -- from Battle for Wesnoth
+		"male", "Celelas", -- from Battle for Wesnoth
+		"male", "Celendel", -- from Battle for Wesnoth
+		"male", "Celér", -- from Battle for Wesnoth
+		"male", "Celilmalas", -- from Battle for Wesnoth
+		"male", "Celiondir", -- from Battle for Wesnoth
+		"male", "Celior", -- from Battle for Wesnoth
+		"male", "Celiorion", -- from Battle for Wesnoth
+		"male", "Celong", -- from Battle for Wesnoth
+		"male", "Celór", -- from Battle for Wesnoth
+		"male", "Celóril", -- from Battle for Wesnoth
+		"male", "Celorion", -- from Battle for Wesnoth
+		"male", "Celundir", -- from Battle for Wesnoth
+		"male", "Celuwyn", -- from Battle for Wesnoth
+		"male", "Celyndel", -- from Battle for Wesnoth
+		"male", "Cénduil", -- from Battle for Wesnoth
+		"male", "Cindil", -- from Battle for Wesnoth
+		"male", "Ciong", -- from Battle for Wesnoth
+		"male", "Cithralad", -- from Battle for Wesnoth
+		"male", "Cithraldur", -- from Battle for Wesnoth
+		"male", "Cithrand", -- from Battle for Wesnoth
+		"male", "Cithrandel", -- from Battle for Wesnoth
+		"male", "Cithraril", -- from Battle for Wesnoth
+		"male", "Col", -- from Battle for Wesnoth
+		"male", "Corfil", -- from Battle for Wesnoth
+		"male", "Corfildur", -- from Battle for Wesnoth
+		"male", "Cówyn", -- from Battle for Wesnoth
+		"male", "Crintil",
+		"male", "Cun", -- from Battle for Wesnoth
+		"male", "Cundir", -- from Battle for Wesnoth
+		"male", "Cylas", -- from Battle for Wesnoth
+		"male", "Dain",
+		"male", "Delán", -- from Battle for Wesnoth
+		"male", "Delánd", -- from Battle for Wesnoth
+		"male", "Delandel", -- from Battle for Wesnoth
+		"male", "Delaraldur", -- from Battle for Wesnoth
+		"male", "Deláril", -- from Battle for Wesnoth
+		"male", "Delawyn", -- from Battle for Wesnoth
+		"male", "Deléng", -- from Battle for Wesnoth
+		"male", "Delilmaldor", -- from Battle for Wesnoth
+		"male", "Deliol", -- from Battle for Wesnoth
+		"male", "Delithrar", -- from Battle for Wesnoth
+		"male", "Deliwyn", -- from Battle for Wesnoth
+		"male", "Delóldor", -- from Battle for Wesnoth
+		"male", "Delorfilad", -- from Battle for Wesnoth
+		"male", "Delorfilith", -- from Battle for Wesnoth
+		"male", "Delorion", -- from Battle for Wesnoth
+		"male", "Delundil", -- from Battle for Wesnoth
+		"male", "Ealin",
+		"male", "Eäradriendel", -- from Battle for Wesnoth
+		"male", "Eäradrier", -- from Battle for Wesnoth
+		"male", "Eäránduil", -- from Battle for Wesnoth
+		"male", "Eäraralad", -- from Battle for Wesnoth
+		"male", "Eärebrindel", -- from Battle for Wesnoth
+		"male", "Eäréldor", -- from Battle for Wesnoth
+		"male", "Eäreng", -- from Battle for Wesnoth
+		"male", "Eärérion", -- from Battle for Wesnoth
+		"male", "Eärithrandil", -- from Battle for Wesnoth
+		"male", "Eäromir", -- from Battle for Wesnoth
+		"male", "Eärorfiriand", -- from Battle for Wesnoth
+		"male", "Eäryldur", -- from Battle for Wesnoth
+		"male", "Eäryriand", -- from Battle for Wesnoth
+		"male", "Egil", -- elven archer from Norse mythology, brother of Slagfid and Volund
+		"male", "Eladrieng", -- from Battle for Wesnoth
+		"male", "Elálith", -- from Battle for Wesnoth
+		"male", "Elánd", -- from Battle for Wesnoth
+		"male", "Elándil", -- from Battle for Wesnoth
+		"male", "Elebrildor", -- from Battle for Wesnoth
+		"male", "Elebrindel", -- from Battle for Wesnoth
+		"male", "Elebriril", -- from Battle for Wesnoth
+		"male", "Elélas", -- from Battle for Wesnoth
+		"male", "Elémbor", -- from Battle for Wesnoth
+		"male", "Elemir", -- from Battle for Wesnoth
+		"male", "Elen", -- from Battle for Wesnoth
+		"male", "Elil-Garil", -- from Battle for Wesnoth
+		"male", "Elilmaldur", -- from Battle for Wesnoth
+		"male", "Eliomir", -- from Battle for Wesnoth
+		"male", "Eliondil", -- from Battle for Wesnoth
+		"male", "Elolas", -- from Battle for Wesnoth
+		"male", "Elólas", -- from Battle for Wesnoth
+		"male", "Elor", -- from Battle for Wesnoth
+		"male", "Elorfilad", -- from Battle for Wesnoth
+		"male", "Elradrien", -- from Battle for Wesnoth
+		"male", "Elralith", -- from Battle for Wesnoth
+		"male", "Elran", -- from Battle for Wesnoth
+		"male", "Elreldur", -- from Battle for Wesnoth
+		"male", "Elrilmand", -- from Battle for Wesnoth
+		"male", "Elrioldor", -- from Battle for Wesnoth
+		"male", "Elriolith", -- from Battle for Wesnoth
+		"male", "Elrithralith", -- from Battle for Wesnoth
+		"male", "Elrithranduil", -- from Battle for Wesnoth
+		"male", "Elrorfir", -- from Battle for Wesnoth
+		"male", "Elval", -- from Battle for Wesnoth
+		"male", "Elvandir", -- from Battle for Wesnoth
+		"male", "Elvaramir", -- from Battle for Wesnoth
+		"male", "Elváwyn", -- from Battle for Wesnoth
+		"male", "Elvebrind", -- from Battle for Wesnoth
+		"male", "Elvebrindel", -- from Battle for Wesnoth
+		"male", "Elvélith", -- from Battle for Wesnoth
+		"male", "Elvémir", -- from Battle for Wesnoth
+		"male", "Elverion", -- from Battle for Wesnoth
+		"male", "Elvil-Garion", -- from Battle for Wesnoth
+		"male", "Elvilmaldur", -- from Battle for Wesnoth
+		"male", "Elvilmaril", -- from Battle for Wesnoth
+		"male", "Elvioldur", -- from Battle for Wesnoth
+		"male", "Elvombor", -- from Battle for Wesnoth
+		"male", "Elvónduil", -- from Battle for Wesnoth
+		"male", "Elvorfimir", -- from Battle for Wesnoth
+		"male", "Elvorfiriand", -- from Battle for Wesnoth
+		"male", "Elvorfiril", -- from Battle for Wesnoth
+		"male", "Elvóriand", -- from Battle for Wesnoth
+		"male", "Elvund", -- from Battle for Wesnoth
+		"male", "Elyldor", -- from Battle for Wesnoth
+		"male", "Elyrion", -- from Battle for Wesnoth
+		"male", "Eowambor", -- from Battle for Wesnoth
+		"male", "Eowanduil", -- from Battle for Wesnoth
+		"male", "Eowar", -- from Battle for Wesnoth
+		"male", "Eowaraldor", -- from Battle for Wesnoth
+		"male", "Eowaran", -- from Battle for Wesnoth
+		"male", "Eowarar", -- from Battle for Wesnoth
+		"male", "Eowariand", -- from Battle for Wesnoth
+		"male", "Eowarion", -- from Battle for Wesnoth
+		"male", "Eowebrind", -- from Battle for Wesnoth
+		"male", "Eowémir", -- from Battle for Wesnoth
+		"male", "Eowil-Garion", -- from Battle for Wesnoth
+		"male", "Eowimbor", -- from Battle for Wesnoth
+		"male", "Eowiomir", -- from Battle for Wesnoth
+		"male", "Eowithrawyn", -- from Battle for Wesnoth
+		"male", "Eowóldur", -- from Battle for Wesnoth
+		"male", "Eoworfildor", -- from Battle for Wesnoth
+		"male", "Eowówyn", -- from Battle for Wesnoth
+		"male", "Eowylas", -- from Battle for Wesnoth
+		"male", "Erlornas",
+		"male", "Fadriendel", -- from Battle for Wesnoth
+		"male", "Fandel", -- from Battle for Wesnoth
+		"male", "Farandir", -- from Battle for Wesnoth
+		"male", "Fáwyn", -- from Battle for Wesnoth
+		"male", "Fendel", -- from Battle for Wesnoth
+		"male", "Fer", -- from Battle for Wesnoth
+		"male", "Filman", -- from Battle for Wesnoth
+		"male", "Fioril", -- from Battle for Wesnoth
+		"male", "Fithraril", -- from Battle for Wesnoth
+		"male", "Forfilas", -- from Battle for Wesnoth
+		"male", "Fyrion", -- from Battle for Wesnoth
+		"male", "Gadriendil", -- from Battle for Wesnoth
+		"male", "Gadrieng", -- from Battle for Wesnoth
+		"male", "Gaelir",
+		"male", "Gaenlar",
+		"male", "Galadrieldor", -- from Battle for Wesnoth
+		"male", "Galálad", -- from Battle for Wesnoth
+		"male", "Galálas", -- from Battle for Wesnoth
+		"male", "Galalith", -- from Battle for Wesnoth
+		"male", "Galar", -- from Battle for Wesnoth
+		"male", "Galelas", -- from Battle for Wesnoth
+		"male", "Galeldur", -- from Battle for Wesnoth
+		"male", "Galelith", -- from Battle for Wesnoth
+		"male", "Galémbor", -- from Battle for Wesnoth
+		"male", "Galithrariand", -- from Battle for Wesnoth
+		"male", "Galoldur", -- from Battle for Wesnoth
+		"male", "Galtrid",
+		"male", "Galuldur", -- from Battle for Wesnoth
+		"male", "Galur", -- from Battle for Wesnoth
+		"male", "Galurion", -- from Battle for Wesnoth
+		"male", "Gambor", -- from Battle for Wesnoth
+		"male", "Gán", -- from Battle for Wesnoth
+		"male", "Ganduil", -- from Battle for Wesnoth
+		"male", "Garaldor", -- from Battle for Wesnoth
+		"male", "Gararil", -- from Battle for Wesnoth
+		"male", "Gelad", -- from Battle for Wesnoth
+		"male", "Géril", -- from Battle for Wesnoth
+		"male", "Gil-Gandel", -- from Battle for Wesnoth
+		"male", "Gil-Gang", -- from Battle for Wesnoth
+		"male", "Giombor", -- from Battle for Wesnoth
+		"male", "Githral", -- from Battle for Wesnoth
+		"male", "Githralad", -- from Battle for Wesnoth
+		"male", "Gladriendil", -- from Battle for Wesnoth
+		"male", "Glal", -- from Battle for Wesnoth
+		"male", "Glámbor", -- from Battle for Wesnoth
+		"male", "Glandil", -- from Battle for Wesnoth
+		"male", "Glarang", -- from Battle for Wesnoth
+		"male", "Glararil", -- from Battle for Wesnoth
+		"male", "Glildur",
+		"male", "Glilmal", -- from Battle for Wesnoth
+		"male", "Glimir", -- from Battle for Wesnoth
+		"male", "Glinan",
+		"male", "Glindur",
+		"male", "Glior", -- from Battle for Wesnoth
+		"male", "Glólas", -- from Battle for Wesnoth
+		"male", "Gloldor", -- from Battle for Wesnoth
+		"male", "Glómir", -- from Battle for Wesnoth
+		"male", "Glon", -- from Battle for Wesnoth
+		"male", "Glul", -- from Battle for Wesnoth
+		"male", "Golad", -- from Battle for Wesnoth
+		"male", "Gor", -- from Battle for Wesnoth
+		"male", "Gumbor", -- from Battle for Wesnoth
+		"male", "Gyl", -- from Battle for Wesnoth
+		"male", "Gymbor", -- from Battle for Wesnoth
+		"male", "Gyn", -- from Battle for Wesnoth
+		"male", "Harariand", -- from Battle for Wesnoth
+		"male", "Háriand", -- from Battle for Wesnoth
+		"male", "Hebril", -- from Battle for Wesnoth
+		"male", "Hemir", -- from Battle for Wesnoth
+		"male", "Hénduil", -- from Battle for Wesnoth
+		"male", "Hilas", -- from Battle for Wesnoth
+		"male", "Hil-Garion", -- from Battle for Wesnoth
+		"male", "Hilmariand", -- from Battle for Wesnoth
+		"male", "Hiong", -- from Battle for Wesnoth
+		"male", "Hirion", -- from Battle for Wesnoth
+		"male", "Hithrandel", -- from Battle for Wesnoth
+		"male", "Horfilad", -- from Battle for Wesnoth
+		"male", "Horfindel", -- from Battle for Wesnoth
+		"male", "Hundel", -- from Battle for Wesnoth
+		"male", "Hymir", -- from Battle for Wesnoth
+		"male", "Hyrion", -- from Battle for Wesnoth
+		"male", "Hywyn", -- from Battle for Wesnoth
+		"male", "Isadrieng", -- from Battle for Wesnoth
+		"male", "Isándir", -- from Battle for Wesnoth
+		"male", "Isarandel", -- from Battle for Wesnoth
+		"male", "Isarar", -- from Battle for Wesnoth
+		"male", "Iselas", -- from Battle for Wesnoth
+		"male", "Isér", -- from Battle for Wesnoth
+		"male", "Isilmandel", -- from Battle for Wesnoth
+		"male", "Isirion", -- from Battle for Wesnoth
+		"male", "Isithral", -- from Battle for Wesnoth
+		"male", "Isól", -- from Battle for Wesnoth
+		"male", "Isóndel", -- from Battle for Wesnoth
+		"male", "Isóng", -- from Battle for Wesnoth
+		"male", "Isorfilad", -- from Battle for Wesnoth
+		"male", "Isorfindir", -- from Battle for Wesnoth
+		"male", "Isuwyn", -- from Battle for Wesnoth
+		"male", "Isyndel", -- from Battle for Wesnoth
+		"male", "Kalenz",
+		"male", "Kalnar",
+		"male", "Landar",
+		"male", "Legal", -- from Battle for Wesnoth
+		"male", "Legaran", -- from Battle for Wesnoth
+		"male", "Legémir", -- from Battle for Wesnoth
+		"male", "Legéril", -- from Battle for Wesnoth
+		"male", "Legilad", -- from Battle for Wesnoth
+		"male", "Legil-Gal", -- from Battle for Wesnoth
+		"male", "Legiondel", -- from Battle for Wesnoth
+		"male", "Legithralith", -- from Battle for Wesnoth
+		"male", "Legorfindil", -- from Battle for Wesnoth
+		"male", "Legorfirion", -- from Battle for Wesnoth
+		"male", "Legówyn", -- from Battle for Wesnoth
+		"male", "Legyl", -- from Battle for Wesnoth
+		"male", "Legyn", -- from Battle for Wesnoth
+		"male", "Linduilas", -- from Battle for Wesnoth
+		"male", "Lómadrieril", -- from Battle for Wesnoth
+		"male", "Lómarand", -- from Battle for Wesnoth
+		"male", "Lomarfel",
+		"male", "Lómariand", -- from Battle for Wesnoth
+		"male", "Lómebrilad", -- from Battle for Wesnoth
+		"male", "Lómebrind", -- from Battle for Wesnoth
+		"male", "Lómémbor", -- from Battle for Wesnoth
+		"male", "Lómilmaril", -- from Battle for Wesnoth
+		"male", "Lómiriand", -- from Battle for Wesnoth
+		"male", "Lómorfindil", -- from Battle for Wesnoth
+		"male", "Lómowyn", -- from Battle for Wesnoth
+		"male", "Losnin",
+		"male", "Lyndar",
+		"male", "Madrieril", -- from Battle for Wesnoth
+		"male", "Maldur", -- from Battle for Wesnoth
+		"male", "Mánduil", -- from Battle for Wesnoth
+		"male", "Maraldur", -- from Battle for Wesnoth
+		"male", "Mebrin", -- from Battle for Wesnoth
+		"male", "Méng", -- from Battle for Wesnoth
+		"male", "Mérion", -- from Battle for Wesnoth
+		"male", "Miolith", -- from Battle for Wesnoth
+		"male", "Miomir", -- from Battle for Wesnoth
+		"male", "Mithrand", -- from Battle for Wesnoth
+		"male", "Mondir", -- from Battle for Wesnoth
+		"male", "Móndir", -- from Battle for Wesnoth
+		"male", "Morfilas", -- from Battle for Wesnoth
+		"male", "Morfin", -- from Battle for Wesnoth
+		"male", "Morfiriand", -- from Battle for Wesnoth
+		"male", "Mylith", -- from Battle for Wesnoth
+		"male", "Nadrieldor", -- from Battle for Wesnoth
+		"male", "Nalith", -- from Battle for Wesnoth
+		"male", "Nán", -- from Battle for Wesnoth
+		"male", "Nél", -- from Battle for Wesnoth
+		"male", "Nil-Galas", -- from Battle for Wesnoth
+		"male", "Nil-Galith", -- from Battle for Wesnoth
+		"male", "Nil-Gar", -- from Battle for Wesnoth
+		"male", "Nilmar", -- from Battle for Wesnoth
+		"male", "Nóndel", -- from Battle for Wesnoth
+		"male", "Norfildor", -- from Battle for Wesnoth
+		"male", "Norfilith", -- from Battle for Wesnoth
+		"male", "Norfindil", -- from Battle for Wesnoth
+		"male", "Norfindir", -- from Battle for Wesnoth
+		"male", "Numbor", -- from Battle for Wesnoth
+		"male", "Nyldur", -- from Battle for Wesnoth
+		"male", "Padrieriand", -- from Battle for Wesnoth
+		"male", "Padrieril", -- from Battle for Wesnoth
+		"male", "Pamir", -- from Battle for Wesnoth
+		"male", "Paraldor", -- from Battle for Wesnoth
+		"male", "Parariand", -- from Battle for Wesnoth
+		"male", "Pilmalad", -- from Battle for Wesnoth
+		"male", "Pindir", -- from Battle for Wesnoth
+		"male", "Pór", -- from Battle for Wesnoth
+		"male", "Porfildur", -- from Battle for Wesnoth
+		"male", "Pumbor", -- from Battle for Wesnoth
+		"male", "Pyldur", -- from Battle for Wesnoth
+		"male", "Raesil",
+		"male", "Rebrir", -- from Battle for Wesnoth
+		"male", "Réndir", -- from Battle for Wesnoth
+		"male", "Rilmandil", -- from Battle for Wesnoth
+		"male", "Rithrandil", -- from Battle for Wesnoth
+		"male", "Ról", -- from Battle for Wesnoth
+		"male", "Róldor", -- from Battle for Wesnoth
+		"male", "Roldur", -- from Battle for Wesnoth
+		"male", "Róldur", -- from Battle for Wesnoth
+		"male", "Rorfilad", -- from Battle for Wesnoth
+		"male", "Rorfindil", -- from Battle for Wesnoth
+		"male", "Rówyn", -- from Battle for Wesnoth
+		"male", "Ryn", -- from Battle for Wesnoth
+		"male", "Sadrielas", -- from Battle for Wesnoth
+		"male", "Salira",
+		"male", "Sebrin", -- from Battle for Wesnoth
+		"male", "Sebriril", -- from Battle for Wesnoth
+		"male", "Sénd", -- from Battle for Wesnoth
+		"male", "Sil-Gal", -- from Battle for Wesnoth
+		"male", "Slagfid", -- from Norse mythology, brother of Egil and Volund
+		"male", "Sólad", -- from Battle for Wesnoth
+		"male", "Sorfind", -- from Battle for Wesnoth
+		"male", "Sóriand", -- from Battle for Wesnoth
+		"male", "Tadriendir", -- from Battle for Wesnoth
+		"male", "Taral", -- from Battle for Wesnoth
+		"male", "Taraldur", -- from Battle for Wesnoth
+		"male", "Táriand", -- from Battle for Wesnoth
+		"male", "Tendel", -- from Battle for Wesnoth
+		"male", "Téwyn", -- from Battle for Wesnoth
+		"male", "Thradrieriand", -- from Battle for Wesnoth
+		"male", "Thrambor", -- from Battle for Wesnoth
+		"male", "Thraral", -- from Battle for Wesnoth
+		"male", "Threbring", -- from Battle for Wesnoth
+		"male", "Thrélad", -- from Battle for Wesnoth
+		"male", "Thréldur", -- from Battle for Wesnoth
+		"male", "Thril-Gamir", -- from Battle for Wesnoth
+		"male", "Thril-Gandir", -- from Battle for Wesnoth
+		"male", "Thril-Gar", -- from Battle for Wesnoth
+		"male", "Thrilmandel", -- from Battle for Wesnoth
+		"male", "Thrimir", -- from Battle for Wesnoth
+		"male", "Thrion", -- from Battle for Wesnoth
+		"male", "Thrithran", -- from Battle for Wesnoth
+		"male", "Throlas", -- from Battle for Wesnoth
+		"male", "Thrón", -- from Battle for Wesnoth
+		"male", "Thróng", -- from Battle for Wesnoth
+		"male", "Thrund", -- from Battle for Wesnoth
+		"male", "Thryriand", -- from Battle for Wesnoth
+		"male", "Til-Gan", -- from Battle for Wesnoth
+		"male", "Tilmalad", -- from Battle for Wesnoth
+		"male", "Tilmalas", -- from Battle for Wesnoth
+		"male", "Tinandir", -- from Battle for Wesnoth
+		"male", "Tinarambor", -- from Battle for Wesnoth
+		"male", "Tinarariand", -- from Battle for Wesnoth
+		"male", "Tinén", -- from Battle for Wesnoth
+		"male", "Tinil-Ganduil", -- from Battle for Wesnoth
+		"male", "Tinilmand", -- from Battle for Wesnoth
+		"male", "Tinilmawyn", -- from Battle for Wesnoth
+		"male", "Tinimir", -- from Battle for Wesnoth
+		"male", "Tinindil", -- from Battle for Wesnoth
+		"male", "Tinithrar", -- from Battle for Wesnoth
+		"male", "Tinoldor", -- from Battle for Wesnoth
+		"male", "Tinond", -- from Battle for Wesnoth
+		"male", "Tinorfind", -- from Battle for Wesnoth
+		"male", "Tinorfiriand", -- from Battle for Wesnoth
+		"male", "Tinóriand", -- from Battle for Wesnoth
+		"male", "Tinowyn", -- from Battle for Wesnoth
+		"male", "Tinun", -- from Battle for Wesnoth
+		"male", "Tinyl", -- from Battle for Wesnoth
+		"male", "Tion", -- from Battle for Wesnoth
+		"male", "Tolas", -- from Battle for Wesnoth
+		"male", "Torfildur", -- from Battle for Wesnoth
+		"male", "Tówyn", -- from Battle for Wesnoth
+		"male", "Tylad", -- from Battle for Wesnoth
+		"male", "Unadrieldor", -- from Battle for Wesnoth
+		"male", "Unadrier", -- from Battle for Wesnoth
+		"male", "Unál", -- from Battle for Wesnoth
+		"male", "Unalas", -- from Battle for Wesnoth
+		"male", "Unálas", -- from Battle for Wesnoth
+		"male", "Unaraldur", -- from Battle for Wesnoth
+		"male", "Unaril", -- from Battle for Wesnoth
+		"male", "Unárion", -- from Battle for Wesnoth
+		"male", "Unebrin", -- from Battle for Wesnoth
+		"male", "Unebrind", -- from Battle for Wesnoth
+		"male", "Uneldor", -- from Battle for Wesnoth
+		"male", "Unil", -- from Battle for Wesnoth
+		"male", "Unil-Gan", -- from Battle for Wesnoth
+		"male", "Uniolith", -- from Battle for Wesnoth
+		"male", "Unioril", -- from Battle for Wesnoth
+		"male", "Unólith", -- from Battle for Wesnoth
+		"male", "Unombor", -- from Battle for Wesnoth
+		"male", "Unóndel", -- from Battle for Wesnoth
+		"male", "Unondir", -- from Battle for Wesnoth
+		"male", "Unorfildor", -- from Battle for Wesnoth
+		"male", "Unorfiril", -- from Battle for Wesnoth
+		"male", "Unorfiwyn", -- from Battle for Wesnoth
+		"male", "Unulad", -- from Battle for Wesnoth
+		"male", "Uradredia",
+		"male", "Uradrielas", -- from Battle for Wesnoth
+		"male", "Uradrierion", -- from Battle for Wesnoth
+		"male", "Urálas", -- from Battle for Wesnoth
+		"male", "Urálith", -- from Battle for Wesnoth
+		"male", "Urambor", -- from Battle for Wesnoth
+		"male", "Urér", -- from Battle for Wesnoth
+		"male", "Uril-Gambor", -- from Battle for Wesnoth
+		"male", "Urilmalith", -- from Battle for Wesnoth
+		"male", "Uróldor", -- from Battle for Wesnoth
+		"male", "Urorfildor", -- from Battle for Wesnoth
+		"male", "Urul", -- from Battle for Wesnoth
+		"male", "Urymir", -- from Battle for Wesnoth
+		"male", "Válad", -- from Battle for Wesnoth
+		"male", "Ván", -- from Battle for Wesnoth
+		"male", "Vándel", -- from Battle for Wesnoth
+		"male", "Vandir", -- from Battle for Wesnoth
+		"male", "Varalas", -- from Battle for Wesnoth
+		"male", "Vararion", -- from Battle for Wesnoth
+		"male", "Vebril", -- from Battle for Wesnoth
+		"male", "Vebrilas", -- from Battle for Wesnoth
+		"male", "Vebrinduil", -- from Battle for Wesnoth
+		"male", "Vel", -- from Battle for Wesnoth
+		"male", "Velon",
+		"male", "Vilith", -- from Battle for Wesnoth
+		"male", "Vol", -- from Battle for Wesnoth
+		"male", "Vólas", -- from Battle for Wesnoth
+		"male", "Vóldur", -- from Battle for Wesnoth
+		"male", "Volund", -- elven smith from Norse mythology, brother of Slagfid and Egil
+		"male", "Vondel", -- from Battle for Wesnoth
+		"male", "Vorfin", -- from Battle for Wesnoth
+		"male", "Vorfindil", -- from Battle for Wesnoth
+		"male", "Vulas", -- from Battle for Wesnoth
+		"male", "Vuldur", -- from Battle for Wesnoth
+		"male", "Vunduil", -- from Battle for Wesnoth
+		"male", "Vylas", -- from Battle for Wesnoth
+		"male", "Vyldor", -- from Battle for Wesnoth
+		"male", "Weland", -- Old English equivalent to Old Norse Völund; Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 118.
+		"male", "Widia" -- son of Weland (Völund); Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, pp. 113, 118.
+	}
 })
 
 --[[
@@ -766,7 +1277,8 @@ DefineCivilization("celt", { -- has to be defined after the germanic civilizatio
 		"Caer Seint", -- the modern Caernarfon and the Roman Segontium; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 135.
 		"Harddlech", -- settlement in the Welsh region of Ardudwy; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 131.
 		"Moridunum", -- the modern Carmarthen; main settlement of the Demetae (ancient Briton people); Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
-		"Pen Llwyn Diarwya" -- settlement in Dyfed (Wales); Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 118.
+		"Pen Llwyn Diarwya", -- settlement in Dyfed (Wales); Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 118.
+		"Sorbidunom" -- the modern Salisbury; Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 115.
 	},
 	ProvinceNames = {
 		"Ardudwy", -- Welsh region; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 131.

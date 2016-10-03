@@ -57,6 +57,14 @@ DefineUpgrade("upgrade-item-suffix-of-othola", {
 	MagicLevel = 2
 })
 
+DefineUpgrade("upgrade-item-suffix-of-sigel", {
+	Name = _("of Sigel"), -- Anglo-Saxon rune meaning "sun", but also in a riddle indicated to mean "shield"; Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 119.
+	MagicSuffix = true,
+	RunicAffix = true,
+	ItemSuffix = {"armor", true, "shield", true, "horn", true, "helmet", true, "amulet", true, "ring", true},
+	MagicLevel = 2
+})
+
 DefineUpgrade("upgrade-item-suffix-of-thurs", {
 	Name = _("of Thurs"), -- "Thurs" is a Norse rune meaning "giant"; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 146.
 	MagicSuffix = true,
@@ -81,6 +89,10 @@ DefineModifier("upgrade-item-suffix-of-os",
 DefineModifier("upgrade-item-suffix-of-othola",
 	{"BasicDamage", 2},
 	{"Accuracy", -1}
+)
+
+DefineModifier("upgrade-item-suffix-of-sigel",
+	{"FireResistance", 30}
 )
 
 DefineModifier("upgrade-item-suffix-of-thurs",

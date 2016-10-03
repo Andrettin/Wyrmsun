@@ -252,6 +252,7 @@ DefineLanguage("english", {
 		"Basengum", "Basing", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Bathum", "Bath", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Beamfleot", "Benfleet", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Searuburh", "Salisbury", -- Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 115.
 		-- German Personal Names
 		"Bernhard", "Bernard",
 		"Franz", "Francis",

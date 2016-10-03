@@ -58,6 +58,7 @@ DefineFaction("Burgundian Tribe", {
 	},
 	PersonalNames = {
 		"male", "Hanhualdus", -- presumably a male name; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.3.
+		"male", "Sarwa" -- the Sörli of Norse mythology, son of Gudrun; Sörli is a reflex of Gothic "sarwa"; Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 118.
 	}
 })
 

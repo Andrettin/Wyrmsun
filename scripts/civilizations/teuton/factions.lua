@@ -158,6 +158,9 @@ DefineFaction("Angle Tribe", {
 		"male", "Wuscfrea", -- son of Edwin of Deira; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 81.
 		"male", "Yffi", -- grandson of Edwin of Deira; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 81.
 	},
+	SettlementNames = {
+		"Searuburh" -- the modern Salisbury; Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 115.
+	},
 	HistoricalFactionDerivations = {-264, "germanic", "Ingaevone Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
