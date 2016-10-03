@@ -43,9 +43,9 @@ DefineMapTemplate("nidavellir", {
 		"unit-copper-deposit", 2,
 		"unit-snigill", 64,
 		"unit-slime", 32,
-		"unit-blood-bat", 32,
+		"unit-blood-bat", 16,
 		"unit-yale", 16,
-		"unit-dread-bat", 16,
+		"unit-dread-bat", 8,
 		"unit-gryphon", 8,
 		"unit-wyrm", 4
 	},
@@ -83,8 +83,8 @@ DefineMapTemplate("nidavellir-underground-1", {
 		"unit-wood-pile", 64,
 		"unit-snigill", 64,
 		"unit-slime", 32,
-		"unit-blood-bat", 32,
-		"unit-dread-bat", 16,
+		"unit-blood-bat", 16,
+		"unit-dread-bat", 8,
 		"unit-wyrm", 4
 	},
 	PlayerLocationGeneratedNeutralUnits = {
@@ -121,8 +121,8 @@ DefineMapTemplate("nidavellir-underground-2", {
 		"unit-wood-pile", 64,
 		"unit-snigill", 64,
 		"unit-slime", 32,
-		"unit-blood-bat", 32,
-		"unit-dread-bat", 16,
+		"unit-blood-bat", 16,
+		"unit-dread-bat", 8,
 		"unit-wyrm", 4
 	},
 	PlayerLocationGeneratedNeutralUnits = {
