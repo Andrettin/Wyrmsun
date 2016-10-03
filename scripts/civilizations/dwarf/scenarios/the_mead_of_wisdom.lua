@@ -60,7 +60,7 @@ AddTrigger("the-mead-of-wisdom-introduction-old",
 			return false
 		end
 		if (GetFactionExists("Fjalar and Galar") and GetFactionExists("Thjodrorir")) then
-			for i=0,14 do
+			for i=0, (PlayerMax - 2) do
 				if (GetPlayerData(i, "RaceName") == "dwarf" and GetPlayerData(i, "Name") == "Fjalar and Galar") then
 					player = i
 					return true

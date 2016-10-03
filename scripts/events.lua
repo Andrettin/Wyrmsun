@@ -60,7 +60,7 @@ function EventTriggers()
 						unit = CreateUnit("unit-goblin-spearman", greebo_player, greebo_spawnpoint)
 						SetUnitVariable(unit, "Active", false)
 						SetUnitVariable(unit, "Character", "Greebo")
-						for i=0,14 do
+						for i=0,(PlayerMax - 2) do
 							if (i ~= greebo_player) then
 								SetDiplomacy(greebo_player, "enemy", i)
 								SetDiplomacy(i, "enemy", greebo_player)
@@ -120,7 +120,7 @@ function EventTriggers()
 								if (GameCycle == 0) then
 									return false
 								end
-								for i=0,14 do
+								for i=0,(PlayerMax - 2) do
 									if (GetPlayerData(i, "Name") == "Greebo" and FindHero("Greebo", i) == nil) then
 										player = GetThisPlayer()
 										return true
@@ -136,7 +136,7 @@ function EventTriggers()
 									{"~!OK"},
 									{function(s)
 										SetPlayerData(player, "Resources", "gold", GetPlayerData(player, "Resources", "gold") + 400)
-										for i=0,14 do
+										for i=0,(PlayerMax - 2) do
 											if (GetPlayerData(i, "Name") ~= "Greebo") then
 												RemovePlayerObjective(i, "- Kill Greebo (optional)")
 											end
@@ -188,7 +188,7 @@ function EventTriggers()
 						SetUnitVariable(unit, "Name", "Andvari")
 						SetDiplomacy(andvari_player, "neutral", player)
 						SetDiplomacy(player, "neutral", andvari_player)
-						for i=0,14 do
+						for i=0,(PlayerMax - 2) do
 							if (i ~= andvari_player and i ~= player) then
 								if ((SyncRand(100) + 1) <= 50) then -- AI players randomly decide whether to be hostile to Andvari or not
 									SetDiplomacy(andvari_player, "neutral", i)
@@ -210,7 +210,7 @@ function EventTriggers()
 						SetUnitVariable(unit, "Active", false)
 						SetDiplomacy(andvari_player, "enemy", player)
 						SetDiplomacy(player, "enemy", andvari_player)
-						for i=0,14 do
+						for i=0,(PlayerMax - 2) do
 							if (i ~= andvari_player and i ~= player) then
 								if ((SyncRand(100) + 1) <= 50) then -- AI players randomly decide whether to be hostile to Andvari or not
 									SetDiplomacy(andvari_player, "neutral", i)
@@ -236,7 +236,7 @@ function EventTriggers()
 				if (GameCycle == 0) then
 					return false
 				end
-				for i=0,14 do
+				for i=0,(PlayerMax - 2) do
 					if (GetPlayerData(i, "Name") == "Andvari" and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-mushroom-farm") == 0 and ThisPlayer:IsEnemy(Players[i])) then
 						player = GetThisPlayer()
 						return true
@@ -252,7 +252,7 @@ function EventTriggers()
 					{"~!OK (receive 1200 gold)"},
 					{function(s)
 						SetPlayerData(player, "Resources", "gold", GetPlayerData(player, "Resources", "gold") + 1200)
-						for i=0,14 do
+						for i=0,(PlayerMax - 2) do
 							if (GetPlayerData(i, "Name") ~= "Andvari") then
 								RemovePlayerObjective(i, "- Destroy Andvari's Mushroom Farm (optional)")
 							end
@@ -312,7 +312,7 @@ function EventTriggers()
 			end
 			if (GetFactionExists("Varva")) then
 				if (GetPlayerData(GetFactionPlayer("Varva"), "TotalNumUnitsConstructed") == 0) then
-					for i=0,14 do
+					for i=0,(PlayerMax - 2) do
 						if (GetPlayerData(i, "RaceName") == "norse" and GetPlayerData(i, "Name") == "Sweden") then
 							player = i
 							return true
@@ -342,7 +342,7 @@ function EventTriggers()
 				if (GameCycle == 0) then
 					return false
 				end
-				for i=0,14 do
+				for i=0,(PlayerMax - 2) do
 					if (GetPlayerData(i, "RaceName") == "teuton") then
 						player = i
 						return true

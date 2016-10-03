@@ -128,7 +128,7 @@ AddTrigger("closing-the-gates-introduction",
 			return false
 		end
 		if (GetFactionExists("Shinsplitter Clan")) then
-			for i=0,14 do
+			for i=0, (PlayerMax - 2) do
 				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga") and FindHero("Rugnur", i) ~= nil and FindHero("Baglur", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(15, "UnitTypesCount", "unit-glyph") >= 6 and PlayerHasObjective(i, "- Have one unit standing on each glyph at the same time") == false) then
 					player = i
 					return true
@@ -349,7 +349,7 @@ AddTrigger("closing-the-gates-glyphs-activated",
 		if (GameCycle == 0) then
 			return false
 		end
-		for i=0,14 do
+		for i=0, (PlayerMax - 2) do
 			if (PlayerHasObjective(i, "- Have one unit standing on each glyph at the same time") and GetPlayerData(i, "RaceName") == "dwarf" and FindHero("Rugnur", i) ~= nil and GetNumUnitsAt(i, "any", {5, 11}, {5, 11}) > 0 and GetNumUnitsAt(i, "any", {38, 53}, {38, 53}) > 0 and GetNumUnitsAt(i, "any", {28, 33}, {28, 33}) > 0 and GetNumUnitsAt(i, "any", {15, 24}, {15, 24}) > 0 and GetNumUnitsAt(i, "any", {23, 7}, {23, 7}) > 0 and GetNumUnitsAt(i, "any", {51, 43}, {51, 43}) > 0) then
 				player = i
 				return true

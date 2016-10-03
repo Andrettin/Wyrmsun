@@ -39,7 +39,7 @@ function HandleCheats(str)
     SetSpeedResourcesHarvest("lumber", 25)
 
   elseif (str == "otters ransom") then
-	for i = 0,PlayerMax - 1 do
+	for i = 0, (PlayerMax - 2) do
 		SetPlayerData(i, "Resources", "gold", GetPlayerData(i, "Resources", "gold") + 12000)
 		SetPlayerData(i, "Resources", "lumber", GetPlayerData(i, "Resources", "lumber") + 10000)
 		SetPlayerData(i, "Resources", "oil", GetPlayerData(i, "Resources", "oil") + 10000)
@@ -137,7 +137,7 @@ function HandleCheats(str)
   elseif (str == "mead of wisdom") then
 	AddMessage("All Technologies Allowed")
 	for i, unitName in ipairs(Units) do
-		for j=0,15 do
+		for j=0,(PlayerMax - 1) do
 			if (((string.find(unitName, "upgrade-") ~= nil and CUpgrade:Get(unitName).Civilization == GetPlayerData(j, "RaceName")) or (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Civilization") == GetPlayerData(j, "RaceName"))) and GetPlayerData(j, "Allow", unitName) ~= "R") then
 				SetPlayerData(j, "Allow", unitName, "A")
 			end
@@ -152,7 +152,7 @@ function HandleCheats(str)
 		"upgrade-goblin-broad-sword", "upgrade-goblin-rimmed-shield", "upgrade-goblin-long-spear", "upgrade-goblin-barbed-arrow", "upgrade-goblin-wood-plow"
 	}
 	for i, unitName in ipairs(bronze_upgrades) do
-		for j=0,14 do
+		for j=0,PlayerMax - 2 do
 			if (Players[j].Type ~= PlayerNobody and unitName == GetFactionClassUnitType(CUpgrade:Get(unitName).Class, GetPlayerData(j, "RaceName"), GetPlayerData(j, "Faction"))) then
 				SetPlayerData(j, "Allow", unitName, "R")
 			end

@@ -332,7 +332,7 @@ AddTrigger("gathering-materials-introduction",
 			return false
 		end
 		if (PlayerHasObjective(GetThisPlayer(), "- Collect 10000 gold and 20000 coal") == false and GetNumUnitsAt(-1, "unit-gold-deposit", {0, 0}, {512, 512}) >= 1 and GetNumUnitsAt(-1, "unit-coal-mine", {0, 0}, {512, 512}) >= 2) then
-			for i=0,14 do
+			for i=0, (PlayerMax - 2) do
 				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= "Shinsplitter Clan" and FindHero("Rugnur", i) ~= nil and FindHero("Baglur", i) ~= nil and FindHero("Thursagan", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
 					player = i
 					return true
@@ -416,7 +416,7 @@ AddTrigger("gathering-materials-introduction",
 AddTrigger("gathering-materials-miners-reminder",
 	function()
 		if (GameCycle > 3000) then
-			for i=0,14 do
+			for i=0, (PlayerMax - 2) do
 				if (PlayerHasObjective(i, "- Collect 10000 gold and 20000 coal")) then
 					player = i
 					return true
@@ -500,7 +500,7 @@ AddTrigger("gathering-materials-gold-found",
 
 AddTrigger("gathering-materials-coal-collected",
 	function()
-		for i=0,14 do
+		for i=0, (PlayerMax - 2) do
 			if (PlayerHasObjective(i, "- Collect 10000 gold and 20000 coal") and GetPlayerData(i, "Resources", "coal") >= 20000) then
 				player = i
 				return true
@@ -828,7 +828,7 @@ end},
 
 AddTrigger("gathering-materials-resources-collected",
 	function()
-		for i=0,14 do
+		for i=0, (PlayerMax - 2) do
 			if (PlayerHasObjective(i, "- Collect 10000 gold and 20000 coal") and GetPlayerData(i, "Resources", "coal") >= 20000 and GetPlayerData(i, "Resources", "gold") >= 10000) then
 				player = i
 				return true

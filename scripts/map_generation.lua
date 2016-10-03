@@ -572,7 +572,7 @@ function GenerateTrees(tree_seed_number, tree_expansions_number, min_x, max_x, m
 		RandomX = SyncRand(max_x - min_x + 1) + min_x
 		RandomY = SyncRand(max_y - min_y + 1) + min_y
 		local near_starting_location = false
-		for i=0,14 do
+		for i=0,(PlayerMax - 2) do
 			if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
 				if (math.abs(Players[i].StartPos.x - RandomX) < 4 and math.abs(Players[i].StartPos.y - RandomY) < 4) then
 					near_starting_location = true
@@ -1375,7 +1375,7 @@ function CreateCritters(arg)
 				and (GetArrayIncludes(critter_terrains[chosen_critter], GetTileTerrainName(RandomX, RandomY)) or GetArrayIncludes(GetSpeciesData(GetUnitTypeData(critter_unit_type, "Species"), "Terrains"), GetTileTerrainName(RandomX, RandomY)))
 			) then
 				local unit_quantity = 0
-				for i=0,14 do
+				for i=0,(PlayerMax - 2) do
 					unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 16, RandomY - 16}, {RandomX + 16, RandomY + 16})
 				end
 
@@ -1452,7 +1452,7 @@ function CreateCreeps(player, creep_type, creep_number, min_x, max_x, min_y, max
 			RandomY = SyncRand(max_y - min_y + 1) + min_y
 			if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 				local unit_quantity = 0
-				for i=0,14 do
+				for i=0,(PlayerMax - 2) do
 					if (i ~= player) then
 						unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 16, RandomY - 16}, {RandomX + 16, RandomY + 16})
 					end
@@ -1604,7 +1604,7 @@ end
 function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_halls, symmetric, starting_gold_mine, player_civilizations, player_buildings)
 	-- create player units
 	local symmetric_starting_location = {0, 0}
-	for i=0,14 do
+	for i=0,(PlayerMax - 2) do
 		if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
 			local possible_civilizations = {}
 			if ((GetCurrentTileset() == "cave" or GetCurrentTileset() == "swamp" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("dwarf")) > 0) then
@@ -1656,7 +1656,7 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 					if ((player_spawn_point[1] + 4) > (Map.Info.MapWidth - 1) or (player_spawn_point[2] + 4) > (Map.Info.MapHeight - 1) or (player_spawn_point[1] - 1) < 0 or (player_spawn_point[2] - 1) < 0) then
 						starting_point_found = false
 					end
-					for j=0,14 do
+					for j=0,(PlayerMax - 2) do
 						if (j < i and (Map.Info.PlayerType[j] == PlayerPerson or Map.Info.PlayerType[j] == PlayerComputer)) then
 							if (math.abs(player_spawn_point[1] - Players[j].StartPos.x) < 32 and math.abs(player_spawn_point[2] - Players[j].StartPos.y) < 32) then -- shouldn't start too close to another player
 								starting_point_found = false
@@ -1958,7 +1958,7 @@ function GenerateRandomMap(arg)
 				end
 			end
 
-			for i=0,14 do
+			for i=0,(PlayerMax - 2) do
 				if (player_starting_location_found[i + 1] == false and table.getn(random_starting_locations) > 0) then
 					local player_starting_location = random_starting_locations[SyncRand(table.getn(random_starting_locations)) + 1]
 					RemoveElementFromArray(random_starting_locations, player_starting_location)
@@ -2061,7 +2061,7 @@ function GenerateRandomMap(arg)
 
 		if (GrandStrategy == false or GrandStrategyBattleBaseBuilding) then
 			if (arg.WorkerQuantity) then
-				for i=0,14 do
+				for i=0,(PlayerMax - 2) do
 					if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
 						for j=1,arg.WorkerQuantity do
 							unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
@@ -2656,7 +2656,7 @@ function FindAppropriateSpawnPoint(min_x, max_x, min_y, max_y)
 		
 		if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 			local unit_quantity = 0
-			for i=0,14 do
+			for i=0,(PlayerMax - 2) do
 				unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 16, RandomY - 16}, {RandomX + 16, RandomY + 16})
 			end
 
@@ -2681,7 +2681,7 @@ function FindAppropriateTileTypeSpawnPoint(tile_type)
 		if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 			if (RawTile(RandomX - 1, RandomY) == tile_type or RawTile(RandomX + 1, RandomY) == tile_type or RawTile(RandomX, RandomY - 1) == tile_type or RawTile(RandomX, RandomY + 1) == tile_type or RawTile(RandomX - 2, RandomY) == tile_type or RawTile(RandomX + 2, RandomY) == tile_type or RawTile(RandomX, RandomY - 2) == tile_type or RawTile(RandomX, RandomY + 2) == tile_type) then
 				local unit_quantity = 0
-				for i=0,14 do
+				for i=0,(PlayerMax - 2) do
 					unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
 				end
 
@@ -2707,7 +2707,7 @@ function FindAppropriatePlayerSpawnPoint(min_x, max_x, min_y, max_y)
 		
 		if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false and GetTileTerrainHasFlag(RandomX, RandomY, "no-building") == false and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "land") and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "unpassable") == false and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "no-building") == false and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "land") and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "unpassable") == false and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "no-building") == false and GetTileTerrainHasFlag(RandomX + 3, RandomY + 3, "land") and GetTileTerrainHasFlag(RandomX + 3, RandomY + 3, "unpassable") == false and GetTileTerrainHasFlag(RandomX + 3, RandomY + 3, "no-building") == false) then
 			local unit_quantity = 0
-			for i=0,14 do
+			for i=0,(PlayerMax - 2) do
 				unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 16, RandomY - 16}, {RandomX + 16, RandomY + 16})
 			end
 
@@ -2768,7 +2768,7 @@ function FindAppropriateNeutralBuildingSpawnPoint(building_type, min_x, max_x, m
 		end
 		if (in_buildable_land) then
 			local unit_quantity = 0
-			for i=0,14 do
+			for i=0,(PlayerMax - 2) do
 				unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 16, RandomY - 16}, {RandomX + (GetUnitTypeData(building_type, "TileWidth") - 1) + 16, RandomY + (GetUnitTypeData(building_type, "TileHeight") - 1) + 16})
 			end
 
@@ -2784,7 +2784,7 @@ function FindAppropriateNeutralBuildingSpawnPoint(building_type, min_x, max_x, m
 end
 
 function FindUnusedPlayerSlot()
-	for i=0,14 do
+	for i=0,(PlayerMax - 2) do
 		if (GetPlayerData(i, "TotalNumUnits") == 0) then
 			return i
 		end
@@ -3959,7 +3959,7 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 
 	CreateDecorations()	
 
-	for i=0,14 do
+	for i=0,(PlayerMax - 2) do
 		if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
 			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
 			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
@@ -5904,7 +5904,7 @@ function GenerateCave(town_halls, symmetric)
 	if (GrandStrategy == false or GrandStrategyBattleBaseBuilding) then
 		CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
 
-		for i=0,14 do
+		for i=0,(PlayerMax - 2) do
 			if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
 				for j=1,5 do
 					unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})

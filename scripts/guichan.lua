@@ -665,7 +665,7 @@ Widget:setGlobalFont(Fonts["large"])
 
 
 DefaultObjectives = {"- Defeat your enemies"}
---for i=0,14 do
+--for i=0,(PlayerMax - 2) do
 --	for key, value in pairs(CustomPlayerData) do
 --		if (CustomPlayerData[key].Number == i) then
 --			CustomPlayerData[key].Objectives = DefaultObjectives
@@ -768,58 +768,58 @@ mapinfo = {
 }
 
 function GetMapInfo(mapname)
-  local OldDefinePlayerTypes = DefinePlayerTypes
-  local OldPresentMap = PresentMap
+	local OldDefinePlayerTypes = DefinePlayerTypes
+	local OldPresentMap = PresentMap
 
-  function DefinePlayerTypes(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p12, p13, p14, p15)
-    mapinfo.playertypes[1] = p1
-    mapinfo.playertypes[2] = p2
-    mapinfo.playertypes[3] = p3
-    mapinfo.playertypes[4] = p4
-    mapinfo.playertypes[5] = p5
-    mapinfo.playertypes[6] = p6
-    mapinfo.playertypes[7] = p7
-    mapinfo.playertypes[8] = p8
-    mapinfo.playertypes[9] = p9
-    mapinfo.playertypes[10] = p10
-    mapinfo.playertypes[11] = p11
-    mapinfo.playertypes[12] = p12
-    mapinfo.playertypes[13] = p13
-    mapinfo.playertypes[14] = p14
-    mapinfo.playertypes[15] = p15
+	function DefinePlayerTypes(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p12, p13, p14, p15)
+		mapinfo.playertypes[1] = p1
+		mapinfo.playertypes[2] = p2
+		mapinfo.playertypes[3] = p3
+		mapinfo.playertypes[4] = p4
+		mapinfo.playertypes[5] = p5
+		mapinfo.playertypes[6] = p6
+		mapinfo.playertypes[7] = p7
+		mapinfo.playertypes[8] = p8
+		mapinfo.playertypes[9] = p9
+		mapinfo.playertypes[10] = p10
+		mapinfo.playertypes[11] = p11
+		mapinfo.playertypes[12] = p12
+		mapinfo.playertypes[13] = p13
+		mapinfo.playertypes[14] = p14
+		mapinfo.playertypes[15] = p15
 
-    mapinfo.nplayers = 0
-    for i=0,15 do
-      local t = mapinfo.playertypes[i]
-      if (t == "person" or t == "computer") then
-        mapinfo.nplayers = mapinfo.nplayers + 1
-      end
-    end
-	
-    mapinfo.npersonplayers = 0
-    for i=0,15 do
-      local t = mapinfo.playertypes[i]
-      if (t == "person") then
-        mapinfo.npersonplayers = mapinfo.npersonplayers + 1
-      end
-    end
-  end
+		mapinfo.nplayers = 0
+		for i=0,(PlayerMax - 1) do
+			local t = mapinfo.playertypes[i]
+			if (t == "person" or t == "computer") then
+				mapinfo.nplayers = mapinfo.nplayers + 1
+			end
+		end
+		
+		mapinfo.npersonplayers = 0
+		for i=0,(PlayerMax - 1) do
+			local t = mapinfo.playertypes[i]
+			if (t == "person") then
+				mapinfo.npersonplayers = mapinfo.npersonplayers + 1
+			end
+		end
+	end
 
-  function PresentMap(description, nplayers, w, h, id)
-    mapinfo.description = description
-    -- nplayers includes rescue-passive and rescue-active
-    -- calculate the real nplayers in DefinePlayerTypes
-    --mapinfo.nplayers = nplayers
-    mapinfo.w = w
-    mapinfo.h = h
-    mapinfo.id = id
-  end
+	function PresentMap(description, nplayers, w, h, id)
+		mapinfo.description = description
+		-- nplayers includes rescue-passive and rescue-active
+		-- calculate the real nplayers in DefinePlayerTypes
+		--mapinfo.nplayers = nplayers
+		mapinfo.w = w
+		mapinfo.h = h
+		mapinfo.id = id
+	end
 
-  MapPersonPlayer = 0 -- default person player is 0
-  Load(mapname)
+	MapPersonPlayer = 0 -- default person player is 0
+	Load(mapname)
 
-  DefinePlayerTypes = OldDefinePlayerTypes
-  PresentMap = OldPresentMap
+	DefinePlayerTypes = OldDefinePlayerTypes
+	PresentMap = OldPresentMap
 end
 
 function RunSelectScenarioMenu(is_mod)
@@ -1497,7 +1497,7 @@ function GameStarting()
 		if (GrandStrategyBattleBaseBuilding) then
 			-- add workers to grand strategy battles, if base building is active
 			
-			for i=0,14 do
+			for i=0,(PlayerMax - 2) do
 				if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
 					local worker_type = GetPlayerClassType("worker", i, Defender == GetPlayerData(i, "Name"))
 					if (worker_type ~= nil) then
@@ -1527,7 +1527,7 @@ function GameStarting()
 		
 		-- add grand strategy battle units
 		if (GrandStrategy and GrandStrategyEventMap == false) then
-			for i=0,14 do
+			for i=0,(PlayerMax - 2) do
 				if ((Players[i].Type == PlayerPerson or Players[i].Type == PlayerComputer)) then
 					if (GetPlayerData(i, "Name") == Attacker) then
 						CreateProvinceUnits(AttackedProvince.Name, i, 1, true, true)

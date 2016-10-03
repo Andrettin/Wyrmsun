@@ -369,7 +369,7 @@ function SinglePlayerTriggers()
 	StandardTriggers()
 
 	-- make players have the correct names in grand strategy mode
-	for i=0,14 do
+	for i=0,(PlayerMax - 2) do
 		if (GrandStrategy and GrandStrategyEventMap == false and GrandStrategyBattle and GrandStrategyFaction ~= nil) then
 			if (Players[i].Type == PlayerPerson or Players[i].Type == PlayerComputer) then
 				if (Players[i].Type == PlayerPerson) then
@@ -391,7 +391,7 @@ function SinglePlayerTriggers()
 			ApplyTechLevels()
 		end
 		if (GrandStrategy) then
-			for i=0,14 do
+			for i=0,(PlayerMax - 2) do
 				if (GetPlayerData(i, "Name") == Attacker or (GetPlayerData(i, "Name") == Defender and GetProvinceOwner(AttackedProvince.Name) ~= "")) then
 					if (GetFactionFromName(GetPlayerData(i, "Name")) ~= nil) then
 						for j, unitName in ipairs(Units) do -- if in grand strategy mode, apply upgrades researched
@@ -423,12 +423,11 @@ function SinglePlayerTriggers()
 		RemovePlayerObjective(GetThisPlayer(), "- Defeat your enemies")
 	end
 	
-	-- for now events are limited to single player
-	if (not IsNetworkGame() and GetCurrentQuest() == "" and GrandStrategy == false) then -- only in custom games
+	-- events are limited to the campaign mode
+	if (GetCurrentCampaign() ~= "") then
 		EventTriggers()
+		FlavorDialogueTriggers()
 	end
-
-	FlavorDialogueTriggers()
 		
 	LoadedGame = false
 end
@@ -444,7 +443,7 @@ function StandardTriggers()
 			return true
 		end,
 		function()
-			for i=0,14 do
+			for i=0,(PlayerMax - 2) do
 				if (GetPlayerData(i, "AiEnabled")) then
 					local uncount = 0
 					uncount = GetUnits(i)
@@ -480,7 +479,7 @@ function StandardTriggers()
 				return false
 			end
 			
-			for i=0,14 do
+			for i=0,(PlayerMax - 2) do
 				if (GetPlayerData(i, "AiEnabled")) then
 					local uncount = 0
 					uncount = GetUnits(i)
@@ -1226,7 +1225,7 @@ function GetCivilizationAvailableFactions(civilization)
 	local civilization_factions = GetCivilizationFactionNames(civilization)
 
 	-- remove faction names already in use
-	for i=0,14 do
+	for i=0,(PlayerMax - 2) do
 		if (table.getn(civilization_factions) > 0 and GetPlayerData(i, "RaceName") == civilization) then
 			RemoveElementFromArray(civilization_factions, GetPlayerData(i, "Name"))
 		end
@@ -1235,7 +1234,7 @@ function GetCivilizationAvailableFactions(civilization)
 end
 
 function GetCivilizationExists(civilization)
-	for i=0,14 do
+	for i=0,(PlayerMax - 2) do
 		if (GetPlayerData(i, "RaceName") == civilization) then
 			return true
 		end
@@ -1244,7 +1243,7 @@ function GetCivilizationExists(civilization)
 end
 
 function GetFactionExists(faction)
-	for i=0,14 do
+	for i=0,(PlayerMax - 2) do
 		if (GetPlayerData(i, "Name") == faction) then
 			return true
 		end
@@ -1272,7 +1271,7 @@ end
 
 function GetNumCivilizationPlayers(civilization)
 	local player_count = 0
-	for i=0,14 do
+	for i=0,(PlayerMax - 2) do
 		if (GetPlayerData(i, "TotalNumUnits") > 0 and GetPlayerData(i, "RaceName") == civilization) then
 			player_count = player_count + 1
 		end
@@ -1281,7 +1280,7 @@ function GetNumCivilizationPlayers(civilization)
 end
 
 function GetFactionPlayer(faction)
-	for i=0,14 do
+	for i=0,(PlayerMax - 2) do
 		if (Players[i].Type ~= PlayerNobody and GetPlayerData(i, "Name") == faction) then
 			return i
 		end
@@ -1291,7 +1290,7 @@ end
 
 function GetNumRivals(player)
 	local rival_count = 0
-	for i=0,14 do
+	for i=0,(PlayerMax - 2) do
 		if (player ~= i and (Players[i].Type == PlayerPerson or Players[i].Type == PlayerComputer) and (Players[player]:IsAllied(Players[i]) == false or Players[i]:IsAllied(Players[player]) == false)) then
 			local total_units = GetPlayerData(i, "TotalNumUnitsConstructed") - GetPlayerData(i, "UnitTypesCount", "unit-goblin-glider")
 			total_units = total_units - GetPlayerData(i, "UnitTypesCount", "unit-gold-mine") - GetPlayerData(i, "UnitTypesCount", "unit-silver-mine") - GetPlayerData(i, "UnitTypesCount", "unit-copper-mine")
@@ -1308,7 +1307,7 @@ end
 
 function GetNumAllies(player)
 	local ally_count = 0
-	for i=0,14 do
+	for i=0,(PlayerMax - 2) do
 		if (player ~= i and (Players[i].Type == PlayerPerson or Players[i].Type == PlayerComputer) and Players[player]:IsAllied(Players[i]) and Players[i]:IsAllied(Players[player])) then
 			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0) then
 				ally_count = ally_count + 1
@@ -1320,7 +1319,7 @@ end
 
 function GetNumPlayers()
 	local player_count = 0
-	for i=0,14 do
+	for i=0,(PlayerMax - 2) do
 		if (GetPlayerData(i, "TotalNumUnits") > 0) then
 			player_count = player_count + 1
 		end

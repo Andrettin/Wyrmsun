@@ -156,7 +156,7 @@ AddTrigger("hills-of-the-shorbear-clan-introduction",
 			return false
 		end
 		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") == false and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") == false and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") == false) then
-			for i=0,14 do
+			for i=0, (PlayerMax - 2) do
 				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga") and FindHero("Rugnur", i) ~= nil and FindHero("Baglur", i) ~= nil and FindHero("Thursagan", i) ~= nil and FindHero("Durstorn", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
 					player = i
 					return true
@@ -465,7 +465,7 @@ AddTrigger("hills-of-the-shorbear-clan-shinsplitters-arrive",
 			return false
 		end
 		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") and (GameCycle > 1500 or (GrandStrategy and GameCycle > 500)) and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") == false) then
-			for i=0,14 do
+			for i=0, (PlayerMax - 2) do
 				if (
 					GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga")
 					and FindHero("Rugnur", i) ~= nil
@@ -830,7 +830,7 @@ AddTrigger("hills-of-the-shorbear-clan-new-objectives",
 			return false
 		end
 		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") and FindHero("Durstorn", GetFactionPlayer("Norlund Clan"))) then
-			for i=0,14 do
+			for i=0, (PlayerMax - 2) do
 				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga")) then
 					player = i
 					return true

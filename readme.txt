@@ -58,7 +58,7 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
-- 2.4.3
+- 3.0.0
 -----------------------------------------------------------------------
 
 * Abilities
@@ -76,6 +76,7 @@ https://github.com/Andrettin/Wyrmsun
 - Revamped Frankish personal names.
 - Revamped Anglo-Saxon personal names.
 - Revamped Lombardic personal names.
+- Faction splitting now only happens in the campaign mode.
 
 * Items
 - Fixed an issue which caused units without inventory to clear their order queue after picking up a healing item.
@@ -85,9 +86,13 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused Germanic players to have the Teuton Civilization upgrade researched at scenario start when restarting the scenario after having developed the Teuton civilization.
 - New See Garrison button icon (by Jinn).
 - Fixed issue which caused the autosave to remain active even after deactivating it in the options.
+- Added support for maps having multiple layers.
+- Flavor triggers now only happen in the campaign mode.
 
 * Quests
+- Added a new Campaign mode, playable on a massive map with several layers.
 - The player now receives a notification when new in-game quests are available, instead of a quest symbol hovering over the town hall.
+- In-game quests are now only obtainable in the campaign mode.
 
 * Terrain
 - Improvements to the rock, cave wall, dry mud and cave floor tile transitions (by Jinn).

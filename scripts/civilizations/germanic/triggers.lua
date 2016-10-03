@@ -30,7 +30,7 @@ AddTrigger("the-curved-swords", -- Source: http://natmus.dk/en/historical-knowle
 		if (SyncRand(100) ~= 0) then -- 1% chance this will trigger every time it is checked (and 1% for each player it is checked for, for a chance of 0.01% for a player that matches the conditions
 			return false
 		end
-		for i=0,14 do
+		for i=0,(PlayerMax - 2) do
 			if (SyncRand(100) == 0 and GetPlayerData(i, "RaceName") == "germanic" and GetPlayerData(i, "UnitTypesCount", "unit-germanic-smithy") >= 1) then
 				trigger_player = i
 				return true
@@ -63,7 +63,7 @@ AddTrigger("the-sun-chariot", -- Source: http://natmus.dk/en/historical-knowledg
 		if (SyncRand(100) ~= 0) then -- 0.01% chance this will trigger every time it is checked
 			return false
 		end
-		for i=0,14 do
+		for i=0,(PlayerMax - 2) do
 			if (SyncRand(100) == 0 and GetPlayerData(i, "RaceName") == "germanic" and GetPlayerData(i, "UnitTypesCount", "unit-germanic-smithy") >= 1) then
 				trigger_player = i
 				return true

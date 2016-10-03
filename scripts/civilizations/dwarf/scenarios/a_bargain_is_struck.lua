@@ -48,7 +48,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 		if (GameCycle == 0) then
 			return false
 		end
-		for i=0,14 do
+		for i=0, (PlayerMax - 2) do
 			if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and FindHero("Rugnur", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetCivilizationExists("gnome") and GetNumRivals(i) >= 2 and not Players[i]:IsEnemy(Players[GetCivilizationPlayer("gnome")]) and GetPlayerData(i, "UnitTypesCount", "unit-gnomish-caravan") < 1) then
 				player = i
 				
@@ -388,7 +388,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 				if (GameCycle == 0) then
 					return false
 				end
-				for i=0,14 do
+				for i=0, (PlayerMax - 2) do
 					if (PlayerHasObjective(i, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")) then
 						player = i
 						return true
@@ -568,7 +568,7 @@ AddTrigger("a-bargain-is-struck-gnomish-envoy-arrives",
 		if (GameCycle == 0) then
 			return false
 		end
-		for i=0,14 do
+		for i=0, (PlayerMax - 2) do
 			if (
 				PlayerHasObjective(i, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
 				and GetPlayerData(i, "RaceName") == "dwarf"
@@ -648,7 +648,7 @@ AddTrigger("a-bargain-is-struck-caravans-arrived",
 		if (GameCycle == 0) then
 			return false
 		end
-		for i=0,14 do
+		for i=0, (PlayerMax - 2) do
 			if (
 				PlayerHasObjective(i, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
 				and GetPlayerData(i, "RaceName") == "dwarf"
@@ -725,7 +725,7 @@ AddTrigger("a-bargain-is-struck-quest-completion",
 		if (gnomish_envoy == nil) then
 			gnomish_envoy = FindUnit("unit-gnomish-master-at-arms", GetFactionPlayer("Norlund Clan"))
 		end
-		for i=0,14 do
+		for i=0, (PlayerMax - 2) do
 			-- added the SyncRand so that this trigger is unlikely to fire instead of the quest completion dialogue events
 			if (
 				(SyncRand(100) + 1) <= 10
@@ -778,7 +778,7 @@ AddTrigger("a-bargain-is-struck-caravan-destroyed",
 		if (GameCycle == 0) then
 			return false
 		end
-		for i=0,14 do
+		for i=0, (PlayerMax - 2) do
 			if (PlayerHasObjective(i, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") and GetPlayerData(i, "UnitTypesCount", "unit-gnomish-caravan") < 4) then
 				player = i
 				return true
@@ -815,7 +815,7 @@ AddTrigger("a-bargain-is-struck-caravan-cargo-dropped",
 		if (GameCycle == 0) then
 			return false
 		end
-		for i=0,14 do
+		for i=0, (PlayerMax - 2) do
 			if (PlayerHasObjective(i, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")) then
 				local caravans_loaded = true -- are all caravans loaded?
 				local uncount = 0
@@ -938,7 +938,7 @@ AddTrigger("a-bargain-is-struck-gnomish-envoy-dies",
 --		if (GameCycle == 0) then
 --			return false
 --		end
---		for i=0,14 do
+--		for i=0, (PlayerMax - 2) do
 --			-- maybe could check here if the gnomish player has a gnomish recruit with level 3 instead (although perhaps it could be bad for performance)?
 --			if (PlayerHasObjective(i, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") and GetPlayerData(GetCivilizationPlayer("gnome"), "UnitTypesCount", "unit-gnomish-duelist") < 1) then
 --				player = i

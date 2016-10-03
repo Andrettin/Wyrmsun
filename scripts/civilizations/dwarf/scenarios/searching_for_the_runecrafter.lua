@@ -131,7 +131,7 @@ AddTrigger("searching-for-the-runecrafter-introduction",
 			return false
 		end
 		if (GetFactionExists("Thursagan") and PlayerHasObjective(GetThisPlayer(), "- Find Thursagan and bring him to your Mead Hall") == false) then
-			for i=0,14 do
+			for i=0, (PlayerMax - 2) do
 				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= "Shinsplitter Clan" and FindHero("Rugnur", i) ~= nil and FindHero("Baglur", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
 					player = i
 					return true
@@ -369,7 +369,7 @@ AddTrigger("searching-for-the-runecrafter-gryphon-riders-found",
 -- if Thursagan's smithy is found by a gryphon rider
 AddTrigger("searching-for-the-runecrafter-thursagan-found-gryphon-rider",
 	function()
-		for i=0,14 do
+		for i=0, (PlayerMax - 2) do
 			if (PlayerHasObjective(i, "- Find Thursagan and bring him to your Mead Hall") and IfNearUnit(i, ">=", 1, "units", "unit-dwarven-smithy")) then
 				local uncount = 0
 				uncount = GetUnits(GetFactionPlayer("Thursagan"))
@@ -410,7 +410,7 @@ AddTrigger("searching-for-the-runecrafter-thursagan-found-gryphon-rider",
 -- if Thursagan's smithy is found by a non-gryphon rider
 AddTrigger("searching-for-the-runecrafter-thursagan-found",
 	function()
-		for i=0,14 do
+		for i=0, (PlayerMax - 2) do
 			if (PlayerHasObjective(i, "- Find Thursagan and bring him to your Mead Hall") and IfNearUnit(i, ">=", 1, "units", "unit-dwarven-smithy")) then
 				local uncount = 0
 				uncount = GetUnits(GetFactionPlayer("Thursagan"))
@@ -557,7 +557,7 @@ AddTrigger("searching-for-the-runecrafter-thursagan-found",
 
 AddTrigger("searching-for-the-runecrafter-victory",
 	function()
-		for i=0,14 do
+		for i=0, (PlayerMax - 2) do
 			if (
 				PlayerHasObjective(i, "- Find Thursagan and bring him to your Mead Hall")
 				and UnitIsAt(FindHero("Thursagan"), {7, 59}, {12, 64})

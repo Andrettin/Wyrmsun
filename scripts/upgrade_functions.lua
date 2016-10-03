@@ -57,7 +57,7 @@ function DefineAllowNormalUnits(flags)
 		for i, unitName in ipairs(Units) do
 			local PlayerUnitFlag = {}
 			local PlayerHeroUnitMax = {}
-			for j=0,15 do
+			for j=0,(PlayerMax - 1) do
 				if (string.find(unitName, "upgrade-") == nil) then
 					if (
 						GetPlayerData(j, "AiEnabled") == false
@@ -91,7 +91,7 @@ function DefineAllowNormalUnits(flags)
 	else
 		for i, unitName in ipairs(Units) do
 			local PlayerUnitFlag = {}
-			for j=0,15 do
+			for j=0,(PlayerMax - 1) do
 				if (string.find(unitName, "upgrade-") == nil) then
 					if (flags == "RRRRRRRRRRRRRRRR") then
 						PlayerUnitFlag[j] = "A"
@@ -116,7 +116,7 @@ InitFuncs:add(function()
 end)
 
 function ApplyTechLevels()
-	for j=0,15 do
+	for j=0,(PlayerMax - 1) do
 		if (TechLevel[j + 1] == "" and j ~= GetThisPlayer()) then
 			TechLevel[j + 1] = TechLevel[GetThisPlayer() + 1]
 		end
@@ -178,14 +178,14 @@ function ApplyTechLevels()
 	
 	for i, unitName in ipairs(Units) do
 		if (string.find(unitName, "upgrade-") ~= nil) then
-			for j=0,15 do
+			for j=0,(PlayerMax - 1) do
 				if (IsTechnologyUnderMinimumTechLevel(unitName, j) and GetPlayerData(j, "Allow", unitName) == "A") then -- if tech level is at least Agrarian (Iron)
 					SetPlayerData(j, "Allow", unitName, "R")
 				end
 			end
 			
 			local PlayerUnitFlag = {}
-			for j=0,15 do
+			for j=0,(PlayerMax - 1) do
 				if (MaxTechLevel[j + 1] ~= "" and IsTechnologyOverMaxTechLevel(unitName, j) and GetPlayerData(j, "Allow", unitName) == "A") then
 					PlayerUnitFlag[j + 1] = "F"
 				else

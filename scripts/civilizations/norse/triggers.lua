@@ -30,7 +30,7 @@ AddTrigger("the-journey-to-godheim", -- Source: Snorri Sturlson, "Heimskringla",
 		if (SyncRand(100) ~= 0) then -- 1% chance this will trigger every time it is checked (and 1% for each player it is checked for, for a chance of 0.01% for a player that matches the conditions
 			return false
 		end
-		for i=0,14 do
+		for i=0,(PlayerMax - 2) do
 			if (SyncRand(100) == 0 and (GetPlayerData(i, "Faction") == "Yngling Tribe" or GetPlayerData(i, "Faction") == "Swede Tribe")) then -- should also check if the faction has an appropriate hero
 				trigger_player = i
 				return true
@@ -74,7 +74,7 @@ AddTrigger("the-winter-abode", -- Source: Snorri Sturlson, "Heimskringla", 1844,
 		if (SyncRand(100) ~= 0) then -- 1% chance this will trigger every time it is checked (and 1% for each player it is checked for, for a chance of 0.01% for a player that matches the conditions
 			return false
 		end
-		for i=0,14 do
+		for i=0,(PlayerMax - 2) do
 			if (SyncRand(100) == 0 and (GetPlayerData(i, "Faction") == "Yngling Tribe" or GetPlayerData(i, "Faction") == "Swede Tribe")) then -- should also check if the faction has an appropriate hero
 				trigger_player = i
 				return true
@@ -119,7 +119,7 @@ AddTrigger("marauding-finland", -- Source: Snorri Sturlson, "Heimskringla", 1844
 		if (SyncRand(100) ~= 0) then -- 1% chance this will trigger every time it is checked (and 1% for each player it is checked for, for a chance of 0.01% for a player that matches the conditions
 			return false
 		end
-		for i=0,14 do
+		for i=0,(PlayerMax - 2) do
 			if (SyncRand(100) == 0 and (GetPlayerData(i, "Faction") == "Yngling Tribe" or GetPlayerData(i, "Faction") == "Swede Tribe")) then
 				trigger_player = i
 				return true

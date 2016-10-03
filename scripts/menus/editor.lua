@@ -284,7 +284,7 @@ end
 function RunEditorSaveMenu(save_as_mod)
 	if not (save_as_mod) then
 		local map_has_person_player = false
-		for i = 0, 14 do
+		for i = 0,(PlayerMax - 2) do
 			if (Map.Info.PlayerType[i] == 5) then
 				map_has_person_player = true
 				break
@@ -414,7 +414,7 @@ function RunEditorPlayerProperties()
 
 	local player_list = {}
 	local player_properties = {}
-	for i = 1,15 do
+	for i = 1,(PlayerMax - 1) do
 		player_properties[i] = {}
 		player_properties[i]["Type"] = Map.Info.PlayerType[i-1] - 2
 		player_properties[i]["Civilization"] = Players[i-1].Race
@@ -523,7 +523,7 @@ function RunEditorPlayerProperties()
 	
 	menu:addHalfButton("~!OK", "o", 20 + 48, sizeY - 40,
 		function()
-			for i = 0, 14 do
+			for i = 0,(PlayerMax - 2) do
 				Map.Info.PlayerType[i] = player_properties[i + 1].Type + 2
 				Players[i].Race = player_properties[i + 1].Civilization
 				SetPlayerData(i, "Faction", player_properties[i + 1].Faction)
