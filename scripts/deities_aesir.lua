@@ -33,6 +33,7 @@ DefineDeity("odin", { -- Known as Allfather, the Terrible One, One-eyed, Father 
 	Religions = {"paganism"},
 	Gender = "male",
 	Major = true,
+	Icon = "icon-odin",
 	Domains = {"aether", "courage", "wisdom"},
 	CulturalNames = {
 		"dwarf", "Hroptatyr", -- in Norse mythology, one of the names of Odin, which was used in a verse concerning a charm by the dwarf Thjodrorir in the Hovamol, who sang wisdom for "Hroptatyr" wise; name means "Crier of the Gods", "the Crying God" or "the Prophet"

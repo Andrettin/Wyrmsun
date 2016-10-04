@@ -53,3 +53,13 @@ Load("scripts/civilizations/slav/factions.lua")
 Load("scripts/civilizations/teuton/factions.lua")
 Load("scripts/civilizations/thracian/factions.lua")
 Load("scripts/civilizations/troll/factions.lua")
+
+-- deity factions
+
+DefineFaction("Asgard", {
+	Civilization = "aesir",
+	Type = "polity",
+	Colors = {"blue"},
+	DefaultTier = "kingdom",
+	DefaultAI = "passive"
+})

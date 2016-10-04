@@ -82,7 +82,7 @@ DefineCharacter("Fjalar", {
 DefineCharacter("Galar", {
 	Name = "Galar",
 	Gender = "male",
-	Type = "unit-dwarven-steelclad", -- should be a thief
+	Type = "unit-dwarven-steelclad", -- should be an alchemist
 	Civilization = "dwarf",
 	Faction = "Shadowcharm Clan",
 	Description = _("The envious Galar is joint chieftain of the Shadowcharm Clan together with his brother Fjalar. He is known for his thieving skills and his dabbling in magic."),

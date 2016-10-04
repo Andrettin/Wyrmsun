@@ -2023,6 +2023,33 @@ DefineCivilization("wose", {
 
 -- Cyclops names: Arges ("Vivid"), Brontes ("Thunderer"), Polyphemus (name means "many-voiced"), Steropes ("Lightner"), Tepegoz (an ogre with a single eye from Turkic mythology; apparently derived from the Greek Polyphemus myth; Tepe means "top, crown of the head" and Göz means "eye"), Depeghoz (Depêghöz, same as Tepegoz, given by Jacob Grimm in Teutonic Mythology, p. 424)
 
+-- deity civilizations
+
+DefineCivilization("aesir", {
+	Display = "Aesir",
+	Visible = true,
+	ParentCivilization = "neutral",
+	Language = "old-norse",
+	Adjective = "Aesir",
+	DefaultColor = "blue",
+	Playable = false,
+	ButtonIcons = {
+		"move", "icon-dwarven-boots",
+		"stop", "icon-germanic-wooden-oblong-shield",
+		"attack", "icon-germanic-short-sword",
+		"patrol", "icon-germanic-patrol-land",
+		"stand-ground", "icon-germanic-stand-ground",
+		"return-goods", "icon-germanic-return-goods"
+	},
+	UIFillers = {
+		"germanic/ui/filler_bottom.png", 380, -181,
+		"germanic/ui/resource.png", 0, 0,
+		"germanic/ui/buttonpanel.png", -256, -200,
+		"germanic/ui/infopanel.png", 0, -200
+	}
+})
+
+
 Load("scripts/factions.lua")
 
 function GetCivilizationID(civilization)

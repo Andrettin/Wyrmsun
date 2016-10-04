@@ -107,7 +107,7 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 		{"layer", "helmet", "file", "teuton/units/iron_helm.png"},
 		{"layer", "weapon", "file", "teuton/units/long_iron_sword.png"}
 	},
-	Animations = "animations-melee-unit-new", Icon = "icon-odin",
+	Animations = "animations-melee-unit-new", Icon = "icon-teuton-swordsman",
 	DefaultEquipment = {
 		{"weapon", "unit-short-sword"},
 		{"shield", "unit-wooden-shield"},

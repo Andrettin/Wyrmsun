@@ -25,27 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineMapTemplate("asgard", {
-	Name = "Asgard",
-	Plane = "Asgard",
-	Width = 64,
-	Height = 64,
-	TimeOfDaySeconds = 0, -- always day
-	BaseTerrain = "dirt",
-	GeneratedTerrains = {
-		"rock", "low",
-		"shallow-water", "low",
-		"grass", "extremely-high",
-		"pine-tree", "high"
-	},
-	GeneratedNeutralUnits = {
-		"unit-yale", 4,
-		"unit-goat", 8,
-		"unit-horse", 4
-	}
+DefineCharacter("Odin", {
+	Name = "Odin",
+	Gender = "male",
+	Type = "unit-teuton-swordsman", -- should be a Norse warrior?
+	Deity = "odin",
+	HairVariation = "gray-hair",
+	Trait = "upgrade-wise",
+	Persistent = true,
+	Level = 95
 })
 
-SetMapTemplateHero("asgard", "Odin", "Asgard", {-1, -1})
-
-SetMapTemplateLayerConnector("asgard", "unit-glyph", {-1, -1}, "Earth")
-SetMapTemplateLayerConnector("asgard", "unit-glyph", {-1, -1}, "Nidavellir")
