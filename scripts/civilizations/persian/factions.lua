@@ -166,3 +166,5 @@ DefineFaction("Nabataei Tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7
 	Colors = {"black"},
 	Playable = false
 })
+
+-- according to one scholar, the Seringas and Sercingas of Widsith are Caucasian peoples; Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 120.

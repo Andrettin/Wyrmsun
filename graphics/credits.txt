@@ -959,6 +959,7 @@ João Victor G. Costa (Jinn):
 /graphics/neutral/units/gnomish_goblin_and_kobold_corpses.png (licensed under the CC0)
 /graphics/neutral/units/goat.png (modified from b_o's yale) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/neutral/units/human_corpse.png (licensed under the CC0)
+/graphics/neutral/units/wolf.png (based on the model by Wildfire Games) (licensed under the CC-BY-SA 3.0)
 /graphics/neutral/units/yale_young.png (modified from b_o's yale) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/norse/icons/runewriting.png (licensed under the CC0)
 /graphics/orc/icons/sea_orc.png (licensed under the CC0)
@@ -1408,3 +1409,4 @@ Wildfire Games (http://www.wildfiregames.com/):
 /graphics/latin/buildings/stables.png (model on which Jinn's building was based) (licensed under the CC-BY-SA 3.0)
 /graphics/latin/buildings/stables_shadow.png (model on which Jinn's building was based) (licensed under the CC-BY-SA 3.0)
 /graphics/neutral/units/boar.png (model on which Jinn's unit was based) (licensed under the CC-BY-SA 3.0)
+/graphics/neutral/units/wolf.png (model on which Jinn's unit was based) (licensed under the CC-BY-SA 3.0)

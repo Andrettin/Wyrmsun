@@ -81,6 +81,7 @@ https://github.com/Andrettin/Wyrmsun
 * Items
 - Fixed an issue which caused units without inventory to clear their order queue after picking up a healing item.
 - Fixed an issue which caused healing item auto-use to clear the unit's order queue.
+- Added a new unique spatha, Sigrljoma.
 
 * Miscellaneous
 - Fixed issue which caused Germanic players to have the Teuton Civilization upgrade researched at scenario start when restarting the scenario after having developed the Teuton civilization.

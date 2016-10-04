@@ -58,7 +58,7 @@ DefineUpgrade("upgrade-item-suffix-of-othola", {
 })
 
 DefineUpgrade("upgrade-item-suffix-of-sigel", {
-	Name = _("of Sigel"), -- Anglo-Saxon rune meaning "sun", but also in a riddle indicated to mean "shield"; Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 119.
+	Name = _("of Sigel"), -- Anglo-Saxon rune meaning "sun", but is also in a riddle indicated to mean "shield"; Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 119.
 	MagicSuffix = true,
 	RunicAffix = true,
 	ItemSuffix = {"armor", true, "shield", true, "horn", true, "helmet", true, "amulet", true, "ring", true},

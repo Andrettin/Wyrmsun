@@ -855,6 +855,59 @@ DefineUnitType("unit-boar", {
 	}
 })
 
+DefineUnitType("unit-wolf", {
+	Name = "Wolf",
+	Parent = "unit-template-fauna-unit",
+	Species = "wolf",
+	Description = _("Wolves are pack hunters who dwell in temperate woodlands."),
+	Image = {"file", "neutral/units/wolf.png", "size", {63, 63}},
+	Animations = "animations-melee-unit-new-movement", Icon = "icon-boar",
+	Strength = 13,
+	Dexterity = 15,
+	Intelligence = 2,
+	Charisma = 6,
+	Speed = 13,
+	HitPoints = 45,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 4,
+	BasicDamage = 6, Missile = "missile-none",
+	MaxAttackRange = 1,
+	Accuracy = 12,
+	Evasion = 12,
+	Priority = 37,
+	Points = 40,
+	Demand = 1,
+	Type = "land",
+	RightMouseAction = "attack",
+	CanAttack = true,
+	CanTargetLand = true,
+	RandomMovementProbability = 1,
+	BoardSize = 100, -- to prevent this unit from being loaded into transporters
+	RandomMovementDistance = 5,
+	PeopleAversion = true,
+	Predator = true,
+	Flesh = true,
+	Carnivore = true,
+	PierceDamage = true,
+	PersonalNames = {
+	},
+	Sounds = {
+--		"selected", "pig",
+--		"acknowledge", "pig",
+--		"idle", "pig",
+--		"ready", "pig",
+--		"dead", "pig",
+		"hit", "bite-attack",
+		"miss", "attack-miss",
+		"step", "step-dirt",
+		"step-dirt", "step-dirt",
+		"step-gravel", "step-gravel",
+		"step-mud", "step-mud",
+		"step-stone", "step-stone",
+		"step-grass", "step-leaves"
+	}
+})
+
 DefineUnitType("unit-gryphon", {
 	Name = _("Gryphon"),
 	Parent = "unit-template-fauna-unit",
