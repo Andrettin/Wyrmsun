@@ -388,5 +388,3 @@ DefineUniqueItem("na-slovanech-monastery", { -- Alena Ježková, "77 Prague Lege
 -- Zikmund (unique bell in Prague); Source: Alena Ježková, "77 Prague Legends", 2006, p. 84.
 
 -- Josef (legendary golem from Prague); Source: Alena Ježková, "77 Prague Legends", 2006, p. 107.
-
--- Skrauti (dragon ship which appears in the Norse saga of Sörli the Strong; Sörli might be Norse himself, but the source does not mention his actual origins); the name means "precious thing"; Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 119.
