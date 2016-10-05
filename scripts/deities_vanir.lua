@@ -50,7 +50,7 @@ DefineDeity("freyja", { -- Source: Peter Buchholz, "Perspectives for Historical 
 	Major = true,
 	Domains = {"earth"}, -- fertility goddess
 	CulturalNames = {
-		"germanic", "Fraujōn" -- Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 135.
+		"germanic", "Fraujon" -- "Fraujōn"; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 135.
 	},
 --	Description = "With the conclusion of the war between the Aesir and the Vanir, the two pantheons agreed to a peace, and that a few of each group should live among the other. Freyja was one of the Vanir who went to dwell in Asgard with the Aesir, accompanied by her father Njord and her brother Frey. At first, the Vanir were worshiped only by elves. As the Aesir were connected to Germanic peoples through their priests, when Freyja went to live in Asgard she began to be worshiped by the Germanics as well.",
 	Feasts = {
@@ -89,7 +89,7 @@ DefineDeity("njord", { -- Husband of Skadi; Source: Kevin Crossley-Holland, "The
 	Gender = "male",
 	Domains = {"water", "air"}, -- god of the Sea and Wind
 	CulturalNames = {
-		"germanic", "Nerþiwiz" -- Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 135.
+		"germanic", "Nerthiwiz" -- "Nerþiwiz"; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 135.
 	},
 --	Description = "With the conclusion of the war between the Aesir and the Vanir, the two pantheons agreed to a peace, and that a few of each group should live among the other. Njord was one of the Vanir who went to dwell in Asgard with the Aesir, accompanied by his two children, Frey and Freyja. At first, the Vanir were worshiped only by elves. As the Aesir were connected to Germanic peoples through their priests, when Njord went to live in Asgard he began to be worshiped by the Germanics as well."
 })

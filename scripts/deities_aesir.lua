@@ -37,7 +37,7 @@ DefineDeity("odin", { -- Known as Allfather, the Terrible One, One-eyed, Father 
 	Domains = {"aether", "courage", "wisdom"},
 	CulturalNames = {
 		"dwarf", "Hroptatyr", -- in Norse mythology, one of the names of Odin, which was used in a verse concerning a charm by the dwarf Thjodrorir in the Hovamol, who sang wisdom for "Hroptatyr" wise; name means "Crier of the Gods", "the Crying God" or "the Prophet"
-		"germanic", "Wōđanaz", -- Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 128.
+		"germanic", "Wodanaz", -- "Wōđanaz"; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 128.
 --		"teuton", "Woden", -- Anglo-Saxon name for the deity
 		"teuton", "Wodan" -- Old High German name for the deity, as seen in the second Merseburg charm; Source: Susan D. Fuller, "Pagan Charms in Tenth-Century Saxony? The Function of the Merseburg Charms", 1909, p. 162.
 	},
@@ -55,7 +55,7 @@ DefineDeity("thor", { -- Son of Odin and Jord (Fjorgyn) and Sif's husband; known
 	Domains = {"air", "lightning", "order"},
 	CulturalNames = {
 		"dwarf", "Vingthor", -- name used by Thor when revealing himself to the dwarf Alvis; the meaning is "Thor the Hurler"; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 185.
-		"germanic", "Þunraz", -- Buchholz gives "Þun(a)raz"; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129.
+		"germanic", "Thunraz", -- Buchholz gives "Þun(a)raz"; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129.
 		"teuton", "Thunor" -- Anglo-Saxon name for the deity; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 98-99.
 	},
 	Description = "Thor is the son of Odin and Jord, and is married to Sif. He is the foremost protector of the Aesir, using his massive throwing hammer to keep Asgard's enemies at bay. Given his power over the weather, Thor is also worshiped as a fertility god."
@@ -68,7 +68,7 @@ DefineDeity("frigg", { -- First among the goddesses; Source: Kevin Crossley-Holl
 	Religions = {"paganism"},
 	Gender = "female",
 	CulturalNames = {
-		"germanic", "Frijjō", -- Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129.
+		"germanic", "Frijjo", -- "Frijjō"; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129.
 		"teuton", "Friia" -- as given in the second Merseburg charm (which is in Old High German); in the charm Volla is described as being her sister; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129; Source: Susan D. Fuller, "Pagan Charms in Tenth-Century Saxony? The Function of the Merseburg Charms", 1909, p. 162.
 		-- "Frig" is the Anglo-Saxon name for the goddess; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 98.
 	},
@@ -92,7 +92,7 @@ DefineDeity("sol", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980,
 	Gender = "female",
 	Domains = {"fire"}, -- goddess of the sun
 	CulturalNames = {
-		"germanic", "Sunōn", -- a sun chariot artifact belonging to the Nordic Bronze Age was found in Trundholm Mose (in Zealand, Denmark), having an aspect similar to that ascribed to Sol in Norse mythology; Winfred P. Lehmann gives the word for sun in Proto-Germanic as "Sunōn", which seems very possible to be the word which gave origin to the Old High German name of the deity, "Sunna" (and Lehmann gives an Old High German "Sunno" as being a reflex of "Sunōn", too); Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-sun-chariot/; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+		"germanic", "Sunon", -- "Sunōn"; a sun chariot artifact belonging to the Nordic Bronze Age was found in Trundholm Mose (in Zealand, Denmark), having an aspect similar to that ascribed to Sol in Norse mythology; Winfred P. Lehmann gives the word for sun in Proto-Germanic as "Sunōn", which seems very possible to be the word which gave origin to the Old High German name of the deity, "Sunna" (and Lehmann gives an Old High German "Sunno" as being a reflex of "Sunōn", too); Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-sun-chariot/; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 		"teuton", "Sunna" -- The second Merseburg charm (written in Old High German) attests a deity named Sunna, which seems likely to be the Old High German name for Sol; in the charm her sister is Sinhtgunt; Source: Susan D. Fuller, "Pagan Charms in Tenth-Century Saxony? The Function of the Merseburg Charms", 1909, p. 162.
 	},
 --	Description = "Sol is a sun goddess and the daughter of Mundilfari. Due to her association with the mighty star, she was believed by the Germanics to carry the sun in her chariot with the horses Arvak and Alsvid. In truth, however, Sol is linked to the abstract concept of a sun, rather than to a particular one."
@@ -106,8 +106,8 @@ DefineDeity("tyr", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980,
 	Gender = "male",
 	Domains = {"courage"}, -- god of war
 	CulturalNames = {
-		"germanic", "Tīwaz", -- Proto-Germanic name of the god; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115.
-		"norse", "Týr", -- Old Norse name of the god; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115.
+		"germanic", "Tiwaz", -- "Tīwaz"; Proto-Germanic name of the god; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115.
+		"norse", "Tyr", -- "Týr"; Old Norse name of the god; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115.
 		"teuton", "Ziu" -- Old High German name of the god (in Old English it was Tīw); Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115.
 	},
 --	Description = "Tyr is the son of Odin, and is known as the bravest of the Aesir. In an effort to bind the giant wolf Fenrir, he ended up losing his hand."
@@ -130,7 +130,7 @@ DefineDeity("balder", { -- Due to Loki's mischief, he was killed by Hod; Balder 
 	Religions = {"paganism"},
 	Gender = "male",
 	CulturalNames = {
-		"teuton", "Bældæg", -- Anglo-Saxon name for the deity
+		"teuton", "Baeldaeg", -- "Bældæg"; Anglo-Saxon name for the deity
 	},
 --	Description = "The son of Odin and Frigg, Balder is known for his beauty, wisdom and gentleness. As Baeldaeg, the royal houses of both Bernicia and Wessex ascribed their descent to him."
 })
