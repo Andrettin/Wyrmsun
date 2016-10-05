@@ -72,7 +72,7 @@ function RunDiplomacyMenu()
 				if (ThisPlayer:IsAllied(Players[i]) or
 					ThisPlayer:IsEnemy(Players[i]) == false) then
 					SetDiplomacy(ThisPlayer.Index, "enemy", i)
-					if (Players[i].Type == PlayerComputer) then
+					if (Players[i].Type == PlayerComputer and Players[i]:IsEnemy(ThisPlayer) == false) then
 						SetDiplomacy(i, "enemy", ThisPlayer.Index) -- Andrettin: this is added so that when the human player decides to attack computer players, computer players become enemies of the human player as well
 					end
 				end
