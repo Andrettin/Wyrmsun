@@ -49,7 +49,7 @@ DefineDialogue("the-mead-of-poetry-fjalar-and-galar-conspire", {
 		},
 		{
 			"speaker", "character", "Galar",
-			"text", "With a potion of ethereal vision we can attune ourselves to that which is mystical. Then we will be able to see the rainbow bridge... And use it to reach Asgard."
+			"text", "Throughout the years we have gathered much magical knowledge, so that we can attune ourselves to that which is mystical. The rainbow bridge may be invisible for others, but we will be able to see it... And use it to reach Asgard."
 		},
 		{
 			"speaker", "character", "Fjalar",
@@ -57,11 +57,10 @@ DefineDialogue("the-mead-of-poetry-fjalar-and-galar-conspire", {
 		},
 		{
 			"speaker", "character", "Galar",
-			"text", "We will need, then, the ingredients for the potions. Four gryphon feathers for the potions of invisibility, and two wyrm eyes for the potions of ethereal vision.",
+			"text", "We will need, then, the ingredients for the potions. Four gryphon feathers should be enough for the potions of invisibility.",
 			"option-effects", {
 				function(s)
 					SetPlayerData(trigger_player, "AcceptQuest", "the-mead-of-poetry-brew-potions-of-invisibility")
-					SetPlayerData(trigger_player, "AcceptQuest", "the-mead-of-poetry-brew-potions-of-ethereal-vision")
 					SetPlayerData(trigger_player, "AcceptQuest", "the-mead-of-poetry-kill-kvasir")
 				end
 			}
@@ -74,27 +73,10 @@ DefineDialogue("the-mead-of-poetry-potions-of-invisibility-ready", {
 		{
 			"speaker", "character", "Galar",
 			"text", "The gryphon feathers are ours! Now we can brew our potions of invisibility... We should use them just before entering Asgard. Remember, the potion's magic will wear off as soon as we attack Kvasir. I am preparing four potions for us - two to be used to get to Kvasir unseen, and another pair for us to drink in order to get out of there safely."
-		}
-	}
-})
-
-DefineDialogue("the-mead-of-poetry-potions-of-ethereal-vision-ready", {
-	Nodes = {
-		{
-			"speaker", "character", "Galar",
-			"text", "We have all the ingredients for the potions of ethereal vision! There... soon they shall be ready. The potion's effect only lasts for a limited duration, so we should only drink it when we feel we have come to the right place."
 		},
 		{
 			"speaker", "character", "Fjalar",
 			"text", "The rainbow bridge is said to stand on the surface of Nidavellir. That's where we should begin our search."
-		},
-		{
-			"speaker", "character", "Galar",
-			"text", "Indeed, dear brother. We must also not linger for too long in Asgard, lest the potion's effect wear off and we be left stranded there."
-		},
-		{
-			"speaker", "character", "Fjalar",
-			"text", "That would be a most fatal mistake."
 		}
 	}
 })

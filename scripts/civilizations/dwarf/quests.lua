@@ -461,21 +461,6 @@ DefineQuest("the-mead-of-poetry-brew-potions-of-invisibility", {
 	DestroyUnits = {"unit-gryphon", "", 1}
 })
 
-DefineQuest("the-mead-of-poetry-brew-potions-of-ethereal-vision", {
-	Name = "Brew Potions of Ethereal Vision",
-	Icon = "icon-red-potion",
---	World = "Nidavellir",
---	Civilization = "dwarf",
-	PlayerColor = "black",
-	Unobtainable = true,
-	CompletionEffects = function(s)
-		CallDialogue("the-mead-of-poetry-potions-of-ethereal-vision-ready", trigger_player)
-	end,
---	Objectives = {"- Kill a Wyrm to obtain the Wyrm Eyes", "- Brew the Potions of Ethereal Vision"},
-	Objectives = {"- Kill a Wyrm to obtain the Wyrm Eyes"},
-	DestroyUnits = {"unit-wyrm", "", 1}
-})
-
 DefineQuest("the-mead-of-poetry-kill-kvasir", {
 	Name = "Kill Kvasir",
 	Icon = "icon-dwarven-witness",
