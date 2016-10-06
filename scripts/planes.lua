@@ -25,9 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefinePlane("Asgard", {
---	Description = _("The plane of Asgard is the home of the Aesir, a group of deities. Mortals who worship the Aesir go to Asgard in the afterlife, the warriors amongst them becoming einherjar at Valhalla. One of the roots of the mighty interplanar tree, Yggdrasill, is located in Asgard.")
-	Description = _("The plane of Asgard is the home of the Aesir, a group of deities. Mortals who worship the Aesir go to Asgard in the afterlife, the warriors amongst them becoming einherjar at Valhalla.")
+DefinePlane("Asgard", { -- Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 116.
+	Description = _("The plane of Asgard is the home of the deities known as the Aesir. Their worshipers who died in battle go to Asgard in the afterlife, becoming einherjar at Valhalla and Folkvang.")
 })
 
 DefinePlane("Duat", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 15.
@@ -48,7 +47,7 @@ DefinePlane("Heaven", {
 
 DefinePlane("Helheim", {
 --	Description = _("Inhabited by the monstrous Hel, this realm is one of the many underworld planes. It harbors the souls of the dead who worshiped the Aesir, and yet were deemed unworthy of entry into Asgard. In Helheim lies one of the roots of the mighty interplanar tree, Yggdrasill, the root having been corrupted by the dark forces of the plane.")
-	Description = _("Inhabited by the monstrous Hel, this realm is one of the many underworld planes. It harbors the souls of the dead who worshiped the Aesir, and yet were deemed unworthy of entry into Asgard.")
+	Description = _("Inhabited by the monstrous Hel, this realm is one of the many underworld planes. It harbors the souls of the dead who worshiped the Aesir, but were denied entry into Asgard by virtue of not having died in battle.")
 })
 
 DefinePlane("Hell", {

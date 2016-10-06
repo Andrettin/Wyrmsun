@@ -634,8 +634,8 @@ DefineUnitType("unit-horse", {
 		"Sviputh", -- Sviputh was a horse from Norse mythology (name means "Swift"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 304.
 		"Vigblaer", -- Vígblær was Helgi's horse in Norse mythology (according to Cleasby its name means "War-breeze"; according to Bellows "Battle-Breather"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 325; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 715.
 		"Vingskornir", -- Vingskornir was Brynhild's horse in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 384.
-		"male", "Alsvid", -- Alsviðr was one of the (male) sun horses from Norse mythology (name means "All-Swift", as given by both sources); also a constellation; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 99; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 19.
-		"male", "Arvak", -- Arvak was one of the (male) sun horses from Norse mythology (name means "Early Waker"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 99; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 19.
+		"male", "Alsvid", -- Alsviðr was one of the (male) sun horses from Norse mythology (name means "All-Swift", as given by both sources); also a constellation; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 99; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 19; Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 124.
+		"male", "Arvak", -- "Arvakr"; Arvak was one of the (male) sun horses from Norse mythology (name means "Early Waker"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 99; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 19; Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 124.
 		"male", "Gulltopp" -- Gulltoppr was Heimdall's (male) horse from Norse mythology; Cleasby gives Gulltoppr (meaning "gold-tuft"); Bellows gives Golltop instead (meaning "Gold-Topped"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 96-97; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 220-221, 636; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 18.
 	},
 	Variations = {
@@ -860,7 +860,7 @@ DefineUnitType("unit-wolf", {
 	Parent = "unit-template-fauna-unit",
 	Species = "wolf",
 	Description = _("Wolves are pack hunters who dwell in temperate woodlands."),
-	Image = {"file", "neutral/units/wolf.png", "size", {63, 63}},
+	Image = {"file", "neutral/units/wolf.png", "size", {76, 76}},
 	Animations = "animations-melee-unit-new-movement", Icon = "icon-boar",
 	Strength = 13,
 	Dexterity = 15,

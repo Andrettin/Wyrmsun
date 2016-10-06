@@ -196,6 +196,17 @@ DefineDeity("heimdall", { -- Son of nine mothers; the horn Gjall belongs to him;
 	Gender = "male"
 })
 
+DefineDeity("hel", { -- Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 116.
+	Name = "Hel",
+	Pantheon = "Aesir",
+	HomePlane = "Helheim",
+	Civilizations = {"norse"},
+	Religions = {"paganism"},
+	Gender = "male",
+	Domains = {"death"},
+--	Description = "Hel is a goddess of death who dwells in Helheim."
+})
+
 DefineDeity("hod", { -- Blind god, who through Loki's mischief killed his brother Balder; returns after Ragnarok; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 245.
 	Name = "Hod",
 	Pantheon = "Aesir",
@@ -312,13 +323,14 @@ DefineDeity("syn", { -- Aids defendants in trials; Source: Kevin Crossley-Hollan
 	Gender = "female"
 })
 
-DefineDeity("ull", { -- name means "Glory" or "Brilliance"; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 494.
+DefineDeity("ull", { -- name means "Glory" or "Brilliance"; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 494; Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 116.
 	Name = "Ull",
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {"archery"}, -- god of archery and skiing
+	Domains = {"archery"},
+--	Description = "Ull is a god archery and skiing."
 })
 
 DefineDeity("var", { -- name means "Oath"; keeps marriage oaths and punishes those who don't fulfill them; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 252.
