@@ -70,7 +70,7 @@ DefineDeity("gullveig", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 })
 
 DefineDeity("kvasir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 8.
-	Name = "Gullveig",
+	Name = "Kvasir",
 	Pantheon = "Vanir",
 	HomePlane = "Vanaheim",
 	Civilizations = {"elf", "norse"}, -- Alaric Hall proposes that the Vanir are more or less identical with the elves, so it makes sense to make Kvasir an elven deity as well; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 135.

@@ -120,86 +120,57 @@ DefineDialogue("the-mead-of-poetry-kvasir-assassinated", {
 	}
 })
 
+DefineDialogue("the-mead-of-poetry-invitation-to-gilling", {
+	Nodes = {
+		{
+			"speaker", "character", "Galar",
+			"text", "Our ability to walk through different worlds will do us much good."
+		},
+		{
+			"speaker", "character", "Fjalar",
+			"text", "Aye. The ettins of Jotunheim are a powerful people, their friendship would be most useful. I suggest we invite one of them we've come to know, the sturdy Gilling."
+		},
+		{
+			"speaker", "character", "Galar",
+			"text", "I concur."
+		}
+	}
+})
+
 DefineDialogue("the-mead-of-poetry-gilling-appears", {
 	Nodes = {
 		{
 			"speaker", "character", "Fjalar",
-			"text", "Who are ye, ye lumbering oaf?!"
+			"text", "Ah, Gilling, yer finally here!"
 		},
 		{
 			"speaker", "character", "Gilling",
-			"text", "I am Gilling, ettin traveler of worlds. I was scrying Asgard when I happened to see one of the plane's gateways being breached. I found the portal used in this world, and followed the trail of the realm travelers to these caves. Amongst ettins, planewalking is a rare but not unheard of gift. But in this strange world of tiny people, I suppose it is the first time that it happens."
+			"text", "A nice world, this. Harsh. Reminds me a bit of Jotunheim."
 		},
 		{
-			"speaker", "character", "Galar",
-			"text", "This isn't good, Fjalar. If the gods learn of this...",
-			"options", {"Time for him to die", "Offer the mead for his silence", "Leave him alone"},
+			"speaker", "character", "Fjalar",
+			"text", "Make yerself at home, Gilling. Some dwarven ale?"
+		},
+		{
+			"speaker", "character", "Gilling",
+			"text", "Mmm, now that's some good stuff. Plenty of gold you have here. I will take some with me as your gift of hospitality."
+		},
+		{
+			"speaker", "character", "Fjalar",
+			"text", "Ye sit at our table, eat our food and drink our ale, and still see fit to demand our gold?! Nothing brings nothing. If ye want gold, give us something worthy for it."
+		},
+		{
+			"speaker", "character", "Gilling",
+			"text", "Hah! You are my hosts. I am Gilling, the mighty traveler of worlds, and I came a long way to visit you. The least I could expect is a valuable gift."
+		},
+		{
+			"speaker", "character", "Fjalar",
+			"text", "Ye ask too much...",
+			"options", {"Time to die"},
 			"option-effects", {
 				function(s)
-				end,
-				function(s)
-					CallDialogue("the-mead-of-poetry-offer-gilling-the-mead", trigger_player)
-				end,
-				function(s)
-					CallDialogue("the-mead-of-poetry-leave-gilling-alone", trigger_player)
 				end
 			}
-		}
-	}
-})
-
-DefineDialogue("the-mead-of-poetry-offer-gilling-the-mead", {
-	Nodes = {
-		{
-			"speaker", "character", "Fjalar",
-			"text", "We offer ye what we have of most precious - this mead which makes those who drink it a sage - for yer silence."
-		},
-		{
-			"speaker", "character", "Gilling",
-			"text", "An interesting offer. I will take it."
-		}
-	}
-})
-
-DefineDialogue("the-mead-of-poetry-leave-gilling-alone", {
-	Nodes = {
-		{
-			"speaker", "character", "Gilling",
-			"text", "Do you two know what I am talking about?"
-		},
-		{
-			"speaker", "character", "Fjalar",
-			"text", "The poets say a rainbow bridge somewhere in our world leads to Asgard. But we have never seen it, and we don't know anything else. We're warriors, not sages."
-		},
-		{
-			"speaker", "character", "Gilling",
-			"text", "I must be on my way, then."
-		}
-	}
-})
-
-DefineDialogue("the-mead-of-poetry-gillings-boastfulness", {
-	Nodes = {
-		{
-			"speaker", "character", "Galar",
-			"text", "Brother... Gilling took our mead, but he has not kept his mouth shut. He has spread the word that we gave him the mead to not tell others about our use of the rainbow bridge. It is now obvious to the Aesir that we must have been the ones to murder Kvasir. Through their priests, they have turned the other dwarven clans against us. Our chance of defeating the other clans is pitiful. We will be slaughtered."
-		},
-		{
-			"speaker", "character", "Fjalar",
-			"text", "Have some nerve, Galar. We still have one choice. We can go further underground, deep into uncharted caves, where no one will be able to find us. It will be extremely perilous, but we don't have much chance of surviving while staying here, do we?"
-		}
-	}
-})
-
-DefineDialogue("the-mead-of-poetry-gillings-tale", {
-	Nodes = {
-		{
-			"speaker", "character", "Galar",
-			"text", "Brother... Gilling may not have accused us of being the ones who travelled to Asgard to our face, but in his home world he spread the tale that he met two tiny planewalkers in our caves. It is now obvious to the Aesir that we must have been the ones to murder Kvasir. Through their priests, they have turned the other dwarven clans against us. Our chance of defeating the other clans is pitiful. We will be slaughtered."
-		},
-		{
-			"speaker", "character", "Fjalar",
-			"text", "Have some nerve, Galar. We still have one choice. We can go further underground, deep into uncharted caves, where no one will be able to find us. It will be extremely perilous, but we don't have much chance of surviving while staying here, do we?"
 		}
 	}
 })

@@ -61,6 +61,7 @@ function DefineCharacter(character, data)
 end
 
 Load("scripts/characters_aesir.lua")
+Load("scripts/characters_vanir.lua")
 Load("scripts/civilizations/finnish/characters.lua")
 Load("scripts/civilizations/germanic/characters.lua")
 Load("scripts/civilizations/gnome/characters.lua")
