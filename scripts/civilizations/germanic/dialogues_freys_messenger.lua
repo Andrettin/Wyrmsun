@@ -106,20 +106,20 @@ DefineDialogue("freys-messenger-skirnir-returns-with-the-fetter", { -- based on 
 	}
 })
 
-DefineDialogue("freys-messenger-njords-concern", { -- based on the myth of Skirnir's journey; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 54.
+DefineDialogue("freys-messenger-njords-concern", { -- based on the myth of Skirnir's journey; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 54; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 108.
 	Nodes = {
 		{
 			"speaker", "character", "Njord",
-			"text", "Skirnir, something is wrong with my son, Fraujaz. He neither eats nor sleeps, and refuses to tell me what is troubling him. Perhaps he will confide in you, his trusted servant."
+			"text", "Skirnir, something is wrong with my son, Fraujaz. He neither eats nor sleeps, and refuses to tell me what is troubling him. Perhaps he will confide in you, his trusted servant. Try and talk to him!"
 		},
 		{
 			"speaker", "character", "Skirnir",
-			"text", "I will do so, great Nerthiwiz."
+			"text", "I will do so, great Nerthiwiz. And yet... I expect ill words to come out of his mouth."
 		}
 	}
 })
 
-DefineDialogue("freys-messenger-freys-longing", { -- based on the myth of Skirnir's journey; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 54-55.
+DefineDialogue("freys-messenger-freys-longing", { -- based on the myth of Skirnir's journey; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 54-55; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 109.
 	Nodes = {
 		{
 			"speaker", "character", "Skirnir",
@@ -148,6 +148,36 @@ DefineDialogue("freys-messenger-freys-longing", { -- based on the myth of Skirni
 		{
 			"speaker", "character", "Frey",
 			"text", "Take it. Once you bring Gerd to me, you will have earned the permanent possession of the sword."
+		}
+	}
+})
+
+
+DefineDialogue("freys-messenger-skirnir-meets-gerd", { -- based on the myth of Skirnir's journey; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 56-58; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 113-119.
+	Nodes = {
+		{
+			"speaker", "character", "Gerd",
+			"text", "Who are you, who dares approach my hall? An elf, one of the Aesir, or a wise member of the Vanir?"
+		},
+		{
+			"speaker", "character", "Skirnir",
+			"text", "I am neither an elf nor a god. I am Skirnir, messenger of the god Frey. A planewalker - like you, noble seeress. I bring eleven golden apples, all yours if you promise yourself to Fraujaz, whom you know as Frey. I also offer you the magnificent ring, Draupnir, with its divine golden sparkle."
+		},
+		{
+			"speaker", "character", "Gerd",
+			"text", "I will take neither the apples nor the ring. Nor will I promise myself to anyone, I cannot be bought. I have seen Frey in my dreams, and yet he never says me a word. He must wish me ill things."
+		},
+		{
+			"speaker", "character", "Skirnir",
+			"text", "He has no sinister intent, I can assure you. Frey's heart is heavy with longing, his love for you has taken away the words from his lips. He knows this union will not be well-accepted by the other gods, and yet he is determined to be with you."
+		},
+		{
+			"speaker", "character", "Gerd",
+			"text", "Tell him... I will meet him secretly in Asgard. Never did I think that I could fall in love for an elf, or one of the Vanir..."
+		},
+		{
+			"speaker", "character", "Skirnir",
+			"text", "I will ride fast back to Asgard, to let Frey know of the news!"
 		}
 	}
 })
