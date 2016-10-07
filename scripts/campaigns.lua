@@ -39,13 +39,12 @@ DefineCampaign("frey-messenger", {
 	Description = "Skirnir, the human servant of the god Frey, must perform a series of deeds for his master",
 	Civilization = "germanic",
 	Faction = "Yngling Tribe", -- Yngve is identified with Frey
-	Year = -2800 -- when Scandinavia was historically settled by Indo-Europeans; Yngve ruled over the Swedes in the Ynglinga saga soon after Odin's people settled Scandinavia in that saga
+	Year = -2800 -- when Scandinavia was historically settled by Indo-Europeans; Yngve ruled over the Swedes in the Ynglinga saga soon after Odin's people settled Scandinavia in that saga; since Skirnir was a servant of Frey in mythology, let's make him a contemporary of Yngve
 })
 
-DefineCampaign("the-bronze-age", {
-	Name = "The Bronze Age (Sandbox)",
-	Civilization = "germanic",
-	Faction = "Yngling Tribe", -- should change to a choosable faction list later
-	Sandbox = true,
-	Year = -1700 -- time the bronze age began in southern Scandinavia
+DefineCampaign("the-marcomannic-wars", {
+	Name = "The Marcomannic Wars",
+	Civilization = "teuton",
+	Faction = "Marcomanni Tribe",
+	Year = 162 -- beginning of the Marcomannic Wars
 })

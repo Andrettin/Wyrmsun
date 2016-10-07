@@ -553,15 +553,28 @@ SetMapTemplateResource("earth", "unit-silver-deposit", {4194, 928}, 0, "smitna")
 
 SetMapTemplateUnit("earth", "unit-germanic-town-hall", "Yngling Tribe", {4243, 692}, -2800) -- Sigtun / Segiztûna; in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples; "Segiztûna" is a rendering of "Sigtun" in Proto-Germanic, since the Ynglinga saga the city was founded when the cultural ancestors of the Germanic peoples (= Odin's people) first settled Scandinavia; the Ynglings were the dynasty founded by Odin's son Yngve, who ruled the Swedish lands
 
-SetMapTemplateUnit("earth", "unit-germanic-town-hall", "Ingaevone Tribe", {4054, 801}, -2800) -- Flensburg; according to Tacitus the Ingaevones were one of the earliest Germanic tribes; the place of their dwelling was inhabited by the cultural ancestors of the Germanics in 2800 BC already
+SetMapTemplateUnit("earth", "unit-germanic-town-hall", "Ingaevone Tribe", {4054, 801}, -2800, -264) -- Flensburg; according to Tacitus the Ingaevones were one of the earliest Germanic tribes; the place of their dwelling was inhabited by the cultural ancestors of the Germanics in 2800 BC already
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "Angle Tribe", {4054, 801}, -264) -- Tribes in Europe between 264 BC and 180 AD (Schleswig was inhabited by the Angles); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 
 SetMapTemplateUnit("earth", "unit-germanic-town-hall", "Skeldung Tribe", {4112, 784}, -2800) -- Leidre / Lejre; Funnel Beaker culture ended in Zealand in 2800 BC and the Corded Ware culture (neolithic) began; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 38. In the Ynglinga Saga, Odin set his son Skjöldr to rule in Leidre after their people (who here we equate with the cultural ancestors of the Germanics who migrated to Scandinavia) conquered the land
+
+-- Prague
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "Marcomanni Tribe", {4169, 908}, -9, 526) -- Marbod, king of the Suebic tribe of the Marcomanni, conquered Bohemia in 9 BC
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "Bavarian Tribe", {4169, 908}, 526) -- political situation in 526-600 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+SetMapTemplateHero("earth", "Marbod", "Marcomanni Tribe", {4169, 908}, -9, 19) -- Marbod, king of the Suebic tribe of the Marcomanni, conquered Bohemia in 9 BC; Marbod deposed in 19 AD
+
+-- Amsterdam
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "Batavian Tribe", {3953, 857}, -264, 526) -- Tribes in Europe between 264 BC and 180 AD (Holland was inhabited by the Batavians); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "Frisian Tribe", {3953, 857}, 526, 734) -- Political situation in 526-600 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "Francia", {3953, 857}, 734, 919) -- Franks conquered Holland and Friesland in 734 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "Holy Rome", {3953, 857}, 919) -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 
 SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "Francia", {4043, 879}, 775) -- a Frankish garrison was established by Charlemagne in Eresburg in 775; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 604.
 SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "Francia", {4019, 876}, 775) -- a Frankish garrison was established by Charlemagne in Syburg in 775; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 604.
 
-SetMapTemplateUnit("earth", "unit-latin-town-hall", "Latin Tribe", {4126, 1096}, -1700, -501)
-SetMapTemplateUnit("earth", "unit-latin-town-hall", "Rome", {4126, 1096}, -500) -- Rome had been founded and was independent by 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+SetMapTemplateUnit("earth", "unit-latin-town-hall", "Latin Tribe", {4126, 1096}, -750, -500) -- Latins present in Latium by 750-625 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+SetMapTemplateUnit("earth", "unit-latin-town-hall", "Rome", {4126, 1096}, -500, 493) -- Rome had been founded and was independent by 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+--SetMapTemplateUnit("earth", "unit-teuton-town-hall", "Ostrogoth Tribe", {4126, 1096}, 493) -- Ostrogoths conquered Italy in 493 AD; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 8-9; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 
 SetMapTemplateLayerConnector("earth", "unit-glyph", {-1, -1}, "Asgard")
 
