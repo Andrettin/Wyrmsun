@@ -173,11 +173,28 @@ DefineDialogue("freys-messenger-skirnir-meets-gerd", { -- based on the myth of S
 		},
 		{
 			"speaker", "character", "Gerd",
-			"text", "Tell him... I will meet him secretly in Asgard. Never did I think that I could fall in love for an elf, or one of the Vanir..."
+			"text", "Tell him... I will meet him secretly in Asgard, nine nights from now. Never did I think that I could fall in love for an elf, or one of the Vanir..."
 		},
 		{
 			"speaker", "character", "Skirnir",
 			"text", "I will ride fast back to Asgard, to let Frey know of the news!"
+		}
+	}
+})
+
+DefineDialogue("freys-messenger-skirnir-returns-with-gerds-message", { -- based on the myth of Skirnir's journey; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 58; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 119-120.
+	Nodes = {
+		{
+			"speaker", "character", "Frey",
+			"text", "Skirnir! Tell me, before you do anything else, how did you fare in Jotunheim?"
+		},
+		{
+			"speaker", "character", "Skirnir",
+			"text", "I spoke to Gerd, and she will meet you here in secret nine nights from now."
+		},
+		{
+			"speaker", "character", "Frey",
+			"text", "Ah! One night is so long, let alone two... How can I bear three? Anyhow, you have done well Skirnir, and I am grateful."
 		}
 	}
 })
