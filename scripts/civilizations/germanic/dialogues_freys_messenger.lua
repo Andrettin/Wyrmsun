@@ -83,3 +83,71 @@ DefineDialogue("freys-messenger-skirnir-contacts-the-brisings", { -- based on th
 		}
 	}
 })
+
+
+DefineDialogue("freys-messenger-skirnir-returns-with-the-fetter", { -- based on the myth of the binding of Fenrir; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 35.
+	Nodes = {
+		{
+			"speaker", "character", "Skirnir",
+			"text", "Master Fraujaz, I have returned with the fetter!"
+		},
+		{
+			"speaker", "character", "Frey",
+			"text", "Excellent, my brave Skirnir! It seems so light and yet strong... How did the dwarves fashion it?"
+		},
+		{
+			"speaker", "character", "Skirnir",
+			"text", "They would not let me in to their secrets... all I could gather is that their runesmiths imbued it with powerful incantations."
+		},
+		{
+			"speaker", "character", "Frey",
+			"text", "It is no matter. What is important is that Fenrir shall now be bound!"
+		}
+	}
+})
+
+DefineDialogue("freys-messenger-njords-concern", { -- based on the myth of Skirnir's journey; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 54.
+	Nodes = {
+		{
+			"speaker", "character", "Njord",
+			"text", "Skirnir, something is wrong with my son, Fraujaz. He neither eats nor sleeps, and refuses to tell me what is troubling him. Perhaps he will confide in you, his trusted servant."
+		},
+		{
+			"speaker", "character", "Skirnir",
+			"text", "I will do so, great Nerthiwiz."
+		}
+	}
+})
+
+DefineDialogue("freys-messenger-freys-longing", { -- based on the myth of Skirnir's journey; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 54-55.
+	Nodes = {
+		{
+			"speaker", "character", "Skirnir",
+			"text", "Master Fraujaz, why do you remain day after day shut away from the other gods, and refuse to eat or sleep?"
+		},
+		{
+			"speaker", "character", "Frey",
+			"text", "Speaking to others would do me no good. No matter how beautifully sunshine is, my world is filled with sadness."
+		},
+		{
+			"speaker", "character", "Skirnir",
+			"text", "You can trust me, no matter what it is. I am your faithful servant."
+		},
+		{
+			"speaker", "character", "Frey",
+			"text", "Skirnir... my heart aches. I secretly got into Wodanaz's hall of Valaskjalf, and sat in his high seat where many realms can be seen. I looked into Jotunheim... and saw her. So beautiful, the daughter of a mighty ettin. I could only stare and stare... I long for her! I love her... and the gods would hardly accept my union with a mortal, let alone an ettin!"
+		},
+		{
+			"speaker", "character", "Frey",
+			"text", "Damn it all! I must have her. Skirnir, go to Jotunheim and bring her to me. Do whatever it takes, and I will give you great rewards."
+		},
+		{
+			"speaker", "character", "Skirnir",
+			"text", "Yes, master. But I will need your sword, as without its powers against ettins I may not succeed in this perilous task. It could also be a fitting reward for this dangerous deed."
+		},
+		{
+			"speaker", "character", "Frey",
+			"text", "Take it. Once you bring Gerd to me, you will have earned the permanent possession of the sword."
+		}
+	}
+})

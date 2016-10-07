@@ -461,7 +461,7 @@ DefineLanguageWord("Etanan", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Meanings = {"Eat"}
 })
 
-DefineLanguageWord("Fadēr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Faðēr", { -- given in 2.3 as "Fadēr" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.3, 3.2.4.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Father"}
