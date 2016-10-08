@@ -25,6 +25,15 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineDialogue("freys-messenger-skirnirs-feeling", {
+	Nodes = {
+		{
+			"speaker", "character", "Skirnir",
+			"text", "Something tells me that my master, Fraujaz, may be needing me."
+		}
+	}
+})
+
 DefineDialogue("freys-messenger-skirnir-sent-to-nidavellir", { -- based on the myth of the binding of Fenrir; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 35.
 	Nodes = {
 		{
@@ -127,7 +136,7 @@ DefineDialogue("freys-messenger-freys-longing", { -- based on the myth of Skirni
 		},
 		{
 			"speaker", "character", "Frey",
-			"text", "Speaking to others would do me no good. No matter how beautifully sunshine is, my world is filled with sadness."
+			"text", "Speaking to others would do me no good. No matter how beautiful sunshine is, my world is filled with sadness."
 		},
 		{
 			"speaker", "character", "Skirnir",
@@ -147,7 +156,7 @@ DefineDialogue("freys-messenger-freys-longing", { -- based on the myth of Skirni
 		},
 		{
 			"speaker", "character", "Frey",
-			"text", "Take it. Once you bring Gerd to me, you will have earned the permanent possession of the sword."
+			"text", "Take it. Once you bring the beautiful Gerd to me, you will have earned the permanent possession of the sword."
 		}
 	}
 })
@@ -161,7 +170,7 @@ DefineDialogue("freys-messenger-skirnir-meets-gerd", { -- based on the myth of S
 		},
 		{
 			"speaker", "character", "Skirnir",
-			"text", "I am neither an elf nor a god. I am Skirnir, messenger of the god Frey. A planewalker - like you, noble seeress. I bring eleven golden apples, all yours if you promise yourself to Fraujaz, whom you know as Frey. I also offer you the magnificent ring, Draupnir, with its divine golden sparkle."
+			"text", "I am neither an elf nor a god. I am Skirnir, messenger of the god Fraujaz. A planewalker - like you, noble seeress. I bring eleven golden apples, all yours if you promise yourself to Fraujaz, whom you know as Frey. I also offer you the magnificent ring, Draupnir, with its divine golden sparkle."
 		},
 		{
 			"speaker", "character", "Gerd",
@@ -194,7 +203,7 @@ DefineDialogue("freys-messenger-skirnir-returns-with-gerds-message", { -- based 
 		},
 		{
 			"speaker", "character", "Frey",
-			"text", "Ah! One night is so long, let alone two... How can I bear three? Anyhow, you have done well Skirnir, and I am grateful."
+			"text", "Ah! One night is so long, let alone two... How can I bear more than three? Anyhow, you have done well Skirnir, and I am grateful."
 		}
 	}
 })

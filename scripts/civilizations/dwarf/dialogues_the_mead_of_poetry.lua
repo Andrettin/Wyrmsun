@@ -57,7 +57,7 @@ DefineDialogue("the-mead-of-poetry-fjalar-and-galar-conspire", {
 		},
 		{
 			"speaker", "character", "Galar",
-			"text", "We will need, then, the ingredients for the potions. Four gryphon feathers should be enough for the potions of invisibility.",
+			"text", "We will need, then, the ingredients for the potions. Four gryphon feathers should be enough for the potions of invisibility. We should train some scouts to attack the gryphons.",
 			"option-effects", {
 				function(s)
 					SetPlayerData(trigger_player, "AcceptQuest", "the-mead-of-poetry-brew-potions-of-invisibility")

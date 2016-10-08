@@ -948,7 +948,7 @@ DefineUnitType("unit-gryphon", {
 	CanTargetLand = true, CanTargetSea = true, CanTargetAir = true,
 	RandomMovementProbability = 1,
 	RandomMovementDistance = 12,
---	Predator = true,
+	Predator = true,
 	PeopleAversion = true,
 	Flesh = true,
 	Carnivore = true,

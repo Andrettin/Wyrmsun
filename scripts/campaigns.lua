@@ -35,7 +35,7 @@ DefineCampaign("the-mead-of-poetry", {
 
 DefineCampaign("frey-messenger", {
 	Name = "Frey's Messenger",
-	Description = "Skirnir, the human servant of the god Frey, must perform a series of deeds for his master.",
+	Description = "Skirnir, the human servant of the god Frey, must perform important deeds for his master.",
 	Civilization = "germanic",
 	Faction = "Yngling Tribe", -- Yngve is identified with Frey
 	Year = -2800 -- when Scandinavia was historically settled by Indo-Europeans; Yngve ruled over the Swedes in the Ynglinga saga soon after Odin's people settled Scandinavia in that saga; since Skirnir was a servant of Frey in mythology, let's make him a contemporary of Yngve
