@@ -46,6 +46,7 @@ DefineUnitType("unit-ettin", {
 	Demand = 3,
 --	Corpse = "unit-dwarven-dead-body",
 	BluntDamage = true,
+	Giant = true,
 	ButtonKey = "e",
 	ButtonHint = _("Hire ~!Ettin"),
 	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},

@@ -56,6 +56,15 @@ DefineUniqueItem("laevatein", { -- Source: Kevin Crossley-Holland, "The Norse My
 	Quote = "\"Laevatein is there that Lopt with runes\nOnce made by the doors of death;\nIn Laegjarn's chest by Sinmora lies it,\nAnd nine locks fasten it firm.\"\n- Svipdagsmol (Fjolsvith)"
 } )
 
+DefineUniqueItem("freys-sword", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 55-57; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 110, 114-115.
+	Name = "Frey's Sword",
+	Type = "unit-spatha",
+	Prefix = "upgrade-item-prefix-giantsbane",
+	Suffix = "upgrade-item-suffix-of-flame",
+	Background = "In Norse mythology, Frey had a keen, gleamning sword that was particularly powerful against giants.",
+	Quote = "\"Then give me the horse that goes through the dark\nAnd magic flickering flames;\nAnd the sword as well that fights of itself\nAgainst the giants grim.\"\n- Skirnismol (Skirnir)"
+} )
+
 DefineUniqueItem("gram", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 351, 365.
 	Name = "Gram",
 	Type = "unit-frankish-spatha",

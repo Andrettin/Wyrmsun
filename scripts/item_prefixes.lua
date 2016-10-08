@@ -66,6 +66,13 @@ DefineUpgrade("upgrade-item-prefix-frail", {
 	MagicLevel = 2
 })
 
+DefineUpgrade("upgrade-item-prefix-giantsbane", {
+	Name = _("Giantsbane"),
+	MagicPrefix = true,
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
+	MagicLevel = 2
+})
+
 DefineUpgrade("upgrade-item-prefix-glacial", {
 	Name = _("Glacial"),
 	MagicPrefix = true,
@@ -177,6 +184,10 @@ DefineModifier("upgrade-item-prefix-flaming",
 
 DefineModifier("upgrade-item-prefix-frail",
 	{"Armor", -2}
+)
+
+DefineModifier("upgrade-item-prefix-giantsbane",
+	{"BonusAgainstGiants", 50}
 )
 
 DefineModifier("upgrade-item-prefix-glacial",
