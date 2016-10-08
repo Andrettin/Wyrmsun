@@ -837,6 +837,9 @@ DefineUnitType("unit-boar", {
 	Herbivore = true,
 	BluntDamage = true,
 	PersonalNames = {
+		"Gullinbursti", -- Gullinbursti is Frey's boar in Norse mythology, given to him by the dwarf Brokk; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 52.
+		"Hildisvini", -- Hildisvini is Freya's battle-boar in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 100.
+		"Saehrimnir" -- Saehrimnir is the boar who is boiled in Valhalla in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 61.
 	},
 	Sounds = {
 		"selected", "pig",
@@ -890,6 +893,12 @@ DefineUnitType("unit-wolf", {
 	Carnivore = true,
 	PierceDamage = true,
 	PersonalNames = {
+		"Fenrir", -- Fenrir is a massive wolf in Norse mythology, who was bound by the gods only with great effort; during Ragnarok he will kill Odin; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 193.
+		"Freki", -- Freki is one of Odin's wolves in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 61.
+		"Garm", -- Garm is a wolf-hound in Norse mythology, who dwells in a cave at the entrance of Niflheim, and who will kill Tyr during Ragnarok; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 193.
+		"Geri", -- Geri is one of Odin's wolves in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 61.
+		"Hati", -- Hati is the wolf who pursues the moon in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63.
+		"Skoll" -- Skoll is the wolf who pursues the sun in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63.
 	},
 	Sounds = {
 --		"selected", "pig",
