@@ -27,16 +27,15 @@
 
 DefineCampaign("the-mead-of-poetry", {
 	Name = "The Mead of Poetry",
-	Description = "The dwarven brothers Fjalar and Galar conspire to kill the wise god Kvasir and brew his blood into a powerful mead",
+	Description = "The dwarven brothers Fjalar and Galar conspire to kill the wise god Kvasir and brew his blood into a powerful mead.",
 	Civilization = "dwarf",
 	Faction = "Shadowcharm Clan",
---	Year = -3000
-	Year = -2800 -- so that Earth is already properly populated
+	Year = -2800
 })
 
 DefineCampaign("frey-messenger", {
 	Name = "Frey's Messenger",
-	Description = "Skirnir, the human servant of the god Frey, must perform a series of deeds for his master",
+	Description = "Skirnir, the human servant of the god Frey, must perform a series of deeds for his master.",
 	Civilization = "germanic",
 	Faction = "Yngling Tribe", -- Yngve is identified with Frey
 	Year = -2800 -- when Scandinavia was historically settled by Indo-Europeans; Yngve ruled over the Swedes in the Ynglinga saga soon after Odin's people settled Scandinavia in that saga; since Skirnir was a servant of Frey in mythology, let's make him a contemporary of Yngve
@@ -44,6 +43,7 @@ DefineCampaign("frey-messenger", {
 
 DefineCampaign("the-marcomannic-wars", {
 	Name = "The Marcomannic Wars",
+	Description = "Under the leadership of Ballomar, the Marcomanni wage war with the mighty Roman Empire.",
 	Civilization = "teuton",
 	Faction = "Marcomanni Tribe",
 	Year = 162 -- beginning of the Marcomannic Wars

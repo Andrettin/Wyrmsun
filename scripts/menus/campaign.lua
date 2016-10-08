@@ -81,20 +81,22 @@ function RunCampaignMenu()
 	for i=1,table.getn(campaign_ident_list) do
 		table.insert(campaign_list, GetCampaignData(campaign_ident_list[i], "Name"))
 	end
-	menu:addLabel(_("Campaign:"), offx + 30, offy + (10 + 300) - 20, Fonts["game"], false)
-	campaign_dd = menu:addDropDown(campaign_list, offx + 30, offy + 10 + 300,
+	campaign_dd = menu:addDropDown(campaign_list, (Video.Width / 2) - (190 / 2), offy + 104 + 36*0,
 		function(dd)
 			SetCurrentCampaign(campaign_ident_list[campaign_dd:getSelected() + 1])
 			menu:stop()
 			RunCampaignMenu()
 		end
 	)
-	campaign_dd:setSize(152, 20)
+	campaign_dd:setSize(190, 20)
 	if (GetCurrentCampaign() ~= "") then
 		campaign_dd:setSelected(GetElementIndexFromArray(campaign_ident_list, GetCurrentCampaign()) - 1)
 	else
 		campaign_dd:setSelected(0)
 		SetCurrentCampaign(campaign_ident_list[1])
+	end
+	if (GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Description") ~= "") then
+		menu:addMultiLineLabel(_("Description: " .. GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Description")), ((Video.Width - 640) / 2) + 32, offy + 104 + 36*2, Fonts["game"], false, Video.Width - (Video.Width - 640) - 64)
 	end
 
 	menu:addFullButton(_("~!Start Campaign"), "s", offx + 208, offy + 212 + (36 * 4),
