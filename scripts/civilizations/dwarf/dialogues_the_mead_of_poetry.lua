@@ -49,7 +49,7 @@ DefineDialogue("the-mead-of-poetry-fjalar-and-galar-conspire", {
 		},
 		{
 			"speaker", "character", "Galar",
-			"text", "Throughout the years we have gathered much magical knowledge, so that we can attune ourselves to that which is mystical. The rainbow bridge may be invisible for others, but we will be able to see it... And use it to reach Asgard."
+			"text", "We must gather enough magical knowledge so that we can attune ourselves to that which is mystical. Then, although the rainbow bridge may remain invisible for others, we will be able to see it... And use it to reach Asgard."
 		},
 		{
 			"speaker", "character", "Fjalar",
@@ -57,7 +57,10 @@ DefineDialogue("the-mead-of-poetry-fjalar-and-galar-conspire", {
 		},
 		{
 			"speaker", "character", "Galar",
-			"text", "We will need, then, the ingredients for the potions. Four gryphon feathers should be enough for the potions of invisibility. We should train some scouts to attack the gryphons.",
+			"text", "We will need, then, the ingredients for the potions. Four gryphon feathers and four wyrm eyes should be enough for the potions of invisibility."
+		},
+		{
+			"text", "Hint: Train Scouts to attack the Gryphons. To see interplanar portals like the Rainbow Bridge, your heroes need to learn the Ethereal Vision ability, which will be first available to them at level 4.",
 			"option-effects", {
 				function(s)
 					SetPlayerData(trigger_player, "AcceptQuest", "the-mead-of-poetry-brew-potions-of-invisibility")
@@ -77,6 +80,9 @@ DefineDialogue("the-mead-of-poetry-potions-of-invisibility-ready", {
 		{
 			"speaker", "character", "Fjalar",
 			"text", "The rainbow bridge is said to stand on the surface of Nidavellir. That's where we should begin our search."
+		},
+		{
+			"text", "Hint: Kvasir is a Vanir deity, and like the other deities of his group, he takes the form of an elf. Learning the Elfslayer ability with Fjalar will make it easier for you to kill him."
 		}
 	}
 })

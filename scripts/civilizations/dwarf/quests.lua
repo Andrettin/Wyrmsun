@@ -456,8 +456,7 @@ DefineQuest("the-mead-of-poetry-brew-potions-of-invisibility", {
 	CompletionEffects = function(s)
 		CallDialogue("the-mead-of-poetry-potions-of-invisibility-ready", trigger_player)
 	end,
---	Objectives = {"- Kill a Gryphon to obtain the Gryphon Feathers", "- Brew the Potions of Invisibility"},
-	Objectives = {"- Kill a Gryphon to obtain the Gryphon Feathers"},
+	Objectives = {"- Collect 4 Gryphon Feathers", "- Collect 4 Wyrm Eyes"},
 	DestroyUnits = {"unit-gryphon", "", 1}
 })
 

@@ -124,7 +124,7 @@ DefineSpell("spell-precision",
 )
 
 DefineSpell("spell-slow",
-	"showname", _("slow"),
+	"showname", _("Slow"),
 	"manacost", 50,
 	"range", 10,
 	"target", "unit",

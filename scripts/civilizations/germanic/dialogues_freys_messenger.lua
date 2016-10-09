@@ -29,7 +29,10 @@ DefineDialogue("freys-messenger-skirnirs-feeling", {
 	Nodes = {
 		{
 			"speaker", "character", "Skirnir",
-			"text", "Something tells me that my master, Fraujaz, may be needing me."
+			"text", "Something tells me that my divine master, Fraujaz, is troubled. I should head over to Asgard and see if he needs me."
+		},
+		{
+			"text", "Hint: Skirnir will receive the benefits from sword and shield upgrades you research, no matter on which plane or world he is currently located."
 		}
 	}
 })
@@ -38,7 +41,7 @@ DefineDialogue("freys-messenger-skirnir-sent-to-nidavellir", { -- based on the m
 	Nodes = {
 		{
 			"speaker", "character", "Frey",
-			"text", "I have just spoken with the Allfather, Odin. Or as your people call him, Wodanaz. The monster Fenrir troubles him. We cannot kill the beast here, as it would stain Asgard's sacred soil with the corrupted blood that runs through its veins. Therefore we need to chain Fenrir. Twice have we crafted fetters to do so, and twice it has broken its chains. Our last recourse is to ask the dwarves of Nidavellir to craft a fetter for us, as their metalworking knows no parallel."
+			"text", "I have just spoken with the Allfather, Odin. Or as your people call him, Wodanaz. The monster Fenrir preoccupies him. We cannot kill the beast here, as it would stain Asgard's sacred soil with the corrupted blood that runs through its veins. Therefore we need to chain Fenrir. Twice have we crafted fetters to do so, and twice it has broken its chains. Our last recourse is to ask the dwarves of Nidavellir to craft a fetter for us, as their metalworking knows no parallel."
 		},
 		{
 			"speaker", "character", "Skirnir",
