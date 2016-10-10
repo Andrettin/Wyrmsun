@@ -33,6 +33,6 @@ DefineCharacter("Kvasir", {
 	HairVariation = "gray-hair",
 	Trait = "upgrade-wise",
 	Persistent = true,
-	Level = 50
+	Level = 25
 })
 
