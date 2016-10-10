@@ -76,6 +76,7 @@ DefineDeity("kvasir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 19
 	Civilizations = {"elf", "norse"}, -- Alaric Hall proposes that the Vanir are more or less identical with the elves, so it makes sense to make Kvasir an elven deity as well; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 135.
 	Religions = {"paganism"},
 	Gender = "male",
+	Icon = "icon-kvasir",
 	Domains = {"wisdom"},
 --	Description = "The wisest of the Vanir, Kvasir was sent to live with the Aesir in Asgard as a result of the peace treaty which concluded the Aesir-Vanir War."
 })

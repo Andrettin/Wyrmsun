@@ -60,7 +60,7 @@ DefineDialogue("the-mead-of-poetry-fjalar-and-galar-conspire", {
 			"text", "We will need, then, the ingredients for the potions. Four gryphon feathers and four wyrm eyes should be enough for the potions of invisibility."
 		},
 		{
-			"text", "Hint: Train Scouts to attack the Gryphons. To see interplanar portals like the Rainbow Bridge, your heroes need to learn the Ethereal Vision ability, which will be first available to them at level 4.",
+			"text", "Hint: Train Scouts to attack the Gryphons. To see interplanar portals like the Rainbow Bridge, your heroes need to learn the Ethereal Vision ability, which will be first available to them at level 4. Complete optional quests available at your Mead Hall to better prepare your heroes for assassinating Kvasir.",
 			"option-effects", {
 				function(s)
 					SetPlayerData(trigger_player, "AcceptQuest", "the-mead-of-poetry-brew-potions-of-invisibility")

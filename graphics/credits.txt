@@ -356,6 +356,7 @@ Exidelo (Leo):
 /graphics/dwarf/icons/surghan_mercenary_steelclad.png (licensed under the CC0)
 /graphics/dwarf/icons/surghan_mercenary_thane.png (licensed under the CC0)
 /graphics/dwarf/icons/thursagan.png (licensed under the GPL 2.0)
+/graphics/elf/icons/kvasir.png (licensed under the CC0)
 /graphics/germanic/buildings/carpenters_shop.png (licensed under the CC0)
 /graphics/germanic/buildings/smithy.png (licensed under the CC0)
 /graphics/germanic/buildings/stables.png (licensed under the GPL 2.0)
