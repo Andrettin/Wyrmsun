@@ -25,53 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineMapTemplate("earth", {
-	Name = "Earth",
-	World = "Earth",
-	Width = 8192,
-	Height = 4096,
-	TerrainFile = "scripts/map_templates/earth.map",
-	GeneratedTerrains = {
-		"rock", "low",
-		"grass", "extremely-high",
-		"dirt", "medium",
-		"pine-tree", "high"
-	},
-	GeneratedNeutralUnits = {
-		"unit-gold-deposit", 8,
-		"unit-silver-deposit", 8,
-		"unit-copper-deposit", 8,
-		"unit-bee", 64,
-		"unit-fly", 64,
-		"unit-bug", 64,
-		"unit-worm", 64,
-		"unit-snail", 64,
-		"unit-slug", 64,
-		"unit-frog", 64,
-		"unit-bird", 64,
-		"unit-crow", 64,
-		"unit-rat", 64,
-		"unit-goat", 32,
-		"unit-boar", 32,
-		"unit-horse", 16,
-		"unit-wolf", 32
-	},
-	PlayerLocationGeneratedNeutralUnits = {
-		"unit-gold-deposit", 1,
-		"unit-wood-pile", 16,
-		"unit-stone-pile", 8
-	}
-})
+SetMapTemplateUnit("earth", "unit-germanic-town-hall", "Ingaevone Tribe", {4054, 801}, -2800, -264) -- Flensburg; according to Tacitus the Ingaevones were one of the earliest Germanic tribes; the place of their dwelling was inhabited by the cultural ancestors of the Germanics in 2800 BC already
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "Angle Tribe", {4054, 801}, -264) -- Tribes in Europe between 264 BC and 180 AD (Schleswig was inhabited by the Angles); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 
-SetMapTemplateLayerConnector("earth", "unit-glyph", {-1, -1}, "Asgard")
-
-Load("scripts/map_templates/earth/bohemia.lua")
-Load("scripts/map_templates/earth/denmark.lua")
-Load("scripts/map_templates/earth/france.lua")
-Load("scripts/map_templates/earth/germany.lua")
-Load("scripts/map_templates/earth/great_britain.lua")
-Load("scripts/map_templates/earth/italy.lua")
-Load("scripts/map_templates/earth/netherlands.lua")
-Load("scripts/map_templates/earth/portugal.lua")
-Load("scripts/map_templates/earth/spain.lua")
-Load("scripts/map_templates/earth/sweden.lua")
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "Francia", {4043, 879}, 775) -- a Frankish garrison was established by Charlemagne in Eresburg in 775; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 604.
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "Francia", {4019, 876}, 775) -- a Frankish garrison was established by Charlemagne in Syburg in 775; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 604.

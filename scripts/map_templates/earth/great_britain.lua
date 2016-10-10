@@ -25,53 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineMapTemplate("earth", {
-	Name = "Earth",
-	World = "Earth",
-	Width = 8192,
-	Height = 4096,
-	TerrainFile = "scripts/map_templates/earth.map",
-	GeneratedTerrains = {
-		"rock", "low",
-		"grass", "extremely-high",
-		"dirt", "medium",
-		"pine-tree", "high"
-	},
-	GeneratedNeutralUnits = {
-		"unit-gold-deposit", 8,
-		"unit-silver-deposit", 8,
-		"unit-copper-deposit", 8,
-		"unit-bee", 64,
-		"unit-fly", 64,
-		"unit-bug", 64,
-		"unit-worm", 64,
-		"unit-snail", 64,
-		"unit-slug", 64,
-		"unit-frog", 64,
-		"unit-bird", 64,
-		"unit-crow", 64,
-		"unit-rat", 64,
-		"unit-goat", 32,
-		"unit-boar", 32,
-		"unit-horse", 16,
-		"unit-wolf", 32
-	},
-	PlayerLocationGeneratedNeutralUnits = {
-		"unit-gold-deposit", 1,
-		"unit-wood-pile", 16,
-		"unit-stone-pile", 8
-	}
-})
+SetMapTemplateTileLabel("earth", "The Weald", {3843, 886})
 
-SetMapTemplateLayerConnector("earth", "unit-glyph", {-1, -1}, "Asgard")
+SetMapTemplateResource("earth", "unit-copper-deposit", {3727, 902}) -- Tin deposits; Source: "Atlas de História Mundial", 2001, p. 41.
 
-Load("scripts/map_templates/earth/bohemia.lua")
-Load("scripts/map_templates/earth/denmark.lua")
-Load("scripts/map_templates/earth/france.lua")
-Load("scripts/map_templates/earth/germany.lua")
-Load("scripts/map_templates/earth/great_britain.lua")
-Load("scripts/map_templates/earth/italy.lua")
-Load("scripts/map_templates/earth/netherlands.lua")
-Load("scripts/map_templates/earth/portugal.lua")
-Load("scripts/map_templates/earth/spain.lua")
-Load("scripts/map_templates/earth/sweden.lua")
+-- In Welsh legends, Gorsedd Arberth (a hill/burial mound near Arberth) was a gateway to Annwn; thus it could be a portal that leads to Annwn in Alfheim; ; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 124.

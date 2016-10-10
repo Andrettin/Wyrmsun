@@ -25,53 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineMapTemplate("earth", {
-	Name = "Earth",
-	World = "Earth",
-	Width = 8192,
-	Height = 4096,
-	TerrainFile = "scripts/map_templates/earth.map",
-	GeneratedTerrains = {
-		"rock", "low",
-		"grass", "extremely-high",
-		"dirt", "medium",
-		"pine-tree", "high"
-	},
-	GeneratedNeutralUnits = {
-		"unit-gold-deposit", 8,
-		"unit-silver-deposit", 8,
-		"unit-copper-deposit", 8,
-		"unit-bee", 64,
-		"unit-fly", 64,
-		"unit-bug", 64,
-		"unit-worm", 64,
-		"unit-snail", 64,
-		"unit-slug", 64,
-		"unit-frog", 64,
-		"unit-bird", 64,
-		"unit-crow", 64,
-		"unit-rat", 64,
-		"unit-goat", 32,
-		"unit-boar", 32,
-		"unit-horse", 16,
-		"unit-wolf", 32
-	},
-	PlayerLocationGeneratedNeutralUnits = {
-		"unit-gold-deposit", 1,
-		"unit-wood-pile", 16,
-		"unit-stone-pile", 8
-	}
-})
+SetMapTemplateResource("earth", "unit-copper-deposit", {4142, 907}) -- Tin deposits; Source: "Atlas de História Mundial", 2001, p. 41.
 
-SetMapTemplateLayerConnector("earth", "unit-glyph", {-1, -1}, "Asgard")
+SetMapTemplateResource("earth", "unit-gold-deposit", {4169, 913}, 0, "the-wedding-veil") -- gold mine located in Jilova; Source: Alena Ježková, "77 Prague Legends", 2006, p. 31.
+SetMapTemplateResource("earth", "unit-silver-deposit", {4194, 927}, 0, "esel") -- silver mine located in Kutná Hora; Source: Alena Ježková, "22 Böhmische Legenden", 2007, pp. 82-83.
+SetMapTemplateResource("earth", "unit-silver-deposit", {4194, 928}, 0, "smitna") -- silver mine located in Kutná Hora; moved slightly to the south so that both it and Esel can coexist; Source: Alena Ježková, "22 Böhmische Legenden", 2007, p. 81.
 
-Load("scripts/map_templates/earth/bohemia.lua")
-Load("scripts/map_templates/earth/denmark.lua")
-Load("scripts/map_templates/earth/france.lua")
-Load("scripts/map_templates/earth/germany.lua")
-Load("scripts/map_templates/earth/great_britain.lua")
-Load("scripts/map_templates/earth/italy.lua")
-Load("scripts/map_templates/earth/netherlands.lua")
-Load("scripts/map_templates/earth/portugal.lua")
-Load("scripts/map_templates/earth/spain.lua")
-Load("scripts/map_templates/earth/sweden.lua")
+-- Prague
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "Marcomanni Tribe", {4169, 908}, -9, 526) -- Marbod, king of the Suebic tribe of the Marcomanni, conquered Bohemia in 9 BC
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "Bavarian Tribe", {4169, 908}, 526) -- political situation in 526-600 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+SetMapTemplateHero("earth", "Marbod", "Marcomanni Tribe", {4169, 908}, -9, 19) -- Marbod, king of the Suebic tribe of the Marcomanni, conquered Bohemia in 9 BC; Marbod deposed in 19 AD

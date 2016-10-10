@@ -25,53 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineMapTemplate("earth", {
-	Name = "Earth",
-	World = "Earth",
-	Width = 8192,
-	Height = 4096,
-	TerrainFile = "scripts/map_templates/earth.map",
-	GeneratedTerrains = {
-		"rock", "low",
-		"grass", "extremely-high",
-		"dirt", "medium",
-		"pine-tree", "high"
-	},
-	GeneratedNeutralUnits = {
-		"unit-gold-deposit", 8,
-		"unit-silver-deposit", 8,
-		"unit-copper-deposit", 8,
-		"unit-bee", 64,
-		"unit-fly", 64,
-		"unit-bug", 64,
-		"unit-worm", 64,
-		"unit-snail", 64,
-		"unit-slug", 64,
-		"unit-frog", 64,
-		"unit-bird", 64,
-		"unit-crow", 64,
-		"unit-rat", 64,
-		"unit-goat", 32,
-		"unit-boar", 32,
-		"unit-horse", 16,
-		"unit-wolf", 32
-	},
-	PlayerLocationGeneratedNeutralUnits = {
-		"unit-gold-deposit", 1,
-		"unit-wood-pile", 16,
-		"unit-stone-pile", 8
-	}
-})
-
-SetMapTemplateLayerConnector("earth", "unit-glyph", {-1, -1}, "Asgard")
-
-Load("scripts/map_templates/earth/bohemia.lua")
-Load("scripts/map_templates/earth/denmark.lua")
-Load("scripts/map_templates/earth/france.lua")
-Load("scripts/map_templates/earth/germany.lua")
-Load("scripts/map_templates/earth/great_britain.lua")
-Load("scripts/map_templates/earth/italy.lua")
-Load("scripts/map_templates/earth/netherlands.lua")
-Load("scripts/map_templates/earth/portugal.lua")
-Load("scripts/map_templates/earth/spain.lua")
-Load("scripts/map_templates/earth/sweden.lua")
+SetMapTemplateUnit("earth", "unit-latin-town-hall", "Latin Tribe", {4126, 1096}, -750, -500) -- Latins present in Latium by 750-625 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+SetMapTemplateUnit("earth", "unit-latin-town-hall", "Rome", {4126, 1096}, -500, 493) -- Rome had been founded and was independent by 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+SetMapTemplateUnit("earth", "unit-teuton-temple", "Rome", {4126, 1096}, -40) -- Temple of Jupiter Capitolinus, Temple of Jupiter Victor, Temple of Vesta,  Temple of Fortunus and Temple of Aesculapius existed in Rome in c. 40 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 22-23.
+--SetMapTemplateUnit("earth", "unit-teuton-town-hall", "Ostrogoth Tribe", {4126, 1096}, 493) -- Ostrogoths conquered Italy in 493 AD; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 8-9; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.

@@ -94,44 +94,6 @@ DefineMapTemplate("nidavellir-underground-1", {
 	}
 })
 
-DefineMapTemplate("nidavellir-underground-2", {
-	Name = "Nidavellir Underground 2",
-	World = "Nidavellir",
-	Layer = 2,
-	Width = 128,
-	Height = 128,
-	BaseTerrain = "rockbound-cave-floor",
-	BorderTerrain = "cave-wall",
-	GeneratedTerrains = {
-		"cave-wall", "very-high",
-		"cave-floor", "very-high",
-		"gray-shallow-water", "low"
-	},
-	GeneratedNeutralUnits = {
-		"unit-gold-deposit", 2,
-		"unit-silver-deposit", 2,
-		"unit-copper-deposit", 2,
-		"unit-wood-pile", 64,
-		"unit-wood-pile", 64,
-		"unit-wood-pile", 64,
-		"unit-wood-pile", 64,
-		"unit-wood-pile", 64,
-		"unit-wood-pile", 64,
-		"unit-wood-pile", 64,
-		"unit-wood-pile", 64,
-		"unit-snigill", 64,
-		"unit-slime", 32,
-		"unit-blood-bat", 16,
-		"unit-dread-bat", 8,
-		"unit-wyrm", 4
-	},
-	PlayerLocationGeneratedNeutralUnits = {
-		"unit-gold-deposit", 1,
-		"unit-wood-pile", 16,
-		"unit-stone-pile", 16
-	}
-})
-
 SetMapTemplateUnit("nidavellir-underground-1", "unit-dwarven-town-hall", "Brising Clan", {-1, -1})
 SetMapTemplateUnit("nidavellir-underground-1", "unit-dwarven-town-hall", "Shadowcharm Clan", {-1, -1})
 SetMapTemplateHero("nidavellir-underground-1", "Fjalar", "Shadowcharm Clan", {-1, -1})
@@ -146,11 +108,9 @@ SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "Khag Tribe", {-1, -1}
 SetMapTemplateLayerConnector("nidavellir", "unit-glyph", {-1, -1}, "Asgard")
 SetMapTemplateLayerConnector("nidavellir", "unit-glyph", {-1, -1}, 1)
 SetMapTemplateLayerConnector("nidavellir-underground-1", "unit-glyph", {-1, -1}, 0)
-SetMapTemplateLayerConnector("nidavellir-underground-1", "unit-glyph", {-1, -1}, 2)
-SetMapTemplateLayerConnector("nidavellir-underground-2", "unit-glyph", {-1, -1}, 1)
 
---Load("scripts/map_templates/aurvang.lua")
---Load("scripts/map_templates/joruvellir.lua")
---Load("scripts/map_templates/svarinshaug.lua")
---Load("scripts/map_templates/untersberg.lua")
---Load("scripts/map_templates/caverns_of_chaincolt_city.lua")
+--Load("scripts/map_templates/nidavellir/aurvang.lua")
+--Load("scripts/map_templates/nidavellir/joruvellir.lua")
+--Load("scripts/map_templates/nidavellir/svarinshaug.lua")
+--Load("scripts/map_templates/nidavellir/untersberg.lua")
+--Load("scripts/map_templates/nidavellir/caverns_of_chaincolt_city.lua")
