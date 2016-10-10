@@ -61,5 +61,11 @@ DefineFaction("Asgard", {
 	Type = "polity",
 	Colors = {"blue"},
 	DefaultTier = "kingdom",
-	DefaultAI = "passive"
+	DefaultAI = "passive",
+	HistoricalTechnologies = { -- give the Aesir iron weapons and armor from the beginning
+		"upgrade-germanic-broad-sword", 0,
+		"upgrade-teuton-spatha", 0,
+		"upgrade-germanic-bronze-shield", 0,
+		"upgrade-teuton-iron-shield", 0
+	}
 })
