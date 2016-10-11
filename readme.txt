@@ -71,6 +71,7 @@ https://github.com/Andrettin/Wyrmsun
 - Temples and docks now correctly have a rally point button.
 - The goblin Dock now correctly the same quantity of under construction frames as those of the other civilizations (new frame by Jinn).
 - Revamped Lumber Mill and Smithy names.
+- Temples now sell scrolls.
 
 * Factions
 - Revamped Frankish personal names.

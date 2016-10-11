@@ -424,6 +424,7 @@ DefineUnitType("unit-potion-of-healing", {
 DefineUnitType("unit-scroll", {
 	Name = _("Scroll"),
 	Parent = "unit-template-item",
+	Costs = {"gold", 100},
 	Image = {"file", "neutral/items/scroll.png", "size", {32, 32}},
 	Icon = "icon-scroll",
 	ItemClass = "scroll",

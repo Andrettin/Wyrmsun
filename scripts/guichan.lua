@@ -908,7 +908,7 @@ function RunSinglePlayerGameMenu()
 	local offy = (Video.Height - 480) / 2
 
 	menu:addLabel(_("~<Single Player~>"), offx + 320, offy + 212 - 25 - (36 * 1))
-	menu:addFullButton(_("~!Campaign"), "c", offx + 208, offy + 104 + 36*2,
+	local campaign_button = menu:addFullButton(_("~!Campaign"), "c", offx + 208, offy + 104 + 36*2,
 		function()
 			RunCampaignMenu();
 			if (RunningScenario) then
@@ -916,6 +916,7 @@ function RunSinglePlayerGameMenu()
 			end
 		end
 	)
+	campaign_button:setTooltip("The Campaign mode is under development")
 	menu:addFullButton(_("~!Quests"), "q", offx + 208, offy + 104 + 36*3,
 		function()
 			RunQuestWorldMenu();

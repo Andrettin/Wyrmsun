@@ -585,7 +585,38 @@ DefineButton( { Pos = 11, Level = 0, Icon = "icon-quest",
 	Key = "", Hint = _("Quest"), Popup = "popup-commands",
 	ForUnit = {"unit-latin-town-hall", "unit-germanic-town-hall", "unit-teuton-town-hall", "unit-teuton-stronghold", "unit-dwarven-town-hall", "unit-dwarven-stronghold", "unit-gnomish-town-hall", "unit-goblin-town-hall", "unit-goblin-stronghold"}
 })
---]]
+
+-- Item Sell Buttons
+
+DefineButton( { Pos = 9, Level = 0,
+	Action = "buy", Value = -1,
+	Key = "", Hint = _("Buy"), Popup = "popup-unit",
+	ForUnit = {
+		"unit-teuton-temple",
+		"unit-dwarven-temple",
+		"unit-goblin-temple"
+	}
+})
+
+DefineButton( { Pos = 10, Level = 0,
+	Action = "buy", Value = -1,
+	Key = "", Hint = _("Buy"), Popup = "popup-unit",
+	ForUnit = {
+		"unit-teuton-temple",
+		"unit-dwarven-temple",
+		"unit-goblin-temple"
+	}
+})
+
+DefineButton( { Pos = 11, Level = 0,
+	Action = "buy", Value = -1,
+	Key = "", Hint = _("Buy"), Popup = "popup-unit",
+	ForUnit = {
+		"unit-teuton-temple",
+		"unit-dwarven-temple",
+		"unit-goblin-temple"
+	}
+})
 
 -- Load the buttons of all civilizations
 

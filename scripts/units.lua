@@ -3470,6 +3470,7 @@ DefineUnitType("unit-template-temple", {
 	ButtonHint = _("Build Tem~!ple"),
 	UnitStock = {"unit-potion-of-healing", 6},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
+	SoldUnits = {"unit-scroll"},
 	AiDrops = {"unit-amulet", "unit-ring", "unit-scroll", "unit-book"},
 	DropAffixes = {"upgrade-item-prefix-accurate", "upgrade-item-prefix-cruel", "upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-swift", "upgrade-item-prefix-vicious", "upgrade-item-prefix-vulnerable", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-accuracy", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-vulnerability"},
 	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},

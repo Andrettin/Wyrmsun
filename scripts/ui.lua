@@ -1149,6 +1149,12 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {ButtonAction = "train-unit"}, Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
+				{ 	Condition = {ButtonAction = "buy"}, Margin = {1, 1},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{	Condition = {ButtonAction = "buy"},
+					More = {"Costs", {Font = PopupFont}}, HighlightColor = "yellow",
+				}, 
 				{ 	Condition = {Class = true, ButtonAction = "train-unit"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Class: "), TypeClass("Type")), Font = wyr.preferences.PopupDescriptionFont}}
 				},
