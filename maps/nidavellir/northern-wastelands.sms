@@ -107,7 +107,7 @@ SetPlayerData(3, "RaceName", "dwarf")
 SetPlayerData(3, "Name", "Gryphon Riders")
 SetAiType(3, "passive")
 SetStartView(3, 2, 35)
-SetPlayerData(15, "RaceName", "neutral")
+SetPlayerData(PlayerNumNeutral, "RaceName", "neutral")
 
 -- Knalgan outpost
 unit = CreateUnit("unit-dwarven-town-hall", 0, {8, 60})
@@ -120,16 +120,16 @@ if (GrandStrategy == false) then
 	unit = CreateUnit("unit-dwarven-miner", 0, {8, 60})
 end
 
-unit = CreateUnit("unit-gold-deposit", 15, {14, 52})
+unit = CreateUnit("unit-gold-deposit", PlayerNumNeutral, {14, 52})
 SetResourcesHeld(unit, 50000)
-unit = CreateUnit("unit-gold-rock", 15, {15, 53})
-unit = CreateUnit("unit-gold-rock", 15, {15, 53})
-unit = CreateUnit("unit-gold-rock", 15, {15, 53})
-unit = CreateUnit("unit-gold-rock", 15, {15, 53})
-unit = CreateUnit("unit-gold-rock", 15, {15, 53})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {15, 53})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {15, 53})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {15, 53})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {15, 53})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {15, 53})
 
 if (GrandStrategy and GrandStrategyBattleBaseBuilding) then
-	unit = CreateUnit("unit-gold-deposit", 15, {25, 33})
+	unit = CreateUnit("unit-gold-deposit", PlayerNumNeutral, {25, 33})
 	SetResourcesHeld(unit, 50000)
 end
 

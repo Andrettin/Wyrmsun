@@ -59,7 +59,7 @@ function CreateUnit(unittype, player, pos, z)
 	if (
 		(
 			GameSettings.NumUnits >= 1
-			and player ~= 15
+			and player ~= PlayerNumNeutral
 			and Players[player].Type ~= PlayerNeutral
 		)
 		or (
@@ -67,7 +67,7 @@ function CreateUnit(unittype, player, pos, z)
 			and GrandStrategyEventMap == false
 			and (
 				((unittype == "unit-gold-deposit" or unittype == "unit-silver-deposit" or unittype == "unit-copper-deposit" or unittype == "unit-coal-mine" or unittype == "unit-mercenary-camp") and GrandStrategyBattleBaseBuilding == false)
-				or (player ~= 15 and Players[player].Type ~= PlayerNeutral)
+				or (player ~= PlayerNumNeutral and Players[player].Type ~= PlayerNeutral)
 			)
 		)
 	) then
@@ -75,7 +75,7 @@ function CreateUnit(unittype, player, pos, z)
 	end
 
 	-- Leave neutral the way it is
---	if (player == 15) then
+--	if (player == PlayerNumNeutral) then
 --		return OldCreateUnit(unittype, player, pos)
 --	end
 
@@ -198,12 +198,12 @@ function SetPlayerData(player, data, arg1, arg2)
 	if (data == "RaceName") then
 		if (GameCycle == 0) then
 			if (GameSettings.NumUnits == 1) then -- 1 Worker
-				if (player ~= 15 and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
+				if (player ~= PlayerNumNeutral and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
 					local unittype = ConvertUnitType("unit-dwarven-miner", GetPlayerData(player, "RaceName"), GetCurrentTileset())
 					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
 				end
 			elseif (GameSettings.NumUnits == 2) then -- Town Hall and 5 Workers
-				if (player ~= 15 and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
+				if (player ~= PlayerNumNeutral and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
 					local unittype = ConvertUnitType("unit-dwarven-town-hall", GetPlayerData(player, "RaceName"), GetCurrentTileset())
 					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
 					unittype = ConvertUnitType("unit-dwarven-miner", GetPlayerData(player, "RaceName"), GetCurrentTileset())
@@ -214,14 +214,14 @@ function SetPlayerData(player, data, arg1, arg2)
 					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
 				end
 			elseif (GameSettings.NumUnits == 3) then -- Basic Squad
-				if (player ~= 15 and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
+				if (player ~= PlayerNumNeutral and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
 					local unittype = ConvertUnitType("unit-dwarven-axefighter", GetPlayerData(player, "RaceName"), GetCurrentTileset())
 					for i = 1, 4 do
 						OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
 					end
 				end
 			elseif (GameSettings.NumUnits == 4) then -- Improved Squad
-				if (player ~= 15 and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
+				if (player ~= PlayerNumNeutral and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
 					local unittype = ConvertUnitType("unit-dwarven-axefighter", GetPlayerData(player, "RaceName"), GetCurrentTileset())
 					for i = 1, 3 do
 						OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
@@ -232,7 +232,7 @@ function SetPlayerData(player, data, arg1, arg2)
 					end
 				end
 			elseif (GameSettings.NumUnits == 5) then -- Advanced Squad
-				if (player ~= 15 and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
+				if (player ~= PlayerNumNeutral and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
 					local unittype = ConvertUnitType("unit-dwarven-axefighter", GetPlayerData(player, "RaceName"), GetCurrentTileset())
 					for i = 1, 5 do
 						OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
@@ -250,7 +250,7 @@ function SetPlayerData(player, data, arg1, arg2)
 				end
 			end
 			if (GrandStrategy and GrandStrategyEventMap == false and GrandStrategyBattle and GrandStrategyFaction ~= nil) then
-				if (player ~= 15 and (Players[player].Type == PlayerPerson or Players[player].Type == PlayerComputer)) then
+				if (player ~= PlayerNumNeutral and (Players[player].Type == PlayerPerson or Players[player].Type == PlayerComputer)) then
 					if (Players[player].Type == PlayerPerson) then
 						SetPlayerData(player, "Faction", GrandStrategyFaction.Name)
 					elseif (Players[player].Type == PlayerComputer) then
@@ -309,8 +309,8 @@ if (OldDefinePlayerTypes == nil) then
 	OldDefinePlayerTypes = DefinePlayerTypes
 end
 
-function DefinePlayerTypes(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15)
-	local p = {p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15}
+function DefinePlayerTypes(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31)
+	local p = {p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31}
 	local foundperson = false
 	local nump = GameSettings.Opponents
 	if (nump == 0) then nump = 15 end
@@ -330,7 +330,7 @@ function DefinePlayerTypes(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p1
 		end
 	end
 
-	OldDefinePlayerTypes(p[1], p[2], p[3], p[4], p[5], p[6], p[7], p[8], p[9], p[10], p[11], p[12], p[13], p[14], p[15])
+	OldDefinePlayerTypes(p[1], p[2], p[3], p[4], p[5], p[6], p[7], p[8], p[9], p[10], p[11], p[12], p[13], p[14], p[15], p[16], p[17], p[18], p[19], p[20], p[21], p[22], p[23], p[24], p[25], p[26], p[27], p[28], p[29], p[30], p[31])
 end
 
 if OldLoadTileModels == nil then

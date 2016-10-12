@@ -125,24 +125,24 @@ SetPlayerData(3, "Resources", "stone", 0)
 SetPlayerData(3, "Resources", "oil", 0)
 SetPlayerData(3, "Name", "Abandoned Stronghold")
 SetAiType(3, "passive")
-SetPlayerData(15, "RaceName", "neutral")
+SetPlayerData(PlayerNumNeutral, "RaceName", "neutral")
 
 -- volcanic craters near the forge
-unit = CreateUnit("unit-volcanic-crater", 15, {30, 47})
-unit = CreateUnit("unit-volcanic-crater", 15, {33, 47})
-unit = CreateUnit("unit-volcanic-crater", 15, {30, 52})
-unit = CreateUnit("unit-volcanic-crater", 15, {33, 52})
+unit = CreateUnit("unit-volcanic-crater", PlayerNumNeutral, {30, 47})
+unit = CreateUnit("unit-volcanic-crater", PlayerNumNeutral, {33, 47})
+unit = CreateUnit("unit-volcanic-crater", PlayerNumNeutral, {30, 52})
+unit = CreateUnit("unit-volcanic-crater", PlayerNumNeutral, {33, 52})
 
-unit = CreateUnit("unit-gold-deposit", 15, {4, 11}) -- Shinsplitter Camp Gold Mine
+unit = CreateUnit("unit-gold-deposit", PlayerNumNeutral, {4, 11}) -- Shinsplitter Camp Gold Mine
 SetResourcesHeld(unit, 100000)
-unit = CreateUnit("unit-gold-rock", 15, {5, 12})
-unit = CreateUnit("unit-gold-rock", 15, {5, 12})
-unit = CreateUnit("unit-gold-rock", 15, {5, 12})
-unit = CreateUnit("unit-gold-rock", 15, {5, 12})
-unit = CreateUnit("unit-gold-rock", 15, {5, 12})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {5, 12})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {5, 12})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {5, 12})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {5, 12})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {5, 12})
 
 if (GrandStrategy and GrandStrategyBattleBaseBuilding) then
-	unit = CreateUnit("unit-gold-deposit", 15, {31, 49})
+	unit = CreateUnit("unit-gold-deposit", PlayerNumNeutral, {31, 49})
 	SetResourcesHeld(unit, 50000)
 end
 	
@@ -284,13 +284,13 @@ elseif (GrandStrategyEventMap) then
 	SetPlayerData(0, "Resources", "lumber", 0)
 	SetPlayerData(0, "Resources", "stone", 0)
 	
-	unit = CreateUnit("unit-gold-deposit", 15, {4, 11}) -- Shinsplitter Camp Gold Mine
+	unit = CreateUnit("unit-gold-deposit", PlayerNumNeutral, {4, 11}) -- Shinsplitter Camp Gold Mine
 	SetResourcesHeld(unit, 100000)
-	unit = CreateUnit("unit-gold-rock", 15, {5, 12})
-	unit = CreateUnit("unit-gold-rock", 15, {5, 12})
-	unit = CreateUnit("unit-gold-rock", 15, {5, 12})
-	unit = CreateUnit("unit-gold-rock", 15, {5, 12})
-	unit = CreateUnit("unit-gold-rock", 15, {5, 12})
+	unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {5, 12})
+	unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {5, 12})
+	unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {5, 12})
+	unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {5, 12})
+	unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {5, 12})
 	
 	-- Rugnur
 	if (GetProvinceHero("Caverns of Chaincolt", "Rugnur") == 2) then

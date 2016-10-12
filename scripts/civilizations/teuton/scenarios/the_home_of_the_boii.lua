@@ -45,7 +45,7 @@ if (LoadedGame == false) then
 	SetPlayerData(1, "Resources", "stone", 1000)
 	SetPlayerData(1, "Resources", "oil", 0)
 	SetAiType(1, "land-attack")
-	SetPlayerData(15, "RaceName", "neutral")
+	SetPlayerData(PlayerNumNeutral, "RaceName", "neutral")
 	
 	if (GrandStrategy == false) then
 		unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})

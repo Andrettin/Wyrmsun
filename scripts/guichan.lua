@@ -771,7 +771,7 @@ function GetMapInfo(mapname)
 	local OldDefinePlayerTypes = DefinePlayerTypes
 	local OldPresentMap = PresentMap
 
-	function DefinePlayerTypes(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p12, p13, p14, p15)
+	function DefinePlayerTypes(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31)
 		mapinfo.playertypes[1] = p1
 		mapinfo.playertypes[2] = p2
 		mapinfo.playertypes[3] = p3
@@ -787,6 +787,22 @@ function GetMapInfo(mapname)
 		mapinfo.playertypes[13] = p13
 		mapinfo.playertypes[14] = p14
 		mapinfo.playertypes[15] = p15
+		mapinfo.playertypes[16] = p16
+		mapinfo.playertypes[17] = p17
+		mapinfo.playertypes[18] = p18
+		mapinfo.playertypes[19] = p19
+		mapinfo.playertypes[20] = p20
+		mapinfo.playertypes[21] = p21
+		mapinfo.playertypes[22] = p22
+		mapinfo.playertypes[23] = p23
+		mapinfo.playertypes[24] = p24
+		mapinfo.playertypes[25] = p25
+		mapinfo.playertypes[26] = p26
+		mapinfo.playertypes[27] = p27
+		mapinfo.playertypes[28] = p28
+		mapinfo.playertypes[29] = p29
+		mapinfo.playertypes[30] = p30
+		mapinfo.playertypes[31] = p31
 
 		mapinfo.nplayers = 0
 		for i=0,(PlayerMax - 1) do

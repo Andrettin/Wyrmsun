@@ -97,7 +97,7 @@ SetPlayerData(2, "Resources", "lumber", 0)
 SetPlayerData(2, "Resources", "stone", 0)
 SetPlayerData(2, "Resources", "oil", 0)
 SetAiType(2, "passive")
-SetPlayerData(15, "RaceName", "neutral")
+SetPlayerData(PlayerNumNeutral, "RaceName", "neutral")
 
 SetDiplomacy(0, "enemy", 2)
 SetDiplomacy(1, "enemy", 2)
@@ -105,20 +105,20 @@ SetDiplomacy(2, "enemy", 0)
 SetDiplomacy(2, "enemy", 1)
 
 -- Gold Mines
-unit = CreateUnit("unit-gold-deposit", 15, {2, 47})
+unit = CreateUnit("unit-gold-deposit", PlayerNumNeutral, {2, 47})
 SetResourcesHeld(unit, 125000)
-unit = CreateUnit("unit-gold-rock", 15, {3, 48})
-unit = CreateUnit("unit-gold-rock", 15, {3, 48})
-unit = CreateUnit("unit-gold-rock", 15, {3, 48})
-unit = CreateUnit("unit-gold-rock", 15, {3, 48})
-unit = CreateUnit("unit-gold-rock", 15, {3, 48})
-unit = CreateUnit("unit-gold-deposit", 15, {29, 20})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {3, 48})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {3, 48})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {3, 48})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {3, 48})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {3, 48})
+unit = CreateUnit("unit-gold-deposit", PlayerNumNeutral, {29, 20})
 SetResourcesHeld(unit, 12500)
-unit = CreateUnit("unit-gold-rock", 15, {30, 21})
-unit = CreateUnit("unit-gold-rock", 15, {30, 21})
-unit = CreateUnit("unit-gold-rock", 15, {30, 21})
-unit = CreateUnit("unit-gold-rock", 15, {30, 21})
-unit = CreateUnit("unit-gold-rock", 15, {30, 21})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {30, 21})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {30, 21})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {30, 21})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {30, 21})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {30, 21})
 	
 if (GrandStrategy == false) then
 	if (MaxTechLevel[GetThisPlayer() + 1] == "") then
@@ -297,12 +297,12 @@ if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
 	end
 end
 
-unit = CreateUnit("unit-glyph", 15, {5, 11})
-unit = CreateUnit("unit-glyph", 15, {38, 53})
-unit = CreateUnit("unit-glyph", 15, {28, 33})
-unit = CreateUnit("unit-glyph", 15, {15, 24})
-unit = CreateUnit("unit-glyph", 15, {23, 7})
-unit = CreateUnit("unit-glyph", 15, {51, 43})
+unit = CreateUnit("unit-glyph", PlayerNumNeutral, {5, 11})
+unit = CreateUnit("unit-glyph", PlayerNumNeutral, {38, 53})
+unit = CreateUnit("unit-glyph", PlayerNumNeutral, {28, 33})
+unit = CreateUnit("unit-glyph", PlayerNumNeutral, {15, 24})
+unit = CreateUnit("unit-glyph", PlayerNumNeutral, {23, 7})
+unit = CreateUnit("unit-glyph", PlayerNumNeutral, {51, 43})
 
 if (GrandStrategy and GrandStrategyEventMap) then
 	if (GetProvinceSettlementBuilding(WorldMapProvinces.CavernsofChaincolt.Name, "unit-dwarven-smithy")) then

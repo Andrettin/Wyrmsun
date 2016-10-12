@@ -386,7 +386,7 @@ function SinglePlayerTriggers()
 	end
 	
 	if (LoadedGame == false) then
-		DefineAllowNormalUnits("AAAAAAAAAAAAAAAA")
+		DefineAllowNormalUnits("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
 		if (GrandStrategy == false) then
 			ApplyTechLevels()
 		end

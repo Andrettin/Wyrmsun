@@ -129,7 +129,7 @@ AddTrigger("closing-the-gates-introduction",
 		end
 		if (GetFactionExists("Shinsplitter Clan")) then
 			for i=0, (PlayerMax - 2) do
-				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga") and FindHero("Rugnur", i) ~= nil and FindHero("Baglur", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(15, "UnitTypesCount", "unit-glyph") >= 6 and PlayerHasObjective(i, "- Have one unit standing on each glyph at the same time") == false) then
+				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga") and FindHero("Rugnur", i) ~= nil and FindHero("Baglur", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(PlayerNumNeutral, "UnitTypesCount", "unit-glyph") >= 6 and PlayerHasObjective(i, "- Have one unit standing on each glyph at the same time") == false) then
 					player = i
 					return true
 				end

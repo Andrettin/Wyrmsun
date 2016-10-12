@@ -43,12 +43,12 @@ end
 -- create rafts in the bottom-left margin of the river, in case the river bridge has been consumed by water
 local nearest_coast = FindNearestTerrainFlagTile("coast", 48, 80)
 if (nearest_coast ~= nil) then
-	unit = CreateUnit("unit-raft", 15, nearest_coast)
-	unit = CreateUnit("unit-raft", 15, nearest_coast)
-	unit = CreateUnit("unit-raft", 15, nearest_coast)
-	unit = CreateUnit("unit-raft", 15, nearest_coast)
-	unit = CreateUnit("unit-raft", 15, nearest_coast)
-	unit = CreateUnit("unit-raft", 15, nearest_coast)
+	unit = CreateUnit("unit-raft", PlayerNumNeutral, nearest_coast)
+	unit = CreateUnit("unit-raft", PlayerNumNeutral, nearest_coast)
+	unit = CreateUnit("unit-raft", PlayerNumNeutral, nearest_coast)
+	unit = CreateUnit("unit-raft", PlayerNumNeutral, nearest_coast)
+	unit = CreateUnit("unit-raft", PlayerNumNeutral, nearest_coast)
+	unit = CreateUnit("unit-raft", PlayerNumNeutral, nearest_coast)
 end
 
 CreateGoldMines(1, 50000, 0, Map.Info.MapWidth - 3, math.floor(Map.Info.MapHeight * 3 / 4), Map.Info.MapHeight - 3, false, true)

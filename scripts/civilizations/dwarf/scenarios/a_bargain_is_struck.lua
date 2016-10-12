@@ -37,7 +37,7 @@ if (LoadedGame == false) then
 	end
 	
 	if (GameSettings.Difficulty <= 2) then -- if the difficulty is normal or lower, add a raft
-		unit = CreateUnit("unit-raft", 15, {14, 32})
+		unit = CreateUnit("unit-raft", PlayerNumNeutral, {14, 32})
 	end
 end
 
@@ -257,32 +257,32 @@ AddTrigger("a-bargain-is-struck-introduction",
 																																OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
 																															end
 																															local transporter = unit
-																															unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
-																															unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
+																															unit = CreateUnitInTransporter("unit-gold-chest", PlayerNumNeutral, transporter)
+																															unit = CreateUnitInTransporter("unit-gold-chest", PlayerNumNeutral, transporter)
 																															unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
 																															if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
 																																-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
 																																OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
 																															end
 																															transporter = unit
-																															unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
-																															unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
+																															unit = CreateUnitInTransporter("unit-gold-chest", PlayerNumNeutral, transporter)
+																															unit = CreateUnitInTransporter("unit-gold-chest", PlayerNumNeutral, transporter)
 																															unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
 																															if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
 																																-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
 																																OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
 																															end
 																															transporter = unit
-																															unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
-																															unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
+																															unit = CreateUnitInTransporter("unit-gold-chest", PlayerNumNeutral, transporter)
+																															unit = CreateUnitInTransporter("unit-gold-chest", PlayerNumNeutral, transporter)
 																															unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
 																															if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
 																																-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
 																																OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
 																															end
 																															transporter = unit
-																															unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
-																															unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
+																															unit = CreateUnitInTransporter("unit-gold-chest", PlayerNumNeutral, transporter)
+																															unit = CreateUnitInTransporter("unit-gold-chest", PlayerNumNeutral, transporter)
 																															if (mapinfo.description == "Chaincolt Foothills") then
 																																ChangeUnitsOwner({6, 65}, {6 + 1, 65 + 1}, gnomish_monarch_player, 0)
 																																RemovePlayerObjective(player, "- Defeat your enemies")

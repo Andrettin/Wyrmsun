@@ -265,7 +265,7 @@ for i = 1,table.getn(misc_individual_upgrades) do
 	end
 	u.TechnologyPointCost = 0
 	u.Ability = false
-	DefineAllow(misc_individual_upgrades[i][1], "AAAAAAAAAAAAAAAA")
+	DefineAllow(misc_individual_upgrades[i][1], "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
 end
 
 DefineModifier("upgrade-child",

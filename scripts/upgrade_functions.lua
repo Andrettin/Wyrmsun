@@ -47,16 +47,15 @@ function DefineUpgrade(upgrade_ident, data)
 	OldDefineUpgrade(upgrade_ident, data)
 	
 	if (CUpgrade:Get(upgrade_ident).Ability) then
-		DefineAllow(upgrade_ident, "AAAAAAAAAAAAAAAA")
+		DefineAllow(upgrade_ident, "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
 	end
 end
 
 function DefineAllowNormalUnits(flags)
 	-- Allow units for human players only if they have been acquired
-	if ((flags == "AAAAAAAAAAAAAAAA" or flags == "RRRRRRRRRRRRRRRR") and (not IsNetworkGame()) and GetCurrentQuest() ~= "" and GrandStrategy == false) then
+	if ((flags == "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" or flags == "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR") and (not IsNetworkGame()) and GetCurrentQuest() ~= "" and GrandStrategy == false) then
 		for i, unitName in ipairs(Units) do
 			local PlayerUnitFlag = {}
-			local PlayerHeroUnitMax = {}
 			for j=0,(PlayerMax - 1) do
 				if (string.find(unitName, "upgrade-") == nil) then
 					if (
@@ -79,40 +78,48 @@ function DefineAllowNormalUnits(flags)
 						and CUpgrade:Get(unitName).TechnologyPointCost > 0
 					) then
 						PlayerUnitFlag[j] = "F"
-					elseif (flags == "RRRRRRRRRRRRRRRR" or unitName == GetCivilizationData(GetPlayerData(j, "RaceName"), "CivilizationUpgrade")) then
+					elseif (flags == "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR" or unitName == GetCivilizationData(GetPlayerData(j, "RaceName"), "CivilizationUpgrade")) then
 						PlayerUnitFlag[j] = "R"
 					else
 						PlayerUnitFlag[j] = "A"
 					end
 				end
 			end
-			DefineAllow(unitName, PlayerUnitFlag[0] .. PlayerUnitFlag[1] .. PlayerUnitFlag[2] .. PlayerUnitFlag[3] .. PlayerUnitFlag[4] .. PlayerUnitFlag[5] .. PlayerUnitFlag[6] .. PlayerUnitFlag[7] .. PlayerUnitFlag[8] .. PlayerUnitFlag[9] .. PlayerUnitFlag[10] .. PlayerUnitFlag[11] .. PlayerUnitFlag[12] .. PlayerUnitFlag[13] .. PlayerUnitFlag[14] .. PlayerUnitFlag[15])
+			local allow_string = ""
+			for j=0,(PlayerMax - 1) do
+				allow_string = allow_string .. PlayerUnitFlag[j]
+			end
+			DefineAllow(unitName, allow_string)
 		end
 	else
 		for i, unitName in ipairs(Units) do
 			local PlayerUnitFlag = {}
 			for j=0,(PlayerMax - 1) do
 				if (string.find(unitName, "upgrade-") == nil) then
-					if (flags == "RRRRRRRRRRRRRRRR") then
+					if (flags == "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR") then
 						PlayerUnitFlag[j] = "A"
 					else
 						PlayerUnitFlag[j] = string.sub(flags, j + 1, j + 1)
 					end
 				else
-					if (flags == "AAAAAAAAAAAAAAAA" and unitName == GetCivilizationData(GetPlayerData(j, "RaceName"), "CivilizationUpgrade")) then
+					if (flags == "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" and unitName == GetCivilizationData(GetPlayerData(j, "RaceName"), "CivilizationUpgrade")) then
 						PlayerUnitFlag[j] = "R"
 					else
 						PlayerUnitFlag[j] = string.sub(flags, j + 1, j + 1)
 					end
 				end
 			end
-			DefineAllow(unitName, PlayerUnitFlag[0] .. PlayerUnitFlag[1] .. PlayerUnitFlag[2] .. PlayerUnitFlag[3] .. PlayerUnitFlag[4] .. PlayerUnitFlag[5] .. PlayerUnitFlag[6] .. PlayerUnitFlag[7] .. PlayerUnitFlag[8] .. PlayerUnitFlag[9] .. PlayerUnitFlag[10] .. PlayerUnitFlag[11] .. PlayerUnitFlag[12] .. PlayerUnitFlag[13] .. PlayerUnitFlag[14] .. PlayerUnitFlag[15])
+			local allow_string = ""
+			for j=0,(PlayerMax - 1) do
+				allow_string = allow_string .. PlayerUnitFlag[j]
+			end
+			DefineAllow(unitName, allow_string)
 		end
 	end
 end
 
 InitFuncs:add(function()
-	DefineAllowNormalUnits("FFFFFFFFFFFFFFFF")
+	DefineAllowNormalUnits("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF")
 end)
 
 function ApplyTechLevels()
@@ -192,7 +199,11 @@ function ApplyTechLevels()
 					PlayerUnitFlag[j + 1] = GetPlayerData(j, "Allow", unitName)
 				end
 			end
-			DefineAllow(unitName, PlayerUnitFlag[1] .. PlayerUnitFlag[2] .. PlayerUnitFlag[3] .. PlayerUnitFlag[4] .. PlayerUnitFlag[5] .. PlayerUnitFlag[6] .. PlayerUnitFlag[7] .. PlayerUnitFlag[8] .. PlayerUnitFlag[9] .. PlayerUnitFlag[10] .. PlayerUnitFlag[11] .. PlayerUnitFlag[12] .. PlayerUnitFlag[13] .. PlayerUnitFlag[14] .. PlayerUnitFlag[15] .. PlayerUnitFlag[16])
+			local allow_string = ""
+			for j=0,(PlayerMax - 1) do
+				allow_string = allow_string .. PlayerUnitFlag[j + 1]
+			end
+			DefineAllow(unitName, allow_string)
 		end
 	end
 end

@@ -82,7 +82,7 @@ if (LoadedGame == false) then
 	unit = CreateUnit("unit-germanic-warrior", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 	SetUnitVariable(unit, "Active", false)
 		
-	CreateCreeps(15, "unit-glyph", 1, 0, Map.Info.MapWidth / 8, Map.Info.MapHeight / 3, Map.Info.MapHeight)
+	CreateCreeps(PlayerNumNeutral, "unit-glyph", 1, 0, Map.Info.MapWidth / 8, Map.Info.MapHeight / 3, Map.Info.MapHeight)
 	if (GameSettings.Difficulty == 1) then -- if difficulty is easy
 		CreateCreeps(1, "unit-germanic-warrior", Map.Info.MapWidth * 1 / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 	elseif (GameSettings.Difficulty == 2) then -- if difficulty is normal
@@ -95,7 +95,7 @@ if (LoadedGame == false) then
 		
 	-- reveal area near the glyph
 	local uncount = 0
-	uncount = GetUnits(15)
+	uncount = GetUnits(PlayerNumNeutral)
 	for unit1 = 1,table.getn(uncount) do 
 		if (GetUnitVariable(uncount[unit1], "Ident") == "unit-glyph") then
 			unit = CreateUnit("unit-revealer", GetFactionPlayer("Asa Tribe"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
@@ -286,7 +286,7 @@ AddTrigger("westward-migration-victory",
 		end
 		if (GetFactionPlayer("Asa Tribe") ~= nil) then
 			local uncount = 0
-			uncount = GetUnits(15)
+			uncount = GetUnits(PlayerNumNeutral)
 			for unit1 = 1,table.getn(uncount) do 
 				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-glyph") then
 					if (GetNumUnitsAt(GetFactionPlayer("Asa Tribe"), "unit-germanic-worker", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}) > 0) then

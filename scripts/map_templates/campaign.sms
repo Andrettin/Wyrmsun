@@ -12,4 +12,4 @@ ApplyMapTemplate("nidavellir", 0, 0, 0, 0, 1)
 ApplyMapTemplate("nidavellir-underground-1", 0, 0, 0, 0, 2)
 ApplyMapTemplate("asgard", 0, 0, 0, 0, 3)
 
-SetPlayerData(15, "RaceName", "neutral")
+SetPlayerData(PlayerNumNeutral, "RaceName", "neutral")

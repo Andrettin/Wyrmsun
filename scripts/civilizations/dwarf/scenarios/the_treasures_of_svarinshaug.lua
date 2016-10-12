@@ -62,21 +62,21 @@ if (LoadedGame == false) then
 
 	-- create blood bats and dread bats
 	if (GameSettings.Difficulty == 1) then -- if difficulty is easy
-		CreateCreeps(15, "unit-slime", 4, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-		CreateCreeps(15, "unit-blood-bat", 4, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-		CreateCreeps(15, "unit-dread-bat", 2, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+		CreateCreeps(PlayerNumNeutral, "unit-slime", 4, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+		CreateCreeps(PlayerNumNeutral, "unit-blood-bat", 4, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+		CreateCreeps(PlayerNumNeutral, "unit-dread-bat", 2, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 	elseif (GameSettings.Difficulty == 2) then -- if difficulty is normal
-		CreateCreeps(15, "unit-slime", 8, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-		CreateCreeps(15, "unit-blood-bat", 8, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-		CreateCreeps(15, "unit-dread-bat", 4, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+		CreateCreeps(PlayerNumNeutral, "unit-slime", 8, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+		CreateCreeps(PlayerNumNeutral, "unit-blood-bat", 8, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+		CreateCreeps(PlayerNumNeutral, "unit-dread-bat", 4, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 	elseif (GameSettings.Difficulty == 3) then -- if difficulty is hard
-		CreateCreeps(15, "unit-slime", 16, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-		CreateCreeps(15, "unit-blood-bat", 16, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-		CreateCreeps(15, "unit-dread-bat", 8, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+		CreateCreeps(PlayerNumNeutral, "unit-slime", 16, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+		CreateCreeps(PlayerNumNeutral, "unit-blood-bat", 16, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+		CreateCreeps(PlayerNumNeutral, "unit-dread-bat", 8, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 	elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
-		CreateCreeps(15, "unit-slime", 32, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-		CreateCreeps(15, "unit-blood-bat", 32, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-		CreateCreeps(15, "unit-dread-bat", 16, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+		CreateCreeps(PlayerNumNeutral, "unit-slime", 32, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+		CreateCreeps(PlayerNumNeutral, "unit-blood-bat", 32, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+		CreateCreeps(PlayerNumNeutral, "unit-dread-bat", 16, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 	end
 end
 
@@ -217,14 +217,14 @@ AddTrigger("the-treasures-of-svarinshaug-brokk-or-eitri-dies",
 		end
 		
 		-- until Brokk or Eitri is dead, make the hostile fauna attack them
-		local uncount = GetUnits(15)
+		local uncount = GetUnits(PlayerNumNeutral)
 		for unit1 = 1,table.getn(uncount) do 
 			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-blood-bat" or GetUnitVariable(uncount[unit1], "Ident") == "unit-dread-bat" or GetUnitVariable(uncount[unit1], "Ident") == "unit-slime") then
 				if (GetNumUnitsAt(GetFactionPlayer("Brising Clan"), "units", {GetUnitVariable(uncount[unit1],"PosX") - 4, GetUnitVariable(uncount[unit1],"PosY") - 4}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}) > 0) then -- if there are units from Brokk and Eitri's entourage near the beast
 					local nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 4, true)
 					for unit2 = 1,table.getn(nearby_uncount) do 
 						if (nearby_uncount[unit2] and GetUnitVariable(nearby_uncount[unit2], "Player") == GetFactionPlayer("Brising Clan") and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "organic")) then
-							OrderUnit(15, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(nearby_uncount[unit2],"PosX"), GetUnitVariable(nearby_uncount[unit2],"PosY")}, "attack")
+							OrderUnit(PlayerNumNeutral, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(nearby_uncount[unit2],"PosX"), GetUnitVariable(nearby_uncount[unit2],"PosY")}, "attack")
 						end
 					end
 				end

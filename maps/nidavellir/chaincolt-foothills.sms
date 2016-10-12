@@ -105,7 +105,7 @@ SetPlayerData(2, "Resources", "lumber", 500)
 SetPlayerData(2, "Resources", "stone", 250)
 SetPlayerData(2, "Resources", "oil", 0)
 SetAiType(2, "land-attack")
-SetPlayerData(15, "RaceName", "neutral")
+SetPlayerData(PlayerNumNeutral, "RaceName", "neutral")
 
 if (GrandStrategy == false or GrandStrategyEventMap) then
 	SetDiplomacy(0, "neutral", 1)
@@ -117,27 +117,27 @@ if (GrandStrategy == false or GrandStrategyEventMap) then
 end
 
 -- Gold Mines
-unit = CreateUnit("unit-gold-deposit", 15, {35, 8})
+unit = CreateUnit("unit-gold-deposit", PlayerNumNeutral, {35, 8})
 SetResourcesHeld(unit, 12500)
-unit = CreateUnit("unit-gold-rock", 15, {36, 9})
-unit = CreateUnit("unit-gold-rock", 15, {36, 9})
-unit = CreateUnit("unit-gold-rock", 15, {36, 9})
-unit = CreateUnit("unit-gold-rock", 15, {36, 9})
-unit = CreateUnit("unit-gold-rock", 15, {36, 9})
-unit = CreateUnit("unit-gold-deposit", 15, {43, 54})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {36, 9})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {36, 9})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {36, 9})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {36, 9})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {36, 9})
+unit = CreateUnit("unit-gold-deposit", PlayerNumNeutral, {43, 54})
 SetResourcesHeld(unit, 25000)
-unit = CreateUnit("unit-gold-rock", 15, {44, 55})
-unit = CreateUnit("unit-gold-rock", 15, {44, 55})
-unit = CreateUnit("unit-gold-rock", 15, {44, 55})
-unit = CreateUnit("unit-gold-rock", 15, {44, 55})
-unit = CreateUnit("unit-gold-rock", 15, {44, 55})
-unit = CreateUnit("unit-gold-deposit", 15, {4, 52})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {44, 55})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {44, 55})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {44, 55})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {44, 55})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {44, 55})
+unit = CreateUnit("unit-gold-deposit", PlayerNumNeutral, {4, 52})
 SetResourcesHeld(unit, 12500)
-unit = CreateUnit("unit-gold-rock", 15, {5, 53})
-unit = CreateUnit("unit-gold-rock", 15, {5, 53})
-unit = CreateUnit("unit-gold-rock", 15, {5, 53})
-unit = CreateUnit("unit-gold-rock", 15, {5, 53})
-unit = CreateUnit("unit-gold-rock", 15, {5, 53})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {5, 53})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {5, 53})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {5, 53})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {5, 53})
+unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {5, 53})
 	
 if (GrandStrategy == false) then
 	--[[
@@ -213,12 +213,12 @@ if (GrandStrategy == false) then
 		unit = CreateUnit("unit-dwarven-miner", 2, {42, 60})
 	end
 	
-	unit = CreateUnit("unit-tree-stump", 15, {43, 30})
+	unit = CreateUnit("unit-tree-stump", PlayerNumNeutral, {43, 30})
 	if (unit) then
 		unit = CreateUnitInTransporter("unit-dwarven-scout", 2, unit)
 		SetUnitVariable(unit, "Active", false)
 	end
-	unit = CreateUnit("unit-tree-stump", 15, {33, 56})
+	unit = CreateUnit("unit-tree-stump", PlayerNumNeutral, {33, 56})
 	if (unit) then
 		unit = CreateUnitInTransporter("unit-dwarven-scout", 2, unit)
 		SetUnitVariable(unit, "Active", false)
@@ -261,8 +261,8 @@ elseif (GrandStrategyEventMap) then
 		ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", -1)
 	end
 	
-	unit = CreateUnit("unit-tree-stump", 15, {43, 30})
-	unit = CreateUnit("unit-tree-stump", 15, {33, 56})
+	unit = CreateUnit("unit-tree-stump", PlayerNumNeutral, {43, 30})
+	unit = CreateUnit("unit-tree-stump", PlayerNumNeutral, {33, 56})
 end
 
 local arg = {}

@@ -59,10 +59,10 @@ CreateRoamingFog((Map.Info.MapWidth * Map.Info.MapHeight) / 4096)
 -- create rafts in the northern margin of the river, in case the river bridge has been consumed by water
 local nearest_coast = FindNearestTerrainFlagTile("coast", 59, 33)
 if (nearest_coast ~= nil) then
-	unit = CreateUnit("unit-raft", 15, nearest_coast)
-	unit = CreateUnit("unit-raft", 15, nearest_coast)
-	unit = CreateUnit("unit-raft", 15, nearest_coast)
-	unit = CreateUnit("unit-raft", 15, nearest_coast)
-	unit = CreateUnit("unit-raft", 15, nearest_coast)
-	unit = CreateUnit("unit-raft", 15, nearest_coast)
+	unit = CreateUnit("unit-raft", PlayerNumNeutral, nearest_coast)
+	unit = CreateUnit("unit-raft", PlayerNumNeutral, nearest_coast)
+	unit = CreateUnit("unit-raft", PlayerNumNeutral, nearest_coast)
+	unit = CreateUnit("unit-raft", PlayerNumNeutral, nearest_coast)
+	unit = CreateUnit("unit-raft", PlayerNumNeutral, nearest_coast)
+	unit = CreateUnit("unit-raft", PlayerNumNeutral, nearest_coast)
 end

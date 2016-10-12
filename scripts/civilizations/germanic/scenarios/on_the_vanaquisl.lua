@@ -102,7 +102,7 @@ if (LoadedGame == false) then
 	-- create raft in the nearest coast tile to the Vana settlement
 	local nearest_coast = FindNearestTerrainFlagTile("coast", Players[1].StartPos.x, Players[1].StartPos.y)
 	if (nearest_coast ~= nil) then
-		unit = CreateUnit("unit-raft", 15, nearest_coast)
+		unit = CreateUnit("unit-raft", PlayerNumNeutral, nearest_coast)
 	end
 end
 

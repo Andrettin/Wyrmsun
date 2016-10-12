@@ -414,7 +414,8 @@ function RunEditorPlayerProperties()
 
 	local player_list = {}
 	local player_properties = {}
-	for i = 1,(PlayerMax - 1) do
+--	for i = 1,(PlayerMax - 1) do
+	for i = 1,(16 - 1) do -- allow only 16 players in the editor
 		player_properties[i] = {}
 		player_properties[i]["Type"] = Map.Info.PlayerType[i-1] - 2
 		player_properties[i]["Civilization"] = Players[i-1].Race

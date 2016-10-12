@@ -43,7 +43,7 @@ if (IsNetworkGame() and GrandStrategy == false) then
 	SetDiplomacy(1, "enemy", 2)
 	SetDiplomacy(2, "enemy", 1)
 end
-SetPlayerData(15, "RaceName", "neutral")
+SetPlayerData(PlayerNumNeutral, "RaceName", "neutral")
 
 unit = CreateUnit("unit-dwarven-thane", 0, {1, 16})
 SetUnitVariable(unit, "Character", "Durstorn")
@@ -69,7 +69,7 @@ if (GameSettings.Difficulty == 1) then -- if difficulty is easy
 
 	unit = CreateUnit("unit-gnomish-recruit", 1, {17, 10})
 	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-potion-of-healing", 15, {16, 10})
+	unit = CreateUnit("unit-potion-of-healing", PlayerNumNeutral, {16, 10})
 
 	unit = CreateUnit("unit-gnomish-recruit", 1, {16, 6}) -- originally Durahn as an undead wight, but since Wyrmsun's universe doesn't have undead, make this a particularly powerful gnomish raider instead
 	SetUnitVariable(unit, "Active", false)
@@ -104,7 +104,7 @@ elseif (GameSettings.Difficulty == 2) then -- if difficulty is normal
 	unit = CreateUnit("unit-gnomish-duelist", 1, {17, 10})
 	SetUnitVariable(unit, "Active", false)
 	--IncreaseUnitLevel(unit, 2)
-	unit = CreateUnit("unit-potion-of-healing", 15, {16, 10})
+	unit = CreateUnit("unit-potion-of-healing", PlayerNumNeutral, {16, 10})
 
 	unit = CreateUnit("unit-gnomish-duelist", 1, {16, 6}) -- originally Durahn as an undead wight, but since Wyrmsun's universe doesn't have undead, make this a particularly powerful gnomish raider instead
 	SetUnitVariable(unit, "Active", false)
@@ -132,7 +132,7 @@ elseif (GameSettings.Difficulty == 3 or GameSettings.Difficulty == 4) then -- if
 	unit = CreateUnit("unit-gnomish-master-at-arms", 1, {17, 10})
 	SetUnitVariable(unit, "Active", false)
 	if (GameSettings.Difficulty == 3) then
-		unit = CreateUnit("unit-potion-of-healing", 15, {16, 10})
+		unit = CreateUnit("unit-potion-of-healing", PlayerNumNeutral, {16, 10})
 	elseif (GameSettings.Difficulty == 4) then
 		IncreaseUnitLevel(unit, 1)
 	end
@@ -141,28 +141,28 @@ elseif (GameSettings.Difficulty == 3 or GameSettings.Difficulty == 4) then -- if
 	SetUnitVariable(unit, "Active", false)
 end
 
-unit = CreateUnit("unit-bones", 15, {6, 8})
-unit = CreateUnit("unit-bones", 15, {7, 11})
-unit = CreateUnit("unit-bones", 15, {9, 12})
-unit = CreateUnit("unit-bones", 15, {17, 6}) -- Durahn Eikinskjaldi's sarcophagus
-unit = CreateUnit("unit-bones", 15, {8, 2}) -- Isuldan Eikinskjaldi's remains
-unit = CreateUnit("unit-bones", 15, {17, 9}) -- Gneissus Eikinskjaldi's remains
+unit = CreateUnit("unit-bones", PlayerNumNeutral, {6, 8})
+unit = CreateUnit("unit-bones", PlayerNumNeutral, {7, 11})
+unit = CreateUnit("unit-bones", PlayerNumNeutral, {9, 12})
+unit = CreateUnit("unit-bones", PlayerNumNeutral, {17, 6}) -- Durahn Eikinskjaldi's sarcophagus
+unit = CreateUnit("unit-bones", PlayerNumNeutral, {8, 2}) -- Isuldan Eikinskjaldi's remains
+unit = CreateUnit("unit-bones", PlayerNumNeutral, {17, 9}) -- Gneissus Eikinskjaldi's remains
 
-unit = CreateUnit("unit-table", 15, {16, 9}) -- table in Gneissus' crypt
+unit = CreateUnit("unit-table", PlayerNumNeutral, {16, 9}) -- table in Gneissus' crypt
 SetUnitVariable(unit, "Variation", 7)
 
-unit = CreateUnit("unit-outer-wall-decoration", 15, {11, 7})
+unit = CreateUnit("unit-outer-wall-decoration", PlayerNumNeutral, {11, 7})
 SetUnitVariable(unit, "Variation", 1)
-unit = CreateUnit("unit-outer-wall-decoration", 15, {13, 11})
+unit = CreateUnit("unit-outer-wall-decoration", PlayerNumNeutral, {13, 11})
 SetUnitVariable(unit, "Variation", 1)
-unit = CreateUnit("unit-outer-wall-decoration", 15, {15, 11})
+unit = CreateUnit("unit-outer-wall-decoration", PlayerNumNeutral, {15, 11})
 SetUnitVariable(unit, "Variation", 1)
 
---unit = CreateUnit("unit-inner-wall-decoration", 15, {8, 7})
---unit = CreateUnit("unit-inner-wall-decoration", 15, {11, 10})
+--unit = CreateUnit("unit-inner-wall-decoration", PlayerNumNeutral, {8, 7})
+--unit = CreateUnit("unit-inner-wall-decoration", PlayerNumNeutral, {11, 10})
 
 -- extra potions to make the scenario less difficult
 if (GameSettings.Difficulty ~= 4) then
-	unit = CreateUnit("unit-potion-of-healing", 15, {7, 9})
-	unit = CreateUnit("unit-potion-of-healing", 15, {7, 11})
+	unit = CreateUnit("unit-potion-of-healing", PlayerNumNeutral, {7, 9})
+	unit = CreateUnit("unit-potion-of-healing", PlayerNumNeutral, {7, 11})
 end

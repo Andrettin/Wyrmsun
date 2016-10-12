@@ -166,7 +166,7 @@ SetPlayerData(4, "Resources", "stone", 2500)
 SetPlayerData(4, "Resources", "oil", 0)
 SetPlayerData(4, "RaceName", "germanic")
 SetAiType(4, "land-attack")
-SetPlayerData(15, "RaceName", "neutral")
+SetPlayerData(PlayerNumNeutral, "RaceName", "neutral")
 
 ApplyRawTiles()
 
@@ -193,7 +193,7 @@ SetUnitVariable(unit, "Active", false)
 -- create a raft in the nearest coast tile to the native settlement
 local nearest_coast = FindNearestTerrainFlagTile("coast", Players[1].StartPos.x, Players[1].StartPos.y)
 if (nearest_coast ~= nil) then
-	unit = CreateUnit("unit-raft", 15, nearest_coast)
+	unit = CreateUnit("unit-raft", PlayerNumNeutral, nearest_coast)
 end
 
 CreateCritters()
