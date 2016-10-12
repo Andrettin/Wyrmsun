@@ -92,20 +92,6 @@ DefineCharacter("Gylve", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	DateReferenceCharacter = "Vóden" -- contemporary of Vóden
 })
 
--- Hun heroes
+-- Hun personal names: "Attila" (known as Atli in Norse myths; invaded Gundahar's kingdom in 437 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 93-94; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6)
 
-DefineCharacter("Attila", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 93-94; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
-	Name = "Attila", -- also known as Atli in Norse myths, in which he married Gudrun
-	Gender = "male",
-	Type = "unit-teuton-ritter",
-	Civilization = "persian", -- should be Hun
---	ProvinceOfOrigin = "?",
-	Year = 437, -- invasion of Gundahar's kingdom in 437 AD by Attila's Huns
-	DeathYear = 453 -- died
-})
-
-DefineCharacter("Tutu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 86.
-	Name = "Tutu", -- a sphinx from Egyptian mythology; the same as the Greek "Titoés"
-	Gender = "female",
-	Type = "unit-yale" -- change this later
-})
+-- Sphinx names: "Tutu" (a female sphinx from Egyptian mythology; the same as the Greek "Titoés"; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 86)

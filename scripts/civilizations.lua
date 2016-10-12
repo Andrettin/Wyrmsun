@@ -602,6 +602,7 @@ DefineCivilization("elf", {
 	Description = "The lush world of Alfheim contains a myriad forests, many of which are inhabited by elves. Being a subtle folk, elves hold magical skills in great steem, and they are more prone to intrigue than open warfare.",
 	Background = "The elves of Wyrmsun incorporate elements of both the elves of Norse mythology and the Celtic fairies. This follows the amalgamation of the two types of beings in English folklore.",
 	PersonalNames = {
+		"female", "Argante", -- Elven Queen whom King Arthur met; described as beautiful; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 90.
 		"male", "Aendan",
 		"male", "Amadrieriand", -- from Battle for Wesnoth
 		"male", "Amáril", -- from Battle for Wesnoth
@@ -1237,9 +1238,11 @@ DefineCivilization("celt", { -- has to be defined after the germanic civilizatio
 		"female", "Penarddun", -- Welsh; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 132.
 		"female", "Rigantona", -- "Rīgantonā"; Proto-Celtic version of the Welsh name "Rhiannon"; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 124.
 		"female", "Rhiannon", -- daughter of Hefeydd the Old and wife of Pwyll; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 20, 124.
+		"male", "Aedan", -- Aedan mac Gabrain, the king of a kingdom founded in Argyll in 574 by Irish settlers; he attacked the Bernicians in 603 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 77, 86.
 		"male", "Ambiorix", -- chieftain of the Eburones tribe in 54 BC (together with Cativolcus); Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
 		"male", "Beli", -- Welsh; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 132.
 		"male", "Bendigeidfran", -- Welsh name; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 130.
+		"male", "Bruide", -- son of the king of Strathclyde who became king of the Picts in 672; he died in 693; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 87-88.
 		"male", "Cadafael", -- Cadafael of Gwynedd; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 83-84.
 		"male", "Cadwallon", -- king of Gwynedd; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 80-81.
 		"male", "Caradawg", -- Welsh; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 135.

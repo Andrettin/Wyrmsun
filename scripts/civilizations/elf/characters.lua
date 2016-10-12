@@ -48,13 +48,3 @@ DefineCharacter("Hafgan", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch d
 --	ProvinceOfOrigin = "Annwn"
 	-- king in Annwn who opposed Arawn
 })
-
-DefineCharacter("Argante", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 90.
-	Name = "Argante", -- Elven Queen whom King Arthur met; described as beautiful
-	Gender = "female",
-	Type = "unit-elven-swordsman",
-	Civilization = "elf",
---	ProvinceOfOrigin = "?",
---	Year = ?,
---	DeathYear = ?
-})

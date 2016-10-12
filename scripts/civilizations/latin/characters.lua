@@ -120,14 +120,3 @@ DefineCharacter("Geofrei Gaimar", { -- Source: Alaric Hall, "The Meanings of Elf
 	ProvinceOfOrigin = "France", -- accurate?
 	Year = 1135 -- composed Estoire des Anglais c. 1135-1140 AD
 })
-
-DefineCharacter("Nicholas", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
-	Name = "Nicholas", -- Pope Nicholas V; what was his real name?
-	Gender = "male",
-	Type = "unit-teuton-priest",
-	Civilization = "latin", -- accurate?
-	ProvinceOfOrigin = "Latium", -- probably not accurate, but since we only know he was Pope, set his province of origin to Latium until we have better information
-	Year = 1448 -- sent a brief to the bishops of Skalholt and Holum in Iceland in 1448 AD
-})
-
---Load("scripts/civilizations/latin/characters_brazilian.lua")
