@@ -28,5 +28,13 @@
 SetMapTemplateUnit("earth", "unit-germanic-town-hall", "Ingaevone Tribe", {4054, 801}, -2800, -264) -- Flensburg; according to Tacitus the Ingaevones were one of the earliest Germanic tribes; the place of their dwelling was inhabited by the cultural ancestors of the Germanics in 2800 BC already
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "Angle Tribe", {4054, 801}, -264) -- Tribes in Europe between 264 BC and 180 AD (Schleswig was inhabited by the Angles); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 
+-- Cologne / Colonia Agrippina
+SetMapTemplateUnit("earth", "unit-latin-town-hall", "Rome", {3998, 887}, -50) -- Gaul (where Colonia Agrippina was located) was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+SetMapTemplateUnit("earth", "unit-latin-barracks", "Rome", {3998, 887}, -50) -- Legionary base present in a location near Colonia Agrippina in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+
+-- Mogontiacum
+SetMapTemplateUnit("earth", "unit-latin-town-hall", "Rome", {4029, 911}, -50) -- Gaul (where Mogontiacum was located) was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+SetMapTemplateUnit("earth", "unit-latin-barracks", "Rome", {4029, 911}, -50) -- Legionary base present in a location near Colonia Agrippina in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+
 SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "Francia", {4043, 879}, 775) -- a Frankish garrison was established by Charlemagne in Eresburg in 775; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 604.
 SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "Francia", {4019, 876}, 775) -- a Frankish garrison was established by Charlemagne in Syburg in 775; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 604.
