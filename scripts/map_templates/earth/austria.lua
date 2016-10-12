@@ -25,54 +25,20 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineMapTemplate("earth", {
-	Name = "Earth",
-	World = "Earth",
-	Width = 8192,
-	Height = 4096,
-	TerrainFile = "scripts/map_templates/earth.map",
-	GeneratedTerrains = {
-		"rock", "low",
-		"grass", "extremely-high",
-		"dirt", "medium",
-		"pine-tree", "high"
-	},
-	GeneratedNeutralUnits = {
-		"unit-gold-deposit", 8,
-		"unit-silver-deposit", 8,
-		"unit-copper-deposit", 8,
-		"unit-bee", 64,
-		"unit-fly", 64,
-		"unit-bug", 64,
-		"unit-worm", 64,
-		"unit-snail", 64,
-		"unit-slug", 64,
-		"unit-frog", 64,
-		"unit-bird", 64,
-		"unit-crow", 64,
-		"unit-rat", 64,
-		"unit-goat", 32,
-		"unit-boar", 32,
-		"unit-horse", 16,
-		"unit-wolf", 32
-	},
-	PlayerLocationGeneratedNeutralUnits = {
-		"unit-gold-deposit", 1,
-		"unit-wood-pile", 16,
-		"unit-stone-pile", 8
-	}
-})
+SetMapTemplateTileTerrain("earth", "shallow-water", 4220, 960, "Lake Neusiedl")
+SetMapTemplateTileTerrain("earth", "shallow-water", 4220, 961, "Lake Neusiedl")
+SetMapTemplateTileTerrain("earth", "shallow-water", 4221, 958, "Lake Neusiedl")
+SetMapTemplateTileTerrain("earth", "shallow-water", 4221, 959, "Lake Neusiedl")
+SetMapTemplateTileTerrain("earth", "shallow-water", 4221, 960, "Lake Neusiedl")
+SetMapTemplateTileTerrain("earth", "shallow-water", 4221, 961, "Lake Neusiedl")
+SetMapTemplateTileTerrain("earth", "shallow-water", 4222, 958, "Lake Neusiedl")
+SetMapTemplateTileTerrain("earth", "shallow-water", 4222, 959, "Lake Neusiedl")
+SetMapTemplateTileTerrain("earth", "shallow-water", 4222, 960, "Lake Neusiedl")
+SetMapTemplateTileTerrain("earth", "shallow-water", 4223, 958, "Lake Neusiedl")
+SetMapTemplateTileTerrain("earth", "shallow-water", 4223, 959, "Lake Neusiedl")
 
-SetMapTemplateLayerConnector("earth", "unit-glyph", {-1, -1}, "Asgard")
+-- Vindobona
+--SetMapTemplateUnit("earth", "unit-latin-town-hall", "Rome", {4212, 952}, 10) -- Upper Pannonia (where Vindobona was located) acquired by Rome in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 
-Load("scripts/map_templates/earth/austria.lua")
-Load("scripts/map_templates/earth/bohemia.lua")
-Load("scripts/map_templates/earth/denmark.lua")
-Load("scripts/map_templates/earth/france.lua")
-Load("scripts/map_templates/earth/germany.lua")
-Load("scripts/map_templates/earth/great_britain.lua")
-Load("scripts/map_templates/earth/italy.lua")
-Load("scripts/map_templates/earth/netherlands.lua")
-Load("scripts/map_templates/earth/portugal.lua")
-Load("scripts/map_templates/earth/spain.lua")
-Load("scripts/map_templates/earth/sweden.lua")
+-- Carnuntum
+SetMapTemplateUnit("earth", "unit-latin-town-hall", "Rome", {4224, 955}, 10) -- Upper Pannonia (where Carnuntum was located) acquired by Rome in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
