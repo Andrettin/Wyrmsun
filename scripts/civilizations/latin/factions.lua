@@ -53,7 +53,8 @@ DefineFaction("Latin Tribe", {
 	Civilization = "latin",
 	Type = "tribe",
 	Colors = {"red", "yellow"},
-	DevelopsTo = {"Rome"}
+	DevelopsTo = {"Rome"},
+	DefaultStartPos = {4126, 1096} -- Rome
 })
 
 DefineFaction("Marsian Tribe", {
@@ -172,6 +173,7 @@ DefineFaction("Rome", {
 	Type = "polity",
 	Colors = {"red", "yellow"},
 	DefaultTier = "kingdom",
+	DefaultStartPos = {4126, 1096}, -- Rome
 	HistoricalFactionDerivations = {-500, "latin", "Latin Tribe"},
 	HistoricalGovernmentTypes = {
 		-500, "republic", -- correct?
