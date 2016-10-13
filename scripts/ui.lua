@@ -1419,13 +1419,13 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {KnowledgeWarfare = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Knowledge (Warfare): "), Variable = "KnowledgeWarfare", Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {DisembarkmentBonus = "only"}, HighlightColor = "yellow",
+				{ 	Condition = {DisembarkmentBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Disembarkment Bonus"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {RegenerationAura = "only"}, HighlightColor = "yellow",
+				{ 	Condition = {RegenerationAura = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Regeneration Aura"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {LeadershipAura = "only"}, HighlightColor = "yellow",
+				{ 	Condition = {LeadershipAura = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Leadership Aura"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				-- Description

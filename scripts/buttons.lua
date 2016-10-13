@@ -586,6 +586,25 @@ DefineButton( { Pos = 11, Level = 0, Icon = "icon-quest",
 	ForUnit = {"unit-latin-town-hall", "unit-germanic-town-hall", "unit-teuton-town-hall", "unit-teuton-stronghold", "unit-dwarven-town-hall", "unit-dwarven-stronghold", "unit-gnomish-town-hall", "unit-goblin-town-hall", "unit-goblin-stronghold"}
 })
 
+-- Hero Recruitment Buttons
+DefineButton( { Pos = 5, Level = 0,
+	Action = "buy", Value = -1,
+	Key = "", Hint = _("Hire"), Popup = "popup-unit",
+	ForUnit = {"unit-latin-town-hall", "unit-germanic-town-hall", "unit-teuton-town-hall", "unit-teuton-stronghold", "unit-dwarven-town-hall", "unit-dwarven-stronghold", "unit-gnomish-town-hall", "unit-goblin-town-hall", "unit-goblin-stronghold"}
+})
+
+DefineButton( { Pos = 6, Level = 0,
+	Action = "buy", Value = -1,
+	Key = "", Hint = _("Hire"), Popup = "popup-unit",
+	ForUnit = {"unit-latin-town-hall", "unit-germanic-town-hall", "unit-teuton-town-hall", "unit-teuton-stronghold", "unit-dwarven-town-hall", "unit-dwarven-stronghold", "unit-gnomish-town-hall", "unit-goblin-town-hall", "unit-goblin-stronghold"}
+})
+
+DefineButton( { Pos = 7, Level = 0,
+	Action = "buy", Value = -1,
+	Key = "", Hint = _("Hire"), Popup = "popup-unit",
+	ForUnit = {"unit-latin-town-hall", "unit-germanic-town-hall", "unit-teuton-town-hall", "unit-teuton-stronghold", "unit-dwarven-town-hall", "unit-dwarven-stronghold", "unit-gnomish-town-hall", "unit-goblin-town-hall", "unit-goblin-stronghold"}
+})
+
 -- Item Sell Buttons
 
 DefineButton( { Pos = 9, Level = 0,
