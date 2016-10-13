@@ -33,7 +33,7 @@ DefineCampaign("the-mead-of-poetry", {
 	Year = -2800
 })
 
-DefineCampaign("frey-messenger", {
+DefineCampaign("freys-messenger", {
 	Name = "Frey's Messenger",
 	Description = "Skirnir, the human servant of the god Frey, must perform important deeds for his master.",
 	Civilization = "germanic",
