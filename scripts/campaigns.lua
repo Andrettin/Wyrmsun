@@ -48,3 +48,11 @@ DefineCampaign("the-marcomannic-wars", {
 	Faction = "Marcomanni Tribe",
 	Year = 162 -- beginning of the Marcomannic Wars
 })
+
+DefineCampaign("sigiberts-struggle", {
+	Name = "Sigibert's Struggle",
+	Description = "The Austrasian king Sigibert must fight his brother Chilperich in a bitter civil war for supremacy over all of Francia.",
+	Civilization = "teuton",
+	Faction = "Austrasia",
+	Year = 561 -- Sigibert's reign in Austrasia begins
+})
