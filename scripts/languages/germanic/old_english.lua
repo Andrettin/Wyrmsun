@@ -1957,6 +1957,7 @@ DefineLanguageWord("Wælcyrige", { -- Source: Sean Crist, "An Analysis of *z los
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Sorceress"},
+	DerivesFrom = {"proto-germanic", "noun", "Valakuzjōn"},
 	Gender = "feminine"
 })
 

@@ -27,6 +27,7 @@
 
 SetMapTemplateResource("earth", "unit-copper-deposit", {3749, 956}) -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
 
--- Argentoratum
-SetMapTemplateUnit("earth", "unit-latin-town-hall", "Rome", {4013, 948}, -50) -- Gaul (where Argentoratum was located) acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-SetMapTemplateUnit("earth", "unit-latin-barracks", "Rome", {4013, 948}, 161) -- Legionary base present in Argentorate in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+-- Argentoratum / Strassburg
+SetMapTemplateUnit("earth", "unit-latin-town-hall", "Rome", {4013, 948}, -50, 413) -- Gaul (where Argentoratum was located) acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+SetMapTemplateUnit("earth", "unit-latin-barracks", "Rome", {4013, 948}, 161, 413) -- Legionary base present in Argentorate in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "Burgundy", {4013, 948}, 413, 436) -- Argentoratum/Strassburg conquered by the Burgundians in 413 AD, after which they founded a kingdom that lasted until 436; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.

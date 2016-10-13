@@ -158,7 +158,9 @@ DefineLanguage("high-german", { -- define High German early to prevent some type
 		"Airmanareiks", "Ermenrich", -- "Ermenrich" is the German form of the Gothic name "Airmanareiks"
 		"Theodoric", "Dietrich", -- "Dietrich" is the German form of the Gothic name Theodoric
 		-- Old High German
-		"Karal", "Karl"
+		"Karal", "Karl",
+		-- Frankish Personal Names
+		"Chlodwig", "Ludwig" -- Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
 	}
 })
 

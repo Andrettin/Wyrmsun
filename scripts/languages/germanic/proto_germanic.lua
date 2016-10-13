@@ -1462,6 +1462,13 @@ DefineLanguageWord("Vaigô", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Valakuzjōn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Valkyrie"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Valþu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 203.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -1544,13 +1551,6 @@ DefineLanguageWord("Waida", { -- source also gives alternative form "Waizda"; So
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Woad"}
-})
-
-DefineLanguageWord("Walakuzjōn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Valkyrie"},
-	Gender = "feminine"
 })
 
 DefineLanguageWord("Wela", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.

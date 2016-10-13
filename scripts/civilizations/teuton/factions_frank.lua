@@ -41,23 +41,32 @@ DefineFaction("Frank Tribe", {
 	},
 	PersonalNames = {
 		"female", "Bertha", -- Bertha of Paris, Frankish noblewoman related to or a part of the Merovingians; married Æthelberht of Kent; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 79.
+		"female", "Fredegunde", -- concubine of Chilperich; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
 		"male", "Answald", -- Old Frankish name; Source: http://www.cnrtl.fr/definition/lourdaud//1
 		"male", "Berchar", -- Mayor of the Palace of Neustria; Source: "Medieval Warfare V.2", 2013, p. 7.
 		"male", "Carloman", -- son of Charles Martel; Source: "Medieval Warfare V.2", 2013, p. 7.
 		"male", "Carloman", -- son of Pepin the Short; Source: "Medieval Warfare V.2", 2013, p. 7.
+		"male", "Charibert", -- son of Chlothar; died in 567; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
 		"male", "Charles", -- Charles Martel, Mayor of the Palace of Francia (the Old Frankish form of "Charles" should be used instead); Source: "Medieval Warfare V.2", 2013, p. 7.
 		"male", "Charles", -- Charles the Great, or Charlemagne, son of Pepin the Short and King of the Franks (the Old Frankish form of "Charles" should be used instead); Source: "Medieval Warfare V.2", 2013, pp. 7-9.
+		"male", "Childebert", -- son of Chlodwig who ruled in Paris; died in 558; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
+		"male", "Chilperich", -- son of Chlothar; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
 		"male", "Chlodio", -- Frankish king; Source: "Medieval Warfare V.2", 2013, p. 6.
-		"male", "Clovis", -- Frankish king, son of Merovech; married Clothilda (daughter of the Burgundian king Chilperic); he converted to Christianity; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 97, 99; Source: "Medieval Warfare V.2", 2013, p. 6.
+		"male", "Chlodomer", -- son of Chlodwig who ruled in Orléans; died in 524; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
+		"male", "Chlodwig", -- Frankish king, son of Merovech; founder of the Frankish kingdom; married Clothilda (daughter of the Burgundian king Chilperic); he converted to Christianity; died in 511; also known as "Chlodovech", "Chlodoveus" or "Clovis"; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 97, 99; Source: "Medieval Warfare V.2", 2013, p. 6; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
+		"male", "Chlothar", -- son of Chlodwig who ruled in Soissons; died in 561; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
 		"male", "Dagobert", -- King of the Franks as Dagobert I; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 81; Source: "Medieval Warfare V.2", 2013, p. 7.
 		"male", "Drogo", -- son of Carloman and grandson of Charles Martel; Source: "Medieval Warfare V.2", 2013, p. 7.
 		"male", "Grifo", -- son of Charles Martel; Source: "Medieval Warfare V.2", 2013, p. 7.
 		"male", "Grimwald", -- Old Frankish name; Source: http://www.cnrtl.fr/definition/lourdaud//1
+		"male", "Gunthram", -- son of Chlothar; died in 592; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
 		"male", "Merovech", -- Frankish king, son of Chlodio and founder of the Merovingian dynasty; Source: "Medieval Warfare V.2", 2013, p. 6.
 		"male", "Louis", -- Louis the Pious, son of Charlemagne (the Old Frankish form of "Louis" should be used instead); Source: "Medieval Warfare V.2", 2013, p. 9.
 		"male", "Pepin", -- Pepin of Herstal, Mayor of the Palace of Austrasia; Source: "Medieval Warfare V.2", 2013, p. 7.
 		"male", "Pepin", -- Pepin the Short, son of Charles Martel who later became king of the Franks; Source: "Medieval Warfare V.2", 2013, p. 7.
+		"male", "Sigibert", -- Sigibert I (535-575), Frankish king; son of Chlothar; became Siegfried/Sigurd in the myths; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, pp. 327-328.
 		"male", "Theoderic", -- King of the Franks as Theoderic IV; Source: "Medieval Warfare V.2", 2013, p. 7.
+		"male", "Theuderich" -- son of Chlodwig who ruled in Reims; died in 534; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
 	},
 	HistoricalFactionDerivations = {150, "germanic", "Herminone Tribe"},
 	HistoricalTechnologies = {

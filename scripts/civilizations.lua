@@ -1791,6 +1791,11 @@ DefineCivilization("goth", {
 	Playable = false,
 	DevelopsFrom = {"germanic"},
 	Description = _("During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). The Goths and the Vandals played an important role in the wars and migrations of late antiquity, and apportioned a part of the Roman empire for themselves. The Visigoths (the Western Goths) settled in Spain and southern France, the Ostrogoths (the Eastern Goths) in Italy, and the Vandals in North Africa. Being a small minority relative to the populations they had conquered, eventually Goths and Vandals would assimilate into the local cultures."),
+	PersonalNames = {
+		"female", "Brunichilde", -- daughter of the Visigothic king Athanagild; refined, attractive, good-mannered, intelligent and socially affable; died in 613; became Brünhild in the myths; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, pp. 328, 330.
+		"female", "Gailswintha", -- daughter of the Visigothic king Athanagild; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, pp. 328-329.
+		"male", "Athanagild" -- Visigothic king; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
+	},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}

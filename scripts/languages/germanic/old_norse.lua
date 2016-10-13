@@ -1801,6 +1801,7 @@ DefineLanguageWord("Valkyrja", { -- Source: Sean Crist, "An Analysis of *z loss 
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Valkyrie"},
+	DerivesFrom = {"proto-germanic", "noun", "Valakuzjōn"},
 	Gender = "feminine"
 })
 
