@@ -32,10 +32,7 @@ DefineFaction("Asa Tribe", {
 	FactionUpgrade = "upgrade-asa-tribe-faction",
 	SplitsTo = {"Skeldung Tribe", "Herminone Tribe", "Ingaevone Tribe", "Istaevone Tribe"},
 	Description = "The Asa are the legendary progenitors of the Germanic peoples.",
-	Background = "In the Ynglinga Saga, the Asa (another name for the Aesir) were Odin's people, who originally lived in Asaland (identified with Asia), a realm centered in the city of Asgard. They went forth from their original lands to Scandinavia and northern Central Europe, establishing themselves in those regions.",
-	HistoricalTechnologies = {
-		"upgrade-germanic-wood-plow", -4000, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
-	}
+	Background = "In the Ynglinga Saga, the Asa (another name for the Aesir) were Odin's people, who originally lived in Asaland (identified with Asia), a realm centered in the city of Asgard. They went forth from their original lands to Scandinavia and northern Central Europe, establishing themselves in those regions."
 })
 
 DefineFaction("Herminone Tribe", { -- according to Tacitus one of the earliest Germanic tribes; Source: Tacitus, "The Germany and the Agricola of Tacitus", 1897, section 2.
@@ -75,11 +72,7 @@ DefineFaction("Skeldung Tribe", { -- Skjoldung in the original Norse sagas, here
 --	DevelopsTo = {"Dane Tribe", "Goth Tribe", "Herulian Tribe", "Jute Tribe"}
 	DevelopsTo = {"Dane Tribe", "Goth Tribe", "Herulian Tribe"},
 	FactionUpgrade = "upgrade-skeldung-tribe-faction",
-	HistoricalFactionDerivations = {-2800, "germanic", "Asa Tribe"},
-	HistoricalTechnologies = {
-		"upgrade-germanic-bronze-shield", -1100, -- bronze shields found in the Danish bogs began to be made; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
-		"upgrade-germanic-broad-sword", -1000 -- broad bronze sword from Føllenslev; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/men-and-woman-in-the-bronze-age/
-	}
+	HistoricalFactionDerivations = {-2800, "germanic", "Asa Tribe"}
 })
 
 DefineFaction("Yngling Tribe", { -- mythical Swedish dynasty, Yngve was a son of Odin set to succeed him in the rule of Sweden; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 9.

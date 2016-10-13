@@ -30,10 +30,7 @@ DefineFaction("Sitone Tribe", { -- Tribes in Europe between 264 BC and 180 AD; S
 	Type = "tribe",
 	Colors = {"brown"},
 	DevelopsTo = {"Sweden"}, -- same general area
-	HistoricalFactionDerivations = {-264, "germanic", "Yngling Tribe"},
-	HistoricalTechnologies = {
-		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
-	}
+	HistoricalFactionDerivations = {-264, "germanic", "Yngling Tribe"}
 })
 
 DefineFaction("Swede Tribe", {
@@ -42,10 +39,7 @@ DefineFaction("Swede Tribe", {
 	Colors = {"blue", "yellow"},
 	DevelopsTo = {"Sweden"},
 	SplitsTo = {"Sitone Tribe", "Dane Tribe"},
-	HistoricalFactionDerivations = {-264, "germanic", "Yngling Tribe"},
-	HistoricalTechnologies = {
-		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
-	}
+	HistoricalFactionDerivations = {-264, "germanic", "Yngling Tribe"}
 })
 
 DefineFaction("Dane Tribe", {

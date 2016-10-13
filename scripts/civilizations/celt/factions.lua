@@ -145,10 +145,7 @@ DefineFaction("Vana Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
 	Colors = {"blue", "cyan"},
-	Playable = false,
-	HistoricalTechnologies = {
-		"upgrade-germanic-wood-plow", -4000, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
-	}
+	Playable = false
 })
 
 Load("scripts/civilizations/celt/factions_briton.lua")

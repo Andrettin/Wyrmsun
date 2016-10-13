@@ -573,6 +573,18 @@ DefineCivilization("dwarf", {
 	},
 	ShipNames = {
 --		"Skidbladnir" -- ship built by dwarves in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 101.
+	},
+	HistoricalTechnologies = {
+		"upgrade-dwarven-wood-plow", -3000, -- give plow technology to the dwarven factions
+		"upgrade-dwarven-broad-axe", -1, -- bronze age technologies had already been obtained by the dwarves by this point
+		"upgrade-dwarven-shield-1", -1, -- bronze age technologies had already been obtained by the dwarves by this point
+		"upgrade-dwarven-sharp-throwing-axe", -1, -- bronze age technologies had already been obtained by the dwarves by this point
+		"upgrade-dwarven-masonry", 25, -- dwarves already had castles built of stone masonry by then
+		"upgrade-dwarven-coinage", 400, -- the dwarves should already have Coinage technology by then
+		"upgrade-dwarven-great-axe", 550, -- late iron age technologies already obtained by the dwarves by this point
+		"upgrade-dwarven-shield-2", 550, -- late iron age technologies already obtained by the dwarves by this point
+		"upgrade-dwarven-bearded-throwing-axe", 550, -- late iron age technologies already obtained by the dwarves by this point
+		"upgrade-dwarven-ballista-bolt-1", 550, -- late iron age technologies already obtained by the dwarves by this point
 	}
 })
 
@@ -1217,6 +1229,11 @@ DefineCivilization("germanic", {
 	SettlementNames = {
 		"Ansugardiz", -- "Ansugárdiz" is a rendering of rendering of "Asgard" in Proto-Germanic, as in the Ynglinga saga's story Asgard is the settlement in "Asia" in which Odin's people (here understood as the Indo-Europeans who went on to settle Scandinavia and become speakers of Proto-Germanic) used to live until they migrated to Scandinavia; shouldn't be in the location of Astrakhan, but instead where modern Assor is (where?), or alternatively Chasgar (again, where?); Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
 		"Segiztuna" -- "Segiztûna" is a rendering of "Sigtun" in Proto-Germanic, since the Ynglinga saga the city was founded when the cultural ancestors of the Germanic peoples (= Odin's people) first settled Scandinavia
+	},
+	HistoricalTechnologies = {
+		"upgrade-germanic-wood-plow", -4000, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
+		"upgrade-germanic-bronze-shield", -1100, -- bronze shields found in the Danish bogs began to be made; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
+		"upgrade-germanic-broad-sword", -1000 -- broad bronze sword from Føllenslev; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/men-and-woman-in-the-bronze-age/
 	}
 })
 
@@ -1299,6 +1316,9 @@ DefineCivilization("celt", { -- has to be defined after the germanic civilizatio
 		"Pebidiog", -- cantref (administrative division) of Dyfed; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
 		"Penfro", -- cantref (administrative division) of Dyfed; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
 		"Rhos" -- cantref (administrative division) of Dyfed; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
+	},
+	HistoricalTechnologies = {
+		"upgrade-germanic-wood-plow", -4000, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
 	}
 })
 
@@ -1618,6 +1638,9 @@ DefineCivilization("teuton", {
 		"Tyrol", -- "Tirol"
 		"Vorarlberg",
 		"Westphalia" -- "Westfalen"
+	},
+	HistoricalTechnologies = {
+		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}
 })
 
@@ -1767,7 +1790,10 @@ DefineCivilization("goth", {
 	Adjective = "Gothic",
 	Playable = false,
 	DevelopsFrom = {"germanic"},
-	Description = _("During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). The Goths and the Vandals played an important role in the wars and migrations of late antiquity, and apportioned a part of the Roman empire for themselves. The Visigoths (the Western Goths) settled in Spain and southern France, the Ostrogoths (the Eastern Goths) in Italy, and the Vandals in North Africa. Being a small minority relative to the populations they had conquered, eventually Goths and Vandals would assimilate into the local cultures.")
+	Description = _("During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). The Goths and the Vandals played an important role in the wars and migrations of late antiquity, and apportioned a part of the Roman empire for themselves. The Visigoths (the Western Goths) settled in Spain and southern France, the Ostrogoths (the Eastern Goths) in Italy, and the Vandals in North Africa. Being a small minority relative to the populations they had conquered, eventually Goths and Vandals would assimilate into the local cultures."),
+	HistoricalTechnologies = {
+		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+	}
 })
 
 DefineCivilization("greek", {
@@ -1920,6 +1946,9 @@ DefineCivilization("norse", {
 	PersonalNames = {
 		"male", "Hathuwulf", -- Hathuwulf is a chieftain whose name appeared in a runestone at Stentoften in Blekinge; Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 118.
 		"male", "Lytir" -- male name which means "lot-reader" or "speaker of truth"; Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 119.
+	},
+	HistoricalTechnologies = {
+		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}
 })
 
@@ -2054,6 +2083,12 @@ DefineCivilization("aesir", {
 		"germanic/ui/resource.png", 0, 0,
 		"germanic/ui/buttonpanel.png", -256, -200,
 		"germanic/ui/infopanel.png", 0, -200
+	},
+	HistoricalTechnologies = { -- give the Aesir iron weapons and armor from the beginning
+		"upgrade-germanic-broad-sword", 0,
+		"upgrade-teuton-spatha", 0,
+		"upgrade-germanic-bronze-shield", 0,
+		"upgrade-teuton-iron-shield", 0
 	}
 })
 
