@@ -43,12 +43,6 @@ DefineCharacter("Marbod", {
 	Persistent = true,
 	HistoricalTitles = {
 		"head-of-state", -9, 19, "teuton", "Marcomanni Tribe"
-	},
-	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "Marcomanni Tribe") then -- since he was a chieftain of the Marcomanni, he should only be recruitable by that faction; otherwise weird results could occur, such as the Marcomanni ending up fighting him
-			return true
-		end
-		return false
-	end
+	}
 })
 
