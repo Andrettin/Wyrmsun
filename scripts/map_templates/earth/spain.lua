@@ -33,3 +33,12 @@ SetMapTemplateResource("earth", "unit-copper-deposit", {3686, 1201}) -- Copper d
 SetMapTemplateResource("earth", "unit-copper-deposit", {3687, 1194}) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
 SetMapTemplateResource("earth", "unit-copper-deposit", {3695, 1201}) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
 SetMapTemplateResource("earth", "unit-copper-deposit", {3792, 1194}) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
+
+-- Barcelona
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "Visigothia", {3889, 1106}, 526) -- Barcelona was a part of the Kingdom of the Visigoths in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+
+-- Valencia
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "Visigothia", {3833, 1148}, 526) -- Valencia was a part of the Kingdom of the Visigoths in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+
+-- Zaragoza
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "Visigothia", {3824, 1103}, 526) -- Zaragoza was a part of the Kingdom of the Visigoths in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.

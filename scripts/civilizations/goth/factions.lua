@@ -136,7 +136,10 @@ DefineFaction("Burgundy", {
 	Type = "polity",
 	Colors = {"brown"},
 	DefaultTier = "kingdom",
-	HistoricalFactionDerivations = {411, "goth", "Burgundian Tribe"} -- Kingdom of the Burgundians established by Gundahar (a Burgundian tribal chief) in 411 AD, with its center in Borbetomagus (Worms); Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-93.
+	HistoricalFactionDerivations = {411, "goth", "Burgundian Tribe"}, -- Kingdom of the Burgundians established by Gundahar (a Burgundian tribal chief) in 411 AD, with its center in Borbetomagus (Worms); Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-93.
+	HistoricalTechnologies = {
+		"upgrade-teuton-writing", 0 -- polities must have writing
+	}
 })
 
 DefineFaction("Gothia", {
@@ -150,19 +153,28 @@ DefineFaction("Ostrogothia", {
 	Civilization = "goth",
 	Type = "polity",
 	Colors = {"red"},
-	DefaultTier = "kingdom"
+	DefaultTier = "kingdom",
+	HistoricalTechnologies = {
+		"upgrade-teuton-writing", 0 -- polities must have writing
+	}
 })
 
 DefineFaction("Vandalia", {
 	Civilization = "goth",
 	Type = "polity",
 	Colors = {"cyan", "blue"},
-	DefaultTier = "kingdom"
+	DefaultTier = "kingdom",
+	HistoricalTechnologies = {
+		"upgrade-teuton-writing", 0 -- polities must have writing
+	}
 })
 
 DefineFaction("Visigothia", {
 	Civilization = "goth",
 	Type = "polity",
 	Colors = {"pink"},
-	DefaultTier = "kingdom"
+	DefaultTier = "kingdom",
+	HistoricalTechnologies = {
+		"upgrade-teuton-writing", 0 -- polities must have writing
+	}
 })
