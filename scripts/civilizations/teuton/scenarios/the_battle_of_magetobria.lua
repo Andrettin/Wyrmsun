@@ -98,7 +98,7 @@ AddTrigger("the-battle-of-magetobria-introduction",
 			player,
 			{"~!Continue"},
 			{function(s)
-				RemovePlayerObjective(player, "- Defeat your enemies")
+				RemovePlayerObjective(player, "- Defeat your rivals")
 				AddPlayerObjective(player, "- Defeat the Aedui")
 			end}
 		)

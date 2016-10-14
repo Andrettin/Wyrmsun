@@ -96,7 +96,7 @@ AddTrigger("the-blue-danube-introduction",
 				player,
 				{"~!Continue"},
 				{function(s)
-					RemovePlayerObjective(player, "- Defeat your enemies")
+					RemovePlayerObjective(player, "- Defeat your rivals")
 					AddPlayerObjective(player, "- Defeat the Roman remnants")
 				end}
 			)

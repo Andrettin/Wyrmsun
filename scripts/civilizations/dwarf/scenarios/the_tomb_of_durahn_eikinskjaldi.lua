@@ -57,7 +57,7 @@ AddTrigger("the-tomb-of-durahn-eikinskjaldi-introduction",
 			player,
 			{"~!Continue"},
 			{function(s)
-				RemovePlayerObjective(player, "- Defeat your enemies")
+				RemovePlayerObjective(player, "- Defeat your rivals")
 				AddPlayerObjective(player, "- Retrieve Durahn Eikinskjaldi's skull")
 				AddPlayerObjective(player, "- Durstorn and Baglur must survive")
 			end},

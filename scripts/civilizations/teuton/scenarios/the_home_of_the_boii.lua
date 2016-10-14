@@ -186,7 +186,7 @@ AddTrigger("the-home-of-the-boii-introduction",
 					player,
 					{"~!Continue"},
 					{function(s)
-						RemovePlayerObjective(player, "- Defeat your enemies")
+						RemovePlayerObjective(player, "- Defeat your rivals")
 						AddPlayerObjective(player, "- Defeat the Boii")
 						AddPlayerObjective(player, "- Find the warriors of the other tribes (optional)")
 						AddPlayerObjective(player, "- Marbod must survive")

@@ -279,7 +279,7 @@ AddTrigger("closing-the-gates-introduction",
 																								AddPlayerObjective(player, "- Have one unit standing on each glyph at the same time")
 																								AddPlayerObjective(player, "- Rugnur and Baglur must survive")
 																								if (mapinfo.description == "Caverns of Chaincolt") then
-																									RemovePlayerObjective(player, "- Defeat your enemies")
+																									RemovePlayerObjective(player, "- Defeat your rivals")
 																								end
 																								KillUnitAt("unit-revealer", player, 1, {0, 0}, {512, 512})
 																							end}

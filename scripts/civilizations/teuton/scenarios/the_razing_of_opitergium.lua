@@ -85,7 +85,7 @@ AddTrigger("the-razing-of-opitergium-introduction",
 				player,
 				{"~!Continue"},
 				{function(s)
-					RemovePlayerObjective(player, "- Defeat your enemies")
+					RemovePlayerObjective(player, "- Defeat your rivals")
 					AddPlayerObjective(player, "- Destroy Opitergium")
 				end}
 			)

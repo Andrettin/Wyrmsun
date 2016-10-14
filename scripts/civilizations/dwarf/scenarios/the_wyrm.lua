@@ -192,7 +192,7 @@ AddTrigger("the-wyrm-introduction",
 										{"~!Continue"},
 										{function(s)
 											if (mapinfo.description == "Svafnir's Lair") then
-												RemovePlayerObjective(player, "- Defeat your enemies")
+												RemovePlayerObjective(player, "- Defeat your rivals")
 											end
 											AddPlayerObjective(player, "- Get all heroes to the end of the tunnel")
 											AddPlayerObjective(player, "- Rugnur, Baglur and Thursagan must survive")

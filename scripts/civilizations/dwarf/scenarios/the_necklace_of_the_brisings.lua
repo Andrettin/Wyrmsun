@@ -99,7 +99,7 @@ if (LoadedGame == false) then
 	end
 end
 
-RemovePlayerObjective(GetFactionPlayer("Brising Clan"), "- Defeat your enemies")
+RemovePlayerObjective(GetFactionPlayer("Brising Clan"), "- Defeat your rivals")
 
 AddTrigger("the-necklace-of-the-brisings-introduction",
 	function()

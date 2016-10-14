@@ -62,7 +62,7 @@ if (LoadedGame == false) then
 	SetUnitVariable(unit, "Active", false)
 end
 
-RemovePlayerObjective(GetFactionPlayer("Annwn (Arawn)"), "- Defeat your enemies")
+RemovePlayerObjective(GetFactionPlayer("Annwn (Arawn)"), "- Defeat your rivals")
 
 AddTrigger("the-two-kingds-of-annwn-introduction",
 	function()

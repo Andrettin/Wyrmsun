@@ -126,7 +126,7 @@ AddTrigger("on-the-vanaquisl-introduction",
 			player,
 			{"~!Continue"},
 			{function(s)
-				RemovePlayerObjective(player, "- Defeat your enemies")
+				RemovePlayerObjective(player, "- Defeat your rivals")
 				AddPlayerObjective(player, "- Destroy Vanaland's Chieftain's Hall")
 			end}
 		)

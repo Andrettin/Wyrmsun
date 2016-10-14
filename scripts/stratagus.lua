@@ -322,7 +322,7 @@ function SinglePlayerTriggers()
 	AddTrigger("default-victory",
 --		function() return GetNumOpponents(GetThisPlayer()) == 0 end,
 		function()
-			if (GetNumRivals(GetThisPlayer()) == 0 and PlayerHasObjective(GetThisPlayer(), "- Defeat your enemies")) then
+			if (GetNumRivals(GetThisPlayer()) == 0 and PlayerHasObjective(GetThisPlayer(), "- Defeat your rivals")) then
 				return true
 			else
 				return false
@@ -364,7 +364,7 @@ function SinglePlayerTriggers()
 
 		for key, value in pairs(CustomPlayerData) do
 			CustomPlayerData[key].Objectives = {}
-			AddPlayerObjective(CustomPlayerData[key].Number, "- Defeat your enemies")
+			AddPlayerObjective(CustomPlayerData[key].Number, "- Defeat your rivals")
 		end
 	end
 	
@@ -426,7 +426,7 @@ function SinglePlayerTriggers()
 
 	if (GetCurrentQuest() ~= "" and GetQuestData(GetCurrentQuest(), "Scenario") ~= "") then
 		if (table.getn(GetQuestData(GetCurrentQuest(), "Objectives")) > 0) then -- if quest has pre-set objectives, add them now
-			RemovePlayerObjective(GetThisPlayer(), "- Defeat your enemies")
+			RemovePlayerObjective(GetThisPlayer(), "- Defeat your rivals")
 			for i=1, table.getn(GetQuestData(GetCurrentQuest(), "Objectives")) do
 				AddPlayerObjective(GetThisPlayer(), GetQuestData(GetCurrentQuest(), "Objectives")[i])
 			end
@@ -435,7 +435,7 @@ function SinglePlayerTriggers()
 	end
 
 	if (GetCurrentCampaign() ~= "" and GetCampaignData(GetCurrentCampaign(), "Sandbox") == false) then
-		RemovePlayerObjective(GetThisPlayer(), "- Defeat your enemies")
+		RemovePlayerObjective(GetThisPlayer(), "- Defeat your rivals")
 	end
 	
 	-- events are limited to the campaign mode

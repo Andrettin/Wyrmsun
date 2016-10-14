@@ -282,7 +282,7 @@ AddTrigger("caverns-of-flame-introduction",
 											{"~!Continue"},
 											{function(s)
 												if (mapinfo.description == "Caverns of Flame") then
-													RemovePlayerObjective(player, "- Defeat your enemies")
+													RemovePlayerObjective(player, "- Defeat your rivals")
 												end
 												AddPlayerObjective(player, "- Explore as much of the cave as possible")
 												AddPlayerObjective(player, "- Rugnur, Baglur and Thursagan must survive")
@@ -498,7 +498,7 @@ AddTrigger("caverns-of-flame-shinsplitters-caught-up",
 					SetUnitVariable(unit, "CustomAIState", 4)
 				end
 			end
-			RemovePlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Defeat your enemies")
+			RemovePlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Defeat your rivals")
 			AddPlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Defeat the Norlunds")
 			Event(
 				FindHero("Rugnur"),

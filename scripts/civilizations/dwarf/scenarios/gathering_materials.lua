@@ -385,7 +385,7 @@ AddTrigger("gathering-materials-introduction",
 									{"~!Continue"},
 									{function(s)
 										if (mapinfo.description == "Eastern Mines") then
-											RemovePlayerObjective(player, "- Defeat your enemies")
+											RemovePlayerObjective(player, "- Defeat your rivals")
 										end
 										AddPlayerObjective(player, "- Collect 10000 gold and 20000 coal")
 										AddPlayerObjective(player, "- Rugnur, Baglur and Thursagan must survive")

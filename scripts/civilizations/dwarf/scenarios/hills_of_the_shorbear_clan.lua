@@ -350,11 +350,11 @@ AddTrigger("hills-of-the-shorbear-clan-introduction",
 																																	SetUnitVariable(unit, "Active", false)
 																																end
 																																if (mapinfo.description == "Shorbear Hills") then
-																																	RemovePlayerObjective(player, "- Defeat your enemies")
+																																	RemovePlayerObjective(player, "- Defeat your rivals")
 																																end
 																																AddPlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
 																																AddPlayerObjective(player, "- Rugnur, Baglur, Thursagan, Durstorn and the Gnomish Envoy must survive")
-																																RemovePlayerObjective(GetFactionPlayer("Shorbear Clan"), "- Defeat your enemies")
+																																RemovePlayerObjective(GetFactionPlayer("Shorbear Clan"), "- Defeat your rivals")
 																																AddPlayerObjective(GetFactionPlayer("Shorbear Clan"), "- Defeat the Norlunds")
 																																--[[
 																																if (GrandStrategy) then
@@ -553,7 +553,7 @@ AddTrigger("hills-of-the-shorbear-clan-shinsplitters-arrive",
 												event_player,
 												{"~!Continue"},
 												{function(s)
-													RemovePlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Defeat your enemies")
+													RemovePlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Defeat your rivals")
 													AddPlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Defeat the Norlunds")
 												end}
 											)

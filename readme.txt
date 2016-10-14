@@ -93,6 +93,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused the autosave to remain active even after deactivating it in the options.
 - Added support for maps having multiple layers.
 - Flavor triggers now only happen in the campaign mode.
+- Changed the "Defeat your enemies" default objective description to "Defeat your rivals".
 
 * Quests
 - Added a new Campaign mode, playable on a massive map with several layers.

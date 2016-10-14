@@ -124,7 +124,7 @@ AddTrigger("westward-migration-introduction",
 			player,
 			{"~!Continue"},
 			{function(s)
-				RemovePlayerObjective(player, "- Defeat your enemies")
+				RemovePlayerObjective(player, "- Defeat your rivals")
 				AddPlayerObjective(player, "- Have a Bura stand on the glyph to the southwest")
 			end}
 		)

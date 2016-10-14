@@ -88,7 +88,7 @@ AddTrigger("gylves-realm-introduction",
 			player,
 			{"~!Continue"},
 			{function(s)
-				RemovePlayerObjective(player, "- Defeat your enemies")
+				RemovePlayerObjective(player, "- Defeat your rivals")
 				AddPlayerObjective(player, "- Destroy all of Gylve's war lodges and military units")
 			end}
 		)

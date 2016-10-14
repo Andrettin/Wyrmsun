@@ -62,7 +62,7 @@ if (LoadedGame == false) then
 	SetTimeOfDay(5) -- the scenario happens in a gloomy evening in Autumn
 end
 
-RemovePlayerObjective(GetFactionPlayer("Untersberg"), "- Defeat your enemies")
+RemovePlayerObjective(GetFactionPlayer("Untersberg"), "- Defeat your rivals")
 
 AddTrigger("pypos-gold-victory",
 	function()

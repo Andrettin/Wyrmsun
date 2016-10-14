@@ -95,7 +95,7 @@ AddTrigger("the-mead-of-wisdom-introduction-old",
 						{"~!Continue"},
 						{function(s)
 							if (mapinfo.description == "Fjalar's and Galar's Hall") then
-								RemovePlayerObjective(player, "- Defeat your enemies")
+								RemovePlayerObjective(player, "- Defeat your rivals")
 							end
 							AddPlayerObjective(player, "- Find Thjodrorir and slay him")
 						end},
@@ -140,7 +140,7 @@ AddTrigger("the-mead-of-wisdom-introduction",
 				{"~!Continue"},
 				{function(s)
 					if (mapinfo.description == "Fjalar's and Galar's Hall") then
-						RemovePlayerObjective(player, "- Defeat your enemies")
+						RemovePlayerObjective(player, "- Defeat your rivals")
 					end
 					AddPlayerObjective(player, "- Rescue Thjodrorir's remains")
 					AddPlayerObjective(player, "- Bring Fjalar and Galar to the clan's justice")

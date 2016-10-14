@@ -285,7 +285,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 																															unit = CreateUnitInTransporter("unit-gold-chest", PlayerNumNeutral, transporter)
 																															if (mapinfo.description == "Chaincolt Foothills") then
 																																ChangeUnitsOwner({6, 65}, {6 + 1, 65 + 1}, gnomish_monarch_player, 0)
-																																RemovePlayerObjective(player, "- Defeat your enemies")
+																																RemovePlayerObjective(player, "- Defeat your rivals")
 																															end
 																															SetDiplomacy(gnomish_monarch_player, "allied", player)
 																															SetSharedVision(gnomish_monarch_player, true, player)

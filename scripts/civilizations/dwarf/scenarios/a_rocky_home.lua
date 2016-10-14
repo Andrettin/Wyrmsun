@@ -80,7 +80,7 @@ if (LoadedGame == false) then
 	SetTimeOfDay(2)
 end
 
-RemovePlayerObjective(GetFactionPlayer("Brising Clan"), "- Defeat your enemies")
+RemovePlayerObjective(GetFactionPlayer("Brising Clan"), "- Defeat your rivals")
 
 AddTrigger("a-rocky-home-introduction",
 	function()

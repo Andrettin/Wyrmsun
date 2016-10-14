@@ -188,7 +188,7 @@ AddTrigger("searching-for-the-runecrafter-introduction",
 											SetUnitVariable(unit, "Active", false)
 										end
 										if (mapinfo.description == "Northern Wastelands") then
-											RemovePlayerObjective(player, "- Defeat your enemies")
+											RemovePlayerObjective(player, "- Defeat your rivals")
 										end
 										AddPlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
 										AddPlayerObjective(player, "- Rugnur, Baglur, Thursagan and the gnomish envoy must survive")

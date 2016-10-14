@@ -72,7 +72,7 @@ AddTrigger("northwards-to-the-sea-introduction",
 			player,
 			{"~!Continue"},
 			{function(s)
-				RemovePlayerObjective(player, "- Defeat your enemies")
+				RemovePlayerObjective(player, "- Defeat your rivals")
 				AddPlayerObjective(player, "- Subdue the natives")
 			end}
 		)

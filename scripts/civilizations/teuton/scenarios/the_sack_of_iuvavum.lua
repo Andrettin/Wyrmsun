@@ -120,7 +120,7 @@ AddTrigger("the-sack-of-iuvavum-introduction",
 				player,
 				{"~!Continue"},
 				{function(s)
-					RemovePlayerObjective(player, "- Defeat your enemies")
+					RemovePlayerObjective(player, "- Defeat your rivals")
 					AddPlayerObjective(player, "- Leave no building standing")
 				end}
 			)
