@@ -106,8 +106,8 @@ SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "Khag Tribe", {-1, -1}
 --SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "Lggi Tribe", {-1, -1})
 
 SetMapTemplateLayerConnector("nidavellir", "unit-portal", {-1, -1}, "Asgard")
-SetMapTemplateLayerConnector("nidavellir", "unit-glyph", {-1, -1}, 1)
-SetMapTemplateLayerConnector("nidavellir-underground-1", "unit-glyph", {-1, -1}, 0)
+SetMapTemplateLayerConnector("nidavellir", "unit-cavern-entrance", {-1, -1}, 1)
+SetMapTemplateLayerConnector("nidavellir-underground-1", "unit-cavern-entrance", {-1, -1}, 0)
 
 --Load("scripts/map_templates/nidavellir/aurvang.lua")
 --Load("scripts/map_templates/nidavellir/joruvellir.lua")

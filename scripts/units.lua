@@ -770,7 +770,40 @@ DefineUnitType("unit-hole", { Name = _("Hole"),
 --		"help", "basic-dwarf-voices-help",
 		"dead", "building-destroyed"
 	}
-} )		
+} )
+
+DefineUnitType("unit-cavern-entrance", {
+	Name = _("Cavern Entrance"),
+	Image = {"file", "neutral/buildings/cavern_entrance.png", "size", {96, 96}},
+	Shadow = {"file", "neutral/buildings/cavern_entrance_shadow.png", "size", {96, 96}},
+	Animations = "animations-building", Icon = "icon-portal",
+	NeutralMinimapColor = {128, 128, 0},
+	Costs = {"time", 150},
+	Speed = 0,
+	HitPoints = 25500,
+	DrawLevel = 40,
+	TileSize = {3, 3}, BoxSize = {95, 95},
+	SightRange = 1,
+	Armor = 20, Missile = "missile-none",
+	Priority = 0,
+	Type = "land",
+	NumDirections = 1,
+	BoardSize = 100, -- to prevent this unit from being loaded into transporters
+	VisibleUnderFog = true,
+	Indestructible = true,
+	Variations = {
+		{
+			"variation-id", "gray"
+		},
+		{
+			"variation-id", "brown",
+			"file", "neutral/buildings/cavern_entrance_brown.png"
+		}
+	},
+	Sounds = {
+		"selected", "click"
+	}
+} )
 
 DefineUnitType("unit-portal", {
 	Name = _("Portal"),
