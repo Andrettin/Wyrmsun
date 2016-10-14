@@ -1794,7 +1794,8 @@ DefineCivilization("goth", {
 	PersonalNames = {
 		"female", "Brunichilde", -- daughter of the Visigothic king Athanagild; refined, attractive, good-mannered, intelligent and socially affable; died in 613; became Brünhild in the myths; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, pp. 328, 330.
 		"female", "Gailswintha", -- daughter of the Visigothic king Athanagild; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, pp. 328-329.
-		"male", "Athanagild" -- Visigothic king; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
+		"male", "Athanagild", -- Visigothic king; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
+		"male", "Witiza" -- Visigothic king who reigned 700-710; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 400.
 	},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.

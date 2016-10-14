@@ -247,7 +247,11 @@ DefineFaction("Frisian Tribe", {
 	Colors = {"violet", "purple"}, -- change to a better one?
 	DevelopsTo = {"Friesland", "Netherlands"},
 	FactionUpgrade = "upgrade-frisian-tribe-faction",
-	HistoricalFactionDerivations = {-264, "germanic", "Ingaevone Tribe"}
+	HistoricalFactionDerivations = {-264, "germanic", "Ingaevone Tribe"},
+	PersonalNames = {
+		"male", "Bubo", -- Frisian ruler defeated by Charles Martel in 736; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 403.
+		"male", "Radbod" -- Frisian ruler defeated by Charles Martel in 718; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 403.
+	},
 })
 
 DefineFaction("Hermunduri Tribe", {
@@ -283,7 +287,7 @@ DefineFaction("Lombard Tribe", {
 		"male", "Authari", -- king of the Lombards (from 584 to 590); Source: "Medieval Warfare IV.6", 2013, p. 16.
 		"male", "Desiderius", -- king of the Lombards; Source: "Medieval Warfare V.2", 2013, p. 7.
 		"male", "Gisulf", -- Source: "Medieval Warfare IV.6", 2013, p. 8.
-		"male", "Liutprand", -- king of the Lombards (from 712 to 744); Source: "Medieval Warfare IV.6", 2013, p. 9.
+		"male", "Liudprand", -- given by Medieval Warfare as "Liutprand", and by Archibald Lewis as "Liudprand"; king of the Lombards (from 712 to 744); Source: "Medieval Warfare IV.6", 2013, p. 9; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 400.
 		"male", "Nordulf" -- Lombard mercenary; Source: "Medieval Warfare IV.6", 2013, p. 18.
 	},
 	HistoricalFactionDerivations = {-264, "germanic", "Istaevone Tribe"}
