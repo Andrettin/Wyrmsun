@@ -39,6 +39,9 @@ SetMapTemplateUnit("earth", "unit-teuton-town-hall", "Ripuaria", {3962, 1062}, 5
 -- Metz / Mettis
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "Ripuaria", {3981, 931}, 561) -- Mettis went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
+-- Paris
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "Neustria", {3891, 937}, 561) -- Paris went to Charibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+
 -- Reims / Durocortorum
 SetMapTemplateUnit("earth", "unit-latin-town-hall", "Rome", {3930, 926}, -50, 526) -- Gaul (where Durocortorum was located) was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "Francia", {3930, 926}, 526, 561) -- Reims was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
