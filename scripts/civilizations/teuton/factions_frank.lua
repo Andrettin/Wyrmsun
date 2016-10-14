@@ -30,7 +30,7 @@ DefineFaction("Frank Tribe", {
 	Type = "tribe",
 	Language = "old-frankish",
 	Colors = {"green", "orange"},
-	DevelopsTo = {"Francia", "Franconia", "Austrasia", "Neustria", "East Francia", "Netherlands"},
+	DevelopsTo = {"Francia", "Franconia", "Austrasia", "Neustria", "Ripuaria", "Salia", "East Francia", "Netherlands"},
 	FactionUpgrade = "upgrade-frank-tribe-faction",
 	Description = "The Franks are one of the most powerful Germanic tribes to have existed. From their humble beginnings in their dwellings along the Rhine, they eventually managed to conquer the entirety of Gaul and much of Central Europe.",
 	UIFillers = {
@@ -42,12 +42,14 @@ DefineFaction("Frank Tribe", {
 	PersonalNames = {
 		"female", "Bertha", -- Bertha of Paris, Frankish noblewoman related to or a part of the Merovingians; married Æthelberht of Kent; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 79.
 		"female", "Fredegunde", -- concubine of Chilperich; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
+		"male", "Adalgisel", -- Frankish duke; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 398.
 		"male", "Answald", -- Old Frankish name; Source: http://www.cnrtl.fr/definition/lourdaud//1
 		"male", "Austrovald", -- Frankish duke; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 392.
 		"male", "Beppelin", -- Frankish duke; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 391.
 		"male", "Berchar", -- Mayor of the Palace of Neustria; Source: "Medieval Warfare V.2", 2013, p. 7.
 		"male", "Berulf", -- Frankish duke; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 392.
 		"male", "Bladast", -- Frankish duke; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 392.
+		"male", "Bobo", -- Frankish duke of Auvergne in 639; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 397.
 		"male", "Bodegisel", -- Frankish duke; died in 585; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 393.
 		"male", "Carloman", -- son of Charles Martel; Source: "Medieval Warfare V.2", 2013, p. 7.
 		"male", "Carloman", -- son of Pepin the Short; Source: "Medieval Warfare V.2", 2013, p. 7.
@@ -152,4 +154,22 @@ DefineFaction("Neustria", {
 	MinisterTitles = {
 		"head-of-government", "no-gender", "monarchy", "no-faction-tier", "Mayor of the Palace" -- Source: "Medieval Warfare V.2", 2013, p. 7.
 	}
+})
+
+DefineFaction("Ripuaria", {
+	Civilization = "teuton",
+	ParentFaction = "Francia",
+	Type = "polity",
+	Colors = {"orange"},
+	DefaultTier = "kingdom",
+	DevelopsTo = {"Austrasia", "Francia", "Holy Rome"}
+})
+
+DefineFaction("Salia", {
+	Civilization = "teuton",
+	ParentFaction = "Francia",
+	Type = "polity",
+	Colors = {"pink"},
+	DefaultTier = "kingdom",
+	DevelopsTo = {"Austrasia", "Francia", "Holy Rome"}
 })

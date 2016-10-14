@@ -51,8 +51,8 @@ DefineCampaign("the-marcomannic-wars", {
 
 DefineCampaign("sigiberts-struggle", {
 	Name = "Sigibert's Struggle",
-	Description = "The Austrasian king Sigibert must fight his brother Chilperich in a bitter civil war for supremacy over all of Francia.",
+	Description = "The Ripuarian king Sigibert must fight his brother Chilperich in a bitter civil war for supremacy over all of Francia.",
 	Civilization = "teuton",
-	Faction = "Austrasia",
-	Year = 561 -- Sigibert's reign in Austrasia begins
+	Faction = "Ripuaria",
+	Year = 561 -- Sigibert's reign in his lands begins
 })

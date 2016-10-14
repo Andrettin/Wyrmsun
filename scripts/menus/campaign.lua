@@ -106,11 +106,8 @@ function RunCampaignMenu()
 			GameSettings.NoRandomness = wyr.preferences.NoRandomness
 			GameSettings.NoTimeOfDay = wyr.preferences.NoTimeOfDay
 			GameSettings.Difficulty = wyr.preferences.Difficulty
-			RunMap("scripts/map_templates/campaign.smp")
 			menu:stop()
-			if not (LoadGameFile) then
-				RunCampaignMenu()
-			end
+			RunMap("scripts/map_templates/campaign.smp")
 		end
 	)
 	
