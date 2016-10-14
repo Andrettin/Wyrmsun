@@ -105,7 +105,7 @@ SetMapTemplateUnit("nidavellir", "unit-gnomish-town-hall", "Sagan Tribe", {-1, -
 SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "Khag Tribe", {-1, -1})
 --SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "Lggi Tribe", {-1, -1})
 
-SetMapTemplateLayerConnector("nidavellir", "unit-glyph", {-1, -1}, "Asgard")
+SetMapTemplateLayerConnector("nidavellir", "unit-portal", {-1, -1}, "Asgard")
 SetMapTemplateLayerConnector("nidavellir", "unit-glyph", {-1, -1}, 1)
 SetMapTemplateLayerConnector("nidavellir-underground-1", "unit-glyph", {-1, -1}, 0)
 

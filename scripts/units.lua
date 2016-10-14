@@ -200,7 +200,8 @@ DefineUnitType("unit-template-sapient-unit", { Name = _("Sapient Unit"),
 
 Load("scripts/units_fauna.lua")
 
-DefineUnitType("unit-template-deposit", { Name = _("Deposit"),
+DefineUnitType("unit-template-deposit", {
+	Name = _("Deposit"),
 	Parent = "unit-template-building",
 	NeutralMinimapColor = {255, 255, 0},
 	Costs = {"time", 150},
@@ -225,7 +226,8 @@ DefineUnitType("unit-template-deposit", { Name = _("Deposit"),
 	}
 } )
 
-DefineUnitType("unit-template-mine", { Name = _("Mine"),
+DefineUnitType("unit-template-mine", {
+	Name = _("Mine"),
 	Parent = "unit-template-building",
 	Animations = "animations-mine",
 	NeutralMinimapColor = {255, 255, 0},
@@ -377,7 +379,8 @@ DefineUnitType("unit-copper-mine", {
 	ButtonHint = _("Build ~!Copper Mine")
 } )
 
-DefineUnitType("unit-coal-mine", { Name = _("Coal Mine"),
+DefineUnitType("unit-coal-mine", {
+	Name = _("Coal Mine"),
 	Parent = "unit-template-building",
 	Description = _("Coal is a valuable heating material."),
 	Image = {"file", "neutral/buildings/coal_mine.png", "size", {96, 96}},
@@ -413,7 +416,9 @@ DefineUnitType("unit-coal-mine", { Name = _("Coal Mine"),
 --		"acknowledge", "gold-mine-acknowledge",
 --		"ready", "gold-mine-ready",
 --		"help", "gold-mine-help",
-		"dead", "building-destroyed"} } )
+		"dead", "building-destroyed"
+	}
+} )
 
 DefineUnitType("unit-gold-rock", {
 	Name = _("Gold Rock"),
@@ -766,7 +771,31 @@ DefineUnitType("unit-hole", { Name = _("Hole"),
 		"dead", "building-destroyed"
 	}
 } )		
-	
+
+DefineUnitType("unit-portal", {
+	Name = _("Portal"),
+	Image = {"file", "neutral/buildings/portal_frame.png", "size", {96, 96}},
+	LightImage = {"file", "neutral/buildings/portal.png"},
+	Animations = "animations-portal", Icon = "icon-portal",
+	NeutralMinimapColor = {128, 128, 0},
+	Costs = {"time", 150},
+	Speed = 0,
+	HitPoints = 25500,
+	DrawLevel = 40,
+	TileSize = {3, 3}, BoxSize = {95, 95},
+	SightRange = 1,
+	Armor = 20, Missile = "missile-none",
+	Priority = 0,
+	Type = "land",
+	NumDirections = 1,
+	BoardSize = 100, -- to prevent this unit from being loaded into transporters
+	VisibleUnderFog = true,
+	Indestructible = true,
+	Sounds = {
+		"selected", "click"
+	}
+} )
+
 DefineUnitType("unit-mushroom", {
 	Name = "Mushroom",
 	Image = {"file", "neutral/decorations/mushroom.png", "size", {32, 32}},

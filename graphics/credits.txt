@@ -881,6 +881,7 @@ João Victor G. Costa (Jinn):
 /graphics/neutral/buildings/land_construction_site.png (licensed under the CC0)
 /graphics/neutral/buildings/mercenary_camp.png (later modified by b_o to add the fire animation) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/neutral/buildings/mercenary_camp_shadow.png (licensed under the CC0)
+/graphics/neutral/buildings/portal.png (licensed under the CC0)
 /graphics/neutral/buildings/silver_deposit.png (licensed under the CC0)
 /graphics/neutral/buildings/silver_deposit_shadow.png (licensed under the CC0)
 /graphics/neutral/buildings/silver_mine.png (licensed under the CC0)

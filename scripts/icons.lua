@@ -829,6 +829,12 @@ DefineIcon({
 	File = "neutral/icons/thurs_rune.png"
 })
 
+DefineIcon({
+	Name = "icon-portal",
+	Size = {46, 38},
+	File = "neutral/icons/portal.png"
+})
+
 -- tileset-dependent icons
 
 if (GetCurrentTileset() == "swamp" or GetCurrentTileset() == "dungeon") then

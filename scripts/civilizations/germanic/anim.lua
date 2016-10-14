@@ -32,8 +32,8 @@
 --
 
 DefineAnimations("animations-germanic-town-hall", {
-  Still = {"frame 0", "wait 6", "frame 1", "wait 6", "frame 2", "wait 6", "frame 0", "wait 1",},
-  Research = {"frame 0", "wait 6", "frame 1", "wait 6", "frame 2", "wait 6", "frame 0", "wait 1",},
-  Train = {"frame 0", "wait 6", "frame 1", "wait 6", "frame 2", "wait 6", "frame 0", "wait 1",},
-  Upgrade = {"frame 3", "wait 4", "frame 3", "wait 1",},
+	Still = {"frame 0", "wait 6", "frame 1", "wait 6", "frame 2", "wait 6", "frame 0", "wait 1",},
+	Research = {"frame 0", "wait 6", "frame 1", "wait 6", "frame 2", "wait 6", "frame 0", "wait 1",},
+	Train = {"frame 0", "wait 6", "frame 1", "wait 6", "frame 2", "wait 6", "frame 0", "wait 1",},
+	Upgrade = {"frame 3", "wait 4", "frame 3", "wait 1",},
 })

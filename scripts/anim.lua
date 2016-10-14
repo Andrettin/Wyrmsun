@@ -1298,3 +1298,10 @@ DefineAnimations("animations-transport-ship", {
 	Attack = {"unbreakable begin", "frame 0", "attack", "wait 119", "frame 0", "unbreakable end", "wait 1",},
 	Death = {"unbreakable begin", "frame 5", "wait 50", "frame 10", "wait 50", "frame 10", "unbreakable end", "wait 1",}
 })
+
+DefineAnimations("animations-portal", {
+	Still = {"frame 0", "wait 5", "frame 1", "wait 5", "frame 2", "wait 5", "frame 3", "wait 5", "frame 4", "wait 5", "frame 5", "wait 5", "frame 6", "wait 5", "frame 7", "wait 5", "frame 8", "wait 5", "frame 9", "wait 5", "frame 10", "wait 5", "frame 11", "wait 5", "frame 0", "wait 1",},
+	Research = {"frame 0", "wait 5", "frame 1", "wait 5", "frame 2", "wait 5", "frame 3", "wait 5", "frame 4", "wait 5", "frame 5", "wait 5", "frame 6", "wait 5", "frame 7", "wait 5", "frame 8", "wait 5", "frame 9", "wait 5", "frame 10", "wait 5", "frame 11", "wait 5", "frame 0", "wait 1",},
+	Train = {"frame 0", "wait 5", "frame 1", "wait 5", "frame 2", "wait 5", "frame 3", "wait 5", "frame 4", "wait 5", "frame 5", "wait 5", "frame 6", "wait 5", "frame 7", "wait 5", "frame 8", "wait 5", "frame 9", "wait 5", "frame 10", "wait 5", "frame 11", "wait 5", "frame 0", "wait 1",},
+	Upgrade = {"frame 0", "wait 5", "frame 1", "wait 5", "frame 2", "wait 5", "frame 3", "wait 5", "frame 4", "wait 5", "frame 5", "wait 5", "frame 6", "wait 5", "frame 7", "wait 5", "frame 8", "wait 5", "frame 9", "wait 5", "frame 10", "wait 5", "frame 11", "wait 5", "frame 0", "wait 1",}
+})
