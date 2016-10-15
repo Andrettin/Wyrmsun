@@ -791,6 +791,7 @@ DefineUnitType("unit-cavern-entrance", {
 	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	VisibleUnderFog = true,
 	Indestructible = true,
+	Building = true,
 	Variations = {
 		{
 			"variation-id", "gray"
@@ -814,7 +815,7 @@ DefineUnitType("unit-portal", {
 	Costs = {"time", 150},
 	Speed = 0,
 	HitPoints = 25500,
-	DrawLevel = 40,
+	DrawLevel = 10,
 	TileSize = {3, 3}, BoxSize = {95, 95},
 	SightRange = 1,
 	Armor = 20, Missile = "missile-none",
@@ -824,6 +825,8 @@ DefineUnitType("unit-portal", {
 	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	VisibleUnderFog = true,
 	Indestructible = true,
+	Building = true,
+	NonSolid = true,
 	Sounds = {
 		"selected", "click"
 	}
