@@ -141,7 +141,7 @@ local GermanicEvents = {
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "asa-tribe" or wyr.preferences.AutomaticBattles) and GrandStrategyFaction.Name ~= "vana-tribe") then
 					ChangeFactionResource("germanic", "asa-tribe", "gold", 1000) -- gold from raiding Vanaland
 					
-					if (GrandStrategyFaction.Name == asa-tribe") then
+					if (GrandStrategyFaction.Name == "asa-tribe") then
 						GenericDialog("On the Vanaquisl", "We have managed to raid the Vana's main settlement, but were later pushed back by their warriors, forcing us to agree to a peace.")
 					end
 				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "asa-tribe" and GrandStrategyFaction.Name == "vana-tribe") then
