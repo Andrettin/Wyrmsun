@@ -80,7 +80,7 @@ https://github.com/Andrettin/Wyrmsun
 - Faction splitting now only happens in the campaign mode.
 
 * Heroes
-- Persistent heroes (including custom ones) can now be hired at the main hall in single-player games (outside of quest scenarios and the grand strategy mode).
+- Persistent heroes (including custom ones) can now be hired at barracks-type buildings and mercenary camps in single-player games (outside of quest scenarios and the grand strategy mode).
 
 * Items
 - Fixed an issue which caused units without inventory to clear their order queue after picking up a healing item.

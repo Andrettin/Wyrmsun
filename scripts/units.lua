@@ -2784,7 +2784,7 @@ DefineUnitType("unit-template-heroic-infantry", {
 	Name = _("Heroic Infantry"),
 	Parent = "unit-template-veteran-infantry",
 	Class = "heroic-infantry",
-	Costs = {"time", 0, "gold", 0},
+	Costs = {"time", 120, "gold", 1200},
 	Strength = 13,
 	Dexterity = 12,
 	Intelligence = 12,
@@ -2858,7 +2858,8 @@ DefineUnitType("unit-template-archer", { Name = _("Shooter"),
 	}
 } )
 
-DefineUnitType("unit-template-veteran-shooter", { Name = _("Veteran Shooter"),
+DefineUnitType("unit-template-veteran-shooter", {
+	Name = _("Veteran Shooter"),
 	Parent = "unit-template-archer",
 	Class = "veteran-shooter",
 	Costs = {"time", 105, "gold", 750, "lumber", 225},
@@ -2982,7 +2983,7 @@ DefineUnitType("unit-template-cavalry", { Name = _("Cavalry"),
 DefineUnitType("unit-template-heroic-cavalry", { Name = _("Heroic Cavalry"),
 	Parent = "unit-template-cavalry",
 	Class = "heroic-cavalry",
-	Costs = {"time", 0, "gold", 0},
+	Costs = {"time", 120, "gold", 1200},
 	Strength = 13,
 	Dexterity = 12,
 	Intelligence = 12,
@@ -3296,6 +3297,7 @@ DefineUnitType("unit-template-barracks", {
 	ExplodeWhenKilled = "missile-explosion",
 	Type = "land",
 	BuilderOutside = true,
+	RecruitHeroes = true,
 	Drops = {"unit-wood-pile"},
 	RightMouseAction = "rally-point",
 	BurnPercent = 50,
@@ -3832,7 +3834,8 @@ DefineUnitType("unit-long-swordsman", { Name = _("Long Swordsman"),
 } )
 
 -- define the mercenary camp after the rest because it refers to unit types of the civilizations
-DefineUnitType("unit-mercenary-camp", { Name = _("Mercenary Camp"),
+DefineUnitType("unit-mercenary-camp", {
+	Name = _("Mercenary Camp"),
 	Parent = "unit-template-building",
 	Class = "mercenary-camp",
 	Description = _("This camp houses a number of mercenary groups, who offer their talents for hire."),
@@ -3857,6 +3860,7 @@ DefineUnitType("unit-mercenary-camp", { Name = _("Mercenary Camp"),
 	RightMouseAction = "rally-point",
 	BurnPercent = 50,
 	BurnDamageRate = 1,
+	RecruitHeroes = true,
 	Trains = {"unit-goblin-thief", "unit-kobold-footpad", "unit-surghan-mercenary-steelclad"},
 	UnitStock = {"unit-goblin-thief", 6, "unit-kobold-footpad", 4},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
