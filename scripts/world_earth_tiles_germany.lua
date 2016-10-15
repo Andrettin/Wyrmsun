@@ -32,7 +32,7 @@ DefineWorldMapTile({498, 111}, {
 		"teuton", "Köln"
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "France", "Cologne"
+		"latin", "france", "Cologne"
 	}
 })
 
@@ -102,7 +102,7 @@ DefineWorldMapTile({506, 109}, {
 		"teuton", "Kassel"
 	},
 	FactionCulturalSettlementNames = {
-		"teuton", "England", "Cassel"
+		"teuton", "england", "Cassel"
 	}
 })
 
@@ -122,7 +122,7 @@ DefineWorldMapTile({507, 107}, {
 		"teuton", "Hannover"
 	},
 	FactionCulturalSettlementNames = {
-		"teuton", "England", "Hanover"
+		"teuton", "england", "Hanover"
 	}
 })
 
@@ -149,7 +149,7 @@ DefineWorldMapTile({509, 107}, {
 		"teuton", "Braunschweig"
 	},
 	FactionCulturalSettlementNames = {
-		"teuton", "England", "Brunswick"
+		"teuton", "england", "Brunswick"
 	}
 })
 

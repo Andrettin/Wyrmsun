@@ -35,7 +35,7 @@ DefineGrandStrategyEvent("Teuton Culture Develops", {
 			and FactionHasTechnologyType(EventFaction, "bronze-shield")
 			and FactionHasTechnologyType(EventFaction, "ranged-projectile-1")
 			and FactionHasTechnologyType(EventFaction, "wood-plow")
-			and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Skeldung Tribe" or EventFaction.Name == "Yngling Tribe") -- the Ynglings shouldn't be able to become Teutons, but let's allow it for now since the other two germanic civilizations are not available for human players
+			and (EventFaction.Name == "asa-tribe" or EventFaction.Name == "skeldung-tribe" or EventFaction.Name == "yngling-tribe") -- the Ynglings shouldn't be able to become Teutons, but let's allow it for now since the other two germanic civilizations are not available for human players
 			and (SyncRand(50) < 1 or FactionHasCulture(EventFaction, "teuton"))
 		) then
 			return true
@@ -127,7 +127,7 @@ DefineGrandStrategyEvent("The Confirmation of Seignorial Privileges", { -- Sourc
 	World = "Earth",
 	Conditions = function(s)
 		if (
-			EventFaction.Name == "Prussia" -- should also be possible for other countries, but let's leave this here for now so that this event doesn't trigger in antiquity
+			EventFaction.Name == "prussia" -- should also be possible for other countries, but let's leave this here for now so that this event doesn't trigger in antiquity
 			and GetProvinceOwner("Estonia") == EventFaction.Name
 			and GetProvinceOwner("Latvia") == EventFaction.Name
 			-- should only trigger after a technology for the appropriate time period has been researched

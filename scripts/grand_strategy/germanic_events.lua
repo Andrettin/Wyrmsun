@@ -32,9 +32,9 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Civilization == "germanic"
-				and EventFaction.Name == "Asa Tribe"
-				and GetFactionMinister("germanic", "Asa Tribe", "head-of-state") == "Lorikus"
---				and FactionHasHero("germanic", "Asa Tribe", "Tror")
+				and EventFaction.Name == "asa-tribe"
+				and GetFactionMinister("germanic", "asa-tribe", "head-of-state") == "Lorikus"
+--				and FactionHasHero("germanic", "asa-tribe", "Tror")
 				and GrandStrategyHeroIsAlive("Tror")
 			) then
 				return true
@@ -60,9 +60,9 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Civilization == "germanic"
-				and EventFaction.Name == "Asa Tribe"
-				and GetFactionMinister("germanic", "Asa Tribe", "head-of-state") == "Lorikus"
---				and FactionHasHero("germanic", "Asa Tribe", "Tror")
+				and EventFaction.Name == "asa-tribe"
+				and GetFactionMinister("germanic", "asa-tribe", "head-of-state") == "Lorikus"
+--				and FactionHasHero("germanic", "asa-tribe", "Tror")
 				and GrandStrategyHeroIsAlive("Tror")
 			) then
 				return true
@@ -77,10 +77,10 @@ local GermanicEvents = {
 				Event(
 					"Tror",
 					"My grandfather was a king beyond these lands... And though my family has been disgraced, we were born to rule!",
-					"Asa Tribe",
+					"asa-tribe",
 					{"~!OK"},
 					{function(s)
-						SetFactionMinister("germanic", "Asa Tribe", "head-of-state", "Tror")
+						SetFactionMinister("germanic", "asa-tribe", "head-of-state", "Tror")
 						KillGrandStrategyHero("Lorikus")
 					end}
 				)
@@ -95,12 +95,12 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Civilization == "germanic"
-				and EventFaction.Name == "Asa Tribe"
+				and EventFaction.Name == "asa-tribe"
 				and GetProvinceOwner("Astrakhan") == EventFaction.Name
-				and GetProvinceOwner("Don") == "Vana Tribe"
+				and GetProvinceOwner("Don") == "vana-tribe"
 --				and GetFactionMinister(EventFaction.Civilization, EventFaction.Name, "head-of-state") ~= "Lorikus" -- only begin the migration with Tror and his descendants
 				and GetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior") >= 8 -- event only happens if player has gathered enough warriors for a raid
-				and FactionHasBorderWith(Factions.AsaTribe, Factions.VanaTribe)
+				and FactionHasBorderWith(Factions.asa_tribe, Factions.vana_tribe)
 				and SyncRand(100) < 33
 			) then
 				return true
@@ -111,15 +111,15 @@ local GermanicEvents = {
 		Options = {"~!Attack them!", "~!Leave them alone"},
 		OptionEffects = {
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Asa Tribe" and wyr.preferences.AutomaticBattles == false) then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "asa-tribe" and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/tanais.smp")
 					SetCurrentQuest("on-the-vanaquisl")
 					RunMap("maps/earth/tanais.smp")
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
-						ChangeFactionResource("germanic", "Asa Tribe", "gold", 1000) -- gold from raiding Vanaland
-						ChangeFactionResource("celt", "Vana Tribe", "gold", -1000) -- gold lost from the raid
+						ChangeFactionResource("germanic", "asa-tribe", "gold", 1000) -- gold from raiding Vanaland
+						ChangeFactionResource("celt", "vana-tribe", "gold", -1000) -- gold lost from the raid
 						SetProvinceSettlementBuilding("Don", "unit-germanic-town-hall", false)
 						ChangeProvinceUnitQuantity("Don", "unit-germanic-warrior", 8) -- increase the quantity of warriors in Vanaland by 8, to make it defensible after this scenario is over
 					end
@@ -138,14 +138,14 @@ local GermanicEvents = {
 							SetProvinceHero("Astrakhan", all_heroes[i], 0)
 						end
 					end
-				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Asa Tribe" or wyr.preferences.AutomaticBattles) and GrandStrategyFaction.Name ~= "Vana Tribe") then
-					ChangeFactionResource("germanic", "Asa Tribe", "gold", 1000) -- gold from raiding Vanaland
+				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "asa-tribe" or wyr.preferences.AutomaticBattles) and GrandStrategyFaction.Name ~= "vana-tribe") then
+					ChangeFactionResource("germanic", "asa-tribe", "gold", 1000) -- gold from raiding Vanaland
 					
-					if (GrandStrategyFaction.Name == "Asa Tribe") then
+					if (GrandStrategyFaction.Name == asa-tribe") then
 						GenericDialog("On the Vanaquisl", "We have managed to raid the Vana's main settlement, but were later pushed back by their warriors, forcing us to agree to a peace.")
 					end
-				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Asa Tribe" and GrandStrategyFaction.Name == "Vana Tribe") then
-					GrandStrategyEvent(Factions.VanaTribe, GrandStrategyEvents.AsaRaid)
+				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "asa-tribe" and GrandStrategyFaction.Name == "vana-tribe") then
+					GrandStrategyEvent(Factions.vana_tribe, GrandStrategyEvents.AsaRaid)
 				end
 			end,
 			function(s)
@@ -155,12 +155,12 @@ local GermanicEvents = {
 	AsaRaid = {
 		Name = "Asa Raid!",
 		Description = "The Asa people are coming with a large force to raid us, prepare our defenses!",
-		Faction = "VanaTribe",
+		Faction = "vana_tribe",
 		TriggeredOnly = true,
 		Options = {"~!Defend our homeland!"},
 		OptionEffects = {
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Vana Tribe" and wyr.preferences.AutomaticBattles == false) then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "vana-tribe" and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/tanais.smp")
 					GameSettings.Presets[0].Type = PlayerComputer
@@ -174,13 +174,13 @@ local GermanicEvents = {
 						end
 					end
 					if (GameResult == GameDefeat) then
-						ChangeFactionResource("germanic", "Asa Tribe", "gold", 1000) -- gold from raiding Vanaland
-						ChangeFactionResource("celt", "Vana Tribe", "gold", -1000)
+						ChangeFactionResource("germanic", "asa-tribe", "gold", 1000) -- gold from raiding Vanaland
+						ChangeFactionResource("celt", "vana-tribe", "gold", -1000)
 					end
-				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Vana Tribe" or wyr.preferences.AutomaticBattles)) then
-					ChangeFactionResource("germanic", "Asa Tribe", "gold", 1000) -- gold from raiding Vanaland
-					ChangeFactionResource("celt", "Vana Tribe", "gold", -1000)
-					if (GrandStrategyFaction.Name == "Vana Tribe") then
+				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "vana-tribe" or wyr.preferences.AutomaticBattles)) then
+					ChangeFactionResource("germanic", "asa-tribe", "gold", 1000) -- gold from raiding Vanaland
+					ChangeFactionResource("celt", "vana-tribe", "gold", -1000)
+					if (GrandStrategyFaction.Name == "vana-tribe") then
 						GenericDialog("On the Vanaquisl", "The Asa raided our main settlement, but we managed to push them out of Vanaland, forcing them to agree to a peace.")
 					end
 				end
@@ -196,7 +196,7 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Civilization == "germanic"
-				and EventFaction.Name == "Asa Tribe"
+				and EventFaction.Name == "asa-tribe"
 				and GetProvinceOwner("Astrakhan") == EventFaction.Name
 				and GetProvinceOwner("Russia") ~= EventFaction.Name
 				and GetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior") >= 8 -- event only happens if player has enough warriors to successfully migrate
@@ -213,14 +213,14 @@ local GermanicEvents = {
 		Options = {"~!Migrate to the west", "The ~!steppes are our home"},
 		OptionEffects = {
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Asa Tribe" and wyr.preferences.AutomaticBattles == false) then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "asa-tribe" and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/novgorod.smp")
 					SetCurrentQuest("westward-migration")
 					RunMap("maps/earth/novgorod.smp")
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
-						AcquireProvince(WorldMapProvinces.Brandenburg, "Asa Tribe")
+						AcquireProvince(WorldMapProvinces.Brandenburg, "asa-tribe")
 						for i, unitName in ipairs(Units) do
 							if (IsOffensiveMilitaryUnit(unitName)) then
 								SetProvinceUnitQuantity("Brandenburg", unitName, GetProvinceUnitQuantity("Astrakhan", unitName) + math.ceil(GetPlayerData(0, "UnitTypesStartingNonHeroCount", unitName) / BattalionMultiplier))
@@ -242,7 +242,7 @@ local GermanicEvents = {
 						SetProvinceUnitQuantity("Astrakhan", "unit-germanic-worker", 1) -- keep one worker there, so that the province won't be entirely depopulated and the population will be able to regrow
 						AcquireProvince(WorldMapProvinces.Astrakhan, "")
 						SetProvinceCivilization("Astrakhan", "")
-						RemoveProvinceClaim("Astrakhan", "germanic", "Asa Tribe")
+						RemoveProvinceClaim("Astrakhan", "germanic", "asa-tribe")
 						SetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior", 8)
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Brandenburg.SettlementLocation[1], WorldMapProvinces.Brandenburg.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
@@ -253,11 +253,11 @@ local GermanicEvents = {
 						end
 						AcquireProvince(WorldMapProvinces.Astrakhan, "")
 						SetProvinceCivilization("Astrakhan", "")
-						RemoveProvinceClaim("Astrakhan", "germanic", "Asa Tribe")
+						RemoveProvinceClaim("Astrakhan", "germanic", "asa-tribe")
 						SetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior", 8) -- to make this province harder to conquer
 					end
-				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Asa Tribe" or wyr.preferences.AutomaticBattles)) then
-					AcquireProvince(WorldMapProvinces.Brandenburg, "Asa Tribe")
+				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "asa-tribe" or wyr.preferences.AutomaticBattles)) then
+					AcquireProvince(WorldMapProvinces.Brandenburg, "asa-tribe")
 					for i, unitName in ipairs(Units) do
 						if (IsOffensiveMilitaryUnit(unitName)) then
 							SetProvinceUnitQuantity("Brandenburg", unitName, GetProvinceUnitQuantity("Astrakhan", unitName))
@@ -276,7 +276,7 @@ local GermanicEvents = {
 					SetProvinceUnitQuantity("Astrakhan", "unit-germanic-worker", 1) -- keep one worker there, so that the province won't be entirely depopulated and the population will be able to regrow					
 					AcquireProvince(WorldMapProvinces.Astrakhan, "")
 					SetProvinceCivilization("Astrakhan", "")
-					RemoveProvinceClaim("Astrakhan", "germanic", "Asa Tribe")
+					RemoveProvinceClaim("Astrakhan", "germanic", "asa-tribe")
 					SetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior", 8) -- to make this province harder to conquer
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Brandenburg.SettlementLocation[1], WorldMapProvinces.Brandenburg.SettlementLocation[2])
@@ -285,16 +285,16 @@ local GermanicEvents = {
 				end
 			end,
 			function(s) -- if refused to migrate, then a part of the tribe splits and does so
-				AcquireProvince(WorldMapProvinces.Brandenburg, "Asa Tribe")
+				AcquireProvince(WorldMapProvinces.Brandenburg, "asa-tribe")
 				EqualizeProvinceUnits(EventFaction)
 				SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 8) -- give them enough units to continue migrating
 				SetProvinceUnitQuantity("Brandenburg", "unit-germanic-worker", GetProvinceUnitQuantity("Astrakhan", "unit-germanic-worker") / 2)
 				ChangeProvinceUnitQuantity("Astrakhan", "unit-germanic-worker", - GetProvinceUnitQuantity("Brandenburg", "unit-germanic-worker"))
-				AcquireProvince(WorldMapProvinces.Brandenburg, "Yngling Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Yngling Tribe")
-				SetFactionResource(Factions.YnglingTribe.Civilization, "Yngling Tribe", "gold", GetFactionResource(EventFaction.Civilization, EventFaction.Name, "gold") / 2)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", - GetFactionResource(Factions.YnglingTribe.Civilization, "Yngling Tribe", "gold"))
-				ChangeFactionResource(Factions.YnglingTribe.Civilization, "Yngling Tribe", "gold", 2000) -- help them stay afloat a bit
+				AcquireProvince(WorldMapProvinces.Brandenburg, "yngling-tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "yngling-tribe")
+				SetFactionResource(Factions.yngling_tribe.Civilization, "yngling-tribe", "gold", GetFactionResource(EventFaction.Civilization, EventFaction.Name, "gold") / 2)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", - GetFactionResource(Factions.yngling_tribe.Civilization, "yngling-tribe", "gold"))
+				ChangeFactionResource(Factions.yngling_tribe.Civilization, "yngling-tribe", "gold", 2000) -- help them stay afloat a bit
 			end
 		}
 	},
@@ -304,7 +304,7 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Civilization == "germanic"
-				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Yngling Tribe")
+				and (EventFaction.Name == "asa-tribe" or EventFaction.Name == "yngling-tribe")
 				and GetProvinceOwner("Brandenburg") == EventFaction.Name
 				and GetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior") >= 6 -- event only happens if player has enough warriors to successfully attack the province
 				and ProvinceHasBorderWith(WorldMapProvinces.Brandenburg, WorldMapProvinces.Mecklenburg)
@@ -412,13 +412,13 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Civilization == "germanic"
-				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Yngling Tribe")
+				and (EventFaction.Name == "asa-tribe" or EventFaction.Name == "yngling-tribe")
 				and GetProvinceOwner("Jutland") == EventFaction.Name
 				and GetProvinceUnitQuantity("Jutland", "unit-germanic-warrior") >= 8 -- event only happens if player has enough warriors to successfully attack the province
 				and ProvinceHasBorderWith(WorldMapWaterProvinces.Kattegat, WorldMapProvinces.Jutland)
 				and ProvinceHasBorderWith(WorldMapWaterProvinces.Kattegat, WorldMapProvinces.Scania)
-				and GetProvinceOwner("Scania") == "Gylfing Tribe"
-				and GetFactionMinister("basque", "Gylfing Tribe", "head-of-state") == "Gylve"
+				and GetProvinceOwner("Scania") == "gylfing-tribe"
+				and GetFactionMinister("basque", "gylfing-tribe", "head-of-state") == "Gylve"
 --				and SyncRand(100) < 50
 			) then
 				return true
@@ -523,7 +523,7 @@ local GermanicEvents = {
 		Description = "The notable Dag has been declared our chieftain.",
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "Goth Tribe"
+				EventFaction.Name == "goth-tribe"
 			) then
 				return true
 			else
@@ -546,7 +546,7 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Civilization == "germanic"
-				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Yngling Tribe")
+				and (EventFaction.Name == "asa-tribe" or EventFaction.Name == "yngling-tribe")
 				and GetProvinceOwner("Sweden") == EventFaction.Name
 				and GetProvinceSettlementBuilding(WorldMapProvinces.Sweden.Name, "unit-germanic-town-hall") -- Hall of Sigtun
 				-- should require a temple having been built? when those are implemented in the game
@@ -572,7 +572,7 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Civilization == "germanic"
-				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Yngling Tribe")
+				and (EventFaction.Name == "asa-tribe" or EventFaction.Name == "yngling-tribe")
 				and GetProvinceOwner("Sweden") == EventFaction.Name
 				and GetProvinceSettlementBuilding(WorldMapProvinces.Sweden.Name, "unit-germanic-town-hall") -- a town hall is needed, since without basic political organization there can be no lawgiving
 				and SyncRand(100) < 25
@@ -595,7 +595,7 @@ local GermanicEvents = {
 		Description = "Our chieftain Voden has granted our newly-conquered lands to the south to his younger son, Skeldu.",
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "Asa Tribe"
+				EventFaction.Name == "asa-tribe"
 				and (GetProvinceOwner("Zealand") == EventFaction.Name or GetProvinceOwner("Jutland") == EventFaction.Name)
 				and GetFactionMinister(EventFaction.Civilization, EventFaction.Name, "head-of-state") == "Voden"
 				and GrandStrategyHeroIsAlive("Skeldu")
@@ -610,34 +610,34 @@ local GermanicEvents = {
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
 				if (GetProvinceOwner("Jutland") == EventFaction.Name) then
-					AcquireProvince(WorldMapProvinces.Jutland, "Skeldung Tribe")
+					AcquireProvince(WorldMapProvinces.Jutland, "skeldung-tribe")
 					RemoveProvinceClaim("Jutland", EventFaction.Civilization, EventFaction.Name)
-					AddProvinceClaim("Jutland", "germanic", "Skeldung Tribe")
+					AddProvinceClaim("Jutland", "germanic", "skeldung-tribe")
 				end
 				if (GetProvinceOwner("Zealand") == EventFaction.Name) then
-					AcquireProvince(WorldMapProvinces.Zealand, "Skeldung Tribe")
+					AcquireProvince(WorldMapProvinces.Zealand, "skeldung-tribe")
 					RemoveProvinceClaim("Zealand", EventFaction.Civilization, EventFaction.Name)
-					AddProvinceClaim("Zealand", "germanic", "Skeldung Tribe")
+					AddProvinceClaim("Zealand", "germanic", "skeldung-tribe")
 				end
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Skeldung Tribe")
-				SetFactionMinister("germanic", "Skeldung Tribe", "head-of-state", "Skeldu")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "skeldung-tribe")
+				SetFactionMinister("germanic", "skeldung-tribe", "head-of-state", "Skeldu")
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
 				if (GetProvinceOwner("Jutland") == EventFaction.Name) then
-					AcquireProvince(WorldMapProvinces.Jutland, "Skeldung Tribe")
+					AcquireProvince(WorldMapProvinces.Jutland, "skeldung-tribe")
 					RemoveProvinceClaim("Jutland", EventFaction.Civilization, EventFaction.Name)
-					AddProvinceClaim("Jutland", "germanic", "Skeldung Tribe")
+					AddProvinceClaim("Jutland", "germanic", "skeldung-tribe")
 				end
 				if (GetProvinceOwner("Zealand") == EventFaction.Name) then
-					AcquireProvince(WorldMapProvinces.Zealand, "Skeldung Tribe")
+					AcquireProvince(WorldMapProvinces.Zealand, "skeldung-tribe")
 					RemoveProvinceClaim("Zealand", EventFaction.Civilization, EventFaction.Name)
-					AddProvinceClaim("Zealand", "germanic", "Skeldung Tribe")
+					AddProvinceClaim("Zealand", "germanic", "skeldung-tribe")
 				end
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Skeldung Tribe")
-				SetFactionMinister("germanic", "Skeldung Tribe", "head-of-state", "Skeldu")
-				GrandStrategyFaction = Factions.SkeldungTribe
-				SetPlayerFaction("germanic", "Skeldung Tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "skeldung-tribe")
+				SetFactionMinister("germanic", "skeldung-tribe", "head-of-state", "Skeldu")
+				GrandStrategyFaction = Factions.skeldung_tribe
+				SetPlayerFaction("germanic", "skeldung-tribe")
 			end
 		},
 		OptionTooltips = {"Skeldung Tribe acquires our lands beyond the sea", "Skeldung Tribe acquires our lands beyond the sea, play as the Skeldung Tribe"}
@@ -647,7 +647,7 @@ local GermanicEvents = {
 		Description = "Yngve has become our new chieftain, founding a new dynasty, the Ynglings. He managed to establish order in our lands, and was blessed with good seasons. Due to the good seasons and the reigning peace, our people have become prosperous as never before. Preferring Upsal to Sigtun, Yngve moved his capital there, where he built a great temple, and spent many resources in embellishing the town. Our chieftain's wife is Gerd, daughter of Gymis.",
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "Asa Tribe"
+				EventFaction.Name == "asa-tribe"
 				and GetProvinceOwner("Sweden") == EventFaction.Name
 				and GetFactionMinister(EventFaction.Civilization, EventFaction.Name, "head-of-state") == "Yngve"
 			) then
@@ -661,7 +661,7 @@ local GermanicEvents = {
 			function(s)
 				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", 250)
 				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
-				FormFactionLua(EventFaction, Factions.YnglingTribe)
+				FormFactionLua(EventFaction, Factions.yngling_tribe)
 			end
 		},
 		OptionTooltips = {"Form the Yngling Tribe\n+250 Gold\n+1 Prestige"}
@@ -778,23 +778,23 @@ local GermanicEvents = {
 		OptionEffects = {
 			function(s)
 				EqualizeProvinceUnits(EventFaction) -- distribute the military units of the faction equally between the newly forming faction and the old one, to prevent one of them from easily conquering the other just by happening to have more units in their province
-				AcquireProvince(WorldMapProvinces.Westphalia, "Saxon Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.SaxonTribe.Civilization, "Saxon Tribe")
+				AcquireProvince(WorldMapProvinces.Westphalia, "saxon-tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.saxon_tribe.Civilization, "saxon-tribe")
 				SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 1) -- if Westphalia has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction) -- distribute the military units of the faction equally between the newly forming faction and the old one, to prevent one of them from easily conquering the other just by happening to have more units in their province
-				AcquireProvince(WorldMapProvinces.Westphalia, "Saxon Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.SaxonTribe.Civilization, "Saxon Tribe")
+				AcquireProvince(WorldMapProvinces.Westphalia, "saxon-tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.saxon_tribe.Civilization, "saxon-tribe")
 				SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 1) -- if Westphalia has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
-				SetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, Factions.SaxonTribe.Civilization, "Saxon Tribe", "war")
+				SetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, Factions.saxon_tribe.Civilization, "saxon-tribe", "war")
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
-				AcquireProvince(WorldMapProvinces.Westphalia, "Saxon Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.SaxonTribe.Civilization, "Saxon Tribe")
-				GrandStrategyFaction = Factions.SaxonTribe
-				SetPlayerFaction(Factions.SaxonTribe.Civilization, "Saxon Tribe")
+				AcquireProvince(WorldMapProvinces.Westphalia, "saxon-tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.saxon_tribe.Civilization, "saxon-tribe")
+				GrandStrategyFaction = Factions.saxon_tribe
+				SetPlayerFaction(Factions.saxon_tribe.Civilization, "saxon-tribe")
 				SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 1) -- if Westphalia has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
 			end
 		}
@@ -818,21 +818,21 @@ local GermanicEvents = {
 		OptionEffects = {
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
-				AcquireProvince(WorldMapProvinces.Holland, "Frank Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.FrankTribe.Civilization, "Frank Tribe")
+				AcquireProvince(WorldMapProvinces.Holland, "frank-tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.frank_tribe.Civilization, "frank-tribe")
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
-				AcquireProvince(WorldMapProvinces.Holland, "Frank Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.FrankTribe.Civilization, "Frank Tribe")
-				SetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, Factions.FrankTribe.Civilization, "Frank Tribe", "war")
+				AcquireProvince(WorldMapProvinces.Holland, "frank-tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.frank_tribe.Civilization, "frank-tribe")
+				SetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, Factions.frank_tribe.Civilization, "frank-tribe", "war")
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
-				AcquireProvince(WorldMapProvinces.Holland, "Frank Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.FrankTribe.Civilization, "Frank Tribe")
-				GrandStrategyFaction = Factions.FrankTribe
-				SetPlayerFaction(Factions.FrankTribe.Civilization, "Frank Tribe")
+				AcquireProvince(WorldMapProvinces.Holland, "frank-tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.frank_tribe.Civilization, "frank-tribe")
+				GrandStrategyFaction = Factions.frank_tribe
+				SetPlayerFaction(Factions.frank_tribe.Civilization, "frank-tribe")
 			end
 		}
 	},
@@ -855,21 +855,21 @@ local GermanicEvents = {
 		OptionEffects = {
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
-				AcquireProvince(WorldMapProvinces.Brandenburg, "Suebi Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.SuebiTribe.Civilization, "Suebi Tribe")
+				AcquireProvince(WorldMapProvinces.Brandenburg, "suebi-tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.suebi_tribe.Civilization, "suebi-tribe")
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
-				AcquireProvince(WorldMapProvinces.Brandenburg, "Suebi Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.SuebiTribe.Civilization, "Suebi Tribe")
-				SetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, Factions.SuebiTribe.Civilization, "Suebi Tribe", "war")
+				AcquireProvince(WorldMapProvinces.Brandenburg, "suebi-tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.suebi_tribe.Civilization, "suebi-tribe")
+				SetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, Factions.suebi_tribe.Civilization, "suebi-tribe", "war")
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
-				AcquireProvince(WorldMapProvinces.Brandenburg, "Suebi Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.SuebiTribe.Civilization, "Suebi Tribe")
-				GrandStrategyFaction = Factions.SuebiTribe
-				SetPlayerFaction(Factions.SuebiTribe.Civilization, "Suebi Tribe")
+				AcquireProvince(WorldMapProvinces.Brandenburg, "suebi-tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.suebi_tribe.Civilization, "suebi-tribe")
+				GrandStrategyFaction = Factions.suebi_tribe
+				SetPlayerFaction(Factions.suebi_tribe.Civilization, "suebi-tribe")
 			end
 		}
 	},
@@ -884,7 +884,7 @@ local GermanicEvents = {
 				and FactionHasTechnologyType(EventFaction, "bronze-shield")
 				and FactionHasTechnologyType(EventFaction, "ranged-projectile-1")
 				and FactionHasTechnologyType(EventFaction, "wood-plow")
-				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Skeldung Tribe" or EventFaction.Name == "Yngling Tribe")
+				and (EventFaction.Name == "asa-tribe" or EventFaction.Name == "skeldung-tribe" or EventFaction.Name == "yngling-tribe")
 				and EventFaction.Name ~= GrandStrategyFaction.Name -- only available for NPC factions, since the goth civilization is not playable
 				and (SyncRand(50) < 1 or FactionHasCulture(EventFaction, "goth"))
 			) then

@@ -36,7 +36,7 @@ DefineCharacter("Fiölner Yngling", { -- Source: Snorri Sturlson, "Heimskringla"
 	-- in the Ynglinga saga, Fiölner was a son of Yngve, but it isn't chronologically feasible for him to be a son of Yngve given how many generations there are between him and Halfdan the Black
 	Quote = _("\"And when brave Frode came, he found\nSwithiod's dark chief, Fiolner, drowned.\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Swede Tribe"
+		"head-of-state", 0, 0, "norse", "swede-tribe"
 	},
 	LiteraryAppearances = {"upgrade-work-ynglingatal"}
 })
@@ -55,7 +55,7 @@ DefineCharacter("Fridfrode Skjoldung", { -- Source: Snorri Sturlson, "Heimskring
 	DateReferenceCharacter = "Fiölner Yngling", -- he was a friend of Fiölner's
 	-- described as brave
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Dane Tribe"
+		"head-of-state", 0, 0, "norse", "dane-tribe"
 	}
 })
 
@@ -69,7 +69,7 @@ DefineCharacter("Svegðir Yngling", { -- Source: Snorri Sturlson, "Heimskringla"
 	Father = "Fiölner Yngling",
 	Quote = _("\"The dauntless hero rushing on,\nPassed through the yawning mouth of stone:\nIt yawned - it shut - the hero fell\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Swede Tribe"
+		"head-of-state", 0, 0, "norse", "swede-tribe"
 	}
 })
 
@@ -97,7 +97,7 @@ DefineCharacter("Vanland Yngling", { -- Source: Snorri Sturlson, "Heimskringla",
 	Mother = "Vana",
 	Quote = _("\"And Vanland, in a fatal hour,\nWas dragg'd by Grimhild's daughter's power\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Swede Tribe"
+		"head-of-state", 0, 0, "norse", "swede-tribe"
 	}
 })
 
@@ -121,7 +121,7 @@ DefineCharacter("Visbur Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Mother = "Drisa",
 	Quote = _("\"Have the fire-dogs' fierce tongues yelling\nLapt Visbur's blood on his own hearth?\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Swede Tribe"
+		"head-of-state", 0, 0, "norse", "swede-tribe"
 	}
 	-- married the daughter of Aud the Rich
 })
@@ -158,7 +158,7 @@ DefineCharacter("Domald Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Father = "Visbur Yngling",
 	Quote = _("\"But Domald dies by bloody arms,\nRaised not by foes in war's alarms,\nRaised by his Swedish liegeman's hand,\nTo bring good seasons to the land.\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Swede Tribe"
+		"head-of-state", 0, 0, "norse", "swede-tribe"
 	}
 })
 
@@ -172,7 +172,7 @@ DefineCharacter("Domar Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1
 	Father = "Domald Yngling",
 	Quote = _("\"I have asked wise men to tell\nWhere Domar rests, and they knew well.\nDomar, on Fyrie's wide-spread ground,\nWas burned, and laid on Yngve's mound.\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Swede Tribe"
+		"head-of-state", 0, 0, "norse", "swede-tribe"
 	}
 })
 
@@ -184,7 +184,7 @@ DefineCharacter("Rig Skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1
 	Civilization = "norse",
 	ProvinceOfOrigin = "Zealand", -- apparently from Denmark
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Dane Tribe" -- apparently
+		"head-of-state", 0, 0, "norse", "dane-tribe" -- apparently
 	}
 })
 
@@ -197,7 +197,7 @@ DefineCharacter("Daup Skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 
 	ProvinceOfOrigin = "Zealand", -- apparently from Denmark
 	Father = "Rig Skjoldung",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Dane Tribe" -- apparently
+		"head-of-state", 0, 0, "norse", "dane-tribe" -- apparently
 	}
 })
 
@@ -211,7 +211,7 @@ DefineCharacter("Dan Mikillati Skjoldung", { -- Source: Snorri Sturlson, "Heimsk
 	ProvinceOfOrigin = "Zealand",
 	Father = "Daup Skjoldung", -- presumably, since Dan Mikillati was Drott's brother, and she was a daughter of Daup
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Dane Tribe"
+		"head-of-state", 0, 0, "norse", "dane-tribe"
 	}
 })
 
@@ -238,7 +238,7 @@ DefineCharacter("Dyggve the Brave Yngling", { -- Source: Snorri Sturlson, "Heims
 	Quote = _("\"For Loke's daughter in her house\nOf Yngve's race would have a spouse;\nTherefore the fell-one snatched away\nBrave Dyggve from the light of day.\"\n- Thiodolf of Huine"),
 	Trait = "upgrade-mighty", -- described as brave and mighty
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Swede Tribe"
+		"head-of-state", 0, 0, "norse", "swede-tribe"
 	}
 })
 
@@ -255,7 +255,7 @@ DefineCharacter("Dag the Wise Yngling", { -- Source: Snorri Sturlson, "Heimskrin
 	Quote = _("\"Varva was ravaged, and the strife\nWas ended when the monarch's life\nWas ended too - the great Dag fell\nBy the hay-fork of a base thrall!\"\n- Thiodolf of Huine"),
 	Trait = "upgrade-wise", -- described as wise, brave and mighty
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Swede Tribe"
+		"head-of-state", 0, 0, "norse", "swede-tribe"
 	}
 })
 
@@ -270,7 +270,7 @@ DefineCharacter("Agne Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 18
 	Quote = _("\"How do ye like her, Agne's men\nThink ye that any chief again\nWill court the fate your chief befell,\nTo ride on wooden horse to hell?\"\n- Thiodolf of Huine"),
 	Trait = "upgrade-mighty", -- described as powerful, celebrated and expert
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Swede Tribe"
+		"head-of-state", 0, 0, "norse", "swede-tribe"
 	}
 	-- Skialf was married to Agne after he invaded Finland, killed her father and took her and her brother to Sweden
 })
@@ -297,7 +297,7 @@ DefineCharacter("Alric Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1
 	Quote = _("\"Alric fell, by Eric slain,\nEric's life-blood dyed the plain.\nBrother fell by brother's hand\"\n- Thiodolf of Huine"),
 	Trait = "upgrade-mighty", -- described as powerful and expert at all feats of arms
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Swede Tribe" -- Swedish king together with his brother Eric, but it was Alric's sons who went on to rule after their death
+		"head-of-state", 0, 0, "norse", "swede-tribe" -- Swedish king together with his brother Eric, but it was Alric's sons who went on to rule after their death
 	}
 })
 
@@ -338,10 +338,10 @@ DefineCharacter("Halfdan the Old Skjoldung", { -- Source: Henry Adams Bellows (t
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Denmark",
+	Faction = "denmark",
 	ProvinceOfOrigin = "Zealand", -- since he is a Danish king
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Denmark"
+		"head-of-state", 0, 0, "norse", "denmark"
 	}
 })
 
@@ -363,7 +363,7 @@ DefineCharacter("Authi", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Denmark",
+	Faction = "denmark",
 	ProvinceOfOrigin = "Zealand", -- since his father was king of Denmark
 	Father = "Halfdan the Old Skjoldung",
 	Mother = "Almveig" -- presumably, since she was married to Halfdan the Old
@@ -375,7 +375,7 @@ DefineCharacter("Ali", { -- Source: Henry Adams Bellows (transl.), "The Poetic E
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Denmark",
+	Faction = "denmark",
 	ProvinceOfOrigin = "Zealand", -- since his father was king of Denmark
 	Father = "Halfdan the Old Skjoldung",
 	Mother = "Almveig" -- presumably, since she was married to Halfdan the Old
@@ -400,12 +400,12 @@ DefineCharacter("Dag the Great", { -- Source: Henry Adams Bellows (transl.), "Th
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Denmark",
+	Faction = "denmark",
 	ProvinceOfOrigin = "Zealand", -- since his father was king of Denmark
 	Father = "Halfdan the Old Skjoldung",
 	Mother = "Almveig", -- presumably, since she was married to Halfdan the Old
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Dane Tribe" -- said to be a king in the Ynglinga Saga, and his ancestor was king of Denmark
+		"head-of-state", 0, 0, "norse", "dane-tribe" -- said to be a king in the Ynglinga Saga, and his ancestor was king of Denmark
 	}
 })
 
@@ -414,7 +414,7 @@ DefineCharacter("Thora", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "norse",
-	Faction = "Denmark",
+	Faction = "denmark",
 	ProvinceOfOrigin = "Zealand", -- since her husband's father was king of Denmark
 })
 
@@ -424,7 +424,7 @@ DefineCharacter("Frathmar Dagling", { -- Source: Henry Adams Bellows (transl.), 
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Denmark",
+	Faction = "denmark",
 	ProvinceOfOrigin = "Zealand", -- since his ancestor was king of Denmark
 	Father = "Dag the Great",
 	Mother = "Thora"
@@ -436,7 +436,7 @@ DefineCharacter("Gyrth Dagling", { -- Source: Henry Adams Bellows (transl.), "Th
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Denmark",
+	Faction = "denmark",
 	ProvinceOfOrigin = "Zealand", -- since his ancestor was king of Denmark
 	Father = "Dag the Great",
 	Mother = "Thora"
@@ -448,7 +448,7 @@ DefineCharacter("Frekis Dagling", { -- Source: Henry Adams Bellows (transl.), "T
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Denmark",
+	Faction = "denmark",
 	ProvinceOfOrigin = "Zealand", -- since his ancestor was king of Denmark
 	Father = "Dag the Great",
 	Mother = "Thora"
@@ -461,7 +461,7 @@ DefineCharacter("Frekis II Dagling", { -- Source: Henry Adams Bellows (transl.),
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Denmark",
+	Faction = "denmark",
 	ProvinceOfOrigin = "Zealand", -- since his ancestor was king of Denmark
 	Father = "Dag the Great",
 	Mother = "Thora"
@@ -473,7 +473,7 @@ DefineCharacter("Am Dagling", { -- Source: Henry Adams Bellows (transl.), "The P
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Denmark",
+	Faction = "denmark",
 	ProvinceOfOrigin = "Zealand", -- since his ancestor was king of Denmark
 	Father = "Dag the Great",
 	Mother = "Thora"
@@ -485,7 +485,7 @@ DefineCharacter("Jofurmar Dagling", { -- Source: Henry Adams Bellows (transl.), 
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Denmark",
+	Faction = "denmark",
 	ProvinceOfOrigin = "Zealand", -- since his ancestor was king of Denmark
 	Father = "Dag the Great",
 	Mother = "Thora"
@@ -501,7 +501,7 @@ DefineCharacter("Alf the Old Dagling", { -- Source: Henry Adams Bellows (transl.
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Denmark",
+	Faction = "denmark",
 	ProvinceOfOrigin = "Zealand", -- since his ancestor was king of Denmark
 	Father = "Dag the Great",
 	Mother = "Thora"
@@ -548,7 +548,7 @@ DefineCharacter("Alf Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 184
 	Quote = _("\"How wretched Alf with bloody knife\nGored Yngve's heart, and Yngve's blade\nAlf on the bloody threshold laid.\"\n- Thiodolf of Huine"),
 	Trait = "upgrade-harsh", -- described as silent, harsh, unfriendly and wretched
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Swede Tribe" -- was king of Sweden together with his brother Yngve, and Alf's son succeeded them
+		"head-of-state", 0, 0, "norse", "swede-tribe" -- was king of Sweden together with his brother Yngve, and Alf's son succeeded them
 	}
 	-- married Bera
 })
@@ -576,7 +576,7 @@ DefineCharacter("Hugleik Yngling", { -- Source: Snorri Sturlson, "Heimskringla",
 	Mother = "Bera", -- his mother was presumably Bera, since she was Alf's wife
 	-- described as very greedy
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Swede Tribe"
+		"head-of-state", 0, 0, "norse", "swede-tribe"
 	}
 })
 
@@ -590,7 +590,7 @@ DefineCharacter("Hake", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	-- described as being a murderous combatant
 	HistoricalTitles = {
 		-- was king (of somewhere), and then invaded and conquered Sweden, becoming its king as well
-		"head-of-state", 0, 0, "norse", "Swede Tribe"
+		"head-of-state", 0, 0, "norse", "swede-tribe"
 	}
 	-- brother of Hagberd
 })
@@ -652,7 +652,7 @@ DefineCharacter("Jorund Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Father = "Yngve Yngling",
 	Quote = _("\"Jorund has travelled far and wide,\nBut the same horse he must bestride\nOn which he made brave Gudlog ride.\nHe too must for a necklace wear\nHagbert's fell noose in middle air.\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Swede Tribe"
+		"head-of-state", 0, 0, "norse", "swede-tribe"
 	}
 })
 
@@ -681,7 +681,7 @@ DefineCharacter("Gudlög", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 	DateReferenceCharacter = "Jorund Yngling", -- was captured in Denmark by Jorund and Eric Yngling, and then was killed by them
 	Quote = _("\"By the fierce East-kings' cruel pride,\nGudlog must on the wild horse rider -\nThe wildest horse you e'er did see:\n'Tis Segur's steed - the gallows tree.\"\n- Eyvind Skaldaspiller"),
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Halogaland" -- was a king, presumably of Halogaland, since his son was king of that place
+		"head-of-state", 0, 0, "norse", "halogaland" -- was a king, presumably of Halogaland, since his son was king of that place
 	}
 })
 
@@ -693,7 +693,7 @@ DefineCharacter("Gylög", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	ProvinceOfOrigin = "Nordland",
 	Father = "Gudlög",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Halogaland"
+		"head-of-state", 0, 0, "norse", "halogaland"
 	}
 })
 
@@ -709,7 +709,7 @@ DefineCharacter("On the Old Yngling", { -- Source: Snorri Sturlson, "Heimskringl
 	Trait = "upgrade-cruel", -- described as wise and cruel
 	Quote = _("\"In Upsal's town the cruel king\nSlaughtered his sons at Odin's shrine\nSlaughtered his sons with cruel knife,\nTo get from Odin length of life.\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Swede Tribe" -- ruled intermittently at Västergotland when Uppsal was occupied by Danish invaders
+		"head-of-state", 0, 0, "norse", "swede-tribe" -- ruled intermittently at Västergotland when Uppsal was occupied by Danish invaders
 	}
 })
 
@@ -723,7 +723,7 @@ DefineCharacter("Frode Mikillati Skjoldung", { -- Source: Snorri Sturlson, "Heim
 	ProvinceOfOrigin = "Zealand",
 	Father = "Dan Mikillati Skjoldung",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Dane Tribe"
+		"head-of-state", 0, 0, "norse", "dane-tribe"
 	}
 	-- described as peace-loving
 })
@@ -741,7 +741,7 @@ DefineCharacter("Halfdan Skjoldung", { -- Source: Snorri Sturlson, "Heimskringla
 	ProvinceOfOrigin = "Zealand",
 	Father = "Frode Mikillati Skjoldung",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Dane Tribe" -- ruled jointly with his brother Fridleif
+		"head-of-state", 0, 0, "norse", "dane-tribe" -- ruled jointly with his brother Fridleif
 	}
 	-- described as a great warrior
 })
@@ -759,7 +759,7 @@ DefineCharacter("Fridleif Skjoldung", { -- Source: Snorri Sturlson, "Heimskringl
 	ProvinceOfOrigin = "Zealand",
 	Father = "Frode Mikillati Skjoldung",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Dane Tribe" -- ruled jointly with his brother Halfdan
+		"head-of-state", 0, 0, "norse", "dane-tribe" -- ruled jointly with his brother Halfdan
 	}
 	-- described as a great warrior
 })
@@ -774,7 +774,7 @@ DefineCharacter("Ole the Bold Skjoldung", { -- Source: Snorri Sturlson, "Heimskr
 	ProvinceOfOrigin = "Zealand",
 	Father = "Fridleif Skjoldung",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Swede Tribe" -- ruled over the Swedes at Upsal for 25 years
+		"head-of-state", 0, 0, "norse", "swede-tribe" -- ruled over the Swedes at Upsal for 25 years
 	}
 	-- was killed by Starkad the Old (probably the same as the Starkod the Old previously mentioned)
 })
@@ -798,7 +798,7 @@ DefineCharacter("Egil Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 18
 	Father = "On the Old Yngling",
 	Quote = _("\"The fair-haired son of Odin's race,\nWho fled before fierce Tunne's face,\nHas perished by the demon-beast\nWho roams the forests of the East.\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Swede Tribe"
+		"head-of-state", 0, 0, "norse", "swede-tribe"
 	}
 })
 
@@ -812,7 +812,7 @@ DefineCharacter("Frode the Bold Skjoldung", { -- Source: Snorri Sturlson, "Heims
 	ProvinceOfOrigin = "Zealand",
 	DateReferenceCharacter = "Egil Yngling", -- helped Egil Yngling to defeat Tunne's forces
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Dane Tribe"
+		"head-of-state", 0, 0, "norse", "dane-tribe"
 	}
 })
 
@@ -827,7 +827,7 @@ DefineCharacter("Ottar Vendelcrow Yngling", { -- Source: Snorri Sturlson, "Heims
 	Father = "Egil Yngling",
 	Quote = _("\"By Danish arms the hero bold,\nOttar the Brave, lies stiff and cold.\nTo Vendel's plain the corpse was borne;\nBy eagles' claws the corpse is torn\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Swede Tribe"
+		"head-of-state", 0, 0, "norse", "swede-tribe"
 	}
 	-- described as brave
 })
@@ -860,7 +860,7 @@ DefineCharacter("Adils Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1
 	Father = "Ottar Vendelcrow Yngling",
 	Quote = _("\"Witch-demons, I have heard men say,\nHave taken Adils' life away.\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Swede Tribe"
+		"head-of-state", 0, 0, "norse", "swede-tribe"
 	}
 })
 
@@ -873,7 +873,7 @@ DefineCharacter("Helge Skjoldung", { -- Source: Snorri Sturlson, "Heimskringla",
 	ProvinceOfOrigin = "Zealand",
 	Father = "Halfdan Skjoldung", -- a king Halfdan of Denmark was his father, presumably the Halfdan previously mentioned
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Dane Tribe"
+		"head-of-state", 0, 0, "norse", "dane-tribe"
 	}
 })
 
@@ -897,7 +897,7 @@ DefineCharacter("Godgest", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 	ProvinceOfOrigin = "Nordland",
 	DateReferenceCharacter = "Adils Yngling", -- Adils sent Godgest the horse Raven as a gift
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Halogaland"
+		"head-of-state", 0, 0, "norse", "halogaland"
 	}
 })
 
@@ -915,7 +915,7 @@ DefineCharacter("Eystein Yngling", { -- Source: Snorri Sturlson, "Heimskringla",
 	Father = "Adils Yngling",
 	Quote = _("\"The raging tree-devourer fire\nRushed on the monarch its ire;\nFirst fell the castle timbers, then\nThe roof-beams - Eystein's funeral pyre.\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Swede Tribe"
+		"head-of-state", 0, 0, "norse", "swede-tribe"
 	}
 })
 
@@ -937,7 +937,7 @@ DefineCharacter("Solve", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	Father = "Hogne of Niardö",
 	DateReferenceCharacter = "Adils Yngling", -- Solve slew Adils by burning
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Swede Tribe" -- Solve became king of Sweden after killing Adils Yngling, but eventually he was killed and Adils' son made king
+		"head-of-state", 0, 0, "norse", "swede-tribe" -- Solve became king of Sweden after killing Adils Yngling, but eventually he was killed and Adils' son made king
 		-- Solve had dominions in Jutland, but from the source it is not clear if he ruled over all of Jutland, or only a portion of it
 	}
 })
@@ -952,7 +952,7 @@ DefineCharacter("Yngvar Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Father = "Eystein Yngling",
 	Quote = _("\"On Esthland's strand, o'er Swedish graves,\nThe East Sea sings her song of waves;\nKing Yngvar's dirge is ocean's roar\nResounding on the rock-ribbed shore.\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Swede Tribe"
+		"head-of-state", 0, 0, "norse", "swede-tribe"
 	}
 })
 
@@ -966,7 +966,7 @@ DefineCharacter("Onund Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1
 	Father = "Yngvar Yngling",
 	Quote = _("\"Or else perhaps the wood-grown land,\nWhich long had felt his conquering hand,\nUprose at length in deadly strife,\nAnd pressed out Onund's hated life.\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Swede Tribe"
+		"head-of-state", 0, 0, "norse", "swede-tribe"
 	}
 })
 
@@ -981,7 +981,7 @@ DefineCharacter("Ingiald the Evil-Adviser Yngling", { -- Source: Snorri Sturlson
 	Father = "Onund Yngling",
 	Quote = _("\"On his own hearth the fire he raised,\nA deed his foemen even praised;\nBy his own hand he perished so,\nAnd life for freedom did forego.\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Swede Tribe"
+		"head-of-state", 0, 0, "norse", "swede-tribe"
 	}
 	-- married to Gauthild
 })
@@ -1064,7 +1064,7 @@ DefineCharacter("Algaut", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	ProvinceOfOrigin = "Gotaland", -- presumably
 	Father = "Gautrek the Mild",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Geat Tribe" -- was a king - apparently of Got(a?)land
+		"head-of-state", 0, 0, "norse", "geat-tribe" -- was a king - apparently of Got(a?)land
 	}
 })
 
@@ -1267,7 +1267,7 @@ DefineCharacter("Gudrod", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	ProvinceOfOrigin = "Scania",
 	DateReferenceCharacter = "Ingiald the Evil-Adviser Yngling", -- lived during the reign of Ingiald over Sweden
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Scania" -- king of Scania
+		"head-of-state", 0, 0, "norse", "scania" -- king of Scania
 	}
 	-- married Aasa Yngling
 })
@@ -1294,8 +1294,8 @@ DefineCharacter("Ivar Vidfadme", { -- Source: Snorri Sturlson, "Heimskringla", 1
 	ProvinceOfOrigin = "Scania",
 	Father = "Halfdan",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Scania", -- king of Scania
-		"head-of-state", 0, 0, "norse", "Swede Tribe" -- conquered Sweden
+		"head-of-state", 0, 0, "norse", "scania", -- king of Scania
+		"head-of-state", 0, 0, "norse", "swede-tribe" -- conquered Sweden
 	}
 })
 
@@ -1761,7 +1761,7 @@ DefineCharacter("Instein", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Hordaland",
+	Faction = "hordaland",
 	ProvinceOfOrigin = "Hordaland",
 --	Year = ?,
 --	DeathYear = ?,
@@ -1854,7 +1854,7 @@ DefineCharacter("Hledis", { -- Source: Kevin Crossley-Holland, "The Norse Myths"
 	Gender = "female",
 	Type = "unit-teuton-priest", -- priestess
 	Civilization = "norse",
-	Faction = "Hordaland",
+	Faction = "hordaland",
 	ProvinceOfOrigin = "Hordaland", -- her husband was a warrior of the king of Horthaland
 --	Year = ?,
 --	DeathYear = ?,
@@ -1867,7 +1867,7 @@ DefineCharacter("Ottar", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Hordaland",
+	Faction = "hordaland",
 	ProvinceOfOrigin = "Hordaland", -- his father was a warrior of the king of Horthaland
 --	Year = ?,
 --	DeathYear = ?,
@@ -1981,7 +1981,7 @@ DefineCharacter("Half", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Hordaland",
+	Faction = "hordaland",
 	ProvinceOfOrigin = "Hordaland",
 --	Year = ?,
 --	DeathYear = ?,
@@ -2191,12 +2191,12 @@ DefineCharacter("Ivar", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Sweden",
+	Faction = "sweden",
 	ProvinceOfOrigin = "Sweden",
 --	Year = ?,
 --	DeathYear = ?,
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Sweden"
+		"head-of-state", 0, 0, "norse", "sweden"
 	}
 })
 
@@ -2206,7 +2206,7 @@ DefineCharacter("Aud the Profound", { -- Source: Kevin Crossley-Holland, "The No
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "norse",
-	Faction = "Sweden",
+	Faction = "sweden",
 	ProvinceOfOrigin = "Sweden", -- her father was king of Sweden
 --	Year = ?,
 --	DeathYear = ?,
@@ -2219,7 +2219,7 @@ DefineCharacter("Harald War Tooth", { -- Source: Kevin Crossley-Holland, "The No
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Sweden",
+	Faction = "sweden",
 	ProvinceOfOrigin = "Sweden", -- his grandfather was king of Sweden
 --	Year = ?,
 --	DeathYear = ?,
@@ -2307,13 +2307,13 @@ DefineCharacter("Hrolf the Old", { -- Source: Henry Adams Bellows (transl.), "Th
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Gautland",
+	Faction = "gautland",
 	ProvinceOfOrigin = "Gotaland",
 --	Year = ?,
 --	DeathYear = ?,
 	Father = "Gautrek",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Gautland"
+		"head-of-state", 0, 0, "norse", "gautland"
 	}
 })
 
@@ -2323,7 +2323,7 @@ DefineCharacter("Gunnar the Bulwark", { -- Source: Henry Adams Bellows (transl.)
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Gautland",
+	Faction = "gautland",
 	ProvinceOfOrigin = "Gotaland", -- was in Hrolf the Old's household
 --	Year = ?,
 --	DeathYear = ?
@@ -2334,7 +2334,7 @@ DefineCharacter("Thorkel", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Gautland",
+	Faction = "gautland",
 	ProvinceOfOrigin = "Gotaland", -- his son was in Hrolf the Old's household
 --	Year = ?,
 --	DeathYear = ?
@@ -2346,7 +2346,7 @@ DefineCharacter("Grim the Hardy", { -- Source: Henry Adams Bellows (transl.), "T
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Gautland",
+	Faction = "gautland",
 	ProvinceOfOrigin = "Gotaland", -- was in Hrolf the Old's household
 --	Year = ?,
 --	DeathYear = ?,
@@ -2359,7 +2359,7 @@ DefineCharacter("Thorir the Iron-Shield", { -- Source: Henry Adams Bellows (tran
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Gautland",
+	Faction = "gautland",
 	ProvinceOfOrigin = "Gotaland", -- was in Hrolf the Old's household
 --	Year = ?,
 --	DeathYear = ?
@@ -2374,7 +2374,7 @@ DefineCharacter("Ulf the Gaper", { -- Source: Henry Adams Bellows (transl.), "Th
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Gautland",
+	Faction = "gautland",
 	ProvinceOfOrigin = "Gotaland", -- was in Hrolf the Old's household
 --	Year = ?,
 --	DeathYear = ?
@@ -2388,7 +2388,7 @@ DefineCharacter("Brodd", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Gautland",
+	Faction = "gautland",
 	ProvinceOfOrigin = "Gotaland", -- was in Hrolf the Old's household
 --	Year = ?,
 --	DeathYear = ?
@@ -2399,7 +2399,7 @@ DefineCharacter("Hörvir", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Gautland",
+	Faction = "gautland",
 	ProvinceOfOrigin = "Gotaland", -- was in Hrolf the Old's household
 --	Year = ?,
 --	DeathYear = ?
@@ -2463,12 +2463,12 @@ DefineCharacter("Swerre", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Norway",
+	Faction = "norway",
 	ProvinceOfOrigin = "Akershus", -- put the character in the province where the Norwegian capital is, since we don't know from where in Norway he came
 	Year = 1177, -- reign began
 	DeathYear = 1203, -- reign ended
 	HistoricalTitles = {
-		"head-of-state", 1177, 1203, "norse", "Norway"
+		"head-of-state", 1177, 1203, "norse", "norway"
 	}
 })
 
@@ -2478,11 +2478,11 @@ DefineCharacter("Magnus the Saint", { -- Source: Snorri Sturlson, "Heimskringla"
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Orkney",
+	Faction = "orkney",
 	ProvinceOfOrigin = "Orkney", -- presumably
 	DeathYear = 1129, -- presumably, since this is the date Kala was made Earl of Orkney
 	HistoricalTitles = {
-		"head-of-state", 0, 1129, "norse", "Orkney"
+		"head-of-state", 0, 1129, "norse", "orkney"
 	}
 })
 
@@ -2491,7 +2491,7 @@ DefineCharacter("Koll", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Orkney",
+	Faction = "orkney",
 	ProvinceOfOrigin = "Orkney" -- since his son was Earl of Orkney
 })
 
@@ -2500,12 +2500,12 @@ DefineCharacter("Kala", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Orkney",
+	Faction = "orkney",
 	ProvinceOfOrigin = "Orkney", -- presumably
 	Year = 1129, -- was made Earl of Orkney
 	Father = "Koll",
 	HistoricalTitles = {
-		"head-of-state", 1129, 0, "norse", "Orkney"
+		"head-of-state", 1129, 0, "norse", "orkney"
 	}
 })
 
@@ -2546,10 +2546,10 @@ DefineCharacter("Hakon", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Norway",
+	Faction = "norway",
 	ProvinceOfOrigin = "Akershus", -- put the character in the province where the Norwegian capital is, since we don't know from where in Norway he came
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Norway" -- his son was King of Norway, so presumably he was too; date estimated; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
+		"head-of-state", 0, 0, "norse", "norway" -- his son was King of Norway, so presumably he was too; date estimated; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
 	}
 })
 
@@ -2559,12 +2559,12 @@ DefineCharacter("Hakon Hakonson", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	Faction = "Norway",
+	Faction = "norway",
 	ProvinceOfOrigin = "Akershus", -- put the character in the province where the Norwegian capital is, since we don't know from where in Norway he came
 	Year = 1261, -- annexed the Norse settlements in Greenland to Norway in 1261 AD
 	Father = "Hakon",
 	HistoricalTitles = {
-		"head-of-state", 1261, 0, "norse", "Norway"
+		"head-of-state", 1261, 0, "norse", "norway"
 	}
 })
 
@@ -2585,13 +2585,13 @@ DefineCharacter("Margaret", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "norse",
-	Faction = "Denmark",
+	Faction = "denmark",
 --	ProvinceOfOrigin = "?",
 	Year = 1387, -- the three northern crowns devolved to her in 1387 AD
 	HistoricalTitles = {
-		"head-of-state", 1387, 0, "norse", "Denmark", -- the three northern crowns devolved to her in 1387 AD
-		"head-of-state", 1387, 0, "norse", "Sweden",
-		"head-of-state", 1387, 0, "norse", "Norway"
+		"head-of-state", 1387, 0, "norse", "denmark", -- the three northern crowns devolved to her in 1387 AD
+		"head-of-state", 1387, 0, "norse", "sweden",
+		"head-of-state", 1387, 0, "norse", "norway"
 	}
 })
 

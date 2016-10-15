@@ -25,14 +25,16 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Etruscan Tribe", {
+DefineFaction("etruscan-tribe", {
+	Name = "Etruscan Tribe",
 	Civilization = "etruscan",
 	Type = "tribe",
 	Colors = {"yellow"},
-	DevelopsTo = {"Etruria"}
+	DevelopsTo = {"etruria"}
 })
 
-DefineFaction("Etruria", {
+DefineFaction("etruria", {
+	Name = "Etruria",
 	Civilization = "etruscan",
 	Type = "polity",
 	Colors = {"yellow"},

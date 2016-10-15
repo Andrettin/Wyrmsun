@@ -33,7 +33,7 @@ DefineCharacter("Geirthiof", { -- Source: Snorri Sturlson, "Heimskringla", 1844,
 	ProvinceOfOrigin = "Holstein", -- correct? was from "Saxonland"
 	DateReferenceCharacter = "Adils Yngling", -- Adils Yngling went on a viking expedition to raid Saxonland when Geirthiof was king there
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "teuton", "Saxon Tribe" -- was king of "Saxonland"
+		"head-of-state", 0, 0, "teuton", "saxon-tribe" -- was king of "Saxonland"
 	}
 	-- married to Alof the Great
 })
@@ -70,7 +70,7 @@ DefineCharacter("Rolf Krake Skjoldung", { -- Source: Snorri Sturlson, "Heimskrin
 	Father = "Helge Skjoldung",
 	Mother = "Yrsa",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Dane Tribe"
+		"head-of-state", 0, 0, "norse", "dane-tribe"
 	}
 })
 
@@ -83,7 +83,7 @@ DefineCharacter("Widukind", {
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
-	Faction = "Saxon Tribe",
+	Faction = "saxon-tribe",
 --	ProvinceOfOrigin = ?
 --	Year = ?,
 --	DeathYear = ?
@@ -100,7 +100,7 @@ DefineCharacter("Henry of Saxony", { -- Source: Susan D. Fuller, "Pagan Charms i
 	Year = 919, -- reign began
 	DeathYear = 936, -- reign ended
 	HistoricalTitles = {
-		"head-of-state", 919, 936, "teuton", "Holy Rome",
-		"head-of-state", 919, 936, "teuton", "Saxony" -- duke of Saxony (from when until when? here we use the same dates as for his other title)
+		"head-of-state", 919, 936, "teuton", "holy-rome",
+		"head-of-state", 919, 936, "teuton", "saxony" -- duke of Saxony (from when until when? here we use the same dates as for his other title)
 	}
 })

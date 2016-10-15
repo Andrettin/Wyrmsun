@@ -25,78 +25,89 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Belgae Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+DefineFaction("belgae-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	Name = "Belgae Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
 --	Language = "welsh", -- correct?
 	Colors = {"purple"}
 })
 
-DefineFaction("Brigantes Tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+DefineFaction("brigantes-tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	Name = "Brigantes Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
 --	Language = "welsh", -- correct?
 	Colors = {"pink"}
 })
 
-DefineFaction("Cantii Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+DefineFaction("cantii-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	Name = "Cantii Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
 --	Language = "welsh", -- correct?
 	Colors = {"brown"}
 })
 
-DefineFaction("Coritani Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+DefineFaction("coritani-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	Name = "Coritani Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
 --	Language = "welsh", -- correct?
 	Colors = {"yellow"}
 })
 
-DefineFaction("Demetae Tribe", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
+DefineFaction("demetae-tribe", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
+	Name = "Demetae Tribe",
 	Civilization = "celt",
 	Type = "tribe",
 --	Language = "welsh", -- the Demetae gave origin to Dyfed, which was a Welsh principality
 	Colors = {"red"},
-	DevelopsTo = {"Dyfed"} -- the Demetae gave origin to Dyfed
+	DevelopsTo = {"dyfed"} -- the Demetae gave origin to Dyfed
 })
 
-DefineFaction("Dumnonii Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+DefineFaction("dumnonii-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	Name = "Dumnonii Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
 --	Language = "welsh", -- correct?
 	Colors = {"violet"}
 })
 
-DefineFaction("Iceni Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+DefineFaction("iceni-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	Name = "Iceni Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
 --	Language = "welsh", -- correct?
 	Colors = {"cyan"}
 })
 
-DefineFaction("Ordovices Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+DefineFaction("ordovices-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	Name = "Ordovices Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
 --	Language = "welsh", -- correct?
 	Colors = {"pink"}
 })
 
-DefineFaction("Regni Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+DefineFaction("regni-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	Name = "Regni Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
 --	Language = "welsh", -- correct?
 	Colors = {"green"}
 })
 
-DefineFaction("Silures Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+DefineFaction("silures-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	Name = "Silures Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
 --	Language = "welsh", -- correct?
 	Colors = {"red"}
 })
 
-DefineFaction("Trinobantes Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+DefineFaction("trinobantes-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	Name = "Trinobantes Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
 --	Language = "welsh", -- correct?
@@ -105,7 +116,8 @@ DefineFaction("Trinobantes Tribe", { -- Source: William R. Shepherd, "Historical
 
 -- Polities
 
-DefineFaction("Deheubarth", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
+DefineFaction("deheubarth", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
+	Name = "Deheubarth",
 	Civilization = "celt",
 	Type = "polity",
 --	Language = "welsh", -- it was a Welsh kingdom
@@ -113,7 +125,8 @@ DefineFaction("Deheubarth", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch
 	DefaultTier = "kingdom"
 })
 
-DefineFaction("Dyfed", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 9, 117.
+DefineFaction("dyfed", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 9, 117.
+	Name = "Dyfed",
 	Civilization = "celt",
 	Type = "polity",
 --	Language = "welsh", -- it was a Welsh principality
@@ -124,7 +137,8 @@ DefineFaction("Dyfed", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der 
 	}
 })
 
-DefineFaction("Elmet", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 80.
+DefineFaction("elmet", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 80.
+	Name = "Elmet",
 	Civilization = "celt",
 	Type = "polity",
 --	Language = "welsh", -- it was a Briton kingdom
@@ -132,7 +146,8 @@ DefineFaction("Elmet", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, 
 	DefaultTier = "kingdom"
 })
 
-DefineFaction("Gwent Is Coed", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 29.
+DefineFaction("gwent-is-coed", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 29.
+	Name = "Gwent Is Coed",
 	Civilization = "celt",
 	Type = "polity",
 --	Language = "welsh", -- it was a Welsh lordship
@@ -143,7 +158,8 @@ DefineFaction("Gwent Is Coed", { -- Source: Bernhard Maier (trans.), "Das Sagenb
 	}
 })
 
-DefineFaction("Gwynedd", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 80.
+DefineFaction("gwynedd", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 80.
+	Name = "Gwynedd",
 	Civilization = "celt",
 	Type = "polity",
 --	Language = "welsh", -- it was a Briton kingdom
@@ -151,7 +167,8 @@ DefineFaction("Gwynedd", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	DefaultTier = "kingdom"
 })
 
-DefineFaction("Powys", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 78.
+DefineFaction("powys", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 78.
+	Name = "Powys",
 	Civilization = "celt",
 	Type = "polity",
 --	Language = "welsh", -- it was a Briton kingdom
@@ -159,7 +176,8 @@ DefineFaction("Powys", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, 
 	DefaultTier = "kingdom"
 })
 
-DefineFaction("Strathclyde", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 85, 87.
+DefineFaction("strathclyde", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 85, 87.
+	Name = "Strathclyde",
 	Civilization = "celt",
 	Type = "polity",
 --	Language = "welsh", -- it was a Briton kingdom

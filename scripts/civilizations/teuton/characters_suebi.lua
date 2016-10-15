@@ -31,7 +31,7 @@ DefineCharacter("Marbod", {
 	Type = "unit-suebi-swordsman",
 	Level = 2,
 	Civilization = "teuton",
-	Faction = "Marcomanni Tribe",
+	Faction = "marcomanni-tribe",
 	Trait = "upgrade-keen",
 	HairVariation = "blond-hair",
 	Description = _("A young chieftain of the Marcomanni, Marbod aspires to forge a realm for his tribe capable of withstanding the test of time."),
@@ -42,7 +42,7 @@ DefineCharacter("Marbod", {
 	ViolentDeath = true, -- to represent him being deposed; remove when his DeathYear is replaced with his actual year of death
 	Persistent = true,
 	HistoricalTitles = {
-		"head-of-state", -9, 19, "teuton", "Marcomanni Tribe"
+		"head-of-state", -9, 19, "teuton", "marcomanni-tribe"
 	}
 })
 

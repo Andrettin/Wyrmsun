@@ -69,7 +69,7 @@ DefineWorldMapTile({535, 127}, {
 		"latin", "Sirmium" -- Source: "Ancient Warfare VII.6", 2013, p. 11.
 	},
 	FactionCulturalSettlementNames = {
-		"slav", "Serbia", "Sremska Mitrovica"
+		"slav", "serbia", "Sremska Mitrovica"
 	}
 })
 

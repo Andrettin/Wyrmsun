@@ -25,7 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Aestui Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+DefineFaction("aestui-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	Name = "Aestui Tribe",
 	Civilization = "baltic", -- correct?
 	Type = "tribe",
 --	Language = "lithuanian",

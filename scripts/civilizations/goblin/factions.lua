@@ -25,49 +25,56 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Aelak Tribe", { -- invented by Jesse Crider
+DefineFaction("aelak-tribe", { -- invented by Jesse Crider
+	Name = "Aelak Tribe",
 	Civilization = "goblin",
 	Type = "tribe",
 	Colors = {"red"},
 	FactionUpgrade = "upgrade-aelak-tribe-faction"
 })
 
-DefineFaction("Issudru Tribe", { -- invented by Jesse Crider
+DefineFaction("issudru-tribe", { -- invented by Jesse Crider
+	Name = "Issudru Tribe",
 	Civilization = "goblin",
 	Type = "tribe",
 	Colors = {"black"},
 	FactionUpgrade = "upgrade-issudru-tribe-faction"
 })
 
-DefineFaction("Khag Tribe", {
+DefineFaction("khag-tribe", {
+	Name = "Khag Tribe",
 	Civilization = "goblin",
 	Type = "tribe",
 	Colors = {"brown"},
 	FactionUpgrade = "upgrade-khag-tribe-faction"
 })
 
-DefineFaction("Lggi Tribe", {
+DefineFaction("lggi-tribe", {
+	Name = "Lggi Tribe",
 	Civilization = "goblin",
 	Type = "tribe",
 	Colors = {"violet"},
 	FactionUpgrade = "upgrade-lggi-tribe-faction"
 })
 
-DefineFaction("Mabom Tribe", { -- invented by Jesse Crider
+DefineFaction("mabom-tribe", { -- invented by Jesse Crider
+	Name = "Mabom Tribe",
 	Civilization = "goblin",
 	Type = "tribe",
 	Colors = {"purple"},
 	FactionUpgrade = "upgrade-mabom-tribe-faction"
 })
 
-DefineFaction("Sigre Tribe", { -- invented by Jesse Crider
+DefineFaction("sigre-tribe", { -- invented by Jesse Crider
+	Name = "Sigre Tribe",
 	Civilization = "goblin",
 	Type = "tribe",
 	Colors = {"yellow"},
 	FactionUpgrade = "upgrade-sigre-tribe-faction"
 })
 
-DefineFaction("Ezmarria", { -- invented by Jesse Crider
+DefineFaction("ezmarria", { -- invented by Jesse Crider
+	Name = "Ezmarria",
 	Civilization = "goblin",
 	Type = "polity",
 	Colors = {"white"},
@@ -80,7 +87,8 @@ DefineFaction("Ezmarria", { -- invented by Jesse Crider
 	Description = _("The Ezmarrian Syndicate is known for its dedication to scientific progress, which often results in the neglect of economic and military power. Many goblin technological breakthroughs were made in Ezmarria, this knowledge being sold at a hefty price to other nations.")
 })
 
-DefineFaction("Myridia", { -- invented by Jesse Crider
+DefineFaction("myridia", { -- invented by Jesse Crider
+	Name = "Myridia",
 	Civilization = "goblin",
 	Type = "polity",
 	Colors = {"cyan"},
@@ -93,7 +101,8 @@ DefineFaction("Myridia", { -- invented by Jesse Crider
 	Description = _("The Myridian Syndicate is known as a conglomerate of merchants and mercenaries of utmost immoral caliber. Many of those who could not pay what they owed the syndicate claim that it is composed of sadistic dark minds, who torment their debtors endlessly until they finally manage to extract payment.")
 })
 
-DefineFaction("Stilgar", { -- invented by Jesse Crider
+DefineFaction("stilgar", { -- invented by Jesse Crider
+	Name = "Stilgar",
 	Civilization = "goblin",
 	Type = "polity",
 	Colors = {"blue"},
@@ -106,7 +115,8 @@ DefineFaction("Stilgar", { -- invented by Jesse Crider
 	Description = _("The Stilgar Syndicate is renowned for its honorable reputation in doing business. They are one of the few goblin syndicates who can be trusted in upholding their end of an agreement.")
 })
 
-DefineFaction("Tenebris", { -- invented by Jesse Crider
+DefineFaction("tenebris", { -- invented by Jesse Crider
+	Name = "Tenebris",
 	Civilization = "goblin",
 	Type = "polity",
 	Colors = {"black"},

@@ -35,7 +35,7 @@ DefineCharacter("Lóríkus", { -- Source: Snorri Sturlson, "The Prose Edda", 191
 	DeathYear = -3000 + 12, -- Trór becomes 12 years old and slays Lóríkus
 	ViolentDeath = true,
 	HistoricalTitles = {
-		"head-of-state", -3000, -3000 + 12, "germanic", "Asa Tribe"
+		"head-of-state", -3000, -3000 + 12, "germanic", "asa-tribe"
 	}
 })
 
@@ -70,7 +70,7 @@ DefineCharacter("Trór", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	DeathYear = -3000 + 12 + 10, -- 30 years is the default lifetime of a hero after having risen to prominence, but here we use 10 to make the genealogy fit from 3000 to 2800 BC, by when Scandinavia was settled by Indo-Europeans (in the Ynglinga Saga, with an euhemerized Odin leading the Asa there)
 	Mother = "Tróán",
 	HistoricalTitles = {
-		"head-of-state", -3000 + 12, -3000 + 12 + 10, "germanic", "Asa Tribe" -- when Trór was 12 years old, he slew his foster-father Lóríkus and took his place
+		"head-of-state", -3000 + 12, -3000 + 12 + 10, "germanic", "asa-tribe" -- when Trór was 12 years old, he slew his foster-father Lóríkus and took his place
 	}
 })
 
@@ -84,7 +84,7 @@ DefineCharacter("Lóridi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 	DeathYear = -3000 + 12 + (10 * 2),
 	Father = "Trór",
 	HistoricalTitles = {
-		"head-of-state", -3000 + 12 + (10 * 1), -3000 + 12 + (10 * 2), "germanic", "Asa Tribe"
+		"head-of-state", -3000 + 12 + (10 * 1), -3000 + 12 + (10 * 2), "germanic", "asa-tribe"
 	}
 })
 
@@ -98,7 +98,7 @@ DefineCharacter("Einridi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 	DeathYear = -3000 + 12 + (10 * 3),
 	Father = "Loridi",
 	HistoricalTitles = {
-		"head-of-state", -3000 + 12 + (10 * 2), -3000 + 12 + (10 * 3), "germanic", "Asa Tribe"
+		"head-of-state", -3000 + 12 + (10 * 2), -3000 + 12 + (10 * 3), "germanic", "asa-tribe"
 	}
 })
 
@@ -112,7 +112,7 @@ DefineCharacter("Vingethor", { -- Source: Snorri Sturlson, "The Prose Edda", 191
 	DeathYear = -3000 + 12 + (10 * 4),
 	Father = "Einridi",
 	HistoricalTitles = {
-		"head-of-state", -3000 + 12 + (10 * 3), -3000 + 12 + (10 * 4), "germanic", "Asa Tribe"
+		"head-of-state", -3000 + 12 + (10 * 3), -3000 + 12 + (10 * 4), "germanic", "asa-tribe"
 	}
 })
 
@@ -126,7 +126,7 @@ DefineCharacter("Vingener", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 	DeathYear = -3000 + 12 + (10 * 5),
 	Father = "Vingethor",
 	HistoricalTitles = {
-		"head-of-state", -3000 + 12 + (10 * 4), -3000 + 12 + (10 * 5), "germanic", "Asa Tribe"
+		"head-of-state", -3000 + 12 + (10 * 4), -3000 + 12 + (10 * 5), "germanic", "asa-tribe"
 	}
 })
 
@@ -140,7 +140,7 @@ DefineCharacter("Móda", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	DeathYear = -3000 + 12 + (10 * 6),
 	Father = "Vingener",
 	HistoricalTitles = {
-		"head-of-state", -3000 + 12 + (10 * 5), -3000 + 12 + (10 * 6), "germanic", "Asa Tribe"
+		"head-of-state", -3000 + 12 + (10 * 5), -3000 + 12 + (10 * 6), "germanic", "asa-tribe"
 	}
 })
 
@@ -154,7 +154,7 @@ DefineCharacter("Magan", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	DeathYear = -3000 + 12 + (10 * 7),
 	Father = "Móda",
 	HistoricalTitles = {
-		"head-of-state", -3000 + 12 + (10 * 6), -3000 + 12 + (10 * 7), "germanic", "Asa Tribe"
+		"head-of-state", -3000 + 12 + (10 * 6), -3000 + 12 + (10 * 7), "germanic", "asa-tribe"
 	}
 })
 
@@ -168,7 +168,7 @@ DefineCharacter("Seskef", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	DeathYear = -3000 + 12 + (10 * 8),
 	Father = "Magan",
 	HistoricalTitles = {
-		"head-of-state", -3000 + 12 + (10 * 7), -3000 + 12 + (10 * 8), "germanic", "Asa Tribe"
+		"head-of-state", -3000 + 12 + (10 * 7), -3000 + 12 + (10 * 8), "germanic", "asa-tribe"
 	}
 })
 
@@ -182,7 +182,7 @@ DefineCharacter("Bedvig", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	DeathYear = -3000 + 12 + (10 * 9),
 	Father = "Seskef",
 	HistoricalTitles = {
-		"head-of-state", -3000 + 12 + (10 * 8), -3000 + 12 + (10 * 9), "germanic", "Asa Tribe"
+		"head-of-state", -3000 + 12 + (10 * 8), -3000 + 12 + (10 * 9), "germanic", "asa-tribe"
 	}
 })
 
@@ -196,7 +196,7 @@ DefineCharacter("Athra", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	DeathYear = -3000 + 12 + (10 * 10),
 	Father = "Bedvig",
 	HistoricalTitles = {
-		"head-of-state", -3000 + 12 + (10 * 9), -3000 + 12 + (10 * 10), "germanic", "Asa Tribe"
+		"head-of-state", -3000 + 12 + (10 * 9), -3000 + 12 + (10 * 10), "germanic", "asa-tribe"
 	}
 })
 
@@ -210,7 +210,7 @@ DefineCharacter("Ítermann", { -- Source: Snorri Sturlson, "The Prose Edda", 191
 	DeathYear = -3000 + 12 + (10 * 11),
 	Father = "Athra",
 	HistoricalTitles = {
-		"head-of-state", -3000 + 12 + (10 * 10), -3000 + 12 + (10 * 11), "germanic", "Asa Tribe"
+		"head-of-state", -3000 + 12 + (10 * 10), -3000 + 12 + (10 * 11), "germanic", "asa-tribe"
 	}
 })
 
@@ -224,7 +224,7 @@ DefineCharacter("Heremód", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 	DeathYear = -3000 + 12 + (10 * 12),
 	Father = "Ítermann",
 	HistoricalTitles = {
-		"head-of-state", -3000 + 12 + (10 * 11), -3000 + 12 + (10 * 12), "germanic", "Asa Tribe"
+		"head-of-state", -3000 + 12 + (10 * 11), -3000 + 12 + (10 * 12), "germanic", "asa-tribe"
 	}
 })
 
@@ -238,7 +238,7 @@ DefineCharacter("Skjaldun", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 	DeathYear = -3000 + 12 + (10 * 13),
 	Father = "Heremód",
 	HistoricalTitles = {
-		"head-of-state", -3000 + 12 + (10 * 12), -3000 + 12 + (10 * 13), "germanic", "Asa Tribe"
+		"head-of-state", -3000 + 12 + (10 * 12), -3000 + 12 + (10 * 13), "germanic", "asa-tribe"
 	}
 })
 
@@ -252,7 +252,7 @@ DefineCharacter("Bjáf", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	DeathYear = -3000 + 12 + (10 * 14),
 	Father = "Skjaldun",
 	HistoricalTitles = {
-		"head-of-state", -3000 + 12 + (10 * 13), -3000 + 12 + (10 * 14), "germanic", "Asa Tribe"
+		"head-of-state", -3000 + 12 + (10 * 13), -3000 + 12 + (10 * 14), "germanic", "asa-tribe"
 	}
 })
 
@@ -266,7 +266,7 @@ DefineCharacter("Ját", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 	DeathYear = -3000 + 12 + (10 * 15),
 	Father = "Bjáf",
 	HistoricalTitles = {
-		"head-of-state", -3000 + 12 + (10 * 14), -3000 + 12 + (10 * 15), "germanic", "Asa Tribe"
+		"head-of-state", -3000 + 12 + (10 * 14), -3000 + 12 + (10 * 15), "germanic", "asa-tribe"
 	}
 })
 
@@ -281,7 +281,7 @@ DefineCharacter("Gudavulfa", { -- Source: Snorri Sturlson, "The Prose Edda", 191
 	DeathYear = -3000 + 12 + (10 * 16),
 	Father = "Ját",
 	HistoricalTitles = {
-		"head-of-state", -3000 + 12 + (10 * 15), -3000 + 12 + (10 * 16), "germanic", "Asa Tribe"
+		"head-of-state", -3000 + 12 + (10 * 15), -3000 + 12 + (10 * 16), "germanic", "asa-tribe"
 	}
 })
 
@@ -295,7 +295,7 @@ DefineCharacter("Finn", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 	DeathYear = -3000 + 12 + (10 * 17),
 	Father = "Gudavulfa",
 	HistoricalTitles = {
-		"head-of-state", -3000 + 12 + (10 * 16), -3000 + 12 + (10 * 17), "germanic", "Asa Tribe"
+		"head-of-state", -3000 + 12 + (10 * 16), -3000 + 12 + (10 * 17), "germanic", "asa-tribe"
 	}
 })
 
@@ -309,7 +309,7 @@ DefineCharacter("Fríallaf", { -- Source: Snorri Sturlson, "The Prose Edda", 191
 	DeathYear = -3000 + 12 + (10 * 18),
 	Father = "Finn",
 	HistoricalTitles = {
-		"head-of-state", -3000 + 12 + (10 * 17), -3000 + 12 + (10 * 18), "germanic", "Asa Tribe"
+		"head-of-state", -3000 + 12 + (10 * 17), -3000 + 12 + (10 * 18), "germanic", "asa-tribe"
 	}
 })
 
@@ -324,7 +324,7 @@ DefineCharacter("Vóden", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	DeathYear = -2800 + (30 * 1), -- with Voden begins a new genealogy, and he can live the standard 30 years
 	Father = "Fríallaf",
 	HistoricalTitles = {
-		"head-of-state", -3000 + 12 + (10 * 18), -2800 + (30 * 1), "germanic", "Asa Tribe"
+		"head-of-state", -3000 + 12 + (10 * 18), -2800 + (30 * 1), "germanic", "asa-tribe"
 	}
 })
 
@@ -350,7 +350,7 @@ DefineCharacter("Yngve", { -- Source: Snorri Sturlson, "Heimskringla", 1844; Sou
 	Father = "Vóden", -- another account gives Yngve as the son of Halfdan the Old
 	Mother = "Frígídá", -- presumably, since she was Vóden's wife
 	HistoricalTitles = {
-		"head-of-state", -2800 + (30 * 1), -2800 + (30 * 2), "germanic", "Yngling Tribe"
+		"head-of-state", -2800 + (30 * 1), -2800 + (30 * 2), "germanic", "yngling-tribe"
 	},
 	LiteraryAppearances = {"upgrade-work-ynglingatal"}
 })
@@ -504,7 +504,7 @@ DefineCharacter("Skeldu", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Father = "Vóden",
 	Mother = "Frígídá", -- presumably, since she was Vóden's wife
 	HistoricalTitles = {
-		"head-of-state", -2800, -2800 + (30 * 2), "germanic", "Skeldung Tribe"
+		"head-of-state", -2800, -2800 + (30 * 2), "germanic", "skeldung-tribe"
 	}
 })
 
@@ -518,7 +518,7 @@ DefineCharacter("Fridleifr Skeldung", { -- Source: Snorri Sturlson, "The Prose E
 	ProvinceOfOrigin = "Zealand",
 	Father = "Skeldu",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "germanic", "Skeldung Tribe"
+		"head-of-state", 0, 0, "germanic", "skeldung-tribe"
 	}
 })
 

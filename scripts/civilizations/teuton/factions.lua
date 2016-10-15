@@ -27,14 +27,15 @@
 
 Load("scripts/civilizations/teuton/factions_frank.lua")
 
-DefineFaction("Suebi Tribe", {
+DefineFaction("suebi-tribe", {
+	Name = "Suebi Tribe",
 	Civilization = "teuton",
 	Type = "tribe",
 	Language = "old-high-german",
 	Colors = {"black"},
 	DefaultTier = "duchy",
-	DevelopsTo = {"Galicia", "Bavaria", "Austria", "Carinthia"},
-	SplitsTo = {"Buri Tribe", "Marcomanni Tribe", "Quadi Tribe", "Semnone Tribe"},
+	DevelopsTo = {"galicia", "bavaria", "austria", "carinthia"},
+	SplitsTo = {"buri-tribe", "marcomanni-tribe", "quadi-tribe", "semnone-tribe"},
 	FactionUpgrade = "upgrade-suebi-tribe-faction",
 	Description = _("The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there."),
 	PersonalNames = {
@@ -46,17 +47,18 @@ DefineFaction("Suebi Tribe", {
 		"male", "Rechilas", -- Suebic cheiftain who defeated a Roman army led by Andevotus near the Singilis river in 438 AD
 		"male", "Tassilo" -- Bavarian ruler who revolted against Frankish dominion; Source: "Medieval Warfare V.2", 2013, p. 8.
 	},
-	HistoricalFactionDerivations = {-264, "germanic", "Istaevone Tribe"}
+	HistoricalFactionDerivations = {-264, "germanic", "istaevone-tribe"}
 })
 
-DefineFaction("Saxon Tribe", {
+DefineFaction("saxon-tribe", {
+	Name = "Saxon Tribe",
 	Civilization = "teuton",
 	Type = "tribe",
 	Language = "old-saxon",
 	Colors = {"pink"},
-	DevelopsTo = {"Saxony", "Brandenburg", "Essex", "Wessex", "England", "Prussia"},
+	DevelopsTo = {"saxony", "brandenburg", "essex", "wessex", "england", "prussia"},
 	FactionUpgrade = "upgrade-saxon-tribe-faction",
-	HistoricalFactionDerivations = {-264, "germanic", "Ingaevone Tribe"},
+	HistoricalFactionDerivations = {-264, "germanic", "ingaevone-tribe"},
 	PersonalNames = {
 		"male", "Bernhard", -- duke of Saxony (apparently a contemporary of bishop Thietmar of Merseburg); Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 613.
 		"male", "Gottschalk", -- 9th century Saxon monk; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 605.
@@ -70,42 +72,46 @@ DefineFaction("Saxon Tribe", {
 	}
 })
 
-DefineFaction("Thuringian Tribe", {
+DefineFaction("thuringian-tribe", {
+	Name = "Thuringian Tribe",
 	Civilization = "teuton",
 	Type = "tribe",
 	Language = "old-high-german",
 	Colors = {"green"},
 	FactionUpgrade = "upgrade-thuringian-tribe-faction",
-	HistoricalFactionDerivations = {507, "teuton", "Suebi Tribe"} -- who did the Thuringians actually stem from?
+	HistoricalFactionDerivations = {507, "teuton", "suebi-tribe"} -- who did the Thuringians actually stem from?
 })
 
-DefineFaction("Alamanni Tribe", {
+DefineFaction("alamanni-tribe", {
+	Name = "Alamanni Tribe",
 	Civilization = "teuton",
---	ParentFaction = "Suebi Tribe",
+--	ParentFaction = "suebi-tribe",
 	Type = "tribe",
 	Language = "old-high-german",
 	Colors = {"blue"},
-	DevelopsTo = {"Baden", "Swabia", "Switzerland", "Wurtemberg"},
+	DevelopsTo = {"baden", "swabia", "switzerland", "wurtemberg"},
 	FactionUpgrade = "upgrade-alamanni-tribe-faction",
-	HistoricalFactionDerivations = {481, "teuton", "Suebi Tribe"}
+	HistoricalFactionDerivations = {481, "teuton", "suebi-tribe"}
 })
 
-DefineFaction("Ampsivarii Tribe", {
+DefineFaction("ampsivarii-tribe", {
+	Name = "Ampsivarii Tribe",
 	Civilization = "teuton",
-	ParentFaction = "Frank Tribe", -- accurate?,
+	ParentFaction = "frank-tribe", -- accurate?,
 	Type = "tribe",
 	Colors = {"cyan"},
-	DevelopsTo = {"Drenthe", "Netherlands"}, -- same general area
-	HistoricalFactionDerivations = {-27, "germanic", "Herminone Tribe"}
+	DevelopsTo = {"drenthe", "netherlands"}, -- same general area
+	HistoricalFactionDerivations = {-27, "germanic", "herminone-tribe"}
 })
 
-DefineFaction("Angle Tribe", {
+DefineFaction("angle-tribe", {
+	Name = "Angle Tribe",
 	Civilization = "teuton",
 	Type = "tribe",
 	Language = "old-english",
 	Colors = {"white"},
-	DevelopsTo = {"England", "Bernicia", "Deira", "East Anglia", "Mercia", "Middle Anglia", "Northumbria", "Scotland"},
-	SplitsTo = {"Bernice Tribe", "Dere Tribe"},
+	DevelopsTo = {"england", "bernicia", "deira", "east-anglia", "mercia", "middle-anglia", "northumbria", "scotland"},
+	SplitsTo = {"bernice-tribe", "dere-tribe"},
 	FactionUpgrade = "upgrade-angle-tribe-faction",
 	PersonalNames = { -- Old English names, not Angle ones per se
 		"female", "Eanflaed", -- "Eanflæd"; daughter of Edwin of Deira who married Oswiu of Bernicia; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 81.
@@ -167,116 +173,128 @@ DefineFaction("Angle Tribe", {
 	SettlementNames = {
 		"Searuburh" -- the modern Salisbury; Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 115.
 	},
-	HistoricalFactionDerivations = {-264, "germanic", "Ingaevone Tribe"}
+	HistoricalFactionDerivations = {-264, "germanic", "ingaevone-tribe"}
 })
 
-DefineFaction("Avione Tribe", {
+DefineFaction("avione-tribe", {
+	Name = "Avione Tribe",
 	Civilization = "teuton",
-	ParentFaction = "Angle Tribe", -- accurate?,
+	ParentFaction = "angle-tribe", -- accurate?,
 	Type = "tribe",
 	Colors = {"white"}
 })
 
-DefineFaction("Batavian Tribe", {
+DefineFaction("batavian-tribe", {
+	Name = "Batavian Tribe",
 	Civilization = "teuton",
-	ParentFaction = "Frank Tribe", -- accurate?
+	ParentFaction = "frank-tribe", -- accurate?
 	Type = "tribe",
 	Colors = {"orange"},
-	DevelopsTo = {"Holland", "Netherlands"}, -- same general area
-	HistoricalFactionDerivations = {-264, "germanic", "Herminone Tribe"}
+	DevelopsTo = {"holland", "netherlands"}, -- same general area
+	HistoricalFactionDerivations = {-264, "germanic", "herminone-tribe"}
 })
 
-DefineFaction("Buri Tribe", {
+DefineFaction("buri-tribe", {
+	Name = "Buri Tribe",
 	Civilization = "teuton", -- accurate?
-	ParentFaction = "Suebi Tribe", -- accurate?
+	ParentFaction = "suebi-tribe", -- accurate?
 	Type = "tribe",
 	Colors = {"violet"},
-	DevelopsTo = {"Bavaria", "Galicia", "Austria", "Carinthia"}, -- accurate?
-	HistoricalFactionDerivations = {161, "teuton", "Suebi Tribe"}
+	DevelopsTo = {"bavaria", "galicia", "austria", "carinthia"}, -- accurate?
+	HistoricalFactionDerivations = {161, "teuton", "suebi-tribe"}
 })
 
-DefineFaction("Chamavi Tribe", {
+DefineFaction("chamavi-tribe", {
+	Name = "Chamavi Tribe",
 	Civilization = "teuton",
-	ParentFaction = "Frank Tribe", -- accurate?
+	ParentFaction = "frank-tribe", -- accurate?
 	Type = "tribe",
 	Colors = {"pink"},
-	DevelopsTo = {"Overijssel", "Netherlands"}, -- same general area
-	HistoricalFactionDerivations = {-27, "germanic", "Herminone Tribe"}
+	DevelopsTo = {"overijssel", "netherlands"}, -- same general area
+	HistoricalFactionDerivations = {-27, "germanic", "herminone-tribe"}
 })
 
-DefineFaction("Charude Tribe", {
+DefineFaction("charude-tribe", {
+	Name = "Charude Tribe",
 	Civilization = "teuton", -- were the Charudes actually West Germanic?
-	ParentFaction = "Angle Tribe", -- accurate?
+	ParentFaction = "angle-tribe", -- accurate?
 	Type = "tribe",
 	Colors = {"purple"},
-	DevelopsTo = {"Jutland"}, -- same general area
-	HistoricalFactionDerivations = {-27, "germanic", "Ingaevone Tribe"}
+	DevelopsTo = {"jutland"}, -- same general area
+	HistoricalFactionDerivations = {-27, "germanic", "ingaevone-tribe"}
 })
 
-DefineFaction("Chatti Tribe", {
+DefineFaction("chatti-tribe", {
+	Name = "Chatti Tribe",
 	Civilization = "teuton",
-	ParentFaction = "Frank Tribe", -- accurate?
+	ParentFaction = "frank-tribe", -- accurate?
 	Type = "tribe",
 	Colors = {"yellow"},
-	DevelopsTo = {"Hesse"}, -- same general area
-	HistoricalFactionDerivations = {-264, "germanic", "Herminone Tribe"}
+	DevelopsTo = {"hesse"}, -- same general area
+	HistoricalFactionDerivations = {-264, "germanic", "herminone-tribe"}
 })
 
-DefineFaction("Chauci Tribe", {
+DefineFaction("chauci-tribe", {
+	Name = "Chauci Tribe",
 	Civilization = "teuton",
-	ParentFaction = "Saxon Tribe", -- accurate?
+	ParentFaction = "saxon-tribe", -- accurate?
 	Type = "tribe",
 	Colors = {"black"},
-	DevelopsTo = {"Bremen"}, -- same general area
-	HistoricalFactionDerivations = {-264, "germanic", "Ingaevone Tribe"}
+	DevelopsTo = {"bremen"}, -- same general area
+	HistoricalFactionDerivations = {-264, "germanic", "ingaevone-tribe"}
 })
 
-DefineFaction("Cherusci Tribe", {
+DefineFaction("cherusci-tribe", {
+	Name = "Cherusci Tribe",
 	Civilization = "teuton",
-	ParentFaction = "Saxon Tribe", -- accurate?
+	ParentFaction = "saxon-tribe", -- accurate?
 	Type = "tribe",
 	Colors = {"teal"},
-	DevelopsTo = {"Brunswick", "Magdeburg"}, -- same general area
-	HistoricalFactionDerivations = {-264, "germanic", "Ingaevone Tribe"}
+	DevelopsTo = {"brunswick", "magdeburg"}, -- same general area
+	HistoricalFactionDerivations = {-264, "germanic", "ingaevone-tribe"}
 })
 
-DefineFaction("Frisian Tribe", {
+DefineFaction("frisian-tribe", {
+	Name = "Frisian Tribe",
 	Civilization = "teuton",
 	Type = "tribe",
 	Language = "old-frisian",
 	Colors = {"violet", "purple"}, -- change to a better one?
-	DevelopsTo = {"Friesland", "Netherlands"},
+	DevelopsTo = {"friesland", "netherlands"},
 	FactionUpgrade = "upgrade-frisian-tribe-faction",
-	HistoricalFactionDerivations = {-264, "germanic", "Ingaevone Tribe"},
+	HistoricalFactionDerivations = {-264, "germanic", "ingaevone-tribe"},
 	PersonalNames = {
 		"male", "Bubo", -- Frisian ruler defeated by Charles Martel in 736; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 403.
 		"male", "Radbod" -- Frisian ruler defeated by Charles Martel in 718; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 403.
 	},
 })
 
-DefineFaction("Hermunduri Tribe", {
+DefineFaction("hermunduri-tribe", {
+	Name = "Hermunduri Tribe",
 	Civilization = "teuton",
-	ParentFaction = "Thuringian Tribe", -- accurate?
+	ParentFaction = "thuringian-tribe", -- accurate?
 	Type = "tribe",
 	Colors = {"blue"},
-	DevelopsTo = {"Thuringia"}, -- same general area
-	HistoricalFactionDerivations = {-264, "germanic", "Istaevone Tribe"}
+	DevelopsTo = {"thuringia"}, -- same general area
+	HistoricalFactionDerivations = {-264, "germanic", "istaevone-tribe"}
 })
 
-DefineFaction("Jute Tribe", {
+DefineFaction("jute-tribe", {
+	Name = "Jute Tribe",
 	Civilization = "teuton",
-	ParentFaction = "Angle Tribe", -- accurate?
+	ParentFaction = "angle-tribe", -- accurate?
 	Type = "tribe",
 	Colors = {"red", "white"},
-	DevelopsTo = {"Jutland", "Kent"}
+	DevelopsTo = {"jutland", "kent"}
 })
 
-DefineFaction("Lombard Tribe", {
+DefineFaction("lombard-tribe", {
+	Name = "Lombard Tribe",
 	Civilization = "teuton",
 	Type = "tribe",
 	Language = "old-high-german", -- should be Lombardic
 	Colors = {"green"},
-	DevelopsTo = {"Lombardy"},
+	DevelopsTo = {"lombardy"},
 	FactionUpgrade = "upgrade-lombard-tribe-faction",
 	PersonalNames = {
 		"male", "Agilulf", -- king of the Lombards (from 591 to 616); Source: "Medieval Warfare IV.6", 2013, p. 18.
@@ -290,109 +308,118 @@ DefineFaction("Lombard Tribe", {
 		"male", "Liudprand", -- given by Medieval Warfare as "Liutprand", and by Archibald Lewis as "Liudprand"; king of the Lombards (from 712 to 744); Source: "Medieval Warfare IV.6", 2013, p. 9; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 400.
 		"male", "Nordulf" -- Lombard mercenary; Source: "Medieval Warfare IV.6", 2013, p. 18.
 	},
-	HistoricalFactionDerivations = {-264, "germanic", "Istaevone Tribe"}
+	HistoricalFactionDerivations = {-264, "germanic", "istaevone-tribe"}
 })
 
-DefineFaction("Marcomanni Tribe", {
+DefineFaction("marcomanni-tribe", {
+	Name = "Marcomanni Tribe",
 	Civilization = "teuton",
-	ParentFaction = "Suebi Tribe",
+	ParentFaction = "suebi-tribe",
 	Type = "tribe",
 	Colors = {"orange", "red"}, -- change to a better one?
-	DevelopsTo = {"Bavarian Tribe", "Bavaria", "Galicia", "Austria", "Carinthia"},
+	DevelopsTo = {"bavarian-tribe", "bavaria", "galicia", "austria", "carinthia"},
 	Description = _("The Marcomanni were a Suebic tribe. Eventually they migrated to the east, settling in Bohemia and expelling the local Boii tribe. In the 2nd century they fought the terrible Marcomannic Wars against the Romans. The name \"Marcomanni\" means \"march-men\", or \"frontier-men\"."),
-	HistoricalFactionDerivations = {-9, "teuton", "Suebi Tribe"},
+	HistoricalFactionDerivations = {-9, "teuton", "suebi-tribe"},
 	HistoricalDiplomacyStates = {
-		167, "latin", "Rome", "war", -- in 167 the Marcomanni and the Quadi (with the Marcomanni seemingly leading) attacked the Romans and won a battle against 20,000 of them near Carnuntum; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		171, "latin", "Rome", "peace", -- in 171 the Romans forced the Marcomanni and the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		177, "latin", "Rome", "war", -- the Marcomanni entered conflict with the Romans again in 177; Source: "Ancient Warfare VII.6", 2013, p. 8.
-		177, "latin", "Rome", "peace" -- in (apparently) 177 the Romans again forced the Marcomanni to a peace; Source: "Ancient Warfare VII.6", 2013, p. 8.
+		167, "latin", "rome", "war", -- in 167 the Marcomanni and the Quadi (with the Marcomanni seemingly leading) attacked the Romans and won a battle against 20,000 of them near Carnuntum; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		171, "latin", "rome", "peace", -- in 171 the Romans forced the Marcomanni and the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		177, "latin", "rome", "war", -- the Marcomanni entered conflict with the Romans again in 177; Source: "Ancient Warfare VII.6", 2013, p. 8.
+		177, "latin", "rome", "peace" -- in (apparently) 177 the Romans again forced the Marcomanni to a peace; Source: "Ancient Warfare VII.6", 2013, p. 8.
 	}
 })
 
-DefineFaction("Bavarian Tribe", {
+DefineFaction("bavarian-tribe", {
+	Name = "Bavarian Tribe",
 	Civilization = "teuton",
---	ParentFaction = "Marcomanni Tribe",
+--	ParentFaction = "marcomanni-tribe",
 	Type = "tribe",
 	Language = "old-high-german",
 	Colors = {"cyan", "white"},
-	DevelopsTo = {"Bavaria", "Austria", "Carinthia"},
+	DevelopsTo = {"bavaria", "austria", "carinthia"},
 	FactionUpgrade = "upgrade-bavarian-tribe-faction",
 	Description = _("The Bavarians were a West Germanic people, tracing their origins to the Marcomanni. Their name means \"men of Bohemia\", an appelation they gained due to the Marcomanni having established themselves in Bohemia under Marbod. The Bavarians migrated south, giving their newly-settled land the name it has to this day, Bavaria."),
-	HistoricalFactionDerivations = {526, "teuton", "Marcomanni Tribe"}
+	HistoricalFactionDerivations = {526, "teuton", "marcomanni-tribe"}
 })
 
-DefineFaction("Quadi Tribe", {
+DefineFaction("quadi-tribe", {
+	Name = "Quadi Tribe",
 	Civilization = "teuton",
-	ParentFaction = "Suebi Tribe",
+	ParentFaction = "suebi-tribe",
 	Type = "tribe",
 	Colors = {"brown"},
-	DevelopsTo = {"Bavaria", "Galicia", "Austria", "Carinthia"}, -- the Quadi were a Suebic tribe
-	HistoricalFactionDerivations = {-9, "teuton", "Suebi Tribe"},
+	DevelopsTo = {"bavaria", "galicia", "austria", "carinthia"}, -- the Quadi were a Suebic tribe
+	HistoricalFactionDerivations = {-9, "teuton", "suebi-tribe"},
 	HistoricalDiplomacyStates = {
-		167, "latin", "Rome", "war", -- in 167 the Marcomanni and the Quadi (with the Marcomanni seemingly leading) attacked the Romans and won a battle against 20,000 of them near Carnuntum; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		171, "latin", "Rome", "peace", -- in 171 the Romans forced the Marcomanni and the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		173, "latin", "Rome", "war", -- the Quadi entered conflict with the Romans again in (apparently) 173; Source: "Ancient Warfare VII.6", 2013, p. 8.
-		174, "latin", "Rome", "peace", -- in 174 the Romans forced the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 8.
-		177, "latin", "Rome", "war", -- the Quadi entered conflict with the Romans again in 177; Source: "Ancient Warfare VII.6", 2013, p. 8.
-		179, "latin", "Rome", "peace" -- in 179 the Romans again forced the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 8.
+		167, "latin", "rome", "war", -- in 167 the Marcomanni and the Quadi (with the Marcomanni seemingly leading) attacked the Romans and won a battle against 20,000 of them near Carnuntum; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		171, "latin", "rome", "peace", -- in 171 the Romans forced the Marcomanni and the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		173, "latin", "rome", "war", -- the Quadi entered conflict with the Romans again in (apparently) 173; Source: "Ancient Warfare VII.6", 2013, p. 8.
+		174, "latin", "rome", "peace", -- in 174 the Romans forced the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 8.
+		177, "latin", "rome", "war", -- the Quadi entered conflict with the Romans again in 177; Source: "Ancient Warfare VII.6", 2013, p. 8.
+		179, "latin", "rome", "peace" -- in 179 the Romans again forced the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 8.
 	}
 })
 
-DefineFaction("Semnone Tribe", {
+DefineFaction("semnone-tribe", {
+	Name = "Semnone Tribe",
 	Civilization = "teuton",
-	ParentFaction = "Suebi Tribe",
+	ParentFaction = "suebi-tribe",
 	Type = "tribe",
 	Colors = {"brown"},
-	DevelopsTo = {"Suebi Tribe", "Bavaria", "Austria", "Carinthia"},
-	HistoricalFactionDerivations = {-264, "teuton", "Suebi Tribe"}
+	DevelopsTo = {"suebi-tribe", "bavaria", "austria", "carinthia"},
+	HistoricalFactionDerivations = {-264, "teuton", "suebi-tribe"}
 })
 
-DefineFaction("Sugambri Tribe", {
+DefineFaction("sugambri-tribe", {
+	Name = "Sugambri Tribe",
 	Civilization = "teuton",
-	ParentFaction = "Frank Tribe", -- accurate?
+	ParentFaction = "frank-tribe", -- accurate?
 	Type = "tribe",
 	Colors = {"black"},
-	DevelopsTo = {"Westphalia"}, -- same general area
-	HistoricalFactionDerivations = {-264, "germanic", "Herminone Tribe"}
+	DevelopsTo = {"westphalia"}, -- same general area
+	HistoricalFactionDerivations = {-264, "germanic", "herminone-tribe"}
 })
 
-DefineFaction("Teuton Tribe", {
+DefineFaction("teuton-tribe", {
+	Name = "Teuton Tribe",
 	Civilization = "teuton",
-	ParentFaction = "Angle Tribe", -- accurate?
+	ParentFaction = "angle-tribe", -- accurate?
 	Type = "tribe",
 	Colors = {"orange"},
-	DevelopsTo = {"Jutland"}, -- same general area
-	HistoricalFactionDerivations = {-264, "germanic", "Ingaevone Tribe"}
+	DevelopsTo = {"jutland"}, -- same general area
+	HistoricalFactionDerivations = {-264, "germanic", "ingaevone-tribe"}
 })
 
-DefineFaction("Ubii Tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 227-228.
+DefineFaction("ubii-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 227-228.
+	Name = "Ubii Tribe",
 	Civilization = "teuton",
 	Type = "tribe",
 	Language = "old-high-german", -- correct?
 	FactionUpgrade = "upgrade-ubii-tribe-faction",
 	Colors = {"purple"},
-	DevelopsTo = {"Cologne", "Hesse"}, -- same general area
+	DevelopsTo = {"cologne", "hesse"}, -- same general area
 	Description = _("The Ubii were a West Germanic tribe which lived by the Rhine, north of the Main river. Due to their location in a central trading spot, they were more advanced than other Germanic tribes. Being allies of Rome, many of them eventually migrated west of the Rhine, dwelling around Colonia Agrippinenses (the modern Cologne). The ones who remained possibly became the Chatti."),
-	HistoricalFactionDerivations = {-55, "teuton", "Suebi Tribe"}, -- they are first mentioned in Caesar's writings in 55 BC
+	HistoricalFactionDerivations = {-55, "teuton", "suebi-tribe"}, -- they are first mentioned in Caesar's writings in 55 BC
 	HistoricalDiplomacyStates = {
-		-55, "teuton", "Suebi Tribe", "vassal" -- the Ubii were tributaries of the Suebi in 55 BC
+		-55, "teuton", "suebi-tribe", "vassal" -- the Ubii were tributaries of the Suebi in 55 BC
 	}
 })
 
-DefineFaction("Varini Tribe", {
+DefineFaction("varini-tribe", {
+	Name = "Varini Tribe",
 	Civilization = "teuton",
-	ParentFaction = "Saxon Tribe", -- accurate?
+	ParentFaction = "saxon-tribe", -- accurate?
 	Type = "tribe",
 	Colors = {"brown"},
-	DevelopsTo = {"Mecklenburg"}, -- same general area
-	HistoricalFactionDerivations = {-264, "germanic", "Ingaevone Tribe"}
+	DevelopsTo = {"mecklenburg"}, -- same general area
+	HistoricalFactionDerivations = {-264, "germanic", "ingaevone-tribe"}
 })
 
 -- Teuton polities
 
-DefineFaction("Bavaria", {
+DefineFaction("bavaria", {
+	Name = "Bavaria",
 	Civilization = "teuton",
-	ParentFaction = "Bavarian Tribe",
+	ParentFaction = "bavarian-tribe",
 	Type = "polity",
 	Language = "high-german",
 	Colors = {"cyan", "white"},
@@ -401,16 +428,17 @@ DefineFaction("Bavaria", {
 		"monarchy", "duchy", "Duchy",
 		"monarchy", "kingdom", "Kingdom"
 	},
-	DevelopsTo = {"Holy Rome"}, -- Bavaria was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	DevelopsTo = {"holy-rome"}, -- Bavaria was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	HistoricalDiplomacyStates = {
-		784, "teuton", "Francia", "war", -- Bavaria revolted against Frankish rule under Tassilo in 784; Source: "Medieval Warfare V.2", 2013, p. 8.
-		787, "teuton", "Francia", "peace" -- Bavarian revolt against Frankish rule quashed by Charles the Great three years after 784; Source: "Medieval Warfare V.2", 2013, p. 8.
+		784, "teuton", "francia", "war", -- Bavaria revolted against Frankish rule under Tassilo in 784; Source: "Medieval Warfare V.2", 2013, p. 8.
+		787, "teuton", "francia", "peace" -- Bavarian revolt against Frankish rule quashed by Charles the Great three years after 784; Source: "Medieval Warfare V.2", 2013, p. 8.
 	}
 })
 
-DefineFaction("Saxony", {
+DefineFaction("saxony", {
+	Name = "Saxony",
 	Civilization = "teuton",
-	ParentFaction = "Saxon Tribe",
+	ParentFaction = "saxon-tribe",
 	Type = "polity",
 	Language = "high-german",
 	Colors = {"pink"},
@@ -419,48 +447,53 @@ DefineFaction("Saxony", {
 		"monarchy", "duchy", "Duchy",
 		"monarchy", "kingdom", "Kingdom"
 	},
-	DevelopsTo = {"Holy Rome"} -- Saxony was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	DevelopsTo = {"holy-rome"} -- Saxony was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 })
 
-DefineFaction("Swabia", {
+DefineFaction("swabia", {
+	Name = "Swabia",
 	Civilization = "teuton",
-	ParentFaction = "Alamanni Tribe",
+	ParentFaction = "alamanni-tribe",
 	Language = "high-german",
 	Type = "polity",
 	Colors = {"orange"},
 	DefaultTier = "duchy", -- Swabia was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-	DevelopsTo = {"Holy Rome"} -- Swabia was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	DevelopsTo = {"holy-rome"} -- Swabia was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 })
 
-DefineFaction("Baden", {
+DefineFaction("baden", {
+	Name = "Baden",
 	Civilization = "teuton",
-	ParentFaction = "Swabia",
+	ParentFaction = "swabia",
 	Type = "polity",
 	Colors = {"black"},
 	DefaultTier = "grand-duchy"
 })
 
-DefineFaction("Netherlands", {
+DefineFaction("netherlands", {
+	Name = "Netherlands",
 	Civilization = "teuton",
-	ParentFaction = "Francia",
+	ParentFaction = "francia",
 	Type = "polity",
 --	Language = "dutch",
 	Colors = {"orange", "blue"},
 	DefaultTier = "kingdom"
 })
 
-DefineFaction("Brabant", {
+DefineFaction("brabant", {
+	Name = "Brabant",
 	Civilization = "teuton",
-	ParentFaction = "Netherlands",
+	ParentFaction = "netherlands",
 	Type = "polity",
 	Colors = {"cyan"},
 	DefaultTier = "duchy", -- Brabant was a duchy in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
-	DevelopsTo = {"Netherlands"}
+	DevelopsTo = {"netherlands"}
 })
 
-DefineFaction("Brandenburg", {
+DefineFaction("brandenburg", {
+	Name = "Brandenburg",
 	Civilization = "teuton",
-	ParentFaction = "Saxony",
+	ParentFaction = "saxony",
 	Type = "polity",
 	Colors = {"blue"},
 	DefaultTier = "duchy",
@@ -471,28 +504,31 @@ DefineFaction("Brandenburg", {
 		"head-of-state", "male", "monarchy", "duchy", "Margrave",
 		"head-of-state", "female", "monarchy", "duchy", "Margrave" -- correct?
 	},
-	DevelopsTo = {"Prussia"} -- allow Prussia to be formed by a Brandenburg that expands to encompass it
+	DevelopsTo = {"prussia"} -- allow Prussia to be formed by a Brandenburg that expands to encompass it
 })
 
-DefineFaction("Bremen", {
+DefineFaction("bremen", {
+	Name = "Bremen",
 	Civilization = "teuton",
-	ParentFaction = "Saxony",
+	ParentFaction = "saxony",
 	Type = "polity",
 	Colors = {"black"},
 	DefaultTier = "duchy"
 })
 
-DefineFaction("Brunswick", {
+DefineFaction("brunswick", {
+	Name = "Brunswick",
 	Civilization = "teuton",
-	ParentFaction = "Saxony",
+	ParentFaction = "saxony",
 	Type = "polity",
 	Colors = {"green"},
 	DefaultTier = "duchy"
 })
 
-DefineFaction("Cologne", {
+DefineFaction("cologne", {
+	Name = "Cologne",
 	Civilization = "teuton",
-	ParentFaction = "Francia", -- correct?
+	ParentFaction = "francia", -- correct?
 	Type = "polity",
 	Language = "high-german",
 	Colors = {"white"},
@@ -502,18 +538,20 @@ DefineFaction("Cologne", {
 	}
 })
 
-DefineFaction("Drenthe", {
+DefineFaction("drenthe", {
+	Name = "Drenthe",
 	Civilization = "teuton",
-	ParentFaction = "Netherlands",
+	ParentFaction = "netherlands",
 	Type = "polity",
 	Colors = {"cyan"},
 	DefaultTier = "county", -- Drenthe was a county in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
-	DevelopsTo = {"Netherlands"}
+	DevelopsTo = {"netherlands"}
 })
 
-DefineFaction("England", {
+DefineFaction("england", {
+	Name = "England",
 	Civilization = "teuton",
-	ParentFaction = "Angle Tribe",
+	ParentFaction = "angle-tribe",
 	Type = "polity",
 	Language = "english",
 	Colors = {"red", "white"},
@@ -572,9 +610,10 @@ DefineFaction("England", {
 	}
 })
 
-DefineFaction("Friesland", {
+DefineFaction("friesland", {
+	Name = "Friesland",
 	Civilization = "teuton",
-	ParentFaction = "Frisian Tribe",
+	ParentFaction = "frisian-tribe",
 	Type = "polity",
 --	Language = "dutch", -- maybe should be modern Frisian instead?
 	Colors = {"black"},
@@ -582,21 +621,23 @@ DefineFaction("Friesland", {
 	Titles = {
 		"monarchy", "barony", "Lordship"
 	},
-	DevelopsTo = {"Netherlands"}
+	DevelopsTo = {"netherlands"}
 })
 
-DefineFaction("Galicia", { -- Suebi kingdom of Galicia
+DefineFaction("galicia", { -- Suebi kingdom of Galicia
+	Name = "Galicia",
 	Civilization = "teuton",
-	ParentFaction = "Suebi Tribe",
+	ParentFaction = "suebi-tribe",
 	Type = "polity",
 	Colors = {"black"},
 	DefaultTier = "kingdom",
-	HistoricalFactionDerivations = {486, "teuton", "Suebi Tribe"}
+	HistoricalFactionDerivations = {486, "teuton", "suebi-tribe"}
 })
 
-DefineFaction("Hesse", {
+DefineFaction("hesse", {
+	Name = "Hesse",
 	Civilization = "teuton",
-	ParentFaction = "Francia",
+	ParentFaction = "francia",
 	Type = "polity",
 	Language = "high-german",
 	Colors = {"black"},
@@ -609,48 +650,53 @@ DefineFaction("Hesse", {
 	}
 })
 
-DefineFaction("Holland", {
+DefineFaction("holland", {
+	Name = "Holland",
 	Civilization = "teuton",
-	ParentFaction = "Netherlands",
+	ParentFaction = "netherlands",
 	Type = "polity",
 	Colors = {"red"},
 	DefaultTier = "county", -- Holland was a county in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
-	DevelopsTo = {"Netherlands"}
+	DevelopsTo = {"netherlands"}
 })
 
-DefineFaction("Holy Rome", {
+DefineFaction("holy-rome", {
+	Name = "Holy Rome",
 	Civilization = "teuton",
-	ParentFaction = "Francia",
+	ParentFaction = "francia",
 	Type = "polity",
 	Language = "high-german",
 	Colors = {"yellow"},
 	DefaultTier = "empire",
-	HistoricalFactionDerivations = {919, "teuton", "Francia"},
+	HistoricalFactionDerivations = {919, "teuton", "francia"},
 	HistoricalDiplomacyStates = {
-		985, "slav", "Bohemia", "war", -- War between Otto II and Bohemia broke out in 985; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 616.
-		987, "slav", "Bohemia", "sovereign" -- Bohemia became again a vassal of the Holy Roman Empire in 987, under heavier subjection; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 616.
+		985, "slav", "bohemia", "war", -- War between Otto II and Bohemia broke out in 985; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 616.
+		987, "slav", "bohemia", "sovereign" -- Bohemia became again a vassal of the Holy Roman Empire in 987, under heavier subjection; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 616.
 	}
 })
 
-DefineFaction("Jutland", {
+DefineFaction("jutland", {
+	Name = "Jutland",
 	Civilization = "teuton",
-	ParentFaction = "Jute Tribe",
+	ParentFaction = "jute-tribe",
 	Type = "polity",
 	Colors = {"red", "white"},
 	DefaultTier = "duchy"
 })
 
-DefineFaction("Lombardy", {
+DefineFaction("lombardy", {
+	Name = "Lombardy",
 	Civilization = "teuton",
-	ParentFaction = "Lombard Tribe",
+	ParentFaction = "lombard-tribe",
 	Type = "polity",
 	Colors = {"green"},
 	DefaultTier = "kingdom"
 })
 
-DefineFaction("Magdeburg", {
+DefineFaction("magdeburg", {
+	Name = "Magdeburg",
 	Civilization = "teuton",
-	ParentFaction = "Brandenburg",
+	ParentFaction = "brandenburg",
 	Type = "polity",
 	Colors = {"black"},
 	DefaultTier = "duchy", -- Magdeburg was an archbishopric in 1547; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 114-115.
@@ -662,44 +708,49 @@ DefineFaction("Magdeburg", {
 	}
 })
 
-DefineFaction("Mecklenburg", {
+DefineFaction("mecklenburg", {
+	Name = "Mecklenburg",
 	Civilization = "teuton",
-	ParentFaction = "Saxony",
+	ParentFaction = "saxony",
 	Type = "polity",
 	Colors = {"brown"},
 	DefaultTier = "grand-duchy",
 	FactionUpgrade = "upgrade-mecklenburg-faction"
 })
 
-DefineFaction("Overijssel", {
+DefineFaction("overijssel", {
+	Name = "Overijssel",
 	Civilization = "teuton",
-	ParentFaction = "Netherlands",
+	ParentFaction = "netherlands",
 	Type = "polity",
 	Colors = {"pink"},
 	DefaultTier = "barony", -- Overijssel was a lordship in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
-	DevelopsTo = {"Netherlands"}
+	DevelopsTo = {"netherlands"}
 })
 
-DefineFaction("Prussia", {
+DefineFaction("prussia", {
+	Name = "Prussia",
 	Civilization = "teuton",
-	ParentFaction = "Brandenburg",
+	ParentFaction = "brandenburg",
 	Type = "polity",
 	Colors = {"black", "white"},
 	DefaultTier = "duchy"
 })
 
-DefineFaction("Scotland", {
+DefineFaction("scotland", {
+	Name = "Scotland",
 	Civilization = "teuton",
-	ParentFaction = "England",
+	ParentFaction = "england",
 	Type = "polity",
 	Language = "english",
 	Colors = {"blue", "white"},
 	DefaultTier = "kingdom"
 })
 
-DefineFaction("Switzerland", {
+DefineFaction("switzerland", {
+	Name = "Switzerland",
 	Civilization = "teuton",
-	ParentFaction = "Swabia",
+	ParentFaction = "swabia",
 	Type = "polity",
 	Colors = {"red", "white"},
 	DefaultTier = "kingdom",
@@ -708,9 +759,10 @@ DefineFaction("Switzerland", {
 	}
 })
 
-DefineFaction("Thuringia", {
+DefineFaction("thuringia", {
+	Name = "Thuringia",
 	Civilization = "teuton",
-	ParentFaction = "Thuringian Tribe",
+	ParentFaction = "thuringian-tribe",
 	Type = "polity",
 	Colors = {"pink"},
 	DefaultTier = "duchy", -- Thuringia was a landgraviate in 1378; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 78-79.
@@ -719,17 +771,19 @@ DefineFaction("Thuringia", {
 	}
 })
 
-DefineFaction("Westphalia", {
+DefineFaction("westphalia", {
+	Name = "Westphalia",
 	Civilization = "teuton",
-	ParentFaction = "Saxony",
+	ParentFaction = "saxony",
 	Type = "polity",
 	Colors = {"black"},
 	DefaultTier = "duchy"
 })
 
-DefineFaction("Wurtemberg", {
+DefineFaction("wurtemberg", {
+	Name = "Wurtemberg",
 	Civilization = "teuton",
-	ParentFaction = "Swabia",
+	ParentFaction = "swabia",
 	Type = "polity",
 	Colors = {"red"},
 	DefaultTier = "kingdom"
@@ -737,7 +791,8 @@ DefineFaction("Wurtemberg", {
 
 -- Non-Playable Polities
 
-DefineFaction("Crimea", {
+DefineFaction("crimea", {
+	Name = "Crimea",
 	Civilization = "teuton",
 	Type = "polity",
 	Colors = {"brown"},
@@ -752,7 +807,8 @@ DefineFaction("Crimea", {
 	}
 })
 
-DefineFaction("Turkey", {
+DefineFaction("turkey", {
+	Name = "Turkey",
 	Civilization = "teuton",
 	Type = "polity",
 	Colors = {"brown"},

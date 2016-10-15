@@ -25,7 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Carthage", {
+DefineFaction("carthage", {
+	Name = "Carthage",
 	Civilization = "phoenician",
 	Type = "polity",
 	Colors = {"black"}

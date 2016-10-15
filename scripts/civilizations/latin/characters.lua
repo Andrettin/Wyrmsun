@@ -30,7 +30,7 @@ DefineCharacter("Caesar", { -- Source: Heiko Steuer, "Warrior bands, war lords a
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "latin",
-	Faction = "Rome",
+	Faction = "rome",
 	ProvinceOfOrigin = "Latium", -- correct?
 	Year = -58, -- De Bello Gallico was written 58-52 BC
 	AuthoredWorks = {"upgrade-work-de-bello-gallico"}
@@ -41,7 +41,7 @@ DefineCharacter("Marcus Aurelius", { -- Source: "Ancient Warfare VII.6", 2013, p
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "latin",
-	Faction = "Rome",
+	Faction = "rome",
 	ProvinceOfOrigin = "Latium", -- put him in Rome's province since we don't have information on his actual province of origin
 	Year = 121, -- born on 26 April 121
 	DeathYear = 180, -- died on 17 March 180, of smallpox or cancer
@@ -50,7 +50,7 @@ DefineCharacter("Marcus Aurelius", { -- Source: "Ancient Warfare VII.6", 2013, p
 	HistoricalTitles = {
 		-- was consul when he was 18 years old
 		-- in 140 he became consul a second time
-		"head-of-state", 161, 0, "latin", "Rome" -- Roman Emperor from 161 (with Lucius Verus as his co-emperor)
+		"head-of-state", 161, 0, "latin", "rome" -- Roman Emperor from 161 (with Lucius Verus as his co-emperor)
 	}
 	-- married to Faustina the Younger
 })
@@ -60,7 +60,7 @@ DefineCharacter("Lucius Verus", { -- Source: "Ancient Warfare VII.6", 2013, pp. 
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "latin",
-	Faction = "Rome",
+	Faction = "rome",
 	ProvinceOfOrigin = "Latium", -- put him in Rome's province since we don't have information on his actual province of origin
 	Year = 161, -- became co-emperor in 161
 	DeathYear = 168, -- died (apparently) in 168 of a stroke
@@ -74,12 +74,12 @@ DefineCharacter("Marcian", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle o
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "latin",
-	Faction = "Rome",
+	Faction = "rome",
 	ProvinceOfOrigin = "Thrace", -- possibly not accurate, but since he was the (Eastern) Roman emperor put him there until we have better information
 	Year = 453, -- concluded a treaty with Walamer soon after he became independent in 453 AD
 	DeathYear = 462, -- by 462 AD the Roman emperor was his successor Leo
 	HistoricalTitles = {
-		"head-of-state", 453, 462, "latin", "Rome"
+		"head-of-state", 453, 462, "latin", "rome"
 	}
 })
 
@@ -88,12 +88,12 @@ DefineCharacter("Leo", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Di
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "latin",
-	Faction = "Rome",
+	Faction = "rome",
 	ProvinceOfOrigin = "Thrace", -- possibly not accurate, but since he was the (Eastern) Roman emperor put him there until we have better information
 	Year = 462, -- ruled in 462 AD when Walamer invaded Illyria because of the treaty's renouncement
 	DeathYear = 480, -- by 480 AD the ruler of Eastern Rome was Zeno
 	HistoricalTitles = {
-		"head-of-state", 462, 480, "latin", "Rome"
+		"head-of-state", 462, 480, "latin", "rome"
 	}
 })
 
@@ -102,11 +102,11 @@ DefineCharacter("Zeno", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of D
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "latin",
-	Faction = "Rome",
+	Faction = "rome",
 	ProvinceOfOrigin = "Thrace", -- possibly not accurate, but since he was the (Eastern) Roman emperor put him there until we have better information
 	Year = 480, -- by 480 AD the ruler of Eastern Rome was Zeno
 	HistoricalTitles = {
-		"head-of-state", 480, 0, "latin", "Rome"
+		"head-of-state", 480, 0, "latin", "rome"
 	}
 })
 
@@ -116,7 +116,7 @@ DefineCharacter("Geofrei Gaimar", { -- Source: Alaric Hall, "The Meanings of Elf
 	Gender = "male",
 	Type = "unit-teuton-swordsman", -- should be something more appropriate for a writer?
 	Civilization = "latin", -- should be French
-	Faction = "France",
+	Faction = "france",
 	ProvinceOfOrigin = "France", -- accurate?
 	Year = 1135 -- composed Estoire des Anglais c. 1135-1140 AD
 })

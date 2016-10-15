@@ -28,6 +28,7 @@
 function ChooseFaction(old_civilization, old_faction)
 	local potential_factions
 	local faction_list = {}
+	local faction_name_list = {}
 	local faction_dd
 	local chosen_faction
 	local current_civilization = GetPlayerData(GetThisPlayer(), "RaceName")
@@ -53,6 +54,10 @@ function ChooseFaction(old_civilization, old_faction)
 	if (table.getn(faction_list) == 0) then
 		return;
 	end
+	
+	for i=1,table.getn(faction_list) do
+		table.insert(faction_name_list, GetFactionData(current_civilization, faction_list[i], "Name"))
+	end
 
 	if (GameRunning and not IsNetworkGame()) then
 		SetGamePaused(true)
@@ -73,7 +78,7 @@ function ChooseFaction(old_civilization, old_faction)
 	
 	local l
 	
-	faction_dd = menu:addDropDown(faction_list, (256 / 2 - (152 / 2)), 55 + 26*1,
+	faction_dd = menu:addDropDown(faction_name_list, (256 / 2 - (152 / 2)), 55 + 26*1,
 	function(dd)
 		chosen_faction = faction_list[faction_dd:getSelected() + 1]
 		l:setCaption("Default Color: " .. CapitalizeString(GetFactionData(current_civilization, faction_list[faction_dd:getSelected() + 1], "Color")) .. "\n\nEffects: " .. GetFactionEffectsString(current_civilization, faction_list[faction_dd:getSelected() + 1]))

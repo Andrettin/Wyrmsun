@@ -97,7 +97,7 @@ DefineWorldMapTile({544, 148}, {
 		"greek", "Argos"
 	},
 	FactionCulturalSettlementNames = {
-		"greek", "Mycenae", "Mycenae" -- Mycenean Greece about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		"greek", "mycenae", "Mycenae" -- Mycenean Greece about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	}
 })
 

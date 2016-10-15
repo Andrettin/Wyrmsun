@@ -32,6 +32,6 @@ SetMapTemplateResource("earth", "unit-silver-deposit", {4194, 927}, 0, "esel") -
 SetMapTemplateResource("earth", "unit-silver-deposit", {4194, 928}, 0, "smitna") -- silver mine located in Kutná Hora; moved slightly to the south so that both it and Esel can coexist; Source: Alena Ježková, "22 Böhmische Legenden", 2007, p. 81.
 
 -- Prague
-SetMapTemplateUnit("earth", "unit-teuton-town-hall", "Marcomanni Tribe", {4169, 908}, -9, 526) -- Marbod, king of the Suebic tribe of the Marcomanni, conquered Bohemia in 9 BC
-SetMapTemplateHero("earth", "Marbod", "Marcomanni Tribe", {4169, 908}, -9, 19) -- Marbod, king of the Suebic tribe of the Marcomanni, conquered Bohemia in 9 BC; Marbod deposed in 19 AD
-SetMapTemplateUnit("earth", "unit-teuton-town-hall", "Bavarian Tribe", {4169, 908}, 526) -- political situation in 526-600 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "marcomanni-tribe", {4169, 908}, -9, 526) -- Marbod, king of the Suebic tribe of the Marcomanni, conquered Bohemia in 9 BC
+SetMapTemplateHero("earth", "Marbod", "marcomanni-tribe", {4169, 908}, -9, 19) -- Marbod, king of the Suebic tribe of the Marcomanni, conquered Bohemia in 9 BC; Marbod deposed in 19 AD
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "bavarian-tribe", {4169, 908}, 526) -- political situation in 526-600 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.

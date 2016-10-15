@@ -30,7 +30,7 @@ DefineCharacter("Hraudung", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "Goth Tribe",
+	Faction = "goth-tribe",
 --	ProvinceOfOrigin = "?",
 --	Year = ?,
 --	DeathYear = ?
@@ -41,7 +41,7 @@ DefineCharacter("Agnar", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "Goth Tribe",
+	Faction = "goth-tribe",
 --	ProvinceOfOrigin = "?",
 --	Year = ?,
 --	DeathYear = ?,
@@ -53,7 +53,7 @@ DefineCharacter("Geirrod", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "Goth Tribe",
+	Faction = "goth-tribe",
 	Trait = "upgrade-cruel", -- was a cruel, tyrannical ruler; had sudden fits of anger; nevertheless, was generous and welcoming of guests
 --	ProvinceOfOrigin = "?",
 --	Year = ?,
@@ -67,7 +67,7 @@ DefineCharacter("Agnar II", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "Goth Tribe",
+	Faction = "goth-tribe",
 	Trait = "upgrade-compassionate", -- when Grimnir (Odin in disguise) suffered, Agnar suffered with him; gave Grimnir a horn with drink
 --	ProvinceOfOrigin = "?",
 --	Year = ?,
@@ -84,12 +84,12 @@ DefineCharacter("Airmanareiks", { -- Source: Henry Adams Bellows (transl.), "The
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "Ostrogoth Tribe",
+	Faction = "ostrogoth-tribe",
 	ProvinceOfOrigin = "Ukraine", -- accurate?
 	Trait = "upgrade-cruel", -- described as generous, cruel, wrathful, faithless, savage; Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxx.
 	DeathYear = 376, -- died
 	HistoricalTitles = {
-		"head-of-state", 0, 376, "goth", "Ostrogoth Tribe"
+		"head-of-state", 0, 376, "goth", "ostrogoth-tribe"
 	}
 })
 
@@ -103,7 +103,7 @@ DefineCharacter("Friþareiks", { -- Source: F. E. Sandbach, "The Heroic Saga-Cyc
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "Ostrogoth Tribe",
+	Faction = "ostrogoth-tribe",
 	ProvinceOfOrigin = "Pannonia", -- presumably, because this is Airmanareiks' province of origin
 	Father = "Airmanareiks"
 })
@@ -114,12 +114,12 @@ DefineCharacter("Walamer Amelung", { -- Source: F. E. Sandbach, "The Heroic Saga
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "Ostrogoth Tribe",
+	Faction = "ostrogoth-tribe",
 	ProvinceOfOrigin = "Pannonia",
 	Year = 453, -- ruled over the Ostrogoths when Attila died and his Hunnic empire collapsed in 453 AD
 	DeathYear = 472, -- died
 	HistoricalTitles = {
-		"head-of-state", 453, 472, "goth", "Ostrogoth Tribe"
+		"head-of-state", 453, 472, "goth", "ostrogoth-tribe"
 	}
 })
 
@@ -129,12 +129,12 @@ DefineCharacter("Theodemer Amelung", { -- Source: F. E. Sandbach, "The Heroic Sa
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "Ostrogoth Tribe",
+	Faction = "ostrogoth-tribe",
 	ProvinceOfOrigin = "Pannonia",
 	Year = 472,
 	DeathYear = 474, -- died
 	HistoricalTitles = {
-		"head-of-state", 472, 474, "goth", "Ostrogoth Tribe" -- by 472 AD Theodemer has become king of the Ostrogoths; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7.
+		"head-of-state", 472, 474, "goth", "ostrogoth-tribe" -- by 472 AD Theodemer has become king of the Ostrogoths; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7.
 	}
 })
 
@@ -144,7 +144,7 @@ DefineCharacter("Widemer Amelung", { -- Source: F. E. Sandbach, "The Heroic Saga
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "Ostrogoth Tribe",
+	Faction = "ostrogoth-tribe",
 	ProvinceOfOrigin = "Pannonia",
 	DateReferenceCharacter = "Walamer Amelung" -- same generation as Walamer
 })
@@ -160,13 +160,13 @@ DefineCharacter("Þiudareiks Amelung", { -- Source: F. E. Sandbach, "The Heroic 
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "Ostrogoth Tribe",
+	Faction = "ostrogoth-tribe",
 	ProvinceOfOrigin = "Pannonia",
 	Year = 454, -- born (was 8 years old in 462 AD)
 	DeathYear = 526, -- died; he was put in a magnificent marble tomb in Ravenna
 	Father = "Theodemer Amelung",
 	HistoricalTitles = {
-		"head-of-state", 474, 526, "goth", "Ostrogoth Tribe" -- In 474 AD the Ostrogoths left Pannonia to settle in Macedonia under the aegis of the Eastern Roman Emperor, and in that same year Theodemer died, being succeeded by Theoderic; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 7.
+		"head-of-state", 474, 526, "goth", "ostrogoth-tribe" -- In 474 AD the Ostrogoths left Pannonia to settle in Macedonia under the aegis of the Eastern Roman Emperor, and in that same year Theodemer died, being succeeded by Theoderic; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 7.
 	}
 })
 
@@ -201,7 +201,7 @@ DefineCharacter("Vulfshardus", { -- Source: F. E. Sandbach, "The Heroic Saga-Cyc
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "Ostrogoth Tribe",
+	Faction = "ostrogoth-tribe",
 	ProvinceOfOrigin = "Pannonia", -- presumably, because this is Theoderic's province of origin
 	DateReferenceCharacter = "Þiudareiks Amelung" -- contemporary of Theoderic
 })

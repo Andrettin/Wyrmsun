@@ -25,12 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Frank Tribe", {
+DefineFaction("frank-tribe", {
+	Name = "Frank Tribe",
 	Civilization = "teuton",
 	Type = "tribe",
 	Language = "old-frankish",
 	Colors = {"green", "orange"},
-	DevelopsTo = {"Francia", "Franconia", "Austrasia", "Neustria", "Ripuaria", "Salia", "East Francia", "Netherlands"},
+	DevelopsTo = {"francia", "franconia", "austrasia", "neustria", "ripuaria", "salia", "east-francia", "netherlands"},
 	FactionUpgrade = "upgrade-frank-tribe-faction",
 	Description = "The Franks are one of the most powerful Germanic tribes to have existed. From their humble beginnings in their dwellings along the Rhine, they eventually managed to conquer the entirety of Gaul and much of Central Europe.",
 	UIFillers = {
@@ -90,22 +91,23 @@ DefineFaction("Frank Tribe", {
 		"male", "Wintrio", -- Frankish duke of Champagne between 593 and 598; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, pp. 391, 397.
 		"male", "Wulfoald" -- Frankish duke; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 405.
 	},
-	HistoricalFactionDerivations = {150, "germanic", "Herminone Tribe"},
+	HistoricalFactionDerivations = {150, "germanic", "herminone-tribe"},
 	HistoricalTechnologies = {
 		"upgrade-frank-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}
 })
 
-DefineFaction("Francia", {
+DefineFaction("francia", {
+	Name = "Francia",
 	Civilization = "teuton",
-	ParentFaction = "Frank Tribe",
+	ParentFaction = "frank-tribe",
 	Type = "polity",
 	Colors = {"green", "orange"},
 	DefaultTier = "kingdom",
 	MinisterTitles = {
 		"head-of-government", "no-gender", "monarchy", "no-faction-tier", "Mayor of the Palace" -- Source: "Medieval Warfare V.2", 2013, p. 7.
 	},
-	HistoricalFactionDerivations = {481, "teuton", "Frank Tribe"}, -- In 481 AD the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+	HistoricalFactionDerivations = {481, "teuton", "frank-tribe"}, -- In 481 AD the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 	HistoricalTechnologies = {
 		"upgrade-teuton-writing", 0, -- polities must have writing
 		"upgrade-teuton-coinage", 565 -- Merovingian Francia began to issue gold solidi at some point between 565 and 578 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 176.
@@ -115,69 +117,75 @@ DefineFaction("Francia", {
 	}
 })
 
-DefineFaction("Austrasia", {
+DefineFaction("austrasia", {
+	Name = "Austrasia",
 	Civilization = "teuton",
-	ParentFaction = "Francia",
+	ParentFaction = "francia",
 	Type = "polity",
 	Colors = {"pink"},
 	DefaultTier = "kingdom", -- correct?
-	DevelopsTo = {"Francia", "Holy Rome"},
+	DevelopsTo = {"francia", "holy-rome"},
 	MinisterTitles = {
 		"head-of-government", "no-gender", "monarchy", "no-faction-tier", "Mayor of the Palace" -- Source: "Medieval Warfare V.2", 2013, p. 7.
 	}
 })
 
-DefineFaction("East Francia", { -- Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
+DefineFaction("east-francia", { -- Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
+	Name = "East Francia",
 	Civilization = "teuton",
-	ParentFaction = "Francia",
+	ParentFaction = "francia",
 	Type = "polity",
 	Colors = {"blue"},
 	DefaultTier = "kingdom",
-	DevelopsTo = {"Holy Rome", "Francia"},
-	HistoricalFactionDerivations = {869, "teuton", "Francia"}, -- East Francia existed in 869, when it conquered Moravia; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
+	DevelopsTo = {"holy-rome", "francia"},
+	HistoricalFactionDerivations = {869, "teuton", "francia"}, -- East Francia existed in 869, when it conquered Moravia; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
 	HistoricalDiplomacyStates = {
-		871, "slav", "Moravia", "war", -- Moravia rose against East Frankish rule in 871; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
-		874, "slav", "Moravia", "sovereign", -- Moravia submitted as a vassal (paying an annual tribute) to the East Franks in 874; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
-		895, "slav", "Bohemia", "sovereign" -- The sons of Bořivoj, Spytihněv and Vratislav, recognized German overlordship over Bohemia in 895; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, pp. 612-613.
+		871, "slav", "moravia", "war", -- Moravia rose against East Frankish rule in 871; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
+		874, "slav", "moravia", "sovereign", -- Moravia submitted as a vassal (paying an annual tribute) to the East Franks in 874; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
+		895, "slav", "bohemia", "sovereign" -- The sons of Bořivoj, Spytihněv and Vratislav, recognized German overlordship over Bohemia in 895; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, pp. 612-613.
 	}
 })
 
-DefineFaction("Franconia", {
+DefineFaction("franconia", {
+	Name = "Franconia",
 	Civilization = "teuton",
-	ParentFaction = "Francia",
+	ParentFaction = "francia",
 	Type = "polity",
 	Language = "high-german",
 	Colors = {"blue"},
 	DefaultTier = "duchy", -- Franconia was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-	DevelopsTo = {"Holy Rome", "Francia"} -- Franconia was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	DevelopsTo = {"holy-rome", "francia"} -- Franconia was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 })
 
-DefineFaction("Neustria", {
+DefineFaction("neustria", {
+	Name = "Neustria",
 	Civilization = "teuton",
-	ParentFaction = "Francia",
+	ParentFaction = "francia",
 	Type = "polity",
 	Colors = {"orange"},
 	DefaultTier = "kingdom", -- correct?
-	DevelopsTo = {"Francia", "Holy Rome"},
+	DevelopsTo = {"francia", "holy-rome"},
 	MinisterTitles = {
 		"head-of-government", "no-gender", "monarchy", "no-faction-tier", "Mayor of the Palace" -- Source: "Medieval Warfare V.2", 2013, p. 7.
 	}
 })
 
-DefineFaction("Ripuaria", {
+DefineFaction("ripuaria", {
+	Name = "Ripuaria",
 	Civilization = "teuton",
-	ParentFaction = "Francia",
+	ParentFaction = "francia",
 	Type = "polity",
 	Colors = {"orange"},
 	DefaultTier = "kingdom",
-	DevelopsTo = {"Austrasia", "Francia", "Holy Rome"}
+	DevelopsTo = {"austrasia", "francia", "holy-rome"}
 })
 
-DefineFaction("Salia", {
+DefineFaction("salia", {
+	Name = "Salia",
 	Civilization = "teuton",
-	ParentFaction = "Francia",
+	ParentFaction = "francia",
 	Type = "polity",
 	Colors = {"pink"},
 	DefaultTier = "kingdom",
-	DevelopsTo = {"Austrasia", "Francia", "Holy Rome"}
+	DevelopsTo = {"austrasia", "francia", "holy-rome"}
 })

@@ -28,14 +28,14 @@
 DefineWorldMapTile({554, 129}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"latin", "Romania", "Bucharest"
+		"latin", "romania", "Bucharest"
 	}
 })
 
 DefineWorldMapTile({557, 121}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"latin", "Romania", "Iași"
+		"latin", "romania", "Iași"
 	}
 })
 
@@ -52,7 +52,7 @@ DefineWorldMapTile({560, 130}, {
 		"latin", "Tomi", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "Romania", "Constanța"
+		"latin", "romania", "Constanța"
 	}
 })
 

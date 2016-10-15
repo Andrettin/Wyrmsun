@@ -28,7 +28,7 @@
 --
 
 if (LoadedGame == false) then
-	SetPlayerData(4, "Faction", "Asa Tribe")
+	SetPlayerData(4, "Faction", "asa-tribe")
 	if not (GrandStrategy) then
 		SetPlayerData(4, "Allow", "upgrade-teuton-civilization", "F")
 		SetPlayerData(1, "Allow", "upgrade-germanic-bronze-shield", "F")
@@ -37,7 +37,7 @@ if (LoadedGame == false) then
 		SetPlayerData(1, "Allow", "upgrade-germanic-long-spear", "F")
 	end
 	if (GrandStrategy == false or GetProvinceOwner("Jutland") == "") then
-		SetPlayerData(1, "Faction", "Ertebolle Tribe")
+		SetPlayerData(1, "Faction", "ertebolle-tribe")
 	else
 		SetPlayerData(1, "Faction", GetProvinceOwner("Jutland"))
 	end

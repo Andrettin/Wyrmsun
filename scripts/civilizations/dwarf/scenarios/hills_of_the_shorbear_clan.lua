@@ -79,7 +79,7 @@ AddTrigger("hills-of-the-shorbear-clan-gnomish-envoy-dies",
 		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Shorbear Hills") then
 			ActionDefeat()
 			if (GrandStrategy and PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")) then
-				ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 2500) -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
+				ChangeFactionResource("dwarf", "shinsplitter-clan", "gold", 2500) -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
 			end
 		end
 		return false
@@ -358,7 +358,7 @@ AddTrigger("hills-of-the-shorbear-clan-introduction",
 																																AddPlayerObjective(GetFactionPlayer("Shorbear Clan"), "- Defeat the Norlunds")
 																																--[[
 																																if (GrandStrategy) then
-																																	SetFactionDiplomacyState("dwarf", "Norlund Clan", "dwarf", "Shorbear Clan", "war")
+																																	SetFactionDiplomacyState("dwarf", "norlund-clan", "dwarf", "shorbear-clan", "war")
 																																end
 																																--]]
 																															end}
@@ -786,7 +786,7 @@ AddTrigger("hills-of-the-shorbear-clan-gates-sealed",
 						end
 						
 						-- if in grand strategy mode, give the province to the Shinsplitters
-						AcquireProvince(WorldMapProvinces.ShorbearHills, "Shinsplitter Clan")
+						AcquireProvince(WorldMapProvinces.ShorbearHills, "shinsplitter-clan")
 					end
 				end
 				
@@ -1160,7 +1160,7 @@ AddTrigger("hills-of-the-shorbear-clan-shinsplitter-ending",
 			{function(s)
 				if (GrandStrategyEventMap) then
 					-- if in grand strategy mode, give the province to the Shinsplitters
-					AcquireProvince(WorldMapProvinces.ShorbearHills, "Shinsplitter Clan")
+					AcquireProvince(WorldMapProvinces.ShorbearHills, "shinsplitter-clan")
 				end
 				ActionDraw()
 			end}
@@ -1191,7 +1191,7 @@ AddTrigger("hills-of-the-shorbear-clan-shorbear-ending",
 			{function(s)
 				if (GrandStrategyEventMap) then
 					-- if in grand strategy mode, give the province to the Shinsplitters
-					AcquireProvince(WorldMapProvinces.ShorbearHills, "Shinsplitter Clan")
+					AcquireProvince(WorldMapProvinces.ShorbearHills, "shinsplitter-clan")
 				end
 				ActionDefeat()
 			end}
@@ -1221,10 +1221,10 @@ AddTrigger("hills-of-the-shorbear-clan-shinsplitter-victory",
 			{"~!Continue"},
 			{function(s)
 				if (GrandStrategyEventMap) then
-					ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 10000) -- gold gained from the ruby's sale
-					ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 2500) -- gained the silver via peace treaty with the Norlunds
-					ChangeFactionResource("dwarf", "Norlund Clan", "gold", -2500)
-					SetFactionDiplomacyState("dwarf", "Norlund Clan", "dwarf", "Shinsplitter Clan", "peace")
+					ChangeFactionResource("dwarf", "shinsplitter-clan", "gold", 10000) -- gold gained from the ruby's sale
+					ChangeFactionResource("dwarf", "shinsplitter-clan", "gold", 2500) -- gained the silver via peace treaty with the Norlunds
+					ChangeFactionResource("dwarf", "norlund-clan", "gold", -2500)
+					SetFactionDiplomacyState("dwarf", "norlund-clan", "dwarf", "shinsplitter-clan", "peace")
 				end
 				ActionVictory()
 			end}
@@ -1254,10 +1254,10 @@ AddTrigger("hills-of-the-shorbear-clan-shorbear-victory",
 			{"~!Continue"},
 			{function(s)
 				if (GrandStrategyEventMap) then
-					ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 10000) -- gold gained from the ruby's sale
-					ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 2500) -- gained the silver via peace treaty with the Norlunds
-					ChangeFactionResource("dwarf", "Norlund Clan", "gold", -2500)
-					SetFactionDiplomacyState("dwarf", "Norlund Clan", "dwarf", "Shinsplitter Clan", "peace")
+					ChangeFactionResource("dwarf", "shinsplitter-clan", "gold", 10000) -- gold gained from the ruby's sale
+					ChangeFactionResource("dwarf", "shinsplitter-clan", "gold", 2500) -- gained the silver via peace treaty with the Norlunds
+					ChangeFactionResource("dwarf", "norlund-clan", "gold", -2500)
+					SetFactionDiplomacyState("dwarf", "norlund-clan", "dwarf", "shinsplitter-clan", "peace")
 				end
 				ActionVictory()
 			end}

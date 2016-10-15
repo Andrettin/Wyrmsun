@@ -25,13 +25,15 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Blackeye Clan", {
+DefineFaction("blackeye-clan", {
+	Name = "Blackeye Clan",
 	Civilization = "orc",
 	Type = "tribe",
 	Colors = {"black"}
 })
 
-DefineFaction("Bloody Sword Clan", {
+DefineFaction("bloody-sword-clan", {
+	Name = "Bloody Sword Clan",
 	Civilization = "orc",
 	Type = "tribe",
 	Colors = {"red"}

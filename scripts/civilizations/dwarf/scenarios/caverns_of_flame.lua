@@ -833,16 +833,16 @@ AddTrigger("caverns-of-flame-ending",
 								{function(s)
 								Event(
 									"",
-									"Pypo I thought it little wise to send forces to uncover the Scepter, with goblins swarming the region, and given that the volcano might still be too unstable. Aged and nearing the end of his life himself, he did not have the energy to undertake such an enterprise either. All he could do was sending the rest of the payment to the remnants of the Norlund Clan, as the promise to craft the Scepter was indeed fulfilled.",
+									"Pypo I thought it little wise to send forces to uncover the Scepter, with goblins swarming the region, and given that the volcano might still be too unstable. Aged and nearing the end of his life himself, he did not have the energy to undertake such an enterprise either. All he could do was sending the rest of the payment to the remnants of the Norlund clan, as the promise to craft the Scepter was indeed fulfilled.",
 									player,
 									{"~!Continue"},
 									{function(s)
 									if (GrandStrategy) then
-										ChangeFactionResource("dwarf", "Norlund Clan", "gold", 2500)
-										ChangeFactionResource("gnome", "Untersberg", "gold", -2500)
-										AcquireProvince(WorldMapProvinces.ShorbearHills, "Norlund Clan")
-										SetFactionDiplomacyState("dwarf", "Norlund Clan", "dwarf", "Shinsplitter Clan", "peace")
-										ChangeFactionResource("dwarf", "Norlund Clan", "prestige", 100) -- a lot of prestige for completing the legendary scepter
+										ChangeFactionResource("dwarf", "norlund-clan", "gold", 2500)
+										ChangeFactionResource("gnome", "untersberg", "gold", -2500)
+										AcquireProvince(WorldMapProvinces.ShorbearHills, "norlund-clan")
+										SetFactionDiplomacyState("dwarf", "norlund-clan", "dwarf", "shinsplitter-clan", "peace")
+										ChangeFactionResource("dwarf", "norlund-clan", "prestige", 100) -- a lot of prestige for completing the legendary scepter
 									end
 									Event(
 										"",
@@ -882,7 +882,7 @@ AddTrigger("caverns-of-flame-ending",
 		)
 		Event(
 			"",
-			"Thus exploded the volcano, obliterating our valiant kin. The Norlunds seem to have done well in the eyes of the gnomish king, for he sent silver caravans with the rest of the payment to them. With our forces depleted and the Norlunds possessing the financial capability of mustering more soldiers, we had no choice but to sue for peace - resulting in our cession of the Shorbear Hold to the Norlund Clan.",
+			"Thus exploded the volcano, obliterating our valiant kin. The Norlunds seem to have done well in the eyes of the gnomish king, for he sent silver caravans with the rest of the payment to them. With our forces depleted and the Norlunds possessing the financial capability of mustering more soldiers, we had no choice but to sue for peace - resulting in our cession of the Shorbear Hold to the Norlund clan.",
 			GetFactionPlayer("Shinsplitter Clan"),
 			{"~!Continue"},
 			{function(s)

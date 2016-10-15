@@ -44,14 +44,14 @@ DefineProvince("Arabia", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
-		"persian", "Agraei Tribe",
-		"persian", "Arab Tribe",
-		"persian", "Nabataei Tribe"
+		"persian", "agraei-tribe",
+		"persian", "arab-tribe",
+		"persian", "nabataei-tribe"
 	},
 	HistoricalOwners = {
-		161, "persian", "Arab Tribe", -- The area was inhabited by the Arabes in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
---		161, "persian", "Nabataei Tribe", -- The area was inhabited by the Nabataei in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
---		161, "persian", "Agraei Tribe" -- The area was inhabited by the Agraei in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "persian", "arab-tribe", -- The area was inhabited by the Arabes in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+--		161, "persian", "nabataei-tribe", -- The area was inhabited by the Nabataei in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+--		161, "persian", "agraei-tribe" -- The area was inhabited by the Agraei in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	Regions = {"Europe"} -- should be in the provinces_earth_europe.lua file, but since the map doesn't extend this far yet, have this definition in this file for now
 })
@@ -62,11 +62,11 @@ DefineProvince("Armenia", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
-		"greek", "Armenia"
+		"greek", "armenia"
 	},
 	HistoricalOwners = {
-		161, "persian", "Parthia", -- in 161 the Parthians invaded Armenia and afterwards defeated the armies stationed there; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		163, "greek", "Armenia" -- in 163 co-emperor Lucius Verus reconquered Armenia from the Parthians (presumably restoring it as a vassal state?); Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "persian", "parthia", -- in 161 the Parthians invaded Armenia and afterwards defeated the armies stationed there; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		163, "greek", "armenia" -- in 163 co-emperor Lucius Verus reconquered Armenia from the Parthians (presumably restoring it as a vassal state?); Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	Regions = {"Asia"}
 })
@@ -81,7 +81,7 @@ DefineProvince("Asia Minor", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
-		"hittite", "Troy"
+		"hittite", "troy"
 	},
 	Regions = {"Asia"}
 })
@@ -92,16 +92,16 @@ DefineProvince("Caucasus", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
-		"persian", "Abasgi Tribe",
-		"persian", "Alan Tribe"
-		"persian", "Heniochi Tribe"
-		"persian", "Sindi Tribe"
+		"persian", "abasgi-tribe",
+		"persian", "alan-tribe"
+		"persian", "heniochi-tribe"
+		"persian", "sindi-tribe"
 	},
 	HistoricalOwners = {
-		161, "persian", "Abasgi Tribe", -- The area was inhabited by the Abasgi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
---		161, "persian", "Heniochi Tribe", -- The area was inhabited by the Heniochi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
---		161, "persian", "Alan Tribe", -- The area was inhabited by the Alani in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
---		161, "persian", "Sindi Tribe" -- The area was inhabited by the Sindi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "persian", "abasgi-tribe", -- The area was inhabited by the Abasgi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+--		161, "persian", "heniochi-tribe", -- The area was inhabited by the Heniochi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+--		161, "persian", "alan-tribe", -- The area was inhabited by the Alani in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+--		161, "persian", "sindi-tribe" -- The area was inhabited by the Sindi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	Regions = {"Europe"} -- should be in the provinces_earth_europe.lua file, but since the map doesn't extend this far yet, have this definition in this file for now
 })
@@ -163,7 +163,7 @@ DefineProvince("Syria", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	HistoricalOwners = {
-		161, "persian", "Parthia", -- in 161 the Parthians invaded Syria and afterwards defeated the armies stationed there; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "persian", "parthia", -- in 161 the Parthians invaded Syria and afterwards defeated the armies stationed there; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalSettlementBuildings = {
 		161, "unit-latin-barracks", true -- Legionary base present in Bostra in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.

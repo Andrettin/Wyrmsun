@@ -34,7 +34,7 @@
 DefineUnitType("unit-deep-gnomish-worker", {
 	Parent = "unit-gnomish-worker",
 	Civilization = "gnome",
-	Faction = "Acthnic Tribe",
+	Faction = "acthnic-tribe",
 	SkinColor = "gray",
 	HairColor = "red",
 	DaySightRangeBonus = -1,
@@ -85,7 +85,7 @@ DefineUnitType("unit-deep-gnomish-worker", {
 DefineUnitType("unit-deep-gnomish-recruit", {
 	Parent = "unit-gnomish-recruit",
 	Civilization = "gnome",
-	Faction = "Acthnic Tribe",
+	Faction = "acthnic-tribe",
 	SkinColor = "gray",
 	HairColor = "red",
 	DaySightRangeBonus = -1,
@@ -182,7 +182,7 @@ DefineUnitType("unit-deep-gnomish-recruit", {
 DefineUnitType("unit-deep-gnomish-duelist", {
 	Parent = "unit-gnomish-duelist",
 	Civilization = "gnome",
-	Faction = "Acthnic Tribe",
+	Faction = "acthnic-tribe",
 	SkinColor = "gray",
 	HairColor = "red",
 	DaySightRangeBonus = -1,
@@ -279,7 +279,7 @@ DefineUnitType("unit-deep-gnomish-duelist", {
 DefineUnitType("unit-deep-gnomish-master-at-arms", {
 	Parent = "unit-gnomish-master-at-arms",
 	Civilization = "gnome",
-	Faction = "Acthnic Tribe",
+	Faction = "acthnic-tribe",
 	SkinColor = "gray",
 	HairColor = "red",
 	DaySightRangeBonus = -1,
@@ -376,7 +376,7 @@ DefineUnitType("unit-deep-gnomish-master-at-arms", {
 DefineUnitType("unit-deep-gnomish-herbalist", {
 	Parent = "unit-gnomish-herbalist",
 	Civilization = "gnome",
-	Faction = "Acthnic Tribe",
+	Faction = "acthnic-tribe",
 	SkinColor = "gray",
 	DaySightRangeBonus = -1,
 	NightSightRangeBonus = 1,

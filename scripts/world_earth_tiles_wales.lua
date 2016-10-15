@@ -41,7 +41,7 @@ DefineWorldMapTile({467, 108}, {
 		"celt", "Moridunum" -- main settlement of the Demetae tribe; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
 	},
 	Claims = {
-		"celt", "Demetae Tribe"
+		"celt", "demetae-tribe"
 	}
 })
 

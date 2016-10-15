@@ -25,11 +25,11 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 if (LoadedGame == false) then
-	SetPlayerData(0, "Faction", "Brising Clan")
+	SetPlayerData(0, "Faction", "brising-clan")
 	SetPlayerData(0, "Resources", "gold", 5000)
 	SetPlayerData(0, "Resources", "lumber", 3000)
 	SetPlayerData(0, "Resources", "stone", 2000)
-	SetPlayerData(1, "Faction", "Shinsplitter Clan")
+	SetPlayerData(1, "Faction", "shinsplitter-clan")
 	SetPlayerData(1, "Name", "Bandits")
 	SetPlayerData(1, "Resources", "gold", 5000)
 	SetPlayerData(1, "Resources", "lumber", 3000)
@@ -54,11 +54,11 @@ if (LoadedGame == false) then
 		CreateProvinceUnits("Svarinshaug", 0, 1, false, true)
 		CreateProvinceCustomHero("Svarinshaug", 0)
 		
-		if (FactionHasHero("dwarf", "Brising Clan", "Modsognir")) then
+		if (FactionHasHero("dwarf", "brising-clan", "Modsognir")) then
 			unit = CreateUnit(GetGrandStrategyHeroUnitType("Modsognir"), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 			SetUnitVariable(unit, "Character", "Modsognir")
 		end
-		if (FactionHasHero("dwarf", "Brising Clan", "Durin")) then
+		if (FactionHasHero("dwarf", "brising-clan", "Durin")) then
 			unit = CreateUnit(GetGrandStrategyHeroUnitType("Durin"), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 			SetUnitVariable(unit, "Character", "Durin")
 		end

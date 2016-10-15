@@ -25,25 +25,10 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Brazil", {
+DefineFaction("brazil", {
+	Name = "Brazil",
 	Civilization = "latin",
 	Type = "polity",
 	Colors = {"green"},
 	DefaultTier = "kingdom"
-})
-
-DefineFaction("Maua", { -- titular barony; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", pp. 6-7.
-	Civilization = "latin",
-	ParentFaction = "Brazil",
-	Type = "polity",
-	Colors = {"yellow"},
-	DefaultTier = "barony"
-})
-
-DefineFaction("Rio Negro", { -- titular barony; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 9.
-	Civilization = "latin",
-	ParentFaction = "Brazil",
-	Type = "polity",
-	Colors = {"black"},
-	DefaultTier = "barony"
 })

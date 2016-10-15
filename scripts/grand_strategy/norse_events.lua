@@ -38,7 +38,7 @@ local NorseEvents = {
 				and FactionHasTechnologyType(EventFaction, "bronze-shield")
 				and FactionHasTechnologyType(EventFaction, "ranged-projectile-1")
 				and FactionHasTechnologyType(EventFaction, "wood-plow")
-				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Skeldung Tribe" or EventFaction.Name == "Yngling Tribe")
+				and (EventFaction.Name == "asa-tribe" or EventFaction.Name == "skeldung-tribe" or EventFaction.Name == "yngling-tribe")
 				and EventFaction.Name ~= GrandStrategyFaction.Name -- only available for NPC factions, since the norse civilization is not playable
 				and (SyncRand(50) < 1 or FactionHasCulture(EventFaction, "norse"))
 			) then
@@ -127,10 +127,10 @@ local NorseEvents = {
 		Description = "The chieftain of the Danes, Fredfrode, prepared a great feast for our chieftain Fiolner in his capital of Leidre. Within Fredfrode's dwelling, there were many tall vessels filled with mead. Our chieftain, while walking through a gallery during the evening, sleepy and exceedingly drunk, slipped his foot and fell into one such vessel, drowning in mead.",
 		Conditions = function(s)
 			if (
-				(EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
-				and (GetFactionProvinceCount(Factions.DaneTribe) > 0 or GetFactionProvinceCount(Factions.Denmark) > 0)
+				(EventFaction.Name == "swede-tribe" or EventFaction.Name == "sweden")
+				and (GetFactionProvinceCount(Factions.dane_tribe) > 0 or GetFactionProvinceCount(Factions.denmark) > 0)
 				and GetFactionMinister("norse", EventFaction.Name, "head-of-state") == "Fiolner Yngling"
-				and GetFactionMinister("norse", "Dane Tribe", "head-of-state") == "Fridfrode Skjoldung"
+				and GetFactionMinister("norse", "dane-tribe", "head-of-state") == "Fridfrode Skjoldung"
 				and SyncRand(100) < 10
 			) then
 				return true
@@ -152,7 +152,7 @@ local NorseEvents = {
 		Description = "Our chieftain Swegde has gone on a journey to find Odin and his dwelling. Travelling with twelve men, he went as far as Asia Minor and the Black Sea.",
 		Conditions = function(s)
 			if (
-				(EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
+				(EventFaction.Name == "swede-tribe" or EventFaction.Name == "sweden")
 				and GetFactionMinister("norse", EventFaction.Name, "head-of-state") == "Swegder Yngling"
 				and SyncRand(100) < 10
 			) then
@@ -174,7 +174,7 @@ local NorseEvents = {
 		Description = "After several years, Swegde returned from his journey, bringing with him a wife, Vana, and their son Vanland. He did not manage to find Odin, but soon afterwards he went away again to do so. He arrived in a place called Stein, where stood a stone as big as a house. During the evening, after having drunk much, Swegde and his men saw someone near the stone... There was a man standing behind a door in it, and he invited Swegde inside, claiming Odin to be inside. Our chieftain agreed... and once inside he was murdered and was never seen again.",
 		Conditions = function(s)
 			if (
-				(EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
+				(EventFaction.Name == "swede-tribe" or EventFaction.Name == "sweden")
 				and GetFactionMinister("norse", EventFaction.Name, "head-of-state") == "Swegder Yngling"
 				and SyncRand(100) < 50
 			) then
@@ -201,7 +201,7 @@ local NorseEvents = {
 		Description = "Our chieftain Vanland has taken up his winter abode in Finland with Snio the Old, marrying his daughter Drisa. When spring came, Vanland set out to Sweden, promising to Drisa that he would return within three years.",
 		Conditions = function(s)
 			if (
-				(EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
+				(EventFaction.Name == "swede-tribe" or EventFaction.Name == "sweden")
 				and GetFactionMinister("norse", EventFaction.Name, "head-of-state") == "Vanland Yngling"
 				and SyncRand(100) < 10
 			) then
@@ -223,7 +223,7 @@ local NorseEvents = {
 		Description = "Vanland did not keep his promise. Even after many years had passed, he hadn't returned to Drisa's embrace... She sent the son she had with Vanland, Visbur, to Sweden, and then bribed the witch Hulda to charm Vanland into returning to Finland, or to kill him. Vanland felt a sudden urge to visit Finland, but his councilors and friends advised him against it. He then became quite drowsy, and went to sleep... cries were heard from his chamber, and his men rushed there, only to find him dead. His body was burnt at the river Skytaa, and a standing stone was raised for him.",
 		Conditions = function(s)
 			if (
-				(EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
+				(EventFaction.Name == "swede-tribe" or EventFaction.Name == "sweden")
 				and GetFactionMinister("norse", EventFaction.Name, "head-of-state") == "Vanland Yngling"
 				and SyncRand(100) < 10
 			) then
@@ -396,7 +396,7 @@ local NorseEvents = {
 		Description = "Movement restrictions, or vornedskabet, have been introduced on the serfs of the island of Zealand.",
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "Denmark"
+				EventFaction.Name == "denmark"
 				and GetProvinceOwner("Zealand") == EventFaction.Name
 				and GetProvinceCivilization("Zealand") == "norse" -- because the name "Vornedskabet" is specific to the Danish language
 				-- should only trigger after a technology for the appropriate time period has been researched
@@ -420,7 +420,7 @@ local NorseEvents = {
 		Description = "The Danish nobility has managed to acquire the right of legal jurisdiction over their villagers.",
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "Denmark"
+				EventFaction.Name == "denmark"
 				-- should only trigger after a technology for the appropriate time period has been researched
 			) then
 				return true
@@ -442,7 +442,7 @@ local NorseEvents = {
 		Description = "The vornedskabet has been abolished in Zealand.",
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "Denmark"
+				EventFaction.Name == "denmark"
 				and GetProvinceOwner("Zealand") == EventFaction.Name
 				and GetProvinceCivilization("Zealand") == "norse"
 				-- should only trigger after a technology for the appropriate time period has been researched
@@ -468,7 +468,7 @@ local NorseEvents = {
 		Description = "The stavnsbandet, which consists of movement restrictions for the male population, has been introduced for military reasons. It will hurt our economy, however.",
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "Denmark"
+				EventFaction.Name == "denmark"
 				and GetProvinceOwner("Zealand") == EventFaction.Name
 				and GetProvinceCivilization("Zealand") == "norse" -- because the name "Vornedskabet" is specific to the Danish language
 				and GetProvinceSettlementBuilding("Zealand", "unit-teuton-barracks")

@@ -33,7 +33,7 @@ if (LoadedGame == false) then
 	SetPlayerData(0, "Resources", "lumber", 0)
 	SetPlayerData(0, "Resources", "stone", 0)
 	SetPlayerData(0, "Resources", "oil", 0)
-	SetPlayerData(0, "Faction", "Brising Clan")
+	SetPlayerData(0, "Faction", "brising-clan")
 	
 	if not (GrandStrategy) then
 		unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
@@ -46,11 +46,11 @@ if (LoadedGame == false) then
 		CreateProvinceUnits("Svarinshaug", 0, 1, false, false)
 		CreateProvinceCustomHero("Svarinshaug", 0)
 	
-		if (FactionHasHero("dwarf", "Brising Clan", "Modsognir")) then
+		if (FactionHasHero("dwarf", "brising-clan", "Modsognir")) then
 			unit = CreateUnit(GetGrandStrategyHeroUnitType("Modsognir"), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 			SetUnitVariable(unit, "Character", "Modsognir")
 		end
-		if (FactionHasHero("dwarf", "Brising Clan", "Durin")) then
+		if (FactionHasHero("dwarf", "brising-clan", "Durin")) then
 			unit = CreateUnit(GetGrandStrategyHeroUnitType("Durin"), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 			SetUnitVariable(unit, "Character", "Durin")
 		end

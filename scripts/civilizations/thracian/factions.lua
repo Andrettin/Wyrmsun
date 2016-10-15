@@ -25,55 +25,64 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Apsinthii Tribe", {
+DefineFaction("apsinthii-tribe", {
+	Name = "Apsinthii Tribe",
 	Civilization = "thracian",
 	Type = "tribe",
 	Colors = {"purple"}
 })
 
-DefineFaction("Carpi Tribe", {
+DefineFaction("carpi-tribe", {
+	Name = "Carpi Tribe",
 	Civilization = "thracian", -- accurate?
 	Type = "tribe",
 	Colors = {"blue"}
 })
 
-DefineFaction("Costoboci Tribe", {
+DefineFaction("costoboci-tribe", {
+	Name = "Costoboci Tribe",
 	Civilization = "thracian", -- correct?
 	Type = "tribe",
 	Colors = {"red"}
 })
 
-DefineFaction("Daci Tribe", {
+DefineFaction("daci-tribe", {
+	Name = "Daci Tribe",
 	Civilization = "thracian", -- correct?
 	Type = "tribe",
 	Colors = {"violet"}
 })
 
-DefineFaction("Edoni Tribe", {
+DefineFaction("edoni-tribe", {
+	Name = "Edoni Tribe",
 	Civilization = "thracian",
 	Type = "tribe",
 	Colors = {"white"}
 })
 
-DefineFaction("Getae Tribe", {
+DefineFaction("getae-tribe", {
+	Name = "Getae Tribe",
 	Civilization = "thracian",
 	Type = "tribe",
 	Colors = {"teal"}
 })
 
-DefineFaction("Odomanti Tribe", {
+DefineFaction("odomanti-tribe", {
+	Name = "Odomanti Tribe",
 	Civilization = "thracian", -- were they really Thracian?
 	Type = "tribe",
 	Colors = {"black"}
 })
 
-DefineFaction("Odrysae Tribe", {
+DefineFaction("odrysae-tribe", {
+	Name = "Odrysae Tribe",
 	Civilization = "thracian",
 	Type = "tribe",
 	Colors = {"red"}
 })
 
-DefineFaction("Triballi Tribe", {
+DefineFaction("triballi-tribe", {
+	Name = "Triballi Tribe",
 	Civilization = "thracian",
 	Type = "tribe",
 	Colors = {"green"}

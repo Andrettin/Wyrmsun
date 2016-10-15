@@ -35,6 +35,6 @@ DefineCharacter("Pypo", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, p
 	DeathYear = 40, -- last we hear of him
 	Quote = _("\"Know, you creeping worm of the earth, I am Pypo, the king of the gnomes.\"\n- Pypo, King of Untersberg"),
 	HistoricalTitles = {
-		"head-of-state", -1, 40, "gnome", "Untersberg"
+		"head-of-state", -1, 40, "gnome", "untersberg"
 	}
 })

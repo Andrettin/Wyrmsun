@@ -28,21 +28,21 @@
 DefineWorldMapTile({467, 97}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "England", "Glasgow"
+		"teuton", "england", "Glasgow"
 	}
 })
 
 DefineWorldMapTile({469, 93}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "England", "Dumfries"
+		"teuton", "england", "Dumfries"
 	}
 })
 
 DefineWorldMapTile({470, 87}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "England", "Kirkwall", "name-elements", {
+		"teuton", "england", "Kirkwall", "name-elements", {
 --			"compound", "prefix", -- ?
 			"compound", "suffix", "english", "noun", "singular", "Wall"
 		}
@@ -52,7 +52,7 @@ DefineWorldMapTile({470, 87}, {
 DefineWorldMapTile({470, 97}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "England", "Edinburgh", "name-elements", {
+		"teuton", "england", "Edinburgh", "name-elements", {
 --			"compound", "prefix", -- ?
 			"compound", "suffix", "english", "noun", "singular", "Burgh"
 		}
@@ -62,6 +62,6 @@ DefineWorldMapTile({470, 97}, {
 DefineWorldMapTile({473, 93}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "England", "Aberdeen"
+		"teuton", "england", "Aberdeen"
 	}
 })

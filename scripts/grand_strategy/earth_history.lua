@@ -142,9 +142,9 @@ if (GrandStrategyYear >= -7000) then
 	-- In the Mediterranean coasts of northwestern Europe, material aspects of the Neolithic (like grinding stones and pottery) begin to appear around the 7th millenium BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 150.
 
 	-- Impressed Cardial Pottery culture existed in parts of the Aegean between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
-	SetProvinceOwner("Thessaly", "minoan", "Impressedware Tribe")
+	SetProvinceOwner("Thessaly", "minoan", "impressedware-tribe")
 	SetProvinceCivilization("Thessaly", "minoan")
-	SetProvinceOwner("Euboea", "minoan", "Impressedware Tribe")
+	SetProvinceOwner("Euboea", "minoan", "impressedware-tribe")
 	SetProvinceCivilization("Euboea", "minoan")
 end
 
@@ -284,7 +284,7 @@ if (GrandStrategyYear >= -2140) then
 end
 
 if (GrandStrategyYear >= -2000) then
-	SetProvinceOwner("Crete", "minoan", "Crete") -- Minoan civilization; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 23.
+	SetProvinceOwner("Crete", "minoan", "crete") -- Minoan civilization; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 23.
 	SetProvinceCivilization("Crete", "minoan")
 	-- Somogyvar-Vinkovci culture existed in Hungary around 2000 BC, and possessed wagons / wooden wheels; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 15.
 	-- early Wietenberg culture existed in Romania around 2000 BC, and possessed wagons / wooden wheels; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 15.
@@ -409,23 +409,23 @@ if (GrandStrategyYear >= -1450) then
 	SetProvinceOwner("Crete", "", "")
 	
 	-- Mycenaean Greece included Argolis, Aetolia, Attica, Boeotia, Corinth, Crete, Euboea, Lacedaemonia and Rhodes about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-	SetProvinceOwner("Aetolia", "greek", "Mycenae")
+	SetProvinceOwner("Aetolia", "greek", "mycenae")
 	SetProvinceCivilization("Aetolia", "greek")
-	SetProvinceOwner("Argolis", "greek", "Mycenae")
+	SetProvinceOwner("Argolis", "greek", "mycenae")
 	SetProvinceCivilization("Argolis", "greek")
-	SetProvinceOwner("Attica", "greek", "Mycenae")
+	SetProvinceOwner("Attica", "greek", "mycenae")
 	SetProvinceCivilization("Attica", "greek")
-	SetProvinceOwner("Boeotia", "greek", "Mycenae")
+	SetProvinceOwner("Boeotia", "greek", "mycenae")
 	SetProvinceCivilization("Boeotia", "greek")
-	SetProvinceOwner("Corinth", "greek", "Mycenae")
+	SetProvinceOwner("Corinth", "greek", "mycenae")
 	SetProvinceCivilization("Corinth", "greek")
-	SetProvinceOwner("Crete", "greek", "Mycenae")
+	SetProvinceOwner("Crete", "greek", "mycenae")
 	SetProvinceCivilization("Crete", "greek")
-	SetProvinceOwner("Euboea", "greek", "Mycenae")
+	SetProvinceOwner("Euboea", "greek", "mycenae")
 	SetProvinceCivilization("Euboea", "greek")
-	SetProvinceOwner("Lacedaemonia", "greek", "Mycenae")
+	SetProvinceOwner("Lacedaemonia", "greek", "mycenae")
 	SetProvinceCivilization("Lacedaemonia", "greek")
-	SetProvinceOwner("Rhodes", "greek", "Mycenae")
+	SetProvinceOwner("Rhodes", "greek", "mycenae")
 	SetProvinceCivilization("Rhodes", "greek")
 end
 
@@ -442,7 +442,7 @@ end
 
 if (GrandStrategyYear >= -1300) then
 	-- Mycenaean territory included most of Thessaly in 1300 BC; Source: "Atlas de História Mundial", 2001, p. 66.
-	SetProvinceOwner("Thessaly", "greek", "Mycenae")
+	SetProvinceOwner("Thessaly", "greek", "mycenae")
 	SetProvinceCivilization("Thessaly", "greek")
 end
 
@@ -473,33 +473,33 @@ if (GrandStrategyYear >= -1000) then
 end
 
 if (GrandStrategyYear >= -800) then -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
-	SetProvinceOwner("Switzerland", "celt", "Helvetii Tribe") -- already in Switzerland?
+	SetProvinceOwner("Switzerland", "celt", "helvetii-tribe") -- already in Switzerland?
 	SetProvinceCivilization("Switzerland", "celt")
 end
 
 if (GrandStrategyYear >= -750) then -- Eastern Mediterranean between 750 and 625 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.	
 	-- Greek settlements existed in Greece proper, Crete, Rhodes, Asia Minor, the Ionian islands, Sinope, Trapezus, eastern Sicily, southern Italy and northern Cyprus between 750 and 625 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	
-	SetProvinceOwner("Macedonia", "greek", "Macedon")
+	SetProvinceOwner("Macedonia", "greek", "macedon")
 	
-	SetProvinceOwner("Tuscany", "etruscan", "Etruscan Tribe")
+	SetProvinceOwner("Tuscany", "etruscan", "etruscan-tribe")
 	SetProvinceCivilization("Tuscany", "etruscan")
 end
 
 if (GrandStrategyYear >= -700) then -- Greece in 700-600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
-	SetProvinceOwner("Attica", "greek", "Athens")
-	SetFactionGovernmentType("greek", "Athens", "republic")
+	SetProvinceOwner("Attica", "greek", "athens")
+	SetFactionGovernmentType("greek", "athens", "republic")
 	
-	SetProvinceOwner("Boeotia", "greek", "Thebes")
+	SetProvinceOwner("Boeotia", "greek", "thebes")
 	
-	SetProvinceOwner("Epirus", "greek", "Chaoni Tribe")
+	SetProvinceOwner("Epirus", "greek", "chaoni-tribe")
 	SetProvinceCivilization("Epirus", "greek")
 	
-	SetProvinceOwner("Lacedaemonia", "greek", "Sparta")
+	SetProvinceOwner("Lacedaemonia", "greek", "sparta")
 
-	SetProvinceOwner("Argolis", "greek", "Argos")
+	SetProvinceOwner("Argolis", "greek", "argos")
 
-	SetProvinceOwner("Corinth", "greek", "Corinth")
+	SetProvinceOwner("Corinth", "greek", "corinth")
 end
 
 if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and encompassed Jutland, southern Sweden, northwestern Germany, and eastern Germany; Source: J. P. Mallory and Douglas Q. Adams, "Encyclopedia of Indo-European Culture", 1997, pp. 321-322
@@ -519,7 +519,7 @@ if (GrandStrategyYear >= -550) then
 	SetProvinceCivilization("Macedonia", "greek")
 	SetProvinceCivilization("Thrace", "greek")
 
-	SetProvinceOwner("Liguria", "celt", "Ligurian Tribe")
+	SetProvinceOwner("Liguria", "celt", "ligurian-tribe")
 	SetProvinceCivilization("Liguria", "celt")
 	
 	-- Celts first mentioned by classical authors around 550 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 113.
@@ -535,75 +535,75 @@ end
 
 if (GrandStrategyYear >= -500) then
 	-- Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
-	SetProvinceOwner("Macedonia", "persian", "Persia")
-	SetProvinceOwner("Thrace", "persian", "Persia")
+	SetProvinceOwner("Macedonia", "persian", "persia")
+	SetProvinceOwner("Thrace", "persian", "persia")
 	
 	-- Maiden Castle hill fort build around 500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 119.
 	
 	-- Greece at the time of the War with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
-	SetFactionDiplomacyState("greek", "Athens", "persian", "Persia", "war")
-	SetFactionDiplomacyState("greek", "Sparta", "persian", "Persia", "war")
-	SetFactionDiplomacyState("greek", "Corinth", "persian", "Persia", "war")
+	SetFactionDiplomacyState("greek", "athens", "persian", "persia", "war")
+	SetFactionDiplomacyState("greek", "sparta", "persian", "persia", "war")
+	SetFactionDiplomacyState("greek", "corinth", "persian", "persia", "war")
 	SetProvinceCivilization("Thrace", "thracian") -- Apsinthii
 	
 	-- Situation of Italy in (apparently) 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 	
-	SetProvinceOwner("Tuscany", "etruscan", "Etruria")
-	SetProvinceOwner("Romagna", "etruscan", "Etruria")
+	SetProvinceOwner("Tuscany", "etruscan", "etruria")
+	SetProvinceOwner("Romagna", "etruscan", "etruria")
 	SetProvinceCivilization("Romagna", "etruscan")
-	SetProvinceOwner("Modena", "etruscan", "Etruria")
+	SetProvinceOwner("Modena", "etruscan", "etruria")
 	SetProvinceCivilization("Modena", "etruscan")
 	
-	SetProvinceOwner("Umbria", "latin", "Umbrian Tribe") -- the Aequians, Picentians and Sabines also inhabited this region
+	SetProvinceOwner("Umbria", "latin", "umbrian-tribe") -- the Aequians, Picentians and Sabines also inhabited this region
 	SetProvinceCivilization("Umbria", "latin")
 	
-	SetProvinceOwner("Calabria", "latin", "Oenotrian Tribe")
+	SetProvinceOwner("Calabria", "latin", "oenotrian-tribe")
 	SetProvinceCivilization("Calabria", "latin")
 	
-	SetProvinceOwner("Apulia", "latin", "Messapian Tribe") -- also inhabited by the Iapygians
+	SetProvinceOwner("Apulia", "latin", "messapian-tribe") -- also inhabited by the Iapygians
 	SetProvinceCivilization("Apulia", "latin")
 	
-	SetProvinceOwner("Abruzzo", "latin", "Sabellian Tribe") -- also inhabited by the Frentanians
+	SetProvinceOwner("Abruzzo", "latin", "sabellian-tribe") -- also inhabited by the Frentanians
 	SetProvinceCivilization("Abruzzo", "latin")
 	
-	SetProvinceOwner("Naples", "latin", "Samnite Tribe")
+	SetProvinceOwner("Naples", "latin", "samnite-tribe")
 	SetProvinceCivilization("Naples", "latin")
 end
 
 if (GrandStrategyYear >= -479) then
 	-- End of the war between the Greek states and Persia in 479 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
-	SetFactionDiplomacyState("greek", "Athens", "persian", "Persia", "peace")
-	SetFactionDiplomacyState("greek", "Sparta", "persian", "Persia", "peace")
-	SetFactionDiplomacyState("greek", "Corinth", "persian", "Persia", "peace")
+	SetFactionDiplomacyState("greek", "athens", "persian", "persia", "peace")
+	SetFactionDiplomacyState("greek", "sparta", "persian", "persia", "peace")
+	SetFactionDiplomacyState("greek", "corinth", "persian", "persia", "peace")
 end
 
 if (GrandStrategyYear >= -450) then
 	-- Greece circa 450 BC (height of the Athenian empire); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
-	SetProvinceOwner("Thrace", "thracian", "Apsinthii Tribe")
-	SetProvinceOwner("Macedonia", "greek", "Macedon")
+	SetProvinceOwner("Thrace", "thracian", "apsinthii-tribe")
+	SetProvinceOwner("Macedonia", "greek", "macedon")
 	
-	SetProvinceOwner("Albania", "illyrian", "Taulantii Tribe")
+	SetProvinceOwner("Albania", "illyrian", "taulantii-tribe")
 	SetProvinceCivilization("Albania", "illyrian")
 	
-	SetFactionDiplomacyState("greek", "Athens", "greek", "Thebes", "alliance")
-	SetFactionDiplomacyState("greek", "Athens", "greek", "Argos", "alliance")
+	SetFactionDiplomacyState("greek", "athens", "greek", "thebes", "alliance")
+	SetFactionDiplomacyState("greek", "athens", "greek", "argos", "alliance")
 end
 
 if (GrandStrategyYear >= -431) then
 	-- Greece in 431 BC (beginning of the Peloponnesian War); Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.	
-	SetProvinceOwner("Bulgaria", "thracian", "Odrysae Tribe")
+	SetProvinceOwner("Bulgaria", "thracian", "odrysae-tribe")
 	SetProvinceCivilization("Bulgaria", "thracian")
 	
-	SetProvinceOwner("Skopje", "phrygian", "Bryges Tribe")
+	SetProvinceOwner("Skopje", "phrygian", "bryges-tribe")
 	SetProvinceCivilization("Skopje", "phrygian")
 
-	SetFactionDiplomacyState("greek", "Athens", "greek", "Sparta", "war")
-	SetFactionDiplomacyState("greek", "Athens", "greek", "Corinth", "war")
-	SetFactionDiplomacyState("greek", "Athens", "greek", "Thebes", "war")
-	SetFactionDiplomacyState("greek", "Athens", "greek", "Macedon", "war")
-	SetFactionDiplomacyState("greek", "Sparta", "greek", "Corinth", "alliance")
-	SetFactionDiplomacyState("greek", "Sparta", "greek", "Thebes", "alliance")
-	SetFactionDiplomacyState("greek", "Sparta", "greek", "Macedon", "alliance")
+	SetFactionDiplomacyState("greek", "athens", "greek", "sparta", "war")
+	SetFactionDiplomacyState("greek", "athens", "greek", "corinth", "war")
+	SetFactionDiplomacyState("greek", "athens", "greek", "thebes", "war")
+	SetFactionDiplomacyState("greek", "athens", "greek", "macedon", "war")
+	SetFactionDiplomacyState("greek", "sparta", "greek", "corinth", "alliance")
+	SetFactionDiplomacyState("greek", "sparta", "greek", "thebes", "alliance")
+	SetFactionDiplomacyState("greek", "sparta", "greek", "macedon", "alliance")
 end
 
 if (GrandStrategyYear >= -387) then
@@ -612,30 +612,30 @@ end
 
 if (GrandStrategyYear >= -362) then
 	-- Greece in 362 BC (Theban headship); Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.	
-	SetFactionDiplomacyState("greek", "Athens", "greek", "Sparta", "peace")
-	SetFactionDiplomacyState("greek", "Athens", "greek", "Corinth", "peace")
-	SetFactionDiplomacyState("greek", "Athens", "greek", "Thebes", "peace")
-	SetFactionDiplomacyState("greek", "Athens", "greek", "Macedon", "peace")
+	SetFactionDiplomacyState("greek", "athens", "greek", "sparta", "peace")
+	SetFactionDiplomacyState("greek", "athens", "greek", "corinth", "peace")
+	SetFactionDiplomacyState("greek", "athens", "greek", "thebes", "peace")
+	SetFactionDiplomacyState("greek", "athens", "greek", "macedon", "peace")
 	
-	SetFactionDiplomacyState("greek", "Sparta", "greek", "Corinth", "peace") -- end of anti-Athenian alliances with Sparta
-	SetFactionDiplomacyState("greek", "Sparta", "greek", "Thebes", "peace")
-	SetFactionDiplomacyState("greek", "Sparta", "greek", "Macedon", "peace")
+	SetFactionDiplomacyState("greek", "sparta", "greek", "corinth", "peace") -- end of anti-Athenian alliances with Sparta
+	SetFactionDiplomacyState("greek", "sparta", "greek", "thebes", "peace")
+	SetFactionDiplomacyState("greek", "sparta", "greek", "macedon", "peace")
 
-	SetFactionDiplomacyState("greek", "Thebes", "greek", "Argos", "alliance")
+	SetFactionDiplomacyState("greek", "thebes", "greek", "argos", "alliance")
 end
 
 if (GrandStrategyYear >= -336) then
 	-- Macedonian Empire in 336-323 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
-	SetProvinceOwner("Skopje", "greek", "Macedon") -- the site of Skopje wasn't a part of the Macedonian Empire in 336 BC, but most of the modern Republic of Macedonia was
-	SetProvinceOwner("Albania", "greek", "Macedon") -- most of Albania was a part of the Macedonian Empire in 336 BC (including the city of Apollonia), but not the city of Epidamnus
+	SetProvinceOwner("Skopje", "greek", "macedon") -- the site of Skopje wasn't a part of the Macedonian Empire in 336 BC, but most of the modern Republic of Macedonia was
+	SetProvinceOwner("Albania", "greek", "macedon") -- most of Albania was a part of the Macedonian Empire in 336 BC (including the city of Apollonia), but not the city of Epidamnus
 	
-	SetProvinceOwner("Dobruja", "thracian", "Getae Tribe")
+	SetProvinceOwner("Dobruja", "thracian", "getae-tribe")
 	SetProvinceCivilization("Dobruja", "thracian")
-	AddProvinceClaim("Dobruja", "thracian", "Getae Tribe")
+	AddProvinceClaim("Dobruja", "thracian", "getae-tribe")
 	
 	SetProvinceUnitQuantity("Ukraine", "unit-germanic-warrior", 0)
 	
-	SetProvinceOwner("Epirus", "greek", "Epirus")
+	SetProvinceOwner("Epirus", "greek", "epirus")
 end
 
 if (GrandStrategyYear >= -325) then -- Pytheas sets out on an exploration voyage in 325 BC; Pliny (in his Natural History) gives Pytheas as an authority for the existence of the Goths; Source: Carl Waldman and Catherine Mason, "Encyclopedia of European Peoples", 2006, p. 350; Source: Pliny the Elder, "The Natural History", 37.11.
@@ -646,66 +646,66 @@ end
 
 if (GrandStrategyYear >= -323) then
 	-- Macedonian Empire in 323 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
-	SetProvinceOwner("Thrace", "greek", "Macedon")
-	SetProvinceOwner("Bulgaria", "greek", "Macedon")
+	SetProvinceOwner("Thrace", "greek", "macedon")
+	SetProvinceOwner("Bulgaria", "greek", "macedon")
 	SetProvinceCivilization("Bulgaria", "greek")
-	SetProvinceOwner("Thessaly", "greek", "Macedon")
+	SetProvinceOwner("Thessaly", "greek", "macedon")
 	
-	SetProvinceOwner("Dobruja", "greek", "Macedon")
+	SetProvinceOwner("Dobruja", "greek", "macedon")
 end
 
 if (GrandStrategyYear >= -301) then
 	-- Kingdoms of the Diadochi about 301 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
-	SetProvinceOwner("Thrace", "greek", "Thrace")
-	SetProvinceOwner("Bulgaria", "greek", "Thrace")
-	SetProvinceOwner("Dobruja", "greek", "Thrace")
+	SetProvinceOwner("Thrace", "greek", "thrace")
+	SetProvinceOwner("Bulgaria", "greek", "thrace")
+	SetProvinceOwner("Dobruja", "greek", "thrace")
 	
-	SetProvinceOwner("Crete", "greek", "Krete")
+	SetProvinceOwner("Crete", "greek", "krete")
 	SetProvinceCivilization("Crete", "greek")
 
 	-- Greece in vassalage to Macedon
-	SetFactionDiplomacyState("greek", "Argos", "greek", "Macedon", "vassal")
-	SetFactionDiplomacyState("greek", "Athens", "greek", "Macedon", "vassal")
-	SetFactionDiplomacyState("greek", "Sparta", "greek", "Macedon", "vassal")
-	SetFactionDiplomacyState("greek", "Thebes", "greek", "Macedon", "vassal")
+	SetFactionDiplomacyState("greek", "argos", "greek", "macedon", "vassal")
+	SetFactionDiplomacyState("greek", "athens", "greek", "macedon", "vassal")
+	SetFactionDiplomacyState("greek", "sparta", "greek", "macedon", "vassal")
+	SetFactionDiplomacyState("greek", "thebes", "greek", "macedon", "vassal")
 end
 
 if (GrandStrategyYear >= -264) then
 	-- Roman territory at the beginning of the 1st Punic War (264 BC); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Naples", "latin", "Rome")
-	SetProvinceOwner("Abruzzo", "latin", "Rome")
-	SetProvinceOwner("Apulia", "latin", "Rome")
-	SetProvinceOwner("Calabria", "latin", "Rome")
-	SetProvinceOwner("Tuscany", "latin", "Rome")
-	SetProvinceOwner("Umbria", "latin", "Rome")
+	SetProvinceOwner("Naples", "latin", "rome")
+	SetProvinceOwner("Abruzzo", "latin", "rome")
+	SetProvinceOwner("Apulia", "latin", "rome")
+	SetProvinceOwner("Calabria", "latin", "rome")
+	SetProvinceOwner("Tuscany", "latin", "rome")
+	SetProvinceOwner("Umbria", "latin", "rome")
 	
 	-- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	
-	SetProvinceOwner("Prussia", "goth", "Goth Tribe")
+	SetProvinceOwner("Prussia", "goth", "goth-tribe")
 	SetProvinceCivilization("Prussia", "goth")
-	AddProvinceClaim("Prussia", "goth", "Goth Tribe")
+	AddProvinceClaim("Prussia", "goth", "goth-tribe")
 	
-	SetProvinceOwner("Posen", "goth", "Burgundian Tribe")
+	SetProvinceOwner("Posen", "goth", "burgundian-tribe")
 	SetProvinceCivilization("Posen", "goth")
-	AddProvinceClaim("Posen", "goth", "Burgundian Tribe")	
+	AddProvinceClaim("Posen", "goth", "burgundian-tribe")	
 	
-	SetProvinceOwner("Lithuania", "baltic", "Aestui Tribe")
+	SetProvinceOwner("Lithuania", "baltic", "aestui-tribe")
 	SetProvinceCivilization("Lithuania", "slav")
 end
 
 if (GrandStrategyYear >= -238) then -- Corsica and Sardinia acquired by Rome in 238 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Corsica", "latin", "Rome")
-	SetProvinceOwner("Sardinia", "latin", "Rome")
+	SetProvinceOwner("Corsica", "latin", "rome")
+	SetProvinceOwner("Sardinia", "latin", "rome")
 end
 
 if (GrandStrategyYear >= -229) then -- The cities of Dyrrhachium and Apollonia were acquired by Rome in 229 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Albania", "latin", "Rome")
+	SetProvinceOwner("Albania", "latin", "rome")
 end
 
 if (GrandStrategyYear >= -218) then
 	-- Carthaginian territory in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 32.
 	-- contains Andalusia in the province's definition; should also include Portugal and Castille south of the Tagus, and Aragon south of the Ebrus
-	SetFactionGovernmentType("phoenician", "Carthage", "republic")
+	SetFactionGovernmentType("phoenician", "carthage", "republic")
 end
 
 if (GrandStrategyYear >= -200) then
@@ -714,17 +714,17 @@ if (GrandStrategyYear >= -200) then
 	SetProvinceOwner("Dobruja", "", "")
 	
 	-- End of Greece's vassalage to Macedon
-	SetFactionDiplomacyState("greek", "Argos", "greek", "Macedon", "peace")
-	SetFactionDiplomacyState("greek", "Athens", "greek", "Macedon", "peace")
-	SetFactionDiplomacyState("greek", "Sparta", "greek", "Macedon", "peace")
-	SetFactionDiplomacyState("greek", "Thebes", "greek", "Macedon", "peace")
+	SetFactionDiplomacyState("greek", "argos", "greek", "macedon", "peace")
+	SetFactionDiplomacyState("greek", "athens", "greek", "macedon", "peace")
+	SetFactionDiplomacyState("greek", "sparta", "greek", "macedon", "peace")
+	SetFactionDiplomacyState("greek", "thebes", "greek", "macedon", "peace")
 end
 
 if (GrandStrategyYear >= -191) then -- Cisalpine Gaul acquired by Rome in 191 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Modena", "latin", "Rome")
-	SetProvinceOwner("Parma", "latin", "Rome")
-	SetProvinceOwner("Piedmont", "latin", "Rome")
-	SetProvinceOwner("Romagna", "latin", "Rome")
+	SetProvinceOwner("Modena", "latin", "rome")
+	SetProvinceOwner("Parma", "latin", "rome")
+	SetProvinceOwner("Piedmont", "latin", "rome")
+	SetProvinceOwner("Romagna", "latin", "rome")
 end
 
 if (GrandStrategyYear >= -175) then
@@ -734,26 +734,26 @@ if (GrandStrategyYear >= -175) then
 end
 
 if (GrandStrategyYear >= -154) then -- Liguria acquired by Rome in 154 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Liguria", "latin", "Rome")
+	SetProvinceOwner("Liguria", "latin", "rome")
 end
 
 if (GrandStrategyYear >= -146) then -- Aetolia, Attica, Boeotia, Corinth, Epirus, Euboea, Macedonia, the Peloponnese and Thessaly acquired by Rome in 146 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Aetolia", "latin", "Rome")
-	SetProvinceOwner("Argolis", "latin", "Rome")
-	SetProvinceOwner("Attica", "latin", "Rome")
-	SetProvinceOwner("Boeotia", "latin", "Rome")
-	SetProvinceOwner("Corinth", "latin", "Rome")
-	SetProvinceOwner("Epirus", "latin", "Rome")
-	SetProvinceOwner("Euboea", "latin", "Rome")
-	SetProvinceOwner("Lacedaemonia", "latin", "Rome")
-	SetProvinceOwner("Macedonia", "latin", "Rome")
-	SetProvinceOwner("Thessaly", "latin", "Rome")
+	SetProvinceOwner("Aetolia", "latin", "rome")
+	SetProvinceOwner("Argolis", "latin", "rome")
+	SetProvinceOwner("Attica", "latin", "rome")
+	SetProvinceOwner("Boeotia", "latin", "rome")
+	SetProvinceOwner("Corinth", "latin", "rome")
+	SetProvinceOwner("Epirus", "latin", "rome")
+	SetProvinceOwner("Euboea", "latin", "rome")
+	SetProvinceOwner("Lacedaemonia", "latin", "rome")
+	SetProvinceOwner("Macedonia", "latin", "rome")
+	SetProvinceOwner("Thessaly", "latin", "rome")
 	
-	SetProvinceOwner("Skopje", "latin", "Rome")
+	SetProvinceOwner("Skopje", "latin", "rome")
 end
 
 if (GrandStrategyYear >= -74) then -- Region around Byzantium acquired by Rome in 14 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Thrace", "latin", "Rome")
+	SetProvinceOwner("Thrace", "latin", "rome")
 end
 
 if (GrandStrategyYear >= -71) then -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
@@ -773,7 +773,7 @@ if (GrandStrategyYear >= -71) then -- The Suebic king Ariovistus enters Gaul at 
 end
 
 if (GrandStrategyYear >= -67) then -- Crete acquired by Rome in 67 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Crete", "latin", "Rome")
+	SetProvinceOwner("Crete", "latin", "rome")
 end
 
 if (GrandStrategyYear >= -61) then -- Battle of Magetobria, in which Ariovistus defeated a number of Gaulish tribes, and afterwards established himself in Alsace and began lording over the Gauls; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 139; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 218.
@@ -789,50 +789,50 @@ if (GrandStrategyYear >= -58) then -- in 58 BC Caesar fought Ariovistus' Suebi a
 	GrandStrategyEvents.DivitiacusPleaForAssistance = nil
 	
 	-- gold (northern) Gallic currency, the gold staters, in existence when Caesar began his campaigns in Gaul; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, pp. 190-191.
---	SetFactionTechnology("celt", "Aedui Tribe", "upgrade-teuton-coinage", true)
---	SetFactionTechnology("celt", "Sequani Tribe", "upgrade-teuton-coinage", true)
+--	SetFactionTechnology("celt", "aedui-tribe", "upgrade-teuton-coinage", true)
+--	SetFactionTechnology("celt", "sequani-tribe", "upgrade-teuton-coinage", true)
 
---	SetFactionTechnology("celt", "Arverni Tribe", "upgrade-teuton-coinage", true) -- in southern Gaul there was currency, mostly of silver however; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 191.
---	SetFactionTechnology("celt", "Menapii Tribe", "upgrade-teuton-coinage", true) -- in Belgic Gaul there was currency, mostly of gold, but using a different weight; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 191.
+--	SetFactionTechnology("celt", "arverni-tribe", "upgrade-teuton-coinage", true) -- in southern Gaul there was currency, mostly of silver however; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 191.
+--	SetFactionTechnology("celt", "menapii-tribe", "upgrade-teuton-coinage", true) -- in Belgic Gaul there was currency, mostly of gold, but using a different weight; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 191.
 
 	-- gold staters also present in Bohemia and the Danubian valley, as well as the Black Forest, the Rhine, Central Gaul, Armorica and the Channel Islands; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 191.
---	SetFactionTechnology("celt", "Boii Tribe", "upgrade-teuton-coinage", true)
+--	SetFactionTechnology("celt", "boii-tribe", "upgrade-teuton-coinage", true)
 end
 
 if (GrandStrategyYear >= -50) then -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Brittany", "latin", "Rome")
-	SetProvinceOwner("Lorraine", "latin", "Rome")
-	SetProvinceOwner("Lower Rhine", "latin", "Rome")
-	SetProvinceOwner("Moselle", "latin", "Rome")
-	SetProvinceOwner("Palatinate", "latin", "Rome")
-	SetProvinceOwner("Switzerland", "latin", "Rome")
+	SetProvinceOwner("Brittany", "latin", "rome")
+	SetProvinceOwner("Lorraine", "latin", "rome")
+	SetProvinceOwner("Lower Rhine", "latin", "rome")
+	SetProvinceOwner("Moselle", "latin", "rome")
+	SetProvinceOwner("Palatinate", "latin", "rome")
+	SetProvinceOwner("Switzerland", "latin", "rome")
 end
 
 if (GrandStrategyYear >= -33) then
 	-- Illyricum acquired by Rome in 33 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Croatia", "latin", "Rome")
-	SetProvinceOwner("Bosnia", "latin", "Rome")
-	SetProvinceOwner("Carniola", "latin", "Rome")
-	SetProvinceOwner("Montenegro", "latin", "Rome")
+	SetProvinceOwner("Croatia", "latin", "rome")
+	SetProvinceOwner("Bosnia", "latin", "rome")
+	SetProvinceOwner("Carniola", "latin", "rome")
+	SetProvinceOwner("Montenegro", "latin", "rome")
 end
 
 if (GrandStrategyYear >= -29) then -- Lower Moesia and Upper Moesia were acquired by Rome in 29 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Bulgaria", "latin", "Rome") -- the southern half of Bulgaria was only acquired later, in 46 AD, when Thrace was acquired
-	SetProvinceOwner("Dobruja", "latin", "Rome")
+	SetProvinceOwner("Bulgaria", "latin", "rome") -- the southern half of Bulgaria was only acquired later, in 46 AD, when Thrace was acquired
+	SetProvinceOwner("Dobruja", "latin", "rome")
 end
 
 if (GrandStrategyYear >= -27) then
 	-- according to the Grottasongr, King Fjolnir of the Swedes lived around the same time as Augustus came to reign, establishing the Pax Romana
---	SetProvinceOwner("Sweden", "norse", "Swede Tribe")
---	AcquireFactionTechnologies("germanic", "Yngling Tribe", "norse", "Swede Tribe")
---	SetProvinceOwner("Scania", "norse", "Dane Tribe") -- the Ynglinga saga gives a Danish king (Fredfrode) living at around the same time as Fjolnir; Danes were in southern Scandinavia in 526 (so presumably this would be their dwelling place previously as well); Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+--	SetProvinceOwner("Sweden", "norse", "swede-tribe")
+--	AcquireFactionTechnologies("germanic", "yngling-tribe", "norse", "swede-tribe")
+--	SetProvinceOwner("Scania", "norse", "dane-tribe") -- the Ynglinga saga gives a Danish king (Fredfrode) living at around the same time as Fjolnir; Danes were in southern Scandinavia in 526 (so presumably this would be their dwelling place previously as well); Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 	
 	-- 31 million people lived in Roman Asia and Africa at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 end
 
 if (GrandStrategyYear >= -15) then
 	-- Raetia and Vindelicia acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Augsburg", "latin", "Rome")
+	SetProvinceOwner("Augsburg", "latin", "rome")
 end
 
 -- Battle of Teutoburg Forest between the Cherusci chieftain Arminius' forces, and the Romans (when did this happen?); Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 231.
@@ -855,7 +855,7 @@ if (GrandStrategyYear >= 20) then
 end
 
 if (GrandStrategyYear >= 43) then
-	SetProvinceOwner("Rhodes", "latin", "Rome") -- Rhodes acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	SetProvinceOwner("Rhodes", "latin", "rome") -- Rhodes acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 end
 
 if (GrandStrategyYear >= 50) then
@@ -864,12 +864,12 @@ end
 
 if (GrandStrategyYear >= 83) then
 	-- Agri Decumates acquired by Rome in 83 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Baden", "latin", "Rome")
-	SetProvinceOwner("Wurtemberg", "latin", "Rome")
+	SetProvinceOwner("Baden", "latin", "rome")
+	SetProvinceOwner("Wurtemberg", "latin", "rome")
 end
 	
 if (GrandStrategyYear >= 98) then
---	SetProvinceOwner("Sweden", "norse", "Swede Tribe") -- Swedes attested in Tacitus' Germania, from 98 AD
+--	SetProvinceOwner("Sweden", "norse", "swede-tribe") -- Swedes attested in Tacitus' Germania, from 98 AD
 end
 
 if (GrandStrategyYear >= 142) then
@@ -914,8 +914,8 @@ end
 
 if (GrandStrategyYear >= 397) then
 	-- The Visigoths migrated to the Western Balkans in 397 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-	SetProvinceOwner("Croatia", "goth", "Visigoth Tribe")
-	SetProvinceOwner("Bosnia", "goth", "Visigoth Tribe")
+	SetProvinceOwner("Croatia", "goth", "visigoth-tribe")
+	SetProvinceOwner("Bosnia", "goth", "visigoth-tribe")
 end
 
 if (GrandStrategyYear >= 400) then
@@ -924,14 +924,14 @@ end
 
 if (GrandStrategyYear >= 406) then
 	-- Gundahar and his father Gibica brought the Burgundians over the Rhine in 406/407 AD; the initial quantity of Burgundians was c. 80,000; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91, 93.
-	SetProvinceOwner("Palatinate", "goth", "Burgundian Tribe")
+	SetProvinceOwner("Palatinate", "goth", "burgundian-tribe")
 end
 
 if (GrandStrategyYear >= 411) then
 	-- Alans conquered the area of modern Portugal in 411; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	
 	-- Kingdom of the Burgundians established by Gundahar (a Burgundian tribal chief) in 411 AD, with its center in Borbetomagus (Worms); Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-93.
-	SetProvinceOwner("Palatinate", "goth", "Burgundy")
+	SetProvinceOwner("Palatinate", "goth", "burgundy")
 end
 
 if (GrandStrategyYear >= 412) then
@@ -959,14 +959,14 @@ end
 
 if (GrandStrategyYear >= 450) then
 	-- Frankish territory in 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
-	SetProvinceOwner("Palatinate", "teuton", "Frank Tribe")
-	SetProvinceOwner("Lower Rhine", "teuton", "Frank Tribe")
+	SetProvinceOwner("Palatinate", "teuton", "frank-tribe")
+	SetProvinceOwner("Lower Rhine", "teuton", "frank-tribe")
 end
 
 if (GrandStrategyYear >= 451) then
 	-- Burgundians fought on both the Roman and Hunnic sides in the Battle of the Catalaunian Fields in (June) 451 AD; with the Roman victory, the Burgundians under Gundioc were granted more land; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 94-95.
 	SetProvinceOwner("Palatinate", "", "")
-	SetProvinceOwner("Switzerland", "goth", "Burgundy")
+	SetProvinceOwner("Switzerland", "goth", "burgundy")
 end
 
 if (GrandStrategyYear >= 453) then
@@ -975,37 +975,37 @@ end
 
 if (GrandStrategyYear >= 474) then
 	-- In 474 AD the Ostrogoths left Pannonia to settle in Macedonia under the aegis of the Eastern Roman Emperor, and in that same year Theodemer died, being succeeded by Theoderic; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 7.
-	SetProvinceOwner("Macedonia", "goth", "Ostrogoth Tribe")
+	SetProvinceOwner("Macedonia", "goth", "ostrogoth-tribe")
 end
 
 if (GrandStrategyYear >= 481) then
 	-- Frankish territory in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-	SetProvinceOwner("Lorraine", "teuton", "Francia")
-	AddProvinceClaim("Lorraine", "teuton", "Francia")
-	SetProvinceOwner("Moselle", "teuton", "Francia")
-	AddProvinceClaim("Moselle", "teuton", "Francia")
-	SetProvinceOwner("Lower Rhine", "teuton", "Francia")
-	AddProvinceClaim("Lower Rhine", "teuton", "Francia")
+	SetProvinceOwner("Lorraine", "teuton", "francia")
+	AddProvinceClaim("Lorraine", "teuton", "francia")
+	SetProvinceOwner("Moselle", "teuton", "francia")
+	AddProvinceClaim("Moselle", "teuton", "francia")
+	SetProvinceOwner("Lower Rhine", "teuton", "francia")
+	AddProvinceClaim("Lower Rhine", "teuton", "francia")
 
 	-- Political situation of the territories surrounding the Frankish realm in 481-814 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-	SetProvinceOwner("Baden", "teuton", "Alamanni Tribe")
-	SetProvinceOwner("Wurtemberg", "teuton", "Alamanni Tribe")
-	SetProvinceOwner("Augsburg", "teuton", "Alamanni Tribe")
-	SetProvinceOwner("Palatinate", "teuton", "Alamanni Tribe")
+	SetProvinceOwner("Baden", "teuton", "alamanni-tribe")
+	SetProvinceOwner("Wurtemberg", "teuton", "alamanni-tribe")
+	SetProvinceOwner("Augsburg", "teuton", "alamanni-tribe")
+	SetProvinceOwner("Palatinate", "teuton", "alamanni-tribe")
 end
 
 if (GrandStrategyYear >= 486) then
-	SetProvinceOwner("Corsica", "goth", "Vandalia") -- Corsica was a part of the Kingdom of the Vandals in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+	SetProvinceOwner("Corsica", "goth", "vandalia") -- Corsica was a part of the Kingdom of the Vandals in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	SetProvinceUnitQuantity("Corsica", "unit-germanic-warrior", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
-	SetProvinceOwner("Sardinia", "goth", "Vandalia") -- Sardinia was a part of the Kingdom of the Vandals in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+	SetProvinceOwner("Sardinia", "goth", "vandalia") -- Sardinia was a part of the Kingdom of the Vandals in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	SetProvinceUnitQuantity("Sardinia", "unit-germanic-warrior", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
 end
 
 if (GrandStrategyYear >= 488) then
 	-- Ostrogoths commissioned by the Eastern Roman Emperor in 488 to wrest control of Italy from Odoacer; as a result, the Ostrogoths marched from Moesia to Italy (this means that by 488 they were in Moesia), with a quarter of a million men, women and children; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 7-8.
-	SetProvinceOwner("Macedonia", "latin", "Rome")
-	SetProvinceOwner("Bulgaria", "goth", "Ostrogoth Tribe") -- Lower Moesia
-	SetProvinceOwner("Skopje", "goth", "Ostrogoth Tribe") -- Upper Moesia
+	SetProvinceOwner("Macedonia", "latin", "rome")
+	SetProvinceOwner("Bulgaria", "goth", "ostrogoth-tribe") -- Lower Moesia
+	SetProvinceOwner("Skopje", "goth", "ostrogoth-tribe") -- Upper Moesia
 end
 
 if (GrandStrategyYear >= 489) then
@@ -1018,9 +1018,9 @@ if (GrandStrategyYear >= 493) then
 	-- Odoacer held out against Theoderic for 2 years entrenched in Ravenna, but in 493 AD the fortress fell; the terms of the surrender foresaw leaving the defenders alive, but later Theoderic suspected a plot of theirs against his life and put them (including Odoacer) to death; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 8-9.
 	
 	-- Ostrogoths conquer Italy in 493 AD; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 8-9; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-	SetProvinceOwner("Naples", "goth", "Ostrogoth Tribe")
-	SetProvinceOwner("Umbria", "goth", "Ostrogoth Tribe")
-	SetProvinceOwner("Abruzzo", "goth", "Ostrogoth Tribe")
+	SetProvinceOwner("Naples", "goth", "ostrogoth-tribe")
+	SetProvinceOwner("Umbria", "goth", "ostrogoth-tribe")
+	SetProvinceOwner("Abruzzo", "goth", "ostrogoth-tribe")
 end
 
 if (GrandStrategyYear >= 500) then
@@ -1031,16 +1031,16 @@ end
 
 if (GrandStrategyYear >= 506) then
 	-- Alemanni lands (Alsace, Baden, Wurtemberg, Augsburg and etc.) conquered by the Franks in 506; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-	SetProvinceOwner("Baden", "teuton", "Francia")
-	SetProvinceOwner("Wurtemberg", "teuton", "Francia")
-	SetProvinceOwner("Augsburg", "teuton", "Francia")
-	SetProvinceOwner("Palatinate", "teuton", "Francia")
+	SetProvinceOwner("Baden", "teuton", "francia")
+	SetProvinceOwner("Wurtemberg", "teuton", "francia")
+	SetProvinceOwner("Augsburg", "teuton", "francia")
+	SetProvinceOwner("Palatinate", "teuton", "francia")
 end
 
 if (GrandStrategyYear >= 507) then -- Political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-	SetProvinceOwner("Carniola", "goth", "Ostrogoth Tribe")
-	SetProvinceOwner("Croatia", "goth", "Ostrogoth Tribe")
-	SetProvinceOwner("Bosnia", "goth", "Ostrogoth Tribe")
+	SetProvinceOwner("Carniola", "goth", "ostrogoth-tribe")
+	SetProvinceOwner("Croatia", "goth", "ostrogoth-tribe")
+	SetProvinceOwner("Bosnia", "goth", "ostrogoth-tribe")
 end
 
 if (GrandStrategyYear >= 517) then
@@ -1051,8 +1051,8 @@ if (GrandStrategyYear >= 534) then
 	-- end of Gundimar's reign over the Burgundians in 534 AD; he was proscribed, pursued and executed by the Franks, and his realm was annexed by them; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 96, 99.
 	
 	-- The Burgundian realm, which included the Franche Comté, Burgundy, Savoy and most of Switzerland, was conquered by the Franks in 534; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-	SetProvinceOwner("Switzerland", "teuton", "Francia")
-	AddProvinceClaim("Switzerland", "teuton", "Francia")
+	SetProvinceOwner("Switzerland", "teuton", "francia")
+	AddProvinceClaim("Switzerland", "teuton", "francia")
 	
 	SetProvinceOwner("Corsica", "", "") -- Fall of the Vandal kingdom in 534 AD; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 	SetProvinceOwner("Sardinia", "", "") -- Fall of the Vandal kingdom in 534 AD; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
@@ -1200,30 +1200,30 @@ if (GrandStrategyYear >= 919) then
 	-- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	
 	-- Duchy of Carinthia
-	SetProvinceOwner("Carniola", "teuton", "Holy Rome")
+	SetProvinceOwner("Carniola", "teuton", "holy-rome")
 	
 	-- Duchy of Franconia
-	SetProvinceOwner("Palatinate", "teuton", "Holy Rome")
+	SetProvinceOwner("Palatinate", "teuton", "holy-rome")
 	SetProvinceCivilization("Palatinate", "teuton")
 	
 	-- Duchy of Lower Lorraine
-	SetProvinceOwner("Lower Rhine", "teuton", "Holy Rome")
+	SetProvinceOwner("Lower Rhine", "teuton", "holy-rome")
 	
 	-- Duchy of Swabia
-	SetProvinceOwner("Augsburg", "teuton", "Holy Rome")
+	SetProvinceOwner("Augsburg", "teuton", "holy-rome")
 	SetProvinceCivilization("Augsburg", "teuton")
-	SetProvinceOwner("Baden", "teuton", "Holy Rome")
+	SetProvinceOwner("Baden", "teuton", "holy-rome")
 	SetProvinceCivilization("Baden", "teuton")
-	SetProvinceOwner("Wurtemberg", "teuton", "Holy Rome")
+	SetProvinceOwner("Wurtemberg", "teuton", "holy-rome")
 	SetProvinceCivilization("Wurtemberg", "teuton")
 	
 	-- Duchy of Upper Lorraine
-	SetProvinceOwner("Lorraine", "teuton", "Holy Rome")
-	SetProvinceOwner("Moselle", "teuton", "Holy Rome")
+	SetProvinceOwner("Lorraine", "teuton", "holy-rome")
+	SetProvinceOwner("Moselle", "teuton", "holy-rome")
 
-	SetProvinceOwner("Croatia", "slav", "Croatia")
+	SetProvinceOwner("Croatia", "slav", "croatia")
 	SetProvinceCivilization("Croatia", "slav")
-	SetProvinceOwner("Posen", "slav", "Poland")
+	SetProvinceOwner("Posen", "slav", "poland")
 	SetProvinceCivilization("Posen", "slav")
 end
 
@@ -1308,7 +1308,7 @@ end
 
 if (GrandStrategyYear >= 1261) then
 	-- Norse settlements in Greenland annexed to Norway in 1261 AD by King Hakon Hakonson; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
---	SetProvinceOwner("Greenland", "norse", "Norway") 
+--	SetProvinceOwner("Greenland", "norse", "norway") 
 end
 
 if (GrandStrategyYear >= 1349) then
@@ -1327,7 +1327,7 @@ if (GrandStrategyYear >= 1523) then
 	GrandStrategyEvents.NoblesAcquireLegalJurisdictionPrivilege = nil -- happened in 1523-1536; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
 
 	-- Bornholm captured by Denmark in 1523; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 90.
-	SetProvinceOwner("Bornholm", "norse", "Denmark")
+	SetProvinceOwner("Bornholm", "norse", "denmark")
 end
 
 if (GrandStrategyYear >= 1526) then -- East Prussian Land Ordinance of 1526; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 23.
@@ -1336,24 +1336,24 @@ end
 
 if (GrandStrategyYear >= 1560) then
 	-- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	SetProvinceOwner("Brittany", "latin", "France")
+	SetProvinceOwner("Brittany", "latin", "france")
 	
-	SetProvinceOwner("Sardinia", "latin", "Spain")
+	SetProvinceOwner("Sardinia", "latin", "spain")
 
-	SetProvinceOwner("Switzerland", "teuton", "Switzerland")
-	SetFactionGovernmentType("teuton", "Switzerland", "republic")	
+	SetProvinceOwner("Switzerland", "teuton", "switzerland")
+	SetFactionGovernmentType("teuton", "switzerland", "republic")	
 	
-	SetProvinceOwner("Prussia", "teuton", "Prussia")
+	SetProvinceOwner("Prussia", "teuton", "prussia")
 	
-	SetProvinceOwner("Carniola", "teuton", "Austria")
-	SetProvinceOwner("Istria", "teuton", "Austria") -- the outer parts of Istria were owned by Venice, but the inner parts (including Trieste) were owned by Austria)
+	SetProvinceOwner("Carniola", "teuton", "austria")
+	SetProvinceOwner("Istria", "teuton", "austria") -- the outer parts of Istria were owned by Venice, but the inner parts (including Trieste) were owned by Austria)
 	
-	SetProvinceOwner("Croatia", "teuton", "Turkey")
-	SetProvinceOwner("Bosnia", "teuton", "Turkey")
+	SetProvinceOwner("Croatia", "teuton", "turkey")
+	SetProvinceOwner("Bosnia", "teuton", "turkey")
 	
-	SetProvinceOwner("Posen", "slav", "Poland")
+	SetProvinceOwner("Posen", "slav", "poland")
 	
-	SetProvinceOwner("Dobruja", "teuton", "Turkey")
+	SetProvinceOwner("Dobruja", "teuton", "turkey")
 end
 
 if (GrandStrategyYear >= 1586) then -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 14.
@@ -1365,7 +1365,7 @@ if (GrandStrategyYear >= 1616) then -- The Peasants' and Shepherds' Ordinance pa
 end
 
 if (GrandStrategyYear >= 1618) then -- Brandenburg acquired the Duchy of Prussia in 1618, although it remained under Polish suzerainty until 1657-1660; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 6.
-	SetProvinceOwner("Prussia", "teuton", "Brandenburg")
+	SetProvinceOwner("Prussia", "teuton", "brandenburg")
 end
 
 if (GrandStrategyYear >= 1649) then -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 17.

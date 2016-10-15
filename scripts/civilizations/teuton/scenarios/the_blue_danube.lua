@@ -38,12 +38,12 @@ if (LoadedGame == false) then
 	SetPlayerData(1, "Resources", "oil", 0)
 	SetAiType(1, "land-attack")
 	
-	SetPlayerData(1, "Faction", "Rome")
+	SetPlayerData(1, "Faction", "rome")
 	
 	if (GrandStrategy == false) then
 		local rome_player = GetFactionPlayer("Rome")
 		SetPlayerData(rome_player, "Allow", "upgrade-teuton-masonry", "R")
-		SetPlayerData(0, "Faction", "Bavarian Tribe")
+		SetPlayerData(0, "Faction", "bavarian-tribe")
 		
 		unit = CreateUnit("unit-teuton-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		SetUnitVariable(unit, "Active", false)

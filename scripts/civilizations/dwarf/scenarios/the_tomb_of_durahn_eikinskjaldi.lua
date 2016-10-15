@@ -28,13 +28,13 @@
 --
 
 if (LoadedGame == false) then
-	--SetPlayerData(0, "Faction", "Eikinskjaldi Clan")
-	SetPlayerData(0, "Faction", "Norlund Clan")
-	SetPlayerData(1, "Faction", "Untersberg")
+	--SetPlayerData(0, "Faction", "eikinskjaldi-clan")
+	SetPlayerData(0, "Faction", "norlund-clan")
+	SetPlayerData(1, "Faction", "untersberg")
 	SetPlayerData(1, "Name", "Raiders")
 	if (IsNetworkGame() and GrandStrategy == false) then
-		--SetPlayerData(2, "Faction", "Eikinskjaldi Clan")
-		SetPlayerData(2, "Faction", "Norlund Clan")
+		--SetPlayerData(2, "Faction", "eikinskjaldi-clan")
+		SetPlayerData(2, "Faction", "norlund-clan")
 		SetPlayerData(2, "Name", "Baglur")
 	end
 end

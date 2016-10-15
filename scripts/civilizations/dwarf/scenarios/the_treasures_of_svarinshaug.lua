@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 if (LoadedGame == false) then
-	SetPlayerData(0, "Faction", "Brising Clan")
+	SetPlayerData(0, "Faction", "brising-clan")
 	SetPlayerData(0, "Allow", "upgrade-dwarven-runewriting", "F")
 	Map.Info.PlayerType[1] = PlayerNobody
 	Map.Info.PlayerType[2] = PlayerNobody

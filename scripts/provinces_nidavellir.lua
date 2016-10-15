@@ -34,13 +34,13 @@ DefineProvince("Acthna", {
 	Map = "maps/random/random-map-cave.smp",
 	SettlementTerrain = "Mountains",
 	Claims = {
-		"gnome", "Acthnic Tribe",
-		"gnome", "Acthna",
-		"gnome", "Untersberg"
+		"gnome", "acthnic-tribe",
+		"gnome", "acthna",
+		"gnome", "untersberg"
 	},
 	HistoricalOwners = {
-		-3000, "gnome", "Acthnic Tribe", -- maybe should be later?
-		1, "gnome", "Acthna" -- maybe should be at another date?
+		-3000, "gnome", "acthnic-tribe", -- maybe should be later?
+		1, "gnome", "acthna" -- maybe should be at another date?
 	},
 	HistoricalCultures = {
 		-3000, "gnome"
@@ -68,10 +68,10 @@ DefineProvince("Brown Hills", {
 	Map = "maps/nidavellir/brown-hills.smp",
 	SettlementTerrain = "Hills", -- should be Dark Plains?
 	Claims = {
-		"gnome", "Untersberg"
+		"gnome", "untersberg"
 	},
 	HistoricalOwners = {
-		1, "gnome", "Untersberg"
+		1, "gnome", "untersberg"
 	},
 	HistoricalCultures = {
 		1, "gnome" -- maybe should be at another date
@@ -91,8 +91,8 @@ DefineProvince("Caverns of Chaincolt", {
 	Map = "maps/nidavellir/caverns-of-chaincolt.smp",
 	SettlementTerrain = "Mountains", -- for random map generation
 	Claims = {
-		"dwarf", "Norlund Clan",
-		"dwarf", "Knalga"
+		"dwarf", "norlund-clan",
+		"dwarf", "knalga"
 	},
 	HistoricalSettlementBuildings = {
 		25, "unit-dwarven-barracks", true, -- had capability to train warriors
@@ -130,12 +130,12 @@ DefineProvince("Du'urdin", {
 	Map = "maps/random/random-map-cave.smp",
 	SettlementTerrain = "Mountains",
 	Claims = {
-		"gnome", "Derro Tribe",
-		"gnome", "Du'urdin"
+		"gnome", "derro-tribe",
+		"gnome", "duurdin"
 	},
 	HistoricalOwners = {
-		-3000, "gnome", "Derro Tribe", -- maybe should be later?
-		1, "gnome", "Du'urdin" -- maybe should be at another date?
+		-3000, "gnome", "derro-tribe", -- maybe should be later?
+		1, "gnome", "duurdin" -- maybe should be at another date?
 	},
 	HistoricalCultures = {
 		-3000, "gnome"
@@ -180,7 +180,7 @@ DefineProvince("Ezmarria", {
 		"goblin", "Ezmarria"
 	},
 	Claims = {
-		"goblin", "Ezmarria"
+		"goblin", "ezmarria"
 	},
 	Map = "maps/random/random-map-swamp.smp",
 	SettlementTerrain = "Plains" -- should be Dark Plains, but those are not generated in random maps (yet)
@@ -207,7 +207,7 @@ DefineProvince("Heartfangs", {
 	Map = "maps/random/random-map-swamp.smp",
 	SettlementTerrain = "Mountains",
 	Claims = {
-		"goblin", "Khag Tribe"
+		"goblin", "khag-tribe"
 	}
 })
 
@@ -232,10 +232,10 @@ DefineProvince("Highbrook Pass", {
 	Map = "maps/random/random-map-swamp.smp",
 	SettlementTerrain = "Mountains",
 	HistoricalOwners = {
-		500, "dwarf", "Shinsplitter Clan" -- The Shinsplitter clan took over the Highbrook Pass around this time
+		500, "dwarf", "shinsplitter-clan" -- The Shinsplitter clan took over the Highbrook Pass around this time
 	},
 	HistoricalClaims = {
-		500, "dwarf", "Shinsplitter Clan"
+		500, "dwarf", "shinsplitter-clan"
 	},
 	HistoricalSettlementBuildings = {
 		535, "unit-dwarven-barracks", true -- the Shinsplitters were already capable of recruiting warriors in Highbrook Pass around this time
@@ -251,8 +251,8 @@ DefineProvince("Joruvellir", {
 	Map = "maps/random/random-map-swamp.smp",
 	SettlementTerrain = "Plains", -- should be Dark Plains, but those are not generated in random maps (yet); when there are desert tiles implemented, this should be Desert instead
 	Claims = {
-		"dwarf", "Eikinskjaldi Clan",
-		"dwarf", "Joruvellir"
+		"dwarf", "eikinskjaldi-clan",
+		"dwarf", "joruvellir"
 	}
 })
 
@@ -282,7 +282,7 @@ DefineProvince("Kal Kartha", {
 	Map = "maps/random/random-map-swamp.smp",
 	SettlementTerrain = "Mountains",
 	Claims = {
-		"dwarf", "Kal Kartha"
+		"dwarf", "kal-kartha"
 	},
 	HistoricalSettlementBuildings = {
 		550, "unit-dwarven-barracks", true, -- had capability to train warriors
@@ -300,7 +300,7 @@ DefineProvince("Lyr", {
 	Map = "maps/random/random-map-swamp.smp",
 	SettlementTerrain = "Hills",
 	Claims = {
-		"dwarf", "Lyr"
+		"dwarf", "lyr"
 	}
 })
 
@@ -311,7 +311,7 @@ DefineProvince("Myridia", {
 		"goblin", "Myridia"
 	},
 	Claims = {
-		"goblin", "Myridia"
+		"goblin", "myridia"
 	},
 	Map = "maps/random/random-map-swamp.smp",
 	SettlementTerrain = "Plains" -- should be Dark Plains, but those are not generated in random maps (yet)
@@ -354,7 +354,7 @@ DefineProvince("Peaceful Valley", {
 	Map = "maps/random/random-map-swamp.smp",
 	SettlementTerrain = "Hills",
 	Claims = {
-		"goblin", "Lggi Tribe"
+		"goblin", "lggi-tribe"
 	}
 })
 
@@ -368,8 +368,8 @@ DefineProvince("Shorbear Hills", {
 	Map = "maps/nidavellir/shorbear-hills.smp",
 	SettlementTerrain = "Hills",
 	Claims = {
-		"dwarf", "Shorbear Clan",
-		"dwarf", "Knalga"
+		"dwarf", "shorbear-clan",
+		"dwarf", "knalga"
 	},
 	HistoricalSettlementBuildings = {
 		25, "unit-dwarven-stronghold", true, -- Shorbear Hold
@@ -389,8 +389,8 @@ DefineProvince("Southern Tunnels", {
 	Map = "maps/nidavellir/southern-tunnels.smp",
 	SettlementTerrain = "Hills",
 	Claims = {
-		"dwarf", "Shinsplitter Clan",
-		"dwarf", "Knalga"
+		"dwarf", "shinsplitter-clan",
+		"dwarf", "knalga"
 	},
 	HistoricalSettlementBuildings = {
 		25, "unit-dwarven-barracks", true, -- had capability to train warriors
@@ -406,7 +406,7 @@ DefineProvince("Stilgar", {
 		"goblin", "Stilgar"
 	},
 	Claims = {
-		"goblin", "Stilgar"
+		"goblin", "stilgar"
 	},
 	Map = "maps/random/random-map-swamp.smp",
 	SettlementTerrain = "Plains" -- should be Dark Plains, but those are not generated in random maps (yet)
@@ -422,7 +422,7 @@ DefineProvince("Svarinshaug", {
 	Map = "maps/nidavellir/svarinshaug.smp",
 	SettlementTerrain = "Hills",
 	Claims = {
-		"dwarf", "Brising Clan"
+		"dwarf", "brising-clan"
 	}
 })
 
@@ -433,7 +433,7 @@ DefineProvince("Tenebris", {
 		"goblin", "Tenebris"
 	},
 	Claims = {
-		"goblin", "Tenebris"
+		"goblin", "tenebris"
 	},
 	Map = "maps/random/random-map-swamp.smp",
 	SettlementTerrain = "Plains" -- should be Dark Plains, but those are not generated in random maps (yet)
@@ -451,14 +451,14 @@ DefineProvince("Untersberg", {
 	Map = "maps/random/random-map-swamp.smp",
 	SettlementTerrain = "Mountains",
 	Claims = {
-		"gnome", "Cubital Tribe",
-		"gnome", "Sagan Tribe",
-		"gnome", "Vulcan Tribe",
-		"gnome", "Untersberg"
+		"gnome", "cubital-tribe",
+		"gnome", "sagan-tribe",
+		"gnome", "vulcan-tribe",
+		"gnome", "untersberg"
 	},
 	HistoricalOwners = {
-		-3000, "gnome", "Sagan Tribe",
-		1, "gnome", "Untersberg"
+		-3000, "gnome", "sagan-tribe",
+		1, "gnome", "untersberg"
 	},
 	HistoricalCultures = {
 		-3000, "gnome"

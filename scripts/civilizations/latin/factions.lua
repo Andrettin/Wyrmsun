@@ -25,99 +25,115 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Aequian Tribe", {
+DefineFaction("aequian-tribe", {
+	Name = "Aequian Tribe",
 	Civilization = "latin",
 	Type = "tribe",
 	Colors = {"teal"}
 })
 
-DefineFaction("Elymian Tribe", {
+DefineFaction("elymian-tribe", {
+	Name = "Elymian Tribe",
 	Civilization = "latin", -- were they actually an Italic people?
 	Type = "tribe",
 	Colors = {"yellow", "red"}
 })
 
-DefineFaction("Frentanian Tribe", {
+DefineFaction("frentanian-tribe", {
+	Name = "Frentanian Tribe",
 	Civilization = "latin",
 	Type = "tribe",
 	Colors = {"orange"}
 })
 
-DefineFaction("Iapygian Tribe", {
+DefineFaction("iapygian-tribe", {
+	Name = "Iapygian Tribe",
 	Civilization = "latin",
 	Type = "tribe",
 	Colors = {"teal"}
 })
 
-DefineFaction("Latin Tribe", {
+DefineFaction("latin-tribe", {
+	Name = "Latin Tribe",
 	Civilization = "latin",
 	Type = "tribe",
 	Colors = {"red", "yellow"},
-	DevelopsTo = {"Rome"},
+	DevelopsTo = {"rome"},
 	DefaultStartPos = {4126, 1096} -- Rome
 })
 
-DefineFaction("Marsian Tribe", {
+DefineFaction("marsian-tribe", {
+	Name = "Marsian Tribe",
 	Civilization = "latin",
 	Type = "tribe",
 	Colors = {"brown"}
 })
 
-DefineFaction("Messapian Tribe", {
+DefineFaction("messapian-tribe", {
+	Name = "Messapian Tribe",
 	Civilization = "latin",
 	Type = "tribe",
 	Colors = {"green"}
 })
 
-DefineFaction("Oenotrian Tribe", {
+DefineFaction("oenotrian-tribe", {
+	Name = "Oenotrian Tribe",
 	Civilization = "latin",
 	Type = "tribe",
 	Colors = {"blue"}
 })
 
-DefineFaction("Picentian Tribe", {
+DefineFaction("picentian-tribe", {
+	Name = "Picentian Tribe",
 	Civilization = "latin",
 	Type = "tribe",
 	Colors = {"green"}
 })
 
-DefineFaction("Sabellian Tribe", {
+DefineFaction("sabellian-tribe", {
+	Name = "Sabellian Tribe",
 	Civilization = "latin",
 	Type = "tribe",
 	Colors = {"white"}
 })
 
-DefineFaction("Sabine Tribe", {
+DefineFaction("sabine-tribe", {
+	Name = "Sabine Tribe",
 	Civilization = "latin",
 	Type = "tribe",
 	Colors = {"blue"}
 })
 
-DefineFaction("Samnite Tribe", {
+DefineFaction("samnite-tribe", {
+	Name = "Samnite Tribe",
 	Civilization = "latin",
 	Type = "tribe",
 	Colors = {"yellow"}
 })
 
-DefineFaction("Sicanian Tribe", {
+DefineFaction("sicanian-tribe", {
+	Name = "Sicanian Tribe",
 	Civilization = "latin", -- were they actually an Italic people?
 	Type = "tribe",
 	Colors = {"yellow", "red"}
 })
 
-DefineFaction("Sicel Tribe", {
+DefineFaction("sicel-tribe", {
+	Name = "Sicel Tribe",
 	Civilization = "latin", -- were they actually an Italic people?
 	Type = "tribe",
 	Colors = {"red", "yellow"}
 })
 
-DefineFaction("Umbrian Tribe", {
+DefineFaction("umbrian-tribe", {
+	Name = "Umbrian Tribe",
 	Civilization = "latin",
 	Type = "tribe",
 	Colors = {"pink"}
 })
 
-DefineFaction("Venetian Tribe", {
+DefineFaction("venetian-tribe", {
+	Name = "Venetian Tribe",
 	Civilization = "latin", -- is not correct, but they could be reasonably close to justify it for game purposes
 	Type = "tribe",
 	Colors = {"teal"}
@@ -125,38 +141,43 @@ DefineFaction("Venetian Tribe", {
 
 -- polities
 
-DefineFaction("France", {
+DefineFaction("france", {
+	Name = "France",
 	Civilization = "latin",
 	Type = "polity",
 	Colors = {"blue", "white"},
 	DefaultTier = "kingdom"
 })
 
-DefineFaction("Italy", {
+DefineFaction("italy", {
+	Name = "Italy",
 	Civilization = "latin",
 	Type = "polity",
 	Colors = {"green", "red"},
 	DefaultTier = "kingdom"
 })
 
-DefineFaction("Portugal", {
+DefineFaction("portugal", {
+	Name = "Portugal",
 	Civilization = "latin",
 	Type = "polity",
 	Colors = {"green", "red"},
 	DefaultTier = "kingdom"
 })
 
-DefineFaction("Romania", {
+DefineFaction("romania", {
+	Name = "Romania",
 	Civilization = "latin",
 	Type = "polity",
 	Colors = {"yellow", "blue", "red"},
 	DefaultTier = "kingdom"
 })
 
-DefineFaction("Moldavia", {
+DefineFaction("moldavia", {
+	Name = "Moldavia",
 	Civilization = "latin",
 	Type = "polity",
-	ParentFaction = "Romania",
+	ParentFaction = "romania",
 	Colors = {"brown"},
 	DefaultTier = "duchy",
 	Titles = {
@@ -168,13 +189,14 @@ DefineFaction("Moldavia", {
 	}
 })
 
-DefineFaction("Rome", {
+DefineFaction("rome", {
+	Name = "Rome",
 	Civilization = "latin",
 	Type = "polity",
 	Colors = {"red", "yellow"},
 	DefaultTier = "kingdom",
 	DefaultStartPos = {4126, 1096}, -- Rome
-	HistoricalFactionDerivations = {-500, "latin", "Latin Tribe"},
+	HistoricalFactionDerivations = {-500, "latin", "latin-tribe"},
 	HistoricalGovernmentTypes = {
 		-500, "republic", -- correct?
 		-27, "monarchy" -- Augustus assumed power in Rome; was this the date in which he actually became emperor?
@@ -191,36 +213,40 @@ DefineFaction("Rome", {
 		"upgrade-teuton-coinage", -58 -- Silver currency existent in the Roman Republic during Caesar's time, and he issued gold currency during his campaigns in Gaul; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 190.
 	},
 	HistoricalDiplomacyStates = {
-		-54, "celt", "Eburones Tribe", "war", -- the Eburones attacked the Romans in 54 BC (instigated by the Treviri, of whom they were clients); Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223-224.
-		-54, "celt", "Nervii Tribe", "war", -- the Nervii allied with the Eburones to attack the Romans in 54 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223-224.
-		161, "greek", "Armenia", "sovereign" -- in 161 Armenia was a vassal state of Rome; Source: "Ancient Warfare VII.6", 2013, p. 6.
+		-54, "celt", "eburones-tribe", "war", -- the Eburones attacked the Romans in 54 BC (instigated by the Treviri, of whom they were clients); Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223-224.
+		-54, "celt", "nervii-tribe", "war", -- the Nervii allied with the Eburones to attack the Romans in 54 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223-224.
+		161, "greek", "armenia", "sovereign" -- in 161 Armenia was a vassal state of Rome; Source: "Ancient Warfare VII.6", 2013, p. 6.
 	}
 })
 
-DefineFaction("Savoy", {
+DefineFaction("savoy", {
+	Name = "Savoy",
 	Civilization = "latin",
 	Type = "polity",
-	ParentFaction = "Italy",
+	ParentFaction = "italy",
 	Colors = {"brown"},
 	DefaultTier = "duchy"
 })
 
-DefineFaction("Sicily", {
+DefineFaction("sicily", {
+	Name = "Sicily",
 	Civilization = "latin",
 	Type = "polity",
-	ParentFaction = "Italy",
+	ParentFaction = "italy",
 	Colors = {"green"},
 	DefaultTier = "duchy"
 })
 
-DefineFaction("Spain", {
+DefineFaction("spain", {
+	Name = "Spain",
 	Civilization = "latin",
 	Type = "polity",
 	Colors = {"yellow", "red"},
 	DefaultTier = "kingdom"
 })
 
-DefineFaction("Transylvania", {
+DefineFaction("transylvania", {
+	Name = "Transylvania",
 	Civilization = "latin",
 	Type = "polity",
 	Colors = {"cyan"},
@@ -234,10 +260,11 @@ DefineFaction("Transylvania", {
 	}
 })
 
-DefineFaction("Venice", {
+DefineFaction("venice", {
+	Name = "Venice",
 	Civilization = "latin",
 	Type = "polity",
-	ParentFaction = "Italy",
+	ParentFaction = "italy",
 	Colors = {"red"},
 	DefaultTier = "duchy", -- Venice was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	HistoricalGovernmentTypes = {
@@ -246,10 +273,11 @@ DefineFaction("Venice", {
 	}
 })
 
-DefineFaction("Wallachia", {
+DefineFaction("wallachia", {
+	Name = "Wallachia",
 	Civilization = "latin",
 	Type = "polity",
-	ParentFaction = "Romania",
+	ParentFaction = "romania",
 	Colors = {"brown"},
 	DefaultTier = "duchy",
 	Titles = {

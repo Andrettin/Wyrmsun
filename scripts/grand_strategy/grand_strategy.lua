@@ -437,7 +437,7 @@ function RunGrandStrategyGameSetupMenu()
 					end
 				end
 			else
-				faction_list = {"Asa Tribe", "Brising Clan", "Eikinskjaldi Clan", "Khag Tribe", "Lggi Tribe", "Norlund Clan", "Shinsplitter Clan", "Shorbear Clan"}
+				faction_list = {"asa-tribe", "brising-clan", "eikinskjaldi-clan", "khag-tribe", "lggi-tribe", "norlund-clan", "shinsplitter-clan", "shorbear-clan"}
 				faction_civilization_list = {"dwarf", "germanic", "goblin"}
 			end
 
@@ -1070,15 +1070,15 @@ end
 
 function GetFactionFromName(faction)
 	if (faction ~= "") then
-		return Factions[string.gsub(faction, " ", "")]
+		return Factions[string.gsub(faction, "-", "_")]
 	else
 		return nil
 	end
 end
 
 function GetFactionKeyFromName(faction)
-	if (Factions[string.gsub(faction, " ", "")] ~= nil) then
-		return string.gsub(faction, " ", "")
+	if (Factions[string.gsub(faction, "-", "_")] ~= nil) then
+		return string.gsub(faction, "-", "_")
 	else
 		return nil
 	end

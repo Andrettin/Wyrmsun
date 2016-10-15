@@ -30,11 +30,11 @@ DefineCharacter("Gibica", { -- Source: Norman Davies, "Vanished Kingdoms", 2012,
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "Burgundian Tribe",
+	Faction = "burgundian-tribe",
 	ProvinceOfOrigin = "Franconia", -- place where the Burgundians dwelled before moving to the area of the Palatinate
 	DeathYear = 411,
 	HistoricalTitles = {
-		"head-of-state", 0, 411, "goth", "Burgundian Tribe"
+		"head-of-state", 0, 411, "goth", "burgundian-tribe"
 	}
 })
 
@@ -43,7 +43,7 @@ DefineCharacter("Grimhild", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "goth",
-	Faction = "Burgundian Tribe",
+	Faction = "burgundian-tribe",
 	ProvinceOfOrigin = "Franconia" -- place where the Burgundians dwelled before moving to the area of the Palatinate
 })
 
@@ -52,7 +52,7 @@ DefineCharacter("Gundahar", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "Burgundy",
+	Faction = "burgundy",
 	ProvinceOfOrigin = "Franconia", -- place where the Burgundians dwelled before moving to the area of the Palatinate
 	Trait = "upgrade-generous", -- in the Anglo-Saxon poem "Widsith", Gundahar (Gunthere) gave the poet "a shining treasure" for his songs
 	Year = 406, -- Gundahar and his father Gibica brought the Burgundians over the Rhine in 406/407 AD
@@ -61,7 +61,7 @@ DefineCharacter("Gundahar", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	Father = "Gibica",
 	Mother = "Grimhild",
 	HistoricalTitles = {
-		"head-of-state", 411, 437, "goth", "Burgundy" -- Kingdom of the Burgundians established by Gundahar (a Burgundian tribal chief) in 411 AD, with its center in Borbetomagus (Worms); Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-93.
+		"head-of-state", 411, 437, "goth", "burgundy" -- Kingdom of the Burgundians established by Gundahar (a Burgundian tribal chief) in 411 AD, with its center in Borbetomagus (Worms); Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-93.
 	}
 })
 
@@ -70,7 +70,7 @@ DefineCharacter("Glaumvor", { -- Source: Henry Adams Bellows (transl.), "The Poe
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "goth",
-	Faction = "Burgundy",
+	Faction = "burgundy",
 	ProvinceOfOrigin = "Franconia", -- place where the Burgundians dwelled before moving to the area of the Palatinate
 	DateReferenceCharacter = "Gundahar" -- comes from the same generation as Gunnar/Gundahar
 })
@@ -80,7 +80,7 @@ DefineCharacter("Gudrun", { -- Source: Norman Davies, "Vanished Kingdoms", 2012,
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "goth",
-	Faction = "Burgundy",
+	Faction = "burgundy",
 	ProvinceOfOrigin = "Franconia", -- place where the Burgundians dwelled before moving to the area of the Palatinate
 	Father = "Gibica",
 	Mother = "Grimhild"
@@ -91,7 +91,7 @@ DefineCharacter("Hogni", { -- Source: Source: Kevin Crossley-Holland, "The Norse
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "Burgundy",
+	Faction = "burgundy",
 	ProvinceOfOrigin = "Franconia",
 	Father = "Gibica",
 	Mother = "Grimhild"
@@ -102,7 +102,7 @@ DefineCharacter("Kostbera", { -- Source: Henry Adams Bellows (transl.), "The Poe
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "goth",
-	Faction = "Burgundy",
+	Faction = "burgundy",
 	Trait = "upgrade-wise", -- kind; wise and cunning in rune-craft
 	ProvinceOfOrigin = "Franconia"
 })
@@ -112,7 +112,7 @@ DefineCharacter("Orkning", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "Burgundy",
+	Faction = "burgundy",
 	ProvinceOfOrigin = "Franconia",
 	DateReferenceCharacter = "Kostbera"
 })
@@ -122,7 +122,7 @@ DefineCharacter("Snaevar", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "Burgundy",
+	Faction = "burgundy",
 	ProvinceOfOrigin = "Franconia",
 	Father = "Hogni",
 	Mother = "Kostbera"
@@ -133,7 +133,7 @@ DefineCharacter("Solar", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "Burgundy",
+	Faction = "burgundy",
 	ProvinceOfOrigin = "Franconia",
 	Father = "Hogni",
 	Mother = "Kostbera"
@@ -144,7 +144,7 @@ DefineCharacter("Gotthorm", { -- Source: Source: Kevin Crossley-Holland, "The No
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "Burgundy",
+	Faction = "burgundy",
 	ProvinceOfOrigin = "Franconia",
 	Mother = "Grimhild"
 })
@@ -154,7 +154,7 @@ DefineCharacter("Brynhild", { -- Source: Henry Adams Bellows (transl.), "The Poe
 	Gender = "female",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth", -- put her as a Burgundian until we have better information
-	Faction = "Burgundy",
+	Faction = "burgundy",
 	ProvinceOfOrigin = "Franconia",
 	DateReferenceCharacter = "Gundahar" -- comes from the same generation as Gunnar/Gundahar
 })
@@ -164,14 +164,14 @@ DefineCharacter("Gundioc", { -- Source: Norman Davies, "Vanished Kingdoms", 2012
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "Burgundy",
+	Faction = "burgundy",
 	ProvinceOfOrigin = "Palatinate",
 	Year = 437, -- Gundioc became king of the Burgundians in 437 AD
 	DeathYear = 474, -- end of reign
 	Father = "Gundahar", -- from Gibica's line (so presumably a child of Gundahar's)
 	Mother = "Glaumvor", -- if he was a child of Gundahar's, then his mother would likely be Glaumvor
 	HistoricalTitles = {
-		"head-of-state", 437, 474, "goth", "Burgundy"
+		"head-of-state", 437, 474, "goth", "burgundy"
 	}
 })
 
@@ -180,13 +180,13 @@ DefineCharacter("Chilperic", { -- Source: Norman Davies, "Vanished Kingdoms", 20
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "Burgundy",
+	Faction = "burgundy",
 	ProvinceOfOrigin = "Switzerland", -- the Burgundian kingdom was centered in Genava (Geneva); Source: Norman Davies, "Vanished Kingdoms", 2012, p. 95.
 	Year = 474, -- beginning of Chilperic's reign over the Burgundians in 474 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
 	DeathYear = 480, -- end of reign
 	Father = "Gundioc", -- from Gibica's line (so presumably a child of Gundioc's)
 	HistoricalTitles = {
-		"head-of-state", 474, 480, "goth", "Burgundy"
+		"head-of-state", 474, 480, "goth", "burgundy"
 	}
 })
 
@@ -195,7 +195,7 @@ DefineCharacter("Clothilda", { -- Source: Norman Davies, "Vanished Kingdoms", 20
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "goth",
-	Faction = "Burgundy",
+	Faction = "burgundy",
 	Trait = "upgrade-pious",
 	ProvinceOfOrigin = "Switzerland",
 	Year = 474, -- born
@@ -208,14 +208,14 @@ DefineCharacter("Gundobad", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "Burgundy",
+	Faction = "burgundy",
 	Trait = "upgrade-wise",
 	ProvinceOfOrigin = "Switzerland",
 	Year = 480, -- beginning of Gundobad's reign over the Burgundians in 480 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
 	DeathYear = 516, -- end of reign
 	Father = "Gundioc", -- was Chilperic's brother, so presumably a child of Gundioc's
 	HistoricalTitles = {
-		"head-of-state", 480, 516, "goth", "Burgundy"
+		"head-of-state", 480, 516, "goth", "burgundy"
 	}
 })
 
@@ -224,14 +224,14 @@ DefineCharacter("Sigismund", { -- Source: Norman Davies, "Vanished Kingdoms", 20
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "Burgundy",
+	Faction = "burgundy",
 	ProvinceOfOrigin = "Switzerland",
 	Trait = "upgrade-pious",
 	Year = 516, -- beginning of Sigismund's reign over the Burgundians in 516 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
 	DeathYear = 523, -- end of reign
 	Father = "Gundobad", -- son of Gundobad
 	HistoricalTitles = {
-		"head-of-state", 516, 523, "goth", "Burgundy"
+		"head-of-state", 516, 523, "goth", "burgundy"
 	}
 })
 
@@ -240,13 +240,13 @@ DefineCharacter("Gundimar", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "Burgundy",
+	Faction = "burgundy",
 	ProvinceOfOrigin = "Switzerland",
 	Year = 523, -- beginning of Gundimar's reign over the Burgundians in 523 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
 	DeathYear = 534, -- end of reign (was proscribed, pursued and executed by the Franks, and his realm was annexed by them)
 	ViolentDeath = true,
 	Father = "Sigismund", -- from Gibica's line (so presumably a child of Sigismund's)
 	HistoricalTitles = {
-		"head-of-state", 523, 534, "goth", "Burgundy"
+		"head-of-state", 523, 534, "goth", "burgundy"
 	}
 })

@@ -78,7 +78,7 @@ function AiLandAttackDefensive()
 		
 		if (
 			CheckDependency(AiPlayer(), GetAiUnitType("smithy"))
-			and (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 2 or (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 1 and GetPlayerData(AiPlayer(), "Faction") == "Shorbear Clan")) -- The Shorbears are masterful crafters of tools, so they probably should invest in smithing sooner rather than later
+			and (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 2 or (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 1 and GetPlayerData(AiPlayer(), "Faction") == "shorbear-clan")) -- The Shorbears are masterful crafters of tools, so they probably should invest in smithing sooner rather than later
 			and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) >= 10 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("smithy")) < 1
 			and (GameCycle >= 10000 or GameSettings.Difficulty ~= 1)
 		) then
@@ -86,26 +86,26 @@ function AiLandAttackDefensive()
 		end
 		
 		if (
-			(GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 2 or (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 1 and GetPlayerData(AiPlayer(), "Faction") == "Shorbear Clan")) -- The Shorbears are masterful crafters of tools, so they probably should invest in smithing sooner rather than later
+			(GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 2 or (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 1 and GetPlayerData(AiPlayer(), "Faction") == "shorbear-clan")) -- The Shorbears are masterful crafters of tools, so they probably should invest in smithing sooner rather than later
 			and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) >= 10
 			and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("smithy")) >= 1
 		) then -- if has a smithy and two barracks, begin researching upgrades
-			if not (GetPlayerData(AiPlayer(), "Faction") == "Eikinskjaldi Clan") then -- The Eikinskjaldi Clan focuses on shields and avoids weapon upgrades
+			if not (GetPlayerData(AiPlayer(), "Faction") == "eikinskjaldi-clan") then -- The Eikinskjaldi Clan focuses on shields and avoids weapon upgrades
 				if (GetAiUnitType("melee-weapon-1") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("melee-weapon-1"))) then
 					AiResearch(GetAiUnitType("melee-weapon-1"))
 				end
 			end
-			if not (GetPlayerData(AiPlayer(), "Faction") == "Shinsplitter Clan") then -- Shinsplitters are more offensive, and use less armor in combat
+			if not (GetPlayerData(AiPlayer(), "Faction") == "shinsplitter-clan") then -- Shinsplitters are more offensive, and use less armor in combat
 				if (GetAiUnitType("bronze-shield") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("bronze-shield"))) then
 					AiResearch(GetAiUnitType("bronze-shield"))
 				end
 			end
-			if not (GetPlayerData(AiPlayer(), "Faction") == "Eikinskjaldi Clan") then -- The Eikinskjaldi Clan focuses on shields and avoids weapon upgrades
+			if not (GetPlayerData(AiPlayer(), "Faction") == "eikinskjaldi-clan") then -- The Eikinskjaldi Clan focuses on shields and avoids weapon upgrades
 				if (GetAiUnitType("melee-weapon-2") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("melee-weapon-2"))) then
 					AiResearch(GetAiUnitType("melee-weapon-2"))
 				end
 			end
-			if not (GetPlayerData(AiPlayer(), "Faction") == "Shinsplitter Clan") then -- Shinsplitters are more offensive, and use less armor in combat
+			if not (GetPlayerData(AiPlayer(), "Faction") == "shinsplitter-clan") then -- Shinsplitters are more offensive, and use less armor in combat
 				if (GetAiUnitType("iron-shield") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("iron-shield"))) then
 					AiResearch(GetAiUnitType("iron-shield"))
 				end
@@ -132,8 +132,8 @@ function AiLandAttackDefensive()
 			and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) >= 10
 			and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("lumber-mill")) >= 1
 			and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("smithy")) >= 1
-			and (GetAiUnitType("melee-weapon-2") == nil or GetPlayerData(AiPlayer(), "Allow", GetAiUnitType("melee-weapon-2")) == "R" or GetPlayerData(AiPlayer(), "Faction") == "Eikinskjaldi Clan") -- The Eikinskjaldi Clan focuses on shields and avoids weapon upgrades
-			and (GetAiUnitType("iron-shield") == nil or GetPlayerData(AiPlayer(), "Allow", GetAiUnitType("iron-shield")) == "R" or GetPlayerData(AiPlayer(), "Faction") == "Shinsplitter Clan") -- Shinsplitters are more offensive, and use less armor in combat
+			and (GetAiUnitType("melee-weapon-2") == nil or GetPlayerData(AiPlayer(), "Allow", GetAiUnitType("melee-weapon-2")) == "R" or GetPlayerData(AiPlayer(), "Faction") == "eikinskjaldi-clan") -- The Eikinskjaldi Clan focuses on shields and avoids weapon upgrades
+			and (GetAiUnitType("iron-shield") == nil or GetPlayerData(AiPlayer(), "Allow", GetAiUnitType("iron-shield")) == "R" or GetPlayerData(AiPlayer(), "Faction") == "shinsplitter-clan") -- Shinsplitters are more offensive, and use less armor in combat
 			and (GetAiUnitType("ranged-projectile-2") == nil or GetPlayerData(AiPlayer(), "Allow", GetAiUnitType("ranged-projectile-2")) == "R")
 			and (GetAiUnitType("iron-tipped-wood-plow") == nil or GetPlayerData(AiPlayer(), "Allow", GetAiUnitType("iron-tipped-wood-plow")) == "R")
 			and (GameCycle >= 15000 or GameSettings.Difficulty ~= 1)

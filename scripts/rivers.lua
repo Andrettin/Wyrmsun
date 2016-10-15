@@ -42,7 +42,7 @@ DefineRiver("Alpheus", {
 DefineRiver("Avon", {
 	World = "Earth",
 	FactionCulturalNames = {
-		"teuton", "Angle Tribe", "Afene" -- Old English name of the Avon River (the source isn't explicit on which Avon River this refers to, but it is presumably this one); Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"teuton", "angle-tribe", "Afene" -- Old English name of the Avon River (the source isn't explicit on which Avon River this refers to, but it is presumably this one); Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 	}
 })
 
@@ -57,7 +57,7 @@ DefineRiver("Danube", {
 DefineRiver("Dee", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	World = "Earth",
 	FactionCulturalNames = {
-		"teuton", "England", "Dee" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+		"teuton", "england", "Dee" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	}
 })
 
@@ -81,8 +81,8 @@ DefineRiver("Don", {
 DefineRiver("Douro", {
 	World = "Earth",
 	FactionCulturalNames = {
-		"latin", "Portugal", "Douro", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
-		"latin", "Spain", "Duero" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+		"latin", "portugal", "Douro", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+		"latin", "spain", "Duero" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
 	}
 })
 
@@ -130,7 +130,7 @@ DefineRiver("Oder", {
 DefineRiver("Orwell", {
 	World = "Earth",
 	FactionCulturalNames = {
-		"teuton", "Angle Tribe", "Arwe" -- Old English name of the Orwell River (the source isn't explicit on which Avon River this refers to, but it is presumably this one); Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"teuton", "angle-tribe", "Arwe" -- Old English name of the Orwell River (the source isn't explicit on which Avon River this refers to, but it is presumably this one); Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 	}
 })
 
@@ -156,14 +156,14 @@ DefineRiver("Sado", {
 DefineRiver("Seine", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	World = "Earth",
 	FactionCulturalNames = {
-		"latin", "France", "Seine" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		"latin", "france", "Seine" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	}
 })
 
 DefineRiver("Severn", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	World = "Earth",
 	FactionCulturalNames = {
-		"teuton", "England", "Severn" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+		"teuton", "england", "Severn" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	}
 })
 
@@ -177,7 +177,7 @@ DefineRiver("Tagus", { -- Source: William R. Shepherd, "Historical Atlas", 1911,
 DefineRiver("Thames", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	World = "Earth",
 	FactionCulturalNames = {
-		"teuton", "England", "Thames" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+		"teuton", "england", "Thames" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	}
 })
 

@@ -25,38 +25,43 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Aedui Tribe", {
+DefineFaction("aedui-tribe", {
+	Name = "Aedui Tribe",
 	Civilization = "celt",
 	Type = "tribe",
 --	Language = "gaulish",
 	Colors = {"green"}
 })
 
-DefineFaction("Arverni Tribe", {
+DefineFaction("arverni-tribe", {
+	Name = "Arverni Tribe",
 	Civilization = "celt",
 	Type = "tribe",
 --	Language = "gaulish",
 	Colors = {"blue"},
 	HistoricalDiplomacyStates = {
-		-71, "celt", "Aedui Tribe", "war" -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
+		-71, "celt", "aedui-tribe", "war" -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
 	}
 })
 
-DefineFaction("Caerasi Tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
+DefineFaction("caerasi-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
+	Name = "Caerasi Tribe",
 	Civilization = "celt",
 	Type = "tribe",
 --	Language = "gaulish", -- presumably
 	Colors = {"white"}
 })
 
-DefineFaction("Condrusi Tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
+DefineFaction("condrusi-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
+	Name = "Condrusi Tribe",
 	Civilization = "celt",
 	Type = "tribe",
 --	Language = "gaulish", -- presumably
 	Colors = {"brown"}
 })
 
-DefineFaction("Eburones Tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223-226.
+DefineFaction("eburones-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223-226.
+	Name = "Eburones Tribe",
 	Civilization = "celt",
 	Type = "tribe",
 --	Language = "gaulish", -- presumably
@@ -67,80 +72,90 @@ DefineFaction("Eburones Tribe", { -- Source: H. H. Howorth, "The Ethnology of Ge
 	}
 })
 
-DefineFaction("Helvetii Tribe", {
+DefineFaction("helvetii-tribe", {
+	Name = "Helvetii Tribe",
 	Civilization = "celt",
 	Type = "tribe",
 --	Language = "gaulish",
 	Colors = {"violet"} -- another color, perhaps?
 })
 
-DefineFaction("Ligurian Tribe", {
+DefineFaction("ligurian-tribe", {
+	Name = "Ligurian Tribe",
 	Civilization = "celt", -- were they really Celts?
 	Type = "tribe",
 --	Language = "gaulish",
 	Colors = {"green"}
 })
 
-DefineFaction("Menapii Tribe", {
+DefineFaction("menapii-tribe", {
+	Name = "Menapii Tribe",
 	Civilization = "celt",
 	Type = "tribe",
 --	Language = "gaulish",
 	Colors = {"yellow"}
 })
 
-DefineFaction("Nervii Tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 224.
+DefineFaction("nervii-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 224.
+	Name = "Nervii Tribe",
 	Civilization = "celt",
 	Type = "tribe",
 --	Language = "gaulish", -- presumably
 	Colors = {"orange"}
 })
 
-DefineFaction("Poemanni Tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
+DefineFaction("poemanni-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
+	Name = "Poemanni Tribe",
 	Civilization = "celt",
 	Type = "tribe",
 --	Language = "gaulish", -- presumably
 	Colors = {"red"}
 })
 
-DefineFaction("Segni Tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
+DefineFaction("segni-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
+	Name = "Segni Tribe",
 	Civilization = "celt",
 	Type = "tribe",
 --	Language = "gaulish", -- presumably
 	Colors = {"blue"}
 })
 
-DefineFaction("Sequani Tribe", {
+DefineFaction("sequani-tribe", {
+	Name = "Sequani Tribe",
 	Civilization = "celt",
 	Type = "tribe",
 --	Language = "gaulish",
 	Colors = {"pink", "red"},
 	HistoricalDiplomacyStates = {
-		-71, "celt", "Aedui Tribe", "war" -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
+		-71, "celt", "aedui-tribe", "war" -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
 	}
 })
 
-DefineFaction("Treviri Tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
+DefineFaction("treviri-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
+	Name = "Treviri Tribe",
 	Civilization = "celt", -- a Belgic tribe
 	Type = "tribe",
 --	Language = "gaulish", -- presumably
 	Colors = {"green"},
 	HistoricalDiplomacyStates = {
-		-54, "celt", "Condrusi Tribe", "sovereign", -- in 54 BC the Condrusi were clients of the Treviri
-		-54, "celt", "Eburones Tribe", "sovereign" -- in 54 BC the Eburones were clients of the Treviri
+		-54, "celt", "condrusi-tribe", "sovereign", -- in 54 BC the Condrusi were clients of the Treviri
+		-54, "celt", "eburones-tribe", "sovereign" -- in 54 BC the Eburones were clients of the Treviri
 	}
 })
 
-DefineFaction("Tribocci Tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 222.
+DefineFaction("tribocci-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 222.
+	Name = "Tribocci Tribe",
 	Civilization = "celt",
 	Type = "tribe",
 --	Language = "gaulish", -- presumably
 	Colors = {"green"}
 })
 
-DefineFaction("Turone Tribe", {
+DefineFaction("turone-tribe", {
+	Name = "Turone Tribe",
 	Civilization = "celt",
 	Type = "tribe",
 --	Language = "gaulish",
 	Colors = {"cyan"},
-	HistoricalFactionDerivations = {-27, "celt", "Boii Tribe"}
+	HistoricalFactionDerivations = {-27, "celt", "boii-tribe"}
 })

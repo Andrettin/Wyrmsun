@@ -25,15 +25,17 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Fenni Tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+DefineFaction("fenni-tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	Name = "Fenni Tribe",
 	Civilization = "finnish", -- correct?
 	Type = "tribe",
 	Colors = {"green"},
-	DevelopsTo = {"Finland"},
-	HistoricalFactionDerivations = {-264, "uralic", "Uralic Tribe"}
+	DevelopsTo = {"finland"},
+	HistoricalFactionDerivations = {-264, "uralic", "uralic-tribe"}
 })
 
-DefineFaction("Finland", {
+DefineFaction("finland", {
+	Name = "Finland",
 	Civilization = "finnish",
 	Type = "polity",
 	Colors = {"green"},

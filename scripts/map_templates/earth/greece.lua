@@ -26,4 +26,4 @@
 --
 
 -- Athens
-SetMapTemplateUnit("earth", "unit-latin-town-hall", "Rome", {4380, 1184}, -146) -- Greece (where Athens was located) was acquired by Rome in 146 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+SetMapTemplateUnit("earth", "unit-latin-town-hall", "rome", {4380, 1184}, -146) -- Greece (where Athens was located) was acquired by Rome in 146 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.

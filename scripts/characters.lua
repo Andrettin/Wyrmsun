@@ -87,7 +87,7 @@ DefineCharacter("Gylve", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Civilization = "basque",
 	ProvinceOfOrigin = "Scania",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "basque", "Gylfing Tribe"
+		"head-of-state", 0, 0, "basque", "gylfing-tribe"
 	},
 	DateReferenceCharacter = "Vóden" -- contemporary of Vóden
 })

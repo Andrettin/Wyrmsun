@@ -58,7 +58,7 @@ DefineMapTemplate("untersberg", {
 	}
 })
 
-SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "Acthnic Tribe", {-1, -1})
-SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "Cubital Tribe", {-1, -1})
-SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "Sagan Tribe", {-1, -1})
-SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "Vulcan Tribe", {-1, -1})
+SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "acthnic-tribe", {-1, -1})
+SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "cubital-tribe", {-1, -1})
+SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "sagan-tribe", {-1, -1})
+SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "vulcan-tribe", {-1, -1})

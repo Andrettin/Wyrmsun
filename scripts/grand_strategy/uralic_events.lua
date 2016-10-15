@@ -35,7 +35,7 @@ DefineGrandStrategyEvent("Finnish Culture Develops", {
 			and FactionHasTechnologyType(EventFaction, "bronze-shield")
 			and FactionHasTechnologyType(EventFaction, "ranged-projectile-1")
 			and FactionHasTechnologyType(EventFaction, "wood-plow")
-			and EventFaction.Name == "Uralic Tribe"
+			and EventFaction.Name == "uralic-tribe"
 			and (SyncRand(50) < 1 or FactionHasCulture(EventFaction, "finnish"))
 		) then
 			return true
@@ -132,7 +132,7 @@ DefineGrandStrategyEvent("Magyar Culture Develops", {
 			and FactionHasTechnologyType(EventFaction, "bronze-shield")
 			and FactionHasTechnologyType(EventFaction, "ranged-projectile-1")
 			and FactionHasTechnologyType(EventFaction, "wood-plow")
-			and EventFaction.Name == "Uralic Tribe"
+			and EventFaction.Name == "uralic-tribe"
 			and (SyncRand(50) < 1 or FactionHasCulture(EventFaction, "magyar"))
 		) then
 			return true

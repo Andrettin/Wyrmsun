@@ -31,7 +31,7 @@ AddTrigger("the-journey-to-godheim", -- Source: Snorri Sturlson, "Heimskringla",
 			return false
 		end
 		for i=0,(PlayerMax - 2) do
-			if (SyncRand(100) == 0 and (GetPlayerData(i, "Faction") == "Yngling Tribe" or GetPlayerData(i, "Faction") == "Swede Tribe")) then -- should also check if the faction has an appropriate hero
+			if (SyncRand(100) == 0 and (GetPlayerData(i, "Faction") == "yngling-tribe" or GetPlayerData(i, "Faction") == "swede-tribe")) then -- should also check if the faction has an appropriate hero
 				trigger_player = i
 				return true
 			end
@@ -75,7 +75,7 @@ AddTrigger("the-winter-abode", -- Source: Snorri Sturlson, "Heimskringla", 1844,
 			return false
 		end
 		for i=0,(PlayerMax - 2) do
-			if (SyncRand(100) == 0 and (GetPlayerData(i, "Faction") == "Yngling Tribe" or GetPlayerData(i, "Faction") == "Swede Tribe")) then -- should also check if the faction has an appropriate hero
+			if (SyncRand(100) == 0 and (GetPlayerData(i, "Faction") == "yngling-tribe" or GetPlayerData(i, "Faction") == "swede-tribe")) then -- should also check if the faction has an appropriate hero
 				trigger_player = i
 				return true
 			end
@@ -120,7 +120,7 @@ AddTrigger("marauding-finland", -- Source: Snorri Sturlson, "Heimskringla", 1844
 			return false
 		end
 		for i=0,(PlayerMax - 2) do
-			if (SyncRand(100) == 0 and (GetPlayerData(i, "Faction") == "Yngling Tribe" or GetPlayerData(i, "Faction") == "Swede Tribe")) then
+			if (SyncRand(100) == 0 and (GetPlayerData(i, "Faction") == "yngling-tribe" or GetPlayerData(i, "Faction") == "swede-tribe")) then
 				trigger_player = i
 				return true
 			end

@@ -25,7 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Shellscale Tribe", {
+DefineFaction("shellscale-tribe", {
+	Name = "Shellscale Tribe",
 	Civilization = "kobold",
 	Type = "tribe",
 	Colors = {"blue"}

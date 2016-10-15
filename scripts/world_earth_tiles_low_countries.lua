@@ -31,21 +31,21 @@ DefineWorldMapTile({492, 111}, {
 		"latin", "Aduatuca"
 	},
 	FactionCulturalSettlementNames = {
-		"teuton", "Netherlands", "Brussels"
+		"teuton", "netherlands", "Brussels"
 	}
 })
 
 DefineWorldMapTile({493, 107}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "Netherlands", "Amsterdam"
+		"teuton", "netherlands", "Amsterdam"
 	}
 })
 
 DefineWorldMapTile({494, 109}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "Netherlands", "'s-Hertogenbosch", "name-elements", {
+		"teuton", "netherlands", "'s-Hertogenbosch", "name-elements", {
 			"compound", "prefix", "dutch", "noun", "singular", "genitive", "Hertog",
 			"compound", "suffix", "dutch", "noun", "singular", "Bosch"
 		}
@@ -58,28 +58,28 @@ DefineWorldMapTile({495, 111}, {
 		"celt", "Aduatuca" -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223-226.
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "France", "Tongres"
+		"latin", "france", "Tongres"
 	}
 })
 
 DefineWorldMapTile({495, 112}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"latin", "France", "Liège"
+		"latin", "france", "Liège"
 	}
 })
 
 DefineWorldMapTile({496, 104}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "Netherlands", "Leeuwarden" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
+		"teuton", "netherlands", "Leeuwarden" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	}
 })
 
 DefineWorldMapTile({497, 106}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "Netherlands", "Zwolle" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
+		"teuton", "netherlands", "Zwolle" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	}
 })
 
@@ -92,7 +92,7 @@ DefineWorldMapTile({497, 115}, {
 		}
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "France", "Luxembourg", "name-elements", {
+		"latin", "france", "Luxembourg", "name-elements", {
 --			"compound", "prefix", -- ?
 			"compound", "suffix", "french", "noun", "singular", "Bourg"
 		}
@@ -102,14 +102,14 @@ DefineWorldMapTile({497, 115}, {
 DefineWorldMapTile({498, 105}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "Netherlands", "Assen" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
+		"teuton", "netherlands", "Assen" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	}
 })
 
 DefineWorldMapTile({500, 104}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "Netherlands", "Emden"
+		"teuton", "netherlands", "Emden"
 	}
 })
 

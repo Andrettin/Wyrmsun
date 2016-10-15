@@ -25,9 +25,10 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Austria", {
+DefineFaction("austria", {
+	Name = "Austria",
 	Civilization = "teuton",
-	ParentFaction = "Bavaria",
+	ParentFaction = "bavaria",
 	Type = "polity",
 	Colors = {"white", "red"},
 	DefaultTier = "duchy",
@@ -68,50 +69,11 @@ DefineFaction("Austria", {
 	-- 31.12.1851: New Year Patent (Silvesterpatent) abolishes the constitution of 1849; Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 48.
 })
 
-DefineFaction("Bach", { -- titular barony granted to Alexander Bach in 1853; Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 50.
+DefineFaction("carinthia", {
+	Name = "Carinthia",
 	Civilization = "teuton",
-	ParentFaction = "Austria",
-	Type = "polity",
-	Colors = {"blue"},
-	DefaultTier = "barony"
-})
-
-DefineFaction("Carinthia", {
-	Civilization = "teuton",
-	ParentFaction = "Austria",
+	ParentFaction = "austria",
 	Type = "polity",
 	Colors = {"brown"},
 	DefaultTier = "duchy" -- Duchy of Carinthia within the Holy Roman Empire; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-})
-
-DefineFaction("Hock", { -- titular barony belonging to Carl von Hock; Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 61.
-	Civilization = "teuton",
-	ParentFaction = "Austria",
-	Type = "polity",
-	Colors = {"brown"},
-	DefaultTier = "barony"
-})
-
-DefineFaction("Pillersdorf", { -- titular barony belonging to the Freiherr von Pillersdorf already in 1848; Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
-	Civilization = "teuton",
-	ParentFaction = "Austria",
-	Type = "polity",
-	Colors = {"blue"},
-	DefaultTier = "barony"
-})
-
-DefineFaction("Salzgeber", { -- titular barony granted to Peter von Salzgeber in 1853; Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
-	Civilization = "teuton",
-	ParentFaction = "Austria",
-	Type = "polity",
-	Colors = {"white"},
-	DefaultTier = "barony"
-})
-
-DefineFaction("Wiesborn", { -- titular barony belonging to Adolph Pratobevera von Wiesborn; Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 61.
-	Civilization = "teuton",
-	ParentFaction = "Austria",
-	Type = "polity",
-	Colors = {"blue"},
-	DefaultTier = "barony"
 })

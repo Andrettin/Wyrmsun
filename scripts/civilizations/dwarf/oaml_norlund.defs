@@ -2,7 +2,7 @@
 <track>
 	<name>ANewAlly</name>
 	<group>map</group>
-	<subgroup>Norlund Clan</subgroup>
+	<subgroup>norlund-clan</subgroup>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>
@@ -20,7 +20,7 @@
 <track>
 	<name>PlungingIntoTheDarkness</name>
 	<group>map</group>
-	<subgroup>Norlund Clan</subgroup>
+	<subgroup>norlund-clan</subgroup>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>
@@ -110,7 +110,7 @@
 	<name>HillsOfTheShorbearClan</name>
 	<group>map</group>
 	<subgroup>dwarf</subgroup>
-	<subgroup>Shorbear Clan</subgroup>
+	<subgroup>shorbear-clan</subgroup>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>

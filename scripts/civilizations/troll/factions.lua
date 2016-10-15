@@ -25,7 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Ironwood", { -- area where trolls lived in the Norse myths
+DefineFaction("ironwood", { -- area where trolls lived in the Norse myths
+	Name = "Ironwood",
 	Civilization = "troll",
 	Type = "tribe",
 	Colors = {"black"},

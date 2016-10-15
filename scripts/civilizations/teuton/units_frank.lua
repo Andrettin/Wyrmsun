@@ -34,7 +34,7 @@
 DefineUnitType("unit-frank-swordsman", { Name = _("Krieger"),
 	Parent = "unit-teuton-swordsman",
 	Civilization = "teuton",
-	Faction = "Frank Tribe",
+	Faction = "frank-tribe",
 	Icon = "icon-frank-swordsman-red-hair",
 	Armor = 3, -- +1 armor
 	Points = 55, -- +5 points
@@ -137,7 +137,7 @@ DefineUnitType("unit-frank-swordsman", { Name = _("Krieger"),
 DefineUnitType("unit-frank-spearman", { Name = _("Speerkampfer"),
 	Parent = "unit-teuton-spearman",
 	Civilization = "teuton",
-	Faction = "Frank Tribe",
+	Faction = "frank-tribe",
 	LayerImages = {
 		{"layer", "hair", "file", "human/units/brown_hair_warrior_no_beard.png"},
 		{"layer", "clothing", "file", "teuton/units/chainmail.png"},
@@ -238,7 +238,7 @@ DefineUnitType("unit-frank-spearman", { Name = _("Speerkampfer"),
 DefineUnitType("unit-frank-horseman", { Name = _("Ritter"),
 	Parent = "unit-teuton-ritter",
 	Civilization = "teuton",
-	Faction = "Frank Tribe",
+	Faction = "frank-tribe",
 	Icon = "icon-frank-horseman",
 	LayerImages = {
 		{"layer", "shield", "file", "dlcs/frankish_faction_flair/graphics/units/frank_horseman_shield.png"}

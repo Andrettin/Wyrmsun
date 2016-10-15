@@ -26,13 +26,13 @@
 --
 
 if (LoadedGame == false) then
-	SetPlayerData(0, "Faction", "Rome")
+	SetPlayerData(0, "Faction", "rome")
 	SetPlayerData(0, "Resources", "gold", 2000)
 	SetPlayerData(0, "Resources", "lumber", 2000)
 	SetPlayerData(0, "Resources", "stone", 1000)
 	SetPlayerData(0, "Resources", "oil", 0)
 	SetAiType(0, "land-attack")
-	SetPlayerData(4, "Faction", "Marcomanni Tribe")
+	SetPlayerData(4, "Faction", "marcomanni-tribe")
 	SetPlayerData(4, "Allow", "upgrade-teuton-writing", "F")
 	SetPlayerData(4, "Resources", "gold", 2000)
 	SetPlayerData(4, "Resources", "lumber", 2000)

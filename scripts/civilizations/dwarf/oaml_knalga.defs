@@ -2,7 +2,7 @@
 <track>
 	<name>SettlingDisputes</name>
 	<group>map</group>
-	<subgroup>Shinsplitter Clan</subgroup>
+	<subgroup>shinsplitter-clan</subgroup>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>
@@ -21,7 +21,7 @@
 	<name>AtTheEastGate</name>
 	<group>map</group>
 	<subgroup>dwarf</subgroup>
-	<subgroup>Knalga</subgroup>
+	<subgroup>knalga</subgroup>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>
@@ -41,7 +41,7 @@
 	<group>map</group>
 	<subgroup>dwarf</subgroup>
 	<subgroup>goblin</subgroup>
-	<subgroup>Knalga</subgroup>
+	<subgroup>knalga</subgroup>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>
@@ -61,7 +61,7 @@
 	<group>map</group>
 	<subgroup>dwarf</subgroup>
 	<subgroup>goblin</subgroup>
-	<subgroup>Knalga</subgroup>
+	<subgroup>knalga</subgroup>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>
@@ -80,7 +80,7 @@
 	<name>Invaders</name>
 	<group>map</group>
 	<subgroup>dwarf</subgroup>
-	<subgroup>Knalga</subgroup>
+	<subgroup>knalga</subgroup>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>
@@ -99,7 +99,7 @@
 	<name>HighPass</name>
 	<group>map</group>
 	<subgroup>dwarf</subgroup>
-	<subgroup>Knalga</subgroup>
+	<subgroup>knalga</subgroup>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>
@@ -119,7 +119,7 @@
 	<group>map</group>
 	<subgroup>dwarf</subgroup>
 	<subgroup>kobold</subgroup>
-	<subgroup>Knalga</subgroup>
+	<subgroup>knalga</subgroup>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>
@@ -138,7 +138,7 @@
 	<name>Fear</name>
 	<group>map</group>
 	<subgroup>dwarf</subgroup>
-	<subgroup>Knalga</subgroup>
+	<subgroup>knalga</subgroup>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>
@@ -158,7 +158,7 @@
 	<group>map</group>
 	<subgroup>dwarf</subgroup>
 	<subgroup>gnome</subgroup>
-	<subgroup>Knalga</subgroup>
+	<subgroup>knalga</subgroup>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>
@@ -177,8 +177,8 @@
 	<name>TheSiegeOfKalKartha</name>
 	<group>map</group>
 	<subgroup>dwarf</subgroup>
-	<subgroup>Knalga</subgroup>
-	<subgroup>Kal Kartha</subgroup>
+	<subgroup>knalga</subgroup>
+	<subgroup>kal-kartha</subgroup>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>
@@ -197,8 +197,8 @@
 	<name>TheCourtOfKarrag</name>
 	<group>map</group>
 	<subgroup>dwarf</subgroup>
-	<subgroup>Knalga</subgroup>
-	<subgroup>Kal Kartha</subgroup>
+	<subgroup>knalga</subgroup>
+	<subgroup>kal-kartha</subgroup>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>
@@ -217,8 +217,8 @@
 	<name>TheUnderlevels</name>
 	<group>map</group>
 	<subgroup>dwarf</subgroup>
-	<subgroup>Knalga</subgroup>
-	<subgroup>Kal Kartha</subgroup>
+	<subgroup>knalga</subgroup>
+	<subgroup>kal-kartha</subgroup>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>

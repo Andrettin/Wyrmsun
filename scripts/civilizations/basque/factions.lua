@@ -25,37 +25,42 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Maglemose Tribe", { -- Scandinavian pre-Indo-Europeans are very unlikely to have spoken a Vasconic language, but this fits better than making them Germanic (as the Vasconic languages are pre-Indo-European); based on the Maglemose culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
+DefineFaction("maglemose-tribe", { -- Scandinavian pre-Indo-Europeans are very unlikely to have spoken a Vasconic language, but this fits better than making them Germanic (as the Vasconic languages are pre-Indo-European); based on the Maglemose culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
+	Name = "Maglemose Tribe",
 	Civilization = "basque",
 	Type = "tribe",
 	Colors = {"red", "white"}
 })
 
-DefineFaction("Kongemose Tribe", { -- based on the Kongemose culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
+DefineFaction("kongemose-tribe", { -- based on the Kongemose culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
+	Name = "Kongemose Tribe",
 	Civilization = "basque",
 	Type = "tribe",
 	Colors = {"red", "white"},
-	HistoricalFactionDerivations = {-6400, "basque", "Maglemose Tribe"} -- Maglemose cultured ended and Kongemose culture arose in Zealand in 6400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
+	HistoricalFactionDerivations = {-6400, "basque", "maglemose-tribe"} -- Maglemose cultured ended and Kongemose culture arose in Zealand in 6400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
 })
 
-DefineFaction("Ertebolle Tribe", { -- based on the Ertebolle culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
+DefineFaction("ertebolle-tribe", { -- based on the Ertebolle culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
+	Name = "Ertebolle Tribe",
 	Civilization = "basque",
 	Type = "tribe",
 	Colors = {"red", "white"},
-	HistoricalFactionDerivations = {-6400, "basque", "Kongemose Tribe"} -- Kongemose cultured ended and Ertebolle culture arose in Zealand in 5400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
+	HistoricalFactionDerivations = {-6400, "basque", "kongemose-tribe"} -- Kongemose cultured ended and Ertebolle culture arose in Zealand in 5400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
 })
 
-DefineFaction("Funnelbeaker Tribe", { -- based on the Funnel Beaker culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
+DefineFaction("funnelbeaker-tribe", { -- based on the Funnel Beaker culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
+	Name = "Funnelbeaker Tribe",
 	Civilization = "basque",
 	Type = "tribe",
 	Colors = {"violet"},
-	HistoricalFactionDerivations = {-6400, "basque", "Ertebolle Tribe"}, -- Ertebolle cultured ended and Funnel Beaker culture arose in Zealand in 3950 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
+	HistoricalFactionDerivations = {-6400, "basque", "ertebolle-tribe"}, -- Ertebolle cultured ended and Funnel Beaker culture arose in Zealand in 3950 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
 	HistoricalTechnologies = {
 		"upgrade-germanic-wood-plow", -3600, -- Primitive ard (plow) appears in Northern Europe c. 3600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 297.
 	}
 })
 
-DefineFaction("Gylfing Tribe", { -- Scandinavian pre-Indo-Europeans are very unlikely to have spoken a Vasconic language, but this fits better than making them Germanic (as the Vasconic languages are pre-Indo-European)
+DefineFaction("gylfing-tribe", { -- Scandinavian pre-Indo-Europeans are very unlikely to have spoken a Vasconic language, but this fits better than making them Germanic (as the Vasconic languages are pre-Indo-European)
+	Name = "Gylfing Tribe",
 	Civilization = "basque",
 	Type = "tribe",
 	Colors = {"green", "teal"},
@@ -64,33 +69,38 @@ DefineFaction("Gylfing Tribe", { -- Scandinavian pre-Indo-Europeans are very unl
 	}
 })
 
-DefineFaction("Cardialware Tribe", {
+DefineFaction("cardialware-tribe", {
+	Name = "Cardialware Tribe",
 	Civilization = "basque",
 	Type = "tribe",
 	Colors = {"yellow"}
 })
 
-DefineFaction("Bellbeaker Tribe", {
+DefineFaction("bellbeaker-tribe", {
+	Name = "Bellbeaker Tribe",
 	Civilization = "basque",
 	Type = "tribe",
 	Colors = {"green"}
 })
 
-DefineFaction("Linearware Tribe", {
+DefineFaction("linearware-tribe", {
+	Name = "Linearware Tribe",
 	Civilization = "basque",
 	Type = "tribe",
 	Colors = {"yellow"}
 })
 
-DefineFaction("Sauveterrian Tribe", { -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 167-168.
+DefineFaction("sauveterrian-tribe", { -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 167-168.
+	Name = "Sauveterrian Tribe",
 	Civilization = "basque", -- not actually Basque, but a pre-Indo-European people as well
 	Type = "tribe",
 	Colors = {"brown"}
 })
 
-DefineFaction("Castelnovian Tribe", { -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 167-168.
+DefineFaction("castelnovian-tribe", { -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 167-168.
+	Name = "Castelnovian Tribe",
 	Civilization = "basque", -- not actually Basque, but a pre-Indo-European people as well
 	Type = "tribe",
 	Colors = {"white"},
-	HistoricalFactionDerivations = {-5930, "basque", "Sauveterrian Tribe"} -- succeeded the Sauveterrian culture
+	HistoricalFactionDerivations = {-5930, "basque", "sauveterrian-tribe"} -- succeeded the Sauveterrian culture
 })

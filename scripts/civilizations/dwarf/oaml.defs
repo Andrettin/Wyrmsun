@@ -26,7 +26,7 @@
 	<name>DwarfTheme</name>
 	<group>map</group>
 	<subgroup>dwarf</subgroup>
-	<subgroup>Brising Clan</subgroup>
+	<subgroup>brising-clan</subgroup>
 	<fadeIn>10000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>10</xfadeIn>
@@ -75,7 +75,7 @@
 	<name>DwarfTheme2</name>
 	<group>map</group>
 	<subgroup>dwarf</subgroup>
-	<subgroup>Brising Clan</subgroup>
+	<subgroup>brising-clan</subgroup>
 	<fadeIn>10000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>10</xfadeIn>

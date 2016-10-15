@@ -266,7 +266,7 @@ DefineQuest("shorbear-hold", {
 	Civilization = "dwarf",
 	PlayerColor = "blue",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "Shorbear Clan" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-stronghold") == 0 and CheckDependency(trigger_player, "unit-dwarven-stronghold") and GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-town-hall") > 0 and GetUniqueItemData("shorbear-hold", "CanDrop")) then
+		if (GetPlayerData(trigger_player, "Faction") == "shorbear-clan" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-stronghold") == 0 and CheckDependency(trigger_player, "unit-dwarven-stronghold") and GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-town-hall") > 0 and GetUniqueItemData("shorbear-hold", "CanDrop")) then
 			return true
 		end
 		return false
@@ -431,7 +431,7 @@ DefineQuest("mushroom-fields", { -- inspired by the dialogue in Battle for Wesno
 	Civilization = "dwarf",
 	PlayerColor = "red",
 	Conditions = function(s)
---		if (GetPlayerData(trigger_player, "Faction") == "Knalga") then
+--		if (GetPlayerData(trigger_player, "Faction") == "knalga") then
 		if (GetPlayerData(trigger_player, "RaceName") == "dwarf" and (GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-miner") > 0 or GetPlayerData(trigger_player, "UnitTypesCount", "unit-brising-miner") > 0) and CheckDependency(trigger_player, "unit-dwarven-mushroom-farm")) then -- allow for all Dwarven factions for now, since they don't have many quests
 			return true
 		end
@@ -471,6 +471,6 @@ DefineQuest("the-mead-of-poetry-kill-kvasir", {
 		CallDialogue("the-mead-of-poetry-kvasir-assassinated", trigger_player)
 	end,
 	Objectives = {"- Find your way to Asgard", "- Kill Kvasir", "- Fjalar and Galar must survive"},
-	DestroyUnits = {"unit-dwarven-witness", "Brising Clan", 1} -- placeholder
+	DestroyUnits = {"unit-dwarven-witness", "brising-clan", 1} -- placeholder
 })
 

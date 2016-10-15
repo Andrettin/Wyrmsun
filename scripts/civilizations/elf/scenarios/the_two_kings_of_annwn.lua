@@ -27,10 +27,10 @@
 
 if (LoadedGame == false) then
 	SetPlayerData(0, "RaceName", "elf")
-	SetPlayerData(0, "Faction", "Annwn")
+	SetPlayerData(0, "Faction", "annwn")
 	SetPlayerData(0, "Name", "Annwn (Arawn)")
 	SetPlayerData(1, "RaceName", "elf")
-	SetPlayerData(1, "Faction", "Annwn")
+	SetPlayerData(1, "Faction", "annwn")
 	SetPlayerData(1, "Name", "Annwn (Hafgan)")
 	if not (GrandStrategy) then
 --		SetPlayerData(1, "Allow", "unit-dwarven-smithy", "F")
@@ -46,7 +46,7 @@ if (LoadedGame == false) then
 		CreateProvinceUnits("Annwn", 0, 1, false, false)
 		CreateProvinceCustomHero("Annwn", 0)
 	
-		if (FactionHasHero("elf", "Annwn", "Arawn")) then
+		if (FactionHasHero("elf", "annwn", "Arawn")) then
 			unit = CreateUnit(GetGrandStrategyHeroUnitType("Arawn"), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 			SetUnitVariable(unit, "Character", "Arawn")
 		end

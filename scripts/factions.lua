@@ -56,7 +56,8 @@ Load("scripts/civilizations/troll/factions.lua")
 
 -- deity factions
 
-DefineFaction("Asgard", {
+DefineFaction("asgard", {
+	Name = "Asgard",
 	Civilization = "aesir",
 	Type = "polity",
 	Colors = {"blue"},

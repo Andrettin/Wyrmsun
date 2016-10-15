@@ -30,11 +30,11 @@ DefineCharacter("Arawn", { -- Arawn was king of the otherworld Annwn in Welsh le
 	Gender = "male",
 	Type = "unit-elven-swordsman", -- should be a rider
 	Civilization = "elf",
-	Faction = "Annwn",
+	Faction = "annwn",
 --	ProvinceOfOrigin = "Annwn",
 	Trait = "upgrade-wise",
 	HistoricalTitles = {
---		"head-of-state", 0, 0, "elf", "Annwn" -- king of Annwn
+--		"head-of-state", 0, 0, "elf", "annwn" -- king of Annwn
 	}
 	-- wore gray-brown clothing when hunting, along with a hunting horn hanging over his neck
 })
@@ -44,7 +44,7 @@ DefineCharacter("Hafgan", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch d
 	Gender = "male",
 	Type = "unit-elven-swordsman",
 	Civilization = "elf",
-	Faction = "Annwn",
+	Faction = "annwn",
 --	ProvinceOfOrigin = "Annwn"
 	-- king in Annwn who opposed Arawn
 })

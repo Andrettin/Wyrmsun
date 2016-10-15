@@ -25,15 +25,17 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Magyar Tribe", {
+DefineFaction("magyar-tribe", {
+	Name = "Magyar Tribe",
 	Civilization = "magyar",
 	Type = "tribe",
 	Colors = {"green"},
-	DevelopsTo = {"Hungary"},
-	HistoricalFactionDerivations = {896, "uralic", "Uralic Tribe"}
+	DevelopsTo = {"hungary"},
+	HistoricalFactionDerivations = {896, "uralic", "uralic-tribe"}
 })
 
-DefineFaction("Hungary", {
+DefineFaction("hungary", {
+	Name = "Hungary",
 	Civilization = "magyar",
 	Type = "polity",
 	Colors = {"green"},

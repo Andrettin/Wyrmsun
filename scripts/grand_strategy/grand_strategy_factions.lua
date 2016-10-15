@@ -33,8 +33,8 @@ function LoadFactions(world)
 
 	local EarthFactions = {
 		-- Germanic tribes
-		AsaTribe = {
-			Name = "Asa Tribe",
+		asa_tribe = {
+			Name = "asa-tribe",
 			Civilization = "germanic",
 			Gold = 3000,
 			Commodities = {
@@ -43,14 +43,14 @@ function LoadFactions(world)
 			}
 		},
 		-- Latin polities
-		Rome = {
-			Name = "Rome",
+		rome = {
+			Name = "rome",
 			Civilization = "latin",
 			Gold = 5000
 		},
 		-- Non-Playable Tribes
-		GylfingTribe = {
-			Name = "Gylfing Tribe",
+		gylfing_tribe = {
+			Name = "gylfing-tribe",
 			Civilization = "basque",
 			Gold = 5000,
 			Commodities = {
@@ -58,8 +58,8 @@ function LoadFactions(world)
 				Stone = 2500 -- half of the gold value
 			}
 		},
-		VanaTribe = {
-			Name = "Vana Tribe",
+		vana_tribe = {
+			Name = "vana-tribe",
 			Civilization = "celt",
 			Gold = 5000,
 			Commodities = {
@@ -70,8 +70,8 @@ function LoadFactions(world)
 	}
 	
 	local NidavellirFactions = {
-		Untersberg = {
-			Name = "Untersberg",
+		untersberg = {
+			Name = "untersberg",
 			Civilization = "gnome",
 			Gold = 7500,
 			Commodities = {
@@ -80,8 +80,8 @@ function LoadFactions(world)
 			}
 		},
 		-- Dwarven clans
-		NorlundClan = {
-			Name = "Norlund Clan",
+		norlund_clan = {
+			Name = "norlund-clan",
 			Civilization = "dwarf",
 			Gold = 3000,
 			Commodities = {
@@ -89,8 +89,8 @@ function LoadFactions(world)
 				Stone = 1500 -- half of the gold value
 			}
 		},
-		ShinsplitterClan = {
-			Name = "Shinsplitter Clan",
+		shinsplitter_clan = {
+			Name = "shinsplitter-clan",
 			Civilization = "dwarf",
 			Gold = 7500,
 			Commodities = {
@@ -98,8 +98,8 @@ function LoadFactions(world)
 				Stone = 3750 -- half of the gold value
 			}
 		},
-		ShorbearClan = {
-			Name = "Shorbear Clan",
+		shorbear_clan = {
+			Name = "shorbear-clan",
 			Civilization = "dwarf",
 			Gold = 9000, -- 300 / 20 * 600 (base value divided by 20, the usual level 1 Wesnoth unit gold cost, and multiplied by 600, the basic military unit gold cost in Wyrmsun)
 			Commodities = {
@@ -108,8 +108,8 @@ function LoadFactions(world)
 			}
 		},
 		-- Goblin tribes
-		KhagTribe = {
-			Name = "Khag Tribe",
+		khag_tribe = {
+			Name = "khag-tribe",
 			Civilization = "goblin",
 			Gold = 750,
 			Commodities = {
@@ -117,8 +117,8 @@ function LoadFactions(world)
 				Stone = 375 -- half of the gold value
 			}
 		},
-		LggiTribe = {
-			Name = "Lggi Tribe",
+		lggi_tribe = {
+			Name = "lggi-tribe",
 			Civilization = "goblin",
 			Gold = 2700,
 			Commodities = {
@@ -133,7 +133,7 @@ function LoadFactions(world)
 		local factions = GetCivilizationFactionNames(civilizations[i])
 		for j=1,table.getn(factions) do
 			local faction_name = factions[j]
-			local key = string.gsub(faction_name, " ", "")
+			local key = string.gsub(faction_name, "-", "_")
 			Factions[key] = {}
 			Factions[key]["Name"] = faction_name
 			Factions[key]["Civilization"] = civilizations[i]

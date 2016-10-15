@@ -32,7 +32,7 @@ DefineCharacter("Teyrnon Twryf Liant", { -- Source: Bernhard Maier (trans.), "Da
 	Civilization = "celt",
 	ProvinceOfOrigin = "Wales", -- Gwent Is Coed
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "celt", "Gwent Is Coed" -- lord of Gwent Is Coed
+		"head-of-state", 0, 0, "celt", "gwent-is-coed" -- lord of Gwent Is Coed
 	}
 })
 

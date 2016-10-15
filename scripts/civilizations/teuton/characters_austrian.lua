@@ -43,14 +43,11 @@ DefineCharacter("Peter von Salzgeber", { -- Source: Waltraud Heindl, "Josephinis
 	Gender = "male",
 	Type = "unit-teuton-ritter", -- section chief who was the right-hand of the Minister-President (the Baron of Pillersdorf) in March of 1848
 	Civilization = "teuton",
-	Faction = "Austria",
+	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1789, -- born
 	DeathYear = 1858, -- died
-	Noble = true,
-	HistoricalTitles = {
-		"head-of-state", 1853, 1858, "teuton", "Salzgeber" -- became Freiherr (Baron) of Salzgeber in 1853
-	}
+	Noble = true
 })
 
 DefineCharacter("Wilhelmina von Salzgeber", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
@@ -61,7 +58,7 @@ DefineCharacter("Wilhelmina von Salzgeber", { -- Source: Waltraud Heindl, "Josep
 	Gender = "female",
 	Type = "unit-teuton-archer", -- baroness; should be a different unit type that is more appropriate
 	Civilization = "teuton",
-	Faction = "Austria",
+	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1801, -- born
 	DeathYear = 1860, -- died
@@ -77,7 +74,7 @@ DefineCharacter("Joseph Anton von Lasser", { -- Source: Waltraud Heindl, "Joseph
 	Gender = "male",
 	Type = "unit-teuton-ritter", -- bureaucrat in the Allgemeinen Hofkammer, in 1848 a deputy in the Austrian Reichstag and in the Frankfurter Parliament; was minister without portfolio in the 1860s during the government of the Archduke Rainer-Mensdorff-Pouilly; was governor of Tyrol; in the 1870s he was a liberal deputy
 	Civilization = "teuton",
-	Faction = "Austria",
+	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1814, -- born
 	DeathYear = 1879, -- died
@@ -90,12 +87,12 @@ DefineCharacter("Leopold Hasner", { -- Source: Waltraud Heindl, "Josephinische M
 	Gender = "male",
 	Type = "unit-teuton-ritter", -- bureaucrat of the Finanzlandesdirektion in Prague; later bureaucrat of the Hofkammerprokuratur of Vienna; in the 1860s professor of political sciences in the University of Vienna and was head (Leiter) of the Department of Education (Unterrichtsdepartement) (which was in effect the education ministry) during the government of Prince (Fürst) Karl Auersperg
 	Civilization = "teuton",
-	Faction = "Austria",
+	Faction = "austria",
 	ProvinceOfOrigin = "Bohemia", -- presumably
 	Year = 1818, -- born
 	DeathYear = 1891, -- died
 	HistoricalTitles = {
-		"education-minister", 0, 0, "teuton", "Austria"
+		"education-minister", 0, 0, "teuton", "austria"
 	}
 	-- Knight (Ritter) of Artha
 })
@@ -109,7 +106,7 @@ DefineCharacter("Wilhelmina the Younger von Salzgeber", { -- Source: Waltraud He
 	Gender = "female",
 	Type = "unit-teuton-archer", -- should be a different unit type that is more appropriate
 	Civilization = "teuton",
-	Faction = "Austria",
+	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1821, -- born
 	DeathYear = 1896, -- died
@@ -123,7 +120,7 @@ DefineCharacter("Josef Russegger", { -- Source: Waltraud Heindl, "Josephinische 
 	Gender = "male",
 	Type = "unit-teuton-ritter", -- bureaucrat, literate, geological researcher (also did geological scientific travels), worked as saline director in various mines in Austria (such as Wieliczka in Galicia)
 	Civilization = "teuton",
-	Faction = "Austria",
+	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1853 -- knighted (became "Ritter von Russegger")
 })
@@ -136,13 +133,12 @@ DefineCharacter("von Pillersdorf", { -- Source: Waltraud Heindl, "Josephinische 
 	Gender = "male",
 	Type = "unit-teuton-ritter", -- high-ranking bureaucrat of the Finance Ministry, and later Minister-President of Austria
 	Civilization = "teuton",
-	Faction = "Austria",
+	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1848, -- became Minister-President of Austria in 1848
 	Noble = true,
 	HistoricalTitles = {
-		"head-of-government", 1848, 1848, "teuton", "Austria", -- was Minister-President of Austria during 1848
-		"head-of-state", 1848, 0, "teuton", "Pillersdorf" -- was already Freiherr (Baron) of Pillersdorf in 1848
+		"head-of-government", 1848, 1848, "teuton", "austria" -- was Minister-President of Austria during 1848
 	}
 })
 
@@ -154,12 +150,12 @@ DefineCharacter("Franz Joseph von Habsburg", { -- Source: Waltraud Heindl, "Jose
 	Gender = "male",
 	Type = "unit-teuton-ritter", -- Emperor of Austria
 	Civilization = "teuton",
-	Faction = "Austria",
+	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1830, -- born (became Emperor in 1848, when he was 18 years old)
 	Noble = true,
 	HistoricalTitles = {
-		"head-of-state", 1848, 0, "teuton", "Austria" -- became Emperor of Austria in 1848
+		"head-of-state", 1848, 0, "teuton", "austria" -- became Emperor of Austria in 1848
 	}
 })
 
@@ -171,7 +167,7 @@ DefineCharacter("Victor Andrian-Werburg", { -- Source: Waltraud Heindl, "Josephi
 	Gender = "male",
 	Type = "unit-teuton-swordsman", -- member of the Tyrolese provincial diet
 	Civilization = "teuton",
-	Faction = "Austria",
+	Faction = "austria",
 	ProvinceOfOrigin = "Tyrol",
 	Year = 1850, -- published "Austria and Her Future" (Österreich und dessen Zukunft") anonymously in 1850
 --	AuthoredWorks = {"upgrade-work-austria-and-her-future"}
@@ -184,12 +180,12 @@ DefineCharacter("Franz Seraph Stadion", { -- Source: Waltraud Heindl, "Josephini
 	Gender = "male",
 	Type = "unit-teuton-ritter",
 	Civilization = "teuton",
-	Faction = "Austria",
+	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1806, -- born
 	DeathYear = 1853, -- died
 	HistoricalTitles = {
-		"interior-minister", 1848, 1849, "teuton", "Austria" -- Interior Minister (Innenminister) of Austria until May 1849, when he became severely ill; was already Interior Minister by 7.11.1818
+		"interior-minister", 1848, 1849, "teuton", "austria" -- Interior Minister (Innenminister) of Austria until May 1849, when he became severely ill; was already Interior Minister by 7.11.1818
 	}
 	-- count (of where?)
 })
@@ -202,14 +198,13 @@ DefineCharacter("Alexander von Bach", { -- Source: Waltraud Heindl, "Josephinisc
 	Gender = "male",
 	Type = "unit-teuton-ritter",
 	Civilization = "teuton",
-	Faction = "Austria",
+	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1813, -- born
 	DeathYear = 1893, -- died
 	Noble = true,
 	HistoricalTitles = {
-		"interior-minister", 1849, 1859, "teuton", "Austria", -- became Interior Minister (Innenminister) of Austria in 15.08.1849, and ceased that function in 1859
-		"head-of-state", 1853, 1893, "teuton", "Bach" -- became Baron (Freiherr) of Bach in 1853
+		"interior-minister", 1849, 1859, "teuton", "austria" -- became Interior Minister (Innenminister) of Austria in 15.08.1849, and ceased that function in 1859
 	}
 })
 
@@ -221,7 +216,7 @@ DefineCharacter("Eduard von Bach", { -- Source: Waltraud Heindl, "Josephinische 
 	Gender = "male",
 	Type = "unit-teuton-ritter",
 	Civilization = "teuton",
-	Faction = "Austria",
+	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	DateReferenceCharacter = "Alexander von Bach", -- brother of Alexander von Bach
 	Noble = true,
@@ -238,12 +233,12 @@ DefineCharacter("Anton Hye von Glunek", { -- Source: Waltraud Heindl, "Josephini
 	Gender = "male",
 	Type = "unit-teuton-ritter", -- was a liberal member of the Juridico-political Reading Club before 1848; from 1857 to 1867 was a section chief in the Ministry of Justice
 	Civilization = "teuton",
-	Faction = "Austria",
+	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1849, -- became part of the ministerial council of the Austrian Ministry of Justice in 1849
 	Noble = true,
 	HistoricalTitles = {
-		"justice-minister", 1867, 1867, "teuton", "Austria" -- was Justice Minister (Justizminister) of Austria from June to December of 1867
+		"justice-minister", 1867, 1867, "teuton", "austria" -- was Justice Minister (Justizminister) of Austria from June to December of 1867
 	}
 })
 
@@ -255,13 +250,12 @@ DefineCharacter("Adolph Pratobevera von Wiesborn",  { -- Source: Waltraud Heindl
 	Gender = "male",
 	Type = "unit-teuton-ritter",
 	Civilization = "teuton",
-	Faction = "Austria",
+	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1852, -- became councillor (Hofrat) in the supreme court (Oberster Gerichtshof) in 1852
 	Noble = true,
 	HistoricalTitles = {
-		"justice-minister", 1861, 1862, "teuton", "Austria", -- was Justice Minister (Justizminister) of Austria from 1861 to 1862
-		"head-of-state", 0, 0, "teuton", "Wiesborn" -- was Baron (Freiherr) of Wiesborn
+		"justice-minister", 1861, 1862, "teuton", "austria" -- was Justice Minister (Justizminister) of Austria from 1861 to 1862
 	}
 	-- had the reputation of being a freethinker
 })
@@ -274,7 +268,7 @@ DefineCharacter("Johann Baptist von Hoffinger", { -- Source: Waltraud Heindl, "J
 	Gender = "male",
 	Type = "unit-teuton-ritter", -- Ministerialsekretär in the Police Ministry (Polizeiministerium), at least during the 1867-1869 period
 	Civilization = "teuton",
-	Faction = "Austria",
+	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1867,
 	Noble = true
@@ -289,13 +283,10 @@ DefineCharacter("Carl von Hock",  { -- Source: Waltraud Heindl, "Josephinische M
 	Gender = "male",
 	Type = "unit-teuton-ritter", -- was a section chief in the Finance Ministry
 	Civilization = "teuton",
-	Faction = "Austria",
+	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	-- start year?
-	Noble = true,
-	HistoricalTitles = {
-		"head-of-state", 0, 0, "teuton", "Hock" -- was Baron (Freiherr) of Hock
-	}
+	Noble = true
 	-- economic liberal
 })
 
@@ -305,7 +296,7 @@ DefineCharacter("Bissingen", { -- Source: Waltraud Heindl, "Josephinische Mandar
 	Gender = "male",
 	Type = "unit-teuton-ritter", -- had the title of Graf (Count)
 	Civilization = "teuton",
-	Faction = "Austria",
+	Faction = "austria",
 	ProvinceOfOrigin = "Tyrol", -- was Statthalter of Tyrol
 	Year = 1852, -- was Statthalter (governor) of Tyrol in 1852 when he wrote complaining of the wages of a governor
 --	Noble = true,
@@ -322,7 +313,7 @@ DefineCharacter("Georg von Toggenburg", { -- Source: Waltraud Heindl, "Josephini
 	Gender = "male",
 	Type = "unit-teuton-ritter", -- had the title of Knight (Ritter)
 	Civilization = "teuton",
-	Faction = "Austria",
+	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1860, -- became Statthalter of Venice
 	Noble = true,

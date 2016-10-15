@@ -29,7 +29,7 @@ DefineCampaign("the-mead-of-poetry", {
 	Name = "The Mead of Poetry",
 	Description = "The dwarven brothers Fjalar and Galar conspire to kill the wise god Kvasir and brew his blood into a powerful mead.",
 	Civilization = "dwarf",
-	Faction = "Shadowcharm Clan",
+	Faction = "shadowcharm-clan",
 	Year = -2800
 })
 
@@ -37,7 +37,7 @@ DefineCampaign("freys-messenger", {
 	Name = "Frey's Messenger",
 	Description = "Skirnir, the human servant of the god Frey, must perform important deeds for his master.",
 	Civilization = "germanic",
-	Faction = "Yngling Tribe", -- Yngve is identified with Frey
+	Faction = "yngling-tribe", -- Yngve is identified with Frey
 	Year = -2800 -- when Scandinavia was historically settled by Indo-Europeans; Yngve ruled over the Swedes in the Ynglinga saga soon after Odin's people settled Scandinavia in that saga; since Skirnir was a servant of Frey in mythology, let's make him a contemporary of Yngve
 })
 
@@ -45,7 +45,7 @@ DefineCampaign("the-marcomannic-wars", {
 	Name = "The Marcomannic Wars",
 	Description = "Under the leadership of Ballomar, the Marcomanni wage war with the mighty Roman Empire.",
 	Civilization = "teuton",
-	Faction = "Marcomanni Tribe",
+	Faction = "marcomanni-tribe",
 	Year = 162 -- beginning of the Marcomannic Wars
 })
 
@@ -53,6 +53,6 @@ DefineCampaign("sigiberts-struggle", {
 	Name = "Sigibert's Struggle",
 	Description = "The Ripuarian king Sigibert must fight his brother Chilperich in a bitter civil war for supremacy over all of Francia.",
 	Civilization = "teuton",
-	Faction = "Ripuaria",
+	Faction = "ripuaria",
 	Year = 561 -- Sigibert's reign in his lands begins
 })

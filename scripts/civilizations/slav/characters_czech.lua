@@ -34,7 +34,7 @@ DefineCharacter("Mojmír", { -- Source: James Westfall Thompson, "Medieval Germa
 	Year = 830, -- reign began
 	DeathYear = 846, -- reign ended
 	HistoricalTitles = {
-		"head-of-state", 830, 846, "slav", "Moravia"
+		"head-of-state", 830, 846, "slav", "moravia"
 	}
 })
 
@@ -47,7 +47,7 @@ DefineCharacter("Ratislav", { -- Source: James Westfall Thompson, "Medieval Germ
 	Year = 846,
 	Trait = "upgrade-wise", -- described as clear-headed and able
 	HistoricalTitles = {
-		"head-of-state", 846, 869, "slav", "Moravia" -- Ratislav succeeded Mojmír in Moravia in 846; Ratislav was captured and placed on a monastery by the Franks in 869
+		"head-of-state", 846, 869, "slav", "moravia" -- Ratislav succeeded Mojmír in Moravia in 846; Ratislav was captured and placed on a monastery by the Franks in 869
 	}
 	-- was a Christian
 })
@@ -59,7 +59,7 @@ DefineCharacter("Viztrach", { -- Source: James Westfall Thompson, "Medieval Germ
 	Civilization = "slav",
 	ProvinceOfOrigin = "Bohemia",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "slav", "Bohemia" -- Viztrach was duke of Bohemia
+		"head-of-state", 0, 0, "slav", "bohemia" -- Viztrach was duke of Bohemia
 	}
 })
 
@@ -72,7 +72,7 @@ DefineCharacter("Slavitah", { -- Source: James Westfall Thompson, "Medieval Germ
 	Year = 857,
 	Father = "Viztrach",
 	HistoricalTitles = {
-		"head-of-state", 857, 857, "slav", "Bohemia" -- Duke Slavitah of Bohemia was driven from his lands by the Franks two years after Lothar I's attack on Moravia in 855
+		"head-of-state", 857, 857, "slav", "bohemia" -- Duke Slavitah of Bohemia was driven from his lands by the Franks two years after Lothar I's attack on Moravia in 855
 	}
 })
 
@@ -85,7 +85,7 @@ DefineCharacter("Svatopluk", { -- Source: James Westfall Thompson, "Medieval Ger
 	Year = 869, -- Svatopluk raided the frontier of Bavaria in 869
 	DeathYear = 892, -- died
 	HistoricalTitles = {
-		"head-of-state", 874, 892, "slav", "Moravia" -- Svatopluk was (apparently) duke of Moravia in 874 when peace was made with East Francia
+		"head-of-state", 874, 892, "slav", "moravia" -- Svatopluk was (apparently) duke of Moravia in 874 when peace was made with East Francia
 	}
 })
 
@@ -97,7 +97,7 @@ DefineCharacter("Bořivoj", { -- Source: James Westfall Thompson, "Medieval Germ
 	ProvinceOfOrigin = "Bohemia",
 	Year = 874,
 	HistoricalTitles = {
-		"head-of-state", 874, 0, "slav", "Bohemia" -- Bořivoj was duke of Bohemia in 874 when he recognized the overlordship of Svatopluk of Moravia
+		"head-of-state", 874, 0, "slav", "bohemia" -- Bořivoj was duke of Bohemia in 874 when he recognized the overlordship of Svatopluk of Moravia
 	}
 })
 
@@ -110,7 +110,7 @@ DefineCharacter("Spytihněv", { -- Source: James Westfall Thompson, "Medieval Ge
 	Father = "Bořivoj",
 	Year = 895, -- recognized German overlordship in 895
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "slav", "Bohemia" -- duke of Bohemia
+		"head-of-state", 0, 0, "slav", "bohemia" -- duke of Bohemia
 	}
 })
 
@@ -123,7 +123,7 @@ DefineCharacter("Vratislav", { -- Source: James Westfall Thompson, "Medieval Ger
 	Father = "Bořivoj",
 	DeathYear = 921,
 	HistoricalTitles = {
-		"head-of-state", 0, 921, "slav", "Bohemia" -- succeeded his brother Spytihněv as duke of Bohemia, reigning until 921
+		"head-of-state", 0, 921, "slav", "bohemia" -- succeeded his brother Spytihněv as duke of Bohemia, reigning until 921
 	}
 })
 
@@ -136,7 +136,7 @@ DefineCharacter("Václav", { -- Source: James Westfall Thompson, "Medieval Germa
 	Father = "Vratislav",
 	Year = 921,
 	HistoricalTitles = {
-		"head-of-state", 921, 0, "slav", "Bohemia" -- Václav succeeded his father Vratislav in 921
+		"head-of-state", 921, 0, "slav", "bohemia" -- Václav succeeded his father Vratislav in 921
 	}
 })
 
@@ -149,7 +149,7 @@ DefineCharacter("Boleslav", { -- Source: James Westfall Thompson, "Medieval Germ
 	Year = 929,
 	DeathYear = 967,
 	HistoricalTitles = {
-		"head-of-state", 929, 967, "slav", "Bohemia" -- ruled over Bohemia in 929-967
+		"head-of-state", 929, 967, "slav", "bohemia" -- ruled over Bohemia in 929-967
 	}
 })
 
@@ -163,7 +163,7 @@ DefineCharacter("Boleslav II", { -- Source: James Westfall Thompson, "Medieval G
 	Year = 995, -- massacred House Slavnik in 995
 	DeathYear = 999,
 	HistoricalTitles = {
-		"head-of-state", 0, 999, "slav", "Bohemia" -- duke of Bohemia until 999, when he died
+		"head-of-state", 0, 999, "slav", "bohemia" -- duke of Bohemia until 999, when he died
 	}
 })
 
@@ -188,7 +188,7 @@ DefineCharacter("Boleslav III", { -- Source: James Westfall Thompson, "Medieval 
 	ProvinceOfOrigin = "Bohemia",
 	Year = 999,
 	HistoricalTitles = {
-		"head-of-state", 999, 0, "slav", "Bohemia" -- succeeded Boleslav II of Bohemia
+		"head-of-state", 999, 0, "slav", "bohemia" -- succeeded Boleslav II of Bohemia
 	}
 })
 
@@ -202,7 +202,7 @@ DefineCharacter("Spytihněv the Younger", { -- Source: James Westfall Thompson, 
 	-- brother to Boleslav III of Bohemia
 	DateReferenceCharacter = "Boleslav III",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "slav", "Bohemia" -- deposed his brother and took control of Bohemia
+		"head-of-state", 0, 0, "slav", "bohemia" -- deposed his brother and took control of Bohemia
 	}
 })
 
@@ -214,7 +214,7 @@ DefineCharacter("Jaromíř", { -- Source: James Westfall Thompson, "Medieval Ger
 	ProvinceOfOrigin = "Bohemia",
 	Year = 1004, -- reign began
 	HistoricalTitles = {
-		"head-of-state", 1004, 0, "slav", "Bohemia" -- became duke of Bohemia in 1004
+		"head-of-state", 1004, 0, "slav", "bohemia" -- became duke of Bohemia in 1004
 	}
 })
 
@@ -226,7 +226,7 @@ DefineCharacter("Oldřich", { -- Source: James Westfall Thompson, "Medieval Germ
 	ProvinceOfOrigin = "Bohemia",
 	DeathYear = 1037, -- reign ended
 	HistoricalTitles = {
-		"head-of-state", 0, 1037, "slav", "Bohemia" -- was duke of Bohemia until 1037
+		"head-of-state", 0, 1037, "slav", "bohemia" -- was duke of Bohemia until 1037
 	}
 })
 
@@ -239,7 +239,7 @@ DefineCharacter("Břetislav", { -- Source: James Westfall Thompson, "Medieval Ge
 	Year = 1037, -- reign began
 	DeathYear = 1055, -- reign ended
 	HistoricalTitles = {
-		"head-of-state", 1037, 1055, "slav", "Bohemia" -- Duke Břetislav I of Bohemia in 1037-1055
+		"head-of-state", 1037, 1055, "slav", "bohemia" -- Duke Břetislav I of Bohemia in 1037-1055
 	}
 })
 
@@ -255,7 +255,7 @@ DefineCharacter("Spytihněv II", { -- Source: James Westfall Thompson, "Medieval
 	Year = 1055, -- reign began
 	DeathYear = 1061, -- reign ended
 	HistoricalTitles = {
-		"head-of-state", 1055, 1061, "slav", "Bohemia" -- was Duke Spytihněv II of Bohemia in 1055-1061
+		"head-of-state", 1055, 1061, "slav", "bohemia" -- was Duke Spytihněv II of Bohemia in 1055-1061
 	}
 })
 
@@ -269,7 +269,7 @@ DefineCharacter("Břetislav II", { -- Source: James Westfall Thompson, "Medieval
 	Year = 1061, -- reign began
 	DeathYear = 1092, -- reign ended
 	HistoricalTitles = {
-		"head-of-state", 1061, 1092, "slav", "Bohemia" -- Břetislav II of Bohemia in 1061-1092
+		"head-of-state", 1061, 1092, "slav", "bohemia" -- Břetislav II of Bohemia in 1061-1092
 	}
 })
 
@@ -282,7 +282,7 @@ DefineCharacter("Bořivoj II", { -- Source: James Westfall Thompson, "Medieval G
 	ProvinceOfOrigin = "Bohemia",
 	DeathYear = 1120, -- reign ended
 	HistoricalTitles = {
-		"head-of-state", 0, 1120, "slav", "Bohemia" -- Bořivoj II of Bohemia until 1120, when he was driven out by his brother Vladislav
+		"head-of-state", 0, 1120, "slav", "bohemia" -- Bořivoj II of Bohemia until 1120, when he was driven out by his brother Vladislav
 	}
 })
 
@@ -295,7 +295,7 @@ DefineCharacter("Vladislav", { -- Source: James Westfall Thompson, "Medieval Ger
 	Year = 1120, -- reign began
 	DeathYear = 1125, -- died
 	HistoricalTitles = {
-		"head-of-state", 1120, 1125, "slav", "Bohemia" -- drove out his brother, Bořivoj II of Bohemia, in 1120, becoming Vladislav I of Bohemia
+		"head-of-state", 1120, 1125, "slav", "bohemia" -- drove out his brother, Bořivoj II of Bohemia, in 1120, becoming Vladislav I of Bohemia
 	}
 })
 
@@ -317,7 +317,7 @@ DefineCharacter("Soběslav", { -- Source: James Westfall Thompson, "Medieval Ger
 	Year = 1173, -- reign began
 	DeathYear = 1179, -- reign ended
 	HistoricalTitles = {
-		"head-of-state", 1173, 1179, "slav", "Bohemia" -- King Soběslav II of Bohemia in 1173-1179
+		"head-of-state", 1173, 1179, "slav", "bohemia" -- King Soběslav II of Bohemia in 1173-1179
 	}
 })
 
@@ -330,7 +330,7 @@ DefineCharacter("Otakar", { -- Source: James Westfall Thompson, "Medieval German
 	Year = 1198, -- reign began
 	DeathYear = 1230, -- reign ended
 	HistoricalTitles = {
-		"head-of-state", 1173, 1179, "slav", "Bohemia" -- King Otakar I of Bohemia in 1198-1230
+		"head-of-state", 1173, 1179, "slav", "bohemia" -- King Otakar I of Bohemia in 1198-1230
 	}
 })
 
@@ -344,7 +344,7 @@ DefineCharacter("Václav the Younger", { -- Source: James Westfall Thompson, "Me
 	Year = 1230, -- reign began
 	DeathYear = 1253, -- reign ended
 	HistoricalTitles = {
-		"head-of-state", 1230, 1253, "slav", "Bohemia" -- King Václav I of Bohemia in 1230-1253
+		"head-of-state", 1230, 1253, "slav", "bohemia" -- King Václav I of Bohemia in 1230-1253
 	}
 })
 
@@ -378,7 +378,7 @@ DefineCharacter("Charles", { -- Source: Alena Ježková, "77 Prague Legends", 20
 	Year = 1357, -- The foundation stone of a new bridge to replace Judita Bridge was laid in the 9th of July 1357 by Emperor and King Charles IV
 	DeathYear = 1378, -- Charles IV was on his deathbed in November 1378, in Prague Castle
 	HistoricalTitles = {
-		"head-of-state", 0, 1378, "slav", "Bohemia"
+		"head-of-state", 0, 1378, "slav", "bohemia"
 	}
 })
 

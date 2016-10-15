@@ -25,85 +25,96 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Sitone Tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+DefineFaction("sitone-tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	Name = "Sitone Tribe",
 	Civilization = "norse", -- correct?
 	Type = "tribe",
 	Colors = {"brown"},
-	DevelopsTo = {"Sweden"}, -- same general area
-	HistoricalFactionDerivations = {-264, "germanic", "Yngling Tribe"}
+	DevelopsTo = {"sweden"}, -- same general area
+	HistoricalFactionDerivations = {-264, "germanic", "yngling-tribe"}
 })
 
-DefineFaction("Swede Tribe", {
+DefineFaction("swede-tribe", {
+	Name = "Swede Tribe",
 	Civilization = "norse",
 	Type = "tribe",
 	Colors = {"blue", "yellow"},
-	DevelopsTo = {"Sweden"},
-	SplitsTo = {"Sitone Tribe", "Dane Tribe"},
-	HistoricalFactionDerivations = {-264, "germanic", "Yngling Tribe"}
+	DevelopsTo = {"sweden"},
+	SplitsTo = {"sitone-tribe", "dane-tribe"},
+	HistoricalFactionDerivations = {-264, "germanic", "yngling-tribe"}
 })
 
-DefineFaction("Dane Tribe", {
+DefineFaction("dane-tribe", {
+	Name = "Dane Tribe",
 	Civilization = "norse",
 	Type = "tribe",
 	Colors = {"red", "white"},
-	DevelopsTo = {"Denmark"},
-	HistoricalFactionDerivations = {526, "norse", "Swede Tribe"} -- Danes were in Scania and Zealand in 526-600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+	DevelopsTo = {"denmark"},
+	HistoricalFactionDerivations = {526, "norse", "swede-tribe"} -- Danes were in Scania and Zealand in 526-600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 })
 
-DefineFaction("Geat Tribe", {
+DefineFaction("geat-tribe", {
+	Name = "Geat Tribe",
 	Civilization = "norse",
 	Type = "tribe",
 	Colors = {"teal"},
-	DevelopsTo = {"Gautland"}
+	DevelopsTo = {"gautland"}
 })
 
 -- polities
 
-DefineFaction("Denmark", {
+DefineFaction("denmark", {
+	Name = "Denmark",
 	Civilization = "norse",
 	Type = "polity",
 	Colors = {"red", "white"},
 	DefaultTier = "kingdom"
 })
 
-DefineFaction("Gautland", {
+DefineFaction("gautland", {
+	Name = "Gautland",
 	Civilization = "norse",
 	Type = "polity",
 	Colors = {"teal"},
 	DefaultTier = "kingdom"
 })
 
-DefineFaction("Halogaland", {
+DefineFaction("halogaland", {
+	Name = "Halogaland",
 	Civilization = "norse",
 	Type = "polity",
 	Colors = {"purple"},
 	DefaultTier = "kingdom",
-	DevelopsTo = {"Norway"}
+	DevelopsTo = {"norway"}
 })
 
-DefineFaction("Holmgard", {
+DefineFaction("holmgard", {
+	Name = "Holmgard",
 	Civilization = "norse",
 	Type = "polity",
 	Colors = {"blue"},
 	DefaultTier = "kingdom"
 })
 
-DefineFaction("Hordaland", {
+DefineFaction("hordaland", {
+	Name = "Hordaland",
 	Civilization = "norse",
 	Type = "polity",
 	Colors = {"cyan"},
 	DefaultTier = "kingdom",
-	DevelopsTo = {"Norway"} -- allow Hordaland to become Norway if it unifies its territories
+	DevelopsTo = {"norway"} -- allow Hordaland to become Norway if it unifies its territories
 })
 
-DefineFaction("Norway", {
+DefineFaction("norway", {
+	Name = "Norway",
 	Civilization = "norse",
 	Type = "polity",
 	Colors = {"blue", "red"},
 	DefaultTier = "kingdom"
 })
 
-DefineFaction("Orkney", { -- Earldom of Orkney
+DefineFaction("orkney", { -- Earldom of Orkney
+	Name = "Orkney",
 	Civilization = "norse",
 	Type = "polity",
 	Colors = {"yellow"},
@@ -115,18 +126,20 @@ DefineFaction("Orkney", { -- Earldom of Orkney
 		"head-of-state", "male", "monarchy", "duchy", "Earl",
 		"head-of-state", "female", "monarchy", "duchy", "Earl" -- correct?
 	},
-	DevelopsTo = {"Norway"}
+	DevelopsTo = {"norway"}
 })
 
-DefineFaction("Scania", {
+DefineFaction("scania", {
+	Name = "Scania",
 	Civilization = "norse",
 	Type = "polity",
 	Colors = {"green"},
 	DefaultTier = "kingdom",
-	DevelopsTo = {"Denmark", "Sweden"}
+	DevelopsTo = {"denmark", "sweden"}
 })
 
-DefineFaction("Sweden", {
+DefineFaction("sweden", {
+	Name = "Sweden",
 	Civilization = "norse",
 	Type = "polity",
 	Colors = {"blue", "yellow"},

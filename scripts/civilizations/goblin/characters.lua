@@ -32,14 +32,14 @@ DefineCharacter("Agniss Tenebris", { -- invented by Jesse Crider
 	Type = "unit-goblin-shaman",
 	Level = 3,
 	Civilization = "goblin",
-	Faction = "Tenebris",
+	Faction = "tenebris",
 	Trait = "upgrade-intelligent",
 	Description = _("The leader of the Tenebris Syndicate, Agniss rules through mysticism and paranoia. The hooded hag is well-known amongst goblins for the terror she inspires."),
 --	Icon = "icon-agniss",
 	ProvinceOfOrigin = "Tenebris",
 --	Persistent = true,
 	HistoricalTitles = {
---		"head-of-state", 0, 0, "goblin", "Tenebris"
+--		"head-of-state", 0, 0, "goblin", "tenebris"
 	}
 })
 
@@ -50,14 +50,14 @@ DefineCharacter("Dremac Paarsins", { -- invented by Jesse Crider
 	Type = "unit-goblin-magnate",
 	Level = 3,
 	Civilization = "goblin",
-	Faction = "Myridia",
+	Faction = "myridia",
 	Trait = "upgrade-genius",
 	Description = _("Dremac Paarsins is the gluttonous leader of the Myridian Syndicate. An extremely wealthy merchant lord, Dremac is known for his opulence and cunning. It is rumored that he rose to his ruling position by a mix of political blackmailing and his wealth's influence."),
 --	Icon = "icon-dremac-paarsins",
 	ProvinceOfOrigin = "Myridia",
 --	Persistent = true,
 	HistoricalTitles = {
---		"head-of-state", 0, 0, "goblin", "Myridia"
+--		"head-of-state", 0, 0, "goblin", "myridia"
 	}
 })
 
@@ -68,14 +68,14 @@ DefineCharacter("Ioun Stilgar", { -- invented by Jesse Crider
 	Type = "unit-goblin-warlord",
 	Level = 3,
 	Civilization = "goblin",
-	Faction = "Stilgar",
+	Faction = "stilgar",
 	Trait = "upgrade-keen", -- a "just" trait would fit better
 	Description = _("Ioun is a veteran tactician who leads the Stilgar Syndicate. He is known as \"Ioun the Just\" due to his record of honoring the contracts he enters."),
 --	Icon = "icon-ioun",
 	ProvinceOfOrigin = "Stilgar",
 --	Persistent = true,
 	HistoricalTitles = {
---		"head-of-state", 0, 0, "goblin", "Stilgar"
+--		"head-of-state", 0, 0, "goblin", "stilgar"
 	}
 })
 
@@ -86,14 +86,14 @@ DefineCharacter("Orza Chahax", { -- invented by Jesse Crider
 	Type = "unit-goblin-magnate",
 	Level = 3,
 	Civilization = "goblin",
-	Faction = "Ezmarria",
+	Faction = "ezmarria",
 	Trait = "upgrade-intelligent",
 	Description = _("Orza Chahax is the leader of the Ezmarrian Syndicate. As a scholar, he is dedicated to science, though his methods are often questionable in their morality."),
 --	Icon = "icon-orza-chahax",
 	ProvinceOfOrigin = "Ezmarria",
 --	Persistent = true,
 	HistoricalTitles = {
---		"head-of-state", 0, 0, "goblin", "Ezmarria"
+--		"head-of-state", 0, 0, "goblin", "ezmarria"
 	}
 })
 

@@ -989,6 +989,7 @@ function RunEditorFactionProperties()
 		faction_properties[i] = {}
 		for j=1,table.getn(faction_list[i]) do
 			faction_properties[i][j] = {}
+			faction_properties[i][j].Name = GetFactionData(civilization_ident_list[i], faction_list[i][j], "Name")
 			faction_properties[i][j].Type = GetFactionData(civilization_ident_list[i], faction_list[i][j], "Type")
 			faction_properties[i][j].Color = GetFactionData(civilization_ident_list[i], faction_list[i][j], "Color")
 			if (GetFactionData(civilization_ident_list[i], faction_list[i][j], "Language") ~= GetCivilizationData(civilization_ident_list[i], "Language")) then
@@ -1138,24 +1139,26 @@ function RunEditorFactionProperties()
 			
 			sub_menu:addFullButton("Crea~!te", "t", 176 - (224 / 2), sub_sizeY - 40 * 2,
 				function()
+					local faction_ident = NameToIdent(faction_name:getText())
 					if (faction_name:getText() == "") then
 						GenericDialog("Error", "The faction's name cannot be empty.")
-					elseif (GetArrayIncludes(faction_list[current_civilization:getSelected() + 1], faction_name:getText()) or GetArrayIncludes(GetFactions(), faction_name:getText())) then
+					elseif (GetArrayIncludes(faction_list[current_civilization:getSelected() + 1], faction_ident) or GetArrayIncludes(GetFactions(), faction_ident)) then
 						GenericDialog("Error", "There is already another faction with that name.")
 					elseif (IsNameValidForWord(faction_name:getText()) == false) then
 						GenericDialog("Error", "The faction's name is invalid.")
 					else
 						local new_faction_id = table.getn(faction_list[current_civilization:getSelected() + 1]) + 1
-						faction_list[current_civilization:getSelected() + 1][new_faction_id] = faction_name:getText()
+						faction_list[current_civilization:getSelected() + 1][new_faction_id] = faction_ident
 						faction_properties[current_civilization:getSelected() + 1][new_faction_id] = {}
+						faction_properties[current_civilization:getSelected() + 1][new_faction_id].Name = faction_name:getText()
 						faction_properties[current_civilization:getSelected() + 1][new_faction_id].Type = "tribe"
 						faction_properties[current_civilization:getSelected() + 1][new_faction_id].Color = GetCivilizationData(civilization_ident_list[current_civilization:getSelected() + 1], "DefaultColor")
 						faction_properties[current_civilization:getSelected() + 1][new_faction_id].Language = ""
 						faction_properties[current_civilization:getSelected() + 1][new_faction_id].FactionUpgrade = ""
 						faction_properties[current_civilization:getSelected() + 1][new_faction_id].ParentFaction = ""
-						table.insert(civilization_factions[current_civilization:getSelected() + 1], faction_name:getText())
+						table.insert(civilization_factions[current_civilization:getSelected() + 1], faction_ident)
 						
-						CivilizationChanged(faction_name:getText())
+						CivilizationChanged(faction_ident)
 						sub_menu:stop()
 					end
 				end
@@ -1205,6 +1208,7 @@ function RunEditorFactionProperties()
 				for j=1,table.getn(faction_list[i]) do
 					local faction_definition = {
 						Civilization = civilization_ident_list[i],
+						Name = faction_properties[i][j].Name,
 						Type = faction_properties[i][j].Type,
 						ParentFaction = faction_properties[i][j].ParentFaction,
 						Language = faction_properties[i][j].Language,

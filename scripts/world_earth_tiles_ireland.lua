@@ -28,21 +28,21 @@
 DefineWorldMapTile({456, 103}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "England", "Roscommon"
+		"teuton", "england", "Roscommon"
 	}
 })
 
 DefineWorldMapTile({456, 106}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "England", "Tipperary"
+		"teuton", "england", "Tipperary"
 	}
 })
 
 DefineWorldMapTile({458, 106}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "England", "Clonmel"
+		"teuton", "england", "Clonmel"
 	}
 })
 
@@ -52,13 +52,13 @@ DefineWorldMapTile({462, 104}, {
 		"celt", "Eblana", -- or is this the Latin name? Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	},
 	FactionCulturalSettlementNames = {
-		"teuton", "England", "Dublin"
+		"teuton", "england", "Dublin"
 	}
 })
 
 DefineWorldMapTile({463, 100}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "England", "Belfast"
+		"teuton", "england", "Belfast"
 	}
 })

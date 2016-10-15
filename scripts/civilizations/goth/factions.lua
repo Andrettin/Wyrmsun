@@ -25,28 +25,31 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Goth Tribe", {
+DefineFaction("goth-tribe", {
+	Name = "Goth Tribe",
 	Civilization = "goth",
 	Type = "tribe",
 	Colors = {"red"},
-	DevelopsTo = {"Gothia"},
-	SplitsTo = {"Bastarnae Tribe", "Burgundian Tribe", "Gepidae Tribe", "Herulian Tribe", "Lugii Tribe", "Ostrogoth Tribe", "Rugian Tribe", "Silingae Tribe", "Turcilingian Tribe", "Vandal Tribe", "Visigoth Tribe"},
-	HistoricalFactionDerivations = {-325, "germanic", "Yngling Tribe"}
+	DevelopsTo = {"gothia"},
+	SplitsTo = {"bastarnae-tribe", "burgundian-tribe", "gepidae-tribe", "herulian-tribe", "lugii-tribe", "ostrogoth-tribe", "rugian-tribe", "silingae-tribe", "turcilingian-tribe", "vandal-tribe", "visigoth-tribe"},
+	HistoricalFactionDerivations = {-325, "germanic", "yngling-tribe"}
 })
 
-DefineFaction("Bastarnae Tribe", {
+DefineFaction("bastarnae-tribe", {
+	Name = "Bastarnae Tribe",
 	Civilization = "goth",
 	Type = "tribe",
 	Colors = {"blue"},
-	HistoricalFactionDerivations = {-264, "goth", "Goth Tribe"}
+	HistoricalFactionDerivations = {-264, "goth", "goth-tribe"}
 })
 
-DefineFaction("Burgundian Tribe", {
+DefineFaction("burgundian-tribe", {
+	Name = "Burgundian Tribe",
 	Civilization = "goth",
 	Type = "tribe",
 	Colors = {"brown"},
-	DevelopsTo = {"Burgundy"},
-	HistoricalFactionDerivations = {-264, "goth", "Goth Tribe"},
+	DevelopsTo = {"burgundy"},
+	HistoricalFactionDerivations = {-264, "goth", "goth-tribe"},
 	PersonalNames = {
 		"female", "Chrona", -- daughter of Chilperich who later became a nun; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 331.
 		"male", "Aridius", -- chief advisor to Gundobad (was he actually a Burgundian?); Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 331.
@@ -62,68 +65,77 @@ DefineFaction("Burgundian Tribe", {
 	}
 })
 
-DefineFaction("Gepidae Tribe", {
+DefineFaction("gepidae-tribe", {
+	Name = "Gepidae Tribe",
 	Civilization = "goth",
 	Type = "tribe",
 	Colors = {"black"}
 })
 
-DefineFaction("Herulian Tribe", {
+DefineFaction("herulian-tribe", {
+	Name = "Herulian Tribe",
 	Civilization = "goth",
 	Type = "tribe",
 	Colors = {"green"},
-	HistoricalFactionDerivations = {-27, "goth", "Goth Tribe"}
+	HistoricalFactionDerivations = {-27, "goth", "goth-tribe"}
 })
 
-DefineFaction("Lugii Tribe", {
+DefineFaction("lugii-tribe", {
+	Name = "Lugii Tribe",
 	Civilization = "goth",
 	Type = "tribe",
 	Colors = {"purple"}
 })
 
-DefineFaction("Ostrogoth Tribe", {
+DefineFaction("ostrogoth-tribe", {
+	Name = "Ostrogoth Tribe",
 	Civilization = "goth",
 	Type = "tribe",
 	Colors = {"red"},
-	DevelopsTo = {"Gothia"},
-	HistoricalFactionDerivations = {200, "goth", "Goth Tribe"}
+	DevelopsTo = {"gothia"},
+	HistoricalFactionDerivations = {200, "goth", "goth-tribe"}
 })
 
-DefineFaction("Rugian Tribe", {
+DefineFaction("rugian-tribe", {
+	Name = "Rugian Tribe",
 	Civilization = "goth",
 	Type = "tribe",
 	Colors = {"red", "orange"}, -- change to a better one?
-	HistoricalFactionDerivations = {-264, "goth", "Goth Tribe"}
+	HistoricalFactionDerivations = {-264, "goth", "goth-tribe"}
 })
 
-DefineFaction("Silingae Tribe", {
+DefineFaction("silingae-tribe", {
+	Name = "Silingae Tribe",
 	Civilization = "goth",
 	Type = "tribe",
 	Colors = {"orange"},
-	HistoricalFactionDerivations = {-264, "goth", "Goth Tribe"}
+	HistoricalFactionDerivations = {-264, "goth", "goth-tribe"}
 })
 
-DefineFaction("Turcilingian Tribe", {
+DefineFaction("turcilingian-tribe", {
+	Name = "Turcilingian Tribe",
 	Civilization = "goth",
 	Type = "tribe",
 	Colors = {"blue"},
-	HistoricalFactionDerivations = {-264, "goth", "Goth Tribe"}
+	HistoricalFactionDerivations = {-264, "goth", "goth-tribe"}
 })
 
-DefineFaction("Vandal Tribe", {
+DefineFaction("vandal-tribe", {
+	Name = "Vandal Tribe",
 	Civilization = "goth",
 	Type = "tribe",
 	Colors = {"cyan", "blue"},
-	DevelopsTo = {"Vandalia"},
-	HistoricalFactionDerivations = {-264, "goth", "Goth Tribe"}
+	DevelopsTo = {"vandalia"},
+	HistoricalFactionDerivations = {-264, "goth", "goth-tribe"}
 })
 
-DefineFaction("Visigoth Tribe", {
+DefineFaction("visigoth-tribe", {
+	Name = "Visigoth Tribe",
 	Civilization = "goth",
 	Type = "tribe",
 	Colors = {"pink"},
-	DevelopsTo = {"Gothia"},
-	HistoricalFactionDerivations = {200, "goth", "Goth Tribe"},
+	DevelopsTo = {"gothia"},
+	HistoricalFactionDerivations = {200, "goth", "goth-tribe"},
 	HistoricalTechnologies = {
 		"upgrade-teuton-coinage", 573 -- Visigothic gold tremissis coined in 573 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 188.
 	}
@@ -131,25 +143,28 @@ DefineFaction("Visigoth Tribe", {
 
 -- polities
 
-DefineFaction("Burgundy", {
+DefineFaction("burgundy", {
+	Name = "Burgundy",
 	Civilization = "goth",
 	Type = "polity",
 	Colors = {"brown"},
 	DefaultTier = "kingdom",
-	HistoricalFactionDerivations = {411, "goth", "Burgundian Tribe"}, -- Kingdom of the Burgundians established by Gundahar (a Burgundian tribal chief) in 411 AD, with its center in Borbetomagus (Worms); Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-93.
+	HistoricalFactionDerivations = {411, "goth", "burgundian-tribe"}, -- Kingdom of the Burgundians established by Gundahar (a Burgundian tribal chief) in 411 AD, with its center in Borbetomagus (Worms); Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-93.
 	HistoricalTechnologies = {
 		"upgrade-teuton-writing", 0 -- polities must have writing
 	}
 })
 
-DefineFaction("Gothia", {
+DefineFaction("gothia", {
+	Name = "Gothia",
 	Civilization = "goth",
 	Type = "polity",
 	Colors = {"red"},
 	DefaultTier = "kingdom"
 })
 
-DefineFaction("Ostrogothia", {
+DefineFaction("ostrogothia", {
+	Name = "Ostrogothia",
 	Civilization = "goth",
 	Type = "polity",
 	Colors = {"red"},
@@ -159,7 +174,8 @@ DefineFaction("Ostrogothia", {
 	}
 })
 
-DefineFaction("Vandalia", {
+DefineFaction("vandalia", {
+	Name = "Vandalia",
 	Civilization = "goth",
 	Type = "polity",
 	Colors = {"cyan", "blue"},
@@ -169,7 +185,8 @@ DefineFaction("Vandalia", {
 	}
 })
 
-DefineFaction("Visigothia", {
+DefineFaction("visigothia", {
+	Name = "Visigothia",
 	Civilization = "goth",
 	Type = "polity",
 	Colors = {"pink"},

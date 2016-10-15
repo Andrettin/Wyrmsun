@@ -93,7 +93,7 @@ DefineQuest("the-great-temple-at-upsal", { -- Source: Snorri Sturlson, "Heimskri
 	Civilization = "germanic",
 	PlayerColor = "blue",
 	Conditions = function(s)
-		if ((GetPlayerData(trigger_player, "Faction") == "Yngling Tribe" or GetPlayerData(trigger_player, "Faction") == "Asa Tribe") and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-worker") > 0 and CheckDependency(trigger_player, "unit-teuton-temple")) then
+		if ((GetPlayerData(trigger_player, "Faction") == "yngling-tribe" or GetPlayerData(trigger_player, "Faction") == "asa-tribe") and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-worker") > 0 and CheckDependency(trigger_player, "unit-teuton-temple")) then
 			return true
 		end
 		return false
@@ -116,7 +116,7 @@ DefineQuest("the-good-seasons", { -- Source: Snorri Sturlson, "Heimskringla", 18
 	Civilization = "germanic",
 	PlayerColor = "blue",
 	Conditions = function(s)
---		if (GetPlayerData(trigger_player, "Faction") == "Yngling Tribe" or GetPlayerData(trigger_player, "Faction") == "Asa Tribe") then
+--		if (GetPlayerData(trigger_player, "Faction") == "yngling-tribe" or GetPlayerData(trigger_player, "Faction") == "asa-tribe") then
 		if (GetPlayerData(trigger_player, "RaceName") == "germanic" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-worker") > 0 and CheckDependency(trigger_player, "unit-germanic-farm")) then -- allow for all Germanic tribes for now, since they don't have quests
 			return true
 		end

@@ -291,11 +291,11 @@ DefineSpell("spell-acthnic-allegiance",
 	"condition", {
 		"organic", "only",
 		"Building", "false",
-		"faction-equivalent", "gnome", "Acthnic Tribe"
+		"faction-equivalent", "gnome", "acthnic-tribe"
 	},
 	"action", {
 		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
-		{"polymorph", "civilization", "gnome", "faction", "Acthnic Tribe"}
+		{"polymorph", "civilization", "gnome", "faction", "acthnic-tribe"}
 	},
 	"item-spell", "scroll",
 	"sound-when-cast", "magic-holy"
@@ -310,11 +310,11 @@ DefineSpell("spell-sagan-allegiance",
 	"condition", {
 		"organic", "only",
 		"Building", "false",
-		"faction-equivalent", "gnome", "Sagan Tribe"
+		"faction-equivalent", "gnome", "sagan-tribe"
 	},
 	"action", {
 		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
-		{"polymorph", "civilization", "gnome", "faction", "Sagan Tribe"}
+		{"polymorph", "civilization", "gnome", "faction", "sagan-tribe"}
 	},
 	"item-spell", "scroll",
 	"sound-when-cast", "magic-holy"
@@ -329,11 +329,11 @@ DefineSpell("spell-frank-allegiance",
 	"condition", {
 		"organic", "only",
 		"Building", "false",
-		"faction-equivalent", "teuton", "Frank Tribe"
+		"faction-equivalent", "teuton", "frank-tribe"
 	},
 	"action", {
 		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
-		{"polymorph", "civilization", "teuton", "faction", "Frank Tribe"}
+		{"polymorph", "civilization", "teuton", "faction", "frank-tribe"}
 	},
 	"item-spell", "scroll",
 	"sound-when-cast", "magic-holy"
@@ -348,11 +348,11 @@ DefineSpell("spell-suebi-allegiance",
 	"condition", {
 		"organic", "only",
 		"Building", "false",
-		"faction-equivalent", "teuton", "Suebi Tribe"
+		"faction-equivalent", "teuton", "suebi-tribe"
 	},
 	"action", {
 		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
-		{"polymorph", "civilization", "teuton", "faction", "Suebi Tribe"}
+		{"polymorph", "civilization", "teuton", "faction", "suebi-tribe"}
 	},
 	"item-spell", "scroll",
 	"sound-when-cast", "magic-holy"

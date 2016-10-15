@@ -143,7 +143,7 @@ function LoadProvinces(world)
 		},
 		Heartfangs = {
 			Name = "Heartfangs",
-			Owner = "Khag Tribe",
+			Owner = "khag-tribe",
 			Civilization = "goblin",
 			Units = {
 				unit_goblin_spearman = 5 -- Fal Khag, Gatrakh, Thurg, Krung, Gorokh (should all be cavalry)
@@ -198,7 +198,7 @@ function LoadProvinces(world)
 		},
 		PeacefulValley = {
 			Name = "Peaceful Valley",
-			Owner = "Lggi Tribe",
+			Owner = "lggi-tribe",
 			Civilization = "goblin",
 			Units = {
 				unit_goblin_spearman = 14 -- 13 is the quantity of villages in Peaceful Valley map (each can generate 0-2 goblin spearmen) + T'shar Lggi himself
@@ -218,7 +218,7 @@ function LoadProvinces(world)
 		},
 		Svarinshaug = {
 			Name = "Svarinshaug",
-			Owner = "Brising Clan",
+			Owner = "brising-clan",
 			Civilization = "dwarf"
 		},
 		Untersberg = {

@@ -59,4 +59,4 @@ DefineMapTemplate("svarinshaug", {
 	}
 })
 
-SetMapTemplateUnit("svarinshaug", "unit-dwarven-town-hall", "Brising Clan", {-1, -1})
+SetMapTemplateUnit("svarinshaug", "unit-dwarven-town-hall", "brising-clan", {-1, -1})

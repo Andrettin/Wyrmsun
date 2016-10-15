@@ -69,7 +69,7 @@ DefineWorldMapTile({520, 113}, {
 		"teuton", "Prague"
 	},
 	FactionCulturalSettlementNames = {
-		"teuton", "Marcomanni Tribe", "Bubienum" -- name of the Marcomannic capital; also known as Marobudum; either located where modern Prague or Budweis are; Source: Frederick Kohlrausch, "A History of Germany", 1844, p. 57.
+		"teuton", "marcomanni-tribe", "Bubienum" -- name of the Marcomannic capital; also known as Marobudum; either located where modern Prague or Budweis are; Source: Frederick Kohlrausch, "A History of Germany", 1844, p. 57.
 	}
 })
 
@@ -184,7 +184,7 @@ DefineWorldMapTile({592, 121}, {
 		"latin", "Tanais" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
-		"slav", "Russia", "Rostov-on-Don"
+		"slav", "russia", "Rostov-on-Don"
 	}
 })
 
@@ -197,6 +197,6 @@ DefineWorldMapTile({618, 124}, {
 		}
 	},
 	FactionCulturalSettlementNames = {
-		"slav", "Russia", "Astrakhan"
+		"slav", "russia", "Astrakhan"
 	}
 })

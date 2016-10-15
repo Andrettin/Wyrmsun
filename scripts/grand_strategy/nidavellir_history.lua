@@ -177,18 +177,18 @@ if (GrandStrategyYear >= -2970) then -- estimated date
 end
 
 if (GrandStrategyYear >= -1) then
-	SetProvinceOwner("Caverns of Chaincolt", "dwarf", "Norlund Clan")
+	SetProvinceOwner("Caverns of Chaincolt", "dwarf", "norlund-clan")
 	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-goblin-spearman", 0)
 --	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-steelclad", 4) -- Neglur, Glinar, Kuhnar, Theganli
 --	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-scout", 1) -- Noiraran
 	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-axefighter", 4) -- 4 Dwarven Guardsmen (5 if easy mode)
 	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-steelclad", 2) -- Neglur, Glinar
 	SetWorldMapResourceProspected("gold", 30, 12, true)
-	SetProvinceOwner("Shorbear Hills", "dwarf", "Shorbear Clan")
+	SetProvinceOwner("Shorbear Hills", "dwarf", "shorbear-clan")
 	SetProvinceUnitQuantity("Shorbear Hills", "unit-goblin-spearman", 0)
 	SetProvinceUnitQuantity("Shorbear Hills", "unit-dwarven-thane", 1) -- Glonoin
 	SetWorldMapResourceProspected("gold", 34, 14, true)
-	SetProvinceOwner("Southern Tunnels", "dwarf", "Shinsplitter Clan")
+	SetProvinceOwner("Southern Tunnels", "dwarf", "shinsplitter-clan")
 	SetProvinceUnitQuantity("Southern Tunnels", "unit-goblin-spearman", 0)
 	SetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", 3) -- Glildur, Glindur, Kalnar
 	SetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane", 5) -- Lyndar, Gaenlar, Glinan, Crintil, Aendan
@@ -211,9 +211,9 @@ if (GrandStrategyYear > 25) then
 	GrandStrategyEvents.ClosingTheGates = nil
 	GrandStrategyEvents.ClosingTheGatesShinsplitterClan = nil
 	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist", 1)
-	SetFactionDiplomacyState("dwarf", "Norlund Clan", "dwarf", "Shinsplitter Clan", "war")
-	ChangeFactionResource("gnome", "Untersberg", "gold", -2500) -- decrease gnomish treasury by 5000 silver (considering for our purposes silver to be worth half as much as gold)
-	ChangeFactionResource("dwarf", "Norlund Clan", "gold", 2500) -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
+	SetFactionDiplomacyState("dwarf", "norlund-clan", "dwarf", "shinsplitter-clan", "war")
+	ChangeFactionResource("gnome", "untersberg", "gold", -2500) -- decrease gnomish treasury by 5000 silver (considering for our purposes silver to be worth half as much as gold)
+	ChangeFactionResource("dwarf", "norlund-clan", "gold", 2500) -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
 	ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", -1)
 end
 
@@ -228,14 +228,14 @@ end
 
 if (GrandStrategyYear >= 29) then
 	GrandStrategyEvents.GatheringMaterials = nil
-	ChangeFactionResource("dwarf", "Norlund Clan", "coal", 20000) -- Rugnur's party returned from the Eastern Mines in 29 AD
+	ChangeFactionResource("dwarf", "norlund-clan", "coal", 20000) -- Rugnur's party returned from the Eastern Mines in 29 AD
 --	SetProvinceUnitQuantity("Eastern Mines", "unit-goblin-spearman", GetProvinceUnitQuantity("Eastern Mines", "unit-goblin-spearman") / 2)
 	SetProvinceUnitQuantity("Eastern Mines", "unit-goblin-spearman", 12) -- to prevent the Norlunds expanding here too soon
 	SetProvinceUnitQuantity("Eastern Mines", "unit-goblin-archer", 4)
 	SetWorldMapResourceProspected("gold", 39, 6, true) -- Rugnur and his companions found the location of the gold mines in the Eastern Mines
 
 	--[[
-	SetProvinceOwner("Shorbear Hills", "dwarf", "Norlund Clan") -- Shorbear Hold conquered in 29 AD by Rugnur's and Durstorn's Clan (Norlund Clan)
+	SetProvinceOwner("Shorbear Hills", "dwarf", "norlund-clan") -- Shorbear Hold conquered in 29 AD by Rugnur's and Durstorn's Clan (Norlund Clan)
 	SetProvinceHero("Shorbear Hills", "Rugnur", 2)
 	SetProvinceHero("Shorbear Hills", "Baglur", 2)
 	SetProvinceHero("Shorbear Hills", "Durstorn", 2)
@@ -248,7 +248,7 @@ if (GrandStrategyYear >= 35) then
 	GrandStrategyEvents.HillsOfTheShorbearClan = nil
 	GrandStrategyEvents.HillsOfTheShorbearClanShinsplitterClan = nil
 	GrandStrategyEvents.HillsOfTheShorbearClanShorbearClan = nil
-	SetProvinceOwner("Shorbear Hills", "dwarf", "Shinsplitter Clan") -- Shorbear Hold abandoned in 35 AD by Rugnur's and Durstorn's Clan (Norlund Clan), while the Shinsplitter forces were sieging them
+	SetProvinceOwner("Shorbear Hills", "dwarf", "shinsplitter-clan") -- Shorbear Hold abandoned in 35 AD by Rugnur's and Durstorn's Clan (Norlund Clan), while the Shinsplitter forces were sieging them
 	SetProvinceUnitQuantity("Shorbear Hills", "unit-dwarven-axefighter", 0)
 	SetProvinceUnitQuantity("Shorbear Hills", "unit-dwarven-thane", 0)
 	--[[
@@ -266,11 +266,11 @@ if (GrandStrategyYear >= 40) then
 	SetProvinceHero("Caverns of Chaincolt", "Rugnur", 0) -- Rugnur, Baglur and Thursagan die at the Caverns of Flame
 	SetProvinceHero("Caverns of Chaincolt", "Baglur", 0)
 	SetProvinceHero("Caverns of Chaincolt", "Thursagan", 0)
-	ChangeFactionResource("dwarf", "Norlund Clan", "coal", -20000) -- Scepter of Fire crafted
-	ChangeFactionResource("dwarf", "Norlund Clan", "gold", 2500) -- payment for the crafting of the Scepter
-	ChangeFactionResource("gnome", "Untersberg", "gold", -2500) -- payment for the crafting of the Scepter
-	SetProvinceOwner("Shorbear Hills", "dwarf", "Norlund Clan") -- Shorbear Hold ceded by the Shinsplitters to the Norlunds and peace established
-	SetFactionDiplomacyState("dwarf", "Norlund Clan", "dwarf", "Shinsplitter Clan", "peace")
+	ChangeFactionResource("dwarf", "norlund-clan", "coal", -20000) -- Scepter of Fire crafted
+	ChangeFactionResource("dwarf", "norlund-clan", "gold", 2500) -- payment for the crafting of the Scepter
+	ChangeFactionResource("gnome", "untersberg", "gold", -2500) -- payment for the crafting of the Scepter
+	SetProvinceOwner("Shorbear Hills", "dwarf", "norlund-clan") -- Shorbear Hold ceded by the Shinsplitters to the Norlunds and peace established
+	SetFactionDiplomacyState("dwarf", "norlund-clan", "dwarf", "shinsplitter-clan", "peace")
 end
 
 if (GrandStrategyYear >= 389) then
@@ -280,19 +280,19 @@ if (GrandStrategyYear >= 389) then
 end
 
 if (GrandStrategyYear >= 400) then
-	SetProvinceOwner("Caverns of Chaincolt", "dwarf", "Knalga") -- The Lordship of Knalga was founded around 400 AD
-	SetProvinceOwner("Southern Tunnels", "dwarf", "Knalga")
-	SetProvinceOwner("Shorbear Hills", "dwarf", "Knalga")
+	SetProvinceOwner("Caverns of Chaincolt", "dwarf", "knalga") -- The Lordship of Knalga was founded around 400 AD
+	SetProvinceOwner("Southern Tunnels", "dwarf", "knalga")
+	SetProvinceOwner("Shorbear Hills", "dwarf", "knalga")
 
-	SetProvinceOwner("Kal Kartha", "dwarf", "Kal Kartha") -- The Lordship of Kal Kartha was founded around 400 AD
+	SetProvinceOwner("Kal Kartha", "dwarf", "kal-kartha") -- The Lordship of Kal Kartha was founded around 400 AD
 	SetProvinceUnitQuantity("Kal Kartha", "unit-forest-gnomish-recruit", 0)
 	SetWorldMapResourceProspected("gold", 46, 5, true)
 
-	SetProvinceOwner("Lyr", "dwarf", "Lyr") -- The Lordship of Lyr was founded around the same time as the other lordships
+	SetProvinceOwner("Lyr", "dwarf", "lyr") -- The Lordship of Lyr was founded around the same time as the other lordships
 	SetProvinceUnitQuantity("Lyr", "unit-dwarven-axefighter", 0)
 	SetWorldMapResourceProspected("gold", 51, 15, true)
 	
-	SetProvinceOwner("Joruvellir", "dwarf", "Joruvellir") -- The Lordship of Joruvellir may have been founded at the same time as the other lordships
+	SetProvinceOwner("Joruvellir", "dwarf", "joruvellir") -- The Lordship of Joruvellir may have been founded at the same time as the other lordships
 	SetProvinceUnitQuantity("Joruvellir", "unit-goblin-spearman", 0)
 	SetProvinceUnitQuantity("Joruvellir", "unit-goblin-archer", 0)
 end

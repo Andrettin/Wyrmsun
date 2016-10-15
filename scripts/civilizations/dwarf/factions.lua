@@ -25,12 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Brising Clan", {
+DefineFaction("brising-clan", {
+	Name = "Brising Clan",
 	Civilization = "dwarf",
 	Type = "tribe",
 	Colors = {"red", "orange", "fire"},
-	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
-	SplitsTo = {"Eikinskjaldi Clan", "Norlund Clan", "Shadowcharm Clan", "Shinsplitter Clan", "Shorbear Clan"},
+	DevelopsTo = {"joruvellir", "kal-kartha", "knalga", "lyr"},
+	SplitsTo = {"eikinskjaldi-clan", "norlund-clan", "shadowcharm-clan", "shinsplitter-clan", "shorbear-clan"},
 	FactionUpgrade = "upgrade-brising-clan-faction",
 	ButtonIcons = {
 		"stop", "icon-brising-round-shield"
@@ -45,11 +46,12 @@ DefineFaction("Brising Clan", {
 	Background = "In Norse mythology, \"Brising\" was an appelation used for the dwarves in general, or more specifically for the ones who created the necklace Brisingamen. \"Brising\" means \"flame\" in Old Norse."
 })
 
-DefineFaction("Eikinskjaldi Clan", { -- originally Oakenshield (from Dyson Logos' The Tomb of Durahn Oakenshield), translated into Norse to make it seem more dwarvish
+DefineFaction("eikinskjaldi-clan", { -- originally Oakenshield (from Dyson Logos' The Tomb of Durahn Oakenshield), translated into Norse to make it seem more dwarvish
+	Name = "Eikinskjaldi Clan",
 	Civilization = "dwarf",
 	Type = "tribe",
 	Colors = {"brown"},
-	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
+	DevelopsTo = {"joruvellir", "kal-kartha", "knalga", "lyr"},
 --	FactionUpgrade = "upgrade-eikinskjaldi-clan-faction",
 	FactionUpgrade = "upgrade-joruvellir-faction",
 	ButtonIcons = {
@@ -59,49 +61,54 @@ DefineFaction("Eikinskjaldi Clan", { -- originally Oakenshield (from Dyson Logos
 	Background = "In Norse mythology Eikinskjaldi was the name of a dwarf who migrated from Svarinshaug to Joruvellir. \"Eikinskjaldi\" means \"oaken shield\" in Old Norse."
 })
 
-DefineFaction("Norlund Clan", {
+DefineFaction("norlund-clan", {
+	Name = "Norlund Clan",
 	Civilization = "dwarf",
 	Type = "tribe",
 	Colors = {"red", "orange"},
---	DevelopsTo = {"Kal Kartha", "Knalga"},
-	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
+--	DevelopsTo = {"kal-kartha", "knalga"},
+	DevelopsTo = {"joruvellir", "kal-kartha", "knalga", "lyr"},
 	FactionUpgrade = "upgrade-norlund-clan-faction",
 	Description = _("The Norlund clan has its origins in the Caverns of Chaincolt, and counts with a number of skilled warriors and craftsmen amongst its ranks. Eventually the Norlund clan would unify much of dwarfdom into the Lordship of Knalga."),
-	HistoricalFactionDerivations = {-1, "dwarf", "Brising Clan"}
+	HistoricalFactionDerivations = {-1, "dwarf", "brising-clan"}
 })
 
-DefineFaction("Shadowcharm Clan", {
+DefineFaction("shadowcharm-clan", {
+	Name = "Shadowcharm Clan",
 	Civilization = "dwarf",
 	Type = "tribe",
 	Colors = {"black"},
-	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
+	DevelopsTo = {"joruvellir", "kal-kartha", "knalga", "lyr"},
 	FactionUpgrade = "upgrade-shinsplitter-clan-faction",
 	Description = _("The Shadowcharm clan is known for its skilled exercise in subtlety. Foes of this clan may well find themselves assassinated by a seemingly-loyal subordinate.")
 })
 
-DefineFaction("Shinsplitter Clan", {
+DefineFaction("shinsplitter-clan", {
+	Name = "Shinsplitter Clan",
 	Civilization = "dwarf",
 	Type = "tribe",
 	Colors = {"green", "teal"},
-	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
+	DevelopsTo = {"joruvellir", "kal-kartha", "knalga", "lyr"},
 	FactionUpgrade = "upgrade-shinsplitter-clan-faction",
 	Description = _("The warriors of the Shinsplitter clan are a wild bunch, and often go into frenzies during battle. In later times the Shinsplitters migrated east to the Highbrook Pass."),
-	HistoricalFactionDerivations = {-1, "dwarf", "Brising Clan"}
+	HistoricalFactionDerivations = {-1, "dwarf", "brising-clan"}
 })
 
-DefineFaction("Shorbear Clan", {
+DefineFaction("shorbear-clan", {
+	Name = "Shorbear Clan",
 	Civilization = "dwarf",
 	Type = "tribe",
 	Colors = {"blue", "cyan"},
---	DevelopsTo = {"Knalga"},
-	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
+--	DevelopsTo = {"knalga"},
+	DevelopsTo = {"joruvellir", "kal-kartha", "knalga", "lyr"},
 	FactionUpgrade = "upgrade-shorbear-clan-faction",
 	Description = _("Contrary to many of the other dwarven clans, who prefer to live in mountains, the Shorbears have made their homes in the hills. They are known as excellent crafters of tools."),
-	HistoricalFactionDerivations = {-1, "dwarf", "Brising Clan"}
+	HistoricalFactionDerivations = {-1, "dwarf", "brising-clan"}
 })
 
-DefineFaction("Joruvellir", {
-	ParentFaction = "Eikinskjaldi Clan",
+DefineFaction("joruvellir", {
+	Name = "Joruvellir",
+	ParentFaction = "eikinskjaldi-clan",
 	Civilization = "dwarf",
 	Type = "polity",
 	Colors = {"brown"},
@@ -115,7 +122,7 @@ DefineFaction("Joruvellir", {
 	},
 	FactionUpgrade = "upgrade-joruvellir-faction",
 	Description = "The arid sands of Joruvellir were first settled by a group of dwarves who had their origins in Svarinshaug.",
-	HistoricalFactionDerivations = {400, "dwarf", "Brising Clan"},
+	HistoricalFactionDerivations = {400, "dwarf", "brising-clan"},
 	HistoricalCapitals = {
 		400, "Joruvellir"
 	},
@@ -125,7 +132,8 @@ DefineFaction("Joruvellir", {
 	}
 })
 
-DefineFaction("Kal Kartha", {
+DefineFaction("kal-kartha", {
+	Name = "Kal Kartha",
 	Civilization = "dwarf",
 	Type = "polity",
 	Colors = {"black"},
@@ -138,7 +146,7 @@ DefineFaction("Kal Kartha", {
 		"head-of-state", "female", "monarchy", "barony", "Lady"
 	},
 	FactionUpgrade = "upgrade-kal-kartha-faction",
-	HistoricalFactionDerivations = {400, "dwarf", "Brising Clan"},
+	HistoricalFactionDerivations = {400, "dwarf", "brising-clan"},
 	HistoricalCapitals = {
 		400, "Kal Kartha"
 	},
@@ -148,7 +156,8 @@ DefineFaction("Kal Kartha", {
 	}
 })
 
-DefineFaction("Knalga", {
+DefineFaction("knalga", {
+	Name = "Knalga",
 	Civilization = "dwarf",
 	Type = "polity",
 	Colors = {"red", "orange"},
@@ -161,7 +170,7 @@ DefineFaction("Knalga", {
 		"head-of-state", "female", "monarchy", "barony", "Lady"
 	},
 	FactionUpgrade = "upgrade-knalga-faction",
-	HistoricalFactionDerivations = {400, "dwarf", "Norlund Clan"},
+	HistoricalFactionDerivations = {400, "dwarf", "norlund-clan"},
 	HistoricalCapitals = {
 		400, "Southern Tunnels"
 	},
@@ -171,10 +180,11 @@ DefineFaction("Knalga", {
 	}
 })
 
-DefineFaction("Lyr", {
+DefineFaction("lyr", {
+	Name = "Lyr",
 	Civilization = "dwarf",
 	Type = "polity",
-	ParentFaction = "Brising Clan",
+	ParentFaction = "brising-clan",
 	Colors = {"green", "teal"},
 	DefaultTier = "barony",
 	Titles = {
@@ -187,7 +197,7 @@ DefineFaction("Lyr", {
 --	FactionUpgrade = "upgrade-lyr-faction",
 	Description = "The shining hall of Lyr was built by a number of skilled dwarven craftsmen who had split off from the Brising clan.",
 	Background = "In Norse mythology Lyr was a magnificent hall which was built by Loki with the help of the dwarves Bari, Delling, Dori, Iri, Jari, Ori, Uni, Var and Vegdrasil. The giantess Menglad dwelled in the hall. \"Lyr\" means \"heat-holding\" in Old Norse.",
-	HistoricalFactionDerivations = {400, "dwarf", "Brising Clan"},
+	HistoricalFactionDerivations = {400, "dwarf", "brising-clan"},
 	HistoricalCapitals = {
 		400, "Lyr"
 	},

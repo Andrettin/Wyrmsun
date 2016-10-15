@@ -264,7 +264,7 @@ SetAiType(0, "land-attack")
 SetStartView(3, 70, 43)
 SetPlayerData(3, "RaceName", "dwarf")
 if (GrandStrategy == false) then
-	SetPlayerData(3, "Faction", "Knalga")
+	SetPlayerData(3, "Faction", "knalga")
 end
 SetPlayerData(3, "Resources", "gold", 2000)
 SetPlayerData(3, "Resources", "lumber", 2000)

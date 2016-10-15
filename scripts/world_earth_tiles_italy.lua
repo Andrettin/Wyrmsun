@@ -31,7 +31,7 @@ DefineWorldMapTile({502, 127}, {
 		"latin", "Augusta Taurinorum"
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "Italy", "Turin"
+		"latin", "italy", "Turin"
 	}
 })
 
@@ -41,14 +41,14 @@ DefineWorldMapTile({505, 129}, {
 		"latin", "Genua"
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "Italy", "Genoa"
+		"latin", "italy", "Genoa"
 	}
 })
 
 DefineWorldMapTile({505, 135}, {
 	World = "Earth",
 	FactionCulturalTerrainNames = {
-		"Mountains", "latin", "Italy", "Monte Cinto" -- Source: "Philip's International School Atlas", 2006, p. 70
+		"Mountains", "latin", "italy", "Monte Cinto" -- Source: "Philip's International School Atlas", 2006, p. 70
 	}
 })
 
@@ -58,7 +58,7 @@ DefineWorldMapTile({505, 144}, {
 		"latin", "Caralis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "Italy", "Cagliari"
+		"latin", "italy", "Cagliari"
 	}
 })
 
@@ -69,7 +69,7 @@ DefineWorldMapTile({506, 126}, {
 		"teuton", "Mailand"
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "Italy", "Milan"
+		"latin", "italy", "Milan"
 	}
 })
 
@@ -83,7 +83,7 @@ DefineWorldMapTile({506, 136}, {
 DefineWorldMapTile({506, 142}, {
 	World = "Earth",
 	FactionCulturalTerrainNames = {
-		"Mountains", "latin", "Italy", "Monti del Gennargentu" -- Source: "Philip's International School Atlas", 2006, p. 70
+		"Mountains", "latin", "italy", "Monti del Gennargentu" -- Source: "Philip's International School Atlas", 2006, p. 70
 	}
 })
 
@@ -94,8 +94,8 @@ DefineWorldMapTile({509, 128}, {
 		"latin", "Placentia" -- Piacenza
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "Italy", "Parma",
-		"latin", "Italy", "Piacenza"
+		"latin", "italy", "Parma",
+		"latin", "italy", "Piacenza"
 	}
 })
 
@@ -105,14 +105,14 @@ DefineWorldMapTile({511, 126}, {
 		"latin", "Verona" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "Italy", "Verona" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+		"latin", "italy", "Verona" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 	}
 })
 
 DefineWorldMapTile({511, 129}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"latin", "Italy", "Modena"
+		"latin", "italy", "Modena"
 	}
 })
 
@@ -122,7 +122,7 @@ DefineWorldMapTile({512, 129}, {
 		"latin", "Bononia"
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "Italy", "Bologna"
+		"latin", "italy", "Bologna"
 	}
 })
 
@@ -132,7 +132,7 @@ DefineWorldMapTile({512, 131}, {
 		"latin", "Florentia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "Italy", "Florence"
+		"latin", "italy", "Florence"
 	}
 })
 
@@ -142,7 +142,7 @@ DefineWorldMapTile({514, 126}, {
 		"latin", "Opitergium" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "Italy", "Oderzo" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"latin", "italy", "Oderzo" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
@@ -159,14 +159,14 @@ DefineWorldMapTile({515, 126}, {
 		"teuton", "Venedig"
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "Italy", "Venice"
+		"latin", "italy", "Venice"
 	}
 })
 
 DefineWorldMapTile({515, 134}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"latin", "Italy", "Perugia"
+		"latin", "italy", "Perugia"
 	}
 })
 
@@ -176,7 +176,7 @@ DefineWorldMapTile({515, 136}, {
 		"latin", "Roma" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
-		"teuton", "England", "Rome"
+		"teuton", "england", "Rome"
 	}
 })
 
@@ -187,7 +187,7 @@ DefineWorldMapTile({517, 147}, {
 		"latin", "Panormus" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 12.
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "Italy", "Palermo"
+		"latin", "italy", "Palermo"
 	}
 })
 
@@ -204,7 +204,7 @@ DefineWorldMapTile({518, 135}, {
 		"latin", "Amiternum"
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "Italy", "L'Aquila"
+		"latin", "italy", "L'Aquila"
 	}
 })
 
@@ -215,7 +215,7 @@ DefineWorldMapTile({519, 126}, {
 		"teuton", "Triest"
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "Italy", "Trieste"
+		"latin", "italy", "Trieste"
 	}
 })
 
@@ -244,7 +244,7 @@ DefineWorldMapTile({522, 150}, {
 		"latin", "Syracusae" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
-		"teuton", "England", "Syracuse"
+		"teuton", "england", "Syracuse"
 	}
 })
 
@@ -254,7 +254,7 @@ DefineWorldMapTile({526, 145}, {
 		"latin", "Castra Hannibalis"
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "Italy", "Catanzaro"
+		"latin", "italy", "Catanzaro"
 	}
 })
 
@@ -264,7 +264,7 @@ DefineWorldMapTile({527, 139}, {
 		"latin", "Barium"
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "Italy", "Bari"
+		"latin", "italy", "Bari"
 	}
 })
 

@@ -47,7 +47,7 @@ DefineQuest("the-chieftains-sparrow", { -- Source: Snorri Sturlson, "Heimskringl
 	Civilization = "norse",
 	PlayerColor = "blue",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "Yngling Tribe" or GetPlayerData(trigger_player, "Faction") == "Swede Tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "yngling-tribe" or GetPlayerData(trigger_player, "Faction") == "swede-tribe") then
 			return true
 		else
 			return false
@@ -70,7 +70,7 @@ DefineQuest("the-roadmaker", { -- Source: Snorri Sturlson, "Heimskringla", 1844,
 	Civilization = "norse",
 	PlayerColor = "blue",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "Yngling Tribe" or GetPlayerData(trigger_player, "Faction") == "Swede Tribe" or GetPlayerData(trigger_player, "Faction") == "Sweden") then
+		if (GetPlayerData(trigger_player, "Faction") == "yngling-tribe" or GetPlayerData(trigger_player, "Faction") == "swede-tribe" or GetPlayerData(trigger_player, "Faction") == "sweden") then
 			return true
 		end
 		-- should check if the player can build roads, and perhaps if there are towns not connected by roads (or alternatively, if there have been too few roads built by the player)

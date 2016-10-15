@@ -31,7 +31,7 @@
 
 if (LoadedGame == false) then
 	if (GrandStrategy == false or GrandStrategyEventMap) then
-		SetPlayerData(0, "Faction", "Norlund Clan")
+		SetPlayerData(0, "Faction", "norlund-clan")
 		SetPlayerData(1, "Allow", "upgrade-goblin-writing", "F")
 		SetPlayerData(2, "Allow", "upgrade-goblin-writing", "F")
 		SetPlayerData(3, "Allow", "upgrade-goblin-writing", "F")
@@ -722,8 +722,8 @@ AddTrigger("gathering-materials-coal-collected",
 																																							{function(s)
 																																								RemovePlayerObjective(player, "- Collect 10000 gold and 20000 coal")
 																																								if (GrandStrategy) then
-																																									--ChangeFactionResource("dwarf", "Norlund Clan", "gold", 10000)
-																																									ChangeFactionResource("dwarf", "Norlund Clan", "coal", 20000)
+																																									--ChangeFactionResource("dwarf", "norlund-clan", "gold", 10000)
+																																									ChangeFactionResource("dwarf", "norlund-clan", "coal", 20000)
 																																								end
 																																								if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 																																									ActionVictory()
@@ -1043,8 +1043,8 @@ AddTrigger("gathering-materials-resources-collected",
 																																				{function(s)
 																																					RemovePlayerObjective(player, "- Collect 10000 gold and 20000 coal")
 																																					if (GrandStrategy) then
-																																						--ChangeFactionResource("dwarf", "Norlund Clan", "gold", 10000)
-																																						ChangeFactionResource("dwarf", "Norlund Clan", "coal", 20000)
+																																						--ChangeFactionResource("dwarf", "norlund-clan", "gold", 10000)
+																																						ChangeFactionResource("dwarf", "norlund-clan", "coal", 20000)
 																																					end
 																																					if (mapinfo.description == "Eastern Mines" and GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 																																						ActionVictory()

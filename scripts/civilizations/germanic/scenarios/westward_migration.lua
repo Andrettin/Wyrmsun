@@ -28,7 +28,7 @@
 --
 
 if (LoadedGame == false) then
-	SetPlayerData(0, "Faction", "Asa Tribe")
+	SetPlayerData(0, "Faction", "asa-tribe")
 	SetPlayerData(0, "Resources", "gold", 0)
 	SetPlayerData(0, "Resources", "lumber", 0)
 	SetPlayerData(0, "Resources", "stone", 0)

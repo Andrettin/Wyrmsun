@@ -27,9 +27,9 @@
 
 if (LoadedGame == false) then
 	SetPlayerData(0, "RaceName", "gnome")
-	SetPlayerData(0, "Faction", "Untersberg")
+	SetPlayerData(0, "Faction", "untersberg")
 	SetPlayerData(1, "RaceName", "dwarf")
-	SetPlayerData(1, "Faction", "Random")
+	SetPlayerData(1, "Faction", "random")
 	if not (GrandStrategy) then
 		SetPlayerData(1, "Allow", "unit-dwarven-smithy", "F")
 		SetPlayerData(1, "Allow", "unit-dwarven-lumber-mill", "F")
@@ -44,7 +44,7 @@ if (LoadedGame == false) then
 		CreateProvinceUnits("Untersberg", 0, 1, false, false)
 		CreateProvinceCustomHero("Untersberg", 0)
 	
-		if (FactionHasHero("gnome", "Untersberg", "Pypo")) then
+		if (FactionHasHero("gnome", "untersberg", "Pypo")) then
 			unit = CreateUnit(GetGrandStrategyHeroUnitType("Pypo"), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 			SetUnitVariable(unit, "Character", "Pypo")
 		end

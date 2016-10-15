@@ -44,7 +44,7 @@ DefineProvince("Annwn", {
 	Map = "maps/random/random-map-fairlimbed-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
-		"elf", "Annwn"
+		"elf", "annwn"
 	}
 })
 
@@ -57,7 +57,7 @@ DefineProvince("Lintanir", { -- from Wesnoth
 	Map = "maps/random/random-map-fairlimbed-forest.smp",
 	SettlementTerrain = "Conifer Forest",
 	Claims = {
-		"elf", "Lintanir"
+		"elf", "lintanir"
 	}
 })
 
@@ -70,7 +70,7 @@ DefineProvince("Ulfdalir", {
 	Map = "maps/random/random-map-fairlimbed-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
-		"elf", "Ulfdalir"
+		"elf", "ulfdalir"
 	}
 })
 
@@ -83,6 +83,6 @@ DefineProvince("Wesmere", { -- from Wesnoth
 	Map = "maps/random/random-map-fairlimbed-forest.smp",
 	SettlementTerrain = "Conifer Forest",
 	Claims = {
-		"elf", "Wesmere"
+		"elf", "wesmere"
 	}
 })

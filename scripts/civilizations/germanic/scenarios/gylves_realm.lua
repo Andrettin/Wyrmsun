@@ -28,13 +28,13 @@
 --
 
 if (LoadedGame == false) then
-	SetPlayerData(0, "Faction", "Asa Tribe")
+	SetPlayerData(0, "Faction", "asa-tribe")
 	SetPlayerData(0, "Resources", "gold", 2000)
 	SetPlayerData(0, "Resources", "lumber", 2000)
 	SetPlayerData(0, "Resources", "stone", 1000)
 	SetPlayerData(0, "Resources", "oil", 0)
 	SetAiType(0, "land-attack")
-	SetPlayerData(1, "Faction", "Gylfing Tribe")
+	SetPlayerData(1, "Faction", "gylfing-tribe")
 	SetPlayerData(1, "Resources", "gold", 2000)
 	SetPlayerData(1, "Resources", "lumber", 2000)
 	SetPlayerData(1, "Resources", "stone", 1000)

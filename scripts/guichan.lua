@@ -989,6 +989,7 @@ function RunSinglePlayerCustomGameMenu()
 	-- create the scenario and faction lists
 	local scenario_list = {}
 	local civilization_list = {_("Map Default")}
+	local faction_ident_list = {"Map Default"}
 	local faction_list = {_("Map Default")}
 	local world_list = { }
 	local game_type_list = { }
@@ -1062,13 +1063,6 @@ function RunSinglePlayerCustomGameMenu()
 	menu:addLabel("~<Single Player Game Setup~>", offx + 640/2 + 12, offy + 72)
 	menu:addFullButton(_("~!Start Game"), "s", offx + 640 - 224 - 16, offy + 360 + 36*1,
 		function()
-			-- change the human player in special cases
-			if (mapinfo.description == "Chaincolt Foothills" and civilization_list[race:getSelected() + 1] == "Dwarf" and faction_list[faction:getSelected() + 1] == _("Shorbear Clan") and (opponents:getSelected() == 0 or opponents:getSelected() >= 2) and mapinfo.nplayers >= 3 and mapinfo.playertypes[3] == "person") then
-				MapPersonPlayer = 2
-			elseif (mapinfo.description == "Caverns of Chaincolt" and civilization_list[race:getSelected() + 1] == "Dwarf" and (faction_list[faction:getSelected() + 1] == _("Shorbear Clan") or faction_list[faction:getSelected() + 1] == _("Shinsplitter Clan")) and mapinfo.nplayers >= 2 and mapinfo.playertypes[2] == "person") then
-				MapPersonPlayer = 1
-			end
-
 			if (MapPersonPlayer > 0) then -- only do this if the person player is not 0, as otherwise it's unnecessary to do it
 				for i=1,mapinfo.nplayers do
 					if ((i - 1) ~= MapPersonPlayer and mapinfo.playertypes[i] == "person") then
@@ -1086,7 +1080,7 @@ function RunSinglePlayerCustomGameMenu()
 			if (faction:getSelected() == 0) then
 				PlayerFaction = ""
 			else
-				PlayerFaction = faction_list[faction:getSelected() + 1]
+				PlayerFaction = faction_ident_list[faction:getSelected() + 1]
 			end
 			GameSettings.Opponents = opponents:getSelected()
 			GameSettings.NumUnits = numunits:getSelected()
@@ -1258,6 +1252,7 @@ function RunSinglePlayerCustomGameMenu()
 	end
 
 	function CivilizationChanged()
+		faction_ident_list = {"Map Default"}
 		faction_list = {_("Map Default")}
 		
 		local new_civilization = civilization_list[race:getSelected() + 1]
@@ -1268,7 +1263,8 @@ function RunSinglePlayerCustomGameMenu()
 			for i=1,table.getn(GetCivilizationFactionNames(new_civilization)) do
 				if ((GetFactionData(new_civilization, GetCivilizationFactionNames(new_civilization)[i], "Type") == "tribe" and (tech_level:getSelected() - 1 == -1 or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)")) or (GetFactionData(new_civilization, GetCivilizationFactionNames(new_civilization)[i], "Type") == "polity" and (tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)"))) then
 					if (GetFactionData(new_civilization, GetCivilizationFactionNames(new_civilization)[i], "Playable")) then
-						table.insert(faction_list, GetCivilizationFactionNames(new_civilization)[i])
+						table.insert(faction_ident_list, GetCivilizationFactionNames(new_civilization)[i])
+						table.insert(faction_list, GetFactionData(new_civilization, GetCivilizationFactionNames(new_civilization)[i], "Name"))
 					end
 				end
 			end
@@ -1504,7 +1500,7 @@ function GameStarting()
 	end
 	--]]
 	
-	if (not IsNetworkGame() and GrandStrategy == false) then
+	if (not IsNetworkGame() and GrandStrategy == false and GetCurrentQuest() == "" and GetCurrentCampaign() == "") then
 		if (PlayerFaction ~= "") then
 			SetPlayerData(GetThisPlayer(), "Faction", PlayerFaction)
 		end

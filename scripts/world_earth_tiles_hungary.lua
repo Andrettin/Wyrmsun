@@ -71,7 +71,7 @@ DefineWorldMapTile({545, 122}, {
 		}
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "Romania", "Cluj"
+		"latin", "romania", "Cluj"
 	}
 })
 

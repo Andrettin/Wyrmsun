@@ -25,7 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Annwn", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 10, 119-120.
+DefineFaction("annwn", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 10, 119-120.
+	Name = "Annwn",
 	Civilization = "elf", -- Annwn was an otherworld in Welsh legends; here we make it an elven kingdom, as (Celtic) fairies are amalgamated into elves in Wyrmsun (which makes particular sense given that in English the two were amalgamated historically as well)
 	Type = "polity",
 	Colors = {"brown"},
@@ -33,14 +34,16 @@ DefineFaction("Annwn", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der 
 	Description = "Annwn is an elven island kingdom, famous for the civil war fought between Arawn and Hafgan for its throne."
 })
 
-DefineFaction("Lintanir", {
+DefineFaction("lintanir", {
+	Name = "Lintanir",
 	Civilization = "elf",
 	Type = "polity",
 	Colors = {"red"},
 	DefaultTier = "kingdom"
 })
 
-DefineFaction("Ulfdalir", {
+DefineFaction("ulfdalir", {
+	Name = "Ulfdalir",
 	Civilization = "elf",
 	Type = "polity",
 	Colors = {"black"},
@@ -48,7 +51,8 @@ DefineFaction("Ulfdalir", {
 	Description = "Ulfdalir was one of the main participants in the Winter War. Facing an attack by a neighboring elven realm, they allied themselves with the frost trolls to the north."
 })
 
-DefineFaction("Wesmere", {
+DefineFaction("wesmere", {
+	Name = "Wesmere",
 	Civilization = "elf",
 	Type = "polity",
 	Colors = {"green"},

@@ -25,97 +25,113 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Astures Tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+DefineFaction("astures-tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	Name = "Astures Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
 	Colors = {"brown"}
 })
 
-DefineFaction("Boii Tribe", {
+DefineFaction("boii-tribe", {
+	Name = "Boii Tribe",
 	Civilization = "celt",
 	Type = "tribe",
 	Colors = {"brown"}
 })
 
-DefineFaction("Caledonii Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+DefineFaction("caledonii-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	Name = "Caledonii Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
 	Colors = {"brown"}
 })
 
-DefineFaction("Cantabri Tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+DefineFaction("cantabri-tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	Name = "Cantabri Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
 	Colors = {"orange"}
 })
 
-DefineFaction("Cauci Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+DefineFaction("cauci-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	Name = "Cauci Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
 	Colors = {"yellow"}
 })
 
-DefineFaction("Cotini Tribe", {
+DefineFaction("cotini-tribe", {
+	Name = "Cotini Tribe",
 	Civilization = "celt",
 	Type = "tribe",
 	Colors = {"teal"}
 })
 
-DefineFaction("Damnii Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+DefineFaction("damnii-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	Name = "Damnii Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
 	Colors = {"pink"}
 })
 
-DefineFaction("Darini Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+DefineFaction("darini-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	Name = "Darini Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
 	Colors = {"brown"}
 })
 
-DefineFaction("Gangani Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+DefineFaction("gangani-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	Name = "Gangani Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
 	Colors = {"black"}
 })
 
-DefineFaction("Hibernii Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+DefineFaction("hibernii-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	Name = "Hibernii Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
 	Colors = {"green"}
 })
 
-DefineFaction("Norici Tribe", {
+DefineFaction("norici-tribe", {
+	Name = "Norici Tribe",
 	Civilization = "celt",
 	Type = "tribe",
 	Colors = {"white"} -- another color, perhaps?
 })
 
-DefineFaction("Otalini Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+DefineFaction("otalini-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	Name = "Otalini Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
 	Colors = {"purple"}
 })
 
-DefineFaction("Pict Tribe", {
+DefineFaction("pict-tribe", {
+	Name = "Pict Tribe",
 	Civilization = "celt",
 	Type = "tribe",
 	Colors = {"cyan"}
 })
 
-DefineFaction("Scot Tribe", {
+DefineFaction("scot-tribe", {
+	Name = "Scot Tribe",
 	Civilization = "celt",
 	Type = "tribe",
 	Colors = {"brown"}
 })
 
-DefineFaction("Selgovae Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+DefineFaction("selgovae-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	Name = "Selgovae Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
 	Colors = {"white"}
 })
 
-DefineFaction("Sovantae Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+DefineFaction("sovantae-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	Name = "Sovantae Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
 	Colors = {"blue"}
@@ -123,7 +139,8 @@ DefineFaction("Sovantae Tribe", { -- Source: William R. Shepherd, "Historical At
 
 -- Polities
 
-DefineFaction("Argyll", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 77, 86.
+DefineFaction("argyll", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 77, 86.
+	Name = "Argyll",
 	Civilization = "celt", -- founded by
 	Type = "polity",
 --	Language = "old-irish", -- founded by Irish settlers
@@ -131,7 +148,8 @@ DefineFaction("Argyll", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971,
 	DefaultTier = "kingdom"
 })
 
-DefineFaction("Meath", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 88.
+DefineFaction("meath", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 88.
+	Name = "Meath",
 	Civilization = "celt",
 	Type = "polity",
 --	Language = "old-irish", -- it was an Irish kingdom
@@ -141,7 +159,8 @@ DefineFaction("Meath", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, 
 
 -- Non-Playable Tribes
 
-DefineFaction("Vana Tribe", {
+DefineFaction("vana-tribe", {
+	Name = "Vana Tribe",
 	Civilization = "celt",
 	Type = "tribe",
 	Colors = {"blue", "cyan"},

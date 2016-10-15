@@ -29,7 +29,7 @@
 
 if (LoadedGame == false) then
 	SetPlayerData(0, "Allow", "upgrade-teuton-writing", "F")
-	SetPlayerData(1, "Faction", "Rome")
+	SetPlayerData(1, "Faction", "rome")
 	SetPlayerData(0, "Resources", "gold", 5000)
 	SetPlayerData(0, "Resources", "lumber", 5000)
 	SetPlayerData(0, "Resources", "stone", 2500)
@@ -44,7 +44,7 @@ if (LoadedGame == false) then
 	if (GrandStrategy == false) then
 		local rome_player = GetFactionPlayer("Rome")
 		SetPlayerData(rome_player, "Allow", "upgrade-teuton-masonry", "R")
-		SetPlayerData(0, "Faction", "Suebi Tribe")
+		SetPlayerData(0, "Faction", "suebi-tribe")
 		
 		unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		SetUnitVariable(unit, "Active", false)

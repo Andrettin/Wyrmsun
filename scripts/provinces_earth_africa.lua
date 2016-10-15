@@ -31,14 +31,14 @@ DefineProvince("Algeria", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains", -- correct?
 	Claims = {
-		"persian", "Gaetuli Tribe",
-		"persian", "Mauri Tribe",
-		"persian", "Musulamii Tribe"
+		"persian", "gaetuli-tribe",
+		"persian", "mauri-tribe",
+		"persian", "musulamii-tribe"
 	},
 	HistoricalOwners = {
-		161, "persian", "Gaetuli Tribe", -- South-central Algeria was inhabited by the Gaetuli in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		161, "persian", "Musulamii Tribe", -- Southeastern Algeria was inhabited by the Musulamii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		161, "persian", "Mauri Tribe" -- Southwestern Algeria was inhabited by the Mauri in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "persian", "gaetuli-tribe", -- South-central Algeria was inhabited by the Gaetuli in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "persian", "musulamii-tribe", -- Southeastern Algeria was inhabited by the Musulamii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "persian", "mauri-tribe" -- Southwestern Algeria was inhabited by the Mauri in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalSettlementBuildings = {
 		161, "unit-latin-barracks", true -- Legionary base present in Lambaesis in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -63,10 +63,10 @@ DefineProvince("Libya", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains", -- correct?
 	Claims = {
-		"persian", "Garamantes Tribe"
+		"persian", "garamantes-tribe"
 	},
 	HistoricalOwners = {
-		161, "persian", "Garamantes Tribe" -- Inland western Libya was inhabited by the Garamantes in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "persian", "garamantes-tribe" -- Inland western Libya was inhabited by the Garamantes in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	Regions = {"Africa"}
 })
@@ -77,10 +77,10 @@ DefineProvince("Morocco", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains", -- correct?
 	Claims = {
-		"persian", "Mauri Tribe"
+		"persian", "mauri-tribe"
 	},
 	HistoricalOwners = {
-		161, "persian", "Mauri Tribe" -- Southern Morocco was inhabited by the Mauri in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "persian", "mauri-tribe" -- Southern Morocco was inhabited by the Mauri in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	Regions = {"Africa"}
 })

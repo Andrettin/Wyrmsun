@@ -27,14 +27,16 @@
 
 -- tribes
 
-DefineFaction("Chaoni Tribe", {
+DefineFaction("chaoni-tribe", {
+	Name = "Chaoni Tribe",
 	Civilization = "greek",
 	Type = "tribe",
 	Colors = {"yellow"},
-	DevelopsTo = {"Epirus"}
+	DevelopsTo = {"epirus"}
 })
 
-DefineFaction("Dolopes Tribe", {
+DefineFaction("dolopes-tribe", {
+	Name = "Dolopes Tribe",
 	Civilization = "greek",
 	Type = "tribe",
 	Colors = {"green"}
@@ -42,7 +44,8 @@ DefineFaction("Dolopes Tribe", {
 
 -- polities
 
-DefineFaction("Mycenae", {
+DefineFaction("mycenae", {
+	Name = "Mycenae",
 	Civilization = "greek",
 	Type = "polity",
 	Colors = {"orange"},
@@ -60,7 +63,8 @@ DefineFaction("Mycenae", {
 	}
 })
 
-DefineFaction("Argos", {
+DefineFaction("argos", {
+	Name = "Argos",
 	Civilization = "greek",
 	Type = "polity",
 	Colors = {"green"},
@@ -69,10 +73,11 @@ DefineFaction("Argos", {
 		"monarchy", "county", "City-State",
 		"republic", "county", "City-State"
 	},
-	HistoricalFactionDerivations = {-700, "greek", "Mycenae"}
+	HistoricalFactionDerivations = {-700, "greek", "mycenae"}
 })
 
-DefineFaction("Athens", {
+DefineFaction("athens", {
+	Name = "Athens",
 	Civilization = "greek",
 	Type = "polity",
 	Colors = {"red"},
@@ -81,17 +86,19 @@ DefineFaction("Athens", {
 		"monarchy", "county", "City-State",
 		"republic", "county", "City-State"
 	},
-	HistoricalFactionDerivations = {-700, "greek", "Mycenae"}
+	HistoricalFactionDerivations = {-700, "greek", "mycenae"}
 })
 
-DefineFaction("Cimmerian Bosphorus", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+DefineFaction("cimmerian-bosphorus", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	Name = "Cimmerian Bosphorus",
 	Civilization = "greek", -- accurate?
 	Type = "polity",
 	Colors = {"green"},
 	DefaultTier = "kingdom" -- Kingdom of the Cimmerian Bosphorus
 })
 
-DefineFaction("Corinth", {
+DefineFaction("corinth", {
+	Name = "Corinth",
 	Civilization = "greek",
 	Type = "polity",
 	Colors = {"black"},
@@ -100,31 +107,35 @@ DefineFaction("Corinth", {
 		"monarchy", "county", "City-State",
 		"republic", "county", "City-State"
 	},
-	HistoricalFactionDerivations = {-700, "greek", "Mycenae"}
+	HistoricalFactionDerivations = {-700, "greek", "mycenae"}
 })
 
-DefineFaction("Epirus", {
+DefineFaction("epirus", {
+	Name = "Epirus",
 	Civilization = "greek",
 	Type = "polity",
 	Colors = {"yellow"},
 	DefaultTier = "kingdom"
 })
 
-DefineFaction("Krete", {
+DefineFaction("krete", {
+	Name = "Krete",
 	Civilization = "greek",
 	Type = "polity",
 	Colors = {"yellow"},
 	DefaultTier = "kingdom"
 })
 
-DefineFaction("Macedon", {
+DefineFaction("macedon", {
+	Name = "Macedon",
 	Civilization = "greek",
 	Type = "polity",
 	Colors = {"brown", "red"},
 	DefaultTier = "kingdom"
 })
 
-DefineFaction("Sparta", {
+DefineFaction("sparta", {
+	Name = "Sparta",
 	Civilization = "greek",
 	Type = "polity",
 	Colors = {"brown"},
@@ -133,10 +144,11 @@ DefineFaction("Sparta", {
 		"monarchy", "county", "City-State",
 		"republic", "county", "City-State"
 	},
-	HistoricalFactionDerivations = {-700, "greek", "Mycenae"}
+	HistoricalFactionDerivations = {-700, "greek", "mycenae"}
 })
 
-DefineFaction("Thebes", {
+DefineFaction("thebes", {
+	Name = "Thebes",
 	Civilization = "greek",
 	Type = "polity",
 	Colors = {"blue"},
@@ -145,10 +157,11 @@ DefineFaction("Thebes", {
 		"monarchy", "county", "City-State",
 		"republic", "county", "City-State"
 	},
-	HistoricalFactionDerivations = {-700, "greek", "Mycenae"}
+	HistoricalFactionDerivations = {-700, "greek", "mycenae"}
 })
 
-DefineFaction("Thrace", {
+DefineFaction("thrace", {
+	Name = "Thrace",
 	Civilization = "greek",
 	Type = "polity",
 	Colors = {"orange"},
@@ -157,7 +170,8 @@ DefineFaction("Thrace", {
 
 -- Non-Playable
 
-DefineFaction("Armenia", {
+DefineFaction("armenia", {
+	Name = "Armenia",
 	Civilization = "greek",
 	Type = "polity",
 	Colors = {"brown"},

@@ -27,14 +27,14 @@
 
 if (LoadedGame == false) then
 	SetPlayerData(0, "Allow", "upgrade-teuton-writing", "F")
-	SetPlayerData(0, "Faction", "Marcomanni Tribe")
-	SetPlayerData(1, "Faction", "Boii Tribe")
+	SetPlayerData(0, "Faction", "marcomanni-tribe")
+	SetPlayerData(1, "Faction", "boii-tribe")
 	SetPlayerData(2, "RaceName", "goth")
-	SetPlayerData(2, "Faction", "Vandal Tribe")
+	SetPlayerData(2, "Faction", "vandal-tribe")
 	SetPlayerData(3, "RaceName", "teuton")
-	SetPlayerData(3, "Faction", "Suebi Tribe")
+	SetPlayerData(3, "Faction", "suebi-tribe")
 	SetPlayerData(4, "RaceName", "teuton")
-	SetPlayerData(4, "Faction", "Lombard Tribe")
+	SetPlayerData(4, "Faction", "lombard-tribe")
 	SetPlayerData(0, "Resources", "gold", 5000)
 	SetPlayerData(0, "Resources", "lumber", 5000)
 	SetPlayerData(0, "Resources", "stone", 2500)
@@ -133,21 +133,21 @@ if (LoadedGame == false) then
 		local units_to_be_created = {}
 		
 		-- Vandals (Lugii)
-		if (GetProvinceOwner("Mazovia") == "Vandal Tribe") then
+		if (GetProvinceOwner("Mazovia") == "vandal-tribe") then
 			player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, Map.Info.MapHeight - 1)
 			SetStartView(2, player_spawn_point[1], player_spawn_point[2])
 			CreateProvinceUnits("Mazovia", 2, 4)
 		end
 
 		-- Suebi (Semnones)
-		if (GetProvinceOwner("Brandenburg") == "Suebi Tribe") then
+		if (GetProvinceOwner("Brandenburg") == "suebi-tribe") then
 			player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, Map.Info.MapHeight - 1)
 			SetStartView(3, player_spawn_point[1], player_spawn_point[2])
 			CreateProvinceUnits("Brandenburg", 3, 4)
 		end
 
 		-- Lombards
-		if (GetProvinceOwner("Hanover") == "Lombards") then
+		if (GetProvinceOwner("Hanover") == "lombard-tribe") then
 			player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, Map.Info.MapHeight - 1)
 			SetStartView(4, player_spawn_point[1], player_spawn_point[2])
 			CreateProvinceUnits("Hanover", 4, 4)

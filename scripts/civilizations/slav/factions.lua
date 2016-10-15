@@ -25,19 +25,22 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Budini Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+DefineFaction("budini-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	Name = "Budini Tribe",
 	Civilization = "slav", -- accurate?
 	Type = "tribe",
 	Colors = {"blue"}
 })
 
-DefineFaction("Venedae Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+DefineFaction("venedae-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	Name = "Venedae Tribe",
 	Civilization = "slav",
 	Type = "tribe",
 	Colors = {"yellow"}
 })
 
-DefineFaction("Bohemia", {
+DefineFaction("bohemia", {
+	Name = "Bohemia",
 	Civilization = "slav",
 	Type = "polity",
 --	Language = "czech",
@@ -47,11 +50,12 @@ DefineFaction("Bohemia", {
 		1086, "kingdom" -- Henry IV elevated Bohemia to a kingdom in 1086; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 621.
 	},
 	HistoricalDiplomacyStates = {
-		1039, "magyar", "Hungary", "alliance" -- Duke Břetislav I of Bohemia made an alliance with King Peter of Hungaryin 1039; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 619.
+		1039, "magyar", "hungary", "alliance" -- Duke Břetislav I of Bohemia made an alliance with King Peter of Hungaryin 1039; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 619.
 	}
 })
 
-DefineFaction("Croatia", {
+DefineFaction("croatia", {
+	Name = "Croatia",
 	Civilization = "slav",
 	Type = "polity",
 --	Language = "old-church-slavonic",
@@ -59,19 +63,21 @@ DefineFaction("Croatia", {
 	DefaultTier = "kingdom"
 })
 
-DefineFaction("Moravia", {
+DefineFaction("moravia", {
+	Name = "Moravia",
 	Civilization = "slav",
 	Type = "polity",
 --	Language = "czech",
 	Colors = {"brown"},
 	DefaultTier = "duchy",
 	HistoricalDiplomacyStates = {
-		874, "slav", "Bohemia", "sovereign", -- The Bohemian duke Bořivoj recognized the overlorship of Svatopluk of Moravia in 874; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
-		895, "slav", "Bohemia", "peace" -- The sons of Bořivoj, Spytihněv and Vratislav, recognized German overlordship over Bohemia in 895, abandoning Moravian suzerainty; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, pp. 612-613.
+		874, "slav", "bohemia", "sovereign", -- The Bohemian duke Bořivoj recognized the overlorship of Svatopluk of Moravia in 874; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
+		895, "slav", "bohemia", "peace" -- The sons of Bořivoj, Spytihněv and Vratislav, recognized German overlordship over Bohemia in 895, abandoning Moravian suzerainty; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, pp. 612-613.
 	}
 })
 
-DefineFaction("Muscovy", {
+DefineFaction("muscovy", {
+	Name = "Muscovy",
 	Civilization = "slav",
 	Type = "polity",
 	Language = "russian",
@@ -86,14 +92,16 @@ DefineFaction("Muscovy", {
 	}
 })
 
-DefineFaction("Poland", {
+DefineFaction("poland", {
+	Name = "Poland",
 	Civilization = "slav",
 	Type = "polity",
 	Colors = {"red", "white"},
 	DefaultTier = "kingdom"
 })
 
-DefineFaction("Russia", {
+DefineFaction("russia", {
+	Name = "Russia",
 	Civilization = "slav",
 	Type = "polity",
 	Language = "russian",
@@ -101,7 +109,8 @@ DefineFaction("Russia", {
 	DefaultTier = "empire"
 })
 
-DefineFaction("Serbia", {
+DefineFaction("serbia", {
+	Name = "Serbia",
 	Civilization = "slav",
 	Type = "polity",
 --	Language = "old-church-slavonic",

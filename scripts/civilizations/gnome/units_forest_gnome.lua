@@ -34,7 +34,7 @@
 DefineUnitType("unit-forest-gnomish-worker", {
 	Parent = "unit-gnomish-worker",
 	Civilization = "gnome",
-	Faction = "Sagan Tribe",
+	Faction = "sagan-tribe",
 	SkinColor = "light-green",
 	HairColor = "green",
 	Variations = {
@@ -77,7 +77,7 @@ DefineUnitType("unit-forest-gnomish-worker", {
 DefineUnitType("unit-forest-gnomish-recruit", {
 	Parent = "unit-gnomish-recruit",
 	Civilization = "gnome",
-	Faction = "Sagan Tribe",
+	Faction = "sagan-tribe",
 	SkinColor = "light-green",
 	HairColor = "green",
 	Variations = {
@@ -166,7 +166,7 @@ DefineUnitType("unit-forest-gnomish-recruit", {
 DefineUnitType("unit-forest-gnomish-duelist", {
 	Parent = "unit-gnomish-duelist",
 	Civilization = "gnome",
-	Faction = "Sagan Tribe",
+	Faction = "sagan-tribe",
 	SkinColor = "light-green",
 	HairColor = "green",
 	Variations = {
@@ -255,7 +255,7 @@ DefineUnitType("unit-forest-gnomish-duelist", {
 DefineUnitType("unit-forest-gnomish-master-at-arms", {
 	Parent = "unit-gnomish-master-at-arms",
 	Civilization = "gnome",
-	Faction = "Sagan Tribe",
+	Faction = "sagan-tribe",
 	SkinColor = "light-green",
 	HairColor = "green",
 	Variations = {
@@ -344,7 +344,7 @@ DefineUnitType("unit-forest-gnomish-master-at-arms", {
 DefineUnitType("unit-forest-gnomish-herbalist", {
 	Parent = "unit-gnomish-herbalist",
 	Civilization = "gnome",
-	Faction = "Sagan Tribe",
+	Faction = "sagan-tribe",
 	SkinColor = "light-green",
 	Variations = {
 		{

@@ -135,7 +135,7 @@ SetPlayerData(0, "Resources", "lumber", 2000)
 SetPlayerData(0, "Resources", "stone", 1000)
 SetPlayerData(0, "Resources", "oil", 0)
 if (GrandStrategy == false or GrandStrategyEventMap) then
-	SetPlayerData(0, "Faction", "Norlund Clan")
+	SetPlayerData(0, "Faction", "norlund-clan")
 end
 SetAiType(0, "land-attack")
 SetStartView(1, 30, 1)
@@ -145,7 +145,7 @@ SetPlayerData(1, "Resources", "lumber", 10000)
 SetPlayerData(1, "Resources", "stone", 5000)
 SetPlayerData(1, "Resources", "oil", 0)
 if (GrandStrategy == false or GrandStrategyEventMap) then
-	SetPlayerData(1, "Faction", "Shinsplitter Clan")
+	SetPlayerData(1, "Faction", "shinsplitter-clan")
 end
 SetAiType(1, "land-attack")
 SetStartView(2, 54, 8)

@@ -32,7 +32,7 @@ if (LoadedGame == false) then
 	SetPlayerData(0, "Resources", "stone", 2500)
 	SetPlayerData(0, "Resources", "oil", 0)
 	SetAiType(0, "land-attack")
-	SetPlayerData(1, "Faction", "Rome")
+	SetPlayerData(1, "Faction", "rome")
 	SetPlayerData(1, "Resources", "gold", 2000)
 	SetPlayerData(1, "Resources", "lumber", 2000)
 	SetPlayerData(1, "Resources", "stone", 1000)
@@ -41,7 +41,7 @@ if (LoadedGame == false) then
 	if (GrandStrategy == false) then
 		local rome_player = GetFactionPlayer("Rome")
 		SetPlayerData(rome_player, "Allow", "upgrade-teuton-masonry", "R")
-		SetPlayerData(0, "Faction", "Marcomanni Tribe")
+		SetPlayerData(0, "Faction", "marcomanni-tribe")
 
 	--	unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y}) -- add Ballomar here later
 	

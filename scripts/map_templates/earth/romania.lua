@@ -26,5 +26,5 @@
 --
 
 -- Apulum
-SetMapTemplateUnit("earth", "unit-latin-town-hall", "Rome", {4374, 1001}, 107, 275) -- Dacia (where Apulum was located) was acquired by Rome in 107 AD and lost in 275 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-SetMapTemplateUnit("earth", "unit-latin-barracks", "Rome", {4374, 1001}, 161, 275) -- Legionary base present in Apulum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+SetMapTemplateUnit("earth", "unit-latin-town-hall", "rome", {4374, 1001}, 107, 275) -- Dacia (where Apulum was located) was acquired by Rome in 107 AD and lost in 275 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+SetMapTemplateUnit("earth", "unit-latin-barracks", "rome", {4374, 1001}, 161, 275) -- Legionary base present in Apulum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.

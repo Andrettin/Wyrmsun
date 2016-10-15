@@ -25,13 +25,15 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Illyrian Tribe", {
+DefineFaction("illyrian-tribe", {
+	Name = "Illyrian Tribe",
 	Civilization = "illyrian",
 	Type = "tribe",
 	Colors = {"red"}
 })
 
-DefineFaction("Taulantii Tribe", {
+DefineFaction("taulantii-tribe", {
+	Name = "Taulantii Tribe",
 	Civilization = "illyrian",
 	Type = "tribe",
 	Colors = {"blue"}

@@ -33,7 +33,7 @@ local EarthEvents = {
 		Description = "Our chieftains desire to migrate to the west, to more hospitable lands for settlement...",
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "Vana Tribe"
+				EventFaction.Name == "vana-tribe"
 				and GetProvinceOwner("Don") == EventFaction.Name
 				and SyncRand(200) < 1
 			) then
@@ -53,35 +53,35 @@ local EarthEvents = {
 				SetProvinceUnitQuantity("Don", "unit-germanic-warrior", 0)
 				AcquireProvince(WorldMapProvinces.Don, "")
 				SetProvinceCivilization("Don", "")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "celt", "Aedui Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "celt", "Boii Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "celt", "Helvetii Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "celt", "Menapii Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "celt", "Norici Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "celt", "Sequani Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "greek", "Chaoni Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "greek", "Mycenae")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "illyrian", "Illyrian Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "illyrian", "Taulantii Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "latin", "Latin Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "phrygian", "Bryges Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "thracian", "Apsinthii Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "thracian", "Odrysae Tribe")
-				AcquireProvince(WorldMapProvinces.Aquitaine, "Arverni Tribe")
-				AcquireProvince(WorldMapProvinces.Albania, "Taulantii Tribe")
-				AcquireProvince(WorldMapProvinces.Argolis, "Mycenae")
-				AcquireProvince(WorldMapProvinces.NorthBrabant, "Menapii Tribe")
-				AcquireProvince(WorldMapProvinces.Bohemia, "Boii Tribe")
-				AcquireProvince(WorldMapProvinces.Bulgaria, "Odrysae Tribe")
-				AcquireProvince(WorldMapProvinces.Burgundy, "Aedui Tribe")
-				AcquireProvince(WorldMapProvinces.Dalmatia, "Taulantii Tribe")
-				AcquireProvince(WorldMapProvinces.Epirus, "Chaoni Tribe")
-				AcquireProvince(WorldMapProvinces.FrancheComte, "Sequani Tribe")
-				AcquireProvince(WorldMapProvinces.Latium, "Latin Tribe")
-				AcquireProvince(WorldMapProvinces.LowerAustria, "Norici Tribe")
-				AcquireProvince(WorldMapProvinces.Skopje, "Bryges Tribe")
-				AcquireProvince(WorldMapProvinces.Switzerland, "Helvetii Tribe")
-				AcquireProvince(WorldMapProvinces.Thrace, "Apsinthii Tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "celt", "aedui-tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "celt", "boii-tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "celt", "helvetii-tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "celt", "menapii-tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "celt", "norici-tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "celt", "sequani-tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "greek", "chaoni-tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "greek", "mycenae")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "illyrian", "illyrian-tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "illyrian", "taulantii-tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "latin", "latin-tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "phrygian", "bryges-tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "thracian", "apsinthii-tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "thracian", "odrysae-tribe")
+				AcquireProvince(WorldMapProvinces.Aquitaine, "arverni-tribe")
+				AcquireProvince(WorldMapProvinces.Albania, "taulantii-tribe")
+				AcquireProvince(WorldMapProvinces.Argolis, "mycenae")
+				AcquireProvince(WorldMapProvinces.NorthBrabant, "menapii-tribe")
+				AcquireProvince(WorldMapProvinces.Bohemia, "boii-tribe")
+				AcquireProvince(WorldMapProvinces.Bulgaria, "odrysae-tribe")
+				AcquireProvince(WorldMapProvinces.Burgundy, "aedui-tribe")
+				AcquireProvince(WorldMapProvinces.Dalmatia, "taulantii-tribe")
+				AcquireProvince(WorldMapProvinces.Epirus, "chaoni-tribe")
+				AcquireProvince(WorldMapProvinces.FrancheComte, "sequani-tribe")
+				AcquireProvince(WorldMapProvinces.Latium, "latin-tribe")
+				AcquireProvince(WorldMapProvinces.LowerAustria, "norici-tribe")
+				AcquireProvince(WorldMapProvinces.Skopje, "bryges-tribe")
+				AcquireProvince(WorldMapProvinces.Switzerland, "helvetii-tribe")
+				AcquireProvince(WorldMapProvinces.Thrace, "apsinthii-tribe")
 				SetProvinceSettlementBuilding("Albania", "unit-teuton-town-hall", true)
 				SetProvinceSettlementBuilding("Aquitaine", "unit-germanic-town-hall", true)
 				SetProvinceSettlementBuilding("Argolis", "unit-teuton-town-hall", true)
@@ -175,11 +175,11 @@ local EarthEvents = {
 		Description = "We have been completely beaten by the Suebi in the battlefield, but there may still be hope for us if the Romans intervene on our side. Shall we send Divitiacus to ask for their aid?",
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "Aedui Tribe"
-				and GetProvinceOwner("Provence") == "Rome"
-				and GetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, Factions.SuebiTribe.Civilization, "Suebi Tribe") == "war"
-				and GetFactionDiplomacyState("latin", "Rome", Factions.SuebiTribe.Civilization, "Suebi Tribe") == "peace"
-				and GetProvinceOwner("Alsace") == "Suebi Tribe"
+				EventFaction.Name == "aedui-tribe"
+				and GetProvinceOwner("Provence") == "rome"
+				and GetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, Factions.suebi_tribe.Civilization, "suebi-tribe") == "war"
+				and GetFactionDiplomacyState("latin", "rome", Factions.suebi_tribe.Civilization, "suebi-tribe") == "peace"
+				and GetProvinceOwner("Alsace") == "suebi-tribe"
 				and SyncRand(100) < 33
 			) then
 				return true
@@ -190,7 +190,7 @@ local EarthEvents = {
 		Options = {"Send ~!Divitiacus", "~!No"},
 		OptionEffects = {
 			function(s)
-				GrandStrategyEvent(Factions.Rome, GrandStrategyEvents.DivitiacusPleaForAssistance)
+				GrandStrategyEvent(Factions.rome, GrandStrategyEvents.DivitiacusPleaForAssistance)
 			end,
 			function(s)
 			end
@@ -225,7 +225,7 @@ local EarthEvents = {
 		Description = "A new law code has been enacted, with provisions greatly enhancing the subjection of the peasantry to the aristocracy.",
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "Russia"
+				EventFaction.Name == "russia"
 				-- should have more conditions, such as technology-related upgrades
 			) then
 				return true
@@ -270,7 +270,7 @@ local EarthEvents = {
 		Description = "Serfdom has finally been abolished in Russia, paving the way for the modernization of agriculture.",
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "Russia"
+				EventFaction.Name == "russia"
 				-- should have more conditions, such as technology-related upgrades
 			) then
 				return true
