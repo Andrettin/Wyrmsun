@@ -32,6 +32,7 @@ function RunCampaignMenu()
 		PlayMusicName("MenuTheme")
 	end
 
+	local campaign_description
 	local no_randomness
 	local no_time_of_day
 	local menu = WarMenu()
@@ -84,8 +85,7 @@ function RunCampaignMenu()
 	campaign_dd = menu:addDropDown(campaign_list, (Video.Width / 2) - (190 / 2), offy + 104 + 36*0,
 		function(dd)
 			SetCurrentCampaign(campaign_ident_list[campaign_dd:getSelected() + 1])
-			menu:stop()
-			RunCampaignMenu()
+			campaign_description:setCaption("Description: " .. GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Description"))
 		end
 	)
 	campaign_dd:setSize(190, 20)
@@ -96,7 +96,7 @@ function RunCampaignMenu()
 		SetCurrentCampaign(campaign_ident_list[1])
 	end
 	if (GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Description") ~= "") then
-		menu:addMultiLineLabel(_("Description: " .. GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Description")), ((Video.Width - 640) / 2) + 32, offy + 104 + 36*2, Fonts["game"], false, Video.Width - (Video.Width - 640) - 64)
+		campaign_description = menu:addMultiLineLabel("Description: " .. GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Description"), ((Video.Width - 640) / 2) + 32, offy + 104 + 36*2, Fonts["game"], false, Video.Width - (Video.Width - 640) - 64)
 	end
 
 	menu:addFullButton(_("~!Start Campaign"), "s", offx + 208, offy + 212 + (36 * 4),
