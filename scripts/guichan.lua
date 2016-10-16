@@ -926,10 +926,8 @@ function RunSinglePlayerGameMenu()
 	menu:addLabel(_("~<Single Player~>"), offx + 320, offy + 212 - 25 - (36 * 1))
 	local campaign_button = menu:addFullButton(_("~!Campaign"), "c", offx + 208, offy + 104 + 36*2,
 		function()
+			menu:stop()
 			RunCampaignMenu();
-			if (RunningScenario) then
-				menu:stop()
-			end
 		end
 	)
 	campaign_button:setTooltip("The Campaign mode is under development")

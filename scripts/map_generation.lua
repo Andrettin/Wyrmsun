@@ -1331,7 +1331,7 @@ function CreateCritters(arg)
 				and (GetUnitTypeData(unit_type_list[i], "Predator") == false or not arg.NoPredators)
 				and (GetUnitTypeData(unit_type_list[i], "Type") ~= "fly" or GetUnitTypeData(unit_type_list[i], "Predator") == false or not arg.NoFlyingCreeps)
 				and (GetUnitTypeData(unit_type_list[i], "Level") < 3 or GetUnitTypeData(unit_type_list[i], "Predator") == false or not arg.NoMightyCreeps)
-				and (GetSpeciesData(species, "Prehistoric") == false or (GetCurrentQuest() == "" and GrandStrategy == false)) -- don't generate prehistoric fauna if playing a quest or the grand strategy mode
+				and (GetSpeciesData(species, "Prehistoric") == false or (GetCurrentQuest() == "" and GetCurrentCampaign() == "" and GrandStrategy == false)) -- don't generate prehistoric fauna if playing a quest or the grand strategy mode
 			) then
 				local has_terrain = false
 				local species_terrains = GetSpeciesData(species, "Terrains")

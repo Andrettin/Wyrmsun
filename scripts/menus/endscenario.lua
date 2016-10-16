@@ -55,15 +55,15 @@ function RunSurrenderConfirmMenu()
 end
 
 function RunQuitToMenuConfirmMenu()
-  local menu = WarGameMenu(panel(1))
+	local menu = WarGameMenu(panel(1))
 
-  menu:addLabel("Are you sure?", 128, 11)
-  menu:addFullButton("~!Yes", "y", 16, 11 + (36 * 2) + 29,
-    function() StopMusic(); StopGame(GameQuitToMenu); Editor.Running = EditorNotRunning; menu:stopAll() end)
-  menu:addFullButton("~!No", "n", 16, 11 + (36 * 3) + 29,
-    function() menu:stop() end)
+	menu:addLabel("Are you sure?", 128, 11)
+	menu:addFullButton("~!Yes", "y", 16, 11 + (36 * 2) + 29,
+		function() StopMusic(); StopGame(GameQuitToMenu); Editor.Running = EditorNotRunning; menu:stopAll() end)
+	menu:addFullButton("~!No", "n", 16, 11 + (36 * 3) + 29,
+		function() menu:stop() end)
 
-  menu:run(false)
+	menu:run(false)
 end
 
 function RunExitConfirmMenu()
