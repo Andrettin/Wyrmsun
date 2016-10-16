@@ -69,47 +69,6 @@ DefineCharacter("Lucius Verus", { -- Source: "Ancient Warfare VII.6", 2013, pp. 
 	}
 })
 
-DefineCharacter("Marcian", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
-	Name = "Marcian", -- Roman emperor who concluded a treaty with the Ostrogothic king Walamer after he had become independent in 453 AD, with the Ostrogoths providing protection of the frontier while the Romans gave them a subsidy
-	Gender = "male",
-	Type = "unit-teuton-swordsman",
-	Civilization = "latin",
-	Faction = "rome",
-	ProvinceOfOrigin = "Thrace", -- possibly not accurate, but since he was the (Eastern) Roman emperor put him there until we have better information
-	Year = 453, -- concluded a treaty with Walamer soon after he became independent in 453 AD
-	DeathYear = 462, -- by 462 AD the Roman emperor was his successor Leo
-	HistoricalTitles = {
-		"head-of-state", 453, 462, "latin", "rome"
-	}
-})
-
-DefineCharacter("Leo", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
-	Name = "Leo", -- Roman emperor who renounced the treaty with the Ostrogoths
-	Gender = "male",
-	Type = "unit-teuton-swordsman",
-	Civilization = "latin",
-	Faction = "rome",
-	ProvinceOfOrigin = "Thrace", -- possibly not accurate, but since he was the (Eastern) Roman emperor put him there until we have better information
-	Year = 462, -- ruled in 462 AD when Walamer invaded Illyria because of the treaty's renouncement
-	DeathYear = 480, -- by 480 AD the ruler of Eastern Rome was Zeno
-	HistoricalTitles = {
-		"head-of-state", 462, 480, "latin", "rome"
-	}
-})
-
-DefineCharacter("Zeno", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 7.
-	Name = "Zeno", -- Roman emperor
-	Gender = "male",
-	Type = "unit-teuton-swordsman",
-	Civilization = "latin",
-	Faction = "rome",
-	ProvinceOfOrigin = "Thrace", -- possibly not accurate, but since he was the (Eastern) Roman emperor put him there until we have better information
-	Year = 480, -- by 480 AD the ruler of Eastern Rome was Zeno
-	HistoricalTitles = {
-		"head-of-state", 480, 0, "latin", "rome"
-	}
-})
-
 DefineCharacter("Geofrei Gaimar", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 76.
 	Name = "Geofrei",
 	FamilyName = "Gaimar", -- was that actually his family name?
