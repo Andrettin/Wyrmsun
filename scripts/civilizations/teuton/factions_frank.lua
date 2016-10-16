@@ -165,6 +165,7 @@ DefineFaction("neustria", {
 	Colors = {"orange"},
 	DefaultTier = "kingdom", -- correct?
 	DevelopsTo = {"francia", "holy-rome"},
+	DefaultStartPos = {3891, 937}, -- Paris
 	MinisterTitles = {
 		"head-of-government", "no-gender", "monarchy", "no-faction-tier", "Mayor of the Palace" -- Source: "Medieval Warfare V.2", 2013, p. 7.
 	}
@@ -177,7 +178,8 @@ DefineFaction("ripuaria", {
 	Type = "polity",
 	Colors = {"orange"},
 	DefaultTier = "kingdom",
-	DevelopsTo = {"austrasia", "francia", "holy-rome"}
+	DevelopsTo = {"austrasia", "francia", "holy-rome"},
+	DefaultStartPos = {3930, 926} -- Reims
 })
 
 DefineFaction("salia", {
@@ -187,5 +189,6 @@ DefineFaction("salia", {
 	Type = "polity",
 	Colors = {"pink"},
 	DefaultTier = "kingdom",
-	DevelopsTo = {"austrasia", "francia", "holy-rome"}
+	DevelopsTo = {"austrasia", "francia", "holy-rome"},
+	DefaultStartPos = {3915, 923} -- Soissons
 })

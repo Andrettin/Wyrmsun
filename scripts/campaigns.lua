@@ -25,6 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+--[[
 DefineCampaign("the-mead-of-poetry", {
 	Name = "The Mead of Poetry",
 	Description = "The dwarven brothers Fjalar and Galar conspire to kill the wise god Kvasir and brew his blood into a powerful mead.",
@@ -48,6 +49,7 @@ DefineCampaign("the-marcomannic-wars", {
 	Faction = "marcomanni-tribe",
 	Year = 162 -- beginning of the Marcomannic Wars
 })
+--]]
 
 DefineCampaign("sigiberts-struggle", {
 	Name = "Sigibert's Struggle",
