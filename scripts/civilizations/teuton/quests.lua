@@ -102,3 +102,5 @@ DefineQuest("the-blue-danube", {
 	Scenario = "scripts/civilizations/teuton/scenarios/the_blue_danube.lua",
 	PlayerColor = "cyan"
 })
+
+Load("scripts/civilizations/teuton/quests_frank.lua")

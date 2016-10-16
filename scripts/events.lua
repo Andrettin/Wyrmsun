@@ -28,6 +28,7 @@
 function EventTriggers()
 	Load("scripts/civilizations/dwarf/triggers.lua")
 	Load("scripts/civilizations/germanic/triggers.lua")
+	Load("scripts/civilizations/teuton/triggers.lua")
 
 	-- Greebo's Shinies
 	-- based on elements from the Descending into Darkness scenario of the Under the Burning Suns campaign from Battle for Wesnoth

@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016 by Andrettin
+--      (c) Copyright 2013-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,11 +25,20 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-player = 0
+DefineQuest("prevent-chilperichs-supremacy", {
+	Name = "Prevent Chilperich's Supremacy",
+	Icon = "icon-frank-horseman", -- should be a portrait of Chilperich
+	PlayerColor = "pink",
+	Unobtainable = true,
+	Uncompleteable = true,
+	Objectives = {"- Prevent Chilperich from establishing supremacy over all of Francia", "- Sigibert must survive"}
+})
 
-Load("scripts/civilizations/dwarf/dialogues.lua")
-Load("scripts/civilizations/dwarf/dialogues_the_mead_of_poetry.lua")
-Load("scripts/civilizations/elf/dialogues.lua")
-Load("scripts/civilizations/germanic/dialogues_freys_messenger.lua")
-Load("scripts/civilizations/gnome/dialogues.lua")
-Load("scripts/civilizations/teuton/dialogues.lua")
+DefineQuest("repel-the-avar-invasion", {
+	Name = "Repel the Avar Invasion",
+	Icon = "icon-frank-horseman", -- should be an Avar horseman
+	PlayerColor = "green",
+	Unobtainable = true,
+	Uncompleteable = true,
+	Objectives = {"- Destroy the invading Avar forces"}
+})

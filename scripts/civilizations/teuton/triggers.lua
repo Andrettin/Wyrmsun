@@ -25,11 +25,4 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-player = 0
-
-Load("scripts/civilizations/dwarf/dialogues.lua")
-Load("scripts/civilizations/dwarf/dialogues_the_mead_of_poetry.lua")
-Load("scripts/civilizations/elf/dialogues.lua")
-Load("scripts/civilizations/germanic/dialogues_freys_messenger.lua")
-Load("scripts/civilizations/gnome/dialogues.lua")
-Load("scripts/civilizations/teuton/dialogues.lua")
+Load("scripts/civilizations/teuton/triggers_frank.lua")

@@ -53,7 +53,7 @@ DefineCampaign("the-marcomannic-wars", {
 
 DefineCampaign("sigiberts-struggle", {
 	Name = "Sigibert's Struggle",
-	Description = "The Ripuarian king Sigibert must fight his brother Chilperich in a bitter civil war for supremacy over all of Francia.",
+	Description = "Upon the death of the Frankish king Chlothar I, his realm was divided between his four sons: Charibert, Chilperich, Sigibert and Gunthram. The ambitious Chilperich desires to increase his share of the inheritance at his brothers' expense, his designs on Sigibert's lands threatening to throw Francia into a bitter civil war...",
 	Civilization = "teuton",
 	Faction = "ripuaria",
 	Year = 561 -- Sigibert's reign in his lands begins

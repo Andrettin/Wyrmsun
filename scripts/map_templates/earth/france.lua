@@ -45,7 +45,8 @@ SetMapTemplateUnit("earth", "unit-teuton-town-hall", "neustria", {3891, 937}, 56
 -- Reims / Durocortorum
 SetMapTemplateUnit("earth", "unit-latin-town-hall", "rome", {3930, 926}, -50, 526) -- Gaul (where Durocortorum was located) was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "francia", {3930, 926}, 526, 561) -- Reims was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-SetMapTemplateUnit("earth", "unit-teuton-town-hall", "ripuaria", {3930, 926}, 561) -- Chlothar (Frankish king) died in 561, and Reims went to his son Sigibert; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328; Gregory of Tours, "History of the Franks", IV.22.
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "ripuaria", {3930, 926}, 561) -- Chlothar (Frankish king) died in 561, and Reims went to his son Sigibert, becoming his capital; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328; Gregory of Tours, "History of the Franks", IV.22.
+SetMapTemplateHero("earth", "Sigibert", "ripuaria", {3930, 926}, 561, 575)
 
 -- Rodez / Ruthenis
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "ripuaria", {3895, 1030}, 561) -- Ruthenis went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.

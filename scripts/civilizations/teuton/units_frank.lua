@@ -235,7 +235,8 @@ DefineUnitType("unit-frank-spearman", { Name = _("Speerkampfer"),
 	}
 } )
 
-DefineUnitType("unit-frank-horseman", { Name = _("Ritter"),
+DefineUnitType("unit-frank-horseman", {
+	Name = _("Ritter"),
 	Parent = "unit-teuton-ritter",
 	Civilization = "teuton",
 	Faction = "frank-tribe",
