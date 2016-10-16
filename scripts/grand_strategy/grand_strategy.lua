@@ -84,6 +84,7 @@ function RunGrandStrategyGameSetupMenu()
 	local date_maximum = 0
 	local faction
 	local faction_list = {}
+	local faction_name_list = {}
 	local faction_civilization_list = {}
 	local battalions
 	local hero_dd
@@ -278,7 +279,7 @@ function RunGrandStrategyGameSetupMenu()
 	bookmark:setSize(152, 20)
 	
 	menu:addLabel(_("Faction:"), offx + 640 - 224 - 16, offy + (10 + 120) - 20, Fonts["game"], false)
-	faction = menu:addDropDown(faction_list, offx + 640 - 224 - 16, offy + 10 + 120,
+	faction = menu:addDropDown(faction_name_list, offx + 640 - 224 - 16, offy + 10 + 120,
 		function(dd) FactionChanged(); end)
 	faction:setSize(152, 20)
 
@@ -429,19 +430,22 @@ function RunGrandStrategyGameSetupMenu()
 				Load("scripts/grand_strategy/" .. string.lower(world_list[world:getSelected() + 1]) .. "_history.lua");
 				
 				faction_list = {}
+				faction_name_list = {}
 				faction_civilization_list = {}
 				for key, value in pairsByKeys(Factions) do
 					if (GetFactionProvinceCountPreGame(Factions[key].Name) > 0 and GetCivilizationData(Factions[key].Civilization, "Playable") and GetFactionData(Factions[key].Civilization, Factions[key].Name, "Playable")) then
 						table.insert(faction_list, Factions[key].Name)
 						table.insert(faction_civilization_list, Factions[key].Civilization)
+						table.insert(faction_name_list, GetFactionData(Factions[key].Civilization, Factions[key].Name, "Name"))
 					end
 				end
 			else
 				faction_list = {"asa-tribe", "brising-clan", "eikinskjaldi-clan", "khag-tribe", "lggi-tribe", "norlund-clan", "shinsplitter-clan", "shorbear-clan"}
-				faction_civilization_list = {"dwarf", "germanic", "goblin"}
+				faction_civilization_list = {"germanic", "dwarf", "dwarf", "goblin", "goblin", "dwarf", "dwarf", "dwarf"}
+				faction_name_list = {"Asa Tribe", "Brising Clan", "Eikinskjaldi Clan", "Khag Tribe", "Lggi Tribe", "Norlund Clan", "Shinsplitter Clan", "Shorbear Clan"}
 			end
 
-			faction:setList(faction_list)
+			faction:setList(faction_name_list)
 			faction:setSize(152, 20)
 			faction:setSelected(0)
 			FactionChanged()
@@ -739,15 +743,21 @@ function AttackProvince(province, faction)
 		elseif (Defender == GrandStrategyFaction.Name) then
 			victorious_player = Attacker
 		end
+		local victorious_player_name = ""
+		if (GetFactionFromName(victorious_player) ~= nil) then
+			victorious_player_name = GetFactionData(GetFactionFromName(victorious_player).Civilization, victorious_player, "Name")
+		else
+			victorious_player_name = victorious_player
+		end
 		-- set the new unit quantity to the surviving units of the victorious side
 		for i, unitName in ipairs(Units) do
 			if (IsOffensiveMilitaryUnit(unitName)) then
-				SetProvinceUnitQuantity(province.Name, unitName, math.ceil(GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesStartingNonHeroCount", unitName) / BattalionMultiplier))
+				SetProvinceUnitQuantity(province.Name, unitName, math.ceil(GetPlayerData(GetFactionPlayer(victorious_player_name), "UnitTypesStartingNonHeroCount", unitName) / BattalionMultiplier))
 			end
 		end
 		
 		local grand_strategy_heroes = GetGrandStrategyHeroes()
-		local victorious_player_heroes = GetPlayerData(GetFactionPlayer(victorious_player), "Heroes")
+		local victorious_player_heroes = GetPlayerData(GetFactionPlayer(victorious_player_name), "Heroes")
 		for i = 1, table.getn(grand_strategy_heroes) do
 			if (GetProvinceHero(province.Name, grand_strategy_heroes[i]) ~= 0 and GetProvinceHero(province.Name, grand_strategy_heroes[i]) ~= 4) then
 				if (GetArrayIncludes(victorious_player_heroes, grand_strategy_heroes[i])) then
@@ -1375,7 +1385,7 @@ function RunGrandStrategySaveMenu()
 		else
 			year_ending = "AD"
 		end
-		default_name = string.gsub(GrandStrategyFaction.Name, " ", "_") .. "_" .. math.abs(GrandStrategyYear) .. "_" .. year_ending
+		default_name = string.gsub(GrandStrategyFaction.Name, "-", "_") .. "_" .. math.abs(GrandStrategyYear) .. "_" .. year_ending
 		default_name = string.lower(default_name)
 	end
 	
@@ -2026,9 +2036,9 @@ function DrawGrandStrategyInterface()
 
 	if (GrandStrategyFaction ~= nil) then
 		if (MonthsPerTurn == 12) then
-			AddGrandStrategyLabel(GrandStrategyFaction.Name .. ", " .. GetYearString(GrandStrategyYear, GrandStrategyFaction.Civilization), 81, Video.Height - 186 + 8, Fonts["game"], true, false)
+			AddGrandStrategyLabel(GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Name") .. ", " .. GetYearString(GrandStrategyYear, GrandStrategyFaction.Civilization), 81, Video.Height - 186 + 8, Fonts["game"], true, false)
 		else
-			AddGrandStrategyLabel(GrandStrategyFaction.Name .. ", " .. GetCivilizationData(GrandStrategyFaction.Civilization, "MonthName", GetMonthNameById(GrandStrategyMonth)) .. ", " .. GetYearString(GrandStrategyYear, GrandStrategyFaction.Civilization), 81, Video.Height - 186 + 8, Fonts["game"], true, false)
+			AddGrandStrategyLabel(GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Name") .. ", " .. GetCivilizationData(GrandStrategyFaction.Civilization, "MonthName", GetMonthNameById(GrandStrategyMonth)) .. ", " .. GetYearString(GrandStrategyYear, GrandStrategyFaction.Civilization), 81, Video.Height - 186 + 8, Fonts["game"], true, false)
 		end
 	end
 	
@@ -4367,11 +4377,11 @@ function RestoreScenarioUnitsToProvince(arg) -- restore the units of a certain f
 	
 	for i, unitName in ipairs(Units) do
 		if (IsOffensiveMilitaryUnit(unitName) and GetArrayIncludes(arg.IgnoredUnitClasses, GetUnitTypeData(unitName, "Class")) == false) then
-			ChangeProvinceUnitQuantity(arg.ProvinceName, unitName, math.ceil(GetPlayerData(GetFactionPlayer(arg.FactionName), "UnitTypesStartingNonHeroCount", unitName) / BattalionMultiplier))
+			ChangeProvinceUnitQuantity(arg.ProvinceName, unitName, math.ceil(GetPlayerData(GetFactionPlayer(GetFactionData(GetFactionFromName(arg.FactionName).Civilization, arg.FactionName, "Name")), "UnitTypesStartingNonHeroCount", unitName) / BattalionMultiplier))
 		end
 	end
 	
-	local faction_heroes = GetPlayerData(GetFactionPlayer(arg.FactionName), "Heroes")
+	local faction_heroes = GetPlayerData(GetFactionPlayer(GetFactionData(GetFactionFromName(arg.FactionName).Civilization, arg.FactionName, "Name")), "Heroes")
 	if (arg.Heroes ~= nil) then
 		if (arg.Heroes == "any") then
 			arg.Heroes = GetGrandStrategyHeroes()

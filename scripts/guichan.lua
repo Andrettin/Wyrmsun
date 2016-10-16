@@ -1512,7 +1512,7 @@ function GameStarting()
 			
 			for i=0,(PlayerMax - 2) do
 				if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
-					local worker_type = GetPlayerClassType("worker", i, Defender == GetPlayerData(i, "Name"))
+					local worker_type = GetPlayerClassType("worker", i, (Defender == GetPlayerData(i, "Faction") or Defender == GetPlayerData(i, "Name")))
 					if (worker_type ~= nil) then
 						for j=1,5 do
 							unit = OldCreateUnit(worker_type, i, {Players[i].StartPos.x, Players[i].StartPos.y})
@@ -1524,6 +1524,9 @@ function GameStarting()
 			
 			-- add buildings for defenders of grand strategy battles, if base building is active
 			local defender_player = GetFactionPlayer(Defender)
+			if (defender_player == nil) then
+				defender_player = GetFactionPlayer(GetFactionData(GetFactionFromName(Defender).Civilization, Defender, "Name"))
+			end
 			for i, unitName in ipairs(Units) do
 				if (string.find(unitName, "upgrade-") == nil) then
 					if (GetUnitTypeData(unitName, "Building") and unitName ~= "unit-mercenary-camp" and GetProvinceSettlementBuilding(AttackedProvince.Name, unitName)) then
@@ -1542,16 +1545,16 @@ function GameStarting()
 		if (GrandStrategy and GrandStrategyEventMap == false) then
 			for i=0,(PlayerMax - 2) do
 				if ((Players[i].Type == PlayerPerson or Players[i].Type == PlayerComputer)) then
-					if (GetPlayerData(i, "Name") == Attacker) then
+					if (GetPlayerData(i, "Name") == Attacker or GetPlayerData(i, "Faction") == Attacker) then
 						CreateProvinceUnits(AttackedProvince.Name, i, 1, true, true)
-					elseif (GetPlayerData(i, "Name") == Defender) then
+					elseif (GetPlayerData(i, "Name") == Defender or GetPlayerData(i, "Faction") == Defender) then
 						CreateProvinceUnits(AttackedProvince.Name, i, 1, false, false)
 					end
 					local grand_strategy_heroes = GetGrandStrategyHeroes()
 					for j = 1, table.getn(grand_strategy_heroes) do
 						if (
-							(GetPlayerData(i, "Name") == Attacker and GetProvinceHero(AttackedProvince.Name, grand_strategy_heroes[j]) == 3)
-							or (GetPlayerData(i, "Name") == Defender and GetProvinceHero(AttackedProvince.Name, grand_strategy_heroes[j]) == 2) -- create heroes which are in the province for the defender
+							((GetPlayerData(i, "Name") == Attacker or GetPlayerData(i, "Faction") == Attacker) and GetProvinceHero(AttackedProvince.Name, grand_strategy_heroes[j]) == 3)
+							or ((GetPlayerData(i, "Name") == Defender or GetPlayerData(i, "Faction") == Defender) and GetProvinceHero(AttackedProvince.Name, grand_strategy_heroes[j]) == 2) -- create heroes which are in the province for the defender
 						) then
 							unit = OldCreateUnit(GetGrandStrategyHeroUnitType(grand_strategy_heroes[j]), i, {Players[i].StartPos.x, Players[i].StartPos.y})
 							if (GrandStrategyHeroIsCustom(grand_strategy_heroes[j])) then

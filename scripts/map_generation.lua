@@ -1710,7 +1710,7 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 							CreateStartingBuilding(i, player_buildings[i + 1][j]) -- give the player initial buildings
 						end
 					end
-					if (GrandStrategy and GrandStrategyEventMap == false and Defender == GetPlayerData(i, "Name") and ProvinceHasBuildingClass(AttackedProvince.Name, "stronghold")) then
+					if (GrandStrategy and GrandStrategyEventMap == false and (Defender == GetPlayerData(i, "Faction") or Defender == GetPlayerData(i, "Name")) and ProvinceHasBuildingClass(AttackedProvince.Name, "stronghold")) then
 						CreateStartingBuilding(i, "Stronghold Guard Tower") -- give the defender two guard towers if a stronghold is built
 						CreateStartingBuilding(i, "Stronghold Guard Tower")
 					end

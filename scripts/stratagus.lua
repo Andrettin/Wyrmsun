@@ -388,12 +388,16 @@ function SinglePlayerTriggers()
 		if (GrandStrategy and GrandStrategyEventMap == false and GrandStrategyBattle and GrandStrategyFaction ~= nil) then
 			if (Players[i].Type == PlayerPerson or Players[i].Type == PlayerComputer) then
 				if (Players[i].Type == PlayerPerson) then
-					SetPlayerData(i, "Name", GrandStrategyFaction.Name)
+					SetPlayerData(i, "Name", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Name"))
 				elseif (Players[i].Type == PlayerComputer) then
 					if (GrandStrategyFaction.Name == Attacker) then
-						SetPlayerData(i, "Name", Defender)
+						if (GetFactionFromName(Defender) ~= nil) then
+							SetPlayerData(i, "Name", GetFactionData(GetFactionFromName(Defender).Civilization, Defender, "Name"))
+						else
+							SetPlayerData(i, "Name", Defender)
+						end
 					elseif (GrandStrategyFaction.Name == Defender) then
-						SetPlayerData(i, "Name", Attacker)
+						SetPlayerData(i, "Name", GetFactionData(GetFactionFromName(Attacker).Civilization, Attacker, "Name"))
 					end
 				end
 			end
@@ -407,7 +411,7 @@ function SinglePlayerTriggers()
 		end
 		if (GrandStrategy) then
 			for i=0,(PlayerMax - 2) do
-				if (GetPlayerData(i, "Name") == Attacker or (GetPlayerData(i, "Name") == Defender and GetProvinceOwner(AttackedProvince.Name) ~= "")) then
+				if (GetPlayerData(i, "Name") == Attacker or GetPlayerData(i, "Faction") == Attacker or ((GetPlayerData(i, "Name") == Defender or GetPlayerData(i, "Faction") == Defender) and GetProvinceOwner(AttackedProvince.Name) ~= "")) then
 					if (GetFactionFromName(GetPlayerData(i, "Name")) ~= nil) then
 						for j, unitName in ipairs(Units) do -- if in grand strategy mode, apply upgrades researched
 							if (string.find(unitName, "upgrade-") ~= nil) then

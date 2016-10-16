@@ -166,14 +166,18 @@ function SetPlayerData(player, data, arg1, arg2)
 	elseif (data == "Name") then
 		if (GrandStrategy and GrandStrategyFaction ~= nil) then
 			if (ThisPlayer ~= nil and ThisPlayer.Index == player) then
-				arg1 = GrandStrategyFaction.Name
+				arg1 = GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Name")
 			end
 
 			if (ThisPlayer ~= nil and ThisPlayer.Index ~= player and GrandStrategyEventMap == false) then
 				if (GrandStrategyFaction.Name == Attacker and Defender ~= "") then
-					arg1 = Defender
+					if (GetFactionFromName(Defender) ~= nil) then
+						arg1 = GetFactionData(GetFactionFromName(Defender).Civilization, Defender, "Name")
+					else
+						arg1 = Defender
+					end
 				elseif (GrandStrategyFaction.Name == Defender and Attacker ~= "") then
-					arg1 = Attacker
+					arg1 = GetFactionData(GetFactionFromName(Attacker).Civilization, Attacker, "Name")
 				end
 			end
 		end
@@ -296,7 +300,7 @@ end
 function SetAiType(player, arg)
 	if (GrandStrategy and GrandStrategyEventMap == false and GrandStrategyBattleBaseBuilding) then
 		arg = "land-attack"
-	elseif (GrandStrategy and GrandStrategyEventMap == false and GrandStrategyBattleBaseBuilding == false and Defender == GetPlayerData(player, "Name") and ProvinceHasBuildingClass(AttackedProvince.Name, "stronghold")) then
+	elseif (GrandStrategy and GrandStrategyEventMap == false and GrandStrategyBattleBaseBuilding == false and (Defender == GetPlayerData(player, "Name") or Defender == GetPlayerData(player, "Faction")) and ProvinceHasBuildingClass(AttackedProvince.Name, "stronghold")) then
 		arg = "passive" -- if has a stronghold, don't attack, but wait for the enemy to come to you
 	elseif ((GrandStrategy and GrandStrategyEventMap == false and GrandStrategyBattleBaseBuilding == false) or ((GameSettings.NumUnits == 3 or GameSettings.NumUnits == 4 or GameSettings.NumUnits == 5) and arg ~= "passive")) then
 		arg = "grand-strategy-battle"
