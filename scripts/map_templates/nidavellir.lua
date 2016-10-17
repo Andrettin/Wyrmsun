@@ -47,7 +47,8 @@ DefineMapTemplate("nidavellir", {
 		"unit-yale", 16,
 		"unit-dread-bat", 8,
 		"unit-gryphon", 8,
-		"unit-wyrm", 4
+		"unit-wyrm", 4,
+		"unit-mercenary-camp", 1
 	},
 	PlayerLocationGeneratedNeutralUnits = {
 		"unit-gold-deposit", 1,
@@ -85,7 +86,8 @@ DefineMapTemplate("nidavellir-underground-1", {
 		"unit-slime", 32,
 		"unit-blood-bat", 16,
 		"unit-dread-bat", 8,
-		"unit-wyrm", 4
+		"unit-wyrm", 4,
+		"unit-mercenary-camp", 1
 	},
 	PlayerLocationGeneratedNeutralUnits = {
 		"unit-gold-deposit", 1,
