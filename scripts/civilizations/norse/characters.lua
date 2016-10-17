@@ -37,8 +37,7 @@ DefineCharacter("Fiölner Yngling", { -- Source: Snorri Sturlson, "Heimskringla"
 	Quote = _("\"And when brave Frode came, he found\nSwithiod's dark chief, Fiolner, drowned.\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "swede-tribe"
-	},
-	LiteraryAppearances = {"upgrade-work-ynglingatal"}
+	}
 })
 
 DefineCharacter("Fridfrode Skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 226-227.

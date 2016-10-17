@@ -117,8 +117,7 @@ DefineCharacter("Thursagan", { -- from "The Sceptre of Fire" campaign of "Battle
 			"unique", "the-hammer-of-thursagan",
 			"bound", true
 		},
-	},
-	LiteraryAppearances = {"upgrade-work-the-scepter-of-fire"}
+	}
 })
 
 DefineCharacter("Baglur", { -- from "The Sceptre of Fire" campaign of "Battle for Wesnoth"; veteran warrior and member of the party of dwarves who handled the crafting of the Sceptre of Fire
@@ -156,7 +155,6 @@ DefineCharacter("Durstorn", { -- from "The Sceptre of Fire" campaign of "Battle 
 	ViolentDeath = true,
 	Persistent = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
-	LiteraryAppearances = {"upgrade-work-the-scepter-of-fire"},
 	HistoricalTitles = {
 		"head-of-state", -1, 35, "dwarf", "norlund-clan"
 	}
@@ -193,6 +191,5 @@ DefineCharacter("Rugnur", { -- from "The Sceptre of Fire" campaign of "Battle fo
 	DeathYear = 40, -- died in 40 AD of a violent death
 	ViolentDeath = true,
 	Persistent = true,
-	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
-	LiteraryAppearances = {"upgrade-work-the-scepter-of-fire"}
+	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })
