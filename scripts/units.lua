@@ -776,7 +776,8 @@ DefineUnitType("unit-cavern-entrance", {
 	Name = _("Cavern Entrance"),
 	Image = {"file", "neutral/buildings/cavern_entrance.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/cavern_entrance_shadow.png", "size", {96, 96}},
-	Animations = "animations-building", Icon = "icon-portal",
+	Animations = "animations-building", Icon = "icon-cavern-entrance",
+	Description = "Cavern entrances connect different surface levels.",
 	NeutralMinimapColor = {128, 128, 0},
 	Costs = {"time", 150},
 	Speed = 0,
@@ -798,7 +799,8 @@ DefineUnitType("unit-cavern-entrance", {
 		},
 		{
 			"variation-id", "brown",
-			"file", "neutral/buildings/cavern_entrance_brown.png"
+			"file", "neutral/buildings/cavern_entrance_brown.png",
+			"icon", "icon-cavern-entrance-brown"
 		}
 	},
 	Sounds = {
@@ -811,6 +813,7 @@ DefineUnitType("unit-portal", {
 	Image = {"file", "neutral/buildings/portal_frame.png", "size", {96, 96}},
 	LightImage = {"file", "neutral/buildings/portal.png"},
 	Animations = "animations-portal", Icon = "icon-portal",
+	Description = "Portals establish a link between different worlds or planes, though they are invisible to all but those who have attuned themselves to that which is magical.",
 	NeutralMinimapColor = {128, 128, 0},
 	Costs = {"time", 150},
 	Speed = 0,
@@ -1305,7 +1308,8 @@ DefineUnitType("unit-bones", { Name = "Bones",
 	Sounds = {} }
 )
 
-DefineUnitType("unit-wyrm-skeleton", { Name = "Wyrm Skeleton",
+DefineUnitType("unit-wyrm-skeleton", {
+	Name = "Wyrm Skeleton",
 	Image = {"file", "neutral/decorations/wyrm_skeleton.png", "size", {128, 32}},
 	Animations = "animations-building", Icon = "icon-wyrm-skeleton",
 	Speed = 0,
@@ -3674,6 +3678,7 @@ DefineUnitType("unit-template-dock", {
 -- Load the different civilizations
 Load("scripts/civilizations/celt/units.lua")
 Load("scripts/civilizations/dwarf/units.lua")
+Load("scripts/civilizations/elf/units.lua")
 Load("scripts/civilizations/ettin/units.lua")
 Load("scripts/civilizations/germanic/units.lua")
 Load("scripts/civilizations/gnome/units.lua")
@@ -3683,22 +3688,6 @@ Load("scripts/civilizations/teuton/units.lua")
 Load("scripts/civilizations/latin/units.lua")
 
 -- Other civilizations' units
-
-DefineUnitType("unit-elven-swordsman", { Name = _("Swordsman"),
-	Parent = "unit-template-infantry",
-	Civilization = "elf",
---	Description = _("Elves are not warlike by nature, but in times of need, their natural grace and agility serve them well, as does their skillful craftsmanship. An elf can grasp the basics of swordsmanship in a time uncannily short by the standards of other races, and put them to effective use on the battlefield."),
---	Quote = _("\"This he learned, the lord of Lintanir,\nThat Volund alone in Ulfdalir lay;\nBy night went his men, their mail-coats were studded,\nTheir shields in the waning moonlight shone.\"\n- The Lay of Volund"),
-	Image = {"file", "teuton/units/saxon_swordsman.png", "size", {72, 72}},
-	Animations = "animations-dwarven-axefighter", Icon = "icon-elven-swordsman",
-	WeaponClasses = {"sword", "thrusting-sword"},
-	HackDamage = true,
-	HiddenInEditor = true,
-	Sounds = {
-		"hit", "sword-attack",
-		"miss", "attack-miss"
-	}
-} )
 
 DefineUnitType("unit-orc-spearthrower", { Name = _("Spearthrower"),
 	Parent = "unit-template-archer",

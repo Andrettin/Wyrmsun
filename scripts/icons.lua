@@ -830,6 +830,18 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-cavern-entrance",
+	Size = {46, 38},
+	File = "neutral/icons/cavern_entrance.png"
+})
+
+DefineIcon({
+	Name = "icon-cavern-entrance-brown",
+	Size = {46, 38},
+	File = "neutral/icons/cavern_entrance_brown.png"
+})
+
+DefineIcon({
 	Name = "icon-portal",
 	Size = {46, 38},
 	File = "neutral/icons/portal.png"
