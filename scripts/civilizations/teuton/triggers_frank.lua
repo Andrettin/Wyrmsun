@@ -28,7 +28,7 @@
 AddTrigger("sigibert-deplores-chilperichs-actions",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "Faction") == "ripuaria" and FindHero("Sigibert", i) ~= nil) then
+			if (GetPlayerData(i, "Faction") == "austrasia" and FindHero("Sigibert", i) ~= nil) then
 				trigger_player = i
 				return true
 			end
@@ -37,6 +37,22 @@ AddTrigger("sigibert-deplores-chilperichs-actions",
 	end,
 	function()
 		CallDialogue("sigibert-deplores-chilperichs-actions", trigger_player)
+		return false
+	end
+)
+
+AddTrigger("sigibert-dies",
+	function()
+		for i=0,(PlayerMax - 2) do
+			if (GetPlayerData(i, "HasQuest", "prevent-chilperichs-supremacy") and FindHero("Sigibert", i) == nil) then
+				trigger_player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function()
+		ActionDefeat()
 		return false
 	end
 )

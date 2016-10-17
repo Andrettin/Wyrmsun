@@ -31,7 +31,7 @@ DefineFaction("frank-tribe", {
 	Type = "tribe",
 	Language = "old-frankish",
 	Colors = {"green", "orange"},
-	DevelopsTo = {"francia", "franconia", "austrasia", "neustria", "ripuaria", "salia", "east-francia", "netherlands"},
+	DevelopsTo = {"francia", "franconia", "austrasia", "neustria", "salia", "east-francia", "netherlands"},
 	FactionUpgrade = "upgrade-frank-tribe-faction",
 	Description = "The Franks are one of the most powerful Germanic tribes to have existed. From their humble beginnings in their dwellings along the Rhine, they eventually managed to conquer the entirety of Gaul and much of Central Europe.",
 	UIFillers = {
@@ -125,6 +125,7 @@ DefineFaction("austrasia", {
 	Colors = {"pink"},
 	DefaultTier = "kingdom", -- correct?
 	DevelopsTo = {"francia", "holy-rome"},
+	DefaultStartPos = {3930, 926}, -- Reims
 	MinisterTitles = {
 		"head-of-government", "no-gender", "monarchy", "no-faction-tier", "Mayor of the Palace" -- Source: "Medieval Warfare V.2", 2013, p. 7.
 	}
@@ -169,17 +170,6 @@ DefineFaction("neustria", {
 	MinisterTitles = {
 		"head-of-government", "no-gender", "monarchy", "no-faction-tier", "Mayor of the Palace" -- Source: "Medieval Warfare V.2", 2013, p. 7.
 	}
-})
-
-DefineFaction("ripuaria", {
-	Name = "Ripuaria",
-	Civilization = "teuton",
-	ParentFaction = "francia",
-	Type = "polity",
-	Colors = {"orange"},
-	DefaultTier = "kingdom",
-	DevelopsTo = {"austrasia", "francia", "holy-rome"},
-	DefaultStartPos = {3930, 926} -- Reims
 })
 
 DefineFaction("salia", {

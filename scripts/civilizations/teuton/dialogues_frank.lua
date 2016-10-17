@@ -53,6 +53,27 @@ DefineDialogue("chilperich-attacks-sigibert", {
 	}
 })
 
+DefineDialogue("chilperich-sues-for-peace", {
+	Nodes = {
+		{
+			"speaker", "character", "Chilperich",
+			"text", "Sigibert! My brother, you have beaten me. I ask you for peace."
+		},
+		{
+			"speaker", "character", "Sigibert",
+			"text", "Damn you and your peace, Chilperich! You attacked me from behind my back."
+		},
+		{
+			"speaker", "character", "Gunthram",
+			"text", "Be reasonable, Sigibert. You have already remedied the ill Chilperich has caused you, it's no use pursuing him into his lands. Your inheritance was larger than that of any of the other three of us. I will not stand by while you take Chilperich's share as well."
+		},
+		{
+			"speaker", "character", "Sigibert",
+			"text", "Fair enough. Chilperich, I will accept your peace, but do not dare prey on my lands again."
+		}
+	}
+})
+
 DefineDialogue("sigibert-complains-of-his-brothers-marriages", {
 	Nodes = {
 		{
@@ -107,15 +128,144 @@ DefineDialogue("chilperich-marries-gailswintha", {
 		},
 		{
 			"speaker", "character", "Sigibert",
-			"text", "That is an ill tiding. Chilperich was enthralled by a concubine... He must have heard of the treasure you brought, and is marrying your sister out of pure greed! Your sister needs to take care, Chilperich is not to be trusted."
+			"text", "That is an ill tiding. Chilperich was enthralled by a concubine, Fredegunde... He must have heard of the treasure you brought, and is marrying your sister out of pure greed! Your sister needs to take care, Chilperich is not to be trusted."
 		},
 		{
 			"speaker", "character", "Brunichilde",
-			"text", "You worry too much. Chilperich did you wrong, but it is time for reconciliation. With this marriage, me and my sister can bring you both together."
+			"text", "You worry too much. Chilperich did you wrong, but it is time for reconciliation. With this marriage, me and my sister can bring you both closer together."
 		},
 		{
 			"speaker", "character", "Sigibert",
 			"text", "Brunichilde..."
+		}
+	}
+})
+
+DefineDialogue("chilperich-murders-gailswintha", {
+	Nodes = {
+		{
+			"speaker", "character", "Brunichilde",
+			"text", "Sigibert, I..."
+		},
+		{
+			"speaker", "character", "Sigibert",
+			"text", "What happened?"
+		},
+		{
+			"speaker", "character", "Brunichilde",
+			"text", "I just received word of Gailswintha. At first, Chilperich showed himself very fond of her, though if that was only because of the treasure she brought I cannot say. Soon, however, he began visiting once more the bed of his former concubine, Fredegunde. As a result of this scandal, my sister and Fredegunde quarreled."
+		},
+		{
+			"speaker", "character", "Sigibert",
+			"text", "Chilperich is no good, my dear, I tried telling you."
+		},
+		{
+			"speaker", "character", "Brunichilde",
+			"text", "He murdered my sister! Under Fredegunde's influence, he ordered Gailswintha strangled. Only a few days later, he married the concubine. I will spill the blood of them both..."
+		},
+		{
+			"speaker", "character", "Sigibert",
+			"text", "We cannot, not now. The Avars are invading once again, we need to deal with that first."
+		}
+	}
+})
+
+DefineDialogue("saxons-attack-francia-through-italy", {
+	Nodes = {
+		{
+			"speaker", "character", "Sigibert",
+			"text", "Italy has fallen to the Lombards. Greek dominion over the peninsula is at an end."
+		},
+		{
+			"speaker", "character", "Brunichilde",
+			"text", "Not long ago the Greeks waged war on my homeland, I cannot say I have sympathy for them."
+		},
+		{
+			"speaker", "character", "Sigibert",
+			"text", "A group of Saxons have entered Italy together with the Lombards, and they're marching on to Francia. Time to beat them back."
+		},
+		{
+			"speaker", "character", "Brunichilde",
+			"text", "My sword is ready to spill some Saxon blood."
+		},
+		{
+			"speaker", "character", "Brunichilde",
+			"text", "(And someday Fredegunde will get her due...)"
+		}
+	}
+})
+
+DefineDialogue("sigibert-receives-news-of-chariberts-death", {
+	Nodes = {
+		{
+			"speaker", "character", "Sigibert",
+			"text", "My brother Charibert has died... His lands were to be distributed between the remaining three of us, but Chilperich has preemptively invaded and taken my share for himself."
+		},
+		{
+			"speaker", "character", "Brunichilde",
+			"text", "The time has come, Sigibert. Chilperich shall know our wrath!"
+		}
+	}
+})
+
+DefineDialogue("gunthram-allies-with-chilperich", {
+	Nodes = {
+		{
+			"speaker", "character", "Brunichilde",
+			"text", "My love... your brother Gunthram has allied with Chilperich."
+		},
+		{
+			"speaker", "character", "Sigibert",
+			"text", "He is afraid that I will take all of Francia for myself. No matter, once Chilperich is defeated Gunthram will surely come around."
+		}
+	}
+})
+
+DefineDialogue("sigiberts-victory", {
+	Nodes = {
+		{
+			"speaker", "character", "Sigibert",
+			"text", "Chilperich's forces have been utterly defeated! Victory is at hand!"
+		},
+		{
+			"speaker", "character", "Brunichilde",
+			"text", "My love, Chilperich's own followers are turning over to you and acclaiming you as their king!"
+		},
+		{
+			"speaker", "character", "Sigibert",
+			"text", "His only option now is to surrender."
+		},
+		{
+			"speaker", "character", "Sigibert",
+			"text", "Aagh!"
+		},
+		{
+			"speaker", "character", "Sigibert",
+			"text", "...poisoned knives?"
+		},
+		{
+			"speaker", "character", "Brunichilde",
+			"text", "Sigibert!"
+		},
+		{
+			"speaker", "character", "Brunichilde",
+			"text", "Men, take the two slaves who attacked our king and get the name of who ordered the attack, no matter the cost!"
+		},
+		{
+			"speaker", "character", "Brunichilde",
+			"text", "My Sigibert..."
+		},
+		{
+			"speaker", "character", "Sigibert",
+			"text", "...I love you, Brunichilde... more beautiful than the tales could do justice... take care of Childebert, our son..."
+		},
+		{
+			"speaker", "character", "Brunichilde",
+			"text", "Don't you die on me! Damn it Sigibert, no!"
+		},
+		{
+			"speaker", "character", "Brunichilde",
+			"text", "Fredegunde..."
 		}
 	}
 })

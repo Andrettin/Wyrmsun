@@ -32,22 +32,22 @@ SetMapTemplateUnit("earth", "unit-teuton-town-hall", "angle-tribe", {4054, 801},
 SetMapTemplateUnit("earth", "unit-latin-town-hall", "rome", {3998, 887}, -50, 526) -- Gaul (where Colonia Agrippina was located) was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 SetMapTemplateUnit("earth", "unit-latin-barracks", "rome", {3998, 887}, -50, 526) -- Legionary base present in a location near Colonia Agrippina in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "francia", {3998, 887}, 526, 561) -- Cologne was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-SetMapTemplateUnit("earth", "unit-teuton-town-hall", "ripuaria", {3998, 887}, 561) -- Colonia Agrippina went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "austrasia", {3998, 887}, 561) -- Colonia Agrippina went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
 -- Konnenberg
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "saxon-tribe", {4045, 857}, 526) -- Konnenberg was in Saxon possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 
 -- Konstanz / Constantia
-SetMapTemplateUnit("earth", "unit-teuton-town-hall", "ripuaria", {4051, 965}, 561) -- Constantia went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "austrasia", {4051, 965}, 561) -- Constantia went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
 -- Mainz / Mayence / Mogontiacum
 SetMapTemplateUnit("earth", "unit-latin-town-hall", "rome", {4029, 911}, -50, 526) -- Gaul (where Mogontiacum was located) was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 SetMapTemplateUnit("earth", "unit-latin-barracks", "rome", {4029, 911}, -50, 526) -- Legionary base present in a location near Colonia Agrippina in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "francia", {4029, 911}, 526, 561) -- Mayence was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-SetMapTemplateUnit("earth", "unit-teuton-town-hall", "ripuaria", {4029, 911}, 561) -- Mogontiacum went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "austrasia", {4029, 911}, 561) -- Mogontiacum went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
 -- Trier / Treveri
-SetMapTemplateUnit("earth", "unit-teuton-town-hall", "ripuaria", {3993, 917}, 561) -- Treveri went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "austrasia", {3993, 917}, 561) -- Treveri went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
 -- Worms / Borbetomagus
 SetMapTemplateUnit("earth", "unit-latin-town-hall", "rome", {4033, 920}, -50, 413) -- Gaul (where Mogontiacum was located) was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.

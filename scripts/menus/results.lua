@@ -79,8 +79,8 @@ function RunResultsMenu()
 	menu:addLabel("Razings", offx + 590, offy + bottom_offset, Fonts["large"], true)
 
 	c = 0
-	for i=0,7 do
-		if (GetPlayerData(i, "TotalUnits") > 0 and Players[i].Type ~= PlayerRescuePassive and Players[i].Type ~= PlayerRescueActive) then
+	for i=0,(PlayerMax - 2) do
+		if (GetPlayerData(i, "TotalUnits") > 0 and Players[i].Type ~= PlayerRescuePassive and Players[i].Type ~= PlayerRescueActive and GetPlayerData(ThisPlayer.Index, "HasContactWith", i)) then
 			local name = _(GetPlayerData(i, "Name"))
 			if (ThisPlayer.Index == i) then
 				name = name .. " - You"
@@ -120,6 +120,10 @@ function RunResultsMenu()
 				Fonts["large"], true)
 
 			c = c + 1
+			
+			if (c >= 8) then
+				break
+			end
 		end
 	end
 
