@@ -182,3 +182,14 @@ DefineFaction("salia", {
 	DevelopsTo = {"austrasia", "francia", "holy-rome"},
 	DefaultStartPos = {3915, 923} -- Soissons
 })
+
+DefineFaction("burgundia", { -- Frankish kingdom of Burgundy (not to be confused with the original Kingdom of the Burgundians - an East Germanic people - or the French region)
+	Name = "Burgundia",
+	Civilization = "teuton",
+	ParentFaction = "francia",
+	Type = "polity",
+	Colors = {"green"},
+	DefaultTier = "kingdom",
+	DevelopsTo = {"francia", "holy-rome"},
+	DefaultStartPos = {3884, 961} -- Orléans
+})

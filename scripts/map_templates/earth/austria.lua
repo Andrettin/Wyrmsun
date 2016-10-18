@@ -38,11 +38,11 @@ SetMapTemplateTileTerrain("earth", "shallow-water", 4223, 958, "Lake Neusiedl")
 SetMapTemplateTileTerrain("earth", "shallow-water", 4223, 959, "Lake Neusiedl")
 
 -- Carnuntum
-SetMapTemplateUnit("earth", "unit-latin-town-hall", "rome", {4224, 955}, 10, 526) -- Upper Pannonia (where Carnuntum was located) acquired by Rome in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4224, 955}, 10, 161) -- Upper Pannonia (where Carnuntum was located) acquired by Rome in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 SetMapTemplateUnit("earth", "unit-latin-barracks", "rome", {4224, 955}, 161, 526) -- Legionary base present in Carnuntum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 -- Carnuntum no longer under Roman control by 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 
 -- Vienna / Vindobona
---SetMapTemplateUnit("earth", "unit-latin-town-hall", "rome", {4212, 952}, 10) -- Upper Pannonia (where Vindobona was located) acquired by Rome in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-SetMapTemplateUnit("earth", "unit-latin-barracks", "rome", {4212, 952}, 10, 526) -- Legionary base present in Vindobona in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4212, 952}, 10, 161) -- Upper Pannonia (where Vindobona was located) acquired by Rome in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+SetMapTemplateUnit("earth", "unit-latin-barracks", "rome", {4212, 952}, 161, 526) -- Legionary base present in Vindobona in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 -- Vindobona no longer under Roman control by 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.

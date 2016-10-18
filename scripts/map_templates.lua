@@ -25,6 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+-- Notes: Use farms to denote minor settlements (villages or small towns), using town halls only for more important ones (to avoid the map being filled with town halls close to one another). If the minor settlement has a known major activity, then use the appropriate building instead: if it is a metalworking center, use a smithy; if it is a military outpost, use a tower; and so forth. As such, minor settlements are represented by only one building, while major ones are represented by a multi-building settlement.
+
 Load("scripts/map_templates/earth.lua")
 Load("scripts/map_templates/nidavellir.lua")
 Load("scripts/map_templates/asgard.lua")

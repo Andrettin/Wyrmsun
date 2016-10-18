@@ -35,7 +35,7 @@ DefineMapTemplate("earth", {
 		"rock", "low",
 		"grass", "extremely-high",
 		"dirt", "medium",
-		"pine-tree", "high"
+		"pine-tree", "medium"
 	},
 	GeneratedNeutralUnits = {
 		"unit-gold-deposit", 8,
@@ -79,3 +79,4 @@ Load("scripts/map_templates/earth/portugal.lua")
 Load("scripts/map_templates/earth/romania.lua")
 Load("scripts/map_templates/earth/spain.lua")
 Load("scripts/map_templates/earth/sweden.lua")
+Load("scripts/map_templates/earth/switzerland.lua")

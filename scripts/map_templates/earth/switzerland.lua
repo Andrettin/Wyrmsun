@@ -25,9 +25,5 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- Amsterdam
-SetMapTemplateUnit("earth", "unit-teuton-town-hall", "batavian-tribe", {3953, 857}, -264, 526) -- Tribes in Europe between 264 BC and 180 AD (Holland was inhabited by the Batavians); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-SetMapTemplateUnit("earth", "unit-teuton-town-hall", "frisian-tribe", {3953, 857}, 526, 734) -- Political situation in 526-600 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-SetMapTemplateUnit("earth", "unit-teuton-farm", "francia", {3953, 857}, 734, 919) -- Franks conquered Holland and Friesland in 734 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-SetMapTemplateUnit("earth", "unit-teuton-farm", "holy-rome", {3953, 857}, 919) -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-
+-- Geneva
+SetMapTemplateUnit("earth", "unit-teuton-farm", "burgundia", {3981, 996}, 561) -- Geneva went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
