@@ -103,7 +103,7 @@ Units = {
 	"upgrade-goblin-masonry",
 	"upgrade-goblin-coinage", "upgrade-goblin-writing", "upgrade-goblin-alchemy",
 	"unit-kobold-footpad",
-	"unit-elven-swordsman",
+	"unit-elven-swordsman", "unit-elven-priest", 
 	"unit-orc-spearthrower", "unit-orc-sea-orc", "unit-orc-shaman",
 	"unit-ettin",
 	"unit-adelobasileus-cromptoni", "unit-galerix-exilis", "unit-rat", "unit-goat", "unit-boar", "unit-horse",

@@ -81,3 +81,49 @@ DefineUnitType("unit-elven-swordsman", {
 		"miss", "attack-miss"
 	}
 } )
+
+DefineUnitType("unit-elven-priest", {
+	Name = _("Priest"),
+	Parent = "unit-template-priest",
+	Civilization = "elf",
+--	Description = _("Teuton clerics attend to the spiritual needs of their congregation. They store religious and secular knowledge, including prayers and medicinal techniques."),
+	Image = {"file", "elf/units/elf_body_warrior.png", "size", {72, 72}},
+	Shadow = {"file", "human/units/human_shadow.png", "size", {72, 72}},
+	LayerImages = {
+		{"layer", "hair", "file", "elf/units/elf_hair.png"},
+		{"layer", "left-arm", "file", "human/units/human_left_arm.png"},
+		{"layer", "right-arm", "file", "human/units/human_right_arm.png"},
+		{"layer", "right-hand", "file", "human/units/human_right_hand.png"},
+		{"layer", "clothing", "file", "teuton/units/robe.png"},
+		{"layer", "clothing-left-arm", "file", "teuton/units/robe_left_arm.png"},
+		{"layer", "clothing-right-arm", "file", "teuton/units/robe_right_arm.png"},
+		{"layer", "weapon", "file", "teuton/units/scepter.png"},
+		{"layer", "pants", "file", "human/units/pants.png"},
+		{"layer", "boots", "file", "teuton/units/leather_shoes.png"}
+	},
+	HairColor = "gray",
+	Animations = "animations-melee-unit-new",
+	Icon = "icon-kvasir",
+	DefaultEquipment = {
+--		{"weapon", "unit-mace"},
+		{"boots", "unit-boots"}
+	},
+	Corpse = "unit-human-dead-body",
+--	WeaponClasses = {"mace"},
+	BluntDamage = true,
+	ButtonKey = "p",
+	ButtonHint = _("Train ~!Priest"),
+	StartingAbilities = {"upgrade-healing"},
+	CanCastSpell = {"spell-healing", "spell-precision"},
+	AutoCastActive = {"spell-healing", "spell-precision"},
+	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	Sounds = {
+--		"selected", "basic-teuton-voices-selected-group",
+--		"acknowledge", "basic-teuton-voices-acknowledge",
+--		"ready", "basic-teuton-voices-ready",
+--		"help", "basic-teuton-voices-help",
+		"dead", "basic-human-voices-dead",
+		"hit", "fist-attack",
+		"miss", "attack-miss"
+	}
+} )

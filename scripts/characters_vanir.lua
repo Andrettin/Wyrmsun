@@ -28,7 +28,7 @@
 DefineCharacter("Kvasir", {
 	Name = "Kvasir",
 	Gender = "male",
-	Type = "unit-teuton-priest", -- should be an elven priest
+	Type = "unit-elven-priest",
 	Deity = "kvasir",
 	HairVariation = "gray-hair",
 	Trait = "upgrade-wise",

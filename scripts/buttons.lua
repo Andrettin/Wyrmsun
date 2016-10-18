@@ -172,6 +172,7 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-level-up",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shadowstalker", "unit-goblin-shaman",
 		"unit-kobold-footpad",
 		"unit-ettin",
+		"unit-elven-swordsman", "unit-elven-priest",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
 	}
 } )
@@ -206,7 +207,8 @@ DefineButton( { Pos = 3, Level = 1, Icon = "icon-sword-mastery-bronze",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman", "unit-teuton-ritter", "unit-frank-horseman",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-forest-gnomish-master-at-arms", "unit-derro-shadowguard",
 		"unit-goblin-warlord",
-		"unit-kobold-footpad"
+		"unit-kobold-footpad",
+		"unit-elven-swordsman"
 	}
 } )
 
@@ -220,7 +222,8 @@ DefineButton( { Pos = 3, Level = 1, Icon = "icon-sword-mastery",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-ritter",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-forest-gnomish-master-at-arms", "unit-derro-shadowguard",
 		"unit-goblin-warlord",
-		"unit-kobold-footpad"
+		"unit-kobold-footpad",
+		"unit-elven-swordsman"
 	}
 } )
 
@@ -262,6 +265,7 @@ DefineButton( { Pos = 5, Level = 1, Icon = "icon-critical-strike",
 		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-shadowstalker",
 		"unit-kobold-footpad",
 		"unit-ettin",
+		"unit-elven-swordsman",
 		"unit-surghan-mercenary-thane"
 	}
 } )
@@ -282,6 +286,7 @@ DefineButton( { Pos = 5, Level = 1, Icon = "icon-deadly-precision",
 		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-shadowstalker",
 		"unit-kobold-footpad",
 		"unit-ettin",
+		"unit-elven-swordsman",
 		"unit-surghan-mercenary-thane"
 	}
 } )
@@ -303,6 +308,7 @@ DefineButton( { Pos = 6, Level = 1, Icon = "icon-eagle-eye",
 		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-shadowstalker",
 		"unit-kobold-footpad",
 		"unit-ettin",
+		"unit-elven-swordsman",
 		"unit-surghan-mercenary-thane"
 	}
 } )
@@ -322,6 +328,7 @@ DefineButton( { Pos = 7, Level = 1, Icon = "icon-stun",
 		"unit-goblin-warlord",
 		"unit-kobold-footpad",
 		"unit-ettin",
+		"unit-elven-swordsman",
 		"unit-surghan-mercenary-thane"
 	}
 } )
@@ -348,7 +355,8 @@ DefineButton( { Pos = 8, Level = 1, Icon = "icon-puncture",
 		"unit-teuton-spearman", "unit-frank-spearman",
 		"unit-dwarven-guard",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-forest-gnomish-master-at-arms", "unit-derro-shadowguard",
-		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman"
+		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman",
+		"unit-elven-swordsman"
 	}
 } )
 
@@ -387,7 +395,7 @@ DefineButton( { Pos = 2, Level = 1, Icon = "icon-precision",
 	Action = "learn-ability", Value = "upgrade-precision",
 	Key = "r", Hint = _("Learn P~!recision"), Popup = "popup-commands",
 	Description = "Precision is an active ability that doubles the accuracy of an organic unit while in combat",
-	ForUnit = {"unit-teuton-priest", "unit-dwarven-witness"}
+	ForUnit = {"unit-teuton-priest", "unit-elven-priest", "unit-dwarven-witness"}
 })
 
 DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
@@ -411,6 +419,7 @@ DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shadowstalker", "unit-goblin-shaman",
 		"unit-kobold-footpad",
 		"unit-ettin",
+		"unit-elven-swordsman", "unit-elven-priest",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
 	} 
 } )
@@ -440,6 +449,7 @@ DefineButton( { Pos = 14, Level = 0, Icon = "icon-inventory",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shadowstalker", "unit-goblin-shaman",
 		"unit-kobold-footpad",
 		"unit-ettin",
+		"unit-elven-swordsman", "unit-elven-priest",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
 	}
 } )
@@ -466,6 +476,7 @@ DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shadowstalker", "unit-goblin-shaman",
 		"unit-kobold-footpad",
 		"unit-ettin",
+		"unit-elven-swordsman", "unit-elven-priest",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
 	} 
 } )
@@ -500,14 +511,14 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-healing",
 	Action = "cast-spell", Value = "spell-healing",
 	Description = "Heals an organic unit",
 	Key = "h", Hint = _("~!Healing"), Popup = "popup-commands",
-	ForUnit = {"unit-teuton-priest", "unit-dwarven-witness"}
+	ForUnit = {"unit-teuton-priest", "unit-elven-priest", "unit-dwarven-witness"}
 })
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-precision",
 	Action = "cast-spell", Value = "spell-precision",
 	Description = "Doubles the accuracy of an organic unit while in combat",
 	Key = "r", Hint = _("P~!recision"), Popup = "popup-commands",
-	ForUnit = {"unit-teuton-priest", "unit-dwarven-witness"}
+	ForUnit = {"unit-teuton-priest", "unit-elven-priest", "unit-dwarven-witness"}
 })
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-stun",
@@ -524,6 +535,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-stun",
 		"unit-goblin-warlord",
 		"unit-kobold-footpad",
 		"unit-ettin",
+		"unit-elven-swordsman",
 		"unit-surghan-mercenary-thane"
 	}
 })
@@ -537,7 +549,8 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-puncture",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman", "unit-teuton-spearman", "unit-frank-spearman",
 		"unit-dwarven-guard",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-forest-gnomish-master-at-arms", "unit-derro-shadowguard",
-		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman"
+		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman",
+		"unit-elven-swordsman"
 	}
 })
 
