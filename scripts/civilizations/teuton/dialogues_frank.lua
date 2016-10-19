@@ -170,15 +170,15 @@ DefineDialogue("fafnir-taunts-sigibert", {
 		},
 		{
 			"speaker", "character", "Sigibert",
-			"text", "I am but a lone traveller, who has neither father nor mother."
+			"text", "My bloodline is, I think, unknown to you, and so am I myself. I am but a lone traveller."
 		},
 		{
 			"speaker", "character", "Fafnir",
-			"text", "If you had neither father nor mother, then how were you born? Are you afraid of the words that may come out of the mouth of the dying? Stop lying, young hero, and tell me your name."
+			"text", "You refuse to tell me your name? Are you afraid of the words that may come out of the mouth of the dying?"
 		},
 		{
 			"speaker", "character", "Sigibert",
-			"text", "My bloodline is, I think, unknown to you, and so am I myself. I am Sigibert, the son of Chlothar."
+			"text", "I am Sigibert, and my father was Chlothar."
 		},
 		{
 			"speaker", "character", "Fafnir",
