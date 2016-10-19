@@ -74,6 +74,137 @@ DefineDialogue("chilperich-sues-for-peace", {
 	}
 })
 
+DefineDialogue("sigibert-mentions-the-portal-to-nidavellir", {
+	Nodes = {
+		{
+			"speaker", "character", "Sigibert",
+			"text", "Our traditions say that a gateway to the realm of the dwarves lies to the northeast of my territory, close to the Saxon lands. I do not know anyone who has actually been able to find it, but perhaps I should investigate the matter."
+		},
+		{
+			"text", "Hint: To see and use portals, your hero needs the Ethereal Vision ability."
+		}
+	}
+})
+
+DefineDialogue("sigibert-encounters-regin", {
+	Nodes = {
+		{
+			"speaker", "character", "Sigibert",
+			"text", "A... dwarf?"
+		},
+		{
+			"speaker", "character", "Regin",
+			"text", "Of course I am a dwarf, what else did you expect to find in the dwarven lands? The true question is: who and what are you? You, the one who rides a strange beast and looks like a giant gnome, and enters unannounced into the dwarven lands."
+		},
+		{
+			"speaker", "character", "Sigibert",
+			"text", "I am Sigibert, son of Chlothar and king of Austrasia. I am a man, a human."
+		},
+		{
+			"speaker", "character", "Regin",
+			"text", "A human, eh? Our traditions speak of humans, though some of our people believe your folk to only exist in tales."
+		},
+		{
+			"speaker", "character", "Sigibert",
+			"text", "And who are you?"
+		},
+		{
+			"speaker", "character", "Regin",
+			"text", "I am Regin, the son of Hreidmar, and the best smith in these lands. And the brother of Fafnir, the fallen. Years ago, my brother Otter was killed by a wanderer from the Shadowcharm clan, a servant of the god Loki. I, together with Fafnir and my father, managed to overpower the murderer. He pleaded for his life, offering to give us a large quantity of gold as compensation for Otter's death."
+		},
+		{
+			"speaker", "character", "Regin",
+			"text", "The wanderer then left two of his companions with us as a guarantee, and set off to the home of the wealthy dwarf Andvari, the son of Oin. He threatened Andvari with death, and took the dwarf's riches away, and gave them to my father as our compensation. But it turns out the gold was cursed. Within the hoard was a ring which Andvari had cherished, and which he had cursed as the wanderer took it off his hand."
+		},
+		{
+			"speaker", "character", "Regin",
+			"text", "Me and Fafnir asked my father for a share of the gold. But the ring's curse was already having its effect, and my father greedily refused and said he would keep it all for himself. Then... Fafnir thrust a sword through him! My brother, now a kinslayer... He took all of the gold for himself, and refused to share as well. For long have I brooded over my father's death and for the theft of my rightful share of his inheritance."
+		},
+		{
+			"speaker", "character", "Regin",
+			"text", "And now you are here! A hardy, courageous hero. Slay Fafnir for me, Sigibert, and you will be properly rewarded. My brother lives in Gnitaheith, and through some powerful sorcery he has transformed himself into a wyrm, a monster! Awed by Fafnir's might, a tribe of kobolds has come to serve him.",
+			"options", {"Accept", "Decline"},
+			"option-effects", {
+				function(s)
+					CallDialogue("sigibert-accepts-regins-quest", trigger_player)
+				end,
+				function(s)
+					CallDialogue("sigibert-refuses-regins-quest", trigger_player)
+				end
+			}
+		}
+	}
+})
+
+DefineDialogue("sigibert-accepts-regins-quest", {
+	Nodes = {
+		{
+			"speaker", "character", "Sigibert",
+			"text", "Very well, I will do as you suggest."
+		},
+		{
+			"speaker", "character", "Regin",
+			"text", "Take this sword, you may need it in your fight against Fafnir. It is called Gram, and consider it my finest work."
+		},
+		{
+			"speaker", "character", "Sigibert",
+			"text", "Thank you, I will see to it that the sword is bathed in Fafnir's blood."
+		}
+	}
+})
+
+DefineDialogue("sigibert-refuses-regins-quest", {
+	Nodes = {
+		{
+			"speaker", "character", "Sigibert",
+			"text", "That is not my battle to fight. My kingdom needs me more."
+		}
+	}
+})
+
+DefineDialogue("fafnir-taunts-sigibert", {
+	Nodes = {
+		{
+			"speaker", "character", "Fafnir",
+			"text", "Young warrior! Who are you, one who has reddened your sword with my blood?"
+		},
+		{
+			"speaker", "character", "Sigibert",
+			"text", "I am but a lone traveller, who has neither father nor mother."
+		},
+		{
+			"speaker", "character", "Fafnir",
+			"text", "If you had neither father nor mother, then how were you born? Are you afraid of the words that may come out of the mouth of the dying? Stop lying, young hero, and tell me your name."
+		},
+		{
+			"speaker", "character", "Sigibert",
+			"text", "My bloodline is, I think, unknown to you, and so am I myself. I am Sigibert, the son of Chlothar."
+		},
+		{
+			"speaker", "character", "Fafnir",
+			"text", "Sigibert, I advise you, leave my hoard alone. If you do not do so, the gold and the ring shall be your end."
+		},
+		{
+			"speaker", "character", "Sigibert",
+			"text", "Such may be your counsel, but I will take the treasure nevertheless. Your struggle with death will soon come to an end, goodbye Fafnir."
+		},
+		{
+			"text", "Then Regin went up to Fafnir and cut out his heart with his sword, which was named Rithil."
+		},
+		{
+			"speaker", "character", "Regin",
+			"text", "Now, Sigibert, hold Fafnir's heart to the fire. The one who eats it shall become a mightier warrior."
+		},
+		{
+			"text", "Sigibert took Fafnir's heart and cooked it on a spit. When he thought that it was fully cooked, and the blood foamed out of the heart, Sigibert took it out."
+		},
+		{
+			"speaker", "character", "Regin",
+			"text", "Sigibert... I am sorry, but you are not leaving with any of my gold. And besides, though you did so at my behest, you are still my brother's slayer, and I suppose I am bound by blood to avenge him."
+		}
+	}
+})
+
 DefineDialogue("sigibert-complains-of-his-brothers-marriages", {
 	Nodes = {
 		{
