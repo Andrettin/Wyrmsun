@@ -28,6 +28,9 @@
 SetMapTemplateUnit("earth", "unit-latin-town-hall", "latin-tribe", {4126, 1096}, -750, -500) -- Latins present in Latium by 750-625 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 SetMapTemplateUnit("earth", "unit-latin-town-hall", "rome", {4126, 1096}, -500, 526) -- Rome had been founded and was independent by 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {4126, 1096}, -40, 526) -- Temple of Jupiter Capitolinus, Temple of Jupiter Victor, Temple of Vesta,  Temple of Fortunus and Temple of Aesculapius existed in Rome in c. 40 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 22-23.
+SetMapTemplateUnit("earth", "unit-teuton-dock", "rome", {4126, 1096}, -40, 526) -- Shipyards ("Navalia") existed in Rome in c. 40 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 22-23.
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "ostrogothia", {4126, 1096}, 526) -- Rome was a part of the Kingdom of the Ostrogoths in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+SetMapTemplateUnit("earth", "unit-teuton-temple", "ostrogothia", {4126, 1096}, 526)
+SetMapTemplateUnit("earth", "unit-teuton-dock", "ostrogothia", {4126, 1096}, 526)
 
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "ostrogothia", {4114, 1035}, 526) -- Ravenna was a part of the Kingdom of the Ostrogoths in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
