@@ -51,6 +51,12 @@ DefineUpgrade("upgrade-eagle-eye", {
 	Ability = true
 })
 
+DefineUpgrade("upgrade-ethereal-vision", {
+	Name = _("Ethereal Vision"),
+	Icon = "icon-scouting", -- to be changed later
+	Ability = true
+})
+
 DefineUpgrade("upgrade-healing", {
 	Name = _("Healing"),
 	Icon = "icon-healing",
@@ -146,6 +152,10 @@ DefineModifier("upgrade-deadly-precision",
 
 DefineModifier("upgrade-eagle-eye",
 	{"Accuracy", 2}
+)
+
+DefineModifier("upgrade-ethereal-vision",
+	{"EtherealVision", 1}
 )
 
 DefineModifier("upgrade-leadership",

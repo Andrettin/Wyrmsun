@@ -63,6 +63,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Abilities
 - The learning buttons for Healing and Precision now correctly display descriptions for them.
+- Added the Ethereal Vision ability, which allows seeing and using portals to other realms in the new Campaign mode.
 
 * AI
 - Made the AI easier on Easy difficulty.
@@ -72,6 +73,8 @@ https://github.com/Andrettin/Wyrmsun
 - The goblin Dock now correctly the same quantity of under construction frames as those of the other civilizations (new frame by Jinn).
 - Revamped Lumber Mill and Smithy names.
 - Temples now sell scrolls.
+- Added Portal (neutral and indestructible; visible and usable only to units with Ethereal Vision), which allows accessing other planes and worlds in the new Campaign mode (graphics by Jinn).
+- Added Cavern Entrance (neutral and indestructible), which allows accessing other surface layers in the new Campaign mode (graphics by Jinn).
 
 * Factions
 - Revamped Frankish personal names.

@@ -144,7 +144,7 @@ DefineDialogue("sigibert-accepts-regins-quest", {
 		},
 		{
 			"speaker", "character", "Regin",
-			"text", "Take this sword, you may need it in your fight against Fafnir. It is called Gram, and consider it my finest work."
+			"text", "Take this sword, you may need it in your fight against Fafnir. It is called Gram, and I consider it my finest work."
 		},
 		{
 			"speaker", "character", "Sigibert",

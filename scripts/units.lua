@@ -826,10 +826,11 @@ DefineUnitType("unit-portal", {
 	Type = "land",
 	NumDirections = 1,
 	BoardSize = 100, -- to prevent this unit from being loaded into transporters
-	VisibleUnderFog = true,
+--	VisibleUnderFog = true,
 	Indestructible = true,
 	Building = true,
 	NonSolid = true,
+	Ethereal = true,
 	Sounds = {
 		"selected", "click"
 	}

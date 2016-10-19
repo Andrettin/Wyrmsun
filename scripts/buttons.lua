@@ -384,6 +384,34 @@ DefineButton( { Pos = 9, Level = 1, Icon = "icon-leadership",
 	}
 } )
 
+DefineButton( { Pos = 13, Level = 1, Icon = "icon-scouting",
+	Action = "learn-ability", Value = "upgrade-ethereal-vision",
+	Key = "v", Hint = "Learn Ethereal ~!Vision", Popup = "popup-commands",
+	Description = "Ethereal Vision is a passive ability that allows the unit to see ethereal objects, such as interplanar portals",
+	ForUnit = { -- allow only level 3 units to learn it, so that it isn't too easy to do so
+		"unit-dwarven-thane",
+--		"unit-dwarven-guard",
+		"unit-dwarven-yale-lord",
+		"unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
+--		"unit-dwarven-witness",
+--		"unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
+--		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman",
+--		"unit-teuton-spearman", "unit-frank-spearman",
+--		"unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
+		"unit-teuton-ritter", "unit-frank-horseman",
+--		"unit-teuton-priest",
+		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-forest-gnomish-master-at-arms", "unit-derro-shadowguard",
+--		"unit-gnomish-herbalist",
+--		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-shadowstalker",
+		"unit-goblin-warlord", "unit-goblin-shadowstalker",
+--		"unit-goblin-shaman",
+--		"unit-kobold-footpad",
+		"unit-ettin",
+--		"unit-elven-swordsman", "unit-elven-priest",
+		"unit-surghan-mercenary-thane"
+	}
+} )
+
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-healing",
 	Action = "learn-ability", Value = "upgrade-healing",
 	Description = "Healing is an active ability that heals an organic unit",
