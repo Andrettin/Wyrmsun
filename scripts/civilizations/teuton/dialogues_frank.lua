@@ -94,7 +94,7 @@ DefineDialogue("sigibert-encounters-regin", {
 		},
 		{
 			"speaker", "character", "Regin",
-			"text", "Of course I am a dwarf, what else did you expect to find in the dwarven lands? The true question is: who and what are you? You, the one who rides a strange beast and looks like a giant gnome, and enters unannounced into the dwarven lands."
+			"text", "Of course I am a dwarf, what else did ye expect to find in the dwarven lands? The true question is: who and what are ye? Ye, the one who rides a strange beast and looks like a giant gnome, and enters unannounced into the dwarven lands."
 		},
 		{
 			"speaker", "character", "Sigibert",
@@ -102,7 +102,7 @@ DefineDialogue("sigibert-encounters-regin", {
 		},
 		{
 			"speaker", "character", "Regin",
-			"text", "A human, eh? Our traditions speak of humans, though some of our people believe your folk to only exist in tales."
+			"text", "A human, eh? Our traditions speak of humans, though some of our people believe yer folk to only exist in tales."
 		},
 		{
 			"speaker", "character", "Sigibert",
@@ -122,7 +122,7 @@ DefineDialogue("sigibert-encounters-regin", {
 		},
 		{
 			"speaker", "character", "Regin",
-			"text", "And now you are here! A hardy, courageous hero. Slay Fafnir for me, Sigibert, and you will be properly rewarded. My brother lives in Gnitaheith, and through some powerful sorcery he has transformed himself into a wyrm, a monster! Awed by Fafnir's might, a tribe of kobolds has come to serve him.",
+			"text", "And now yer here! A hardy, courageous hero. Slay Fafnir for me, Sigibert, and ye will be properly rewarded. My brother lives in Gnitaheith, and through some powerful sorcery he has transformed himself into a wyrm, a monster! Awed by Fafnir's might, a tribe of kobolds has come to serve him.",
 			"options", {"Accept", "Decline"},
 			"option-effects", {
 				function(s)
@@ -144,7 +144,7 @@ DefineDialogue("sigibert-accepts-regins-quest", {
 		},
 		{
 			"speaker", "character", "Regin",
-			"text", "Take this sword, you may need it in your fight against Fafnir. It is called Gram, and I consider it my finest work."
+			"text", "Take this sword, ye may need it in yer fight against Fafnir. It is called Gram, and I consider it my finest work."
 		},
 		{
 			"speaker", "character", "Sigibert",
@@ -166,7 +166,7 @@ DefineDialogue("fafnir-taunts-sigibert", {
 	Nodes = {
 		{
 			"speaker", "character", "Fafnir",
-			"text", "Young warrior! Who are you, one who has reddened your sword with my blood?"
+			"text", "Young warrior! Who are ye, one who has reddened yer sword with my blood?"
 		},
 		{
 			"speaker", "character", "Sigibert",
@@ -174,7 +174,7 @@ DefineDialogue("fafnir-taunts-sigibert", {
 		},
 		{
 			"speaker", "character", "Fafnir",
-			"text", "You refuse to tell me your name? Are you afraid of the words that may come out of the mouth of the dying?"
+			"text", "Ye refuse to tell me yer name? Are ye afraid of the words that may come out of the mouth of the dying?"
 		},
 		{
 			"speaker", "character", "Sigibert",
@@ -182,8 +182,22 @@ DefineDialogue("fafnir-taunts-sigibert", {
 		},
 		{
 			"speaker", "character", "Fafnir",
-			"text", "Sigibert, I advise you, leave my hoard alone. If you do not do so, the gold and the ring shall be your end."
-		},
+			"text", "Sigibert, I advise ye, leave my hoard alone. If ye do not do so, the gold and the ring shall be yer end.",
+			"options", {"Take the gold", "Heed Fafnir"},
+			"option-effects", {
+				function(s)
+					CallDialogue("sigibert-takes-fafnirs-gold", trigger_player)
+				end,
+				function(s)
+					CallDialogue("sigibert-heeds-fafnir", trigger_player)
+				end
+			}
+		}
+	}
+})
+
+DefineDialogue("sigibert-takes-fafnirs-gold", {
+	Nodes = {
 		{
 			"speaker", "character", "Sigibert",
 			"text", "Such may be your counsel, but I will take the treasure nevertheless. Your struggle with death will soon come to an end, goodbye Fafnir."
@@ -200,7 +214,30 @@ DefineDialogue("fafnir-taunts-sigibert", {
 		},
 		{
 			"speaker", "character", "Regin",
-			"text", "Sigibert... I am sorry, but you are not leaving with any of my gold. And besides, though you did so at my behest, you are still my brother's slayer, and I suppose I am bound by blood to avenge him."
+			"text", "Sigibert... I am sorry, but yer not leaving with any of my gold. And besides, though ye did so at my behest, yer still my brother's slayer, and I suppose I am bound by blood to avenge him."
+		}
+	}
+})
+
+DefineDialogue("sigibert-heeds-fafnir", {
+	Nodes = {
+		{
+			"speaker", "character", "Sigibert",
+			"text", "I will not take this cursed gold. Regin, keep it all to yourself."
+		},
+		{
+			"text", "Then Regin went up to Fafnir and cut out his heart with his sword, which was named Rithil."
+		},
+		{
+			"speaker", "character", "Regin",
+			"text", "Now, Sigibert, hold Fafnir's heart to the fire. The one who eats it shall become a mightier warrior."
+		},
+		{
+			"text", "Sigibert took Fafnir's heart and cooked it on a spit. When he thought that it was fully cooked, and the blood foamed out of the heart, Sigibert took it out."
+		},
+		{
+			"speaker", "character", "Regin",
+			"text", "Sigibert, we must part ways. As ye said, this is my gold now! I shall let none approach it."
 		}
 	}
 })
@@ -251,7 +288,16 @@ DefineDialogue("brunichilde-arrives-at-sigiberts-court", {
 	}
 })
 
-DefineDialogue("chilperich-marries-gailswintha", {
+DefineDialogue("chilperich-envies-sigiberts-gold", { -- this is shown only to the Chilperich player (meaning it is not visible to the player in the Sigibert campaign, it is included here more as a lore explanation), and only if Sigibert has both acquired Fafnir's gold and received Brunichilde's treasure
+	Nodes = {
+		{
+			"speaker", "character", "Chilperich",
+			"text", "Word has reached me that Sigibert has rapidly amassed a large amount of gold. I was told his new wife Brunichilde brought a lot of treasure with her, but could that alone have increased Sigibert's wealth by so much? I did not know Athanagild to be so rich... But I see no other possible reason. The Visigothic king has another daughter, it would do me well to marry her."
+		}
+	}
+})
+
+DefineDialogue("chilperich-marries-gailswintha", { -- Chilperich's marriage to Gailswintha only happens if his envy for Sigibert's gold is triggered, which requires Sigibert to have obtained both Brunichilde's treasure and Fafnir's cursed gold; in effect, this means that gaining the cursed gold indeed brings Sigibert to ruin in the end, as shown later
 	Nodes = {
 		{
 			"speaker", "character", "Brunichilde",
@@ -301,6 +347,15 @@ DefineDialogue("chilperich-murders-gailswintha", {
 	}
 })
 
+DefineDialogue("avars-invade-sigiberts-kingdom-again", { -- appears if Chilperich hasn't married Gailswintha
+	Nodes = {
+		{
+			"speaker", "character", "Sigibert",
+			"text", "Once more the Avars come to my borders. Don't these horse riders ever learn?"
+		}
+	}
+})
+
 DefineDialogue("saxons-attack-francia-through-italy", {
 	Nodes = {
 		{
@@ -321,12 +376,12 @@ DefineDialogue("saxons-attack-francia-through-italy", {
 		},
 		{
 			"speaker", "character", "Brunichilde",
-			"text", "(And someday Fredegunde will get her due...)"
+			"text", "(And someday Fredegunde will get her due...)" -- this part should only be displayed if Fredegunde has caused Gailswintha to get murdered
 		}
 	}
 })
 
-DefineDialogue("sigibert-receives-news-of-chariberts-death", {
+DefineDialogue("sigibert-receives-news-of-chariberts-death-gailswintha-murdered", { -- appears if Gailswintha has been murdered
 	Nodes = {
 		{
 			"speaker", "character", "Sigibert",
@@ -335,6 +390,43 @@ DefineDialogue("sigibert-receives-news-of-chariberts-death", {
 		{
 			"speaker", "character", "Brunichilde",
 			"text", "The time has come, Sigibert. Chilperich shall know our wrath!"
+		},
+		{
+			"speaker", "character", "Sigibert",
+			"text", "The bishop Germanus has told me that if I undertake this war without the intent of killing my brother, I will return safe and sound. But that otherwise I will end in ruin..."
+		},
+		{
+			"speaker", "character", "Brunichilde",
+			"text", "The old man must be going senile. Chilperich's misdeeds need to end! He killed my sister, my beloved sister..."
+		},
+		{
+			"speaker", "character", "Sigibert",
+			"text", "Yes. He has done great ill, specially to you. His murder of Gailswinthia must be avenged."
+		}
+	}
+})
+
+DefineDialogue("sigibert-receives-news-of-chariberts-death-gailswintha-alive", { -- appears if Gailswintha is alive (hasn't married to Chilperich)
+	Nodes = {
+		{
+			"speaker", "character", "Sigibert",
+			"text", "My brother Charibert has died... His lands were to be distributed between the remaining three of us, but Chilperich has preemptively invaded and taken my share for himself."
+		},
+		{
+			"speaker", "character", "Brunichilde",
+			"text", "We need to put a stop to Chilperich's ambitions."
+		},
+		{
+			"speaker", "character", "Sigibert",
+			"text", "The bishop Germanus has told me that if I undertake this war without the intent of killing my brother, I will return safe and sound. But that otherwise I will end in ruin..."
+		},
+		{
+			"speaker", "character", "Brunichilde",
+			"text", "I am not sure if the bishop's vision is to be trusted. But either way kinslaying is said to be a most vicious deed."
+		},
+		{
+			"speaker", "character", "Sigibert",
+			"text", "You are right. Though Chilperich is far too ambitious for his own good, killing him is not the right way."
 		}
 	}
 })
@@ -364,8 +456,22 @@ DefineDialogue("sigiberts-victory", {
 		},
 		{
 			"speaker", "character", "Sigibert",
-			"text", "His only option now is to surrender."
-		},
+			"text", "His only option now is to surrender.",
+			"option-effects", {
+				function(s)
+					if (true) then -- if Sigibert has acquired Fafnir's gold, resulting in Gailswintha's death and Brunichilde's vow for revenge, he dies (perhaps because if Brunichilde is enthralled with the thought of revenge, Fredegunde presumes that this is a fight to the death - possibly including the death of her children - and thus hires the assassins)
+						CallDialogue("sigiberts-murder", trigger_player)
+					else
+						CallDialogue("chilperich-surrenders", trigger_player)
+					end
+				end
+			}
+		}
+	}
+})
+
+DefineDialogue("sigiberts-murder", {
+	Nodes = {
 		{
 			"speaker", "character", "Sigibert",
 			"text", "Aagh!"
@@ -396,7 +502,38 @@ DefineDialogue("sigiberts-victory", {
 		},
 		{
 			"speaker", "character", "Brunichilde",
-			"text", "Fredegunde..."
+			"text", "Fredegunde...",
+			"option-effects", {
+				function(s)
+					CallDialogue("campaign-victory", trigger_player)
+				end
+			}
+		}
+	}
+})
+
+DefineDialogue("chilperich-surrenders", {
+	Nodes = {
+		{
+			"speaker", "character", "Sigibert",
+			"text", "It is over, Chilperich."
+		},
+		{
+			"speaker", "character", "Chilperich",
+			"text", "What are your terms?"
+		},
+		{
+			"speaker", "character", "Sigibert",
+			"text", "You will relinquish your lands. Your hair will be cut, and you will be sent to a monastery. Your children will serve under me, and I will make sure they are treated well."
+		},
+		{
+			"speaker", "character", "Chilperich",
+			"text", "I see no other way... I accept.",
+			"option-effects", {
+				function(s)
+					CallDialogue("campaign-victory", trigger_player)
+				end
+			}
 		}
 	}
 })
