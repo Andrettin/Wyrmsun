@@ -10,6 +10,7 @@ if (LoadedGame == false) then
 			WaterQuantity = "high",
 			WorkerQuantity = 0,
 			NoFlyingCreeps = true, -- too early a mission to add such perils
+			NoMightyCreeps = true, -- too early a mission to add such perils
 			PlayerCivilizations = {"dwarf", "dwarf"},
 			PlayerBuildings = {
 				{"Farm", "Farm"},
