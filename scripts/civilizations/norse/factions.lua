@@ -31,6 +31,7 @@ DefineFaction("sitone-tribe", { -- Tribes in Europe between 264 BC and 180 AD; S
 	Type = "tribe",
 	Colors = {"brown"},
 	DevelopsTo = {"sweden"}, -- same general area
+	DefaultAI = "sea-attack",
 	HistoricalFactionDerivations = {-264, "germanic", "yngling-tribe"}
 })
 
@@ -41,6 +42,7 @@ DefineFaction("swede-tribe", {
 	Colors = {"blue", "yellow"},
 	DevelopsTo = {"sweden"},
 	SplitsTo = {"sitone-tribe", "dane-tribe"},
+	DefaultAI = "sea-attack",
 	HistoricalFactionDerivations = {-264, "germanic", "yngling-tribe"}
 })
 
@@ -50,6 +52,7 @@ DefineFaction("dane-tribe", {
 	Type = "tribe",
 	Colors = {"red", "white"},
 	DevelopsTo = {"denmark"},
+	DefaultAI = "sea-attack",
 	HistoricalFactionDerivations = {526, "norse", "swede-tribe"} -- Danes were in Scania and Zealand in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 })
 
@@ -58,7 +61,8 @@ DefineFaction("geat-tribe", {
 	Civilization = "norse",
 	Type = "tribe",
 	Colors = {"teal"},
-	DevelopsTo = {"gautland"}
+	DevelopsTo = {"gautland"},
+	DefaultAI = "sea-attack"
 })
 
 -- polities
@@ -68,7 +72,8 @@ DefineFaction("denmark", {
 	Civilization = "norse",
 	Type = "polity",
 	Colors = {"red", "white"},
-	DefaultTier = "kingdom"
+	DefaultTier = "kingdom",
+	DefaultAI = "sea-attack"
 })
 
 DefineFaction("gautland", {
@@ -76,7 +81,8 @@ DefineFaction("gautland", {
 	Civilization = "norse",
 	Type = "polity",
 	Colors = {"teal"},
-	DefaultTier = "kingdom"
+	DefaultTier = "kingdom",
+	DefaultAI = "sea-attack"
 })
 
 DefineFaction("halogaland", {
@@ -85,7 +91,8 @@ DefineFaction("halogaland", {
 	Type = "polity",
 	Colors = {"purple"},
 	DefaultTier = "kingdom",
-	DevelopsTo = {"norway"}
+	DevelopsTo = {"norway"},
+	DefaultAI = "sea-attack"
 })
 
 DefineFaction("holmgard", {
@@ -102,7 +109,8 @@ DefineFaction("hordaland", {
 	Type = "polity",
 	Colors = {"cyan"},
 	DefaultTier = "kingdom",
-	DevelopsTo = {"norway"} -- allow Hordaland to become Norway if it unifies its territories
+	DevelopsTo = {"norway"}, -- allow Hordaland to become Norway if it unifies its territories
+	DefaultAI = "sea-attack"
 })
 
 DefineFaction("norway", {
@@ -110,7 +118,8 @@ DefineFaction("norway", {
 	Civilization = "norse",
 	Type = "polity",
 	Colors = {"blue", "red"},
-	DefaultTier = "kingdom"
+	DefaultTier = "kingdom",
+	DefaultAI = "sea-attack"
 })
 
 DefineFaction("orkney", { -- Earldom of Orkney
@@ -126,7 +135,8 @@ DefineFaction("orkney", { -- Earldom of Orkney
 		"head-of-state", "male", "monarchy", "duchy", "Earl",
 		"head-of-state", "female", "monarchy", "duchy", "Earl" -- correct?
 	},
-	DevelopsTo = {"norway"}
+	DevelopsTo = {"norway"},
+	DefaultAI = "sea-attack"
 })
 
 DefineFaction("scania", {
@@ -135,7 +145,8 @@ DefineFaction("scania", {
 	Type = "polity",
 	Colors = {"green"},
 	DefaultTier = "kingdom",
-	DevelopsTo = {"denmark", "sweden"}
+	DevelopsTo = {"denmark", "sweden"},
+	DefaultAI = "sea-attack"
 })
 
 DefineFaction("sweden", {
@@ -143,5 +154,6 @@ DefineFaction("sweden", {
 	Civilization = "norse",
 	Type = "polity",
 	Colors = {"blue", "yellow"},
-	DefaultTier = "kingdom"
+	DefaultTier = "kingdom",
+	DefaultAI = "sea-attack"
 })

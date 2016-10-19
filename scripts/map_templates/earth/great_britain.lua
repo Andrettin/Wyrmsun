@@ -30,3 +30,9 @@ SetMapTemplateTileLabel("earth", "The Weald", {3843, 886})
 SetMapTemplateResource("earth", "unit-copper-deposit", {3727, 902}) -- Tin deposits; Source: "Atlas de História Mundial", 2001, p. 41.
 
 -- In Welsh legends, Gorsedd Arberth (a hill/burial mound near Arberth) was a gateway to Annwn; thus it could be a portal that leads to Annwn in Alfheim; ; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 124.
+
+-- York / Eboracum
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "dere-tribe", {3815, 819}, 500, 588) -- the Dere (a collection of Anglian peoples) were in possession of York in 500 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "bernicia", {3815, 819}, 588, 654) -- according to tradition, Æthelric of Bernicia acquired the kingdom of Deira upon its king Ælle's death in 588 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "northumbria", {3815, 819}, 654, 1560) -- Northumbria unified by Oswiu of Bernicia in 654
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "england", {3815, 819}, 1560) -- political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.

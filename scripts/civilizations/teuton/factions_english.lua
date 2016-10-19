@@ -34,6 +34,7 @@ DefineFaction("bernice-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England"
 	Colors = {"brown"},
 	DevelopsTo = {"bernicia", "northumbria", "england", "scotland"},
 	FactionUpgrade = "upgrade-bernice-tribe-faction",
+	DefaultAI = "sea-attack",
 	Description = "The Bernice were an Anglian people who established themselves on the Northumbrian coast, eventually managing to conquer the surrounding Celtic territories.",
 	HistoricalFactionDerivations = {526, "teuton", "angle-tribe"}
 })
@@ -47,6 +48,7 @@ DefineFaction("dere-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Colors = {"blue"},
 	DevelopsTo = {"deira", "northumbria", "england", "scotland"},
 	FactionUpgrade = "upgrade-bernice-tribe-faction",
+	DefaultAI = "sea-attack",
 	Description = "The Dere were a group of Anglian peoples, who originally dwelled in the central and eastern parts of modern Yorkshire. Their name comes from the British word \"deifr\" (meaning \"waters\"), likely due to their initial settlements being located at the confluence of multiple rivers into the Humber.",
 	HistoricalFactionDerivations = {500, "teuton", "angle-tribe"} -- The Dere (a collection of Anglian peoples) were in possession of York in 500 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 })
@@ -60,6 +62,7 @@ DefineFaction("gumeninga-tribe", { -- Source: Frank Stenton, "Anglo-Saxon Englan
 	Colors = {"brown"},
 	DevelopsTo = {"england"},
 	FactionUpgrade = "upgrade-gumeninga-tribe-faction", -- since all we know about them is their religious location, it makes sense to give them a priest-related bonus
+	DefaultAI = "sea-attack",
 	Description = "The Gumeningas were an Anglo-Saxon tribe who inhabited the area of Middlesex.",
 	Background = "The name of the Gumeningas was present in the place name \"Gumeninga hearh\" (the Old English name for Harrow on the Hill), meaning \"the holy place of the Gumeningas\"."
 })
@@ -74,6 +77,7 @@ DefineFaction("bernicia", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	DefaultTier = "kingdom",
 	DevelopsTo = {"northumbria", "england", "scotland"},
 	FactionUpgrade = "upgrade-angle-tribe-faction",
+	DefaultAI = "sea-attack",
 	Description = "Bernicia was the kingdom founded by the Bernice people in Northumbria.",
 	HistoricalFactionDerivations = {547, "teuton", "bernice-tribe"} -- the Kingdom of Bernicia was founded in 547 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
 })
@@ -88,6 +92,7 @@ DefineFaction("deira", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, 
 	DefaultTier = "kingdom",
 	DevelopsTo = {"northumbria", "england", "scotland"},
 	FactionUpgrade = "upgrade-angle-tribe-faction",
+	DefaultAI = "sea-attack",
 	Description = "Deira was the kingdom founded by the Dere people in Northumbria.",
 	HistoricalFactionDerivations = {588, "teuton", "dere-tribe"} -- according to tradition, Æthelric of Bernicia acquired the kingdom of Deira upon its king Ælle's death in 588 AD; and since their king died in this year, the kingdom existed then
 })
@@ -102,6 +107,7 @@ DefineFaction("east-anglia", {
 	DefaultTier = "kingdom",
 	DevelopsTo = {"england"},
 	Description = "",
+	DefaultAI = "sea-attack",
 	HistoricalFactionDerivations = {616, "teuton", "angle-tribe"} -- The kingdom of East Anglia existed in 616 under Rædwald; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 78-79.
 })
 
@@ -116,6 +122,7 @@ DefineFaction("essex", {
 	DefaultTier = "kingdom",
 	DevelopsTo = {"england"},
 	FactionUpgrade = "upgrade-saxon-tribe-faction",
+	DefaultAI = "sea-attack",
 	Description = ""
 })
 
@@ -129,6 +136,7 @@ DefineFaction("kent", {
 	Colors = {"cyan"},
 	DefaultTier = "kingdom",
 	DevelopsTo = {"england"},
+	DefaultAI = "sea-attack",
 	Description = ""
 })
 
@@ -141,6 +149,7 @@ DefineFaction("mercia", {
 	Colors = {"white"},
 	DefaultTier = "kingdom",
 	DevelopsTo = {"england"},
+	DefaultAI = "sea-attack",
 	Description = "",
 	HistoricalFactionDerivations = {654, "teuton", "angle-tribe"} -- we have notice of the fall of a king Penda of Mercia in 654 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
 })
@@ -154,6 +163,7 @@ DefineFaction("middle-anglia", {
 	Colors = {"violet"},
 	DefaultTier = "kingdom",
 	DevelopsTo = {"england"},
+	DefaultAI = "sea-attack",
 	Description = "",
 	HistoricalFactionDerivations = {654, "teuton", "angle-tribe"} -- Peada was king of the Middle Angles when Penda fell; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
 })
@@ -167,6 +177,7 @@ DefineFaction("northumbria", {
 	Colors = {"brown"},
 	DefaultTier = "kingdom",
 	DevelopsTo = {"england", "scotland"},
+	DefaultAI = "sea-attack",
 	HistoricalFactionDerivations = {654, "teuton", "bernicia"} -- Northumbria unified by Oswiu of Bernicia in 654
 })
 
@@ -181,5 +192,6 @@ DefineFaction("wessex", {
 	DefaultTier = "kingdom",
 	DevelopsTo = {"england"},
 	FactionUpgrade = "upgrade-saxon-tribe-faction",
+	DefaultAI = "sea-attack",
 	Description = ""
 })
