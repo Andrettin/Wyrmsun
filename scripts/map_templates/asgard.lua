@@ -48,5 +48,5 @@ DefineMapTemplate("asgard", {
 SetMapTemplateHero("asgard", "Odin", "asgard", {-1, -1})
 SetMapTemplateHero("asgard", "Kvasir", "asgard", {-1, -1})
 
-SetMapTemplateLayerConnector("asgard", "unit-portal", {-1, -1}, "Earth")
-SetMapTemplateLayerConnector("asgard", "unit-portal", {-1, -1}, "Nidavellir")
+--SetMapTemplateLayerConnector("asgard", "unit-portal", {-1, -1}, "Earth")
+--SetMapTemplateLayerConnector("asgard", "unit-portal", {-1, -1}, "Nidavellir")

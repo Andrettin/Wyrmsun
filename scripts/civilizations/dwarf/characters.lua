@@ -94,6 +94,20 @@ DefineCharacter("Galar", {
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })
 
+DefineCharacter("Regin", {
+	Name = "Regin",
+	Gender = "male",
+	Type = "unit-dwarven-thane", -- should be a runemaster
+	Civilization = "dwarf",
+	Faction = "brising-clan",
+	Description = _("Regin is a dwarven mastersmith, unrivalled in his time. The mythical sword Gram was of his making, as were several other legendary blades."),
+	Icon = "icon-thursagan",
+	HairVariation = "brown-hair",
+	Trait = "upgrade-intelligent",
+	Persistent = true,
+	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
+})
+
 DefineCharacter("Thursagan", { -- from "The Sceptre of Fire" campaign of "Battle for Wesnoth"; master runesmith who crafted the Sceptre of Fire
 	Name = "Thursagan",
 	Gender = "male",

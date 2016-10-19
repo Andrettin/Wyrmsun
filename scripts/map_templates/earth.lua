@@ -64,7 +64,7 @@ DefineMapTemplate("earth", {
 	}
 })
 
-SetMapTemplateLayerConnector("earth", "unit-portal", {-1, -1}, "Asgard")
+--SetMapTemplateLayerConnector("earth", "unit-portal", {-1, -1}, "Asgard")
 
 Load("scripts/map_templates/earth/austria.lua")
 Load("scripts/map_templates/earth/bohemia.lua")
