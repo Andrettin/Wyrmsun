@@ -1447,7 +1447,7 @@ function CreateCreeps(player, creep_type, creep_number, min_x, max_x, min_y, max
 		local Count = 0
 		local WhileCount = 0
 		Count = creep_number
-		while (Count > 0 and WhileCount < creep_number * 100) do
+		while (Count > 0 and WhileCount < creep_number * 1000) do
 			RandomX = SyncRand(max_x - min_x + 1) + min_x
 			RandomY = SyncRand(max_y - min_y + 1) + min_y
 			if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then

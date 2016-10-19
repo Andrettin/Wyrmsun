@@ -29,16 +29,16 @@ if (LoadedGame == false) then
 	end
 end
 
-CreateCreeps(15, "unit-yale", 12 - GetPlayerData(15, "UnitTypesCount", "unit-yale"), 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+CreateCreeps(PlayerNumNeutral, "unit-yale", 12 - GetPlayerData(PlayerNumNeutral, "UnitTypesCount", "unit-yale"), 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 	
 if (GameSettings.Difficulty == 1) then -- if difficulty is easy
-	CreateCreeps(15, "unit-slime", 6, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+	CreateCreeps(PlayerNumNeutral, "unit-slime", 6, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 else
-	CreateCreeps(15, "unit-slime", 12, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+	CreateCreeps(PlayerNumNeutral, "unit-slime", 12, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 end
 
 if (GameSettings.Difficulty == 3) then -- if difficulty is hard
-	CreateCreeps(15, "unit-wyrm", 1, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2)
+	CreateCreeps(PlayerNumNeutral, "unit-wyrm", 1, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2)
 elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
-	CreateCreeps(15, "unit-wyrm", 3, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2)
+	CreateCreeps(PlayerNumNeutral, "unit-wyrm", 3, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2)
 end
