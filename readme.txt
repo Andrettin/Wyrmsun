@@ -75,6 +75,7 @@ https://github.com/Andrettin/Wyrmsun
 - Temples now sell scrolls.
 - Added Portal (neutral and indestructible; visible and usable only to units with Ethereal Vision), which allows accessing other planes and worlds in the new Campaign mode (graphics by Jinn).
 - Added Cavern Entrance (neutral and indestructible), which allows accessing other surface layers in the new Campaign mode (graphics by Jinn).
+- Temples now correctly receive the time efficiency bonus from Writing upgrades.
 
 * Factions
 - Revamped Frankish personal names.
