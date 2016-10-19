@@ -1079,48 +1079,36 @@ DefineUnitType("unit-wyrm", {
 		--]]
 		{
 			"variation-id", "green-scales",
-			"upgrade-forbidden", "upgrade-vicious"
---			"upgrade-forbidden", "upgrade-wyrm-child"
-		},
-		{
-			"variation-id", "green-scales-vicious",
-			"icon", "icon-wyrm-vicious",
-			"upgrade-required", "upgrade-vicious"
 --			"upgrade-forbidden", "upgrade-wyrm-child"
 		},
 		{
 			"variation-id", "blue-scales",
 			"file", "neutral/units/wyrm_blue_scales.png",
 			"icon", "icon-wyrm-blue-scales",
-			"upgrade-forbidden", "upgrade-vicious"
 --			"upgrade-forbidden", "upgrade-wyrm-child"
 		},
 		{
 			"variation-id", "cyan-scales",
 			"file", "neutral/units/wyrm_cyan_scales.png",
 			"icon", "icon-wyrm-cyan-scales",
-			"upgrade-forbidden", "upgrade-vicious"
 --			"upgrade-forbidden", "upgrade-wyrm-child"
 		},
 		{
 			"variation-id", "purple-scales",
 			"file", "neutral/units/wyrm_purple_scales.png",
 			"icon", "icon-wyrm-purple-scales",
-			"upgrade-forbidden", "upgrade-vicious"
 --			"upgrade-forbidden", "upgrade-wyrm-child"
 		},
 		{
 			"variation-id", "red-scales",
 			"file", "neutral/units/wyrm_red_scales.png",
 			"icon", "icon-wyrm-red-scales",
-			"upgrade-forbidden", "upgrade-vicious"
 --			"upgrade-forbidden", "upgrade-wyrm-child"
 		},
 		{
 			"variation-id", "yellow-scales",
 			"file", "neutral/units/wyrm_yellow_scales.png",
 			"icon", "icon-wyrm-yellow-scales",
-			"upgrade-forbidden", "upgrade-vicious"
 --			"upgrade-forbidden", "upgrade-wyrm-child"
 		}
 	},

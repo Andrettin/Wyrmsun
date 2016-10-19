@@ -1418,16 +1418,26 @@ DefineCivilization("kobold", {
 	Display = "Kobold",
 	Visible = true,
 	Species = "kobold",
+	ParentCivilization = "neutral",
 	Language = "kobold",
-	ParentCivilization = "goblin",
 	Adjective = "Kobold",
 	Playable = false,
 	DefaultColor = "violet",
 	NegativeYearLabel = "BU", -- Before Untersberg
 	YearLabel = "YU", -- Years Untersberg
 	ButtonIcons = {
+		"move", "icon-dwarven-boots",
+		"stop", "icon-goblin-wooden-shield",
 		"attack", "icon-gnomish-thrusting-sword-1",
-		"stand-ground", "icon-goblin-stand-ground"
+		"patrol", "icon-goblin-patrol-land",
+		"stand-ground", "icon-goblin-stand-ground",
+		"return-goods", "icon-goblin-return-goods"
+	},
+	UIFillers = {
+		"goblin/ui/filler_bottom.png", 380, -181,
+		"goblin/ui/resource.png", 0, 0,
+		"goblin/ui/buttonpanel.png", -256, -200,
+		"goblin/ui/infopanel.png", 0, -200
 	},
 	Description = _("Kobolds live in the deep caves of Nidavellir, and worship wyrms as sacred ancestors. They share the dwarven passion for mining and metals, but not their technological advancement. Although kobolds can be inventive, their isolation from other communities has made the spread of progress to their lands more difficult. Being the sole intelligent reptilian race in Nidavellir, they feel threatened by the presence of dwarves, gnomes and goblins - all of which they call \"breastlings\"."),
 	PersonalNames = {

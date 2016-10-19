@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,17 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("fafning-tribe", {
-	Name = "Fafning Tribe",
+DefineCharacter("Fafnir", {
+	Name = "Fafnir",
+	Gender = "male",
+	Type = "unit-wyrm",
 	Civilization = "kobold",
-	Type = "tribe",
-	Colors = {"purple"},
-	DefaultAI = "passive"
-})
-
-DefineFaction("shellscale-tribe", {
-	Name = "Shellscale Tribe",
-	Civilization = "kobold",
-	Type = "tribe",
-	Colors = {"blue"}
+	Faction = "fafning-tribe",
+	Description = _("Fafnir was originally a greedy dwarf, the son of Hreidmar and brother of Regin. Through potent magics he transformed himself into a wyrm."),
+	Icon = "icon-wyrm-vicious",
+	Trait = "upgrade-vicious",
+	Persistent = true
 })
