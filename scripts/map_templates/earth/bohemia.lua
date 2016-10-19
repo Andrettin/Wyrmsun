@@ -34,4 +34,4 @@ SetMapTemplateResource("earth", "unit-silver-deposit", {4194, 928}, 0, "smitna")
 -- Prague
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "marcomanni-tribe", {4169, 908}, -9, 526) -- Marbod, king of the Suebic tribe of the Marcomanni, conquered Bohemia in 9 BC
 SetMapTemplateHero("earth", "Marbod", "marcomanni-tribe", {4169, 908}, -9, 19) -- Marbod, king of the Suebic tribe of the Marcomanni, conquered Bohemia in 9 BC; Marbod deposed in 19 AD
-SetMapTemplateUnit("earth", "unit-teuton-town-hall", "bavarian-tribe", {4169, 908}, 526) -- political situation in 526-600 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+SetMapTemplateUnit("earth", "unit-teuton-farm", "bavarian-tribe", {4169, 908}, 526) -- Bohemia was in Bavarian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.

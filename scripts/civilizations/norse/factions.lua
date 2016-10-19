@@ -50,7 +50,7 @@ DefineFaction("dane-tribe", {
 	Type = "tribe",
 	Colors = {"red", "white"},
 	DevelopsTo = {"denmark"},
-	HistoricalFactionDerivations = {526, "norse", "swede-tribe"} -- Danes were in Scania and Zealand in 526-600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+	HistoricalFactionDerivations = {526, "norse", "swede-tribe"} -- Danes were in Scania and Zealand in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 })
 
 DefineFaction("geat-tribe", {

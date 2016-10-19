@@ -25,6 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+SetMapTemplateTileTerrain("earth", "shallow-water", 3815, 1011) -- to make the river appear properly, as single water tiles aren't supported
+SetMapTemplateTileTerrain("earth", "shallow-water", 3812, 1030) -- to make the river appear properly, as single water tiles aren't supported
+
 SetMapTemplateResource("earth", "unit-copper-deposit", {3749, 956}) -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
 
 -- Amiens / Ambiani

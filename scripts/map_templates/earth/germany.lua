@@ -46,6 +46,12 @@ SetMapTemplateUnit("earth", "unit-latin-barracks", "rome", {4029, 911}, 161, 526
 SetMapTemplateUnit("earth", "unit-teuton-farm", "francia", {4029, 911}, 526, 561) -- Mayence was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 SetMapTemplateUnit("earth", "unit-teuton-farm", "austrasia", {4029, 911}, 561) -- Mogontiacum went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
+-- Scheidungen
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "thuringian-tribe", {4107, 873}, 526) -- Scheidungen was in Thuringian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+
+-- Regensburg / Ratisbon / Regina Castra
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "bavarian-tribe", {4116, 932}, 526) -- Ratisbon was in Bavarian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+
 -- Trier / Treveri
 SetMapTemplateUnit("earth", "unit-teuton-farm", "austrasia", {3993, 917}, 561) -- Treveri went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
