@@ -110,6 +110,7 @@ DefineFaction("francia", {
 	HistoricalFactionDerivations = {481, "teuton", "frank-tribe"}, -- In 481 AD the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 	HistoricalTechnologies = {
 		"upgrade-teuton-writing", 0, -- polities must have writing
+		"upgrade-teuton-masonry", 0,
 		"upgrade-teuton-coinage", 565 -- Merovingian Francia began to issue gold solidi at some point between 565 and 578 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 176.
 	},
 	HistoricalCapitals = {

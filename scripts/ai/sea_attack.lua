@@ -133,7 +133,7 @@ local sea_funcs = {
 	function() return AiSleep(500) end,
 	function() return AiNeed(GetAiUnitType("dock")) end,
 	function()
-		if (AiGetRace() ~= "germanic" and AiGetRace() ~= "teuton") then
+		if (AiGetRace() ~= "germanic") then
 			return AiNeed(GetAiUnitType("smithy")); -- Germanics needed a smithy earlier to upgrade to Teuton
 		end
 		return false;
