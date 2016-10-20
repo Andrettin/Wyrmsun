@@ -25,8 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- Athens
-SetMapTemplateUnit("earth", "unit-latin-town-hall", "rome", {4380, 1184}, -146) -- Athens was acquired by Rome in 146 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+-- Carthage
+SetMapTemplateUnit("earth", "unit-latin-town-hall", "carthage", {4074, 1208}, -218) -- Carthage was in Carthaginian possession in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 32.
 
--- Krisa
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "mycenae", {4351, 1172}, -1700, -1190) -- Mycenaean fortifications present in Krisa (in Locris Ozolis) between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67. Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
+-- Utica
+SetMapTemplateUnit("earth", "unit-latin-farm", "carthage", {4070, 1205}, -218) -- Utica was in Carthaginian possession in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 32.

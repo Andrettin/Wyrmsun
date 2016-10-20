@@ -69,6 +69,9 @@ SetMapTemplateUnit("earth", "unit-teuton-farm", "austrasia", {3962, 1062}, 561) 
 -- Metz / Mettis
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "austrasia", {3981, 931}, 561) -- Mettis went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
+-- Molsheim
+-- University founded in Molsheim in 1618. Source: The Cambridge Modern History Atlas, 1912, p. 9.
+
 -- Nice / Nicea
 SetMapTemplateUnit("earth", "unit-teuton-farm", "burgundia", {4006, 1052}, 561) -- Nicea went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
@@ -98,8 +101,12 @@ SetMapTemplateUnit("earth", "unit-teuton-town-hall", "salia", {3915, 923}, 561) 
 SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4013, 948}, -50, 161) -- Gaul (where Argentoratum was located) was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 SetMapTemplateUnit("earth", "unit-latin-barracks", "rome", {4013, 948}, 161, 413) -- Legionary base present in Argentorate in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 SetMapTemplateUnit("earth", "unit-teuton-farm", "burgundy", {4013, 948}, 413, 436) -- Argentoratum/Strassburg conquered by the Burgundians in 413 AD, after which they founded a kingdom that lasted until 436; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
-SetMapTemplateUnit("earth", "unit-teuton-farm", "francia", {4013, 948}, 526, 561) -- Strasburg was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-SetMapTemplateUnit("earth", "unit-teuton-farm", "austrasia", {4013, 948}, 561) -- Argentoratum went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+SetMapTemplateUnit("earth", "unit-teuton-farm", "alamanni-tribe", {4013, 948}, 481, 506) -- political situation of the territories surrounding the Frankish realm in 481-814 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+SetMapTemplateUnit("earth", "unit-teuton-farm", "francia", {4013, 948}, 506, 561) -- Alemanni lands (Alsace, Baden, Wurtemberg, Augsburg and etc.) conquered by the Franks in 506; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+SetMapTemplateUnit("earth", "unit-teuton-farm", "austrasia", {4013, 948}, 561, 919) -- Argentoratum went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+SetMapTemplateUnit("earth", "unit-teuton-farm", "holy-rome", {4013, 948}, 919) -- Duchy of Swabia; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+-- Prévôt des maréchaux existent in Strasbourg in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
+-- Parlement or conseil souverain existent in Colmar in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 
 -- Toulon / Tolo
 SetMapTemplateUnit("earth", "unit-teuton-farm", "burgundia", {3974, 1065}, 561) -- Tolo went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
