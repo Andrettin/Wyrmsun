@@ -31,8 +31,8 @@ SetMapTemplateUnit("earth", "unit-teuton-town-hall", "angle-tribe", {4054, 801},
 -- Cologne / Colonia Agrippina
 SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {3998, 887}, -50, 161) -- Gaul (where Colonia Agrippina was located) was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 SetMapTemplateUnit("earth", "unit-latin-barracks", "rome", {3998, 887}, 161, 526) -- Legionary base present in a location near Colonia Agrippina in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-SetMapTemplateUnit("earth", "unit-teuton-farm", "francia", {3998, 887}, 526, 561) -- Cologne was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-SetMapTemplateUnit("earth", "unit-teuton-farm", "austrasia", {3998, 887}, 561) -- Colonia Agrippina went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+SetMapTemplateUnit("earth", "unit-teuton-barracks", "francia", {3998, 887}, 526, 561) -- Cologne was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+SetMapTemplateUnit("earth", "unit-teuton-barracks", "austrasia", {3998, 887}, 561) -- Colonia Agrippina went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
 -- Konnenberg
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "saxon-tribe", {4045, 857}, 526) -- Konnenberg was in Saxon possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
@@ -43,8 +43,8 @@ SetMapTemplateUnit("earth", "unit-teuton-farm", "austrasia", {4051, 965}, 561) -
 -- Mainz / Mayence / Mogontiacum
 SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4029, 911}, -50, 161) -- Gaul (where Mogontiacum was located) was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 SetMapTemplateUnit("earth", "unit-latin-barracks", "rome", {4029, 911}, 161, 526) -- Legionary base present in a location near Colonia Agrippina in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-SetMapTemplateUnit("earth", "unit-teuton-farm", "francia", {4029, 911}, 526, 561) -- Mayence was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-SetMapTemplateUnit("earth", "unit-teuton-farm", "austrasia", {4029, 911}, 561) -- Mogontiacum went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+SetMapTemplateUnit("earth", "unit-teuton-barracks", "francia", {4029, 911}, 526, 561) -- Mayence was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+SetMapTemplateUnit("earth", "unit-teuton-barracks", "austrasia", {4029, 911}, 561) -- Mogontiacum went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
 -- Paderborn
 SetMapTemplateLayerConnector("earth", "unit-portal", {4033, 873}, "Nidavellir") -- Gnitaheith (where Fafnir dwelled) has been identified with a real location south of Paderborn, so place a portal to Nidavellir there; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 343.

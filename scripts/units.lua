@@ -176,10 +176,12 @@ DefineUnitType("unit-template-unit", { Name = _("Unit"),
 	ButtonPopup = "popup-unit"
 })
 
-DefineUnitType("unit-template-building", { Name = _("Building"),
+DefineUnitType("unit-template-building", {
+	Name = _("Building"),
 	TileSize = {2, 2}, BoxSize = {63, 63}, -- default tile and box size
 	Animations = "animations-building",
 	DrawLevel = 40,
+	SightRange = 2,
 	Building = true,
 	VisibleUnderFog = true,
 	SelectableByRectangle = true,
@@ -209,7 +211,6 @@ DefineUnitType("unit-template-deposit", {
 	Speed = 0,
 	HitPoints = 25500,
 	TileSize = {3, 3}, BoxSize = {95, 95},
-	SightRange = 1,
 	Armor = 20, Missile = "missile-none",
 	Priority = 0,
 	Corpse = "unit-destroyed-3x3-place",
@@ -237,7 +238,6 @@ DefineUnitType("unit-template-mine", {
 	Speed = 0,
 	HitPoints = 650,
 	TileSize = {3, 3}, BoxSize = {95, 95},
-	SightRange = 1,
 --	Armor = 20, Missile = "missile-none",
 	Armor = 5, Missile = "missile-none",
 	Priority = 20, AnnoyComputerFactor = 20,
@@ -391,7 +391,6 @@ DefineUnitType("unit-coal-mine", {
 	Speed = 0,
 	HitPoints = 25500,
 	TileSize = {3, 3}, BoxSize = {95, 95},
-	SightRange = 1,
 	Armor = 20, Missile = "missile-none",
 	Priority = 0,
 	Corpse = "unit-destroyed-3x3-place",
@@ -3256,7 +3255,6 @@ DefineUnitType("unit-template-farm", {
 	Speed = 0,
 	HitPoints = 334, -- 400 with masonry
 	TileSize = {2, 2}, BoxSize = {63, 63},
-	SightRange = 1,
 	Armor = 5, Missile = "missile-none",
 	Priority = 20, AnnoyComputerFactor = 45,
 	Points = 100,
@@ -3294,7 +3292,6 @@ DefineUnitType("unit-template-barracks", {
 	Speed = 0,
 	HitPoints = 667, -- 800 with masonry
 	TileSize = {3, 3}, BoxSize = {95, 95},
-	SightRange = 1,
 	Armor = 5, Missile = "missile-none",
 	Priority = 30, AnnoyComputerFactor = 35,
 	Points = 160,
@@ -3334,7 +3331,6 @@ DefineUnitType("unit-template-lumber-mill", {
 	Speed = 0,
 	HitPoints = 500, -- 600 with masonry
 	TileSize = {3, 3}, BoxSize = {95, 95},
-	SightRange = 1,
 	Armor = 5, Missile = "missile-none",
 	Priority = 25, AnnoyComputerFactor = 15,
 	Points = 150,
@@ -3408,7 +3404,6 @@ DefineUnitType("unit-template-smithy", {
 	Speed = 0,
 	HitPoints = 646, -- 775 with masonry
 	TileSize = {3, 3}, BoxSize = {95, 95},
-	SightRange = 1,
 	Armor = 5, Missile = "missile-none",
 	Priority = 15, AnnoyComputerFactor = 20,
 	Points = 170,
@@ -3488,7 +3483,6 @@ DefineUnitType("unit-template-stables", {
 	Speed = 0,
 	HitPoints = 417, -- 500 with masonry
 	TileSize = {3, 3}, BoxSize = {95, 95},
-	SightRange = 1,
 	Armor = 5, Missile = "missile-none",
 	Priority = 15, AnnoyComputerFactor = 15,
 	Points = 210,
@@ -3523,7 +3517,6 @@ DefineUnitType("unit-template-temple", {
 	Speed = 0,
 	HitPoints = 584, -- 700 with masonry
 	TileSize = {3, 3}, BoxSize = {95, 95},
-	SightRange = 1,
 	Armor = 5, Missile = "missile-none",
 	Priority = 15, AnnoyComputerFactor = 35,
 	Points = 240,
@@ -3649,7 +3642,6 @@ DefineUnitType("unit-template-dock", {
 	Speed = 0,
 	HitPoints = 917, -- 1100 with masonry
 	TileSize = {3, 3}, BoxSize = {95, 95},
-	SightRange = 1,
 	Armor = 5, Missile = "missile-none",
 	Priority = 30, AnnoyComputerFactor = 20,
 	Points = 170,
@@ -3840,7 +3832,6 @@ DefineUnitType("unit-mercenary-camp", {
 	Speed = 0,
 	HitPoints = 800,
 	TileSize = {3, 3}, BoxSize = {95, 95},
-	SightRange = 1,
 	Armor = 20, Missile = "missile-none",
 	Priority = 30, AnnoyComputerFactor = 35,
 	Corpse = "unit-destroyed-3x3-place",

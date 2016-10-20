@@ -76,6 +76,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Portal (neutral and indestructible; visible and usable only to units with Ethereal Vision), which allows accessing other planes and worlds in the new Campaign mode (graphics by Jinn).
 - Added Cavern Entrance (neutral and indestructible), which allows accessing other surface layers in the new Campaign mode (graphics by Jinn).
 - Temples now correctly receive the time efficiency bonus from Writing upgrades.
+- Increased the sight of buildings which had a sight of 1 to 2.
 
 * Factions
 - Revamped Frankish personal names.

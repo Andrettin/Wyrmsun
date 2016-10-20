@@ -75,7 +75,7 @@ DefineCharacter("Fjalar", {
 	HairVariation = "brown-hair",
 	Trait = "upgrade-cruel",
 	Year = -3000,
-	Persistent = true,
+--	Persistent = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })
 
@@ -90,7 +90,7 @@ DefineCharacter("Galar", {
 	HairVariation = "brown-hair",
 	Trait = "upgrade-cruel",
 	Year = -3000,
-	Persistent = true,
+--	Persistent = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })
 
