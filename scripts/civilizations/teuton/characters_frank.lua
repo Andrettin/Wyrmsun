@@ -25,6 +25,32 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineCharacter("Chilperich", {
+	Name = "Chilperich",
+	Gender = "male",
+	Type = "unit-frank-horseman",
+	Civilization = "teuton",
+	Faction = "francia",
+	Description = _("Born to the late Frankish king Chlothar I, Chilperich harbors great ambitions to establish his supremacy over the entire realm, subsuming his brothers' share of their father's inheritance."),
+	Icon = "icon-frank-horseman",
+	HairVariation = "brown-hair",
+	Trait = "upgrade-reckless",
+	Persistent = true
+})
+
+DefineCharacter("Gunthram", {
+	Name = "Gunthram",
+	Gender = "male",
+	Type = "unit-frank-horseman",
+	Civilization = "teuton",
+	Faction = "francia",
+	Description = _("As one of the sons of the Frankish king Chlothar I, Gunthram inherited the Burgundian part of the Frankish realm from his father."),
+	Icon = "icon-frank-horseman",
+	HairVariation = "brown-hair",
+	Trait = "upgrade-dextrous",
+	Persistent = true
+})
+
 DefineCharacter("Sigibert", {
 	Name = "Sigibert",
 	Gender = "male",

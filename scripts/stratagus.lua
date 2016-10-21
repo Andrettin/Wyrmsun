@@ -1263,7 +1263,7 @@ end
 
 function GetFactionExists(faction)
 	for i=0,(PlayerMax - 2) do
-		if (GetPlayerData(i, "Name") == faction) then
+		if (Players[i].Type ~= PlayerNobody and (GetPlayerData(i, "Name") == faction or GetPlayerData(i, "Faction") == faction)) then
 			return true
 		end
 	end
@@ -1300,7 +1300,7 @@ end
 
 function GetFactionPlayer(faction)
 	for i=0,(PlayerMax - 2) do
-		if (Players[i].Type ~= PlayerNobody and GetPlayerData(i, "Name") == faction) then
+		if (Players[i].Type ~= PlayerNobody and (GetPlayerData(i, "Name") == faction or GetPlayerData(i, "Faction") == faction)) then
 			return i
 		end
 	end

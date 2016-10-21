@@ -28,7 +28,7 @@
 AddTrigger("sigibert-deplores-chilperichs-actions",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "Faction") == "austrasia" and FindHero("Sigibert", i) ~= nil) then
+			if (GetPlayerData(i, "Faction") == "austrasia" and FindHero("Sigibert", i) ~= nil and GetFactionExists("salia") and FindHero("Chilperich", GetFactionPlayer("salia")) ~= nil and GetFactionExists("neustria") and GetFactionExists("burgundia") and FindHero("Gunthram", GetFactionPlayer("burgundia")) ~= nil) then
 				trigger_player = i
 				return true
 			end

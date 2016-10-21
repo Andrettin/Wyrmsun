@@ -45,9 +45,6 @@ SetMapTemplateUnit("earth", "unit-teuton-temple", "burgundia", {3948, 1053}, 561
 -- Autin / Augustodunum
 SetMapTemplateUnit("earth", "unit-teuton-farm", "burgundia", {3933, 981}, 561) -- Augustodunum went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
--- Auvergne / Arverni
-SetMapTemplateUnit("earth", "unit-teuton-farm", "austrasia", {3909, 1006}, 561) -- Arverni went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-
 -- Avignon / Avinio
 SetMapTemplateUnit("earth", "unit-teuton-farm", "austrasia", {3952, 1045}, 561) -- Avinio went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
@@ -72,6 +69,9 @@ SetMapTemplateUnit("earth", "unit-teuton-temple", "burgundia", {3894, 975}, 561)
 SetMapTemplateUnit("earth", "unit-teuton-farm", "rome", {3947, 941}, 395, 486) -- Châlons was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 SetMapTemplateUnit("earth", "unit-teuton-farm", "francia", {3947, 941}, 486, 561) -- Châlons' area became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 SetMapTemplateUnit("earth", "unit-teuton-farm", "austrasia", {3947, 941}, 561) -- Châlons' area went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+
+-- Clermont-Ferrand / Arverni
+SetMapTemplateUnit("earth", "unit-teuton-farm", "austrasia", {3909, 1006}, 561) -- Arverni went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
 -- Dijon / Divio
 SetMapTemplateUnit("earth", "unit-teuton-farm", "burgundia", {3955, 994}, 561) -- Divio went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
@@ -115,6 +115,7 @@ SetMapTemplateUnit("earth", "unit-teuton-temple", "burgundia", {4006, 1052}, 561
 
 -- Orléans / Aurehani
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "burgundia", {3884, 961}, 561) -- Chlothar (Frankish king) died in 561, and Orléans went to his son Gunthram; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328; Gregory of Tours, "History of the Franks", IV.22.
+SetMapTemplateHero("earth", "Gunthram", "burgundia", {3884, 961}, 561, 592)
 
 -- Paris
 SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {3891, 937}, 395, 561) -- Paris was a part of the Roman Empire and was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
@@ -182,6 +183,7 @@ SetMapTemplateUnit("earth", "unit-teuton-temple", "neustria", {3867, 1048}, 561)
 
 -- Tournai / Tornacum
 SetMapTemplateUnit("earth", "unit-teuton-farm", "salia", {3917, 896}, 561) -- Tornacum went to Chilperich when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+SetMapTemplateHero("earth", "Chilperich", "salia", {3917, 896}, 561, 584)
 
 -- Tours / Turones
 SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {3857, 971}, 395, 486) -- Tours was a part of the Roman Empire and was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.

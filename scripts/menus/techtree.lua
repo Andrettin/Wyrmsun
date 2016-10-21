@@ -613,9 +613,10 @@ function GetAvailableCivilizationsTechTree()
 	
 	local civilizations = GetCivilizations()
 	for i=1,table.getn(civilizations) do
-		if (GetCivilizationData(civilizations[i], "Playable") and table.getn(GetCivilizationData(civilizations[i], "Quests")) > 0) then
+		if (GetCivilizationData(civilizations[i], "Playable")) then
 			if (
 				(civilizations[i] ~= "teuton" or GetQuestData("gylves-realm", "Completed"))
+				and civilizations[i] ~= "goblin"
 			) then
 				local playable_civilization_species = CapitalizeString(GetCivilizationData(civilizations[i], "Species"))
 				local playable_civilization = GetCivilizationData(civilizations[i], "Display")
