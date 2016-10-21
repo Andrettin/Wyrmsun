@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wyrmsun\n"
 "POT-Creation-Date: 2014-10-04 18:46+0100\n"
-"PO-Revision-Date: 2016-10-18 19:16+0100\n"
+"PO-Revision-Date: 2016-10-21 13:41+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -65,190 +65,190 @@ msgid "The materials we need have been collected."
 msgstr "Surowce, jakich potrzebowaliśmy zostały zgromadzone."
 
 msgid "The materials we need have been collected. It is time to build our new homes by these rocks!"
-msgstr ""
+msgstr "Zebraliśmy wszystkie potrzebne surowce. Czas wybudować nasz nowy dom z tych kamieni!"
 
 msgid "Modsogning Clan"
-msgstr ""
+msgstr "Klan Modsogning"
 
 msgid "Svarinshaug"
-msgstr ""
+msgstr "Svarinshaug"
 
 msgid "Fjalar"
-msgstr ""
+msgstr "Fjalar"
 
 msgid "Galar"
-msgstr ""
+msgstr "Galar"
 
 msgid "Fjalar and Galar"
-msgstr ""
+msgstr "Fjalar i Galar"
 
 msgid "A few days ago our clan's sage, Thjodrorir, disappeared during the night. Word has now reached our chieftain Modsognir that the dwarves Fjalar and Galar have captured Thjodrorir, for unknown reasons. The chieftain has sent you, Durin, to enter their hall, rescue the sage - or what remains of him - and bring the evil pair to the clan's justice."
-msgstr ""
+msgstr "Kilka dni temu mędrzec naszego klanu, Thjodrorir, zniknął w nocy. Do uszu naszego wodza, Modsognira, dotarły pogłoski jakoby krasnoludy Fjalar i Galar porwali Thjodrorira z nieznanych powodów. Wódz wysyła Ciebie, Durinie, by dostać się na ich dwór, ocalić mędrca - bądź to, co z niego zostało - i sprowadzić na zdradliwą parę sprawiedliwość w imię klanu."
 
 msgid "We must wary, for these corridors are filled with the two dwarves' thugs. Let us get this over with as quickly as we can."
-msgstr ""
+msgstr "Musimy zachować baczenie, korytarze są zapełnione zbirami tych dwóch krasnoludów. Uporajmy się z tym najszybciej, jak się da."
 
 msgid "Fjalar's and Galar's Hall"
-msgstr ""
+msgstr "Dwór Fjalara i Galara"
 
 msgid "- Defeat your enemies"
-msgstr ""
+msgstr "- Pokonaj swoich nieprzyjaciół"
 
 msgid "- Rescue Thjodrorir's remains"
-msgstr ""
+msgstr "- Odzyskaj szczątki Thjodrorira"
 
 msgid "- Bring Fjalar and Galar to the clan's justice"
-msgstr ""
+msgstr "- Sprowadź sprawiedliwość na Fjalara i Galara"
 
 msgid "Fjalar and Galar, I am here on behalf of Modsognir. Where is Thjodrorir?"
-msgstr ""
+msgstr "Fjalarze i Galarze, przychodzę w imieniu Modsognira. Gdzie jest Thjodrorir?"
 
 msgid "He is no more. We brew his blood into mead, to absorb his ancient wisdom and gift with words."
-msgstr ""
+msgstr "Już go nie ma. Uwarzyliśmy jego krew w miodzie, by posiąść jego starożytną wiedzę i dar słów."
 
 msgid "I feel rather like a sage, myself. We made a cauldron of mead, Odrorir, along with two jars, Bodn and Son. Go away, you can't drink any!"
-msgstr ""
+msgstr "Sam czuję się jak mędrzec. Uwarzyliśmy kocioł pełen miodu, Odrorir, a także jeszcze dwa słoje, Bodn i Son. Odejdźcie, nie dostaniecie ni kropli!"
 
 msgid "Abominable! How could you, to Thjodrorir... Foolish as you seem, the mead certainly made you none the wiser."
-msgstr ""
+msgstr "Obrzydlistwo! Jak mogliście zrobić to Thjodrorirowi... Głupcy z was, a miód nie uczynił was ani krzty mądrzejszymi."
 
 msgid "Thjodrorir went down first, but you will be next!"
-msgstr ""
+msgstr "Thjodrorir był pierwszy, ale wy zginiecie jako następni!"
 
 msgid "It is over. I will bring the cauldron and jars to Modsognir, and have them buried in Thjodrorir's grave. It is the best that can be done..."
-msgstr ""
+msgstr "Już po wszystkim. Zaniosę kocioł i słoje Modsognirowi i pochowamy je w grobie Thjodrorira. To najlepsze, co możemy dlań zrobić..."
 
 msgid "The Mead of Wisdom"
-msgstr ""
+msgstr "Miód Mądrości"
 
 msgid "Raiders"
-msgstr ""
+msgstr "Najeźdźcy"
 
 msgid "Norlund Clan"
-msgstr ""
+msgstr "Klan Norlund"
 
 msgid "The Eikinskjaldi Clan from Joruvellir has hired us to recover the skull of Durahn Eikinskjaldi, a dwarven warlord of ages past. The clan's chieftain needs the skull to prove his descent from Durahn, and thus his claim to his title."
-msgstr ""
+msgstr "Klan Eikinskjaldi z Joruvellir najął nas do odzyskania czaszki Durahna Eikinskjaldi, krasnoludzkiego pogromcy z zamierzchłych czasów. Wódz klanu potrzebuje czaszki, by udowodnić, że jest godny objęcia tronu po Durahnie."
 
 msgid "- Retrieve Durahn Eikinskjaldi's skull"
-msgstr ""
+msgstr "- Odzyskaj czaszkę Durahna Eikinskjaldi"
 
 msgid "- Durstorn and Baglur must survive"
-msgstr ""
+msgstr "- Durnstorn i Baglur muszą przeżyć"
 
 msgid "Baglur"
 msgstr "Baglur"
 
 msgid "Gnomish raiders looting the tomb... bad news."
-msgstr ""
+msgstr "Najeźdźcy gnomów grabią grobowiec... to zły znak."
 
 msgid "The ceiling of this antechamber bears a mosaic... depicting a dwarven noble with gold armor and a huge axe."
-msgstr ""
+msgstr "Na suficie tego holu znajduje się mozaika... przedstawia krasnoludzkiego szlachcica w złotej zbroi i z wielkim toporem."
 
 msgid "Durstorn"
 msgstr "Durstorn"
 
 msgid "Fit for a chieftain."
-msgstr "
+msgstr "Pasuje do przywódcy."
 
 msgid "The walls here have niches, which must have contained dwarven corpses before the raiders scoured this room for valuable objects."
-msgstr ""
+msgstr "W tutejszych murach znajdują się wnęki, w których musiały spoczywać ciała zmarłych, zanim najeźdźcy przetrząsnęli to miejsce w poszukiwaniu kosztowności."
 
 msgid "The remains of a dwarf... the regalia does not seem Durahn's. This must be Isuldan, his son."
-msgstr ""
+msgstr "Szczątki krasnoluga... insygnia nie pasują do Durahna. To musi być jego syn, Isuldan."
 
 msgid "Bloody dwarves! We were almost finishing with this tomb... prepare to be gutted."
-msgstr ""
+msgstr "Przeklęte krasnoludy! Prawie skończyliśmy z grobowcem... gotujcie się na wypatroszenie."
 
 msgid "The skeleton of a female dwarf... Durahn's wife Gneissus, I suppose."
-msgstr ""
+msgstr "Szkielet krasnoludzkiej kobiety... żona Durahna, Gneissus, jak mniemam."
 
 msgid "There's a book on this table... merchant contacts that the raider leader used to sell off the tomb's artifacts are written on it."
-msgstr ""
+msgstr "Na stole jest książka... są tu zapisane kontakty kupca, któremu przywódca najeźdźców sprzedawał artefakty z krypty."
 
 msgid "There's Durahn's skeleton! Let us bring his skull back to the Eikinskjaldis for a nice reward."
-msgstr ""
+msgstr "Jest szkielet Durahna! Zanieśmy jego czaszkę Eikinskjaldom i nacieszmy się nagrodą."
 
 msgid "The Tomb of Durahn Eikinskjaldi"
-msgstr ""
+msgstr "Grobowiec Durahna Eikinskjaldi"
 
 msgid "Tomb of Durahn Eikinskjaldi"
-msgstr ""
+msgstr "Grobowiec Durahna Eikinskjaldi"
 
 msgid "A clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home. Beset by hostile natural forces on all sides, can they survive their first winter?\n\nMap: Svarinshaug\n\nRewards: 1 Dwarven Technology Point."
-msgstr ""
+msgstr "Klan krasnoludów prowadzony przez Modsognira dotarł do Svarinshaug w poszukiwaniu nowego domu. Otoczeni przez naturalne zagrożenia z każdej strony, czy przetrwają swoją pierwszą zimę?\n\nMapa: Svarinshaug\n\nNagrody: 1 Punkt Technologii Krasnoludzkiej."
 
 msgid "Nidavellir"
 msgstr "Nidavellir"
 
 msgid "Dwarf"
-msgstr "Krasnoludy"
+msgstr "Krasnolud"
 
 msgid "The sage of Modsognir's clan has disappeared, taken by two dwarves called Fjalar and Galar. Modsognir has sent Durin to enter their hall, rescue the sage - or what remains of him - and bring the evil pair to justice.\n\nMap: Fjalar's and Galar's Hall\n\nRewards: 2 Dwarven Technology Points."
-msgstr ""
+msgstr "Zaginął mędrzec klanu Modsognira za sprawą dwóch krasnoludów zwanych Fjalar i Galar. Modsognir wysyła Durina na ich dwóch, by ocalić mędrca - albo to, co z niego zostało - i sprowadzić sprawiedliwość na podłą parę.\n\nMapa: Dwór Fjalara i Galara\n\nNagrody: 2 Punkty Technologii Krasnoludzkiej."
 
 msgid "The dwarves of the Eikinskjaldi Clan need to recover Durahn Eikinskjaldi's skull to prove their claim in the lordship of Joruvellir, but Durahn's tomb has fallen prey to a band of gnomish raiders...\n\nMap: Tomb of Durahn Eikinskjaldi\n\nRewards: 1 Dwarven Technology Point."
-msgstr ""
+msgstr "Krasnoludy z Klanu Eikinskjaldi muszą odzyskać czaszkę Durahna Eikinskjaldi, by tron w Joruvellir mógł ponownie zostać objęty, jednak grobowiec Durahna padł ofiarą bandy gnomich najeźdźców...\n\nMapa: Grobowiec Durahna Eikinskjaldi\n\nNagrody: 1 Punkt Technologii Krasnoludzkiej."
 
 msgid "A Bargain is Struck"
-msgstr ""
+msgstr "Nagła okazja"
 
 msgid "A gnomish monarch arrives at a small border outpost led by Rugnur, asking that his clan craft a special scepter for him.\n\nMap: Chaincolt Foothills\n\nRewards: 2 Dwarven Technology Points."
-msgstr ""
+msgstr "Gnomi monarcha przybywa na mały posterunek graniczny dowodzony przez Rugnura, prosząc o wykucie specjalnego kostura dla niego.\n\nMapa: Pogórze Źrębięcego Łańcucha\n\nNagrody: 2 Punkty Technologii Krasnoludzkiej."
 
 msgid "Chaincolt Foothills"
-msgstr ""
+msgstr "Pogórze Źrębięcego Łańcucha"
 
 msgid "Closing the Gates"
-msgstr ""
+msgstr "Zamykanie Bram"
 
 msgid "Having retreated from the raiders' onslaught, Rugnur reaches the gates of his clan's tunnels.\n\nMap: Caverns of Chaincolt\n\nRewards: 2 Dwarven Technology Points."
-msgstr ""
+msgstr "Po wycofaniu się z ataku najeźdźców, Rugnur dociera do tuneli jaskiń jego klanu.\n\nMapa: Jaskinie Źrębięcego Łańcucha\n\nNagrody: 2 Punkty Technologii Krasnoludzkiej."
 
 msgid "Caverns of Chaincolt"
-msgstr ""
+msgstr "Jaskinie Źrębięcego Łańcucha"
 
 msgid "Searching for the Runecrafter"
-msgstr ""
+msgstr "Poszukiwanie Mistrza Run"
 
 msgid "Rugnur's expedition reaches the northlands, and begin to search for the runesmith named Thursagan - the sage of fire.\n\nMap: Northern Wastelands\n\nRewards: 2 Dwarven Technology Points."
-msgstr ""
+msgstr "Ekspedycja Rugnura dociera na północne ziemie w celu rozpoczęcia poszukiwać Mistrza Run zwanego Thursagan - mędrca ognia.\n\nMapa: Północne Pustkowia\n\nNagrody: 2 Punkty Technologii Krasnoludzkiej."
 
 msgid "Northern Wastelands"
-msgstr ""
+msgstr "Północne Pustkowia"
 
 msgid "Gathering Materials"
-msgstr ""
+msgstr "Gromadzenie materiałów"
 
 msgid "Rugnur and his brave companions, having spent two years harvesting materials in the tunnels of the eastern mines, now venture into the very heart of the goblins' territory to obtain the last materials needed...\n\nMap: Eastern Mines\n\nRewards: 2 Dwarven Technology Points."
-msgstr ""
+msgstr "Rugnur i jego dzielni kompani, po spędzeniu dwóch lat w tunelach wschodnich kopalni, wyruszają do samego serca terytorium goblinów, aby zdobyć ostatnie potrzebne materiały...\n\nMapa: Wschodnie Kopalnie\n\nNagrody: 2 Punkty Technologii Krasnoludzkiej."
 
 msgid "Eastern Mines"
-msgstr ""
+msgstr "Wschodnie Kopalnie"
 
 msgid "Hills of the Shorbear Clan"
-msgstr ""
+msgstr "Góry Klanu Shorbear"
 
 msgid "Durstorn, Rugnur and their companions travel to the hills of the Shorbear Clan, seeking access to that tribe's magnificent tools, which are needed to craft the Scepter of Fire.\n\nMap: Shorbear Hills\n\nRewards: 2 Dwarven Technology Points."
-msgstr ""
+msgstr "Durnstorn, Rugnur i ich towarzysze wyruszają w góry Klanu Shorbear, chcąc uzyskać dostęp do wspaniałych narzędzi tego plemienia, potrzebnych do wykucia Kostura Ognia.\n\nMapa: Góry Shorbear\n\nNagrody: 2 Punkty Technologii Krasnoludzkiej."
 
 msgid "Shorbear Hills"
-msgstr ""
+msgstr "Góry Shorbear"
 
 msgid "The Wyrm"
-msgstr ""
+msgstr "Wyrm"
 
 msgid "Wyrm"
-msgstr ""
+msgstr "Wyrm"
 
 msgid "Rugnur's dwarves delve deep into underground caves, seeking to escape from the Shinsplitter Clan. However, the section of the old eastern mines that they reached had long since become the lair of Svafnir... the wyrm.\n\nMap: Svafnir's Lair\n\nRewards: 2 Dwarven Technology Points."
-msgstr ""
+msgstr "Krasnoludy Rugnura zagłębiają się w podziemne jaskinie, szukając drogi ucieczki przed Klanem Shinsplitter. Jednakże część starych kopalni wschodnich, do której dotarli od pewnego czasu służy za leże Svafnira... wyrma.\n\nMapa: Leże Svafnira\n\nNagrody: 2 Punkty Technologii Krasnoludzkiej."
 
 msgid "Svafnir's Lair"
-msgstr ""
+msgstr "Leże Svafnira"
 
 msgid "Caverns of Flame"
-msgstr ""
+msgstr "Jaskinie Płomienia"
 
 msgid "Rugnur and his companions reach deep into the Caverns of Flame, where they find an ancient dwarven mechanism which may just allow them to prevent the Shinsplitters from getting their hands on the Scepter.\n\nMap: Caverns of Flame\n\nRewards: 1 Dwarven Technology Point."
-msgstr ""
+msgstr "Rugnur i jego towarzysze dotarli do czeluści Jaskiń Płomienia, gdzie znaleźli starożytny mechanizm, który może zapobiec przejęciu Kostura przez Shinsplitterów.\n\nMapa: Jaskinie Płomienia\n\nNagrody: 1 Punkt Technologii Krasnoludzkiej."
