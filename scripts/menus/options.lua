@@ -402,10 +402,9 @@ function RunGameplayOptionsMenu()
 
 	menu:addLabel(_("~<Options~>"), offx + 176, offy + 1)
 
---[[
-	menu:addLabel(_("Language"), offx + 8, offy + 34 + 26*2, Fonts["game"], false)
+	menu:addLabel(_("Language:"), offx + 8, offy + 34 + 26*0, Fonts["game"], false)
 
-	language_list = menu:addDropDown({"English", "French", "German", "Portuguese"}, offx + 8, offy + 55 + 26*2,
+	language_list = menu:addDropDown({"English", "French (Partial)", "German (Partial)", "Italian (Partial)", "Polish (Partial)", "Portuguese (Partial)", "Russian (Partial)"}, offx + 8, offy + 55 + 26*0,
 		function(dd)
 			if (language_list:getSelected() == 0) then
 				wyr.preferences.Language = "English"
@@ -420,28 +419,46 @@ function RunGameplayOptionsMenu()
 				wyr.preferences.StratagusTranslation = "translations/wyr-de.po"
 				wyr.preferences.GameTranslation = "translations/wyr-de.po"
 			elseif (language_list:getSelected() == 3) then
+				wyr.preferences.Language = "Italian"
+				wyr.preferences.StratagusTranslation = "translations/wyr-it.po"
+				wyr.preferences.GameTranslation = "translations/wyr-it.po"
+			elseif (language_list:getSelected() == 4) then
+				wyr.preferences.Language = "Polish"
+				wyr.preferences.StratagusTranslation = "translations/wyr-pl.po"
+				wyr.preferences.GameTranslation = "translations/wyr-pl.po"
+			elseif (language_list:getSelected() == 5) then
 				wyr.preferences.Language = "Portuguese"
 				wyr.preferences.StratagusTranslation = "translations/wyr-pt.po"
 				wyr.preferences.GameTranslation = "translations/wyr-pt.po"
+			elseif (language_list:getSelected() == 6) then
+				wyr.preferences.Language = "Russian"
+				wyr.preferences.StratagusTranslation = "translations/wyr-ru.po"
+				wyr.preferences.GameTranslation = "translations/wyr-ru.po"
 			end
 			SetTranslationsFiles(wyr.preferences.StratagusTranslation, wyr.preferences.GameTranslation)
 			menu:stop()
 			RunGameplayOptionsMenu()
 		end
 	)
-	language_list:setSize(152, 20)
+	language_list:setSize(266, 20)
 	if (wyr.preferences.Language == "English") then
 		language_list:setSelected(0)
 	elseif (wyr.preferences.Language == "French") then
 		language_list:setSelected(1)
 	elseif (wyr.preferences.Language == "German") then
 		language_list:setSelected(2)
-	elseif (wyr.preferences.Language == "Portuguese") then
+	elseif (wyr.preferences.Language == "Italian") then
 		language_list:setSelected(3)
+	elseif (wyr.preferences.Language == "Polish") then
+		language_list:setSelected(4)
+	elseif (wyr.preferences.Language == "Portuguese") then
+		language_list:setSelected(5)
+	elseif (wyr.preferences.Language == "Russian") then
+		language_list:setSelected(6)
 	end
---]]
-	menu:addLabel(_("Hotkey Setup:"), offx + 8, offy + 34, Fonts["game"], false)
-	hotkey_setup_dd = menu:addDropDown(hotkey_setup_list, offx + 8, offy + 55 + 26*0,
+
+	menu:addLabel(_("Hotkey Setup:"), offx + 8, offy + 34 + 26*2, Fonts["game"], false)
+	hotkey_setup_dd = menu:addDropDown(hotkey_setup_list, offx + 8, offy + 55 + 26*2,
 		function(dd)
 			wyr.preferences.HotkeySetup = hotkey_setup_dd:getSelected()
 			Preference.HotkeySetup = wyr.preferences.HotkeySetup
@@ -452,7 +469,7 @@ function RunGameplayOptionsMenu()
 	hotkey_setup_dd:setSize(266, 20)
 	hotkey_setup_dd:setSelected(wyr.preferences.HotkeySetup)
 
-	b = menu:addImageCheckBox(_("Mouse Grabbing"), offx + 16, offy + 55 + 26*4 + 14,
+	b = menu:addImageCheckBox(_("Mouse Grabbing"), offx + 16, offy + 55 + 26*6 + 14,
 		function()
 			if (wyr.preferences.GrabMouse == false) then
 				wyr.preferences.GrabMouse = true
@@ -467,7 +484,7 @@ function RunGameplayOptionsMenu()
 	)
 	b:setMarked(wyr.preferences.GrabMouse)
 
-	b = menu:addImageCheckBox(_("Show Tips"), offx + 16, offy + 55 + 26*1 + 14,
+	b = menu:addImageCheckBox(_("Show Tips"), offx + 16, offy + 55 + 26*3 + 14,
 		function()
 			if (wyr.preferences.ShowTips == false) then
 				wyr.preferences.ShowTips = true
@@ -480,7 +497,7 @@ function RunGameplayOptionsMenu()
 	)
 	b:setMarked(wyr.preferences.ShowTips)
 
-	b = menu:addImageCheckBox(_("Show Resource Bar"), offx + 16, offy + 55 + 26*2 + 14,
+	b = menu:addImageCheckBox(_("Show Resource Bar"), offx + 16, offy + 55 + 26*4 + 14,
 		function()
 			if (wyr.preferences.ShowResourceBar == false) then -- sort of ugly way to set the preferences for this, fix later please
 				wyr.preferences.ShowResourceBar = true
@@ -495,7 +512,7 @@ function RunGameplayOptionsMenu()
 	)
 	b:setMarked(wyr.preferences.ShowResourceBar)
 
-	b = menu:addImageCheckBox(_("Larger Popup Text"), offx + 16, offy + 55 + 26*5 + 14,
+	b = menu:addImageCheckBox(_("Larger Popup Text"), offx + 16, offy + 55 + 26*7 + 14,
 		function()
 			if (wyr.preferences.PopupDescriptionFont == "small") then
 				wyr.preferences.PopupDescriptionFont = "game"
@@ -509,7 +526,7 @@ function RunGameplayOptionsMenu()
 	)
 	b:setMarked(wyr.preferences.PopupDescriptionFont == "game")
 
-	b = menu:addImageCheckBox(_("Show Player Color Circle"), offx + 16, offy + 55 + 26*8 + 14,
+	b = menu:addImageCheckBox(_("Show Player Color Circle"), offx + 16, offy + 55 + 26*10 + 14,
 		function()
 			if (wyr.preferences.PlayerColorCircle == false) then
 				wyr.preferences.PlayerColorCircle = true
@@ -523,7 +540,7 @@ function RunGameplayOptionsMenu()
 	)
 	b:setMarked(wyr.preferences.PlayerColorCircle)
 
-	b = menu:addImageCheckBox(_("Autosave"), offx + 16, offy + 55 + 26*3 + 14,
+	b = menu:addImageCheckBox(_("Autosave"), offx + 16, offy + 55 + 26*5 + 14,
 		function()
 			if (wyr.preferences.Autosave == false) then
 				wyr.preferences.Autosave = true
@@ -538,7 +555,7 @@ function RunGameplayOptionsMenu()
 	)
 	b:setMarked(wyr.preferences.Autosave)
 
-	b = menu:addImageCheckBox(_("Show Pathlines"), offx + 16, offy + 55 + 26*6 + 14,
+	b = menu:addImageCheckBox(_("Show Pathlines"), offx + 16, offy + 55 + 26*8 + 14,
 		function()
 			if (wyr.preferences.ShowPathlines == false) then
 				wyr.preferences.ShowPathlines = true
@@ -552,7 +569,7 @@ function RunGameplayOptionsMenu()
 	)
 	b:setMarked(wyr.preferences.ShowPathlines)
 
-	b = menu:addImageCheckBox(_("Disable Messages"), offx + 16, offy + 55 + 26*7 + 14,
+	b = menu:addImageCheckBox(_("Disable Messages"), offx + 16, offy + 55 + 26*9 + 14,
 		function()
 			if (wyr.preferences.ShowMessages) then
 				wyr.preferences.ShowMessages = false
@@ -566,7 +583,7 @@ function RunGameplayOptionsMenu()
 	)
 	if (wyr.preferences.ShowMessages == false) then b:setMarked(true) end
 
-	menu:addHalfButton(_("~!OK"), "o", offx + 123, offy + 55 + 26*12 + 14, function()
+	menu:addHalfButton(_("~!OK"), "o", offx + 123, offy + 55 + 26*13 + 14, function()
 		SavePreferences()
 		menu:stop()
 	end)

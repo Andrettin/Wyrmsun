@@ -56,7 +56,7 @@ function ChooseFaction(old_civilization, old_faction)
 	end
 	
 	for i=1,table.getn(faction_list) do
-		table.insert(faction_name_list, GetFactionData(current_civilization, faction_list[i], "Name"))
+		table.insert(faction_name_list, _(GetFactionData(current_civilization, faction_list[i], "Name")))
 	end
 
 	if (GameRunning and not IsNetworkGame()) then
@@ -81,7 +81,7 @@ function ChooseFaction(old_civilization, old_faction)
 	faction_dd = menu:addDropDown(faction_name_list, (256 / 2 - (152 / 2)), 55 + 26*1,
 	function(dd)
 		chosen_faction = faction_list[faction_dd:getSelected() + 1]
-		l:setCaption("Default Color: " .. CapitalizeString(GetFactionData(current_civilization, faction_list[faction_dd:getSelected() + 1], "Color")) .. "\n\nEffects: " .. GetFactionEffectsString(current_civilization, faction_list[faction_dd:getSelected() + 1]))
+		l:setCaption(_("Default Color:") .. " " .. _(CapitalizeString(GetFactionData(current_civilization, faction_list[faction_dd:getSelected() + 1], "Color"))) .. "\n\n" .. _("Effects:") .. " " .. GetFactionEffectsString(current_civilization, faction_list[faction_dd:getSelected() + 1]))
 	end)
 	faction_dd:setSize(152, 20)
 	faction_dd:setSelected(0)
@@ -92,7 +92,7 @@ function ChooseFaction(old_civilization, old_faction)
 	l:setSize(228, 192)
 	l:setLineWidth(228)
 	menu:add(l, 14, 3 + (32 * 4))
-	l:setCaption("Default Color: " .. CapitalizeString(GetFactionData(current_civilization, faction_list[faction_dd:getSelected() + 1], "Color")) .. "\n\nEffects: " .. GetFactionEffectsString(current_civilization, faction_list[faction_dd:getSelected() + 1]))
+	l:setCaption(_("Default Color:") .. " " .. _(CapitalizeString(GetFactionData(current_civilization, faction_list[faction_dd:getSelected() + 1], "Color"))) .. "\n\n" .. _("Effects:") .. " " .. GetFactionEffectsString(current_civilization, faction_list[faction_dd:getSelected() + 1]))
 
 	local ok_button = menu:addFullButton("~!OK", "o", 16, 248 - (36 * 0),
 		function()

@@ -1262,7 +1262,7 @@ function RunSinglePlayerCustomGameMenu()
 				if ((GetFactionData(new_civilization, GetCivilizationFactionNames(new_civilization)[i], "Type") == "tribe" and (tech_level:getSelected() - 1 == -1 or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)")) or (GetFactionData(new_civilization, GetCivilizationFactionNames(new_civilization)[i], "Type") == "polity" and (tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)"))) then
 					if (GetFactionData(new_civilization, GetCivilizationFactionNames(new_civilization)[i], "Playable")) then
 						table.insert(faction_ident_list, GetCivilizationFactionNames(new_civilization)[i])
-						table.insert(faction_list, GetFactionData(new_civilization, GetCivilizationFactionNames(new_civilization)[i], "Name"))
+						table.insert(faction_list, _(GetFactionData(new_civilization, GetCivilizationFactionNames(new_civilization)[i], "Name")))
 					end
 				end
 			end
