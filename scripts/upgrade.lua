@@ -290,3 +290,41 @@ Load("scripts/item_suffixes_runic.lua")
 Load("scripts/province_modifiers.lua")
 Load("scripts/traits.lua")
 Load("scripts/works.lua")
+
+DefineUpgrade("upgrade-deity-character", {
+	Name = _("Deity Character Upgrade"),
+	Icon = "icon-level-up"
+})
+
+DefineUpgrade("upgrade-kvasir-character", {
+	Name = _("Kvasir Character Upgrade"),
+	Icon = "icon-kvasir"
+})
+
+DefineModifier("upgrade-deity-character",
+	{"FireResistance", 100},
+	{"ColdResistance", 100},
+	{"ArcaneResistance", 100},
+	{"LightningResistance", 100},
+	{"AirResistance", 100},
+	{"EarthResistance", 100},
+	{"WaterResistance", 100},
+	{"HackResistance", 100},
+	{"PierceResistance", 100},
+	{"BluntResistance", 100},
+	{"HitPoints", 1, "Increase"}
+)
+
+DefineModifier("upgrade-kvasir-character",
+	{"FireResistance", 100},
+	{"ColdResistance", 100},
+	{"ArcaneResistance", 100},
+	{"LightningResistance", 100},
+	{"AirResistance", 100},
+	{"EarthResistance", 100},
+	{"WaterResistance", 100},
+--	{"HackResistance", 100},
+--	{"PierceResistance", 100},
+	{"BluntResistance", 100},
+	{"HitPoints", 1, "Increase"}
+)

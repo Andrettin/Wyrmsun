@@ -78,6 +78,7 @@ DefineDeity("kvasir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 19
 	Gender = "male",
 	Icon = "icon-kvasir",
 	Domains = {"wisdom"},
+	CharacterUpgrade = "upgrade-kvasir-character",
 --	Description = "The wisest of the Vanir, Kvasir was sent to live with the Aesir in Asgard as a result of the peace treaty which concluded the Aesir-Vanir War."
 })
 
