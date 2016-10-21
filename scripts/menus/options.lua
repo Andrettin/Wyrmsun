@@ -404,7 +404,7 @@ function RunGameplayOptionsMenu()
 
 	menu:addLabel(_("Language:"), offx + 8, offy + 34 + 26*0, Fonts["game"], false)
 
-	language_list = menu:addDropDown({"English", "French (Partial)", "German (Partial)", "Italian (Partial)", "Polish (Partial)", "Portuguese (Partial)", "Russian (Partial)"}, offx + 8, offy + 55 + 26*0,
+	language_list = menu:addDropDown({"English", "French (Partial)", "German (Partial)", "Italian (Partial)", "Polish (Partial)", "Portuguese (Partial)"}, offx + 8, offy + 55 + 26*0,
 		function(dd)
 			if (language_list:getSelected() == 0) then
 				wyr.preferences.Language = "English"
@@ -430,10 +430,6 @@ function RunGameplayOptionsMenu()
 				wyr.preferences.Language = "Portuguese"
 				wyr.preferences.StratagusTranslation = "translations/wyr-pt.po"
 				wyr.preferences.GameTranslation = "translations/wyr-pt.po"
-			elseif (language_list:getSelected() == 6) then
-				wyr.preferences.Language = "Russian"
-				wyr.preferences.StratagusTranslation = "translations/wyr-ru.po"
-				wyr.preferences.GameTranslation = "translations/wyr-ru.po"
 			end
 			SetTranslationsFiles(wyr.preferences.StratagusTranslation, wyr.preferences.GameTranslation)
 			menu:stop()
@@ -453,8 +449,6 @@ function RunGameplayOptionsMenu()
 		language_list:setSelected(4)
 	elseif (wyr.preferences.Language == "Portuguese") then
 		language_list:setSelected(5)
-	elseif (wyr.preferences.Language == "Russian") then
-		language_list:setSelected(6)
 	end
 
 	menu:addLabel(_("Hotkey Setup:"), offx + 8, offy + 34 + 26*2, Fonts["game"], false)
