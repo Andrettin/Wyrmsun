@@ -493,6 +493,8 @@ SetMapTemplateTileTerrain("earth", "shallow-water", 4159, 704, "Lake Wener")
 SetMapTemplateTileTerrain("earth", "shallow-water", 4160, 704, "Lake Wener")
 
 SetMapTemplateUnit("earth", "unit-germanic-town-hall", "yngling-tribe", {4243, 692}, -2800, -264) -- Sigtun / Segiztûna; in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples; "Segiztûna" is a rendering of "Sigtun" in Proto-Germanic, since the Ynglinga saga the city was founded when the cultural ancestors of the Germanic peoples (= Odin's people) first settled Scandinavia; the Ynglings were the dynasty founded by Odin's son Yngve, who ruled the Swedish lands
-
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "swede-tribe", {4243, 692}, -264, 1560) -- tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "swede-tribe", {4243, 692}, 1560) -- political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+
+SetMapTemplateUnit("earth", "unit-germanic-town-hall", "jarling-tribe", {-1, -1}, -1600, -264) -- set in a location in Scandinavia later
+SetMapTemplateHero("earth", "Erala", "jarling-tribe", {-1, -1}, -1600, -1570)

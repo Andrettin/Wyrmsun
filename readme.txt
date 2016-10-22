@@ -86,6 +86,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Heroes
 - Persistent heroes (including custom ones) can now be hired at barracks-type buildings and mercenary camps in single-player games (outside of quest scenarios and the grand strategy mode).
+- Added Erala (Germanic Warrior) (icon by Exidelo).
 
 * Items
 - Fixed an issue which caused units without inventory to clear their order queue after picking up a healing item.

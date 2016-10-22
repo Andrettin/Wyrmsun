@@ -41,7 +41,17 @@ DefineCampaign("freys-messenger", {
 	Faction = "yngling-tribe", -- Yngve is identified with Frey
 	Year = -2800 -- when Scandinavia was historically settled by Indo-Europeans; Yngve ruled over the Swedes in the Ynglinga saga soon after Odin's people settled Scandinavia in that saga; since Skirnir was a servant of Frey in mythology, let's make him a contemporary of Yngve
 })
+--]]
 
+DefineCampaign("rigs-progeny", {
+	Name = "Rig's Progeny",
+	Description = "The young warrior Erala, the son of Fader and Moder, believes his true father to be the god Rig. Feeling that his divine heritage has fated him to rule over vast lands, Erala sets off to carve territory for himself. After establishing a hall, he begins to gather followers to take control of nearby tribes...",
+	Civilization = "germanic",
+	Faction = "jarling-tribe",
+	Year = -1600 -- the introduction of stronger social differentiation occurred in Scandinavia around 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 73. As such, it makes sense to make the Rig myth (in which the different Scandinavian social classes are originated) take place around this time
+})
+
+--[[
 DefineCampaign("the-marcomannic-wars", {
 	Name = "The Marcomannic Wars",
 	Description = "Under the leadership of Ballomar, the Marcomanni wage war with the mighty Roman Empire.",

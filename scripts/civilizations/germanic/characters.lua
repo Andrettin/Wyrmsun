@@ -530,3 +530,16 @@ DefineCharacter("Sæmingr Yngling", { -- Source: Snorri Sturlson, "Heimskringla"
 	ProvinceOfOrigin = "Sweden",
 	Father = "Yngve"
 })
+
+DefineCharacter("Erala", {
+	Name = "Erala",
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "germanic",
+	Faction = "jarling-tribe",
+	Description = _("The young warrior Erala, the son of Fader and Moder, believes his true father to be the god Rig. Feeling that his divine heritage has fated him to rule over vast lands, Erala sets about to carve territory for himself."),
+	Icon = "icon-jarl",
+	HairVariation = "blond-hair",
+	Trait = "upgrade-strong",
+	Persistent = true
+})
