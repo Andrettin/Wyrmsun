@@ -121,6 +121,8 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused some Gnomish factions to not be able to train Recruits.
 - Animal idle sounds are now played less frequently.
 - The owner of goblin Thieves is now hidden (they appear as if they were neutral to other players).
+- The popup which appears when hovering over a unit instead of displaying the personal name followed by the unit's type name, now displays the unit's type name (or its proper name in the case of unique/magic items or heroes) followed by the name of its owning faction.
+- Names of heroes now have the proper color when hovering over their portrait in unit multi-selection or from within a transporter.
 
 -----------------------------------------------------------------------
 - 2.4.2

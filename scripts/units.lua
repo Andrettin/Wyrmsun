@@ -1252,13 +1252,14 @@ DefineUnitType("unit-twigs", { Name = _("Twigs"),
 	Sounds = {} }
 )
 
-DefineUnitType("unit-log", { Name = "Log",
+DefineUnitType("unit-log", {
+	Name = "Log",
 	Image = {"file", "neutral/decorations/log.png", "size", {56, 56}},
 	Animations = "animations-decoration-old", Icon = "icon-log",
 	NeutralMinimapColor = {165, 42, 42},
 	Speed = 0,
 	HitPoints = 20,
-	DrawLevel = 30,
+	DrawLevel = 40,
 	TileSize = {1, 1}, BoxSize = {31, 31},
 	SightRange = 0,
 	Armor = 2, Missile = "missile-none",

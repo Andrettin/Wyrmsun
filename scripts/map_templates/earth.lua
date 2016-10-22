@@ -55,7 +55,7 @@ DefineMapTemplate("earth", {
 		"unit-boar", 32,
 		"unit-horse", 16,
 		"unit-wolf", 32,
-		"unit-mercenary-camp", 4
+--		"unit-mercenary-camp", 4
 	},
 	PlayerLocationGeneratedNeutralUnits = {
 		"unit-gold-deposit", 1,
@@ -73,11 +73,13 @@ Load("scripts/map_templates/earth/france.lua")
 Load("scripts/map_templates/earth/germany.lua")
 Load("scripts/map_templates/earth/great_britain.lua")
 Load("scripts/map_templates/earth/greece.lua")
+Load("scripts/map_templates/earth/hungary.lua")
 Load("scripts/map_templates/earth/italy.lua")
 Load("scripts/map_templates/earth/netherlands.lua")
 Load("scripts/map_templates/earth/north_africa.lua")
 Load("scripts/map_templates/earth/portugal.lua")
 Load("scripts/map_templates/earth/romania.lua")
+Load("scripts/map_templates/earth/slovakia.lua")
 Load("scripts/map_templates/earth/spain.lua")
 Load("scripts/map_templates/earth/sweden.lua")
 Load("scripts/map_templates/earth/switzerland.lua")

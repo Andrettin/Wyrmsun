@@ -25,6 +25,17 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineFaction("celtic-cimmerian-tribe", {
+	Name = "Kommrogian Tribe",
+	Civilization = "celt",
+	Type = "tribe",
+	Colors = {"black"},
+	HistoricalTechnologies = {
+		-- swords appear in the Carpathian Basin c. 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 32.
+	}
+	-- fictional Proto-Celtic people; Brythonic "Kombrogos" means "compatriot" and is the etymological origin of "Cymry" ("Welsh" in the Welsh language); "kom-mrogi" is a tentative rendering of that in Proto-Celtic
+})
+
 DefineFaction("astures-tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Name = "Astures Tribe",
 	Civilization = "celt", -- correct?
