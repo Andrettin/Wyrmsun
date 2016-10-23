@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wyrmsun\n"
 "POT-Creation-Date: 2014-10-04 18:46+0100\n"
-"PO-Revision-Date: 2016-10-21 13:41+0100\n"
+"PO-Revision-Date: 2016-10-22 09:11+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,6 +13,522 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: c:/Program Files/Wyrmsun/scripts\n"
 
+msgid "~!Single Player Game"
+msgstr "Gra Jednoo~!sobowa"
+
+msgid "~!Quests"
+msgstr "Zadania (~!Q)"
+
+msgid "C~!ustom Game"
+msgstr "Gra dowolna (~!U)"
+
+msgid "~!Multi Player Game"
+msgstr "Gra Wieloosobowa (~!M)"
+
+msgid "~!Multiplayer Game"
+msgstr "Gra Wieloosobowa (~!M)"
+
+msgid "~!Grand Strategy Game"
+msgstr "~!Gra Wielkiej Strategii"
+
+msgid "Load Game"
+msgstr "Wczytaj Grę"
+
+msgid "~!Load Game"
+msgstr "Wczytaj Grę (~!L)"
+
+msgid "~!Replay Game"
+msgstr "Powtó~!rz Grę"
+
+msgid "~!Options"
+msgstr "~!Opcje"
+
+msgid "Map ~!Editor"
+msgstr "~!Edytor Map"
+
+msgid "Load Mod"
+msgstr "Wczytaj Mod"
+
+msgid "Load Mo~!d"
+msgstr "Wczytaj Mo~!d"
+
+msgid "En~!cyclopedia"
+msgstr "En~!cyklopedia"
+
+msgid "S~!how Credits"
+msgstr "Li~!sta Twórców"
+
+msgid "E~!xit Program"
+msgstr "Wyjdź z Gry (~!X)
+
+msgid "~!Previous Menu"
+msgstr "~!Poprzednie Menu"
+
+msgid "~!New Map"
+msgstr "~!Nowa Mapa"
+
+msgid "~!Load Map"
+msgstr "Wczytaj Mapę (~!)"
+
+msgid "Select Map"
+msgstr "Wybierz Mapę"
+
+msgid "~!Select Map"
+msgstr "Wybierz Mapę (~!S)"
+
+msgid "S~!elect Map"
+msgstr "Wybi~!erz Mapę"
+
+msgid "~!Edit Map"
+msgstr "~!Edytuj Mapę"
+
+msgid "~!Continue"
+msgstr "Kontynuuj (~!C)"
+
+msgid "~!Load"
+msgstr "Wczytaj (~!L)"
+
+msgid "~!Cancel"
+msgstr "Anuluj (~!C)"
+
+msgid "~<Units:~>"
+msgstr "~<Jednostki:~>"
+
+msgid "Dwarf"
+msgstr "Krasnolud"
+
+msgid "Miner"
+msgstr "Górnik"
+
+msgid "Axefighter"
+msgstr "Topornik"
+
+msgid "Mead Hall"
+msgstr "Miodowy Dwór"
+
+msgid "War Hall"
+msgstr "Hala Wojny"
+
+msgid "Barracks"
+msgstr "Koszary"
+
+msgid "Mushroom Farm"
+msgstr "Grzybowa Farma"
+
+msgid "Lumber Mill"
+msgstr "Tartak"
+
+msgid "Gnomish Recruit"
+msgstr "Gnomi Rekrut"
+
+msgid "Gnomish Caravan"
+msgstr "Gnomia Karawana"
+
+msgid "Gold Mine"
+msgstr "Kopalnia Złota"
+
+msgid "Silver Mine"
+msgstr "Kopalnia Srebra"
+
+msgid "Copper Mine"
+msgstr "Kopalnia Miedzi"
+
+msgid "Coal Mine"
+msgstr "Kopalnia Węgla"
+
+msgid "Rat"
+msgstr "Szczur"
+
+msgid "The Scepter of Fire"
+msgstr "Berło Ognia"
+
+msgid "A Bargain is Struck"
+msgstr "Nagła Okazja"
+
+msgid "- Bring the Gnomish caravans and the envoy to your Mead Hall"
+msgstr "- Sprowadź Gnomią Karawanę i posła do swojego Miodowego Dworu"
+
+msgid "Dawn"
+msgstr "Świt"
+
+msgid "Morning"
+msgstr "Poranek"
+
+msgid "Midday"
+msgstr "Południe"
+
+msgid "Afternoon"
+msgstr "Popołudnie"
+
+msgid "Dusk"
+msgstr "Zmierzch"
+
+msgid "Early Night"
+msgstr "Wczesna Noc"
+
+msgid "Midnight"
+msgstr "Północ"
+
+msgid "Late Night"
+msgstr "Późna Noc"
+
+msgid "- Defeat your rivals"
+msgstr "- Pokonaj swoich rywali"
+
+msgid "Asa Tribe"
+msgstr "Plemię Asa"
+
+msgid "Herminone Tribe"
+msgstr "Plemię Herminone"
+
+msgid "Ingaevone Tribe"
+msgstr "Plemię Ingaevone"
+
+msgid "Istaevone Tribe"
+msgstr "Plemię Istaevone"
+
+msgid "Skeldung Tribe"
+msgstr "Plemię Skeldung"
+
+msgid "Yngling Tribe"
+msgstr "Plemię Ynglinga"
+
+msgid "Vulcan Tribe"
+msgstr "Plemię Vulcan"
+
+msgid "Cycle:"
+msgstr "Cykl:"
+
+msgid "Default Color:"
+msgstr "Domyślny Kolor:"
+
+msgid "Effects:"
+msgstr "Efekty:"
+
+msgid "Red"
+msgstr "Czerwony"
+
+msgid "Blue"
+msgstr "Niebieski"
+
+msgid "Green"
+msgstr "Zielony"
+
+msgid "Violet"
+msgstr "Fioletowy"
+
+msgid "Orange"
+msgstr "Pomarańczowy"
+
+msgid "Black"
+msgstr "Czarny"
+
+msgid "White"
+msgstr "Biały"
+
+msgid "Yellow"
+msgstr "Żółty"
+
+msgid "Pink"
+msgstr "Różowy"
+
+msgid "Cyan"
+msgstr "Cyjan"
+
+msgid "Teal"
+msgstr "Morski"
+
+msgid "Purple"
+msgstr "Purpurowy"
+
+msgid "Fire"
+msgstr "Ognisty"
+
+msgid "Brown"
+msgstr "Brązowy"
+
+msgid "Radioactive"
+msgstr "Radioaktywny"
+
+msgid "Acid"
+msgstr "Toksyczny"
+
+msgid "Gray"
+msgstr "Szary"
+
+msgid "Level"
+msgstr "Poziom"
+
+msgid "Level:"
+msgstr "Poziom:"
+
+msgid "Trait"
+msgstr "Cecha"
+
+msgid "Trait:"
+msgstr "Cecha:"
+
+msgid "Hit Points"
+msgstr "Punkty Życia"
+
+msgid "Hit Points:"
+msgstr "Punkty Życia:"
+
+msgid "Damage"
+msgstr "Obrażenia"
+
+msgid "Damage:"
+msgstr "Obrażenia:"
+
+msgid "Range"
+msgstr "Zasięg"
+
+msgid "Range:"
+msgstr "Zasięg:"
+
+msgid "Armor"
+msgstr "Obrona"
+
+msgid "Armor:"
+msgstr "Obrona:"
+
+msgid "Sight"
+msgstr "Zas. Widzenia"
+
+msgid "Sight:"
+msgstr "Zas. Widzenia:"
+
+msgid "Accuracy"
+msgstr "Celność"
+
+msgid "Accuracy:"
+msgstr "Celność:"
+
+msgid "Evasion"
+msgstr "Unik"
+
+msgid "Evasion:"
+msgstr "Unik:"
+
+msgid "Speed"
+msgstr "Szybkość"
+
+msgid "Speed:"
+msgstr "Szybkość:"
+
+msgid "Deity"
+msgstr "Bóstwo"
+
+msgid "Chieftain's Hall"
+msgstr "Dwór Wodza"
+
+msgid "Town Hall"
+msgstr "Ratusz"
+
+msgid "War Lodge"
+msgstr "Stróżówka"
+
+msgid "Farm"
+msgstr "Farma"
+
+msgid "Dock"
+msgstr "Doki"
+
+msgid "Stables"
+msgstr "Stajnie"
+
+msgid "Carpenter's Shop"
+msgstr "Sklep Stolarza"
+
+msgid "Smithy"
+msgstr "Zbrojownia"
+
+msgid "Forge"
+msgstr "Kuźnia"
+
+msgid "Fugla Forge"
+msgstr "Kuźnia Fugla"
+
+msgid "Watch Tower"
+msgstr "Wieża Obserwacyjna"
+
+msgid "Guard Tower"
+msgstr "Wieża Strażnicza"
+
+msgid "Stronghold"
+msgstr "Twierdza"
+
+msgid "Fortress"
+msgstr "Forteca"
+
+msgid "Glyph"
+msgstr "Glif"
+
+msgid "Cavern Entrance"
+msgstr "Wejście do Jaskini"
+
+msgid "Catapult"
+msgstr "Katapulta"
+
+msgid "War Machine"
+msgstr "Machina Wojenna"
+
+msgid "Processing"
+msgstr "Przerób"
+
+msgid "Gold"
+msgstr "Złoto"
+
+msgid "Gold:"
+msgstr "Złoto:"
+
+msgid "Lumber"
+msgstr "Drewno"
+
+msgid "Lumber:"
+msgstr "Drewno:"
+
+msgid "Stone"
+msgstr "Kamień"
+
+msgid "Stone:"
+msgstr "Kamień:"
+
+msgid "Coal"
+msgstr "Węgiel"
+
+msgid "Silver"
+msgstr "Srebro"
+
+msgid "Copper"
+msgstr "Miedź"
+
+msgid "Choose Your Faction"
+msgstr "Wybierz Swoje Stronnictwo"
+
+msgid "Strong"
+msgstr "Silny"
+
+msgid "Intelligent"
+msgstr "Inteligentny"
+
+msgid "Old"
+msgstr "Stary"
+
+msgid "Weak"
+msgstr "Słaby"
+
+msgid "Dim"
+msgstr "Ponury"
+
+msgid "Pious"
+msgstr "Pobożny"
+
+msgid "Train ~!Bura"
+msgstr "Szkol ~!Bura"
+
+msgid "Set ~!Rally Point"
+msgstr "Ustaw Punkt Zbió~!rki"
+
+msgid "~!Move"
+msgstr "Prze~!mieść"
+
+msgid "~!Stop"
+msgstr "~!Stój"
+
+msgid "~!Attack"
+msgstr "~!Atakuj"
+
+msgid "~!Repair"
+msgstr "Nap~!raw"
+
+msgid "~!Harvest Resource"
+msgstr "Zbieraj Surowce (~!H)"
+
+msgid "~!Build Structure"
+msgstr "~!Buduj Strukturę"
+
+msgid "Build Chieftain's ~!Hall"
+msgstr "Buduj Dwór Wodza (~!H)"
+
+msgid "Build ~!Farm"
+msgstr "Buduj ~!Farmę"
+
+msgid "Build ~!War Lodge"
+msgstr "Buduj Stróżó~!wkę"
+
+msgid "Build Carpente~!r's Shop"
+msgstr "Buduj Sklep Stola~!rza"
+
+msgid "Build ~!Smithy"
+msgstr "Buduj Zbrojownię (~!S)"
+
+msgid "Build ~!Gold Mine"
+msgstr "Buduj Kopalnię Złota (~!G)"
+
+msgid "Build Sil~!ver Mine"
+msgstr "Buduj Kopalnię Srebra (~!V)"
+
+msgid "Build ~!Copper Mine"
+msgstr "Buduj Kopalnię Miedzi"
+
+msgid "Cancel (~<Esc~>)"
+msgstr "Anuluj (~<Esc~>)"
+
+msgid "Class:"
+msgstr "Klasa:"
+
+msgid "Food Supply:"
+msgstr "Zapasy Jedzenia:"
+
+msgid "Food Cost:"
+msgstr "Koszt w Jedzeniu:"
+
+msgid "Worker"
+msgstr "Robotnik"
+
+msgid "Unicorn"
+msgstr "Jednorożec"
+
+msgid "~<ALT~>-click to defend a unit"
+msgstr "~<ALT~>-LPM, by bronić jednostkę"
+
+msgid "~<SHIFT~>-click to make waypoints"
+msgstr "~<SHIFT~>-LPM, by zaznaczyć punkt kontrolny"
+
+msgid "~<CTRL~>-click to stand ground after moving"
+msgstr "~<CTRL~>-LPM, by zostać tutaj po przemieszczeniu"
+
+msgid "Click on an empty space to attack-move"
+msgstr "Naciśnij na pustej przestrzeni, by zaatakować najbliższy cel"
+
+msgid "~<CTRL~>-click on the button toggles auto-repair of damaged buildings"
+msgstr "~<CTRL~>-LPM na przycisk spowoduje przełączenie automatycznej naprawy uszkodzonych budowli"
+
+msgid "Left-click to center"
+msgstr "Lewy Przycisk Myszy spowoduje przeniesienie kamery do celu"
+
+msgid "Middle-click to track"
+msgstr "Środkowy Przycisk Myszy spowoduje śledzenie celu"
+
+msgid "Right-click to see encyclopedia"
+msgstr "Prawy Przycisk Myszy otworzy encyklopedię"
+
+msgid "Find Idle Worker (~!.)"
+msgstr "Znajdź Wolnego Robotnika (~!.)"
+
+msgid "Find Unit with Available Level Up"
+msgstr "Znajdź Jednostkę, która może Awansować"
+
+msgid "Find"
+msgstr "Znajdź"
+
+msgid "%s attacked"
+msgstr "Zaatakowano: %s"
+
+msgid "Your Faction:"
+msgstr "Twoje Stronnictwo:"
+
 msgid "- Kill 8 Yales"
 msgstr "- Zabij 8 Yali"
 
@@ -20,7 +536,7 @@ msgid "After a long time wandering, a clan of dwarves led by Modsognir has arriv
 msgstr "Po długiej wędrówce, klan krasnoludów prowadzony przez Modsognira przybył do Svarinshaug w poszukiwaniu nowego domu..."
 
 msgid "~!Continue"
-msgstr "~!Kontynuuj"
+msgstr "Kontynuuj (~!C)"
 
 msgid "Modsognir"
 msgstr "Modsognir"
@@ -194,7 +710,7 @@ msgid "A Bargain is Struck"
 msgstr "Nagła okazja"
 
 msgid "A gnomish monarch arrives at a small border outpost led by Rugnur, asking that his clan craft a special scepter for him.\n\nMap: Chaincolt Foothills\n\nRewards: 2 Dwarven Technology Points."
-msgstr "Gnomi monarcha przybywa na mały posterunek graniczny dowodzony przez Rugnura, prosząc o wykucie specjalnego kostura dla niego.\n\nMapa: Pogórze Źrębięcego Łańcucha\n\nNagrody: 2 Punkty Technologii Krasnoludzkiej."
+msgstr "Gnomi monarcha przybywa na mały posterunek graniczny dowodzony przez Rugnura, prosząc o wykucie specjalnego berła dla niego.\n\nMapa: Pogórze Źrębięcego Łańcucha\n\nNagrody: 2 Punkty Technologii Krasnoludzkiej."
 
 msgid "Chaincolt Foothills"
 msgstr "Pogórze Źrębięcego Łańcucha"
@@ -230,7 +746,7 @@ msgid "Hills of the Shorbear Clan"
 msgstr "Góry Klanu Shorbear"
 
 msgid "Durstorn, Rugnur and their companions travel to the hills of the Shorbear Clan, seeking access to that tribe's magnificent tools, which are needed to craft the Scepter of Fire.\n\nMap: Shorbear Hills\n\nRewards: 2 Dwarven Technology Points."
-msgstr "Durnstorn, Rugnur i ich towarzysze wyruszają w góry Klanu Shorbear, chcąc uzyskać dostęp do wspaniałych narzędzi tego plemienia, potrzebnych do wykucia Kostura Ognia.\n\nMapa: Góry Shorbear\n\nNagrody: 2 Punkty Technologii Krasnoludzkiej."
+msgstr "Durnstorn, Rugnur i ich towarzysze wyruszają w góry Klanu Shorbear, chcąc uzyskać dostęp do wspaniałych narzędzi tego plemienia, potrzebnych do wykucia Berła Ognia.\n\nMapa: Góry Shorbear\n\nNagrody: 2 Punkty Technologii Krasnoludzkiej."
 
 msgid "Shorbear Hills"
 msgstr "Góry Shorbear"
@@ -251,4 +767,4 @@ msgid "Caverns of Flame"
 msgstr "Jaskinie Płomienia"
 
 msgid "Rugnur and his companions reach deep into the Caverns of Flame, where they find an ancient dwarven mechanism which may just allow them to prevent the Shinsplitters from getting their hands on the Scepter.\n\nMap: Caverns of Flame\n\nRewards: 1 Dwarven Technology Point."
-msgstr "Rugnur i jego towarzysze dotarli do czeluści Jaskiń Płomienia, gdzie znaleźli starożytny mechanizm, który może zapobiec przejęciu Kostura przez Shinsplitterów.\n\nMapa: Jaskinie Płomienia\n\nNagrody: 1 Punkt Technologii Krasnoludzkiej."
+msgstr "Rugnur i jego towarzysze dotarli do czeluści Jaskiń Płomienia, gdzie znaleźli starożytny mechanizm, który może zapobiec przejęciu Berła przez Shinsplitterów.\n\nMapa: Jaskinie Płomienia\n\nNagrody: 1 Punkt Technologii Krasnoludzkiej."
