@@ -12,23 +12,284 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: c:/Program Files/Wyrmsun/scripts\n"
 
-msgid "~!Single Player Game"
-msgstr "Jogo de Um Jogador (~!S)"
+msgid "%s attacked"
+msgstr "%s atacado"
 
-msgid "~!Quests"
-msgstr "Missões (~!Q)"
+msgid "- Bring the Gnomish caravans and the envoy to your Mead Hall"
+msgstr "- Traga as caravanas gnomas e o enviado até seu Salão de Hidromel"
+
+msgid "- Defeat your rivals"
+msgstr "- Derrote seus rivais"
+
+msgid "A Bargain is Struck"
+msgstr "Um Negócio é Fechado"
+
+msgid "Accuracy"
+msgstr "Precisão"
+
+msgid "Accuracy:"
+msgstr "Precisão:"
+
+msgid "Acid"
+msgstr "Ácido"
+
+msgid "Afternoon"
+msgstr "Tarde"
+
+msgid "~<ALT~>-click to defend a unit"
+msgstr "~<ALT~>-clique para defender uma unidade"
+
+msgid "Armor"
+msgstr "Armadura"
+
+msgid "Armor:"
+msgstr "Armad.:"
+
+msgid "Asa Tribe"
+msgstr "Tribo Asa"
+
+msgid "~!Attack"
+msgstr "~!Atacar"
+
+msgid "Axefighter"
+msgstr "Machadeiro"
+
+msgid "Barracks"
+msgstr "Quartel"
+
+msgid "Black"
+msgstr "Preto"
+
+msgid "Blue"
+msgstr "Azul"
+
+msgid "Brown"
+msgstr "Marrom"
+
+msgid "Build Carpente~!r's Shop"
+msgstr "Construir Oficina de Carpintei~!ro"
+
+msgid "Build Chieftain's ~!Hall"
+msgstr "Construir Salão do Chefe (~!H)"
+
+msgid "Build ~!Copper Mine"
+msgstr "Construir Mina de ~!Cobre"
+
+msgid "Build ~!Farm"
+msgstr "Construir ~!Fazenda"
+
+msgid "Build ~!Gold Mine"
+msgstr "Construir Mina de Ouro (~!G)"
+
+msgid "Build Sil~!ver Mine"
+msgstr "Construir Mina de Prata (~!V)"
+
+msgid "Build ~!Smithy"
+msgstr "Construir Ferraria (~!S)"
+
+msgid "~!Build Structure"
+msgstr "Construir Estrutura (~!B)"
+
+msgid "Build ~!War Lodge"
+msgstr "Construir Alojamento de Guerra (~!W)"
+
+msgid "~!Cancel"
+msgstr "~!Cancelar"
+
+msgid "Cancel (~<Esc~>)"
+msgstr "Cancelar (~<Esc~>)"
+
+msgid "Carpenter's Shop"
+msgstr "Oficina de Carpinteiro"
+
+msgid "Catapult"
+msgstr "Catapulta"
+
+msgid "Cavern Entrance"
+msgstr "Entrada de Caverna"
+
+msgid "Chieftain's Hall"
+msgstr "Salão do Chefe"
+
+msgid "Choose Your Faction"
+msgstr "Escolha sua Facção"
+
+msgid "Class:"
+msgstr "Classe:"
+
+msgid "Click on an empty space to attack-move"
+msgstr "Clique em um espaço vazio para atacar-mover"
+
+msgid "Coal"
+msgstr "Carvão"
+
+msgid "Coal Mine"
+msgstr "Mina de Carvão"
+
+msgid "Copper"
+msgstr "Cobre"
+
+msgid "Copper Mine"
+msgstr "Mina de Cobre"
+
+msgid "~!Continue"
+msgstr "~!Continuar"
+
+msgid "~<CTRL~>-click to stand ground after moving"
+msgstr "~<CTRL~>-clique para defender terreno após mover"
+
+msgid "~<CTRL~>-click on the button toggles auto-repair of damaged buildings"
+msgstr "~<CTRL~>-clicar no botão alterna o auto-conserto de construções danificadas"
 
 msgid "C~!ustom Game"
 msgstr "Jogo Personalizado (~!U)"
 
-msgid "~!Multi Player Game"
-msgstr "Jogo ~!Multijogador"
+msgid "Cyan"
+msgstr "Azul-Piscina"
 
-msgid "~!Multiplayer Game"
-msgstr "Jogo ~!Multijogador"
+msgid "Cycle:"
+msgstr "Ciclo:"
+
+msgid "Damage"
+msgstr "Dano"
+
+msgid "Damage:"
+msgstr "Dano:"
+
+msgid "Dawn"
+msgstr "Amanhecer"
+
+msgid "Default Color:"
+msgstr "Cor Padrão:"
+
+msgid "Deity"
+msgstr "Divindade"
+
+msgid "Dim"
+msgstr "Burro"
+
+msgid "Dock"
+msgstr "Doca"
+
+msgid "Dusk"
+msgstr "Pôr do Sol"
+
+msgid "Dwarf"
+msgstr "Anão"
+
+msgid "Early Night"
+msgstr "Noite"
+
+msgid "~!Edit Map"
+msgstr "~!Editar Mapa"
+
+msgid "Effects:"
+msgstr "Efeitos:"
+
+msgid "En~!cyclopedia"
+msgstr "En~!ciclopédia"
+
+msgid "Evasion"
+msgstr "Evasão"
+
+msgid "Evasion:"
+msgstr "Evasão:"
+
+msgid "E~!xit Program"
+msgstr "Sair do Programa (~!X)"
+
+msgid "Farm"
+msgstr "Fazenda"
+
+msgid "Find"
+msgstr "Encontrar"
+
+msgid "Find Idle Worker (~!.)"
+msgstr "Encontrar Trabalhador Desocupado (~!.)"
+
+msgid "Find Unit with Available Level Up"
+msgstr "Encontrar Unidade com Level Up Disponível"
+
+msgid "Fire"
+msgstr "Fogo"
+
+msgid "Food Cost:"
+msgstr "Custo de Comida:"
+
+msgid "Food Supply:"
+msgstr "Suprimento de Comida:"
+
+msgid "Forge"
+msgstr "Forja"
+
+msgid "Fortress"
+msgstr "Fortaleza"
+
+msgid "Fugla Forge"
+msgstr "Forja Fugla"
+
+msgid "Glyph"
+msgstr "Glifo"
+
+msgid "Gnomish Caravan"
+msgstr "Caravana Gnoma"
+
+msgid "Gnomish Recruit"
+msgstr "Recruta Gnomo"
+
+msgid "Gold"
+msgstr "Ouro"
+
+msgid "Gold:"
+msgstr "Ouro:"
+
+msgid "Gold Mine"
+msgstr "Mina de Ouro"
 
 msgid "~!Grand Strategy Game"
 msgstr "Jogo de ~!Grande Estratégia"
+
+msgid "Gray"
+msgstr "Cinza"
+
+msgid "Green"
+msgstr "Verde"
+
+msgid "Guard Tower"
+msgstr "Torre de Guarda"
+
+msgid "~!Harvest Resource"
+msgstr "Coletar Recurso (~!H)"
+
+msgid "Herminone Tribe"
+msgstr "Tribo Herminona"
+
+msgid "Hit Points"
+msgstr "Vida"
+
+msgid "Hit Points:"
+msgstr "Vida:"
+
+msgid "Ingaevone Tribe"
+msgstr "Tribo Ingaevona"
+
+msgid "Intelligent"
+msgstr "Inteligente"
+
+msgid "Istaevone Tribe"
+msgstr "Tribo Istaevona"
+
+msgid "Late Night"
+msgstr "Madrugada"
+
+msgid "Left-click to center"
+msgstr "Clique com o botão esquerdo do mouse para centralizar"
+
+msgid "Level"
+msgstr "Nível"
+
+msgid "Level:"
+msgstr "Nível:"
 
 msgid "Load Game"
 msgstr "Carregar Jogo"
@@ -36,14 +297,11 @@ msgstr "Carregar Jogo"
 msgid "~!Load Game"
 msgstr "Carregar Jogo (~!L)"
 
-msgid "~!Replay Game"
-msgstr "~!Rever Jogo"
+msgid "~!Load"
+msgstr "Carregar (~!L)"
 
-msgid "~!Options"
-msgstr "~!Opções"
-
-msgid "Map ~!Editor"
-msgstr "~!Editor de Mapas"
+msgid "~!Load Map"
+msgstr "Carregar Mapa (~!L)"
 
 msgid "Load Mod"
 msgstr "Carregar Mod"
@@ -51,23 +309,101 @@ msgstr "Carregar Mod"
 msgid "Load Mo~!d"
 msgstr "Carregar Mo~!d"
 
-msgid "En~!cyclopedia"
-msgstr "En~!ciclopédia"
+msgid "Lumber"
+msgstr "Madeira"
 
-msgid "S~!how Credits"
-msgstr "Mostrar Créditos"
+msgid "Lumber:"
+msgstr "Madeira:"
 
-msgid "E~!xit Program"
-msgstr "Sair do Programa"
+msgid "Lumber Mill"
+msgstr "Serraria"
 
-msgid "~!Previous Menu"
-msgstr "Menu Anterior (~!P)"
+msgid "Map ~!Editor"
+msgstr "~!Editor de Mapas"
+
+msgid "Mead Hall"
+msgstr "Salão de Hidromel"
+
+msgid "Midday"
+msgstr "Meio-Dia"
+
+msgid "Middle-click to track"
+msgstr "Clique com o botão do meio do mouse para acompanhar"
+
+msgid "Midnight"
+msgstr "Meia-Noite"
+
+msgid "Miner"
+msgstr "Mineiro"
+
+msgid "Morning"
+msgstr "Manhã"
+
+msgid "~!Move"
+msgstr "~!Mover"
+
+msgid "~!Multi Player Game"
+msgstr "Jogo ~!Multijogador"
+
+msgid "~!Multiplayer Game"
+msgstr "Jogo ~!Multijogador"
+
+msgid "Mushroom Farm"
+msgstr "Fazenda de Cogumelos"
 
 msgid "~!New Map"
 msgstr "~!Novo Mapa"
 
-msgid "~!Load Map"
-msgstr "Carregar Mapa"
+msgid "Old"
+msgstr "Velho"
+
+msgid "~!Options"
+msgstr "~!Opções"
+
+msgid "Orange"
+msgstr "Laranja"
+
+msgid "Pink"
+msgstr "Rosa"
+
+msgid "Pious"
+msgstr "Pio"
+
+msgid "~!Previous Menu"
+msgstr "Menu Anterior (~!P)"
+
+msgid "Processing"
+msgstr "Processamento"
+
+msgid "Purple"
+msgstr "Roxo"
+
+msgid "~!Quests"
+msgstr "Missões (~!Q)"
+
+msgid "Radioactive"
+msgstr "Radioativo"
+
+msgid "Range"
+msgstr "Alcance"
+
+msgid "Range:"
+msgstr "Alcance:"
+
+msgid "Rat"
+msgstr "Rato"
+
+msgid "Red"
+msgstr "Vermelho"
+
+msgid "~!Repair"
+msgstr "Conserta~!r"
+
+msgid "~!Replay Game"
+msgstr "~!Rever Jogo"
+
+msgid "Right-click to see encyclopedia"
+msgstr "Clique com o botão direito do mouse para ver a enciclopédia"
 
 msgid "Select Map"
 msgstr "Selecionar Mapa"
@@ -78,218 +414,14 @@ msgstr "~!Selecionar Mapa"
 msgid "S~!elect Map"
 msgstr "S~!elecionar Mapa"
 
-msgid "~!Edit Map"
-msgstr "~!Editar Mapa"
+msgid "Set ~!Rally Point"
+msgstr "Colocar Ponto de Encont~!ro"
 
-msgid "~!Continue"
-msgstr "~!Continuar"
+msgid "~<SHIFT~>-click to make waypoints"
+msgstr "~<SHIFT~>-clique para fazer waypoints"
 
-msgid "~!Load"
-msgstr "Carregar"
-
-msgid "~!Cancel"
-msgstr "~!Cancelar"
-
-msgid "~<Units:~>"
-msgstr "~<Unidades:~>"
-
-msgid "Dwarf"
-msgstr "Anão"
-
-msgid "Miner"
-msgstr "Mineiro"
-
-msgid "Axefighter"
-msgstr "Machadeiro"
-
-msgid "Mead Hall"
-msgstr "Salão de Hidromel"
-
-msgid "War Hall"
-msgstr "Salão de Guerra"
-
-msgid "Barracks"
-msgstr "Quartel"
-
-msgid "Mushroom Farm"
-msgstr "Fazenda de Cogumelos"
-
-msgid "Lumber Mill"
-msgstr "Serraria"
-
-msgid "Gnomish Recruit"
-msgstr "Recruta Gnomo"
-
-msgid "Gnomish Caravan"
-msgstr "Caravana Gnoma"
-
-msgid "Gold Mine"
-msgstr "Mina de Ouro"
-
-msgid "Silver Mine"
-msgstr "Mina de Prata"
-
-msgid "Copper Mine"
-msgstr "Mina de Cobre"
-
-msgid "Coal Mine"
-msgstr "Mina de Carvão"
-
-msgid "Rat"
-msgstr "Rato"
-
-msgid "The Scepter of Fire"
-msgstr "O Cetro de Fogo"
-
-msgid "A Bargain is Struck"
-msgstr "Um Negócio é Fechado"
-
-msgid "- Bring the Gnomish caravans and the envoy to your Mead Hall"
-msgstr "- Traga as caravanas gnomas e o enviado até seu Salão de Hidromel"
-
-msgid "Dawn"
-msgstr "Amanhecer"
-
-msgid "Morning"
-msgstr "Manhã"
-
-msgid "Midday"
-msgstr "Meio-Dia"
-
-msgid "Afternoon"
-msgstr "Tarde"
-
-msgid "Dusk"
-msgstr "Pôr do Sol"
-
-msgid "Early Night"
-msgstr "Noite"
-
-msgid "Midnight"
-msgstr "Meia-Noite"
-
-msgid "Late Night"
-msgstr "Madrugada"
-
-msgid "- Defeat your rivals"
-msgstr "- Derrote seus rivais"
-
-msgid "Asa Tribe"
-msgstr "Tribo Asa"
-
-msgid "Herminone Tribe"
-msgstr "Tribo Herminona"
-
-msgid "Ingaevone Tribe"
-msgstr "Tribo Ingaevona"
-
-msgid "Istaevone Tribe"
-msgstr "Tribo Istaevona"
-
-msgid "Skeldung Tribe"
-msgstr "Tribo Skeldunga"
-
-msgid "Yngling Tribe"
-msgstr "Tribo Ynglinga"
-
-msgid "Vulcan Tribe"
-msgstr "Tribo Vulcana"
-
-msgid "Cycle:"
-msgstr "Ciclo:"
-
-msgid "Default Color:"
-msgstr "Cor Padrão:"
-
-msgid "Effects:"
-msgstr "Efeitos:"
-
-msgid "Red"
-msgstr "Vermelho"
-
-msgid "Blue"
-msgstr "Azul"
-
-msgid "Green"
-msgstr "Verde"
-
-msgid "Violet"
-msgstr "Violeta"
-
-msgid "Orange"
-msgstr "Laranja"
-
-msgid "Black"
-msgstr "Preto"
-
-msgid "White"
-msgstr "Branco"
-
-msgid "Yellow"
-msgstr "Amarelo"
-
-msgid "Pink"
-msgstr "Rosa"
-
-msgid "Cyan"
-msgstr "Azul-Piscina"
-
-msgid "Teal"
-msgstr "Verde-Azulado"
-
-msgid "Purple"
-msgstr "Roxo"
-
-msgid "Fire"
-msgstr "Fogo"
-
-msgid "Brown"
-msgstr "Marrom"
-
-msgid "Radioactive"
-msgstr "Radioativo"
-
-msgid "Acid"
-msgstr "Ácido"
-
-msgid "Gray"
-msgstr "Cinza"
-
-msgid "Level"
-msgstr "Nível"
-
-msgid "Level:"
-msgstr "Nível:"
-
-msgid "Trait"
-msgstr "Característica"
-
-msgid "Trait:"
-msgstr "Carac.:"
-
-msgid "Hit Points"
-msgstr "Vida"
-
-msgid "Hit Points:"
-msgstr "Vida:"
-
-msgid "Damage"
-msgstr "Dano"
-
-msgid "Damage:"
-msgstr "Dano:"
-
-msgid "Range"
-msgstr "Alcance"
-
-msgid "Range:"
-msgstr "Alcance:"
-
-msgid "Armor"
-msgstr "Armadura"
-
-msgid "Armor:"
-msgstr "Armad.:"
+msgid "S~!how Credits"
+msgstr "Mostrar Créditos(~!H)"
 
 msgid "Sight"
 msgstr "Visão"
@@ -297,17 +429,20 @@ msgstr "Visão"
 msgid "Sight:"
 msgstr "Visão:"
 
-msgid "Accuracy"
-msgstr "Precisão"
+msgid "Silver"
+msgstr "Prata"
 
-msgid "Accuracy:"
-msgstr "Precisão:"
+msgid "Silver Mine"
+msgstr "Mina de Prata"
 
-msgid "Evasion"
-msgstr "Evasão"
+msgid "~!Single Player Game"
+msgstr "Jogo de Um Jogador (~!S)"
 
-msgid "Evasion:"
-msgstr "Evasão:"
+msgid "Skeldung Tribe"
+msgstr "Tribo Skeldunga"
+
+msgid "Smithy"
+msgstr "Ferraria"
 
 msgid "Speed"
 msgstr "Velocidade"
@@ -315,77 +450,8 @@ msgstr "Velocidade"
 msgid "Speed:"
 msgstr "Veloc.:"
 
-msgid "Deity"
-msgstr "Divindade"
-
-msgid "Chieftain's Hall"
-msgstr "Salão do Chefe"
-
-msgid "Town Hall"
-msgstr "Prefeitura"
-
-msgid "War Lodge"
-msgstr "Alojamento de Guerra"
-
-msgid "Farm"
-msgstr "Fazenda"
-
-msgid "Dock"
-msgstr "Doca"
-
 msgid "Stables"
 msgstr "Estábulos"
-
-msgid "Carpenter's Shop"
-msgstr "Oficina de Carpinteiro"
-
-msgid "Smithy"
-msgstr "Ferraria"
-
-msgid "Forge"
-msgstr "Forja"
-
-msgid "Fugla Forge"
-msgstr "Forja Fugla"
-
-msgid "Watch Tower"
-msgstr "Torre de Vigia"
-
-msgid "Guard Tower"
-msgstr "Torre de Guarda"
-
-msgid "Stronghold"
-msgstr "Forte"
-
-msgid "Fortress"
-msgstr "Fortaleza"
-
-msgid "Glyph"
-msgstr "Glifo"
-
-msgid "Cavern Entrance"
-msgstr "Entrada de Caverna"
-
-msgid "Catapult"
-msgstr "Catapulta"
-
-msgid "War Machine"
-msgstr "Máquina de Guerra"
-
-msgid "Processing"
-msgstr "Processamento"
-
-msgid "Gold"
-msgstr "Ouro"
-
-msgid "Gold:"
-msgstr "Ouro:"
-
-msgid "Lumber"
-msgstr "Madeira"
-
-msgid "Lumber:"
-msgstr "Madeira:"
 
 msgid "Stone"
 msgstr "Pedra"
@@ -393,137 +459,71 @@ msgstr "Pedra"
 msgid "Stone:"
 msgstr "Pedra:"
 
-msgid "Coal"
-msgstr "Carvão"
-
-msgid "Silver"
-msgstr "Prata"
-
-msgid "Copper"
-msgstr "Cobre"
-
-msgid "Choose Your Faction"
-msgstr "Escolha sua Facção"
+msgid "~!Stop"
+msgstr "Parar (~!S)"
 
 msgid "Strong"
 msgstr "Forte"
 
-msgid "Intelligent"
-msgstr "Inteligente"
+msgid "Stronghold"
+msgstr "Forte"
 
-msgid "Old"
-msgstr "Velho"
+msgid "Teal"
+msgstr "Verde-Azulado"
 
-msgid "Weak"
-msgstr "Fraco"
+msgid "The Scepter of Fire"
+msgstr "O Cetro de Fogo"
 
-msgid "Dim"
-msgstr "Burro"
-
-msgid "Pious"
-msgstr "Pio"
+msgid "Town Hall"
+msgstr "Prefeitura"
 
 msgid "Train ~!Bura"
 msgstr "Treinar ~!Bura"
 
-msgid "Set ~!Rally Point"
-msgstr "Colocar Ponto de Encont~!ro"
+msgid "Trait"
+msgstr "Característica"
 
-msgid "~!Move"
-msgstr "~!Mover"
-
-msgid "~!Stop"
-msgstr "Parar (~!S)"
-
-msgid "~!Attack"
-msgstr "~!Atacar"
-
-msgid "~!Repair"
-msgstr "Conserta~!r"
-
-msgid "~!Harvest Resource"
-msgstr "Coletar Recurso (~!H)"
-
-msgid "~!Build Structure"
-msgstr "Construir Estrutura (~!B)"
-
-msgid "Build Chieftain's ~!Hall"
-msgstr "Construir Salão do Chefe (~!H)"
-
-msgid "Build ~!Farm"
-msgstr "Construir ~!Fazenda"
-
-msgid "Build ~!War Lodge"
-msgstr "Construir Alojamento de Guerra (~!W)"
-
-msgid "Build Carpente~!r's Shop"
-msgstr "Construir Oficina de Carpintei~!ro"
-
-msgid "Build ~!Smithy"
-msgstr "Construir Ferraria (~!S)"
-
-msgid "Build ~!Gold Mine"
-msgstr "Construir Mina de Ouro (~!G)"
-
-msgid "Build Sil~!ver Mine"
-msgstr "Construir Mina de Prata (~!V)"
-
-msgid "Build ~!Copper Mine"
-msgstr "Construir Mina de ~!Cobre"
-
-msgid "Cancel (~<Esc~>)"
-msgstr "Cancelar (~<Esc~>)"
-
-msgid "Class:"
-msgstr "Classe:"
-
-msgid "Food Supply:"
-msgstr "Suprimento de Comida:"
-
-msgid "Food Cost:"
-msgstr "Custo de Comida:"
-
-msgid "Worker"
-msgstr "Trabalhador"
+msgid "Trait:"
+msgstr "Carac.:"
 
 msgid "Unicorn"
 msgstr "Unicórnio"
 
-msgid "~<ALT~>-click to defend a unit"
-msgstr "~<ALT~>-clique para defender uma unidade"
+msgid "~<Units:~>"
+msgstr "~<Unidades:~>"
 
-msgid "~<SHIFT~>-click to make waypoints"
-msgstr "~<SHIFT~>-clique para fazer waypoints"
+msgid "Violet"
+msgstr "Violeta"
 
-msgid "~<CTRL~>-click to stand ground after moving"
-msgstr "~<CTRL~>-clique para defender terreno após mover"
+msgid "Vulcan Tribe"
+msgstr "Tribo Vulcana"
 
-msgid "Click on an empty space to attack-move"
-msgstr "Clique em um espaço vazio para atacar-mover"
+msgid "War Hall"
+msgstr "Salão de Guerra"
 
-msgid "~<CTRL~>-click on the button toggles auto-repair of damaged buildings"
-msgstr "~<CTRL~>-clicar no botão alterna o auto-conserto de construções danificadas"
+msgid "War Lodge"
+msgstr "Alojamento de Guerra"
 
-msgid "Left-click to center"
-msgstr "Clique com o botão esquerdo do mouse para centralizar"
+msgid "War Machine"
+msgstr "Máquina de Guerra"
 
-msgid "Middle-click to track"
-msgstr "Clique com o botão do meio do mouse para acompanhar"
+msgid "Watch Tower"
+msgstr "Torre de Vigia"
 
-msgid "Right-click to see encyclopedia"
-msgstr "Clique com o botão direito do mouse para ver a enciclopédia"
+msgid "Weak"
+msgstr "Fraco"
 
-msgid "Find Idle Worker (~!.)"
-msgstr "Encontrar Trabalhador Desocupado (~!.)"
+msgid "White"
+msgstr "Branco"
 
-msgid "Find Unit with Available Level Up"
-msgstr "Encontrar Unidade com Level Up Disponível"
+msgid "Worker"
+msgstr "Trabalhador"
 
-msgid "Find"
-msgstr "Encontrar"
+msgid "Yellow"
+msgstr "Amarelo"
 
-msgid "%s attacked"
-msgstr "%s atacado"
+msgid "Yngling Tribe"
+msgstr "Tribo Ynglinga"
 
 msgid "Your Faction:"
 msgstr "Sua Facção:"

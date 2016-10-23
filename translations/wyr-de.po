@@ -103,29 +103,107 @@ msgstr ""
 "in einer sehr kurzen Zeit zu erlernen, so dass in Windeseile "
 "eine schlagkräftige Verteidigungsarmee bereitsteht."
 
-msgid "Earth"
-msgstr "Erde"
-
-msgid "The Scepter of Fire"
-msgstr "Das Zepter des Feuers"
-
 msgid "A Bargain is Struck"
 msgstr "Ein Handel wird vereinbart"
 
-msgid "~!Single Player Game"
-msgstr "Einzel~!spieler"
+msgid "~!Buildings"
+msgstr "Ge~!bäude"
 
-msgid "~!Multi Player Game"
-msgstr "~!Mehrspieler"
+msgid "~!Civilizations"
+msgstr "Zivilisationen (~!C)"
+
+msgid "Cred~!its"
+msgstr "M~!itwirkende"
+
+msgid "~!Deities"
+msgstr "Götter (~!D)"
+
+msgid "Earth"
+msgstr "Erde"
+
+msgid "En~!cyclopedia"
+msgstr "Enzyklopädie (~!C)"
+
+msgid "~<Encyclopedia: Units~>"
+msgstr "~<Enzyklopädie: Einheiten~>"
+
+msgid "~<Encyclopedia: Worlds~>"
+msgstr "~<Enzyklopädie: Welten~>"
+
+msgid "E~!xit"
+msgstr "Beenden (~!X)"
+
+msgid "E~!xit Program"
+msgstr "Programm Beenden (~!X)"
+
+msgid "~!Factions"
+msgstr "~!Fraktionen"
+
+msgid "~!Game Concepts"
+msgstr "Spielbe~!griffe"
+
+msgid "Grand Strateg~!y Concepts"
+msgstr "Großstrategiespielbegriffe (~!Y)"
 
 msgid "~!Grand Strategy Game"
 msgstr "~!Großstrategiespiel"
 
+msgid "~!Heroes"
+msgstr "~!Helden"
+
+msgid "~!Items"
+msgstr "Gegenstände (~!I)"
+
+msgid "Language"
+msgstr "Sprache"
+
 msgid "Load Game"
-msgstr "Spielstand laden"
+msgstr "Spielstand Laden"
 
 msgid "~!Load Game"
-msgstr "Spielstand ~!laden"
+msgstr "Spielstand ~!Laden"
+
+msgid "Load Mo~!d"
+msgstr "Mo~!d Laden"
+
+msgid "Magic P~!refixes"
+msgstr "Magische P~!räfixe"
+
+msgid "Magic ~!Suffixes"
+msgstr "Magische ~!Suffixe"
+
+msgid "~<Map:~>"
+msgstr "~<Karte:~>"
+
+msgid "Map Default"
+msgstr "Vorgaben nutzen"
+
+msgid "Map ~!Editor"
+msgstr "~!Editor"
+
+msgid "~!Mercenaries"
+msgstr "Söldner (~!M)"
+
+msgid "~!Multi Player Game"
+msgstr "~!Mehrspieler"
+
+msgid "~!Multiplayer Game"
+msgstr "~!Mehrspieler"
+
+msgid "~!Options"
+msgstr "Einstellungen (~!O)"
+
+msgid "Options"
+msgstr "Einstellungen"
+
+msgid "P~!lanes"
+msgstr "Ebenen (~!L)"
+
+msgid "Preferences (~<F8~>)"
+msgstr "Einstellungen (~<F8~>)"
+
+msgid "~!Previous Menu"
+msgstr "Vorheriges Menu (~!P)"
 
 msgid "Replay Game"
 msgstr "Wiederholung anzeigen"
@@ -133,65 +211,47 @@ msgstr "Wiederholung anzeigen"
 msgid "~!Replay Game"
 msgstr "Wiede~!rholung anzeigen"
 
-msgid "Load Mo~!d"
-msgstr "Mo~!d laden"
-
-msgid "En~!cyclopedia"
-msgstr "Enzyklopädie"
-
-msgid "~!Worlds"
-msgstr "~!Welten"
-
-msgid "~<World:~>"
-msgstr "~<Welt:~>"
-
-msgid "~<Encyclopedia: Worlds~>"
-msgstr "~<Enzyklopädie: Welten~>"
-
-msgid "~!Units"
-msgstr "Einheiten"
-
-msgid "~<Units:~>"
-msgstr "~<Einheiten:~>"
-
-msgid "~<Encyclopedia: Units~>"
-msgstr "~<Enzyklopädie: Einheiten~>"
-
-msgid "Map Default"
-msgstr "Vorgaben nutzen"
-
-msgid "Use Map Settings"
-msgstr "Vorgaben nutzen"
-
-msgid "Select Scenario"
-msgstr "Szenario auswählen"
+msgid "Runic Suffix~!es"
+msgstr "Runische Suffix~!e"
 
 msgid "Select Game"
 msgstr "Spiel auswählen"
 
-msgid "~!Options"
-msgstr "Einstellungen"
+msgid "Select Scenario"
+msgstr "Szenario auswählen"
 
-msgid "Options"
-msgstr "Einstellungen"
+msgid "~!Single Player Game"
+msgstr "Einzel~!spieler"
 
-msgid "Preferences (~<F8~>)"
-msgstr "Einstellungen (~<F8~>)"
+msgid "~!Technologies"
+msgstr "~!Technologien"
 
-msgid "Map ~!Editor"
-msgstr "~!Editor"
+msgid "Te~!xts"
+msgstr "Te~!xte"
 
-msgid "E~!xit Program"
-msgstr "Programm beenden"
+msgid "The Scepter of Fire"
+msgstr "Das Zepter des Feuers"
 
-msgid "~<Map:~>"
-msgstr "~<Karte:~>"
+msgid "U~!niques"
+msgstr "Ei~!nzigartige Gegenstände"
+
+msgid "~!Units"
+msgstr "Einheiten (~!U)"
+
+msgid "~<Units:~>"
+msgstr "~<Einheiten:~>"
+
+msgid "Use Map Settings"
+msgstr "Vorgaben nutzen"
+
+msgid "~<World:~>"
+msgstr "~<Welt:~>"
+
+msgid "~!Worlds"
+msgstr "~!Welten"
 
 msgid "~<Your Civilization:~>"
 msgstr "~<Ihre Zivilisation:~>"
 
 msgid "~<Your Faction:~>"
 msgstr "~<Ihre Fraktion:~>"
-
-msgid "Language"
-msgstr "Sprache"
