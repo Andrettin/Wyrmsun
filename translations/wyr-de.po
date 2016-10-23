@@ -13,98 +13,11 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: c:/Program Files/Wyrmsun/scripts\n"
 
-msgid "Dwarf"
-msgstr "Zwerg"
-
-msgid "Mead Hall"
-msgstr "Methalle"
-
-msgid "Miner"
-msgstr "Bergmann"
-
-msgid ""
-"Dwarven miners are the grunt workers of dwarven society. They take the "
-"precious ores out of the ground, but do not ever take part in the crafting "
-"of weapons or artifacts. "
-"Although their expertise makes them quite efficient in mining, this comes at the cost of neglecting training in the harvesting of other resources."
-msgstr ""
-"Bergmänner sind die Knechte des Volkes der Zwerge. Sie holen die "
-"Kostbarkeiten aus dem Gestein, schmieden allerdings nie Waffen oder "
-"Artefakte. Weil sie viel Zeit im Bergbau Ausbildung verwenden, müssen sie die Ausbildung in der Extraktion der anderen Rostoffen vernachlässigen."
+msgid "A Bargain is Struck"
+msgstr "Ein Handel wird vereinbart"
 
 msgid "Axefighter"
 msgstr "Axtkämpfer"
-
-msgid "Steelclad"
-msgstr "Chalybter"
-
-msgid ""
-"The more experienced dwarven steelclad fighters wear heavy chain mail and "
-"plate armor, for which they are rightly famous."
-msgstr ""
-"Die erfahrenen Chalybter tragen schwere Kettenhemden und Plattenrüstungen, "
-"für die sie geradezu berühmt sind."
-
-msgid "Scout"
-msgstr "Späher"
-
-msgid ""
-"Dwarven scouts use their lighter armor to their "
-"advantage, ranging ahead of the main force and reporting back on troop "
-"movements and dispositions, or securing important objectives. Outside of "
-"battle, they are often used to relay messages between dwarven communities. "
-"However, they pay for their speed with the poorer protection provided by "
-"their lighter armor."
-msgstr ""
-"Zwergenspäher nutzen ihre höhere Beweglichkeit "
-"und spionieren Truppenbewegungen und Truppenstärke weit im "
-"feindlichen Gebiet aus oder sichern als Vorauskommando strategisch wichtige "
-"Objekte. In Zivil überbringen sie Botschaften zwischen den Stämmen. Ihre "
-"Geschwindigkeit erkaufen sie sich durch eine höhere Verletzlichkeit in der "
-"nur leichte Rüstung."
-
-msgid "Gryphon Rider"
-msgstr "Greifenreiter"
-
-msgid ""
-"Only a few are able to bond with the mighty gryphons. Those who do may "
-"become gryphon riders, and discover the world of the skies upon the backs of "
-"these flying beasts."
-msgstr ""
-"Nur wenige sind in der Lage, einen der mächtigen Greifen zu zähmen. Diese "
-"werden Greifenreiter und beherrschen mit diesen fliegenden Bestien den "
-"Himmel."
-
-msgid "Town Hall"
-msgstr "Rathaus"
-
-msgid "Kobold Footpad"
-msgstr "Koboldwegelagerer"
-
-msgid "Footpad"
-msgstr "Wegelagerer"
-
-msgid "Elven Swordsman"
-msgstr "Elfenschwertkämpfer"
-
-msgid "Swordsman"
-msgstr "Schwertkämpfer"
-
-msgid ""
-"Elves are not warlike by nature, but in times of need, their natural grace "
-"and agility serve them well, as does their skillful craftsmanship. An elf "
-"can grasp the basics of swordsmanship in a time uncannily short "
-"by the standards of other races, and put them to effective use on the "
-"battlefield."
-msgstr ""
-"Auch wenn sie das Kriegshandwerk ablehnen, wird in Zeiten der Not zu Schwert "
-"und Bogen gegriffen. Den elfischen Fußtruppen ist es durch ihre "
-"Geschicklichkeit möglich, die Grundlagen des Schwertkampfes "
-"in einer sehr kurzen Zeit zu erlernen, so dass in Windeseile "
-"eine schlagkräftige Verteidigungsarmee bereitsteht."
-
-msgid "A Bargain is Struck"
-msgstr "Ein Handel wird vereinbart"
 
 msgid "~!Buildings"
 msgstr "Ge~!bäude"
@@ -118,8 +31,23 @@ msgstr "M~!itwirkende"
 msgid "~!Deities"
 msgstr "Götter (~!D)"
 
+msgid "Dwarf"
+msgstr "Zwerg"
+
+msgid "Dwarven miners are the grunt workers of dwarven society. They take the precious ores out of the ground, but do not ever take part in the crafting of weapons or artifacts. Although their expertise makes them quite efficient in mining, this comes at the cost of neglecting training in the harvesting of other resources."
+msgstr "Bergmänner sind die Knechte des Volkes der Zwerge. Sie holen die Kostbarkeiten aus dem Gestein, schmieden allerdings nie Waffen oder Artefakte. Weil sie viel Zeit im Bergbau Ausbildung verwenden, müssen sie die Ausbildung in der Extraktion der anderen Rostoffen vernachlässigen."
+
+msgid "Dwarven scouts use their lighter armor to their advantage, ranging ahead of the main force and reporting back on troop movements and dispositions, or securing important objectives. Outside of battle, they are often used to relay messages between dwarven communities. However, they pay for their speed with the poorer protection provided by their lighter armor."
+msgstr "Zwergenspäher nutzen ihre höhere Beweglichkeit und spionieren Truppenbewegungen und Truppenstärke weit im feindlichen Gebiet aus oder sichern als Vorauskommando strategisch wichtige Objekte. In Zivil überbringen sie Botschaften zwischen den Stämmen. Ihre Geschwindigkeit erkaufen sie sich durch eine höhere Verletzlichkeit in der nur leichte Rüstung."
+
 msgid "Earth"
 msgstr "Erde"
+
+msgid "Elven Swordsman"
+msgstr "Elfenschwertkämpfer"
+
+msgid "Elves are not warlike by nature, but in times of need, their natural grace and agility serve them well, as does their skillful craftsmanship. An elf can grasp the basics of swordsmanship in a time uncannily short by the standards of other races, and put them to effective use on the battlefield."
+msgstr "Auch wenn sie das Kriegshandwerk ablehnen, wird in Zeiten der Not zu Schwert und Bogen gegriffen. Den elfischen Fußtruppen ist es durch ihre Geschicklichkeit möglich, die Grundlagen des Schwertkampfes in einer sehr kurzen Zeit zu erlernen, so dass in Windeseile eine schlagkräftige Verteidigungsarmee bereitsteht."
 
 msgid "En~!cyclopedia"
 msgstr "Enzyklopädie (~!C)"
@@ -139,6 +67,9 @@ msgstr "Programm Beenden (~!X)"
 msgid "~!Factions"
 msgstr "~!Fraktionen"
 
+msgid "Footpad"
+msgstr "Wegelagerer"
+
 msgid "~!Game Concepts"
 msgstr "Spielbe~!griffe"
 
@@ -148,11 +79,20 @@ msgstr "Großstrategiespielbegriffe (~!Y)"
 msgid "~!Grand Strategy Game"
 msgstr "~!Großstrategiespiel"
 
+msgid "Gryphon"
+msgstr "Greif"
+
+msgid "Gryphon Rider"
+msgstr "Greifenreiter"
+
 msgid "~!Heroes"
 msgstr "~!Helden"
 
 msgid "~!Items"
 msgstr "Gegenstände (~!I)"
+
+msgid "Kobold Footpad"
+msgstr "Koboldwegelagerer"
 
 msgid "Language"
 msgstr "Sprache"
@@ -181,14 +121,23 @@ msgstr "Vorgaben nutzen"
 msgid "Map ~!Editor"
 msgstr "~!Editor"
 
+msgid "Mead Hall"
+msgstr "Methalle"
+
 msgid "~!Mercenaries"
 msgstr "Söldner (~!M)"
+
+msgid "Miner"
+msgstr "Bergmann"
 
 msgid "~!Multi Player Game"
 msgstr "~!Mehrspieler"
 
 msgid "~!Multiplayer Game"
 msgstr "~!Mehrspieler"
+
+msgid "Only a few are able to bond with the mighty gryphons. Those who do may become gryphon riders, and discover the world of the skies upon the backs of these flying beasts."
+msgstr "Nur wenige sind in der Lage, einen der mächtigen Greifen zu zähmen. Diese werden Greifenreiter und beherrschen mit diesen fliegenden Bestien den Himmel."
 
 msgid "~!Options"
 msgstr "Einstellungen (~!O)"
@@ -214,6 +163,9 @@ msgstr "Wiede~!rholung anzeigen"
 msgid "Runic Suffix~!es"
 msgstr "Runische Suffix~!e"
 
+msgid "Scout"
+msgstr "Späher"
+
 msgid "Select Game"
 msgstr "Spiel auswählen"
 
@@ -223,14 +175,26 @@ msgstr "Szenario auswählen"
 msgid "~!Single Player Game"
 msgstr "Einzel~!spieler"
 
+msgid "Steelclad"
+msgstr "Chalybter"
+
+msgid "Swordsman"
+msgstr "Schwertkämpfer"
+
 msgid "~!Technologies"
 msgstr "~!Technologien"
 
 msgid "Te~!xts"
 msgstr "Te~!xte"
 
+msgid "The more experienced dwarven steelclad fighters wear heavy chain mail and plate armor, for which they are rightly famous."
+msgstr "Die erfahrenen Chalybter tragen schwere Kettenhemden und Plattenrüstungen, für die sie geradezu berühmt sind."
+
 msgid "The Scepter of Fire"
 msgstr "Das Zepter des Feuers"
+
+msgid "Town Hall"
+msgstr "Rathaus"
 
 msgid "U~!niques"
 msgstr "Ei~!nzigartige Gegenstände"
