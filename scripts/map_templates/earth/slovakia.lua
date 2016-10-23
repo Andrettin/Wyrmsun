@@ -26,16 +26,16 @@
 --
 
 -- Bárca
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "celtic-cimmerian-tribe", {4323, 941}, -1700, -1500) -- a fortified settlement existed c. 1700-1500 BC in Bárca (southeast Slovakia), belonging to the Otomani-Füzesabony culture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 31.
+SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "celtic-cimmerian-tribe", {4323, 941}, -1700, -1500) -- a fortified settlement existed c. 1700-1500 BC in Bárca (southeast Slovakia), belonging to the Otomani-Füzesabony culture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 31.
 
 -- Gánovce
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "celtic-cimmerian-tribe", {4302, 933}, -1700, -1500) -- a fortified settlement existed c. 1700-1500 BC in Gánovce (southeast Slovakia), belonging to the Otomani-Füzesabony culture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 31.
+SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "celtic-cimmerian-tribe", {4302, 933}, -1700, -1500) -- a fortified settlement existed c. 1700-1500 BC in Gánovce (southeast Slovakia), belonging to the Otomani-Füzesabony culture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 31.
 
 -- Nižná Myšl'a
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "celtic-cimmerian-tribe", {4326, 930}, -1700, -1500) -- a fortified settlement existed c. 1700-1500 BC in Nižná Myšl'a (southeast Slovakia), belonging to the Otomani-Füzesabony culture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 31.
+SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "celtic-cimmerian-tribe", {4326, 930}, -1700, -1500) -- a fortified settlement existed c. 1700-1500 BC in Nižná Myšl'a (southeast Slovakia), belonging to the Otomani-Füzesabony culture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 31.
 
 -- Spišský Štvrtok
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "celtic-cimmerian-tribe", {4305, 933}, -1700, -1500) -- a fortified hilltop settlement existed c. 1700-1500 BC in Spišský Štvrtok, belonging to the Otomani-Füzesabony culture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 31.
+SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "celtic-cimmerian-tribe", {4305, 933}, -1700, -1500) -- a fortified hilltop settlement existed c. 1700-1500 BC in Spišský Štvrtok, belonging to the Otomani-Füzesabony culture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 31.
 
 -- Streda nad Bodrogom
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "celtic-cimmerian-tribe", {4335, 948}, -1700, -1500) -- a fortified settlement existed c. 1700-1500 BC in Streda nad Bodrogom (southeast Slovakia), belonging to the Otomani-Füzesabony culture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 31.
+SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "celtic-cimmerian-tribe", {4335, 948}, -1700, -1500) -- a fortified settlement existed c. 1700-1500 BC in Streda nad Bodrogom (southeast Slovakia), belonging to the Otomani-Füzesabony culture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 31.

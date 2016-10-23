@@ -29,7 +29,7 @@ SetMapTemplateUnit("earth", "unit-germanic-town-hall", "ingaevone-tribe", {4054,
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "angle-tribe", {4054, 801}, -264) -- Tribes in Europe between 264 BC and 180 AD (Schleswig was inhabited by the Angles); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 
 -- Bernstorf (Bavaria)
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "celtic-cimmerian-tribe", {4104, 946}, -1600, -1400) -- a fortified settlement existed c. 1600-1400 BC in Bernstorf (Bavaria); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 29.
+SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "celtic-cimmerian-tribe", {4104, 946}, -1600, -1400) -- a fortified settlement existed c. 1600-1400 BC in Bernstorf (Bavaria); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 29.
 
 -- Cologne / Colonia Agrippina
 SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {3998, 887}, -50, 161) -- Gaul (where Colonia Agrippina was located) was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -62,7 +62,7 @@ SetMapTemplateUnit("earth", "unit-teuton-barracks", "francia", {4029, 911}, 526,
 SetMapTemplateUnit("earth", "unit-teuton-barracks", "austrasia", {4029, 911}, 561) -- Mogontiacum went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
 -- Mittelberg
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "celtic-cimmerian-tribe", {4101, 882}, -1600, -1599) -- the fortified settlement of Mittelberg (near Nebra) existed in 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 27.
+SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "celtic-cimmerian-tribe", {4101, 882}, -1600, -1599) -- the fortified settlement of Mittelberg (near Nebra) existed in 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 27.
 
 -- Paderborn
 SetMapTemplateLayerConnector("earth", "unit-portal", {4033, 873}, "Nidavellir") -- Gnitaheith (where Fafnir dwelled) has been identified with a real location south of Paderborn, so place a portal to Nidavellir there; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 343.
