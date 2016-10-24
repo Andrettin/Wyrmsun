@@ -31,7 +31,10 @@ DefineFaction("celtic-cimmerian-tribe", {
 	Type = "tribe",
 	Colors = {"black"},
 	HistoricalTechnologies = {
+		-- metalworking begins in the British Isles at c. 2500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
+		-- bronzeworking begins in the British Isles at c. 2200 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
 		-- swords appear in the Carpathian Basin c. 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 32.
+		-- swords appear in the British Isles c. 1200 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 55.
 	}
 	-- fictional Proto-Celtic people; Brythonic "Kombrogos" means "compatriot" and is the etymological origin of "Cymry" ("Welsh" in the Welsh language); "kom-mrogi" is a tentative rendering of that in Proto-Celtic
 })

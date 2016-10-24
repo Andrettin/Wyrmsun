@@ -2002,6 +2002,16 @@ DefineCivilization("finnish", {
 	DevelopsFrom = {"uralic"}
 })
 
+DefineCivilization("iberian", { -- the Iberian-speaking cultures of antiquity, such as the Oretanians
+	Display = "Iberian",
+	Visible = true,
+	Species = "human",
+	ParentCivilization = "germanic",
+	Adjective = "Iberian",
+	Playable = false,
+	DefaultColor = "brown"
+})
+
 DefineCivilization("magyar", {
 	Display = "Magyar",
 	Visible = true,

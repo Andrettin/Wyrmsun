@@ -31,6 +31,9 @@ SetMapTemplateResource("earth", "unit-copper-deposit", {3727, 902}) -- Tin depos
 
 -- In Welsh legends, Gorsedd Arberth (a hill/burial mound near Arberth) was a gateway to Annwn; thus it could be a portal that leads to Annwn in Alfheim; ; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 124.
 
+-- Runnymede (Surrey)
+SetMapTemplateUnit("earth", "unit-germanic-smithy", "celtic-cimmerian-tribe", {3826, 878}, -2200, -700) -- concentrated metalworking activity existed in the high status settlement at Runnymede (in Surrey) during the Bronze Age of the British Isles (c. 2200-700 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 54-55.
+
 -- York / Eboracum
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "dere-tribe", {3815, 819}, 500, 588) -- the Dere (a collection of Anglian peoples) were in possession of York in 500 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "bernicia", {3815, 819}, 588, 654) -- according to tradition, Æthelric of Bernicia acquired the kingdom of Deira upon its king Ælle's death in 588 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
