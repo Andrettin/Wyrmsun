@@ -864,7 +864,7 @@ DefineUnitType("unit-wolf", {
 	Species = "wolf",
 	Description = _("Wolves are pack hunters who dwell in temperate woodlands."),
 	Image = {"file", "neutral/units/wolf.png", "size", {76, 76}},
-	Animations = "animations-melee-unit-new-movement", Icon = "icon-boar",
+	Animations = "animations-melee-unit-new-movement", Icon = "icon-wolf",
 	Strength = 13,
 	Dexterity = 15,
 	Intelligence = 2,
