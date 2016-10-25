@@ -115,3 +115,9 @@ DefineIcon({
 	File = "dlcs/frankish_faction_flair/graphics/icons/frankish_spatha.png"
 })
 
+DefineIcon({
+	Name = "icon-sigibert",
+	Size = {46, 38},
+	File = "teuton/icons/sigibert.png"
+})
+

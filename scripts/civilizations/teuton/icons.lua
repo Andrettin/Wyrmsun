@@ -175,5 +175,11 @@ DefineIcon({
 	File = "teuton/icons/coinage.png"
 })
 
+DefineIcon({
+	Name = "icon-conrad-the-red",
+	Size = {46, 38},
+	File = "teuton/icons/conrad_the_red.png"
+})
+
 Load("scripts/civilizations/teuton/icons_frank.lua")
 Load("scripts/civilizations/teuton/icons_suebi.lua")

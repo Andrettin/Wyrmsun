@@ -384,7 +384,7 @@ DefineButton( { Pos = 9, Level = 1, Icon = "icon-leadership",
 	}
 } )
 
-DefineButton( { Pos = 13, Level = 1, Icon = "icon-scouting",
+DefineButton( { Pos = 13, Level = 1, Icon = "icon-ethereal-vision",
 	Action = "learn-ability", Value = "upgrade-ethereal-vision",
 	Key = "v", Hint = "Learn Ethereal ~!Vision", Popup = "popup-commands",
 	Description = "Ethereal Vision is a passive ability that allows the unit to see ethereal objects, such as interplanar portals",

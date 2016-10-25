@@ -212,6 +212,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-ethereal-vision",
+	Size = {46, 38},
+	File = "neutral/icons/ethereal_vision.png"
+})
+
+DefineIcon({
 	Name = "icon-healing",
 	Size = {46, 38},
 	File = "neutral/icons/healing.png"

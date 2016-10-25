@@ -370,7 +370,8 @@ DefineUnitType("unit-teuton-archer", {
 	}
 } )
 
-DefineUnitType("unit-teuton-ritter", { Name = _("Ritter"),
+DefineUnitType("unit-teuton-ritter", {
+	Name = _("Ritter"),
 	Parent = "unit-template-cavalry",
 	Civilization = "teuton",
 	Description = _("The Teutons excel in mounted combat. Their well-armored and trained heavy cavalry strikes fear in the hearts of their enemies whenever they are seen upon the battlefield."),
@@ -397,6 +398,7 @@ DefineUnitType("unit-teuton-ritter", { Name = _("Ritter"),
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-victory"}, -- allow more affixes than normal for the unit's level, to compensate for the unit not being upgradeable
 	Corpse = "unit-human-dead-body",
+	HairColor = "brown",
 	Sounds = {
 		"selected", "basic-teuton-voices-selected-group",
 		"acknowledge", "basic-teuton-voices-acknowledge",

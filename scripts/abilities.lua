@@ -53,7 +53,7 @@ DefineUpgrade("upgrade-eagle-eye", {
 
 DefineUpgrade("upgrade-ethereal-vision", {
 	Name = _("Ethereal Vision"),
-	Icon = "icon-scouting", -- to be changed later
+	Icon = "icon-ethereal-vision",
 	Ability = true
 })
 

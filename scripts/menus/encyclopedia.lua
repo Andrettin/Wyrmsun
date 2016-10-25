@@ -465,6 +465,9 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 			end
 			tooltip_civilization = tooltip_civilization .. ")"
 		end
+		if (GetCharacterData(unit_name, "HairVariation") ~= "") then
+			hair_color = string.gsub(GetCharacterData(unit_name, "HairVariation"), "%-hair", "")
+		end
 	elseif (state == "unique_items") then
 		encyclopedia_icon = CIcon:Get(GetUnitTypeData(GetUniqueItemData(unit_name, "Type"), "Icon")).G
 		encyclopedia_icon_frame = CIcon:Get(GetUnitTypeData(GetUniqueItemData(unit_name, "Type"), "Icon")).Frame
@@ -626,6 +629,9 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 				tooltip_civilization = tooltip_civilization ..  ": " .. _(FullyCapitalizeString(string.gsub(faction, "-", " ")))
 			end
 			tooltip_civilization = tooltip_civilization .. ")"
+		end
+		if (GetCharacterData(unit_name, "HairVariation") ~= "") then
+			hair_color = string.gsub(GetCharacterData(unit_name, "HairVariation"), "%-hair", "")
 		end
 	elseif (state == "unique_items") then
 		encyclopedia_icon = CIcon:Get(GetUnitTypeData(GetUniqueItemData(unit_name, "Type"), "Icon")).G

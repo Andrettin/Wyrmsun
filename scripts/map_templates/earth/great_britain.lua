@@ -27,6 +27,8 @@
 
 SetMapTemplateTileLabel("earth", "The Weald", {3843, 886})
 
+--SetMapTemplateResource("earth", "unit-salt-deposit", {3848, 875}) -- salt production at Mucking North Ring (Essex) during the Late Bronze Age of the British Isles (c. 1200-700 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 55.
+
 SetMapTemplateResource("earth", "unit-copper-deposit", {3727, 902}) -- Tin deposits; Source: "Atlas de História Mundial", 2001, p. 41.
 
 -- In Welsh legends, Gorsedd Arberth (a hill/burial mound near Arberth) was a gateway to Annwn; thus it could be a portal that leads to Annwn in Alfheim; ; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 124.

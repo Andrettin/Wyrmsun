@@ -58,7 +58,7 @@ DefineCharacter("Sigibert", {
 	Civilization = "teuton",
 	Faction = "francia",
 	Description = _("The son of the Frankish king Chlothar I, Sigibert inherited vast lands upon the death of his father. A courageous hero, Sigibert faces both the enmity of his brother Chilperich and the threat of invasion from abroad."),
-	Icon = "icon-frank-horseman",
+	Icon = "icon-sigibert",
 	HairVariation = "brown-hair",
 	Trait = "upgrade-strong",
 	Persistent = true
