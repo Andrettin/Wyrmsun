@@ -1752,7 +1752,8 @@ DefineUnitType("unit-floor-decoration", { Name = "Floor Decoration",
 	Sounds = {} }
 )
 
-DefineUnitType("unit-dwarven-dead-body", { Name = "Dead Body",
+DefineUnitType("unit-dwarven-dead-body", {
+	Name = "Dead Body",
 	Image = {"file", "neutral/units/dwarven_corpse.png", "size", {72, 72}},
 	Animations = "animations-dwarven-dead-body", Icon = "icon-dwarven-miner",
 	Speed = 0,
@@ -1768,7 +1769,8 @@ DefineUnitType("unit-dwarven-dead-body", { Name = "Dead Body",
 	Sounds = {}
 } )
 
-DefineUnitType("unit-gnomish-dead-body", { Name = "Dead Body",
+DefineUnitType("unit-gnomish-dead-body", {
+	Name = "Dead Body",
 	Image = {"file", "neutral/units/gnomish_goblin_and_kobold_corpses.png", "size", {72, 72}},
 	Animations = "animations-gnomish-dead-body", Icon = "icon-dwarven-miner",
 	Speed = 0,
@@ -1784,7 +1786,8 @@ DefineUnitType("unit-gnomish-dead-body", { Name = "Dead Body",
 	Sounds = {}
 } )
 
-DefineUnitType("unit-goblin-dead-body", { Name = "Dead Body",
+DefineUnitType("unit-goblin-dead-body", {
+	Name = "Dead Body",
 	Image = {"file", "neutral/units/gnomish_goblin_and_kobold_corpses.png", "size", {72, 72}},
 	Animations = "animations-goblin-dead-body", Icon = "icon-dwarven-miner",
 	Speed = 0,
@@ -1800,7 +1803,8 @@ DefineUnitType("unit-goblin-dead-body", { Name = "Dead Body",
 	Sounds = {}
 } )
 
-DefineUnitType("unit-human-dead-body", { Name = "Dead Body",
+DefineUnitType("unit-human-dead-body", {
+	Name = "Dead Body",
 	Image = {"file", "neutral/units/human_corpse.png", "size", {72, 72}},
 	Animations = "animations-dwarven-dead-body", Icon = "icon-dwarven-miner",
 	Speed = 0,
@@ -1816,7 +1820,8 @@ DefineUnitType("unit-human-dead-body", { Name = "Dead Body",
 	Sounds = {}
 } )
 
-DefineUnitType("unit-kobold-dead-body", { Name = "Dead Body",
+DefineUnitType("unit-kobold-dead-body", {
+	Name = "Dead Body",
 	Image = {"file", "neutral/units/gnomish_goblin_and_kobold_corpses.png", "size", {72, 72}},
 	Animations = "animations-kobold-dead-body", Icon = "icon-dwarven-miner",
 	Speed = 0,
