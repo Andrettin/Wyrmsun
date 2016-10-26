@@ -114,8 +114,8 @@ function RunCampaignMenu()
 	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 212 + (36 * 5),
 		function()
 			SetCurrentCampaign("")
-			RunSinglePlayerGameMenu()
 			menu:stop();
+			RunSinglePlayerGameMenu()
 		end
 	)
 

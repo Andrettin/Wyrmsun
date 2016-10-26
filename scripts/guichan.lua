@@ -751,6 +751,7 @@ function RunMap(map, objective, fow, revealmap)
 		SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 	end
 	
+	SetCurrentCampaign("")
 	SetCurrentQuest("")
 end
 

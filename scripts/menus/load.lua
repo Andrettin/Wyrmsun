@@ -19,6 +19,7 @@ function LoadGame(s)
 		end
 	end
 
+	SetCurrentCampaign("")
 	SetCurrentQuest("")
 	
 	InitGameSettings()
