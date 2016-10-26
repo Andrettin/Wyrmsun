@@ -1862,7 +1862,7 @@ function RunEncyclopediaFactionsMenu(civilization)
 	local faction_y = -3
 
 	for i = 1, table.getn(factions) do
-		menu:addFullButton(_(factions[i]), "", offx + 208 + (113 * faction_x), offy + 104 + (36 * (faction_y + height_offset)),
+		menu:addFullButton(_(GetFactionData(civilization, factions[i], "Name")), "", offx + 208 + (113 * faction_x), offy + 104 + (36 * (faction_y + height_offset)),
 			function() OpenEncyclopediaFactionEntry(civilization, factions[i]); end)
 
 		if (faction_y > 5 or (faction_y > 4 and Video.Height < 600)) then
@@ -1891,7 +1891,7 @@ function OpenEncyclopediaFactionEntry(civilization, faction)
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
-	encyclopedia_entry_menu:addLabel("~<" .. faction .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
+	encyclopedia_entry_menu:addLabel("~<" .. GetFactionData(civilization, faction, "Name") .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
 
 	local l = MultiLineLabel()
 	l:setFont(Fonts["game"])
