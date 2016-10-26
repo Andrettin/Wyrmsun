@@ -26,9 +26,11 @@
 --
 
 SetMapTemplateResource("earth", "unit-copper-deposit", {3623, 863}) -- copper deposits at Ross Island in southwest Ireland; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
-
-SetMapTemplateResource("earth", "unit-copper-deposit", {3624, 873}) -- copper deposits at Mount Gabriel in southwest Ireland; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
-
 SetMapTemplateUnit("earth", "unit-copper-mine", "celtic-cimmerian-tribe", {3623, 863}, -2200, -1650) -- copper mines at Ross Island were operational during the Early Bronze Age of the British Isles (c. 2200-1650 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
 
+SetMapTemplateResource("earth", "unit-copper-deposit", {3624, 873}) -- copper deposits at Mount Gabriel in southwest Ireland; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
 SetMapTemplateUnit("earth", "unit-copper-mine", "celtic-cimmerian-tribe", {3624, 873}, -2200, -1650) -- copper mines at Mount Gabriel were operational during the Early Bronze Age of the British Isles (c. 2200-1650 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
+
+-- Haughey's Fort (County Armagh)
+SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "celtic-cimmerian-tribe", {3688, 811}, -1100, -900) -- Haughey's Fort, a hillfort, was occupied between c. 1100 and 900 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 58.
+

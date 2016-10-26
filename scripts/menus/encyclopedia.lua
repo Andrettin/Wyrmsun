@@ -688,9 +688,9 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 	if (string.find(unit_name, "unit") ~= nil) then
 		if (GetUnitTypeData(unit_name, "Civilization") ~= "") then
 			civilization = "Civilization: " .. _(GetCivilizationData(GetUnitTypeData(unit_name, "Civilization"), "Display")) .. "\n\n"
-		end
-		if (GetUnitTypeData(unit_name, "Faction") ~= "") then
-			faction = "Faction: " .. _(CapitalizeString(GetUnitTypeData(unit_name, "Faction"))) .. "\n\n"
+			if (GetUnitTypeData(unit_name, "Faction") ~= "") then
+				faction = "Faction: " .. _(GetFactionData(GetUnitTypeData(unit_name, "Civilization"), GetUnitTypeData(unit_name, "Faction"), "Name")) .. "\n\n"
+			end
 		end
 		if (GetUnitTypeData(unit_name, "Class") ~= "") then
 			unit_type_class = "Class: " .. _(FullyCapitalizeString(string.gsub(GetUnitTypeData(unit_name, "Class"), "-", " "))) .. "\n\n"
@@ -731,9 +731,9 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 	elseif (string.find(unit_name, "upgrade") ~= nil) then
 		if (CUpgrade:Get(unit_name).Civilization ~= "") then
 			civilization = "Civilization: " .. GetCivilizationData(CUpgrade:Get(unit_name).Civilization, "Display") .. "\n\n"
-		end
-		if (CUpgrade:Get(unit_name).Faction ~= "") then
-			faction = "Faction: " .. CUpgrade:Get(unit_name).Faction .. "\n\n"
+			if (CUpgrade:Get(unit_name).Faction ~= "") then
+				faction = "Faction: " .. _(GetFactionData(CUpgrade:Get(unit_name).Civilization, CUpgrade:Get(unit_name).Faction, "Name")) .. "\n\n"
+			end
 		end
 		if (CUpgrade:Get(unit_name).Class ~= "") then
 			unit_type_class = "Class: " .. _(FullyCapitalizeString(string.gsub(CUpgrade:Get(unit_name).Class, "-", " "))) .. "\n\n"
@@ -793,9 +793,9 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 	elseif (state == "heroes") then
 		if (GetCharacterData(unit_name, "Civilization") ~= "") then
 			civilization = "Civilization: " .. _(GetCivilizationData(GetCharacterData(unit_name, "Civilization"), "Display")) .. "\n\n"
-		end
-		if (GetCharacterData(unit_name, "Faction") ~= "") then
-			faction = "Faction: " .. _(CapitalizeString(GetCharacterData(unit_name, "Faction"))) .. "\n\n"
+			if (GetCharacterData(unit_name, "Faction") ~= "") then
+				faction = "Faction: " .. _(GetFactionData(GetCharacterData(unit_name, "Civilization"), GetCharacterData(unit_name, "Faction"), "Name")) .. "\n\n"
+			end
 		end
 		if (GetCharacterData(unit_name, "Type") ~= "") then
 			unit_type_type = "Type: " .. _(GetUnitTypeData(GetCharacterData(unit_name, "Type"), "Name")) .. "\n\n"
