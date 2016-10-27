@@ -36,6 +36,10 @@ function AddLoadGameItems(menu)
 		if (browser:getSelected() < 0) then
 			return
 		end
+		if not (CanAccessFile("save/" .. browser:getSelectedItem())) then
+			GenericDialog("Error", "The file no longer exists.")
+			return;
+		end
 		LoadGameFile = "~save/" .. browser:getSelectedItem()
 		if (menu.ingame) then
 			StopGame(GameNoResult)
