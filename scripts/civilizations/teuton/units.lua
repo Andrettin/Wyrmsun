@@ -389,7 +389,7 @@ DefineUnitType("unit-teuton-ritter", {
 --		{"layer", "pants", "file", "human/units/pants.png"},
 --		{"layer", "boots", "file", "teuton/units/leather_shoes.png"},
 --		{"layer", "helmet", "file", "teuton/units/iron_helm.png"},
---		{"layer", "weapon", "file", "teuton/units/long_iron_sword.png"},
+		{"layer", "weapon", "file", "human/units/long_iron_sword_mounted.png"},
 --		{"layer", "shield", "file", "teuton/units/ritter_shield.png"}
 	},
 	Animations = "animations-melee-unit",
