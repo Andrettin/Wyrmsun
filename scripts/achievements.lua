@@ -34,12 +34,12 @@ DefineAchievement("the-settlement-of-scandinavia", {
 	RequiredQuests = {"on-the-vanaquisl", "westward-migration", "northwards-to-the-sea", "gylves-realm"}
 })
 
-DefineAchievement("the-song-of-rig", {
-	Name = "The Song of Rig",
-	Icon = "icon-germanic-worker",
-	Description = "Complete all quests related to Thrahila, Karla and Erala.",
-	PlayerColor = "orange",
-	RequiredQuests = {"thralls-logging", "thralls-hut", "karls-farm", "jarls-swordsmanship", "jarls-hall"}
+DefineAchievement("heimdalls-progeny", {
+	Name = "Heimdall's Progeny",
+	Icon = "icon-jarl",
+	Description = "Complete the Heimdall's Progeny campaign.",
+	PlayerColor = "yellow",
+	RequiredQuests = {"heimdalls-progeny"}
 })
 
 DefineAchievement("the-marcomannic-wars", {

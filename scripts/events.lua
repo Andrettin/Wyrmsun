@@ -607,7 +607,7 @@ function Tip(tip_name, tip_description)
 	end
 end
 
-function GenericDialog(title, message, tooltip, icon, player_color)
+function GenericDialog(title, message, tooltip, icon, player_color, skin_color, hair_color)
 	if (GameRunning and not IsNetworkGame()) then
 		SetGamePaused(true)
 	elseif (GrandStrategy) then
@@ -635,6 +635,12 @@ function GenericDialog(title, message, tooltip, icon, player_color)
 			player_color = "red"
 		end
 		local icon_widget = PlayerColorImageWidget(icon_graphics, player_color)
+		if (skin_color and skin_color ~= "" and skin_color ~= "default") then
+			icon_widget:setSkinColor(skin_color)
+		end
+		if (hair_color and hair_color ~= "" and hair_color ~= "default") then
+			icon_widget:setHairColor(hair_color)
+		end
 		menu:add(icon_widget, 105, 48)
 	end
 

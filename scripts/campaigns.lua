@@ -45,7 +45,7 @@ DefineCampaign("freys-messenger", {
 
 DefineCampaign("heimdalls-progeny", {
 	Name = "Heimdall's Progeny",
-	Description = "The young warrior Erala, the son of Fader and Moder, believes his true father to be the god Heimdall. Feeling that his divine heritage has fated him to rule over vast lands, Erala sets off to carve territory for himself. After establishing a hall, he begins to gather followers to take control of nearby tribes...",
+	Description = "The young warrior Erala, the son of Fader and Moder, believes his true father to be the god Heimdall. Feeling that his divine heritage has fated him to rule over vast lands, Erala sets off to carve territory for himself. After establishing a hall, he begins to gather followers to take control of nearby tribes...", -- in the original myth his parents were "Fathir" and "Mothir"; "Fadēr" is the word which gave origin to "Fathir", while "Môder" gave origin to "Mothir"
 	Civilization = "germanic",
 	Faction = "jarling-tribe",
 	Year = -1600 -- the introduction of stronger social differentiation occurred in Scandinavia around 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 73. As such, it makes sense to make the Rig myth (in which the different Scandinavian social classes are originated) take place around this time
@@ -59,7 +59,6 @@ DefineCampaign("the-marcomannic-wars", {
 	Faction = "marcomanni-tribe",
 	Year = 162 -- beginning of the Marcomannic Wars
 })
---]]
 
 DefineCampaign("sigiberts-struggle", {
 	Name = "Sigibert's Struggle",
@@ -68,3 +67,4 @@ DefineCampaign("sigiberts-struggle", {
 	Faction = "austrasia",
 	Year = 561 -- Sigibert's reign in his lands begins
 })
+--]]

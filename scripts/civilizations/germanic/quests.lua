@@ -139,7 +139,7 @@ DefineQuest("thralls-logging", { -- based on the Song of Rig; Source: Kevin Cros
 	Civilization = "germanic",
 	PlayerColor = "orange",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "RaceName") == "germanic" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-worker") > 0) then
+		if (GetPlayerData(trigger_player, "RaceName") == "germanic" and GetPlayerData(trigger_player, "Faction") == "thralling-tribe" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-worker") > 0) then
 			return true
 		end
 		return false
@@ -161,7 +161,7 @@ DefineQuest("thralls-hut", { -- based on the Song of Rig; Source: Kevin Crossley
 	Civilization = "germanic",
 	PlayerColor = "orange",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "RaceName") == "germanic" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-worker") > 0 and CheckDependency(trigger_player, "unit-germanic-farm")) then
+		if (GetPlayerData(trigger_player, "RaceName") == "germanic" and GetPlayerData(trigger_player, "Faction") == "thralling-tribe" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-worker") > 0 and CheckDependency(trigger_player, "unit-germanic-farm")) then
 			return true
 		end
 		return false
@@ -183,7 +183,7 @@ DefineQuest("karls-farm", { -- based on the Song of Rig; Source: Kevin Crossley-
 	Civilization = "germanic",
 	PlayerColor = "orange",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "RaceName") == "germanic" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-worker") > 0 and CheckDependency(trigger_player, "unit-germanic-farm")) then
+		if (GetPlayerData(trigger_player, "RaceName") == "germanic" and GetPlayerData(trigger_player, "Faction") == "karling-tribe" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-worker") > 0 and CheckDependency(trigger_player, "unit-germanic-farm")) then
 			return true
 		end
 		return false
@@ -195,28 +195,6 @@ DefineQuest("karls-farm", { -- based on the Song of Rig; Source: Kevin Crossley-
 	Rewards = "+750 Gold",
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Farm button to build the structure required for this quest.",
 	BuildUnits = {"unit-germanic-farm", 1}
-})
-
-DefineQuest("jarls-swordsmanship", { -- based on the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 22-24.
-	Name = "Erala's Swordsmanship", -- in the Song of Rig, Rig (the God Heimdall) fathers Thrall, Karl and Jarl, each of which originates a class of the Norse world; namely serfs, peasants and warriors; "jarl" is a reflex of Proto-Germanic "erala"
-	Icon = "icon-jarl",
-	Description = "The young warrior Erala, the son of Fader and Moder, was fast to master the art of the sword. He proposes to train a few brave warriors to protect our homeland.", -- in the original myth his parents were "Fathir" and "Mothir"; "Fadēr" is the word which gave origin to "Fathir", while "Môder" gave origin to "Mothir"
-	World = "Earth",
-	Civilization = "germanic",
-	PlayerColor = "yellow",
-	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "RaceName") == "germanic" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-barracks") > 0 and CheckDependency(trigger_player, "unit-germanic-warrior")) then
-			return true
-		end
-		return false
-	end,
-	CompletionEffects = function(s)
-		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 1500)
-	end,
-	Objectives = {"- Train 3 Eralas"}, -- when Erala is added as a hero, this should be changed to him acquiring the Sword Mastery ability
-	Rewards = "+1500 Gold",
-	Hint = "Select a War Lodge and then click on the Train Erala button to train the unit required for this quest.",
-	BuildUnits = {"unit-germanic-warrior", 3}
 })
 
 DefineQuest("heimdalls-progeny", {
@@ -231,19 +209,37 @@ DefineQuest("heimdalls-progeny", {
 })
 
 DefineQuest("jarls-hall", { -- based on the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 22-24.
-	Name = "Erala's Hall",
+	Name = "Erala's Hall", -- in the Song of Rig, Rig (the God Heimdall) fathers Thrall, Karl and Jarl, each of which originates a class of the Norse world; namely serfs, peasants and warriors; "jarl" is a reflex of Proto-Germanic "erala"
 	Icon = "icon-germanic-town-hall",
 	Description = "The fierce warrior Erala seeks to establish a hall for himself.",
 	World = "Earth",
 	Civilization = "germanic",
 	PlayerColor = "yellow",
 	CompletionEffects = function(s)
+		CallDialogue("jarls-hall-is-complete", trigger_player)
 	end,
 	Objectives = {"- Acquire some Buras", "- Build a Chieftain's Hall"},
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Chieftain's Hall button to build the structure required for this quest.",
 	BuildUnits = {"unit-germanic-town-hall", 1},
 	Unobtainable = true,
 	Unfailable = true
+})
+
+DefineQuest("jarls-retainers", { -- based on the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 24.
+	Name = "Erala's Retainers",
+	Icon = "icon-germanic-warrior",
+	Description = "The young warrior Erala, the son of Fader and Moder, was fast to master the art of the sword. He proposes to train a few brave warriors to protect our homeland.",
+	World = "Earth",
+	Civilization = "germanic",
+	PlayerColor = "yellow",
+	HairColor = "blond",
+	CompletionEffects = function(s)
+	end,
+	Objectives = {"- Train 3 Eralas"},
+	Unobtainable = true,
+	Unfailable = true,
+	Hint = "Select a War Lodge and then click on the Train Erala button to train the unit required for this quest.",
+	BuildUnits = {"unit-germanic-warrior", 3}
 })
 
 DefineQuest("the-sun-shields", { -- Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/

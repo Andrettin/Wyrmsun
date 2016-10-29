@@ -37,7 +37,11 @@ DefineDialogue("jarl-speaks-of-his-destiny", {
 		},
 		{
 			"speaker", "character", "Erala",
-			"text", "I will need workers to build my hall. There are two tribes nearby, the Karlings and the Thrahilings. Their people could build me a hall, hopefully willingly, but I must be prepared for resistance. The Karlings are sturdy farmers, but their archers will be difficult to beat on my own. It will be better to go to the Thrahilings, as they have no familiarity with warfare and will be easier to subjugate if it comes to that. The Karlings dwell to the northwest, while the Thrahilings live to the northeast.",
+			"text", "I will need workers to build my hall. There are two tribes nearby, the Karlings and the Thrahilings. Their people could build me a hall, hopefully willingly, but I must be prepared for resistance."
+		},
+		{
+			"speaker", "character", "Erala",
+			"text", "The Karlings are diligent farmers, but their archers will be difficult to beat on my own. It will be better to go to the Thrahilings, as they have no familiarity with warfare and will be easier to subjugate if it comes to that. The Karlings dwell to the northwest, while the Thrahilings live to the northeast.",
 			"option-effects", {
 				function(s)
 					SetPlayerData(trigger_player, "AcceptQuest", "heimdalls-progeny")
@@ -111,6 +115,30 @@ DefineDialogue("thrallings-subjugated", {
 						ChangeUnitOwner(uncount[unit1], trigger_player)
 						OrderUnit(trigger_player, GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, nil, "stop")
 					end
+				end
+			}
+		},
+		{
+			"text", "Hint: Select a Bura, press the Build Structure button and then click on the Build Chieftain's Hall button to build the structure required for this quest."
+		}
+	}
+})
+
+DefineDialogue("jarls-hall-is-complete", { -- based on the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 24.
+	Nodes = {
+		{
+			"speaker", "character", "Erala",
+			"text", "The hall is complete! My destiny starts now."
+		},
+		{
+			"speaker", "character", "Erala",
+			"text", "I will need a group of loyal retainers. Once my buras have gathered enough resources, I should begin training brave warriors in the art of the sword."
+		},
+		{
+			"text", "Hint: Select a War Lodge and then click on the Train Erala button to train the unit required for this quest.",
+			"option-effects", {
+				function(s)
+					SetPlayerData(trigger_player, "AcceptQuest", "jarls-retainers")
 				end
 			}
 		}
