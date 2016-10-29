@@ -43,9 +43,9 @@ DefineCampaign("freys-messenger", {
 })
 --]]
 
-DefineCampaign("rigs-progeny", {
-	Name = "Rig's Progeny",
-	Description = "The young warrior Erala, the son of Fader and Moder, believes his true father to be the god Rig. Feeling that his divine heritage has fated him to rule over vast lands, Erala sets off to carve territory for himself. After establishing a hall, he begins to gather followers to take control of nearby tribes...",
+DefineCampaign("heimdalls-progeny", {
+	Name = "Heimdall's Progeny",
+	Description = "The young warrior Erala, the son of Fader and Moder, believes his true father to be the god Heimdall. Feeling that his divine heritage has fated him to rule over vast lands, Erala sets off to carve territory for himself. After establishing a hall, he begins to gather followers to take control of nearby tribes...",
 	Civilization = "germanic",
 	Faction = "jarling-tribe",
 	Year = -1600 -- the introduction of stronger social differentiation occurred in Scandinavia around 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 73. As such, it makes sense to make the Rig myth (in which the different Scandinavian social classes are originated) take place around this time

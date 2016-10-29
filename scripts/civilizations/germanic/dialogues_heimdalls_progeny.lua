@@ -29,7 +29,7 @@ DefineDialogue("jarl-speaks-of-his-destiny", {
 	Nodes = {
 		{
 			"speaker", "character", "Erala",
-			"text", "Something tells me... I feel it, I know it! My true father was not my mother's husband, but the mighty god Rig. I am not like others. I have a singular destiny."
+			"text", "Something tells me... I have seen it in my dreams, I know it! My true father was not the man who raised me, but the mighty god Heimdall. I am not like others. I have a singular destiny."
 		},
 		{
 			"speaker", "character", "Erala",
@@ -40,6 +40,7 @@ DefineDialogue("jarl-speaks-of-his-destiny", {
 			"text", "I will need workers to build my hall. There are two tribes nearby, the Karlings and the Thrahilings. Their people could build me a hall, hopefully willingly, but I must be prepared for resistance. The Karlings are sturdy farmers, but their archers will be difficult to beat on my own. It will be better to go to the Thrahilings, as they have no familiarity with warfare and will be easier to subjugate if it comes to that. The Karlings dwell to the northwest, while the Thrahilings live to the northeast.",
 			"option-effects", {
 				function(s)
+					SetPlayerData(trigger_player, "AcceptQuest", "heimdalls-progeny")
 					SetPlayerData(trigger_player, "AcceptQuest", "jarls-hall")
 				end
 			}
@@ -51,16 +52,16 @@ DefineDialogue("jarl-meets-the-thrallings", {
 	Nodes = {
 		{
 			"speaker", "unit", "unit-germanic-worker",
-			"speaker-player", "thrahiling-tribe",
+			"speaker-player", "thralling-tribe",
 			"text", "Who are you and what do you want with Thrahila and his sons?"
 		},
 		{
 			"speaker", "character", "Erala",
-			"text", "I am the fierce warrior Erala. I need workers to serve me and build my hall."
+			"text", "I am the fierce warrior Erala. I need workers to serve me and build me a hall."
 		},
 		{
 			"speaker", "unit", "unit-germanic-worker",
-			"speaker-player", "thrahiling-tribe",
+			"speaker-player", "thralling-tribe",
 			"text", "Then go somewhere else. We have work of our own to do."
 		},
 		{
@@ -70,6 +71,46 @@ DefineDialogue("jarl-meets-the-thrallings", {
 				function(s)
 					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("thralling-tribe"))
 					SetDiplomacy(GetFactionPlayer("thralling-tribe"), "enemy", trigger_player)
+					local erala_hero_unit = FindHero("Erala", trigger_player)
+					local attacker_count = 0
+					local uncount = GetUnits(GetFactionPlayer("thralling-tribe"))
+					for unit1 = 1,table.getn(uncount) do 
+						if (GetUnitVariable(uncount[unit1], "Ident") == "unit-germanic-worker") then
+							OrderUnit(GetFactionPlayer("thralling-tribe"), GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, {GetUnitVariable(erala_hero_unit, "PosX"), GetUnitVariable(erala_hero_unit, "PosY")}, "attack")
+							attacker_count = attacker_count + 1
+							if (attacker_count >= 2) then
+								break
+							end
+						end
+					end
+				end
+			}
+		}
+	}
+})
+
+DefineDialogue("thrallings-subjugated", {
+	Nodes = {
+		{
+			"speaker", "unit", "unit-germanic-worker",
+			"speaker-player", "thralling-tribe",
+			"text", "Please, have mercy!"
+		},
+		{
+			"speaker", "character", "Erala",
+			"text", "If you serve me faithfully, I will spare your lives."
+		},
+		{
+			"speaker", "unit", "unit-germanic-worker",
+			"speaker-player", "thralling-tribe",
+			"text", "We are yours to command.",
+			"option-effects", {
+				function(s)
+					local uncount = GetUnits(GetFactionPlayer("thralling-tribe"))
+					for unit1 = 1,table.getn(uncount) do
+						ChangeUnitOwner(uncount[unit1], trigger_player)
+						OrderUnit(trigger_player, GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, nil, "stop")
+					end
 				end
 			}
 		}

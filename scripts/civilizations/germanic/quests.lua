@@ -203,7 +203,7 @@ DefineQuest("jarls-swordsmanship", { -- based on the Song of Rig; Source: Kevin 
 	Description = "The young warrior Erala, the son of Fader and Moder, was fast to master the art of the sword. He proposes to train a few brave warriors to protect our homeland.", -- in the original myth his parents were "Fathir" and "Mothir"; "Fadēr" is the word which gave origin to "Fathir", while "Môder" gave origin to "Mothir"
 	World = "Earth",
 	Civilization = "germanic",
-	PlayerColor = "orange",
+	PlayerColor = "yellow",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "RaceName") == "germanic" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-barracks") > 0 and CheckDependency(trigger_player, "unit-germanic-warrior")) then
 			return true
@@ -219,13 +219,24 @@ DefineQuest("jarls-swordsmanship", { -- based on the Song of Rig; Source: Kevin 
 	BuildUnits = {"unit-germanic-warrior", 3}
 })
 
+DefineQuest("heimdalls-progeny", {
+	Name = "Heimdall's Progeny",
+	Icon = "icon-jarl",
+	World = "Earth",
+	Civilization = "germanic",
+	PlayerColor = "yellow",
+	Objectives = {"- Establish a powerful realm", "- Erala must survive"},
+	Uncompleteable = true,
+	Unobtainable = true
+})
+
 DefineQuest("jarls-hall", { -- based on the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 22-24.
 	Name = "Erala's Hall",
 	Icon = "icon-germanic-town-hall",
 	Description = "The fierce warrior Erala seeks to establishing a hall for himself.",
 	World = "Earth",
 	Civilization = "germanic",
-	PlayerColor = "orange",
+	PlayerColor = "yellow",
 	CompletionEffects = function(s)
 	end,
 	Objectives = {"- Acquire some Buras", "- Build a Chieftain's Hall"},
