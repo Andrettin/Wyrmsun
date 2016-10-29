@@ -25,6 +25,41 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+AddTrigger("jarl-speaks-of-his-destiny",
+	function()
+		for i=0,(PlayerMax - 2) do
+			if (GetPlayerData(i, "Faction") == "jarling-tribe" and FindHero("Erala", i) ~= nil and GetFactionExists("thralling-tribe") and GetFactionExists("karling-tribe")) then
+				trigger_player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function()
+		CallDialogue("jarl-speaks-of-his-destiny", trigger_player)
+		return false
+	end
+)
+
+AddTrigger("jarl-meets-the-thrallings",
+	function()
+		for i=0,(PlayerMax - 2) do
+			if (GetPlayerData(i, "Faction") == "jarling-tribe" and FindHero("Erala", i) ~= nil and GetFactionExists("thralling-tribe") and GetPlayerData(i, "HasQuest", "jarls-hall")) then
+				local erala_hero_unit = FindHero("Erala", i)
+				if (GetNumUnitsAt(GetFactionPlayer("thralling-tribe"), "units", {GetUnitVariable(erala_hero_unit, "PosX") - 2, GetUnitVariable(erala_hero_unit, "PosY") - 2}, {GetUnitVariable(erala_hero_unit, "PosX") + 2, GetUnitVariable(erala_hero_unit, "PosY") + 2}) > 0) then
+					trigger_player = i
+					return true
+				end
+			end
+		end
+		return false
+	end,
+	function()
+		CallDialogue("jarl-meets-the-thrallings", trigger_player)
+		return false
+	end
+)
+
 AddTrigger("the-curved-swords", -- Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-roerby-swords/
 	function()
 		if (SyncRand(100) ~= 0) then -- 1% chance this will trigger every time it is checked (and 1% for each player it is checked for, for a chance of 0.01% for a player that matches the conditions

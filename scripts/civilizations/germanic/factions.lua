@@ -83,6 +83,7 @@ DefineFaction("karling-tribe", {
 	Type = "tribe",
 	Colors = {"brown"},
 	FactionUpgrade = "upgrade-yngling-tribe-faction",
+	DefaultAI = "passive",
 	Background = "In Norse mythology, Karl (rendered in Proto-Germanic as Karla) was one of the sons of the god Rig, and the ancestor of those belonging to the social class of peasants."
 })
 
@@ -105,6 +106,7 @@ DefineFaction("thralling-tribe", {
 	Type = "tribe",
 	Colors = {"black"},
 	FactionUpgrade = "upgrade-yngling-tribe-faction",
+	DefaultAI = "passive",
 	Background = "In Norse mythology, Thrall (rendered in Proto-Germanic as Thrahila) was one of the sons of the god Rig, and the ancestor of those belonging to the social class of thralls."
 })
 

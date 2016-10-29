@@ -398,6 +398,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-megacricetodon-collongensis",
+	Size = {46, 38},
+	File = "neutral/icons/megacricetodon_collongensis.png"
+})
+
+DefineIcon({
 	Name = "icon-rat",
 	Size = {46, 38},
 	File = "neutral/icons/rat.png"

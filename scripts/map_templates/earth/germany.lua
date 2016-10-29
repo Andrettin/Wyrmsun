@@ -25,8 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-SetMapTemplateUnit("earth", "unit-germanic-town-hall", "ingaevone-tribe", {4054, 801}, -2800, -264) -- Flensburg; according to Tacitus the Ingaevones were one of the earliest Germanic tribes; the place of their dwelling was inhabited by the cultural ancestors of the Germanics in 2800 BC already
-SetMapTemplateUnit("earth", "unit-teuton-town-hall", "angle-tribe", {4054, 801}, -264) -- Tribes in Europe between 264 BC and 180 AD (Schleswig was inhabited by the Angles); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "angle-tribe", {4054, 801}, -264) -- tribes in Europe between 264 BC and 180 AD (Schleswig was inhabited by the Angles); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 
 -- Bernstorf (Bavaria)
 SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "celtic-cimmerian-tribe", {4104, 946}, -1600, -1400) -- a fortified settlement existed c. 1600-1400 BC in Bernstorf (Bavaria); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 29.
