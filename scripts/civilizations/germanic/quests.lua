@@ -233,7 +233,7 @@ DefineQuest("heimdalls-progeny", {
 DefineQuest("jarls-hall", { -- based on the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 22-24.
 	Name = "Erala's Hall",
 	Icon = "icon-germanic-town-hall",
-	Description = "The fierce warrior Erala seeks to establishing a hall for himself.",
+	Description = "The fierce warrior Erala seeks to establish a hall for himself.",
 	World = "Earth",
 	Civilization = "germanic",
 	PlayerColor = "yellow",
@@ -242,7 +242,8 @@ DefineQuest("jarls-hall", { -- based on the Song of Rig; Source: Kevin Crossley-
 	Objectives = {"- Acquire some Buras", "- Build a Chieftain's Hall"},
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Chieftain's Hall button to build the structure required for this quest.",
 	BuildUnits = {"unit-germanic-town-hall", 1},
-	Unobtainable = true
+	Unobtainable = true,
+	Unfailable = true
 })
 
 DefineQuest("the-sun-shields", { -- Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/

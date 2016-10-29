@@ -41,6 +41,11 @@ SetMapTemplateUnit("earth", "unit-germanic-town-hall", "jarling-tribe", {4051, 7
 -- Legård (northwestern Jutland)
 SetMapTemplateUnit("earth", "unit-germanic-carpenters-shop", "karling-tribe", {4033, 751}, -1600, -1500)
 SetMapTemplateUnit("earth", "unit-germanic-farm", "karling-tribe", {4033, 751}, -1600, -1500)
+SetMapTemplateUnit("earth", "unit-germanic-worker", "karling-tribe", {4033, 751}, -1600, -1500)
+SetMapTemplateUnit("earth", "unit-germanic-worker", "karling-tribe", {4033, 751}, -1600, -1500)
+SetMapTemplateUnit("earth", "unit-germanic-worker", "karling-tribe", {4033, 751}, -1600, -1500)
+SetMapTemplateUnit("earth", "unit-germanic-worker", "karling-tribe", {4033, 751}, -1600, -1500)
+SetMapTemplateUnit("earth", "unit-germanic-worker", "karling-tribe", {4033, 751}, -1600, -1500)
 SetMapTemplateUnit("earth", "unit-germanic-farm", "jarling-tribe", {4033, 751}, -1500, -1300) -- a longhouse existed in Legård (in northwestern Jutland) in the period II of the Nordic Bronze Age (1500-1300 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 73, 78.
 
 -- Lusehøj
@@ -48,6 +53,11 @@ SetMapTemplateUnit("earth", "unit-germanic-farm", "jarling-tribe", {4033, 751}, 
 
 -- Store Tyrrestrup (Vendsyssel)
 SetMapTemplateUnit("earth", "unit-germanic-farm", "thralling-tribe", {4070, 743}, -1600, -1500)
+SetMapTemplateUnit("earth", "unit-germanic-worker", "thralling-tribe", {4070, 743}, -1600, -1500)
+SetMapTemplateUnit("earth", "unit-germanic-worker", "thralling-tribe", {4070, 743}, -1600, -1500)
+SetMapTemplateUnit("earth", "unit-germanic-worker", "thralling-tribe", {4070, 743}, -1600, -1500)
+SetMapTemplateUnit("earth", "unit-germanic-worker", "thralling-tribe", {4070, 743}, -1600, -1500)
+SetMapTemplateUnit("earth", "unit-germanic-worker", "thralling-tribe", {4070, 743}, -1600, -1500)
 SetMapTemplateUnit("earth", "unit-germanic-farm", "jarling-tribe", {4070, 743}, -1500, -1300) -- a longhouse existed in Store Tyrrestrup (Vendsyssel) in the period II of the Nordic Bronze Age (1500-1300 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 73-74.
 
 -- Strandtved (near Svendborg)
