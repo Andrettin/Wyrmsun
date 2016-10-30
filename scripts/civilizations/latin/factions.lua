@@ -58,8 +58,7 @@ DefineFaction("latin-tribe", {
 	Civilization = "latin",
 	Type = "tribe",
 	Colors = {"red", "yellow"},
-	DevelopsTo = {"rome"},
-	DefaultStartPos = {4126, 1096} -- Rome
+	DevelopsTo = {"rome"}
 })
 
 DefineFaction("marsian-tribe", {
