@@ -1,0 +1,529 @@
+﻿msgid ""
+msgstr ""
+"Project-Id-Version: Wyrmsun\n"
+"POT-Creation-Date: 2016-10-04 18:46+0100\n"
+"PO-Revision-Date: 2016-10-04 20:43+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.9\n"
+"X-Poedit-Basepath: c:/Program Files/Wyrmsun/scripts\n"
+"Language: tr\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: c:/Program Files/Wyrmsun/scripts\n"
+
+msgid "~!Single Player Game"
+msgstr "Tek Kişilik Oyun"
+
+msgid "~!Quests"
+msgstr "Görevler"
+
+msgid "C~!ustom Game"
+msgstr "Uyarlama Oyun"
+
+msgid "~!Multi Player Game"
+msgstr "Çok Oyunculu Oyun"
+
+msgid "~!Multiplayer Game"
+msgstr "Çok Oyunculu Oyun"
+
+msgid "~!Grand Strategy Game"
+msgstr "Büyük Strateji Oyunu"
+
+msgid "Load Game"
+msgstr "Oyunu Yükle"
+
+msgid "~!Load Game"
+msgstr "Oyunu ~!Yükle"
+
+msgid "~!Replay Game"
+msgstr "Oyunu İzle"
+
+msgid "~!Options"
+msgstr "Ayarlar"
+
+msgid "Map ~!Editor"
+msgstr "Harita Düzenleyici"
+
+msgid "Load Mod"
+msgstr "Mod Yükle"
+
+msgid "Load Mo~!d"
+msgstr "Mo~!d Yükle"
+
+msgid "En~!cyclopedia"
+msgstr "An~siklopedi"
+
+msgid "S~!how Credits"
+msgstr "Emeği Geçenler"
+
+msgid "E~!xit Program"
+msgstr "Oyundan Çık"
+
+msgid "~!Previous Menu"
+msgstr "Önceki Menü"
+
+msgid "~!New Map"
+msgstr "Yeni Harita"
+
+msgid "~!Load Map"
+msgstr "Harita Yükle"
+
+msgid "Select Map"
+msgstr "Harita Seç"
+
+msgid "~!Select Map"
+msgstr "Harita Seç"
+
+msgid "S~!elect Map"
+msgstr "Harita Seç"
+
+msgid "~!Edit Map"
+msgstr "Harita Düzenle"
+
+msgid "~!Continue"
+msgstr "Devam Et"
+
+msgid "~!Load"
+msgstr "Yükle"
+
+msgid "~!Cancel"
+msgstr "İptal"
+
+msgid "~<Units:~>"
+msgstr "~<Birimler:~>"
+
+msgid "Dwarf"
+msgstr "Cüce"
+
+msgid "Miner"
+msgstr "Madenci"
+
+msgid "Axefighter"
+msgstr "Baltalı"
+
+msgid "Mead Hall"
+msgstr "Meyhane"
+
+msgid "War Hall"
+msgstr "Savaş Meclisi"
+
+msgid "Barracks"
+msgstr "Kışla"
+
+msgid "Mushroom Farm"
+msgstr "Mantar Çiftliği"
+
+msgid "Lumber Mill"
+msgstr "Keresteci"
+
+msgid "Gnomish Recruit"
+msgstr "Gnom Acemisi"
+
+msgid "Gnomish Caravan"
+msgstr "Gnom Kervanı"
+
+msgid "Gold Mine"
+msgstr "Altın Madeni"
+
+msgid "Silver Mine"
+msgstr "Gümüş Madeni"
+
+msgid "Copper Mine"
+msgstr "Bakır Madeni"
+
+msgid "Coal Mine"
+msgstr "Kömür Madeni"
+
+msgid "Rat"
+msgstr "Sıçan"
+
+msgid "The Scepter of Fire"
+msgstr "Ateş Asası"
+
+msgid "A Bargain is Struck"
+msgstr "Bir Pazarlık Yapılır"
+
+msgid "- Bring the Gnomish caravans and the envoy to your Mead Hall"
+msgstr "- Gnom Kervanlarını ve Gnom Elçisini Meyhaneye getir"
+
+msgid "Dawn"
+msgstr "Şafak"
+
+msgid "Morning"
+msgstr "Sabah"
+
+msgid "Midday"
+msgstr "Öğle"
+
+msgid "Afternoon"
+msgstr "İkindi"
+
+msgid "Dusk"
+msgstr "Akşam"
+
+msgid "Early Night"
+msgstr "Gece"
+
+msgid "Midnight"
+msgstr "Gece Yarısı"
+
+msgid "Late Night"
+msgstr "Gece Karanlığı"
+
+msgid "- Defeat your rivals"
+msgstr "- Rakiplerini yen"
+
+msgid "Asa Tribe"
+msgstr "Asa Kabilesi"
+
+msgid "Herminone Tribe"
+msgstr "Herminone Kabilesi"
+
+msgid "Ingaevone Tribe"
+msgstr "Ingaevone Kabilesi"
+
+msgid "Istaevone Tribe"
+msgstr "Istaevone Kabilesi"
+
+msgid "Skeldung Tribe"
+msgstr "Skeldung Kabilesi"
+
+msgid "Yngling Tribe"
+msgstr "Yngling Kabilesi"
+
+msgid "Vulcan Tribe"
+msgstr "Volkan Kabilesi"
+
+msgid "Cycle:"
+msgstr "Devir:"
+
+msgid "Default Color:"
+msgstr "Varsayılan Renk:"
+
+msgid "Effects:"
+msgstr "Etkiler:"
+
+msgid "Red"
+msgstr "Kırmızı"
+
+msgid "Blue"
+msgstr "Mavi"
+
+msgid "Green"
+msgstr "Yeşil"
+
+msgid "Violet"
+msgstr "Menekşe"
+
+msgid "Orange"
+msgstr "Turuncu"
+
+msgid "Black"
+msgstr "Siyah"
+
+msgid "White"
+msgstr "Beyaz"
+
+msgid "Yellow"
+msgstr "Sarı"
+
+msgid "Pink"
+msgstr "Pembe"
+
+msgid "Cyan"
+msgstr "Turkuaz"
+
+msgid "Teal"
+msgstr "Soluk Yeşil"
+
+msgid "Purple"
+msgstr "Mor"
+
+msgid "Fire"
+msgstr "Ateş"
+
+msgid "Brown"
+msgstr "Kahverengi"
+
+msgid "Radioactive"
+msgstr "Radyoaktif"
+
+msgid "Acid"
+msgstr "Asit"
+
+msgid "Gray"
+msgstr "Gri"
+
+msgid "Level"
+msgstr "Nível"
+
+msgid "Level:"
+msgstr "Seviye:"
+
+msgid "Trait"
+msgstr "Özellik"
+
+msgid "Trait:"
+msgstr "Özellik:"
+
+msgid "Hit Points"
+msgstr "Can"
+
+msgid "Hit Points:"
+msgstr "Can:"
+
+msgid "Damage"
+msgstr "Hasar"
+
+msgid "Damage:"
+msgstr "Hasar:"
+
+msgid "Range"
+msgstr "Menzil"
+
+msgid "Range:"
+msgstr "Menzil:"
+
+msgid "Armor"
+msgstr "Zırh"
+
+msgid "Armor:"
+msgstr "Zırh:"
+
+msgid "Sight"
+msgstr "Görüş"
+
+msgid "Sight:"
+msgstr "Görüş:"
+
+msgid "Accuracy"
+msgstr "İsabet"
+
+msgid "Accuracy:"
+msgstr "İsabat:"
+
+msgid "Evasion"
+msgstr "Kaçınma"
+
+msgid "Evasion:"
+msgstr "Kaçınma:"
+
+msgid "Speed"
+msgstr "Hız"
+
+msgid "Speed:"
+msgstr "Hız:"
+
+msgid "Deity"
+msgstr "Kutsiyet"
+
+msgid "Chieftain's Hall"
+msgstr "Reis'in Konağı"
+
+msgid "Town Hall"
+msgstr "Kasaba Meclisi"
+
+msgid "War Lodge"
+msgstr "Savaş Evi"
+
+msgid "Farm"
+msgstr "Çiftlik"
+
+msgid "Dock"
+msgstr "Liman"
+
+msgid "Stables"
+msgstr "Ahırlar"
+
+msgid "Carpenter's Shop"
+msgstr "Marangozhane"
+
+msgid "Smithy"
+msgstr "Demirci"
+
+msgid "Forge"
+msgstr "Demir Ocağı"
+
+msgid "Fugla Forge"
+msgstr "Fugla Ocağı"
+
+msgid "Watch Tower"
+msgstr "Gözcü Kulesi"
+
+msgid "Guard Tower"
+msgstr "Muhafız Kulesi"
+
+msgid "Stronghold"
+msgstr "Kale"
+
+msgid "Fortress"
+msgstr "Büyük Kale"
+
+msgid "Glyph"
+msgstr "Damga"
+
+msgid "Cavern Entrance"
+msgstr "Mağara Girişi"
+
+msgid "Catapult"
+msgstr "Mancınık"
+
+msgid "War Machine"
+msgstr "Savaş Makinesi"
+
+msgid "Processing"
+msgstr "İşliyor"
+
+msgid "Gold"
+msgstr "Altın"
+
+msgid "Gold:"
+msgstr "Altın:"
+
+msgid "Lumber"
+msgstr "Kereste"
+
+msgid "Lumber:"
+msgstr "Kereste:"
+
+msgid "Stone"
+msgstr "Taş"
+
+msgid "Stone:"
+msgstr "Taş:"
+
+msgid "Coal"
+msgstr "Kömür"
+
+msgid "Silver"
+msgstr "Gümüş"
+
+msgid "Copper"
+msgstr "Bakır"
+
+msgid "Choose Your Faction"
+msgstr "Tarafını Seç"
+
+msgid "Strong"
+msgstr "Güçlü"
+
+msgid "Intelligent"
+msgstr "Zeki"
+
+msgid "Old"
+msgstr "Yaşlı"
+
+msgid "Weak"
+msgstr "Zayıf"
+
+msgid "Dim"
+msgstr "Donuk"
+
+msgid "Pious"
+msgstr "Dindar"
+
+msgid "Train ~!Bura"
+msgstr "~!Bura Eğit"
+
+msgid "Set ~!Rally Point"
+msgstr "~!Toplanma Yeri Ayarla"
+
+msgid "~!Move"
+msgstr "~!İlerle"
+
+msgid "~!Stop"
+msgstr "Dur"
+
+msgid "~!Attack"
+msgstr "~!Saldır"
+
+msgid "~!Repair"
+msgstr "Tamir Et"
+
+msgid "~!Harvest Resource"
+msgstr "Kaynağı Topla"
+
+msgid "~!Build Structure"
+msgstr "Yapıyı İnşa Et"
+
+msgid "Build Chieftain's ~!Hall"
+msgstr "Reis'in Konağını inşa et"
+
+msgid "Build ~!Farm"
+msgstr "Çiftlik inşa et"
+
+msgid "Build ~!War Lodge"
+msgstr "Savaş Evi inşa et"
+
+msgid "Build Carpente~!r's Shop"
+msgstr "Marangozhane inşa et"
+
+msgid "Build ~!Smithy"
+msgstr "Demirci inşa et"
+
+msgid "Build ~!Gold Mine"
+msgstr "Altın Madeni inşa et"
+
+msgid "Build Sil~!ver Mine"
+msgstr "Gümüş Madeni inşa et"
+
+msgid "Build ~!Copper Mine"
+msgstr "Bakır Madeni inşa et"
+
+msgid "Cancel (~<Esc~>)"
+msgstr "İptal (~<Esc~>)"
+
+msgid "Class:"
+msgstr "Sınıf:"
+
+msgid "Food Supply:"
+msgstr "Yiyecek Tedarik:"
+
+msgid "Food Cost:"
+msgstr "Yiyecek Maliyet:"
+
+msgid "Worker"
+msgstr "İşçi"
+
+msgid "Unicorn"
+msgstr "Boynuzlu At"
+
+msgid "~<ALT~>-click to defend a unit"
+msgstr "~<ALT~>-bir birimi savunmak için tıkla"
+
+msgid "~<SHIFT~>-click to make waypoints"
+msgstr "~<SHIFT~>-yürüyüş rotası oluşturmak için tıkla"
+
+msgid "~<CTRL~>-click to stand ground after moving"
+msgstr "~<CTRL~>-yürüyüşten sonra dikilmesi için tıkla"
+
+msgid "Click on an empty space to attack-move"
+msgstr "Saldırgan yürüyüş için boş bir yere tıkla"
+
+msgid "~<CTRL~>-click on the button toggles auto-repair of damaged buildings"
+msgstr "~<CTRL~>-hasar gören yapıları otomatik tamir için butona tıkla"
+
+msgid "Left-click to center"
+msgstr "Merkezlemek için Fare ile Sol Tıklayın"
+
+msgid "Middle-click to track"
+msgstr "Takip etmek için Fare ile Orta Tıklayın"
+
+msgid "Right-click to see encyclopedia"
+msgstr "Ansiklopedi için Sağ Tıklayın"
+
+msgid "Find Idle Worker (~!.)"
+msgstr "Boştaki İşçiyi Bul (~!.)"
+
+msgid "Find Unit with Available Level Up"
+msgstr "Seviye Atlamaya hazır birimi bul"
+
+msgid "Find"
+msgstr "Bul"
+
+msgid "%s attacked"
+msgstr "% saldırıldı"
+
+msgid "Your Faction:"
+msgstr "Sizin Tarafınız:"
