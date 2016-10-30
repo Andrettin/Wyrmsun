@@ -124,6 +124,92 @@ DefineDialogue("thrallings-subjugated", {
 	}
 })
 
+DefineDialogue("jarl-meets-the-karlings", {
+	Nodes = {
+		{
+			"speaker", "unit", "unit-germanic-worker",
+			"speaker-player", "karling-tribe",
+			"text", "These are the lands of Karla and his sons. What do you wish?"
+		},
+		{
+			"speaker", "character", "Erala",
+			"text", "I am Erala, a mighty warrior. Your people are good farmers, but they need protection. Submit to me and I will make you safe."
+		},
+		{
+			"speaker", "unit", "unit-germanic-worker",
+			"speaker-player", "karling-tribe",
+			"text", "We need no one to guard us. Our arrows are enough to counter any threat.",
+			"options", {"Subjugate them", "Leave them alone"},
+			"option-effects", {
+				function(s)
+					CallDialogue("jarl-attacks-the-karlings", trigger_player)
+				end,
+				function(s)
+				end
+			}
+		}
+	}
+})
+
+DefineDialogue("jarl-attacks-the-karlings", {
+	Nodes = {
+		{
+			"speaker", "character", "Erala",
+			"text", "Folly. If you lot will not submit willingly, then I must subjugate you by force."
+		},
+		{
+			"speaker", "unit", "unit-germanic-worker",
+			"speaker-player", "karling-tribe",
+			"text", "The Karlings shall never be slaves!",
+			"option-effects", {
+				function(s)
+					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("karling-tribe"))
+					SetDiplomacy(GetFactionPlayer("karling-tribe"), "enemy", trigger_player)
+					local erala_hero_unit = FindHero("Erala", trigger_player)
+					local uncount = GetUnits(GetFactionPlayer("karling-tribe"))
+					for unit1 = 1,table.getn(uncount) do 
+						if (GetUnitVariable(uncount[unit1], "Ident") == "unit-germanic-worker") then
+							OrderUnit(GetFactionPlayer("karling-tribe"), GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, {GetUnitVariable(erala_hero_unit, "PosX"), GetUnitVariable(erala_hero_unit, "PosY")}, "attack")
+						end
+					end
+				end
+			}
+		}
+	}
+})
+
+DefineDialogue("karlings-subjugated", {
+	Nodes = {
+		{
+			"speaker", "unit", "unit-germanic-worker",
+			"speaker-player", "karling-tribe",
+			"text", "Enough of this bloodshed! Mercy!"
+		},
+		{
+			"speaker", "character", "Erala",
+			"text", "Will you submit to my tribe?"
+		},
+		{
+			"speaker", "unit", "unit-germanic-worker",
+			"speaker-player", "karling-tribe",
+			"text", "We shall. But only if our personal freedom is guaranteed, otherwise we would rather die."
+		},
+		{
+			"speaker", "character", "Erala",
+			"text", "Very well.",
+			"option-effects", {
+				function(s)
+					local uncount = GetUnits(GetFactionPlayer("karling-tribe"))
+					for unit1 = 1,table.getn(uncount) do
+						ChangeUnitOwner(uncount[unit1], trigger_player)
+						OrderUnit(trigger_player, GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, nil, "stop")
+					end
+				end
+			}
+		}
+	}
+})
+
 DefineDialogue("jarls-hall-is-complete", { -- based on the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 24.
 	Nodes = {
 		{

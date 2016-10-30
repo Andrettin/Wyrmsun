@@ -76,6 +76,41 @@ AddTrigger("thrallings-subjugated",
 	end
 )
 
+AddTrigger("jarl-meets-the-karlings",
+	function()
+		for i=0,(PlayerMax - 2) do
+			if (GetPlayerData(i, "Faction") == "jarling-tribe" and FindHero("Erala", i) ~= nil and GetFactionExists("karling-tribe") and GetPlayerData(i, "HasQuest", "jarls-hall")) then
+				local erala_hero_unit = FindHero("Erala", i)
+				if (GetNumUnitsAt(GetFactionPlayer("karling-tribe"), "units", {GetUnitVariable(erala_hero_unit, "PosX") - 2, GetUnitVariable(erala_hero_unit, "PosY") - 2}, {GetUnitVariable(erala_hero_unit, "PosX") + 2, GetUnitVariable(erala_hero_unit, "PosY") + 2}) > 0) then
+					trigger_player = i
+					return true
+				end
+			end
+		end
+		return false
+	end,
+	function()
+		CallDialogue("jarl-meets-the-karlings", trigger_player)
+		return false
+	end
+)
+
+AddTrigger("karlings-subjugated",
+	function()
+		for i=0,(PlayerMax - 2) do
+			if (GetPlayerData(i, "Faction") == "jarling-tribe" and FindHero("Erala", i) ~= nil and GetFactionExists("karling-tribe") and GetPlayerData(i, "HasQuest", "jarls-hall") and GetPlayerData(GetFactionPlayer("karling-tribe"), "UnitTypesCount", "unit-germanic-archer") == 0 and GetPlayerData(GetFactionPlayer("karling-tribe"), "UnitTypesCount", "unit-germanic-worker") <= 3) then
+				trigger_player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function()
+		CallDialogue("karlings-subjugated", trigger_player)
+		return false
+	end
+)
+
 AddTrigger("jarl-dies",
 	function()
 		for i=0,(PlayerMax - 2) do
