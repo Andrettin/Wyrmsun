@@ -31,7 +31,7 @@ SetMapTemplateUnit("earth", "unit-teuton-town-hall", "dane-tribe", {4112, 784}, 
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "denmark", {4112, 784}, 919) -- political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 
 -- Brødrene Gram (southern Jutland)
-SetMapTemplateUnit("earth", "unit-germanic-barracks", "jarling-tribe", {4051, 790}, -1600, -1500)
+SetMapTemplateUnit("earth", "unit-germanic-barracks", "jarling-tribe", {4051, 790}, -1600, -1500) -- regarding the place of Jarl's dwelling, it should be in a mountainous area, but also near a sound (since in the myth Jarl swam across sounds in his infancy); the lands between Jarl's hall and that of Hersir should contain boggy ground somewhere
 SetMapTemplateHero("earth", "Erala", "jarling-tribe", {4051, 790}, -1600, -1570)
 SetMapTemplateUnit("earth", "unit-germanic-town-hall", "jarling-tribe", {4051, 790}, -1500, -1300) -- a longhouse existed in Brødrene Gram (in southern Jutland) in the period II of the Nordic Bronze Age (1500-1300 BC), interpreted as a chiefly residence; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 73, 77-78.
 

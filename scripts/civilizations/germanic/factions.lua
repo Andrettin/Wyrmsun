@@ -46,6 +46,16 @@ DefineFaction("herminone-tribe", { -- according to Tacitus one of the earliest G
 	FactionUpgrade = "upgrade-skeldung-tribe-faction"
 })
 
+DefineFaction("hersing-tribe", {
+	Name = "Hersing Tribe",
+	Civilization = "germanic",
+	Type = "tribe",
+	Colors = {"white"},
+	FactionUpgrade = "upgrade-skeldung-tribe-faction",
+	DefaultAI = "passive",
+	Background = "In Norse mythology, Hersir was a chieftain whose daughter married Jarl."
+})
+
 DefineFaction("ingaevone-tribe", { -- according to Tacitus one of the earliest Germanic tribes; Source: Tacitus, "The Germany and the Agricola of Tacitus", 1897, section 2.
 	Name = "Ingaevone Tribe",
 	Civilization = "germanic",
@@ -73,7 +83,7 @@ DefineFaction("jarling-tribe", {
 	Civilization = "germanic",
 	Type = "tribe",
 	Colors = {"yellow"},
-	FactionUpgrade = "upgrade-yngling-tribe-faction",
+	FactionUpgrade = "upgrade-skeldung-tribe-faction",
 	Background = "In Norse mythology, Jarl (rendered in Proto-Germanic as Erala) was one of the sons of the god Rig, and the ancestor of those belonging to the social class of warriors. Unlike his treatment of his other sons, Rig revealed himself to Jarl as his father, and taught him the art of runes and magic."
 })
 
@@ -82,7 +92,7 @@ DefineFaction("karling-tribe", {
 	Civilization = "germanic",
 	Type = "tribe",
 	Colors = {"brown"},
-	FactionUpgrade = "upgrade-yngling-tribe-faction",
+	FactionUpgrade = "upgrade-skeldung-tribe-faction",
 	DefaultAI = "passive",
 	Background = "In Norse mythology, Karl (rendered in Proto-Germanic as Karla) was one of the sons of the god Rig, and the ancestor of those belonging to the social class of peasants."
 })
@@ -105,7 +115,7 @@ DefineFaction("thralling-tribe", {
 	Civilization = "germanic",
 	Type = "tribe",
 	Colors = {"black"},
-	FactionUpgrade = "upgrade-yngling-tribe-faction",
+	FactionUpgrade = "upgrade-skeldung-tribe-faction",
 	DefaultAI = "passive",
 	Background = "In Norse mythology, Thrall (rendered in Proto-Germanic as Thrahila) was one of the sons of the god Rig, and the ancestor of those belonging to the social class of thralls."
 })
