@@ -445,7 +445,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 			encyclopedia_icon_grayed = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-large-grayed.png")
 		end
 		civilization = GetUpgradeData(unit_name, "Civilization")
-		faction = CUpgrade:Get(unit_name).Faction
+		faction = GetUpgradeData(unit_name, "Faction")
 		tooltip_name = CUpgrade:Get(unit_name).Name
 		if (civilization ~= "") then
 			if (faction ~= "") then
@@ -608,7 +608,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			encyclopedia_icon_grayed = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-large-grayed.png")
 		end
 		civilization = GetUpgradeData(unit_name, "Civilization")
-		faction = CUpgrade:Get(unit_name).Faction
+		faction = GetUpgradeData(unit_name, "Faction")
 		tooltip_name = CUpgrade:Get(unit_name).Name
 		if (civilization ~= "") then
 			tooltip_civilization = "(" ..  _(GetCivilizationData(civilization, "Display"))
@@ -731,8 +731,8 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 	elseif (string.find(unit_name, "upgrade") ~= nil) then
 		if (GetUpgradeData(unit_name, "Civilization") ~= "") then
 			civilization = "Civilization: " .. GetCivilizationData(GetUpgradeData(unit_name, "Civilization"), "Display") .. "\n\n"
-			if (CUpgrade:Get(unit_name).Faction ~= "") then
-				faction = "Faction: " .. _(GetFactionData(GetUpgradeData(unit_name, "Civilization"), CUpgrade:Get(unit_name).Faction, "Name")) .. "\n\n"
+			if (GetUpgradeData(unit_name, "Faction") ~= "") then
+				faction = "Faction: " .. _(GetFactionData(GetUpgradeData(unit_name, "Civilization"), GetUpgradeData(unit_name, "Faction"), "Name")) .. "\n\n"
 			end
 		end
 		if (CUpgrade:Get(unit_name).Class ~= "") then
