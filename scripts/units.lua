@@ -120,7 +120,7 @@ Units = {
 	"unit-cavern-entrance",
 	"unit-portal",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
-	"unit-carrots", "unit-cheese", "unit-potion-of-healing"
+	"unit-carrots", "unit-cheese", "unit-wyrm-heart", "unit-potion-of-healing"
 }
 
 if (OldDefineUnitType == nil) then
@@ -204,6 +204,7 @@ DefineUnitType("unit-template-sapient-unit", { Name = _("Sapient Unit"),
 	Traits = {"upgrade-ambitious", "upgrade-clumsy", "upgrade-cruel", "upgrade-dextrous", "upgrade-dim", "upgrade-dutiful", "upgrade-genius", "upgrade-intelligent", "upgrade-keen", "upgrade-limping", "upgrade-mighty", "upgrade-near-sighted", "upgrade-old", "upgrade-pious", "upgrade-quick", "upgrade-reckless", "upgrade-resilient", "upgrade-slow", "upgrade-strong", "upgrade-weak", "upgrade-wise"}
 })
 
+Load("scripts/items.lua")
 Load("scripts/units_fauna.lua")
 
 DefineUnitType("unit-template-deposit", {
@@ -2195,8 +2196,6 @@ DefineUnitType("unit-yale-excrement", { Name = _("Yale Excrement"),
 		}
 	}
 } )
-
-Load("scripts/items.lua")
 
 DefineUnitType("unit-potion-of-decay", { Name = _("Potion of Decay"),
 	Image = {"file", "neutral/items/potion_blue.png", "size", {16, 16}},

@@ -1108,6 +1108,7 @@ DefineUnitType("unit-wyrm", {
 	Carnivore = true,
 	Dragon = true,
 	PierceDamage = true,
+	Drops = {"unit-wyrm-heart"},
 	PersonalNames = {
 		"Goin", -- Wyrm/dragon in Norse mythology
 		"Grabak", -- Grabak is a wyrm/dragon in Norse mythology

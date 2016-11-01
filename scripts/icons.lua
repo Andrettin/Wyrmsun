@@ -668,6 +668,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-wyrm-heart",
+	Size = {46, 38},
+	File = "neutral/icons/wyrm_heart.png"
+})
+
+DefineIcon({
 	Name = "icon-scroll",
 	Size = {46, 38},
 	File = "norse/icons/scroll.png"

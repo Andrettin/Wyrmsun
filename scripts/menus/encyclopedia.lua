@@ -717,7 +717,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 					end
 					droppers_string = droppers_string .. GetUnitTypeData(droppers[i], "Name")
 					if (GetUnitTypeData(droppers[i], "Civilization") ~= "" and GetUnitTypeData(droppers[i], "Faction") ~= "") then
-						droppers_string = droppers_string .. " (" .. GetCivilizationData(GetUnitTypeData(droppers[i], "Civilization"), "Display") .. ": " .. GetUnitTypeData(droppers[i], "Faction") .. ")"
+						droppers_string = droppers_string .. " (" .. GetCivilizationData(GetUnitTypeData(droppers[i], "Civilization"), "Display") .. ": " .. GetFactionData(GetUnitTypeData(droppers[i], "Civilization"), GetUnitTypeData(droppers[i], "Faction"), "Name") .. ")"
 					elseif (GetUnitTypeData(droppers[i], "Civilization") ~= "") then
 						droppers_string = droppers_string .. " (" .. GetCivilizationData(GetUnitTypeData(droppers[i], "Civilization"), "Display") .. ")"
 					end
@@ -754,12 +754,9 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 					applies_to = applies_to .. ", "
 				end
 				if (string.find(applies_to_items[i], "unit") ~= nil) then
-					applies_to = applies_to .. _(GetUnitTypeData(applies_to_items[i], "Name"))
+					applies_to = applies_to .. _(GetPluralForm(GetUnitTypeData(applies_to_items[i], "Name")))
 				else
-					applies_to = applies_to .. _(FullyCapitalizeString(string.gsub(applies_to_items[i], "-", " ")))
-				end
-				if (string.sub(applies_to_items[i], -1) ~= "s") then
-					applies_to = applies_to .. "s"
+					applies_to = applies_to .. _(GetPluralForm(FullyCapitalizeString(string.gsub(applies_to_items[i], "-", " "))))
 				end
 			end
 			applies_to = applies_to .. ".\n\n"
@@ -778,7 +775,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 						end
 						droppers_string = droppers_string .. GetUnitTypeData(droppers[i], "Name")
 						if (GetUnitTypeData(droppers[i], "Civilization") ~= "" and GetUnitTypeData(droppers[i], "Faction") ~= "") then
-							droppers_string = droppers_string .. " (" .. GetCivilizationData(GetUnitTypeData(droppers[i], "Civilization"), "Display") .. ": " .. GetUnitTypeData(droppers[i], "Faction") .. ")"
+							droppers_string = droppers_string .. " (" .. GetCivilizationData(GetUnitTypeData(droppers[i], "Civilization"), "Display") .. ": " .. GetFactionData(GetUnitTypeData(droppers[i], "Civilization"), GetUnitTypeData(droppers[i], "Faction"), "Name") .. ")"
 						elseif (GetUnitTypeData(droppers[i], "Civilization") ~= "") then
 							droppers_string = droppers_string .. " (" .. GetCivilizationData(GetUnitTypeData(droppers[i], "Civilization"), "Display") .. ")"
 						end
@@ -841,7 +838,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 					end
 					droppers_string = droppers_string .. GetUnitTypeData(droppers[i], "Name")
 					if (GetUnitTypeData(droppers[i], "Civilization") ~= "" and GetUnitTypeData(droppers[i], "Faction") ~= "") then
-						droppers_string = droppers_string .. " (" .. GetCivilizationData(GetUnitTypeData(droppers[i], "Civilization"), "Display") .. ": " .. GetUnitTypeData(droppers[i], "Faction") .. ")"
+						droppers_string = droppers_string .. " (" .. GetCivilizationData(GetUnitTypeData(droppers[i], "Civilization"), "Display") .. ": " .. GetFactionData(GetUnitTypeData(droppers[i], "Civilization"), GetUnitTypeData(droppers[i], "Faction"), "Name") .. ")"
 					elseif (GetUnitTypeData(droppers[i], "Civilization") ~= "") then
 						droppers_string = droppers_string .. " (" .. GetCivilizationData(GetUnitTypeData(droppers[i], "Civilization"), "Display") .. ")"
 					end

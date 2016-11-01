@@ -461,7 +461,8 @@ DefineUnitType("unit-cheese", {
 	} 
 } )
 
-DefineUnitType("unit-carrots", { Name = _("Carrots"),
+DefineUnitType("unit-carrots", {
+	Name = _("Carrots"),
 	Parent = "unit-template-item",
 	Image = {"file", "neutral/items/carrots.png", "size", {18, 12}},
 	Icon = "icon-carrots",
@@ -472,6 +473,19 @@ DefineUnitType("unit-carrots", { Name = _("Carrots"),
 	ButtonKey = "r",
 	ButtonHint = _("Buy Ca~!rrots"),
 	ButtonPos = 2,
+	Sounds = {
+		"used", "eat"
+	} 
+} )
+
+DefineUnitType("unit-wyrm-heart", {
+	Name = _("Wyrm Heart"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/carrots.png", "size", {18, 12}},
+	Icon = "icon-wyrm-heart",
+	ItemClass = "food",
+	HitPointHealing = 60,
+	Flesh = true,
 	Sounds = {
 		"used", "eat"
 	} 

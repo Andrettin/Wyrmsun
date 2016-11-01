@@ -416,6 +416,7 @@ Exidelo (Leo):
 /graphics/neutral/icons/wyrm.png (licensed under the CC0)
 /graphics/neutral/icons/wyrm_blue_scales.png (licensed under the CC0)
 /graphics/neutral/icons/wyrm_cyan_scales.png (licensed under the CC0)
+/graphics/neutral/icons/wyrm_heart.png (licensed under the CC0)
 /graphics/neutral/icons/wyrm_purple_scales.png (licensed under the CC0)
 /graphics/neutral/icons/wyrm_red_scales.png (licensed under the CC0)
 /graphics/neutral/icons/wyrm_vicious.png (licensed under the CC0)
