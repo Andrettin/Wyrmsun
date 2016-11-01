@@ -1134,9 +1134,12 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {Opponent = "false", Neutral = "false"}, Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
---				{ 	Condition = {Opponent = "only", SettlementName = true}, Margin = {1, 1},
---					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
---				}, 
+				{ 	Condition = {Opponent = "only", SettlementName = true}, Margin = {1, 1},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				}, 
+				{ 	Condition = {Neutral = "only", SettlementName = true}, Margin = {1, 1},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				}, 
 				{ 	Condition = {ButtonAction = "editor-unit"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = TypeIdent("Type"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -1161,9 +1164,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {Class = true, ButtonAction = "editor-unit"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(Concat(_("Class:"), " "), TypeClass("Type")), Font = wyr.preferences.PopupDescriptionFont}}
 				},
---				{ 	Condition = {SettlementName = true, ButtonAction = "unit"}, HighlightColor = "yellow",
---					More = {"Variable", {Text = Concat(_("Settlement: "), UnitSettlementName("Unit")), Font = wyr.preferences.PopupDescriptionFont}}
---				},
+				{ 	Condition = {SettlementName = true, ButtonAction = "unit"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Settlement: "), UnitSettlementName("Unit")), Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {Mercenary = "only", ButtonAction = "train-unit"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Troop Quantity: "), String(TypeTrainQuantity("Type"))), Font = wyr.preferences.PopupDescriptionFont}}
 				},

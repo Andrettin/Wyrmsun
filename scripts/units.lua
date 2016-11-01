@@ -2607,18 +2607,14 @@ DefineUnitType("unit-template-worker", {
 			"resource-capacity", 100,
 			"resource-step", 2,
 			"wait-at-resource", 6,
-			"wait-at-depot", 150,
-			"final-resource", "gold",
-			"final-resource-conversion-rate", 50
+			"wait-at-depot", 150
 		},
 		{
 			"resource-id", "copper",
 			"resource-capacity", 100,
 			"resource-step", 2,
 			"wait-at-resource", 6,
-			"wait-at-depot", 150,
-			"final-resource", "gold",
-			"final-resource-conversion-rate", 25
+			"wait-at-depot", 150
 		},
 		{
 			"resource-id", "lumber",
