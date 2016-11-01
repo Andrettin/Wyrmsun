@@ -4068,7 +4068,7 @@ function GetUnitTypeRequiredBuildings(unit_type, owner_civilization, owner_facti
 	if (string.find(unit_type, "upgrade-") == nil) then
 		civilization = GetUnitTypeData(unit_type, "Civilization")
 	else
-		civilization = CUpgrade:Get(unit_type).Civilization
+		civilization = GetUpgradeData(unit_type, "Civilization")
 	end
 	local faction = ""
 	if (civilization == owner_civilization) then
@@ -4200,7 +4200,7 @@ function GetUnitTypeRequiredTechnologies(unit_type, owner_civilization, owner_fa
 	if (string.find(unit_type, "upgrade-") == nil) then
 		civilization = GetUnitTypeData(unit_type, "Civilization")
 	else
-		civilization = CUpgrade:Get(unit_type).Civilization
+		civilization = GetUpgradeData(unit_type, "Civilization")
 	end
 	local faction = ""
 	if (civilization == owner_civilization) then

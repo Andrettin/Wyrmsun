@@ -73,8 +73,8 @@ function DefineAllowNormalUnits(flags)
 					if (
 						GetPlayerData(j, "AiEnabled") == false
 						and CUpgrade:Get(unitName).Class ~= ""
-						and CUpgrade:Get(unitName).Civilization ~= ""
-						and GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType(CUpgrade:Get(unitName).Class, CUpgrade:Get(unitName).Civilization)) == false
+						and GetUpgradeData(unitName, "Civilization") ~= ""
+						and GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType(CUpgrade:Get(unitName).Class, GetUpgradeData(unitName, "Civilization"))) == false
 						and CUpgrade:Get(unitName).TechnologyPointCost > 0
 					) then
 						PlayerUnitFlag[j] = "F"

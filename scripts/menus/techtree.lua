@@ -402,7 +402,7 @@ function ResetTechnologiesAcquired(civilization)
 				table.insert(technologies_to_remove, wyr.preferences.TechnologyAcquired[i])
 			end
 		else
-			if (civilization == CUpgrade:Get(wyr.preferences.TechnologyAcquired[i]).Civilization) then
+			if (civilization == GetUpgradeData(wyr.preferences.TechnologyAcquired[i], "Civilization")) then
 				table.insert(technologies_to_remove, wyr.preferences.TechnologyAcquired[i])
 			end
 		end
@@ -430,7 +430,7 @@ function GetTechnologyPointCost(civilization, technology)
 			return GetUnitTypeData(technology, "TechnologyPointCost")
 		end
 	elseif (string.find(technology, "upgrade") ~= nil) then
-		if (civilization == CUpgrade:Get(technology).Civilization or civilization == "") then
+		if (civilization == GetUpgradeData(technology, "Civilization") or civilization == "") then
 			return CUpgrade:Get(technology).TechnologyPointCost
 		end
 	end
