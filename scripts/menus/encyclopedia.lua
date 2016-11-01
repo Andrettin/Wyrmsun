@@ -735,8 +735,8 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 				faction = "Faction: " .. _(GetFactionData(GetUpgradeData(unit_name, "Civilization"), GetUpgradeData(unit_name, "Faction"), "Name")) .. "\n\n"
 			end
 		end
-		if (CUpgrade:Get(unit_name).Class ~= "") then
-			unit_type_class = "Class: " .. _(FullyCapitalizeString(string.gsub(CUpgrade:Get(unit_name).Class, "-", " "))) .. "\n\n"
+		if (GetUpgradeData(unit_name, "Class") ~= "") then
+			unit_type_class = "Class: " .. _(FullyCapitalizeString(string.gsub(GetUpgradeData(unit_name, "Class"), "-", " "))) .. "\n\n"
 		end
 		if (CUpgrade:Get(unit_name).Description ~= "") then
 			description = "Description: " .. CUpgrade:Get(unit_name).Description .. "\n\n"

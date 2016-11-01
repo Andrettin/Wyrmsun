@@ -1165,7 +1165,7 @@ end
 function FactionHasTechnologyType(faction, technology_type)
 	for i, unitName in ipairs(Units) do
 		if (string.find(unitName, "upgrade-") ~= nil) then
-			if (CUpgrade:Get(unitName).Class == technology_type and GetFactionTechnology(faction.Civilization, faction.Name, unitName)) then
+			if (GetUpgradeData(unitName, "Class") == technology_type and GetFactionTechnology(faction.Civilization, faction.Name, unitName)) then
 				return true
 			end
 		end
@@ -2785,7 +2785,7 @@ function AIDoTurn(ai_faction)
 		for i, unitName in ipairs(Units) do
 			if (string.find(unitName, "upgrade-") ~= nil) then
 				if (CanResearchTechnology(WorldMapProvinces[key], unitName)) then
---					if (CUpgrade:Get(unitName).Class == "melee-weapon-1") then
+--					if (GetUpgradeData(unitName, "Class") == "melee-weapon-1") then
 						ResearchTechnology(WorldMapProvinces[key], unitName)
 						break
 --					end
@@ -3422,9 +3422,9 @@ function UseBuilding(province, unit_type)
 end
 
 function IsTechnologyAvailable(province, unit_type)
-	if (GetFactionFromName(GetProvinceOwner(province.Name)).Civilization == GetProvinceCivilization(province.Name) and GetFactionClassUnitType(CUpgrade:Get(unit_type).Class, GetProvinceCivilization(province.Name), GetProvinceOwner(province.Name)) ~= unit_type) then
+	if (GetFactionFromName(GetProvinceOwner(province.Name)).Civilization == GetProvinceCivilization(province.Name) and GetFactionClassUnitType(GetUpgradeData(unit_type, "Class"), GetProvinceCivilization(province.Name), GetProvinceOwner(province.Name)) ~= unit_type) then
 		return false
-	elseif (GetFactionFromName(GetProvinceOwner(province.Name)).Civilization ~= GetProvinceCivilization(province.Name) and GetCivilizationClassUnitType(CUpgrade:Get(unit_type).Class, GetProvinceCivilization(province.Name)) ~= unit_type) then
+	elseif (GetFactionFromName(GetProvinceOwner(province.Name)).Civilization ~= GetProvinceCivilization(province.Name) and GetCivilizationClassUnitType(GetUpgradeData(unit_type, "Class"), GetProvinceCivilization(province.Name)) ~= unit_type) then
 		return false
 	end
 
@@ -4047,15 +4047,15 @@ function GetUnitTypeInterfaceState(unit_type)
 			return ""
 		end
 	else
-		if (CUpgrade:Get(unit_type).Class == "melee-weapon-1" or CUpgrade:Get(unit_type).Class == "melee-weapon-2" or CUpgrade:Get(unit_type).Class == "bronze-shield" or CUpgrade:Get(unit_type).Class == "iron-shield" or CUpgrade:Get(unit_type).Class == "siege-projectile-1" or CUpgrade:Get(unit_type).Class == "siege-projectile-2") then
+		if (GetUpgradeData(unit_type, "Class") == "melee-weapon-1" or GetUpgradeData(unit_type, "Class") == "melee-weapon-2" or GetUpgradeData(unit_type, "Class") == "bronze-shield" or GetUpgradeData(unit_type, "Class") == "iron-shield" or GetUpgradeData(unit_type, "Class") == "siege-projectile-1" or GetUpgradeData(unit_type, "Class") == "siege-projectile-2") then
 			return "smithy"
-		elseif (CUpgrade:Get(unit_type).Class == "long-spear" or CUpgrade:Get(unit_type).Class == "pike" or CUpgrade:Get(unit_type).Class == "ranged-projectile-1" or CUpgrade:Get(unit_type).Class == "ranged-projectile-2" or CUpgrade:Get(unit_type).Class == "wood-plow" or CUpgrade:Get(unit_type).Class == "iron-tipped-wood-plow" or CUpgrade:Get(unit_type).Class == "iron-plow" or CUpgrade:Get(unit_type).Class == "masonry") then
+		elseif (GetUpgradeData(unit_type, "Class") == "long-spear" or GetUpgradeData(unit_type, "Class") == "pike" or GetUpgradeData(unit_type, "Class") == "ranged-projectile-1" or GetUpgradeData(unit_type, "Class") == "ranged-projectile-2" or GetUpgradeData(unit_type, "Class") == "wood-plow" or GetUpgradeData(unit_type, "Class") == "iron-tipped-wood-plow" or GetUpgradeData(unit_type, "Class") == "iron-plow" or GetUpgradeData(unit_type, "Class") == "masonry") then
 			return "lumber-mill"
-		elseif (CUpgrade:Get(unit_type).Class == "coinage") then
+		elseif (GetUpgradeData(unit_type, "Class") == "coinage") then
 			return "smithy"
-		elseif (CUpgrade:Get(unit_type).Class == "writing") then
+		elseif (GetUpgradeData(unit_type, "Class") == "writing") then
 			return "lumber-mill"
-		elseif (CUpgrade:Get(unit_type).Class == "alchemy") then
+		elseif (GetUpgradeData(unit_type, "Class") == "alchemy") then
 			return "smithy"
 		else
 			return ""
@@ -4160,33 +4160,33 @@ function GetUnitTypeRequiredBuildings(unit_type, owner_civilization, owner_facti
 			end
 		end
 	else
-		if (CUpgrade:Get(unit_type).Class == "melee-weapon-1" or CUpgrade:Get(unit_type).Class == "melee-weapon-2" or CUpgrade:Get(unit_type).Class == "bronze-shield" or CUpgrade:Get(unit_type).Class == "iron-shield") then
+		if (GetUpgradeData(unit_type, "Class") == "melee-weapon-1" or GetUpgradeData(unit_type, "Class") == "melee-weapon-2" or GetUpgradeData(unit_type, "Class") == "bronze-shield" or GetUpgradeData(unit_type, "Class") == "iron-shield") then
 			if (GetFactionClassUnitType("smithy", civilization, faction) ~= nil) then
 				table.insert(required_buildings, GetFactionClassUnitType("smithy", civilization, faction))
 			end
-		elseif (CUpgrade:Get(unit_type).Class == "long-spear" or CUpgrade:Get(unit_type).Class == "pike" or CUpgrade:Get(unit_type).Class == "ranged-projectile-1" or CUpgrade:Get(unit_type).Class == "ranged-projectile-2" or CUpgrade:Get(unit_type).Class == "wood-plow" or CUpgrade:Get(unit_type).Class == "iron-tipped-wood-plow" or CUpgrade:Get(unit_type).Class == "iron-plow" or CUpgrade:Get(unit_type).Class == "masonry") then
+		elseif (GetUpgradeData(unit_type, "Class") == "long-spear" or GetUpgradeData(unit_type, "Class") == "pike" or GetUpgradeData(unit_type, "Class") == "ranged-projectile-1" or GetUpgradeData(unit_type, "Class") == "ranged-projectile-2" or GetUpgradeData(unit_type, "Class") == "wood-plow" or GetUpgradeData(unit_type, "Class") == "iron-tipped-wood-plow" or GetUpgradeData(unit_type, "Class") == "iron-plow" or GetUpgradeData(unit_type, "Class") == "masonry") then
 			if (GetFactionClassUnitType("lumber-mill", civilization, faction) ~= nil) then
 				table.insert(required_buildings, GetFactionClassUnitType("lumber-mill", civilization, faction))
 			end
-		elseif (CUpgrade:Get(unit_type).Class == "siege-projectile-1" or CUpgrade:Get(unit_type).Class == "siege-projectile-2") then
+		elseif (GetUpgradeData(unit_type, "Class") == "siege-projectile-1" or GetUpgradeData(unit_type, "Class") == "siege-projectile-2") then
 			if (GetFactionClassUnitType("smithy", civilization, faction) ~= nil) then
 				table.insert(required_buildings, GetFactionClassUnitType("smithy", civilization, faction))
 			end
 			if (GetFactionClassUnitType("lumber-mill", civilization, faction) ~= nil) then
 				table.insert(required_buildings, GetFactionClassUnitType("lumber-mill", civilization, faction))
 			end
-		elseif (CUpgrade:Get(unit_type).Class == "coinage") then
+		elseif (GetUpgradeData(unit_type, "Class") == "coinage") then
 			if (GetFactionClassUnitType("smithy", civilization, faction) ~= nil) then
 				table.insert(required_buildings, GetFactionClassUnitType("smithy", civilization, faction))
 			end
 			if (GetFactionClassUnitType("stronghold", civilization, faction) ~= nil) then
 				table.insert(required_buildings, GetFactionClassUnitType("stronghold", civilization, faction))
 			end
-		elseif (CUpgrade:Get(unit_type).Class == "writing") then
+		elseif (GetUpgradeData(unit_type, "Class") == "writing") then
 			if (GetFactionClassUnitType("stronghold", civilization, faction) ~= nil) then
 				table.insert(required_buildings, GetFactionClassUnitType("stronghold", civilization, faction))
 			end
-		elseif (CUpgrade:Get(unit_type).Class == "alchemy") then
+		elseif (GetUpgradeData(unit_type, "Class") == "alchemy") then
 			if (GetFactionClassUnitType("stronghold", civilization, faction) ~= nil) then
 				table.insert(required_buildings, GetFactionClassUnitType("stronghold", civilization, faction))
 			end
@@ -4215,31 +4215,31 @@ function GetUnitTypeRequiredTechnologies(unit_type, owner_civilization, owner_fa
 			end
 		end
 	else
-		if (CUpgrade:Get(unit_type).Class == "melee-weapon-2") then
+		if (GetUpgradeData(unit_type, "Class") == "melee-weapon-2") then
 			if (GetFactionClassUnitType("melee-weapon-1", civilization, faction) ~= nil) then
 				table.insert(required_technologies, GetFactionClassUnitType("melee-weapon-1", civilization, faction))
 			end
-		elseif (CUpgrade:Get(unit_type).Class == "pike") then
+		elseif (GetUpgradeData(unit_type, "Class") == "pike") then
 			if (GetFactionClassUnitType("long-spear", civilization, faction) ~= nil) then
 				table.insert(required_technologies, GetFactionClassUnitType("long-spear", civilization, faction))
 			end
-		elseif (CUpgrade:Get(unit_type).Class == "iron-shield") then
+		elseif (GetUpgradeData(unit_type, "Class") == "iron-shield") then
 			if (GetFactionClassUnitType("bronze-shield", civilization, faction) ~= nil) then
 				table.insert(required_technologies, GetFactionClassUnitType("bronze-shield", civilization, faction))
 			end
-		elseif (CUpgrade:Get(unit_type).Class == "ranged-projectile-2") then
+		elseif (GetUpgradeData(unit_type, "Class") == "ranged-projectile-2") then
 			if (GetFactionClassUnitType("ranged-projectile-1", civilization, faction) ~= nil) then
 				table.insert(required_technologies, GetFactionClassUnitType("ranged-projectile-1", civilization, faction))
 			end
-		elseif (CUpgrade:Get(unit_type).Class == "siege-projectile-2") then
+		elseif (GetUpgradeData(unit_type, "Class") == "siege-projectile-2") then
 			if (GetFactionClassUnitType("siege-projectile-1", civilization, faction) ~= nil) then
 				table.insert(required_technologies, GetFactionClassUnitType("siege-projectile-1", civilization, faction))
 			end
-		elseif (CUpgrade:Get(unit_type).Class == "iron-tipped-wood-plow") then
+		elseif (GetUpgradeData(unit_type, "Class") == "iron-tipped-wood-plow") then
 			if (GetFactionClassUnitType("wood-plow", civilization, faction) ~= nil) then
 				table.insert(required_technologies, GetFactionClassUnitType("wood-plow", civilization, faction))
 			end
-		elseif (CUpgrade:Get(unit_type).Class == "alchemy") then
+		elseif (GetUpgradeData(unit_type, "Class") == "alchemy") then
 			if (GetFactionClassUnitType("writing", civilization, faction) ~= nil) then
 				table.insert(required_technologies, GetFactionClassUnitType("writing", civilization, faction))
 			end

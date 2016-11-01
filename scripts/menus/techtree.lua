@@ -260,95 +260,95 @@ function RunTechTreeMenu(civilization_number)
 				end
 			end
 		else
-			if (CUpgrade:Get(unitName).Class ~= "" and GetCivilizationClassUnitType(CUpgrade:Get(unitName).Class, civilization) == unitName) then
+			if (GetUpgradeData(unitName, "Class") ~= "" and GetCivilizationClassUnitType(GetUpgradeData(unitName, "Class"), civilization) == unitName) then
 				local tech_icon_x = 0
 				local tech_icon_y = 0
 				local tech_allowed = true
-				if (CUpgrade:Get(unitName).Class == "melee-weapon-1") then
+				if (GetUpgradeData(unitName, "Class") == "melee-weapon-1") then
 					tech_icon_x = 3
 					tech_icon_y = 4
 					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("smithy", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("smithy", civilization)) > 0) then
 						tech_allowed = false
 					end
-				elseif (CUpgrade:Get(unitName).Class == "melee-weapon-2") then
+				elseif (GetUpgradeData(unitName, "Class") == "melee-weapon-2") then
 					tech_icon_x = 3
 					tech_icon_y = 5
 					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("melee-weapon-1", civilization))) then
 						tech_allowed = false
 					end
-				elseif (CUpgrade:Get(unitName).Class == "long-spear") then
+				elseif (GetUpgradeData(unitName, "Class") == "long-spear") then
 					tech_icon_x = 4
 					tech_icon_y = 4
 					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("lumber-mill", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("lumber-mill", civilization)) > 0) then
 						tech_allowed = false
 					end
-				elseif (CUpgrade:Get(unitName).Class == "pike") then
+				elseif (GetUpgradeData(unitName, "Class") == "pike") then
 					tech_icon_x = 4
 					tech_icon_y = 5
 					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("long-spear", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("long-spear", civilization)) > 0) then
 						tech_allowed = false
 					end
-				elseif (CUpgrade:Get(unitName).Class == "bronze-shield") then
+				elseif (GetUpgradeData(unitName, "Class") == "bronze-shield") then
 					tech_icon_x = 2
 					tech_icon_y = 4
 					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("smithy", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("smithy", civilization)) > 0) then
 						tech_allowed = false
 					end
-				elseif (CUpgrade:Get(unitName).Class == "iron-shield") then
+				elseif (GetUpgradeData(unitName, "Class") == "iron-shield") then
 					tech_icon_x = 2
 					tech_icon_y = 5
 					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("bronze-shield", civilization))) then
 						tech_allowed = false
 					end
-				elseif (CUpgrade:Get(unitName).Class == "ranged-projectile-1") then
+				elseif (GetUpgradeData(unitName, "Class") == "ranged-projectile-1") then
 					tech_icon_x = 7
 					tech_icon_y = 4
 					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("shooter", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("shooter", civilization)) > 0 and GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("flying-rider", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("flying-rider", civilization)) > 0) then
 						tech_allowed = false
 					end
-				elseif (CUpgrade:Get(unitName).Class == "ranged-projectile-2") then
+				elseif (GetUpgradeData(unitName, "Class") == "ranged-projectile-2") then
 					tech_icon_x = 7
 					tech_icon_y = 5
 					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("ranged-projectile-1", civilization))) then
 						tech_allowed = false
 					end
-				elseif (CUpgrade:Get(unitName).Class == "siege-projectile-1") then
+				elseif (GetUpgradeData(unitName, "Class") == "siege-projectile-1") then
 					tech_icon_x = 1
 					tech_icon_y = 4
 					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("siege-engine", civilization))) then
 						tech_allowed = false
 					end
-				elseif (CUpgrade:Get(unitName).Class == "siege-projectile-2") then
+				elseif (GetUpgradeData(unitName, "Class") == "siege-projectile-2") then
 					tech_icon_x = 1
 					tech_icon_y = 5
 					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("siege-projectile-1", civilization))) then
 						tech_allowed = false
 					end
-				elseif (CUpgrade:Get(unitName).Class == "wood-plow") then
+				elseif (GetUpgradeData(unitName, "Class") == "wood-plow") then
 					tech_icon_x = 6
 					tech_icon_y = 3
 					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("lumber-mill", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("lumber-mill", civilization)) > 0) then
 						tech_allowed = false
 					end
-				elseif (CUpgrade:Get(unitName).Class == "iron-tipped-wood-plow") then
+				elseif (GetUpgradeData(unitName, "Class") == "iron-tipped-wood-plow") then
 					tech_icon_x = 6
 					tech_icon_y = 4
 					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("wood-plow", civilization))) then
 						tech_allowed = false
 					end
-				elseif (CUpgrade:Get(unitName).Class == "iron-plow") then
+				elseif (GetUpgradeData(unitName, "Class") == "iron-plow") then
 					tech_icon_x = 6
 					tech_icon_y = 5
 					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("iron-plow", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("iron-plow", civilization)) > 0) then
 						tech_allowed = false
 					end
-				elseif (CUpgrade:Get(unitName).Class == "masonry") then
+				elseif (GetUpgradeData(unitName, "Class") == "masonry") then
 					tech_icon_x = 8
 					tech_icon_y = 3
 					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("lumber-mill", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("lumber-mill", civilization)) > 0) then
 						tech_allowed = false
 					end
-				elseif (CUpgrade:Get(unitName).Class == "coinage") then
+				elseif (GetUpgradeData(unitName, "Class") == "coinage") then
 					tech_icon_x = 5
 					tech_icon_y = 5
 					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("smithy", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("smithy", civilization)) > 0) then
@@ -357,13 +357,13 @@ function RunTechTreeMenu(civilization_number)
 					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("stronghold", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("stronghold", civilization)) > 0) then
 						tech_allowed = false
 					end
-				elseif (CUpgrade:Get(unitName).Class == "writing") then
+				elseif (GetUpgradeData(unitName, "Class") == "writing") then
 					tech_icon_x = 5
 					tech_icon_y = 4
 					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("stronghold", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("stronghold", civilization)) > 0) then
 						tech_allowed = false
 					end
-				elseif (CUpgrade:Get(unitName).Class == "alchemy") then
+				elseif (GetUpgradeData(unitName, "Class") == "alchemy") then
 					tech_icon_x = 5
 					tech_icon_y = 6
 					if (
@@ -533,42 +533,42 @@ function GetTechnologyAllowsString(technology, civilization)
 			end
 		end
 	else
-		if (CUpgrade:Get(technology).Class == "melee-weapon-1") then
+		if (GetUpgradeData(technology, "Class") == "melee-weapon-1") then
 			if (GetCivilizationClassUnitType("melee-weapon-2", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("melee-weapon-2", civilization))
 			end
-		elseif (CUpgrade:Get(technology).Class == "long-spear") then
+		elseif (GetUpgradeData(technology, "Class") == "long-spear") then
 			if (GetCivilizationClassUnitType("pike", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("pike", civilization))
 			end
-		elseif (CUpgrade:Get(technology).Class == "bronze-shield") then
+		elseif (GetUpgradeData(technology, "Class") == "bronze-shield") then
 			if (GetCivilizationClassUnitType("iron-shield", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("iron-shield", civilization))
 			end
-		elseif (CUpgrade:Get(technology).Class == "ranged-projectile-1") then
+		elseif (GetUpgradeData(technology, "Class") == "ranged-projectile-1") then
 			if (GetCivilizationClassUnitType("ranged-projectile-2", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("ranged-projectile-2", civilization))
 			end
-		elseif (CUpgrade:Get(technology).Class == "siege-projectile-1") then
+		elseif (GetUpgradeData(technology, "Class") == "siege-projectile-1") then
 			if (GetCivilizationClassUnitType("siege-projectile-2", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("siege-projectile-2", civilization))
 			end
-		elseif (CUpgrade:Get(technology).Class == "wood-plow") then
+		elseif (GetUpgradeData(technology, "Class") == "wood-plow") then
 			if (GetCivilizationClassUnitType("iron-tipped-wood-plow", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("iron-tipped-wood-plow", civilization))
 			end
-		elseif (CUpgrade:Get(technology).Class == "iron-tipped-wood-plow") then
+		elseif (GetUpgradeData(technology, "Class") == "iron-tipped-wood-plow") then
 			if (GetCivilizationClassUnitType("iron-plow", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("iron-plow", civilization))
 			end
-		elseif (CUpgrade:Get(technology).Class == "masonry") then
+		elseif (GetUpgradeData(technology, "Class") == "masonry") then
 			if (GetCivilizationClassUnitType("stronghold", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("stronghold", civilization))
 			end
 			if (GetCivilizationClassUnitType("guard-tower", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("guard-tower", civilization))
 			end
-		elseif (CUpgrade:Get(technology).Class == "writing") then
+		elseif (GetUpgradeData(technology, "Class") == "writing") then
 			if (GetCivilizationClassUnitType("alchemy", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("alchemy", civilization))
 			end
