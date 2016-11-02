@@ -481,7 +481,7 @@ DefineUnitType("unit-carrots", {
 DefineUnitType("unit-wyrm-heart", {
 	Name = _("Wyrm Heart"),
 	Parent = "unit-template-item",
-	Image = {"file", "neutral/items/carrots.png", "size", {18, 12}},
+	Image = {"file", "neutral/items/wyrm_heart.png", "size", {16, 16}},
 	Icon = "icon-wyrm-heart",
 	ItemClass = "food",
 	HitPointHealing = 60,

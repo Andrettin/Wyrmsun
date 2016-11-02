@@ -422,6 +422,7 @@ Exidelo (Leo):
 /graphics/neutral/icons/wyrm_vicious.png (licensed under the CC0)
 /graphics/neutral/icons/wyrm_vicious_light_green_scales.png (licensed under the CC0)
 /graphics/neutral/icons/wyrm_yellow_scales.png (licensed under the CC0)
+/graphics/neutral/items/wyrm_heart.png (licensed under the CC0)
 /graphics/norse/icons/odin.png (licensed under the CC0)
 /graphics/terrain/deep_water.png (licensed under the CC0)
 /graphics/terrain/dirt_extra_1.png (licensed under the CC0)
