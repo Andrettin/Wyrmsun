@@ -755,6 +755,11 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 				end
 				if (string.find(applies_to_items[i], "unit") ~= nil) then
 					applies_to = applies_to .. _(GetPluralForm(GetUnitTypeData(applies_to_items[i], "Name")))
+					if (GetUnitTypeData(applies_to_items[i], "Civilization") ~= "" and GetUnitTypeData(applies_to_items[i], "Faction") ~= "") then
+						applies_to = applies_to .. " (" .. _(GetCivilizationData(GetUnitTypeData(applies_to_items[i], "Civilization"), "Display")) .. ": " .. _(GetFactionData(GetUnitTypeData(applies_to_items[i], "Civilization"), GetUnitTypeData(applies_to_items[i], "Faction"), "Name")) .. ")"
+					elseif (GetUnitTypeData(applies_to_items[i], "Civilization") ~= "") then
+						applies_to = applies_to .. " (" .. _(GetCivilizationData(GetUnitTypeData(applies_to_items[i], "Civilization"), "Display")) .. ")"
+					end
 				else
 					applies_to = applies_to .. _(GetPluralForm(FullyCapitalizeString(string.gsub(applies_to_items[i], "-", " "))))
 				end

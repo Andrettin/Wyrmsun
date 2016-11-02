@@ -1,0 +1,7 @@
+Translation Notes:
+
+"~!" is used before a letter to highlight it. It is used primarily to highlight the hotkey for buttons. If the translated string happens to contain the same letter that is highlighted in the original, then highlight it as well. Otherwise, put it capitalized, highlighted and within parenthesis after the translated string, like in this example:
+msgid "~!Civilizations"
+msgstr "Zivilisationen (~!C)"
+
+All text placed between "~<" and "~>" are highlighted by the game.
