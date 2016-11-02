@@ -498,3 +498,6 @@ SetMapTemplateUnit("earth", "unit-teuton-town-hall", "swede-tribe", {4243, 692},
 
 -- Gannarve (Fröjel Parish, Gotland)
 -- a stone ship grave was established at Gannarve (Fröjel Parish, Gotland) in the Late Bronze Age of Scandinavia (1100-700 BC); Source: Peter Skoglund, "Stone Ships: Continuity and Change in Scandinavian Prehistory", 2008, pp. 394, 398.
+
+-- Vitemölla (Southeast Sweden)
+--SetMapTemplateUnit("earth", "unit-germanic-temple", "skeldung-tribe", {4162, 780}, -1700, -500) -- the archaeoastronomical observatory termed by archaeologists as "Heimdall's Stones" was constructed and in use during the Bronze Age; between 600 and 500 BC it was covered by sands; Source: Nils-Axel Mörner, Bob G. Lind and Göran Possnert, "Heimdall's Stones at Vitemölla in SE Sweden and the Chronology and Stratigraphy of the Surroundings", 2009, pp. 209-212.

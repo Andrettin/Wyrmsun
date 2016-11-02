@@ -2171,32 +2171,6 @@ DefineUnitType("unit-bed", { Name = _("Bed"),
 	}
 } )
 
-DefineUnitType("unit-yale-excrement", { Name = _("Yale Excrement"),
-	Image = {"file", "neutral/decorations/yale_excrement.png", "size", {72, 72}},
-	Animations = "animations-yale-excrement", Icon = "icon-yale-excrement",
-	Speed = 0,
-	HitPoints = 1,
-	DrawLevel = 30,
-	TileSize = {1, 1}, BoxSize = {31, 31},
-	SightRange = 1,
-	Priority = 0,
-	Type = "land",
-	IsNotSelectable = true,
-	Decoration = true,
-	Diminutive = true,
-	Detritus = true,
-	HiddenInEditor = true,
-	Variations = {
-		{
-			"variation-id", "brown"
-		},
-		{
-			"variation-id", "green",
-			"file", "neutral/decorations/yale_excrement_green.png"
-		}
-	}
-} )
-
 DefineUnitType("unit-potion-of-decay", { Name = _("Potion of Decay"),
 	Image = {"file", "neutral/items/potion_blue.png", "size", {16, 16}},
 	Animations = "animations-potion", Icon = "icon-blue-potion",

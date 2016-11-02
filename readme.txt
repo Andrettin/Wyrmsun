@@ -84,6 +84,9 @@ https://github.com/Andrettin/Wyrmsun
 - Revamped Lombardic personal names.
 - Faction splitting now only happens in the campaign mode.
 
+* Grand Strategy
+- Fixed issue which sometimes caused a crash when loading a grand strategy game.
+
 * Heroes
 - Persistent heroes (including custom ones) can now be hired at barracks-type buildings and mercenary camps in single-player games (outside of quest scenarios and the grand strategy mode).
 - Added Erala (Germanic Warrior) (icon by Exidelo).
@@ -126,6 +129,7 @@ https://github.com/Andrettin/Wyrmsun
 - The owner of goblin Thieves is now hidden (they appear as if they were neutral to other players).
 - The popup which appears when hovering over a unit instead of displaying the personal name followed by the unit's type name, now displays the unit's type name (or its proper name in the case of unique/magic items or heroes) followed by the name of its owning faction.
 - Names of heroes now have the proper color when hovering over their portrait in unit multi-selection or from within a transporter.
+- Attacking is no longer the default action for when right-clicking non-aggressive fauna.
 
 -----------------------------------------------------------------------
 - 2.4.2
