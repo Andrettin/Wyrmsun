@@ -1601,7 +1601,7 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {Equipped = "only"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = _("Right-click to de-equip"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {Consumable = "only", CanUse = "only", Work = "false"}, TextColor = "white", HighlightColor = "yellow",
+				{ 	Condition = {Consumable = "only", CanUse = "only", Work = "false", Elixir = "false"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = _("Right-click to use"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {Work = "only", CanUse = "only", ReadWork = "false"}, TextColor = "white", HighlightColor = "yellow",
@@ -1609,6 +1609,12 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {Work = "only", ReadWork = "only"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = _("Already read"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Elixir = "only", CanUse = "only", ConsumedElixir = "false"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = _("Right-click to consume"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Elixir = "only", ConsumedElixir = "only"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = _("Already consumed"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {Bound = "false"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = _("Left-click to drop"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
@@ -1648,6 +1654,9 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {Work = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = _("Literary Work"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Elixir = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = _("Elixir"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {Spell = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(_("Casts "), UnitSpell("Unit")), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
@@ -1960,10 +1969,16 @@ if not (ui_loaded_first_time) then
 				{ 	Margin = {1, 1}, Condition = {Work = "only", Unique = "false", Quote = true},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
+				{ 	Margin = {1, 1}, Condition = {Elixir = "only", Unique = "false", Quote = true},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				}, 
 				{ 	Condition = {Unique = "only", Identified = "only", Quote = true}, HighlightColor = "yellow",
 					More = {"Text", {Text = UnitQuote("Unit"), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {Work = "only", Unique = "false", Quote = true}, HighlightColor = "yellow",
+					More = {"Text", {Text = UnitQuote("Unit"), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Elixir = "only", Unique = "false", Quote = true}, HighlightColor = "yellow",
 					More = {"Text", {Text = UnitQuote("Unit"), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 		}	

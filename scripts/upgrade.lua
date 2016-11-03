@@ -289,6 +289,7 @@ Load("scripts/item_suffixes.lua")
 Load("scripts/item_suffixes_runic.lua")
 Load("scripts/province_modifiers.lua")
 Load("scripts/traits.lua")
+Load("scripts/elixirs.lua")
 Load("scripts/works.lua")
 
 DefineUpgrade("upgrade-deity-character", {

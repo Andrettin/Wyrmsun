@@ -47,6 +47,15 @@ DefineUniqueItem("brimir", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Quote = "\"Of all the gods is Odin the greatest,\nAnd Sleipnir the best of steeds;\nBifrost of bridges, Bragi of skalds,\nHobrok of hawks, Garm of hounds,\nand Brimir of swords.\"\n- Grimnismol (Grimnir)"
 } )
 
+DefineUniqueItem("fafnirs-heart", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 380-381.
+	Name = "Fafnir's Heart",
+	Type = "unit-wyrm-heart",
+	Elixir = "upgrade-elixir-fafnirs-heart",
+	Background = "In Norse mythology, the hero Sigurd (identified by scholars with the historical Frankish king Sigibert) cooked the heart of the monster Fafnir, presumably gaining in strength after eating it.",
+--	Quote = "\"There sits Sigurd, sprinkled with blood,\nAnd Fafnir's heart with fire he cooks\"\n- Fafnismol"
+	Quote = "\"There sits Sigibert, sprinkled with blood,\nAnd Fafnir's heart with fire he cooks\"\n- Fafnismol"
+} )
+
 DefineUniqueItem("laevatein", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 124; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 245.
 	Name = "Laevatein",
 	Type = "unit-broad-sword",
