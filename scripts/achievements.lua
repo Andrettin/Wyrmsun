@@ -63,6 +63,7 @@ DefineAchievement("the-blue-danube", {
 	Icon = "icon-teuton-swordsman",
 	Description = "Complete The Blue Danube mission.",
 	PlayerColor = "cyan",
+	HairColor = "brown",
 	RequiredQuests = {"the-blue-danube"}
 })
 

@@ -108,6 +108,7 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 		{"layer", "weapon", "file", "teuton/units/long_iron_sword.png"}
 	},
 	Animations = "animations-melee-unit-new", Icon = "icon-teuton-swordsman",
+	HairColor = "red",
 	DefaultEquipment = {
 		{"weapon", "unit-short-sword"},
 		{"shield", "unit-wooden-shield"},
@@ -128,17 +129,31 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-quenching", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-trickery", "upgrade-item-suffix-of-victory"}, -- allow more affixes than normal for the unit's level, to compensate for the unit not being upgradeable
 	Variations = {
 		{
-			"variation-id", "red-hair"
+			"variation-id", "red-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "black-hair",
+			"layer-file", "hair", "human/units/black_hair_warrior.png",
+			"hair-color", "black",
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "blond-hair",
 			"layer-file", "hair", "human/units/blond_hair_warrior.png",
-			"icon", "icon-teuton-swordsman-blond-hair"
+			"hair-color", "blond",
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "brown-hair",
 			"layer-file", "hair", "human/units/brown_hair_warrior.png",
-			"icon", "icon-teuton-swordsman-brown-hair"
+			"hair-color", "brown",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "gray-hair",
+			"layer-file", "hair", "human/units/gray_hair_warrior.png",
+			"hair-color", "gray"
 		},
 		{
 			"layer", "left-arm",
