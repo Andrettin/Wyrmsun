@@ -95,7 +95,7 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {
-		{"layer", "hair", "file", "human/units/red_hair_warrior.png"},
+		{"layer", "hair", "file", "human/units/hair_warrior.png"},
 		{"layer", "left-arm", "file", "human/units/left_arm.png"},
 		{"layer", "right-arm", "file", "human/units/right_arm.png"},
 		{"layer", "right-hand", "file", "human/units/right_hand.png"},
@@ -134,26 +134,27 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 		},
 		{
 			"variation-id", "black-hair",
-			"layer-file", "hair", "human/units/black_hair_warrior.png",
 			"hair-color", "black",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "blond-hair",
-			"layer-file", "hair", "human/units/blond_hair_warrior.png",
 			"hair-color", "blond",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "brown-hair",
-			"layer-file", "hair", "human/units/brown_hair_warrior.png",
 			"hair-color", "brown",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "gray-hair",
-			"layer-file", "hair", "human/units/gray_hair_warrior.png",
 			"hair-color", "gray"
+		},
+		{
+			"variation-id", "light-brown-hair",
+			"hair-color", "light-brown",
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"layer", "left-arm",
@@ -394,15 +395,15 @@ DefineUnitType("unit-teuton-ritter", {
 	Image = {"file", "human/units/body_mounted.png", "size", {72, 72}},
 	LayerImages = {
 		{"layer", "mount", "file", "neutral/units/horse_brown_skin_brown_hair_brown_eyes.png"},
---		{"layer", "hair", "file", "human/units/red_hair_warrior.png"},
+		{"layer", "hair", "file", "human/units/hair_mounted.png"},
 		{"layer", "left-arm", "file", "human/units/left_arm_mounted.png"},
 		{"layer", "right-arm", "file", "human/units/right_arm_mounted.png"},
 		{"layer", "right-hand", "file", "human/units/right_hand_mounted.png"},
---		{"layer", "clothing", "file", "teuton/units/chainmail.png"},
+		{"layer", "clothing", "file", "human/units/chainmail_mounted.png"},
 --		{"layer", "clothing-left-arm", "file", "teuton/units/chainmail_left_arm.png"},
 --		{"layer", "clothing-right-arm", "file", "teuton/units/chainmail_right_arm.png"},
---		{"layer", "pants", "file", "human/units/pants.png"},
---		{"layer", "boots", "file", "teuton/units/leather_shoes.png"},
+		{"layer", "pants", "file", "human/units/pants_mounted.png"},
+		{"layer", "boots", "file", "human/units/leather_shoes_mounted.png"},
 --		{"layer", "helmet", "file", "teuton/units/iron_helm.png"},
 		{"layer", "weapon", "file", "human/units/long_iron_sword_mounted.png"},
 --		{"layer", "shield", "file", "teuton/units/ritter_shield.png"}
@@ -414,6 +415,7 @@ DefineUnitType("unit-teuton-ritter", {
 		{"shield", "unit-wooden-shield"},
 		{"boots", "unit-boots"}
 	},
+	HairColor = "brown",
 	Armor = 3, BasicDamage = 13, -- +1 armor, +1 damage
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
@@ -424,7 +426,6 @@ DefineUnitType("unit-teuton-ritter", {
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-victory"}, -- allow more affixes than normal for the unit's level, to compensate for the unit not being upgradeable
 	Corpse = "unit-human-dead-body",
-	HairColor = "brown",
 	Sounds = {
 		"selected", "basic-teuton-voices-selected-group",
 		"acknowledge", "basic-teuton-voices-acknowledge",

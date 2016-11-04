@@ -98,7 +98,7 @@ DefineUnitType("unit-germanic-warrior", {
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {
-		{"layer", "hair", "file", "human/units/blond_hair_warrior.png"},
+		{"layer", "hair", "file", "human/units/hair_warrior.png"},
 		{"layer", "left-arm", "file", "human/units/left_arm.png"},
 		{"layer", "right-arm", "file", "human/units/right_arm.png"},
 		{"layer", "right-hand", "file", "human/units/right_hand.png"},
@@ -136,19 +136,21 @@ DefineUnitType("unit-germanic-warrior", {
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
+			"variation-id", "black-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "black"
+		},
+		{
 			"variation-id", "brown-hair",
-			"layer-file", "hair", "human/units/brown_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
 			"hair-color", "light-brown"
 		},
 		{
 			"variation-id", "gray-hair",
-			"layer-file", "hair", "human/units/gray_hair_warrior.png",
 			"hair-color", "gray"
 		},
 		{
 			"variation-id", "red-hair",
-			"layer-file", "hair", "human/units/red_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
 			"hair-color", "orange"
 		},
@@ -240,7 +242,7 @@ DefineUnitType("unit-germanic-spearman", {
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {
-		{"layer", "hair", "file", "human/units/blond_hair_warrior.png"},
+		{"layer", "hair", "file", "human/units/hair_warrior.png"},
 		{"layer", "left-arm", "file", "human/units/left_arm.png"},
 		{"layer", "right-arm", "file", "human/units/right_arm_spear.png"},
 		{"layer", "clothing", "file", "germanic/units/coat_warrior.png"},
@@ -256,6 +258,7 @@ DefineUnitType("unit-germanic-spearman", {
 		{"shield", "unit-wooden-shield"},
 		{"boots", "unit-boots"}
 	},
+	HairColor = "light-brown",
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
@@ -264,24 +267,30 @@ DefineUnitType("unit-germanic-spearman", {
 	Variations = {
 		{
 			"layer", "hair",
-			"variation-id", "blond-hair",
+			"variation-id", "brown-hair",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"layer", "hair",
-			"variation-id", "brown-hair",
-			"file", "human/units/brown_hair_warrior.png",
+			"variation-id", "black-hair",
+			"hair-color", "black",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"layer", "hair",
+			"variation-id", "blond-hair",
+			"hair-color", "blond",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"layer", "hair",
 			"variation-id", "gray-hair",
-			"file", "human/units/gray_hair_warrior.png"
+			"hair-color", "gray"
 		},
 		{
 			"layer", "hair",
 			"variation-id", "red-hair",
-			"file", "human/units/red_hair_warrior.png",
+			"hair-color", "red",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{

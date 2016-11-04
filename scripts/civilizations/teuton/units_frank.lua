@@ -36,30 +36,32 @@ DefineUnitType("unit-frank-swordsman", { Name = _("Krieger"),
 	Civilization = "teuton",
 	Faction = "frank-tribe",
 	Icon = "icon-frank-swordsman-red-hair",
+	HairColor = "red",
 	Armor = 3, -- +1 armor
 	Points = 55, -- +5 points
 	AiDrops = {"unit-frankish-spatha"},
 	Variations = {
 		{
 			"variation-id", "red-hair",
+			"hair-color", "red",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "blond-hair",
-			"layer-file", "hair", "human/units/blond_hair_warrior.png",
 			"icon", "icon-frank-swordsman-blond-hair",
+			"hair-color", "blond",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "brown-hair",
-			"layer-file", "hair", "human/units/brown_hair_warrior.png",
 			"icon", "icon-frank-swordsman-brown-hair",
+			"hair-color", "brown",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "gray-hair",
-			"layer-file", "hair", "human/units/gray_hair_warrior.png",
-			"icon", "icon-frank-swordsman-gray-hair"
+			"icon", "icon-frank-swordsman-gray-hair",
+			"hair-color", "gray"
 		},
 		{
 			"layer", "left-arm",
