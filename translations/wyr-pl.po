@@ -275,10 +275,10 @@ msgid "Hit Points:"
 msgstr "Punkty Życia:"
 
 msgid "Damage"
-msgstr "Obrażenia"
+msgstr "Atak"
 
 msgid "Damage:"
-msgstr "Obrażenia:"
+msgstr "Atak:"
 
 msgid "Range"
 msgstr "Zasięg"
@@ -293,10 +293,10 @@ msgid "Armor:"
 msgstr "Obrona:"
 
 msgid "Sight"
-msgstr "Zas. Widzenia"
+msgstr "Wzrok"
 
 msgid "Sight:"
-msgstr "Zas. Widzenia:"
+msgstr "Wzrok:"
 
 msgid "Accuracy"
 msgstr "Celność"
