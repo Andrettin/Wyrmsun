@@ -35,7 +35,7 @@ DefineCharacter("Chilperich", {
 	Icon = "icon-frank-horseman",
 	HairVariation = "brown-hair",
 	Trait = "upgrade-reckless",
-	Persistent = true
+--	Persistent = true
 })
 
 DefineCharacter("Gunthram", {
@@ -48,7 +48,7 @@ DefineCharacter("Gunthram", {
 	Icon = "icon-frank-horseman",
 	HairVariation = "brown-hair",
 	Trait = "upgrade-dextrous",
-	Persistent = true
+--	Persistent = true
 })
 
 DefineCharacter("Sigibert", {
@@ -56,7 +56,7 @@ DefineCharacter("Sigibert", {
 	Gender = "male",
 	Type = "unit-frank-horseman",
 	Civilization = "teuton",
-	Faction = "francia",
+	Faction = "austrasia",
 	Description = _("The son of the Frankish king Chlothar I, Sigibert inherited vast lands upon the death of his father. A courageous hero, Sigibert faces both the enmity of his brother Chilperich and the threat of invasion from abroad."),
 	Icon = "icon-sigibert",
 	HairVariation = "brown-hair",
