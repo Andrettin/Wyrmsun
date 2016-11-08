@@ -378,6 +378,7 @@ DefineButton( { Pos = 9, Level = 1, Icon = "icon-leadership",
 	Description = "Leadership Aura is an aura ability that increases the damage of nearby friendly units by 10%",
 	ForUnit = {
 		"unit-dwarven-thane",
+		"unit-dwarven-yale-lord",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-forest-gnomish-master-at-arms",
 		"unit-ettin",
 		"unit-surghan-mercenary-thane"

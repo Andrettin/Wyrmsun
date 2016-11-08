@@ -80,6 +80,8 @@ function addAchievementIcon(achievement, menu, x, y)
     		achievement_menu:setPosition((Video.Width - achievement_menu:getWidth()) / 2, (Video.Height - achievement_menu:getHeight()) / 2)
 			achievement_menu:addLabel(GetAchievementData(achievement, "Name"), 144, 11)
 			local achievement_menu_image = PlayerColorImageWidget(achievement_icon, GetAchievementData(achievement, "PlayerColor"))
+			achievement_menu_image:setSkinColor(GetAchievementData(achievement, "SkinColor"))
+			achievement_menu_image:setHairColor(GetAchievementData(achievement, "HairColor"))
 			achievement_menu:add(achievement_menu_image, 121, 48)
 
 			local l = MultiLineLabel()
