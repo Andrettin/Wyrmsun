@@ -1528,7 +1528,7 @@ function GameStarting()
 			end
 			for i, unitName in ipairs(Units) do
 				if (string.find(unitName, "upgrade-") == nil) then
-					if (GetUnitTypeData(unitName, "Building") and unitName ~= "unit-mercenary-camp" and GetProvinceSettlementBuilding(AttackedProvince.Name, unitName)) then
+					if (GetUnitTypeData(unitName, "Building") and unitName ~= "unit-mercenary-camp" and GetProvinceSettlementBuilding(AttackedProvince.Name, unitName) and GetUnitTypeData(unitName, "ShoreBuilding") == false) then
 						if (GetUnitTypeData(unitName, "Class") == "stronghold") then
 							local town_hall = FindUnitOfClass("town-hall", defender_player, true)
 							ConvertUnit(town_hall, unitName)
