@@ -38,6 +38,30 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-germanic-warrior-black-hair",
+	Size = {46, 38},
+	File = "germanic/icons/warrior_black_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-germanic-warrior-brown-hair",
+	Size = {46, 38},
+	File = "germanic/icons/warrior_brown_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-germanic-warrior-gray-hair",
+	Size = {46, 38},
+	File = "germanic/icons/warrior_gray_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-germanic-warrior-red-hair",
+	Size = {46, 38},
+	File = "germanic/icons/warrior_red_hair.png"
+})
+
+DefineIcon({
 	Name = "icon-germanic-veteran-warrior",
 	Size = {46, 38},
 	File = "germanic/icons/veteran_warrior.png"

@@ -95,28 +95,13 @@ DefineUnitType("unit-germanic-warrior", {
 	Description = _("Germanic tribes are known for their fierceness in combat, and these sword-wielding warriors act accordingly."),
 	Quote = _("\"His spear he shook, his shield he brandished,\nHis horse he spurred, with his sword he hewed;\nWars he raised, and reddened the field,\nWarriors slew he, and land he won.\"\n- Rigsthula"),
 	Background = _("\"Erala\" is the Proto-Germanic word for \"warrior\"."),
-	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
-	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
-	LayerImages = {
-		{"layer", "hair", "file", "human/units/hair_warrior.png"},
-		{"layer", "left-arm", "file", "human/units/left_arm.png"},
-		{"layer", "right-arm", "file", "human/units/right_arm.png"},
-		{"layer", "right-hand", "file", "human/units/right_hand.png"},
-		{"layer", "clothing", "file", "germanic/units/coat_warrior.png"},
-		{"layer", "clothing-left-arm", "file", "germanic/units/coat_left_arm.png"},
-		{"layer", "clothing-right-arm", "file", "germanic/units/coat_right_arm.png"},
-		{"layer", "pants", "file", "human/units/pants.png"},
-		{"layer", "boots", "file", "human/units/shoes.png"},
-		{"layer", "weapon", "file", "germanic/units/broad_bronze_sword.png"},
-		{"layer", "helmet", "file", "germanic/units/bronze_helmet.png"}
-	},
-	Animations = "animations-melee-unit-new", Icon = "icon-germanic-warrior",
+	Image = {"file", "germanic/units/warrior.png", "size", {72, 72}},
+	Animations = "animations-melee-unit", Icon = "icon-germanic-warrior",
 	DefaultEquipment = {
 		{"weapon", "unit-short-sword"},
 		{"shield", "unit-wooden-shield"},
 		{"boots", "unit-boots"}
 	},
-	HairColor = "blond",
 	Costs = {"time", 50, "gold", 600},
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
@@ -133,90 +118,54 @@ DefineUnitType("unit-germanic-warrior", {
 	Variations = {
 		{
 			"variation-id", "blond-hair",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "black-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"hair-color", "black"
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield"
 		},
 		{
 			"variation-id", "brown-hair",
+			"file", "germanic/units/warrior_brown_hair.png",
+			"icon", "icon-germanic-warrior-brown-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"hair-color", "light-brown"
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield"
 		},
 		{
 			"variation-id", "gray-hair",
-			"hair-color", "gray"
+			"file", "germanic/units/warrior_gray_hair.png",
+			"icon", "icon-germanic-warrior-gray-hair",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield"
 		},
 		{
 			"variation-id", "red-hair",
+			"file", "germanic/units/warrior_red_hair.png",
+			"icon", "icon-germanic-warrior-red-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"hair-color", "orange"
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield"
 		},
 		{
-			"layer", "left-arm",
-			"variation-id", "left-arm",
-			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
-			"item-not-equipped", "unit-bronze-shield",
-			"item-not-equipped", "unit-iron-shield",
-			"item-not-equipped", "unit-kite-shield",
-			"item-not-equipped", "unit-heater-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
+			"variation-id", "blond-hair",
+			"file", "germanic/units/warrior_bronze_shield.png",
+			"upgrade-forbidden", "upgrade-old",
+			"upgrade-required", "upgrade-germanic-bronze-shield"
 		},
 		{
-			"layer", "left-arm",
-			"variation-id", "shield-left-arm",
-			"file", "human/units/left_arm_shield.png",
-			"upgrade-required", "upgrade-germanic-bronze-shield",
-			"item-equipped", "unit-bronze-shield",
-			"item-equipped", "unit-heater-shield",
-			"item-equipped", "unit-iron-shield",
-			"item-equipped", "unit-kite-shield",
-			"item-equipped", "unit-thrymgjol-shield"
+			"variation-id", "brown-hair",
+			"file", "germanic/units/warrior_brown_hair_bronze_shield.png",
+			"icon", "icon-germanic-warrior-brown-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"upgrade-required", "upgrade-germanic-bronze-shield"
 		},
 		{
-			"layer", "weapon",
-			"variation-id", "broad-bronze-sword",
-			"file", "germanic/units/broad_bronze_sword.png",
-			"item-not-equipped", "unit-spatha",
-			"item-not-equipped", "unit-frankish-spatha"
+			"variation-id", "gray-hair",
+			"file", "germanic/units/warrior_gray_hair_bronze_shield.png",
+			"icon", "icon-germanic-warrior-gray-hair",
+			"upgrade-required", "upgrade-germanic-bronze-shield"
 		},
 		{
-			"layer", "weapon",
-			"variation-id", "long-iron-sword",
-			"file", "teuton/units/long_iron_sword.png",
-			"item-equipped", "unit-spatha",
-			"item-equipped", "unit-frankish-spatha"
-		},
-		{
-			"layer", "shield",
-			"variation-id", "no-shield",
-			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
-			"item-not-equipped", "unit-bronze-shield",
-			"item-not-equipped", "unit-iron-shield",
-			"item-not-equipped", "unit-kite-shield",
-			"item-not-equipped", "unit-heater-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
-		},
-		{
-			"layer", "shield",
-			"variation-id", "bronze-shield",
-			"file", "germanic/units/bronze_shield.png",
-			"upgrade-required", "upgrade-germanic-bronze-shield",
-			"item-equipped", "unit-bronze-shield",
-			"item-equipped", "unit-heater-shield",
-			"item-not-equipped", "unit-iron-shield",
-			"item-not-equipped", "unit-kite-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
-		},
-		{
-			"layer", "shield",
-			"variation-id", "iron-shield",
-			"file", "teuton/units/saxon_shield.png",
-			"item-equipped", "unit-iron-shield",
-			"item-equipped", "unit-kite-shield",
-			"item-equipped", "unit-thrymgjol-shield"
+			"variation-id", "red-hair",
+			"file", "germanic/units/warrior_red_hair_bronze_shield.png",
+			"icon", "icon-germanic-warrior-red-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"upgrade-required", "upgrade-germanic-bronze-shield"
 		}
 	},
 	Sounds = {

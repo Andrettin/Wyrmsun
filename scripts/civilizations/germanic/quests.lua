@@ -35,7 +35,6 @@ DefineQuest("on-the-vanaquisl", {
 	Map = "maps/earth/tanais.smp",
 	Scenario = "scripts/civilizations/germanic/scenarios/on_the_vanaquisl.lua",
 	PlayerColor = "orange",
-	HairColor = "blond",
 	LoadingMusic = "GermanicLoading",
 	MapMusic = "GermanicTheme"
 })
@@ -232,7 +231,6 @@ DefineQuest("jarls-retainers", { -- based on the Song of Rig; Source: Kevin Cros
 	World = "Earth",
 	Civilization = "germanic",
 	PlayerColor = "yellow",
-	HairColor = "blond",
 	CompletionEffects = function(s)
 	end,
 	Objectives = {"- Train 3 Eralas"},
