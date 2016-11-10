@@ -112,6 +112,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added a new Campaign mode, playable on a massive map with several layers.
 - The player now receives a notification when new in-game quests are available, instead of a quest symbol hovering over the town hall.
 - In-game quests are now only obtainable in the campaign mode.
+- Added the "Master of Metal" in-game quest for the Germanics.
 
 * Terrain
 - Improvements to the rock, cave wall, dry mud and cave floor tile transitions (by Jinn).

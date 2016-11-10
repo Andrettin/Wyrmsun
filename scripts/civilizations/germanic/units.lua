@@ -119,53 +119,61 @@ DefineUnitType("unit-germanic-warrior", {
 		{
 			"variation-id", "blond-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"upgrade-forbidden", "upgrade-germanic-bronze-shield"
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"item-class-not-equipped", "shield"
 		},
 		{
 			"variation-id", "brown-hair",
 			"file", "germanic/units/warrior_brown_hair.png",
 			"icon", "icon-germanic-warrior-brown-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"upgrade-forbidden", "upgrade-germanic-bronze-shield"
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"item-class-not-equipped", "shield"
 		},
 		{
 			"variation-id", "gray-hair",
 			"file", "germanic/units/warrior_gray_hair.png",
 			"icon", "icon-germanic-warrior-gray-hair",
-			"upgrade-forbidden", "upgrade-germanic-bronze-shield"
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"item-class-not-equipped", "shield"
 		},
 		{
 			"variation-id", "red-hair",
 			"file", "germanic/units/warrior_red_hair.png",
 			"icon", "icon-germanic-warrior-red-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"upgrade-forbidden", "upgrade-germanic-bronze-shield"
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"item-class-not-equipped", "shield"
 		},
 		{
 			"variation-id", "blond-hair",
 			"file", "germanic/units/warrior_bronze_shield.png",
 			"upgrade-forbidden", "upgrade-old",
-			"upgrade-required", "upgrade-germanic-bronze-shield"
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"item-class-equipped", "shield"
 		},
 		{
 			"variation-id", "brown-hair",
 			"file", "germanic/units/warrior_brown_hair_bronze_shield.png",
 			"icon", "icon-germanic-warrior-brown-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"upgrade-required", "upgrade-germanic-bronze-shield"
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"item-class-equipped", "shield"
 		},
 		{
 			"variation-id", "gray-hair",
 			"file", "germanic/units/warrior_gray_hair_bronze_shield.png",
 			"icon", "icon-germanic-warrior-gray-hair",
-			"upgrade-required", "upgrade-germanic-bronze-shield"
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"item-class-equipped", "shield"
 		},
 		{
 			"variation-id", "red-hair",
 			"file", "germanic/units/warrior_red_hair_bronze_shield.png",
 			"icon", "icon-germanic-warrior-red-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"upgrade-required", "upgrade-germanic-bronze-shield"
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"item-class-equipped", "shield"
 		}
 	},
 	Sounds = {

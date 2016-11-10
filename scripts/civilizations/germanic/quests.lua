@@ -240,6 +240,30 @@ DefineQuest("jarls-retainers", { -- based on the Song of Rig; Source: Kevin Cros
 	BuildUnits = {"unit-germanic-warrior", 3}
 })
 
+DefineQuest("master-of-metal", {
+	Name = "Master of Metal",
+	Icon = "icon-germanic-smithy",
+	Description = "Control over metalworking is essential for a chieftain's status to be maintained. Building a smithy will foster your mastery over metal and attract followers.",
+	World = "Earth",
+	Civilization = "germanic",
+	PlayerColor = "yellow",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "RaceName") == "germanic" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-smithy") == 0 and CheckDependency(trigger_player, "unit-germanic-smithy")) then
+			return true
+		end
+		return false
+	end,
+	CompletionEffects = function(s)
+		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 1000)
+		unit = CreateUnit("unit-germanic-worker", trigger_player, {Players[trigger_player].StartPos.x, Players[trigger_player].StartPos.y})
+		unit = CreateUnit("unit-germanic-worker", trigger_player, {Players[trigger_player].StartPos.x, Players[trigger_player].StartPos.y})
+	end,
+	Objectives = {"- Build a Smithy"},
+	Rewards = "+1000 Gold, +2 Buras",
+	Hint = "Select a Bura, press the Build Structure button and then click on the Build Smithy button to build the structure required for this quest.",
+	BuildUnits = {"unit-germanic-smithy", 1}
+})
+
 DefineQuest("the-sun-shields", { -- Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
 	Name = "The Sun Shields", -- the Swedes believed their chieftain Yngve (identified with Freyr) provided them good seasons
 	Icon = "icon-germanic-bronze-shield",
