@@ -38,6 +38,12 @@ SetMapTemplateUnit("earth", "unit-germanic-town-hall", "jarling-tribe", {4051, 7
 -- Buddinge (near Copenhagen)
 -- a burial mound was created at Buddinge (near Copenhagen) in c. 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 75.
 
+-- Egtved
+-- SetMapTemplateUnit("earth", "unit-burial-mound", "", {4055, 781}, -1370) -- a girl was buried in an oak coffin in a mound (called Storehøj) at Egtved in 1370 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 81.
+
+-- Eshøj
+-- three people were buried in oak coffins in the Eshøj mound, one of them in c. 1351 BC and another in c. 1345 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 81.
+
 -- Legård (northwestern Jutland)
 SetMapTemplateUnit("earth", "unit-germanic-carpenters-shop", "karling-tribe", {4033, 751}, -1600, -1500)
 SetMapTemplateUnit("earth", "unit-germanic-farm", "karling-tribe", {4033, 751}, -1600, -1500)
