@@ -63,7 +63,6 @@ https://github.com/Andrettin/Wyrmsun
 
 * Abilities
 - The learning buttons for Healing and Precision now correctly display descriptions for them.
-- Added the Ethereal Vision ability, which allows seeing and using portals to other realms in the new Campaign mode (icon by Jinn).
 - Yale Lords can now learn Leadership Aura.
 
 * AI

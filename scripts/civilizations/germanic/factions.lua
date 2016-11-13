@@ -52,7 +52,7 @@ DefineFaction("hersing-tribe", {
 	Type = "tribe",
 	Colors = {"white"},
 	FactionUpgrade = "upgrade-skeldung-tribe-faction",
-	DefaultAI = "passive",
+	DefaultAI = "hersing-tribe",
 	Background = "In Norse mythology, Hersir was a chieftain whose daughter married Jarl."
 })
 

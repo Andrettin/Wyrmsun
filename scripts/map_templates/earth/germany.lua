@@ -44,6 +44,26 @@ SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "francia", {4043, 879}, 7
 -- Helmsdorf
 -- in c. 1800 BC a barrow was built near Helmsdorf (in Saxo-Thuringia in central Germany); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 23.
 
+-- Kiel
+SetMapTemplateUnit("earth", "unit-germanic-town-hall", "hersing-tribe", {4069, 811}, -1600, -1599) -- Hersir's tribe, from the Norse myth of Rig; in the myths, there was a boggy ground between Jarl's hall and that of Hersir
+SetMapTemplateUnit("earth", "unit-germanic-farm", "hersing-tribe", {4069, 811}, -1600, -1599)
+SetMapTemplateUnit("earth", "unit-germanic-farm", "hersing-tribe", {4069, 811}, -1600, -1599)
+SetMapTemplateUnit("earth", "unit-germanic-farm", "hersing-tribe", {4069, 811}, -1600, -1599)
+SetMapTemplateUnit("earth", "unit-germanic-barracks", "hersing-tribe", {4069, 811}, -1600, -1599)
+SetMapTemplateUnit("earth", "unit-germanic-smithy", "hersing-tribe", {4069, 811}, -1600, -1599)
+SetMapTemplateUnit("earth", "unit-germanic-carpenters-shop", "hersing-tribe", {4069, 811}, -1600, -1599)
+SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "hersing-tribe", {4069, 811}, -1600, -1599)
+SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "hersing-tribe", {4069, 811}, -1600, -1599)
+SetMapTemplateUnit("earth", "unit-germanic-warrior", "hersing-tribe", {4069, 811}, -1600, -1599)
+SetMapTemplateUnit("earth", "unit-germanic-warrior", "hersing-tribe", {4069, 811}, -1600, -1599)
+SetMapTemplateUnit("earth", "unit-germanic-warrior", "hersing-tribe", {4069, 811}, -1600, -1599)
+SetMapTemplateUnit("earth", "unit-germanic-warrior", "hersing-tribe", {4069, 811}, -1600, -1599)
+SetMapTemplateUnit("earth", "unit-germanic-warrior", "hersing-tribe", {4069, 811}, -1600, -1599)
+SetMapTemplateUnit("earth", "unit-germanic-warrior", "hersing-tribe", {4069, 811}, -1600, -1599)
+SetMapTemplateUnit("earth", "unit-germanic-archer", "hersing-tribe", {4069, 811}, -1600, -1599)
+SetMapTemplateUnit("earth", "unit-germanic-archer", "hersing-tribe", {4069, 811}, -1600, -1599)
+SetMapTemplateUnit("earth", "unit-germanic-archer", "hersing-tribe", {4069, 811}, -1600, -1599)
+
 -- Konnenberg
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "saxon-tribe", {4045, 857}, 526) -- Konnenberg was in Saxon possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 
@@ -62,6 +82,7 @@ SetMapTemplateUnit("earth", "unit-teuton-barracks", "francia", {4029, 911}, 526,
 SetMapTemplateUnit("earth", "unit-teuton-barracks", "austrasia", {4029, 911}, 561) -- Mogontiacum went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
 -- Mittelberg
+SetMapTemplateUnit("earth", "unit-germanic-town-hall", "celtic-cimmerian-tribe", {4101, 882}, -1600, -1599)
 SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "celtic-cimmerian-tribe", {4101, 882}, -1600, -1599) -- the fortified settlement of Mittelberg (near Nebra) existed in 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 27.
 
 -- Paderborn

@@ -204,6 +204,7 @@ DefineDialogue("karlings-subjugated", {
 						ChangeUnitOwner(uncount[unit1], trigger_player)
 						OrderUnit(trigger_player, GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, nil, "stop")
 					end
+					SetPlayerData(trigger_player, "CompleteQuest", "subjugate-the-karlings")
 				end
 			}
 		}
@@ -225,6 +226,166 @@ DefineDialogue("jarls-hall-is-complete", { -- based on the Song of Rig; Source: 
 			"option-effects", {
 				function(s)
 					SetPlayerData(trigger_player, "AcceptQuest", "jarls-retainers")
+				end
+			}
+		}
+	}
+})
+
+DefineDialogue("jarl-desires-karling-subjugation", {
+	Nodes = {
+		{
+			"speaker", "character", "Erala",
+			"text", "Now that I have gathered an ensemble of warriors, the Karlings will be no match for me. They will accept my overlordship - or perish.",
+			"option-effects", {
+				function(s)
+					SetPlayerData(trigger_player, "AcceptQuest", "subjugate-the-karlings")
+				end
+			}
+		}
+	}
+})
+
+DefineDialogue("jarl-considers-the-hersings", {
+	Nodes = {
+		{
+			"speaker", "character", "Erala",
+			"text", "The last threat to my power in this peninsula are the Hersings to our south. They are a powerful clan, it would be better to seek an alliance than to face their warriors in battle.",
+			"option-effects", {
+				function(s)
+					SetPlayerData(trigger_player, "AcceptQuest", "neutralize-the-hersings")
+				end
+			}
+		}
+	}
+})
+
+DefineDialogue("jarl-meets-the-hersings", {
+	Nodes = {
+		{
+			"speaker", "unit", "unit-germanic-warrior",
+			"speaker-player", "hersing-tribe",
+			"text", "Welcome to the lands of the chieftain Hersir. What do you desire with us?",
+			"options", {"Seek an alliance", "Threaten them"},
+			"option-effects", {
+				function(s)
+					CallDialogue("jarl-seeks-an-alliance-with-the-hersings", trigger_player)
+				end,
+				function(s)
+					CallDialogue("jarl-threatens-the-hersings", trigger_player)
+				end
+			}
+		}
+	}
+})
+
+DefineDialogue("jarl-seeks-an-alliance-with-the-hersings", {
+	Nodes = {
+		{
+			"speaker", "character", "Erala",
+			"text", "Greetings, noble swordsman. I have come to forge a bond between our peoples. I ask to marry your chieftain's daughter, joining our tribes in an alliance of kinship.",
+			"option-effects", {
+				function(s)
+					if (UnitLevelCheck(FindHero("Erala"), 1)) then
+						CallDialogue("jarl-forges-an-alliance-with-the-hersings", trigger_player)
+					else
+						CallDialogue("jarl-fails-to-ally-with-the-hersings", trigger_player)
+					end
+				end
+			}
+		}
+	}
+})
+
+DefineDialogue("jarl-forges-an-alliance-with-the-hersings", {
+	Nodes = {
+		{
+			"text", "~<[Level Check Succeeded]~>"
+		},
+		{
+			"speaker", "unit", "unit-germanic-warrior",
+			"speaker-player", "hersing-tribe",
+			"text", "That will be a great honor for our chieftain."
+		},
+		{
+			"speaker", "character", "Erala",
+			"text", "Then let us rejoice and feast together!",
+			"option-effects", {
+				function(s)
+					SetDiplomacy(trigger_player, "allied", GetFactionPlayer("hersing-tribe"))
+					SetDiplomacy(GetFactionPlayer("hersing-tribe"), "allied", trigger_player)
+					SetSharedVision(trigger_player, true, GetFactionPlayer("hersing-tribe"))
+					SetSharedVision(GetFactionPlayer("hersing-tribe"), true, trigger_player)
+					if (GetPlayerData(trigger_player, "HasQuest", "heimdalls-progeny")) then
+						CallDialogue("campaign-victory", trigger_player)
+						SetPlayerData(trigger_player, "CompleteQuest", "heimdalls-progeny")
+					end
+					SetPlayerData(trigger_player, "CompleteQuest", "neutralize-the-hersings")
+				end
+			}
+		}
+	}
+})
+
+DefineDialogue("jarl-fails-to-ally-with-the-hersings", {
+	Nodes = {
+		{
+			"text", "~<[Level Check Failed]~>"
+		},
+		{
+			"speaker", "unit", "unit-germanic-warrior",
+			"speaker-player", "hersing-tribe",
+			"text", "That would shame our tribe. You are not worthy."
+		},
+		{
+			"speaker", "character", "Erala",
+			"text", "What did you say?! I shall stain your lands with your own blood!",
+			"option-effects", {
+				function(s)
+					unit = CreateUnit("unit-revealer", GetFactionPlayer("hersing-tribe"), {Players[trigger_player].StartPos.x, Players[trigger_player].StartPos.y})
+					KillUnitAt("unit-revealer", GetFactionPlayer("hersing-tribe"), 1, {0, 0}, {512, 512})
+					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("hersing-tribe"))
+					SetDiplomacy(GetFactionPlayer("hersing-tribe"), "enemy", trigger_player)
+				end
+			}
+		}
+	}
+})
+
+DefineDialogue("jarl-threatens-the-hersings", {
+	Nodes = {
+		{
+			"speaker", "character", "Erala",
+			"text", "Submit to me, warriors, or your homes will burn."
+		},
+		{
+			"speaker", "unit", "unit-germanic-warrior",
+			"speaker-player", "hersing-tribe",
+			"text", "We greet you into our village, and you dare threaten us?! Prepare to die!",
+			"option-effects", {
+				function(s)
+					unit = CreateUnit("unit-revealer", GetFactionPlayer("hersing-tribe"), {Players[trigger_player].StartPos.x, Players[trigger_player].StartPos.y})
+					KillUnitAt("unit-revealer", GetFactionPlayer("hersing-tribe"), 1, {0, 0}, {512, 512})
+					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("hersing-tribe"))
+					SetDiplomacy(GetFactionPlayer("hersing-tribe"), "enemy", trigger_player)
+				end
+			}
+		}
+	}
+})
+
+DefineDialogue("jarl-destroys-the-hersings", {
+	Nodes = {
+		{
+			"speaker", "character", "Erala",
+			"text", "The Hersings are no more. My rule extends throughout the entire peninsula, from north to south!",
+			"option-effects", {
+				function(s)
+					if (GetPlayerData(trigger_player, "HasQuest", "heimdalls-progeny")) then
+						CallDialogue("campaign-victory", trigger_player)
+						SetPlayerData(trigger_player, "CompleteQuest", "heimdalls-progeny")
+					end
+					SetPlayerData(trigger_player, "CompleteQuest", "neutralize-the-hersings")
 				end
 			}
 		}

@@ -227,17 +227,17 @@ DefineQuest("jarls-hall", { -- based on the Song of Rig; Source: Kevin Crossley-
 DefineQuest("jarls-retainers", { -- based on the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 24.
 	Name = "Erala's Retainers",
 	Icon = "icon-germanic-warrior",
-	Description = "The young warrior Erala, the son of Fader and Moder, was fast to master the art of the sword. He proposes to train a few brave warriors to protect our homeland.",
+	Description = "The young warrior Erala was fast to master the art of the sword. He proposes to train a few brave warriors to protect our homeland.",
 	World = "Earth",
 	Civilization = "germanic",
 	PlayerColor = "yellow",
 	CompletionEffects = function(s)
 	end,
-	Objectives = {"- Train 3 Eralas"},
+	Objectives = {"- Train 5 Eralas"},
 	Unobtainable = true,
 	Unfailable = true,
 	Hint = "Select a War Lodge and then click on the Train Erala button to train the unit required for this quest.",
-	BuildUnits = {"unit-germanic-warrior", 3}
+	BuildUnits = {"unit-germanic-warrior", 5}
 })
 
 DefineQuest("master-of-metal", {
@@ -262,6 +262,30 @@ DefineQuest("master-of-metal", {
 	Rewards = "+1000 Gold, +2 Buras",
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Smithy button to build the structure required for this quest.",
 	BuildUnits = {"unit-germanic-smithy", 1}
+})
+
+DefineQuest("subjugate-the-karlings", {
+	Name = "Subjugate the Karlings",
+	Icon = "icon-germanic-worker",
+	World = "Earth",
+	Civilization = "germanic",
+	PlayerColor = "yellow",
+	Objectives = {"- Subjugate the Karlings"},
+	Unobtainable = true,
+	Uncompleteable = true,
+	Unfailable = true
+})
+
+DefineQuest("neutralize-the-hersings", {
+	Name = "Neutralize the Hersings",
+	Icon = "icon-germanic-chieftain",
+	World = "Earth",
+	Civilization = "germanic",
+	PlayerColor = "yellow",
+	Objectives = {"- Ally with or defeat the Hersings"},
+	Unobtainable = true,
+	Uncompleteable = true,
+	Unfailable = true
 })
 
 DefineQuest("the-sun-shields", { -- Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/

@@ -35,7 +35,7 @@ DefineMapTemplate("earth", {
 		"rock", "low",
 		"grass", "extremely-high",
 		"dirt", "medium",
-		"pine-tree", "medium"
+		"pine-tree", "high"
 	},
 	GeneratedNeutralUnits = {
 		"unit-gold-deposit", 8,
