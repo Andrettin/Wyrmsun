@@ -133,6 +133,7 @@ https://github.com/Andrettin/Wyrmsun
 - The popup which appears when hovering over a unit instead of displaying the personal name followed by the unit's type name, now displays the unit's type name (or its proper name in the case of unique/magic items or heroes) followed by the name of its owning faction.
 - Names of heroes now have the proper color when hovering over their portrait in unit multi-selection or from within a transporter.
 - Attacking is no longer the default action for when right-clicking non-aggressive fauna.
+- Improved the performance of unit sight calculation when changing the time of day.
 
 -----------------------------------------------------------------------
 - 2.4.2

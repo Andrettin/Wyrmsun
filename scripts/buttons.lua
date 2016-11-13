@@ -385,6 +385,7 @@ DefineButton( { Pos = 9, Level = 1, Icon = "icon-leadership",
 	}
 } )
 
+--[[
 DefineButton( { Pos = 13, Level = 1, Icon = "icon-ethereal-vision",
 	Action = "learn-ability", Value = "upgrade-ethereal-vision",
 	Key = "v", Hint = "Learn Ethereal ~!Vision", Popup = "popup-commands",
@@ -412,6 +413,7 @@ DefineButton( { Pos = 13, Level = 1, Icon = "icon-ethereal-vision",
 		"unit-surghan-mercenary-thane"
 	}
 } )
+--]]
 
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-healing",
 	Action = "learn-ability", Value = "upgrade-healing",
