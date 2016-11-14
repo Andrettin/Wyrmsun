@@ -231,11 +231,11 @@ DefineUnitType("unit-teuton-swordsman", {
 } )
 
 DefineUnitType("unit-teuton-veteran-swordsman", {
-	Name = _("Kampfveteran"),
+	Name = _("Adel"),
 	Parent = "unit-template-veteran-infantry",
 	Civilization = "teuton",
-	Description = _("Swordsmen who have survived many battles"),
-	Background = _("\"Kampfveteran\" is the German word for \"veteran warrior\"."),
+	Description = _("These high-ranking swordsmen have honed their combat skills to a greater degree than many of their counterparts."),
+	Background = _("\"Adel\" is the German word for \"noble\"."),
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {

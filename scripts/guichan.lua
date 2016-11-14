@@ -931,7 +931,6 @@ function RunSinglePlayerGameMenu()
 			RunCampaignMenu();
 		end
 	)
-	campaign_button:setTooltip("The Campaign mode is under development")
 	menu:addFullButton(_("~!Quests"), "q", offx + 208, offy + 104 + 36*3,
 		function()
 			RunQuestWorldMenu();

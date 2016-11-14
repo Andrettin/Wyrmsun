@@ -215,7 +215,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-stronghold",
 
 DefineButton( { Pos = 1, Level = 1,
 	Action = "experience-upgrade-to", Value = "unit-teuton-veteran-swordsman",
-	Key = "k", Hint = _("Upgrade to ~!Kampfveteran"), Popup = "popup-unit",
+	Key = "a", Hint = _("Upgrade to ~!Adel"), Popup = "popup-unit",
 	ForUnit = {"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman"}
 } )
 
