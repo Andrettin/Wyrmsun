@@ -213,10 +213,14 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-stronghold",
 	ForUnit = {"unit-teuton-town-hall", "unit-latin-town-hall"}
 } )
 
---[[
+DefineButton( { Pos = 1, Level = 1,
+	Action = "experience-upgrade-to", Value = "unit-teuton-veteran-swordsman",
+	Key = "k", Hint = _("Upgrade to ~!Kampfveteran"), Popup = "popup-unit",
+	ForUnit = {"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman"}
+} )
+
 DefineButton( { Pos = 2, Level = 1, Icon = "icon-teuton-ritter",
 	Action = "experience-upgrade-to", Value = "unit-teuton-ritter",
 	Key = "r", Hint = _("Upgrade to ~!Ritter"), Popup = "popup-unit",
 	ForUnit = {"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman"}
 } )
---]]

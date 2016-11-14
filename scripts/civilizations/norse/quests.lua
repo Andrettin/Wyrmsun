@@ -87,7 +87,7 @@ DefineQuest("the-roadmaker", { -- Source: Snorri Sturlson, "Heimskringla", 1844,
 
 DefineQuest("ottars-lineage", {
 	Name = "Ottar's Lineage",
-	Icon = "icon-teuton-swordsman",
+	Icon = "icon-saxon-swordsman",
 	Description = "Ottar has bet his entire inheritance against Argantyr, to see who has the better lineage. He now asks you to take him to a seeress who can tell him about his bloodline.",
 	World = "Earth",
 	Civilization = "norse",

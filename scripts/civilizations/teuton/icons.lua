@@ -32,9 +32,51 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-teuton-swordsman",
+	Name = "icon-saxon-swordsman",
 	Size = {46, 38},
-	File = "teuton/icons/saxon_swordsman.png"
+	File = "teuton/icons/saxon_swordsman_brown_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-saxon-swordsman-black-hair",
+	Size = {46, 38},
+	File = "teuton/icons/saxon_swordsman_black_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-saxon-swordsman-blond-hair",
+	Size = {46, 38},
+	File = "teuton/icons/saxon_swordsman_blond_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-saxon-swordsman-red-hair",
+	Size = {46, 38},
+	File = "teuton/icons/saxon_swordsman_red_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-veteran-saxon-swordsman",
+	Size = {46, 38},
+	File = "teuton/icons/veteran_saxon_swordsman_brown_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-veteran-saxon-swordsman-black-hair",
+	Size = {46, 38},
+	File = "teuton/icons/veteran_saxon_swordsman_black_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-veteran-saxon-swordsman-blond-hair",
+	Size = {46, 38},
+	File = "teuton/icons/veteran_saxon_swordsman_blond_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-veteran-saxon-swordsman-red-hair",
+	Size = {46, 38},
+	File = "teuton/icons/veteran_saxon_swordsman_red_hair.png"
 })
 
 DefineIcon({

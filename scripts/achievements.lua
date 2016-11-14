@@ -59,7 +59,7 @@ DefineAchievement("the-conquest-of-galicia", {
 
 DefineAchievement("the-blue-danube", {
 	Name = "The Blue Danube",
-	Icon = "icon-teuton-swordsman",
+	Icon = "icon-saxon-swordsman",
 	Description = "Complete The Blue Danube mission.",
 	PlayerColor = "cyan",
 	HairColor = "brown",

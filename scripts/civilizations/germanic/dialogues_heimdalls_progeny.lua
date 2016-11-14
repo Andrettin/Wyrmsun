@@ -286,7 +286,7 @@ DefineDialogue("jarl-seeks-an-alliance-with-the-hersings", {
 			"text", "Greetings, noble swordsman. I have come to forge a bond between our peoples. I ask to marry your chieftain's daughter, joining our tribes in an alliance of kinship.",
 			"option-effects", {
 				function(s)
-					if (UnitLevelCheck(FindHero("Erala"), 1)) then
+					if (UnitLevelCheck(FindHero("Erala"), 3)) then
 						CallDialogue("jarl-forges-an-alliance-with-the-hersings", trigger_player)
 					else
 						CallDialogue("jarl-fails-to-ally-with-the-hersings", trigger_player)

@@ -28,7 +28,7 @@
 DefineCharacter("Odin", {
 	Name = "Odin",
 	Gender = "male",
-	Type = "unit-teuton-swordsman", -- should be a Norse warrior?
+	Type = "unit-teuton-veteran-swordsman", -- should be a Norse warrior?
 	Deity = "odin",
 	HairVariation = "gray-hair",
 	Trait = "upgrade-wise",

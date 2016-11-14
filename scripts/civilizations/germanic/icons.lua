@@ -64,13 +64,61 @@ DefineIcon({
 DefineIcon({
 	Name = "icon-germanic-veteran-warrior",
 	Size = {46, 38},
-	File = "germanic/icons/veteran_warrior.png"
+	File = "germanic/icons/veteran_warrior_blond_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-germanic-veteran-warrior-black-hair",
+	Size = {46, 38},
+	File = "germanic/icons/veteran_warrior_black_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-germanic-veteran-warrior-brown-hair",
+	Size = {46, 38},
+	File = "germanic/icons/veteran_warrior_brown_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-germanic-veteran-warrior-gray-hair",
+	Size = {46, 38},
+	File = "germanic/icons/veteran_warrior_gray_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-germanic-veteran-warrior-red-hair",
+	Size = {46, 38},
+	File = "germanic/icons/veteran_warrior_red_hair.png"
 })
 
 DefineIcon({
 	Name = "icon-germanic-chieftain",
 	Size = {46, 38},
-	File = "germanic/icons/chieftain.png"
+	File = "germanic/icons/chieftain_blond_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-germanic-chieftain-black-hair",
+	Size = {46, 38},
+	File = "germanic/icons/chieftain_black_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-germanic-chieftain-brown-hair",
+	Size = {46, 38},
+	File = "germanic/icons/chieftain_brown_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-germanic-chieftain-gray-hair",
+	Size = {46, 38},
+	File = "germanic/icons/chieftain_gray_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-germanic-chieftain-red-hair",
+	Size = {46, 38},
+	File = "germanic/icons/chieftain_red_hair.png"
 })
 
 DefineIcon({

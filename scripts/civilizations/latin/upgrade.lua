@@ -80,6 +80,10 @@ DefineModifier("upgrade-latin-civilization",
 )
 
 DefineModifier("upgrade-latin-civilization",
+	{"apply-to", "unit-germanic-veteran-warrior"}, {"convert-to", "unit-teuton-veteran-swordsman"}
+)
+
+DefineModifier("upgrade-latin-civilization",
 	{"apply-to", "unit-germanic-spearman"}, {"convert-to", "unit-teuton-spearman"}
 )
 

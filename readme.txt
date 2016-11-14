@@ -133,6 +133,8 @@ https://github.com/Andrettin/Wyrmsun
 - Names of heroes now have the proper color when hovering over their portrait in unit multi-selection or from within a transporter.
 - Attacking is no longer the default action for when right-clicking non-aggressive fauna.
 - Improved the performance of unit sight calculation when changing the time of day.
+- Added level 2 infantry upgrades for the Germanic Warrior and the Teuton Krieger.
+- The Teuton Krieger can now upgrade to the Ritter.
 
 -----------------------------------------------------------------------
 - 2.4.2

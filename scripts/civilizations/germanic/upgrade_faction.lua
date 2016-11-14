@@ -43,14 +43,16 @@ DefineModifier("upgrade-asa-tribe-faction",
 	{"BasicDamage", 1},
 	{"HitPoints", 5},
 	{"Points", 10},
-	{"apply-to", "unit-germanic-warrior"}
+	{"apply-to", "unit-germanic-warrior"},
+	{"apply-to", "unit-germanic-veteran-warrior"}
 )
 
 DefineModifier("upgrade-skeldung-tribe-faction",
 	{"BasicDamage", 1},
 	{"Armor", 1},
 	{"Points", 10},
-	{"apply-to", "unit-germanic-warrior"}
+	{"apply-to", "unit-germanic-warrior"},
+	{"apply-to", "unit-germanic-veteran-warrior"}
 )
 
 DefineModifier("upgrade-yngling-tribe-faction",

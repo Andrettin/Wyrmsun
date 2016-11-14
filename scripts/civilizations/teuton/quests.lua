@@ -92,7 +92,7 @@ DefineQuest("moving-into-galicia", { -- happened in 411 AD
 
 DefineQuest("the-blue-danube", {
 	Name = "The Blue Danube",
-	Icon = "icon-teuton-swordsman",
+	Icon = "icon-saxon-swordsman",
 	Description = "As time passed, the Marcomanni abandoned their old name and adopted a new one - that of the Bavarians. Expelled from Bohemia by the Lombards, they must now seek a home on the margins of the Danube, facing the forces of the crumbling Roman Empire, if need be.\n\nMap: Regensburg",
 	RequiredQuest = "the-razing-of-opitergium",
 	World = "Earth",
