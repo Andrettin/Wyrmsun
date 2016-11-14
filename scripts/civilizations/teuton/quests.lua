@@ -100,8 +100,7 @@ DefineQuest("the-blue-danube", {
 	TechnologyPoints = 4,
 	Map = "maps/earth/regensburg.smp",
 	Scenario = "scripts/civilizations/teuton/scenarios/the_blue_danube.lua",
-	PlayerColor = "cyan",
-	HairColor = "brown"
+	PlayerColor = "cyan"
 })
 
 Load("scripts/civilizations/teuton/quests_frank.lua")

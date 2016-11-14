@@ -67,8 +67,6 @@ function addAchievementIcon(achievement, menu, x, y)
 	if (GetAchievementData(achievement, "Obtained") == false) then
 		b:setTransparency(66)
 	end
-	b:setSkinColor(GetAchievementData(achievement, "SkinColor"))
-	b:setHairColor(GetAchievementData(achievement, "HairColor"))
 	local achievement_icon_x_origin = (achievement_icon_frame * 46) % achievement_icon:getGraphicWidth()
 	local achievement_icon_y_origin = math.floor((achievement_icon_frame * 46) / achievement_icon:getGraphicWidth()) * 38
 --	b:setHotKey("")
@@ -80,8 +78,6 @@ function addAchievementIcon(achievement, menu, x, y)
     		achievement_menu:setPosition((Video.Width - achievement_menu:getWidth()) / 2, (Video.Height - achievement_menu:getHeight()) / 2)
 			achievement_menu:addLabel(GetAchievementData(achievement, "Name"), 144, 11)
 			local achievement_menu_image = PlayerColorImageWidget(achievement_icon, GetAchievementData(achievement, "PlayerColor"))
-			achievement_menu_image:setSkinColor(GetAchievementData(achievement, "SkinColor"))
-			achievement_menu_image:setHairColor(GetAchievementData(achievement, "HairColor"))
 			achievement_menu:add(achievement_menu_image, 121, 48)
 
 			local l = MultiLineLabel()

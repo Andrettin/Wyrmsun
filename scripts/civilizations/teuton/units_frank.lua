@@ -31,19 +31,20 @@
 --	NOTE: Save can generate this table.
 --
 
-DefineUnitType("unit-frank-swordsman", { Name = _("Krieger"),
+DefineUnitType("unit-frank-swordsman", {
+	Name = _("Krieger"),
 	Parent = "unit-teuton-swordsman",
 	Civilization = "teuton",
 	Faction = "frank-tribe",
-	Icon = "icon-frank-swordsman-red-hair",
-	HairColor = "red",
+	Icon = "icon-frank-swordsman-brown-hair",
+	HairColor = "brown",
 	Armor = 3, -- +1 armor
 	Points = 55, -- +5 points
 	AiDrops = {"unit-frankish-spatha"},
 	Variations = {
 		{
-			"variation-id", "red-hair",
-			"hair-color", "red",
+			"variation-id", "brown-hair",
+			"hair-color", "brown",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
@@ -53,15 +54,15 @@ DefineUnitType("unit-frank-swordsman", { Name = _("Krieger"),
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
-			"variation-id", "brown-hair",
-			"icon", "icon-frank-swordsman-brown-hair",
-			"hair-color", "brown",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
 			"variation-id", "gray-hair",
 			"icon", "icon-frank-swordsman-gray-hair",
 			"hair-color", "gray"
+		},
+		{
+			"variation-id", "red-hair",
+			"hair-color", "red",
+			"icon", "icon-frank-swordsman-red-hair",
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"layer", "left-arm",
