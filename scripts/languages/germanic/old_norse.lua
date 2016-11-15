@@ -60,7 +60,7 @@ DefineLanguageWord("Afi", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Grandfather"}, -- source gives the German "Großvater" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Avan"},
+	DerivesFrom = {"proto-germanic", "noun", "Aban"},
 	Gender = "masculine"
 })
 

@@ -499,7 +499,7 @@ DefineLanguageWord("Éam", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Uncle"}, -- source gives the German "Oheim, Ohm" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Avan"}
+	DerivesFrom = {"proto-germanic", "noun", "Aban"}
 })
 
 DefineLanguageWord("Éast", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.

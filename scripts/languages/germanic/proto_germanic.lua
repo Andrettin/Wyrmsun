@@ -133,7 +133,7 @@ DefineLanguageWord("Austrô", { -- source gives "Austrô(n)"; Source: August Fic
 	Gender = "feminine"
 })
 
-DefineLanguageWord("Avan", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
+DefineLanguageWord("Aban", { -- as given by Kroonen; Fick gives "Avan" instead; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20; Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 1.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Grandfather"}, -- source gives the German "Großvater" as the meaning

@@ -1200,7 +1200,7 @@ DefineLanguageWord("Ôheim", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Uncle"}, -- source (apparently) gives the German "Oheim, Ohm" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Avan"}
+	DerivesFrom = {"proto-germanic", "noun", "Aban"}
 })
 
 DefineLanguageWord("Orlac", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
