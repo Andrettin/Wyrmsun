@@ -467,7 +467,7 @@ DefineLanguageWord("Drôttinn", { -- Source: August Fick and Alf Torp, "Wortscha
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Prince", "Lord (God)"}, -- source gives the German "Fürst, Herr (Gott)" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Druhtîna"},
+	DerivesFrom = {"proto-germanic", "noun", "Druhtana"},
 	Gender = "masculine"
 })
 
@@ -562,7 +562,7 @@ DefineLanguageWord("Fjǫrđr", { -- Source: August Fick and Alf Torp, "Wortschat
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Flōđ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageWord("Flōđ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Flood"}, -- derived from the Proto-Germanic "Flōduz", which means "Flood"
@@ -1853,6 +1853,17 @@ DefineLanguageWord("Vestr", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"West"}, -- source gives the German "Westen" as the meaning
 	DerivesFrom = {"proto-germanic", "adverb", "Vesta"},
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Viðr", { -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 585.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Tree", "Wood"},
+	DerivesFrom = {"proto-germanic", "noun", "Widu"},
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Viðar"
+	}
 })
 
 DefineLanguageWord("Vilda", { -- this is the singular first person past; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.

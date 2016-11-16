@@ -143,7 +143,7 @@ DefineLanguageWord("Drochten", { -- Source: August Fick and Alf Torp, "Wortschat
 	Language = "old-frisian",
 	Type = "noun",
 	Meanings = {},
-	DerivesFrom = {"proto-germanic", "noun", "Druhtîna"}
+	DerivesFrom = {"proto-germanic", "noun", "Druhtana"}
 })
 
 DefineLanguageWord("Fretho", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.

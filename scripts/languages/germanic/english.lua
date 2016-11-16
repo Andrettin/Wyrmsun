@@ -2781,6 +2781,7 @@ DefineLanguageWord("Wood", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Wood"},
+	DerivesFrom = {"old-english", "noun", "Widu"}, -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 585.
 	Gender = "neuter",
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "settlement" -- example: "Woodbridge"

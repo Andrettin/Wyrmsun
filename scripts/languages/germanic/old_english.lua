@@ -455,7 +455,7 @@ DefineLanguageWord("Dryhten", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {},
-	DerivesFrom = {"proto-germanic", "noun", "Druhtîna"}
+	DerivesFrom = {"proto-germanic", "noun", "Druhtana"}
 })
 
 DefineLanguageWord("Dun", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
@@ -2052,6 +2052,14 @@ DefineLanguageWord("West", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "adverb",
 	Meanings = {"West"}, -- source gives the German "West" as the meaning
 	DerivesFrom = {"proto-germanic", "adverb", "Vesta"}
+})
+
+DefineLanguageWord("Widu", { -- source also gives the alternative forms "wiodu" and "wudu"; Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 585.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Tree", "Wood"},
+	DerivesFrom = {"proto-germanic", "noun", "Widu"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Wiella", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.

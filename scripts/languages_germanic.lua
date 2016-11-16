@@ -89,6 +89,16 @@ DefineLanguage("old-icelandic", {
 	DialectOf = "old-norse"
 })
 
+DefineLanguage("faroese", {
+	Name = "Faroese",
+	Family = "germanic"
+})
+
+DefineLanguage("elfdalian", {
+	Name = "Elfdalian",
+	Family = "germanic"
+})
+
 DefineLanguage("west-germanic", {
 	Name = "West Germanic",
 	Family = "germanic"

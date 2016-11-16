@@ -136,8 +136,8 @@ DefineLanguageWord("Austrô", { -- source gives "Austrô(n)"; Source: August Fic
 DefineLanguageWord("Aban", { -- as given by Kroonen; Fick gives "Avan" instead; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20; Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 1.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Grandfather"}, -- source gives the German "Großvater" as the meaning
-	Gender = "masculine"
+	Meanings = {"Man", "Husband"}, -- as given by Kroonen; Fick gives the German "Großvater" as the meaning instead
+	Gender = "masculine" -- as given by both Kroonen and Fick
 })
 
 DefineLanguageWord("Avôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
@@ -387,15 +387,22 @@ DefineLanguageWord("Buska", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Χŕdiz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Wattle"}
+})
+
 DefineLanguageWord("Χunda", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
 	Language = "proto-germanic",
 	Type = "numeral" -- presumably
 })
 
-DefineLanguageWord("Χŕdiz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageWord("Χwat", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Wattle"}
+	Type = "pronoun",
+	Meanings = {"What"},
+	Nominative = "Χwat"
 })
 
 DefineLanguageWord("Dag", { -- Lehmann gives "dag-"; Fick gives "daga" and the alternative form "dagan" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
@@ -406,11 +413,17 @@ DefineLanguageWord("Dag", { -- Lehmann gives "dag-"; Fick gives "daga" and the a
 	Gender = "masculine" -- as given by Fick
 })
 
-DefineLanguageWord("Druhtîna", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 113.
+DefineLanguageWord("Déwpaz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Type = "adjective",
+	Meanings = {"Deep"}
+})
+
+DefineLanguageWord("Druhtana", { -- as given by Kroonen; Fick gives "Druhtîna" instead; Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 104; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 113.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Retinue Leader", "Prince"}, -- source gives the German "Gefolgsherr, Fürst" as the meaning
-	Gender = "masculine"
+	Meanings = {"Retinue Leader", "Prince"}, -- Fick gives the German "Gefolgsherr, Fürst" as the meaning
+	Gender = "masculine" -- as given by Fick
 })
 
 DefineLanguageWord("Dur", { -- source gives "dur-"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2, 2.7.2.
@@ -537,6 +550,12 @@ DefineLanguageWord("Fōr", { -- as given by Lehmann; Fick gives "fûir" and "fû
 		"singular", "dative", "Funi",
 		"singular", "genitive", "Funis"
 	}
+})
+
+DefineLanguageWord("Fūla", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Type = "adjective",
+	Meanings = {"Foul"}
 })
 
 DefineLanguageWord("Furdu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 120.
@@ -924,11 +943,23 @@ DefineLanguageWord("Kwemanan", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Meanings = {"Come"}
 })
 
+DefineLanguageWord("Laizijanã", { -- causative verb; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4-5.
+	Language = "proto-germanic",
+	Type = "verb",
+	Meanings = {"Teach"}
+})
+
 DefineLanguageWord("Landa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Terra Firma", "Land", "Country"}, -- source gives the German "terra firma, Land"
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Langaz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Type = "adjective",
+	Meanings = {"Long"}
 })
 
 DefineLanguageWord("Lauda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
@@ -952,6 +983,12 @@ DefineLanguageWord("Leuþôn", { -- Source: August Fick and Alf Torp, "Wortschat
 	Type = "verb",
 	Meanings = {"Sing"}, -- source gives the German "singen" as the meaning
 	DerivesFrom = {"proto-indo-european", "noun", "Lēut"}
+})
+
+DefineLanguageWord("Liznōn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
+	Language = "proto-germanic",
+	Type = "verb",
+	Meanings = {"Learn"}
 })
 
 DefineLanguageWord("Maχtiz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -985,6 +1022,18 @@ DefineLanguageWord("Maiz", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "proto-germanic",
 	Type = "adverb",
 	Meanings = {"More"}
+})
+
+DefineLanguageWord("Maitjō", { -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 24.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Cutter"}
+})
+
+DefineLanguageWord("Malanan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "proto-germanic",
+	Type = "verb",
+	Meanings = {"Grind"}
 })
 
 DefineLanguageWord("Mari", { -- source gives "mari-"; Source: http://www.cnrtl.fr/definition/marais
@@ -1032,6 +1081,16 @@ DefineLanguageWord("Mazgaz", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Mēria", { -- Crist gives "Mēria", while Lehmann gives "Méyzaz"; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Type = "adjective",
+	Meanings = {"More"},
+	ComparisonDegreeCaseInflections = {
+		"comparative", "Maizan",
+		"superlative", "Maista"
+	}
+})
+
 DefineLanguageWord("Miz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "proto-germanic",
 	Type = "pronoun",
@@ -1057,6 +1116,12 @@ DefineLanguageWord("Naχts", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Night"}
+})
+
+DefineLanguageWord("Nazjan", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+	Language = "proto-germanic",
+	Type = "verb",
+	Meanings = {"Heal", "Rescue", "Sustain"}
 })
 
 DefineLanguageWord("Nemida", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 151.
@@ -1108,6 +1173,12 @@ DefineLanguageWord("Razna", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Type = "noun",
 	Meanings = {"House"},
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Reχtaz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Type = "adjective",
+	Meanings = {"Right", "Straight"}
 })
 
 DefineLanguageWord("Rêda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 172.
@@ -1207,6 +1278,12 @@ DefineLanguageWord("Sinaskalka", { -- Source: http://www.cnrtl.fr/definition/s%C
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Senior Servant"} -- the TLFi gives the French "serviteur le plus âgé" as the meaning
+})
+
+DefineLanguageWord("Singwanan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "proto-germanic",
+	Type = "verb",
+	Meanings = {"Sing"}
 })
 
 DefineLanguageWord("Skadwas", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
@@ -1378,6 +1455,21 @@ DefineLanguageWord("Tanþ", { -- source gives "tanþ-"; source also gives the al
 	}
 })
 
+DefineLanguageWord("Tawido", { -- this is the singular first person past (apparently); Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "proto-germanic", -- from the Gallehus inscription, is it really Proto-Germanic?
+	Type = "verb",
+	Meanings = {"Made"},
+	NumberPersonTenseMoodInflections = {
+		"singular", "first-person", "past", "indicative", "Tawido"
+	}
+})
+
+DefineLanguageWord("Téuχanan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 2-3.
+	Language = "proto-germanic",
+	Type = "verb",
+	Meanings = {"Pull"} -- the same source gives the meaning as "Push" previously (though when it gives the meaning as "Pull" it writes the word as "Teuχanan" instead in that instance), but the meaning of "Pull" given later seems correct, since it is repeated later on as well
+})
+
 DefineLanguageWord("Þarma", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 97.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -1392,6 +1484,12 @@ DefineLanguageWord("Þeudô", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Þewb", { -- source gives "þewb-"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Thief"}
+})
+
 DefineLanguageWord("Þinχanan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
 	Language = "proto-germanic",
 	Type = "verb",
@@ -1402,6 +1500,26 @@ DefineLanguageWord("Þingsaz", { -- Source: Peter Buchholz, "Perspectives for Hi
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Protector of the Thing"}
+})
+
+DefineLanguageWord("Þrahila", { -- source also gives the alternative form "þregila"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 101.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Servant"}, -- source gives the German "Diener, Knecht" as the meaning
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Þrizna", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+	Language = "proto-germanic",
+	Type = "adjective",
+	Meanings = {"Threefold"} -- source gives the meaning as "threefold, the three (je drei)"
+	 -- maybe is an adverb instead?
+})
+
+DefineLanguageWord("Þrsúz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Type = "adjective",
+	Meanings = {"Dry"}
 })
 
 DefineLanguageWord("Þurpa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
@@ -1434,6 +1552,19 @@ DefineLanguageWord("Turba", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Peat", "Lawn", "Turf"} -- source gives the German "Torf, Rasen" as the meaning
+})
+
+DefineLanguageWord("Twiznaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 6.
+	Language = "proto-germanic",
+	Type = "adjective",
+	Meanings = {"Twofold"} -- source actually gives "two each" (je zwei) as the meaning in p. 6, but later there is an equivalent Proto-Germanic word for "threefold" which is noted as "je drei"; and besides, in p. 1 "Twofold" is given as a possible meaning
+	 -- maybe is an adverb instead?
+})
+
+DefineLanguageWord("Twiznōn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+	Language = "proto-germanic",
+	Type = "verb",
+	Meanings = {"Twine"}
 })
 
 DefineLanguageWord("Ufar", { -- later the source gives "ufer" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2, 2.7.2.
@@ -1559,6 +1690,13 @@ DefineLanguageWord("Wela", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Meanings = {"Indeed"}
 })
 
+DefineLanguageWord("Widu", { -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 585.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Tree", "Wood"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Wilda", { -- this is the singular first person past; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
 	Language = "proto-germanic",
 	Type = "verb",
@@ -1588,131 +1726,6 @@ DefineLanguageWord("Yēra", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Year"}
-})
-
-DefineLanguageWord("Laizijanã", { -- causative verb; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4-5.
-	Language = "proto-germanic",
-	Type = "verb",
-	Meanings = {"Teach"}
-})
-
-DefineLanguageWord("Liznōn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
-	Language = "proto-germanic",
-	Type = "verb",
-	Meanings = {"Learn"}
-})
-
-DefineLanguageWord("Malanan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "proto-germanic",
-	Type = "verb",
-	Meanings = {"Grind"}
-})
-
-DefineLanguageWord("Nazjan", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Language = "proto-germanic",
-	Type = "verb",
-	Meanings = {"Heal", "Rescue", "Sustain"}
-})
-
-DefineLanguageWord("Singwanan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "proto-germanic",
-	Type = "verb",
-	Meanings = {"Sing"}
-})
-
-DefineLanguageWord("Tawido", { -- this is the singular first person past (apparently); Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
-	Language = "proto-germanic", -- from the Gallehus inscription, is it really Proto-Germanic?
-	Type = "verb",
-	Meanings = {"Made"},
-	NumberPersonTenseMoodInflections = {
-		"singular", "first-person", "past", "indicative", "Tawido"
-	}
-})
-
-DefineLanguageWord("Téuχanan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 2-3.
-	Language = "proto-germanic",
-	Type = "verb",
-	Meanings = {"Pull"} -- the same source gives the meaning as "Push" previously (though when it gives the meaning as "Pull" it writes the word as "Teuχanan" instead in that instance), but the meaning of "Pull" given later seems correct, since it is repeated later on as well
-})
-
-DefineLanguageWord("Twiznōn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
-	Language = "proto-germanic",
-	Type = "verb",
-	Meanings = {"Twine"}
-})
-
-DefineLanguageWord("Déwpaz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "proto-germanic",
-	Type = "adjective",
-	Meanings = {"Deep"}
-})
-
-DefineLanguageWord("Fūla", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "proto-germanic",
-	Type = "adjective",
-	Meanings = {"Foul"}
-})
-
-DefineLanguageWord("Langaz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "proto-germanic",
-	Type = "adjective",
-	Meanings = {"Long"}
-})
-
-DefineLanguageWord("Mēria", { -- Crist gives "Mēria", while Lehmann gives "Méyzaz"; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "proto-germanic",
-	Type = "adjective",
-	Meanings = {"More"},
-	ComparisonDegreeCaseInflections = {
-		"comparative", "Maizan",
-		"superlative", "Maista"
-	}
-})
-
-DefineLanguageWord("Reχtaz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "proto-germanic",
-	Type = "adjective",
-	Meanings = {"Right", "Straight"}
-})
-
-DefineLanguageWord("Þewb", { -- source gives "þewb-"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Thief"}
-})
-
-DefineLanguageWord("Þrahila", { -- source also gives the alternative form "þregila"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 101.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Servant"}, -- source gives the German "Diener, Knecht" as the meaning
-	Gender = "masculine"
-})
-
-DefineLanguageWord("Þrizna", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
-	Language = "proto-germanic",
-	Type = "adjective",
-	Meanings = {"Threefold"} -- source gives the meaning as "threefold, the three (je drei)"
-	 -- maybe is an adverb instead?
-})
-
-DefineLanguageWord("Þrsúz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "proto-germanic",
-	Type = "adjective",
-	Meanings = {"Dry"}
-})
-
-DefineLanguageWord("Twiznaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 6.
-	Language = "proto-germanic",
-	Type = "adjective",
-	Meanings = {"Twofold"} -- source actually gives "two each" (je zwei) as the meaning in p. 6, but later there is an equivalent Proto-Germanic word for "threefold" which is noted as "je drei"; and besides, in p. 1 "Twofold" is given as a possible meaning
-	 -- maybe is an adverb instead?
-})
-
-DefineLanguageWord("Χwat", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "proto-germanic",
-	Type = "pronoun",
-	Meanings = {"What"},
-	Nominative = "Χwat"
 })
 
 -- compounds

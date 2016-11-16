@@ -1684,7 +1684,7 @@ DefineLanguageWord("Truhtîn", { -- source also gives the alternative form "troh
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Lord", "Warlord", "Lord (God)"}, -- source gives the German "Herr, Kriegsherr, meist von Gott als Herrn der Heerscharen" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Druhtîna"},
+	DerivesFrom = {"proto-germanic", "noun", "Druhtana"},
 	Gender = "masculine"
 })
 
@@ -1761,6 +1761,14 @@ DefineLanguageWord("Wī̆r", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Type = "pronoun",
 	Meanings = {"We"},
 	Nominative = "Wī̆r"
+})
+
+DefineLanguageWord("Witu", { -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 585.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Tree", "Wood"},
+	DerivesFrom = {"proto-germanic", "noun", "Widu"},
+	Gender = "masculine" -- alternatively also neutral
 })
 
 DefineLanguageWord("Wîz̨", { -- Fick gives "(h)wîz̨"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 67.

@@ -967,6 +967,14 @@ DefineLanguageWord("Weit", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Wite", { -- source also gives the alternative form "wit"; Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 585.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Tree", "Wood"},
+	DerivesFrom = {"old-high-german", "noun", "Witu"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Wîz̨", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 67.
 	Language = "middle-high-german",
 	Type = "adjective",

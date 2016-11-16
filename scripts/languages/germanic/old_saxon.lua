@@ -198,7 +198,7 @@ DefineLanguageWord("Drohtîn", { -- Source: August Fick and Alf Torp, "Wortschat
 	Language = "old-saxon",
 	Type = "noun",
 	Meanings = {"Lord (God)"}, -- source gives the German "Herr (fast immer von Gott)" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Druhtîna"}
+	DerivesFrom = {"proto-germanic", "noun", "Druhtana"}
 })
 
 DefineLanguageWord("Eiiere", { -- this is the genitive plural; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
