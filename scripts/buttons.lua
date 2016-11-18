@@ -194,6 +194,7 @@ DefineButton( { Pos = 1, Level = 2, Icon = "icon-mace-mastery",
 	Key = "m", Hint = "Learn ~!Mace Mastery", Popup = "popup-commands",
 	Description = "Mace Mastery is a passive ability that increases damage with maces by 2",
 	ForUnit = {
+		"unit-dwarven-expert-miner",
 		"unit-dwarven-thane",
 		"unit-surghan-mercenary-thane"
 	}
@@ -265,6 +266,7 @@ DefineButton( { Pos = 5, Level = 2, Icon = "icon-critical-strike",
 	Key = "c", Hint = "Learn ~!Critical Strike", Popup = "popup-commands",
 	Description = "Critical Strike is a passive ability that provides a 10% chance to deal double damage in combat. In No Randomness mode it provides a 10% damage bonus instead",
 	ForUnit = {
+		"unit-dwarven-expert-miner",
 		"unit-dwarven-thane",
 		"unit-dwarven-guard",
 		"unit-dwarven-yale-lord",
@@ -403,6 +405,7 @@ DefineButton( { Pos = 13, Level = 2, Icon = "icon-ethereal-vision",
 	Key = "v", Hint = "Learn Ethereal ~!Vision", Popup = "popup-commands",
 	Description = "Ethereal Vision is a passive ability that allows the unit to see ethereal objects, such as interplanar portals",
 	ForUnit = { -- allow only level 3 units to learn it, so that it isn't too easy to do so
+		"unit-dwarven-expert-miner",
 		"unit-dwarven-thane",
 --		"unit-dwarven-guard",
 		"unit-dwarven-yale-lord",
