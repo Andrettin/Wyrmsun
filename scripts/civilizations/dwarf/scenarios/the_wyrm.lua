@@ -240,7 +240,7 @@ AddTrigger("the-wyrm-shinsplitter-and-kobold-chase",
 			uncount = 0
 			uncount = GetUnits(GetFactionPlayer("Shinsplitter Clan"))
 			for unit1 = 1,table.getn(uncount) do 
-				if (uncount[unit1] and GetUnitVariable(uncount[unit1],"Level") >= 2 and GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-miner" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building") == false) then
+				if (uncount[unit1] and GetUnitVariable(uncount[unit1],"Level") >= 2 and GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-miner" and GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-skilled-miner" and GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-expert-miner" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building") == false) then
 					OrderUnit(1, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(thursagan,"PosX"), GetUnitVariable(thursagan,"PosY")}, "attack")
 					local nearby_uncount = 0
 					nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 6, true)

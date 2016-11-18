@@ -206,25 +206,25 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-guard-tower",
 	ForUnit = {"unit-goblin-watch-tower"}
 } )
 
-DefineButton( { Pos = 1, Level = 1, Icon = "icon-goblin-barbarian",
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-goblin-barbarian",
 	Action = "experience-upgrade-to", Value = "unit-goblin-barbarian",
 	Key = "u", Hint = _("~!Upgrade to Barbarian"), Popup = "popup-unit",
 	ForUnit = {"unit-goblin-swordsman"}
 } )
 
-DefineButton( { Pos = 1, Level = 1, Icon = "icon-goblin-warlord",
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-goblin-warlord",
 	Action = "experience-upgrade-to", Value = "unit-goblin-warlord",
 	Key = "u", Hint = _("~!Upgrade to Warlord"), Popup = "popup-unit",
 	ForUnit = {"unit-goblin-barbarian"}
 } )
 
-DefineButton( { Pos = 1, Level = 1, Icon = "icon-goblin-headhunter",
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-goblin-headhunter",
 	Action = "experience-upgrade-to", Value = "unit-goblin-headhunter",
 	Key = "u", Hint = _("~!Upgrade to Headhunter"), Popup = "popup-unit",
 	ForUnit = {"unit-goblin-archer"}
 } )
 
-DefineButton( { Pos = 1, Level = 1, Icon = "icon-goblin-shadowstalker",
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-goblin-shadowstalker",
 	Action = "experience-upgrade-to", Value = "unit-goblin-shadowstalker",
 	Key = "u", Hint = _("~!Upgrade to Shadowstalker"), Popup = "popup-unit",
 	ForUnit = {"unit-goblin-headhunter"}

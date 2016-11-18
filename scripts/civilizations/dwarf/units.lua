@@ -31,10 +31,11 @@
 --	NOTE: Save can generate this table.
 --
 
-DefineUnitType("unit-dwarven-miner", { Name = _("Miner"),
+DefineUnitType("unit-dwarven-miner", {
+	Name = _("Miner"),
 	Parent = "unit-template-worker",
 	Civilization = "dwarf",
-	Description = _("Dwarven miners are the grunt workers of dwarven society. They take the precious ores out of the ground, but do not ever take part in the crafting of weapons or artifacts. Although their expertise makes them quite efficient in mining, this comes at the cost of neglecting training in the harvesting of other resources."),
+	Description = _("Dwarven miners are the grunt workers of dwarven society. They take the precious ores out of the ground, but do not ever take part in the crafting of weapons or artifacts. Although their expertise makes them quite efficient in mining, this comes at the cost of neglecting training in the harvesting of timber."),
 	Background = _("In Norse mythology, dwarves were shown to have an affinity for metals, and often they lived in mountainous homes."),
 	Image = {"file", "dwarf/units/miner.png", "size", {72, 72}},
 	Animations = "animations-dwarven-miner", Icon = "icon-dwarven-miner",
@@ -51,22 +52,22 @@ DefineUnitType("unit-dwarven-miner", { Name = _("Miner"),
 		{
 			"resource-id", "gold",
 			"file-when-loaded", "dwarf/units/miner_with_gold.png",
-			"wait-at-resource", 5
+			"gathering-modifier", 20
 		},
 		{
 			"resource-id", "silver",
 			"file-when-loaded", "dwarf/units/miner_with_gold.png",
-			"wait-at-resource", 5
+			"gathering-modifier", 20
 		},
 		{
 			"resource-id", "copper",
 			"file-when-loaded", "dwarf/units/miner_with_gold.png",
-			"wait-at-resource", 5
+			"gathering-modifier", 20
 		},
 		{
 			"resource-id", "lumber",
 			"file-when-loaded", "dwarf/units/miner_with_lumber.png",
-			"wait-at-resource", 7
+			"gathering-modifier", -17
 		},
 		{
 			"resource-id", "stone",
@@ -75,7 +76,111 @@ DefineUnitType("unit-dwarven-miner", { Name = _("Miner"),
 		{
 			"resource-id", "coal",
 			"file-when-loaded", "dwarf/units/miner_with_coal.png",
-			"wait-at-resource", 5
+			"gathering-modifier", 20
+		}
+	},
+	Sounds = {
+		"selected", "basic-dwarf-voices-selected-group",
+		"acknowledge", "dwarven-miner-acknowledge",
+		"attack", "basic-dwarf-voices-attack",
+		"ready", "dwarven-miner-ready",
+		"help", "basic-dwarf-voices-help",
+		"dead", "basic-dwarf-voices-dead",
+		"hit", "mace-attack",
+		"miss", "attack-miss"
+	}
+} )
+
+DefineUnitType("unit-dwarven-skilled-miner", {
+	Name = _("Skilled Miner"),
+	Parent = "unit-template-skilled-miner",
+	Civilization = "dwarf",
+	Description = _("Dwarven miners who become experienced in their craft can harvest metals more efficiently than others."),
+	Image = {"file", "dwarf/units/miner.png", "size", {72, 72}},
+	Animations = "animations-dwarven-miner", Icon = "icon-dwarven-skilled-miner",
+	DefaultEquipment = {
+		{"boots", "unit-boots"}
+	},
+	Corpse = "unit-dwarven-dead-body",
+	WeaponClasses = {"mace"},
+	BluntDamage = true,
+	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
+	CanGatherResources = {
+		{
+			"resource-id", "gold",
+			"file-when-loaded", "dwarf/units/miner_with_gold.png"
+		},
+		{
+			"resource-id", "silver",
+			"file-when-loaded", "dwarf/units/miner_with_gold.png"
+		},
+		{
+			"resource-id", "copper",
+			"file-when-loaded", "dwarf/units/miner_with_gold.png"
+		},
+		{
+			"resource-id", "lumber",
+			"file-when-loaded", "dwarf/units/miner_with_lumber.png"
+		},
+		{
+			"resource-id", "stone",
+			"file-when-loaded", "dwarf/units/miner_with_gold.png"
+		},
+		{
+			"resource-id", "coal",
+			"file-when-loaded", "dwarf/units/miner_with_coal.png"
+		}
+	},
+	Sounds = {
+		"selected", "basic-dwarf-voices-selected-group",
+		"acknowledge", "dwarven-miner-acknowledge",
+		"attack", "basic-dwarf-voices-attack",
+		"ready", "dwarven-miner-ready",
+		"help", "basic-dwarf-voices-help",
+		"dead", "basic-dwarf-voices-dead",
+		"hit", "mace-attack",
+		"miss", "attack-miss"
+	}
+} )
+
+DefineUnitType("unit-dwarven-expert-miner", {
+	Name = _("Expert Miner"),
+	Parent = "unit-template-expert-miner",
+	Civilization = "dwarf",
+	Description = _("The dwarves who have mastered the craft of mining can gather metals with extreme efficiency."),
+	Image = {"file", "dwarf/units/miner.png", "size", {72, 72}},
+	Animations = "animations-dwarven-miner", Icon = "icon-dwarven-expert-miner",
+	DefaultEquipment = {
+		{"boots", "unit-boots"}
+	},
+	Corpse = "unit-dwarven-dead-body",
+	WeaponClasses = {"mace"},
+	BluntDamage = true,
+	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
+	CanGatherResources = {
+		{
+			"resource-id", "gold",
+			"file-when-loaded", "dwarf/units/miner_with_gold.png"
+		},
+		{
+			"resource-id", "silver",
+			"file-when-loaded", "dwarf/units/miner_with_gold.png"
+		},
+		{
+			"resource-id", "copper",
+			"file-when-loaded", "dwarf/units/miner_with_gold.png"
+		},
+		{
+			"resource-id", "lumber",
+			"file-when-loaded", "dwarf/units/miner_with_lumber.png"
+		},
+		{
+			"resource-id", "stone",
+			"file-when-loaded", "dwarf/units/miner_with_gold.png"
+		},
+		{
+			"resource-id", "coal",
+			"file-when-loaded", "dwarf/units/miner_with_coal.png"
 		}
 	},
 	Sounds = {
@@ -282,7 +387,7 @@ DefineUnitType("unit-dwarven-steelclad", {
 		{
 			"variation-id", "gray-hair",
 			"layer-file", "hair", "dwarf/units/gray_hair_warrior.png",
-			"icon", "icon-dwarven-axefighter-gray-hair"
+			"icon", "icon-dwarven-steelclad-gray-hair"
 		},
 		{
 			"variation-id", "orange-hair",
@@ -292,19 +397,19 @@ DefineUnitType("unit-dwarven-steelclad", {
 		{
 			"variation-id", "blond-hair",
 			"layer-file", "hair", "dwarf/units/blond_hair_warrior.png",
-			"icon", "icon-dwarven-axefighter-blond-hair",
+			"icon", "icon-dwarven-steelclad-blond-hair",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "black-hair",
 			"layer-file", "hair", "dwarf/units/black_hair_warrior.png",
-			"icon", "icon-dwarven-axefighter-black-hair",
+			"icon", "icon-dwarven-steelclad-black-hair",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "brown-hair",
 			"layer-file", "hair", "dwarf/units/brown_hair_warrior.png",
-			"icon", "icon-dwarven-axefighter-brown-hair",
+			"icon", "icon-dwarven-steelclad-brown-hair",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
@@ -1200,6 +1305,14 @@ DefineUnitType("unit-dwarven-dock", { Name = _("Dock"),
 Load("scripts/civilizations/dwarf/units_joruvellir.lua")
 
 DefineUnitType("unit-dwarven-miner", { -- this is here because the buildings need to be defined before being assigned to the miner's "Trains" array
+	Trains = {"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-lumber-mill", "unit-dwarven-smithy", "unit-dwarven-yale-pen", "unit-joruvellir-yale-pen", "unit-dwarven-temple", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
+} )
+
+DefineUnitType("unit-dwarven-skilled-miner", {
+	Trains = {"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-lumber-mill", "unit-dwarven-smithy", "unit-dwarven-yale-pen", "unit-joruvellir-yale-pen", "unit-dwarven-temple", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
+} )
+
+DefineUnitType("unit-dwarven-expert-miner", {
 	Trains = {"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-lumber-mill", "unit-dwarven-smithy", "unit-dwarven-yale-pen", "unit-joruvellir-yale-pen", "unit-dwarven-temple", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
 } )
 

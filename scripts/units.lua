@@ -58,7 +58,7 @@ Units = {
 	"unit-frank-swordsman", "unit-frank-spearman", "unit-frank-horseman",
 	"unit-celt-farm",
 	"upgrade-celt-civilization",
-	"unit-dwarven-miner", "unit-dwarven-militia",
+	"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner", "unit-dwarven-militia",
 	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
 	"unit-dwarven-guard",
 	"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer",
@@ -2618,6 +2618,62 @@ DefineUnitType("unit-template-worker", {
 		"step-mud", "step-mud",
 		"step-stone", "step-stone",
 		"step-grass", "step-leaves"
+	}
+} )
+
+DefineUnitType("unit-template-skilled-miner", {
+	Name = _("Skilled Miner"),
+	Parent = "unit-template-worker",
+	Class = "skilled-miner",
+	HitPoints = 40,
+	BasicDamage = 6,
+	Accuracy = 9,
+	Points = 45,
+	CanGatherResources = {
+		{
+			"resource-id", "gold",
+			"gathering-modifier", 50
+		},
+		{
+			"resource-id", "silver",
+			"gathering-modifier", 50
+		},
+		{
+			"resource-id", "copper",
+			"gathering-modifier", 50
+		},
+		{
+			"resource-id", "coal",
+			"gathering-modifier", 50
+		}
+	}
+} )
+
+DefineUnitType("unit-template-expert-miner", {
+	Name = _("Expert Miner"),
+	Parent = "unit-template-skilled-miner",
+	Class = "expert-miner",
+	HitPoints = 50,
+	BasicDamage = 7,
+	Accuracy = 10,
+	Points = 60,
+	CanGatherResources = {
+		{
+			"resource-id", "gold",
+			"gathering-modifier", 100
+		},
+		{
+			"resource-id", "silver",
+			"gathering-modifier", 100
+		},
+		{
+			"resource-id", "copper",
+			"gathering-modifier", 100
+		},
+		{
+			"resource-id", "coal",
+			"gathering-modifier", 100
+		}
 	}
 } )
 

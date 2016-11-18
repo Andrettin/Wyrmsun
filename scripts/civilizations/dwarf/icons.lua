@@ -32,6 +32,18 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-dwarven-skilled-miner",
+	Size = {46, 38},
+	File = "dwarf/icons/skilled_miner.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-expert-miner",
+	Size = {46, 38},
+	File = "dwarf/icons/expert_miner.png"
+})
+
+DefineIcon({
 	Name = "icon-dwarven-militia",
 	Size = {46, 38},
 	File = "dwarf/icons/militia.png"

@@ -86,7 +86,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-civilization",
   
 -- Upgrades ---------------------------------------------------------
 
-DefineButton( { Pos = 1, Level = 1,
+DefineButton( { Pos = 1, Level = 2,
 	Action = "experience-upgrade-to", Value = "unit-germanic-veteran-warrior",
 	Key = "k", Hint = _("Upgrade to ~!Kuni"), Popup = "popup-unit",
 	ForUnit = {"unit-germanic-warrior"}

@@ -135,6 +135,7 @@ https://github.com/Andrettin/Wyrmsun
 - Improved the performance of unit sight calculation when changing the time of day.
 - Added level 2 infantry upgrades for the Germanic Warrior and the Teuton Krieger.
 - The Teuton Krieger can now upgrade to the Ritter.
+- Dwarven Miners can now upgrade to Skilled Miner and (at level 3) to Expert Miner (icons by Exidelo, based on Jinn's Dwarven Miner icon).
 
 -----------------------------------------------------------------------
 - 2.4.2

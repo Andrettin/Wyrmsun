@@ -229,7 +229,7 @@ DefineQuest("the-weaver-of-dreams", { -- based on the lay of Alvis from Norse my
 	Civilization = "dwarf",
 	PlayerColor = "red",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "RaceName") == "dwarf" and (GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-miner") > 0 or GetPlayerData(trigger_player, "UnitTypesCount", "unit-brising-miner") > 0) and GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-temple") == 0 and CheckDependency(trigger_player, "unit-dwarven-temple")) then -- should be made to require Alvis in the future, when he is added as a hero and there are more dwarven quests in general
+		if (GetPlayerData(trigger_player, "RaceName") == "dwarf" and (GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-miner") > 0 or GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-skilled-miner") > 0 or GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-expert-miner") > 0 or GetPlayerData(trigger_player, "UnitTypesCount", "unit-brising-miner") > 0) and GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-temple") == 0 and CheckDependency(trigger_player, "unit-dwarven-temple")) then -- should be made to require Alvis in the future, when he is added as a hero and there are more dwarven quests in general
 			return true
 		end
 		return false
@@ -432,7 +432,7 @@ DefineQuest("mushroom-fields", { -- inspired by the dialogue in Battle for Wesno
 	PlayerColor = "red",
 	Conditions = function(s)
 --		if (GetPlayerData(trigger_player, "Faction") == "knalga") then
-		if (GetPlayerData(trigger_player, "RaceName") == "dwarf" and (GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-miner") > 0 or GetPlayerData(trigger_player, "UnitTypesCount", "unit-brising-miner") > 0) and CheckDependency(trigger_player, "unit-dwarven-mushroom-farm")) then -- allow for all Dwarven factions for now, since they don't have many quests
+		if (GetPlayerData(trigger_player, "RaceName") == "dwarf" and (GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-miner") > 0 or GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-skilled-miner") > 0 or GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-expert-miner") > 0 or GetPlayerData(trigger_player, "UnitTypesCount", "unit-brising-miner") > 0) and CheckDependency(trigger_player, "unit-dwarven-mushroom-farm")) then -- allow for all Dwarven factions for now, since they don't have many quests
 			return true
 		end
 		return false
