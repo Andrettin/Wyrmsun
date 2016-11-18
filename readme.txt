@@ -64,6 +64,7 @@ https://github.com/Andrettin/Wyrmsun
 * Abilities
 - The learning buttons for Healing and Precision now correctly display descriptions for them.
 - Yale Lords can now learn Leadership Aura.
+- The Leadership Aura's effect is now only applied if units are in combat.
 
 * AI
 - Made the AI easier on Easy difficulty.
