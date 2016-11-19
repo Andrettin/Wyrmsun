@@ -214,11 +214,11 @@ local EarthEvents = {
 		Options = {"Oh ~!no!"},
 		OptionEffects = {
 			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", -100)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", -100)
 				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", -1)
 			end
 		},
-		OptionTooltips = {"-100 Gold\n-1 Prestige"}
+		OptionTooltips = {"-100 Metal\n-1 Prestige"}
 	},
 	TheUlozhenieLawCode = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 17.
 		Name = "The Ulozhenie Law Code",
@@ -236,11 +236,11 @@ local EarthEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", 500) -- greater exploitation of the peasantry bringing in more revenues
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", 500) -- greater exploitation of the peasantry bringing in more revenues
 				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", -5) -- strengthening of serfdom increases long-term backwardness
 			end
 		},
-		OptionTooltips = {"+500 Gold\n-5 Research"}
+		OptionTooltips = {"+500 Metal\n-5 Research"}
 	},
 	CelticAndAntediluvianAntiquities = { -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 17.
 		Name = "Celtic and Antediluvian Antiquities",

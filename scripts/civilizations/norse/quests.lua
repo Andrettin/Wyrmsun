@@ -54,10 +54,10 @@ DefineQuest("the-chieftains-sparrow", { -- Source: Snorri Sturlson, "Heimskringl
 		end
 	end,
 	CompletionEffects = function(s)
-		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 500)
+		SetPlayerData(trigger_player, "Resources", "metal", GetPlayerData(trigger_player, "Resources", "metal") + 500)
 	end,
 	Objectives = {"- Destroy Varva"},
-	Rewards = "+500 Gold",
+	Rewards = "+500 Metal",
 	Hidden = true
 	-- still need to add objective (destroy unique farm Varva) (the objective above is just a descriptive string)
 })
@@ -77,11 +77,11 @@ DefineQuest("the-roadmaker", { -- Source: Snorri Sturlson, "Heimskringla", 1844,
 		return false
 	end,
 	CompletionEffects = function(s)
-		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 500)
+		SetPlayerData(trigger_player, "Resources", "metal", GetPlayerData(trigger_player, "Resources", "metal") + 500)
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 250)
 	end,
 	Objectives = {"- Build 20 Roads"}, -- 20 road tiles
-	Rewards = "+500 Gold, +250 Lumber",
+	Rewards = "+500 Metal, +250 Lumber",
 	Hidden = true
 })
 

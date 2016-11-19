@@ -141,9 +141,9 @@ DefineGrandStrategyEvent("The Confirmation of Seignorial Privileges", { -- Sourc
 	Options = {"~!OK"},
 	OptionEffects = {
 		function(s)
-			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", 500)
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", 500)
 			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", -5)
 		end
 	},
-	OptionTooltips = {"+500 Gold\n-5 Research", ""}
+	OptionTooltips = {"+500 Metal\n-5 Research", ""}
 })

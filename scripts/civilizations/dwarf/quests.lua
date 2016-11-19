@@ -112,12 +112,12 @@ DefineQuest("the-dripping-hall", { -- based on the lay of Alvis from Norse mytho
 		return false
 	end,
 	CompletionEffects = function(s)
-		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 1000)
+		SetPlayerData(trigger_player, "Resources", "metal", GetPlayerData(trigger_player, "Resources", "metal") + 1000)
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
 		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
 	end,
 	Objectives = {"- Train a Gryphon Rider"}, -- could be changed to exploring a % of the skies? (or unpassable terrain)
-	Rewards = "+1000 Gold, +1000 Lumber, +500 Stone",
+	Rewards = "+1000 Metal, +1000 Lumber, +500 Stone",
 	Hint = "Select a War Hall and then click on the Train Gryphon Rider button to train the unit required for this quest.",
 	BuildUnits = {"unit-dwarven-gryphon-rider", 1}
 })
@@ -137,12 +137,12 @@ DefineQuest("the-gleamer", { -- based on the lay of Alvis from Norse mythology; 
 		return false
 	end,
 	CompletionEffects = function(s)
-		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 1000)
+		SetPlayerData(trigger_player, "Resources", "metal", GetPlayerData(trigger_player, "Resources", "metal") + 1000)
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
 		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
 	end,
 	Objectives = {"- Research Astrology"}, -- this technology could improve farm output, to represent better knowledge of the seasons which knowing about celestial bodies provided; that might make farms give too much food though, so it might be better for it to give a bonus to dwarven priests
-	Rewards = "+1000 Gold, +1000 Lumber, +500 Stone",
+	Rewards = "+1000 Metal, +1000 Lumber, +500 Stone",
 	Hint = "Select a Temple and then click on the Research Astrology button to research the technology required for this quest.",
 --	ResearchUpgrades = {"upgrade-dwarven-astrology"},
 	Hidden = true
@@ -162,12 +162,12 @@ DefineQuest("the-days-refuge", { -- based on the lay of Alvis from Norse mytholo
 		return false
 	end,
 	CompletionEffects = function(s)
-		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 1000)
+		SetPlayerData(trigger_player, "Resources", "metal", GetPlayerData(trigger_player, "Resources", "metal") + 1000)
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
 		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
 	end,
 	Objectives = {"- Research Dvalic Runewriting"},
-	Rewards = "+1000 Gold, +1000 Lumber, +500 Stone",
+	Rewards = "+1000 Metal, +1000 Lumber, +500 Stone",
 	Hint = "Select a Bastion and then click on the Research Dvalic Runewriting button to research the technology required for this quest.",
 	ResearchUpgrades = {"upgrade-dwarven-runewriting"},
 	Hidden = true
@@ -187,12 +187,12 @@ DefineQuest("the-deep", { -- based on the lay of Alvis from Norse mythology; Sou
 		return false
 	end,
 	CompletionEffects = function(s)
-		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 1000)
+		SetPlayerData(trigger_player, "Resources", "metal", GetPlayerData(trigger_player, "Resources", "metal") + 1000)
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
 		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
 	end,
 	Objectives = {"- Build a Transport"}, -- could be changed to be about exploring a % of the seas, or finding a certain neutral building in the seas or shores
-	Rewards = "+1000 Gold, +1000 Lumber, +500 Stone",
+	Rewards = "+1000 Metal, +1000 Lumber, +500 Stone",
 	Hint = "Select a Dock and then click on the Build Transport button to build the ship required for this quest.",
 	BuildUnits = {"unit-dwarven-transport-ship", 1}
 })
@@ -211,12 +211,12 @@ DefineQuest("the-burner", { -- based on the lay of Alvis from Norse mythology; S
 		return false
 	end,
 	CompletionEffects = function(s)
-		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 1000)
+		SetPlayerData(trigger_player, "Resources", "metal", GetPlayerData(trigger_player, "Resources", "metal") + 1000)
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
 		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
 	end,
 	Objectives = {"- Research Alchemy"},
-	Rewards = "+1000 Gold, +1000 Lumber, +500 Stone",
+	Rewards = "+1000 Metal, +1000 Lumber, +500 Stone",
 	Hint = "Select a Bastion and then click on the Research Alchemy button to research the technology required for this quest.",
 	ResearchUpgrades = {"upgrade-dwarven-alchemy"}
 })
@@ -235,12 +235,12 @@ DefineQuest("the-weaver-of-dreams", { -- based on the lay of Alvis from Norse my
 		return false
 	end,
 	CompletionEffects = function(s)
-		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 1000)
+		SetPlayerData(trigger_player, "Resources", "metal", GetPlayerData(trigger_player, "Resources", "metal") + 1000)
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
 		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
 	end,
 	Objectives = {"- Build a Temple"},
-	Rewards = "+1000 Gold, +1000 Lumber, +500 Stone",
+	Rewards = "+1000 Metal, +1000 Lumber, +500 Stone",
 	Hint = "Select a Miner, press the Build Structure button and then click on the Build Temple button to build the structure required for this quest.",
 	BuildUnits = {"unit-dwarven-temple", 1}
 })
@@ -438,10 +438,10 @@ DefineQuest("mushroom-fields", { -- inspired by the dialogue in Battle for Wesno
 		return false
 	end,
 	CompletionEffects = function(s)
-		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 1500)
+		SetPlayerData(trigger_player, "Resources", "metal", GetPlayerData(trigger_player, "Resources", "metal") + 1500)
 	end,
 	Objectives = {"- Build 3 Mushroom Farms"},
-	Rewards = "+1500 Gold",
+	Rewards = "+1500 Metal",
 	Hint = "Select a Miner, press the Build Structure button and then click on the Build Mushroom Farm button to build the structure required for this quest.",
 	BuildUnits = {"unit-dwarven-mushroom-farm", 3}
 })

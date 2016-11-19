@@ -136,7 +136,7 @@ function EventTriggers()
 									player,
 									{"~!OK"},
 									{function(s)
-										SetPlayerData(player, "Resources", "gold", GetPlayerData(player, "Resources", "gold") + 400)
+										SetPlayerData(player, "Resources", "metal", GetPlayerData(player, "Resources", "metal") + 400)
 										for i=0,(PlayerMax - 2) do
 											if (GetPlayerData(i, "Name") ~= "Greebo") then
 												RemovePlayerObjective(i, "- Kill Greebo (optional)")
@@ -250,9 +250,9 @@ function EventTriggers()
 					"Andvari's Gold is Ours!",
 					"We have successfully raided Andvari's house and obtained his gold. We even found a ring which seems particularly valuable. Andvari spoke a curse upon us for getting the ring... Ramblings of an impoverished dwarf.",
 					player,
-					{"~!OK (receive 1200 gold)"},
+					{"~!OK (receive 1200 metal)"},
 					{function(s)
-						SetPlayerData(player, "Resources", "gold", GetPlayerData(player, "Resources", "gold") + 1200)
+						SetPlayerData(player, "Resources", "metal", GetPlayerData(player, "Resources", "metal") + 1200)
 						for i=0,(PlayerMax - 2) do
 							if (GetPlayerData(i, "Name") ~= "Andvari") then
 								RemovePlayerObjective(i, "- Destroy Andvari's Mushroom Farm (optional)")

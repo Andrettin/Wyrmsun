@@ -44,6 +44,12 @@ DefineAnimations("animations-gnomish-worker", {
 		"frame 25", "wait 7", "frame 25",
 		"unbreakable end", "wait 1",
 	},
+	Harvest_metal = {
+		"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
+		"frame 40", "sound metal-mining", "wait 5", "frame 45", "wait 3",
+		"frame 25", "wait 7", "frame 25",
+		"wait 1",
+	},
 	Harvest_gold = {
 		"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
 		"frame 40", "sound metal-mining", "wait 5", "frame 45", "wait 3",

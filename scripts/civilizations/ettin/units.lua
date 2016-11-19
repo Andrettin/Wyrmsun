@@ -39,7 +39,7 @@ DefineUnitType("unit-ettin", {
 	Image = {"file", "ettin/units/ettin.png", "size", {144, 144}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-ettin",
 	TileSize = {2, 2}, BoxSize = {63, 63},
-	Costs = {"time", 120, "gold", 1200},
+	Costs = {"time", 120, "metal", 1200},
 	DefaultEquipment = {
 		{"boots", "unit-boots"}
 	},

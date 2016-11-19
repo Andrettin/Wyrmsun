@@ -212,8 +212,8 @@ if (GrandStrategyYear > 25) then
 	GrandStrategyEvents.ClosingTheGatesShinsplitterClan = nil
 	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist", 1)
 	SetFactionDiplomacyState("dwarf", "norlund-clan", "dwarf", "shinsplitter-clan", "war")
-	ChangeFactionResource("gnome", "untersberg", "gold", -2500) -- decrease gnomish treasury by 5000 silver (considering for our purposes silver to be worth half as much as gold)
-	ChangeFactionResource("dwarf", "norlund-clan", "gold", 2500) -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
+	ChangeFactionResource("gnome", "untersberg", "metal", -7500) -- decrease gnomish treasury by 5000 silver (considering for our purposes silver to be worth 150% of metal)
+	ChangeFactionResource("dwarf", "norlund-clan", "metal", 7500) -- 5000 silver
 	ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", -1)
 end
 
@@ -267,8 +267,8 @@ if (GrandStrategyYear >= 40) then
 	SetProvinceHero("Caverns of Chaincolt", "Baglur", 0)
 	SetProvinceHero("Caverns of Chaincolt", "Thursagan", 0)
 	ChangeFactionResource("dwarf", "norlund-clan", "coal", -20000) -- Scepter of Fire crafted
-	ChangeFactionResource("dwarf", "norlund-clan", "gold", 2500) -- payment for the crafting of the Scepter
-	ChangeFactionResource("gnome", "untersberg", "gold", -2500) -- payment for the crafting of the Scepter
+	ChangeFactionResource("dwarf", "norlund-clan", "metal", 7500) -- payment for the crafting of the Scepter
+	ChangeFactionResource("gnome", "untersberg", "metal", -7500) -- payment for the crafting of the Scepter
 	SetProvinceOwner("Shorbear Hills", "dwarf", "norlund-clan") -- Shorbear Hold ceded by the Shinsplitters to the Norlunds and peace established
 	SetFactionDiplomacyState("dwarf", "norlund-clan", "dwarf", "shinsplitter-clan", "peace")
 end

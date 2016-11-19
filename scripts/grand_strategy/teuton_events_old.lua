@@ -354,11 +354,11 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", 500)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", 500)
 				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", -5)
 			end
 		},
-		OptionTooltips = {"+500 Gold\n-5 Research", ""}
+		OptionTooltips = {"+500 Metal\n-5 Research", ""}
 	},
 	ThePeasantsAndShepherdsOrdinance = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 30.
 		Name = "The Peasants' and Shepherds' Ordinance",
@@ -377,11 +377,11 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", 500)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", 500)
 				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", -5)
 			end
 		},
-		OptionTooltips = {"+500 Gold\n-5 Research", ""}
+		OptionTooltips = {"+500 Metal\n-5 Research", ""}
 	},
 	Britannia = { -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 14.
 		Name = "Britannia",
@@ -426,10 +426,10 @@ local TeutonEvents = {
 		Options = {"More ~!taxes for us!"},
 		OptionEffects = {
 			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", 500)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", 500)
 			end
 		},
-		OptionTooltips = {"+50 Gold"}
+		OptionTooltips = {"+50 Metal"}
 	},
 	HansRutenbergsEviction = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 37.
 		Name = "Hans Rutenberg's Eviction",
@@ -451,11 +451,11 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", -50)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", -50)
 				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", -1)
 			end
 		},
-		OptionTooltips = {"-50 Gold\n-1 Research"}
+		OptionTooltips = {"-50 Metal\n-1 Research"}
 	},
 	TheSerfdomActForBohemiaAndMoravia = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 14.
 		Name = "Serfdom Act for Bohemia and Moravia",
@@ -474,12 +474,12 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", 500)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", 500)
 				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", 1)
 				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
-		OptionTooltips = {"+500 Gold\n+1 Research\n+1 Prestige"}
+		OptionTooltips = {"+500 Metal\n+1 Research\n+1 Prestige"}
 	},
 	PrinciplesOfGeology = { -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 17.
 		Name = "Principles of Geology",

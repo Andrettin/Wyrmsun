@@ -37,15 +37,15 @@ DefineUpgrade("upgrade-melee-weapon-1", {
 DefineUpgrade("upgrade-broad-sword", {
 	Name = _("Broad Sword"),
 	Parent = "upgrade-melee-weapon-1",
-	Costs = {"time", 200, "gold", 800},
-	GrandStrategyCosts = {"time", 200, "gold", 800, "research", 800}
+	Costs = {"time", 200, "metal", 800},
+	GrandStrategyCosts = {"time", 200, "metal", 800, "research", 800}
 })
 
 DefineUpgrade("upgrade-broad-axe", {
 	Name = _("Broad Axe"),
 	Parent = "upgrade-melee-weapon-1",
-	Costs = {"time", 200, "gold", 500, "lumber", 300},
-	GrandStrategyCosts = {"time", 200, "gold", 500, "lumber", 300, "research", 800}
+	Costs = {"time", 200, "metal", 500, "lumber", 300},
+	GrandStrategyCosts = {"time", 200, "metal", 500, "lumber", 300, "research", 800}
 })
 
 DefineUpgrade("upgrade-melee-weapon-2", {
@@ -58,15 +58,15 @@ DefineUpgrade("upgrade-melee-weapon-2", {
 DefineUpgrade("upgrade-long-sword", {
 	Name = _("Long Sword"),
 	Parent = "upgrade-melee-weapon-2",
-	Costs = {"time", 250, "gold", 2400},
-	GrandStrategyCosts = {"time", 250, "gold", 2400, "research", 2400}
+	Costs = {"time", 250, "metal", 2400},
+	GrandStrategyCosts = {"time", 250, "metal", 2400, "research", 2400}
 })
 
 DefineUpgrade("upgrade-great-axe", {
 	Name = _("Great Axe"),
 	Parent = "upgrade-melee-weapon-2",
-	Costs = {"time", 250, "gold", 1500, "lumber", 900},
-	GrandStrategyCosts = {"time", 250, "gold", 1500, "lumber", 900, "research", 2400}
+	Costs = {"time", 250, "metal", 1500, "lumber", 900},
+	GrandStrategyCosts = {"time", 250, "metal", 1500, "lumber", 900, "research", 2400}
 })
 
 DefineUpgrade("upgrade-long-spear", {
@@ -75,8 +75,8 @@ DefineUpgrade("upgrade-long-spear", {
 	Description = _("With the lengthening of spear shafts, soldiers who wield these weapons have greater reach against their enemies."),
 	Icon = "icon-long-spear",
 	Weapon = true,
-	Costs = {"time", 200, "gold", 400, "lumber", 400},
-	GrandStrategyCosts = {"time", 200, "gold", 400, "lumber", 400, "research", 800}
+	Costs = {"time", 200, "metal", 400, "lumber", 400},
+	GrandStrategyCosts = {"time", 200, "metal", 400, "lumber", 400, "research", 800}
 })
 
 DefineUpgrade("upgrade-pike", {
@@ -85,8 +85,8 @@ DefineUpgrade("upgrade-pike", {
 	Description = _("Much longer than previous spears, pikes can be deadly when used by disciplined groups of soldiers."),
 	Icon = "icon-pike",
 	Weapon = true,
-	Costs = {"time", 250, "gold", 1200, "lumber", 1200},
-	GrandStrategyCosts = {"time", 250, "gold", 1200, "lumber", 1200, "research", 2400},
+	Costs = {"time", 250, "metal", 1200, "lumber", 1200},
+	GrandStrategyCosts = {"time", 250, "metal", 1200, "lumber", 1200, "research", 2400},
 	TechnologyPointCost = 1
 })
 
@@ -94,8 +94,8 @@ DefineUpgrade("upgrade-bronze-shield", {
 	Name = _("Bronze Shield"),
 	Class = "bronze-shield",
 	Shield = true,
-	Costs = {"time", 200, "gold", 300, "lumber", 900},
-	GrandStrategyCosts = {"time", 200, "gold", 300, "lumber", 900, "research", 1200},
+	Costs = {"time", 200, "metal", 300, "lumber", 900},
+	GrandStrategyCosts = {"time", 200, "metal", 300, "lumber", 900, "research", 1200},
 	TechnologyPointCost = 1
 })
 
@@ -103,24 +103,24 @@ DefineUpgrade("upgrade-iron-shield", {
 	Name = _("Iron Shield"),
 	Class = "iron-shield",
 	Shield = true,
-	Costs = {"time", 250, "gold", 900, "lumber", 1500},
-	GrandStrategyCosts = {"time", 250, "gold", 900, "lumber", 1500, "research", 2400},
+	Costs = {"time", 250, "metal", 900, "lumber", 1500},
+	GrandStrategyCosts = {"time", 250, "metal", 900, "lumber", 1500, "research", 2400},
 	TechnologyPointCost = 1
 })
 
 DefineUpgrade("upgrade-ranged-projectile-1", {
 	Name = _("Ranged Projectile 1"),
 	Class = "ranged-projectile-1",
-	Costs = {"time", 200, "gold", 300, "lumber", 900},
-	GrandStrategyCosts = {"time", 200, "gold", 300, "lumber", 900, "research", 1200},
+	Costs = {"time", 200, "metal", 300, "lumber", 900},
+	GrandStrategyCosts = {"time", 200, "metal", 300, "lumber", 900, "research", 1200},
 	TechnologyPointCost = 1
 })
 
 DefineUpgrade("upgrade-ranged-projectile-2", {
 	Name = _("Ranged Projectile 2"),
 	Class = "ranged-projectile-2",
-	Costs = {"time", 250, "gold", 900, "lumber", 1500},
-	GrandStrategyCosts = {"time", 250, "gold", 900, "lumber", 1500, "research", 2400},
+	Costs = {"time", 250, "metal", 900, "lumber", 1500},
+	GrandStrategyCosts = {"time", 250, "metal", 900, "lumber", 1500, "research", 2400},
 	TechnologyPointCost = 1
 })
 
@@ -134,15 +134,15 @@ DefineUpgrade("upgrade-catapult-granite-projectile", {
 	Name = _("Catapult Granite Projectile"),
 	Parent = "upgrade-siege-projectile-1",
 	Icon = "icon-catapult-projectile-2",
-	Costs = {"time", 250, "gold", 1000, "stone", 500},
-	GrandStrategyCosts = {"time", 250, "gold", 1000, "stone", 500, "research", 1500}
+	Costs = {"time", 250, "metal", 1000, "stone", 500},
+	GrandStrategyCosts = {"time", 250, "metal", 1000, "stone", 500, "research", 1500}
 })
 
 DefineUpgrade("upgrade-broadhead-ballista-bolt", {
 	Name = _("Broadhead Ballista Bolt"),
 	Parent = "upgrade-siege-projectile-1",
-	Costs = {"time", 250, "gold", 1000, "lumber", 500},
-	GrandStrategyCosts = {"time", 250, "gold", 1000, "lumber", 500, "research", 1500}
+	Costs = {"time", 250, "metal", 1000, "lumber", 500},
+	GrandStrategyCosts = {"time", 250, "metal", 1000, "lumber", 500, "research", 1500}
 })
 
 DefineUpgrade("upgrade-siege-projectile-2", {
@@ -155,15 +155,15 @@ DefineUpgrade("upgrade-catapult-metal-projectile", {
 	Name = _("Catapult Metal Projectile"),
 	Parent = "upgrade-siege-projectile-2",
 	Icon = "icon-catapult-projectile-3",
-	Costs = {"time", 250, "gold", 4000},
-	GrandStrategyCosts = {"time", 250, "gold", 4000, "research", 4000}
+	Costs = {"time", 250, "metal", 4000},
+	GrandStrategyCosts = {"time", 250, "metal", 4000, "research", 4000}
 })
 
 DefineUpgrade("upgrade-penetrating-ballista-bolt", {
 	Name = _("Penetrating Ballista Bolt"),
 	Parent = "upgrade-siege-projectile-2",
-	Costs = {"time", 250, "gold", 3000, "lumber", 1000},
-	GrandStrategyCosts = {"time", 250, "gold", 3000, "lumber", 1000, "research", 4000}
+	Costs = {"time", 250, "metal", 3000, "lumber", 1000},
+	GrandStrategyCosts = {"time", 250, "metal", 3000, "lumber", 1000, "research", 4000}
 })
 
 DefineUpgrade("upgrade-wood-plow", {
@@ -171,8 +171,8 @@ DefineUpgrade("upgrade-wood-plow", {
 	Class = "wood-plow",
 	Icon = "icon-wood-plow",
 	Description = _("While at the dawn of agriculture seeds were simply spread over the soil, the invention of the plow allows farmers to more easily make furrows where seeds would be planted. This made way for the cultivation of heavier soils, and planting over larger areas became a more practical possibility.\n\nEffect: +1 Food supply for farms."),
-	Costs = {"time", 200, "gold", 300, "lumber", 900},
-	GrandStrategyCosts = {"time", 200, "gold", 300, "lumber", 900, "research", 1200},
+	Costs = {"time", 200, "metal", 300, "lumber", 900},
+	GrandStrategyCosts = {"time", 200, "metal", 300, "lumber", 900, "research", 1200},
 	TechnologyPointCost = 1,
 	GrandStrategyProductionEfficiencyModifier = {"grain", 100, "mushrooms", 100}
 })
@@ -182,8 +182,8 @@ DefineUpgrade("upgrade-iron-tipped-wood-plow", {
 	Class = "iron-tipped-wood-plow",
 	Icon = "icon-iron-tipped-wood-plow",
 	Description = _("The use of plowshares made of iron greatly increases the plow's strength, allowing it to penetrate more deeply into the soil.\n\nEffect: +1 Food supply for farms."),
-	Costs = {"time", 250, "gold", 900, "lumber", 1500},
-	GrandStrategyCosts = {"time", 250, "gold", 900, "lumber", 1500, "research", 2400},
+	Costs = {"time", 250, "metal", 900, "lumber", 1500},
+	GrandStrategyCosts = {"time", 250, "metal", 900, "lumber", 1500, "research", 2400},
 	TechnologyPointCost = 1,
 	GrandStrategyProductionEfficiencyModifier = {"grain", 100, "mushrooms", 100}
 })
@@ -193,17 +193,17 @@ DefineUpgrade("upgrade-masonry", {
 	Class = "masonry",
 	Icon = "icon-masonry",
 	Description = _("Masonry is the craft of building structures from blocks, which are bound together with mortar."),
-	Costs = {"time", 250, "gold", 900, "lumber", 1000, "stone", 500},
-	GrandStrategyCosts = {"time", 250, "gold", 900, "lumber", 1000, "stone", 500, "research", 2400},
+	Costs = {"time", 250, "metal", 900, "lumber", 1000, "stone", 500},
+	GrandStrategyCosts = {"time", 250, "metal", 900, "lumber", 1000, "stone", 500, "research", 2400},
 	TechnologyPointCost = 1
 })
 
 DefineUpgrade("upgrade-coinage", {
 	Name = _("Coinage"),
 	Class = "coinage",
-	Description = _("While previously trade was conducted by trading one commodity for another, the introduction of currency provides a more practical means of exchange.\n\nEffect: +10% Gold Processing."),
-	Costs = {"time", 250, "gold", 1500},
-	GrandStrategyCosts = {"time", 250, "gold", 1500, "research", 1500},
+	Description = _("While previously trade was conducted by trading one commodity for another, the introduction of currency provides a more practical means of exchange.\n\nEffect: +10% Metal Processing."),
+	Costs = {"time", 250, "metal", 1500},
+	GrandStrategyCosts = {"time", 250, "metal", 1500, "research", 1500},
 	TechnologyPointCost = 1,
 	GrandStrategyProductionEfficiencyModifier = {"gold", 10, "silver", 10, "copper", 10}
 })
@@ -212,8 +212,8 @@ DefineUpgrade("upgrade-writing", {
 	Name = _("Writing"),
 	Class = "writing",
 	Description = _("The invention of writing makes it possible for ideas and traditions to be more easily spread and preserved.\n\nEffect: +10% Time Efficiency for all buildings, changes faction from tribe to polity."),
-	Costs = {"time", 250, "gold", 900, "lumber", 1500},
-	GrandStrategyCosts = {"time", 250, "gold", 900, "lumber", 1500, "research", 2400},
+	Costs = {"time", 250, "metal", 900, "lumber", 1500},
+	GrandStrategyCosts = {"time", 250, "metal", 900, "lumber", 1500, "research", 2400},
 	TechnologyPointCost = 1,
 	GrandStrategyProductionEfficiencyModifier = {"research", 50, "leadership", 25}
 })
@@ -223,8 +223,8 @@ DefineUpgrade("upgrade-alchemy", {
 	Class = "alchemy",
 	Icon = "icon-cauldron",
 	Description = _("Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed."),
-	Costs = {"time", 250, "gold", 4000},
-	GrandStrategyCosts = {"time", 250, "gold", 4000, "research", 4000},
+	Costs = {"time", 250, "metal", 4000},
+	GrandStrategyCosts = {"time", 250, "metal", 4000, "research", 4000},
 	TechnologyPointCost = 1
 })
 
@@ -233,8 +233,8 @@ DefineUpgrade("upgrade-printing-press", {
 	Class = "printing-press",
 	Description = _("The invention of the printing press allowed knowledge to be more quickly and more efficiently spread."),
 	Icon = "icon-printing-press",
-	Costs = {"time", 250, "gold", 2000, "lumber", 2000},
-	GrandStrategyCosts = {"time", 250, "gold", 2000, "lumber", 2000, "research", 4000},
+	Costs = {"time", 250, "metal", 2000, "lumber", 2000},
+	GrandStrategyCosts = {"time", 250, "metal", 2000, "lumber", 2000, "research", 4000},
 	TechnologyPointCost = 1,
 	GrandStrategyProductionEfficiencyModifier = {"research", 25}
 })

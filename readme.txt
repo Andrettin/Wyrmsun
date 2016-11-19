@@ -107,6 +107,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added support for maps having multiple layers.
 - Flavor triggers now only happen in the campaign mode.
 - Changed the "Defeat your enemies" default objective description to "Defeat your rivals".
+- The Gold resource is now "Metal". Gold can still be harvested, and is converted to metal at a 200% rate. Silver is converted to metal at a 150% rate, and copper at a 100% rate.
 
 * Quests
 - Added a new Campaign mode, playable on a massive map with several layers.

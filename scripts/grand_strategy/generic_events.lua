@@ -67,11 +67,11 @@ DefineGrandStrategyEvent("Skilled Carpenters", {
 	Options = {"~!OK"},
 	OptionEffects = {
 		function(s)
-			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", 100)
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", 100)
 			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", 1)
 		end
 	},
-	OptionTooltips = {"+100 Gold\n+1 Research"}
+	OptionTooltips = {"+100 Metal\n+1 Research"}
 })
 
 DefineGrandStrategyEvent("Skilled Masons", {
@@ -94,11 +94,11 @@ DefineGrandStrategyEvent("Skilled Masons", {
 	Options = {"~!OK"},
 	OptionEffects = {
 		function(s)
-			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", 100)
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", 100)
 			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", 1)
 		end
 	},
-	OptionTooltips = {"+100 Gold\n+1 Research"}
+	OptionTooltips = {"+100 Metal\n+1 Research"}
 })
 
 DefineGrandStrategyEvent("Build Observatory?", {
@@ -106,7 +106,7 @@ DefineGrandStrategyEvent("Build Observatory?", {
 	Conditions = function(s)
 		if (
 			SyncRand(100) < math.min(5, math.floor(GetFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige") / 20)) -- 5% chance the event happens at all if prestige is at least 100, and then 1% chance that it happens to a particular province, for a total chance of 0.01% of happening if the player has one province (this event shouldn't be common)
-			and GetFactionResource(EventFaction.Civilization, EventFaction.Name, "gold") >= 500
+			and GetFactionResource(EventFaction.Civilization, EventFaction.Name, "metal") >= 500
 			and FactionHasTechnologyType(EventFaction, "masonry")
 		) then
 			for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
@@ -122,13 +122,13 @@ DefineGrandStrategyEvent("Build Observatory?", {
 	Options = {"~!Accept", "~!Decline"},
 	OptionEffects = {
 		function(s)
-			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", -500)
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", -500)
 			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", 5)
 		end,
 		function(s)
 		end
 	},
-	OptionTooltips = {"-500 Gold\n+5 Research", ""}
+	OptionTooltips = {"-500 Metal\n+5 Research", ""}
 })
 
 DefineGrandStrategyEvent("Build Library?", {
@@ -136,7 +136,7 @@ DefineGrandStrategyEvent("Build Library?", {
 	Conditions = function(s)
 		if (
 			SyncRand(100) < math.min(5, math.floor(GetFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige") / 20)) -- 5% chance the event happens at all if prestige is at least 100, and then 10% chance that it happens to a particular province, for a total chance of 0.1% of happening if the player has one province
-			and GetFactionResource(EventFaction.Civilization, EventFaction.Name, "gold") >= 800
+			and GetFactionResource(EventFaction.Civilization, EventFaction.Name, "metal") >= 800
 			and GetFactionResource(EventFaction.Civilization, EventFaction.Name, "lumber") >= 1350
 			and FactionHasTechnologyType(EventFaction, "masonry")
 			and FactionHasTechnologyType(EventFaction, "writing")
@@ -154,14 +154,14 @@ DefineGrandStrategyEvent("Build Library?", {
 	Options = {"~!Accept", "~!Decline"},
 	OptionEffects = {
 		function(s)
-			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", -800)
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", -800)
 			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "lumber", -1350)
 			SetGrandStrategyProvinceData(EventProvince.Name, "Modifier", "upgrade-library", true)
 		end,
 		function(s)
 		end			
 	},
-	OptionTooltips = {"-800 Gold\n-1350 Lumber\nA Library is built in PROVINCE_NAME", ""}
+	OptionTooltips = {"-800 Metal\n-1350 Lumber\nA Library is built in PROVINCE_NAME", ""}
 })
 
 DefineGrandStrategyEvent("Build Courthouse?", {
@@ -169,7 +169,7 @@ DefineGrandStrategyEvent("Build Courthouse?", {
 	Conditions = function(s)
 		if (
 			SyncRand(100) < math.min(5, math.floor(GetFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige") / 20)) -- 5% chance the event happens at all if prestige is at least 100, and then 10% chance that it happens to a particular province, for a total chance of 0.1% of happening if the player has one province
-			and GetFactionResource(EventFaction.Civilization, EventFaction.Name, "gold") >= 800
+			and GetFactionResource(EventFaction.Civilization, EventFaction.Name, "metal") >= 800
 			and GetFactionResource(EventFaction.Civilization, EventFaction.Name, "lumber") >= 1350
 			and FactionHasTechnologyType(EventFaction, "masonry")
 			and FactionHasTechnologyType(EventFaction, "writing")
@@ -187,14 +187,14 @@ DefineGrandStrategyEvent("Build Courthouse?", {
 	Options = {"~!Accept", "~!Decline"},
 	OptionEffects = {
 		function(s)
-			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", -800)
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", -800)
 			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "lumber", -1350)
 			SetGrandStrategyProvinceData(EventProvince.Name, "Modifier", "upgrade-courthouse", true)
 		end,
 		function(s)
 		end			
 	},
-	OptionTooltips = {"-800 Gold\n-1350 Lumber\nA Courthouse is built in PROVINCE_NAME", ""}
+	OptionTooltips = {"-800 Metal\n-1350 Lumber\nA Courthouse is built in PROVINCE_NAME", ""}
 })
 
 DefineGrandStrategyEvent("Build College?", {
@@ -202,7 +202,7 @@ DefineGrandStrategyEvent("Build College?", {
 	Conditions = function(s)
 		if (
 			SyncRand(100) < math.min(5, math.floor(GetFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige") / 20)) -- 5% chance the event happens at all if prestige is at least 100, and then 10% chance that it happens to a particular province, for a total chance of 0.1% of happening if the player has one province
-			and GetFactionResource(EventFaction.Civilization, EventFaction.Name, "gold") >= 900
+			and GetFactionResource(EventFaction.Civilization, EventFaction.Name, "metal") >= 900
 			and GetFactionResource(EventFaction.Civilization, EventFaction.Name, "lumber") >= 1500
 			and FactionHasTechnologyType(EventFaction, "masonry")
 			and FactionHasTechnologyType(EventFaction, "writing")
@@ -220,14 +220,14 @@ DefineGrandStrategyEvent("Build College?", {
 	Options = {"~!Accept", "~!Decline"},
 	OptionEffects = {
 		function(s)
-			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", -900)
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", -900)
 			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "lumber", -1500)
 			SetGrandStrategyProvinceData(EventProvince.Name, "Modifier", "upgrade-college", true)
 		end,
 		function(s)
 		end			
 	},
-	OptionTooltips = {"-900 Gold\n-1500 Lumber\nA College is built in PROVINCE_NAME", ""}
+	OptionTooltips = {"-900 Metal\n-1500 Lumber\nA College is built in PROVINCE_NAME", ""}
 })
 
 DefineGrandStrategyEvent("Build University?", {
@@ -235,7 +235,7 @@ DefineGrandStrategyEvent("Build University?", {
 	Conditions = function(s)
 		if (
 			SyncRand(100) < math.min(5, math.floor(GetFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige") / 20)) -- 5% chance the event happens at all if prestige is at least 100, and then 10% chance that it happens to a particular province, for a total chance of 0.1% of happening if the player has one province
-			and GetFactionResource(EventFaction.Civilization, EventFaction.Name, "gold") >= 1500
+			and GetFactionResource(EventFaction.Civilization, EventFaction.Name, "metal") >= 1500
 			and GetFactionResource(EventFaction.Civilization, EventFaction.Name, "lumber") >= 2250
 			and FactionHasTechnologyType(EventFaction, "masonry")
 			and FactionHasTechnologyType(EventFaction, "writing")
@@ -253,7 +253,7 @@ DefineGrandStrategyEvent("Build University?", {
 	Options = {"~!Accept", "~!Decline"},
 	OptionEffects = {
 		function(s)
-			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", -1500)
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", -1500)
 			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "lumber", -2250)
 			SetGrandStrategyProvinceData(EventProvince.Name, "Modifier", "upgrade-college", false)
 			SetGrandStrategyProvinceData(EventProvince.Name, "Modifier", "upgrade-university", true)
@@ -261,7 +261,7 @@ DefineGrandStrategyEvent("Build University?", {
 		function(s)
 		end			
 	},
-	OptionTooltips = {"-1500 Gold\n-2250 Lumber\nA University is built in PROVINCE_NAME", ""}
+	OptionTooltips = {"-1500 Metal\n-2250 Lumber\nA University is built in PROVINCE_NAME", ""}
 })
 
 DefineGrandStrategyEvent("Build Monument?", {
@@ -269,7 +269,7 @@ DefineGrandStrategyEvent("Build Monument?", {
 	Conditions = function(s)
 		if (
 			SyncRand(100) < math.min(5, math.floor(GetFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige") / 20)) -- 5% chance the event happens at all if prestige is at least 100, and then 1% chance that it happens to a particular province, for a total chance of 0.01% of happening if the player has one province (this event shouldn't be common)
-			and GetFactionResource(EventFaction.Civilization, EventFaction.Name, "gold") >= 500
+			and GetFactionResource(EventFaction.Civilization, EventFaction.Name, "metal") >= 500
 			and FactionHasTechnologyType(EventFaction, "masonry")
 		) then
 			for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
@@ -285,13 +285,13 @@ DefineGrandStrategyEvent("Build Monument?", {
 	Options = {"~!Accept", "~!Decline"},
 	OptionEffects = {
 		function(s)
-			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", -500)
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", -500)
 			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 5)
 		end,
 		function(s)
 		end
 	},
-	OptionTooltips = {"-500 Gold\n+5 Prestige", ""}
+	OptionTooltips = {"-500 Metal\n+5 Prestige", ""}
 })
 
 DefineGrandStrategyEvent("PROVINCE_NAME Assimilates", {

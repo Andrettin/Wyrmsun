@@ -26,12 +26,12 @@
 --
 if (LoadedGame == false) then
 	SetPlayerData(0, "Faction", "brising-clan")
-	SetPlayerData(0, "Resources", "gold", 5000)
+	SetPlayerData(0, "Resources", "metal", 5000)
 	SetPlayerData(0, "Resources", "lumber", 3000)
 	SetPlayerData(0, "Resources", "stone", 2000)
 	SetPlayerData(1, "Faction", "shinsplitter-clan")
 	SetPlayerData(1, "Name", "Bandits")
-	SetPlayerData(1, "Resources", "gold", 5000)
+	SetPlayerData(1, "Resources", "metal", 5000)
 	SetPlayerData(1, "Resources", "lumber", 3000)
 	SetPlayerData(1, "Resources", "stone", 2000)
 	if not (GrandStrategy) then

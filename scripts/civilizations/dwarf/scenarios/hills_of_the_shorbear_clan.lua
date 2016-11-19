@@ -47,7 +47,7 @@ AddTrigger("hills-of-the-shorbear-clan-rugnur-dies",
 		RemovePlayerObjective(player, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
 		RemovePlayerObjective(player, "- Have one unit standing on each glyph at the same time")
 		RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
-		RemovePlayerObjective(player, "- Mine 10000 gold and 20000 coal")
+		RemovePlayerObjective(player, "- Mine 10000 metal and 20000 coal")
 		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
 		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
 		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Eastern Mines" or mapinfo.description == "Shorbear Hills" or mapinfo.description == "Svafnir's Lair" or mapinfo.description == "Caverns of Flame") then
@@ -79,7 +79,7 @@ AddTrigger("hills-of-the-shorbear-clan-gnomish-envoy-dies",
 		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Shorbear Hills") then
 			ActionDefeat()
 			if (GrandStrategy and PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")) then
-				ChangeFactionResource("dwarf", "shinsplitter-clan", "gold", 2500) -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
+				ChangeFactionResource("dwarf", "shinsplitter-clan", "metal", 7500) -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
 			end
 		end
 		return false
@@ -112,7 +112,7 @@ AddTrigger("hills-of-the-shorbear-clan-baglur-dies",
 	function() 
 		RemovePlayerObjective(player, "- Have one unit standing on each glyph at the same time")
 		RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
-		RemovePlayerObjective(player, "- Mine 10000 gold and 20000 coal")
+		RemovePlayerObjective(player, "- Mine 10000 metal and 20000 coal")
 		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
 		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
 		if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
@@ -135,7 +135,7 @@ AddTrigger("hills-of-the-shorbear-clan-thursagan-dies",
 		return false
 	end,
 	function() 
-		RemovePlayerObjective(player, "- Mine 10000 gold and 20000 coal")
+		RemovePlayerObjective(player, "- Mine 10000 metal and 20000 coal")
 		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
 		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
 		if (mapinfo.description == "Eastern Mines" or mapinfo.description == "Shorbear Hills" or mapinfo.description == "Svafnir's Lair" or mapinfo.description == "Caverns of Flame") then
@@ -1221,9 +1221,9 @@ AddTrigger("hills-of-the-shorbear-clan-shinsplitter-victory",
 			{"~!Continue"},
 			{function(s)
 				if (GrandStrategyEventMap) then
-					ChangeFactionResource("dwarf", "shinsplitter-clan", "gold", 10000) -- gold gained from the ruby's sale
-					ChangeFactionResource("dwarf", "shinsplitter-clan", "gold", 2500) -- gained the silver via peace treaty with the Norlunds
-					ChangeFactionResource("dwarf", "norlund-clan", "gold", -2500)
+					ChangeFactionResource("dwarf", "shinsplitter-clan", "metal", 10000) -- metal gained from the ruby's sale
+					ChangeFactionResource("dwarf", "shinsplitter-clan", "metal", 7500) -- gained the silver via peace treaty with the Norlunds
+					ChangeFactionResource("dwarf", "norlund-clan", "metal", -7500)
 					SetFactionDiplomacyState("dwarf", "norlund-clan", "dwarf", "shinsplitter-clan", "peace")
 				end
 				ActionVictory()
@@ -1254,9 +1254,9 @@ AddTrigger("hills-of-the-shorbear-clan-shorbear-victory",
 			{"~!Continue"},
 			{function(s)
 				if (GrandStrategyEventMap) then
-					ChangeFactionResource("dwarf", "shinsplitter-clan", "gold", 10000) -- gold gained from the ruby's sale
-					ChangeFactionResource("dwarf", "shinsplitter-clan", "gold", 2500) -- gained the silver via peace treaty with the Norlunds
-					ChangeFactionResource("dwarf", "norlund-clan", "gold", -2500)
+					ChangeFactionResource("dwarf", "shinsplitter-clan", "metal", 10000) -- metal gained from the ruby's sale
+					ChangeFactionResource("dwarf", "shinsplitter-clan", "metal", 7500) -- gained the silver via peace treaty with the Norlunds
+					ChangeFactionResource("dwarf", "norlund-clan", "metal", -7500)
 					SetFactionDiplomacyState("dwarf", "norlund-clan", "dwarf", "shinsplitter-clan", "peace")
 				end
 				ActionVictory()

@@ -334,8 +334,8 @@ UI.StatusLine.TextY = Video.Height + 2 - 16
 UI.StatusLine.Width = Video.Width - 16 - 2 - 176
 UI.StatusLine.Font = Fonts["game"]
 
--- gold
-UI.Resources[1].G = CGraphic:New("ui/resources/gold.png", 14, 14)
+-- metal
+UI.Resources[1].G = CGraphic:New("ui/resources/copper.png", 14, 14)
 UI.Resources[1].IconFrame = 0
 UI.Resources[1].IconX = 154 + 0
 UI.Resources[1].IconY = 0
@@ -708,10 +708,10 @@ DefinePanelContents(
   Condition = {ShowOpponent = false, HideNeutral = true, TownHall = "only", Build = "false", Supply = "only", Training = "false", UpgradeTo = "false", Research = "false"},
   Contents = {
 	{ Pos = {9, 103}, More = {"Text", _("Processing")} },
-	{ Pos = {9, 116}, More = { "Text", {Text = _("Gold:")}}},
+	{ Pos = {9, 116}, More = { "Text", {Text = _("Metal:")}}},
 	{ Pos = {115, 116}, HighlightColor = "yellow", More = { "Text", {Text = Concat("100", 
-										If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "gold"), 100),
-										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "gold"), 100)))),
+										If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "metal"), 100),
+										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "metal"), 100)))),
 										""))}}
     },
 	{ Pos = {9, 130}, Condition = {LumberImprove = "only"}, More = {"Text", {Text = _("Lumber:")}}},

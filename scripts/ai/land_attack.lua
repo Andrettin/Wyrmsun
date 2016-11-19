@@ -146,7 +146,7 @@ local land_funcs = {
 	function() return AiUpgradeTo(GetAiUnitType("stronghold")) end,
 	function() return AiWait(GetAiUnitType("stronghold")) end,
 	function() return AiSet(GetAiUnitType("worker"), 25) end,
-	function() return AiResearch(GetAiUnitType("coinage")) end, -- research coinage to improve gold processing
+	function() return AiResearch(GetAiUnitType("coinage")) end, -- research coinage to improve metal processing
 	function() return AiNeed(GetAiUnitType("stables")) end,
 	function() return AiResearch(GetAiUnitType("writing")) end, -- research writing to become a polity
 

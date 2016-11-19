@@ -29,7 +29,7 @@ if (LoadedGame == false) then
 	if not (GrandStrategy) then
 		SetPlayerData(0, "Allow", "upgrade-dwarven-runewriting", "F")
 	end
-	SetPlayerData(0, "Resources", "gold", 0)
+	SetPlayerData(0, "Resources", "metal", 0)
 	SetPlayerData(0, "Resources", "lumber", 0)
 	SetPlayerData(0, "Resources", "stone", 0)
 	SetPlayerData(0, "Resources", "oil", 0)

@@ -98,10 +98,10 @@ DefineQuest("the-great-temple-at-upsal", { -- Source: Snorri Sturlson, "Heimskri
 		return false
 	end,
 	CompletionEffects = function(s)
-		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 2000)
+		SetPlayerData(trigger_player, "Resources", "metal", GetPlayerData(trigger_player, "Resources", "metal") + 2000)
 	end,
 	Objectives = {"- Build a Temple"},
-	Rewards = "+2000 Gold",
+	Rewards = "+2000 Metal",
 	Hint = "Select a Bura, press the Build Structure button and then click on the Temple button to build the structure required for this quest.",
 	BuildUnits = {"unit-teuton-temple", 1}, -- should be a Germanic Temple, of course
 	Hidden = true
@@ -122,10 +122,10 @@ DefineQuest("the-good-seasons", { -- Source: Snorri Sturlson, "Heimskringla", 18
 		return false
 	end,
 	CompletionEffects = function(s)
-		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 1000)
+		SetPlayerData(trigger_player, "Resources", "metal", GetPlayerData(trigger_player, "Resources", "metal") + 1000)
 	end,
 	Objectives = {"- Build 2 Farms"},
-	Rewards = "+1000 Gold",
+	Rewards = "+1000 Metal",
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Farm button to build the structure required for this quest.",
 	BuildUnits = {"unit-germanic-farm", 2}
 })
@@ -144,10 +144,10 @@ DefineQuest("thralls-logging", { -- based on the Song of Rig; Source: Kevin Cros
 		return false
 	end,
 	CompletionEffects = function(s)
-		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 1000)
+		SetPlayerData(trigger_player, "Resources", "metal", GetPlayerData(trigger_player, "Resources", "metal") + 1000)
 	end,
 	Objectives = {"- Gather 2000 Lumber"},
-	Rewards = "+1000 Gold",
+	Rewards = "+1000 Metal",
 	Hint = "Select a Bura and right-click on a tree or wood pile to begin gathering lumber.",
 	GatherResources = {"lumber", 2000}
 })
@@ -166,10 +166,10 @@ DefineQuest("thralls-hut", { -- based on the Song of Rig; Source: Kevin Crossley
 		return false
 	end,
 	CompletionEffects = function(s)
-		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 750)
+		SetPlayerData(trigger_player, "Resources", "metal", GetPlayerData(trigger_player, "Resources", "metal") + 750)
 	end,
 	Objectives = {"- Build a Farm"},
-	Rewards = "+750 Gold",
+	Rewards = "+750 Metal",
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Farm button to build the structure required for this quest.",
 	BuildUnits = {"unit-germanic-farm", 1}
 })
@@ -188,10 +188,10 @@ DefineQuest("karls-farm", { -- based on the Song of Rig; Source: Kevin Crossley-
 		return false
 	end,
 	CompletionEffects = function(s)
-		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 750)
+		SetPlayerData(trigger_player, "Resources", "metal", GetPlayerData(trigger_player, "Resources", "metal") + 750)
 	end,
 	Objectives = {"- Build a Farm"},
-	Rewards = "+750 Gold",
+	Rewards = "+750 Metal",
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Farm button to build the structure required for this quest.",
 	BuildUnits = {"unit-germanic-farm", 1}
 })
@@ -254,12 +254,12 @@ DefineQuest("master-of-metal", {
 		return false
 	end,
 	CompletionEffects = function(s)
-		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 1000)
+		SetPlayerData(trigger_player, "Resources", "metal", GetPlayerData(trigger_player, "Resources", "metal") + 1000)
 		unit = CreateUnit("unit-germanic-worker", trigger_player, {Players[trigger_player].StartPos.x, Players[trigger_player].StartPos.y})
 		unit = CreateUnit("unit-germanic-worker", trigger_player, {Players[trigger_player].StartPos.x, Players[trigger_player].StartPos.y})
 	end,
 	Objectives = {"- Build a Smithy"},
-	Rewards = "+1000 Gold, +2 Buras",
+	Rewards = "+1000 Metal, +2 Buras",
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Smithy button to build the structure required for this quest.",
 	BuildUnits = {"unit-germanic-smithy", 1}
 })
@@ -302,11 +302,11 @@ DefineQuest("the-sun-shields", { -- Source: http://en.natmus.dk/historical-knowl
 		return false
 	end,
 	CompletionEffects = function(s)
-		SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 1000)
+		SetPlayerData(trigger_player, "Resources", "metal", GetPlayerData(trigger_player, "Resources", "metal") + 1000)
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 500)
 	end,
 	Objectives = {"- Research Bronze Shield"},
-	Rewards = "+1000 Gold, +500 Lumber",
+	Rewards = "+1000 Metal, +500 Lumber",
 	Hint = "Select a Smithy and then click on the Research Bronze Shield button to research the technology required for this quest.",
 	ResearchUpgrades = {"upgrade-germanic-bronze-shield"}
 })

@@ -94,7 +94,7 @@ else
 	SetStartView(0, 16, 16)
 end
 SetPlayerData(0, "RaceName", "dwarf")
-SetPlayerData(0, "Resources", "gold", 5000)
+SetPlayerData(0, "Resources", "metal", 5000)
 SetPlayerData(0, "Resources", "lumber", 5000)
 SetPlayerData(0, "Resources", "stone", 2500)
 SetPlayerData(0, "Resources", "oil", 0)
@@ -102,7 +102,7 @@ SetPlayerData(0, "Faction", "norlund-clan")
 SetAiType(0, "land-attack")
 SetStartView(1, 4, 20)
 SetPlayerData(1, "RaceName", "dwarf")
-SetPlayerData(1, "Resources", "gold", 10000)
+SetPlayerData(1, "Resources", "metal", 10000)
 SetPlayerData(1, "Resources", "lumber", 10000)
 SetPlayerData(1, "Resources", "stone", 5000)
 SetPlayerData(1, "Resources", "oil", 0)
@@ -111,7 +111,7 @@ SetAiType(1, "land-attack")
 SetStartView(2, 70, 43)
 SetPlayerData(2, "RaceName", "kobold")
 SetPlayerData(2, "RaceName", "dwarf")
-SetPlayerData(2, "Resources", "gold", 0)
+SetPlayerData(2, "Resources", "metal", 0)
 SetPlayerData(2, "Resources", "lumber", 0)
 SetPlayerData(2, "Resources", "stone", 0)
 SetPlayerData(2, "Resources", "oil", 0)
@@ -119,7 +119,7 @@ SetPlayerData(2, "Name", "Svafnir")
 SetAiType(2, "land-attack")
 SetStartView(3, 32, 50)
 SetPlayerData(3, "RaceName", "dwarf")
-SetPlayerData(3, "Resources", "gold", 0)
+SetPlayerData(3, "Resources", "metal", 0)
 SetPlayerData(3, "Resources", "lumber", 0)
 SetPlayerData(3, "Resources", "stone", 0)
 SetPlayerData(3, "Resources", "oil", 0)
@@ -133,16 +133,16 @@ unit = CreateUnit("unit-volcanic-crater", PlayerNumNeutral, {33, 47})
 unit = CreateUnit("unit-volcanic-crater", PlayerNumNeutral, {30, 52})
 unit = CreateUnit("unit-volcanic-crater", PlayerNumNeutral, {33, 52})
 
-unit = CreateUnit("unit-gold-deposit", PlayerNumNeutral, {4, 11}) -- Shinsplitter Camp Gold Mine
+unit = CreateUnit("unit-copper-deposit", PlayerNumNeutral, {4, 11}) -- Shinsplitter Camp Gold Mine
 SetResourcesHeld(unit, 100000)
-unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {5, 12})
-unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {5, 12})
-unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {5, 12})
-unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {5, 12})
-unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {5, 12})
+unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {5, 12})
+unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {5, 12})
+unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {5, 12})
+unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {5, 12})
+unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {5, 12})
 
 if (GrandStrategy and GrandStrategyBattleBaseBuilding) then
-	unit = CreateUnit("unit-gold-deposit", PlayerNumNeutral, {31, 49})
+	unit = CreateUnit("unit-copper-deposit", PlayerNumNeutral, {31, 49})
 	SetResourcesHeld(unit, 50000)
 end
 	
@@ -280,17 +280,17 @@ if (GrandStrategy == false) then
 	SetUnitVariable(unit, "Name", "Svafnir")
 	SetUnitVariable(unit, "Active", false)
 elseif (GrandStrategyEventMap) then
-	SetPlayerData(0, "Resources", "gold", 0)
+	SetPlayerData(0, "Resources", "metal", 0)
 	SetPlayerData(0, "Resources", "lumber", 0)
 	SetPlayerData(0, "Resources", "stone", 0)
 	
-	unit = CreateUnit("unit-gold-deposit", PlayerNumNeutral, {4, 11}) -- Shinsplitter Camp Gold Mine
+	unit = CreateUnit("unit-copper-deposit", PlayerNumNeutral, {4, 11}) -- Shinsplitter Camp Gold Mine
 	SetResourcesHeld(unit, 100000)
-	unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {5, 12})
-	unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {5, 12})
-	unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {5, 12})
-	unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {5, 12})
-	unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {5, 12})
+	unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {5, 12})
+	unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {5, 12})
+	unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {5, 12})
+	unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {5, 12})
+	unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {5, 12})
 	
 	-- Rugnur
 	if (GetProvinceHero("Caverns of Chaincolt", "Rugnur") == 2) then

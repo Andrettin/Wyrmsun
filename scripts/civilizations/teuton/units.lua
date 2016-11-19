@@ -52,6 +52,10 @@ DefineUnitType("unit-teuton-worker", { Name = _("Bura"),
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese", "unit-carrots"},
 	CanGatherResources = {
 		{
+			"resource-id", "metal",
+			"file-when-loaded", "germanic/units/worker_with_gold.png"
+		},
+		{
 			"resource-id", "gold",
 			"file-when-loaded", "germanic/units/worker_with_gold.png"
 		},
@@ -115,7 +119,7 @@ DefineUnitType("unit-teuton-swordsman", {
 		{"shield", "unit-wooden-shield"},
 		{"boots", "unit-boots"}
 	},
-	Costs = {"time", 50, "gold", 600},
+	Costs = {"time", 50, "metal", 600},
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,

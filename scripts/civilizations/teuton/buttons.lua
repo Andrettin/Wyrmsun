@@ -178,7 +178,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-masonry",
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-coinage",
 	Action = "research", Value = "upgrade-teuton-coinage",
 	Allowed = "check-single-research",
-	Description = _("+10% Gold Processing."),
+	Description = _("+10% Metal Processing."),
 	Key = "c", Hint = _("Research ~!Coinage"), Popup = "popup-research",
 	ForUnit = {"unit-teuton-stronghold"}
 } )

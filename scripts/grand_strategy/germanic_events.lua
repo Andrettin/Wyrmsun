@@ -118,8 +118,8 @@ local GermanicEvents = {
 					RunMap("maps/earth/tanais.smp")
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
-						ChangeFactionResource("germanic", "asa-tribe", "gold", 1000) -- gold from raiding Vanaland
-						ChangeFactionResource("celt", "vana-tribe", "gold", -1000) -- gold lost from the raid
+						ChangeFactionResource("germanic", "asa-tribe", "metal", 1000) -- metal from raiding Vanaland
+						ChangeFactionResource("celt", "vana-tribe", "metal", -1000) -- metal lost from the raid
 						SetProvinceSettlementBuilding("Don", "unit-germanic-town-hall", false)
 						ChangeProvinceUnitQuantity("Don", "unit-germanic-warrior", 8) -- increase the quantity of warriors in Vanaland by 8, to make it defensible after this scenario is over
 					end
@@ -139,7 +139,7 @@ local GermanicEvents = {
 						end
 					end
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "asa-tribe" or wyr.preferences.AutomaticBattles) and GrandStrategyFaction.Name ~= "vana-tribe") then
-					ChangeFactionResource("germanic", "asa-tribe", "gold", 1000) -- gold from raiding Vanaland
+					ChangeFactionResource("germanic", "asa-tribe", "metal", 1000) -- metal from raiding Vanaland
 					
 					if (GrandStrategyFaction.Name == "asa-tribe") then
 						GenericDialog("On the Vanaquisl", "We have managed to raid the Vana's main settlement, but were later pushed back by their warriors, forcing us to agree to a peace.")
@@ -174,12 +174,12 @@ local GermanicEvents = {
 						end
 					end
 					if (GameResult == GameDefeat) then
-						ChangeFactionResource("germanic", "asa-tribe", "gold", 1000) -- gold from raiding Vanaland
-						ChangeFactionResource("celt", "vana-tribe", "gold", -1000)
+						ChangeFactionResource("germanic", "asa-tribe", "metal", 1000) -- metal from raiding Vanaland
+						ChangeFactionResource("celt", "vana-tribe", "metal", -1000)
 					end
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "vana-tribe" or wyr.preferences.AutomaticBattles)) then
-					ChangeFactionResource("germanic", "asa-tribe", "gold", 1000) -- gold from raiding Vanaland
-					ChangeFactionResource("celt", "vana-tribe", "gold", -1000)
+					ChangeFactionResource("germanic", "asa-tribe", "metal", 1000) -- metal from raiding Vanaland
+					ChangeFactionResource("celt", "vana-tribe", "metal", -1000)
 					if (GrandStrategyFaction.Name == "vana-tribe") then
 						GenericDialog("On the Vanaquisl", "The Asa raided our main settlement, but we managed to push them out of Vanaland, forcing them to agree to a peace.")
 					end
@@ -292,9 +292,9 @@ local GermanicEvents = {
 				ChangeProvinceUnitQuantity("Astrakhan", "unit-germanic-worker", - GetProvinceUnitQuantity("Brandenburg", "unit-germanic-worker"))
 				AcquireProvince(WorldMapProvinces.Brandenburg, "yngling-tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "yngling-tribe")
-				SetFactionResource(Factions.yngling_tribe.Civilization, "yngling-tribe", "gold", GetFactionResource(EventFaction.Civilization, EventFaction.Name, "gold") / 2)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", - GetFactionResource(Factions.yngling_tribe.Civilization, "yngling-tribe", "gold"))
-				ChangeFactionResource(Factions.yngling_tribe.Civilization, "yngling-tribe", "gold", 2000) -- help them stay afloat a bit
+				SetFactionResource(Factions.yngling_tribe.Civilization, "yngling-tribe", "metal", GetFactionResource(EventFaction.Civilization, EventFaction.Name, "metal") / 2)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", - GetFactionResource(Factions.yngling_tribe.Civilization, "yngling-tribe", "metal"))
+				ChangeFactionResource(Factions.yngling_tribe.Civilization, "yngling-tribe", "metal", 2000) -- help them stay afloat a bit
 			end
 		}
 	},
@@ -561,10 +561,10 @@ local GermanicEvents = {
 		OptionEffects = {
 			function(s)
 				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 3) -- promotion of the educated priest class
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", -300) -- cost of the land grant
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", -300) -- cost of the land grant
 			end
 		},
-		OptionTooltips = {"-300 Gold\n+3 Prestige"}
+		OptionTooltips = {"-300 Metal\n+3 Prestige"}
 	},
 	AsaLawgiving = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
 		Name = "Asa Lawgiving",
@@ -585,10 +585,10 @@ local GermanicEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", 500) -- tax gains
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", 500) -- tax gains
 			end
 		},
-		OptionTooltips = {"+500 Gold"}
+		OptionTooltips = {"+500 Metal"}
 	},
 	SkeldusDomain = { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
 		Name = "Skeldu's Domain",
@@ -659,12 +659,12 @@ local GermanicEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", 250)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", 250)
 				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 				FormFactionLua(EventFaction, Factions.yngling_tribe)
 			end
 		},
-		OptionTooltips = {"Form the Yngling Tribe\n+250 Gold\n+1 Prestige"}
+		OptionTooltips = {"Form the Yngling Tribe\n+250 Metal\n+1 Prestige"}
 	},
 	TheCurvedSwords = { -- Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-roerby-swords/
 		Name = "The Curved Swords",

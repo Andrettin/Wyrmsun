@@ -38,5 +38,5 @@ DefineUnitType("unit-joruvellir-yale-pen", {
 	Image = {"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_yale_pen.png", "size", {96, 96}},
 	Shadow = {"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_yale_pen_shadow.png", "size", {96, 96}},
 	Icon = "icon-joruvellir-yale-pen",
-	Costs = {"time", 135, "gold", 900, "lumber", 540, "stone", 270} -- 10% cheaper
+	Costs = {"time", 135, "metal", 900, "lumber", 540, "stone", 270} -- 10% cheaper
 } )

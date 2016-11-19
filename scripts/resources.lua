@@ -29,7 +29,7 @@
 
 -- FIXME: Must be removed: Use and write (define-resource)
 --
---  (define-resource 'gold 'name "Gold"
+--  (define-resource 'metal 'name "Metal"
 --    'start-resource-default 2000
 --    'start-resource-low 2000
 --    'start-resource-medium 5000
@@ -39,39 +39,41 @@
 --
 
 DefineDefaultIncomes(
-	0, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100
+	0, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100
 )
 
 DefineDefaultActions(
-	"stop", "mine", "gather", "drill", "mine", "mine", "mine", "produce", "gain", "gather", "mine", "mine", "grow", "grow", "produce", "catch", "gain"
+	"stop", "mine", "gather", "drill", "mine", "mine", "mine", "produce", "gain", "gather", "mine", "mine", "mine", "grow", "grow", "produce", "catch", "gain"
 )
 
 DefineDefaultResourceNames(
-	"time", "gold", "lumber", "oil", "ore", "stone", "coal", "research", "prestige", "timber", "silver", "copper", "grain", "mushrooms", "labor", "fish", "leadership"
+	"time", "metal", "lumber", "oil", "ore", "stone", "coal", "research", "prestige", "timber", "gold", "silver", "copper", "grain", "mushrooms", "labor", "fish", "leadership"
 )
 
 DefineDefaultResourceAmounts(
-	"gold", 50000,
 	"lumber", 400,
 	"oil", 50000,
 	"stone", 400,
 	"coal", 50000,
+	"gold", 50000,
 	"silver", 50000,
 	"copper", 50000
 )
 
-DefineDefaultResourceMaxAmounts(-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1)
+DefineDefaultResourceMaxAmounts(-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1)
 
+SetResourceFinalResource("gold", "metal")
+SetResourceFinalResourceConversionRate("gold", 200)
 SetResourceBaseLaborInput("gold", 100)
 SetResourceBaseOutput("gold", 200)
 
-SetResourceFinalResource("silver", "gold")
-SetResourceFinalResourceConversionRate("silver", 50)
+SetResourceFinalResource("silver", "metal")
+SetResourceFinalResourceConversionRate("silver", 150)
 SetResourceBaseLaborInput("silver", 100)
 SetResourceBaseOutput("silver", 200)
 
-SetResourceFinalResource("copper", "gold")
-SetResourceFinalResourceConversionRate("copper", 25)
+SetResourceFinalResource("copper", "metal")
+SetResourceFinalResourceConversionRate("copper", 100)
 SetResourceBaseLaborInput("copper", 100)
 SetResourceBaseOutput("copper", 200)
 

@@ -184,7 +184,7 @@ DefineModifier("upgrade-teuton-masonry",
 )
 
 DefineModifier("upgrade-teuton-coinage",
-	{"improve-production", "gold", 10},
+	{"improve-production", "metal", 10},
 	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"},
 	{"apply-to", "unit-latin-town-hall"}
 )

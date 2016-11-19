@@ -36,35 +36,35 @@ function LoadFactions(world)
 		asa_tribe = {
 			Name = "asa-tribe",
 			Civilization = "germanic",
-			Gold = 3000,
+			Metal = 3000,
 			Commodities = {
-				Lumber = 1500, -- half of the gold value
-				Stone = 1500 -- half of the gold value
+				Lumber = 1500, -- half of the metal value
+				Stone = 1500 -- half of the metal value
 			}
 		},
 		-- Latin polities
 		rome = {
 			Name = "rome",
 			Civilization = "latin",
-			Gold = 5000
+			Metal = 5000
 		},
 		-- Non-Playable Tribes
 		gylfing_tribe = {
 			Name = "gylfing-tribe",
 			Civilization = "basque",
-			Gold = 5000,
+			Metal = 5000,
 			Commodities = {
-				Lumber = 2500, -- half of the gold value
-				Stone = 2500 -- half of the gold value
+				Lumber = 2500, -- half of the metal value
+				Stone = 2500 -- half of the metal value
 			}
 		},
 		vana_tribe = {
 			Name = "vana-tribe",
 			Civilization = "celt",
-			Gold = 5000,
+			Metal = 5000,
 			Commodities = {
-				Lumber = 2500, -- half of the gold value
-				Stone = 2500 -- half of the gold value
+				Lumber = 2500, -- half of the metal value
+				Stone = 2500 -- half of the metal value
 			}
 		}
 	}
@@ -73,57 +73,57 @@ function LoadFactions(world)
 		untersberg = {
 			Name = "untersberg",
 			Civilization = "gnome",
-			Gold = 7500,
+			Metal = 7500,
 			Commodities = {
-				Lumber = 3750, -- half of the gold value
-				Stone = 3750 -- half of the gold value
+				Lumber = 3750, -- half of the metal value
+				Stone = 3750 -- half of the metal value
 			}
 		},
 		-- Dwarven clans
 		norlund_clan = {
 			Name = "norlund-clan",
 			Civilization = "dwarf",
-			Gold = 3000,
+			Metal = 3000,
 			Commodities = {
-				Lumber = 1500, -- half of the gold value
-				Stone = 1500 -- half of the gold value
+				Lumber = 1500, -- half of the metal value
+				Stone = 1500 -- half of the metal value
 			}
 		},
 		shinsplitter_clan = {
 			Name = "shinsplitter-clan",
 			Civilization = "dwarf",
-			Gold = 7500,
+			Metal = 7500,
 			Commodities = {
-				Lumber = 3750, -- half of the gold value
-				Stone = 3750 -- half of the gold value
+				Lumber = 3750, -- half of the metal value
+				Stone = 3750 -- half of the metal value
 			}
 		},
 		shorbear_clan = {
 			Name = "shorbear-clan",
 			Civilization = "dwarf",
-			Gold = 9000, -- 300 / 20 * 600 (base value divided by 20, the usual level 1 Wesnoth unit gold cost, and multiplied by 600, the basic military unit gold cost in Wyrmsun)
+			Metal = 9000, -- 300 / 20 * 600 (base value divided by 20, the usual level 1 Wesnoth unit metal cost, and multiplied by 600, the basic military unit metal cost in Wyrmsun)
 			Commodities = {
-				Lumber = 4500, -- half of the gold value
-				Stone = 4500 -- half of the gold value
+				Lumber = 4500, -- half of the metal value
+				Stone = 4500 -- half of the metal value
 			}
 		},
 		-- Goblin tribes
 		khag_tribe = {
 			Name = "khag-tribe",
 			Civilization = "goblin",
-			Gold = 750,
+			Metal = 750,
 			Commodities = {
-				Lumber = 375, -- half of the gold value
-				Stone = 375 -- half of the gold value
+				Lumber = 375, -- half of the metal value
+				Stone = 375 -- half of the metal value
 			}
 		},
 		lggi_tribe = {
 			Name = "lggi-tribe",
 			Civilization = "goblin",
-			Gold = 2700,
+			Metal = 2700,
 			Commodities = {
-				Lumber = 1350, -- half of the gold value
-				Stone = 1350 -- half of the gold value
+				Lumber = 1350, -- half of the metal value
+				Stone = 1350 -- half of the metal value
 			}
 		}
 	}

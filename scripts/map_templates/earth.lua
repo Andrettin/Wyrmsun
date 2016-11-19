@@ -58,7 +58,7 @@ DefineMapTemplate("earth", {
 --		"unit-mercenary-camp", 4
 	},
 	PlayerLocationGeneratedNeutralUnits = {
-		"unit-gold-deposit", 1,
+		"unit-copper-deposit", 1,
 		"unit-wood-pile", 16,
 		"unit-stone-pile", 8
 	}

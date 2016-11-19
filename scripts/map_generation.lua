@@ -1715,7 +1715,7 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 						CreateStartingBuilding(i, "Stronghold Guard Tower")
 					end
 
-					SetPlayerData(i, "Resources", "gold", 10000)
+					SetPlayerData(i, "Resources", "metal", 10000)
 					SetPlayerData(i, "Resources", "lumber", 6000)
 					SetPlayerData(i, "Resources", "stone", 2000)
 --					SetPlayerData(i, "Resources", "oil", 2000)
@@ -2177,13 +2177,13 @@ function ApplyRawTiles()
 				SetRawTile(x, y, "Water")
 			elseif (RawTile(x, y) == "Starting Gold Mine") then
 				-- for starting gold locations, generate gold rocks and the gold deposit
-				unit = CreateUnit("unit-gold-deposit", PlayerNumNeutral, {x, y})
+				unit = CreateUnit("unit-copper-deposit", PlayerNumNeutral, {x, y})
 				SetResourcesHeld(unit, 50000)
-				for sub_x=0,(GetUnitTypeData("unit-gold-deposit", "TileWidth") - 1) do
-					for sub_y=0,(GetUnitTypeData("unit-gold-deposit", "TileHeight") - 1) do
+				for sub_x=0,(GetUnitTypeData("unit-copper-deposit", "TileWidth") - 1) do
+					for sub_y=0,(GetUnitTypeData("unit-copper-deposit", "TileHeight") - 1) do
 						SetRawTile(x + sub_x, y + sub_y, "Land")
 						if (SyncRand(100) <= 50) then -- give a chance of a gold rock not being generated, to make the shape of the gold rock group seem more natural
-							unit = CreateUnit("unit-gold-rock", PlayerNumNeutral, {x + sub_x, y + sub_y})
+							unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {x + sub_x, y + sub_y})
 						end
 					end
 				end
@@ -3833,8 +3833,8 @@ function CreateStartingGoldMine(player, x, y)
 					SetRawTile(gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y, "Road") -- add road so that there are no transition issues
 				end
 			end
-			for sub_x=0,(GetUnitTypeData("unit-gold-deposit", "TileWidth") - 1) do
-				for sub_y=0,(GetUnitTypeData("unit-gold-deposit", "TileHeight") - 1) do
+			for sub_x=0,(GetUnitTypeData("unit-copper-deposit", "TileWidth") - 1) do
+				for sub_y=0,(GetUnitTypeData("unit-copper-deposit", "TileHeight") - 1) do
 					SetRawTile(gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y, "Starting Gold Mine")
 				end
 			end

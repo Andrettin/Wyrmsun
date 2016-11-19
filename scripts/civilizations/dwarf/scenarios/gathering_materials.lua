@@ -263,7 +263,7 @@ AddTrigger("gathering-materials-rugnur-dies",
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Collect 10000 gold and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and FindHero("Rugnur", GetFactionPlayer("Norlund Clan")) == nil) then
+		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Collect 10000 metal and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and FindHero("Rugnur", GetFactionPlayer("Norlund Clan")) == nil) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
@@ -273,7 +273,7 @@ AddTrigger("gathering-materials-rugnur-dies",
 		RemovePlayerObjective(player, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
 		RemovePlayerObjective(player, "- Have one unit standing on each glyph at the same time")
 		RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
-		RemovePlayerObjective(player, "- Collect 10000 gold and 20000 coal")
+		RemovePlayerObjective(player, "- Collect 10000 metal and 20000 coal")
 		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
 		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
 		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Eastern Mines" or mapinfo.description == "Shorbear Hills" or mapinfo.description == "Svafnir's Lair" or mapinfo.description == "Caverns of Flame") then
@@ -295,7 +295,7 @@ AddTrigger("gathering-materials-baglur-dies",
 			(
 				PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time")
 				or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall")
-				or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Collect 10000 gold and 20000 coal") 
+				or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Collect 10000 metal and 20000 coal") 
 				or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader")
 				or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves")
 				or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance")
@@ -314,7 +314,7 @@ AddTrigger("gathering-materials-baglur-dies",
 	function() 
 		RemovePlayerObjective(player, "- Have one unit standing on each glyph at the same time")
 		RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
-		RemovePlayerObjective(player, "- Collect 10000 gold and 20000 coal")
+		RemovePlayerObjective(player, "- Collect 10000 metal and 20000 coal")
 		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
 		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
 		if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
@@ -331,7 +331,7 @@ AddTrigger("gathering-materials-introduction",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Collect 10000 gold and 20000 coal") == false and GetNumUnitsAt(-1, "unit-gold-deposit", {0, 0}, {512, 512}) >= 1 and GetNumUnitsAt(-1, "unit-coal-mine", {0, 0}, {512, 512}) >= 2) then
+		if (PlayerHasObjective(GetThisPlayer(), "- Collect 10000 metal and 20000 coal") == false and GetNumUnitsAt(-1, "unit-gold-deposit", {0, 0}, {512, 512}) >= 1 and GetNumUnitsAt(-1, "unit-coal-mine", {0, 0}, {512, 512}) >= 2) then
 			for i=0, (PlayerMax - 2) do
 				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= "Shinsplitter Clan" and FindHero("Rugnur", i) ~= nil and FindHero("Baglur", i) ~= nil and FindHero("Thursagan", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
 					player = i
@@ -387,7 +387,7 @@ AddTrigger("gathering-materials-introduction",
 										if (mapinfo.description == "Eastern Mines") then
 											RemovePlayerObjective(player, "- Defeat your rivals")
 										end
-										AddPlayerObjective(player, "- Collect 10000 gold and 20000 coal")
+										AddPlayerObjective(player, "- Collect 10000 metal and 20000 coal")
 										AddPlayerObjective(player, "- Rugnur, Baglur and Thursagan must survive")
 									end}
 								)
@@ -417,7 +417,7 @@ AddTrigger("gathering-materials-miners-reminder",
 	function()
 		if (GameCycle > 3000) then
 			for i=0, (PlayerMax - 2) do
-				if (PlayerHasObjective(i, "- Collect 10000 gold and 20000 coal")) then
+				if (PlayerHasObjective(i, "- Collect 10000 metal and 20000 coal")) then
 					player = i
 					return true
 				end
@@ -501,7 +501,7 @@ AddTrigger("gathering-materials-gold-found",
 AddTrigger("gathering-materials-coal-collected",
 	function()
 		for i=0, (PlayerMax - 2) do
-			if (PlayerHasObjective(i, "- Collect 10000 gold and 20000 coal") and GetPlayerData(i, "Resources", "coal") >= 20000) then
+			if (PlayerHasObjective(i, "- Collect 10000 metal and 20000 coal") and GetPlayerData(i, "Resources", "coal") >= 20000) then
 				player = i
 				return true
 			end
@@ -515,7 +515,7 @@ AddTrigger("gathering-materials-coal-collected",
 			player,
 			{"~!Continue"},
 			{function(s)
-				if (GetPlayerData(GetFactionPlayer("Norlund Clan"), "Resources", "gold") >= 10000) then
+				if (GetPlayerData(GetFactionPlayer("Norlund Clan"), "Resources", "metal") >= 10000) then
 					Event(
 						FindHero("Thursagan"),
 						"This is all we need from these mines. Now we should go back further west, where there are no goblins, and mine there.",
@@ -720,9 +720,9 @@ AddTrigger("gathering-materials-coal-collected",
 																																							player,
 																																							{"~!Continue"},
 																																							{function(s)
-																																								RemovePlayerObjective(player, "- Collect 10000 gold and 20000 coal")
+																																								RemovePlayerObjective(player, "- Collect 10000 metal and 20000 coal")
 																																								if (GrandStrategy) then
-																																									--ChangeFactionResource("dwarf", "norlund-clan", "gold", 10000)
+																																									--ChangeFactionResource("dwarf", "norlund-clan", "metal", 10000)
 																																									ChangeFactionResource("dwarf", "norlund-clan", "coal", 20000)
 																																								end
 																																								if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
@@ -829,7 +829,7 @@ end},
 AddTrigger("gathering-materials-resources-collected",
 	function()
 		for i=0, (PlayerMax - 2) do
-			if (PlayerHasObjective(i, "- Collect 10000 gold and 20000 coal") and GetPlayerData(i, "Resources", "coal") >= 20000 and GetPlayerData(i, "Resources", "gold") >= 10000) then
+			if (PlayerHasObjective(i, "- Collect 10000 metal and 20000 coal") and GetPlayerData(i, "Resources", "coal") >= 20000 and GetPlayerData(i, "Resources", "metal") >= 10000) then
 				player = i
 				return true
 			end
@@ -1041,9 +1041,9 @@ AddTrigger("gathering-materials-resources-collected",
 																																				player,
 																																				{"~!Continue"},
 																																				{function(s)
-																																					RemovePlayerObjective(player, "- Collect 10000 gold and 20000 coal")
+																																					RemovePlayerObjective(player, "- Collect 10000 metal and 20000 coal")
 																																					if (GrandStrategy) then
-																																						--ChangeFactionResource("dwarf", "norlund-clan", "gold", 10000)
+																																						--ChangeFactionResource("dwarf", "norlund-clan", "metal", 10000)
 																																						ChangeFactionResource("dwarf", "norlund-clan", "coal", 20000)
 																																					end
 																																					if (mapinfo.description == "Eastern Mines" and GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
@@ -1149,14 +1149,14 @@ AddTrigger("gathering-materials-thursagan-dies",
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Collect 10000 gold and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and FindHero("Thursagan", GetFactionPlayer("Norlund Clan")) == nil and FindHero("Thursagan", PlayerNumNeutral) == nil) then
+		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Collect 10000 metal and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and FindHero("Thursagan", GetFactionPlayer("Norlund Clan")) == nil and FindHero("Thursagan", PlayerNumNeutral) == nil) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
 		return false
 	end,
 	function() 
-		RemovePlayerObjective(player, "- Collect 10000 gold and 20000 coal")
+		RemovePlayerObjective(player, "- Collect 10000 metal and 20000 coal")
 		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
 		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
 		if (mapinfo.description == "Eastern Mines" or mapinfo.description == "Shorbear Hills" or mapinfo.description == "Svafnir's Lair" or mapinfo.description == "Caverns of Flame") then
