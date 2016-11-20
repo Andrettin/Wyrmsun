@@ -946,11 +946,11 @@ DefineUnitType("unit-wolf", {
 		"Skoll" -- Skoll is the wolf who pursues the sun in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63.
 	},
 	Sounds = {
---		"selected", "pig",
---		"acknowledge", "pig",
---		"idle", "pig",
---		"ready", "pig",
---		"dead", "pig",
+		"selected", "wolf-growl",
+		"acknowledge", "wolf-growl",
+		"idle", "wolf-growl",
+		"ready", "wolf-growl",
+		"dead", "wolf-dead",
 		"hit", "bite-attack",
 		"miss", "attack-miss",
 		"step", "step-dirt",

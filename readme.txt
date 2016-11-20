@@ -125,7 +125,7 @@ https://github.com/Andrettin/Wyrmsun
 - Personal name epithets are no longer generated for fauna units.
 - Added Goat (unit graphics by Jinn, based on b_o's yale; icon by Exidelo; sounds by Wildfire Games).
 - Added Boar (unit graphics by Jinn, based on the boar model by Wildfire Games; icon by Exidelo; sounds by Wildfire Games).
-- Added Wolf (unit graphics by Jinn, based on the wolf model by Wildfire Games; icon by Exidelo).
+- Added Wolf (unit graphics by Jinn, based on the wolf model by Wildfire Games; icon by Exidelo; sounds by the Battle for Wesnoth team).
 - Removed fauna breeding to improve performance, and because it didn't serve enough of a purpose.
 - Skutans and Schutzes now correctly have mana.
 - Fixed issue which caused some Gnomish factions to not be able to train Recruits.
