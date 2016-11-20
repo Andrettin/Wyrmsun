@@ -94,17 +94,6 @@ if (OldSetPlayerData == nil) then
 	OldSetPlayerData = SetPlayerData
 end
 
---Define Player Data.
-function SetupPlayer(player, race, ai, metal, lumber, oil, stone, x, y)
-	SetStartView(player, x, y)
-	SetPlayerData(player, "Resources", "lumber", lumber)
-	SetPlayerData(player, "Resources", "metal", metal)
-	SetPlayerData(player, "Resources", "oil", oil)
-	SetPlayerData(player, "Resources", "stone", stone)
-	SetPlayerData(player, "RaceName", race)
-	SetAiType(player, ai)
-end
-
 -- Override with game settings
 function SetPlayerData(player, data, arg1, arg2)
 	if (GameCycle ~= 0) then
