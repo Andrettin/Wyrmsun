@@ -531,21 +531,9 @@ DefineUnitType("unit-teuton-ritter", {
 	Civilization = "teuton",
 	Description = _("The Teutons excel in mounted combat. Their well-armored and trained heavy cavalry strikes fear in the hearts of their enemies whenever they are seen upon the battlefield."),
 	Background = _("\"Ritter\" is the German word for \"knight\"."),
-	Image = {"file", "human/units/body_mounted.png", "size", {72, 72}},
+	Image = {"file", "teuton/units/ritter.png", "size", {72, 72}},
 	LayerImages = {
-		{"layer", "mount", "file", "neutral/units/horse_brown_skin_brown_hair_brown_eyes.png"},
-		{"layer", "hair", "file", "human/units/hair_mounted.png"},
-		{"layer", "left-arm", "file", "human/units/left_arm_mounted.png"},
-		{"layer", "right-arm", "file", "human/units/right_arm_mounted.png"},
-		{"layer", "right-hand", "file", "human/units/right_hand_mounted.png"},
-		{"layer", "clothing", "file", "human/units/chainmail_mounted.png"},
---		{"layer", "clothing-left-arm", "file", "teuton/units/chainmail_left_arm.png"},
---		{"layer", "clothing-right-arm", "file", "teuton/units/chainmail_right_arm.png"},
-		{"layer", "pants", "file", "human/units/pants_mounted.png"},
-		{"layer", "boots", "file", "human/units/leather_shoes_mounted.png"},
---		{"layer", "helmet", "file", "teuton/units/iron_helm.png"},
-		{"layer", "weapon", "file", "human/units/long_iron_sword_mounted.png"},
---		{"layer", "shield", "file", "teuton/units/ritter_shield.png"}
+		{"layer", "shield", "file", "teuton/units/ritter_shield.png"}
 	},
 	Animations = "animations-melee-unit",
 	Icon = "icon-teuton-ritter",

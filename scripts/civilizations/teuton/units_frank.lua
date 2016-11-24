@@ -246,7 +246,7 @@ DefineUnitType("unit-frank-horseman", {
 	Faction = "frank-tribe",
 	Icon = "icon-frank-horseman",
 	LayerImages = {
---		{"layer", "shield", "file", "dlcs/frankish_faction_flair/graphics/units/frank_horseman_shield.png"}
+		{"layer", "shield", "file", "dlcs/frankish_faction_flair/graphics/units/frank_horseman_shield.png"}
 	},
 	Armor = 4, BasicDamage = 14, -- +1 armor, +1 damage
 	Points = 60, -- +10 points
