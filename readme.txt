@@ -74,8 +74,6 @@ https://github.com/Andrettin/Wyrmsun
 - The goblin Dock now correctly the same quantity of under construction frames as those of the other civilizations (new frame by Jinn).
 - Revamped Lumber Mill and Smithy names.
 - Temples now sell scrolls.
-- Added Portal (neutral and indestructible; visible and usable only to units with Ethereal Vision), which allows accessing other planes and worlds in the new Campaign mode (graphics by Jinn).
-- Added Cavern Entrance (neutral and indestructible), which allows accessing other surface layers in the new Campaign mode (graphics by Jinn).
 - Temples now correctly receive the time efficiency bonus from Writing upgrades.
 - Increased the sight of buildings which had a sight of 1 to 2.
 
@@ -104,14 +102,13 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused Germanic players to have the Teuton Civilization upgrade researched at scenario start when restarting the scenario after having developed the Teuton civilization.
 - New See Garrison button icon (by Jinn).
 - Fixed issue which caused the autosave to remain active even after deactivating it in the options.
-- Added support for maps having multiple layers.
 - Flavor triggers now only happen in the campaign mode.
 - Changed the "Defeat your enemies" default objective description to "Defeat your rivals".
 - The Gold resource is now "Metal". Gold can still be harvested, and is converted to metal at a 200% rate. Silver is converted to metal at a 150% rate, and copper at a 100% rate.
 - A popup is now displayed with the name of a resource when hovering over its icon.
 
 * Quests
-- Added a new Campaign mode, playable on a massive map with several layers.
+- Added a new Campaign mode, playable on a huge map.
 - The player now receives a notification when new in-game quests are available, instead of a quest symbol hovering over the town hall.
 - In-game quests are now only obtainable in the campaign mode.
 - Added the "Master of Metal" in-game quest for the Germanics.
