@@ -137,6 +137,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added level 2 infantry upgrades for the Germanic Warrior and the Teuton Krieger.
 - The Teuton Krieger can now upgrade to the Ritter.
 - Dwarven Miners can now upgrade to Skilled Miner and (at level 3) to Expert Miner (icons by Exidelo, based on Jinn's Dwarven Miner icon).
+- Added icons for the Brising Skilled and Expert Miners for the Brising Faction Flair DLC.
 
 -----------------------------------------------------------------------
 - 2.4.2

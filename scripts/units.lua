@@ -78,7 +78,7 @@ Units = {
 	"upgrade-dwarven-wood-plow", "upgrade-dwarven-iron-tipped-wood-plow",
 	"upgrade-dwarven-masonry",
 	"upgrade-dwarven-coinage", "upgrade-dwarven-runewriting", "upgrade-dwarven-alchemy",
-	"unit-brising-miner", "unit-brising-militia",
+	"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner", "unit-brising-militia",
 	"unit-brising-smithy",
 	"unit-joruvellir-yale-pen",
 	"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist", "unit-gnomish-caravan",

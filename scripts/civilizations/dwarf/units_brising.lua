@@ -40,6 +40,24 @@ DefineUnitType("unit-brising-miner", {
 	Points = 35 -- +5 points
 } )
 
+DefineUnitType("unit-brising-skilled-miner", {
+	Parent = "unit-dwarven-skilled-miner",
+	Civilization = "dwarf",
+	Faction = "brising-clan",
+	Icon = "icon-brising-skilled-miner",
+	HitPoints = 50, -- +10 HP
+	Points = 50 -- +5 points
+} )
+
+DefineUnitType("unit-brising-expert-miner", {
+	Parent = "unit-dwarven-expert-miner",
+	Civilization = "dwarf",
+	Faction = "brising-clan",
+	Icon = "icon-brising-expert-miner",
+	HitPoints = 60, -- +10 HP
+	Points = 65 -- +5 points
+} )
+
 DefineUnitType("unit-brising-militia", {
 	Parent = "unit-dwarven-militia",
 	Civilization = "dwarf",
@@ -65,5 +83,13 @@ DefineUnitType("unit-brising-smithy", {
 } )
 
 DefineUnitType("unit-brising-miner", { -- this is here because the buildings need to be defined before being assigned to the miner's "Trains" array
+	Trains = {"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-lumber-mill", "unit-brising-smithy", "unit-dwarven-yale-pen", "unit-dwarven-temple", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
+} )
+
+DefineUnitType("unit-brising-skilled-miner", {
+	Trains = {"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-lumber-mill", "unit-brising-smithy", "unit-dwarven-yale-pen", "unit-dwarven-temple", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
+} )
+
+DefineUnitType("unit-brising-expert-miner", {
 	Trains = {"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-lumber-mill", "unit-brising-smithy", "unit-dwarven-yale-pen", "unit-dwarven-temple", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
 } )

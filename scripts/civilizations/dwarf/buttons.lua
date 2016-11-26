@@ -205,13 +205,25 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-cauldron",
 DefineButton( { Pos = 1, Level = 2, Icon = "icon-dwarven-skilled-miner",
 	Action = "experience-upgrade-to", Value = "unit-dwarven-skilled-miner",
 	Key = "u", Hint = _("~!Upgrade to Skilled Miner"), Popup = "popup-unit",
-	ForUnit = {"unit-dwarven-miner", "unit-brising-miner"}
+	ForUnit = {"unit-dwarven-miner"}
 } )
 
 DefineButton( { Pos = 1, Level = 2, Icon = "icon-dwarven-expert-miner",
 	Action = "experience-upgrade-to", Value = "unit-dwarven-expert-miner",
 	Key = "u", Hint = _("~!Upgrade to Expert Miner"), Popup = "popup-unit",
 	ForUnit = {"unit-dwarven-skilled-miner"}
+} )
+
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-brising-skilled-miner",
+	Action = "experience-upgrade-to", Value = "unit-brising-skilled-miner",
+	Key = "u", Hint = _("~!Upgrade to Skilled Miner"), Popup = "popup-unit",
+	ForUnit = {"unit-brising-miner"}
+} )
+
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-brising-expert-miner",
+	Action = "experience-upgrade-to", Value = "unit-brising-expert-miner",
+	Key = "u", Hint = _("~!Upgrade to Expert Miner"), Popup = "popup-unit",
+	ForUnit = {"unit-brising-skilled-miner"}
 } )
 
 DefineButton( { Pos = 1, Level = 2, Icon = "icon-dwarven-steelclad",

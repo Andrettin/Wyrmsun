@@ -5,6 +5,18 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-brising-skilled-miner",
+	Size = {46, 38},
+	File = "dlcs/brising_faction_flair/graphics/icons/brising_skilled_miner.png"
+})
+
+DefineIcon({
+	Name = "icon-brising-expert-miner",
+	Size = {46, 38},
+	File = "dlcs/brising_faction_flair/graphics/icons/brising_expert_miner.png"
+})
+
+DefineIcon({
 	Name = "icon-brising-militia",
 	Size = {46, 38},
 	File = "dlcs/brising_faction_flair/graphics/icons/brising_militia.png"

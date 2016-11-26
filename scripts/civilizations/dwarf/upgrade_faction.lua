@@ -78,6 +78,14 @@ DefineModifier("upgrade-brising-clan-faction",
 )
 
 DefineModifier("upgrade-brising-clan-faction",
+	{"apply-to", "unit-dwarven-skilled-miner"}, {"convert-to", "unit-brising-skilled-miner"}
+)
+
+DefineModifier("upgrade-brising-clan-faction",
+	{"apply-to", "unit-dwarven-expert-miner"}, {"convert-to", "unit-brising-expert-miner"}
+)
+
+DefineModifier("upgrade-brising-clan-faction",
 	{"apply-to", "unit-dwarven-militia"}, {"convert-to", "unit-brising-militia"}
 )
 

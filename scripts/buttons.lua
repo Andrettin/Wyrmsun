@@ -56,7 +56,8 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-repair",
 	Key = "r", Hint = _("~!Repair"), Popup = "popup-commands",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner", "unit-brising-miner",
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-forest-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker"
 	}
@@ -67,7 +68,8 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-harvest",
 	Key = "h", Hint = _("~!Harvest Resource"), Popup = "popup-commands",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner", "unit-brising-miner",
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-forest-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker"
 	}
@@ -78,7 +80,8 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-build-basic-structure",
 	Key = "b", Hint = _("~!Build Structure"), Popup = "popup-commands",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner", "unit-brising-miner",
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-forest-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker"
 	}
@@ -183,7 +186,8 @@ DefineButton( { Pos = 14, Level = 0, Icon = "icon-level-up",
 	Key = "l", Hint = "Choose ~!Level-Up Upgrade", Popup = "popup-commands",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner", "unit-brising-miner",
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-forest-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker"
 	}
@@ -448,7 +452,8 @@ DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
 	Action = "button", Value = 0,
 	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
 	ForUnit = {
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner", "unit-brising-miner",
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
 		"unit-dwarven-guard",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
@@ -512,7 +517,8 @@ DefineButton( { Pos = 15, Level = 0, Icon = "icon-inventory",
 	Key = "i", Hint = "Open ~!Inventory", Popup = "popup-commands",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner", "unit-brising-miner",
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-forest-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker"
 	}
@@ -638,7 +644,8 @@ DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 	Key = "escape", Hint = _("Cancel (~<Esc~>)"), Popup = "popup-commands",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner", "unit-brising-miner",
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-forest-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker"
 	}

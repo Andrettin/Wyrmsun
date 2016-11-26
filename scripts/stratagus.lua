@@ -285,7 +285,6 @@ SetAllPlayersTotalUnitLimit(400)
 -------------------------------------------------------------------------------
 
 DefineVariables(
-	"LevelUp", {Enable = true},
 	"Variation", {Enable = true},
 	"Slow", {Max = 1000, Value = 0, Enable = true},
 	"GraphicsVariation", {Max = 255, Value = 0, Increase = 0, Enable = true},
