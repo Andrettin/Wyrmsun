@@ -3598,7 +3598,8 @@ DefineUnitType("unit-template-temple", {
 	}
 } )
 
-DefineUnitType("unit-template-watch-tower", { Name = _("Watch Tower"),
+DefineUnitType("unit-template-watch-tower", {
+	Name = _("Watch Tower"),
 	Parent = "unit-template-building",
 	Class = "watch-tower",
 	Costs = {"time", 60, "metal", 550, "lumber", 300, "stone", 300},
@@ -3641,7 +3642,8 @@ DefineUnitType("unit-template-watch-tower", { Name = _("Watch Tower"),
 	}
 } )
 
-DefineUnitType("unit-template-guard-tower", { Name = _("Guard Tower"),
+DefineUnitType("unit-template-guard-tower", {
+	Name = _("Guard Tower"),
 	Parent = "unit-template-building",
 	Class = "guard-tower",
 	Costs = {"time", 140, "metal", 500, "lumber", 225, "stone", 225},

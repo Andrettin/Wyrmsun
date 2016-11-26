@@ -83,7 +83,7 @@ DefineFaction("jarling-tribe", {
 	Civilization = "germanic",
 	Type = "tribe",
 	Colors = {"yellow"},
-	FactionUpgrade = "upgrade-skeldung-tribe-faction",
+	FactionUpgrade = "upgrade-jarling-tribe-faction",
 	Background = "In Norse mythology, Jarl (rendered in Proto-Germanic as Erala) was one of the sons of the god Rig, and the ancestor of those belonging to the social class of warriors. Unlike his treatment of his other sons, Rig revealed himself to Jarl as his father, and taught him the art of runes and magic."
 })
 
@@ -92,7 +92,7 @@ DefineFaction("karling-tribe", {
 	Civilization = "germanic",
 	Type = "tribe",
 	Colors = {"brown"},
-	FactionUpgrade = "upgrade-skeldung-tribe-faction",
+	FactionUpgrade = "upgrade-yngling-tribe-faction",
 	DefaultAI = "passive",
 	Background = "In Norse mythology, Karl (rendered in Proto-Germanic as Karla) was one of the sons of the god Rig, and the ancestor of those belonging to the social class of peasants."
 })
@@ -110,12 +110,21 @@ DefineFaction("skeldung-tribe", { -- Skjoldung in the original Norse sagas, here
 	HistoricalFactionDerivations = {-2800, "germanic", "asa-tribe"}
 })
 
+DefineFaction("thielung-tribe", {
+	Name = "Thielung Tribe",
+	Civilization = "germanic",
+	Type = "tribe",
+	Colors = {"white"},
+	FactionUpgrade = "upgrade-thielung-tribe-faction",
+	Background = "In the Gutasaga, Thieluar (who is identified by several scholars with the mythological figure Thialfi) was the first person to discover the island of Gotland. He lifted a curse on the island, and his lineage ruled over it for many years."
+})
+
 DefineFaction("thralling-tribe", {
 	Name = "Thrahiling Tribe",
 	Civilization = "germanic",
 	Type = "tribe",
 	Colors = {"black"},
-	FactionUpgrade = "upgrade-skeldung-tribe-faction",
+	FactionUpgrade = "upgrade-thralling-tribe-faction",
 	DefaultAI = "passive",
 	Background = "In Norse mythology, Thrall (rendered in Proto-Germanic as Thrahila) was one of the sons of the god Rig, and the ancestor of those belonging to the social class of thralls."
 })

@@ -86,6 +86,7 @@ function RunCampaignMenu()
 		function(dd)
 			SetCurrentCampaign(campaign_ident_list[campaign_dd:getSelected() + 1])
 			campaign_description:setCaption("Description: " .. GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Description"))
+			campaign_description:adjustSize()
 		end
 	)
 	campaign_dd:setSize(190, 20)

@@ -498,9 +498,13 @@ SetMapTemplateUnit("earth", "unit-teuton-town-hall", "swede-tribe", {4243, 692},
 
 -- Gannarve (Fröjel Parish, Gotland)
 -- a stone ship grave was established at Gannarve (Fröjel Parish, Gotland) in the Late Bronze Age of Scandinavia (1100-700 BC); Source: Peter Skoglund, "Stone Ships: Continuity and Change in Scandinavian Prehistory", 2008, pp. 394, 398.
+SetMapTemplateUnit("earth", "unit-germanic-town-hall", "thielung-tribe", {4254, 743}, -1100, -700)
 
 -- Kivik
 -- a man was buried in the Bredarör cairn at Kivik in c. 1400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 84.
+
+-- Uppsala
+SetMapTemplateUnit("earth", "unit-teuton-temple", "sweden", {4241, 686}, 1164) -- Swedish archbishopric founded in Uppsala in 1164; Source: "Guta Saga: The History of the Gotlanders", 1999, p. vii.
 
 -- Vitemölla (Southeast Sweden)
 --SetMapTemplateUnit("earth", "unit-germanic-temple", "skeldung-tribe", {4162, 780}, -1700, -500) -- the archaeoastronomical observatory termed by archaeologists as "Heimdall's Stones" was constructed and in use during the Bronze Age; between 600 and 500 BC it was covered by sands; Source: Nils-Axel Mörner, Bob G. Lind and Göran Possnert, "Heimdall's Stones at Vitemölla in SE Sweden and the Chronology and Stratigraphy of the Surroundings", 2009, pp. 209-212.

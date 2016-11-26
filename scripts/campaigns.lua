@@ -52,6 +52,14 @@ DefineCampaign("heimdalls-progeny", {
 })
 
 --[[
+DefineCampaign("thunrazs-servant", {
+	Name = "Thunraz's Servant",
+	Description = "Terrified by a calamitous thunderstorm, Thialfi's parents pledged him to the service of the lightning god Thunraz when he was still a boy. Now a grown up man, during a trance he heard his master command him to sail to an undiscovered island...",
+	Civilization = "germanic",
+	Faction = "thielung-tribe",
+	Year = -1100 -- first occupation of Gotland (by presumably pre-Germanic or Germanic speakers) we have found through research so far
+})
+
 DefineCampaign("the-marcomannic-wars", {
 	Name = "The Marcomannic Wars",
 	Description = "Under the leadership of Ballomar, the Marcomanni wage war with the mighty Roman Empire.",

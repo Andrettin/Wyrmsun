@@ -31,8 +31,21 @@ DefineUpgrade("upgrade-asa-tribe-faction", {
 	Name = _("Asa Tribe Faction")
 })
 
+DefineUpgrade("upgrade-jarling-tribe-faction", {
+	Name = _("Eraling Tribe Faction")
+})
+
 DefineUpgrade("upgrade-skeldung-tribe-faction", {
 	Name = _("Skeldung Tribe Faction")
+})
+
+DefineUpgrade("upgrade-thielung-tribe-faction", {
+	Name = _("Thielung Tribe Faction")
+})
+
+DefineUpgrade("upgrade-thralling-tribe-faction", {
+	Name = _("Thrahiling Tribe Faction"),
+	GrandStrategyProductionEfficiencyModifier = {"lumber", 5}
 })
 
 DefineUpgrade("upgrade-yngling-tribe-faction", {
@@ -47,12 +60,32 @@ DefineModifier("upgrade-asa-tribe-faction",
 	{"apply-to", "unit-germanic-veteran-warrior"}
 )
 
+DefineModifier("upgrade-jarling-tribe-faction",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-germanic-warrior"},
+	{"apply-to", "unit-germanic-veteran-warrior"}
+)
+
 DefineModifier("upgrade-skeldung-tribe-faction",
 	{"BasicDamage", 1},
 	{"Armor", 1},
 	{"Points", 10},
 	{"apply-to", "unit-germanic-warrior"},
 	{"apply-to", "unit-germanic-veteran-warrior"}
+)
+
+DefineModifier("upgrade-thielung-tribe-faction",
+	{"BasicDamage", 1},
+	{"Accuracy", 1},
+	{"Points", 10},
+	{"apply-to", "unit-germanic-warrior"},
+	{"apply-to", "unit-germanic-veteran-warrior"}
+)
+
+DefineModifier("upgrade-thralling-tribe-faction",
+	{"improve-production", "lumber", 5},
+	{"apply-to", "unit-germanic-carpenters-shop"}
 )
 
 DefineModifier("upgrade-yngling-tribe-faction",
