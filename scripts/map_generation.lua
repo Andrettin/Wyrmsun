@@ -1060,7 +1060,7 @@ function CreateGoldSpots(gold_mine_number, min_x, max_x, min_y, max_y, symmetric
 	while (Count > 0 and WhileCount < gold_mine_number * 100) do
 		local gold_mine_spawn_point = FindAppropriateGoldMineSpawnPoint(min_x, max_x, min_y, max_y, symmetric)
 		RandomNumber = SyncRand(2)
-		if (RandomNumber == 0) then -- 50% chance a deposit will be generated, 50% chance a group of precious metal rocks will be generated
+		if (RandomNumber == 0) then -- 50% chance a deposit will be generated, 50% chance a group of copper/silver/gold rocks will be generated
 			RandomNumber = SyncRand(3)
 			local deposit_type
 			if (RandomNumber == 0) then
@@ -1715,7 +1715,7 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 						CreateStartingBuilding(i, "Stronghold Guard Tower")
 					end
 
-					SetPlayerData(i, "Resources", "metal", 10000)
+					SetPlayerData(i, "Resources", "copper", 10000)
 					SetPlayerData(i, "Resources", "lumber", 6000)
 					SetPlayerData(i, "Resources", "stone", 2000)
 --					SetPlayerData(i, "Resources", "oil", 2000)

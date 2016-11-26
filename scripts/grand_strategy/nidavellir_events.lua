@@ -61,7 +61,7 @@ local NidavellirEvents = {
 					
 					if (GameResult == GameVictory) then
 						ChangeFactionResource("dwarf", "brising-clan", "prestige", 5) -- prestige for successfully settling Svarinshaug
-						ChangeFactionResource("dwarf", "brising-clan", "metal", 800) -- food gained from the yales
+						ChangeFactionResource("dwarf", "brising-clan", "copper", 800) -- food gained from the yales
 						ChangeFactionResource("dwarf", "brising-clan", "lumber", 800) -- lumber gained from the mission
 						ChangeFactionResource("dwarf", "brising-clan", "stone", 400) -- stone gained from the mission
 					elseif (GameResult == GameDefeat) then
@@ -69,7 +69,7 @@ local NidavellirEvents = {
 					end
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "brising-clan" or wyr.preferences.AutomaticBattles)) then
 					ChangeFactionResource("dwarf", "brising-clan", "prestige", 5) -- prestige for successfully settling Svarinshaug
-					ChangeFactionResource("dwarf", "brising-clan", "metal", 800) -- food gained from the yales
+					ChangeFactionResource("dwarf", "brising-clan", "copper", 800) -- food gained from the yales
 					ChangeFactionResource("dwarf", "brising-clan", "lumber", 800) -- lumber gained from the mission
 					ChangeFactionResource("dwarf", "brising-clan", "stone", 400) -- stone gained from the mission
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
@@ -166,11 +166,11 @@ local NidavellirEvents = {
 					RestoreScenarioUnitsToProvince({ProvinceName = "Svarinshaug", FactionName = "brising-clan"})
 					if (GameResult == GameVictory) then
 						ChangeFactionResource("dwarf", "brising-clan", "prestige", 30) -- prestige for obtaining the wondrous artifacts
-						ChangeFactionResource("dwarf", "brising-clan", "metal", 1000) -- metal value of Draupnir
+						ChangeFactionResource("dwarf", "brising-clan", "copper", 1000) -- copper value of Draupnir
 					end
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "brising-clan" or wyr.preferences.AutomaticBattles)) then
 					ChangeFactionResource("dwarf", "brising-clan", "prestige", 30) -- prestige for obtaining the wondrous artifacts
-					ChangeFactionResource("dwarf", "brising-clan", "metal", 1000) -- metal value of Draupnir
+					ChangeFactionResource("dwarf", "brising-clan", "copper", 1000) -- copper value of Draupnir
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						GenericDialog("The Treasures of Svarinshaug", "Having gathered the necessary resources, Brokk and Eitri crafted their gifts for Modsognir. The sons of Ivaldi had presented the chieftain with a magnificent throwing spear, Gungnir, and a sleek ship, Skidbladnir. But Modsognir judged Brokk and Eitri's artifacts to be the better ones: they gave him a solid gold arm-ring, Draupnir, and a mighty hammer, Mjollnir.")
 					end
@@ -217,7 +217,7 @@ local NidavellirEvents = {
 					
 					if (GameResult == GameVictory) then
 						ChangeFactionResource("dwarf", "brising-clan", "prestige", 5) -- prestige for rooting out the bandits
-						ChangeFactionResource("dwarf", "brising-clan", "metal", 1000) -- metal value of the Necklace
+						ChangeFactionResource("dwarf", "brising-clan", "copper", 1000) -- copper value of the Necklace
 						-- place some goblins in Aurvang after the dwarven bandits are gone
 						SetProvinceUnitQuantity("Aurvang", "unit-goblin-spearman", 6)
 						SetProvinceUnitQuantity("Aurvang", "unit-goblin-archer", 3)
@@ -226,7 +226,7 @@ local NidavellirEvents = {
 					SetProvinceUnitQuantity("Aurvang", "unit-dwarven-steelclad", 0) -- bandits rooted out
 					SetProvinceUnitQuantity("Aurvang", "unit-dwarven-axefighter", 0)
 					ChangeFactionResource("dwarf", "brising-clan", "prestige", 5) -- prestige for rooting out the bandits
-					ChangeFactionResource("dwarf", "brising-clan", "metal", 1000) -- metal value of the Necklace
+					ChangeFactionResource("dwarf", "brising-clan", "copper", 1000) -- copper value of the Necklace
 					
 					-- place some goblins in Aurvang after the dwarven bandits are gone
 					SetProvinceUnitQuantity("Aurvang", "unit-goblin-spearman", 6)
@@ -347,8 +347,8 @@ local NidavellirEvents = {
 			end
 			if (("norlund-clan" ~= GrandStrategyFaction.Name or wyr.preferences.AutomaticBattles) and ("shinsplitter-clan" ~= GrandStrategyFaction.Name or wyr.preferences.AutomaticBattles)) then -- if neither Norlund Clan nor Shinsplitter Clan are played by the human player, then enact the effects of the bargain between the gnomes and Rugnur successfully being struck
 				SetFactionDiplomacyState("dwarf", "norlund-clan", "dwarf", "shinsplitter-clan", "war") -- begin war between Norlund Clan and Shinsplitter Clan
-				ChangeFactionResource("gnome", "untersberg", "metal", -7500) -- decrease gnomish treasury by 5000 silver (considering for our purposes silver to be worth 150% of metal)
-				ChangeFactionResource("dwarf", "norlund-clan", "metal", 7500) -- 5000 silver
+				ChangeFactionResource("gnome", "untersberg", "copper", -10000) -- decrease gnomish treasury by 5000 silver (considering for our purposes silver to be worth 200% of copper)
+				ChangeFactionResource("dwarf", "norlund-clan", "copper", 10000) -- 5000 silver
 				ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist", 1)
 				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", -1)
 			end
@@ -703,7 +703,7 @@ local NidavellirEvents = {
 		OptionEffects = {function(s)
 			if ("norlund-clan" == GrandStrategyFaction.Name and wyr.preferences.AutomaticBattles == false) then
 				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-surghan-mercenary-steelclad", 8) -- Surghan mercenaries hired by the Shinsplitters
-				ChangeFactionResource("dwarf", "shinsplitter-clan", "metal", - (GetUnitTypeData("unit-surghan-mercenary-steelclad", "Costs", "metal") * 2))
+				ChangeFactionResource("dwarf", "shinsplitter-clan", "copper", - (GetUnitTypeData("unit-surghan-mercenary-steelclad", "Costs", "copper") * 2))
 				MercenaryGroups.unit_surghan_mercenary_steelclad = nil
 			
 				GrandStrategyEventMap = true
@@ -726,7 +726,7 @@ local NidavellirEvents = {
 				
 			if ((GrandStrategyFaction.Name ~= "norlund-clan" and GrandStrategyFaction.Name ~= "shinsplitter-clan") or wyr.preferences.AutomaticBattles) then
 				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-surghan-mercenary-steelclad", 8) -- Surghan mercenaries hired by the Shinsplitters
-				ChangeFactionResource("dwarf", "shinsplitter-clan", "metal", - (GetUnitTypeData("unit-surghan-mercenary-steelclad", "Costs", "metal") * 2))
+				ChangeFactionResource("dwarf", "shinsplitter-clan", "copper", - (GetUnitTypeData("unit-surghan-mercenary-steelclad", "Costs", "copper") * 2))
 				MercenaryGroups.unit_surghan_mercenary_steelclad = nil
 			
 				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane", -1) -- Crintil
@@ -816,8 +816,8 @@ local NidavellirEvents = {
 
 				ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-gryphon-rider", -2) -- the dwarven gryphon riders return to the Northern Wastelands
 
-				ChangeFactionResource("dwarf", "norlund-clan", "metal", 7500) -- payment for the crafting of the Scepter
-				ChangeFactionResource("gnome", "untersberg", "metal", -7500) -- payment for the crafting of the Scepter
+				ChangeFactionResource("dwarf", "norlund-clan", "copper", 10000) -- payment for the crafting of the Scepter
+				ChangeFactionResource("gnome", "untersberg", "copper", -10000) -- payment for the crafting of the Scepter
 				AcquireProvince(WorldMapProvinces.ShorbearHills, "norlund-clan") -- Shorbear Hold ceded by the Shinsplitters to the Norlunds and peace established
 				SetFactionDiplomacyState("dwarf", "norlund-clan", "dwarf", "shinsplitter-clan", "peace")
 				
@@ -904,8 +904,8 @@ local NidavellirEvents = {
 					
 					if (GameResult == GameVictory) then
 						ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
-					elseif (GameResult == GameDefeat) then -- if lost the battle, lose the metal
-						ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", -500)
+					elseif (GameResult == GameDefeat) then -- if lost the battle, lose copper
+						ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "copper", -500)
 						ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", -1)
 					end
 				else
@@ -916,9 +916,9 @@ local NidavellirEvents = {
 						ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 					else
 						if (GrandStrategyFaction.Name == EventFaction.Name) then
-							GenericDialog("Goblin Looters", "The thieves have beaten our forces!", "-500 Metal, -1 Prestige, Lose Troops in Province")
+							GenericDialog("Goblin Looters", "The thieves have beaten our forces!", "-500 Copper, -1 Prestige, Lose Troops in Province")
 						end
-						ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", -500)
+						ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "copper", -500)
 						ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", -1)
 						for i, unitName in ipairs(Units) do
 							if (IsOffensiveMilitaryUnit(unitName)) then
@@ -931,11 +931,11 @@ local NidavellirEvents = {
 				end
 			end,
 			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", -500)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "copper", -500)
 				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", -2)
 			end
 		},
-		OptionTooltips = {"Fight the goblin thieves", "-500 Metal\n-1 Prestige"}
+		OptionTooltips = {"Fight the goblin thieves", "-500 Copper\n-1 Prestige"}
 	}
 }
 	

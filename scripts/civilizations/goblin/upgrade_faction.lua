@@ -94,7 +94,7 @@ DefineModifier("upgrade-myridia-faction",
 )
 
 DefineModifier("upgrade-stilgar-faction",
-	{"improve-production", "metal", 5},
+	{"improve-production", "copper", 5},
 	{"apply-to", "unit-goblin-town-hall"}, {"apply-to", "unit-goblin-stronghold"}
 )
 

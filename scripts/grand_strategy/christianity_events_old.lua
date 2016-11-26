@@ -569,10 +569,10 @@ local ChristianityEvents = {
 		OptionEffects = {
 			function(s)
 				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", -100)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "copper", -100)
 			end
 		},
-		OptionTooltips = {"+1 Prestige\n-100 Metal"}
+		OptionTooltips = {"+1 Prestige\n-100 Copper"}
 	},
 	VitaSanctiLebuiniAntiqua = { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 320.
 		Name = "Vita sancti Lebuini antiqua",

@@ -53,10 +53,6 @@ DefineUnitType("unit-goblin-worker", {
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
 	CanGatherResources = {
 		{
-			"resource-id", "metal",
-			"file-when-loaded", "goblin/units/goblin_worker_with_gold.png"
-		},
-		{
 			"resource-id", "gold",
 			"file-when-loaded", "goblin/units/goblin_worker_with_gold.png"
 		},
@@ -522,9 +518,9 @@ DefineUnitType("unit-goblin-glider", {
 	Description = _("A brainchild of goblin inventiveness, gliders are used to scout ahead and determine enemy positions."),
 	Image = {"file", "goblin/units/glider.png", "size", {100, 100}},
 	Animations = "animations-goblin-glider", Icon = "icon-goblin-glider",
-	Costs = {"time", 65, "metal", 500, "lumber", 300},
+	Costs = {"time", 65, "copper", 500, "lumber", 300},
 	RepairHp = 4,
-	RepairCosts = {"metal", 1, "lumber", 1},
+	RepairCosts = {"copper", 1, "lumber", 1},
 	NeutralMinimapColor = {192, 192, 192},
 	Intelligence = 11,
 	Speed = 14,
@@ -612,7 +608,7 @@ DefineUnitType("unit-goblin-farm", { Name = _("Farm"),
 	Shadow = {"file", "goblin/buildings/farm_shadow.png", "size", {64, 64}},
 	Icon = "icon-goblin-farm",
 	HitPoints = 167, -- 200 with masonry
-	Costs = {"time", 80, "metal", 400, "lumber", 600},
+	Costs = {"time", 80, "copper", 400, "lumber", 600},
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
 	}

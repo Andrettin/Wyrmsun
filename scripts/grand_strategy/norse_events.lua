@@ -409,11 +409,11 @@ local NorseEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", 500)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "copper", 500)
 				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", -5)
 			end
 		},
-		OptionTooltips = {"+500 Metal\n-5 Research"}
+		OptionTooltips = {"+500 Copper\n-5 Research"}
 	},
 	NoblesAcquireLegalJurisdictionPrivilege = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
 		Name = "Nobles Acquire Legal Jurisdiction Privilege",
@@ -431,11 +431,11 @@ local NorseEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", 500)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "copper", 500)
 				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", -5)
 			end
 		},
-		OptionTooltips = {"+500 Metal\n-5 Research", ""}
+		OptionTooltips = {"+500 Copper\n-5 Research", ""}
 	},
 	TheLiftingOfTheVornedskabet = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
 		Name = "The Lifting of the Vornedskabet",
@@ -482,11 +482,11 @@ local NorseEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", -300)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "copper", -300)
 				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", -2)
 			end
 		},
-		OptionTooltips = {"-300 Metal\n-2 Research"}
+		OptionTooltips = {"-300 Copper\n-2 Research"}
 	}
 }
 	

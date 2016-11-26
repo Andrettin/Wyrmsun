@@ -319,7 +319,7 @@ function GenerateRandomWorldMap()
 		end
 	end
 
-	-- generate precious metal deposits
+	-- generate gold/silver/copper deposits
 	for i=1,(world_map_width * world_map_height / 128) do
 		for j=1,100 do
 			local RandomX = SyncRand(world_map_width)

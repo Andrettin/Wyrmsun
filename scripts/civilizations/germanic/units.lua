@@ -52,10 +52,6 @@ DefineUnitType("unit-germanic-worker", { Name = _("Bura"), -- Bûra = "Bauer" in
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese", "unit-carrots"},
 	CanGatherResources = {
 		{
-			"resource-id", "metal", -- this needs to be on top
-			"file-when-loaded", "germanic/units/worker_with_gold.png"
-		},
-		{
 			"resource-id", "gold", -- this needs to be on top
 			"file-when-loaded", "germanic/units/worker_with_gold.png"
 		},
@@ -106,7 +102,7 @@ DefineUnitType("unit-germanic-warrior", {
 		{"shield", "unit-wooden-shield"},
 		{"boots", "unit-boots"}
 	},
-	Costs = {"time", 50, "metal", 600},
+	Costs = {"time", 50, "copper", 600},
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,

@@ -52,10 +52,6 @@ DefineUnitType("unit-gnomish-worker", { Name = _("Scavenger"),
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-cheese", "unit-wool-shoes"},
 	CanGatherResources = {
 		{
-			"resource-id", "metal",
-			"file-when-loaded", "gnome/units/gnomish_worker_with_gold.png"
-		},
-		{
 			"resource-id", "gold",
 			"file-when-loaded", "gnome/units/gnomish_worker_with_gold.png"
 		},
@@ -159,7 +155,7 @@ DefineUnitType("unit-gnomish-recruit", { Name = _("Recruit"),
 		{"shield", "unit-round-shield"},
 		{"boots", "unit-wool-shoes"}
 	},
-	Costs = {"metal", 500},
+	Costs = {"copper", 500},
 	HitPoints = 50,
 	Accuracy = 11,
 	Evasion = 11,
@@ -627,9 +623,9 @@ DefineUnitType("unit-gnomish-caravan", { Name = _("Caravan"),
 	Description = _("These caravans are used by gnomish societies to conduct trade, bringing goods as far as the Heart Mountains."),
 	Image = {"file", "gnome/units/gnomish_caravan.png", "size", {64, 64}},
 	Animations = "animations-gnomish-caravan", Icon = "icon-gnomish-caravan",
-	Costs = {"time", 250, "metal", 900, "lumber", 900},
+	Costs = {"time", 250, "copper", 900, "lumber", 900},
 	RepairHp = 4,
-	RepairCosts = {"metal", 1, "lumber", 1},
+	RepairCosts = {"copper", 1, "lumber", 1},
 	Speed = 5,
 	HitPoints = 110,
 	TileSize = {1, 1}, BoxSize = {63, 63},

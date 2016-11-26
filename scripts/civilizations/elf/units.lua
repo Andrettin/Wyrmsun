@@ -58,7 +58,7 @@ DefineUnitType("unit-elven-swordsman", {
 		{"boots", "unit-boots"}
 	},
 	HairColor = "blond",
-	Costs = {"time", 50, "metal", 600},
+	Costs = {"time", 50, "copper", 600},
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,

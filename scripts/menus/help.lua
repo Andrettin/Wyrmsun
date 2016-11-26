@@ -137,7 +137,7 @@ local tips = {
 	
 	-- Resource-related tips
 	"You can build gold mines on top of gold deposits.",
-	"Gold, silver and copper are converted into metal when delivered, at a rate of 200%, 150% and 100%, respectively.",
+	"Silver and gold are converted into copper when delivered, at a rate of 200% and 400%, respectively.",
 	"If a worker is stuck between trees or rocks, it will drop the resources it is carrying to be able to harvest more and escape.",
 	
 	-- Fauna-related tips

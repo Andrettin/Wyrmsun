@@ -71,7 +71,7 @@ function RunResultsMenu()
 	end
 	menu:addLabel("Units", offx + 50, offy + bottom_offset, Fonts["large"], true)
 	menu:addLabel("Buildings", offx + 140, offy + bottom_offset, Fonts["large"], true)
-	menu:addLabel("Metal", offx + 230, offy + bottom_offset, Fonts["large"], true)
+	menu:addLabel("Copper", offx + 230, offy + bottom_offset, Fonts["large"], true)
 	menu:addLabel("Lumber", offx + 320, offy + bottom_offset, Fonts["large"], true)
 	menu:addLabel("Stone", offx + 410, offy + bottom_offset, Fonts["large"], true)
 --	menu:addLabel("Oil", offx + 410, offy + bottom_offset, Fonts["large"], true)
@@ -100,7 +100,7 @@ function RunResultsMenu()
 			menu:addLabel(GetPlayerData(i, "TotalBuildings"), offx + 100 + 40,
 				offy + bottom_offset + description_offset + line_spacing * c + 5,
 				Fonts["large"], true)
-			menu:addLabel(GetPlayerData(i, "TotalResources", "metal"), offx + 190 + 40,
+			menu:addLabel(GetPlayerData(i, "TotalResources", "copper"), offx + 190 + 40,
 				offy + bottom_offset + description_offset + line_spacing * c + 5,
 				Fonts["large"], true)
 			menu:addLabel(GetPlayerData(i, "TotalResources", "lumber"), offx + 280 + 40,

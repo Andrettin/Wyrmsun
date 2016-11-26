@@ -334,7 +334,7 @@ UI.StatusLine.TextY = Video.Height + 2 - 16
 UI.StatusLine.Width = Video.Width - 16 - 2 - 176
 UI.StatusLine.Font = Fonts["game"]
 
--- metal
+-- copper
 UI.Resources[1].G = CGraphic:New("ui/resources/copper.png", 14, 14)
 UI.Resources[1].IconFrame = 0
 UI.Resources[1].IconX = 154 + 0
@@ -427,11 +427,6 @@ UI.Resources[GetResourceIdByName("silver")].G = CGraphic:New("ui/resources/silve
 UI.Resources[GetResourceIdByName("silver")].IconFrame = 0
 UI.Resources[GetResourceIdByName("silver")].IconX = Video.Width
 UI.Resources[GetResourceIdByName("silver")].IconY = Video.Height
-
-UI.Resources[GetResourceIdByName("copper")].G = CGraphic:New("ui/resources/copper.png", 14, 14)
-UI.Resources[GetResourceIdByName("copper")].IconFrame = 0
-UI.Resources[GetResourceIdByName("copper")].IconX = Video.Width
-UI.Resources[GetResourceIdByName("copper")].IconY = Video.Height
 
 UI.Resources[GetResourceIdByName("labor")].G = CGraphic:New("ui/resources/labor.png", 14, 14)
 UI.Resources[GetResourceIdByName("labor")].IconFrame = 0
@@ -708,10 +703,10 @@ DefinePanelContents(
   Condition = {ShowOpponent = false, HideNeutral = true, TownHall = "only", Build = "false", Supply = "only", Training = "false", UpgradeTo = "false", Research = "false"},
   Contents = {
 	{ Pos = {9, 103}, More = {"Text", _("Processing")} },
-	{ Pos = {9, 116}, More = { "Text", {Text = _("Metal:")}}},
+	{ Pos = {9, 116}, More = { "Text", {Text = _("Copper:")}}},
 	{ Pos = {115, 116}, HighlightColor = "yellow", More = { "Text", {Text = Concat("100", 
-										If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "metal"), 100),
-										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "metal"), 100)))),
+										If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "copper"), 100),
+										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "copper"), 100)))),
 										""))}}
     },
 	{ Pos = {9, 130}, Condition = {LumberImprove = "only"}, More = {"Text", {Text = _("Lumber:")}}},

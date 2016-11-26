@@ -147,11 +147,11 @@ function DebugMessage(message)
 	DebugPrint(message .. "\n")
 end
 
-function AiCheat(metal, lumber, stone)
-	if (metal == nil) then metal = 0 end
+function AiCheat(copper, lumber, stone)
+	if (copper == nil) then copper = 0 end
 	if (lumber == nil) then lumber = 0 end
 	if (stone == nil) then stone = 0 end
-	SetPlayerData(AiPlayer(), "Resources", "metal", GetPlayerData(AiPlayer(), "Resources", "metal") + metal)
+	SetPlayerData(AiPlayer(), "Resources", "copper", GetPlayerData(AiPlayer(), "Resources", "copper") + copper)
 	SetPlayerData(AiPlayer(), "Resources", "lumber", GetPlayerData(AiPlayer(), "Resources", "lumber") + lumber)
 	SetPlayerData(AiPlayer(), "Resources", "stone", GetPlayerData(AiPlayer(), "Resources", "stone") + stone)
 end

@@ -11,7 +11,7 @@ if (GrandStrategyEventMap) then
 	SetPlayerData(0, "Faction", GrandStrategyFaction.Name)
 	SetPlayerData(1, "RaceName", "goblin")
 	SetPlayerData(1, "Name", "Goblin Thieves")
-	SetPlayerData(0, "Resources", "metal", 0)
+	SetPlayerData(0, "Resources", "copper", 0)
 	SetPlayerData(0, "Resources", "lumber", 0)
 	SetPlayerData(0, "Resources", "stone", 0)
 	SetAiType(0, "grand-strategy-battle")

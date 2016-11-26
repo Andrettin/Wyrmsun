@@ -35,7 +35,6 @@ DefineAnimations("animations-dwarven-miner", {
 	Still = UnitStill,
 	Move = UnitMove,
 	Attack = WorkerAttack,
-	Harvest_metal = WorkerMetalMining,
 	Harvest_gold = WorkerMetalMining,
 	Harvest_silver = WorkerMetalMining,
 	Harvest_copper = WorkerMetalMining,

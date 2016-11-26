@@ -154,8 +154,8 @@ function RunGrandStrategyGameSetupMenu()
 
 			-- add resource quantities to factions that don't have that set up
 			for key, value in pairs(Factions) do
-				if (GetFactionResource(Factions[key].Civilization, Factions[key].Name, "metal") == 0) then
-					SetFactionResource(Factions[key].Civilization, Factions[key].Name, "metal", 3000)
+				if (GetFactionResource(Factions[key].Civilization, Factions[key].Name, "copper") == 0) then
+					SetFactionResource(Factions[key].Civilization, Factions[key].Name, "copper", 3000)
 				end
 				if (GetFactionResource(Factions[key].Civilization, Factions[key].Name, "lumber") == 0) then
 					SetFactionResource(Factions[key].Civilization, Factions[key].Name, "lumber", 3000)
@@ -543,15 +543,15 @@ function EndTurn()
 	CalculateFactionUpkeeps()
 
 	for key, value in pairs(Factions) do
-		ChangeFactionResource(Factions[key].Civilization, Factions[key].Name, "metal", - GetFactionUpkeep(Factions[key].Civilization, Factions[key].Name))
+		ChangeFactionResource(Factions[key].Civilization, Factions[key].Name, "copper", - GetFactionUpkeep(Factions[key].Civilization, Factions[key].Name))
 	end
 
 	local disbanding_happened = false
-	-- disband units if metal is on the negative and upkeep is higher than income
+	-- disband units if copper is on the negative and upkeep is higher than income
 	for key, value in pairs(Factions) do
-		if (GetFactionResource(Factions[key].Civilization, Factions[key].Name, "metal") < 0 and GetFactionUpkeep(Factions[key].Civilization, Factions[key].Name) > GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "metal")) then
+		if (GetFactionResource(Factions[key].Civilization, Factions[key].Name, "copper") < 0 and GetFactionUpkeep(Factions[key].Civilization, Factions[key].Name) > GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "copper")) then
 			disbanding_happened = true
-			local disband_quota = GetFactionUpkeep(Factions[key].Civilization, Factions[key].Name) - GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "metal")
+			local disband_quota = GetFactionUpkeep(Factions[key].Civilization, Factions[key].Name) - GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "copper")
 			for province_i, province_key in ipairs(Factions[key].OwnedProvinces) do
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
@@ -1659,13 +1659,13 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 	UIElements[table.getn(UIElements)]:setFont(Fonts["game"])
 
 	local building_cost_tooltip = ""
-	if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type, "metal") > 0) then
+	if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type, "copper") > 0) then
 		if (building_cost_tooltip == "") then
 			building_cost_tooltip = "Costs "
 		else
 			building_cost_tooltip = building_cost_tooltip .. ", "
 		end
-		building_cost_tooltip = building_cost_tooltip .. GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type, "metal") .. " Metal"
+		building_cost_tooltip = building_cost_tooltip .. GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type, "copper") .. " Copper"
 	end
 	if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type, "lumber") > 0) then
 		if (building_cost_tooltip == "") then
@@ -1792,13 +1792,13 @@ function AddGrandStrategyTechnologyButton(x, y, unit_type)
 		end
 		cost_tooltip = cost_tooltip .. CUpgrade:Get(unit_type).GrandStrategyCosts[7] .. " Research"
 	end
-	if (CUpgrade:Get(unit_type).GrandStrategyCosts[1] > 0) then -- metal cost
+	if (CUpgrade:Get(unit_type).GrandStrategyCosts[1] > 0) then -- copper cost
 		if (cost_tooltip == "") then
 			cost_tooltip = "Costs "
 		else
 			cost_tooltip = cost_tooltip .. ", "
 		end
-		cost_tooltip = cost_tooltip .. CUpgrade:Get(unit_type).GrandStrategyCosts[1] .. " Metal"
+		cost_tooltip = cost_tooltip .. CUpgrade:Get(unit_type).GrandStrategyCosts[1] .. " Copper"
 	end
 	if (CUpgrade:Get(unit_type).GrandStrategyCosts[2] > 0) then -- lumber cost
 		if (cost_tooltip == "") then
@@ -1942,13 +1942,13 @@ function AddGrandStrategyMercenaryButton(x, y, unit_type)
 	UIElements[table.getn(UIElements)]:setFont(Fonts["game"])
 
 	local cost_tooltip = ""
-	if (GetUnitTypeData(unit_type, "Costs", "metal") > 0) then
+	if (GetUnitTypeData(unit_type, "Costs", "copper") > 0) then
 		if (cost_tooltip == "") then
 			cost_tooltip = "Costs "
 		else
 			cost_tooltip = cost_tooltip .. ", "
 		end
-		cost_tooltip = cost_tooltip .. GetUnitTypeData(unit_type, "Costs", "metal") * GetUnitTypeData(unit_type, "TrainQuantity") .. " Metal"
+		cost_tooltip = cost_tooltip .. GetUnitTypeData(unit_type, "Costs", "copper") * GetUnitTypeData(unit_type, "TrainQuantity") .. " Copper"
 	end
 	if (GetUnitTypeData(unit_type, "Costs", "lumber") > 0) then
 		if (cost_tooltip == "") then
@@ -1968,7 +1968,7 @@ function AddGrandStrategyMercenaryButton(x, y, unit_type)
 	end
 							
 	if (GetUnitTypeData(unit_type, "Upkeep") > 0) then
-		cost_tooltip = cost_tooltip .. "\n" .. GetUnitTypeData(unit_type, "Upkeep") * GetUnitTypeData(unit_type, "TrainQuantity") .. " Metal Upkeep"
+		cost_tooltip = cost_tooltip .. "\n" .. GetUnitTypeData(unit_type, "Upkeep") * GetUnitTypeData(unit_type, "TrainQuantity") .. " Copper Upkeep"
 	end
 							
 	local regiment_type_name = GetUnitTypeData(unit_type, "NamePlural")
@@ -2176,8 +2176,8 @@ function DrawGrandStrategyInterface()
 						end
 					end
 				elseif (GetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "PathwayConstruction") == false) then
---					local build_road_tooltip = "Build roads to connect resource tiles to your capital\nRoads allow more than 200 of a tile's output to be transported\nRoads between provinces allow more than 8 regiments to move or attack\nCosts 200 Metal and 200 Lumber"
-					local build_road_tooltip = "Build roads to connect resource tiles to your capital\nRoads allow more than 200 of a tile's output to be transported\nCosts 200 Metal and 200 Lumber"
+--					local build_road_tooltip = "Build roads to connect resource tiles to your capital\nRoads allow more than 200 of a tile's output to be transported\nRoads between provinces allow more than 8 regiments to move or attack\nCosts 200 Copper and 200 Lumber"
+					local build_road_tooltip = "Build roads to connect resource tiles to your capital\nRoads allow more than 200 of a tile's output to be transported\nCosts 200 Copper and 200 Lumber"
 					-- add a button for building a road
 					if (GetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "CanBuildPathway", "road", "north", false)) then
 						AddGrandStrategyThinImageButton("Build Road N", "", UI.InfoPanel.X + 72, Video.Height - (15 * 8) - 8, function()
@@ -2276,7 +2276,7 @@ function DrawGrandStrategyInterface()
 					b = AddGrandStrategyImageButton("", "", Video.Width - 243 + 112 - 2 - 24, icon_offset_y, function()
 						if (GetFactionCommodityTrade(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, string.lower(key)) > 0 and GetFactionCommodityTrade(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, string.lower(key)) < 100) then
 							SetFactionCommodityTrade(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, string.lower(key), 0)
-						elseif (GetFactionResource(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "metal") >= -1 * (GetFactionCommodityTrade(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, string.lower(key)) - 100) * GetCommodityPrice(string.lower(key)) / 100) then
+						elseif (GetFactionResource(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "copper") >= -1 * (GetFactionCommodityTrade(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, string.lower(key)) - 100) * GetCommodityPrice(string.lower(key)) / 100) then
 							ChangeFactionCommodityTrade(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, string.lower(key), -100)
 						end
 						DrawGrandStrategyInterface()
@@ -2320,7 +2320,7 @@ function DrawGrandStrategyInterface()
 					end
 
 					b = AddGrandStrategyLabel(GetCommodityPrice(string.lower(key)), Video.Width - 243 + 12 + 18, icon_offset_y + 3 + 1, Fonts["game"], false, false)
-					b:setTooltip(_("Price of 100 " .. key .. " in Metal"))
+					b:setTooltip(_("Price of 100 " .. key .. " in Copper"))
 					
 					if (GetFactionCommodityTrade(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, string.lower(key)) ~= 0) then
 						b = AddGrandStrategyLabel(math.abs(GetFactionCommodityTrade(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, string.lower(key))), Video.Width - 243 + 112 + 24 - 12, icon_offset_y + 2, Fonts["game"], true, false)
@@ -2414,13 +2414,13 @@ function DrawGrandStrategyInterface()
 							
 							local cost_tooltip = ""
 							cost_tooltip = "Costs 1 " .. GetUnitTypeName(GetFactionClassUnitType("worker", GetProvinceCivilization(SelectedProvince.Name), faction)) .. " unit"
-							if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "metal") > 0) then
+							if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "copper") > 0) then
 								if (cost_tooltip == "") then
 									cost_tooltip = "Costs "
 								else
 									cost_tooltip = cost_tooltip .. ", "
 								end
-								cost_tooltip = cost_tooltip .. GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "metal") .. " Metal"
+								cost_tooltip = cost_tooltip .. GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "copper") .. " Copper"
 							end
 							if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "lumber") > 0) then
 								if (cost_tooltip == "") then
@@ -2440,7 +2440,7 @@ function DrawGrandStrategyInterface()
 							end
 							
 							if (GetUnitTypeData(unitName, "Upkeep") > 0) then
-								cost_tooltip = cost_tooltip .. "\n" .. GetUnitTypeData(unitName, "Upkeep") .. " Metal Upkeep"
+								cost_tooltip = cost_tooltip .. "\n" .. GetUnitTypeData(unitName, "Upkeep") .. " Copper Upkeep"
 							end
 							
 							local regiment_type_name = GetUnitTypeData(unitName, "NamePlural")
@@ -2578,13 +2578,13 @@ function DrawGrandStrategyInterface()
 							b:setPressedImage(g_rslider_p)
 							
 							local cost_tooltip = ""
-							if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "metal") > 0) then
+							if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "copper") > 0) then
 								if (cost_tooltip == "") then
 									cost_tooltip = "Costs "
 								else
 									cost_tooltip = cost_tooltip .. ", "
 								end
-								cost_tooltip = cost_tooltip .. GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "metal") .. " Metal"
+								cost_tooltip = cost_tooltip .. GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "copper") .. " Copper"
 							end
 							if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "lumber") > 0) then
 								if (cost_tooltip == "") then
@@ -2604,7 +2604,7 @@ function DrawGrandStrategyInterface()
 							end
 							
 							if (GetUnitTypeData(unitName, "Upkeep") > 0) then
-								cost_tooltip = cost_tooltip .. "\n" .. GetUnitTypeData(unitName, "Upkeep") .. " Metal Upkeep"
+								cost_tooltip = cost_tooltip .. "\n" .. GetUnitTypeData(unitName, "Upkeep") .. " Copper Upkeep"
 							end
 							
 							local regiment_type_name = GetUnitTypeData(unitName, "NamePlural")
@@ -2625,7 +2625,7 @@ function DrawGrandStrategyInterface()
 				item_x = 0
 				item_y = 1
 				for i, unitName in ipairs(Units) do
-					if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Mercenary") and IsMercenaryAvailableForHiring(SelectedProvince, unitName)) then -- the unit's metal cost is required to be more than 0 to avoid upgraded versions of the same mercenary group to be available for hiring as well
+					if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Mercenary") and IsMercenaryAvailableForHiring(SelectedProvince, unitName)) then -- the unit's copper cost is required to be more than 0 to avoid upgraded versions of the same mercenary group to be available for hiring as well
 						local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
 						local icon_offset_y = Video.Height - 186 + 13 + (item_y * 47) + 19 + 4
 
@@ -2735,7 +2735,7 @@ function DrawGrandStrategyInterface()
 						Tip("Attacking Over Water", "To attack an enemy province over water, you need a dock in the coastal province where your troops are, and both provinces need to border at least one sea province in common.")
 					end
 				elseif (GrandStrategyInterfaceState == "town-hall" or GrandStrategyInterfaceState == "stronghold") then
-					Tip("Town Hall Interface", "A province's culture determines what is available in it. A province that has a different culture than your faction will suffer a penalty to economic efficiency. The number beside each commodity icon represents its price in metal, while the one between the arrows represents its quantity currently bid or offered by your faction - use the arrows to change it.")
+					Tip("Town Hall Interface", "A province's culture determines what is available in it. A province that has a different culture than your faction will suffer a penalty to economic efficiency. The number beside each commodity icon represents its price in copper, while the one between the arrows represents its quantity currently bid or offered by your faction - use the arrows to change it.")
 					Tip("Workers and Food", "Food is stored in each province. Once 2000 is accumulated, a new worker is created.")
 				elseif (GrandStrategyInterfaceState == "barracks") then
 					Tip("Barracks Interface", "Here you can recruit new units. The number on each unit icon represents how many units of that type are present in the province, while the number between the arrows represents how many are currently being trained. Use the arrows to change the quantity of units being trained.")
@@ -3040,9 +3040,9 @@ function AIDoTurn(ai_faction)
 		if (
 			borders_foreign == false
 			or GetFactionBuildingTypeCount(ai_faction, "town-hall") < GetFactionProvinceCount(ai_faction)
-			or ((GetFactionIncome(ai_faction.Civilization, ai_faction.Name, "metal") - GetFactionUpkeep(ai_faction.Civilization, ai_faction.Name)) < 100 and GetFactionResource(ai_faction.Civilization, ai_faction.Name, "metal") < 1500 * 4)
+			or ((GetFactionIncome(ai_faction.Civilization, ai_faction.Name, "copper") - GetFactionUpkeep(ai_faction.Civilization, ai_faction.Name)) < 100 and GetFactionResource(ai_faction.Civilization, ai_faction.Name, "copper") < 1500 * 4)
 			or GetProvinceAvailableWorkersForTraining(WorldMapProvinces[key].Name) < 1
-		) then -- don't build any military units if a province is lacking a town hall, if it doesn't border any non-owned provinces, or if net income is too small and metal reserves are too small; 800 is the highest metal cost a unit/building/technology can have
+		) then -- don't build any military units if a province is lacking a town hall, if it doesn't border any non-owned provinces, or if net income is too small and copper reserves are too small; 800 is the highest copper cost a unit/building/technology can have
 			desired_infantry_in_province = 0
 			desired_archers_in_province = 0
 			desired_cavalry_in_province = 0
@@ -3246,7 +3246,7 @@ function CanBuildStructure(province, unit_type)
 	end
 
 	if (
-		GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "metal") < GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "metal")
+		GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "copper") < GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "copper")
 		or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "lumber") < GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "lumber")
 		or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "stone") < GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "stone")
 	) then
@@ -3263,7 +3263,7 @@ function BuildStructure(province, unit_type)
 		end
 
 		SetProvinceCurrentConstruction(province.Name, unit_type)
-		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "metal", - GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "metal"))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "copper", - GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "copper"))
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "lumber", - GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "lumber"))
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "stone", - GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "stone"))
 	end
@@ -3272,7 +3272,7 @@ end
 function CancelBuildStructure(province, unit_type)
 	if (GetProvinceCurrentConstruction(province.Name) == unit_type) then
 		SetProvinceCurrentConstruction(province.Name, "")
-		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "metal", GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "metal"))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "copper", GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "copper"))
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "lumber", GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "lumber"))
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "stone", GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "stone"))
 	end
@@ -3280,7 +3280,7 @@ end
 
 function CanTrainUnit(province, unit_type)
 	if (
-		GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "metal") < GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "metal")
+		GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "copper") < GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "copper")
 		or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "lumber") < GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "lumber")
 		or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "stone") < GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "stone")
 		or (GetProvinceAvailableWorkersForTraining(province.Name) < 1 and GetUnitTypeData(unit_type, "Class") ~= "thief")
@@ -3346,7 +3346,7 @@ function TrainUnit(province, unit_type)
 
 	if (CanTrainUnit(province, unit_type)) then
 		SetProvinceUnderConstructionUnitQuantity(province.Name, unit_type, GetProvinceUnderConstructionUnitQuantity(province.Name, unit_type) + 1)
-		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "metal", - GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "metal"))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "copper", - GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "copper"))
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "lumber", - GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "lumber"))
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "stone", - GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "stone"))
 		if (GetUnitTypeData(unit_type, "Class") ~= "thief") then
@@ -3363,7 +3363,7 @@ function TrainUnitCancel(province, unit_type)
 
 	if (GetProvinceUnderConstructionUnitQuantity(province.Name, unit_type) >= 1) then
 		SetProvinceUnderConstructionUnitQuantity(province.Name, unit_type, GetProvinceUnderConstructionUnitQuantity(province.Name, unit_type) - 1)
-		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "metal", GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "metal"))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "copper", GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "copper"))
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "lumber", GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "lumber"))
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "stone", GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "stone"))
 		if (GetUnitTypeData(unit_type, "Class") ~= "thief") then
@@ -3375,7 +3375,7 @@ end
 function CanHireMercenary(province, unit_type)
 	local mercenary_quantity = MercenaryGroups[string.gsub(unit_type, "-", "_")]
 	if (
-		GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "metal") < (GetUnitTypeData(unit_type, "Costs", "metal") * mercenary_quantity)
+		GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "copper") < (GetUnitTypeData(unit_type, "Costs", "copper") * mercenary_quantity)
 		or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber") < (GetUnitTypeData(unit_type, "Costs", "lumber") * mercenary_quantity)
 		or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone") < (GetUnitTypeData(unit_type, "Costs", "stone") * mercenary_quantity)
 	) then
@@ -3401,7 +3401,7 @@ function HireMercenary(province, unit_type)
 	if (CanHireMercenary(province, unit_type)) then
 		local mercenary_quantity = MercenaryGroups[string.gsub(unit_type, "-", "_")]
 		SetProvinceUnderConstructionUnitQuantity(province.Name, unit_type, mercenary_quantity)
-		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "metal", - (GetUnitTypeData(unit_type, "Costs", "metal") * mercenary_quantity))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "copper", - (GetUnitTypeData(unit_type, "Costs", "copper") * mercenary_quantity))
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber", - (GetUnitTypeData(unit_type, "Costs", "lumber") * mercenary_quantity))
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone", - (GetUnitTypeData(unit_type, "Costs", "stone") * mercenary_quantity))
 	end
@@ -3411,7 +3411,7 @@ function CancelHireMercenary(province, unit_type)
 	if (GetProvinceUnderConstructionUnitQuantity(province.Name, unit_type) >= 1) then
 		local mercenary_quantity = GetProvinceUnderConstructionUnitQuantity(province.Name, unit_type)
 		SetProvinceUnderConstructionUnitQuantity(province.Name, unit_type, 0)
-		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "metal", (GetUnitTypeData(unit_type, "Costs", "metal") * mercenary_quantity))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "copper", (GetUnitTypeData(unit_type, "Costs", "copper") * mercenary_quantity))
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber", (GetUnitTypeData(unit_type, "Costs", "lumber") * mercenary_quantity))
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone", (GetUnitTypeData(unit_type, "Costs", "stone") * mercenary_quantity))
 	end
@@ -3471,7 +3471,7 @@ function IsTechnologyAvailable(province, unit_type)
 end
 
 function CanResearchTechnology(province, unit_type)
-	if (GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "metal") < CUpgrade:Get(unit_type).GrandStrategyCosts[1] or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber") < CUpgrade:Get(unit_type).GrandStrategyCosts[2] or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone") < CUpgrade:Get(unit_type).GrandStrategyCosts[5] or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "research") < CUpgrade:Get(unit_type).GrandStrategyCosts[7]) then
+	if (GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "copper") < CUpgrade:Get(unit_type).GrandStrategyCosts[1] or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber") < CUpgrade:Get(unit_type).GrandStrategyCosts[2] or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone") < CUpgrade:Get(unit_type).GrandStrategyCosts[5] or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "research") < CUpgrade:Get(unit_type).GrandStrategyCosts[7]) then
 		return false
 	end
 	
@@ -3485,7 +3485,7 @@ function ResearchTechnology(province, unit_type)
 		end
 
 		SetFactionCurrentResearch(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type)
-		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "metal", - CUpgrade:Get(unit_type).GrandStrategyCosts[1])
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "copper", - CUpgrade:Get(unit_type).GrandStrategyCosts[1])
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber", - CUpgrade:Get(unit_type).GrandStrategyCosts[2])
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone", - CUpgrade:Get(unit_type).GrandStrategyCosts[5])
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "research", - CUpgrade:Get(unit_type).GrandStrategyCosts[7])
@@ -3495,7 +3495,7 @@ end
 function CancelResearchTechnology(province, unit_type)
 	if (GetFactionCurrentResearch(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name)) == unit_type) then
 		SetFactionCurrentResearch(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "")
-		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "metal", CUpgrade:Get(unit_type).GrandStrategyCosts[1])
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "copper", CUpgrade:Get(unit_type).GrandStrategyCosts[1])
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber", CUpgrade:Get(unit_type).GrandStrategyCosts[2])
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone", CUpgrade:Get(unit_type).GrandStrategyCosts[5])
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "research", CUpgrade:Get(unit_type).GrandStrategyCosts[7])

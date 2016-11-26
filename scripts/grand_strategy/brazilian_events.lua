@@ -45,11 +45,11 @@ DefineGrandStrategyEvent("Companhia de Carris de Ferro da Cidade a Boavista", { 
 	Options = {"~!OK"},
 	OptionEffects = {
 		function(s)
-			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", 100)
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "copper", 100)
 			SetGrandStrategyProvinceData(EventProvince.Name, "Modifier", "upgrade-tramway-network", true)
 		end
 	},
-	OptionTooltips = {"+100 Metal\nA Tramway Network is built in PROVINCE_NAME"}
+	OptionTooltips = {"+100 Copper\nA Tramway Network is built in PROVINCE_NAME"}
 })
 
 DefineGrandStrategyEvent("Companhia do Caminho de Carris de Ferro do Jardim Botanico", { -- Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", pp. 7-9, 19.
@@ -72,11 +72,11 @@ DefineGrandStrategyEvent("Companhia do Caminho de Carris de Ferro do Jardim Bota
 	Options = {"~!OK"},
 	OptionEffects = {
 		function(s)
-			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", 100)
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "copper", 100)
 			SetGrandStrategyProvinceData(EventProvince.Name, "Modifier", "upgrade-tramway-network", true)
 		end
 	},
-	OptionTooltips = {"+100 Metal\nA Tramway Network is built in PROVINCE_NAME"}
+	OptionTooltips = {"+100 Copper\nA Tramway Network is built in PROVINCE_NAME"}
 })
 
 DefineGrandStrategyEvent("Companhia Ferro-Carril de Sao Cristovao", { -- Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", pp. 9-10.
@@ -99,11 +99,11 @@ DefineGrandStrategyEvent("Companhia Ferro-Carril de Sao Cristovao", { -- Source:
 	Options = {"~!OK"},
 	OptionEffects = {
 		function(s)
-			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", 100)
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "copper", 100)
 			SetGrandStrategyProvinceData(EventProvince.Name, "Modifier", "upgrade-tramway-network", true)
 		end
 	},
-	OptionTooltips = {"+100 Metal\nA Tramway Network is built in PROVINCE_NAME"}
+	OptionTooltips = {"+100 Copper\nA Tramway Network is built in PROVINCE_NAME"}
 })
 
 DefineGrandStrategyEvent("Companhia Ferro-Carril Carioca", { -- Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", pp. 11-12.
@@ -126,11 +126,11 @@ DefineGrandStrategyEvent("Companhia Ferro-Carril Carioca", { -- Source: Elisabet
 	Options = {"~!OK"},
 	OptionEffects = {
 		function(s)
-			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", 100)
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "copper", 100)
 			SetGrandStrategyProvinceData(EventProvince.Name, "Modifier", "upgrade-tramway-network", true)
 		end
 	},
-	OptionTooltips = {"+100 Metal\nA Tramway Network is built in PROVINCE_NAME"}
+	OptionTooltips = {"+100 Copper\nA Tramway Network is built in PROVINCE_NAME"}
 })
 
 DefineGrandStrategyEvent("Companhia Locomotora", { -- Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 12.
@@ -153,11 +153,11 @@ DefineGrandStrategyEvent("Companhia Locomotora", { -- Source: Elisabeth von der 
 	Options = {"~!OK"},
 	OptionEffects = {
 		function(s)
-			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", 100)
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "copper", 100)
 			SetGrandStrategyProvinceData(EventProvince.Name, "Modifier", "upgrade-tramway-network", true)
 		end
 	},
-	OptionTooltips = {"+100 Metal\nA Tramway Network is built in PROVINCE_NAME"}
+	OptionTooltips = {"+100 Copper\nA Tramway Network is built in PROVINCE_NAME"}
 })
 
 DefineGrandStrategyEvent("Companhia Ferro-Carril Fluminense", { -- Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 12.
@@ -180,11 +180,11 @@ DefineGrandStrategyEvent("Companhia Ferro-Carril Fluminense", { -- Source: Elisa
 	Options = {"~!OK"},
 	OptionEffects = {
 		function(s)
-			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", 100)
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "copper", 100)
 			SetGrandStrategyProvinceData(EventProvince.Name, "Modifier", "upgrade-tramway-network", true)
 		end
 	},
-	OptionTooltips = {"+100 Metal\nA Tramway Network is built in PROVINCE_NAME"}
+	OptionTooltips = {"+100 Copper\nA Tramway Network is built in PROVINCE_NAME"}
 })
 
 DefineGrandStrategyEvent("Companhia de Carris Urbanos", { -- Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 12.
@@ -208,10 +208,10 @@ DefineGrandStrategyEvent("Companhia de Carris Urbanos", { -- Source: Elisabeth v
 	Options = {"~!OK"},
 	OptionEffects = {
 		function(s)
-			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", 100)
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "copper", 100)
 		end
 	},
-	OptionTooltips = {"+100 Metal"}
+	OptionTooltips = {"+100 Copper"}
 })
 
 DefineGrandStrategyEvent("Companhia Ferro Carril de Vila Isabel", { -- Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 13.
@@ -234,11 +234,11 @@ DefineGrandStrategyEvent("Companhia Ferro Carril de Vila Isabel", { -- Source: E
 	Options = {"~!OK"},
 	OptionEffects = {
 		function(s)
-			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", 100)
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "copper", 100)
 			SetGrandStrategyProvinceData(EventProvince.Name, "Modifier", "upgrade-tramway-network", true)
 		end
 	},
-	OptionTooltips = {"+100 Metal\nA Tramway Network is built in PROVINCE_NAME"}
+	OptionTooltips = {"+100 Copper\nA Tramway Network is built in PROVINCE_NAME"}
 })
 
 DefineGrandStrategyEvent("Companhia Ferro-Carril e Hotel Corcovado", { -- Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 18.
@@ -262,11 +262,11 @@ DefineGrandStrategyEvent("Companhia Ferro-Carril e Hotel Corcovado", { -- Source
 	Options = {"~!OK"},
 	OptionEffects = {
 		function(s)
-			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", 100)
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "copper", 100)
 			SetGrandStrategyProvinceData(EventProvince.Name, "Modifier", "upgrade-tramway-network", true)
 		end
 	},
-	OptionTooltips = {"+100 Metal\nA Tramway Network is built in PROVINCE_NAME"}
+	OptionTooltips = {"+100 Copper\nA Tramway Network is built in PROVINCE_NAME"}
 })
 
 DefineGrandStrategyEvent("Exposicao dos Caminhos de Ferro Brasileiros", { -- Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 18.
@@ -316,11 +316,11 @@ DefineGrandStrategyEvent("Sao Paulo Tramway Light and Power Co. Ltd.", { -- Sour
 	Options = {"~!OK"},
 	OptionEffects = {
 		function(s)
-			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", 100)
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "copper", 100)
 			SetGrandStrategyProvinceData(EventProvince.Name, "Modifier", "upgrade-tramway-network", true)
 		end
 	},
-	OptionTooltips = {"+100 Metal\nA Tramway Network is built in PROVINCE_NAME"}
+	OptionTooltips = {"+100 Copper\nA Tramway Network is built in PROVINCE_NAME"}
 })
 
 DefineGrandStrategyEvent("The Rio de Janeiro Tramway, Light and Power Co. Ltd.", { -- Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 24.
@@ -344,9 +344,9 @@ DefineGrandStrategyEvent("The Rio de Janeiro Tramway, Light and Power Co. Ltd.",
 	Options = {"~!OK"},
 	OptionEffects = {
 		function(s)
-			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "metal", 100)
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "copper", 100)
 			SetGrandStrategyProvinceData(EventProvince.Name, "Modifier", "upgrade-tramway-network", true)
 		end
 	},
-	OptionTooltips = {"+100 Metal\nA Tramway Network is built in PROVINCE_NAME"}
+	OptionTooltips = {"+100 Copper\nA Tramway Network is built in PROVINCE_NAME"}
 })

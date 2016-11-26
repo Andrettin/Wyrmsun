@@ -87,7 +87,7 @@ AddTrigger("the-treasures-of-svarinshaug-introduction",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("Brising Clan") and not PlayerHasObjective(GetFactionPlayer("Brising Clan"), "- Collect 8000 metal")) then
+		if (GetFactionExists("Brising Clan") and not PlayerHasObjective(GetFactionPlayer("Brising Clan"), "- Collect 8000 copper")) then
 			player = GetFactionPlayer("Brising Clan")
 			return true
 		end
@@ -123,7 +123,7 @@ AddTrigger("the-treasures-of-svarinshaug-introduction",
 					player,
 					{"~!Continue"},
 					{function(s)
-						AddPlayerObjective(player, "- Collect 8000 metal")
+						AddPlayerObjective(player, "- Collect 8000 copper")
 						AddPlayerObjective(player, "- Brokk must survive")
 						AddPlayerObjective(player, "- Eitri must survive")
 					end}
@@ -144,7 +144,7 @@ AddTrigger("the-treasures-of-svarinshaug-victory",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Collect 8000 metal") and GetPlayerData(GetThisPlayer(), "Resources", "metal") >= 8000) then
+		if (PlayerHasObjective(GetThisPlayer(), "- Collect 8000 copper") and GetPlayerData(GetThisPlayer(), "Resources", "copper") >= 8000) then
 			player = GetThisPlayer()
 			return true
 		end

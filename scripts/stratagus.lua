@@ -241,7 +241,7 @@ AddColorCyclingRange(38, 47) -- water
 --  Edit next to increase the speed, for debugging.
 
 --  Decrease the mining time by this factor.
---SetSpeedResourcesHarvest("metal", 10)
+--SetSpeedResourcesHarvest("copper", 10)
 --  Decrease the time in a gold deposit by this factor.
 --SetSpeedResourcesReturn("gold", 10)
 --  Decrease the time for chopping a tree by this factor.
@@ -804,7 +804,7 @@ function StandardTriggers()
 					end
 				end,
 				function()
-					Tip("Miner", "The Miner is the worker unit of the Dwarven civilization. It is used to build structures, harvest resources and repair buildings. Miners can be trained at the Mead Hall. Miners have a gathering rate bonus when harvesting metal, and a malus when gathering lumber.")
+					Tip("Miner", "The Miner is the worker unit of the Dwarven civilization. It is used to build structures, harvest resources and repair buildings. Miners can be trained at the Mead Hall. Miners have a gathering rate bonus when harvesting metals, and a malus when gathering lumber.")
 					return false
 				end
 			)
@@ -1028,7 +1028,7 @@ function StandardTriggers()
 					end
 				end,
 				function()
-					Tip("Gold Rock", "Gold rocks can be mined for gold, which when processed is converted to metal at a 200% rate.")
+					Tip("Gold Rock", "Gold rocks can be mined for gold, which when processed is converted to copper at a 400% rate.")
 					return false
 				end
 			)
@@ -1044,7 +1044,7 @@ function StandardTriggers()
 					end
 				end,
 				function()
-					Tip("Gold Deposit", "Gold deposits are the most durable source of gold. Build a gold mine on top of it to harvest the gold within, which when processed is converted to metal at a 200% rate.")
+					Tip("Gold Deposit", "Gold deposits are the most durable source of gold. Build a gold mine on top of it to harvest the gold within, which when processed is converted to copper at a 400% rate.")
 					return false
 				end
 			)
@@ -1060,7 +1060,7 @@ function StandardTriggers()
 					end
 				end,
 				function()
-					Tip("Silver Rock", "Silver rocks can be mined for silver, which when processed is converted to metal at a 150% rate.")
+					Tip("Silver Rock", "Silver rocks can be mined for silver, which when processed is converted to copper at a 200% rate.")
 					return false
 				end
 			)
@@ -1076,7 +1076,7 @@ function StandardTriggers()
 					end
 				end,
 				function()
-					Tip("Silver Deposit", "Silver deposits are the most durable source of silver. Build a silver mine on top of it to harvest the silver within, which when processed is converted to metal at a 150% rate.")
+					Tip("Silver Deposit", "Silver deposits are the most durable source of silver. Build a silver mine on top of it to harvest the silver within, which when processed is converted to copper at a 200% rate.")
 					return false
 				end
 			)
@@ -1092,7 +1092,7 @@ function StandardTriggers()
 					end
 				end,
 				function()
-					Tip("Copper Rock", "Copper rocks can be mined for copper, which when processed is converted to metal at a 100% rate.")
+					Tip("Copper Rock", "Copper rocks can be mined for copper.")
 					return false
 				end
 			)
@@ -1108,7 +1108,7 @@ function StandardTriggers()
 					end
 				end,
 				function()
-					Tip("Copper Deposit", "Copper deposits are the most durable source of copper. Build a copper mine on top of it to harvest the copper within, which when processed is converted to metal at a 100% rate.")
+					Tip("Copper Deposit", "Copper deposits are the most durable source of copper. Build a copper mine on top of it to harvest the copper within.")
 					return false
 				end
 			)

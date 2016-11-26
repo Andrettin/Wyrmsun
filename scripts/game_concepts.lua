@@ -64,7 +64,7 @@ GameConcepts = {
 	},
 	Harvesting = {
 		Name = _("Har~!vesting"),
-		Description = _("Resources can be harvested by worker units. Metal is mined by assigning workers to metal (copper, silver or gold) rocks or mines (built on deposits). Lumber is gathered by harvesting trees or wood piles, while stone is harvested from rocks. Coal mines are used in a similar manner to metal mines, but they appear only in specific scenarios.")
+		Description = _("Resources can be harvested by worker units. Copper is mined by assigning workers to copper rocks and copper mines (built on copper deposits), or to their silver and gold equivalents - which when delivered will be converted to copper. Lumber is gathered by harvesting trees or wood piles, while stone is harvested from rocks. Coal mines are used in a similar manner to copper mines, but they appear only in specific scenarios.")
 	},
 	Heroes = {
 		Name = _("~!Heroes"),
@@ -84,7 +84,7 @@ GameConcepts = {
 	},
 	Mercenaries = {
 		Name = _("Mer~!cenaries"),
-		Description = _("Groups of mercenaries can be hired at mercenary camps, providing the player with a few experienced warriors, no time needing to be spent in training them. Mercenaries do cost quite a bit of metal, however. Besides mercenary squads, players can also hire thieves in mercenary camps. Like mercenary groups, thieves are hired instantly.")
+		Description = _("Groups of mercenaries can be hired at mercenary camps, providing the player with a few experienced warriors, no time needing to be spent in training them. Mercenaries do cost quite a bit of copper, however. Besides mercenary squads, players can also hire thieves in mercenary camps. Like mercenary groups, thieves are hired instantly.")
 	},
 	Quests = {
 		Name = _("~!Quests"),
@@ -169,6 +169,6 @@ GrandStrategyGameConcepts = {
 	},
 	Upkeep = {
 		Name = _("~!Upkeep"),
-		Description = _("In the Grand Strategy mode, each military unit costs some upkeep in metal. If the upkeep is not paid, the unit will be disbanded.")
+		Description = _("In the Grand Strategy mode, each military unit costs some upkeep in copper. If the upkeep is not paid, the unit will be disbanded.")
 	}
 }

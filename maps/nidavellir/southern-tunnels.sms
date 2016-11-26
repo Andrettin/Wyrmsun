@@ -256,7 +256,7 @@ ApplyRawTiles()
 -- Player Setup
 SetStartView(0, 16, 26)
 SetPlayerData(0, "RaceName", "dwarf")
-SetPlayerData(0, "Resources", "metal", 2000)
+SetPlayerData(0, "Resources", "copper", 2000)
 SetPlayerData(0, "Resources", "lumber", 2000)
 SetPlayerData(0, "Resources", "stone", 1000)
 SetPlayerData(0, "Resources", "oil", 0)
@@ -266,7 +266,7 @@ SetPlayerData(3, "RaceName", "dwarf")
 if (GrandStrategy == false) then
 	SetPlayerData(3, "Faction", "knalga")
 end
-SetPlayerData(3, "Resources", "metal", 2000)
+SetPlayerData(3, "Resources", "coppercopper", 2000)
 SetPlayerData(3, "Resources", "lumber", 2000)
 SetPlayerData(3, "Resources", "stone", 1000)
 SetPlayerData(3, "Resources", "oil", 0)

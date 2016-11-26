@@ -36,35 +36,35 @@ function LoadFactions(world)
 		asa_tribe = {
 			Name = "asa-tribe",
 			Civilization = "germanic",
-			Metal = 3000,
+			Copper = 3000,
 			Commodities = {
-				Lumber = 1500, -- half of the metal value
-				Stone = 1500 -- half of the metal value
+				Lumber = 1500, -- half of the copper value
+				Stone = 1500 -- half of the copper value
 			}
 		},
 		-- Latin polities
 		rome = {
 			Name = "rome",
 			Civilization = "latin",
-			Metal = 5000
+			Copper = 5000
 		},
 		-- Non-Playable Tribes
 		gylfing_tribe = {
 			Name = "gylfing-tribe",
 			Civilization = "basque",
-			Metal = 5000,
+			Copper = 5000,
 			Commodities = {
-				Lumber = 2500, -- half of the metal value
-				Stone = 2500 -- half of the metal value
+				Lumber = 2500, -- half of the copper value
+				Stone = 2500 -- half of the copper value
 			}
 		},
 		vana_tribe = {
 			Name = "vana-tribe",
 			Civilization = "celt",
-			Metal = 5000,
+			Copper = 5000,
 			Commodities = {
-				Lumber = 2500, -- half of the metal value
-				Stone = 2500 -- half of the metal value
+				Lumber = 2500, -- half of the copper value
+				Stone = 2500 -- half of the copper value
 			}
 		}
 	}
@@ -73,57 +73,57 @@ function LoadFactions(world)
 		untersberg = {
 			Name = "untersberg",
 			Civilization = "gnome",
-			Metal = 7500,
+			Copper = 7500,
 			Commodities = {
-				Lumber = 3750, -- half of the metal value
-				Stone = 3750 -- half of the metal value
+				Lumber = 3750, -- half of the copper value
+				Stone = 3750 -- half of the copper value
 			}
 		},
 		-- Dwarven clans
 		norlund_clan = {
 			Name = "norlund-clan",
 			Civilization = "dwarf",
-			Metal = 3000,
+			Copper = 3000,
 			Commodities = {
-				Lumber = 1500, -- half of the metal value
-				Stone = 1500 -- half of the metal value
+				Lumber = 1500, -- half of the copper value
+				Stone = 1500 -- half of the copper value
 			}
 		},
 		shinsplitter_clan = {
 			Name = "shinsplitter-clan",
 			Civilization = "dwarf",
-			Metal = 7500,
+			Copper = 7500,
 			Commodities = {
-				Lumber = 3750, -- half of the metal value
-				Stone = 3750 -- half of the metal value
+				Lumber = 3750, -- half of the copper value
+				Stone = 3750 -- half of the copper value
 			}
 		},
 		shorbear_clan = {
 			Name = "shorbear-clan",
 			Civilization = "dwarf",
-			Metal = 9000, -- 300 / 20 * 600 (base value divided by 20, the usual level 1 Wesnoth unit metal cost, and multiplied by 600, the basic military unit metal cost in Wyrmsun)
+			Copper = 9000, -- 300 / 20 * 600 (base value divided by 20, the usual level 1 Wesnoth unit gold cost, and multiplied by 600, the basic military unit copper cost in Wyrmsun)
 			Commodities = {
-				Lumber = 4500, -- half of the metal value
-				Stone = 4500 -- half of the metal value
+				Lumber = 4500, -- half of the copper value
+				Stone = 4500 -- half of the copper value
 			}
 		},
 		-- Goblin tribes
 		khag_tribe = {
 			Name = "khag-tribe",
 			Civilization = "goblin",
-			Metal = 750,
+			Copper = 750,
 			Commodities = {
-				Lumber = 375, -- half of the metal value
-				Stone = 375 -- half of the metal value
+				Lumber = 375, -- half of the copper value
+				Stone = 375 -- half of the copper value
 			}
 		},
 		lggi_tribe = {
 			Name = "lggi-tribe",
 			Civilization = "goblin",
-			Metal = 2700,
+			Copper = 2700,
 			Commodities = {
-				Lumber = 1350, -- half of the metal value
-				Stone = 1350 -- half of the metal value
+				Lumber = 1350, -- half of the copper value
+				Stone = 1350 -- half of the copper value
 			}
 		}
 	}

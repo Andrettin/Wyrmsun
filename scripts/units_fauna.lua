@@ -1070,7 +1070,7 @@ DefineUnitType("unit-wyrm", {
 	Background = "The dragons of Norse mythology, also referred to as serpents, had different physical characteristics than the dragons of medieval folklore. The Norse dragons were wingless, and entirely or partially limbless. The most famous of them were Jormungand and Nidhogg. The ~<Grimnismol~> includes a list of other notable ones, Svafnir among them. The constellation Draco (\"Dragon\") represents the giant serpent of Greek mythology, Ladon.",
 	Image = {"file", "neutral/units/wyrm.png", "size", {110, 108}},
 	Animations = "animations-wyrm", Icon = "icon-wyrm",
-	Costs = {"time", 250, "metal", 2500},
+	Costs = {"time", 250, "copper", 2500},
 	Strength = 27,
 	Dexterity = 10,
 	Intelligence = 5, -- same as a gryphon

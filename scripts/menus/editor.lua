@@ -424,7 +424,7 @@ function RunEditorPlayerProperties()
 		for j = 1,table.getn(ais) do
 			if (ais[j] == Players[i-1].AiName) then player_properties[i].AI = j-1 end
 		end
-		player_properties[i]["Metal"] = Players[i-1].Resources[1]
+		player_properties[i]["Copper"] = Players[i-1].Resources[1]
 		player_properties[i]["Lumber"] = Players[i-1].Resources[2]
 		player_properties[i]["Stone"] = Players[i-1].Resources[5]
 		table.insert(player_list, "Player " .. i)
@@ -438,8 +438,8 @@ function RunEditorPlayerProperties()
 	local current_player_faction_label
 	local current_player_ai
 	local current_player_ai_label
-	local current_player_metal
-	local current_player_metal_label
+	local current_player_copper
+	local current_player_copper_label
 	local current_player_lumber
 	local current_player_lumber_label
 	local current_player_stone
@@ -456,7 +456,7 @@ function RunEditorPlayerProperties()
 		current_player_faction:setSize(236, 20)
 		
 		current_player_ai:setSelected(player_properties[current_player:getSelected() + 1].AI)
-		current_player_metal:setText(player_properties[current_player:getSelected() + 1].Metal)
+		current_player_copper:setText(player_properties[current_player:getSelected() + 1].Copper)
 		current_player_lumber:setText(player_properties[current_player:getSelected() + 1].Lumber)
 		current_player_stone:setText(player_properties[current_player:getSelected() + 1].Stone)
 		local player_active = current_player_type:getSelected() ~= 1
@@ -466,8 +466,8 @@ function RunEditorPlayerProperties()
 		current_player_faction_label:setVisible(player_active)
 		current_player_ai:setVisible(player_active)
 		current_player_ai_label:setVisible(player_active)
-		current_player_metal:setVisible(player_active)
-		current_player_metal_label:setVisible(player_active)
+		current_player_copper:setVisible(player_active)
+		current_player_copper_label:setVisible(player_active)
 		current_player_lumber:setVisible(player_active)
 		current_player_lumber_label:setVisible(player_active)
 		current_player_stone:setVisible(player_active)
@@ -503,8 +503,8 @@ function RunEditorPlayerProperties()
 	end)
 	current_player_ai:setSize(236, 20)
 	
-	current_player_metal_label = menu:addLabel(_("Metal:"), 10, 12 + 36 * 6, Fonts["game"], false)
-	current_player_metal = menu:addTextInputField(player_properties[current_player:getSelected() + 1].Metal, (sizeX / 2) - 60 - 10, 11 + 36 * 6, 60)
+	current_player_copper_label = menu:addLabel(_("Copper:"), 10, 12 + 36 * 6, Fonts["game"], false)
+	current_player_copper = menu:addTextInputField(player_properties[current_player:getSelected() + 1].Copper, (sizeX / 2) - 60 - 10, 11 + 36 * 6, 60)
 
 	current_player_lumber_label = menu:addLabel(_("Lumber:"), (sizeX / 2) + 10, 12 + 36 * 6, Fonts["game"], false)
 	current_player_lumber = menu:addTextInputField(player_properties[current_player:getSelected() + 1].Lumber, sizeX - 60 - 10, 11 + 36 * 6, 60)
@@ -513,7 +513,7 @@ function RunEditorPlayerProperties()
 	current_player_stone = menu:addTextInputField(player_properties[current_player:getSelected() + 1].Stone, (sizeX / 2) - 60 - 10, 11 + 36 * 7, 60)
 
 	local function listen()
-		player_properties[current_player:getSelected() + 1].Metal = current_player_metal:getText()
+		player_properties[current_player:getSelected() + 1].Copper = current_player_copper:getText()
 		player_properties[current_player:getSelected() + 1].Lumber = current_player_lumber:getText()
 		player_properties[current_player:getSelected() + 1].Stone = current_player_stone:getText()
 	end
@@ -529,7 +529,7 @@ function RunEditorPlayerProperties()
 				Players[i].Race = player_properties[i + 1].Civilization
 				SetPlayerData(i, "Faction", player_properties[i + 1].Faction)
 				Players[i].AiName = ais[player_properties[i + 1].AI + 1]
-				Players[i].Resources[1] = player_properties[i + 1].Metal
+				Players[i].Resources[1] = player_properties[i + 1].Copper
 				Players[i].Resources[2] = player_properties[i + 1].Lumber
 				Players[i].Resources[5] = player_properties[i + 1].Stone
 			end
@@ -2020,13 +2020,13 @@ function EditUnitTypePropertiesResourceStats(unit_type)
 	menu:resize(sizeX, sizeY)
 	menu:addLabel(_(GetUnitTypeName(unit_type)) .. " " .. _("Properties"), sizeX / 2, 11)
 	
-	local resources_displayed = {"time", "metal", "lumber", "stone"}
+	local resources_displayed = {"time", "copper", "lumber", "stone"}
 
 	menu:addLabel(_("Time Cost:"), 10, 12 + 36 * 1, Fonts["game"], false)
 	local time_cost_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Costs", "time"), (sizeX / 2) - 60 - 10, 11 + 36 * 1, 60)
 
-	menu:addLabel(_("Metal Cost:"), (sizeX / 2) + 10, 12 + 36 * 1, Fonts["game"], false)
-	local metal_cost_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Costs", "metal"), sizeX - 60 - 10, 11 + 36 * 1, 60)
+	menu:addLabel(_("Copper Cost:"), (sizeX / 2) + 10, 12 + 36 * 1, Fonts["game"], false)
+	local copper_cost_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Costs", "copper"), sizeX - 60 - 10, 11 + 36 * 1, 60)
 
 	menu:addLabel(_("Lumber Cost:"), 10, 12 + 36 * 2, Fonts["game"], false)
 	local lumber_cost_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Costs", "lumber"), (sizeX / 2) - 60 - 10, 11 + 36 * 2, 60)
@@ -2034,8 +2034,8 @@ function EditUnitTypePropertiesResourceStats(unit_type)
 	menu:addLabel(_("Stone Cost:"), (sizeX / 2) + 10, 12 + 36 * 2, Fonts["game"], false)
 	local stone_cost_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Costs", "stone"), sizeX - 60 - 10, 11 + 36 * 2, 60)
 
-	menu:addLabel(_("Metal Proc.:"), 10, 12 + 36 * 3, Fonts["game"], false)
-	local metal_processing_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ImproveProduction", "metal"), (sizeX / 2) - 60 - 10, 11 + 36 * 3, 60)
+	menu:addLabel(_("Copper Proc.:"), 10, 12 + 36 * 3, Fonts["game"], false)
+	local copper_processing_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ImproveProduction", "copper"), (sizeX / 2) - 60 - 10, 11 + 36 * 3, 60)
 
 	menu:addLabel(_("Lumber Proc.:"), (sizeX / 2) + 10, 12 + 36 * 3, Fonts["game"], false)
 	local lumber_processing_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ImproveProduction", "lumber"),  sizeX - 60 - 10, 11 + 36 * 3, 60)
@@ -2052,14 +2052,14 @@ function EditUnitTypePropertiesResourceStats(unit_type)
 		function()
 			if (tonumber(time_cost_value:getText()) == nil) then
 				GenericDialog("Error", "The time cost must be a number.")
-			elseif (tonumber(metal_cost_value:getText()) == nil) then
-				GenericDialog("Error", "The metal cost must be a number.")
+			elseif (tonumber(copper_cost_value:getText()) == nil) then
+				GenericDialog("Error", "The copper cost must be a number.")
 			elseif (tonumber(lumber_cost_value:getText()) == nil) then
 				GenericDialog("Error", "The lumber cost must be a number.")
 			elseif (tonumber(stone_cost_value:getText()) == nil) then
 				GenericDialog("Error", "The stone cost must be a number.")
-			elseif (tonumber(metal_processing_value:getText()) == nil) then
-				GenericDialog("Error", "The metal processing must be a number.")
+			elseif (tonumber(copper_processing_value:getText()) == nil) then
+				GenericDialog("Error", "The copper processing must be a number.")
 			elseif (tonumber(lumber_processing_value:getText()) == nil) then
 				GenericDialog("Error", "The lumber processing must be a number.")
 			elseif (tonumber(stone_processing_value:getText()) == nil) then
@@ -2075,9 +2075,9 @@ function EditUnitTypePropertiesResourceStats(unit_type)
 						table.insert(unit_type_definition.Costs, "time")
 						table.insert(unit_type_definition.Costs, tonumber(time_cost_value:getText()))
 					end
-					if (metal_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "metal")) then
-						table.insert(unit_type_definition.Costs, "metal")
-						table.insert(unit_type_definition.Costs, tonumber(metal_cost_value:getText()))
+					if (copper_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "copper")) then
+						table.insert(unit_type_definition.Costs, "copper")
+						table.insert(unit_type_definition.Costs, tonumber(copper_cost_value:getText()))
 					end
 					if (lumber_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "lumber")) then
 						table.insert(unit_type_definition.Costs, "lumber")
@@ -2087,9 +2087,9 @@ function EditUnitTypePropertiesResourceStats(unit_type)
 						table.insert(unit_type_definition.Costs, "stone")
 						table.insert(unit_type_definition.Costs, tonumber(stone_cost_value:getText()))
 					end
-					if (metal_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "metal")) then
-						table.insert(unit_type_definition.ImproveProduction, "metal")
-						table.insert(unit_type_definition.ImproveProduction, tonumber(metal_processing_value:getText()))
+					if (copper_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "copper")) then
+						table.insert(unit_type_definition.ImproveProduction, "copper")
+						table.insert(unit_type_definition.ImproveProduction, tonumber(copper_processing_value:getText()))
 					end
 					if (lumber_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "lumber")) then
 						table.insert(unit_type_definition.ImproveProduction, "lumber")
@@ -2105,8 +2105,8 @@ function EditUnitTypePropertiesResourceStats(unit_type)
 					if (time_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "time")) then
 						SetModStat(Map.Info.Filename, unit_type, "Costs", time_cost_value:getText() - GetUnitTypeData(unit_type, "Costs", "time"), "time")
 					end
-					if (metal_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "metal")) then
-						SetModStat(Map.Info.Filename, unit_type, "Costs", metal_cost_value:getText() - GetUnitTypeData(unit_type, "Costs", "metal"), "metal")
+					if (copper_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "copper")) then
+						SetModStat(Map.Info.Filename, unit_type, "Costs", copper_cost_value:getText() - GetUnitTypeData(unit_type, "Costs", "copper"), "copper")
 					end
 					if (lumber_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "lumber")) then
 						SetModStat(Map.Info.Filename, unit_type, "Costs", lumber_cost_value:getText() - GetUnitTypeData(unit_type, "Costs", "lumber"), "lumber")
@@ -2114,8 +2114,8 @@ function EditUnitTypePropertiesResourceStats(unit_type)
 					if (stone_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "stone")) then
 						SetModStat(Map.Info.Filename, unit_type, "Costs", stone_cost_value:getText() - GetUnitTypeData(unit_type, "Costs", "stone"), "stone")
 					end
-					if (metal_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "metal")) then
-						SetModStat(Map.Info.Filename, unit_type, "ImproveProduction", metal_processing_value:getText() - GetUnitTypeData(unit_type, "ImproveProduction", "metal"), "metal")
+					if (copper_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "copper")) then
+						SetModStat(Map.Info.Filename, unit_type, "ImproveProduction", copper_processing_value:getText() - GetUnitTypeData(unit_type, "ImproveProduction", "copper"), "copper")
 					end
 					if (lumber_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "lumber")) then
 						SetModStat(Map.Info.Filename, unit_type, "ImproveProduction", lumber_processing_value:getText() - GetUnitTypeData(unit_type, "ImproveProduction", "lumber"), "lumber")
