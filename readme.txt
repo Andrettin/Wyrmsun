@@ -82,6 +82,7 @@ https://github.com/Andrettin/Wyrmsun
 - Revamped Anglo-Saxon personal names.
 - Revamped Lombardic personal names.
 - Faction splitting now only happens in the campaign mode.
+- Added several new Germanic tribes: the Eraling Tribe (+2 Damage for Eralas), the Karling Tribe (+1 Food per Farm), the Thielung Tribe (+1 Damage and +1 Accuracy for Eralas) and the Thrahiling Tribe (+5% Lumber Processing).
 
 * Grand Strategy
 - Fixed issue which sometimes caused a crash when loading a grand strategy game.

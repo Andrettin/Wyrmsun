@@ -92,7 +92,7 @@ DefineFaction("karling-tribe", {
 	Civilization = "germanic",
 	Type = "tribe",
 	Colors = {"brown"},
-	FactionUpgrade = "upgrade-yngling-tribe-faction",
+	FactionUpgrade = "upgrade-karling-tribe-faction",
 	DefaultAI = "passive",
 	Background = "In Norse mythology, Karl (rendered in Proto-Germanic as Karla) was one of the sons of the god Rig, and the ancestor of those belonging to the social class of peasants."
 })

@@ -35,6 +35,10 @@ DefineUpgrade("upgrade-jarling-tribe-faction", {
 	Name = _("Eraling Tribe Faction")
 })
 
+DefineUpgrade("upgrade-karling-tribe-faction", {
+	Name = _("Karling Tribe Faction")
+})
+
 DefineUpgrade("upgrade-skeldung-tribe-faction", {
 	Name = _("Skeldung Tribe Faction")
 })
@@ -65,6 +69,11 @@ DefineModifier("upgrade-jarling-tribe-faction",
 	{"Points", 10},
 	{"apply-to", "unit-germanic-warrior"},
 	{"apply-to", "unit-germanic-veteran-warrior"}
+)
+
+DefineModifier("upgrade-karling-tribe-faction",
+	{"Supply", 1},
+	{"apply-to", "unit-germanic-farm"}
 )
 
 DefineModifier("upgrade-skeldung-tribe-faction",
