@@ -505,7 +505,9 @@ DefineDialogue("sigiberts-murder", {
 			"text", "Fredegunde...",
 			"option-effects", {
 				function(s)
-					CallDialogue("campaign-victory", trigger_player)
+					if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "sigiberts-struggle") then
+						CallDialogue("campaign-victory", trigger_player)
+					end
 				end
 			}
 		}
@@ -531,7 +533,9 @@ DefineDialogue("chilperich-surrenders", {
 			"text", "I see no other way... I accept.",
 			"option-effects", {
 				function(s)
-					CallDialogue("campaign-victory", trigger_player)
+					if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "sigiberts-struggle") then
+						CallDialogue("campaign-victory", trigger_player)
+					end
 				end
 			}
 		}

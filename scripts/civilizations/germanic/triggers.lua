@@ -189,7 +189,9 @@ AddTrigger("jarl-dies",
 		return false
 	end,
 	function()
-		CallDialogue("campaign-defeat", trigger_player)
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "heimdalls-progeny") then
+			CallDialogue("campaign-defeat", trigger_player)
+		end
 		SetPlayerData(trigger_player, "FailQuest", "heimdalls-progeny")
 		return false
 	end

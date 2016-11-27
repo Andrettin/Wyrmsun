@@ -317,7 +317,9 @@ DefineDialogue("jarl-forges-an-alliance-with-the-hersings", {
 					SetSharedVision(trigger_player, true, GetFactionPlayer("hersing-tribe"))
 					SetSharedVision(GetFactionPlayer("hersing-tribe"), true, trigger_player)
 					if (GetPlayerData(trigger_player, "HasQuest", "heimdalls-progeny")) then
-						CallDialogue("campaign-victory", trigger_player)
+						if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "heimdalls-progeny") then
+							CallDialogue("campaign-victory", trigger_player)
+						end
 						SetPlayerData(trigger_player, "CompleteQuest", "heimdalls-progeny")
 					end
 					SetPlayerData(trigger_player, "CompleteQuest", "neutralize-the-hersings")
@@ -382,7 +384,9 @@ DefineDialogue("jarl-destroys-the-hersings", {
 			"option-effects", {
 				function(s)
 					if (GetPlayerData(trigger_player, "HasQuest", "heimdalls-progeny")) then
-						CallDialogue("campaign-victory", trigger_player)
+						if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "heimdalls-progeny") then
+							CallDialogue("campaign-victory", trigger_player)
+						end
 						SetPlayerData(trigger_player, "CompleteQuest", "heimdalls-progeny")
 					end
 					SetPlayerData(trigger_player, "CompleteQuest", "neutralize-the-hersings")

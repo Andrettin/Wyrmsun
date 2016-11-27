@@ -52,7 +52,9 @@ AddTrigger("sigibert-dies",
 		return false
 	end,
 	function()
-		CallDialogue("campaign-defeat", trigger_player)
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "sigiberts-struggle") then
+			CallDialogue("campaign-defeat", trigger_player)
+		end
 		SetPlayerData(trigger_player, "FailQuest", "prevent-chilperichs-supremacy")
 		return false
 	end
