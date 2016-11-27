@@ -121,27 +121,6 @@ DefineProvince("Caverns of Flame", {
 	}
 })
 
-DefineProvince("Du'urdin", {
-	World = "Nidavellir",
-	Tiles = {},
-	CulturalNames = {
-		"gnome", "Du'urdin" -- Derro
-	},
-	Map = "maps/random/random-map-cave.smp",
-	SettlementTerrain = "Mountains",
-	Claims = {
-		"gnome", "derro-tribe",
-		"gnome", "duurdin"
-	},
-	HistoricalOwners = {
-		-3000, "gnome", "derro-tribe", -- maybe should be later?
-		1, "gnome", "duurdin" -- maybe should be at another date?
-	},
-	HistoricalCultures = {
-		-3000, "gnome"
-	}
-})
-
 DefineProvince("Eastern Mines", {
 	World = "Nidavellir",
 	Tiles = {

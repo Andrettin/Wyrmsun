@@ -492,19 +492,25 @@ SetMapTemplateTileTerrain("earth", "shallow-water", 4159, 701, "Lake Wener")
 SetMapTemplateTileTerrain("earth", "shallow-water", 4159, 704, "Lake Wener")
 SetMapTemplateTileTerrain("earth", "shallow-water", 4160, 704, "Lake Wener")
 
-SetMapTemplateUnit("earth", "unit-germanic-town-hall", "yngling-tribe", {4243, 692}, -2800, -264) -- Sigtun / Segiztûna; in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples; "Segiztûna" is a rendering of "Sigtun" in Proto-Germanic, since the Ynglinga saga the city was founded when the cultural ancestors of the Germanic peoples (= Odin's people) first settled Scandinavia; the Ynglings were the dynasty founded by Odin's son Yngve, who ruled the Swedish lands
+-- Sigtun / Segiztûna
+SetMapTemplateUnit("earth", "unit-germanic-town-hall", "yngling-tribe", {4243, 692}, -2800, -264) -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples; "Segiztûna" is a rendering of "Sigtun" in Proto-Germanic, since the Ynglinga saga the city was founded when the cultural ancestors of the Germanic peoples (= Odin's people) first settled Scandinavia; the Ynglings were the dynasty founded by Odin's son Yngve, who ruled the Swedish lands
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "swede-tribe", {4243, 692}, -264, 1560) -- tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "swede-tribe", {4243, 692}, 1560) -- political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 
 -- Gannarve (Fröjel Parish, Gotland)
 -- a stone ship grave was established at Gannarve (Fröjel Parish, Gotland) in the Late Bronze Age of Scandinavia (1100-700 BC); Source: Peter Skoglund, "Stone Ships: Continuity and Change in Scandinavian Prehistory", 2008, pp. 394, 398.
-SetMapTemplateUnit("earth", "unit-germanic-town-hall", "thielung-tribe", {4254, 743}, -1100, -700)
 
 -- Kivik
 -- a man was buried in the Bredarör cairn at Kivik in c. 1400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 84.
 
 -- Uppsala
 SetMapTemplateUnit("earth", "unit-teuton-temple", "sweden", {4241, 686}, 1164) -- Swedish archbishopric founded in Uppsala in 1164; Source: "Guta Saga: The History of the Gotlanders", 1999, p. vii.
+
+-- Västervik
+SetMapTemplateUnit("earth", "unit-germanic-warrior", "thielung-tribe", {4218, 734}, -1101, -1100) -- in the Guta saga, Thieluar was Gotland's discoverer, here we place his journey just before 1100 BC since that's the first occupation of Gotland (by presumably pre-Germanic or Germanic speakers) we have found through research so far
+SetMapTemplateUnit("earth", "unit-germanic-worker", "thielung-tribe", {4218, 734}, -1101, -1100)
+SetMapTemplateUnit("earth", "unit-germanic-worker", "thielung-tribe", {4218, 734}, -1101, -1100)
+SetMapTemplateUnit("earth", "unit-goblin-transport-ship", "thielung-tribe", {4218, 734}, -1101, -1100)
 
 -- Vitemölla (Southeast Sweden)
 --SetMapTemplateUnit("earth", "unit-germanic-temple", "skeldung-tribe", {4162, 780}, -1700, -500) -- the archaeoastronomical observatory termed by archaeologists as "Heimdall's Stones" was constructed and in use during the Bronze Age; between 600 and 500 BC it was covered by sands; Source: Nils-Axel Mörner, Bob G. Lind and Göran Possnert, "Heimdall's Stones at Vitemölla in SE Sweden and the Chronology and Stratigraphy of the Surroundings", 2009, pp. 209-212.

@@ -86,21 +86,6 @@ DefineFaction("acthna", {
 	}
 })
 
-DefineFaction("duurdin", {
-	Name = "Du'urdin",
-	ParentFaction = "derro-tribe",
-	Civilization = "gnome",
-	Type = "polity",
-	Colors = {"black", "purple", "violet"},
-	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Dominion"
-	},
-	HistoricalCapitals = {
-		-3000, "Du'urdin"
-	}
-})
-
 DefineFaction("untersberg", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 1, 12-13.
 	Name = "Untersberg",
 	Civilization = "gnome",

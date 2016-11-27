@@ -40,7 +40,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-broad-sword",
 	Action = "research", Value = "upgrade-germanic-broad-sword",
 	Allowed = "check-single-research",
 	Key = "w", Hint = _("Research Broad S~!word"), Popup = "popup-research",
-	Description = "+2 Damage for Eralas and Kriegers.",
+	Description = "+2 Damage for Eralas, Kunis, Kriegers and Adels.",
 	ForUnit = {"unit-germanic-smithy", "unit-teuton-smithy", "unit-latin-smithy"}
 } )
 
@@ -48,7 +48,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-bronze-shield",
 	Action = "research", Value = "upgrade-germanic-bronze-shield",
 	Allowed = "check-single-research",
 	Key = "s", Hint = _("Research Bronze ~!Shield"), Popup = "popup-research",
-	Description = "+2 Armor for Eralas and Kriegers.",
+	Description = "+2 Armor for Eralas, Kunis, Kriegers and Adels.",
 	ForUnit = {"unit-germanic-smithy", "unit-teuton-smithy", "unit-latin-smithy"}
 } )
 

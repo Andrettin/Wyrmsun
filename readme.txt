@@ -228,11 +228,7 @@ https://github.com/Andrettin/Wyrmsun
 - Which literary work a scroll or book contains can now be set in the editor.
 - Terrain types are no longer limited to a tileset, and can now be placed on any map.
 
-* Factions
-- Added Du'urdin gnomish polity.
-
 * Grand Strategy
-- Added Du'urdin province (Nidavellir).
 - Fixed the position of the "No Day/Night Cycle" and "Battle Base Building" options in the Grand Strategy menu, so that they no longer occupy the same position.
 
 * Heroes
