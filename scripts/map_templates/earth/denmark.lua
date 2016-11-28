@@ -42,6 +42,12 @@ SetMapTemplateUnit("earth", "unit-germanic-town-hall", "jarling-tribe", {4051, 7
 -- Eshøj
 -- three people were buried in oak coffins in the Eshøj mound, one of them in c. 1351 BC and another in c. 1345 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 81.
 
+-- Hlesey Island
+SetMapTemplateUnit("earth", "unit-germanic-warrior", "hlesing-tribe", {4089, 745}, -1101, -1100) -- in Norse mythology, Thor (accompanied by Thialfi) slew a group of "brides of the berserkers" at Hlesey; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 119.
+SetMapTemplateUnit("earth", "unit-germanic-warrior", "hlesing-tribe", {4089, 745}, -1101, -1100)
+SetMapTemplateUnit("earth", "unit-germanic-warrior", "hlesing-tribe", {4089, 745}, -1101, -1100)
+SetMapTemplateUnit("earth", "unit-germanic-warrior", "hlesing-tribe", {4089, 745}, -1101, -1100)
+
 -- Legård (northwestern Jutland)
 SetMapTemplateUnit("earth", "unit-germanic-carpenters-shop", "karling-tribe", {4033, 751}, -1600, -1500)
 SetMapTemplateUnit("earth", "unit-germanic-farm", "karling-tribe", {4033, 751}, -1600, -1500)

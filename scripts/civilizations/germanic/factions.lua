@@ -56,6 +56,15 @@ DefineFaction("hersing-tribe", {
 	Background = "In Norse mythology, Hersir was a chieftain whose daughter married Jarl."
 })
 
+DefineFaction("hlesing-tribe", {
+	Name = "Hlesing Tribe",
+	Civilization = "germanic",
+	Type = "tribe",
+	Colors = {"black"},
+	FactionUpgrade = "upgrade-jarling-tribe-faction",
+	Background = "In Norse mythology, Thor (accompanied by Thialfi) slew a group of savage brides of berserkers at the island of Hlesey."
+})
+
 DefineFaction("ingaevone-tribe", { -- according to Tacitus one of the earliest Germanic tribes; Source: Tacitus, "The Germany and the Agricola of Tacitus", 1897, section 2.
 	Name = "Ingaevone Tribe",
 	Civilization = "germanic",

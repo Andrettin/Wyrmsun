@@ -48,7 +48,7 @@ DefineDialogue("thialfi-settles-gotland", {
 		},
 		{
 			"speaker", "character", "Thialfi",
-			"text", "Thunraz told me of a group of wild women living in the island of Hlesey. They attack the passing ships, and must be rooted out to restore safety to that sea passage.",
+			"text", "Thunraz told me of a group of wild ulfserkers living in the island of Hlesey. They attack the passing ships, and must be rooted out to restore safety to that sea passage. The island lies far to the west, beyond the great chain of isles where the Skeldungs dwell.",
 			"option-effects", {
 				function(s)
 					SetPlayerData(trigger_player, "AcceptQuest", "the-slaying-at-hlesey") -- objective: Kill all units of the "Hlesing Tribe" (Germanic)
