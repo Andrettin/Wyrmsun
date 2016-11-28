@@ -492,6 +492,10 @@ SetMapTemplateTileTerrain("earth", "shallow-water", 4159, 701, "Lake Wener")
 SetMapTemplateTileTerrain("earth", "shallow-water", 4159, 704, "Lake Wener")
 SetMapTemplateTileTerrain("earth", "shallow-water", 4160, 704, "Lake Wener")
 
+-- some coastline fixes, to separate islands from the mainland
+SetMapTemplateTileTerrain("earth", "shallow-water", 4214, 756)
+
+
 -- Boge (Gotland)
 -- 4267, 735
 -- a grave (called "Tjelvars grav") was built in Boge between 1000 and 300 BC; Source: "Guta Saga: The History of the Gotlanders", 1999, p. xviii.

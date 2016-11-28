@@ -25,6 +25,27 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+-- some coastline fixes in the Danish Islands, to make them not be connected to the mainland or between themselves by land
+SetMapTemplateTileTerrain("earth", "shallow-water", 4060, 784)
+SetMapTemplateTileTerrain("earth", "shallow-water", 4061, 782)
+SetMapTemplateTileTerrain("earth", "shallow-water", 4061, 783)
+SetMapTemplateTileTerrain("earth", "shallow-water", 4061, 785)
+SetMapTemplateTileTerrain("earth", "shallow-water", 4062, 782)
+SetMapTemplateTileTerrain("earth", "shallow-water", 4062, 783)
+SetMapTemplateTileTerrain("earth", "shallow-water", 4062, 784)
+SetMapTemplateTileTerrain("earth", "shallow-water", 4062, 785)
+SetMapTemplateTileTerrain("earth", "shallow-water", 4081, 797)
+SetMapTemplateTileTerrain("earth", "shallow-water", 4110, 796)
+SetMapTemplateTileTerrain("earth", "shallow-water", 4111, 796)
+SetMapTemplateTileTerrain("earth", "shallow-water", 4111, 798)
+SetMapTemplateTileTerrain("earth", "shallow-water", 4112, 798)
+SetMapTemplateTileTerrain("earth", "shallow-water", 4113, 797)
+SetMapTemplateTileTerrain("earth", "shallow-water", 4114, 797)
+SetMapTemplateTileTerrain("earth", "shallow-water", 4115, 796)
+SetMapTemplateTileTerrain("earth", "shallow-water", 4116, 797)
+SetMapTemplateTileTerrain("earth", "shallow-water", 4125, 772)
+SetMapTemplateTileTerrain("earth", "shallow-water", 4126, 773)
+
 SetMapTemplateUnit("earth", "unit-germanic-town-hall", "skeldung-tribe", {4112, 784}, -2800, -27) -- Leidre / Lejre; Funnel Beaker culture ended in Zealand in 2800 BC and the Corded Ware culture (neolithic) began; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 38. In the Ynglinga Saga, Odin set his son Skjöldr to rule in Leidre after their people (who here we equate with the cultural ancestors of the Germanics who migrated to Scandinavia) conquered the land
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "herulian-tribe", {4112, 784}, -27, 526) -- political situation in Europe (presumably) at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "dane-tribe", {4112, 784}, 526, 919) -- Danes were in Zealand in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
@@ -43,6 +64,7 @@ SetMapTemplateUnit("earth", "unit-germanic-town-hall", "jarling-tribe", {4051, 7
 -- three people were buried in oak coffins in the Eshøj mound, one of them in c. 1351 BC and another in c. 1345 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 81.
 
 -- Hlesey Island
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "hlesing-tribe", {4089, 745}, -1101, -1100) -- put a guard tower there to make the berserker women more capable of attacking passing ships
 SetMapTemplateUnit("earth", "unit-germanic-warrior", "hlesing-tribe", {4089, 745}, -1101, -1100) -- in Norse mythology, Thor (accompanied by Thialfi) slew a group of "brides of the berserkers" at Hlesey; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 119.
 SetMapTemplateUnit("earth", "unit-germanic-warrior", "hlesing-tribe", {4089, 745}, -1101, -1100)
 SetMapTemplateUnit("earth", "unit-germanic-warrior", "hlesing-tribe", {4089, 745}, -1101, -1100)
