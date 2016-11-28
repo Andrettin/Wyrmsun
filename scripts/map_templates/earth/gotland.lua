@@ -25,36 +25,19 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDialogue("thialfi-commanded-to-gotland", {
-	Nodes = {
-		{
-			"speaker", "character", "Thialfi",
-			"text", "My master, the god Thunraz, has revealed to me the existence of an island to the east. I am to establish my hearth there, bringing human life to the isle.",
-			"option-effects", {
-				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "thunrazs-servant")
-					SetPlayerData(trigger_player, "AcceptQuest", "the-discovery-of-gotland") -- objective: build a Chieftain's Hall in Gotland
-					KillUnitAt("unit-revealer", trigger_player, 1, {0, 0}, {512, 512})
-				end
-			}
-		}
-	}
-})
+-- Boge
+-- 4267, 735
+-- a grave (called "Tjelvars grav") was built in Boge between 1000 and 300 BC; Source: "Guta Saga: The History of the Gotlanders", 1999, p. xviii.
 
-DefineDialogue("thialfi-settles-gotland", {
-	Nodes = {
-		{
-			"speaker", "character", "Thialfi",
-			"text", "My new home is ready! From this base of operations established I can gather the necessary forces to deal with my next task."
-		},
-		{
-			"speaker", "character", "Thialfi",
-			"text", "Thunraz told me of a group of wild ulfserkers living in the island of Hlesey. They attack the passing ships, and must be rooted out to restore safety to that sea passage. The island lies far to the west, beyond the great chain of isles where the Skeldungs dwell.",
-			"option-effects", {
-				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "the-slaying-at-hlesey") -- objective: Kill all units of the "Hlesing Tribe" (Germanic)
-				end
-			}
-		}
-	}
-})
+-- Fröjel
+-- 4254, 743
+-- a stone ship grave was established at Gannarve (Fröjel Parish, Gotland) in the Late Bronze Age of Scandinavia (1100-700 BC); Source: Peter Skoglund, "Stone Ships: Continuity and Change in Scandinavian Prehistory", 2008, pp. 394, 398.
+
+-- Roma
+-- 4259, 739
+
+-- Torsburgen / Þorsborg
+SetMapTemplateUnit("earth", "unit-revealer", "thielung-tribe", {4265, 741}, -1101, -1100)
+SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "gute-tribe", {4265, 741}, 300, 1100) -- the enormous hill fort of Torsburgen had two phases, one dated to 300-400 AD, and the other to 800-1100 AD; Source: "Guta Saga: The History of the Gotlanders", 1999, pp. xxvii-xxviii.
+
+-- the migration mentioned in the Guta saga, if it is real, likely occurred c. 475-550 AD; Source: "Guta Saga: The History of the Gotlanders", 1999, pp. xxvi-xxvii.

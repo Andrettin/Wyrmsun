@@ -495,14 +495,6 @@ SetMapTemplateTileTerrain("earth", "shallow-water", 4160, 704, "Lake Wener")
 -- some coastline fixes, to separate islands from the mainland
 SetMapTemplateTileTerrain("earth", "shallow-water", 4214, 756)
 
-
--- Boge (Gotland)
--- 4267, 735
--- a grave (called "Tjelvars grav") was built in Boge between 1000 and 300 BC; Source: "Guta Saga: The History of the Gotlanders", 1999, p. xviii.
-
--- Gannarve (Fröjel Parish, Gotland)
--- a stone ship grave was established at Gannarve (Fröjel Parish, Gotland) in the Late Bronze Age of Scandinavia (1100-700 BC); Source: Peter Skoglund, "Stone Ships: Continuity and Change in Scandinavian Prehistory", 2008, pp. 394, 398.
-
 -- Kivik
 -- a man was buried in the Bredarör cairn at Kivik in c. 1400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 84.
 

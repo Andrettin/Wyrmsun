@@ -65,6 +65,15 @@ DefineFaction("geat-tribe", {
 	DefaultAI = "sea-attack"
 })
 
+DefineFaction("gute-tribe", {
+	Name = "Gute Tribe",
+	Civilization = "norse",
+	Type = "tribe",
+	Colors = {"cyan"},
+	DevelopsTo = {"gotland"},
+	DefaultAI = "sea-attack"
+})
+
 -- polities
 
 DefineFaction("denmark", {
@@ -82,6 +91,15 @@ DefineFaction("gautland", {
 	Type = "polity",
 	Colors = {"teal"},
 	DefaultTier = "kingdom",
+	DefaultAI = "sea-attack"
+})
+
+DefineFaction("gotland", {
+	Name = "Gotland",
+	Civilization = "norse",
+	Type = "polity",
+	Colors = {"cyan"},
+	DefaultTier = "duchy", -- correct?
 	DefaultAI = "sea-attack"
 })
 
