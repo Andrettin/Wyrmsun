@@ -1791,7 +1791,7 @@ DefineLanguageWord("Wolf", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Wolf"}, -- the TLFi gives the French "loup", while Fick gives the German "Wolf"
-	DerivesFrom = {"proto-germanic", "noun", "Vulfa"}
+	DerivesFrom = {"proto-germanic", "noun", "Wulfa"}
 })
 
 DefineLanguageWord("Wulpa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.

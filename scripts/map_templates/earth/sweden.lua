@@ -492,16 +492,20 @@ SetMapTemplateTileTerrain("earth", "shallow-water", 4159, 701, "Lake Wener")
 SetMapTemplateTileTerrain("earth", "shallow-water", 4159, 704, "Lake Wener")
 SetMapTemplateTileTerrain("earth", "shallow-water", 4160, 704, "Lake Wener")
 
--- Sigtun / Segiztûna
-SetMapTemplateUnit("earth", "unit-germanic-town-hall", "yngling-tribe", {4243, 692}, -2800, -264) -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples; "Segiztûna" is a rendering of "Sigtun" in Proto-Germanic, since the Ynglinga saga the city was founded when the cultural ancestors of the Germanic peoples (= Odin's people) first settled Scandinavia; the Ynglings were the dynasty founded by Odin's son Yngve, who ruled the Swedish lands
-SetMapTemplateUnit("earth", "unit-teuton-town-hall", "swede-tribe", {4243, 692}, -264, 1560) -- tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-SetMapTemplateUnit("earth", "unit-teuton-town-hall", "swede-tribe", {4243, 692}, 1560) -- political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+-- Boge (Gotland)
+-- 4267, 735
+-- a grave (called "Tjelvars grav") was built in Boge between 1000 and 300 BC; Source: "Guta Saga: The History of the Gotlanders", 1999, p. xviii.
 
 -- Gannarve (Fröjel Parish, Gotland)
 -- a stone ship grave was established at Gannarve (Fröjel Parish, Gotland) in the Late Bronze Age of Scandinavia (1100-700 BC); Source: Peter Skoglund, "Stone Ships: Continuity and Change in Scandinavian Prehistory", 2008, pp. 394, 398.
 
 -- Kivik
 -- a man was buried in the Bredarör cairn at Kivik in c. 1400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 84.
+
+-- Sigtun / Segiztûna
+SetMapTemplateUnit("earth", "unit-germanic-town-hall", "yngling-tribe", {4243, 692}, -2800, -264) -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples; "Segiztûna" is a rendering of "Sigtun" in Proto-Germanic, since the Ynglinga saga the city was founded when the cultural ancestors of the Germanic peoples (= Odin's people) first settled Scandinavia; the Ynglings were the dynasty founded by Odin's son Yngve, who ruled the Swedish lands
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "swede-tribe", {4243, 692}, -264, 1560) -- tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "swede-tribe", {4243, 692}, 1560) -- political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 
 -- Uppsala
 SetMapTemplateUnit("earth", "unit-teuton-temple", "sweden", {4241, 686}, 1164) -- Swedish archbishopric founded in Uppsala in 1164; Source: "Guta Saga: The History of the Gotlanders", 1999, p. vii.

@@ -1339,7 +1339,7 @@ DefineLanguageWord("Vulfs", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Wolf"}, -- source gives the German "Wolf"
-	DerivesFrom = {"proto-germanic", "noun", "Vulfa"},
+	DerivesFrom = {"proto-germanic", "noun", "Wulfa"},
 	Gender = "masculine"
 })
 

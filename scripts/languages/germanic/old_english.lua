@@ -2110,7 +2110,7 @@ DefineLanguageWord("Wulf", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Wolf"}, -- source gives the German "Wolf"
-	DerivesFrom = {"proto-germanic", "noun", "Vulfa"}
+	DerivesFrom = {"proto-germanic", "noun", "Wulfa"}
 })
 
 DefineLanguageWord("Wyrm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.

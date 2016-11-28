@@ -270,8 +270,8 @@ DefineCharacter("Ját", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 	}
 })
 
-DefineCharacter("Gudavulfa", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
-	Name = "Gudavulfa", -- originally "Gudólfr"; this is a Proto-Germanic rendering of the name
+DefineCharacter("Gudawulfa", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+	Name = "Gudawulfa", -- originally "Gudólfr"; this is a Proto-Germanic rendering of the name
 	-- prefix is likely the Old Norse neuter noun "Guđ"
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -293,7 +293,7 @@ DefineCharacter("Finn", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 16),
 	DeathYear = -3000 + 12 + (10 * 17),
-	Father = "Gudavulfa",
+	Father = "Gudawulfa",
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 16), -3000 + 12 + (10 * 17), "germanic", "asa-tribe"
 	}

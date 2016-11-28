@@ -1784,7 +1784,7 @@ DefineLanguageWord("Ulfr", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Wolf"}, -- source gives the German "Wolf"
-	DerivesFrom = {"proto-germanic", "noun", "Vulfa"},
+	DerivesFrom = {"proto-germanic", "noun", "Wulfa"},
 	NumberCaseInflections = {
 		"singular", "no-case", "Ulf" -- presumably (assuming the "-r" ending here is the nominative ending)
 	}

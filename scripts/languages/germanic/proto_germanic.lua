@@ -1642,14 +1642,6 @@ DefineLanguageWord("Vulbî", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "feminine"
 })
 
-DefineLanguageWord("Vulfa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Wolf"}, -- source gives the German "Wolf"
-	DerivesFrom = {"proto-indo-european", "noun", "Vl̥po"},
-	Gender = "masculine"
-})
-
 DefineLanguageWord("Vulgvî", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -1720,6 +1712,14 @@ DefineLanguageWord("Wīz", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Type = "pronoun",
 	Meanings = {"We"},
 	Nominative = "Wīz"
+})
+
+DefineLanguageWord("Wulfa", { -- Fick gives "vulfa" instead; Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 598; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Wolf"}, -- source gives the German "Wolf"
+	DerivesFrom = {"proto-indo-european", "noun", "Vl̥po"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Yēra", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

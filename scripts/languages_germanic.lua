@@ -43,7 +43,7 @@ DefineLanguage("old-norse", {
 		-- Proto-Germanic Personal Names
 		"Branda", "Brand",
 		"Erala", "Jarl",
-		"Gudavulfa", "Gudolf",
+		"Gudawulfa", "Gudolf",
 		"Karla", "Karl",
 		"Magan", "Magi",
 		"Skeldu", "Skjold",

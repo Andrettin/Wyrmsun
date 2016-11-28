@@ -54,7 +54,7 @@ DefineCampaign("heimdalls-progeny", {
 --[[
 DefineCampaign("thunrazs-servant", {
 	Name = "Thunraz's Servant",
-	Description = "Terrified by a calamitous thunderstorm, Thialfi's parents pledged him to the service of the lightning god Thunraz when he was still a boy. Now a grown up man, during a trance he heard his master command him to sail to an undiscovered island...",
+	Description = "Terrified by a calamitous thunderstorm, Thialfi's parents pledged him to the service of the lightning god Thunraz when he was still a boy. Now a grown up man, during a dream he heard his master command him to sail to an undiscovered island...",
 	Civilization = "germanic",
 	Faction = "thielung-tribe",
 	Year = -1101 -- 1100 BC was the first occupation of Gotland (by presumably pre-Germanic or Germanic speakers) we have found through research so far, so we place the campaign start at just before that
