@@ -867,6 +867,7 @@
 /graphics/neutral/units/gryphon.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/neutral/units/gryphon_blue_feathers.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/neutral/units/gryphon_gray_feathers.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/horse.png (by b_o and Jinn) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/neutral/units/horse_black_skin_brown_hair_brown_eyes.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/neutral/units/horse_brown_skin_brown_hair_brown_eyes.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/neutral/units/horse_brown_skin_tan_hair_blue_eyes.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)

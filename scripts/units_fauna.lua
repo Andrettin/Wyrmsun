@@ -626,7 +626,7 @@ DefineUnitType("unit-horse", {
 	Species = "horse",
 	Description = _("Horses are valuable for their speed as well as their endurance, making excellent mounts. The creatures were a vital component of any army, and was an essential part of the lifestyle of the peoples of the Eurasian steppes."),
 	Quote = _("\"Glath and Gyllir, Gler and Skeithbrimir,\nSilfrintopp and Sinir,\nGisl and Falhofnir, Golltopp and Lettfeti,\nOn these steeds the gods shall go\nWhen dooms to give each day they ride\nTo the ash-tree Yggdrasil.\"\n- Grimnismol (Grimnir)"), -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
-	Image = {"file", "neutral/units/horse_brown_skin_brown_hair_brown_eyes.png", "size", {72, 72}},
+	Image = {"file", "neutral/units/horse.png", "size", {72, 72}},
 	Animations = "animations-yale", Icon = "icon-horse",
 	Strength = 14,
 	Dexterity = 13,
@@ -685,23 +685,6 @@ DefineUnitType("unit-horse", {
 		"male", "Alsvid", -- Alsviðr was one of the (male) sun horses from Norse mythology (name means "All-Swift", as given by both sources); also a constellation; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 99; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 19; Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 124.
 		"male", "Arvak", -- "Arvakr"; Arvak was one of the (male) sun horses from Norse mythology (name means "Early Waker"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 99; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 19; Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 124.
 		"male", "Gulltopp" -- Gulltoppr was Heimdall's (male) horse from Norse mythology; Cleasby gives Gulltoppr (meaning "gold-tuft"); Bellows gives Golltop instead (meaning "Gold-Topped"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 96-97; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 220-221, 636; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 18.
-	},
-	Variations = {
-		{
-			"variation-id", "brown-skin-brown-hair-brown-eyes"
-		},
-		{
-			"variation-id", "brown-skin-tan-hair-brown-eyes",
-			"file", "neutral/units/horse_brown_skin_tan_hair_brown_eyes.png"
-		},
-		{
-			"variation-id", "black-skin-brown-hair-brown-eyes",
-			"file", "neutral/units/horse_black_skin_brown_hair_brown_eyes.png"
-		},
-		{
-			"variation-id", "brown-skin-tan-hair-blue-eyes",
-			"file", "neutral/units/horse_brown_skin_tan_hair_blue_eyes.png"
-		}
 	},
 	Sounds = {
 		"selected", "horse-selected",
