@@ -429,6 +429,7 @@ DefineTerrainType("dungeon-wall", {
 	AllowSingle = true,
 	Graphics = "terrain/dungeon_wall.png",
 	SolidTiles = {17, 20, 23, 26},
+	DestroyedTiles = {48},
 	TransitionTiles = {
 		"any", "north", 17,
 		"any", "north", 20,
