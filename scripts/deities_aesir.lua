@@ -192,9 +192,13 @@ DefineDeity("gefion", { -- Name means "Giver"; Source: Kevin Crossley-Holland, "
 DefineDeity("heimdall", { -- Son of nine mothers; the horn Gjall belongs to him; is the watchman of the gods; identified with Rig (the progenitor of the three races of man); Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 244.
 	Name = "Heimdall",
 	Pantheon = "Aesir",
-	Civilizations = {"norse"},
+	Civilizations = {"germanic", "norse"},
 	Religions = {"paganism"},
-	Gender = "male"
+	Gender = "male",
+	Domains = {},
+	CulturalNames = {
+		"germanic", "Haimadala" -- tentative rendering of "Heimdall" in Proto-Germanic (assuming "dallr" to have the same etymological origin as "dalr", the Old Norse word for "valley")
+	}
 })
 
 DefineDeity("hel", { -- Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 116.

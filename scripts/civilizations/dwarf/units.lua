@@ -540,7 +540,8 @@ DefineUnitType("unit-dwarven-thane", {
 	}
 } )
 
-DefineUnitType("unit-dwarven-guard", { Name = _("Guard"),
+DefineUnitType("unit-dwarven-guard", {
+	Name = _("Guard"),
 	Parent = "unit-template-spearman",
 	Civilization = "dwarf",
 	Description = _("Dwarven guards are the first line of defense of the dwarven homelands. With their sturdy shields, they can often mount an unassailable defense against attackers."),

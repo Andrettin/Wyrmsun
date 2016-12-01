@@ -413,6 +413,13 @@ DefineLanguageWord("Dag", { -- Lehmann gives "dag-"; Fick gives "daga" and the a
 	Gender = "masculine" -- as given by Fick
 })
 
+DefineLanguageWord("Dala", { -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 87.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Valley"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Déwpaz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "adjective",
@@ -686,13 +693,13 @@ DefineLanguageWord("Gumō", { -- Lehmann also gives "gumn-" in another instance;
 	}
 })
 
-DefineLanguageWord("Haima", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+DefineLanguageWord("Haima", { -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 201; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Village", "Home"}, -- source gives the German "Dorf, Heim, Heimat" as the meaning
-	Gender = "masculine",
+	Meanings = {"Village", "Home"}, -- as given by Kroonen; Fick likewise gives the German "Dorf, Heim, Heimat" as the meaning
+	Gender = "masculine", -- as given by both Kroonen and Fick
 	NumberCaseInflections = {
-		"singular", "accusative", "Haima" -- source gives meaning of "nach Hause" for the accusative; source also gives the (apparently accusative) "Haimanô", meaning "von Hause"
+		"singular", "accusative", "Haima" -- as given by Fick; Fick gives meaning of "nach Hause" for the accusative; Fick also gives the (apparently accusative) "Haimanô", meaning "von Hause"
 	}
 })
 

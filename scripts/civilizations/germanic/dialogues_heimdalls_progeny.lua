@@ -29,7 +29,7 @@ DefineDialogue("jarl-speaks-of-his-destiny", {
 	Nodes = {
 		{
 			"speaker", "character", "Erala",
-			"text", "Something tells me... I have seen it in my dreams, I know it! My true father was not the man who raised me, but the mighty god Heimdall. I am not like others. I have a singular destiny."
+			"text", "Something tells me... I have seen it in my dreams, I know it! My true father was not the man who raised me, but the mighty god Haimadala. I am not like others. I have a singular destiny."
 		},
 		{
 			"speaker", "character", "Erala",

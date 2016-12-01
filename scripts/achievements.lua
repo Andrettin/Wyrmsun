@@ -34,9 +34,9 @@ DefineAchievement("the-settlement-of-scandinavia", {
 })
 
 DefineAchievement("heimdalls-progeny", {
-	Name = "Heimdall's Progeny",
+	Name = "Haimadala's Progeny",
 	Icon = "icon-jarl",
-	Description = "Complete the Heimdall's Progeny campaign.",
+	Description = "Complete the Haimadala's Progeny campaign.",
 	PlayerColor = "yellow",
 	RequiredQuests = {"heimdalls-progeny"}
 })

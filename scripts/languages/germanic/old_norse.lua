@@ -456,6 +456,14 @@ DefineLanguageWord("Dagr", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	}
 })
 
+DefineLanguageWord("Dalr", { -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 87.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Valley"},
+	DerivesFrom = {"proto-germanic", "noun", "Dala"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Djūpr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "adjective",
@@ -856,12 +864,12 @@ DefineLanguageWord("Heima", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	}
 })
 
-DefineLanguageWord("Heimr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+DefineLanguageWord("Heimr", { -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 201; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
 	Language = "old-norse",
 	Type = "noun",
-	Meanings = {"Home", "World"}, -- source gives the German "Heimat, Welt" as the meaning
+	Meanings = {"Home", "World"}, -- as given by Kroonen; Fick likewise gives the German "Heimat, Welt" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Haima"},
-	Gender = "masculine",
+	Gender = "masculine", -- as given by both Kroonen and Fick
 	NumberCaseInflections = {
 		"singular", "no-case", "Heim", -- presumably (assuming the "-r" ending here is the nominative ending)
 		"singular", "genitive", "Heims" -- correct?
