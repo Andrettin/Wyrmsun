@@ -34,7 +34,7 @@
 -- a stone ship grave was established at Gannarve (Fröjel Parish, Gotland) in the Late Bronze Age of Scandinavia (1100-700 BC); Source: Peter Skoglund, "Stone Ships: Continuity and Change in Scandinavian Prehistory", 2008, pp. 394, 398.
 
 -- Roma
--- 4259, 739
+SetMapTemplateUnit("earth", "unit-teuton-temple", "sweden", {4259, 739}, 1164) -- a Cistercian monastery, the Beata Maria de Gutnalia, was established on September 9th of 1164 at Roma; Source: "Guta Saga: The History of the Gotlanders", 1999, p. xlvii.
 
 -- Torsburgen / Þorsborg
 SetMapTemplateUnit("earth", "unit-revealer", "thielung-tribe", {4265, 741}, -1101, -1100)

@@ -312,7 +312,7 @@ DefineDeity("sif", { -- Thor's wife; had golden hair, which were cut by Loki; So
 	Gender = "female"
 })
 
-DefineDeity("sjofn", { -- Inspired human passion; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 249.
+DefineDeity("sjofn", { -- inspired human passion; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 249.
 	Name = "Sjofn",
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},

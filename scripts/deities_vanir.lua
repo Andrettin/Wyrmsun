@@ -47,7 +47,6 @@ DefineDeity("freyja", { -- Source: Peter Buchholz, "Perspectives for Historical 
 	Civilizations = {"elf", "germanic", "norse"}, -- Alaric Hall proposes that the Vanir are more or less identical with the elves, so it makes sense to make Freyja an elven deity as well; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 135.
 	Religions = {"paganism"},
 	Gender = "female",
-	Major = true,
 	Domains = {"earth"}, -- fertility goddess
 	CulturalNames = {
 		"germanic", "Fraujon" -- "Fraujōn"; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 135.
