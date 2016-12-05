@@ -76,6 +76,7 @@ https://github.com/Andrettin/Wyrmsun
 - Temples now sell scrolls.
 - Temples now correctly receive the time efficiency bonus from Writing upgrades.
 - Increased the sight of buildings which had a sight of 1 to 2.
+- Added Germanic Dock graphics (at the moment used only for the Teuton pre-Masonry Dock).
 
 * Factions
 - Revamped Frankish personal names.

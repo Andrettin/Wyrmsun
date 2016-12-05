@@ -182,6 +182,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-germanic-dock",
+	Size = {46, 38},
+	File = "germanic/icons/dock.png"
+})
+
+DefineIcon({
 	Name = "icon-germanic-short-sword",
 	Size = {46, 38},
 	File = "germanic/icons/short_sword.png"

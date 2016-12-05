@@ -243,6 +243,8 @@
 /graphics/germanic/buildings/barracks_shadow.png (by Jinn) (licensed under the CC0)
 /graphics/germanic/buildings/carpenters_shop.png (by Exidelo) (licensed under the CC0)
 /graphics/germanic/buildings/carpenters_shop_shadow.png (by Jinn) (licensed under the CC0)
+/graphics/germanic/buildings/dock.png (by Jinn) (licensed under the CC0)
+/graphics/germanic/buildings/dock_shadow.png (by Jinn) (licensed under the CC0)
 /graphics/germanic/buildings/farm.png (by Jinn) (licensed under the CC0)
 /graphics/germanic/buildings/farm_shadow.png (by Jinn) (licensed under the CC0)
 /graphics/germanic/buildings/farm_extra_1.png (by Jinn) (licensed under the CC0)
