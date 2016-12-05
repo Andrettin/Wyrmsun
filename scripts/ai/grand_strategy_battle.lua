@@ -90,6 +90,7 @@ local land_funcs = {
 	"unit-teuton-veteran-swordsman", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-teuton-veteran-swordsman"),
 	"unit-suebi-swordsman", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-suebi-swordsman"),
 	"unit-frank-swordsman", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-frank-swordsman"),
+	"unit-frank-veteran-swordsman", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-frank-veteran-swordsman"),
 	"unit-teuton-spearman", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-teuton-spearman"),
 	"unit-frank-spearman", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-frank-spearman"),
 	"unit-teuton-archer", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-teuton-archer"),

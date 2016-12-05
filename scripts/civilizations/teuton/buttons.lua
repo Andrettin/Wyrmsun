@@ -216,11 +216,23 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-stronghold",
 DefineButton( { Pos = 1, Level = 2,
 	Action = "experience-upgrade-to", Value = "unit-teuton-veteran-swordsman",
 	Key = "a", Hint = _("Upgrade to ~!Adel"), Popup = "popup-unit",
-	ForUnit = {"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman"}
+	ForUnit = {"unit-teuton-swordsman", "unit-suebi-swordsman"}
+} )
+
+DefineButton( { Pos = 1, Level = 2,
+	Action = "experience-upgrade-to", Value = "unit-frank-veteran-swordsman",
+	Key = "a", Hint = _("Upgrade to ~!Adel"), Popup = "popup-unit",
+	ForUnit = {"unit-frank-swordsman"}
 } )
 
 DefineButton( { Pos = 2, Level = 2, Icon = "icon-teuton-ritter",
 	Action = "experience-upgrade-to", Value = "unit-teuton-ritter",
 	Key = "r", Hint = _("Upgrade to ~!Ritter"), Popup = "popup-unit",
-	ForUnit = {"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman"}
+	ForUnit = {"unit-teuton-swordsman", "unit-suebi-swordsman"}
+} )
+
+DefineButton( { Pos = 2, Level = 2, Icon = "icon-frank-horseman",
+	Action = "experience-upgrade-to", Value = "unit-frank-horseman",
+	Key = "r", Hint = _("Upgrade to ~!Ritter"), Popup = "popup-unit",
+	ForUnit = {"unit-frank-swordsman"}
 } )

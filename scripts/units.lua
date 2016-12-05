@@ -55,7 +55,7 @@ Units = {
 	"upgrade-teuton-masonry",
 	"upgrade-teuton-coinage", "upgrade-teuton-writing", "upgrade-teuton-alchemy",
 	"unit-suebi-swordsman", 
-	"unit-frank-swordsman", "unit-frank-spearman", "unit-frank-horseman",
+	"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-spearman", "unit-frank-horseman",
 	"unit-celt-farm",
 	"upgrade-celt-civilization",
 	"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner", "unit-dwarven-militia",
