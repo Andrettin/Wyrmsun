@@ -2629,6 +2629,7 @@ DefineUnitType("unit-template-skilled-miner", {
 	BasicDamage = 6,
 	Accuracy = 9,
 	Points = 45,
+	Level = 2,
 	CanGatherResources = {
 		{
 			"resource-id", "gold",
@@ -2657,6 +2658,8 @@ DefineUnitType("unit-template-expert-miner", {
 	BasicDamage = 7,
 	Accuracy = 10,
 	Points = 60,
+	Level = 3,
+	Inventory = true,
 	CanGatherResources = {
 		{
 			"resource-id", "gold",
@@ -2758,7 +2761,8 @@ DefineUnitType("unit-template-heroic-merchant", {
 	Evasion = 14,
 	Points = 90,
 	Level = 3,
-	LeadershipAura = 1
+	LeadershipAura = 1,
+	Inventory = true
 } )
 
 DefineUnitType("unit-template-infantry", {
