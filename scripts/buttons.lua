@@ -525,7 +525,7 @@ DefineButton( { Pos = 15, Level = 0, Icon = "icon-inventory",
 	}
 } )
 
-DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
+DefineButton( { Pos = 16, Level = 3, Icon = "icon-cancel",
 	Action = "button", Value = 0,
 	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
 	ForUnit = {
