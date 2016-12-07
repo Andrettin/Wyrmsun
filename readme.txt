@@ -61,11 +61,15 @@ https://github.com/Andrettin/Wyrmsun
 - 2.5.1
 -----------------------------------------------------------------------
 
+* Buildings
+- Dwarven buildings now use stone (instead of lumber) for construction, except for the Yale Pen, the Dock and mines.
+
 * Units
 - Dwarven Axefighters and Yale Riders no longer cost Lumber.
 
 * Upgrades
 - Axe upgrades no longer cost Lumber.
+- The dwarven Masonry technology now costs only stone and no lumber.
 
 -----------------------------------------------------------------------
 - 2.5.0

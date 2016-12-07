@@ -4,7 +4,8 @@ if (LoadedGame == false) then
 	if (GetCurrentQuest() == "the-necklace-of-the-brisings") then
 		GenerateRandomMap({
 			MercenaryCamp = true,
-			RockQuantity = "medium",
+--			RockQuantity = "medium",
+			RockQuantity = "high",
 			TreeQuantity = "low",
 			RoughLandQuantity = "high",
 			WaterQuantity = "high",

@@ -124,8 +124,8 @@ DefineUpgrade("upgrade-dwarven-masonry", {
 	Parent = "upgrade-masonry",
 	Civilization = "dwarf",
 	Description = _("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings, and allows Sentry Towers to be upgraded to Guard Towers and Mead Halls to Bastions."),
-	Costs = {"time", 250, "copper", 900, "lumber", 750, "stone", 750},
-	GrandStrategyCosts = {"time", 250, "copper", 900, "lumber", 750, "stone", 750, "research", 2400},
+	Costs = {"time", 250, "copper", 900, "lumber", 0, "stone", 1500},
+	GrandStrategyCosts = {"time", 250, "copper", 900, "lumber", 0, "stone", 1500, "research", 2400},
 	TechnologyPointCost = 1
 })
 
