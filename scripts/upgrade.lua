@@ -44,7 +44,7 @@ DefineUpgrade("upgrade-broad-sword", {
 DefineUpgrade("upgrade-broad-axe", {
 	Name = _("Broad Axe"),
 	Parent = "upgrade-melee-weapon-1",
-	Costs = {"time", 200, "copper", 500, "lumber", 300},
+	Costs = {"time", 200, "copper", 800},
 	GrandStrategyCosts = {"time", 200, "copper", 500, "lumber", 300, "research", 800}
 })
 
@@ -65,7 +65,7 @@ DefineUpgrade("upgrade-long-sword", {
 DefineUpgrade("upgrade-great-axe", {
 	Name = _("Great Axe"),
 	Parent = "upgrade-melee-weapon-2",
-	Costs = {"time", 250, "copper", 1500, "lumber", 900},
+	Costs = {"time", 250, "copper", 2400},
 	GrandStrategyCosts = {"time", 250, "copper", 1500, "lumber", 900, "research", 2400}
 })
 

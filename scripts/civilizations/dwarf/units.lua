@@ -243,7 +243,6 @@ DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 --		{"shield", "unit-round-shield"}, -- commented out to make the Brising Round Shield icon appear when proper
 		{"boots", "unit-boots"}
 	},
-	Costs = {"time", 60, "copper", 500, "lumber", 45},
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClasses = {"axe", "mace"},
 	HackDamage = true,
@@ -370,7 +369,6 @@ DefineUnitType("unit-dwarven-steelclad", {
 --		{"shield", "unit-round-shield"}, -- commented out to make the Brising Round Shield icon appear when proper
 		{"boots", "unit-boots"}
 	},
-	Costs = {"time", 90, "copper", 825, "lumber", 75},
 	Armor = 4,
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClasses = {"axe", "mace"},
@@ -561,7 +559,6 @@ DefineUnitType("unit-dwarven-guard", {
 --		{"shield", "unit-round-shield"}, -- commented out to make the Brising Round Shield icon appear when proper
 		{"boots", "unit-boots"}
 	},
-	Costs = {"time", 55, "copper", 460, "lumber", 90},
 	HitPoints = 65,
 	Armor = 2,
 	Corpse = "unit-dwarven-dead-body",
@@ -750,7 +747,6 @@ DefineUnitType("unit-dwarven-yale-rider", { Name = _("Yale Rider"),
 	Civilization = "dwarf",
 	Description = _("Although dwarves have a stronger affinity for fighting on foot than many other peoples, they nevertheless possess formidable cavalry in the form of yale riders. These mounted dwarves are fierce in the battlefield, and their yales can easily traverse the mountainous terrain dwarves usually inhabit."),
 	Image = {"file", "dwarf/units/yale_rider_red_hair_gray_fur.png", "size", {72, 72}},
-	Costs = {"time", 90, "copper", 825, "lumber", 75},
 	Animations = "animations-melee-unit", Icon = "icon-dwarven-yale-rider",
 	DefaultEquipment = {
 		{"weapon", "unit-battle-axe"},
