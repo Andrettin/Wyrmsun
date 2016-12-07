@@ -402,6 +402,7 @@ function RunGameplayOptionsMenu()
 
 	menu:addLabel(_("~<Options~>"), offx + 176, offy + 1)
 
+	--[[
 	menu:addLabel(_("Language:"), offx + 8, offy + 34 + 26*0, Fonts["game"], false)
 
 	language_list = menu:addDropDown({"English", "French (Partial)", "German (Partial)", "Italian (Partial)", "Polish (Partial)", "Portuguese (Partial)", "Turkish (Partial)"}, offx + 8, offy + 55 + 26*0,
@@ -456,6 +457,7 @@ function RunGameplayOptionsMenu()
 	elseif (wyr.preferences.Language == "Turkish") then
 		language_list:setSelected(6)
 	end
+	--]]
 
 	menu:addLabel(_("Hotkey Setup:"), offx + 8, offy + 34 + 26*2, Fonts["game"], false)
 	hotkey_setup_dd = menu:addDropDown(hotkey_setup_list, offx + 8, offy + 55 + 26*2,

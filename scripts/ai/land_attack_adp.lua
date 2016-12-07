@@ -35,9 +35,9 @@ function AiLandAttack()
 	if (force_attacking[AiPlayer()] == nil) then -- init variables
 		force_attacking[AiPlayer()] = false
 		if (AiGetRace() == "dwarf") then -- dwarves collect more stone than other civilizations
-			AiSetCollect({0, 40, 40, 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0})
+			AiSetCollect("copper", 40, "lumber", 40, "stone", 20)
 		else
-			AiSetCollect({0, 45, 45, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0})
+			AiSetCollect("copper", 45, "lumber", 45, "stone", 10)
 		end
 	end
 	if (water_build[AiPlayer()] == nil) then

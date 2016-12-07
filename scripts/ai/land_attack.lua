@@ -60,9 +60,9 @@ local land_funcs = {
 	function() return AiSleep(AiGetSleepCycles()) end,
 	function()
 		if (AiGetRace() == "dwarf") then -- dwarves collect more stone than other civilizations, as they need it for their structures, rather than lumber
-			AiSetCollect({0, 45, 20, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0})
+			AiSetCollect("copper", 45, "lumber", 20, "stone", 35)
 		else
-			AiSetCollect({0, 45, 45, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0})
+			AiSetCollect("copper", 45, "lumber", 45, "stone", 10)
 		end
 		return false;
 	end,
