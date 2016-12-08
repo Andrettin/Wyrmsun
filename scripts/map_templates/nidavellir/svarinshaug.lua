@@ -45,7 +45,7 @@ DefineMapTemplate("svarinshaug", {
 	GeneratedNeutralUnits = {
 		"unit-snigill", 16,
 		"unit-slime", 8,
-		"unit-yale", 8
+		"unit-yale", 12
 	},
 	PlayerLocationGeneratedNeutralUnits = {
 		"unit-copper-deposit", 1,

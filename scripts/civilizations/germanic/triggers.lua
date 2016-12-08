@@ -178,25 +178,6 @@ AddTrigger("jarl-destroys-the-hersings",
 	end
 )
 
-AddTrigger("jarl-dies",
-	function()
-		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "HasQuest", "heimdalls-progeny") and FindHero("Erala", i) == nil) then
-				trigger_player = i
-				return true
-			end
-		end
-		return false
-	end,
-	function()
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "heimdalls-progeny") then
-			CallDialogue("campaign-defeat", trigger_player)
-		end
-		SetPlayerData(trigger_player, "FailQuest", "heimdalls-progeny")
-		return false
-	end
-)
-
 AddTrigger("the-curved-swords", -- Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-roerby-swords/
 	function()
 		if (SyncRand(100) ~= 0) then -- 1% chance this will trigger every time it is checked (and 1% for each player it is checked for, for a chance of 0.01% for a player that matches the conditions

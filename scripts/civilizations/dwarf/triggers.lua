@@ -40,3 +40,5 @@ AddTrigger("the-mead-of-poetry-fjalar-and-galar-conspire",
 		return false
 	end
 )
+
+Load("scripts/civilizations/dwarf/triggers_the_first_dwarves.lua")

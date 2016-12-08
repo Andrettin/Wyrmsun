@@ -25,45 +25,46 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-player = 0
-
-DefineDialogue("campaign-victory", {
+DefineDialogue("a-rocky-home-introduction", {
 	Nodes = {
 		{
-			"text", "You have completed the campaign! You may now choose to end the game here, or to pursue a full conquest of your world.",
-			"options", {"~!Victory!", "~!Continue Game"},
+			"text", "After a long time wandering, a clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home..."
+		},
+		{
+			"speaker", "character", "Modsognir",
+			"text", "My clansfolk, if we are to survive, we will need food and materials to build shelters for our people."
+		},
+		{
+			"speaker", "character", "Durin",
+			"text", "Aye. There are plenty of yales here, we should hunt some."
+		},
+		{
+			"speaker", "character", "Modsognir",
+			"text", "There are many perils laying about. We need to be ready quickly.",
 			"option-effects", {
 				function(s)
-					ActionVictory()
-				end,
-				function(s)
-					AddPlayerObjective(GetThisPlayer(), "- Defeat your rivals")
+					SetPlayerData(trigger_player, "AcceptQuest", "the-first-dwarves")
+					SetPlayerData(trigger_player, "AcceptQuest", "a-rocky-home")
 				end
 			}
 		}
 	}
 })
 
-DefineDialogue("campaign-defeat", {
+DefineDialogue("a-rocky-home-yales-hunted", {
 	Nodes = {
 		{
-			"text", "You have failed the campaign... But the game need not end. You still have forces standing, and you may choose to pursue a full conquest of your world instead of the campaign's objectives.",
-			"options", {"~!Defeat...", "~!Continue Game"},
-			"option-effects", {
-				function(s)
-					ActionDefeat()
-				end,
-				function(s)
-					AddPlayerObjective(GetThisPlayer(), "- Defeat your rivals")
-				end
-			}
+			"speaker", "character", "Durin",
+			"text", "We have hunted enough of them to last for a while. Ah, nothing like the taste of roasted yale..."
 		}
 	}
 })
 
-Load("scripts/civilizations/dwarf/dialogues.lua")
-Load("scripts/civilizations/elf/dialogues.lua")
-Load("scripts/civilizations/germanic/dialogues_freys_messenger.lua")
-Load("scripts/civilizations/germanic/dialogues_heimdalls_progeny.lua")
-Load("scripts/civilizations/gnome/dialogues.lua")
-Load("scripts/civilizations/teuton/dialogues.lua")
+DefineDialogue("a-rocky-home-materials-collected", {
+	Nodes = {
+		{
+			"speaker", "character", "Modsognir",
+			"text", "The materials we need have been collected. It is time to build our new homes by these rocks!"
+		}
+	}
+})

@@ -25,25 +25,44 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineQuest("the-first-dwarves", {
+	Name = "The First Dwarves",
+	Icon = "icon-modsognir",
+	World = "Nidavellir",
+	Civilization = "dwarf",
+	PlayerColor = "red",
+	FailEffects = function(s)
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "the-first-dwarves") then
+			CallDialogue("campaign-defeat", trigger_player)
+		end
+	end,
+	Objectives = {"- Overcome Svarinshaug's perils", "- Modsognir must survive", "- Durin must survive"},
+	Uncompleteable = true,
+	Unobtainable = true,
+	HeroesMustSurvive = {"Modsognir", "Durin"}
+})
+
 DefineQuest("a-rocky-home", {
 	Name = "A Rocky Home",
 	Icon = "icon-modsognir",
-	Description = "A clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home. Beset by hostile natural forces on all sides, can they survive their first winter?\n\nMap: Svarinshaug",
+	Description = "A clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home. Beset by hostile natural forces on all sides, can they survive their first winter?",
 	World = "Nidavellir",
 	Civilization = "dwarf",
-	Map = "maps/nidavellir/svarinshaug.smp",
-	Scenario = "scripts/civilizations/dwarf/scenarios/a_rocky_home.lua",
-	PlayerColor = "white",
-	LoadingMusic = "DwarfLoading",
-	MapMusic = "DwarfTheme",
-	IntroductionDialogue = "a-rocky-home-introduction"
+	PlayerColor = "red",
+	CompletionEffects = function(s)
+		CallDialogue("a-rocky-home-materials-collected", trigger_player)
+	end,
+	Objectives = {"- Kill 8 Yales", "- Gather 400 Lumber and 1200 Stone"},
+	Unobtainable = true,
+	DestroyUnits = {"unit-yale", "", 8},
+	GatherResources = {"lumber", 400, "stone", 1200},
+	HeroesMustSurvive = {"Modsognir", "Durin"}
 })
 
 DefineQuest("the-mead-of-wisdom", {
 	Name = "The Mead of Wisdom",
 	Icon = "icon-durin",
 	Description = "The sage of Modsognir's clan has disappeared, taken by two dwarves called Fjalar and Galar. Modsognir has sent Durin to enter their hall, rescue the sage - or what remains of him - and bring the evil pair to justice.\n\nMap: Fjalar's and Galar's Hall",
-	RequiredQuest = "a-rocky-home",
 	World = "Nidavellir",
 	Civilization = "dwarf",
 	Map = "maps/nidavellir/fjalars-and-galars-hall.smp",

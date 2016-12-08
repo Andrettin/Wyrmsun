@@ -25,45 +25,34 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-player = 0
+AddTrigger("a-rocky-home-introduction",
+	function()
+		for i=0,(PlayerMax - 2) do
+			if (FindHero("Modsognir", i) ~= nil and FindHero("Durin", i) ~= nil) then
+				trigger_player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function() 
+		CallDialogue("a-rocky-home-introduction", player)
+		return false
+	end
+)
 
-DefineDialogue("campaign-victory", {
-	Nodes = {
-		{
-			"text", "You have completed the campaign! You may now choose to end the game here, or to pursue a full conquest of your world.",
-			"options", {"~!Victory!", "~!Continue Game"},
-			"option-effects", {
-				function(s)
-					ActionVictory()
-				end,
-				function(s)
-					AddPlayerObjective(GetThisPlayer(), "- Defeat your rivals")
-				end
-			}
-		}
-	}
-})
-
-DefineDialogue("campaign-defeat", {
-	Nodes = {
-		{
-			"text", "You have failed the campaign... But the game need not end. You still have forces standing, and you may choose to pursue a full conquest of your world instead of the campaign's objectives.",
-			"options", {"~!Defeat...", "~!Continue Game"},
-			"option-effects", {
-				function(s)
-					ActionDefeat()
-				end,
-				function(s)
-					AddPlayerObjective(GetThisPlayer(), "- Defeat your rivals")
-				end
-			}
-		}
-	}
-})
-
-Load("scripts/civilizations/dwarf/dialogues.lua")
-Load("scripts/civilizations/elf/dialogues.lua")
-Load("scripts/civilizations/germanic/dialogues_freys_messenger.lua")
-Load("scripts/civilizations/germanic/dialogues_heimdalls_progeny.lua")
-Load("scripts/civilizations/gnome/dialogues.lua")
-Load("scripts/civilizations/teuton/dialogues.lua")
+AddTrigger("a-rocky-home-yales-hunted",
+	function()
+		for i=0,(PlayerMax - 2) do
+			if (GetPlayerData(i, "HasQuest", "a-rocky-home") and GetPlayerData(i, "UnitTypeKills", "unit-yale") >= 8) then
+				trigger_player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function()
+		CallDialogue("a-rocky-home-yales-hunted", trigger_player)
+		return false
+	end
+)
