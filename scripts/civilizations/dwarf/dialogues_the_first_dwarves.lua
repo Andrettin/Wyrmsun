@@ -40,7 +40,10 @@ DefineDialogue("a-rocky-home-introduction", {
 		},
 		{
 			"speaker", "character", "Modsognir",
-			"text", "There are many perils laying about. We need to be ready quickly.",
+			"text", "There are many perils laying about. We need to be ready quickly."
+		},
+		{
+			"text", "Hint: Press A and then click on a yale to attack it.",
 			"option-effects", {
 				function(s)
 					SetPlayerData(trigger_player, "AcceptQuest", "the-first-dwarves")
