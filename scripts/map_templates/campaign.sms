@@ -8,7 +8,7 @@ end
 
 --ApplyMapTemplate("earth", 3766, 667) -- once the game has more human civilizations, and if performance is improved enough to allow a 2048x1024 map, this could be changed to the coordinates {3281, 427}, delimiting the map at the end of Iceland to the west, and at the end Scandinavia to the north; thus allowing the map to contain all of Europe and a significant part of the the areas adjacent to it
 ApplyMapTemplate("earth", 4022, 667)
---ApplyMapTemplate("nidavellir", 0, 0, 0, 0, 1)
+ApplyMapTemplate("nidavellir", 0, 0, 0, 0, 1)
 --ApplyMapTemplate("nidavellir-underground-1", 0, 0, 0, 0, 2)
 --ApplyMapTemplate("asgard", 0, 0, 0, 0, 3)
 

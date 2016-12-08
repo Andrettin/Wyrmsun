@@ -28,26 +28,21 @@
 DefineMapTemplate("svarinshaug", {
 	Name = "Svarinshaug",
 	MainTemplate = "nidavellir",
-	Width = 64,
-	Height = 64,
+	Width = 32,
+	Height = 32,
 	BaseTerrain = "dry-mud",
-	SurroundingTerrain = "mud",
 	GeneratedTerrains = {
 		"mud", "medium",
 		"shallow-water", "low",
 		"rock", "high",
-		"flamefood-tree", "low"
+		"flamefood-tree", "medium"
 	},
 	ExternalGeneratedTerrains = {
-		"mud", "high",
-		"dry-mud", "medium",
-		"rock", "high",
+		"mud", "low",
+		"rock", "low",
 		"flamefood-tree", "low"
 	},
 	GeneratedNeutralUnits = {
-		"unit-gold-deposit", 1,
-		"unit-silver-deposit", 1,
-		"unit-copper-deposit", 1,
 		"unit-snigill", 16,
 		"unit-slime", 8,
 		"unit-yale", 8
@@ -59,4 +54,7 @@ DefineMapTemplate("svarinshaug", {
 	}
 })
 
-SetMapTemplateUnit("svarinshaug", "unit-dwarven-town-hall", "brising-clan", {-1, -1})
+SetMapTemplateUnit("svarinshaug", "unit-dwarven-town-hall", "brising-clan", {-1, -1}, -3000)
+SetMapTemplateHero("svarinshaug", "Modsognir", "brising-clan", {-1, -1}, -3000, -2999)
+SetMapTemplateHero("svarinshaug", "Durin", "brising-clan", {-1, -1}, -3000, -2999)
+SetMapTemplateHero("svarinshaug", "Regin", "brising-clan", {-1, -1}, 561, 566) -- Sigibert's campaign begins in 561; Sigibert's encounter with Regin (which causes the latter's death in the end) should take place between Sigibert's initial defeat of the Avars and Chilperich in 561-562, and Sigibert's marriage to Brunichilde in 566

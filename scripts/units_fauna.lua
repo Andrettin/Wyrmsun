@@ -790,7 +790,6 @@ DefineUnitType("unit-yale", {
 	HitPoints = 30,
 	BasicDamage = 3,
 	Points = 15,
-	PeopleAversion = true,
 	Variations = {
 		{
 --			"variation-id", "brown-fur",

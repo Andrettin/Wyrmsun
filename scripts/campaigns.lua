@@ -25,6 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineCampaign("the-first-dwarves", {
+	Name = "The First Dwarves",
+	Description = "A clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home. Beset by hostile natural forces on all sides, can they survive their first winter?",
+	Civilization = "dwarf",
+	Faction = "brising-clan",
+	Year = -3000
+})
+
 --[[
 DefineCampaign("the-mead-of-poetry", {
 	Name = "The Mead of Poetry",

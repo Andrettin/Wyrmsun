@@ -66,6 +66,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Dwarven Axefighters and Yale Riders no longer cost Lumber.
+- Yales no longer attack if a unit gets close to them.
 
 * Upgrades
 - Axe upgrades no longer cost Lumber.
