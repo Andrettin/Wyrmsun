@@ -64,6 +64,9 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Dwarven buildings now use stone (instead of lumber) for construction, except for the Yale Pen, the Dock and mines.
 
+* Quests
+- As missions are transitioning to the Campaign mode, acquiring technology points to unlock units, buildings and upgrades is no longer required for the missions.
+
 * Units
 - Dwarven Axefighters and Yale Riders no longer cost Lumber.
 - Yales no longer attack if a unit gets close to them.

@@ -52,69 +52,28 @@ function DefineUpgrade(upgrade_ident, data)
 end
 
 function DefineAllowNormalUnits(flags)
-	-- Allow units for human players only if they have been acquired
-	if ((flags == "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" or flags == "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR") and (not IsNetworkGame()) and GetCurrentQuest() ~= "" and GrandStrategy == false) then
-		for i, unitName in ipairs(Units) do
-			local PlayerUnitFlag = {}
-			for j=0,(PlayerMax - 1) do
-				if (string.find(unitName, "upgrade-") == nil) then
-					if (
-						GetPlayerData(j, "AiEnabled") == false
-						and GetUnitTypeData(unitName, "Class") ~= ""
-						and GetUnitTypeData(unitName, "Civilization") ~= ""
-						and GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), GetUnitTypeData(unitName, "Civilization"))) == false
-						and GetUnitTypeData(unitName, "TechnologyPointCost") > 0
-					) then
-						PlayerUnitFlag[j] = "F"
-					else
-						PlayerUnitFlag[j] = "A"
-					end
+	for i, unitName in ipairs(Units) do
+		local PlayerUnitFlag = {}
+		for j=0,(PlayerMax - 1) do
+			if (string.find(unitName, "upgrade-") == nil) then
+				if (flags == "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR") then
+					PlayerUnitFlag[j] = "A"
 				else
-					if (
-						GetPlayerData(j, "AiEnabled") == false
-						and GetUpgradeData(unitName, "Class") ~= ""
-						and GetUpgradeData(unitName, "Civilization") ~= ""
-						and GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType(GetUpgradeData(unitName, "Class"), GetUpgradeData(unitName, "Civilization"))) == false
-						and CUpgrade:Get(unitName).TechnologyPointCost > 0
-					) then
-						PlayerUnitFlag[j] = "F"
-					elseif (flags == "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR" or unitName == GetCivilizationData(GetPlayerData(j, "RaceName"), "CivilizationUpgrade")) then
-						PlayerUnitFlag[j] = "R"
-					else
-						PlayerUnitFlag[j] = "A"
-					end
+					PlayerUnitFlag[j] = string.sub(flags, j + 1, j + 1)
+				end
+			else
+				if (flags == "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" and unitName == GetCivilizationData(GetPlayerData(j, "RaceName"), "CivilizationUpgrade")) then
+					PlayerUnitFlag[j] = "R"
+				else
+					PlayerUnitFlag[j] = string.sub(flags, j + 1, j + 1)
 				end
 			end
-			local allow_string = ""
-			for j=0,(PlayerMax - 1) do
-				allow_string = allow_string .. PlayerUnitFlag[j]
-			end
-			DefineAllow(unitName, allow_string)
 		end
-	else
-		for i, unitName in ipairs(Units) do
-			local PlayerUnitFlag = {}
-			for j=0,(PlayerMax - 1) do
-				if (string.find(unitName, "upgrade-") == nil) then
-					if (flags == "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR") then
-						PlayerUnitFlag[j] = "A"
-					else
-						PlayerUnitFlag[j] = string.sub(flags, j + 1, j + 1)
-					end
-				else
-					if (flags == "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" and unitName == GetCivilizationData(GetPlayerData(j, "RaceName"), "CivilizationUpgrade")) then
-						PlayerUnitFlag[j] = "R"
-					else
-						PlayerUnitFlag[j] = string.sub(flags, j + 1, j + 1)
-					end
-				end
-			end
-			local allow_string = ""
-			for j=0,(PlayerMax - 1) do
-				allow_string = allow_string .. PlayerUnitFlag[j]
-			end
-			DefineAllow(unitName, allow_string)
+		local allow_string = ""
+		for j=0,(PlayerMax - 1) do
+			allow_string = allow_string .. PlayerUnitFlag[j]
 		end
+		DefineAllow(unitName, allow_string)
 	end
 end
 

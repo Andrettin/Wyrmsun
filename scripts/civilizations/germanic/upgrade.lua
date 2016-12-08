@@ -47,8 +47,6 @@ DefineUpgrade("upgrade-germanic-long-spear", {
 	Parent = "upgrade-long-spear",
 	Civilization = "teuton", -- change to Germanic when they get spearmen
 	Description = _("With the lengthening of spear shafts, soldiers who wield these weapons have greater reach against their enemies.\n\nEffect: +2 Damage for Speerkampfers."),
---	TechnologyPointCost = 1
-	TechnologyPointCost = 0, -- 0 cost until the Germanics get spearmen
 	Item = "unit-long-spear"
 })
 
@@ -73,8 +71,7 @@ DefineUpgrade("upgrade-germanic-barbed-arrow", {
 
 DefineUpgrade("upgrade-germanic-wood-plow", {
 	Parent = "upgrade-wood-plow",
-	Civilization = "germanic",
-	TechnologyPointCost = 1
+	Civilization = "germanic"
 })
 
 DefineModifier("upgrade-germanic-broad-sword",

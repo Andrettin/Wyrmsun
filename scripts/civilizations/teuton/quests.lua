@@ -32,7 +32,6 @@ DefineQuest("the-battle-of-magetobria", {
 	RequiredQuest = "gylves-realm",
 	World = "Earth",
 	Civilization = "teuton",
-	TechnologyPoints = 4,
 	Map = "maps/earth/belfort.smp",
 	Scenario = "scripts/civilizations/teuton/scenarios/the_battle_of_magetobria.lua",
 	PlayerColor = "black"
@@ -45,7 +44,6 @@ DefineQuest("the-home-of-the-boii", {
 	RequiredQuest = "the-battle-of-magetobria",
 	World = "Earth",
 	Civilization = "teuton",
-	TechnologyPoints = 4,
 	Map = "maps/earth/prague.smp",
 	Scenario = "scripts/civilizations/teuton/scenarios/the_home_of_the_boii.lua",
 	PlayerColor = "orange"
@@ -58,7 +56,6 @@ DefineQuest("the-sack-of-iuvavum", {
 	RequiredQuest = "the-home-of-the-boii",
 	World = "Earth",
 	Civilization = "teuton",
-	TechnologyPoints = 3,
 	Map = "maps/earth/salzburg.smp",
 	Scenario = "scripts/civilizations/teuton/scenarios/the_sack_of_iuvavum.lua",
 	PlayerColor = "orange"
@@ -71,7 +68,6 @@ DefineQuest("the-razing-of-opitergium", {
 	RequiredQuest = "the-sack-of-iuvavum",
 	World = "Earth",
 	Civilization = "teuton",
-	TechnologyPoints = 3,
 	Map = "maps/earth/oderzo.smp",
 	Scenario = "scripts/civilizations/teuton/scenarios/the_razing_of_opitergium.lua",
 	PlayerColor = "orange"
@@ -84,7 +80,6 @@ DefineQuest("moving-into-galicia", { -- happened in 411 AD
 	RequiredQuest = "the-razing-of-opitergium",
 	World = "Earth",
 	Civilization = "teuton",
-	TechnologyPoints = 3,
 	Map = "maps/earth/braga.smp",
 	Scenario = "scripts/civilizations/teuton/scenarios/moving_into_galicia.lua",
 	PlayerColor = "black"
@@ -97,7 +92,6 @@ DefineQuest("the-blue-danube", {
 	RequiredQuest = "the-razing-of-opitergium",
 	World = "Earth",
 	Civilization = "teuton",
-	TechnologyPoints = 4,
 	Map = "maps/earth/regensburg.smp",
 	Scenario = "scripts/civilizations/teuton/scenarios/the_blue_danube.lua",
 	PlayerColor = "cyan"

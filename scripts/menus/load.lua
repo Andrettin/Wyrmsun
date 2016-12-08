@@ -13,11 +13,6 @@ function LoadGame(s)
 	end
 
 	RunResultsMenu()
-	if not (IsNetworkGame()) then
-		if (GetCurrentQuest() ~= "" and GetCivilizationTechnologyPoints(GetQuestData(GetCurrentQuest(), "Civilization")) > 0 and GameResult == GameVictory and not IsReplayGame() and not GrandStrategy) then
-			RunTechTreeMenu(GetTechTreeCivilizationNumber(GetQuestData(GetCurrentQuest(), "Civilization")))
-		end
-	end
 
 	SetCurrentCampaign("")
 	SetCurrentQuest("")

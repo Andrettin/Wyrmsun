@@ -433,7 +433,6 @@ DefineUnitType("unit-germanic-archer", {
 		{"arrows", "unit-arrows"}
 	},
 	Corpse = "unit-human-dead-body",
-	TechnologyPointCost = 1,
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
 	BonusAgainstAir = 50,
@@ -532,7 +531,6 @@ DefineUnitType("unit-germanic-carpenters-shop", { Name = _("Carpenter's Shop"),
 	Image = {"file", "germanic/buildings/carpenters_shop.png", "size", {96, 96}},
 	Shadow = {"file", "germanic/buildings/carpenters_shop_shadow.png", "size", {96, 96}},
 	Icon = "icon-germanic-carpenters-shop",
-	TechnologyPointCost = 1,
 	ButtonKey = "r",
 	ButtonHint = _("Build Carpente~!r's Shop"),
 	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-arrows", "unit-barbed-arrows"},
@@ -549,7 +547,6 @@ DefineUnitType("unit-germanic-smithy", { Name = _("Smithy"),
 	Image = {"file", "germanic/buildings/smithy.png", "size", {96, 96}},
 	Shadow = {"file", "germanic/buildings/smithy_shadow.png", "size", {96, 96}},
 	Icon = "icon-germanic-smithy",
-	TechnologyPointCost = 1,
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery", "upgrade-item-suffix-of-aedi", "upgrade-item-suffix-of-ergi", "upgrade-item-suffix-of-othola", "upgrade-item-suffix-of-thurs"}, -- Aedi, Ergi, Othola and Thurs are Norse runes
 	Sounds = {

@@ -45,7 +45,6 @@ DefineUpgrade("upgrade-dwarven-long-spear", {
 	Parent = "upgrade-long-spear",
 	Civilization = "dwarf",
 	Description = _("With the lengthening of spear shafts, soldiers who wield these weapons have greater reach against their enemies.\n\nEffect: +2 Damage for Guards."),
-	TechnologyPointCost = 1,
 	Item = "unit-long-spear"
 })
 
@@ -125,8 +124,7 @@ DefineUpgrade("upgrade-dwarven-masonry", {
 	Civilization = "dwarf",
 	Description = _("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings, and allows Sentry Towers to be upgraded to Guard Towers and Mead Halls to Bastions."),
 	Costs = {"time", 250, "copper", 900, "lumber", 0, "stone", 1500},
-	GrandStrategyCosts = {"time", 250, "copper", 900, "lumber", 0, "stone", 1500, "research", 2400},
-	TechnologyPointCost = 1
+	GrandStrategyCosts = {"time", 250, "copper", 900, "lumber", 0, "stone", 1500, "research", 2400}
 })
 
 DefineUpgrade("upgrade-dwarven-coinage", {
@@ -141,15 +139,13 @@ DefineUpgrade("upgrade-dwarven-runewriting", {
 	Civilization = "dwarf",
 	Description = _("The dwarven system of runewriting is said to have been invented by the dwarven scholar, Dvalin.\n\nEffect: +10% Time Efficiency for all buildings, changes faction from tribe to polity."),
 	Background = _("In the Poetic Edda's ~<Hovamol~>, Dvalin is mentioned as the one who bestowed the knowledge of runes upon the dwarves."),
-	Icon = "icon-norse-runewriting",
-	TechnologyPointCost = 1
+	Icon = "icon-norse-runewriting"
 })
 
 DefineUpgrade("upgrade-dwarven-alchemy", {
 	Parent = "upgrade-alchemy",
 	Civilization = "dwarf",
-	Description = _("Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Scouts, Pathfinders, Explorers and Gryphon Riders, +5 Fire Damage for Ballistas."),
-	TechnologyPointCost = 1
+	Description = _("Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Scouts, Pathfinders, Explorers and Gryphon Riders, +5 Fire Damage for Ballistas.")
 })
 
 DefineModifier("upgrade-dwarven-broad-axe",

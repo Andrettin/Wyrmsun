@@ -104,15 +104,13 @@ DefineUpgrade("upgrade-teuton-coinage", {
 DefineUpgrade("upgrade-teuton-writing", {
 	Parent = "upgrade-writing",
 	Civilization = "teuton",
-	Icon = "icon-norse-runewriting",
-	TechnologyPointCost = 1
+	Icon = "icon-norse-runewriting"
 })
 
 DefineUpgrade("upgrade-teuton-alchemy", {
 	Parent = "upgrade-alchemy",
 	Civilization = "teuton",
-	Description = _("Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Schutzes, +5 Fire Damage for Catapults."),
-	TechnologyPointCost = 1
+	Description = _("Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Schutzes, +5 Fire Damage for Catapults.")
 })
 
 DefineModifier("upgrade-teuton-spatha",

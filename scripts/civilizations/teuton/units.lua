@@ -810,7 +810,6 @@ DefineUnitType("unit-teuton-stables", {
 	Image = {"file", "teuton/buildings/stables.png", "size", {96, 96}},
 	Shadow = {"file", "teuton/buildings/stables_shadow.png", "size", {96, 96}},
 	Icon = "icon-teuton-stables",
-	TechnologyPointCost = 1,
 	Drops = {"unit-horse"},
 	Variations = {
 		{

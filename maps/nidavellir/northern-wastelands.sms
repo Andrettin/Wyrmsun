@@ -154,14 +154,12 @@ elseif (GrandStrategyEventMap) then
 	end
 end
 
-if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-sentry-tower") or GrandStrategyEventMap or GetThisPlayer() ~= 0) then
-	unit = CreateUnit("unit-dwarven-sentry-tower", 0, {14, 46})
-	unit = CreateUnit("unit-dwarven-sentry-tower", 0, {18, 44})
-	unit = CreateUnit("unit-dwarven-sentry-tower", 0, {23, 43})
-	unit = CreateUnit("unit-dwarven-sentry-tower", 0, {26, 45})
-	unit = CreateUnit("unit-dwarven-sentry-tower", 0, {28, 53})
-	unit = CreateUnit("unit-dwarven-sentry-tower", 0, {28, 57})
-end
+unit = CreateUnit("unit-dwarven-sentry-tower", 0, {14, 46})
+unit = CreateUnit("unit-dwarven-sentry-tower", 0, {18, 44})
+unit = CreateUnit("unit-dwarven-sentry-tower", 0, {23, 43})
+unit = CreateUnit("unit-dwarven-sentry-tower", 0, {26, 45})
+unit = CreateUnit("unit-dwarven-sentry-tower", 0, {28, 53})
+unit = CreateUnit("unit-dwarven-sentry-tower", 0, {28, 57})
 
 if (GrandStrategyEventMap) then
 	local units_to_be_created = {}

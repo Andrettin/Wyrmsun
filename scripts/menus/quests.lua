@@ -93,14 +93,12 @@ function RunQuestMenu(world)
 		if (GetQuestData(quests[i], "Hidden") == false and GetQuestData(quests[i], "World") == world and GetQuestData(quests[i], "Map") ~= "") then
 			total_quest_quantity = total_quest_quantity + 1
 			if (GetQuestData(quests[i], "RequiredQuest") == "" or GetQuestData(GetQuestData(quests[i], "RequiredQuest"), "Completed") or GetQuestData(quests[i], "Completed")) then
-				if (GetQuestData(quests[i], "RequiredTechnology") == "" or GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetQuestData(quests[i], "RequiredTechnology"))) then
-					addQuestIcon(quests[i], menu, offx + 23 + 4 + (54 * item_x), offy + 10 + 4 + (46 * (item_y + 1))) -- increase Y by 1 because there are few enough quests that it makes sense to make the existing quests more centralized in the interface
+				addQuestIcon(quests[i], menu, offx + 23 + 4 + (54 * item_x), offy + 10 + 4 + (46 * (item_y + 1))) -- increase Y by 1 because there are few enough quests that it makes sense to make the existing quests more centralized in the interface
 			
-					item_x = item_x + 1
-					if (item_x > 9) then
-						item_x = 1
-						item_y = item_y + 1
-					end
+				item_x = item_x + 1
+				if (item_x > 9) then
+					item_x = 1
+					item_y = item_y + 1
 				end
 				if (GetQuestData(quests[i], "Completed")) then
 					completed_quest_quantity = completed_quest_quantity + 1
@@ -266,12 +264,7 @@ function addQuestIcon(quest, menu, x, y)
 			l:setSize(324, 208)
 			l:setLineWidth(324)
 			quest_menu:add(l, 14, 112)
-			local quest_description = GetQuestData(quest, "Description") .. "\n\nRewards: " .. tostring(GetQuestData(quest, "TechnologyPoints")) .. " " .. GetCivilizationData(GetQuestData(quest, "Civilization"), "Adjective")
-			if (GetQuestData(quest, "TechnologyPoints") > 1) then
-				quest_description = quest_description .. " Technology Points."
-			else
-				quest_description = quest_description .. " Technology Point."
-			end
+			local quest_description = GetQuestData(quest, "Description")
 			l:setCaption(quest_description)
 			
 			if (GetQuestData(quest, "Map") ~= "") then

@@ -1514,15 +1514,8 @@ function PersistencyUpdates()
 		SavePreferences()
 	end
 	
-	if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-throwing-axe-1")) then
-		RemoveElementFromArray(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-throwing-axe-1")
-		table.insert(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-sharp-throwing-axe")
-		SavePreferences()
-	end
-	
-	if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-throwing-axe-2")) then
-		RemoveElementFromArray(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-throwing-axe-2")
-		table.insert(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-bearded-throwing-axe")
+	if (wyr.preferences.TechnologyAcquired ~= nil) then
+		wyr.preferences.TechnologyAcquired = nil
 		SavePreferences()
 	end
 	
@@ -1864,7 +1857,6 @@ local defaultPreferences = {
 	Difficulty = 2,
 	GrandStrategyBattalionMultiplier = 1,
 	GrandStrategyBattleBaseBuilding = false,
-	TechnologyAcquired = {},
 	TipsShown = {},
 	LastVersionPlayed = "0.0.0",
 	EnabledMods = {},

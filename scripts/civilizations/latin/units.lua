@@ -84,7 +84,6 @@ DefineUnitType("unit-latin-smithy", {
 	Image = {"file", "latin/buildings/smithy.png", "size", {96, 96}},
 	Shadow = {"file", "latin/buildings/smithy_shadow.png", "size", {96, 96}},
 	Icon = "icon-latin-smithy",
-	TechnologyPointCost = 1,
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield"},
 	DropAffixes = {"upgrade-item-prefix-flaming", "upgrade-item-prefix-quenching", "upgrade-item-prefix-storm", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery"},
 	Sounds = {
@@ -99,7 +98,6 @@ DefineUnitType("unit-latin-stables", {
 	Image = {"file", "latin/buildings/stables.png", "size", {96, 96}},
 	Shadow = {"file", "latin/buildings/stables_shadow.png", "size", {96, 96}},
 	Icon = "icon-latin-stables",
-	TechnologyPointCost = 1,
 	Drops = {"unit-horse"},
 	Sounds = {
 --		"help", "basic-teuton-voices-help-town"

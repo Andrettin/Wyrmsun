@@ -602,7 +602,6 @@ DefineUnitType("unit-dwarven-scout", {
 	FireMissile = "missile-flaming-throwing-axe",
 	MaxAttackRange = 4,
 	Corpse = "unit-dwarven-dead-body",
-	TechnologyPointCost = 1,
 	WeaponClasses = {"throwing-axe"},
 	HackDamage = true,
 	ButtonKey = "s",
@@ -1175,7 +1174,6 @@ DefineUnitType("unit-dwarven-lumber-mill", {
 	Costs = {"time", 165, "copper", 660, "lumber", 0, "stone", 1485},
 	RepairCosts = {"lumber", 0, "stone", 1},
 	FireResistance = 20,
-	TechnologyPointCost = 1,
 	Drops = {"unit-stone-pile"},
 	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe"},
 	DropAffixes = {"upgrade-item-prefix-storm", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-the-snigill"},
@@ -1199,7 +1197,6 @@ DefineUnitType("unit-dwarven-smithy", {
 	Costs = {"time", 190, "copper", 800, "lumber", 0, "stone", 1560},
 	RepairCosts = {"lumber", 0, "stone", 1},
 	FireResistance = 20,
-	TechnologyPointCost = 1,
 	Drops = {"unit-stone-pile"},
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-spatha"}, -- drops Spatha to allow dropping dwarven unique swords
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-aedi",  "upgrade-item-suffix-of-othola"}, -- has flaming prefix to allow dropping The Hammer of Thursagan; Aedi and Othola are Norse runes
@@ -1220,7 +1217,6 @@ DefineUnitType("unit-dwarven-yale-pen", {
 	Costs = {"lumber", 600, "stone", 300},
 	RepairCosts = {"copper", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
-	TechnologyPointCost = 1,
 	ButtonKey = "y",
 	ButtonHint = _("Build ~!Yale Pen"),
 	Drops = {"unit-stone-pile", "unit-yale"},
