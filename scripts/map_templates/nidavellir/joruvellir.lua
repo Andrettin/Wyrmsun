@@ -28,27 +28,23 @@
 DefineMapTemplate("joruvellir", {
 	Name = "Joruvellir",
 	MainTemplate = "nidavellir",
-	Width = 64,
-	Height = 64,
+	Width = 32,
+	Height = 32,
 	BaseTerrain = "dry-mud",
-	SurroundingTerrain = "mud",
 	GeneratedTerrains = {
 		"mud", "low",
 		"rock", "medium",
 		"flamefood-tree", "low"
 	},
 	ExternalGeneratedTerrains = {
-		"mud", "high",
-		"dry-mud", "high",
-		"rock", "medium",
+		"mud", "low",
+		"rock", "low",
 		"flamefood-tree", "low"
 	},
 	GeneratedNeutralUnits = {
-		"unit-gold-deposit", 1,
-		"unit-silver-deposit", 1,
 		"unit-copper-deposit", 1,
 		"unit-yale", 8,
-		"unit-gryphon", 2
+--		"unit-gryphon", 2
 	},
 	PlayerLocationGeneratedNeutralUnits = {
 		"unit-copper-deposit", 1,

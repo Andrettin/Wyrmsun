@@ -40,13 +40,13 @@ DefineMapTemplate("nidavellir", {
 	GeneratedNeutralUnits = {
 		"unit-gold-deposit", 2,
 		"unit-silver-deposit", 2,
-		"unit-copper-deposit", 2,
 		"unit-snigill", 64,
 		"unit-slime", 32,
 		"unit-blood-bat", 16,
 		"unit-yale", 16,
 		"unit-dread-bat", 8,
-		"unit-gryphon", 8,
+--		"unit-gryphon", 8,
+		"unit-gryphon", 2,
 		"unit-wyrm", 4,
 		"unit-mercenary-camp", 1
 	},
@@ -96,16 +96,12 @@ DefineMapTemplate("nidavellir-underground-1", {
 	}
 })
 
---SetMapTemplateUnit("nidavellir", "unit-gnomish-town-hall", "acthnic-tribe", {-1, -1})
---SetMapTemplateUnit("nidavellir", "unit-gnomish-town-hall", "cubital-tribe", {-1, -1})
---SetMapTemplateUnit("nidavellir", "unit-gnomish-town-hall", "sagan-tribe", {-1, -1})
---SetMapTemplateUnit("nidavellir", "unit-gnomish-town-hall", "vulcan-tribe", {-1, -1})
---SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "khag-tribe", {-1, -1})
---SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "lggi-tribe", {-1, -1})
+SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "khag-tribe", {-1, -1})
+SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "lggi-tribe", {-1, -1})
 
 SetMapTemplateUnit("nidavellir-underground-1", "unit-dwarven-town-hall", "shadowcharm-clan", {-1, -1})
-SetMapTemplateHero("nidavellir-underground-1", "Fjalar", "shadowcharm-clan", {-1, -1}, -2800, -2770) -- Fjalar's and Galar's campaign begins in 2800 BC, give them +30 years of life
-SetMapTemplateHero("nidavellir-underground-1", "Galar", "shadowcharm-clan", {-1, -1}, -2800, -2770)
+SetMapTemplateHero("nidavellir-underground-1", "Fjalar", "shadowcharm-clan", {-1, -1}, -2800, -2799) -- Fjalar's and Galar's campaign begins in 2800 BC
+SetMapTemplateHero("nidavellir-underground-1", "Galar", "shadowcharm-clan", {-1, -1}, -2800, -2799)
 
 SetMapTemplateUnit("nidavellir-underground-1", "unit-kobold-footpad", "fafning-tribe", {-1, -1}, 561, 566)
 SetMapTemplateUnit("nidavellir-underground-1", "unit-kobold-footpad", "fafning-tribe", {-1, -1}, 561, 566)
@@ -123,8 +119,8 @@ SetMapTemplateHero("nidavellir-underground-1", "Fafnir", "fafning-tribe", {-1, -
 --SetMapTemplateLayerConnector("nidavellir-underground-1", "unit-portal", {-1, -1}, "Earth")
 --SetMapTemplateLayerConnector("nidavellir-underground-1", "unit-cavern-entrance", {-1, -1}, 0)
 
---Load("scripts/map_templates/nidavellir/aurvang.lua")
---Load("scripts/map_templates/nidavellir/joruvellir.lua")
+Load("scripts/map_templates/nidavellir/aurvang.lua")
+Load("scripts/map_templates/nidavellir/joruvellir.lua")
 Load("scripts/map_templates/nidavellir/svarinshaug.lua")
---Load("scripts/map_templates/nidavellir/untersberg.lua")
+Load("scripts/map_templates/nidavellir/untersberg.lua")
 --Load("scripts/map_templates/nidavellir/caverns_of_chaincolt_city.lua")

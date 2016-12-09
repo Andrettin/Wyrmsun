@@ -28,25 +28,21 @@
 DefineMapTemplate("aurvang", {
 	Name = "Aurvang",
 	MainTemplate = "nidavellir",
-	Width = 64,
-	Height = 64,
+	Width = 32,
+	Height = 32,
 	BaseTerrain = "dry-mud",
-	SurroundingTerrain = "mud",
 	GeneratedTerrains = {
 		"mud", "high",
 		"shallow-water", "medium",
-		"rock", "low",
+		"rock", "medium",
 		"flamefood-tree", "medium"
 	},
 	ExternalGeneratedTerrains = {
-		"mud", "high",
-		"dry-mud", "low",
+		"mud", "low",
 		"rock", "low",
 		"flamefood-tree", "medium"
 	},
 	GeneratedNeutralUnits = {
-		"unit-gold-deposit", 1,
-		"unit-silver-deposit", 1,
 		"unit-copper-deposit", 1,
 		"unit-snigill", 16,
 		"unit-slime", 8

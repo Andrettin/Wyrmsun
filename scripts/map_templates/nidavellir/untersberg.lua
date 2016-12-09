@@ -28,10 +28,9 @@
 DefineMapTemplate("untersberg", {
 	Name = "Untersberg",
 	MainTemplate = "nidavellir",
-	Width = 64,
-	Height = 64,
+	Width = 32,
+	Height = 32,
 	BaseTerrain = "dry-mud",
-	SurroundingTerrain = "mud",
 	GeneratedTerrains = {
 		"mud", "low",
 		"shallow-water", "low",
@@ -39,15 +38,14 @@ DefineMapTemplate("untersberg", {
 		"flamefood-tree", "medium"
 	},
 	ExternalGeneratedTerrains = {
-		"mud", "high",
-		"dry-mud", "high",
-		"rock", "high",
-		"flamefood-tree", "medium"
+		"mud", "low",
+		"rock", "low",
+		"flamefood-tree", "low"
 	},
 	GeneratedNeutralUnits = {
-		"unit-gold-deposit", 4,
-		"unit-silver-deposit", 4,
-		"unit-copper-deposit", 4,
+--		"unit-gold-deposit", 4,
+--		"unit-silver-deposit", 4,
+--		"unit-copper-deposit", 4,
 		"unit-snigill", 16,
 		"unit-slime", 4
 	},
@@ -58,7 +56,7 @@ DefineMapTemplate("untersberg", {
 	}
 })
 
-SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "acthnic-tribe", {-1, -1})
-SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "cubital-tribe", {-1, -1})
+--SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "acthnic-tribe", {-1, -1})
+--SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "cubital-tribe", {-1, -1})
 SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "sagan-tribe", {-1, -1})
-SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "vulcan-tribe", {-1, -1})
+--SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "vulcan-tribe", {-1, -1})
