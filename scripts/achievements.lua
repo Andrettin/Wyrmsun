@@ -65,6 +65,14 @@ DefineAchievement("the-blue-danube", {
 	RequiredQuests = {"the-blue-danube"}
 })
 
+DefineAchievement("the-first-dwarves", {
+	Name = "The First Dwarves",
+	Icon = "icon-brising-miner",
+	Description = "Complete the The First Dwarves campaign.",
+	PlayerColor = "red",
+	RequiredQuests = {"the-first-dwarves"}
+})
+
 DefineAchievement("the-mightiest-made", {
 	Name = "The Mightiest Made",
 	Icon = "icon-modsognir",
@@ -72,14 +80,6 @@ DefineAchievement("the-mightiest-made", {
 	PlayerColor = "red",
 	Character = "Modsognir",
 	CharacterLevel = 10
-})
-
-DefineAchievement("the-first-dwarves", {
-	Name = "The First Dwarves",
-	Icon = "icon-brising-miner",
-	Description = "Complete the A Rocky Home, The Mead of Wisdom, The Treasures of Svarinshaug, The Necklace of the Brisings and The Binding of Grafvitnir missions.",
-	PlayerColor = "red",
-	RequiredQuests = {"a-rocky-home", "the-mead-of-wisdom", "the-treasures-of-svarinshaug", "the-necklace-of-the-brisings", "the-binding-of-grafvitnir"}
 })
 
 DefineAchievement("the-lay-of-alvis", {

@@ -28,68 +28,12 @@
 --
 
 local NidavellirEvents = {
-	ARockyHome = {
-		Name = "A Rocky Home",
-		Description = "Our clan, led by Modsognir, has arrived in Svarinshaug seeking a new home. Beset by hostile natural forces on all sides, can we survive our first winter?",
-		Heroes = {
-			Modsognir = true,
-			Durin = true
-		},
-		Conditions = function(s)
-			if (
-				EventFaction.Name == "brising-clan"
-			) then
-				return true
-			else
-				return false
-			end
-		end,
-		Options = {"~!OK"},
-		OptionEffects = {
-			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "brising-clan" and wyr.preferences.AutomaticBattles == false) then
-					SetProvinceHero("Svarinshaug", "Modsognir", 2)
-					SetProvinceHero("Svarinshaug", "Durin", 2)
-
-					GrandStrategyEventMap = true
-					GetMapInfo("maps/nidavellir/svarinshaug.smp")
-					SetCurrentQuest("a-rocky-home")
-					RunMap("maps/nidavellir/svarinshaug.smp")
-					GrandStrategyEventMap = false
-					
-					RestoreScenarioUnitsToProvince({ProvinceName = "Svarinshaug", FactionName = "brising-clan", Heroes = {"Modsognir", "Durin"}})
-					
-					if (GameResult == GameVictory) then
-						ChangeFactionResource("dwarf", "brising-clan", "prestige", 5) -- prestige for successfully settling Svarinshaug
-						ChangeFactionResource("dwarf", "brising-clan", "copper", 800) -- food gained from the yales
-						ChangeFactionResource("dwarf", "brising-clan", "lumber", 800) -- lumber gained from the mission
-						ChangeFactionResource("dwarf", "brising-clan", "stone", 400) -- stone gained from the mission
-					elseif (GameResult == GameDefeat) then
-						AcquireProvince(WorldMapProvinces.Svarinshaug, "")
-					end
-				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "brising-clan" or wyr.preferences.AutomaticBattles)) then
-					ChangeFactionResource("dwarf", "brising-clan", "prestige", 5) -- prestige for successfully settling Svarinshaug
-					ChangeFactionResource("dwarf", "brising-clan", "copper", 800) -- food gained from the yales
-					ChangeFactionResource("dwarf", "brising-clan", "lumber", 800) -- lumber gained from the mission
-					ChangeFactionResource("dwarf", "brising-clan", "stone", 400) -- stone gained from the mission
-					if (GrandStrategyFaction.Name == EventFaction.Name) then
-						CenterGrandStrategyMapOnTile(WorldMapProvinces.Svarinshaug.SettlementLocation[1], WorldMapProvinces.Svarinshaug.SettlementLocation[2])
-						GenericDialog("A Rocky Home", "We have successfully hunted enough yales and gathered enough lumber and stone to survive our early days in Svarinshaug.")
-					end
-				end
-			end
-		},
-		OptionTooltips = {""}
-	},
 	TheMeadOfWisdom = {
 		Name = "The Mead of Wisdom",
 		Description = "Word has reached our chieftain Modsognir that the dwarves Fjalar and Galar have slain our wise clansman Thjodrorir. Modsognir's advisors suggest sending Durin to enter the two dwarves' hall, returning with the sage's remains to give him a proper burial, and bringing the evil pair to the clan's justice.",
 		Heroes = {
 			Modsognir = true,
 			Durin = true
-		},
-		RequiredEvents = {
-			ARockyHome = true
 		},
 		Conditions = function(s)
 			if (

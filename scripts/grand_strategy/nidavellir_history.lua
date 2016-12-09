@@ -149,7 +149,6 @@ if (GrandStrategyYear >= -3000) then
 end
 
 if (GrandStrategyYear >= -2970) then -- estimated date
-	GrandStrategyEvents.ARockyHome = nil -- should be placed at an earlier date
 	GrandStrategyEvents.TheMeadOfWisdom = nil -- should be placed at an earlier date
 	GrandStrategyEvents.TheTreasuresOfSvarinshaug = nil -- should be placed at an earlier date
 
