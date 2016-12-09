@@ -115,13 +115,13 @@ AddTrigger("the-necklace-of-the-brisings-introduction",
 	function() 
 		Event(
 			"",
-			"The necklace made for Modsognir's wife by a group of four dwarven smiths has been stolen! The culprits, a band of local dwarven thieves, sneaked away with the necklace last night, going back to their hideout. We must avenge this dishonor on our clan, and recover the necklace from these bandits!",
+			"The necklace made for Modsognir's wife by a group of four dwarven smiths has been stolen! The culprits, a band of local dwarven thieves, sneaked away with the necklace last night, going back to their hideout. We must avenge this dishonor to our clan, and recover the necklace from these bandits!",
 			player,
 			{"~!Continue"},
 			{function(s)
 			Event(
 				FindHero("Modsognir"),
-				"The scoundrels have their base here in the Aurvang swamplands. We should be crossing our axes with them soon.",
+				"The scoundrels have their base in the Aurvang swamplands. We shall cross our axes with them soon.",
 				player,
 				{"~!Continue"},
 				{function(s)

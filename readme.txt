@@ -62,7 +62,7 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Buildings
-- Dwarven buildings now use stone (instead of lumber) for construction, except for the Yale Pen, the Dock and mines.
+- Dwarven buildings now use stone (instead of lumber) for construction, except for the Yale Pen, Dock and mines.
 
 * Quests
 - As missions are transitioning to the Campaign mode, acquiring technology points to unlock units, buildings and upgrades is no longer required for the missions.

@@ -6521,6 +6521,7 @@ SetWorldMapTileTerrain(473, 115, water_id)
 SetWorldMapTileTerrain(473, 116, water_id)
 SetWorldMapTileTerrain(473, 117, water_id)
 SetWorldMapTileTerrain(473, 118, plains_id)
+AddWorldMapResource("grain", 473, 118, true) -- Potatoes; Source: "Philip's International School Atlas", 2006, p. 59.
 SetWorldMapTileTerrain(473, 119, plains_id)
 SetWorldMapTileTerrain(473, 120, plains_id)
 SetWorldMapTileTerrain(473, 121, plains_id)
@@ -7433,6 +7434,7 @@ SetWorldMapTileTerrain(485, 121, plains_id)
 SetWorldMapTileTerrain(485, 122, plains_id)
 SetWorldMapTileTerrain(485, 123, plains_id)
 SetWorldMapTileTerrain(485, 124, plains_id)
+AddWorldMapResource("grain", 485, 124, true) -- Potatoes; Source: "Philip's International School Atlas", 2006, p. 59.
 SetWorldMapTileTerrain(485, 125, plains_id)
 SetWorldMapTileTerrain(485, 126, plains_id)
 AddWorldMapResource("grain", 485, 126, true) -- Dairy cattle; Source: "Philip's International School Atlas", 2006, p. 59.
