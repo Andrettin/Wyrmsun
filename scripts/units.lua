@@ -2571,43 +2571,43 @@ DefineUnitType("unit-template-worker", {
 		{
 			"resource-id", "gold",
 			"resource-capacity", 100,
-			"resource-step", 2,
-			"wait-at-resource", 6,
+			"resource-step", 4,
+			"wait-at-resource", 12,
 			"wait-at-depot", 150
 		},
 		{
 			"resource-id", "silver",
 			"resource-capacity", 100,
-			"resource-step", 2,
-			"wait-at-resource", 6,
+			"resource-step", 4,
+			"wait-at-resource", 12,
 			"wait-at-depot", 150
 		},
 		{
 			"resource-id", "copper",
 			"resource-capacity", 100,
-			"resource-step", 2,
-			"wait-at-resource", 6,
+			"resource-step", 4,
+			"wait-at-resource", 12,
 			"wait-at-depot", 150
 		},
 		{
 			"resource-id", "lumber",
 			"resource-capacity", 100,
-			"resource-step", 2,
-			"wait-at-resource", 6,
+			"resource-step", 4,
+			"wait-at-resource", 12,
 			"wait-at-depot", 150
 		},
 		{
 			"resource-id", "stone",
 			"resource-capacity", 100,
-			"resource-step", 2,
-			"wait-at-resource", 6,
+			"resource-step", 4,
+			"wait-at-resource", 12,
 			"wait-at-depot", 150
 		},
 		{
 			"resource-id", "coal",
 			"resource-capacity", 100,
-			"resource-step", 2,
-			"wait-at-resource", 6,
+			"resource-step", 4,
+			"wait-at-resource", 12,
 			"wait-at-depot", 150
 		}
 	},
@@ -2633,19 +2633,19 @@ DefineUnitType("unit-template-skilled-miner", {
 	CanGatherResources = {
 		{
 			"resource-id", "gold",
-			"gathering-modifier", 50
+			"resource-step", 6
 		},
 		{
 			"resource-id", "silver",
-			"gathering-modifier", 50
+			"resource-step", 6
 		},
 		{
 			"resource-id", "copper",
-			"gathering-modifier", 50
+			"resource-step", 6
 		},
 		{
 			"resource-id", "coal",
-			"gathering-modifier", 50
+			"resource-step", 6
 		}
 	}
 } )
@@ -2663,19 +2663,19 @@ DefineUnitType("unit-template-expert-miner", {
 	CanGatherResources = {
 		{
 			"resource-id", "gold",
-			"gathering-modifier", 100
+			"resource-step", 8
 		},
 		{
 			"resource-id", "silver",
-			"gathering-modifier", 100
+			"resource-step", 8
 		},
 		{
 			"resource-id", "copper",
-			"gathering-modifier", 100
+			"resource-step", 8
 		},
 		{
 			"resource-id", "coal",
-			"gathering-modifier", 100
+			"resource-step", 8
 		}
 	}
 } )

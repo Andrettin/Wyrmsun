@@ -46,7 +46,6 @@ DefineMapTemplate("nidavellir", {
 		"unit-yale", 16,
 		"unit-dread-bat", 8,
 --		"unit-gryphon", 8,
-		"unit-gryphon", 2,
 		"unit-wyrm", 4,
 		"unit-mercenary-camp", 1
 	},

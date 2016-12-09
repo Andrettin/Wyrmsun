@@ -52,22 +52,22 @@ DefineUnitType("unit-dwarven-miner", {
 		{
 			"resource-id", "gold",
 			"file-when-loaded", "dwarf/units/miner_with_gold.png",
-			"gathering-modifier", 20
+			"resource-step", 5
 		},
 		{
 			"resource-id", "silver",
 			"file-when-loaded", "dwarf/units/miner_with_gold.png",
-			"gathering-modifier", 20
+			"resource-step", 5
 		},
 		{
 			"resource-id", "copper",
 			"file-when-loaded", "dwarf/units/miner_with_gold.png",
-			"gathering-modifier", 20
+			"resource-step", 5
 		},
 		{
 			"resource-id", "lumber",
 			"file-when-loaded", "dwarf/units/miner_with_lumber.png",
-			"gathering-modifier", -17
+			"resource-step", 3
 		},
 		{
 			"resource-id", "stone",
@@ -76,7 +76,7 @@ DefineUnitType("unit-dwarven-miner", {
 		{
 			"resource-id", "coal",
 			"file-when-loaded", "dwarf/units/miner_with_coal.png",
-			"gathering-modifier", 20
+			"resource-step", 5
 		}
 	},
 	Sounds = {

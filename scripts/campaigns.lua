@@ -30,7 +30,7 @@ DefineCampaign("the-first-dwarves", {
 	Description = "A clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home. Beset by hostile natural forces on all sides, can they survive for long?",
 	Civilization = "dwarf",
 	Faction = "brising-clan",
-	Year = -3000
+	Year = -2800
 })
 
 --[[
