@@ -31,6 +31,8 @@ SetMapTemplateResource("earth", "unit-gold-deposit", {4169, 913}, 0, "the-weddin
 SetMapTemplateResource("earth", "unit-silver-deposit", {4194, 927}, 0, "esel") -- silver mine located in Kutná Hora; Source: Alena Ježková, "22 Böhmische Legenden", 2007, pp. 82-83.
 SetMapTemplateResource("earth", "unit-silver-deposit", {4194, 928}, 0, "smitna") -- silver mine located in Kutná Hora; moved slightly to the south so that both it and Esel can coexist; Source: Alena Ježková, "22 Böhmische Legenden", 2007, p. 81.
 
+SetMapTemplateUnit("earth", "unit-teuton-stables", "quadi-tribe", {4234, 931}, 180) -- horse breeding in 180 AD; Source: "Atlas de História Mundial", 2001, p. 89.
+
 -- Prague
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "marcomanni-tribe", {4169, 908}, -9, 526) -- Marbod, king of the Suebic tribe of the Marcomanni, conquered Bohemia in 9 BC
 SetMapTemplateHero("earth", "Marbod", "marcomanni-tribe", {4169, 908}, -9, 19) -- Marbod, king of the Suebic tribe of the Marcomanni, conquered Bohemia in 9 BC; Marbod deposed in 19 AD
