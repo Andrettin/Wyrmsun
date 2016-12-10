@@ -63,6 +63,9 @@ DefineMapTemplate("earth", {
 
 --SetMapTemplateLayerConnector("earth", "unit-portal", {-1, -1}, "Asgard")
 
+EarthStartX = 4022
+EarthStartY = 667
+
 Load("scripts/map_templates/earth/austria.lua")
 Load("scripts/map_templates/earth/bohemia.lua")
 Load("scripts/map_templates/earth/denmark.lua")

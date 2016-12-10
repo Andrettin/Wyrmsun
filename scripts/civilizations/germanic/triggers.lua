@@ -148,7 +148,7 @@ AddTrigger("jarl-meets-the-hersings",
 		for i=0,(PlayerMax - 2) do
 			if (FindHero("Erala", i) ~= nil and GetFactionExists("hersing-tribe") and GetPlayerData(i, "HasQuest", "heimdalls-progeny")) then
 				local erala_hero_unit = FindHero("Erala", i)
-				if (GetNumUnitsAt(GetFactionPlayer("hersing-tribe"), "units", {GetUnitVariable(erala_hero_unit, "PosX") - 2, GetUnitVariable(erala_hero_unit, "PosY") - 2}, {GetUnitVariable(erala_hero_unit, "PosX") + 2, GetUnitVariable(erala_hero_unit, "PosY") + 2}) > 0) then
+				if (GetNumUnitsAt(GetFactionPlayer("hersing-tribe"), "units", {GetUnitVariable(erala_hero_unit, "PosX") - 2, GetUnitVariable(erala_hero_unit, "PosY") - 2}, {GetUnitVariable(erala_hero_unit, "PosX") + 2, GetUnitVariable(erala_hero_unit, "PosY") + 2}) > 0 and Players[GetFactionPlayer("hersing-tribe")]:IsEnemy(Players[i]) == false) then
 					trigger_player = i
 					return true
 				end
@@ -162,10 +162,13 @@ AddTrigger("jarl-meets-the-hersings",
 	end
 )
 
-AddTrigger("jarl-destroys-the-hersings",
+AddTrigger("jarl-conquers-jutland",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (FindHero("Erala", i) ~= nil and GetFactionExists("hersing-tribe") and GetPlayerData(GetFactionPlayer("hersing-tribe"), "TotalNumUnits") == 0) then
+			if (
+				FindHero("Erala", i) ~= nil
+				and (GetNumUnitsAt(-2, "any", {4023 - EarthStartX, 733 - EarthStartY}, {4088 - EarthStartX, 829 - EarthStartY}, GetMapLayer("", "Earth", 0)) - GetNumUnitsAt(i, "any", {4023 - EarthStartX, 733 - EarthStartY}, {4088 - EarthStartX, 829 - EarthStartY}, GetMapLayer("", "Earth", 0))) == 0
+			) then
 				trigger_player = i
 				return true
 			end
@@ -173,7 +176,7 @@ AddTrigger("jarl-destroys-the-hersings",
 		return false
 	end,
 	function()
-		CallDialogue("jarl-destroys-the-hersings", trigger_player)
+		CallDialogue("jarl-conquers-jutland", trigger_player)
 		return false
 	end
 )

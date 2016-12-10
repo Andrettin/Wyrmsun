@@ -203,7 +203,7 @@ DefineQuest("heimdalls-progeny", {
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
-	Objectives = {"- Establish a powerful realm", "- Erala must survive"},
+	Objectives = {"- Conquer all of your home peninsula", "- Erala must survive"},
 	HeroesMustSurvive = {"Erala"},
 	Uncompleteable = true,
 	Unobtainable = true

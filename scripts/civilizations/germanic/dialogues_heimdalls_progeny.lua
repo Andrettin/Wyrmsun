@@ -376,11 +376,11 @@ DefineDialogue("jarl-threatens-the-hersings", {
 	}
 })
 
-DefineDialogue("jarl-destroys-the-hersings", {
+DefineDialogue("jarl-conquers-jutland", {
 	Nodes = {
 		{
 			"speaker", "character", "Erala",
-			"text", "The Hersings are no more. My rule extends throughout the entire peninsula, from north to south!",
+			"text", "It is done. My rule extends throughout the entire peninsula, from north to south!",
 			"option-effects", {
 				function(s)
 					if (GetPlayerData(trigger_player, "HasQuest", "heimdalls-progeny")) then
