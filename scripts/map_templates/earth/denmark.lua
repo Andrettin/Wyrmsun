@@ -46,10 +46,7 @@ SetMapTemplateTileTerrain("earth", "shallow-water", 4116, 797)
 SetMapTemplateTileTerrain("earth", "shallow-water", 4125, 772)
 SetMapTemplateTileTerrain("earth", "shallow-water", 4126, 773)
 
-SetMapTemplateUnit("earth", "unit-germanic-town-hall", "skeldung-tribe", {4112, 784}, -2800, -27) -- Leidre / Lejre; Funnel Beaker culture ended in Zealand in 2800 BC and the Corded Ware culture (neolithic) began; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 38. In the Ynglinga Saga, Odin set his son Skjöldr to rule in Leidre after their people (who here we equate with the cultural ancestors of the Germanics who migrated to Scandinavia) conquered the land
-SetMapTemplateUnit("earth", "unit-teuton-town-hall", "herulian-tribe", {4112, 784}, -27, 526) -- political situation in Europe (presumably) at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-SetMapTemplateUnit("earth", "unit-teuton-town-hall", "dane-tribe", {4112, 784}, 526, 919) -- Danes were in Zealand in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-SetMapTemplateUnit("earth", "unit-teuton-town-hall", "denmark", {4112, 784}, 919) -- political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+SetMapTemplateResource("earth", "unit-gold-deposit", {4078, 745}) -- Amber; Source: "Atlas de História Mundial", 2001, p. 89.
 
 -- Brødrene Gram (southern Jutland)
 SetMapTemplateUnit("earth", "unit-germanic-town-hall", "jarling-tribe", {4051, 790}, -1500, -1300) -- a longhouse existed in Brødrene Gram (in southern Jutland) in the period II of the Nordic Bronze Age (1500-1300 BC), interpreted as a chiefly residence; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 73, 77-78.
@@ -83,6 +80,12 @@ SetMapTemplateUnit("earth", "unit-germanic-archer", "karling-tribe", {4033, 751}
 SetMapTemplateUnit("earth", "unit-germanic-archer", "karling-tribe", {4033, 751}, -1600, -1500)
 SetMapTemplateUnit("earth", "unit-germanic-archer", "karling-tribe", {4033, 751}, -1600, -1500)
 SetMapTemplateUnit("earth", "unit-germanic-farm", "jarling-tribe", {4033, 751}, -1500, -1300) -- a longhouse existed in Legård (in northwestern Jutland) in the period II of the Nordic Bronze Age (1500-1300 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 73, 78.
+
+-- Leidre / Lejre
+SetMapTemplateUnit("earth", "unit-germanic-town-hall", "skeldung-tribe", {4112, 784}, -2800, -27) -- Leidre / Lejre; Funnel Beaker culture ended in Zealand in 2800 BC and the Corded Ware culture (neolithic) began; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 38. In the Ynglinga Saga, Odin set his son Skjöldr to rule in Leidre after their people (who here we equate with the cultural ancestors of the Germanics who migrated to Scandinavia) conquered the land
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "herulian-tribe", {4112, 784}, -27, 526) -- political situation in Europe (presumably) at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "dane-tribe", {4112, 784}, 526, 919) -- Danes were in Zealand in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "denmark", {4112, 784}, 919) -- political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 
 -- Lusehøj
 -- a burial mound was created at Lusehøj in the period V of the Nordic Bronze Age (900-700 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 73, 77.
