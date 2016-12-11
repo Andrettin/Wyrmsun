@@ -63,6 +63,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Buildings
 - Dwarven buildings now use stone (instead of lumber) for construction, except for the Yale Pen, Dock and mines.
+- Added Germanic Dock (graphics by Jinn).
 
 * Campaign
 - Mineral resources are now based on the real location of resources (except for those in the player starting points), instead of being randomly generated.
@@ -73,6 +74,7 @@ https://github.com/Andrettin/Wyrmsun
 * Units
 - Dwarven Axefighters and Yale Riders no longer cost Lumber.
 - Yales no longer attack if a unit gets close to them.
+- Added Germanic Transport ship (graphics by Jinn).
 
 * Upgrades
 - Axe upgrades no longer cost Lumber.

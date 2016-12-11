@@ -72,6 +72,10 @@ DefineModifier("upgrade-latin-civilization",
 )
 
 DefineModifier("upgrade-latin-civilization",
+	{"apply-to", "unit-germanic-dock"}, {"convert-to", "unit-teuton-dock"}
+)
+
+DefineModifier("upgrade-latin-civilization",
 	{"apply-to", "unit-germanic-worker"}, {"convert-to", "unit-teuton-worker"}
 )
 
@@ -89,6 +93,10 @@ DefineModifier("upgrade-latin-civilization",
 
 DefineModifier("upgrade-latin-civilization",
 	{"apply-to", "unit-germanic-archer"}, {"convert-to", "unit-teuton-archer"}
+)
+
+DefineModifier("upgrade-latin-civilization",
+	{"apply-to", "unit-germanic-transport-ship"}, {"convert-to", "unit-teuton-kogge"}
 )
 
 DefineDependency("unit-latin-town-hall",

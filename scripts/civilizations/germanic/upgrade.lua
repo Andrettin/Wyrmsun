@@ -8,9 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      upgrade.ccl - Define the germanic dependencies and upgrades.
---
---      (c) Copyright 2014-2015 by Andrettin
+--      (c) Copyright 2014-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -122,6 +120,13 @@ DefineDependency("unit-germanic-archer",
 	{"unit-germanic-carpenters-shop"}
 )
 
+DefineDependency("unit-germanic-dock",
+	{"unit-germanic-carpenters-shop"}
+)
+
+DefineDependency("unit-teuton-kogge",
+	{"unit-germanic-carpenters-shop"}
+)
 DefineDependency("upgrade-teuton-civilization",
 --	{"upgrade-germanic-broad-sword", "upgrade-germanic-long-spear", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
 	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}

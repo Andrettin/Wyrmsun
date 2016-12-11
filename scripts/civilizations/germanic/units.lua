@@ -474,6 +474,18 @@ DefineUnitType("unit-germanic-archer", {
 	}
 } )
 
+DefineUnitType("unit-germanic-transport-ship", {
+	Parent = "unit-template-transport-ship",
+	Civilization = "germanic",
+	Description = _("Seafaring was a major element of Germanic peoples' way of life, as they sailed throughout the Baltic and beyond. The ship was a status symbol, depicted in many of their drawings, and its form was used as inspiration for the \"stone ship\" tombs scattered throughout Scandinavia."),
+	Image = {"file", "germanic/units/transport_ship.png", "size", {72, 72}},
+	LightImage = {"file", "germanic/units/transport_ship_water.png"},
+	Icon = "icon-germanic-transport-ship",
+	Sounds = {
+		"help", "basic-germanic-voices-help"
+	}
+})
+
 DefineUnitType("unit-germanic-town-hall", { Name = _("Chieftain's Hall"),
 	Parent = "unit-template-town-hall",
 	Civilization = "germanic",
@@ -540,7 +552,8 @@ DefineUnitType("unit-germanic-carpenters-shop", { Name = _("Carpenter's Shop"),
 	}
 } )
 
-DefineUnitType("unit-germanic-smithy", { Name = _("Smithy"),
+DefineUnitType("unit-germanic-smithy", {
+	Name = _("Smithy"),
 	Parent = "unit-template-smithy",
 	Civilization = "germanic",
 	Description = _("It is in these smithies that Germanic craftsmen prepare and seek to continuously improve the arms warriors will wield into battle."),
@@ -554,6 +567,20 @@ DefineUnitType("unit-germanic-smithy", { Name = _("Smithy"),
 	}
 } )
 
+DefineUnitType("unit-germanic-dock", {
+	Name = _("Dock"),
+	Parent = "unit-template-dock",
+	Civilization = "germanic",
+	Description = _("Germanic peoples were skilled shipwrights. They often lived close to the shore and built sturdy ships capable sailing the seas."),
+	Image = {"file", "germanic/buildings/dock.png", "size", {96, 96}},
+	Shadow = {"file", "germanic/buildings/dock_shadow.png", "size", {96, 96}},
+	Animations = "animations-building", Icon = "icon-germanic-dock",
+	Trains = {"unit-germanic-transport-ship"},
+	Sounds = {
+		"help", "basic-germanic-voices-help-town"
+	}
+} )
+
 DefineUnitType("unit-germanic-worker", {
-	Trains = {"unit-germanic-town-hall", "unit-germanic-farm", "unit-germanic-barracks", "unit-germanic-carpenters-shop", "unit-germanic-smithy", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
+	Trains = {"unit-germanic-town-hall", "unit-germanic-farm", "unit-germanic-barracks", "unit-germanic-carpenters-shop", "unit-germanic-smithy", "unit-germanic-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
 } )

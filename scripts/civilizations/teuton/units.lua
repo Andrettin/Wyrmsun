@@ -625,7 +625,8 @@ DefineUnitType("unit-teuton-catapult", { Name = _("Catapult"),
 	}
 } )
 
-DefineUnitType("unit-teuton-kogge", { Name = _("Kogge"),
+DefineUnitType("unit-teuton-kogge", {
+	Name = _("Kogge"),
 	Parent = "unit-template-transport-ship",
 	Civilization = "teuton",
 	Description = _("A mainstay of the Hanseatic vessels of the North Sea, the Kogge is a sturdy ship capable of carrying a large amount of cargo. It is well-suited for commerce, the transport of troops and naval warfare alike."),

@@ -53,6 +53,8 @@ local sea_funcs = {
 	function() return AiForceRole(0, "defend") end,
 	function() return AiWaitForce(0) end,
 
+	function() return AiNeed(GetAiUnitType("dock")) end,
+	
 	-- get the necessary upgrades for Germanic civilizations to become Teuton
 	function()
 		if (AiGetRace() == "germanic") then
@@ -103,8 +105,6 @@ local sea_funcs = {
 		return false;
 	end,
 
-	function() return AiNeed(GetAiUnitType("dock")) end,
-	
 	function() return AiResearch(GetAiUnitType("masonry")) end, -- needed for the stronghold
 	function() return AiWait(GetAiUnitType("masonry")) end,
 

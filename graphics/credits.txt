@@ -376,6 +376,8 @@
 /graphics/germanic/units/coat_warrior.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/germanic/units/militia.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/germanic/units/old_man.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/units/transport_ship.png (by Jinn) (licensed under the CC0)
+/graphics/germanic/units/transport_ship_water.png (by Jinn) (licensed under the CC0)
 /graphics/germanic/units/warrior.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/germanic/units/warrior_bronze_shield.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/germanic/units/warrior_brown_hair.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)

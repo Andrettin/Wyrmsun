@@ -235,6 +235,10 @@ DefineModifier("upgrade-teuton-civilization",
 )
 
 DefineModifier("upgrade-teuton-civilization",
+	{"apply-to", "unit-germanic-dock"}, {"convert-to", "unit-teuton-dock"}
+)
+
+DefineModifier("upgrade-teuton-civilization",
 	{"apply-to", "unit-germanic-worker"}, {"convert-to", "unit-teuton-worker"}
 )
 
@@ -252,6 +256,10 @@ DefineModifier("upgrade-teuton-civilization",
 
 DefineModifier("upgrade-teuton-civilization",
 	{"apply-to", "unit-germanic-archer"}, {"convert-to", "unit-teuton-archer"}
+)
+
+DefineModifier("upgrade-teuton-civilization",
+	{"apply-to", "unit-germanic-transport-ship"}, {"convert-to", "unit-teuton-kogge"}
 )
 
 Load("scripts/civilizations/teuton/upgrade_faction.lua")
