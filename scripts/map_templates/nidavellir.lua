@@ -83,8 +83,8 @@ DefineMapTemplate("nidavellir-underground-1", {
 		"unit-wood-pile", 64,
 		"unit-snigill", 64,
 		"unit-slime", 32,
-		"unit-blood-bat", 16,
-		"unit-dread-bat", 8,
+--		"unit-blood-bat", 16,
+--		"unit-dread-bat", 8,
 		"unit-wyrm", 4,
 		"unit-mercenary-camp", 1
 	},
@@ -98,9 +98,9 @@ DefineMapTemplate("nidavellir-underground-1", {
 SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "khag-tribe", {-1, -1})
 SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "lggi-tribe", {-1, -1})
 
-SetMapTemplateUnit("nidavellir-underground-1", "unit-dwarven-town-hall", "shadowcharm-clan", {-1, -1})
-SetMapTemplateHero("nidavellir-underground-1", "Fjalar", "shadowcharm-clan", {-1, -1}, -2800, -2799) -- Fjalar's and Galar's campaign begins in 2800 BC
-SetMapTemplateHero("nidavellir-underground-1", "Galar", "shadowcharm-clan", {-1, -1}, -2800, -2799)
+--SetMapTemplateUnit("nidavellir-underground-1", "unit-dwarven-town-hall", "shadowcharm-clan", {-1, -1})
+--SetMapTemplateHero("nidavellir-underground-1", "Fjalar", "shadowcharm-clan", {-1, -1}, -2800, -2799) -- Fjalar's and Galar's campaign begins in 2800 BC
+--SetMapTemplateHero("nidavellir-underground-1", "Galar", "shadowcharm-clan", {-1, -1}, -2800, -2799)
 
 SetMapTemplateUnit("nidavellir-underground-1", "unit-kobold-footpad", "fafning-tribe", {-1, -1}, 561, 566)
 SetMapTemplateUnit("nidavellir-underground-1", "unit-kobold-footpad", "fafning-tribe", {-1, -1}, 561, 566)

@@ -28,6 +28,7 @@
 DefineMapTemplate("svarinshaug", {
 	Name = "Svarinshaug",
 	MainTemplate = "nidavellir",
+	World = "Nidavellir",
 	Width = 32,
 	Height = 32,
 	BaseTerrain = "dry-mud",
@@ -54,7 +55,50 @@ DefineMapTemplate("svarinshaug", {
 	}
 })
 
-SetMapTemplateUnit("svarinshaug", "unit-dwarven-town-hall", "brising-clan", {-1, -1}, -3000)
-SetMapTemplateHero("svarinshaug", "Modsognir", "brising-clan", {-1, -1}, -3000, -2999)
-SetMapTemplateHero("svarinshaug", "Durin", "brising-clan", {-1, -1}, -3000, -2999)
+DefineMapTemplate("svarinshaug-underground", {
+	Name = "Svarinshaug Underground",
+	MainTemplate = "nidavellir-underground-1",
+	World = "Nidavellir",
+	Width = 32,
+	Height = 32,
+	BaseTerrain = "cave-floor",
+	GeneratedTerrains = {
+		"rockbound-cave-floor", "medium",
+		"gray-shallow-water", "low",
+		"cave-wall", "medium"
+	},
+	ExternalGeneratedTerrains = {
+		"rockbound-cave-floor", "low",
+		"cave-wall", "low"
+	},
+	GeneratedNeutralUnits = {
+		"unit-snigill", 8,
+		"unit-slime", 4,
+		"unit-blood-bat", 4,
+		"unit-dread-bat", 2,
+	},
+	PlayerLocationGeneratedNeutralUnits = {
+		"unit-copper-deposit", 1,
+		"unit-wood-pile", 16,
+		"unit-stone-pile", 16
+	}
+})
+
+SetMapTemplateUnit("svarinshaug", "unit-dwarven-town-hall", "brising-clan", {-1, -1}, -2800)
+SetMapTemplateHero("svarinshaug", "Modsognir", "brising-clan", {-1, -1}, -2800, -2799)
+SetMapTemplateHero("svarinshaug", "Durin", "brising-clan", {-1, -1}, -2800, -2799)
 SetMapTemplateHero("svarinshaug", "Regin", "brising-clan", {-1, -1}, 561, 566) -- Sigibert's campaign begins in 561; Sigibert's encounter with Regin (which causes the latter's death in the end) should take place between Sigibert's initial defeat of the Avars and Chilperich in 561-562, and Sigibert's marriage to Brunichilde in 566
+
+SetMapTemplateUnit("svarinshaug-underground", "unit-kobold-footpad", "grafvitning-tribe", {-1, -1}, -2800, -2799)
+SetMapTemplateUnit("svarinshaug-underground", "unit-kobold-footpad", "grafvitning-tribe", {-1, -1}, -2800, -2799)
+SetMapTemplateUnit("svarinshaug-underground", "unit-kobold-footpad", "grafvitning-tribe", {-1, -1}, -2800, -2799)
+SetMapTemplateUnit("svarinshaug-underground", "unit-kobold-footpad", "grafvitning-tribe", {-1, -1}, -2800, -2799)
+SetMapTemplateUnit("svarinshaug-underground", "unit-kobold-footpad", "grafvitning-tribe", {-1, -1}, -2800, -2799)
+SetMapTemplateUnit("svarinshaug-underground", "unit-kobold-footpad", "grafvitning-tribe", {-1, -1}, -2800, -2799)
+SetMapTemplateUnit("svarinshaug-underground", "unit-kobold-footpad", "grafvitning-tribe", {-1, -1}, -2800, -2799)
+SetMapTemplateUnit("svarinshaug-underground", "unit-kobold-footpad", "grafvitning-tribe", {-1, -1}, -2800, -2799)
+SetMapTemplateUnit("svarinshaug-underground", "unit-kobold-footpad", "grafvitning-tribe", {-1, -1}, -2800, -2799)
+SetMapTemplateUnit("svarinshaug-underground", "unit-wyrm", "grafvitning-tribe", {-1, -1}, -2800, -2799)
+
+SetMapTemplateLayerConnector("svarinshaug", "unit-cavern-entrance", {-1, -1}, 1)
+SetMapTemplateLayerConnector("svarinshaug-underground", "unit-cavern-entrance", {-1, -1}, 0)

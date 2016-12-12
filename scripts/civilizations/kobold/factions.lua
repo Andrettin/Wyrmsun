@@ -33,6 +33,13 @@ DefineFaction("fafning-tribe", {
 	DefaultAI = "passive"
 })
 
+DefineFaction("grafvitning-tribe", {
+	Name = "Grafvitning Tribe",
+	Civilization = "kobold",
+	Type = "tribe",
+	Colors = {"black"}
+})
+
 DefineFaction("shellscale-tribe", {
 	Name = "Shellscale Tribe",
 	Civilization = "kobold",
