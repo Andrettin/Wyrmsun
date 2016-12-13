@@ -28,8 +28,8 @@
 DefineMapTemplate("nidavellir", {
 	Name = "Nidavellir",
 	World = "Nidavellir",
-	Width = 128,
-	Height = 128,
+	Width = 256,
+	Height = 256,
 	BaseTerrain = "dry-mud",
 	GeneratedTerrains = {
 		"mud", "medium",
@@ -42,9 +42,9 @@ DefineMapTemplate("nidavellir", {
 		"unit-silver-deposit", 2,
 		"unit-snigill", 64,
 		"unit-slime", 32,
-		"unit-blood-bat", 16,
+--		"unit-blood-bat", 16,
 		"unit-yale", 16,
-		"unit-dread-bat", 8,
+--		"unit-dread-bat", 8,
 --		"unit-gryphon", 8,
 		"unit-wyrm", 4,
 		"unit-mercenary-camp", 1
@@ -60,8 +60,8 @@ DefineMapTemplate("nidavellir-underground-1", {
 	Name = "Nidavellir Underground 1",
 	World = "Nidavellir",
 	Layer = 1,
-	Width = 128,
-	Height = 128,
+	Width = 256,
+	Height = 256,
 	BaseTerrain = "rockbound-cave-floor",
 	BorderTerrain = "cave-wall",
 	GeneratedTerrains = {
@@ -83,8 +83,8 @@ DefineMapTemplate("nidavellir-underground-1", {
 		"unit-wood-pile", 64,
 		"unit-snigill", 64,
 		"unit-slime", 32,
---		"unit-blood-bat", 16,
---		"unit-dread-bat", 8,
+		"unit-blood-bat", 16,
+		"unit-dread-bat", 8,
 		"unit-wyrm", 4,
 		"unit-mercenary-camp", 1
 	},

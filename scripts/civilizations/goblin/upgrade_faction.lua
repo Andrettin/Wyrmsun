@@ -14,6 +14,10 @@ DefineUpgrade("upgrade-sigre-tribe-faction", {
 	Name = _("Sigre Tribe Faction")
 })
 
+DefineUpgrade("upgrade-aurvangian-tribe-faction", {
+	Name = _("Aurvangian Tribe Faction")
+})
+
 DefineUpgrade("upgrade-khag-tribe-faction", {
 	Name = _("Khag Tribe Faction")
 })
@@ -65,6 +69,12 @@ DefineModifier("upgrade-sigre-tribe-faction",
 	{"HitPoints", -5},
 	{"Points", 10},
 	{"apply-to", "unit-goblin-archer"}, {"apply-to", "unit-goblin-headhunter"}, {"apply-to", "unit-goblin-shadowstalker"}
+)
+
+DefineModifier("upgrade-aurvangian-tribe-faction",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-goblin-archer"}
 )
 
 DefineModifier("upgrade-khag-tribe-faction",

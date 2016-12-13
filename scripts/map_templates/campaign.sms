@@ -11,7 +11,6 @@ if (GetCurrentCampaign() ~= "the-first-dwarves") then
 	ApplyMapTemplate("earth", EarthStartX, EarthStartY)
 else
 	ApplyMapTemplate("nidavellir", 0, 0, 0, 0)
-	ApplyMapTemplate("nidavellir-underground-1", 0, 0, 0, 0, 1)
 end
 --ApplyMapTemplate("nidavellir", 0, 0, 0, 0, 1)
 --ApplyMapTemplate("nidavellir-underground-1", 0, 0, 0, 0, 2)

@@ -1,9 +1,5 @@
 -- Stratagus Map Presentation
 
 DefinePlayerTypes("person")
-if (GetCurrentCampaign() ~= "the-first-dwarves") then
-	PresentMap("Earth", 1, 256, 256, 1)
-else
-	PresentMap("Nidavellir", 1, 128, 128, 1)
-end
+PresentMap("Earth", 1, 256, 256, 1)
 MapWorld = "Earth"

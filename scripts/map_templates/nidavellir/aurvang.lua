@@ -43,7 +43,6 @@ DefineMapTemplate("aurvang", {
 		"flamefood-tree", "medium"
 	},
 	GeneratedNeutralUnits = {
-		"unit-copper-deposit", 1,
 		"unit-snigill", 16,
 		"unit-slime", 8
 	},
@@ -53,3 +52,5 @@ DefineMapTemplate("aurvang", {
 		"unit-stone-pile", 16
 	}
 })
+
+SetMapTemplateUnit("aurvang", "unit-goblin-town-hall", "aurvangian-tribe", {-1, -1})

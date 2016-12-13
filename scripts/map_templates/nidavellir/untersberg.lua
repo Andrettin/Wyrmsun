@@ -28,8 +28,8 @@
 DefineMapTemplate("untersberg", {
 	Name = "Untersberg",
 	MainTemplate = "nidavellir",
-	Width = 32,
-	Height = 32,
+	Width = 128,
+	Height = 128,
 	BaseTerrain = "dry-mud",
 	GeneratedTerrains = {
 		"mud", "low",
@@ -56,7 +56,7 @@ DefineMapTemplate("untersberg", {
 	}
 })
 
---SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "acthnic-tribe", {-1, -1})
---SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "cubital-tribe", {-1, -1})
+SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "acthnic-tribe", {-1, -1})
+SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "cubital-tribe", {-1, -1})
 SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "sagan-tribe", {-1, -1})
---SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "vulcan-tribe", {-1, -1})
+SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "vulcan-tribe", {-1, -1})
