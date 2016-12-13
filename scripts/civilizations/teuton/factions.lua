@@ -35,7 +35,6 @@ DefineFaction("suebi-tribe", {
 	Colors = {"black"},
 	DefaultTier = "duchy",
 	DevelopsTo = {"galicia", "bavaria", "austria", "carinthia"},
-	SplitsTo = {"buri-tribe", "marcomanni-tribe", "quadi-tribe", "semnone-tribe"},
 	FactionUpgrade = "upgrade-suebi-tribe-faction",
 	Description = _("The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there."),
 	PersonalNames = {
@@ -113,7 +112,6 @@ DefineFaction("angle-tribe", {
 	Language = "old-english",
 	Colors = {"white"},
 	DevelopsTo = {"england", "bernicia", "deira", "east-anglia", "mercia", "middle-anglia", "northumbria", "scotland"},
-	SplitsTo = {"bernice-tribe", "dere-tribe"},
 	FactionUpgrade = "upgrade-angle-tribe-faction",
 	PersonalNames = { -- Old English names, not Angle ones per se
 		"female", "Eanflaed", -- "Eanflæd"; daughter of Edwin of Deira who married Oswiu of Bernicia; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 81.

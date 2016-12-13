@@ -31,7 +31,6 @@ DefineFaction("goth-tribe", {
 	Type = "tribe",
 	Colors = {"red"},
 	DevelopsTo = {"gothia"},
-	SplitsTo = {"bastarnae-tribe", "burgundian-tribe", "gepidae-tribe", "herulian-tribe", "lugii-tribe", "ostrogoth-tribe", "rugian-tribe", "silingae-tribe", "turcilingian-tribe", "vandal-tribe", "visigoth-tribe"},
 	HistoricalFactionDerivations = {-325, "germanic", "yngling-tribe"}
 })
 

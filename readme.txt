@@ -68,6 +68,9 @@ https://github.com/Andrettin/Wyrmsun
 * Campaign
 - Mineral resources are now based on the real location of resources (except for those in the player starting points), instead of being randomly generated.
 
+* Faction
+- Removed faction splitting, as the feature was not performing as expected.
+
 * Quests
 - As missions are transitioning to the Campaign mode, acquiring technology points to unlock units, buildings and upgrades is no longer required for the missions.
 

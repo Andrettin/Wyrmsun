@@ -41,7 +41,6 @@ DefineFaction("swede-tribe", {
 	Type = "tribe",
 	Colors = {"blue", "yellow"},
 	DevelopsTo = {"sweden"},
-	SplitsTo = {"sitone-tribe", "dane-tribe"},
 	DefaultAI = "sea-attack",
 	HistoricalFactionDerivations = {-264, "germanic", "yngling-tribe"}
 })

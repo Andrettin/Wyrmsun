@@ -31,7 +31,6 @@ DefineFaction("brising-clan", {
 	Type = "tribe",
 	Colors = {"red", "orange", "fire"},
 	DevelopsTo = {"joruvellir", "kal-kartha", "knalga", "lyr"},
-	SplitsTo = {"eikinskjaldi-clan", "norlund-clan", "shadowcharm-clan", "shinsplitter-clan", "shorbear-clan"},
 	FactionUpgrade = "upgrade-brising-clan-faction",
 	ButtonIcons = {
 		"stop", "icon-brising-round-shield"

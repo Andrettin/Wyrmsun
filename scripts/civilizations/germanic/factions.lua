@@ -31,7 +31,6 @@ DefineFaction("asa-tribe", {
 	Type = "tribe",
 	Colors = {"orange", "red"},
 	FactionUpgrade = "upgrade-asa-tribe-faction",
-	SplitsTo = {"skeldung-tribe", "herminone-tribe", "ingaevone-tribe", "istaevone-tribe"},
 	Description = "The Asa are the legendary progenitors of the Germanic peoples.",
 	Background = "In the Ynglinga Saga, the Asa (another name for the Aesir) were Odin's people, who originally lived in Asaland (identified with Asia), a realm centered in the city of Asgard. They went forth from their original lands to Scandinavia and northern Central Europe, establishing themselves in those regions."
 })
@@ -72,7 +71,6 @@ DefineFaction("ingaevone-tribe", { -- according to Tacitus one of the earliest G
 	Type = "tribe",
 	Colors = {"white"},
 	DevelopsTo = {"angle-tribe", "frisian-tribe", "saxon-tribe"},
-	SplitsTo = {"herminone-tribe", "istaevone-tribe"}, -- the areas in which those tribes lived were settled only later, and like the Ingaevones they were West Germanic regions
 	FactionUpgrade = "upgrade-yngling-tribe-faction"
 	-- lived near the sea
 })

@@ -29,8 +29,8 @@ DefineMapTemplate("svarinshaug", {
 	Name = "Svarinshaug",
 	MainTemplate = "nidavellir",
 	World = "Nidavellir",
-	Width = 64,
-	Height = 64,
+	Width = 128,
+	Height = 128,
 	BaseTerrain = "dry-mud",
 	GeneratedTerrains = {
 		"mud", "medium",
