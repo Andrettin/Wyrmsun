@@ -83,7 +83,6 @@ https://github.com/Andrettin/Wyrmsun
 - Added Germanic Transport ship (graphics by Jinn).
 
 * Upgrades
-- Axe upgrades no longer cost Lumber.
 - The dwarven Masonry technology now costs only stone and no lumber.
 
 -----------------------------------------------------------------------
