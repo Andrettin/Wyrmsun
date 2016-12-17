@@ -71,6 +71,9 @@ https://github.com/Andrettin/Wyrmsun
 * Faction
 - Removed faction splitting, as the feature was not performing as expected.
 
+* Maps
+- Improved the symmetric map generation.
+
 * Quests
 - As missions are transitioning to the Campaign mode, acquiring technology points to unlock units, buildings and upgrades is no longer required for the missions.
 

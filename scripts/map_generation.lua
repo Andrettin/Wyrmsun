@@ -1643,11 +1643,11 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 								player_spawn_point = {SyncRand(math.floor(max_x / 2) - min_x) + min_x, SyncRand(math.floor(max_y / 2) - min_y) + min_y}
 								symmetric_starting_location = player_spawn_point
 							elseif (i == 1 or i == 5 or i == 9 or i == 13) then
-								player_spawn_point = {math.abs(symmetric_starting_location[1] - (Map.Info.MapWidth - 1)) - 3, symmetric_starting_location[2]}
+								player_spawn_point = {math.abs(symmetric_starting_location[1] - (Map.Info.MapWidth - 1)) - 3, math.abs(symmetric_starting_location[2] - (Map.Info.MapHeight - 1)) - 3}
 							elseif (i == 2 or i == 6 or i == 10 or i == 14) then
 								player_spawn_point = {symmetric_starting_location[1], math.abs(symmetric_starting_location[2] - (Map.Info.MapHeight - 1)) - 3}
 							elseif (i == 3 or i == 7 or i == 11) then
-								player_spawn_point = {math.abs(symmetric_starting_location[1] - (Map.Info.MapWidth - 1)) - 3, math.abs(symmetric_starting_location[2] - (Map.Info.MapHeight - 1)) - 3}
+								player_spawn_point = {math.abs(symmetric_starting_location[1] - (Map.Info.MapWidth - 1)) - 3, symmetric_starting_location[2]}
 							end
 						end
 					end
@@ -1666,7 +1666,7 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 					
 					if (symmetric) then -- if is symmetric, shouldn't be too close to the end of the quadrant (since then the starting point would be generated too close to another player)
 						if (i == 0 or i == 4 or i == 8 or i == 12) then -- only need to check the players who set the spawn point to be replicated
-							if (math.abs(player_spawn_point[1] - math.floor(max_x / 2)) < 16 and math.abs(player_spawn_point[2] - math.floor(max_y / 2)) < 16) then
+							if (math.abs(player_spawn_point[1] - math.floor(max_x / 2)) < 16 or math.abs(player_spawn_point[2] - math.floor(max_y / 2)) < 16) then
 								starting_point_found = false
 							end
 						end
