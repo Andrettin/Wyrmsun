@@ -628,6 +628,58 @@ DefineFaction("england", {
 		"male", "Theodore",
 		"male", "Thomas",
 		"male", "William"
+	},
+	SettlementNames = {
+		"Ashford", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Bedford", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Blackburn", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Blackpool", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Blackwall",
+		"Chatham",
+		"Chester",
+		"Chesterfield",
+		"Dartford",
+		"Dartmouth",
+		"Dorchester",
+		"Fishguard", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Gateshead", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Greenwich",
+		"Guildford", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Hempstead", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Holyhead",
+		"Huntingdon",
+		"Kingston",
+		"Liverpool", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Longford", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Maidstone", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Mansfield",
+		"Marshfield",
+		"Newbury", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Newport", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Newquay", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Northfleet",
+		"Norwich",
+		"Oldham",
+		"Oxford", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Portsmouth",
+		"Reading",
+		"Redditch", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Salisbury", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Scarborough",
+		"Shrewsbury", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Stockport", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Stonehaven", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Swanscombe",
+		"Swansea", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Torbay", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Waterford",
+		"Westbury",
+		"Westport",
+		"Whitehaven", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Wimbledon",
+		"Woodbridge",
+		"Woolwich",
+		"Wormshill"
 	}
 })
 

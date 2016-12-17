@@ -31,18 +31,6 @@ DefineLanguageWord("Ankh", { -- Source: Claude Traunecker, "Os Deuses do Egito",
 	Meanings = {"Winged Cross", "Life"}
 })
 
-DefineLanguageWord("Apis", { -- name of a bull in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 119.
-	Language = "egyptian",
-	Type = "noun",
-	Meanings = {}
-})
-
-DefineLanguageWord("Apofis", { -- name of a serpent in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 104.
-	Language = "egyptian",
-	Type = "noun",
-	Meanings = {}
-})
-
 DefineLanguageWord("At", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 54.
 	Language = "egyptian",
 	Type = "noun",
@@ -65,12 +53,6 @@ DefineLanguageWord("Ben", { -- Source: Claude Traunecker, "Os Deuses do Egito", 
 	Language = "egyptian",
 	Type = "verb",
 	Meanings = {"Swell", "Be Full", "Be Fat"}
-})
-
-DefineLanguageWord("Buchis", { -- name of a bull in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 119.
-	Language = "egyptian",
-	Type = "noun",
-	Meanings = {}
 })
 
 DefineLanguageWord("Djed", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 66.
@@ -121,12 +103,6 @@ DefineLanguageWord("Ib", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1
 	Meanings = {"Heart"}
 })
 
-DefineLanguageWord("Ikher", { -- name of a serpent in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 119.
-	Language = "egyptian",
-	Type = "noun",
-	Meanings = {}
-})
-
 DefineLanguageWord("Ir", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 59.
 	Language = "egyptian",
 	Type = "verb",
@@ -161,12 +137,6 @@ DefineLanguageWord("Kematef", { -- name of a serpent in Egyptian mythology; Sour
 	Language = "egyptian",
 	Type = "noun",
 	Meanings = {"One Who Ended Its Time"}
-})
-
-DefineLanguageWord("Mnevis", { -- name of a bull in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 119.
-	Language = "egyptian",
-	Type = "noun",
-	Meanings = {}
 })
 
 DefineLanguageWord("Nekhekh", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 68, 71.

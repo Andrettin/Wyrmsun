@@ -33,7 +33,6 @@ DefineLanguageWord("Al", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "A
 	Meanings = {"Mighty", "All"}, -- meaning from Old Norse, but is also a prefix and infix used by Wesnoth's dwarven names
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "province", -- no examples, but seems sensible in face of a general lack of examples
-		"compound", "prefix", "singular", "settlement", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-hills", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-mountains" -- no examples, but seems sensible in face of a general lack of examples
 	}
@@ -46,7 +45,6 @@ DefineLanguageWord("Aur", { -- "Aurr" in Old Icelandic; Source: Richard Cleasby 
 	Gender = "masculine",
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "province", -- example: "Aurvang" (wetlands in Norse mythology, through which a group of dwarves passed to migrate to Joruvellir; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771.)
-		"compound", "prefix", "singular", "settlement", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-hills" -- no examples, but seems sensible in face of a general lack of examples
 	}
 })
@@ -73,7 +71,6 @@ DefineLanguageWord("Brising", { -- also name of a group of four dwarves (or the 
 	},
 	Gender = "masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 772.
 	AffixNameTypes = {
-		"compound", "prefix", "singular", "settlement", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "province", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-hills", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-mountains" -- no examples, but seems sensible in face of a general lack of examples
@@ -98,7 +95,6 @@ DefineLanguageWord("Eikin", {
 	Type = "adjective",
 	Meanings = {"Oaken"},
 	AffixNameTypes = {
-		"compound", "prefix", "settlement", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "province" -- no examples, but seems sensible in face of a general lack of examples
 	}
 })
@@ -109,7 +105,6 @@ DefineLanguageWord("Gand", {
 	Meanings = {"Magic"},
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "province", -- no examples, but seems sensible in face of a general lack of examples
-		"compound", "prefix", "singular", "settlement", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-hills", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-mountains" -- no examples, but seems sensible in face of a general lack of examples
 	}
@@ -135,7 +130,6 @@ DefineLanguageWord("Haug", { -- from Norse mythology, "Svarinshaug" = "Svarin's 
 	Meanings = {"Mound"},
 	AffixNameTypes = {
 		"compound", "suffix", "singular", "province", -- example: "Svarinshaug" ("Svarin's Mound"; from Norse mythology)
-		"compound", "suffix", "singular", "settlement", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "suffix", "singular", "terrain-hills", -- example: "Svarinshaug" ("Svarin's Mound"; from Norse mythology)
 		"compound", "suffix", "singular", "terrain-mountains" -- no examples, but seems sensible in face of a general lack of examples
 	}
@@ -147,7 +141,6 @@ DefineLanguageWord("Hledj", {
 	Meanings = {"Sound", "Silence", "Hearing", "Listening"}, -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 271-272.
 	Gender = "neuter",
 	AffixNameTypes = {
-		"compound", "prefix", "singular", "settlement", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "province" -- no examples, but seems sensible in face of a general lack of examples
 	}
 })
@@ -159,7 +152,6 @@ DefineLanguageWord("Joru", { -- from Norse mythology, "Joruvellir" = "Fields of 
 	Uncountable = true,
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "province", -- example: "Joruvellir" (Norse mythology)
-		"compound", "prefix", "singular", "settlement", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-mountains" -- no examples, but seems sensible in face of a general lack of examples
 	}
 })
@@ -205,7 +197,6 @@ DefineLanguageWord("Mjod", {
 	Uncountable = true,
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "province", -- no examples, but seems sensible in face of a general lack of examples
-		"compound", "prefix", "singular", "settlement", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-hills", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-mountains" -- no examples, but seems sensible in face of a general lack of examples
 	}
@@ -238,7 +229,6 @@ DefineLanguageWord("Nid", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "
 	Gender = "feminine",
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "province", -- no examples, but seems sensible in face of a general lack of examples
-		"compound", "prefix", "singular", "settlement", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-hills", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-mountains" -- no examples, but seems sensible in face of a general lack of examples
 	}
@@ -267,9 +257,8 @@ DefineLanguageWord("Rad", {
 	Type = "adjective",
 	Meanings = {"Counsel"}, -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 485.
 	AffixNameTypes = {
-		"compound", "prefix", "singular", "settlement", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "province" -- no examples, but seems sensible in face of a general lack of examples
-	},
+	}
 })
 
 DefineLanguageWord("Sol", {
@@ -305,7 +294,6 @@ DefineLanguageWord("Thjod", { -- Source: Richard Cleasby and Gudbrand Vigfusson,
 	Type = "adjective",
 	Meanings = {"Great"},
 	AffixNameTypes = {
-		"compound", "prefix", "singular", "settlement", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "province", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-hills", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-mountains" -- no examples, but seems sensible in face of a general lack of examples
@@ -336,7 +324,6 @@ DefineLanguageWord("Vig", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "
 	Meanings = {"Fight", "Battle"},
 	Gender = "neuter",
 	AffixNameTypes = {
-		"compound", "prefix", "singular", "settlement", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "province", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-hills", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-mountains" -- no examples, but seems sensible in face of a general lack of examples
@@ -350,7 +337,6 @@ DefineLanguageWord("Vind", {
 	Uncountable = true,
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "province", -- no examples, but seems sensible in face of a general lack of examples
-		"compound", "prefix", "singular", "settlement", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-hills", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-mountains" -- no examples, but seems sensible in face of a general lack of examples
 	}

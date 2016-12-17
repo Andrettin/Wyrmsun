@@ -77,9 +77,7 @@ DefineWorldMapTile({471, 104}, {
 		"latin", "Deva" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
-		"teuton", "england", "Chester", "name-elements", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-			"word", "english", "noun", "Chester" -- presumably
-		}
+		"teuton", "england", "Chester" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	}
 })
 
@@ -266,10 +264,7 @@ DefineWorldMapTile({476, 110}, {
 	FactionCulturalSettlementNames = {
 		"teuton", "angle-tribe", "Basengum", -- Old English name of Basing; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"teuton", "angle-tribe", "Andeferas", -- Old English name of Andover; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"teuton", "england", "Winchester", "name-elements", {
-			"compound", "prefix", "english", "noun", "singular", "Win",
-			"compound", "suffix", "english", "noun", "singular", "Chester"
-		},
+		"teuton", "england", "Winchester",
 		"teuton", "england", "Basing",
 		"teuton", "england", "Andover"
 	}

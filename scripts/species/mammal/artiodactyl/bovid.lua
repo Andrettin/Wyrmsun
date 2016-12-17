@@ -93,12 +93,7 @@ DefineSpecies("cow", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRp
 	Homeworld = "Earth",
 	EvolvesFrom = {"ilingoceros"}, -- shares a common ancestor with the bison
 	Era = "holocene",
-	ChildUpgrade = "upgrade-child",
-	MalePersonalNameElements = {
-		"word", "egyptian", "noun", "Apis", -- name of a bull in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 119.
-		"word", "egyptian", "noun", "Buchis", -- name of a bull in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 119.
-		"word", "egyptian", "noun", "Mnevis" -- name of a bull in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 119.
-	}
+	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("goat", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180715

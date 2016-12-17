@@ -28,16 +28,14 @@
 DefineLanguageWord("Fri", {
 	Language = "danish",
 	Type = "adjective",
-	Meanings = {"Free"},
-	AffixNameTypes = {"compound", "suffix", "settlement"} -- example: "Sorgenfri"
+	Meanings = {"Free"}
 })
 
 DefineLanguageWord("Hals", {
 	Language = "danish",
 	Type = "noun",
 	Meanings = {"Neck"},
-	DerivesFrom = {"old-norse", "noun", "Hals"}, -- presumably
-	NameTypes = {"settlement"}
+	DerivesFrom = {"old-norse", "noun", "Hals"} -- presumably
 })
 
 DefineLanguageWord("Sorg", {
@@ -47,9 +45,6 @@ DefineLanguageWord("Sorg", {
 	DerivesFrom = {"old-norse", "noun", "Sorg"}, -- presumably
 	NumberCaseInflections = {
 		"plural", "nominative", "Sorgen" -- correct?
-	},
-	AffixNameTypes = {
-		"compound", "prefix", "plural", "settlement" -- example: "Sorgenfri"
 	}
 })
 

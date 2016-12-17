@@ -1516,3 +1516,14 @@ DefineUnitType("unit-dread-bat", {
 		"miss", "attack-miss"
 	}
 } )
+
+-- Serpent Names:
+-- "Apofis", -- serpent which appears in Egyptian mythology, representing the utter lack of order; Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 104, 107.
+-- "Ikher", -- serpent in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 119.
+-- "Irto", -- serpent which appears in Egyptian mythology, having created the earth; Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 101, 103-104.
+-- "Kematef" -- serpent which appears in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 104.
+
+-- Bull Names:
+-- "Apis", -- name of a bull in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 119.
+-- "Buchis", -- name of a bull in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 119.
+-- "Mnevis" -- name of a bull in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 119.

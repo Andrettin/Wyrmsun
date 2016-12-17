@@ -147,13 +147,7 @@ DefineSpecies("snake", {
 	Name = "Snake",
 	Homeworld = "Earth",
 	EvolvesFrom = {"petrolacosaurus", "thadeosaurus"},
-	ChildUpgrade = "upgrade-child",
-	PersonalNameElements = {
-		"word", "egyptian", "noun", "Apofis", -- serpent which appears in Egyptian mythology, representing the utter lack of order; Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 104, 107.
-		"word", "egyptian", "noun", "Ikher", -- Serpent in Egyptian mythology
-		"word", "egyptian", "noun", "Irto", -- serpent which appears in Egyptian mythology, having created the earth; Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 101, 103-104.
-		"word", "egyptian", "noun", "Kematef" -- serpent which appears in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 104.
-	}
+	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("ticinosuchus", {
