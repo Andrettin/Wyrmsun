@@ -576,10 +576,7 @@ DefineLanguageWord("Gárdiz", { -- Fick and Torp spell the word as "Garda"/"Gard
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Enclosure", "Court", "Garden"}, -- Fick and Torp give "Geheg, Hof, Garten" as the meaning; Lehmann gives the meaning as "Garden"
-	Gender = "masculine",
-	AffixNameTypes = {
-		"compound", "prefix", "singular", "province" -- seems sensible in face of a lack of examples, specially since is a cognate of the prefix in "Gardarike"
-	}
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Gastiz", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 74; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2007, 3.3.5.

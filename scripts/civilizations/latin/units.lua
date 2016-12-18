@@ -103,3 +103,6 @@ DefineUnitType("unit-latin-stables", {
 --		"help", "basic-teuton-voices-help-town"
 	}
 } )
+
+-- Portuguese Farm Names:
+-- "Macacos" (farm in Rio de Janeiro); Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 13.

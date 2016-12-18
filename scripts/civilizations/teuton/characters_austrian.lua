@@ -38,47 +38,38 @@ DefineCharacter("Adalram", { -- Source: James Westfall Thompson, "Medieval Germa
 DefineCharacter("Peter von Salzgeber", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
 	Name = "Peter",
 	FamilyName = "von Salzgeber",
-	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
-	PlaceNameDerivedFamilyName = true, -- presumably
 	Gender = "male",
 	Type = "unit-teuton-ritter", -- section chief who was the right-hand of the Minister-President (the Baron of Pillersdorf) in March of 1848
 	Civilization = "teuton",
 	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1789, -- born
-	DeathYear = 1858, -- died
-	Noble = true
+	DeathYear = 1858 -- died
 })
 
 DefineCharacter("Wilhelmina von Salzgeber", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
 	Name = "Wilhelmina",
 	FamilyName = "von Salzgeber", -- this is her name after marrying Peter von Salzgeber; should be set to her maiden name instead
-	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
-	PlaceNameDerivedFamilyName = true, -- presumably
 	Gender = "female",
 	Type = "unit-teuton-archer", -- baroness; should be a different unit type that is more appropriate
 	Civilization = "teuton",
 	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1801, -- born
-	DeathYear = 1860, -- died
-	Noble = true
+	DeathYear = 1860 -- died
 	-- married to Peter von Salzgeber
 })
 
 DefineCharacter("Joseph Anton von Lasser", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
 	Name = "Joseph Anton",
 	FamilyName = "von Lasser",
-	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
-	PlaceNameDerivedFamilyName = true, -- presumably
 	Gender = "male",
 	Type = "unit-teuton-ritter", -- bureaucrat in the Allgemeinen Hofkammer, in 1848 a deputy in the Austrian Reichstag and in the Frankfurter Parliament; was minister without portfolio in the 1860s during the government of the Archduke Rainer-Mensdorff-Pouilly; was governor of Tyrol; in the 1870s he was a liberal deputy
 	Civilization = "teuton",
 	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1814, -- born
-	DeathYear = 1879, -- died
-	Noble = true
+	DeathYear = 1879 -- died
 })
 
 DefineCharacter("Leopold Hasner", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
@@ -101,16 +92,13 @@ DefineCharacter("Wilhelmina the Younger von Salzgeber", { -- Source: Waltraud He
 	Name = "Wilhelmina",
 	ExtraName = "the Younger", -- to differentiate her from her mother
 	FamilyName = "von Salzgeber",
-	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
-	PlaceNameDerivedFamilyName = true, -- presumably
 	Gender = "female",
 	Type = "unit-teuton-archer", -- should be a different unit type that is more appropriate
 	Civilization = "teuton",
 	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1821, -- born
-	DeathYear = 1896, -- died
-	Noble = true
+	DeathYear = 1896 -- died
 	-- married to Josef Russegger
 })
 
@@ -128,15 +116,12 @@ DefineCharacter("Josef Russegger", { -- Source: Waltraud Heindl, "Josephinische 
 DefineCharacter("von Pillersdorf", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
 	Name = "von Pillersdorf", -- this is actually his family name, since we don't have his given name
 --	FamilyName = "von Pillersdorf",
-	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
-	PlaceNameDerivedFamilyName = true, -- presumably
 	Gender = "male",
 	Type = "unit-teuton-ritter", -- high-ranking bureaucrat of the Finance Ministry, and later Minister-President of Austria
 	Civilization = "teuton",
 	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1848, -- became Minister-President of Austria in 1848
-	Noble = true,
 	HistoricalTitles = {
 		"head-of-government", 1848, 1848, "teuton", "austria" -- was Minister-President of Austria during 1848
 	}
@@ -145,15 +130,12 @@ DefineCharacter("von Pillersdorf", { -- Source: Waltraud Heindl, "Josephinische 
 DefineCharacter("Franz Joseph von Habsburg", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 48.
 	Name = "Franz Joseph",
 	FamilyName = "von Habsburg",
-	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
-	PlaceNameDerivedFamilyName = true, -- presumably
 	Gender = "male",
 	Type = "unit-teuton-ritter", -- Emperor of Austria
 	Civilization = "teuton",
 	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1830, -- born (became Emperor in 1848, when he was 18 years old)
-	Noble = true,
 	HistoricalTitles = {
 		"head-of-state", 1848, 0, "teuton", "austria" -- became Emperor of Austria in 1848
 	}
@@ -162,8 +144,6 @@ DefineCharacter("Franz Joseph von Habsburg", { -- Source: Waltraud Heindl, "Jose
 DefineCharacter("Victor Andrian-Werburg", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 46; Source: A.J.P. Taylor, The Habsburg Monarchy, 1809-1918, 1964, pp. 55-56.
 	Name = "Victor",
 	FamilyName = "Andrian-Werburg", -- presumably
-	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
-	PlaceNameDerivedFamilyName = true, -- presumably
 	Gender = "male",
 	Type = "unit-teuton-swordsman", -- member of the Tyrolese provincial diet
 	Civilization = "teuton",
@@ -193,8 +173,6 @@ DefineCharacter("Franz Seraph Stadion", { -- Source: Waltraud Heindl, "Josephini
 DefineCharacter("Alexander von Bach", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, pp. 50, 58.
 	Name = "Alexander",
 	FamilyName = "von Bach",
-	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
-	PlaceNameDerivedFamilyName = true, -- presumably
 	Gender = "male",
 	Type = "unit-teuton-ritter",
 	Civilization = "teuton",
@@ -202,7 +180,6 @@ DefineCharacter("Alexander von Bach", { -- Source: Waltraud Heindl, "Josephinisc
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1813, -- born
 	DeathYear = 1893, -- died
-	Noble = true,
 	HistoricalTitles = {
 		"interior-minister", 1849, 1859, "teuton", "austria" -- became Interior Minister (Innenminister) of Austria in 15.08.1849, and ceased that function in 1859
 	}
@@ -211,15 +188,12 @@ DefineCharacter("Alexander von Bach", { -- Source: Waltraud Heindl, "Josephinisc
 DefineCharacter("Eduard von Bach", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 52.
 	Name = "Eduard",
 	FamilyName = "von Bach", -- source gives him as "Eduard Bach"; it is not clear if he and his brother had the "von" predicate from birth or not
-	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
-	PlaceNameDerivedFamilyName = true, -- presumably
 	Gender = "male",
 	Type = "unit-teuton-ritter",
 	Civilization = "teuton",
 	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	DateReferenceCharacter = "Alexander von Bach", -- brother of Alexander von Bach
-	Noble = true,
 	HistoricalTitles = {
 		"governor", 0, 0, "Upper Austria" -- was Statthalter of Upper Austria (Oberösterreich)
 	}
@@ -228,15 +202,12 @@ DefineCharacter("Eduard von Bach", { -- Source: Waltraud Heindl, "Josephinische 
 DefineCharacter("Anton Hye von Glunek", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, pp. 60-61.
 	Name = "Anton Hye",
 	FamilyName = "von Glunek",
-	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
-	PlaceNameDerivedFamilyName = true, -- presumably
 	Gender = "male",
 	Type = "unit-teuton-ritter", -- was a liberal member of the Juridico-political Reading Club before 1848; from 1857 to 1867 was a section chief in the Ministry of Justice
 	Civilization = "teuton",
 	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1849, -- became part of the ministerial council of the Austrian Ministry of Justice in 1849
-	Noble = true,
 	HistoricalTitles = {
 		"justice-minister", 1867, 1867, "teuton", "austria" -- was Justice Minister (Justizminister) of Austria from June to December of 1867
 	}
@@ -245,15 +216,12 @@ DefineCharacter("Anton Hye von Glunek", { -- Source: Waltraud Heindl, "Josephini
 DefineCharacter("Adolph Pratobevera von Wiesborn",  { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 61.
 	Name = "Adolph Pratobevera",
 	FamilyName = "von Wiesborn",
-	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
-	PlaceNameDerivedFamilyName = true, -- presumably
 	Gender = "male",
 	Type = "unit-teuton-ritter",
 	Civilization = "teuton",
 	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1852, -- became councillor (Hofrat) in the supreme court (Oberster Gerichtshof) in 1852
-	Noble = true,
 	HistoricalTitles = {
 		"justice-minister", 1861, 1862, "teuton", "austria" -- was Justice Minister (Justizminister) of Austria from 1861 to 1862
 	}
@@ -263,43 +231,35 @@ DefineCharacter("Adolph Pratobevera von Wiesborn",  { -- Source: Waltraud Heindl
 DefineCharacter("Johann Baptist von Hoffinger", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
 	Name = "Johann Baptist",
 	FamilyName = "von Hoffinger",
-	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
-	PlaceNameDerivedFamilyName = true, -- presumably
 	Gender = "male",
 	Type = "unit-teuton-ritter", -- Ministerialsekretär in the Police Ministry (Polizeiministerium), at least during the 1867-1869 period
 	Civilization = "teuton",
 	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
-	Year = 1867,
-	Noble = true
+	Year = 1867
 	-- Knight (Ritter)
 })
 
 DefineCharacter("Carl von Hock",  { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 61.
 	Name = "Carl",
 	FamilyName = "von Hock",
-	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
-	PlaceNameDerivedFamilyName = true, -- presumably
 	Gender = "male",
 	Type = "unit-teuton-ritter", -- was a section chief in the Finance Ministry
 	Civilization = "teuton",
 	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	-- start year?
-	Noble = true
 	-- economic liberal
 })
 
 DefineCharacter("Bissingen", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 69.
 	Name = "Bissingen", -- likely his family name instead
-	PlaceNameDerivedFamilyName = true, -- presumably
 	Gender = "male",
 	Type = "unit-teuton-ritter", -- had the title of Graf (Count)
 	Civilization = "teuton",
 	Faction = "austria",
 	ProvinceOfOrigin = "Tyrol", -- was Statthalter of Tyrol
 	Year = 1852, -- was Statthalter (governor) of Tyrol in 1852 when he wrote complaining of the wages of a governor
---	Noble = true,
 	HistoricalTitles = {
 		"governor", 1852, 0, "Tyrol" -- was Statthalter (governor) of Tyrol in 1852 when he wrote complaining of the wages of a governor
 	}
@@ -308,15 +268,12 @@ DefineCharacter("Bissingen", { -- Source: Waltraud Heindl, "Josephinische Mandar
 DefineCharacter("Georg von Toggenburg", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 64.
 	Name = "Georg",
 	FamilyName = "von Toggenburg",
-	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
-	PlaceNameDerivedFamilyName = true, -- presumably
 	Gender = "male",
 	Type = "unit-teuton-ritter", -- had the title of Knight (Ritter)
 	Civilization = "teuton",
 	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1860, -- became Statthalter of Venice
-	Noble = true,
 	HistoricalTitles = {
 		"governor", 1860, 1866, "Venetia" -- was Statthalter (governor) of Venice from 1860 to 1866
 	}

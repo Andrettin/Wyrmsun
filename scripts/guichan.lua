@@ -1473,10 +1473,6 @@ else
 	LoadHeroes() -- load persistent heroes
 end
 
-if (LanguageCacheOutdated) then
-	GenerateMissingLanguageData() -- generate missing language data after loading mods, so that the function will take language data defined in mods into account
-end
-
 function GameStarting()
 	if (GetCurrentQuest() ~= "" and GetQuestData(GetCurrentQuest(), "MapMusic") ~= "") then
 		StopMusic()

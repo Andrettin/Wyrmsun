@@ -30,10 +30,7 @@ DefineLanguageWord("Church", {
 	Type = "noun",
 	Meanings = {"Church"},
 	DerivesFrom = {"old-english", "noun", "Cirice"}, -- presumably
-	Gender = "neuter",
-	AffixNameTypes = {
-		"separate", "prefix", "singular", "terrain-hills" -- example: "Church Hill"
-	}
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Hauberk", {

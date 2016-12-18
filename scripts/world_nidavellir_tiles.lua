@@ -42,10 +42,7 @@ DefineWorldMapTile({33, 15}, {
 DefineWorldMapTile({44, 11}, {
 	World = "Nidavellir",
 	CulturalTerrainNames = {
-		"Hills", "dwarf", "Svarinshaug", "name-elements", {
-			"compound", "prefix", "dwarven", "noun", "singular", "genitive", "Svarin",
-			"compound", "suffix", "dwarven", "noun", "singular", "Haug"
-		}
+		"Hills", "dwarf", "Svarinshaug"
 	}
 })
 

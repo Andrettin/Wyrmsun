@@ -27,8 +27,7 @@
 
 DefineLanguage("proto-celtic", {
 	Name = "Proto-Celtic",
-	Family = "celtic",
-	SkipNameTypeInheritance = true
+	Family = "celtic"
 })
 
 DefineLanguage("old-gaulish", {

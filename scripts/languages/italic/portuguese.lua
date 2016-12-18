@@ -49,8 +49,7 @@ DefineLanguageWord("Burgo", { -- Source: T. C. Donkin, "An Etymological Dictiona
 DefineLanguageWord("Macaco", {
 	Language = "portuguese",
 	Type = "noun",
-	Meanings = {"Monkey"},
-	NameTypes = {"plural", "unit-class-farm"} -- example: "Macacos" (farm in Rio de Janeiro); Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 13.
+	Meanings = {"Monkey"}
 })
 
 DefineLanguageWord("Rico", {

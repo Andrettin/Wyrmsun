@@ -406,3 +406,13 @@ DefineUniqueItem("na-slovanech-monastery", { -- Alena Ježková, "77 Prague Lege
 -- Zikmund (unique bell in Prague); Source: Alena Ježková, "77 Prague Legends", 2006, p. 84.
 
 -- Josef (legendary golem from Prague); Source: Alena Ježková, "77 Prague Legends", 2006, p. 107.
+
+-- Bodn (jar which contained some of the mead of poetry)
+-- Dainsleif (dwarven sword)
+-- Gleipnir (fetter made by dwarves to bind the wolf Fenrir)
+-- Gungnir (throwing spear made by the sons of Ivaldi)
+-- Mjollnir (iron hammer made by the dwarven brothers Brokk and Eitri)
+-- Naglering (sword forged by the dwarf Alberich)
+-- Odrorir (cauldron which contained some of the mead of poetry)
+-- Son (jar which contained some of the mead of poetry)
+-- Thrymgjol (extraordinary gate crafted by the sons of the sun-blinded dwarf Solblindi)

@@ -27,14 +27,12 @@
 
 DefineLanguage("proto-slavic", {
 	Name = "Proto-Slavic",
-	Family = "slavic",
-	SkipNameTypeInheritance = true
+	Family = "slavic"
 })
 
 DefineLanguage("russian", {
 	Name = "Russian",
-	Family = "slavic",
-	SkipNameTypeInheritance = true
+	Family = "slavic"
 })
 
 DefineLanguage("ukrainian", {

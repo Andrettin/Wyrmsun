@@ -32,8 +32,7 @@ DefineLanguage("old-latin", {
 
 DefineLanguage("latin", {
 	Name = "Latin",
-	Family = "italic",
-	SkipNameTypeInheritance = true
+	Family = "italic"
 })
 
 DefineLanguage("late-latin", {

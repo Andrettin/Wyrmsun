@@ -571,6 +571,9 @@ DefineCivilization("dwarf", {
 		"Knalga", -- from Battle for Wesnoth
 		"Lyr"
 	},
+	ProvinceNames = {
+		"Joruvellir" -- from Norse mythology, "Joruvellir" = "Fields of Sand"
+	},
 	ShipNames = {
 --		"Skidbladnir" -- ship built by dwarves in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 101.
 	},
@@ -1230,6 +1233,9 @@ DefineCivilization("germanic", {
 		"Ansugardiz", -- "Ansugárdiz" is a rendering of rendering of "Asgard" in Proto-Germanic, as in the Ynglinga saga's story Asgard is the settlement in "Asia" in which Odin's people (here understood as the Indo-Europeans who went on to settle Scandinavia and become speakers of Proto-Germanic) used to live until they migrated to Scandinavia; shouldn't be in the location of Astrakhan, but instead where modern Assor is (where?), or alternatively Chasgar (again, where?); Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
 		"Segiztuna" -- "Segiztûna" is a rendering of "Sigtun" in Proto-Germanic, since the Ynglinga saga the city was founded when the cultural ancestors of the Germanic peoples (= Odin's people) first settled Scandinavia
 	},
+	ProvinceNames = {
+		"Ansulanda", -- rendering of "Asaland" in Proto-Germanic, as in the Ynglinga saga's story Asaland is the region in "Asia" in which Odin's people (here understood as the Indo-Europeans who went on to settle Scandinavia and become speakers of Proto-Germanic) used to live until they migrated to Scandinavia; alternatively called "Asaheim"; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
+	},
 	HistoricalTechnologies = {
 		"upgrade-germanic-wood-plow", -4000, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
 		-- the prevalence of bronzeworking (compared to copperworking) in Scandinavia began c. 2000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 73.
@@ -1695,14 +1701,24 @@ DefineCivilization("teuton", {
 		"Zweibrücken"
 	},
 	ProvinceNames = {
+		"Altmark", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 134-135.
+		"Baden",
 		"Bavaria", -- "Bayern"
+		"Brandenburg",
+		"Burgenland",
 		"Carinthia", -- "Kärnten"
 		"Holstein",
 		"Mecklenburg",
+		"Mittelmark", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 134-135.
+		"Neumark", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 134-135.
+		"Nordgau",
+		"Ostmark",
+		"Pomerania",
 		"Prussia", -- "Preussen"
 		"Saxony", -- "Sachsen"
 		"Schlesien",
 		"Schleswig",
+		"Siebenbürgen",
 		"Styria", -- "Steiermark"
 		"Tyrol", -- "Tirol"
 		"Vorarlberg",
@@ -1886,7 +1902,10 @@ DefineCivilization("goth", {
 	PersonalNames = {
 		"female", "Brunichilde", -- daughter of the Visigothic king Athanagild; refined, attractive, good-mannered, intelligent and socially affable; died in 613; became Brünhild in the myths; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, pp. 328, 330.
 		"female", "Gailswintha", -- daughter of the Visigothic king Athanagild; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, pp. 328-329.
+		"male", "Airmanareiks", -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 225-226, 536, 552; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 22; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18.
 		"male", "Athanagild", -- Visigothic king; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
+		"male", "Frithareiks", -- "Friþareiks"; son of Ermenrich (= Airmanareiks) in the Dietrich Saga; in the saga he was taken prisoner by Dietrich, but he couldn't have been a contemporary of Dietrich if he was a son of Airmanareiks; in the saga his name is "Friedrich"; this is a tentative rendering of the name in Gothic, based on the cognates of the components of the original German name; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 26.
+		"male", "Thiudareiks", -- "Þiudareiks"; tentative rendering of the name in Gothic, based on the cognates of the German version of the name, "Dietrich"; also known as "Theoderic"; king of the Ostrogoths; Dietrich von Bern in the German sagas; was given as a hostage by Walamer to the Romans, and thus stayed for 10 years (until 472 AD) in the Byzantine court; his religion was Arian Christianity; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7, 9.
 		"male", "Witiza" -- Visigothic king who reigned 700-710; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 400.
 	},
 	HistoricalTechnologies = {
@@ -2053,13 +2072,51 @@ DefineCivilization("norse", {
 	DevelopsFrom = {"germanic"},
 	Description = _("During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). While late antiquity saw intense migration of Germanic peoples, the Danes and Swedes remained largely in Scandinavia, well beyond the developments of the Mediterranean."),
 	PersonalNames = {
+		"female", "Alfhild", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 259.
+		"female", "Almveig", -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
+		"female", "Bera", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 235.
+		"female", "Hild", -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 223-224; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 257.
+		"male", "Alf", -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 222-223; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 142, 235-236.
+		"male", "Alfarin", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 259.
+		"male", "Alfgeir", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 260.
+		"male", "Ali", -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 245.
+		"male", "Biari", -- Old Swedish name; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+		"male", "Brodd", -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
+		"male", "Dag", -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 231-233, 235, 259.
+		"male", "Dagrid", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 235.
+		"male", "Eymund", -- king of Holmgarth (i.e. Russia); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
+		"male", "Eystein", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 246, 257-258.
+		"male", "Fridfrode", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 226-227.
+		"male", "Fridleif", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 239.
+		"male", "Gandalf", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 260.
+		"male", "Gudlög", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 237-238.
+		"male", "Gudrod", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 254, 257, 259-260.
+		"male", "Half", -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
+		"male", "Halfdan", -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 221-223; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 239, 254-257, 259-262.
 		"male", "Hathuwulf", -- Hathuwulf is a chieftain whose name appeared in a runestone at Stentoften in Blekinge; Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 118.
-		"male", "Lytir" -- male name which means "lot-reader" or "speaker of truth"; Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 119.
+		"male", "Instein", -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 100-101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
+		"male", "Isulf", -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
+		"male", "Lytir", -- male name which means "lot-reader" or "speaker of truth"; Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 119.
+		"male", "Osulf", -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
+		"male", "Rathbard", -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 227.
+		"male", "Saefari", -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
+		"male", "Saekonung", -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101.
+		"male", "Sigtrygg", -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 257-258.
+		"male", "Sigurd", -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 227.
+		"male", "Skjold", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 258.
+		"male", "Svipdag", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 236.
+		"male", "Ulf", -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 222, 224.
+		"male", "Vanland" -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 227-228.
 	},
 	SettlementNames = {
 		"Hals", -- Danish
 		"Sigtun",
 		"Sorgenfri" -- Danish
+	},
+	ProvinceNames = {
+		"Gardarike",
+		"Hordaland",
+		"Vestfold" -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
 	},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.

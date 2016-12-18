@@ -37,9 +37,6 @@ DefineUpgrade("upgrade-work-austria-and-her-future", { -- Source: Waltraud Heind
 
 DefineUpgrade("upgrade-work-hildebrandslied", {
 	Name = _("Hildebrandslied"),
-	NameElements = {
-		"compound", "suffix", "high-german", "noun", "Lied"
-	},
 	Work = "scroll",
 	Civilization = "teuton",
 	Quote = "\"That Hildebrand was my father,\nand I am Hadubrand.\nLong ago to the east he went,\nfleeing Otacher's hatred\"\n- Hildebrandslied (Hadubrand)"

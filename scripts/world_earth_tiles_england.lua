@@ -132,10 +132,7 @@ DefineWorldMapTile({474, 109}, {
 		"teuton", "england", "Wootton Bassett"
 	},
 	FactionCulturalResourceNames = {
-		"grain", "teuton", "angle-tribe", "Weoland", "name-elements", { -- Old English field-name; Weoland was near the location of Wootton Bassett; the first part of the name is formed by a variant of the Old English word "weoh"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
-			"compound", "prefix", "old-english", "noun", "Weo",
-			"compound", "suffix", "old-english", "noun", "Land" -- presumably
-		}
+		"grain", "teuton", "angle-tribe", "Weoland", -- Old English field-name; Weoland was near the location of Wootton Bassett; the first part of the name is formed by a variant of the Old English word "weoh"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
 	}
 })
 
@@ -154,10 +151,7 @@ DefineWorldMapTile({474, 111}, {
 		"teuton", "england", "Damerham"
 	},
 	FactionCulturalResourceNames = {
-		"grain", "teuton", "angle-tribe", "Wedone", "name-elements", { -- Old English field-name; Wedone was near the location of Damerham; the first part of the name is formed by a variant of the Old English word "weoh"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
-			"compound", "prefix", "old-english", "noun", "We",
-			"compound", "suffix", "old-english", "noun", "Done"
-		}
+		"grain", "teuton", "angle-tribe", "Wedone", -- Old English field-name; Wedone was near the location of Damerham; the first part of the name is formed by a variant of the Old English word "weoh"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
 	}
 })
 
@@ -200,13 +194,8 @@ DefineWorldMapTile({475, 106}, {
 DefineWorldMapTile({475, 109}, {
 	World = "Earth",
 	FactionCulturalTerrainNames = {
-		"Hills", "teuton", "angle-tribe", "Æscesdun", "name-elements", { -- Old English name of the Berkshire Downs; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-			-- "compound", "prefix", "old-english", -- ?
-			"compound", "suffix", "old-english", "noun", "Dun" -- presumably
-		},
-		"Hills", "teuton", "england", "Berkshire Downs", "name-elements", {
-			"separate", "suffix", "english", "noun", "plural", "Down" -- presumably
-		}
+		"Hills", "teuton", "angle-tribe", "Æscesdun", -- Old English name of the Berkshire Downs; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Hills", "teuton", "england", "Berkshire Downs"
 	}
 })
 
@@ -282,10 +271,7 @@ DefineWorldMapTile({479, 109}, {
 DefineWorldMapTile({479, 110}, {
 	World = "Earth",
 	FactionCulturalTerrainNames = {
-		"Conifer Forest", "teuton", "angle-tribe", "Andredesweald", "name-elements", { -- Old English name of The Weald; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-			-- "compound", "prefix", "old-english", -- ?
-			"compound", "suffix", "old-english", "noun", "Weald" -- presumably
-		},
+		"Conifer Forest", "teuton", "angle-tribe", "Andredesweald", -- Old English name of The Weald; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Conifer Forest", "teuton", "england", "The Weald" -- The Weald was a forest, but of what kind?
 	}
 })

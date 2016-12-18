@@ -705,6 +705,26 @@ DefineFaction("england", {
 		"Woolwich",
 		"Wormshill",
 		"Yarmouth" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+	},
+	ProvinceNames = {
+		"Berkshire",
+		"Cheshire",
+		"Cornwall",
+		"Dorset",
+		"East Anglia",
+		"Essex",
+		"Hampshire",
+		"Lancashire",
+		"Middlesex",
+		"Norfolk",
+		"Northumberland",
+		"Portland", -- duchy
+		"Shropshire",
+		"Somerset",
+		"Suffolk",
+		"Sussex",
+		"Wessex",
+		"Wiltshire"
 	}
 })
 

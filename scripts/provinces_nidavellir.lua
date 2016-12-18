@@ -255,7 +255,7 @@ DefineProvince("Kal Kartha", {
 		{56, 12}
 	},
 	CulturalNames = {
-		"dwarf", "Kal Kartha", "settlement-derived-name"
+		"dwarf", "Kal Kartha"
 	},
 	SettlementLocation = {45, 5},
 	Map = "maps/random/random-map-swamp.smp",
@@ -273,7 +273,7 @@ DefineProvince("Lyr", {
 	World = "Nidavellir",
 	Tiles = { {47, 13}, {47, 14}, {47, 15}, {47, 16}, {48, 13}, {48, 14}, {48, 15}, {48, 16}, {49, 12}, {49, 13}, {49, 14}, {49, 15}, {49, 16}, {49, 17}, {50, 12}, {50, 13}, {50, 14}, {50, 15}, {50, 16}, {50, 17}, {51, 12}, {51, 13}, {51, 14}, {51, 15}, {51, 16}, {51, 17}, {52, 13}, {52, 14}, {52, 15}, {52, 16}, {52, 17}, {53, 13}, {53, 14}, {53, 15}, {53, 16}, {54, 13}, {54, 14}, {54, 15}, {54, 16}, {55, 13}, {55, 14}, {55, 15}, {55, 16}, {56, 13}, {56, 14}, {56, 15}, {56, 16} },
 	CulturalNames = {
-		"dwarf", "Lyr", "settlement-derived-name"
+		"dwarf", "Lyr"
 	},
 	SettlementLocation = {50, 13},
 	Map = "maps/random/random-map-swamp.smp",
@@ -422,10 +422,7 @@ DefineProvince("Untersberg", {
 	World = "Nidavellir",
 	Tiles = {},
 	CulturalNames = {
-		"gnome", "Untersberg"--[[, "name-elements", {
-			"compound", "prefix", "gnomish", "noun", "genitive", "Unter",
-			"compound", "suffix", "gnomish", "noun", "Berg"
-		}--]]
+		"gnome", "Untersberg"
 	},
 	Map = "maps/random/random-map-swamp.smp",
 	SettlementTerrain = "Mountains",

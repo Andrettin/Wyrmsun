@@ -27,8 +27,7 @@
 
 DefineLanguage("greek", {
 	Name = "Greek",
-	Family = "hellenic",
-	SkipNameTypeInheritance = true
+	Family = "hellenic"
 })
 
 DefineLanguage("aeolic", { -- should this be a dialect of Greek?

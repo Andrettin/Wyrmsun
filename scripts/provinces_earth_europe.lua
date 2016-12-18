@@ -171,7 +171,7 @@ DefineProvince("Alentejo", {
 DefineProvince("Alsace", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Elsass"
+		"teuton", "Alsace" -- Elsass
 	},
 	Tiles = {
 		{500, 117}, {500, 118}, {500, 119}, {500, 120},
@@ -468,10 +468,7 @@ DefineProvince("Argolis", {
 DefineProvince("Astrakhan", {
 	World = "Earth",
 	CulturalNames = {
-		"germanic", "Ansulanda", "name-elements", { -- rendering of "Asaland" in Proto-Germanic, as in the Ynglinga saga's story Asaland is the region in "Asia" in which Odin's people (here understood as the Indo-Europeans who went on to settle Scandinavia and become speakers of Proto-Germanic) used to live until they migrated to Scandinavia; alternatively called "Asaheim"; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
-			"compound", "prefix", "proto-germanic", "noun", "singular", "Ansu",
-			"compound", "suffix", "proto-germanic", "noun", "singular", "Landa"
-		}
+		"germanic", "Ansulanda" -- rendering of "Asaland" in Proto-Germanic, as in the Ynglinga saga's story Asaland is the region in "Asia" in which Odin's people (here understood as the Indo-Europeans who went on to settle Scandinavia and become speakers of Proto-Germanic) used to live until they migrated to Scandinavia; alternatively called "Asaheim"; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
 	},
 	Tiles = {
 --		{151, 30}, {152, 28}, {152, 29}, {152, 30}, {152, 31}, {153, 28}, {153, 29}, {153, 30}, {153, 31}, {154, 28}, {154, 29}, {154, 30}, {155, 29}, {155, 30}, -- old map
@@ -602,7 +599,7 @@ DefineProvince("Augsburg", {
 	World = "Earth",
 	CulturalNames = {
 		"latin", "Augusta Vindelicorum",
-		"teuton", "Augsburg", "settlement-derived-name" -- presumably, since a settlement with that name exists there
+		"teuton", "Augsburg"
 	},
 	Tiles = {
 		{509, 118}, {509, 119}, {509, 120},
@@ -626,9 +623,7 @@ DefineProvince("Baden", {
 	World = "Earth",
 	CulturalNames = {
 		"latin", "Agri Decumates", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		"teuton", "Baden", "name-elements", { -- is this a settlement-derived name instead?
-			"word", "high-german", "verb", "no-tense", "Baden", -- correct?
-		}
+		"teuton", "Baden"
 	},
 	Tiles = {
 		{502, 118}, {502, 119}, {502, 120},
@@ -905,7 +900,7 @@ DefineProvince("Bohemia", {
 		"germanic", "Boiohaemum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		"latin", "Boiohaemum",
 		"slav", "Bohemia",
-		"teuton", "Böhmen"
+		"teuton", "Bohemia" -- Böhmen
 	},
 	FactionCulturalNames = {
 		"teuton", "marcomanni-tribe", "Marcomannia",
@@ -1009,10 +1004,7 @@ DefineProvince("Bosnia", {
 DefineProvince("Brandenburg", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Brandenburg", "name-elements", { -- is this a settlement-derived name instead?
-			"compound", "prefix", "high-german", "verb", "no-tense", "Branden", -- correct?
-			"compound", "suffix", "high-german", "noun", "singular", "Burg"
-		}
+		"teuton", "Brandenburg"
 	},
 	FactionCulturalNames = {
 		"teuton", "semnone-tribe", "Semnonia",
@@ -1127,7 +1119,7 @@ DefineProvince("Brittany", {
 DefineProvince("Brunswick", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Braunschweig"
+		"teuton", "Brunswick" -- Braunschweig
 	},
 	Tiles = {
 		{507, 108}, {507, 109},
@@ -1487,7 +1479,7 @@ DefineProvince("Corinth", {
 		{545, 147}, {545, 148}
 	},
 	CulturalNames = {
-		"greek", "Corinth", "settlement-derived-name"
+		"greek", "Corinth"
 	},
 	SettlementLocation = {545, 148}, -- Corinth
 	Map = "maps/random/random-map-forest.smp",
@@ -1506,10 +1498,7 @@ DefineProvince("Corinth", {
 DefineProvince("Cornwall", {
 	World = "Earth",
 	FactionCulturalNames = {
-		"teuton", "england", "Cornwall", "name-elements", {
-			"compound", "prefix", "english", "noun", "singular", "Corn", -- presumably
-			"compound", "suffix", "english", "noun", "singular", "Wall" -- presumably
-		}
+		"teuton", "england", "Cornwall"
 	},
 	Tiles = {
 		{464, 113},
@@ -1888,7 +1877,7 @@ DefineProvince("Dobruja", {
 DefineProvince("Don", {
 	World = "Earth",
 	CulturalNames = {
-		"greek", "Tanais", "settlement-derived-name"
+		"greek", "Tanais"
 	},
 	FactionCulturalNames = {
 		"celt", "vana-tribe", "Vanaland" -- alternatively called "Vanaheim"; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
@@ -2016,7 +2005,7 @@ DefineProvince("Drenthe", {
 DefineProvince("Durham", {
 	World = "Earth",
 	FactionCulturalNames = {
-		"teuton", "england", "Durham", "settlement-derived-name" -- presumably a settlement-derived name
+		"teuton", "england", "Durham"
 	},
 	Tiles = {
 		{473, 100},
@@ -2088,10 +2077,7 @@ DefineProvince("Dyfed", {
 DefineProvince("East Anglia", {
 	World = "Earth",
 	FactionCulturalNames = {
-		"teuton", "england", "East Anglia", "name-elements", {
-			"separate", "prefix", "english", "noun", "East"
---			"separate", "suffix", -- ?
-		}
+		"teuton", "england", "East Anglia"
 	},
 	Tiles = {
 		{481, 105}, {481, 106}, {481, 107},
@@ -2188,10 +2174,7 @@ DefineProvince("Essex", {
 	World = "Earth",
 	FactionCulturalNames = {
 		"teuton", "angle-tribe", "Essex",
-		"teuton", "england", "Essex", "name-elements", {
-			"compound", "prefix", "english", "noun", "Es",
-			"compound", "suffix", "english", "noun", "plural", "Sex"
-		}
+		"teuton", "england", "Essex"
 	},
 	Tiles = {
 		{477, 108},
@@ -2293,10 +2276,7 @@ DefineProvince("Euboea", { -- to make this island appear separated from Attica, 
 DefineProvince("Farther Pomerania", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Hinterpommern", "name-elements", {
-			"compound", "prefix", "high-german", "adposition", "Hinter",
---			"suffix" -- ?
-		}
+		"teuton", "Farther Pomerania" -- Hinterpommern
 	},
 	Tiles = {
 		{521, 104},
@@ -2902,7 +2882,7 @@ DefineProvince("Hedmark", {
 DefineProvince("Hesse", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Hessen"
+		"teuton", "Hesse" -- Hessen
 	},
 	Tiles = {
 		{502, 112}, -- Duchy of Nassau
@@ -3004,10 +2984,7 @@ DefineProvince("Highland Scotland", {
 DefineProvince("Hither Pomerania", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Vorpommern", "name-elements", {
-			"compound", "prefix", "high-german", "adposition", "Vor",
---			"suffix" -- ?
-		}
+		"teuton", "Hither Pomerania" -- Vorpommern
 	},
 	Tiles = {
 		{515, 101},
@@ -3154,10 +3131,7 @@ DefineProvince("Hordaland", {
 		{500, 83}, {500, 84}
 	},
 	CulturalNames = {
-		"norse", "Hordaland", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "old-norse", "noun", "singular", "Land" -- presumably
-		}
+		"norse", "Hordaland"
 	},
 	SettlementLocation = {495, 84}, -- Bergen
 	Map = "maps/random/random-map-forest.smp",
@@ -3972,10 +3946,10 @@ DefineProvince("Lower Rhine", {
 DefineProvince("Luxemburg", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Luxemburg", "settlement-derived-name" -- presumably
+		"teuton", "Luxemburg"
 	},
 	FactionCulturalNames = {
-		"latin", "france", "Luxembourg", "settlement-derived-name" -- presumably
+		"latin", "france", "Luxembourg"
 	},
 	Tiles = {
 		{494, 114},
@@ -4070,7 +4044,7 @@ DefineProvince("Macedonia", {
 DefineProvince("Magdeburg", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Magdeburg", "settlement-derived-name" -- presumably, since a settlement with that name exists there
+		"teuton", "Magdeburg"
 	},
 	Tiles = {
 		{509, 109},
@@ -4194,10 +4168,7 @@ DefineProvince("Mazovia", {
 DefineProvince("Mecklenburg", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Mecklenburg", "name-elements", { -- is this a settlement-derived name instead?
---			"compound", "prefix", -- ?
-			"compound", "suffix", "high-german", "noun", "singular", "Burg"
-		}
+		"teuton", "Mecklenburg"
 	},
 	Tiles = {
 		{511, 102}, {511, 103}, {511, 104},
@@ -4377,7 +4348,7 @@ DefineProvince("Moravia", {
 	World = "Earth",
 	CulturalNames = {
 		"slav", "Moravia",
-		"teuton", "Mähren"
+		"teuton", "Moravia" -- Mähren
 	},
 	Tiles = {
 		{524, 116},
@@ -4530,10 +4501,7 @@ DefineProvince("Naples", {
 DefineProvince("Neumark", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Neumark", "name-elements", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 134-135.
-			"compound", "prefix", "high-german", "adjective", "Neu",
-			"compound", "suffix", "high-german", "noun", {"March"}, "singular", "Mark"
-		}
+		"teuton", "Neumark" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 134-135.
 	},
 	Tiles = {
 		{520, 105},
@@ -4773,11 +4741,7 @@ DefineProvince("Northumberland", {
 	World = "Earth",
 	FactionCulturalNames = {
 		"teuton", "angle-tribe", "Bernicia",
-		"teuton", "england", "Northumberland", "name-elements", {
-			"compound", "prefix", "english", "noun", "North", -- could also be the adjective or adverb form of this word
---			"compound", "infix", -- the name of the Humber river
-			"compound", "suffix", "english", "noun", "Land"
-		},
+		"teuton", "england", "Northumberland"
 	},
 	Tiles = {
 		{473, 99},
@@ -4847,7 +4811,7 @@ DefineProvince("Odeska", {
 DefineProvince("Oldenburg", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Oldenburg", "settlement-derived-name" -- presumably, since a settlement with that name exists there
+		"teuton", "Oldenburg"
 	},
 	Tiles = {
 		{502, 103}, {502, 104}, {502, 105},
@@ -5226,7 +5190,7 @@ DefineProvince("Pomerelia", {
 	CulturalNames = {
 		"goth", "Gothiscandza",
 		"slav", "Pomerelia",
-		"teuton", "Westpreussen"
+		"teuton", "West Prussia" -- Westpreussen
 	},
 	Tiles = {
 		{526, 104},
@@ -5271,7 +5235,7 @@ DefineProvince("Pomerelia", {
 DefineProvince("Posen", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Posen", "settlement-derived-name" -- presumably, since a settlement with that name exists there
+		"teuton", "Posen"
 	},
 	Tiles = {
 		{524, 106},
@@ -5341,7 +5305,7 @@ DefineProvince("Provence", {
 DefineProvince("Prussia", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Ostpreussen"
+		"teuton", "East Prussia" -- Ostpreussen
 	},
 	Tiles = {
 --		{130, 26}, {131, 25}, {131, 26}, {132, 25}, {132, 26}, {133, 25}, {134, 25}, {135, 25}, -- old map
@@ -5470,10 +5434,7 @@ DefineProvince("Romagna", {
 DefineProvince("Russia", {
 	World = "Earth",
 	CulturalNames = {
-		"norse", "Gardarike", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "old-norse", "noun", "Rîki" -- presumably
-		},
+		"norse", "Gardarike",
 		"slav", "Russia"
 	},
 	FactionCulturalNames = {
@@ -5558,7 +5519,7 @@ DefineProvince("Russia", {
 DefineProvince("Salzburg", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Salzburg", "settlement-derived-name" -- presumably
+		"teuton", "Salzburg"
 	},
 	Tiles = {
 		{515, 121},
@@ -5781,7 +5742,7 @@ DefineProvince("Serbia", {
 DefineProvince("Silesia", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Schlesien"
+		"teuton", "Silesia" -- Schlesien
 	},
 	Tiles = {
 --		{130, 27}, {131, 27}, {132, 27}, {132, 28}, -- old map
@@ -5822,7 +5783,7 @@ DefineProvince("Silesia", {
 DefineProvince("Skopje", {
 	World = "Earth",
 	CulturalNames = {
-		"latin", "Scupi", "settlement-derived-name"
+		"latin", "Scupi"
 	},
 	Tiles = {
 		{538, 137}, {538, 138},
@@ -5908,10 +5869,7 @@ DefineProvince("Somerset", {
 	World = "Earth",
 	FactionCulturalNames = {
 		"teuton", "angle-tribe", "Somerset",
-		"teuton", "england", "Somerset", "name-elements", {
-			"compound", "prefix", "english", "noun", "Somer",
-			"compound", "suffix", "english", "noun", "Set"
-		}
+		"teuton", "england", "Somerset"
 	},
 	Tiles = {
 		{469, 110},
@@ -6020,10 +5978,7 @@ DefineProvince("Strathclyde", {
 DefineProvince("Styria", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Styria", "name-elements", { -- Steiermark
---			"compound", "prefix", -- ?
-			"compound", "suffix", "high-german", "noun", {"March"}, "singular", "Mark"
-		}
+		"teuton", "Styria" -- Steiermark
 	},
 	Tiles = {
 		{518, 120},
@@ -6067,10 +6022,7 @@ DefineProvince("Sussex", {
 	World = "Earth",
 	FactionCulturalNames = {
 		"teuton", "angle-tribe", "Sussex",
-		"teuton", "england", "Sussex", "name-elements", {
-			"compound", "prefix", "english", "noun", "Sus",
-			"compound", "suffix", "english", "noun", "plural", "Sex"
-		}
+		"teuton", "england", "Sussex"
 	},
 	Tiles = {
 		{477, 111},
@@ -6197,8 +6149,8 @@ DefineProvince("Switzerland", {
 DefineProvince("Syracuse", {
 	World = "Earth",
 	CulturalNames = {
-		"greek", "Syracusae", "settlement-derived-name", -- presumably, since a settlement with that name exists there
-		"latin", "Syracusae", "settlement-derived-name" -- presumably, since a settlement with that name exists there
+		"greek", "Syracusae",
+		"latin", "Syracusae"
 	},
 	Tiles = {
 		{520, 148}, {520, 149}, {520, 150},
@@ -6280,7 +6232,7 @@ DefineProvince("Thrace", {
 DefineProvince("Thuringia", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Thüringen"
+		"teuton", "Thuringia" -- Thüringen
 	},
 	Tiles = {
 		{508, 110}, {508, 111},
@@ -6349,10 +6301,7 @@ DefineProvince("Transylvania", {
 	World = "Earth",
 	CulturalNames = {
 		"latin", "Upper Dacia",
-		"teuton", "Siebenbürgen", "name-elements", {
-			"compound", "prefix", "high-german", "numeral", "Sieben",
-			"compound", "suffix", "high-german", "noun", "plural", "Burg" -- not exact, because the plural of "Burg" is written "Burgen", and not "Bürgen"
-		}
+		"teuton", "Siebenbürgen"
 	},
 	Tiles = {
 --		{136, 30}, {136, 31}, {137, 30}, {137, 31}, {138, 30}, {138, 31}, -- old map
@@ -6702,7 +6651,7 @@ DefineProvince("Upper Lusatia", {
 DefineProvince("Upper Saxony", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Obersachsen"
+		"teuton", "Upper Saxony" -- Obersachsen
 	},
 	Tiles = {
 		{515, 109}, {515, 111}, {515, 112},
@@ -7030,10 +6979,7 @@ DefineProvince("Wessex", {
 	World = "Earth",
 	FactionCulturalNames = {
 		"teuton", "angle-tribe", "Wessex",
-		"teuton", "england", "Wessex", "name-elements", {
-			"compound", "prefix", "english", "noun", "Wes",
-			"compound", "suffix", "english", "noun", "plural", "Sex"
-		}
+		"teuton", "england", "Wessex"
 	},
 	Tiles = {
 		{471, 111},
@@ -7076,10 +7022,7 @@ DefineProvince("Wessex", {
 DefineProvince("West Galicia", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Westgalizien", "name-elements", {
-			"compound", "prefix", "high-german", "noun", "singular", "West",
---			"compound", "suffix", -- ?
-		}
+		"teuton", "Westgalizien"
 	},
 	Tiles = {
 		{537, 109}, {537, 110}, {537, 111}, {537, 112},
@@ -7116,10 +7059,7 @@ DefineProvince("West Galicia", {
 DefineProvince("Westphalia", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Westfalen", "name-elements", {
-			"compound", "prefix", "high-german", "noun", "singular", "West",
---			"compound", "suffix", -- ?
-		}
+		"teuton", "Westphalia" -- Westfalen
 	},
 	Tiles = {
 --		{125, 26}, {125, 27}, {125, 28}, {126, 26}, {126, 27}, {126, 28}, {127, 26}, -- old map
@@ -7259,7 +7199,7 @@ DefineProvince("York", {
 	World = "Earth",
 	FactionCulturalNames = {
 		"teuton", "angle-tribe", "Deira",
-		"teuton", "england", "York", "settlement-derived-name" -- presumably a settlement-derived name
+		"teuton", "england", "York"
 	},
 	Tiles = {
 		{473, 102},

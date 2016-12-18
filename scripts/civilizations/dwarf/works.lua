@@ -27,9 +27,6 @@
 
 DefineUpgrade("upgrade-work-alvissmol", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 183-194.
 	Name = _("Alvissmol"),
-	NameElements = {
-		"compound", "suffix", "dwarven", "noun", "Mol"
-	},
 	Work = "scroll",
 	Civilization = "dwarf",
 	Quote = "\"Alvis am I, and under the earth\nMy home 'neath the rocks I have;\nWith the wagon-guider a word do I seek,\nLet the gods their bond not break.\"\n- Alvissmol (Alvis)"
@@ -37,9 +34,6 @@ DefineUpgrade("upgrade-work-alvissmol", { -- Source: Henry Adams Bellows (transl
 
 DefineUpgrade("upgrade-work-fafnismol", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 370-385.
 	Name = _("Fafnismol"),
-	NameElements = {
-		"compound", "suffix", "dwarven", "noun", "Mol"
-	},
 	Work = "scroll",
 	Civilization = "dwarf",
 	Quote = "\"Hail to thee, warrior! Thou victory hast,\nAnd Fafnir in fight hast slain;\nOf all the dwarves who tread the earth,\nMost fearless art thou, methinks.\"\n- Fafnismol (Regin)"
@@ -48,9 +42,6 @@ DefineUpgrade("upgrade-work-fafnismol", { -- Source: Henry Adams Bellows (transl
 
 DefineUpgrade("upgrade-work-reginsmol", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 356-369.
 	Name = _("Reginsmol"),
-	NameElements = {
-		"compound", "suffix", "dwarven", "noun", "Mol"
-	},
 	Work = "scroll",
 	Civilization = "dwarf",
 	Quote = "\"Here shall I foster the fearless prince,\nNow Hroptatyr's heir to us is come;\nThe noblest hero under the mountains,\nThe threads of his fate all lands enfold.\"\n- Reginsmol (Regin)"

@@ -80,10 +80,7 @@ DefineLanguageWord("Alt", {
 	Language = "high-german",
 	Type = "adjective",
 	Meanings = {"Old"},
-	DerivesFrom = {"middle-high-german", "adjective", "Alt"},
-	AffixNameTypes = {
-		"compound", "prefix", "province" -- example: "Altmark" (Source: William R. Shepherd, "Historical Atlas", 1911, pp. 134-135)
-	}
+	DerivesFrom = {"middle-high-german", "adjective", "Alt"}
 })
 
 DefineLanguageWord("Amboss", {
@@ -95,13 +92,6 @@ DefineLanguageWord("Amboss", {
 		"singular", "genitive", "Ambosses",
 		"plural", "nominative", "Ambosse"
 	}
-})
-
-DefineLanguageWord("Arl", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {"compound", "prefix", "singular", "terrain-mountains"} -- example: "Arlberg"
 })
 
 DefineLanguageWord("Au", { -- Source: http://www.duden.de/rechtschreibung/Au_feuchte_Niederung
@@ -184,8 +174,7 @@ DefineLanguageWord("Bär", { -- Source: http://www.duden.de/rechtschreibung/Baer
 		"plural", "dative", "Bären",
 		"plural", "genitive", "Bären"
 	},
-	Gender = "masculine",
-	AffixNameTypes = {"compound", "prefix", "plural", "terrain-hills"}, -- example: "Bärenberg"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Bart", { -- Source: http://www.duden.de/rechtschreibung/Bart
@@ -245,11 +234,6 @@ DefineLanguageWord("Berg", {
 		"plural", "accusative", "Berge",
 		"plural", "dative", "Bergen",
 		"plural", "genitive", "Berge"
-	},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "province", -- example: "Vorarlberg" (Vorarlberg is a special case, however - ideally we should generate mountain names like "Arlberg", and then have the possibility of adding the prefix "Vor" regarding the mountain, if it is on the edge of the province
-		"compound", "suffix", "singular", "terrain-hills", -- examples: "Bärenberg", "Hackenberg"
-		"compound", "suffix", "singular", "terrain-mountains" -- example: "Arlberg", "Schneeberg"
 	}
 })
 
@@ -442,10 +426,7 @@ DefineLanguageWord("Burg", {
 		"plural", "dative", "Burgen",
 		"plural", "genitive", "Burgen"
 	},
-	Gender = "feminine",
-	AffixNameTypes = {
-		"compound", "prefix", "plural", "province" -- example: "Burgenland"
-	}
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Busch", {
@@ -545,8 +526,7 @@ DefineLanguageWord("Drasch", {
 		"singular", "genitive", "Draschs"
 	},
 	Gender = "masculine",
-	Uncountable = true,
-	AffixNameTypes = {"compound", "prefix", "singular", "terrain-mountains"} -- example: "Draschturm"
+	Uncountable = true
 })
 
 DefineLanguageWord("Drei", {
@@ -755,9 +735,6 @@ DefineLanguageWord("Gau", {
 		"plural", "accusative", "Gaue",
 		"plural", "dative", "Gauen",
 		"plural", "genitive", "Gaue"
-	},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "province" -- example: "Nordgau"
 	}
 })
 
@@ -782,10 +759,7 @@ DefineLanguageWord("Glockner", { -- presumably related to the word "Glöckner"
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {},
-	Gender = "masculine",
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "terrain-mountains" -- example: "Grossglockner"
-	}
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Glöckner", {
@@ -803,8 +777,7 @@ DefineLanguageWord("Goethe", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {},
-	DerivesFrom = {"middle-high-german", "noun", "Göte"}, -- source is not clear if Goethe comes from Göte or Gote in Middle High German; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
-	NameTypes = {"family"}
+	DerivesFrom = {"middle-high-german", "noun", "Göte"} -- source is not clear if Goethe comes from Göte or Gote in Middle High German; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
 })
 
 DefineLanguageWord("Gold", {
@@ -851,9 +824,6 @@ DefineLanguageWord("Groß", {
 	ComparisonDegreeCaseInflections = {
 		"comparative", "Größer",
 		"superlative", "Größte"
-	},
-	AffixNameTypes = {
-		"compound", "prefix", "terrain-mountains" -- example: "Grossglockner"
 	}
 })
 
@@ -880,8 +850,7 @@ DefineLanguageWord("Hacken", {
 	NumberCaseInflections = {
 		"singular", "genitive", "Hackens"
 	},
-	Gender = "masculine",
-	AffixNameTypes = {"compound", "prefix", "singular", "terrain-hills"} -- example: "Hackenberg"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Hacken", {
@@ -1073,9 +1042,6 @@ DefineLanguageWord("Horn", {
 	NumberCaseInflections = {
 		"singular", "genitive", "Horns", -- alternatively also "Hornes"
 		"plural", "nominative", "Hörner"
-	},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "terrain-mountains" -- example: "Teufelshorn"
 	}
 })
 
@@ -1088,8 +1054,7 @@ DefineLanguageWord("Hügel", {
 	NumberCaseInflections = {
 		"singular", "genitive", "Hügels",
 		"plural", "dative", "Hügeln"
-	},
-	AffixNameTypes = {"compound", "suffix", "singular", "terrain-hills"} -- example: "Konstantinhügel" (http://www.wien.gv.at/umwelt/parks/anlagen/prater.html)
+	}
 })
 
 DefineLanguageWord("Huhn", {
@@ -1113,8 +1078,7 @@ DefineLanguageWord("Hunger", { -- Source: http://www.duden.de/rechtschreibung/Hu
 	Uncountable = true,
 	NumberCaseInflections = {
 		"singular", "genitive", "Hungers"
-	},
-	AffixNameTypes = {"compound", "prefix", "singular", "terrain-hills"} -- example: "Hungerberg"
+	}
 })
 
 DefineLanguageWord("Kaiser", {
@@ -1271,8 +1235,7 @@ DefineLanguageWord("Kugel", {
 		"plural", "dative", "Kugeln",
 		"plural", "genitive", "Kugeln"
 	},
-	Gender = "feminine",
-	AffixNameTypes = {"compound", "suffix", "singular", "terrain-mountains"} -- example: "Weißkugel"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Kupfer", {
@@ -1309,8 +1272,7 @@ DefineLanguageWord("Land", {
 		"singular", "genitive", "Landes",
 		"plural", "nominative", "Länder",
 		"plural", "genitive", "Länder"
-	},
-	AffixNameTypes = {"compound", "suffix", "singular", "province"} -- examples: "Burgenland"
+	}
 })
 
 DefineLanguageWord("Lot", {
@@ -1359,8 +1321,7 @@ DefineLanguageWord("Mark", {
 		"plural", "accusative", "Marken",
 		"plural", "dative", "Marken",
 		"plural", "genitive", "Marken"
-	},
-	AffixNameTypes = {"compound", "suffix", "singular", "province"} -- example: "Ostmark"
+	}
 })
 
 DefineLanguageWord("Mark", {
@@ -1420,9 +1381,6 @@ DefineLanguageWord("Mittel", {
 	NumberCaseInflections = {
 		"plural", "genitive", "Mittels",
 		"plural", "dative", "Mitteln"
-	},
-	AffixNameTypes = {
-		"compound", "prefix", "province" -- example: "Mittelmark" (Source: William R. Shepherd, "Historical Atlas", 1911, pp. 134-135)
 	}
 })
 
@@ -1451,10 +1409,7 @@ DefineLanguageWord("Neu", {
 	Language = "high-german",
 	Type = "adjective",
 	Meanings = {"New"},
-	DerivesFrom = {"middle-high-german", "adjective", "Niuwe"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 153.
-	AffixNameTypes = {
---		"compound", "prefix", "unit-class-castle" -- example: "Schloss Neusorge"
-	}
+	DerivesFrom = {"middle-high-german", "adjective", "Niuwe"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 153.
 })
 
 DefineLanguageWord("Neun", {
@@ -1468,10 +1423,7 @@ DefineLanguageWord("Nord", {
 	Type = "noun",
 	Meanings = {"North"},
 	DerivesFrom = {"old-high-german", "noun", "Nord"}, -- seems sensible
-	Gender = "masculine",
-	AffixNameTypes = {
-		"compound", "prefix", "singular", "province" -- example: "Nordgau"
-	}
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Norden", {
@@ -1493,8 +1445,7 @@ DefineLanguageWord("Nuss", { -- Source: http://www.duden.de/rechtschreibung/Nuss
 		"plural", "accusative", "Nüsse",
 		"plural", "dative", "Nüsse",
 		"plural", "genitive", "Nüsse"
-	},
-	AffixNameTypes = {"compound", "prefix", "singular", "terrain-hills"} -- example: "Nussberg"
+	}
 })
 
 DefineLanguageWord("Oheim", {
@@ -1539,8 +1490,7 @@ DefineLanguageWord("Ost", {
 	Type = "noun",
 	Meanings = {"East"},
 	DerivesFrom = {"middle-high-german", "noun", "Ôsten"}, -- correct? seems sensible
-	Gender = "masculine",
-	AffixNameTypes = {"compound", "prefix", "singular", "province"} -- example: "Ostmark"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Osten", {
@@ -1598,10 +1548,7 @@ DefineLanguageWord("Rose", { -- Source: http://www.duden.de/rechtschreibung/Rose
 		"plural", "dative", "Rosen",
 		"plural", "genitive", "Rosen"
 	},
-	Gender = "feminine",
-	AffixNameTypes = {
-		"compound", "prefix", "plural", "terrain-hills" -- example: "Rosenhügel"
-	}
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Rostig", {
@@ -1657,8 +1604,7 @@ DefineLanguageWord("Schaf", {
 		"plural", "dative", "Schafen",
 		"plural", "genitive", "Schafe"
 	},
-	Gender = "neuter",
-	AffixNameTypes = {"compound", "prefix", "singular", "nominative", "terrain-hills"} -- example: "Schafberg"
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Schild", {
@@ -1748,8 +1694,7 @@ DefineLanguageWord("Schnee", {
 	Meanings = {"Snow"},
 	DerivesFrom = {"proto-germanic", "noun", "Snaigva"},
 	Gender = "masculine",
-	Uncountable = true,
-	AffixNameTypes = {"compound", "prefix", "singular", "terrain-mountains"} -- example: "Schneeberg"
+	Uncountable = true
 })
 
 DefineLanguageWord("Sechs", {
@@ -1823,10 +1768,6 @@ DefineLanguageWord("Sorge", {
 		"plural", "accusative", "Sorgen",
 		"plural", "dative", "Sorgen",
 		"plural", "genitive", "Sorgen"
-	},
---	NameTypes = {"river"},
-	AffixNameTypes = {
---		"compound", "suffix", "singular", "unit-class-castle" -- example: "Schloss Neusorge"
 	}
 })
 
@@ -1861,8 +1802,7 @@ DefineLanguageWord("Spitze", {
 		"plural", "dative", "Spitzen",
 		"plural", "genitive", "Spitzen"
 	},
-	Gender = "feminine",
-	AffixNameTypes = {"compound", "suffix", "singular", "terrain-mountains"} -- example: "Wildspitze"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Stadt", {
@@ -1984,8 +1924,7 @@ DefineLanguageWord("Teufel", {
 		"singular", "genitive", "Teufels",
 		"plural", "dative", "Teufeln"
 	},
-	Gender = "masculine",
-	AffixNameTypes = {"compound", "prefix", "singular", "genitive", "terrain-mountains"} -- example: "Teufelshorn"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Turm", {
@@ -1999,8 +1938,7 @@ DefineLanguageWord("Turm", {
 		"plural", "dative", "Türmen",
 		"plural", "genitive", "Türme"
 	},
-	Gender = "masculine",
-	AffixNameTypes = {"compound", "suffix", "singular", "terrain-mountains"} -- example: "Draschturm"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Verrostet", {
@@ -2067,10 +2005,7 @@ DefineLanguageWord("Weiß", {
 	Language = "high-german",
 	Type = "adjective",
 	Meanings = {"White"},
-	DerivesFrom = {"middle-high-german", "adjective", "Wîz̨"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 67.
-	AffixNameTypes = {
-		"compound", "prefix", "singular", "nominative", "terrain-mountains" -- example: "Weißkugel"
-	}
+	DerivesFrom = {"middle-high-german", "adjective", "Wîz̨"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 67.
 })
 
 DefineLanguageWord("Werben", { 
@@ -2199,8 +2134,7 @@ DefineLanguageWord("Schwarz", {
 DefineLanguageWord("Wild", {
 	Language = "high-german",
 	Type = "adjective",
-	Meanings = {"Wild"},
-	AffixNameTypes = {"compound", "prefix", "singular", "terrain-mountains"} -- example: "Wildspitze"
+	Meanings = {"Wild"}
 })
 
 DefineLanguageWord("Mehr", {
@@ -2232,6 +2166,5 @@ DefineLanguageWord("Schlossberg", { -- Source: http://www.duden.de/rechtschreibu
 		"prefix", "high-german", "noun", "Schloss",
 		"suffix", "high-german", "noun", "Berg"
 	},
-	Gender = "masculine",
-	NameTypes = {"terrain-hills"} -- example: "Schlossberg" (Graz)
+	Gender = "masculine"
 })

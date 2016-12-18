@@ -1851,8 +1851,7 @@ DefineLanguageWord("Vest", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Language = "old-norse",
 	Type = "adverb",
 	Meanings = {"Westward"}, -- source gives the German "westwärts" as the meaning
-	DerivesFrom = {"proto-germanic", "adverb", "Vesta"},
-	AffixNameTypes = {"compound", "prefix", "singular", "province"} -- example: "Vestfold"
+	DerivesFrom = {"proto-germanic", "adverb", "Vesta"}
 })
 
 DefineLanguageWord("Vestr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.

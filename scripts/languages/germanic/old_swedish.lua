@@ -30,8 +30,7 @@ DefineLanguageWord("Biari", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Type = "noun",
 	Meanings = {"Bear"}, -- used as a personal name, the meaning is not current
 	DerivesFrom = {"old-norse", "noun", "Bjǫrn"},
-	Gender = "masculine",
-	NameTypes = {"person-male"}
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Deggia", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.

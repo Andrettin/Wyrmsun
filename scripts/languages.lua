@@ -25,66 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-LanguageCacheOutdated = false
-if (CanAccessFile("cache/languages.lua")) then
-	local language_cache_date = GetFileLastModified("cache/languages.lua")
-	
-	local fileslist = ListFilesInDirectory("scripts/")
-	for i,f in ipairs(fileslist) do
-		local file_name = "scripts/" .. f
-		if ((string.find(file_name, "language") ~= nil or string.find(file_name, "province") ~= nil or string.find(file_name, "tiles") ~= nil or string.find(file_name, "character") ~= nil or string.find(file_name, "unique_item") ~= nil or string.find(file_name, "works") ~= nil) and GetFileLastModified(file_name) > language_cache_date) then
-			LanguageCacheOutdated = true
-			break
-		end
-	end
-	
-	if (LanguageCacheOutdated == false) then
-		local fileslist = ListFilesInDirectory("scripts/languages/")
-		for i,f in ipairs(fileslist) do
-			local file_name = "scripts/languages/" .. f
-			if (GetFileLastModified(file_name) > language_cache_date) then
-				LanguageCacheOutdated = true
-				break
-			end
-		end
-			
-		local dirs = ListDirsInDirectory("scripts/languages/")
-		for i,f in ipairs(dirs) do
-			local directory = "scripts/languages/" .. f .. "/"
-			local fileslist = ListFilesInDirectory(directory)
-			for second_i,second_f in ipairs(fileslist) do
-				local file_name = directory .. second_f
-				if (GetFileLastModified(file_name) > language_cache_date) then
-					LanguageCacheOutdated = true
-					break
-				end
-			end
-		end
-	end
-	
-	if (LanguageCacheOutdated == false) then
-		local dirs = ListDirsInDirectory("scripts/civilizations/")
-		for i,f in ipairs(dirs) do
-			local directory = "scripts/civilizations/" .. f .. "/"
-			local fileslist = ListFilesInDirectory(directory)
-			for second_i,second_f in ipairs(fileslist) do
-				local file_name = directory .. second_f
-				if ((string.find(file_name, "character") ~= nil or string.find(file_name, "unique_item") ~= nil or string.find(file_name, "works") ~= nil) and GetFileLastModified(file_name) > language_cache_date) then
-					LanguageCacheOutdated = true
-					break
-				end
-			end
-		end
-	end
-else
-	LanguageCacheOutdated = true
-end
-
-if not (LanguageCacheOutdated) then
-	Load("cache/languages.lua")
-	return;
-end
-
 DefineLanguage("proto-indo-european", {
 	Name = "Proto-Indo-European"
 })
@@ -98,8 +38,7 @@ DefineLanguage("armenian", {
 })
 
 DefineLanguage("avestan", {
-	Name = "Avestan",
-	SkipNameTypeInheritance = true
+	Name = "Avestan"
 })
 
 DefineLanguage("egyptian", {
@@ -115,8 +54,7 @@ DefineLanguage("illyrian", {
 })
 
 DefineLanguage("phrygian", {
-	Name = "Phrygian",
-	SkipNameTypeInheritance = true
+	Name = "Phrygian"
 })
 
 DefineLanguage("sanskrit", {
@@ -124,18 +62,15 @@ DefineLanguage("sanskrit", {
 })
 
 DefineLanguage("thracian", {
-	Name = "Thracian",
-	SkipNameTypeInheritance = true
+	Name = "Thracian"
 })
 
 DefineLanguage("proto-uralic", {
-	Name = "Proto-Uralic",
-	SkipNameTypeInheritance = true
+	Name = "Proto-Uralic"
 })
 
 DefineLanguage("finnish", {
-	Name = "Finnish",
-	SkipNameTypeInheritance = true
+	Name = "Finnish"
 })
 
 DefineLanguage("basque", {

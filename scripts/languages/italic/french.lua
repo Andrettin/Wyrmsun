@@ -44,8 +44,7 @@ DefineLanguageWord("Aud", { -- a suffix
 	Language = "french",
 	Type = "noun", -- correct?
 	Meanings = {},
-	DerivesFrom = {"old-french", "noun", "Alt"}, -- http://www.cnrtl.fr/definition/lourdaud//1
-	AffixNameTypes = {"compound", "suffix", "singular", "person-male"} -- examples: "Bellaud", "Bonnaud", "Renaud"
+	DerivesFrom = {"old-french", "noun", "Alt"} -- http://www.cnrtl.fr/definition/lourdaud//1
 })
 
 DefineLanguageWord("Aut", { -- a suffix
@@ -60,13 +59,6 @@ DefineLanguageWord("Barguigner", {
 	Type = "verb",
 	Meanings = {"Haggle", "Hesitate"},
 	DerivesFrom = {"old-frankish", "verb", "Borganjan"} -- source also gives an alternative theory in which it derives from the Old Frankish verb "warbanjan"; Source: http://www.cnrtl.fr/definition/barguigner
-})
-
-DefineLanguageWord("Bell", {
-	Language = "french",
-	Type = "noun", -- correct?
-	Meanings = {},
-	AffixNameTypes = {"compound", "prefix", "singular", "person-male"} -- example: "Bellaud"
 })
 
 DefineLanguageWord("Bleu", {
@@ -89,13 +81,6 @@ DefineLanguageWord("Bois", {
 	Meanings = {"Wood"},
 	DerivesFrom = {"old-frankish", "noun", "Bŏsk"} -- Source: http://www.cnrtl.fr/definition/bois
 	-- Fick gives as being derived from Medieval Latin "Buscus" instead; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 143.
-})
-
-DefineLanguageWord("Bonn", {
-	Language = "french",
-	Type = "noun", -- correct?
-	Meanings = {},
-	AffixNameTypes = {"compound", "prefix", "singular", "person-male"} -- example: "Bonnaud"
 })
 
 DefineLanguageWord("Bord", {
@@ -263,13 +248,6 @@ DefineLanguageWord("Mésange", {
 	Meanings = {"Tit", "Titmouse"},
 	DerivesFrom = {"old-frankish", "noun", "Meisinga"}, -- Source: http://www.cnrtl.fr/definition/m%C3%A9sange
 	Gender = "feminine"
-})
-
-DefineLanguageWord("Ren", {
-	Language = "french",
-	Type = "noun", -- correct?
-	Meanings = {},
-	AffixNameTypes = {"compound", "prefix", "singular", "person-male"} -- example: "Renaud"
 })
 
 DefineLanguageWord("Riche", {

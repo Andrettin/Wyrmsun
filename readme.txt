@@ -71,6 +71,9 @@ https://github.com/Andrettin/Wyrmsun
 * Faction
 - Removed faction splitting, as the feature was not performing as expected.
 
+* Grand Strategy
+- Removed province and tile name generation, greatly saving on memory usage.
+
 * Maps
 - Improved the symmetric map generation.
 

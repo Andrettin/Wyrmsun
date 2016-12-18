@@ -42,10 +42,6 @@ DefineCharacter("Fiölner Yngling", { -- Source: Snorri Sturlson, "Heimskringla"
 
 DefineCharacter("Fridfrode Skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 226-227.
 	Name = "Fridfrode",
-	NameElements = {
-		"compound", "prefix", "old-norse", "noun", "no-case", "Friđr", -- presumably
---		"compound", "suffix", -- ?
-	},
 	FamilyName = "Skjoldung", -- presumably
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -83,10 +79,6 @@ DefineCharacter("Vana", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 
 DefineCharacter("Vanland Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 227-228.
 	Name = "Vanland",
-	NameElements = {
---		"compound", "prefix", -- ?
-		"compound", "suffix", "old-norse", "noun", "Land" -- presumably
-	},
 	FamilyName = "Yngling",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -243,7 +235,6 @@ DefineCharacter("Dyggve the Brave Yngling", { -- Source: Snorri Sturlson, "Heims
 
 DefineCharacter("Dag the Wise Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 231-233.
 	Name = "Dag",
-	NameElements = {"word", "old-norse", "noun", "Dagr"}, -- presumably
 	ExtraName = "the Wise",
 	FamilyName = "Yngling",
 	Gender = "male",
@@ -315,10 +306,6 @@ DefineCharacter("Eric Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 18
 
 DefineCharacter("Eymund", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Eymund", -- king of Holmgarth (i.e. Russia); described as "the strongest of men"
-	NameElements = {
---		"compound", "prefix", -- ?
-		"compound", "suffix", "old-norse", "noun", "Mund" -- presumably (could also be "Mundr")
-	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse", -- accurate?
@@ -328,10 +315,6 @@ DefineCharacter("Eymund", { -- Source: Henry Adams Bellows (transl.), "The Poeti
 
 DefineCharacter("Halfdan the Old Skjoldung", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 221-223.
 	Name = "Halfdan", -- mythical king of Denmark; had an ice-cold sword; was strengthened by king Eymund of Holmgarth and slew Sigtrygg with the ice-cold sword; married Eymund's daughter Almveig
-	NameElements = {
-		"compound", "prefix", "old-norse", "adjective", "no-case", "Halfr", -- presumably; used "no-case" to avoid the nominative ending "-r"
---		"compound", "suffix", -- ?
-	},
 	ExtraName = "the Old",
 	FamilyName = "Skjoldung", -- the text gives Halfdan the Old both as "the foremost of the Skjoldungs", and as a progenitor of the Skjoldungs (along with the Skilfings, Othlings and Ynglings) himself
 	Gender = "male",
@@ -346,10 +329,6 @@ DefineCharacter("Halfdan the Old Skjoldung", { -- Source: Henry Adams Bellows (t
 
 DefineCharacter("Almveig", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Almveig", -- wife of Halfdan the Old Skjoldung; also known as Alvig; bore Halfdan the Old eighteen sons (nine of them being in a single birth); the nine who were the result of a single birth were all slain, while the other nine are held to be the ancestors of the most famous heroes in Norse myths
-	NameElements = {
-		"compound", "prefix", "old-norse", "noun", "no-case", "Almr", -- presumably
-		"compound", "suffix", "old-norse", "noun", "Veig" -- presumably
-	},
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "norse", -- accurate?
@@ -370,7 +349,6 @@ DefineCharacter("Authi", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 
 DefineCharacter("Ali", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Ali",
-	NameElements = {"word", "old-norse", "verb", "present", "Ali"}, -- presumably; also, not certain if that is the present participle of the verb, or another participle form
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -382,10 +360,6 @@ DefineCharacter("Ali", { -- Source: Henry Adams Bellows (transl.), "The Poetic E
 
 DefineCharacter("Sigtrygg", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Sigtrygg", -- Halfdan the Old slew him with an ice-cold sword
-	NameElements = {
-		"compound", "prefix", "old-norse", "noun", "no-case", "Sigr", -- presumably; used "no-case" to avoid the nominative ending "-r"
-		"compound", "suffix", "old-norse", "adjective", "Tryggr" -- presumably
-	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -394,7 +368,6 @@ DefineCharacter("Sigtrygg", { -- Source: Henry Adams Bellows (transl.), "The Poe
 
 DefineCharacter("Dag the Great", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 235.
 	Name = "Dag", -- ancestor of the Daglings; married to Thora
-	NameElements = {"word", "old-norse", "noun", "Dagr"}, -- presumably
 	ExtraName = "the Great",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -492,9 +465,6 @@ DefineCharacter("Jofurmar Dagling", { -- Source: Henry Adams Bellows (transl.), 
 
 DefineCharacter("Alf the Old Dagling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
 	Name = "Alf", -- apparently isn't the same Alf the Old who is father of Instein, since they have different fathers themselves
-	NameElements = {
-		"word", "old-norse", "noun", "Alfr" -- presumably
-	},
 	ExtraName = "the Old",
 	FamilyName = "Dagling",
 	Gender = "male",
@@ -508,10 +478,6 @@ DefineCharacter("Alf the Old Dagling", { -- Source: Henry Adams Bellows (transl.
 
 DefineCharacter("Dagrid Dagling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 235.
 	Name = "Dagrid",
-	NameElements = {
-		"compound", "prefix", "old-norse", "noun", "no-case", "Dagr", -- presumably
---		"compound", "suffix", -- ?
-	},
 	FamilyName = "Dagling",
 	Gender = "female",
 	Type = "unit-teuton-archer",
@@ -536,7 +502,6 @@ DefineCharacter("Yngve Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1
 
 DefineCharacter("Alf Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 235-236.
 	Name = "Alf",
-	NameElements = {"word", "old-norse", "noun", "Alfr"}, -- presumably
 	FamilyName = "Yngling",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -554,7 +519,6 @@ DefineCharacter("Alf Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 184
 
 DefineCharacter("Bera", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 235.
 	Name = "Bera",
-	NameElements = {"word", "old-norse", "noun", "Bera"}, -- presumably
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "norse",
@@ -606,10 +570,6 @@ DefineCharacter("Hagberd", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 
 DefineCharacter("Svipdag", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 236.
 	Name = "Svipdag",
-	NameElements = {
---		"compound", "prefix", -- ?
-		"compound", "suffix", "old-norse", "noun", "Dagr" -- presumably
-	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -669,10 +629,6 @@ DefineCharacter("Eric Yngveson Yngling", { -- Source: Snorri Sturlson, "Heimskri
 
 DefineCharacter("Gudlög", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 237-238.
 	Name = "Gudlög",
-	NameElements = {
-		"compound", "prefix", "old-norse", "noun", {"God"}, "Guð" -- presumably
---		"compound", "suffix" -- ?
-	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -729,10 +685,6 @@ DefineCharacter("Frode Mikillati Skjoldung", { -- Source: Snorri Sturlson, "Heim
 
 DefineCharacter("Halfdan Skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 239.
 	Name = "Halfdan",
-	NameElements = {
-		"compound", "prefix", "old-norse", "adjective", "no-case", "Halfr", -- presumably
---		"compound", "suffix", -- ?
-	},
 	FamilyName = "Skjoldung", -- correct?
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -747,10 +699,6 @@ DefineCharacter("Halfdan Skjoldung", { -- Source: Snorri Sturlson, "Heimskringla
 
 DefineCharacter("Fridleif Skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 239.
 	Name = "Fridleif",
-	NameElements = {
-		"compound", "prefix", "old-norse", "noun", "no-case", "Friđr", -- presumably
---		"compound", "suffix", -- ?
-	},
 	FamilyName = "Skjoldung", -- correct?
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -878,7 +826,6 @@ DefineCharacter("Helge Skjoldung", { -- Source: Snorri Sturlson, "Heimskringla",
 
 DefineCharacter("Ali of the Uplands", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 245.
 	Name = "Ali",
-	NameElements = {"word", "old-norse", "verb", "present", "Ali"}, -- presumably; also, not certain if that is the present participle of the verb, or another participle form
 	ExtraName = "of the Uplands",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -902,10 +849,6 @@ DefineCharacter("Godgest", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 
 DefineCharacter("Eystein Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 246.
 	Name = "Eystein",
-	NameElements = {
---		"compound", "prefix" -- ?
-		"compound", "suffix", "old-norse", "noun", "Steinn" -- presumably
-	},
 	FamilyName = "Yngling",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -1256,10 +1199,6 @@ DefineCharacter("Savre Flettir", { -- Source: Snorri Sturlson, "Heimskringla", 1
 
 DefineCharacter("Gudrod", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 254.
 	Name = "Gudrod",
-	NameElements = {
-		"compound", "prefix", "old-norse", "noun", {"God"}, "Guð" -- presumably
---		"compound", "suffix" -- ?
-	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -1273,10 +1212,6 @@ DefineCharacter("Gudrod", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 
 DefineCharacter("Halfdan", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 254.
 	Name = "Halfdan",
-	NameElements = {
-		"compound", "prefix", "old-norse", "adjective", "no-case", "Halfr", -- presumably; used "no-case" to avoid the nominative ending "-r"
---		"compound", "suffix", -- ?
-	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -1352,10 +1287,6 @@ DefineCharacter("Ingiald Yngling", { -- Source: Snorri Sturlson, "Heimskringla",
 
 DefineCharacter("Halfdan Huitbein Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 255-257.
 	Name = "Halfdan",
-	NameElements = {
-		"compound", "prefix", "old-norse", "adjective", "no-case", "Halfr", -- presumably; used "no-case" to avoid the nominative ending "-r"
---		"compound", "suffix", -- ?
-	},
 	ExtraName = "Huitbein",
 	FamilyName = "Yngling",
 	Gender = "male",
@@ -1371,10 +1302,6 @@ DefineCharacter("Halfdan Huitbein Yngling", { -- Source: Snorri Sturlson, "Heims
 
 DefineCharacter("Eystein the Severe", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 257.
 	Name = "Eystein",
-	NameElements = {
---		"compound", "prefix" -- ?
-		"compound", "suffix", "old-norse", "noun", "Steinn" -- presumably
-	},
 	ExtraName = "the Severe",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -1394,10 +1321,6 @@ DefineCharacter("Asa", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 
 
 DefineCharacter("Eystein Halfdanson Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 257-258.
 	Name = "Eystein",
-	NameElements = {
---		"compound", "prefix" -- ?
-		"compound", "suffix", "old-norse", "noun", "Steinn" -- presumably
-	},
 	ExtraName = "Halfdanson", -- to differentiate him from the other Eystein Yngling
 	FamilyName = "Yngling",
 	Gender = "male",
@@ -1413,10 +1336,6 @@ DefineCharacter("Eystein Halfdanson Yngling", { -- Source: Snorri Sturlson, "Hei
 
 DefineCharacter("Gudrod Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 257.
 	Name = "Gudrod",
-	NameElements = {
-		"compound", "prefix", "old-norse", "noun", {"God"}, "Guð" -- presumably
---		"compound", "suffix" -- ?
-	},
 	FamilyName = "Yngling",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -1428,10 +1347,6 @@ DefineCharacter("Gudrod Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 
 
 DefineCharacter("Sigtryg", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 257-258.
 	Name = "Sigtryg",
-	NameElements = {
-		"compound", "prefix", "old-norse", "noun", "no-case", "Sigr", -- presumably
-		"compound", "suffix", "old-norse", "adjective", "Tryggr" -- presumably
-	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -1461,7 +1376,6 @@ DefineCharacter("Eric Agnarson", { -- Source: Snorri Sturlson, "Heimskringla", 1
 
 DefineCharacter("Hilde", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 257.
 	Name = "Hilde",
-	NameElements = {"word", "old-norse", "noun", "Hildr"}, -- presumably
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "norse",
@@ -1471,7 +1385,6 @@ DefineCharacter("Hilde", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 
 DefineCharacter("Skiold", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 258.
 	Name = "Skiold",
-	NameElements = {"word", "old-norse", "noun", "Skjǫldr"}, -- presumably
 	Gender = "male",
 	Type = "unit-teuton-swordsman", -- was a great warlock
 	Civilization = "norse",
@@ -1482,10 +1395,6 @@ DefineCharacter("Skiold", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 
 DefineCharacter("Halfdan the Mild Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 259.
 	Name = "Halfdan",
-	NameElements = {
-		"compound", "prefix", "old-norse", "adjective", "no-case", "Halfr", -- presumably; used "no-case" to avoid the nominative ending "-r"
---		"compound", "suffix", -- ?
-	},
 	ExtraName = "the Mild", -- also knowns as "the Bad Entertainer"
 	FamilyName = "Yngling",
 	Gender = "male",
@@ -1502,7 +1411,6 @@ DefineCharacter("Halfdan the Mild Yngling", { -- Source: Snorri Sturlson, "Heims
 
 DefineCharacter("Dag of Westmor", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 259.
 	Name = "Dag",
-	NameElements = {"word", "old-norse", "noun", "Dagr"}, -- presumably
 	ExtraName = "of Westmor", -- to differentiate him
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -1522,10 +1430,6 @@ DefineCharacter("Hlif", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 
 DefineCharacter("Gudrod the Magnificent Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 259-260.
 	Name = "Gudrod",
-	NameElements = {
-		"compound", "prefix", "old-norse", "noun", {"God"}, "Guð" -- presumably
---		"compound", "suffix" -- ?
-	},
 	ExtraName = "the Magnificent", -- also knowns as "the Hunter"
 	FamilyName = "Yngling",
 	Gender = "male",
@@ -1542,10 +1446,6 @@ DefineCharacter("Gudrod the Magnificent Yngling", { -- Source: Snorri Sturlson, 
 
 DefineCharacter("Alfarin", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 259.
 	Name = "Alfarin",
-	NameElements = {
-		"compound", "prefix", "old-norse", "noun", "no-case", "Alfr", -- presumably; used "no-case" to avoid the nominative ending "-r"
---		"compound", "suffix" -- ?
-	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -1554,10 +1454,6 @@ DefineCharacter("Alfarin", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 
 DefineCharacter("Alfhild", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 259.
 	Name = "Alfhild",
-	NameElements = {
-		"compound", "prefix", "old-norse", "noun", "no-case", "Alfr", -- presumably; used "no-case" to avoid the nominative ending "-r"
-		"compound", "suffix", "old-norse", "noun", "Hildr" -- presumably
-	},
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "norse",
@@ -1611,10 +1507,6 @@ DefineCharacter("Gyrder", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 
 DefineCharacter("Halfdan the Black Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 260-262.
 	Name = "Halfdan",
-	NameElements = {
-		"compound", "prefix", "old-norse", "adjective", "no-case", "Halfr", -- presumably; used "no-case" to avoid the nominative ending "-r"
---		"compound", "suffix", -- ?
-	},
 	ExtraName = "the Black",
 	FamilyName = "Yngling",
 	Gender = "male",
@@ -1630,10 +1522,6 @@ DefineCharacter("Halfdan the Black Yngling", { -- Source: Snorri Sturlson, "Heim
 
 DefineCharacter("Alfgeir", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 260.
 	Name = "Alfgeir",
-	NameElements = {
-		"compound", "prefix", "old-norse", "noun", "no-case", "Alfr", -- presumably; used "no-case" to avoid the nominative ending "-r"
---		"compound", "suffix" -- ?
-	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -1643,10 +1531,6 @@ DefineCharacter("Alfgeir", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 DefineCharacter("Gandalf of Vingulmark", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 260.
 	Name = "Gandalf",
 	ExtraName = "of Vingulmark", -- to differentiate him
-	NameElements = {
---		"compound", "prefix" -- ?
-		"compound", "suffix", "old-norse", "noun", "Alfr" -- presumably
-	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -1711,10 +1595,6 @@ DefineCharacter("Svan the Red", { -- Source: Kevin Crossley-Holland, "The Norse 
 
 DefineCharacter("Saefari", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Saefari",
-	NameElements = {
-		"compound", "prefix", "old-norse", "noun", "no-case", "Sær" -- presumably; used "no-case" to avoid the nominative ending "-r"
---		"compound", "suffix" -- ?
-	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -1726,7 +1606,6 @@ DefineCharacter("Saefari", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 
 DefineCharacter("Ulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Ulf",
-	NameElements = {"word", "old-norse", "noun", "Ulfr"}, -- presumably
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -1738,9 +1617,6 @@ DefineCharacter("Ulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1
 
 DefineCharacter("Alf the Old", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Alf",
-	NameElements = {
-		"word", "old-norse", "noun", "Alfr" -- presumably
-	},
 	ExtraName = "the Old",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -1753,10 +1629,6 @@ DefineCharacter("Alf the Old", { -- Source: Kevin Crossley-Holland, "The Norse M
 
 DefineCharacter("Instein", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 100-101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Instein", -- one of the warriors of King Half of Horthaland
-	NameElements = {
---		"compound", "prefix" -- ?
-		"compound", "suffix", "old-norse", "noun", "Steinn" -- presumably
-	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -1769,10 +1641,6 @@ DefineCharacter("Instein", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 
 DefineCharacter("Saekonung", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101.
 	Name = "Saekonung",
-	NameElements = {
-		"compound", "prefix", "old-norse", "noun", "no-case", "Sær", -- presumably; used "no-case" to avoid the nominative ending "-r"
-		"compound", "suffix", "old-norse", "noun", "Konungr" -- presumably
-	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -1929,10 +1797,6 @@ DefineCharacter("Skurhold", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 
 DefineCharacter("Isulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Isulf", -- also known as Isolf
-	NameElements = {
---		"compound", "prefix", -- ?
-		"compound", "suffix", "old-norse", "noun", "Ulfr" -- presumably
-	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -1945,10 +1809,6 @@ DefineCharacter("Isulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 
 DefineCharacter("Osulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Osulf", -- also known as Osolf
-	NameElements = {
---		"compound", "prefix", -- ?
-		"compound", "suffix", "old-norse", "noun", "Ulfr" -- presumably
-	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -1961,9 +1821,6 @@ DefineCharacter("Osulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 
 DefineCharacter("Hild", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 223-224.
 	Name = "Hild",
-	NameElements = {
-		"word", "old-norse", "noun", "Hildr" -- presumably
-	},
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "norse",
@@ -1974,9 +1831,6 @@ DefineCharacter("Hild", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 
 DefineCharacter("Half", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Half", -- also known as Hoalf; king of Horthaland (the Halfsrekkar); Instein was one of his warriors
-	NameElements = {
-		"word", "old-norse", "adjective", "Halfr" -- presumably
-	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -2228,10 +2082,6 @@ DefineCharacter("Harald War Tooth", { -- Source: Kevin Crossley-Holland, "The No
 
 DefineCharacter("Rathbard", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 227.
 	Name = "Rathbard", -- king
-	NameElements = {
-		"compound", "prefix", "old-norse", "noun", "Râđ", -- presumably
-		"compound", "suffix", "old-norse", "noun", "Barđ" -- presumably
-	},	
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse", -- correct?
@@ -2254,10 +2104,6 @@ DefineCharacter("Randver", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 
 DefineCharacter("Sigurd Ring", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 227.
 	Name = "Sigurd",
-	NameElements = {
-		"compound", "prefix", "old-norse", "noun", "no-case", "Sigr" -- presumably
---		"compound", "suffix" -- ?
-	},
 	ExtraName = "Ring",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -2366,9 +2212,6 @@ DefineCharacter("Thorir the Iron-Shield", { -- Source: Henry Adams Bellows (tran
 
 DefineCharacter("Ulf the Gaper", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Ulf",
-	NameElements = {
-		"word", "old-norse", "noun", "Ulfr" -- presumably
-	},
 	ExtraName = "the Gaper",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -2381,9 +2224,6 @@ DefineCharacter("Ulf the Gaper", { -- Source: Henry Adams Bellows (transl.), "Th
 
 DefineCharacter("Brodd", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Brodd",
-	NameElements = {
-		"word", "old-norse", "noun", "Broddr" -- presumably
-	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -2569,9 +2409,6 @@ DefineCharacter("Hakon Hakonson", { -- Source: Snorri Sturlson, "Heimskringla", 
 
 DefineCharacter("Alf", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
 	Name = "Alf", -- also known as Alfus; officiated in Greenland; presumably was Bishop of Greenland
-	NameElements = {
-		"word", "old-norse", "noun", "Alfr" -- presumably
-	},
 	Gender = "male",
 	Type = "unit-teuton-priest",
 	Civilization = "norse", -- presumably

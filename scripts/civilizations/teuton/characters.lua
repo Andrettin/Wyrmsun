@@ -149,13 +149,10 @@ DefineCharacter("Adalbert", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 DefineCharacter("Judith von Babenberg", { -- Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 620.
 	Name = "Judith",
 	FamilyName = "von Babenberg",
-	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
-	PlaceNameDerivedFamilyName = true, -- presumably
 	Gender = "female",
 	Type = "unit-teuton-priest", -- correct?
 	Civilization = "teuton",
-	ProvinceOfOrigin = "Bavaria", -- her brother was margrave of Nordgau
-	Noble = true
+	ProvinceOfOrigin = "Bavaria" -- her brother was margrave of Nordgau
 	-- was abducted by and married to Duke Břetislav I of Bohemia
 })
 
