@@ -222,10 +222,7 @@ DefineWorldMapTile({519, 126}, {
 DefineWorldMapTile({520, 139}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"greek", "Neapolis", "name-elements", {
-			"compound", "prefix", "greek", "adjective", "Nea",
-			"compound", "suffix", "greek", "noun", "singular", "Polis"
-		},
+		"greek", "Neapolis",
 		"latin", "Neapolis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })

@@ -145,7 +145,14 @@ DefineFaction("france", {
 	Civilization = "latin",
 	Type = "polity",
 	Colors = {"blue", "white"},
-	DefaultTier = "kingdom"
+	DefaultTier = "kingdom",
+	SettlementNames = {
+		"Hamelet", -- Source: http://www.cnrtl.fr/definition/hameau
+		"Hamelin", -- Source: http://www.cnrtl.fr/definition/hameau
+		"Hem", -- Source: http://www.cnrtl.fr/definition/hameau
+		"Le Hamel", -- Source: http://www.cnrtl.fr/definition/hameau
+		"Luxembourg"
+	}
 })
 
 DefineFaction("italy", {
@@ -241,7 +248,10 @@ DefineFaction("spain", {
 	Civilization = "latin",
 	Type = "polity",
 	Colors = {"yellow", "red"},
-	DefaultTier = "kingdom"
+	DefaultTier = "kingdom",
+	SettlementNames = {
+		"Burgos" -- the Spanish town of Burgos; Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
+	}
 })
 
 DefineFaction("transylvania", {

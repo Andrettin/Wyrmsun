@@ -25,40 +25,10 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Aha", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-	}
-})
-
-DefineLanguageWord("Apa", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- Characteristic of the influence of the Carolingian realm; Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-	}
-})
-
-DefineLanguageWord("Berg", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-	}
-})
-
 DefineLanguageWord("Bever", {
 	Language = "dutch",
 	Type = "noun",
-	Meanings = {"Beaver"}, -- Source: http://www.vandale.nl/opzoeken?pattern=Bever&lang=ne
-	AffixNameTypes = {
-		"compound", "prefix", "singular", "settlement" -- example: "Beverwijk"
-	}
+	Meanings = {"Beaver"} -- Source: http://www.vandale.nl/opzoeken?pattern=Bever&lang=ne
 })
 
 DefineLanguageWord("Boord", { -- Source: http://www.cnrtl.fr/definition/bord
@@ -66,15 +36,6 @@ DefineLanguageWord("Boord", { -- Source: http://www.cnrtl.fr/definition/bord
 	Type = "noun",
 	Meanings = {"Edge", "Ridge", "Edge of a Ship"}, -- source gives the French "bord, arête; bord de navire" as the meaning
 	DerivesFrom = {"old-frankish", "noun", {"Edge of a Vessel"}, "Bord"}
-})
-
-DefineLanguageWord("Borg", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-	}
 })
 
 DefineLanguageWord("Bos", {
@@ -91,31 +52,10 @@ DefineLanguageWord("Bosch", {
 	DerivesFrom = {"middle-dutch", "noun", "Busch"} -- presumably
 })
 
-DefineLanguageWord("Braak", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	}
-})
-
-DefineLanguageWord("Breede", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	}
-})
-
 DefineLanguageWord("Dam", {
 	Language = "dutch",
 	Type = "noun",
-	Meanings = {"Dam"}, -- Source: http://www.vandale.nl/opzoeken?pattern=Dam&lang=ne
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- examples: "Amsterdam", "Rotterdam"
-	}
+	Meanings = {"Dam"} -- Source: http://www.vandale.nl/opzoeken?pattern=Dam&lang=ne
 })
 
 DefineLanguageWord("Dorp", { -- Source: http://www.cnrtl.fr/definition/trop
@@ -129,28 +69,7 @@ DefineLanguageWord("Ede", { -- is this really a noun? Source: B. H. Slicher van 
 	Language = "dutch",
 	Type = "noun",
 	Meanings = {},
-	DerivesFrom = {"old-frankish", "noun", "Ithi"}, -- presumably
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-	}
-})
-
-DefineLanguageWord("Geer", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	}
-})
-
-DefineLanguageWord("Goor", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	}
+	DerivesFrom = {"old-frankish", "noun", "Ithi"} -- presumably
 })
 
 DefineLanguageWord("Grijs", { -- Source: http://www.cnrtl.fr/definition/gris
@@ -158,24 +77,6 @@ DefineLanguageWord("Grijs", { -- Source: http://www.cnrtl.fr/definition/gris
 	Type = "adjective",
 	Meanings = {"Gray"}, -- source gives the French "gris" as the meaning
 	DerivesFrom = {"old-frankish", "adjective", "Grîs"} -- presumably
-})
-
-DefineLanguageWord("Haar", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-	}
-})
-
-DefineLanguageWord("Heim", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- Characteristic of the influence of the Carolingian realm; Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-	}
 })
 
 DefineLanguageWord("Hertog", {
@@ -187,49 +88,16 @@ DefineLanguageWord("Hertog", {
 	}
 })
 
-DefineLanguageWord("Heuvel", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	}
-})
-
-DefineLanguageWord("Ho", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	}
-})
-
-DefineLanguageWord("Hoop", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	}
-})
-
 DefineLanguageWord("Horst", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
 	Type = "noun",
-	Meanings = {"Hyrst"},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- example: "Staphorst"
-	}
+	Meanings = {"Hyrst"}
 })
 
 DefineLanguageWord("Huis", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
 	Type = "noun",
-	Meanings = {"House"},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	}
+	Meanings = {"House"}
 })
 
 DefineLanguageWord("Klei", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 38.
@@ -239,31 +107,10 @@ DefineLanguageWord("Klei", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	DerivesFrom = {"proto-germanic", "noun", "Klajja"}
 })
 
-DefineLanguageWord("Kote", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	}
-})
-
-DefineLanguageWord("Laar", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- Characteristic of the influence of the Carolingian realm; Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-	}
-})
-
 DefineLanguageWord("Land", {
 	Language = "dutch",
 	Type = "noun",
-	Meanings = {"Land", "Country"}, -- Source: http://www.vandale.nl/opzoeken?pattern=Land&lang=ne
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "province" -- examples: "Flevoland", "Friesland", "Gelderland"
-	}
+	Meanings = {"Land", "Country"} -- Source: http://www.vandale.nl/opzoeken?pattern=Land&lang=ne
 })
 
 DefineLanguageWord("Lied", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
@@ -272,15 +119,6 @@ DefineLanguageWord("Lied", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Meanings = {"Song"}, -- source gives the German "Lied" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Leuþa"},
 	Gender = "neuter"
-})
-
-DefineLanguageWord("Lo", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-	}
 })
 
 DefineLanguageWord("Lood", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
@@ -293,126 +131,37 @@ DefineLanguageWord("Lood", { -- Source: August Fick and Alf Torp, "Wortschatz de
 DefineLanguageWord("Molen", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
 	Type = "noun",
-	Meanings = {"Mill"},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	}
+	Meanings = {"Mill"}
 })
 
 DefineLanguageWord("Oever", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
 	Type = "noun",
-	Meanings = {"Bank of a River"},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	}
-})
-
-DefineLanguageWord("Roden", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-	}
-})
-
-DefineLanguageWord("Sol", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	}
+	Meanings = {"Bank of a River"}
 })
 
 DefineLanguageWord("Stap", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
 	Type = "noun",
-	Meanings = {"Step", "Footstep", "Pace", "Stride"}, -- Source: http://www.vandale.nl/opzoeken?pattern=Stap&lang=ne
-	AffixNameTypes = {
-		"compound", "prefix", "singular", "settlement" -- example: "Staphorst"
-	}
-})
-
-DefineLanguageWord("Stege", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	}
-})
-
-DefineLanguageWord("Tere", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, pp. 331, 335.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, pp. 331, 335.
-	}
+	Meanings = {"Step", "Footstep", "Pace", "Stride"} -- Source: http://www.vandale.nl/opzoeken?pattern=Stap&lang=ne
 })
 
 DefineLanguageWord("Tuin", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
 	Type = "noun",
-	Meanings = {"Garden", "Town"},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	}
-})
-
-DefineLanguageWord("Tye", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	}
-})
-
-DefineLanguageWord("Veld", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-	}
-})
-
-DefineLanguageWord("Voorde", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- Characteristic of the influence of the Carolingian realm; Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-	}
+	Meanings = {"Garden", "Town"}
 })
 
 DefineLanguageWord("Waal", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
 	Type = "noun",
-	Meanings = {"Walloon"}, -- Source: http://www.vandale.nl/opzoeken?pattern=Waal&lang=ne
-	AffixNameTypes = {
-		"compound", "prefix", "singular", "settlement" -- example: "Waalwijk"
-	}
-})
-DefineLanguageWord("Wede", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-	}
+	Meanings = {"Walloon"} -- Source: http://www.vandale.nl/opzoeken?pattern=Waal&lang=ne
 })
 
 DefineLanguageWord("Wijk", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
 	Type = "noun",
-	Meanings = {"District", "Area"}, -- Source: http://www.vandale.nl/opzoeken?pattern=Wijk&lang=ne
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- examples: "Beverwijk", "Waalwijk"
-	}
+	Meanings = {"District", "Area"} -- Source: http://www.vandale.nl/opzoeken?pattern=Wijk&lang=ne
 })
 
 DefineLanguageWord("Worm", {

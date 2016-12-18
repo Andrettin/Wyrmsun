@@ -113,10 +113,7 @@ DefineWorldMapTile({547, 114}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"slav", "Lvov",
-		"teuton", "Lemberg", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "high-german", "noun", "singular", "Berg"
-		}
+		"teuton", "Lemberg"
 	}
 })
 
@@ -191,10 +188,7 @@ DefineWorldMapTile({592, 121}, {
 DefineWorldMapTile({618, 124}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"germanic", "Ansugárdiz", "name-elements", { -- rendering of "Asgaard" in Proto-Germanic, as in the Ynglinga saga's story Asgard is the settlement in "Asia" in which Odin's people (here understood as the Indo-Europeans who went on to settle Scandinavia and become speakers of Proto-Germanic) used to live until they migrated to Scandinavia; shouldn't be in the location of Astrakhan, but instead where modern Assor is (where?), or alternatively Chasgar (again, where?); Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
-			"compound", "prefix", "proto-germanic", "noun", "singular", "Ansu",
-			"compound", "suffix", "proto-germanic", "noun", "singular", "Gárdiz"
-		}
+		"germanic", "Ansugárdiz"
 	},
 	FactionCulturalSettlementNames = {
 		"slav", "russia", "Astrakhan"

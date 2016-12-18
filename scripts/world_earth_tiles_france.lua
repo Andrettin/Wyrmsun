@@ -204,10 +204,7 @@ DefineWorldMapTile({501, 118}, {
 	CulturalSettlementNames = {
 		"celt", "Argentoratum",
 		"latin", "Argentoratum", -- Ancient Warfare gives "Argentorate", while Shepherd gives "Argentoratum"; Source: "Ancient Warfare VII.6", 2013, p. 7; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"teuton", "Strasburg", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "high-german", "noun", "singular", "Burg"
-		}
+		"teuton", "Strasburg"
 	}
 })
 

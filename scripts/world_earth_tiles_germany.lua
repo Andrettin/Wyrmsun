@@ -47,20 +47,14 @@ DefineWorldMapTile({502, 115}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"latin", "Borbetomagus", -- not actually the same city as Kaiserslautern (Borbetomagus is Worms), but nevertheless in the Palatinate; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"teuton", "Kaiserslautern", "name-elements", {
-			"compound", "prefix", "high-german", "noun", "singular", "genitive", "Kaiser",
---			"suffix" -- ?
-		}
+		"teuton", "Kaiserslautern"
 	}
 })
 
 DefineWorldMapTile({503, 104}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"teuton", "Oldenburg", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "high-german", "noun", "singular", "Burg"
-		}
+		"teuton", "Oldenburg"
 	}
 })
 
@@ -89,10 +83,7 @@ DefineWorldMapTile({504, 104}, {
 DefineWorldMapTile({506, 100}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"teuton", "Flensburg", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "high-german", "noun", "singular", "Burg"
-		}
+		"teuton", "Flensburg"
 	}
 })
 
@@ -109,10 +100,7 @@ DefineWorldMapTile({506, 109}, {
 DefineWorldMapTile({506, 117}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"teuton", "Stuttgart", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "high-german", "noun", "singular", "Gart" -- possibly? alternatively, it could be a remnant of Old (or Middle) High German "Gart" (two words were spelled like that for OHG)
-		}
+		"teuton", "Stuttgart"
 	}
 })
 
@@ -136,10 +124,7 @@ DefineWorldMapTile({508, 101}, {
 DefineWorldMapTile({508, 114}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"teuton", "Würzburg", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "high-german", "noun", "singular", "Burg"
-		}
+		"teuton", "Würzburg"
 	}
 })
 
@@ -164,20 +149,14 @@ DefineWorldMapTile({510, 118}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"latin", "Augusta Vindelicorum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"teuton", "Augsburg", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "high-german", "noun", "singular", "Burg"
-		}
+		"teuton", "Augsburg"
 	}
 })
 
 DefineWorldMapTile({511, 110}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"teuton", "Erfurt", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "high-german", "noun", "singular", "Furt"
-		}
+		"teuton", "Erfurt"
 	}
 })
 
@@ -191,10 +170,7 @@ DefineWorldMapTile({512, 103}, {
 DefineWorldMapTile({513, 107}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"teuton", "Magdeburg", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "high-german", "noun", "singular", "Burg"
-		}
+		"teuton", "Magdeburg"
 	}
 })
 
@@ -202,10 +178,7 @@ DefineWorldMapTile({514, 116}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"latin", "Regina Castra",
-		"teuton", "Regensburg", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "high-german", "noun", "singular", "Burg"
-		}
+		"teuton", "Regensburg"
 		-- also "Ratisbon"
 	}
 })
@@ -255,10 +228,7 @@ DefineWorldMapTile({522, 106}, {
 DefineWorldMapTile({523, 102}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"teuton", "Kolberg", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "high-german", "noun", "singular", "Berg"
-		}
+		"teuton", "Kolberg"
 	}
 })
 
@@ -287,10 +257,7 @@ DefineWorldMapTile({532, 101}, {
 DefineWorldMapTile({537, 100}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"teuton", "Königsberg", "name-elements", {
-			"compound", "prefix", "high-german", "noun", "singular", "genitive", "König",
-			"compound", "suffix", "high-german", "noun", "singular", "Berg"
-		}
+		"teuton", "Königsberg"
 	}
 })
 

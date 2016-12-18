@@ -25,51 +25,16 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Abdera", { -- should be written as the original Greek name (with Greek characters)
-	Language = "greek",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"settlement"} -- example: "Abdera"
-})
-
-DefineLanguageWord("Abydus", { -- should be written as the original Greek name (with Greek characters)
-	Language = "greek",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"settlement"} -- example: "Abydus"
-})
-
 DefineLanguageWord("Ἄχμων", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Anvil"} -- source gives the German "Ambos" (sic) as the meaning
 })
 
-DefineLanguageWord("Acragas", { -- should be written as the original Greek name (with Greek characters)
-	Language = "greek",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"settlement"} -- example: "Acragas" (Agrigentum)
-})
-
 DefineLanguageWord("Aegi", { -- appears in the name of a goat
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Goat"} -- presumably, since "Aegipan" means "Goat-Pan" or "Goat-All"
-})
-
-DefineLanguageWord("Agathe", { -- should be written as the original Greek name (with Greek characters)
-	Language = "greek",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"settlement"} -- example: "Agathe"
-})
-
-DefineLanguageWord("Ainos", { -- should be written as the original Greek name (with Greek characters)
-	Language = "greek",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"settlement"} -- example: "Ainos"
 })
 
 DefineLanguageWord("Ákmōn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 3.2.2.
@@ -83,38 +48,10 @@ DefineLanguageWord("Ákmōn", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	}
 })
 
-DefineLanguageWord("Alalia", { -- should be written as the original Greek name (with Greek characters)
-	Language = "greek",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"settlement"} -- example: "Alalia" (Aleria)
-})
-
-DefineLanguageWord("Alonae", { -- should be written as the original Greek name (with Greek characters)
-	Language = "greek",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"settlement"} -- example: "Alonae"
-})
-
 DefineLanguageWord("Amaltheia", { -- name of a female goat
 	Language = "greek",
 	Type = "noun",
 	Meanings = {}
-})
-
-DefineLanguageWord("Amisus", { -- should be written as the original Greek name (with Greek characters)
-	Language = "greek",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"settlement"} -- example: "Amisus"
-})
-
-DefineLanguageWord("Amphi", { -- should be written as the original Greek name (with Greek characters)
-	Language = "greek",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Amphipolis"
 })
 
 DefineLanguageWord("Ársēn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 3.2.2.
@@ -138,13 +75,6 @@ DefineLanguageWord("Basilikē", { -- Source: D. H. Green, "From Germania to Euro
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Royal Hall", "Large Public Hall", "Church"}
-})
-
-DefineLanguageWord("Calli", { -- should be written as the original Greek name (with Greek characters)
-	Language = "greek",
-	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Callipolis"
 })
 
 DefineLanguageWord("Χαροπός", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
@@ -541,13 +471,6 @@ DefineLanguageWord("Πύργος", { -- Source: T. C. Donkin, "An Etymological D
 	Language = "greek",
 	Type = "noun",
 	Meanings = {}
-})
-
-DefineLanguageWord("Polis", { -- should be written as the original Greek name (with Greek characters)
-	Language = "greek",
-	Type = "noun",
-	Meanings = {"City"},
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Amphipolis", "Callipolis"
 })
 
 DefineLanguageWord("Skiá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.

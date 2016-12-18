@@ -45,10 +45,7 @@ DefineWorldMapTile({493, 107}, {
 DefineWorldMapTile({494, 109}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "netherlands", "'s-Hertogenbosch", "name-elements", {
-			"compound", "prefix", "dutch", "noun", "singular", "genitive", "Hertog",
-			"compound", "suffix", "dutch", "noun", "singular", "Bosch"
-		}
+		"teuton", "netherlands", "'s-Hertogenbosch"
 	}
 })
 
@@ -86,16 +83,10 @@ DefineWorldMapTile({497, 106}, {
 DefineWorldMapTile({497, 115}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"teuton", "Luxemburg", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "high-german", "noun", "singular", "Burg"
-		}
+		"teuton", "Luxemburg"
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "france", "Luxembourg", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "french", "noun", "singular", "Bourg"
-		}
+		"latin", "france", "Luxembourg"
 	}
 })
 

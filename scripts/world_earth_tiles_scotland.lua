@@ -42,20 +42,14 @@ DefineWorldMapTile({469, 93}, {
 DefineWorldMapTile({470, 87}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "england", "Kirkwall", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "english", "noun", "singular", "Wall"
-		}
+		"teuton", "england", "Kirkwall"
 	}
 })
 
 DefineWorldMapTile({470, 97}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "england", "Edinburgh", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "english", "noun", "singular", "Burgh"
-		}
+		"teuton", "england", "Edinburgh"
 	}
 })
 

@@ -28,7 +28,7 @@
 DefineWorldMapTile({32, 14}, {
 	World = "Nidavellir",
 	CulturalSettlementNames = {
-		"dwarf", "Knalga", "name-elements", {"word", "dwarven", "noun", "Knalga"}
+		"dwarf", "Knalga"
 	}
 })
 
@@ -52,17 +52,14 @@ DefineWorldMapTile({44, 11}, {
 DefineWorldMapTile({45, 5}, {
 	World = "Nidavellir",
 	CulturalSettlementNames = {
-		"dwarf", "Kal Kartha", "name-elements", {
-			"separate", "prefix", "dwarven", "noun", "Kal",
-			"separate", "suffix", "dwarven", "noun", "Kartha"
-		}
+		"dwarf", "Kal Kartha"
 	}
 })
 
 DefineWorldMapTile({50, 13}, {
 	World = "Nidavellir",
 	CulturalSettlementNames = {
-		"dwarf", "Lyr", "name-elements", {"word", "dwarven", "adjective", "Lyr"}
+		"dwarf", "Lyr"
 	}
 })
 

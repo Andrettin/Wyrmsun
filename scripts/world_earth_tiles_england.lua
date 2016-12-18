@@ -28,20 +28,14 @@
 DefineWorldMapTile({465, 113}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "england", "Falmouth", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "english", "noun", "singular", "Mouth"
-		}
+		"teuton", "england", "Falmouth"
 	}
 })
 
 DefineWorldMapTile({468, 110}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "angle-tribe", "Bardanstapol", "name-elements", { -- Old English name of Barnstaple; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
---			"compound", "prefix", "old-english", -- ?
-			"compound", "suffix", "old-english", "noun", "Stapol" -- presumably
-		},
+		"teuton", "angle-tribe", "Bardanstapol", -- Old English name of Barnstaple; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"teuton", "england", "Barnstaple"
 	}
 })
@@ -49,10 +43,7 @@ DefineWorldMapTile({468, 110}, {
 DefineWorldMapTile({468, 112}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "england", "Plymouth", "name-elements", {
-			"compound", "prefix", "english", "noun", "Ply",
-			"compound", "suffix", "english", "noun", "singular", "Mouth"
-		}
+		"teuton", "england", "Plymouth"
 	}
 })
 
@@ -84,11 +75,7 @@ DefineWorldMapTile({471, 104}, {
 DefineWorldMapTile({471, 105}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "angle-tribe", "Bancornaburg", "name-elements", { -- Old English name of Bangor on Dee; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-			"compound", "prefix", "old-english", "noun", "Bân", -- presumably
---			"compound", "infix", "old-english", -- genitive of "corn"?
-			"compound", "suffix", "old-english", "noun", "Burg" -- presumably
-		},
+		"teuton", "angle-tribe", "Bancornaburg", -- Old English name of Bangor on Dee; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"teuton", "england", "Bangor on Dee"
 	}
 })
@@ -112,10 +99,7 @@ DefineWorldMapTile({472, 110}, {
 DefineWorldMapTile({472, 111}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "angle-tribe", "Abbodesbyrig", "name-elements", { -- Old English name of Abbotsbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-			-- "compound", "prefix", "old-english", -- ?
-			"compound", "suffix", "old-english", "noun", "plural", "Burg" -- presumably
-		},
+		"teuton", "angle-tribe", "Abbodesbyrig", -- Old English name of Abbotsbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"teuton", "england", "Abbotsbury"
 	}
 })
@@ -131,9 +115,7 @@ DefineWorldMapTile({473, 109}, {
 DefineWorldMapTile({473, 110}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "england", "Wells", "name-elements", {
-			"word", "english", "noun", "plural", "Well"
-		}
+		"teuton", "england", "Wells"
 	}
 })
 
@@ -160,10 +142,7 @@ DefineWorldMapTile({474, 109}, {
 DefineWorldMapTile({474, 110}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "angle-tribe", "Ambresbyrig", "name-elements", { -- Old English name of Amesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-			-- "compound", "prefix", "old-english", -- ?
-			"compound", "suffix", "old-english", "noun", "plural", "Burg" -- presumably
-		},
+		"teuton", "angle-tribe", "Ambresbyrig", -- Old English name of Amesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"teuton", "england", "Amesbury"
 	}
 })
@@ -171,10 +150,7 @@ DefineWorldMapTile({474, 110}, {
 DefineWorldMapTile({474, 111}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "angle-tribe", "Baddanbyrig", "name-elements", { -- Old English name of the Badbury Rings; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-			-- "compound", "prefix", "old-english", -- ?
-			"compound", "suffix", "old-english", "noun", "plural", "Burg" -- presumably
-		},
+		"teuton", "angle-tribe", "Baddanbyrig", -- Old English name of the Badbury Rings; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"teuton", "england", "Damerham"
 	},
 	FactionCulturalResourceNames = {
@@ -188,30 +164,21 @@ DefineWorldMapTile({474, 111}, {
 DefineWorldMapTile({475, 98}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "england", "Bamburgh", "name-elements", { -- Shepherd gives it as "Bamborough" instead; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
---			"compound", "prefix", "english", -- ?
-			"compound", "suffix", "english", "noun", "Burgh" -- presumably
-		}
+		"teuton", "england", "Bamburgh" -- Shepherd gives it as "Bamborough" instead; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 	}
 })
 
 DefineWorldMapTile({475, 99}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "england", "Newcastle", "name-elements", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-			"compound", "prefix", "english", "adjective", "New", -- presumably
-			"compound", "suffix", "english", "noun", "singular", "Castle" -- presumably
-		}
+		"teuton", "england", "Newcastle" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	}
 })
 
 DefineWorldMapTile({475, 100}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "england", "Durham", "name-elements", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-			"compound", "prefix", "english", "noun", "Dur", -- presumably
-			"compound", "suffix", "english", "noun", "Ham" -- presumably
-		}
+		"teuton", "england", "Durham" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	}
 })
 
@@ -246,14 +213,8 @@ DefineWorldMapTile({475, 109}, {
 DefineWorldMapTile({476, 109}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "angle-tribe", "Abbandun", "name-elements", { -- Old English name of Abingdon; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-			-- "compound", "prefix", "old-english", -- ?
-			"compound", "suffix", "old-english", "noun", "Dun" -- presumably
-		},
-		"teuton", "angle-tribe", "Bænesingtun", "name-elements", { -- Old English name of Bensington; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-			-- "compound", "prefix", "old-english", -- ?
-			"compound", "suffix", "old-english", "noun", "Tûn" -- presumably
-		},
+		"teuton", "angle-tribe", "Abbandun", -- Old English name of Abingdon; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"teuton", "angle-tribe", "Bænesingtun", -- Old English name of Bensington; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"teuton", "england", "Abingdon",
 		"teuton", "england", "Bensington"
 	}
@@ -284,10 +245,7 @@ DefineWorldMapTile({477, 102}, {
 DefineWorldMapTile({477, 108}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "angle-tribe", "Ægelesburg", "name-elements", { -- Old English name of Aylesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-			-- "compound", "prefix", "old-english", -- ?
-			"compound", "suffix", "old-english", "noun", "Burg" -- presumably
-		},
+		"teuton", "angle-tribe", "Ægelesburg", -- Old English name of Aylesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"teuton", "england", "Aylesbury"
 	}
 })
@@ -302,9 +260,7 @@ DefineWorldMapTile({477, 110}, {
 DefineWorldMapTile({478, 102}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "england", "Hull", "name-elements", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-			"word", "english", "noun", "Hull" -- presumably
-		}
+		"teuton", "england", "Hull" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	}
 })
 
@@ -318,10 +274,7 @@ DefineWorldMapTile({478, 104}, { -- Source: William R. Shepherd, "Historical Atl
 DefineWorldMapTile({479, 109}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "angle-tribe", "Gumeninga Hearh", "name-elements", { -- Old English name of Harrow on the Hill; the name means "the holy place of the Gumeningas"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
-			-- the prefix is a demonym (of the Gumeningas)
-			"separate", "suffix", "old-english", "noun", "Hearh"
-		},
+		"teuton", "angle-tribe", "Gumeninga Hearh", -- Old English name of Harrow on the Hill; the name means "the holy place of the Gumeningas"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
 		"teuton", "england", "Harrow on the Hill"
 	}
 })
@@ -351,24 +304,15 @@ DefineWorldMapTile({480, 109}, {
 DefineWorldMapTile({480, 111}, { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "england", "Newhaven", "name-elements", {
-			"compound", "prefix", "english", "adjective", "New",
-			"compound", "suffix", "english", "noun", "singular", "Haven"
-		}
+		"teuton", "england", "Newhaven"
 	}
 })
 
 DefineWorldMapTile({481, 109}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "angle-tribe", "Assandun", "name-elements", { -- Old English name of Ashingdon; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-			-- "compound", "prefix", "old-english", -- ?
-			"compound", "suffix", "old-english", "noun", "Dun" -- presumably
-		},
-		"teuton", "angle-tribe", "Beamfleot", "name-elements", { -- Old English name of Benfleet; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-			"compound", "prefix", "old-english", "noun", "Béam", -- presumably
---			"compound", "suffix", "old-english", -- ?
-		},
+		"teuton", "angle-tribe", "Assandun", -- Old English name of Ashingdon; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"teuton", "angle-tribe", "Beamfleot", -- Old English name of Benfleet; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"teuton", "england", "Ashingdon",
 		"teuton", "england", "Benfleet"
 	}
@@ -377,10 +321,7 @@ DefineWorldMapTile({481, 109}, {
 DefineWorldMapTile({481, 110}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "angle-tribe", "Ægelesford", "name-elements", { -- Old English name of Aylesford; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-			-- "compound", "prefix", "old-english", -- ?
-			"compound", "suffix", "old-english", "noun", "Ford" -- presumably
-		},
+		"teuton", "angle-tribe", "Ægelesford", -- Old English name of Aylesford; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"teuton", "england", "Aylesford"
 	}
 })
@@ -403,9 +344,6 @@ DefineWorldMapTile({483, 110}, { -- Source: William R. Shepherd, "Historical Atl
 DefineWorldMapTile({484, 106}, { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"teuton", "england", "Yarmouth", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "english", "noun", "singular", "Mouth"
-		}
+		"teuton", "england", "Yarmouth"
 	}
 })

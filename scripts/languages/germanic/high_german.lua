@@ -39,8 +39,7 @@ DefineLanguageWord("Adel", {
 	NumberCaseInflections = {
 		"singular", "genitive", "Adels"
 	},
-	Gender = "masculine",
-	AffixNameTypes = {"compound", "prefix", "singular", "genitive", "settlement"} -- example: "Adelsberg"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Adler", {
@@ -83,8 +82,7 @@ DefineLanguageWord("Alt", {
 	Meanings = {"Old"},
 	DerivesFrom = {"middle-high-german", "adjective", "Alt"},
 	AffixNameTypes = {
-		"compound", "prefix", "province", -- example: "Altmark" (Source: William R. Shepherd, "Historical Atlas", 1911, pp. 134-135)
-		"compound", "prefix", "settlement" -- example: "Altsohl"
+		"compound", "prefix", "province" -- example: "Altmark" (Source: William R. Shepherd, "Historical Atlas", 1911, pp. 134-135)
 	}
 })
 
@@ -116,8 +114,7 @@ DefineLanguageWord("Au", { -- Source: http://www.duden.de/rechtschreibung/Au_feu
 		"plural", "dative", "Auen",
 		"plural", "genitive", "Auen"
 	},
-	Gender = "feminine",
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Braunau", "Blumenau"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Bach", { -- Source: http://www.duden.de/rechtschreibung/Bach_Wasserlauf
@@ -132,8 +129,7 @@ DefineLanguageWord("Bach", { -- Source: http://www.duden.de/rechtschreibung/Bach
 		"plural", "dative", "Bächen",
 		"plural", "genitive", "Bäche"
 	},
-	Gender = "masculine",
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Mühlenbach"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Bad", { -- Source: http://www.duden.de/rechtschreibung/Bad
@@ -148,8 +144,7 @@ DefineLanguageWord("Bad", { -- Source: http://www.duden.de/rechtschreibung/Bad
 		"plural", "dative", "Bädern",
 		"plural", "genitive", "Bäder"
 	},
-	Gender = "neuter",
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Karlsbad"
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Baden", {
@@ -252,7 +247,6 @@ DefineLanguageWord("Berg", {
 		"plural", "genitive", "Berge"
 	},
 	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement", -- examples: "Adelsberg", "Hartberg", "Spielberg", "Wolfsberg"
 		"compound", "suffix", "singular", "province", -- example: "Vorarlberg" (Vorarlberg is a special case, however - ideally we should generate mountain names like "Arlberg", and then have the possibility of adding the prefix "Vor" regarding the mountain, if it is on the edge of the province
 		"compound", "suffix", "singular", "terrain-hills", -- examples: "Bärenberg", "Hackenberg"
 		"compound", "suffix", "singular", "terrain-mountains" -- example: "Arlberg", "Schneeberg"
@@ -306,8 +300,7 @@ DefineLanguageWord("Blume", { -- Source: http://www.duden.de/rechtschreibung/Blu
 		"plural", "dative", "Blumen",
 		"plural", "genitive", "Blumen"
 	},
-	Gender = "feminine",
-	AffixNameTypes = {"compound", "prefix", "plural", "settlement"} -- example: "Blumenau"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Brand", {
@@ -351,8 +344,7 @@ DefineLanguageWord("Branden", {
 DefineLanguageWord("Braun", {
 	Language = "high-german",
 	Type = "adjective",
-	Meanings = {"Brown"},
-	AffixNameTypes = {"compound", "prefix", "settlement"} -- example: "Braunau"
+	Meanings = {"Brown"}
 })
 
 DefineLanguageWord("Brennen", {
@@ -408,8 +400,7 @@ DefineLanguageWord("Bruck", { -- used in placenames, but not in actual speech
 		"plural", "genitive", "Brucken"
 	},
 	Gender = "feminine",
-	DerivesFrom = {"middle-high-german", "noun", "Brücke"}, -- presumably, since the High German word "Brücke" does come from Middle High German "Brücke"
-	NameTypes = {"settlement"} -- example: "Bruck"
+	DerivesFrom = {"middle-high-german", "noun", "Brücke"} -- presumably, since the High German word "Brücke" does come from Middle High German "Brücke"
 })
 
 DefineLanguageWord("Brücke", {
@@ -423,10 +414,6 @@ DefineLanguageWord("Brücke", {
 		"plural", "accusative", "Brücken",
 		"plural", "dative", "Brücken",
 		"plural", "genitive", "Brücken"
-	},
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement", -- example: "Halsbrücke"
-		"compound", "suffix", "plural", "settlement" -- example: "Zweibrücken"
 	}
 })
 
@@ -457,8 +444,7 @@ DefineLanguageWord("Burg", {
 	},
 	Gender = "feminine",
 	AffixNameTypes = {
-		"compound", "prefix", "plural", "province", -- example: "Burgenland"
-		"compound", "suffix", "singular", "settlement" -- examples: "Friedeburg", "Hamburg", "Klosterneuburg", "Marburg", "Nikolsburg", "Ödenburg", "Schässburg", "Stuhlweissenburg", "Wolfsburg"
+		"compound", "prefix", "plural", "province" -- example: "Burgenland"
 	}
 })
 
@@ -482,8 +468,7 @@ DefineLanguageWord("Darm", {
 		"plural", "accusative", "Därme",
 		"plural", "dative", "Därmen",
 		"plural", "genitive", "Därme"
-	},
-	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Darmstadt"
+	}
 })
 
 DefineLanguageWord("Das", {
@@ -549,8 +534,7 @@ DefineLanguageWord("Dorf", {
 		"plural", "accusative", "Dörfer",
 		"plural", "dative", "Dörfern",
 		"plural", "genitive", "Dörfer"
-	},
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Frohsdorf", "Gänserndorf", "Halsdorf"
+	}
 })
 
 DefineLanguageWord("Drasch", {
@@ -584,8 +568,7 @@ DefineLanguageWord("Eisen", {
 	Meanings = {"Iron"},
 	DerivesFrom = {"middle-high-german", "noun", "Îsern"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
 	Gender = "neuter",
-	Uncountable = true,
-	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- examples: "Eisenerz", "Eisenstadt"
+	Uncountable = true
 })
 	
 DefineLanguageWord("Eisern", {
@@ -623,8 +606,7 @@ DefineLanguageWord("Erz", {
 		"plural", "accusative", "Erze",
 		"plural", "dative", "Erzen",
 		"plural", "genitive", "Erze"
-	},
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Eisenerz"
+	}
 })
 
 DefineLanguageWord("Esse", {
@@ -660,8 +642,7 @@ DefineLanguageWord("Feld", {
 		"plural", "accusative", "Felder",
 		"plural", "dative", "Feldern",
 		"plural", "genitive", "Felder"
-	},
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Fürstenfeld"
+	}
 })
 
 DefineLanguageWord("Feuer", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
@@ -695,8 +676,7 @@ DefineLanguageWord("Frei", {
 	ComparisonDegreeCaseInflections = {
 		"comparative", "Freier",
 		"superlative", "Freiesten" -- alternatively also "freisten"
-	},
-	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Freistadt"
+	}
 })
 
 DefineLanguageWord("Fried", { -- root present in "Friede" and also in a number of adjectives
@@ -712,10 +692,7 @@ DefineLanguageWord("Friede", {
 	Meanings = {"Peace"},
 	DerivesFrom = {"middle-high-german", "noun", "Vride"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
 	Gender = "masculine",
-	Uncountable = true,
-	AffixNameTypes = {
-		"compound", "prefix", "singular", "settlement", -- example: "Friedeburg"
-	}
+	Uncountable = true
 })
 
 DefineLanguageWord("Fürst", {
@@ -731,8 +708,7 @@ DefineLanguageWord("Fürst", {
 		"plural", "accusative", "Fürsten",
 		"plural", "dative", "Fürsten",
 		"plural", "genitive", "Fürsten"
-	},
-	AffixNameTypes = {"compound", "prefix", "plural", "settlement"} -- example: "Fürstenfeld" (not entirely clear if that's really the plural or if it is the genitive)
+	}
 })
 
 DefineLanguageWord("Furt", { -- Source: http://www.duden.de/rechtschreibung/Furt
@@ -949,10 +925,6 @@ DefineLanguageWord("Hals", {
 		"plural", "accusative", "Hälse",
 		"plural", "dative", "Hälsen",
 		"plural", "genitive", "Hälse"
-	},
-	NameTypes = {"settlement"},
-	AffixNameTypes = {
-		"compound", "prefix", "singular", "settlement" -- examples: "Halsbrücke", "Halsdorf"
 	}
 })
 
@@ -979,9 +951,6 @@ DefineLanguageWord("Hart", { -- Source: http://www.duden.de/rechtschreibung/hart
 	ComparisonDegreeCaseInflections = {
 		"comparative", "Härter",
 		"superlative", "Härteste"
-	},
-	AffixNameTypes = {
-		"compound", "prefix", "settlement" -- example: "Hartberg"
 	}
 })
 
@@ -993,18 +962,14 @@ DefineLanguageWord("Haus", {
 	NumberCaseInflections = {
 		"singular", "genitive", "Hauses",
 		"plural", "nominative", "Häuser"
-	},
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Torfhaus"
+	}
 })
 
 DefineLanguageWord("Heilig", {
 	Language = "high-german",
 	Type = "adjective",
 	Meanings = {"Holy"},
-	DerivesFrom = {"middle-high-german", "adjective", "Heilec"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 42.
-	AffixNameTypes = {
-		"compound", "prefix", "dative", "settlement", -- example: "Heiligenstadt"
-	}
+	DerivesFrom = {"middle-high-german", "adjective", "Heilec"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 42.
 })
 
 DefineLanguageWord("Heim", {
@@ -1019,8 +984,7 @@ DefineLanguageWord("Heim", {
 		"plural", "accusative", "Heime",
 		"plural", "dative", "Heimen",
 		"plural", "genitive", "Heime"
-	},
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Mannheim", "Meisenheim", "Rosenheim"
+	}
 })
 
 DefineLanguageWord("Heimisch", {
@@ -1097,8 +1061,7 @@ DefineLanguageWord("Hof", {
 		"plural", "accusative", "Höfe",
 		"plural", "dative", "Höfen",
 		"plural", "genitive", "Höfe"
-	},
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Königinhof"
+	}
 })
 
 DefineLanguageWord("Horn", {
@@ -1111,7 +1074,6 @@ DefineLanguageWord("Horn", {
 		"singular", "genitive", "Horns", -- alternatively also "Hornes"
 		"plural", "nominative", "Hörner"
 	},
-	NameTypes = {"settlement"},
 	AffixNameTypes = {
 		"compound", "suffix", "singular", "terrain-mountains" -- example: "Teufelshorn"
 	}
@@ -1139,8 +1101,7 @@ DefineLanguageWord("Huhn", {
 		"plural", "nominative", "Hühner",
 		"plural", "genitive", "Hühner"
 	},
-	Gender = "neuter",
-	AffixNameTypes = {"compound", "prefix", "plural", "settlement"} -- example: "Hühnerwasser"
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Hunger", { -- Source: http://www.duden.de/rechtschreibung/Hunger
@@ -1245,9 +1206,6 @@ DefineLanguageWord("Kloster", {
 		"plural", "accusative", "Klöster",
 		"plural", "dative", "Klöstern",
 		"plural", "genitive", "Klöster"
-	},
-	AffixNameTypes = {
-		"compound", "prefix", "singular", "settlement" -- example: "Klosterneuburg"
 	}
 })
 
@@ -1275,9 +1233,6 @@ DefineLanguageWord("König", {
 	NumberCaseInflections = {
 		"singular", "genitive", "Königs",
 		"plural", "nominative", "Könige"
-	},
-	AffixNameTypes = {
-		"compound", "prefix", "singular", "nominative", "settlement" -- example: "Königgrätz"
 	}
 })
 
@@ -1289,8 +1244,7 @@ DefineLanguageWord("Königin", {
 	Gender = "feminine",
 	NumberCaseInflections = {
 		"plural", "nominative", "Königinnen"
-	},
-	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Königinhof"
+	}
 })
 
 DefineLanguageWord("Kreuz", {
@@ -1304,9 +1258,6 @@ DefineLanguageWord("Kreuz", {
 		"plural", "accusative", "Kreuze",
 		"plural", "dative", "Kreuzen",
 		"plural", "genitive", "Kreuze"
-	},
-	AffixNameTypes = {
-		"compound", "prefix", "singular", "settlement" -- example: "Kreuztal"
 	}
 })
 
@@ -1394,10 +1345,7 @@ DefineLanguageWord("Mann", {
 	NumberCaseInflections = {
 		"plural", "nominative", "Männer"
 	},
-	Gender = "masculine",
-	AffixNameTypes = {
-		"compound", "prefix", "singular", "settlement" -- example: "Mannheim"
-	}
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Mark", {
@@ -1448,8 +1396,7 @@ DefineLanguageWord("Meise", {
 		"plural", "accusative", "Meisen",
 		"plural", "dative", "Meisen",
 		"plural", "genitive", "Meisen"
-	},
-	AffixNameTypes = {"compound", "prefix", "plural", "settlement"} -- example: "Meisenheim"
+	}
 })
 
 DefineLanguageWord("Messing", {
@@ -1489,8 +1436,7 @@ DefineLanguageWord("Mühle", { -- Source: http://www.duden.de/rechtschreibung/Mu
 		"plural", "dative", "Mühlen",
 		"plural", "genitive", "Mühlen"
 	},
-	Gender = "feminine",
-	AffixNameTypes = {"compound", "prefix", "plural", "settlement"} -- example: "Mühlenbach"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Mut", {
@@ -1507,9 +1453,6 @@ DefineLanguageWord("Neu", {
 	Meanings = {"New"},
 	DerivesFrom = {"middle-high-german", "adjective", "Niuwe"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 153.
 	AffixNameTypes = {
-		"compound", "prefix", "settlement", -- examples: "Neusohl", "Neusorge", "Neustadt"
-		"compound", "infix", "settlement", -- example: "Klosterneuburg"
-		"separate", "prefix", "settlement", -- example: "Neue Sorge"
 --		"compound", "prefix", "unit-class-castle" -- example: "Schloss Neusorge"
 	}
 })
@@ -1517,8 +1460,7 @@ DefineLanguageWord("Neu", {
 DefineLanguageWord("Neun", {
 	Language = "high-german",
 	Type = "numeral",
-	Number = 9,
-	AffixNameTypes = {"compound", "prefix", "settlement"} -- example: "Neunkirchen"
+	Number = 9
 })
 
 DefineLanguageWord("Nord", {
@@ -1658,7 +1600,6 @@ DefineLanguageWord("Rose", { -- Source: http://www.duden.de/rechtschreibung/Rose
 	},
 	Gender = "feminine",
 	AffixNameTypes = {
-		"compound", "prefix", "plural", "settlement", -- example: "Rosenheim"
 		"compound", "prefix", "plural", "terrain-hills" -- example: "Rosenhügel"
 	}
 })
@@ -1883,10 +1824,8 @@ DefineLanguageWord("Sorge", {
 		"plural", "dative", "Sorgen",
 		"plural", "genitive", "Sorgen"
 	},
---	NameTypes = {"settlement", "river"},
+--	NameTypes = {"river"},
 	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement", -- example: "Neusorge"
-		"separate", "suffix", "singular", "settlement", -- example: "Neue Sorge"
 --		"compound", "suffix", "singular", "unit-class-castle" -- example: "Schloss Neusorge"
 	}
 })
@@ -1909,8 +1848,7 @@ DefineLanguageWord("Spiel", {
 		"plural", "accusative", "Spiele",
 		"plural", "dative", "Spielen",
 		"plural", "genitive", "Spiele"
-	},
-	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Spielberg"
+	}
 })
 
 DefineLanguageWord("Spitze", {
@@ -1937,8 +1875,7 @@ DefineLanguageWord("Stadt", {
 		"plural", "accusative", "Städte",
 		"plural", "dative", "Städten",
 		"plural", "genitive", "Städte"
-	},
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Darmstadt", "Eisenstadt", "Freistadt", "Josefstadt", "Kronstadt", "Leopoldstadt", "Neustadt"
+	}
 })
 
 DefineLanguageWord("Staffel", {
@@ -1987,8 +1924,7 @@ DefineLanguageWord("Stuhl", {
 		"plural", "accusative", "Stühle",
 		"plural", "dative", "Stühlen",
 		"plural", "genitive", "Stühle"
-	},
-	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Stuhlweissenburg"
+	}
 })
 
 DefineLanguageWord("Tag", {
@@ -2037,8 +1973,7 @@ DefineLanguageWord("Tal", {
 		"plural", "accusative", "Täler",
 		"plural", "dative", "Tälern",
 		"plural", "genitive", "Täler"
-	},
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Kreuztal", "Zillertal"
+	}
 })
 
 DefineLanguageWord("Teufel", {
@@ -2125,8 +2060,7 @@ DefineLanguageWord("Wasser", {
 	Type = "noun",
 	Meanings = {"Water"},
 	Gender = "neuter",
-	Uncountable = true,
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Hühnerwasser"
+	Uncountable = true
 })
 
 DefineLanguageWord("Weiß", {
@@ -2135,8 +2069,6 @@ DefineLanguageWord("Weiß", {
 	Meanings = {"White"},
 	DerivesFrom = {"middle-high-german", "adjective", "Wîz̨"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 67.
 	AffixNameTypes = {
-		"compound", "prefix", "singular", "nominative", "settlement", -- example: "Weisskirchen"
-		"compound", "infix", "singular", "dative", "settlement", -- example: "Stuhlweissenburg"
 		"compound", "prefix", "singular", "nominative", "terrain-mountains" -- example: "Weißkugel"
 	}
 })
@@ -2168,9 +2100,6 @@ DefineLanguageWord("Wolf", {
 		"plural", "accusative", "Wölfe",
 		"plural", "dative", "Wölfen",
 		"plural", "genitive", "Wölfe"
-	},
-	AffixNameTypes = {
-		"compound", "prefix", "singular", "genitive", "settlement" -- examples: "Wolfsberg", "Wolfsburg"
 	}
 })
 
@@ -2252,8 +2181,7 @@ DefineLanguageWord("Zehn", {
 DefineLanguageWord("Zwei", {
 	Language = "high-german",
 	Type = "numeral",
-	Number = 2,
-	AffixNameTypes = {"compound", "prefix", "settlement"} -- example: "Zweibrücken"
+	Number = 2
 })
 
 DefineLanguageWord("Zwölf", {
@@ -2285,8 +2213,7 @@ DefineLanguageWord("Fünf", {
 	Language = "high-german",
 	Type = "numeral",
 	Number = 5,
-	DerivesFrom = {"old-high-german", "numeral", "Fimf"}, -- presumably
-	AffixNameTypes = {"compound", "prefix", "settlement"} -- example: "Fünfkirchen"
+	DerivesFrom = {"old-high-german", "numeral", "Fimf"} -- presumably
 })
 
 DefineLanguageWord("Sieben", {

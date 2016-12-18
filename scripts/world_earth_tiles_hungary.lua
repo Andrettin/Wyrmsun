@@ -29,10 +29,7 @@ DefineWorldMapTile({528, 118}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"slav", "Bratislava",
-		"teuton", "Presburg", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "high-german", "noun", "singular", "Burg"
-		}
+		"teuton", "Presburg"
 	}
 })
 
@@ -55,20 +52,14 @@ DefineWorldMapTile({536, 127}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"slav", "Novi Sad",
-		"teuton", "Neusatz", "name-elements", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 168.
-			"compound", "prefix", "high-german", "adjective", "Neu",
-			"compound", "suffix", "high-german", "noun", "singular", "Satz"
-		}
+		"teuton", "Neusatz"
 	}
 })
 
 DefineWorldMapTile({545, 122}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"teuton", "Klausenburg", "name-elements", {
-			"compound", "prefix", "high-german", "noun", "plural", "Klause",
-			"compound", "suffix", "high-german", "noun", "singular", "Burg"
-		}
+		"teuton", "Klausenburg"
 	},
 	FactionCulturalSettlementNames = {
 		"latin", "romania", "Cluj"

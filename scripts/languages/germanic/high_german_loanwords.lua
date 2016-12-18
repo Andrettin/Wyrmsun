@@ -62,8 +62,7 @@ DefineLanguageWord("Kirche", {
 		"plural", "accusative", "Kirchen",
 		"plural", "dative", "Kirchen",
 		"plural", "genitive", "Kirchen"
-	},
-	AffixNameTypes = {"compound", "suffix", "plural", "settlement"} -- examples: "Fünfkirchen", "Neunkirchen", "Weisskirchen"
+	}
 })
 
 DefineLanguageWord("Lied", { -- Source: http://www.duden.de/rechtschreibung/Lied
@@ -106,8 +105,7 @@ DefineLanguageWord("Torf", {
 	NumberCaseInflections = {
 		"singular", "genitive", "Torfs", -- alternatively also "Torfes"
 		"plural", "nominative", "Torfe"
-	},
-	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Torfhaus"
+	}
 })
 
 DefineLanguageWord("Wein", {

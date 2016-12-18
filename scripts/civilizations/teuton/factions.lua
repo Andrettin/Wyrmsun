@@ -173,9 +173,9 @@ DefineFaction("angle-tribe", {
 	SettlementNames = {
 		"Abbandun",  -- Old English name of Abingdon; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Abbodesbyrig", -- Old English name of Abbotsbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p.
-		"Ægelesburg", -- Old English name of Aylesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Ægelesford", -- Old English name of Aylesford; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Æthelingaig", -- Old English name of Athelney; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Aegelesburg", -- "Ægelesburg"; Old English name of Aylesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Aegelesford", -- "Ægelesford"; Old English name of Aylesford; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Aethelingaig", -- "Æthelingaig"; Old English name of Athelney; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Alre", -- Old English name of Aller; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Ambresbyrig", -- Old English name of Amesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Andeferas", -- Old English name of Andover; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
@@ -183,7 +183,7 @@ DefineFaction("angle-tribe", {
 		"Assandun", -- Old English name of Ashingdon; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Badecanwiellon", -- Old English name of Bakewell; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Baddanbyrig", -- Old English name of the Badbury Rings; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Bænesingtun", -- Old English name of Bensington; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Baenesingtun", -- "Bænesingtun"; Old English name of Bensington; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Bancornaburg", -- Old English name of Bangor on Dee; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Bardanstapol", -- Old English name of Barnstaple; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Basengum", -- Old English name of Basing; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
@@ -498,7 +498,20 @@ DefineFaction("netherlands", {
 	Type = "polity",
 --	Language = "dutch",
 	Colors = {"orange", "blue"},
-	DefaultTier = "kingdom"
+	DefaultTier = "kingdom",
+	SettlementNames = {
+		"'s-Hertogenbosch",
+		"Amsterdam",
+		"Beverwijk",
+		"Rotterdam",
+		"Staphorst", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+		"Waalwijk"
+	},
+	ProvinceNames = {
+		"Flevoland",
+		"Friesland",
+		"Gelderland"
+	}
 })
 
 DefineFaction("brabant", {
@@ -631,6 +644,7 @@ DefineFaction("england", {
 	},
 	SettlementNames = {
 		"Ashford", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Bamburgh", -- Shepherd gives it as "Bamborough" instead; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 		"Bedford", -- Source: "Philip's International School Atlas", 2006, p. 64.
 		"Blackburn", -- Source: "Philip's International School Atlas", 2006, p. 64.
 		"Blackpool", -- Source: "Philip's International School Atlas", 2006, p. 64.
@@ -641,26 +655,35 @@ DefineFaction("england", {
 		"Dartford",
 		"Dartmouth",
 		"Dorchester",
+		"Durham", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+		"Edinburgh", -- in Scotland
+		"Falmouth",
 		"Fishguard", -- Source: "Philip's International School Atlas", 2006, p. 64.
 		"Gateshead", -- Source: "Philip's International School Atlas", 2006, p. 64.
 		"Greenwich",
 		"Guildford", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Harrow on the Hill",
 		"Hempstead", -- Source: "Philip's International School Atlas", 2006, p. 64.
 		"Holyhead",
+		"Hull", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 		"Huntingdon",
 		"Kingston",
+		"Kirkwall", -- in Scotland
 		"Liverpool", -- Source: "Philip's International School Atlas", 2006, p. 64.
 		"Longford", -- Source: "Philip's International School Atlas", 2006, p. 64.
 		"Maidstone", -- Source: "Philip's International School Atlas", 2006, p. 64.
 		"Mansfield",
 		"Marshfield",
 		"Newbury", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Newcastle", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+		"Newhaven", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 		"Newport", -- Source: "Philip's International School Atlas", 2006, p. 64.
 		"Newquay", -- Source: "Philip's International School Atlas", 2006, p. 64.
 		"Northfleet",
 		"Norwich",
 		"Oldham",
 		"Oxford", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Plymouth",
 		"Portsmouth",
 		"Reading",
 		"Redditch", -- Source: "Philip's International School Atlas", 2006, p. 64.
@@ -673,13 +696,15 @@ DefineFaction("england", {
 		"Swansea", -- Source: "Philip's International School Atlas", 2006, p. 64.
 		"Torbay", -- Source: "Philip's International School Atlas", 2006, p. 64.
 		"Waterford",
+		"Wells",
 		"Westbury",
 		"Westport",
 		"Whitehaven", -- Source: "Philip's International School Atlas", 2006, p. 64.
 		"Wimbledon",
 		"Woodbridge",
 		"Woolwich",
-		"Wormshill"
+		"Wormshill",
+		"Yarmouth" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	}
 })
 

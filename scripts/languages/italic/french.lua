@@ -211,9 +211,7 @@ DefineLanguageWord("Hamel", {
 	Type = "noun",
 	Meanings = {"Hamlet"}, -- presumably
 	DerivesFrom = {"old-french", "noun", "Ham"}, -- Source: http://www.cnrtl.fr/definition/hameau
-	Archaic = true,
-	NameTypes = {"settlement"}, -- example: "Le Hamel" (Source: http://www.cnrtl.fr/definition/hameau)
-	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- examples: "Hamelet", "Hamelin" (Source: http://www.cnrtl.fr/definition/hameau)
+	Archaic = true
 })
 
 DefineLanguageWord("Haubert", {
@@ -235,8 +233,7 @@ DefineLanguageWord("Hem", {
 	Type = "noun",
 	Meanings = {"Hamlet"}, -- presumably
 	DerivesFrom = {"old-french", "noun", "Ham"}, -- Source: http://www.cnrtl.fr/definition/hameau
-	Archaic = true,
-	NameTypes = {"settlement"} -- example: "Hem" (Source: http://www.cnrtl.fr/definition/hameau)
+	Archaic = true
 })
 
 DefineLanguageWord("Jardin", {

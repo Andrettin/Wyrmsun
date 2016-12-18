@@ -39,9 +39,6 @@ DefineLanguageWord("Burgo", { -- Source: T. C. Donkin, "An Etymological Dictiona
 	DerivesFrom = {"gothic", "noun", "Baúrgs"}, -- the source gives it as being of Germanic origin (then going on to list a series of Germanic words including this Gothic one); presumably from the Gothic in Spanish since they were the Germanic people who settled in Spain
 	NumberCaseInflections = {
 		"plural", "nominative", "Burgos"
-	},
-	NameTypes = {
-		"plural", "settlement" -- the Spanish town of Burgos
 	}
 })
 

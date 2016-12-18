@@ -28,20 +28,14 @@
 DefineWorldMapTile({512, 121}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"teuton", "Innsbruck", "name-elements", {
---			"compound", "prefix", -- the name of the river Inn
-			"compound", "suffix", "high-german", "noun", "singular", "Bruck"
-		}
+		"teuton", "Innsbruck"
 	}
 })
 
 DefineWorldMapTile({516, 119}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"teuton", "Salzburg", "name-elements", {
-			"compound", "prefix", "high-german", "noun", "singular", "Salz",
-			"compound", "suffix", "high-german", "noun", "singular", "Burg"
-		}
+		"teuton", "Salzburg"
 	}
 })
 
@@ -55,10 +49,7 @@ DefineWorldMapTile({520, 118}, {
 DefineWorldMapTile({520, 123}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"teuton", "Klagenfurt", "name-elements", {
-			"compound", "prefix", "high-german", "noun", "plural", "Klage",
-			"compound", "suffix", "high-german", "noun", "singular", "Furt"
-		}
+		"teuton", "Klagenfurt"
 	}
 })
 
@@ -67,10 +58,7 @@ DefineWorldMapTile({521, 125}, {
 	CulturalSettlementNames = {
 		"latin", "Emona", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		"slav", "Ljubljana",
-		"teuton", "Laibach", "name-elements", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-			"compound", "prefix", "high-german", "noun", "singular", "Lai",
-			"compound", "suffix", "high-german", "noun", "singular", "Bach"
-		}
+		"teuton", "Laibach"
 	}
 })
 
