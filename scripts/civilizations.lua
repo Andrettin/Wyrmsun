@@ -65,10 +65,6 @@ DefineCivilization("dutch", { -- information for later use
 		"Gelderland", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
 		"Overijssel" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
 	},
-	SettlementNames = {
-		"Amsterdam",
-		"Rotterdam"
-	},
 	RiverNames = {
 		"Ijssel" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
 	}
@@ -1607,7 +1603,6 @@ DefineCivilization("teuton", {
 		"Eisenerz",
 		"Eisenstadt",
 		"Erfurt",
-		"Flensburg",
 		"Franzensfeste",
 		"Freistadt",
 		"Friedeburg",
@@ -1669,18 +1664,14 @@ DefineCivilization("teuton", {
 		"Olmütz",
 		"Passau",
 		"Pilsen",
-		"Prag",
 		"Presburg",
-		"Regensburg",
 		"Rosenheim",
 		"Sadowa",
-		"Salzburg",
 		"Schässburg",
 		"Schweinschädel",
 		"Sorge",
 		"Spielberg",
 		"Steinamanger",
-		"Strasburg",
 		"Stuhlweissenburg",
 		"Stuttgart",
 		"Teplitz",

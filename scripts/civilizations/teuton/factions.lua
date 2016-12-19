@@ -501,7 +501,6 @@ DefineFaction("netherlands", {
 	DefaultTier = "kingdom",
 	SettlementNames = {
 		"'s-Hertogenbosch",
-		"Amsterdam",
 		"Beverwijk",
 		"Rotterdam",
 		"Staphorst", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
