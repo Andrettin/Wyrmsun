@@ -74,6 +74,30 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-frank-heroic-swordsman-blond-hair",
+	Size = {46, 38},
+	File = "dlcs/frankish_faction_flair/graphics/icons/frank_heroic_swordsman_blond_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-frank-heroic-swordsman-brown-hair",
+	Size = {46, 38},
+	File = "dlcs/frankish_faction_flair/graphics/icons/frank_heroic_swordsman_brown_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-frank-heroic-swordsman-gray-hair",
+	Size = {46, 38},
+	File = "dlcs/frankish_faction_flair/graphics/icons/frank_heroic_swordsman_gray_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-frank-heroic-swordsman-red-hair",
+	Size = {46, 38},
+	File = "dlcs/frankish_faction_flair/graphics/icons/frank_heroic_swordsman_red_hair.png"
+})
+
+DefineIcon({
 	Name = "icon-frank-horseman",
 	Size = {46, 38},
 	File = "dlcs/frankish_faction_flair/graphics/icons/frank_horseman_brown_hair.png"
