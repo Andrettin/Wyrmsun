@@ -26,6 +26,7 @@
 --
 
 -- Amsterdam
+SetMapTemplateFactionCulturalSettlementName("earth", "Amsterdam", {3953, 857}, "netherlands")
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "batavian-tribe", {3953, 857}, -264, 526) -- tribes in Europe between 264 BC and 180 AD (Holland was inhabited by the Batavians); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "frisian-tribe", {3953, 857}, 526, 734) -- political situation in 526 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 SetMapTemplateUnit("earth", "unit-teuton-farm", "francia", {3953, 857}, 734, 919) -- Franks conquered Holland and Friesland in 734 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.

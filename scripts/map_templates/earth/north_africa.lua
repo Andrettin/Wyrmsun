@@ -26,7 +26,9 @@
 --
 
 -- Carthage
+SetMapTemplateCulturalSettlementName("earth", "Carthage", {4074, 1208}, "phoenician")
 SetMapTemplateUnit("earth", "unit-latin-town-hall", "carthage", {4074, 1208}, -218) -- Carthage was in Carthaginian possession in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 32.
 
 -- Utica
+SetMapTemplateCulturalSettlementName("earth", "Utica", {4070, 1205}, "phoenician")
 SetMapTemplateUnit("earth", "unit-latin-farm", "carthage", {4070, 1205}, -218) -- Utica was in Carthaginian possession in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 32.

@@ -29,6 +29,8 @@ SetMapTemplateResource("earth", "unit-copper-deposit", {3655, 1192}) -- Iron dep
 SetMapTemplateResource("earth", "unit-copper-deposit", {3680, 1109}) -- Iron deposits; Source: http://www.lib.utexas.edu/maps/europe/portugal_econ_1972.jpg
 
 -- Lisbon / Olisipo
+SetMapTemplateCulturalSettlementName("earth", "Olisipo", {3632, 1166}, "latin")
+SetMapTemplateFactionCulturalSettlementName("earth", "Lisbon", {3632, 1166}, "portugal")
 SetMapTemplateUnit("earth", "unit-latin-town-hall", "rome", {3632, 1166}, -146, 486) -- Olisipo was acquired by Rome in 146 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "visigothia", {3632, 1166}, 486, 1560) -- Lisbon was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 SetMapTemplateUnit("earth", "unit-latin-town-hall", "portugal", {3632, 1166}, 1560) -- political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.

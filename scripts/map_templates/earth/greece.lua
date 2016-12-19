@@ -26,7 +26,9 @@
 --
 
 -- Athens
+SetMapTemplateCulturalSettlementName("earth", "Athens", {4380, 1184}, "greek")
 SetMapTemplateUnit("earth", "unit-latin-town-hall", "rome", {4380, 1184}, -146) -- Athens was acquired by Rome in 146 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 
 -- Krisa
+SetMapTemplateCulturalSettlementName("earth", "Krisa", {4351, 1172}, "greek")
 SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "mycenae", {4351, 1172}, -1700, -1190) -- Mycenaean fortifications present in Krisa (in Locris Ozolis) between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67. Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.

@@ -527,6 +527,7 @@ SetMapTemplateUnit("earth", "unit-teuton-town-hall", "swede-tribe", {4243, 692},
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "swede-tribe", {4243, 692}, 1560) -- political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 
 -- Uppsala
+SetMapTemplateCulturalSettlementName("earth", "Uppsala", {4241, 686}, "norse")
 SetMapTemplateUnit("earth", "unit-teuton-temple", "sweden", {4241, 686}, 1164) -- Swedish archbishopric founded in Uppsala in 1164; Source: "Guta Saga: The History of the Gotlanders", 1999, p. vii.
 
 -- Västervik

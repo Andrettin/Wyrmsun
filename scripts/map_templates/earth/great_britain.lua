@@ -45,6 +45,7 @@ SetMapTemplateUnit("earth", "unit-germanic-smithy", "celtic-cimmerian-tribe", {3
 -- the Stonehenge experienced its third construction phase between c. 2550-2450 and 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 64.
 
 -- York / Eboracum
+SetMapTemplateFactionCulturalSettlementName("earth", "York", {3815, 819}, "england")
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "dere-tribe", {3815, 819}, 500, 588) -- the Dere (a collection of Anglian peoples) were in possession of York in 500 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "bernicia", {3815, 819}, 588, 654) -- according to tradition, Æthelric of Bernicia acquired the kingdom of Deira upon its king Ælle's death in 588 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "northumbria", {3815, 819}, 654, 1560) -- Northumbria unified by Oswiu of Bernicia in 654
