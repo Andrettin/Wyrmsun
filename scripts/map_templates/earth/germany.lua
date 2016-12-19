@@ -47,6 +47,7 @@ SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "francia", {4043, 879}, 7
 -- in c. 1800 BC a barrow was built near Helmsdorf (in Saxo-Thuringia in central Germany); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 23.
 
 -- Kiel
+SetMapTemplateCulturalSettlementName("earth", "Kiel", {4069, 811}, "teuton")
 SetMapTemplateUnit("earth", "unit-germanic-town-hall", "hersing-tribe", {4069, 811}, -1600, -1599) -- Hersir's tribe, from the Norse myth of Rig; in the myths, there was a boggy ground between Jarl's hall and that of Hersir
 SetMapTemplateUnit("earth", "unit-germanic-farm", "hersing-tribe", {4069, 811}, -1600, -1599)
 SetMapTemplateUnit("earth", "unit-germanic-farm", "hersing-tribe", {4069, 811}, -1600, -1599)
