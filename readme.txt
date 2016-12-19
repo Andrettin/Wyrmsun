@@ -77,6 +77,9 @@ https://github.com/Andrettin/Wyrmsun
 * Maps
 - Improved the symmetric map generation.
 
+* Miscellaneous
+- Fixed a crash related to worker gathering.
+
 * Quests
 - As missions are transitioning to the Campaign mode, acquiring technology points to unlock units, buildings and upgrades is no longer required for the missions.
 
