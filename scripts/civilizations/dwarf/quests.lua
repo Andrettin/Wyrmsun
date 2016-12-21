@@ -52,10 +52,11 @@ DefineQuest("a-rocky-home", {
 	CompletionEffects = function(s)
 		CallDialogue("a-rocky-home-materials-collected", trigger_player)
 	end,
-	Objectives = {"- Kill 8 Yales", "- Gather 400 Lumber and 1200 Stone"},
+	Objectives = {"- Build a Mead Hall", "- Kill 8 Yales", "- Gather 800 Lumber and 2400 Stone"},
 	Unobtainable = true,
+	BuildUnits = {"unit-dwarven-town-hall", 1},
 	DestroyUnits = {"unit-yale", "", 8},
-	GatherResources = {"lumber", 400, "stone", 1200},
+	GatherResources = {"lumber", 800, "stone", 2400},
 	HeroesMustSurvive = {"Modsognir", "Durin"}
 })
 

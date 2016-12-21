@@ -84,7 +84,12 @@ DefineMapTemplate("svarinshaug-underground", {
 	}
 })
 
-SetMapTemplateUnit("svarinshaug", "unit-dwarven-town-hall", "brising-clan", {-1, -1}, -2800)
+SetMapTemplateUnit("svarinshaug", "unit-dwarven-town-hall", "brising-clan", {-1, -1}, -2799)
+SetMapTemplateUnit("svarinshaug", "unit-brising-miner", "brising-clan", {-1, -1}, -2800, -2799)
+SetMapTemplateUnit("svarinshaug", "unit-brising-miner", "brising-clan", {-1, -1}, -2800, -2799)
+SetMapTemplateUnit("svarinshaug", "unit-brising-miner", "brising-clan", {-1, -1}, -2800, -2799)
+SetMapTemplateUnit("svarinshaug", "unit-brising-miner", "brising-clan", {-1, -1}, -2800, -2799)
+SetMapTemplateUnit("svarinshaug", "unit-brising-miner", "brising-clan", {-1, -1}, -2800, -2799)
 SetMapTemplateHero("svarinshaug", "Modsognir", "brising-clan", {-1, -1}, -2800, -2799)
 SetMapTemplateHero("svarinshaug", "Durin", "brising-clan", {-1, -1}, -2800, -2799)
 SetMapTemplateHero("svarinshaug", "Regin", "brising-clan", {-1, -1}, 561, 566) -- Sigibert's campaign begins in 561; Sigibert's encounter with Regin (which causes the latter's death in the end) should take place between Sigibert's initial defeat of the Avars and Chilperich in 561-562, and Sigibert's marriage to Brunichilde in 566

@@ -32,7 +32,7 @@ DefineDialogue("a-rocky-home-introduction", {
 		},
 		{
 			"speaker", "character", "Modsognir",
-			"text", "My clansfolk, if we are to survive, we will need food and materials to build shelters for our people."
+			"text", "My clansfolk, these rocky hills seem like a promising place to build our place of dwelling. And if we are to survive here, we will need food and materials to build shelters for our people."
 		},
 		{
 			"speaker", "character", "Durin",
@@ -41,6 +41,9 @@ DefineDialogue("a-rocky-home-introduction", {
 		{
 			"speaker", "character", "Modsognir",
 			"text", "There are many perils laying about. We need to be ready quickly."
+		},
+		{
+			"text", "Hint: Select a Miner, press the Build Structure button and then click on the Build Mead Hall button to build the structure required for this quest."
 		},
 		{
 			"text", "Hint: Press A and then click on a yale to attack it.",
