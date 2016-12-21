@@ -56,3 +56,60 @@ AddTrigger("a-rocky-home-yales-hunted",
 		return false
 	end
 )
+
+AddTrigger("grafvitning-kobolds-attack-modsognirs-clan",
+	function()
+		for i=0,(PlayerMax - 2) do
+			if (FindHero("Modsognir", i) ~= nil and FindHero("Durin", i) ~= nil) then
+				local uncount = 0
+				uncount = GetUnits(GetFactionPlayer("grafvitning-tribe"))
+				for unit1 = 1,table.getn(uncount) do 
+					if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) then
+						local unit_quantity = GetNumUnitsAt(i, "any", {GetUnitVariable(uncount[unit1],"PosX") - 4, GetUnitVariable(uncount[unit1],"PosY") - 4}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4})
+						if (unit_quantity > 0) then
+							trigger_player = i
+							return true
+						end
+					end
+				end
+			end
+		end
+		return false
+	end,
+	function()
+		CallDialogue("grafvitning-kobolds-attack-modsognirs-clan", trigger_player)
+		return false
+	end
+)
+
+AddTrigger("modsognirs-clan-kills-a-kobold",
+	function()
+		for i=0,(PlayerMax - 2) do
+			if (FindHero("Modsognir", i) ~= nil and FindHero("Durin", i) ~= nil and GetPlayerData(i, "UnitTypeKills", "unit-kobold-footpad") >= 1) then
+				trigger_player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function()
+		CallDialogue("modsognirs-clan-kills-a-kobold", trigger_player)
+		return false
+	end
+)
+
+AddTrigger("modsognirs-clan-destroys-the-grafvitnings",
+	function()
+		for i=0,(PlayerMax - 2) do
+			if (FindHero("Modsognir", i) ~= nil and FindHero("Durin", i) ~= nil and GetPlayerData(GetFactionPlayer("grafvitning-tribe"), "TotalNumUnitsConstructed") == 0) then
+				trigger_player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function()
+		CallDialogue("modsognirs-clan-destroys-the-grafvitnings", trigger_player)
+		return false
+	end
+)

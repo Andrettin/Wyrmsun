@@ -158,7 +158,6 @@ if (GrandStrategyYear >= -2970) then -- estimated date
 	SetProvinceUnitQuantity("Aurvang", "unit-goblin-spearman", 6) -- place some goblins in Aurvang after the dwarven bandits are gone
 	SetProvinceUnitQuantity("Aurvang", "unit-goblin-archer", 3)
 		
-	GrandStrategyEvents.TheBindingOfGrafvitnir = nil -- should be placed at an earlier date
 	SetProvinceHero("Svarinshaug", "Modsognir", 0)
 	SetProvinceHero("Svarinshaug", "Durin", 0)
 end

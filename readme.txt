@@ -67,6 +67,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Campaign
 - Mineral resources are now based on the real location of resources (except for those in the player starting points), instead of being randomly generated.
+- Added The First Dwarves campaign.
 
 * Faction
 - Removed faction splitting, as the feature was not performing as expected.
@@ -82,6 +83,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Quests
 - As missions are transitioning to the Campaign mode, acquiring technology points to unlock units, buildings and upgrades is no longer required for the missions.
+- The storylines of the A Rocky Home and The Binding of Grafvitnir quests are now part of the The First Dwarves campaign, and thus those quest scenarios have been removed. The storyline has also been modified, so that the dwarves now have to slay the wyrm, rather than put fetters on it, and the kobolds who serve the wyrm now play a more prominent role.
 
 * Units
 - Dwarven Axefighters and Yale Riders no longer cost Lumber.

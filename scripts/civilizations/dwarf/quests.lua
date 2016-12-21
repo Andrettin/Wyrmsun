@@ -101,16 +101,18 @@ DefineQuest("the-necklace-of-the-brisings", {
 --	MapMusic = "DwarfTheme4"
 })
 
-DefineQuest("the-binding-of-grafvitnir", {
-	Name = "The Binding of Grafvitnir",
+DefineQuest("the-slaying-of-grafvitnir", {
+	Name = "The Slaying of Grafvitnir",
 	Icon = "icon-wyrm",
-	Description = "The colossal wyrm Grafvitnir threatens the survival of the fledgling dwarves, who have little chance of slaying the monstrous creature. The only hope rests in getting close enough to bind Grafvitnir with a powerful fetter crafted by the clan's talented smiths.\n\nMap: Grafvitnir's Lair",
-	RequiredQuest = "the-necklace-of-the-brisings",
+	Description = "Svarinshaug has been discovered to house a kobold tribe, who will attack the dwarves on sight for trespassing on their sacred ground. Modsognir's clan must now slay the kobolds and the wyrm they worship, Grafvitnir.",
 	World = "Nidavellir",
 	Civilization = "dwarf",
-	Map = "maps/nidavellir/grafvitnirs-lair.smp",
-	Scenario = "scripts/civilizations/dwarf/scenarios/the_binding_of_grafvitnir.lua",
-	PlayerColor = "black"
+	PlayerColor = "black",
+	Objectives = {"- Destroy the Grafvitning Tribe"},
+	Unobtainable = true,
+	Uncompleteable = true,
+	Unfailable = true,
+	HeroesMustSurvive = {"Modsognir", "Durin"}
 })
 
 DefineQuest("the-dripping-hall", { -- based on the lay of Alvis from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 144.
@@ -264,7 +266,7 @@ DefineQuest("the-tomb-of-durahn-eikinskjaldi", {
 	Name = "The Tomb of Durahn Eikinskjaldi",
 	Icon = "icon-dwarven-shield-3",
 	Description = "The dwarves of the Eikinskjaldi Clan need to recover Durahn Eikinskjaldi's skull to prove their claim in the lordship of Joruvellir, but Durahn's tomb has fallen prey to a band of gnomish raiders...\n\nMap: Tomb of Durahn Eikinskjaldi",
-	RequiredQuest = "the-binding-of-grafvitnir",
+	RequiredQuest = "the-necklace-of-the-brisings",
 	World = "Nidavellir",
 	Civilization = "dwarf",
 	Map = "maps/nidavellir/tomb-of-durahn-eikinskjaldi.smp",
@@ -405,7 +407,7 @@ DefineQuest("andvaris-gold", {
 	Description = "Regin has asked you to help him take Andvari's gold forcibly, giving promises of great wealth.",
 	World = "Nidavellir",
 	Civilization = "dwarf",
-	RequiredQuest = "the-binding-of-grafvitnir", -- this happens long after Modsognir's time
+	RequiredQuest = "the-necklace-of-the-brisings", -- this happens long after Modsognir's time
 --	QuestGiver = "Regin",
 	Area = "Andvari's Falls",
 	StartSpeech = "Listen... there is a dwarf who lives near here, called Andvari. He has gathered a large gold hoard, by methods unknown. For me alone, it would be too risky to wrest the gold from Andvari. But with your help... can I count on it?",

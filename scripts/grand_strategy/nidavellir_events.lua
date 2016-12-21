@@ -184,54 +184,6 @@ local NidavellirEvents = {
 		},
 		OptionTooltips = {""}
 	},
-	TheBindingOfGrafvitnir = {
-		Name = "The Binding of Grafvitnir",
-		Description = "The colossal wyrm Grafvitnir threatens the survival of the fledgling dwarves, who have little chance of slaying the monstrous creature. The only hope rests in getting close enough to bind Grafvitnir with a powerful fetter crafted by the clan's talented smiths.",
-		Heroes = {
-			Modsognir = true,
-			Durin = true
-		},
-		RequiredEvents = {
-			TheNecklaceOfTheBrisings = true
-		},
-		Conditions = function(s)
-			if (
-				EventFaction.Name == "brising-clan"
-				and SyncRand(100) < 20
-			) then
-				return true
-			else
-				return false
-			end
-		end,
-		Options = {"~!OK"},
-		OptionEffects = {
-			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "brising-clan" and wyr.preferences.AutomaticBattles == false) then
-					SetProvinceHero("Svarinshaug", "Modsognir", 2)
-					SetProvinceHero("Svarinshaug", "Durin", 2)
-					
-					GrandStrategyEventMap = true
-					GetMapInfo(GetQuestData("the-binding-of-grafvitnir", "Map"))
-					SetCurrentQuest("the-binding-of-grafvitnir")
-					RunMap(GetQuestData("the-binding-of-grafvitnir", "Map"))
-					GrandStrategyEventMap = false
-					
-					RestoreScenarioUnitsToProvince({ProvinceName = "Svarinshaug", FactionName = "brising-clan", Heroes = {"Modsognir", "Durin"}})
-					
-					if (GameResult == GameVictory) then
-						ChangeFactionResource("dwarf", "brising-clan", "prestige", 25) -- prestige for chaining the beast
-					end
-				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "brising-clan" or wyr.preferences.AutomaticBattles)) then
-					ChangeFactionResource("dwarf", "brising-clan", "prestige", 25) -- prestige for chaining the beast
-					if (GrandStrategyFaction.Name == EventFaction.Name) then
-						GenericDialog("The Binding of Grafvitnir", "Modsognir successfully entered Grafvitnir's lair and chained the beast. With much effort, the enormous Grafvitnir was brought to Svarinshaug by the dwarves. The monster's fetters were bound to the walls of a nearby cave, and the entrance destroyed. Little is known of what ultimately became of the wyrm. What is certain is that the creature never bothered our clan again.")
-					end
-				end
-			end
-		},
-		OptionTooltips = {""}
-	},
 	TheSagesDeparture = {
 		Name = "The Sage's Departure",
 		Description = "Discontent with Durstorn's leadership, Thursagan has decided to leave us and move to the far north.",

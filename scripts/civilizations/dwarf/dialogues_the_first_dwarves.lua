@@ -32,7 +32,7 @@ DefineDialogue("a-rocky-home-introduction", {
 		},
 		{
 			"speaker", "character", "Modsognir",
-			"text", "My clansfolk, these rocky hills seem like a promising place to build our place of dwelling. And if we are to survive here, we will need food and materials to build shelters for our people."
+			"text", "My clansfolk, this rocky hill seems like a promising place to build our place of dwelling. And if we are to survive here, we will need food and materials to build shelters for our people."
 		},
 		{
 			"speaker", "character", "Durin",
@@ -71,6 +71,80 @@ DefineDialogue("a-rocky-home-materials-collected", {
 		{
 			"speaker", "character", "Modsognir",
 			"text", "The materials we need have been collected. It is time to build our new homes by these rocks!"
+		}
+	}
+})
+
+DefineDialogue("grafvitning-kobolds-attack-modsognirs-clan", {
+	Nodes = {
+		{
+			"speaker", "unit", "unit-kobold-footpad",
+			"speaker-player", "grafvitning-tribe",
+			"text", "This is our land! Die, breastling trespassers!"
+		},
+		{
+			"speaker", "character", "Durin",
+			"text", "Kobolds! We are under attack!",
+			"option-effects", {
+				function(s)
+					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("grafvitning-tribe"))
+					SetDiplomacy(GetFactionPlayer("grafvitning-tribe"), "enemy", trigger_player)
+				end
+			}
+		}
+	}
+})
+
+DefineDialogue("modsognirs-clan-kills-a-kobold", {
+	Nodes = {
+		{
+			"speaker", "character", "Durin",
+			"text", "Damn scaly beast!"
+		},
+		{
+			"speaker", "character", "Modsognir",
+			"text", "The kobolds claim these stonelands as their own. There are many other kobold territories, however, and us dwarves have only these rocks to call home. If our settlement in Svarinshaug is destroyed, we will go extinct."
+		},
+		{
+			"speaker", "character", "Durin",
+			"text", "Ye speak truly, Modsognir. But perhaps we can agree to some form of peace with the creatures?"
+		},
+		{
+			"speaker", "character", "Modsognir",
+			"text", "It would be no use. If they attacked us on sight, they hold Svarinshaug to be sacred ground and would never let us live here. Many kobold tribes build their homes around a wyrm's lair, serving the colossal beast who resides within. This is likely the case here."
+		},
+		{
+			"speaker", "character", "Durin",
+			"text", "A dire situation, if true. Our clan has never fought a wyrm before."
+		},
+		{
+			"speaker", "character", "Modsognir",
+			"text", "Either way, the survival of our clan requires that we root the kobolds out. Ready our warriors!",
+			"option-effects", {
+				function(s)
+					SetPlayerData(trigger_player, "AcceptQuest", "the-slaying-of-grafvitnir")
+				end
+			}
+		}
+	}
+})
+
+DefineDialogue("modsognirs-clan-destroys-the-grafvitnings", {
+	Nodes = {
+		{
+			"speaker", "character", "Modsognir",
+			"text", "The diminutive fiends and their pet monster are done for. Our clan lives on!",
+			"option-effects", {
+				function(s)
+					if (GetPlayerData(trigger_player, "HasQuest", "the-first-dwarves")) then
+						if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "the-first-dwarves") then
+							CallDialogue("campaign-victory", trigger_player)
+						end
+						SetPlayerData(trigger_player, "CompleteQuest", "the-first-dwarves")
+					end
+					SetPlayerData(trigger_player, "CompleteQuest", "the-slaying-of-grafvitnir")
+				end
+			}
 		}
 	}
 })
