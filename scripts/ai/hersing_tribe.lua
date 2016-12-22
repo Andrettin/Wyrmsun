@@ -33,7 +33,7 @@ local hersing_funcs = {
 	function() return (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("infantry")) > 0) end, -- returns true (meaning it doesn't go forward in the loop) while the player still has an AI active infantry unit
 	
 	function()
-		stratagus.gameData.AIState.index[AiPlayer() + 1] = 1; -- repeat loop
+		stratagus.gameData.AIState.index[AiPlayer() + 1] = 0; -- repeat loop
 		return false;
 	end,
 }
