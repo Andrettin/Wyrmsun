@@ -57,6 +57,52 @@ AddTrigger("a-rocky-home-yales-hunted",
 	end
 )
 
+AddTrigger("grafvitning-kobolds-send-attacker",
+	function()
+		for i=0,(PlayerMax - 2) do
+			if (GetPlayerData(i, "Faction") == "grafvitning-tribe" and FindHero("Modsognir") ~= nil and FindHero("Durin") ~= nil and FindHero("Modsognir", i) == nil and FindHero("Durin", i) == nil) then
+				local modsognir_player = GetUnitVariable(FindHero("Modsognir"), "Player")
+				if (Players[modsognir_player].Type ~= PlayerNeutral and GetPlayerData(modsognir_player, "UnitTypesCount", "unit-dwarven-barracks") > 0) then
+					trigger_player = i
+					return true
+				end
+			end
+		end
+		return false
+	end,
+	function()
+		local modsognir_player = GetUnitVariable(FindHero("Modsognir"), "Player")
+		local modsognir_building = nil
+		
+		local uncount = GetUnits(modsognir_player)
+		for unit1 = 1,table.getn(uncount) do 
+			if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building")) then
+				if (modsognir_building == nil) then
+					modsognir_building = uncount[unit1]
+				else
+					local old_pos_difference = math.abs(GetUnitVariable(modsognir_building, "PosX") - Players[trigger_player].StartPos.x) + math.abs(GetUnitVariable(modsognir_building, "PosY") - Players[trigger_player].StartPos.y)
+					local new_pos_difference = math.abs(GetUnitVariable(uncount[unit1], "PosX") - Players[trigger_player].StartPos.x) + math.abs(GetUnitVariable(uncount[unit1], "PosY") - Players[trigger_player].StartPos.y)
+					if (new_pos_difference < old_pos_difference) then
+						modsognir_building = uncount[unit1]
+					end
+				end
+			end
+		end
+		
+		if (modsognir_building ~= nil) then
+			uncount = GetUnits(trigger_player)
+			for unit1 = 1,table.getn(uncount) do 
+				if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic") and GetUnitVariable(uncount[unit1], "Ident") ~= "unit-wyrm") then
+					OrderUnit(trigger_player, GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, {GetUnitVariable(modsognir_building, "PosX"), GetUnitVariable(modsognir_building, "PosY")}, "attack")
+					break
+				end
+			end
+		end
+
+		return false
+	end
+)
+
 AddTrigger("grafvitning-kobolds-attack-modsognirs-clan",
 	function()
 		for i=0,(PlayerMax - 2) do

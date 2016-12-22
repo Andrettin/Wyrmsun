@@ -10,7 +10,7 @@
 --
 --      ai.lua - Define the AI.
 --
---      (c) Copyright 2000-2004 by Lutz Sammer and Jimmy Salmon
+--      (c) Copyright 2000-2016 by Lutz Sammer, Jimmy Salmon and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -185,5 +185,6 @@ Load("scripts/ai/land_attack.lua")
 Load("scripts/ai/land_attack_defensive.lua")
 Load("scripts/ai/sea_attack.lua")
 Load("scripts/ai/northern_wastelands_goblins.lua")
+Load("scripts/ai/grafvitning_tribe.lua")
 Load("scripts/ai/hersing_tribe.lua")
 Load("scripts/ai/grand_strategy_battle.lua")

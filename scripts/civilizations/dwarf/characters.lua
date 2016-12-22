@@ -104,7 +104,7 @@ DefineCharacter("Regin", {
 	Icon = "icon-thursagan",
 	HairVariation = "brown-hair",
 	Trait = "upgrade-intelligent",
-	Persistent = true,
+--	Persistent = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })
 

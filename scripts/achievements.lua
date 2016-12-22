@@ -68,7 +68,7 @@ DefineAchievement("the-blue-danube", {
 DefineAchievement("the-first-dwarves", {
 	Name = "The First Dwarves",
 	Icon = "icon-brising-miner",
-	Description = "Complete the The First Dwarves campaign.",
+	Description = "Complete The First Dwarves campaign.",
 	PlayerColor = "red",
 	RequiredQuests = {"the-first-dwarves"}
 })

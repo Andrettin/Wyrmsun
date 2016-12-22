@@ -222,7 +222,8 @@ DefineUnitType("unit-dwarven-militia", {
 	}
 } )
 
-DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
+DefineUnitType("unit-dwarven-axefighter", {
+	Name = _("Axefighter"),
 	Parent = "unit-template-infantry",
 	Civilization = "dwarf",
 	Description = _("Dwarven axefighters wield mighty battle axes, which make them feared opponents in close-range combat. Veteran axefighters often use the pay they've managed to spare to purchase steel armor for themselves at the local smithy."),
@@ -741,7 +742,8 @@ DefineUnitType("unit-dwarven-explorer", { Name = _("Explorer"),
 	}
 } )
 
-DefineUnitType("unit-dwarven-yale-rider", { Name = _("Yale Rider"),
+DefineUnitType("unit-dwarven-yale-rider", {
+	Name = _("Yale Rider"),
 	Parent = "unit-template-cavalry",
 	Civilization = "dwarf",
 	Description = _("Although dwarves have a stronger affinity for fighting on foot than many other peoples, they nevertheless possess formidable cavalry in the form of yale riders. These mounted dwarves are fierce in the battlefield, and their yales can easily traverse the mountainous terrain dwarves usually inhabit."),
@@ -1140,7 +1142,8 @@ DefineUnitType("unit-dwarven-mushroom-farm", { Name = _("Mushroom Farm"),
 	}
 } )
 
-DefineUnitType("unit-dwarven-barracks", { Name = _("War Hall"),
+DefineUnitType("unit-dwarven-barracks", {
+	Name = _("War Hall"),
 	Parent = "unit-template-barracks",
 	Civilization = "dwarf",
 	Description = _("The war hall is where dwarves meet to train and hone their axefighting skills. Since early times, dwarves have faced many perils in the dark plains and caves of Nidavellir, such as goblins or hostile dwarven clans. To fight off these menaces, clans gradually developed means of organizing themselves militarily."),
