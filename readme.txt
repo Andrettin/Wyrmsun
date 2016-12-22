@@ -61,6 +61,9 @@ https://github.com/Andrettin/Wyrmsun
 - 2.5.1
 -----------------------------------------------------------------------
 
+* AI
+- Fixed bug which sometimes resulted in AI forces trying to go to the top-left corner of the screen.
+
 * Buildings
 - Dwarven buildings now use stone (instead of lumber) for construction, except for the Yale Pen, Dock and mines.
 - Added Germanic Dock (graphics by Jinn).
