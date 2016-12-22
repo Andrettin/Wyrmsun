@@ -1900,11 +1900,14 @@ function OpenEncyclopediaFactionEntry(civilization, faction)
 	l:setSize(Video.Width - 64, Video.Height / 2)
 	l:setLineWidth(Video.Width - 64)
 	encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*0)
-	local effects = GetFactionEffectsString(civilization, faction)
+	local effects = ""
+	if (GetFactionData(civilization, faction, "FactionUpgrade") ~= "") then
+		effects = GetUpgradeData(GetFactionData(civilization, faction, "FactionUpgrade"), "EffectsString")
+	end
 	local description = ""
 	description = "Color: " .. CapitalizeString(GetFactionData(civilization, faction, "Color")) .. "\n\n"
 	if (effects ~= "") then
-		description = description .. "Effects: " .. effects .. "\n\n"
+		description = description .. "Effects: " .. effects .. ".\n\n"
 	end
 	if (GetFactionData(civilization, faction, "Description") ~= "") then
 		description = description .. "Description: " .. GetFactionData(civilization, faction, "Description") .. "\n\n"

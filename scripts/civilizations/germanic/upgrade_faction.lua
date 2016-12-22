@@ -28,32 +28,39 @@
 --
 
 DefineUpgrade("upgrade-asa-tribe-faction", {
-	Name = _("Asa Tribe Faction")
+	Name = _("Asa Tribe Faction"),
+	EffectsString = "+5 HP and +1 Damage for Eralas"
 })
 
 DefineUpgrade("upgrade-jarling-tribe-faction", {
-	Name = _("Eraling Tribe Faction")
+	Name = _("Eraling Tribe Faction"),
+	EffectsString = "+2 Damage for Eralas"
 })
 
 DefineUpgrade("upgrade-karling-tribe-faction", {
-	Name = _("Karling Tribe Faction")
+	Name = _("Karling Tribe Faction"),
+	EffectsString = "+1 Food Supply for Farms"
 })
 
 DefineUpgrade("upgrade-skeldung-tribe-faction", {
-	Name = _("Skeldung Tribe Faction")
+	Name = _("Skeldung Tribe Faction"),
+	EffectsString = "+1 Damage and +1 Armor for Eralas"
 })
 
 DefineUpgrade("upgrade-thielung-tribe-faction", {
-	Name = _("Thielung Tribe Faction")
+	Name = _("Thielung Tribe Faction"),
+	EffectsString = "+1 Damage and +1 Accuracy for Eralas"
 })
 
 DefineUpgrade("upgrade-thralling-tribe-faction", {
 	Name = _("Thrahiling Tribe Faction"),
-	GrandStrategyProductionEfficiencyModifier = {"lumber", 5}
+	GrandStrategyProductionEfficiencyModifier = {"lumber", 5},
+	EffectsString = "+5% Lumber Processing for Carpenter's Shops"
 })
 
 DefineUpgrade("upgrade-yngling-tribe-faction", {
-	Name = _("Yngling Tribe Faction")
+	Name = _("Yngling Tribe Faction"),
+	EffectsString = "+2 Damage for Skutans"
 })
 
 DefineModifier("upgrade-asa-tribe-faction",
@@ -98,7 +105,7 @@ DefineModifier("upgrade-thralling-tribe-faction",
 )
 
 DefineModifier("upgrade-yngling-tribe-faction",
-	{"BasicDamage", 1},
+	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-germanic-archer"}
 )

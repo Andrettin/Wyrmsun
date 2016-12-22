@@ -31,7 +31,8 @@
 --	NOTE: Save can generate this table.
 --
 
-DefineUnitType("unit-suebi-swordsman", { Name = _("Krieger"),
+DefineUnitType("unit-suebi-swordsman", {
+	Name = _("Krieger"),
 	Parent = "unit-teuton-swordsman",
 	Civilization = "teuton",
 	Faction = "suebi-tribe",

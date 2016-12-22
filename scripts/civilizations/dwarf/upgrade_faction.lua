@@ -26,40 +26,49 @@
 --
 
 DefineUpgrade("upgrade-eikinskjaldi-clan-faction", {
-	Name = _("Eikinskjaldi Clan Faction")
+	Name = _("Eikinskjaldi Clan Faction"),
+	EffectsString = "+2 Armor for Axefighters"
 })
 
 DefineUpgrade("upgrade-brising-clan-faction", {
-	Name = _("Brising Clan Faction")
+	Name = _("Brising Clan Faction"),
+	EffectsString = "+10 HP for Miners, +1 Damage for Axefighters, +50% Time Efficiency for Smithies"
 })
 
 DefineUpgrade("upgrade-norlund-clan-faction", {
-	Name = _("Norlund Clan Faction")
+	Name = _("Norlund Clan Faction"),
+	EffectsString = "+1 Damage and +1 Armor for Axefighters"
 })
 
 DefineUpgrade("upgrade-shinsplitter-clan-faction", {
-	Name = _("Shinsplitter Clan Faction")
+	Name = _("Shinsplitter Clan Faction"),
+	EffectsString = "+3 Damage and -1 Armor for Axefighters"
 })
 
 DefineUpgrade("upgrade-shorbear-clan-faction", {
-	Name = _("Shorbear Clan Faction")
+	Name = _("Shorbear Clan Faction"),
+	EffectsString = "+15 Damage for Ballistas"
 })
 
 DefineUpgrade("upgrade-joruvellir-faction", {
-	Name = _("Joruvellir Faction")
+	Name = _("Joruvellir Faction"),
+	EffectsString = "+2 Damage for Scouts, -10% cost for Yale Pens"
 })
 
 DefineUpgrade("upgrade-kal-kartha-faction", {
-	Name = _("Kal Kartha Faction")
+	Name = _("Kal Kartha Faction"),
+	EffectsString = "-5 HP and +3 Damage for Axefighters"
 })
 
 DefineUpgrade("upgrade-knalga-faction", {
-	Name = _("Knalga Faction")
+	Name = _("Knalga Faction"),
+	EffectsString = "+2 Damage for Axefighters"
 })
 
 --[[
 DefineUpgrade("upgrade-lyr-faction", {
-	Name = _("Lyr Faction")
+	Name = _("Lyr Faction"),
+	EffectsString = "+5 Armor for Towers"
 })
 --]]
 
@@ -120,7 +129,7 @@ DefineModifier("upgrade-shorbear-clan-faction",
 )
 
 DefineModifier("upgrade-joruvellir-faction",
-	{"BasicDamage", 1},
+	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}, {"apply-to", "unit-dwarven-explorer"}
 )

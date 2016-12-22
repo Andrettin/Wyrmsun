@@ -26,56 +26,69 @@
 --
 
 DefineUpgrade("upgrade-alamanni-tribe-faction", {
-	Name = _("Alamanni Tribe Faction")
+	Name = _("Alamanni Tribe Faction"),
+	EffectsString = "+10 HP for Kriegers"
 })
 
 DefineUpgrade("upgrade-angle-tribe-faction", {
-	Name = _("Angle Tribe Faction")
+	Name = _("Angle Tribe Faction"),
+	EffectsString = "+2 Damage for Kriegers"
 })
 
 DefineUpgrade("upgrade-bavarian-tribe-faction", {
-	Name = _("Bavarian Tribe Faction")
+	Name = _("Bavarian Tribe Faction"),
+	EffectsString = "+1 Damage and +1 Armor for Kriegers"
 })
 
 DefineUpgrade("upgrade-bernice-tribe-faction", {
-	Name = _("Bernice Tribe Faction")
+	Name = _("Bernice Tribe Faction"),
+	EffectsString = "Disembarkment Bonus for Kriegers and Speerkampfers"
 })
 
 DefineUpgrade("upgrade-frank-tribe-faction", {
-	Name = _("Frank Tribe Faction")
+	Name = _("Frank Tribe Faction"),
+	EffectsString = "+1 Armor for Kriegers and Speerkampfers, +1 Damage and +1 Armor for Ritters"
 })
 
 DefineUpgrade("upgrade-frisian-tribe-faction", {
-	Name = _("Frisian Tribe Faction")
+	Name = _("Frisian Tribe Faction"),
+	EffectsString = "+5 HP and +1 Armor for Kriegers"
 })
 
 DefineUpgrade("upgrade-gumeninga-tribe-faction", {
-	Name = _("Gumeninga Tribe Faction")
+	Name = _("Gumeninga Tribe Faction"),
+	EffectsString = "+30 Mana for Clerics"
 })
 
 DefineUpgrade("upgrade-lombard-tribe-faction", {
-	Name = _("Lombard Tribe Faction")
+	Name = _("Lombard Tribe Faction"),
+	EffectsString = "+2 Damage for Kriegers"
 })
 
 DefineUpgrade("upgrade-saxon-tribe-faction", {
-	Name = _("Saxon Tribe Faction")
+	Name = _("Saxon Tribe Faction"),
+	EffectsString = "+1 HP and +1 Damage for Kriegers"
 })
 
 DefineUpgrade("upgrade-suebi-tribe-faction", {
-	Name = _("Suebi Tribe Faction")
+	Name = _("Suebi Tribe Faction"),
+	EffectsString = "+2 Damage, -2 Armor and +2 Accuracy for Kriegers"
 })
 
 DefineUpgrade("upgrade-thuringian-tribe-faction", {
-	Name = _("Thuringian Tribe Faction")
+	Name = _("Thuringian Tribe Faction"),
+	EffectsString = "+2 Damage for Schutzes"
 })
 
 DefineUpgrade("upgrade-ubii-tribe-faction", {
 	Name = _("Ubii Tribe Faction"),
-	GrandStrategyProductionEfficiencyModifier = {"gold", 5, "silver", 5, "copper", 5}
+	GrandStrategyProductionEfficiencyModifier = {"gold", 5, "silver", 5, "copper", 5},
+	EffectsString = "+5% Copper Processing for Rathauses and Burgs"
 })
 
 DefineUpgrade("upgrade-mecklenburg-faction", {
-	Name = _("Mecklenburg Faction")
+	Name = _("Mecklenburg Faction"),
+	EffectsString = "+2 Armor for Kriegers"
 })
 
 DefineModifier("upgrade-alamanni-tribe-faction",
@@ -157,7 +170,7 @@ DefineModifier("upgrade-suebi-tribe-faction",
 )
 
 DefineModifier("upgrade-thuringian-tribe-faction",
-	{"BasicDamage", 1},
+	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-archer"}
 )

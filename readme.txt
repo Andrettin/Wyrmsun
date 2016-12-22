@@ -68,12 +68,13 @@ https://github.com/Andrettin/Wyrmsun
 - Dwarven buildings now use stone (instead of lumber) for construction, except for the Yale Pen, Dock and mines.
 - Added Germanic Dock (graphics by Jinn).
 
-* Campaign
+* Campaigns
 - Mineral resources are now based on the real location of resources (except for those in the player starting points), instead of being randomly generated.
 - Added The First Dwarves campaign.
 
-* Faction
+* Factions
 - Removed faction splitting, as the feature was not performing as expected.
+- Updated the faction effects string to be more objective.
 
 * Grand Strategy
 - Removed province and tile name generation, greatly saving on memory usage.

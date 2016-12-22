@@ -61,18 +61,11 @@ function ChooseFaction(old_civilization, old_faction)
 
 	if (GameRunning and not IsNetworkGame()) then
 		SetGamePaused(true)
-	elseif (GrandStrategy) then
-		GrandStrategyGamePaused = true
 	end
 	
 	local menu
 	
-	if (GrandStrategy == false) then
-		menu = WarGameMenu(panel(1))
-	else
-		menu = WarGrandStrategyGameMenu(panel(1))
-		menu:setDrawMenusUnder(true)
-	end
+	menu = WarGameMenu(panel(1))
 
 	menu:addLabel(_("Choose Your Faction"), 128, 11)
 	
@@ -81,7 +74,11 @@ function ChooseFaction(old_civilization, old_faction)
 	faction_dd = menu:addDropDown(faction_name_list, (256 / 2 - (152 / 2)), 55 + 26*1,
 	function(dd)
 		chosen_faction = faction_list[faction_dd:getSelected() + 1]
-		l:setCaption(_("Default Color:") .. " " .. _(CapitalizeString(GetFactionData(current_civilization, faction_list[faction_dd:getSelected() + 1], "Color"))) .. "\n\n" .. _("Effects:") .. " " .. GetFactionEffectsString(current_civilization, faction_list[faction_dd:getSelected() + 1]))
+		if (GetFactionData(current_civilization, faction_list[faction_dd:getSelected() + 1], "FactionUpgrade") ~= "") then
+			l:setCaption(_("Default Color:") .. " " .. _(CapitalizeString(GetFactionData(current_civilization, faction_list[faction_dd:getSelected() + 1], "Color"))) .. "\n\n" .. _("Effects:") .. " " .. GetUpgradeData(GetFactionData(current_civilization, faction_list[faction_dd:getSelected() + 1], "FactionUpgrade"), "EffectsString"))
+		else
+			l:setCaption(_("Default Color:") .. " " .. _(CapitalizeString(GetFactionData(current_civilization, faction_list[faction_dd:getSelected() + 1], "Color"))))
+		end
 	end)
 	faction_dd:setSize(152, 20)
 	faction_dd:setSelected(0)
@@ -92,7 +89,11 @@ function ChooseFaction(old_civilization, old_faction)
 	l:setSize(228, 192)
 	l:setLineWidth(228)
 	menu:add(l, 14, 3 + (32 * 4))
-	l:setCaption(_("Default Color:") .. " " .. _(CapitalizeString(GetFactionData(current_civilization, faction_list[faction_dd:getSelected() + 1], "Color"))) .. "\n\n" .. _("Effects:") .. " " .. GetFactionEffectsString(current_civilization, faction_list[faction_dd:getSelected() + 1]))
+	if (GetFactionData(current_civilization, faction_list[faction_dd:getSelected() + 1], "FactionUpgrade") ~= "") then
+		l:setCaption(_("Default Color:") .. " " .. _(CapitalizeString(GetFactionData(current_civilization, faction_list[faction_dd:getSelected() + 1], "Color"))) .. "\n\n" .. _("Effects:") .. " " .. GetUpgradeData(GetFactionData(current_civilization, faction_list[faction_dd:getSelected() + 1], "FactionUpgrade"), "EffectsString"))
+	else
+		l:setCaption(_("Default Color:") .. " " .. _(CapitalizeString(GetFactionData(current_civilization, faction_list[faction_dd:getSelected() + 1], "Color"))))
+	end
 
 	local ok_button = menu:addFullButton("~!OK", "o", 16, 248 - (36 * 0),
 		function()
