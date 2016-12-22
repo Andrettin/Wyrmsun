@@ -52,6 +52,7 @@ SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/icons/frank_swordsma
 SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/icons/frank_veteran_swordsman_blond_hair.png", "teuton/icons/veteran_saxon_swordsman_blond_hair.png")
 SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/icons/frank_veteran_swordsman_brown_hair.png", "teuton/icons/veteran_saxon_swordsman_brown_hair.png")
 SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/icons/frank_veteran_swordsman_gray_hair.png", "teuton/icons/veteran_saxon_swordsman_brown_hair.png")
+SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/icons/frank_veteran_swordsman_red_hair.png", "teuton/icons/veteran_saxon_swordsman_red_hair.png")
 SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/icons/frank_heroic_swordsman_blond_hair.png", "teuton/icons/heroic_saxon_swordsman_blond_hair.png")
 SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/icons/frank_heroic_swordsman_brown_hair.png", "teuton/icons/heroic_saxon_swordsman_brown_hair.png")
 SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/icons/frank_heroic_swordsman_gray_hair.png", "teuton/icons/heroic_saxon_swordsman_brown_hair.png")
