@@ -55,7 +55,7 @@ DefineDeity("thor", { -- Son of Odin and Jord (Fjorgyn) and Sif's husband; known
 	Major = true,
 	Domains = {"air", "lightning", "order"},
 	CulturalNames = {
-		"dwarf", "Vingthor", -- name used by Thor when revealing himself to the dwarf Alvis; the meaning is "Thor the Hurler"; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 185.
+--		"dwarf", "Vingthor", -- name used by Thor when revealing himself to the dwarf Alvis; the meaning is "Thor the Hurler"; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 185.
 		"germanic", "Thunraz", -- Buchholz gives "Þun(a)raz"; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129.
 		"teuton", "Thunor" -- Anglo-Saxon name for the deity; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 98-99.
 	},
@@ -189,16 +189,17 @@ DefineDeity("gefion", { -- Name means "Giver"; Source: Kevin Crossley-Holland, "
 	Domains = {"earth"} -- goddess of fertility
 })
 
-DefineDeity("heimdall", { -- Son of nine mothers; the horn Gjall belongs to him; is the watchman of the gods; identified with Rig (the progenitor of the three races of man); Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 244.
+DefineDeity("heimdall", { -- the horn Gjall belongs to him; identified with Rig (the progenitor of the three races of man in Norse mythology); Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. xxvii-xxviii, 244.
 	Name = "Heimdall",
 	Pantheon = "Aesir",
 	Civilizations = {"germanic", "norse"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {},
+--	Domains = {"air"},
 	CulturalNames = {
 		"germanic", "Haimadala" -- tentative rendering of "Heimdall" in Proto-Germanic (assuming "dallr" to have the same etymological origin as "dalr", the Old Norse word for "valley")
-	}
+	},
+--	Description = "Heimdall is the watchman of the Aesir, his hall Himinbjorg guarding the gates to Asgard. He is believed to be the son of nine mothers."
 })
 
 DefineDeity("hel", { -- Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 116.
