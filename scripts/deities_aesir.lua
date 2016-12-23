@@ -91,7 +91,7 @@ DefineDeity("sol", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980,
 	Civilizations = {"germanic", "norse", "teuton"},
 	Religions = {"paganism"},
 	Gender = "female",
-	Domains = {"fire"}, -- goddess of the sun
+	Domains = {"sun"}, -- goddess of the sun
 	CulturalNames = {
 		"germanic", "Sunon", -- "Sunōn"; a sun chariot artifact belonging to the Nordic Bronze Age was found in Trundholm Mose (in Zealand, Denmark), having an aspect similar to that ascribed to Sol in Norse mythology; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-sun-chariot/ . Winfred P. Lehmann gives the word for sun in Proto-Germanic as "Sunōn", which seems very possible to be the word which gave origin to the Old High German name of the deity, "Sunna" (and Lehmann gives an Old High German "Sunno" as being a reflex of "Sunōn", too); Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2. The Sun was worshipped as a major deity in the Bronze Age in Scandinavia; Source: Nils-Axel Mörner, Bob G. Lind and Göran Possnert, "Heimdall's Stones at Vitemölla in SE Sweden and the Chronology and Stratigraphy of the Surroundings", 2009, p. 205.
 		"teuton", "Sunna" -- The second Merseburg charm (written in Old High German) attests a deity named Sunna, which seems likely to be the Old High German name for Sol; in the charm her sister is Sinhtgunt; Source: Susan D. Fuller, "Pagan Charms in Tenth-Century Saxony? The Function of the Merseburg Charms", 1909, p. 162.
@@ -105,7 +105,7 @@ DefineDeity("tyr", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980,
 	Civilizations = {"germanic", "norse", "teuton"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {"courage"}, -- god of war
+	Domains = {"warfare"}, -- god of war
 	CulturalNames = {
 		"germanic", "Tiwaz", -- "Tīwaz"; Proto-Germanic name of the god; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115.
 		"norse", "Tyr", -- "Týr"; Old Norse name of the god; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115.
@@ -142,7 +142,7 @@ DefineDeity("bragi", { -- Son of Odin and husband of Idun; Source: Kevin Crossle
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {} -- god of eloquence and poetry
+	Domains = {"poetry"} -- god of eloquence and poetry
 })
 
 DefineDeity("eir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 241.
@@ -242,7 +242,8 @@ DefineDeity("idun", { -- Wife of Bragi; she takes care of the golden apples of y
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
-	Gender = "female"
+	Gender = "female",
+	Domains = {"life"}
 })
 
 DefineDeity("jord", { -- Mother of Thor by Odin; name means "Earth"; also known as Fjorgyn; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 241-242.
@@ -259,7 +260,8 @@ DefineDeity("lofn", { -- Goddess who favored illicit unions; Source: Kevin Cross
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
-	Gender = "female"
+	Gender = "female",
+	Domains = {"lust"}
 })
 
 DefineDeity("loki", { -- Son of two giants; attractive, mischief-making and ambivalent god; known as the Sly One, the Trickster, the Shape Changer or the Sky Traveller; as time wears on he becomes more evil, culminating in him causing the death of Balder, and Loki is then imprisoned until Ragnarok comes; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 247.
@@ -268,7 +270,8 @@ DefineDeity("loki", { -- Son of two giants; attractive, mischief-making and ambi
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Major = true
+	Major = true,
+	Domains = {"chaos", "envy"}
 })
 
 DefineDeity("mimir", { -- Wise god sent by the Aesir to seal their truce with the Vanir, but was killed by the latter; his head was preserved by Odin and put by Mimir's Well; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 247.

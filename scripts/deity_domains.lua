@@ -102,6 +102,16 @@ DefineDeityDomain("light", {
 	Name = "Light"
 })
 
+-- Sun and Moon
+
+DefineDeityDomain("sun", {
+	Name = "Sun"
+})
+
+DefineDeityDomain("moon", {
+	Name = "Moon"
+})
+
 -- Four Cardinal Virtues
 
 DefineDeityDomain("courage", {
@@ -129,11 +139,18 @@ DefineDeityDomain("charity", {
 })
 
 DefineDeityDomain("faith", {
-	Name = "Faith"
+	Name = "Faith",
+	Abilities = {"upgrade-healing"}
 })
 
 DefineDeityDomain("hope", {
 	Name = "Hope"
+})
+
+-- Other Virtues
+
+DefineDeityDomain("love", {
+	Name = "Love"
 })
 
 -- Seven Sins
@@ -167,6 +184,13 @@ DefineDeityDomain("wrath", {
 	Abilities = {"upgrade-terror"}
 })
 
+-- Other Sins
+
+DefineDeityDomain("fear", {
+	Name = "Fear",
+	Abilities = {"upgrade-terror"}
+})
+
 -- Skills
 
 DefineDeityDomain("archery", {
@@ -176,4 +200,12 @@ DefineDeityDomain("archery", {
 
 DefineDeityDomain("metalworking", {
 	Name = "Metalworking"
+})
+
+DefineDeityDomain("poetry", {
+	Name = "Poetry"
+})
+
+DefineDeityDomain("warfare", {
+	Name = "Warfare"
 })

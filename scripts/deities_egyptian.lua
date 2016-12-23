@@ -31,7 +31,7 @@ DefineDeity("aton", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, 
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"}, -- actually a form of monotheism in which the existence of other deities was sometimes accepted as well (was it henotheism?)
 	Gender = "male",
-	Domains = {"fire"},
+	Domains = {"sun", "fire"},
 	Major = true,
 --	Description = "Aton is a solar deity, believed by its followers to be the only god in existence."
 })
@@ -42,7 +42,7 @@ DefineDeity("ra", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {"fire"},
+	Domains = {"sun", "fire"},
 	Major = true,
 --	Description = "Ra is a mighty sun god. He is the son of Neith."
 })
@@ -294,7 +294,7 @@ DefineDeity("mandulis", { -- Source: Claude Traunecker, "Os Deuses do Egito", 19
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {"fire"},
+	Domains = {"sun"},
 --	Description = "Mandulis is a solar god, who takes the shape of a flowery falcon."
 })
 

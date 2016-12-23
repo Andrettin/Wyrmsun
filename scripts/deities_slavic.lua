@@ -69,7 +69,7 @@ DefineDeity("slnce", { -- the Sun; Source: "Germans, Avars and Slavs", p. 125
 	Name = "Slnce",
 	Civilizations = {"slav"},
 	Religions = {"paganism"},
-	Domains = {"fire"} -- deity of the sun
+	Domains = {"sun"} -- deity of the sun
 	-- child of Svarog
 })
 
