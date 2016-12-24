@@ -69,7 +69,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Germanic Dock (graphics by Jinn).
 
 * Campaigns
-- Mineral resources are now based on the real location of resources (except for those in the player starting points), instead of being randomly generated.
+- Mineral resources for the Earth campaign map are now based on the real location of resources (except for those in the player starting points), instead of being randomly generated.
 - Added The First Dwarves campaign.
 
 * Factions
