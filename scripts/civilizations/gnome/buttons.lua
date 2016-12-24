@@ -54,6 +54,26 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-portent",
 	ForUnit = {"unit-gnomish-herbalist", "unit-deep-gnomish-herbalist", "unit-forest-gnomish-herbalist"}
 })
 
+-- Buildings -----------------------------------------------------
+
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-gnomish-town-hall",
+	Action = "build", Value = "unit-gnomish-town-hall",
+	Key = "h", Hint = _("Build Town ~!Hall"), Popup = "popup-building",
+	ForUnit = {"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-forest-gnomish-worker", "unit-derro-worker"}
+})
+
+DefineButton( { Pos = 2, Level = 1, Icon = "icon-gnomish-farm",
+	Action = "build", Value = "unit-gnomish-farm",
+	Key = "f", Hint = _("Build ~!Farm"), Popup = "popup-building",
+	ForUnit = {"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-forest-gnomish-worker", "unit-derro-worker"}
+})
+
+DefineButton( { Pos = 3, Level = 1, Icon = "icon-gnomish-barracks",
+	Action = "build", Value = "unit-gnomish-barracks",
+	Key = "b", Hint = _("Build ~!Barracks"), Popup = "popup-building",
+	ForUnit = {"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-forest-gnomish-worker", "unit-derro-worker"}
+})
+
 -- Upgrades ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 2, Icon = "icon-gnomish-duelist",
