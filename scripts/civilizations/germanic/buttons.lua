@@ -66,6 +66,38 @@ DefineButton( { Pos = 5, Level = 1, Icon = "icon-germanic-smithy",
 	ForUnit = {"unit-germanic-worker"}
 })
 
+DefineButton( { Pos = 9, Level = 1, Icon = "icon-germanic-dock",
+	Action = "build", Value = "unit-germanic-dock",
+	Key = "d", Hint = _("Build ~!Dock"), Popup = "popup-building",
+	ForUnit = {"unit-germanic-worker"}
+})
+
+-- Units --------------------------------------------------------------
+
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-worker",
+	Action = "train-unit", Value = "unit-germanic-worker",
+	Key = "b", Hint = _("Train ~!Bura"), Popup = "popup-unit",
+	ForUnit = {"unit-germanic-town-hall"}
+})
+
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-warrior",
+	Action = "train-unit", Value = "unit-germanic-warrior",
+	Key = "e", Hint = _("Train ~!Erala"), Popup = "popup-unit",
+	ForUnit = {"unit-germanic-barracks"}
+})
+
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-archer",
+	Action = "train-unit", Value = "unit-germanic-archer",
+	Key = "s", Hint = _("Train ~!Skutan"), Popup = "popup-unit",
+	ForUnit = {"unit-germanic-barracks"}
+})
+
+DefineButton( { Pos = 1, Level = 0,
+	Action = "train-unit", Value = "unit-germanic-transport-ship",
+	Key = "t", Hint = _("Build ~!Transport"), Popup = "popup-unit",
+	ForUnit = {"unit-germanic-dock"}
+})
+
 -- Researches ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-broad-sword",

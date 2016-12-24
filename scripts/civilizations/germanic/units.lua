@@ -31,7 +31,8 @@
 --	NOTE: Save can generate this table.
 --
 
-DefineUnitType("unit-germanic-worker", { Name = _("Bura"), -- Bûra = "Bauer" in Proto-Germanic, according to the "Wortschatz der Germanischen Spracheinheit" by August Fick; another possibility of a name is "Theva", "Thrahila" or "Thregila", all of which mean "Knecht" or "Thrall"
+DefineUnitType("unit-germanic-worker", {
+	Name = _("Bura"), -- Bûra = "Bauer" in Proto-Germanic, according to the "Wortschatz der Germanischen Spracheinheit" by August Fick; another possibility of a name is "Theva", "Thrahila" or "Thregila", all of which mean "Knecht" or "Thrall"
 	Parent = "unit-template-worker",
 	Civilization = "germanic",
 	Description = _("Hardworking and robust, buras are the lifeblood of Germanic society, tending the fields and performing most of the manual labor required."),
@@ -47,8 +48,6 @@ DefineUnitType("unit-germanic-worker", { Name = _("Bura"), -- Bûra = "Bauer" in
 	NightSightRangeBonus = -1,
 	WeaponClasses = {"mace"},
 	BluntDamage = true,
-	ButtonKey = "b",
-	ButtonHint = _("Train ~!Bura"),
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese", "unit-carrots"},
 	CanGatherResources = {
 		{
@@ -108,8 +107,6 @@ DefineUnitType("unit-germanic-warrior", {
 	NightSightRangeBonus = -1,
 	WeaponClasses = {"sword", "thrusting-sword"},
 	HackDamage = true,
-	ButtonKey = "e",
-	ButtonHint = _("Train ~!Erala"),
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-quenching", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-trickery", "upgrade-item-suffix-of-victory"}, -- allow more affixes than normal for the unit's level, to compensate for the unit not being upgradeable
 	Variations = {
@@ -441,8 +438,6 @@ DefineUnitType("unit-germanic-archer", {
 	PierceDamage = true,
 	CanCastSpell = {"spell-precise-shot"},
 	AutoCastActive = {"spell-precise-shot"},
-	ButtonKey = "s",
-	ButtonHint = _("Train ~!Skutan"),
 	AiDrops = {"unit-arrows", "unit-barbed-arrows", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-quenching", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-trickery", "upgrade-item-suffix-of-victory"}, -- allow more affixes than normal for the unit's level, to compensate for the unit not being upgradeable
 	Variations = {
@@ -486,7 +481,8 @@ DefineUnitType("unit-germanic-transport-ship", {
 	}
 })
 
-DefineUnitType("unit-germanic-town-hall", { Name = _("Chieftain's Hall"),
+DefineUnitType("unit-germanic-town-hall", {
+	Name = _("Chieftain's Hall"),
 	Parent = "unit-template-town-hall",
 	Civilization = "germanic",
 	Description = _("The chieftain's hall serves both as the dwelling of a Germanic tribe's chieftain and as the center of its political life."),
@@ -494,8 +490,6 @@ DefineUnitType("unit-germanic-town-hall", { Name = _("Chieftain's Hall"),
 	Shadow = {"file", "germanic/buildings/town_hall_shadow.png", "size", {128, 128}},
 	Animations = "animations-germanic-town-hall", Icon = "icon-germanic-town-hall",
 	Construction = "construction-germanic-town-hall",
-	Trains = {"unit-germanic-worker"},
-	ButtonHint = _("Build Chieftain's ~!Hall"),
 	AiDrops = {"unit-boots"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery"},
 	Sounds = {
@@ -527,9 +521,6 @@ DefineUnitType("unit-germanic-barracks", { Name = _("War Lodge"),
 	Image = {"file", "germanic/buildings/barracks.png", "size", {96, 96}},
 	Shadow = {"file", "germanic/buildings/barracks_shadow.png", "size", {96, 96}},
 	Icon = "icon-germanic-barracks",
-	Trains = {"unit-germanic-warrior", "unit-germanic-archer"},
-	ButtonKey = "w",
-	ButtonHint = _("Build ~!War Lodge"),
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-short-spear", "unit-long-spear", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery"},
 	Sounds = {
@@ -576,7 +567,6 @@ DefineUnitType("unit-germanic-dock", {
 	Image = {"file", "germanic/buildings/dock.png", "size", {96, 96}},
 	Shadow = {"file", "germanic/buildings/dock_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-germanic-dock",
-	Trains = {"unit-germanic-transport-ship"},
 	Sounds = {
 		"help", "basic-germanic-voices-help-town"
 	}
