@@ -580,7 +580,3 @@ DefineUnitType("unit-germanic-dock", {
 		"help", "basic-germanic-voices-help-town"
 	}
 } )
-
-DefineUnitType("unit-germanic-worker", {
-	Trains = {"unit-germanic-town-hall", "unit-germanic-farm", "unit-germanic-barracks", "unit-germanic-carpenters-shop", "unit-germanic-smithy", "unit-germanic-dock"}
-} )

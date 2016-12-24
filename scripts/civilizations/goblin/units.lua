@@ -663,7 +663,8 @@ DefineUnitType("unit-goblin-smithy", {
 	}
 } )
 
-DefineUnitType("unit-goblin-temple", { Name = _("Temple"),
+DefineUnitType("unit-goblin-temple", {
+	Name = _("Temple"),
 	Parent = "unit-template-temple",
 	Civilization = "goblin",
 	Description = _("Goblin temples are built on sites deemed to be particularly mystic for the green-skinned creatures, a wyrm's burial ground being an esteemed choice. Around the site massive runestones are placed, readying it for goblin shamans to chaint their rituals."),
@@ -676,7 +677,8 @@ DefineUnitType("unit-goblin-temple", { Name = _("Temple"),
 	}
 } )
 
-DefineUnitType("unit-goblin-watch-tower", { Name = _("Watch Tower"),
+DefineUnitType("unit-goblin-watch-tower", {
+	Name = _("Watch Tower"),
 	Parent = "unit-template-watch-tower",
 	Civilization = "goblin",
 	Description = _("Goblins are ever wary of being caught offguard by attacks from rival tribes or dwarven punitive expeditions. Their watch towers keep them informed if foes are approaching."),
@@ -688,7 +690,8 @@ DefineUnitType("unit-goblin-watch-tower", { Name = _("Watch Tower"),
 	}
 } )
 
-DefineUnitType("unit-goblin-guard-tower", { Name = _("Guard Tower"),
+DefineUnitType("unit-goblin-guard-tower", {
+	Name = _("Guard Tower"),
 	Parent = "unit-template-guard-tower",
 	Civilization = "goblin",
 	Description = _("The more powerful goblin tribes protect their settlements with the placement of guard towers on their perimeters. The archers garrisoned in these structures greet approaching enemies with deadly arrows."),
@@ -713,11 +716,8 @@ DefineUnitType("unit-goblin-dock", {
 	}
 } )
 
-DefineUnitType("unit-goblin-worker", {
-	Trains = {"unit-goblin-town-hall", "unit-goblin-farm", "unit-goblin-mess-hall", "unit-goblin-lumber-mill", "unit-goblin-smithy", "unit-goblin-temple", "unit-goblin-watch-tower", "unit-goblin-dock"}
-} )
-
-DefineUnitType("unit-goblin-banner", { Name = _("Goblin Banner"),
+DefineUnitType("unit-goblin-banner", {
+	Name = _("Goblin Banner"),
 	Civilization = "goblin",
 	Image = {"file", "goblin/decorations/goblin_banner.png", "size", {32, 32}},
 	NeutralMinimapColor = {128, 128, 0},

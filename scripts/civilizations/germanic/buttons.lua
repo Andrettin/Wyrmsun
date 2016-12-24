@@ -34,6 +34,38 @@
 --		['allowed check ['values]] Key = key, Hint = hint 'for-unit", "units)
 --
 
+-- Buildings -----------------------------------------------------
+
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-germanic-town-hall",
+	Action = "build", Value = "unit-germanic-town-hall",
+	Key = "h", Hint = _("Build Chieftain's ~!Hall"), Popup = "popup-building",
+	ForUnit = {"unit-germanic-worker"}
+})
+
+DefineButton( { Pos = 2, Level = 1, Icon = "icon-germanic-farm",
+	Action = "build", Value = "unit-germanic-farm",
+	Key = "f", Hint = _("Build ~!Farm"), Popup = "popup-building",
+	ForUnit = {"unit-germanic-worker"}
+})
+
+DefineButton( { Pos = 3, Level = 1, Icon = "icon-germanic-barracks",
+	Action = "build", Value = "unit-germanic-barracks",
+	Key = "w", Hint = _("Build ~!War Lodge"), Popup = "popup-building",
+	ForUnit = {"unit-germanic-worker"}
+})
+
+DefineButton( { Pos = 4, Level = 1, Icon = "icon-germanic-carpenters-shop",
+	Action = "build", Value = "unit-germanic-carpenters-shop",
+	Key = "r", Hint = _("Build Ca~!rpenter's Shop"), Popup = "popup-building",
+	ForUnit = {"unit-germanic-worker"}
+})
+
+DefineButton( { Pos = 5, Level = 1, Icon = "icon-germanic-smithy",
+	Action = "build", Value = "unit-germanic-smithy",
+	Key = "s", Hint = _("Build ~!Smithy"), Popup = "popup-building",
+	ForUnit = {"unit-germanic-worker"}
+})
+
 -- Researches ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-broad-sword",

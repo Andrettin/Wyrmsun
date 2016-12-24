@@ -60,6 +60,56 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-3",
 	}
 } )
 
+-- Buildings -----------------------------------------------------
+
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-goblin-town-hall",
+	Action = "build", Value = "unit-goblin-town-hall",
+	Key = "h", Hint = _("Build Town ~!Hall"), Popup = "popup-building",
+	ForUnit = {"unit-goblin-worker"}
+} )
+
+DefineButton( { Pos = 2, Level = 1, Icon = "icon-goblin-farm",
+	Action = "build", Value = "unit-goblin-farm",
+	Key = "f", Hint = _("Build ~!Farm"), Popup = "popup-building",
+	ForUnit = {"unit-goblin-worker"}
+})
+
+DefineButton( { Pos = 3, Level = 1, Icon = "icon-goblin-mess-hall",
+	Action = "build", Value = "unit-goblin-mess-hall",
+	Key = "m", Hint = _("Build ~!Mess Hall"), Popup = "popup-building",
+	ForUnit = {"unit-goblin-worker"}
+})
+
+DefineButton( { Pos = 4, Level = 1, Icon = "icon-goblin-lumber-mill",
+	Action = "build", Value = "unit-goblin-lumber-mill",
+	Key = "l", Hint = _("Build ~!Lumber Mill"), Popup = "popup-building",
+	ForUnit = {"unit-goblin-worker"}
+})
+
+DefineButton( { Pos = 5, Level = 1, Icon = "icon-goblin-smithy",
+	Action = "build", Value = "unit-goblin-smithy",
+	Key = "o", Hint = _("Build Fugla F~!orge"), Popup = "popup-building",
+	ForUnit = {"unit-goblin-worker"}
+})
+
+DefineButton( { Pos = 7, Level = 1, Icon = "icon-goblin-temple",
+	Action = "build", Value = "unit-goblin-temple",
+	Key = "p", Hint = _("Build Tem~!ple"), Popup = "popup-building",
+	ForUnit = {"unit-goblin-worker"}
+})
+
+DefineButton( { Pos = 8, Level = 1, Icon = "icon-goblin-watch-tower",
+	Action = "build", Value = "unit-goblin-watch-tower",
+	Key = "t", Hint = _("Build Watch ~!Tower"), Popup = "popup-building",
+	ForUnit = {"unit-goblin-worker"}
+})
+
+DefineButton( { Pos = 9, Level = 1, Icon = "icon-goblin-dock",
+	Action = "build", Value = "unit-goblin-dock",
+	Key = "d", Hint = _("Build ~!Dock"), Popup = "popup-building",
+	ForUnit = {"unit-goblin-worker"}
+})
+
 -- Researches ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-broad-sword",
