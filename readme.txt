@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 - 2.5.2
 -----------------------------------------------------------------------
 
+* Maps
+- Changed starting resources for random maps.
+
 * Units
 - When dwarven Miners, Skilled Miners and Expert Miners are selected at the same time, the build structure buttons now show up correctly.
 

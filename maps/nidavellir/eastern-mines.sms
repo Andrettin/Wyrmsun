@@ -93,7 +93,7 @@ end
 SetPlayerData(0, "RaceName", "dwarf")
 SetPlayerData(0, "Resources", "copper", 2000)
 SetPlayerData(0, "Resources", "lumber", 2000)
-SetPlayerData(0, "Resources", "stone", 1000)
+SetPlayerData(0, "Resources", "stone", 2000)
 SetPlayerData(0, "Resources", "oil", 0)
 SetAiType(0, "land-attack")
 SetStartView(1, 59, 53)

@@ -1715,10 +1715,10 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 						CreateStartingBuilding(i, "Stronghold Guard Tower")
 					end
 
-					SetPlayerData(i, "Resources", "copper", 10000)
-					SetPlayerData(i, "Resources", "lumber", 6000)
-					SetPlayerData(i, "Resources", "stone", 2000)
---					SetPlayerData(i, "Resources", "oil", 2000)
+					SetPlayerData(i, "Resources", "copper", 5000)
+					SetPlayerData(i, "Resources", "lumber", 5000)
+					SetPlayerData(i, "Resources", "stone", 5000)
+
 					SetAiType(i, "land-attack")
 				end
 			end
