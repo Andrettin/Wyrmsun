@@ -714,7 +714,7 @@ DefineUnitType("unit-goblin-dock", {
 } )
 
 DefineUnitType("unit-goblin-worker", {
-	Trains = {"unit-goblin-town-hall", "unit-goblin-farm", "unit-goblin-mess-hall", "unit-goblin-lumber-mill", "unit-goblin-smithy", "unit-goblin-temple", "unit-goblin-watch-tower", "unit-goblin-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
+	Trains = {"unit-goblin-town-hall", "unit-goblin-farm", "unit-goblin-mess-hall", "unit-goblin-lumber-mill", "unit-goblin-smithy", "unit-goblin-temple", "unit-goblin-watch-tower", "unit-goblin-dock"}
 } )
 
 DefineUnitType("unit-goblin-banner", { Name = _("Goblin Banner"),

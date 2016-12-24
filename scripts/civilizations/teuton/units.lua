@@ -899,6 +899,6 @@ DefineUnitType("unit-teuton-worker", {
 		--"unit-teuton-town-hall",
 		"unit-teuton-farm",
 		--"unit-teuton-barracks", "unit-teuton-lumber-mill",
-		"unit-teuton-smithy", "unit-teuton-stables", "unit-teuton-temple", "unit-teuton-watch-tower", "unit-teuton-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"
+		"unit-teuton-smithy", "unit-teuton-stables", "unit-teuton-temple", "unit-teuton-watch-tower", "unit-teuton-dock"
 	}
 } )

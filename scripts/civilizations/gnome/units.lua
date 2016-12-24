@@ -708,17 +708,17 @@ DefineUnitType("unit-gnomish-barracks", { Name = _("Barracks"),
 } )
 
 DefineUnitType("unit-gnomish-worker", { -- this is here because the buildings need to be defined before being assigned to the miner's "Trains" array
-	Trains = {"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks", "unit-dwarven-lumber-mill", "unit-dwarven-smithy", "unit-dwarven-yale-pen", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
+	Trains = {"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks"}
 } )
 
 DefineUnitType("unit-deep-gnomish-worker", { -- this is here because the buildings need to be defined before being assigned to the miner's "Trains" array
-	Trains = {"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks", "unit-dwarven-lumber-mill", "unit-dwarven-smithy", "unit-dwarven-yale-pen", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
+	Trains = {"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks"}
 } )
 
 DefineUnitType("unit-forest-gnomish-worker", { -- this is here because the buildings need to be defined before being assigned to the miner's "Trains" array
-	Trains = {"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks", "unit-dwarven-lumber-mill", "unit-dwarven-smithy", "unit-dwarven-yale-pen", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
+	Trains = {"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks"}
 } )
 
 DefineUnitType("unit-derro-worker", { -- this is here because the buildings need to be defined before being assigned to the miner's "Trains" array
-	Trains = {"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks", "unit-dwarven-lumber-mill", "unit-dwarven-smithy", "unit-dwarven-yale-pen", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
+	Trains = {"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks"}
 } )

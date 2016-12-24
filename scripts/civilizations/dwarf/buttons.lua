@@ -60,6 +60,108 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-3",
 	}
 } )
 
+-- Buildings -----------------------------------------------------
+
+DefineButton( { Pos = 1, Level = 1,
+	Action = "build", Value = "unit-dwarven-town-hall",
+	Key = "h", Hint = _("Build Mead ~!Hall"), Popup = "popup-building",
+	ForUnit = {
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner"
+	}
+})
+
+DefineButton( { Pos = 2, Level = 1, Icon = "icon-dwarven-mushroom-farm",
+	Action = "build", Value = "unit-dwarven-mushroom-farm",
+	Key = "f", Hint = _("Build Mushroom ~!Farm"), Popup = "popup-building",
+	ForUnit = {
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner"
+	}
+})
+
+DefineButton( { Pos = 3, Level = 1, Icon = "icon-dwarven-barracks",
+	Action = "build", Value = "unit-dwarven-barracks",
+	Key = "w", Hint = _("Build ~!War Hall"), Popup = "popup-building",
+	ForUnit = {
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner"
+	}
+})
+
+DefineButton( { Pos = 4, Level = 1, Icon = "icon-dwarven-lumber-mill",
+	Action = "build", Value = "unit-dwarven-lumber-mill",
+	Key = "l", Hint = _("Build ~!Lumber Mill"), Popup = "popup-building",
+	ForUnit = {
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-forest-gnomish-worker", "unit-derro-worker",
+	}
+})
+
+DefineButton( { Pos = 5, Level = 1, Icon = "icon-dwarven-smithy",
+	Action = "build", Value = "unit-dwarven-smithy",
+	Key = "s", Hint = _("Build ~!Smithy"), Popup = "popup-building",
+	ForUnit = {
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-forest-gnomish-worker", "unit-derro-worker",
+	}
+})
+
+DefineButton( { Pos = 5, Level = 1, Icon = "icon-brising-smithy",
+	Action = "build", Value = "unit-brising-smithy",
+	Key = "s", Hint = _("Build ~!Smithy"), Popup = "popup-building",
+	ForUnit = {"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner"}
+})
+
+DefineButton( { Pos = 6, Level = 1, Icon = "icon-dwarven-yale-pen",
+	Action = "build", Value = "unit-dwarven-yale-pen",
+	Key = "y", Hint = _("Build ~!Yale Pen"), Popup = "popup-building",
+	ForUnit = {
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-forest-gnomish-worker", "unit-derro-worker",
+	}
+})
+
+DefineButton( { Pos = 6, Level = 1, Icon = "icon-joruvellir-yale-pen",
+	Action = "build", Value = "unit-joruvellir-yale-pen",
+	Key = "y", Hint = _("Build ~!Yale Pen"), Popup = "popup-building",
+	ForUnit = {
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner"
+	}
+})
+
+DefineButton( { Pos = 7, Level = 1, Icon = "icon-dwarven-temple",
+	Action = "build", Value = "unit-dwarven-temple",
+	Key = "p", Hint = _("Build Tem~!ple"), Popup = "popup-building",
+	ForUnit = {
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-forest-gnomish-worker", "unit-derro-worker",
+	}
+})
+
+DefineButton( { Pos = 8, Level = 1, Icon = "icon-dwarven-sentry-tower",
+	Action = "build", Value = "unit-dwarven-sentry-tower",
+	Key = "t", Hint = _("Build Sentry ~!Tower"), Popup = "popup-building",
+	ForUnit = {
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-forest-gnomish-worker", "unit-derro-worker",
+	}
+} )
+
+DefineButton( { Pos = 9, Level = 1, Icon = "icon-dwarven-dock",
+	Action = "build", Value = "unit-dwarven-dock",
+	Key = "d", Hint = _("Build ~!Dock"), Popup = "popup-building",
+	ForUnit = {
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-forest-gnomish-worker", "unit-derro-worker",
+	}
+} )
+
 -- Researches ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-broad-axe",

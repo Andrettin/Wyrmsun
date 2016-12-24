@@ -1301,19 +1301,6 @@ DefineUnitType("unit-dwarven-dock", {
 } )
 
 Load("scripts/civilizations/dwarf/units_joruvellir.lua")
-
-DefineUnitType("unit-dwarven-miner", { -- this is here because the buildings need to be defined before being assigned to the miner's "Trains" array
-	Trains = {"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-lumber-mill", "unit-dwarven-smithy", "unit-dwarven-yale-pen", "unit-joruvellir-yale-pen", "unit-dwarven-temple", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
-} )
-
-DefineUnitType("unit-dwarven-skilled-miner", {
-	Trains = {"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-lumber-mill", "unit-dwarven-smithy", "unit-dwarven-yale-pen", "unit-joruvellir-yale-pen", "unit-dwarven-temple", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
-} )
-
-DefineUnitType("unit-dwarven-expert-miner", {
-	Trains = {"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-lumber-mill", "unit-dwarven-smithy", "unit-dwarven-yale-pen", "unit-joruvellir-yale-pen", "unit-dwarven-temple", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
-} )
-
 Load("scripts/civilizations/dwarf/units_brising.lua")
 
 DefineUnitType("unit-dwarven-town-hall", {

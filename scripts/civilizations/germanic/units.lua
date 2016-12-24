@@ -582,5 +582,5 @@ DefineUnitType("unit-germanic-dock", {
 } )
 
 DefineUnitType("unit-germanic-worker", {
-	Trains = {"unit-germanic-town-hall", "unit-germanic-farm", "unit-germanic-barracks", "unit-germanic-carpenters-shop", "unit-germanic-smithy", "unit-germanic-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
+	Trains = {"unit-germanic-town-hall", "unit-germanic-farm", "unit-germanic-barracks", "unit-germanic-carpenters-shop", "unit-germanic-smithy", "unit-germanic-dock"}
 } )

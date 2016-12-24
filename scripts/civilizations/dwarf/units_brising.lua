@@ -81,15 +81,3 @@ DefineUnitType("unit-brising-smithy", {
 	TimeEfficiencyBonus = 50, -- +50% Time Efficiency Bonus
 	AiDrops = {"unit-brising-round-shield"}
 } )
-
-DefineUnitType("unit-brising-miner", { -- this is here because the buildings need to be defined before being assigned to the miner's "Trains" array
-	Trains = {"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-lumber-mill", "unit-brising-smithy", "unit-dwarven-yale-pen", "unit-dwarven-temple", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
-} )
-
-DefineUnitType("unit-brising-skilled-miner", {
-	Trains = {"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-lumber-mill", "unit-brising-smithy", "unit-dwarven-yale-pen", "unit-dwarven-temple", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
-} )
-
-DefineUnitType("unit-brising-expert-miner", {
-	Trains = {"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-lumber-mill", "unit-brising-smithy", "unit-dwarven-yale-pen", "unit-dwarven-temple", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
-} )

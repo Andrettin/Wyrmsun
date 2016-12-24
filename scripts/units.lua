@@ -301,7 +301,7 @@ DefineUnitType("unit-gold-mine", {
 	Costs = {"time", 200, "lumber", 2050},
 	BuildingRules = { { "ontop", { Type = "unit-gold-deposit", ReplaceOnDie = true, ReplaceOnBuild = true} } },
 	GivesResource = "gold",
-	ButtonPos = 10,
+	ButtonPos = 12,
 	ButtonKey = "g",
 	ButtonHint = _("Build ~!Gold Mine")
 } )
@@ -381,7 +381,7 @@ DefineUnitType("unit-copper-mine", {
 	Costs = {"time", 200, "lumber", 2050},
 	BuildingRules = { { "ontop", { Type = "unit-copper-deposit", ReplaceOnDie = true, ReplaceOnBuild = true} } },
 	GivesResource = "copper",
-	ButtonPos = 12,
+	ButtonPos = 10,
 	ButtonKey = "c",
 	ButtonHint = _("Build ~!Copper Mine")
 } )

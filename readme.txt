@@ -21,7 +21,7 @@ In the Wyrmsun universe a myriad of inhabited planets exist. Humans dwell on Ear
 Features:
 - Retro-style graphics
 - 3 playable civilizations, and a number of non-playable ones
-- 23 quests to play, earning technology points which can be used to obtain new units, buildings and technologies
+- Campaign mode scenarios, played on a huge map
 - Dozens of units, buildings and technologies
 - Personal names and traits for units
 - Units can earn experience, being able to upgrade to new unit types or acquire new abilities upon level-up
@@ -29,7 +29,6 @@ Features:
 - Possibility to create your own custom persistent heroes
 - Normal, magic-enchanted and unique items drop from enemies
 - Very moddable game, with a built-in mod editor and Steam Workshop integration
-- Grand strategy mode, where production is resolved on the strategic (world map) level, while battles are resolved on the tactical level
 - In-game encyclopedia, allowing players to learn more about the units, buildings and other elements of the game, as well as their historical and mythological sources of inspiration
 
 Wyrmsun's lore is based on history and mythology, and on the lore of other open-source fantasy games, such as Battle for Wesnoth.
@@ -56,6 +55,13 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 # Changelog
 ############################################################
+
+-----------------------------------------------------------------------
+- 2.5.2
+-----------------------------------------------------------------------
+
+* Units
+- When dwarven Miners, Skilled Miners and Expert Miners are selected at the same time, the build structure buttons now show up correctly.
 
 -----------------------------------------------------------------------
 - 2.5.1
