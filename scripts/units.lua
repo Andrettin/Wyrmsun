@@ -3043,7 +3043,8 @@ DefineUnitType("unit-template-heroic-cavalry", { Name = _("Heroic Cavalry"),
 	DropAffixes = {"upgrade-item-suffix-of-power", "upgrade-item-suffix-of-regeneration", "upgrade-item-suffix-of-slaughter", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-victory", "upgrade-item-suffix-of-vision"}
 } )
 
-DefineUnitType("unit-template-priest", { Name = _("Priest"),
+DefineUnitType("unit-template-priest", {
+	Name = _("Priest"),
 	Parent = "unit-template-sapient-unit",
 	Class = "priest",
 	Costs = {"time", 80, "copper", 700},
@@ -3303,7 +3304,6 @@ DefineUnitType("unit-template-farm", {
 	ButtonPos = 2,
 	ButtonKey = "f",
 	ButtonHint = _("Build ~!Farm"),
-	Trains = {"unit-cheese", "unit-carrots"},
 	UnitStock = {"unit-cheese", 3, "unit-carrots", 3},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
@@ -3874,7 +3874,7 @@ DefineUnitType("unit-mercenary-camp", {
 	BurnPercent = 50,
 	BurnDamageRate = 1,
 	RecruitHeroes = true,
-	Trains = {"unit-goblin-thief", "unit-kobold-footpad", "unit-surghan-mercenary-steelclad"},
+	Trains = {"unit-goblin-thief", "unit-kobold-footpad"},
 	UnitStock = {"unit-goblin-thief", 6, "unit-kobold-footpad", 4},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {

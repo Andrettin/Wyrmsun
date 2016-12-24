@@ -413,9 +413,6 @@ DefineUnitType("unit-potion-of-healing", {
 	ItemClass = "potion",
 	Costs = {"copper", 150},
 	HitPointHealing = 45,
-	ButtonKey = "h",
-	ButtonHint = _("Buy Potion of ~!Healing"),
-	ButtonPos = 2,
 	Sounds = {
 		"used", "potion"
 	} 
@@ -453,9 +450,6 @@ DefineUnitType("unit-cheese", {
 	Costs = {"copper", 25},
 	Dairy = true,
 	HitPointHealing = 5,
-	ButtonKey = "c",
-	ButtonHint = _("Buy ~!Cheese"),
-	ButtonPos = 1,
 	Sounds = {
 		"used", "eat"
 	} 
@@ -470,9 +464,6 @@ DefineUnitType("unit-carrots", {
 	Costs = {"copper", 25},
 	HitPointHealing = 5,
 	Vegetable = true,
-	ButtonKey = "r",
-	ButtonHint = _("Buy Ca~!rrots"),
-	ButtonPos = 2,
 	Sounds = {
 		"used", "eat"
 	} 

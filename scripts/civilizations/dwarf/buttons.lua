@@ -162,6 +162,74 @@ DefineButton( { Pos = 9, Level = 1, Icon = "icon-dwarven-dock",
 	}
 } )
 
+-- Units --------------------------------------------------------------
+
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-miner",
+	Action = "train-unit", Value = "unit-dwarven-miner",
+	Key = "m", Hint = _("Train ~!Miner"), Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-town-hall", "unit-dwarven-stronghold"}
+})
+
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-brising-miner",
+	Action = "train-unit", Value = "unit-brising-miner",
+	Key = "m", Hint = _("Train ~!Miner"), Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-town-hall", "unit-dwarven-stronghold"}
+})
+
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-axefighter",
+	Action = "train-unit", Value = "unit-dwarven-axefighter",
+	Key = "a", Hint = _("Train ~!Axefighter"), Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-barracks"}
+})
+
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-guard",
+	Action = "train-unit", Value = "unit-dwarven-guard",
+	Key = "g", Hint = _("Train ~!Guard"), Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-barracks"}
+})
+
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-scout",
+	Action = "train-unit", Value = "unit-dwarven-scout",
+	Key = "s", Hint = _("Train ~!Scout"), Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-barracks", "unit-gnomish-barracks"}
+})
+
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-dwarven-yale-rider",
+	Action = "train-unit", Value = "unit-dwarven-yale-rider",
+	Key = "y", Hint = _("Train ~!Yale Rider"), Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-barracks", "unit-gnomish-barracks"}
+})
+
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-dwarven-ballista",
+	Action = "train-unit", Value = "unit-dwarven-ballista",
+	Key = "b", Hint = _("Build ~!Ballista"), Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-barracks", "unit-gnomish-barracks"}
+})
+
+DefineButton( { Pos = 6, Level = 0, Icon = "icon-dwarven-gryphon-rider",
+	Action = "train-unit", Value = "unit-dwarven-gryphon-rider",
+	Key = "g", Hint = _("Train ~!Gryphon Rider"), Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-barracks", "unit-gnomish-barracks"}
+})
+
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-witness",
+	Action = "train-unit", Value = "unit-dwarven-witness",
+	Key = "w", Hint = _("Train ~!Witness"), Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-temple"}
+})
+
+DefineButton( { Pos = 1, Level = 0,
+	Action = "train-unit", Value = "unit-dwarven-transport-ship",
+	Key = "t", Hint = _("Build ~!Transport"), Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-dock"}
+})
+
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-surghan-mercenary-steelclad",
+	Action = "train-unit", Value = "unit-surghan-mercenary-steelclad",
+	Key = "s", Hint = _("Hire ~!Surghan Mercenaries"), Popup = "popup-unit",
+	ForUnit = {"unit-mercenary-camp"}
+})
+
 -- Researches ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-broad-axe",

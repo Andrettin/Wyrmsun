@@ -917,7 +917,8 @@ DefineUnitType("unit-dwarven-yale-lord", { Name = _("Yale Lord"),
 	}
 } )
 
-DefineUnitType("unit-dwarven-witness", { Name = _("Witness"),
+DefineUnitType("unit-dwarven-witness", {
+	Name = _("Witness"),
 	Parent = "unit-template-priest",
 	Civilization = "dwarf",
 --	Description = _("A witness functions as the eyes of the dwarves' history, a deep lore that they almost never share with outsiders. The presence of a witness inspires dwarven warriors with the knowledge that their deeds (and their deaths) will not go unrecorded. The person of a witness is considered sacred, and witnesses are often used as envoys between dwarven clans. The earliest known dwarven witness was Thjodrorir, sage of the Brising Clan. The best known of them, however, was Dvalin. He created the dwarven runes and shifted lorekeeping away from being an oral practice."),
@@ -944,8 +945,6 @@ DefineUnitType("unit-dwarven-witness", { Name = _("Witness"),
 	BluntDamage = true,
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
-	ButtonKey = "w",
-	ButtonHint = _("Train ~!Witness"),
 	StartingAbilities = {"upgrade-inspire"},
 	CanCastSpell = {"spell-inspire", "spell-healing", "spell-precision"},
 	AutoCastActive = {"spell-inspire", "spell-healing", "spell-precision"},
@@ -1123,7 +1122,8 @@ DefineUnitType("unit-dwarven-stronghold", { Name = _("Bastion"),
 	}
 })
 
-DefineUnitType("unit-dwarven-mushroom-farm", { Name = _("Mushroom Farm"),
+DefineUnitType("unit-dwarven-mushroom-farm", {
+	Name = _("Mushroom Farm"),
 	Parent = "unit-template-farm",
 	Civilization = "dwarf",
 	Description = _("For aeons, dwarves have practiced mushroom farming underground. At first, their crude agricultural methods allowed them only to use mushroom farming as a supplementary means of nutrition, so that they could remain in a given area for a longer time before migrating. Eventually, however, dwarven mushroom farming techniques developed to the point that dwarves were able to establish their first permanent communities."),
@@ -1134,8 +1134,6 @@ DefineUnitType("unit-dwarven-mushroom-farm", { Name = _("Mushroom Farm"),
 	Costs = {"lumber", 0, "stone", 750},
 	RepairCosts = {"lumber", 0, "stone", 1},
 	FireResistance = 20,
-	ButtonHint = _("Build Mushroom ~!Farm"),
-	Trains = {"unit-cheese"},
 	Drops = {"unit-wood-pile", "unit-stone-pile"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
@@ -1156,7 +1154,6 @@ DefineUnitType("unit-dwarven-barracks", {
 	FireResistance = 20,
 	ButtonKey = "w",
 	ButtonHint = _("Build ~!War Hall"),
-	Trains = {"unit-dwarven-axefighter", "unit-dwarven-guard", "unit-dwarven-scout", "unit-dwarven-yale-rider", "unit-dwarven-ballista", "unit-dwarven-gryphon-rider"},
 	Drops = {"unit-stone-pile"},
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill"},
@@ -1240,7 +1237,6 @@ DefineUnitType("unit-dwarven-temple", {
 	Costs = {"lumber", 0, "stone", 1500},
 	RepairCosts = {"lumber", 0, "stone", 1},
 	FireResistance = 20,
-	Trains = {"unit-dwarven-witness", "unit-potion-of-healing"},
 	Drops = {"unit-stone-pile"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
@@ -1293,7 +1289,6 @@ DefineUnitType("unit-dwarven-dock", {
 	Costs = {"time", 200, "copper", 800, "lumber", 900, "stone", 450},
 	RepairCosts = {"copper", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
-	Trains = {"unit-dwarven-transport-ship"},
 --	Drops = {"unit-stone-pile"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
@@ -1303,15 +1298,8 @@ DefineUnitType("unit-dwarven-dock", {
 Load("scripts/civilizations/dwarf/units_joruvellir.lua")
 Load("scripts/civilizations/dwarf/units_brising.lua")
 
-DefineUnitType("unit-dwarven-town-hall", {
-	Trains = {"unit-dwarven-miner", "unit-brising-miner"},
-})
-
-DefineUnitType("unit-dwarven-stronghold", {
-	Trains = {"unit-dwarven-miner", "unit-brising-miner"},
-})
-
-DefineUnitType("unit-surghan-mercenary-steelclad", { Name = _("Surghan Mercenary"),
+DefineUnitType("unit-surghan-mercenary-steelclad", {
+	Name = _("Surghan Mercenary"),
 	Parent = "unit-dwarven-steelclad",
 	Class = "",
 	Civilization = "dwarf",
@@ -1321,9 +1309,6 @@ DefineUnitType("unit-surghan-mercenary-steelclad", { Name = _("Surghan Mercenary
 	Costs = {"time", 0, "copper", 900, "lumber", 0},
 	TrainQuantity = 4,
 	Mercenary = true,
-	ButtonPos = 5,
-	ButtonKey = "s",
-	ButtonHint = _("Hire ~!Surghan Mercenaries"),
 	Variations = {
 		{
 			"variation-id", "red-hair",

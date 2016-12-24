@@ -503,7 +503,8 @@ DefineUnitType("unit-germanic-town-hall", { Name = _("Chieftain's Hall"),
 	}
 } )
 
-DefineUnitType("unit-germanic-farm", { Name = _("Farm"),
+DefineUnitType("unit-germanic-farm", {
+	Name = _("Farm"),
 	Parent = "unit-template-farm",
 	Civilization = "germanic",
 	Description = _("Farms are essential for supporting a settlement's population."),
