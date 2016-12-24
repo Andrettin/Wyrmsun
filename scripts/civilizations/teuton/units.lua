@@ -830,7 +830,8 @@ DefineUnitType("unit-teuton-stables", {
 	}
 } )
 
-DefineUnitType("unit-teuton-temple", { Name = _("Temple"),
+DefineUnitType("unit-teuton-temple", {
+	Name = _("Temple"),
 	Parent = "unit-template-temple",
 	Civilization = "teuton",
 	Description = _("In early times, Teutons professed faith in polytheistic deities in their houses of worship, the most important one being Woden. Eventually, Christian missionaries managed to expand their faith to the entirety of the Teutonic lands, overtaking the earlier paganism."),
@@ -891,14 +892,5 @@ DefineUnitType("unit-teuton-dock", {
 	},
 	Sounds = {
 		"help", "basic-teuton-voices-help-town"
-	}
-} )
-
-DefineUnitType("unit-teuton-worker", {
-	Trains = {
-		--"unit-teuton-town-hall",
-		"unit-teuton-farm",
-		--"unit-teuton-barracks", "unit-teuton-lumber-mill",
-		"unit-teuton-smithy", "unit-teuton-stables", "unit-teuton-temple", "unit-teuton-watch-tower", "unit-teuton-dock"
 	}
 } )
