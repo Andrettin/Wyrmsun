@@ -2982,7 +2982,8 @@ DefineUnitType("unit-template-thief", {
 	}
 } )
 
-DefineUnitType("unit-template-cavalry", { Name = _("Cavalry"),
+DefineUnitType("unit-template-cavalry", {
+	Name = _("Cavalry"),
 	Parent = "unit-template-sapient-unit",
 	Class = "cavalry",
 	Costs = {"time", 90, "copper", 900},
