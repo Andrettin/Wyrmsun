@@ -124,7 +124,7 @@ DefineDependency("unit-germanic-dock",
 	{"unit-germanic-carpenters-shop"}
 )
 
-DefineDependency("unit-teuton-kogge",
+DefineDependency("unit-germanic-transport-ship",
 	{"unit-germanic-carpenters-shop"}
 )
 DefineDependency("upgrade-teuton-civilization",
