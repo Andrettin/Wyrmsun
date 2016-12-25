@@ -9,6 +9,7 @@ if (LoadedGame == false) then
 		TreeQuantity = "medium",
 		WaterQuantity = "low",
 		RoughLandQuantity = "medium",
-		WorkerQuantity = 5
+		WorkerQuantity = 5,
+		NoFlyingCreeps = true
 	})
 end

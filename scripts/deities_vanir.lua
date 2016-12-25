@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDeity("frey", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 135.
+DefineDeity("frey", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 135; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 551.
 	Name = "Frey",
 	Pantheon = "Vanir",
 	HomePlane = "Vanaheim",
@@ -33,11 +33,11 @@ DefineDeity("frey", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980
 	Religions = {"paganism"},
 	Gender = "male",
 	Major = true,
-	Domains = {"earth"}, -- fertility god
+	Domains = {"earth", "light"},
 	CulturalNames = {
 		"germanic", "Fraujaz" -- Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 135.
 	},
---	Description = "With the conclusion of the war between the Aesir and the Vanir, the two pantheons agreed to a peace, and that a few of each group should live among the other. Frey was one of the Vanir who went to dwell in Asgard with the Aesir, accompanied by his father Njord and his sister Freyja. At first, the Vanir were worshiped only by elves. As the Aesir were connected to Germanic peoples through their priests, when Frey went to live in Asgard he began to be worshiped by the Germanics as well."
+--	Description = "With the conclusion of the war between the Aesir and the Vanir, the two pantheons agreed to a peace, and that a few of each group should live among the other. Frey was one of the Vanir who went to dwell in Asgard with the Aesir, accompanied by his father Njord and his sister Freyja. At first, the Vanir were worshiped only by elves. As the Aesir were connected to Germanic peoples through their priests, when Frey went to live in Asgard he began to be worshiped by the Germanics as well. Frey is a god of fertility and of light."
 })
 
 DefineDeity("freyja", { -- Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 135.

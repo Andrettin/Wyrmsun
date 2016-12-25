@@ -92,6 +92,13 @@ DefineLanguageWord("Fal", { -- appears in the horse name "Falhofnír"; Source: H
 	Meanings = {"Barrel", "Hollow"} -- presumably, given that "Falhofnír" means "barrel-hoof" or "hollow-hoof"
 })
 
+DefineLanguageWord("Falr", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 140.
+	Language = "old-icelandic",
+	Type = "noun",
+	Meanings = {"Socket of a Spear's Head in Which the Handle is Put"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Fax", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 145.
 	Language = "old-icelandic",
 	Type = "noun",
