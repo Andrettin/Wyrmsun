@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 - 2.5.2
 -----------------------------------------------------------------------
 
+* Campaign
+- Increased the quantity of yales in the Svarinshaug region of the Nidavellir campaign map.
+
 * Maps
 - Changed starting resources for randomly-generated maps.
 - Wood/stone piles are now generated near each player's starting location in randomly-generated maps.
