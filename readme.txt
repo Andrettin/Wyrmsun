@@ -69,6 +69,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - When dwarven Miners, Skilled Miners and Expert Miners are selected at the same time, the build structure buttons now show up correctly.
+- Fixed issue which prevented the Teuton Kogge from being available.
 
 -----------------------------------------------------------------------
 - 2.5.1
