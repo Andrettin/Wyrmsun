@@ -44,9 +44,9 @@ DefineMapTemplate("svarinshaug", {
 		"flamefood-tree", "low"
 	},
 	GeneratedNeutralUnits = {
-		"unit-snigill", 8,
-		"unit-slime", 4,
-		"unit-yale", 12
+		"unit-snigill", 16,
+		"unit-slime", 8,
+		"unit-yale", 32
 	},
 	PlayerLocationGeneratedNeutralUnits = {
 		"unit-copper-deposit", 1,

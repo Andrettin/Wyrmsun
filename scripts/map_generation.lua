@@ -1307,6 +1307,46 @@ function CreateNeutralBuildings(building_type, building_number, min_x, max_x, mi
 	end
 end
 
+function CreateStartingLocationResourcePiles(loc_player, pile_type, pile_quantity)
+	local min_x = math.max(Players[loc_player].StartPos.x - 8, 0)
+	local max_x = math.min(Players[loc_player].StartPos.x + 8, Map.Info.MapWidth - 1)
+	local min_y = math.max(Players[loc_player].StartPos.y - 8, 0)
+	local max_y = math.min(Players[loc_player].StartPos.y + 8, Map.Info.MapHeight - 1)
+			
+	local RandomX = 0
+	local RandomY = 0
+	local location_found = false
+	local WhileCount = 0
+	while (location_found == false and WhileCount < 1000) do
+		RandomX = SyncRand(max_x - min_x + 1) + min_x
+		RandomY = SyncRand(max_y - min_y + 1) + min_y
+				
+		local in_appropriate_land = true
+		for x_offset=0, (GetUnitTypeData(pile_type, "TileWidth") - 1) do
+			for y_offset=0, (GetUnitTypeData(pile_type, "TileHeight") - 1) do
+				if (GetTileTerrainHasFlag(RandomX + x_offset, RandomY + y_offset, "land") == false or GetTileTerrainHasFlag(RandomX + x_offset, RandomY + y_offset, "unpassable")) then
+					in_appropriate_land = false
+					break
+				end
+			end
+		end
+		if (in_appropriate_land) then
+			local unit_quantity = GetNumUnitsAt(-1, "any", {RandomX - 2, RandomY - 2}, {RandomX + (GetUnitTypeData(pile_type, "TileWidth") - 1) + 2, RandomY + (GetUnitTypeData(pile_type, "TileHeight") - 1) + 2})
+
+			if (unit_quantity < 1) then
+				location_found = true
+			end
+		end
+		WhileCount = WhileCount + 1
+	end
+			
+	if (location_found) then
+		for i=1,pile_quantity do
+			unit = CreateUnit(pile_type, PlayerNumNeutral, {RandomX, RandomY})
+		end
+	end
+end
+
 function CreateCritters(arg)
 	if (arg == nil) then
 		arg = {}
@@ -2073,6 +2113,17 @@ function GenerateRandomMap(arg)
 				end
 			end
 
+			for i=0,(PlayerMax - 2) do
+				if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
+					if (GetPlayerData(i, "RaceName") == "dwarf") then
+						CreateStartingLocationResourcePiles(i, "unit-stone-pile", 12)
+						CreateStartingLocationResourcePiles(i, "unit-wood-pile", 4)
+					else
+						CreateStartingLocationResourcePiles(i, "unit-wood-pile", 16)
+					end
+				end
+			end
+			
 			if (arg.NoDeposits) then
 				CreateGoldRocks((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
 			else
@@ -3543,260 +3594,6 @@ function ReplaceTiles(x1, y1, x2, y2, from, to)
 	end
 end
 
-function GenerateTown(layout, town_player, town_player_civilization, town_player_faction, invader_player, invader_player_civilization, invader_player_faction, town_buildings, town_units, invader_base, invader_buildings, invader_units, tree_quantity, rock_generation)
-	CleanRawTiles()
-
-	local RandomNumber = 0
-	
-	local block_size = 16
-	if (Map.Info.MapWidth > Map.Info.MapHeight) then
-		block_size = Map.Info.MapWidth / table.getn(layout[1])
-	else
-		block_size = Map.Info.MapHeight / table.getn(layout)
-	end
-
-	FillArea(0, 0, (Map.Info.MapWidth - 1), (Map.Info.MapHeight - 1), "Land", false)
-
-	if (invader_player ~= nil) then
-		local invader_location_found = false
-		while (invader_location_found == false) do
-			local potential_location_y = SyncRand(table.getn(layout)) + 1
-			local potential_location_x = SyncRand(table.getn(layout[potential_location_y])) + 1
-			if (layout[potential_location_y][potential_location_x] == -1) then
-				layout[potential_location_y][potential_location_x] = 25
-				invader_location_found = true
-			end
-		end
-	end
-	
-	-- -1 = potential invader base location
-	-- 6 = town center
-	-- 8 = N/S river
-	-- 9 = N/S river + bridge
-	-- 10 = E/W river
-	-- 11 = E/W river + bridge
-	-- 16 = N/W river bend
-	-- 17 = N/E river bend
-	-- 18 = S/E river bend
-	-- 19 = S/W river bend
-	-- 20 = N/W/E river fork
-	-- 21 = N/S/E river fork
-	-- 22 = S/W/E river fork
-	-- 23 = N/S/W river fork
-	-- 25 = invader base
-	-- 27 = gold mine
-	-- 30 = Sea
-	-- 31 = North coast
-	-- 32 = East coast
-	-- 33 = South coast
-	-- 34 = West coast
-	-- 35 = Northwest outer coast
-	-- 36 = Northeast outer coast
-	-- 37 = Southeast outer coast
-	-- 38 = Southwest outer coast
-	-- 39 = Northwest inner coast
-	-- 40 = Northeast inner coast
-	-- 41 = Southeast inner coast
-	-- 42 = Southwest inner coast
-	
-	local function BuildWaterArea(x, y, t)
-		if (t == 8) then -- N/S river
-			MakeRandomPath(x + (block_size / 2), y, x + (block_size / 2), y + (block_size - 1), x, y, x + (block_size - 1), y + (block_size - 1), "Water", false)
-			SpreadTiles(x, y, x + (block_size - 1), y + (block_size - 1), "Water", "Land")
-			AdjustRawMapTileIrregularities(x - 2, x + (block_size + 1), y - 2, y + (block_size + 1), 2, false) -- correct for leftover single tiles
-		elseif (t == 9) then -- N/S river + bridge
-			MakeRandomPath(x + (block_size / 2), y, x + (block_size / 2), y + (block_size - 1), x, y, x + (block_size - 1), y + (block_size - 1), "Water", false)
-			SpreadTiles(x, y, x + (block_size - 1), y + (block_size - 1), "Water", "Land")
-			ReplaceTiles(x, y + ((block_size / 2) - 1), x + (block_size - 1), y + ((block_size / 2) - 1) + SyncRand(3) + 1, "Water", "Rough") -- add the bridge
-			AdjustRawMapTileIrregularities(x - 2, x + (block_size + 1), y - 2, y + (block_size + 1), 2, false) -- correct for leftover single tiles
-		elseif (t == 10) then -- E/W river
-			MakeRandomPath(x + (block_size / 2), y, x + (block_size / 2), y + (block_size - 1), x, y, x + (block_size - 1), y + (block_size - 1), "Water", false)
-			SpreadTiles(x, y, x + (block_size - 1), y + (block_size - 1), "Water", "Land")
-			RotateArea(x, y, block_size, 1)
-			AdjustRawMapTileIrregularities(x - 2, x + (block_size + 1), y - 2, y + (block_size + 1), 2, false) -- correct for leftover single tiles
-		elseif (t == 11) then -- E/W river + bridge
-			MakeRandomPath(x + (block_size / 2), y, x + (block_size / 2), y + (block_size - 1), x, y, x + (block_size - 1), y + (block_size - 1), "Water", false)
-			SpreadTiles(x, y, x + (block_size - 1), y + (block_size - 1), "Water", "Land")
-			ReplaceTiles(x, y + ((block_size / 2) - 1), x + (block_size - 1), y + ((block_size / 2) - 1) + SyncRand(3) + 1, "Water", "Rough") -- add the bridge
-			RotateArea(x, y, block_size, 1)
-			AdjustRawMapTileIrregularities(x - 2, x + (block_size + 1), y - 2, y + (block_size + 1), 2, false) -- correct for leftover single tiles
-		elseif (t == 16 or t == 17 or t == 18 or t == 19) then -- river bends
-			MakeRandomPath(x + (block_size / 2), y, x, y + (block_size / 2), x, y, x + (block_size - 1), y + (block_size - 1), "Water", false)
-			SpreadTiles(x, y, x + (block_size - 1), y + (block_size - 1), "Water", "Land")
-			RotateArea(x, y, block_size, t - 16) -- rotate clockwise to correct orientation; 16 = N/W position, etc.
-			AdjustRawMapTileIrregularities(x - 2, x + (block_size + 1), y - 2, y + (block_size + 1), 2, false) -- correct for leftover single tiles
-		elseif (t == 20 or t == 21 or t == 22 or t == 23) then -- river forks
-			MakeRandomPath(x + (block_size / 2), y, x, y + (block_size / 2), x, y, x + (block_size - 1), y + (block_size - 1), "Water", false)
-			MakeRandomPath(x + (block_size / 2), y, x + (block_size - 1), y + (block_size / 2), x, y, x + (block_size - 1), y + (block_size - 1), "Water", false)
-			SpreadTiles(x, y, x + (block_size - 1), y + (block_size - 1), "Water", "Land")
-			RotateArea(x, y, block_size, t - 20) -- rotate clockwise to correct orientation; 20 = N/W/E position, etc.
-			AdjustRawMapTileIrregularities(x - 2, x + (block_size + 1), y - 2, y + (block_size + 1), 2, false) -- correct for leftover single tiles
-		elseif (t == 30) then -- sea
-			FillArea(x, y, x + (block_size - 1), y + (block_size - 1), "Water", false)
-		elseif (t == 31) then -- North coast
-			FillArea(x, y, x + (block_size - 1), y + (block_size - 1), "Land", false)
-			FillArea(x, y, x + (block_size - 1), y + 3, "Water", false)
-			GenerateWater(0, (8 * block_size - (4 * block_size)), x, x + (block_size - 1), y, y + (block_size - 1)) -- (8 (the water area goal height) * 16 (the water area goal width) - (4 * 16)) (the already filled-in area of water)
-		elseif (t == 32) then -- East coast
-			FillArea(x, y, x + (block_size - 1), y + (block_size - 1), "Land", false)
-			FillArea(x + (block_size * 3 / 4), y, x + (block_size - 1), y + (block_size - 1), "Water", false)
-			GenerateWater(0, (8 * block_size - (4 * block_size)), x, x + (block_size - 1), y, y + (block_size - 1), x, x + (block_size - 1), y, y + (block_size - 1))
-		elseif (t == 33) then -- South coast
-			FillArea(x, y, x + (block_size - 1), y + (block_size - 1), "Land", false)
-			FillArea(x, y + (block_size * 3 / 4), x + (block_size - 1), y + (block_size - 1), "Water", false)
-			GenerateWater(0, (8 * block_size - (4 * block_size)), x, x + (block_size - 1), y, y + (block_size - 1), x, x + (block_size - 1), y, y + (block_size - 1))
-		elseif (t == 34) then -- West coast
-			FillArea(x, y, x + (block_size - 1), y + (block_size - 1), "Land", false)
-			FillArea(x, y, x + 3, y + (block_size - 1), "Water", false)
-			GenerateWater(0, (8 * block_size - (4 * block_size)), x, x + (block_size - 1), y, y + (block_size - 1), x, x + (block_size - 1), y, y + (block_size - 1))
-		elseif (t == 35) then -- Northwest outer coast
-			FillArea(x, y, x + (block_size - 1), y + (block_size - 1), "Land", false)
-			FillArea(x, y, x + (block_size - 1), y + 3, "Water", false)
-			FillArea(x, y, x + 3, y + (block_size - 1), "Water", false)
-			GenerateWater(0, (8 * block_size - (3 * block_size)), x, x + (block_size - 1), y, y + (block_size - 1))
-		elseif (t == 36) then -- Northeast outer coast
-			FillArea(x, y, x + (block_size - 1), y + (block_size - 1), "Land", false)
-			FillArea(x, y, x + (block_size - 1), y + 3, "Water", false)
-			FillArea(x + (block_size * 3 / 4), y, x + (block_size - 1), y + (block_size - 1), "Water", false)
-			GenerateWater(0, (8 * block_size - (3 * block_size)), x, x + (block_size - 1), y, y + (block_size - 1))
-		elseif (t == 39) then -- Northwest inner coast
-			FillArea(x, y, x + (block_size - 1), y + (block_size - 1), "Land", false)
-			FillArea(x, y, x + 3, y + 3, "Water", false)
-			GenerateWater(0, (8 * block_size - (5 * block_size)), x, x + (block_size - 1), y, y + (block_size - 1))
-		elseif (t == 40) then -- Northeast inner coast
-			FillArea(x, y, x + (block_size - 1), y + (block_size - 1), "Land", false)
-			FillArea(x + (block_size * 3 / 4), y, x + (block_size - 1), y + 3, "Water", false)
-			GenerateWater(0, (8 * block_size - (5 * block_size)), x, x + (block_size - 1), y, y + (block_size - 1))
-		end
-	end
-
-	local function BuildArea(x, y, t)
-		if (t == 6) then -- town center
-			local town_player_starting_point = {x + SyncRand(block_size - 3), y + SyncRand(block_size - 3)}
-			SetStartView(town_player, town_player_starting_point[1], town_player_starting_point[2])
-			if (town_player_civilization ~= nil) then
-				SetPlayerData(town_player, "RaceName", town_player_civilization)
-			end
-			if (town_player_faction ~= nil) then
-				SetPlayerData(town_player, "Faction", town_player_faction)
-			end
-			for sub_x=-1,4 do
-				for sub_y=-1,4 do
-					SetRawTile(town_player_starting_point[1] + sub_x, town_player_starting_point[2] + sub_y, "Road")
-				end
-			end
-			for sub_x=0,3 do
-				for sub_y=0,3 do
-					SetRawTile(town_player_starting_point[1] + sub_x, town_player_starting_point[2] + sub_y, "Town Hall " .. town_player)
-				end
-			end
-			CreateStartingGoldMine(town_player) -- create the town player's gold mine
-			if (town_buildings) then
-				for i=1,table.getn(town_buildings) do
-					CreateStartingBuilding(town_player, town_buildings[i]) -- create the town player's initial farms
-				end
-			end
-		elseif (t == 25) then -- invader's base
-			local invader_player_starting_point = {x + SyncRand(block_size - 3), y + SyncRand(block_size - 3)}
-			SetStartView(invader_player, invader_player_starting_point[1], invader_player_starting_point[2])
-			if (invader_player_civilization ~= nil) then
-				SetPlayerData(invader_player, "RaceName", invader_player_civilization)
-			end
-			if (invader_player_faction ~= nil) then
-				SetPlayerData(invader_player, "Faction", invader_player_faction)
-			end
-			if (invader_base) then
-				for sub_x=-1,4 do
-					for sub_y=-1,4 do
-						SetRawTile(invader_player_starting_point[1] + sub_x, invader_player_starting_point[2] + sub_y, "Road")
-					end
-				end
-				for sub_x=0,3 do
-					for sub_y=0,3 do
-						SetRawTile(invader_player_starting_point[1] + sub_x, invader_player_starting_point[2] + sub_y, "Town Hall " .. invader_player)
-					end
-				end
-				CreateStartingGoldMine(invader_player) -- create the invader player's gold mine
-				if (invader_buildings) then
-					for i=1,table.getn(invader_buildings) do
-						CreateStartingBuilding(invader_player, invader_buildings[i]) -- create the town player's initial farms
-					end
-				end
-			end
-		elseif (t == 27) then -- extra gold mine
-			CreateStartingGoldMine(PlayerNumNeutral, x, y)
-		end
-	end
-
-	for ay=1,table.getn(layout) do
-		for ax=1,table.getn(layout[ay]) do
-			BuildWaterArea((ax-1) * block_size, (ay-1) * block_size, layout[ay][ax])
-		end
-	end
-	
-	AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-
-	for ay=1,table.getn(layout) do
-		for ax=1,table.getn(layout[ay]) do
-			BuildArea((ax-1) * block_size, (ay-1) * block_size, layout[ay][ax])
-		end
-	end
-	
-	if (rock_generation) then
-		for i=1,table.getn(rock_generation) do
-			GenerateRocks((((rock_generation[i][2] - rock_generation[i][1]) * (rock_generation[i][4] - rock_generation[i][3])) / 32), (((rock_generation[i][2] - rock_generation[i][1]) * (rock_generation[i][4] - rock_generation[i][3])) / 4), "Land", rock_generation[i][1], rock_generation[i][2], rock_generation[i][3], rock_generation[i][4])
-		end
-	end
-	
-	AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-
-	if (tree_quantity == "high") then
-		GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 4, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-	elseif (tree_quantity == "medium") then
-		GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 8, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-	elseif (tree_quantity == "low") then
-		GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-	end
-
-	ApplyRawTiles()
-	CleanRawTiles()
-	
-	if (GrandStrategy == false or GrandStrategyBattleBaseBuilding) then
-		CreateGoldSpots((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, false)
-		
-		unit = CreateUnit("unit-germanic-worker", town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
-		unit = CreateUnit("unit-germanic-worker", town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
-		unit = CreateUnit("unit-germanic-worker", town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
-		unit = CreateUnit("unit-germanic-worker", town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
-		unit = CreateUnit("unit-germanic-worker", town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
-
-		for i=1,table.getn(town_units) do
-			unit = CreateUnit(town_units[i], town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
-			SetUnitVariable(unit, "Active", false) -- set town defender to passive AI (so that they do not participate in attacks)
-		end
-
-		if (invader_base) then
-			unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
-			unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
-			unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
-			unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
-			unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
-		end
-
-		for i=1,table.getn(invader_units) do
-			unit = CreateUnit(invader_units[i], invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
-		end
-	end
-
-	CreateCritters()
-
-	if (GetCurrentTileset() == "swamp" or GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest") then
-		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
-	elseif (GetCurrentTileset() == "cave") then
-		CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
-	end
-end
-
 function CreateStartingGoldMine(player, x, y)
 	local WhileCount = 0
 	local gold_mine_built = false
@@ -3981,6 +3778,17 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 	
 	CreateCritters()
 
+	for i=0,(PlayerMax - 2) do
+		if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
+			if (GetPlayerData(i, "RaceName") == "dwarf") then
+				CreateStartingLocationResourcePiles(i, "unit-stone-pile", 12)
+				CreateStartingLocationResourcePiles(i, "unit-wood-pile", 4)
+			else
+				CreateStartingLocationResourcePiles(i, "unit-wood-pile", 16)
+			end
+		end
+	end
+			
 	if (GetCurrentTileset() == "swamp" or GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest") then
 		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
 	elseif (GetCurrentTileset() == "cave") then

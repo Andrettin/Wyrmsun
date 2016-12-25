@@ -61,7 +61,8 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Maps
-- Changed starting resources for random maps.
+- Changed starting resources for randomly-generated maps.
+- Wood/stone piles are now generated near each player's starting location in randomly-generated maps.
 
 * Units
 - When dwarven Miners, Skilled Miners and Expert Miners are selected at the same time, the build structure buttons now show up correctly.
