@@ -18,8 +18,8 @@ DefineUpgrade("upgrade-sigre-tribe-faction", {
 	EffectsString = "-5 HP, +2 Damage and +1 Accuracy for Archers"
 })
 
-DefineUpgrade("upgrade-aurvangian-tribe-faction", {
-	Name = _("Aurvangian Tribe Faction"),
+DefineUpgrade("upgrade-aurvangling-tribe-faction", {
+	Name = _("Aurvangling Tribe Faction"),
 	EffectsString = "+2 Damage for Archers"
 })
 
@@ -82,7 +82,7 @@ DefineModifier("upgrade-sigre-tribe-faction",
 	{"apply-to", "unit-goblin-archer"}, {"apply-to", "unit-goblin-headhunter"}, {"apply-to", "unit-goblin-shadowstalker"}
 )
 
-DefineModifier("upgrade-aurvangian-tribe-faction",
+DefineModifier("upgrade-aurvangling-tribe-faction",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-goblin-archer"}

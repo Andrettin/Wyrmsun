@@ -53,4 +53,4 @@ DefineMapTemplate("aurvang", {
 	}
 })
 
-SetMapTemplateUnit("aurvang", "unit-goblin-town-hall", "aurvangian-tribe", {-1, -1})
+SetMapTemplateUnit("aurvang", "unit-goblin-town-hall", "aurvangling-tribe", {-1, -1})

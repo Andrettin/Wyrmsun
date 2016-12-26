@@ -41,12 +41,12 @@ DefineFaction("issudru-tribe", { -- invented by Jesse Crider
 	FactionUpgrade = "upgrade-issudru-tribe-faction"
 })
 
-DefineFaction("aurvangian-tribe", {
-	Name = "Aurvangian Tribe",
+DefineFaction("aurvangling-tribe", {
+	Name = "Aurvangling Tribe",
 	Civilization = "goblin",
 	Type = "tribe",
 	Colors = {"teal"},
-	FactionUpgrade = "upgrade-aurvangian-tribe-faction",
+	FactionUpgrade = "upgrade-aurvangling-tribe-faction",
 	Description = "The reclusive goblins of the Aurvang swamplands are wary of outsiders, with trespassers often finding themselves filled with arrows."
 })
 
@@ -89,7 +89,7 @@ DefineFaction("aurvang", {
 	Colors = {"teal"},
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "monarchy",
-	FactionUpgrade = "upgrade-aurvangian-tribe-faction",
+	FactionUpgrade = "upgrade-aurvangling-tribe-faction",
 	Titles = {
 		"monarchy", "duchy", "Principality"
 	}
