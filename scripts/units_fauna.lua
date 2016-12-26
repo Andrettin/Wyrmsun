@@ -925,6 +925,7 @@ DefineUnitType("unit-wolf", {
 		"Garm", -- Garm is a wolf-hound in Norse mythology, who dwells in a cave at the entrance of Niflheim, and who will kill Tyr during Ragnarok; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 193.
 		"Geri", -- Geri is one of Odin's wolves in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 61.
 		"Hati", -- Hati is the wolf who pursues the moon in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63.
+		"Hrodvitnir", -- alternative name for the wolf from Norse mythology, Fenrir; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 245.
 		"Skoll" -- Skoll is the wolf who pursues the sun in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63.
 	},
 	Sounds = {
