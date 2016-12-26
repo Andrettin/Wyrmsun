@@ -9,6 +9,7 @@ if (LoadedGame == false) then
 --		DarkLandQuantity = "medium",
 		RoughLandQuantity = "medium",
 --		DarkRoughLandQuantity = "medium",
-		WorkerQuantity = 5
+		WorkerQuantity = 5,
+		NoFlyingCreeps = true
 	})
 end
