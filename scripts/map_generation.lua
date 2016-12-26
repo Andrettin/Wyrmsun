@@ -1279,7 +1279,7 @@ function CreateNeutralBuildings(building_type, building_number, min_x, max_x, mi
 		Count = building_number
 		local WhileCount = 0
 		while (Count > 0 and WhileCount < building_number * 100) do
-			local building_spawn_point = FindAppropriateNeutralBuildingSpawnPoint(building_type, min_x, max_x, min_y, max_y)
+			local building_spawn_point = FindAppropriateNeutralBuildingSpawnPoint(building_type, min_x, max_x, min_y, max_y, symmetric)
 			unit = CreateUnit(building_type, PlayerNumNeutral, {building_spawn_point[1], building_spawn_point[2]})
 			Count = Count - 1
 			if (symmetric) then
@@ -2800,23 +2800,37 @@ function FindAppropriateGoldMineSpawnPoint(min_x, max_x, min_y, max_y, symmetric
 	return {RandomX, RandomY}
 end
 
-function FindAppropriateNeutralBuildingSpawnPoint(building_type, min_x, max_x, min_y, max_y)
+function FindAppropriateNeutralBuildingSpawnPoint(building_type, min_x, max_x, min_y, max_y, symmetric)
 	local RandomX = 0
 	local RandomY = 0
 	local location_found = false
 	local WhileCount = 0
+	if (symmetric) then
+		max_x = max_x / 2
+		max_y = max_y / 2
+	end
 	while (location_found == false and WhileCount < 1000) do
 		RandomX = SyncRand(max_x - min_x + 1) + min_x
 		RandomY = SyncRand(max_y - min_y + 1) + min_y
 		
 		local in_buildable_land = true
-		for x_offset=0, (GetUnitTypeData(building_type, "TileWidth") - 1) do
-			for y_offset=0, (GetUnitTypeData(building_type, "TileHeight") - 1) do
-				if (GetTileTerrainHasFlag(RandomX + x_offset, RandomY + y_offset, "land") == false or GetTileTerrainHasFlag(RandomX + x_offset, RandomY + y_offset, "unpassable") or GetTileTerrainHasFlag(RandomX + x_offset, RandomY + y_offset, "no-building")) then
-					in_buildable_land = false
+
+		if (symmetric) then
+			if (math.abs(RandomX - max_x) < 16 or math.abs(RandomY - max_y) < 16) then
+				in_buildable_land = false
+			end
+		end
+		
+		if (in_buildable_land) then
+			for x_offset=0, (GetUnitTypeData(building_type, "TileWidth") - 1) do
+				for y_offset=0, (GetUnitTypeData(building_type, "TileHeight") - 1) do
+					if (GetTileTerrainHasFlag(RandomX + x_offset, RandomY + y_offset, "land") == false or GetTileTerrainHasFlag(RandomX + x_offset, RandomY + y_offset, "unpassable") or GetTileTerrainHasFlag(RandomX + x_offset, RandomY + y_offset, "no-building")) then
+						in_buildable_land = false
+					end
 				end
 			end
 		end
+
 		if (in_buildable_land) then
 			local unit_quantity = 0
 			for i=0,(PlayerMax - 2) do

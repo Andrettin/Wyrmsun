@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 - 2.5.3
 -----------------------------------------------------------------------
 
+* Maps
+- Improved symmetric map generation so that mercenary camps can no longer be generated extremely close together in a group of four at the center of the map.
+
 * Units
 - Fixed issue which caused a worker to stop its current actions if they previously had been ordered to build a structure, began building it, and then went on to do something else and another worker completed the construction.
 
