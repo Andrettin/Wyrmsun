@@ -119,8 +119,8 @@ Units = {
 	"unit-copper-rock", "unit-copper-deposit", "unit-copper-mine",
 	"unit-coal-mine",
 	"unit-mercenary-camp",
-	"unit-cavern-entrance",
-	"unit-portal",
+--	"unit-cavern-entrance",
+--	"unit-portal",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
 	"unit-carrots", "unit-cheese", "unit-wyrm-heart", "unit-potion-of-healing"
 }
