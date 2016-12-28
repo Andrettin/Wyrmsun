@@ -25,6 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+--[[
 AddTrigger("the-journey-to-godheim", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 227.
 	function()
 		if (SyncRand(100) ~= 0) then -- 1% chance this will trigger every time it is checked (and 1% for each player it is checked for, for a chance of 0.01% for a player that matches the conditions
@@ -158,3 +159,27 @@ AddTrigger("marauding-finland-end", -- Source: Snorri Sturlson, "Heimskringla", 
 		return false
 	end
 )
+--]]
+
+AddTrigger("the-house-of-seven-fathers",
+	function()
+		local the_house_of_seven_fathers = FindUnique("the-house-of-seven-fathers")
+		if (the_house_of_seven_fathers) then
+			local uncount = GetUnitsAroundUnit(the_house_of_seven_fathers, 1, true)
+			for unit1 = 1,table.getn(uncount) do 
+				if (uncount[unit1] and GetUnitVariable(uncount[unit1], "Character") ~= "" and GetUnitVariable(uncount[unit1], "CustomCharacter") == false and Players[GetUnitVariable(the_house_of_seven_fathers, "Player")]:IsEnemy(Players[GetUnitVariable(uncount[unit1], "Player")]) == false) then -- for now only allowed for non-custom heroes, for code reasons
+					trigger_player = GetUnitVariable(uncount[unit1], "Player")
+					second_trigger_player = GetUnitVariable(the_house_of_seven_fathers, "Player")
+					trigger_hero = GetUnitVariable(uncount[unit1], "Character")
+					return true
+				end
+			end
+		end
+		return false
+	end,
+	function()
+		CallDialogue("the-house-of-seven-fathers", trigger_player)
+		return false
+	end
+)
+

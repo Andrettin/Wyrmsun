@@ -448,7 +448,6 @@ function SinglePlayerTriggers()
 	-- events are limited to the campaign mode
 	if (GetCurrentCampaign() ~= "") then
 		EventTriggers()
-		FlavorDialogueTriggers()
 	end
 		
 	LoadedGame = false
@@ -1502,6 +1501,24 @@ function FindHero(hero, player)
 	
 	for unit1 = 1,table.getn(uncount) do 
 		if (GetUnitVariable(uncount[unit1], "Character") == hero and GetUnitVariable(uncount[unit1], "CustomCharacter") == false) then
+			return uncount[unit1]
+		end
+	end
+	
+	return nil
+end
+
+function FindUnique(unique, player)
+	local uncount = 0
+	
+	if (player) then
+		uncount = GetUnits(player)
+	else
+		uncount = GetUnits("any")
+	end
+	
+	for unit1 = 1,table.getn(uncount) do 
+		if (GetUnitVariable(uncount[unit1], "Unique") == unique) then
 			return uncount[unit1]
 		end
 	end

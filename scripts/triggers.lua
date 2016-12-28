@@ -60,4 +60,5 @@ AddTrigger("bountiful-harvest",
 
 Load("scripts/civilizations/dwarf/triggers.lua")
 Load("scripts/civilizations/germanic/triggers.lua")
+Load("scripts/civilizations/norse/triggers.lua")
 Load("scripts/civilizations/teuton/triggers.lua")

@@ -67,7 +67,7 @@ https://github.com/Andrettin/Wyrmsun
 - Improved symmetric map generation so that mercenary camps can no longer be generated extremely close together in a group of four at the center of the map.
 
 * Quests
-- Added The House of Seven Fathers in-game quest for the Germanics.
+- Added "The House of Seven Fathers" in-game quest for the Germanics.
 
 * Units
 - Fixed issue which caused a worker to stop its current actions if it previously had been ordered to build a structure, began building it, and then went on to do something else and another worker completed the construction.
@@ -100,7 +100,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Campaigns
 - Mineral resources for the Earth campaign map are now based on the real location of resources (except for those in the player starting points), instead of being randomly generated.
-- Added The First Dwarves campaign.
+- Added "The First Dwarves" campaign.
 
 * Factions
 - Removed faction splitting, as the feature was not performing as expected.

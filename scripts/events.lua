@@ -365,54 +365,48 @@ function EventTriggers()
 	end
 end
 
-function FlavorDialogueTriggers()
-	-- random bed dialogue
-	--[[
-	AddTrigger("random-bed-dialogue",
-		function()
-			local uncount = GetUnits("any")
-			for unit1 = 1,table.getn(uncount) do 
-				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-bed" and GetUnitVariable(uncount[unit1], "CustomAIState") == 0) then
-					local unit_quantity = GetNumUnitsAt(GetThisPlayer(), "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 1, GetUnitVariable(uncount[unit1],"PosY") + 1})
-					if (unit_quantity > 0) then
-						return true
-					end
-				end
-			end
-			return false
-		end,
-		function()
-			local uncount = GetUnits("any")
-			for unit1 = 1,table.getn(uncount) do 
-				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-bed" and GetUnitVariable(uncount[unit1], "CustomAIState") == 0) then
-					local unit_quantity = GetNumUnitsAt(GetThisPlayer(), "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 1, GetUnitVariable(uncount[unit1],"PosY") + 1})
-					if (unit_quantity > 0) then
-						local nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 2, true)
-						for unit2 = 1,table.getn(nearby_uncount) do 
-							if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetThisPlayer()) then
-								local RandomNumber = SyncRand(5)
-								if (RandomNumber == 0) then
-									AddMessage(GetUnitVariable(nearby_uncount[unit2], "Name") .. ": " .. _("This bed doesn't look very comfortable."))
-								elseif (RandomNumber == 1) then
-									AddMessage(GetUnitVariable(nearby_uncount[unit2], "Name") .. ": " .. _("What a dirty bed."))
-								elseif (RandomNumber == 2) then
-									AddMessage(GetUnitVariable(nearby_uncount[unit2], "Name") .. ": " .. _("A bed? Well, I'm not tired."))
-								elseif (RandomNumber == 3) then
-									AddMessage(GetUnitVariable(nearby_uncount[unit2], "Name") .. ": " .. _("This looks better than the bed in ~<my~> room."))
-								elseif (RandomNumber == 4) then
-									AddMessage(GetUnitVariable(nearby_uncount[unit2], "Name") .. ": " .. _("Early to bed, early to rise..."))
-								end
-								SetUnitVariable(uncount[unit1], "CustomAIState", 1)
-								return true
-							end
-						end
-					end
-				end
-			end
-			return true
+function ProcessEventString(event_string)
+	if (string.find(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN_CAPITALIZED") ~= nil) then
+		if (GetCharacterData(trigger_hero, "Gender") == "male") then
+			event_string = string.gsub(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN_CAPITALIZED", "He")
+		elseif (GetCharacterData(trigger_hero, "Gender") == "female") then
+			event_string = string.gsub(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN_CAPITALIZED", "She")
+		elseif (GetCharacterData(trigger_hero, "Gender") == "asexual") then
+			event_string = string.gsub(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN_CAPITALIZED", "It")
 		end
-	)
-	--]]
+	end
+	if (string.find(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN") ~= nil) then
+		if (GetCharacterData(trigger_hero, "Gender") == "male") then
+			event_string = string.gsub(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN", "he")
+		elseif (GetCharacterData(trigger_hero, "Gender") == "female") then
+			event_string = string.gsub(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN", "she")
+		elseif (GetCharacterData(trigger_hero, "Gender") == "asexual") then
+			event_string = string.gsub(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN", "it")
+		end
+	end
+	if (string.find(event_string, "TRIGGER_HERO_POSSESSIVE_PRONOUN") ~= nil) then
+		if (GetCharacterData(trigger_hero, "Gender") == "male") then
+			event_string = string.gsub(event_string, "TRIGGER_HERO_POSSESSIVE_PRONOUN", "his")
+		elseif (GetCharacterData(trigger_hero, "Gender") == "female") then
+			event_string = string.gsub(event_string, "TRIGGER_HERO_POSSESSIVE_PRONOUN", "her")
+		elseif (GetCharacterData(trigger_hero, "Gender") == "asexual") then
+			event_string = string.gsub(event_string, "TRIGGER_HERO_POSSESSIVE_PRONOUN", "its")
+		end
+	end
+	if (string.find(event_string, "TRIGGER_HERO_OBLIQUE_PRONOUN") ~= nil) then
+		if (GetCharacterData(trigger_hero, "Gender") == "male") then
+			event_string = string.gsub(event_string, "TRIGGER_HERO_OBLIQUE_PRONOUN", "him")
+		elseif (GetCharacterData(trigger_hero, "Gender") == "female") then
+			event_string = string.gsub(event_string, "TRIGGER_HERO_OBLIQUE_PRONOUN", "her")
+		elseif (GetCharacterData(trigger_hero, "Gender") == "asexual") then
+			event_string = string.gsub(event_string, "TRIGGER_HERO_OBLIQUE_PRONOUN", "it")
+		end
+	end
+	if (string.find(event_string, "TRIGGER_HERO") ~= nil) then
+		event_string = string.gsub(event_string, "TRIGGER_HERO", GetCharacterData(trigger_hero, "Name"))
+	end
+
+	return event_string
 end
 
 function Event(speaker, event_description, player, options, option_effects, event_icon, event_image, continue_automatically, arg)
@@ -460,7 +454,8 @@ function Event(speaker, event_description, player, options, option_effects, even
 		else
 			menu:add(l, 14, 112)
 		end
-		l:setCaption(_(event_description))
+		
+		l:setCaption(_(ProcessEventString(event_description)))
 
 		if (type(speaker) == "number") then
 			event_icon = CIcon:Get(GetUnitVariable(speaker, "Icon")).G
@@ -510,7 +505,7 @@ function Event(speaker, event_description, player, options, option_effects, even
 			)
 			
 			if (arg.OptionTooltips ~= nil) then
-				option_b:setTooltip(_(arg.OptionTooltips[i]))
+				option_b:setTooltip(_(ProcessEventString(arg.OptionTooltips[i])))
 			end
 		end
 		
