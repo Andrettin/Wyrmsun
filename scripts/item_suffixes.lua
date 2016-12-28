@@ -114,6 +114,12 @@ DefineUpgrade("upgrade-item-suffix-of-perfuration", {
 	MagicLevel = 2
 })
 
+DefineUpgrade("upgrade-item-suffix-of-plenty", {
+	Name = _("of Plenty"),
+	MagicSuffix = true,
+	MagicLevel = 2
+})
+
 DefineUpgrade("upgrade-item-suffix-of-power", { -- example: Ring of Power (from Wesnoth)
 	Name = _("of Power"),
 	MagicSuffix = true,
@@ -273,6 +279,10 @@ DefineModifier("upgrade-item-suffix-of-lightning",
 
 DefineModifier("upgrade-item-suffix-of-perfuration",
 	{"PiercingDamage", 1}
+)
+
+DefineModifier("upgrade-item-suffix-of-plenty",
+	{"Supply", 1}
 )
 
 DefineModifier("upgrade-item-suffix-of-power",

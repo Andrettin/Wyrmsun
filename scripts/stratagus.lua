@@ -1431,7 +1431,7 @@ function OrderUnitBlock(player, unit, fromx, fromy, width, height, tox, toy, ord
     end
 end
 
-function FindUnit(unit_type, player)
+function FindUnit(unit_type, player, last_unit)
 	local uncount = 0
 	
 	if (player ~= nil) then
@@ -1440,10 +1440,20 @@ function FindUnit(unit_type, player)
 		uncount = GetUnits("any")
 	end
 	
-	for unit1 = 1,table.getn(uncount) do 
-		if (GetUnitVariable(uncount[unit1], "Ident") == unit_type or (unit_type == "any_organic" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) or unit_type == "any") then
-			if (GetUnitVariable(uncount[unit1], "HitPoints") > 0) then
-				return uncount[unit1]
+	if (last_unit) then
+		for unit1 = table.getn(uncount), 1, -1 do
+			if (GetUnitVariable(uncount[unit1], "Ident") == unit_type or (unit_type == "any_organic" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) or unit_type == "any") then
+				if (GetUnitVariable(uncount[unit1], "HitPoints") > 0) then
+					return uncount[unit1]
+				end
+			end
+		end
+	else
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == unit_type or (unit_type == "any_organic" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) or unit_type == "any") then
+				if (GetUnitVariable(uncount[unit1], "HitPoints") > 0) then
+					return uncount[unit1]
+				end
 			end
 		end
 	end

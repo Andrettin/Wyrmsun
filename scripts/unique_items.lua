@@ -209,6 +209,14 @@ DefineUniqueItem("smitna", { -- Source: Alena Ježková, "22 Böhmische Legenden
 	Background = "Šmitna was a silver mine near Kuttenberg (Kutná Hora), in Bohemia. It was said to be inhabited by kobolds, who would warn the miners of which parts of the mine were unsafe to dig through. In 1509 Šmitna was flooded, resulting in the drowning of 18 miners - according to legend, they had been told not to dig at a certain place by the mine's kobolds, but such warnings went unheeded."
 } )
 
+DefineUniqueItem("the-house-of-seven-fathers", { -- Source: Peter Christen Asbjørnsen and Jørgen Moe, "Norwegian Folktales", 1960, pp. 13-14.
+	Name = "The House of Seven Fathers",
+	Type = "unit-teuton-farm",
+	Prefix = "upgrade-item-prefix-sturdy",
+	Suffix = "upgrade-item-suffix-of-plenty"
+	-- described as being big and beautiful, so it makes sense that it provides more food than the usual farm, and that it is harder to destroy
+} )
+
 DefineUniqueItem("shorbear-hold", {
 	Name = "Shorbear Hold",
 	Type = "unit-dwarven-stronghold",
