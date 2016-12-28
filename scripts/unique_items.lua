@@ -213,7 +213,8 @@ DefineUniqueItem("the-house-of-seven-fathers", { -- Source: Peter Christen Asbj√
 	Name = "The House of Seven Fathers",
 	Type = "unit-teuton-farm",
 	Prefix = "upgrade-item-prefix-sturdy",
-	Suffix = "upgrade-item-suffix-of-plenty"
+	Suffix = "upgrade-item-suffix-of-plenty",
+	Description = "This imposing manor house lies along a road, and seven generations of fathers live together in it."
 	-- described as being big and beautiful, so it makes sense that it provides more food than the usual farm, and that it is harder to destroy
 } )
 
