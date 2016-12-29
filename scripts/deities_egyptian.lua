@@ -25,6 +25,17 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineDeity("amon", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 44, 61, 64, 66, 77.
+	Name = "Amon",
+	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
+	Civilizations = {"dwarf", "egyptian"},
+	Religions = {"paganism"},
+	Gender = "male",
+	Domains = {"aether", "air"},
+	Major = true,
+--	Description = "\"The hidden\", Amon is a god associated with invisible powers and the winds. Sometimes Amon takes the form of a ram or a goose. He is the father of Khonsu. He is worshiped by the Egyptians on Earth, and as a yale-headed deity by the dwarves of Joruvellir."
+})
+
 DefineDeity("aton", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 113-114.
 	Name = "Aton",
 	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
@@ -55,16 +66,6 @@ DefineDeity("akhsu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992,
 	Gender = "male",
 	Domains = {},
 --	Description = "Akhsu is a god who takes the form of a tree."
-})
-
-DefineDeity("amon", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 44, 61, 64, 66, 77.
-	Name = "Amon",
-	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
-	Civilizations = {"egyptian"},
-	Religions = {"paganism"},
-	Gender = "male",
-	Domains = {"aether", "air"},
---	Description = "\"The hidden\", Amon is a god associated with invisible powers. The deity is also related to the winds. Sometimes Amon takes the form of a ram or a goose. He is the father of Khonsu."
 })
 
 DefineDeity("andjety", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 68.

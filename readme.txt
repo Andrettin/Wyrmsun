@@ -65,12 +65,14 @@ https://github.com/Andrettin/Wyrmsun
 
 * Maps
 - Improved symmetric map generation so that mercenary camps can no longer be generated extremely close together in a group of four at the center of the map.
+- Improved resource generation for randomly-generated maps.
 
 * Quests
 - Added "The House of Seven Fathers" in-game quest for the Germanics.
 
 * Units
 - Fixed issue which caused a worker to stop its current actions if it previously had been ordered to build a structure, began building it, and then went on to do something else and another worker completed the construction.
+- Units with only one experience unit type upgrade (i.e. Dwarven Miners) will now automatically choose that upgrade upon leveling up.
 
 -----------------------------------------------------------------------
 - 2.5.2
