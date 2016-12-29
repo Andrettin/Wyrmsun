@@ -66,6 +66,7 @@ https://github.com/Andrettin/Wyrmsun
 * Maps
 - Improved symmetric map generation so that mercenary camps can no longer be generated extremely close together in a group of four at the center of the map.
 - Improved resource generation for randomly-generated maps.
+- Updated tree generation so that trees are less spread out in small chunks in randomly generated maps.
 
 * Quests
 - Added "The House of Seven Fathers" in-game quest for the Germanics.

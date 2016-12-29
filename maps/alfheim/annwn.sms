@@ -4,7 +4,7 @@ if (LoadedGame == false) then
 	if (GetCurrentQuest() == "the-two-kings-of-annwn") then
 		GenerateRandomMap({
 			RockQuantity = "low",
-			TreeQuantity = "medium",
+			TreeQuantity = "high",
 			WaterQuantity = "low",
 			RoughLandQuantity = "low",
 			WorkerQuantity = 5,
@@ -14,7 +14,7 @@ if (LoadedGame == false) then
 	else
 		GenerateRandomMap({
 			RockQuantity = "low",
-			TreeQuantity = "medium",
+			TreeQuantity = "high",
 			WaterQuantity = "low",
 			RoughLandQuantity = "low",
 			WorkerQuantity = 5

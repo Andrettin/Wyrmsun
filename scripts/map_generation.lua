@@ -2021,11 +2021,11 @@ function GenerateRandomMap(arg)
 		end
 
 		if (arg.TreeQuantity == "high") then
-			GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+			GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 512, (Map.Info.MapWidth * Map.Info.MapHeight) / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 		elseif (arg.TreeQuantity == "medium") then
-			GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+			GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 		elseif (arg.TreeQuantity == "low") then
-			GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 128, (Map.Info.MapWidth * Map.Info.MapHeight) / 64, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+			GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 2048, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 		end
 
 		if (arg.DarkLandQuantity == "high") then
@@ -2214,42 +2214,24 @@ function ApplyRawTiles()
 					end
 				end
 			elseif (RawTile(x, y) == "Gold Mine") then
-				RandomNumber = SyncRand(2)
+				RandomNumber = SyncRand(3)
+				local deposit_type
 				if (RandomNumber == 0) then
-					RandomNumber = SyncRand(3)
-					local deposit_type
-					if (RandomNumber == 0) then
-						deposit_type = "unit-gold-deposit"
-					elseif (RandomNumber == 1) then
-						deposit_type = "unit-silver-deposit"
-					elseif (RandomNumber == 2) then
-						deposit_type = "unit-copper-deposit"
-					end
-					unit = CreateUnit(deposit_type, PlayerNumNeutral, {x, y})
-					SetResourcesHeld(unit, 50000)
-					SetUnitVariable(unit, "GenerateSpecialProperties")
-					for sub_x=0,(GetUnitTypeData(deposit_type, "TileWidth") - 1) do
-						for sub_y=0,(GetUnitTypeData(deposit_type, "TileHeight") - 1) do
-							SetRawTile(x + sub_x, y + sub_y, "Land")
-						end
-					end
+					deposit_type = "unit-gold-deposit"
+					rock_type = "unit-gold-rock"
 				elseif (RandomNumber == 1) then
-					RandomNumber = SyncRand(3)
-					local rock_type
-					if (RandomNumber == 0) then
-						rock_type = "unit-gold-rock"
-					elseif (RandomNumber == 1) then
-						rock_type = "unit-silver-rock"
-					elseif (RandomNumber == 2) then
-						rock_type = "unit-copper-rock"
-					end
-					for sub_x=0,(GetUnitTypeData("unit-gold-deposit", "TileWidth") - 1) do
-						for sub_y=0,(GetUnitTypeData("unit-gold-deposit", "TileHeight") - 1) do
-							SetRawTile(x + sub_x, y + sub_y, "Land")
-							if (SyncRand(100) <= 50) then -- give a chance of a gold rock not being generated, to make the shape of the gold rock group seem more natural
-								unit = CreateUnit(rock_type, PlayerNumNeutral, {x + sub_x, y + sub_y})
-							end
-						end
+					deposit_type = "unit-silver-deposit"
+					rock_type = "unit-silver-rock"
+				elseif (RandomNumber == 2) then
+					deposit_type = "unit-copper-deposit"
+					rock_type = "unit-copper-rock"
+				end
+				unit = CreateUnit(deposit_type, PlayerNumNeutral, {x, y})
+				SetResourcesHeld(unit, 50000)
+				SetUnitVariable(unit, "GenerateSpecialProperties")
+				for sub_x=0,(GetUnitTypeData(deposit_type, "TileWidth") - 1) do
+					for sub_y=0,(GetUnitTypeData(deposit_type, "TileHeight") - 1) do
+						SetRawTile(x + sub_x, y + sub_y, "Land")
 					end
 				end
 			elseif (string.sub(RawTile(x, y), 0, 9) == "Town Hall") then

@@ -7,7 +7,7 @@ end
 if (LoadedGame == false) then
 	GenerateRandomMap({
 		RockQuantity = "low",
-		TreeQuantity = "medium",
+		TreeQuantity = "high",
 		WaterQuantity = "low",
 		RoughLandQuantity = "medium",
 --		DarkLandQuantity = "medium",

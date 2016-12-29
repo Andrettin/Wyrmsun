@@ -5,7 +5,7 @@ if (LoadedGame == false) then
 		GenerateRandomMap({
 			MercenaryCamp = true,
 			RockQuantity = "high",
-			TreeQuantity = "medium",
+			TreeQuantity = "high",
 			RoughLandQuantity = "high",
 			WaterQuantity = "low",
 			WorkerQuantity = 5,
@@ -16,7 +16,7 @@ if (LoadedGame == false) then
 		GenerateRandomMap({
 			MercenaryCamp = true,
 			RockQuantity = "high",
-			TreeQuantity = "medium",
+			TreeQuantity = "high",
 			RoughLandQuantity = "high",
 			WaterQuantity = "low",
 			WorkerQuantity = 5,
