@@ -72,24 +72,3 @@ DefineModifier("upgrade-derro-tribe-faction",
 DefineModifier("upgrade-derro-tribe-faction",
 	{"apply-to", "unit-gnomish-master-at-arms"}, {"convert-to", "unit-derro-shadowguard"}
 )
-
-DefineModifier("upgrade-sagan-tribe-faction",
-	{"apply-to", "unit-gnomish-worker"}, {"convert-to", "unit-forest-gnomish-worker"}
-)
-
-DefineModifier("upgrade-sagan-tribe-faction",
-	{"apply-to", "unit-gnomish-recruit"}, {"convert-to", "unit-forest-gnomish-recruit"}
-)
-
-DefineModifier("upgrade-sagan-tribe-faction",
-	{"apply-to", "unit-gnomish-duelist"}, {"convert-to", "unit-forest-gnomish-duelist"}
-)
-
-DefineModifier("upgrade-sagan-tribe-faction",
-	{"apply-to", "unit-gnomish-master-at-arms"}, {"convert-to", "unit-forest-gnomish-master-at-arms"}
-)
-
-DefineModifier("upgrade-sagan-tribe-faction",
-	{"apply-to", "unit-gnomish-herbalist"}, {"convert-to", "unit-forest-gnomish-herbalist"}
-)
-

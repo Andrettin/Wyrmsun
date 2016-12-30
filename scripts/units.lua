@@ -86,7 +86,6 @@ Units = {
 	"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist", "unit-gnomish-caravan",
 	"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
 	"unit-deep-gnomish-worker", "unit-deep-gnomish-recruit", "unit-deep-gnomish-duelist", "unit-deep-gnomish-master-at-arms", "unit-deep-gnomish-herbalist",
-	"unit-forest-gnomish-worker", "unit-forest-gnomish-recruit", "unit-forest-gnomish-duelist", "unit-forest-gnomish-master-at-arms", "unit-forest-gnomish-herbalist",
 	"unit-derro-worker", "unit-derro-thug", "unit-derro-executioner", "unit-derro-shadowguard",
 	"unit-goblin-worker", "unit-goblin-militia", "unit-goblin-magnate",
 	"unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman",

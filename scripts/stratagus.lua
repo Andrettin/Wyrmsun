@@ -923,7 +923,7 @@ function StandardTriggers()
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Scavenger") == false) then
 			AddTrigger("tip-scavenger",
 				function()
-					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-gnomish-worker" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-deep-gnomish-worker" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-forest-gnomish-worker" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-derro-worker")) then
+					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-gnomish-worker" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-deep-gnomish-worker" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-derro-worker")) then
 						return true
 					else
 						return false
@@ -939,7 +939,7 @@ function StandardTriggers()
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Recruit") == false) then
 			AddTrigger("tip-recruit",
 				function()
-					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-gnomish-recruit" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-deep-gnomish-recruit" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-forest-gnomish-recruit")) then
+					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-gnomish-recruit" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-deep-gnomish-recruit")) then
 						return true
 					else
 						return false
@@ -955,7 +955,7 @@ function StandardTriggers()
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Herbalist") == false) then
 			AddTrigger("tip-herbalist",
 				function()
-					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-gnomish-herbalist" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-deep-gnomish-herbalist" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-forest-gnomish-herbalist")) then
+					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-gnomish-herbalist" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-deep-gnomish-herbalist")) then
 						return true
 					else
 						return false

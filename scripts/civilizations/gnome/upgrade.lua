@@ -58,15 +58,3 @@ DefineDependency("unit-derro-worker",
 DefineDependency("unit-derro-thug",
 	{"upgrade-derro-tribe-faction"}
 )
-
-DefineDependency("unit-forest-gnomish-worker",
-	{"upgrade-sagan-tribe-faction"}
-)
-
-DefineDependency("unit-forest-gnomish-recruit",
-	{"upgrade-sagan-tribe-faction"}
-)
-
-DefineDependency("unit-forest-gnomish-herbalist",
-	{"upgrade-sagan-tribe-faction"}
-)

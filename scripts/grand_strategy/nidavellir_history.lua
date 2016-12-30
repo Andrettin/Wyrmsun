@@ -271,7 +271,7 @@ if (GrandStrategyYear >= 400) then
 	SetProvinceOwner("Shorbear Hills", "dwarf", "knalga")
 
 	SetProvinceOwner("Kal Kartha", "dwarf", "kal-kartha") -- The Lordship of Kal Kartha was founded around 400 AD
-	SetProvinceUnitQuantity("Kal Kartha", "unit-forest-gnomish-recruit", 0)
+	SetProvinceUnitQuantity("Kal Kartha", "unit-gnomish-recruit", 0)
 	SetWorldMapResourceProspected("gold", 46, 5, true)
 
 	SetProvinceOwner("Lyr", "dwarf", "lyr") -- The Lordship of Lyr was founded around the same time as the other lordships

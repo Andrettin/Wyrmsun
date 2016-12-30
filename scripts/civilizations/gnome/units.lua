@@ -658,17 +658,17 @@ DefineUnitType("unit-gnomish-caravan", { Name = _("Caravan"),
 } )
 
 Load("scripts/civilizations/gnome/units_deep_gnome.lua")
-Load("scripts/civilizations/gnome/units_forest_gnome.lua")
 Load("scripts/civilizations/gnome/units_derro.lua")
 
-DefineUnitType("unit-gnomish-town-hall", { Name = _("Town Hall"),
+DefineUnitType("unit-gnomish-town-hall", {
+	Name = _("Town Hall"),
 	Parent = "unit-template-town-hall",
 	Civilization = "gnome",
 	Description = _("The town hall is the center of a gnomish settlement's life."),
 	Image = {"file", "gnome/buildings/town_hall.png", "size", {128, 128}},
 	Shadow = {"file", "gnome/buildings/town_hall_shadow.png", "size", {128, 128}},
 	Animations = "animations-building", Icon = "icon-gnomish-town-hall",
-	Trains = {"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-forest-gnomish-worker", "unit-derro-worker"},
+	Trains = {"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker"},
 	AiDrops = {"unit-wool-shoes", "unit-furry-wool-shoes"},
 	DropAffixes = {"upgrade-item-prefix-jinns", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-storm", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-the-jinn", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-trickery"},
 	DropSpells = {"spell-acthnic-allegiance", "spell-sagan-allegiance"},
@@ -700,7 +700,7 @@ DefineUnitType("unit-gnomish-barracks", {
 	Image = {"file", "gnome/buildings/barracks.png", "size", {96, 96}},
 	Shadow = {"file", "gnome/buildings/barracks_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-gnomish-barracks",
-	Trains = {"unit-gnomish-recruit", "unit-deep-gnomish-recruit", "unit-forest-gnomish-recruit", "unit-derro-thug", "unit-gnomish-herbalist", "unit-deep-gnomish-herbalist", "unit-forest-gnomish-herbalist"},
+	Trains = {"unit-gnomish-recruit", "unit-deep-gnomish-recruit", "unit-derro-thug", "unit-gnomish-herbalist", "unit-deep-gnomish-herbalist"},
 	AiDrops = {"unit-thrusting-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-wool-shoes", "unit-furry-wool-shoes"},
 	DropAffixes = {"upgrade-item-prefix-jinns", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-storm", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-the-jinn", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-trickery"},
 	Sounds = {
