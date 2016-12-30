@@ -47,3 +47,10 @@ DefineFaction("shellscale-tribe", {
 	Type = "tribe",
 	Colors = {"blue"}
 })
+
+DefineFaction("svafning-tribe", {
+	Name = "Svafning Tribe",
+	Civilization = "kobold",
+	Type = "tribe",
+	Colors = {"blue"}
+})

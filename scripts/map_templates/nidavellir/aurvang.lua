@@ -26,3 +26,4 @@
 --
 
 SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "aurvangling-tribe", {605, 265})
+--SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "aurvangling-tribe", {635, 280})

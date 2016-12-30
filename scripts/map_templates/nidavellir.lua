@@ -95,12 +95,23 @@ DefineMapTemplate("nidavellir-underground-1", {
 	}
 })
 
-SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "khag-tribe", {274, 244})
-SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "lggi-tribe", {842, 332})
+SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "khag-tribe", {234, 204})
+SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "lggi-tribe", {802, 292})
 
 --SetMapTemplateUnit("nidavellir-underground-1", "unit-dwarven-town-hall", "shadowcharm-clan", {-1, -1})
 --SetMapTemplateHero("nidavellir-underground-1", "Fjalar", "shadowcharm-clan", {-1, -1}, -2800, -2799) -- Fjalar's and Galar's campaign begins in 2800 BC
 --SetMapTemplateHero("nidavellir-underground-1", "Galar", "shadowcharm-clan", {-1, -1}, -2800, -2799)
+
+SetMapTemplateUnit("nidavellir", "unit-wyrm", "svafning-tribe", {640, 118})
+SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "svafning-tribe", {640, 118})
+SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "svafning-tribe", {640, 118})
+SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "svafning-tribe", {640, 118})
+SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "svafning-tribe", {640, 118})
+SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "svafning-tribe", {640, 118})
+SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "svafning-tribe", {640, 118})
+SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "svafning-tribe", {640, 118})
+SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "svafning-tribe", {640, 118})
+SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "svafning-tribe", {640, 118})
 
 SetMapTemplateUnit("nidavellir-underground-1", "unit-kobold-footpad", "fafning-tribe", {-1, -1}, 561, 566)
 SetMapTemplateUnit("nidavellir-underground-1", "unit-kobold-footpad", "fafning-tribe", {-1, -1}, 561, 566)
@@ -118,6 +129,8 @@ SetMapTemplateHero("nidavellir-underground-1", "Fafnir", "fafning-tribe", {-1, -
 --SetMapTemplateLayerConnector("nidavellir-underground-1", "unit-portal", {-1, -1}, "Earth")
 --SetMapTemplateLayerConnector("nidavellir-underground-1", "unit-cavern-entrance", {-1, -1}, 0)
 
+--NidavellirStartX = 404
+--NidavellirStartY = 74
 NidavellirStartX = 362
 NidavellirStartY = 61
 
