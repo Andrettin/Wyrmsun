@@ -34,7 +34,7 @@ DefineMapTemplate("nidavellir", {
 	OverlayTerrainFile = "scripts/map_templates/nidavellir_overlay.map",
 	GeneratedTerrains = {
 		"mud", "medium",
-		"rock", "high",
+		"rock", "medium",
 		"flamefood-tree", "medium"
 	},
 	GeneratedNeutralUnits = {
