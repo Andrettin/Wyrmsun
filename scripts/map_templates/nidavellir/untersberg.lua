@@ -25,38 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineMapTemplate("untersberg", {
-	Name = "Untersberg",
-	MainTemplate = "nidavellir",
-	Width = 64,
-	Height = 64,
-	BaseTerrain = "dry-mud",
-	GeneratedTerrains = {
-		"mud", "low",
-		"shallow-water", "low",
-		"rock", "high",
-		"flamefood-tree", "medium"
-	},
-	ExternalGeneratedTerrains = {
-		"mud", "low",
-		"rock", "low",
-		"flamefood-tree", "low"
-	},
-	GeneratedNeutralUnits = {
---		"unit-gold-deposit", 4,
---		"unit-silver-deposit", 4,
---		"unit-copper-deposit", 4,
-		"unit-snigill", 16,
-		"unit-slime", 4
-	},
-	PlayerLocationGeneratedNeutralUnits = {
-		"unit-copper-deposit", 1,
-		"unit-wood-pile", 16,
-		"unit-stone-pile", 16
-	}
-})
-
---SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "acthnic-tribe", {-1, -1})
---SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "cubital-tribe", {-1, -1})
-SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "sagan-tribe", {-1, -1})
---SetMapTemplateUnit("untersberg", "unit-gnomish-town-hall", "vulcan-tribe", {-1, -1})
+SetMapTemplateUnit("nidavellir", "unit-gnomish-town-hall", "acthnic-tribe", {378, 198})
+--SetMapTemplateUnit("nidavellir", "unit-gnomish-town-hall", "cubital-tribe", {-1, -1})
+SetMapTemplateUnit("nidavellir", "unit-gnomish-town-hall", "sagan-tribe", {329, 221})
+--SetMapTemplateUnit("nidavellir", "unit-gnomish-town-hall", "vulcan-tribe", {-1, -1})
+--SetMapTemplateUnit("nidavellir", "unit-gnomish-town-hall", "untersberg", {355, 209})

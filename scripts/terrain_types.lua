@@ -131,6 +131,7 @@ DefineTerrainType("cave-floor", {
 
 DefineTerrainType("dry-mud", {
 	Name = "Dry Mud",
+	Character = "r",
 	Buildable = true,
 	Flags = {"land", "mud"},
 	InnerBorderTerrains = {"dirt"},

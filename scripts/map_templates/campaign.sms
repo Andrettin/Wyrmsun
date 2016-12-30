@@ -10,10 +10,10 @@ end
 if (GetCurrentCampaign() ~= "the-first-dwarves") then
 	ApplyMapTemplate("earth", EarthStartX, EarthStartY)
 else
-	ApplyMapTemplate("nidavellir", 0, 0, 0, 0)
+	ApplyMapTemplate("nidavellir", NidavellirStartX, NidavellirStartY)
 end
---ApplyMapTemplate("nidavellir", 0, 0, 0, 0, 1)
---ApplyMapTemplate("nidavellir-underground-1", 0, 0, 0, 0, 2)
+--ApplyMapTemplate("nidavellir", NidavellirStartX, NidavellirStartY, 0, 0, 1)
+--ApplyMapTemplate("nidavellir-underground-1", NidavellirStartX, NidavellirStartY, 0, 0, 2)
 --ApplyMapTemplate("asgard", 0, 0, 0, 0, 3)
 
 SetPlayerData(PlayerNumNeutral, "RaceName", "neutral")
