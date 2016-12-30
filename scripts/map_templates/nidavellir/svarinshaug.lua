@@ -48,4 +48,4 @@ SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "grafvitning-tribe", {53
 SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "grafvitning-tribe", {539, 174}, -2800, -2799)
 
 --SetMapTemplateLayerConnector("nidavellir", "unit-cavern-entrance", {-1, -1}, 1)
---SetMapTemplateLayerConnector("nidavellir-underground-1", "unit-cavern-entrance", {-1, -1}, 0)
+--SetMapTemplateLayerConnector("nidavellir-underground", "unit-cavern-entrance", {-1, -1}, 0)

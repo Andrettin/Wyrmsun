@@ -34,3 +34,39 @@ DefineMapTemplate("caverns-of-chaincolt-gates", { -- From Battle for Wesnoth: Th
 	TerrainFile = "scripts/map_templates/nidavellir/caverns_of_chaincolt_gates.map",
 	OverlayTerrainFile = "scripts/map_templates/nidavellir/caverns_of_chaincolt_gates_overlay.map"
 })
+
+DefineMapTemplate("caverns-of-chaincolt-gates-underground", { -- From Battle for Wesnoth: The Sceptre of Fire (Closing the Gates)
+	Name = "Caverns of Chaincolt Gates (Underground)",
+	MainTemplate = "nidavellir-underground",
+	Width = 34,
+	Height = 30,
+	SubtemplatePosition = {466, 227},
+	TerrainFile = "scripts/map_templates/nidavellir/caverns_of_chaincolt_gates_underground.map"
+})
+
+--SetMapTemplateLayerConnector("caverns-of-chaincolt-gates", "unit-cavern-entrance", {11, 15}, 1)
+--SetMapTemplateLayerConnector("caverns-of-chaincolt-gates-underground", "unit-cavern-entrance", {12, 14}, 0)
+
+-- stepping on all the glyphs should deactivate (or reactivate) the connection between the cavern entrances
+SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-glyph", "", {3, 5})
+SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-glyph", "", {9, 11})
+SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-glyph", "", {14, 3})
+SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-glyph", "", {17, 15})
+SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-glyph", "", {23, 24})
+SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-glyph", "", {30, 19})
+
+SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-dwarven-guard-tower", "norlund-clan", {22, 12}, 24)
+SetMapTemplateHero("caverns-of-chaincolt-gates-underground", "Baglur", "norlund-clan", {22, 11}, 24, 40)
+SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-dwarven-guard", "norlund-clan", {10, 13}, 24)
+SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-dwarven-guard", "norlund-clan", {14, 15}, 24)
+SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-dwarven-guard", "norlund-clan", {12, 11}, 24)
+SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-dwarven-guard", "norlund-clan", {15, 13}, 24)
+
+-- should give these goblins to a faction later
+SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-goblin-swordsman", "", {6, 3}, 24, 25)
+SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-goblin-swordsman", "", {6, 3}, 24, 25)
+SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-goblin-swordsman", "", {6, 3}, 24, 25)
+SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-goblin-swordsman", "", {30, 25}, 24, 25)
+SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-goblin-swordsman", "", {30, 25}, 24, 25)
+SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-goblin-swordsman", "", {30, 25}, 24, 25)
+SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-goblin-swordsman", "", {30, 25}, 24, 25)

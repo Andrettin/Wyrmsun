@@ -13,7 +13,7 @@ else
 	ApplyMapTemplate("nidavellir", NidavellirStartX, NidavellirStartY)
 end
 --ApplyMapTemplate("nidavellir", NidavellirStartX, NidavellirStartY, 0, 0, 1)
---ApplyMapTemplate("nidavellir-underground-1", NidavellirStartX, NidavellirStartY, 0, 0, 2)
+--ApplyMapTemplate("nidavellir-underground", NidavellirStartX, NidavellirStartY, 0, 0, 2)
 --ApplyMapTemplate("asgard", 0, 0, 0, 0, 3)
 
 SetPlayerData(PlayerNumNeutral, "RaceName", "neutral")

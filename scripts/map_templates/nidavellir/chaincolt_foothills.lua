@@ -35,10 +35,11 @@ DefineMapTemplate("chaincolt-foothills", { -- From Battle for Wesnoth: The Scept
 	OverlayTerrainFile = "scripts/map_templates/nidavellir/chaincolt_foothills_overlay.map"
 })
 
-SetMapTemplateUnit("chaincolt-foothills", "unit-dwarven-guard-tower", "norlund-clan", {28, 3}, -24000, 25)
-SetMapTemplateHero("chaincolt-foothills", "Rugnur", "norlund-clan", {28, 3}, -24000, 25)
+SetMapTemplateUnit("chaincolt-foothills", "unit-dwarven-guard-tower", "norlund-clan", {28, 3}, 24, 25)
+SetMapTemplateHero("chaincolt-foothills", "Rugnur", "norlund-clan", {28, 3}, 24, 25)
+SetMapTemplateUnit("chaincolt-foothills", "unit-dwarven-guard-tower", "shinsplitter-clan", {28, 3}, 25)
 
-SetMapTemplateUnit("chaincolt-foothills", "unit-dwarven-guard-tower", "shinsplitter-clan", {25, 28}, -24000)
-SetMapTemplateUnit("chaincolt-foothills", "unit-dwarven-steelclad", "shinsplitter-clan", {25, 28}, -24000)
+SetMapTemplateUnit("chaincolt-foothills", "unit-dwarven-guard-tower", "shinsplitter-clan", {25, 28}, 24)
+SetMapTemplateUnit("chaincolt-foothills", "unit-dwarven-steelclad", "shinsplitter-clan", {25, 28}, 24)
 
-SetMapTemplateUnit("chaincolt-foothills", "unit-gnomish-master-at-arms", "untersberg", {5, 27}, -24000, 25)
+SetMapTemplateUnit("chaincolt-foothills", "unit-gnomish-master-at-arms", "untersberg", {5, 27}, 24, 25)
