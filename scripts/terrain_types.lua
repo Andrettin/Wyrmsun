@@ -78,6 +78,7 @@ DefineTerrainType("mud", {
 
 DefineTerrainType("rockbound-cave-floor", {
 	Name = "Rockbound Cave Floor",
+	Character = "b",
 	Flags = {"land", "no-building", "gravel"},
 	InnerBorderTerrains = {"dirt"},
 	Graphics = "terrain/rockbound_cave_floor.png",
@@ -273,6 +274,7 @@ DefineTerrainType("shallow-water", {
 
 DefineTerrainType("gray-shallow-water", {
 	Name = "Gray Shallow Water",
+	Character = "y",
 	BaseTerrains = {"rockbound-cave-floor", "cave-floor", "mud", "dirt"},
 	Overlay = true,
 	Flags = {"water"},
@@ -537,6 +539,7 @@ DefineTerrainType("dungeon-wall", {
 
 DefineTerrainType("cave-wall", {
 	Name = "Cave Wall",
+	Character = "v",
 	BaseTerrains = {"rockbound-cave-floor", "cave-floor"},
 	Overlay = true,
 	Flags = {"land", "rock", "unpassable", "air-unpassable"},
@@ -577,6 +580,7 @@ DefineTerrainType("cave-wall", {
 
 DefineTerrainType("rock", {
 	Name = "Rock",
+	Character = "k",
 	BaseTerrains = {"dirt", "mud", "dry-mud", "rockbound-cave-floor", "cave-floor"},
 	Overlay = true,
 	Flags = {"land", "rock", "unpassable"},
@@ -621,6 +625,7 @@ DefineTerrainType("rock", {
 
 DefineTerrainType("fairlimbed-tree", {
 	Name = "Fairlimbed Tree",
+	Character = "i",
 	BaseTerrains = {"grass"},
 	Overlay = true,
 	Flags = {"land", "forest", "unpassable"},
@@ -649,6 +654,7 @@ DefineTerrainType("fairlimbed-tree", {
 
 DefineTerrainType("flamefood-tree", {
 	Name = "Flamefood Tree",
+	Character = "l",
 	BaseTerrains = {"dry-mud"},
 	Overlay = true,
 	Flags = {"land", "forest", "unpassable"},
