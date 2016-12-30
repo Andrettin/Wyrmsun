@@ -32,7 +32,10 @@ DefineMapTemplate("chaincolt-foothills", { -- From Battle for Wesnoth: The Scept
 	Height = 33,
 	SubtemplatePosition = {453, 252},
 	TerrainFile = "scripts/map_templates/nidavellir/chaincolt_foothills.map",
-	OverlayTerrainFile = "scripts/map_templates/nidavellir/chaincolt_foothills_overlay.map"
+	OverlayTerrainFile = "scripts/map_templates/nidavellir/chaincolt_foothills_overlay.map",
+	GeneratedNeutralUnits = {
+		"unit-copper-deposit", 2
+	}
 })
 
 SetMapTemplateUnit("chaincolt-foothills", "unit-dwarven-guard-tower", "norlund-clan", {28, 3}, 24, 25)

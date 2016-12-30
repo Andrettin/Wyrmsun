@@ -32,7 +32,10 @@ DefineMapTemplate("caverns-of-chaincolt-gates", { -- From Battle for Wesnoth: Th
 	Height = 30,
 	SubtemplatePosition = {466, 227},
 	TerrainFile = "scripts/map_templates/nidavellir/caverns_of_chaincolt_gates.map",
-	OverlayTerrainFile = "scripts/map_templates/nidavellir/caverns_of_chaincolt_gates_overlay.map"
+	OverlayTerrainFile = "scripts/map_templates/nidavellir/caverns_of_chaincolt_gates_overlay.map",
+	GeneratedNeutralUnits = {
+		"unit-copper-deposit", 1
+	}
 })
 
 DefineMapTemplate("caverns-of-chaincolt-gates-underground", { -- From Battle for Wesnoth: The Sceptre of Fire (Closing the Gates)
@@ -41,7 +44,10 @@ DefineMapTemplate("caverns-of-chaincolt-gates-underground", { -- From Battle for
 	Width = 34,
 	Height = 30,
 	SubtemplatePosition = {466, 227},
-	TerrainFile = "scripts/map_templates/nidavellir/caverns_of_chaincolt_gates_underground.map"
+	TerrainFile = "scripts/map_templates/nidavellir/caverns_of_chaincolt_gates_underground.map",
+	GeneratedNeutralUnits = {
+		"unit-copper-deposit", 1
+	}
 })
 
 --SetMapTemplateLayerConnector("caverns-of-chaincolt-gates", "unit-cavern-entrance", {11, 15}, 1)

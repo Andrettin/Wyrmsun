@@ -32,7 +32,15 @@ DefineMapTemplate("shorbear-hills", { -- From Battle for Wesnoth: The Sceptre of
 	Height = 40,
 	SubtemplatePosition = {516, 225},
 	TerrainFile = "scripts/map_templates/nidavellir/shorbear_hills.map",
-	OverlayTerrainFile = "scripts/map_templates/nidavellir/shorbear_hills_overlay.map"
+	OverlayTerrainFile = "scripts/map_templates/nidavellir/shorbear_hills_overlay.map",
+	GeneratedNeutralUnits = {
+		"unit-copper-deposit", 2
+	},
+	PlayerLocationGeneratedNeutralUnits = {
+		"unit-copper-deposit", 1,
+		"unit-wood-pile", 16,
+		"unit-stone-pile", 16
+	}
 })
 
 --SetMapTemplateLayerConnector("shorbear-hills", "unit-cavern-entrance", {3, 3}, 1)
