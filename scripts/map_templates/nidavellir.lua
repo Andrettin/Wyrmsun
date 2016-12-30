@@ -137,6 +137,7 @@ NidavellirStartY = 74
 --NidavellirStartY = 123
 
 Load("scripts/map_templates/nidavellir/aurvang.lua")
+Load("scripts/map_templates/nidavellir/caverns_of_chaincolt_gates.lua")
 Load("scripts/map_templates/nidavellir/chaincolt_foothills.lua")
 Load("scripts/map_templates/nidavellir/joruvellir.lua")
 Load("scripts/map_templates/nidavellir/svarinshaug.lua")

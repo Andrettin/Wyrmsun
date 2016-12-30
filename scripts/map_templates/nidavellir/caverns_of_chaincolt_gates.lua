@@ -25,20 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineMapTemplate("chaincolt-foothills", { -- From Battle for Wesnoth: The Sceptre of Fire (A Bargain is Struck)
-	Name = "Chaincolt Foothills",
+DefineMapTemplate("caverns-of-chaincolt-gates", { -- From Battle for Wesnoth: The Sceptre of Fire (Closing the Gates)
+	Name = "Caverns of Chaincolt Gates",
 	MainTemplate = "nidavellir",
 	Width = 34,
-	Height = 33,
-	SubtemplatePosition = {453, 252},
-	TerrainFile = "scripts/map_templates/nidavellir/chaincolt_foothills.map",
-	OverlayTerrainFile = "scripts/map_templates/nidavellir/chaincolt_foothills_overlay.map"
+	Height = 30,
+	SubtemplatePosition = {466, 227},
+	TerrainFile = "scripts/map_templates/nidavellir/caverns_of_chaincolt_gates.map",
+	OverlayTerrainFile = "scripts/map_templates/nidavellir/caverns_of_chaincolt_gates_overlay.map"
 })
-
-SetMapTemplateUnit("chaincolt-foothills", "unit-dwarven-guard-tower", "norlund-clan", {28, 3}, -24000, 25)
-SetMapTemplateHero("chaincolt-foothills", "Rugnur", "norlund-clan", {28, 3}, -24000, 25)
-
-SetMapTemplateUnit("chaincolt-foothills", "unit-dwarven-guard-tower", "shinsplitter-clan", {25, 28}, -24000)
-SetMapTemplateUnit("chaincolt-foothills", "unit-dwarven-steelclad", "shinsplitter-clan", {25, 28}, -24000)
-
-SetMapTemplateUnit("chaincolt-foothills", "unit-gnomish-master-at-arms", "untersberg", {5, 27}, -24000, 25)
