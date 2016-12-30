@@ -31,6 +31,7 @@ DefineMapTemplate("nidavellir", {
 	Width = 984,
 	Height = 728,
 	TerrainFile = "scripts/map_templates/nidavellir.map",
+	OverlayTerrainFile = "scripts/map_templates/nidavellir_overlay.map",
 	GeneratedTerrains = {
 		"mud", "medium",
 		"rock", "high",
@@ -132,7 +133,8 @@ SetMapTemplateHero("nidavellir-underground-1", "Fafnir", "fafning-tribe", {-1, -
 --NidavellirStartX = 404
 --NidavellirStartY = 74
 NidavellirStartX = 362
-NidavellirStartY = 61
+NidavellirStartY = 74
+--NidavellirStartY = 123
 
 Load("scripts/map_templates/nidavellir/aurvang.lua")
 Load("scripts/map_templates/nidavellir/joruvellir.lua")

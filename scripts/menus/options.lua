@@ -501,12 +501,12 @@ function RunGameplayOptionsMenu()
 
 	b = menu:addImageCheckBox(_("Show Resource Bar"), offx + 16, offy + 55 + 26*4 + 14,
 		function()
-			if (wyr.preferences.ShowResourceBar == false) then -- sort of ugly way to set the preferences for this, fix later please
+			if (wyr.preferences.ShowResourceBar == false) then -- sort of ugly way to set the preferences for this, should fix later
 				wyr.preferences.ShowResourceBar = true
-				DefineDecorations({Index = "GiveResource", MinValue = 1000, ShowWhenMax = true, HideNeutral = false, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
+				DefineDecorations({Index = "GiveResource", MinValue = 1000, ShowWhenMax = true, HideNeutral = false, HideSelf = false, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
 			else
 				wyr.preferences.ShowResourceBar = false
-				DefineDecorations({Index = "GiveResource", MinValue = 1000, ShowWhenMax = true, HideNeutral = true, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
+				DefineDecorations({Index = "GiveResource", MinValue = 1000, ShowWhenMax = true, HideNeutral = true, HideSelf = true, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
 			end
 			menu:stop()
 			RunGameplayOptionsMenu()
@@ -541,6 +541,23 @@ function RunGameplayOptionsMenu()
 		end
 	)
 	b:setMarked(wyr.preferences.PlayerColorCircle)
+
+	b = menu:addImageCheckBox(_("Show Hero Symbol"), offx + 16, offy + 55 + 26*11 + 14,
+		function()
+			if (wyr.preferences.ShowHeroSymbol == false) then -- sort of ugly way to set the preferences for this, should fix later
+				wyr.preferences.ShowHeroSymbol = true
+				DefineDecorations({Index = "Hero", ShowOpponent = false, HideAllied = true, HideNeutral = true, ShowWhenMax = true,
+				  Offset = {0, -11}, Method = {"static-sprite", {"sprite-hero", 0}}})
+			else
+				wyr.preferences.ShowHeroSymbol = false
+				DefineDecorations({Index = "Hero", ShowOpponent = false, HideAllied = true, HideNeutral = true, HideSelf = true, ShowWhenMax = true,
+				  Offset = {0, -11}, Method = {"static-sprite", {"sprite-hero", 0}}})
+			end
+			menu:stop()
+			RunGameplayOptionsMenu()
+		end
+	)
+	b:setMarked(wyr.preferences.ShowHeroSymbol)
 
 	b = menu:addImageCheckBox(_("Autosave"), offx + 16, offy + 55 + 26*5 + 14,
 		function()

@@ -1874,6 +1874,7 @@ local defaultPreferences = {
 	ShowPathlines = false,
 	Language = "English",
 	ShowResourceBar = false,
+	ShowHeroSymbol = false,
 	PopupDescriptionFont = "small",
 	Autosave = true,
 	PlayerColorCircle = false,

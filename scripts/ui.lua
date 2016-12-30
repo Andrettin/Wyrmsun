@@ -66,7 +66,7 @@ if not (ui_loaded_first_time) then
 		DefineDecorations({Index = "Research", HideNeutral = true, CenterX = true,OffsetPercent = {50, 100},Method = {"sprite", {"sprite-mana"}}})
 		DefineDecorations({Index = "Training", HideNeutral = true, CenterX = true,OffsetPercent = {50, 100},Method = {"sprite", {"sprite-mana"}}})
 		DefineDecorations({Index = "UpgradeTo", HideNeutral = true, CenterX = true,OffsetPercent = {50, 100},Method = {"sprite", {"sprite-mana"}}})
-		if (wyr.preferences.ShowResourceBar) then -- sort of ugly way to set the preferences for this, fix later please
+		if (wyr.preferences.ShowResourceBar) then -- sort of ugly way to set the preferences for this, should fix later
 			DefineDecorations({Index = "GiveResource", MinValue = 1000, ShowWhenMax = true, HideNeutral = false, HideSelf = false, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
 		else
 			DefineDecorations({Index = "GiveResource", MinValue = 1000, ShowWhenMax = true, HideNeutral = true, HideSelf = true, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
@@ -82,6 +82,7 @@ if not (ui_loaded_first_time) then
 	DefineSprites({Name = "sprite-regeneration", File = "ui/status_effects/regeneration.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-terror", File = "ui/status_effects/terror.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-level-up", File = "ui/status_effects/level_up.png", Offset = {1, 1}, Size = {16, 16}})
+	DefineSprites({Name = "sprite-hero", File = "ui/icons/crown.png", Offset = {1, 1}, Size = {14, 11}})
 
 	DefineDecorations({Index = "Leadership", ShowOpponent = true, ShowWhenMax = true,
 	  Offset = {0, 0}, Method = {"static-sprite", {"sprite-leadership", 0}}})
@@ -99,8 +100,16 @@ if not (ui_loaded_first_time) then
 	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-regeneration", 0}}})
 	DefineDecorations({Index = "Terror", ShowOpponent = true, ShowWhenMax = true,
 	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-terror", 0}}})
-	DefineDecorations({Index = "LevelUp", ShowOpponent = false, HideAllied = true, ShowWhenMax = true,
+	DefineDecorations({Index = "LevelUp", ShowOpponent = false, HideAllied = true, HideNeutral = true, ShowWhenMax = true,
 	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-level-up", 0}}})
+
+	if (wyr.preferences.ShowHeroSymbol) then -- sort of ugly way to set the preferences for this, should fix later
+		DefineDecorations({Index = "Hero", ShowOpponent = false, HideAllied = true, HideNeutral = true, ShowWhenMax = true,
+		  Offset = {0, -11}, Method = {"static-sprite", {"sprite-hero", 0}}})
+	else
+		DefineDecorations({Index = "Hero", ShowOpponent = false, HideAllied = true, HideNeutral = true, HideSelf = true, ShowWhenMax = true,
+		  Offset = {0, -11}, Method = {"static-sprite", {"sprite-hero", 0}}})
+	end
 end
 
 LoadingBarSetBackgrounds({
