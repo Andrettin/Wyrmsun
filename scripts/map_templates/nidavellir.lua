@@ -132,9 +132,9 @@ SetMapTemplateHero("nidavellir-underground", "Fafnir", "fafning-tribe", {-1, -1}
 
 --NidavellirStartX = 404
 --NidavellirStartY = 74
-NidavellirStartX = 362
-NidavellirStartY = 74
---NidavellirStartY = 123
+--NidavellirStartX = 362
+NidavellirStartX = 525
+NidavellirStartY = 132
 
 Load("scripts/map_templates/nidavellir/aurvang.lua")
 Load("scripts/map_templates/nidavellir/caverns_of_chaincolt_gates.lua")

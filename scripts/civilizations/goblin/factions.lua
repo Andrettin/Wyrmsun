@@ -50,6 +50,15 @@ DefineFaction("aurvangling-tribe", {
 	Description = "The reclusive goblins of the Aurvang swamplands are wary of outsiders, with trespassers often finding themselves filled with arrows."
 })
 
+DefineFaction("dreadskull-tribe", {
+	Name = "Dreadskull Tribe",
+	Civilization = "goblin",
+	Type = "tribe",
+	Colors = {"black"},
+	FactionUpgrade = "upgrade-dreadskull-tribe-faction",
+	Description = "The Dreadskull tribe is known for its mysticism, and is suspected by other tribes of practicing necromancy."
+})
+
 DefineFaction("khag-tribe", {
 	Name = "Khag Tribe",
 	Civilization = "goblin",

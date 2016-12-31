@@ -23,6 +23,11 @@ DefineUpgrade("upgrade-aurvangling-tribe-faction", {
 	EffectsString = "+2 Damage for Archers"
 })
 
+DefineUpgrade("upgrade-dreadskull-tribe-faction", {
+	Name = _("Dreadskull Tribe Faction"),
+	EffectsString = "+5 HP and +10 Mana for Shamans"
+})
+
 DefineUpgrade("upgrade-khag-tribe-faction", {
 	Name = _("Khag Tribe Faction"),
 	EffectsString = "-5 HP and +2 Damage for Impalers"
@@ -86,6 +91,13 @@ DefineModifier("upgrade-aurvangling-tribe-faction",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-goblin-archer"}
+)
+
+DefineModifier("upgrade-dreadskull-tribe-faction",
+	{"HitPoints", 5},
+	{"Mana", 10},
+	{"Points", 10},
+	{"apply-to", "unit-goblin-shaman"}
 )
 
 DefineModifier("upgrade-khag-tribe-faction",

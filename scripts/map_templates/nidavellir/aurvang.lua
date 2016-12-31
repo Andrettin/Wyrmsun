@@ -25,5 +25,24 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "aurvangling-tribe", {605, 265})
---SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "aurvangling-tribe", {635, 280})
+DefineMapTemplate("aurvang", {
+	Name = "Aurvang",
+	MainTemplate = "nidavellir",
+	Width = 46,
+	Height = 35,
+	SubtemplatePosition = {679, 312},
+	TerrainFile = "scripts/map_templates/nidavellir/aurvang.map", -- From Battle for Wesnoth: Delfador's Memoirs (Showdown in the Northern Swamp)
+	OverlayTerrainFile = "scripts/map_templates/nidavellir/aurvang_overlay.map", -- From Battle for Wesnoth: Delfador's Memoirs (Showdown in the Northern Swamp)
+	GeneratedNeutralUnits = {
+		"unit-copper-deposit", 2
+	},
+	PlayerLocationGeneratedNeutralUnits = {
+		"unit-copper-deposit", 1,
+		"unit-wood-pile", 16,
+		"unit-stone-pile", 16
+	}
+})
+
+SetMapTemplateUnit("aurvang", "unit-goblin-town-hall", "dreadskull-tribe", {12, 3})
+
+SetMapTemplateUnit("aurvang", "unit-goblin-watch-tower", "dreadskull-tribe", {31, 7})
