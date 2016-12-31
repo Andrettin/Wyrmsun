@@ -41,8 +41,8 @@ DefineFaction("goinling-tribe", {
 	DefaultAI = "kobolds"
 })
 
-DefineFaction("grabaking-tribe", {
-	Name = "Grabaking Tribe",
+DefineFaction("grabakling-tribe", {
+	Name = "Grabakling Tribe",
 	Civilization = "kobold",
 	Type = "tribe",
 	Colors = {"white"},
