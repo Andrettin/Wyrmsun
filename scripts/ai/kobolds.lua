@@ -27,7 +27,7 @@
 
 local ai_call_counter = {}
 
-local grafvitning_funcs = {
+local kobold_funcs = {
 	function()
 		unit = CreateUnit("unit-kobold-footpad", AiPlayer(), {Players[AiPlayer()].StartPos.x, Players[AiPlayer()].StartPos.y})
 		return false;
@@ -48,7 +48,7 @@ local grafvitning_funcs = {
 	end,
 }
 
-function AiGrafvitningTribe()
+function AiKobolds()
 	if (ai_call_counter[AiPlayer()] == nil) then
 		ai_call_counter[AiPlayer()] = 0
 	end
@@ -57,11 +57,11 @@ function AiGrafvitningTribe()
 		return;
 	end
 	
-	if (GetCurrentCampaign() == "the-first-dwarves" and Players[AiPlayer()]:IsEnemy(Players[GetThisPlayer()]) == false) then
+	if (GetCurrentCampaign() == "the-first-dwarves" and Players[AiPlayer()]:IsEnemy(Players[GetThisPlayer()]) == false and GetPlayerData(AiPlayer(), "Faction") == "grafvitning-tribe") then
 		return;
 	end
 
-	AiLoop(grafvitning_funcs, stratagus.gameData.AIState.index);
+	AiLoop(kobold_funcs, stratagus.gameData.AIState.index);
 end
 
-DefineAi("grafvitning-tribe", "*", "grafvitning-tribe", AiGrafvitningTribe)
+DefineAi("kobolds", "*", "kobolds", AiKobolds)

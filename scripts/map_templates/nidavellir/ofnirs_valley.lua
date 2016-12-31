@@ -25,65 +25,23 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("fafning-tribe", {
-	Name = "Fafning Tribe",
-	Civilization = "kobold",
-	Type = "tribe",
-	Colors = {"purple"},
-	DefaultAI = "passive"
+DefineMapTemplate("ofnirs-valley", {
+	Name = "Ofnir's Valley",
+	MainTemplate = "nidavellir",
+	Width = 47,
+	Height = 37,
+	SubtemplatePosition = {648, 157},
+	TerrainFile = "scripts/map_templates/nidavellir/ofnirs_valley.map", -- From Battle for Wesnoth: The Hammer of Thursagan (Mages and Drakes)
+	OverlayTerrainFile = "scripts/map_templates/nidavellir/ofnirs_valley_overlay.map" -- From Battle for Wesnoth: The Hammer of Thursagan (Mages and Drakes)
 })
 
-DefineFaction("goinling-tribe", {
-	Name = "Goinling Tribe",
-	Civilization = "kobold",
-	Type = "tribe",
-	Colors = {"white"},
-	DefaultAI = "kobolds"
-})
-
-DefineFaction("grabaking-tribe", {
-	Name = "Grabaking Tribe",
-	Civilization = "kobold",
-	Type = "tribe",
-	Colors = {"white"},
-	DefaultAI = "kobolds"
-})
-
-DefineFaction("grafvitning-tribe", {
-	Name = "Grafvitning Tribe",
-	Civilization = "kobold",
-	Type = "tribe",
-	Colors = {"black"},
-	DefaultAI = "kobolds"
-})
-
-DefineFaction("moinling-tribe", {
-	Name = "Moinling Tribe",
-	Civilization = "kobold",
-	Type = "tribe",
-	Colors = {"orange"},
-	DefaultAI = "kobolds"
-})
-
-DefineFaction("ofning-tribe", {
-	Name = "Ofning Tribe",
-	Civilization = "kobold",
-	Type = "tribe",
-	Colors = {"violet"},
-	DefaultAI = "kobolds"
-})
-
-DefineFaction("shellscale-tribe", {
-	Name = "Shellscale Tribe",
-	Civilization = "kobold",
-	Type = "tribe",
-	Colors = {"blue"}
-})
-
-DefineFaction("svafning-tribe", {
-	Name = "Svafning Tribe",
-	Civilization = "kobold",
-	Type = "tribe",
-	Colors = {"blue"},
-	DefaultAI = "kobolds"
-})
+SetMapTemplateUnit("ofnirs-valley", "unit-wyrm", "ofning-tribe", {39, 20})
+SetMapTemplateUnit("ofnirs-valley", "unit-kobold-footpad", "ofning-tribe", {39, 20})
+SetMapTemplateUnit("ofnirs-valley", "unit-kobold-footpad", "ofning-tribe", {39, 20})
+SetMapTemplateUnit("ofnirs-valley", "unit-kobold-footpad", "ofning-tribe", {39, 20})
+SetMapTemplateUnit("ofnirs-valley", "unit-kobold-footpad", "ofning-tribe", {39, 20})
+SetMapTemplateUnit("ofnirs-valley", "unit-kobold-footpad", "ofning-tribe", {39, 20})
+SetMapTemplateUnit("ofnirs-valley", "unit-kobold-footpad", "ofning-tribe", {39, 20})
+SetMapTemplateUnit("ofnirs-valley", "unit-kobold-footpad", "ofning-tribe", {39, 20})
+SetMapTemplateUnit("ofnirs-valley", "unit-kobold-footpad", "ofning-tribe", {39, 20})
+SetMapTemplateUnit("ofnirs-valley", "unit-kobold-footpad", "ofning-tribe", {39, 20})
