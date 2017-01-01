@@ -77,6 +77,9 @@ https://github.com/Andrettin/Wyrmsun
 * Quests
 - Added "The House of Seven Fathers" in-game quest for the Germanics.
 
+* Triggers
+- Updated the "Bountiful Harvest" campaign mode trigger so that the quantity of copper obtained scales with the quantity of farms owned.
+
 * Units
 - Fixed issue which caused a worker to stop its current actions if it previously had been ordered to build a structure, began building it, and then went on to do something else and another worker completed the construction.
 - Units with only one experience unit type upgrade (i.e. Dwarven Miners) will now automatically choose that upgrade upon leveling up.

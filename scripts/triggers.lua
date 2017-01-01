@@ -38,20 +38,21 @@ AddTrigger("bountiful-harvest",
 		end
 		return false
 	end,
-	function() 
+	function()
+		local copper_quantity = GetPlayerData(trigger_player, "UnitTypesCount", GetFactionClassUnitType("farm", GetPlayerData(trigger_player, "RaceName"), GetPlayerData(trigger_player, "Faction"))) * 100
 		Event(
 			"Bountiful Harvest",
 			"The harvest this year has been exceptionally plentiful, rejoice! Our farmers are bringing their abundant surplus to market and selling it for a profit.",
 			trigger_player,
 			{"E~!xcellent!"},
 			{function(s)
-				SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 1000)
+				SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + copper_quantity)
 			end},
 			nil,
 			nil,
 			false,
 			{
-				OptionTooltips = {"+1000 Copper"}
+				OptionTooltips = {"+" .. copper_quantity .. " Copper"}
 			}
 		)
 		return true
