@@ -101,12 +101,6 @@ local land_funcs = {
 	function() return AiSet(GetAiUnitType("worker"), 20) end,
 	function() return AiWaitForce(1) end,
 	function() return AiAttackWithForce(1) end,
-	function() -- if has no cavalry, keep redoing infantry attacks
-		if (AiGetRace() ~= "germanic" and GetAiUnitType("cavalry") == nil) then
-			stratagus.gameData.AIState.index[AiPlayer() + 1] = stratagus.gameData.AIState.index[AiPlayer() + 1] - 6;
-		end
-		return false;
-	end,
 
 -- NOW UPGRADING
 
