@@ -38,9 +38,9 @@ DefineMapTemplate("nidavellir", {
 		"flamefood-tree", "medium"
 	},
 	GeneratedNeutralUnits = {
-		"unit-gold-deposit", 8,
-		"unit-silver-deposit", 8,
-		"unit-copper-deposit", 8,
+		"unit-gold-deposit", 4,
+		"unit-silver-deposit", 4,
+		"unit-copper-deposit", 4,
 		"unit-snigill", 64,
 		"unit-slime", 32,
 --		"unit-blood-bat", 16,
