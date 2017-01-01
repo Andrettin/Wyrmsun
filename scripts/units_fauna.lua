@@ -1003,6 +1003,7 @@ DefineUnitType("unit-gryphon", {
 		"Griak", -- gryphon in Battle for Wesnoth: Heir to the Throne
 		"Grook", -- gryphon in Battle for Wesnoth: Heir to the Throne
 		"Gruak", -- gryphon in Battle for Wesnoth: Heir to the Throne
+		"Kaara", -- gryphon in Battle for Wesnoth: The Hammer of Thursagan
 		"Kawn", -- gryphon in Battle for Wesnoth: The Sceptre of Fire
 		"Krawg" -- gryphon in Battle for Wesnoth: The Sceptre of Fire
 	},
