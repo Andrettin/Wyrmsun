@@ -105,6 +105,73 @@ AddTrigger("expert-miner",
 	end
 )
 
+AddTrigger("splendid-table",
+	function()
+		if (SyncRand(100) ~= 0) then -- 1% chance this will trigger every time it is checked (and 1% for each player it is checked for, for a chance of 0.01% for a player who matches the conditions
+			return false
+		end
+		for i=0,(PlayerMax - 2) do
+			if (SyncRand(100) == 0 and GetFactionClassUnitType("lumber-mill", GetPlayerData(i, "RaceName"), GetPlayerData(i, "Faction")) ~= nil and GetPlayerData(i, "UnitTypesCount", GetFactionClassUnitType("lumber-mill", GetPlayerData(i, "RaceName"), GetPlayerData(i, "Faction"))) >= 1) then
+				trigger_player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function()
+		Event(
+			"Splendid Table",
+			"One of our master carpenters has created a most splendid table! The beautiful piece of furniture has impressed many, and will fetch a good price.",
+			trigger_player,
+			{"~!Marvelous!"},
+			{function(s)
+				SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 250)
+			end},
+			nil,
+			nil,
+			false,
+			{
+				OptionTooltips = {"+250 Copper"}
+			}
+		)
+		return true
+	end
+)
+
+AddTrigger("brawl-at-the-barracks",
+	function()
+		if (SyncRand(100) ~= 0) then -- 1% chance this will trigger every time it is checked (and 1% for each player it is checked for, for a chance of 0.01% for a player who matches the conditions
+			return false
+		end
+		for i=0,(PlayerMax - 2) do
+			if (SyncRand(100) == 0 and GetFactionClassUnitType("barracks", GetPlayerData(i, "RaceName"), GetPlayerData(i, "Faction")) ~= nil and GetPlayerData(i, "UnitTypesCount", GetFactionClassUnitType("barracks", GetPlayerData(i, "RaceName"), GetPlayerData(i, "Faction"))) >= 1) then
+				trigger_player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function()
+		Event(
+			"Brawl at the Barracks",
+			"A brawl broke out amongst our recruits-in-training! It all began when one of them made an unfortunate joke, leading to another getting offended, and soon punches were thrown. The local commander has informed us that they will need funds to repair the resulting damage, as well as lumber for new furniture to replace what was broken during the fight.", -- could add the name of the specific barracks where this happened in the future, when barrackses receive proper names
+			trigger_player,
+			{"~!Damn fools..."},
+			{function(s)
+				SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") - 250)
+				SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") - 250)
+			end},
+			nil,
+			nil,
+			false,
+			{
+				OptionTooltips = {"-250 Copper, -250 Lumber"}
+			}
+		)
+		return true
+	end
+)
+
 Load("scripts/civilizations/dwarf/triggers.lua")
 Load("scripts/civilizations/germanic/triggers.lua")
 Load("scripts/civilizations/norse/triggers.lua")

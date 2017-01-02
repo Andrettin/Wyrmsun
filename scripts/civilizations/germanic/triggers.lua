@@ -201,13 +201,13 @@ AddTrigger("the-curved-swords", -- Source: http://natmus.dk/en/historical-knowle
 			trigger_player,
 			{"~!Marvelous!"},
 			{function(s)
-				SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 100)
+				SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 500)
 			end},
 			nil,
 			nil,
 			false,
 			{
-				OptionTooltips = {"+100 Copper"}
+				OptionTooltips = {"+500 Copper"}
 			}
 		)
 		return false
@@ -234,13 +234,13 @@ AddTrigger("the-sun-chariot", -- Source: http://natmus.dk/en/historical-knowledg
 			trigger_player,
 			{"~!Inspiring!"},
 			{function(s)
-				SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 100)
+				SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 500)
 			end},
 			nil,
 			nil,
 			false,
 			{
-				OptionTooltips = {"+100 Copper"}
+				OptionTooltips = {"+500 Copper"}
 			}
 		)
 		return false
