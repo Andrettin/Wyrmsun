@@ -1441,7 +1441,7 @@ function FindUnit(unit_type, player, last_unit)
 	
 	if (last_unit) then
 		for unit1 = table.getn(uncount), 1, -1 do
-			if (GetUnitVariable(uncount[unit1], "Ident") == unit_type or (unit_type == "any_organic" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) or unit_type == "any") then
+			if (GetUnitVariable(uncount[unit1], "Ident") == unit_type or (unit_type == "town_hall" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "TownHall")) or (unit_type == "any_organic" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) or unit_type == "any") then
 				if (GetUnitVariable(uncount[unit1], "HitPoints") > 0) then
 					return uncount[unit1]
 				end
@@ -1449,7 +1449,7 @@ function FindUnit(unit_type, player, last_unit)
 		end
 	else
 		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == unit_type or (unit_type == "any_organic" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) or unit_type == "any") then
+			if (GetUnitVariable(uncount[unit1], "Ident") == unit_type or (unit_type == "town_hall" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "TownHall")) or (unit_type == "any_organic" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) or unit_type == "any") then
 				if (GetUnitVariable(uncount[unit1], "HitPoints") > 0) then
 					return uncount[unit1]
 				end
@@ -1481,13 +1481,43 @@ function GetPlayerClassType(unit_class, player, use_province_civilization)
 end
 
 function FindUnitOfClass(unit_class, player, use_province_civilization)
-	local class_type = GetPlayerClassType(unit_class, player, use_province_civilization)
-	
-	if (class_type == nil) then
-		return nil
-	else
-		return FindUnit(class_type, player)
+	if (use_province_civilization) then
+		local class_type = GetPlayerClassType(unit_class, player, use_province_civilization)
+		
+		if (class_type == nil) then
+			return nil
+		else
+			return FindUnit(class_type, player)
+		end
 	end
+	
+	local uncount = 0
+	
+	if (player ~= nil) then
+		uncount = GetUnits(player)
+	else
+		uncount = GetUnits("any")
+	end
+	
+	if (last_unit) then
+		for unit1 = table.getn(uncount), 1, -1 do
+			if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == unit_class) then
+				if (GetUnitVariable(uncount[unit1], "HitPoints") > 0) then
+					return uncount[unit1]
+				end
+			end
+		end
+	else
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == unit_class) then
+				if (GetUnitVariable(uncount[unit1], "HitPoints") > 0) then
+					return uncount[unit1]
+				end
+			end
+		end
+	end
+	
+	return nil
 end
 
 function FindHero(hero, player)

@@ -59,6 +59,52 @@ AddTrigger("bountiful-harvest",
 	end
 )
 
+AddTrigger("expert-miner",
+	function()
+		if (SyncRand(100) ~= 0) then -- 1% chance this will trigger every time it is checked (and 1% for each player it is checked for, for a chance of 0.01% for a player who matches the conditions
+			return false
+		end
+		for i=0,(PlayerMax - 2) do
+			local percent_chance = 0
+			-- this event can only trigger if the player owns a mine, and it is more probable that it will trigger if the player owns a more valuable mine
+			if (GetPlayerData(i, "UnitTypesCount", "unit-gold-mine") > 0) then
+				percent_chance = 4
+			elseif (GetPlayerData(i, "UnitTypesCount", "unit-silver-mine") > 0) then
+				percent_chance = 2
+			elseif (GetPlayerData(i, "UnitTypesCount", "unit-copper-mine") > 0) then
+				percent_chance = 1
+			end
+			if (SyncRand(100) < percent_chance and GetFactionClassUnitType("expert-miner", GetPlayerData(i, "RaceName"), GetPlayerData(i, "Faction")) ~= nil and GetPlayerData(i, "NumTownHalls") > 0 and GetPlayerData(i, "Resources", "copper") >= 600 and (GetPlayerData(i, "Supply") - GetPlayerData(i, "Demand")) >= GetUnitTypeData(GetFactionClassUnitType("expert-miner", GetPlayerData(i, "RaceName"), GetPlayerData(i, "Faction")), "Demand")) then
+				trigger_player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function()
+		Event(
+			"Expert Miner",
+			"Hearing tales of the prosperity of our mines, an expert miner has come to you looking for gainful employment. Will you accept?",
+			trigger_player,
+			{"~!Yes", "~!No"},
+			{function(s)
+				local town_hall = FindUnit("town_hall", trigger_player)
+				unit = CreateUnit(GetFactionClassUnitType("expert-miner", GetPlayerData(trigger_player, "RaceName"), GetPlayerData(trigger_player, "Faction")), trigger_player, {GetUnitVariable(town_hall, "PosX"), GetUnitVariable(town_hall, "PosY")})
+				SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") - 600)
+			end,
+			function(s)
+			end},
+			nil,
+			nil,
+			false,
+			{
+				OptionTooltips = {"Gain an Expert Miner, -600 Copper", ""}
+			}
+		)
+		return true
+	end
+)
+
 Load("scripts/civilizations/dwarf/triggers.lua")
 Load("scripts/civilizations/germanic/triggers.lua")
 Load("scripts/civilizations/norse/triggers.lua")
