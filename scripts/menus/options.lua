@@ -547,11 +547,11 @@ function RunGameplayOptionsMenu()
 			if (wyr.preferences.ShowHeroSymbol == false) then -- sort of ugly way to set the preferences for this, should fix later
 				wyr.preferences.ShowHeroSymbol = true
 				DefineDecorations({Index = "Hero", ShowOpponent = false, HideAllied = true, HideNeutral = true, ShowWhenMax = true,
-				  Offset = {0, -11}, Method = {"static-sprite", {"sprite-hero", 0}}})
+				  Offset = {0, -9}, Method = {"static-sprite", {"sprite-hero", 0}}})
 			else
 				wyr.preferences.ShowHeroSymbol = false
 				DefineDecorations({Index = "Hero", ShowOpponent = false, HideAllied = true, HideNeutral = true, HideSelf = true, ShowWhenMax = true,
-				  Offset = {0, -11}, Method = {"static-sprite", {"sprite-hero", 0}}})
+				  Offset = {0, -9}, Method = {"static-sprite", {"sprite-hero", 0}}})
 			end
 			menu:stop()
 			RunGameplayOptionsMenu()

@@ -67,7 +67,7 @@ https://github.com/Andrettin/Wyrmsun
 - The Gnomish Sagan Tribe no longer uses light-green-colored gnomes.
 
 * Heroes
-- Added option to display a crown symbol over a hero, to make the unit more easily distinguishable.
+- Added option to display a star symbol over a hero, to make the unit more easily distinguishable.
 
 * Maps
 - Improved symmetric map generation so that mercenary camps can no longer be generated extremely close together in a group of four at the center of the map.

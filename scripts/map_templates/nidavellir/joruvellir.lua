@@ -25,3 +25,26 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+--[[
+DefineMapTemplate("joruvellir", {
+	Name = "Joruvellir",
+	MainTemplate = "nidavellir",
+	Width = 64,
+	Height = 64,
+	SubtemplatePosition = {748, 355},
+	GeneratedTerrains = {
+		"mud", "medium", -- should be desert
+		"dirt", "high",
+		"rock", "medium",
+		"flamefood-tree", "medium"
+	},
+	GeneratedNeutralUnits = {
+		"unit-copper-deposit", 2
+	},
+	PlayerLocationGeneratedNeutralUnits = {
+		"unit-copper-deposit", 1,
+		"unit-wood-pile", 16,
+		"unit-stone-pile", 16
+	}
+})
+--]]

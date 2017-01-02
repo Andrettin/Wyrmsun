@@ -82,7 +82,7 @@ if not (ui_loaded_first_time) then
 	DefineSprites({Name = "sprite-regeneration", File = "ui/status_effects/regeneration.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-terror", File = "ui/status_effects/terror.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-level-up", File = "ui/status_effects/level_up.png", Offset = {1, 1}, Size = {16, 16}})
-	DefineSprites({Name = "sprite-hero", File = "ui/icons/crown.png", Offset = {1, 1}, Size = {14, 11}})
+	DefineSprites({Name = "sprite-hero", File = "ui/icons/star.png", Offset = {1, 1}, Size = {14, 9}})
 
 	DefineDecorations({Index = "Leadership", ShowOpponent = true, ShowWhenMax = true,
 	  Offset = {0, 0}, Method = {"static-sprite", {"sprite-leadership", 0}}})
@@ -105,10 +105,10 @@ if not (ui_loaded_first_time) then
 
 	if (wyr.preferences.ShowHeroSymbol) then -- sort of ugly way to set the preferences for this, should fix later
 		DefineDecorations({Index = "Hero", ShowOpponent = false, HideAllied = true, HideNeutral = true, ShowWhenMax = true,
-		  Offset = {0, -11}, Method = {"static-sprite", {"sprite-hero", 0}}})
+		  Offset = {0, -9}, Method = {"static-sprite", {"sprite-hero", 0}}})
 	else
 		DefineDecorations({Index = "Hero", ShowOpponent = false, HideAllied = true, HideNeutral = true, HideSelf = true, ShowWhenMax = true,
-		  Offset = {0, -11}, Method = {"static-sprite", {"sprite-hero", 0}}})
+		  Offset = {0, -9}, Method = {"static-sprite", {"sprite-hero", 0}}})
 	end
 end
 
