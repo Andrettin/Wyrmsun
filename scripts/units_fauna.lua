@@ -751,6 +751,7 @@ DefineUnitType("unit-goat", {
 	RandomMovementProbability = 1,
 	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	RandomMovementDistance = 5,
+	Coward = true,
 	Flesh = true,
 	Herbivore = true,
 	BluntDamage = true,
@@ -790,6 +791,7 @@ DefineUnitType("unit-yale", {
 	HitPoints = 30,
 	BasicDamage = 3,
 	Points = 15,
+	Coward = false,
 	Variations = {
 		{
 --			"variation-id", "brown-fur",
