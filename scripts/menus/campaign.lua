@@ -40,7 +40,7 @@ function RunCampaignMenu()
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
-	menu:addLabel(_("~<Campaigns~>"), offx + 320, offy + 104 + 36*-2)
+	menu:addLabel(_("~<Scenarios~>"), offx + 320, offy + 104 + 36*-2)
 
 	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 480, offy + 10 + 270 + 3,
 		function()
@@ -127,7 +127,7 @@ function RunCampaignMenu()
 		
 	campaign_description = menu:addMultiLineLabel("Description: " .. GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Description") .. "\n\n" .. highest_completed_difficulty, ((Video.Width - 640) / 2) + 32, offy + 104 + 36*2, Fonts["game"], false, Video.Width - (Video.Width - 640) - 64)
 
-	menu:addFullButton(_("~!Start Campaign"), "s", offx + 208, offy + 212 + (36 * 4),
+	menu:addFullButton(_("~!Start Scenario"), "s", offx + 208, offy + 212 + (36 * 4),
 		function()
 			RunningScenario = true
 			GetMapInfo("scripts/map_templates/campaign.smp")

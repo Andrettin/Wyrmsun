@@ -21,7 +21,7 @@ In the Wyrmsun universe a myriad of inhabited planets exist. Humans dwell on Ear
 Features:
 - Retro-style graphics
 - 3 playable civilizations, and a number of non-playable ones
-- Campaign mode scenarios, played on a huge map
+- Scenarios playable on a huge map
 - Dozens of units, buildings and technologies
 - Personal names and traits for units
 - Units can earn experience, being able to upgrade to new unit types or acquire new abilities upon level-up
@@ -67,9 +67,6 @@ https://github.com/Andrettin/Wyrmsun
 - Added proper names for Barrackses.
 - Added proper names for Farms.
 
-* Campaign
-- The campaign screen now displays the highest completed difficulty for each campaign.
-
 * Factions
 - The Gnomish Sagan Tribe no longer uses light-green-colored gnomes.
 - Added the Dreadskull and Wildfang tribes for the goblins.
@@ -82,16 +79,22 @@ https://github.com/Andrettin/Wyrmsun
 - Improved resource generation for randomly-generated maps.
 - Updated tree generation so that trees are less spread out in small chunks in randomly generated maps.
 
+* Miscellaneous
+- Renamed the "Campaign" screen to "Scenarios", to prevent confusion due to each "campaign" in the mode not containing a series of missions, but rather a single scenario on a huge map.
+
 * Quests
 - Added "The House of Seven Fathers" in-game quest for the Germanics.
 
+* Scenarios
+- The scenario screen now displays the highest completed difficulty for each scenario/campaign.
+
 * Triggers
-- Updated the "Bountiful Harvest" campaign mode event so that the quantity of copper obtained scales with the quantity of farms owned.
-- Added the "Expert Miner" random event for the campaign mode, which gives the (dwarven) player an expert miner for a price.
-- Added the "Splendid Table" random event for the campaign mode.
-- Added the "Beautiful Statuette" random event for the campaign mode.
-- Added the "Brawl at the Barracks" random event for the campaign mode.
-- Added the "Giant Mushroom Grown" random event for the campaign mode, for the dwarves.
+- Updated the "Bountiful Harvest" scenario/campaign mode event so that the quantity of copper obtained scales with the quantity of farms owned.
+- Added the "Expert Miner" random event for the scenario/campaign mode, which gives the (dwarven) player an expert miner for a price.
+- Added the "Splendid Table" random event for the scenario/campaign mode.
+- Added the "Beautiful Statuette" random event for the scenario/campaign mode.
+- Added the "Brawl at the Barracks" random event for the scenario/campaign mode.
+- Added the "Giant Mushroom Grown" random event for the scenario/campaign mode, for the dwarves.
 
 * Units
 - Fixed issue which caused a worker to stop its current actions if it previously had been ordered to build a structure, began building it, and then went on to do something else and another worker completed the construction.

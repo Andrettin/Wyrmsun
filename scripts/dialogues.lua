@@ -30,7 +30,7 @@ player = 0
 DefineDialogue("campaign-victory", {
 	Nodes = {
 		{
-			"text", "You have completed the campaign! You may now choose to end the game here, or to pursue a full conquest of your world.",
+			"text", "You have completed the scenario! You may now choose to end the game here, or to pursue a full conquest of your world.",
 			"options", {"~!Victory!", "~!Continue Game"},
 			"option-effects", {
 				function(s)
@@ -47,7 +47,7 @@ DefineDialogue("campaign-victory", {
 DefineDialogue("campaign-defeat", {
 	Nodes = {
 		{
-			"text", "You have failed the campaign... But the game need not end. You still have forces standing, and you may choose to pursue a full conquest of your world instead of the campaign's objectives.",
+			"text", "You have failed the scenario... But the game need not end. You still have forces standing, and you may choose to pursue a full conquest of your world instead of the scenario's objectives.",
 			"options", {"~!Defeat...", "~!Continue Game"},
 			"option-effects", {
 				function(s)

@@ -36,7 +36,7 @@ DefineAchievement("the-settlement-of-scandinavia", {
 DefineAchievement("heimdalls-progeny", {
 	Name = "Haimadala's Progeny",
 	Icon = "icon-jarl",
-	Description = "Complete the Haimadala's Progeny campaign.",
+	Description = "Complete the Haimadala's Progeny scenario.",
 	PlayerColor = "yellow",
 	RequiredQuests = {"heimdalls-progeny"}
 })
@@ -68,7 +68,7 @@ DefineAchievement("the-blue-danube", {
 DefineAchievement("the-first-dwarves", {
 	Name = "The First Dwarves",
 	Icon = "icon-brising-miner",
-	Description = "Complete The First Dwarves campaign.",
+	Description = "Complete The First Dwarves scenario.",
 	PlayerColor = "red",
 	RequiredQuests = {"the-first-dwarves"}
 })
