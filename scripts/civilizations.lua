@@ -43,6 +43,33 @@ DefineCivilization("neutral", {
 		"dwarf/ui/buttonpanel.png", -256, -200,
 		"dwarf/ui/infopanel.png", 0, -200
 	},
+	SettlementNames = { -- some English placenames which are generic enough to fit pretty much any civilization
+		"Ashford",
+		"Bedford",
+		"Blackpool",
+		"Blackwall",
+		"Dartford",
+		"Dartmouth",
+		"Fishguard",
+		"Gateshead",
+		"Guildford",
+		"Holyhead",
+		"Longford",
+		"Maidstone",
+		"Marshfield",
+		"Newcastle",
+		"Newhaven",
+		"Newport",
+		"Newquay",
+		"Portsmouth",
+		"Redditch",
+		"Stockport",
+		"Stonehaven",
+		"Waterford",
+		"Westport",
+		"Whitehaven",
+		"Woodbridge"
+	},
 	ShipNames = {
 		"Naglfar", -- ship of the giants in Norse mythology, whose helmsman is Hrym; made of dead men's nails; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 21.
 		"Ringhorn", -- Balder's ship in Norse mythology in which he was cremanted; ; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 155, 249.
