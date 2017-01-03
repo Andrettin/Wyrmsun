@@ -119,9 +119,10 @@ AddTrigger("splendid-table",
 		return false
 	end,
 	function()
+		local lumber_mill = FindUnitOfClass("lumber-mill", trigger_player, true)
 		Event(
 			"Splendid Table",
-			"One of our master carpenters has created a most splendid table! The beautiful piece of furniture has impressed many, and will fetch a good price.",
+			"One of our master carpenters at " .. GetUnitVariable(lumber_mill, "Name") .. " has created a most splendid table! The beautiful piece of furniture has impressed many, and will fetch a good price.",
 			trigger_player,
 			{"~!Marvelous!"},
 			{function(s)
@@ -132,6 +133,40 @@ AddTrigger("splendid-table",
 			false,
 			{
 				OptionTooltips = {"+250 Copper"}
+			}
+		)
+		return true
+	end
+)
+
+AddTrigger("beautiful-statuette",
+	function()
+		if (SyncRand(100) ~= 0) then -- 1% chance this will trigger every time it is checked (and 1% for each player it is checked for, for a chance of 0.01% for a player who matches the conditions
+			return false
+		end
+		for i=0,(PlayerMax - 2) do
+			if (SyncRand(100) == 0 and GetFactionClassUnitType("smithy", GetPlayerData(i, "RaceName"), GetPlayerData(i, "Faction")) ~= nil and GetPlayerData(i, "UnitTypesCount", GetFactionClassUnitType("smithy", GetPlayerData(i, "RaceName"), GetPlayerData(i, "Faction"))) >= 1) then
+				trigger_player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function()
+		local smithy = FindUnitOfClass("smithy", trigger_player, true)
+		Event(
+			"Beautiful Statuette",
+			"One of our master bronzesmiths at " .. GetUnitVariable(smithy, "Name") .. " has made a beautiful statuette! The striking masterpiece has caught the eyes of many, and will fetch a good price.",
+			trigger_player,
+			{"~!Marvelous!"},
+			{function(s)
+				SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 500)
+			end},
+			nil,
+			nil,
+			false,
+			{
+				OptionTooltips = {"+500 Copper"}
 			}
 		)
 		return true

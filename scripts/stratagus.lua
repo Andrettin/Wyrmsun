@@ -1494,7 +1494,7 @@ function FindUnitOfClass(unit_class, player, random_unit, last_unit)
 	if (last_unit) then
 		for unit1 = table.getn(uncount), 1, -1 do
 			if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == unit_class) then
-				if (GetUnitVariable(uncount[unit1], "HitPoints") > 0) then
+				if (GetUnitVariable(uncount[unit1], "HitPoints") > 0 and GetUnitVariable(uncount[unit1], "Built")) then
 					return uncount[unit1]
 				end
 			end
@@ -1502,7 +1502,7 @@ function FindUnitOfClass(unit_class, player, random_unit, last_unit)
 	else
 		for unit1 = 1,table.getn(uncount) do 
 			if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == unit_class) then
-				if (GetUnitVariable(uncount[unit1], "HitPoints") > 0) then
+				if (GetUnitVariable(uncount[unit1], "HitPoints") > 0 and GetUnitVariable(uncount[unit1], "Built")) then
 					if (random_unit) then
 						table.insert(units_of_class, uncount[unit1])
 					else

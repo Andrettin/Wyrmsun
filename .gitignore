@@ -8,6 +8,7 @@ mods/
 wyr/
 crash.dmp
 oaml.log
+screen*.png
 SDL.dll
 stderr.txt
 stdout.txt
