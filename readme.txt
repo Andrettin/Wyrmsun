@@ -81,6 +81,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - Renamed the "Campaign" screen to "Scenarios", to prevent confusion due to each "campaign" in the mode not containing a series of missions, but rather a single scenario on a huge map.
+- Renamed the "Quests" screen to "Mini-Quests".
 
 * Quests
 - Added "The House of Seven Fathers" in-game quest for the Germanics.
