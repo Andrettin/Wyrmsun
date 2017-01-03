@@ -152,9 +152,10 @@ AddTrigger("brawl-at-the-barracks",
 		return false
 	end,
 	function()
+		local barracks = FindUnitOfClass("barracks", trigger_player, true)
 		Event(
 			"Brawl at the Barracks",
-			"A brawl broke out amongst our recruits-in-training! It all began when one of them made an unfortunate joke, leading to another getting offended, and soon punches were thrown. The local commander has informed us that they will need funds to repair the resulting damage, as well as lumber for new furniture to replace what was broken during the fight.", -- could add the name of the specific barracks where this happened in the future, when barrackses receive proper names
+			"A brawl broke out amongst our recruits-in-training at " .. GetUnitVariable(barracks, "Name") .. "! It all began when one of them made an unfortunate joke, leading to another getting offended, and soon punches were thrown. The local commander has informed us that they will need funds to repair the resulting damage, as well as lumber for new furniture to replace what was broken during the fight.", -- could add the name of the specific barracks where this happened in the future, when barrackses receive proper names
 			trigger_player,
 			{"~!Damn fools..."},
 			{function(s)

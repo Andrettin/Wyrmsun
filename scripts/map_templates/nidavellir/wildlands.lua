@@ -32,5 +32,20 @@ DefineMapTemplate("wildlands", { -- From Battle for Wesnoth: The Hammer of Thurs
 	Height = 32,
 	SubtemplatePosition = {605, 206},
 	TerrainFile = "scripts/map_templates/nidavellir/wildlands.map",
-	OverlayTerrainFile = "scripts/map_templates/nidavellir/wildlands_overlay.map"
+	OverlayTerrainFile = "scripts/map_templates/nidavellir/wildlands_overlay.map",
+	GeneratedNeutralUnits = {
+		"unit-copper-deposit", 2
+	},
+	PlayerLocationGeneratedNeutralUnits = {
+		"unit-copper-deposit", 1,
+		"unit-wood-pile", 16,
+		"unit-stone-pile", 16
+	}
 })
+
+--SetMapTemplateUnit("wildlands", "unit-goblin-town-hall", "wildfang-tribe", {34, 17})
+SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "wildfang-tribe", {-1, -1})
+
+--SetMapTemplateUnit("wildlands", "unit-goblin-watch-tower", "wildfang-tribe", {26, 8})
+
+--SetMapTemplateUnit("wildlands", "unit-goblin-watch-tower", "wildfang-tribe", {28, 29})

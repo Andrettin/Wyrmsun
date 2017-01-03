@@ -63,8 +63,12 @@ https://github.com/Andrettin/Wyrmsun
 * AI
 - Improved the Easy difficulty AI.
 
+* Buildings
+- Barrackses now have proper names.
+
 * Factions
 - The Gnomish Sagan Tribe no longer uses light-green-colored gnomes.
+- Added the Dreadskull and Wildfang tribes for the goblins.
 
 * Heroes
 - Added option to display a star symbol over a hero, to make the unit more easily distinguishable.

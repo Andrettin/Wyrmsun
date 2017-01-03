@@ -5739,7 +5739,7 @@ function FindNearestTerrainFlagTile(terrain_flag, starting_x, starting_y)
 end
 
 function GenerateBuilding(building_type, player)
-	local worker = FindUnitOfClass("worker", player, GrandStrategy and GrandStrategyEventMap == false)
+	local worker = FindUnitOfClass("worker", player)
 	
 	if (worker == nil) then
 		return;

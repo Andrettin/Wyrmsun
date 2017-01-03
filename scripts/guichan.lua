@@ -1520,7 +1520,7 @@ function GameStarting()
 				if (string.find(unitName, "upgrade-") == nil) then
 					if (GetUnitTypeData(unitName, "Building") and unitName ~= "unit-mercenary-camp" and GetProvinceSettlementBuilding(AttackedProvince.Name, unitName) and GetUnitTypeData(unitName, "ShoreBuilding") == false) then
 						if (GetUnitTypeData(unitName, "Class") == "stronghold") then
-							local town_hall = FindUnitOfClass("town-hall", defender_player, true)
+							local town_hall = FindUnitOfClass("town-hall", defender_player)
 							ConvertUnit(town_hall, unitName)
 						else
 							GenerateBuilding(unitName, defender_player)

@@ -91,6 +91,15 @@ DefineFaction("sigre-tribe", { -- invented by Jesse Crider
 	FactionUpgrade = "upgrade-sigre-tribe-faction"
 })
 
+DefineFaction("wildfang-tribe", {
+	Name = "Wildfang Tribe",
+	Civilization = "goblin",
+	Type = "tribe",
+	Colors = {"red"},
+	FactionUpgrade = "upgrade-wildfang-tribe-faction",
+	Description = "The savage Wildfang tribe lives off raiding dwarven villages. Their swordsmen are renowned for their lethality."
+})
+
 DefineFaction("aurvang", {
 	Name = "Aurvang",
 	Civilization = "goblin",

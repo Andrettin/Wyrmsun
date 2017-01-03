@@ -86,14 +86,6 @@ GameConcepts = {
 		Name = _("Mer~!cenaries"),
 		Description = _("Groups of mercenaries can be hired at mercenary camps, providing the player with a few experienced warriors, no time needing to be spent in training them. Mercenaries do cost quite a bit of copper, however. Besides mercenary squads, players can also hire thieves in mercenary camps. Like mercenary groups, thieves are hired instantly.")
 	},
-	Quests = {
-		Name = _("~!Quests"),
-		Description = _("Completing RTS quests will provide the player with technology points (which can be used to acquire further technologies for the RTS mode), along with new maps.")
-	},
-	TechTreeScreen = {
-		Name = _("~!Tech Tree Screen"),
-		Description = _("The tech tree screen allows players to spend technology points to acquire new technologies, making them available for the RTS mode.")
-	},
 	Traits = {
 		Name = _("Tra~!its"),
 		Description = _("Each organic unit has an individual personality or physical trait assigned to it, which affects its stats.\n\nClumsy: -1 Accuracy, -1 Evasion\nDextrous: +1 Accuracy, +1 Evasion\nKeen: +1 Accuracy, +1 Sight\nLimping: -2 Speed\nMighty: +2 Damage\nNear-Sighted: -1 Accuracy, -1 Sight\nOld: -1 Sight, -1 Speed\nQuick: +1 Speed\nReckless: -1 Evasion\nResilient: +5 HP\nSlow: -1 Speed\nStrong: +1 Damage \nVicious: +2 Damage\nWeak: -1 Damage")

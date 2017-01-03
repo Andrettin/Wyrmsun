@@ -38,6 +38,11 @@ DefineUpgrade("upgrade-lggi-tribe-faction", {
 	EffectsString = "+2 Armor and +1 Evasion for Impalers"
 })
 
+DefineUpgrade("upgrade-wildfang-tribe-faction", {
+	Name = _("Wildfang Tribe Faction"),
+	EffectsString = "+2 Damage for Swordsmen"
+})
+
 DefineUpgrade("upgrade-ezmarria-faction", {
 	Name = _("Ezmarria Faction"),
 	EffectsString = "+50% Time Efficiency for Lumber Mills and Fugla Forges"
@@ -90,7 +95,7 @@ DefineModifier("upgrade-sigre-tribe-faction",
 DefineModifier("upgrade-aurvangling-tribe-faction",
 	{"BasicDamage", 2},
 	{"Points", 10},
-	{"apply-to", "unit-goblin-archer"}
+	{"apply-to", "unit-goblin-archer"}, {"apply-to", "unit-goblin-headhunter"}, {"apply-to", "unit-goblin-shadowstalker"}
 )
 
 DefineModifier("upgrade-dreadskull-tribe-faction",
@@ -112,6 +117,13 @@ DefineModifier("upgrade-lggi-tribe-faction",
 	{"Evasion", 1},
 	{"Points", 10},
 	{"apply-to", "unit-goblin-spearman"}
+)
+
+DefineModifier("upgrade-wildfang-tribe-faction",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-goblin-militia"}, 
+	{"apply-to", "unit-goblin-swordsman"}, {"apply-to", "unit-goblin-barbarian"}, {"apply-to", "unit-goblin-warlord"}
 )
 
 DefineModifier("upgrade-ezmarria-faction",

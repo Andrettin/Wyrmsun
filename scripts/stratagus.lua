@@ -1480,17 +1480,7 @@ function GetPlayerClassType(unit_class, player, use_province_civilization)
 	end
 end
 
-function FindUnitOfClass(unit_class, player, use_province_civilization)
-	if (use_province_civilization) then
-		local class_type = GetPlayerClassType(unit_class, player, use_province_civilization)
-		
-		if (class_type == nil) then
-			return nil
-		else
-			return FindUnit(class_type, player)
-		end
-	end
-	
+function FindUnitOfClass(unit_class, player, random_unit, last_unit)
 	local uncount = 0
 	
 	if (player ~= nil) then
@@ -1498,6 +1488,8 @@ function FindUnitOfClass(unit_class, player, use_province_civilization)
 	else
 		uncount = GetUnits("any")
 	end
+	
+	local units_of_class = {}
 	
 	if (last_unit) then
 		for unit1 = table.getn(uncount), 1, -1 do
@@ -1511,10 +1503,18 @@ function FindUnitOfClass(unit_class, player, use_province_civilization)
 		for unit1 = 1,table.getn(uncount) do 
 			if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == unit_class) then
 				if (GetUnitVariable(uncount[unit1], "HitPoints") > 0) then
-					return uncount[unit1]
+					if (random_unit) then
+						table.insert(units_of_class, uncount[unit1])
+					else
+						return uncount[unit1]
+					end
 				end
 			end
 		end
+	end
+	
+	if (table.getn(units_of_class) > 0) then
+		return units_of_class[SyncRand(table.getn(units_of_class)) + 1]
 	end
 	
 	return nil
@@ -1558,12 +1558,6 @@ end
 
 function PersistencyUpdates()
 	if (wyr.preferences.QuestsCompleted ~= nil) then
-		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Mead of Poetry")) then
-			RemoveElementFromArray(wyr.preferences.QuestsCompleted, "The Mead of Poetry")
-			table.insert(wyr.preferences.QuestsCompleted, "The Mead of Wisdom")
-			SavePreferences()
-		end
-	
 		for i=1, table.getn(wyr.preferences.QuestsCompleted) do
 			SetQuestCompleted(wyr.preferences.QuestsCompleted[i])
 		end
