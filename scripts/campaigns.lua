@@ -67,7 +67,9 @@ DefineCampaign("thunrazs-servant", {
 	Faction = "thielung-tribe",
 	Year = -1101 -- 1100 BC was the first occupation of Gotland (by presumably pre-Germanic or Germanic speakers) we have found through research so far, so we place the campaign start at just before that
 })
+--]]
 
+--[[
 DefineCampaign("the-marcomannic-wars", {
 	Name = "The Marcomannic Wars",
 	Description = "Under the leadership of Ballomar, the Marcomanni wage war with the mighty Roman Empire.",
@@ -75,7 +77,9 @@ DefineCampaign("the-marcomannic-wars", {
 	Faction = "marcomanni-tribe",
 	Year = 162 -- beginning of the Marcomannic Wars
 })
+--]]
 
+--[[
 DefineCampaign("sigiberts-struggle", {
 	Name = "Sigibert's Struggle",
 	Description = "Upon the death of the Frankish king Chlothar I, his realm was divided between his four sons: Charibert, Chilperich, Sigibert and Gunthram. The ambitious Chilperich desires to increase his share of the inheritance at his brothers' expense, his designs on Sigibert's lands threatening to throw Francia into a bitter civil war...",

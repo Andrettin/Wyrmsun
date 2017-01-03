@@ -76,7 +76,7 @@ AddTrigger("giant-mushroom-grown", -- this is here rather than in a dwarven trig
 		local farm = FindUnit("unit-dwarven-mushroom-farm", trigger_player, true)
 		Event(
 			"Giant Mushroom Grown",
-			"A giant mushroom has been grown at " .. GetUnitVariable(farm, "Name") .. "! It was presented in a local competition, where it easily won the prize for largest mushroom, and soon its fame began to spread. Curious to see how the peculiar mushroom would taste, some wealthy people have made generous bids to buy the mushroom, so that it should be sold for a good profit.",
+			"A giant mushroom has been grown at " .. GetUnitVariable(farm, "Name") .. "! It was presented in a local competition, where it easily won the prize for largest mushroom, and soon its fame began to spread. Curious to see how the peculiar mushroom would taste, some wealthy people have made generous bids to buy it, so that the mushroom should be sold for a good profit.",
 			trigger_player,
 			{"~!Nice!"},
 			{function(s)

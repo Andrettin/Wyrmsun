@@ -67,6 +67,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added proper names for Barrackses.
 - Added proper names for Farms.
 
+* Campaign
+- The campaign screen now displays the highest completed difficulty for each campaign.
+
 * Factions
 - The Gnomish Sagan Tribe no longer uses light-green-colored gnomes.
 - Added the Dreadskull and Wildfang tribes for the goblins.

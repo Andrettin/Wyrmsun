@@ -1844,7 +1844,6 @@ DefineCivilization("latin", {
 		"Alba",
 		"Aleria",
 		"Antium",
-		"Aquileia",
 		"Ardea",
 		"Ariminum",
 		"Arretium",
@@ -1886,14 +1885,12 @@ DefineCivilization("latin", {
 		"Novum Castrum",
 		"Olbia",
 		"Olisipo",
-		"Opitergium", -- Oderzo
 		"Ostia",
 		"Paestum",
 		"Placentia",
 		"Puteoli",
 		"Regina Castra", -- Ratisbon/Regensburg
 		"Rhegium",
-		"Roma", -- Rome
 		"Saguntum",
 		"Salernum",
 		"Salicula",

@@ -49,6 +49,21 @@ DefineQuest("the-home-of-the-boii", {
 	PlayerColor = "orange"
 })
 
+DefineQuest("the-marcomannic-wars", {
+	Name = "The Marcomannic Wars",
+	Icon = "icon-suebi-swordsman",
+	Civilization = "teuton",
+	PlayerColor = "orange",
+	FailEffects = function(s)
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "the-marcomannic-wars") then
+			CallDialogue("campaign-defeat", trigger_player)
+		end
+	end,
+	Objectives = {"- Destroy Opitergium"},
+	Uncompleteable = true,
+	Unobtainable = true
+})
+
 DefineQuest("the-sack-of-iuvavum", {
 	Name = "The Sack of Iuvavum",
 	Icon = "icon-teuton-spatha",

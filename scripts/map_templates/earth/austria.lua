@@ -40,12 +40,14 @@ SetMapTemplateTileTerrain("earth", "shallow-water", 4223, 959, "Lake Neusiedl")
 -- Carnuntum
 SetMapTemplateCulturalSettlementName("earth", "Carnuntum", {4224, 955}, "latin")
 SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4224, 955}, 10, 161) -- Upper Pannonia (where Carnuntum was located) acquired by Rome in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+SetMapTemplateUnit("earth", "unit-latin-town-hall", "rome", {4224, 955}, 161, 526)
 SetMapTemplateUnit("earth", "unit-latin-barracks", "rome", {4224, 955}, 161, 526) -- Legionary base present in Carnuntum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 -- Carnuntum no longer under Roman control by 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 
 -- Salzburg / Iuvavum
 SetMapTemplateCulturalSettlementName("earth", "Iuvavum", {4135, 960}, "latin")
 SetMapTemplateCulturalSettlementName("earth", "Salzburg", {4135, 960}, "teuton")
+SetMapTemplateUnit("earth", "unit-latin-town-hall", "rome", {4135, 960}, -15, 526) -- Noricum was conquered by the Romans in 15 BC, and a few Celtic settlements were subsequently amalgamated into Iuvavum; Source: Heinz Dopsch, "Kleine Geschichte Salzburgs: Stadt und Land", 2009, pp. 16-17.
 SetMapTemplateUnit("earth", "unit-teuton-farm", "bavarian-tribe", {4135, 960}, 526) -- Salzburg was in Bavarian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 
 -- Vienna / Vindobona

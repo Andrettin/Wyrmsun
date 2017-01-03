@@ -25,6 +25,10 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+-- Aquileia
+SetMapTemplateCulturalSettlementName("earth", "Aquileia", {4143, 1005}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 26-27, 29.
+SetMapTemplateUnit("earth", "unit-latin-town-hall", "rome", {4143, 1005}, -184) -- Aquileia founded as a colony in 184 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+
 -- Broglio di Trebisacce
 SetMapTemplateUnit("earth", "unit-latin-farm", "mycenae", {4214, 1143}, -1350, -1150) -- the site of Broglio di Trebisacce (in the plain of Sybaris) was occupied during the Italian Recent Bronze Age (c. 1350-1150 BC) and in the Italian Final Bronze Age (c. 1150-950 BC), and was possibly a Mycenaean colony; the settlement produced Aegean-type storage jars and grew olives in the Recent Bronze Age; in the Final Bronze Age it had some early ironworking, and possessed a wall as well as a ditch; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 37-38, 40-41.
 SetMapTemplateUnit("earth", "unit-latin-smithy", "mycenae", {4214, 1143}, -1150, -950)
@@ -46,6 +50,10 @@ SetMapTemplateUnit("earth", "unit-celt-farm", "celtic-cimmerian-tribe", {4034, 1
 
 -- Nola
 SetMapTemplateUnit("earth", "unit-latin-farm", "samnite-tribe", {4170, 1116}, -2300, -1701) -- the settlement of Nola was inhabited in the Italian Early Bronze Age (c. 2300-1700 BC), until it was destroyed by an eruption of Mount Vesuvius in the 18th century BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 43-44.
+
+-- Oderzo / Opitergium
+SetMapTemplateCulturalSettlementName("earth", "Opitergium", {4122, 1005}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 26-27; Source: "Ancient Warfare VII.6", 2013, p. 7.
+SetMapTemplateUnit("earth", "unit-latin-town-hall", "rome", {4122, 1005}, 161, 526) -- Opitergium was in existence in the 161-180 AD period, and under Roman ownership; Source: "Ancient Warfare VII.6", 2013, p. 7.
 
 -- Poggiomarino
 SetMapTemplateUnit("earth", "unit-latin-town-hall", "samnite-tribe", {4170, 1119}, -1600, -501) -- the settlement of Poggiomarino was inhabited continuously between the 16th and 6th centuries BC; due to environmental reasons the settlement had to be forsaken, at which point they founded the city of Pompeii; Poggiomarino was a major industrial center in southern central Italy; it contained a furnace for copper smelting and mold casts for making bronze objects; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 42-44.
