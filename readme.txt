@@ -64,7 +64,8 @@ https://github.com/Andrettin/Wyrmsun
 - Improved the Easy difficulty AI.
 
 * Buildings
-- Barrackses now have proper names.
+- Added proper names for Barrackses.
+- Added proper names for Farms.
 
 * Factions
 - The Gnomish Sagan Tribe no longer uses light-green-colored gnomes.
@@ -87,6 +88,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added the "Splendid Table" random event for the campaign mode.
 - Added the "Beautiful Statuette" random event for the campaign mode.
 - Added the "Brawl at the Barracks" random event for the campaign mode.
+- Added the "Giant Mushroom Grown" random event for the campaign mode, for the dwarves.
 
 * Units
 - Fixed issue which caused a worker to stop its current actions if it previously had been ordered to build a structure, began building it, and then went on to do something else and another worker completed the construction.

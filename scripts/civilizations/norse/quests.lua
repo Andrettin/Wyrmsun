@@ -118,9 +118,9 @@ DefineQuest("the-house-of-seven-fathers", { -- based on the "The Seventh Father 
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 500)
 		if (GetPlayerData(trigger_player, "RaceName") == "germanic") then
-			SetUnitVariable(FindUnit("unit-germanic-farm", trigger_player, true), "Unique", "the-house-of-seven-fathers")
+			SetUnitVariable(FindUnit("unit-germanic-farm", trigger_player, false, true), "Unique", "the-house-of-seven-fathers")
 		else
-			SetUnitVariable(FindUnit("unit-teuton-farm", trigger_player, true), "Unique", "the-house-of-seven-fathers")
+			SetUnitVariable(FindUnit("unit-teuton-farm", trigger_player, false, true), "Unique", "the-house-of-seven-fathers")
 		end
 	end,
 	Objectives = {"- Build a Farm"},

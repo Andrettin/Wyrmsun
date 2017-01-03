@@ -59,6 +59,40 @@ AddTrigger("bountiful-harvest",
 	end
 )
 
+AddTrigger("giant-mushroom-grown", -- this is here rather than in a dwarven triggers.lua file because in the future other civilizations could have mushroom farms
+	function()
+		if (SyncRand(100) ~= 0) then -- 1% chance this will trigger every time it is checked (and 1% for each player it is checked for, for a chance of 0.01% for a player who matches the conditions
+			return false
+		end
+		for i=0,(PlayerMax - 2) do
+			if (SyncRand(100) == 0 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-mushroom-farm") >= 1) then
+				trigger_player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function()
+		local farm = FindUnit("unit-dwarven-mushroom-farm", trigger_player, true)
+		Event(
+			"Giant Mushroom Grown",
+			"A giant mushroom has been grown at " .. GetUnitVariable(farm, "Name") .. "! It was presented in a local competition, where it easily won the prize for largest mushroom, and soon its fame began to spread. Curious to see how the peculiar mushroom would taste, some wealthy people have made generous bids to buy the mushroom, so that it should be sold for a good profit.",
+			trigger_player,
+			{"~!Nice!"},
+			{function(s)
+				SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 150)
+			end},
+			nil,
+			nil,
+			false,
+			{
+				OptionTooltips = {"+150 Copper"}
+			}
+		)
+		return true
+	end
+)
+
 AddTrigger("expert-miner",
 	function()
 		if (SyncRand(100) ~= 0) then -- 1% chance this will trigger every time it is checked (and 1% for each player it is checked for, for a chance of 0.01% for a player who matches the conditions
@@ -88,7 +122,7 @@ AddTrigger("expert-miner",
 			trigger_player,
 			{"~!Yes", "~!No"},
 			{function(s)
-				local town_hall = FindUnit("town_hall", trigger_player)
+				local town_hall = FindUnit("town_hall", trigger_player, true)
 				unit = CreateUnit(GetFactionClassUnitType("expert-miner", GetPlayerData(trigger_player, "RaceName"), GetPlayerData(trigger_player, "Faction")), trigger_player, {GetUnitVariable(town_hall, "PosX"), GetUnitVariable(town_hall, "PosY")})
 				SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") - 600)
 			end,

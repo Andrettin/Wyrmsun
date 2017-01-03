@@ -288,7 +288,7 @@ DefineQuest("shorbear-hold", {
 		return false
 	end,
 	CompletionEffects = function(s)
-		SetUnitVariable(FindUnit("unit-dwarven-stronghold", trigger_player), "Unique", "shorbear-hold")
+		SetUnitVariable(FindUnit("unit-dwarven-stronghold", trigger_player, false, true), "Unique", "shorbear-hold")
 	end,
 	Objectives = {"- Build a Bastion"},
 	Rewards = "The Bastion will become the Shorbear Hold unique building",
