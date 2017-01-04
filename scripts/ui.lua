@@ -2019,6 +2019,33 @@ if not (ui_loaded_first_time) then
 				}
 		}	
 	})
+	
+	DefinePopup({
+		Ident = "popup-unit-under-cursor",
+		BackgroundColor = PopupBackgroundColor,
+		BorderColor = PopupBorderColor,
+		MinWidth = 64,
+		DefaultFont = wyr.preferences.PopupDescriptionFont,
+		Contents = {
+				{	Condition = {Affixed = "false", Unique = "false"}, HighlightColor = "yellow",
+					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
+				}, 
+				{	Condition = {Affixed = "only", Unique = "false"}, TextColor = "light-blue", HighlightColor = "yellow",
+					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
+				}, 
+				{	Condition = {Unique = "only"}, TextColor = "fire", HighlightColor = "yellow",
+					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
+				}
+				--[[
+				{ 	Condition = {Building = "only", SettlementName = true, ButtonAction = "unit"}, Margin = {1, 1},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {Building = "only", SettlementName = true, ButtonAction = "unit"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Settlement: "), UnitSettlementName("Unit")), Font = wyr.preferences.PopupDescriptionFont}}
+				}
+				--]]
+		}	
+	})
 end
 
 ui_loaded_first_time = true

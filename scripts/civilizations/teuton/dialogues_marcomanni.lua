@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016-2017 by Andrettin
+--      (c) Copyright 2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,5 +25,18 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-Load("scripts/civilizations/teuton/triggers_frank.lua")
-Load("scripts/civilizations/teuton/triggers_marcomanni.lua")
+DefineDialogue("the-marcomannic-wars-introduction", {
+	Nodes = {
+		{
+			"text", "Almost two centuries after Marbod conquered Bohemia for the Marcomanni, their chieftain Ballomar has gathered more than a dozen Germanic tribes in an alliance to invade the Roman Empire. Attracted by the southern riches, the tribal alliance seeks to plunder its way to northern Italy. Once the coastal city of Aquileia has been razed, Marcomanni control of the Alpine lands will be secure."
+		},
+		{
+			"text", "Hint: Hover the mouse over a building to see the name of its settlement.", -- to be implemented
+			"option-effects", {
+				function(s)
+					SetPlayerData(trigger_player, "AcceptQuest", "the-marcomannic-wars")
+				end
+			}
+		}
+	}
+})

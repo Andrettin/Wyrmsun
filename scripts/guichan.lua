@@ -926,7 +926,7 @@ function RunSinglePlayerGameMenu()
 			RunCampaignMenu();
 		end
 	)
-	menu:addFullButton(_("Mini-~!Quests"), "q", offx + 208, offy + 104 + 36*3,
+	menu:addFullButton(_("~!Quests"), "q", offx + 208, offy + 104 + 36*3,
 		function()
 			RunQuestWorldMenu();
 			if (RunningScenario) then

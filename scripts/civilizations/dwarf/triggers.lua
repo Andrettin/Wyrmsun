@@ -28,7 +28,7 @@
 AddTrigger("the-mead-of-poetry-fjalar-and-galar-conspire",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (FindHero("Fjalar", i) ~= nil and FindHero("Galar", i) ~= nil) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("Fjalar", i) ~= nil and FindHero("Galar", i) ~= nil) then
 				trigger_player = i
 				return true
 			end

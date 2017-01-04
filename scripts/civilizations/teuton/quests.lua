@@ -59,7 +59,7 @@ DefineQuest("the-marcomannic-wars", {
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
-	Objectives = {"- Destroy Opitergium"},
+	Objectives = {"- Destroy Aquileia"},
 	Uncompleteable = true,
 	Unobtainable = true
 })

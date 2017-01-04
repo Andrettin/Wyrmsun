@@ -31,7 +31,7 @@ AddTrigger("bountiful-harvest",
 			return false
 		end
 		for i=0,(PlayerMax - 2) do
-			if (SyncRand(100) == 0 and GetFactionClassUnitType("farm", GetPlayerData(i, "Faction")) ~= nil and GetPlayerData(i, "UnitTypesCount", GetFactionClassUnitType("farm", GetPlayerData(i, "Faction"))) >= 1) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and SyncRand(100) == 0 and GetFactionClassUnitType("farm", GetPlayerData(i, "Faction")) ~= nil and GetPlayerData(i, "UnitTypesCount", GetFactionClassUnitType("farm", GetPlayerData(i, "Faction"))) >= 1) then
 				trigger_player = i
 				return true
 			end
@@ -65,7 +65,7 @@ AddTrigger("giant-mushroom-grown", -- this is here rather than in a dwarven trig
 			return false
 		end
 		for i=0,(PlayerMax - 2) do
-			if (SyncRand(100) == 0 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-mushroom-farm") >= 1) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and SyncRand(100) == 0 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-mushroom-farm") >= 1) then
 				trigger_player = i
 				return true
 			end
@@ -108,7 +108,7 @@ AddTrigger("expert-miner",
 			elseif (GetPlayerData(i, "UnitTypesCount", "unit-copper-mine") > 0) then
 				percent_chance = 1
 			end
-			if (SyncRand(100) < percent_chance and GetFactionClassUnitType("expert-miner", GetPlayerData(i, "Faction")) ~= nil and GetPlayerData(i, "NumTownHalls") > 0 and GetPlayerData(i, "Resources", "copper") >= 600 and (GetPlayerData(i, "Supply") - GetPlayerData(i, "Demand")) >= GetUnitTypeData(GetFactionClassUnitType("expert-miner", GetPlayerData(i, "Faction")), "Demand")) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and SyncRand(100) < percent_chance and GetFactionClassUnitType("expert-miner", GetPlayerData(i, "Faction")) ~= nil and GetPlayerData(i, "NumTownHalls") > 0 and GetPlayerData(i, "Resources", "copper") >= 600 and (GetPlayerData(i, "Supply") - GetPlayerData(i, "Demand")) >= GetUnitTypeData(GetFactionClassUnitType("expert-miner", GetPlayerData(i, "Faction")), "Demand")) then
 				trigger_player = i
 				return true
 			end
@@ -145,7 +145,7 @@ AddTrigger("splendid-table",
 			return false
 		end
 		for i=0,(PlayerMax - 2) do
-			if (SyncRand(100) == 0 and GetFactionClassUnitType("lumber-mill", GetPlayerData(i, "Faction")) ~= nil and GetPlayerData(i, "UnitTypesCount", GetFactionClassUnitType("lumber-mill", GetPlayerData(i, "Faction"))) >= 1) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and SyncRand(100) == 0 and GetFactionClassUnitType("lumber-mill", GetPlayerData(i, "Faction")) ~= nil and GetPlayerData(i, "UnitTypesCount", GetFactionClassUnitType("lumber-mill", GetPlayerData(i, "Faction"))) >= 1) then
 				trigger_player = i
 				return true
 			end
@@ -179,7 +179,7 @@ AddTrigger("beautiful-statuette",
 			return false
 		end
 		for i=0,(PlayerMax - 2) do
-			if (SyncRand(100) == 0 and GetFactionClassUnitType("smithy", GetPlayerData(i, "Faction")) ~= nil and GetPlayerData(i, "UnitTypesCount", GetFactionClassUnitType("smithy", GetPlayerData(i, "Faction"))) >= 1) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and SyncRand(100) == 0 and GetFactionClassUnitType("smithy", GetPlayerData(i, "Faction")) ~= nil and GetPlayerData(i, "UnitTypesCount", GetFactionClassUnitType("smithy", GetPlayerData(i, "Faction"))) >= 1) then
 				trigger_player = i
 				return true
 			end
@@ -213,7 +213,7 @@ AddTrigger("brawl-at-the-barracks",
 			return false
 		end
 		for i=0,(PlayerMax - 2) do
-			if (SyncRand(100) == 0 and GetFactionClassUnitType("barracks", GetPlayerData(i, "Faction")) ~= nil and GetPlayerData(i, "UnitTypesCount", GetFactionClassUnitType("barracks", GetPlayerData(i, "Faction"))) >= 1) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and SyncRand(100) == 0 and GetFactionClassUnitType("barracks", GetPlayerData(i, "Faction")) ~= nil and GetPlayerData(i, "UnitTypesCount", GetFactionClassUnitType("barracks", GetPlayerData(i, "Faction"))) >= 1) then
 				trigger_player = i
 				return true
 			end

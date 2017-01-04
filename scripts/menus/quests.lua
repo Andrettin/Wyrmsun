@@ -82,7 +82,7 @@ function RunQuestMenu(world)
 	
 	RunningScenario = false
 	
-	menu:addLabel(_("~<Mini-Quests~>"), offx + 320, offy + 104 + 36*-2)
+	menu:addLabel(_("~<Quests~>"), offx + 320, offy + 104 + 36*-2)
 
 	local completed_quest_quantity = 0
 	local total_quest_quantity = 0
