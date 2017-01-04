@@ -89,6 +89,7 @@ https://github.com/Andrettin/Wyrmsun
 * Scenarios
 - The scenario screen now displays the highest completed difficulty for each scenario/campaign.
 - Fixed issue which caused the Karling Buras to not be able to build if captured after the player developed the Teuton civilization.
+- Fixed issue which caused the "Defeat your rivals" objective to be removed from a loaded game in the scenario/campaign mode.
 
 * Triggers
 - Updated the "Bountiful Harvest" scenario/campaign mode event so that the quantity of copper obtained scales with the quantity of farms owned.
