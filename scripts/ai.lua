@@ -61,7 +61,7 @@ DefineAiHelper(
 function GetAiUnitType(unit_class)
 	local ai_unit_type = nil
 	if (GetPlayerData(AiPlayer(), "Faction") ~= "") then
-		ai_unit_type = GetFactionClassUnitType(unit_class, AiGetRace(), GetPlayerData(AiPlayer(), "Faction"))
+		ai_unit_type = GetFactionClassUnitType(unit_class, GetPlayerData(AiPlayer(), "Faction"))
 	else
 		ai_unit_type = GetCivilizationClassUnitType(unit_class, AiGetRace())
 	end

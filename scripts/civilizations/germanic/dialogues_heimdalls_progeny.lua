@@ -114,6 +114,9 @@ DefineDialogue("thrallings-subjugated", {
 					for unit1 = 1,table.getn(uncount) do
 						ChangeUnitOwner(uncount[unit1], trigger_player)
 						OrderUnit(trigger_player, GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, nil, "stop")
+						if (GetUnitVariable(uncount[unit1], "Ident") ~= GetFactionClassUnitType(GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class"), GetPlayerData(trigger_player, "Faction"))) then
+							ConvertUnit(uncount[unit1], GetFactionClassUnitType(GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class"), GetPlayerData(trigger_player, "Faction")))
+						end
 					end
 				end
 			}
@@ -203,6 +206,9 @@ DefineDialogue("karlings-subjugated", {
 					for unit1 = 1,table.getn(uncount) do
 						ChangeUnitOwner(uncount[unit1], trigger_player)
 						OrderUnit(trigger_player, GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, nil, "stop")
+						if (GetUnitVariable(uncount[unit1], "Ident") ~= GetFactionClassUnitType(GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class"), GetPlayerData(trigger_player, "Faction"))) then
+							ConvertUnit(uncount[unit1], GetFactionClassUnitType(GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class"), GetPlayerData(trigger_player, "Faction")))
+						end
 					end
 					SetPlayerData(trigger_player, "CompleteQuest", "subjugate-the-karlings")
 				end

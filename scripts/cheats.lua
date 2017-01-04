@@ -153,7 +153,7 @@ function HandleCheats(str)
 	}
 	for i, unitName in ipairs(bronze_upgrades) do
 		for j=0,PlayerMax - 2 do
-			if (Players[j].Type ~= PlayerNobody and unitName == GetFactionClassUnitType(GetUpgradeData(unitName, "Class"), GetPlayerData(j, "RaceName"), GetPlayerData(j, "Faction"))) then
+			if (Players[j].Type ~= PlayerNobody and unitName == GetFactionClassUnitType(GetUpgradeData(unitName, "Class"), GetPlayerData(j, "Faction"))) then
 				SetPlayerData(j, "Allow", unitName, "R")
 			end
 		end

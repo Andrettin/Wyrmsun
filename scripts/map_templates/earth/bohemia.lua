@@ -36,7 +36,7 @@ SetMapTemplateUnit("earth", "unit-teuton-stables", "quadi-tribe", {4234, 931}, 1
 -- Prague
 SetMapTemplateCulturalSettlementName("earth", "Prague", {4169, 908}, "slav")
 SetMapTemplateCulturalSettlementName("earth", "Prague", {4169, 908}, "teuton")
---SetMapTemplateFactionCulturalSettlementName("earth", "Bubienum", {4169, 908}, "marcomanni-tribe") -- name of the Marcomannic capital; also known as Marobudum; either located where modern Prague or Budweis are; Source: Frederick Kohlrausch, "A History of Germany", 1844, p. 57.
+SetMapTemplateFactionCulturalSettlementName("earth", "Bubienum", {4169, 908}, "suebi-tribe") -- name of the Marcomannic capital; also known as Marobudum; either located where modern Prague or Budweis are; Source: Frederick Kohlrausch, "A History of Germany", 1844, p. 57.
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "marcomanni-tribe", {4169, 908}, -9, 526) -- Marbod, king of the Suebic tribe of the Marcomanni, conquered Bohemia in 9 BC
 SetMapTemplateHero("earth", "Marbod", "marcomanni-tribe", {4169, 908}, -9, 19) -- Marbod, king of the Suebic tribe of the Marcomanni, conquered Bohemia in 9 BC; Marbod deposed in 19 AD
 SetMapTemplateUnit("earth", "unit-teuton-farm", "bavarian-tribe", {4169, 908}, 526) -- Bohemia was in Bavarian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.

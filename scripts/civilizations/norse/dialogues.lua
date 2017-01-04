@@ -36,14 +36,14 @@ DefineDialogue("the-house-of-seven-fathers", { -- based on the "The Seventh Fath
 		{
 			"text", "Entering the parlor, TRIGGER_HERO finds an even older man sitting by the table, trembling from the cold. TRIGGER_HERO_PERSONAL_PRONOUN_CAPITALIZED asks the man if TRIGGER_HERO_PERSONAL_PRONOUN could sleep in the house for the night, as TRIGGER_HERO_PERSONAL_PRONOUN is weary of travelling. The old man puts away the big book he is reading and answers TRIGGER_HERO that he is not the father of the house, and tells TRIGGER_HERO_OBLIQUE_PRONOUN to speak to his father, who is sitting on the wooden bench.",
 			"conditions", function(s)
-				local writing_upgrade = GetFactionClassUnitType("writing", GetPlayerData(second_trigger_player, "RaceName"), GetPlayerData(second_trigger_player, "Faction"))
+				local writing_upgrade = GetFactionClassUnitType("writing", GetPlayerData(second_trigger_player, "Faction"))
 				return (writing_upgrade ~= nil and GetPlayerData(second_trigger_player, "Allow", writing_upgrade) == "R")
 			end
 		},
 		{
 			"text", "Entering the parlor, TRIGGER_HERO finds an even older man sitting by the table, trembling from the cold. TRIGGER_HERO_PERSONAL_PRONOUN_CAPITALIZED asks the man if TRIGGER_HERO_PERSONAL_PRONOUN could sleep in the house for the night, as TRIGGER_HERO_PERSONAL_PRONOUN is weary of travelling. The old man answers TRIGGER_HERO that he is not the father of the house, and tells TRIGGER_HERO_OBLIQUE_PRONOUN to speak to his father, who is sitting on the wooden bench.",
 			"conditions", function(s)
-				local writing_upgrade = GetFactionClassUnitType("writing", GetPlayerData(second_trigger_player, "RaceName"), GetPlayerData(second_trigger_player, "Faction"))
+				local writing_upgrade = GetFactionClassUnitType("writing", GetPlayerData(second_trigger_player, "Faction"))
 				return (writing_upgrade == nil or GetPlayerData(second_trigger_player, "Allow", writing_upgrade) ~= "R")
 			end
 		},

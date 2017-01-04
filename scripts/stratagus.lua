@@ -1472,7 +1472,7 @@ end
 
 function GetPlayerClassType(unit_class, player, use_province_civilization)
 	if (use_province_civilization and GetPlayerData(player, "Faction") ~= "" and GetPlayerData(player, "RaceName") == GetProvinceCivilization(AttackedProvince.Name)) then
-		return GetFactionClassUnitType(unit_class, GetPlayerData(player, "RaceName"), GetPlayerData(player, "Faction"))
+		return GetFactionClassUnitType(unit_class, GetPlayerData(player, "Faction"))
 	elseif (use_province_civilization and GetProvinceCivilization(AttackedProvince.Name) ~= "") then
 		return GetCivilizationClassUnitType(unit_class, GetProvinceCivilization(AttackedProvince.Name))
 	elseif (use_province_civilization) then
@@ -1484,7 +1484,7 @@ function GetPlayerClassType(unit_class, player, use_province_civilization)
 			return GetCivilizationClassUnitType(unit_class, "goblin")
 		end
 	elseif (GetPlayerData(player, "Faction") ~= "") then
-		return GetFactionClassUnitType(unit_class, GetPlayerData(player, "RaceName"), GetPlayerData(player, "Faction"))
+		return GetFactionClassUnitType(unit_class, GetPlayerData(player, "Faction"))
 	else
 		return GetCivilizationClassUnitType(unit_class, GetPlayerData(player, "RaceName"))
 	end

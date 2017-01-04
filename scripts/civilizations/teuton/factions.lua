@@ -46,6 +46,9 @@ DefineFaction("suebi-tribe", {
 		"male", "Rechilas", -- Suebic cheiftain who defeated a Roman army led by Andevotus near the Singilis river in 438 AD
 		"male", "Tassilo" -- Bavarian ruler who revolted against Frankish dominion; Source: "Medieval Warfare V.2", 2013, p. 8.
 	},
+	SettlementNames = {
+		"Marobudum" -- alternate name of the Marcomannic capital; either located where modern Prague or Budweis are; Source: Frederick Kohlrausch, "A History of Germany", 1844, p. 57.
+	},
 	HistoricalFactionDerivations = {-264, "germanic", "istaevone-tribe"}
 })
 
