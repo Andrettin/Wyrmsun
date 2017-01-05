@@ -31,6 +31,11 @@ SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "celtic-cimmerian-tribe",
 -- Gánovce
 SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "celtic-cimmerian-tribe", {4302, 933}, -1700, -1500) -- a fortified settlement existed c. 1700-1500 BC in Gánovce (southeast Slovakia), belonging to the Otomani-Füzesabony culture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 31.
 
+-- Kremnica / Kremnitz / Körmöcbanya
+SetMapTemplateCulturalSettlementName("earth", "Kremnica", {4275, 935}, "slav")
+SetMapTemplateCulturalSettlementName("earth", "Kremnitz", {4275, 935}, "teuton")
+SetMapTemplateUnit("earth", "unit-teuton-town-hall", "quadi-tribe", {4275, 935}, 161) -- the Quadi inhabited roughly the area around Kremnica in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+
 -- Nižná Myšl'a
 SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "celtic-cimmerian-tribe", {4326, 930}, -1700, -1500) -- a fortified settlement existed c. 1700-1500 BC in Nižná Myšl'a (southeast Slovakia), belonging to the Otomani-Füzesabony culture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 31.
 

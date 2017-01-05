@@ -36,7 +36,7 @@ SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "celtic-cimmerian-tribe",
 SetMapTemplateCulturalSettlementName("earth", "Colonia Agrippina", {3998, 887}, "latin")
 SetMapTemplateCulturalSettlementName("earth", "Cologne", {3998, 887}, "teuton")
 SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {3998, 887}, -50, 161) -- Gaul (where Colonia Agrippina was located) was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {3998, 887}, 161, 486) -- Legionary base present in a location near Colonia Agrippina in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {3998, 887}, 161, 486) -- Legionary base present in a location near Colonia Agrippina in 161-180 AD; Colonia Agrippina was a Roman provincial capital in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
 -- Cologne was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "francia", {3998, 887}, 486, 561) -- Cologne was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "austrasia", {3998, 887}, 561) -- Colonia Agrippina went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.

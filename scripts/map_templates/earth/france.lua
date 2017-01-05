@@ -59,8 +59,10 @@ SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {3973, 978}, 395, 486)
 SetMapTemplateUnit("earth", "unit-teuton-temple", "burgundy", {3973, 978}, 486, 561) -- Besançon was a part of the Kingdom of the Burgundians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "burgundia", {3973, 978}, 561) -- Vesontio went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
--- Bordeaux / Burdegala
+-- Bordeaux / Burdigala / Burdegala
+SetMapTemplateCulturalSettlementName("earth", "Burdigala", {3826, 1029}, "latin") -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 SetMapTemplateFactionCulturalSettlementName("earth", "Bordeaux", {3826, 1029}, "france")
+SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {3826, 1029}, 161, 395) -- Burdigala was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {3826, 1029}, 395, 486) -- Bordeaux was a part of the Roman Empire and was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "visigothia", {3826, 1029}, 486, 526) -- Bordeaux was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "francia", {3826, 1029}, 526, 561) -- Bordeaux's area was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
@@ -72,6 +74,11 @@ SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {3894, 975}, 395, 486)
 SetMapTemplateUnit("earth", "unit-teuton-temple", "visigothia", {3894, 975}, 486, 526) -- Bourges was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "francia", {3894, 975}, 526, 561) -- Bourges' area was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "burgundia", {3894, 975}, 561) -- Bituricae went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+
+-- Brest / Gesocribate
+SetMapTemplateCulturalSettlementName("earth", "Gesocribate", {3736, 946}, "latin") -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+SetMapTemplateFactionCulturalSettlementName("earth", "Brest", {3736, 946}, "france")
+SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {3736, 946}, 161) -- Gesocribate was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
 
 -- Châlons
 SetMapTemplateFactionCulturalSettlementName("earth", "Chalons", {3947, 941}, "france") -- "Châlons"
@@ -92,13 +99,17 @@ SetMapTemplateFactionCulturalSettlementName("earth", "Langres", {3958, 963}, "fr
 SetMapTemplateUnit("earth", "unit-teuton-farm", "burgundia", {3958, 963}, 561) -- Lingones went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
 -- Lyon / Lugdunum
+SetMapTemplateCulturalSettlementName("earth", "Lugdunum", {3947, 1006}, "latin") -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 SetMapTemplateFactionCulturalSettlementName("earth", "Lyon", {3947, 1006}, "france")
+SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {3947, 1006}, 161, 395) -- Lugdunum was a Roman provincial capital in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {3947, 1006}, 395, 486) -- Lyon was a part of the Roman Empire and was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "burgundy", {3947, 1006}, 486, 561) -- Lyon was a part of the Kingdom of the Burgundians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "burgundia", {3947, 1006}, 561) -- Lugdunum went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
 -- Marseilles / Massilia
+SetMapTemplateCulturalSettlementName("earth", "Massilia", {3962, 1062}, "latin") -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 SetMapTemplateFactionCulturalSettlementName("earth", "Marseilles", {3962, 1062}, "france")
+SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {3962, 1062}, 161, 395) -- Massilia was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {3962, 1062}, 395, 480) -- Marseilles was a part of the Roman Empire and was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "visigothia", {3962, 1062}, 480, 526) -- Marseilles became a part of the Kingdom of the Visigoths in 480; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "ostrogothia", {3962, 1062}, 526, 561) -- Marseilles was a part of the Kingdom of the Ostrogoths in 526; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
@@ -136,8 +147,10 @@ SetMapTemplateFactionCulturalSettlementName("earth", "Orleans", {3884, 961}, "fr
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "burgundia", {3884, 961}, 561) -- Chlothar (Frankish king) died in 561, and Orléans went to his son Gunthram; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328; Gregory of Tours, "History of the Franks", IV.22.
 SetMapTemplateHero("earth", "Gunthram", "burgundia", {3884, 961}, 561, 592)
 
--- Paris
+-- Paris / Lutetia
+SetMapTemplateCulturalSettlementName("earth", "Lutetia", {3891, 937}, "latin") -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 SetMapTemplateFactionCulturalSettlementName("earth", "Paris", {3891, 937}, "france")
+SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {3891, 937}, 161, 395) -- Lutetia was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {3891, 937}, 395, 561) -- Paris was a part of the Roman Empire and was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "neustria", {3891, 937}, 561) -- Paris went to Charibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "neustria", {3891, 937}, 561)
@@ -182,6 +195,7 @@ SetMapTemplateUnit("earth", "unit-teuton-town-hall", "salia", {3915, 923}, 561) 
 SetMapTemplateUnit("earth", "unit-teuton-temple", "salia", {3915, 923}, 561)
 
 -- Strassburg / Argentoratum
+SetMapTemplateCulturalSettlementName("earth", "Argentoratum", {4013, 948}, "latin")
 SetMapTemplateCulturalSettlementName("earth", "Strassburg", {4013, 948}, "teuton")
 SetMapTemplateFactionCulturalSettlementName("earth", "Strasbourg", {4013, 948}, "france")
 SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4013, 948}, -50, 161) -- Gaul (where Argentoratum was located) was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -206,7 +220,9 @@ SetMapTemplateFactionCulturalSettlementName("earth", "Toulon", {3974, 1065}, "fr
 SetMapTemplateUnit("earth", "unit-teuton-farm", "burgundia", {3974, 1065}, 561) -- Tolo went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
 -- Toulouse / Tolosa
+SetMapTemplateCulturalSettlementName("earth", "Tolosa", {3867, 1048}, "latin") -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 SetMapTemplateFactionCulturalSettlementName("earth", "Toulouse", {3867, 1048}, "france")
+SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {3867, 1048}, 161, 395) -- Tolosa was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {3867, 1048}, 395, 486) -- Toulouse was a part of the Roman Empire and was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "visigothia", {3867, 1048}, 486, 526) -- Toulouse was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "francia", {3867, 1048}, 526, 561) -- Toulouse was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.

@@ -10,9 +10,11 @@ end
 if (GetCurrentCampaign() == "the-first-dwarves") then
 	ApplyMapTemplate("nidavellir", NidavellirStartX, NidavellirStartY)
 elseif (GetCurrentCampaign() == "the-first-marcomannic-war") then
+	EarthStartX = 4064
 	EarthStartY = 881
 	ApplyMapTemplate("earth", EarthStartX, EarthStartY)
 else
+	EarthStartX = 4022
 	EarthStartY = 667
 	ApplyMapTemplate("earth", EarthStartX, EarthStartY)
 end

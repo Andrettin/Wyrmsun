@@ -25,6 +25,10 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+-- Aleria
+SetMapTemplateCulturalSettlementName("earth", "Aleria", {4055, 1090}, "latin") -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4055, 1090}, 161) -- Aleria was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+
 -- Aquileia
 SetMapTemplateCulturalSettlementName("earth", "Aquileia", {4143, 1005}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 26-27, 29.
 SetMapTemplateUnit("earth", "unit-latin-town-hall", "rome", {4143, 1005}, -184) -- Aquileia founded as a colony in 184 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
@@ -58,11 +62,23 @@ SetMapTemplateUnit("earth", "unit-teuton-ritter", "rome", {4143, 1005}, 167, 168
 SetMapTemplateUnit("earth", "unit-latin-farm", "mycenae", {4214, 1143}, -1350, -1150) -- the site of Broglio di Trebisacce (in the plain of Sybaris) was occupied during the Italian Recent Bronze Age (c. 1350-1150 BC) and in the Italian Final Bronze Age (c. 1150-950 BC), and was possibly a Mycenaean colony; the settlement produced Aegean-type storage jars and grew olives in the Recent Bronze Age; in the Final Bronze Age it had some early ironworking, and possessed a wall as well as a ditch; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 37-38, 40-41.
 SetMapTemplateUnit("earth", "unit-latin-smithy", "mycenae", {4214, 1143}, -1150, -950)
 
+-- Brundisium
+SetMapTemplateCulturalSettlementName("earth", "Brundisium", {4245, 1123}, "latin") -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4245, 1123}, 161) -- Brundisium was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+
+-- Caralis
+SetMapTemplateCulturalSettlementName("earth", "Caralis", {4047, 1155}, "latin") -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4047, 1155}, 161) -- Caralis was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+
 -- Castellaro del Vhò
 SetMapTemplateUnit("earth", "unit-germanic-smithy", "celtic-cimmerian-tribe", {4076, 1021}, -1700, -1350) -- the settlement of Castellaro del Vhò was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC); the settlement (apparently) specialized in metalworking; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
 
 -- Fiavè
 SetMapTemplateUnit("earth", "unit-celt-farm", "celtic-cimmerian-tribe", {4087, 1001}, -1700, -1350) -- a settlement at Fiavè was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
+
+-- Florence / Florentia
+SetMapTemplateCulturalSettlementName("earth", "Florentia", {4095, 1054}, "latin") -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4095, 1054}, 161) -- Florentia was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
 
 -- Frattesina
 SetMapTemplateUnit("earth", "unit-germanic-smithy", "celtic-cimmerian-tribe", {4105, 1023}, -1200, -801) -- the site of Frattesina was occupied between the 12th and 9th centuries BC; the settlement imported raw materials (such as amber, ivory, ostrich eggs and copper) and exported manufactured products (such as works in glass, glazed pottery, bone, antler, elephant ivory, bronze, iron and amber); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 39.
@@ -73,12 +89,20 @@ SetMapTemplateUnit("earth", "unit-latin-town-hall", "latin-tribe", {4111, 1087},
 -- Mercurago
 SetMapTemplateUnit("earth", "unit-celt-farm", "celtic-cimmerian-tribe", {4034, 1007}, -1700, -1350) -- the settlement of Mercurago was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
 
+-- Milan / Mediolanum
+SetMapTemplateCulturalSettlementName("earth", "Mediolanum", {4049, 1013}, "latin") -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4049, 1013}, 161) -- Mediolanum was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+
+-- Naples / Neapolis
+SetMapTemplateCulturalSettlementName("earth", "Neapolis", {4163, 1117}, "latin") -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4163, 1117}, 161) -- Neapolis was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+
 -- Nola
 SetMapTemplateUnit("earth", "unit-latin-farm", "samnite-tribe", {4170, 1116}, -2300, -1701) -- the settlement of Nola was inhabited in the Italian Early Bronze Age (c. 2300-1700 BC), until it was destroyed by an eruption of Mount Vesuvius in the 18th century BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 43-44.
 
 -- Oderzo / Opitergium
 SetMapTemplateCulturalSettlementName("earth", "Opitergium", {4122, 1005}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 26-27; Source: "Ancient Warfare VII.6", 2013, p. 7.
-SetMapTemplateUnit("earth", "unit-latin-town-hall", "rome", {4122, 1005}, 161, 526) -- Opitergium was in existence in the 161-180 AD period, and under Roman ownership; Source: "Ancient Warfare VII.6", 2013, p. 7.
+SetMapTemplateUnit("earth", "unit-latin-town-hall", "rome", {4122, 1005}, 161) -- Opitergium was in existence in the 161-180 AD period, and under Roman ownership; Source: "Ancient Warfare VII.6", 2013, p. 7.
 SetMapTemplateUnit("earth", "unit-teuton-lumber-mill", "rome", {4122, 1005}, 167, 168) -- some buildings for Opitergium for The First Marcomannic War scenario
 SetMapTemplateUnit("earth", "unit-latin-smithy", "rome", {4122, 1005}, 167, 168) -- some buildings for Opitergium for The First Marcomannic War scenario
 SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4122, 1005}, 167, 168) -- some buildings for Opitergium for The First Marcomannic War scenario
@@ -105,6 +129,8 @@ SetMapTemplateUnit("earth", "unit-latin-smithy", "samnite-tribe", {4170, 1119}, 
 --SetMapTemplateUnit("earth", "unit-latin-farm", "sicel-tribe", {4179, 1172}, -1700, -1350) -- the settlement of Punta Milazzese (located on the island of Lipari) was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC); it contained around fifty drystone huts; it was destroyed violently at the end of the Italian Middle Bronze Age; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 37.
 
 -- Ravenna
+SetMapTemplateCulturalSettlementName("earth", "Ravenna", {4114, 1035}, "latin") -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4114, 1035}, 161, 526) -- Ravenna was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "ostrogothia", {4114, 1035}, 526) -- Ravenna was a part of the Kingdom of the Ostrogoths in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 
 -- Rome
@@ -134,3 +160,7 @@ SetMapTemplateUnit("earth", "unit-teuton-dock", "sicel-tribe", {4185, 1202}, -17
 
 -- Toppo Daguzzo
 -- three tombs at Toppo Daguzzo during the Italian Middle Bronze Age (c. 1700-1350 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
+
+-- Verona
+SetMapTemplateCulturalSettlementName("earth", "Verona", {4090, 1014}, "latin") -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4090, 1014}, 161) -- Verona was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.

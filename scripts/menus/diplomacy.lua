@@ -74,6 +74,9 @@ function RunDiplomacyMenu()
 					SetDiplomacy(ThisPlayer.Index, "enemy", i)
 					if (Players[i].Type == PlayerComputer and Players[i]:IsEnemy(ThisPlayer) == false) then
 						SetDiplomacy(i, "enemy", ThisPlayer.Index) -- Andrettin: this is added so that when the human player decides to attack computer players, computer players become enemies of the human player as well
+						if (Players[i].Type == PlayerComputer and Players[i]:IsSharedVision(ThisPlayer)) then
+							SetSharedVision(i, false, ThisPlayer.Index)
+						end
 					end
 				end
 			end

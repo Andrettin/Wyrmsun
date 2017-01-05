@@ -375,6 +375,7 @@ DefineFaction("quadi-tribe", {
 	HistoricalFactionDerivations = {-9, "teuton", "suebi-tribe"},
 	HistoricalDiplomacyStates = {
 		167, "latin", "rome", "war", -- in 167 the Marcomanni and the Quadi (with the Marcomanni seemingly leading) attacked the Romans and won a battle against 20,000 of them near Carnuntum; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		167, "teuton", "marcomanni-tribe", "alliance",
 		171, "latin", "rome", "peace", -- in 171 the Romans forced the Marcomanni and the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		173, "latin", "rome", "war", -- the Quadi entered conflict with the Romans again in (apparently) 173; Source: "Ancient Warfare VII.6", 2013, p. 8.
 		174, "latin", "rome", "peace", -- in 174 the Romans forced the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 8.
