@@ -64,6 +64,28 @@ DefineQuest("the-marcomannic-wars", {
 	Unobtainable = true
 })
 
+--[[
+DefineQuest("the-sack-of-iuvavum", {
+	Name = "The Sack of Iuvavum",
+	Icon = "icon-teuton-spatha",
+	Description = "The Roman town of Iuvavum is renowned for its wealth derived from the salt trade. Our warriors yearn for these riches... Sack this city, for all it is worth!",
+	PlayerColor = "orange",
+	Conditions = function(s)
+		local rome_player = GetFactionPlayer("rome")
+		if (GetPlayerData(trigger_player, "RaceName") == "teuton" and rome_player ~= nil and GetNumUnitsAt(rome_player, "unit-latin-town-hall", {4135 - EarthStartX, 960 - EarthStartY}, {4135 - EarthStartX, 960 - EarthStartY}, GetMapLayer("", "Earth", 0))) then
+			return true
+		end
+		return false
+	end,
+	CompletionEffects = function(s)
+		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 5000)
+	end,
+	Objectives = {"- Destroy Iuvavum"},
+	Rewards = "+5000 Copper",
+	Uncompleteable = true -- completed by trigger
+})
+--]]
+
 DefineQuest("the-sack-of-iuvavum", {
 	Name = "The Sack of Iuvavum",
 	Icon = "icon-teuton-spatha",

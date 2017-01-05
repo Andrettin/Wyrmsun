@@ -48,6 +48,21 @@ SetMapTemplateUnit("earth", "unit-latin-barracks", "rome", {4224, 955}, 161, 526
 SetMapTemplateCulturalSettlementName("earth", "Iuvavum", {4135, 960}, "latin")
 SetMapTemplateCulturalSettlementName("earth", "Salzburg", {4135, 960}, "teuton")
 SetMapTemplateUnit("earth", "unit-latin-town-hall", "rome", {4135, 960}, -15, 526) -- Noricum was conquered by the Romans in 15 BC, and a few Celtic settlements were subsequently amalgamated into Iuvavum; Source: Heinz Dopsch, "Kleine Geschichte Salzburgs: Stadt und Land", 2009, pp. 16-17.
+SetMapTemplateUnit("earth", "unit-teuton-lumber-mill", "rome", {4135, 960}, 162, 163) -- some buildings for Iuvavum for The Marcomannic Wars scenario
+SetMapTemplateUnit("earth", "unit-latin-smithy", "rome", {4135, 960}, 162, 163) -- some buildings for Iuvavum for The Marcomannic Wars scenario
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4135, 960}, 162, 163) -- some buildings for Iuvavum for The Marcomannic Wars scenario
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4135, 960}, 162, 163) -- some buildings for Iuvavum for The Marcomannic Wars scenario
+SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4135, 960}, 162, 163) -- troops to defend Iuvavum for The Marcomannic Wars scenario
+SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4135, 960}, 162, 163) -- troops to defend Iuvavum for The Marcomannic Wars scenario
+SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4135, 960}, 162, 163) -- troops to defend Iuvavum for The Marcomannic Wars scenario
+SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4135, 960}, 162, 163) -- troops to defend Iuvavum for The Marcomannic Wars scenario
+SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4135, 960}, 162, 163) -- troops to defend Iuvavum for The Marcomannic Wars scenario
+SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4135, 960}, 162, 163) -- troops to defend Iuvavum for The Marcomannic Wars scenario
+SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4135, 960}, 162, 163) -- troops to defend Iuvavum for The Marcomannic Wars scenario
+SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4135, 960}, 162, 163) -- troops to defend Iuvavum for The Marcomannic Wars scenario
+SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4135, 960}, 162, 163) -- troops to defend Iuvavum for The Marcomannic Wars scenario
+SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4135, 960}, 162, 163) -- troops to defend Iuvavum for The Marcomannic Wars scenario
+SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4135, 960}, 162, 163) -- troops to defend Iuvavum for The Marcomannic Wars scenario
 SetMapTemplateUnit("earth", "unit-teuton-farm", "bavarian-tribe", {4135, 960}, 526) -- Salzburg was in Bavarian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 
 -- Vienna / Vindobona
