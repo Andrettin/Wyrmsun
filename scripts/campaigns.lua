@@ -69,6 +69,7 @@ DefineCampaign("thunrazs-servant", {
 })
 --]]
 
+--[[
 DefineCampaign("the-first-marcomannic-war", {
 	Name = "The First Marcomannic War",
 	Description = "Under the leadership of Ballomar, the Marcomanni wage war with the mighty Roman Empire.",
@@ -76,6 +77,7 @@ DefineCampaign("the-first-marcomannic-war", {
 	Faction = "marcomanni-tribe",
 	Year = 167 -- beginning of the First Marcomannic War
 })
+--]]
 
 --[[
 DefineCampaign("sigiberts-struggle", {

@@ -64,6 +64,7 @@ DefineQuest("the-first-marcomannic-war", {
 	Unobtainable = true
 })
 
+--[[
 DefineQuest("the-sack-of-iuvavum", {
 	Name = "The Sack of Iuvavum",
 	Icon = "icon-latin-forum",
@@ -111,8 +112,8 @@ DefineQuest("the-razing-of-opitergium", {
 	Hint = "Hint: Hover the mouse over a building to see the name of its settlement.",
 	Uncompleteable = true -- completed by trigger
 })
+--]]
 
---[[
 DefineQuest("the-sack-of-iuvavum", {
 	Name = "The Sack of Iuvavum",
 	Icon = "icon-teuton-spatha",
@@ -136,7 +137,6 @@ DefineQuest("the-razing-of-opitergium", {
 	Scenario = "scripts/civilizations/teuton/scenarios/the_razing_of_opitergium.lua",
 	PlayerColor = "orange"
 })
---]]
 
 DefineQuest("moving-into-galicia", { -- happened in 411 AD
 	Name = "Moving into Galicia",
