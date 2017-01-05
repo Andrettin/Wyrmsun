@@ -49,30 +49,32 @@ DefineQuest("the-home-of-the-boii", {
 	PlayerColor = "orange"
 })
 
-DefineQuest("the-marcomannic-wars", {
-	Name = "The Marcomannic Wars",
+DefineQuest("the-first-marcomannic-war", {
+	Name = "The First Marcomannic War",
 	Icon = "icon-suebi-swordsman",
 	Civilization = "teuton",
 	PlayerColor = "orange",
 	FailEffects = function(s)
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "the-marcomannic-wars") then
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "the-first-marcomannic-war") then
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
-	Objectives = {"- Destroy Aquileia"},
+	Objectives = {"- Destroy Aquileia's Forum"},
 	Uncompleteable = true,
 	Unobtainable = true
 })
 
---[[
 DefineQuest("the-sack-of-iuvavum", {
 	Name = "The Sack of Iuvavum",
-	Icon = "icon-teuton-spatha",
+	Icon = "icon-latin-forum",
 	Description = "The Roman town of Iuvavum is renowned for its wealth derived from the salt trade. Our warriors yearn for these riches... Sack this city, for all it is worth!",
-	PlayerColor = "orange",
+	PlayerColor = "red",
 	Conditions = function(s)
 		local rome_player = GetFactionPlayer("rome")
-		if (GetPlayerData(trigger_player, "RaceName") == "teuton" and rome_player ~= nil and GetNumUnitsAt(rome_player, "unit-latin-town-hall", {4135 - EarthStartX, 960 - EarthStartY}, {4135 - EarthStartX, 960 - EarthStartY}, GetMapLayer("", "Earth", 0))) then
+		if (
+			GetPlayerData(trigger_player, "RaceName") == "teuton" and rome_player ~= nil and Players[trigger_player]:IsEnemy(Players[rome_player])
+			and (GetNumUnitsAt(rome_player, "unit-latin-town-hall", {4135 - EarthStartX, 960 - EarthStartY}, {4135 - EarthStartX, 960 - EarthStartY}, GetMapLayer("", "Earth", 0)) > 0 or GetNumUnitsAt(rome_player, "unit-teuton-stronghold", {4135 - EarthStartX, 960 - EarthStartY}, {4135 - EarthStartX, 960 - EarthStartY}, GetMapLayer("", "Earth", 0)) > 0)
+		) then
 			return true
 		end
 		return false
@@ -80,12 +82,37 @@ DefineQuest("the-sack-of-iuvavum", {
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 5000)
 	end,
-	Objectives = {"- Destroy Iuvavum"},
+	Objectives = {"- Destroy Iuvavum's Forum"},
 	Rewards = "+5000 Copper",
+	Hint = "Hint: Hover the mouse over a building to see the name of its settlement.",
 	Uncompleteable = true -- completed by trigger
 })
---]]
 
+DefineQuest("the-razing-of-opitergium", {
+	Name = "The Razing of Opitergium",
+	Icon = "icon-latin-forum",
+	Description = "The time has come for us to lay siege to the Roman city of Opitergium, securing land and riches in northern Italy.",
+	PlayerColor = "red",
+	Conditions = function(s)
+		local rome_player = GetFactionPlayer("rome")
+		if (
+			GetPlayerData(trigger_player, "RaceName") == "teuton" and rome_player ~= nil and Players[trigger_player]:IsEnemy(Players[rome_player])
+			and (GetNumUnitsAt(rome_player, "unit-latin-town-hall", {4122 - EarthStartX, 1005 - EarthStartY}, {4122 - EarthStartX, 1005 - EarthStartY}, GetMapLayer("", "Earth", 0)) > 0 or GetNumUnitsAt(rome_player, "unit-teuton-stronghold", {4122 - EarthStartX, 1005 - EarthStartY}, {4122 - EarthStartX, 1005 - EarthStartY}, GetMapLayer("", "Earth", 0)) > 0)
+		) then
+			return true
+		end
+		return false
+	end,
+	CompletionEffects = function(s)
+		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 5000)
+	end,
+	Objectives = {"- Destroy Opitergium's Forum"},
+	Rewards = "+5000 Copper",
+	Hint = "Hint: Hover the mouse over a building to see the name of its settlement.",
+	Uncompleteable = true -- completed by trigger
+})
+
+--[[
 DefineQuest("the-sack-of-iuvavum", {
 	Name = "The Sack of Iuvavum",
 	Icon = "icon-teuton-spatha",
@@ -109,6 +136,7 @@ DefineQuest("the-razing-of-opitergium", {
 	Scenario = "scripts/civilizations/teuton/scenarios/the_razing_of_opitergium.lua",
 	PlayerColor = "orange"
 })
+--]]
 
 DefineQuest("moving-into-galicia", { -- happened in 411 AD
 	Name = "Moving into Galicia",

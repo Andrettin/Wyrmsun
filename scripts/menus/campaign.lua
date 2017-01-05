@@ -83,7 +83,7 @@ function RunCampaignMenu()
 	for i=1,table.getn(campaign_ident_list) do
 		table.insert(campaign_list, GetCampaignData(campaign_ident_list[i], "Name"))
 	end
-	campaign_dd = menu:addDropDown(campaign_list, (Video.Width / 2) - (190 / 2), offy + 104 + 36*0,
+	campaign_dd = menu:addDropDown(campaign_list, (Video.Width / 2) - (220 / 2), offy + 104 + 36*0,
 		function(dd)
 			SetCurrentCampaign(campaign_ident_list[campaign_dd:getSelected() + 1])
 			
@@ -104,7 +104,7 @@ function RunCampaignMenu()
 			campaign_description:adjustSize()
 		end
 	)
-	campaign_dd:setSize(190, 20)
+	campaign_dd:setSize(220, 20)
 	if (GetCurrentCampaign() ~= "") then
 		campaign_dd:setSelected(GetElementIndexFromArray(campaign_ident_list, GetCurrentCampaign()) - 1)
 	else

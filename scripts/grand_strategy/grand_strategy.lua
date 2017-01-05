@@ -374,7 +374,7 @@ function RunGrandStrategyGameSetupMenu()
 			if (old_world ~= world_list[world:getSelected() + 1]) then
 				if (GrandStrategyWorld == "Earth") then
 					date_minimum = -3000 -- beginning of the last wave of Indo-European migrations, which lasted until 2800 BC
-					date_maximum = 162 -- beginning of the Marcomannic Wars
+					date_maximum = 167 -- beginning of the Marcomannic Wars
 --					date_maximum = 486 -- conquest of Syagrius' realm by the Frankish Merovingian king, Clovis
 --					date_maximum = 654
 					
@@ -384,7 +384,7 @@ function RunGrandStrategyGameSetupMenu()
 						"71 BC", -- the Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui
 --						"27 BC", -- Augustus assumes power in Rome
 						"9 BC", -- Marbod conquers Bohemia
-						"162 AD", -- beginning of the Marcomannic Wars
+						"167 AD", -- beginning of the Marcomannic Wars
 --						"486 AD", -- conquest of Syagrius' realm by the Frankish Merovingian king, Clovis
 --						"1547 AD",
 --						"1648 AD", -- Peace of Westphalia

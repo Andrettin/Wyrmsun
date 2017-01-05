@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDialogue("the-marcomannic-wars-introduction", {
+DefineDialogue("the-first-marcomannic-war-introduction", {
 	Nodes = {
 		{
 			"text", "Almost two centuries after Marbod conquered Bohemia for the Marcomanni, their chieftain Ballomar has gathered more than a dozen Germanic tribes in an alliance to invade the Roman Empire. Attracted by the southern riches, the tribal alliance seeks to plunder its way to northern Italy. Once the coastal city of Aquileia has been razed, Marcomanni control of the Alpine lands will be secure."
@@ -34,9 +34,35 @@ DefineDialogue("the-marcomannic-wars-introduction", {
 			"text", "Hint: Hover the mouse over a building to see the name of its settlement.", -- to be implemented
 			"option-effects", {
 				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "the-marcomannic-wars")
+					SetPlayerData(trigger_player, "AcceptQuest", "the-first-marcomannic-war")
 				end
 			}
+		}
+	}
+})
+
+DefineDialogue("aquileia-destroyed", {
+	Nodes = {
+		{
+			"text", "Aquileia lies in shambles, plundered for its wealth. Within the city's forum, we found the Roman emperor Marcus Aurelius, who had come to Aquileia to command the war effort in Italy. With him as our prisoner, we were able to obtain generous peace terms from the Romans. We shall keep all Roman land we currently occupy, no plunder will be given back, and we are to receive a large tribute.",
+			"option-effects", {
+				function(s)
+					if (GetPlayerData(trigger_player, "HasQuest", "the-first-marcomannic-war")) then
+						if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "the-first-marcomannic-war") then
+							CallDialogue("campaign-victory", trigger_player)
+						end
+						SetPlayerData(trigger_player, "CompleteQuest", "the-first-marcomannic-war")
+					end
+					local rome_player = GetFactionPlayer("rome")
+					SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 20000)
+					if (rome_player ~= nil) then
+						SetPlayerData(rome_player, "Resources", "copper", GetPlayerData(rome_player, "Resources", "copper") - 20000)
+						SetDiplomacy(trigger_player, "neutral", rome_player)
+						SetDiplomacy(rome_player, "neutral", trigger_player)
+					end
+				end
+			},
+			"option-tooltips", {"Peace with Rome, +20,000 Copper"}
 		}
 	}
 })

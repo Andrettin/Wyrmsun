@@ -36,10 +36,10 @@ SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "celtic-cimmerian-tribe",
 SetMapTemplateCulturalSettlementName("earth", "Colonia Agrippina", {3998, 887}, "latin")
 SetMapTemplateCulturalSettlementName("earth", "Cologne", {3998, 887}, "teuton")
 SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {3998, 887}, -50, 161) -- Gaul (where Colonia Agrippina was located) was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-SetMapTemplateUnit("earth", "unit-latin-barracks", "rome", {3998, 887}, 161, 486) -- Legionary base present in a location near Colonia Agrippina in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {3998, 887}, 161, 486) -- Legionary base present in a location near Colonia Agrippina in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 -- Cologne was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-SetMapTemplateUnit("earth", "unit-teuton-barracks", "francia", {3998, 887}, 486, 561) -- Cologne was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-SetMapTemplateUnit("earth", "unit-teuton-barracks", "austrasia", {3998, 887}, 561) -- Colonia Agrippina went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "francia", {3998, 887}, 486, 561) -- Cologne was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "austrasia", {3998, 887}, 561) -- Colonia Agrippina went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
 -- Eresburg
 SetMapTemplateCulturalSettlementName("earth", "Eresburg", {4043, 879}, "teuton")
@@ -88,11 +88,11 @@ SetMapTemplateUnit("earth", "unit-teuton-farm", "austrasia", {4051, 965}, 561) -
 SetMapTemplateCulturalSettlementName("earth", "Mogontiacum", {4029, 911}, "latin")
 SetMapTemplateCulturalSettlementName("earth", "Mainz", {4029, 911}, "teuton")
 SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4029, 911}, -50, 161) -- Mogontiacum was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-SetMapTemplateUnit("earth", "unit-latin-barracks", "rome", {4029, 911}, 161, 486) -- Legionary base present in Mogontiacum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4029, 911}, 161, 486) -- Legionary base present in Mogontiacum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 -- Mayence was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-SetMapTemplateUnit("earth", "unit-teuton-barracks", "alamanni-tribe", {4033, 920}, 486, 526) -- Mayence was in possession of the Alamanni in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-SetMapTemplateUnit("earth", "unit-teuton-barracks", "francia", {4029, 911}, 526, 561) -- Mayence was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-SetMapTemplateUnit("earth", "unit-teuton-barracks", "austrasia", {4029, 911}, 561) -- Mogontiacum went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "alamanni-tribe", {4033, 920}, 486, 526) -- Mayence was in possession of the Alamanni in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "francia", {4029, 911}, 526, 561) -- Mayence was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "austrasia", {4029, 911}, 561) -- Mogontiacum went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
 -- Mittelberg
 SetMapTemplateUnit("earth", "unit-germanic-town-hall", "celtic-cimmerian-tribe", {4101, 882}, -1600, -1599)

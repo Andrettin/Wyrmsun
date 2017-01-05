@@ -41,8 +41,8 @@ DefineAchievement("heimdalls-progeny", {
 	RequiredQuests = {"heimdalls-progeny"}
 })
 
-DefineAchievement("the-marcomannic-wars", {
-	Name = "The Marcomannic Wars",
+DefineAchievement("the-first-marcomannic-war", {
+	Name = "The First Marcomannic War",
 	Icon = "icon-suebi-swordsman",
 	Description = "Complete The Sack of Iuvavum and The Razing of Opitergium missions.",
 	PlayerColor = "orange",

@@ -25,10 +25,10 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-AddTrigger("the-marcomannic-wars-introduction",
+AddTrigger("the-first-marcomannic-war-introduction",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and i == GetThisPlayer() and GetCurrentCampaign() == "the-marcomannic-wars") then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and i == GetThisPlayer() and GetCurrentCampaign() == "the-first-marcomannic-war") then
 				trigger_player = i
 				return true
 			end
@@ -36,7 +36,76 @@ AddTrigger("the-marcomannic-wars-introduction",
 		return false
 	end,
 	function()
-		CallDialogue("the-marcomannic-wars-introduction", trigger_player)
+		CallDialogue("the-first-marcomannic-war-introduction", trigger_player)
+		return false
+	end
+)
+
+AddTrigger("iuvavum-sacked",
+	function()
+		for i=0,(PlayerMax - 2) do
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "the-sack-of-iuvavum")) then
+				local rome_player = GetFactionPlayer("rome")
+				if (rome_player ~= nil) then
+					if (GetNumUnitsAt(rome_player, "unit-latin-town-hall", {4135 - EarthStartX, 960 - EarthStartY}, {4135 - EarthStartX, 960 - EarthStartY}, GetMapLayer("", "Earth", 0)) == 0 and GetNumUnitsAt(rome_player, "unit-teuton-stronghold", {4135 - EarthStartX, 960 - EarthStartY}, {4135 - EarthStartX, 960 - EarthStartY}, GetMapLayer("", "Earth", 0)) == 0) then
+						trigger_player = i
+						return true
+					end
+				else
+					SetPlayerData(i, "FailQuest", "the-sack-of-iuvavum")
+				end
+			end
+		end
+		return false
+	end,
+	function()
+		SetPlayerData(trigger_player, "CompleteQuest", "the-sack-of-iuvavum")
+		return false
+	end
+)
+
+AddTrigger("opitergium-razed",
+	function()
+		for i=0,(PlayerMax - 2) do
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "the-razing-of-opitergium")) then
+				local rome_player = GetFactionPlayer("rome")
+				if (rome_player ~= nil) then
+					if (GetNumUnitsAt(rome_player, "unit-latin-town-hall", {4122 - EarthStartX, 1005 - EarthStartY}, {4122 - EarthStartX, 1005 - EarthStartY}, GetMapLayer("", "Earth", 0)) == 0 and GetNumUnitsAt(rome_player, "unit-teuton-stronghold", {4122 - EarthStartX, 1005 - EarthStartY}, {4122 - EarthStartX, 1005 - EarthStartY}, GetMapLayer("", "Earth", 0)) == 0) then
+						trigger_player = i
+						return true
+					end
+				else
+					SetPlayerData(i, "FailQuest", "the-razing-of-opitergium")
+				end
+			end
+		end
+		return false
+	end,
+	function()
+		SetPlayerData(trigger_player, "CompleteQuest", "the-razing-of-opitergium")
+		return false
+	end
+)
+
+AddTrigger("aquileia-destroyed",
+	function()
+		for i=0,(PlayerMax - 2) do
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "the-first-marcomannic-war")) then
+				local rome_player = GetFactionPlayer("rome")
+				if (rome_player ~= nil) then
+					if (GetNumUnitsAt(rome_player, "unit-latin-town-hall", {4143 - EarthStartX, 1005 - EarthStartY}, {4143 - EarthStartX, 1005 - EarthStartY}, GetMapLayer("", "Earth", 0)) == 0 and GetNumUnitsAt(rome_player, "unit-teuton-stronghold", {4143 - EarthStartX, 1005 - EarthStartY}, {4143 - EarthStartX, 1005 - EarthStartY}, GetMapLayer("", "Earth", 0)) == 0) then
+						trigger_player = i
+						return true
+					end
+				else
+					SetPlayerData(i, "FailQuest", "the-first-marcomannic-war")
+				end
+			end
+		end
+		return false
+	end,
+	function()
+		CallDialogue("aquileia-destroyed", trigger_player)
 		return false
 	end
 )
