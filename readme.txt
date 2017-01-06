@@ -97,6 +97,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added the "Beautiful Statuette" random event for the scenario/campaign mode.
 - Added the "Brawl at the Barracks" random event for the scenario/campaign mode.
 - Added the "Giant Mushroom Grown" random event for the scenario/campaign mode, for the dwarves.
+- Added the "Skilled Carpenters" and "Skilled Masons" random events for the scenario/campaign mode.
 
 * Units
 - Fixed issue which caused a worker to stop its current actions if it previously had been ordered to build a structure, began building it, and then went on to do something else and another worker completed the construction.

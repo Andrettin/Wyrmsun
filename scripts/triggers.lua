@@ -139,6 +139,73 @@ AddTrigger("expert-miner",
 	end
 )
 
+AddTrigger("skilled-carpenters",
+	function()
+		if (SyncRand(100) ~= 0) then -- 1% chance this will trigger every time it is checked (and 1% for each player it is checked for, for a chance of 0.01% for a player who matches the conditions
+			return false
+		end
+		for i=0,(PlayerMax - 2) do
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and SyncRand(100) == 0 and GetFactionClassUnitType("lumber-mill", GetPlayerData(i, "Faction")) ~= nil and GetPlayerData(i, "UnitTypesCount", GetFactionClassUnitType("lumber-mill", GetPlayerData(i, "Faction"))) >= 1) then
+				trigger_player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function()
+		local lumber_mill = FindUnitOfClass("lumber-mill", trigger_player, true)
+		Event(
+			"Skilled Carpenters",
+			"A group of skilled carpenters has come to our country, taking up employment at " .. GetUnitVariable(lumber_mill, "Name") .. ".",
+			trigger_player,
+			{"~!OK"},
+			{function(s)
+				SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 500)
+			end},
+			nil,
+			nil,
+			false,
+			{
+				OptionTooltips = {"+500 Lumber"}
+			}
+		)
+		return true
+	end
+)
+
+AddTrigger("skilled-masons",
+	function()
+		if (SyncRand(100) ~= 0) then -- 1% chance this will trigger every time it is checked (and 1% for each player it is checked for, for a chance of 0.01% for a player who matches the conditions
+			return false
+		end
+		for i=0,(PlayerMax - 2) do
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and SyncRand(100) == 0 and GetFactionClassUnitType("lumber-mill", GetPlayerData(i, "Faction")) ~= nil and GetPlayerData(i, "UnitTypesCount", GetFactionClassUnitType("lumber-mill", GetPlayerData(i, "Faction"))) >= 1 and GetFactionClassUnitType("masonry", GetPlayerData(i, "Faction")) ~= nil and GetPlayerData(i, "Allow", GetFactionClassUnitType("masonry", GetPlayerData(i, "Faction"))) == "R") then
+				trigger_player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function()
+		Event(
+			"Skilled Masons",
+			"A group of skilled masons has come to our country, taking up employment at a local workshop.",
+			trigger_player,
+			{"~!OK"},
+			{function(s)
+				SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
+			end},
+			nil,
+			nil,
+			false,
+			{
+				OptionTooltips = {"+500 Stone"}
+			}
+		)
+		return true
+	end
+)
+
 AddTrigger("splendid-table",
 	function()
 		if (SyncRand(100) ~= 0) then -- 1% chance this will trigger every time it is checked (and 1% for each player it is checked for, for a chance of 0.01% for a player who matches the conditions
