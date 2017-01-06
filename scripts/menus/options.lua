@@ -503,10 +503,10 @@ function RunGameplayOptionsMenu()
 		function()
 			if (wyr.preferences.ShowResourceBar == false) then -- sort of ugly way to set the preferences for this, should fix later
 				wyr.preferences.ShowResourceBar = true
-				DefineDecorations({Index = "GiveResource", MinValue = 1000, ShowWhenMax = true, HideNeutral = false, HideSelf = false, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
+				DefineDecorations({Index = "GiveResource", MinValue = 1000, ShowWhenMax = true, HideAllied = false, HideNeutral = false, HideSelf = false, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
 			else
 				wyr.preferences.ShowResourceBar = false
-				DefineDecorations({Index = "GiveResource", MinValue = 1000, ShowWhenMax = true, HideNeutral = true, HideSelf = true, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
+				DefineDecorations({Index = "GiveResource", MinValue = 1000, ShowWhenMax = true, HideAllied = true, HideNeutral = true, HideSelf = true, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
 			end
 			menu:stop()
 			RunGameplayOptionsMenu()
