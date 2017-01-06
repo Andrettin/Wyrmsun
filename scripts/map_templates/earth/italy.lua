@@ -81,6 +81,10 @@ SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4047, 1155}, 161) -- Car
 -- Castellaro del Vhò
 SetMapTemplateUnit("earth", "unit-germanic-smithy", "celtic-cimmerian-tribe", {4076, 1021}, -1700, -1350) -- the settlement of Castellaro del Vhò was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC); the settlement (apparently) specialized in metalworking; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
 
+-- Cosa
+SetMapTemplateCulturalSettlementName("earth", "Cosa", {4095, 1082}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4095, 1082}, -273) -- Cosa founded as a colony in 273 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+
 -- Cremona
 SetMapTemplateCulturalSettlementName("earth", "Cremona", {4066, 1025}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4066, 1025}, -218) -- Cremona founded as a colony in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
@@ -148,6 +152,10 @@ SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4122, 1005}, 167, 168
 SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4122, 1005}, 167, 168) -- troops to defend Opitergium for The First Marcomannic War scenario
 SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4122, 1005}, 167, 168) -- troops to defend Opitergium for The First Marcomannic War scenario
 
+-- Paestum
+SetMapTemplateCulturalSettlementName("earth", "Paestum", {4181, 1127}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4181, 1127}, -273) -- Paestum founded as a colony in 273 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+
 -- Placentia
 SetMapTemplateCulturalSettlementName("earth", "Placentia", {4056, 1028}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4056, 1028}, -218) -- Placentia founded as a colony in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
@@ -189,6 +197,10 @@ SetMapTemplateUnit("earth", "unit-celt-farm", "celtic-cimmerian-tribe", {4080, 1
 -- Sena Gallica
 SetMapTemplateCulturalSettlementName("earth", "Sena Gallica", {4138, 1052}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4138, 1052}, -283) -- Sena Gallica founded as a colony in 283 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+
+-- Spoletum
+SetMapTemplateCulturalSettlementName("earth", "Spoletum", {4127, 1074}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4127, 1074}, -240) -- Spoletum founded as a colony in 240 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 
 -- Thapsos
 SetMapTemplateUnit("earth", "unit-teuton-dock", "sicel-tribe", {4185, 1202}, -1700, -1150) -- the settlement of Thapsos was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC) and Recent Bronze Age (c. 1350-1150 BC); it contained circular and sub-circular huts and possibly a stone wall; the settlement was probably built for conducting sea trade; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36-37.
