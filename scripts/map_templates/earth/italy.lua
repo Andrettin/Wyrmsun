@@ -58,6 +58,14 @@ SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4143, 1005}, 167, 168
 SetMapTemplateUnit("earth", "unit-teuton-ritter", "rome", {4143, 1005}, 167, 168) -- troops to defend Aquileia for The First Marcomannic War scenario
 SetMapTemplateUnit("earth", "unit-teuton-ritter", "rome", {4143, 1005}, 167, 168) -- troops to defend Aquileia for The First Marcomannic War scenario
 
+-- Ariminum
+SetMapTemplateCulturalSettlementName("earth", "Ariminum", {4123, 1044}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4123, 1044}, -268) -- Ariminum founded as a colony in 268 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+
+-- Bononia
+SetMapTemplateCulturalSettlementName("earth", "Bononia", {4096, 1034}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4096, 1034}, -189) -- Bononia founded as a colony in 189 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+
 -- Broglio di Trebisacce
 SetMapTemplateUnit("earth", "unit-latin-farm", "mycenae", {4214, 1143}, -1350, -1150) -- the site of Broglio di Trebisacce (in the plain of Sybaris) was occupied during the Italian Recent Bronze Age (c. 1350-1150 BC) and in the Italian Final Bronze Age (c. 1150-950 BC), and was possibly a Mycenaean colony; the settlement produced Aegean-type storage jars and grew olives in the Recent Bronze Age; in the Final Bronze Age it had some early ironworking, and possessed a wall as well as a ditch; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 37-38, 40-41.
 SetMapTemplateUnit("earth", "unit-latin-smithy", "mycenae", {4214, 1143}, -1150, -950)
@@ -73,8 +81,16 @@ SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4047, 1155}, 161) -- Car
 -- Castellaro del Vhò
 SetMapTemplateUnit("earth", "unit-germanic-smithy", "celtic-cimmerian-tribe", {4076, 1021}, -1700, -1350) -- the settlement of Castellaro del Vhò was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC); the settlement (apparently) specialized in metalworking; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
 
+-- Cremona
+SetMapTemplateCulturalSettlementName("earth", "Cremona", {4066, 1025}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4066, 1025}, -218) -- Cremona founded as a colony in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+
 -- Fiavè
 SetMapTemplateUnit("earth", "unit-celt-farm", "celtic-cimmerian-tribe", {4087, 1001}, -1700, -1350) -- a settlement at Fiavè was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
+
+-- Firmum
+SetMapTemplateCulturalSettlementName("earth", "Firmum", {4151, 1064}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4151, 1064}, -264) -- Firmum founded as a colony in 264 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 
 -- Florence / Florentia
 SetMapTemplateCulturalSettlementName("earth", "Florentia", {4095, 1054}, "latin") -- Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -82,6 +98,10 @@ SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4095, 1054}, 161) -- Flo
 
 -- Frattesina
 SetMapTemplateUnit("earth", "unit-germanic-smithy", "celtic-cimmerian-tribe", {4105, 1023}, -1200, -801) -- the site of Frattesina was occupied between the 12th and 9th centuries BC; the settlement imported raw materials (such as amber, ivory, ostrich eggs and copper) and exported manufactured products (such as works in glass, glazed pottery, bone, antler, elephant ivory, bronze, iron and amber); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 39.
+
+-- Hatria
+SetMapTemplateCulturalSettlementName("earth", "Hatria", {4156, 1076}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4156, 1076}, -298) -- Hatria founded as a colony in 298 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 
 -- Luni sul Mignone
 SetMapTemplateUnit("earth", "unit-latin-town-hall", "latin-tribe", {4111, 1087}, -1700, -1350) -- two rock-cut longhouses existed at Luni sul Mignone during the Italian Middle Bronze Age (c. 1700-1350 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
@@ -93,12 +113,20 @@ SetMapTemplateUnit("earth", "unit-celt-farm", "celtic-cimmerian-tribe", {4034, 1
 SetMapTemplateCulturalSettlementName("earth", "Mediolanum", {4049, 1013}, "latin") -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4049, 1013}, 161) -- Mediolanum was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
 
+-- Mutina
+SetMapTemplateCulturalSettlementName("earth", "Mutina", {4089, 1032}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4089, 1032}, -183) -- Mutina founded as a colony in 183 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+
 -- Naples / Neapolis
 SetMapTemplateCulturalSettlementName("earth", "Neapolis", {4163, 1117}, "latin") -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4163, 1117}, 161) -- Neapolis was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
 
 -- Nola
 SetMapTemplateUnit("earth", "unit-latin-farm", "samnite-tribe", {4170, 1116}, -2300, -1701) -- the settlement of Nola was inhabited in the Italian Early Bronze Age (c. 2300-1700 BC), until it was destroyed by an eruption of Mount Vesuvius in the 18th century BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 43-44.
+
+-- Novum Castrum
+SetMapTemplateCulturalSettlementName("earth", "Novum Castrum", {4154, 1070}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4154, 1070}, -283) -- Novum Castrum founded as a colony in 283 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 
 -- Oderzo / Opitergium
 SetMapTemplateCulturalSettlementName("earth", "Opitergium", {4122, 1005}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 26-27; Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -120,6 +148,9 @@ SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4122, 1005}, 167, 168
 SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4122, 1005}, 167, 168) -- troops to defend Opitergium for The First Marcomannic War scenario
 SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4122, 1005}, 167, 168) -- troops to defend Opitergium for The First Marcomannic War scenario
 
+-- Placentia
+SetMapTemplateCulturalSettlementName("earth", "Placentia", {4056, 1028}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4056, 1028}, -218) -- Placentia founded as a colony in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 
 -- Poggiomarino
 SetMapTemplateUnit("earth", "unit-latin-town-hall", "samnite-tribe", {4170, 1119}, -1600, -501) -- the settlement of Poggiomarino was inhabited continuously between the 16th and 6th centuries BC; due to environmental reasons the settlement had to be forsaken, at which point they founded the city of Pompeii; Poggiomarino was a major industrial center in southern central Italy; it contained a furnace for copper smelting and mold casts for making bronze objects; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 42-44.
@@ -154,6 +185,10 @@ SetMapTemplateUnit("earth", "unit-teuton-dock", "ostrogothia", {4126, 1096}, 526
 
 -- Santa Rosa di Poviglio
 SetMapTemplateUnit("earth", "unit-celt-farm", "celtic-cimmerian-tribe", {4080, 1026}, -1700, -1350) -- a settlement at Santa Rosa di Poviglio was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
+
+-- Sena Gallica
+SetMapTemplateCulturalSettlementName("earth", "Sena Gallica", {4138, 1052}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4138, 1052}, -283) -- Sena Gallica founded as a colony in 283 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 
 -- Thapsos
 SetMapTemplateUnit("earth", "unit-teuton-dock", "sicel-tribe", {4185, 1202}, -1700, -1150) -- the settlement of Thapsos was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC) and Recent Bronze Age (c. 1350-1150 BC); it contained circular and sub-circular huts and possibly a stone wall; the settlement was probably built for conducting sea trade; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36-37.
