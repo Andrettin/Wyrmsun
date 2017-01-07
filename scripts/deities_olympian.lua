@@ -24,3 +24,11 @@
 --      along with this program; if not, write to the Free Software
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
+
+DefineDeity("roma", { -- goddess who is a personification of the city of Rome; Source: "Ancient Warfare VII.6", 2013, p. 19.
+	Name = "Roma",
+	Pantheon = "Olympian",
+	Civilizations = {"latin"},
+	Religions = {"paganism"},
+	Gender = "female"
+})

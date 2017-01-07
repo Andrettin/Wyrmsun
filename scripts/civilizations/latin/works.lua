@@ -25,6 +25,25 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineUpgrade("upgrade-work-anabasis", { -- Source: "Ancient Warfare VII.6", 2013, pp. 18-19.
+	Name = _("Anabasis"), -- written by Arrian
+	Work = "book",
+	Civilization = "latin",
+	Year = 162 -- possibly published in 162, according to the source
+})
+
+DefineUpgrade("upgrade-work-belli-parthici", { -- Source: "Ancient Warfare VII.6", 2013, p. 18.
+	Name = _("Belli Parthici"), -- written by Asinius Quadratus
+	Work = "book",
+	Civilization = "latin"
+})
+
+DefineUpgrade("upgrade-work-bithyniaca", { -- Source: "Ancient Warfare VII.6", 2013, p. 19.
+	Name = _("Bithyniaca"), -- written by Arrian
+	Work = "book",
+	Civilization = "latin"
+})
+
 DefineUpgrade("upgrade-work-de-bello-gallico", { -- Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 227.
 	Name = _("De Bello Gallico"),
 	Work = "book",
@@ -52,6 +71,58 @@ DefineUpgrade("upgrade-work-notitia-dignitatum", { -- Source: Heiko Steuer, "War
 	Year = 400 -- Notitia Dignitatum was written c. 400 AD
 })
 
+DefineUpgrade("upgrade-work-on-writing-history", { -- Source: "Ancient Warfare VII.6", 2013, p. 18.
+	Name = _("On Writing History"), -- written by Lucian of Samosata
+	Work = "book",
+	Civilization = "latin",
+	Description = "Lucian of Samosata's \"On Writing History\" is a remarkable treatise on the craft of the historian. The work also made particular criticisms to the historians who went with Lucius Verus on his Parthian campaign."
+})
+
+DefineUpgrade("upgrade-work-parthica", { -- Source: "Ancient Warfare VII.6", 2013, p. 19.
+	Name = _("Parthica"), -- written by Arrian
+	Work = "book",
+	Civilization = "latin"
+})
+
+DefineUpgrade("upgrade-work-principia-historiae", { -- Source: "Ancient Warfare VII.6", 2013, pp. 18-19.
+	Name = _("Principia Historiae"), -- written by Marcus Cornelius Fronto, imperial rhetoric tutor
+	Work = "book",
+	Civilization = "latin",
+	Description = "The \"Principia Historiae\" of Marcus Cornelius Fronto about Lucius Verus' campaign against the Parthians.",
+	Year = 165 -- written in 165
+})
+
+DefineUpgrade("upgrade-work-pro-lege-manilia", { -- Source: "Ancient Warfare VII.6", 2013, p. 19.
+	Name = _("Pro Lege Manilia"), -- written by Cicero
+	Work = "book",
+	Civilization = "latin"
+})
+
+DefineUpgrade("upgrade-work-scriptores-historiae-augustae", { -- Source: "Ancient Warfare VII.6", 2013, pp. 18-19.
+	Name = _("Scriptores Historiae Augustae"),
+	Work = "book",
+	Civilization = "latin"
+})
+
+DefineUpgrade("upgrade-work-strategemata", { -- Source: "Ancient Warfare VII.6", 2013, pp. 18-19.
+	Name = _("Strategemata"), -- written by Polyaenus, a forensic rhetor
+	Work = "book",
+	Civilization = "latin",
+	Year = 161 -- published between 161 and the summer of 162, comprised of multiple books
+})
+
+DefineModifier("upgrade-work-anabasis",
+	{"KnowledgeWarfare", 3}
+)
+
+DefineModifier("upgrade-work-belli-parthici",
+	{"KnowledgeWarfare", 3}
+)
+
+DefineModifier("upgrade-work-bithyniaca",
+	{"KnowledgeWarfare", 3}
+)
+
 DefineModifier("upgrade-work-de-bello-gallico",
 	{"KnowledgeWarfare", 3}
 )
@@ -61,5 +132,29 @@ DefineModifier("upgrade-work-meditations",
 )
 
 DefineModifier("upgrade-work-notitia-dignitatum",
+	{"KnowledgeWarfare", 3}
+)
+
+DefineModifier("upgrade-work-on-writing-history",
+	{"KnowledgeWarfare", 3} -- should probably be something else
+)
+
+DefineModifier("upgrade-work-parthica",
+	{"KnowledgeWarfare", 3}
+)
+
+DefineModifier("upgrade-work-principia-historiae",
+	{"KnowledgeWarfare", 3}
+)
+
+DefineModifier("upgrade-work-pro-lege-manilia",
+	{"KnowledgeWarfare", 3}
+)
+
+DefineModifier("upgrade-work-scriptores-historiae-augustae",
+	{"KnowledgeWarfare", 3}
+)
+
+DefineModifier("upgrade-work-strategemata",
 	{"KnowledgeWarfare", 3}
 )
