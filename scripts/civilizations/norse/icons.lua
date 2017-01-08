@@ -36,3 +36,9 @@ DefineIcon({
 	Size = {46, 38},
 	File = "norse/icons/odin.png"
 })
+
+DefineIcon({
+	Name = "icon-thor",
+	Size = {46, 38},
+	File = "norse/icons/thor.png"
+})

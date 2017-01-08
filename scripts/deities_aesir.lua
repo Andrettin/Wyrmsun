@@ -53,6 +53,7 @@ DefineDeity("thor", { -- Son of Odin and Jord (Fjorgyn) and Sif's husband; known
 	Religions = {"paganism"},
 	Gender = "male",
 	Major = true,
+	Icon = "icon-thor",
 	Domains = {"air", "lightning", "order"},
 	CulturalNames = {
 --		"dwarf", "Vingthor", -- name used by Thor when revealing himself to the dwarf Alvis; the meaning is "Thor the Hurler"; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 185.
