@@ -44,7 +44,7 @@ DefineDialogue("the-first-marcomannic-war-introduction", {
 DefineDialogue("aquileia-destroyed", {
 	Nodes = {
 		{
-			"text", "Aquileia lies in shambles, plundered for its wealth. Within the city's forum, we found the Roman emperor Marcus Aurelius, who had come to Aquileia to command the war effort in Italy. With him as our prisoner, we were able to obtain generous peace terms from the Romans. We shall keep all Roman land we currently occupy, no plunder will be given back, and we are to receive a large tribute.",
+			"text", "Aquileia lies in shambles, plundered for its wealth. Due to this astounding victory, we were able to obtain generous peace terms from the Romans. We shall keep all Roman land we currently occupy, no plunder will be given back, and we are to receive a large tribute.",
 			"option-effects", {
 				function(s)
 					if (GetPlayerData(trigger_player, "HasQuest", "the-first-marcomannic-war")) then

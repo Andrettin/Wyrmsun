@@ -32,32 +32,38 @@ SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4055, 1090}, 161) -- Ale
 -- Aquileia
 SetMapTemplateCulturalSettlementName("earth", "Aquileia", {4143, 1005}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 26-27, 29.
 SetMapTemplateUnit("earth", "unit-latin-town-hall", "rome", {4143, 1005}, -184) -- Aquileia founded as a colony in 184 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 167, 168) -- some buildings for Aquileia for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 167, 168) -- some buildings for Aquileia for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 167, 168) -- some buildings for Aquileia for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 167, 168) -- some buildings for Aquileia for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 167, 168) -- some buildings for Aquileia for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 167, 168) -- some buildings for Aquileia for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 167, 168) -- some buildings for Aquileia for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 167, 168) -- some buildings for Aquileia for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 167, 168) -- some buildings for Aquileia for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 167, 168) -- some buildings for Aquileia for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 167, 168) -- some buildings for Aquileia for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 167, 168) -- some buildings for Aquileia for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4143, 1005}, 167, 168) -- troops to defend Aquileia for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4143, 1005}, 167, 168) -- troops to defend Aquileia for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4143, 1005}, 167, 168) -- troops to defend Aquileia for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4143, 1005}, 167, 168) -- troops to defend Aquileia for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4143, 1005}, 167, 168) -- troops to defend Aquileia for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4143, 1005}, 167, 168) -- troops to defend Aquileia for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4143, 1005}, 167, 168) -- troops to defend Aquileia for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4143, 1005}, 167, 168) -- troops to defend Aquileia for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4143, 1005}, 167, 168) -- troops to defend Aquileia for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4143, 1005}, 167, 168) -- troops to defend Aquileia for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4143, 1005}, 167, 168) -- troops to defend Aquileia for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-ritter", "rome", {4143, 1005}, 167, 168) -- troops to defend Aquileia for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-ritter", "rome", {4143, 1005}, 167, 168) -- troops to defend Aquileia for The First Marcomannic War scenario
-SetMapTemplateHero("earth", "marcus-aurelius", "rome", {4126, 1096}, 168) -- Marcus Aurelius went north in the spring of 168, with the objective of reaching Aquileia; Source: "Ancient Warfare VII.6", 2013, p. 28.
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 170, 171) -- some buildings for Aquileia for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 170, 171) -- some buildings for Aquileia for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 170, 171) -- some buildings for Aquileia for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 170, 171) -- some buildings for Aquileia for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 170, 171) -- some buildings for Aquileia for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 170, 171) -- some buildings for Aquileia for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 170, 171) -- some buildings for Aquileia for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 170, 171) -- some buildings for Aquileia for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 170, 171) -- some buildings for Aquileia for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 170, 171) -- some buildings for Aquileia for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 170, 171) -- some buildings for Aquileia for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 170, 171) -- some buildings for Aquileia for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4143, 1005}, 170, 171) -- troops to defend Aquileia for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4143, 1005}, 170, 171) -- troops to defend Aquileia for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4143, 1005}, 170, 171) -- troops to defend Aquileia for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4143, 1005}, 170, 171) -- troops to defend Aquileia for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4143, 1005}, 170, 171) -- troops to defend Aquileia for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4143, 1005}, 170, 171) -- troops to defend Aquileia for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4143, 1005}, 170, 171) -- troops to defend Aquileia for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4143, 1005}, 170, 171) -- troops to defend Aquileia for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4143, 1005}, 170, 171) -- troops to defend Aquileia for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4143, 1005}, 170, 171) -- troops to defend Aquileia for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4143, 1005}, 170, 171) -- troops to defend Aquileia for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-ritter", "rome", {4143, 1005}, 170, 171) -- troops to defend Aquileia for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-ritter", "rome", {4143, 1005}, 170, 171) -- troops to defend Aquileia for The First Marcomannic War scenario
+SetMapTemplateHero("earth", "marcus-aurelius", "rome", {4143, 1005}, 168, 169) -- Marcus Aurelius went north in the spring of 168, with the objective of reaching Aquileia; during the 168/169 winter he returned to Rome; Source: "Ancient Warfare VII.6", 2013, p. 28.
+SetMapTemplateHero("earth", "lucius-verus", "rome", {4143, 1005}, 168, 169) -- Lucius Verus went north in the spring of 168, with the objective of reaching Aquileia; Lucius died returning from Aquileia to Rome during the 168/169 winter; Source: "Ancient Warfare VII.6", 2013, p. 28.
+SetMapTemplateHero("earth", "furius-victorinus", "rome", {4143, 1005}, 168, 169) -- the Praetorian prefect Furius Victorinus went north together with Marcus Aurelius and Lucius Verus in the spring of 168, with the objective of reaching Aquileia; Furius Victorinus died still in 168, likely of plague; Source: "Ancient Warfare VII.6", 2013, p. 28.
+SetMapTemplateHero("earth", "marcus-claudius-fronto", "rome", {4143, 1005}, 168, 169) -- the senior officer Marcus Claudius Fronto went north together with Marcus Aurelius and Lucius Verus in the spring of 168, with the objective of reaching Aquileia; Source: "Ancient Warfare VII.6", 2013, p. 28.
+-- Aquileia had c. 100,000 people around 168 AD; Source: "Ancient Warfare VII.6", 2013, p. 28.
+-- plague swept through Aquileia in 168 AD; Source: "Ancient Warfare VII.6", 2013, p. 28.
+SetMapTemplateHero("earth", "marcus-aurelius", "rome", {4143, 1005}, {169, 9, 15}, 170) -- Marcus Aurelius returned to Aquileia in the middle of September 169, and in the spring of 170 led a force to fight in Dacia or in Iazyge land (alternatively, he could also have been at Carnuntum to prepare against the Marcomanni, but that seems unlikely to me, as if that happened it is probable that we would have heard of him being there in some form while the massive defeat against the Marcomanni happened!); Source: "Ancient Warfare VII.6", 2013, p. 28.
 
 -- Ariminum
 SetMapTemplateCulturalSettlementName("earth", "Ariminum", {4123, 1044}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
@@ -136,22 +142,22 @@ SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4154, 1070}, -283) -- No
 -- Oderzo / Opitergium
 SetMapTemplateCulturalSettlementName("earth", "Opitergium", {4122, 1005}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 26-27; Source: "Ancient Warfare VII.6", 2013, p. 7.
 SetMapTemplateUnit("earth", "unit-latin-town-hall", "rome", {4122, 1005}, 161) -- Opitergium was in existence in the 161-180 AD period, and under Roman ownership; Source: "Ancient Warfare VII.6", 2013, p. 7.
-SetMapTemplateUnit("earth", "unit-teuton-lumber-mill", "rome", {4122, 1005}, 167, 168) -- some buildings for Opitergium for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-latin-smithy", "rome", {4122, 1005}, 167, 168) -- some buildings for Opitergium for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4122, 1005}, 167, 168) -- some buildings for Opitergium for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4122, 1005}, 167, 168) -- some buildings for Opitergium for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4122, 1005}, 167, 168) -- some buildings for Opitergium for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4122, 1005}, 167, 168) -- troops to defend Opitergium for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4122, 1005}, 167, 168) -- troops to defend Opitergium for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4122, 1005}, 167, 168) -- troops to defend Opitergium for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4122, 1005}, 167, 168) -- troops to defend Opitergium for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4122, 1005}, 167, 168) -- troops to defend Opitergium for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4122, 1005}, 167, 168) -- troops to defend Opitergium for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4122, 1005}, 167, 168) -- troops to defend Opitergium for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4122, 1005}, 167, 168) -- troops to defend Opitergium for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4122, 1005}, 167, 168) -- troops to defend Opitergium for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4122, 1005}, 167, 168) -- troops to defend Opitergium for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4122, 1005}, 167, 168) -- troops to defend Opitergium for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-lumber-mill", "rome", {4122, 1005}, 170, 171) -- some buildings for Opitergium for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-latin-smithy", "rome", {4122, 1005}, 170, 171) -- some buildings for Opitergium for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4122, 1005}, 170, 171) -- some buildings for Opitergium for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4122, 1005}, 170, 171) -- some buildings for Opitergium for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4122, 1005}, 170, 171) -- some buildings for Opitergium for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
 
 -- Paestum
 SetMapTemplateCulturalSettlementName("earth", "Paestum", {4181, 1127}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
@@ -179,13 +185,19 @@ SetMapTemplateUnit("earth", "unit-latin-town-hall", "latin-tribe", {4126, 1096},
 SetMapTemplateUnit("earth", "unit-latin-town-hall", "rome", {4126, 1096}, -500, 526) -- Rome had been founded and was independent by 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {4126, 1096}, -40, 526) -- Temple of Jupiter Capitolinus, Temple of Jupiter Victor, Temple of Vesta,  Temple of Fortunus and Temple of Aesculapius existed in Rome in c. 40 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 22-23.
 SetMapTemplateUnit("earth", "unit-teuton-dock", "rome", {4126, 1096}, -40, 526) -- Shipyards ("Navalia") existed in Rome in c. 40 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 22-23.
-SetMapTemplateHero("earth", "marcus-aurelius", "rome", {4126, 1096}, 161, 168) -- Marcus Aurelius crowned Roman emperor in 161 (presumably in Rome itself?); Marcus Aurelius went north in the spring of 168, with the objective of reaching Aquileia; Source: "Ancient Warfare VII.6", 2013, pp. 6, 8, 10, 28.
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4126, 1096}, 167, 168) -- some buildings for Rome for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4126, 1096}, 167, 168) -- some buildings for Rome for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4126, 1096}, 167, 168) -- some buildings for Rome for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4126, 1096}, 167, 168) -- some buildings for Rome for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4126, 1096}, 167, 168) -- some buildings for Rome for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4126, 1096}, 167, 168) -- some buildings for Rome for The First Marcomannic War scenario
+SetMapTemplateHero("earth", "marcus-aurelius", "rome", {4126, 1096}, 161, 168) -- Marcus Aurelius crowned Roman emperor in 161 (presumably in Rome itself?); Marcus Aurelius went north in the spring of 168, with the objective of reaching Aquileia; Source: "Ancient Warfare VII.6", 2013, pp. 6, 28.
+SetMapTemplateHero("earth", "lucius-verus", "rome", {4126, 1096}, 161, 168) -- Lucius Verus crowned Roman co-emperor in 161 (presumably in Rome itself?); Lucius Verus went north in the spring of 168, with the objective of reaching Aquileia; Source: "Ancient Warfare VII.6", 2013, pp. 6-7, 28.
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4126, 1096}, 170, 171) -- some buildings for Rome for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4126, 1096}, 170, 171) -- some buildings for Rome for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4126, 1096}, 170, 171) -- some buildings for Rome for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4126, 1096}, 170, 171) -- some buildings for Rome for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4126, 1096}, 170, 171) -- some buildings for Rome for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4126, 1096}, 170, 171) -- some buildings for Rome for The First Marcomannic War scenario
+SetMapTemplateHero("earth", "furius-victorinus", "rome", {4126, 1096}, 167, 168) -- the Praetorian prefect Furius Victorinus went north together with Marcus Aurelius and Lucius Verus in the spring of 168, with the objective of reaching Aquileia; he was presumably in Rome just before that; Source: "Ancient Warfare VII.6", 2013, p. 28.
+SetMapTemplateHero("earth", "marcus-claudius-fronto", "rome", {4126, 1096}, 167, 168) -- the senior officer Marcus Claudius Fronto went north together with Marcus Aurelius and Lucius Verus in the spring of 168, with the objective of reaching Aquileia; he was presumably in Rome just before that; Source: "Ancient Warfare VII.6", 2013, p. 28.
+SetMapTemplateHero("earth", "marcus-aurelius", "rome", {4126, 1096}, 169, {169, 9, 15}) -- Marcus Aurelius returned to Rome during the 168/169 winter, but by the middle of September 169 had returned to Aquileia; Source: "Ancient Warfare VII.6", 2013, p. 28.
+SetMapTemplateHero("earth", "tiberius-claudius-pompeianus", "rome", {4126, 1096}, 169, 170) -- the general Tiberius Claudius Pompeianus went to Rome after Marcus Aurelius returned to the city during the 168/169 winter; Source: "Ancient Warfare VII.6", 2013, p. 28.
+SetMapTemplateHero("earth", "marcus-aurelius", "rome", {4126, 1096}, 176, 178) -- Marcus Aurelius returned to Rome in late 176, going away to campaign against the Marcomanni and Quadi in 178; Source: "Ancient Warfare VII.6", 2013, p. 33.
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "ostrogothia", {4126, 1096}, 526) -- Rome was a part of the Kingdom of the Ostrogoths in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "ostrogothia", {4126, 1096}, 526)
 SetMapTemplateUnit("earth", "unit-teuton-dock", "ostrogothia", {4126, 1096}, 526)

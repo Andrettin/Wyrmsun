@@ -46,3 +46,14 @@ DefineCharacter("marbod", {
 	}
 })
 
+DefineCharacter("ballomar", { -- Source: "Ancient Warfare VII.6", 2013, pp. 29-32.
+	Name = "Ballomar",
+	Gender = "male",
+	Type = "unit-suebi-swordsman",
+	Civilization = "teuton",
+	Faction = "marcomanni-tribe",
+	Trait = "upgrade-intelligent",
+	HairVariation = "brown-hair",
+--	Description = _("The Marcomannic chieftain Ballomar seeks to establish his tribe in the Roman lands to their south. To that effect, he has gathered a coalition of tribes - and is ready to cross the Danube.")
+})
+

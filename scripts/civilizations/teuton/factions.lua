@@ -300,6 +300,10 @@ DefineFaction("hermunduri-tribe", {
 	Type = "tribe",
 	Colors = {"blue"},
 	DevelopsTo = {"thuringia"}, -- same general area
+	HistoricalDiplomacyStates = {
+		170, "latin", "rome", "war", -- in 170 a coalition led by the Marcomanni (which included the Hermunduri) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.
+		171, "latin", "rome", "peace" -- in 171 the Romans forced most of the tribes of the Marcomannic coalition to a peace; Source: "Ancient Warfare VII.6", 2013, p. 32.
+	},
 	HistoricalFactionDerivations = {-264, "germanic", "istaevone-tribe"}
 })
 
@@ -345,8 +349,9 @@ DefineFaction("marcomanni-tribe", {
 	Description = _("The Marcomanni were a Suebic tribe. Eventually they migrated to the east, settling in Bohemia and expelling the local Boii tribe. In the 2nd century they fought the terrible Marcomannic Wars against the Romans. The name \"Marcomanni\" means \"march-men\", or \"frontier-men\"."),
 	HistoricalFactionDerivations = {-9, "teuton", "suebi-tribe"},
 	HistoricalDiplomacyStates = {
-		167, "latin", "rome", "war", -- in 167 the Marcomanni and the Quadi (with the Marcomanni seemingly leading) attacked the Romans and won a battle against 20,000 of them near Carnuntum; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		171, "latin", "rome", "peace", -- in 171 the Romans forced the Marcomanni and the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		170, "latin", "rome", "war", -- in 170 a coalition led by the Marcomanni (which included the Quadi and the Hermunduri) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.
+		170, "teuton", "hermunduri-tribe", "alliance",
+		172, "latin", "rome", "peace", -- in 172 the Romans forced the Marcomanni to a peace; Source: "Ancient Warfare VII.6", 2013, p. 32.
 		177, "latin", "rome", "war", -- the Marcomanni entered conflict with the Romans again in 177; Source: "Ancient Warfare VII.6", 2013, p. 8.
 		177, "latin", "rome", "peace" -- in (apparently) 177 the Romans again forced the Marcomanni to a peace; Source: "Ancient Warfare VII.6", 2013, p. 8.
 	}
@@ -374,9 +379,9 @@ DefineFaction("quadi-tribe", {
 	DevelopsTo = {"bavaria", "galicia", "austria", "carinthia"}, -- the Quadi were a Suebic tribe
 	HistoricalFactionDerivations = {-9, "teuton", "suebi-tribe"},
 	HistoricalDiplomacyStates = {
-		167, "latin", "rome", "war", -- in 167 the Marcomanni and the Quadi (with the Marcomanni seemingly leading) attacked the Romans and won a battle against 20,000 of them near Carnuntum; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		167, "teuton", "marcomanni-tribe", "alliance",
-		171, "latin", "rome", "peace", -- in 171 the Romans forced the Marcomanni and the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		170, "latin", "rome", "war", -- in 170 a coalition led by the Marcomanni (which included the Quadi) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.
+		170, "teuton", "marcomanni-tribe", "alliance",
+		171, "latin", "rome", "peace", -- in 171 the Romans forced the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 32.
 		173, "latin", "rome", "war", -- the Quadi entered conflict with the Romans again in (apparently) 173; Source: "Ancient Warfare VII.6", 2013, p. 8.
 		174, "latin", "rome", "peace", -- in 174 the Romans forced the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 8.
 		177, "latin", "rome", "war", -- the Quadi entered conflict with the Romans again in 177; Source: "Ancient Warfare VII.6", 2013, p. 8.

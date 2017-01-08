@@ -39,7 +39,7 @@ DefineCharacter("caesar", { -- Source: Heiko Steuer, "Warrior bands, war lords a
 DefineCharacter("marcus-aurelius", { -- Source: "Ancient Warfare VII.6", 2013, pp. 6, 8, 10.
 	Name = "Marcus Aurelius",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-teuton-veteran-swordsman",
 	Civilization = "latin",
 	Faction = "rome",
 	ProvinceOfOrigin = "Latium", -- put him in Rome's province since we don't have information on his actual province of origin
@@ -58,7 +58,7 @@ DefineCharacter("marcus-aurelius", { -- Source: "Ancient Warfare VII.6", 2013, p
 DefineCharacter("lucius-verus", { -- Source: "Ancient Warfare VII.6", 2013, pp. 6-7.
 	Name = "Lucius Verus",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-teuton-veteran-swordsman",
 	Civilization = "latin",
 	Faction = "rome",
 	ProvinceOfOrigin = "Latium", -- put him in Rome's province since we don't have information on his actual province of origin
@@ -67,6 +67,30 @@ DefineCharacter("lucius-verus", { -- Source: "Ancient Warfare VII.6", 2013, pp. 
 	HistoricalTitles = {
 		-- Roman Emperor from 161 (as co-emperor to Marcus Aurelius, but Marcus Aurelius seemed to be the one who held more power)
 	}
+})
+
+DefineCharacter("furius-victorinus", { -- Source: "Ancient Warfare VII.6", 2013, p. 28.
+	Name = "Furius Victorinus",
+	Gender = "male",
+	Type = "unit-teuton-veteran-swordsman", -- Praetorian prefect
+	Civilization = "latin",
+	Faction = "rome"
+})
+
+DefineCharacter("marcus-claudius-fronto", { -- Source: "Ancient Warfare VII.6", 2013, p. 28.
+	Name = "Marcus Claudius Fronto", -- given in the source as "M. Claudius Fronto"
+	Gender = "male",
+	Type = "unit-teuton-veteran-swordsman", -- senior officer
+	Civilization = "latin",
+	Faction = "rome"
+})
+
+DefineCharacter("tiberius-claudius-pompeianus", { -- Source: "Ancient Warfare VII.6", 2013, p. 28.
+	Name = "Tiberius Claudius Pompeianus",
+	Gender = "male",
+	Type = "unit-teuton-veteran-swordsman", -- general
+	Civilization = "latin",
+	Faction = "rome"
 })
 
 DefineCharacter("geofrei-gaimar", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 76.

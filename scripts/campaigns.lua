@@ -75,7 +75,7 @@ DefineCampaign("the-first-marcomannic-war", {
 	Description = "Under the leadership of Ballomar, the Marcomanni wage war with the mighty Roman Empire.",
 	Civilization = "teuton",
 	Faction = "marcomanni-tribe",
-	Year = 167 -- beginning of the First Marcomannic War
+	Year = 170 -- beginning of the First Marcomannic War
 })
 --]]
 
