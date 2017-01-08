@@ -27,6 +27,11 @@
 
 SetMapTemplateResource("earth", "unit-gold-deposit", {4110, 819}) -- Amber; Source: "Atlas de História Mundial", 2001, p. 89.
 
+-- Augsburg
+SetMapTemplateCulturalSettlementName("earth", "Augusta Vindelicorum", {4090, 942}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+SetMapTemplateCulturalSettlementName("earth", "Augsburg", {4090, 942}, "teuton") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4090, 942}, 167, 172) -- the Raetian provincial capital at Augsburg was destroyed during the First Marcomannic War in c. 172; it likely existed at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
+
 -- Bernstorf (Bavaria)
 SetMapTemplateCulturalSettlementName("earth", "Bernstorf", {4104, 946}, "teuton")
 SetMapTemplateUnit("earth", "unit-germanic-town-hall", "celtic-cimmerian-tribe", {4104, 946}, -1600, -1400)
@@ -40,6 +45,10 @@ SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {3998, 887}, 161,
 -- Cologne was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "francia", {3998, 887}, 486, 561) -- Cologne was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "austrasia", {3998, 887}, 561) -- Colonia Agrippina went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+
+-- Eining
+SetMapTemplateCulturalSettlementName("earth", "Eining", {4104, 936}, "teuton")
+SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4104, 936}, 173, 179) -- the "Legio III Italica" was stationed at the location of Eining from c. 173 to 179; Source: "Ancient Warfare VII.6", 2013, p. 25.
 
 -- Eresburg
 SetMapTemplateCulturalSettlementName("earth", "Eresburg", {4043, 879}, "teuton")
@@ -105,11 +114,20 @@ SetMapTemplateCulturalSettlementName("earth", "Paderborn", {4033, 873}, "teuton"
 -- Regensburg / Ratisbon / Regina Castra
 SetMapTemplateCulturalSettlementName("earth", "Regina Castra", {4116, 932}, "latin")
 SetMapTemplateCulturalSettlementName("earth", "Regensburg", {4116, 932}, "teuton")
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4116, 932}, 167, 172) -- a Roman camp at Regensburg-Kumpfmühl was destroyed during the First Marcomannic War in 172; it likely existed at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
+SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4116, 932}, 167, 172) -- the "Cohors II Aquitanorum equitata civium Romanorum" (a mixed unit, which contained circa 375 auxiliary infantry and 125 cavalry) was stationed at Regensburg-Kumpfmühl when it was attacked and destroyed in 172, during the First Marcomannic War; it likely was stationed there at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4116, 932}, 175, 526) -- The Legio III Italica began building in 175 the fortress of Castra Regina near where the Regensburg-Kumpfmühl camp had been; Source: "Ancient Warfare VII.6", 2013, p. 25.
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "bavarian-tribe", {4116, 932}, 526) -- Ratisbon was in Bavarian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 
 -- Scheidungen
 SetMapTemplateCulturalSettlementName("earth", "Scheidungen", {4107, 873}, "teuton")
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "thuringian-tribe", {4107, 873}, 526) -- Scheidungen was in Thuringian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+
+-- Straubing
+SetMapTemplateCulturalSettlementName("earth", "Straubing", {4124, 934}, "teuton") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4124, 934}, 167, 172) -- a Roman double camp at Straubing was destroyed during the First Marcomannic War in 172; it likely existed at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
+SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4124, 934}, 167, 172) -- the "Cohors II Raetorum" (a unit containing 500 infantry) was stationed at Straubing when it was attacked and destroyed in 172, during the First Marcomannic War; it likely was stationed there at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
+SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4124, 934}, 167, 172) -- the "Cohors I Flavia Canathenorum milliaria sagittariorum" (a unit containing 1,000 Syrian archers) was stationed at Straubing when it was attacked and destroyed in 172, during the First Marcomannic War; it likely was stationed there at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
 
 -- Syburg
 SetMapTemplateCulturalSettlementName("earth", "Syburg", {4019, 876}, "teuton")
