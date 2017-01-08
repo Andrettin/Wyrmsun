@@ -106,4 +106,4 @@ SetMapTemplateUnit("earth", "unit-germanic-farm", "jarling-tribe", {4070, 743}, 
 
 -- Vejle
 SetMapTemplateUnit("earth", "unit-germanic-barracks", "jarling-tribe", {4058, 779}, -1600, -1599) -- regarding the place of Jarl's dwelling, it should be in a mountainous area, but also near a sound (since in the myth Jarl swam across sounds in his infancy); the lands between Jarl's hall and that of Hersir should contain boggy ground somewhere
-SetMapTemplateHero("earth", "Erala", "jarling-tribe", {4058, 779}, -1600, -1599)
+SetMapTemplateHero("earth", "erala", "jarling-tribe", {4058, 779}, -1600, -1599)

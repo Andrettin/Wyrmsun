@@ -131,7 +131,7 @@ AddTrigger("caverns-of-flame-rugnur-dies",
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 copper and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and FindHero("Rugnur", GetFactionPlayer("Norlund Clan")) == nil) then
+		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 copper and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and FindHero("rugnur", GetFactionPlayer("Norlund Clan")) == nil) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
@@ -163,8 +163,8 @@ AddTrigger("caverns-of-flame-baglur-dies",
 				or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")
 				or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Durstorn and Baglur must survive")
 			)
-			and FindHero("Baglur", GetFactionPlayer("Norlund Clan")) == nil
-			and (GetFactionExists("Baglur") == false or FindHero("Baglur", GetFactionPlayer("Baglur")) == nil)
+			and FindHero("baglur", GetFactionPlayer("Norlund Clan")) == nil
+			and (GetFactionExists("Baglur") == false or FindHero("baglur", GetFactionPlayer("Baglur")) == nil)
 		) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
@@ -190,7 +190,7 @@ AddTrigger("caverns-of-flame-thursagan-dies",
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 copper and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and FindHero("Thursagan", GetFactionPlayer("Norlund Clan")) == nil and FindHero("Thursagan", PlayerNumNeutral) == nil) then
+		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 copper and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and FindHero("thursagan", GetFactionPlayer("Norlund Clan")) == nil and FindHero("thursagan", PlayerNumNeutral) == nil) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
@@ -218,7 +218,7 @@ AddTrigger("caverns-of-flame-introduction",
 		end
 		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Explore as much of the cave as possible") == false) then
 			for i=0, (PlayerMax - 2) do
-				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga") and FindHero("Rugnur", i) ~= nil and FindHero("Baglur", i) ~= nil and FindHero("Thursagan", i) ~= nil) then
+				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga") and FindHero("rugnur", i) ~= nil and FindHero("baglur", i) ~= nil and FindHero("thursagan", i) ~= nil) then
 					player = i
 					return true
 				end
@@ -234,37 +234,37 @@ AddTrigger("caverns-of-flame-introduction",
 			{"~!Continue"},
 			{function(s)
 			Event(
-				FindHero("Rugnur"),
+				FindHero("rugnur"),
 				"Well, I think we've gotten a good distance ahead of the Shinsplitters. What do we do now?",
 				player,
 				{"~!Continue"},
 				{function(s)
 				Event(
-					FindHero("Thursagan"),
+					FindHero("thursagan"),
 					"We should keep going. This seems to be a volcano... I think we should try to cause it to erupt. It will kill all the Shinsplitters, and we might be able to find a safe place so the lava doesn't kill us.",
 					player,
 					{"~!Continue"},
 					{function(s)
 					Event(
-						FindHero("Rugnur"),
+						FindHero("rugnur"),
 						"This sounds... plausible.",
 						player,
 						{"~!Continue"},
 						{function(s)
 						Event(
-							FindHero("Baglur"),
+							FindHero("baglur"),
 							"Aye, an interesting plan. How do ye propose we do this?",
 							player,
 							{"~!Continue"},
 							{function(s)
 							Event(
-								FindHero("Thursagan"),
+								FindHero("thursagan"),
 								"I have a suspicion that there is an opening somewhere near here that leads to the surface. I have heard of ancient constructions such as I have seen here, of dwarven machinery of some kind that can cause the lava to flow.",
 								player,
 								{"~!Continue"},
 								{function(s)
 								Event(
-									FindHero("Rugnur"),
+									FindHero("rugnur"),
 									"Very well. We will continue to explore until we find it.",
 									player,
 									{"~!Continue"},
@@ -276,7 +276,7 @@ AddTrigger("caverns-of-flame-introduction",
 										{"~!Continue"},
 										{function(s)
 										Event(
-											FindHero("Thursagan"),
+											FindHero("thursagan"),
 											"Indeed, there may be goblins lurking here. We should beware of them.",
 											player,
 											{"~!Continue"},
@@ -501,13 +501,13 @@ AddTrigger("caverns-of-flame-shinsplitters-caught-up",
 			RemovePlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Defeat your rivals")
 			AddPlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Defeat the Norlunds")
 			Event(
-				FindHero("Rugnur"),
+				FindHero("rugnur"),
 				"Thursagan! The Shinsplitters are right on our tail; what should we do?",
 				player,
 				{"~!Continue"},
 				{function(s)
 				Event(
-					FindHero("Thursagan"),
+					FindHero("thursagan"),
 					"We could try to set off the volcano as soon as possible. Meanwhile, we should draw the Shinsplitters further into the caves, so they can't escape when it does erupt.",
 					player,
 					{"~!Continue"},
@@ -542,13 +542,13 @@ AddTrigger("caverns-of-flame-goblin-guards",
 	end,
 	function()
 		Event(
-			FindHero("Rugnur"),
+			FindHero("rugnur"),
 			"These goblins appear to be guarding something.",
 			player,
 			{"~!Continue"},
 			{function(s)
 			Event(
-				FindHero("Thursagan"),
+				FindHero("thursagan"),
 				"It is probably the ancient mechanism. Attack them!",
 				player,
 				{"~!Continue"},
@@ -571,7 +571,7 @@ AddTrigger("caverns-of-flame-shinsplitter-chase",
 		return true
 	end,
 	function() 
-		local thursagan = FindHero("Thursagan", GetFactionPlayer("Norlund Clan"))
+		local thursagan = FindHero("thursagan", GetFactionPlayer("Norlund Clan"))
 	
 		if (thursagan == nil) then
 			return true
@@ -645,7 +645,7 @@ AddTrigger("caverns-of-flame-glyph-triggered",
 		PlaySound("rumble")
 		PlaySound("rumble")
 		Event(
-			FindHero("Thursagan"),
+			FindHero("thursagan"),
 			"That's it! The volcano will erupt soon now that ye've triggered it.",
 			player,
 			{"~!Continue"},
@@ -653,7 +653,7 @@ AddTrigger("caverns-of-flame-glyph-triggered",
 			PlaySound("rumble")
 			PlaySound("rumble")
 			Event(
-				FindHero("Baglur"),
+				FindHero("baglur"),
 				"Well, we've succeeded in stopping the Shinsplitters from getting the Scepter, I would say. But what do we do now?!",
 				player,
 				{"~!Continue"},
@@ -661,7 +661,7 @@ AddTrigger("caverns-of-flame-glyph-triggered",
 				PlaySound("rumble")
 				PlaySound("rumble")
 				Event(
-					FindHero("Thursagan"),
+					FindHero("thursagan"),
 					"Now, we must fight the goblins until we die, it's our only option.",
 					player,
 					{"~!Continue"},
@@ -669,7 +669,7 @@ AddTrigger("caverns-of-flame-glyph-triggered",
 					PlaySound("rumble")
 					PlaySound("rumble")
 					Event(
-						FindHero("Rugnur"),
+						FindHero("rugnur"),
 						"We cannot let any of the Shinsplitters or their mercenaries escape; they would tell where the Scepter of Fire is. Make sure they all die!",
 						player,
 						{"~!Continue"},
@@ -677,14 +677,14 @@ AddTrigger("caverns-of-flame-glyph-triggered",
 						PlaySound("rumble")
 						PlaySound("rumble")
 						Event(
-							FindHero("Thursagan"),
+							FindHero("thursagan"),
 							"We have to kill them quickly, before they realize what is happening.",
 							player,
 							{"~!Continue"},
 							{function(s)
 							PlaySound("rumble")
 							PlaySound("rumble")
-							SetUnitVariable(FindHero("Thursagan", GetFactionPlayer("Norlund Clan")), "LastCycle", GameCycle)
+							SetUnitVariable(FindHero("thursagan", GetFactionPlayer("Norlund Clan")), "LastCycle", GameCycle)
 							AddPlayerObjective(player, "- Distract the Shinsplitters until the volcano erupts and kills them")
 							end}
 						)
@@ -706,7 +706,7 @@ AddTrigger("caverns-of-flame-shinsplitters-acknowledge-eruption",
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((GameCycle - GetUnitVariable(FindHero("Thursagan", GetFactionPlayer("Norlund Clan")), "LastCycle")) > 3500 and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Distract the Shinsplitters until the volcano erupts and kills them")) then
+		if ((GameCycle - GetUnitVariable(FindHero("thursagan", GetFactionPlayer("Norlund Clan")), "LastCycle")) > 3500 and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Distract the Shinsplitters until the volcano erupts and kills them")) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
@@ -734,7 +734,7 @@ AddTrigger("caverns-of-flame-shinsplitters-eruption-death",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Distract the Shinsplitters until the volcano erupts and kills them") and FindHero("Thursagan", GetFactionPlayer("Norlund Clan")) ~= nil and (GameCycle - GetUnitVariable(FindHero("Thursagan", GetFactionPlayer("Norlund Clan")), "LastCycle")) > 3000) then
+		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Distract the Shinsplitters until the volcano erupts and kills them") and FindHero("thursagan", GetFactionPlayer("Norlund Clan")) ~= nil and (GameCycle - GetUnitVariable(FindHero("thursagan", GetFactionPlayer("Norlund Clan")), "LastCycle")) > 3000) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
@@ -785,7 +785,7 @@ AddTrigger("caverns-of-flame-ending",
 	end,
 	function()
 		Event(
-			FindHero("Rugnur"),
+			FindHero("rugnur"),
 			"We have hidden the Scepter well, but now the volcano is going to erupt and kill us all.",
 			player,
 			{"~!Continue"},

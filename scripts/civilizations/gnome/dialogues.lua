@@ -52,7 +52,7 @@ DefineDialogue("pypos-gold-introduction", { -- Source: Franz Hartmann, "Among th
 			"text", "...?! Who are ye standing there?"
 		},
 		{
-			"speaker", "character", "Pypo",
+			"speaker", "character", "pypo",
 			"text", "Ho! Ho! Know, you creeping worm of the earth, I am Pypo, the king of the gnomes. Mine is the Untersberg with its treasures. What have you to seek in my territory?"
 		},
 		{
@@ -60,7 +60,7 @@ DefineDialogue("pypos-gold-introduction", { -- Source: Franz Hartmann, "Among th
 			"text", "Yer Highness, I am in a sorry situation. The lady of my dreams scorns me for my poverty. I ask ye provide me with a loan, and ye shall have my everlasting gratitude."
 		},
 		{
-			"speaker", "character", "Pypo",
+			"speaker", "character", "pypo",
 			"text", "Confound your gratitude, there would be plenty of wretches like you coming to borrow money from me, if it could be had so easily. Nothing brings nothing."
 		},
 		{
@@ -68,7 +68,7 @@ DefineDialogue("pypos-gold-introduction", { -- Source: Franz Hartmann, "Among th
 			"text", "Ask what ye will! But give me only one bag of money. Only one bag of gold I am asking of ye!"
 		},
 		{
-			"speaker", "character", "Pypo",
+			"speaker", "character", "pypo",
 			"text", "Ha! Ha!"
 		},
 		{
@@ -76,7 +76,7 @@ DefineDialogue("pypos-gold-introduction", { -- Source: Franz Hartmann, "Among th
 			"text", "Derrospawn! If ye will not give the gold to me, then look out for the wrath of the dwarves!"
 		},
 		{
-			"speaker", "character", "Pypo",
+			"speaker", "character", "pypo",
 			"text", "Fool! Do you wish to frighten me? I laugh at you and your threats; but if you wish to meet your end, be it so!",
 			"option-effects", {
 				function(s)

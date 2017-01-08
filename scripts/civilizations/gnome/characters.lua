@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCharacter("Pypo", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 13.
+DefineCharacter("pypo", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 13.
 	Name = "Pypo",
 	Gender = "male",
 	Type = "unit-gnomish-master-at-arms",

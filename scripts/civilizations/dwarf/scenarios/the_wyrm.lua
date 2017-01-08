@@ -39,7 +39,7 @@ AddTrigger("the-wyrm-rugnur-dies",
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 copper and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and FindHero("Rugnur", GetFactionPlayer("Norlund Clan")) == nil) then
+		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 copper and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and FindHero("rugnur", GetFactionPlayer("Norlund Clan")) == nil) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
@@ -79,8 +79,8 @@ AddTrigger("the-wyrm-baglur-dies",
 				or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")
 				or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Durstorn and Baglur must survive")
 			)
-			and FindHero("Baglur", GetFactionPlayer("Norlund Clan")) == nil
-			and (GetFactionExists("Baglur") == false or FindHero("Baglur", GetFactionPlayer("Baglur")) == nil)
+			and FindHero("baglur", GetFactionPlayer("Norlund Clan")) == nil
+			and (GetFactionExists("Baglur") == false or FindHero("baglur", GetFactionPlayer("Baglur")) == nil)
 		) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
@@ -106,7 +106,7 @@ AddTrigger("the-wyrm-thursagan-dies",
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 copper and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and FindHero("Thursagan", GetFactionPlayer("Norlund Clan")) == nil and FindHero("Thursagan", PlayerNumNeutral) == nil) then
+		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 copper and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and FindHero("thursagan", GetFactionPlayer("Norlund Clan")) == nil and FindHero("thursagan", PlayerNumNeutral) == nil) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
@@ -134,7 +134,7 @@ AddTrigger("the-wyrm-introduction",
 		end
 		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") == false) then
 			for i=0, (PlayerMax - 2) do
-				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga") and FindHero("Rugnur", i) ~= nil and FindHero("Baglur", i) ~= nil and FindHero("Thursagan", i) ~= nil) then
+				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga") and FindHero("rugnur", i) ~= nil and FindHero("baglur", i) ~= nil and FindHero("thursagan", i) ~= nil) then
 					player = i
 					return true
 				end
@@ -150,13 +150,13 @@ AddTrigger("the-wyrm-introduction",
 			{"~!Continue"},
 			{function(s)
 			Event(
-				FindHero("Rugnur"),
+				FindHero("rugnur"),
 				"Well, Thursagan, we've reached the eastern mines, but the Shinsplitters are hot on our trail. What do we do now?",
 				player,
 				{"~!Continue"},
 				{function(s)
 				Event(
-					FindHero("Thursagan"),
+					FindHero("thursagan"),
 					"Well, we have two choices. We may either stand and fight, and assuredly die, or run as quickly as possible down this path into the depths of the cave, where we may find something that will help us. Also, remember, the Shinsplitters will take some time to have their full strength here, so we may be able to get ahead of them and perhaps lay a trap.",
 					player,
 					{"~!Continue"},
@@ -168,25 +168,25 @@ AddTrigger("the-wyrm-introduction",
 						{"~!Continue"},
 						{function(s)
 						Event(
-							FindHero("Rugnur"),
+							FindHero("rugnur"),
 							"If we give them the ruby, then what? They'll probably kill us anyway. And, that ruby is very valuable, they could use it to gain funds and become even more dangerous. We can't let it fall into the wrong hands.",
 							player,
 							{"~!Continue"},
 							{function(s)
 							Event(
-								FindHero("Thursagan"),
+								FindHero("thursagan"),
 								"Then we shall run.",
 								player,
 								{"~!Continue"},
 								{function(s)
 								Event(
-									FindHero("Baglur"),
+									FindHero("baglur"),
 									"So we're running away, eh? I dinna' like that, but it seems it's our only option.",
 									player,
 									{"~!Continue"},
 									{function(s)
 									Event(
-										FindHero("Rugnur"),
+										FindHero("rugnur"),
 										"If it makes ye feel any better, we'll probably die this way, too.",
 										player,
 										{"~!Continue"},
@@ -229,7 +229,7 @@ AddTrigger("the-wyrm-shinsplitter-and-kobold-chase",
 		return true
 	end,
 	function() 
-		local thursagan = FindHero("Thursagan")
+		local thursagan = FindHero("thursagan")
 	
 		if (thursagan == nil) then
 			return true
@@ -280,14 +280,14 @@ AddTrigger("the-wyrm-norlunds-move-to-smithy",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionPlayer("Norlund Clan") == GetThisPlayer() or FindHero("Thursagan", PlayerNumNeutral) ~= nil) then
+		if (GetFactionPlayer("Norlund Clan") == GetThisPlayer() or FindHero("thursagan", PlayerNumNeutral) ~= nil) then
 			return false
 		end
 		return true
 	end,
 	function() 
 		local smithy = nil
-		local thursagan = FindHero("Thursagan")
+		local thursagan = FindHero("thursagan")
 	
 		local uncount = 0
 		uncount = GetUnits("any")
@@ -306,7 +306,7 @@ AddTrigger("the-wyrm-norlunds-move-to-smithy",
 		uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
 		for unit1 = 1,table.getn(uncount) do 
 			if (uncount[unit1] and GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-scout" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building") == false and GetUnitVariable(uncount[unit1], "Idle")) then
-				if (GetUnitVariable(uncount[unit1],"Character") ~= "Thursagan") then
+				if (GetUnitVariable(uncount[unit1],"Character") ~= "thursagan") then
 					OrderUnit(GetFactionPlayer("Norlund Clan"), GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(thursagan,"PosX"), GetUnitVariable(thursagan,"PosY")}, "move")
 				else
 					OrderUnit(GetFactionPlayer("Norlund Clan"), GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(smithy,"PosX"), GetUnitVariable(smithy,"PosY")}, "move")
@@ -339,19 +339,19 @@ AddTrigger("the-wyrm-svafnir-sighted",
 	end,
 	function() 
 		Event(
-			FindHero("Rugnur"),
+			FindHero("rugnur"),
 			"Look, there's a wyrm in these caves!",
 			player,
 			{"~!Continue"},
 			{function(s)
 			Event(
-				FindHero("Thursagan"),
+				FindHero("thursagan"),
 				"I wonder which of the great wyrms this is...",
 				player,
 				{"~!Continue"},
 				{function(s)
 				Event(
-					FindHero("Rugnur"),
+					FindHero("rugnur"),
 					"I'd rather face one powerful wyrm than hundreds of mighty dwarves. Continue!",
 					player,
 					{"~!Continue"},
@@ -387,13 +387,13 @@ AddTrigger("the-wyrm-surghan-mercenary-sighted",
 	end,
 	function() 
 		Event(
-			FindHero("Thursagan"),
+			FindHero("thursagan"),
 			"What's this? This isn't a normal dwarven soldier!",
 			player,
 			{"~!Continue"},
 			{function(s)
 			Event(
-				FindHero("Baglur"),
+				FindHero("baglur"),
 				"It must be one of those Surghan mercenaries. I'll bet those Shinsplitters have hired more of them. That's bad news for us, for they are deadly, combat-hardened warriors.",
 				player,
 				{"~!Continue"},
@@ -433,7 +433,7 @@ AddTrigger("the-wyrm-gryphon-rider-sees-forge",
 			{"~!Continue"},
 			{function(s)
 			Event(
-				FindHero("Thursagan"),
+				FindHero("thursagan"),
 				"It looks like a forge, heated by lava. It looks ancient, and it looks hot enough to make the Scepter.",
 				player,
 				{"~!Continue"},
@@ -456,22 +456,22 @@ AddTrigger("the-wyrm-thursagan-reaches-forge",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (UnitIsAt(FindHero("Thursagan"), {30, 48}, {34, 52})) then
+		if (UnitIsAt(FindHero("thursagan"), {30, 48}, {34, 52})) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
 		return false
 	end,
 	function() 
-		if (FindHero("Thursagan", GetFactionPlayer("Norlund Clan")) ~= nil) then
+		if (FindHero("thursagan", GetFactionPlayer("Norlund Clan")) ~= nil) then
 			Event(
-				FindHero("Thursagan"),
+				FindHero("thursagan"),
 				"This forge will work perfectly. Give me a few days here, and I can reforge the Scepter of Fire to become a proper artifact.",
 				player,
 				{"~!Continue"},
 				{function(s)
-					ChangeUnitOwner(FindHero("Thursagan", GetFactionPlayer("Norlund Clan")), PlayerNumNeutral)
-					SetUnitVariable(FindHero("Thursagan", GetFactionPlayer("Norlund Clan")), "LastCycle", GameCycle)
+					ChangeUnitOwner(FindHero("thursagan", GetFactionPlayer("Norlund Clan")), PlayerNumNeutral)
+					SetUnitVariable(FindHero("thursagan", GetFactionPlayer("Norlund Clan")), "LastCycle", GameCycle)
 				end}
 			)
 		end
@@ -564,7 +564,7 @@ AddTrigger("the-wyrm-victory",
 		local uncount = 0
 		uncount = GetUnits(PlayerNumNeutral)
 		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Character") == "Thursagan" and (GameCycle - GetUnitVariable(uncount[unit1], "LastCycle")) > 6000) then -- Scepter is crafted after 6000 cycles
+			if (GetUnitVariable(uncount[unit1], "Character") == "thursagan" and (GameCycle - GetUnitVariable(uncount[unit1], "LastCycle")) > 6000) then -- Scepter is crafted after 6000 cycles
 				unit = CreateUnit("unit-scepter-of-fire", PlayerNumNeutral, {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY") + 1})
 				player = GetFactionPlayer("Norlund Clan")
 				return true
@@ -573,15 +573,15 @@ AddTrigger("the-wyrm-victory",
 		return false
 	end,
 	function() 
-		ChangeUnitOwner(FindHero("Thursagan"), GetFactionPlayer("Norlund Clan"))
+		ChangeUnitOwner(FindHero("thursagan"), GetFactionPlayer("Norlund Clan"))
 		Event(
-			FindHero("Thursagan"),
+			FindHero("thursagan"),
 			"I have completed my work. Now it is truly the Scepter of Fire, a mighty artifact.",
 			player,
 			{"~!Continue"},
 			{function(s)
 			Event(
-				FindHero("Rugnur"),
+				FindHero("rugnur"),
 				"Good. Now, let's get out of this cave, before the dwarves or kobolds kill us!",
 				player,
 				{"~!Continue"},

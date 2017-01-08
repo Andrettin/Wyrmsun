@@ -45,12 +45,12 @@ DefineMapTemplate("shorbear-hills", { -- From Battle for Wesnoth: The Sceptre of
 
 --SetMapTemplateLayerConnector("shorbear-hills", "unit-cavern-entrance", {3, 3}, 1)
 --SetMapTemplateLayerConnector("nidavellir-underground", "unit-cavern-entrance", {3, 3}, 0)
-SetMapTemplateHero("shorbear-hills", "Rugnur", "norlund-clan", {3, 3}, 34, 35)
+SetMapTemplateHero("shorbear-hills", "rugnur", "norlund-clan", {3, 3}, 34, 35)
 SetMapTemplateUnit("shorbear-hills", "unit-gnomish-duelist", "norlund-clan", {3, 3}, 34, 35) -- Gnomish Envoy
-SetMapTemplateHero("shorbear-hills", "Baglur", "norlund-clan", {3, 3}, 34, 35)
+SetMapTemplateHero("shorbear-hills", "baglur", "norlund-clan", {3, 3}, 34, 35)
 SetMapTemplateUnit("shorbear-hills", "unit-dwarven-gryphon-rider", "norlund-clan", {3, 3}, 34, 35) -- Kawn's Gryphon Rider
-SetMapTemplateHero("shorbear-hills", "Thursagan", "norlund-clan", {3, 3}, 34, 35)
-SetMapTemplateHero("shorbear-hills", "Durstorn", "norlund-clan", {11, 1}, 34, 35)
+SetMapTemplateHero("shorbear-hills", "thursagan", "norlund-clan", {3, 3}, 34, 35)
+SetMapTemplateHero("shorbear-hills", "durstorn", "norlund-clan", {11, 1}, 34, 35)
 SetMapTemplateUnit("shorbear-hills", "unit-dwarven-pathfinder", "norlund-clan", {11, 1}, 34, 35) -- Noiraran
 SetMapTemplateUnit("shorbear-hills", "unit-dwarven-steelclad", "norlund-clan", {11, 1}, 34, 35) -- Kuhnar
 

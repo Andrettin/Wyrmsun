@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCharacter("Adalram", { -- Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 608.
+DefineCharacter("adalram", { -- Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 608.
 	Name = "Adalram",
 	Gender = "male",
 	Type = "unit-teuton-priest", -- Archbishop of Salzburg
@@ -35,7 +35,7 @@ DefineCharacter("Adalram", { -- Source: James Westfall Thompson, "Medieval Germa
 	DeathYear = 836, -- Archbishop of Salzburg until 836
 })
 
-DefineCharacter("Peter von Salzgeber", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
+DefineCharacter("peter-von-salzgeber", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
 	Name = "Peter",
 	FamilyName = "von Salzgeber",
 	Gender = "male",
@@ -47,7 +47,7 @@ DefineCharacter("Peter von Salzgeber", { -- Source: Waltraud Heindl, "Josephinis
 	DeathYear = 1858 -- died
 })
 
-DefineCharacter("Wilhelmina von Salzgeber", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
+DefineCharacter("wilhelmina-von-salzgeber", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
 	Name = "Wilhelmina",
 	FamilyName = "von Salzgeber", -- this is her name after marrying Peter von Salzgeber; should be set to her maiden name instead
 	Gender = "female",
@@ -60,7 +60,7 @@ DefineCharacter("Wilhelmina von Salzgeber", { -- Source: Waltraud Heindl, "Josep
 	-- married to Peter von Salzgeber
 })
 
-DefineCharacter("Joseph Anton von Lasser", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
+DefineCharacter("joseph-anton-von-lasser", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
 	Name = "Joseph Anton",
 	FamilyName = "von Lasser",
 	Gender = "male",
@@ -72,7 +72,7 @@ DefineCharacter("Joseph Anton von Lasser", { -- Source: Waltraud Heindl, "Joseph
 	DeathYear = 1879 -- died
 })
 
-DefineCharacter("Leopold Hasner", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
+DefineCharacter("leopold-hasner", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
 	Name = "Leopold",
 	FamilyName = "Hasner", -- apparently
 	Gender = "male",
@@ -88,9 +88,8 @@ DefineCharacter("Leopold Hasner", { -- Source: Waltraud Heindl, "Josephinische M
 	-- Knight (Ritter) of Artha
 })
 
-DefineCharacter("Wilhelmina the Younger von Salzgeber", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
+DefineCharacter("wilhelmina-the-younger-von-salzgeber", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
 	Name = "Wilhelmina",
-	ExtraName = "the Younger", -- to differentiate her from her mother
 	FamilyName = "von Salzgeber",
 	Gender = "female",
 	Type = "unit-teuton-archer", -- should be a different unit type that is more appropriate
@@ -102,7 +101,7 @@ DefineCharacter("Wilhelmina the Younger von Salzgeber", { -- Source: Waltraud He
 	-- married to Josef Russegger
 })
 
-DefineCharacter("Josef Russegger", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
+DefineCharacter("josef-russegger", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
 	Name = "Josef",
 	FamilyName = "Russegger",
 	Gender = "male",
@@ -113,7 +112,7 @@ DefineCharacter("Josef Russegger", { -- Source: Waltraud Heindl, "Josephinische 
 	Year = 1853 -- knighted (became "Ritter von Russegger")
 })
 
-DefineCharacter("von Pillersdorf", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
+DefineCharacter("von-pillersdorf", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
 	Name = "von Pillersdorf", -- this is actually his family name, since we don't have his given name
 --	FamilyName = "von Pillersdorf",
 	Gender = "male",
@@ -127,7 +126,7 @@ DefineCharacter("von Pillersdorf", { -- Source: Waltraud Heindl, "Josephinische 
 	}
 })
 
-DefineCharacter("Franz Joseph von Habsburg", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 48.
+DefineCharacter("franz-joseph-von-habsburg", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 48.
 	Name = "Franz Joseph",
 	FamilyName = "von Habsburg",
 	Gender = "male",
@@ -141,7 +140,7 @@ DefineCharacter("Franz Joseph von Habsburg", { -- Source: Waltraud Heindl, "Jose
 	}
 })
 
-DefineCharacter("Victor Andrian-Werburg", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 46; Source: A.J.P. Taylor, The Habsburg Monarchy, 1809-1918, 1964, pp. 55-56.
+DefineCharacter("victor-andrian-werburg", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 46; Source: A.J.P. Taylor, The Habsburg Monarchy, 1809-1918, 1964, pp. 55-56.
 	Name = "Victor",
 	FamilyName = "Andrian-Werburg", -- presumably
 	Gender = "male",
@@ -154,7 +153,7 @@ DefineCharacter("Victor Andrian-Werburg", { -- Source: Waltraud Heindl, "Josephi
 	-- a "conservative thinker"
 })
 
-DefineCharacter("Franz Seraph Stadion", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, pp. 50, 54-55.
+DefineCharacter("franz-seraph-stadion", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, pp. 50, 54-55.
 	Name = "Franz Seraph",
 	FamilyName = "Stadion",
 	Gender = "male",
@@ -170,7 +169,7 @@ DefineCharacter("Franz Seraph Stadion", { -- Source: Waltraud Heindl, "Josephini
 	-- count (of where?)
 })
 
-DefineCharacter("Alexander von Bach", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, pp. 50, 58.
+DefineCharacter("alexander-von-bach", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, pp. 50, 58.
 	Name = "Alexander",
 	FamilyName = "von Bach",
 	Gender = "male",
@@ -185,7 +184,7 @@ DefineCharacter("Alexander von Bach", { -- Source: Waltraud Heindl, "Josephinisc
 	}
 })
 
-DefineCharacter("Eduard von Bach", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 52.
+DefineCharacter("eduard-von-bach", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 52.
 	Name = "Eduard",
 	FamilyName = "von Bach", -- source gives him as "Eduard Bach"; it is not clear if he and his brother had the "von" predicate from birth or not
 	Gender = "male",
@@ -193,13 +192,13 @@ DefineCharacter("Eduard von Bach", { -- Source: Waltraud Heindl, "Josephinische 
 	Civilization = "teuton",
 	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
-	DateReferenceCharacter = "Alexander von Bach", -- brother of Alexander von Bach
+	DateReferenceCharacter = "alexander-von-bach", -- brother of Alexander von Bach
 	HistoricalTitles = {
 		"governor", 0, 0, "Upper Austria" -- was Statthalter of Upper Austria (Oberösterreich)
 	}
 })
 
-DefineCharacter("Anton Hye von Glunek", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, pp. 60-61.
+DefineCharacter("anton-hye-von-glunek", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, pp. 60-61.
 	Name = "Anton Hye",
 	FamilyName = "von Glunek",
 	Gender = "male",
@@ -213,7 +212,7 @@ DefineCharacter("Anton Hye von Glunek", { -- Source: Waltraud Heindl, "Josephini
 	}
 })
 
-DefineCharacter("Adolph Pratobevera von Wiesborn",  { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 61.
+DefineCharacter("adolph-pratobevera-von-wiesborn",  { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 61.
 	Name = "Adolph Pratobevera",
 	FamilyName = "von Wiesborn",
 	Gender = "male",
@@ -228,7 +227,7 @@ DefineCharacter("Adolph Pratobevera von Wiesborn",  { -- Source: Waltraud Heindl
 	-- had the reputation of being a freethinker
 })
 
-DefineCharacter("Johann Baptist von Hoffinger", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
+DefineCharacter("johann-baptist-von-hoffinger", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
 	Name = "Johann Baptist",
 	FamilyName = "von Hoffinger",
 	Gender = "male",
@@ -240,7 +239,7 @@ DefineCharacter("Johann Baptist von Hoffinger", { -- Source: Waltraud Heindl, "J
 	-- Knight (Ritter)
 })
 
-DefineCharacter("Carl von Hock",  { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 61.
+DefineCharacter("carl-von-hock",  { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 61.
 	Name = "Carl",
 	FamilyName = "von Hock",
 	Gender = "male",
@@ -252,7 +251,7 @@ DefineCharacter("Carl von Hock",  { -- Source: Waltraud Heindl, "Josephinische M
 	-- economic liberal
 })
 
-DefineCharacter("Bissingen", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 69.
+DefineCharacter("bissingen", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 69.
 	Name = "Bissingen", -- likely his family name instead
 	Gender = "male",
 	Type = "unit-teuton-ritter", -- had the title of Graf (Count)
@@ -265,7 +264,7 @@ DefineCharacter("Bissingen", { -- Source: Waltraud Heindl, "Josephinische Mandar
 	}
 })
 
-DefineCharacter("Georg von Toggenburg", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 64.
+DefineCharacter("georg-von-toggenburg", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 64.
 	Name = "Georg",
 	FamilyName = "von Toggenburg",
 	Gender = "male",

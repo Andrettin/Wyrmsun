@@ -60,6 +60,19 @@ function DefineCharacter(character, data)
 	OldDefineCharacter(character, data)
 end
 
+if (OldDefineCustomHero == nil) then
+	OldDefineCustomHero = DefineCustomHero
+end
+
+function DefineCustomHero(character, data)
+	if (string.find(character, "custom") == nil) then
+		character = string.lower(string.gsub(character, " ", "-"))
+		character = "custom-" .. character
+	end
+	
+	OldDefineCustomHero(character, data)
+end
+
 Load("scripts/characters_aesir.lua")
 Load("scripts/characters_vanir.lua")
 Load("scripts/civilizations/finnish/characters.lua")
@@ -90,7 +103,7 @@ DefineCharacter("Gylve", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "basque", "gylfing-tribe"
 	},
-	DateReferenceCharacter = "Vóden" -- contemporary of Vóden
+	DateReferenceCharacter = "voden" -- contemporary of Vóden
 })
 
 -- Hun personal names: "Attila" (known as Atli in Norse myths; invaded Gundahar's kingdom in 437 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 93-94; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6)

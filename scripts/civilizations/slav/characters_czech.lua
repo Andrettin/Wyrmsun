@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCharacter("Charles", { -- Source: Alena Ježková, "77 Prague Legends", 2006, pp. 45, 87.
+DefineCharacter("charles", { -- Source: Alena Ježková, "77 Prague Legends", 2006, pp. 45, 87.
 	Name = "Charles", -- Emperor and king Charles IV
 	Gender = "male",
 	Type = "unit-teuton-ritter",
@@ -38,7 +38,7 @@ DefineCharacter("Charles", { -- Source: Alena Ježková, "77 Prague Legends", 20
 	}
 })
 
-DefineCharacter("Humprecht Černín of Chudenice", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 94.
+DefineCharacter("humprecht-cernin-of-chudenice", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 94.
 	Name = "Humprecht", -- Imperial envoy to Venice
 	ExtraName = "Černín of Chudenice",
 	Gender = "male",

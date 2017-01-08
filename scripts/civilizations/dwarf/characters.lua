@@ -27,7 +27,7 @@
 
 -- Dwarven heroes
 
-DefineCharacter("Modsognir", { -- one of the earliest dwarven leaders; in Norse mythology Modsognir was the mightiest and first of dwarves
+DefineCharacter("modsognir", { -- one of the earliest dwarven leaders; in Norse mythology Modsognir was the mightiest and first of dwarves
 	Name = "Modsognir",
 	Gender = "male",
 	Type = "unit-dwarven-steelclad",
@@ -47,7 +47,7 @@ DefineCharacter("Modsognir", { -- one of the earliest dwarven leaders; in Norse 
 	}
 })
 
-DefineCharacter("Durin", { -- deputy of Modsognir
+DefineCharacter("durin", { -- deputy of Modsognir
 	Name = "Durin", -- possibly the same as the Diurnir mentioned in the Ynglinga saga; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 228.
 	Gender = "male",
 	Type = "unit-dwarven-steelclad",
@@ -64,7 +64,7 @@ DefineCharacter("Durin", { -- deputy of Modsognir
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })
 
-DefineCharacter("Fjalar", {
+DefineCharacter("fjalar", {
 	Name = "Fjalar",
 	Gender = "male",
 	Type = "unit-dwarven-steelclad", -- should be a thief
@@ -79,7 +79,7 @@ DefineCharacter("Fjalar", {
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })
 
-DefineCharacter("Galar", {
+DefineCharacter("galar", {
 	Name = "Galar",
 	Gender = "male",
 	Type = "unit-dwarven-steelclad", -- should be an alchemist
@@ -94,7 +94,7 @@ DefineCharacter("Galar", {
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })
 
-DefineCharacter("Regin", {
+DefineCharacter("regin", {
 	Name = "Regin",
 	Gender = "male",
 	Type = "unit-dwarven-thane", -- should be a runemaster
@@ -108,7 +108,7 @@ DefineCharacter("Regin", {
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })
 
-DefineCharacter("Thursagan", { -- from "The Sceptre of Fire" campaign of "Battle for Wesnoth"; master runesmith who crafted the Sceptre of Fire
+DefineCharacter("thursagan", { -- from "The Sceptre of Fire" campaign of "Battle for Wesnoth"; master runesmith who crafted the Sceptre of Fire
 	Name = "Thursagan",
 	Gender = "male",
 	Type = "unit-dwarven-thane",
@@ -134,7 +134,7 @@ DefineCharacter("Thursagan", { -- from "The Sceptre of Fire" campaign of "Battle
 	}
 })
 
-DefineCharacter("Baglur", { -- from "The Sceptre of Fire" campaign of "Battle for Wesnoth"; veteran warrior and member of the party of dwarves who handled the crafting of the Sceptre of Fire
+DefineCharacter("baglur", { -- from "The Sceptre of Fire" campaign of "Battle for Wesnoth"; veteran warrior and member of the party of dwarves who handled the crafting of the Sceptre of Fire
 	Name = "Baglur",
 	Gender = "male",
 	Type = "unit-dwarven-steelclad",
@@ -153,7 +153,7 @@ DefineCharacter("Baglur", { -- from "The Sceptre of Fire" campaign of "Battle fo
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })
 
-DefineCharacter("Durstorn", { -- from "The Sceptre of Fire" campaign of "Battle for Wesnoth"; chieftain of Rugnur's tribe
+DefineCharacter("durstorn", { -- from "The Sceptre of Fire" campaign of "Battle for Wesnoth"; chieftain of Rugnur's tribe
 	Name = "Durstorn",
 	Gender = "male",
 	Type = "unit-dwarven-thane",
@@ -174,7 +174,7 @@ DefineCharacter("Durstorn", { -- from "The Sceptre of Fire" campaign of "Battle 
 	}
 })
 
-DefineCharacter("Glonoin", { -- from "The Sceptre of Fire" campaign of "Battle for Wesnoth"; chieftain of the Shorbear clan
+DefineCharacter("glonoin", { -- from "The Sceptre of Fire" campaign of "Battle for Wesnoth"; chieftain of the Shorbear clan
 	Name = "Glonoin",
 	Gender = "male",
 	Type = "unit-dwarven-thane",
@@ -189,7 +189,7 @@ DefineCharacter("Glonoin", { -- from "The Sceptre of Fire" campaign of "Battle f
 	}
 })
 
-DefineCharacter("Rugnur", { -- from "The Sceptre of Fire" campaign of "Battle for Wesnoth"; leader of the party of dwarves who handled the crafting of the Sceptre of Fire
+DefineCharacter("rugnur", { -- from "The Sceptre of Fire" campaign of "Battle for Wesnoth"; leader of the party of dwarves who handled the crafting of the Sceptre of Fire
 	Name = "Rugnur",
 	Gender = "male",
 	Type = "unit-dwarven-axefighter",

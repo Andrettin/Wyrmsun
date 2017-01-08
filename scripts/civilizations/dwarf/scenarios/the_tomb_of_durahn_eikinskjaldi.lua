@@ -86,7 +86,7 @@ AddTrigger("the-tomb-of-durahn-eikinskjaldi-gnomish-raiders-found",
 	end,
 	function()
 		Event(
-			FindHero("Baglur"),
+			FindHero("baglur"),
 			"Gnomish raiders looting the tomb... bad news.",
 			player,
 			{"~!Continue"},
@@ -110,13 +110,13 @@ AddTrigger("the-tomb-of-durahn-eikinskjaldi-ceiling-mosaic",
 	end,
 	function()
 		Event(
-			FindHero("Baglur"),
+			FindHero("baglur"),
 			"The ceiling of this antechamber bears a mosaic... depicting a dwarven noble with gold armor and a huge axe.",
 			player,
 			{"~!Continue"},
 			{function(s)
 			Event(
-				FindHero("Durstorn"),
+				FindHero("durstorn"),
 				"Fit for a chieftain.",
 				player,
 				{"~!Continue"},
@@ -142,7 +142,7 @@ AddTrigger("the-tomb-of-durahn-eikinskjaldi-wall-niches",
 	end,
 	function()
 		Event(
-			FindHero("Baglur"),
+			FindHero("baglur"),
 			"The walls here have niches, which must have contained dwarven corpses before the raiders scoured this room for valuable objects.",
 			player,
 			{"~!Continue"},
@@ -166,7 +166,7 @@ AddTrigger("the-tomb-of-durahn-eikinskjaldi-isuldan-found",
 	end,
 	function()
 		Event(
-			FindHero("Baglur"),
+			FindHero("baglur"),
 			"The remains of a dwarf... the regalia does not seem Durahn's. This must be Isuldan, his son.",
 			player,
 			{"~!Continue"},
@@ -231,7 +231,7 @@ AddTrigger("the-tomb-of-durahn-eikinskjaldi-gneissus-found",
 	end,
 	function()
 		Event(
-			FindHero("Baglur"),
+			FindHero("baglur"),
 			"The skeleton of a female dwarf... Durahn's wife Gneissus, I suppose.",
 			player,
 			{"~!Continue"},
@@ -255,7 +255,7 @@ AddTrigger("the-tomb-of-durahn-eikinskjaldi-merchant-contacts",
 	end,
 	function()
 		Event(
-			FindHero("Durstorn"),
+			FindHero("durstorn"),
 			"There's a book on this table... merchant contacts that the raider leader used to sell off the tomb's artifacts are written on it.",
 			player,
 			{"~!Continue"},
@@ -279,7 +279,7 @@ AddTrigger("the-tomb-of-durahn-eikinskjaldi-victory",
 	end,
 	function()
 		Event(
-			FindHero("Durstorn"),
+			FindHero("durstorn"),
 			"There's Durahn's skeleton! Let us bring his skull back to the Eikinskjaldis for a nice reward.",
 			player,
 			{"~!Continue"},
@@ -303,7 +303,7 @@ AddTrigger("the-tomb-of-durahn-eikinskjaldi-baglur-dies",
 			return false
 		end
 		if (
-			FindHero("Baglur") == nil
+			FindHero("baglur") == nil
 		) then
 			return true
 		end
@@ -322,7 +322,7 @@ AddTrigger("the-tomb-of-durahn-eikinskjaldi-durstorn-dies",
 			return false
 		end
 		if (
-			FindHero("Durstorn") == nil
+			FindHero("durstorn") == nil
 		) then
 			return true
 		end

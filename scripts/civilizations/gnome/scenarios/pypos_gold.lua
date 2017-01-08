@@ -39,14 +39,14 @@ if (LoadedGame == false) then
 	
 	if not (GrandStrategy) then
 		unit = CreateUnit("unit-gnomish-master-at-arms", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Character", "Pypo")
+		SetUnitVariable(unit, "Character", "pypo")
 	elseif (GrandStrategyEventMap) then
 		CreateProvinceUnits("Untersberg", 0, 1, false, false)
 		CreateProvinceCustomHero("Untersberg", 0)
 	
 		if (FactionHasHero("gnome", "untersberg", "Pypo")) then
 			unit = CreateUnit(GetGrandStrategyHeroUnitType("Pypo"), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-			SetUnitVariable(unit, "Character", "Pypo")
+			SetUnitVariable(unit, "Character", "pypo")
 		end
 		
 	end
@@ -83,7 +83,7 @@ AddTrigger("pypos-gold-victory",
 
 AddTrigger("pypos-gold-pypo-dies",
 	function()
-		if (PlayerHasObjective(GetThisPlayer(), "- Pypo must survive") and FindHero("Pypo", GetThisPlayer()) == nil) then
+		if (PlayerHasObjective(GetThisPlayer(), "- Pypo must survive") and FindHero("pypo", GetThisPlayer()) == nil) then
 			player = GetThisPlayer()
 			return true
 		end

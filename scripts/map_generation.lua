@@ -5210,40 +5210,40 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							if (player_hero == "random") then
 								local available_heroes = {}
 								if (player_civilization == "teuton") then
-									if (FindHero("Marbod") == nil) then
-										table.insert(available_heroes, "Marbod")
+									if (FindHero("marbod") == nil) then
+										table.insert(available_heroes, "marbod")
 									end
 								elseif (player_civilization == "dwarf") then
-									if (FindHero("Modsognir") == nil) then
-										table.insert(available_heroes, "Modsognir")
+									if (FindHero("modsognir") == nil) then
+										table.insert(available_heroes, "modsognir")
 									end
-									if (FindHero("Durin") == nil) then
-										table.insert(available_heroes, "Durin")
+									if (FindHero("durin") == nil) then
+										table.insert(available_heroes, "durin")
 									end
-									if (FindHero("Rugnur") == nil) then
-										table.insert(available_heroes, "Rugnur")
+									if (FindHero("rugnur") == nil) then
+										table.insert(available_heroes, "rugnur")
 									end
-									if (FindHero("Baglur") == nil) then
-										table.insert(available_heroes, "Baglur")
+									if (FindHero("baglur") == nil) then
+										table.insert(available_heroes, "baglur")
 									end
-									if (FindHero("Thursagan") == nil) then
-										table.insert(available_heroes, "Thursagan")
+									if (FindHero("thursagan") == nil) then
+										table.insert(available_heroes, "thursagan")
 									end
-									if (FindHero("Durstorn") == nil) then
-										table.insert(available_heroes, "Durstorn")
+									if (FindHero("durstorn") == nil) then
+										table.insert(available_heroes, "durstorn")
 									end
 								elseif (player_civilization == "goblin") then
-									if (FindHero("Agniss Tenebris") == nil) then
-										table.insert(available_heroes, "Agniss Tenebris")
+									if (FindHero("agniss-tenebris") == nil) then
+										table.insert(available_heroes, "agniss-tenebris")
 									end
-									if (FindHero("Dremac Paarsins") == nil) then
-										table.insert(available_heroes, "Dremac Paarsins")
+									if (FindHero("dremac-paarsins") == nil) then
+										table.insert(available_heroes, "dremac-paarsins")
 									end
-									if (FindHero("Ioun Stilgar") == nil) then
-										table.insert(available_heroes, "Ioun Stilgar")
+									if (FindHero("ioun-stilgar") == nil) then
+										table.insert(available_heroes, "ioun-stilgar")
 									end
-									if (FindHero("Orza Chahax") == nil) then
-										table.insert(available_heroes, "Orza Chahax")
+									if (FindHero("orza-chahax") == nil) then
+										table.insert(available_heroes, "orza-chahax")
 									end
 								end
 								local chosen_hero = available_heroes[SyncRand(table.getn(available_heroes)) + 1]
@@ -5305,40 +5305,40 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							if (second_player_hero == "random") then
 								local available_heroes = {}
 								if (second_player_civilization == "teuton") then
-									if (FindHero("Marbod") == nil) then
-										table.insert(available_heroes, "Marbod")
+									if (FindHero("marbod") == nil) then
+										table.insert(available_heroes, "marbod")
 									end
 								elseif (second_player_civilization == "dwarf") then
-									if (FindHero("Modsognir") == nil) then
-										table.insert(available_heroes, "Modsognir")
+									if (FindHero("modsognir") == nil) then
+										table.insert(available_heroes, "modsognir")
 									end
-									if (FindHero("Durin") == nil) then
-										table.insert(available_heroes, "Durin")
+									if (FindHero("durin") == nil) then
+										table.insert(available_heroes, "durin")
 									end
-									if (FindHero("Rugnur") == nil) then
-										table.insert(available_heroes, "Rugnur")
+									if (FindHero("rugnur") == nil) then
+										table.insert(available_heroes, "rugnur")
 									end
-									if (FindHero("Baglur") == nil) then
-										table.insert(available_heroes, "Baglur")
+									if (FindHero("baglur") == nil) then
+										table.insert(available_heroes, "baglur")
 									end
-									if (FindHero("Thursagan") == nil) then
-										table.insert(available_heroes, "Thursagan")
+									if (FindHero("thursagan") == nil) then
+										table.insert(available_heroes, "thursagan")
 									end
-									if (FindHero("Durstorn") == nil) then
-										table.insert(available_heroes, "Durstorn")
+									if (FindHero("durstorn") == nil) then
+										table.insert(available_heroes, "durstorn")
 									end
 								elseif (second_player_civilization == "goblin") then
-									if (FindHero("Agniss Tenebris") == nil) then
-										table.insert(available_heroes, "Agniss Tenebris")
+									if (FindHero("agniss-tenebris") == nil) then
+										table.insert(available_heroes, "agniss-tenebris")
 									end
-									if (FindHero("Dremac Paarsins") == nil) then
-										table.insert(available_heroes, "Dremac Paarsins")
+									if (FindHero("dremac-paarsins") == nil) then
+										table.insert(available_heroes, "dremac-paarsins")
 									end
-									if (FindHero("Ioun Stilgar") == nil) then
-										table.insert(available_heroes, "Ioun Stilgar")
+									if (FindHero("ioun-stilgar") == nil) then
+										table.insert(available_heroes, "ioun-stilgar")
 									end
-									if (FindHero("Orza Chahax") == nil) then
-										table.insert(available_heroes, "Orza Chahax")
+									if (FindHero("orza-chahax") == nil) then
+										table.insert(available_heroes, "orza-chahax")
 									end
 								end
 								local chosen_hero = available_heroes[SyncRand(table.getn(available_heroes)) + 1]

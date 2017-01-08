@@ -28,19 +28,19 @@
 DefineDialogue("jarl-speaks-of-his-destiny", {
 	Nodes = {
 		{
-			"speaker", "character", "Erala",
+			"speaker", "character", "erala",
 			"text", "Something tells me... I have seen it in my dreams, I know it! My true father was not the man who raised me, but the mighty god Haimadala. I am not like others. I have a singular destiny."
 		},
 		{
-			"speaker", "character", "Erala",
+			"speaker", "character", "erala",
 			"text", "In this house my foster father taught me the art of war. It is a nice dwelling, but the time has come for something greater... not just a house, but a hall. From it I shall gather followers to establish my rule over vast lands."
 		},
 		{
-			"speaker", "character", "Erala",
+			"speaker", "character", "erala",
 			"text", "I will need workers to build my hall. There are two tribes nearby, the Karlings and the Thrahilings. Their people could build me a hall, hopefully willingly, but I must be prepared for resistance."
 		},
 		{
-			"speaker", "character", "Erala",
+			"speaker", "character", "erala",
 			"text", "The Karlings are diligent farmers, but their archers will be difficult to beat on my own. It will be better to go to the Thrahilings, as they have no familiarity with warfare and will be easier to subjugate if it comes to that. The Karlings dwell to the northwest, while the Thrahilings live to the northeast.",
 			"option-effects", {
 				function(s)
@@ -60,7 +60,7 @@ DefineDialogue("jarl-meets-the-thrallings", {
 			"text", "Who are you and what do you want with Thrahila and his sons?"
 		},
 		{
-			"speaker", "character", "Erala",
+			"speaker", "character", "erala",
 			"text", "I am the fierce warrior Erala. I need workers to serve me and build me a hall."
 		},
 		{
@@ -69,13 +69,13 @@ DefineDialogue("jarl-meets-the-thrallings", {
 			"text", "Then go somewhere else. We have work of our own to do."
 		},
 		{
-			"speaker", "character", "Erala",
+			"speaker", "character", "erala",
 			"text", "You dare refuse me?! Then speak to my sword!",
 			"option-effects", {
 				function(s)
 					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("thralling-tribe"))
 					SetDiplomacy(GetFactionPlayer("thralling-tribe"), "enemy", trigger_player)
-					local erala_hero_unit = FindHero("Erala", trigger_player)
+					local erala_hero_unit = FindHero("erala", trigger_player)
 					local attacker_count = 0
 					local uncount = GetUnits(GetFactionPlayer("thralling-tribe"))
 					for unit1 = 1,table.getn(uncount) do 
@@ -101,7 +101,7 @@ DefineDialogue("thrallings-subjugated", {
 			"text", "Please, have mercy!"
 		},
 		{
-			"speaker", "character", "Erala",
+			"speaker", "character", "erala",
 			"text", "If you serve me faithfully, I will spare your lives."
 		},
 		{
@@ -135,7 +135,7 @@ DefineDialogue("jarl-meets-the-karlings", {
 			"text", "These are the lands of Karla and his sons. What do you wish?"
 		},
 		{
-			"speaker", "character", "Erala",
+			"speaker", "character", "erala",
 			"text", "I am Erala, a mighty warrior. Your people are good farmers, but they need protection. Submit to me and I will make you safe."
 		},
 		{
@@ -157,7 +157,7 @@ DefineDialogue("jarl-meets-the-karlings", {
 DefineDialogue("jarl-attacks-the-karlings", {
 	Nodes = {
 		{
-			"speaker", "character", "Erala",
+			"speaker", "character", "erala",
 			"text", "Folly. If you lot will not submit willingly, then I must subjugate you by force."
 		},
 		{
@@ -168,7 +168,7 @@ DefineDialogue("jarl-attacks-the-karlings", {
 				function(s)
 					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("karling-tribe"))
 					SetDiplomacy(GetFactionPlayer("karling-tribe"), "enemy", trigger_player)
-					local erala_hero_unit = FindHero("Erala", trigger_player)
+					local erala_hero_unit = FindHero("erala", trigger_player)
 					local uncount = GetUnits(GetFactionPlayer("karling-tribe"))
 					for unit1 = 1,table.getn(uncount) do 
 						if (GetUnitVariable(uncount[unit1], "Ident") == "unit-germanic-worker") then
@@ -189,7 +189,7 @@ DefineDialogue("karlings-subjugated", {
 			"text", "Enough of this bloodshed! Mercy!"
 		},
 		{
-			"speaker", "character", "Erala",
+			"speaker", "character", "erala",
 			"text", "Will you submit to my tribe?"
 		},
 		{
@@ -198,7 +198,7 @@ DefineDialogue("karlings-subjugated", {
 			"text", "We shall. But only if our personal freedom is guaranteed, otherwise we would rather die."
 		},
 		{
-			"speaker", "character", "Erala",
+			"speaker", "character", "erala",
 			"text", "Very well.",
 			"option-effects", {
 				function(s)
@@ -220,11 +220,11 @@ DefineDialogue("karlings-subjugated", {
 DefineDialogue("jarls-hall-is-complete", { -- based on the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 24.
 	Nodes = {
 		{
-			"speaker", "character", "Erala",
+			"speaker", "character", "erala",
 			"text", "The hall is complete! My destiny starts now."
 		},
 		{
-			"speaker", "character", "Erala",
+			"speaker", "character", "erala",
 			"text", "I will need a group of loyal retainers. Once my buras have gathered enough resources, I should begin training brave warriors in the art of the sword."
 		},
 		{
@@ -241,7 +241,7 @@ DefineDialogue("jarls-hall-is-complete", { -- based on the Song of Rig; Source: 
 DefineDialogue("jarl-desires-karling-subjugation", {
 	Nodes = {
 		{
-			"speaker", "character", "Erala",
+			"speaker", "character", "erala",
 			"text", "Now that I have gathered an ensemble of warriors, the Karlings will be no match for me. They will accept my overlordship - or perish.",
 			"option-effects", {
 				function(s)
@@ -255,7 +255,7 @@ DefineDialogue("jarl-desires-karling-subjugation", {
 DefineDialogue("jarl-considers-the-hersings", {
 	Nodes = {
 		{
-			"speaker", "character", "Erala",
+			"speaker", "character", "erala",
 			"text", "The last threat to my power in this peninsula are the Hersings to our south. They are a powerful clan, it would be better to seek an alliance than to face their warriors in battle.",
 			"option-effects", {
 				function(s)
@@ -288,11 +288,11 @@ DefineDialogue("jarl-meets-the-hersings", {
 DefineDialogue("jarl-seeks-an-alliance-with-the-hersings", {
 	Nodes = {
 		{
-			"speaker", "character", "Erala",
+			"speaker", "character", "erala",
 			"text", "Greetings, noble swordsman. I have come to forge a bond between our peoples. I ask to marry your chieftain's daughter, joining our tribes in an alliance of kinship.",
 			"option-effects", {
 				function(s)
-					if (UnitLevelCheck(FindHero("Erala"), 5)) then
+					if (UnitLevelCheck(FindHero("erala"), 5)) then
 						CallDialogue("jarl-forges-an-alliance-with-the-hersings", trigger_player)
 					else
 						CallDialogue("jarl-fails-to-ally-with-the-hersings", trigger_player)
@@ -314,7 +314,7 @@ DefineDialogue("jarl-forges-an-alliance-with-the-hersings", {
 			"text", "That will be a great honor for our chieftain."
 		},
 		{
-			"speaker", "character", "Erala",
+			"speaker", "character", "erala",
 			"text", "Then let us rejoice and feast together!",
 			"option-effects", {
 				function(s)
@@ -346,7 +346,7 @@ DefineDialogue("jarl-fails-to-ally-with-the-hersings", {
 			"text", "That would shame our tribe. You are not worthy."
 		},
 		{
-			"speaker", "character", "Erala",
+			"speaker", "character", "erala",
 			"text", "What did you say?! I shall stain your lands with your own blood!",
 			"option-effects", {
 				function(s)
@@ -363,7 +363,7 @@ DefineDialogue("jarl-fails-to-ally-with-the-hersings", {
 DefineDialogue("jarl-threatens-the-hersings", {
 	Nodes = {
 		{
-			"speaker", "character", "Erala",
+			"speaker", "character", "erala",
 			"text", "Submit to me, warriors, or your homes will burn."
 		},
 		{
@@ -385,7 +385,7 @@ DefineDialogue("jarl-threatens-the-hersings", {
 DefineDialogue("jarl-conquers-jutland", {
 	Nodes = {
 		{
-			"speaker", "character", "Erala",
+			"speaker", "character", "erala",
 			"text", "It is done. My rule extends throughout the entire peninsula, from north to south!",
 			"option-effects", {
 				function(s)

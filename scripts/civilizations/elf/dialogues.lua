@@ -32,11 +32,11 @@ DefineDialogue("the-two-kings-of-annwn-introduction", { -- Source: Bernhard Maie
 			"conditions", function(s) return GrandStrategy == false; end
 		},
 		{
-			"speaker", "character", "Arawn",
+			"speaker", "character", "arawn",
 			"text", "My noble elves, hear me well!"
 		},
 		{
-			"speaker", "character", "Arawn",
+			"speaker", "character", "arawn",
 			"text", "This encounter between me and the usurper shall decide whose claim to these lands will persevere. Each of you shall follow me to the field of battle, and we will put an end to this conflict!",
 			"option-effects", {
 				function(s)
@@ -51,15 +51,15 @@ DefineDialogue("the-two-kings-of-annwn-introduction", { -- Source: Bernhard Maie
 DefineDialogue("the-two-kings-of-annwn-hafgan-dies", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 13-14.
 	Nodes = {
 		{
-			"speaker", "character", "Hafgan",
+			"speaker", "character", "hafgan",
 			"text", "My lord, what right did you have to kill me? But by the gods, now that you have begun to take my life, put an end to it!"
 		},
 		{
-			"speaker", "character", "Hafgan",
+			"speaker", "character", "hafgan",
 			"text", "My loyal nobles, my death is sealed. I can no longer provide for you."
 		},
 		{
-			"speaker", "character", "Arawn",
+			"speaker", "character", "arawn",
 			"text", "My noble elves of Hafgan's household, I will hear now which of you shall pledge yourselves to me."
 		},
 		{
@@ -68,7 +68,7 @@ DefineDialogue("the-two-kings-of-annwn-hafgan-dies", { -- Source: Bernhard Maier
 			"text", "Lord, all of us shall, as there is no king over all of Annwn other than you."
 		},
 		{
-			"speaker", "character", "Arawn",
+			"speaker", "character", "arawn",
 			"text", "Now it is time, then, to take your oaths of fealty. Those who refuse to do so of their own will shall be forced by the sword."
 		},
 		{

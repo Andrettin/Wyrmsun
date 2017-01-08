@@ -134,7 +134,7 @@ AddTrigger("the-mead-of-wisdom-introduction",
 			{"~!Continue"},
 			{function(s)
 			Event(
-				FindHero("Durin"),
+				FindHero("durin"),
 				"We must wary, for these corridors are filled with the two dwarves' thugs. Let us get this over with as quickly as we can.",
 				player,
 				{"~!Continue"},
@@ -188,7 +188,7 @@ AddTrigger("the-mead-of-wisdom-fjalar-and-galar-found",
 		end
 	
 		Event(
-			FindHero("Durin"),
+			FindHero("durin"),
 			"Fjalar and Galar, I am here on behalf of Modsognir. Where is Thjodrorir?",
 			player,
 			{"~!Continue"},
@@ -206,7 +206,7 @@ AddTrigger("the-mead-of-wisdom-fjalar-and-galar-found",
 					{"~!Continue"},
 					{function(s)
 					Event(
-						FindHero("Durin"),
+						FindHero("durin"),
 						"Abominable! How could ye, to Thjodrorir... Foolish as ye seem, the mead certainly made ye none the wiser.",
 						player,
 						{"~!Continue"},
@@ -244,7 +244,7 @@ AddTrigger("the-mead-of-wisdom-victory",
 	end,
 	function()
 		Event(
-			FindHero("Durin"),
+			FindHero("durin"),
 			"It is over. I will bring the cauldron and jars to Modsognir, and have them buried in Thjodrorir's grave. It is the best that can be done...",
 			player,
 			{"~!Continue"},
@@ -274,7 +274,7 @@ AddTrigger("the-mead-of-wisdom-durin-dies",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Durin must survive") and FindHero("Durin", GetThisPlayer()) == nil) then
+		if (PlayerHasObjective(GetThisPlayer(), "- Durin must survive") and FindHero("durin", GetThisPlayer()) == nil) then
 			player = GetThisPlayer()
 			return true
 		end

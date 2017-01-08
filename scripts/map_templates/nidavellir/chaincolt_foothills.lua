@@ -39,7 +39,7 @@ DefineMapTemplate("chaincolt-foothills", { -- From Battle for Wesnoth: The Scept
 })
 
 SetMapTemplateUnit("chaincolt-foothills", "unit-dwarven-guard-tower", "norlund-clan", {28, 3}, 24, 25)
-SetMapTemplateHero("chaincolt-foothills", "Rugnur", "norlund-clan", {28, 3}, 24, 25)
+SetMapTemplateHero("chaincolt-foothills", "rugnur", "norlund-clan", {28, 3}, 24, 25)
 SetMapTemplateUnit("chaincolt-foothills", "unit-dwarven-guard-tower", "shinsplitter-clan", {28, 3}, 25)
 
 SetMapTemplateUnit("chaincolt-foothills", "unit-dwarven-guard-tower", "shinsplitter-clan", {25, 28}, 24)

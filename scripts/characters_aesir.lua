@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCharacter("Odin", {
+DefineCharacter("odin", {
 	Name = "Odin",
 	Gender = "male",
 	Type = "unit-teuton-veteran-swordsman", -- should be a Norse warrior?

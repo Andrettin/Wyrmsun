@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCharacter("Caesar", { -- Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 227.
+DefineCharacter("caesar", { -- Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 227.
 	Name = "Caesar",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -36,7 +36,7 @@ DefineCharacter("Caesar", { -- Source: Heiko Steuer, "Warrior bands, war lords a
 	AuthoredWorks = {"upgrade-work-de-bello-gallico"}
 })
 
-DefineCharacter("Marcus Aurelius", { -- Source: "Ancient Warfare VII.6", 2013, pp. 6, 8, 10.
+DefineCharacter("marcus-aurelius", { -- Source: "Ancient Warfare VII.6", 2013, pp. 6, 8, 10.
 	Name = "Marcus Aurelius",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -55,7 +55,7 @@ DefineCharacter("Marcus Aurelius", { -- Source: "Ancient Warfare VII.6", 2013, p
 	-- married to Faustina the Younger
 })
 
-DefineCharacter("Lucius Verus", { -- Source: "Ancient Warfare VII.6", 2013, pp. 6-7.
+DefineCharacter("lucius-verus", { -- Source: "Ancient Warfare VII.6", 2013, pp. 6-7.
 	Name = "Lucius Verus",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -69,7 +69,7 @@ DefineCharacter("Lucius Verus", { -- Source: "Ancient Warfare VII.6", 2013, pp. 
 	}
 })
 
-DefineCharacter("Geofrei Gaimar", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 76.
+DefineCharacter("geofrei-gaimar", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 76.
 	Name = "Geofrei",
 	FamilyName = "Gaimar", -- was that actually his family name?
 	Gender = "male",

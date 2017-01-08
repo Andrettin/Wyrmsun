@@ -53,28 +53,28 @@ if (LoadedGame == false) then
 	if (GrandStrategy == false) then
 		SetPlayerData(0, "Allow", "upgrade-dwarven-runewriting", "F")
 		unit = CreateUnit("unit-dwarven-axefighter", 0, {19, 47})
-		SetUnitVariable(unit, "Character", "Rugnur")
+		SetUnitVariable(unit, "Character", "rugnur")
 		unit = CreateUnit("unit-dwarven-steelclad", 0, {19, 47})
-		SetUnitVariable(unit, "Character", "Baglur")
+		SetUnitVariable(unit, "Character", "baglur")
 		unit = CreateUnit("unit-dwarven-thane", 0, {19, 47})
-		SetUnitVariable(unit, "Character", "Thursagan")
+		SetUnitVariable(unit, "Character", "thursagan")
 	elseif (GrandStrategyEventMap) then
 		-- Rugnur
 		if (GetProvinceHero("Caverns of Chaincolt", "Rugnur") == 2) then
 			unit = CreateUnit(GetGrandStrategyHeroUnitType("Rugnur"), 0, {19, 47})
-			SetUnitVariable(unit, "Character", "Rugnur")
+			SetUnitVariable(unit, "Character", "rugnur")
 		end
 
 		-- Baglur
 		if (GetProvinceHero("Caverns of Chaincolt", "Baglur") == 2) then
 			unit = CreateUnit(GetGrandStrategyHeroUnitType("Baglur"), 0, {19, 47})
-			SetUnitVariable(unit, "Character", "Baglur")
+			SetUnitVariable(unit, "Character", "baglur")
 		end
 
 		-- Thursagan
 		if (GetProvinceHero("Caverns of Chaincolt", "Thursagan") == 2) then
 			unit = CreateUnit(GetGrandStrategyHeroUnitType("Thursagan"), 0, {19, 47})
-			SetUnitVariable(unit, "Character", "Thursagan")
+			SetUnitVariable(unit, "Character", "thursagan")
 		end
 	end
 	
@@ -263,7 +263,7 @@ AddTrigger("gathering-materials-rugnur-dies",
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Collect 10000 copper and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and FindHero("Rugnur", GetFactionPlayer("Norlund Clan")) == nil) then
+		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Collect 10000 copper and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and FindHero("rugnur", GetFactionPlayer("Norlund Clan")) == nil) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
@@ -303,8 +303,8 @@ AddTrigger("gathering-materials-baglur-dies",
 				or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")
 				or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Durstorn and Baglur must survive")
 			)
-			and FindHero("Baglur", GetFactionPlayer("Norlund Clan")) == nil
-			and (GetFactionExists("Baglur") == false or FindHero("Baglur", GetFactionPlayer("Baglur")) == nil)
+			and FindHero("baglur", GetFactionPlayer("Norlund Clan")) == nil
+			and (GetFactionExists("Baglur") == false or FindHero("baglur", GetFactionPlayer("Baglur")) == nil)
 		) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
@@ -333,7 +333,7 @@ AddTrigger("gathering-materials-introduction",
 		end
 		if (PlayerHasObjective(GetThisPlayer(), "- Collect 10000 copper and 20000 coal") == false and GetNumUnitsAt(-1, "unit-gold-deposit", {0, 0}, {512, 512}) >= 1 and GetNumUnitsAt(-1, "unit-coal-mine", {0, 0}, {512, 512}) >= 2) then
 			for i=0, (PlayerMax - 2) do
-				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= "Shinsplitter Clan" and FindHero("Rugnur", i) ~= nil and FindHero("Baglur", i) ~= nil and FindHero("Thursagan", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
+				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= "Shinsplitter Clan" and FindHero("rugnur", i) ~= nil and FindHero("baglur", i) ~= nil and FindHero("thursagan", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
 					player = i
 					return true
 				end
@@ -355,31 +355,31 @@ AddTrigger("gathering-materials-introduction",
 				{"~!Continue"},
 				{function(s)
 				Event(
-					FindHero("Rugnur"),
+					FindHero("rugnur"),
 					"Well, these are the eastern mines. Goblins live here, be prepared to fight them; also be prepared to spend quite some time here - mining can take a while.",
 					player,
 					{"~!Continue"},
 					{function(s)
 					Event(
-						FindHero("Thursagan"),
+						FindHero("thursagan"),
 						"For me to make the artifact Pypo wants, I need a special type of gold. I do not know where it was found, but Baglur said these mines were the source of it.",
 						player,
 						{"~!Continue"},
 						{function(s)
 						Event(
-							FindHero("Baglur"),
+							FindHero("baglur"),
 							"Also, the only coal that wi' melt this gold is here.",
 							player,
 							{"~!Continue"},
 							{function(s)
 							Event(
-								FindHero("Rugnur"),
+								FindHero("rugnur"),
 								"So we're down here to, what, mine this gold and coal? That should be easy enough.",
 								player,
 								{"~!Continue"},
 								{function(s)
 								Event(
-									FindHero("Thursagan"),
+									FindHero("thursagan"),
 									"Aye. But beware, there are goblins and such down here...",
 									player,
 									{"~!Continue"},
@@ -428,7 +428,7 @@ AddTrigger("gathering-materials-miners-reminder",
 	function()
 		if (GetPlayerData(player, "UnitTypesCount", "unit-dwarven-miner") < 1) then
 			Event(
-				FindHero("Thursagan"),
+				FindHero("thursagan"),
 				"Don't forget to recruit the miners. Our warriors can clear the tunnels of goblins and worse, but once we find the gold and coal we need the miners to acquire it.",
 				player,
 				{"~!Continue"},
@@ -458,7 +458,7 @@ AddTrigger("gathering-materials-coal-found",
 	end,
 	function()
 		Event(
-			FindHero("Rugnur"),
+			FindHero("rugnur"),
 			"Here is some of the coal that we need! Bring the miners to take it!",
 			player,
 			{"~!Continue"},
@@ -487,7 +487,7 @@ AddTrigger("gathering-materials-gold-found",
 	end,
 	function()
 		Event(
-			FindHero("Rugnur"),
+			FindHero("rugnur"),
 			"Here is a mine of the precious gold! Send the miners this way.",
 			player,
 			{"~!Continue"},
@@ -510,14 +510,14 @@ AddTrigger("gathering-materials-coal-collected",
 	end,
 	function()
 		Event(
-			FindHero("Rugnur"),
+			FindHero("rugnur"),
 			"That's the last load of coal we need.",
 			player,
 			{"~!Continue"},
 			{function(s)
 				if (GetPlayerData(GetFactionPlayer("Norlund Clan"), "Resources", "copper") >= 10000) then
 					Event(
-						FindHero("Thursagan"),
+						FindHero("thursagan"),
 						"This is all we need from these mines. Now we should go back further west, where there are no goblins, and mine there.",
 						player,
 						{"~!Continue"},
@@ -535,7 +535,7 @@ AddTrigger("gathering-materials-coal-collected",
 								{"~!Continue"},
 								{function(s)
 								Event(
-									FindHero("Thursagan"),
+									FindHero("thursagan"),
 									"We don't. Not everything is about ye. We need to talk to Theganli.",
 									player,
 									{"~!Continue"},
@@ -547,7 +547,7 @@ AddTrigger("gathering-materials-coal-collected",
 										{"~!Continue"},
 										{function(s)
 										Event(
-											FindHero("Thursagan"),
+											FindHero("thursagan"),
 											"I need to make the plans for the scepter, then have him cut the ruby to match them.",
 											player,
 											{"~!Continue"},
@@ -559,7 +559,7 @@ AddTrigger("gathering-materials-coal-collected",
 												{"~!Continue"},
 												{function(s)
 												Event(
-													FindHero("Rugnur"),
+													FindHero("rugnur"),
 													"What are ye talking about, sir? Ye knew all along the jewel would have to be cut to make the scepter out of.",
 													player,
 													{"~!Continue"},
@@ -595,13 +595,13 @@ AddTrigger("gathering-materials-coal-collected",
 																		{"~!Continue"},
 																		{function(s)
 																		Event(
-																			FindHero("Thursagan"),
+																			FindHero("thursagan"),
 																			"He doesn't need to come here, I'll take the jewel to his shop. He'll need his tools anyway.",
 																			player,
 																			{"~!Continue"},
 																			{function(s)
 																			Event(
-																				FindHero("Thursagan"),
+																				FindHero("thursagan"),
 																				"Well, Theganli, what do ye think of this jewel?",
 																				player,
 																				{"~!Continue"},
@@ -613,7 +613,7 @@ AddTrigger("gathering-materials-coal-collected",
 																					{"~!Continue"},
 																					{function(s)
 																					Event(
-																						FindHero("Thursagan"),
+																						FindHero("thursagan"),
 																						"Do ye think ye could cut it in the manner my plans specify?",
 																						player,
 																						{"~!Continue"},
@@ -625,7 +625,7 @@ AddTrigger("gathering-materials-coal-collected",
 																							{"~!Continue"},
 																							{function(s)
 																							Event(
-																								FindHero("Thursagan"),
+																								FindHero("thursagan"),
 																								"Very well. See what ye can do.",
 																								player,
 																								{"~!Continue"},
@@ -649,7 +649,7 @@ AddTrigger("gathering-materials-coal-collected",
 																											{"~!Continue"},
 																											{function(s)
 																											Event(
-																												FindHero("Thursagan"),
+																												FindHero("thursagan"),
 																												"So what do ye propose we do? We need this jewel cut in a very specific way to make sure... well, it doesn't matter why.",
 																												player,
 																												{"~!Continue"},
@@ -661,7 +661,7 @@ AddTrigger("gathering-materials-coal-collected",
 																													{"~!Continue"},
 																													{function(s)
 																													Event(
-																														FindHero("Rugnur"),
+																														FindHero("rugnur"),
 																														"Who are they?",
 																														player,
 																														{"~!Continue"},
@@ -679,7 +679,7 @@ AddTrigger("gathering-materials-coal-collected",
 																																{"~!Continue"},
 																																{function(s)
 																																Event(
-																																	FindHero("Baglur"),
+																																	FindHero("baglur"),
 																																	"We can't just go in there and take their property. We'll have to buy, or rent, it from them.",
 																																	player,
 																																	{"~!Continue"},
@@ -691,7 +691,7 @@ AddTrigger("gathering-materials-coal-collected",
 																																		{"~!Continue"},
 																																		{function(s)
 																																		Event(
-																																			FindHero("Rugnur"),
+																																			FindHero("rugnur"),
 																																			"Very well. We'll go south now.",
 																																			player,
 																																			{"~!Continue"},
@@ -838,7 +838,7 @@ AddTrigger("gathering-materials-resources-collected",
 	end,
 	function()
 		Event(
-			FindHero("Thursagan"),
+			FindHero("thursagan"),
 			"This is all we need from these mines. Now we should go back further west, where there are no goblins, and mine there.",
 			player,
 			{"~!Continue"},
@@ -856,7 +856,7 @@ AddTrigger("gathering-materials-resources-collected",
 					{"~!Continue"},
 					{function(s)
 					Event(
-						FindHero("Thursagan"),
+						FindHero("thursagan"),
 						"We don't. Not everything is about ye. We need to talk to Theganli.",
 						player,
 						{"~!Continue"},
@@ -868,7 +868,7 @@ AddTrigger("gathering-materials-resources-collected",
 							{"~!Continue"},
 							{function(s)
 							Event(
-								FindHero("Thursagan"),
+								FindHero("thursagan"),
 								"I need to make the plans for the scepter, then have him cut the ruby to match them.",
 								player,
 								{"~!Continue"},
@@ -880,7 +880,7 @@ AddTrigger("gathering-materials-resources-collected",
 									{"~!Continue"},
 									{function(s)
 									Event(
-										FindHero("Rugnur"),
+										FindHero("rugnur"),
 										"What are ye talking about, sir? Ye knew all along the jewel would have to be cut to make the scepter out of.",
 										player,
 										{"~!Continue"},
@@ -916,13 +916,13 @@ AddTrigger("gathering-materials-resources-collected",
 															{"~!Continue"},
 															{function(s)
 															Event(
-																FindHero("Thursagan"),
+																FindHero("thursagan"),
 																"He doesn't need to come here, I'll take the jewel to his shop. He'll need his tools anyway.",
 																player,
 																{"~!Continue"},
 																{function(s)
 																Event(
-																	FindHero("Thursagan"),
+																	FindHero("thursagan"),
 																	"Well, Theganli, what do ye think of this jewel?",
 																	player,
 																	{"~!Continue"},
@@ -934,7 +934,7 @@ AddTrigger("gathering-materials-resources-collected",
 																		{"~!Continue"},
 																		{function(s)
 																		Event(
-																			FindHero("Thursagan"),
+																			FindHero("thursagan"),
 																			"Do ye think ye could cut it in the manner my plans specify?",
 																			player,
 																			{"~!Continue"},
@@ -946,7 +946,7 @@ AddTrigger("gathering-materials-resources-collected",
 																				{"~!Continue"},
 																				{function(s)
 																				Event(
-																					FindHero("Thursagan"),
+																					FindHero("thursagan"),
 																					"Very well. See what ye can do.",
 																					player,
 																					{"~!Continue"},
@@ -970,7 +970,7 @@ AddTrigger("gathering-materials-resources-collected",
 																								{"~!Continue"},
 																								{function(s)
 																								Event(
-																									FindHero("Thursagan"),
+																									FindHero("thursagan"),
 																									"So what do ye propose we do? We need this jewel cut in a very specific way to make sure... well, it doesn't matter why.",
 																									player,
 																									{"~!Continue"},
@@ -982,7 +982,7 @@ AddTrigger("gathering-materials-resources-collected",
 																										{"~!Continue"},
 																										{function(s)
 																										Event(
-																											FindHero("Rugnur"),
+																											FindHero("rugnur"),
 																											"Who are they?",
 																											player,
 																											{"~!Continue"},
@@ -1000,7 +1000,7 @@ AddTrigger("gathering-materials-resources-collected",
 																													{"~!Continue"},
 																													{function(s)
 																													Event(
-																														FindHero("Baglur"),
+																														FindHero("baglur"),
 																														"We can't just go in there and take their property. We'll have to buy, or rent, it from them.",
 																														player,
 																														{"~!Continue"},
@@ -1012,7 +1012,7 @@ AddTrigger("gathering-materials-resources-collected",
 																															{"~!Continue"},
 																															{function(s)
 																															Event(
-																																FindHero("Rugnur"),
+																																FindHero("rugnur"),
 																																"Very well. We'll go south now.",
 																																player,
 																																{"~!Continue"},
@@ -1149,7 +1149,7 @@ AddTrigger("gathering-materials-thursagan-dies",
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Collect 10000 copper and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and FindHero("Thursagan", GetFactionPlayer("Norlund Clan")) == nil and FindHero("Thursagan", PlayerNumNeutral) == nil) then
+		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Collect 10000 copper and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and FindHero("thursagan", GetFactionPlayer("Norlund Clan")) == nil and FindHero("thursagan", PlayerNumNeutral) == nil) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end

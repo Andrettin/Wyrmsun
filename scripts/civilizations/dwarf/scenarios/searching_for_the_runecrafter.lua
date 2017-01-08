@@ -35,7 +35,7 @@ AddTrigger("searching-for-the-runecrafter-rugnur-dies",
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 copper and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and FindHero("Rugnur", GetFactionPlayer("Norlund Clan")) == nil) then
+		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 copper and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and FindHero("rugnur", GetFactionPlayer("Norlund Clan")) == nil) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
@@ -102,8 +102,8 @@ AddTrigger("searching-for-the-runecrafter-baglur-dies",
 				or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")
 				or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Durstorn and Baglur must survive")
 			)
-			and FindHero("Baglur", GetFactionPlayer("Norlund Clan")) == nil
-			and (GetFactionExists("Baglur") == false or FindHero("Baglur", GetFactionPlayer("Baglur")) == nil)
+			and FindHero("baglur", GetFactionPlayer("Norlund Clan")) == nil
+			and (GetFactionExists("Baglur") == false or FindHero("baglur", GetFactionPlayer("Baglur")) == nil)
 		) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
@@ -132,7 +132,7 @@ AddTrigger("searching-for-the-runecrafter-introduction",
 		end
 		if (GetFactionExists("Thursagan") and PlayerHasObjective(GetThisPlayer(), "- Find Thursagan and bring him to your Mead Hall") == false) then
 			for i=0, (PlayerMax - 2) do
-				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= "Shinsplitter Clan" and FindHero("Rugnur", i) ~= nil and FindHero("Baglur", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
+				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= "Shinsplitter Clan" and FindHero("rugnur", i) ~= nil and FindHero("baglur", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
 					player = i
 					return true
 				end
@@ -154,19 +154,19 @@ AddTrigger("searching-for-the-runecrafter-introduction",
 				{"~!Continue"},
 				{function(s)
 				Event(
-					FindHero("Baglur"),
+					FindHero("baglur"),
 					"We need to find the sage Thursagan and convince him to return to the citadel with us. He's somewhere up here.",
 					player,
 					{"~!Continue"},
 					{function(s)
 					Event(
-						FindHero("Rugnur"),
+						FindHero("rugnur"),
 						"Well, how are we supposed to find him?",
 						player,
 						{"~!Continue"},
 						{function(s)
 						Event(
-							FindHero("Baglur"),
+							FindHero("baglur"),
 							"His will probably be the only house up here. No one else is insane enough to live this far north! Even the Shinsplitters won't challenge us here.",
 							player,
 							{"~!Continue"},
@@ -178,7 +178,7 @@ AddTrigger("searching-for-the-runecrafter-introduction",
 								{"~!Continue"},
 								{function(s)
 								Event(
-									FindHero("Baglur"),
+									FindHero("baglur"),
 									"Right. We'll probably have to fight our way through to his house.",
 									player,
 									{"~!Continue"},
@@ -297,7 +297,7 @@ AddTrigger("searching-for-the-runecrafter-gryphon-riders-found",
 				{"~!Continue"},
 				{function(s)
 				Event(
-					FindHero("Baglur"),
+					FindHero("baglur"),
 					"Is that... is that a gryphon?",
 					player,
 					{"~!Continue"},
@@ -309,7 +309,7 @@ AddTrigger("searching-for-the-runecrafter-gryphon-riders-found",
 						{"~!Continue"},
 						{function(s)
 						Event(
-							FindHero("Rugnur"),
+							FindHero("rugnur"),
 							"What do ye want, gryphon rider?",
 							player,
 							{"~!Continue"},
@@ -321,7 +321,7 @@ AddTrigger("searching-for-the-runecrafter-gryphon-riders-found",
 								{"~!Continue"},
 								{function(s)
 								Event(
-									FindHero("Rugnur"),
+									FindHero("rugnur"),
 									"Well, um, aye. Why, can ye help us?",
 									player,
 									{"~!Continue"},
@@ -333,7 +333,7 @@ AddTrigger("searching-for-the-runecrafter-gryphon-riders-found",
 										{"~!Continue"},
 										{function(s)
 										Event(
-											FindHero("Baglur"),
+											FindHero("baglur"),
 											"Sure, we'll help ye fight goblins.",
 											player,
 											{"~!Continue"},
@@ -393,7 +393,7 @@ AddTrigger("searching-for-the-runecrafter-thursagan-found-gryphon-rider",
 			{"~!Continue"},
 			{function(s)
 			Event(
-				FindHero("Baglur"),
+				FindHero("baglur"),
 				"He doesn't want to talk to the gryphon riders, apparently. I think we'll have to get someone there he will talk to...",
 				player,
 				{"~!Continue"},
@@ -428,75 +428,75 @@ AddTrigger("searching-for-the-runecrafter-thursagan-found",
 	end,
 	function()
 		unit = CreateUnit("unit-dwarven-thane", player, {Players[GetFactionPlayer("Thursagan")].StartPos.x, Players[GetFactionPlayer("Thursagan")].StartPos.y})
-		SetUnitVariable(unit, "Character", "Thursagan")
+		SetUnitVariable(unit, "Character", "thursagan")
 		Event(
-			FindHero("Thursagan"),
+			FindHero("thursagan"),
 			"What do ye people want?! Leave me alone!",
 			player,
 			{"~!Continue"},
 			{function(s)
 			Event(
-				FindHero("Rugnur"),
+				FindHero("rugnur"),
 				"Old sage, we come with a message from Lord Durstorn. He asks ye to come back to the city.",
 				player,
 				{"~!Continue"},
 				{function(s)
 				Event(
-					FindHero("Thursagan"),
+					FindHero("thursagan"),
 					"Ha! That fool thinks he can order me around. Why does he want me to go back, anyway?",
 					player,
 					{"~!Continue"},
 					{function(s)
 					Event(
-						FindHero("Baglur"),
+						FindHero("baglur"),
 						"We have entered into a bargain with the king of Untersberg to craft a scepter for him.",
 						player,
 						{"~!Continue"},
 						{function(s)
 						Event(
-							FindHero("Thursagan"),
+							FindHero("thursagan"),
 							"Oh, and now I suppose Durstorn wants me to craft it, eh? Well I'm not going to.",
 							player,
 							{"~!Continue"},
 							{function(s)
 							Event(
-								FindHero("Rugnur"),
+								FindHero("rugnur"),
 								"Ye don't want to make a scepter imbued with the mighty ruby of fire? Very well, yer choice is made.",
 								player,
 								{"~!Continue"},
 								{function(s)
 								Event(
-									FindHero("Thursagan"),
+									FindHero("thursagan"),
 									"The ruby of fire, what is that, some worthless gnomish gem?",
 									player,
 									{"~!Continue"},
 									{function(s)
 									Event(
-										FindHero("Baglur"),
+										FindHero("baglur"),
 										"It is a gnomish gem, but it is also supposedly the most flawless precious stone ever seen.",
 										player,
 										{"~!Continue"},
 										{function(s)
 										Event(
-											FindHero("Thursagan"),
+											FindHero("thursagan"),
 											"Oh, really? And what does the gnomish king want us to do with it?",
 											player,
 											{"~!Continue"},
 											{function(s)
 											Event(
-												FindHero("Rugnur"),
+												FindHero("rugnur"),
 												"Cut it and insert it into a scepter, creating a powerful symbol of the gnomish monarchy.",
 												player,
 												{"~!Continue"},
 												{function(s)
 												Event(
-													FindHero("Thursagan"),
+													FindHero("thursagan"),
 													"I see. Fine then, I will help ye craft this scepter... into the greatest artifact ever seen. This will be a true test of my skill. I expect it will take many years.",
 													player,
 													{"~!Continue"},
 													{function(s)
 													Event(
-														FindHero("Baglur"),
+														FindHero("baglur"),
 														"Good. Now, there are still wild animals and goblins here... We have to get back into the caves.",
 														player,
 														{"~!Continue"},
@@ -513,7 +513,7 @@ AddTrigger("searching-for-the-runecrafter-thursagan-found",
 															end
 															AddTrigger("searching-for-the-runecrafter-thursagan-dies",
 																function()
-																	if (PlayerHasObjective(GetThisPlayer(), "- Find Thursagan and bring him to your Mead Hall") and FindHero("Thursagan", GetThisPlayer()) == nil) then
+																	if (PlayerHasObjective(GetThisPlayer(), "- Find Thursagan and bring him to your Mead Hall") and FindHero("thursagan", GetThisPlayer()) == nil) then
 																		player = GetThisPlayer()
 																		return true
 																	end
@@ -560,7 +560,7 @@ AddTrigger("searching-for-the-runecrafter-victory",
 		for i=0, (PlayerMax - 2) do
 			if (
 				PlayerHasObjective(i, "- Find Thursagan and bring him to your Mead Hall")
-				and UnitIsAt(FindHero("Thursagan"), {7, 59}, {12, 64})
+				and UnitIsAt(FindHero("thursagan"), {7, 59}, {12, 64})
 			) then
 				player = i
 				return true
@@ -570,7 +570,7 @@ AddTrigger("searching-for-the-runecrafter-victory",
 	end,
 	function()
 		Event(
-			FindHero("Thursagan"),
+			FindHero("thursagan"),
 			"Well, now we are near the caves again! Come on, back south, to the city.",
 			player,
 			{"~!Continue"},
@@ -582,7 +582,7 @@ AddTrigger("searching-for-the-runecrafter-victory",
 				{"~!Continue"},
 				{function(s)
 				Event(
-					FindHero("Rugnur"),
+					FindHero("rugnur"),
 					"Lord Durstorn, we have succeeded in our mission. Thursagan is here.",
 					player,
 					{"~!Continue"},
@@ -594,13 +594,13 @@ AddTrigger("searching-for-the-runecrafter-victory",
 						{"~!Continue"},
 						{function(s)
 						Event(
-							FindHero("Baglur"),
+							FindHero("baglur"),
 							"Aye, we did.",
 							player,
 							{"~!Continue"},
 							{function(s)
 							Event(
-								FindHero("Thursagan"),
+								FindHero("thursagan"),
 								"Now, where is this ruby that I am to work with, eh Durstorn?",
 								player,
 								{"~!Continue"},
@@ -612,7 +612,7 @@ AddTrigger("searching-for-the-runecrafter-victory",
 									{"~!Continue"},
 									{function(s)
 									Event(
-										FindHero("Thursagan"),
+										FindHero("thursagan"),
 										"Ha! ~<Ye~> don't trust ~<me~>?",
 										player,
 										{"~!Continue"},
@@ -624,7 +624,7 @@ AddTrigger("searching-for-the-runecrafter-victory",
 											{"~!Continue"},
 											{function(s)
 											Event(
-												FindHero("Thursagan"),
+												FindHero("thursagan"),
 												"Ye don't dictate what I am to do, Durstorn! I will do as I please, and don't stop me if ye want me to make this scepter.",
 												player,
 												{"~!Continue"},
@@ -636,7 +636,7 @@ AddTrigger("searching-for-the-runecrafter-victory",
 													{"~!Continue"},
 													{function(s)
 													Event(
-														FindHero("Rugnur"),
+														FindHero("rugnur"),
 														"Uh, technically it's Pypo's, and I think that if Thursagan needs to see it to plan this scepter, we must allow it.",
 														player,
 														{"~!Continue"},
@@ -648,13 +648,13 @@ AddTrigger("searching-for-the-runecrafter-victory",
 															{"~!Continue"},
 															{function(s)
 															Event(
-																FindHero("Thursagan"),
+																FindHero("thursagan"),
 																"Hm... a most interesting jewel. I will start drawing up plans for the scepter immediately.",
 																player,
 																{"~!Continue"},
 																{function(s)
 																Event(
-																	FindHero("Thursagan"),
+																	FindHero("thursagan"),
 																	"Now, I will need certain materials to make this scepter.",
 																	player,
 																	{"~!Continue"},
@@ -666,7 +666,7 @@ AddTrigger("searching-for-the-runecrafter-victory",
 																		{"~!Continue"},
 																		{function(s)
 																		Event(
-																			FindHero("Thursagan"),
+																			FindHero("thursagan"),
 																			"I would say probably ten stone of artifact-quality gold and twenty stone of the finest coal, and many of the finest jewels in the land - we'll need others to search for those, though. I'll also need to have the jeweler cut the ruby once I have the plans done.",
 																			player,
 																			{"~!Continue"},
@@ -678,19 +678,19 @@ AddTrigger("searching-for-the-runecrafter-victory",
 																				{"~!Continue"},
 																				{function(s)
 																				Event(
-																					FindHero("Thursagan"),
+																					FindHero("thursagan"),
 																					"Ye try my patience, Durstorn. Ye know yers aren't acceptable, but ye have to give me something or I can't make the scepter!",
 																					player,
 																					{"~!Continue"},
 																					{function(s)
 																					Event(
-																						FindHero("Baglur"),
+																						FindHero("baglur"),
 																						"Wait, wait. The gold and coal... I think we can find those in the abandoned eastern mines, north of the Arkan-thoria. Goblins ha' overrun them, but earlier they were the source of the finest smithing materials.",
 																						player,
 																						{"~!Continue"},
 																						{function(s)
 																						Event(
-																							FindHero("Rugnur"),
+																							FindHero("rugnur"),
 																							"So, we will go to the eastern mines!",
 																							player,
 																							{"~!Continue"},
@@ -702,7 +702,7 @@ AddTrigger("searching-for-the-runecrafter-victory",
 																								{"~!Continue"},
 																								{function(s)
 																								Event(
-																									FindHero("Thursagan"),
+																									FindHero("thursagan"),
 																									"That is acceptable. Durstorn, send some miners along with us to the eastern mines.",
 																									player,
 																									{"~!Continue"},
@@ -781,7 +781,7 @@ AddTrigger("searching-for-the-runecrafter-thursagan-dies-2",
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 copper and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and FindHero("Thursagan", GetFactionPlayer("Norlund Clan")) == nil and FindHero("Thursagan", PlayerNumNeutral) == nil) then
+		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 copper and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and FindHero("thursagan", GetFactionPlayer("Norlund Clan")) == nil and FindHero("thursagan", PlayerNumNeutral) == nil) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end

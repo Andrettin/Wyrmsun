@@ -31,15 +31,15 @@ DefineDialogue("a-rocky-home-introduction", {
 			"text", "After a long time wandering, a clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home..."
 		},
 		{
-			"speaker", "character", "Modsognir",
+			"speaker", "character", "modsognir",
 			"text", "My clansfolk, this rocky hill seems like a promising place to build our place of dwelling. And if we are to survive here, we will need food and materials to build shelters for our people."
 		},
 		{
-			"speaker", "character", "Durin",
+			"speaker", "character", "durin",
 			"text", "Aye. There are plenty of yales here, we should hunt some."
 		},
 		{
-			"speaker", "character", "Modsognir",
+			"speaker", "character", "modsognir",
 			"text", "There are many perils laying about. We need to be ready quickly."
 		},
 		{
@@ -60,7 +60,7 @@ DefineDialogue("a-rocky-home-introduction", {
 DefineDialogue("a-rocky-home-yales-hunted", {
 	Nodes = {
 		{
-			"speaker", "character", "Durin",
+			"speaker", "character", "durin",
 			"text", "We have hunted enough of them to last for a while. Ah, nothing like the taste of roasted yale..."
 		}
 	}
@@ -69,7 +69,7 @@ DefineDialogue("a-rocky-home-yales-hunted", {
 DefineDialogue("a-rocky-home-materials-collected", {
 	Nodes = {
 		{
-			"speaker", "character", "Modsognir",
+			"speaker", "character", "modsognir",
 			"text", "The materials we need have been collected. It is time to build our new homes by these rocks!"
 		}
 	}
@@ -83,7 +83,7 @@ DefineDialogue("grafvitning-kobolds-attack-modsognirs-clan", {
 			"text", "This is our land! Die, breastling trespassers!"
 		},
 		{
-			"speaker", "character", "Durin",
+			"speaker", "character", "durin",
 			"text", "Kobolds! We are under attack!",
 			"option-effects", {
 				function(s)
@@ -98,27 +98,27 @@ DefineDialogue("grafvitning-kobolds-attack-modsognirs-clan", {
 DefineDialogue("modsognirs-clan-kills-a-kobold", {
 	Nodes = {
 		{
-			"speaker", "character", "Durin",
+			"speaker", "character", "durin",
 			"text", "Damn scaly beast!"
 		},
 		{
-			"speaker", "character", "Modsognir",
+			"speaker", "character", "modsognir",
 			"text", "The kobolds claim these stonelands as their own. There are many other kobold territories, however, and us dwarves have only these rocks to call home. If our settlement in Svarinshaug is destroyed, we will go extinct."
 		},
 		{
-			"speaker", "character", "Durin",
+			"speaker", "character", "durin",
 			"text", "Ye speak truly, Modsognir. But perhaps we can agree to some form of peace with the creatures?"
 		},
 		{
-			"speaker", "character", "Modsognir",
+			"speaker", "character", "modsognir",
 			"text", "It would be no use. If they attacked us on sight, they hold Svarinshaug to be sacred ground and would never let us live here. Many kobold tribes build their homes around a wyrm's lair, serving the colossal beast who resides within. This is likely the case here."
 		},
 		{
-			"speaker", "character", "Durin",
+			"speaker", "character", "durin",
 			"text", "A dire situation, if true. Our clan has never fought a wyrm before."
 		},
 		{
-			"speaker", "character", "Modsognir",
+			"speaker", "character", "modsognir",
 			"text", "Either way, the survival of our clan requires that we root the kobolds out. Ready our warriors!",
 			"option-effects", {
 				function(s)
@@ -132,7 +132,7 @@ DefineDialogue("modsognirs-clan-kills-a-kobold", {
 DefineDialogue("modsognirs-clan-destroys-the-grafvitnings", {
 	Nodes = {
 		{
-			"speaker", "character", "Modsognir",
+			"speaker", "character", "modsognir",
 			"text", "The diminutive fiends and their pet monster are done for. Our clan lives on!",
 			"option-effects", {
 				function(s)

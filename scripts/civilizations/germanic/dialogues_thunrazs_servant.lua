@@ -28,7 +28,7 @@
 DefineDialogue("thialfi-commanded-to-gotland", {
 	Nodes = {
 		{
-			"speaker", "character", "Thialfi",
+			"speaker", "character", "thialfi",
 			"text", "My master, the god Thunraz, has revealed to me the existence of an island to the east. I am to establish my hearth there, bringing human life to the isle.",
 			"option-effects", {
 				function(s)
@@ -44,11 +44,11 @@ DefineDialogue("thialfi-commanded-to-gotland", {
 DefineDialogue("thialfi-settles-gotland", {
 	Nodes = {
 		{
-			"speaker", "character", "Thialfi",
+			"speaker", "character", "thialfi",
 			"text", "My new home is ready! From this base of operations established I can gather the necessary forces to deal with my next task."
 		},
 		{
-			"speaker", "character", "Thialfi",
+			"speaker", "character", "thialfi",
 			"text", "Thunraz told me of a group of wild berserkers living in the island of Hlesey. They attack the passing ships, and must be rooted out to restore safety to that sea passage. The island lies far to the west, beyond the great chain of isles where the Skeldungs dwell.",
 			"option-effects", {
 				function(s)

@@ -45,9 +45,9 @@ if (LoadedGame == false) then
 	
 	if not (GrandStrategy) then
 		unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Character", "Modsognir")
+		SetUnitVariable(unit, "Character", "modsognir")
 		unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Character", "Durin")
+		SetUnitVariable(unit, "Character", "durin")
 		unit = CreateUnit("unit-dwarven-steelclad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 		SetUnitVariable(unit, "Active", false)
 	elseif (GrandStrategyEventMap) then
@@ -56,11 +56,11 @@ if (LoadedGame == false) then
 		
 		if (FactionHasHero("dwarf", "brising-clan", "Modsognir")) then
 			unit = CreateUnit(GetGrandStrategyHeroUnitType("Modsognir"), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-			SetUnitVariable(unit, "Character", "Modsognir")
+			SetUnitVariable(unit, "Character", "modsognir")
 		end
 		if (FactionHasHero("dwarf", "brising-clan", "Durin")) then
 			unit = CreateUnit(GetGrandStrategyHeroUnitType("Durin"), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-			SetUnitVariable(unit, "Character", "Durin")
+			SetUnitVariable(unit, "Character", "durin")
 		end
 		
 		CreateProvinceUnits("Aurvang", 1, 1)
@@ -120,7 +120,7 @@ AddTrigger("the-necklace-of-the-brisings-introduction",
 			{"~!Continue"},
 			{function(s)
 			Event(
-				FindHero("Modsognir"),
+				FindHero("modsognir"),
 				"The scoundrels have their base in the Aurvang swamplands. We shall cross our axes with them soon.",
 				player,
 				{"~!Continue"},
@@ -132,19 +132,19 @@ AddTrigger("the-necklace-of-the-brisings-introduction",
 					{"~!Continue"},
 					{function(s)
 					Event(
-						FindHero("Modsognir"),
+						FindHero("modsognir"),
 						"No, not just a necklace! What honor does our clan have if others can freely steal from us?",
 						player,
 						{"~!Continue"},
 						{function(s)
 						Event(
-							FindHero("Durin"),
+							FindHero("durin"),
 							"I don't much like the idea of a bandit outpost so near to our homes, either.",
 							player,
 							{"~!Continue"},
 							{function(s)
 							Event(
-								FindHero("Modsognir"),
+								FindHero("modsognir"),
 								"Aye. Let's root them out.",
 								player,
 								{"~!Continue"},
@@ -184,19 +184,19 @@ AddTrigger("the-necklace-of-the-brisings-victory",
 	end,
 	function()
 		Event(
-			FindHero("Durin"),
+			FindHero("durin"),
 			"Bloody bandits, quite a piece of work they were.",
 			player,
 			{"~!Continue"},
 			{function(s)
 			Event(
-				FindHero("Modsognir"),
+				FindHero("modsognir"),
 				"Durin, yer service to the clan has been invaluable. I believe that despite the loss of our sage's guidance, together we - warriors and leaders - can take the clan through the dangers of our new home.",
 				player,
 				{"~!Continue"},
 				{function(s)
 				Event(
-					FindHero("Modsognir"),
+					FindHero("modsognir"),
 					"Ah, here's the necklace!",
 					player,
 					{"~!Continue"},
@@ -220,7 +220,7 @@ AddTrigger("the-necklace-of-the-brisings-modsognir-dies",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Modsognir must survive") and FindHero("Modsognir", GetThisPlayer()) == nil) then
+		if (PlayerHasObjective(GetThisPlayer(), "- Modsognir must survive") and FindHero("modsognir", GetThisPlayer()) == nil) then
 			player = GetThisPlayer()
 			return true
 		end
@@ -238,7 +238,7 @@ AddTrigger("the-necklace-of-the-brisings-durin-dies",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Durin must survive") and FindHero("Durin", GetThisPlayer()) == nil) then
+		if (PlayerHasObjective(GetThisPlayer(), "- Durin must survive") and FindHero("durin", GetThisPlayer()) == nil) then
 			player = GetThisPlayer()
 			return true
 		end

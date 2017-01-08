@@ -28,7 +28,7 @@
 DefineDialogue("freys-messenger-skirnirs-feeling", {
 	Nodes = {
 		{
-			"speaker", "character", "Skirnir",
+			"speaker", "character", "skirnir",
 			"text", "Something tells me that my divine master, Fraujaz, is troubled. I should head over to Asgard and see if he needs me."
 		},
 		{
@@ -40,19 +40,19 @@ DefineDialogue("freys-messenger-skirnirs-feeling", {
 DefineDialogue("freys-messenger-skirnir-sent-to-nidavellir", { -- based on the myth of the binding of Fenrir; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 35.
 	Nodes = {
 		{
-			"speaker", "character", "Frey",
+			"speaker", "character", "frey",
 			"text", "I have just spoken with the Allfather, Odin. Or as your people call him, Wodanaz. The monster Fenrir preoccupies him. We cannot kill the beast here, as it would stain Asgard's sacred soil with the corrupted blood that runs through its veins. Therefore we need to chain Fenrir. Twice have we crafted fetters to do so, and twice it has broken its chains. Our last recourse is to ask the dwarves of Nidavellir to craft a fetter for us, as their metalworking knows no parallel."
 		},
 		{
-			"speaker", "character", "Skirnir",
+			"speaker", "character", "skirnir",
 			"text", "Even amongst the Aesir and the Vanir?"
 		},
 		{
-			"speaker", "character", "Frey",
+			"speaker", "character", "frey",
 			"text", "Indeed. The Aesir are warrior gods, while we, the Vanir, are deities of fertility and magic. For all our power, I am afraid these mortal dwarves are better craftsmen than we are. I am sending you to their world to request the dwarves known as the Brisings to create the fetter for us. As you know, as deities we cannot enter material worlds. This task must fall to you, a gifted mortal, a planewalker."
 		},
 		{
-			"speaker", "character", "Skirnir",
+			"speaker", "character", "skirnir",
 			"text", "Yes, master.",
 			"option-effects", {
 				function(s)
@@ -66,27 +66,27 @@ DefineDialogue("freys-messenger-skirnir-sent-to-nidavellir", { -- based on the m
 DefineDialogue("freys-messenger-skirnir-contacts-the-brisings", { -- based on the myth of the binding of Fenrir; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 35.
 	Nodes = {
 		{
-			"speaker", "character", "Skirnir",
+			"speaker", "character", "skirnir",
 			"text", "Greetings, noble dwarves. I am Skirnir, and I was sent to you by my master, a Vanir god. My people call him Fraujaz, though others know him as Frey."
 		},
 		{
-			"speaker", "character", "Nar",
+			"speaker", "character", "nar",
 			"text", "Welcome, Skirnir the giant-gnome, it is a blessing to speak with a servant of Frey. Our priests have foretold your coming. What is it that the gods desire from us?"
 		},
 		{
-			"speaker", "character", "Skirnir",
+			"speaker", "character", "skirnir",
 			"text", "The beast Fenrir imperils Asgard, but cannot be slain lest its evil blood taint the land. It must be bound with a fetter - but so far none have been strong enough to contain it. My master believes your clansfolk sufficiently skilled to craft the masterful chain which the gods require."
 		},
 		{
-			"speaker", "character", "Nar",
+			"speaker", "character", "nar",
 			"text", "Very well. We are fit for the job, you will find no better smiths than us. But there's the matter of, you see, the reward..."
 		},
 		{
-			"speaker", "character", "Skirnir",
+			"speaker", "character", "skirnir",
 			"text", "A fair question. The gods have allowed me to offer you 10,000 gold pieces - given from the coffers of their priesthoods throughout this world."
 		},
 		{
-			"speaker", "character", "Nar",
+			"speaker", "character", "nar",
 			"text", "In that case - we agree. Nain! Niping! Call the others, we have some work to do!",
 			"option-effects", {
 				function(s)
@@ -100,19 +100,19 @@ DefineDialogue("freys-messenger-skirnir-contacts-the-brisings", { -- based on th
 DefineDialogue("freys-messenger-skirnir-returns-with-the-fetter", { -- based on the myth of the binding of Fenrir; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 35.
 	Nodes = {
 		{
-			"speaker", "character", "Skirnir",
+			"speaker", "character", "skirnir",
 			"text", "Master Fraujaz, I have returned with the fetter!"
 		},
 		{
-			"speaker", "character", "Frey",
+			"speaker", "character", "frey",
 			"text", "Excellent, my brave Skirnir! It seems so light and yet strong... How did the dwarves fashion it?"
 		},
 		{
-			"speaker", "character", "Skirnir",
+			"speaker", "character", "skirnir",
 			"text", "They would not let me in to their secrets... all I could gather is that their runesmiths imbued it with powerful incantations."
 		},
 		{
-			"speaker", "character", "Frey",
+			"speaker", "character", "frey",
 			"text", "It is no matter. What is important is that Fenrir shall now be bound!"
 		}
 	}
@@ -121,11 +121,11 @@ DefineDialogue("freys-messenger-skirnir-returns-with-the-fetter", { -- based on 
 DefineDialogue("freys-messenger-njords-concern", { -- based on the myth of Skirnir's journey; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 54; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 108.
 	Nodes = {
 		{
-			"speaker", "character", "Njord",
+			"speaker", "character", "njord",
 			"text", "Skirnir, something is wrong with my son, Fraujaz. He neither eats nor sleeps, and refuses to tell me what is troubling him. Perhaps he will confide in you, his trusted servant. Try and talk to him!"
 		},
 		{
-			"speaker", "character", "Skirnir",
+			"speaker", "character", "skirnir",
 			"text", "I will do so, great Nerthiwiz. And yet... I expect ill words to come out of his mouth."
 		}
 	}
@@ -134,31 +134,31 @@ DefineDialogue("freys-messenger-njords-concern", { -- based on the myth of Skirn
 DefineDialogue("freys-messenger-freys-longing", { -- based on the myth of Skirnir's journey; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 54-55; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 109.
 	Nodes = {
 		{
-			"speaker", "character", "Skirnir",
+			"speaker", "character", "skirnir",
 			"text", "Master Fraujaz, why do you remain day after day shut away from the other gods, and refuse to eat or sleep?"
 		},
 		{
-			"speaker", "character", "Frey",
+			"speaker", "character", "frey",
 			"text", "Speaking to others would do me no good. No matter how beautiful sunshine is, my world is filled with sadness."
 		},
 		{
-			"speaker", "character", "Skirnir",
+			"speaker", "character", "skirnir",
 			"text", "You can trust me, no matter what it is. I am your faithful servant."
 		},
 		{
-			"speaker", "character", "Frey",
+			"speaker", "character", "frey",
 			"text", "Skirnir... my heart aches. I secretly got into Wodanaz's hall of Valaskjalf, and sat in his high seat where many realms can be seen. I looked into Jotunheim... and saw her. So beautiful, the daughter of a mighty ettin. I could only stare and stare... I long for her! I love her... and the gods would hardly accept my union with a mortal, let alone an ettin!"
 		},
 		{
-			"speaker", "character", "Frey",
+			"speaker", "character", "frey",
 			"text", "Damn it all! I must have her. Skirnir, go to Jotunheim and bring her to me. Do whatever it takes, and I will give you great rewards."
 		},
 		{
-			"speaker", "character", "Skirnir",
+			"speaker", "character", "skirnir",
 			"text", "Yes, master. But I will need your sword, as without its powers against ettins I may not succeed in this perilous task. It could also be a fitting reward for this dangerous deed."
 		},
 		{
-			"speaker", "character", "Frey",
+			"speaker", "character", "frey",
 			"text", "Take it. Once you bring the beautiful Gerd to me, you will have earned the permanent possession of the sword."
 		}
 	}
@@ -168,27 +168,27 @@ DefineDialogue("freys-messenger-freys-longing", { -- based on the myth of Skirni
 DefineDialogue("freys-messenger-skirnir-meets-gerd", { -- based on the myth of Skirnir's journey; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 56-58; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 113-119.
 	Nodes = {
 		{
-			"speaker", "character", "Gerd",
+			"speaker", "character", "gerd",
 			"text", "Who are you, who dares approach my hall? An elf, one of the Aesir, or a wise member of the Vanir?"
 		},
 		{
-			"speaker", "character", "Skirnir",
+			"speaker", "character", "skirnir",
 			"text", "I am neither an elf nor a god. I am Skirnir, messenger of the god Fraujaz. A planewalker - like you, noble seeress. I bring eleven golden apples, all yours if you promise yourself to Fraujaz, whom you know as Frey. I also offer you the magnificent ring, Draupnir, with its divine golden sparkle."
 		},
 		{
-			"speaker", "character", "Gerd",
+			"speaker", "character", "gerd",
 			"text", "I will take neither the apples nor the ring. Nor will I promise myself to anyone, I cannot be bought. I have seen Frey in my dreams, and yet he never says me a word. He must wish me ill things."
 		},
 		{
-			"speaker", "character", "Skirnir",
+			"speaker", "character", "skirnir",
 			"text", "He has no sinister intent, I can assure you. Frey's heart is heavy with longing, his love for you has taken away the words from his lips. He knows this union will not be well-accepted by the other gods, and yet he is determined to be with you."
 		},
 		{
-			"speaker", "character", "Gerd",
+			"speaker", "character", "gerd",
 			"text", "Tell him... I will meet him secretly in Asgard, nine nights from now. Never did I think that I could fall in love for an elf, or one of the Vanir..."
 		},
 		{
-			"speaker", "character", "Skirnir",
+			"speaker", "character", "skirnir",
 			"text", "I will ride fast back to Asgard, to let Frey know of the news!"
 		}
 	}
@@ -197,15 +197,15 @@ DefineDialogue("freys-messenger-skirnir-meets-gerd", { -- based on the myth of S
 DefineDialogue("freys-messenger-skirnir-returns-with-gerds-message", { -- based on the myth of Skirnir's journey; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 58; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 119-120.
 	Nodes = {
 		{
-			"speaker", "character", "Frey",
+			"speaker", "character", "frey",
 			"text", "Skirnir! Tell me, before you do anything else, how did you fare in Jotunheim?"
 		},
 		{
-			"speaker", "character", "Skirnir",
+			"speaker", "character", "skirnir",
 			"text", "I spoke to Gerd, and she will meet you here in secret nine nights from now."
 		},
 		{
-			"speaker", "character", "Frey",
+			"speaker", "character", "frey",
 			"text", "Ah! One night is so long, let alone two... How can I bear more than three? Anyhow, you have done well Skirnir, and I am grateful."
 		}
 	}

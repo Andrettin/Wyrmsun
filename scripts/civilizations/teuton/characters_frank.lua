@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCharacter("Chilperich", {
+DefineCharacter("chilperich", {
 	Name = "Chilperich",
 	Gender = "male",
 	Type = "unit-frank-horseman",
@@ -38,7 +38,7 @@ DefineCharacter("Chilperich", {
 --	Persistent = true
 })
 
-DefineCharacter("Gunthram", {
+DefineCharacter("gunthram", {
 	Name = "Gunthram",
 	Gender = "male",
 	Type = "unit-frank-horseman",
@@ -51,7 +51,7 @@ DefineCharacter("Gunthram", {
 --	Persistent = true
 })
 
-DefineCharacter("Sigibert", {
+DefineCharacter("sigibert", {
 	Name = "Sigibert",
 	Gender = "male",
 	Type = "unit-frank-horseman",

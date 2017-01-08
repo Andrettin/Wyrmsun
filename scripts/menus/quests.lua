@@ -161,6 +161,7 @@ function RunQuestMenu(world)
 
 	local custom_heroes = GetCustomHeroes()
 	local hero_list = {}
+	local hero_name_list = {}
 	for i=1,table.getn(custom_heroes) do
 		if (
 			(world == "Earth" and (GetCustomHeroData(custom_heroes[i], "Civilization") == "germanic" or GetCustomHeroData(custom_heroes[i], "Civilization") == "teuton"))
@@ -173,9 +174,13 @@ function RunQuestMenu(world)
 	end
 	local hero_dd
 	table.sort(hero_list)
+	for i=1,table.getn(hero_list) do
+		table.insert(hero_name_list, GetCustomHeroData(hero_list[i], "FullName"))
+	end
 	table.insert(hero_list, "") -- to allow players to choose having no custom hero selected
+	table.insert(hero_name_list, "")
 	menu:addLabel(_("Custom Hero:"), offx + 30, offy + (10 + 300) - 20, Fonts["game"], false)
-	hero_dd = menu:addDropDown(hero_list, offx + 30, offy + 10 + 300,
+	hero_dd = menu:addDropDown(hero_name_list, offx + 30, offy + 10 + 300,
 		function(dd)
 			SetCurrentCustomHero(hero_list[hero_dd:getSelected() + 1])
 			menu:stop()
@@ -190,14 +195,6 @@ function RunQuestMenu(world)
 		end
 	)
 	
-	if (GetCurrentCustomHero() ~= "" and GetCustomHeroData(GetCurrentCustomHero(), "Civilization") == "germanic" and GetQuestData("gylves-realm", "Completed")) then
-		menu:addFullButton(_("~!Advance Hero Civilization"), "a", offx + 208 - 226, offy + 212 + (36 * 4),
-			function()
-				CustomHeroCivilizationAdvancementMenu(world, menu)
-			end
-		)
-	end
-
 	menu:addFullButton(_("~!Delete Custom Hero"), "d", offx + 208 + 226, offy + 212 + (36 * 4),
 		function()
 			if (GetCurrentCustomHero() ~= "") then

@@ -145,7 +145,7 @@ SetMapTemplateUnit("earth", "unit-teuton-temple", "burgundia", {4006, 1052}, 561
 -- Orléans / Aurehani
 SetMapTemplateFactionCulturalSettlementName("earth", "Orleans", {3884, 961}, "france") -- "Orléans"
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "burgundia", {3884, 961}, 561) -- Chlothar (Frankish king) died in 561, and Orléans went to his son Gunthram; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328; Gregory of Tours, "History of the Franks", IV.22.
-SetMapTemplateHero("earth", "Gunthram", "burgundia", {3884, 961}, 561, 592)
+SetMapTemplateHero("earth", "gunthram", "burgundia", {3884, 961}, 561, 592)
 
 -- Paris / Lutetia
 SetMapTemplateCulturalSettlementName("earth", "Lutetia", {3891, 937}, "latin") -- Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -169,7 +169,7 @@ SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {3930, 926}, 395, 526)
 SetMapTemplateUnit("earth", "unit-teuton-temple", "francia", {3930, 926}, 526, 561) -- Reims was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "austrasia", {3930, 926}, 561) -- Chlothar (Frankish king) died in 561, and Reims went to his son Sigibert, becoming his capital; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328; Gregory of Tours, "History of the Franks", IV.22.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "austrasia", {3930, 926}, 561)
-SetMapTemplateHero("earth", "Sigibert", "austrasia", {3930, 926}, 561, 575)
+SetMapTemplateHero("earth", "sigibert", "austrasia", {3930, 926}, 561, 575)
 
 -- Rodez / Ruthenis
 SetMapTemplateFactionCulturalSettlementName("earth", "Rodez", {3895, 1030}, "france")
@@ -231,7 +231,7 @@ SetMapTemplateUnit("earth", "unit-teuton-temple", "neustria", {3867, 1048}, 561)
 -- Tournai / Tornacum
 SetMapTemplateFactionCulturalSettlementName("earth", "Tournai", {3917, 896}, "france")
 SetMapTemplateUnit("earth", "unit-teuton-farm", "salia", {3917, 896}, 561) -- Tornacum went to Chilperich when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-SetMapTemplateHero("earth", "Chilperich", "salia", {3917, 896}, 561, 584)
+SetMapTemplateHero("earth", "chilperich", "salia", {3917, 896}, 561, 584)
 
 -- Tours / Turones
 SetMapTemplateFactionCulturalSettlementName("earth", "Tours", {3857, 971}, "france")

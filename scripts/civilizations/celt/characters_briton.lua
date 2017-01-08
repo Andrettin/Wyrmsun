@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCharacter("Teyrnon Twryf Liant", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 29.
+DefineCharacter("teyrnon-twryf-liant", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 29.
 	Name = "Teyrnon Twryf Liant",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -36,7 +36,7 @@ DefineCharacter("Teyrnon Twryf Liant", { -- Source: Bernhard Maier (trans.), "Da
 	}
 })
 
-DefineCharacter("Pendaran Dyfed", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 21.
+DefineCharacter("pendaran-dyfed", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 21.
 	Name = "Pendaran Dyfed",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -44,7 +44,7 @@ DefineCharacter("Pendaran Dyfed", { -- Source: Bernhard Maier (trans.), "Das Sag
 	ProvinceOfOrigin = "Dyfed"
 })
 
-DefineCharacter("Casnar Wledig", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 35.
+DefineCharacter("casnar-wledig", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 35.
 	Name = "Casnar Wledig",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -52,20 +52,20 @@ DefineCharacter("Casnar Wledig", { -- Source: Bernhard Maier (trans.), "Das Sage
 --	ProvinceOfOrigin = ?
 })
 
-DefineCharacter("Gloyw Wallt Lydan", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 35.
+DefineCharacter("gloyw-wallt-lydan", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 35.
 	Name = "Gloyw Wallt Lydan",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
 --	ProvinceOfOrigin = ?
-	Father = "Casnar Wledig"
+	Father = "casnar-wledig"
 })
 
-DefineCharacter("Gwyn Gohoyw", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 35.
+DefineCharacter("gwyn-gohoyw", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 35.
 	Name = "Gwyn Gohoyw",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
 --	ProvinceOfOrigin = ?
-	Father = "Gloyw Wallt Lydan"
+	Father = "gloyw-wallt-lydan"
 })

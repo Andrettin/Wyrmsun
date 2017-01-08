@@ -26,7 +26,7 @@
 --
 
 -- personnages from the Volsungasaga, presumed Teuton since Sigurd was a Frank
-DefineCharacter("Volsung", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 3; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
+DefineCharacter("volsung", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 3; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
 	Name = "Volsung",
 	Gender = "male",
 	Type = "unit-frank-swordsman",
@@ -35,7 +35,7 @@ DefineCharacter("Volsung", { -- Source: C. Scott Littleton, "The Germanic Sword 
 --	ProvinceOfOrigin = "?"
 })
 
-DefineCharacter("Eylimi Othling", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
+DefineCharacter("eylimi-othling", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
 	Name = "Eylimi",
 	FamilyName = "Othling", -- dynasty name in the Norse myths
 	Gender = "male",
@@ -45,7 +45,7 @@ DefineCharacter("Eylimi Othling", { -- Source: Kevin Crossley-Holland, "The Nors
 	ProvinceOfOrigin = "Zealand" -- since he descends from Halfdan the Old of Denmark
 })
 
-DefineCharacter("Signy Volsung", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, pp. 2-3.
+DefineCharacter("signy-volsung", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, pp. 2-3.
 	Name = "Signy",
 	FamilyName = "Volsung",
 	Gender = "female",
@@ -53,22 +53,22 @@ DefineCharacter("Signy Volsung", { -- Source: C. Scott Littleton, "The Germanic 
 	Civilization = "teuton",
 	Faction = "frank-tribe",
 --	ProvinceOfOrigin = "?",
-	Father = "Volsung"
+	Father = "volsung"
 	-- wedded to Siggeir
 })
 
-DefineCharacter("Siggeir", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, pp. 2-3.
+DefineCharacter("siggeir", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, pp. 2-3.
 	Name = "Siggeir",
 	Gender = "male",
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
 	Faction = "frank-tribe",
 --	ProvinceOfOrigin = "?",
-	DateReferenceCharacter = "Signy Volsung" -- comes from the same generation as Signy Volsung
+	DateReferenceCharacter = "signy-volsung" -- comes from the same generation as Signy Volsung
 	-- wedded to Signy
 })
 
-DefineCharacter("Siegmund Volsung", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 3.
+DefineCharacter("siegmund-volsung", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 3.
 	Name = "Siegmund", -- also known as Sigmund in the Norse myths; tenth and youngest son of Volsung
 	FamilyName = "Volsung",
 	Gender = "male",
@@ -76,10 +76,10 @@ DefineCharacter("Siegmund Volsung", { -- Source: Norman Davies, "Vanished Kingdo
 	Civilization = "teuton",
 	Faction = "frank-tribe",
 --	ProvinceOfOrigin = "?",
-	Father = "Volsung"
+	Father = "volsung"
 })
 
-DefineCharacter("Sieglind Hraudung", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
+DefineCharacter("sieglind-hraudung", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
 	Name = "Sieglind", -- also known as Hjordis in the Norse myths; 
 	FamilyName = "Hraudung", -- dynasty name in the Norse myths (would be better to know the German name to put here, since her given name is in German); she was also an Othling
 	Gender = "female",
@@ -87,10 +87,10 @@ DefineCharacter("Sieglind Hraudung", { -- Source: Norman Davies, "Vanished Kingd
 	Civilization = "teuton", -- Norse?
 	Faction = "frank-tribe", -- seems unlikely to be correct
 	ProvinceOfOrigin = "Zealand", -- since he descends from Halfdan the Old of Denmark
-	Father = "Eylimi Othling"
+	Father = "eylimi-othling"
 })
 
-DefineCharacter("Sinfiotli Volsung", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 3.
+DefineCharacter("sinfiotli-volsung", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 3.
 	Name = "Sinfiotli", -- born out of the incestuous relationship between Siegmund and his sister Signy
 	FamilyName = "Volsung",
 	Gender = "male",
@@ -98,11 +98,11 @@ DefineCharacter("Sinfiotli Volsung", { -- Source: C. Scott Littleton, "The Germa
 	Civilization = "teuton",
 	Faction = "frank-tribe",
 --	ProvinceOfOrigin = "?",
-	Father = "Siegmund Volsung",
-	Mother = "Signy Volsung"
+	Father = "siegmund-volsung",
+	Mother = "signy-volsung"
 })
 
-DefineCharacter("Siegfried Volsung", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94.
+DefineCharacter("siegfried-volsung", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94.
 	Name = "Siegfried", -- Son of Siegmund and Sieglind; Gudrun's husband
 	FamilyName = "Volsung",
 	Gender = "male",
@@ -110,11 +110,11 @@ DefineCharacter("Siegfried Volsung", { -- Source: Norman Davies, "Vanished Kingd
 	Civilization = "teuton",
 	Faction = "frank-tribe",
 --	ProvinceOfOrigin = "?",
-	Father = "Siegmund Volsung",
-	Mother = "Sieglind Hraudung"
+	Father = "siegmund-volsung",
+	Mother = "sieglind-hraudung"
 })
 
-DefineCharacter("Svanhild Volsung", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 226, 536, 538, 542, 546.
+DefineCharacter("svanhild-volsung", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 226, 536, 538, 542, 546.
 	Name = "Svanhild", -- also called Sunilda or Sanielh; in the Norse myths was married to and killed by Jormunrek, but they could hardly have lived at the same time
 	-- suffix is likely the Old Norse noun "Hildr"
 	FamilyName = "Volsung",
@@ -123,11 +123,11 @@ DefineCharacter("Svanhild Volsung", { -- Source: Henry Adams Bellows (transl.), 
 	Civilization = "teuton",
 	Faction = "frank-tribe",
 --	ProvinceOfOrigin = "?",
-	Father = "Siegfried Volsung",
-	Mother = "Gudrun"
+	Father = "siegfried-volsung",
+	Mother = "gudrun"
 })
 
-DefineCharacter("Ricimer", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 96-97.
+DefineCharacter("ricimer", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 96-97.
 	Name = "Ricimer", -- ally of Flavius Aetius and de facto ruler of the Roman Empire at a certain stage; was married to the sister of the Burgundian king Gundioc
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -137,7 +137,7 @@ DefineCharacter("Ricimer", { -- Source: Norman Davies, "Vanished Kingdoms", 2012
 	DeathYear = 472 -- died
 })
 
-DefineCharacter("Adalbert", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 141.
+DefineCharacter("adalbert", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 141.
 	Name = "Adalbert", -- archbishop of Bremen; was requested by Norse people (including from Greenland) to send clergymen to them, which he did
 	Gender = "male",
 	Type = "unit-teuton-priest",
@@ -146,7 +146,7 @@ DefineCharacter("Adalbert", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	DeathYear = 1075 -- died
 })
 
-DefineCharacter("Judith von Babenberg", { -- Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 620.
+DefineCharacter("judith-von-babenberg", { -- Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 620.
 	Name = "Judith",
 	FamilyName = "von Babenberg",
 	Gender = "female",

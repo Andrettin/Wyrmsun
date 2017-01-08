@@ -37,9 +37,7 @@ function CustomHeroCreationMenu(world, quest_menu)
 	local hero_civilization_list = {}
 	if (world == "Earth") then
 		table.insert(hero_civilization_list, "Germanic")
-		if (GetQuestData("gylves-realm", "Completed")) then
-			table.insert(hero_civilization_list, "Teuton")
-		end
+		table.insert(hero_civilization_list, "Teuton")
 	elseif (world == "Nidavellir") then
 		table.insert(hero_civilization_list, "Dwarf")
 		table.insert(hero_civilization_list, "Gnome")
@@ -163,14 +161,17 @@ function CustomHeroCreationMenu(world, quest_menu)
 	
 	menu:addFullButton("Create ~!Hero", "h", 176 - (224 / 2), 352 - 40 * 2,
 		function()
-			local hero_full_name = hero_name:getText()
+			local hero_ident = hero_name:getText()
 			if (hero_family_name:getText() ~= "") then
-				hero_full_name = hero_full_name .. " " .. hero_family_name:getText()
+				hero_ident = hero_ident .. " " .. hero_family_name:getText()
 			end
+			
+			hero_ident = string.lower(string.gsub(hero_ident, " ", "-"))
+			hero_ident = "custom-" .. hero_ident
 			
 			if (hero_name:getText() == "") then
 				GenericDialog("Error", "The hero's name cannot be empty.")
-			elseif (GetArrayIncludes(GetCustomHeroes(), hero_full_name, true)) then
+			elseif (GetArrayIncludes(GetCustomHeroes(), hero_ident, true)) then
 				GenericDialog("Error", "There is already another custom hero with that combination of name and surname.")
 			elseif (IsNameValidForCustomHero(hero_name:getText(), hero_family_name:getText()) == false) then
 				GenericDialog("Error", "The custom hero's name is invalid.")
@@ -185,89 +186,8 @@ function CustomHeroCreationMenu(world, quest_menu)
 				if (table.getn(variation_list) > 0) then
 					hero_data.HairVariation = string.lower(string.gsub(variation_list[variation:getSelected() + 1], " ", "-"))
 				end
-				DefineCustomHero(hero_full_name, hero_data)
-				SaveCustomHero(hero_full_name)
-				menu:stop()
-				quest_menu:stop()
-				RunQuestMenu(world)
-			end
-		end
-	)
-	menu:addFullButton("~!Cancel", "c", 176 - (224 / 2), 352 - 40 * 1,
-		function()
-			menu:stop()
-		end
-	)
-	menu:run()
-end
-
-function CustomHeroCivilizationAdvancementMenu(world, quest_menu)
-	local menu = WarGameMenu(panel(5))
-	menu:setSize(352, 352)
-    menu:setPosition((Video.Width - menu:getWidth()) / 2, (Video.Height - menu:getHeight()) / 2)
-	menu:addLabel(_("Advance Hero Civilization"), 176, 11)
-	
-	local sizeX = 352
-	local sizeY = 352
-
-	local hero_civilization_list = {}
-	if (GetCustomHeroData(GetCurrentCustomHero(), "Civilization") == "germanic" and GetQuestData("gylves-realm", "Completed")) then
-		table.insert(hero_civilization_list, "Teuton")
-	end
-	
-	local hero_name
-	local hero_family_name
-	local hero_civilization
-
-	local function CivilizationChanged()
-		local generated_personal_name = ""
-		while (generated_personal_name == "" or GetArrayIncludes(GetCustomHeroes(), generated_personal_name)) do
-			local hero_type = GetCivilizationClassUnitType(GetUnitTypeData(GetCustomHeroData(GetCurrentCustomHero(), "Type"), "Class"), string.lower(hero_civilization_list[hero_civilization:getSelected() + 1]))
-			local language = GetCivilizationData(string.lower(hero_civilization_list[hero_civilization:getSelected() + 1]), "Language")
-			if (GetUnitTypeData(hero_type, "Faction") ~= "") then
-				language = GetFactionData(string.lower(hero_civilization_list[hero_civilization:getSelected() + 1]), GetUnitTypeData(hero_type, "Faction"), "Language")
-			end
-			generated_personal_name = GeneratePersonalName(hero_type)
-		end
-		hero_name:setText(generated_personal_name)
-	end
-	
-	menu:addLabel(_("Name:"), 10, 12 + 36 * 1, Fonts["game"], false)
-	hero_name = menu:addTextInputField("", (sizeX / 2) - 60 - 10, 11 + 36 * 1, 120)
-
-	menu:addLabel(_("Surname:"), 10, 12 + 36 * 2, Fonts["game"], false)
-	hero_family_name = menu:addTextInputField("", (sizeX / 2) - 60 - 10, 11 + 36 * 2, 120)
-
-	menu:addLabel(_("Civilization:"), 10, 14 + 36 * 3, Fonts["game"], false)
-	hero_civilization = menu:addDropDown(hero_civilization_list, (sizeX / 2) - 60 - 10, 11 + 36 * 3, function(dd) CivilizationChanged() end)
-	hero_civilization:setSize(236, 20)
-	
-	hero_civilization:setSelected(0)
-	CivilizationChanged()
-	
-	menu:addFullButton("~!Update Hero", "u", 176 - (224 / 2), 352 - 40 * 2,
-		function()
-			local hero_full_name = hero_name:getText()
-			if (hero_family_name:getText() ~= "") then
-				hero_full_name = hero_full_name .. " " .. hero_family_name:getText()
-			end
-			
-			local non_current_custom_heroes = {}
-			local custom_heroes = GetCustomHeroes()
-			for i=1,table.getn(custom_heroes) do
-				if (GetCurrentCustomHero() ~= custom_heroes[i]) then
-					table.insert(non_current_custom_heroes, custom_heroes[i])
-				end
-			end
-			
-			if (hero_name:getText() == "") then
-				GenericDialog("Error", "The hero's name cannot be empty.")
-			elseif (GetArrayIncludes(non_current_custom_heroes, hero_full_name, true)) then
-				GenericDialog("Error", "There is already another custom hero with that combination of name and surname.")
-			elseif (IsNameValidForCustomHero(hero_name:getText(), hero_family_name:getText()) == false) then
-				GenericDialog("Error", "The custom hero's name is invalid.")
-			else
-				ChangeCustomHeroCivilization(GetCurrentCustomHero(), string.lower(hero_civilization_list[hero_civilization:getSelected() + 1]), hero_name:getText(), hero_family_name:getText())
+				DefineCustomHero(hero_ident, hero_data)
+				SaveCustomHero(hero_ident)
 				menu:stop()
 				quest_menu:stop()
 				RunQuestMenu(world)

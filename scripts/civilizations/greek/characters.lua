@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCharacter("Strabo", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 222.
+DefineCharacter("strabo", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 222.
 	Name = "Strabo",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -36,7 +36,7 @@ DefineCharacter("Strabo", { -- Source: H. H. Howorth, "The Ethnology of Germany,
 	AuthoredWorks = {"upgrade-work-geography"}
 })
 
-DefineCharacter("Galen of Pergamon", { -- Source: "Ancient Warfare VII.6", 2013, p. 10.
+DefineCharacter("galen-of-pergamon", { -- Source: "Ancient Warfare VII.6", 2013, p. 10.
 	Name = "Galen",
 	ExtraName = "of Pergamon",
 	Gender = "male",
@@ -47,7 +47,7 @@ DefineCharacter("Galen of Pergamon", { -- Source: "Ancient Warfare VII.6", 2013,
 	DeathYear = 210 -- died
 })
 
-DefineCharacter("Zosimus", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 320.
+DefineCharacter("zosimus", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 320.
 	Name = "Zosimus",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",

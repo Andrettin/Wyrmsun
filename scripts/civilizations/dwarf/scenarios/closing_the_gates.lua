@@ -85,7 +85,7 @@ AddTrigger("closing-the-gates-rugnur-dies",
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 copper and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and FindHero("Rugnur", GetFactionPlayer("Norlund Clan")) == nil) then
+		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 copper and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and FindHero("rugnur", GetFactionPlayer("Norlund Clan")) == nil) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
@@ -129,7 +129,7 @@ AddTrigger("closing-the-gates-introduction",
 		end
 		if (GetFactionExists("Shinsplitter Clan")) then
 			for i=0, (PlayerMax - 2) do
-				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga") and FindHero("Rugnur", i) ~= nil and FindHero("Baglur", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(PlayerNumNeutral, "UnitTypesCount", "unit-glyph") >= 6 and PlayerHasObjective(i, "- Have one unit standing on each glyph at the same time") == false) then
+				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga") and FindHero("rugnur", i) ~= nil and FindHero("baglur", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(PlayerNumNeutral, "UnitTypesCount", "unit-glyph") >= 6 and PlayerHasObjective(i, "- Have one unit standing on each glyph at the same time") == false) then
 					player = i
 					return true
 				end
@@ -151,7 +151,7 @@ AddTrigger("closing-the-gates-introduction",
 			{"~!Continue"},
 			{function(s)
 			Event(
-				FindHero("Rugnur"),
+				FindHero("rugnur"),
 				"These Shinsplitter raiders are right behind me! We have to go warn the council of this attack...!",
 				event_player,
 				{"~!Continue"},
@@ -163,7 +163,7 @@ AddTrigger("closing-the-gates-introduction",
 					{"~!Continue"},
 					{function(s)
 					Event(
-						FindHero("Rugnur"),
+						FindHero("rugnur"),
 						"Aye, that sounds good. I'll stay here and try to defend the gates...",
 						event_player,
 						{"~!Continue"},
@@ -175,7 +175,7 @@ AddTrigger("closing-the-gates-introduction",
 							{"~!Continue"},
 							{function(s)
 							Event(
-								FindHero("Rugnur"),
+								FindHero("rugnur"),
 								"(~<Gulp~>)",
 								event_player,
 								{"~!Continue"},
@@ -187,7 +187,7 @@ AddTrigger("closing-the-gates-introduction",
 									{"~!Continue"},
 									{function(s)
 									Event(
-										FindHero("Rugnur"),
+										FindHero("rugnur"),
 										"Um... on what terms?",
 										event_player,
 										{"~!Continue"},
@@ -199,19 +199,19 @@ AddTrigger("closing-the-gates-introduction",
 											{"~!Continue"},
 											{function(s)
 											Event(
-												FindHero("Baglur"),
+												FindHero("baglur"),
 												"Wait! Rugnur, dinna' they tell ye ~<anything~> when ye took command here?!",
 												event_player,
 												{"~!Continue"},
 												{function(s)
 												Event(
-													FindHero("Rugnur"),
+													FindHero("rugnur"),
 													"Not really. This was supposedly a time of peace. Who are ye?",
 													event_player,
 													{"~!Continue"},
 													{function(s)
 													Event(
-														FindHero("Baglur"),
+														FindHero("baglur"),
 														"Argh! I'm a retired warrior... it looks like I'll ha' to come out and help ye, else we'll be overrun by these damn raiders... Well, listen here. This entrance to the city can be closed. There's a gate. If we can close it, the raiders will no' be able to enter. And ye Shinsplitters; begone from here!",
 														event_player,
 														{"~!Continue"},
@@ -229,37 +229,37 @@ AddTrigger("closing-the-gates-introduction",
 															possible_options,
 															{function(s)
 															Event(
-																FindHero("Rugnur"),
+																FindHero("rugnur"),
 																"Baglur, how do ye close the gates?",
 																event_player,
 																{"~!Continue"},
 																{function(s)
 																Event(
-																	FindHero("Baglur"),
+																	FindHero("baglur"),
 																	"Och, well that's the difficulty. It's an impregnable gate, made of thick layers of solid rock. Almost indestructible. But that means it can only be closed by a special mechanism. Ye need to position a warrior on each of the six glyphs. When all are occupied, the gates wi' close. Then the Shinsplitters will be shut out of the caves forever, at least through this entrance.",
 																	event_player,
 																	{"~!Continue"},
 																	{function(s)
 																	Event(
-																		FindHero("Rugnur"),
+																		FindHero("rugnur"),
 																		"Don't we have troops positioned near these glyphs, to unlock them?",
 																		event_player,
 																		{"~!Continue"},
 																		{function(s)
 																		Event(
-																			FindHero("Baglur"),
+																			FindHero("baglur"),
 																			"Och, well, no. Lately goblins have been more in charge of those caves where the glyphs are than we dwarves have.",
 																			event_player,
 																			{"~!Continue"},
 																			{function(s)
 																			Event(
-																				FindHero("Rugnur"),
+																				FindHero("rugnur"),
 																				"Well, where are they located?",
 																				event_player,
 																				{"~!Continue"},
 																				{function(s)
 																				Event(
-																					FindHero("Baglur"),
+																					FindHero("baglur"),
 																					"Two are down a side passage in the northwest, another two are in a similar location in the southeast, and two are right next to the front gate.",
 																					event_player,
 																					{"~!Continue"},
@@ -271,7 +271,7 @@ AddTrigger("closing-the-gates-introduction",
 																						{"~!Continue"},
 																						{function(s)
 																						Event(
-																							FindHero("Rugnur"),
+																							FindHero("rugnur"),
 																							"Ye may be more powerful than us, but I doubt even ye can blast through our stonecraft. We refuse - now let's close these gates!",
 																							event_player,
 																							{"~!Continue"},
@@ -350,7 +350,7 @@ AddTrigger("closing-the-gates-glyphs-activated",
 			return false
 		end
 		for i=0, (PlayerMax - 2) do
-			if (PlayerHasObjective(i, "- Have one unit standing on each glyph at the same time") and GetPlayerData(i, "RaceName") == "dwarf" and FindHero("Rugnur", i) ~= nil and GetNumUnitsAt(i, "any", {5, 11}, {5, 11}) > 0 and GetNumUnitsAt(i, "any", {38, 53}, {38, 53}) > 0 and GetNumUnitsAt(i, "any", {28, 33}, {28, 33}) > 0 and GetNumUnitsAt(i, "any", {15, 24}, {15, 24}) > 0 and GetNumUnitsAt(i, "any", {23, 7}, {23, 7}) > 0 and GetNumUnitsAt(i, "any", {51, 43}, {51, 43}) > 0) then
+			if (PlayerHasObjective(i, "- Have one unit standing on each glyph at the same time") and GetPlayerData(i, "RaceName") == "dwarf" and FindHero("rugnur", i) ~= nil and GetNumUnitsAt(i, "any", {5, 11}, {5, 11}) > 0 and GetNumUnitsAt(i, "any", {38, 53}, {38, 53}) > 0 and GetNumUnitsAt(i, "any", {28, 33}, {28, 33}) > 0 and GetNumUnitsAt(i, "any", {15, 24}, {15, 24}) > 0 and GetNumUnitsAt(i, "any", {23, 7}, {23, 7}) > 0 and GetNumUnitsAt(i, "any", {51, 43}, {51, 43}) > 0) then
 				player = i
 				return true
 			end
@@ -364,13 +364,13 @@ AddTrigger("closing-the-gates-glyphs-activated",
 		end
 
 		Event(
-			FindHero("Rugnur"),
+			FindHero("rugnur"),
 			"We have everyone positioned on the glyphs! What do we do now?",
 			event_player,
 			{"~!Continue"},
 			{function(s)
 			Event(
-				FindHero("Baglur"),
+				FindHero("baglur"),
 				"Just watch. The gates wi' close very soon. Then the raiders outside - and, unfortunately, our clansfolk who are still out there - wi' become irrelevant.",
 				event_player,
 				{"~!Continue"},
@@ -382,13 +382,13 @@ AddTrigger("closing-the-gates-glyphs-activated",
 					{"~!Continue"},
 					{function(s)
 					Event(
-						FindHero("Baglur"),
+						FindHero("baglur"),
 						"If that is what ye choose to do, fine, but be prepared to wait for many years.",
 						event_player,
 						{"~!Continue"},
 						{function(s)
 						Event(
-							FindHero("Rugnur"),
+							FindHero("rugnur"),
 							"Well, now I should go down to the city and report. I'm late already...",
 							player,
 							{"~!Continue"},
@@ -430,7 +430,7 @@ AddTrigger("closing-the-gates-glyphs-activated",
 													{"~!Continue"},
 													{function(s)
 													Event(
-														FindHero("Rugnur"),
+														FindHero("rugnur"),
 														"Hey, Durstorn, have we started yet? King Pypo came by just now, wanted to talk to ye...",
 														player,
 														{"~!Continue"},
@@ -442,7 +442,7 @@ AddTrigger("closing-the-gates-glyphs-activated",
 															{"~!Continue"},
 															{function(s)
 															Event(
-																FindHero("Rugnur"),
+																FindHero("rugnur"),
 																"Huh? Didn't a messenger come and tell ye?",
 																player,
 																{"~!Continue"},
@@ -454,7 +454,7 @@ AddTrigger("closing-the-gates-glyphs-activated",
 																	{"~!Continue"},
 																	{function(s)
 																	Event(
-																		FindHero("Baglur"),
+																		FindHero("baglur"),
 																		"I think ye'd better let me explain. King Pypo I of Untersberg came to the gate. Then we had to close it, which took considerable time.",
 																		player,
 																		{"~!Continue"},
@@ -466,7 +466,7 @@ AddTrigger("closing-the-gates-glyphs-activated",
 																			{"~!Continue"},
 																			{function(s)
 																			Event(
-																				FindHero("Rugnur"),
+																				FindHero("rugnur"),
 																				"He wanted to make a deal with us. He gave us a magnificent stone, called the 'Ruby of Fire', and told us to make a scepter out of it, to symbolize his power, or something like that. We closed the doors because Shinsplitter raiders were attacking us.",
 																				player,
 																				{"~!Continue"},
@@ -478,7 +478,7 @@ AddTrigger("closing-the-gates-glyphs-activated",
 																					{"~!Continue"},
 																					{function(s)
 																					Event(
-																						FindHero("Rugnur"),
+																						FindHero("rugnur"),
 																						"He paid us five thousand silver in advance, and he'll give us five thousand more when we deliver the finished scepter if we are done before he dies.",
 																						player,
 																						{"~!Continue"},
@@ -490,7 +490,7 @@ AddTrigger("closing-the-gates-glyphs-activated",
 																							{"~!Continue"},
 																							{function(s)
 																							Event(
-																								FindHero("Rugnur"),
+																								FindHero("rugnur"),
 																								"Sorry, lord, but he said he would move on to another tribe if I left.",
 																								player,
 																								{"~!Continue"},
@@ -502,7 +502,7 @@ AddTrigger("closing-the-gates-glyphs-activated",
 																									{"~!Continue"},
 																									{function(s)
 																									Event(
-																										FindHero("Baglur"),
+																										FindHero("baglur"),
 																										"Well, since this boy bargained so badly, why not make him fulfill the contract himself? If he fails, it's on his head.",
 																										player,
 																										{"~!Continue"},
@@ -514,7 +514,7 @@ AddTrigger("closing-the-gates-glyphs-activated",
 																											{"~!Continue"},
 																											{function(s)
 																											Event(
-																												FindHero("Baglur"),
+																												FindHero("baglur"),
 																												"Ye mean the insane dwarf who lives in the far north?!",
 																												player,
 																												{"~!Continue"},
@@ -526,7 +526,7 @@ AddTrigger("closing-the-gates-glyphs-activated",
 																													{"~!Continue"},
 																													{function(s)
 																													Event(
-																														FindHero("Rugnur"),
+																														FindHero("rugnur"),
 																														"Very well, my lord. We will go into the north to find Thursagan. Do ye have any idea where he is?",
 																														player,
 																														{"~!Continue"},
@@ -698,8 +698,8 @@ AddTrigger("closing-the-gates-baglur-dies",
 				or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")
 				or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Durstorn and Baglur must survive")
 			)
-			and FindHero("Baglur", GetFactionPlayer("Norlund Clan")) == nil
-			and (GetFactionExists("Baglur") == false or FindHero("Baglur", GetFactionPlayer("Baglur")) == nil)
+			and FindHero("baglur", GetFactionPlayer("Norlund Clan")) == nil
+			and (GetFactionExists("Baglur") == false or FindHero("baglur", GetFactionPlayer("Baglur")) == nil)
 		) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true

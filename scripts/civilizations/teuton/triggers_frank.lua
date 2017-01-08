@@ -28,7 +28,7 @@
 AddTrigger("sigibert-deplores-chilperichs-actions",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "Faction") == "austrasia" and FindHero("Sigibert", i) ~= nil and GetFactionExists("salia") and FindHero("Chilperich", GetFactionPlayer("salia")) ~= nil and GetFactionExists("neustria") and GetFactionExists("burgundia") and FindHero("Gunthram", GetFactionPlayer("burgundia")) ~= nil) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "Faction") == "austrasia" and FindHero("sigibert", i) ~= nil and GetFactionExists("salia") and FindHero("chilperich", GetFactionPlayer("salia")) ~= nil and GetFactionExists("neustria") and GetFactionExists("burgundia") and FindHero("gunthram", GetFactionPlayer("burgundia")) ~= nil) then
 				trigger_player = i
 				return true
 			end
@@ -44,7 +44,7 @@ AddTrigger("sigibert-deplores-chilperichs-actions",
 AddTrigger("sigibert-dies",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "prevent-chilperichs-supremacy") and FindHero("Sigibert", i) == nil) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "prevent-chilperichs-supremacy") and FindHero("sigibert", i) == nil) then
 				trigger_player = i
 				return true
 			end

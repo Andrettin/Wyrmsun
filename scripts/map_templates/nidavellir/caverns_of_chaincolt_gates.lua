@@ -62,7 +62,7 @@ SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-glyph", "", {
 SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-glyph", "", {30, 19})
 
 SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-dwarven-guard-tower", "norlund-clan", {22, 12}, 24)
-SetMapTemplateHero("caverns-of-chaincolt-gates-underground", "Baglur", "norlund-clan", {22, 11}, 24, 40)
+SetMapTemplateHero("caverns-of-chaincolt-gates-underground", "baglur", "norlund-clan", {22, 11}, 24, 40)
 SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-dwarven-guard", "norlund-clan", {10, 13}, 24)
 SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-dwarven-guard", "norlund-clan", {14, 15}, 24)
 SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-dwarven-guard", "norlund-clan", {12, 11}, 24)

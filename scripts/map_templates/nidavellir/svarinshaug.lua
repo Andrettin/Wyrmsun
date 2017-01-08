@@ -32,9 +32,9 @@ SetMapTemplateUnit("nidavellir", "unit-brising-miner", "brising-clan", {568, 207
 SetMapTemplateUnit("nidavellir", "unit-brising-miner", "brising-clan", {568, 207}, -2800, -2799)
 SetMapTemplateUnit("nidavellir", "unit-brising-miner", "brising-clan", {568, 207}, -2800, -2799)
 SetMapTemplateUnit("nidavellir", "unit-brising-miner", "brising-clan", {568, 207}, -2800, -2799)
-SetMapTemplateHero("nidavellir", "Modsognir", "brising-clan", {568, 207}, -2800, -2799)
-SetMapTemplateHero("nidavellir", "Durin", "brising-clan", {568, 207}, -2800, -2799)
-SetMapTemplateHero("nidavellir", "Regin", "brising-clan", {568, 207}, 561, 566) -- Sigibert's campaign begins in 561; Sigibert's encounter with Regin (which causes the latter's death in the end) should take place between Sigibert's initial defeat of the Avars and Chilperich in 561-562, and Sigibert's marriage to Brunichilde in 566
+SetMapTemplateHero("nidavellir", "modsognir", "brising-clan", {568, 207}, -2800, -2799)
+SetMapTemplateHero("nidavellir", "durin", "brising-clan", {568, 207}, -2800, -2799)
+SetMapTemplateHero("nidavellir", "regin", "brising-clan", {568, 207}, 561, 566) -- Sigibert's campaign begins in 561; Sigibert's encounter with Regin (which causes the latter's death in the end) should take place between Sigibert's initial defeat of the Avars and Chilperich in 561-562, and Sigibert's marriage to Brunichilde in 566
 
 SetMapTemplateUnit("nidavellir", "unit-wyrm", "grafvitning-tribe", {539, 174}, -2800, -2799)
 SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "grafvitning-tribe", {539, 174}, -2800, -2799)

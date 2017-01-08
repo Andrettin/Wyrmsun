@@ -49,7 +49,7 @@ if (LoadedGame == false) then
 	
 	if (GrandStrategy == false) then
 		unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Character", "Marbod")
+		SetUnitVariable(unit, "Character", "marbod")
 		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		SetUnitVariable(unit, "Active", false)
@@ -89,7 +89,7 @@ if (LoadedGame == false) then
 		CreateProvinceUnits("Brandenburg", 0, 2)
 		CreateProvinceCustomHero("Brandenburg", 0)
 		unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Character", "Marbod")
+		SetUnitVariable(unit, "Character", "marbod")
 		SetUnitVariable(unit, "Active", false)
 		
 		-- Boii units
@@ -175,13 +175,13 @@ AddTrigger("the-home-of-the-boii-introduction",
 			{"~!Continue"},
 			{function(s)
 			Event(
-				FindHero("Marbod"),
+				FindHero("marbod"),
 				"Germania is under ever-greater peril from the Romans. My warriors, there is no turning back - we must take the Boii's lands, or perish!",
 				player,
 				{"~!Continue"},
 				{function(s)
 				Event(
-					FindHero("Marbod"),
+					FindHero("marbod"),
 					"Warriors from a few other tribes have come to our aid, let us gather forces with them.",
 					player,
 					{"~!Continue"},
@@ -214,7 +214,7 @@ AddTrigger("the-home-of-the-boii-marbods-ambition",
 	end,
 	function()
 		Event(
-			FindHero("Marbod"),
+			FindHero("marbod"),
 			"So near the Romans as we used to be, no realm could succeed and become great. But here... we have a chance.",
 			player,
 			{"~!Continue"},
@@ -245,7 +245,7 @@ AddTrigger("the-home-of-the-boii-marbods-time-in-rome",
 	end,
 	function()
 		Event(
-			FindHero("Marbod"),
+			FindHero("marbod"),
 			"Much did I learn about statecraft and military organization during my younger years in Rome. Already, we have a disciplined army to pursue our dangerous - albeit rewarding - task. The Boii shall be no match for us!",
 			player,
 			{"~!Continue"},
@@ -269,7 +269,7 @@ AddTrigger("the-home-of-the-boii-victory",
 	end,
 	function() 
 		Event(
-			FindHero("Marbod"),
+			FindHero("marbod"),
 			"The Boii's capital has become naught but a burning ruin. On its ashes we shall build our own settlement of Bubienum, the center of our new Marcomannic kingdom!",
 			player,
 			{"~!Continue"},
@@ -292,7 +292,7 @@ AddTrigger("the-home-of-the-boii-marbod-dies",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("Marcomanni Tribe") and PlayerHasObjective(GetFactionPlayer("Marcomanni Tribe"), "- Marbod must survive") and FindHero("Marbod", GetFactionPlayer("Marcomanni Tribe")) == nil) then
+		if (GetFactionExists("Marcomanni Tribe") and PlayerHasObjective(GetFactionPlayer("Marcomanni Tribe"), "- Marbod must survive") and FindHero("marbod", GetFactionPlayer("Marcomanni Tribe")) == nil) then
 			return true
 		end
 		return false
@@ -355,7 +355,7 @@ AddTrigger("the-home-of-the-boii-vandals-found",
 			{"~!Continue"},
 			{function(s)
 				Event(
-					FindHero("Marbod"),
+					FindHero("marbod"),
 					"Tough you are, Vandal warriors! Let us crush some Boii skulls.",
 					player,
 					{"~!Continue"},
@@ -412,7 +412,7 @@ AddTrigger("the-home-of-the-boii-suebi-found",
 		end
 			
 		Event(
-			FindHero("Marbod"),
+			FindHero("marbod"),
 			"Ah, there you are! Warriors of the Semnones, our tribes are Suebic kin. It is only right that we join forces in war.",
 			player,
 			{"~!Continue"},
@@ -482,7 +482,7 @@ AddTrigger("the-home-of-the-boii-lombards-found",
 			{"~!Continue"},
 			{function(s)
 				Event(
-					FindHero("Marbod"),
+					FindHero("marbod"),
 					"Your help is most appreciated, and you shall share in our booty!",
 					player,
 					{"~!Continue"},

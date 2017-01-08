@@ -1587,32 +1587,6 @@ function PersistencyUpdates()
 		SavePreferences()
 	end
 	
-	--[[
-	if (GetCharacterData("Modsognir", "Type") == "unit-dwarven-steelclad") then
-		DefineCharacter("Modsognir", {
-			Type = "unit-brising-steelclad"
-		})
-	end
-	
-	if (GetCharacterData("Durin", "Type") == "unit-dwarven-steelclad") then
-		DefineCharacter("Durin", {
-			Type = "unit-brising-steelclad"
-		})
-	end
-	
-	if (GetCharacterData("Modsognir", "Type") == "unit-dwarven-thane") then
-		DefineCharacter("Modsognir", {
-			Type = "unit-brising-thane"
-		})
-	end
-	
-	if (GetCharacterData("Durin", "Type") == "unit-dwarven-thane") then
-		DefineCharacter("Durin", {
-			Type = "unit-brising-thane"
-		})
-	end
-	--]]
-	
 	if (wyr.preferences.Heroes ~= nil) then
 		for key, value in pairs(wyr.preferences.Heroes) do
 			local hero_type = GetCharacterData(wyr.preferences.Heroes[key].name, "Type")

@@ -185,13 +185,13 @@ if (GrandStrategy == false) then
 
 	if (GetPlayerData(0, "Name") ~= "Shorbear Clan" and GetPlayerData(0, "Name") ~= "Shinsplitter Clan" and (GetThisPlayer() ~= 0 or (PlayerFaction ~= "Shorbear Clan" and PlayerFaction ~= "Shinsplitter Clan"))) then
 		unit = CreateUnit("unit-dwarven-axefighter", 0, {6, 5})
-		SetUnitVariable(unit, "Character", "Rugnur")
+		SetUnitVariable(unit, "Character", "rugnur")
 		unit = CreateUnit("unit-dwarven-steelclad", 0, {6, 5})
-		SetUnitVariable(unit, "Character", "Baglur")
+		SetUnitVariable(unit, "Character", "baglur")
 		unit = CreateUnit("unit-dwarven-thane", 0, {6, 5})
-		SetUnitVariable(unit, "Character", "Thursagan")
+		SetUnitVariable(unit, "Character", "thursagan")
 		unit = CreateUnit("unit-dwarven-thane", 0, {6, 5})
-		SetUnitVariable(unit, "Character", "Durstorn")
+		SetUnitVariable(unit, "Character", "durstorn")
 
 		unit = CreateUnit("unit-dwarven-pathfinder", 0, {6, 5}) -- Noiraran
 		AcquireTrait(unit, "upgrade-keen") -- was loyal and intelligent in Wesnoth
@@ -221,7 +221,7 @@ if (GrandStrategy == false) then
 --	unit = CreateUnit("unit-dwarven-miner", 1, {38, 33})
 --	unit = CreateUnit("unit-dwarven-miner", 1, {38, 33})
 	unit = CreateUnit("unit-dwarven-thane", 1, {36, 33}) -- Glonoin
-	SetUnitVariable(unit, "Character", "Glonoin")
+	SetUnitVariable(unit, "Character", "glonoin")
 	SetUnitVariable(unit, "Active", false)
 
 	-- give a few towers to the Shorbear Clan to make their stronghold less vulnerable at game start
@@ -418,25 +418,25 @@ elseif (GrandStrategyEventMap) then
 	-- Rugnur
 	if (GetProvinceHero("Caverns of Chaincolt", "Rugnur") == 2) then
 		unit = CreateUnit(GetGrandStrategyHeroUnitType("Rugnur"), 0, {6, 5})
-		SetUnitVariable(unit, "Character", "Rugnur")
+		SetUnitVariable(unit, "Character", "rugnur")
 	end
 
 	-- Baglur
 	if (GetProvinceHero("Caverns of Chaincolt", "Baglur") == 2) then
 		unit = CreateUnit(GetGrandStrategyHeroUnitType("Baglur"), 0, {6, 5})
-		SetUnitVariable(unit, "Character", "Baglur")
+		SetUnitVariable(unit, "Character", "baglur")
 	end
 
 	-- Thursagan
 	if (GetProvinceHero("Caverns of Chaincolt", "Thursagan") == 2) then
 		unit = CreateUnit(GetGrandStrategyHeroUnitType("Thursagan"), 0, {6, 5})
-		SetUnitVariable(unit, "Character", "Thursagan")
+		SetUnitVariable(unit, "Character", "thursagan")
 	end
 
 	-- Durstorn
 	if (GetProvinceHero("Caverns of Chaincolt", "Durstorn") == 2) then
 		unit = CreateUnit(GetGrandStrategyHeroUnitType("Durstorn"), 0, {6, 5})
-		SetUnitVariable(unit, "Character", "Durstorn")
+		SetUnitVariable(unit, "Character", "durstorn")
 	end
 	
 	-- Gnomish Envoy

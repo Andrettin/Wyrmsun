@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCharacter("Agniss Tenebris", { -- invented by Jesse Crider
+DefineCharacter("agniss-tenebris", { -- invented by Jesse Crider
 	Name = "Agniss",
 	FamilyName = "Tenebris",
 	Gender = "female",
@@ -43,7 +43,7 @@ DefineCharacter("Agniss Tenebris", { -- invented by Jesse Crider
 	}
 })
 
-DefineCharacter("Dremac Paarsins", { -- invented by Jesse Crider
+DefineCharacter("dremac-paarsins", { -- invented by Jesse Crider
 	Name = "Dremac",
 	FamilyName = "Paarsins",
 	Gender = "male",
@@ -61,7 +61,7 @@ DefineCharacter("Dremac Paarsins", { -- invented by Jesse Crider
 	}
 })
 
-DefineCharacter("Ioun Stilgar", { -- invented by Jesse Crider
+DefineCharacter("ioun-stilgar", { -- invented by Jesse Crider
 	Name = "Ioun",
 	FamilyName = "Stilgar",
 	Gender = "male",
@@ -79,7 +79,7 @@ DefineCharacter("Ioun Stilgar", { -- invented by Jesse Crider
 	}
 })
 
-DefineCharacter("Orza Chahax", { -- invented by Jesse Crider
+DefineCharacter("orza-chahax", { -- invented by Jesse Crider
 	Name = "Orza",
 	FamilyName = "Chahax",
 	Gender = "male",
@@ -97,7 +97,7 @@ DefineCharacter("Orza Chahax", { -- invented by Jesse Crider
 	}
 })
 
-DefineCharacter("Greebo", {
+DefineCharacter("greebo", {
 	Name = "Greebo",
 	Gender = "male",
 	Type = "unit-goblin-spearman",

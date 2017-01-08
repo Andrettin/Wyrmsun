@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCharacter("Snio the Old", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 228.
+DefineCharacter("snio-the-old", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 228.
 	Name = "Snio",
 	ExtraName = "the Old",
 	Gender = "male",
@@ -34,25 +34,25 @@ DefineCharacter("Snio the Old", { -- Source: Snorri Sturlson, "Heimskringla", 18
 	ProvinceOfOrigin = "Finland"
 })
 
-DefineCharacter("Drisa", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 228.
+DefineCharacter("drisa", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 228.
 	Name = "Drisa",
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "finnish", -- presumably
 	ProvinceOfOrigin = "Finland",
-	Father = "Snio the Old"
+	Father = "snio-the-old"
 })
 
-DefineCharacter("Hulda", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 228.
+DefineCharacter("hulda", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 228.
 	Name = "Hulda",
 	Gender = "female",
 	Type = "unit-teuton-priest",
 	Civilization = "finnish", -- presumably
 	ProvinceOfOrigin = "Finland",
-	DateReferenceCharacter = "Drisa" -- placed a charm on Vanland Yngling for Drisa
+	DateReferenceCharacter = "drisa" -- placed a charm on Vanland Yngling for Drisa
 })
 
-DefineCharacter("Froste", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 233.
+DefineCharacter("froste", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 233.
 	Name = "Froste",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -63,12 +63,12 @@ DefineCharacter("Froste", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	}
 })
 
-DefineCharacter("Loge", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 233.
+DefineCharacter("loge", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 233.
 	Name = "Loge",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "finnish", -- presumably
 	ProvinceOfOrigin = "Finland",
-	Father = "Froste"
+	Father = "froste"
 })
 

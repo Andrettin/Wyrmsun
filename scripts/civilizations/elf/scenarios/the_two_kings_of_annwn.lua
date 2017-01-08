@@ -41,19 +41,19 @@ if (LoadedGame == false) then
 	
 	if not (GrandStrategy) then
 		unit = CreateUnit("unit-elven-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Character", "Arawn")
+		SetUnitVariable(unit, "Character", "arawn")
 	elseif (GrandStrategyEventMap) then
 		CreateProvinceUnits("Annwn", 0, 1, false, false)
 		CreateProvinceCustomHero("Annwn", 0)
 	
 		if (FactionHasHero("elf", "annwn", "Arawn")) then
 			unit = CreateUnit(GetGrandStrategyHeroUnitType("Arawn"), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-			SetUnitVariable(unit, "Character", "Arawn")
+			SetUnitVariable(unit, "Character", "arawn")
 		end
 	end
 
 	unit = CreateUnit("unit-elven-swordsman", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-	SetUnitVariable(unit, "Character", "Hafgan")
+	SetUnitVariable(unit, "Character", "hafgan")
 	SetUnitVariable(unit, "Active", false)
 	
 	unit = CreateUnit("unit-elven-swordsman", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
@@ -66,7 +66,7 @@ RemovePlayerObjective(GetFactionPlayer("Annwn (Arawn)"), "- Defeat your rivals")
 
 AddTrigger("the-two-kingds-of-annwn-introduction",
 	function()
-		if (FindHero("Hafgan", GetFactionPlayer("Annwn (Hafgan)")) == nil) then
+		if (FindHero("hafgan", GetFactionPlayer("Annwn (Hafgan)")) == nil) then
 			player = GetThisPlayer()
 			return true
 		end
@@ -80,7 +80,7 @@ AddTrigger("the-two-kingds-of-annwn-introduction",
 
 AddTrigger("the-two-kingds-of-annwn-victory",
 	function()
-		if (PlayerHasObjective(GetThisPlayer(), "- Arawn must survive") and FindHero("Arawn", GetThisPlayer()) == nil) then
+		if (PlayerHasObjective(GetThisPlayer(), "- Arawn must survive") and FindHero("arawn", GetThisPlayer()) == nil) then
 			player = GetThisPlayer()
 			return true
 		end

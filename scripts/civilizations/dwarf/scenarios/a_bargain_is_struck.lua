@@ -49,7 +49,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 			return false
 		end
 		for i=0, (PlayerMax - 2) do
-			if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and FindHero("Rugnur", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetCivilizationExists("gnome") and GetNumRivals(i) >= 2 and not Players[i]:IsEnemy(Players[GetCivilizationPlayer("gnome")]) and GetPlayerData(i, "UnitTypesCount", "unit-gnomish-caravan") < 1) then
+			if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and FindHero("rugnur", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetCivilizationExists("gnome") and GetNumRivals(i) >= 2 and not Players[i]:IsEnemy(Players[GetCivilizationPlayer("gnome")]) and GetPlayerData(i, "UnitTypesCount", "unit-gnomish-caravan") < 1) then
 				player = i
 				
 				-- this check is necessary to see if there is a viable raider player (so that the game doesn't crash if the only other dwarven clan are the Shorbear)
@@ -74,7 +74,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 	end,
 	function() 
 		local gnomish_monarch_player = GetCivilizationPlayer("gnome")
-		local rugnur = FindHero("Rugnur")
+		local rugnur = FindHero("rugnur")
 		local pypo_i = FindUnit("unit-gnomish-master-at-arms", gnomish_monarch_player)
 		unit = CreateUnit("unit-revealer", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
 		Event(
@@ -397,7 +397,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 				return false
 			end,
 			function() 
-				local rugnur = FindHero("Rugnur")
+				local rugnur = FindHero("rugnur")
 				local gnomish_monarch_player = GetCivilizationPlayer("gnome")
 				local loop = true
 				local loop_count = 0
@@ -572,7 +572,7 @@ AddTrigger("a-bargain-is-struck-gnomish-envoy-arrives",
 			if (
 				PlayerHasObjective(i, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
 				and GetPlayerData(i, "RaceName") == "dwarf"
-				and FindHero("Rugnur", i) ~= nil
+				and FindHero("rugnur", i) ~= nil
 				and (IfNearUnit(i, ">=", 1, "unit-gnomish-duelist", "unit-dwarven-town-hall") or IfNearUnit(i, ">=", 1, "unit-gnomish-duelist", "unit-dwarven-stronghold") or IfNearUnit(i, ">=", 1, "unit-gnomish-master-at-arms", "unit-dwarven-town-hall") or IfNearUnit(i, ">=", 1, "unit-gnomish-master-at-arms", "unit-dwarven-stronghold"))
 				and (IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-duelist") or IfNearUnit(i, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-duelist") or IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-master-at-arms") or IfNearUnit(i, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-master-at-arms"))
 			) then
@@ -652,7 +652,7 @@ AddTrigger("a-bargain-is-struck-caravans-arrived",
 			if (
 				PlayerHasObjective(i, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
 				and GetPlayerData(i, "RaceName") == "dwarf"
-				and FindHero("Rugnur", i) ~= nil
+				and FindHero("rugnur", i) ~= nil
 				and (IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") or IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-stronghold"))
 				and (IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") or IfNearUnit(i, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-caravan"))
 			) then
@@ -680,7 +680,7 @@ AddTrigger("a-bargain-is-struck-caravans-arrived",
 		end
 		if (GetUnitVariable(gnomish_envoy, "Removed") and GetUnitVariable(gnomish_envoy, "Container") == -1) then
 			Event(
-				FindHero("Rugnur"),
+				FindHero("rugnur"),
 				"That's the last caravan! We will commence work immediately.",
 				player,
 				{"~!Continue"},
@@ -703,7 +703,7 @@ AddTrigger("a-bargain-is-struck-caravans-arrived",
 			)
 		else
 			Event(
-				FindHero("Rugnur"),
+				FindHero("rugnur"),
 				"We have all of the silver, now all we need is the stone.",
 				player,
 				{"~!Continue"},
@@ -731,7 +731,7 @@ AddTrigger("a-bargain-is-struck-quest-completion",
 				(SyncRand(100) + 1) <= 10
 				and PlayerHasObjective(i, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
 				and GetPlayerData(i, "RaceName") == "dwarf"
-				and FindHero("Rugnur", i) ~= nil
+				and FindHero("rugnur", i) ~= nil
 				and (IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") or IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-stronghold"))
 				and (IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") or IfNearUnit(i, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-caravan"))
 				and GetUnitVariable(gnomish_envoy, "Removed") and GetUnitVariable(gnomish_envoy, "Container") == -1
@@ -884,7 +884,7 @@ AddTrigger("a-bargain-is-struck-rugnur-dies",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur must survive") and FindHero("Rugnur", GetFactionPlayer("Norlund Clan")) == nil) then
+		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur must survive") and FindHero("rugnur", GetFactionPlayer("Norlund Clan")) == nil) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end

@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCharacter("Lóríkus", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 6.
+DefineCharacter("lorikus", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 6.
 	Name = "Lóríkus", -- Duke of Thrudheim, married to Lórá (also called Glórá)
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -39,7 +39,7 @@ DefineCharacter("Lóríkus", { -- Source: Snorri Sturlson, "The Prose Edda", 191
 	}
 })
 
-DefineCharacter("Lórá", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 6.
+DefineCharacter("lora", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 6.
 	Name = "Lórá", -- Lórá (also called Glórá) was Lóríkus' wife
 	Gender = "female",
 	Type = "unit-germanic-archer",
@@ -48,7 +48,7 @@ DefineCharacter("Lórá", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Year = -3000
 })
 
-DefineCharacter("Tróán", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 6.
+DefineCharacter("troan", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 6.
 	Name = "Tróán", -- Trór's mother; in the euhemerized account Tróán is said to be a daughter of the Trojan king Priam; however, since she doesn't seem to appear in any other account about Troy, it makes more sense to place this character together with Trór's genealogy (which we've placed to match the time of the Indo-European migrations to Scandinavia) rather than with Priam, specially since she's part of the account of how Scandinavia came to be settled
 	Gender = "female",
 	Type = "unit-germanic-archer",
@@ -58,7 +58,7 @@ DefineCharacter("Tróán", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 	DeathYear = -3000 + 10
 })
 
-DefineCharacter("Trór", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 6.
+DefineCharacter("tror", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 6.
 	Name = "Trór", -- euhemerized version of Thor
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -68,13 +68,13 @@ DefineCharacter("Trór", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	HairVariation = "blond-hair", -- his hair was "fairer than gold"
 	Year = -3000, -- born
 	DeathYear = -3000 + 12 + 10, -- 30 years is the default lifetime of a hero after having risen to prominence, but here we use 10 to make the genealogy fit from 3000 to 2800 BC, by when Scandinavia was settled by Indo-Europeans (in the Ynglinga Saga, with an euhemerized Odin leading the Asa there)
-	Mother = "Tróán",
+	Mother = "troan",
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12, -3000 + 12 + 10, "germanic", "asa-tribe" -- when Trór was 12 years old, he slew his foster-father Lóríkus and took his place
 	}
 })
 
-DefineCharacter("Lóridi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+DefineCharacter("loridi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Lóridi", -- resembled his father, Trór
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -82,13 +82,13 @@ DefineCharacter("Lóridi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 1),
 	DeathYear = -3000 + 12 + (10 * 2),
-	Father = "Trór",
+	Father = "tror",
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 1), -3000 + 12 + (10 * 2), "germanic", "asa-tribe"
 	}
 })
 
-DefineCharacter("Einridi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+DefineCharacter("einridi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Einridi",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -96,13 +96,13 @@ DefineCharacter("Einridi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 2),
 	DeathYear = -3000 + 12 + (10 * 3),
-	Father = "Loridi",
+	Father = "loridi",
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 2), -3000 + 12 + (10 * 3), "germanic", "asa-tribe"
 	}
 })
 
-DefineCharacter("Vingethor", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+DefineCharacter("vingethor", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Vingethor",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -110,13 +110,13 @@ DefineCharacter("Vingethor", { -- Source: Snorri Sturlson, "The Prose Edda", 191
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 3),
 	DeathYear = -3000 + 12 + (10 * 4),
-	Father = "Einridi",
+	Father = "einridi",
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 3), -3000 + 12 + (10 * 4), "germanic", "asa-tribe"
 	}
 })
 
-DefineCharacter("Vingener", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+DefineCharacter("vingener", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Vingener",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -124,13 +124,13 @@ DefineCharacter("Vingener", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 4),
 	DeathYear = -3000 + 12 + (10 * 5),
-	Father = "Vingethor",
+	Father = "vingethor",
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 4), -3000 + 12 + (10 * 5), "germanic", "asa-tribe"
 	}
 })
 
-DefineCharacter("Móda", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+DefineCharacter("moda", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Móda",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -138,13 +138,13 @@ DefineCharacter("Móda", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 5),
 	DeathYear = -3000 + 12 + (10 * 6),
-	Father = "Vingener",
+	Father = "vingener",
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 5), -3000 + 12 + (10 * 6), "germanic", "asa-tribe"
 	}
 })
 
-DefineCharacter("Magan", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+DefineCharacter("magan", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Magan", -- "Magi" in the source; this is a Proto-Germanic rendering of the name
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -152,13 +152,13 @@ DefineCharacter("Magan", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 6),
 	DeathYear = -3000 + 12 + (10 * 7),
-	Father = "Móda",
+	Father = "moda",
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 6), -3000 + 12 + (10 * 7), "germanic", "asa-tribe"
 	}
 })
 
-DefineCharacter("Seskef", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+DefineCharacter("seskef", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Seskef",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -166,13 +166,13 @@ DefineCharacter("Seskef", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 7),
 	DeathYear = -3000 + 12 + (10 * 8),
-	Father = "Magan",
+	Father = "magan",
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 7), -3000 + 12 + (10 * 8), "germanic", "asa-tribe"
 	}
 })
 
-DefineCharacter("Bedvig", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+DefineCharacter("bedvig", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Bedvig",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -180,13 +180,13 @@ DefineCharacter("Bedvig", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 8),
 	DeathYear = -3000 + 12 + (10 * 9),
-	Father = "Seskef",
+	Father = "seskef",
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 8), -3000 + 12 + (10 * 9), "germanic", "asa-tribe"
 	}
 })
 
-DefineCharacter("Athra", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+DefineCharacter("athra", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Athra",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -194,13 +194,13 @@ DefineCharacter("Athra", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 9),
 	DeathYear = -3000 + 12 + (10 * 10),
-	Father = "Bedvig",
+	Father = "bedvig",
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 9), -3000 + 12 + (10 * 10), "germanic", "asa-tribe"
 	}
 })
 
-DefineCharacter("Ítermann", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+DefineCharacter("itermann", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Ítermann",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -208,13 +208,13 @@ DefineCharacter("Ítermann", { -- Source: Snorri Sturlson, "The Prose Edda", 191
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 10),
 	DeathYear = -3000 + 12 + (10 * 11),
-	Father = "Athra",
+	Father = "athra",
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 10), -3000 + 12 + (10 * 11), "germanic", "asa-tribe"
 	}
 })
 
-DefineCharacter("Heremód", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+DefineCharacter("heremod", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Heremód",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -222,13 +222,13 @@ DefineCharacter("Heremód", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 11),
 	DeathYear = -3000 + 12 + (10 * 12),
-	Father = "Ítermann",
+	Father = "itermann",
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 11), -3000 + 12 + (10 * 12), "germanic", "asa-tribe"
 	}
 })
 
-DefineCharacter("Skjaldun", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+DefineCharacter("skjaldun", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Skjaldun",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -236,13 +236,13 @@ DefineCharacter("Skjaldun", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 12),
 	DeathYear = -3000 + 12 + (10 * 13),
-	Father = "Heremód",
+	Father = "heremod",
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 12), -3000 + 12 + (10 * 13), "germanic", "asa-tribe"
 	}
 })
 
-DefineCharacter("Bjáf", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+DefineCharacter("bjaf", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Bjáf",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -250,13 +250,13 @@ DefineCharacter("Bjáf", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 13),
 	DeathYear = -3000 + 12 + (10 * 14),
-	Father = "Skjaldun",
+	Father = "skjaldun",
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 13), -3000 + 12 + (10 * 14), "germanic", "asa-tribe"
 	}
 })
 
-DefineCharacter("Ját", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+DefineCharacter("jat", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Ját",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -264,13 +264,13 @@ DefineCharacter("Ját", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 14),
 	DeathYear = -3000 + 12 + (10 * 15),
-	Father = "Bjáf",
+	Father = "bjaf",
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 14), -3000 + 12 + (10 * 15), "germanic", "asa-tribe"
 	}
 })
 
-DefineCharacter("Gudawulfa", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+DefineCharacter("gudawulfa", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Gudawulfa", -- originally "Gudólfr"; this is a Proto-Germanic rendering of the name
 	-- prefix is likely the Old Norse neuter noun "Guđ"
 	Gender = "male",
@@ -279,13 +279,13 @@ DefineCharacter("Gudawulfa", { -- Source: Snorri Sturlson, "The Prose Edda", 191
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 15),
 	DeathYear = -3000 + 12 + (10 * 16),
-	Father = "Ját",
+	Father = "jat",
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 15), -3000 + 12 + (10 * 16), "germanic", "asa-tribe"
 	}
 })
 
-DefineCharacter("Finn", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+DefineCharacter("finn", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Finn",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -293,13 +293,13 @@ DefineCharacter("Finn", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 16),
 	DeathYear = -3000 + 12 + (10 * 17),
-	Father = "Gudawulfa",
+	Father = "gudawulfa",
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 16), -3000 + 12 + (10 * 17), "germanic", "asa-tribe"
 	}
 })
 
-DefineCharacter("Fríallaf", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+DefineCharacter("friallaf", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Fríallaf",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -307,13 +307,13 @@ DefineCharacter("Fríallaf", { -- Source: Snorri Sturlson, "The Prose Edda", 191
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 17),
 	DeathYear = -3000 + 12 + (10 * 18),
-	Father = "Finn",
+	Father = "finn",
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 17), -3000 + 12 + (10 * 18), "germanic", "asa-tribe"
 	}
 })
 
-DefineCharacter("Vóden", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+DefineCharacter("voden", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Vóden", -- euhemerized version of Odin; "far-famed for his wisdom and every accomplishment"; had "second sight"
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -322,13 +322,13 @@ DefineCharacter("Vóden", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Trait = "upgrade-wise",
 	Year = -3000 + 12 + (10 * 18),
 	DeathYear = -2800 + (30 * 1), -- with Voden begins a new genealogy, and he can live the standard 30 years
-	Father = "Fríallaf",
+	Father = "friallaf",
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 18), -2800 + (30 * 1), "germanic", "asa-tribe"
 	}
 })
 
-DefineCharacter("Frígídá", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+DefineCharacter("frigida", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Frígídá", -- wife of Vóden; euhemerized version of Frigg; had "second sight"
 	Gender = "female",
 	Type = "unit-germanic-archer",
@@ -339,7 +339,7 @@ DefineCharacter("Frígídá", { -- Source: Snorri Sturlson, "The Prose Edda", 19
 	DeathYear = -2800 + (30 * 1)
 })
 
-DefineCharacter("Yngve", { -- Source: Snorri Sturlson, "Heimskringla", 1844; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 9; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 221.
+DefineCharacter("yngve", { -- Source: Snorri Sturlson, "Heimskringla", 1844; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 9; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 221.
 	Name = "Yngve", -- has to be defined first so that he becomes the first in line to succede Vóden in Sweden; also known as Yng or Yngvi; from him the Ynglings spring
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -347,14 +347,14 @@ DefineCharacter("Yngve", { -- Source: Snorri Sturlson, "Heimskringla", 1844; Sou
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -2800,
 	DeathYear = -2800 + (30 * 2),
-	Father = "Vóden", -- another account gives Yngve as the son of Halfdan the Old
-	Mother = "Frígídá", -- presumably, since she was Vóden's wife
+	Father = "voden", -- another account gives Yngve as the son of Halfdan the Old
+	Mother = "frigida", -- presumably, since she was Vóden's wife
 	HistoricalTitles = {
 		"head-of-state", -2800 + (30 * 1), -2800 + (30 * 2), "germanic", "yngling-tribe"
 	}
 })
 
-DefineCharacter("Vegdeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+DefineCharacter("vegdeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Vegdeg", -- in the Prose Edda, Vegdeg was Vóden's son who was set to rule over East Saxland; Vóden's first son (presumably)
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -363,57 +363,57 @@ DefineCharacter("Vegdeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Trait = "upgrade-mighty", -- described as a "mighty king"
 	Year = -2800,
 	DeathYear = -2800 + (30 * 2),
-	Father = "Vóden",
-	Mother = "Frígídá" -- presumably, since she was Vóden's wife
+	Father = "voden",
+	Mother = "frigida" -- presumably, since she was Vóden's wife
 })
 
-DefineCharacter("Vitgils", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+DefineCharacter("vitgils", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Vitgils",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Jutland", -- his father was in the Prose Edda set to rule over East Saxland; but since that region wasn't settled by Germanic peoples yet, place Vegdeg's family in the region settled by Germanics which would later give rise to West Germanic culture (Jutland)
-	Father = "Vegdeg"
+	Father = "vegdeg"
 })
 
-DefineCharacter("Vitta", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+DefineCharacter("vitta", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Vitta",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Jutland",
-	Father = "Vitgils"
+	Father = "vitgils"
 })
 
-DefineCharacter("Heingistr", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+DefineCharacter("heingistr", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Heingistr",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Jutland",
-	Father = "Vitta"
+	Father = "vitta"
 })
 
-DefineCharacter("Sigarr", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+DefineCharacter("sigarr", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Sigarr",
 	-- prefix is likely Old Norse "Sigr"
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Jutland",
-	Father = "Vitgils"
+	Father = "vitgils"
 })
 
-DefineCharacter("Svebdeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+DefineCharacter("svebdeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Svebdeg", -- also known as Svipdagr
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Jutland",
-	Father = "Sigarr"
+	Father = "sigarr"
 })
 
-DefineCharacter("Beldeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, pp. 7-8.
+DefineCharacter("beldeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, pp. 7-8.
 	Name = "Beldeg", -- euhemerized version of Baldr; in the Prose Edda, was a son of Odin set to rule over Westphalia; Vóden's second son
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -421,56 +421,56 @@ DefineCharacter("Beldeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -2800,
 	DeathYear = -2800 + (30 * 2),
-	Father = "Vóden",
-	Mother = "Frígídá" -- presumably, since she was Vóden's wife
+	Father = "voden",
+	Mother = "frigida" -- presumably, since she was Vóden's wife
 })
 
-DefineCharacter("Branda", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+DefineCharacter("branda", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
 	Name = "Branda", -- "Brandr" in the source; this is a Proto-Germanic rendering of the name
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Jutland", -- his father was in the Prose Edda set to rule over Westphalia; but since that region wasn't settled by Germanic peoples yet, place Beldeg's family in the region settled by Germanics which would later give rise to West Germanic culture (Jutland)
-	Father = "Beldeg"
+	Father = "beldeg"
 })
 
-DefineCharacter("Frjódigar", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+DefineCharacter("frjodigar", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
 	Name = "Frjódigar", -- also known as Fródi
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Jutland",
-	Father = "Branda"
+	Father = "branda"
 })
 
-DefineCharacter("Freóvin", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+DefineCharacter("freovin", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
 	Name = "Freóvin",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Jutland",
-	Father = "Frjódigar"
+	Father = "frjodigar"
 })
 
-DefineCharacter("Uvigg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+DefineCharacter("uvigg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
 	Name = "Uvigg",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Jutland",
-	Father = "Freóvin"
+	Father = "freovin"
 })
 
-DefineCharacter("Gevis", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+DefineCharacter("gevis", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
 	Name = "Gevis", -- also known as Gave
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Jutland",
-	Father = "Uvigg"
+	Father = "uvigg"
 })
 
-DefineCharacter("Sigi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+DefineCharacter("sigi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
 	Name = "Sigi", -- in the Prose Edda, was a son of Odin set to rule over Frankland; Vóden's third son
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -478,20 +478,20 @@ DefineCharacter("Sigi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -2800,
 	DeathYear = -2800 + (30 * 2),
-	Father = "Vóden",
-	Mother = "Frígídá" -- presumably, since she was Vóden's wife
+	Father = "voden",
+	Mother = "frigida" -- presumably, since she was Vóden's wife
 })
 
-DefineCharacter("Rerir", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+DefineCharacter("rerir", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
 	Name = "Rerir", -- ancestor of the Völsungs
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Jutland", -- his father was in the Prose Edda set to rule over Frankland; but since that region wasn't settled by Germanic peoples yet, place Sigi's family in the region settled by Germanics which would later give rise to West Germanic culture (Jutland)
-	Father = "Sigi"
+	Father = "sigi"
 })
 
-DefineCharacter("Skeldu", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 221.
+DefineCharacter("skeldu", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 221.
 	-- ancestor of the Danish kings; from him spring the Skjoldungs
 	Name = "Skeldu", -- "Skjöldr" in the source; this is a Proto-Germanic rendering of the name
 	Gender = "male",
@@ -500,14 +500,14 @@ DefineCharacter("Skeldu", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -2800,
 	DeathYear = -2800 + (30 * 2), -- 30 years is the default lifetime of a hero after having risen to prominence
-	Father = "Vóden",
-	Mother = "Frígídá", -- presumably, since she was Vóden's wife
+	Father = "voden",
+	Mother = "frigida", -- presumably, since she was Vóden's wife
 	HistoricalTitles = {
 		"head-of-state", -2800, -2800 + (30 * 2), "germanic", "skeldung-tribe"
 	}
 })
 
-DefineCharacter("Fridleifr Skeldung", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+DefineCharacter("fridleifr-skeldung", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
 	Name = "Fridleifr",
 	-- prefix is likely the Old Norse word "Friđr"
 	FamilyName = "Skeldung", -- "Skjoldung" in the original Norse saga (from Skjöldr), here rendered as Skeldu (Proto-Germanic version of "Skjöldr") and -ung (the suffix in the original word; which should be changed for a Proto-Germanic version)
@@ -515,23 +515,23 @@ DefineCharacter("Fridleifr Skeldung", { -- Source: Snorri Sturlson, "The Prose E
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Zealand",
-	Father = "Skeldu",
+	Father = "skeldu",
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "germanic", "skeldung-tribe"
 	}
 })
 
-DefineCharacter("Sæmingr Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, p. 212; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 9.
+DefineCharacter("saemingr-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, p. 212; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 9.
 	Name = "Sæmingr", -- Yngve (or Vóden's) son set to rule over Norway
 	FamilyName = "Yngling",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Sweden",
-	Father = "Yngve"
+	Father = "yngve"
 })
 
-DefineCharacter("Erala", {
+DefineCharacter("erala", {
 	Name = "Erala",
 	Gender = "male",
 	Type = "unit-germanic-warrior",

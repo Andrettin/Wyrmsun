@@ -46,13 +46,13 @@ end
 SetPlayerData(PlayerNumNeutral, "RaceName", "neutral")
 
 unit = CreateUnit("unit-dwarven-thane", 0, {1, 16})
-SetUnitVariable(unit, "Character", "Durstorn")
+SetUnitVariable(unit, "Character", "durstorn")
 if (IsNetworkGame() and GrandStrategy == false) then
 	unit = CreateUnit("unit-dwarven-steelclad", 2, {1, 16})
-	SetUnitVariable(unit, "Character", "Baglur")
+	SetUnitVariable(unit, "Character", "baglur")
 else
 	unit = CreateUnit("unit-dwarven-steelclad", 0, {1, 16})
-	SetUnitVariable(unit, "Character", "Baglur")
+	SetUnitVariable(unit, "Character", "baglur")
 end
 
 if (GameSettings.Difficulty == 1) then -- if difficulty is easy
