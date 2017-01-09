@@ -35,6 +35,7 @@ DefineCharacter("volsung", { -- Source: C. Scott Littleton, "The Germanic Sword 
 --	ProvinceOfOrigin = "?"
 })
 
+--[[
 DefineCharacter("eylimi-othling", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
 	Name = "Eylimi",
 	FamilyName = "Othling", -- dynasty name in the Norse myths
@@ -102,18 +103,6 @@ DefineCharacter("sinfiotli-volsung", { -- Source: C. Scott Littleton, "The Germa
 	Mother = "signy-volsung"
 })
 
-DefineCharacter("siegfried-volsung", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94.
-	Name = "Siegfried", -- Son of Siegmund and Sieglind; Gudrun's husband
-	FamilyName = "Volsung",
-	Gender = "male",
-	Type = "unit-frank-swordsman",
-	Civilization = "teuton",
-	Faction = "frank-tribe",
---	ProvinceOfOrigin = "?",
-	Father = "siegmund-volsung",
-	Mother = "sieglind-hraudung"
-})
-
 DefineCharacter("svanhild-volsung", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 226, 536, 538, 542, 546.
 	Name = "Svanhild", -- also called Sunilda or Sanielh; in the Norse myths was married to and killed by Jormunrek, but they could hardly have lived at the same time
 	-- suffix is likely the Old Norse noun "Hildr"
@@ -123,9 +112,10 @@ DefineCharacter("svanhild-volsung", { -- Source: Henry Adams Bellows (transl.), 
 	Civilization = "teuton",
 	Faction = "frank-tribe",
 --	ProvinceOfOrigin = "?",
-	Father = "siegfried-volsung",
+--	Father = "siegfried-volsung", -- daughter of Siegfried/Sigurd in the myths
 	Mother = "gudrun"
 })
+--]]
 
 DefineCharacter("ricimer", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 96-97.
 	Name = "Ricimer", -- ally of Flavius Aetius and de facto ruler of the Roman Empire at a certain stage; was married to the sister of the Burgundian king Gundioc

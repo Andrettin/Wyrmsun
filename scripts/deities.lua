@@ -54,12 +54,14 @@ DefineDeity("gaia", { -- Source: Jenny March, "Dictionary of Classical Mythology
 
 DefineDeity("gathaarl", { -- from Tyrant, Goblin God of Battle
 	Name = "Gathaarl",
+	Pantheon = "Goblin",
 	HomePlane = "Helheim",
 	Civilizations = {"goblin"},
 	Religions = {"paganism"},
 	Domains = {"chaos", "earth", "wrath"},
 	Gender = "male",
 	Major = true,
+	Icon = "icon-gathaarl",
 	Description = "The chief goblin deity, Gathaarl rejoices in the bloodiness of battle. The god's priests preach that goblins procreate and multiply, so that they may have an edge against their enemies. Many goblins raise totems to Gathaarl's glory, hoping that the deity will intercede for them."
 	-- neutral alignment (actually "neutral -")
 	-- prefers offerings of food and weapons

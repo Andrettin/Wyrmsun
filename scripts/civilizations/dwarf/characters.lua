@@ -40,11 +40,16 @@ DefineCharacter("modsognir", { -- one of the earliest dwarven leaders; in Norse 
 	Trait = "upgrade-mighty",
 	ProvinceOfOrigin = "Svarinshaug",
 	Year = -3000,
-	Persistent = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	HistoricalTitles = {
 		"head-of-state", -3000, -3000 + 30, "dwarf", "brising-clan"
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Allow", "upgrade-dwarven-runewriting") ~= "R") then -- Modsognir shouldn't appear in eras with too advanced technology
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("durin", { -- deputy of Modsognir
@@ -60,8 +65,13 @@ DefineCharacter("durin", { -- deputy of Modsognir
 	Trait = "upgrade-dextrous",
 	ProvinceOfOrigin = "Svarinshaug",
 	Year = -3000,
-	Persistent = true,
-	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
+	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Allow", "upgrade-dwarven-runewriting") ~= "R") then -- Durin shouldn't appear in eras with too advanced technology
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("fjalar", {
@@ -71,12 +81,16 @@ DefineCharacter("fjalar", {
 	Civilization = "dwarf",
 	Faction = "shadowcharm-clan",
 	Description = _("The greedy Fjalar is joint chieftain of the Shadowcharm Clan together with his brother Galar. He is adept at deception and stealth."),
-	Icon = "icon-modsognir",
 	HairVariation = "brown-hair",
 	Trait = "upgrade-cruel",
 	Year = -3000,
---	Persistent = true,
-	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
+	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "shadowcharm-clan") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("galar", {
@@ -86,12 +100,16 @@ DefineCharacter("galar", {
 	Civilization = "dwarf",
 	Faction = "shadowcharm-clan",
 	Description = _("The envious Galar is joint chieftain of the Shadowcharm Clan together with his brother Fjalar. He is known for his thieving skills and his dabbling in magic."),
-	Icon = "icon-modsognir",
 	HairVariation = "brown-hair",
 	Trait = "upgrade-cruel",
 	Year = -3000,
---	Persistent = true,
-	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
+	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "shadowcharm-clan") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("regin", {
@@ -101,10 +119,8 @@ DefineCharacter("regin", {
 	Civilization = "dwarf",
 	Faction = "brising-clan",
 	Description = _("Regin is a dwarven mastersmith, unrivalled in his time. The mythical sword Gram was of his making, as were several other legendary blades."),
-	Icon = "icon-thursagan",
 	HairVariation = "brown-hair",
 	Trait = "upgrade-intelligent",
---	Persistent = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })
 
@@ -124,7 +140,6 @@ DefineCharacter("thursagan", { -- from "The Sceptre of Fire" campaign of "Battle
 	Year = -1,
 	DeathYear = 40, -- died in 40 AD of a violent death
 	ViolentDeath = true,
-	Persistent = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	Items = {
 		{
@@ -149,7 +164,6 @@ DefineCharacter("baglur", { -- from "The Sceptre of Fire" campaign of "Battle fo
 	Year = -1,
 	DeathYear = 40, -- died in 40 AD of a violent death
 	ViolentDeath = true,
-	Persistent = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })
 
@@ -167,7 +181,6 @@ DefineCharacter("durstorn", { -- from "The Sceptre of Fire" campaign of "Battle 
 	Year = -1,
 	DeathYear = 35, -- died in 35 AD of a violent death
 	ViolentDeath = true,
-	Persistent = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	HistoricalTitles = {
 		"head-of-state", -1, 35, "dwarf", "norlund-clan"
@@ -186,7 +199,13 @@ DefineCharacter("glonoin", { -- from "The Sceptre of Fire" campaign of "Battle f
 	ViolentDeath = true,
 	HistoricalTitles = {
 		"head-of-state", -1, 29, "dwarf", "shorbear-clan"
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "shorbear-clan") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("rugnur", { -- from "The Sceptre of Fire" campaign of "Battle for Wesnoth"; leader of the party of dwarves who handled the crafting of the Sceptre of Fire
@@ -204,6 +223,5 @@ DefineCharacter("rugnur", { -- from "The Sceptre of Fire" campaign of "Battle fo
 	Year = 25,
 	DeathYear = 40, -- died in 40 AD of a violent death
 	ViolentDeath = true,
-	Persistent = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })

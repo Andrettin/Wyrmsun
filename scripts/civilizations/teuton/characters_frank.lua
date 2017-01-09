@@ -32,10 +32,8 @@ DefineCharacter("chilperich", {
 	Civilization = "teuton",
 	Faction = "francia",
 	Description = _("Born to the late Frankish king Chlothar I, Chilperich harbors great ambitions to establish his supremacy over the entire realm, subsuming his brothers' share of their father's inheritance."),
-	Icon = "icon-frank-horseman",
 	HairVariation = "brown-hair",
-	Trait = "upgrade-reckless",
---	Persistent = true
+	Trait = "upgrade-reckless"
 })
 
 DefineCharacter("gunthram", {
@@ -45,13 +43,11 @@ DefineCharacter("gunthram", {
 	Civilization = "teuton",
 	Faction = "francia",
 	Description = _("As one of the sons of the Frankish king Chlothar I, Gunthram inherited the Burgundian part of the Frankish realm from his father."),
-	Icon = "icon-frank-horseman",
 	HairVariation = "brown-hair",
-	Trait = "upgrade-dextrous",
---	Persistent = true
+	Trait = "upgrade-dextrous"
 })
 
-DefineCharacter("sigibert", {
+DefineCharacter("sigibert", { -- Sigibert I (535-575), Frankish king; son of Chlothar; identified with the Siegfried/Sigurd of the myths; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, pp. 327-328.
 	Name = "Sigibert",
 	Gender = "male",
 	Type = "unit-frank-horseman",
@@ -60,6 +56,6 @@ DefineCharacter("sigibert", {
 	Description = _("The son of the Frankish king Chlothar I, Sigibert inherited vast lands upon the death of his father. A courageous hero, Sigibert faces both the enmity of his brother Chilperich and the threat of invasion from abroad."),
 	Icon = "icon-sigibert",
 	HairVariation = "brown-hair",
-	Trait = "upgrade-strong",
-	Persistent = true
+	Trait = "upgrade-strong"
+	-- in the myths Siegfried/Sigurd was the son of Siegmund and Sieglind, and he was Gudrun's husband; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94.
 })

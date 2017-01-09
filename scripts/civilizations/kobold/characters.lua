@@ -33,6 +33,5 @@ DefineCharacter("fafnir", {
 	Faction = "fafning-tribe",
 	Description = _("Fafnir was originally a greedy dwarf, the son of Hreidmar and brother of Regin. Through potent magics he transformed himself into a wyrm."),
 	Icon = "icon-wyrm-vicious",
-	Trait = "upgrade-vicious",
-	Persistent = true
+	Trait = "upgrade-vicious"
 })

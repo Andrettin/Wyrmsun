@@ -35,6 +35,7 @@ DefineCharacter("adalram", { -- Source: James Westfall Thompson, "Medieval Germa
 	DeathYear = 836, -- Archbishop of Salzburg until 836
 })
 
+--[[
 DefineCharacter("peter-von-salzgeber", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
 	Name = "Peter",
 	FamilyName = "von Salzgeber",
@@ -277,3 +278,4 @@ DefineCharacter("georg-von-toggenburg", { -- Source: Waltraud Heindl, "Josephini
 		"governor", 1860, 1866, "Venetia" -- was Statthalter (governor) of Venice from 1860 to 1866
 	}
 })
+--]]

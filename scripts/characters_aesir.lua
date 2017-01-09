@@ -32,7 +32,6 @@ DefineCharacter("odin", {
 	Deity = "odin",
 	HairVariation = "gray-hair",
 	Trait = "upgrade-wise",
-	Persistent = true,
 	Level = 95
 })
 

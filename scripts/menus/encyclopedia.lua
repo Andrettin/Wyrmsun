@@ -59,7 +59,7 @@ function RunEncyclopediaMenu()
 		function() RunEncyclopediaCivilizationsMenu() end)
 
 	menu:addFullButton(_("~!Deities"), "d", offx + 208 + (113 * -1), offy + 104 + 36*1,
-		function() RunEncyclopediaDeitiesMenu() end)
+		function() RunEncyclopediaUnitsMenu("deities") end)
 
 	menu:addFullButton(_("~!Factions"), "f", offx + 208 + (113 * -1), offy + 104 + 36*2,
 		function() RunEncyclopediaFactionsCivilizationMenu() end)
@@ -141,7 +141,7 @@ function RunEncyclopediaUnitsCivilizationMenu(state)
 
 	local civilizations = {}
 	
-	if (state ~= "heroes" and state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "runic_suffixes" and state ~= "unique_items") then
+	if (state ~= "heroes" and state ~= "deities" and state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "runic_suffixes" and state ~= "unique_items") then
 		local units_table = {}
 		if not (state == "items") then
 			units_table = Units
@@ -184,8 +184,21 @@ function RunEncyclopediaUnitsCivilizationMenu(state)
 	elseif (state == "heroes") then
 		local heroes = GetCharacters()
 		for i = 1, table.getn(heroes) do
-			if (GetCharacterData(heroes[i], "Persistent") and (GetCharacterData(heroes[i], "Description") ~= "" or GetCharacterData(heroes[i], "Background") ~= "")) then
+			if (GetCharacterData(heroes[i], "BaseIcon") ~= "" and (GetCharacterData(heroes[i], "Description") ~= "" or GetCharacterData(heroes[i], "Background") ~= "")) then
 				local element_civilization = GetCharacterData(heroes[i], "Civilization")
+				if (element_civilization == "") then
+					element_civilization = "neutral"
+				end
+				if (GetArrayIncludes(civilizations, element_civilization) == false) then
+					table.insert(civilizations, element_civilization)
+				end
+			end
+		end
+	elseif (state == "deities") then
+		local deities = GetDeities()
+		for i = 1, table.getn(deities) do
+			if (GetDeityData(deities[i], "Icon") ~= "" and (GetDeityData(deities[i], "Description") ~= "" or GetDeityData(deities[i], "Background") ~= "")) then
+				local element_civilization = GetDeityData(deities[i], "Pantheon")
 				if (element_civilization == "") then
 					element_civilization = "neutral"
 				end
@@ -247,6 +260,8 @@ function RunEncyclopediaUnitsCivilizationMenu(state)
 		menu:addLabel("~<Encyclopedia: Runic Suffixes~>", offx + 320, offy + 104 + 36*-2)
 	elseif (state == "heroes") then
 		menu:addLabel("~<Encyclopedia: Heroes~>", offx + 320, offy + 104 + 36*-2)
+	elseif (state == "deities") then
+		menu:addLabel("~<Encyclopedia: Deities~>", offx + 320, offy + 104 + 36*-2)
 	elseif (state == "mercenaries") then
 		menu:addLabel("~<Encyclopedia: Mercenaries~>", offx + 320, offy + 104 + 36*-2)
 	elseif (state == "unique_items") then
@@ -274,7 +289,7 @@ function RunEncyclopediaUnitsMenu(state, civilization)
 	
 	local icon_x = 0
 	local icon_y = 0
-	if (state ~= "heroes" and state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "runic_suffixes" and state ~= "unique_items") then
+	if (state ~= "heroes" and state ~= "deities" and state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "runic_suffixes" and state ~= "unique_items") then
 		local units_table = {}
 		if not (state == "items") then
 			units_table = Units
@@ -355,8 +370,34 @@ function RunEncyclopediaUnitsMenu(state, civilization)
 		table.sort(heroes, compare_hero)
 		
 		for i = 1, table.getn(heroes) do
-			if (GetCharacterData(heroes[i], "Persistent") and (GetCharacterData(heroes[i], "Description") ~= "" or GetCharacterData(heroes[i], "Background") ~= "")) then
+			if (GetCharacterData(heroes[i], "BaseIcon") ~= "" and (GetCharacterData(heroes[i], "Description") ~= "" or GetCharacterData(heroes[i], "Background") ~= "")) then
 				addEncyclopediaIcon(heroes[i], state, menu, offx + 23 + 4 + (54 * icon_x), offy + 10 + 4 + (46 * (icon_y + 1)))
+				if (icon_x >= 10) then
+					icon_x = 0
+					icon_y = icon_y + 1
+				else
+					icon_x = icon_x + 1
+				end
+			end
+		end
+	elseif (state == "deities") then
+		local deities = GetDeities()
+		
+		local function compare_deity(a,b)
+			if (GetDeityData(a, "Pantheon") ~= GetDeityData(b, "Pantheon")) then
+				return GetDeityData(a, "Pantheon") < GetDeityData(b, "Pantheon")
+			elseif (GetDeityData(a, "Major") ~= GetDeityData(b, "Major")) then
+				return GetDeityData(a, "Major")
+			else
+				return a < b
+			end
+		end
+		
+		table.sort(deities, compare_deity)
+		
+		for i = 1, table.getn(deities) do
+			if (GetDeityData(deities[i], "Icon") ~= "" and (GetDeityData(deities[i], "Description") ~= "" or GetDeityData(deities[i], "Background") ~= "")) then
+				addEncyclopediaIcon(deities[i], state, menu, offx + 23 + 4 + (54 * icon_x), offy + 10 + 4 + (46 * (icon_y + 1)))
 				if (icon_x >= 10) then
 					icon_x = 0
 					icon_y = icon_y + 1
@@ -396,6 +437,8 @@ function RunEncyclopediaUnitsMenu(state, civilization)
 		menu:addLabel("~<Encyclopedia: Runic Suffixes~>", offx + 320, offy + 104 + 36*-2)
 	elseif (state == "heroes") then
 		menu:addLabel("~<Encyclopedia: Heroes~>", offx + 320, offy + 104 + 36*-2)
+	elseif (state == "deities") then
+		menu:addLabel("~<Encyclopedia: Deities~>", offx + 320, offy + 104 + 36*-2)
 	elseif (state == "mercenaries") then
 		menu:addLabel("~<Encyclopedia: Mercenaries~>", offx + 320, offy + 104 + 36*-2)
 	elseif (state == "unique_items") then
@@ -467,6 +510,15 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 		end
 		if (GetCharacterData(unit_name, "HairVariation") ~= "") then
 			hair_color = string.gsub(GetCharacterData(unit_name, "HairVariation"), "%-hair", "")
+		end
+	elseif (state == "deities") then
+		encyclopedia_icon = CIcon:Get(GetDeityData(unit_name, "Icon")).G
+		encyclopedia_icon_frame = CIcon:Get(GetDeityData(unit_name, "Icon")).Frame
+		civilization = ""
+		faction = ""
+		tooltip_name = GetDeityData(unit_name, "Name")
+		if (GetDeityData(unit_name, "Pantheon") ~= "") then
+			tooltip_civilization = "(" ..  _(GetDeityData(unit_name, "Pantheon")) .. ")"
 		end
 	elseif (state == "unique_items") then
 		encyclopedia_icon = CIcon:Get(GetUnitTypeData(GetUniqueItemData(unit_name, "Type"), "Icon")).G
@@ -544,7 +596,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 end
 
 function OpenEncyclopediaUnitEntry(unit_name, state)
-	if (state ~= "heroes" and state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "runic_suffixes" and state ~= "unique_items") then
+	if (state ~= "heroes" and state ~= "deities" and state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "runic_suffixes" and state ~= "unique_items") then
 		if (state ~= "technologies" and string.find(unit_name, "upgrade") == nil) then
 			if (
 				(
@@ -632,6 +684,15 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		end
 		if (GetCharacterData(unit_name, "HairVariation") ~= "") then
 			hair_color = string.gsub(GetCharacterData(unit_name, "HairVariation"), "%-hair", "")
+		end
+	elseif (state == "deities") then
+		encyclopedia_icon = CIcon:Get(GetDeityData(unit_name, "Icon")).G
+		encyclopedia_icon_frame = CIcon:Get(GetDeityData(unit_name, "Icon")).Frame
+		civilization = ""
+		faction = ""
+		tooltip_name = GetDeityData(unit_name, "Name")
+		if (GetDeityData(unit_name, "Pantheon") ~= "") then
+			tooltip_civilization = "(" ..  _(GetDeityData(unit_name, "Pantheon")) .. ")"
 		end
 	elseif (state == "unique_items") then
 		encyclopedia_icon = CIcon:Get(GetUnitTypeData(GetUniqueItemData(unit_name, "Type"), "Icon")).G
@@ -813,6 +874,85 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		end
 		if (GetCharacterData(unit_name, "Background") ~= "") then
 			background = "Background: " .. GetCharacterData(unit_name, "Background") .. "\n\n"
+		end
+	elseif (state == "deities") then
+		if (GetDeityData(unit_name, "Pantheon") ~= "") then
+			description = description .. "Pantheon: " .. GetDeityData(unit_name, "Pantheon") .. "\n\n"
+		end
+		if (GetDeityData(unit_name, "HomePlane") ~= "") then
+			description = description .. "Home Plane: " .. GetDeityData(unit_name, "HomePlane") .. "\n\n"
+		end
+		if (GetDeityData(unit_name, "Major")) then
+			description = description .. "Rank: Major\n\n"
+		else
+			description = description .. "Rank: Minor\n\n"
+		end
+		
+		local domains = GetDeityData(unit_name, "Domains")
+		table.sort(domains)
+		if (table.getn(domains) > 0) then
+			description = description .. "Portfolio: "
+			for i=1,table.getn(domains) do
+				description = description .. GetDeityDomainData(domains[i], "Name")
+				if (i < table.getn(domains)) then
+					description = description .. ", "
+				end
+			end
+			description = description .. "\n\n"
+		end
+		
+		local civilizations = GetDeityData(unit_name, "Civilizations")
+		table.sort(civilizations)
+		if (table.getn(civilizations) > 0) then
+			description = description .. "Civilizations: "
+			for i=1,table.getn(civilizations) do
+				description = description .. GetCivilizationData(civilizations[i], "Display")
+				if (i < table.getn(civilizations)) then
+					description = description .. ", "
+				end
+			end
+			description = description .. "\n\n"
+		end
+		
+		local alternate_names = {}
+		for i=1,table.getn(civilizations) do
+			if (GetDeityData(unit_name, "CulturalName", civilizations[i]) ~= "" and GetDeityData(unit_name, "CulturalName", civilizations[i]) ~= GetDeityData(unit_name, "Name")) then
+				table.insert(alternate_names, GetDeityData(unit_name, "CulturalName", civilizations[i]) .. " (" .. GetCivilizationData(civilizations[i], "Display") .. ")")
+			end
+		end
+		table.sort(alternate_names)
+		if (table.getn(alternate_names) > 0) then
+			description = description .. "Alternate Names: "
+			for i=1,table.getn(alternate_names) do
+				description = description .. alternate_names[i]
+				if (i < table.getn(alternate_names)) then
+					description = description .. ", "
+				end
+			end
+			description = description .. "\n\n"
+		end
+		
+		local abilities = GetDeityData(unit_name, "Abilities")
+		table.sort(abilities)
+		if (table.getn(abilities) > 0) then
+			description = description .. "Spells: "
+			for i=1,table.getn(abilities) do
+				description = description .. GetUpgradeData(abilities[i], "Name")
+				if (i < table.getn(abilities)) then
+					description = description .. ", "
+				end
+			end
+			description = description .. "\n\n"
+		end
+		
+		if (GetDeityData(unit_name, "Description") ~= "") then
+			description = description .. "Description: " .. GetDeityData(unit_name, "Description") .. "\n\n"
+		end
+		if (GetDeityData(unit_name, "Quote") ~= "") then
+			quote = "Quote: " .. GetDeityData(unit_name, "Quote") .. "\n\n"
+		end
+		if (GetDeityData(unit_name, "Background") ~= "") then
+			background = "Background: " .. GetDeityData(unit_name, "Background") .. "\n\n"
 		end
 	elseif (state == "unique_items") then
 		if (GetUniqueItemData(unit_name, "Type") ~= "") then
@@ -1917,167 +2057,6 @@ function OpenEncyclopediaFactionEntry(civilization, faction)
 	end
 	if (GetFactionData(civilization, faction, "Background") ~= "") then
 		description = description .. "Background: " .. GetFactionData(civilization, faction, "Background") .. "\n\n"
-	end
-	l:setCaption(description)
-			
-	encyclopedia_entry_menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
-		function() encyclopedia_entry_menu:stop(); end)
-	encyclopedia_entry_menu:run()
-end
-
-function RunEncyclopediaDeitiesMenu()
-
-	if (RunningScenario == false) then
-		if not (IsMusicPlaying()) then
-			PlayMusicName("MenuTheme")
-		end
-	end
-
-	local menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
-	local offx = (Video.Width - 640) / 2
-	local offy = (Video.Height - 480) / 2
-	
-	local height_offset = 2
-	if (Video.Height >= 600) then
-		height_offset = 2 -- change this to 0 if the number of deity entries becomes too large
-	else
-		height_offset = 2
-	end
-	menu:addLabel("~<Encyclopedia: Deities~>", offx + 320, offy + 104 + 36*(-4 + height_offset), nil, true)
-
-	local potential_deities = GetDeities()
-	local deities = {}
-	
-	for i = 1, table.getn(potential_deities) do
-		if (GetDeityData(potential_deities[i], "Description") ~= "") then
-			table.insert(deities, potential_deities[i])
-		end
-	end
-	table.sort(deities)
-
-	local deity_x = 0
-	if (GetTableSize(deities) > 20) then
-		deity_x = -2
-	elseif (GetTableSize(deities) > 10) then
-		deity_x = -1
-	end
-	local deity_y = -3
-
-	for i = 1, table.getn(deities) do
-		menu:addFullButton(_(GetDeityData(deities[i], "Name")), "", offx + 208 + (113 * deity_x), offy + 104 + (36 * (deity_y + height_offset)),
-			function() OpenEncyclopediaDeityEntry(deities[i]); end)
-
-		if (deity_y > 5 or (deity_y > 4 and Video.Height < 600)) then
-			deity_x = deity_x + 2
-			deity_y = -3
-		else
-			deity_y = deity_y + 1
-		end
-	end
-
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
-		function() menu:stop(); end)
-
-	menu:run()
-end
-
-function OpenEncyclopediaDeityEntry(deity)
-	if (RunningScenario == false) then
-		if not (IsMusicPlaying()) then
-			PlayMusicName("MenuTheme")
-		end
-	end
-
-	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
-	local offx = (Video.Width - 640) / 2
-	local offy = (Video.Height - 480) / 2
-
-	encyclopedia_entry_menu:addLabel("~<" .. GetDeityData(deity, "Name") .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
-
-	local l = MultiLineLabel()
-	l:setFont(Fonts["game"])
-	l:setSize(Video.Width - 64, Video.Height / 2)
-	l:setLineWidth(Video.Width - 64)
-	encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*0)
-	local description = ""
-	
-	if (GetDeityData(deity, "Pantheon") ~= "") then
-		description = description .. "Pantheon: " .. GetDeityData(deity, "Pantheon") .. "\n\n"
-	end
-	if (GetDeityData(deity, "HomePlane") ~= "") then
-		description = description .. "Home Plane: " .. GetDeityData(deity, "HomePlane") .. "\n\n"
-	end
-	if (GetDeityData(deity, "Major")) then
-		description = description .. "Rank: Major\n\n"
-	else
-		description = description .. "Rank: Minor\n\n"
-	end
-	
-	local domains = GetDeityData(deity, "Domains")
-	table.sort(domains)
-	if (table.getn(domains) > 0) then
-		description = description .. "Portfolio: "
-		for i=1,table.getn(domains) do
-			description = description .. GetDeityDomainData(domains[i], "Name")
-			if (i < table.getn(domains)) then
-				description = description .. ", "
-			end
-		end
-		description = description .. "\n\n"
-	end
-	
-	local civilizations = GetDeityData(deity, "Civilizations")
-	table.sort(civilizations)
-	if (table.getn(civilizations) > 0) then
-		description = description .. "Civilizations: "
-		for i=1,table.getn(civilizations) do
-			description = description .. GetCivilizationData(civilizations[i], "Display")
-			if (i < table.getn(civilizations)) then
-				description = description .. ", "
-			end
-		end
-		description = description .. "\n\n"
-	end
-	
-	local alternate_names = {}
-	for i=1,table.getn(civilizations) do
-		if (GetDeityData(deity, "CulturalName", civilizations[i]) ~= "" and GetDeityData(deity, "CulturalName", civilizations[i]) ~= GetDeityData(deity, "Name")) then
-			table.insert(alternate_names, GetDeityData(deity, "CulturalName", civilizations[i]) .. " (" .. GetCivilizationData(civilizations[i], "Display") .. ")")
-		end
-	end
-	table.sort(alternate_names)
-	if (table.getn(alternate_names) > 0) then
-		description = description .. "Alternate Names: "
-		for i=1,table.getn(alternate_names) do
-			description = description .. alternate_names[i]
-			if (i < table.getn(alternate_names)) then
-				description = description .. ", "
-			end
-		end
-		description = description .. "\n\n"
-	end
-	
-	local abilities = GetDeityData(deity, "Abilities")
-	table.sort(abilities)
-	if (table.getn(abilities) > 0) then
-		description = description .. "Spells: "
-		for i=1,table.getn(abilities) do
-			description = description .. GetUpgradeData(abilities[i], "Name")
-			if (i < table.getn(abilities)) then
-				description = description .. ", "
-			end
-		end
-		description = description .. "\n\n"
-	end
-	
-	if (GetDeityData(deity, "Description") ~= "") then
-		description = description .. "Description: " .. GetDeityData(deity, "Description") .. "\n\n"
-	end
-	if (GetDeityData(deity, "Quote") ~= "") then
-		description = description .. "Quote: " .. GetDeityData(deity, "Quote") .. "\n\n"
-	end
-	if (GetDeityData(deity, "Background") ~= "") then
-		description = description .. "Background: " .. GetDeityData(deity, "Background") .. "\n\n"
 	end
 	l:setCaption(description)
 			

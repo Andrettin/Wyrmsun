@@ -569,10 +569,6 @@ function StandardTriggers()
 					if (
 						table.getn(GetSelectedUnits()) > 0
 						and GetUnitVariable(GetSelectedUnits()[1], "Character") ~= ""
-						and (
-							GetUnitVariable(GetSelectedUnits()[1], "CustomCharacter") == false and (GetCharacterData(GetUnitVariable(GetSelectedUnits()[1], "Character"), "Persistent"))
-							or GetUnitVariable(GetSelectedUnits()[1], "CustomCharacter") == true
-						)
 						and GetUnitVariable(GetSelectedUnits()[1], "Player") == GetThisPlayer()
 					) then
 						return true

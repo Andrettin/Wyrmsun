@@ -472,6 +472,7 @@
 /graphics/goblin/icons/coinage.png (by Jesse Crider and Jinn) (licensed under the CC0)
 /graphics/goblin/icons/embossed_shield.png (by Exidelo) (licensed under the CC0)
 /graphics/goblin/icons/embossed_shield_extra_1.png (by Exidelo) (licensed under the CC0)
+/graphics/goblin/icons/gathaarl.png (by Exidelo) (licensed under the CC0)
 /graphics/goblin/icons/glider.png (by Exidelo) (licensed under the CC0)
 /graphics/goblin/icons/goblin_archer.png (by Jinn) (licensed under the CC0)
 /graphics/goblin/icons/goblin_assassin.png (by Jinn) (licensed under the CC0)

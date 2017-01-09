@@ -26,7 +26,7 @@
 --
 
 DefineCharacter("lorikus", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 6.
-	Name = "Lóríkus", -- Duke of Thrudheim, married to Lórá (also called Glórá)
+	Name = "Lorikus", -- "Lóríkus"; Duke of Thrudheim, married to Lórá (also called Glórá)
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
@@ -40,7 +40,7 @@ DefineCharacter("lorikus", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 })
 
 DefineCharacter("lora", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 6.
-	Name = "Lórá", -- Lórá (also called Glórá) was Lóríkus' wife
+	Name = "Lora", -- "Lórá"; Lórá (also called Glórá) was Lóríkus' wife
 	Gender = "female",
 	Type = "unit-germanic-archer",
 	Civilization = "germanic",
@@ -49,7 +49,7 @@ DefineCharacter("lora", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 })
 
 DefineCharacter("troan", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 6.
-	Name = "Tróán", -- Trór's mother; in the euhemerized account Tróán is said to be a daughter of the Trojan king Priam; however, since she doesn't seem to appear in any other account about Troy, it makes more sense to place this character together with Trór's genealogy (which we've placed to match the time of the Indo-European migrations to Scandinavia) rather than with Priam, specially since she's part of the account of how Scandinavia came to be settled
+	Name = "Troan", -- "Tróán"; Trór's mother; in the euhemerized account Tróán is said to be a daughter of the Trojan king Priam; however, since she doesn't seem to appear in any other account about Troy, it makes more sense to place this character together with Trór's genealogy (which we've placed to match the time of the Indo-European migrations to Scandinavia) rather than with Priam, specially since she's part of the account of how Scandinavia came to be settled
 	Gender = "female",
 	Type = "unit-germanic-archer",
 	Civilization = "germanic",
@@ -59,7 +59,7 @@ DefineCharacter("troan", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 })
 
 DefineCharacter("tror", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 6.
-	Name = "Trór", -- euhemerized version of Thor
+	Name = "Tror", -- "Trór"; euhemerized version of Thor
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
@@ -75,7 +75,7 @@ DefineCharacter("tror", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 })
 
 DefineCharacter("loridi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
-	Name = "Lóridi", -- resembled his father, Trór
+	Name = "Loridi", -- "Lóridi"; resembled his father, Trór
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
@@ -131,7 +131,7 @@ DefineCharacter("vingener", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 })
 
 DefineCharacter("moda", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
-	Name = "Móda",
+	Name = "Moda", -- "Móda"
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
@@ -201,7 +201,7 @@ DefineCharacter("athra", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 })
 
 DefineCharacter("itermann", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
-	Name = "Ítermann",
+	Name = "Itermann", -- "Ítermann"
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
@@ -215,7 +215,7 @@ DefineCharacter("itermann", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 })
 
 DefineCharacter("heremod", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
-	Name = "Heremód",
+	Name = "Heremod", -- "Heremód"
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
@@ -243,7 +243,7 @@ DefineCharacter("skjaldun", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 })
 
 DefineCharacter("bjaf", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
-	Name = "Bjáf",
+	Name = "Bjaf", -- "Bjáf"
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
@@ -257,7 +257,7 @@ DefineCharacter("bjaf", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 })
 
 DefineCharacter("jat", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
-	Name = "Ját",
+	Name = "Jat", -- "Ját"
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
@@ -300,7 +300,7 @@ DefineCharacter("finn", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 })
 
 DefineCharacter("friallaf", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
-	Name = "Fríallaf",
+	Name = "Friallaf", -- "Fríallaf"
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
@@ -314,7 +314,7 @@ DefineCharacter("friallaf", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 })
 
 DefineCharacter("voden", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
-	Name = "Vóden", -- euhemerized version of Odin; "far-famed for his wisdom and every accomplishment"; had "second sight"
+	Name = "Voden", -- "Vóden"; euhemerized version of Odin; "far-famed for his wisdom and every accomplishment"; had "second sight"
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
@@ -329,7 +329,7 @@ DefineCharacter("voden", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 })
 
 DefineCharacter("frigida", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
-	Name = "Frígídá", -- wife of Vóden; euhemerized version of Frigg; had "second sight"
+	Name = "Frigida", -- "Frígídá"; wife of Vóden; euhemerized version of Frigg; had "second sight"
 	Gender = "female",
 	Type = "unit-germanic-archer",
 	Civilization = "germanic",
@@ -386,7 +386,7 @@ DefineCharacter("vitta", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 })
 
 DefineCharacter("heingistr", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
-	Name = "Heingistr",
+	Name = "Heingist", -- "Heingistr"
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
@@ -435,7 +435,7 @@ DefineCharacter("branda", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 })
 
 DefineCharacter("frjodigar", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
-	Name = "Frjódigar", -- also known as Fródi
+	Name = "Frjodigar", -- "Frjódigar"; also known as Fródi
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
@@ -444,7 +444,7 @@ DefineCharacter("frjodigar", { -- Source: Snorri Sturlson, "The Prose Edda", 191
 })
 
 DefineCharacter("freovin", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
-	Name = "Freóvin",
+	Name = "Freovin", -- "Freóvin"
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
@@ -508,7 +508,7 @@ DefineCharacter("skeldu", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 })
 
 DefineCharacter("fridleifr-skeldung", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
-	Name = "Fridleifr",
+	Name = "Fridleif", -- "Fridleifr"
 	-- prefix is likely the Old Norse word "Friđr"
 	FamilyName = "Skeldung", -- "Skjoldung" in the original Norse saga (from Skjöldr), here rendered as Skeldu (Proto-Germanic version of "Skjöldr") and -ung (the suffix in the original word; which should be changed for a Proto-Germanic version)
 	Gender = "male",
@@ -522,7 +522,7 @@ DefineCharacter("fridleifr-skeldung", { -- Source: Snorri Sturlson, "The Prose E
 })
 
 DefineCharacter("saemingr-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, p. 212; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 9.
-	Name = "Sæmingr", -- Yngve (or Vóden's) son set to rule over Norway
+	Name = "Saeming", -- "Sæmingr"; Yngve (or Vóden's) son set to rule over Norway
 	FamilyName = "Yngling",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -540,6 +540,5 @@ DefineCharacter("erala", {
 	Description = _("The young warrior Erala believes his true father to be the god Rig. Feeling that his divine heritage has fated him to rule over vast lands, Erala sets about to carve territory for himself."),
 	Icon = "icon-jarl",
 	HairVariation = "blond-hair",
-	Trait = "upgrade-strong",
-	Persistent = true
+	Trait = "upgrade-strong"
 })

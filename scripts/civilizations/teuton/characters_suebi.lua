@@ -40,7 +40,6 @@ DefineCharacter("marbod", {
 	Year = -9, -- Marbod, king of the Suebic tribe of the Marcomanni, conquers Bohemia in 9 BC
 	DeathYear = 19, -- Marbod deposed in 19 AD
 	ViolentDeath = true, -- to represent him being deposed; remove when his DeathYear is replaced with his actual year of death
-	Persistent = true,
 	HistoricalTitles = {
 		"head-of-state", -9, 19, "teuton", "marcomanni-tribe"
 	}

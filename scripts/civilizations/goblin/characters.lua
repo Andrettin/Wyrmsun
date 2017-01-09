@@ -37,7 +37,6 @@ DefineCharacter("agniss-tenebris", { -- invented by Jesse Crider
 	Description = _("The leader of the Tenebris Syndicate, Agniss rules through mysticism and paranoia. The hooded hag is well-known amongst goblins for the terror she inspires."),
 --	Icon = "icon-agniss",
 	ProvinceOfOrigin = "Tenebris",
---	Persistent = true,
 	HistoricalTitles = {
 --		"head-of-state", 0, 0, "goblin", "tenebris"
 	}
@@ -55,7 +54,6 @@ DefineCharacter("dremac-paarsins", { -- invented by Jesse Crider
 	Description = _("Dremac Paarsins is the gluttonous leader of the Myridian Syndicate. An extremely wealthy merchant lord, Dremac is known for his opulence and cunning. It is rumored that he rose to his ruling position by a mix of political blackmailing and his wealth's influence."),
 --	Icon = "icon-dremac-paarsins",
 	ProvinceOfOrigin = "Myridia",
---	Persistent = true,
 	HistoricalTitles = {
 --		"head-of-state", 0, 0, "goblin", "myridia"
 	}
@@ -73,7 +71,6 @@ DefineCharacter("ioun-stilgar", { -- invented by Jesse Crider
 	Description = _("Ioun is a veteran tactician who leads the Stilgar Syndicate. He is known as \"Ioun the Just\" due to his record of honoring the contracts he enters."),
 --	Icon = "icon-ioun",
 	ProvinceOfOrigin = "Stilgar",
---	Persistent = true,
 	HistoricalTitles = {
 --		"head-of-state", 0, 0, "goblin", "stilgar"
 	}
@@ -91,7 +88,6 @@ DefineCharacter("orza-chahax", { -- invented by Jesse Crider
 	Description = _("Orza Chahax is the leader of the Ezmarrian Syndicate. As a scholar, he is dedicated to science, though his methods are often questionable in their morality."),
 --	Icon = "icon-orza-chahax",
 	ProvinceOfOrigin = "Ezmarria",
---	Persistent = true,
 	HistoricalTitles = {
 --		"head-of-state", 0, 0, "goblin", "ezmarria"
 	}

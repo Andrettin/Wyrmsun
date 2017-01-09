@@ -32,7 +32,6 @@ DefineCharacter("kvasir", {
 	Deity = "kvasir",
 	HairVariation = "gray-hair",
 	Trait = "upgrade-wise",
-	Persistent = true,
 	Level = 25
 })
 
