@@ -67,6 +67,9 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - Deity entries in the encyclopedia now display their portraits.
 
+* Scenarios
+- Added Karla and Thrahila as heroes to their respective tribes for the Haimdala's Progeny scenario.
+
 * Terrain
 - Fixed issue which prevented trees from regrowing.
 

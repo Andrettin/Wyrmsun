@@ -71,7 +71,7 @@ SetMapTemplateUnit("earth", "unit-germanic-warrior", "hlesing-tribe", {4089, 745
 SetMapTemplateUnit("earth", "unit-germanic-carpenters-shop", "karling-tribe", {4033, 751}, -1600, -1500)
 SetMapTemplateUnit("earth", "unit-germanic-farm", "karling-tribe", {4033, 751}, -1600, -1500)
 SetMapTemplateUnit("earth", "unit-germanic-farm", "karling-tribe", {4033, 751}, -1600, -1500)
-SetMapTemplateUnit("earth", "unit-germanic-worker", "karling-tribe", {4033, 751}, -1600, -1500)
+SetMapTemplateHero("earth", "karla", "karling-tribe", {4033, 751}, -1600, -1599)
 SetMapTemplateUnit("earth", "unit-germanic-worker", "karling-tribe", {4033, 751}, -1600, -1500)
 SetMapTemplateUnit("earth", "unit-germanic-worker", "karling-tribe", {4033, 751}, -1600, -1500)
 SetMapTemplateUnit("earth", "unit-germanic-worker", "karling-tribe", {4033, 751}, -1600, -1500)
@@ -94,7 +94,7 @@ SetMapTemplateUnit("earth", "unit-teuton-town-hall", "denmark", {4112, 784}, 919
 
 -- Store Tyrrestrup (Vendsyssel)
 SetMapTemplateUnit("earth", "unit-germanic-farm", "thralling-tribe", {4070, 743}, -1600, -1500)
-SetMapTemplateUnit("earth", "unit-germanic-worker", "thralling-tribe", {4070, 743}, -1600, -1500)
+SetMapTemplateHero("earth", "thrahila", "thralling-tribe", {4070, 743}, -1600, -1599)
 SetMapTemplateUnit("earth", "unit-germanic-worker", "thralling-tribe", {4070, 743}, -1600, -1500)
 SetMapTemplateUnit("earth", "unit-germanic-worker", "thralling-tribe", {4070, 743}, -1600, -1500)
 SetMapTemplateUnit("earth", "unit-germanic-worker", "thralling-tribe", {4070, 743}, -1600, -1500)

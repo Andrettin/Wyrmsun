@@ -531,8 +531,29 @@ DefineCharacter("saemingr-yngling", { -- Source: Snorri Sturlson, "Heimskringla"
 	Father = "yngve"
 })
 
+DefineCharacter("thrahila", {
+	Name = "Thrahila", -- Proto-Germanic rendering of "Thrall", the ancestor of the class of thralls in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 19-20.
+	Gender = "male",
+	Type = "unit-germanic-worker",
+	Civilization = "germanic",
+	Faction = "thralling-tribe",
+	Description = _("The robust Thrahila is a hard worker, constantly engaged in logging and other laborious activities."),
+	HairVariation = "black-hair", -- described as black-haired in the myths
+	Trait = "upgrade-dutiful"
+})
+
+DefineCharacter("karla", {
+	Name = "Karla", -- Proto-Germanic rendering of "Karl", the ancestor of the class of peasants in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 21.
+	Gender = "male",
+	Type = "unit-germanic-worker",
+	Civilization = "germanic",
+	Faction = "karling-tribe",
+	HairVariation = "brown-hair", -- described as brown-haired in the myths
+	Trait = "upgrade-intelligent"
+})
+
 DefineCharacter("erala", {
-	Name = "Erala",
+	Name = "Erala", -- Proto-Germanic rendering of "Jarl", the ancestor of the class of warriors in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 22-24.
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",

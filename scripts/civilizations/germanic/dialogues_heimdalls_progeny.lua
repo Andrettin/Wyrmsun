@@ -55,17 +55,15 @@ DefineDialogue("jarl-speaks-of-his-destiny", {
 DefineDialogue("jarl-meets-the-thrallings", {
 	Nodes = {
 		{
-			"speaker", "unit", "unit-germanic-worker",
-			"speaker-player", "thralling-tribe",
-			"text", "Who are you and what do you want with Thrahila and his sons?"
+			"speaker", "character", "thrahila",
+			"text", "Who are you and what do you want with me and his sons?"
 		},
 		{
 			"speaker", "character", "erala",
 			"text", "I am the fierce warrior Erala. I need workers to serve me and build me a hall."
 		},
 		{
-			"speaker", "unit", "unit-germanic-worker",
-			"speaker-player", "thralling-tribe",
+			"speaker", "character", "thrahila",
 			"text", "Then go somewhere else. We have work of our own to do."
 		},
 		{
@@ -130,17 +128,15 @@ DefineDialogue("thrallings-subjugated", {
 DefineDialogue("jarl-meets-the-karlings", {
 	Nodes = {
 		{
-			"speaker", "unit", "unit-germanic-worker",
-			"speaker-player", "karling-tribe",
-			"text", "These are the lands of Karla and his sons. What do you wish?"
+			"speaker", "character", "karla",
+			"text", "These lands belong to me and my sons. What do you wish?"
 		},
 		{
 			"speaker", "character", "erala",
 			"text", "I am Erala, a mighty warrior. Your people are good farmers, but they need protection. Submit to me and I will make you safe."
 		},
 		{
-			"speaker", "unit", "unit-germanic-worker",
-			"speaker-player", "karling-tribe",
+			"speaker", "character", "karla",
 			"text", "We need no one to guard us. Our arrows are enough to counter any threat.",
 			"options", {"Subjugate them", "Leave them alone"},
 			"option-effects", {
@@ -161,8 +157,7 @@ DefineDialogue("jarl-attacks-the-karlings", {
 			"text", "Folly. If you lot will not submit willingly, then I must subjugate you by force."
 		},
 		{
-			"speaker", "unit", "unit-germanic-worker",
-			"speaker-player", "karling-tribe",
+			"speaker", "character", "karla",
 			"text", "The Karlings shall never be slaves!",
 			"option-effects", {
 				function(s)
