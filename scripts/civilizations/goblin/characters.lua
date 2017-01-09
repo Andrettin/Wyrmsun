@@ -51,7 +51,7 @@ DefineCharacter("dremac-paarsins", { -- invented by Jesse Crider
 	Civilization = "goblin",
 	Faction = "myridia",
 	Trait = "upgrade-genius",
-	Description = _("Dremac Paarsins is the gluttonous leader of the Myridian Syndicate. An extremely wealthy merchant lord, Dremac is known for his opulence and cunning. It is rumored that he rose to his ruling position by a mix of political blackmailing and his wealth's influence."),
+	Description = _("Dremac Paarsins is the gluttonous leader of the Myridian Syndicate. An extremely wealthy merchant lord, Dremac is known for his opulence and cunning. It is rumored that he rose to his ruling position by a mix of political blackmailing and the influence of his wealth."),
 --	Icon = "icon-dremac-paarsins",
 	ProvinceOfOrigin = "Myridia",
 	HistoricalTitles = {
