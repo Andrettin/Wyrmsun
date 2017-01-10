@@ -67,6 +67,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - Deity entries in the encyclopedia now display their portraits.
+- Players that are hostile to you will now be considered as your enemy, even if you don't have a hostile diplomatic stance towards them.
 
 * Scenarios
 - Added Karla and Thrahila as heroes to their respective tribes for the Haimdala's Progeny scenario.
