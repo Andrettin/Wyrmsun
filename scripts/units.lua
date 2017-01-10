@@ -2753,6 +2753,7 @@ DefineUnitType("unit-template-heroic-merchant", {
 	Name = _("Heroic Merchant"),
 	Parent = "unit-template-merchant",
 	Class = "heroic-merchant",
+	Costs = {"time", 120, "copper", 1200},
 	Strength = 10,
 	Dexterity = 12,
 	Intelligence = 13,

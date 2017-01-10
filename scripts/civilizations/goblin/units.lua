@@ -147,7 +147,7 @@ DefineUnitType("unit-goblin-magnate", {
 	Civilization = "goblin",
 	Description = _("The Goblin syndicates always keen on profitable opportunities. Their leadership is largely drawn from magnates, extremely wealthy and savvy merchants whose scruples leave something to be desired. Engaging in trade with all sorts of people and in all kinds of goods, goblin traders often stradle the twilight zone between legality and illegality."),
 	Image = {"file", "goblin/units/rogue.png", "size", {72, 72}},
-	Animations = "animations-goblin-thief", Icon = "icon-goblin-magnate",
+	Animations = "animations-goblin-rogue", Icon = "icon-goblin-magnate",
 	DefaultEquipment = {
 		{"boots", "unit-boots"}
 	},

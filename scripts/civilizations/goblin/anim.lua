@@ -8,9 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      anim.lua - The goblin unit animation definitions.
---
---      (c) Copyright 2014 by Andrettin
+--      (c) Copyright 2014-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -51,8 +49,6 @@ DefineAnimations("animations-goblin-spearman", {
 --
 
 local GoblinSwordsmanStill = {"frame 0", "wait 4", "random-goto 1 taunt", "random-goto 99 no-rotate", "random-rotate 1", "goto no-rotate", "label taunt", "frame 60", "wait 6", "frame 65", "wait 6", "frame 60", "wait 6", "frame 65", "wait 6", "frame 60", "wait 6", "frame 65", "wait 6", "frame 0", "label no-rotate", "wait 1",}
-local GoblinSwordsmanDeath = {"unbreakable begin", "frame 45", "wait 3", "frame 50", "wait 3", "frame 55", "wait 100",
-    "frame 55", "unbreakable end", "wait 1",}
 
 DefineAnimations("animations-goblin-swordsman", {
 	Still = GoblinSwordsmanStill,
@@ -62,7 +58,7 @@ DefineAnimations("animations-goblin-swordsman", {
 		"frame 40", "attack", "wait 5", "frame 0", "wait 10",
 		"frame 0", "unbreakable end", "wait 1",
 	},
-	Death = GoblinSwordsmanDeath
+	Death = UnitDeath
 })
 
 --
@@ -83,8 +79,17 @@ DefineAnimations("animations-goblin-thief", {
 		"attack", "wait 5", "frame 0", "wait 10", "frame 0",
 		"unbreakable end", "wait 1",
 	},
-	Death = GoblinSwordsmanDeath
+	Death = UnitDeath
 })
+
+local GoblinRogueStill = {"frame 0", "wait 4", "random-goto 1 taunt", "random-goto 99 no-rotate", "random-rotate 1", "goto no-rotate", "label taunt", "frame 65", "wait 6", "frame 70", "wait 6", "frame 65", "wait 6", "frame 70", "wait 6", "frame 65", "wait 6", "frame 70", "wait 6", "frame 0", "label no-rotate", "wait 1",}
+DefineAnimations("animations-goblin-rogue", {
+	Still = GoblinRogueStill,
+	Move = UnitMove,
+	Attack = UnitMeleeAttackNew,
+	Death = WorkerDeath
+})
+
 
 --
 -- Goblin Archer
