@@ -471,7 +471,7 @@
 /graphics/goblin/icons/barbarian.png (by Jesse Crider, b_o and Exidelo) (licensed under the CC0)
 /graphics/goblin/icons/broad_sword.png (by Jinn) (licensed under the CC0)
 /graphics/goblin/icons/coinage.png (by Jesse Crider and Jinn) (licensed under the CC0)
-/graphics/goblin/icons/dremac_paarsins.png (by Jesse Crider) (licensed under the CC0)
+/graphics/goblin/icons/dremac_paarsins.png (by Jesse Crider and Exidelo) (licensed under the CC0)
 /graphics/goblin/icons/embossed_shield.png (by Exidelo) (licensed under the CC0)
 /graphics/goblin/icons/embossed_shield_extra_1.png (by Exidelo) (licensed under the CC0)
 /graphics/goblin/icons/gathaarl.png (by Exidelo) (licensed under the CC0)

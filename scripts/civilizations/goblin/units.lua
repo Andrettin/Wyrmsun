@@ -141,7 +141,8 @@ DefineUnitType("unit-goblin-militia", {
 	}
 } )
 
-DefineUnitType("unit-goblin-magnate", { Name = _("Magnate"),
+DefineUnitType("unit-goblin-magnate", { 
+	Name = _("Magnate"),
 	Parent = "unit-template-heroic-merchant",
 	Civilization = "goblin",
 	Description = _("The Goblin syndicates always keen on profitable opportunities. Their leadership is largely drawn from magnates, extremely wealthy and savvy merchants whose scruples leave something to be desired. Engaging in trade with all sorts of people and in all kinds of goods, goblin traders often stradle the twilight zone between legality and illegality."),
