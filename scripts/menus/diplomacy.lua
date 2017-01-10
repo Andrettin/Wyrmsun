@@ -44,7 +44,7 @@ function RunDiplomacyMenu()
 					alliedcb:setMarked(false)
 				end
 			end)
-			enemycb:setMarked(ThisPlayer:IsEnemy(Players[i]))
+			enemycb:setMarked(ThisPlayer:IsEnemy(i))
 			enemy[j] = enemycb
 
 			sharedvisioncb = menu:addImageCheckBox("", 276, (18 * j) + 23,
@@ -62,7 +62,7 @@ function RunDiplomacyMenu()
 			-- allies
 			if (allied[j]:isMarked() and enemy[j]:isMarked() == false) then
 				if (ThisPlayer:IsAllied(Players[i]) == false or
-					ThisPlayer:IsEnemy(Players[i])) then
+					ThisPlayer:IsEnemy(i)) then
 					SetDiplomacy(ThisPlayer.Index, "allied", i)
 				end
 			end
@@ -70,9 +70,9 @@ function RunDiplomacyMenu()
 			-- enemies
 			if (allied[j]:isMarked() == false and enemy[j]:isMarked()) then
 				if (ThisPlayer:IsAllied(Players[i]) or
-					ThisPlayer:IsEnemy(Players[i]) == false) then
+					ThisPlayer:IsEnemy(i) == false) then
 					SetDiplomacy(ThisPlayer.Index, "enemy", i)
-					if (Players[i].Type == PlayerComputer and Players[i]:IsEnemy(ThisPlayer) == false) then
+					if (Players[i].Type == PlayerComputer and Players[i]:IsEnemy(GetThisPlayer()) == false) then
 						SetDiplomacy(i, "enemy", ThisPlayer.Index) -- Andrettin: this is added so that when the human player decides to attack computer players, computer players become enemies of the human player as well
 						if (Players[i].Type == PlayerComputer and Players[i]:IsSharedVision(ThisPlayer)) then
 							SetSharedVision(i, false, ThisPlayer.Index)
@@ -84,7 +84,7 @@ function RunDiplomacyMenu()
 			-- neutral
 			if (allied[j]:isMarked() == false and enemy[j]:isMarked() == false) then
 				if (ThisPlayer:IsAllied(Players[i]) or
-					ThisPlayer:IsEnemy(Players[i])) then
+					ThisPlayer:IsEnemy(i)) then
 					SetDiplomacy(ThisPlayer.Index, "neutral", i)
 				end
 			end
@@ -92,7 +92,7 @@ function RunDiplomacyMenu()
 			-- crazy
 			if (allied[j]:isMarked() and enemy[j]:isMarked()) then
 				if (ThisPlayer:IsAllied(Players[i]) == false or
-					ThisPlayer:IsEnemy(Players[i]) == false) then
+					ThisPlayer:IsEnemy(i) == false) then
 					SetDiplomacy(ThisPlayer.Index, "crazy", i)
 				end
 			end

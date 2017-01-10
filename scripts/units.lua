@@ -3366,6 +3366,7 @@ DefineUnitType("unit-template-barracks", {
 	PersonalNames = {
 		"Axehall",
 		"Bloodhall",
+		"Daggerhall",
 		"Hammerhall",
 		"Helmhall",
 		"Shieldhall",
