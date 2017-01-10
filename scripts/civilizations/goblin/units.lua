@@ -615,7 +615,8 @@ DefineUnitType("unit-goblin-farm", { Name = _("Farm"),
 	}
 } )
 
-DefineUnitType("unit-goblin-mess-hall", { Name = _("Mess Hall"),
+DefineUnitType("unit-goblin-mess-hall", {
+	Name = _("Mess Hall"),
 	Parent = "unit-template-barracks",
 	Civilization = "goblin",
 	Description = _("Within mess halls goblin warriors gather to hone their skills and plan raids on nearby settlements."),

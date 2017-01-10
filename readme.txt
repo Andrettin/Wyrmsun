@@ -63,6 +63,7 @@ https://github.com/Andrettin/Wyrmsun
 * Heroes
 - Heroes without unique portraits can now also be recruited, and are likewise also persistent.
 - Barracks and mercenary camp buildings now allow choosing from up to three heroes to recruit.
+- Fixed issue which prevented goblins from recruiting heroes.
 
 * Miscellaneous
 - Deity entries in the encyclopedia now display their portraits.

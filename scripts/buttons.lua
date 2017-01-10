@@ -109,7 +109,7 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-rally-point",
 		"unit-gnomish-town-hall",
 		"unit-gnomish-barracks",
 		"unit-goblin-town-hall", "unit-goblin-stronghold",
-		"unit-goblin-barracks",
+		"unit-goblin-mess-hall",
 		"unit-goblin-temple", "unit-goblin-dock",
 		"unit-goblin-watch-tower", "unit-goblin-guard-tower"
 	}
@@ -720,7 +720,7 @@ DefineButton( { Pos = 9, Level = 0,
 		"unit-dwarven-barracks",
 		"unit-dwarven-temple",
 		"unit-gnomish-barracks",
-		"unit-goblin-barracks",
+		"unit-goblin-mess-hall",
 		"unit-goblin-temple",
 		"unit-mercenary-camp"
 	}
@@ -737,7 +737,7 @@ DefineButton( { Pos = 10, Level = 0,
 		"unit-dwarven-barracks",
 		"unit-dwarven-temple",
 		"unit-gnomish-barracks",
-		"unit-goblin-barracks",
+		"unit-goblin-mess-hall",
 		"unit-goblin-temple",
 		"unit-mercenary-camp"
 	}
@@ -754,7 +754,7 @@ DefineButton( { Pos = 11, Level = 0,
 		"unit-dwarven-barracks",
 		"unit-dwarven-temple",
 		"unit-gnomish-barracks",
-		"unit-goblin-barracks",
+		"unit-goblin-mess-hall",
 		"unit-goblin-temple",
 		"unit-mercenary-camp"
 	}
