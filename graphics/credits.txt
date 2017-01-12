@@ -481,7 +481,7 @@
 /graphics/goblin/icons/goblin_spearman.png (by Jinn) (licensed under the CC0)
 /graphics/goblin/icons/goblin_thief.png (by Exidelo) (licensed under the CC0)
 /graphics/goblin/icons/goblin_worker.png (by Jinn) (licensed under the CC0)
-/graphics/goblin/icons/ioun.png (by Jesse Crider) (licensed under the CC0)
+/graphics/goblin/icons/ioun.png (by Jesse Crider and Exidelo) (licensed under the CC0)
 /graphics/goblin/icons/long_sword.png (by Jinn) (licensed under the CC0)
 /graphics/goblin/icons/magnate.png (by Jesse Crider and Jinn) (licensed under the CC0)
 /graphics/goblin/icons/militia.png (by Jesse Crider and Jinn) (licensed under the CC0)

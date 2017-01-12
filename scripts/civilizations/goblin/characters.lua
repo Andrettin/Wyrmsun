@@ -69,7 +69,7 @@ DefineCharacter("ioun-stilgar", { -- invented by Jesse Crider
 	Faction = "stilgar",
 	Trait = "upgrade-keen", -- a "just" trait would fit better
 	Description = _("Ioun is a veteran tactician who leads the Stilgar Syndicate. He is known as \"Ioun the Just\" due to his record of honoring the contracts he enters."),
---	Icon = "icon-ioun",
+	Icon = "icon-ioun",
 	ProvinceOfOrigin = "Stilgar",
 	HistoricalTitles = {
 --		"head-of-state", 0, 0, "goblin", "stilgar"
