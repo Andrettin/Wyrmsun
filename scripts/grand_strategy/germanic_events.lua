@@ -902,7 +902,7 @@ local GermanicEvents = {
 						GetProvinceCivilization(WorldMapProvinces[province_key].Name) == "germanic"
 					) then
 						for key, value in pairs(Factions) do
-							if (Factions[key].Civilization == "goth" and GetFactionData(Factions[key].Civilization, Factions[key].Name, "Type") == GetFactionData(EventFaction.Civilization, EventFaction.Name, "Type") and ProvinceHasClaim(WorldMapProvinces[province_key].Name, Factions[key].Civilization, Factions[key].Name) and GetFactionProvinceCount(Factions[key]) == 0) then
+							if (Factions[key].Civilization == "goth" and GetFactionData(Factions[key].Name, "Type") == GetFactionData(EventFaction.Name, "Type") and ProvinceHasClaim(WorldMapProvinces[province_key].Name, Factions[key].Civilization, Factions[key].Name) and GetFactionProvinceCount(Factions[key]) == 0) then
 								FormFactionLua(EventFaction, Factions[key])
 								EventFaction = Factions[key]
 								found_faction = true
@@ -917,7 +917,7 @@ local GermanicEvents = {
 				end
 				if not (found_faction) then
 					for key, value in pairs(Factions) do
-						if (Factions[key].Civilization == "goth" and GetFactionData(Factions[key].Civilization, Factions[key].Name, "Type") == GetFactionData(EventFaction.Civilization, EventFaction.Name, "Type") and GetFactionProvinceCount(Factions[key]) == 0) then
+						if (Factions[key].Civilization == "goth" and GetFactionData(Factions[key].Name, "Type") == GetFactionData(EventFaction.Name, "Type") and GetFactionProvinceCount(Factions[key]) == 0) then
 							FormFactionLua(EventFaction, Factions[key])
 							EventFaction = Factions[key]
 							break

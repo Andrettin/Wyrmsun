@@ -472,7 +472,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 		if (civilization ~= "") then
 			tooltip_civilization = "(" ..  _(GetCivilizationData(civilization, "Display"))
 			if (faction ~= "") then
-				tooltip_civilization = tooltip_civilization ..  ": " .. _(FullyCapitalizeString(string.gsub(faction, "-", " ")))
+				tooltip_civilization = tooltip_civilization ..  ": " .. _(GetFactionData(faction, "Name"))
 			end
 			tooltip_civilization = tooltip_civilization .. ")"
 		end
@@ -492,7 +492,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 		tooltip_name = CUpgrade:Get(unit_name).Name
 		if (civilization ~= "") then
 			if (faction ~= "") then
-				tooltip_civilization = "(" ..  _(FullyCapitalizeString(string.gsub(faction, "-", " "))) .. ")"
+				tooltip_civilization = "(" ..  _(GetFactionData(faction, "Name")) .. ")"
 			end
 		end
 	elseif (state == "heroes") then
@@ -504,7 +504,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 		if (civilization ~= "") then
 			tooltip_civilization = "(" ..  _(GetCivilizationData(civilization, "Display"))
 			if (faction ~= "") then
-				tooltip_civilization = tooltip_civilization ..  ": " .. _(FullyCapitalizeString(string.gsub(faction, "-", " ")))
+				tooltip_civilization = tooltip_civilization ..  ": " .. _(GetFactionData(faction, "Name"))
 			end
 			tooltip_civilization = tooltip_civilization .. ")"
 		end
@@ -529,7 +529,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 		if (civilization ~= "") then
 			tooltip_civilization = "(" ..  _(GetCivilizationData(civilization, "Display"))
 			if (faction ~= "") then
-				tooltip_civilization = tooltip_civilization ..  ": " .. _(FullyCapitalizeString(string.gsub(faction, "-", " ")))
+				tooltip_civilization = tooltip_civilization ..  ": " .. _(GetFactionData(faction, "Name"))
 			end
 			tooltip_civilization = tooltip_civilization .. ")"
 		end
@@ -557,7 +557,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 	local playercolor
 	if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
 		if (civilization ~= "" and faction ~= "") then
-			playercolor = GetFactionData(civilization, faction, "Color")
+			playercolor = GetFactionData(faction, "Color")
 		elseif (civilization ~= "") then
 			playercolor = GetCivilizationData(civilization, "DefaultColor")
 		else
@@ -645,7 +645,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		if (civilization ~= "") then
 			tooltip_civilization = "(" ..  _(GetCivilizationData(civilization, "Display"))
 			if (faction ~= "") then
-				tooltip_civilization = tooltip_civilization ..  ": " .. _(FullyCapitalizeString(string.gsub(faction, "-", " ")))
+				tooltip_civilization = tooltip_civilization ..  ": " .. _(GetFactionData(faction, "Name"))
 			end
 			tooltip_civilization = tooltip_civilization .. ")"
 		end
@@ -665,7 +665,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		if (civilization ~= "") then
 			tooltip_civilization = "(" ..  _(GetCivilizationData(civilization, "Display"))
 			if (faction ~= "") then
-				tooltip_civilization = tooltip_civilization ..  ": " .. _(FullyCapitalizeString(string.gsub(faction, "-", " ")))
+				tooltip_civilization = tooltip_civilization ..  ": " .. _(GetFactionData(faction, "Name"))
 			end
 			tooltip_civilization = tooltip_civilization .. ")"
 		end
@@ -678,7 +678,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		if (civilization ~= "") then
 			tooltip_civilization = "(" ..  _(GetCivilizationData(civilization, "Display"))
 			if (faction ~= "") then
-				tooltip_civilization = tooltip_civilization ..  ": " .. _(FullyCapitalizeString(string.gsub(faction, "-", " ")))
+				tooltip_civilization = tooltip_civilization ..  ": " .. _(GetFactionData(faction, "Name"))
 			end
 			tooltip_civilization = tooltip_civilization .. ")"
 		end
@@ -703,7 +703,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		if (civilization ~= "") then
 			tooltip_civilization = "(" ..  _(GetCivilizationData(civilization, "Display"))
 			if (faction ~= "") then
-				tooltip_civilization = tooltip_civilization ..  ": " .. _(FullyCapitalizeString(string.gsub(faction, "-", " ")))
+				tooltip_civilization = tooltip_civilization ..  ": " .. _(GetFactionData(faction, "Name"))
 			end
 			tooltip_civilization = tooltip_civilization .. ")"
 		end
@@ -714,7 +714,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 	local playercolor
 	if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
 		if (civilization ~= "" and faction ~= "") then
-			playercolor = GetFactionData(civilization, faction, "Color")
+			playercolor = GetFactionData(faction, "Color")
 		elseif (civilization ~= "") then
 			playercolor = GetCivilizationData(civilization, "DefaultColor")
 		else
@@ -750,7 +750,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		if (GetUnitTypeData(unit_name, "Civilization") ~= "") then
 			civilization = "Civilization: " .. _(GetCivilizationData(GetUnitTypeData(unit_name, "Civilization"), "Display")) .. "\n\n"
 			if (GetUnitTypeData(unit_name, "Faction") ~= "") then
-				faction = "Faction: " .. _(GetFactionData(GetUnitTypeData(unit_name, "Civilization"), GetUnitTypeData(unit_name, "Faction"), "Name")) .. "\n\n"
+				faction = "Faction: " .. _(GetFactionData(GetUnitTypeData(unit_name, "Faction"), "Name")) .. "\n\n"
 			end
 		end
 		if (GetUnitTypeData(unit_name, "Class") ~= "") then
@@ -778,7 +778,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 					end
 					droppers_string = droppers_string .. GetUnitTypeData(droppers[i], "Name")
 					if (GetUnitTypeData(droppers[i], "Civilization") ~= "" and GetUnitTypeData(droppers[i], "Faction") ~= "") then
-						droppers_string = droppers_string .. " (" .. GetCivilizationData(GetUnitTypeData(droppers[i], "Civilization"), "Display") .. ": " .. GetFactionData(GetUnitTypeData(droppers[i], "Civilization"), GetUnitTypeData(droppers[i], "Faction"), "Name") .. ")"
+						droppers_string = droppers_string .. " (" .. GetCivilizationData(GetUnitTypeData(droppers[i], "Civilization"), "Display") .. ": " .. GetFactionData(GetUnitTypeData(droppers[i], "Faction"), "Name") .. ")"
 					elseif (GetUnitTypeData(droppers[i], "Civilization") ~= "") then
 						droppers_string = droppers_string .. " (" .. GetCivilizationData(GetUnitTypeData(droppers[i], "Civilization"), "Display") .. ")"
 					end
@@ -793,7 +793,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		if (GetUpgradeData(unit_name, "Civilization") ~= "") then
 			civilization = "Civilization: " .. GetCivilizationData(GetUpgradeData(unit_name, "Civilization"), "Display") .. "\n\n"
 			if (GetUpgradeData(unit_name, "Faction") ~= "") then
-				faction = "Faction: " .. _(GetFactionData(GetUpgradeData(unit_name, "Civilization"), GetUpgradeData(unit_name, "Faction"), "Name")) .. "\n\n"
+				faction = "Faction: " .. _(GetFactionData(GetUpgradeData(unit_name, "Faction"), "Name")) .. "\n\n"
 			end
 		end
 		if (GetUpgradeData(unit_name, "Class") ~= "") then
@@ -817,7 +817,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 				if (string.find(applies_to_items[i], "unit") ~= nil) then
 					applies_to = applies_to .. _(GetPluralForm(GetUnitTypeData(applies_to_items[i], "Name")))
 					if (GetUnitTypeData(applies_to_items[i], "Civilization") ~= "" and GetUnitTypeData(applies_to_items[i], "Faction") ~= "") then
-						applies_to = applies_to .. " (" .. _(GetCivilizationData(GetUnitTypeData(applies_to_items[i], "Civilization"), "Display")) .. ": " .. _(GetFactionData(GetUnitTypeData(applies_to_items[i], "Civilization"), GetUnitTypeData(applies_to_items[i], "Faction"), "Name")) .. ")"
+						applies_to = applies_to .. " (" .. _(GetCivilizationData(GetUnitTypeData(applies_to_items[i], "Civilization"), "Display")) .. ": " .. _(GetFactionData(GetUnitTypeData(applies_to_items[i], "Faction"), "Name")) .. ")"
 					elseif (GetUnitTypeData(applies_to_items[i], "Civilization") ~= "") then
 						applies_to = applies_to .. " (" .. _(GetCivilizationData(GetUnitTypeData(applies_to_items[i], "Civilization"), "Display")) .. ")"
 					end
@@ -841,7 +841,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 						end
 						droppers_string = droppers_string .. GetUnitTypeData(droppers[i], "Name")
 						if (GetUnitTypeData(droppers[i], "Civilization") ~= "" and GetUnitTypeData(droppers[i], "Faction") ~= "") then
-							droppers_string = droppers_string .. " (" .. GetCivilizationData(GetUnitTypeData(droppers[i], "Civilization"), "Display") .. ": " .. GetFactionData(GetUnitTypeData(droppers[i], "Civilization"), GetUnitTypeData(droppers[i], "Faction"), "Name") .. ")"
+							droppers_string = droppers_string .. " (" .. GetCivilizationData(GetUnitTypeData(droppers[i], "Civilization"), "Display") .. ": " .. GetFactionData(GetUnitTypeData(droppers[i], "Faction"), "Name") .. ")"
 						elseif (GetUnitTypeData(droppers[i], "Civilization") ~= "") then
 							droppers_string = droppers_string .. " (" .. GetCivilizationData(GetUnitTypeData(droppers[i], "Civilization"), "Display") .. ")"
 						end
@@ -857,7 +857,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		if (GetCharacterData(unit_name, "Civilization") ~= "") then
 			civilization = "Civilization: " .. _(GetCivilizationData(GetCharacterData(unit_name, "Civilization"), "Display")) .. "\n\n"
 			if (GetCharacterData(unit_name, "Faction") ~= "") then
-				faction = "Faction: " .. _(GetFactionData(GetCharacterData(unit_name, "Civilization"), GetCharacterData(unit_name, "Faction"), "Name")) .. "\n\n"
+				faction = "Faction: " .. _(GetFactionData(GetCharacterData(unit_name, "Faction"), "Name")) .. "\n\n"
 			end
 		end
 		if (GetCharacterData(unit_name, "Type") ~= "") then
@@ -983,7 +983,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 					end
 					droppers_string = droppers_string .. GetUnitTypeData(droppers[i], "Name")
 					if (GetUnitTypeData(droppers[i], "Civilization") ~= "" and GetUnitTypeData(droppers[i], "Faction") ~= "") then
-						droppers_string = droppers_string .. " (" .. GetCivilizationData(GetUnitTypeData(droppers[i], "Civilization"), "Display") .. ": " .. GetFactionData(GetUnitTypeData(droppers[i], "Civilization"), GetUnitTypeData(droppers[i], "Faction"), "Name") .. ")"
+						droppers_string = droppers_string .. " (" .. GetCivilizationData(GetUnitTypeData(droppers[i], "Civilization"), "Display") .. ": " .. GetFactionData(GetUnitTypeData(droppers[i], "Faction"), "Name") .. ")"
 					elseif (GetUnitTypeData(droppers[i], "Civilization") ~= "") then
 						droppers_string = droppers_string .. " (" .. GetCivilizationData(GetUnitTypeData(droppers[i], "Civilization"), "Display") .. ")"
 					end
@@ -1929,7 +1929,7 @@ function RunEncyclopediaFactionsCivilizationMenu()
 		local potential_factions = GetCivilizationData(potential_civilizations[i], "Factions")
 		local factions = {}
 		for j = 1, table.getn(potential_factions) do
-			if (GetFactionData(potential_civilizations[i], potential_factions[j], "Description") ~= "" or GetFactionData(potential_civilizations[i], potential_factions[j], "Background") ~= "" or GetFactionData(potential_civilizations[i], potential_factions[j], "Quote") ~= "") then
+			if (GetFactionData(potential_factions[j], "Description") ~= "" or GetFactionData(potential_factions[j], "Background") ~= "" or GetFactionData(potential_factions[j], "Quote") ~= "") then
 				table.insert(factions, potential_factions[j])
 			end
 		end
@@ -1989,7 +1989,7 @@ function RunEncyclopediaFactionsMenu(civilization)
 	local factions = {}
 	
 	for i = 1, table.getn(potential_factions) do
-		if (GetFactionData(civilization, potential_factions[i], "Description") ~= "" or GetFactionData(civilization, potential_factions[i], "Background") ~= "" or GetFactionData(civilization, potential_factions[i], "Quote") ~= "") then
+		if (GetFactionData(potential_factions[i], "Description") ~= "" or GetFactionData(potential_factions[i], "Background") ~= "" or GetFactionData(potential_factions[i], "Quote") ~= "") then
 			table.insert(factions, potential_factions[i])
 		end
 	end
@@ -2004,7 +2004,7 @@ function RunEncyclopediaFactionsMenu(civilization)
 	local faction_y = -3
 
 	for i = 1, table.getn(factions) do
-		menu:addFullButton(_(GetFactionData(civilization, factions[i], "Name")), "", offx + 208 + (113 * faction_x), offy + 104 + (36 * (faction_y + height_offset)),
+		menu:addFullButton(_(GetFactionData(factions[i], "Name")), "", offx + 208 + (113 * faction_x), offy + 104 + (36 * (faction_y + height_offset)),
 			function() OpenEncyclopediaFactionEntry(civilization, factions[i]); end)
 
 		if (faction_y > 5 or (faction_y > 4 and Video.Height < 600)) then
@@ -2033,7 +2033,7 @@ function OpenEncyclopediaFactionEntry(civilization, faction)
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
-	encyclopedia_entry_menu:addLabel("~<" .. GetFactionData(civilization, faction, "Name") .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
+	encyclopedia_entry_menu:addLabel("~<" .. GetFactionData(faction, "Name") .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
 
 	local l = MultiLineLabel()
 	l:setFont(Fonts["game"])
@@ -2041,22 +2041,22 @@ function OpenEncyclopediaFactionEntry(civilization, faction)
 	l:setLineWidth(Video.Width - 64)
 	encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*0)
 	local effects = ""
-	if (GetFactionData(civilization, faction, "FactionUpgrade") ~= "") then
-		effects = GetUpgradeData(GetFactionData(civilization, faction, "FactionUpgrade"), "EffectsString")
+	if (GetFactionData(faction, "FactionUpgrade") ~= "") then
+		effects = GetUpgradeData(GetFactionData(faction, "FactionUpgrade"), "EffectsString")
 	end
 	local description = ""
-	description = "Color: " .. CapitalizeString(GetFactionData(civilization, faction, "Color")) .. "\n\n"
+	description = "Color: " .. CapitalizeString(GetFactionData(faction, "Color")) .. "\n\n"
 	if (effects ~= "") then
 		description = description .. "Effects: " .. effects .. ".\n\n"
 	end
-	if (GetFactionData(civilization, faction, "Description") ~= "") then
-		description = description .. "Description: " .. GetFactionData(civilization, faction, "Description") .. "\n\n"
+	if (GetFactionData(faction, "Description") ~= "") then
+		description = description .. "Description: " .. GetFactionData(faction, "Description") .. "\n\n"
 	end
-	if (GetFactionData(civilization, faction, "Quote") ~= "") then
-		description = description .. "Quote: " .. GetFactionData(civilization, faction, "Quote") .. "\n\n"
+	if (GetFactionData(faction, "Quote") ~= "") then
+		description = description .. "Quote: " .. GetFactionData(faction, "Quote") .. "\n\n"
 	end
-	if (GetFactionData(civilization, faction, "Background") ~= "") then
-		description = description .. "Background: " .. GetFactionData(civilization, faction, "Background") .. "\n\n"
+	if (GetFactionData(faction, "Background") ~= "") then
+		description = description .. "Background: " .. GetFactionData(faction, "Background") .. "\n\n"
 	end
 	l:setCaption(description)
 			

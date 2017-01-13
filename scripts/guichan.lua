@@ -1254,10 +1254,10 @@ function RunSinglePlayerCustomGameMenu()
 		
 		if (race:getSelected() > 0) then
 			for i=1,table.getn(GetCivilizationFactionNames(new_civilization)) do
-				if ((GetFactionData(new_civilization, GetCivilizationFactionNames(new_civilization)[i], "Type") == "tribe" and (tech_level:getSelected() - 1 == -1 or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)")) or (GetFactionData(new_civilization, GetCivilizationFactionNames(new_civilization)[i], "Type") == "polity" and (tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)"))) then
-					if (GetFactionData(new_civilization, GetCivilizationFactionNames(new_civilization)[i], "Playable")) then
+				if ((GetFactionData(GetCivilizationFactionNames(new_civilization)[i], "Type") == "tribe" and (tech_level:getSelected() - 1 == -1 or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)")) or (GetFactionData(GetCivilizationFactionNames(new_civilization)[i], "Type") == "polity" and (tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)"))) then
+					if (GetFactionData(GetCivilizationFactionNames(new_civilization)[i], "Playable")) then
 						table.insert(faction_ident_list, GetCivilizationFactionNames(new_civilization)[i])
-						table.insert(faction_list, _(GetFactionData(new_civilization, GetCivilizationFactionNames(new_civilization)[i], "Name")))
+						table.insert(faction_list, _(GetFactionData(GetCivilizationFactionNames(new_civilization)[i], "Name")))
 					end
 				end
 			end
@@ -1514,7 +1514,7 @@ function GameStarting()
 			-- add buildings for defenders of grand strategy battles, if base building is active
 			local defender_player = GetFactionPlayer(Defender)
 			if (defender_player == nil) then
-				defender_player = GetFactionPlayer(GetFactionData(GetFactionFromName(Defender).Civilization, Defender, "Name"))
+				defender_player = GetFactionPlayer(GetFactionData(Defender, "Name"))
 			end
 			for i, unitName in ipairs(Units) do
 				if (string.find(unitName, "upgrade-") == nil) then

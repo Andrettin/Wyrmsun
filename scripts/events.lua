@@ -467,7 +467,7 @@ function Event(speaker, event_description, player, options, option_effects, even
 		elseif (GrandStrategy and not GameRunning and GameResult == GameNoResult) then
 			event_icon = CIcon:Get(GetUnitTypeData(GetGrandStrategyHeroUnitType(speaker), "Icon")).G
 			event_icon:Load()
-			local b = PlayerColorImageWidget(event_icon, GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
+			local b = PlayerColorImageWidget(event_icon, GetFactionData(GrandStrategyFaction.Name, "Color"))
 			b:setSkinColor(GetUnitVariable(speaker, "SkinColor"))
 			b:setHairColor(GetUnitVariable(speaker, "HairColor"))
 			menu:add(b, 153, 48)

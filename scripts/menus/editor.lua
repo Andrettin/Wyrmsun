@@ -657,16 +657,16 @@ function RunEditorFactionProperties()
 		faction_properties[i] = {}
 		for j=1,table.getn(faction_list[i]) do
 			faction_properties[i][j] = {}
-			faction_properties[i][j].Name = GetFactionData(civilization_ident_list[i], faction_list[i][j], "Name")
-			faction_properties[i][j].Type = GetFactionData(civilization_ident_list[i], faction_list[i][j], "Type")
-			faction_properties[i][j].Color = GetFactionData(civilization_ident_list[i], faction_list[i][j], "Color")
-			if (GetFactionData(civilization_ident_list[i], faction_list[i][j], "Language") ~= GetCivilizationData(civilization_ident_list[i], "Language")) then
-				faction_properties[i][j].Language = GetFactionData(civilization_ident_list[i], faction_list[i][j], "Language")
+			faction_properties[i][j].Name = GetFactionData(faction_list[i][j], "Name")
+			faction_properties[i][j].Type = GetFactionData(faction_list[i][j], "Type")
+			faction_properties[i][j].Color = GetFactionData(faction_list[i][j], "Color")
+			if (GetFactionData(faction_list[i][j], "Language") ~= GetCivilizationData(civilization_ident_list[i], "Language")) then
+				faction_properties[i][j].Language = GetFactionData(faction_list[i][j], "Language")
 			else
 				faction_properties[i][j].Language = ""
 			end
-			faction_properties[i][j].FactionUpgrade = GetFactionData(civilization_ident_list[i], faction_list[i][j], "FactionUpgrade")
-			faction_properties[i][j].ParentFaction = GetFactionData(civilization_ident_list[i], faction_list[i][j], "ParentFaction")
+			faction_properties[i][j].FactionUpgrade = GetFactionData(faction_list[i][j], "FactionUpgrade")
+			faction_properties[i][j].ParentFaction = GetFactionData(faction_list[i][j], "ParentFaction")
 		end
 	end
 	
@@ -676,8 +676,8 @@ function RunEditorFactionProperties()
 		faction_upgrade_list[i] = {}
 		civilization_factions[i] = GetCivilizationData(civilization_ident_list[i], "Factions")
 		for j=1,table.getn(civilization_factions[i]) do
-			if (GetFactionData(civilization_ident_list[i], civilization_factions[i][j], "FactionUpgrade") ~= "" and GetArrayIncludes(faction_upgrade_list[i], GetFactionData(civilization_ident_list[i], civilization_factions[i][j], "FactionUpgrade")) == false) then
-				table.insert(faction_upgrade_list[i], GetFactionData(civilization_ident_list[i], civilization_factions[i][j], "FactionUpgrade"))
+			if (GetFactionData(civilization_factions[i][j], "FactionUpgrade") ~= "" and GetArrayIncludes(faction_upgrade_list[i], GetFactionData(civilization_factions[i][j], "FactionUpgrade")) == false) then
+				table.insert(faction_upgrade_list[i], GetFactionData(civilization_factions[i][j], "FactionUpgrade"))
 			end
 		end
 		table.insert(faction_upgrade_list[i], "")

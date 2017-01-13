@@ -88,7 +88,7 @@ function CustomHeroCreationMenu(world, quest_menu)
 		
 		local new_language = GetCivilizationData(string.lower(hero_civilization_list[hero_civilization:getSelected() + 1]), "Language")
 		if (GetUnitTypeData(hero_class_ident_list[hero_class:getSelected() + 1], "Faction") ~= "") then
-			new_language = GetFactionData(string.lower(hero_civilization_list[hero_civilization:getSelected() + 1]), GetUnitTypeData(hero_class_ident_list[hero_class:getSelected() + 1], "Faction"), "Language")
+			new_language = GetFactionData(GetUnitTypeData(hero_class_ident_list[hero_class:getSelected() + 1], "Faction"), "Language")
 		end
 		
 		if (new_language ~= language) then -- if the language changed, generate a new name for the hero

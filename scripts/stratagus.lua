@@ -391,16 +391,16 @@ function SinglePlayerTriggers()
 		if (GrandStrategy and GrandStrategyEventMap == false and GrandStrategyBattle and GrandStrategyFaction ~= nil) then
 			if (Players[i].Type == PlayerPerson or Players[i].Type == PlayerComputer) then
 				if (Players[i].Type == PlayerPerson) then
-					SetPlayerData(i, "Name", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Name"))
+					SetPlayerData(i, "Name", GetFactionData(GrandStrategyFaction.Name, "Name"))
 				elseif (Players[i].Type == PlayerComputer) then
 					if (GrandStrategyFaction.Name == Attacker) then
 						if (GetFactionFromName(Defender) ~= nil) then
-							SetPlayerData(i, "Name", GetFactionData(GetFactionFromName(Defender).Civilization, Defender, "Name"))
+							SetPlayerData(i, "Name", GetFactionData(Defender, "Name"))
 						else
 							SetPlayerData(i, "Name", Defender)
 						end
 					elseif (GrandStrategyFaction.Name == Defender) then
-						SetPlayerData(i, "Name", GetFactionData(GetFactionFromName(Attacker).Civilization, Attacker, "Name"))
+						SetPlayerData(i, "Name", GetFactionData(Attacker, "Name"))
 					end
 				end
 			end

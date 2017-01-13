@@ -155,18 +155,18 @@ function SetPlayerData(player, data, arg1, arg2)
 	elseif (data == "Name") then
 		if (GrandStrategy and GrandStrategyFaction ~= nil) then
 			if (ThisPlayer ~= nil and ThisPlayer.Index == player) then
-				arg1 = GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Name")
+				arg1 = GetFactionData(GrandStrategyFaction.Name, "Name")
 			end
 
 			if (ThisPlayer ~= nil and ThisPlayer.Index ~= player and GrandStrategyEventMap == false) then
 				if (GrandStrategyFaction.Name == Attacker and Defender ~= "") then
 					if (GetFactionFromName(Defender) ~= nil) then
-						arg1 = GetFactionData(GetFactionFromName(Defender).Civilization, Defender, "Name")
+						arg1 = GetFactionData(Defender, "Name")
 					else
 						arg1 = Defender
 					end
 				elseif (GrandStrategyFaction.Name == Defender and Attacker ~= "") then
-					arg1 = GetFactionData(GetFactionFromName(Attacker).Civilization, Attacker, "Name")
+					arg1 = GetFactionData(Attacker, "Name")
 				end
 			end
 		end

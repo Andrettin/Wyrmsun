@@ -40,8 +40,8 @@ function ChooseFaction(old_civilization, old_faction)
 	end
 	
 	for i=1,table.getn(potential_factions) do
-		if (GetFactionData(current_civilization, potential_factions[i], "Playable")) then
-			if ((GetFactionData(current_civilization, potential_factions[i], "Type") == "polity") == (GetCivilizationClassUnitType("writing", current_civilization) ~= nil and GetPlayerData(GetThisPlayer(), "Allow", GetCivilizationClassUnitType("writing", current_civilization)) == "R")) then -- if player has writing and faction is a polity, or if player doesn't have writing and faction is a tribe
+		if (GetFactionData(potential_factions[i], "Playable")) then
+			if ((GetFactionData(potential_factions[i], "Type") == "polity") == (GetCivilizationClassUnitType("writing", current_civilization) ~= nil and GetPlayerData(GetThisPlayer(), "Allow", GetCivilizationClassUnitType("writing", current_civilization)) == "R")) then -- if player has writing and faction is a polity, or if player doesn't have writing and faction is a tribe
 				if (IsNetworkGame() or GetFactionExists(potential_factions[i]) == false or GetFactionPlayer(potential_factions[i]) == GetThisPlayer()) then -- in single-player only factions that aren't already being used can be chosen
 					table.insert(faction_list, potential_factions[i])
 				end
@@ -56,7 +56,7 @@ function ChooseFaction(old_civilization, old_faction)
 	end
 	
 	for i=1,table.getn(faction_list) do
-		table.insert(faction_name_list, _(GetFactionData(current_civilization, faction_list[i], "Name")))
+		table.insert(faction_name_list, _(GetFactionData(faction_list[i], "Name")))
 	end
 
 	if (GameRunning and not IsNetworkGame()) then
@@ -74,10 +74,10 @@ function ChooseFaction(old_civilization, old_faction)
 	faction_dd = menu:addDropDown(faction_name_list, (256 / 2 - (152 / 2)), 55 + 26*1,
 	function(dd)
 		chosen_faction = faction_list[faction_dd:getSelected() + 1]
-		if (GetFactionData(current_civilization, faction_list[faction_dd:getSelected() + 1], "FactionUpgrade") ~= "") then
-			l:setCaption(_("Default Color:") .. " " .. _(CapitalizeString(GetFactionData(current_civilization, faction_list[faction_dd:getSelected() + 1], "Color"))) .. "\n\n" .. _("Effects:") .. " " .. GetUpgradeData(GetFactionData(current_civilization, faction_list[faction_dd:getSelected() + 1], "FactionUpgrade"), "EffectsString"))
+		if (GetFactionData(faction_list[faction_dd:getSelected() + 1], "FactionUpgrade") ~= "") then
+			l:setCaption(_("Default Color:") .. " " .. _(CapitalizeString(GetFactionData(faction_list[faction_dd:getSelected() + 1], "Color"))) .. "\n\n" .. _("Effects:") .. " " .. GetUpgradeData(GetFactionData(faction_list[faction_dd:getSelected() + 1], "FactionUpgrade"), "EffectsString"))
 		else
-			l:setCaption(_("Default Color:") .. " " .. _(CapitalizeString(GetFactionData(current_civilization, faction_list[faction_dd:getSelected() + 1], "Color"))))
+			l:setCaption(_("Default Color:") .. " " .. _(CapitalizeString(GetFactionData(faction_list[faction_dd:getSelected() + 1], "Color"))))
 		end
 	end)
 	faction_dd:setSize(152, 20)
@@ -89,10 +89,10 @@ function ChooseFaction(old_civilization, old_faction)
 	l:setSize(228, 192)
 	l:setLineWidth(228)
 	menu:add(l, 14, 3 + (32 * 4))
-	if (GetFactionData(current_civilization, faction_list[faction_dd:getSelected() + 1], "FactionUpgrade") ~= "") then
-		l:setCaption(_("Default Color:") .. " " .. _(CapitalizeString(GetFactionData(current_civilization, faction_list[faction_dd:getSelected() + 1], "Color"))) .. "\n\n" .. _("Effects:") .. " " .. GetUpgradeData(GetFactionData(current_civilization, faction_list[faction_dd:getSelected() + 1], "FactionUpgrade"), "EffectsString"))
+	if (GetFactionData(faction_list[faction_dd:getSelected() + 1], "FactionUpgrade") ~= "") then
+		l:setCaption(_("Default Color:") .. " " .. _(CapitalizeString(GetFactionData(faction_list[faction_dd:getSelected() + 1], "Color"))) .. "\n\n" .. _("Effects:") .. " " .. GetUpgradeData(GetFactionData(faction_list[faction_dd:getSelected() + 1], "FactionUpgrade"), "EffectsString"))
 	else
-		l:setCaption(_("Default Color:") .. " " .. _(CapitalizeString(GetFactionData(current_civilization, faction_list[faction_dd:getSelected() + 1], "Color"))))
+		l:setCaption(_("Default Color:") .. " " .. _(CapitalizeString(GetFactionData(faction_list[faction_dd:getSelected() + 1], "Color"))))
 	end
 
 	local ok_button = menu:addFullButton("~!OK", "o", 16, 248 - (36 * 0),

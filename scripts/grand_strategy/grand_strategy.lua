@@ -433,10 +433,10 @@ function RunGrandStrategyGameSetupMenu()
 				faction_name_list = {}
 				faction_civilization_list = {}
 				for key, value in pairsByKeys(Factions) do
-					if (GetFactionProvinceCountPreGame(Factions[key].Name) > 0 and GetCivilizationData(Factions[key].Civilization, "Playable") and GetFactionData(Factions[key].Civilization, Factions[key].Name, "Playable")) then
+					if (GetFactionProvinceCountPreGame(Factions[key].Name) > 0 and GetCivilizationData(Factions[key].Civilization, "Playable") and GetFactionData(Factions[key].Name, "Playable")) then
 						table.insert(faction_list, Factions[key].Name)
 						table.insert(faction_civilization_list, Factions[key].Civilization)
-						table.insert(faction_name_list, GetFactionData(Factions[key].Civilization, Factions[key].Name, "Name"))
+						table.insert(faction_name_list, GetFactionData(Factions[key].Name, "Name"))
 					end
 				end
 			else
@@ -745,7 +745,7 @@ function AttackProvince(province, faction)
 		end
 		local victorious_player_name = ""
 		if (GetFactionFromName(victorious_player) ~= nil) then
-			victorious_player_name = GetFactionData(GetFactionFromName(victorious_player).Civilization, victorious_player, "Name")
+			victorious_player_name = GetFactionData(victorious_player, "Name")
 		else
 			victorious_player_name = victorious_player
 		end
@@ -839,7 +839,7 @@ function AttackProvince(province, faction)
 	end
 	
 	if (victorious_player == Attacker) then
-		local migration = empty_province and GetFactionProvinceCount(GetFactionFromName(Attacker)) == 1 and GetFactionData(GetFactionFromName(Attacker).Civilization, GetFactionFromName(Attacker).Name, "Type") == "tribe"
+		local migration = empty_province and GetFactionProvinceCount(GetFactionFromName(Attacker)) == 1 and GetFactionData(GetFactionFromName(Attacker).Name, "Type") == "tribe"
 		AcquireProvince(province, victorious_player)
 		if (migration) then
 			for province_i, province_key in ipairs(GetFactionFromName(Attacker).OwnedProvinces) do
@@ -1623,7 +1623,7 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 		unit_type = "unit-germanic-smithy"
 	end
 	
-	b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
+	b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Name, "Color"))
 	if (GetProvinceSettlementBuilding(SelectedProvince.Name, old_unit_type) == false) then -- if not built, make icon gray
 		unit_icon = CIcon:Get(GetUnitTypeData(unit_type, "Icon")).GScale
 	else
@@ -1718,7 +1718,7 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 end
 
 function AddGrandStrategyUnitButton(x, y, unit_type)
-	UIElements[table.getn(UIElements) + 1] = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
+	UIElements[table.getn(UIElements) + 1] = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Name, "Color"))
 	UIElements[table.getn(UIElements)]:setActionCallback(
 		function()
 			PlaySound("click")
@@ -1752,7 +1752,7 @@ function AddGrandStrategyTechnologyButton(x, y, unit_type)
 	local b
 	local unit_icon
 	
-	b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
+	b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Name, "Color"))
 
 	if (GetFactionCurrentResearch(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name) == unit_type) then -- if already being researched, make icon gray
 		unit_icon = CUpgrade:Get(unit_type).Icon.GScale
@@ -1840,7 +1840,7 @@ function AddGrandStrategyHeroButton(x, y, hero_name)
 	local b
 	local unit_icon
 	
-	b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
+	b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Name, "Color"))
 	if (SelectedHero == hero_name) then -- if hero is already selected, make icon gray
 		unit_icon = CIcon:Get(GetGrandStrategyHeroIcon(hero_name)).GScale
 	else
@@ -1882,7 +1882,7 @@ function AddGrandStrategyHeroButton(x, y, hero_name)
 end
 
 function AddGrandStrategyMinisterButton(x, y, hero_name)
-	UIElements[table.getn(UIElements) + 1] = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
+	UIElements[table.getn(UIElements) + 1] = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Name, "Color"))
 	UIElements[table.getn(UIElements)]:setActionCallback(
 		function()
 			PlaySound("click")
@@ -1911,7 +1911,7 @@ function AddGrandStrategyMercenaryButton(x, y, unit_type)
 	local b
 	local unit_icon
 	
-	b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
+	b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Name, "Color"))
 	if (GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unit_type) > 0) then -- if mercenary group is already being hired, make icon gray
 		unit_icon = CIcon:Get(GetUnitTypeData(unit_type, "Icon")).GScale
 	else
@@ -2036,9 +2036,9 @@ function DrawGrandStrategyInterface()
 
 	if (GrandStrategyFaction ~= nil) then
 		if (MonthsPerTurn == 12) then
-			AddGrandStrategyLabel(GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Name") .. ", " .. GetYearString(GrandStrategyYear, GrandStrategyFaction.Civilization), 81, Video.Height - 186 + 8, Fonts["game"], true, false)
+			AddGrandStrategyLabel(GetFactionData(GrandStrategyFaction.Name, "Name") .. ", " .. GetYearString(GrandStrategyYear, GrandStrategyFaction.Civilization), 81, Video.Height - 186 + 8, Fonts["game"], true, false)
 		else
-			AddGrandStrategyLabel(GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Name") .. ", " .. GetCivilizationData(GrandStrategyFaction.Civilization, "MonthName", GetMonthNameById(GrandStrategyMonth)) .. ", " .. GetYearString(GrandStrategyYear, GrandStrategyFaction.Civilization), 81, Video.Height - 186 + 8, Fonts["game"], true, false)
+			AddGrandStrategyLabel(GetFactionData(GrandStrategyFaction.Name, "Name") .. ", " .. GetCivilizationData(GrandStrategyFaction.Civilization, "MonthName", GetMonthNameById(GrandStrategyMonth)) .. ", " .. GetYearString(GrandStrategyYear, GrandStrategyFaction.Civilization), 81, Video.Height - 186 + 8, Fonts["game"], true, false)
 		end
 	end
 	
@@ -3692,7 +3692,7 @@ function CanTriggerEvent(faction, event)
 		return false
 	end
 	
-	if (event.FactionType ~= nil and event.FactionType ~= GetFactionData(faction.Civilization, faction.Name, "Type")) then
+	if (event.FactionType ~= nil and event.FactionType ~= GetFactionData(faction.Name, "Type")) then
 		return false
 	end
 	
@@ -4377,11 +4377,11 @@ function RestoreScenarioUnitsToProvince(arg) -- restore the units of a certain f
 	
 	for i, unitName in ipairs(Units) do
 		if (IsOffensiveMilitaryUnit(unitName) and GetArrayIncludes(arg.IgnoredUnitClasses, GetUnitTypeData(unitName, "Class")) == false) then
-			ChangeProvinceUnitQuantity(arg.ProvinceName, unitName, math.ceil(GetPlayerData(GetFactionPlayer(GetFactionData(GetFactionFromName(arg.FactionName).Civilization, arg.FactionName, "Name")), "UnitTypesStartingNonHeroCount", unitName) / BattalionMultiplier))
+			ChangeProvinceUnitQuantity(arg.ProvinceName, unitName, math.ceil(GetPlayerData(GetFactionPlayer(GetFactionData(arg.FactionName, "Name")), "UnitTypesStartingNonHeroCount", unitName) / BattalionMultiplier))
 		end
 	end
 	
-	local faction_heroes = GetPlayerData(GetFactionPlayer(GetFactionData(GetFactionFromName(arg.FactionName).Civilization, arg.FactionName, "Name")), "Heroes")
+	local faction_heroes = GetPlayerData(GetFactionPlayer(GetFactionData(arg.FactionName, "Name")), "Heroes")
 	if (arg.Heroes ~= nil) then
 		if (arg.Heroes == "any") then
 			arg.Heroes = GetGrandStrategyHeroes()
