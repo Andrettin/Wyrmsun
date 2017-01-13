@@ -27,7 +27,7 @@
 
 -- Dwarven heroes
 
-DefineCharacter("modsognir", { -- one of the earliest dwarven leaders; in Norse mythology Modsognir was the mightiest and first of dwarves
+DefineCharacter("modsognir", { -- one of the earliest dwarven leaders
 	Name = "Modsognir",
 	Gender = "male",
 	Type = "unit-dwarven-steelclad",
@@ -52,14 +52,14 @@ DefineCharacter("modsognir", { -- one of the earliest dwarven leaders; in Norse 
 	end
 })
 
-DefineCharacter("durin", { -- deputy of Modsognir
+DefineCharacter("durin", {
 	Name = "Durin", -- possibly the same as the Diurnir mentioned in the Ynglinga saga; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 228.
 	Gender = "male",
 	Type = "unit-dwarven-steelclad",
 	Civilization = "dwarf",
 	Faction = "brising-clan",
 	Description = _("Durin is a valiant dwarven warrior and loyal vassal of chieftain Modsognir."),
-	Background = _("In Norse mythology, Durin appears in the ~<Voluspo~> as one of the first dwarves."),
+	Background = _("In Norse mythology, Durin appears in the ~<Voluspo~> as one of the first dwarves and the deputy of Modsognir."),
 	Icon = "icon-durin",
 	HairVariation = "brown-hair",
 	Trait = "upgrade-dextrous",
@@ -74,7 +74,7 @@ DefineCharacter("durin", { -- deputy of Modsognir
 	end
 })
 
-DefineCharacter("fjalar", {
+DefineCharacter("fjalar", { -- dwarf from Norse mythology who, with the help of his brother Galar, brew Kvasir's blood into the Mead of Poetry
 	Name = "Fjalar",
 	Gender = "male",
 	Type = "unit-dwarven-steelclad", -- should be a thief
@@ -131,19 +131,46 @@ DefineCharacter("thjodrorir", { -- dwarf from Norse mythology; Source: Kevin Cro
 	end
 })
 
+DefineCharacter("gandalf", {
+	Name = "Gandalf",
+	Gender = "male",
+	Type = "unit-dwarven-witness", -- his name means "magic elf", so it makes sense that he is a spellcaster
+	Civilization = "dwarf",
+	Background = _("Gandalf is a dwarf from Norse mythology. His name means \"magic elf\".")
+})
+
+DefineCharacter("vindalf", {
+	Name = "Vindalf",
+	Gender = "male",
+	Type = "unit-dwarven-scout", -- his name means "wind elf", so it makes sense to make him a projectile thrower
+	Civilization = "dwarf",
+	Background = _("Vindalf is a dwarf from Norse mythology. His name means \"wind elf\".")
+})
+
+DefineCharacter("alvis", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 144-145; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 183-194.
+	Name = "Alvis",
+	Gender = "male",
+	Type = "unit-dwarven-witness",
+	Civilization = "dwarf",
+	Background = _("In the ~<Alvismol~>, Alvis is an extremely knowledgeable dwarf who desires to marry Thor's daughter. His name means \"all-knowing\" or \"all-wise\"."),
+	HairVariation = "gray-hair",
+	Trait = "upgrade-wise"
+})
+
 DefineCharacter("regin", {
 	Name = "Regin",
 	Gender = "male",
 	Type = "unit-dwarven-thane", -- should be a runemaster
 	Civilization = "dwarf",
 	Faction = "brising-clan",
-	Description = _("Regin is a dwarven mastersmith, unrivalled in his time. The mythical sword Gram was of his making, as were several other legendary blades."),
+	Description = "Regin is a dwarven mastersmith, unrivalled in his time. The mythical sword Gram was of his making, as were several other legendary blades.",
+	Background = "In Norse mythology, Regin was a skilled dwarven smith and the brother of the dragon Fafnir.",
 	HairVariation = "brown-hair",
 	Trait = "upgrade-intelligent",
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })
 
-DefineCharacter("thursagan", { -- from "The Sceptre of Fire" campaign of "Battle for Wesnoth"; master runesmith who crafted the Sceptre of Fire
+DefineCharacter("thursagan", { -- from Battle for Wesnoth: The Sceptre of Fire; master runesmith who crafted the Sceptre of Fire
 	Name = "Thursagan",
 	Gender = "male",
 	Type = "unit-dwarven-thane",
@@ -168,7 +195,7 @@ DefineCharacter("thursagan", { -- from "The Sceptre of Fire" campaign of "Battle
 	}
 })
 
-DefineCharacter("baglur", { -- from "The Sceptre of Fire" campaign of "Battle for Wesnoth"; veteran warrior and member of the party of dwarves who handled the crafting of the Sceptre of Fire
+DefineCharacter("baglur", { -- from Battle for Wesnoth: The Sceptre of Fire; veteran warrior and member of the party of dwarves who handled the crafting of the Sceptre of Fire
 	Name = "Baglur",
 	Gender = "male",
 	Type = "unit-dwarven-steelclad",
@@ -186,7 +213,7 @@ DefineCharacter("baglur", { -- from "The Sceptre of Fire" campaign of "Battle fo
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })
 
-DefineCharacter("durstorn", { -- from "The Sceptre of Fire" campaign of "Battle for Wesnoth"; chieftain of Rugnur's tribe
+DefineCharacter("durstorn", { -- from Battle for Wesnoth: The Sceptre of Fire; chieftain of Rugnur's tribe
 	Name = "Durstorn",
 	Gender = "male",
 	Type = "unit-dwarven-thane",
@@ -206,7 +233,7 @@ DefineCharacter("durstorn", { -- from "The Sceptre of Fire" campaign of "Battle 
 	}
 })
 
-DefineCharacter("glonoin", { -- from "The Sceptre of Fire" campaign of "Battle for Wesnoth"; chieftain of the Shorbear clan
+DefineCharacter("glonoin", { -- from Battle for Wesnoth: The Sceptre of Fire; chieftain of the Shorbear clan
 	Name = "Glonoin",
 	Gender = "male",
 	Type = "unit-dwarven-thane",
@@ -227,7 +254,7 @@ DefineCharacter("glonoin", { -- from "The Sceptre of Fire" campaign of "Battle f
 	end
 })
 
-DefineCharacter("rugnur", { -- from "The Sceptre of Fire" campaign of "Battle for Wesnoth"; leader of the party of dwarves who handled the crafting of the Sceptre of Fire
+DefineCharacter("rugnur", { -- from Battle for Wesnoth: The Sceptre of Fire; leader of the party of dwarves who handled the crafting of the Sceptre of Fire
 	Name = "Rugnur",
 	Gender = "male",
 	Type = "unit-dwarven-axefighter",

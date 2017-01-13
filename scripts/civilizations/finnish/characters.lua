@@ -48,8 +48,8 @@ DefineCharacter("hulda", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	Gender = "female",
 	Type = "unit-teuton-priest",
 	Civilization = "finnish", -- presumably
-	ProvinceOfOrigin = "Finland",
-	DateReferenceCharacter = "drisa" -- placed a charm on Vanland Yngling for Drisa
+	ProvinceOfOrigin = "Finland"
+	-- placed a charm on Vanland Yngling for Drisa
 })
 
 DefineCharacter("froste", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 233.

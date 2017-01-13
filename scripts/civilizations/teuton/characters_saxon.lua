@@ -31,7 +31,7 @@ DefineCharacter("geirthiof", { -- Source: Snorri Sturlson, "Heimskringla", 1844,
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
 	ProvinceOfOrigin = "Holstein", -- correct? was from "Saxonland"
-	DateReferenceCharacter = "adils-yngling", -- Adils Yngling went on a viking expedition to raid Saxonland when Geirthiof was king there
+	-- Adils Yngling went on a viking expedition to raid Saxonland when Geirthiof was king there
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "teuton", "saxon-tribe" -- was king of "Saxonland"
 	}
@@ -45,7 +45,7 @@ DefineCharacter("alof-the-great", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Type = "unit-teuton-archer",
 	Civilization = "teuton",
 	ProvinceOfOrigin = "Holstein", -- correct? was from "Saxonland"
-	DateReferenceCharacter = "geirthiof" -- married to Geirthiof
+	-- married to Geirthiof
 })
 
 DefineCharacter("yrsa", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 244-245.
@@ -61,7 +61,8 @@ DefineCharacter("yrsa", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 })
 
 DefineCharacter("rolf-krake-skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 244-245.
-	Name = "Rolf Krake", -- placed here (despite being Norse) because his mother is Saxon, and the Saxon characters are loaded after the Norse ones
+	Name = "Rolf", -- placed here (despite being Norse) because his mother is Saxon, and the Saxon characters are loaded after the Norse ones
+	ExtraName = "Krake",
 	FamilyName = "Skjoldung", -- correct?
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -85,6 +86,7 @@ DefineCharacter("widukind", {
 --	DeathYear = ?
 })
 
+--[[
 DefineCharacter("henry-of-saxony", { -- Source: Susan D. Fuller, "Pagan Charms in Tenth-Century Saxony? The Function of the Merseburg Charms", 1909, pp. 166-167.
 	Name = "Henry",
 	ExtraName = "of Saxony", -- to differentiate him
@@ -99,3 +101,4 @@ DefineCharacter("henry-of-saxony", { -- Source: Susan D. Fuller, "Pagan Charms i
 		"head-of-state", 919, 936, "teuton", "saxony" -- duke of Saxony (from when until when? here we use the same dates as for his other title)
 	}
 })
+--]]

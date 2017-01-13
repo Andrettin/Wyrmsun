@@ -65,7 +65,7 @@ DefineCharacter("siggeir", { -- Source: C. Scott Littleton, "The Germanic Sword 
 	Civilization = "teuton",
 	Faction = "frank-tribe",
 --	ProvinceOfOrigin = "?",
-	DateReferenceCharacter = "signy-volsung" -- comes from the same generation as Signy Volsung
+	-- comes from the same generation as Signy Volsung
 	-- wedded to Signy
 })
 

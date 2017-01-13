@@ -72,7 +72,7 @@ DefineCharacter("glaumvor", { -- Source: Henry Adams Bellows (transl.), "The Poe
 	Civilization = "goth",
 	Faction = "burgundy",
 	ProvinceOfOrigin = "Franconia", -- place where the Burgundians dwelled before moving to the area of the Palatinate
-	DateReferenceCharacter = "gundahar" -- comes from the same generation as Gunnar/Gundahar
+	-- comes from the same generation as Gunnar/Gundahar
 })
 
 DefineCharacter("gudrun", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94; Source: Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
@@ -113,8 +113,7 @@ DefineCharacter("orkning", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
 	Faction = "burgundy",
-	ProvinceOfOrigin = "Franconia",
-	DateReferenceCharacter = "kostbera"
+	ProvinceOfOrigin = "Franconia"
 })
 
 DefineCharacter("snaevar", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 509, 517.
@@ -156,7 +155,7 @@ DefineCharacter("brynhild", { -- Source: Henry Adams Bellows (transl.), "The Poe
 	Civilization = "goth", -- put her as a Burgundian until we have better information
 	Faction = "burgundy",
 	ProvinceOfOrigin = "Franconia",
-	DateReferenceCharacter = "gundahar" -- comes from the same generation as Gunnar/Gundahar
+	-- comes from the same generation as Gunnar/Gundahar
 })
 
 DefineCharacter("gundioc", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 94-96.

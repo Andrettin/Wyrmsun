@@ -205,7 +205,6 @@ DefineCivilization("dwarf", {
 		"male", "Althasol", -- from Battle for Wesnoth
 		"male", "Althaus", -- from Battle for Wesnoth
 		"male", "Althjof", -- "mighty thief", dwarf from Norse mythology
-		"male", "Alvis", -- "all-knowing"/"all-wise", dwarf from Norse mythology
 		"male", "Anaithas", -- from Battle for Wesnoth
 		"male", "Anaithil", -- from Battle for Wesnoth
 		"male", "Anaithing", -- from Battle for Wesnoth
@@ -278,7 +277,6 @@ DefineCivilization("dwarf", {
 		"male", "Aurvang", -- dwarf from Norse mythology
 		"male", "Austri", -- dwarf from Norse mythology (name means "the Eastern"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 101; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771.
 		"male", "Bafur", -- dwarf from Norse mythology
-		"male", "Baglur", -- dwarf from Battle for Wesnoth: The Sceptre of Fire
 		"male", "Bari", -- dwarf from Norse mythology
 		"male", "Berling", -- dwarf from Norse mythology
 		"male", "Bibung", -- dwarf from Norse mythology
@@ -330,9 +328,7 @@ DefineCivilization("dwarf", {
 		"male", "Dulthasol", -- from Battle for Wesnoth
 		"male", "Dulthaus", -- from Battle for Wesnoth
 		"male", "Durahn", -- "Durâhn"; from Dyson Logos' The Tomb of Durâhn Oakenshield, which the author agreed to release under the GPLv2
-		"male", "Durin", -- dwarf from Norse mythology who was the deputy of Modsognir
 		"male", "Dursil", -- dwarf from Battle for Wesnoth: The Rise of Wesnoth
-		"male", "Durstorn", -- dwarf from Battle for Wesnoth: The Sceptre of Fire
 		"male", "Dvalin", -- dwarf from Norse mythology; gave the knowledge of runes to the dwarves; one of the four who crafted the Necklace of the Brisings
 		"male", "Eggerich", -- dwarf from German sagas
 		"male", "Eikinskjaldi", -- dwarf from Norse mythology
@@ -340,13 +336,11 @@ DefineCivilization("dwarf", {
 		"male", "Fal", -- dwarf from Norse mythology
 		"male", "Fid", -- dwarf from Norse mythology
 		"male", "Fili", -- dwarf from Norse mythology
-		"male", "Fjalar", -- dwarf from Norse mythology who, with the help of his brother Galar, brew Kvasir's blood into the Mead of Poetry
 		"male", "Frag", -- dwarf from Norse mythology
 		"male", "Frar", -- dwarf from Norse mythology
 		"male", "Frosti", -- dwarf from Norse mythology
 		"male", "Fundin", -- dwarf from Norse mythology
 		"male", "Galar", -- dwarf from Norse mythology who, with the help of his brother Fjalar, brew Kvasir's blood into the Mead of Poetry
-		"male", "Gandalf", -- dwarf from Norse mythology
 		"male", "Ginnar", -- dwarf from Norse mythology
 		"male", "Glamaithil", -- from Battle for Wesnoth
 		"male", "Glamaithis", -- from Battle for Wesnoth
@@ -382,7 +376,6 @@ DefineCivilization("dwarf", {
 		"male", "Glinar", -- dwarf from Battle for Wesnoth: The Sceptre of Fire
 		"male", "Gloin", -- dwarf from Norse mythology
 		"male", "Glomin", -- from Battle for Wesnoth
-		"male", "Glonoin", -- dwarf from Battle for Wesnoth: The Sceptre of Fire
 		"male", "Goldemar", -- dwarf from German sagas
 		"male", "Gomaithas", -- from Battle for Wesnoth
 		"male", "Gomaithil", -- from Battle for Wesnoth
@@ -438,7 +431,6 @@ DefineCivilization("dwarf", {
 		"male", "Lofar", -- dwarf from Norse mythology who was a descendant of the settlers of Joruvellir
 		"male", "Loni", -- dwarf from Norse mythology
 		"male", "Mjodvitnir", -- dwarf from Norse mythology
-		"male", "Modsognir", -- dwarf from Norse mythology who was the first dwarf
 		"male", "Nabbi", -- dwarven mastersmith from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 100.
 		"male", "Nain", -- dwarf from Norse mythology
 		"male", "Naraithil", -- from Battle for Wesnoth
@@ -524,10 +516,8 @@ DefineCivilization("dwarf", {
 		"male", "Pelthail", -- from Battle for Wesnoth
 		"male", "Pelthasil", -- from Battle for Wesnoth
 		"male", "Radsvid", -- dwarf from Norse mythology
-		"male", "Regin", -- skilled smith; in Norse mythology was the brother of the dragon Fafnir
 		"male", "Rekk", -- dwarf from Norse mythology
 		"male", "Relgorn", -- dwarf from Battle for Wesnoth: Heir to the Throne and Battle for Wesnoth: Delfador's Memoirs
-		"male", "Rugnur", -- dwarf from Battle for Wesnoth: The Sceptre of Fire
 		"male", "Rynan", -- dwarf from Battle for Wesnoth: The Sceptre of Fire
 		"male", "Skavid", -- dwarf from Norse mythology
 		"male", "Skirvir", -- dwarf from Norse mythology
@@ -538,11 +528,9 @@ DefineCivilization("dwarf", {
 		"male", "Sviur", -- dwarf from Norse mythology
 		"male", "Theganli", -- dwarf from Battle for Wesnoth: The Sceptre of Fire; jeweler of Durstorn's clan
 		"male", "Thekk", -- dwarf from Norse mythology
-		"male", "Thjodrorir", -- a dwarf who knew a charm of power to the gods in Norse mythology
 		"male", "Thorin", -- dwarf from Norse mythology
 		"male", "Thrain", -- dwarf from Norse mythology
 		"male", "Thror", -- dwarf from Norse mythology
-		"male", "Thursagan", -- dwarf from Battle for Wesnoth: The Sceptre of Fire
 		"male", "Trithaithas", -- from Battle for Wesnoth
 		"male", "Trithaithil", -- from Battle for Wesnoth
 		"male", "Trithaithis", -- from Battle for Wesnoth
@@ -587,7 +575,6 @@ DefineCivilization("dwarf", {
 		"male", "Vestri", -- dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 101.
 		"male", "Vig", -- dwarf from Norse mythology
 		"male", "Vigdvalin", -- "Víg-dvalinn"; dwarf from Norse mythology; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 715.
-		"male", "Vindalf", -- dwarf from Norse mythology
 		"male", "Virfir", -- dwarf from Norse mythology
 		"male", "Vit", -- dwarf from Norse mythology
 	},
@@ -1273,20 +1260,13 @@ DefineCivilization("germanic", {
 		"female", "Ammon", -- Proto-Germanic rendering of "Amma", Karl's mother in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 21.
 		"female", "Moder", -- Proto-Germanic rendering of "Mothir", Jarl's mother in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 22.
 		"male", "Aban", -- Proto-Germanic rendering of "Afi", Karl's (presumed) father in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 21; Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 1.
-		"male", "Branda", -- Proto-Germanic rendering of "Brandr" (son of Beldeg), descendant of Vóden, who settled Scandinavia in the Prose Edda; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
-		"male", "Erala", -- Proto-Germanic rendering of "Jarl", the ancestor of the class of warriors in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 22-24.
 		"male", "Fader", -- Proto-Germanic rendering of "Fathir", Jarl's (presumed) father in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 22.
 		"male", "Godagaz", -- correct?
-		"male", "Gudawulfa", -- Proto-Germanic rendering of "Gudólfr" (son of Ját), ancestor of Vóden, who settled Scandinavia in the Prose Edda; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 		"male", "Hadulaikaz", -- correct?
 		"male", "Hagustaldaz", -- correct?
 		"male", "Hlewagastiz", -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 1.2.
 		"male", "Holtagastiz", -- correct?
-		"male", "Karla", -- Proto-Germanic rendering of "Karl", the ancestor of the class of peasants in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 21.
-		"male", "Magan", -- Proto-Germanic rendering of "Magi" (son of Móda), ancestor of Vóden, who settled Scandinavia in the Prose Edda; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
-		"male", "Skeldu", -- Proto-Germanic rendering of "Skjöldr", son of Vóden and ancestor of the Danish kings; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 221.
 		"male", "Theudariks", -- correct?
-		"male", "Thrahila", -- Proto-Germanic rendering of "Thrall", the ancestor of the class of thralls in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 19-20.
 		"male", "Wagigaz", -- correct?
 		"male", "Wiwaz", -- correct?
 		"male", "Woduridaz" -- correct?
@@ -1419,7 +1399,6 @@ DefineCivilization("gnome", {
 		"male", "Clavo", -- commanding general of the army of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 106.
 		"male", "Cravatu", -- Prince Cravatu, minister to King Bimbam I of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 97.
 		"male", "Kalutho", -- name of an (apparently male) gnome; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 13.
-		"male", "Pypo", -- king of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 13.
 		"male", "Rubezahl"
 	},
 	SettlementNames = {
@@ -1460,7 +1439,6 @@ DefineCivilization("goblin", {
 		"male", "Gashnok",
 		"male", "Gatrakh",
 		"male", "Gorokh",
-		"male", "Greebo",
 		"male", "Grogor-Tuk",
 		"male", "Hrugt",
 		"male", "Kardur",
@@ -1833,9 +1811,7 @@ DefineCivilization("latin", {
 		"male", "Avitus", -- Archbishop Avitus of Vienne; corresponded with the Burgundian king Sigismund c. 494-523, and was his chief advisor; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 99.
 		"male", "Commodus", -- son of Marcus Aurelius and Faustina, succeeded his father as Roman emperor; Source: "Ancient Warfare VII.6", 2013, p. 6.
 		"male", "Leo", -- Eastern Roman emperor who renounced the treaty with the Ostrogoths; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
-		"male", "Lucius", -- Lucius Verus, co-emperor with Marcus Aurelius; Source: "Ancient Warfare VII.6", 2013, pp. 6-7.
 		"male", "Marcianus", -- source gives "Marcian"; Eastern Roman emperor who concluded a treaty with the Ostrogothic king Walamer after he had become independent in 453 AD, with the Ostrogoths providing protection of the frontier while the Romans gave them a subsidy; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
-		"male", "Marcus", -- Marcus Aurelius, Roman emperor; Source: "Ancient Warfare VII.6", 2013, pp. 6, 8, 10.
 		"male", "Seneca", -- philosopher, of the school of Roman Stoicism; Source: "Ancient Warfare VII.6", 2013, p. 9.
 		"male", "Severianus", -- governor of Armenia; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		"male", "Sidonius", -- Sidonius Apollinaris, Gallo-Roman writer; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
@@ -1955,10 +1931,7 @@ DefineCivilization("goth", {
 	PersonalNames = {
 		"female", "Brunichilde", -- daughter of the Visigothic king Athanagild; refined, attractive, good-mannered, intelligent and socially affable; died in 613; became Brünhild in the myths; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, pp. 328, 330.
 		"female", "Gailswintha", -- daughter of the Visigothic king Athanagild; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, pp. 328-329.
-		"male", "Airmanareiks", -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 225-226, 536, 552; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 22; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18.
 		"male", "Athanagild", -- Visigothic king; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
-		"male", "Frithareiks", -- "Friþareiks"; son of Ermenrich (= Airmanareiks) in the Dietrich Saga; in the saga he was taken prisoner by Dietrich, but he couldn't have been a contemporary of Dietrich if he was a son of Airmanareiks; in the saga his name is "Friedrich"; this is a tentative rendering of the name in Gothic, based on the cognates of the components of the original German name; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 26.
-		"male", "Thiudareiks", -- "Þiudareiks"; tentative rendering of the name in Gothic, based on the cognates of the German version of the name, "Dietrich"; also known as "Theoderic"; king of the Ostrogoths; Dietrich von Bern in the German sagas; was given as a hostage by Walamer to the Romans, and thus stayed for 10 years (until 472 AD) in the Byzantine court; his religion was Arian Christianity; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7, 9.
 		"male", "Witiza" -- Visigothic king who reigned 700-710; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 400.
 	},
 	HistoricalTechnologies = {

@@ -25,41 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-if (OldDefineCharacter == nil) then
-	OldDefineCharacter = DefineCharacter
-end
-
-function DefineCharacter(character, data)
-	if (data.Civilization ~= nil or data.Faction ~= nil or data.Type ~= nil or data.Gender ~= nil or data.Noble ~= nil) then
-		local preliminary_data = {}
-		if (data.Civilization ~= nil) then
-			preliminary_data.Civilization = data.Civilization
-		end
-		if (data.Faction ~= nil) then
-			preliminary_data.Faction = data.Faction
-		end
-		if (data.Type ~= nil) then
-			preliminary_data.Type = data.Type
-		end
-		if (data.Gender ~= nil) then
-			preliminary_data.Gender = data.Gender
-		end
-		if (data.Noble ~= nil) then
-			preliminary_data.Noble = data.Noble
-		end
-		OldDefineCharacter(character, preliminary_data)
-		data.Civilization = nil
-		data.Faction = nil
-		data.Type = nil
-		data.Gender = nil
-		data.Noble = nil
-	end
-	
-	data.Defined = true
-	
-	OldDefineCharacter(character, data)
-end
-
 if (OldDefineCustomHero == nil) then
 	OldDefineCustomHero = DefineCustomHero
 end
@@ -94,7 +59,7 @@ Load("scripts/civilizations/elf/characters.lua")
 
 -- Basque heroes
 
-DefineCharacter("Gylve", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+DefineCharacter("gylve", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
 	Name = "Gylve", -- ruled over Scania; contemporary of Voden
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -102,8 +67,8 @@ DefineCharacter("Gylve", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	ProvinceOfOrigin = "Scania",
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "basque", "gylfing-tribe"
-	},
-	DateReferenceCharacter = "voden" -- contemporary of Vóden
+	}
+	-- contemporary of Vóden
 })
 
 -- Hun personal names: "Attila" (known as Atli in Norse myths; invaded Gundahar's kingdom in 437 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 93-94; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6)

@@ -26,7 +26,7 @@
 --
 
 DefineCharacter("fiolner-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 225-227.
-	Name = "Fiölner",
+	Name = "Fiolner", -- "Fiölner"
 	FamilyName = "Yngling",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -47,7 +47,7 @@ DefineCharacter("fridfrode-skjoldung", { -- Source: Snorri Sturlson, "Heimskring
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Zealand", -- ruled in Leidre
-	DateReferenceCharacter = "fiolner-yngling", -- he was a friend of Fiölner's
+	-- he was a friend of Fiölner's
 	-- described as brave
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "dane-tribe"
@@ -55,7 +55,7 @@ DefineCharacter("fridfrode-skjoldung", { -- Source: Snorri Sturlson, "Heimskring
 })
 
 DefineCharacter("svegdir-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 227-228; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 608.
-	Name = "Svegðir", -- as given by Cleasby; in the Heimskringla translation it is given as "Swegder" instead
+	Name = "Svegdir", -- "Svegðir"; as given by Cleasby; in the Heimskringla translation it is given as "Swegder" instead
 	FamilyName = "Yngling",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -272,7 +272,7 @@ DefineCharacter("skialf", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Civilization = "finnish", -- presumably
 	ProvinceOfOrigin = "Finland",
 	Father = "froste",
-	DateReferenceCharacter = "agne-yngling", -- Skialf was married to Agne after he invaded Finland, killed her father and took her and her brother to Sweden
+	-- Skialf was married to Agne Yngling after he invaded Finland, killed her father and took her and her brother to Sweden
 	Quote = _("\"How do ye like the high-souled maid,\nWho, with the grim Fate-goddess' aid,\nAvenged her sire? Made Swithiod's king\nThrough air in golden halter swing?\"\n- Thiodolf of Huine")
 })
 
@@ -548,7 +548,6 @@ DefineCharacter("hake", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden", -- correct?
-	DateReferenceCharacter = "hugleik-yngling",
 	-- described as being a murderous combatant
 	HistoricalTitles = {
 		-- was king (of somewhere), and then invaded and conquered Sweden, becoming its king as well
@@ -562,9 +561,9 @@ DefineCharacter("hagberd", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	ProvinceOfOrigin = "Sweden", -- correct?
+	ProvinceOfOrigin = "Sweden" -- correct?
 	-- was king (of where?)
-	DateReferenceCharacter = "hake" -- brother of Hake
+	-- brother of Hake
 })
 
 DefineCharacter("svipdag", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 236.
@@ -574,7 +573,7 @@ DefineCharacter("svipdag", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden",
 	Trait = "upgrade-mighty", -- described as a powerful combatant
-	DateReferenceCharacter = "hugleik-yngling" -- came to the assistance of king Hugleik of Sweden when he was attacked by Hake
+	-- came to the assistance of king Hugleik of Sweden when he was attacked by Hake
 	-- brother of Geigad
 })
 
@@ -585,7 +584,7 @@ DefineCharacter("geigad", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden",
 	Trait = "upgrade-mighty", -- described as a powerful combatant
-	DateReferenceCharacter = "hugleik-yngling" -- came to the assistance of king Hugleik of Sweden when he was attacked by Hake
+	-- came to the assistance of king Hugleik of Sweden when he was attacked by Hake
 	-- brother of Svipdag
 })
 
@@ -597,7 +596,7 @@ DefineCharacter("starkod-the-old", { -- Source: Snorri Sturlson, "Heimskringla",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden",
 	Trait = "upgrade-old",
-	DateReferenceCharacter = "hake" -- was a champion of Hake's
+	-- was a champion of Hake's
 })
 
 DefineCharacter("jorund-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 237-238.
@@ -632,7 +631,7 @@ DefineCharacter("gudlog", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Nordland",
-	DateReferenceCharacter = "jorund-yngling", -- was captured in Denmark by Jorund and Eric Yngling, and then was killed by them
+	-- was captured in Denmark by Jorund and Eric Yngling, and then was killed by them
 	Quote = _("\"By the fierce East-kings' cruel pride,\nGudlog must on the wild horse rider -\nThe wildest horse you e'er did see:\n'Tis Segur's steed - the gallows tree.\"\n- Eyvind Skaldaspiller"),
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "halogaland" -- was a king, presumably of Halogaland, since his son was king of that place
@@ -731,7 +730,7 @@ DefineCharacter("tunne", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	Type = "unit-teuton-worker",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden",
-	DateReferenceCharacter = "on-the-old-yngling" -- slave who was counsellor and treasurer to On the Old of Sweden
+	-- slave who was counsellor and treasurer to On the Old of Sweden
 })
 
 DefineCharacter("egil-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 240-241.
@@ -756,7 +755,7 @@ DefineCharacter("frode-the-bold-skjoldung", { -- Source: Snorri Sturlson, "Heims
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Zealand",
-	DateReferenceCharacter = "egil-yngling", -- helped Egil Yngling to defeat Tunne's forces
+	-- helped Egil Yngling to defeat Tunne's forces
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "dane-tribe"
 	}
@@ -784,7 +783,7 @@ DefineCharacter("vatte", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Zealand",
-	DateReferenceCharacter = "frode-the-bold-skjoldung", -- Vätte was an earl appointed by Frode the Bold to defend Denmark while he invaded Sweden
+	-- Vätte was an earl appointed by Frode the Bold to defend Denmark while he invaded Sweden
 })
 
 DefineCharacter("faste", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 243.
@@ -793,7 +792,7 @@ DefineCharacter("faste", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Zealand",
-	DateReferenceCharacter = "frode-the-bold-skjoldung", -- Faste was an earl appointed by Frode the Bold to defend Denmark while he invaded Sweden
+	-- Faste was an earl appointed by Frode the Bold to defend Denmark while he invaded Sweden
 })
 
 DefineCharacter("adils-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 243-245.
@@ -830,7 +829,7 @@ DefineCharacter("ali-of-the-uplands", { -- Source: Snorri Sturlson, "Heimskringl
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden", -- correct?
-	DateReferenceCharacter = "adils-yngling", -- fought against Adils, dying in battle
+	-- fought against Adils Yngling, dying in battle
 	-- was king of the Uplands
 })
 
@@ -840,7 +839,7 @@ DefineCharacter("godgest", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Nordland",
-	DateReferenceCharacter = "adils-yngling", -- Adils sent Godgest the horse Raven as a gift
+	-- Adils Yngling sent Godgest the horse Raven as a gift
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "halogaland"
 	}
@@ -876,7 +875,7 @@ DefineCharacter("solve", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	Civilization = "norse",
 	ProvinceOfOrigin = "North Trondelag", -- from Niardö, an island in "North Drontheim" (North Trondheim)
 	Father = "hogne-of-niardo",
-	DateReferenceCharacter = "adils-yngling", -- Solve slew Adils by burning
+	-- Solve slew Adils Yngling by burning
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "swede-tribe" -- Solve became king of Sweden after killing Adils Yngling, but eventually he was killed and Adils' son made king
 		-- Solve had dominions in Jutland, but from the source it is not clear if he ruled over all of Jutland, or only a portion of it
@@ -933,7 +932,7 @@ DefineCharacter("yngvar", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden", -- correct?
-	DateReferenceCharacter = "onund-yngling" -- lived during the reign of Onund over Sweden
+	-- lived during the reign of Onund over Sweden
 	-- district-king of Fiadryndaland (in Sweden)
 })
 
@@ -964,7 +963,7 @@ DefineCharacter("svipdag-the-blind", { -- Source: Snorri Sturlson, "Heimskringla
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden", -- presumably from Fiundaland, where Upsal is located
-	DateReferenceCharacter = "onund-yngling" -- lived during the reign of Onund over Sweden
+	-- lived during the reign of Onund over Sweden
 	-- district-king of Fiundaland (in Sweden)
 	-- Ingiald Yngling's foster-father
 })
@@ -1044,7 +1043,7 @@ DefineCharacter("spossniall", { -- Source: Snorri Sturlson, "Heimskringla", 1844
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden",
-	DateReferenceCharacter = "ingiald-the-evil-adviser-yngling" -- lived during the reign of Ingiald over Sweden
+	-- lived during the reign of Ingiald the Evil-Adviser over Sweden
 	-- (district-)king of Nerike (in Sweden)
 })
 
@@ -1054,7 +1053,7 @@ DefineCharacter("sighvat", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden", -- correct?
-	DateReferenceCharacter = "ingiald-the-evil-adviser-yngling" -- lived during the reign of Ingiald over Sweden
+	-- lived during the reign of Ingiald the Evil-Adviser over Sweden
 	-- (district-)king of Aattundaland (in Sweden)
 })
 
@@ -1064,7 +1063,7 @@ DefineCharacter("granmar", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden",
-	DateReferenceCharacter = "ingiald-the-evil-adviser-yngling" -- lived during the reign of Ingiald over Sweden
+	-- lived during the reign of Ingiald the Evil-Adviser over Sweden
 	-- (district-)king of Sondermanland (in Sweden)
 	-- married to Hilda
 })
@@ -1075,7 +1074,7 @@ DefineCharacter("hogne", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Gotaland",
-	DateReferenceCharacter = "ingiald-the-evil-adviser-yngling" -- lived during the reign of Ingiald over Sweden
+	-- lived during the reign of Ingiald the Evil-Adviser over Sweden
 	-- ruled over East Gotaland
 })
 
@@ -1132,7 +1131,7 @@ DefineCharacter("hiorvard-ylfing", { -- Source: Snorri Sturlson, "Heimskringla",
 	Civilization = "norse",
 --	ProvinceOfOrigin = -- ?
 	Father = "ylfing",
-	DateReferenceCharacter = "ingiald-the-evil-adviser-yngling" -- lived during the reign of Ingiald over Sweden
+	-- lived during the reign of Ingiald the Evil-Adviser over Sweden
 	-- was a king (of where?)
 	-- married to Hildigunna
 })
@@ -1183,7 +1182,7 @@ DefineCharacter("bove", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Gotaland", -- from West Gotaland
-	DateReferenceCharacter = "gauthild" -- Gauthild sent her son to be fostered by Bove
+	-- Gauthild sent her son to be fostered by Bove
 })
 
 DefineCharacter("savre-flettir", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 253-254.
@@ -1202,7 +1201,7 @@ DefineCharacter("gudrod", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Scania",
-	DateReferenceCharacter = "ingiald-the-evil-adviser-yngling", -- lived during the reign of Ingiald over Sweden
+	-- lived during the reign of Ingiald the Evil-Adviser over Sweden
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "scania" -- king of Scania
 	}
@@ -1215,7 +1214,7 @@ DefineCharacter("halfdan", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Scania",
-	DateReferenceCharacter = "gudrod" -- Gudrod's brother
+	-- Gudrod's brother
 })
 
 DefineCharacter("ivar-vidfadme", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 254-255.
@@ -1269,7 +1268,7 @@ DefineCharacter("solveig", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 	Civilization = "norse",
 	ProvinceOfOrigin = "Hedmark", -- correct? from the Soloer Islands
 	Father = "halfdan-guldtand",
-	DateReferenceCharacter = "olaf-treefeller-yngling" -- married to Olaf Yngling
+	-- married to Olaf Treefeller Yngling
 })
 
 DefineCharacter("ingiald-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 255, 257.
@@ -1388,7 +1387,7 @@ DefineCharacter("skiold", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Type = "unit-teuton-swordsman", -- was a great warlock
 	Civilization = "norse",
 --	ProvinceOfOrigin = ? -- lived in Varna (where?)
-	DateReferenceCharacter = "eystein-halfdanson-yngling" -- Eystein Yngling, son of Halfdan Huitbein, went with ships and raided Varna
+	-- Eystein Yngling, son of Halfdan Huitbein, went with ships and raided Varna
 	-- was a king
 })
 
@@ -1534,8 +1533,8 @@ DefineCharacter("gandalf-of-vingulmark", { -- Source: Snorri Sturlson, "Heimskri
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Ostfold", -- ruled over Vingulmark
-	Father = "alfgeir",
-	DateReferenceCharacter = "olaf-geirstad-alf-yngling" -- he lived during Olaf's reign
+	Father = "alfgeir"
+	-- he lived during Olaf Geirstad-Alf Yngling's reign
 })
 
 DefineCharacter("eystein-the-great", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 261.
@@ -1554,8 +1553,8 @@ DefineCharacter("hogne-eysteinson", { -- Source: Snorri Sturlson, "Heimskringla"
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Oppland", -- his father was king of Oppland
-	Father = "eystein-the-great",
-	DateReferenceCharacter = "olaf-geirstad-alf-yngling" -- he lived during Olaf's reign
+	Father = "eystein-the-great"
+	-- he lived during Olaf Geirstad-Alf Yngling's reign
 })
 
 DefineCharacter("rognvald-mountain-high-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 261.
@@ -1577,7 +1576,7 @@ DefineCharacter("thiodolf-of-huine", { -- Source: Snorri Sturlson, "Heimskringla
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Vestfold", -- he composed the Ynglingatal for Rognvald Mountain-High Yngling of Vestfold
-	DateReferenceCharacter = "rognvald-mountain-high-yngling", -- composed the Ynglingatal for Rognvald
+	-- composed the Ynglingatal for Rognvald
 	AuthoredWorks = {"upgrade-work-ynglingatal"}
 })
 
@@ -2477,7 +2476,7 @@ DefineCharacter("magnus-eyolfson", { -- Source: Snorri Sturlson, "Heimskringla",
 
 DefineCharacter("thormod-torfaeus", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 154-155.
 	Name = "Thormod",
-	FamilyName = "Torfæus",
+	FamilyName = "Torfaeus", -- "Torfæus"
 	Gender = "male",
 	Type = "unit-teuton-priest", -- put as a priest since there isn't any other unit type more appropriate for a writer
 	Civilization = "norse",

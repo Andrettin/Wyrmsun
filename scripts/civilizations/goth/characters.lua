@@ -74,7 +74,7 @@ DefineCharacter("agnar-ii", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	Father = "geirrod"
 })
 
-DefineCharacter("airmanareiks", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 225-226, 536, 552; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 22.
+DefineCharacter("airmanareiks", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 225-226, 536, 552; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 22; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18.
 	Name = "Airmanareiks", -- king of the East Goths; also known as Ermanaric or Ermanarich; known as Ermenrich in High German; known as Jormunrek in the Norse myths; in Norse tradition, slew his own sons; in the Norse myths married with Sigurd's daughter Svanhild and slew her (it would, however, have been impossible for Sigurd to be a contemporary of Gundahar/Gunnar and his daughter and Ermanaric have married); in the Dietrich saga, was the uncle of Dietrich who expelled him from his possessions (he could not have been a contemporary of Dietrich/Theodoric, however)
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -90,7 +90,7 @@ DefineCharacter("airmanareiks", { -- Source: Henry Adams Bellows (transl.), "The
 
 DefineCharacter("frithareiks", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 26.
 	-- son of Ermenrich (= Airmanareiks) in the Dietrich Saga; in the saga he was taken prisoner by Dietrich, but he couldn't have been a contemporary of Dietrich if he was a son of Airmanareiks
-	Name = "Friþareiks", -- in the saga his name is "Friedrich"; this is a tentative rendering of the name in Gothic, based on the cognates of the components of the original German name
+	Name = "Frithareiks", -- "Friþareiks"; in the saga his name is "Friedrich"; this is a tentative rendering of the name in Gothic, based on the cognates of the components of the original German name
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
@@ -137,12 +137,12 @@ DefineCharacter("widemer-amelung", { -- Source: F. E. Sandbach, "The Heroic Saga
 	Civilization = "goth",
 	Faction = "ostrogoth-tribe",
 	ProvinceOfOrigin = "Pannonia",
-	DateReferenceCharacter = "walamer-amelung" -- same generation as Walamer
+	-- same generation as Walamer
 })
 
 DefineCharacter("thiudareiks-amelung", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7, 9.
 	-- king of the Ostrogoths; Dietrich von Bern in the German sagas; was given as a hostage by Walamer to the Romans, and thus stayed for 10 years (until 472 AD) in the Byzantine court; his religion was Arian Christianity
-	Name = "Þiudareiks", -- tentative rendering of the name in Gothic, based on the cognates of the German version of the name, "Dietrich"; also known as "Theoderic"
+	Name = "Thiudareiks", -- "Þiudareiks"; tentative rendering of the name in Gothic, based on the cognates of the German version of the name, "Dietrich"; also known as "Theoderic"
 	FamilyName = "Amelung",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -186,7 +186,7 @@ DefineCharacter("vulfshardus", { -- Source: F. E. Sandbach, "The Heroic Saga-Cyc
 	Civilization = "goth",
 	Faction = "ostrogoth-tribe",
 	ProvinceOfOrigin = "Pannonia", -- presumably, because this is Theoderic's province of origin
-	DateReferenceCharacter = "thiudareiks-amelung" -- contemporary of Theoderic
+	-- contemporary of Theoderic
 })
 
 Load("scripts/civilizations/goth/characters_burgundian.lua")

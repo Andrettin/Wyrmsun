@@ -39,10 +39,8 @@ DefineFaction("suebi-tribe", {
 	Description = _("The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there."),
 	PersonalNames = {
 		"male", "Ariovistus", -- chieftain of the Suebi who fought against Caesar; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 222.
-		"male", "Ballomar", -- Marcomannic king; Source: "Ancient Warfare VII.6", 2013, p. 23.
 		"male", "Catualda", -- Marcomannic noble who was exiled by Marbod, and later returned with an army behind him and deposed Marbod
 		"male", "Hermeric", -- Suebic cheiftain who sacked central Galicia
-		"male", "Marbod", -- chieftain of the Marcomanni
 		"male", "Rechilas", -- Suebic cheiftain who defeated a Roman army led by Andevotus near the Singilis river in 438 AD
 		"male", "Tassilo" -- Bavarian ruler who revolted against Frankish dominion; Source: "Medieval Warfare V.2", 2013, p. 8.
 	},

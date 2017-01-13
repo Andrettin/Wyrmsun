@@ -26,7 +26,8 @@
 --
 
 DefineCharacter("teyrnon-twryf-liant", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 29.
-	Name = "Teyrnon Twryf Liant",
+	Name = "Teyrnon",
+	ExtraName = "Twryf Liant",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
@@ -37,7 +38,8 @@ DefineCharacter("teyrnon-twryf-liant", { -- Source: Bernhard Maier (trans.), "Da
 })
 
 DefineCharacter("pendaran-dyfed", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 21.
-	Name = "Pendaran Dyfed",
+	Name = "Pendaran",
+	ExtraName = "Dyfed",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
@@ -45,7 +47,8 @@ DefineCharacter("pendaran-dyfed", { -- Source: Bernhard Maier (trans.), "Das Sag
 })
 
 DefineCharacter("casnar-wledig", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 35.
-	Name = "Casnar Wledig",
+	Name = "Casnar",
+	ExtraName = "Wledig",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
@@ -53,7 +56,8 @@ DefineCharacter("casnar-wledig", { -- Source: Bernhard Maier (trans.), "Das Sage
 })
 
 DefineCharacter("gloyw-wallt-lydan", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 35.
-	Name = "Gloyw Wallt Lydan",
+	Name = "Gloyw",
+	ExtraName = "Wallt Lydan",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
@@ -62,7 +66,8 @@ DefineCharacter("gloyw-wallt-lydan", { -- Source: Bernhard Maier (trans.), "Das 
 })
 
 DefineCharacter("gwyn-gohoyw", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 35.
-	Name = "Gwyn Gohoyw",
+	Name = "Gwyn",
+	ExtraName = "Gohoyw",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",

@@ -193,7 +193,7 @@ DefineCharacter("eduard-von-bach", { -- Source: Waltraud Heindl, "Josephinische 
 	Civilization = "teuton",
 	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
-	DateReferenceCharacter = "alexander-von-bach", -- brother of Alexander von Bach
+	-- brother of Alexander von Bach
 	HistoricalTitles = {
 		"governor", 0, 0, "Upper Austria" -- was Statthalter of Upper Austria (Oberösterreich)
 	}
