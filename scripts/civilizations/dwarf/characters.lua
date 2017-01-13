@@ -112,6 +112,25 @@ DefineCharacter("galar", {
 	end
 })
 
+DefineCharacter("thjodrorir", { -- dwarf from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 17; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 66.
+	Name = "Thjodrorir",
+	Gender = "male",
+	Type = "unit-dwarven-witness",
+	Civilization = "dwarf",
+	Description = _("A wise loremaster, Thjodrorir possesses knowledge of many powerful charms."),
+	Background = _("In Norse mythology, Thjodrorir was a dwarf who knew a potent magic charm. This he sang before the doors of the god Delling, to bring might for the gods, glory for the elves and wisdom for Odin. Thjodrorir is mentioned in the ~<Hovamol~>."),
+	HairVariation = "gray-hair",
+	Trait = "upgrade-wise",
+	Year = -3000,
+	-- worships deities: Hroptatyr (Odin) and Delling
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") ~= "shadowcharm-clan") then
+			return true
+		end
+		return false
+	end
+})
+
 DefineCharacter("regin", {
 	Name = "Regin",
 	Gender = "male",

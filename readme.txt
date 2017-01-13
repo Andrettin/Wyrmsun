@@ -60,10 +60,15 @@ https://github.com/Andrettin/Wyrmsun
 - 2.5.4
 -----------------------------------------------------------------------
 
+* Buildings
+- Now up to four scrolls/books can be bought in temples (previously it was three).
+
 * Heroes
 - Heroes without unique portraits can now also be recruited, and are likewise also persistent.
-- Barracks and mercenary camp buildings now allow choosing from up to three heroes to recruit.
+- Heroes are now recruited at town hall and stronghold buildings.
+- Town halls, strongholds and mercenary camp buildings now allow choosing from up to four heroes to recruit.
 - Fixed issue which prevented goblins from recruiting heroes.
+- Hero recruitment buttons now show heroes' stats.
 
 * Miscellaneous
 - Deity entries in the encyclopedia now display their portraits.

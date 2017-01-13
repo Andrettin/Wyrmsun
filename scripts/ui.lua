@@ -1158,12 +1158,12 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {ButtonAction = "train-unit"}, Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
-				{ 	Condition = {ButtonAction = "buy"}, Margin = {1, 1},
-					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
-				},
 				{	Condition = {ButtonAction = "buy"},
 					More = {"Costs", {Font = PopupFont}}, HighlightColor = "yellow",
 				}, 
+				{ 	Condition = {ButtonAction = "buy"}, Margin = {1, 1},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
 				{ 	Condition = {Class = true, ButtonAction = "train-unit"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(Concat(_("Class:"), " "), TypeClass("Type")), Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -1304,6 +1304,61 @@ if not (ui_loaded_first_time) then
 					), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {BasicDamage = "only", ButtonAction = "unit", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(
+						Concat(_("Damage:"), " "),
+						String(
+							Div(
+								Add(
+									Add(
+										Add(
+											UnitVar("PiercingDamage","Value"), UnitVar("BasicDamage","Value")
+										),
+										Add(
+											UnitVar("FireDamage","Value"), UnitVar("ColdDamage","Value")
+										)
+									),
+									Add(
+										Add(
+											UnitVar("ArcaneDamage","Value"), UnitVar("LightningDamage","Value")
+										),
+										Add(
+											Add(
+												UnitVar("AirDamage","Value"), UnitVar("EarthDamage","Value")
+											),
+											UnitVar("WaterDamage","Value")
+										)
+									)
+								),
+								2
+							)
+						),
+						"-",
+						String(
+							Add(
+								Add(
+									Add(
+										UnitVar("PiercingDamage","Value"), UnitVar("BasicDamage","Value")
+									),
+									Add(
+										UnitVar("FireDamage","Value"), UnitVar("ColdDamage","Value")
+									)
+								),
+								Add(
+									Add(
+										UnitVar("ArcaneDamage","Value"), UnitVar("LightningDamage","Value")
+									),
+									Add(
+										Add(
+											UnitVar("AirDamage","Value"), UnitVar("EarthDamage","Value")
+										),
+										UnitVar("WaterDamage","Value")
+									)
+								)
+							)
+						)
+					), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {BasicDamage = "only", ButtonAction = "buy", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(
 						Concat(_("Damage:"), " "),
 						String(
