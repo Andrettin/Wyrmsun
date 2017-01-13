@@ -30,7 +30,7 @@ DefineCampaign("the-first-dwarves", {
 	Description = "A clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home. Beset by hostile forces, can they survive for long?",
 	Civilization = "dwarf",
 	Faction = "brising-clan",
-	Year = -2800
+	StartYear = -2800
 })
 
 --[[
@@ -39,7 +39,7 @@ DefineCampaign("the-mead-of-poetry", {
 	Description = "The dwarven brothers Fjalar and Galar conspire to kill the wise god Kvasir and brew his blood into a powerful mead.",
 	Civilization = "dwarf",
 	Faction = "shadowcharm-clan",
-	Year = -2800
+	StartYear = -2800
 })
 
 DefineCampaign("freys-messenger", {
@@ -47,7 +47,7 @@ DefineCampaign("freys-messenger", {
 	Description = "Skirnir, the human servant of the god Frey, must perform important deeds for his master.",
 	Civilization = "germanic",
 	Faction = "yngling-tribe", -- Yngve is identified with Frey
-	Year = -2800 -- when Scandinavia was historically settled by Indo-Europeans; Yngve ruled over the Swedes in the Ynglinga saga soon after Odin's people settled Scandinavia in that saga; since Skirnir was a servant of Frey in mythology, let's make him a contemporary of Yngve
+	StartYear = -2800 -- when Scandinavia was historically settled by Indo-Europeans; Yngve ruled over the Swedes in the Ynglinga saga soon after Odin's people settled Scandinavia in that saga; since Skirnir was a servant of Frey in mythology, let's make him a contemporary of Yngve
 })
 --]]
 
@@ -56,7 +56,7 @@ DefineCampaign("heimdalls-progeny", {
 	Description = "The young warrior Erala believes his true father to be the god Haimadala. Feeling that his divine heritage has fated him to rule over vast lands, Erala sets off to establish a hall and gather followers...", -- in the original myth his parents were "Fathir" and "Mothir"; "Fadēr" is the word which gave origin to "Fathir", while "Môder" gave origin to "Mothir"
 	Civilization = "germanic",
 	Faction = "jarling-tribe",
-	Year = -1600 -- the introduction of stronger social differentiation occurred in Scandinavia around 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 73. As such, it makes sense to make the Rig myth (in which the different Scandinavian social classes are originated) take place around this time
+	StartYear = -1600 -- the introduction of stronger social differentiation occurred in Scandinavia around 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 73. As such, it makes sense to make the Rig myth (in which the different Scandinavian social classes are originated) take place around this time
 })
 
 --[[
@@ -65,7 +65,7 @@ DefineCampaign("thunrazs-servant", {
 	Description = "Terrified by a calamitous thunderstorm, Thialfi's parents pledged him to the service of the lightning god Thunraz when he was still a boy. Now a grown up man, during a dream he heard his master command him to sail to an undiscovered island...",
 	Civilization = "germanic",
 	Faction = "thielung-tribe",
-	Year = -1101 -- 1100 BC was the first occupation of Gotland (by presumably pre-Germanic or Germanic speakers) we have found through research so far, so we place the campaign start at just before that
+	StartYear = -1101 -- 1100 BC was the first occupation of Gotland (by presumably pre-Germanic or Germanic speakers) we have found through research so far, so we place the campaign start at just before that
 })
 --]]
 
@@ -75,7 +75,7 @@ DefineCampaign("the-first-marcomannic-war", {
 	Description = "Under the leadership of Ballomar, the Marcomanni wage war with the mighty Roman Empire.",
 	Civilization = "teuton",
 	Faction = "marcomanni-tribe",
-	Year = 170 -- beginning of the First Marcomannic War
+	StartYear = 170 -- beginning of the First Marcomannic War
 })
 --]]
 
@@ -85,6 +85,6 @@ DefineCampaign("sigiberts-struggle", {
 	Description = "Upon the death of the Frankish king Chlothar I, his realm was divided between his four sons: Charibert, Chilperich, Sigibert and Gunthram. The ambitious Chilperich desires to increase his share of the inheritance at his brothers' expense, his designs on Sigibert's lands threatening to throw Francia into a bitter civil war...",
 	Civilization = "teuton",
 	Faction = "austrasia",
-	Year = 561 -- Sigibert's reign in his lands begins
+	StartYear = 561 -- Sigibert's reign in his lands begins
 })
 --]]

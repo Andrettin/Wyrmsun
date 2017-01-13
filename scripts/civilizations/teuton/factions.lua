@@ -77,17 +77,17 @@ DefineFaction("saxon-tribe", {
 DefineFaction("thuringian-tribe", {
 	Name = "Thuringian Tribe",
 	Civilization = "teuton",
+	ParentFaction = "suebi-tribe", -- correct?
 	Type = "tribe",
-	Language = "old-high-german",
+--	Language = "old-high-german",
 	Colors = {"green"},
-	FactionUpgrade = "upgrade-thuringian-tribe-faction",
+--	FactionUpgrade = "upgrade-thuringian-tribe-faction",
 	HistoricalFactionDerivations = {507, "teuton", "suebi-tribe"} -- who did the Thuringians actually stem from?
 })
 
 DefineFaction("alamanni-tribe", {
 	Name = "Alamanni Tribe",
 	Civilization = "teuton",
---	ParentFaction = "suebi-tribe",
 	Type = "tribe",
 	Language = "old-high-german",
 	Colors = {"blue"},
@@ -294,7 +294,7 @@ DefineFaction("frisian-tribe", {
 DefineFaction("hermunduri-tribe", {
 	Name = "Hermunduri Tribe",
 	Civilization = "teuton",
-	ParentFaction = "thuringian-tribe", -- accurate?
+	ParentFaction = "suebi-tribe", -- accurate?
 	Type = "tribe",
 	Colors = {"blue"},
 	DevelopsTo = {"thuringia"}, -- same general area
