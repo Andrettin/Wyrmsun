@@ -531,7 +531,7 @@ SetMapTemplateCulturalSettlementName("earth", "Uppsala", {4241, 686}, "norse")
 SetMapTemplateUnit("earth", "unit-teuton-temple", "sweden", {4241, 686}, 1164) -- Swedish archbishopric founded in Uppsala in 1164; Source: "Guta Saga: The History of the Gotlanders", 1999, p. vii.
 
 -- Västervik
-SetMapTemplateUnit("earth", "unit-germanic-warrior", "thielung-tribe", {4218, 734}, -1101, -1100) -- in the Guta saga, Thieluar was Gotland's discoverer, here we place his journey just before 1100 BC since that's the first occupation of Gotland (by presumably pre-Germanic or Germanic speakers) we have found through research so far
+SetMapTemplateHero("earth", "thialfi", "thielung-tribe", {4218, 734}, -1101, -1100) -- in the Guta saga, Thieluar was Gotland's discoverer, here we place his journey just before 1100 BC since that's the first occupation of Gotland (by presumably pre-Germanic or Germanic speakers) we have found through research so far
 SetMapTemplateUnit("earth", "unit-germanic-worker", "thielung-tribe", {4218, 734}, -1101, -1100)
 SetMapTemplateUnit("earth", "unit-germanic-worker", "thielung-tribe", {4218, 734}, -1101, -1100)
 SetMapTemplateUnit("earth", "unit-germanic-transport-ship", "thielung-tribe", {4218, 734}, -1101, -1100)

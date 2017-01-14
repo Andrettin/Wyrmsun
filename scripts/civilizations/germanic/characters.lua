@@ -509,7 +509,7 @@ DefineCharacter("skeldu", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 DefineCharacter("fridleifr-skeldung", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
 	Name = "Fridleif", -- "Fridleifr"
 	-- prefix is likely the Old Norse word "Friđr"
-	FamilyName = "Skeldung", -- "Skjoldung" in the original Norse saga (from Skjöldr), here rendered as Skeldu (Proto-Germanic version of "Skjöldr") and -ung (the suffix in the original word; which should be changed for a Proto-Germanic version)
+--	FamilyName = "Skeldung", -- "Skjoldung" in the original Norse saga (from Skjöldr), here rendered as Skeldu (Proto-Germanic version of "Skjöldr") and -ung (the suffix in the original word; which should be changed for a Proto-Germanic version)
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
@@ -522,7 +522,7 @@ DefineCharacter("fridleifr-skeldung", { -- Source: Snorri Sturlson, "The Prose E
 
 DefineCharacter("saemingr-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, p. 212; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 9.
 	Name = "Saeming", -- "Sæmingr"; Yngve (or Vóden's) son set to rule over Norway
-	FamilyName = "Yngling",
+--	FamilyName = "Yngling",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
@@ -536,7 +536,7 @@ DefineCharacter("thrahila", {
 	Type = "unit-germanic-worker",
 	Civilization = "germanic",
 	Faction = "thralling-tribe",
-	Description = _("The robust Thrahila is a hard worker, constantly engaged in logging and other laborious activities."),
+	Description = "The robust Thrahila is a hard worker, constantly engaged in logging and other laborious activities.",
 	HairVariation = "black-hair", -- described as black-haired in the myths
 	Trait = "upgrade-dutiful"
 })
@@ -557,8 +557,108 @@ DefineCharacter("erala", {
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	Faction = "jarling-tribe",
-	Description = _("The young warrior Erala believes his true father to be the god Rig. Feeling that his divine heritage has fated him to rule over vast lands, Erala sets about to carve territory for himself."),
+	Description = "The young warrior Erala believes his true father to be the god Rig. Feeling that his divine heritage has fated him to rule over vast lands, Erala sets about to carve territory for himself.",
 	Icon = "icon-jarl",
 	HairVariation = "blond-hair",
 	Trait = "upgrade-strong"
+})
+
+DefineCharacter("thialfi", { -- Thor's servant in Norse mythology; associated by several scholars with Þieluar, the discoverer of Gotland; Source: "Guta Saga: The History of the Gotlanders", 1999, pp. xvii-xviii, 3.
+	Name = "Thialfi",
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "germanic",
+	Faction = "thielung-tribe",
+	Description = "Terrified by a calamitous thunderstorm, Thialfi's parents pledged him to the service of the lightning god Thunraz when he was still a boy. Years later as a grown up man, during a dream he heard his master command him to sail to an undiscovered island...",
+	Trait = "upgrade-quick",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "thielung-tribe") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("hafthi", { -- Source: "Guta Saga: The History of the Gotlanders", 1999, p. 3.
+	Name = "Hafthi", -- "Hafþi"
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "germanic",
+	Faction = "thielung-tribe",
+	Background = "In the Guta Saga, Hafthi was the son of Thieluar, and the first to settle the island of Gotland after his father discovered it.",
+	Father = "thialfi",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "thielung-tribe") then
+			return true
+		end
+		return false
+	end
+	-- married to Huitastierna
+})
+
+DefineCharacter("huitastierna", { -- Source: "Guta Saga: The History of the Gotlanders", 1999, p. 3.
+	Name = "Huitastierna",
+	Gender = "female",
+	Type = "unit-germanic-worker",
+	Civilization = "germanic",
+	Faction = "thielung-tribe",
+	Background = "In the Guta Saga, Huitastierna was the wife of Hafthi, and together they were the first to settle the island of Gotland.",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "thielung-tribe") then
+			return true
+		end
+		return false
+	end
+	-- married to Hafthi
+})
+
+DefineCharacter("guti", { -- Source: "Guta Saga: The History of the Gotlanders", 1999, p. 3.
+	Name = "Guti",
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "germanic",
+	Faction = "thielung-tribe",
+	Background = "In the Guta Saga, Guti was the eldest son of Hafthi and Huitastierna, and he inherited the northern third of the island of Gotland from them.",
+	Father = "hafthi",
+	Mother = "huitastierna",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "thielung-tribe") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("graipr", { -- Source: "Guta Saga: The History of the Gotlanders", 1999, p. 3.
+	Name = "Graip", -- "Graipr"
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "germanic",
+	Faction = "thielung-tribe",
+	Background = "In the Guta Saga, Graip was the second son of Hafthi and Huitastierna, and he inherited the middle third of the island of Gotland from them.",
+	Father = "hafthi",
+	Mother = "huitastierna",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "thielung-tribe") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("gunfiaun", { -- Source: "Guta Saga: The History of the Gotlanders", 1999, p. 3.
+	Name = "Gunfiaun",
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "germanic",
+	Faction = "thielung-tribe",
+	Background = "In the Guta Saga, Gunfiaun was the youngest son of Hafthi and Huitastierna, and he inherited the southern third of the island of Gotland from them.",
+	Father = "hafthi",
+	Mother = "huitastierna",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "thielung-tribe") then
+			return true
+		end
+		return false
+	end
 })
