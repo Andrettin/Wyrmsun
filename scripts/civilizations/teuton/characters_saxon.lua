@@ -44,6 +44,7 @@ DefineCharacter("alof-the-great", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "teuton",
+	Faction = "saxon-tribe",
 	ProvinceOfOrigin = "Holstein", -- correct? was from "Saxonland"
 	-- married to Geirthiof
 })
@@ -53,6 +54,7 @@ DefineCharacter("yrsa", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "teuton",
+	Faction = "saxon-tribe",
 	ProvinceOfOrigin = "Holstein", -- correct? was from "Saxonland"
 	Father = "helge-skjoldung", 
 	Mother = "alof-the-great", 
@@ -75,15 +77,12 @@ DefineCharacter("rolf-krake-skjoldung", { -- Source: Snorri Sturlson, "Heimskrin
 	}
 })
 
-DefineCharacter("widukind", {
+DefineCharacter("widukind", { -- Saxon leader who resisted Charlemagne's forces from 772 to 802; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 603.
 	Name = "Widukind",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-teuton-veteran-swordsman",
 	Civilization = "teuton",
-	Faction = "saxon-tribe",
---	ProvinceOfOrigin = ?
---	Year = ?,
---	DeathYear = ?
+	Faction = "saxon-tribe"
 })
 
 --[[

@@ -59,11 +59,7 @@ DefineFaction("frank-tribe", {
 		"male", "Charles", -- Charles the Great, or Charlemagne, son of Pepin the Short; succeeded his father together with Carloman in 768 as king of the Franks, and became sole ruler of the Franks in 771; died of illness on 28 January 814 at Aachen at 66 years old (the Old Frankish form of "Charles" should be used instead); Source: "Medieval Warfare V.2", 2013, pp. 7-9.
 		"male", "Childebert", -- son of Chlodwig who ruled in Paris; died in 558; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
 		"male", "Childebrand", -- Frankish duke; uncle of Pepin the Short; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 408.
-		"male", "Chilperich", -- son of Chlothar; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
-		"male", "Chlodio", -- Frankish king; Source: "Medieval Warfare V.2", 2013, p. 6.
 		"male", "Chlodomer", -- son of Chlodwig who ruled in Orléans; died in 524; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
-		"male", "Chlodwig", -- Frankish king, son of Merovech; founder of the Frankish kingdom; married Clothilda (daughter of the Burgundian king Chilperic); he converted to Christianity; his reign began in 481 and he died in 511; also known as "Chlodovech", "Chlodoveus" or "Clovis"; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 97, 99; Source: "Medieval Warfare V.2", 2013, p. 6; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
-		"male", "Chlothar", -- son of Chlodwig who ruled in Soissons; died in 561; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
 		"male", "Dagobert", -- king of the Franks as Dagobert I; died in 639; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 81; Source: "Medieval Warfare V.2", 2013, p. 7.
 		"male", "Dragolen", -- Frankish duke; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 391.
 		"male", "Drogo", -- son of Carloman and grandson of Charles Martel; Source: "Medieval Warfare V.2", 2013, p. 7.
@@ -74,15 +70,12 @@ DefineFaction("frank-tribe", {
 		"male", "Ghislamar", -- son of Waratto, Mayor of the Palace of Neustria; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 405.
 		"male", "Grifo", -- son of Charles Martel and brother of Pepin the Short; Source: "Medieval Warfare V.2", 2013, p. 7; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 408.
 		"male", "Grimwald", -- Old Frankish name; Source: http://www.cnrtl.fr/definition/lourdaud//1
-		"male", "Gunthram", -- son of Chlothar; died in 592; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
-		"male", "Merovech", -- Frankish king, son of Chlodio and founder of the Merovingian dynasty; Source: "Medieval Warfare V.2", 2013, p. 6.
 		"male", "Leudegisel", -- duke under Gunthram; fought the Visigoths in Septimania in 585; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 390.
 		"male", "Louis", -- Louis the Pious, son of Charlemagne; made co-emperor with his father in 813 (the Old Frankish form of "Louis" should be used instead); Source: "Medieval Warfare V.2", 2013, p. 9.
 		"male", "Pepin", -- Pepin of Herstal; became Mayor of the Palace of Austrasia in 675; died in 714; Source: "Medieval Warfare V.2", 2013, p. 7.
 		"male", "Pepin", -- Pepin the Short, son of Charles Martel; became king of the Franks in 751; died in 768; Source: "Medieval Warfare V.2", 2013, p. 7.
 		"male", "Ragamfred", -- Mayor of the Palace of Austrasia; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 406.
 		"male", "Rathar", -- vassal of a Frankish king Childebert; restored the king's authority in Marseilles in 585; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 390.
-		"male", "Sigibert", -- Sigibert I (535-575), Frankish king; son of Chlothar; became Siegfried/Sigurd in the myths; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, pp. 327-328.
 		"male", "Sigulf", -- Frankish duke; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 391.
 		"male", "Theoderic", -- king of the Franks as Theoderic IV; died in 737; Source: "Medieval Warfare V.2", 2013, p. 7.
 		"male", "Theuderich", -- son of Chlodwig who ruled in Reims; died in 534; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
@@ -148,7 +141,7 @@ DefineFaction("east-francia", { -- Source: James Westfall Thompson, "Medieval Ge
 	}
 })
 
-DefineFaction("franconia", {
+DefineFaction("franconia", { -- represents the German region, so it uses base Teuton elements, rather than Frankish ones
 	Name = "Franconia",
 	Civilization = "teuton",
 	Type = "polity",

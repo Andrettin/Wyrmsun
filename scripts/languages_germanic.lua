@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015-2016 by Andrettin
+--      (c) Copyright 2015-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -41,11 +41,15 @@ DefineLanguage("old-norse", {
 	NameTranslations = {
 		"Airmanareiks", "Jormunrek", -- "Jǫrmunrekr" is the Old Norse equivalent of the Gothic name "Airmanareiks; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18
 		-- Proto-Germanic Personal Names
+		"Aban", "Afi",
+		"Ammon", "Amma",
 		"Branda", "Brand",
 		"Erala", "Jarl",
+		"Fader", "Fathir",
 		"Gudawulfa", "Gudolf",
 		"Karla", "Karl",
 		"Magan", "Magi",
+		"Moder", "Mothir",
 		"Skeldu", "Skjold",
 		"Thrahila", "Thrall",
 		-- Proto-Germanic Settlement Names
