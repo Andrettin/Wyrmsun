@@ -40,7 +40,7 @@ DefineFaction("arverni-tribe", {
 --	Language = "gaulish",
 	Colors = {"blue"},
 	HistoricalDiplomacyStates = {
-		-71, "celt", "aedui-tribe", "war" -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
+		-71, "aedui-tribe", "war" -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
 	}
 })
 
@@ -127,7 +127,7 @@ DefineFaction("sequani-tribe", {
 --	Language = "gaulish",
 	Colors = {"pink", "red"},
 	HistoricalDiplomacyStates = {
-		-71, "celt", "aedui-tribe", "war" -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
+		-71, "aedui-tribe", "war" -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
 	}
 })
 
@@ -138,8 +138,8 @@ DefineFaction("treviri-tribe", { -- Source: H. H. Howorth, "The Ethnology of Ger
 --	Language = "gaulish", -- presumably
 	Colors = {"green"},
 	HistoricalDiplomacyStates = {
-		-54, "celt", "condrusi-tribe", "sovereign", -- in 54 BC the Condrusi were clients of the Treviri
-		-54, "celt", "eburones-tribe", "sovereign" -- in 54 BC the Eburones were clients of the Treviri
+		-54, "condrusi-tribe", "sovereign", -- in 54 BC the Condrusi were clients of the Treviri
+		-54, "eburones-tribe", "sovereign" -- in 54 BC the Eburones were clients of the Treviri
 	}
 })
 

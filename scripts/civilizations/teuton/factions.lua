@@ -297,8 +297,8 @@ DefineFaction("hermunduri-tribe", {
 	Colors = {"blue"},
 	DevelopsTo = {"thuringia"}, -- same general area
 	HistoricalDiplomacyStates = {
-		170, "latin", "rome", "war", -- in 170 a coalition led by the Marcomanni (which included the Hermunduri) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.
-		171, "latin", "rome", "peace" -- in 171 the Romans forced most of the tribes of the Marcomannic coalition to a peace; Source: "Ancient Warfare VII.6", 2013, p. 32.
+		170, "rome", "war", -- in 170 a coalition led by the Marcomanni (which included the Hermunduri) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.
+		171, "rome", "peace" -- in 171 the Romans forced most of the tribes of the Marcomannic coalition to a peace; Source: "Ancient Warfare VII.6", 2013, p. 32.
 	},
 	HistoricalFactionDerivations = {-264, "germanic", "istaevone-tribe"}
 })
@@ -345,11 +345,11 @@ DefineFaction("marcomanni-tribe", {
 	Description = _("The Marcomanni were a Suebic tribe. Eventually they migrated to the east, settling in Bohemia and expelling the local Boii tribe. In the 2nd century they fought the terrible Marcomannic Wars against the Romans. The name \"Marcomanni\" means \"march-men\", or \"frontier-men\"."),
 	HistoricalFactionDerivations = {-9, "teuton", "suebi-tribe"},
 	HistoricalDiplomacyStates = {
-		170, "latin", "rome", "war", -- in 170 a coalition led by the Marcomanni (which included the Quadi and the Hermunduri) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.
-		170, "teuton", "hermunduri-tribe", "alliance",
-		172, "latin", "rome", "peace", -- in 172 the Romans forced the Marcomanni to a peace; Source: "Ancient Warfare VII.6", 2013, p. 32.
-		177, "latin", "rome", "war", -- the Marcomanni entered conflict with the Romans again in 177; Source: "Ancient Warfare VII.6", 2013, p. 8.
-		177, "latin", "rome", "peace" -- in (apparently) 177 the Romans again forced the Marcomanni to a peace; Source: "Ancient Warfare VII.6", 2013, p. 8.
+		170, "rome", "war", -- in 170 a coalition led by the Marcomanni (which included the Quadi and the Hermunduri) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.
+		170, "hermunduri-tribe", "alliance",
+		172, "rome", "peace", -- in 172 the Romans forced the Marcomanni to a peace; Source: "Ancient Warfare VII.6", 2013, p. 32.
+		177, "rome", "war", -- the Marcomanni entered conflict with the Romans again in 177; Source: "Ancient Warfare VII.6", 2013, p. 8.
+		177, "rome", "peace" -- in (apparently) 177 the Romans again forced the Marcomanni to a peace; Source: "Ancient Warfare VII.6", 2013, p. 8.
 	}
 })
 
@@ -375,13 +375,13 @@ DefineFaction("quadi-tribe", {
 	DevelopsTo = {"bavaria", "galicia", "austria", "carinthia"}, -- the Quadi were a Suebic tribe
 	HistoricalFactionDerivations = {-9, "teuton", "suebi-tribe"},
 	HistoricalDiplomacyStates = {
-		170, "latin", "rome", "war", -- in 170 a coalition led by the Marcomanni (which included the Quadi) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.
-		170, "teuton", "marcomanni-tribe", "alliance",
-		171, "latin", "rome", "peace", -- in 171 the Romans forced the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 32.
-		173, "latin", "rome", "war", -- the Quadi entered conflict with the Romans again in (apparently) 173; Source: "Ancient Warfare VII.6", 2013, p. 8.
-		174, "latin", "rome", "peace", -- in 174 the Romans forced the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 8.
-		177, "latin", "rome", "war", -- the Quadi entered conflict with the Romans again in 177; Source: "Ancient Warfare VII.6", 2013, p. 8.
-		179, "latin", "rome", "peace" -- in 179 the Romans again forced the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 8.
+		170, "rome", "war", -- in 170 a coalition led by the Marcomanni (which included the Quadi) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.
+		170, "marcomanni-tribe", "alliance",
+		171, "rome", "peace", -- in 171 the Romans forced the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 32.
+		173, "rome", "war", -- the Quadi entered conflict with the Romans again in (apparently) 173; Source: "Ancient Warfare VII.6", 2013, p. 8.
+		174, "rome", "peace", -- in 174 the Romans forced the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 8.
+		177, "rome", "war", -- the Quadi entered conflict with the Romans again in 177; Source: "Ancient Warfare VII.6", 2013, p. 8.
+		179, "rome", "peace" -- in 179 the Romans again forced the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 8.
 	}
 })
 
@@ -426,7 +426,7 @@ DefineFaction("ubii-tribe", { -- Source: H. H. Howorth, "The Ethnology of German
 	Description = _("The Ubii were a West Germanic tribe which lived by the Rhine, north of the Main river. Due to their location in a central trading spot, they were more advanced than other Germanic tribes. Being allies of Rome, many of them eventually migrated west of the Rhine, dwelling around Colonia Agrippinenses (the modern Cologne). The ones who remained possibly became the Chatti."),
 	HistoricalFactionDerivations = {-55, "teuton", "suebi-tribe"}, -- they are first mentioned in Caesar's writings in 55 BC
 	HistoricalDiplomacyStates = {
-		-55, "teuton", "suebi-tribe", "vassal" -- the Ubii were tributaries of the Suebi in 55 BC
+		-55, "suebi-tribe", "vassal" -- the Ubii were tributaries of the Suebi in 55 BC
 	}
 })
 
@@ -456,8 +456,8 @@ DefineFaction("bavaria", {
 	},
 	DevelopsTo = {"holy-rome"}, -- Bavaria was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	HistoricalDiplomacyStates = {
-		784, "teuton", "francia", "war", -- Bavaria revolted against Frankish rule under Tassilo in 784; Source: "Medieval Warfare V.2", 2013, p. 8.
-		787, "teuton", "francia", "peace" -- Bavarian revolt against Frankish rule quashed by Charles the Great three years after 784; Source: "Medieval Warfare V.2", 2013, p. 8.
+		784, "francia", "war", -- Bavaria revolted against Frankish rule under Tassilo in 784; Source: "Medieval Warfare V.2", 2013, p. 8.
+		787, "francia", "peace" -- Bavarian revolt against Frankish rule quashed by Charles the Great three years after 784; Source: "Medieval Warfare V.2", 2013, p. 8.
 	}
 })
 
@@ -570,8 +570,8 @@ DefineFaction("holy-rome", {
 	FactionUpgrade = "upgrade-saxon-tribe-faction",
 	HistoricalFactionDerivations = {919, "teuton", "francia"},
 	HistoricalDiplomacyStates = {
-		985, "slav", "bohemia", "war", -- War between Otto II and Bohemia broke out in 985; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 616.
-		987, "slav", "bohemia", "sovereign" -- Bohemia became again a vassal of the Holy Roman Empire in 987, under heavier subjection; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 616.
+		985, "bohemia", "war", -- War between Otto II and Bohemia broke out in 985; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 616.
+		987, "bohemia", "sovereign" -- Bohemia became again a vassal of the Holy Roman Empire in 987, under heavier subjection; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 616.
 	}
 })
 

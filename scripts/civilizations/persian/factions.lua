@@ -66,8 +66,8 @@ DefineFaction("iazyge-tribe", {
 	Type = "tribe",
 	Colors = {"violet"},
 	HistoricalDiplomacyStates = {
-		171, "latin", "rome", "war", -- the Iazyges entered conflict with the Romans in (apparently) 171; Source: "Ancient Warfare VII.6", 2013, pp. 7-8.
-		175, "latin", "rome", "peace" -- in 175 the Romans defeated the Iazyges and forced them to a peace; Source: "Ancient Warfare VII.6", 2013, p. 8.
+		171, "rome", "war", -- the Iazyges entered conflict with the Romans in (apparently) 171; Source: "Ancient Warfare VII.6", 2013, pp. 7-8.
+		175, "rome", "peace" -- in 175 the Romans defeated the Iazyges and forced them to a peace; Source: "Ancient Warfare VII.6", 2013, p. 8.
 	}
 })
 
@@ -116,8 +116,8 @@ DefineFaction("parthia", {
 --		161, "Mesopotamia" -- Ctesiphon was the capital of Parthia in 161; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalDiplomacyStates = {
-		161, "greek", "armenia", "war", -- in the autumn of 161 Parthia invaded Armenia, a vassal state of Rome; Source: "Ancient Warfare VII.6", 2013, p. 6.
-		161, "latin", "rome", "war"
+		161, "armenia", "war", -- in the autumn of 161 Parthia invaded Armenia, a vassal state of Rome; Source: "Ancient Warfare VII.6", 2013, p. 6.
+		161, "rome", "war"
 	}
 })
 
