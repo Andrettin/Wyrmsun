@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016 by Andrettin
+--      (c) Copyright 2016-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -195,3 +195,160 @@ DefineFaction("wessex", {
 	DefaultAI = "sea-attack",
 	Description = ""
 })
+
+DefineFaction("england", {
+	Name = "England",
+	Civilization = "teuton",
+	Type = "polity",
+	Language = "english",
+	Colors = {"red", "white"},
+	DefaultTier = "kingdom",
+	FactionUpgrade = "upgrade-angle-tribe-faction",
+	PersonalNames = {
+		"female", "Catherine",
+		"female", "Charlotte",
+		"female", "Elizabeth",
+		"female", "Mary",
+		"female", "Victoria",
+		"male", "Adam",
+		"male", "Alexander",
+		"male", "Alf",
+		"male", "Alfred",
+		"male", "Arthur",
+		"male", "Benjamin",
+		"male", "Bernard",
+		"male", "Charles",
+		"male", "Christopher",
+		"male", "David",
+		"male", "Donald",
+		"male", "Edgar",
+		"male", "Edmund",
+		"male", "Edward",
+		"male", "Elias",
+		"male", "Francis",
+		"male", "Frederick",
+		"male", "George",
+		"male", "Godfrey",
+		"male", "Harold",
+		"male", "Harrison",
+		"male", "Harry",
+		"male", "Henry",
+		"male", "Jack",
+		"male", "James",
+		"male", "John",
+		"male", "Joseph",
+		"male", "Kenneth",
+		"male", "Lewis",
+		"male", "Malcolm",
+		"male", "Mark",
+		"male", "Matthew",
+		"male", "Michael",
+		"male", "Nathan",
+		"male", "Nicolas",
+		"male", "Oliver",
+		"male", "Peter",
+		"male", "Philip",
+		"male", "Richard",
+		"male", "Robert",
+		"male", "Sebastian",
+		"male", "Stephen",
+		"male", "Theodore",
+		"male", "Thomas",
+		"male", "William"
+	},
+	SettlementNames = {
+		"Ashford", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Bamburgh", -- Shepherd gives it as "Bamborough" instead; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
+		"Bedford", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Blackburn", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Blackpool", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Blackwall",
+		"Chatham",
+		"Chester",
+		"Chesterfield",
+		"Dartford",
+		"Dartmouth",
+		"Dorchester",
+		"Durham", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+		"Edinburgh", -- in Scotland
+		"Falmouth",
+		"Fishguard", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Gateshead", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Greenwich",
+		"Guildford", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Harrow on the Hill",
+		"Hempstead", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Holyhead",
+		"Hull", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+		"Huntingdon",
+		"Kingston",
+		"Kirkwall", -- in Scotland
+		"Liverpool", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Longford", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Maidstone", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Mansfield",
+		"Marshfield",
+		"Newbury", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Newcastle", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+		"Newhaven", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+		"Newport", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Newquay", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Northfleet",
+		"Norwich",
+		"Oldham",
+		"Oxford", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Plymouth",
+		"Portsmouth",
+		"Reading",
+		"Redditch", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Salisbury", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Scarborough",
+		"Shrewsbury", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Stockport", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Stonehaven", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Swanscombe",
+		"Swansea", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Torbay", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Waterford",
+		"Wells",
+		"Westbury",
+		"Westport",
+		"Whitehaven", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Wimbledon",
+		"Woodbridge",
+		"Woolwich",
+		"Wormshill",
+		"Yarmouth" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+	},
+	ProvinceNames = {
+		"Berkshire",
+		"Cheshire",
+		"Cornwall",
+		"Dorset",
+		"East Anglia",
+		"Essex",
+		"Hampshire",
+		"Lancashire",
+		"Middlesex",
+		"Norfolk",
+		"Northumberland",
+		"Portland", -- duchy
+		"Shropshire",
+		"Somerset",
+		"Suffolk",
+		"Sussex",
+		"Wessex",
+		"Wiltshire"
+	}
+})
+
+DefineFaction("scotland", {
+	Name = "Scotland",
+	Civilization = "teuton",
+	ParentFaction = "england",
+	Type = "polity",
+	Language = "english",
+	Colors = {"blue", "white"},
+	DefaultTier = "kingdom"
+})
+

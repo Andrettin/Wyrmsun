@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015-2016 by Andrettin
+--      (c) Copyright 2015-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -38,10 +38,8 @@ DefineFaction("suebi-tribe", {
 	FactionUpgrade = "upgrade-suebi-tribe-faction",
 	Description = _("The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there."),
 	PersonalNames = {
-		"male", "Ariovistus", -- chieftain of the Suebi who fought against Caesar; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 222.
-		"male", "Catualda", -- Marcomannic noble who was exiled by Marbod, and later returned with an army behind him and deposed Marbod
-		"male", "Hermeric", -- Suebic cheiftain who sacked central Galicia
-		"male", "Rechilas", -- Suebic cheiftain who defeated a Roman army led by Andevotus near the Singilis river in 438 AD
+		"male", "Hermeric", -- Suebic chieftain who sacked central Galicia
+		"male", "Rechilas", -- Suebic chieftain who defeated a Roman army led by Andevotus near the Singilis river in 438 AD
 		"male", "Tassilo" -- Bavarian ruler who revolted against Frankish dominion; Source: "Medieval Warfare V.2", 2013, p. 8.
 	},
 	SettlementNames = {
@@ -466,68 +464,15 @@ DefineFaction("bavaria", {
 DefineFaction("saxony", {
 	Name = "Saxony",
 	Civilization = "teuton",
-	ParentFaction = "saxon-tribe",
 	Type = "polity",
-	Language = "high-german",
 	Colors = {"pink"},
 	DefaultTier = "duchy", -- Saxony was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	FactionUpgrade = "upgrade-saxon-tribe-faction",
 	Titles = {
 		"monarchy", "duchy", "Duchy",
 		"monarchy", "kingdom", "Kingdom"
 	},
 	DevelopsTo = {"holy-rome"} -- Saxony was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-})
-
-DefineFaction("swabia", {
-	Name = "Swabia",
-	Civilization = "teuton",
-	ParentFaction = "alamanni-tribe",
-	Language = "high-german",
-	Type = "polity",
-	Colors = {"orange"},
-	DefaultTier = "duchy", -- Swabia was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-	DevelopsTo = {"holy-rome"} -- Swabia was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-})
-
-DefineFaction("baden", {
-	Name = "Baden",
-	Civilization = "teuton",
-	ParentFaction = "swabia",
-	Type = "polity",
-	Colors = {"black"},
-	DefaultTier = "grand-duchy"
-})
-
-DefineFaction("netherlands", {
-	Name = "Netherlands",
-	Civilization = "teuton",
-	ParentFaction = "francia",
-	Type = "polity",
---	Language = "dutch",
-	Colors = {"orange", "blue"},
-	DefaultTier = "kingdom",
-	SettlementNames = {
-		"'s-Hertogenbosch",
-		"Beverwijk",
-		"Rotterdam",
-		"Staphorst", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-		"Waalwijk"
-	},
-	ProvinceNames = {
-		"Flevoland",
-		"Friesland",
-		"Gelderland"
-	}
-})
-
-DefineFaction("brabant", {
-	Name = "Brabant",
-	Civilization = "teuton",
-	ParentFaction = "netherlands",
-	Type = "polity",
-	Colors = {"cyan"},
-	DefaultTier = "duchy", -- Brabant was a duchy in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
-	DevelopsTo = {"netherlands"}
 })
 
 DefineFaction("brandenburg", {
@@ -568,169 +513,12 @@ DefineFaction("brunswick", {
 DefineFaction("cologne", {
 	Name = "Cologne",
 	Civilization = "teuton",
-	ParentFaction = "francia", -- correct?
 	Type = "polity",
-	Language = "high-german",
 	Colors = {"white"},
 	DefaultTier = "duchy", -- Cologne was an archbishopric in 1378; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 78-79.
+	FactionUpgrade = "upgrade-saxon-tribe-faction",
 	Titles = {
 		"theocracy", "duchy", "Archbishopric"
-	}
-})
-
-DefineFaction("drenthe", {
-	Name = "Drenthe",
-	Civilization = "teuton",
-	ParentFaction = "netherlands",
-	Type = "polity",
-	Colors = {"cyan"},
-	DefaultTier = "county", -- Drenthe was a county in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
-	DevelopsTo = {"netherlands"}
-})
-
-DefineFaction("england", {
-	Name = "England",
-	Civilization = "teuton",
-	ParentFaction = "angle-tribe",
-	Type = "polity",
-	Language = "english",
-	Colors = {"red", "white"},
-	DefaultTier = "kingdom",
-	PersonalNames = {
-		"female", "Catherine",
-		"female", "Charlotte",
-		"female", "Elizabeth",
-		"female", "Mary",
-		"female", "Victoria",
-		"male", "Adam",
-		"male", "Alexander",
-		"male", "Alf",
-		"male", "Alfred",
-		"male", "Arthur",
-		"male", "Benjamin",
-		"male", "Bernard",
-		"male", "Charles",
-		"male", "Christopher",
-		"male", "David",
-		"male", "Donald",
-		"male", "Edgar",
-		"male", "Edmund",
-		"male", "Edward",
-		"male", "Elias",
-		"male", "Francis",
-		"male", "Frederick",
-		"male", "George",
-		"male", "Godfrey",
-		"male", "Harold",
-		"male", "Harrison",
-		"male", "Harry",
-		"male", "Henry",
-		"male", "Jack",
-		"male", "James",
-		"male", "John",
-		"male", "Joseph",
-		"male", "Kenneth",
-		"male", "Lewis",
-		"male", "Malcolm",
-		"male", "Mark",
-		"male", "Matthew",
-		"male", "Michael",
-		"male", "Nathan",
-		"male", "Nicolas",
-		"male", "Oliver",
-		"male", "Peter",
-		"male", "Philip",
-		"male", "Richard",
-		"male", "Robert",
-		"male", "Sebastian",
-		"male", "Stephen",
-		"male", "Theodore",
-		"male", "Thomas",
-		"male", "William"
-	},
-	SettlementNames = {
-		"Ashford", -- Source: "Philip's International School Atlas", 2006, p. 64.
-		"Bamburgh", -- Shepherd gives it as "Bamborough" instead; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
-		"Bedford", -- Source: "Philip's International School Atlas", 2006, p. 64.
-		"Blackburn", -- Source: "Philip's International School Atlas", 2006, p. 64.
-		"Blackpool", -- Source: "Philip's International School Atlas", 2006, p. 64.
-		"Blackwall",
-		"Chatham",
-		"Chester",
-		"Chesterfield",
-		"Dartford",
-		"Dartmouth",
-		"Dorchester",
-		"Durham", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-		"Edinburgh", -- in Scotland
-		"Falmouth",
-		"Fishguard", -- Source: "Philip's International School Atlas", 2006, p. 64.
-		"Gateshead", -- Source: "Philip's International School Atlas", 2006, p. 64.
-		"Greenwich",
-		"Guildford", -- Source: "Philip's International School Atlas", 2006, p. 64.
-		"Harrow on the Hill",
-		"Hempstead", -- Source: "Philip's International School Atlas", 2006, p. 64.
-		"Holyhead",
-		"Hull", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-		"Huntingdon",
-		"Kingston",
-		"Kirkwall", -- in Scotland
-		"Liverpool", -- Source: "Philip's International School Atlas", 2006, p. 64.
-		"Longford", -- Source: "Philip's International School Atlas", 2006, p. 64.
-		"Maidstone", -- Source: "Philip's International School Atlas", 2006, p. 64.
-		"Mansfield",
-		"Marshfield",
-		"Newbury", -- Source: "Philip's International School Atlas", 2006, p. 64.
-		"Newcastle", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-		"Newhaven", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-		"Newport", -- Source: "Philip's International School Atlas", 2006, p. 64.
-		"Newquay", -- Source: "Philip's International School Atlas", 2006, p. 64.
-		"Northfleet",
-		"Norwich",
-		"Oldham",
-		"Oxford", -- Source: "Philip's International School Atlas", 2006, p. 64.
-		"Plymouth",
-		"Portsmouth",
-		"Reading",
-		"Redditch", -- Source: "Philip's International School Atlas", 2006, p. 64.
-		"Salisbury", -- Source: "Philip's International School Atlas", 2006, p. 64.
-		"Scarborough",
-		"Shrewsbury", -- Source: "Philip's International School Atlas", 2006, p. 64.
-		"Stockport", -- Source: "Philip's International School Atlas", 2006, p. 64.
-		"Stonehaven", -- Source: "Philip's International School Atlas", 2006, p. 64.
-		"Swanscombe",
-		"Swansea", -- Source: "Philip's International School Atlas", 2006, p. 64.
-		"Torbay", -- Source: "Philip's International School Atlas", 2006, p. 64.
-		"Waterford",
-		"Wells",
-		"Westbury",
-		"Westport",
-		"Whitehaven", -- Source: "Philip's International School Atlas", 2006, p. 64.
-		"Wimbledon",
-		"Woodbridge",
-		"Woolwich",
-		"Wormshill",
-		"Yarmouth" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-	},
-	ProvinceNames = {
-		"Berkshire",
-		"Cheshire",
-		"Cornwall",
-		"Dorset",
-		"East Anglia",
-		"Essex",
-		"Hampshire",
-		"Lancashire",
-		"Middlesex",
-		"Norfolk",
-		"Northumberland",
-		"Portland", -- duchy
-		"Shropshire",
-		"Somerset",
-		"Suffolk",
-		"Sussex",
-		"Wessex",
-		"Wiltshire"
 	}
 })
 
@@ -761,11 +549,10 @@ DefineFaction("galicia", { -- Suebi kingdom of Galicia
 DefineFaction("hesse", {
 	Name = "Hesse",
 	Civilization = "teuton",
-	ParentFaction = "francia",
 	Type = "polity",
-	Language = "high-german",
 	Colors = {"black"},
 	DefaultTier = "duchy", -- Hesse was a landgraviate in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	FactionUpgrade = "upgrade-saxon-tribe-faction",
 	Titles = {
 		"monarchy", "duchy", "Landgraviate"
 	},
@@ -774,24 +561,13 @@ DefineFaction("hesse", {
 	}
 })
 
-DefineFaction("holland", {
-	Name = "Holland",
-	Civilization = "teuton",
-	ParentFaction = "netherlands",
-	Type = "polity",
-	Colors = {"red"},
-	DefaultTier = "county", -- Holland was a county in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
-	DevelopsTo = {"netherlands"}
-})
-
 DefineFaction("holy-rome", {
 	Name = "Holy Rome",
 	Civilization = "teuton",
-	ParentFaction = "francia",
 	Type = "polity",
-	Language = "high-german",
 	Colors = {"yellow"},
 	DefaultTier = "empire",
+	FactionUpgrade = "upgrade-saxon-tribe-faction",
 	HistoricalFactionDerivations = {919, "teuton", "francia"},
 	HistoricalDiplomacyStates = {
 		985, "slav", "bohemia", "war", -- War between Otto II and Bohemia broke out in 985; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 616.
@@ -842,16 +618,6 @@ DefineFaction("mecklenburg", {
 	FactionUpgrade = "upgrade-mecklenburg-faction"
 })
 
-DefineFaction("overijssel", {
-	Name = "Overijssel",
-	Civilization = "teuton",
-	ParentFaction = "netherlands",
-	Type = "polity",
-	Colors = {"pink"},
-	DefaultTier = "barony", -- Overijssel was a lordship in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
-	DevelopsTo = {"netherlands"}
-})
-
 DefineFaction("prussia", {
 	Name = "Prussia",
 	Civilization = "teuton",
@@ -861,35 +627,13 @@ DefineFaction("prussia", {
 	DefaultTier = "duchy"
 })
 
-DefineFaction("scotland", {
-	Name = "Scotland",
-	Civilization = "teuton",
-	ParentFaction = "england",
-	Type = "polity",
-	Language = "english",
-	Colors = {"blue", "white"},
-	DefaultTier = "kingdom"
-})
-
-DefineFaction("switzerland", {
-	Name = "Switzerland",
-	Civilization = "teuton",
-	ParentFaction = "swabia",
-	Type = "polity",
-	Colors = {"red", "white"},
-	DefaultTier = "kingdom",
-	Titles = {
-		"republic", "kingdom", "Confederation"
-	}
-})
-
 DefineFaction("thuringia", {
 	Name = "Thuringia",
 	Civilization = "teuton",
-	ParentFaction = "thuringian-tribe",
 	Type = "polity",
 	Colors = {"pink"},
 	DefaultTier = "duchy", -- Thuringia was a landgraviate in 1378; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 78-79.
+	FactionUpgrade = "upgrade-thuringian-tribe-faction",
 	Titles = {
 		"monarchy", "duchy", "Landgraviate"
 	}
@@ -902,15 +646,6 @@ DefineFaction("westphalia", {
 	Type = "polity",
 	Colors = {"black"},
 	DefaultTier = "duchy"
-})
-
-DefineFaction("wurtemberg", {
-	Name = "Wurtemberg",
-	Civilization = "teuton",
-	ParentFaction = "swabia",
-	Type = "polity",
-	Colors = {"red"},
-	DefaultTier = "kingdom"
 })
 
 -- Non-Playable Polities
@@ -941,4 +676,6 @@ DefineFaction("turkey", {
 })
 
 Load("scripts/civilizations/teuton/factions_austrian.lua")
+Load("scripts/civilizations/teuton/factions_dutch.lua")
 Load("scripts/civilizations/teuton/factions_english.lua")
+Load("scripts/civilizations/teuton/factions_swabian.lua")

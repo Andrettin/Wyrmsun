@@ -25,6 +25,21 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineCharacter("ariovistus", {
+	Name = "Ariovistus",
+	Gender = "male",
+	Type = "unit-suebi-swordsman",
+	Civilization = "teuton",
+	Faction = "suebi-tribe",
+	ProvinceOfOrigin = "Brandenburg",
+	Year = -71, -- The Suebic king Ariovistus entered Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
+	DeathYear = -54, -- Ariovistus died in 54 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 222.
+	ViolentDeath = true,
+	HistoricalTitles = {
+		"head-of-state", -71, -54, "teuton", "suebi-tribe"
+	}
+})
+
 DefineCharacter("marbod", {
 	Name = "Marbod",
 	Gender = "male",
@@ -34,7 +49,7 @@ DefineCharacter("marbod", {
 	Faction = "marcomanni-tribe",
 	Trait = "upgrade-keen",
 	HairVariation = "blond-hair",
-	Description = _("A young chieftain of the Marcomanni, Marbod aspires to forge a realm for his tribe capable of withstanding the test of time."),
+	Description = "A young chieftain of the Marcomanni, Marbod aspires to forge a realm for his tribe capable of withstanding the test of time.",
 	Icon = "icon-marbod",
 	ProvinceOfOrigin = "Brandenburg",
 	Year = -9, -- Marbod, king of the Suebic tribe of the Marcomanni, conquers Bohemia in 9 BC
@@ -42,6 +57,17 @@ DefineCharacter("marbod", {
 	ViolentDeath = true, -- to represent him being deposed; remove when his DeathYear is replaced with his actual year of death
 	HistoricalTitles = {
 		"head-of-state", -9, 19, "teuton", "marcomanni-tribe"
+	}
+})
+
+DefineCharacter("catualda", { -- Marcomannic noble who was exiled by Marbod, and later returned with an army behind him and deposed Marbod
+	Name = "Catualda",
+	Gender = "male",
+	Type = "unit-suebi-swordsman",
+	Civilization = "teuton",
+	Faction = "marcomanni-tribe",
+	HistoricalTitles = {
+		"head-of-state", 19, 0, "teuton", "marcomanni-tribe" -- deposed Marbod in 19 AD
 	}
 })
 
@@ -53,6 +79,6 @@ DefineCharacter("ballomar", { -- Source: "Ancient Warfare VII.6", 2013, pp. 29-3
 	Faction = "marcomanni-tribe",
 	Trait = "upgrade-intelligent",
 	HairVariation = "brown-hair",
---	Description = _("The Marcomannic chieftain Ballomar seeks to establish his tribe in the Roman lands to their south. To that effect, he has gathered a coalition of tribes - and is ready to cross the Danube.")
+--	Description = "The Marcomannic chieftain Ballomar seeks to establish his tribe in the Roman lands to their south. To that effect, he has gathered a coalition of tribes - and is ready to cross the Danube."
 })
 
