@@ -96,7 +96,6 @@ function RunKeystrokeHelpMenu()
 end
 
 local tips = {
-	"Completing quests rewards you with technology points.",
 	"You can select all of your currently visible units of the same type by holding down the CTRL key and selecting a unit or by double-clicking on a unit.",
 	"The more workers you have collecting resources, the faster your economy will grow.",
 	"Building more than one barracks will let you train units faster.",
