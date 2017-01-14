@@ -292,7 +292,19 @@ b = CUIButton:new()
 b.X = Video.Width - 12 - 46
 b.Y = 16 + 12 + (38 * 2) + (24 * 2)
 b.Style = FindButtonStyle("icon")
-UI.CustomHeroUnitButton = b
+UI.HeroUnitButtons[0] = b
+
+b = CUIButton:new()
+b.X = Video.Width - 12 - 46
+b.Y = 16 + 12 + (38 * 3) + (24 * 3)
+b.Style = FindButtonStyle("icon")
+UI.HeroUnitButtons[1] = b
+
+b = CUIButton:new()
+b.X = Video.Width - 12 - 46
+b.Y = 16 + 12 + (38 * 4) + (24 * 4)
+b.Style = FindButtonStyle("icon")
+UI.HeroUnitButtons[2] = b
 
 UI.CompletedBarColorRGB = CColor(48, 100, 4)
 UI.CompletedBarShadow = false

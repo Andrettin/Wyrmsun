@@ -69,6 +69,7 @@ https://github.com/Andrettin/Wyrmsun
 - Town halls, strongholds and mercenary camp buildings now allow choosing from up to four heroes to recruit.
 - Fixed issue which prevented goblins from recruiting heroes.
 - Hero recruitment buttons now show heroes' stats.
+- Replaced the custom hero unit button which appears on the right border of the map with buttons for up to three heroes, both custom and non-custom.
 
 * Miscellaneous
 - Deity entries in the encyclopedia now display their portraits.
