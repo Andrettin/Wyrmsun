@@ -358,7 +358,7 @@ DefineFaction("bavarian-tribe", {
 	Civilization = "teuton",
 --	ParentFaction = "marcomanni-tribe",
 	Type = "tribe",
-	Language = "old-high-german",
+--	Language = "old-high-german",
 	Colors = {"cyan", "white"},
 	DevelopsTo = {"bavaria", "austria", "carinthia"},
 	FactionUpgrade = "upgrade-bavarian-tribe-faction",
@@ -447,7 +447,6 @@ DefineFaction("bavaria", {
 	Civilization = "teuton",
 	ParentFaction = "bavarian-tribe",
 	Type = "polity",
-	Language = "high-german",
 	Colors = {"cyan", "white"},
 	DefaultTier = "duchy", -- Bavaria was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	Titles = {

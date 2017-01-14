@@ -1493,7 +1493,7 @@ DefineCivilization("kobold", {
 	PersonalNames = {
 		"Hodeke", -- Source: Jacob Grimm, "Deutsche Mythologie", pp. 392, 1049, 1080.
 		"Hoidike", -- Source: Jacob Grimm, "Deutsche Mythologie", p. 392.
-		"Napfhans", -- urce: Jacob Grimm, "Deutsche Mythologie", p. 393.
+		"Napfhans", -- Source: Jacob Grimm, "Deutsche Mythologie", p. 393.
 		"Pumphut", -- Source: Jacob Grimm, "Deutsche Mythologie", p. 1049.
 		"Shellycoat", -- Source: Jacob Grimm, "Deutsche Mythologie", p. 394.
 	}
