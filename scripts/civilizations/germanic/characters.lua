@@ -350,7 +350,13 @@ DefineCharacter("yngve", { -- Source: Snorri Sturlson, "Heimskringla", 1844; Sou
 	Mother = "frigida", -- presumably, since she was Vóden's wife
 	HistoricalTitles = {
 		"head-of-state", -2800 + (30 * 1), -2800 + (30 * 2), "germanic", "yngling-tribe"
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "asa-tribe" or GetPlayerData(trigger_player, "Faction") == "yngling-tribe") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("vegdeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
@@ -503,7 +509,13 @@ DefineCharacter("skeldu", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Mother = "frigida", -- presumably, since she was Vóden's wife
 	HistoricalTitles = {
 		"head-of-state", -2800, -2800 + (30 * 2), "germanic", "skeldung-tribe"
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "asa-tribe" or GetPlayerData(trigger_player, "Faction") == "skeldung-tribe") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("fridleifr-skeldung", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
@@ -517,7 +529,13 @@ DefineCharacter("fridleifr-skeldung", { -- Source: Snorri Sturlson, "The Prose E
 	Father = "skeldu",
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "germanic", "skeldung-tribe"
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "skeldung-tribe") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("saemingr-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, p. 212; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 9.
