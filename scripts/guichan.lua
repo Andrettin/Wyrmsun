@@ -1466,12 +1466,14 @@ LoadDLCs()
 LoadMods()
 
 -- load heroes after the DLCs and mods, so that they can use mod-specific items
+LoadingPersistentHeroes = true
 if (CanAccessFile("wyr/heroes.lua")) then -- keep compatibility with how heroes were saved before
 	Load("heroes.lua")
 	SaveHeroes()
 else
 	LoadHeroes() -- load persistent heroes
 end
+LoadingPersistentHeroes = false
 
 function GameStarting()
 	if (GetCurrentQuest() ~= "" and GetQuestData(GetCurrentQuest(), "MapMusic") ~= "") then

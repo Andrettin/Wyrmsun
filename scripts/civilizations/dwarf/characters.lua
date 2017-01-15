@@ -33,8 +33,8 @@ DefineCharacter("modsognir", { -- one of the earliest dwarven leaders
 	Type = "unit-dwarven-steelclad",
 	Civilization = "dwarf",
 	Faction = "brising-clan",
-	Description = _("The leader of one of the first dwarven tribes, Modsognir is a mighty warrior."),
-	Background = _("In Norse mythology, Modsognir appears in the ~<Voluspo~> as the first and mightiest of the dwarves."),
+	Description = "The leader of one of the first dwarven tribes, Modsognir is a mighty warrior.",
+	Background = "In Norse mythology, Modsognir appears in the ~<Voluspo~> as the first and mightiest of the dwarves.",
 	Icon = "icon-modsognir",
 	HairVariation = "brown-hair",
 	Trait = "upgrade-mighty",
@@ -58,8 +58,8 @@ DefineCharacter("durin", {
 	Type = "unit-dwarven-steelclad",
 	Civilization = "dwarf",
 	Faction = "brising-clan",
-	Description = _("Durin is a valiant dwarven warrior and loyal vassal of chieftain Modsognir."),
-	Background = _("In Norse mythology, Durin appears in the ~<Voluspo~> as one of the first dwarves and the deputy of Modsognir."),
+	Description = "Durin is a valiant dwarven warrior and loyal vassal of chieftain Modsognir.",
+	Background = "In Norse mythology, Durin appears in the ~<Voluspo~> as one of the first dwarves and the deputy of Modsognir.",
 	Icon = "icon-durin",
 	HairVariation = "brown-hair",
 	Trait = "upgrade-dextrous",
@@ -80,7 +80,7 @@ DefineCharacter("fjalar", { -- dwarf from Norse mythology who, with the help of 
 	Type = "unit-dwarven-steelclad", -- should be a thief
 	Civilization = "dwarf",
 	Faction = "shadowcharm-clan",
-	Description = _("The greedy Fjalar is joint chieftain of the Shadowcharm Clan together with his brother Galar. He is adept at deception and stealth."),
+	Description = "The greedy Fjalar is joint chieftain of the Shadowcharm Clan together with his brother Galar. He is adept at deception and stealth.",
 	HairVariation = "brown-hair",
 	Trait = "upgrade-cruel",
 	Year = -3000,
@@ -99,7 +99,7 @@ DefineCharacter("galar", {
 	Type = "unit-dwarven-steelclad", -- should be an alchemist
 	Civilization = "dwarf",
 	Faction = "shadowcharm-clan",
-	Description = _("The envious Galar is joint chieftain of the Shadowcharm Clan together with his brother Fjalar. He is known for his thieving skills and his dabbling in magic."),
+	Description = "The envious Galar is joint chieftain of the Shadowcharm Clan together with his brother Fjalar. He is known for his thieving skills and his dabbling in magic.",
 	HairVariation = "brown-hair",
 	Trait = "upgrade-cruel",
 	Year = -3000,
@@ -117,8 +117,8 @@ DefineCharacter("thjodrorir", { -- dwarf from Norse mythology; Source: Kevin Cro
 	Gender = "male",
 	Type = "unit-dwarven-witness",
 	Civilization = "dwarf",
-	Description = _("A wise loremaster, Thjodrorir possesses knowledge of many powerful charms."),
-	Background = _("In Norse mythology, Thjodrorir was a dwarf who knew a potent magic charm. This he sang before the doors of the god Delling, to bring might for the gods, glory for the elves and wisdom for Odin. Thjodrorir is mentioned in the ~<Hovamol~>."),
+	Description = "A wise loremaster, Thjodrorir possesses knowledge of many powerful charms.",
+	Background = "In Norse mythology, Thjodrorir was a dwarf who knew a potent magic charm. This he sang before the doors of the god Delling, to bring might for the gods, glory for the elves and wisdom for Odin. Thjodrorir is mentioned in the ~<Hovamol~>.",
 	HairVariation = "gray-hair",
 	Trait = "upgrade-wise",
 	Year = -3000,
@@ -136,7 +136,7 @@ DefineCharacter("gandalf", {
 	Gender = "male",
 	Type = "unit-dwarven-witness", -- his name means "magic elf", so it makes sense that he is a spellcaster
 	Civilization = "dwarf",
-	Background = _("Gandalf is a dwarf from Norse mythology. His name means \"magic elf\".")
+	Background = "Gandalf is a dwarf from Norse mythology. His name means \"magic elf\"."
 })
 
 DefineCharacter("vindalf", {
@@ -144,7 +144,7 @@ DefineCharacter("vindalf", {
 	Gender = "male",
 	Type = "unit-dwarven-scout", -- his name means "wind elf", so it makes sense to make him a projectile thrower
 	Civilization = "dwarf",
-	Background = _("Vindalf is a dwarf from Norse mythology. His name means \"wind elf\".")
+	Background = "Vindalf is a dwarf from Norse mythology. His name means \"wind elf\"."
 })
 
 DefineCharacter("alvis", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 144-145; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 183-194.
@@ -152,7 +152,7 @@ DefineCharacter("alvis", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 	Gender = "male",
 	Type = "unit-dwarven-witness",
 	Civilization = "dwarf",
-	Background = _("In the ~<Alvismol~>, Alvis is an extremely knowledgeable dwarf who desires to marry Thor's daughter. His name means \"all-knowing\" or \"all-wise\"."),
+	Background = "In the ~<Alvismol~>, Alvis is an extremely knowledgeable dwarf who desires to marry Thor's daughter. His name means \"all-knowing\" or \"all-wise\".",
 	HairVariation = "gray-hair",
 	Trait = "upgrade-wise"
 })
@@ -176,8 +176,8 @@ DefineCharacter("thursagan", { -- from Battle for Wesnoth: The Sceptre of Fire; 
 	Type = "unit-dwarven-thane",
 	Civilization = "dwarf",
 	Faction = "norlund-clan",
-	Description = _("Thursagan is an extremely skilled runemaster who has retired to live as a hermit in the Northern Wastelands. Due to his talents, he was contacted by Rugnur to craft of the Scepter of Fire. His hammer is considered legendary, and dwarves have sought to find it for centuries after his death."),
-	Quote = _("\"Ye mean the insane dwarf who lives in the far north?!\"\n- Baglur, Retired Norlund Warrior"),
+	Description = "Thursagan is an extremely skilled runemaster who has retired to live as a hermit in the Northern Wastelands. Due to his talents, he was contacted by Rugnur to craft of the Scepter of Fire. His hammer is considered legendary, and dwarves have sought to find it for centuries after his death.",
+	Quote = "\"Ye mean the insane dwarf who lives in the far north?!\"\n- Baglur, Retired Norlund Warrior",
 	Background = "~<The Sceptre of Fire~> poem about the crafting of that artifact mentions Thursagan (as \"a runesmith\") as the maker of the scepter.",
 	Trait = "upgrade-strong",
 	Icon = "icon-thursagan",
@@ -201,8 +201,8 @@ DefineCharacter("baglur", { -- from Battle for Wesnoth: The Sceptre of Fire; vet
 	Type = "unit-dwarven-steelclad",
 	Civilization = "dwarf",
 	Faction = "norlund-clan",
-	Description = _("Baglur is an old and well-experienced warrior. He came back from retirement to help Rugnur defend their homeland against an attack from the Shinsplitter Clan."),
-	Quote = _("\"Argh! I'm a retired warrior... it looks like I'll ha' to come out and help ye, else we'll be overrun by these damn raiders...\"\n- Baglur"),
+	Description = "Baglur is an old and well-experienced warrior. He came back from retirement to help Rugnur defend their homeland against an attack from the Shinsplitter Clan.",
+	Quote = "\"Argh! I'm a retired warrior... it looks like I'll ha' to come out and help ye, else we'll be overrun by these damn raiders...\"\n- Baglur",
  	Icon = "icon-baglur",
 	Trait = "upgrade-resilient",
 	HairVariation = "gray-hair",
@@ -219,7 +219,7 @@ DefineCharacter("durstorn", { -- from Battle for Wesnoth: The Sceptre of Fire; c
 	Type = "unit-dwarven-thane",
 	Civilization = "dwarf",
 	Faction = "norlund-clan",
-	Description = _("Durstorn is the chief of the Norlund Clan. Despite being greedy and unpleasant to be around, he makes a passable leader. When under pressure, however, he tends to become hasty and crass, impoverishing his capability to make good decisions."),
+	Description = "Durstorn is the chief of the Norlund Clan. Despite being greedy and unpleasant to be around, he makes a passable leader. When under pressure, however, he tends to become hasty and crass, impoverishing his capability to make good decisions.",
 	Icon = "icon-durstorn",
 	Trait = "upgrade-strong",
 	HairVariation = "brown-hair",
@@ -260,7 +260,7 @@ DefineCharacter("rugnur", { -- from Battle for Wesnoth: The Sceptre of Fire; lea
 	Type = "unit-dwarven-axefighter",
 	Civilization = "dwarf",
 	Faction = "norlund-clan",
-	Description = _("Rugnur is a relatively young dwarven warrior. He belongs to the lower strata of his tribe's notables, not being of high enough rank to have a leading position in the clan, but important enough to be granted control of an outpost in the Chaincolt Foothills. Despite being neither ambitious nor adventurous, Rugnur nevertheless ended up being embroiled in the quest to craft the Scepter of Fire for a gnomish monarch."),
+	Description = "Rugnur is a relatively young dwarven warrior. He belongs to the lower strata of his tribe's notables, not being of high enough rank to have a leading position in the clan, but important enough to be granted control of an outpost in the Chaincolt Foothills. Despite being neither ambitious nor adventurous, Rugnur nevertheless ended up being embroiled in the quest to craft the Scepter of Fire for a gnomish monarch.",
 	Icon = "icon-rugnur",
 	HeroicIcon = "icon-rugnur-older",
 	Trait = "upgrade-keen", -- not the best fit for this character, should be replaced with something else perhaps?

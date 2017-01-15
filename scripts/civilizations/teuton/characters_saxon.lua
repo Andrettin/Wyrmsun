@@ -28,7 +28,7 @@
 DefineCharacter("geirthiof", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 244.
 	Name = "Geirthiof",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-teuton-veteran-swordsman", -- king
 	Civilization = "teuton",
 	ProvinceOfOrigin = "Holstein", -- correct? was from "Saxonland"
 	-- Adils Yngling went on a viking expedition to raid Saxonland when Geirthiof was king there

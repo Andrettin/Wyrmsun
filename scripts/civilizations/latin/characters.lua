@@ -40,7 +40,7 @@ DefineCharacter("marcus-aurelius", { -- Source: "Ancient Warfare VII.6", 2013, p
 	Name = "Marcus",
 	ExtraName = "Aurelius",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman",
+	Type = "unit-teuton-veteran-swordsman", -- emperor
 	Civilization = "latin",
 	Faction = "rome",
 	ProvinceOfOrigin = "Latium", -- put him in Rome's province since we don't have information on his actual province of origin
@@ -60,7 +60,7 @@ DefineCharacter("lucius-verus", { -- Source: "Ancient Warfare VII.6", 2013, pp. 
 	Name = "Lucius",
 	ExtraName = "Verus",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman",
+	Type = "unit-teuton-veteran-swordsman", -- emperor
 	Civilization = "latin",
 	Faction = "rome",
 	ProvinceOfOrigin = "Latium", -- put him in Rome's province since we don't have information on his actual province of origin
@@ -102,7 +102,7 @@ DefineCharacter("geofrei-gaimar", { -- Source: Alaric Hall, "The Meanings of Elf
 	Name = "Geofrei",
 	FamilyName = "Gaimar", -- was that actually his family name?
 	Gender = "male",
-	Type = "unit-teuton-swordsman", -- should be something more appropriate for a writer?
+	Type = "unit-teuton-priest", -- since he is a writer, this seemed like the closest unit type
 	Civilization = "latin", -- should be French
 	Faction = "france",
 	ProvinceOfOrigin = "France", -- accurate?
