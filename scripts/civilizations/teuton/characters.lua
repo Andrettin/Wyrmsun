@@ -25,16 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- personnages from the Volsungasaga, presumed Teuton since Sigurd was a Frank
-DefineCharacter("volsung", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 3; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
-	Name = "Volsung",
-	Gender = "male",
-	Type = "unit-frank-swordsman",
-	Civilization = "teuton",
-	Faction = "frank-tribe",
---	ProvinceOfOrigin = "?"
-})
-
 --[[
 DefineCharacter("eylimi-othling", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
 	Name = "Eylimi",
