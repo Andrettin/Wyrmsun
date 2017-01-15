@@ -10,7 +10,7 @@
 --
 --      buttons.lua - Define the general unit-buttons.
 --
---      (c) Copyright 2001-2015 by Vladi Belperchinov-Shabanski, Lutz Sammer,
+--      (c) Copyright 2001-2017 by Vladi Belperchinov-Shabanski, Lutz Sammer,
 --                                 Jimmy Salmon and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify

@@ -86,7 +86,7 @@ DefineCharacter("orza-chahax", { -- invented by Jesse Crider
 	Faction = "ezmarria",
 	Trait = "upgrade-intelligent",
 	Description = _("Orza Chahax is the leader of the Ezmarrian Syndicate. As a scholar, he is dedicated to science, though his methods are often questionable in their morality."),
---	Icon = "icon-orza-chahax",
+	Icon = "icon-orza-chahax",
 	ProvinceOfOrigin = "Ezmarria",
 	HistoricalTitles = {
 --		"head-of-state", 0, 0, "goblin", "ezmarria"
