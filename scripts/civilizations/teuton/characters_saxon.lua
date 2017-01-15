@@ -34,7 +34,13 @@ DefineCharacter("geirthiof", { -- Source: Snorri Sturlson, "Heimskringla", 1844,
 	-- Adils Yngling went on a viking expedition to raid Saxonland when Geirthiof was king there
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "teuton", "saxon-tribe" -- was king of "Saxonland"
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "saxon-tribe") then
+			return true
+		end
+		return false
+	end
 	-- married to Alof the Great
 })
 
@@ -46,6 +52,12 @@ DefineCharacter("alof-the-great", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Civilization = "teuton",
 	Faction = "saxon-tribe",
 	ProvinceOfOrigin = "Holstein", -- correct? was from "Saxonland"
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "saxon-tribe") then
+			return true
+		end
+		return false
+	end
 	-- married to Geirthiof
 })
 
@@ -58,7 +70,13 @@ DefineCharacter("yrsa", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	ProvinceOfOrigin = "Holstein", -- correct? was from "Saxonland"
 	Father = "helge-skjoldung", 
 	Mother = "alof-the-great", 
-	Trait = "upgrade-intelligent" -- described as intelligent, as speaking well and being in all respects well behaved
+	Trait = "upgrade-intelligent", -- described as intelligent, as speaking well and being in all respects well behaved
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "saxon-tribe") then
+			return true
+		end
+		return false
+	end
 	-- captured during a viking expedition led by Adils Yngling (king of Sweden), and then taken to Sweden, where she was married to Adils and became queen; later captured by king Helge of Denmark during his invasion of Sweden and married to him
 })
 
@@ -82,7 +100,13 @@ DefineCharacter("widukind", { -- Saxon leader who resisted Charlemagne's forces 
 	Gender = "male",
 	Type = "unit-teuton-veteran-swordsman",
 	Civilization = "teuton",
-	Faction = "saxon-tribe"
+	Faction = "saxon-tribe",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "saxon-tribe") then
+			return true
+		end
+		return false
+	end
 })
 
 --[[

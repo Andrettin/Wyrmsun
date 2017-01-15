@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016 by Andrettin
+--      (c) Copyright 2016-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -30,7 +30,13 @@ DefineCharacter("volsung", { -- Source: C. Scott Littleton, "The Germanic Sword 
 	Gender = "male",
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
-	Faction = "frank-tribe"
+	Faction = "frank-tribe",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "frank-tribe") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("chlodio", { -- Source: "Medieval Warfare V.2", 2013, p. 6.
@@ -109,7 +115,7 @@ DefineCharacter("chilperich", { -- Source: Edward G. Fichtner, "Sigfrid's Merovi
 	Trait = "upgrade-reckless",
 	Father = "chlothar",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "francia") then
+		if (GetPlayerData(trigger_player, "Faction") == "francia" or GetPlayerData(trigger_player, "Faction") == "salia" or GetPlayerData(trigger_player, "Faction") == "neustria") then
 			return true
 		end
 		return false

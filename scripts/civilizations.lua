@@ -1212,14 +1212,12 @@ DefineCivilization("ettin", {
 		"male", "Geirrod", -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 243.
 		"male", "Gilling", -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 243.
 		"male", "Gymir", -- frost giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 244.
-		"male", "Hraesvelg", -- giant who took the form of an eagle in Norse mythology (could be an ettin roc rider if made into a hero later on); Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 18, 245.
 		"male", "Hrungnir", -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 245.
 		"male", "Hugi", -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 245.
 		"male", "Hymir", -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 245.
 		"male", "Logi", -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 246.
 		"male", "Mokkurkalfi", -- giant made of clay from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 247.
 		"male", "Narvi", -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 248.
-		"male", "Saekmime", -- "Sækmime"; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 228.
 		"male", "Skrymir", -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 250.
 		"male", "Surt", -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 250.
 		"male", "Suttung", -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 250.
@@ -1394,11 +1392,6 @@ DefineCivilization("gnome", {
 	},
 	Description = _("Gnomes usually live in the hills and forests of Nidavellir, and often seek contact with nature. Although they have a different outlook on life than the dwarves, not rarely both two peoples live side by side, with gnomish minorities permeating dwarven settlements and vice-versa. These contacts have brought much benefit to both of them, both through trade and via the spread of gnomish technologies northwards."),
 	PersonalNames = {
-		"female", "Adalga", -- daughter of Bimbam I of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 79.
-		"male", "Bimbam", -- Bimbam I of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 79.
-		"male", "Clavo", -- commanding general of the army of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 106.
-		"male", "Cravatu", -- Prince Cravatu, minister to King Bimbam I of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 97.
-		"male", "Kalutho", -- name of an (apparently male) gnome; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 13.
 		"male", "Rubezahl"
 	},
 	SettlementNames = {
@@ -2207,10 +2200,7 @@ DefineCivilization("persian", {
 	Language = "avestan",
 	ParentCivilization = "greek",
 	Adjective = "Persian",
-	Playable = false,
-	PersonalNames = {
-		"male", "Vologaeses" -- Parthian king Vologaeses IV; Source: "Ancient Warfare VII.6", 2013, p. 7.
-	}
+	Playable = false
 })
 
 DefineCivilization("phoenician", {

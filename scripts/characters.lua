@@ -40,6 +40,9 @@ end
 
 Load("scripts/characters_aesir.lua")
 Load("scripts/characters_vanir.lua")
+Load("scripts/civilizations/dwarf/characters.lua")
+Load("scripts/civilizations/elf/characters.lua")
+Load("scripts/civilizations/ettin/characters.lua")
 Load("scripts/civilizations/finnish/characters.lua")
 Load("scripts/civilizations/germanic/characters.lua")
 Load("scripts/civilizations/gnome/characters.lua")
@@ -49,13 +52,10 @@ Load("scripts/civilizations/greek/characters.lua")
 Load("scripts/civilizations/kobold/characters.lua")
 Load("scripts/civilizations/latin/characters.lua")
 Load("scripts/civilizations/norse/characters.lua")
+Load("scripts/civilizations/persian/characters.lua")
 Load("scripts/civilizations/teuton/characters.lua")
 Load("scripts/civilizations/celt/characters.lua") -- define after Teuton ones, because some Celtic characters refer to Teutonic ones
 Load("scripts/civilizations/slav/characters.lua") -- define after Teuton ones, because some Slavic characters refer to Teutonic ones
-
--- load characters of fictional species afterwards, since many of them use human characters as a date reference
-Load("scripts/civilizations/dwarf/characters.lua")
-Load("scripts/civilizations/elf/characters.lua")
 
 -- Basque heroes
 

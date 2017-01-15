@@ -25,8 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCharacter("caesar", { -- Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 227.
-	Name = "Caesar",
+DefineCharacter("julius-caesar", { -- Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 227.
+	Name = "Julius Caesar",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "latin",

@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015-2016 by Andrettin
+--      (c) Copyright 2015-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -112,7 +112,6 @@ DefineCharacter("ricimer", { -- Source: Norman Davies, "Vanished Kingdoms", 2012
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton", -- correct?
---	ProvinceOfOrigin = "?",
 	Year = 405, -- born
 	DeathYear = 472 -- died
 })
@@ -122,6 +121,7 @@ DefineCharacter("adalbert", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Gender = "male",
 	Type = "unit-teuton-priest",
 	Civilization = "teuton", -- presumably
+	Faction = "bremen",
 	ProvinceOfOrigin = "Bremen", -- presumably
 	DeathYear = 1075 -- died
 })
@@ -136,7 +136,10 @@ DefineCharacter("judith-von-babenberg", { -- Source: James Westfall Thompson, "M
 	-- was abducted by and married to Duke Břetislav I of Bohemia
 })
 
+Load("scripts/civilizations/teuton/characters_bavarian.lua")
+Load("scripts/civilizations/teuton/characters_english.lua")
 Load("scripts/civilizations/teuton/characters_frank.lua")
+Load("scripts/civilizations/teuton/characters_lombard.lua")
 Load("scripts/civilizations/teuton/characters_saxon.lua")
 Load("scripts/civilizations/teuton/characters_suebi.lua")
 Load("scripts/civilizations/teuton/characters_austrian.lua")
