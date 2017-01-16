@@ -563,24 +563,11 @@ DefineUnitType("unit-teuton-ritter", {
 } )
 
 DefineUnitType("unit-teuton-priest", {
-	Name = _("Cleric"),
+	Name = "Cleric",
 	Parent = "unit-template-priest",
 	Civilization = "teuton",
-	Description = _("Teuton clerics attend to the spiritual needs of their congregation. They store religious and secular knowledge, including prayers and medicinal techniques."),
-	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
-	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
-	LayerImages = {
-		{"layer", "hair", "file", "teuton/units/cleric_hair.png"},
-		{"layer", "left-arm", "file", "human/units/left_arm.png"},
-		{"layer", "right-arm", "file", "human/units/right_arm.png"},
-		{"layer", "right-hand", "file", "human/units/right_hand.png"},
-		{"layer", "clothing", "file", "teuton/units/robe.png"},
-		{"layer", "clothing-left-arm", "file", "teuton/units/robe_left_arm.png"},
-		{"layer", "clothing-right-arm", "file", "teuton/units/robe_right_arm.png"},
-		{"layer", "weapon", "file", "teuton/units/scepter.png"},
-		{"layer", "pants", "file", "human/units/pants.png"},
-		{"layer", "boots", "file", "teuton/units/leather_shoes.png"}
-	},
+	Description = "Teuton clerics attend to the spiritual needs of their congregation. They store religious and secular knowledge, including prayers and medicinal techniques.",
+	Image = {"file", "teuton/units/cleric.png", "size", {72, 72}},
 	Animations = "animations-melee-unit-new",
 	Icon = "icon-teuton-cleric",
 	DefaultEquipment = {
