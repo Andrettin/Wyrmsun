@@ -29,7 +29,6 @@ DefineFaction("aedui-tribe", {
 	Name = "Aedui Tribe",
 	Civilization = "celt",
 	Type = "tribe",
---	Language = "gaulish",
 	Colors = {"green"}
 })
 
@@ -37,7 +36,6 @@ DefineFaction("arverni-tribe", {
 	Name = "Arverni Tribe",
 	Civilization = "celt",
 	Type = "tribe",
---	Language = "gaulish",
 	Colors = {"blue"},
 	HistoricalDiplomacyStates = {
 		-71, "aedui-tribe", "war" -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
@@ -48,7 +46,6 @@ DefineFaction("caerasi-tribe", { -- Source: H. H. Howorth, "The Ethnology of Ger
 	Name = "Caerasi Tribe",
 	Civilization = "celt",
 	Type = "tribe",
---	Language = "gaulish", -- presumably
 	Colors = {"white"}
 })
 
@@ -56,7 +53,6 @@ DefineFaction("condrusi-tribe", { -- Source: H. H. Howorth, "The Ethnology of Ge
 	Name = "Condrusi Tribe",
 	Civilization = "celt",
 	Type = "tribe",
---	Language = "gaulish", -- presumably
 	Colors = {"brown"}
 })
 
@@ -64,7 +60,6 @@ DefineFaction("eburones-tribe", { -- Source: H. H. Howorth, "The Ethnology of Ge
 	Name = "Eburones Tribe",
 	Civilization = "celt",
 	Type = "tribe",
---	Language = "gaulish", -- presumably
 	Colors = {"yellow"},
 --	Description = _("The Eburones were a Gaulish tribe which dwelled largely between the Rhine and the Meuse. They fought fiercely against Caesar's Romans, but ended up being annihilated by them."),
 	HistoricalCapitals = {
@@ -76,7 +71,6 @@ DefineFaction("helvetii-tribe", {
 	Name = "Helvetii Tribe",
 	Civilization = "celt",
 	Type = "tribe",
---	Language = "gaulish",
 	Colors = {"violet"} -- another color, perhaps?
 })
 
@@ -84,7 +78,6 @@ DefineFaction("ligurian-tribe", {
 	Name = "Ligurian Tribe",
 	Civilization = "celt", -- were they really Celts?
 	Type = "tribe",
---	Language = "gaulish",
 	Colors = {"green"}
 })
 
@@ -92,7 +85,6 @@ DefineFaction("menapii-tribe", {
 	Name = "Menapii Tribe",
 	Civilization = "celt",
 	Type = "tribe",
---	Language = "gaulish",
 	Colors = {"yellow"}
 })
 
@@ -100,7 +92,6 @@ DefineFaction("nervii-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germ
 	Name = "Nervii Tribe",
 	Civilization = "celt",
 	Type = "tribe",
---	Language = "gaulish", -- presumably
 	Colors = {"orange"}
 })
 
@@ -108,7 +99,6 @@ DefineFaction("poemanni-tribe", { -- Source: H. H. Howorth, "The Ethnology of Ge
 	Name = "Poemanni Tribe",
 	Civilization = "celt",
 	Type = "tribe",
---	Language = "gaulish", -- presumably
 	Colors = {"red"}
 })
 
@@ -116,7 +106,6 @@ DefineFaction("segni-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germa
 	Name = "Segni Tribe",
 	Civilization = "celt",
 	Type = "tribe",
---	Language = "gaulish", -- presumably
 	Colors = {"blue"}
 })
 
@@ -124,7 +113,6 @@ DefineFaction("sequani-tribe", {
 	Name = "Sequani Tribe",
 	Civilization = "celt",
 	Type = "tribe",
---	Language = "gaulish",
 	Colors = {"pink", "red"},
 	HistoricalDiplomacyStates = {
 		-71, "aedui-tribe", "war" -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
@@ -135,7 +123,6 @@ DefineFaction("treviri-tribe", { -- Source: H. H. Howorth, "The Ethnology of Ger
 	Name = "Treviri Tribe",
 	Civilization = "celt", -- a Belgic tribe
 	Type = "tribe",
---	Language = "gaulish", -- presumably
 	Colors = {"green"},
 	HistoricalDiplomacyStates = {
 		-54, "condrusi-tribe", "sovereign", -- in 54 BC the Condrusi were clients of the Treviri
@@ -147,7 +134,6 @@ DefineFaction("tribocci-tribe", { -- Source: H. H. Howorth, "The Ethnology of Ge
 	Name = "Tribocci Tribe",
 	Civilization = "celt",
 	Type = "tribe",
---	Language = "gaulish", -- presumably
 	Colors = {"green"}
 })
 
@@ -155,7 +141,6 @@ DefineFaction("turone-tribe", {
 	Name = "Turone Tribe",
 	Civilization = "celt",
 	Type = "tribe",
---	Language = "gaulish",
 	Colors = {"cyan"},
 	HistoricalFactionDerivations = {-27, "celt", "boii-tribe"}
 })

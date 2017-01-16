@@ -29,7 +29,6 @@ DefineFaction("frank-tribe", {
 	Name = "Frank Tribe",
 	Civilization = "teuton",
 	Type = "tribe",
-	Language = "old-frankish",
 	Colors = {"green", "orange"},
 	DevelopsTo = {"francia", "franconia", "austrasia", "neustria", "salia", "east-francia", "netherlands"},
 	FactionUpgrade = "upgrade-frank-tribe-faction",

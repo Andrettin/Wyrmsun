@@ -31,7 +31,6 @@ DefineFaction("suebi-tribe", {
 	Name = "Suebi Tribe",
 	Civilization = "teuton",
 	Type = "tribe",
-	Language = "old-high-german",
 	Colors = {"black"},
 	DefaultTier = "duchy",
 	DevelopsTo = {"galicia", "bavaria", "austria", "carinthia"},
@@ -47,7 +46,6 @@ DefineFaction("saxon-tribe", {
 	Name = "Saxon Tribe",
 	Civilization = "teuton",
 	Type = "tribe",
-	Language = "old-saxon",
 	Colors = {"pink"},
 	DevelopsTo = {"saxony", "brandenburg", "essex", "wessex", "england", "prussia"},
 	FactionUpgrade = "upgrade-saxon-tribe-faction",
@@ -64,7 +62,6 @@ DefineFaction("thuringian-tribe", {
 	Civilization = "teuton",
 	ParentFaction = "suebi-tribe", -- correct?
 	Type = "tribe",
---	Language = "old-high-german",
 	Colors = {"green"},
 --	FactionUpgrade = "upgrade-thuringian-tribe-faction",
 	HistoricalFactionDerivations = {507, "teuton", "suebi-tribe"} -- who did the Thuringians actually stem from?
@@ -74,7 +71,6 @@ DefineFaction("alamanni-tribe", {
 	Name = "Alamanni Tribe",
 	Civilization = "teuton",
 	Type = "tribe",
-	Language = "old-high-german",
 	Colors = {"blue"},
 	DevelopsTo = {"baden", "swabia", "switzerland", "wurtemberg"},
 	FactionUpgrade = "upgrade-alamanni-tribe-faction",
@@ -95,7 +91,6 @@ DefineFaction("angle-tribe", {
 	Name = "Angle Tribe",
 	Civilization = "teuton",
 	Type = "tribe",
-	Language = "old-english",
 	Colors = {"white"},
 	DevelopsTo = {"england", "bernicia", "deira", "east-anglia", "mercia", "middle-anglia", "northumbria", "scotland"},
 	FactionUpgrade = "upgrade-angle-tribe-faction",
@@ -206,7 +201,6 @@ DefineFaction("frisian-tribe", {
 	Name = "Frisian Tribe",
 	Civilization = "teuton",
 	Type = "tribe",
-	Language = "old-frisian",
 	Colors = {"violet", "purple"}, -- change to a better one?
 	DevelopsTo = {"friesland", "netherlands"},
 	FactionUpgrade = "upgrade-frisian-tribe-faction",
@@ -240,7 +234,6 @@ DefineFaction("lombard-tribe", {
 	Name = "Lombard Tribe",
 	Civilization = "teuton",
 	Type = "tribe",
-	Language = "old-high-german", -- should be Lombardic
 	Colors = {"green"},
 	DevelopsTo = {"lombardy"},
 	FactionUpgrade = "upgrade-lombard-tribe-faction",
@@ -268,9 +261,7 @@ DefineFaction("marcomanni-tribe", {
 DefineFaction("bavarian-tribe", {
 	Name = "Bavarian Tribe",
 	Civilization = "teuton",
---	ParentFaction = "marcomanni-tribe",
 	Type = "tribe",
---	Language = "old-high-german",
 	Colors = {"cyan", "white"},
 	DevelopsTo = {"bavaria", "austria", "carinthia"},
 	FactionUpgrade = "upgrade-bavarian-tribe-faction",
@@ -331,7 +322,6 @@ DefineFaction("ubii-tribe", { -- Source: H. H. Howorth, "The Ethnology of German
 	Name = "Ubii Tribe",
 	Civilization = "teuton",
 	Type = "tribe",
-	Language = "old-high-german", -- correct?
 	FactionUpgrade = "upgrade-ubii-tribe-faction",
 	Colors = {"purple"},
 	DevelopsTo = {"cologne", "hesse"}, -- same general area
@@ -438,7 +428,6 @@ DefineFaction("friesland", {
 	Civilization = "teuton",
 	ParentFaction = "frisian-tribe",
 	Type = "polity",
---	Language = "dutch", -- maybe should be modern Frisian instead?
 	Colors = {"black"},
 	DefaultTier = "barony", -- Friesland was a lordship in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	Titles = {

@@ -149,18 +149,16 @@ DefineFaction("sovantae-tribe", { -- Source: William R. Shepherd, "Historical At
 
 DefineFaction("argyll", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 77, 86.
 	Name = "Argyll",
-	Civilization = "celt", -- founded by
+	Civilization = "celt", -- founded by Irish settlers
 	Type = "polity",
---	Language = "old-irish", -- founded by Irish settlers
 	Colors = {"purple"},
 	DefaultTier = "kingdom"
 })
 
 DefineFaction("meath", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 88.
 	Name = "Meath",
-	Civilization = "celt",
+	Civilization = "celt", -- it was an Irish kingdom
 	Type = "polity",
---	Language = "old-irish", -- it was an Irish kingdom
 	Colors = {"red"},
 	DefaultTier = "kingdom"
 })

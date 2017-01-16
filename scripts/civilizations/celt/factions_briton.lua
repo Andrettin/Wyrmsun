@@ -29,7 +29,6 @@ DefineFaction("belgae-tribe", { -- Source: William R. Shepherd, "Historical Atla
 	Name = "Belgae Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
---	Language = "welsh", -- correct?
 	Colors = {"purple"}
 })
 
@@ -37,7 +36,6 @@ DefineFaction("brigantes-tribe", { -- Tribes in Europe between 264 BC and 180 AD
 	Name = "Brigantes Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
---	Language = "welsh", -- correct?
 	Colors = {"pink"}
 })
 
@@ -45,7 +43,6 @@ DefineFaction("cantii-tribe", { -- Source: William R. Shepherd, "Historical Atla
 	Name = "Cantii Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
---	Language = "welsh", -- correct?
 	Colors = {"brown"}
 })
 
@@ -53,7 +50,6 @@ DefineFaction("coritani-tribe", { -- Source: William R. Shepherd, "Historical At
 	Name = "Coritani Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
---	Language = "welsh", -- correct?
 	Colors = {"yellow"}
 })
 
@@ -61,7 +57,7 @@ DefineFaction("demetae-tribe", { -- Source: Bernhard Maier (trans.), "Das Sagenb
 	Name = "Demetae Tribe",
 	Civilization = "celt",
 	Type = "tribe",
---	Language = "welsh", -- the Demetae gave origin to Dyfed, which was a Welsh principality
+	-- the Demetae gave origin to Dyfed, which was a Welsh principality
 	Colors = {"red"},
 	DevelopsTo = {"dyfed"} -- the Demetae gave origin to Dyfed
 })
@@ -70,7 +66,6 @@ DefineFaction("dumnonii-tribe", { -- Source: William R. Shepherd, "Historical At
 	Name = "Dumnonii Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
---	Language = "welsh", -- correct?
 	Colors = {"violet"}
 })
 
@@ -78,7 +73,6 @@ DefineFaction("iceni-tribe", { -- Source: William R. Shepherd, "Historical Atlas
 	Name = "Iceni Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
---	Language = "welsh", -- correct?
 	Colors = {"cyan"}
 })
 
@@ -86,7 +80,6 @@ DefineFaction("ordovices-tribe", { -- Source: William R. Shepherd, "Historical A
 	Name = "Ordovices Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
---	Language = "welsh", -- correct?
 	Colors = {"pink"}
 })
 
@@ -94,7 +87,6 @@ DefineFaction("regni-tribe", { -- Source: William R. Shepherd, "Historical Atlas
 	Name = "Regni Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
---	Language = "welsh", -- correct?
 	Colors = {"green"}
 })
 
@@ -102,7 +94,6 @@ DefineFaction("silures-tribe", { -- Source: William R. Shepherd, "Historical Atl
 	Name = "Silures Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
---	Language = "welsh", -- correct?
 	Colors = {"red"}
 })
 
@@ -110,7 +101,6 @@ DefineFaction("trinobantes-tribe", { -- Source: William R. Shepherd, "Historical
 	Name = "Trinobantes Tribe",
 	Civilization = "celt", -- correct?
 	Type = "tribe",
---	Language = "welsh", -- correct?
 	Colors = {"orange"}
 })
 
@@ -118,18 +108,16 @@ DefineFaction("trinobantes-tribe", { -- Source: William R. Shepherd, "Historical
 
 DefineFaction("deheubarth", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
 	Name = "Deheubarth",
-	Civilization = "celt",
+	Civilization = "celt", -- it was a Welsh kingdom
 	Type = "polity",
---	Language = "welsh", -- it was a Welsh kingdom
 	Colors = {"black"},
 	DefaultTier = "kingdom"
 })
 
 DefineFaction("dyfed", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 9, 117.
 	Name = "Dyfed",
-	Civilization = "celt",
+	Civilization = "celt", -- it was a Welsh principality
 	Type = "polity",
---	Language = "welsh", -- it was a Welsh principality
 	Colors = {"red"},
 	DefaultTier = "duchy",
 	Titles = {
@@ -139,18 +127,16 @@ DefineFaction("dyfed", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der 
 
 DefineFaction("elmet", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 80.
 	Name = "Elmet",
-	Civilization = "celt",
+	Civilization = "celt", -- it was a Briton kingdom
 	Type = "polity",
---	Language = "welsh", -- it was a Briton kingdom
 	Colors = {"teal"},
 	DefaultTier = "kingdom"
 })
 
 DefineFaction("gwent-is-coed", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 29.
 	Name = "Gwent Is Coed",
-	Civilization = "celt",
+	Civilization = "celt", -- it was a Welsh lordship
 	Type = "polity",
---	Language = "welsh", -- it was a Welsh lordship
 	Colors = {"green"},
 	DefaultTier = "barony",
 	Titles = {
@@ -160,27 +146,24 @@ DefineFaction("gwent-is-coed", { -- Source: Bernhard Maier (trans.), "Das Sagenb
 
 DefineFaction("gwynedd", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 80.
 	Name = "Gwynedd",
-	Civilization = "celt",
+	Civilization = "celt", -- it was a Briton kingdom
 	Type = "polity",
---	Language = "welsh", -- it was a Briton kingdom
 	Colors = {"blue"},
 	DefaultTier = "kingdom"
 })
 
 DefineFaction("powys", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 78.
 	Name = "Powys",
-	Civilization = "celt",
+	Civilization = "celt", -- it was a Briton kingdom
 	Type = "polity",
---	Language = "welsh", -- it was a Briton kingdom
 	Colors = {"green"},
 	DefaultTier = "kingdom"
 })
 
 DefineFaction("strathclyde", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 85, 87.
 	Name = "Strathclyde",
-	Civilization = "celt",
+	Civilization = "celt", -- it was a Briton kingdom
 	Type = "polity",
---	Language = "welsh", -- it was a Briton kingdom
 	Colors = {"brown"},
 	DefaultTier = "kingdom"
 })

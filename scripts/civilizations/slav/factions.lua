@@ -43,7 +43,6 @@ DefineFaction("bohemia", {
 	Name = "Bohemia",
 	Civilization = "slav",
 	Type = "polity",
---	Language = "czech",
 	Colors = {"red"},
 	DefaultTier = "duchy",
 	HistoricalTiers = {
@@ -58,7 +57,6 @@ DefineFaction("croatia", {
 	Name = "Croatia",
 	Civilization = "slav",
 	Type = "polity",
---	Language = "old-church-slavonic",
 	Colors = {"blue", "red"},
 	DefaultTier = "kingdom"
 })
@@ -67,7 +65,6 @@ DefineFaction("moravia", {
 	Name = "Moravia",
 	Civilization = "slav",
 	Type = "polity",
---	Language = "czech",
 	Colors = {"brown"},
 	DefaultTier = "duchy",
 	HistoricalDiplomacyStates = {
@@ -80,7 +77,6 @@ DefineFaction("muscovy", {
 	Name = "Muscovy",
 	Civilization = "slav",
 	Type = "polity",
-	Language = "russian",
 	Colors = {"red"},
 	DefaultTier = "duchy",
 	Titles = {
@@ -104,7 +100,6 @@ DefineFaction("russia", {
 	Name = "Russia",
 	Civilization = "slav",
 	Type = "polity",
-	Language = "russian",
 	Colors = {"blue", "red"},
 	DefaultTier = "empire"
 })
@@ -113,7 +108,6 @@ DefineFaction("serbia", {
 	Name = "Serbia",
 	Civilization = "slav",
 	Type = "polity",
---	Language = "old-church-slavonic",
 	Colors = {"red"},
 	DefaultTier = "kingdom"
 })

@@ -30,7 +30,6 @@ DefineFaction("netherlands", {
 	Civilization = "teuton",
 	ParentFaction = "francia",
 	Type = "polity",
---	Language = "dutch",
 	Colors = {"orange", "blue"},
 	DefaultTier = "kingdom",
 	SettlementNames = {

@@ -29,6 +29,5 @@ DefineFaction("aestui-tribe", { -- Source: William R. Shepherd, "Historical Atla
 	Name = "Aestui Tribe",
 	Civilization = "baltic", -- correct?
 	Type = "tribe",
---	Language = "lithuanian",
 	Colors = {"green"}
 })
