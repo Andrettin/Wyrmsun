@@ -98,6 +98,7 @@ DefineCharacter("tiberius-claudius-pompeianus", { -- Source: "Ancient Warfare VI
 	Faction = "rome"
 })
 
+--[[
 DefineCharacter("geofrei-gaimar", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 76.
 	Name = "Geofrei",
 	FamilyName = "Gaimar", -- was that actually his family name?
@@ -108,3 +109,4 @@ DefineCharacter("geofrei-gaimar", { -- Source: Alaric Hall, "The Meanings of Elf
 	ProvinceOfOrigin = "France", -- accurate?
 	Year = 1135 -- composed Estoire des Anglais c. 1135-1140 AD
 })
+--]]

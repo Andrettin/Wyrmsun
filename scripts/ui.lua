@@ -1158,6 +1158,9 @@ if not (ui_loaded_first_time) then
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				--]]
+				{ 	Condition = {ButtonAction = "buy", Item = "only"}, Margin = {1, 1},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
 				{ 	Condition = {ButtonAction = "editor-unit"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = TypeIdent("Type"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -1173,7 +1176,7 @@ if not (ui_loaded_first_time) then
 				{	Condition = {ButtonAction = "buy"},
 					More = {"Costs", {Font = PopupFont}}, HighlightColor = "yellow",
 				}, 
-				{ 	Condition = {ButtonAction = "buy"}, Margin = {1, 1},
+				{ 	Condition = {ButtonAction = "buy", Neutral = "false"}, Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {Class = true, ButtonAction = "train-unit"}, HighlightColor = "yellow",
