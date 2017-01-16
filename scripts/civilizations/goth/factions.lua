@@ -48,20 +48,7 @@ DefineFaction("burgundian-tribe", {
 	Type = "tribe",
 	Colors = {"brown"},
 	DevelopsTo = {"burgundy"},
-	HistoricalFactionDerivations = {-264, "goth", "goth-tribe"},
-	PersonalNames = {
-		"female", "Chrona", -- daughter of Chilperich who later became a nun; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 331.
-		"male", "Aridius", -- chief advisor to Gundobad (was he actually a Burgundian?); Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 331.
-		"male", "Chilperich", -- brother of Gundobad; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
-		"male", "Godegisel", -- brother of Gundobad; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
-		"male", "Godomar", -- Burgundian king from 523 on; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
-		"male", "Gundahar", -- Burgundian king; died in 436; became Gunnar/Gunther in the myths; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
-		"male", "Gundioc", -- Burgundian king (437-474); Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
-		"male", "Gundobad", -- Burgundian king from 474 on; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
-		"male", "Hanhualdus", -- presumably a male name; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.3.
-		"male", "Sarwa", -- the Sörli of Norse mythology, son of Gudrun; Sörli is a reflex of Gothic "sarwa"; Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 118.
-		"male", "Sigismund" -- son of Gundobad; died in 523; became Sigmund (father of Sigurd) in the myths; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
-	}
+	HistoricalFactionDerivations = {-264, "goth", "goth-tribe"}
 })
 
 DefineFaction("gepidae-tribe", {

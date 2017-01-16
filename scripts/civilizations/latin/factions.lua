@@ -146,11 +146,13 @@ DefineFaction("france", {
 	Type = "polity",
 	Colors = {"blue", "white"},
 	DefaultTier = "kingdom",
+	--[[
 	PersonalNames = {
 		"male", "Bellaud",
 		"male", "Bonnaud",
 		"male", "Renaud"
 	},
+	--]]
 	SettlementNames = {
 		"Hamelet", -- Source: http://www.cnrtl.fr/definition/hameau
 		"Hamelin", -- Source: http://www.cnrtl.fr/definition/hameau

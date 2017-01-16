@@ -36,11 +36,7 @@ DefineFaction("suebi-tribe", {
 	DefaultTier = "duchy",
 	DevelopsTo = {"galicia", "bavaria", "austria", "carinthia"},
 	FactionUpgrade = "upgrade-suebi-tribe-faction",
-	Description = _("The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there."),
-	PersonalNames = {
-		"male", "Hermeric", -- Suebic chieftain who sacked central Galicia
-		"male", "Rechilas" -- Suebic chieftain who defeated a Roman army led by Andevotus near the Singilis river in 438 AD
-	},
+	Description = "The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there.",
 	SettlementNames = {
 		"Marobudum" -- alternate name of the Marcomannic capital; either located where modern Prague or Budweis are; Source: Frederick Kohlrausch, "A History of Germany", 1844, p. 57.
 	},
@@ -56,11 +52,6 @@ DefineFaction("saxon-tribe", {
 	DevelopsTo = {"saxony", "brandenburg", "essex", "wessex", "england", "prussia"},
 	FactionUpgrade = "upgrade-saxon-tribe-faction",
 	HistoricalFactionDerivations = {-264, "germanic", "ingaevone-tribe"},
-	PersonalNames = {
-		"male", "Bernhard", -- duke of Saxony (apparently a contemporary of bishop Thietmar of Merseburg); Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 613.
-		"male", "Gottschalk", -- 9th century Saxon monk; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 605.
-		"male", "Thietmar" -- Saxon bishop of Merseburg; was alive in 1002; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 613.
-	},
 	SettlementNames = {
 		"Hardego", -- one of the pagi in Eastphalia in 852; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 610.
 		"Hohsingo", -- one of the pagi in Eastphalia in 852; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 610.
@@ -219,13 +210,7 @@ DefineFaction("frisian-tribe", {
 	Colors = {"violet", "purple"}, -- change to a better one?
 	DevelopsTo = {"friesland", "netherlands"},
 	FactionUpgrade = "upgrade-frisian-tribe-faction",
-	HistoricalFactionDerivations = {-264, "germanic", "ingaevone-tribe"},
-	--[[
-	PersonalNames = {
-		"male", "Bubo", -- Frisian ruler defeated by Charles Martel in 736; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 403.
-		"male", "Radbod" -- Frisian ruler defeated by Charles Martel in 718; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 403.
-	}
-	--]]
+	HistoricalFactionDerivations = {-264, "germanic", "ingaevone-tribe"}
 })
 
 DefineFaction("hermunduri-tribe", {
@@ -259,12 +244,6 @@ DefineFaction("lombard-tribe", {
 	Colors = {"green"},
 	DevelopsTo = {"lombardy"},
 	FactionUpgrade = "upgrade-lombard-tribe-faction",
-	PersonalNames = {
-		"male", "Arichis", -- Lombard duke of Benevento; Source: "Medieval Warfare IV.6", 2013, p. 18.
-		"male", "Ariulf", -- Lombard duke of Spoleto; Source: "Medieval Warfare IV.6", 2013, p. 18.
-		"male", "Gisulf", -- Source: "Medieval Warfare IV.6", 2013, p. 8.
-		"male", "Nordulf" -- Lombard mercenary; Source: "Medieval Warfare IV.6", 2013, p. 18.
-	},
 	HistoricalFactionDerivations = {-264, "germanic", "istaevone-tribe"}
 })
 
@@ -275,7 +254,7 @@ DefineFaction("marcomanni-tribe", {
 	Type = "tribe",
 	Colors = {"orange", "red"}, -- change to a better one?
 	DevelopsTo = {"bavarian-tribe", "bavaria", "galicia", "austria", "carinthia"},
-	Description = _("The Marcomanni were a Suebic tribe. Eventually they migrated to the east, settling in Bohemia and expelling the local Boii tribe. In the 2nd century they fought the terrible Marcomannic Wars against the Romans. The name \"Marcomanni\" means \"march-men\", or \"frontier-men\"."),
+	Description = "The Marcomanni were a Suebic tribe. Eventually they migrated to the east, settling in Bohemia and expelling the local Boii tribe. In the 2nd century they fought the terrible Marcomannic Wars against the Romans. The name \"Marcomanni\" means \"march-men\", or \"frontier-men\".",
 	HistoricalFactionDerivations = {-9, "teuton", "suebi-tribe"},
 	HistoricalDiplomacyStates = {
 		170, "rome", "war", -- in 170 a coalition led by the Marcomanni (which included the Quadi and the Hermunduri) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.

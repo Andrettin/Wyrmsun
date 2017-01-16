@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016 by Andrettin
+--      (c) Copyright 2016-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -98,11 +98,25 @@ DefineCharacter("rolf-krake-skjoldung", { -- Source: Snorri Sturlson, "Heimskrin
 DefineCharacter("widukind", { -- Saxon leader who resisted Charlemagne's forces from 772 to 802; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 603.
 	Name = "Widukind",
 	Gender = "male",
-	Type = "unit-teuton-heroic-swordsman",
+	Type = "unit-teuton-heroic-swordsman", -- chieftain
 	Civilization = "teuton",
 	Faction = "saxon-tribe",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "saxon-tribe") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("gottschalk", { -- 9th century Saxon monk; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 605.
+	Name = "Gottschalk",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- monk
+	Civilization = "teuton",
+	Faction = "saxony",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "saxony") then
 			return true
 		end
 		return false
@@ -125,3 +139,32 @@ DefineCharacter("henry-of-saxony", { -- Source: Susan D. Fuller, "Pagan Charms i
 	}
 })
 --]]
+
+DefineCharacter("bernhard-of-saxony", { -- duke of Saxony (apparently a contemporary of bishop Thietmar of Merseburg); Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 613.
+	Name = "Bernhard",
+	Gender = "male",
+	Type = "unit-teuton-heroic-swordsman", -- duke
+	Civilization = "teuton",
+	Faction = "saxony",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "saxony") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("thietmar", { -- Saxon bishop of Merseburg; was alive in 1002; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 613.
+	Name = "Thietmar",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- bishop
+	Civilization = "teuton",
+	Faction = "saxony",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "saxony") then
+			return true
+		end
+		return false
+	end
+})
+

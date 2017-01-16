@@ -1530,13 +1530,14 @@ DefineCivilization("teuton", {
 	Display = "Teuton",
 	Visible = true,
 	Species = "human",
-	Language = "high-german",
+	Language = "old-high-german", -- the "Teuton" civilization covers all West Germanic cultures; Old High German is used as it fits somewhat well for the entire time period covered by the civilization at present (from the Iron Age to the Early Middle Ages), and somewhat well for all continental West Germanic peoples (using it for Anglo-Saxons is a bit of a stretch, but acceptable in my opinion, given the alternative would be creating a whole new civilization for them)
 	ParentCivilization = "germanic",
+	-- this civilization could be split in the following manner in the future: Franks (representing all Istvaeonic peoples of late Antiquity and the early Middle Ages), Saxons (representing all Ingvaeonic peoples of late Antiquity and the early Middle Ages) and Suebi (representing all Irminonic peoples of late Antiquity and the early Middle Ages); then we could have (if the timeline is expanded) three later civilizations which would developed from these for the later medieval periods: Dutch (formable by Franks), English (formable by Saxons) and Teutons (representing Germans properly speaking, formable by Franks, Saxons or Suebi)
 	Adjective = "Teutonic",
 	DefaultColor = "yellow",
 	CivilizationUpgrade = "upgrade-teuton-civilization",
 	DevelopsFrom = {"germanic"},
-	Description = _("During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). Eventually, West Germanic peoples would come to identify themselves with the demonym \"deutsch\", a term often latinized as \"teutonicus\"."),
+	Description = "During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). Eventually, West Germanic peoples would come to identify themselves with the demonym \"deutsch\", a term often latinized as \"teutonicus\".",
 	Months = { -- Anglo-Saxon months; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 97-98.
 		"january", "Giuli", -- first month of the Anglo-Saxon year; the modern Yule, the name was used for both the last and first month of the year; the year began on the 25th of December, during the night of which the "Modra nect" ("the night of the mothers") was celebrated
 		"february", "Solmonath", -- second month of the Anglo-Saxon year; known as the month of cakes, in which those were offered to the gods
@@ -1552,6 +1553,8 @@ DefineCivilization("teuton", {
 		"december", "Giuli" -- last month of the Anglo-Saxon year; the modern Yule, the name was used for both the last and first month of the year
 	},
 	PersonalNames = {
+		-- High German names, many are too modern for the time period covered in the game
+		--[[
 		"female", "Hilde",
 		"female", "Wilhelmina",
 		"male", "Adalbert",
@@ -1618,6 +1621,10 @@ DefineCivilization("teuton", {
 		"male", "Wilhelm",
 		"male", "Wolfgang",
 		"male", "Wolfhart"
+		--]]
+		-- Old Frankish names
+		"male", "Answald", -- Old Frankish name; Source: http://www.cnrtl.fr/definition/lourdaud//1
+		"male", "Grimwald" -- Old Frankish name; Source: http://www.cnrtl.fr/definition/lourdaud//1
 	},
 	FamilyNames = {
 		"Muhlhausen" -- "Mühlhausen"; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 104.
@@ -1925,7 +1932,19 @@ DefineCivilization("goth", {
 		"female", "Brunichilde", -- daughter of the Visigothic king Athanagild; refined, attractive, good-mannered, intelligent and socially affable; died in 613; became Brünhild in the myths; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, pp. 328, 330.
 		"female", "Gailswintha", -- daughter of the Visigothic king Athanagild; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, pp. 328-329.
 		"male", "Athanagild", -- Visigothic king; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
-		"male", "Witiza" -- Visigothic king who reigned 700-710; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 400.
+		"male", "Witiza", -- Visigothic king who reigned 700-710; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 400.
+		-- Burgundian names
+		"female", "Chrona", -- daughter of Chilperich who later became a nun; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 331.
+		"male", "Aridius", -- chief advisor to Gundobad (was he actually a Burgundian?); Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 331.
+		"male", "Chilperich", -- brother of Gundobad; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
+		"male", "Godegisel", -- brother of Gundobad; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
+		"male", "Godomar", -- Burgundian king from 523 on; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
+		"male", "Gundahar", -- Burgundian king; died in 436; became Gunnar/Gunther in the myths; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
+		"male", "Gundioc", -- Burgundian king (437-474); Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
+		"male", "Gundobad", -- Burgundian king from 474 on; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
+		"male", "Hanhualdus", -- presumably a male name; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.3.
+		"male", "Sarwa", -- the Sörli of Norse mythology, son of Gudrun; Sörli is a reflex of Gothic "sarwa"; Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 118.
+		"male", "Sigismund" -- son of Gundobad; died in 523; became Sigmund (father of Sigurd) in the myths; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.		
 	},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
@@ -2231,7 +2250,43 @@ DefineCivilization("slav", {
 	ParentCivilization = "teuton",
 	Adjective = "Slavic",
 	Playable = false,
-	DefaultColor = "blue"
+	DefaultColor = "blue",
+	PersonalNames = {
+		-- Czech names
+		"female", "Agnes", -- Agnes Přemyslovna, youngest daughter of the Czech king Přemysl Otakar I; founded St. Agnes' Cloister (in Prague) in 1231, and became its mother superior; Source: Alena Ježková, "77 Prague Legends", 2006, p. 36.
+		"female", "Judita", -- wife of Vladislav II; ordered Judita Bridge (across the Vltava river in Prague) built in 1158; Source: Alena Ježková, "77 Prague Legends", 2006, p. 45.
+		"male", "Boleslav", -- Boleslav I of Bohemia; ruled over Bohemia in 929-967; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 615.
+		"male", "Boleslav", -- Boleslav II of Bohemia; duke of Bohemia until 999, when he died; massacred House Slavnik in 995; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, pp. 616-617.
+		"male", "Boleslav", -- Boleslav III of Bohemia; succeeded Boleslav II of Bohemia; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 616.
+		"male", "Borivoj", -- "Bořivoj"; Bořivoj was duke of Bohemia in 874 when he recognized the overlordship of Svatopluk of Moravia; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
+		"male", "Borivoj", -- "Bořivoj"; Bořivoj II of Bohemia until 1120, when he was driven out by his brother Vladislav; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 622.
+		"male", "Bretislav", -- "Břetislav"; Duke Břetislav I of Bohemia in 1037-1055; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 618.
+		"male", "Bretislav", -- "Břetislav"; Břetislav II of Bohemia in 1061-1092; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 621.
+		"male", "Hanus", -- Master Hanuš of Růže, perfected Prague's Old Town Astronomical Clock in the 15th century; Source: Alena Ježková, "77 Prague Legends", 2006, p. 10.
+		"male", "Jan", -- Jan Jesenius; physician and professor of Prague's Charles University; executed in the 21st of June 1621 for rebelling against Emperor Ferdinand II; only 10 years later it would be allowed to take his head from public display and be buried; Source: Alena Ježková, "77 Prague Legends", 2006, p. 13.
+		"male", "Jaromir", -- "Jaromíř"; became duke of Bohemia in 1004; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 618.
+		"male", "Krystof", -- Kryštof Harant of Polžice; traveller; executed in the 21st of June 1621 for rebelling against Emperor Ferdinand II; only 10 years later it would be allowed to take his head from public display and be buried; Source: Alena Ježková, "77 Prague Legends", 2006, p. 13.
+		"male", "Mikulas", -- Mikulás of Kadaň; built Prague's Old Town Astronomical Clock before 1410; Source: Alena Ježková, "77 Prague Legends", 2006, p. 10.
+		"male", "Mojmir", -- "Mojmír"; Moravian ruler between 830 and 846; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 606.
+		"male", "Mydlar", -- "Mydlář"; executioner who killed the Czech lords that had rebelled against Emperor Ferdinand II; executed the Czech lords in 21st of June 1621; Source: Alena Ježková, "77 Prague Legends", 2006, p. 13.
+		"male", "Oldrich", -- "Oldřich"; was duke of Bohemia until 1037; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 618.
+		"male", "Otakar", -- King Otakar I of Bohemia in 1198-1230; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 628.
+		"male", "Petr", -- the foundation stone of a new bridge to replace Judita Bridge was laid in the 9th of July 1357 by Emperor and King Charles IV; the construction of this new bridge was entrusted to Petr Parléř, who had built St Vitus' Cathedral; Source: Alena Ježková, "77 Prague Legends", 2006, p. 45.
+		"male", "Ratislav", -- Ratislav succeeded Mojmír in Moravia in 846; Ratislav was captured and placed on a monastery by the Franks in 869; was a Christian; described as clear-headed and able; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, pp. 606-608.
+		"male", "Slavitah", -- duke Slavitah of Bohemia was driven from his lands by the Franks two years after Lothar I's attack on Moravia in 855; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 606.
+		"male", "Sobeslav", -- "Soběslav"; King Soběslav II of Bohemia in 1173-1179; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 628.
+		"male", "Spytihnev", -- "Spytihněv"; duke of Bohemia; recognized German overlordship in 895; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, pp. 612-613.
+		"male", "Spytihnev", -- "Spytihněv"; brother to Boleslav III of Bohemia; deposed his brother and took control of Bohemia; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 616.
+		"male", "Spytihnev", -- "Spytihněv"; was Duke Spytihněv II of Bohemia in 1055-1061; son of Břetislav I of Bohemia and Judith von Babenberg; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 620.
+		"male", "Svatopluk", -- Svatopluk was (apparently) duke of Moravia in 874 when peace was made with East Francia; Svatopluk raided the frontier of Bavaria in 869; died in 892; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, pp. 606-607.
+		"male", "Vaclav", -- "Václav"; Václav succeeded his father Vratislav in 921 in Bohemia; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 613.
+		"male", "Vaclav", -- "Václav"; King Václav I of Bohemia in 1230-1253; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 627.
+		"male", "Vaclav", -- Vacláv Budovec of Budov; scholar and writer; executed in the 21st of June 1621 for his role in the rebellion against Emperor Ferdinand II; he was 74 years old when executed; only 10 years later it would be allowed to take his head from public display and be buried; Source: Alena Ježková, "77 Prague Legends", 2006, p. 13.
+		"male", "Viztrach", -- duke of Bohemia; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 606.
+		"male", "Vladislav", -- drove out his brother, Bořivoj II of Bohemia, in 1120, becoming Vladislav I of Bohemia; died in 1125; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 622.
+		"male", "Vojtech", -- "Vojtěch Slavnik"; born in 956; known as St. Adalbert, in 983 became bishop of Prague; murdered on 23 April 997; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 617.
+		"male", "Vratislav" -- succeeded his brother Spytihněv as duke of Bohemia, reigning until 921; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, pp. 612-613.
+	}
 })
 
 DefineCivilization("thracian", {

@@ -74,7 +74,7 @@ DefineCharacter("marbod", {
 DefineCharacter("catualda", { -- Marcomannic noble who was exiled by Marbod, and later returned with an army behind him and deposed Marbod
 	Name = "Catualda",
 	Gender = "male",
-	Type = "unit-suebi-swordsman",
+	Type = "unit-teuton-veteran-swordsman", -- noble
 	Civilization = "teuton",
 	Faction = "marcomanni-tribe",
 	HistoricalTitles = {
@@ -99,6 +99,34 @@ DefineCharacter("ballomar", { -- Source: "Ancient Warfare VII.6", 2013, pp. 29-3
 	Description = "The Marcomannic chieftain Ballomar seeks to establish his tribe in the Roman lands to their south. To that effect, he has gathered a coalition of tribes - and is ready to cross the Danube.",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "marcomanni-tribe") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("hermeric", { -- Suebic chieftain who sacked central Galicia
+	Name = "Hermeric",
+	Gender = "male",
+	Type = "unit-teuton-heroic-swordsman", -- chieftain
+	Civilization = "teuton",
+	Faction = "suebi-tribe",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "suebi-tribe" or GetPlayerData(trigger_player, "Faction") == "galicia") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("rechilas", { -- Suebic chieftain who defeated a Roman army led by Andevotus near the Singilis river in 438 AD
+	Name = "Rechilas",
+	Gender = "male",
+	Type = "unit-teuton-heroic-swordsman", -- chieftain
+	Civilization = "teuton",
+	Faction = "galicia",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "suebi-tribe" or GetPlayerData(trigger_player, "Faction") == "galicia") then
 			return true
 		end
 		return false

@@ -40,50 +40,6 @@ DefineFaction("frank-tribe", {
 		"dlcs/frankish_faction_flair/graphics/ui/buttonpanel.png", -256, -200,
 		"dlcs/frankish_faction_flair/graphics/ui/infopanel.png", 0, -200
 	},
-	PersonalNames = {
-		"female", "Bertha", -- Bertha of Paris, Frankish noblewoman related to or a part of the Merovingians; married Æthelberht of Kent; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 79.
-		"female", "Fredegunde", -- concubine of Chilperich; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
-		"male", "Adalgisel", -- Frankish duke; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 398.
-		"male", "Answald", -- Old Frankish name; Source: http://www.cnrtl.fr/definition/lourdaud//1
-		"male", "Austrovald", -- Frankish duke; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 392.
-		"male", "Bechar", -- Mayor of the Palace of Neustria; Waratto's wife's son-in-law; Source: "Medieval Warfare V.2", 2013, p. 7; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 405.
-		"male", "Beppelin", -- Frankish duke; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 391.
-		"male", "Berulf", -- Frankish duke; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 392.
-		"male", "Bladast", -- Frankish duke; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 392.
-		"male", "Bobo", -- Frankish duke of Auvergne in 639; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 397.
-		"male", "Bodegisel", -- Frankish duke; died in 585; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 393.
-		"male", "Carloman", -- son of Charles Martel; Source: "Medieval Warfare V.2", 2013, p. 7.
-		"male", "Carloman", -- son of Pepin the Short; died of illness in 771 at 20 years old; Source: "Medieval Warfare V.2", 2013, p. 7.
-		"male", "Charibert", -- son of Chlothar; died in 567; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
-		"male", "Charles", -- Charles Martel; became Mayor of the Palace of Francia in 718; died in 741; Source: "Medieval Warfare V.2", 2013, p. 7.
-		"male", "Charles", -- Charles the Great, or Charlemagne, son of Pepin the Short; succeeded his father together with Carloman in 768 as king of the Franks, and became sole ruler of the Franks in 771; died of illness on 28 January 814 at Aachen at 66 years old (the Old Frankish form of "Charles" should be used instead); Source: "Medieval Warfare V.2", 2013, pp. 7-9.
-		"male", "Childebert", -- son of Chlodwig who ruled in Paris; died in 558; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
-		"male", "Childebrand", -- Frankish duke; uncle of Pepin the Short; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 408.
-		"male", "Chlodomer", -- son of Chlodwig who ruled in Orléans; died in 524; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
-		"male", "Dagobert", -- king of the Franks as Dagobert I; died in 639; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 81; Source: "Medieval Warfare V.2", 2013, p. 7.
-		"male", "Dragolen", -- Frankish duke; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 391.
-		"male", "Drogo", -- son of Carloman and grandson of Charles Martel; Source: "Medieval Warfare V.2", 2013, p. 7.
-		"male", "Drogo", -- son of Pepin II (of Heristal) and duke of Champagne; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 405.
-		"male", "Ebracher", -- Frankish duke; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 392.
-		"male", "Ebroin", -- Mayor of the Palace of Neustria until 675; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 405.
-		"male", "Erchinoald", -- Mayor of the Palace of Neustria; died in 657; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 405.
-		"male", "Ghislamar", -- son of Waratto, Mayor of the Palace of Neustria; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 405.
-		"male", "Grifo", -- son of Charles Martel and brother of Pepin the Short; Source: "Medieval Warfare V.2", 2013, p. 7; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 408.
-		"male", "Grimwald", -- Old Frankish name; Source: http://www.cnrtl.fr/definition/lourdaud//1
-		"male", "Leudegisel", -- duke under Gunthram; fought the Visigoths in Septimania in 585; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 390.
-		"male", "Louis", -- Louis the Pious, son of Charlemagne; made co-emperor with his father in 813 (the Old Frankish form of "Louis" should be used instead); Source: "Medieval Warfare V.2", 2013, p. 9.
-		"male", "Pepin", -- Pepin of Herstal; became Mayor of the Palace of Austrasia in 675; died in 714; Source: "Medieval Warfare V.2", 2013, p. 7.
-		"male", "Pepin", -- Pepin the Short, son of Charles Martel; became king of the Franks in 751; died in 768; Source: "Medieval Warfare V.2", 2013, p. 7.
-		"male", "Ragamfred", -- Mayor of the Palace of Austrasia; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 406.
-		"male", "Rathar", -- vassal of a Frankish king Childebert; restored the king's authority in Marseilles in 585; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 390.
-		"male", "Sigulf", -- Frankish duke; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 391.
-		"male", "Theoderic", -- king of the Franks as Theoderic IV; died in 737; Source: "Medieval Warfare V.2", 2013, p. 7.
-		"male", "Theuderich", -- son of Chlodwig who ruled in Reims; died in 534; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
-		"male", "Theodulf", -- Frankish count; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 391.
-		"male", "Waratto", -- Mayor of the Palace of Neustria; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 405.
-		"male", "Wintrio", -- Frankish duke of Champagne between 593 and 598; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, pp. 391, 397.
-		"male", "Wulfoald" -- Frankish duke; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 405.
-	},
 	HistoricalFactionDerivations = {150, "germanic", "herminone-tribe"},
 	HistoricalTechnologies = {
 		"upgrade-frank-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.

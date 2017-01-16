@@ -80,7 +80,7 @@ DefineCharacter("theodric-of-bernicia", { -- Source: Frank Stenton, "Anglo-Saxon
 })
 
 DefineCharacter("aethelric", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 75-76.
-	Name = "aethelric", -- "Æthelric"
+	Name = "Aethelric", -- "Æthelric"
 	Gender = "male",
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
