@@ -728,7 +728,7 @@ function StandardTriggers()
 					end
 				end,
 				function()
-					Tip("Krieger", "The Krieger is the melee infantry unit of the Teuton civilization, replacing the Erala.")
+					Tip("Kregar", "The Kregar is the melee infantry unit of the Teuton civilization, replacing the Erala.")
 					return false
 				end
 			)

@@ -35,7 +35,7 @@ DefineLanguageWord("Adel", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Noble"},
-	DerivesFrom = {"middle-high-german", "noun", "Adel"},
+	DerivesFrom = {"middle-high-german", "noun", "Adel"}, -- presumably
 	NumberCaseInflections = {
 		"singular", "genitive", "Adels"
 	},
@@ -1538,6 +1538,13 @@ DefineLanguageWord("Reich", {
 	DerivesFrom = {"middle-high-german", "adjective", "Rîche"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
 })
 
+DefineLanguageWord("Reiten", {
+	Language = "high-german",
+	Type = "verb",
+	Meanings = {"Ride"},
+	DerivesFrom = {"old-high-german", "verb", "Rītan"} -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 412.
+})
+
 DefineLanguageWord("Rose", { -- Source: http://www.duden.de/rechtschreibung/Rose_Pflanze_Bluete_Verdickung
 	Language = "high-german",
 	Type = "noun",
@@ -1697,6 +1704,13 @@ DefineLanguageWord("Schnee", {
 	Uncountable = true
 })
 
+DefineLanguageWord("Schütze", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Archer"},
+	DerivesFrom = {"old-high-german", "noun", "Scuzzo"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 234.
+})
+
 DefineLanguageWord("Sechs", {
 	Language = "high-german",
 	Type = "numeral",
@@ -1778,6 +1792,13 @@ DefineLanguageWord("Sorgen", {
 	DerivesFrom = {"old-high-german", "verb", "Sorgên"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 223-224.
 })
 
+DefineLanguageWord("Speer", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Spear"},
+	DerivesFrom = {"old-high-german", "noun", "Sper"} -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 467.
+})
+
 DefineLanguageWord("Spiel", {
 	Language = "high-german",
 	Type = "noun",
@@ -1790,6 +1811,13 @@ DefineLanguageWord("Spiel", {
 		"plural", "dative", "Spielen",
 		"plural", "genitive", "Spiele"
 	}
+})
+
+DefineLanguageWord("Spieß", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Spear"},
+	DerivesFrom = {"old-high-german", "noun", "Spioz"} -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 467.
 })
 
 DefineLanguageWord("Spitze", {

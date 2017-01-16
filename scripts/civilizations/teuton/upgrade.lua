@@ -30,8 +30,8 @@ DefineUpgrade("upgrade-teuton-spatha", {
 	Parent = "upgrade-long-sword",
 	Icon = "icon-teuton-spatha",
 	Civilization = "teuton",
-	Description = _("With the development of iron working, the forging of longer swords became a practical possibility.\n\nEffect: +2 Damage for Kriegers and Ritters."),
-	Background = _("During the Migration Period, Germanic peoples - including West Germanics - used longswords such as these in combat."),
+	Description = "With the development of iron working, the forging of longer swords became a practical possibility.\n\nEffect: +2 Damage for Kregars and Ritars.",
+	Background = "During the Migration Period, Germanic peoples - including West Germanics - used longswords such as these in combat.",
 	Item = "unit-spatha"
 })
 
@@ -41,15 +41,15 @@ DefineUpgrade("upgrade-frank-spatha", {
 	Icon = "icon-frankish-spatha",
 	Civilization = "teuton",
 	Faction = "frank-tribe",
-	Description = _("With the development of iron working, the forging of longer swords became a practical possibility.\n\nEffect: +2 Damage for Kriegers and Ritters."),
-	Background = _("During the Migration Period, Germanic peoples - including West Germanics - used longswords such as these in combat."),
+	Description = "With the development of iron working, the forging of longer swords became a practical possibility.\n\nEffect: +2 Damage for Kregars and Ritars.",
+	Background = "During the Migration Period, Germanic peoples - including West Germanics - used longswords such as these in combat.",
 	Item = "unit-frankish-spatha"
 })
 
 DefineUpgrade("upgrade-teuton-pike", {
 	Parent = "upgrade-pike",
 	Civilization = "teuton",
-	Description = _("Much longer than previous spears, pikes can be deadly when used by disciplined groups of soldiers.\n\nEffect: +2 Damage for Speerkampfers."),
+	Description = "Much longer than previous spears, pikes can be deadly when used by disciplined groups of soldiers.\n\nEffect: +2 Damage for Spearmen.",
 	Item = "unit-pike"
 })
 
@@ -57,7 +57,7 @@ DefineUpgrade("upgrade-teuton-iron-shield", {
 	Parent = "upgrade-iron-shield",
 	Icon = "icon-teuton-iron-shield",
 	Civilization = "teuton",
-	Description = _("The development of iron working makes the crafting of sturdier shields possible.\n\nEffect: +2 Armor for Kriegers, Speerkampfers and Ritters."),
+	Description = "The development of iron working makes the crafting of sturdier shields possible.\n\nEffect: +2 Armor for Kregars, Spearmen and Ritars.",
 	Item = "unit-iron-shield"
 })
 
@@ -66,7 +66,7 @@ DefineUpgrade("upgrade-teuton-bodkin-arrow", {
 	Parent = "upgrade-ranged-projectile-2",
 	Icon = "icon-bodkin-arrow",
 	Civilization = "teuton",
-	Description = _("Bodkin arrows focus pressure on a single point, greatly enhancing their piercing capability.\n\nEffect: +2 Damage for Schutzes."),
+	Description = "Bodkin arrows focus pressure on a single point, greatly enhancing their piercing capability.\n\nEffect: +2 Damage for Scuzzos.",
 	Arrows = true,
 	Item = "unit-bodkin-arrows"
 })
@@ -110,7 +110,7 @@ DefineUpgrade("upgrade-teuton-writing", {
 DefineUpgrade("upgrade-teuton-alchemy", {
 	Parent = "upgrade-alchemy",
 	Civilization = "teuton",
-	Description = _("Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Schutzes, +5 Fire Damage for Catapults.")
+	Description = "Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Scuzzos, +5 Fire Damage for Catapults."
 })
 
 DefineModifier("upgrade-teuton-spatha",

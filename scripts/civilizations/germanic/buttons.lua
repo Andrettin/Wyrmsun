@@ -105,7 +105,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-broad-sword",
 	Action = "research", Value = "upgrade-germanic-broad-sword",
 	Allowed = "check-single-research",
 	Key = "w", Hint = _("Research Broad S~!word"), Popup = "popup-research",
-	Description = "+2 Damage for Eralas, Kunis, Kriegers and Adels.",
+	Description = "+2 Damage for Eralas, Kregars and Ritars.",
 	ForUnit = {"unit-germanic-smithy", "unit-teuton-smithy", "unit-latin-smithy"}
 })
 
@@ -113,15 +113,15 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-bronze-shield",
 	Action = "research", Value = "upgrade-germanic-bronze-shield",
 	Allowed = "check-single-research",
 	Key = "s", Hint = _("Research Bronze ~!Shield"), Popup = "popup-research",
-	Description = "+2 Armor for Eralas, Kunis, Kriegers and Adels.",
+	Description = "+2 Armor for Eralas, Kregars and Ritars.",
 	ForUnit = {"unit-germanic-smithy", "unit-teuton-smithy", "unit-latin-smithy"}
 })
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-long-spear",
 	Action = "research", Value = "upgrade-germanic-long-spear",
 	Allowed = "check-single-research",
-	Key = "s", Hint = _("Research Long ~!Spear"), Popup = "popup-research",
-	Description = "+2 Damage for Speerkampfers.",
+	Key = "s", Hint = "Research Long ~!Spear", Popup = "popup-research",
+	Description = "+2 Damage for Spearmen.",
 --	ForUnit = {"unit-germanic-carpenters-shop", "unit-teuton-lumber-mill"}
 	ForUnit = {"unit-teuton-lumber-mill"}
 })
@@ -130,7 +130,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-barbed-arrow",
 	Action = "research", Value = "upgrade-germanic-barbed-arrow",
 	Allowed = "check-single-research",
 	Key = "a", Hint = _("Research Barbed ~!Arrow"), Popup = "popup-research",
-	Description = "+2 Damage for Skutans and Schutzes.",
+	Description = "+2 Damage for Skutans and Scuzzos.",
 	ForUnit = {"unit-germanic-carpenters-shop", "unit-teuton-lumber-mill"}
 })
   

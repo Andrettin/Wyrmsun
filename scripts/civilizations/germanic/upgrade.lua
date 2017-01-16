@@ -36,15 +36,15 @@ DefineUpgrade("upgrade-germanic-broad-sword", {
 	Parent = "upgrade-broad-sword",
 	Icon = "icon-germanic-broad-sword",
 	Civilization = "germanic",
-	Description = _("While the earlier short swords relied mostly on stabbing attacks, the enlarged width of the broad swords allowed germanic swordsmen to deal devastating slashing attacks.\n\nEffect: +2 Damage for Eralas, Kunis, Kriegers and Adels."),
-	Background = _("A number of bronze age swords have been found in Denmark. They were used by men not only in combat, but also as a symbol of social status."),
+	Description = "While the earlier short swords relied mostly on stabbing attacks, the enlarged width of the broad swords allowed germanic swordsmen to deal devastating slashing attacks.\n\nEffect: +2 Damage for Eralas, Kregars and Ritars.",
+	Background = "A number of bronze age swords have been found in Denmark. They were used by men not only in combat, but also as a symbol of social status.",
 	Item = "unit-broad-sword"
 })
 
 DefineUpgrade("upgrade-germanic-long-spear", {
 	Parent = "upgrade-long-spear",
 	Civilization = "teuton", -- change to Germanic when they get spearmen
-	Description = _("With the lengthening of spear shafts, soldiers who wield these weapons have greater reach against their enemies.\n\nEffect: +2 Damage for Speerkampfers."),
+	Description = "With the lengthening of spear shafts, soldiers who wield these weapons have greater reach against their enemies.\n\nEffect: +2 Damage for Spearmen.",
 	Item = "unit-long-spear"
 })
 
@@ -52,8 +52,8 @@ DefineUpgrade("upgrade-germanic-bronze-shield", {
 	Parent = "upgrade-bronze-shield",
 	Icon = "icon-germanic-bronze-shield",
 	Civilization = "germanic",
-	Description = _("Although earlier shields were made of simpler materials, the arrival of bronzeworking technologies allows Germanic craftsmen to produce bronze shields for the warriors, improving their personal protection.\n\nEffect: +2 Armor for Eralas, Kunis, Kriegers and Adels."),
-	Background = _("A number of bronze shields have been found preserved in Danish bogs, belonging to the archaeological period known as the Nordic Bronze Age (during which many scholars posit that the linguistic change from the Proto-Indo-European to Proto-Germanic happened). Those shields were actually probably not used in battle, but in rituals related to the sun and the seasons."),
+	Description = "Although earlier shields were made of simpler materials, the arrival of bronzeworking technologies allows Germanic craftsmen to produce bronze shields for the warriors, improving their personal protection.\n\nEffect: +2 Armor for Eralas, Kregars and Ritars.",
+	Background = "A number of bronze shields have been found preserved in Danish bogs, belonging to the archaeological period known as the Nordic Bronze Age (during which many scholars posit that the linguistic change from the Proto-Indo-European to Proto-Germanic happened). Those shields were actually probably not used in battle, but in rituals related to the sun and the seasons.",
 	Item = "unit-bronze-shield"
 })
 
@@ -62,7 +62,7 @@ DefineUpgrade("upgrade-germanic-barbed-arrow", {
 	Parent = "upgrade-ranged-projectile-1",
 	Icon = "icon-germanic-barbed-arrow",
 	Civilization = "germanic",
-	Description = _("An improvement over the basic triangular-shaped arrow, the barbed arrow is much harder to be removed from the wound after puncturing an enemy.\n\nEffect: +2 Damage for Skutans and Schutzes."),
+	Description = "An improvement over the basic triangular-shaped arrow, the barbed arrow is much harder to be removed from the wound after puncturing an enemy.\n\nEffect: +2 Damage for Skutans and Scuzzos.",
 	Arrows = true,
 	Item = "unit-barbed-arrows"
 })

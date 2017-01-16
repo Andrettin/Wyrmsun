@@ -32,7 +32,7 @@
 --
 
 DefineUnitType("unit-frank-swordsman", {
-	Name = "Krieger",
+	Name = "Kregar",
 	Parent = "unit-teuton-swordsman",
 	Civilization = "teuton",
 	Faction = "frank-tribe",
@@ -136,7 +136,7 @@ DefineUnitType("unit-frank-swordsman", {
 } )
 
 DefineUnitType("unit-frank-veteran-swordsman", {
-	Name = "Adel",
+	Name = "Adal",
 	Parent = "unit-teuton-veteran-swordsman",
 	Civilization = "teuton",
 	Faction = "frank-tribe",
@@ -240,7 +240,7 @@ DefineUnitType("unit-frank-veteran-swordsman", {
 })
 
 DefineUnitType("unit-frank-heroic-swordsman", {
-	Name = "Adel",
+	Name = "Truhtin",
 	Parent = "unit-teuton-heroic-swordsman",
 	Civilization = "teuton",
 	Faction = "frank-tribe",
@@ -344,7 +344,7 @@ DefineUnitType("unit-frank-heroic-swordsman", {
 })
 
 DefineUnitType("unit-frank-spearman", {
-	Name = "Speerkampfer",
+	Name = "Spearman",
 	Parent = "unit-teuton-spearman",
 	Civilization = "teuton",
 	Faction = "frank-tribe",
@@ -358,8 +358,6 @@ DefineUnitType("unit-frank-spearman", {
 		{"layer", "weapon", "file", "human/units/spear.png"}
 	},
 	Icon = "icon-frank-scara-brown-hair",
-	Armor = 3, -- +1 armor
-	Points = 55, -- +5 points
 	Variations = {
 		{
 			"variation-id", "brown-hair",
@@ -446,7 +444,7 @@ DefineUnitType("unit-frank-spearman", {
 } )
 
 DefineUnitType("unit-frank-horseman", {
-	Name = "Ritter",
+	Name = "Ritar",
 	Parent = "unit-teuton-ritter",
 	Civilization = "teuton",
 	Faction = "frank-tribe",
@@ -460,7 +458,7 @@ DefineUnitType("unit-frank-horseman", {
 })
 
 DefineUnitType("unit-frank-knight-lord", {
-	Name = "Landesherr",
+	Name = "Heriro",
 	Parent = "unit-teuton-knight-lord",
 	Civilization = "teuton",
 	Faction = "frank-tribe",

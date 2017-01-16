@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015-2016 by Andrettin
+--      (c) Copyright 2015-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -813,6 +813,13 @@ DefineLanguageWord("Herd", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Hērro", { -- source gives ""Hēr(i)ro"; Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 201.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Sir"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Herza", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
 	Language = "old-high-german",
 	Type = "noun",
@@ -980,6 +987,13 @@ DefineLanguageWord("Kōl", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Cabbage"}
+})
+
+DefineLanguageWord("Krêg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 36.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Tenacity"}, -- source gives the German "Hartnäckigkeit" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Kreiga"}
 })
 
 DefineLanguageWord("Kuning", { -- source also gives the alternative form "chuninc"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
@@ -1343,6 +1357,13 @@ DefineLanguageWord("Rōt", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Meanings = {"Red"}
 })
 
+DefineLanguageWord("Rītan", { -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 412.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Ride", "Move", "Swing", "Rock"},
+	DerivesFrom = {"proto-germanic", "verb", "Rīdan"}
+})
+
 DefineLanguageWord("Saga", { -- source also gives the alternative form "sega"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
 	Language = "old-high-german",
 	Type = "noun",
@@ -1381,6 +1402,13 @@ DefineLanguageWord("Scrīban", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Language = "old-high-german",
 	Type = "verb",
 	Meanings = {"Write"}
+})
+
+DefineLanguageWord("Scuzzo", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 234.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Archer"}, -- the source (apparently) gives "Schütze" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Skutan"}
 })
 
 DefineLanguageWord("Sehan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
@@ -1520,6 +1548,22 @@ DefineLanguageWord("Speck", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Type = "noun",
 	Meanings = {"Bacon"},
 	DerivesFrom = {"proto-indo-european", "noun", "Spyxwon"} -- apparently
+})
+
+DefineLanguageWord("Sper", { -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 467.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Spear"},
+	DerivesFrom = {"proto-germanic", "noun", "Speru"},
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Spioz", { -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 467.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Spear"},
+	DerivesFrom = {"proto-germanic", "noun", "Speuta"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Standan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
@@ -1682,12 +1726,6 @@ DefineLanguageWord("Trūēn", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Meanings = {"Trust"}
 })
 
-DefineLanguageWord("Vernawun", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
-	Language = "old-high-german",
-	Type = "noun",
-	Meanings = {"Wood-Carrying Boats"}
-})
-
 DefineLanguageWord("Truhtîn", { -- source also gives the alternative form "trohtîn"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 113.
 	Language = "old-high-german",
 	Type = "noun",
@@ -1714,6 +1752,12 @@ DefineLanguageWord("Urlaga", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Type = "noun",
 	Meanings = {"Fate"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Vernawun", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Wood-Carrying Boats"}
 })
 
 DefineLanguageWord("Wald", { -- Fick also gives the alternative form "walth"; Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 31; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 203.

@@ -32,12 +32,12 @@
 --
 
 DefineUnitType("unit-suebi-swordsman", {
-	Name = _("Krieger"),
+	Name = "Kregar",
 	Parent = "unit-teuton-swordsman",
 	Civilization = "teuton",
 	Faction = "suebi-tribe",
-	Description = _("Little armored but intensely courageous, the Suebi swordsmen are fierce opponents in battle."),
-	Background = _("\"Krieger\" is the German word for \"warrior\"."),
+	Description = "Little armored but intensely courageous, the Suebi swordsmen are fierce opponents in battle.",
+	Background = "\"Krêg\" is the Old High German word for \"tenacity\", and possibly \"war\".",
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {

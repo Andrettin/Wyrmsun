@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015-2016 by Andrettin
+--      (c) Copyright 2015-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -910,6 +910,13 @@ DefineLanguageWord("Knehta", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Meanings = {}
 })
 
+DefineLanguageWord("Kreiga", { -- source also gives the alternative form "krîga"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 36.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Fight", "War"}, -- source gives the German "Streit, Krieg" as the meaning
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Krenga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 35.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -1198,6 +1205,12 @@ DefineLanguageWord("Reupôn", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Meanings = {"Ptarmigan"} -- source gives meaning as "Schneehuhn (tetrao lagopus)"
 })
 
+DefineLanguageWord("Rīdan", { -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 412.
+	Language = "proto-germanic",
+	Type = "verb",
+	Meanings = {"Ride", "Move", "Swing", "Rock"}
+})
+
 DefineLanguageWord("Rîka", { -- source also gives the alternative form "Rîkia"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -1316,6 +1329,12 @@ DefineLanguageWord("Skîrô", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Skutan", { -- the source gives "skut(i)an; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 234.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Archer"} -- the source gives "Schütze" as the meaning
+})
+
 DefineLanguageWord("Smaiþra", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 263.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -1349,6 +1368,20 @@ DefineLanguageWord("Snaigva", { -- source also gives the forms "Snaiva", "Snaigv
 	Meanings = {"Snow"},
 	Gender = "masculine",
 	Uncountable = true -- seems likely to be uncountable
+})
+
+DefineLanguageWord("Speru", { -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 467.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Spear"},
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Speuta", { -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 467.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Spear"},
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Staynas", { -- as given by Lehmann; Fick gives "staina" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.

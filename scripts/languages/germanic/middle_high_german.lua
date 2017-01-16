@@ -561,6 +561,17 @@ DefineLanguageWord("Kneht", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	DerivesFrom = {"old-high-german", "noun", "Cneht"}
 })
 
+DefineLanguageWord("Kriec", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 36.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Struggle", "Fight", "Combat"}, -- source gives the German "Anstrengung, Streit, Kampf" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Krêg"},
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Krieges"
+	}
+})
+
 DefineLanguageWord("Krinc", { -- source also gives the alternative form "kranc"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 35.
 	Language = "middle-high-german",
 	Type = "noun",

@@ -33,6 +33,12 @@ DefineCharacter("adalram", { -- Source: James Westfall Thompson, "Medieval Germa
 	ProvinceOfOrigin = "Salzburg",
 	Year = 821, -- Archbishop of Salzburg from 821 on
 	DeathYear = 836, -- Archbishop of Salzburg until 836
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "bavaria" or GetPlayerData(trigger_player, "Faction") == "austria") then
+			return true
+		end
+		return false
+	end
 })
 
 --[[

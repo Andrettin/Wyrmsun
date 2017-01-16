@@ -88,11 +88,11 @@ DefineUnitType("unit-teuton-worker", { Name = _("Bura"),
 } )
 
 DefineUnitType("unit-teuton-swordsman", {
-	Name = _("Krieger"),
+	Name = "Kregar", -- tentative suffix added to Old High German "Krêg" to make a corresponding word to modern German "Krieger"
 	Parent = "unit-template-infantry",
 	Civilization = "teuton",
-	Description = _("The dauntless West Germanic swordsmen ravage the battlefield with their longswords, being second to few other warriors in combat."),
-	Background = _("\"Krieger\" is the German word for \"warrior\"."),
+	Description = "The dauntless West Germanic swordsmen ravage the battlefield with their longswords, being second to few other warriors in combat.",
+	Background = "\"Krêg\" is the Old High German word for \"tenacity\", and possibly \"war\".",
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {
@@ -122,7 +122,7 @@ DefineUnitType("unit-teuton-swordsman", {
 	WeaponClasses = {"sword", "thrusting-sword"},
 	HackDamage = true,
 	ButtonKey = "k",
-	ButtonHint = _("Train ~!Krieger"),
+	ButtonHint = _("Train ~!Kregar"),
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-quenching", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-trickery", "upgrade-item-suffix-of-victory"}, -- allow more affixes than normal for the unit's level, to compensate for the unit not being upgradeable
 	Variations = {
@@ -231,11 +231,11 @@ DefineUnitType("unit-teuton-swordsman", {
 } )
 
 DefineUnitType("unit-teuton-veteran-swordsman", {
-	Name = "Adel",
+	Name = "Adal",
 	Parent = "unit-template-veteran-infantry",
 	Civilization = "teuton",
 	Description = "These high-ranking swordsmen have honed their combat skills to a greater degree than many of their counterparts.",
-	Background = "\"Adel\" is the German word for \"noble\".",
+	Background = "\"Adal\" is the Old High German word for \"noble\".",
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {
@@ -371,11 +371,11 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 } )
 
 DefineUnitType("unit-teuton-heroic-swordsman", {
-	Name = "Degen",
+	Name = "Truhtin",
 	Parent = "unit-template-heroic-infantry",
 	Civilization = "teuton",
 	Description = "Amongst the most skilled in the land, these swordsmen often serve as retainers for chieftains and kings.",
-	Background = "\"Degen\" is the Middle High German word for \"hero\", and is a cognate of English \"thane\".",
+	Background = "\"Truhtîn\" is an Old High German word for \"lord\" or \"warlord\".",
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {
@@ -513,11 +513,10 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 })
 
 DefineUnitType("unit-teuton-spearman", {
-	Name = "Speerkampfer",
+	Name = "Spearman",
 	Parent = "unit-template-spearman",
 	Civilization = "teuton",
-	Description = _("With spears in hand, these Teuton warriors stoically defend their homelands."),
-	Background = _("\"Speer\" is the German word for \"spear\", while \"kämpfer\" means \"warrior\"."),
+	Description = "With spears in hand, these Teuton warriors stoically defend their homelands.",
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {
@@ -612,11 +611,11 @@ DefineUnitType("unit-teuton-spearman", {
 } )
 
 DefineUnitType("unit-teuton-archer", {
-	Name = _("Schutze"),
+	Name = "Scuzzo",
 	Parent = "unit-template-archer",
 	Civilization = "teuton",
-	Description = _("Teuton archers are a perilous lot. They excel at ambushing enemies in the forests of their homelands."),
-	Background = _("\"Schütze\" is the German word for \"archer\"."),
+	Description = "Teuton archers are a perilous lot. They excel at ambushing enemies in the forests of their homelands.",
+	Background = "\"Scuzzo\" is an Old High German word for \"archer\".",
 	Image = {"file", "human/units/body_archer.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow_archer.png", "size", {72, 72}},
 	LayerImages = {
@@ -647,7 +646,7 @@ DefineUnitType("unit-teuton-archer", {
 	CanCastSpell = {"spell-precise-shot"},
 	AutoCastActive = {"spell-precise-shot"},
 	ButtonKey = "s",
-	ButtonHint = _("Train ~!Schutze"),
+	ButtonHint = "Train ~!Scuzzo",
 	AiDrops = {"unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-quenching", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-trickery", "upgrade-item-suffix-of-victory"}, -- allow more affixes than normal for the unit's level, to compensate for the unit not being upgradeable
 	Sounds = {
@@ -662,11 +661,11 @@ DefineUnitType("unit-teuton-archer", {
 } )
 
 DefineUnitType("unit-teuton-ritter", {
-	Name = "Ritter",
+	Name = "Ritar", -- changed the verb "Rītan" to "Rītar" in a tentative way to make correspondent words to German "reiten" and "Ritter"
 	Parent = "unit-template-cavalry",
 	Civilization = "teuton",
 	Description = "The Teutons excel in mounted combat. Their well-armored and trained heavy cavalry strikes fear in the hearts of their enemies whenever they are seen upon the battlefield.",
-	Background = _("\"Ritter\" is the German word for \"knight\"."),
+	Background = "\"Rītan\" is the Old High German word for \"to ride\".",
 	Image = {"file", "teuton/units/ritter.png", "size", {72, 72}},
 	LayerImages = {
 		{"layer", "shield", "file", "teuton/units/ritter_shield.png"}
@@ -686,7 +685,7 @@ DefineUnitType("unit-teuton-ritter", {
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
 	ButtonKey = "r",
-	ButtonHint = _("Train ~!Ritter"),
+	ButtonHint = _("Train ~!Ritar"),
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-victory"}, -- allow more affixes than normal for the unit's level, to compensate for the unit not being upgradeable
 	Corpse = "unit-human-dead-body",
@@ -702,11 +701,11 @@ DefineUnitType("unit-teuton-ritter", {
 } )
 
 DefineUnitType("unit-teuton-knight-lord", {
-	Name = "Landesherr",
+	Name = "Heriro",
 	Parent = "unit-template-heroic-cavalry",
 	Civilization = "teuton",
-	Description = "Heavily-armored and possessing a lifetime of martial and horseriding training, Teuton lords sweep the battlefield cutting down their foes.",
-	Background = "\"Landesherr\" is a German word for \"lord\".",
+	Description = "Heavily-armored and possessing years of martial and horse-riding training, Teuton lords sweep the battlefield cutting down their foes.",
+	Background = "\"Hēr(i)ro\" is an Old High German word for \"sir\", which gave rise to the modern German \"Herr\", meaning \"lord\".",
 	Image = {"file", "teuton/units/ritter.png", "size", {72, 72}},
 	LayerImages = {
 		{"layer", "shield", "file", "teuton/units/ritter_shield.png"}

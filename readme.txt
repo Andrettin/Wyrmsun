@@ -84,8 +84,9 @@ https://github.com/Andrettin/Wyrmsun
 * Units
 - Added Germanic and Teuton level 3 swordsmen.
 - Added portrait for the Frankish level 3 swordsman for those who have the Frankish Faction Flair DLC.
-- Added Teuton "Landesherr", and upgrade to the Ritter (icon by Jinn).
-- Added portrait for the Frankish level 3 knight for those who have the Frankish Faction Flair DLC. 
+- Added an upgrade to the Teuton cavalry (icon by Jinn).
+- Added portrait for the Frankish level 3 knight for those who have the Frankish Faction Flair DLC.
+- Changed Teuton unit type names to be based on Old High German words (rather than modern German ones), to better reflect the time period the civilization represents. Units without a suitable Old High German name were changed to English. The exception to this is the Kogge, which is based on a late medieval ship.
 
 -----------------------------------------------------------------------
 - 2.5.3

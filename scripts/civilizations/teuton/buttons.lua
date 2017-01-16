@@ -142,24 +142,24 @@ DefineButton( { Pos = 9, Level = 1,
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-spatha",
 	Action = "research", Value = "upgrade-teuton-spatha",
 	Allowed = "check-single-research",
-	Key = "p", Hint = _("Research S~!patha"), Popup = "popup-research",
-	Description = "+2 Damage for Kriegers and Ritters.",
+	Key = "p", Hint = "Research S~!patha", Popup = "popup-research",
+	Description = "+2 Damage for Kregars and Ritars.",
 	ForUnit = {"unit-teuton-smithy", "unit-latin-smithy"}
 } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-frankish-spatha",
 	Action = "research", Value = "upgrade-frank-spatha",
 	Allowed = "check-single-research",
-	Key = "p", Hint = _("Research S~!patha"), Popup = "popup-research",
-	Description = "+2 Damage for Kriegers and Ritters.",
+	Key = "p", Hint = "Research S~!patha", Popup = "popup-research",
+	Description = "+2 Damage for Kregars and Ritars.",
 	ForUnit = {"unit-teuton-smithy"}
 } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-iron-shield",
 	Action = "research", Value = "upgrade-teuton-iron-shield",
 	Allowed = "check-single-research",
-	Key = "s", Hint = _("Research Iron ~!Shield"), Popup = "popup-research",
-	Description = "+2 Armor for Kriegers, Speerkampfers and Ritters.",
+	Key = "s", Hint = "Research Iron ~!Shield", Popup = "popup-research",
+	Description = "+2 Armor for Kregars, Spearmen and Ritars.",
 	ForUnit = {"unit-teuton-smithy", "unit-latin-smithy"}
 } )
 
@@ -183,7 +183,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-pike",
 	Action = "research", Value = "upgrade-teuton-pike",
 	Allowed = "check-single-research",
 	Key = "k", Hint = _("Research Pi~!ke"), Popup = "popup-research",
-	Description = _("+2 Damage for Speerkampfers."),
+	Description = "+2 Damage for Spearmen.",
 	ForUnit = {"unit-teuton-lumber-mill"}
 } )
 
@@ -191,7 +191,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-bodkin-arrow",
 	Action = "research", Value = "upgrade-teuton-bodkin-arrow",
 	Allowed = "check-single-research",
 	Key = "a", Hint = _("Research Bodkin ~!Arrow"), Popup = "popup-research",
-	Description = "+2 Damage for Schutzes.",
+	Description = "+2 Damage for Scuzzos.",
 	ForUnit = {"unit-teuton-lumber-mill"}
 } )
 
@@ -230,7 +230,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-cauldron",
 	Action = "research", Value = "upgrade-teuton-alchemy",
 	Allowed = "check-single-research",
-	Description = _("+1 Fire Damage for Schutzes, +5 Fire Damage for Catapults."),
+	Description = "+1 Fire Damage for Scuzzos, +5 Fire Damage for Catapults.",
 	Key = "a", Hint = _("Research ~!Alchemy"), Popup = "popup-research",
 	ForUnit = {"unit-teuton-stronghold"}
 } )
@@ -239,54 +239,60 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-cauldron",
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-guard-tower",
   Action = "upgrade-to", Value = "unit-teuton-guard-tower",
-  Key = "g", Hint = _("Upgrade to ~!Guard Tower"), Popup = "popup-building",
+  Key = "g", Hint = "Upgrade to ~!Guard Tower", Popup = "popup-building",
   ForUnit = {"unit-teuton-watch-tower"} } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-stronghold",
 	Action = "upgrade-to", Value = "unit-teuton-stronghold",
 	Allowed = "check-upgrade-to",
-	Key = "u", Hint = _("Upgrade to B~!urg"), Popup = "popup-building",
+	Key = "u", Hint = "Upgrade to B~!urg", Popup = "popup-building",
 	ForUnit = {"unit-teuton-town-hall", "unit-latin-town-hall"}
 } )
 
 DefineButton( { Pos = 1, Level = 2,
 	Action = "experience-upgrade-to", Value = "unit-teuton-veteran-swordsman",
-	Key = "a", Hint = _("Upgrade to ~!Adel"), Popup = "popup-unit",
+	Key = "a", Hint = "Upgrade to ~!Adal", Popup = "popup-unit",
 	ForUnit = {"unit-teuton-swordsman", "unit-suebi-swordsman"}
 } )
 
 DefineButton( { Pos = 1, Level = 2,
 	Action = "experience-upgrade-to", Value = "unit-teuton-heroic-swordsman",
-	Key = "d", Hint = _("Upgrade to ~!Degen"), Popup = "popup-unit",
+	Key = "d", Hint = "Upgrade to ~!Truhtin", Popup = "popup-unit",
 	ForUnit = {"unit-teuton-veteran-swordsman"}
 } )
 
 DefineButton( { Pos = 1, Level = 2,
 	Action = "experience-upgrade-to", Value = "unit-frank-veteran-swordsman",
-	Key = "a", Hint = _("Upgrade to ~!Adel"), Popup = "popup-unit",
+	Key = "a", Hint = "Upgrade to ~!Adal", Popup = "popup-unit",
 	ForUnit = {"unit-frank-swordsman"}
 } )
 
 DefineButton( { Pos = 1, Level = 2,
 	Action = "experience-upgrade-to", Value = "unit-frank-heroic-swordsman",
-	Key = "d", Hint = _("Upgrade to ~!Degen"), Popup = "popup-unit",
+	Key = "d", Hint = "Upgrade to ~!Truhtin", Popup = "popup-unit",
 	ForUnit = {"unit-frank-veteran-swordsman"}
 } )
 
 DefineButton( { Pos = 2, Level = 2, Icon = "icon-teuton-ritter",
 	Action = "experience-upgrade-to", Value = "unit-teuton-ritter",
-	Key = "r", Hint = "Upgrade to ~!Ritter", Popup = "popup-unit",
+	Key = "r", Hint = "Upgrade to ~!Ritar", Popup = "popup-unit",
 	ForUnit = {"unit-teuton-swordsman", "unit-suebi-swordsman"}
+} )
+
+DefineButton( { Pos = 2, Level = 2,
+	Action = "experience-upgrade-to", Value = "unit-frank-horseman",
+	Key = "r", Hint = "Upgrade to ~!Ritar", Popup = "popup-unit",
+	ForUnit = {"unit-frank-swordsman"}
 } )
 
 DefineButton( { Pos = 1, Level = 2,
 	Action = "experience-upgrade-to", Value = "unit-teuton-knight-lord",
-	Key = "h", Hint = "Upgrade to ~!Landesherr", Popup = "popup-unit",
+	Key = "h", Hint = "Upgrade to ~!Heriro", Popup = "popup-unit",
 	ForUnit = {"unit-teuton-ritter"}
 } )
 
 DefineButton( { Pos = 1, Level = 2,
 	Action = "experience-upgrade-to", Value = "unit-frank-knight-lord",
-	Key = "h", Hint = "Upgrade to ~!Landesherr", Popup = "popup-unit",
+	Key = "h", Hint = "Upgrade to ~!Heriro", Popup = "popup-unit",
 	ForUnit = {"unit-frank-horseman"}
 } )
