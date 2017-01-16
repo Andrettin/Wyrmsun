@@ -42,7 +42,7 @@ DefineCharacter("volsung", { -- Source: C. Scott Littleton, "The Germanic Sword 
 DefineCharacter("chlodio", { -- Source: "Medieval Warfare V.2", 2013, p. 6.
 	Name = "Chlodio",
 	Gender = "male",
-	Type = "unit-frank-horseman",
+	Type = "unit-frank-knight-lord", -- chieftain/king
 	Civilization = "teuton",
 	Faction = "frank-tribe",
 	Conditions = function(s)
@@ -57,7 +57,7 @@ DefineCharacter("chlodio", { -- Source: "Medieval Warfare V.2", 2013, p. 6.
 DefineCharacter("merovech", { -- Source: "Medieval Warfare V.2", 2013, p. 6.
 	Name = "Merovech",
 	Gender = "male",
-	Type = "unit-frank-horseman",
+	Type = "unit-frank-knight-lord", -- chieftain/king
 	Civilization = "teuton",
 	Faction = "frank-tribe",
 	Description = "Merovech was a Frankish chieftain renowned for being the ancestor of the Merovingian dynasty.", -- king of the Franks, but what he ruled was more of a tribal territory than an established polity
@@ -74,7 +74,7 @@ DefineCharacter("chlodwig", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	Name = "Chlodwig", -- Frankish king; married Clothilda (daughter of the Burgundian king Chilperic); he converted to Christianity; his reign began in 481 and he died in 511; also known as "Chlodovech", "Chlodoveus" or "Clovis"
 --	FamilyName = "Merovingian",
 	Gender = "male",
-	Type = "unit-frank-horseman",
+	Type = "unit-frank-knight-lord", -- king
 	Civilization = "teuton",
 	Faction = "francia",
 	Description = "Chlodwig was the founder of the Frankish kingdom.",
@@ -91,7 +91,7 @@ DefineCharacter("chlothar", { -- ruled in Soissons; died in 561; Source: Edward 
 	Name = "Chlothar",
 --	FamilyName = "Merovingian",
 	Gender = "male",
-	Type = "unit-frank-horseman",
+	Type = "unit-frank-knight-lord", -- king
 	Civilization = "teuton",
 	Faction = "francia",
 	Father = "chlodwig",
@@ -107,7 +107,7 @@ DefineCharacter("chilperich", { -- Source: Edward G. Fichtner, "Sigfrid's Merovi
 	Name = "Chilperich",
 --	FamilyName = "Merovingian",
 	Gender = "male",
-	Type = "unit-frank-horseman",
+	Type = "unit-frank-knight-lord", -- king
 	Civilization = "teuton",
 	Faction = "francia",
 	Description = "Born to the late Frankish king Chlothar I, Chilperich harbors great ambitions to establish his supremacy over the entire realm, subsuming his brothers' share of their father's inheritance.",
@@ -126,7 +126,7 @@ DefineCharacter("gunthram", { -- died in 592; Source: Edward G. Fichtner, "Sigfr
 	Name = "Gunthram",
 --	FamilyName = "Merovingian",
 	Gender = "male",
-	Type = "unit-frank-horseman",
+	Type = "unit-frank-knight-lord", -- king
 	Civilization = "teuton",
 	Faction = "burgundia",
 	Description = "As one of the sons of the Frankish king Chlothar I, Gunthram inherited the Burgundian part of the Frankish realm from his father.",
@@ -145,7 +145,7 @@ DefineCharacter("sigibert", { -- Sigibert I (535-575), Frankish king; son of Chl
 	Name = "Sigibert",
 --	FamilyName = "Merovingian",
 	Gender = "male",
-	Type = "unit-frank-horseman",
+	Type = "unit-frank-knight-lord", -- king
 	Civilization = "teuton",
 	Faction = "austrasia",
 	Description = "The son of the Frankish king Chlothar I, Sigibert inherited vast lands upon the death of his father. A courageous hero, Sigibert faces both the enmity of his brother Chilperich and the threat of invasion from abroad.",

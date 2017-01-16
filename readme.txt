@@ -84,6 +84,8 @@ https://github.com/Andrettin/Wyrmsun
 * Units
 - Added Germanic and Teuton level 3 swordsmen.
 - Added portrait for the Frankish level 3 swordsman for those who have the Frankish Faction Flair DLC.
+- Added Teuton "Landesherr", and upgrade to the Ritter (icon by Jinn).
+- Added portrait for the Frankish level 3 knight for those who have the Frankish Faction Flair DLC. 
 
 -----------------------------------------------------------------------
 - 2.5.3

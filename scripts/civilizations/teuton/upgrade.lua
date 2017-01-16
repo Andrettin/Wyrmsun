@@ -118,14 +118,14 @@ DefineModifier("upgrade-teuton-spatha",
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"},
 	{"apply-to", "unit-suebi-swordsman"},
-	{"apply-to", "unit-teuton-ritter"}
+	{"apply-to", "unit-teuton-ritter"}, {"apply-to", "unit-teuton-knight-lord"}
 )
 
 DefineModifier("upgrade-frank-spatha",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-frank-swordsman"}, {"apply-to", "unit-frank-veteran-swordsman"}, {"apply-to", "unit-frank-heroic-swordsman"},
-	{"apply-to", "unit-frank-horseman"}
+	{"apply-to", "unit-frank-horseman"}, {"apply-to", "unit-frank-knight-lord"}
 )
 
 DefineModifier("upgrade-teuton-pike",
@@ -141,7 +141,7 @@ DefineModifier("upgrade-teuton-iron-shield",
 	{"apply-to", "unit-suebi-swordsman"},
 	{"apply-to", "unit-frank-swordsman"}, {"apply-to", "unit-frank-veteran-swordsman"}, {"apply-to", "unit-frank-heroic-swordsman"},
 	{"apply-to", "unit-teuton-spearman"}, {"apply-to", "unit-frank-spearman"},
-	{"apply-to", "unit-teuton-ritter"}, {"apply-to", "unit-frank-horseman"}
+	{"apply-to", "unit-teuton-ritter"}, {"apply-to", "unit-teuton-knight-lord"}, {"apply-to", "unit-frank-horseman"}, {"apply-to", "unit-frank-knight-lord"}
 )
 
 DefineModifier("upgrade-teuton-bodkin-arrow",

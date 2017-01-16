@@ -662,10 +662,10 @@ DefineUnitType("unit-teuton-archer", {
 } )
 
 DefineUnitType("unit-teuton-ritter", {
-	Name = _("Ritter"),
+	Name = "Ritter",
 	Parent = "unit-template-cavalry",
 	Civilization = "teuton",
-	Description = _("The Teutons excel in mounted combat. Their well-armored and trained heavy cavalry strikes fear in the hearts of their enemies whenever they are seen upon the battlefield."),
+	Description = "The Teutons excel in mounted combat. Their well-armored and trained heavy cavalry strikes fear in the hearts of their enemies whenever they are seen upon the battlefield.",
 	Background = _("\"Ritter\" is the German word for \"knight\"."),
 	Image = {"file", "teuton/units/ritter.png", "size", {72, 72}},
 	LayerImages = {
@@ -688,6 +688,45 @@ DefineUnitType("unit-teuton-ritter", {
 	InvertedSoutheastArms = true,
 	ButtonKey = "r",
 	ButtonHint = _("Train ~!Ritter"),
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-victory"}, -- allow more affixes than normal for the unit's level, to compensate for the unit not being upgradeable
+	Corpse = "unit-human-dead-body",
+	Sounds = {
+		"selected", "basic-teuton-voices-selected-group",
+		"acknowledge", "basic-teuton-voices-acknowledge",
+		"ready", "basic-teuton-voices-ready",
+		"help", "basic-teuton-voices-help",
+		"dead", "basic-human-voices-dead",
+		"hit", "sword-attack",
+		"miss", "attack-miss"
+	}
+} )
+
+DefineUnitType("unit-teuton-knight-lord", {
+	Name = "Landesherr",
+	Parent = "unit-template-heroic-cavalry",
+	Civilization = "teuton",
+	Description = "Heavily-armored and possessing a lifetime of martial and horseriding training, Teuton lords sweep the battlefield cutting down their foes.",
+	Background = "\"Landesherr\" is a German word for \"lord\".",
+	Image = {"file", "teuton/units/ritter.png", "size", {72, 72}},
+	LayerImages = {
+		{"layer", "shield", "file", "teuton/units/ritter_shield.png"}
+	},
+	Animations = "animations-melee-unit",
+	Icon = "icon-conrad-the-red",
+	DefaultEquipment = {
+		{"weapon", "unit-short-sword"},
+		{"shield", "unit-wooden-shield"},
+		{"boots", "unit-boots"}
+	},
+	HairColor = "brown",
+	Armor = 3, BasicDamage = 15, -- +1 armor, +1 damage
+	DaySightRangeBonus = 1,
+	NightSightRangeBonus = -1,
+	WeaponClasses = {"sword"},
+	HackDamage = true,
+	InvertedEastArms = true,
+	InvertedSoutheastArms = true,
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-victory"}, -- allow more affixes than normal for the unit's level, to compensate for the unit not being upgradeable
 	Corpse = "unit-human-dead-body",

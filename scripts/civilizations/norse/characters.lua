@@ -280,7 +280,7 @@ DefineCharacter("alric-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1
 	Name = "Alric",
 	FamilyName = "Yngling",
 	Gender = "male",
-	Type = "unit-teuton-ritter", -- horseriding described as being customary for him
+	Type = "unit-teuton-knight-lord", -- horseriding described as being customary for him; king
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden",
 	Father = "agne-yngling",
@@ -295,7 +295,7 @@ DefineCharacter("eric-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 18
 	Name = "Eric",
 	FamilyName = "Yngling",
 	Gender = "male",
-	Type = "unit-teuton-ritter", -- horseriding described as being customary for him
+	Type = "unit-teuton-knight-lord", -- horseriding described as being customary for him; king
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden",
 	Father = "agne-yngling",

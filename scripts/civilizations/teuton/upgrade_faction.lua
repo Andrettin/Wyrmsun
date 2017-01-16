@@ -137,6 +137,10 @@ DefineModifier("upgrade-frank-tribe-faction",
 	{"apply-to", "unit-teuton-ritter"}, {"convert-to", "unit-frank-horseman"}
 )
 
+DefineModifier("upgrade-frank-tribe-faction",
+	{"apply-to", "unit-teuton-knight-lord"}, {"convert-to", "unit-frank-knight-lord"}
+)
+
 DefineModifier("upgrade-frisian-tribe-faction",
 	{"Armor", 1},
 	{"HitPoints", 5},

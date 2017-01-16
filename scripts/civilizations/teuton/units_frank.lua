@@ -459,3 +459,17 @@ DefineUnitType("unit-frank-horseman", {
 	AiDrops = {"unit-frankish-spatha"}
 })
 
+DefineUnitType("unit-frank-knight-lord", {
+	Name = "Landesherr",
+	Parent = "unit-teuton-knight-lord",
+	Civilization = "teuton",
+	Faction = "frank-tribe",
+	Icon = "icon-conrad-the-red",
+	LayerImages = {
+		{"layer", "shield", "file", "dlcs/frankish_faction_flair/graphics/units/frank_horseman_shield.png"}
+	},
+	Armor = 4, BasicDamage = 16, -- +1 armor, +1 damage
+	Points = 110, -- +10 points
+	AiDrops = {"unit-frankish-spatha"}
+})
+

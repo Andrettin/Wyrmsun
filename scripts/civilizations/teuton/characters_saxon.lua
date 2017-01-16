@@ -114,7 +114,7 @@ DefineCharacter("henry-of-saxony", { -- Source: Susan D. Fuller, "Pagan Charms i
 	Name = "Henry",
 	ExtraName = "of Saxony", -- to differentiate him
 	Gender = "male",
-	Type = "unit-teuton-ritter", -- noble, and during his reign horses were made a main element of the Saxon military
+	Type = "unit-teuton-knight-lord", -- noble, and during his reign horses were made a main element of the Saxon military; duke
 	Civilization = "teuton",
 	ProvinceOfOrigin = "Hanover", -- correct?
 	Year = 919, -- reign began

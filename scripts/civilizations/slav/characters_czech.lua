@@ -28,7 +28,7 @@
 DefineCharacter("charles", { -- Source: Alena Ježková, "77 Prague Legends", 2006, pp. 45, 87.
 	Name = "Charles", -- Emperor and king Charles IV
 	Gender = "male",
-	Type = "unit-teuton-ritter",
+	Type = "unit-teuton-knight-lord", -- emperor/king
 	Civilization = "slav",
 	ProvinceOfOrigin = "Bohemia", -- presumably
 	Year = 1357, -- The foundation stone of a new bridge to replace Judita Bridge was laid in the 9th of July 1357 by Emperor and King Charles IV

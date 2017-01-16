@@ -131,7 +131,7 @@ DefineCharacter("franz-joseph-von-habsburg", { -- Source: Waltraud Heindl, "Jose
 	Name = "Franz Joseph",
 	FamilyName = "von Habsburg",
 	Gender = "male",
-	Type = "unit-teuton-ritter", -- Emperor of Austria
+	Type = "unit-teuton-knight-lord", -- Emperor of Austria
 	Civilization = "teuton",
 	Faction = "austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
