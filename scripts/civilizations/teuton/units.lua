@@ -678,7 +678,6 @@ DefineUnitType("unit-teuton-ritter", {
 		{"shield", "unit-wooden-shield"},
 		{"boots", "unit-boots"}
 	},
-	HairColor = "brown",
 	Armor = 3, BasicDamage = 13, -- +1 armor, +1 damage
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
@@ -719,7 +718,6 @@ DefineUnitType("unit-teuton-knight-lord", {
 		{"shield", "unit-wooden-shield"},
 		{"boots", "unit-boots"}
 	},
-	HairColor = "brown",
 	Armor = 3, BasicDamage = 15, -- +1 armor, +1 damage
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
