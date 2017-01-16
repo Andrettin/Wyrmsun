@@ -10,7 +10,7 @@
 --
 --      buttons.ccl - Define the unit-buttons of the germanic civilization.
 --
---      (c) Copyright 2014-2016 by Andrettin
+--      (c) Copyright 2014-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,13 +25,6 @@
 --      You should have received a copy of the GNU General Public License
 --      along with this program; if not, write to the Free Software
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
---
-
-------------------------------------------------------------------------------
---	Define", "unit-button.
---
---	DefineButton( { Pos = n, Level = n 'icon ident Action = name ['value value]
---		['allowed check ['values]] Key = key, Hint = hint 'for-unit", "units)
 --
 
 -- Buildings -----------------------------------------------------
@@ -65,6 +58,14 @@ DefineButton( { Pos = 5, Level = 1, Icon = "icon-germanic-smithy",
 	Key = "s", Hint = _("Build ~!Smithy"), Popup = "popup-building",
 	ForUnit = {"unit-germanic-worker"}
 })
+
+--[[
+DefineButton( { Pos = 7, Level = 1, Icon = "icon-germanic-temple",
+	Action = "build", Value = "unit-germanic-temple",
+	Key = "p", Hint = _("Build Tem~!ple"), Popup = "popup-building",
+	ForUnit = {"unit-germanic-worker"}
+})
+--]]
 
 DefineButton( { Pos = 9, Level = 1, Icon = "icon-germanic-dock",
 	Action = "build", Value = "unit-germanic-dock",

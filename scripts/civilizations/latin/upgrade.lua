@@ -68,6 +68,10 @@ DefineModifier("upgrade-latin-civilization",
 )
 
 DefineModifier("upgrade-latin-civilization",
+	{"apply-to", "unit-germanic-temple"}, {"convert-to", "unit-teuton-temple"}
+)
+
+DefineModifier("upgrade-latin-civilization",
 	{"apply-to", "unit-teuton-stables"}, {"convert-to", "unit-latin-stables"}
 )
 

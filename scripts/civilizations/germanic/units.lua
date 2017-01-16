@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2014-2016 by Andrettin
+--      (c) Copyright 2014-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -545,10 +545,10 @@ DefineUnitType("unit-germanic-carpenters-shop", { Name = _("Carpenter's Shop"),
 } )
 
 DefineUnitType("unit-germanic-smithy", {
-	Name = _("Smithy"),
+	Name = "Smithy",
 	Parent = "unit-template-smithy",
 	Civilization = "germanic",
-	Description = _("It is in these smithies that Germanic craftsmen prepare and seek to continuously improve the arms warriors will wield into battle."),
+	Description = "It is in these smithies that Germanic craftsmen prepare and seek to continuously improve the arms warriors will wield into battle.",
 	Image = {"file", "germanic/buildings/smithy.png", "size", {96, 96}},
 	Shadow = {"file", "germanic/buildings/smithy_shadow.png", "size", {96, 96}},
 	Icon = "icon-germanic-smithy",
@@ -557,7 +557,21 @@ DefineUnitType("unit-germanic-smithy", {
 	Sounds = {
 		"help", "basic-germanic-voices-help-town"
 	}
-} )
+})
+
+DefineUnitType("unit-germanic-temple", {
+	Name = "Temple",
+	Parent = "unit-template-temple",
+	Civilization = "germanic",
+	Description = "In Germanic sacred sites their priests practice various rituals, including the sacrifice of objects, livestock - and sometimes even people. Some of these locations were also used to observe celestial bodies and their movements.",
+	Image = {"file", "germanic/buildings/temple.png", "size", {96, 96}},
+	Shadow = {"file", "germanic/buildings/temple_shadow.png", "size", {96, 96}},
+	Icon = "icon-germanic-temple",
+--	Trains = {"unit-germanic-priest"},
+	Sounds = {
+		"help", "basic-germanic-voices-help-town"
+	}
+})
 
 DefineUnitType("unit-germanic-dock", {
 	Name = _("Dock"),

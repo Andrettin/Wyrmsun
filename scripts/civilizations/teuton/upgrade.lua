@@ -235,6 +235,10 @@ DefineModifier("upgrade-teuton-civilization",
 )
 
 DefineModifier("upgrade-teuton-civilization",
+	{"apply-to", "unit-germanic-temple"}, {"convert-to", "unit-teuton-temple"}
+)
+
+DefineModifier("upgrade-teuton-civilization",
 	{"apply-to", "unit-germanic-dock"}, {"convert-to", "unit-teuton-dock"}
 )
 

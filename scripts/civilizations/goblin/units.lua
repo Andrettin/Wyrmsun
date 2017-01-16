@@ -645,7 +645,7 @@ DefineUnitType("unit-goblin-lumber-mill", { Name = _("Lumber Mill"),
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
 	}
-} )
+})
 
 DefineUnitType("unit-goblin-smithy", {
 	Name = _("Fugla Forge"),
@@ -663,7 +663,7 @@ DefineUnitType("unit-goblin-smithy", {
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
 	}
-} )
+})
 
 DefineUnitType("unit-goblin-temple", {
 	Name = _("Temple"),
@@ -677,7 +677,7 @@ DefineUnitType("unit-goblin-temple", {
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
 	}
-} )
+})
 
 DefineUnitType("unit-goblin-watch-tower", {
 	Name = _("Watch Tower"),

@@ -33,7 +33,7 @@ Units = {
 	"unit-germanic-worker", "unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-spearman", "unit-germanic-archer",
 	"unit-germanic-transport-ship",
 	"unit-germanic-town-hall", "unit-germanic-farm", "unit-germanic-barracks",
-	"unit-germanic-carpenters-shop", "unit-germanic-smithy",
+	"unit-germanic-carpenters-shop", "unit-germanic-smithy", --"unit-germanic-temple",
 	"unit-germanic-dock",
 	"upgrade-germanic-broad-sword", "upgrade-germanic-long-spear", "upgrade-germanic-bronze-shield",
 	"upgrade-germanic-barbed-arrow",
