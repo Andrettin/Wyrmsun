@@ -231,11 +231,11 @@ DefineUnitType("unit-teuton-swordsman", {
 } )
 
 DefineUnitType("unit-teuton-veteran-swordsman", {
-	Name = _("Adel"),
+	Name = "Adel",
 	Parent = "unit-template-veteran-infantry",
 	Civilization = "teuton",
-	Description = _("These high-ranking swordsmen have honed their combat skills to a greater degree than many of their counterparts."),
-	Background = _("\"Adel\" is the German word for \"noble\"."),
+	Description = "These high-ranking swordsmen have honed their combat skills to a greater degree than many of their counterparts.",
+	Background = "\"Adel\" is the German word for \"noble\".",
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {
@@ -263,9 +263,6 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 	NightSightRangeBonus = -1,
 	WeaponClasses = {"sword", "thrusting-sword"},
 	HackDamage = true,
-	Mana = {Enable = true, Max = 150, Value = 150, Increase = 1},
-	CanCastSpell = {"spell-puncture"},
-	AutoCastActive = {"spell-puncture"},
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-quenching", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-trickery", "upgrade-item-suffix-of-victory"}, -- allow more affixes than normal for the unit's level, to compensate for the unit not being upgradeable
 	Variations = {
@@ -373,7 +370,150 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 	}
 } )
 
-DefineUnitType("unit-teuton-spearman", { Name = _("Speerkampfer"),
+DefineUnitType("unit-teuton-heroic-swordsman", {
+	Name = "Degen",
+	Parent = "unit-template-heroic-infantry",
+	Civilization = "teuton",
+	Description = "Amongst the most skilled in the land, these swordsmen often serve as retainers for chieftains and kings.",
+	Background = "\"Degen\" is the Middle High German word for \"hero\", and is a cognate of English \"thane\".",
+	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
+	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
+	LayerImages = {
+		{"layer", "hair", "file", "human/units/hair_warrior.png"},
+		{"layer", "left-arm", "file", "human/units/left_arm.png"},
+		{"layer", "right-arm", "file", "human/units/right_arm.png"},
+		{"layer", "right-hand", "file", "human/units/right_hand.png"},
+		{"layer", "clothing", "file", "teuton/units/chainmail.png"},
+		{"layer", "clothing-left-arm", "file", "teuton/units/chainmail_left_arm.png"},
+		{"layer", "clothing-right-arm", "file", "teuton/units/chainmail_right_arm.png"},
+		{"layer", "pants", "file", "human/units/pants.png"},
+		{"layer", "boots", "file", "teuton/units/leather_shoes.png"},
+		{"layer", "helmet", "file", "teuton/units/iron_helm.png"},
+		{"layer", "weapon", "file", "teuton/units/long_iron_sword.png"}
+	},
+	Animations = "animations-melee-unit-new", Icon = "icon-heroic-saxon-swordsman",
+	HairColor = "brown",
+	DefaultEquipment = {
+		{"weapon", "unit-short-sword"},
+		{"shield", "unit-wooden-shield"},
+		{"boots", "unit-boots"}
+	},
+	Corpse = "unit-human-dead-body",
+	DaySightRangeBonus = 1,
+	NightSightRangeBonus = -1,
+	WeaponClasses = {"sword", "thrusting-sword"},
+	HackDamage = true,
+	CanCastSpell = {"spell-puncture"},
+	AutoCastActive = {"spell-puncture"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-quenching", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-trickery", "upgrade-item-suffix-of-victory"},
+	Variations = {
+		{
+			"variation-id", "brown-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "black-hair",
+			"icon", "icon-heroic-saxon-swordsman-black-hair",
+			"hair-color", "black",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "blond-hair",
+			"icon", "icon-heroic-saxon-swordsman-blond-hair",
+			"hair-color", "blond",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "red-hair",
+			"icon", "icon-heroic-saxon-swordsman-red-hair",
+			"hair-color", "red",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"layer", "left-arm",
+			"variation-id", "left-arm",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield",
+			"item-not-equipped", "unit-bronze-shield",
+			"item-not-equipped", "unit-heater-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
+			"item-not-equipped", "unit-thrymgjol-shield"
+		},
+		{
+			"layer", "left-arm",
+			"variation-id", "shield-left-arm",
+			"file", "human/units/left_arm_shield.png",
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"item-equipped", "unit-bronze-shield",
+			"item-equipped", "unit-heater-shield",
+			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-kite-shield",
+			"item-equipped", "unit-thrymgjol-shield"
+		},
+		{
+			"layer", "weapon",
+			"variation-id", "broad-bronze-sword",
+			"file", "germanic/units/broad_bronze_sword.png",
+			"upgrade-forbidden", "upgrade-teuton-spatha",
+			"item-not-equipped", "unit-spatha",
+			"item-not-equipped", "unit-frankish-spatha"
+		},
+		{
+			"layer", "weapon",
+			"variation-id", "long-iron-sword",
+			"file", "teuton/units/long_iron_sword.png",
+			"upgrade-required", "upgrade-teuton-spatha",
+			"item-equipped", "unit-spatha",
+			"item-equipped", "unit-frankish-spatha"
+		},
+		{
+			"layer", "shield",
+			"variation-id", "no-shield",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield",
+			"item-not-equipped", "unit-bronze-shield",
+			"item-not-equipped", "unit-heater-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
+			"item-not-equipped", "unit-thrymgjol-shield"
+		},
+		{
+			"layer", "shield",
+			"variation-id", "bronze-shield",
+			"file", "germanic/units/bronze_shield.png",
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"item-equipped", "unit-bronze-shield",
+			"item-equipped", "unit-heater-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
+			"item-not-equipped", "unit-thrymgjol-shield"
+		},
+		{
+			"layer", "shield",
+			"variation-id", "iron-shield",
+			"file", "teuton/units/saxon_shield.png",
+			"upgrade-required", "upgrade-teuton-iron-shield",
+			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-kite-shield",
+			"item-equipped", "unit-thrymgjol-shield"
+		}
+	},
+	Sounds = {
+		"selected", "basic-teuton-voices-selected-group",
+		"acknowledge", "basic-teuton-voices-acknowledge",
+		"ready", "basic-teuton-voices-ready",
+		"help", "basic-teuton-voices-help",
+		"dead", "basic-human-voices-dead",
+		"hit", "sword-attack",
+		"miss", "attack-miss"
+	}
+})
+
+DefineUnitType("unit-teuton-spearman", {
+	Name = "Speerkampfer",
 	Parent = "unit-template-spearman",
 	Civilization = "teuton",
 	Description = _("With spears in hand, these Teuton warriors stoically defend their homelands."),

@@ -124,7 +124,7 @@ DefineCivilization("dwarf", {
 		"dwarf/ui/buttonpanel.png", -256, -200,
 		"dwarf/ui/infopanel.png", 0, -200
 	},
-	Description = _("Dwarves live in the world of Nidavellir, where gnomes, goblins and kobolds also dwell. They usually prefer living in mountainous terrain or underground, and build their dwellings mostly out of stone. Dwarves are particularly talented at smithing, and ownership of precious metals is a passion for many of them."),
+	Description = "Dwarves live in the world of Nidavellir, where gnomes, goblins and kobolds also dwell. They usually prefer living in mountainous terrain or underground, and build their dwellings mostly out of stone. Dwarves are particularly talented at smithing, and ownership of precious metals is a passion for many of them.",
 	PersonalNames = {
 		"female", "Gneissus", -- from Dyson Logos' The Tomb of Durâhn Oakenshield, which the author agreed to release under the GPLv2
 		"male", "Ai", -- dwarf from Norse mythology who was a settler of Joruvellir
@@ -1423,7 +1423,7 @@ DefineCivilization("goblin", {
 		"goblin/ui/buttonpanel.png", -256, -200,
 		"goblin/ui/infopanel.png", 0, -200
 	},
-	Description = _("Goblins dwell in the caves and highlands of Nidavellir. The frequency of goblin raids into dwarven and gnomish territory has fostered a history of hatred with those races. The emergence of the goblin merchant syndicates has changed this relationship, however. The goblin merchants have become an indispensable part of Nidavellir's trade network, though the dwarves and gnomes do hold grudges against their practices, specially their suspected support of piracy..."),
+	Description = "Goblins dwell in the caves and highlands of Nidavellir. The frequency of goblin raids into dwarven and gnomish territory has fostered a history of hatred with those races. The emergence of the goblin merchant syndicates has changed this relationship, however. The goblin merchants have become an indispensable part of Nidavellir's trade network, though the dwarves and gnomes do hold grudges against their practices, specially their suspected support of piracy...",
 	PersonalNames = {
 		"male", "Belragor", -- invented by Jesse Crider
 		"male", "Dran",
@@ -1453,7 +1453,7 @@ DefineCivilization("goblin", {
 		"male", "Vrag",
 		"male", "Vrunt",
 		"male", "Zhuk",
-		"male", "Zuzerd",
+		"male", "Zuzerd"
 	}
 })
 

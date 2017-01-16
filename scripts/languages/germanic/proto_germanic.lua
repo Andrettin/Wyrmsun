@@ -1481,6 +1481,13 @@ DefineLanguageWord("Þarma", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Þegna", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 95.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Free Man", "Warrior", "Servant"}, -- source gives the German "freier Mann, Krieger, Diener" as the meaning
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Þeudô", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 99.
 	Language = "proto-germanic",
 	Type = "noun",

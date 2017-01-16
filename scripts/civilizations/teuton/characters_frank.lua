@@ -28,7 +28,7 @@
 DefineCharacter("volsung", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 3; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
 	Name = "Volsung",
 	Gender = "male",
-	Type = "unit-frank-veteran-swordsman",
+	Type = "unit-frank-heroic-swordsman",
 	Civilization = "teuton",
 	Faction = "frank-tribe",
 	Conditions = function(s)

@@ -30,7 +30,7 @@ UnitTypeFiles = {}
 Units = {
 	"unit-latin-town-hall", "unit-latin-farm", "unit-latin-barracks", "unit-latin-smithy", "unit-latin-stables",
 	"upgrade-latin-civilization",
-	"unit-germanic-worker", "unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-spearman", "unit-germanic-archer",
+	"unit-germanic-worker", "unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain", "unit-germanic-spearman", "unit-germanic-archer",
 	"unit-germanic-transport-ship",
 	"unit-germanic-town-hall", "unit-germanic-farm", "unit-germanic-barracks",
 	"unit-germanic-carpenters-shop", "unit-germanic-smithy", --"unit-germanic-temple",
@@ -39,7 +39,7 @@ Units = {
 	"upgrade-germanic-barbed-arrow",
 	"upgrade-germanic-wood-plow",
 	"upgrade-teuton-civilization",
-	"unit-teuton-worker", "unit-teuton-swordsman", "unit-teuton-veteran-swordsman",
+	"unit-teuton-worker", "unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman",
 	"unit-teuton-spearman", "unit-teuton-archer",
 	"unit-teuton-ritter",
 	"unit-teuton-priest", 
@@ -57,7 +57,7 @@ Units = {
 	"upgrade-teuton-masonry",
 	"upgrade-teuton-coinage", "upgrade-teuton-writing", "upgrade-teuton-alchemy",
 	"unit-suebi-swordsman", 
-	"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-spearman", "unit-frank-horseman",
+	"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman", "unit-frank-spearman", "unit-frank-horseman",
 	"unit-celt-farm",
 	"upgrade-celt-civilization",
 	"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner", "unit-dwarven-militia",
@@ -2805,7 +2805,8 @@ DefineUnitType("unit-template-infantry", {
 	}
 } )
 
-DefineUnitType("unit-template-veteran-infantry", { Name = _("Veteran Infantry"),
+DefineUnitType("unit-template-veteran-infantry", {
+	Name = "Veteran Infantry",
 	Parent = "unit-template-infantry",
 	Class = "veteran-infantry",
 	Costs = {"time", 90, "copper", 900},
@@ -2823,10 +2824,10 @@ DefineUnitType("unit-template-veteran-infantry", { Name = _("Veteran Infantry"),
 	CanTargetLand = true,
 	AiDrops = {"unit-horn", "unit-amulet", "unit-ring"},
 	DropAffixes = {"upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-thorns"}
-} )
+})
 
 DefineUnitType("unit-template-heroic-infantry", {
-	Name = _("Heroic Infantry"),
+	Name = "Heroic Infantry",
 	Parent = "unit-template-veteran-infantry",
 	Class = "heroic-infantry",
 	Costs = {"time", 120, "copper", 1200},
@@ -2843,9 +2844,10 @@ DefineUnitType("unit-template-heroic-infantry", {
 	Inventory = true,
 	Mana = {Enable = true, Max = 225, Value = 225, Increase = 1},
 	DropAffixes = {"upgrade-item-suffix-of-power", "upgrade-item-suffix-of-regeneration", "upgrade-item-suffix-of-slaughter", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-victory", "upgrade-item-suffix-of-vision"}
-} )
+})
 
-DefineUnitType("unit-template-spearman", { Name = _("Spearman"),
+DefineUnitType("unit-template-spearman", {
+	Name = "Spearman",
 	Parent = "unit-template-infantry",
 	Class = "spearman",
 	Costs = {"time", 50, "copper", 400, "lumber", 100},
@@ -2863,7 +2865,7 @@ DefineUnitType("unit-template-spearman", { Name = _("Spearman"),
 		"hit", "spear-attack",
 		"miss", "spear-miss"
 	}
-} )
+})
 
 DefineUnitType("unit-template-archer", { Name = _("Shooter"),
 	Parent = "unit-template-sapient-unit",

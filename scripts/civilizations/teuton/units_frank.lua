@@ -32,14 +32,12 @@
 --
 
 DefineUnitType("unit-frank-swordsman", {
-	Name = _("Krieger"),
+	Name = "Krieger",
 	Parent = "unit-teuton-swordsman",
 	Civilization = "teuton",
 	Faction = "frank-tribe",
 	Icon = "icon-frank-swordsman-brown-hair",
 	HairColor = "brown",
-	Armor = 3, -- +1 armor
-	Points = 55, -- +5 points
 	AiDrops = {"unit-frankish-spatha"},
 	Variations = {
 		{
@@ -138,14 +136,12 @@ DefineUnitType("unit-frank-swordsman", {
 } )
 
 DefineUnitType("unit-frank-veteran-swordsman", {
-	Name = _("Adel"),
+	Name = "Adel",
 	Parent = "unit-teuton-veteran-swordsman",
 	Civilization = "teuton",
 	Faction = "frank-tribe",
 	Icon = "icon-frank-veteran-swordsman-brown-hair",
 	HairColor = "brown",
-	Armor = 3, -- +1 armor
-	Points = 80, -- +5 points
 	AiDrops = {"unit-frankish-spatha"},
 	Variations = {
 		{
@@ -241,10 +237,114 @@ DefineUnitType("unit-frank-veteran-swordsman", {
 			"item-equipped", "unit-thrymgjol-shield"
 		}
 	}
-} )
+})
+
+DefineUnitType("unit-frank-heroic-swordsman", {
+	Name = "Adel",
+	Parent = "unit-teuton-heroic-swordsman",
+	Civilization = "teuton",
+	Faction = "frank-tribe",
+	Icon = "icon-frank-heroic-swordsman-brown-hair",
+	HairColor = "brown",
+	AiDrops = {"unit-frankish-spatha"},
+	Variations = {
+		{
+			"variation-id", "brown-hair",
+			"hair-color", "brown",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "blond-hair",
+			"icon", "icon-frank-heroic-swordsman-blond-hair",
+			"hair-color", "blond",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "gray-hair",
+			"icon", "icon-frank-heroic-swordsman-gray-hair",
+			"hair-color", "gray"
+		},
+		{
+			"variation-id", "red-hair",
+			"hair-color", "red",
+			"icon", "icon-frank-heroic-swordsman-red-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"layer", "left-arm",
+			"variation-id", "left-arm",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield",
+			"item-not-equipped", "unit-bronze-shield",
+			"item-not-equipped", "unit-heater-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
+			"item-not-equipped", "unit-thrymgjol-shield"
+		},
+		{
+			"layer", "left-arm",
+			"variation-id", "shield-left-arm",
+			"file", "human/units/left_arm_shield.png",
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"item-equipped", "unit-bronze-shield",
+			"item-equipped", "unit-heater-shield",
+			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-kite-shield",
+			"item-equipped", "unit-thrymgjol-shield"
+		},
+		{
+			"layer", "weapon",
+			"variation-id", "broad-bronze-sword",
+			"file", "germanic/units/broad_bronze_sword.png",
+			"upgrade-forbidden", "upgrade-frank-spatha",
+			"item-not-equipped", "unit-spatha",
+			"item-not-equipped", "unit-frankish-spatha"
+		},
+		{
+			"layer", "weapon",
+			"variation-id", "long-iron-sword",
+			"file", "teuton/units/long_iron_sword.png",
+			"upgrade-required", "upgrade-frank-spatha",
+			"item-equipped", "unit-spatha",
+			"item-equipped", "unit-frankish-spatha"
+		},
+		{
+			"layer", "shield",
+			"variation-id", "no-shield",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield",
+			"item-not-equipped", "unit-bronze-shield",
+			"item-not-equipped", "unit-heater-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
+			"item-not-equipped", "unit-thrymgjol-shield"
+		},
+		{
+			"layer", "shield",
+			"variation-id", "bronze-shield",
+			"file", "germanic/units/bronze_shield.png",
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"item-equipped", "unit-bronze-shield",
+			"item-equipped", "unit-heater-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
+			"item-not-equipped", "unit-thrymgjol-shield"
+		},
+		{
+			"layer", "shield",
+			"variation-id", "iron-shield",
+			"file", "teuton/units/saxon_shield.png",
+			"upgrade-required", "upgrade-teuton-iron-shield",
+			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-kite-shield",
+			"item-equipped", "unit-thrymgjol-shield"
+		}
+	}
+})
 
 DefineUnitType("unit-frank-spearman", {
-	Name = _("Speerkampfer"),
+	Name = "Speerkampfer",
 	Parent = "unit-teuton-spearman",
 	Civilization = "teuton",
 	Faction = "frank-tribe",
@@ -346,7 +446,7 @@ DefineUnitType("unit-frank-spearman", {
 } )
 
 DefineUnitType("unit-frank-horseman", {
-	Name = _("Ritter"),
+	Name = "Ritter",
 	Parent = "unit-teuton-ritter",
 	Civilization = "teuton",
 	Faction = "frank-tribe",

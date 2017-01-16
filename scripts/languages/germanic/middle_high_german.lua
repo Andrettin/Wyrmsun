@@ -237,6 +237,14 @@ DefineLanguageWord("Darm", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	}
 })
 
+DefineLanguageWord("Degen", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 95.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Boy", "Servant", "Warrior", "Hero"}, -- source gives the German "Knabe, Diener, Krieger, Held" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Degan"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Diet", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 99.
 	Language = "middle-high-german",
 	Type = "noun",

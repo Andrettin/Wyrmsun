@@ -28,7 +28,7 @@
 DefineCharacter("tassilo", { -- Source: "Medieval Warfare V.2", 2013, p. 8.
 	Name = "Tassilo",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman",
+	Type = "unit-teuton-heroic-swordsman",
 	Civilization = "teuton",
 	Faction = "bavaria",
 	Year = 784, -- revolted against Frankish rule in 784

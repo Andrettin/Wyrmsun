@@ -348,6 +348,14 @@ DefineLanguageWord("Daram", { -- source also gives the alternative form "Darm"; 
 	}
 })
 
+DefineLanguageWord("Degan", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 95.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Boy", "Servant", "Warrior", "Hero"}, -- source gives the German "Knabe, Diener, Krieger, Held" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Þegna"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Dīhan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
 	Language = "old-high-german",
 	Type = "verb",

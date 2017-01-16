@@ -81,6 +81,10 @@ https://github.com/Andrettin/Wyrmsun
 * Terrain
 - Fixed issue which prevented trees from regrowing.
 
+* Units
+- Added Germanic and Teuton level 3 swordsmen.
+- Added portrait for the Frankish level 3 swordsman for those who have the Frankish Faction Flair DLC.
+
 -----------------------------------------------------------------------
 - 2.5.3
 -----------------------------------------------------------------------

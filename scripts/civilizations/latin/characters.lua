@@ -40,7 +40,7 @@ DefineCharacter("marcus-aurelius", { -- Source: "Ancient Warfare VII.6", 2013, p
 	Name = "Marcus",
 	ExtraName = "Aurelius",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- emperor
+	Type = "unit-teuton-heroic-swordsman", -- emperor
 	Civilization = "latin",
 	Faction = "rome",
 	ProvinceOfOrigin = "Latium", -- put him in Rome's province since we don't have information on his actual province of origin
@@ -60,7 +60,7 @@ DefineCharacter("lucius-verus", { -- Source: "Ancient Warfare VII.6", 2013, pp. 
 	Name = "Lucius",
 	ExtraName = "Verus",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- emperor
+	Type = "unit-teuton-heroic-swordsman", -- emperor
 	Civilization = "latin",
 	Faction = "rome",
 	ProvinceOfOrigin = "Latium", -- put him in Rome's province since we don't have information on his actual province of origin
@@ -75,7 +75,7 @@ DefineCharacter("furius-victorinus", { -- Source: "Ancient Warfare VII.6", 2013,
 	Name = "Furius",
 	ExtraName = "Victorinus",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- Praetorian prefect
+	Type = "unit-teuton-heroic-swordsman", -- Praetorian prefect
 	Civilization = "latin",
 	Faction = "rome"
 })
@@ -84,7 +84,7 @@ DefineCharacter("marcus-claudius-fronto", { -- Source: "Ancient Warfare VII.6", 
 	Name = "Marcus", -- given in the source as "M. Claudius Fronto"
 	ExtraName = "Claudius Fronto", -- given in the source as "M. Claudius Fronto"
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- senior officer
+	Type = "unit-teuton-heroic-swordsman", -- senior officer
 	Civilization = "latin",
 	Faction = "rome"
 })
@@ -93,7 +93,7 @@ DefineCharacter("tiberius-claudius-pompeianus", { -- Source: "Ancient Warfare VI
 	Name = "Tiberius",
 	ExtraName = "Claudius Pompeianus",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- general
+	Type = "unit-teuton-heroic-swordsman", -- general
 	Civilization = "latin",
 	Faction = "rome"
 })

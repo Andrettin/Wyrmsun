@@ -28,7 +28,7 @@
 DefineCharacter("lorikus", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 6.
 	Name = "Lorikus", -- "Lóríkus"; Duke of Thrudheim, married to Lórá (also called Glórá)
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain/duke
+	Type = "unit-germanic-chieftain", -- chieftain/duke
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000, -- beginning of the process of the Indo-European migrations to Scandinavia
@@ -61,7 +61,7 @@ DefineCharacter("troan", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 DefineCharacter("tror", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 6.
 	Name = "Tror", -- "Trór"; euhemerized version of Thor
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
 	Trait = "upgrade-mighty", -- described as goodly to look upon; very strong
@@ -77,7 +77,7 @@ DefineCharacter("tror", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 DefineCharacter("loridi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Loridi", -- "Lóridi"; resembled his father, Trór
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 1),
@@ -91,7 +91,7 @@ DefineCharacter("loridi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 DefineCharacter("einridi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Einridi",
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 2),
@@ -105,7 +105,7 @@ DefineCharacter("einridi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 DefineCharacter("vingethor", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Vingethor",
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 3),
@@ -119,7 +119,7 @@ DefineCharacter("vingethor", { -- Source: Snorri Sturlson, "The Prose Edda", 191
 DefineCharacter("vingener", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Vingener",
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 4),
@@ -133,7 +133,7 @@ DefineCharacter("vingener", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 DefineCharacter("moda", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Moda", -- "Móda"
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 5),
@@ -147,7 +147,7 @@ DefineCharacter("moda", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 DefineCharacter("magan", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Magan", -- "Magi" in the original; this is a Proto-Germanic rendering of the name
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 6),
@@ -161,7 +161,7 @@ DefineCharacter("magan", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 DefineCharacter("seskef", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Seskef",
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 7),
@@ -175,7 +175,7 @@ DefineCharacter("seskef", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 DefineCharacter("bedvig", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Bedvig",
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 8),
@@ -189,7 +189,7 @@ DefineCharacter("bedvig", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 DefineCharacter("athra", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Athra",
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 9),
@@ -203,7 +203,7 @@ DefineCharacter("athra", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 DefineCharacter("itermann", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Itermann", -- "Ítermann"
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 10),
@@ -217,7 +217,7 @@ DefineCharacter("itermann", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 DefineCharacter("heremod", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Heremod", -- "Heremód"
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 11),
@@ -231,7 +231,7 @@ DefineCharacter("heremod", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 DefineCharacter("skjaldun", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Skjaldun",
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 12),
@@ -245,7 +245,7 @@ DefineCharacter("skjaldun", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 DefineCharacter("bjaf", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Bjaf", -- "Bjáf"
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 13),
@@ -259,7 +259,7 @@ DefineCharacter("bjaf", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 DefineCharacter("jat", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Jat", -- "Ját"
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 14),
@@ -273,7 +273,7 @@ DefineCharacter("jat", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 
 DefineCharacter("gudawulfa", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Gudawulfa", -- "Gudólfr" in the original; this is a Proto-Germanic rendering of the name
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 15),
@@ -287,7 +287,7 @@ DefineCharacter("gudawulfa", { -- Source: Snorri Sturlson, "The Prose Edda", 191
 DefineCharacter("finn", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Finn",
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 16),
@@ -301,7 +301,7 @@ DefineCharacter("finn", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 DefineCharacter("friallaf", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Friallaf", -- "Fríallaf"
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 17),
@@ -315,7 +315,7 @@ DefineCharacter("friallaf", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 DefineCharacter("voden", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Voden", -- "Vóden"; euhemerized version of Odin; "far-famed for his wisdom and every accomplishment"; had "second sight"
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
 	Trait = "upgrade-wise",
@@ -341,7 +341,7 @@ DefineCharacter("frigida", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 DefineCharacter("yngve", { -- Source: Snorri Sturlson, "Heimskringla", 1844; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 9; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 221.
 	Name = "Yngve", -- has to be defined first so that he becomes the first in line to succede Vóden in Sweden; also known as Yng or Yngvi; from him the Ynglings spring
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -2800,
@@ -362,7 +362,7 @@ DefineCharacter("yngve", { -- Source: Snorri Sturlson, "Heimskringla", 1844; Sou
 DefineCharacter("vegdeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Vegdeg", -- in the Prose Edda, Vegdeg was Vóden's son who was set to rule over East Saxland; Vóden's first son (presumably)
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
 	Trait = "upgrade-mighty", -- described as a "mighty king"
@@ -421,7 +421,7 @@ DefineCharacter("svebdeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 DefineCharacter("beldeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, pp. 7-8.
 	Name = "Beldeg", -- euhemerized version of Baldr; in the Prose Edda, was a son of Odin set to rule over Westphalia; Vóden's second son
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -2800,
@@ -478,7 +478,7 @@ DefineCharacter("gevis", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 DefineCharacter("sigi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
 	Name = "Sigi", -- in the Prose Edda, was a son of Odin set to rule over Frankland; Vóden's third son
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -2800,
@@ -500,7 +500,7 @@ DefineCharacter("skeldu", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	-- ancestor of the Danish kings; from him spring the Skjoldungs
 	Name = "Skeldu", -- "Skjöldr" in the original; this is a Proto-Germanic rendering of the name
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -2800,
@@ -523,7 +523,7 @@ DefineCharacter("fridleifr-skeldung", { -- Source: Snorri Sturlson, "The Prose E
 	-- prefix is likely the Old Norse word "Friđr"
 --	FamilyName = "Skeldung", -- "Skjoldung" in the original Norse saga (from Skjöldr), here rendered as Skeldu (Proto-Germanic version of "Skjöldr") and -ung (the suffix in the original word; which should be changed for a Proto-Germanic version)
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Zealand",
 	Father = "skeldu",
@@ -542,7 +542,7 @@ DefineCharacter("saemingr-yngling", { -- Source: Snorri Sturlson, "Heimskringla"
 	Name = "Saeming", -- "Sæmingr"; Yngve (or Vóden's) son set to rule over Norway
 --	FamilyName = "Yngling",
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Sweden",
 	Father = "yngve"
@@ -600,7 +600,7 @@ DefineCharacter("thialfi", { -- Thor's servant in Norse mythology; associated by
 DefineCharacter("hafthi", { -- Source: "Guta Saga: The History of the Gotlanders", 1999, p. 3.
 	Name = "Hafthi", -- "Hafþi"
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	Faction = "thielung-tribe",
 	Background = "In the Guta Saga, Hafthi was the son of Thieluar, and the first to settle the island of Gotland after his father discovered it.",
@@ -633,7 +633,7 @@ DefineCharacter("huitastierna", { -- Source: "Guta Saga: The History of the Gotl
 DefineCharacter("guti", { -- Source: "Guta Saga: The History of the Gotlanders", 1999, p. 3.
 	Name = "Guti",
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	Faction = "thielung-tribe",
 	Background = "In the Guta Saga, Guti was the eldest son of Hafthi and Huitastierna, and he inherited the northern third of the island of Gotland from them.",
@@ -650,7 +650,7 @@ DefineCharacter("guti", { -- Source: "Guta Saga: The History of the Gotlanders",
 DefineCharacter("graipr", { -- Source: "Guta Saga: The History of the Gotlanders", 1999, p. 3.
 	Name = "Graip", -- "Graipr"
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	Faction = "thielung-tribe",
 	Background = "In the Guta Saga, Graip was the second son of Hafthi and Huitastierna, and he inherited the middle third of the island of Gotland from them.",
@@ -667,7 +667,7 @@ DefineCharacter("graipr", { -- Source: "Guta Saga: The History of the Gotlanders
 DefineCharacter("gunfiaun", { -- Source: "Guta Saga: The History of the Gotlanders", 1999, p. 3.
 	Name = "Gunfiaun",
 	Gender = "male",
-	Type = "unit-germanic-veteran-warrior", -- chieftain
+	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
 	Faction = "thielung-tribe",
 	Background = "In the Guta Saga, Gunfiaun was the youngest son of Hafthi and Huitastierna, and he inherited the southern third of the island of Gotland from them.",

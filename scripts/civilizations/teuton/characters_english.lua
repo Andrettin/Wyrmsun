@@ -28,7 +28,7 @@
 DefineCharacter("aelle", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
 	Name = "Aelle", -- "Ælle"
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "deira",
 	DeathYear = 588, -- died
@@ -46,7 +46,7 @@ DefineCharacter("aelle", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 DefineCharacter("ida", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 76.
 	Name = "Ida",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "bernicia",
 	Year = 547, -- became king of Bernicia
@@ -82,7 +82,7 @@ DefineCharacter("theodric-of-bernicia", { -- Source: Frank Stenton, "Anglo-Saxon
 DefineCharacter("aethelric", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 75-76.
 	Name = "aethelric", -- "Æthelric"
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "bernicia",
 	Year = 588, -- according to tradition, Æthelric acquired the kingdom of Deira upon Ælle's death in 588 AD
@@ -102,7 +102,7 @@ DefineCharacter("aethelric", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 DefineCharacter("aethelfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 75, 78.
 	Name = "aethelfrith", -- "Æthelfrith"
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "bernicia",
 	Year = 593, -- beginning of reign
@@ -128,7 +128,7 @@ DefineCharacter("aethelfrith", { -- Source: Frank Stenton, "Anglo-Saxon England"
 DefineCharacter("ceawlin", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 76.
 	Name = "Ceawlin",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "wessex",
 	HistoricalTitles = {
@@ -145,7 +145,7 @@ DefineCharacter("ceawlin", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 DefineCharacter("edwin-of-deira", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 78-81.
 	Name = "Edwin",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "deira",
 	Father = "aelle",
@@ -167,7 +167,7 @@ DefineCharacter("edwin-of-deira", { -- Source: Frank Stenton, "Anglo-Saxon Engla
 DefineCharacter("raedwald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 78-79.
 	Name = "Raedwald", -- "Rædwald"
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "east-anglia",
 	Year = 616, -- in the summer or early fall of 616, Rædwald (supporting Edwin's claim to the Deiran throne; Edwin had taken refuge with him) engaged in a battle against Æthelfrith of Bernicia, with the location being at the southern border of Deira, where the Idle river crosses with the Lincoln-Doncaster Roman road
@@ -185,7 +185,7 @@ DefineCharacter("raedwald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 DefineCharacter("lilla", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 79.
 	Name = "Lilla",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- thegn
+	Type = "unit-teuton-heroic-swordsman", -- thegn
 	Civilization = "teuton",
 	Faction = "deira",
 	Description = "Lilla was a thegn of Edwin of Deira. He saved his lord's life by stopping an assassin from Wessex just as he was about to strike Edwin.",
@@ -200,7 +200,7 @@ DefineCharacter("lilla", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 DefineCharacter("aethelberht", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 79.
 	Name = "Aethelberht", -- "Æthelberht"
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "kent",
 	-- his daughter married Edwin of Deira
@@ -252,7 +252,7 @@ DefineCharacter("osfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 DefineCharacter("penda", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 75, 80-81, 83-84.
 	Name = "Penda",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "mercia",
 	Year = 632, -- in 632, Penda (still a noble belonging to the Mercian royal house with no throne) allied himself Cadwallon of Gwynedd against Edwin of Deira
@@ -273,7 +273,7 @@ DefineCharacter("penda", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 DefineCharacter("osric", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 81.
 	Name = "Osric",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "deira",
 	Year = 632,
@@ -293,7 +293,7 @@ DefineCharacter("osric", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 DefineCharacter("eanfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 81.
 	Name = "Eanfrith",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "bernicia",
 	Father = "aethelfrith",
@@ -332,7 +332,7 @@ DefineCharacter("talorcan", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 DefineCharacter("oswald-of-bernicia", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 81-82.
 	Name = "Oswald",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "bernicia",
 	Father = "aethelfrith", -- he was a brother of Eanfrith's, so presumably also a son of Æthelfrith
@@ -411,7 +411,7 @@ DefineCharacter("eanflaed", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 DefineCharacter("oswiu", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 81-85.
 	Name = "Oswiu",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "northumbria",
 	Father = "aethelfrith", -- he was a brother of Oswald's, so also of Eanfrith's, and as such likely also a son of Æthelfrith
@@ -434,7 +434,7 @@ DefineCharacter("oswiu", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 DefineCharacter("cynegils", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 81.
 	Name = "Cynegils",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "wessex",
 	HistoricalTitles = {
@@ -451,7 +451,7 @@ DefineCharacter("cynegils", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 DefineCharacter("oswine", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 82-83.
 	Name = "Oswine",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "deira",
 	Father = "osric",
@@ -472,7 +472,7 @@ DefineCharacter("oswine", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 DefineCharacter("aethelwald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 83.
 	Name = "Aethelwald", -- "Æthelwald"
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "deira",
 	Father = "oswald-of-bernicia",
@@ -491,7 +491,7 @@ DefineCharacter("aethelwald", { -- Source: Frank Stenton, "Anglo-Saxon England",
 DefineCharacter("aethelhere", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 83-84.
 	Name = "Aethelhere", -- "Æthelhere"
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "east-anglia",
 	Year = 654,
@@ -511,7 +511,7 @@ DefineCharacter("aethelhere", { -- Source: Frank Stenton, "Anglo-Saxon England",
 DefineCharacter("sigeberht", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
 	Name = "Sigeberht",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "essex",
 	HistoricalTitles = {
@@ -528,7 +528,7 @@ DefineCharacter("sigeberht", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 DefineCharacter("cenwalh", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
 	Name = "Cenwalh",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "wessex",
 	HistoricalTitles = {
@@ -546,7 +546,7 @@ DefineCharacter("cenwalh", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 DefineCharacter("peada", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
 	Name = "Peada", -- king of the Middle Angles
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "middle-anglia",
 	Father = "penda",
@@ -568,7 +568,7 @@ DefineCharacter("peada", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 DefineCharacter("wulfhere", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 84-85.
 	Name = "Wulfhere",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "mercia",
 	Father = "penda",
@@ -589,7 +589,7 @@ DefineCharacter("wulfhere", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 DefineCharacter("ecgfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 85, 88.
 	Name = "Ecgfrith",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "northumbria",
 	Father = "oswiu",
@@ -612,7 +612,7 @@ DefineCharacter("ecgfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 DefineCharacter("beornhaeth", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 88.
 	Name = "Beornhaeth", -- "Beornhæth"; Northumbrian ealdorman, quelled a Pictish rebellion with Ecgfrith of Northumbria
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- ealdorman
+	Type = "unit-teuton-heroic-swordsman", -- ealdorman
 	Civilization = "teuton",
 	Faction = "northumbria",
 	Conditions = function(s)
@@ -642,7 +642,7 @@ DefineCharacter("aethelred-of-mercia", { -- Source: Frank Stenton, "Anglo-Saxon 
 DefineCharacter("aldfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 88.
 	Name = "Aldfrith",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "northumbria",
 	Father = "oswiu",
@@ -677,7 +677,7 @@ DefineCharacter("aldhelm", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 DefineCharacter("osred", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 91.
 	Name = "Osred",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "northumbria",
 	Father = "aldfrith",
@@ -699,7 +699,7 @@ DefineCharacter("osred", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 DefineCharacter("beorhtfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 88.
 	Name = "Beorhtfrith", -- Northumbrian ealdorman
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- ealdorman
+	Type = "unit-teuton-heroic-swordsman", -- ealdorman
 	Civilization = "teuton",
 	Faction = "northumbria",
 	Year = 711, -- defeated a Pictish army in the Scottish central plain in 711
@@ -714,7 +714,7 @@ DefineCharacter("beorhtfrith", { -- Source: Frank Stenton, "Anglo-Saxon England"
 DefineCharacter("ceolwulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 91.
 	Name = "Ceolwulf",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "northumbria",
 	Year = 729,
@@ -744,7 +744,7 @@ DefineCharacter("bede", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 DefineCharacter("eadberht", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 92.
 	Name = "Eadberht",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "northumbria",
 	Year = 737,
@@ -764,7 +764,7 @@ DefineCharacter("eadberht", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 DefineCharacter("aethelbald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 92.
 	Name = "Aethelbald", -- "Æthelbald"
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "mercia",
 	HistoricalTitles = {
@@ -828,7 +828,7 @@ DefineCharacter("aethelwald-moll", { -- Source: Frank Stenton, "Anglo-Saxon Engl
 	Name = "Aethelwald", -- "Æthelwald"
 	FamilyName = "Moll",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "northumbria",
 	Year = 759,
@@ -846,7 +846,7 @@ DefineCharacter("aethelwald-moll", { -- Source: Frank Stenton, "Anglo-Saxon Engl
 DefineCharacter("alhred", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 90, 92-93.
 	Name = "Alhred", -- descendant of Ida of Bernicia
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "northumbria",
 	Year = 765,
@@ -867,7 +867,7 @@ DefineCharacter("aethelred-moll", { -- Source: Frank Stenton, "Anglo-Saxon Engla
 	FamilyName = "Moll",
 	Trait = "upgrade-cruel", -- treacherous and merciless
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "northumbria",
 	Father = "aethelwald-moll",
@@ -891,7 +891,7 @@ DefineCharacter("aelfwald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Name = "Aelfwald", -- "Ælfwald"; grandson of Eadberht
 	Trait = "upgrade-pious", -- considered just and pious
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "northumbria",
 	Year = 779, -- expelled Æthelred Moll from Northumbria
@@ -910,7 +910,7 @@ DefineCharacter("aelfwald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 DefineCharacter("offa-of-mercia", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 93.
 	Name = "Offa",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "mercia",
 	Year = 792,
@@ -958,7 +958,7 @@ DefineCharacter("torhtmund", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 DefineCharacter("eardwulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 94-95.
 	Name = "Eardwulf",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "northumbria",
 	Year = 801,
@@ -978,7 +978,7 @@ DefineCharacter("eardwulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 DefineCharacter("cenwulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 94.
 	Name = "Cenwulf",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "mercia",
 	Year = 801,
@@ -996,7 +996,7 @@ DefineCharacter("cenwulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 DefineCharacter("eanred", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 95.
 	Name = "Eanred",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "northumbria",
 	Father = "eardwulf",
@@ -1016,7 +1016,7 @@ DefineCharacter("eanred", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 DefineCharacter("egbert-of-wessex", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 95.
 	Name = "Egbert",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "wessex",
 	Year = 829,

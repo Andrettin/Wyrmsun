@@ -94,30 +94,27 @@ DefineUpgrade("upgrade-mecklenburg-faction", {
 DefineModifier("upgrade-alamanni-tribe-faction",
 	{"HitPoints", 10},
 	{"Points", 10},
-	{"apply-to", "unit-teuton-swordsman"},
-	{"apply-to", "unit-teuton-veteran-swordsman"}
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
 DefineModifier("upgrade-angle-tribe-faction",
 	{"BasicDamage", 2},
 	{"Points", 10},
-	{"apply-to", "unit-teuton-swordsman"},
-	{"apply-to", "unit-teuton-veteran-swordsman"}
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
 DefineModifier("upgrade-bavarian-tribe-faction",
 	{"Armor", 1},
 	{"BasicDamage", 1},
 	{"Points", 10},
-	{"apply-to", "unit-teuton-swordsman"},
-	{"apply-to", "unit-teuton-veteran-swordsman"}
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
 DefineModifier("upgrade-bernice-tribe-faction",
 	{"DisembarkmentBonus", 1},
 	{"Points", 10},
-	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-spearman"},
-	{"apply-to", "unit-teuton-veteran-swordsman"}
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"},
+	{"apply-to", "unit-teuton-spearman"}
 )
 
 DefineModifier("upgrade-frank-tribe-faction",
@@ -126,6 +123,10 @@ DefineModifier("upgrade-frank-tribe-faction",
 
 DefineModifier("upgrade-frank-tribe-faction",
 	{"apply-to", "unit-teuton-veteran-swordsman"}, {"convert-to", "unit-frank-veteran-swordsman"}
+)
+
+DefineModifier("upgrade-frank-tribe-faction",
+	{"apply-to", "unit-teuton-heroic-swordsman"}, {"convert-to", "unit-frank-heroic-swordsman"}
 )
 
 DefineModifier("upgrade-frank-tribe-faction",
@@ -140,8 +141,7 @@ DefineModifier("upgrade-frisian-tribe-faction",
 	{"Armor", 1},
 	{"HitPoints", 5},
 	{"Points", 10},
-	{"apply-to", "unit-teuton-swordsman"},
-	{"apply-to", "unit-teuton-veteran-swordsman"}
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
 DefineModifier("upgrade-gumeninga-tribe-faction",
@@ -153,16 +153,14 @@ DefineModifier("upgrade-gumeninga-tribe-faction",
 DefineModifier("upgrade-lombard-tribe-faction",
 	{"BasicDamage", 2},
 	{"Points", 10},
-	{"apply-to", "unit-teuton-swordsman"},
-	{"apply-to", "unit-teuton-veteran-swordsman"}
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
 DefineModifier("upgrade-saxon-tribe-faction",
 	{"BasicDamage", 1},
 	{"HitPoints", 5},
 	{"Points", 10},
-	{"apply-to", "unit-teuton-swordsman"},
-	{"apply-to", "unit-teuton-veteran-swordsman"}
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
 DefineModifier("upgrade-suebi-tribe-faction",
@@ -183,6 +181,5 @@ DefineModifier("upgrade-ubii-tribe-faction",
 DefineModifier("upgrade-mecklenburg-faction",
 	{"Armor", 2},
 	{"Points", 10},
-	{"apply-to", "unit-teuton-swordsman"},
-	{"apply-to", "unit-teuton-veteran-swordsman"}
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )

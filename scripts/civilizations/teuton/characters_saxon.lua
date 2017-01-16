@@ -28,7 +28,7 @@
 DefineCharacter("geirthiof", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 244.
 	Name = "Geirthiof",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- king
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	ProvinceOfOrigin = "Holstein", -- correct? was from "Saxonland"
 	-- Adils Yngling went on a viking expedition to raid Saxonland when Geirthiof was king there
@@ -98,7 +98,7 @@ DefineCharacter("rolf-krake-skjoldung", { -- Source: Snorri Sturlson, "Heimskrin
 DefineCharacter("widukind", { -- Saxon leader who resisted Charlemagne's forces from 772 to 802; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 603.
 	Name = "Widukind",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman",
+	Type = "unit-teuton-heroic-swordsman",
 	Civilization = "teuton",
 	Faction = "saxon-tribe",
 	Conditions = function(s)

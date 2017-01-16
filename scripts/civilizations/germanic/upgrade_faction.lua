@@ -68,14 +68,16 @@ DefineModifier("upgrade-asa-tribe-faction",
 	{"HitPoints", 5},
 	{"Points", 10},
 	{"apply-to", "unit-germanic-warrior"},
-	{"apply-to", "unit-germanic-veteran-warrior"}
+	{"apply-to", "unit-germanic-veteran-warrior"},
+	{"apply-to", "unit-germanic-chieftain"}
 )
 
 DefineModifier("upgrade-jarling-tribe-faction",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-germanic-warrior"},
-	{"apply-to", "unit-germanic-veteran-warrior"}
+	{"apply-to", "unit-germanic-veteran-warrior"},
+	{"apply-to", "unit-germanic-chieftain"}
 )
 
 DefineModifier("upgrade-karling-tribe-faction",
@@ -88,7 +90,8 @@ DefineModifier("upgrade-skeldung-tribe-faction",
 	{"Armor", 1},
 	{"Points", 10},
 	{"apply-to", "unit-germanic-warrior"},
-	{"apply-to", "unit-germanic-veteran-warrior"}
+	{"apply-to", "unit-germanic-veteran-warrior"},
+	{"apply-to", "unit-germanic-chieftain"}
 )
 
 DefineModifier("upgrade-thielung-tribe-faction",
@@ -96,7 +99,8 @@ DefineModifier("upgrade-thielung-tribe-faction",
 	{"Accuracy", 1},
 	{"Points", 10},
 	{"apply-to", "unit-germanic-warrior"},
-	{"apply-to", "unit-germanic-veteran-warrior"}
+	{"apply-to", "unit-germanic-veteran-warrior"},
+	{"apply-to", "unit-germanic-chieftain"}
 )
 
 DefineModifier("upgrade-thralling-tribe-faction",

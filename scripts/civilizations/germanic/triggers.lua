@@ -114,7 +114,7 @@ AddTrigger("karlings-subjugated",
 AddTrigger("jarl-desires-karling-subjugation",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-germanic-town-hall") >= 1 and (GetPlayerData(i, "UnitTypesCount", "unit-germanic-warrior") + GetPlayerData(i, "UnitTypesCount", "unit-germanic-veteran-warrior")) >= 6 and GetFactionExists("karling-tribe") and GetPlayerData(GetFactionPlayer("karling-tribe"), "TotalNumUnits") > 0) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-germanic-town-hall") >= 1 and (GetPlayerData(i, "UnitTypesCount", "unit-germanic-warrior") + GetPlayerData(i, "UnitTypesCount", "unit-germanic-veteran-warrior") + GetPlayerData(i, "UnitTypesCount", "unit-germanic-chieftain")) >= 6 and GetFactionExists("karling-tribe") and GetPlayerData(GetFactionPlayer("karling-tribe"), "TotalNumUnits") > 0) then
 				trigger_player = i
 				return true
 			end

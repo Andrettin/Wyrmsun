@@ -183,11 +183,11 @@ DefineUnitType("unit-germanic-warrior", {
 } )
 
 DefineUnitType("unit-germanic-veteran-warrior", {
-	Name = _("Kuni"),
+	Name = "Kuni",
 	Parent = "unit-template-veteran-infantry",
 	Civilization = "germanic",
-	Description = _("Having honed their swordsmanship to a greater degree, high-ranking Germanic warriors are a force to be reckoned with."),
-	Background = _("\"Kuni\" is the Proto-Germanic word for \"noble\"."),
+	Description = "Having honed their swordsmanship to a greater degree, high-ranking Germanic warriors are a force to be reckoned with.",
+	Background = "\"Kuni\" is the Proto-Germanic word for \"noble\".",
 	Image = {"file", "germanic/units/warrior.png", "size", {72, 72}},
 	Animations = "animations-melee-unit", Icon = "icon-germanic-veteran-warrior",
 	DefaultEquipment = {
@@ -200,9 +200,6 @@ DefineUnitType("unit-germanic-veteran-warrior", {
 	NightSightRangeBonus = -1,
 	WeaponClasses = {"sword", "thrusting-sword"},
 	HackDamage = true,
-	Mana = {Enable = true, Max = 150, Value = 150, Increase = 1},
-	CanCastSpell = {"spell-puncture"},
-	AutoCastActive = {"spell-puncture"},
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-quenching", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-trickery", "upgrade-item-suffix-of-victory"}, -- allow more affixes than normal for the unit's level, to compensate for the unit not being upgradeable
 	Variations = {
@@ -278,8 +275,103 @@ DefineUnitType("unit-germanic-veteran-warrior", {
 	}
 } )
 
+DefineUnitType("unit-germanic-chieftain", {
+	Name = "Druhtana",
+	Parent = "unit-template-heroic-infantry",
+	Civilization = "germanic",
+	Description = "Germanic chieftains combine both martial prowess and leadership skills, bringing forth their formidable hosts into battle.",
+	Background = "\"Druhtana\" is the Proto-Germanic word for \"retinue leader\" and \"prince\".",
+	Image = {"file", "germanic/units/warrior.png", "size", {72, 72}},
+	Animations = "animations-melee-unit", Icon = "icon-germanic-chieftain",
+	DefaultEquipment = {
+		{"weapon", "unit-short-sword"},
+		{"shield", "unit-wooden-shield"},
+		{"boots", "unit-boots"}
+	},
+	Corpse = "unit-human-dead-body",
+	DaySightRangeBonus = 1,
+	NightSightRangeBonus = -1,
+	WeaponClasses = {"sword", "thrusting-sword"},
+	HackDamage = true,
+	CanCastSpell = {"spell-puncture"},
+	AutoCastActive = {"spell-puncture"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-quenching", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-trickery", "upgrade-item-suffix-of-victory"},
+	Variations = {
+		{
+			"variation-id", "blond-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"item-class-not-equipped", "shield"
+		},
+		{
+			"variation-id", "brown-hair",
+			"file", "germanic/units/warrior_brown_hair.png",
+			"icon", "icon-germanic-chieftain-brown-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"item-class-not-equipped", "shield"
+		},
+		{
+			"variation-id", "gray-hair",
+			"file", "germanic/units/warrior_gray_hair.png",
+			"icon", "icon-germanic-chieftain-gray-hair",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"item-class-not-equipped", "shield"
+		},
+		{
+			"variation-id", "red-hair",
+			"file", "germanic/units/warrior_red_hair.png",
+			"icon", "icon-germanic-chieftain-red-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"item-class-not-equipped", "shield"
+		},
+		{
+			"variation-id", "blond-hair",
+			"file", "germanic/units/warrior_bronze_shield.png",
+			"upgrade-forbidden", "upgrade-old",
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"item-class-equipped", "shield"
+		},
+		{
+			"variation-id", "brown-hair",
+			"file", "germanic/units/warrior_brown_hair_bronze_shield.png",
+			"icon", "icon-germanic-chieftain-brown-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"item-class-equipped", "shield"
+		},
+		{
+			"variation-id", "gray-hair",
+			"file", "germanic/units/warrior_gray_hair_bronze_shield.png",
+			"icon", "icon-germanic-chieftain-gray-hair",
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"item-class-equipped", "shield"
+		},
+		{
+			"variation-id", "red-hair",
+			"file", "germanic/units/warrior_red_hair_bronze_shield.png",
+			"icon", "icon-germanic-chieftain-red-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"item-class-equipped", "shield"
+		}
+	},
+	Sounds = {
+		"selected", "basic-germanic-voices-selected-group",
+		"acknowledge", "basic-germanic-voices-acknowledge",
+		"attack", "basic-germanic-voices-attack",
+		"ready", "basic-germanic-voices-ready",
+		"help", "basic-germanic-voices-help",
+		"dead", "basic-human-voices-dead",
+		"hit", "sword-attack",
+		"miss", "attack-miss"
+	}
+} )
+
 DefineUnitType("unit-germanic-spearman", {
-	Name = _("Spearman"),
+	Name = "Spearman",
 	Parent = "unit-template-spearman",
 	Civilization = "germanic",
 	Class = "", -- because the unit is not ready for being playable
