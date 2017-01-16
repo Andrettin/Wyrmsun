@@ -25,10 +25,80 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineCharacter("alboin", { -- king of the Lombards (from 560 to 572); Source: "Medieval Warfare IV.6", 2013, p. 8.
+	Name = "Alboin",
+	Gender = "male",
+	Type = "unit-teuton-heroic-swordsman", -- king
+	Civilization = "teuton",
+	Faction = "lombardy",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "lombardy") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("authari", { -- king of the Lombards (from 584 to 590); Source: "Medieval Warfare IV.6", 2013, p. 16.
+	Name = "Authari",
+	Gender = "male",
+	Type = "unit-teuton-heroic-swordsman", -- king
+	Civilization = "teuton",
+	Faction = "lombardy",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "lombardy") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("agilulf", { -- king of the Lombards (from 591 to 616); Source: "Medieval Warfare IV.6", 2013, p. 18.
+	Name = "Agilulf",
+	Gender = "male",
+	Type = "unit-teuton-heroic-swordsman", -- king
+	Civilization = "teuton",
+	Faction = "lombardy",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "lombardy") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("liudprand", { -- given by Medieval Warfare as "Liutprand", and by Archibald Lewis as "Liudprand"; king of the Lombards (from 712 to 744); Source: "Medieval Warfare IV.6", 2013, p. 9; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 400.
+	Name = "Liudprand",
+	Gender = "male",
+	Type = "unit-teuton-heroic-swordsman", -- king
+	Civilization = "teuton",
+	Faction = "lombardy",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "lombardy") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("aistulf", { -- king of the Lombards (from 749 to 756); Source: "Medieval Warfare IV.6", 2013, p. 9.
+	Name = "Aistulf",
+	Gender = "male",
+	Type = "unit-teuton-heroic-swordsman", -- king
+	Civilization = "teuton",
+	Faction = "lombardy",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "lombardy") then
+			return true
+		end
+		return false
+	end
+})
+
 DefineCharacter("desiderius", { -- Source: "Medieval Warfare V.2", 2013, p. 7.
 	Name = "Desiderius",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
 	Faction = "lombardy",
 	Year = 772, -- was king of the Lombards in 772, when Carloman the Younger Carolingian's wife fled to his court

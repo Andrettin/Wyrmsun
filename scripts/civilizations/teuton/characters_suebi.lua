@@ -28,7 +28,7 @@
 DefineCharacter("ariovistus", {
 	Name = "Ariovistus",
 	Gender = "male",
-	Type = "unit-suebi-swordsman",
+	Type = "unit-teuton-heroic-swordsman", -- chieftain
 	Civilization = "teuton",
 	Faction = "suebi-tribe",
 	ProvinceOfOrigin = "Brandenburg",
@@ -37,14 +37,19 @@ DefineCharacter("ariovistus", {
 	ViolentDeath = true,
 	HistoricalTitles = {
 		"head-of-state", -71, -54, "teuton", "suebi-tribe"
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "suebi-tribe") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("marbod", {
 	Name = "Marbod",
 	Gender = "male",
-	Type = "unit-suebi-swordsman",
-	Level = 2,
+	Type = "unit-teuton-heroic-swordsman", -- chieftain/king
 	Civilization = "teuton",
 	Faction = "marcomanni-tribe",
 	Trait = "upgrade-keen",
@@ -57,7 +62,13 @@ DefineCharacter("marbod", {
 	ViolentDeath = true, -- to represent him being deposed; remove when his DeathYear is replaced with his actual year of death
 	HistoricalTitles = {
 		"head-of-state", -9, 19, "teuton", "marcomanni-tribe"
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "marcomanni-tribe") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("catualda", { -- Marcomannic noble who was exiled by Marbod, and later returned with an army behind him and deposed Marbod
@@ -68,17 +79,29 @@ DefineCharacter("catualda", { -- Marcomannic noble who was exiled by Marbod, and
 	Faction = "marcomanni-tribe",
 	HistoricalTitles = {
 		"head-of-state", 19, 0, "teuton", "marcomanni-tribe" -- deposed Marbod in 19 AD
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "marcomanni-tribe") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("ballomar", { -- Source: "Ancient Warfare VII.6", 2013, pp. 29-32.
 	Name = "Ballomar",
 	Gender = "male",
-	Type = "unit-suebi-swordsman",
+	Type = "unit-teuton-heroic-swordsman", -- chieftain
 	Civilization = "teuton",
 	Faction = "marcomanni-tribe",
 	Trait = "upgrade-intelligent",
 	HairVariation = "brown-hair",
---	Description = "The Marcomannic chieftain Ballomar seeks to establish his tribe in the Roman lands to their south. To that effect, he has gathered a coalition of tribes - and is ready to cross the Danube."
+	Description = "The Marcomannic chieftain Ballomar seeks to establish his tribe in the Roman lands to their south. To that effect, he has gathered a coalition of tribes - and is ready to cross the Danube.",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "marcomanni-tribe") then
+			return true
+		end
+		return false
+	end
 })
 
