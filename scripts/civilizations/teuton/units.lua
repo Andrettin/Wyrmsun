@@ -31,12 +31,13 @@
 --	NOTE: Save can generate this table.
 --
 
-DefineUnitType("unit-teuton-worker", { Name = _("Bura"),
+DefineUnitType("unit-teuton-worker", {
+	Name = "Bura",
 	Parent = "unit-template-worker",
 	Civilization = "teuton",
---	Description = _("Hardworking and robust, buras are the lifeblood of germanic society, tending the fields and performing most of the manual labor required."),
---	Quote = _("\"He began to grow, and to gain in strength,\nOxen he ruled, and plows made ready,\nHouses he built, and barns he fashioned,\nCarts he made, and the plow he managed.\"\n- Rigsthula"),
---	Background = _("\"Bûra\" is the Proto-Germanic word for \"peasant\" or \"farmer\"."),
+--	Description = "Hardworking and robust, buras are the lifeblood of germanic society, tending the fields and performing most of the manual labor required.",
+--	Quote = "\"He began to grow, and to gain in strength,\nOxen he ruled, and plows made ready,\nHouses he built, and barns he fashioned,\nCarts he made, and the plow he managed.\"\n- Rigsthula",
+--	Background = "\"Bûra\" is a Proto-Germanic word for \"peasant\" or \"farmer\".",
 	Image = {"file", "germanic/units/worker.png", "size", {72, 72}},
 	Animations = "animations-worker", Icon = "icon-germanic-worker",
 	DefaultEquipment = {
@@ -541,7 +542,7 @@ DefineUnitType("unit-teuton-spearman", {
 	NightSightRangeBonus = -1,
 	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	ButtonKey = "e",
-	ButtonHint = _("Train Sp~!eerkampfer"),
+	ButtonHint = _("Train Sp~!earman"),
 	Variations = {
 		{
 			"variation-id", "red-hair"
@@ -665,7 +666,7 @@ DefineUnitType("unit-teuton-ritter", {
 	Parent = "unit-template-cavalry",
 	Civilization = "teuton",
 	Description = "The Teutons excel in mounted combat. Their well-armored and trained heavy cavalry strikes fear in the hearts of their enemies whenever they are seen upon the battlefield.",
-	Background = "\"Rītan\" is the Old High German word for \"to ride\".",
+	Background = "\"Rītan\" is an Old High German word for \"to ride\".",
 	Image = {"file", "teuton/units/ritter.png", "size", {72, 72}},
 	LayerImages = {
 		{"layer", "shield", "file", "teuton/units/ritter_shield.png"}

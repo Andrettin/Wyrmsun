@@ -86,7 +86,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added portrait for the Frankish level 3 swordsman for those who have the Frankish Faction Flair DLC.
 - Added an upgrade to the Teuton cavalry (icon by Jinn).
 - Added portrait for the Frankish level 3 knight for those who have the Frankish Faction Flair DLC.
-- Changed Teuton unit type names to be based on Old High German words (rather than modern German ones), to better reflect the time period the civilization represents. Units without a suitable Old High German name were changed to English. The exception to this is the Kogge, which is based on a late medieval ship.
+- Changed the unit type names of the Teuton swordsman, archer and horse rider to be based on Old High German words (rather than modern German ones), to better reflect the time period they represent. The name of Teuton spearmen, for a lack of a suitable Old High German name found in research so far, was changed to English.
 
 -----------------------------------------------------------------------
 - 2.5.3
