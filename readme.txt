@@ -74,6 +74,8 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - Deity entries in the encyclopedia now display their portraits.
 - Players that are hostile to you will now be considered as your enemy, even if you don't have a hostile diplomatic stance towards them.
+- Cold damage now has a small chance to cause slow status on organic units.
+- Lightning damage now has a small chance to cause stun status on organic units.
 
 * Scenarios
 - Added Karla and Thrahila as heroes to their respective tribes for the Haimdala's Progeny scenario.

@@ -171,7 +171,7 @@ DefineCharacter("franz-seraph-stadion", { -- Source: Waltraud Heindl, "Josephini
 	Year = 1806, -- born
 	DeathYear = 1853, -- died
 	HistoricalTitles = {
-		"interior-minister", 1848, 1849, "teuton", "austria" -- Interior Minister (Innenminister) of Austria until May 1849, when he became severely ill; was already Interior Minister by 7.11.1818
+		"interior-minister", 1848, 1849, "teuton", "austria" -- Interior Minister (Innenminister) of Austria until May 1849, when he became severely ill; was already Interior Minister by 7.11.1848
 	}
 	-- count (of where?)
 })
@@ -187,7 +187,7 @@ DefineCharacter("alexander-von-bach", { -- Source: Waltraud Heindl, "Josephinisc
 	Year = 1813, -- born
 	DeathYear = 1893, -- died
 	HistoricalTitles = {
-		"interior-minister", 1849, 1859, "teuton", "austria" -- became Interior Minister (Innenminister) of Austria in 15.08.1849, and ceased that function in 1859
+		"interior-minister", 1849, 1859, "teuton", "austria" -- became Interior Minister (Innenminister) of Austria on 15.08.1849, and ceased that function in 1859
 	}
 })
 

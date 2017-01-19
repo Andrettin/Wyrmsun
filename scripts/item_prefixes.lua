@@ -67,7 +67,7 @@ DefineUpgrade("upgrade-item-prefix-frail", {
 })
 
 DefineUpgrade("upgrade-item-prefix-giantsbane", {
-	Name = _("Giantsbane"),
+	Name = "Giantsbane",
 	MagicPrefix = true,
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
 	MagicLevel = 2
