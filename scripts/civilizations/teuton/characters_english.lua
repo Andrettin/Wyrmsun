@@ -100,7 +100,7 @@ DefineCharacter("aethelric", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 })
 
 DefineCharacter("aethelfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 75, 78.
-	Name = "aethelfrith", -- "Æthelfrith"
+	Name = "Aethelfrith", -- "Æthelfrith"
 	Gender = "male",
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
