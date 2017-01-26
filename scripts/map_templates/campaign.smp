@@ -1,5 +1,5 @@
 -- Stratagus Map Presentation
 
 DefinePlayerTypes("person")
-PresentMap("Earth", 1, 256, 256, 1)
+PresentMap("Earth", 1, GetCampaignData(GetCurrentCampaign(), "MapWidth"), GetCampaignData(GetCurrentCampaign(), "MapHeight"), 1)
 MapWorld = "Earth"

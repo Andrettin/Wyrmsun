@@ -95,7 +95,7 @@ DefineDeity("anubis", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {"death"},
---	Description = "Anubis is a god of embalming and guards over necropolises. He appears as an anthropomorphic canine."
+--	Description = "Anubis is a god of embalming who guards over necropolises. He appears as an anthropomorphic canine."
 })
 
 DefineDeity("anuquis", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 66, 122.
@@ -135,7 +135,7 @@ DefineDeity("geb", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p
 	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {"earth"},
---	Description = "Geb is a god of earth and fate. Geb is the son of Shu and Tefnut."
+--	Description = "Geb is a god of earth and fate. He is the son of Shu and Tefnut."
 })
 
 DefineDeity("hathor", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 13, 29, 61, 68, 74, 129.
@@ -296,7 +296,7 @@ DefineDeity("mandulis", { -- Source: Claude Traunecker, "Os Deuses do Egito", 19
 	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {"sun"},
---	Description = "Mandulis is a solar god, who takes the shape of a flowery falcon."
+--	Description = "Mandulis is a solar god who takes the shape of a flowery falcon."
 })
 
 DefineDeity("menket", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 85.

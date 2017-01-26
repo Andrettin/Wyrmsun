@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2014-2016 by Andrettin
+--      (c) Copyright 2014-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -1548,6 +1548,7 @@ function RunEncyclopediaWorldsMenu()
 	menu:addLabel("~<Encyclopedia: Worlds~>", offx + 320, offy + 104 + 36*(-4 + height_offset), nil, true)
 
 	local worlds = GetWorlds()
+	table.sort(worlds)
 
 	local world_x = 0
 	if (GetTableSize(worlds) > 20) then
@@ -1937,6 +1938,7 @@ function RunEncyclopediaFactionsCivilizationMenu()
 			table.insert(civilizations, potential_civilizations[i])
 		end
 	end
+	table.sort(civilizations)
 
 	local civilization_x = 0
 	if (GetTableSize(civilizations) > 20) then

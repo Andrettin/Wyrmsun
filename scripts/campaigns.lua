@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016 by Andrettin
+--      (c) Copyright 2016-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -30,7 +30,10 @@ DefineCampaign("the-first-dwarves", {
 	Description = "A clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home. Beset by hostile forces, can they survive for long?",
 	Civilization = "dwarf",
 	Faction = "brising-clan",
-	StartYear = -2800
+	StartYear = -2800,
+	MapTemplate = "nidavellir",
+	MapTemplateStartPos = {525, 132},
+	MapSize = {256, 256}
 })
 
 --[[
@@ -56,7 +59,10 @@ DefineCampaign("heimdalls-progeny", {
 	Description = "The young warrior Erala believes his true father to be the god Haimadala. Feeling that his divine heritage has fated him to rule over vast lands, Erala sets off to establish a hall and gather followers...", -- in the original myth his parents were "Fathir" and "Mothir"; "Fadēr" is the word which gave origin to "Fathir", while "Môder" gave origin to "Mothir"
 	Civilization = "germanic",
 	Faction = "jarling-tribe",
-	StartYear = -1600 -- the introduction of stronger social differentiation occurred in Scandinavia around 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 73. As such, it makes sense to make the Rig myth (in which the different Scandinavian social classes are originated) take place around this time
+	StartYear = -1600, -- the introduction of stronger social differentiation occurred in Scandinavia around 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 73. As such, it makes sense to make the Rig myth (in which the different Scandinavian social classes are originated) take place around this time
+	MapTemplate = "earth",
+	MapTemplateStartPos = {4022, 667},
+	MapSize = {256, 256}
 })
 
 --[[
@@ -75,7 +81,10 @@ DefineCampaign("the-first-marcomannic-war", {
 	Description = "Under the leadership of Ballomar, the Marcomanni wage war with the mighty Roman Empire.",
 	Civilization = "teuton",
 	Faction = "marcomanni-tribe",
-	StartYear = 170 -- beginning of the First Marcomannic War
+	StartYear = 170, -- beginning of the First Marcomannic War
+	MapTemplate = "earth",
+	MapTemplateStartPos = {4064, 881},
+	MapSize = {256, 256}
 })
 --]]
 

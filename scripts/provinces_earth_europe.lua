@@ -3184,7 +3184,7 @@ DefineProvince("Hungary", {
 	},
 	HistoricalModifiers = {
 		1389, "upgrade-university", true, -- University founded in Budapest in 1389; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
---		1896, "upgrade-college", true -- Eötvos College founded in Budapest in 1896; Source: John Lukacs, Budapest 1900: a historical portrait of a city and its culture, pp. 175-176.
+--		1896, "upgrade-college", true -- Eötvos College founded in Budapest in 1896; Source: John Lukacs, "Budapest 1900: a historical portrait of a city and its culture", pp. 175-176.
 	},
 	Regions = {"Europe", "West and Central Europe"}
 })
@@ -3496,7 +3496,7 @@ DefineProvince("Latium", {
 		768, "unit-teuton-temple", true -- Monastery or abbey existent in Farfa during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
-		166, "upgrade-smallpox", true, -- A sort of smallpox reached Rome from the east in 166; Source: "Ancient Warfare VII.6", 2013, p. 6.
+		166, "upgrade-smallpox", true, -- a sort of smallpox reached Rome from the east in 166; Source: "Ancient Warfare VII.6", 2013, p. 6.
 		1303, "upgrade-university", true -- University founded in Rome in 1303; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	Regions = {"Europe", "Italy", "West and Central Europe"}

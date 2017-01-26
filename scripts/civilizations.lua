@@ -1506,7 +1506,7 @@ DefineCivilization("orc", {
 	Display = "Orc",
 	Visible = true,
 	Species = "orc",
-	ParentCivilization = "neutral",
+	ParentCivilization = "goblin",
 	Adjective = "Orc",
 	Playable = false,
 	DefaultColor = "red",
