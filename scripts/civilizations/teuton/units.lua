@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015-2016 by Andrettin
+--      (c) Copyright 2015-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -813,7 +813,7 @@ DefineUnitType("unit-teuton-town-hall", { Name = _("Rathaus"),
 	Parent = "unit-template-town-hall",
 	Civilization = "teuton",
 	Description = _("The rathaus, or town hall, is the political center of teuton settlements."),
-	Background = _("The graphics of the Rathaus are based on the Tallinn Town Hall, which was originally built by Hanseatic merchants."),
+	Background = _("The appearance of the Rathaus is based on the Tallinn Town Hall, which was originally built by Hanseatic merchants."),
 	Image = {"file", "teuton/buildings/town_hall.png", "size", {128, 128}},
 	Shadow = {"file", "teuton/buildings/town_hall_shadow.png", "size", {128, 128}},
 	Icon = "icon-teuton-town-hall",

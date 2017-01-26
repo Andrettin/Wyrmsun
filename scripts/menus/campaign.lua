@@ -80,6 +80,17 @@ function RunCampaignMenu()
 			table.insert(campaign_ident_list, potential_campaigns[i])
 		end
 	end
+	
+	local function compare_campaign(a, b)
+		if (GetCampaignData(a, "StartYear") ~= GetCampaignData(b, "StartYear")) then
+			return GetCampaignData(a, "StartYear") < GetCampaignData(b, "StartYear")
+		else
+			return a < b
+		end
+	end
+		
+	table.sort(campaign_ident_list, compare_campaign)
+
 	for i=1,table.getn(campaign_ident_list) do
 		table.insert(campaign_list, GetCampaignData(campaign_ident_list[i], "Name"))
 	end

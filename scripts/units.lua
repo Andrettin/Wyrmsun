@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 1998-2016 by Lutz Sammer, Jimmy Salmon and Andrettin
+--      (c) Copyright 1998-2017 by Lutz Sammer, Jimmy Salmon and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -183,7 +183,7 @@ DefineUnitType("unit-template-unit", { Name = _("Unit"),
 })
 
 DefineUnitType("unit-template-building", {
-	Name = _("Building"),
+	Name = "Building",
 	TileSize = {2, 2}, BoxSize = {63, 63}, -- default tile and box size
 	Animations = "animations-building",
 	DrawLevel = 40,
@@ -210,7 +210,7 @@ Load("scripts/items.lua")
 Load("scripts/units_fauna.lua")
 
 DefineUnitType("unit-template-deposit", {
-	Name = _("Deposit"),
+	Name = "Deposit",
 	Parent = "unit-template-building",
 	NeutralMinimapColor = {255, 255, 0},
 	Costs = {"time", 150},
@@ -2462,7 +2462,8 @@ DefineUnitType("unit-miasma", { Name = _("Miasma"),
 --	Vanishes = true,
 --	Sounds = {} } )
 
-DefineUnitType("unit-destroyed-2x2-place", { Name = "Destroyed 2x2 Place",
+DefineUnitType("unit-destroyed-2x2-place", {
+	Name = "Destroyed 2x2 Place",
 	Image = {"file", "neutral/buildings/destroyed_site.png", "size", {64, 64}},
 	Animations = "animations-destroyed-place", Icon = "icon-dwarven-miner",
 	Speed = 0,
@@ -2476,9 +2477,10 @@ DefineUnitType("unit-destroyed-2x2-place", { Name = "Destroyed 2x2 Place",
 	Building = true, VisibleUnderFog = true,
 	Vanishes = true,
 	Sounds = {}
-} )
+})
 
-DefineUnitType("unit-destroyed-3x3-place", { Name = "Destroyed 3x3 Place",
+DefineUnitType("unit-destroyed-3x3-place", {
+	Name = "Destroyed 3x3 Place",
 	Image = {"file", "neutral/buildings/destroyed_site.png", "size", {64, 64}},
 	Animations = "animations-destroyed-place", Icon = "icon-dwarven-miner",
 	Speed = 0,
@@ -2491,7 +2493,8 @@ DefineUnitType("unit-destroyed-3x3-place", { Name = "Destroyed 3x3 Place",
 	Type = "land",
 	Building = true, VisibleUnderFog = true,
 	Vanishes = true,
-	Sounds = {} } )
+	Sounds = {}
+})
 
 --DefineUnitType("unit-destroyed-3x3-place-water", { Name = "Destroyed 3x3 Place Water",
 --	Image = {"size", {64, 64}},
@@ -2508,7 +2511,8 @@ DefineUnitType("unit-destroyed-3x3-place", { Name = "Destroyed 3x3 Place",
 --	Vanishes = true,
 --	Sounds = {} } )
 
-DefineUnitType("unit-destroyed-4x4-place", { Name = "Destroyed 4x4 Place",
+DefineUnitType("unit-destroyed-4x4-place", {
+	Name = "Destroyed 4x4 Place",
 	Image = {"file", "neutral/buildings/destroyed_site.png", "size", {64, 64}},
 	Animations = "animations-destroyed-place", Icon = "icon-dwarven-miner",
 	Speed = 0,
@@ -2521,7 +2525,8 @@ DefineUnitType("unit-destroyed-4x4-place", { Name = "Destroyed 4x4 Place",
 	Type = "land",
 	Building = true, VisibleUnderFog = true,
 	Vanishes = true,
-	Sounds = {} } )
+	Sounds = {}
+})
 
 DefineUnitType("unit-revealer", { Name = "Revealer",
 	Animations = "animations-building", Icon = "icon-eagle-eye",
@@ -3213,7 +3218,7 @@ DefineUnitType("unit-template-transport-ship", {
 })
 
 DefineUnitType("unit-template-town-hall", {
-	Name = _("Town Hall"),
+	Name = "Town Hall",
 	Parent = "unit-template-building",
 	Class = "town-hall",
 	Costs = {"time", 255, "copper", 1200, "lumber", 2400},
@@ -3285,7 +3290,7 @@ DefineUnitType("unit-template-stronghold", {
 } )
 
 DefineUnitType("unit-template-farm", {
-	Name = _("Farm"),
+	Name = "Farm",
 	Parent = "unit-template-building",
 	Class = "farm",
 	Costs = {"time", 100, "copper", 500, "lumber", 750},
@@ -3308,7 +3313,7 @@ DefineUnitType("unit-template-farm", {
 	BurnDamageRate = 1,
 	ButtonPos = 2,
 	ButtonKey = "f",
-	ButtonHint = _("Build ~!Farm"),
+	ButtonHint = "Build ~!Farm",
 	UnitStock = {"unit-cheese", 3, "unit-carrots", 3},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	PersonalNames = {

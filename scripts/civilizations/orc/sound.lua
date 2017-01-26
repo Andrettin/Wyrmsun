@@ -84,3 +84,4 @@ MakeSound("basic-orc-voices-dead", {
 	"orc/basic_voices/orc-die-2.wav",
 	"orc/basic_voices/orc-die-3.wav"
 })
+SetSoundRange("basic-orc-voices-dead", 32)

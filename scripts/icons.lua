@@ -28,7 +28,11 @@
 function DefineIcon(arg)
 	local icon = CIcon:New(arg.Name)
 	icon.G = CPlayerColorGraphic:New(arg.File, arg.Size[1], arg.Size[2])
-	icon.Frame = 0
+	if (arg.Frame) then
+		icon.Frame = arg.Frame
+	else
+		icon.Frame = 0
+	end
 end
 
 DefineIcon({

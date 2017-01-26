@@ -28,6 +28,16 @@
 function EventTriggers()
 	Load("scripts/triggers.lua")
 
+	-- load a triggers.lua file in an enabled mod, if present
+	for i=1,table.getn(wyr.preferences.EnabledMods) do
+		if (string.find(wyr.preferences.EnabledMods[i], ".sms") == nil) then
+			ModPath = tostring(string.gsub(wyr.preferences.EnabledMods[i], "info.lua", ""))
+			if (CanAccessFile(ModPath .. "scripts/triggers.lua")) then
+				Load(ModPath .. "scripts/triggers.lua")
+			end
+		end
+	end
+
 	-- Greebo's Shinies
 	-- based on elements from the Descending into Darkness scenario of the Under the Burning Suns campaign from Battle for Wesnoth
 	-- only appears in terrains which exist in Nidavellir (substitute for checking if there is a goblin faction, as a goblin civilization hasn't yet been implemented)
@@ -435,22 +445,30 @@ function Event(speaker, event_description, player, options, option_effects, even
 		end
 		menu:resize(352, 352)
 
+		local title_label = ""
 		if (type(speaker) == "number") then
 			if (GetUnitVariable(speaker, "Name") ~= "") then
-				menu:addLabel(_(GetUnitVariable(speaker, "Name")), 176, 11)
+				title_label = GetUnitVariable(speaker, "Name")
 			else
-				menu:addLabel(_(GetUnitTypeData(GetUnitVariable(speaker, "Ident"), "Name")), 176, 11)
+				title_label = GetUnitTypeData(GetUnitVariable(speaker, "Ident"), "Name")
 			end
 		elseif (type(speaker) == "string") then
-			menu:addLabel(_(speaker), 176, 11)
+			title_label = speaker
+		end
+		if (title_label ~= "") then
+			menu:addLabel(_(title_label), 176, 11)
 		end
 
 		local l = MultiLineLabel()
 		l:setFont(Fonts["game"])
-		l:setSize(324, 208)
+		l:setSize(324, 324)
 		l:setLineWidth(324)
 		if (event_icon == nil and type(speaker) == "string" and not (GrandStrategy and not GameRunning and GameResult == GameNoResult)) then
-			menu:add(l, 14, 76)
+			--if (title_label ~= "") then
+				menu:add(l, 14, 76)
+			--else
+			--	menu:add(l, 14, 38)
+			--end
 		else
 			menu:add(l, 14, 112)
 		end
