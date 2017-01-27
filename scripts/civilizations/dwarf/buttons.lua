@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2013-2016 by Andrettin
+--      (c) Copyright 2013-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -733,3 +733,5 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-guard-tower",
 --  Action = "cast-spell", Value = "spell-axe-twirl",
 --  Key = "w", Hint = _("Axe T~!wirl"), Popup = "popup-commands",
 --  ForUnit = {"unit-dwarven-thane", "unit-hero-rugnur-thane"} } )
+
+Load("scripts/civilizations/dwarf/buttons_faction.lua")

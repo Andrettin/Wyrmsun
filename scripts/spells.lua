@@ -321,8 +321,8 @@ DefineSpell("spell-sagan-allegiance",
 )
 
 DefineSpell("spell-frank-allegiance",
-	"showname", _("Frank Allegiance"),
-	"description", _("Changes the unit's type into its Frankish faction-specific equivalent"),
+	"showname", "Frank Allegiance",
+	"description", "Changes the unit's type into its Frankish faction-specific equivalent",
 	"manacost", 0,
 	"range", 0,
 	"target", "self",
@@ -340,22 +340,42 @@ DefineSpell("spell-frank-allegiance",
 )
 
 DefineSpell("spell-suebi-allegiance",
-	"showname", _("Suebi Allegiance"),
-	"description", _("Changes the unit's type into its Suebi faction-specific equivalent"),
+	"showname", "Suebi Allegiance",
+	"description", "Changes the unit's type into its Suebi equivalent",
 	"manacost", 0,
 	"range", 0,
 	"target", "self",
 	"condition", {
 		"organic", "only",
 		"Building", "false",
-		"faction-equivalent", "teuton", "suebi-tribe"
+		"civilization-equivalent", "suebi"
 	},
 	"action", {
 		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
-		{"polymorph", "civilization", "teuton", "faction", "suebi-tribe"}
+		{"polymorph", "civilization", "suebi"}
 	},
 	"item-spell", "scroll",
 	"sound-when-cast", "magic-holy"
+)
+
+DefineSpell("spell-teuton-allegiance",
+	"showname", "Teuton Allegiance",
+	"description", "Changes the unit's type into its Teuton equivalent",
+	"manacost", 0,
+	"range", 0,
+	"target", "self",
+	"condition", {
+		"organic", "only",
+		"Building", "false",
+		"civilization-equivalent", "teuton"
+	},
+	"action", {
+		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
+		{"polymorph", "civilization", "teuton"}
+	},
+	"item-spell", "scroll",
+	"sound-when-cast", "magic-holy"
+
 )
 
 DefineSpell("spell-detachment",

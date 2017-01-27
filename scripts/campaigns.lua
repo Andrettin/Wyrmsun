@@ -79,7 +79,7 @@ DefineCampaign("thunrazs-servant", {
 DefineCampaign("the-first-marcomannic-war", {
 	Name = "The First Marcomannic War",
 	Description = "Under the leadership of Ballomar, the Marcomanni wage war with the mighty Roman Empire.",
-	Civilization = "teuton",
+	Civilization = "suebi",
 	Faction = "marcomanni-tribe",
 	StartYear = 170, -- beginning of the First Marcomannic War
 	MapTemplate = "earth",

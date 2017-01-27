@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2013-2016 by Lutz Sammer, Jimmy Salmon and Andrettin
+--      (c) Copyright 2013-2017 by Lutz Sammer, Jimmy Salmon and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -1076,5 +1076,6 @@ Load("scripts/civilizations/kobold/icons.lua")
 Load("scripts/civilizations/latin/icons.lua")
 Load("scripts/civilizations/norse/icons.lua")
 Load("scripts/civilizations/orc/icons.lua")
+Load("scripts/civilizations/suebi/icons.lua")
 Load("scripts/civilizations/teuton/icons.lua")
 Load("scripts/civilizations/troll/icons.lua")

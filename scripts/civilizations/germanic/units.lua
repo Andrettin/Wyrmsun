@@ -88,7 +88,7 @@ DefineUnitType("unit-germanic-worker", {
 } )
 
 DefineUnitType("unit-germanic-warrior", {
-	Name = _("Erala"), -- Erala = "Warrior" in Proto-Germanic, according to the "Wortschatz der Germanischen Spracheinheit" by August Fick
+	Name = "Erala", -- Erala = "Warrior" in Proto-Germanic, according to the "Wortschatz der Germanischen Spracheinheit" by August Fick
 	Parent = "unit-template-infantry",
 	Civilization = "germanic",
 	Description = _("Germanic tribes are known for their fierceness in combat, and these sword-wielding warriors act accordingly."),

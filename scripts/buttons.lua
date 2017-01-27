@@ -43,7 +43,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-attack-ground",
 	Action = "attack-ground",
 	Key = "g", Hint = _("Attack ~!Ground"), Popup = "popup-commands",
 	ForUnit = {
-		"unit-teuton-catapult", "germanic-group", "teuton-group",
+		"unit-teuton-catapult", "germanic-group", "suebi-group", "teuton-group",
 		"unit-dwarven-ballista", "dwarf-group",
 		"unit-goblin-war-machine", "goblin-group"
 	}
@@ -91,7 +91,7 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-build-basic-structure",
 
 DefineButton( { Pos = 13, Level = 0, Icon = "icon-rally-point",
 	Action = "rally-point",
-	Key = "r", Hint = _("Set ~!Rally Point"), Popup = "popup-commands",
+	Key = "r", Hint = "Set ~!Rally Point", Popup = "popup-commands",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-latin-barracks",
@@ -115,16 +115,53 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-rally-point",
 	}
 } )
 
-DefineButton( { Pos = 14, Level = 0, Icon = "icon-garrison",
+DefineButton( { Pos = 14, Level = 0, Icon = "icon-teuton-civilization",
+	Action = "button", Value = 2,
+--	Allowed = "check-unit-variable", AllowArg = {"Transport", "Value", ">=", "1"},
+	Key = "p", Hint = "View ~!Political Decisions", Popup = "popup-commands",
+	ForUnit = {
+		"unit-latin-town-hall",
+		"unit-germanic-town-hall",
+		"unit-teuton-town-hall", "unit-teuton-stronghold",
+		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
+		"unit-gnomish-town-hall",
+		"unit-goblin-town-hall", "unit-goblin-stronghold"
+	}
+})
+
+DefineButton( { Pos = 15, Level = 0, Icon = "icon-garrison",
 	Action = "button", Value = 1,
 	Allowed = "check-unit-variable", AllowArg = {"Transport", "Value", ">=", "1"},
-	Key = "g", Hint = _("See ~!Garrison"), Popup = "popup-commands",
+	Key = "g", Hint = "View ~!Garrison", Popup = "popup-commands",
 	ForUnit = {
 		"unit-teuton-stronghold",
 		"unit-dwarven-stronghold",
 		"unit-goblin-stronghold",
 	}
 })
+
+DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
+	Action = "button", Value = 0,
+	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
+	ForUnit = {
+		"unit-teuton-stronghold",
+		"unit-dwarven-stronghold",
+		"unit-goblin-stronghold",
+	}
+} )
+
+DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
+	Action = "button", Value = 0,
+	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
+	ForUnit = {
+		"unit-latin-town-hall",
+		"unit-germanic-town-hall",
+		"unit-teuton-town-hall", "unit-teuton-stronghold",
+		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
+		"unit-gnomish-town-hall",
+		"unit-goblin-town-hall", "unit-goblin-stronghold"
+	}
+} )
 
 -- General Cancel Buttons ------------------------------------------------------
 
@@ -559,16 +596,6 @@ DefineButton( { Pos = 16, Level = 3, Icon = "icon-cancel",
 	} 
 } )
 
-DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
-	Action = "button", Value = 0,
-	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
-	ForUnit = {
-		"unit-teuton-stronghold",
-		"unit-dwarven-stronghold",
-		"unit-goblin-stronghold",
-	}
-} )
-
 -- Special Abilities ---------------------------------------------------
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-inspire",
@@ -717,7 +744,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-quest",
 
 DefineButton( { Pos = 9, Level = 0,
 	Action = "buy", Value = -1,
-	Key = "", Hint = _("Buy"), Popup = "popup-unit",
+	Key = "", Hint = "Buy", Popup = "popup-unit",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -735,7 +762,7 @@ DefineButton( { Pos = 9, Level = 0,
 
 DefineButton( { Pos = 10, Level = 0,
 	Action = "buy", Value = -1,
-	Key = "", Hint = _("Buy"), Popup = "popup-unit",
+	Key = "", Hint = "Buy", Popup = "popup-unit",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -753,7 +780,7 @@ DefineButton( { Pos = 10, Level = 0,
 
 DefineButton( { Pos = 11, Level = 0,
 	Action = "buy", Value = -1,
-	Key = "", Hint = _("Buy"), Popup = "popup-unit",
+	Key = "", Hint = "Buy", Popup = "popup-unit",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -771,7 +798,7 @@ DefineButton( { Pos = 11, Level = 0,
 
 DefineButton( { Pos = 12, Level = 0,
 	Action = "buy", Value = -1,
-	Key = "", Hint = _("Buy"), Popup = "popup-unit",
+	Key = "", Hint = "Buy", Popup = "popup-unit",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -824,4 +851,5 @@ Load("scripts/civilizations/germanic/buttons.lua")
 Load("scripts/civilizations/gnome/buttons.lua")
 Load("scripts/civilizations/goblin/buttons.lua")
 Load("scripts/civilizations/latin/buttons.lua")
+Load("scripts/civilizations/suebi/buttons.lua")
 Load("scripts/civilizations/teuton/buttons.lua")

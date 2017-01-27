@@ -2104,6 +2104,8 @@ function GetCivilizationBackground(civilization)
 		return "ui/backgrounds/gryphon.png"
 	elseif (civilization == "slav") then
 		return "ui/backgrounds/wyrm.png"
+	elseif (civilization == "suebi") then
+		return "ui/backgrounds/wyrm.png"
 	elseif (civilization == "teuton") then
 		return "ui/backgrounds/wyrm.png"
 	end

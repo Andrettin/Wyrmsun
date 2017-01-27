@@ -56,11 +56,15 @@ Units = {
 	"upgrade-teuton-iron-tipped-wood-plow",
 	"upgrade-teuton-masonry",
 	"upgrade-teuton-coinage", "upgrade-teuton-writing", "upgrade-teuton-alchemy",
+	"upgrade-suebi-civilization",
 	"unit-suebi-swordsman", 
+	"upgrade-faction-alamanni-tribe", "upgrade-faction-marcomanni-tribe", "upgrade-faction-suebi-tribe", "upgrade-faction-thuringian-tribe",
 	"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman", "unit-frank-spearman",
 	"unit-frank-horseman", "unit-frank-knight-lord",
 	"unit-celt-farm",
 	"upgrade-celt-civilization",
+	"upgrade-faction-norlund-clan", "upgrade-faction-shadowcharm-clan", "upgrade-faction-shinsplitter-clan", "upgrade-faction-shorbear-clan", 
+	"upgrade-faction-kal-kartha", "upgrade-faction-knalga",
 	"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner", "unit-dwarven-militia",
 	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
 	"unit-dwarven-guard",
@@ -81,8 +85,10 @@ Units = {
 	"upgrade-dwarven-wood-plow", "upgrade-dwarven-iron-tipped-wood-plow",
 	"upgrade-dwarven-masonry",
 	"upgrade-dwarven-coinage", "upgrade-dwarven-runewriting", "upgrade-dwarven-alchemy",
+	"upgrade-faction-brising-clan", "upgrade-faction-lyr",
 	"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner", "unit-brising-militia",
 	"unit-brising-smithy",
+	"upgrade-faction-eikinskjaldi-clan", "upgrade-faction-joruvellir",
 	"unit-joruvellir-yale-pen",
 	"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist", "unit-gnomish-caravan",
 	"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
@@ -3748,6 +3754,7 @@ Load("scripts/civilizations/germanic/units.lua")
 Load("scripts/civilizations/gnome/units.lua")
 Load("scripts/civilizations/goblin/units.lua")
 Load("scripts/civilizations/kobold/units.lua")
+Load("scripts/civilizations/suebi/units.lua")
 Load("scripts/civilizations/teuton/units.lua")
 Load("scripts/civilizations/latin/units.lua")
 
@@ -3927,7 +3934,7 @@ DefineUnitType("unit-mercenary-camp", {
 
 
 DefineUnitType("unit-dungeon-wall", {
-	Name = _("Dungeon Wall"),
+	Name = "Dungeon Wall",
 	TerrainType = "dungeon-wall",
 	Image = {"file", "neutral/buildings/glyph.png", "size", {32, 32}},
 	Animations = "animations-building", Icon = "icon-teuton-lumber-mill",

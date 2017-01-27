@@ -26,4 +26,3 @@
 --
 
 Load("scripts/civilizations/teuton/triggers_frank.lua")
-Load("scripts/civilizations/teuton/triggers_marcomanni.lua")

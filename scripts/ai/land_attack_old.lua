@@ -116,7 +116,6 @@ local land_funcs = {
   function() return AiNeed(GetAiUnitType("lumber-mill")) end, -- moved here, as it is necessary for the stronghold to be available
   function() return AiWait(GetAiUnitType("lumber-mill")) end,
   function() return AiResearch(GetAiUnitType("ranged-projectile-1")) end,
-  function() if (AiGetRace() == "germanic") then return AiResearch("upgrade-teuton-civilization") else return false end end,
 
   function() return AiSet(GetAiUnitType("barracks"), 2) end,
   function() return AiDifficultyForce(1, {GetAiUnitType("infantry"), 12, GetAiUnitType("shooter"), 4}, true) end,

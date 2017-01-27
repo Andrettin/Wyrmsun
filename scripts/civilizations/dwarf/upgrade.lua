@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2013-2016 by Andrettin
+--      (c) Copyright 2013-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -329,11 +329,11 @@ DefineDependency("unit-dwarven-ballista",
 )
 
 DefineDependency("unit-dwarven-yale-pen",
-	{"unit-dwarven-lumber-mill", "upgrade-joruvellir-faction", 0}
+	{"unit-dwarven-lumber-mill", "upgrade-faction-joruvellir", 0, "upgrade-faction-eikinskjaldi-clan", 0}
 )
 
 DefineDependency("unit-joruvellir-yale-pen",
-	{"unit-dwarven-lumber-mill", "upgrade-joruvellir-faction"}
+	{"unit-dwarven-lumber-mill", "upgrade-faction-joruvellir"}, "or", {"unit-dwarven-lumber-mill", "upgrade-faction-eikinskjaldi-clan"}
 )
 
 DefineDependency("unit-dwarven-yale-rider",
@@ -357,17 +357,17 @@ DefineDependency("unit-dwarven-gryphon-rider",
 )
 
 DefineDependency("unit-dwarven-miner",
-	{"upgrade-brising-clan-faction", 0}
+	{"upgrade-faction-brising-clan", 0, "upgrade-faction-lyr", 0}
 )
 
 DefineDependency("unit-brising-miner",
-	{"upgrade-brising-clan-faction"}
+	{"upgrade-faction-brising-clan"}, "or", {"upgrade-faction-lyr"}
 )
 
 DefineDependency("unit-dwarven-smithy",
-	{"upgrade-brising-clan-faction", 0}
+	{"upgrade-faction-brising-clan", 0, "upgrade-faction-lyr", 0}
 )
 
 DefineDependency("unit-brising-smithy",
-	{"upgrade-brising-clan-faction"}
+	{"upgrade-faction-brising-clan"}, "or", {"upgrade-faction-lyr"}
 )

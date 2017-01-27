@@ -27,21 +27,6 @@
 
 Load("scripts/civilizations/teuton/factions_frank.lua")
 
-DefineFaction("suebi-tribe", {
-	Name = "Suebi Tribe",
-	Civilization = "teuton",
-	Type = "tribe",
-	Colors = {"black"},
-	DefaultTier = "duchy",
-	DevelopsTo = {"galicia", "bavaria", "austria", "carinthia"},
-	FactionUpgrade = "upgrade-suebi-tribe-faction",
-	Description = "The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there.",
-	SettlementNames = {
-		"Marobudum" -- alternate name of the Marcomannic capital; either located where modern Prague or Budweis are; Source: Frederick Kohlrausch, "A History of Germany", 1844, p. 57.
-	},
-	HistoricalFactionDerivations = {-264, "germanic", "istaevone-tribe"}
-})
-
 DefineFaction("saxon-tribe", {
 	Name = "Saxon Tribe",
 	Civilization = "teuton",
@@ -55,26 +40,6 @@ DefineFaction("saxon-tribe", {
 		"Hohsingo", -- one of the pagi in Eastphalia in 852; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 610.
 		"Suabengo" -- one of the pagi in Eastphalia in 852; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 610.
 	}
-})
-
-DefineFaction("thuringian-tribe", {
-	Name = "Thuringian Tribe",
-	Civilization = "teuton",
-	ParentFaction = "suebi-tribe", -- correct?
-	Type = "tribe",
-	Colors = {"green"},
---	FactionUpgrade = "upgrade-thuringian-tribe-faction",
-	HistoricalFactionDerivations = {507, "teuton", "suebi-tribe"} -- who did the Thuringians actually stem from?
-})
-
-DefineFaction("alamanni-tribe", {
-	Name = "Alamanni Tribe",
-	Civilization = "teuton",
-	Type = "tribe",
-	Colors = {"blue"},
-	DevelopsTo = {"baden", "swabia", "switzerland", "wurtemberg"},
-	FactionUpgrade = "upgrade-alamanni-tribe-faction",
-	HistoricalFactionDerivations = {481, "teuton", "suebi-tribe"}
 })
 
 DefineFaction("ampsivarii-tribe", {
@@ -137,16 +102,6 @@ DefineFaction("batavian-tribe", {
 	HistoricalFactionDerivations = {-264, "germanic", "herminone-tribe"}
 })
 
-DefineFaction("buri-tribe", {
-	Name = "Buri Tribe",
-	Civilization = "teuton", -- accurate?
-	ParentFaction = "suebi-tribe", -- accurate?
-	Type = "tribe",
-	Colors = {"violet"},
-	DevelopsTo = {"bavaria", "galicia", "austria", "carinthia"}, -- accurate?
-	HistoricalFactionDerivations = {161, "teuton", "suebi-tribe"}
-})
-
 DefineFaction("chamavi-tribe", {
 	Name = "Chamavi Tribe",
 	Civilization = "teuton",
@@ -207,20 +162,6 @@ DefineFaction("frisian-tribe", {
 	HistoricalFactionDerivations = {-264, "germanic", "ingaevone-tribe"}
 })
 
-DefineFaction("hermunduri-tribe", {
-	Name = "Hermunduri Tribe",
-	Civilization = "teuton",
-	ParentFaction = "suebi-tribe", -- accurate?
-	Type = "tribe",
-	Colors = {"blue"},
-	DevelopsTo = {"thuringia"}, -- same general area
-	HistoricalDiplomacyStates = {
-		170, "rome", "war", -- in 170 a coalition led by the Marcomanni (which included the Hermunduri) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.
-		171, "rome", "peace" -- in 171 the Romans forced most of the tribes of the Marcomannic coalition to a peace; Source: "Ancient Warfare VII.6", 2013, p. 32.
-	},
-	HistoricalFactionDerivations = {-264, "germanic", "istaevone-tribe"}
-})
-
 DefineFaction("jute-tribe", {
 	Name = "Jute Tribe",
 	Civilization = "teuton",
@@ -240,24 +181,6 @@ DefineFaction("lombard-tribe", {
 	HistoricalFactionDerivations = {-264, "germanic", "istaevone-tribe"}
 })
 
-DefineFaction("marcomanni-tribe", {
-	Name = "Marcomanni Tribe",
-	Civilization = "teuton",
-	ParentFaction = "suebi-tribe",
-	Type = "tribe",
-	Colors = {"orange", "red"}, -- change to a better one?
-	DevelopsTo = {"bavarian-tribe", "bavaria", "galicia", "austria", "carinthia"},
-	Description = "The Marcomanni were a Suebic tribe. Eventually they migrated to the east, settling in Bohemia and expelling the local Boii tribe. In the 2nd century they fought the terrible Marcomannic Wars against the Romans. The name \"Marcomanni\" means \"march-men\", or \"frontier-men\".",
-	HistoricalFactionDerivations = {-9, "teuton", "suebi-tribe"},
-	HistoricalDiplomacyStates = {
-		170, "rome", "war", -- in 170 a coalition led by the Marcomanni (which included the Quadi and the Hermunduri) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.
-		170, "hermunduri-tribe", "alliance",
-		172, "rome", "peace", -- in 172 the Romans forced the Marcomanni to a peace; Source: "Ancient Warfare VII.6", 2013, p. 32.
-		177, "rome", "war", -- the Marcomanni entered conflict with the Romans again in 177; Source: "Ancient Warfare VII.6", 2013, p. 8.
-		177, "rome", "peace" -- in (apparently) 177 the Romans again forced the Marcomanni to a peace; Source: "Ancient Warfare VII.6", 2013, p. 8.
-	}
-})
-
 DefineFaction("bavarian-tribe", {
 	Name = "Bavarian Tribe",
 	Civilization = "teuton",
@@ -265,37 +188,7 @@ DefineFaction("bavarian-tribe", {
 	Colors = {"cyan", "white"},
 	DevelopsTo = {"bavaria", "austria", "carinthia"},
 	FactionUpgrade = "upgrade-bavarian-tribe-faction",
-	Description = _("The Bavarians were a West Germanic people, tracing their origins to the Marcomanni. Their name means \"men of Bohemia\", an appelation they gained due to the Marcomanni having established themselves in Bohemia under Marbod. The Bavarians migrated south, giving their newly-settled land the name it has to this day, Bavaria."),
-	HistoricalFactionDerivations = {526, "teuton", "marcomanni-tribe"}
-})
-
-DefineFaction("quadi-tribe", {
-	Name = "Quadi Tribe",
-	Civilization = "teuton",
-	ParentFaction = "suebi-tribe",
-	Type = "tribe",
-	Colors = {"brown"},
-	DevelopsTo = {"bavaria", "galicia", "austria", "carinthia"}, -- the Quadi were a Suebic tribe
-	HistoricalFactionDerivations = {-9, "teuton", "suebi-tribe"},
-	HistoricalDiplomacyStates = {
-		170, "rome", "war", -- in 170 a coalition led by the Marcomanni (which included the Quadi) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.
-		170, "marcomanni-tribe", "alliance",
-		171, "rome", "peace", -- in 171 the Romans forced the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 32.
-		173, "rome", "war", -- the Quadi entered conflict with the Romans again in (apparently) 173; Source: "Ancient Warfare VII.6", 2013, p. 8.
-		174, "rome", "peace", -- in 174 the Romans forced the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 8.
-		177, "rome", "war", -- the Quadi entered conflict with the Romans again in 177; Source: "Ancient Warfare VII.6", 2013, p. 8.
-		179, "rome", "peace" -- in 179 the Romans again forced the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 8.
-	}
-})
-
-DefineFaction("semnone-tribe", {
-	Name = "Semnone Tribe",
-	Civilization = "teuton",
-	ParentFaction = "suebi-tribe",
-	Type = "tribe",
-	Colors = {"brown"},
-	DevelopsTo = {"suebi-tribe", "bavaria", "austria", "carinthia"},
-	HistoricalFactionDerivations = {-264, "teuton", "suebi-tribe"}
+	Description = _("The Bavarians were a West Germanic people, tracing their origins to the Marcomanni. Their name means \"men of Bohemia\", an appelation they gained due to the Marcomanni having established themselves in Bohemia under Marbod. The Bavarians migrated south, giving their newly-settled land the name it has to this day, Bavaria.")
 })
 
 DefineFaction("sugambri-tribe", {
@@ -325,8 +218,7 @@ DefineFaction("ubii-tribe", { -- Source: H. H. Howorth, "The Ethnology of German
 	FactionUpgrade = "upgrade-ubii-tribe-faction",
 	Colors = {"purple"},
 	DevelopsTo = {"cologne", "hesse"}, -- same general area
-	Description = _("The Ubii were a West Germanic tribe which lived by the Rhine, north of the Main river. Due to their location in a central trading spot, they were more advanced than other Germanic tribes. Being allies of Rome, many of them eventually migrated west of the Rhine, dwelling around Colonia Agrippinenses (the modern Cologne). The ones who remained possibly became the Chatti."),
-	HistoricalFactionDerivations = {-55, "teuton", "suebi-tribe"}, -- they are first mentioned in Caesar's writings in 55 BC
+	Description = "The Ubii were a West Germanic tribe who lived by the Rhine, north of the Main river. Due to their location in a central trading spot, they were more advanced than other Germanic tribes. Being allies of Rome, many of them eventually migrated west of the Rhine, dwelling around Colonia Agrippinenses (the modern Cologne). The ones who remained possibly became the Chatti.",
 	HistoricalDiplomacyStates = {
 		-55, "suebi-tribe", "vassal" -- the Ubii were tributaries of the Suebi in 55 BC
 	}
@@ -436,16 +328,6 @@ DefineFaction("friesland", {
 	DevelopsTo = {"netherlands"}
 })
 
-DefineFaction("galicia", { -- Suebi kingdom of Galicia
-	Name = "Galicia",
-	Civilization = "teuton",
-	ParentFaction = "suebi-tribe",
-	Type = "polity",
-	Colors = {"black"},
-	DefaultTier = "kingdom",
-	HistoricalFactionDerivations = {486, "teuton", "suebi-tribe"}
-})
-
 DefineFaction("hesse", {
 	Name = "Hesse",
 	Civilization = "teuton",
@@ -533,7 +415,6 @@ DefineFaction("thuringia", {
 	Type = "polity",
 	Colors = {"pink"},
 	DefaultTier = "duchy", -- Thuringia was a landgraviate in 1378; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 78-79.
-	FactionUpgrade = "upgrade-thuringian-tribe-faction",
 	Titles = {
 		"monarchy", "duchy", "Landgraviate"
 	}

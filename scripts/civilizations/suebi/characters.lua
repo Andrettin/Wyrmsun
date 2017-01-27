@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016 by Andrettin
+--      (c) Copyright 2016-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -29,14 +29,14 @@ DefineCharacter("ariovistus", {
 	Name = "Ariovistus",
 	Gender = "male",
 	Type = "unit-teuton-heroic-swordsman", -- chieftain
-	Civilization = "teuton",
+	Civilization = "suebi",
 	Faction = "suebi-tribe",
 	ProvinceOfOrigin = "Brandenburg",
 	Year = -71, -- The Suebic king Ariovistus entered Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
 	DeathYear = -54, -- Ariovistus died in 54 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 222.
 	ViolentDeath = true,
 	HistoricalTitles = {
-		"head-of-state", -71, -54, "teuton", "suebi-tribe"
+		"head-of-state", -71, -54, "suebi", "suebi-tribe"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "suebi-tribe") then
@@ -50,7 +50,7 @@ DefineCharacter("marbod", {
 	Name = "Marbod",
 	Gender = "male",
 	Type = "unit-teuton-heroic-swordsman", -- chieftain/king
-	Civilization = "teuton",
+	Civilization = "suebi",
 	Faction = "marcomanni-tribe",
 	Trait = "upgrade-keen",
 	HairVariation = "blond-hair",
@@ -61,7 +61,7 @@ DefineCharacter("marbod", {
 	DeathYear = 19, -- Marbod deposed in 19 AD
 	ViolentDeath = true, -- to represent him being deposed; remove when his DeathYear is replaced with his actual year of death
 	HistoricalTitles = {
-		"head-of-state", -9, 19, "teuton", "marcomanni-tribe"
+		"head-of-state", -9, 19, "suebi", "marcomanni-tribe"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "marcomanni-tribe") then
@@ -75,10 +75,10 @@ DefineCharacter("catualda", { -- Marcomannic noble who was exiled by Marbod, and
 	Name = "Catualda",
 	Gender = "male",
 	Type = "unit-teuton-veteran-swordsman", -- noble
-	Civilization = "teuton",
+	Civilization = "suebi",
 	Faction = "marcomanni-tribe",
 	HistoricalTitles = {
-		"head-of-state", 19, 0, "teuton", "marcomanni-tribe" -- deposed Marbod in 19 AD
+		"head-of-state", 19, 0, "suebi", "marcomanni-tribe" -- deposed Marbod in 19 AD
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "marcomanni-tribe") then
@@ -92,7 +92,7 @@ DefineCharacter("ballomar", { -- Source: "Ancient Warfare VII.6", 2013, pp. 29-3
 	Name = "Ballomar",
 	Gender = "male",
 	Type = "unit-teuton-heroic-swordsman", -- chieftain
-	Civilization = "teuton",
+	Civilization = "suebi",
 	Faction = "marcomanni-tribe",
 	Trait = "upgrade-intelligent",
 	HairVariation = "brown-hair",
@@ -109,7 +109,7 @@ DefineCharacter("hermeric", { -- Suebic chieftain who sacked central Galicia
 	Name = "Hermeric",
 	Gender = "male",
 	Type = "unit-teuton-heroic-swordsman", -- chieftain
-	Civilization = "teuton",
+	Civilization = "suebi",
 	Faction = "suebi-tribe",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "suebi-tribe" or GetPlayerData(trigger_player, "Faction") == "galicia") then
@@ -123,7 +123,7 @@ DefineCharacter("rechilas", { -- Suebic chieftain who defeated a Roman army led 
 	Name = "Rechilas",
 	Gender = "male",
 	Type = "unit-teuton-heroic-swordsman", -- chieftain
-	Civilization = "teuton",
+	Civilization = "suebi",
 	Faction = "galicia",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "suebi-tribe" or GetPlayerData(trigger_player, "Faction") == "galicia") then

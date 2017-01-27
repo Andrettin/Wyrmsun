@@ -203,13 +203,8 @@ DefineProvince("Baltic Sea", { -- Source: http://www.euratlas.net/history/europe
 	Water = true,
 	ReferenceProvince = "Hither Pomerania", -- province used as a reference for this province's name
 	CulturalNames = {
-		"latin", "Suebic Sea" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	FactionCulturalNames = {
-		"teuton", "marcomanni-tribe", "Suebic Sea",
-		"teuton", "quadi-tribe", "Suebic Sea",
-		"teuton", "semnone-tribe", "Suebic Sea", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-		"teuton", "suebi-tribe", "Suebic Sea"
+		"latin", "Suebic Sea", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"suebi", "Suebic Sea" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	Tiles = {
 --		{128, 24}, {129, 24}, {130, 24}, {130, 25}, {131, 24}, {132, 20}, {132, 22}, {132, 23}, {132, 24}, {133, 19}, {133, 20}, {133, 21}, {133, 22}, {133, 24}, {134, 18}, {134, 19}, {134, 20}, {134, 21}, {134, 22}, {134, 23}, {134, 24}, {135, 17}, {135, 18}, {135, 21}, {135, 22}, {136, 17}, {136, 18}, {136, 21}, {136, 22}, {137, 17}, {137, 21}, {138, 21}, {139, 21}, {140, 21}, -- old map

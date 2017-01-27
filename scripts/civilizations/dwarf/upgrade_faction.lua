@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2013-2016 by Andrettin
+--      (c) Copyright 2013-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,136 +25,247 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUpgrade("upgrade-eikinskjaldi-clan-faction", {
-	Name = _("Eikinskjaldi Clan Faction"),
-	EffectsString = "+2 Armor for Axefighters"
-})
-
-DefineUpgrade("upgrade-brising-clan-faction", {
-	Name = _("Brising Clan Faction"),
+DefineUpgrade("upgrade-faction-brising-clan", {
+	Name = "Brising Clan",
 	EffectsString = "+10 HP for Miners, +1 Damage for Axefighters, +50% Time Efficiency for Smithies"
 })
 
-DefineUpgrade("upgrade-norlund-clan-faction", {
-	Name = _("Norlund Clan Faction"),
+DefineUpgrade("upgrade-faction-eikinskjaldi-clan", {
+	Name = "Eikinskjaldi Clan",
+	EffectsString = "+2 Armor for Axefighters"
+})
+
+DefineUpgrade("upgrade-faction-norlund-clan", {
+	Name = "Norlund Clan",
 	EffectsString = "+1 Damage and +1 Armor for Axefighters"
 })
 
-DefineUpgrade("upgrade-shinsplitter-clan-faction", {
-	Name = _("Shinsplitter Clan Faction"),
+DefineUpgrade("upgrade-faction-shadowcharm-clan", {
+	Name = "Shadowcharm Clan",
+	EffectsString = "+2 Evasion for Axefighters"
+})
+
+DefineUpgrade("upgrade-faction-shinsplitter-clan", {
+	Name = "Shinsplitter Clan",
 	EffectsString = "+3 Damage and -1 Armor for Axefighters"
 })
 
-DefineUpgrade("upgrade-shorbear-clan-faction", {
-	Name = _("Shorbear Clan Faction"),
+DefineUpgrade("upgrade-faction-shorbear-clan", {
+	Name = "Shorbear Clan",
 	EffectsString = "+15 Damage for Ballistas"
 })
 
-DefineUpgrade("upgrade-joruvellir-faction", {
-	Name = _("Joruvellir Faction"),
+DefineUpgrade("upgrade-faction-joruvellir", {
+	Name = "Joruvellir",
 	EffectsString = "+2 Damage for Scouts, -10% cost for Yale Pens"
 })
 
-DefineUpgrade("upgrade-kal-kartha-faction", {
-	Name = _("Kal Kartha Faction"),
+DefineUpgrade("upgrade-faction-kal-kartha", {
+	Name = "Kal Kartha",
 	EffectsString = "-5 HP and +3 Damage for Axefighters"
 })
 
-DefineUpgrade("upgrade-knalga-faction", {
-	Name = _("Knalga Faction"),
+DefineUpgrade("upgrade-faction-knalga", {
+	Name = "Knalga",
 	EffectsString = "+2 Damage for Axefighters"
 })
 
---[[
-DefineUpgrade("upgrade-lyr-faction", {
-	Name = _("Lyr Faction"),
+DefineUpgrade("upgrade-faction-lyr", {
+	Name = "Lyr",
 	EffectsString = "+5 Armor for Towers"
 })
---]]
 
-DefineModifier("upgrade-brising-clan-faction",
+DefineModifier("upgrade-faction-brising-clan",
 	{"BasicDamage", 1},
 	{"Points", 5},
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"}
 )
 
-DefineModifier("upgrade-brising-clan-faction",
+DefineModifier("upgrade-faction-brising-clan",
 	{"apply-to", "unit-dwarven-smithy"}, {"convert-to", "unit-brising-smithy"}
 )
 
-DefineModifier("upgrade-brising-clan-faction",
+DefineModifier("upgrade-faction-brising-clan",
 	{"apply-to", "unit-dwarven-miner"}, {"convert-to", "unit-brising-miner"}
 )
 
-DefineModifier("upgrade-brising-clan-faction",
+DefineModifier("upgrade-faction-brising-clan",
 	{"apply-to", "unit-dwarven-skilled-miner"}, {"convert-to", "unit-brising-skilled-miner"}
 )
 
-DefineModifier("upgrade-brising-clan-faction",
+DefineModifier("upgrade-faction-brising-clan",
 	{"apply-to", "unit-dwarven-expert-miner"}, {"convert-to", "unit-brising-expert-miner"}
 )
 
-DefineModifier("upgrade-brising-clan-faction",
+DefineModifier("upgrade-faction-brising-clan",
 	{"apply-to", "unit-dwarven-militia"}, {"convert-to", "unit-brising-militia"}
 )
 
-DefineModifier("upgrade-brising-clan-faction", -- dummy upgrade modifier to trigger the variation change
+DefineModifier("upgrade-faction-brising-clan", -- dummy upgrade modifier to trigger the variation change
 	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"}, {"apply-to", "unit-dwarven-transport-ship"}
 )
 
-DefineModifier("upgrade-eikinskjaldi-clan-faction",
+DefineModifier("upgrade-faction-brising-clan",
+	{"change-faction-to", "brising-clan"}
+)
+
+DefineModifier("upgrade-faction-eikinskjaldi-clan",
 	{"Armor", 2},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"}
 )
 
-DefineModifier("upgrade-norlund-clan-faction",
+DefineModifier("upgrade-faction-eikinskjaldi-clan",
+	{"apply-to", "unit-dwarven-yale-pen"}, {"convert-to", "unit-joruvellir-yale-pen"}
+)
+
+DefineModifier("upgrade-faction-eikinskjaldi-clan",
+	{"change-faction-to", "eikinskjaldi-clan"}
+)
+
+DefineModifier("upgrade-faction-norlund-clan",
 	{"BasicDamage", 1},
 	{"Armor", 1},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"}
 )
 
-DefineModifier("upgrade-shinsplitter-clan-faction",
+DefineModifier("upgrade-faction-norlund-clan",
+	{"change-faction-to", "norlund-clan"}
+)
+
+DefineModifier("upgrade-faction-shadowcharm-clan",
+	{"Evasion", 2},
+	{"Points", 10},
+	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"}
+)
+
+DefineModifier("upgrade-faction-shadowcharm-clan",
+	{"change-faction-to", "shadowcharm-clan"}
+)
+
+DefineModifier("upgrade-faction-shinsplitter-clan",
 	{"Armor", -1},
 	{"BasicDamage", 3},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"}
 )
 
-DefineModifier("upgrade-shorbear-clan-faction",
+DefineModifier("upgrade-faction-shinsplitter-clan",
+	{"change-faction-to", "shinsplitter-clan"}
+)
+
+DefineModifier("upgrade-faction-shorbear-clan",
 	{"BasicDamage", 15},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-ballista"}
 )
 
-DefineModifier("upgrade-joruvellir-faction",
+DefineModifier("upgrade-faction-shorbear-clan",
+	{"change-faction-to", "shorbear-clan"}
+)
+
+DefineModifier("upgrade-faction-joruvellir",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}, {"apply-to", "unit-dwarven-explorer"}
 )
 
-DefineModifier("upgrade-joruvellir-faction",
+DefineModifier("upgrade-faction-joruvellir",
+	{"change-faction-to", "joruvellir"}
+)
+
+DefineModifier("upgrade-faction-joruvellir",
 	{"apply-to", "unit-dwarven-yale-pen"}, {"convert-to", "unit-joruvellir-yale-pen"}
 )
 
-DefineModifier("upgrade-kal-kartha-faction",
+DefineModifier("upgrade-faction-kal-kartha",
 	{"BasicDamage", 3},
 	{"HitPoints", -5},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"}
 )
 
-DefineModifier("upgrade-knalga-faction",
+DefineModifier("upgrade-faction-kal-kartha",
+	{"change-faction-to", "kal-kartha"}
+)
+
+DefineModifier("upgrade-faction-knalga",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"}
 )
 
---[[
-DefineModifier("upgrade-lyr-faction",
+DefineModifier("upgrade-faction-knalga",
+	{"change-faction-to", "knalga"}
+)
+
+DefineModifier("upgrade-faction-lyr",
 	{"Armor", 5}, -- Thrymgjol bonus
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-sentry-tower"}, {"apply-to", "unit-dwarven-guard-tower"}
 )
---]]
+
+DefineModifier("upgrade-faction-lyr",
+	{"apply-to", "unit-dwarven-smithy"}, {"convert-to", "unit-brising-smithy"}
+)
+
+DefineModifier("upgrade-faction-lyr",
+	{"apply-to", "unit-dwarven-miner"}, {"convert-to", "unit-brising-miner"}
+)
+
+DefineModifier("upgrade-faction-lyr",
+	{"apply-to", "unit-dwarven-skilled-miner"}, {"convert-to", "unit-brising-skilled-miner"}
+)
+
+DefineModifier("upgrade-faction-lyr",
+	{"apply-to", "unit-dwarven-expert-miner"}, {"convert-to", "unit-brising-expert-miner"}
+)
+
+DefineModifier("upgrade-faction-lyr",
+	{"apply-to", "unit-dwarven-militia"}, {"convert-to", "unit-brising-militia"}
+)
+
+DefineModifier("upgrade-faction-lyr", -- dummy upgrade modifier to trigger the variation change
+	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"}, {"apply-to", "unit-dwarven-transport-ship"}
+)
+
+DefineModifier("upgrade-faction-lyr",
+	{"change-faction-to", "lyr"}
+)
+
+DefineDependency("upgrade-faction-eikinskjaldi-clan",
+	{"upgrade-faction-brising-clan"}
+)
+
+DefineDependency("upgrade-faction-norlund-clan",
+	{"upgrade-faction-brising-clan"}
+)
+
+DefineDependency("upgrade-faction-shadowcharm-clan",
+	{"upgrade-faction-brising-clan"}
+)
+
+DefineDependency("upgrade-faction-shinsplitter-clan",
+	{"upgrade-faction-brising-clan"}
+)
+
+DefineDependency("upgrade-faction-shorbear-clan",
+	{"upgrade-faction-brising-clan"}
+)
+
+DefineDependency("upgrade-faction-joruvellir",
+	{"upgrade-faction-eikinskjaldi-clan", "upgrade-dwarven-runewriting"}
+)
+
+DefineDependency("upgrade-faction-kal-kartha",
+	{"upgrade-faction-shadowcharm-clan", "upgrade-dwarven-runewriting"}, "or", {"upgrade-faction-shinsplitter-clan", "upgrade-dwarven-runewriting"}, "or", {"upgrade-faction-shorbear-clan", "upgrade-dwarven-runewriting"}
+)
+
+DefineDependency("upgrade-faction-knalga",
+	{"upgrade-faction-norlund-clan", "upgrade-dwarven-runewriting"}, "or", {"upgrade-faction-shinsplitter-clan", "upgrade-dwarven-runewriting"}, "or", {"upgrade-faction-shorbear-clan", "upgrade-dwarven-runewriting"}
+)
+
+DefineDependency("upgrade-faction-lyr",
+	{"upgrade-faction-brising-clan", "upgrade-dwarven-runewriting"}
+)

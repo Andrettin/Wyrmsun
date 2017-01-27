@@ -53,6 +53,7 @@ Load("scripts/civilizations/kobold/characters.lua")
 Load("scripts/civilizations/latin/characters.lua")
 Load("scripts/civilizations/norse/characters.lua")
 Load("scripts/civilizations/persian/characters.lua")
+Load("scripts/civilizations/suebi/characters.lua")
 Load("scripts/civilizations/teuton/characters.lua")
 Load("scripts/civilizations/celt/characters.lua") -- define after Teuton ones, because some Celtic characters refer to Teutonic ones
 Load("scripts/civilizations/slav/characters.lua") -- define after Teuton ones, because some Slavic characters refer to Teutonic ones

@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016 by Andrettin
+--      (c) Copyright 2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,18 +25,16 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
---=============================================================================
---	Define unit-types.
---
---	NOTE: Save can generate this table.
---
+DefineCursor({
+	Name = "cursor-point",
+	Race = "germanic",
+	File = "germanic/ui/cursors/germanic_hand.png",
+	HotSpot = {0, 0},
+	Size = {29, 32}
+})
 
-DefineUnitType("unit-joruvellir-yale-pen", {
-	Parent = "unit-dwarven-yale-pen",
-	Civilization = "dwarf",
-	Faction = "eikinskjaldi-clan",
-	Image = {"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_yale_pen.png", "size", {96, 96}},
-	Shadow = {"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_yale_pen_shadow.png", "size", {96, 96}},
-	Icon = "icon-joruvellir-yale-pen",
-	Costs = {"time", 135, "copper", 900, "lumber", 540, "stone", 270} -- 10% cheaper
-} )
+UI.NormalFontColor = "white"
+UI.ReverseFontColor = "yellow"
+
+UI.MenuButton.Style = FindButtonStyle("main-germanic")
+UI.NetworkDiplomacyButton.Style = FindButtonStyle("main-germanic")

@@ -13,7 +13,7 @@ if (LoadedGame == false) then
 		RoughLandQuantity = "medium",
 --		DarkRoughLandQuantity = "medium",
 		WorkerQuantity = 5,
-		PlayerCivilizations = {"latin", "celt", "celt", "celt", "teuton"},
+		PlayerCivilizations = {"latin", "celt", "celt", "celt", "suebi"},
 		PlayerBuildings = {
 			{"Farm", "Farm", "Lumber Mill", "Farm", "Smithy", "Farm"},
 			{},

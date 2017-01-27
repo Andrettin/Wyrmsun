@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016 by Andrettin
+--      (c) Copyright 2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -33,15 +33,14 @@
 
 DefineUnitType("unit-suebi-swordsman", {
 	Name = "Kregar",
-	Parent = "unit-teuton-swordsman",
-	Civilization = "teuton",
-	Faction = "suebi-tribe",
+	Parent = "unit-template-infantry",
+	Civilization = "suebi",
 	Description = "Little armored but intensely courageous, the Suebi swordsmen are fierce opponents in battle.",
 	Background = "\"Krêg\" is the Old High German word for \"tenacity\", and possibly \"war\".",
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {
-		{"layer", "hair", "file", "teuton/units/suebi_hair.png"},
+		{"layer", "hair", "file", "suebi/units/suebi_hair.png"},
 		{"layer", "left-arm", "file", "human/units/left_arm.png"},
 		{"layer", "right-arm", "file", "human/units/right_arm.png"},
 		{"layer", "right-hand", "file", "human/units/right_hand.png"},
@@ -53,9 +52,21 @@ DefineUnitType("unit-suebi-swordsman", {
 		{"layer", "helmet", "file", ""},
 		{"layer", "weapon", "file", "teuton/units/long_iron_sword.png"}
 	},
+	Animations = "animations-melee-unit-new",
 	Icon = "icon-suebi-swordsman",
 	Armor = 0, BasicDamage = 11, Accuracy = 12, -- -2 armor, +2 damage, +2 accuracy
 	Points = 60, -- +10 points
+	DefaultEquipment = {
+		{"weapon", "unit-short-sword"},
+		{"shield", "unit-wooden-shield"},
+		{"boots", "unit-boots"}
+	},
+	Corpse = "unit-human-dead-body",
+	DaySightRangeBonus = 1,
+	NightSightRangeBonus = -1,
+	WeaponClasses = {"sword", "thrusting-sword"},
+	HackDamage = true,
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "blond-hair"
@@ -124,12 +135,21 @@ DefineUnitType("unit-suebi-swordsman", {
 		{
 			"layer", "shield",
 			"variation-id", "iron-shield",
-			"file", "teuton/units/suebi_shield.png",
+			"file", "suebi/units/suebi_shield.png",
 			"upgrade-required", "upgrade-teuton-iron-shield",
 			"item-equipped", "unit-iron-shield",
 			"item-equipped", "unit-kite-shield",
 			"item-equipped", "unit-thrymgjol-shield"
 		}
+	},
+	Sounds = {
+		"selected", "basic-germanic-voices-selected-group",
+		"acknowledge", "basic-germanic-voices-acknowledge",
+		"ready", "basic-germanic-voices-ready",
+		"help", "basic-germanic-voices-help",
+		"dead", "basic-human-voices-dead",
+		"hit", "sword-attack",
+		"miss", "attack-miss"
 	}
 } )
 

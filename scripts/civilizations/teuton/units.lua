@@ -521,7 +521,7 @@ DefineUnitType("unit-teuton-spearman", {
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {
-		{"layer", "hair", "file", "teuton/units/suebi_red_hair.png"},
+		{"layer", "hair", "file", "suebi/units/suebi_red_hair.png"},
 		{"layer", "left-arm", "file", "human/units/left_arm.png"},
 		{"layer", "right-arm", "file", "human/units/right_arm_spear.png"},
 		{"layer", "clothing", "file", "teuton/units/cherusci_shirt.png"},
@@ -807,7 +807,6 @@ DefineUnitType("unit-teuton-kogge", {
 })
 
 Load("scripts/civilizations/teuton/units_frank.lua")
-Load("scripts/civilizations/teuton/units_suebi.lua")
 
 DefineUnitType("unit-teuton-town-hall", { Name = _("Rathaus"),
 	Parent = "unit-template-town-hall",
@@ -820,7 +819,7 @@ DefineUnitType("unit-teuton-town-hall", { Name = _("Rathaus"),
 	Trains = {"unit-teuton-worker"},
 	AiDrops = {"unit-boots"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery"},
-	DropSpells = {"spell-frank-allegiance", "spell-suebi-allegiance"},
+	DropSpells = {"spell-frank-allegiance", "spell-suebi-allegiance", "spell-teuton-allegiance"},
 	Variations = {
 		{
 			"variation-id", "town-hall",
@@ -852,7 +851,7 @@ DefineUnitType("unit-teuton-stronghold", { Name = _("Burg"),
 	Trains = {"unit-teuton-worker"},
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery"},
-	DropSpells = {"spell-frank-allegiance", "spell-suebi-allegiance"},
+	DropSpells = {"spell-frank-allegiance", "spell-suebi-allegiance", "spell-teuton-allegiance"},
 	Sounds = {
 		"help", "basic-teuton-voices-help-town"
 	}

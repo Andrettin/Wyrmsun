@@ -31,7 +31,6 @@ DefineFaction("swabia", {
 	Type = "polity",
 	Colors = {"orange"},
 	DefaultTier = "duchy", -- Swabia was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-	FactionUpgrade = "upgrade-alamanni-tribe-faction",
 	DevelopsTo = {"holy-rome"} -- Swabia was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 })
 

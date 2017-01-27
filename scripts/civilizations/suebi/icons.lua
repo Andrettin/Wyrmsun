@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016 by Andrettin
+--      (c) Copyright 2016-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -28,11 +28,11 @@
 DefineIcon({
 	Name = "icon-suebi-swordsman",
 	Size = {46, 38},
-	File = "teuton/icons/suebi_swordsman.png"
+	File = "suebi/icons/suebi_swordsman.png"
 })
 
 DefineIcon({
 	Name = "icon-marbod",
 	Size = {46, 38},
-	File = "teuton/icons/marbod.png"
+	File = "suebi/icons/marbod.png"
 })

@@ -8,9 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      upgrade.lua - Define the dependencies and upgrades.
---
---      (c) Copyright 2001-2016 by Lutz Sammer, Jimmy Salmon and Andrettin
+--      (c) Copyright 2001-2017 by Lutz Sammer, Jimmy Salmon and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -230,6 +228,7 @@ Load("scripts/civilizations/germanic/upgrade.lua")
 Load("scripts/civilizations/gnome/upgrade.lua")
 Load("scripts/civilizations/goblin/upgrade.lua")
 Load("scripts/civilizations/latin/upgrade.lua")
+Load("scripts/civilizations/suebi/upgrade.lua")
 Load("scripts/civilizations/teuton/upgrade.lua")
 
 -- miscellaneous individual upgrades

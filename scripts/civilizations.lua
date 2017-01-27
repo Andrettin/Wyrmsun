@@ -1530,9 +1530,8 @@ DefineCivilization("teuton", {
 	Display = "Teuton",
 	Visible = true,
 	Species = "human",
-	Language = "old-high-german", -- the "Teuton" civilization covers all West Germanic cultures; Old High German is used as it fits somewhat well for the entire time period covered by the civilization at present (from the Iron Age to the Early Middle Ages), and somewhat well for all continental West Germanic peoples (using it for Anglo-Saxons is a bit of a stretch, but acceptable in my opinion, given the alternative would be creating a whole new civilization for them)
+	Language = "high-german",
 	ParentCivilization = "germanic",
-	-- this civilization could be split in the following manner in the future: Franks (representing all Istvaeonic peoples of late Antiquity and the early Middle Ages), Saxons (representing all Ingvaeonic peoples of late Antiquity and the early Middle Ages) and Suebi (representing all Irminonic peoples of late Antiquity and the early Middle Ages); then we could have (if the timeline is expanded) three later civilizations which would developed from these for the later medieval periods: Dutch (formable by Franks), English (formable by Saxons) and Teutons (representing Germans properly speaking, formable by Franks, Saxons or Suebi)
 	Adjective = "Teutonic",
 	DefaultColor = "yellow",
 	CivilizationUpgrade = "upgrade-teuton-civilization",
@@ -1780,6 +1779,25 @@ DefineCivilization("teuton", {
 	},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+	}
+})
+
+DefineCivilization("suebi", {
+	Display = "Suebi",
+	Visible = true,
+	Species = "human",
+	Language = "old-high-german",
+	ParentCivilization = "teuton",
+	Adjective = "Suebi",
+	DefaultColor = "black",
+	CivilizationUpgrade = "upgrade-suebi-civilization",
+	DevelopsFrom = {"germanic"},
+	Description = "The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there.",
+	HistoricalTechnologies = {
+		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+	},
+	SettlementNames = {
+		"Marobudum" -- alternate name of the Marcomannic capital; either located where modern Prague or Budweis are; Source: Frederick Kohlrausch, "A History of Germany", 1844, p. 57.
 	}
 })
 

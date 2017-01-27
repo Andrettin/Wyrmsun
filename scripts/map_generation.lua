@@ -1628,6 +1628,9 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("germanic")) > 0 and (TechLevel[i + 1] == "" or TechLevel[i + 1] == "Agrarian (Bronze)" or TechLevel[i + 1] == "Civilized (Bronze)")) then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "germanic")
 			end
+			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("suebi")) > 0 and TechLevel[i + 1] == "Agrarian (Iron)") then -- allow germanic humans in elven forests since there is no elven civilization yet
+				table.insert(possible_civilizations, "suebi")
+			end
 			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("teuton")) > 0 and (TechLevel[i + 1] == "Agrarian (Iron)" or TechLevel[i + 1] == "Civilized (Iron)")) then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "teuton")
 			end
@@ -3827,15 +3830,15 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 		local possible_civilizations = {}
 
 		if (player_civilization == "random") then
-			possible_civilizations = {"dwarf", "teuton"}
+			possible_civilizations = {"dwarf", "suebi"}
 			player_civilization = possible_civilizations[SyncRand(table.getn(possible_civilizations)) + 1]
 			possible_civilizations = nil
 		end
 		
 		if (second_player_civilization == "random") then
 			possible_civilizations = {"dwarf"}
-			if (player_civilization ~= "teuton") then -- there's only one teuton hero so far, so both players can't have it
-				table.insert(possible_civilizations, "teuton")
+			if (player_civilization ~= "suebi") then -- there's only one suebi hero so far, so both players can't have it
+				table.insert(possible_civilizations, "suebi")
 			end
 			second_player_civilization = possible_civilizations[SyncRand(table.getn(possible_civilizations)) + 1]
 			possible_civilizations = nil
@@ -5209,7 +5212,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							SetStartView(0, RandomX, RandomY)
 							if (player_hero == "random") then
 								local available_heroes = {}
-								if (player_civilization == "teuton") then
+								if (player_civilization == "suebi") then
 									if (FindHero("marbod") == nil) then
 										table.insert(available_heroes, "marbod")
 									end
@@ -5304,7 +5307,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							SetStartView(1, RandomX, RandomY)
 							if (second_player_hero == "random") then
 								local available_heroes = {}
-								if (second_player_civilization == "teuton") then
+								if (second_player_civilization == "suebi") then
 									if (FindHero("marbod") == nil) then
 										table.insert(available_heroes, "marbod")
 									end

@@ -302,7 +302,7 @@ DefineGrandStrategyEvent("Sao Paulo Tramway Light and Power Co. Ltd.", { -- Sour
 		if (
 			GetProvinceOwner("Sao Paulo") == EventFaction.Name
 			and GetProvinceCivilization("Sao Paulo") == "latin" -- this should be changed to Portuguese or Brazilian when those cultures get added to the game
-			and GetProvinceCivilization("Ontario") == "teuton" -- this should be changed to English when those culture get added to the game
+			and GetProvinceCivilization("Ontario") == "teuton" -- this should be changed to English when that culture gets added to the game
 			-- add a railroad/tram technology as requirement
 			and SyncRand(20) == 0
 		) then
@@ -330,7 +330,7 @@ DefineGrandStrategyEvent("The Rio de Janeiro Tramway, Light and Power Co. Ltd.",
 		if (
 			GetProvinceOwner("Rio de Janeiro") == EventFaction.Name
 			and GetProvinceCivilization("Rio de Janeiro") == "latin" -- this should be changed to Portuguese or Brazilian when those cultures get added to the game
-			and GetProvinceCivilization("Ontario") == "teuton" -- this should be changed to English when those culture get added to the game
+			and GetProvinceCivilization("Ontario") == "teuton" -- this should be changed to English when that culture gets added to the game
 			-- add a railroad/tram technology as requirement
 			and SyncRand(20) == 0
 		) then

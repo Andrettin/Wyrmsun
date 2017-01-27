@@ -37,6 +37,7 @@ function CustomHeroCreationMenu(world, quest_menu)
 	local hero_civilization_list = {}
 	if (world == "Earth") then
 		table.insert(hero_civilization_list, "Germanic")
+		table.insert(hero_civilization_list, "Suebi")
 		table.insert(hero_civilization_list, "Teuton")
 	elseif (world == "Nidavellir") then
 		table.insert(hero_civilization_list, "Dwarf")

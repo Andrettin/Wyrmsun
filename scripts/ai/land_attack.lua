@@ -119,25 +119,13 @@ local land_funcs = {
 		return false;
 	end,
 	function()
-		if (AiGetRace() == "germanic") then
-			return AiResearch("upgrade-teuton-civilization");
-		end
-		return false;
-	end,
-	function()
-		if (AiGetRace() == "germanic") then
-			return AiWait("upgrade-teuton-civilization");
-		end
-		return false;
-	end,
-	function()
-		if (AiGetRace() == "teuton") then
+		if (AiGetRace() == "suebi" or AiGetRace() == "teuton") then
 			return AiResearch(GetAiUnitType("melee-weapon-2")); -- research this now, since Teutons couldn't before
 		end
 		return false;
 	end,
 	function()
-		if (AiGetRace() == "teuton") then
+		if (AiGetRace() == "suebi" or AiGetRace() == "teuton") then
 			return AiResearch(GetAiUnitType("iron-shield")); -- research this now, since Teutons couldn't before
 		end
 		return false;

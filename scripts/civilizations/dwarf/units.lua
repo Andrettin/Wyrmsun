@@ -313,7 +313,8 @@ DefineUnitType("unit-dwarven-axefighter", {
 		{
 			"layer", "shield",
 			"variation-id", "round-shield",
-			"upgrade-forbidden", "upgrade-brising-clan-faction",
+			"upgrade-forbidden", "upgrade-faction-brising-clan",
+			"upgrade-forbidden", "upgrade-faction-lyr",
 			"item-not-equipped", "unit-brising-round-shield"
 		},
 		{
@@ -325,7 +326,14 @@ DefineUnitType("unit-dwarven-axefighter", {
 			"layer", "shield",
 			"variation-id", "brising-round-shield",
 			"file", "dlcs/brising_faction_flair/graphics/units/brising_round_shield.png",
-			"upgrade-required", "upgrade-brising-clan-faction",
+			"upgrade-required", "upgrade-faction-brising-clan",
+			"item-not-equipped", "unit-round-shield"
+		},
+		{
+			"layer", "shield",
+			"variation-id", "brising-round-shield",
+			"file", "dlcs/brising_faction_flair/graphics/units/brising_round_shield.png",
+			"upgrade-required", "upgrade-faction-lyr",
 			"item-not-equipped", "unit-round-shield"
 		},
 		{
@@ -438,7 +446,8 @@ DefineUnitType("unit-dwarven-steelclad", {
 		{
 			"layer", "shield",
 			"variation-id", "round-shield",
-			"upgrade-forbidden", "upgrade-brising-clan-faction",
+			"upgrade-forbidden", "upgrade-faction-brising-clan",
+			"upgrade-forbidden", "upgrade-faction-lyr",
 			"item-not-equipped", "unit-brising-round-shield"
 		},
 		{
@@ -450,7 +459,14 @@ DefineUnitType("unit-dwarven-steelclad", {
 			"layer", "shield",
 			"variation-id", "brising-round-shield",
 			"file", "dlcs/brising_faction_flair/graphics/units/brising_round_shield.png",
-			"upgrade-required", "upgrade-brising-clan-faction",
+			"upgrade-required", "upgrade-faction-brising-clan",
+			"item-not-equipped", "unit-round-shield"
+		},
+		{
+			"layer", "shield",
+			"variation-id", "brising-round-shield",
+			"file", "dlcs/brising_faction_flair/graphics/units/brising_round_shield.png",
+			"upgrade-required", "upgrade-faction-lyr",
 			"item-not-equipped", "unit-round-shield"
 		},
 		{
@@ -1035,7 +1051,7 @@ DefineUnitType("unit-dwarven-ballista", { Name = _("Ballista"),
 })
 
 DefineUnitType("unit-dwarven-transport-ship", {
-	Name = _("Transport"),
+	Name = "Transport",
 	Parent = "unit-template-transport-ship",
 	Civilization = "dwarf",
 	Description = _("Sailing the Deep Sea and underground rivers alike, these ships are manned by hearty dwarven crews. Every journey brings back new tales, be it of a kobold dwarf-eating tribe, or of treacherous goblin pirates..."),
@@ -1045,13 +1061,20 @@ DefineUnitType("unit-dwarven-transport-ship", {
 	Variations = {
 		{
 			"variation-id", "dwarf",
-			"upgrade-forbidden", "upgrade-brising-clan-faction"
+			"upgrade-forbidden", "upgrade-faction-brising-clan",
+			"upgrade-forbidden", "upgrade-faction-lyr"
 		},
 		{
 			"variation-id", "brising",
 			"file", "dlcs/brising_faction_flair/graphics/units/brising_transport.png",
 			"icon", "icon-brising-transport-ship",
-			"upgrade-required", "upgrade-brising-clan-faction"
+			"upgrade-required", "upgrade-faction-brising-clan"
+		},
+		{
+			"variation-id", "brising",
+			"file", "dlcs/brising_faction_flair/graphics/units/brising_transport.png",
+			"icon", "icon-brising-transport-ship",
+			"upgrade-required", "upgrade-faction-lyr"
 		}
 	},
 	Sounds = {
@@ -1078,13 +1101,20 @@ DefineUnitType("unit-dwarven-town-hall", {
 	Variations = {
 		{
 			"variation-id", "dwarf",
-			"upgrade-forbidden", "upgrade-brising-clan-faction"
+			"upgrade-forbidden", "upgrade-faction-brising-clan",
+			"upgrade-forbidden", "upgrade-faction-lyr"
 		},
 		{
 			"variation-id", "brising",
 			"file", "dlcs/brising_faction_flair/graphics/buildings/brising_town_hall.png",
 			"icon", "icon-brising-town-hall",
-			"upgrade-required", "upgrade-brising-clan-faction"
+			"upgrade-required", "upgrade-faction-brising-clan"
+		},
+		{
+			"variation-id", "brising",
+			"file", "dlcs/brising_faction_flair/graphics/buildings/brising_town_hall.png",
+			"icon", "icon-brising-town-hall",
+			"upgrade-required", "upgrade-faction-lyr"
 		}
 	},
 	Sounds = {
@@ -1095,7 +1125,7 @@ DefineUnitType("unit-dwarven-town-hall", {
 DefineUnitType("unit-dwarven-stronghold", { Name = _("Bastion"),
 	Parent = "unit-template-stronghold",
 	Civilization = "dwarf",
-	Description = _("A dwarven settlement that has reached a certain status will often oversee the construction of a bastion, enhancing its defensive capabilities."),
+	Description = "A dwarven settlement that has reached a certain status will often oversee the construction of a bastion, enhancing its defensive capabilities.",
 	Quote = _("\"Now answer me, warder, the question I ask,\nFor now the truth would I know:\nWhat call they the hall, encompassed here\nWith flickering magic flames?\"\n- Dwarven Traditional Poetry (Durin)"),
 	Image = {"file", "dwarf/buildings/stronghold.png", "size", {128, 128}},
 	Shadow = {"file", "dwarf/buildings/stronghold_shadow.png", "size", {128, 128}},
@@ -1108,13 +1138,20 @@ DefineUnitType("unit-dwarven-stronghold", { Name = _("Bastion"),
 	Variations = {
 		{
 			"variation-id", "dwarf",
-			"upgrade-forbidden", "upgrade-brising-clan-faction"
+			"upgrade-forbidden", "upgrade-faction-brising-clan",
+			"upgrade-forbidden", "upgrade-faction-lyr"
 		},
 		{
 			"variation-id", "brising",
 			"file", "dlcs/brising_faction_flair/graphics/buildings/brising_stronghold.png",
 			"icon", "icon-brising-stronghold",
-			"upgrade-required", "upgrade-brising-clan-faction"
+			"upgrade-required", "upgrade-faction-brising-clan"
+		},
+		{
+			"variation-id", "brising",
+			"file", "dlcs/brising_faction_flair/graphics/buildings/brising_stronghold.png",
+			"icon", "icon-brising-stronghold",
+			"upgrade-required", "upgrade-faction-lyr"
 		}
 	},
 	Sounds = {

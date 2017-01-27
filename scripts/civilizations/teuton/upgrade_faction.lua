@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2014-2016 by Andrettin
+--      (c) Copyright 2014-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -24,11 +24,6 @@
 --      along with this program; if not, write to the Free Software
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
-
-DefineUpgrade("upgrade-alamanni-tribe-faction", {
-	Name = "Alamanni Tribe Faction",
-	EffectsString = "+10 HP for Kregars"
-})
 
 DefineUpgrade("upgrade-angle-tribe-faction", {
 	Name = "Angle Tribe Faction",
@@ -70,16 +65,6 @@ DefineUpgrade("upgrade-saxon-tribe-faction", {
 	EffectsString = "+1 HP and +1 Damage for Kregars"
 })
 
-DefineUpgrade("upgrade-suebi-tribe-faction", {
-	Name = "Suebi Tribe Faction",
-	EffectsString = "+2 Damage, -2 Armor and +2 Accuracy for Kregars"
-})
-
-DefineUpgrade("upgrade-thuringian-tribe-faction", {
-	Name = "Thuringian Tribe Faction",
-	EffectsString = "+2 Damage for Scuzzos"
-})
-
 DefineUpgrade("upgrade-ubii-tribe-faction", {
 	Name = "Ubii Tribe Faction",
 	GrandStrategyProductionEfficiencyModifier = {"gold", 5, "silver", 5, "copper", 5},
@@ -90,12 +75,6 @@ DefineUpgrade("upgrade-mecklenburg-faction", {
 	Name = "Mecklenburg Faction",
 	EffectsString = "+2 Armor for Kregars"
 })
-
-DefineModifier("upgrade-alamanni-tribe-faction",
-	{"HitPoints", 10},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
 
 DefineModifier("upgrade-angle-tribe-faction",
 	{"BasicDamage", 2},
@@ -165,16 +144,6 @@ DefineModifier("upgrade-saxon-tribe-faction",
 	{"HitPoints", 5},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
-DefineModifier("upgrade-suebi-tribe-faction",
-	{"apply-to", "unit-teuton-swordsman"}, {"convert-to", "unit-suebi-swordsman"}
-)
-
-DefineModifier("upgrade-thuringian-tribe-faction",
-	{"BasicDamage", 2},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-archer"}
 )
 
 DefineModifier("upgrade-ubii-tribe-faction",

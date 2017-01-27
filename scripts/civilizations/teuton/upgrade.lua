@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2014-2016 by Andrettin
+--      (c) Copyright 2014-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -252,6 +252,10 @@ DefineModifier("upgrade-teuton-civilization",
 )
 
 DefineModifier("upgrade-teuton-civilization",
+	{"apply-to", "unit-suebi-swordsman"}, {"convert-to", "unit-teuton-swordsman"}
+)
+
+DefineModifier("upgrade-teuton-civilization",
 	{"apply-to", "unit-germanic-veteran-warrior"}, {"convert-to", "unit-teuton-veteran-swordsman"}
 )
 
@@ -334,11 +338,7 @@ DefineDependency("unit-teuton-stables",
 )
 
 DefineDependency("unit-teuton-swordsman",
-	{"upgrade-suebi-tribe-faction", 0, "upgrade-frank-tribe-faction", 0}
-)
-
-DefineDependency("unit-suebi-swordsman",
-	{"upgrade-suebi-tribe-faction"}
+	{"upgrade-suebi-civilization", 0, "upgrade-frank-tribe-faction", 0}
 )
 
 DefineDependency("unit-frank-swordsman",
@@ -362,7 +362,7 @@ DefineDependency("unit-frank-horseman",
 )
 
 DefineDependency("unit-teuton-town-hall",
-	{"upgrade-teuton-civilization", "upgrade-latin-civilization", 0}
+	{"upgrade-teuton-civilization", "upgrade-latin-civilization", 0}, "or", {"upgrade-suebi-civilization", "upgrade-latin-civilization", 0}
 )
 
 DefineDependency("unit-teuton-farm",

@@ -138,9 +138,6 @@ function AiLandAttack()
 				AiResearch(GetAiUnitType("ranged-projectile-2"))
 			end
 		end
-		if (AiGetRace() == "germanic" and CheckDependency(AiPlayer(), "upgrade-teuton-civilization")) then -- if is Germanic and can develop Teuton civilization, do so now
-			AiResearch("upgrade-teuton-civilization")
-		end
 		
 		if (
 			GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 2

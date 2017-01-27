@@ -63,13 +63,22 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Now up to four scrolls/books can be bought in temples (previously it was three).
 
+* Civilizations
+- The Suebi are now handled as their own civilization.
+
+* Factions
+- Faction change is now handled by a submenu in town hall / stronghold buildings. Researching a writing upgrade no longer triggers a faction change automatically, instead allowing the player to pick a polity faction. To change from the Germanic civilization to the Teuton one, the player now needs to pick a Teuton faction in this manner while playing a Germanic tribe.
+
 * Heroes
 - Heroes without unique portraits can now also be recruited, and are likewise also persistent.
-- Heroes are now recruited at town hall and stronghold buildings.
+- Heroes are now recruited at town hall and stronghold buildings instead of at barracks buildings.
 - Town halls, strongholds and mercenary camp buildings now allow choosing from up to four heroes to recruit.
 - Fixed issue which prevented goblins from recruiting heroes.
 - Hero recruitment buttons now show heroes' stats.
 - Replaced the custom hero unit button which appears on the right border of the map with buttons for up to three heroes, both custom and non-custom.
+
+* Items
+- Added "Scroll of Teuton Allegiance", to allow changing from the Suebi swordsman to the Teuton swordsman.
 
 * Miscellaneous
 - Deity entries in the encyclopedia now display their portraits.
@@ -85,9 +94,9 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Added Germanic and Teuton level 3 swordsmen.
-- Added portrait for the Frankish level 3 swordsman for those who have the Frankish Faction Flair DLC.
+- Added portrait for the Frankish level 3 swordsman for those who have the Frankish Faction Flair DLC (by Exidelo).
 - Added an upgrade to the Teuton cavalry (icon by Jinn).
-- Added portrait for the Frankish level 3 knight for those who have the Frankish Faction Flair DLC.
+- Added portrait for the Frankish level 3 knight for those who have the Frankish Faction Flair DLC (modification of the Frankish horseman icon by Exidelo).
 - Changed the unit type names of the Teuton swordsman, archer and horse rider to be based on Old High German words (rather than modern German ones), to better reflect the time period they represent. The name of Teuton spearmen, for a lack of a suitable Old High German name found in research so far, was changed to English.
 
 -----------------------------------------------------------------------

@@ -92,18 +92,6 @@ local sea_funcs = {
 		end
 		return false;
 	end,
-	function()
-		if (AiGetRace() == "germanic") then
-			return AiResearch("upgrade-teuton-civilization");
-		end
-		return false;
-	end,
-	function()
-		if (AiGetRace() == "germanic") then
-			return AiWait("upgrade-teuton-civilization");
-		end
-		return false;
-	end,
 
 	function() return AiResearch(GetAiUnitType("masonry")) end, -- needed for the stronghold
 	function() return AiWait(GetAiUnitType("masonry")) end,
