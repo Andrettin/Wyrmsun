@@ -462,7 +462,7 @@ DefineUnitType("unit-frank-knight-lord", {
 	Parent = "unit-teuton-knight-lord",
 	Civilization = "teuton",
 	Faction = "frank-tribe",
-	Icon = "icon-conrad-the-red",
+	Icon = "icon-frank-heroic-horseman",
 	LayerImages = {
 		{"layer", "shield", "file", "dlcs/frankish_faction_flair/graphics/units/frank_horseman_shield.png"}
 	},

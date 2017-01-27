@@ -257,21 +257,21 @@ DefineUniqueItem("carolinum", { -- Source: Alena Ježková, "77 Prague Legends",
 
 DefineUniqueItem("castle-of-zebrak", { -- Castle of Žebrák; Source: Alena Ježková, "77 Prague Legends", 2006, p. 52.
 	Name = "Castle of Zebrak",
-	Type = "unit-teuton-burg", -- should be a castle
+	Type = "unit-teuton-stronghold", -- should be a castle
 	Prefix = ?,
 	Suffix = ?
 } )
 
 DefineUniqueItem("prague-castle", { -- Source: Alena Ježková, "77 Prague Legends", 2006, pp. 53, 61.
 	Name = "Prague Castle",
-	Type = "unit-teuton-burg", -- should be a castle
+	Type = "unit-teuton-stronghold", -- should be a castle
 	Prefix = ?,
 	Suffix = ?
 } )
 
 DefineUniqueItem("novy-hrad", { -- Nový Hrad; Source: Alena Ježková, "77 Prague Legends", 2006, p. 53.
 	Name = "Novy Hrad",
-	Type = "unit-teuton-burg", -- should be a castle
+	Type = "unit-teuton-stronghold", -- should be a castle
 	Prefix = ?,
 	Suffix = ?,
 	Background = "\"Nový Hrad\" means \"new castle\" in Czech."
@@ -287,7 +287,7 @@ DefineUniqueItem("clementinum", { -- Alena Ježková, "77 Prague Legends", 2006,
 
 DefineUniqueItem("schwarzenberg-palace", { -- Located in Prague; Source: Alena Ježková, "77 Prague Legends", 2006, p. 62.
 	Name = "Schwarzenberg Palace",
-	Type = "unit-teuton-burg", -- should be a castle?
+	Type = "unit-teuton-stronghold", -- should be a castle?
 	Prefix = ?,
 	Suffix = ?
 } )
@@ -318,7 +318,7 @@ DefineUniqueItem("mihulka", { -- Source: Alena Ježková, "77 Prague Legends", 2
 
 DefineUniqueItem("ploskovice", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 88.
 	Name = "Ploskovice",
-	Type = "unit-teuton-burg",
+	Type = "unit-teuton-stronghold",
 	Prefix = ?,
 	Suffix = ?,
 	Background = "Ploskovice was a stronghold near Litoměřice."
@@ -366,7 +366,7 @@ DefineUniqueItem("the-lion-court", { -- Alena Ježková, "77 Prague Legends", 20
 
 DefineUniqueItem("cernin-palace", { -- Alena Ježková, "77 Prague Legends", 2006, p. 94.
 	Name = "Cernin Palace",
-	Type = "unit-teuton-burg",
+	Type = "unit-teuton-stronghold",
 	Prefix = ?,
 	Suffix = ?,
 	Background = "The Černín Palace was built in the Loretánské Square in Prague for Humprecht Černín of Chudenice, the Holy Roman Empire's envoy to Venice."
