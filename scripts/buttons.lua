@@ -117,7 +117,7 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-rally-point",
 
 DefineButton( { Pos = 14, Level = 0, Icon = "icon-teuton-civilization",
 	Action = "button", Value = 2,
---	Allowed = "check-unit-variable", AllowArg = {"Transport", "Value", ">=", "1"},
+	Allowed = "check-has-sub-buttons",
 	Key = "p", Hint = "View ~!Political Decisions", Popup = "popup-commands",
 	ForUnit = {
 		"unit-latin-town-hall",
