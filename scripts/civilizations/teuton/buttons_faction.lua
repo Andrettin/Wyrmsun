@@ -24,3 +24,19 @@
 --      along with this program; if not, write to the Free Software
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
+
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-teuton-civilization",
+	Action = "research", Value = "upgrade-faction-bavarian-tribe",
+	Allowed = "check-single-research",
+	Key = "b", Hint = "Found the ~!Bavarian Tribe", Popup = "popup-research",
+	Description = "Changes your faction to the Bavarian Tribe",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-teuton-civilization",
+	Action = "research", Value = "upgrade-faction-bavaria",
+	Allowed = "check-single-research",
+	Key = "b", Hint = "Found ~!Bavaria", Popup = "popup-research",
+	Description = "Changes your faction to Bavaria",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )

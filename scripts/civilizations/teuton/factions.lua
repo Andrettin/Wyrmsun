@@ -187,8 +187,8 @@ DefineFaction("bavarian-tribe", {
 	Type = "tribe",
 	Colors = {"cyan", "white"},
 	DevelopsTo = {"bavaria", "austria", "carinthia"},
-	FactionUpgrade = "upgrade-bavarian-tribe-faction",
-	Description = _("The Bavarians were a West Germanic people, tracing their origins to the Marcomanni. Their name means \"men of Bohemia\", an appelation they gained due to the Marcomanni having established themselves in Bohemia under Marbod. The Bavarians migrated south, giving their newly-settled land the name it has to this day, Bavaria.")
+	FactionUpgrade = "upgrade-faction-bavarian-tribe",
+	Description = "The early Bavarians were a West Germanic people who traced their origins to the Marcomanni. Their name means \"men of Bohemia\", an appelation they gained due to the Marcomanni having established themselves in Bohemia under Marbod. The Bavarians migrated south, giving their newly-settled land the name it has to this day, Bavaria."
 })
 
 DefineFaction("sugambri-tribe", {
@@ -239,7 +239,6 @@ DefineFaction("varini-tribe", {
 DefineFaction("bavaria", {
 	Name = "Bavaria",
 	Civilization = "teuton",
-	ParentFaction = "bavarian-tribe",
 	Type = "polity",
 	Colors = {"cyan", "white"},
 	DefaultTier = "duchy", -- Bavaria was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
@@ -248,6 +247,7 @@ DefineFaction("bavaria", {
 		"monarchy", "kingdom", "Kingdom"
 	},
 	DevelopsTo = {"holy-rome"}, -- Bavaria was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	FactionUpgrade = "upgrade-faction-bavaria",
 	HistoricalDiplomacyStates = {
 		784, "francia", "war", -- Bavaria revolted against Frankish rule under Tassilo in 784; Source: "Medieval Warfare V.2", 2013, p. 8.
 		787, "francia", "peace" -- Bavarian revolt against Frankish rule quashed by Charles the Great three years after 784; Source: "Medieval Warfare V.2", 2013, p. 8.

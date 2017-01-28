@@ -30,8 +30,8 @@ DefineUpgrade("upgrade-angle-tribe-faction", {
 	EffectsString = "+2 Damage for Kregars"
 })
 
-DefineUpgrade("upgrade-bavarian-tribe-faction", {
-	Name = "Bavarian Tribe Faction",
+DefineUpgrade("upgrade-faction-bavarian-tribe", {
+	Name = "Bavarian Tribe",
 	EffectsString = "+1 Damage and +1 Armor for Kregars"
 })
 
@@ -71,8 +71,13 @@ DefineUpgrade("upgrade-ubii-tribe-faction", {
 	EffectsString = "+5% Copper Processing for Rathauses and Burgs"
 })
 
+DefineUpgrade("upgrade-faction-bavaria", {
+	Name = "Bavaria",
+	EffectsString = "+1 Damage and +1 Armor for Kregars"
+})
+
 DefineUpgrade("upgrade-mecklenburg-faction", {
-	Name = "Mecklenburg Faction",
+	Name = "Mecklenburg",
 	EffectsString = "+2 Armor for Kregars"
 })
 
@@ -82,7 +87,11 @@ DefineModifier("upgrade-angle-tribe-faction",
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
-DefineModifier("upgrade-bavarian-tribe-faction",
+DefineModifier("upgrade-faction-bavarian-tribe",
+	{"change-faction-to", "bavarian-tribe"}
+)
+
+DefineModifier("upgrade-faction-bavarian-tribe",
 	{"Armor", 1},
 	{"BasicDamage", 1},
 	{"Points", 10},
@@ -155,6 +164,25 @@ DefineModifier("upgrade-mecklenburg-faction",
 	{"Armor", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
+)
+
+DefineModifier("upgrade-faction-bavaria",
+	{"change-faction-to", "bavaria"}
+)
+
+DefineModifier("upgrade-faction-bavaria",
+	{"Armor", 1},
+	{"BasicDamage", 1},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
+)
+
+DefineDependency("upgrade-faction-bavarian-tribe",
+	{"upgrade-faction-marcomanni-tribe", "upgrade-teuton-spatha", "upgrade-teuton-iron-shield"}, "or", {"upgrade-faction-quadi-tribe", "upgrade-teuton-spatha", "upgrade-teuton-iron-shield"}, "or", {"upgrade-faction-buri-tribe", "upgrade-teuton-spatha", "upgrade-teuton-iron-shield"} -- must be the Marcomanni or a closely related tribe to found the Bavarian Tribe, and needs some more advanced technology (as the Marcomanni are from Antiquity, and the Bavarians from the early Middle Ages)
+)
+
+DefineDependency("upgrade-faction-bavaria",
+	{"upgrade-faction-bavarian-tribe", "upgrade-teuton-writing"}
 )
 
 DefineDependency("upgrade-faction-galicia", -- although Galicia is a Suebi faction, this is here because it requires a Teuton upgrade

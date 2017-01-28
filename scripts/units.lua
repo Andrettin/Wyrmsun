@@ -39,6 +39,7 @@ Units = {
 	"upgrade-germanic-barbed-arrow",
 	"upgrade-germanic-wood-plow",
 	"upgrade-teuton-civilization",
+	"upgrade-faction-bavarian-tribe", "upgrade-faction-bavaria",
 	"unit-teuton-worker", "unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman",
 	"unit-teuton-spearman", "unit-teuton-archer",
 	"unit-teuton-ritter", "unit-teuton-knight-lord",
