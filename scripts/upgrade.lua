@@ -221,7 +221,7 @@ DefineUpgrade("upgrade-printing-press", {
 	GrandStrategyProductionEfficiencyModifier = {"research", 25}
 })
 
--- Load the different civilizations
+-- Load the upgrades of the different civilizations
 Load("scripts/civilizations/celt/upgrade.lua")
 Load("scripts/civilizations/dwarf/upgrade.lua")
 Load("scripts/civilizations/germanic/upgrade.lua")

@@ -90,8 +90,8 @@ DefineModifier("upgrade-suebi-civilization",
 	{"apply-to", "unit-germanic-transport-ship"}, {"convert-to", "unit-teuton-kogge"}
 )
 
-Load("scripts/civilizations/suebi/upgrade_faction.lua")
-
 DefineDependency("unit-suebi-swordsman",
 	{"upgrade-suebi-civilization"}
 )
+
+Load("scripts/civilizations/suebi/upgrade_faction.lua")

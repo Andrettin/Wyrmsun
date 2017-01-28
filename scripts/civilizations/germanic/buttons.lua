@@ -142,13 +142,6 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-wood-plow",
 	ForUnit = {"unit-germanic-carpenters-shop", "unit-teuton-lumber-mill"}
 })
 
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-civilization",
-	Action = "research", Value = "upgrade-teuton-civilization",
-	Allowed = "check-single-research",
-	Key = "t", Hint = _("Develop ~!Teuton Civilization"), Popup = "popup-research",
-	ForUnit = {"unit-germanic-town-hall"}
-})
-  
 -- Upgrades ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 2,

@@ -51,16 +51,17 @@ DefineFaction("buri-tribe", {
 	ParentFaction = "suebi-tribe", -- accurate?
 	Type = "tribe",
 	Colors = {"violet"},
+	FactionUpgrade = "upgrade-faction-buri-tribe",
 	DevelopsTo = {"bavaria", "galicia", "austria", "carinthia"} -- accurate?
 })
 
 DefineFaction("hermunduri-tribe", {
 	Name = "Hermunduri Tribe",
-	Civilization = "suebi",
-	ParentFaction = "suebi-tribe", -- accurate?
+	Civilization = "suebi", -- accurate?
 	Type = "tribe",
 	Colors = {"blue"},
 	DevelopsTo = {"thuringia"}, -- same general area
+	FactionUpgrade = "upgrade-faction-hermunduri-tribe",
 	HistoricalDiplomacyStates = {
 		170, "rome", "war", -- in 170 a coalition led by the Marcomanni (which included the Hermunduri) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.
 		171, "rome", "peace" -- in 171 the Romans forced most of the tribes of the Marcomannic coalition to a peace; Source: "Ancient Warfare VII.6", 2013, p. 32.
@@ -90,6 +91,7 @@ DefineFaction("quadi-tribe", {
 	ParentFaction = "marcomanni-tribe",
 	Type = "tribe",
 	Colors = {"brown"},
+	FactionUpgrade = "upgrade-faction-quadi-tribe",
 	DevelopsTo = {"bavaria", "galicia", "austria", "carinthia"}, -- the Quadi were a Suebic tribe
 	HistoricalDiplomacyStates = {
 		170, "rome", "war", -- in 170 a coalition led by the Marcomanni (which included the Quadi) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.
@@ -105,16 +107,15 @@ DefineFaction("quadi-tribe", {
 DefineFaction("semnone-tribe", {
 	Name = "Semnone Tribe",
 	Civilization = "suebi",
-	ParentFaction = "suebi-tribe",
 	Type = "tribe",
 	Colors = {"brown"},
+	FactionUpgrade = "upgrade-faction-semnone-tribe",
 	DevelopsTo = {"suebi-tribe", "bavaria", "austria", "carinthia"}
 })
 
 DefineFaction("thuringian-tribe", {
 	Name = "Thuringian Tribe",
 	Civilization = "suebi",
-	ParentFaction = "suebi-tribe", -- correct?
 	Type = "tribe",
 	Colors = {"green"},
 	FactionUpgrade = "upgrade-faction-thuringian-tribe"
@@ -123,8 +124,8 @@ DefineFaction("thuringian-tribe", {
 DefineFaction("galicia", { -- Suebi kingdom of Galicia
 	Name = "Galicia",
 	Civilization = "suebi",
-	ParentFaction = "suebi-tribe",
 	Type = "polity",
 	Colors = {"black"},
-	DefaultTier = "kingdom"
+	DefaultTier = "kingdom",
+	FactionUpgrade = "upgrade-faction-galicia"
 })

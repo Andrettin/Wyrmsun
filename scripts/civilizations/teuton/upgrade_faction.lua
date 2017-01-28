@@ -156,3 +156,7 @@ DefineModifier("upgrade-mecklenburg-faction",
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
+
+DefineDependency("upgrade-faction-galicia", -- although Galicia is a Suebi faction, this is here because it requires a Teuton upgrade
+	{"upgrade-faction-suebi-tribe", "upgrade-teuton-writing"}, "or", {"upgrade-faction-semnone-tribe", "upgrade-teuton-writing"}, "or", {"upgrade-faction-marcomanni-tribe", "upgrade-teuton-writing"}, "or", {"upgrade-faction-quadi-tribe", "upgrade-teuton-writing"}, "or", {"upgrade-faction-buri-tribe", "upgrade-teuton-writing"}
+)
