@@ -36,7 +36,7 @@ DefineProvince("Argentina", {
 		1784, "upgrade-college", true, -- College or seminary founded in Buenos Aires in 1784. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 226.
 --		1795, "upgrade-college", false -- College or seminary abolished in Cordoba in 1795(?). Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 226.
 	},
-	Regions = {"America", "South America"}
+	Regions = {"america", "south-america"}
 })
 
 DefineProvince("Bolivia", {
@@ -47,7 +47,7 @@ DefineProvince("Bolivia", {
 	HistoricalModifiers = {
 		1621, "upgrade-university", true -- University founded in Chuquisaca (Charcas) in 1621. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 226.
 	},
-	Regions = {"America", "South America"}
+	Regions = {"america", "south-america"}
 })
 
 DefineProvince("Chile", {
@@ -59,7 +59,7 @@ DefineProvince("Chile", {
 	HistoricalModifiers = {
 		1738, "upgrade-university", true -- University founded in Santiago in 1738. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 226.
 	},
-	Regions = {"America", "South America"}
+	Regions = {"america", "south-america"}
 })
 
 DefineProvince("Colombia", {
@@ -73,7 +73,7 @@ DefineProvince("Colombia", {
 		1704, "upgrade-university", false, -- University Sto. Tomás abolished in Bogota in 1704. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 226.
 		1774, "upgrade-university", true -- University founded in Popayan in 1774. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 226.
 	},
-	Regions = {"America", "South America"}
+	Regions = {"america", "south-america"}
 })
 
 DefineProvince("Cuba", {
@@ -85,7 +85,7 @@ DefineProvince("Cuba", {
 	HistoricalModifiers = {
 		1721, "upgrade-college", true -- College or seminary founded in Havana in 1721 or 1728. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 226.
 	},
-	Regions = {"America", "Caribbean"}
+	Regions = {"america", "caribbean"}
 })
 
 DefineProvince("Ecuador", {
@@ -97,7 +97,7 @@ DefineProvince("Ecuador", {
 	HistoricalModifiers = {
 		1769, "upgrade-university", true, -- University S. Gregorio founded in Quito in 1769. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 226.
 	},
-	Regions = {"America", "South America"}
+	Regions = {"america", "south-america"}
 })
 
 DefineProvince("Guatemala", {
@@ -109,7 +109,7 @@ DefineProvince("Guatemala", {
 	HistoricalModifiers = {
 		1676, "upgrade-university", true -- University founded in Guatemala in 1676. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 226.
 	},
-	Regions = {"America", "Central America"}
+	Regions = {"america", "central-america"}
 })
 
 DefineProvince("Massachusetts", {
@@ -121,7 +121,7 @@ DefineProvince("Massachusetts", {
 	HistoricalModifiers = {
 		1636, "upgrade-university", true -- Harvard university founded in 1636. Source: Atlas de História Mundial, 2001, p. 23.
 	},
-	Regions = {"America", "North America"}
+	Regions = {"america", "north-america"}
 })
 
 DefineProvince("Mexico", {
@@ -135,7 +135,7 @@ DefineProvince("Mexico", {
 --		1778, "upgrade-college", true, -- College or seminary founded in Merida in 1778. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 226.
 --		1791, "upgrade-college", true -- College or seminary founded in Guadalajara in 1791. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 226.
 	},
-	Regions = {"America", "North America"}
+	Regions = {"america", "north-america"}
 })
 
 DefineProvince("Minas Gerais", {
@@ -151,7 +151,7 @@ DefineProvince("Minas Gerais", {
 		1839, "upgrade-college", true, -- Escola de Farmácia de Ouro Preto founded in 1839. Source: Keila Grinberg; Ricardo Salles, O Brasil Imperial, vol. I, 2009, p. 296.
 		1876, "upgrade-college", true -- Escola de Minas de Ouro Preto founded in 1876. Source: Keila Grinberg; Ricardo Salles, O Brasil Imperial, vol. I, 2009, pp. 292, 296.
 	},
-	Regions = {"America", "South America"}
+	Regions = {"america", "south-america"}
 })
 
 DefineProvince("Nicaragua", {
@@ -163,7 +163,7 @@ DefineProvince("Nicaragua", {
 	HistoricalModifiers = {
 		1812, "upgrade-university", true -- University founded in Leon in 1812. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 226.
 	},
-	Regions = {"America", "Central America"}
+	Regions = {"america", "central-america"}
 })
 
 DefineProvince("Ontario", {
@@ -172,7 +172,7 @@ DefineProvince("Ontario", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Coastal = true,
-	Regions = {"America", "North America"}
+	Regions = {"america", "north-america"}
 })
 
 DefineProvince("Paraguay", {
@@ -183,7 +183,7 @@ DefineProvince("Paraguay", {
 	HistoricalModifiers = {
 		1776, "upgrade-college", true -- College or seminary founded in Asuncion in 1776. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 226.
 	},
-	Regions = {"America", "South America"}
+	Regions = {"america", "south-america"}
 })
 
 DefineProvince("Pernambuco", {
@@ -198,7 +198,7 @@ DefineProvince("Pernambuco", {
 	HistoricalModifiers = {
 		1828, "upgrade-college", true -- Law college founded in Olinda in 1828. Source: Jeffrey D. Needell, “Party Formation and State-Making: The Conservative Party and the Reconstruction of the Brazilian State, 1831-1840”, Hispanic American Historical Review, vol. 81, 2001, p. 293.
 	},
-	Regions = {"America", "South America"}
+	Regions = {"america", "south-america"}
 })
 
 DefineProvince("Peru", {
@@ -212,7 +212,7 @@ DefineProvince("Peru", {
 --		1680, "upgrade-college", true, -- College or seminary founded in Huamanga in 1680. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 226.
 --		1692, "upgrade-college", true -- College or seminary founded in Cuzco in 1692. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 226.
 	},
-	Regions = {"America", "South America"}
+	Regions = {"america", "south-america"}
 })
 
 DefineProvince("Rio de Janeiro", {
@@ -242,7 +242,7 @@ DefineProvince("Rio de Janeiro", {
 		1892, "upgrade-tramway-network", true, -- the "Companhia Ferro-Carril Carioca" (tramway company) built the terminal station for their lines in the Largo da Carioca in 1892; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", pp. 11-12.
 		1905, "upgrade-tramway-network", true, -- the "The Rio de Janeiro Tramway, Light and Power Co. Ltd." (tramway and electricity generation company) received permission to function in Brazil on 30th May 1905; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 24.
 	},
-	Regions = {"America", "South America"}
+	Regions = {"america", "south-america"}
 })
 
 DefineProvince("Santo Domingo", {
@@ -254,7 +254,7 @@ DefineProvince("Santo Domingo", {
 	HistoricalModifiers = {
 		1538, "upgrade-university", true -- University C. Sto. Tomás founded in Santo Domingo in 1538. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 226.
 	},
-	Regions = {"America", "Caribbean"}
+	Regions = {"america", "caribbean"}
 })
 
 DefineProvince("Sao Paulo", {
@@ -270,7 +270,7 @@ DefineProvince("Sao Paulo", {
 		1827, "upgrade-college", true, -- Law college existent in São Paulo in 1827. Source: Otávio Tarquínio de Sousa, Bernardo Pereira de Vasconcelos, p. 66.
 		1904, "upgrade-tramway-network", true -- the "Sao Paulo Tramway Light and Power Co. Ltd." (tramway and electricity generation company) already existed by 1904; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", pp. 20-21.
 	},
-	Regions = {"America", "South America"}
+	Regions = {"america", "south-america"}
 })
 
 DefineProvince("Venezuela", {
@@ -283,5 +283,5 @@ DefineProvince("Venezuela", {
 		1721, "upgrade-university", true, -- University founded in Caracas in 1721. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 226.
 --		1807, "upgrade-college", true -- College or seminary founded in Mérida in 1807. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 226.
 	},
-	Regions = {"America", "South America"}
+	Regions = {"america", "south-america"}
 })

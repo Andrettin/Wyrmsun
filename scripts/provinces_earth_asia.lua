@@ -35,7 +35,7 @@ DefineProvince("Anatolia", {
 		161, "unit-latin-barracks", true, -- Legionary base present in Melitene in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		161, "unit-latin-barracks", true -- Legionary base present in Zeugma in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
-	Regions = {"Asia"}
+	Regions = {"asia"}
 })
 
 DefineProvince("Arabia", {
@@ -53,7 +53,7 @@ DefineProvince("Arabia", {
 --		161, "persian", "nabataei-tribe", -- The area was inhabited by the Nabataei in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 --		161, "persian", "agraei-tribe" -- The area was inhabited by the Agraei in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
-	Regions = {"Europe"} -- should be in the provinces_earth_europe.lua file, but since the map doesn't extend this far yet, have this definition in this file for now
+	Regions = {"asia"}
 })
 
 DefineProvince("Armenia", {
@@ -68,7 +68,7 @@ DefineProvince("Armenia", {
 		161, "persian", "parthia", -- in 161 the Parthians invaded Armenia and afterwards defeated the armies stationed there; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		163, "greek", "armenia" -- in 163 co-emperor Lucius Verus reconquered Armenia from the Parthians (presumably restoring it as a vassal state?); Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
-	Regions = {"Asia"}
+	Regions = {"asia"}
 })
 
 DefineProvince("Asia Minor", {
@@ -83,7 +83,7 @@ DefineProvince("Asia Minor", {
 	Claims = {
 		"hittite", "troy"
 	},
-	Regions = {"Asia"}
+	Regions = {"asia"}
 })
 
 DefineProvince("Caucasus", {
@@ -103,7 +103,7 @@ DefineProvince("Caucasus", {
 --		161, "persian", "alan-tribe", -- The area was inhabited by the Alani in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 --		161, "persian", "sindi-tribe" -- The area was inhabited by the Sindi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
-	Regions = {"Europe"} -- should be in the provinces_earth_europe.lua file, but since the map doesn't extend this far yet, have this definition in this file for now
+	Regions = {"europe"} -- should be in the provinces_earth_europe.lua file, but since the map doesn't extend this far yet, have this definition in this file for now
 })
 
 DefineProvince("India", {
@@ -115,7 +115,7 @@ DefineProvince("India", {
 	HistoricalModifiers = {
 		1817, "upgrade-college", true -- Hindu College founded in Calcutta in 1817. Source: Atlas de História Mundial, 2001, p. 24.
 	},
-	Regions = {"Asia"}
+	Regions = {"asia"}
 })
 
 DefineProvince("Lebanon", {
@@ -123,7 +123,7 @@ DefineProvince("Lebanon", {
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
-	Regions = {"Asia"}
+	Regions = {"asia"}
 })
 
 DefineProvince("Mesopotamia", {
@@ -131,7 +131,7 @@ DefineProvince("Mesopotamia", {
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
-	Regions = {"Asia"}
+	Regions = {"asia"}
 })
 
 DefineProvince("Palestine", {
@@ -142,7 +142,7 @@ DefineProvince("Palestine", {
 	HistoricalSettlementBuildings = {
 		161, "unit-latin-barracks", true -- Legionary base present in Hierosolyma in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
-	Regions = {"Asia"}
+	Regions = {"asia"}
 })
 
 DefineProvince("Philippines", {
@@ -154,7 +154,7 @@ DefineProvince("Philippines", {
 	HistoricalModifiers = {
 		1645, "upgrade-university", true -- University Sto Tomás founded in Manila in 1645. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 226.
 	},
-	Regions = {"Asia"}
+	Regions = {"asia"}
 })
 
 DefineProvince("Syria", {
@@ -168,7 +168,7 @@ DefineProvince("Syria", {
 	HistoricalSettlementBuildings = {
 		161, "unit-latin-barracks", true -- Legionary base present in Bostra in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
-	Regions = {"Asia"}
+	Regions = {"asia"}
 })
 
 -- North Africa, Iberia and the Arabic parts of Asia were collectively known as "Serkland" to the Norse; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 216.

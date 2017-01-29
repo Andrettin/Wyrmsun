@@ -25,48 +25,58 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineRegion("Africa", {
+DefineRegion("africa", {
+	Name = "Africa"
 })
 
-DefineRegion("America", {
+DefineRegion("america", {
+	Name = "America"
 })
 
-DefineRegion("Asia", {
+DefineRegion("asia", {
+	Name = "Asia"
 })
 
-DefineRegion("British Isles", {
+DefineRegion("british-isles", {
+	Name = "British Isles",
 	HistoricalPopulation = {
 		-4000, (2750 + 5500 / 2) -- The British Isles had between 2,750 and 5,500 people at the end of the Mesolithic; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 148.
 	}
 })
 
-DefineRegion("Caribbean", {
+DefineRegion("caribbean", {
+	Name = "Caribbean"
 })
 
-DefineRegion("Central America", {
+DefineRegion("central-america", {
+	Name = "Central America"
 })
 
-DefineRegion("Cisleithania", {
+DefineRegion("cisleithania", {
+	Name = "Cisleithania",
 	HistoricalPopulation = {
 		1851, 17534948, -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 33.
 		1910, 27963872 -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 33.
 	}
 })
 
-DefineRegion("Czechoslovakia", {
+DefineRegion("czechoslovakia", {
+	Name = "Czechoslovakia",
 	HistoricalPopulation = {
 		1600, 2000000 -- 2 million people lived in Czechoslovakia around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 	}
 })
 
-DefineRegion("England", {
+DefineRegion("england", {
+	Name = "England",
 	HistoricalPopulation = {
 		1401, 4000000, -- 4 million people lived in England during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 		1600, 5000000 -- 5 million people lived in England around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 	}
 })
 
-DefineRegion("Eurasia", {
+DefineRegion("eurasia", {
+	Name = "Eurasia",
 	HistoricalPopulation = {
 		-10000, 200000, -- CIS had a population of around 0.2 millions in 10,000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
 		-9000, 200000, -- CIS had a population of around 0.2 millions in 9000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
@@ -87,36 +97,42 @@ DefineRegion("Eurasia", {
 	}
 })
 
-DefineRegion("Europe", {
+DefineRegion("europe", {
+	Name = "Europe"
 })
 
-DefineRegion("France", {
+DefineRegion("france", {
+	Name = "France",
 	HistoricalPopulation = {
 		1401, 21000000, -- 21 million people lived in France during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 		1600, 17000000 -- 17 million people lived in France around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 	}
 })
 
-DefineRegion("Gaul", {
+DefineRegion("gaul", {
+	Name = "Gaul",
 	HistoricalPopulation = {
 		-27, 5000000 -- 5 million people lived in France at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 	}
 })
 
-DefineRegion("Germany-Netherlands", {
+DefineRegion("germany-netherlands", {
+	Name = "Germany-Netherlands",
 	HistoricalPopulation = {
 		1401, 15000000, -- 15 million people lived in Germany-Netherlands during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 		1600, 20000000 -- 20 million people lived in Germany-Netherlands around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 	}
 })
 
-DefineRegion("Greece", {
+DefineRegion("greece", {
+	Name = "Greece",
 	HistoricalPopulation = {
 		-27, 3000000 -- 3 million people lived in Greece at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 	}
 })
 
-DefineRegion("Iberia", {
+DefineRegion("iberia", {
+	Name = "Iberia",
 	HistoricalPopulation = {
 		-27, 6000000, -- 6 million people lived in Spain-Portugal at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 		1401, 6000000, -- 6 million people lived in Spain-Portugal during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
@@ -124,7 +140,8 @@ DefineRegion("Iberia", {
 	}
 })
 
-DefineRegion("Italy", {
+DefineRegion("italy", {
+	Name = "Italy",
 	HistoricalPopulation = {
 		-27, 14000000, -- 14 million people lived in Italy at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 		1401, 11000000, -- 11 million people lived in Italy during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
@@ -132,41 +149,49 @@ DefineRegion("Italy", {
 	}
 })
 
-DefineRegion("North America", {
+DefineRegion("north-america", {
+	Name = "North America"
 })
 
-DefineRegion("Northwest Europe", {
+DefineRegion("northwest-europe", {
+	Name = "Northwest Europe",
 	HistoricalPopulation = {
 		-7000, 100000 -- At the height of the Mesolithic the population in northwestern Europe was no larger than 100,000; since the Mesolithic in Northwestern Europe began around 10,000 BC and ended about 4000 BC, its height would have been in the middle, or 7000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 144, 148.
 	}
 })
 
-DefineRegion("Oceania", {
+DefineRegion("oceania", {
+	Name = "Oceania"
 })
 
-DefineRegion("Poland", {
+DefineRegion("poland", {
+	Name = "Poland",
 	HistoricalPopulation = {
 		1600, 3000000 -- 3 million people lived in Poland around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 	}
 })
 
-DefineRegion("Roman Danube", {
+DefineRegion("roman-danube", {
+	Name = "Roman Danube",
 	HistoricalPopulation = {
 		-27, 2000000 -- 2 million people lived in the (Roman) Danube at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 	}
 })
 
-DefineRegion("Scandinavia", {
+DefineRegion("scandinavia", {
+	Name = "Scandinavia",
 	HistoricalPopulation = {
 		1401, 2000000, -- 2 million people lived in Scandinavia during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 		1600, 2000000 -- 2 million people lived in Scandinavia around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 	}
 })
 
-DefineRegion("South America", {
+DefineRegion("south-america", {
+	Name = "South America"
 })
 
-DefineRegion("West and Central Europe", {
+DefineRegion("west-and-central-europe", {
+	Name = "West and Central Europe",
 	HistoricalPopulation = {
 		-10000, 500000, -- Non-CIS Europe had a population of around 0.5 millions in 10,000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
 		-9000, 800000, -- Non-CIS Europe had a population of around 0.8 millions in 9000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html

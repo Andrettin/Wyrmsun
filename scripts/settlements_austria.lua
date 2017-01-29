@@ -40,7 +40,7 @@ DefineSettlement("carnuntum", {
 		10, 161, "unit-latin-farm", -- Upper Pannonia (where Carnuntum was located) acquired by Rome in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		161, 526, "unit-teuton-guard-tower" -- Legionary base present in Carnuntum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
---	Regions = {"europe", "west-and-central-europe", "roman-danube", "germany-netherlands", "cisleithania"}
+	Regions = {"europe", "west-and-central-europe", "roman-danube", "germany-netherlands", "cisleithania"}
 })
 
 DefineSettlement("salzburg", {
@@ -59,7 +59,7 @@ DefineSettlement("salzburg", {
 		45, 526, "unit-latin-town-hall",
 		526, 0, "unit-teuton-farm"
 	},
---	Regions = {"europe", "west-and-central-europe", "roman-danube", "germany-netherlands", "cisleithania"}
+	Regions = {"europe", "west-and-central-europe", "roman-danube", "germany-netherlands", "cisleithania"}
 })
 
 DefineSettlement("vienna", {
@@ -79,5 +79,5 @@ DefineSettlement("vienna", {
 		10, 161, "unit-latin-farm",
 		161, 526, "unit-teuton-guard-tower" -- Legionary base present in Vindobona in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
---	Regions = {"europe", "west-and-central-europe", "roman-danube", "germany-netherlands", "cisleithania"}
+	Regions = {"europe", "west-and-central-europe", "roman-danube", "germany-netherlands", "cisleithania"}
 })

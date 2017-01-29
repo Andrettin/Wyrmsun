@@ -43,7 +43,7 @@ DefineProvince("Algeria", {
 	HistoricalSettlementBuildings = {
 		161, "unit-latin-barracks", true -- Legionary base present in Lambaesis in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
-	Regions = {"Africa"}
+	Regions = {"africa"}
 })
 
 DefineProvince("Egypt", {
@@ -54,7 +54,7 @@ DefineProvince("Egypt", {
 	HistoricalSettlementBuildings = {
 		161, "unit-latin-barracks", true -- Legionary base present in Alexandria in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
-	Regions = {"Africa"}
+	Regions = {"africa"}
 })
 
 DefineProvince("Libya", {
@@ -68,7 +68,7 @@ DefineProvince("Libya", {
 	HistoricalOwners = {
 		161, "persian", "garamantes-tribe" -- Inland western Libya was inhabited by the Garamantes in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
-	Regions = {"Africa"}
+	Regions = {"africa"}
 })
 
 DefineProvince("Morocco", {
@@ -82,7 +82,7 @@ DefineProvince("Morocco", {
 	HistoricalOwners = {
 		161, "persian", "mauri-tribe" -- Southern Morocco was inhabited by the Mauri in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
-	Regions = {"Africa"}
+	Regions = {"africa"}
 })
 
 DefineProvince("Oyo", {
@@ -93,7 +93,7 @@ DefineProvince("Oyo", {
 	HistoricalModifiers = {
 		1947, "upgrade-university", true -- University founded in Ibadan in 1947. Source: David Thomson, Europe Since Napoleon, 1966, p. 863.
 	},
-	Regions = {"Africa"}
+	Regions = {"africa"}
 })
 
 DefineProvince("Tunisia", {
@@ -101,7 +101,7 @@ DefineProvince("Tunisia", {
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains", -- correct?
-	Regions = {"Africa"}
+	Regions = {"africa"}
 })
 
 -- The parts of Africa inhabited by black peoples were known as "Great Blueland" or "Blaland" to the Norse; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 216.

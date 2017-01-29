@@ -42,7 +42,7 @@ DefineProvince("Abruzzo", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Coastal = true,
-	Regions = {"Europe", "Italy", "West and Central Europe"}
+	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
 DefineProvince("Aetolia", {
@@ -66,7 +66,7 @@ DefineProvince("Aetolia", {
 		-1700, "unit-teuton-stronghold", true, -- Mycenaean fortifications present in Krisa (in Locris Ozolis) between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
 		-1190, "unit-teuton-stronghold", false -- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 	},
-	Regions = {"Europe", "Greece", "West and Central Europe"}
+	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
 DefineProvince("Agder", {
@@ -90,7 +90,7 @@ DefineProvince("Agder", {
 	Claims = {
 		"norse", "norway"
 	},
-	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
 DefineProvince("Akershus", {
@@ -111,7 +111,7 @@ DefineProvince("Akershus", {
 	Claims = {
 		"norse", "norway"
 	},
-	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
 DefineProvince("Albania", {
@@ -134,7 +134,7 @@ DefineProvince("Albania", {
 	Claims = {
 		"illyrian", "taulantii-tribe"
 	},
-	Regions = {"Europe", "Greece", "West and Central Europe"}
+	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
 DefineProvince("Alentejo", {
@@ -165,7 +165,7 @@ DefineProvince("Alentejo", {
 	HistoricalClaims = {
 		-138, "latin", "rome"
 	},
-	Regions = {"Europe", "Iberia", "West and Central Europe"}
+	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
 DefineProvince("Alsace", {
@@ -212,7 +212,7 @@ DefineProvince("Alsace", {
 		1789, "upgrade-courthouse", true, -- Prévôt des maréchaux existent in Strasbourg in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 		1789, "upgrade-courthouse", true -- Parlement or conseil souverain existent in Colmar in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
-	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
+	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Andalusia", {
@@ -271,7 +271,7 @@ DefineProvince("Andalusia", {
 --		1807, "upgrade-university", false, -- Minor university abolished in Orihuela in 1807; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 --		1807, "upgrade-university", false -- Minor university abolished in Osuna in 1807; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 	},
-	Regions = {"Europe", "Iberia", "West and Central Europe"}
+	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
 DefineProvince("Apulia", {
@@ -294,7 +294,7 @@ DefineProvince("Apulia", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Coastal = true,
-	Regions = {"Europe", "Italy", "West and Central Europe"}
+	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
 DefineProvince("Aquitaine", {
@@ -371,7 +371,7 @@ DefineProvince("Aquitaine", {
 		1789, "upgrade-courthouse", true, -- Chief court of the salt tax existent in Narbonne in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 		1789, "upgrade-courthouse", true -- Parlement or conseil souverain and prévôt des maréchaux existent in Perpignan in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
-	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
+	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Aragon", {
@@ -434,7 +434,7 @@ DefineProvince("Aragon", {
 --		1717, "upgrade-university", false, -- Minor university in Tortosa abolished in 1717; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 --		1717, "upgrade-university", false -- University abolished in Barcelona in 1717; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 	},
-	Regions = {"Europe", "Iberia", "West and Central Europe"}
+	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
 DefineProvince("Argolis", {
@@ -462,7 +462,7 @@ DefineProvince("Argolis", {
 		-1700, "unit-teuton-stronghold", true, -- Mycenaean fortifications present in Argos, Tirinto, Dendra and Kastro between 1700 and 1200 BC, as well as in Araxos (in the Achaean coast) and in Kolonna (in the isle of Aegina); Source: "Atlas de História Mundial", 2001, p. 67.
 		-1190, "unit-teuton-stronghold", false -- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 	},
-	Regions = {"Europe", "Greece", "West and Central Europe"}
+	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
 DefineProvince("Astrakhan", {
@@ -522,7 +522,7 @@ DefineProvince("Astrakhan", {
 		-2800, "unit-germanic-town-hall", false,
 		-2800, "unit-germanic-barracks", false
 	},
-	Regions = {"Eurasia", "Europe"}
+	Regions = {"eurasia", "europe"}
 })
 
 DefineProvince("Asturias", {
@@ -568,7 +568,7 @@ DefineProvince("Asturias", {
 		1580, "upgrade-university", true, -- University founded in Oviedo in 1580; Source: "The Cambridge Modern History Atlas", p. 9.
 		1608, "upgrade-university", false -- University abolished in Oviedo in 1608; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 	},
-	Regions = {"Europe", "Iberia", "West and Central Europe"}
+	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
 DefineProvince("Attica", {
@@ -592,7 +592,7 @@ DefineProvince("Attica", {
 		-1700, "unit-teuton-stronghold", true, -- Mycenaean fortifications present in Athens between 1700 and 1200 BC, as well as in Aghia Irini (in the island of Ceos); Source: "Atlas de História Mundial", 2001, p. 67.
 		-1190, "unit-teuton-stronghold", false -- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 	},
-	Regions = {"Europe", "Greece", "West and Central Europe"}
+	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
 DefineProvince("Augsburg", {
@@ -616,7 +616,7 @@ DefineProvince("Augsburg", {
 	HistoricalModifiers = {
 		1549, "upgrade-university", true -- University founded in Dillingen in 1549; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
-	Regions = {"Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
+	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
 
 DefineProvince("Baden", {
@@ -650,7 +650,7 @@ DefineProvince("Baden", {
 		1385, "upgrade-university", true, -- University founded in Heidelberg in 1385; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1455, "upgrade-university", true -- University founded in Freiburg in 1455; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
+	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
 
 DefineProvince("Bavaria", {
@@ -708,7 +708,7 @@ DefineProvince("Bavaria", {
 	HistoricalModifiers = {
 		1459, "upgrade-university", true -- University founded in Ingolstadt in 1459; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
+	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
 
 DefineProvince("Beira", {
@@ -745,7 +745,7 @@ DefineProvince("Beira", {
 		1537, "upgrade-university", true, -- University moved from Lisbon to Coimbra in 1537; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1911, "upgrade-university", true -- University founded in Lisbon in 1911; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	},
-	Regions = {"Europe", "Iberia", "West and Central Europe"}
+	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
 DefineProvince("Belgium", {
@@ -790,7 +790,7 @@ DefineProvince("Belgium", {
 	HistoricalModifiers = {
 		1425, "upgrade-university", true -- University founded in Louvain in 1425; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"Europe", "Gaul", "Germany-Netherlands", "Northwest Europe", "West and Central Europe"}
+	Regions = {"europe", "gaul", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Berry", {
@@ -824,7 +824,7 @@ DefineProvince("Berry", {
 		1464, "upgrade-university", true, -- University founded in Bourges in 1464; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1789, "upgrade-courthouse", true -- Prévôt des maréchaux and chief court of the salt tax existent in Bourges in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
-	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
+	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Bessarabia", {
@@ -866,7 +866,7 @@ DefineProvince("Bessarabia", {
 		-336, "persian",
 		-264, "goth"
 	},
-	Regions = {"Eurasia", "Europe"}
+	Regions = {"eurasia", "europe"}
 })
 
 DefineProvince("Boeotia", {
@@ -890,7 +890,7 @@ DefineProvince("Boeotia", {
 		-1700, "unit-teuton-stronghold", true, -- Mycenaean fortifications present in Eutresis, Kastri, Aghia Marina, Gla, Aghios Ioannis, Chantsa, Stroviki, Pyrgos and Panopeus between 1700 and 1200 BC, as well as in Aghia Irini (in the island of Ceos); Source: "Atlas de História Mundial", 2001, p. 67.
 		-1190, "unit-teuton-stronghold", false -- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 	},
-	Regions = {"Europe", "Greece", "West and Central Europe"}
+	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
 DefineProvince("Bohemia", {
@@ -959,7 +959,7 @@ DefineProvince("Bohemia", {
 		1347, "upgrade-university", true, -- University founded in Prague in 1347; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		-- Olomouc-Prague State Railroad Company opened for business in 1845; Source: Chad Bryant, "Into an Uncertain Future: Railroads and Vormärz Liberalism in Brno, Vienna, and Prague", 2009, p. 187.
 	},
-	Regions = {"Cisleithania", "Czechoslovakia", "Europe", "West and Central Europe"}
+	Regions = {"cisleithania", "czechoslovakia", "europe", "west-and-central-europe"}
 })
 
 DefineProvince("Bornholm", {
@@ -977,7 +977,7 @@ DefineProvince("Bornholm", {
 	Claims = {
 		"goth", "burgundian-tribe"
 	},
-	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
 DefineProvince("Bosnia", {
@@ -998,7 +998,7 @@ DefineProvince("Bosnia", {
 	SettlementLocation = {532, 131}, -- Sarajevo
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
-	Regions = {"Europe", "Roman Danube", "West and Central Europe"}
+	Regions = {"europe", "roman-danube", "west-and-central-europe"}
 })
 
 DefineProvince("Brandenburg", {
@@ -1042,7 +1042,7 @@ DefineProvince("Brandenburg", {
 	HistoricalModifiers = {
 		1502, "upgrade-university", true -- University founded in Wittenberg in 1502; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
 DefineProvince("Bremen", {
@@ -1079,7 +1079,7 @@ DefineProvince("Bremen", {
 		-3950, "basque",
 		-264, "teuton"
 	},
-	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
 DefineProvince("Brittany", {
@@ -1113,7 +1113,7 @@ DefineProvince("Brittany", {
 		1789, "upgrade-courthouse", true, -- Chambre des comptes existent in Nantes in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 		1789, "upgrade-courthouse", true, -- Parlement or conseil souverain, court of admiralty and prévôt des maréchaux existent in Rennes in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
-	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
+	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Brunswick", {
@@ -1146,7 +1146,7 @@ DefineProvince("Brunswick", {
 	HistoricalCultures = {
 		-264, "teuton"
 	},
-	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
 DefineProvince("Bukowina", {
@@ -1172,7 +1172,7 @@ DefineProvince("Bukowina", {
 	HistoricalCultures = {
 		161, "thracian"
 	},
-	Regions = {"Cisleithania", "Eurasia", "Europe", "Poland"}
+	Regions = {"cisleithania", "eurasia", "europe", "poland"}
 })
 
 DefineProvince("Bulgaria", {
@@ -1211,7 +1211,7 @@ DefineProvince("Bulgaria", {
 		161, "unit-latin-barracks", true, -- Legionary base present in Novae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		161, "unit-latin-barracks", true -- Legionary base present in Durostorum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
-	Regions = {"Europe", "Roman Danube", "West and Central Europe"}
+	Regions = {"europe", "roman-danube", "west-and-central-europe"}
 })
 
 DefineProvince("Burgundy", {
@@ -1251,7 +1251,7 @@ DefineProvince("Burgundy", {
 	HistoricalModifiers = {
 		1789, "upgrade-courthouse", true -- Parlement or conseil souverain, chambre des comptes, prévôt des maréchaux and chief court of the salt tax existent in Dijon in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
-	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
+	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Calabria", {
@@ -1272,7 +1272,7 @@ DefineProvince("Calabria", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Coastal = true,
-	Regions = {"Europe", "Italy", "West and Central Europe"}
+	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
 DefineProvince("Carinthia", {
@@ -1309,7 +1309,7 @@ DefineProvince("Carinthia", {
 	HistoricalCultures = {
 		-800, "celt"
 	},
-	Regions = {"Cisleithania", "Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
+	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
 
 DefineProvince("Carniola", {
@@ -1327,7 +1327,7 @@ DefineProvince("Carniola", {
 	SettlementLocation = {521, 125}, -- Laibach/Ljubljana
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
-	Regions = {"Cisleithania", "Europe", "Roman Danube", "West and Central Europe"}
+	Regions = {"cisleithania", "europe", "roman-danube", "west-and-central-europe"}
 })
 
 DefineProvince("Castille", {
@@ -1398,7 +1398,7 @@ DefineProvince("Castille", {
 --		1807, "upgrade-university", false, -- Minor university abolished in Oñate in 1807; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 --		1807, "upgrade-university", false -- Minor university in Irache abolished in 1807; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 	},
-	Regions = {"Europe", "Iberia", "West and Central Europe"}
+	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
 DefineProvince("Champagne", { -- includes Brie
@@ -1437,7 +1437,7 @@ DefineProvince("Champagne", { -- includes Brie
 		1547, "upgrade-university", true, -- University founded in Reims in 1547; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 		1789, "upgrade-courthouse", true -- Chief court of the salt tax existent in Troyes in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
-	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
+	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Connaught", {
@@ -1470,7 +1470,7 @@ DefineProvince("Connaught", {
 	HistoricalCultures = {
 		-27, "celt"
 	},
-	Regions = {"British Isles", "Europe", "Northwest Europe", "West and Central Europe"}
+	Regions = {"british-isles", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Corinth", {
@@ -1488,7 +1488,7 @@ DefineProvince("Corinth", {
 	Claims = {
 		"greek", "corinth"
 	},
-	Regions = {"Europe", "Greece", "West and Central Europe"},
+	Regions = {"europe", "greece", "west-and-central-europe"},
 	HistoricalSettlementBuildings = {
 		-1700, "unit-teuton-stronghold", true, -- Mycenaean fortifications present in Korakou and Perdikaria (both in the isthmus of Corinth); Source: "Atlas de História Mundial", 2001, p. 67.
 		-1190, "unit-teuton-stronghold", false -- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
@@ -1525,7 +1525,7 @@ DefineProvince("Cornwall", {
 	HistoricalCultures = {
 		-27, "celt"
 	},
-	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Corsica", {
@@ -1542,7 +1542,7 @@ DefineProvince("Corsica", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Coastal = true,
-	Regions = {"Europe", "Italy", "West and Central Europe"}
+	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
 DefineProvince("Courland", {
@@ -1584,7 +1584,7 @@ DefineProvince("Courland", {
 	HistoricalCultures = {
 		-9000, "uralic" -- The ancestors of Finno-Ugric speaking peoples settled the eastern Baltic (apparently meaning Estonia and Latvia) c. 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
 	},
-	Regions = {"Europe", "West and Central Europe"}
+	Regions = {"europe", "west-and-central-europe"}
 })
 
 DefineProvince("Crete", {
@@ -1615,7 +1615,7 @@ DefineProvince("Crete", {
 	HistoricalOwners = {
 		-3000, "minoan", "minoan-tribe" -- Minoans inhabited the island of Crete in 3000 BC; Source: Rodney Castleden, "Minoans", 2002, p. 4.
 	},
-	Regions = {"Europe", "Greece", "West and Central Europe"}
+	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
 DefineProvince("Crimea", {
@@ -1652,7 +1652,7 @@ DefineProvince("Crimea", {
 	HistoricalCultures = {
 		161, "persian"
 	},
-	Regions = {"Eurasia", "Europe"}
+	Regions = {"eurasia", "europe"}
 })
 
 DefineProvince("Croatia", {
@@ -1689,7 +1689,7 @@ DefineProvince("Croatia", {
 	HistoricalModifiers = {
 		1874, "upgrade-university", true -- University founded in Zagreb in 1874; Source: A.J.P. Taylor, The Habsburg Monarchy, 1809-1918, 1964, p. 203.
 	},
-	Regions = {"Europe", "Roman Danube", "West and Central Europe"}
+	Regions = {"europe", "roman-danube", "west-and-central-europe"}
 })
 
 DefineProvince("Cumbria", {
@@ -1724,7 +1724,7 @@ DefineProvince("Cumbria", {
 		-264, "celt",
 		1560, "teuton"
 	},
-	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Dalmatia", {
@@ -1767,7 +1767,7 @@ DefineProvince("Dalmatia", {
 	HistoricalCultures = {
 		-750, "illyrian"
 	},
-	Regions = {"Europe", "Roman Danube", "West and Central Europe"}
+	Regions = {"europe", "roman-danube", "west-and-central-europe"}
 })
 
 DefineProvince("Dauphiny", {
@@ -1808,7 +1808,7 @@ DefineProvince("Dauphiny", {
 		1789, "upgrade-courthouse", true, -- Chief court of the salt tax existent in Valence in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 		1789, "upgrade-courthouse", true -- Parlement or conseil souverain, prévôt des maréchaux and chief court of the salt tax existent in Grenoble in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
-	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
+	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Devon", {
@@ -1845,7 +1845,7 @@ DefineProvince("Devon", {
 		-7000, "basque",
 		-27, "celt"
 	},
-	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Dobruja", {
@@ -1871,7 +1871,7 @@ DefineProvince("Dobruja", {
 	HistoricalSettlementBuildings = {
 		161, "unit-latin-barracks", true -- Legionary base present in Troesmis in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
-	Regions = {"Europe", "Roman Danube", "West and Central Europe"}
+	Regions = {"europe", "roman-danube", "west-and-central-europe"}
 })
 
 DefineProvince("Don", {
@@ -1923,7 +1923,7 @@ DefineProvince("Don", {
 		-2800, "unit-germanic-town-hall", false,
 		-2800, "unit-germanic-barracks", false
 	},
-	Regions = {"Eurasia", "Europe"}
+	Regions = {"eurasia", "europe"}
 })
 
 DefineProvince("Douro", {
@@ -1959,7 +1959,7 @@ DefineProvince("Douro", {
 	HistoricalModifiers = {
 		1911, "upgrade-university", true -- University founded in Oporto in 1911; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	},
-	Regions = {"Europe", "Iberia", "West and Central Europe"}
+	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
 DefineProvince("Drenthe", {
@@ -1999,7 +1999,7 @@ DefineProvince("Drenthe", {
 		-3950, "basque",
 		-27, "teuton"
 	},
-	Regions = {"Europe", "Germany-Netherlands", "Northwest Europe", "West and Central Europe"}
+	Regions = {"europe", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Durham", {
@@ -2036,7 +2036,7 @@ DefineProvince("Durham", {
 	HistoricalModifiers = {
 		1832, "upgrade-university", true -- University founded in Durham in 1832; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	},
-	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Dyfed", {
@@ -2071,7 +2071,7 @@ DefineProvince("Dyfed", {
 	HistoricalClaims = {
 		43, "latin", "rome"
 	},
-	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("East Anglia", {
@@ -2108,7 +2108,7 @@ DefineProvince("East Anglia", {
 		-27, "celt",
 		526, "teuton"
 	},
-	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("East Friesland", { -- also includes Osnabrück
@@ -2145,7 +2145,7 @@ DefineProvince("East Friesland", { -- also includes Osnabrück
 		-3950, "basque",
 		-264, "teuton"
 	},
-	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
 DefineProvince("Epirus", {
@@ -2167,7 +2167,7 @@ DefineProvince("Epirus", {
 	},
 	SettlementTerrain = "Plains",
 	Coastal = true,
-	Regions = {"Europe", "Greece", "West and Central Europe"}
+	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
 DefineProvince("Essex", {
@@ -2209,7 +2209,7 @@ DefineProvince("Essex", {
 	HistoricalModifiers = {
 		1836, "upgrade-university", true -- University founded in London in 1836; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	},
-	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Estonia", {
@@ -2250,7 +2250,7 @@ DefineProvince("Estonia", {
 	HistoricalCultures = {
 		-9000, "uralic" -- The ancestors of Finno-Ugric speaking peoples settled the eastern Baltic (apparently meaning Estonia and Latvia) c. 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
 	},
-	Regions = {"Europe", "West and Central Europe"}
+	Regions = {"europe", "west-and-central-europe"}
 })
 
 DefineProvince("Euboea", { -- to make this island appear separated from Attica, it was necessary to "bump" it one tile to the north and one tile to the east into the sea
@@ -2270,7 +2270,7 @@ DefineProvince("Euboea", { -- to make this island appear separated from Attica, 
 	Claims = {
 		"minoan", "impressedware-tribe"
 	},
-	Regions = {"Europe", "Greece", "West and Central Europe"}
+	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
 DefineProvince("Farther Pomerania", {
@@ -2306,7 +2306,7 @@ DefineProvince("Farther Pomerania", {
 	HistoricalCultures = {
 		-264, "goth"
 	},
-	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
 DefineProvince("Finland", {
@@ -2354,7 +2354,7 @@ DefineProvince("Finland", {
 		-7500, "uralic", -- The ancestors of Finno-Ugric speaking peoples (or their descendants) settled the coast of the Bothian Gulf in Finland 7500-6400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
 		-264, "finnish"
 	},
-	Regions = {"Europe", "West and Central Europe"}
+	Regions = {"europe", "west-and-central-europe"}
 })
 
 DefineProvince("France", {
@@ -2414,7 +2414,7 @@ DefineProvince("France", {
 		1789, "upgrade-courthouse", true, -- Chief court of the salt tax existent in Le Mans in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 		1789, "upgrade-courthouse", true -- Prévôt des maréchaux and chief court of the salt tax existent in Orléans in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
-	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
+	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Franche Comte", {
@@ -2466,7 +2466,7 @@ DefineProvince("Franche Comte", {
 		1485, "upgrade-university", true, -- University founded in Besançon in 1485; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1789, "upgrade-courthouse", true -- Parlement or conseil souverain and prévôt des maréchaux existent in Besançon in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
-	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
+	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Franconia", {
@@ -2521,7 +2521,7 @@ DefineProvince("Franconia", {
 	HistoricalModifiers = {
 		1402, "upgrade-university", true -- University founded in Wurzburg in 1402; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
 DefineProvince("Friesland", {
@@ -2569,7 +2569,7 @@ DefineProvince("Friesland", {
 	HistoricalModifiers = {
 		1585, "upgrade-university", true -- University founded in Franeker in 1585; Source: "The Cambridge Modern History Atlas", p. 9.
 	},
-	Regions = {"Europe", "Germany-Netherlands", "Northwest Europe", "West and Central Europe"}
+	Regions = {"europe", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Galicia", {
@@ -2622,7 +2622,7 @@ DefineProvince("Galicia", {
 	HistoricalModifiers = {
 		1364, "upgrade-university", true -- University founded in Krakow in 1364; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"Cisleithania", "Europe", "Poland", "West and Central Europe"}
+	Regions = {"cisleithania", "europe", "poland", "west-and-central-europe"}
 })
 
 DefineProvince("Gallaecia", {
@@ -2663,7 +2663,7 @@ DefineProvince("Gallaecia", {
 	HistoricalModifiers = {
 		1532, "upgrade-university", true -- University founded in Santiago de Compostela in 1532; Source: "The Cambridge Modern History Atlas", p. 9.
 	},
-	Regions = {"Europe", "Iberia", "West and Central Europe"}
+	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
 DefineProvince("Galloway", {
@@ -2698,7 +2698,7 @@ DefineProvince("Galloway", {
 	HistoricalCultures = {
 		-27, "celt"
 	},
-	Regions = {"British Isles", "Europe", "Northwest Europe", "West and Central Europe"}
+	Regions = {"british-isles", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Gotaland", {
@@ -2749,7 +2749,7 @@ DefineProvince("Gotaland", {
 		-325, "goth",
 		161, "norse"
 	},
-	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
 DefineProvince("Gotland", {
@@ -2780,7 +2780,7 @@ DefineProvince("Gotland", {
 	HistoricalClaims = {
 		-325, "goth", "goth-tribe"
 	},
-	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
 DefineProvince("Gwynedd", { -- also includes Clwyd
@@ -2816,7 +2816,7 @@ DefineProvince("Gwynedd", { -- also includes Clwyd
 	HistoricalClaims = {
 		43, "latin", "rome"
 	},
-	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Hanover", {
@@ -2852,7 +2852,7 @@ DefineProvince("Hanover", {
 	HistoricalCultures = {
 		-264, "teuton"
 	},
-	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
 DefineProvince("Hedmark", {
@@ -2876,7 +2876,7 @@ DefineProvince("Hedmark", {
 	Claims = {
 		"norse", "norway"
 	},
-	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
 DefineProvince("Hesse", {
@@ -2923,7 +2923,7 @@ DefineProvince("Hesse", {
 		1527, "upgrade-university", true, -- University founded in Marburg in 1527; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 		1607, "upgrade-university", true -- University founded in Giessen in 1607; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
-	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
 DefineProvince("Highland Scotland", {
@@ -2978,7 +2978,7 @@ DefineProvince("Highland Scotland", {
 		1413, "upgrade-university", true, -- University founded in St. Andrews in 1413; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1494, "upgrade-university", true -- University founded in Aberdeen in 1494; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"British Isles", "Europe", "Northwest Europe", "West and Central Europe"}
+	Regions = {"british-isles", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Hither Pomerania", {
@@ -3018,7 +3018,7 @@ DefineProvince("Hither Pomerania", {
 	HistoricalModifiers = {
 		1456, "upgrade-university", true -- University founded in Greifswald in 1456; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
 DefineProvince("Holland", {
@@ -3074,7 +3074,7 @@ DefineProvince("Holland", {
 		1877, "upgrade-university", true, -- State university founded in Amsterdam in 1877; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 		1905, "upgrade-university", true -- Calvinist university founded in Amsterdam in 1905; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	},
-	Regions = {"Europe", "Germany-Netherlands", "Northwest Europe", "West and Central Europe"}
+	Regions = {"europe", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Holstein", {
@@ -3116,7 +3116,7 @@ DefineProvince("Holstein", {
 	HistoricalSettlementBuildings = {
 		768, "unit-teuton-stronghold", true -- Fort existent in Esesfeld during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
-	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
 DefineProvince("Hordaland", {
@@ -3141,7 +3141,7 @@ DefineProvince("Hordaland", {
 		"norse", "norway"
 	},
 	Coastal = true,
-	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
 DefineProvince("Hungary", {
@@ -3186,7 +3186,7 @@ DefineProvince("Hungary", {
 		1389, "upgrade-university", true, -- University founded in Budapest in 1389; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 --		1896, "upgrade-college", true -- Eötvos College founded in Budapest in 1896; Source: John Lukacs, "Budapest 1900: a historical portrait of a city and its culture", pp. 175-176.
 	},
-	Regions = {"Europe", "West and Central Europe"}
+	Regions = {"europe", "west-and-central-europe"}
 })
 
 DefineProvince("Iceland", {
@@ -3227,7 +3227,7 @@ DefineProvince("Iceland", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Coastal = true,
-	Regions = {"Europe", "West and Central Europe"}
+	Regions = {"europe", "west-and-central-europe"}
 })
 
 DefineProvince("Ingria", {
@@ -3262,7 +3262,7 @@ DefineProvince("Ingria", {
 	HistoricalCultures = {
 		-9000, "uralic" -- The ancestors of Finno-Ugric speaking peoples settled the Karelian Isthmus c. 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
 	},
-	Regions = {"Eurasia", "Europe"}
+	Regions = {"eurasia", "europe"}
 })
 
 DefineProvince("Istria", {
@@ -3295,7 +3295,7 @@ DefineProvince("Istria", {
 	HistoricalCultures = {
 		-6500, "basque"
 	},
-	Regions = {"Europe", "Italy", "West and Central Europe"}
+	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
 DefineProvince("Jutland", {
@@ -3349,7 +3349,7 @@ DefineProvince("Jutland", {
 	HistoricalSettlementBuildings = {
 		-1600, "unit-germanic-smithy", true -- bronzesmithing capabilities existed in Jutland in 1600 BC, since swords were crafted there at this date; Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-roerby-swords/
 	},
-	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
 --[[
@@ -3366,7 +3366,7 @@ DefineProvince("Karelia", {
 	SettlementTerrain = "Plains",
 	Claims = {
 	},
-	Regions = {"Eurasia", "Europe"}
+	Regions = {"eurasia", "europe"}
 })
 --]]
 
@@ -3403,7 +3403,7 @@ DefineProvince("Kent", {
 		-27, "celt",
 		526, "teuton"
 	},
-	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Khersonska", {
@@ -3435,7 +3435,7 @@ DefineProvince("Khersonska", {
 	HistoricalCultures = {
 		-264, "persian"
 	},
-	Regions = {"Eurasia", "Europe"}
+	Regions = {"eurasia", "europe"}
 })
 
 DefineProvince("Lacedaemonia", {
@@ -3461,7 +3461,7 @@ DefineProvince("Lacedaemonia", {
 		-1700, "unit-teuton-stronghold", true, -- Mycenaean fortifications present in Elliniko and Peristeria (both in the western coast of Messenia) between 1700 and 1200 BC, as well as in Phylakopi (in the island of Melos); Source: "Atlas de História Mundial", 2001, p. 67.
 		-1190, "unit-teuton-stronghold", false -- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 	},
-	Regions = {"Europe", "Greece", "West and Central Europe"}
+	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
 DefineProvince("Latium", {
@@ -3499,7 +3499,7 @@ DefineProvince("Latium", {
 		166, "upgrade-smallpox", true, -- a sort of smallpox reached Rome from the east in 166; Source: "Ancient Warfare VII.6", 2013, p. 6.
 		1303, "upgrade-university", true -- University founded in Rome in 1303; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"Europe", "Italy", "West and Central Europe"}
+	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
 DefineProvince("Latvia", {
@@ -3536,7 +3536,7 @@ DefineProvince("Latvia", {
 	HistoricalCultures = {
 		-9000, "uralic" -- The ancestors of Finno-Ugric speaking peoples settled the eastern Baltic (apparently meaning Estonia and Latvia) c. 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
 	},
-	Regions = {"Europe", "West and Central Europe"}
+	Regions = {"europe", "west-and-central-europe"}
 })
 
 DefineProvince("Leinster", {
@@ -3575,7 +3575,7 @@ DefineProvince("Leinster", {
 	HistoricalModifiers = {
 		1312, "upgrade-university", true, -- University founded in Dublin in 1312; Source: "Atlas de História Mundial", p. 144.
 	},
-	Regions = {"British Isles", "Europe", "Northwest Europe", "West and Central Europe"}
+	Regions = {"british-isles", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Liege", { -- also includes Namur and Belgian Limburg
@@ -3619,7 +3619,7 @@ DefineProvince("Liege", { -- also includes Namur and Belgian Limburg
 	HistoricalSettlementBuildings = {
 		768, "unit-teuton-temple", true, -- Monastery or abbey existent in Stavelot during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
-	Regions = {"Europe", "Gaul", "Germany-Netherlands", "Northwest Europe", "West and Central Europe"}
+	Regions = {"europe", "gaul", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Liguria", {
@@ -3643,7 +3643,7 @@ DefineProvince("Liguria", {
 	Claims = {
 		"celt", "ligurian-tribe"
 	},
-	Regions = {"Europe", "Italy", "West and Central Europe"}
+	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
 DefineProvince("Lincoln", {
@@ -3681,7 +3681,7 @@ DefineProvince("Lincoln", {
 		-27, "celt",
 		526, "teuton"
 	},
-	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Lithuania", {
@@ -3714,7 +3714,7 @@ DefineProvince("Lithuania", {
 	Claims = {
 		"baltic", "aestui-tribe"
 	},
-	Regions = {"Europe", "West and Central Europe"}
+	Regions = {"europe", "west-and-central-europe"}
 })
 
 DefineProvince("Lombardy", {
@@ -3755,7 +3755,7 @@ DefineProvince("Lombardy", {
 	HistoricalModifiers = {
 		1565, "upgrade-university", true, -- University founded in Milan in 1565; Source: "The Cambridge Modern History Atlas", p. 9.
 	},
-	Regions = {"Europe", "Italy", "West and Central Europe"}
+	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
 DefineProvince("Lorraine", {
@@ -3782,7 +3782,7 @@ DefineProvince("Lorraine", {
 	HistoricalModifiers = {
 		1789, "upgrade-courthouse", true -- Parlement or conseil souverain and prévôt des maréchaux existent in Nancy in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
-	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
+	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Lothian", { -- includes Borders
@@ -3822,7 +3822,7 @@ DefineProvince("Lothian", { -- includes Borders
 	HistoricalModifiers = {
 		1582, "upgrade-university", true -- University founded in Edinburgh in 1582; Source: "The Cambridge Modern History Atlas", p. 9.
 	},
-	Regions = {"British Isles", "Europe", "Northwest Europe", "West and Central Europe"}
+	Regions = {"british-isles", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Lower Austria", {
@@ -3874,7 +3874,7 @@ DefineProvince("Lower Austria", {
 		1365, "upgrade-university", true, -- University founded in Vienna in 1365; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 --		1815, "upgrade-college", true -- Imperial Polytechnic Institute of Vienna founded in 1815; Source: Silvia Fernanda de Mendonça Figueirôa, "Ciência e tecnologia no Brasil Imperial: Guilherme Schüch, Barão de Capanema (1824-1908)", 2005, p. 442.
 	},
-	Regions = {"Cisleithania", "Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
+	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
 
 DefineProvince("Lower Lusatia", {
@@ -3908,7 +3908,7 @@ DefineProvince("Lower Lusatia", {
 	HistoricalModifiers = {
 		1506, "upgrade-university", true -- University founded in Frankfort-on-the-Oder in 1506; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
 DefineProvince("Lower Rhine", {
@@ -3940,7 +3940,7 @@ DefineProvince("Lower Rhine", {
 		1388, "upgrade-university", true, -- University founded in Cologne in 1388; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1454, "upgrade-university", true -- University founded in Trier in 1454; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"Europe", "Gaul", "Germany-Netherlands", "West and Central Europe"}
+	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
 })
 
 DefineProvince("Luxemburg", {
@@ -3977,7 +3977,7 @@ DefineProvince("Luxemburg", {
 	HistoricalSettlementBuildings = {
 		768, "unit-teuton-temple", true -- Monastery or abbey existent in Echternach (in modern Luxembourg) during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
-	Regions = {"Europe", "Gaul", "Germany-Netherlands", "Northwest Europe", "West and Central Europe"}
+	Regions = {"europe", "gaul", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Lyonnais", {
@@ -4009,7 +4009,7 @@ DefineProvince("Lyonnais", {
 		1330, "upgrade-university", true, -- University founded in Lyon in 1330; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 		1789, "upgrade-courthouse", true -- Chief court of the salt tax existent in Lyon in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
-	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
+	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Macedonia", {
@@ -4038,7 +4038,7 @@ DefineProvince("Macedonia", {
 		"thracian", "edoni-tribe", -- inhabited the region between Stryinon and Nestus rivers
 		"thracian", "odomanti-tribe" -- inhabited the region between Stryinon and Nestus rivers
 	},
-	Regions = {"Europe", "Greece", "West and Central Europe"}
+	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
 DefineProvince("Magdeburg", {
@@ -4079,7 +4079,7 @@ DefineProvince("Magdeburg", {
 	HistoricalModifiers = {
 		1576, "upgrade-university", true -- University founded in Helmstadt in 1576; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
-	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
 DefineProvince("Malta", {
@@ -4096,7 +4096,7 @@ DefineProvince("Malta", {
 	Coastal = true,
 	Claims = {
 	},
-	Regions = {"Europe", "West and Central Europe"}
+	Regions = {"europe", "west-and-central-europe"}
 })
 
 DefineProvince("Marche", {
@@ -4123,7 +4123,7 @@ DefineProvince("Marche", {
 	HistoricalClaims = {
 		-50, "latin", "rome"
 	},
-	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
+	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Mazovia", {
@@ -4162,7 +4162,7 @@ DefineProvince("Mazovia", {
 	HistoricalCultures = {
 		-264, "goth"
 	},
-	Regions = {"Europe", "Poland", "West and Central Europe"}
+	Regions = {"europe", "poland", "west-and-central-europe"}
 })
 
 DefineProvince("Mecklenburg", {
@@ -4205,7 +4205,7 @@ DefineProvince("Mecklenburg", {
 	HistoricalModifiers = {
 		1419, "upgrade-university", true -- University founded in Rostock in 1419; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
 DefineProvince("Mercia", {
@@ -4262,7 +4262,7 @@ DefineProvince("Mercia", {
 	HistoricalSettlementBuildings = {
 		161, "unit-latin-barracks", true -- Legionary base present in Deva in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
-	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Modena", {
@@ -4280,7 +4280,7 @@ DefineProvince("Modena", {
 	HistoricalModifiers = {
 		1250, "upgrade-university", true -- University existent in Reggio in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
 	},
-	Regions = {"Europe", "Italy", "West and Central Europe"}
+	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
 DefineProvince("Moldavia", {
@@ -4325,7 +4325,7 @@ DefineProvince("Moldavia", {
 		161, "thracian",
 		200, "goth"
 	},
-	Regions = {"Europe", "West and Central Europe"}
+	Regions = {"europe", "west-and-central-europe"}
 })
 
 DefineProvince("Montenegro", {
@@ -4341,7 +4341,7 @@ DefineProvince("Montenegro", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Coastal = true,
-	Regions = {"Europe", "Roman Danube", "West and Central Europe"}
+	Regions = {"europe", "roman-danube", "west-and-central-europe"}
 })
 
 DefineProvince("Moravia", {
@@ -4401,7 +4401,7 @@ DefineProvince("Moravia", {
 		-- First trains from Vienna arrived in Brünn on the 07.07.1839; Source: Chad Bryant, "Into an Uncertain Future: Railroads and Vormärz Liberalism in Brno, Vienna, and Prague", 2009, p. 183.
 		-- Nordbahn reached Olmütz in 1841; Source: Chad Bryant, "Into an Uncertain Future: Railroads and Vormärz Liberalism in Brno, Vienna, and Prague", 2009, p. 187.
 	},
-	Regions = {"Cisleithania", "Czechoslovakia", "Europe", "West and Central Europe"}
+	Regions = {"cisleithania", "czechoslovakia", "europe", "west-and-central-europe"}
 })
 
 DefineProvince("Moselle", {
@@ -4423,7 +4423,7 @@ DefineProvince("Moselle", {
 	HistoricalModifiers = {
 		1789, "upgrade-courthouse", true -- Parlement or conseil souverain and prévôt des maréchaux existent in Metz in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
-	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
+	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Munster", {
@@ -4462,7 +4462,7 @@ DefineProvince("Munster", {
 	HistoricalCultures = {
 		-27, "celt"
 	},
-	Regions = {"British Isles", "Europe", "Northwest Europe", "West and Central Europe"}
+	Regions = {"british-isles", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Naples", {
@@ -4495,7 +4495,7 @@ DefineProvince("Naples", {
 		1224, "upgrade-university", true, -- University founded in Naples in 1224; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1250, "upgrade-university", true -- University existent in Salerno in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
 	},
-	Regions = {"Europe", "Italy", "West and Central Europe"}
+	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
 DefineProvince("Neumark", {
@@ -4525,7 +4525,7 @@ DefineProvince("Neumark", {
 	HistoricalCultures = {
 		161, "teuton"
 	},
-	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
 DefineProvince("Nordland", {
@@ -4560,7 +4560,7 @@ DefineProvince("Nordland", {
 		"norse", "halogaland",
 		"norse", "norway"
 	},
-	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
 DefineProvince("Normandy", {
@@ -4610,7 +4610,7 @@ DefineProvince("Normandy", {
 		1789, "upgrade-courthouse", true, -- Prévôt des maréchaux and chief court of the salt tax existent in Alençon in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 		1789, "upgrade-courthouse", true -- Chief court of the salt tax and prévôt des maréchaux existent in Caen in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
-	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
+	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Norrland", {
@@ -4669,7 +4669,7 @@ DefineProvince("Norrland", {
 	HistoricalCultures = {
 		-264, "norse"
 	},
-	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
 DefineProvince("North Brabant", {
@@ -4707,7 +4707,7 @@ DefineProvince("North Brabant", {
 	HistoricalCultures = {
 		-56, "celt"
 	},
-	Regions = {"Europe", "Germany-Netherlands", "Northwest Europe", "West and Central Europe"}
+	Regions = {"europe", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("North Trondelag", {
@@ -4734,7 +4734,7 @@ DefineProvince("North Trondelag", {
 	Claims = {
 		"norse", "norway"
 	},
-	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
 DefineProvince("Northumberland", {
@@ -4773,7 +4773,7 @@ DefineProvince("Northumberland", {
 		161, "celt",
 		526, "teuton"
 	},
-	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Odeska", {
@@ -4805,7 +4805,7 @@ DefineProvince("Odeska", {
 		-336, "persian",
 		161, "goth"
 	},
-	Regions = {"Eurasia", "Europe"}
+	Regions = {"eurasia", "europe"}
 })
 
 DefineProvince("Oldenburg", {
@@ -4838,7 +4838,7 @@ DefineProvince("Oldenburg", {
 		-3950, "basque",
 		-264, "teuton"
 	},
-	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
 DefineProvince("Oppland", {
@@ -4864,7 +4864,7 @@ DefineProvince("Oppland", {
 	Claims = {
 		"norse", "norway"
 	},
-	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
 DefineProvince("Orkney", {
@@ -4884,7 +4884,7 @@ DefineProvince("Orkney", {
 		1099, "norse", "orkney", -- since the faction had a ruler at this date, then it must have existed
 		1560, "teuton", "scotland" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
-	Regions = {"British Isles", "Europe", "Northwest Europe", "West and Central Europe"}
+	Regions = {"british-isles", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Ostfold", {
@@ -4904,7 +4904,7 @@ DefineProvince("Ostfold", {
 	Claims = {
 		"norse", "norway"
 	},
-	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
 DefineProvince("Overijssel", {
@@ -4941,7 +4941,7 @@ DefineProvince("Overijssel", {
 	HistoricalCultures = {
 		-27, "teuton"
 	},
-	Regions = {"Europe", "Germany-Netherlands", "Northwest Europe", "West and Central Europe"}
+	Regions = {"europe", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Palatinate", {
@@ -4968,7 +4968,7 @@ DefineProvince("Palatinate", {
 		1476, "upgrade-university", true, -- University founded in Mainz in 1476; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1578, "upgrade-university", true -- University founded in Neustadt in 1578; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
-	Regions = {"Europe", "Gaul", "Germany-Netherlands", "West and Central Europe"}
+	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
 })
 
 DefineProvince("Palermo", {
@@ -5010,7 +5010,7 @@ DefineProvince("Palermo", {
 	HistoricalModifiers = {
 		1394, "upgrade-university", true -- University founded in Palermo in 1394; Source: "The Cambridge Modern History Atlas", p. 9.
 	},
-	Regions = {"Europe", "Italy", "West and Central Europe"}
+	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
 DefineProvince("Pannonia", {
@@ -5056,7 +5056,7 @@ DefineProvince("Pannonia", {
 	HistoricalModifiers = {
 		1367, "upgrade-university", true -- University founded in Fünfkirchen in 1367; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"Europe", "Roman Danube", "West and Central Europe"}
+	Regions = {"europe", "roman-danube", "west-and-central-europe"}
 })
 
 DefineProvince("Parma", {
@@ -5078,7 +5078,7 @@ DefineProvince("Parma", {
 	HistoricalModifiers = {
 		1248, "upgrade-university", true -- University founded in Piacenza in 1248; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"Europe", "Italy", "West and Central Europe"}
+	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
 DefineProvince("Picardy", { -- also includes French Flanders, Hainaut and Artois
@@ -5125,7 +5125,7 @@ DefineProvince("Picardy", { -- also includes French Flanders, Hainaut and Artois
 		1789, "upgrade-courthouse", true, -- Prévôt des maréchaux existent in Lille in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 		1789, "upgrade-courthouse", true -- Prévôt des maréchaux existent in Valenciennes in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
-	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
+	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Piedmont", {
@@ -5146,7 +5146,7 @@ DefineProvince("Piedmont", {
 		1228, "upgrade-university", true, -- University founded in Vercelli in 1228; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1405, "upgrade-university", true -- University founded in Turin in 1405; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"Europe", "Italy", "West and Central Europe"}
+	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
 DefineProvince("Poitou", {
@@ -5182,7 +5182,7 @@ DefineProvince("Poitou", {
 		1431, "upgrade-university", true, -- University founded in Poitiers in 1431; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1789, "upgrade-courthouse", true -- Prévôt des maréchaux existent in Poitiers in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
-	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
+	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Pomerelia", {
@@ -5229,7 +5229,7 @@ DefineProvince("Pomerelia", {
 	HistoricalModifiers = {
 		1366, "upgrade-university", true -- University founded in Kulm in 1366; Source: "Atlas de História Mundial", 2001, p. 144.
 	},
-	Regions = {"Europe", "Poland", "West and Central Europe"}
+	Regions = {"europe", "poland", "west-and-central-europe"}
 })
 
 DefineProvince("Posen", {
@@ -5255,7 +5255,7 @@ DefineProvince("Posen", {
 		"goth", "vandal-tribe",
 		"slav", "poland"
 	},
-	Regions = {"Europe", "Poland", "West and Central Europe"}
+	Regions = {"europe", "poland", "west-and-central-europe"}
 })
 
 DefineProvince("Provence", {
@@ -5299,7 +5299,7 @@ DefineProvince("Provence", {
 		1409, "upgrade-university", true, -- University founded in Aix-en-Provence in 1409; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1789, "upgrade-courthouse", true -- Parlement or conseil souverain, chambre des comptes, court of admiralty, chief court of the salt tax and prévôt des maréchaux existent in Aix-en-Provence in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
-	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
+	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Prussia", {
@@ -5329,7 +5329,7 @@ DefineProvince("Prussia", {
 	HistoricalModifiers = {
 		1544, "upgrade-university", true -- University founded in Königsberg in 1544; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
-	Regions = {"Europe", "West and Central Europe"}
+	Regions = {"europe", "west-and-central-europe"}
 })
 
 DefineProvince("Rhodes", {
@@ -5344,8 +5344,7 @@ DefineProvince("Rhodes", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Coastal = true,
-	Regions = {"Europe", "Greece", "West and Central Europe"},
-	Regions = {"Europe", "West and Central Europe"}
+	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
 DefineProvince("Rhodope", {
@@ -5381,7 +5380,7 @@ DefineProvince("Rhodope", {
 	HistoricalClaims = {
 		-146, "latin", "rome"
 	},
-	Regions = {"Europe", "Greece", "West and Central Europe"}
+	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
 DefineProvince("Rogaland", {
@@ -5402,7 +5401,7 @@ DefineProvince("Rogaland", {
 	Claims = {
 		"norse", "norway"
 	},
-	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
 DefineProvince("Romagna", {
@@ -5428,7 +5427,7 @@ DefineProvince("Romagna", {
 		1250, "upgrade-university", true, -- University existent in Bologna in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
 		1391, "upgrade-university", true -- University founded in Ferrara in 1391; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"Europe", "Italy", "West and Central Europe"}
+	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
 DefineProvince("Russia", {
@@ -5513,7 +5512,7 @@ DefineProvince("Russia", {
 	HistoricalCultures = {
 		-264, "slav"
 	},
-	Regions = {"Eurasia", "Europe"}
+	Regions = {"eurasia", "europe"}
 })
 
 DefineProvince("Salzburg", {
@@ -5553,7 +5552,7 @@ DefineProvince("Salzburg", {
 	HistoricalSettlementBuildings = {
 		768, "unit-teuton-temple", true -- Archbishopric existent in Salzburg during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
-	Regions = {"Cisleithania", "Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
+	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
 
 DefineProvince("Sardinia", {
@@ -5572,7 +5571,7 @@ DefineProvince("Sardinia", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Coastal = true,
-	Regions = {"Europe", "Italy", "West and Central Europe"}
+	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
 DefineProvince("Savoy", {
@@ -5608,7 +5607,7 @@ DefineProvince("Savoy", {
 	HistoricalSettlementBuildings = {
 		768, "unit-teuton-temple", true -- Archbishopric existent in Tarentaise during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
-	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
+	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Scania", {
@@ -5663,7 +5662,7 @@ DefineProvince("Scania", {
 		-2800, "germanic",
 		161, "norse"
 	},
-	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
 DefineProvince("Schleswig", {
@@ -5692,7 +5691,7 @@ DefineProvince("Schleswig", {
 	HistoricalCultures = {
 		-264, "teuton"
 	},
-	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
 DefineProvince("Serbia", {
@@ -5736,7 +5735,7 @@ DefineProvince("Serbia", {
 	HistoricalSettlementBuildings = {
 		161, "unit-latin-barracks", true -- Legionary base present in Viminacium in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
-	Regions = {"Europe", "Roman Danube", "West and Central Europe"}
+	Regions = {"europe", "roman-danube", "west-and-central-europe"}
 })
 
 DefineProvince("Silesia", {
@@ -5777,7 +5776,7 @@ DefineProvince("Silesia", {
 		-264, "goth",
 		161, "teuton"
 	},
-	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
 DefineProvince("Skopje", {
@@ -5800,7 +5799,7 @@ DefineProvince("Skopje", {
 	Claims = {
 		"phrygian", "bryges-tribe"
 	},
-	Regions = {"Europe", "Greece", "West and Central Europe"}
+	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
 DefineProvince("Slovakia", {
@@ -5862,7 +5861,7 @@ DefineProvince("Slovakia", {
 	HistoricalModifiers = {
 		1465, "upgrade-university", true -- University founded in Bratislava in 1465; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"Czechoslovakia", "Europe", "West and Central Europe"}
+	Regions = {"czechoslovakia", "europe", "west-and-central-europe"}
 })
 
 DefineProvince("Somerset", {
@@ -5903,7 +5902,7 @@ DefineProvince("Somerset", {
 	HistoricalModifiers = {
 		1909, "upgrade-university", true -- University founded in Bristol in 1909; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	},
-	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("South Trondelag", {
@@ -5931,7 +5930,7 @@ DefineProvince("South Trondelag", {
 	Claims = {
 		"norse", "norway"
 	},
-	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
 DefineProvince("Strathclyde", {
@@ -5972,7 +5971,7 @@ DefineProvince("Strathclyde", {
 	HistoricalModifiers = {
 		1450, "upgrade-university", true -- University founded in Glasgow in 1450; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"British Isles", "Europe", "Northwest Europe", "West and Central Europe"}
+	Regions = {"british-isles", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Styria", {
@@ -6015,7 +6014,7 @@ DefineProvince("Styria", {
 	HistoricalModifiers = {
 		1585, "upgrade-university", true -- University founded in Graz in 1585; Source: "The Cambridge Modern History Atlas", p. 9.
 	},
-	Regions = {"Cisleithania", "Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
+	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
 
 DefineProvince("Sussex", {
@@ -6048,7 +6047,7 @@ DefineProvince("Sussex", {
 	HistoricalCultures = {
 		526, "teuton"
 	},
-	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Sweden", {
@@ -6099,7 +6098,7 @@ DefineProvince("Sweden", {
 	HistoricalModifiers = {
 		1477, "upgrade-university", true -- University founded in Uppsala in 1477; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
 DefineProvince("Switzerland", {
@@ -6143,7 +6142,7 @@ DefineProvince("Switzerland", {
 		1459, "upgrade-university", true, -- University founded in Basel in 1459; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1521, "upgrade-university", true -- University founded in Zurich in 1521; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
-	Regions = {"Europe", "Roman Danube", "West and Central Europe"}
+	Regions = {"europe", "roman-danube", "west-and-central-europe"}
 })
 
 DefineProvince("Syracuse", {
@@ -6183,7 +6182,7 @@ DefineProvince("Syracuse", {
 		1444, "upgrade-university", true, -- University founded in Catania in 1444; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1548, "upgrade-university", true -- University founded in Messina in 1548; Source: "The Cambridge Modern History Atlas", p. 9.
 	},
-	Regions = {"Europe", "Italy", "West and Central Europe"}
+	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
 DefineProvince("Thessaly", {
@@ -6204,7 +6203,7 @@ DefineProvince("Thessaly", {
 	Claims = {
 		"minoan", "impressedware-tribe"
 	},
-	Regions = {"Europe", "Greece", "West and Central Europe"}
+	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
 DefineProvince("Thrace", {
@@ -6226,7 +6225,7 @@ DefineProvince("Thrace", {
 		"thracian", "apsinthii-tribe",
 		"greek", "thrace"
 	},
-	Regions = {"Europe", "Greece", "West and Central Europe"}
+	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
 DefineProvince("Thuringia", {
@@ -6263,7 +6262,7 @@ DefineProvince("Thuringia", {
 		1379, "upgrade-university", true, -- University founded in Erfurt in 1379; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1557, "upgrade-university", true -- University founded in Jena in 1557; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
-	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
 DefineProvince("Touraine", {
@@ -6294,7 +6293,7 @@ DefineProvince("Touraine", {
 	HistoricalModifiers = {
 		1789, "upgrade-courthouse", true -- Chief court of the salt tax existent in Tours in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
-	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
+	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Transylvania", {
@@ -6350,7 +6349,7 @@ DefineProvince("Transylvania", {
 	HistoricalModifiers = {
 		1580, "upgrade-university", true, -- University founded in Cluj in 1580; Source: "The Cambridge Modern History Atlas", p. 9.
 	},
-	Regions = {"Europe", "West and Central Europe"}
+	Regions = {"europe", "west-and-central-europe"}
 })
 
 DefineProvince("Tuscany", {
@@ -6380,7 +6379,7 @@ DefineProvince("Tuscany", {
 		1348, "upgrade-university", true, -- University founded in Pisa in 1348; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1369, "upgrade-university", true -- University founded in Lucca in 1369; Source: "Atlas de História Mundial", 2001, p. 144.
 	},
-	Regions = {"Europe", "Italy", "West and Central Europe"}
+	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
 DefineProvince("Tyrol", {
@@ -6427,7 +6426,7 @@ DefineProvince("Tyrol", {
 		-7040, "basque",
 		-800, "celt"
 	},
-	Regions = {"Cisleithania", "Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
+	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
 
 DefineProvince("Ukraine", {
@@ -6511,7 +6510,7 @@ DefineProvince("Ukraine", {
 		-336, "persian",
 		200, "goth"
 	},
-	Regions = {"Eurasia", "Europe"}
+	Regions = {"eurasia", "europe"}
 })
 
 DefineProvince("Ulster", {
@@ -6550,7 +6549,7 @@ DefineProvince("Ulster", {
 	HistoricalCultures = {
 		-27, "celt"
 	},
-	Regions = {"British Isles", "Europe", "Northwest Europe", "West and Central Europe"}
+	Regions = {"british-isles", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Umbria", {
@@ -6578,7 +6577,7 @@ DefineProvince("Umbria", {
 		1308, "upgrade-university", true, -- University founded in Perugia in 1308; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1540, "upgrade-university", true -- University founded in Macerata in 1540; Source: "The Cambridge Modern History Atlas", p. 9.
 	},
-	Regions = {"Europe", "Italy", "West and Central Europe"}
+	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
 DefineProvince("Upper Austria", {
@@ -6615,7 +6614,7 @@ DefineProvince("Upper Austria", {
 	HistoricalCultures = {
 		-800, "celt"
 	},
-	Regions = {"Cisleithania", "Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
+	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
 
 DefineProvince("Upper Lusatia", {
@@ -6645,7 +6644,7 @@ DefineProvince("Upper Lusatia", {
 	HistoricalCultures = {
 		161, "teuton"
 	},
-	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
 DefineProvince("Upper Saxony", {
@@ -6681,7 +6680,7 @@ DefineProvince("Upper Saxony", {
 		1409, "upgrade-university", true, -- University founded in Leipzig in 1409; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 --		1846, "upgrade-college", true -- Bergakademie Freiberg existent in Chemnitz in 1846; Source: Silvia Fernanda de Mendonça Figueirôa, "Ciência e tecnologia no Brasil Imperial: Guilherme Schüch, Barão de Capanema (1824-1908)", 2005, p. 443.
 	},
-	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
 DefineProvince("Varmland", {
@@ -6711,7 +6710,7 @@ DefineProvince("Varmland", {
 	HistoricalCultures = {
 		-264, "norse"
 	},
-	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
 DefineProvince("Venetia", {
@@ -6759,7 +6758,7 @@ DefineProvince("Venetia", {
 		1318, "upgrade-university", true, -- University founded in Treviso in 1318; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1353, "upgrade-university", true -- University founded in Cividale in 1353; Source: "Atlas de História Mundial", 2001, p. 144.
 	},
-	Regions = {"Europe", "Italy", "West and Central Europe"}
+	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
 DefineProvince("Vestfold", {
@@ -6778,7 +6777,7 @@ DefineProvince("Vestfold", {
 	Claims = {
 		"norse", "norway"
 	},
-	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
 DefineProvince("Viborg", {
@@ -6810,7 +6809,7 @@ DefineProvince("Viborg", {
 		-9000, "uralic" -- The ancestors of Finno-Ugric speaking peoples settled the Karelian Isthmus c. 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
 		-- A fishnet belonging to the ancestors of Finno-Ugric speaking peoples was found in Antrea (on the Karelian Isthmus), being dated c. 8500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
 	},
-	Regions = {"Eurasia", "Europe"}
+	Regions = {"eurasia", "europe"}
 })
 
 DefineProvince("Vinnytska", {
@@ -6843,7 +6842,7 @@ DefineProvince("Vinnytska", {
 		-264, "persian",
 		161, "goth"
 	},
-	Regions = {"Eurasia", "Europe"}
+	Regions = {"eurasia", "europe"}
 })
 
 DefineProvince("Vojvodina", {
@@ -6875,7 +6874,7 @@ DefineProvince("Vojvodina", {
 	HistoricalCultures = {
 		-6000, "minoan"
 	},
-	Regions = {"Europe", "West and Central Europe"}
+	Regions = {"europe", "west-and-central-europe"}
 })
 
 DefineProvince("Wales", {
@@ -6918,7 +6917,7 @@ DefineProvince("Wales", {
 	HistoricalSettlementBuildings = {
 		161, "unit-latin-barracks", true -- Legionary base present in Isca Silurum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
-	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Wallachia", {
@@ -6972,7 +6971,7 @@ DefineProvince("Wallachia", {
 		-336, "thracian",
 		200, "goth"
 	},
-	Regions = {"Europe", "West and Central Europe"}
+	Regions = {"europe", "west-and-central-europe"}
 })
 
 DefineProvince("Wessex", {
@@ -7016,7 +7015,7 @@ DefineProvince("Wessex", {
 	HistoricalClaims = {
 		43, "latin", "rome"
 	},
-	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("West Galicia", {
@@ -7053,7 +7052,7 @@ DefineProvince("West Galicia", {
 		-264, "slav",
 		161, "goth"
 	},
-	Regions = {"Europe", "Poland", "West and Central Europe"}
+	Regions = {"europe", "poland", "west-and-central-europe"}
 })
 
 DefineProvince("Westphalia", {
@@ -7103,7 +7102,7 @@ DefineProvince("Westphalia", {
 	HistoricalModifiers = {
 		1614, "upgrade-university", true -- University founded in Paderborn in 1614; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
-	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
 DefineProvince("White Russia", {
@@ -7160,7 +7159,7 @@ DefineProvince("White Russia", {
 	HistoricalCultures = {
 		161, "finnish",
 	},
-	Regions = {"Eurasia", "Europe"}
+	Regions = {"eurasia", "europe"}
 })
 
 DefineProvince("Wurtemberg", {
@@ -7192,7 +7191,7 @@ DefineProvince("Wurtemberg", {
 	HistoricalModifiers = {
 		1416, "upgrade-university", true -- University founded in Tubingen in 1416; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
+	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
 
 DefineProvince("York", {
@@ -7245,7 +7244,7 @@ DefineProvince("York", {
 	HistoricalSettlementBuildings = {
 		161, "unit-latin-barracks", true -- Legionary base present in Eboracum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
-	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineProvince("Zealand", {
@@ -7297,7 +7296,7 @@ DefineProvince("Zealand", {
 	HistoricalModifiers = {
 		1478, "upgrade-university", true -- University founded in Copenhagen in 1478; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
 -- The ancient Sarmatia was known as "Swithiod the Great" or "Swithiod the Cold" to the Norse; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 216.
