@@ -114,7 +114,7 @@ DefineFaction("essex", {
 	Colors = {"purple"},
 	DefaultTier = "kingdom",
 	DevelopsTo = {"england"},
-	FactionUpgrade = "upgrade-saxon-tribe-faction",
+--	FactionUpgrade = "upgrade-saxon-tribe-faction",
 	DefaultAI = "sea-attack",
 	Description = ""
 })
@@ -179,7 +179,7 @@ DefineFaction("wessex", {
 	Colors = {"red"},
 	DefaultTier = "kingdom",
 	DevelopsTo = {"england"},
-	FactionUpgrade = "upgrade-saxon-tribe-faction",
+--	FactionUpgrade = "upgrade-saxon-tribe-faction",
 	DefaultAI = "sea-attack",
 	Description = ""
 })

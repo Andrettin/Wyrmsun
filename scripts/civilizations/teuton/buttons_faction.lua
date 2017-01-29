@@ -97,3 +97,36 @@ DefineButton( { Pos = 13, Level = 2, Icon = "icon-teuton-civilization",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
+-- Saxon Factions
+
+DefineButton( { Pos = 4, Level = 2, Icon = "icon-teuton-civilization",
+	Action = "research", Value = "upgrade-faction-saxon-tribe",
+	Allowed = "check-single-research",
+	Key = "x", Hint = "Found the Sa~!xon Tribe", Popup = "popup-research",
+	Description = "Changes your faction to the Saxon Tribe",
+	ForUnit = {"unit-germanic-town-hall"}
+} )
+
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-teuton-civilization",
+	Action = "research", Value = "upgrade-faction-cherusci-tribe",
+	Allowed = "check-single-research",
+	Key = "c", Hint = "Found the ~!Cherusci Tribe", Popup = "popup-research",
+	Description = "Changes your faction to the Cherusci Tribe",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
+DefineButton( { Pos = 2, Level = 2, Icon = "icon-teuton-civilization",
+	Action = "research", Value = "upgrade-faction-varini-tribe",
+	Allowed = "check-single-research",
+	Key = "v", Hint = "Found the ~!Varini Tribe", Popup = "popup-research",
+	Description = "Changes your faction to the Varini Tribe",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
+DefineButton( { Pos = 9, Level = 2, Icon = "icon-teuton-civilization",
+	Action = "research", Value = "upgrade-faction-saxony",
+	Allowed = "check-single-research",
+	Key = "x", Hint = "Found Sa~!xony", Popup = "popup-research",
+	Description = "Changes your faction to Saxony",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )

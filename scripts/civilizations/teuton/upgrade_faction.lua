@@ -40,6 +40,11 @@ DefineUpgrade("upgrade-bernice-tribe-faction", {
 	EffectsString = "Disembarkment Bonus for Kregars and Spearmen"
 })
 
+DefineUpgrade("upgrade-faction-cherusci-tribe", {
+	Name = "Cherusci Tribe",
+	EffectsString = "+5 HP and +1 Damage for Spearmen"
+})
+
 DefineUpgrade("upgrade-frank-tribe-faction", {
 	Name = "Frank Tribe Faction",
 	EffectsString = "+1 Damage and +1 Armor for Ritars"
@@ -60,15 +65,20 @@ DefineUpgrade("upgrade-lombard-tribe-faction", {
 	EffectsString = "+2 Damage for Kregars"
 })
 
-DefineUpgrade("upgrade-saxon-tribe-faction", {
-	Name = "Saxon Tribe Faction",
-	EffectsString = "+1 HP and +1 Damage for Kregars"
+DefineUpgrade("upgrade-faction-saxon-tribe", {
+	Name = "Saxon Tribe",
+	EffectsString = "+5 HP and +1 Damage for Kregars"
 })
 
 DefineUpgrade("upgrade-ubii-tribe-faction", {
 	Name = "Ubii Tribe Faction",
 	GrandStrategyProductionEfficiencyModifier = {"gold", 5, "silver", 5, "copper", 5},
 	EffectsString = "+5% Copper Processing for Rathauses and Burgs"
+})
+
+DefineUpgrade("upgrade-faction-varini-tribe", {
+	Name = "Varini Tribe",
+	EffectsString = "+10 HP for Kregars"
 })
 
 DefineUpgrade("upgrade-faction-austria", {
@@ -94,6 +104,11 @@ DefineUpgrade("upgrade-faction-carinthia", {
 DefineUpgrade("upgrade-mecklenburg-faction", {
 	Name = "Mecklenburg",
 	EffectsString = "+2 Armor for Kregars"
+})
+
+DefineUpgrade("upgrade-faction-saxony", {
+	Name = "Saxony",
+	EffectsString = "+5 HP and +1 Damage for Kregars"
 })
 
 DefineUpgrade("upgrade-faction-swabia", {
@@ -140,6 +155,17 @@ DefineModifier("upgrade-bernice-tribe-faction",
 	{"apply-to", "unit-teuton-spearman"}
 )
 
+DefineModifier("upgrade-faction-cherusci-tribe",
+	{"change-faction-to", "cherusci-tribe"}
+)
+
+DefineModifier("upgrade-faction-cherusci-tribe",
+	{"BasicDamage", 1},
+	{"HitPoints", 5},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-spearman"}
+)
+
 DefineModifier("upgrade-frank-tribe-faction",
 	{"apply-to", "unit-teuton-swordsman"}, {"convert-to", "unit-frank-swordsman"}
 )
@@ -183,7 +209,11 @@ DefineModifier("upgrade-lombard-tribe-faction",
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
-DefineModifier("upgrade-saxon-tribe-faction",
+DefineModifier("upgrade-faction-saxon-tribe",
+	{"change-faction-to", "saxon-tribe"}
+)
+
+DefineModifier("upgrade-faction-saxon-tribe",
 	{"BasicDamage", 1},
 	{"HitPoints", 5},
 	{"Points", 10},
@@ -193,6 +223,16 @@ DefineModifier("upgrade-saxon-tribe-faction",
 DefineModifier("upgrade-ubii-tribe-faction",
 	{"improve-production", "copper", 5}, -- the Ubii were in a central trading position, making them more advanced than other Germanic tribes
 	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"}
+)
+
+DefineModifier("upgrade-faction-varini-tribe",
+	{"change-faction-to", "varini-tribe"}
+)
+
+DefineModifier("upgrade-faction-varini-tribe",
+	{"HitPoints", 10},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
 DefineModifier("upgrade-mecklenburg-faction",
@@ -242,6 +282,17 @@ DefineModifier("upgrade-faction-carinthia",
 	{"apply-to", "unit-teuton-priest"}
 )
 
+DefineModifier("upgrade-faction-saxony",
+	{"change-faction-to", "saxony"}
+)
+
+DefineModifier("upgrade-faction-saxony",
+	{"BasicDamage", 1},
+	{"HitPoints", 5},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
+)
+
 DefineModifier("upgrade-faction-swabia",
 	{"change-faction-to", "swabia"}
 )
@@ -286,6 +337,18 @@ DefineDependency("upgrade-faction-bavarian-tribe",
 	{"upgrade-faction-marcomanni-tribe", "upgrade-teuton-spatha", "upgrade-teuton-iron-shield"}, "or", {"upgrade-faction-quadi-tribe", "upgrade-teuton-spatha", "upgrade-teuton-iron-shield"}, "or", {"upgrade-faction-buri-tribe", "upgrade-teuton-spatha", "upgrade-teuton-iron-shield"} -- must be the Marcomanni or a closely related tribe to found the Bavarian Tribe, and needs some more advanced technology (as the Marcomanni are from Antiquity, and the Bavarians from the early Middle Ages)
 )
 
+DefineDependency("upgrade-faction-cherusci-tribe",
+	{"upgrade-faction-saxon-tribe"}
+)
+
+DefineDependency("upgrade-faction-saxon-tribe",
+	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
+)
+
+DefineDependency("upgrade-faction-varini-tribe",
+	{"upgrade-faction-saxon-tribe"}
+)
+
 DefineDependency("upgrade-faction-austria",
 	{"upgrade-faction-bavarian-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
@@ -300,6 +363,10 @@ DefineDependency("upgrade-faction-bavaria",
 
 DefineDependency("upgrade-faction-carinthia",
 	{"upgrade-faction-bavarian-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-saxony",
+	{"upgrade-faction-saxon-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}, "or", {"upgrade-faction-cherusci-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}, "or", {"upgrade-faction-varini-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
 DefineDependency("upgrade-faction-swabia",

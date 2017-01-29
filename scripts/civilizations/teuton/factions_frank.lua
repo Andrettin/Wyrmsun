@@ -102,7 +102,7 @@ DefineFaction("franconia", { -- represents the German region, so it uses base Te
 	Type = "polity",
 	Colors = {"blue"},
 	DefaultTier = "duchy", -- Franconia was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-	FactionUpgrade = "upgrade-saxon-tribe-faction",
+--	FactionUpgrade = "upgrade-saxon-tribe-faction",
 	DevelopsTo = {"holy-rome", "francia"} -- Franconia was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 })
 

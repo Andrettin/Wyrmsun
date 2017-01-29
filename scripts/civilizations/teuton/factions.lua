@@ -33,8 +33,7 @@ DefineFaction("saxon-tribe", {
 	Type = "tribe",
 	Colors = {"pink"},
 	DevelopsTo = {"saxony", "brandenburg", "essex", "wessex", "england", "prussia"},
-	FactionUpgrade = "upgrade-saxon-tribe-faction",
-	HistoricalFactionDerivations = {-264, "germanic", "ingaevone-tribe"},
+	FactionUpgrade = "upgrade-faction-saxon-tribe",
 	SettlementNames = {
 		"Hardego", -- one of the pagi in Eastphalia in 852; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 610.
 		"Hohsingo", -- one of the pagi in Eastphalia in 852; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 610.
@@ -145,9 +144,9 @@ DefineFaction("chauci-tribe", {
 DefineFaction("cherusci-tribe", {
 	Name = "Cherusci Tribe",
 	Civilization = "teuton",
-	ParentFaction = "saxon-tribe", -- accurate?
 	Type = "tribe",
 	Colors = {"teal"},
+	FactionUpgrade = "upgrade-faction-cherusci-tribe",
 	DevelopsTo = {"brunswick", "magdeburg"}, -- same general area
 	HistoricalFactionDerivations = {-264, "germanic", "ingaevone-tribe"}
 })
@@ -227,9 +226,9 @@ DefineFaction("ubii-tribe", { -- Source: H. H. Howorth, "The Ethnology of German
 DefineFaction("varini-tribe", {
 	Name = "Varini Tribe",
 	Civilization = "teuton",
-	ParentFaction = "saxon-tribe", -- accurate?
 	Type = "tribe",
 	Colors = {"brown"},
+	FactionUpgrade = "upgrade-faction-varini-tribe",
 	DevelopsTo = {"mecklenburg"}, -- same general area
 	HistoricalFactionDerivations = {-264, "germanic", "ingaevone-tribe"}
 })
@@ -260,7 +259,7 @@ DefineFaction("saxony", {
 	Type = "polity",
 	Colors = {"pink"},
 	DefaultTier = "duchy", -- Saxony was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-	FactionUpgrade = "upgrade-saxon-tribe-faction",
+	FactionUpgrade = "upgrade-faction-saxony",
 	Titles = {
 		"monarchy", "duchy", "Duchy",
 		"monarchy", "kingdom", "Kingdom"
@@ -309,7 +308,7 @@ DefineFaction("cologne", {
 	Type = "polity",
 	Colors = {"white"},
 	DefaultTier = "duchy", -- Cologne was an archbishopric in 1378; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 78-79.
-	FactionUpgrade = "upgrade-saxon-tribe-faction",
+--	FactionUpgrade = "upgrade-saxon-tribe-faction",
 	Titles = {
 		"theocracy", "duchy", "Archbishopric"
 	}
@@ -334,7 +333,7 @@ DefineFaction("hesse", {
 	Type = "polity",
 	Colors = {"black"},
 	DefaultTier = "duchy", -- Hesse was a landgraviate in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-	FactionUpgrade = "upgrade-saxon-tribe-faction",
+--	FactionUpgrade = "upgrade-saxon-tribe-faction",
 	Titles = {
 		"monarchy", "duchy", "Landgraviate"
 	},
@@ -349,7 +348,7 @@ DefineFaction("holy-rome", {
 	Type = "polity",
 	Colors = {"yellow"},
 	DefaultTier = "empire",
-	FactionUpgrade = "upgrade-saxon-tribe-faction",
+--	FactionUpgrade = "upgrade-saxon-tribe-faction",
 	HistoricalFactionDerivations = {919, "teuton", "francia"},
 	HistoricalDiplomacyStates = {
 		985, "bohemia", "war", -- War between Otto II and Bohemia broke out in 985; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 616.

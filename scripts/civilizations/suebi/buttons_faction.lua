@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineButton( { Pos = 4, Level = 2, Icon = "icon-teuton-civilization",
+DefineButton( { Pos = 5, Level = 2, Icon = "icon-teuton-civilization",
 	Action = "research", Value = "upgrade-faction-suebi-tribe",
 	Allowed = "check-single-research",
 	Key = "s", Hint = "Found the ~!Suebi Tribe", Popup = "popup-research",
