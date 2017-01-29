@@ -40,3 +40,19 @@ DefineButton( { Pos = 1, Level = 2, Icon = "icon-teuton-civilization",
 	Description = "Changes your faction to Bavaria",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
+
+DefineButton( { Pos = 2, Level = 2, Icon = "icon-teuton-civilization",
+	Action = "research", Value = "upgrade-faction-austria",
+	Allowed = "check-single-research",
+	Key = "a", Hint = "Found ~!Austria", Popup = "popup-research",
+	Description = "Changes your faction to Austria",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
+DefineButton( { Pos = 3, Level = 2, Icon = "icon-teuton-civilization",
+	Action = "research", Value = "upgrade-faction-carinthia",
+	Allowed = "check-single-research",
+	Key = "c", Hint = "Found ~!Carinthia", Popup = "popup-research",
+	Description = "Changes your faction to Carinthia",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )

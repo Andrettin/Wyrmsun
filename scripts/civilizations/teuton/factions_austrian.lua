@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015-2016 by Andrettin
+--      (c) Copyright 2015-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -28,10 +28,10 @@
 DefineFaction("austria", {
 	Name = "Austria",
 	Civilization = "teuton",
-	ParentFaction = "bavaria",
 	Type = "polity",
 	Colors = {"white", "red"},
 	DefaultTier = "duchy",
+	FactionUpgrade = "upgrade-faction-austria",
 	Titles = {
 		"monarchy", "grand-duchy", "Archduchy"
 	},
@@ -72,8 +72,8 @@ DefineFaction("austria", {
 DefineFaction("carinthia", {
 	Name = "Carinthia",
 	Civilization = "teuton",
-	ParentFaction = "austria",
 	Type = "polity",
 	Colors = {"brown"},
+	FactionUpgrade = "upgrade-faction-carinthia",
 	DefaultTier = "duchy" -- Duchy of Carinthia within the Holy Roman Empire; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 })
