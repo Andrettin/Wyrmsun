@@ -76,6 +76,11 @@ DefineUpgrade("upgrade-faction-austria", {
 	EffectsString = "+1 Speed for Scuzzos"
 })
 
+DefineUpgrade("upgrade-faction-baden", {
+	Name = "Baden",
+	EffectsString = "+2 Evasion for Kregars"
+})
+
 DefineUpgrade("upgrade-faction-bavaria", {
 	Name = "Bavaria",
 	EffectsString = "+1 Damage and +1 Armor for Kregars"
@@ -88,6 +93,26 @@ DefineUpgrade("upgrade-faction-carinthia", {
 
 DefineUpgrade("upgrade-mecklenburg-faction", {
 	Name = "Mecklenburg",
+	EffectsString = "+2 Armor for Kregars"
+})
+
+DefineUpgrade("upgrade-faction-swabia", {
+	Name = "Swabia",
+	EffectsString = "+10 HP for Kregars"
+})
+
+DefineUpgrade("upgrade-faction-switzerland", {
+	Name = "Switzerland",
+	EffectsString = "+2 Damage for Spearmen"
+})
+
+DefineUpgrade("upgrade-faction-thuringia", {
+	Name = "Thuringia",
+	EffectsString = "+2 Damage for Scuzzos"
+})
+
+DefineUpgrade("upgrade-faction-wurtemberg", {
+	Name = "Wurtemberg",
 	EffectsString = "+2 Armor for Kregars"
 })
 
@@ -197,6 +222,16 @@ DefineModifier("upgrade-faction-bavaria",
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
+DefineModifier("upgrade-faction-baden",
+	{"change-faction-to", "baden"}
+)
+
+DefineModifier("upgrade-faction-baden",
+	{"Evasion", 2},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
+)
+
 DefineModifier("upgrade-faction-carinthia",
 	{"change-faction-to", "carinthia"}
 )
@@ -207,22 +242,82 @@ DefineModifier("upgrade-faction-carinthia",
 	{"apply-to", "unit-teuton-priest"}
 )
 
+DefineModifier("upgrade-faction-swabia",
+	{"change-faction-to", "swabia"}
+)
+
+DefineModifier("upgrade-faction-swabia",
+	{"HitPoints", 10},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
+)
+
+DefineModifier("upgrade-faction-switzerland",
+	{"change-faction-to", "switzerland"}
+)
+
+DefineModifier("upgrade-faction-switzerland",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-spearman"}
+)
+
+DefineModifier("upgrade-faction-thuringia",
+	{"change-faction-to", "thuringia"}
+)
+
+DefineModifier("upgrade-faction-thuringia",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-archer"}
+)
+
+DefineModifier("upgrade-faction-wurtemberg",
+	{"change-faction-to", "wurtemberg"}
+)
+
+DefineModifier("upgrade-faction-wurtemberg",
+	{"Armor", 2},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
+)
+
 DefineDependency("upgrade-faction-bavarian-tribe",
 	{"upgrade-faction-marcomanni-tribe", "upgrade-teuton-spatha", "upgrade-teuton-iron-shield"}, "or", {"upgrade-faction-quadi-tribe", "upgrade-teuton-spatha", "upgrade-teuton-iron-shield"}, "or", {"upgrade-faction-buri-tribe", "upgrade-teuton-spatha", "upgrade-teuton-iron-shield"} -- must be the Marcomanni or a closely related tribe to found the Bavarian Tribe, and needs some more advanced technology (as the Marcomanni are from Antiquity, and the Bavarians from the early Middle Ages)
 )
 
 DefineDependency("upgrade-faction-austria",
-	{"upgrade-faction-bavarian-tribe", "upgrade-teuton-writing"}
+	{"upgrade-faction-bavarian-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-baden",
+	{"upgrade-faction-alamanni-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}, "or", {"upgrade-faction-suebi-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
 DefineDependency("upgrade-faction-bavaria",
-	{"upgrade-faction-bavarian-tribe", "upgrade-teuton-writing"}
+	{"upgrade-faction-bavarian-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
 DefineDependency("upgrade-faction-carinthia",
-	{"upgrade-faction-bavarian-tribe", "upgrade-teuton-writing"}
+	{"upgrade-faction-bavarian-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-swabia",
+	{"upgrade-faction-alamanni-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}, "or", {"upgrade-faction-suebi-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-switzerland",
+	{"upgrade-faction-alamanni-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}, "or", {"upgrade-faction-suebi-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-thuringia",
+	{"upgrade-faction-thuringian-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-wurtemberg",
+	{"upgrade-faction-alamanni-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}, "or", {"upgrade-faction-suebi-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
 DefineDependency("upgrade-faction-galicia", -- although Galicia is a Suebi faction, this is here because it requires a Teuton upgrade
-	{"upgrade-faction-suebi-tribe", "upgrade-teuton-writing"}, "or", {"upgrade-faction-semnone-tribe", "upgrade-teuton-writing"}, "or", {"upgrade-faction-marcomanni-tribe", "upgrade-teuton-writing"}, "or", {"upgrade-faction-quadi-tribe", "upgrade-teuton-writing"}, "or", {"upgrade-faction-buri-tribe", "upgrade-teuton-writing"}
+	{"upgrade-faction-suebi-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}, "or", {"upgrade-faction-semnone-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}, "or", {"upgrade-faction-marcomanni-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}, "or", {"upgrade-faction-quadi-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}, "or", {"upgrade-faction-buri-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )

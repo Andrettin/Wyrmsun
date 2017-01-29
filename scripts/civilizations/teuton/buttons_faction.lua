@@ -41,6 +41,14 @@ DefineButton( { Pos = 1, Level = 2, Icon = "icon-teuton-civilization",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-teuton-civilization",
+	Action = "research", Value = "upgrade-faction-thuringia",
+	Allowed = "check-single-research",
+	Key = "b", Hint = "Found ~!Thuringia", Popup = "popup-research",
+	Description = "Changes your faction to Thuringia",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
 DefineButton( { Pos = 2, Level = 2, Icon = "icon-teuton-civilization",
 	Action = "research", Value = "upgrade-faction-austria",
 	Allowed = "check-single-research",
@@ -56,3 +64,36 @@ DefineButton( { Pos = 3, Level = 2, Icon = "icon-teuton-civilization",
 	Description = "Changes your faction to Carinthia",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
+
+DefineButton( { Pos = 10, Level = 2, Icon = "icon-teuton-civilization",
+	Action = "research", Value = "upgrade-faction-swabia",
+	Allowed = "check-single-research",
+	Key = "s", Hint = "Found ~!Swabia", Popup = "popup-research",
+	Description = "Changes your faction to Swabia",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
+DefineButton( { Pos = 11, Level = 2, Icon = "icon-teuton-civilization",
+	Action = "research", Value = "upgrade-faction-baden",
+	Allowed = "check-single-research",
+	Key = "b", Hint = "Found ~!Baden", Popup = "popup-research",
+	Description = "Changes your faction to Baden",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
+DefineButton( { Pos = 12, Level = 2, Icon = "icon-teuton-civilization",
+	Action = "research", Value = "upgrade-faction-wurtemberg",
+	Allowed = "check-single-research",
+	Key = "w", Hint = "Found ~!Wurtemberg", Popup = "popup-research",
+	Description = "Changes your faction to Wurtemberg",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
+DefineButton( { Pos = 13, Level = 2, Icon = "icon-teuton-civilization",
+	Action = "research", Value = "upgrade-faction-switzerland",
+	Allowed = "check-single-research",
+	Key = "i", Hint = "Found Sw~!itzerland", Popup = "popup-research",
+	Description = "Changes your faction to Switzerland",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+

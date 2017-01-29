@@ -25,31 +25,32 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineFaction("baden", {
+	Name = "Baden",
+	Civilization = "teuton",
+	Type = "polity",
+	Colors = {"black"},
+	FactionUpgrade = "upgrade-faction-baden",
+	DefaultTier = "grand-duchy"
+})
+
 DefineFaction("swabia", {
 	Name = "Swabia",
 	Civilization = "teuton",
 	Type = "polity",
 	Colors = {"orange"},
 	DefaultTier = "duchy", -- Swabia was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	FactionUpgrade = "upgrade-faction-swabia",
 	DevelopsTo = {"holy-rome"} -- Swabia was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-})
-
-DefineFaction("baden", {
-	Name = "Baden",
-	Civilization = "teuton",
-	ParentFaction = "swabia",
-	Type = "polity",
-	Colors = {"black"},
-	DefaultTier = "grand-duchy"
 })
 
 DefineFaction("switzerland", {
 	Name = "Switzerland",
 	Civilization = "teuton",
-	ParentFaction = "swabia",
 	Type = "polity",
 	Colors = {"red", "white"},
 	DefaultTier = "kingdom",
+	FactionUpgrade = "upgrade-faction-switzerland",
 	Titles = {
 		"republic", "kingdom", "Confederation"
 	}
@@ -61,6 +62,7 @@ DefineFaction("wurtemberg", {
 	ParentFaction = "swabia",
 	Type = "polity",
 	Colors = {"red"},
+	FactionUpgrade = "upgrade-faction-wurtemberg",
 	DefaultTier = "kingdom"
 })
 

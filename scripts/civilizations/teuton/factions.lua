@@ -415,6 +415,7 @@ DefineFaction("thuringia", {
 	Type = "polity",
 	Colors = {"pink"},
 	DefaultTier = "duchy", -- Thuringia was a landgraviate in 1378; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 78-79.
+	FactionUpgrade = "upgrade-faction-thuringia",
 	Titles = {
 		"monarchy", "duchy", "Landgraviate"
 	}

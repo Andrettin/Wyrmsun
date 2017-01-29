@@ -41,6 +41,8 @@ Units = {
 	"upgrade-teuton-civilization",
 	"upgrade-faction-bavarian-tribe",
 	"upgrade-faction-austria", "upgrade-faction-bavaria", "upgrade-faction-carinthia",
+	"upgrade-faction-thuringia",
+	"upgrade-faction-baden", "upgrade-faction-swabia", "upgrade-faction-switzerland", "upgrade-faction-wurtemberg",
 	"unit-teuton-worker", "unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman",
 	"unit-teuton-spearman", "unit-teuton-archer",
 	"unit-teuton-ritter", "unit-teuton-knight-lord",
