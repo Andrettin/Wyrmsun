@@ -62,7 +62,13 @@ function DefineAllowNormalUnits(flags)
 					PlayerUnitFlag[j] = string.sub(flags, j + 1, j + 1)
 				end
 			else
-				if (flags == "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" and unitName == GetCivilizationData(GetPlayerData(j, "RaceName"), "CivilizationUpgrade")) then
+				if (
+					flags == "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+					and (
+						unitName == GetCivilizationData(GetPlayerData(j, "RaceName"), "CivilizationUpgrade")
+						or (GetPlayerData(j, "Faction") ~= "" and unitName == GetFactionData(GetPlayerData(j, "Faction"), "FactionUpgrade"))
+					)
+				) then
 					PlayerUnitFlag[j] = "R"
 				else
 					PlayerUnitFlag[j] = string.sub(flags, j + 1, j + 1)
