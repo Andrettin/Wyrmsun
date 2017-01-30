@@ -125,8 +125,8 @@ DefineFaction("treviri-tribe", { -- Source: H. H. Howorth, "The Ethnology of Ger
 	Type = "tribe",
 	Colors = {"green"},
 	HistoricalDiplomacyStates = {
-		-54, "condrusi-tribe", "sovereign", -- in 54 BC the Condrusi were clients of the Treviri
-		-54, "eburones-tribe", "sovereign" -- in 54 BC the Eburones were clients of the Treviri
+		-54, "condrusi-tribe", "overlord", -- in 54 BC the Condrusi were clients of the Treviri
+		-54, "eburones-tribe", "overlord" -- in 54 BC the Eburones were clients of the Treviri
 	}
 })
 
