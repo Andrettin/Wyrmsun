@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2014-2016 by Andrettin
+--      (c) Copyright 2014-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -280,3 +280,4 @@ DefineButton( { Pos = 1, Level = 2, Icon = "icon-goblin-shadowstalker",
 	ForUnit = {"unit-goblin-headhunter"}
 } )
 
+Load("scripts/civilizations/goblin/buttons_faction.lua")

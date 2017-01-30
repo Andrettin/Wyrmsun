@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016 by Andrettin
+--      (c) Copyright 2016-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -30,7 +30,7 @@ DefineFaction("aelak-tribe", { -- invented by Jesse Crider
 	Civilization = "goblin",
 	Type = "tribe",
 	Colors = {"red"},
-	FactionUpgrade = "upgrade-aelak-tribe-faction"
+	FactionUpgrade = "upgrade-faction-aelak-tribe"
 })
 
 DefineFaction("issudru-tribe", { -- invented by Jesse Crider
@@ -38,7 +38,7 @@ DefineFaction("issudru-tribe", { -- invented by Jesse Crider
 	Civilization = "goblin",
 	Type = "tribe",
 	Colors = {"black"},
-	FactionUpgrade = "upgrade-issudru-tribe-faction"
+	FactionUpgrade = "upgrade-faction-issudru-tribe"
 })
 
 DefineFaction("aurvangling-tribe", {
@@ -46,7 +46,7 @@ DefineFaction("aurvangling-tribe", {
 	Civilization = "goblin",
 	Type = "tribe",
 	Colors = {"teal"},
-	FactionUpgrade = "upgrade-aurvangling-tribe-faction",
+	FactionUpgrade = "upgrade-faction-aurvangling-tribe",
 	Description = "The reclusive goblins of the Aurvang swamplands are wary of outsiders, with trespassers often finding themselves filled with arrows."
 })
 
@@ -55,7 +55,7 @@ DefineFaction("dreadskull-tribe", {
 	Civilization = "goblin",
 	Type = "tribe",
 	Colors = {"black"},
-	FactionUpgrade = "upgrade-dreadskull-tribe-faction",
+	FactionUpgrade = "upgrade-faction-dreadskull-tribe",
 	Description = "The Dreadskull tribe is known for its mysticism, and is suspected by other tribes of practicing necromancy."
 })
 
@@ -64,7 +64,7 @@ DefineFaction("khag-tribe", {
 	Civilization = "goblin",
 	Type = "tribe",
 	Colors = {"brown"},
-	FactionUpgrade = "upgrade-khag-tribe-faction"
+	FactionUpgrade = "upgrade-faction-khag-tribe"
 })
 
 DefineFaction("lggi-tribe", {
@@ -72,7 +72,7 @@ DefineFaction("lggi-tribe", {
 	Civilization = "goblin",
 	Type = "tribe",
 	Colors = {"violet"},
-	FactionUpgrade = "upgrade-lggi-tribe-faction"
+	FactionUpgrade = "upgrade-faction-lggi-tribe"
 })
 
 DefineFaction("mabom-tribe", { -- invented by Jesse Crider
@@ -80,7 +80,7 @@ DefineFaction("mabom-tribe", { -- invented by Jesse Crider
 	Civilization = "goblin",
 	Type = "tribe",
 	Colors = {"purple"},
-	FactionUpgrade = "upgrade-mabom-tribe-faction"
+	FactionUpgrade = "upgrade-faction-mabom-tribe"
 })
 
 DefineFaction("sigre-tribe", { -- invented by Jesse Crider
@@ -88,7 +88,7 @@ DefineFaction("sigre-tribe", { -- invented by Jesse Crider
 	Civilization = "goblin",
 	Type = "tribe",
 	Colors = {"yellow"},
-	FactionUpgrade = "upgrade-sigre-tribe-faction"
+	FactionUpgrade = "upgrade-faction-sigre-tribe"
 })
 
 DefineFaction("wildfang-tribe", {
@@ -96,7 +96,7 @@ DefineFaction("wildfang-tribe", {
 	Civilization = "goblin",
 	Type = "tribe",
 	Colors = {"red"},
-	FactionUpgrade = "upgrade-wildfang-tribe-faction",
+	FactionUpgrade = "upgrade-faction-wildfang-tribe",
 	Description = "The savage Wildfang tribe lives off raiding dwarven villages. Their swordsmen are renowned for their lethality."
 })
 
@@ -107,7 +107,7 @@ DefineFaction("aurvang", {
 	Colors = {"teal"},
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "monarchy",
-	FactionUpgrade = "upgrade-aurvangling-tribe-faction",
+	FactionUpgrade = "upgrade-faction-aurvang",
 	Titles = {
 		"monarchy", "duchy", "Principality"
 	}
@@ -120,11 +120,11 @@ DefineFaction("ezmarria", { -- invented by Jesse Crider
 	Colors = {"white"},
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "republic",
-	FactionUpgrade = "upgrade-ezmarria-faction",
+	FactionUpgrade = "upgrade-faction-ezmarria",
 	Titles = {
 		"republic", "duchy", "Syndicate"
 	},
-	Description = _("The Ezmarrian Syndicate is known for its dedication to scientific progress, which often results in the neglect of economic and military power. Many goblin technological breakthroughs were made in Ezmarria, this knowledge being sold at a hefty price to other nations.")
+	Description = "The Ezmarrian Syndicate is known for its dedication to scientific progress, which often results in the neglect of economic and military power. Many goblin technological breakthroughs were made in Ezmarria, this knowledge being sold at a hefty price to other nations."
 })
 
 DefineFaction("myridia", { -- invented by Jesse Crider
@@ -134,11 +134,11 @@ DefineFaction("myridia", { -- invented by Jesse Crider
 	Colors = {"cyan"},
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "republic",
-	FactionUpgrade = "upgrade-myridia-faction",
+	FactionUpgrade = "upgrade-faction-myridia",
 	Titles = {
 		"republic", "duchy", "Syndicate"
 	},
-	Description = _("The Myridian Syndicate is known as a conglomerate of merchants and mercenaries of utmost immoral caliber. Many of those who could not pay what they owed the syndicate claim that it is composed of sadistic dark minds, who torment their debtors endlessly until they finally manage to extract payment.")
+	Description = "The Myridian Syndicate is known as a conglomerate of merchants and mercenaries of utmost immoral caliber. Many of those who could not pay what they owed the syndicate claim that it is composed of sadistic dark minds, who torment their debtors endlessly until they finally manage to extract payment."
 })
 
 DefineFaction("stilgar", { -- invented by Jesse Crider
@@ -148,11 +148,11 @@ DefineFaction("stilgar", { -- invented by Jesse Crider
 	Colors = {"blue"},
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "republic",
-	FactionUpgrade = "upgrade-stilgar-faction",
+	FactionUpgrade = "upgrade-faction-stilgar",
 	Titles = {
 		"republic", "duchy", "Syndicate"
 	},
-	Description = _("The Stilgar Syndicate is renowned for its honorable reputation in doing business. They are one of the few goblin syndicates who can be trusted in upholding their end of an agreement.")
+	Description = "The Stilgar Syndicate is renowned for its honorable reputation in doing business. They are one of the few goblin syndicates who can be trusted in upholding their end of an agreement."
 })
 
 DefineFaction("tenebris", { -- invented by Jesse Crider
@@ -162,9 +162,9 @@ DefineFaction("tenebris", { -- invented by Jesse Crider
 	Colors = {"black"},
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "republic",
-	FactionUpgrade = "upgrade-tenebris-faction",
+	FactionUpgrade = "upgrade-faction-tenebris",
 	Titles = {
 		"republic", "duchy", "Syndicate"
 	},
-	Description = _("The Tenebris Syndicate is mistrusted by most goblins. Due to the prevalence of mysticism in it, the syndicate is thought of as more of a land of witches and occultists than a true syndicate.")
+	Description = "The Tenebris Syndicate is mistrusted by most goblins. Due to the prevalence of mysticism in it, the syndicate is thought of as more of a land of witches and occultists than a true syndicate."
 })
