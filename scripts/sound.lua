@@ -542,6 +542,7 @@ MakeSound("squishy-miss",
 	"missiles/squishy_miss.wav"
 )
 SetSoundRange("squishy-miss", 32)
+
 MakeSound("sword-attack", {
 	"missiles/sword/swordhit_12a.wav",
 	"missiles/sword/swordhit_10.wav",
@@ -572,10 +573,13 @@ MakeSound("sword-attack", {
 	"missiles/sword/swordhit_19.wav"
 })
 SetSoundRange("sword-attack", 32)
+
 MakeSound("bow", "missiles/bow.wav")
 SetSoundRange("bow", 32)
+
 MakeSound("bow-hit", "missiles/bow_hit.wav")
 SetSoundRange("bow-hit", 32)
+
 MakeSound("throwing-axe", "missiles/throwing_axe.wav")
 SetSoundRange("throwing-axe", 32)
 SetSoundVolumePercent("throwing-axe", 75)

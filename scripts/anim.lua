@@ -156,6 +156,10 @@ ArcherDeath = {
 	"unbreakable begin", "frame 55", "wait 3", "frame 60", "wait 3", "frame 65", "wait 100",
 	"frame 65", "unbreakable end", "wait 1",
 }
+AlternativeArcherDeath = {
+	"unbreakable begin", "frame 45", "wait 3", "frame 50", "wait 3", "frame 55", "wait 100",
+	"frame 55", "unbreakable end", "wait 1",
+}
 WorkerMetalMining = {
 	"frame 25", "wait 4", "frame 30", "wait 4", "frame 35", "wait 4",
 	"frame 40", "sound metal-mining", "wait 5", "frame 45", "wait 3",

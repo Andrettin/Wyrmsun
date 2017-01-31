@@ -49,7 +49,7 @@ DefineButton( { Pos = 3, Level = 1, Icon = "icon-germanic-barracks",
 
 DefineButton( { Pos = 4, Level = 1, Icon = "icon-germanic-carpenters-shop",
 	Action = "build", Value = "unit-germanic-carpenters-shop",
-	Key = "r", Hint = _("Build Ca~!rpenter's Shop"), Popup = "popup-building",
+	Key = "r", Hint = "Build Ca~!rpenter's Shop", Popup = "popup-building",
 	ForUnit = {"unit-germanic-worker"}
 })
 
@@ -89,7 +89,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-warrior",
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-archer",
 	Action = "train-unit", Value = "unit-germanic-archer",
-	Key = "s", Hint = _("Train ~!Skutan"), Popup = "popup-unit",
+	Key = "s", Hint = "Train ~!Skutan", Popup = "popup-unit",
 	ForUnit = {"unit-germanic-barracks"}
 })
 

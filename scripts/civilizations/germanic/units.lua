@@ -495,12 +495,12 @@ DefineUnitType("unit-germanic-spearman", {
 } )
 
 DefineUnitType("unit-germanic-archer", {
-	Name = _("Skutan"),
+	Name = "Skutan",
 	Parent = "unit-template-archer",
 	Civilization = "germanic",
-	Description = _("These warriors specialize in the art of archery, which they employ against their enemies with great lethality."),
-	Quote = _("\"There sat the house-lord, wound strings for the bow,\nShafts he fashioned, and bows he shaped.\"\n- Rigsthula"),
-	Background = _("\"Skutan\" is the Proto-Germanic word for \"archer\"."),
+	Description = "These warriors specialize in the art of archery, which they employ against their enemies with great lethality.",
+	Quote = "\"There sat the house-lord, wound strings for the bow,\nShafts he fashioned, and bows he shaped.\"\n- Rigsthula",
+	Background = "\"Skutan\" is the Proto-Germanic word for \"archer\".",
 	Image = {"file", "human/units/body_archer.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow_archer.png", "size", {72, 72}},
 	LayerImages = {
@@ -620,10 +620,11 @@ DefineUnitType("unit-germanic-barracks", { Name = _("War Lodge"),
 	}
 } )
 
-DefineUnitType("unit-germanic-carpenters-shop", { Name = _("Carpenter's Shop"),
+DefineUnitType("unit-germanic-carpenters-shop", {
+	Name = "Carpenter's Shop",
 	Parent = "unit-template-lumber-mill",
 	Civilization = "germanic",
-	Description = _("Germanic carpenters work hard to provide settlements with all their woodworking needs."),
+	Description = "Germanic carpenters work hard to provide settlements with all their woodworking needs.",
 	Image = {"file", "germanic/buildings/carpenters_shop.png", "size", {96, 96}},
 	Shadow = {"file", "germanic/buildings/carpenters_shop_shadow.png", "size", {96, 96}},
 	Icon = "icon-germanic-carpenters-shop",

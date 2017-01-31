@@ -347,7 +347,8 @@ DefineUnitType("unit-goblin-spearman", { Name = _("Impaler"),
 	}
 } )
 
-DefineUnitType("unit-goblin-archer", { Name = _("Archer"),
+DefineUnitType("unit-goblin-archer", {
+	Name = "Archer",
 	Parent = "unit-template-archer",
 	Civilization = "goblin",
 	Description = _("Swift and deadly, the goblin archers hone above all the art of the ambush."),

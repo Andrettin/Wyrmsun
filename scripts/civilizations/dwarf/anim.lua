@@ -92,11 +92,6 @@ DefineAnimations("animations-dwarven-axefighter", {
 -- Dwarven Scout
 --
 
-local ScoutDeath = {
-	"unbreakable begin", "frame 45", "wait 3", "frame 50", "wait 3", "frame 55", "wait 100",
-	"frame 55", "unbreakable end", "wait 1",
-}
-
 DefineAnimations("animations-dwarven-scout", {
 	Still = UnitStill,
 	Move = UnitMove,
@@ -107,7 +102,7 @@ DefineAnimations("animations-dwarven-scout", {
 		"frame 0", "wait 18", "frame 0",
 		"unbreakable end", "wait 1",
 	},
-	Death = ScoutDeath
+	Death = AlternativeArcherDeath
 })
 
 --
