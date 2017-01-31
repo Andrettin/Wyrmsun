@@ -956,7 +956,6 @@ DefineProvince("Bohemia", {
 		1213, "unit-teuton-temple", true -- a Benedictine priory was founded in Politz (in Bohemia, near the Silesian Glatz) in 1213; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 627.
 	},
 	HistoricalModifiers = {
-		1347, "upgrade-university", true, -- University founded in Prague in 1347; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		-- Olomouc-Prague State Railroad Company opened for business in 1845; Source: Chad Bryant, "Into an Uncertain Future: Railroads and Vormärz Liberalism in Brno, Vienna, and Prague", 2009, p. 187.
 	},
 	Regions = {"cisleithania", "czechoslovakia", "europe", "west-and-central-europe"}
