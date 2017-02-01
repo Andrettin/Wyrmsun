@@ -229,7 +229,6 @@ DefineUpgrade("upgrade-trading-company", {
 
 DefineModifier("upgrade-trading-company", -- trading companies' docks produce food, to allow them to build ships despite not having farms
 	{"Supply", 8},
-	{"HitPoints", 8},
 	{"apply-to", "unit-germanic-dock"}, {"apply-to", "unit-teuton-dock"},
 	{"apply-to", "unit-dwarven-dock"},
 	{"apply-to", "unit-goblin-dock"}

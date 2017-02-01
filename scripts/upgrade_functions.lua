@@ -67,7 +67,7 @@ function DefineAllowNormalUnits(flags)
 					and (
 						unitName == GetCivilizationData(GetPlayerData(j, "RaceName"), "CivilizationUpgrade")
 						or (GetPlayerData(j, "Faction") ~= "" and unitName == GetFactionData(GetPlayerData(j, "Faction"), "FactionUpgrade"))
---						or (GetPlayerData(j, "Faction") ~= "" and unitName == ("upgrade-" .. GetFactionData(GetPlayerData(j, "Faction"), "Type")))
+						or (GetPlayerData(j, "Faction") ~= "" and unitName == ("upgrade-" .. GetFactionData(GetPlayerData(j, "Faction"), "Type")))
 					)
 				) then
 					PlayerUnitFlag[j] = "R"
