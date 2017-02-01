@@ -25,17 +25,19 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- some coastline changes, to allow ships to reach Fiume
-SetMapTemplateTileTerrain("earth", "shallow-water", 4163, 1020)
-SetMapTemplateTileTerrain("earth", "shallow-water", 4165, 1020)
-SetMapTemplateTileTerrain("earth", "shallow-water", 4165, 1021)
-SetMapTemplateTileTerrain("earth", "shallow-water", 4165, 1026)
-SetMapTemplateTileTerrain("earth", "shallow-water", 4166, 1021)
-SetMapTemplateTileTerrain("earth", "shallow-water", 4166, 1022)
-SetMapTemplateTileTerrain("earth", "shallow-water", 4168, 1024)
-SetMapTemplateTileTerrain("earth", "shallow-water", 4170, 1023)
-SetMapTemplateTileTerrain("earth", "shallow-water", 4171, 1018)
-
--- Narona
-SetMapTemplateCulturalSettlementName("earth", "Narona", {4242, 1068}, "latin") -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4242, 1068}, 161) -- Narona was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+DefineSettlement("fiume", {
+	Name = "Fiume",
+	MapTemplate = "earth",
+	Position = {4170, 1016},
+	CulturalNames = {
+		"slav", "Rijeka",
+		"teuton", "Fiume"
+	},
+	HistoricalOwners = {
+		1719, "austria" -- Fiume was a possession of Karl VI of the Holy Roman Empire (ruler of Austria) in 1719; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 464.
+	},
+	HistoricalBuildings = {
+		1719, 0, "unit-teuton-town-hall" -- Karl VI of the Holy Roman Empire made Fiume/Rijeka a free port ("Freihafen") in 1719; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 464.
+	},
+	Regions = {"europe", "west-and-central-europe"}
+})

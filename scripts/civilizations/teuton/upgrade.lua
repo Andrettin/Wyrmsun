@@ -386,5 +386,5 @@ DefineDependency("unit-teuton-dock",
 )
 
 DefineDependency("unit-teuton-kogge",
-	{"unit-teuton-lumber-mill"}
+	{"unit-teuton-lumber-mill"}, "or", {"upgrade-trading-company"}
 )

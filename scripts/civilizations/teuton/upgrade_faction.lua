@@ -246,9 +246,8 @@ DefineModifier("upgrade-faction-austria",
 )
 
 DefineModifier("upgrade-faction-austria",
-	{"Speed", 1},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-archer"}
+	{"Supply", 8},
+	{"apply-to", "unit-teuton-town-hall"}
 )
 
 DefineModifier("upgrade-faction-bavaria",

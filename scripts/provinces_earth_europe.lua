@@ -3284,7 +3284,7 @@ DefineProvince("Istria", {
 		"teuton", "holy-rome"
 	},
 	HistoricalOwners = {
-		-6500, "basque", "castelnovian-tribe", -- In the Grotta dell'Edera site (near Triest) a Castelnovian fireplace was found, dated to c. 6500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 171.
+		-6500, "basque", "castelnovian-tribe", -- In the Grotta dell'Edera site (near Trieste) a Castelnovian fireplace was found, dated to c. 6500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 171.
 		507, "goth", "ostrogoth-tribe", -- Political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 		919, "teuton", "holy-rome" -- March of Istria within the Duchy of Carinthia; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},

@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016 by Andrettin
+--      (c) Copyright 2016-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,13 +25,15 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+-- some coastline changes, to make it easier for ships to reach Trieste
+SetMapTemplateTileTerrain("earth", "shallow-water", 4145, 1008)
+SetMapTemplateTileTerrain("earth", "shallow-water", 4147, 1013)
+
 -- Aleria
 SetMapTemplateCulturalSettlementName("earth", "Aleria", {4055, 1090}, "latin") -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4055, 1090}, 161) -- Aleria was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
 
 -- Aquileia
-SetMapTemplateCulturalSettlementName("earth", "Aquileia", {4143, 1005}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 26-27, 29.
-SetMapTemplateUnit("earth", "unit-latin-town-hall", "rome", {4143, 1005}, -184) -- Aquileia founded as a colony in 184 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 170, 171) -- some buildings for Aquileia for The First Marcomannic War scenario
 SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 170, 171) -- some buildings for Aquileia for The First Marcomannic War scenario
 SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 170, 171) -- some buildings for Aquileia for The First Marcomannic War scenario
@@ -140,8 +142,6 @@ SetMapTemplateCulturalSettlementName("earth", "Novum Castrum", {4154, 1070}, "la
 SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4154, 1070}, -283) -- Novum Castrum founded as a colony in 283 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 
 -- Oderzo / Opitergium
-SetMapTemplateCulturalSettlementName("earth", "Opitergium", {4122, 1005}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 26-27; Source: "Ancient Warfare VII.6", 2013, p. 7.
-SetMapTemplateUnit("earth", "unit-latin-town-hall", "rome", {4122, 1005}, 161) -- Opitergium was in existence in the 161-180 AD period, and under Roman ownership; Source: "Ancient Warfare VII.6", 2013, p. 7.
 SetMapTemplateUnit("earth", "unit-teuton-lumber-mill", "rome", {4122, 1005}, 170, 171) -- some buildings for Opitergium for The First Marcomannic War scenario
 SetMapTemplateUnit("earth", "unit-latin-smithy", "rome", {4122, 1005}, 170, 171) -- some buildings for Opitergium for The First Marcomannic War scenario
 SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4122, 1005}, 170, 171) -- some buildings for Opitergium for The First Marcomannic War scenario

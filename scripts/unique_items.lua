@@ -182,6 +182,8 @@ DefineUniqueItem("thusagans-book", { -- From Battle for Wesnoth: The Hammer of T
 	Quote = "\"But it might be that, with the book and the Hammer in hand, we could train and initiate runesmiths once more.\"\n- Angarthing, Dwarven Witness"
 } )
 
+-- Mines
+
 DefineUniqueItem("the-wedding-veil", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 31.
 	Name = "The Wedding Veil",
 	Type = "unit-gold-deposit",
@@ -209,6 +211,8 @@ DefineUniqueItem("smitna", { -- Source: Alena Ježková, "22 Böhmische Legenden
 	Background = "Šmitna was a silver mine near Kuttenberg (Kutná Hora), in Bohemia. It was said to be inhabited by kobolds, who would warn the miners of which parts of the mine were unsafe to dig through. In 1509 Šmitna was flooded, resulting in the drowning of 18 miners - according to legend, they had been told not to dig at a certain place by the mine's kobolds, but such warnings went unheeded."
 } )
 
+-- Buildings
+
 DefineUniqueItem("the-house-of-seven-fathers", { -- Source: Peter Christen Asbjørnsen and Jørgen Moe, "Norwegian Folktales", 1960, pp. 13-14.
 	Name = "The House of Seven Fathers",
 	Type = "unit-teuton-farm",
@@ -225,6 +229,8 @@ DefineUniqueItem("shorbear-hold", {
 	Suffix = "upgrade-item-suffix-of-the-colossus",
 	Quote = "\"Everyone to the caves, and kill those still inside!\"\n- Durstorn, Norlund Chieftain"
 } )
+
+-- Ships
 
 DefineUniqueItem("skidbladnir", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 101.
 	Name = "Skidbladnir",
@@ -243,7 +249,7 @@ DefineUniqueItem("varva", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Type = "unit-teuton-farm", -- should be Norse
 	Prefix = "upgrade-item-prefix-sturdy", -- should be something more fitting?
 --	Suffix = ?,
-	Quote = _("\"Varva was wasted with the sword,\nAnd vengeance taken for the bird,\nThe little bird that used to bring\nNews to the ear of the great king.\"\n- Thiodolf of Huine"),
+	Quote = "\"Varva was wasted with the sword,\nAnd vengeance taken for the bird,\nThe little bird that used to bring\nNews to the ear of the great king.\"\n- Thiodolf of Huine",
 	Background = "Varva was a farm in Jutland in ancient times. In the Ynglinga Saga it is told that the sparrow of the Swedish king Dag, which relayed news to the monarch from faraway lands, once flew to the farm. It ate some of the farmer's grain, upon which he threw stones at the sparrow, killing it. When the king discovered that the sparrow had been killed at Varva, he sent a host to exact his revenge on the farm's inhabitants. As the king was about cross Skiotan's Ford to return to Sweden, a thrall threw a hay-fork at the monarch, hitting his head and ending his life."
 } )
 

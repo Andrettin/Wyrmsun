@@ -221,6 +221,20 @@ DefineUpgrade("upgrade-printing-press", {
 	GrandStrategyProductionEfficiencyModifier = {"research", 25}
 })
 
+-- Faction Type Upgrades
+
+DefineUpgrade("upgrade-trading-company", {
+	Name = "Trading Company"
+})
+
+DefineModifier("upgrade-trading-company", -- trading companies' docks produce food, to allow them to build ships despite not having farms
+	{"Supply", 8},
+	{"HitPoints", 8},
+	{"apply-to", "unit-germanic-dock"}, {"apply-to", "unit-teuton-dock"},
+	{"apply-to", "unit-dwarven-dock"},
+	{"apply-to", "unit-goblin-dock"}
+)
+
 -- Load the upgrades of the different civilizations
 Load("scripts/civilizations/celt/upgrade.lua")
 Load("scripts/civilizations/dwarf/upgrade.lua")
