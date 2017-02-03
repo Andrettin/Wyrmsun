@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 - 2.5.4
 -----------------------------------------------------------------------
 
+* AI
+- The AI now receives half of the resources it gathers on Easy difficulty.
+
 * Buildings
 - Now up to four scrolls/books can be bought in temples (previously it was three).
 

@@ -1823,6 +1823,14 @@ end
 --  String Functions
 -------------------------------------------------------------------------------
 
+function FullyCapitalizeStringAndCreateSpaces(str)
+	str = string.gsub(str, "_", " ")
+	str = string.gsub(str, "-", " ")
+	str = (str:gsub("^%l", string.upper))
+	str = (str:gsub(" %l", string.upper))
+    return str
+end
+
 function FullyCapitalizeString(str)
 	str = (str:gsub("^%l", string.upper))
 	str = (str:gsub(" %l", string.upper))
