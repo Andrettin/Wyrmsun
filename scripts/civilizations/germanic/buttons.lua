@@ -59,13 +59,11 @@ DefineButton( { Pos = 5, Level = 1, Icon = "icon-germanic-smithy",
 	ForUnit = {"unit-germanic-worker"}
 })
 
---[[
 DefineButton( { Pos = 7, Level = 1, Icon = "icon-germanic-temple",
 	Action = "build", Value = "unit-germanic-temple",
 	Key = "p", Hint = _("Build Tem~!ple"), Popup = "popup-building",
 	ForUnit = {"unit-germanic-worker"}
 })
---]]
 
 DefineButton( { Pos = 9, Level = 1, Icon = "icon-germanic-dock",
 	Action = "build", Value = "unit-germanic-dock",

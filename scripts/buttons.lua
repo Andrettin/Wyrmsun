@@ -203,6 +203,7 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-level-up",
 		"unit-dwarven-witness",
 		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",
 		"unit-germanic-spearman", "unit-germanic-archer",
+		"unit-germanic-priest",
 		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
 		"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman",
 		"unit-teuton-spearman", "unit-frank-spearman", "unit-teuton-archer",
@@ -458,6 +459,7 @@ DefineButton( { Pos = 13, Level = 2, Icon = "icon-ethereal-vision",
 		"unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
 --		"unit-dwarven-witness",
 --		"unit-germanic-chieftain", "unit-germanic-spearman", "unit-germanic-archer",
+		"unit-germanic-priest",
 --		"unit-teuton-heroic-swordsman", "unit-frank-heroic-swordsman",
 --		"unit-teuton-spearman", "unit-frank-spearman",
 --		"unit-teuton-archer",
@@ -487,7 +489,7 @@ DefineButton( { Pos = 2, Level = 2, Icon = "icon-precision",
 	Action = "learn-ability", Value = "upgrade-precision",
 	Key = "r", Hint = _("Learn P~!recision"), Popup = "popup-commands",
 	Description = "Precision is an active ability that doubles the accuracy of an organic unit while in combat",
-	ForUnit = {"unit-teuton-priest", "unit-elven-priest", "unit-dwarven-witness"}
+	ForUnit = {"unit-germanic-priest", "unit-teuton-priest", "unit-elven-priest", "unit-dwarven-witness"}
 })
 
 DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
@@ -504,6 +506,7 @@ DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",
 		"unit-germanic-spearman", "unit-germanic-archer",
+		"unit-germanic-priest", 
 		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
 		"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman",
 		"unit-teuton-spearman", "unit-frank-spearman",
@@ -537,6 +540,7 @@ DefineButton( { Pos = 14, Level = 0, Icon = "icon-inventory",
 		"unit-dwarven-gryphon-rider",
 		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",
 		"unit-germanic-spearman", "unit-germanic-archer",
+		"unit-germanic-priest",
 		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
 		"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman",
 		"unit-teuton-spearman", "unit-frank-spearman",
@@ -579,6 +583,7 @@ DefineButton( { Pos = 16, Level = 3, Icon = "icon-cancel",
 		"unit-dwarven-gryphon-rider",
 		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",
 		"unit-germanic-spearman", "unit-germanic-archer",
+		"unit-germanic-priest",
 		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
 		"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman",
 		"unit-teuton-spearman", "unit-frank-spearman",
@@ -601,8 +606,8 @@ DefineButton( { Pos = 16, Level = 3, Icon = "icon-cancel",
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-inspire",
 	Action = "cast-spell", Value = "spell-inspire",
 	Description = "Inspires an organic unit to deal 50% more damage",
-	Key = "i", Hint = _("~!Inspire"), Popup = "popup-commands",
-	ForUnit = {"unit-dwarven-witness"}
+	Key = "i", Hint = "~!Inspire", Popup = "popup-commands",
+	ForUnit = {"unit-germanic-priest", "unit-dwarven-witness"}
 })
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-terror",
@@ -615,15 +620,15 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-terror",
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-healing",
 	Action = "cast-spell", Value = "spell-healing",
 	Description = "Heals an organic unit",
-	Key = "h", Hint = _("~!Healing"), Popup = "popup-commands",
-	ForUnit = {"unit-teuton-priest", "unit-elven-priest", "unit-dwarven-witness"}
+	Key = "h", Hint = "~!Healing", Popup = "popup-commands",
+	ForUnit = {"unit-germanic-priest", "unit-teuton-priest", "unit-elven-priest", "unit-dwarven-witness"}
 })
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-precision",
 	Action = "cast-spell", Value = "spell-precision",
 	Description = "Doubles the accuracy of an organic unit while in combat",
 	Key = "r", Hint = _("P~!recision"), Popup = "popup-commands",
-	ForUnit = {"unit-teuton-priest", "unit-elven-priest", "unit-dwarven-witness"}
+	ForUnit = {"unit-germanic-priest", "unit-teuton-priest", "unit-elven-priest", "unit-dwarven-witness"}
 })
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-stun",

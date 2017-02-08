@@ -113,7 +113,7 @@ DefineProvince("India", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	HistoricalModifiers = {
-		1817, "upgrade-college", true -- Hindu College founded in Calcutta in 1817. Source: Atlas de História Mundial, 2001, p. 24.
+		1817, "upgrade-college", true -- Hindu College founded in Calcutta in 1817. Source: "Atlas de História Mundial", 2001, p. 24.
 	},
 	Regions = {"asia"}
 })
@@ -152,7 +152,7 @@ DefineProvince("Philippines", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	HistoricalModifiers = {
-		1645, "upgrade-university", true -- University Sto Tomás founded in Manila in 1645. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 226.
+		1645, "upgrade-university", true -- University Sto Tomás founded in Manila in 1645. Source: Enrique Martínez Ruiz; Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 226.
 	},
 	Regions = {"asia"}
 })

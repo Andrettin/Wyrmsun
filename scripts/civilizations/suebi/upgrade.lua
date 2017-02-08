@@ -87,6 +87,10 @@ DefineModifier("upgrade-suebi-civilization",
 )
 
 DefineModifier("upgrade-suebi-civilization",
+	{"apply-to", "unit-germanic-priest"}, {"convert-to", "unit-teuton-priest"}
+)
+
+DefineModifier("upgrade-suebi-civilization",
 	{"apply-to", "unit-germanic-transport-ship"}, {"convert-to", "unit-teuton-kogge"}
 )
 

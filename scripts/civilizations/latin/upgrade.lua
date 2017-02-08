@@ -104,6 +104,10 @@ DefineModifier("upgrade-latin-civilization",
 )
 
 DefineModifier("upgrade-latin-civilization",
+	{"apply-to", "unit-germanic-priest"}, {"convert-to", "unit-teuton-priest"}
+)
+
+DefineModifier("upgrade-latin-civilization",
 	{"apply-to", "unit-germanic-transport-ship"}, {"convert-to", "unit-teuton-kogge"}
 )
 

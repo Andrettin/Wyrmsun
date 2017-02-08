@@ -91,7 +91,7 @@ DefineProvince("Oyo", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains", -- correct?
 	HistoricalModifiers = {
-		1947, "upgrade-university", true -- University founded in Ibadan in 1947. Source: David Thomson, Europe Since Napoleon, 1966, p. 863.
+		1947, "upgrade-university", true -- University founded in Ibadan in 1947. Source: David Thomson, "Europe Since Napoleon", 1966, p. 863.
 	},
 	Regions = {"africa"}
 })

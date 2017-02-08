@@ -561,6 +561,40 @@ DefineUnitType("unit-germanic-archer", {
 	}
 } )
 
+DefineUnitType("unit-germanic-priest", {
+	Name = "Gudjan",
+	Parent = "unit-template-priest",
+	Civilization = "germanic",
+	Description = "Germanic priests perform the rituals of their people, working magic to aid them.",
+	Image = {"file", "germanic/units/priest.png", "size", {72, 72}},
+	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
+	Animations = "animations-melee-unit-new",
+	Icon = "icon-germanic-priest",
+	DefaultEquipment = {
+--		{"weapon", "unit-mace"},
+		{"boots", "unit-boots"}
+	},
+	Corpse = "unit-human-dead-body",
+--	WeaponClasses = {"mace"},
+	BluntDamage = true,
+	ButtonKey = "g",
+	ButtonHint = "Train ~!Gudjan",
+	StartingAbilities = {"upgrade-inspire"},
+	CanCastSpell = {"spell-inspire", "spell-healing", "spell-precision"},
+	AutoCastActive = {"spell-inspire", "spell-healing", "spell-precision"},
+	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-victory"},
+	Sounds = {
+		"selected", "basic-germanic-voices-selected-group",
+		"acknowledge", "basic-germanic-voices-acknowledge",
+		"ready", "basic-germanic-voices-ready",
+		"help", "basic-germanic-voices-help",
+		"dead", "basic-human-voices-dead",
+		"hit", "fist-attack",
+		"miss", "attack-miss"
+	}
+})
+
 DefineUnitType("unit-germanic-transport-ship", {
 	Parent = "unit-template-transport-ship",
 	Civilization = "germanic",
@@ -660,7 +694,7 @@ DefineUnitType("unit-germanic-temple", {
 	Image = {"file", "germanic/buildings/temple.png", "size", {96, 96}},
 	Shadow = {"file", "germanic/buildings/temple_shadow.png", "size", {96, 96}},
 	Icon = "icon-germanic-temple",
---	Trains = {"unit-germanic-priest"},
+	Trains = {"unit-germanic-priest"},
 	Sounds = {
 		"help", "basic-germanic-voices-help-town"
 	}
