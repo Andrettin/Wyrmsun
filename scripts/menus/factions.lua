@@ -41,7 +41,10 @@ function ChooseFaction(old_civilization, old_faction)
 	
 	for i=1,table.getn(potential_factions) do
 		if (GetFactionData(potential_factions[i], "Playable")) then
-			if ((GetFactionData(potential_factions[i], "Type") == "polity") == (GetCivilizationClassUnitType("writing", current_civilization) ~= nil and GetPlayerData(GetThisPlayer(), "Allow", GetCivilizationClassUnitType("writing", current_civilization)) == "R")) then -- if player has writing and faction is a polity, or if player doesn't have writing and faction is a tribe
+			if (
+				(GetFactionData(potential_factions[i], "Type") == "tribe" or GetFactionData(potential_factions[i], "Type") == "polity") -- trading companies, mercenary squads and etc. are not playable
+				and (GetFactionData(potential_factions[i], "Type") == "polity") == (GetCivilizationClassUnitType("writing", current_civilization) ~= nil and GetPlayerData(GetThisPlayer(), "Allow", GetCivilizationClassUnitType("writing", current_civilization)) == "R")
+			) then -- if player has writing and faction is a polity, or if player doesn't have writing and faction is a tribe
 				if (IsNetworkGame() or GetFactionExists(potential_factions[i]) == false or GetFactionPlayer(potential_factions[i]) == GetThisPlayer()) then -- in single-player only factions that aren't already being used can be chosen
 					table.insert(faction_list, potential_factions[i])
 				end
