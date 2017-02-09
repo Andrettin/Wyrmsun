@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015-2016 by Andrettin
+--      (c) Copyright 2015-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -240,4 +240,84 @@ DefineModifier("upgrade-item-prefix-vulnerable",
 
 DefineModifier("upgrade-item-prefix-wounding",
 	{"BasicDamage", 2}
+)
+
+DefineDependency("upgrade-item-prefix-accurate",
+	{"upgrade-deity-domain-archery"}, "or", {"upgrade-deity-domain-warfare"}
+)
+
+DefineDependency("upgrade-item-prefix-cold",
+	{"upgrade-deity-domain-cold"}
+)
+
+DefineDependency("upgrade-item-prefix-cruel",
+	{"upgrade-deity-domain-wrath"}
+)
+
+DefineDependency("upgrade-item-prefix-dwindling",
+	{"upgrade-deity-domain-death"}
+)
+
+DefineDependency("upgrade-item-prefix-flaming",
+	{"upgrade-deity-domain-fire"}
+)
+
+DefineDependency("upgrade-item-prefix-frail",
+	{"upgrade-deity-domain-death"}
+)
+
+DefineDependency("upgrade-item-prefix-giantsbane",
+	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}
+)
+
+DefineDependency("upgrade-item-prefix-glacial",
+	{"upgrade-deity-domain-cold"}
+)
+
+DefineDependency("upgrade-item-prefix-impregnable",
+	{"upgrade-deity-domain-earth"}, "or", {"upgrade-deity-domain-metal"}, "or", {"upgrade-deity-domain-order"}, "or", {"upgrade-deity-domain-warfare"}
+)
+
+DefineDependency("upgrade-item-prefix-industrious",
+	{"upgrade-deity-domain-greed"}, "or", {"upgrade-deity-domain-metalworking"}
+)
+
+DefineDependency("upgrade-item-prefix-jinns",
+	{"upgrade-deity-domain-air"}
+)
+
+DefineDependency("upgrade-item-prefix-penetrating",
+	{"upgrade-deity-domain-archery"}, "or", {"upgrade-deity-domain-metalworking"}, "or", {"upgrade-deity-domain-warfare"}, "or", {"upgrade-deity-domain-warfare"}
+)
+
+DefineDependency("upgrade-item-prefix-quenching",
+	{"upgrade-deity-domain-water"}
+)
+
+DefineDependency("upgrade-item-prefix-replenishing",
+	{"upgrade-deity-domain-life"}
+)
+
+DefineDependency("upgrade-item-prefix-storm",
+	{"upgrade-deity-domain-lightning"}
+)
+
+DefineDependency("upgrade-item-prefix-sturdy",
+	{"upgrade-deity-domain-earth"}, "or", {"upgrade-deity-domain-metal"}, "or", {"upgrade-deity-domain-metalworking"}, "or", {"upgrade-deity-domain-order"}, "or", {"upgrade-deity-domain-warfare"}
+)
+
+DefineDependency("upgrade-item-prefix-swift",
+	{"upgrade-deity-domain-air"}, "or", {"upgrade-deity-domain-lightning"}
+)
+
+DefineDependency("upgrade-item-prefix-vicious",
+	{"upgrade-deity-domain-wrath"}
+)
+
+DefineDependency("upgrade-item-prefix-vulnerable",
+	{"upgrade-deity-domain-chaos"}
+)
+
+DefineDependency("upgrade-item-prefix-wounding",
+	{"upgrade-deity-domain-warfare"}, "or", {"upgrade-deity-domain-wrath"}
 )

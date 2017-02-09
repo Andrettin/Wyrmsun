@@ -279,6 +279,7 @@ DefineModifier("upgrade-wyrm-child",
 	{"BasicDamage", -24}
 )
 
+Load("scripts/upgrade_deities.lua")
 Load("scripts/item_prefixes.lua")
 Load("scripts/item_suffixes.lua")
 Load("scripts/item_suffixes_runic.lua")

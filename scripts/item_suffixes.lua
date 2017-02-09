@@ -350,3 +350,120 @@ DefineModifier("upgrade-item-suffix-of-vision",
 DefineModifier("upgrade-item-suffix-of-vulnerability",
 	{"Armor", -1}
 )
+
+DefineDependency("upgrade-item-suffix-of-accuracy",
+	{"upgrade-deity-domain-archery"}, "or", {"upgrade-deity-domain-warfare"}
+)
+
+DefineDependency("upgrade-item-suffix-of-betrayal",
+	{"upgrade-deity-domain-envy"}, "or", {"upgrade-deity-domain-greed"}
+)
+
+DefineDependency("upgrade-item-suffix-of-cold",
+	{"upgrade-deity-domain-cold"}
+)
+
+DefineDependency("upgrade-item-suffix-of-the-colossus",
+	{"upgrade-deity-domain-earth"}, "or", {"upgrade-deity-domain-metal"}, "or", {"upgrade-deity-domain-metalworking"}, "or", {"upgrade-deity-domain-warfare"}
+)
+
+DefineDependency("upgrade-item-suffix-of-diligence",
+	{"upgrade-deity-domain-temperance"}
+)
+
+DefineDependency("upgrade-item-suffix-of-extinguishment",
+	{"upgrade-deity-domain-water"}
+)
+
+DefineDependency("upgrade-item-suffix-of-fire",
+	{"upgrade-deity-domain-fire"}
+)
+
+DefineDependency("upgrade-item-suffix-of-flame",
+	{"upgrade-deity-domain-fire"}
+)
+
+DefineDependency("upgrade-item-suffix-of-frailty",
+	{"upgrade-deity-domain-death"}
+)
+
+DefineDependency("upgrade-item-suffix-of-the-jinn",
+	{"upgrade-deity-domain-air"}
+)
+
+DefineDependency("upgrade-item-suffix-of-lightning",
+	{"upgrade-deity-domain-lightning"}
+)
+
+DefineDependency("upgrade-item-suffix-of-perfuration",
+	{"upgrade-deity-domain-archery"}, "or", {"upgrade-deity-domain-warfare"}, "or", {"upgrade-deity-domain-wrath"}
+)
+
+DefineDependency("upgrade-item-suffix-of-plenty",
+	{"upgrade-deity-domain-life"}
+)
+
+DefineDependency("upgrade-item-suffix-of-power",
+	{"upgrade-deity-domain-pride"}
+)
+
+DefineDependency("upgrade-item-suffix-of-regeneration",
+	{"upgrade-deity-domain-life"}
+)
+
+DefineDependency("upgrade-item-suffix-of-replenishment",
+	{"upgrade-deity-domain-life"}
+)
+
+DefineDependency("upgrade-item-suffix-of-the-serpent",
+	{"upgrade-deity-domain-envy"}
+)
+
+DefineDependency("upgrade-item-suffix-of-slaughter",
+	{"upgrade-deity-domain-wrath"}
+)
+
+DefineDependency("upgrade-item-suffix-of-slowness",
+	{"upgrade-deity-domain-earth"}, "or", {"upgrade-deity-domain-sloth"}
+)
+
+DefineDependency("upgrade-item-suffix-of-the-snail",
+	{"upgrade-deity-domain-earth"}, "or", {"upgrade-deity-domain-sloth"}
+)
+
+DefineDependency("upgrade-item-suffix-of-the-snigill",
+	{"upgrade-deity-domain-earth"}, "or", {"upgrade-deity-domain-sloth"}
+)
+
+DefineDependency("upgrade-item-suffix-of-speed",
+	{"upgrade-deity-domain-air"}, "or", {"upgrade-deity-domain-lightning"}
+)
+
+DefineDependency("upgrade-item-suffix-of-strength",
+	{"upgrade-deity-domain-warfare"}
+)
+
+DefineDependency("upgrade-item-suffix-of-swiftness",
+	{"upgrade-deity-domain-air"}, "or", {"upgrade-deity-domain-lightning"}
+)
+
+DefineDependency("upgrade-item-suffix-of-thorns",
+	{"upgrade-deity-domain-chaos"}, "or", {"upgrade-deity-domain-wood"}
+)
+
+DefineDependency("upgrade-item-suffix-of-trickery",
+	{"upgrade-deity-domain-chaos"}
+)
+
+DefineDependency("upgrade-item-suffix-of-victory",
+	{"upgrade-deity-domain-hope"}, "or", {"upgrade-deity-domain-warfare"}
+)
+
+DefineDependency("upgrade-item-suffix-of-vision",
+	{"upgrade-deity-domain-archery"}
+)
+
+DefineDependency("upgrade-item-suffix-of-vulnerability",
+	{"upgrade-deity-domain-death"}
+)
+
