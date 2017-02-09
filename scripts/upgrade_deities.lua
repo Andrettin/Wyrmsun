@@ -201,11 +201,13 @@ DefineUpgrade("upgrade-deity-domain-warfare", {
 
 DefineUpgrade("upgrade-deity-odin", {
 	Name = "Odin",
+	Icon = "icon-odin",
 	Costs = {"time", 200, "copper", 1000}
 })
 
 DefineUpgrade("upgrade-deity-thor", {
 	Name = "Thor",
+	Icon = "icon-thor",
 	Costs = {"time", 200, "copper", 1000}
 })
 
@@ -215,3 +217,11 @@ DefineUpgrade("upgrade-deity-gathaarl", {
 	Name = "Gathaarl",
 	Costs = {"time", 200, "copper", 1000}
 })
+
+DefineDependency("upgrade-deity-odin",
+	{"upgrade-deity-thor", 0}
+)
+
+DefineDependency("upgrade-deity-thor",
+	{"upgrade-deity-odin", 0}
+)

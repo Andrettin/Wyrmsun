@@ -240,6 +240,16 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-cauldron",
 	ForUnit = {"unit-goblin-stronghold"}
 } )
 
+-- Deities ----------------------------------------------------------
+
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-odin",
+	Action = "research", Value = "upgrade-deity-odin",
+	Allowed = "check-single-research",
+	Key = "g", Hint = "Worship ~!Gathaarl", Popup = "popup-research",
+	Description = "Choose Gathaarl as your major deity.",
+	ForUnit = {"unit-goblin-temple"}
+})
+
 -- Upgrades ---------------------------------------------------------
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-goblin-stronghold",

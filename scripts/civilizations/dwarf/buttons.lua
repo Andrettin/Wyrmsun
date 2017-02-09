@@ -370,6 +370,24 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-cauldron",
 	ForUnit = {"unit-dwarven-stronghold"}
 } )
 
+-- Deities ----------------------------------------------------------
+
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-odin",
+	Action = "research", Value = "upgrade-deity-odin",
+	Allowed = "check-single-research",
+	Key = "h", Hint = "Worship ~!Hroptatyr", Popup = "popup-research",
+	Description = "Choose Hroptatyr as your major deity.",
+	ForUnit = {"unit-dwarven-temple"}
+})
+  
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-thor",
+	Action = "research", Value = "upgrade-deity-thor",
+	Allowed = "check-single-research",
+	Key = "t", Hint = "Worship ~!Thor", Popup = "popup-research",
+	Description = "Choose Thor as your major deity.",
+	ForUnit = {"unit-dwarven-temple"}
+})
+
 -- Upgrades ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 2, Icon = "icon-dwarven-skilled-miner",

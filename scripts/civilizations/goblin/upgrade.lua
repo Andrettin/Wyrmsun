@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2014-2016 by Andrettin
+--      (c) Copyright 2014-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -270,7 +270,8 @@ DefineDependency("unit-goblin-guard-tower",
 )
 
 DefineDependency("unit-goblin-war-machine",
-	{"unit-goblin-smithy", "unit-goblin-lumber-mill"})
+	{"unit-goblin-smithy", "unit-goblin-lumber-mill"}
+)
 
 DefineDependency("unit-goblin-glider",
 	{"unit-goblin-lumber-mill"}
@@ -282,6 +283,10 @@ DefineDependency("upgrade-goblin-pike",
 
 DefineDependency("unit-goblin-temple",
 	{"unit-goblin-lumber-mill"}
+)
+
+DefineDependency("unit-goblin-shaman",
+	{"upgrade-deity-gathaarl"}
 )
 
 DefineDependency("unit-goblin-dock",

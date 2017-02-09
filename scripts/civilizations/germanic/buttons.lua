@@ -140,6 +140,24 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-wood-plow",
 	ForUnit = {"unit-germanic-carpenters-shop", "unit-teuton-lumber-mill"}
 })
 
+-- Deities ----------------------------------------------------------
+
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-odin",
+	Action = "research", Value = "upgrade-deity-odin",
+	Allowed = "check-single-research",
+	Key = "w", Hint = "Worship ~!Wodanaz", Popup = "popup-research",
+	Description = "Choose Wodanaz as your major deity.",
+	ForUnit = {"unit-germanic-temple"}
+})
+  
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-thor",
+	Action = "research", Value = "upgrade-deity-thor",
+	Allowed = "check-single-research",
+	Key = "t", Hint = "Worship ~!Thunraz", Popup = "popup-research",
+	Description = "Choose Thunraz as your major deity.",
+	ForUnit = {"unit-germanic-temple"}
+})
+
 -- Upgrades ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 2,

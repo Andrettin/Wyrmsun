@@ -344,6 +344,10 @@ DefineDependency("unit-dwarven-temple",
 	{"unit-dwarven-lumber-mill"}
 )
 
+DefineDependency("unit-dwarven-witness",
+	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}
+)
+
 DefineDependency("unit-dwarven-dock",
 	{"unit-dwarven-lumber-mill"}
 )

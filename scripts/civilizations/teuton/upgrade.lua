@@ -385,6 +385,10 @@ DefineDependency("unit-teuton-temple",
 	{"unit-teuton-lumber-mill"}
 )
 
+DefineDependency("unit-teuton-priest",
+	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}
+)
+
 DefineDependency("unit-teuton-dock",
 	{"unit-teuton-lumber-mill"}
 )

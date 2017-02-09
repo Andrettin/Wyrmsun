@@ -128,6 +128,10 @@ DefineDependency("unit-germanic-temple",
 	{"unit-germanic-carpenters-shop"}
 )
 
+DefineDependency("unit-germanic-priest",
+	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}
+)
+
 DefineDependency("unit-germanic-dock",
 	{"unit-germanic-carpenters-shop"}
 )
@@ -135,6 +139,7 @@ DefineDependency("unit-germanic-dock",
 DefineDependency("unit-germanic-transport-ship",
 	{"unit-germanic-carpenters-shop"}
 )
+
 DefineDependency("upgrade-teuton-civilization",
 --	{"upgrade-germanic-broad-sword", "upgrade-germanic-long-spear", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
 	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}

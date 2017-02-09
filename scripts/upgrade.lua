@@ -234,6 +234,9 @@ DefineModifier("upgrade-trading-company", -- trading companies' docks produce fo
 	{"apply-to", "unit-goblin-dock"}
 )
 
+-- Load the deity upgrades
+Load("scripts/upgrade_deities.lua")
+
 -- Load the upgrades of the different civilizations
 Load("scripts/civilizations/celt/upgrade.lua")
 Load("scripts/civilizations/dwarf/upgrade.lua")
@@ -279,7 +282,6 @@ DefineModifier("upgrade-wyrm-child",
 	{"BasicDamage", -24}
 )
 
-Load("scripts/upgrade_deities.lua")
 Load("scripts/item_prefixes.lua")
 Load("scripts/item_suffixes.lua")
 Load("scripts/item_suffixes_runic.lua")

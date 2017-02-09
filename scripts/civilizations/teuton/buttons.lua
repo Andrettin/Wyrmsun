@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2014-2016 by Andrettin
+--      (c) Copyright 2014-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -234,6 +234,34 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-cauldron",
 	Key = "a", Hint = _("Research ~!Alchemy"), Popup = "popup-research",
 	ForUnit = {"unit-teuton-stronghold"}
 } )
+
+-- Deities ----------------------------------------------------------
+
+--[[
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-christianity",
+	Action = "research", Value = "upgrade-deity-christianity",
+	Allowed = "check-single-research",
+	Key = "c", Hint = "Convert to ~!Christianity", Popup = "popup-research",
+	Description = "Choose Christianity as your religion.",
+	ForUnit = {"unit-teuton-temple"}
+})
+--]]
+  
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-odin",
+	Action = "research", Value = "upgrade-deity-odin",
+	Allowed = "check-single-research",
+	Key = "w", Hint = "Worship ~!Wodan", Popup = "popup-research",
+	Description = "Choose Wodan as your major deity.",
+	ForUnit = {"unit-teuton-temple"}
+})
+  
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-thor",
+	Action = "research", Value = "upgrade-deity-thor",
+	Allowed = "check-single-research",
+	Key = "t", Hint = "Worship ~!Thunor", Popup = "popup-research",
+	Description = "Choose Thunor as your major deity.",
+	ForUnit = {"unit-teuton-temple"}
+})
 
 -- Upgrades ---------------------------------------------------------
 
