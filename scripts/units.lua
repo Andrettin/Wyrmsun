@@ -2819,7 +2819,6 @@ DefineUnitType("unit-template-infantry", {
 	CanCastSpell = {"spell-stun"},
 	AutoCastActive = {"spell-stun"},
 	ButtonPos = 1,
-	DropAffixes = {"upgrade-item-prefix-accurate", "upgrade-item-prefix-cruel", "upgrade-item-prefix-frail", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-swift", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-accuracy", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 		"step", "step-dirt",
 		"step-dirt", "step-dirt",
@@ -2847,8 +2846,7 @@ DefineUnitType("unit-template-veteran-infantry", {
 	RightMouseAction = "attack",
 	CanAttack = true,
 	CanTargetLand = true,
-	AiDrops = {"unit-horn", "unit-amulet", "unit-ring"},
-	DropAffixes = {"upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-thorns"}
+	AiDrops = {"unit-horn", "unit-amulet", "unit-ring"}
 })
 
 DefineUnitType("unit-template-heroic-infantry", {
@@ -2867,8 +2865,7 @@ DefineUnitType("unit-template-heroic-infantry", {
 	Type = "land",
 	RightMouseAction = "attack",
 	Inventory = true,
-	Mana = {Enable = true, Max = 225, Value = 225, Increase = 1},
-	DropAffixes = {"upgrade-item-suffix-of-power", "upgrade-item-suffix-of-regeneration", "upgrade-item-suffix-of-slaughter", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-victory", "upgrade-item-suffix-of-vision"}
+	Mana = {Enable = true, Max = 225, Value = 225, Increase = 1}
 })
 
 DefineUnitType("unit-template-spearman", {
@@ -2881,7 +2878,6 @@ DefineUnitType("unit-template-spearman", {
 	Armor = 1,
 	WeaponClasses = {"spear"},
 	PierceDamage = true,
-	DropAffixes = {},
 	Mana = {Enable = true, Max = 75, Value = 75, Increase = 1},
 	CanCastSpell = {"spell-puncture"},
 	AutoCastActive = {"spell-puncture"},
@@ -2919,7 +2915,6 @@ DefineUnitType("unit-template-archer", { Name = _("Shooter"),
 	Flesh = true,
 	AttackFromTransporter = true,
 	ButtonPos = 3,
-	DropAffixes = {"upgrade-item-prefix-accurate", "upgrade-item-prefix-cruel", "upgrade-item-prefix-frail", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-swift", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-accuracy", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 		"step", "step-dirt",
 		"step-dirt", "step-dirt",
@@ -2944,8 +2939,7 @@ DefineUnitType("unit-template-veteran-shooter", {
 	Accuracy = 11,
 	Points = 90,
 	Level = 2,
-	AiDrops = {"unit-horn", "unit-amulet", "unit-ring"},
-	DropAffixes = {"upgrade-item-prefix-penetrating", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed"}
+	AiDrops = {"unit-horn", "unit-amulet", "unit-ring"}
 } )
 
 DefineUnitType("unit-template-heroic-shooter", { Name = _("Heroic Shooter"),
@@ -2964,8 +2958,7 @@ DefineUnitType("unit-template-heroic-shooter", { Name = _("Heroic Shooter"),
 	Mana = {Enable = true, Max = 225, Value = 225, Increase = 1},
 	Inventory = true,
 	CanCastSpell = {"spell-precise-shot"},
-	AutoCastActive = {"spell-precise-shot"},
-	DropAffixes = {"upgrade-item-prefix-impregnable", "upgrade-item-suffix-of-thorns"}
+	AutoCastActive = {"spell-precise-shot"}
 } )
 
 DefineUnitType("unit-template-thief", {
@@ -2998,7 +2991,6 @@ DefineUnitType("unit-template-thief", {
 	HiddenOwnership = true,
 	CanCastSpell = {"spell-puncture"},
 	AutoCastActive = {"spell-puncture"},
-	DropAffixes = {"upgrade-item-prefix-accurate", "upgrade-item-prefix-cruel", "upgrade-item-prefix-frail", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-swift", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-accuracy", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 		"step", "step-dirt",
 		"step-dirt", "step-dirt",
@@ -3041,7 +3033,6 @@ DefineUnitType("unit-template-cavalry", {
 	Mana = {Enable = true, Max = 150, Value = 150, Increase = 1},
 	ButtonPos = 4,
 	AiDrops = {"unit-horn", "unit-amulet", "unit-ring"},
-	DropAffixes = {"upgrade-item-prefix-accurate", "upgrade-item-prefix-cruel", "upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-swift", "upgrade-item-prefix-vicious", "upgrade-item-prefix-vulnerable", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-accuracy", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 		"step", "step-dirt",
 		"step-dirt", "step-dirt",
@@ -3067,8 +3058,7 @@ DefineUnitType("unit-template-heroic-cavalry", { Name = _("Heroic Cavalry"),
 	Inventory = true,
 	Mana = {Enable = true, Max = 225, Value = 225, Increase = 1},
 	CanCastSpell = {"spell-stun"},
-	AutoCastActive = {"spell-stun"},
-	DropAffixes = {"upgrade-item-suffix-of-power", "upgrade-item-suffix-of-regeneration", "upgrade-item-suffix-of-slaughter", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-victory", "upgrade-item-suffix-of-vision"}
+	AutoCastActive = {"spell-stun"}
 } )
 
 DefineUnitType("unit-template-priest", {
@@ -3100,7 +3090,6 @@ DefineUnitType("unit-template-priest", {
 	Mana = {Enable = true, Max = 190, Value = 190, Increase = 1},
 	ButtonPos = 1,
 	AiDrops = {"unit-amulet", "unit-ring", "unit-scroll", "unit-book"},
-	DropAffixes = {"upgrade-item-prefix-accurate", "upgrade-item-prefix-cruel", "upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-swift", "upgrade-item-prefix-vicious", "upgrade-item-prefix-vulnerable", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-accuracy", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-vulnerability"},
 	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},
 	Sounds = {
 		"step", "step-dirt",
@@ -3146,7 +3135,6 @@ DefineUnitType("unit-template-flying-rider", { Name = _("Flying Rider"),
 	Inventory = true,
 	ButtonPos = 6,
 	AiDrops = {"unit-horn", "unit-amulet", "unit-ring"},
-	DropAffixes = {"upgrade-item-prefix-accurate", "upgrade-item-prefix-cruel", "upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-swift", "upgrade-item-prefix-vicious", "upgrade-item-prefix-vulnerable", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-accuracy", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-power", "upgrade-item-suffix-of-regeneration", "upgrade-item-suffix-of-slaughter", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-victory", "upgrade-item-suffix-of-vision", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 	}
 } )
@@ -3269,7 +3257,6 @@ DefineUnitType("unit-template-town-hall", {
 	ButtonHint = _("Build Town ~!Hall"),
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-amulet", "unit-ring", "unit-scroll", "unit-book"}, -- worker-related items, as well as those we would expect a center of administration to have
-	DropAffixes = {"upgrade-item-prefix-accurate", "upgrade-item-prefix-cruel", "upgrade-item-prefix-frail", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-swift", "upgrade-item-prefix-vulnerable", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-accuracy", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-power", "upgrade-item-suffix-of-regeneration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-vision", "upgrade-item-suffix-of-vulnerability"},
 	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},
 	Sounds = {
 		"selected", "town-hall-selected",
@@ -3299,7 +3286,6 @@ DefineUnitType("unit-template-stronghold", {
 	Drops = {"unit-stone-pile"},
 	AiDrops = {}, -- worker-related items, as well as those we would expect a center of administration to have; and military ones, since this is a stronghold
 	Affixes = {"upgrade-item-suffix-of-the-colossus"},
-	DropAffixes = {"upgrade-item-suffix-of-slaughter", "upgrade-item-suffix-of-victory"},
 	Sounds = {
 		"selected", "fortress-selected",
 --		"acknowledge", "town-hall-acknowledge",
@@ -3389,7 +3375,6 @@ DefineUnitType("unit-template-barracks", {
 	ButtonKey = "b",
 	ButtonHint = _("Build ~!Barracks"),
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
-	DropAffixes = {"upgrade-item-prefix-accurate", "upgrade-item-prefix-cruel", "upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-swift", "upgrade-item-prefix-vicious", "upgrade-item-prefix-vulnerable", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-accuracy", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-power", "upgrade-item-suffix-of-regeneration", "upgrade-item-suffix-of-slaughter", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-victory", "upgrade-item-suffix-of-vision", "upgrade-item-suffix-of-vulnerability"},
 	PersonalNames = {
 		"Axehall",
 		"Bloodhall",
@@ -3439,7 +3424,6 @@ DefineUnitType("unit-template-lumber-mill", {
 	ButtonKey = "l",
 	ButtonHint = _("Build ~!Lumber Mill"),
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
-	DropAffixes = {"upgrade-item-prefix-accurate", "upgrade-item-prefix-cruel", "upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-swift", "upgrade-item-prefix-vicious", "upgrade-item-prefix-vulnerable", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-accuracy", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slaughter", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-victory", "upgrade-item-suffix-of-vulnerability"},
 	PersonalNames = {
 		"The Black Board",
 		"The Black Hammer",
@@ -3511,7 +3495,6 @@ DefineUnitType("unit-template-smithy", {
 	ButtonHint = _("Build ~!Smithy"),
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-amulet", "unit-ring"},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
-	DropAffixes = {"upgrade-item-prefix-accurate", "upgrade-item-prefix-cruel", "upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-swift", "upgrade-item-prefix-vicious", "upgrade-item-prefix-vulnerable", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-accuracy", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-the-colossus", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-power", "upgrade-item-suffix-of-regeneration", "upgrade-item-suffix-of-slaughter", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-victory", "upgrade-item-suffix-of-vision", "upgrade-item-suffix-of-vulnerability"},
 	PersonalNames = {
 		"The Black Anvil",
 		"The Black Furnace",
@@ -3628,7 +3611,6 @@ DefineUnitType("unit-template-temple", {
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	SoldUnits = {"unit-scroll"},
 	AiDrops = {"unit-amulet", "unit-ring", "unit-scroll", "unit-book"},
-	DropAffixes = {"upgrade-item-prefix-accurate", "upgrade-item-prefix-cruel", "upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-swift", "upgrade-item-prefix-vicious", "upgrade-item-prefix-vulnerable", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-accuracy", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-vulnerability"},
 	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},
 	Sounds = {
 		"selected", "temple-selected",

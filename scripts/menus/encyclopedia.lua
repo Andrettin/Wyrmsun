@@ -743,7 +743,6 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 	local description = ""
 	local effects = ""
 	local applies_to = ""
-	local droppers_string = ""
 	local quote = ""
 	local background = ""
 	if (string.find(unit_name, "unit") ~= nil) then
@@ -764,27 +763,6 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		end
 		if (GetUnitTypeData(unit_name, "Item") and GetItemEffectsString(unit_name) ~= "") then
 			effects = "Effects: " .. GetItemEffectsString(unit_name) .. ".\n\n"
-		end
-		if (GetUnitTypeData(unit_name, "Item") and table.getn(GetUnitTypeData(unit_name, "Droppers")) > 0) then
-			droppers_string = "Dropped By: "
-			local droppers = GetUnitTypeData(unit_name, "Droppers")
-			local first_dropper = true
-			for i=1,table.getn(droppers) do
-				if (string.find(droppers[i], "template") == nil and GetUnitTypeData(droppers[i], "Mercenary") == false and GetUnitTypeData(droppers[i], "Civilization") ~= "elf" and GetUnitTypeData(droppers[i], "Civilization") ~= "orc") then
-					if not (first_dropper) then
-						droppers_string = droppers_string .. ", "
-					else
-						first_dropper = false
-					end
-					droppers_string = droppers_string .. GetUnitTypeData(droppers[i], "Name")
-					if (GetUnitTypeData(droppers[i], "Civilization") ~= "" and GetUnitTypeData(droppers[i], "Faction") ~= "") then
-						droppers_string = droppers_string .. " (" .. GetCivilizationData(GetUnitTypeData(droppers[i], "Civilization"), "Display") .. ": " .. GetFactionData(GetUnitTypeData(droppers[i], "Faction"), "Name") .. ")"
-					elseif (GetUnitTypeData(droppers[i], "Civilization") ~= "") then
-						droppers_string = droppers_string .. " (" .. GetCivilizationData(GetUnitTypeData(droppers[i], "Civilization"), "Display") .. ")"
-					end
-				end
-			end
-			droppers_string = droppers_string .. "."
 		end
 		if (GetUnitTypeData(unit_name, "Background") ~= "") then
 			background = "Background: " .. GetUnitTypeData(unit_name, "Background") .. "\n\n"
@@ -826,29 +804,6 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 				end
 			end
 			applies_to = applies_to .. ".\n\n"
-		end
-		if (string.find(unit_name, "prefix") ~= nil or string.find(unit_name, "suffix") ~= nil) then
-			local droppers = GetUpgradeData(unit_name, "Droppers")
-			if (table.getn(droppers) > 0) then
-				droppers_string = "Dropped By: "
-				local first_dropper = true
-				for i=1,table.getn(droppers) do
-					if (string.find(droppers[i], "template") == nil and GetUnitTypeData(droppers[i], "Mercenary") == false and GetUnitTypeData(droppers[i], "Civilization") ~= "elf" and GetUnitTypeData(droppers[i], "Civilization") ~= "orc") then
-						if not (first_dropper) then
-							droppers_string = droppers_string .. ", "
-						else
-							first_dropper = false
-						end
-						droppers_string = droppers_string .. GetUnitTypeData(droppers[i], "Name")
-						if (GetUnitTypeData(droppers[i], "Civilization") ~= "" and GetUnitTypeData(droppers[i], "Faction") ~= "") then
-							droppers_string = droppers_string .. " (" .. GetCivilizationData(GetUnitTypeData(droppers[i], "Civilization"), "Display") .. ": " .. GetFactionData(GetUnitTypeData(droppers[i], "Faction"), "Name") .. ")"
-						elseif (GetUnitTypeData(droppers[i], "Civilization") ~= "") then
-							droppers_string = droppers_string .. " (" .. GetCivilizationData(GetUnitTypeData(droppers[i], "Civilization"), "Display") .. ")"
-						end
-					end
-				end
-				droppers_string = droppers_string .. ".\n\n"
-			end
 		end
 		if (CUpgrade:Get(unit_name).Background ~= "") then
 			background = "Background: " .. CUpgrade:Get(unit_name).Background .. "\n\n"
@@ -970,32 +925,11 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		if (GetUniqueItemData(unit_name, "Quote") ~= "") then
 			quote = "Quote: " .. GetUniqueItemData(unit_name, "Quote") .. "\n\n"
 		end
-		if (table.getn(GetUniqueItemData(unit_name, "Droppers")) > 0) then
-			droppers_string = "Dropped By: "
-			local droppers = GetUniqueItemData(unit_name, "Droppers")
-			local first_dropper = true
-			for i=1,table.getn(droppers) do
-				if (string.find(droppers[i], "template") == nil and GetUnitTypeData(droppers[i], "Mercenary") == false and GetUnitTypeData(droppers[i], "Civilization") ~= "elf" and GetUnitTypeData(droppers[i], "Civilization") ~= "orc") then
-					if not (first_dropper) then
-						droppers_string = droppers_string .. ", "
-					else
-						first_dropper = false
-					end
-					droppers_string = droppers_string .. GetUnitTypeData(droppers[i], "Name")
-					if (GetUnitTypeData(droppers[i], "Civilization") ~= "" and GetUnitTypeData(droppers[i], "Faction") ~= "") then
-						droppers_string = droppers_string .. " (" .. GetCivilizationData(GetUnitTypeData(droppers[i], "Civilization"), "Display") .. ": " .. GetFactionData(GetUnitTypeData(droppers[i], "Faction"), "Name") .. ")"
-					elseif (GetUnitTypeData(droppers[i], "Civilization") ~= "") then
-						droppers_string = droppers_string .. " (" .. GetCivilizationData(GetUnitTypeData(droppers[i], "Civilization"), "Display") .. ")"
-					end
-				end
-			end
-			droppers_string = droppers_string .. ".\n\n"
-		end
 		if (GetUniqueItemData(unit_name, "Background") ~= "") then
 			background = "Background: " .. GetUniqueItemData(unit_name, "Background") .. "\n\n"
 		end
 	end
-	l:setCaption(civilization .. faction .. unit_type_type .. unit_type_class .. description .. quote .. effects .. applies_to .. droppers_string .. background)
+	l:setCaption(civilization .. faction .. unit_type_type .. unit_type_class .. description .. quote .. effects .. applies_to .. background)
 	
 	-- add buttons of texts related to the subject matter of the entry
 	local chapter_references = 0

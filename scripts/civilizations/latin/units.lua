@@ -44,7 +44,6 @@ DefineUnitType("unit-latin-town-hall", {
 	ButtonHint = _("Build Foru~!m"),
 	ButtonKey = "m",
 	AiDrops = {"unit-boots"},
-	DropAffixes = {"upgrade-item-prefix-flaming", "upgrade-item-prefix-quenching", "upgrade-item-prefix-storm", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery"},
 	Sounds = {
 --		"help", "basic-germanic-voices-help-town"
 	}
@@ -71,7 +70,6 @@ DefineUnitType("unit-latin-barracks", {
 	Icon = "icon-latin-barracks",
 	Trains = {"unit-teuton-swordsman", "unit-teuton-spearman", "unit-teuton-archer", "unit-teuton-ritter", "unit-teuton-catapult"},
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
-	DropAffixes = {"upgrade-item-prefix-flaming", "upgrade-item-prefix-quenching", "upgrade-item-prefix-storm", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery"},
 	Sounds = {
 --		"help", "basic-germanic-voices-help-town"
 	}
@@ -85,7 +83,6 @@ DefineUnitType("unit-latin-smithy", {
 	Shadow = {"file", "latin/buildings/smithy_shadow.png", "size", {96, 96}},
 	Icon = "icon-latin-smithy",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield"},
-	DropAffixes = {"upgrade-item-prefix-flaming", "upgrade-item-prefix-quenching", "upgrade-item-prefix-storm", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery"},
 	Sounds = {
 --		"help", "basic-germanic-voices-help-town"
 	}

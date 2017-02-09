@@ -252,7 +252,6 @@ DefineUnitType("unit-dwarven-axefighter", {
 	ButtonKey = "a",
 	ButtonHint = _("Train ~!Axefighter"),
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
-	DropAffixes = {"upgrade-item-suffix-of-the-snigill"},
 	Variations = {
 		{
 			"variation-id", "red-hair",
@@ -383,7 +382,6 @@ DefineUnitType("unit-dwarven-steelclad", {
 	WeaponClasses = {"axe", "mace"},
 	HackDamage = true,
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
-	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-the-snigill"},
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
 	Variations = {
@@ -508,7 +506,6 @@ DefineUnitType("unit-dwarven-thane", {
 	WeaponClasses = {"axe", "mace"},
 	HackDamage = true,
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
-	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-the-colossus", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill"},
 	Variations = {
 		{
 			"variation-id", "red-hair",
@@ -585,7 +582,6 @@ DefineUnitType("unit-dwarven-guard", {
 	ButtonKey = "g",
 	ButtonHint = _("Train ~!Guard"),
 	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
-	DropAffixes = {"upgrade-item-suffix-of-the-snigill"},
 	Variations = {
 		{
 			"variation-id", "brown-hair"
@@ -776,7 +772,6 @@ DefineUnitType("unit-dwarven-yale-rider", {
 	ButtonKey = "y",
 	ButtonHint = _("Train ~!Yale Rider"),
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
-	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-the-snigill"},
 	Variations = {
 		{
 			"variation-id", "red-hair-gray-fur",
@@ -862,7 +857,6 @@ DefineUnitType("unit-dwarven-yale-lord", { Name = _("Yale Lord"),
 	WeaponClasses = {"axe"},
 	HackDamage = true,
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
-	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill"},
 	Variations = {
 		{
 			"variation-id", "red-hair-gray-fur",
@@ -965,7 +959,6 @@ DefineUnitType("unit-dwarven-witness", {
 	CanCastSpell = {"spell-inspire", "spell-healing", "spell-precision"},
 	AutoCastActive = {"spell-inspire", "spell-healing", "spell-precision"},
 	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
-	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill"},
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
 		"acknowledge", "basic-dwarf-voices-acknowledge",
@@ -998,7 +991,6 @@ DefineUnitType("unit-dwarven-gryphon-rider", { Name = _("Gryphon Rider"),
 	ButtonKey = "r",
 	ButtonHint = _("Train Gryphon ~!Rider"),
 	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
-	DropAffixes = {"upgrade-item-prefix-storm", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-the-snigill"},
 	Variations = {
 		{
 			"variation-id", "black-hair-brown-feathers",
@@ -1097,7 +1089,6 @@ DefineUnitType("unit-dwarven-town-hall", {
 	ButtonHint = _("Build Mead ~!Hall"),
 	Drops = {"unit-stone-pile"},
 	AiDrops = {"unit-boots"},
-	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill"},
 	Variations = {
 		{
 			"variation-id", "dwarf",
@@ -1134,7 +1125,6 @@ DefineUnitType("unit-dwarven-stronghold", { Name = _("Bastion"),
 	RepairCosts = {"lumber", 0},
 	FireResistance = 20,
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
-	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill"},
 	Variations = {
 		{
 			"variation-id", "dwarf",
@@ -1193,7 +1183,6 @@ DefineUnitType("unit-dwarven-barracks", {
 	ButtonHint = _("Build ~!War Hall"),
 	Drops = {"unit-stone-pile"},
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
-	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
@@ -1213,7 +1202,6 @@ DefineUnitType("unit-dwarven-lumber-mill", {
 	FireResistance = 20,
 	Drops = {"unit-stone-pile"},
 	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe"},
-	DropAffixes = {"upgrade-item-prefix-storm", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-the-snigill"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
@@ -1236,7 +1224,6 @@ DefineUnitType("unit-dwarven-smithy", {
 	FireResistance = 20,
 	Drops = {"unit-stone-pile"},
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-spatha"}, -- drops Spatha to allow dropping dwarven unique swords
-	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-aedi",  "upgrade-item-suffix-of-othola"}, -- has flaming prefix to allow dropping The Hammer of Thursagan; Aedi and Othola are Norse runes
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
