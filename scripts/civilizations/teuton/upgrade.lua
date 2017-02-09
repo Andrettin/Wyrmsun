@@ -386,7 +386,7 @@ DefineDependency("unit-teuton-temple",
 )
 
 DefineDependency("unit-teuton-priest",
-	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}
+	{"upgrade-deity-christian-god"}, "or", {"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}
 )
 
 DefineDependency("unit-teuton-dock",

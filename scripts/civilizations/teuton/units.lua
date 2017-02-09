@@ -750,10 +750,25 @@ DefineUnitType("unit-teuton-priest", {
 	BluntDamage = true,
 	ButtonKey = "c",
 	ButtonHint = _("Train ~!Cleric"),
-	StartingAbilities = {"upgrade-healing"},
+	StartingAbilities = {"upgrade-inspire", "upgrade-precision", "upgrade-healing"},
 	CanCastSpell = {"spell-healing", "spell-precision"},
 	AutoCastActive = {"spell-healing", "spell-precision"},
 	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	Variations = {
+		{
+			"variation-id", "cleric",
+			"upgrade-required", "upgrade-deity-christian-god",
+			"upgrade-forbidden", "upgrade-deity-odin",
+			"upgrade-forbidden", "upgrade-deity-thor"
+		},
+		{
+			"variation-id", "gudjan",
+			"file", "germanic/units/priest.png",
+			"icon", "icon-germanic-priest",
+			"type-name", "Gudjan",
+			"upgrade-forbidden", "upgrade-deity-christian-god"
+		}
+	},
 	Sounds = {
 		"selected", "basic-teuton-voices-selected-group",
 		"acknowledge", "basic-teuton-voices-acknowledge",
@@ -984,7 +999,7 @@ DefineUnitType("unit-teuton-stables", {
 } )
 
 DefineUnitType("unit-teuton-temple", {
-	Name = _("Temple"),
+	Name = _("Church"),
 	Parent = "unit-template-temple",
 	Civilization = "teuton",
 	Description = _("In early times, Teutons professed faith in polytheistic deities in their houses of worship, the most important one being Woden. Eventually, Christian missionaries managed to expand their faith to the entirety of the Teutonic lands, overtaking the earlier paganism."),
@@ -992,6 +1007,22 @@ DefineUnitType("unit-teuton-temple", {
 	Shadow = {"file", "teuton/buildings/church_shadow.png", "size", {96, 96}},
 	Icon = "icon-teuton-church",
 	Trains = {"unit-teuton-priest"},
+	Variations = {
+		{
+			"variation-id", "church",
+			"upgrade-required", "upgrade-deity-christian-god",
+			"upgrade-forbidden", "upgrade-deity-odin",
+			"upgrade-forbidden", "upgrade-deity-thor"
+		},
+		{
+			"variation-id", "germanic-temple",
+			"file", "germanic/buildings/temple.png",
+			"shadow-file", "germanic/buildings/temple_shadow.png",
+			"icon", "icon-germanic-temple",
+			"type-name", "Temple",
+			"upgrade-forbidden", "upgrade-deity-christian-god"
+		}
+	},
 	Sounds = {
 		"help", "basic-teuton-voices-help-town"
 	}

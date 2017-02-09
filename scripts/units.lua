@@ -35,7 +35,7 @@ Units = {
 	"unit-germanic-priest",
 	"unit-germanic-transport-ship",
 	"unit-germanic-town-hall", "unit-germanic-farm", "unit-germanic-barracks",
-	"unit-germanic-carpenters-shop", "unit-germanic-smithy", --"unit-germanic-temple",
+	"unit-germanic-carpenters-shop", "unit-germanic-smithy", "unit-germanic-temple",
 	"unit-germanic-dock",
 	"upgrade-germanic-broad-sword", "upgrade-germanic-long-spear", "upgrade-germanic-bronze-shield",
 	"upgrade-germanic-barbed-arrow",
@@ -143,7 +143,7 @@ Units = {
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
 	"unit-carrots", "unit-cheese", "unit-wyrm-heart", "unit-potion-of-healing",
 	"upgrade-deity-odin", "upgrade-deity-thor", "upgrade-deity-gathaarl",
---	"upgrade-deity-christianity",
+	"upgrade-deity-christian-god",
 	"upgrade-deity-domain-air", "upgrade-deity-domain-earth", "upgrade-deity-domain-fire", "upgrade-deity-domain-water", "upgrade-deity-domain-aether", "upgrade-deity-domain-metal", "upgrade-deity-domain-wood", "upgrade-deity-domain-cold", "upgrade-deity-domain-lightning", "upgrade-deity-domain-chaos", "upgrade-deity-domain-order", "upgrade-deity-domain-death", "upgrade-deity-domain-life", "upgrade-deity-domain-darkness", "upgrade-deity-domain-light", "upgrade-deity-domain-sun", "upgrade-deity-domain-moon",
 	"upgrade-deity-domain-courage", "upgrade-deity-domain-justice", "upgrade-deity-domain-temperance", "upgrade-deity-domain-wisdom", "upgrade-deity-domain-charity", "upgrade-deity-domain-faith", "upgrade-deity-domain-hope", "upgrade-deity-domain-love", "upgrade-deity-domain-envy", "upgrade-deity-domain-gluttony", "upgrade-deity-domain-greed", "upgrade-deity-domain-lust", "upgrade-deity-domain-pride", "upgrade-deity-domain-sloth", "upgrade-deity-domain-wrath", "upgrade-deity-domain-archery", "upgrade-deity-domain-metalworking", "upgrade-deity-domain-poetry", "upgrade-deity-domain-warfare"
 }

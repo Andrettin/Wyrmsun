@@ -607,7 +607,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-inspire",
 	Action = "cast-spell", Value = "spell-inspire",
 	Description = "Inspires an organic unit to deal 50% more damage",
 	Key = "i", Hint = "~!Inspire", Popup = "popup-commands",
-	ForUnit = {"unit-germanic-priest", "unit-dwarven-witness"}
+	ForUnit = {"unit-germanic-priest", "unit-teuton-priest", "unit-dwarven-witness"}
 })
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-terror",
@@ -627,7 +627,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-healing",
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-precision",
 	Action = "cast-spell", Value = "spell-precision",
 	Description = "Doubles the accuracy of an organic unit while in combat",
-	Key = "r", Hint = _("P~!recision"), Popup = "popup-commands",
+	Key = "r", Hint = "P~!recision", Popup = "popup-commands",
 	ForUnit = {"unit-germanic-priest", "unit-teuton-priest", "unit-elven-priest", "unit-dwarven-witness"}
 })
 

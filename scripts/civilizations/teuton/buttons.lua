@@ -237,29 +237,27 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-cauldron",
 
 -- Deities ----------------------------------------------------------
 
---[[
-DefineButton( { Pos = 1, Level = 0, Icon = "icon-christianity",
-	Action = "research", Value = "upgrade-deity-christianity",
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-christianity",
+	Action = "research", Value = "upgrade-deity-christian-god",
 	Allowed = "check-single-research",
 	Key = "c", Hint = "Convert to ~!Christianity", Popup = "popup-research",
-	Description = "Choose Christianity as your religion.",
+	Description = "Choose Christianity as your religion. +10 HP and enables Healing spell for Clerics. Incompatible with any pagan deities.",
 	ForUnit = {"unit-teuton-temple"}
 })
---]]
   
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-odin",
+DefineButton( { Pos = 6, Level = 0, Icon = "icon-odin",
 	Action = "research", Value = "upgrade-deity-odin",
 	Allowed = "check-single-research",
 	Key = "w", Hint = "Worship ~!Wodan", Popup = "popup-research",
-	Description = "Choose Wodan as your major deity.",
+	Description = "Choose Wodan as your major deity. +2 Damage for Scuzzos, enables Inspire spell for Gudjans. Incompatible with the Christianity religion or with the Thunor major deity.",
 	ForUnit = {"unit-teuton-temple"}
 })
   
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-thor",
+DefineButton( { Pos = 7, Level = 0, Icon = "icon-thor",
 	Action = "research", Value = "upgrade-deity-thor",
 	Allowed = "check-single-research",
 	Key = "t", Hint = "Worship ~!Thunor", Popup = "popup-research",
-	Description = "Choose Thunor as your major deity.",
+	Description = "Choose Thunor as your major deity. +2 Damage for Kregars, enables Precision spell for Gudjans. Incompatible with the Christianity religion or with the Wodan major deity.",
 	ForUnit = {"unit-teuton-temple"}
 })
 

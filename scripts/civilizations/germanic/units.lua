@@ -562,7 +562,6 @@ DefineUnitType("unit-germanic-priest", {
 	Civilization = "germanic",
 	Description = "Germanic priests perform the rituals of their people, working magic to aid them.",
 	Image = {"file", "germanic/units/priest.png", "size", {72, 72}},
-	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	Animations = "animations-melee-unit-new",
 	Icon = "icon-germanic-priest",
 	DefaultEquipment = {
@@ -574,7 +573,7 @@ DefineUnitType("unit-germanic-priest", {
 	BluntDamage = true,
 	ButtonKey = "g",
 	ButtonHint = "Train ~!Gudjan",
-	StartingAbilities = {"upgrade-inspire"},
+	StartingAbilities = {"upgrade-inspire", "upgrade-precision"},
 	CanCastSpell = {"spell-inspire", "spell-healing", "spell-precision"},
 	AutoCastActive = {"spell-inspire", "spell-healing", "spell-precision"},
 	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},

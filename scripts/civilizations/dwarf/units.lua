@@ -955,7 +955,7 @@ DefineUnitType("unit-dwarven-witness", {
 	BluntDamage = true,
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
-	StartingAbilities = {"upgrade-inspire"},
+	StartingAbilities = {"upgrade-inspire", "upgrade-precision"},
 	CanCastSpell = {"spell-inspire", "spell-healing", "spell-precision"},
 	AutoCastActive = {"spell-inspire", "spell-healing", "spell-precision"},
 	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},

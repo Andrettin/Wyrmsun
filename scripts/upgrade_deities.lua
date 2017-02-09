@@ -197,6 +197,14 @@ DefineUpgrade("upgrade-deity-domain-warfare", {
 
 -- Deity Upgrades
 
+-- Christianity
+
+DefineUpgrade("upgrade-deity-christian-god", {
+	Name = "Christian God",
+	Icon = "icon-christianity",
+	Costs = {"time", 200, "copper", 1000}
+})
+
 -- Aesir
 
 DefineUpgrade("upgrade-deity-odin", {
@@ -218,10 +226,65 @@ DefineUpgrade("upgrade-deity-gathaarl", {
 	Costs = {"time", 200, "copper", 1000}
 })
 
-DefineDependency("upgrade-deity-odin",
-	{"upgrade-deity-thor", 0}
+DefineModifier("upgrade-deity-christian-god",
+	{"HitPoints", 10},
+	{"remove-upgrade", "upgrade-deity-odin"}, {"remove-upgrade", "upgrade-deity-thor"},
+	{"apply-to", "unit-teuton-priest"}
 )
 
-DefineDependency("upgrade-deity-thor",
-	{"upgrade-deity-odin", 0}
+DefineModifier("upgrade-deity-christian-god", -- dummy upgrade modifier to change variation
+	{"apply-to", "unit-teuton-temple"}
+)
+
+DefineModifier("upgrade-deity-gathaarl",
+	{"BasicDamage", 2},
+	{"apply-to", "unit-goblin-swordsman"}, {"apply-to", "unit-goblin-barbarian"}, {"apply-to", "unit-goblin-warlord"}
+)
+
+DefineModifier("upgrade-deity-gathaarl", -- dummy upgrade modifier to change starting abilities
+	{"apply-to", "unit-goblin-shaman"}
+)
+
+DefineModifier("upgrade-deity-odin",
+	{"BasicDamage", 2},
+	{"apply-to", "unit-germanic-archer"}, {"apply-to", "unit-teuton-archer"},
+	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"}
+)
+
+DefineModifier("upgrade-deity-odin",
+	{"remove-upgrade", "upgrade-deity-thor"}, {"remove-upgrade", "upgrade-deity-christian-god"},
+	{"apply-to", "unit-germanic-priest"}, {"apply-to", "unit-teuton-priest"}, {"apply-to", "unit-dwarven-witness"},
+	{"apply-to", "unit-teuton-temple"}
+)
+
+DefineModifier("upgrade-deity-thor",
+	{"BasicDamage", 2},
+	{"apply-to", "unit-germanic-warrior"}, {"apply-to", "unit-germanic-veteran-warrior"}, {"apply-to", "unit-germanic-chieftain"},
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"},
+	{"apply-to", "unit-suebi-swordsman"},
+	{"apply-to", "unit-frank-swordsman"}, {"apply-to", "unit-frank-veteran-swordsman"}, {"apply-to", "unit-frank-heroic-swordsman"},
+	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}, {"apply-to", "unit-dwarven-explorer"}
+)
+
+DefineModifier("upgrade-deity-thor",
+	{"remove-upgrade", "upgrade-deity-odin"}, {"remove-upgrade", "upgrade-deity-christian-god"},
+	{"apply-to", "unit-germanic-priest"}, {"apply-to", "unit-teuton-priest"}, {"apply-to", "unit-dwarven-witness"},
+	{"apply-to", "unit-teuton-temple"}
+)
+
+-- Spell Upgrade Dependencies
+DefineDependency("upgrade-healing",
+	{"upgrade-deity-christian-god"}
+)
+
+DefineDependency("upgrade-inspire",
+	{"upgrade-deity-odin"}
+)
+
+DefineDependency("upgrade-precision",
+	{"upgrade-deity-thor"}
+)
+
+DefineDependency("upgrade-terror",
+	{"upgrade-deity-gathaarl"}
 )

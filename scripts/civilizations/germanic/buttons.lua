@@ -142,19 +142,19 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-wood-plow",
 
 -- Deities ----------------------------------------------------------
 
-DefineButton( { Pos = 1, Level = 0, Icon = "icon-odin",
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-odin",
 	Action = "research", Value = "upgrade-deity-odin",
 	Allowed = "check-single-research",
 	Key = "w", Hint = "Worship ~!Wodanaz", Popup = "popup-research",
-	Description = "Choose Wodanaz as your major deity.",
+	Description = "Choose Wodanaz as your major deity. +2 Damage for Skutans, enables Inspire spell for Gudjans. Incompatible with the Thunraz major deity.",
 	ForUnit = {"unit-germanic-temple"}
 })
   
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-thor",
+DefineButton( { Pos = 6, Level = 0, Icon = "icon-thor",
 	Action = "research", Value = "upgrade-deity-thor",
 	Allowed = "check-single-research",
 	Key = "t", Hint = "Worship ~!Thunraz", Popup = "popup-research",
-	Description = "Choose Thunraz as your major deity.",
+	Description = "Choose Thunraz as your major deity. +2 Damage for Eralas, enables Precision spell for Gudjans. Incompatible with the Wodanaz major deity.",
 	ForUnit = {"unit-germanic-temple"}
 })
 

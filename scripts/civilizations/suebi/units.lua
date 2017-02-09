@@ -66,6 +66,8 @@ DefineUnitType("unit-suebi-swordsman", {
 	NightSightRangeBonus = -1,
 	WeaponClasses = {"sword", "thrusting-sword"},
 	HackDamage = true,
+	ButtonKey = "k",
+	ButtonHint = "Train ~!Kregar",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Variations = {
 		{

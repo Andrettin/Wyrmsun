@@ -247,6 +247,11 @@ Load("scripts/civilizations/latin/upgrade.lua")
 Load("scripts/civilizations/suebi/upgrade.lua")
 Load("scripts/civilizations/teuton/upgrade.lua")
 
+-- dependencies for deity upgrades that require a certain upgrade
+DefineDependency("upgrade-deity-christian-god",
+	{"upgrade-teuton-writing"}
+)
+
 -- miscellaneous individual upgrades
 local misc_individual_upgrades = {
 	{"upgrade-child", _("Child")},
