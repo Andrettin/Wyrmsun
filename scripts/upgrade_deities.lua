@@ -202,7 +202,7 @@ DefineUpgrade("upgrade-deity-domain-warfare", {
 DefineUpgrade("upgrade-deity-christian-god", {
 	Name = "Christian God",
 	Icon = "icon-christianity",
-	Costs = {"time", 200, "copper", 1000}
+	Costs = {"time", 120, "copper", 750}
 })
 
 -- Aesir
@@ -210,24 +210,28 @@ DefineUpgrade("upgrade-deity-christian-god", {
 DefineUpgrade("upgrade-deity-odin", {
 	Name = "Odin",
 	Icon = "icon-odin",
-	Costs = {"time", 200, "copper", 1000}
+	Costs = {"time", 120, "copper", 750}
 })
 
 DefineUpgrade("upgrade-deity-thor", {
 	Name = "Thor",
 	Icon = "icon-thor",
-	Costs = {"time", 200, "copper", 1000}
+	Costs = {"time", 120, "copper", 750}
 })
 
 -- Goblin Deities
 
 DefineUpgrade("upgrade-deity-gathaarl", {
 	Name = "Gathaarl",
-	Costs = {"time", 200, "copper", 1000}
+	Costs = {"time", 120, "copper", 750}
 })
+
+-- Modifiers
 
 DefineModifier("upgrade-deity-christian-god",
 	{"HitPoints", 10},
+	{"Mana", 20},
+	{"Points", 20},
 	{"remove-upgrade", "upgrade-deity-odin"}, {"remove-upgrade", "upgrade-deity-thor"},
 	{"apply-to", "unit-teuton-priest"}
 )
@@ -238,6 +242,7 @@ DefineModifier("upgrade-deity-christian-god", -- dummy upgrade modifier to chang
 
 DefineModifier("upgrade-deity-gathaarl",
 	{"BasicDamage", 2},
+	{"Points", 10},
 	{"apply-to", "unit-goblin-swordsman"}, {"apply-to", "unit-goblin-barbarian"}, {"apply-to", "unit-goblin-warlord"}
 )
 
@@ -247,6 +252,7 @@ DefineModifier("upgrade-deity-gathaarl", -- dummy upgrade modifier to change sta
 
 DefineModifier("upgrade-deity-odin",
 	{"BasicDamage", 2},
+	{"Points", 10},
 	{"apply-to", "unit-germanic-archer"}, {"apply-to", "unit-teuton-archer"},
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"}
 )
@@ -259,6 +265,7 @@ DefineModifier("upgrade-deity-odin",
 
 DefineModifier("upgrade-deity-thor",
 	{"BasicDamage", 2},
+	{"Points", 10},
 	{"apply-to", "unit-germanic-warrior"}, {"apply-to", "unit-germanic-veteran-warrior"}, {"apply-to", "unit-germanic-chieftain"},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"},
 	{"apply-to", "unit-suebi-swordsman"},

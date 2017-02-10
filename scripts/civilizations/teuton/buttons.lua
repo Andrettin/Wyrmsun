@@ -241,7 +241,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-christianity",
 	Action = "research", Value = "upgrade-deity-christian-god",
 	Allowed = "check-single-research",
 	Key = "c", Hint = "Convert to ~!Christianity", Popup = "popup-research",
-	Description = "Choose Christianity as your religion. +10 HP and enables Healing spell for Clerics. Incompatible with any pagan deities.",
+	Description = "Choose Christianity as your religion. +10 HP , +20 Mana and enables Healing spell for Clerics. Incompatible with any pagan deities.",
 	ForUnit = {"unit-teuton-temple"}
 })
   
