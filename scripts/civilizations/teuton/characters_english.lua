@@ -665,6 +665,7 @@ DefineCharacter("aldhelm", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Type = "unit-teuton-priest",
 	Civilization = "teuton",
 	Faction = "wessex",
+	Deities = {"christian-god"},
 	DeathYear = 709, -- died in 709/710
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "wessex") then
@@ -737,6 +738,7 @@ DefineCharacter("bede", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	Civilization = "teuton",
 	Faction = "angle-tribe", -- so that the name will be added to the name generation correctly
 	-- from which part of England?
+	Deities = {"christian-god"},
 	Year = 731, -- wrote "Historia Ecclesiastica Venerabilis Bedae" around 731 AD
 	AuthoredWorks = {"upgrade-work-historia-ecclesiastica-venerabilis-bedae"}
 })
@@ -799,6 +801,7 @@ DefineCharacter("egbert", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Type = "unit-teuton-priest", -- archbishop
 	Civilization = "teuton",
 	Faction = "northumbria",
+	Deities = {"christian-god"},
 	-- was Eadberht of Northumbria's brother
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
@@ -931,6 +934,7 @@ DefineCharacter("alcuin", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Type = "unit-teuton-priest", -- correct?
 	Civilization = "teuton",
 	Faction = "northumbria",
+	Deities = {"christian-god"},
 	Year = 782, -- moved from England to the court of Charlemagne
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
@@ -1047,6 +1051,7 @@ DefineCharacter("nicolas-breakspear", { -- Source: Snorri Sturlson, "Heimskringl
 	Type = "unit-teuton-priest",
 	Civilization = "teuton",
 	Faction = "england",
+	Deities = {"christian-god"},
 	Year = 1154, -- elected Pope
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "england") then

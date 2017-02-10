@@ -115,6 +115,7 @@ DefineCharacter("gottschalk", { -- 9th century Saxon monk; Source: James Westfal
 	Type = "unit-teuton-priest", -- monk
 	Civilization = "teuton",
 	Faction = "saxony",
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "saxony") then
 			return true
@@ -160,6 +161,7 @@ DefineCharacter("thietmar", { -- Saxon bishop of Merseburg; was alive in 1002; S
 	Type = "unit-teuton-priest", -- bishop
 	Civilization = "teuton",
 	Faction = "saxony",
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "saxony") then
 			return true

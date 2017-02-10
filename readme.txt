@@ -80,6 +80,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which prevented goblins from recruiting heroes.
 - Hero recruitment buttons now show heroes' stats.
 - Replaced the custom hero unit button which appears on the right border of the map with buttons for up to three heroes, both custom and non-custom.
+- Custom heroes can now choose their deity or religion.
 
 * Items
 - Added "Scroll of Teuton Allegiance", to allow changing from the Suebi swordsman to the Teuton swordsman.

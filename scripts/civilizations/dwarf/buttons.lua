@@ -388,6 +388,34 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-thor",
 	ForUnit = {"unit-dwarven-temple"}
 })
 
+DefineButton( { Pos = 9, Level = 0, Icon = "icon-odin",
+	Action = "learn-ability", Value = "upgrade-deity-odin",
+	Key = "h", Hint = "Worship ~!Hroptatyr", Popup = "popup-research",
+	Description = "Choose Hroptatyr as your hero's major deity. +2 Damage for Axefighters, enables Inspire spell for Witnesses. Incompatible with the Thor major deity.",
+	ForUnit = {
+		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
+		"unit-dwarven-guard",
+		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
+		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
+		"unit-dwarven-witness",
+		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
+	}
+})
+  
+DefineButton( { Pos = 10, Level = 0, Icon = "icon-thor",
+	Action = "learn-ability", Value = "upgrade-deity-thor",
+	Key = "t", Hint = "Worship ~!Thor", Popup = "popup-research",
+	Description = "Choose Thor as your hero's major deity. +2 Damage for Scouts, enables Precision spell for Witnesses. Incompatible with the Hroptatyr major deity.",
+	ForUnit = {
+		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
+		"unit-dwarven-guard",
+		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
+		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
+		"unit-dwarven-witness",
+		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
+	}
+})
+
 -- Upgrades ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 2, Icon = "icon-dwarven-skilled-miner",

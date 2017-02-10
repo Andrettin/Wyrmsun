@@ -30,6 +30,7 @@ DefineCharacter("adalram", { -- Source: James Westfall Thompson, "Medieval Germa
 	Gender = "male",
 	Type = "unit-teuton-priest", -- Archbishop of Salzburg
 	Civilization = "teuton",
+	Deities = {"christian-god"},
 	ProvinceOfOrigin = "Salzburg",
 	Year = 821, -- Archbishop of Salzburg from 821 on
 	DeathYear = 836, -- Archbishop of Salzburg until 836

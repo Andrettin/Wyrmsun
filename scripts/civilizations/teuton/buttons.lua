@@ -261,6 +261,48 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-thor",
 	ForUnit = {"unit-teuton-temple"}
 })
 
+DefineButton( { Pos = 9, Level = 0, Icon = "icon-christianity",
+	Action = "learn-ability", Value = "upgrade-deity-christian-god",
+	Key = "c", Hint = "Convert to ~!Christianity", Popup = "popup-research",
+	Description = "Choose Christianity as your hero's religion. +10 HP , +20 Mana and enables Healing spell for Clerics. Incompatible with any pagan deities.",
+	ForUnit = {
+		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
+		"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman",
+		"unit-teuton-spearman", "unit-frank-spearman", "unit-teuton-archer",
+		"unit-teuton-ritter", "unit-teuton-knight-lord",
+		"unit-frank-horseman", "unit-frank-knight-lord",
+		"unit-teuton-priest"
+	}
+})
+  
+DefineButton( { Pos = 10, Level = 0, Icon = "icon-odin",
+	Action = "learn-ability", Value = "upgrade-deity-odin",
+	Key = "w", Hint = "Worship ~!Wodan", Popup = "popup-research",
+	Description = "Choose Wodan as your hero's major deity. +2 Damage for Scuzzos, enables Inspire spell for Gudjans. Incompatible with the Christianity religion or with the Thunor major deity.",
+	ForUnit = {
+		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
+		"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman",
+		"unit-teuton-spearman", "unit-frank-spearman", "unit-teuton-archer",
+		"unit-teuton-ritter", "unit-teuton-knight-lord",
+		"unit-frank-horseman", "unit-frank-knight-lord",
+		"unit-teuton-priest"
+	}
+})
+  
+DefineButton( { Pos = 11, Level = 0, Icon = "icon-thor",
+	Action = "learn-ability", Value = "upgrade-deity-thor",
+	Key = "t", Hint = "Worship ~!Thunor", Popup = "popup-research",
+	Description = "Choose Thunor as your hero's major deity. +2 Damage for Kregars, enables Precision spell for Gudjans. Incompatible with the Christianity religion or with the Wodan major deity.",
+	ForUnit = {
+		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
+		"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman",
+		"unit-teuton-spearman", "unit-frank-spearman", "unit-teuton-archer",
+		"unit-teuton-ritter", "unit-teuton-knight-lord",
+		"unit-frank-horseman", "unit-frank-knight-lord",
+		"unit-teuton-priest"
+	}
+})
+
 -- Upgrades ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-guard-tower",

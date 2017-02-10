@@ -232,8 +232,11 @@ DefineModifier("upgrade-deity-christian-god",
 	{"HitPoints", 10},
 	{"Mana", 20},
 	{"Points", 20},
-	{"remove-upgrade", "upgrade-deity-odin"}, {"remove-upgrade", "upgrade-deity-thor"},
 	{"apply-to", "unit-teuton-priest"}
+)
+
+DefineModifier("upgrade-deity-christian-god",
+	{"remove-upgrade", "upgrade-deity-odin"}, {"remove-upgrade", "upgrade-deity-thor"}
 )
 
 DefineModifier("upgrade-deity-christian-god", -- dummy upgrade modifier to change variation
@@ -258,7 +261,10 @@ DefineModifier("upgrade-deity-odin",
 )
 
 DefineModifier("upgrade-deity-odin",
-	{"remove-upgrade", "upgrade-deity-thor"}, {"remove-upgrade", "upgrade-deity-christian-god"},
+	{"remove-upgrade", "upgrade-deity-thor"}, {"remove-upgrade", "upgrade-deity-christian-god"}
+)
+
+DefineModifier("upgrade-deity-odin",
 	{"apply-to", "unit-germanic-priest"}, {"apply-to", "unit-teuton-priest"}, {"apply-to", "unit-dwarven-witness"},
 	{"apply-to", "unit-teuton-temple"}
 )
@@ -274,7 +280,10 @@ DefineModifier("upgrade-deity-thor",
 )
 
 DefineModifier("upgrade-deity-thor",
-	{"remove-upgrade", "upgrade-deity-odin"}, {"remove-upgrade", "upgrade-deity-christian-god"},
+	{"remove-upgrade", "upgrade-deity-odin"}, {"remove-upgrade", "upgrade-deity-christian-god"}
+)
+
+DefineModifier("upgrade-deity-thor",
 	{"apply-to", "unit-germanic-priest"}, {"apply-to", "unit-teuton-priest"}, {"apply-to", "unit-dwarven-witness"},
 	{"apply-to", "unit-teuton-temple"}
 )

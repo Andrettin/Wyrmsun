@@ -122,6 +122,7 @@ DefineCharacter("adalbert", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Type = "unit-teuton-priest",
 	Civilization = "teuton", -- presumably
 	Faction = "bremen",
+	Deities = {"christian-god"},
 	ProvinceOfOrigin = "Bremen", -- presumably
 	DeathYear = 1075 -- died
 })

@@ -2351,6 +2351,7 @@ DefineCharacter("arnold", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Type = "unit-teuton-priest",
 	Civilization = "norse", -- presumably
 	ProvinceOfOrigin = "Scania", -- presumably, since he was ordained there
+	Deities = {"christian-god"},
 	Year = 1121 -- ordained Bishop of Greenland by the Archbishop of Lund (in Scania)
 })
 
@@ -2408,6 +2409,7 @@ DefineCharacter("alf", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 
 	Gender = "male",
 	Type = "unit-teuton-priest",
 	Civilization = "norse", -- presumably
+	Deities = {"christian-god"},
 --	ProvinceOfOrigin = "Greenland", -- possibly he was from elsewhere, but we have no information about that
 	DeathYear = 1378 -- died in Greenland
 })
@@ -2433,6 +2435,7 @@ DefineCharacter("henry-of-greenland", { -- Source: Snorri Sturlson, "Heimskringl
 	Gender = "male",
 	Type = "unit-teuton-priest",
 	Civilization = "norse", -- presumably
+	Deities = {"christian-god"},
 --	ProvinceOfOrigin = "?",
 	Year = 1389 -- appointed Bishop of Greenland
 })
@@ -2442,6 +2445,7 @@ DefineCharacter("askil", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	Gender = "male",
 	Type = "unit-teuton-priest",
 	Civilization = "norse", -- presumably
+	Deities = {"christian-god"},
 --	ProvinceOfOrigin = "?",
 	Year = 1406 -- appointed Bishop of Greenland to succeed Henry in case he was dead
 })
@@ -2459,6 +2463,7 @@ DefineCharacter("endrede", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 	Gender = "male",
 	Type = "unit-teuton-priest",
 	Civilization = "norse", -- presumably
+	Deities = {"christian-god"},
 --	ProvinceOfOrigin = "Greenland", -- accurate?
 	Year = 1409, -- executed a marriage settlement at Garda (the episcopal seat of Greenland) in 1409
 	Father = "andreas"
@@ -2470,6 +2475,7 @@ DefineCharacter("magnus-eyolfson", { -- Source: Snorri Sturlson, "Heimskringla",
 	Gender = "male",
 	Type = "unit-teuton-priest",
 	Civilization = "norse", -- correct?
+	Deities = {"christian-god"},
 	ProvinceOfOrigin = "Iceland", -- correct?
 	Year = 1477 -- was bishop of Skalholt (in Iceland) in 1477
 })
@@ -2491,6 +2497,7 @@ DefineCharacter("hans-egide", { -- Source: Snorri Sturlson, "Heimskringla", 1844
 	Gender = "male",
 	Type = "unit-teuton-priest",
 	Civilization = "norse",
+	Deities = {"christian-god"},
 	ProvinceOfOrigin = "Akershus", -- put the character in the province where the Norwegian capital is, since we don't know from where in Norway he came
 	Year = 1721 -- settled in Greenland amongst the eskimos as a missionary in 1721
 })

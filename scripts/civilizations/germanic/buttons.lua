@@ -158,6 +158,30 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-thor",
 	ForUnit = {"unit-germanic-temple"}
 })
 
+DefineButton( { Pos = 9, Level = 0, Icon = "icon-odin",
+	Action = "learn-ability", Value = "upgrade-deity-odin",
+	Key = "w", Hint = "Worship ~!Wodanaz", Popup = "popup-research",
+	Description = "Choose Wodanaz as your hero's major deity. +2 Damage for Skutans, enables Inspire spell for Gudjans. Incompatible with the Thunraz major deity.",
+	ForUnit = {
+		"unit-germanic-worker",
+		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",
+		"unit-germanic-spearman", "unit-germanic-archer",
+		"unit-germanic-priest"
+	}
+})
+  
+DefineButton( { Pos = 10, Level = 0, Icon = "icon-thor",
+	Action = "learn-ability", Value = "upgrade-deity-thor",
+	Key = "t", Hint = "Worship ~!Thunraz", Popup = "popup-research",
+	Description = "Choose Thunraz as your hero's major deity. +2 Damage for Eralas, enables Precision spell for Gudjans. Incompatible with the Wodanaz major deity.",
+	ForUnit = {
+		"unit-germanic-worker",
+		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",
+		"unit-germanic-spearman", "unit-germanic-archer",
+		"unit-germanic-priest"
+	}
+})
+
 -- Upgrades ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 2,
