@@ -118,7 +118,7 @@ function CustomHeroCreationMenu(world, quest_menu)
 			) then
 				table.insert(hero_class_ident_list, unitName)
 				if (GetUnitTypeData(unitName, "Faction") ~= "") then
-					table.insert(hero_class_list, GetUnitTypeData(unitName, "Name") .. " (" .. GetUnitTypeData(unitName, "Faction") .. ")")
+					table.insert(hero_class_list, GetUnitTypeData(unitName, "Name") .. " (" .. GetFactionData(GetUnitTypeData(unitName, "Faction"), "Name") .. ")")
 				else
 					table.insert(hero_class_list, GetUnitTypeData(unitName, "Name"))
 				end
