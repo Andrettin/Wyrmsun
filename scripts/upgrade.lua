@@ -295,7 +295,7 @@ Load("scripts/traits.lua")
 Load("scripts/elixirs.lua")
 Load("scripts/works.lua")
 
-DefineUpgrade("upgrade-deity-character", {
+DefineUpgrade("upgrade-character-deity", {
 	Name = _("Deity Character Upgrade"),
 	Icon = "icon-level-up"
 })
@@ -305,7 +305,7 @@ DefineUpgrade("upgrade-kvasir-character", {
 	Icon = "icon-kvasir"
 })
 
-DefineModifier("upgrade-deity-character",
+DefineModifier("upgrade-character-deity",
 	{"FireResistance", 100},
 	{"ColdResistance", 100},
 	{"ArcaneResistance", 100},

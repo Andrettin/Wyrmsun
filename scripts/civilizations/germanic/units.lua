@@ -436,7 +436,9 @@ DefineUnitType("unit-germanic-spearman", {
 			"item-not-equipped", "unit-iron-shield",
 			"item-not-equipped", "unit-kite-shield",
 			"item-not-equipped", "unit-heater-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
+			"item-not-equipped", "unit-thrymgjol-shield",
+			"item-not-equipped", "unit-goblin-rimmed-shield",
+			"item-not-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "left-arm",
@@ -447,7 +449,9 @@ DefineUnitType("unit-germanic-spearman", {
 			"item-equipped", "unit-heater-shield",
 			"item-equipped", "unit-iron-shield",
 			"item-equipped", "unit-kite-shield",
-			"item-equipped", "unit-thrymgjol-shield"
+			"item-equipped", "unit-thrymgjol-shield",
+			"item-equipped", "unit-goblin-rimmed-shield",
+			"item-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "shield",
@@ -457,7 +461,9 @@ DefineUnitType("unit-germanic-spearman", {
 			"item-not-equipped", "unit-iron-shield",
 			"item-not-equipped", "unit-kite-shield",
 			"item-not-equipped", "unit-heater-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
+			"item-not-equipped", "unit-thrymgjol-shield",
+			"item-not-equipped", "unit-goblin-rimmed-shield",
+			"item-not-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "shield",
@@ -468,7 +474,9 @@ DefineUnitType("unit-germanic-spearman", {
 			"item-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-iron-shield",
 			"item-not-equipped", "unit-kite-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
+			"item-not-equipped", "unit-thrymgjol-shield",
+			"item-not-equipped", "unit-goblin-rimmed-shield",
+			"item-not-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "shield",
@@ -476,7 +484,9 @@ DefineUnitType("unit-germanic-spearman", {
 			"file", "teuton/units/saxon_shield.png",
 			"item-equipped", "unit-iron-shield",
 			"item-equipped", "unit-kite-shield",
-			"item-equipped", "unit-thrymgjol-shield"
+			"item-equipped", "unit-thrymgjol-shield",
+			"item-equipped", "unit-goblin-rimmed-shield",
+			"item-equipped", "unit-goblin-embossed-shield"
 		}
 	},
 	HiddenInEditor = true,

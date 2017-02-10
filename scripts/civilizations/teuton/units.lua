@@ -157,7 +157,9 @@ DefineUnitType("unit-teuton-swordsman", {
 			"item-not-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-iron-shield",
 			"item-not-equipped", "unit-kite-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
+			"item-not-equipped", "unit-thrymgjol-shield",
+			"item-not-equipped", "unit-goblin-rimmed-shield",
+			"item-not-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "left-arm",
@@ -168,7 +170,9 @@ DefineUnitType("unit-teuton-swordsman", {
 			"item-equipped", "unit-heater-shield",
 			"item-equipped", "unit-iron-shield",
 			"item-equipped", "unit-kite-shield",
-			"item-equipped", "unit-thrymgjol-shield"
+			"item-equipped", "unit-thrymgjol-shield",
+			"item-equipped", "unit-goblin-rimmed-shield",
+			"item-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "weapon",
@@ -177,6 +181,9 @@ DefineUnitType("unit-teuton-swordsman", {
 			"upgrade-forbidden", "upgrade-teuton-spatha",
 			"item-not-equipped", "unit-spatha",
 			"item-not-equipped", "unit-frankish-spatha"
+			"item-not-equipped", "unit-goblin-short-sword"
+			"item-not-equipped", "unit-goblin-broad-sword"
+			"item-not-equipped", "unit-goblin-long-sword"
 		},
 		{
 			"layer", "weapon",
@@ -185,6 +192,9 @@ DefineUnitType("unit-teuton-swordsman", {
 			"upgrade-required", "upgrade-teuton-spatha",
 			"item-equipped", "unit-spatha",
 			"item-equipped", "unit-frankish-spatha"
+			"item-equipped", "unit-goblin-short-sword"
+			"item-equipped", "unit-goblin-broad-sword"
+			"item-equipped", "unit-goblin-long-sword"
 		},
 		{
 			"layer", "shield",
@@ -195,7 +205,9 @@ DefineUnitType("unit-teuton-swordsman", {
 			"item-not-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-iron-shield",
 			"item-not-equipped", "unit-kite-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
+			"item-not-equipped", "unit-thrymgjol-shield",
+			"item-not-equipped", "unit-goblin-rimmed-shield",
+			"item-not-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "shield",
@@ -207,7 +219,9 @@ DefineUnitType("unit-teuton-swordsman", {
 			"upgrade-forbidden", "upgrade-teuton-iron-shield",
 			"item-not-equipped", "unit-iron-shield",
 			"item-not-equipped", "unit-kite-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
+			"item-not-equipped", "unit-thrymgjol-shield",
+			"item-not-equipped", "unit-goblin-rimmed-shield",
+			"item-not-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "shield",
@@ -216,7 +230,9 @@ DefineUnitType("unit-teuton-swordsman", {
 			"upgrade-required", "upgrade-teuton-iron-shield",
 			"item-equipped", "unit-iron-shield",
 			"item-equipped", "unit-kite-shield",
-			"item-equipped", "unit-thrymgjol-shield"
+			"item-equipped", "unit-thrymgjol-shield",
+			"item-equipped", "unit-goblin-rimmed-shield",
+			"item-equipped", "unit-goblin-embossed-shield"
 		}
 	},
 	Sounds = {
@@ -296,7 +312,9 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 			"item-not-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-iron-shield",
 			"item-not-equipped", "unit-kite-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
+			"item-not-equipped", "unit-thrymgjol-shield",
+			"item-not-equipped", "unit-goblin-rimmed-shield",
+			"item-not-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "left-arm",
@@ -307,7 +325,9 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 			"item-equipped", "unit-heater-shield",
 			"item-equipped", "unit-iron-shield",
 			"item-equipped", "unit-kite-shield",
-			"item-equipped", "unit-thrymgjol-shield"
+			"item-equipped", "unit-thrymgjol-shield",
+			"item-equipped", "unit-goblin-rimmed-shield",
+			"item-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "weapon",
@@ -316,6 +336,9 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 			"upgrade-forbidden", "upgrade-teuton-spatha",
 			"item-not-equipped", "unit-spatha",
 			"item-not-equipped", "unit-frankish-spatha"
+			"item-not-equipped", "unit-goblin-short-sword"
+			"item-not-equipped", "unit-goblin-broad-sword"
+			"item-not-equipped", "unit-goblin-long-sword"
 		},
 		{
 			"layer", "weapon",
@@ -324,6 +347,9 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 			"upgrade-required", "upgrade-teuton-spatha",
 			"item-equipped", "unit-spatha",
 			"item-equipped", "unit-frankish-spatha"
+			"item-equipped", "unit-goblin-short-sword"
+			"item-equipped", "unit-goblin-broad-sword"
+			"item-equipped", "unit-goblin-long-sword"
 		},
 		{
 			"layer", "shield",
@@ -334,7 +360,9 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 			"item-not-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-iron-shield",
 			"item-not-equipped", "unit-kite-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
+			"item-not-equipped", "unit-thrymgjol-shield",
+			"item-not-equipped", "unit-goblin-rimmed-shield",
+			"item-not-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "shield",
@@ -346,7 +374,9 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 			"upgrade-forbidden", "upgrade-teuton-iron-shield",
 			"item-not-equipped", "unit-iron-shield",
 			"item-not-equipped", "unit-kite-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
+			"item-not-equipped", "unit-thrymgjol-shield",
+			"item-not-equipped", "unit-goblin-rimmed-shield",
+			"item-not-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "shield",
@@ -355,7 +385,9 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 			"upgrade-required", "upgrade-teuton-iron-shield",
 			"item-equipped", "unit-iron-shield",
 			"item-equipped", "unit-kite-shield",
-			"item-equipped", "unit-thrymgjol-shield"
+			"item-equipped", "unit-thrymgjol-shield",
+			"item-equipped", "unit-goblin-rimmed-shield",
+			"item-equipped", "unit-goblin-embossed-shield"
 		}
 	},
 	Sounds = {
@@ -437,7 +469,9 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 			"item-not-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-iron-shield",
 			"item-not-equipped", "unit-kite-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
+			"item-not-equipped", "unit-thrymgjol-shield",
+			"item-not-equipped", "unit-goblin-rimmed-shield",
+			"item-not-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "left-arm",
@@ -448,7 +482,9 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 			"item-equipped", "unit-heater-shield",
 			"item-equipped", "unit-iron-shield",
 			"item-equipped", "unit-kite-shield",
-			"item-equipped", "unit-thrymgjol-shield"
+			"item-equipped", "unit-thrymgjol-shield",
+			"item-equipped", "unit-goblin-rimmed-shield",
+			"item-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "weapon",
@@ -457,6 +493,9 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 			"upgrade-forbidden", "upgrade-teuton-spatha",
 			"item-not-equipped", "unit-spatha",
 			"item-not-equipped", "unit-frankish-spatha"
+			"item-not-equipped", "unit-goblin-short-sword"
+			"item-not-equipped", "unit-goblin-broad-sword"
+			"item-not-equipped", "unit-goblin-long-sword"
 		},
 		{
 			"layer", "weapon",
@@ -465,6 +504,9 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 			"upgrade-required", "upgrade-teuton-spatha",
 			"item-equipped", "unit-spatha",
 			"item-equipped", "unit-frankish-spatha"
+			"item-equipped", "unit-goblin-short-sword"
+			"item-equipped", "unit-goblin-broad-sword"
+			"item-equipped", "unit-goblin-long-sword"
 		},
 		{
 			"layer", "shield",
@@ -475,7 +517,9 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 			"item-not-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-iron-shield",
 			"item-not-equipped", "unit-kite-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
+			"item-not-equipped", "unit-thrymgjol-shield",
+			"item-not-equipped", "unit-goblin-rimmed-shield",
+			"item-not-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "shield",
@@ -487,7 +531,9 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 			"upgrade-forbidden", "upgrade-teuton-iron-shield",
 			"item-not-equipped", "unit-iron-shield",
 			"item-not-equipped", "unit-kite-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
+			"item-not-equipped", "unit-thrymgjol-shield",
+			"item-not-equipped", "unit-goblin-rimmed-shield",
+			"item-not-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "shield",
@@ -496,7 +542,9 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 			"upgrade-required", "upgrade-teuton-iron-shield",
 			"item-equipped", "unit-iron-shield",
 			"item-equipped", "unit-kite-shield",
-			"item-equipped", "unit-thrymgjol-shield"
+			"item-equipped", "unit-thrymgjol-shield",
+			"item-equipped", "unit-goblin-rimmed-shield",
+			"item-equipped", "unit-goblin-embossed-shield"
 		}
 	},
 	Sounds = {
@@ -553,7 +601,9 @@ DefineUnitType("unit-teuton-spearman", {
 			"item-not-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-iron-shield",
 			"item-not-equipped", "unit-kite-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
+			"item-not-equipped", "unit-thrymgjol-shield",
+			"item-not-equipped", "unit-goblin-rimmed-shield",
+			"item-not-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "left-arm",
@@ -564,7 +614,9 @@ DefineUnitType("unit-teuton-spearman", {
 			"item-equipped", "unit-heater-shield",
 			"item-equipped", "unit-iron-shield",
 			"item-equipped", "unit-kite-shield",
-			"item-equipped", "unit-thrymgjol-shield"
+			"item-equipped", "unit-thrymgjol-shield",
+			"item-equipped", "unit-goblin-rimmed-shield",
+			"item-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "shield",
@@ -575,7 +627,9 @@ DefineUnitType("unit-teuton-spearman", {
 			"item-not-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-iron-shield",
 			"item-not-equipped", "unit-kite-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
+			"item-not-equipped", "unit-thrymgjol-shield",
+			"item-not-equipped", "unit-goblin-rimmed-shield",
+			"item-not-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "shield",
@@ -587,7 +641,9 @@ DefineUnitType("unit-teuton-spearman", {
 			"upgrade-forbidden", "upgrade-teuton-iron-shield",
 			"item-not-equipped", "unit-iron-shield",
 			"item-not-equipped", "unit-kite-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
+			"item-not-equipped", "unit-thrymgjol-shield",
+			"item-not-equipped", "unit-goblin-rimmed-shield",
+			"item-not-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "shield",
@@ -596,7 +652,9 @@ DefineUnitType("unit-teuton-spearman", {
 			"upgrade-required", "upgrade-teuton-iron-shield",
 			"item-equipped", "unit-iron-shield",
 			"item-equipped", "unit-kite-shield",
-			"item-equipped", "unit-thrymgjol-shield"
+			"item-equipped", "unit-thrymgjol-shield",
+			"item-equipped", "unit-goblin-rimmed-shield",
+			"item-equipped", "unit-goblin-embossed-shield"
 		}
 	},
 	Sounds = {
