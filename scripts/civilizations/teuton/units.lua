@@ -180,9 +180,9 @@ DefineUnitType("unit-teuton-swordsman", {
 			"file", "germanic/units/broad_bronze_sword.png",
 			"upgrade-forbidden", "upgrade-teuton-spatha",
 			"item-not-equipped", "unit-spatha",
-			"item-not-equipped", "unit-frankish-spatha"
-			"item-not-equipped", "unit-goblin-short-sword"
-			"item-not-equipped", "unit-goblin-broad-sword"
+			"item-not-equipped", "unit-frankish-spatha",
+			"item-not-equipped", "unit-goblin-short-sword",
+			"item-not-equipped", "unit-goblin-broad-sword",
 			"item-not-equipped", "unit-goblin-long-sword"
 		},
 		{
@@ -191,9 +191,9 @@ DefineUnitType("unit-teuton-swordsman", {
 			"file", "teuton/units/long_iron_sword.png",
 			"upgrade-required", "upgrade-teuton-spatha",
 			"item-equipped", "unit-spatha",
-			"item-equipped", "unit-frankish-spatha"
-			"item-equipped", "unit-goblin-short-sword"
-			"item-equipped", "unit-goblin-broad-sword"
+			"item-equipped", "unit-frankish-spatha",
+			"item-equipped", "unit-goblin-short-sword",
+			"item-equipped", "unit-goblin-broad-sword",
 			"item-equipped", "unit-goblin-long-sword"
 		},
 		{
@@ -335,9 +335,9 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 			"file", "germanic/units/broad_bronze_sword.png",
 			"upgrade-forbidden", "upgrade-teuton-spatha",
 			"item-not-equipped", "unit-spatha",
-			"item-not-equipped", "unit-frankish-spatha"
-			"item-not-equipped", "unit-goblin-short-sword"
-			"item-not-equipped", "unit-goblin-broad-sword"
+			"item-not-equipped", "unit-frankish-spatha",
+			"item-not-equipped", "unit-goblin-short-sword",
+			"item-not-equipped", "unit-goblin-broad-sword",
 			"item-not-equipped", "unit-goblin-long-sword"
 		},
 		{
@@ -346,9 +346,9 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 			"file", "teuton/units/long_iron_sword.png",
 			"upgrade-required", "upgrade-teuton-spatha",
 			"item-equipped", "unit-spatha",
-			"item-equipped", "unit-frankish-spatha"
-			"item-equipped", "unit-goblin-short-sword"
-			"item-equipped", "unit-goblin-broad-sword"
+			"item-equipped", "unit-frankish-spatha",
+			"item-equipped", "unit-goblin-short-sword",
+			"item-equipped", "unit-goblin-broad-sword",
 			"item-equipped", "unit-goblin-long-sword"
 		},
 		{
@@ -492,9 +492,9 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 			"file", "germanic/units/broad_bronze_sword.png",
 			"upgrade-forbidden", "upgrade-teuton-spatha",
 			"item-not-equipped", "unit-spatha",
-			"item-not-equipped", "unit-frankish-spatha"
-			"item-not-equipped", "unit-goblin-short-sword"
-			"item-not-equipped", "unit-goblin-broad-sword"
+			"item-not-equipped", "unit-frankish-spatha",
+			"item-not-equipped", "unit-goblin-short-sword",
+			"item-not-equipped", "unit-goblin-broad-sword",
 			"item-not-equipped", "unit-goblin-long-sword"
 		},
 		{
@@ -503,9 +503,9 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 			"file", "teuton/units/long_iron_sword.png",
 			"upgrade-required", "upgrade-teuton-spatha",
 			"item-equipped", "unit-spatha",
-			"item-equipped", "unit-frankish-spatha"
-			"item-equipped", "unit-goblin-short-sword"
-			"item-equipped", "unit-goblin-broad-sword"
+			"item-equipped", "unit-frankish-spatha",
+			"item-equipped", "unit-goblin-short-sword",
+			"item-equipped", "unit-goblin-broad-sword",
 			"item-equipped", "unit-goblin-long-sword"
 		},
 		{

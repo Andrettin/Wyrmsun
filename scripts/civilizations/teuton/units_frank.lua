@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016 by Andrettin
+--      (c) Copyright 2016-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -71,7 +71,9 @@ DefineUnitType("unit-frank-swordsman", {
 			"item-not-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-iron-shield",
 			"item-not-equipped", "unit-kite-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
+			"item-not-equipped", "unit-thrymgjol-shield",
+			"item-not-equipped", "unit-goblin-rimmed-shield",
+			"item-not-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "left-arm",
@@ -82,7 +84,9 @@ DefineUnitType("unit-frank-swordsman", {
 			"item-equipped", "unit-heater-shield",
 			"item-equipped", "unit-iron-shield",
 			"item-equipped", "unit-kite-shield",
-			"item-equipped", "unit-thrymgjol-shield"
+			"item-equipped", "unit-thrymgjol-shield",
+			"item-equipped", "unit-goblin-rimmed-shield",
+			"item-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "weapon",
@@ -90,7 +94,10 @@ DefineUnitType("unit-frank-swordsman", {
 			"file", "germanic/units/broad_bronze_sword.png",
 			"upgrade-forbidden", "upgrade-frank-spatha",
 			"item-not-equipped", "unit-spatha",
-			"item-not-equipped", "unit-frankish-spatha"
+			"item-not-equipped", "unit-frankish-spatha",
+			"item-not-equipped", "unit-goblin-short-sword",
+			"item-not-equipped", "unit-goblin-broad-sword",
+			"item-not-equipped", "unit-goblin-long-sword"
 		},
 		{
 			"layer", "weapon",
@@ -98,7 +105,10 @@ DefineUnitType("unit-frank-swordsman", {
 			"file", "teuton/units/long_iron_sword.png",
 			"upgrade-required", "upgrade-frank-spatha",
 			"item-equipped", "unit-spatha",
-			"item-equipped", "unit-frankish-spatha"
+			"item-equipped", "unit-frankish-spatha",
+			"item-equipped", "unit-goblin-short-sword",
+			"item-equipped", "unit-goblin-broad-sword",
+			"item-equipped", "unit-goblin-long-sword"
 		},
 		{
 			"layer", "shield",
@@ -109,7 +119,9 @@ DefineUnitType("unit-frank-swordsman", {
 			"item-not-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-iron-shield",
 			"item-not-equipped", "unit-kite-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
+			"item-not-equipped", "unit-thrymgjol-shield",
+			"item-not-equipped", "unit-goblin-rimmed-shield",
+			"item-not-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "shield",
@@ -121,7 +133,9 @@ DefineUnitType("unit-frank-swordsman", {
 			"upgrade-forbidden", "upgrade-teuton-iron-shield",
 			"item-not-equipped", "unit-iron-shield",
 			"item-not-equipped", "unit-kite-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
+			"item-not-equipped", "unit-thrymgjol-shield",
+			"item-not-equipped", "unit-goblin-rimmed-shield",
+			"item-not-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "shield",
@@ -130,7 +144,9 @@ DefineUnitType("unit-frank-swordsman", {
 			"upgrade-required", "upgrade-teuton-iron-shield",
 			"item-equipped", "unit-iron-shield",
 			"item-equipped", "unit-kite-shield",
-			"item-equipped", "unit-thrymgjol-shield"
+			"item-equipped", "unit-thrymgjol-shield",
+			"item-equipped", "unit-goblin-rimmed-shield",
+			"item-equipped", "unit-goblin-embossed-shield"
 		}
 	}
 } )
@@ -175,7 +191,9 @@ DefineUnitType("unit-frank-veteran-swordsman", {
 			"item-not-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-iron-shield",
 			"item-not-equipped", "unit-kite-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
+			"item-not-equipped", "unit-thrymgjol-shield",
+			"item-not-equipped", "unit-goblin-rimmed-shield",
+			"item-not-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "left-arm",
@@ -186,7 +204,9 @@ DefineUnitType("unit-frank-veteran-swordsman", {
 			"item-equipped", "unit-heater-shield",
 			"item-equipped", "unit-iron-shield",
 			"item-equipped", "unit-kite-shield",
-			"item-equipped", "unit-thrymgjol-shield"
+			"item-equipped", "unit-thrymgjol-shield",
+			"item-equipped", "unit-goblin-rimmed-shield",
+			"item-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "weapon",
@@ -194,7 +214,10 @@ DefineUnitType("unit-frank-veteran-swordsman", {
 			"file", "germanic/units/broad_bronze_sword.png",
 			"upgrade-forbidden", "upgrade-frank-spatha",
 			"item-not-equipped", "unit-spatha",
-			"item-not-equipped", "unit-frankish-spatha"
+			"item-not-equipped", "unit-frankish-spatha",
+			"item-not-equipped", "unit-goblin-short-sword",
+			"item-not-equipped", "unit-goblin-broad-sword",
+			"item-not-equipped", "unit-goblin-long-sword"
 		},
 		{
 			"layer", "weapon",
@@ -202,7 +225,10 @@ DefineUnitType("unit-frank-veteran-swordsman", {
 			"file", "teuton/units/long_iron_sword.png",
 			"upgrade-required", "upgrade-frank-spatha",
 			"item-equipped", "unit-spatha",
-			"item-equipped", "unit-frankish-spatha"
+			"item-equipped", "unit-frankish-spatha",
+			"item-equipped", "unit-goblin-short-sword",
+			"item-equipped", "unit-goblin-broad-sword",
+			"item-equipped", "unit-goblin-long-sword"
 		},
 		{
 			"layer", "shield",
@@ -213,7 +239,9 @@ DefineUnitType("unit-frank-veteran-swordsman", {
 			"item-not-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-iron-shield",
 			"item-not-equipped", "unit-kite-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
+			"item-not-equipped", "unit-thrymgjol-shield",
+			"item-not-equipped", "unit-goblin-rimmed-shield",
+			"item-not-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "shield",
@@ -225,7 +253,9 @@ DefineUnitType("unit-frank-veteran-swordsman", {
 			"upgrade-forbidden", "upgrade-teuton-iron-shield",
 			"item-not-equipped", "unit-iron-shield",
 			"item-not-equipped", "unit-kite-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
+			"item-not-equipped", "unit-thrymgjol-shield",
+			"item-not-equipped", "unit-goblin-rimmed-shield",
+			"item-not-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "shield",
@@ -234,7 +264,9 @@ DefineUnitType("unit-frank-veteran-swordsman", {
 			"upgrade-required", "upgrade-teuton-iron-shield",
 			"item-equipped", "unit-iron-shield",
 			"item-equipped", "unit-kite-shield",
-			"item-equipped", "unit-thrymgjol-shield"
+			"item-equipped", "unit-thrymgjol-shield",
+			"item-equipped", "unit-goblin-rimmed-shield",
+			"item-equipped", "unit-goblin-embossed-shield"
 		}
 	}
 })
@@ -279,7 +311,9 @@ DefineUnitType("unit-frank-heroic-swordsman", {
 			"item-not-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-iron-shield",
 			"item-not-equipped", "unit-kite-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
+			"item-not-equipped", "unit-thrymgjol-shield",
+			"item-not-equipped", "unit-goblin-rimmed-shield",
+			"item-not-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "left-arm",
@@ -290,7 +324,9 @@ DefineUnitType("unit-frank-heroic-swordsman", {
 			"item-equipped", "unit-heater-shield",
 			"item-equipped", "unit-iron-shield",
 			"item-equipped", "unit-kite-shield",
-			"item-equipped", "unit-thrymgjol-shield"
+			"item-equipped", "unit-thrymgjol-shield",
+			"item-equipped", "unit-goblin-rimmed-shield",
+			"item-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "weapon",
@@ -298,7 +334,10 @@ DefineUnitType("unit-frank-heroic-swordsman", {
 			"file", "germanic/units/broad_bronze_sword.png",
 			"upgrade-forbidden", "upgrade-frank-spatha",
 			"item-not-equipped", "unit-spatha",
-			"item-not-equipped", "unit-frankish-spatha"
+			"item-not-equipped", "unit-frankish-spatha",
+			"item-not-equipped", "unit-goblin-short-sword",
+			"item-not-equipped", "unit-goblin-broad-sword",
+			"item-not-equipped", "unit-goblin-long-sword"
 		},
 		{
 			"layer", "weapon",
@@ -306,7 +345,10 @@ DefineUnitType("unit-frank-heroic-swordsman", {
 			"file", "teuton/units/long_iron_sword.png",
 			"upgrade-required", "upgrade-frank-spatha",
 			"item-equipped", "unit-spatha",
-			"item-equipped", "unit-frankish-spatha"
+			"item-equipped", "unit-frankish-spatha",
+			"item-equipped", "unit-goblin-short-sword",
+			"item-equipped", "unit-goblin-broad-sword",
+			"item-equipped", "unit-goblin-long-sword"
 		},
 		{
 			"layer", "shield",
@@ -317,7 +359,9 @@ DefineUnitType("unit-frank-heroic-swordsman", {
 			"item-not-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-iron-shield",
 			"item-not-equipped", "unit-kite-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
+			"item-not-equipped", "unit-thrymgjol-shield",
+			"item-not-equipped", "unit-goblin-rimmed-shield",
+			"item-not-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "shield",
@@ -329,7 +373,9 @@ DefineUnitType("unit-frank-heroic-swordsman", {
 			"upgrade-forbidden", "upgrade-teuton-iron-shield",
 			"item-not-equipped", "unit-iron-shield",
 			"item-not-equipped", "unit-kite-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
+			"item-not-equipped", "unit-thrymgjol-shield",
+			"item-not-equipped", "unit-goblin-rimmed-shield",
+			"item-not-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "shield",
@@ -338,7 +384,9 @@ DefineUnitType("unit-frank-heroic-swordsman", {
 			"upgrade-required", "upgrade-teuton-iron-shield",
 			"item-equipped", "unit-iron-shield",
 			"item-equipped", "unit-kite-shield",
-			"item-equipped", "unit-thrymgjol-shield"
+			"item-equipped", "unit-thrymgjol-shield",
+			"item-equipped", "unit-goblin-rimmed-shield",
+			"item-equipped", "unit-goblin-embossed-shield"
 		}
 	}
 })
@@ -395,7 +443,9 @@ DefineUnitType("unit-frank-spearman", {
 			"item-not-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-iron-shield",
 			"item-not-equipped", "unit-kite-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
+			"item-not-equipped", "unit-thrymgjol-shield",
+			"item-not-equipped", "unit-goblin-rimmed-shield",
+			"item-not-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "left-arm",
@@ -406,7 +456,9 @@ DefineUnitType("unit-frank-spearman", {
 			"item-equipped", "unit-heater-shield",
 			"item-equipped", "unit-iron-shield",
 			"item-equipped", "unit-kite-shield",
-			"item-equipped", "unit-thrymgjol-shield"
+			"item-equipped", "unit-thrymgjol-shield",
+			"item-equipped", "unit-goblin-rimmed-shield",
+			"item-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "shield",
@@ -417,7 +469,9 @@ DefineUnitType("unit-frank-spearman", {
 			"item-not-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-iron-shield",
 			"item-not-equipped", "unit-kite-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
+			"item-not-equipped", "unit-thrymgjol-shield",
+			"item-not-equipped", "unit-goblin-rimmed-shield",
+			"item-not-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "shield",
@@ -429,7 +483,9 @@ DefineUnitType("unit-frank-spearman", {
 			"upgrade-forbidden", "upgrade-teuton-iron-shield",
 			"item-not-equipped", "unit-iron-shield",
 			"item-not-equipped", "unit-kite-shield",
-			"item-not-equipped", "unit-thrymgjol-shield"
+			"item-not-equipped", "unit-thrymgjol-shield",
+			"item-not-equipped", "unit-goblin-rimmed-shield",
+			"item-not-equipped", "unit-goblin-embossed-shield"
 		},
 		{
 			"layer", "shield",
@@ -438,7 +494,9 @@ DefineUnitType("unit-frank-spearman", {
 			"upgrade-required", "upgrade-teuton-iron-shield",
 			"item-equipped", "unit-iron-shield",
 			"item-equipped", "unit-kite-shield",
-			"item-equipped", "unit-thrymgjol-shield"
+			"item-equipped", "unit-thrymgjol-shield",
+			"item-equipped", "unit-goblin-rimmed-shield",
+			"item-equipped", "unit-goblin-embossed-shield"
 		}
 	}
 } )
