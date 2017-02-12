@@ -91,6 +91,7 @@ https://github.com/Andrettin/Wyrmsun
 - Cold damage now has a small chance to cause slow status on organic units.
 - Lightning damage now has a small chance to cause stun status on organic units.
 - Implemented religion system, with players being able to choose a deity or religion at the temple building.
+- Added extra check regarding whether fullscreen is available for a particular resolution in the player's setup.
 
 * Scenarios
 - Added Karla and Thrahila as heroes to their respective tribes for the Haimdala's Progeny scenario.
