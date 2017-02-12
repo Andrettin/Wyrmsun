@@ -170,6 +170,34 @@ DefineFaction("italy", {
 	DefaultTier = "kingdom"
 })
 
+DefineFaction("florence", {
+	Name = "Florence",
+	Civilization = "latin",
+	Type = "polity",
+	ParentFaction = "italy",
+	Colors = {"orange"},
+	DefaultTier = "duchy"
+})
+
+DefineFaction("milan", {
+	Name = "Milan",
+	Civilization = "latin",
+	Type = "polity",
+	ParentFaction = "italy",
+	Colors = {"orange"},
+	DefaultTier = "duchy"
+})
+
+DefineFaction("papal-states", {
+	Name = "Papal States",
+	Civilization = "latin",
+	Type = "polity",
+	ParentFaction = "italy",
+	Colors = {"brown"},
+	DefaultTier = "kingdom",
+	DefaultStartPos = {4126, 1096} -- Rome
+})
+
 DefineFaction("portugal", {
 	Name = "Portugal",
 	Civilization = "latin",
@@ -243,6 +271,15 @@ DefineFaction("savoy", {
 
 DefineFaction("sicily", {
 	Name = "Sicily",
+	Civilization = "latin",
+	Type = "polity",
+	ParentFaction = "italy",
+	Colors = {"green"},
+	DefaultTier = "duchy"
+})
+
+DefineFaction("siena", {
+	Name = "Siena",
 	Civilization = "latin",
 	Type = "polity",
 	ParentFaction = "italy",

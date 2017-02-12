@@ -41,6 +41,94 @@ DefineSettlement("aquileia", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
+DefineSettlement("bologna", {
+	Name = "Bologna",
+	MapTemplate = "earth",
+	Position = {4096, 1034},
+	CulturalNames = {
+		"latin", "Bononia" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+	},
+	HistoricalOwners = {
+		-189, "rome", -- Bononia founded as a colony in 189 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+		1494, "papal-states" -- Bologna was a Papal possession about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+	},
+	HistoricalBuildings = {
+		-189, 0, "unit-latin-farm"
+	},
+	Regions = {"europe", "italy", "west-and-central-europe"}
+})
+
+DefineSettlement("brindisi", {
+	Name = "Brindisi",
+	MapTemplate = "earth",
+	Position = {4245, 1123},
+	CulturalNames = {
+		"latin", "Brundisium" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	HistoricalOwners = {
+		-161, "rome", -- Brundisium was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		1494, "sicily" -- Brindisi was a possession of the Kingdom of the Two Sicilies about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+	},
+	HistoricalBuildings = {
+		-161, 0, "unit-latin-farm"
+	},
+	Regions = {"europe", "italy", "west-and-central-europe"}
+})
+
+DefineSettlement("florence", {
+	Name = "Florence",
+	MapTemplate = "earth",
+	Position = {4095, 1054},
+	CulturalNames = {
+		"latin", "Florentia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	HistoricalOwners = {
+		-161, "rome", -- Florentia was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		1494, "florence" -- Florence was a possession of the Republic of Florence about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+	},
+	HistoricalBuildings = {
+		-161, 1494, "unit-latin-farm",
+		1494, 0, "unit-latin-town-hall"
+	},
+	Regions = {"europe", "italy", "west-and-central-europe"}
+})
+
+DefineSettlement("milan", {
+	Name = "Milan",
+	MapTemplate = "earth",
+	Position = {4049, 1013},
+	CulturalNames = {
+		"latin", "Mediolanum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	HistoricalOwners = {
+		-161, "rome", -- Mediolanum was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		1494, "milan" -- Milan was a possession of the Duchy of Milan about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+	},
+	HistoricalBuildings = {
+		-161, 1494, "unit-latin-farm",
+		1494, 0, "unit-latin-town-hall"
+	},
+	Regions = {"europe", "italy", "west-and-central-europe"}
+})
+
+DefineSettlement("naples", {
+	Name = "Naples",
+	MapTemplate = "earth",
+	Position = {4163, 1117},
+	CulturalNames = {
+		"latin", "Neapolis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	HistoricalOwners = {
+		-161, "rome", -- Neapolis was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		1494, "sicily" -- Naples was a possession of the Kingdom of the Two Sicilies about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+	},
+	HistoricalBuildings = {
+		-161, 1494, "unit-latin-farm",
+		1494, 0, "unit-latin-town-hall"
+	},
+	Regions = {"europe", "italy", "west-and-central-europe"}
+})
+
 DefineSettlement("opitergium", {
 	Name = "Opitergium",
 	MapTemplate = "earth",
@@ -53,6 +141,69 @@ DefineSettlement("opitergium", {
 	},
 	HistoricalBuildings = {
 		161, 1815, "unit-latin-town-hall"
+	},
+	Regions = {"europe", "italy", "west-and-central-europe"}
+})
+
+DefineSettlement("paestum", {
+	Name = "Paestum",
+	MapTemplate = "earth",
+	Position = {4181, 1127},
+	CulturalNames = {
+		"latin", "Paestum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+	},
+	HistoricalOwners = {
+		-273, "rome" -- Paestum founded as a colony in 273 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+	},
+	HistoricalBuildings = {
+		-273, 1494, "unit-latin-farm"
+	},
+	Regions = {"europe", "italy", "west-and-central-europe"}
+})
+
+DefineSettlement("ravenna", {
+	Name = "Ravenna",
+	MapTemplate = "earth",
+	Position = {4114, 1035},
+	CulturalNames = {
+		"latin", "Ravenna" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	HistoricalOwners = {
+		-161, "rome", -- Ravenna was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		526, "ostrogothia", -- Ravenna was a part of the Kingdom of the Ostrogoths in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		1494, "papal-states" -- Ravenna was a Papal possession about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+	},
+	HistoricalBuildings = {
+		-161, 526, "unit-latin-farm",
+		526, 1494, "unit-teuton-town-hall",
+		1494, 0, "unit-latin-farm"
+	},
+	Regions = {"europe", "italy", "west-and-central-europe"}
+})
+
+DefineSettlement("rome", {
+	Name = "Rome",
+	MapTemplate = "earth",
+	Position = {4126, 1096},
+	CulturalNames = {
+		"latin", "Rome"
+	},
+	HistoricalOwners = {
+		-750, "latin-tribe", -- Latins present in Latium by 750-625 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-500, "rome", -- Rome had been founded and was independent by 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+		526, "ostrogothia", -- Rome was a part of the Kingdom of the Ostrogoths in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		1494, "papal-states" -- Rome was a Papal possession about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+	},
+	HistoricalBuildings = {
+		-750, 526, "unit-latin-town-hall",
+		-40, 526, "unit-teuton-temple", -- Temple of Jupiter Capitolinus, Temple of Jupiter Victor, Temple of Vesta, Temple of Fortunus and Temple of Aesculapius existed in Rome in c. 40 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 22-23.
+		-40, 526, "unit-teuton-dock", -- Shipyards ("Navalia") existed in Rome in c. 40 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 22-23.
+		526, 1494, "unit-teuton-town-hall",
+		526, 1494, "unit-teuton-temple",
+		526, 1494, "unit-teuton-dock",
+		1494, 0, "unit-latin-town-hall",
+		1494, 0, "unit-teuton-temple",
+		1494, 0, "unit-teuton-dock"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })

@@ -200,7 +200,8 @@ DefineUpgrade("upgrade-deity-domain-warfare", {
 -- Christianity
 
 DefineUpgrade("upgrade-deity-christian-god", {
-	Name = "Christian God",
+--	Name = "Christian God",
+	Name = "Christianity",
 	Icon = "icon-christianity",
 	Costs = {"time", 120, "copper", 750}
 })

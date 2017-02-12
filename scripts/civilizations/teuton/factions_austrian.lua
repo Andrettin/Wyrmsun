@@ -31,6 +31,7 @@ DefineFaction("austria", {
 	Type = "polity",
 	Colors = {"white", "red"},
 	DefaultTier = "duchy",
+	DefaultStartPos = {4212, 952}, -- Vienna
 	FactionUpgrade = "upgrade-faction-austria",
 	Titles = {
 		"monarchy", "grand-duchy", "Archduchy"
