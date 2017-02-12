@@ -27,24 +27,10 @@
 
 SetMapTemplateResource("earth", "unit-gold-deposit", {4110, 819}) -- Amber; Source: "Atlas de História Mundial", 2001, p. 89.
 
--- Augsburg
-SetMapTemplateCulturalSettlementName("earth", "Augusta Vindelicorum", {4090, 942}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-SetMapTemplateCulturalSettlementName("earth", "Augsburg", {4090, 942}, "teuton") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4090, 942}, 170, 172) -- the Raetian provincial capital at Augsburg was destroyed during the First Marcomannic War in c. 172; it likely existed at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
-
 -- Bernstorf (Bavaria)
 SetMapTemplateCulturalSettlementName("earth", "Bernstorf", {4104, 946}, "teuton")
 SetMapTemplateUnit("earth", "unit-germanic-town-hall", "celtic-cimmerian-tribe", {4104, 946}, -1600, -1400)
 SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "celtic-cimmerian-tribe", {4104, 946}, -1600, -1400) -- a fortified settlement existed c. 1600-1400 BC in Bernstorf (Bavaria); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 29.
-
--- Cologne / Colonia Agrippina
-SetMapTemplateCulturalSettlementName("earth", "Colonia Agrippina", {3998, 887}, "latin")
-SetMapTemplateCulturalSettlementName("earth", "Cologne", {3998, 887}, "teuton")
-SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {3998, 887}, -50, 161) -- Gaul (where Colonia Agrippina was located) was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {3998, 887}, 161, 486) -- Legionary base present in a location near Colonia Agrippina in 161-180 AD; Colonia Agrippina was a Roman provincial capital in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
--- Cologne was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "francia", {3998, 887}, 486, 561) -- Cologne was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "austrasia", {3998, 887}, 561) -- Colonia Agrippina went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
 -- Eining
 SetMapTemplateCulturalSettlementName("earth", "Eining", {4104, 936}, "teuton")
@@ -58,16 +44,6 @@ SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "francia", {4043, 879}, 7
 -- in c. 1800 BC a barrow was built near Helmsdorf (in Saxo-Thuringia in central Germany); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 23.
 
 -- Kiel
-SetMapTemplateCulturalSettlementName("earth", "Kiel", {4069, 811}, "teuton")
-SetMapTemplateUnit("earth", "unit-germanic-town-hall", "hersing-tribe", {4069, 811}, -1600, -1599) -- Hersir's tribe, from the Norse myth of Rig; in the myths, there was a boggy ground between Jarl's hall and that of Hersir
-SetMapTemplateUnit("earth", "unit-germanic-farm", "hersing-tribe", {4069, 811}, -1600, -1599)
-SetMapTemplateUnit("earth", "unit-germanic-farm", "hersing-tribe", {4069, 811}, -1600, -1599)
-SetMapTemplateUnit("earth", "unit-germanic-farm", "hersing-tribe", {4069, 811}, -1600, -1599)
-SetMapTemplateUnit("earth", "unit-germanic-barracks", "hersing-tribe", {4069, 811}, -1600, -1599)
-SetMapTemplateUnit("earth", "unit-germanic-smithy", "hersing-tribe", {4069, 811}, -1600, -1599)
-SetMapTemplateUnit("earth", "unit-germanic-carpenters-shop", "hersing-tribe", {4069, 811}, -1600, -1599)
-SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "hersing-tribe", {4069, 811}, -1600, -1599)
-SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "hersing-tribe", {4069, 811}, -1600, -1599)
 SetMapTemplateUnit("earth", "unit-germanic-warrior", "hersing-tribe", {4069, 811}, -1600, -1599)
 SetMapTemplateUnit("earth", "unit-germanic-warrior", "hersing-tribe", {4069, 811}, -1600, -1599)
 SetMapTemplateUnit("earth", "unit-germanic-warrior", "hersing-tribe", {4069, 811}, -1600, -1599)
@@ -103,10 +79,6 @@ SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "austrasia", {4029, 911},
 SetMapTemplateUnit("earth", "unit-germanic-town-hall", "celtic-cimmerian-tribe", {4101, 882}, -1600, -1599)
 SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "celtic-cimmerian-tribe", {4101, 882}, -1600, -1599) -- the fortified settlement of Mittelberg (near Nebra) existed in 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 27.
 
--- Nuremberg
-SetMapTemplateCulturalSettlementName("earth", "Nuremberg", {4087, 930}, "teuton") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-SetMapTemplateUnit("earth", "unit-teuton-town-hall", "hermunduri-tribe", {4087, 930}, 161) -- the Hermunduri inhabited the area immediately north of the Danube in Bavaria, in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
-
 -- Paderborn
 SetMapTemplateCulturalSettlementName("earth", "Paderborn", {4033, 873}, "teuton")
 --SetMapTemplateLayerConnector("earth", "unit-portal", {4033, 873}, "Nidavellir") -- Gnitaheith (where Fafnir dwelled) has been identified with a real location south of Paderborn, so place a portal to Nidavellir there; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 343.
@@ -127,13 +99,6 @@ SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4124, 934}, 170, 172)
 -- Syburg
 SetMapTemplateCulturalSettlementName("earth", "Syburg", {4019, 876}, "teuton")
 SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "francia", {4019, 876}, 775) -- a Frankish garrison was established by Charlemagne in Syburg in 775; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 604.
-
--- Trier / Trèves / Treveri
-SetMapTemplateCulturalSettlementName("earth", "Trier", {3993, 917}, "teuton")
-SetMapTemplateFactionCulturalSettlementName("earth", "Treves", {3993, 917}, "france") -- "Trèves"
-SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {3993, 917}, 395, 486) -- Trèves was a part of the Roman Empire and was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-SetMapTemplateUnit("earth", "unit-teuton-temple", "francia", {3993, 917}, 486, 561) -- Trèves was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-SetMapTemplateUnit("earth", "unit-teuton-temple", "austrasia", {3993, 917}, 561) -- Treveri went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
 -- Worms / Borbetomagus
 SetMapTemplateCulturalSettlementName("earth", "Borbetomagus", {4033, 920}, "latin")

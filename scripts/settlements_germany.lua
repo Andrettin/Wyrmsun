@@ -25,6 +25,53 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSettlement("augsburg", {
+	Name = "Augsburg",
+	MapTemplate = "earth",
+	Position = {4090, 942},
+	CulturalNames = {
+		"latin", "Augusta Vindelicorum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		"teuton", "Augsburg" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalOwners = {
+		170, "rome", -- the Raetian provincial capital at Augsburg was destroyed during the First Marcomannic War in c. 172; it likely existed at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
+		172, "",
+		1815, "bavaria" -- Augsburg was a possession of the Kingdom of Bavaria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		170, 172, "unit-latin-town-hall",
+		1815, 0, "unit-teuton-town-hall"
+	},
+	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
+})
+
+DefineSettlement("cologne", {
+	Name = "Cologne",
+	MapTemplate = "earth",
+	Position = {3998, 887},
+	CulturalNames = {
+		"latin", "Colonia Agrippina",
+		"teuton", "Cologne"
+	},
+	HistoricalOwners = {
+		-50, "rome", -- Gaul (where Colonia Agrippina was located) was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		486, "francia", -- Cologne was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		561, "austrasia", -- Colonia Agrippina went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+		1815, "prussia" -- Cologne was a possession of the Kingdom of Prussia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		-50, 161, "unit-latin-farm",
+		161, 486, "unit-latin-town-hall", -- Colonia Agrippina was a Roman provincial capital in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, 486, "unit-teuton-guard-tower", -- Legionary base present in a location near Colonia Agrippina in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		395, 486, "unit-teuton-temple", -- Cologne was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		486, 1815, "unit-teuton-town-hall",
+		486, 1815, "unit-teuton-temple",
+		1815, 0, "unit-teuton-stronghold", -- Cologne possessed a fortress in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		1815, 0, "unit-teuton-temple"
+	},
+	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
+})
+
 DefineSettlement("flensburg", {
 	Name = "Flensburg",
 	MapTemplate = "earth",
@@ -40,6 +87,49 @@ DefineSettlement("flensburg", {
 		-264, 0, "unit-teuton-town-hall"
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+})
+
+DefineSettlement("kiel", {
+	Name = "Kiel",
+	MapTemplate = "earth",
+	Position = {4069, 811},
+	CulturalNames = {
+		"teuton", "Kiel"
+	},
+	HistoricalOwners = {
+		-1600, "hersing-tribe", -- Hersir's tribe, from the Norse myth of Rig; in the myths, there was a boggy ground between Jarl's hall and that of Hersir
+		1815, "denmark" -- Kiel was a possession of the Kingdom of Denmark in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		-1600, 1815, "unit-germanic-town-hall",
+		-1600, 1815, "unit-germanic-farm",
+		-1600, 1815, "unit-germanic-farm",
+		-1600, 1815, "unit-germanic-farm",
+		-1600, 1815, "unit-germanic-barracks",
+		-1600, 1815, "unit-germanic-smithy",
+		-1600, 1815, "unit-germanic-carpenters-shop",
+		-1600, 1815, "unit-teuton-watch-tower",
+		-1600, 1815, "unit-teuton-watch-tower",
+		1815, 0, "unit-teuton-town-hall"
+	},
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+})
+
+DefineSettlement("nuremberg", {
+	Name = "Nuremberg",
+	MapTemplate = "earth",
+	Position = {4087, 930},
+	CulturalNames = {
+		"teuton", "Nuremberg" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalOwners = {
+		161, "hermunduri-tribe", -- the Hermunduri inhabited the area immediately north of the Danube in Bavaria, in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		1815, "bavaria" -- Nuremberg was a possession of the Kingdom of Bavaria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		161, 0, "unit-teuton-town-hall"
+	},
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
 DefineSettlement("regensburg", {
@@ -62,5 +152,25 @@ DefineSettlement("regensburg", {
 		175, 526, "unit-teuton-guard-tower", -- The Legio III Italica began building in 175 the fortress of Castra Regina near where the Regensburg-Kumpfmühl camp had been; Source: "Ancient Warfare VII.6", 2013, p. 25.
 		526, 0, "unit-teuton-town-hall"
 	},
-	Regions = {"europe", "west-and-central-europe", "roman-danube", "germany-netherlands"}
+	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
+})
+
+DefineSettlement("trier", {
+	Name = "Trier",
+	MapTemplate = "earth",
+	Position = {3993, 917},
+	CulturalNames = {
+--		"french", "Treves", -- "Trèves"
+		"teuton", "Trier"
+	},
+	HistoricalOwners = {
+		395, "rome", -- Trèves was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		486, "francia", -- Trèves was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		561, "austrasia", -- Treveri went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+		1815, "prussia" -- Trier was a possession of the Kingdom of Prussia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		395, 0, "unit-teuton-temple" -- Trèves was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+	},
+	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
 })

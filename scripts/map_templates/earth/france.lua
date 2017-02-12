@@ -106,15 +106,6 @@ SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {3947, 1006}, 395, 486
 SetMapTemplateUnit("earth", "unit-teuton-temple", "burgundy", {3947, 1006}, 486, 561) -- Lyon was a part of the Kingdom of the Burgundians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "burgundia", {3947, 1006}, 561) -- Lugdunum went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
--- Marseilles / Massilia
-SetMapTemplateCulturalSettlementName("earth", "Massilia", {3962, 1062}, "latin") -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-SetMapTemplateFactionCulturalSettlementName("earth", "Marseilles", {3962, 1062}, "france")
-SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {3962, 1062}, 161, 395) -- Massilia was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
-SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {3962, 1062}, 395, 480) -- Marseilles was a part of the Roman Empire and was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-SetMapTemplateUnit("earth", "unit-teuton-temple", "visigothia", {3962, 1062}, 480, 526) -- Marseilles became a part of the Kingdom of the Visigoths in 480; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-SetMapTemplateUnit("earth", "unit-teuton-temple", "ostrogothia", {3962, 1062}, 526, 561) -- Marseilles was a part of the Kingdom of the Ostrogoths in 526; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-SetMapTemplateUnit("earth", "unit-teuton-temple", "austrasia", {3962, 1062}, 561) -- Massilia went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-
 -- Metz / Mettis
 SetMapTemplateFactionCulturalSettlementName("earth", "Metz", {3981, 931}, "france")
 SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {3981, 931}, 395, 486) -- Metz was a part of the Roman Empire and was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
@@ -135,12 +126,6 @@ SetMapTemplateUnit("earth", "unit-teuton-temple", "neustria", {3804, 972}, 561) 
 SetMapTemplateFactionCulturalSettlementName("earth", "Narbonne", {3914, 1063}, "france")
 SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {3914, 1063}, 395, 486) -- Narbonne was a part of the Roman Empire and was the seat of a metropolitanate (archbishopric) in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "visigothia", {3914, 1063}, 486) -- Narbonne was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-
--- Nice / Nicaea
-SetMapTemplateFactionCulturalSettlementName("earth", "Nice", {4006, 1052}, "france")
-SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {4006, 1052}, 395, 526) -- Nicaea was a part of the Roman Empire and was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-SetMapTemplateUnit("earth", "unit-teuton-temple", "ostrogothia", {4006, 1052}, 526, 561) -- Marseilles was a part of the Kingdom of the Ostrogoths in 526; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-SetMapTemplateUnit("earth", "unit-teuton-temple", "burgundia", {4006, 1052}, 561) -- Nicea went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
 -- Orléans / Aurehani
 SetMapTemplateFactionCulturalSettlementName("earth", "Orleans", {3884, 961}, "france") -- "Orléans"
@@ -215,10 +200,6 @@ SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {3969, 948}, 395, 486)
 SetMapTemplateUnit("earth", "unit-teuton-temple", "francia", {3969, 948}, 486, 561) -- Toul's area was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "austrasia", {3969, 948}, 561) -- Toul's area went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
--- Toulon / Tolo
-SetMapTemplateFactionCulturalSettlementName("earth", "Toulon", {3974, 1065}, "france")
-SetMapTemplateUnit("earth", "unit-teuton-farm", "burgundia", {3974, 1065}, 561) -- Tolo went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-
 -- Toulouse / Tolosa
 SetMapTemplateCulturalSettlementName("earth", "Tolosa", {3867, 1048}, "latin") -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 SetMapTemplateFactionCulturalSettlementName("earth", "Toulouse", {3867, 1048}, "france")
@@ -257,9 +238,3 @@ SetMapTemplateFactionCulturalSettlementName("earth", "Verdun", {3957, 927}, "fra
 SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {3957, 927}, 395, 486) -- Verdun was a part of the Roman Empire and was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "francia", {3957, 927}, 486, 561) -- Verdun's area was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "austrasia", {3957, 927}, 561) -- Verdun's area went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-
--- Vienne
-SetMapTemplateFactionCulturalSettlementName("earth", "Vienne", {3959, 1012}, "france")
-SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {3959, 1012}, 395, 486) -- Vienne was a part of the Roman Empire and was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-SetMapTemplateUnit("earth", "unit-teuton-temple", "burgundy", {3959, 1012}, 486, 561) -- Vienne was a part of the Kingdom of the Burgundians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-SetMapTemplateUnit("earth", "unit-teuton-temple", "burgundia", {3959, 1012}, 561) -- Vienne's area went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.

@@ -1680,7 +1680,6 @@ DefineCivilization("teuton", {
 		"Kreuztal",
 		"Kronstadt",
 		"Kufstein",
-		"Laibach", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 		"Lemberg",
 		"Leopoldstadt",
 		"Luxemburg",

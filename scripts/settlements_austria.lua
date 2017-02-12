@@ -113,7 +113,7 @@ DefineSettlement("ljubljana", {
 	Position = {4170, 1000},
 	CulturalNames = {
 		"slav", "Ljubljana",
-		"teuton", "Laibach"
+		"teuton", "Laibach" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalOwners = {
 		1815, "austria" -- Laibach was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
