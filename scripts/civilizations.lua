@@ -1657,7 +1657,6 @@ DefineCivilization("teuton", {
 		"Gänserndorf",
 		"Glurns",
 		"Görz",
-		"Graz", -- from the same Slavic root as "Grad"
 		"Hals",
 		"Halsbrücke",
 		"Halsdorf",
@@ -1671,7 +1670,6 @@ DefineCivilization("teuton", {
 		"Josefstadt",
 		"Kaiserslautern",
 		"Karlsbad",
-		"Klagenfurt",
 		"Klausenburg",
 		"Klosterneuburg",
 		"Kolberg",
@@ -1686,7 +1684,6 @@ DefineCivilization("teuton", {
 		"Laibach", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 		"Lemberg",
 		"Leopoldstadt",
-		"Linz",
 		"Luxemburg",
 		"Magdeburg",
 		"Mannheim",

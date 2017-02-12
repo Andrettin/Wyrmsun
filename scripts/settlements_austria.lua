@@ -43,6 +43,87 @@ DefineSettlement("carnuntum", {
 	Regions = {"europe", "west-and-central-europe", "roman-danube", "germany-netherlands", "cisleithania"}
 })
 
+DefineSettlement("graz", {
+	Name = "Graz",
+	MapTemplate = "earth",
+	Position = {4190, 981},
+	CulturalNames = {
+		"teuton", "Graz" -- from the same Slavic root as "Grad"
+	},
+	HistoricalOwners = {
+		1815, "austria" -- Graz was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		1815, 0, "unit-teuton-town-hall"
+	},
+	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
+})
+
+DefineSettlement("innsbruck", {
+	Name = "Innsbruck",
+	MapTemplate = "earth",
+	Position = {4102, 972},
+	CulturalNames = {
+		"teuton", "Innsbruck"
+	},
+	HistoricalOwners = {
+		1815, "austria" -- Innsbruck was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		1815, 0, "unit-teuton-town-hall"
+	},
+	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
+})
+
+DefineSettlement("klagenfurt", {
+	Name = "Klagenfurt",
+	MapTemplate = "earth",
+	Position = {4166, 987},
+	CulturalNames = {
+		"teuton", "Klagenfurt"
+	},
+	HistoricalOwners = {
+		1815, "austria" -- Klagenfurt was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		1815, 0, "unit-teuton-town-hall"
+	},
+	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
+})
+
+DefineSettlement("linz", {
+	Name = "Linz",
+	MapTemplate = "earth",
+	Position = {4162, 949},
+	CulturalNames = {
+		"teuton", "Linz"
+	},
+	HistoricalOwners = {
+		1815, "austria" -- Linz was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		1815, 0, "unit-teuton-town-hall"
+	},
+	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
+})
+
+DefineSettlement("ljubljana", {
+	Name = "Ljubljana",
+	MapTemplate = "earth",
+	Position = {4170, 1000},
+	CulturalNames = {
+		"slav", "Ljubljana",
+		"teuton", "Laibach"
+	},
+	HistoricalOwners = {
+		1815, "austria" -- Laibach was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		1815, 0, "unit-teuton-town-hall"
+	},
+	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
+})
+
 DefineSettlement("salzburg", {
 	Name = "Salzburg",
 	MapTemplate = "earth",
