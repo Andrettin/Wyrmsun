@@ -1665,7 +1665,6 @@ DefineCivilization("teuton", {
 		"Heiligenstadt",
 		"Horn",
 		"Hühnerwasser",
-		"Innsbruck",
 		"Ischl",
 		"Josefstadt",
 		"Kaiserslautern",

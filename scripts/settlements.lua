@@ -32,6 +32,7 @@
 Load("scripts/settlements_austria.lua")
 Load("scripts/settlements_bohemia.lua")
 Load("scripts/settlements_croatia.lua")
+Load("scripts/settlements_denmark.lua")
 Load("scripts/settlements_germany.lua")
 Load("scripts/settlements_greece.lua")
 Load("scripts/settlements_italy.lua")

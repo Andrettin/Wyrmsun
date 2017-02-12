@@ -25,6 +25,23 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSettlement("flensburg", {
+	Name = "Flensburg",
+	MapTemplate = "earth",
+	Position = {4054, 801},
+	CulturalNames = {
+		"teuton", "Flensburg"
+	},
+	HistoricalOwners = {
+		-264, "angle-tribe", -- tribes in Europe between 264 BC and 180 AD (Schleswig was inhabited by the Angles); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		1815, "denmark" -- Flensburg was a possession of the Kingdom of Denmark in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		-264, 0, "unit-teuton-town-hall"
+	},
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+})
+
 DefineSettlement("regensburg", {
 	Name = "Regensburg",
 	MapTemplate = "earth",

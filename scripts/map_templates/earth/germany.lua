@@ -54,10 +54,6 @@ SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4104, 936}, 173, 1
 SetMapTemplateCulturalSettlementName("earth", "Eresburg", {4043, 879}, "teuton")
 SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "francia", {4043, 879}, 775) -- a Frankish garrison was established by Charlemagne in Eresburg in 775; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 604.
 
--- Flensburg
-SetMapTemplateCulturalSettlementName("earth", "Flensburg", {4054, 801}, "teuton")
-SetMapTemplateUnit("earth", "unit-teuton-town-hall", "angle-tribe", {4054, 801}, -264) -- tribes in Europe between 264 BC and 180 AD (Schleswig was inhabited by the Angles); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-
 -- Helmsdorf
 -- in c. 1800 BC a barrow was built near Helmsdorf (in Saxo-Thuringia in central Germany); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 23.
 
