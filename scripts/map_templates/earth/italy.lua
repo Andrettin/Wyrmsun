@@ -86,10 +86,6 @@ SetMapTemplateUnit("earth", "unit-germanic-smithy", "celtic-cimmerian-tribe", {4
 SetMapTemplateCulturalSettlementName("earth", "Cosa", {4095, 1082}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4095, 1082}, -273) -- Cosa founded as a colony in 273 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 
--- Cremona
-SetMapTemplateCulturalSettlementName("earth", "Cremona", {4066, 1025}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4066, 1025}, -218) -- Cremona founded as a colony in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-
 -- Fiavè
 SetMapTemplateUnit("earth", "unit-celt-farm", "celtic-cimmerian-tribe", {4087, 1001}, -1700, -1350) -- a settlement at Fiavè was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
 
@@ -109,10 +105,6 @@ SetMapTemplateUnit("earth", "unit-latin-town-hall", "latin-tribe", {4111, 1087},
 
 -- Mercurago
 SetMapTemplateUnit("earth", "unit-celt-farm", "celtic-cimmerian-tribe", {4034, 1007}, -1700, -1350) -- the settlement of Mercurago was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
-
--- Mutina
-SetMapTemplateCulturalSettlementName("earth", "Mutina", {4089, 1032}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4089, 1032}, -183) -- Mutina founded as a colony in 183 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 
 -- Nola
 SetMapTemplateUnit("earth", "unit-latin-farm", "samnite-tribe", {4170, 1116}, -2300, -1701) -- the settlement of Nola was inhabited in the Italian Early Bronze Age (c. 2300-1700 BC), until it was destroyed by an eruption of Mount Vesuvius in the 18th century BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 43-44.
@@ -138,10 +130,6 @@ SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4122, 1005}, 170, 171
 SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
 SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
 SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
-
--- Placentia
-SetMapTemplateCulturalSettlementName("earth", "Placentia", {4056, 1028}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4056, 1028}, -218) -- Placentia founded as a colony in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 
 -- Poggiomarino
 SetMapTemplateUnit("earth", "unit-latin-town-hall", "samnite-tribe", {4170, 1119}, -1600, -501) -- the settlement of Poggiomarino was inhabited continuously between the 16th and 6th centuries BC; due to environmental reasons the settlement had to be forsaken, at which point they founded the city of Pompeii; Poggiomarino was a major industrial center in southern central Italy; it contained a furnace for copper smelting and mold casts for making bronze objects; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 42-44.
@@ -184,7 +172,3 @@ SetMapTemplateUnit("earth", "unit-teuton-dock", "sicel-tribe", {4185, 1202}, -17
 
 -- Toppo Daguzzo
 -- three tombs at Toppo Daguzzo during the Italian Middle Bronze Age (c. 1700-1350 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
-
--- Verona
-SetMapTemplateCulturalSettlementName("earth", "Verona", {4090, 1014}, "latin") -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4090, 1014}, 161) -- Verona was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.

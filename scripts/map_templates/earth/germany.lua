@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016 by Andrettin
+--      (c) Copyright 2016-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -116,12 +116,7 @@ SetMapTemplateCulturalSettlementName("earth", "Paderborn", {4033, 873}, "teuton"
 --SetMapTemplateLayerConnector("earth", "unit-portal", {4033, 873}, "Nidavellir") -- Gnitaheith (where Fafnir dwelled) has been identified with a real location south of Paderborn, so place a portal to Nidavellir there; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 343.
 
 -- Regensburg / Ratisbon / Regina Castra
-SetMapTemplateCulturalSettlementName("earth", "Regina Castra", {4116, 932}, "latin")
-SetMapTemplateCulturalSettlementName("earth", "Regensburg", {4116, 932}, "teuton")
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4116, 932}, 170, 172) -- a Roman camp at Regensburg-Kumpfmühl was destroyed during the First Marcomannic War in 172; it likely existed at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
 SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4116, 932}, 170, 172) -- the "Cohors II Aquitanorum equitata civium Romanorum" (a mixed unit, which contained circa 375 auxiliary infantry and 125 cavalry) was stationed at Regensburg-Kumpfmühl when it was attacked and destroyed in 172, during the First Marcomannic War; it likely was stationed there at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4116, 932}, 175, 526) -- The Legio III Italica began building in 175 the fortress of Castra Regina near where the Regensburg-Kumpfmühl camp had been; Source: "Ancient Warfare VII.6", 2013, p. 25.
-SetMapTemplateUnit("earth", "unit-teuton-town-hall", "bavarian-tribe", {4116, 932}, 526) -- Ratisbon was in Bavarian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 
 -- Scheidungen
 SetMapTemplateCulturalSettlementName("earth", "Scheidungen", {4107, 873}, "teuton")

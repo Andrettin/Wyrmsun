@@ -75,6 +75,27 @@ DefineSettlement("brindisi", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
+DefineSettlement("cremona", {
+	Name = "Cremona",
+	MapTemplate = "earth",
+	Position = {4066, 1025},
+	CulturalNames = {
+		"latin", "Cremona" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+	},
+	HistoricalOwners = {
+		-218, "rome", -- Cremona founded as a colony in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+		1494, "milan", -- Cremona was a possession of the Duchy of Milan about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+		1815, "austria", -- Cremona was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		1859, "sardinia" -- Cremona became a possession of Sardinia in 1859; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		-218, 1815, "unit-latin-farm",
+		1815, 1859, "unit-teuton-farm",
+		1859, 0, "unit-latin-farm"
+	},
+	Regions = {"europe", "italy", "west-and-central-europe"}
+})
+
 DefineSettlement("florence", {
 	Name = "Florence",
 	MapTemplate = "earth",
@@ -102,10 +123,32 @@ DefineSettlement("milan", {
 	},
 	HistoricalOwners = {
 		-161, "rome", -- Mediolanum was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		1494, "milan" -- Milan was a possession of the Duchy of Milan about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+		1494, "milan", -- Milan was a possession of the Duchy of Milan about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+		1815, "austria", -- Milan was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		1859, "sardinia" -- Milan became a possession of Sardinia in 1859; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
 		-161, 1494, "unit-latin-farm",
+		1494, 1815, "unit-latin-town-hall",
+		1815, 1859, "unit-teuton-town-hall",
+		1859, 0, "unit-latin-town-hall"
+	},
+	Regions = {"europe", "italy", "west-and-central-europe"}
+})
+
+DefineSettlement("modena", {
+	Name = "Modena",
+	MapTemplate = "earth",
+	Position = {4089, 1032},
+	CulturalNames = {
+		"latin", "Mutina" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+	},
+	HistoricalOwners = {
+		-183, "rome", -- Mutina founded as a colony in 183 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+		1494, "modena"
+	},
+	HistoricalBuildings = {
+		-218, 1494, "unit-latin-farm",
 		1494, 0, "unit-latin-town-hall"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
@@ -129,8 +172,8 @@ DefineSettlement("naples", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("opitergium", {
-	Name = "Opitergium",
+DefineSettlement("oderzo", {
+	Name = "Oderzo",
 	MapTemplate = "earth",
 	Position = {4122, 1005},
 	CulturalNames = {
@@ -157,6 +200,27 @@ DefineSettlement("paestum", {
 	},
 	HistoricalBuildings = {
 		-273, 1494, "unit-latin-farm"
+	},
+	Regions = {"europe", "italy", "west-and-central-europe"}
+})
+
+DefineSettlement("piacenza", {
+	Name = "Piacenza",
+	MapTemplate = "earth",
+	Position = {4056, 1028},
+	CulturalNames = {
+		"latin", "Placentia" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+	},
+	HistoricalOwners = {
+		-218, "rome", -- Placentia founded as a colony in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+		1494, "milan", -- Placentia was a possession of the Duchy of Milan about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+		1815, "parma", -- Placentia was a possession of the Duchy of Parma in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		1860, "sardinia" -- Placentia became a possession of Sardinia in 1860; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		-218, 1815, "unit-latin-farm",
+		1815, 1860, "unit-teuton-farm",
+		1860, 0, "unit-latin-farm"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -234,4 +298,38 @@ DefineSettlement("trieste", {
 		1853, 60860 -- Trieste's population was 60,860 in 1853; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 466.
 	},
 	Regions = {"cisleithania", "europe", "germany-netherlands", "italy", "west-and-central-europe"}
+})
+
+DefineSettlement("venice", {
+	Name = "Venice",
+	MapTemplate = "earth",
+	Position = {4122, 1011},
+	HistoricalOwners = {
+		1494, "venice", -- Venice was a possession of the Venetian Republic about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+		1815, "austria" -- Venice was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		1494, 1815, "unit-latin-town-hall",
+		1815, 0, "unit-teuton-town-hall"
+	},
+	Regions = {"europe", "italy", "west-and-central-europe"}
+})
+
+DefineSettlement("verona", {
+	Name = "Verona",
+	MapTemplate = "earth",
+	Position = {4090, 1014},
+	CulturalNames = {
+		"latin", "Verona" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	HistoricalOwners = {
+		161, "rome", -- Verona was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		1494, "venice", -- Verona was a possession of the Venetian Republic about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+		1815, "austria" -- Verona was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		161, 1815, "unit-latin-farm",
+		1815, 0, "unit-teuton-guard-tower" -- Verona had a fortress in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	Regions = {"europe", "italy", "west-and-central-europe"}
 })

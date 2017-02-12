@@ -25,38 +25,25 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("athens", {
-	Name = "Athens",
+DefineSettlement("regensburg", {
+	Name = "Regensburg",
 	MapTemplate = "earth",
-	Position = {4380, 1184},
+	Position = {4116, 932},
 	CulturalNames = {
-		"greek", "Athens",
-		"latin", "Athens"
+		"latin", "Regina Castra",
+		"teuton", "Regensburg"
 	},
 	HistoricalOwners = {
-		-146, "rome", -- Athens was acquired by Rome in 146 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		1740, "turkey" -- Athens was in possession of the Ottoman Empire in 1740; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		170, "rome", -- a Roman camp at Regensburg-KumpfmÃ¼hl was destroyed during the First Marcomannic War in 172; it likely existed at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
+		172, "",
+		175, "rome",
+		526, "bavarian-tribe", -- Ratisbon was in Bavarian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		1815, "bavaria" -- Regensburg was a possession of the Kingdom of Bavaria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		-146, 1740, "unit-latin-town-hall",
-		1740, 0, "unit-teuton-town-hall"
+		170, 172, "unit-teuton-guard-tower",
+		175, 526, "unit-teuton-guard-tower", -- The Legio III Italica began building in 175 the fortress of Castra Regina near where the Regensburg-KumpfmÃ¼hl camp had been; Source: "Ancient Warfare VII.6", 2013, p. 25.
+		526, 0, "unit-teuton-town-hall"
 	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
-})
-
-DefineSettlement("krisa", {
-	Name = "Krisa",
-	MapTemplate = "earth",
-	Position = {4351, 1172},
-	CulturalNames = {
-		"greek", "Krisa"
-	},
-	HistoricalOwners = {
-		-1700, "mycenae", -- Mycenaean fortifications present in Krisa (in Locris Ozolis) between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
-		-1190, "" -- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
-	},
-	HistoricalBuildings = {
-		-1700, -1190, "unit-latin-town-hall"
-	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
+	Regions = {"europe", "west-and-central-europe", "roman-danube", "germany-netherlands"}
 })

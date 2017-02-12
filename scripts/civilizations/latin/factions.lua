@@ -188,6 +188,15 @@ DefineFaction("milan", {
 	DefaultTier = "duchy"
 })
 
+DefineFaction("modena", {
+	Name = "Modena",
+	Civilization = "latin",
+	Type = "polity",
+	ParentFaction = "italy",
+	Colors = {"yellow"},
+	DefaultTier = "duchy"
+})
+
 DefineFaction("papal-states", {
 	Name = "Papal States",
 	Civilization = "latin",
@@ -196,6 +205,15 @@ DefineFaction("papal-states", {
 	Colors = {"brown"},
 	DefaultTier = "kingdom",
 	DefaultStartPos = {4126, 1096} -- Rome
+})
+
+DefineFaction("parma", {
+	Name = "Parma",
+	Civilization = "latin",
+	Type = "polity",
+	ParentFaction = "italy",
+	Colors = {"green"},
+	DefaultTier = "duchy"
 })
 
 DefineFaction("portugal", {
@@ -258,6 +276,15 @@ DefineFaction("rome", {
 		-54, "nervii-tribe", "war", -- the Nervii allied with the Eburones to attack the Romans in 54 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223-224.
 		161, "armenia", "overlord" -- in 161 Armenia was a vassal state of Rome; Source: "Ancient Warfare VII.6", 2013, p. 6.
 	}
+})
+
+DefineFaction("sardinia", {
+	Name = "Sardinia",
+	Civilization = "latin",
+	Type = "polity",
+	ParentFaction = "italy",
+	Colors = {"yellow"},
+	DefaultTier = "kingdom"
 })
 
 DefineFaction("savoy", {
