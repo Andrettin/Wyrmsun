@@ -36,10 +36,6 @@ SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "celtic-cimmerian-tribe",
 SetMapTemplateCulturalSettlementName("earth", "Eining", {4104, 936}, "teuton")
 SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4104, 936}, 173, 179) -- the "Legio III Italica" was stationed at the location of Eining from c. 173 to 179; Source: "Ancient Warfare VII.6", 2013, p. 25.
 
--- Eresburg
-SetMapTemplateCulturalSettlementName("earth", "Eresburg", {4043, 879}, "teuton")
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "francia", {4043, 879}, 775) -- a Frankish garrison was established by Charlemagne in Eresburg in 775; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 604.
-
 -- Helmsdorf
 -- in c. 1800 BC a barrow was built near Helmsdorf (in Saxo-Thuringia in central Germany); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 23.
 
@@ -58,22 +54,8 @@ SetMapTemplateUnit("earth", "unit-germanic-archer", "hersing-tribe", {4069, 811}
 SetMapTemplateCulturalSettlementName("earth", "Konnenberg", {4045, 857}, "teuton")
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "saxon-tribe", {4045, 857}, 526) -- Konnenberg was in Saxon possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 
--- Konstanz / Constantia
-SetMapTemplateCulturalSettlementName("earth", "Konstanz", {4051, 965}, "teuton")
-SetMapTemplateUnit("earth", "unit-teuton-farm", "austrasia", {4051, 965}, 561) -- Constantia went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-
 -- Leubingen
 -- in c. 1900 BC a barrow was built at Leubingen (in Saxo-Thuringia in central Germany); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 23.
-
--- Mainz / Mayence / Mogontiacum
-SetMapTemplateCulturalSettlementName("earth", "Mogontiacum", {4029, 911}, "latin")
-SetMapTemplateCulturalSettlementName("earth", "Mainz", {4029, 911}, "teuton")
-SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4029, 911}, -50, 161) -- Mogontiacum was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4029, 911}, 161, 486) -- Legionary base present in Mogontiacum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
--- Mayence was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "alamanni-tribe", {4033, 920}, 486, 526) -- Mayence was in possession of the Alamanni in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "francia", {4029, 911}, 526, 561) -- Mayence was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "austrasia", {4029, 911}, 561) -- Mogontiacum went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
 -- Mittelberg
 SetMapTemplateUnit("earth", "unit-germanic-town-hall", "celtic-cimmerian-tribe", {4101, 882}, -1600, -1599)
@@ -91,21 +73,5 @@ SetMapTemplateCulturalSettlementName("earth", "Scheidungen", {4107, 873}, "teuto
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "thuringian-tribe", {4107, 873}, 526) -- Scheidungen was in Thuringian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 
 -- Straubing
-SetMapTemplateCulturalSettlementName("earth", "Straubing", {4124, 934}, "teuton") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4124, 934}, 170, 172) -- a Roman double camp at Straubing was destroyed during the First Marcomannic War in 172; it likely existed at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
 SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4124, 934}, 170, 172) -- the "Cohors II Raetorum" (a unit containing 500 infantry) was stationed at Straubing when it was attacked and destroyed in 172, during the First Marcomannic War; it likely was stationed there at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
 SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4124, 934}, 170, 172) -- the "Cohors I Flavia Canathenorum milliaria sagittariorum" (a unit containing 1,000 Syrian archers) was stationed at Straubing when it was attacked and destroyed in 172, during the First Marcomannic War; it likely was stationed there at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
-
--- Syburg
-SetMapTemplateCulturalSettlementName("earth", "Syburg", {4019, 876}, "teuton")
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "francia", {4019, 876}, 775) -- a Frankish garrison was established by Charlemagne in Syburg in 775; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 604.
-
--- Worms / Borbetomagus
-SetMapTemplateCulturalSettlementName("earth", "Borbetomagus", {4033, 920}, "latin")
-SetMapTemplateCulturalSettlementName("earth", "Worms", {4033, 920}, "teuton")
-SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {4033, 920}, 395, 413) -- Worms was a part of the Roman Empire and was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-SetMapTemplateUnit("earth", "unit-teuton-town-hall", "burgundy", {4033, 920}, 413, 436) -- Borbetomagus/Worms conquered by the Burgundians in 413 AD, after which they founded a kingdom that lasted until 436; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
-SetMapTemplateUnit("earth", "unit-teuton-temple", "burgundy", {4033, 920}, 413, 436)
-SetMapTemplateUnit("earth", "unit-teuton-temple", "alamanni-tribe", {4033, 920}, 486, 526) -- Worms was in possession of the Alamanni in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-SetMapTemplateUnit("earth", "unit-teuton-temple", "francia", {4033, 920}, 526, 561) -- Worms' area was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-SetMapTemplateUnit("earth", "unit-teuton-temple", "austrasia", {4033, 920}, 561) -- Worms' area went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.

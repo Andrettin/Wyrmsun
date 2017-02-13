@@ -72,6 +72,24 @@ DefineSettlement("cologne", {
 	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
 })
 
+DefineSettlement("eresburg", {
+	Name = "Eresburg",
+	MapTemplate = "earth",
+	Position = {4043, 879},
+	CulturalNames = {
+--		"frankish", "Eresburg",
+		"teuton", "Eresburg"
+	},
+	HistoricalOwners = {
+		775, "francia", -- a Frankish garrison was established by Charlemagne in Eresburg in 775; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 604.
+		1815, ""
+	},
+	HistoricalBuildings = {
+		775, 1815, "unit-teuton-guard-tower"
+	},
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+})
+
 DefineSettlement("flensburg", {
 	Name = "Flensburg",
 	MapTemplate = "earth",
@@ -115,6 +133,47 @@ DefineSettlement("kiel", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
+DefineSettlement("konstanz", {
+	Name = "Konstanz",
+	MapTemplate = "earth",
+	Position = {4051, 965},
+	CulturalNames = {
+		"teuton", "Konstanz"
+	},
+	HistoricalOwners = {
+		561, "austrasia", -- Constantia went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+		1815, "baden" -- Constance was a possession of the Grand Duchy of Baden in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		561, 0, "unit-teuton-farm"
+	},
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+})
+
+DefineSettlement("mainz", {
+	Name = "Mainz",
+	MapTemplate = "earth",
+	Position = {4029, 911},
+	CulturalNames = {
+		"latin", "Mogontiacum",
+		"teuton", "Mainz"
+	},
+	HistoricalOwners = {
+		-50, "rome", -- Mogontiacum was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		486, "alamanni-tribe", -- Mayence was in possession of the Alamanni in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		526, "francia", -- Mayence was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		561, "austrasia", -- Mogontiacum went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+		1815, "hesse" -- Mayence was a possession of the Grand Duchy of Hesse in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		-50, 161, "unit-latin-farm",
+		161, 395, "unit-teuton-guard-tower", -- Legionary base present in Mogontiacum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		395, 0, "unit-teuton-temple" -- Mayence was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		-- Mayence possessed a fortress in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
+})
+
 DefineSettlement("nuremberg", {
 	Name = "Nuremberg",
 	MapTemplate = "earth",
@@ -155,6 +214,43 @@ DefineSettlement("regensburg", {
 	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
 
+DefineSettlement("straubing", {
+	Name = "Straubing",
+	MapTemplate = "earth",
+	Position = {4124, 934},
+	CulturalNames = {
+		"teuton", "Straubing" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalOwners = {
+		170, "rome",
+		172, "",
+		1815, "bavaria" -- Straubing was a possession of the Kingdom of Bavaria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		170, 172, "unit-teuton-guard-tower", -- a Roman double camp at Straubing was destroyed during the First Marcomannic War in 172; it likely existed at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
+		1815, 0, "unit-teuton-farm"
+	},
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+})
+
+DefineSettlement("syburg", {
+	Name = "Syburg",
+	MapTemplate = "earth",
+	Position = {4019, 876},
+	CulturalNames = {
+--		"frankish", "Syburg",
+		"teuton", "Syburg"
+	},
+	HistoricalOwners = {
+		775, "francia", -- a Frankish garrison was established by Charlemagne in Syburg in 775; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 604.
+		1815, ""
+	},
+	HistoricalBuildings = {
+		775, 1815, "unit-teuton-guard-tower"
+	},
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+})
+
 DefineSettlement("trier", {
 	Name = "Trier",
 	MapTemplate = "earth",
@@ -171,6 +267,31 @@ DefineSettlement("trier", {
 	},
 	HistoricalBuildings = {
 		395, 0, "unit-teuton-temple" -- Trèves was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+	},
+	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
+})
+
+DefineSettlement("worms", {
+	Name = "Worms",
+	MapTemplate = "earth",
+	Position = {4033, 920},
+	CulturalNames = {
+		"latin", "Borbetomagus",
+		"teuton", "Worms"
+	},
+	HistoricalOwners = {
+		395, "rome", -- Worms was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		413, "burgundy", -- Borbetomagus/Worms conquered by the Burgundians in 413 AD, after which they founded a kingdom that lasted until 436; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
+		486, "alamanni-tribe", -- Worms was in possession of the Alamanni in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		526, "francia", -- Worms' area was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		561, "austrasia", -- Worms' area went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+		1815, "hesse" -- Worms was a possession of the Grand Duchy of Hesse in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		395, 413, "unit-teuton-temple", -- Worms was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		413, 436, "unit-teuton-town-hall",
+		413, 436, "unit-teuton-temple",
+		436, 0, "unit-teuton-temple"
 	},
 	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
 })
