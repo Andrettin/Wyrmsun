@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016-2017 by Andrettin
+--      (c) Copyright 2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,16 +25,35 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("carthage", {
-	Name = "Carthage",
-	Civilization = "phoenician",
-	Type = "polity",
-	Colors = {"black"}
+DefineSettlement("amathus", {
+	Name = "Amathus",
+	MapTemplate = "earth",
+	Position = {4594, 1257},
+	CulturalNames = {
+		"phoenician", "Amathus"
+	},
+	HistoricalOwners = {
+		-1450, "phoenicia" -- Amathus was a Phoenician settlement about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	},
+	HistoricalBuildings = {
+		-1450, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
 })
 
-DefineFaction("phoenicia", {
-	Name = "Phoenicia",
-	Civilization = "phoenician",
-	Type = "polity",
-	Colors = {"black"}
+DefineSettlement("citium", {
+	Name = "Citium",
+	MapTemplate = "earth",
+	Position = {4604, 1252},
+	CulturalNames = {
+		"phoenician", "Citium"
+	},
+	HistoricalOwners = {
+		-1450, "phoenicia" -- Citium was a Phoenician settlement about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	},
+	HistoricalBuildings = {
+		-1450, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
 })
+

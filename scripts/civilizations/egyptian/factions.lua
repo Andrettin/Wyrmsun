@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016-2017 by Andrettin
+--      (c) Copyright 2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,16 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("carthage", {
-	Name = "Carthage",
-	Civilization = "phoenician",
+DefineFaction("egypt", {
+	Name = "Egypt",
+	Civilization = "egyptian",
 	Type = "polity",
-	Colors = {"black"}
-})
-
-DefineFaction("phoenicia", {
-	Name = "Phoenicia",
-	Civilization = "phoenician",
-	Type = "polity",
-	Colors = {"black"}
+	Colors = {"green"}
 })

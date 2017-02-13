@@ -25,22 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("amathus", {
-	Name = "Amathus",
-	MapTemplate = "earth",
-	Position = {4594, 1257},
-	CulturalNames = {
-		"greek", "Ialysus"
-	},
-	HistoricalOwners = {
-		-1450, "phoenicia" -- Amathus was Phoenician settlement about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-	},
-	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
-	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
-})
-
 DefineSettlement("amyclae", {
 	Name = "Amyclae",
 	MapTemplate = "earth",
@@ -82,13 +66,12 @@ DefineSettlement("athens", {
 		"latin", "Athens"
 	},
 	HistoricalOwners = {
-		-1450, "mycenae", -- Athens was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "mycenae", -- Athens was a center of the highest Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 		-146, "rome", -- Athens was acquired by Rome in 146 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1740, "turkey" -- Athens was in possession of the Ottoman Empire in 1740; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	},
 	HistoricalBuildings = {
-		-1450, -146, "unit-latin-farm",
-		-146, 1740, "unit-latin-town-hall",
+		-1450, 1740, "unit-latin-town-hall",
 		1740, 0, "unit-teuton-town-hall"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
@@ -206,15 +189,15 @@ DefineSettlement("ialysus", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
-DefineSettlement("ioleus", {
-	Name = "Ioleus",
+DefineSettlement("iolcus", {
+	Name = "Iolcus",
 	MapTemplate = "earth",
 	Position = {4363, 1150},
 	CulturalNames = {
-		"greek", "Ioleus"
+		"greek", "Iolcus"
 	},
 	HistoricalOwners = {
-		-1450, "mycenae" -- Ioleus was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "mycenae" -- Iolcus was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"
@@ -246,10 +229,10 @@ DefineSettlement("knossos", {
 		"greek", "Knossos"
 	},
 	HistoricalOwners = {
-		-1450, "mycenae" -- Cnossus was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "mycenae" -- Cnossus was a center of the highest Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "unit-latin-town-hall"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -295,10 +278,10 @@ DefineSettlement("orchomenus", {
 		"greek", "Orchomenus"
 	},
 	HistoricalOwners = {
-		-1450, "mycenae" -- Orchomenus was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "mycenae" -- Orchomenus was a center of the highest Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "unit-latin-town-hall"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -327,7 +310,7 @@ DefineSettlement("tiryns", {
 		"greek", "Tiryns"
 	},
 	HistoricalOwners = {
-		-1450, "mycenae" -- Tiryns was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "mycenae" -- Tiryns was a center of the highest Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"
