@@ -31,3 +31,10 @@ DefineFaction("carthage", {
 	Type = "polity",
 	Colors = {"black"}
 })
+
+DefineFaction("phoenicia", {
+	Name = "Phoenicia",
+	Civilization = "phoenician",
+	Type = "polity",
+	Colors = {"black"}
+})

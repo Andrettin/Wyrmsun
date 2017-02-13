@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2015-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -50,12 +50,13 @@ DefineFaction("mycenae", {
 	Type = "polity",
 	Colors = {"orange"},
 	DefaultTier = "county",
+	DefaultStartPos = {4358, 1188}, -- Mycenae
 	Titles = {
 		"monarchy", "county", "City-State",
 		"republic", "county", "City-State"
 	},
 	HistoricalCapitals = {
-		-1450, "Argolis" -- Mycenae center of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "Argolis" -- Mycenae was the center of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalTechnologies = {
 		"upgrade-teuton-writing", -1700, -- Linear B tablets found in Mycenae belonging to the period between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
