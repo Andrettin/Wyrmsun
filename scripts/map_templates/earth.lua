@@ -113,6 +113,7 @@ SetMapTemplateTileTerrain("earth", "rock", 4150, 967)
 SetMapTemplateTileTerrain("earth", "rock", 4154, 993)
 SetMapTemplateTileTerrain("earth", "rock", 4159, 963)
 
+Load("scripts/map_templates/earth/asia_minor.lua")
 Load("scripts/map_templates/earth/austria.lua")
 Load("scripts/map_templates/earth/bohemia.lua")
 Load("scripts/map_templates/earth/croatia.lua")

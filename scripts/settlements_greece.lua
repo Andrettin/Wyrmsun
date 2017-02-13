@@ -57,6 +57,22 @@ DefineSettlement("amyclae", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
+DefineSettlement("aphidnae", {
+	Name = "Aphidnae",
+	MapTemplate = "earth",
+	Position = {4382, 1179},
+	CulturalNames = {
+		"greek", "Aphidnae"
+	},
+	HistoricalOwners = {
+		-1450, "mycenae" -- Aphidnae was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	},
+	HistoricalBuildings = {
+		-1450, 0, "unit-latin-farm"
+	},
+	Regions = {"europe", "greece", "west-and-central-europe"}
+})
+
 DefineSettlement("athens", {
 	Name = "Athens",
 	MapTemplate = "earth",
@@ -78,6 +94,38 @@ DefineSettlement("athens", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
+DefineSettlement("coulas", {
+	Name = "Coulas",
+	MapTemplate = "earth",
+	Position = {4366, 1172},
+	CulturalNames = {
+		"greek", "Coulas"
+	},
+	HistoricalOwners = {
+		-1450, "mycenae" -- Coulas was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	},
+	HistoricalBuildings = {
+		-1450, 0, "unit-latin-farm"
+	},
+	Regions = {"europe", "greece", "west-and-central-europe"}
+})
+
+DefineSettlement("delphi", {
+	Name = "Delphi",
+	MapTemplate = "earth",
+	Position = {4352, 1172},
+	CulturalNames = {
+		"greek", "Delphi"
+	},
+	HistoricalOwners = {
+		-1450, "mycenae" -- Delphi was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	},
+	HistoricalBuildings = {
+		-1450, 0, "unit-latin-farm"
+	},
+	Regions = {"europe", "greece", "west-and-central-europe"}
+})
+
 DefineSettlement("dicte", {
 	Name = "Dicte",
 	MapTemplate = "earth",
@@ -87,6 +135,22 @@ DefineSettlement("dicte", {
 	},
 	HistoricalOwners = {
 		-1450, "mycenae" -- Dicte was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	},
+	HistoricalBuildings = {
+		-1450, 0, "unit-latin-farm"
+	},
+	Regions = {"europe", "greece", "west-and-central-europe"}
+})
+
+DefineSettlement("eleusis", {
+	Name = "Eleusis",
+	MapTemplate = "earth",
+	Position = {4374, 1181},
+	CulturalNames = {
+		"greek", "Eleusis"
+	},
+	HistoricalOwners = {
+		-1450, "mycenae" -- Eleusis was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"
@@ -135,6 +199,22 @@ DefineSettlement("ialysus", {
 	},
 	HistoricalOwners = {
 		-1450, "mycenae" -- Ialysus was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	},
+	HistoricalBuildings = {
+		-1450, 0, "unit-latin-farm"
+	},
+	Regions = {"europe", "greece", "west-and-central-europe"}
+})
+
+DefineSettlement("ioleus", {
+	Name = "Ioleus",
+	MapTemplate = "earth",
+	Position = {4363, 1150},
+	CulturalNames = {
+		"greek", "Ioleus"
+	},
+	HistoricalOwners = {
+		-1450, "mycenae" -- Ioleus was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"
@@ -203,6 +283,38 @@ DefineSettlement("mycenae", {
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-town-hall"
+	},
+	Regions = {"europe", "greece", "west-and-central-europe"}
+})
+
+DefineSettlement("orchomenus", {
+	Name = "Orchomenus",
+	MapTemplate = "earth",
+	Position = {4360, 1172},
+	CulturalNames = {
+		"greek", "Orchomenus"
+	},
+	HistoricalOwners = {
+		-1450, "mycenae" -- Orchomenus was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	},
+	HistoricalBuildings = {
+		-1450, 0, "unit-latin-farm"
+	},
+	Regions = {"europe", "greece", "west-and-central-europe"}
+})
+
+DefineSettlement("pagasae", {
+	Name = "Pagasae",
+	MapTemplate = "earth",
+	Position = {4361, 1152},
+	CulturalNames = {
+		"greek", "Pagasae"
+	},
+	HistoricalOwners = {
+		-1450, "mycenae" -- Pagasae was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	},
+	HistoricalBuildings = {
+		-1450, 0, "unit-latin-farm"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
