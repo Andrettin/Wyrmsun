@@ -33,7 +33,7 @@ DefineButton( { Pos = 1, Level = 2, Icon = "icon-flag-silver-hammer-on-red",
 	ForUnit = {"unit-dwarven-town-hall", "unit-dwarven-stronghold"}
 } )
 
-DefineButton( { Pos = 2, Level = 2, Icon = "icon-flag-silver-hammer-on-red",
+DefineButton( { Pos = 2, Level = 2, Icon = "icon-flag-cyan-hammer-on-green",
 	Action = "research", Value = "upgrade-faction-shinsplitter-clan",
 	Allowed = "check-single-research",
 	Key = "s", Hint = "Found the ~!Shinsplitter Clan", Popup = "popup-research",
@@ -41,7 +41,7 @@ DefineButton( { Pos = 2, Level = 2, Icon = "icon-flag-silver-hammer-on-red",
 	ForUnit = {"unit-dwarven-town-hall", "unit-dwarven-stronghold"}
 } )
 
-DefineButton( { Pos = 3, Level = 2, Icon = "icon-flag-silver-hammer-on-red",
+DefineButton( { Pos = 3, Level = 2, Icon = "icon-flag-green-hammer-on-blue",
 	Action = "research", Value = "upgrade-faction-shorbear-clan",
 	Allowed = "check-single-research",
 	Key = "o", Hint = "Found the Sh~!orbear Clan", Popup = "popup-research",
@@ -49,7 +49,7 @@ DefineButton( { Pos = 3, Level = 2, Icon = "icon-flag-silver-hammer-on-red",
 	ForUnit = {"unit-dwarven-town-hall", "unit-dwarven-stronghold"}
 } )
 
-DefineButton( { Pos = 4, Level = 2, Icon = "icon-flag-silver-hammer-on-red",
+DefineButton( { Pos = 4, Level = 2, Icon = "icon-flag-red-hammer-on-silver",
 	Action = "research", Value = "upgrade-faction-shadowcharm-clan",
 	Allowed = "check-single-research",
 	Key = "c", Hint = "Found the Shadow~!charm Clan", Popup = "popup-research",
@@ -57,7 +57,7 @@ DefineButton( { Pos = 4, Level = 2, Icon = "icon-flag-silver-hammer-on-red",
 	ForUnit = {"unit-dwarven-town-hall", "unit-dwarven-stronghold"}
 } )
 
-DefineButton( { Pos = 5, Level = 2, Icon = "icon-flag-silver-hammer-on-red",
+DefineButton( { Pos = 5, Level = 2, Icon = "icon-flag-light-blue-hammer-on-orange",
 	Action = "research", Value = "upgrade-faction-eikinskjaldi-clan",
 	Allowed = "check-single-research",
 	Key = "e", Hint = "Found the ~!Eikinskjaldi Clan", Popup = "popup-research",
@@ -73,7 +73,7 @@ DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-silver-hammer-on-red",
 	ForUnit = {"unit-dwarven-town-hall", "unit-dwarven-stronghold"}
 } )
 
-DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-silver-hammer-on-red",
+DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-light-blue-hammer-on-orange",
 	Action = "research", Value = "upgrade-faction-joruvellir",
 	Allowed = "check-single-research",
 	Key = "j", Hint = "Found ~!Joruvellir", Popup = "popup-research",
@@ -81,7 +81,7 @@ DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-silver-hammer-on-red",
 	ForUnit = {"unit-dwarven-town-hall", "unit-dwarven-stronghold"}
 } )
 
-DefineButton( { Pos = 10, Level = 2, Icon = "icon-flag-silver-hammer-on-red",
+DefineButton( { Pos = 10, Level = 2, Icon = "icon-flag-yellow-hammer-on-purple",
 	Action = "research", Value = "upgrade-faction-lyr",
 	Allowed = "check-single-research",
 	Key = "l", Hint = "Found ~!Lyr", Popup = "popup-research",
@@ -89,7 +89,7 @@ DefineButton( { Pos = 10, Level = 2, Icon = "icon-flag-silver-hammer-on-red",
 	ForUnit = {"unit-dwarven-town-hall", "unit-dwarven-stronghold"}
 } )
 
-DefineButton( { Pos = 11, Level = 2, Icon = "icon-flag-silver-hammer-on-red",
+DefineButton( { Pos = 11, Level = 2, Icon = "icon-flag-red-hammer-on-silver",
 	Action = "research", Value = "upgrade-faction-kal-kartha",
 	Allowed = "check-single-research",
 	Key = "h", Hint = "Found Kal Kart~!ha", Popup = "popup-research",

@@ -524,9 +524,39 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-flag-cyan-hammer-on-green",
+	Size = {46, 38},
+	File = "dwarf/icons/flag_cyan_hammer_on_green.png"
+})
+
+DefineIcon({
+	Name = "icon-flag-green-hammer-on-blue",
+	Size = {46, 38},
+	File = "dwarf/icons/flag_green_hammer_on_blue.png"
+})
+
+DefineIcon({
+	Name = "icon-flag-light-blue-hammer-on-orange",
+	Size = {46, 38},
+	File = "dwarf/icons/flag_light_blue_hammer_on_orange.png"
+})
+
+DefineIcon({
+	Name = "icon-flag-red-hammer-on-silver",
+	Size = {46, 38},
+	File = "dwarf/icons/flag_red_hammer_on_silver.png"
+})
+
+DefineIcon({
 	Name = "icon-flag-silver-hammer-on-red",
 	Size = {46, 38},
 	File = "dwarf/icons/flag_silver_hammer_on_red.png"
+})
+
+DefineIcon({
+	Name = "icon-flag-yellow-hammer-on-purple",
+	Size = {46, 38},
+	File = "dwarf/icons/flag_yellow_hammer_on_purple.png"
 })
 
 DefineIcon({
