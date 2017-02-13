@@ -185,7 +185,7 @@ DefineSettlement("tentyris", {
 	Regions = {"africa"}
 })
 
-DefineSettlement("thebes", {
+DefineSettlement("thebes-egypt", {
 	Name = "Thebes",
 	MapTemplate = "earth",
 	Position = {4582, 1466},

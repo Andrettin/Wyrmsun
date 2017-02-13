@@ -50,6 +50,7 @@ DefineFaction("mycenae", {
 	Type = "polity",
 	Colors = {"orange"},
 	DefaultTier = "county",
+	DefaultAI = "sea-attack",
 	DefaultStartPos = {4358, 1188}, -- Mycenae
 	Titles = {
 		"monarchy", "county", "City-State",

@@ -1,0 +1,90 @@
+--       _________ __                 __
+--      /   _____//  |_____________ _/  |______     ____  __ __  ______
+--      \_____  \\   __\_  __ \__  \\   __\__  \   / ___\|  |  \/  ___/
+--      /        \|  |  |  | \// __ \|  |  / __ \_/ /_/  >  |  /\___ \
+--     /_______  /|__|  |__|  (____  /__| (____  /\___  /|____//____  >
+--             \/                  \/          \//_____/            \/
+--  ______________________                           ______________________
+--                        T H E   W A R   B E G I N S
+--         Stratagus - A free fantasy real time strategy game engine
+--
+--      (c) Copyright 2017 by Andrettin
+--
+--      This program is free software; you can redistribute it and/or modify
+--      it under the terms of the GNU General Public License as published by
+--      the Free Software Foundation; either version 2 of the License, or
+--      (at your option) any later version.
+--
+--      This program is distributed in the hope that it will be useful,
+--      but WITHOUT ANY WARRANTY; without even the implied warranty of
+--      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+--      GNU General Public License for more details.
+--
+--      You should have received a copy of the GNU General Public License
+--      along with this program; if not, write to the Free Software
+--      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+--
+
+DefineSettlement("amida", {
+	Name = "Amida",
+	MapTemplate = "earth",
+	Position = {4709, 1188},
+	CulturalNames = {
+		"assyrian", "Amida"
+	},
+	HistoricalOwners = {
+		-1450, "assyria" -- Amida was an Assyrian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	},
+	HistoricalBuildings = {
+		-1450, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
+DefineSettlement("arbela", {
+	Name = "Arbela",
+	MapTemplate = "earth",
+	Position = {4841, 1224},
+	CulturalNames = {
+		"assyrian", "Arbela"
+	},
+	HistoricalOwners = {
+		-1450, "assyria" -- Arbela was an Assyrian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	},
+	HistoricalBuildings = {
+		-1450, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
+DefineSettlement("assur", {
+	Name = "Assur",
+	MapTemplate = "earth",
+	Position = {4823, 1233},
+	CulturalNames = {
+		"assyrian", "Assur"
+	},
+	HistoricalOwners = {
+		-1450, "assyria" -- Assur was an Assyrian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	},
+	HistoricalBuildings = {
+		-1450, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
+DefineSettlement("nineveh", {
+	Name = "Nineveh",
+	MapTemplate = "earth",
+	Position = {4828, 1214},
+	CulturalNames = {
+		"assyrian", "Nineveh"
+	},
+	HistoricalOwners = {
+		-1450, "assyria" -- Nineveh was an Assyrian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	},
+	HistoricalBuildings = {
+		-1450, 0, "unit-latin-town-hall"
+	},
+	Regions = {"asia"}
+})
