@@ -29,5 +29,6 @@ DefineFaction("egypt", {
 	Name = "Egypt",
 	Civilization = "egyptian",
 	Type = "polity",
-	Colors = {"green"}
+	Colors = {"green"},
+	DefaultStartPos = {4546, 1363} -- Memphis
 })

@@ -36,5 +36,6 @@ DefineFaction("phoenicia", {
 	Name = "Phoenicia",
 	Civilization = "phoenician",
 	Type = "polity",
-	Colors = {"black"}
+	Colors = {"black"},
+	DefaultStartPos = {4642, 1290} -- Tyre
 })

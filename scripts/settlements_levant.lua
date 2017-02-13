@@ -57,6 +57,38 @@ DefineSettlement("byblos", {
 	Regions = {"asia"}
 })
 
+DefineSettlement("charchemish", {
+	Name = "Charchemish",
+	MapTemplate = "earth",
+	Position = {4704, 1209},
+	CulturalNames = {
+		"egyptian", "Charchemish"
+	},
+	HistoricalOwners = {
+		-1450, "egypt" -- Charchemish was subject to Egypt about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	},
+	HistoricalBuildings = {
+		-1450, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
+DefineSettlement("damascus", {
+	Name = "Damascus",
+	MapTemplate = "earth",
+	Position = {4666, 1279},
+	CulturalNames = {
+		"egyptian", "Damascus"
+	},
+	HistoricalOwners = {
+		-1450, "egypt" -- Damascus was subject to Egypt about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	},
+	HistoricalBuildings = {
+		-1450, 0, "unit-latin-town-hall"
+	},
+	Regions = {"asia"}
+})
+
 DefineSettlement("gaza", {
 	Name = "Gaza",
 	MapTemplate = "earth",
@@ -66,6 +98,38 @@ DefineSettlement("gaza", {
 	},
 	HistoricalOwners = {
 		-1450, "phoenicia" -- Gaza was a Phoenician settlement about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	},
+	HistoricalBuildings = {
+		-1450, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
+DefineSettlement("hamath", {
+	Name = "Hamath",
+	MapTemplate = "earth",
+	Position = {4674, 1244},
+	CulturalNames = {
+		"egyptian", "Hamath"
+	},
+	HistoricalOwners = {
+		-1450, "egypt" -- Hamath was subject to Egypt about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	},
+	HistoricalBuildings = {
+		-1450, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
+DefineSettlement("kadesh", {
+	Name = "Kadesh",
+	MapTemplate = "earth",
+	Position = {4667, 1264},
+	CulturalNames = {
+		"egyptian", "Kadesh"
+	},
+	HistoricalOwners = {
+		-1450, "egypt" -- Kadesh was subject to Egypt about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"

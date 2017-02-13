@@ -28,7 +28,7 @@
 DefineCharacter("strabo", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 222.
 	Name = "Strabo",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-teuton-priest",
 	Civilization = "greek",
 --	ProvinceOfOrigin = ?,
 	Year = -60, -- born
@@ -50,7 +50,7 @@ DefineCharacter("galen-of-pergamon", { -- Source: "Ancient Warfare VII.6", 2013,
 DefineCharacter("zosimus", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 320.
 	Name = "Zosimus",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-teuton-priest",
 	Civilization = "greek",
 	ProvinceOfOrigin = "Thrace",
 	Year = 500, -- wrote "Historia nova" around 500 AD
