@@ -49,6 +49,7 @@ DefineFaction("ampsivarii-tribe", {
 	Civilization = "frankish", -- accurate?
 	Type = "tribe",
 	Colors = {"cyan"},
+	FactionUpgrade = "upgrade-faction-ampsivarii-tribe",
 	DevelopsTo = {"drenthe", "netherlands"} -- same general area
 })
 
@@ -57,6 +58,7 @@ DefineFaction("batavian-tribe", {
 	Civilization = "frankish", -- accurate?
 	Type = "tribe",
 	Colors = {"orange"},
+	FactionUpgrade = "upgrade-faction-batavian-tribe",
 	DevelopsTo = {"holland", "netherlands"} -- same general area
 })
 
@@ -65,6 +67,7 @@ DefineFaction("chamavi-tribe", {
 	Civilization = "frankish", -- accurate?
 	Type = "tribe",
 	Colors = {"pink"},
+	FactionUpgrade = "upgrade-faction-chamavi-tribe",
 	DevelopsTo = {"overijssel", "netherlands"} -- same general area
 })
 
@@ -73,6 +76,7 @@ DefineFaction("chatti-tribe", {
 	Civilization = "frankish", -- accurate?
 	Type = "tribe",
 	Colors = {"yellow"},
+	FactionUpgrade = "upgrade-faction-chatti-tribe",
 	DevelopsTo = {"hesse"} -- same general area
 })
 
@@ -81,6 +85,7 @@ DefineFaction("sugambri-tribe", {
 	Civilization = "frankish", -- accurate?
 	Type = "tribe",
 	Colors = {"black"},
+	FactionUpgrade = "upgrade-faction-sugambri-tribe",
 	DevelopsTo = {"westphalia"} -- same general area
 })
 
@@ -91,6 +96,7 @@ DefineFaction("francia", {
 	Type = "polity",
 	Colors = {"green", "orange"},
 	DefaultTier = "kingdom",
+	FactionUpgrade = "upgrade-faction-francia",
 	MinisterTitles = {
 		"head-of-government", "no-gender", "monarchy", "no-faction-tier", "Mayor of the Palace" -- Source: "Medieval Warfare V.2", 2013, p. 7.
 	},
@@ -112,6 +118,7 @@ DefineFaction("austrasia", {
 	Type = "polity",
 	Colors = {"pink"},
 	DefaultTier = "kingdom", -- correct?
+	FactionUpgrade = "upgrade-faction-austrasia",
 	DevelopsTo = {"francia", "holy-rome"},
 	DefaultStartPos = {3930, 926}, -- Reims
 	MinisterTitles = {
@@ -125,6 +132,7 @@ DefineFaction("east-francia", { -- Source: James Westfall Thompson, "Medieval Ge
 	ParentFaction = "francia",
 	Type = "polity",
 	Colors = {"blue"},
+	FactionUpgrade = "upgrade-faction-east-francia",
 	DefaultTier = "kingdom",
 	DevelopsTo = {"holy-rome", "francia"},
 	HistoricalFactionDerivations = {869, "frankish", "francia"}, -- East Francia existed in 869, when it conquered Moravia; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
@@ -143,6 +151,7 @@ DefineFaction("neustria", {
 	ParentFaction = "francia",
 	Type = "polity",
 	Colors = {"orange"},
+	FactionUpgrade = "upgrade-faction-neustria",
 	DefaultTier = "kingdom", -- correct?
 	DevelopsTo = {"francia", "holy-rome"},
 	DefaultStartPos = {3891, 937}, -- Paris
@@ -157,6 +166,7 @@ DefineFaction("salia", {
 	ParentFaction = "francia",
 	Type = "polity",
 	Colors = {"pink"},
+	FactionUpgrade = "upgrade-faction-salia",
 	DefaultTier = "kingdom",
 	DevelopsTo = {"austrasia", "francia", "holy-rome"},
 	DefaultStartPos = {3915, 923} -- Soissons
@@ -168,6 +178,7 @@ DefineFaction("burgundia", { -- Frankish kingdom of Burgundy (not to be confused
 	ParentFaction = "francia",
 	Type = "polity",
 	Colors = {"green"},
+	FactionUpgrade = "upgrade-faction-burgundia",
 	DefaultTier = "kingdom",
 	DevelopsTo = {"francia", "holy-rome"},
 	DefaultStartPos = {3884, 961} -- Orléans

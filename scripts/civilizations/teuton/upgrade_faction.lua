@@ -414,10 +414,56 @@ DefineDependency("upgrade-faction-galicia",
 	"or", {"upgrade-faction-buri-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
-DefineDependency("upgrade-faction-frank-tribe",
-	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
+DefineDependency("upgrade-faction-francia",
+	{"upgrade-faction-frank-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-austrasia", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-burgundia", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-east-francia", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-neustria", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-salia", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
-DefineDependency("upgrade-faction-francia",
-	{"upgrade-faction-frank-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
+DefineDependency("upgrade-faction-austrasia",
+	{"upgrade-faction-ampsivarii-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-batavian-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-chamavi-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-chatti-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-frank-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-sugambri-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-burgundia",
+	{"upgrade-faction-ampsivarii-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-batavian-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-chamavi-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-chatti-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-frank-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-sugambri-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-east-francia",
+	{"upgrade-faction-ampsivarii-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-batavian-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-chamavi-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-chatti-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-frank-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-sugambri-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-neustria",
+	{"upgrade-faction-ampsivarii-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-batavian-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-chamavi-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-chatti-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-frank-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-sugambri-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-salia",
+	{"upgrade-faction-ampsivarii-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-batavian-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-chamavi-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-chatti-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-frank-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-sugambri-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )

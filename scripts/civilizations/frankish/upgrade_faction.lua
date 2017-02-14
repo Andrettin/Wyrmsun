@@ -25,15 +25,106 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineUpgrade("upgrade-faction-ampsivarii-tribe", {
+	Name = "Ampsivarii Tribe",
+	EffectsString = "+2 Damage for Kregars"
+})
+
+DefineUpgrade("upgrade-faction-batavian-tribe", {
+	Name = "Batavian Tribe",
+	EffectsString = "+3 Damage, -1 Armor for Kregars"
+})
+
+DefineUpgrade("upgrade-faction-chamavi-tribe", {
+	Name = "Chamavi Tribe",
+	EffectsString = "+2 Accuracy for Kregars"
+})
+
+DefineUpgrade("upgrade-faction-chatti-tribe", {
+	Name = "Chatti Tribe",
+	EffectsString = "+2 Damage for Spearmen"
+})
+
 DefineUpgrade("upgrade-faction-frank-tribe", {
 	Name = "Frank Tribe",
 	EffectsString = "+1 Damage and +1 Armor for Ritars"
+})
+
+DefineUpgrade("upgrade-faction-sugambri-tribe", {
+	Name = "Sugambri Tribe",
+	EffectsString = "+2 Accuracy for Scuzzos"
+})
+
+DefineUpgrade("upgrade-faction-austrasia", {
+	Name = "Austrasia",
+	EffectsString = "+1 Damage and +1 Armor for Ritars"
+})
+
+DefineUpgrade("upgrade-faction-burgundia", {
+	Name = "Burgundia",
+	EffectsString = "+10 HP for Ritars"
+})
+
+DefineUpgrade("upgrade-faction-east-francia", {
+	Name = "East Francia",
+	EffectsString = "+2 Armor for Ritars"
 })
 
 DefineUpgrade("upgrade-faction-francia", {
 	Name = "Francia",
 	EffectsString = "+2 Damage for Ritars"
 })
+
+DefineUpgrade("upgrade-faction-neustria", {
+	Name = "Neustria",
+	EffectsString = "+1 Accuracy and +1 Armor for Ritars"
+})
+
+DefineUpgrade("upgrade-faction-salia", {
+	Name = "Salia",
+	EffectsString = "+2 Accuracy for Ritars"
+})
+
+DefineModifier("upgrade-faction-ampsivarii-tribe",
+	{"change-faction-to", "ampsivarii-tribe"}
+)
+
+DefineModifier("upgrade-faction-ampsivarii-tribe",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-frank-swordsman"}, {"apply-to", "unit-frank-veteran-swordsman"}, {"apply-to", "unit-frank-heroic-swordsman"}
+)
+
+DefineModifier("upgrade-faction-batavian-tribe",
+	{"change-faction-to", "batavian-tribe"}
+)
+
+DefineModifier("upgrade-faction-batavian-tribe",
+	{"BasicDamage", 3},
+	{"Armor", -1},
+	{"Points", 10},
+	{"apply-to", "unit-frank-swordsman"}, {"apply-to", "unit-frank-veteran-swordsman"}, {"apply-to", "unit-frank-heroic-swordsman"}
+)
+
+DefineModifier("upgrade-faction-chamavi-tribe",
+	{"change-faction-to", "chamavi-tribe"}
+)
+
+DefineModifier("upgrade-faction-chamavi-tribe",
+	{"Accuracy", 2},
+	{"Points", 10},
+	{"apply-to", "unit-frank-swordsman"}, {"apply-to", "unit-frank-veteran-swordsman"}, {"apply-to", "unit-frank-heroic-swordsman"}
+)
+
+DefineModifier("upgrade-faction-chatti-tribe",
+	{"change-faction-to", "chatti-tribe"}
+)
+
+DefineModifier("upgrade-faction-chatti-tribe",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-frank-spearman"}
+)
 
 DefineModifier("upgrade-faction-frank-tribe",
 	{"change-faction-to", "frank-tribe"}
@@ -46,6 +137,47 @@ DefineModifier("upgrade-faction-frank-tribe",
 	{"apply-to", "unit-frank-horseman"}, {"apply-to", "unit-frank-knight-lord"}
 )
 
+DefineModifier("upgrade-faction-sugambri-tribe",
+	{"change-faction-to", "sugambri-tribe"}
+)
+
+DefineModifier("upgrade-faction-sugambri-tribe",
+	{"Accuracy", 2},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-archer"}
+)
+
+DefineModifier("upgrade-faction-austrasia",
+	{"change-faction-to", "austrasia"}
+)
+
+DefineModifier("upgrade-faction-austrasia",
+	{"BasicDamage", 1},
+	{"Armor", 1},
+	{"Points", 10},
+	{"apply-to", "unit-frank-horseman"}, {"apply-to", "unit-frank-knight-lord"}
+)
+
+DefineModifier("upgrade-faction-burgundia",
+	{"change-faction-to", "burgundia"}
+)
+
+DefineModifier("upgrade-faction-burgundia",
+	{"HitPoints", 10},
+	{"Points", 10},
+	{"apply-to", "unit-frank-horseman"}, {"apply-to", "unit-frank-knight-lord"}
+)
+
+DefineModifier("upgrade-faction-east-francia",
+	{"change-faction-to", "east-francia"}
+)
+
+DefineModifier("upgrade-faction-east-francia",
+	{"Armor", 2},
+	{"Points", 10},
+	{"apply-to", "unit-frank-horseman"}, {"apply-to", "unit-frank-knight-lord"}
+)
+
 DefineModifier("upgrade-faction-francia",
 	{"change-faction-to", "francia"}
 )
@@ -54,4 +186,49 @@ DefineModifier("upgrade-faction-francia",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-frank-horseman"}, {"apply-to", "unit-frank-knight-lord"}
+)
+
+DefineModifier("upgrade-faction-neustria",
+	{"change-faction-to", "neustria"}
+)
+
+DefineModifier("upgrade-faction-neustria",
+	{"Accuracy", 1},
+	{"Armor", 1},
+	{"Points", 10},
+	{"apply-to", "unit-frank-horseman"}, {"apply-to", "unit-frank-knight-lord"}
+)
+
+DefineModifier("upgrade-faction-salia",
+	{"change-faction-to", "salia"}
+)
+
+DefineModifier("upgrade-faction-salia",
+	{"Accuracy", 2},
+	{"Points", 10},
+	{"apply-to", "unit-frank-horseman"}, {"apply-to", "unit-frank-knight-lord"}
+)
+
+DefineDependency("upgrade-faction-ampsivarii-tribe",
+	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
+)
+
+DefineDependency("upgrade-faction-batavian-tribe",
+	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
+)
+
+DefineDependency("upgrade-faction-chamavi-tribe",
+	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
+)
+
+DefineDependency("upgrade-faction-chatti-tribe",
+	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
+)
+
+DefineDependency("upgrade-faction-frank-tribe",
+	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
+)
+
+DefineDependency("upgrade-faction-sugambri-tribe",
+	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
 )
