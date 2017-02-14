@@ -25,4 +25,40 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+-- Researches ---------------------------------------------------------
+
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-frankish-spatha",
+	Action = "research", Value = "upgrade-frank-spatha",
+	Allowed = "check-single-research",
+	Key = "p", Hint = "Research S~!patha", Popup = "popup-research",
+	Description = "+2 Damage for swordwielders.",
+	ForUnit = {"unit-teuton-smithy"}
+} )
+
+-- Upgrades ---------------------------------------------------------
+
+DefineButton( { Pos = 1, Level = 2,
+	Action = "experience-upgrade-to", Value = "unit-frank-veteran-swordsman",
+	Key = "a", Hint = "Upgrade to ~!Adal", Popup = "popup-unit",
+	ForUnit = {"unit-frank-swordsman"}
+} )
+
+DefineButton( { Pos = 1, Level = 2,
+	Action = "experience-upgrade-to", Value = "unit-frank-heroic-swordsman",
+	Key = "d", Hint = "Upgrade to ~!Truhtin", Popup = "popup-unit",
+	ForUnit = {"unit-frank-veteran-swordsman"}
+} )
+
+DefineButton( { Pos = 2, Level = 2,
+	Action = "experience-upgrade-to", Value = "unit-frank-horseman",
+	Key = "r", Hint = "Upgrade to ~!Ritar", Popup = "popup-unit",
+	ForUnit = {"unit-frank-swordsman"}
+} )
+
+DefineButton( { Pos = 1, Level = 2,
+	Action = "experience-upgrade-to", Value = "unit-frank-knight-lord",
+	Key = "h", Hint = "Upgrade to ~!Heriro", Popup = "popup-unit",
+	ForUnit = {"unit-frank-horseman"}
+} )
+
 Load("scripts/civilizations/frankish/buttons_faction.lua")

@@ -143,23 +143,15 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-spatha",
 	Action = "research", Value = "upgrade-teuton-spatha",
 	Allowed = "check-single-research",
 	Key = "p", Hint = "Research S~!patha", Popup = "popup-research",
-	Description = "+2 Damage for Kregars and Ritars.",
+	Description = "+2 Damage for swordwielders.",
 	ForUnit = {"unit-teuton-smithy", "unit-latin-smithy"}
-} )
-
-DefineButton( { Pos = 1, Level = 0, Icon = "icon-frankish-spatha",
-	Action = "research", Value = "upgrade-frank-spatha",
-	Allowed = "check-single-research",
-	Key = "p", Hint = "Research S~!patha", Popup = "popup-research",
-	Description = "+2 Damage for Kregars and Ritars.",
-	ForUnit = {"unit-teuton-smithy"}
 } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-iron-shield",
 	Action = "research", Value = "upgrade-teuton-iron-shield",
 	Allowed = "check-single-research",
 	Key = "s", Hint = "Research Iron ~!Shield", Popup = "popup-research",
-	Description = "+2 Armor for Kregars, Spearmen and Ritars.",
+	Description = "+2 Armor for melee infantry and cavalry.",
 	ForUnit = {"unit-teuton-smithy", "unit-latin-smithy"}
 } )
 
@@ -191,7 +183,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-bodkin-arrow",
 	Action = "research", Value = "upgrade-teuton-bodkin-arrow",
 	Allowed = "check-single-research",
 	Key = "a", Hint = _("Research Bodkin ~!Arrow"), Popup = "popup-research",
-	Description = "+2 Damage for Scuzzos.",
+	Description = "+2 Damage for Schutzes.",
 	ForUnit = {"unit-teuton-lumber-mill"}
 } )
 
@@ -230,7 +222,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-cauldron",
 	Action = "research", Value = "upgrade-teuton-alchemy",
 	Allowed = "check-single-research",
-	Description = "+1 Fire Damage for Scuzzos, +5 Fire Damage for Catapults.",
+	Description = "+1 Fire Damage for Schutzes, +5 Fire Damage for Catapults.",
 	Key = "a", Hint = _("Research ~!Alchemy"), Popup = "popup-research",
 	ForUnit = {"unit-teuton-stronghold"}
 } )
@@ -249,7 +241,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-odin",
 	Action = "research", Value = "upgrade-deity-odin",
 	Allowed = "check-single-research",
 	Key = "w", Hint = "Worship ~!Wodan", Popup = "popup-research",
-	Description = "Choose Wodan as your major deity. +2 Damage for Scuzzos, enables Inspire spell for Gudjans. Incompatible with the Christianity religion or with the Thunor major deity.",
+	Description = "Choose Wodan as your major deity. +2 Damage for Schutzes, enables Inspire spell for Gudjans. Incompatible with the Christianity religion or with the Thunor major deity.",
 	ForUnit = {"unit-teuton-temple"}
 })
   
@@ -257,7 +249,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-thor",
 	Action = "research", Value = "upgrade-deity-thor",
 	Allowed = "check-single-research",
 	Key = "t", Hint = "Worship ~!Thunor", Popup = "popup-research",
-	Description = "Choose Thunor as your major deity. +2 Damage for Kregars, enables Precision spell for Gudjans. Incompatible with the Christianity religion or with the Wodan major deity.",
+	Description = "Choose Thunor as your major deity. +2 Damage for sword infantry, enables Precision spell for Gudjans. Incompatible with the Christianity religion or with the Wodan major deity.",
 	ForUnit = {"unit-teuton-temple"}
 })
 
@@ -278,7 +270,7 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-christianity",
 DefineButton( { Pos = 10, Level = 0, Icon = "icon-odin",
 	Action = "learn-ability", Value = "upgrade-deity-odin",
 	Key = "w", Hint = "Worship ~!Wodan", Popup = "popup-research",
-	Description = "Choose Wodan as your hero's major deity. +2 Damage for Scuzzos, enables Inspire spell for Gudjans. Incompatible with the Christianity religion or with the Thunor major deity.",
+	Description = "Choose Wodan as your hero's major deity. +2 Damage for Schutzes, enables Inspire spell for Gudjans. Incompatible with the Christianity religion or with the Thunor major deity.",
 	ForUnit = {
 		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
 		"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman",
@@ -292,7 +284,7 @@ DefineButton( { Pos = 10, Level = 0, Icon = "icon-odin",
 DefineButton( { Pos = 11, Level = 0, Icon = "icon-thor",
 	Action = "learn-ability", Value = "upgrade-deity-thor",
 	Key = "t", Hint = "Worship ~!Thunor", Popup = "popup-research",
-	Description = "Choose Thunor as your hero's major deity. +2 Damage for Kregars, enables Precision spell for Gudjans. Incompatible with the Christianity religion or with the Wodan major deity.",
+	Description = "Choose Thunor as your hero's major deity. +2 Damage for sword infantry, enables Precision spell for Gudjans. Incompatible with the Christianity religion or with the Wodan major deity.",
 	ForUnit = {
 		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
 		"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman",
@@ -319,7 +311,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-stronghold",
 
 DefineButton( { Pos = 1, Level = 2,
 	Action = "experience-upgrade-to", Value = "unit-teuton-veteran-swordsman",
-	Key = "a", Hint = "Upgrade to ~!Adal", Popup = "popup-unit",
+	Key = "a", Hint = "Upgrade to ~!Adel", Popup = "popup-unit",
 	ForUnit = {"unit-teuton-swordsman", "unit-suebi-swordsman"}
 } )
 
@@ -329,40 +321,16 @@ DefineButton( { Pos = 1, Level = 2,
 	ForUnit = {"unit-teuton-veteran-swordsman"}
 } )
 
-DefineButton( { Pos = 1, Level = 2,
-	Action = "experience-upgrade-to", Value = "unit-frank-veteran-swordsman",
-	Key = "a", Hint = "Upgrade to ~!Adal", Popup = "popup-unit",
-	ForUnit = {"unit-frank-swordsman"}
-} )
-
-DefineButton( { Pos = 1, Level = 2,
-	Action = "experience-upgrade-to", Value = "unit-frank-heroic-swordsman",
-	Key = "d", Hint = "Upgrade to ~!Truhtin", Popup = "popup-unit",
-	ForUnit = {"unit-frank-veteran-swordsman"}
-} )
-
 DefineButton( { Pos = 2, Level = 2, Icon = "icon-teuton-ritter",
 	Action = "experience-upgrade-to", Value = "unit-teuton-ritter",
-	Key = "r", Hint = "Upgrade to ~!Ritar", Popup = "popup-unit",
+	Key = "r", Hint = "Upgrade to ~!Ritter", Popup = "popup-unit",
 	ForUnit = {"unit-teuton-swordsman", "unit-suebi-swordsman"}
-} )
-
-DefineButton( { Pos = 2, Level = 2,
-	Action = "experience-upgrade-to", Value = "unit-frank-horseman",
-	Key = "r", Hint = "Upgrade to ~!Ritar", Popup = "popup-unit",
-	ForUnit = {"unit-frank-swordsman"}
 } )
 
 DefineButton( { Pos = 1, Level = 2,
 	Action = "experience-upgrade-to", Value = "unit-teuton-knight-lord",
-	Key = "h", Hint = "Upgrade to ~!Heriro", Popup = "popup-unit",
+	Key = "l", Hint = "Upgrade to ~!Landesherr", Popup = "popup-unit",
 	ForUnit = {"unit-teuton-ritter"}
-} )
-
-DefineButton( { Pos = 1, Level = 2,
-	Action = "experience-upgrade-to", Value = "unit-frank-knight-lord",
-	Key = "h", Hint = "Upgrade to ~!Heriro", Popup = "popup-unit",
-	ForUnit = {"unit-frank-horseman"}
 } )
 
 Load("scripts/civilizations/teuton/buttons_faction.lua")

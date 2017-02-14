@@ -27,17 +27,17 @@
 
 DefineUpgrade("upgrade-angle-tribe-faction", {
 	Name = "Angle Tribe Faction",
-	EffectsString = "+2 Damage for Kregars"
+	EffectsString = "+2 Damage for Kriegers"
 })
 
 DefineUpgrade("upgrade-faction-bavarian-tribe", {
 	Name = "Bavarian Tribe",
-	EffectsString = "+1 Damage and +1 Armor for Kregars"
+	EffectsString = "+1 Damage and +1 Armor for Kriegers"
 })
 
 DefineUpgrade("upgrade-bernice-tribe-faction", {
 	Name = "Bernice Tribe Faction",
-	EffectsString = "Disembarkment Bonus for Kregars and Spearmen"
+	EffectsString = "Disembarkment Bonus for Kriegers and Spearmen"
 })
 
 DefineUpgrade("upgrade-faction-cherusci-tribe", {
@@ -47,7 +47,7 @@ DefineUpgrade("upgrade-faction-cherusci-tribe", {
 
 DefineUpgrade("upgrade-frisian-tribe-faction", {
 	Name = "Frisian Tribe Faction",
-	EffectsString = "+5 HP and +1 Armor for Kregars"
+	EffectsString = "+5 HP and +1 Armor for Kriegers"
 })
 
 DefineUpgrade("upgrade-gumeninga-tribe-faction", {
@@ -57,12 +57,12 @@ DefineUpgrade("upgrade-gumeninga-tribe-faction", {
 
 DefineUpgrade("upgrade-lombard-tribe-faction", {
 	Name = "Lombard Tribe Faction",
-	EffectsString = "+2 Damage for Kregars"
+	EffectsString = "+2 Damage for Kriegers"
 })
 
 DefineUpgrade("upgrade-faction-saxon-tribe", {
 	Name = "Saxon Tribe",
-	EffectsString = "+5 HP and +1 Damage for Kregars"
+	EffectsString = "+5 HP and +1 Damage for Kriegers"
 })
 
 DefineUpgrade("upgrade-ubii-tribe-faction", {
@@ -73,22 +73,22 @@ DefineUpgrade("upgrade-ubii-tribe-faction", {
 
 DefineUpgrade("upgrade-faction-varini-tribe", {
 	Name = "Varini Tribe",
-	EffectsString = "+10 HP for Kregars"
+	EffectsString = "+10 HP for Kriegers"
 })
 
 DefineUpgrade("upgrade-faction-austria", {
 	Name = "Austria",
-	EffectsString = "+1 Speed for Scuzzos"
+	EffectsString = "+1 Speed for Schutzes"
 })
 
 DefineUpgrade("upgrade-faction-baden", {
 	Name = "Baden",
-	EffectsString = "+2 Evasion for Kregars"
+	EffectsString = "+2 Evasion for Kriegers"
 })
 
 DefineUpgrade("upgrade-faction-bavaria", {
 	Name = "Bavaria",
-	EffectsString = "+1 Damage and +1 Armor for Kregars"
+	EffectsString = "+1 Damage and +1 Armor for Kriegers"
 })
 
 DefineUpgrade("upgrade-faction-carinthia", {
@@ -98,27 +98,27 @@ DefineUpgrade("upgrade-faction-carinthia", {
 
 DefineUpgrade("upgrade-faction-franconia", {
 	Name = "Franconia",
-	EffectsString = "+10 HP for Ritars"
+	EffectsString = "+10 HP for Ritters"
 })
 
 DefineUpgrade("upgrade-faction-holy-rome", {
 	Name = "Holy Rome",
-	EffectsString = "+2 Armor for Ritars"
+	EffectsString = "+2 Armor for Ritters"
 })
 
 DefineUpgrade("upgrade-mecklenburg-faction", {
 	Name = "Mecklenburg",
-	EffectsString = "+2 Armor for Kregars"
+	EffectsString = "+2 Armor for Kriegers"
 })
 
 DefineUpgrade("upgrade-faction-saxony", {
 	Name = "Saxony",
-	EffectsString = "+5 HP and +1 Damage for Kregars"
+	EffectsString = "+5 HP and +1 Damage for Kriegers"
 })
 
 DefineUpgrade("upgrade-faction-swabia", {
 	Name = "Swabia",
-	EffectsString = "+10 HP for Kregars"
+	EffectsString = "+10 HP for Kriegers"
 })
 
 DefineUpgrade("upgrade-faction-switzerland", {
@@ -128,12 +128,12 @@ DefineUpgrade("upgrade-faction-switzerland", {
 
 DefineUpgrade("upgrade-faction-thuringia", {
 	Name = "Thuringia",
-	EffectsString = "+2 Damage for Scuzzos"
+	EffectsString = "+2 Damage for Schutzes"
 })
 
 DefineUpgrade("upgrade-faction-wurtemberg", {
 	Name = "Wurtemberg",
-	EffectsString = "+2 Armor for Kregars"
+	EffectsString = "+2 Armor for Kriegers"
 })
 
 DefineModifier("upgrade-angle-tribe-faction",

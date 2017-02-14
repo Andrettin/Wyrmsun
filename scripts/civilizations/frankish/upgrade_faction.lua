@@ -52,7 +52,7 @@ DefineUpgrade("upgrade-faction-frank-tribe", {
 
 DefineUpgrade("upgrade-faction-sugambri-tribe", {
 	Name = "Sugambri Tribe",
-	EffectsString = "+2 Accuracy for Scuzzos"
+	EffectsString = "+2 Accuracy for Schutzes"
 })
 
 DefineUpgrade("upgrade-faction-austrasia", {

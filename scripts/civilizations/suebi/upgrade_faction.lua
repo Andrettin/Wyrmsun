@@ -62,7 +62,7 @@ DefineUpgrade("upgrade-faction-suebi-tribe", {
 
 DefineUpgrade("upgrade-faction-thuringian-tribe", {
 	Name = "Thuringian Tribe",
-	EffectsString = "+2 Damage for Scuzzos"
+	EffectsString = "+2 Damage for Schutzes"
 })
 
 DefineUpgrade("upgrade-faction-galicia", {

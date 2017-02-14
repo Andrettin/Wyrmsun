@@ -30,7 +30,7 @@ DefineUpgrade("upgrade-teuton-spatha", {
 	Parent = "upgrade-long-sword",
 	Icon = "icon-teuton-spatha",
 	Civilization = "teuton",
-	Description = "With the development of iron working, the forging of longer swords became a practical possibility.\n\nEffect: +2 Damage for Kregars and Ritars.",
+	Description = "With the development of iron working, the forging of longer swords became a practical possibility.\n\nEffect: +2 Damage for swordwielders.",
 	Background = "During the Migration Period, Germanic peoples - including West Germanics - used longswords such as these in combat.",
 	Item = "unit-spatha"
 })
@@ -40,7 +40,7 @@ DefineUpgrade("upgrade-frank-spatha", {
 	Parent = "upgrade-teuton-spatha",
 	Icon = "icon-frankish-spatha",
 	Civilization = "frankish",
-	Description = "With the development of iron working, the forging of longer swords became a practical possibility.\n\nEffect: +2 Damage for Kregars and Ritars.",
+	Description = "With the development of iron working, the forging of longer swords became a practical possibility.\n\nEffect: +2 Damage for swordwielders.",
 	Background = "During the Migration Period, Germanic peoples - including West Germanics - used longswords such as these in combat.",
 	Item = "unit-frankish-spatha"
 })
@@ -56,7 +56,7 @@ DefineUpgrade("upgrade-teuton-iron-shield", {
 	Parent = "upgrade-iron-shield",
 	Icon = "icon-teuton-iron-shield",
 	Civilization = "teuton",
-	Description = "The development of iron working makes the crafting of sturdier shields possible.\n\nEffect: +2 Armor for Kregars, Spearmen and Ritars.",
+	Description = "The development of iron working makes the crafting of sturdier shields possible.\n\nEffect: +2 Armor for melee infantry and cavalry.",
 	Item = "unit-iron-shield"
 })
 
@@ -65,7 +65,7 @@ DefineUpgrade("upgrade-teuton-bodkin-arrow", {
 	Parent = "upgrade-ranged-projectile-2",
 	Icon = "icon-bodkin-arrow",
 	Civilization = "teuton",
-	Description = "Bodkin arrows focus pressure on a single point, greatly enhancing their piercing capability.\n\nEffect: +2 Damage for Scuzzos.",
+	Description = "Bodkin arrows focus pressure on a single point, greatly enhancing their piercing capability.\n\nEffect: +2 Damage for Schutzes.",
 	Arrows = true,
 	Item = "unit-bodkin-arrows"
 })
@@ -109,7 +109,7 @@ DefineUpgrade("upgrade-teuton-writing", {
 DefineUpgrade("upgrade-teuton-alchemy", {
 	Parent = "upgrade-alchemy",
 	Civilization = "teuton",
-	Description = "Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Scuzzos, +5 Fire Damage for Catapults."
+	Description = "Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Schutzes, +5 Fire Damage for Catapults."
 })
 
 DefineModifier("upgrade-teuton-spatha",

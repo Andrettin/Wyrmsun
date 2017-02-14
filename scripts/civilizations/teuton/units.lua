@@ -89,11 +89,11 @@ DefineUnitType("unit-teuton-worker", {
 } )
 
 DefineUnitType("unit-teuton-swordsman", {
-	Name = "Kregar", -- tentative suffix added to Old High German "Krêg" to make a corresponding word to modern German "Krieger"
+	Name = "Krieger",
 	Parent = "unit-template-infantry",
 	Civilization = "teuton",
 	Description = "The dauntless West Germanic swordsmen ravage the battlefield with their longswords, being second to few other warriors in combat.",
-	Background = "\"Krêg\" is the Old High German word for \"tenacity\", and possibly \"war\".",
+	Background = "\"Krieger\" is the German word for \"warrior\".",
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {
@@ -123,7 +123,7 @@ DefineUnitType("unit-teuton-swordsman", {
 	WeaponClasses = {"sword", "thrusting-sword"},
 	HackDamage = true,
 	ButtonKey = "k",
-	ButtonHint = "Train ~!Kregar",
+	ButtonHint = "Train ~!Krieger",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Variations = {
 		{
@@ -247,11 +247,11 @@ DefineUnitType("unit-teuton-swordsman", {
 } )
 
 DefineUnitType("unit-teuton-veteran-swordsman", {
-	Name = "Adal",
+	Name = "Adel",
 	Parent = "unit-template-veteran-infantry",
 	Civilization = "teuton",
 	Description = "These high-ranking swordsmen have honed their combat skills to a greater degree than many of their counterparts.",
-	Background = "\"Adal\" is the Old High German word for \"noble\".",
+	Background = "\"Adel\" is the German word for \"noble\".",
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {
@@ -406,7 +406,7 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 	Parent = "unit-template-heroic-infantry",
 	Civilization = "teuton",
 	Description = "Amongst the most skilled in the land, these swordsmen often serve as retainers for chieftains and kings.",
-	Background = "\"Truhtîn\" is an Old High German word for \"lord\" or \"warlord\".",
+	Background = "\"Truhtîn\", or \"trohtîn\", is a Middle High German word for \"lord\" or \"warlord\".",
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {
@@ -667,11 +667,13 @@ DefineUnitType("unit-teuton-spearman", {
 } )
 
 DefineUnitType("unit-teuton-archer", {
-	Name = "Scuzzo",
+--	Name = "Scuzzo",
+	Name = "Schutze",
 	Parent = "unit-template-archer",
 	Civilization = "teuton",
 	Description = "Teuton archers are a perilous lot. They excel at ambushing enemies in the forests of their homelands.",
-	Background = "\"Scuzzo\" is an Old High German word for \"archer\".",
+--	Background = "\"Scuzzo\" is an Old High German word for \"archer\".",
+	Background = "\"Schutze\" is a German word for \"archer\".",
 	Image = {"file", "human/units/body_archer.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow_archer.png", "size", {72, 72}},
 	LayerImages = {
@@ -702,7 +704,7 @@ DefineUnitType("unit-teuton-archer", {
 	CanCastSpell = {"spell-precise-shot"},
 	AutoCastActive = {"spell-precise-shot"},
 	ButtonKey = "s",
-	ButtonHint = "Train ~!Scuzzo",
+	ButtonHint = "Train ~!Schutze",
 	AiDrops = {"unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Sounds = {
 		"selected", "basic-teuton-voices-selected-group",
@@ -716,11 +718,11 @@ DefineUnitType("unit-teuton-archer", {
 } )
 
 DefineUnitType("unit-teuton-ritter", {
-	Name = "Ritar", -- changed the verb "Rītan" to "Rītar" in a tentative way to make correspondent words to German "reiten" and "Ritter"
+	Name = "Ritter",
 	Parent = "unit-template-cavalry",
 	Civilization = "teuton",
 	Description = "The Teutons excel in mounted combat. Their well-armored and trained heavy cavalry strikes fear in the hearts of their enemies whenever they are seen upon the battlefield.",
-	Background = "\"Rītan\" is an Old High German word for \"to ride\".",
+	Background = "\"Ritter\" is the German word for \"knight\".",
 	Image = {"file", "teuton/units/ritter.png", "size", {72, 72}},
 	LayerImages = {
 		{"layer", "shield", "file", "teuton/units/ritter_shield.png"}
@@ -741,7 +743,7 @@ DefineUnitType("unit-teuton-ritter", {
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
 	ButtonKey = "r",
-	ButtonHint = "Train ~!Ritar",
+	ButtonHint = "Train ~!Ritter",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Corpse = "unit-human-dead-body",
 	Sounds = {
@@ -756,11 +758,11 @@ DefineUnitType("unit-teuton-ritter", {
 } )
 
 DefineUnitType("unit-teuton-knight-lord", {
-	Name = "Heriro",
+	Name = "Landesherr",
 	Parent = "unit-template-heroic-cavalry",
 	Civilization = "teuton",
 	Description = "Heavily-armored and possessing years of martial and horse-riding training, Teuton lords sweep the battlefield cutting down their foes.",
-	Background = "\"Hēr(i)ro\" is an Old High German word for \"sir\", which gave rise to the modern German \"Herr\", meaning \"lord\".",
+	Background = "\"Landesherr\" is a German word for \"landed lord\".",
 	Image = {"file", "teuton/units/ritter.png", "size", {72, 72}},
 	LayerImages = {
 		{"layer", "shield", "file", "teuton/units/ritter_shield.png"}

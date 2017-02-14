@@ -32,7 +32,7 @@
 --
 
 DefineUnitType("unit-frank-swordsman", {
-	Name = "Kregar",
+	Name = "Kregar", -- tentative suffix added to Old High German "Krêg" to make a corresponding word to modern German "Krieger"
 	Parent = "unit-template-infantry",
 	Civilization = "frankish",
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
@@ -631,7 +631,7 @@ DefineUnitType("unit-frank-spearman", {
 } )
 
 DefineUnitType("unit-frank-horseman", {
-	Name = "Ritar",
+	Name = "Ritar", -- changed the verb "Ritan" to "Ritar" in a tentative way to make correspondent words to German "reiten" and "Ritter"
 	Parent = "unit-template-cavalry",
 	Civilization = "frankish",
 	Icon = "icon-frank-horseman",
