@@ -852,6 +852,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-red-potion",
 
 Load("scripts/civilizations/celt/buttons.lua")
 Load("scripts/civilizations/dwarf/buttons.lua")
+Load("scripts/civilizations/frankish/buttons.lua")
 Load("scripts/civilizations/germanic/buttons.lua")
 Load("scripts/civilizations/gnome/buttons.lua")
 Load("scripts/civilizations/goblin/buttons.lua")

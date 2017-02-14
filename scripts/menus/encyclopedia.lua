@@ -2010,6 +2010,8 @@ function GetCivilizationBackground(civilization)
 		return "ui/backgrounds/yale.png"
 	elseif (civilization == "ettin") then
 		return "ui/backgrounds/wyrm.png"
+	elseif (civilization == "frankish") then
+		return "ui/backgrounds/wyrm.png"
 	elseif (civilization == "germanic") then
 		return "ui/backgrounds/wyrm.png"
 	elseif (civilization == "gnome") then

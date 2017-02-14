@@ -25,13 +25,19 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDeity("christian-god", {
-	Name = "Christian God",
-	HomePlane = "Heaven",
-	Civilizations = {"frankish", "latin", "suebi", "teuton"},
-	Religions = {"christianity"},
-	Gender = "male",
-	Major = true,
---	Icon = "icon-christianity",
-	Domains = {"charity", "faith", "hope"}
-})
+DefineButton( { Pos = 6, Level = 2, Icon = "icon-teuton-civilization",
+	Action = "research", Value = "upgrade-faction-frank-tribe",
+	Allowed = "check-single-research",
+	Key = "f", Hint = "Found the ~!Frank Tribe", Popup = "popup-research",
+	Description = "Changes your faction to the Frank Tribe",
+	ForUnit = {"unit-germanic-town-hall"}
+} )
+
+DefineButton( { Pos = 9, Level = 2, Icon = "icon-teuton-civilization",
+	Action = "research", Value = "upgrade-faction-francia",
+	Allowed = "check-single-research",
+	Key = "f", Hint = "Found ~!Francia", Popup = "popup-research",
+	Description = "Changes your faction to Francia",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+

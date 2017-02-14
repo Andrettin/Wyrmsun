@@ -36,11 +36,10 @@ DefineUpgrade("upgrade-teuton-spatha", {
 })
 
 DefineUpgrade("upgrade-frank-spatha", {
-	Name = _("Spatha"),
+	Name = "Spatha",
 	Parent = "upgrade-teuton-spatha",
 	Icon = "icon-frankish-spatha",
-	Civilization = "teuton",
-	Faction = "frank-tribe",
+	Civilization = "frankish",
 	Description = "With the development of iron working, the forging of longer swords became a practical possibility.\n\nEffect: +2 Damage for Kregars and Ritars.",
 	Background = "During the Migration Period, Germanic peoples - including West Germanics - used longswords such as these in combat.",
 	Item = "unit-frankish-spatha"
@@ -294,11 +293,11 @@ DefineDependency("unit-teuton-catapult",
 )
 
 DefineDependency("upgrade-teuton-spatha",
-	{"upgrade-germanic-broad-sword", "upgrade-frank-tribe-faction", 0}
+	{"upgrade-germanic-broad-sword", "upgrade-frankish-civilization", 0}
 )
 
 DefineDependency("upgrade-frank-spatha",
-	{"upgrade-germanic-broad-sword", "upgrade-frank-tribe-faction"}
+	{"upgrade-germanic-broad-sword", "upgrade-frankish-civilization"}
 )
 
 DefineDependency("upgrade-teuton-pike",
@@ -342,31 +341,19 @@ DefineDependency("unit-teuton-stables",
 )
 
 DefineDependency("unit-teuton-swordsman",
-	{"upgrade-suebi-civilization", 0, "upgrade-frank-tribe-faction", 0}
-)
-
-DefineDependency("unit-frank-swordsman",
-	{"upgrade-frank-tribe-faction"}
+	{"upgrade-suebi-civilization", 0, "upgrade-frankish-civilization", 0}
 )
 
 DefineDependency("unit-teuton-spearman",
-	{"upgrade-frank-tribe-faction", 0}
-)
-
-DefineDependency("unit-frank-spearman",
-	{"upgrade-frank-tribe-faction"}
+	{"upgrade-frankish-civilization", 0}
 )
 
 DefineDependency("unit-teuton-ritter",
-	{"unit-teuton-smithy", "unit-teuton-stables", "upgrade-frank-tribe-faction", 0, "upgrade-latin-civilization", 0}, "or", {"unit-latin-smithy", "unit-latin-stables"}
-)
-
-DefineDependency("unit-frank-horseman",
-	{"unit-teuton-smithy", "unit-teuton-stables", "upgrade-frank-tribe-faction"}
+	{"unit-teuton-smithy", "unit-teuton-stables", "upgrade-frankish-civilization", 0, "upgrade-latin-civilization", 0}, "or", {"unit-latin-smithy", "unit-latin-stables"}
 )
 
 DefineDependency("unit-teuton-town-hall",
-	{"upgrade-teuton-civilization", "upgrade-latin-civilization", 0}, "or", {"upgrade-suebi-civilization", "upgrade-latin-civilization", 0}
+	{"upgrade-teuton-civilization", "upgrade-latin-civilization", 0}, "or", {"upgrade-suebi-civilization", "upgrade-latin-civilization", 0}, "or", {"upgrade-frankish-civilization", "upgrade-latin-civilization", 0}
 )
 
 DefineDependency("unit-teuton-farm",

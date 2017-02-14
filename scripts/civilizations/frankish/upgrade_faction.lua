@@ -25,13 +25,33 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDeity("christian-god", {
-	Name = "Christian God",
-	HomePlane = "Heaven",
-	Civilizations = {"frankish", "latin", "suebi", "teuton"},
-	Religions = {"christianity"},
-	Gender = "male",
-	Major = true,
---	Icon = "icon-christianity",
-	Domains = {"charity", "faith", "hope"}
+DefineUpgrade("upgrade-faction-frank-tribe", {
+	Name = "Frank Tribe",
+	EffectsString = "+1 Damage and +1 Armor for Ritars"
 })
+
+DefineUpgrade("upgrade-faction-francia", {
+	Name = "Francia",
+	EffectsString = "+2 Damage for Ritars"
+})
+
+DefineModifier("upgrade-faction-frank-tribe",
+	{"change-faction-to", "frank-tribe"}
+)
+
+DefineModifier("upgrade-faction-frank-tribe",
+	{"BasicDamage", 1},
+	{"Armor", 1},
+	{"Points", 10},
+	{"apply-to", "unit-frank-horseman"}, {"apply-to", "unit-frank-knight-lord"}
+)
+
+DefineModifier("upgrade-faction-francia",
+	{"change-faction-to", "francia"}
+)
+
+DefineModifier("upgrade-faction-francia",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-frank-horseman"}, {"apply-to", "unit-frank-knight-lord"}
+)

@@ -25,6 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineButton( { Pos = 5, Level = 2, Icon = "icon-teuton-civilization",
+	Action = "research", Value = "upgrade-faction-holy-rome",
+	Allowed = "check-single-research",
+	Key = "h", Hint = "Found the ~!Holy Roman Empire", Popup = "popup-research",
+	Description = "Changes your faction to the Holy Roman Empire",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
 DefineButton( { Pos = 1, Level = 2, Icon = "icon-teuton-civilization",
 	Action = "research", Value = "upgrade-faction-bavarian-tribe",
 	Allowed = "check-single-research",
@@ -128,5 +136,15 @@ DefineButton( { Pos = 9, Level = 2, Icon = "icon-teuton-civilization",
 	Allowed = "check-single-research",
 	Key = "x", Hint = "Found Sa~!xony", Popup = "popup-research",
 	Description = "Changes your faction to Saxony",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
+-- Franconian Factions
+
+DefineButton( { Pos = 9, Level = 2, Icon = "icon-teuton-civilization",
+	Action = "research", Value = "upgrade-faction-franconia",
+	Allowed = "check-single-research",
+	Key = "f", Hint = "Found ~!Franconia", Popup = "popup-research",
+	Description = "Changes your faction to Franconia",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )

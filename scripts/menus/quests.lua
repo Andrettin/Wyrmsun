@@ -164,7 +164,7 @@ function RunQuestMenu(world)
 	local hero_name_list = {}
 	for i=1,table.getn(custom_heroes) do
 		if (
-			(world == "Earth" and (GetCustomHeroData(custom_heroes[i], "Civilization") == "germanic" or GetCustomHeroData(custom_heroes[i], "Civilization") == "suebi" or GetCustomHeroData(custom_heroes[i], "Civilization") == "teuton"))
+			(world == "Earth" and (GetCustomHeroData(custom_heroes[i], "Civilization") == "germanic" or GetCustomHeroData(custom_heroes[i], "Civilization") == "frankish" or GetCustomHeroData(custom_heroes[i], "Civilization") == "suebi" or GetCustomHeroData(custom_heroes[i], "Civilization") == "teuton"))
 			or (world == "Nidavellir" and GetCustomHeroData(custom_heroes[i], "Civilization") == "dwarf")
 			or (world == "Nidavellir" and GetCustomHeroData(custom_heroes[i], "Civilization") == "gnome")
 			or (world == "Nidavellir" and GetCustomHeroData(custom_heroes[i], "Civilization") == "goblin")

@@ -25,8 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-Load("scripts/civilizations/teuton/factions_frank.lua")
-
 DefineFaction("saxon-tribe", {
 	Name = "Saxon Tribe",
 	Civilization = "teuton",
@@ -39,16 +37,6 @@ DefineFaction("saxon-tribe", {
 		"Hohsingo", -- one of the pagi in Eastphalia in 852; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 610.
 		"Suabengo" -- one of the pagi in Eastphalia in 852; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 610.
 	}
-})
-
-DefineFaction("ampsivarii-tribe", {
-	Name = "Ampsivarii Tribe",
-	Civilization = "teuton",
-	ParentFaction = "frank-tribe", -- accurate?,
-	Type = "tribe",
-	Colors = {"cyan"},
-	DevelopsTo = {"drenthe", "netherlands"}, -- same general area
-	HistoricalFactionDerivations = {-27, "germanic", "herminone-tribe"}
 })
 
 DefineFaction("angle-tribe", {
@@ -91,26 +79,6 @@ DefineFaction("avione-tribe", {
 	Colors = {"white"}
 })
 
-DefineFaction("batavian-tribe", {
-	Name = "Batavian Tribe",
-	Civilization = "teuton",
-	ParentFaction = "frank-tribe", -- accurate?
-	Type = "tribe",
-	Colors = {"orange"},
-	DevelopsTo = {"holland", "netherlands"}, -- same general area
-	HistoricalFactionDerivations = {-264, "germanic", "herminone-tribe"}
-})
-
-DefineFaction("chamavi-tribe", {
-	Name = "Chamavi Tribe",
-	Civilization = "teuton",
-	ParentFaction = "frank-tribe", -- accurate?
-	Type = "tribe",
-	Colors = {"pink"},
-	DevelopsTo = {"overijssel", "netherlands"}, -- same general area
-	HistoricalFactionDerivations = {-27, "germanic", "herminone-tribe"}
-})
-
 DefineFaction("charude-tribe", {
 	Name = "Charude Tribe",
 	Civilization = "teuton", -- were the Charudes actually West Germanic?
@@ -119,16 +87,6 @@ DefineFaction("charude-tribe", {
 	Colors = {"purple"},
 	DevelopsTo = {"jutland"}, -- same general area
 	HistoricalFactionDerivations = {-27, "germanic", "ingaevone-tribe"}
-})
-
-DefineFaction("chatti-tribe", {
-	Name = "Chatti Tribe",
-	Civilization = "teuton",
-	ParentFaction = "frank-tribe", -- accurate?
-	Type = "tribe",
-	Colors = {"yellow"},
-	DevelopsTo = {"hesse"}, -- same general area
-	HistoricalFactionDerivations = {-264, "germanic", "herminone-tribe"}
 })
 
 DefineFaction("chauci-tribe", {
@@ -188,16 +146,6 @@ DefineFaction("bavarian-tribe", {
 	DevelopsTo = {"bavaria", "austria", "carinthia"},
 	FactionUpgrade = "upgrade-faction-bavarian-tribe",
 	Description = "The early Bavarians were a West Germanic people who traced their origins to the Marcomanni. Their name means \"men of Bohemia\", an appelation they gained due to the Marcomanni having established themselves in Bohemia under Marbod. The Bavarians migrated south, giving their newly-settled land the name it has to this day, Bavaria."
-})
-
-DefineFaction("sugambri-tribe", {
-	Name = "Sugambri Tribe",
-	Civilization = "teuton",
-	ParentFaction = "frank-tribe", -- accurate?
-	Type = "tribe",
-	Colors = {"black"},
-	DevelopsTo = {"westphalia"}, -- same general area
-	HistoricalFactionDerivations = {-264, "germanic", "herminone-tribe"}
 })
 
 DefineFaction("teuton-tribe", {
@@ -314,6 +262,16 @@ DefineFaction("cologne", {
 	}
 })
 
+DefineFaction("franconia", { -- represents the German region, so it uses base Teuton elements, rather than Frankish ones
+	Name = "Franconia",
+	Civilization = "teuton",
+	Type = "polity",
+	Colors = {"blue"},
+	DefaultTier = "duchy", -- Franconia was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	FactionUpgrade = "upgrade-faction-franconia",
+	DevelopsTo = {"holy-rome", "francia"} -- Franconia was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+})
+
 DefineFaction("friesland", {
 	Name = "Friesland",
 	Civilization = "teuton",
@@ -348,8 +306,8 @@ DefineFaction("holy-rome", {
 	Type = "polity",
 	Colors = {"yellow"},
 	DefaultTier = "empire",
---	FactionUpgrade = "upgrade-saxon-tribe-faction",
-	HistoricalFactionDerivations = {919, "teuton", "francia"},
+	FactionUpgrade = "upgrade-faction-holy-rome",
+	HistoricalFactionDerivations = {919, "frankish", "francia"},
 	HistoricalDiplomacyStates = {
 		985, "bohemia", "war", -- War between Otto II and Bohemia broke out in 985; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 616.
 		987, "bohemia", "overlord" -- Bohemia became again a vassal of the Holy Roman Empire in 987, under heavier subjection; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 616.

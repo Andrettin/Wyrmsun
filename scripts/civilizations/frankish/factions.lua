@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015-2016 by Andrettin
+--      (c) Copyright 2015-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -27,11 +27,11 @@
 
 DefineFaction("frank-tribe", {
 	Name = "Frank Tribe",
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Type = "tribe",
 	Colors = {"green", "orange"},
 	DevelopsTo = {"francia", "franconia", "austrasia", "neustria", "salia", "east-francia", "netherlands"},
-	FactionUpgrade = "upgrade-frank-tribe-faction",
+	FactionUpgrade = "upgrade-faction-frank-tribe",
 	Description = "The Franks are one of the most powerful Germanic tribes to have existed. From their humble beginnings in their dwellings along the Rhine, they eventually managed to conquer the entirety of Gaul and much of Central Europe.",
 	UIFillers = {
 		"dlcs/frankish_faction_flair/graphics/ui/filler_bottom.png", 380, -181,
@@ -39,15 +39,54 @@ DefineFaction("frank-tribe", {
 		"dlcs/frankish_faction_flair/graphics/ui/buttonpanel.png", -256, -200,
 		"dlcs/frankish_faction_flair/graphics/ui/infopanel.png", 0, -200
 	},
-	HistoricalFactionDerivations = {150, "germanic", "herminone-tribe"},
 	HistoricalTechnologies = {
 		"upgrade-frank-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}
 })
 
+DefineFaction("ampsivarii-tribe", {
+	Name = "Ampsivarii Tribe",
+	Civilization = "frankish", -- accurate?
+	Type = "tribe",
+	Colors = {"cyan"},
+	DevelopsTo = {"drenthe", "netherlands"} -- same general area
+})
+
+DefineFaction("batavian-tribe", {
+	Name = "Batavian Tribe",
+	Civilization = "frankish", -- accurate?
+	Type = "tribe",
+	Colors = {"orange"},
+	DevelopsTo = {"holland", "netherlands"} -- same general area
+})
+
+DefineFaction("chamavi-tribe", {
+	Name = "Chamavi Tribe",
+	Civilization = "frankish", -- accurate?
+	Type = "tribe",
+	Colors = {"pink"},
+	DevelopsTo = {"overijssel", "netherlands"} -- same general area
+})
+
+DefineFaction("chatti-tribe", {
+	Name = "Chatti Tribe",
+	Civilization = "frankish", -- accurate?
+	Type = "tribe",
+	Colors = {"yellow"},
+	DevelopsTo = {"hesse"} -- same general area
+})
+
+DefineFaction("sugambri-tribe", {
+	Name = "Sugambri Tribe",
+	Civilization = "frankish", -- accurate?
+	Type = "tribe",
+	Colors = {"black"},
+	DevelopsTo = {"westphalia"} -- same general area
+})
+
 DefineFaction("francia", {
 	Name = "Francia",
-	Civilization = "teuton",
+	Civilization = "frankish",
 	ParentFaction = "frank-tribe",
 	Type = "polity",
 	Colors = {"green", "orange"},
@@ -55,7 +94,7 @@ DefineFaction("francia", {
 	MinisterTitles = {
 		"head-of-government", "no-gender", "monarchy", "no-faction-tier", "Mayor of the Palace" -- Source: "Medieval Warfare V.2", 2013, p. 7.
 	},
-	HistoricalFactionDerivations = {481, "teuton", "frank-tribe"}, -- In 481 AD the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+	HistoricalFactionDerivations = {481, "frankish", "frank-tribe"}, -- In 481 AD the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 	HistoricalTechnologies = {
 		"upgrade-teuton-writing", 0, -- polities must have writing
 		"upgrade-teuton-masonry", 0,
@@ -68,7 +107,7 @@ DefineFaction("francia", {
 
 DefineFaction("austrasia", {
 	Name = "Austrasia",
-	Civilization = "teuton",
+	Civilization = "frankish",
 	ParentFaction = "francia",
 	Type = "polity",
 	Colors = {"pink"},
@@ -82,33 +121,25 @@ DefineFaction("austrasia", {
 
 DefineFaction("east-francia", { -- Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
 	Name = "East Francia",
-	Civilization = "teuton",
+	Civilization = "frankish",
 	ParentFaction = "francia",
 	Type = "polity",
 	Colors = {"blue"},
 	DefaultTier = "kingdom",
 	DevelopsTo = {"holy-rome", "francia"},
-	HistoricalFactionDerivations = {869, "teuton", "francia"}, -- East Francia existed in 869, when it conquered Moravia; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
+	HistoricalFactionDerivations = {869, "frankish", "francia"}, -- East Francia existed in 869, when it conquered Moravia; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
+	--[[
 	HistoricalDiplomacyStates = {
 		871, "moravia", "war", -- Moravia rose against East Frankish rule in 871; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
 		874, "moravia", "overlord", -- Moravia submitted as a vassal (paying an annual tribute) to the East Franks in 874; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
 		895, "bohemia", "overlord" -- The sons of Bořivoj, Spytihněv and Vratislav, recognized German overlordship over Bohemia in 895; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, pp. 612-613.
 	}
-})
-
-DefineFaction("franconia", { -- represents the German region, so it uses base Teuton elements, rather than Frankish ones
-	Name = "Franconia",
-	Civilization = "teuton",
-	Type = "polity",
-	Colors = {"blue"},
-	DefaultTier = "duchy", -- Franconia was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
---	FactionUpgrade = "upgrade-saxon-tribe-faction",
-	DevelopsTo = {"holy-rome", "francia"} -- Franconia was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	--]]
 })
 
 DefineFaction("neustria", {
 	Name = "Neustria",
-	Civilization = "teuton",
+	Civilization = "frankish",
 	ParentFaction = "francia",
 	Type = "polity",
 	Colors = {"orange"},
@@ -122,7 +153,7 @@ DefineFaction("neustria", {
 
 DefineFaction("salia", {
 	Name = "Salia",
-	Civilization = "teuton",
+	Civilization = "frankish",
 	ParentFaction = "francia",
 	Type = "polity",
 	Colors = {"pink"},
@@ -133,7 +164,7 @@ DefineFaction("salia", {
 
 DefineFaction("burgundia", { -- Frankish kingdom of Burgundy (not to be confused with the original Kingdom of the Burgundians - an East Germanic people - or the French region)
 	Name = "Burgundia",
-	Civilization = "teuton",
+	Civilization = "frankish",
 	ParentFaction = "francia",
 	Type = "polity",
 	Colors = {"green"},

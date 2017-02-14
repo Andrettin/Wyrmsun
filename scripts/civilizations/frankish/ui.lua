@@ -25,13 +25,16 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDeity("christian-god", {
-	Name = "Christian God",
-	HomePlane = "Heaven",
-	Civilizations = {"frankish", "latin", "suebi", "teuton"},
-	Religions = {"christianity"},
-	Gender = "male",
-	Major = true,
---	Icon = "icon-christianity",
-	Domains = {"charity", "faith", "hope"}
+DefineCursor({
+	Name = "cursor-point",
+	Race = "germanic",
+	File = "germanic/ui/cursors/germanic_hand.png",
+	HotSpot = {0, 0},
+	Size = {29, 32}
 })
+
+UI.NormalFontColor = "white"
+UI.ReverseFontColor = "yellow"
+
+UI.MenuButton.Style = FindButtonStyle("main-germanic")
+UI.NetworkDiplomacyButton.Style = FindButtonStyle("main-germanic")

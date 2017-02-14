@@ -25,13 +25,4 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDeity("christian-god", {
-	Name = "Christian God",
-	HomePlane = "Heaven",
-	Civilizations = {"frankish", "latin", "suebi", "teuton"},
-	Religions = {"christianity"},
-	Gender = "male",
-	Major = true,
---	Icon = "icon-christianity",
-	Domains = {"charity", "faith", "hope"}
-})
+Load("scripts/civilizations/frankish/buttons_faction.lua")

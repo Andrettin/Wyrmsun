@@ -33,12 +33,39 @@
 
 DefineUnitType("unit-frank-swordsman", {
 	Name = "Kregar",
-	Parent = "unit-teuton-swordsman",
-	Civilization = "teuton",
-	Faction = "frank-tribe",
+	Parent = "unit-template-infantry",
+	Civilization = "frankish",
+	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
+	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
+	LayerImages = {
+		{"layer", "hair", "file", "human/units/hair_warrior.png"},
+		{"layer", "left-arm", "file", "human/units/left_arm.png"},
+		{"layer", "right-arm", "file", "human/units/right_arm.png"},
+		{"layer", "right-hand", "file", "human/units/right_hand.png"},
+		{"layer", "clothing", "file", "teuton/units/chainmail.png"},
+		{"layer", "clothing-left-arm", "file", "teuton/units/chainmail_left_arm.png"},
+		{"layer", "clothing-right-arm", "file", "teuton/units/chainmail_right_arm.png"},
+		{"layer", "pants", "file", "human/units/pants.png"},
+		{"layer", "boots", "file", "teuton/units/leather_shoes.png"},
+		{"layer", "helmet", "file", "teuton/units/iron_helm.png"},
+		{"layer", "weapon", "file", "teuton/units/long_iron_sword.png"}
+	},
+	Animations = "animations-melee-unit-new",
 	Icon = "icon-frank-swordsman-brown-hair",
 	HairColor = "brown",
-	AiDrops = {"unit-frankish-spatha"},
+	DefaultEquipment = {
+		{"weapon", "unit-short-sword"},
+		{"shield", "unit-wooden-shield"},
+		{"boots", "unit-boots"}
+	},
+	ButtonKey = "k",
+	ButtonHint = "Train ~!Kregar",
+	Corpse = "unit-human-dead-body",
+	DaySightRangeBonus = 1,
+	NightSightRangeBonus = -1,
+	WeaponClasses = {"sword", "thrusting-sword"},
+	HackDamage = true,
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-frankish-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "brown-hair",
@@ -148,17 +175,51 @@ DefineUnitType("unit-frank-swordsman", {
 			"item-equipped", "unit-goblin-rimmed-shield",
 			"item-equipped", "unit-goblin-embossed-shield"
 		}
+	},
+	Sounds = {
+		"selected", "basic-teuton-voices-selected-group",
+		"acknowledge", "basic-teuton-voices-acknowledge",
+		"ready", "basic-teuton-voices-ready",
+		"help", "basic-teuton-voices-help",
+		"dead", "basic-human-voices-dead",
+		"hit", "sword-attack",
+		"miss", "attack-miss"
 	}
 } )
 
 DefineUnitType("unit-frank-veteran-swordsman", {
 	Name = "Adal",
-	Parent = "unit-teuton-veteran-swordsman",
-	Civilization = "teuton",
-	Faction = "frank-tribe",
+	Parent = "unit-template-veteran-infantry",
+	Civilization = "frankish",
+	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
+	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
+	LayerImages = {
+		{"layer", "hair", "file", "human/units/hair_warrior.png"},
+		{"layer", "left-arm", "file", "human/units/left_arm.png"},
+		{"layer", "right-arm", "file", "human/units/right_arm.png"},
+		{"layer", "right-hand", "file", "human/units/right_hand.png"},
+		{"layer", "clothing", "file", "teuton/units/chainmail.png"},
+		{"layer", "clothing-left-arm", "file", "teuton/units/chainmail_left_arm.png"},
+		{"layer", "clothing-right-arm", "file", "teuton/units/chainmail_right_arm.png"},
+		{"layer", "pants", "file", "human/units/pants.png"},
+		{"layer", "boots", "file", "teuton/units/leather_shoes.png"},
+		{"layer", "helmet", "file", "teuton/units/iron_helm.png"},
+		{"layer", "weapon", "file", "teuton/units/long_iron_sword.png"}
+	},
+	Animations = "animations-melee-unit-new",
 	Icon = "icon-frank-veteran-swordsman-brown-hair",
 	HairColor = "brown",
-	AiDrops = {"unit-frankish-spatha"},
+	DefaultEquipment = {
+		{"weapon", "unit-short-sword"},
+		{"shield", "unit-wooden-shield"},
+		{"boots", "unit-boots"}
+	},
+	Corpse = "unit-human-dead-body",
+	DaySightRangeBonus = 1,
+	NightSightRangeBonus = -1,
+	WeaponClasses = {"sword", "thrusting-sword"},
+	HackDamage = true,
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-frankish-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "brown-hair",
@@ -268,17 +329,53 @@ DefineUnitType("unit-frank-veteran-swordsman", {
 			"item-equipped", "unit-goblin-rimmed-shield",
 			"item-equipped", "unit-goblin-embossed-shield"
 		}
+	},
+	Sounds = {
+		"selected", "basic-teuton-voices-selected-group",
+		"acknowledge", "basic-teuton-voices-acknowledge",
+		"ready", "basic-teuton-voices-ready",
+		"help", "basic-teuton-voices-help",
+		"dead", "basic-human-voices-dead",
+		"hit", "sword-attack",
+		"miss", "attack-miss"
 	}
 })
 
 DefineUnitType("unit-frank-heroic-swordsman", {
 	Name = "Truhtin",
-	Parent = "unit-teuton-heroic-swordsman",
-	Civilization = "teuton",
-	Faction = "frank-tribe",
+	Parent = "unit-template-heroic-infantry",
+	Civilization = "frankish",
+	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
+	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
+	LayerImages = {
+		{"layer", "hair", "file", "human/units/hair_warrior.png"},
+		{"layer", "left-arm", "file", "human/units/left_arm.png"},
+		{"layer", "right-arm", "file", "human/units/right_arm.png"},
+		{"layer", "right-hand", "file", "human/units/right_hand.png"},
+		{"layer", "clothing", "file", "teuton/units/chainmail.png"},
+		{"layer", "clothing-left-arm", "file", "teuton/units/chainmail_left_arm.png"},
+		{"layer", "clothing-right-arm", "file", "teuton/units/chainmail_right_arm.png"},
+		{"layer", "pants", "file", "human/units/pants.png"},
+		{"layer", "boots", "file", "teuton/units/leather_shoes.png"},
+		{"layer", "helmet", "file", "teuton/units/iron_helm.png"},
+		{"layer", "weapon", "file", "teuton/units/long_iron_sword.png"}
+	},
+	Animations = "animations-melee-unit-new",
 	Icon = "icon-frank-heroic-swordsman-brown-hair",
 	HairColor = "brown",
-	AiDrops = {"unit-frankish-spatha"},
+	DefaultEquipment = {
+		{"weapon", "unit-short-sword"},
+		{"shield", "unit-wooden-shield"},
+		{"boots", "unit-boots"}
+	},
+	Corpse = "unit-human-dead-body",
+	DaySightRangeBonus = 1,
+	NightSightRangeBonus = -1,
+	WeaponClasses = {"sword", "thrusting-sword"},
+	HackDamage = true,
+	CanCastSpell = {"spell-puncture"},
+	AutoCastActive = {"spell-puncture"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-frankish-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "brown-hair",
@@ -388,24 +485,49 @@ DefineUnitType("unit-frank-heroic-swordsman", {
 			"item-equipped", "unit-goblin-rimmed-shield",
 			"item-equipped", "unit-goblin-embossed-shield"
 		}
+	},
+	Sounds = {
+		"selected", "basic-teuton-voices-selected-group",
+		"acknowledge", "basic-teuton-voices-acknowledge",
+		"ready", "basic-teuton-voices-ready",
+		"help", "basic-teuton-voices-help",
+		"dead", "basic-human-voices-dead",
+		"hit", "sword-attack",
+		"miss", "attack-miss"
 	}
 })
 
 DefineUnitType("unit-frank-spearman", {
 	Name = "Spearman",
-	Parent = "unit-teuton-spearman",
-	Civilization = "teuton",
-	Faction = "frank-tribe",
+	Parent = "unit-template-spearman",
+	Civilization = "frankish",
+	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
+	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {
 		{"layer", "hair", "file", "human/units/brown_hair_warrior_no_beard.png"},
+		{"layer", "left-arm", "file", "human/units/left_arm.png"},
+		{"layer", "right-arm", "file", "human/units/right_arm_spear.png"},
 		{"layer", "clothing", "file", "teuton/units/chainmail.png"},
 		{"layer", "clothing-left-arm", "file", "teuton/units/chainmail_left_arm.png"},
 		{"layer", "clothing-right-arm", "file", "teuton/units/chainmail_right_arm.png"},
+		{"layer", "pants", "file", "human/units/pants.png"},
 		{"layer", "boots", "file", "human/units/shoes.png"},
 		{"layer", "helmet", "file", "teuton/units/iron_helm.png"},
 		{"layer", "weapon", "file", "human/units/spear.png"}
 	},
+	Animations = "animations-melee-unit-new",
 	Icon = "icon-frank-scara-brown-hair",
+	DefaultEquipment = {
+		{"weapon", "unit-short-spear"},
+		{"shield", "unit-wooden-shield"},
+		{"boots", "unit-boots"}
+	},
+	ButtonKey = "e",
+	ButtonHint = "Train Sp~!earman",
+	Corpse = "unit-human-dead-body",
+	DaySightRangeBonus = 1,
+	NightSightRangeBonus = -1,
+	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "brown-hair",
@@ -498,34 +620,86 @@ DefineUnitType("unit-frank-spearman", {
 			"item-equipped", "unit-goblin-rimmed-shield",
 			"item-equipped", "unit-goblin-embossed-shield"
 		}
+	},
+	Sounds = {
+		"selected", "basic-teuton-voices-selected-group",
+		"acknowledge", "basic-teuton-voices-acknowledge",
+		"ready", "basic-teuton-voices-ready",
+		"help", "basic-teuton-voices-help",
+		"dead", "basic-human-voices-dead"
 	}
 } )
 
 DefineUnitType("unit-frank-horseman", {
 	Name = "Ritar",
-	Parent = "unit-teuton-ritter",
-	Civilization = "teuton",
-	Faction = "frank-tribe",
+	Parent = "unit-template-cavalry",
+	Civilization = "frankish",
 	Icon = "icon-frank-horseman",
+	Image = {"file", "teuton/units/ritter.png", "size", {72, 72}},
 	LayerImages = {
 		{"layer", "shield", "file", "dlcs/frankish_faction_flair/graphics/units/frank_horseman_shield.png"}
 	},
-	Armor = 4, BasicDamage = 14, -- +1 armor, +1 damage
-	Points = 60, -- +10 points
-	AiDrops = {"unit-frankish-spatha"}
+	Animations = "animations-melee-unit",
+	DefaultEquipment = {
+		{"weapon", "unit-short-sword"},
+		{"shield", "unit-wooden-shield"},
+		{"boots", "unit-boots"}
+	},
+	Armor = 3, BasicDamage = 13, -- +1 armor, +1 damage
+	Points = 85, -- +10 points
+	DaySightRangeBonus = 1,
+	NightSightRangeBonus = -1,
+	WeaponClasses = {"sword"},
+	HackDamage = true,
+	InvertedEastArms = true,
+	InvertedSoutheastArms = true,
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-frankish-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	ButtonKey = "r",
+	ButtonHint = "Train ~!Ritar",
+	Corpse = "unit-human-dead-body",
+	Sounds = {
+		"selected", "basic-teuton-voices-selected-group",
+		"acknowledge", "basic-teuton-voices-acknowledge",
+		"ready", "basic-teuton-voices-ready",
+		"help", "basic-teuton-voices-help",
+		"dead", "basic-human-voices-dead",
+		"hit", "sword-attack",
+		"miss", "attack-miss"
+	}
 })
 
 DefineUnitType("unit-frank-knight-lord", {
 	Name = "Heriro",
-	Parent = "unit-teuton-knight-lord",
-	Civilization = "teuton",
-	Faction = "frank-tribe",
+	Parent = "unit-template-heroic-cavalry",
+	Civilization = "frankish",
 	Icon = "icon-frank-heroic-horseman",
+	Image = {"file", "teuton/units/ritter.png", "size", {72, 72}},
 	LayerImages = {
 		{"layer", "shield", "file", "dlcs/frankish_faction_flair/graphics/units/frank_horseman_shield.png"}
 	},
-	Armor = 4, BasicDamage = 16, -- +1 armor, +1 damage
+	Animations = "animations-melee-unit",
+	DefaultEquipment = {
+		{"weapon", "unit-short-sword"},
+		{"shield", "unit-wooden-shield"},
+		{"boots", "unit-boots"}
+	},
+	Armor = 3, BasicDamage = 15, -- +1 armor, +1 damage
 	Points = 110, -- +10 points
-	AiDrops = {"unit-frankish-spatha"}
+	DaySightRangeBonus = 1,
+	NightSightRangeBonus = -1,
+	WeaponClasses = {"sword"},
+	HackDamage = true,
+	InvertedEastArms = true,
+	InvertedSoutheastArms = true,
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-frankish-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	Corpse = "unit-human-dead-body",
+	Sounds = {
+		"selected", "basic-teuton-voices-selected-group",
+		"acknowledge", "basic-teuton-voices-acknowledge",
+		"ready", "basic-teuton-voices-ready",
+		"help", "basic-teuton-voices-help",
+		"dead", "basic-human-voices-dead",
+		"hit", "sword-attack",
+		"miss", "attack-miss"
+	}
 })
-

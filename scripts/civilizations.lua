@@ -1621,9 +1621,6 @@ DefineCivilization("teuton", {
 		"male", "Wolfgang",
 		"male", "Wolfhart"
 		--]]
-		-- Old Frankish names
-		"male", "Answald", -- Old Frankish name; Source: http://www.cnrtl.fr/definition/lourdaud//1
-		"male", "Grimwald" -- Old Frankish name; Source: http://www.cnrtl.fr/definition/lourdaud//1
 	},
 	FamilyNames = {
 		"Muhlhausen" -- "Mühlhausen"; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 104.
@@ -1776,6 +1773,26 @@ DefineCivilization("teuton", {
 		"upgrade-teuton-spatha", 180, -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 		"upgrade-teuton-writing", 800,
 		"upgrade-teuton-masonry", 800
+	}
+})
+
+DefineCivilization("frankish", {
+	Display = "Frankish",
+	Visible = true,
+	Species = "human",
+	Language = "old-frankish",
+	ParentCivilization = "teuton",
+	Adjective = "Frankish",
+	DefaultColor = "black",
+	CivilizationUpgrade = "upgrade-frankish-civilization",
+	DevelopsFrom = {"germanic"},
+	Description = "The Franks are one of the most powerful Germanic tribes to have existed. From their humble beginnings in their dwellings along the Rhine, they eventually managed to conquer the entirety of Gaul and much of Central Europe.",
+	HistoricalTechnologies = {
+		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+	},
+	PersonalNames = {
+		"male", "Answald", -- Old Frankish name; Source: http://www.cnrtl.fr/definition/lourdaud//1
+		"male", "Grimwald" -- Old Frankish name; Source: http://www.cnrtl.fr/definition/lourdaud//1
 	}
 })
 

@@ -959,8 +959,8 @@ end
 
 if (GrandStrategyYear >= 450) then
 	-- Frankish territory in 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
-	SetProvinceOwner("Palatinate", "teuton", "frank-tribe")
-	SetProvinceOwner("Lower Rhine", "teuton", "frank-tribe")
+	SetProvinceOwner("Palatinate", "frankish", "frank-tribe")
+	SetProvinceOwner("Lower Rhine", "frankish", "frank-tribe")
 end
 
 if (GrandStrategyYear >= 451) then
@@ -980,12 +980,12 @@ end
 
 if (GrandStrategyYear >= 481) then
 	-- Frankish territory in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-	SetProvinceOwner("Lorraine", "teuton", "francia")
-	AddProvinceClaim("Lorraine", "teuton", "francia")
-	SetProvinceOwner("Moselle", "teuton", "francia")
-	AddProvinceClaim("Moselle", "teuton", "francia")
-	SetProvinceOwner("Lower Rhine", "teuton", "francia")
-	AddProvinceClaim("Lower Rhine", "teuton", "francia")
+	SetProvinceOwner("Lorraine", "frankish", "francia")
+	AddProvinceClaim("Lorraine", "frankish", "francia")
+	SetProvinceOwner("Moselle", "frankish", "francia")
+	AddProvinceClaim("Moselle", "frankish", "francia")
+	SetProvinceOwner("Lower Rhine", "frankish", "francia")
+	AddProvinceClaim("Lower Rhine", "frankish", "francia")
 
 	-- Political situation of the territories surrounding the Frankish realm in 481-814 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 	SetProvinceOwner("Baden", "teuton", "alamanni-tribe")
@@ -1031,10 +1031,10 @@ end
 
 if (GrandStrategyYear >= 506) then
 	-- Alemanni lands (Alsace, Baden, Wurtemberg, Augsburg and etc.) conquered by the Franks in 506; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-	SetProvinceOwner("Baden", "teuton", "francia")
-	SetProvinceOwner("Wurtemberg", "teuton", "francia")
-	SetProvinceOwner("Augsburg", "teuton", "francia")
-	SetProvinceOwner("Palatinate", "teuton", "francia")
+	SetProvinceOwner("Baden", "frankish", "francia")
+	SetProvinceOwner("Wurtemberg", "frankish", "francia")
+	SetProvinceOwner("Augsburg", "frankish", "francia")
+	SetProvinceOwner("Palatinate", "frankish", "francia")
 end
 
 if (GrandStrategyYear >= 507) then -- Political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
@@ -1051,8 +1051,8 @@ if (GrandStrategyYear >= 534) then
 	-- end of Gundimar's reign over the Burgundians in 534 AD; he was proscribed, pursued and executed by the Franks, and his realm was annexed by them; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 96, 99.
 	
 	-- The Burgundian realm, which included the Franche Comté, Burgundy, Savoy and most of Switzerland, was conquered by the Franks in 534; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-	SetProvinceOwner("Switzerland", "teuton", "francia")
-	AddProvinceClaim("Switzerland", "teuton", "francia")
+	SetProvinceOwner("Switzerland", "frankish", "francia")
+	AddProvinceClaim("Switzerland", "frankish", "francia")
 	
 	SetProvinceOwner("Corsica", "", "") -- Fall of the Vandal kingdom in 534 AD; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 	SetProvinceOwner("Sardinia", "", "") -- Fall of the Vandal kingdom in 534 AD; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.

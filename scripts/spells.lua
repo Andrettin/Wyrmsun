@@ -322,18 +322,18 @@ DefineSpell("spell-sagan-allegiance",
 
 DefineSpell("spell-frank-allegiance",
 	"showname", "Frank Allegiance",
-	"description", "Changes the unit's type into its Frankish faction-specific equivalent",
+	"description", "Changes the unit's type into its Frankish equivalent",
 	"manacost", 0,
 	"range", 0,
 	"target", "self",
 	"condition", {
 		"organic", "only",
 		"Building", "false",
-		"faction-equivalent", "teuton", "frank-tribe"
+		"civilization-equivalent", "frankish"
 	},
 	"action", {
 		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
-		{"polymorph", "civilization", "teuton", "faction", "frank-tribe"}
+		{"polymorph", "civilization", "frankish"}
 	},
 	"item-spell", "scroll",
 	"sound-when-cast", "magic-holy"

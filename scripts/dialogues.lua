@@ -63,6 +63,7 @@ DefineDialogue("campaign-defeat", {
 
 Load("scripts/civilizations/dwarf/dialogues.lua")
 Load("scripts/civilizations/elf/dialogues.lua")
+Load("scripts/civilizations/frankish/dialogues.lua")
 Load("scripts/civilizations/germanic/dialogues_freys_messenger.lua")
 Load("scripts/civilizations/germanic/dialogues_heimdalls_progeny.lua")
 Load("scripts/civilizations/gnome/dialogues.lua")

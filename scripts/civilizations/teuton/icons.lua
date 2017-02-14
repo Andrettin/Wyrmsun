@@ -228,5 +228,3 @@ DefineIcon({
 	Size = {46, 38},
 	File = "teuton/icons/conrad_the_red.png"
 })
-
-Load("scripts/civilizations/teuton/icons_frank.lua")

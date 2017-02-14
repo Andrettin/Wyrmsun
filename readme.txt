@@ -68,7 +68,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Germanic Temple (graphics by Jinn).
 
 * Civilizations
-- The Suebi are now handled as their own civilization.
+- The Franks and the Suebi are now handled as their own civilizations, to make it simpler for them to have their own personal names and such.
 
 * Factions
 - Faction change is now handled by a submenu in town hall / stronghold buildings. Researching a writing upgrade no longer triggers a faction change automatically, instead allowing the player to pick a polity faction. To change from the Germanic civilization to the Teuton one, the player now needs to pick a Teuton faction in this manner while playing a Germanic tribe.

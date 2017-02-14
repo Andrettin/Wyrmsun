@@ -49,7 +49,7 @@ DefineUnitType("unit-teuton-worker", {
 	WeaponClasses = {"mace"},
 	BluntDamage = true,
 	ButtonKey = "b",
-	ButtonHint = _("Train ~!Bura"),
+	ButtonHint = "Train ~!Bura",
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese", "unit-carrots"},
 	CanGatherResources = {
 		{
@@ -123,7 +123,7 @@ DefineUnitType("unit-teuton-swordsman", {
 	WeaponClasses = {"sword", "thrusting-sword"},
 	HackDamage = true,
 	ButtonKey = "k",
-	ButtonHint = _("Train ~!Kregar"),
+	ButtonHint = "Train ~!Kregar",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Variations = {
 		{
@@ -587,7 +587,7 @@ DefineUnitType("unit-teuton-spearman", {
 	NightSightRangeBonus = -1,
 	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	ButtonKey = "e",
-	ButtonHint = _("Train Sp~!earman"),
+	ButtonHint = "Train Sp~!earman",
 	Variations = {
 		{
 			"variation-id", "red-hair"
@@ -733,6 +733,7 @@ DefineUnitType("unit-teuton-ritter", {
 		{"boots", "unit-boots"}
 	},
 	Armor = 3, BasicDamage = 13, -- +1 armor, +1 damage
+	Points = 85, -- +10 points
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
 	WeaponClasses = {"sword"},
@@ -740,7 +741,7 @@ DefineUnitType("unit-teuton-ritter", {
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
 	ButtonKey = "r",
-	ButtonHint = _("Train ~!Ritar"),
+	ButtonHint = "Train ~!Ritar",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Corpse = "unit-human-dead-body",
 	Sounds = {
@@ -772,6 +773,7 @@ DefineUnitType("unit-teuton-knight-lord", {
 		{"boots", "unit-boots"}
 	},
 	Armor = 3, BasicDamage = 15, -- +1 armor, +1 damage
+	Points = 110, -- +10 points
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
 	WeaponClasses = {"sword"},
@@ -871,8 +873,6 @@ DefineUnitType("unit-teuton-kogge", {
 		"help", "basic-teuton-voices-help"
 	}
 })
-
-Load("scripts/civilizations/teuton/units_frank.lua")
 
 DefineUnitType("unit-teuton-town-hall", { Name = _("Rathaus"),
 	Parent = "unit-template-town-hall",

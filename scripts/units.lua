@@ -46,7 +46,9 @@ Units = {
 	"upgrade-faction-austria", "upgrade-faction-bavaria", "upgrade-faction-carinthia",
 	"upgrade-faction-thuringia",
 	"upgrade-faction-baden", "upgrade-faction-swabia", "upgrade-faction-switzerland", "upgrade-faction-wurtemberg",
+	"upgrade-faction-franconia",
 	"upgrade-faction-saxony",
+	"upgrade-faction-holy-rome",
 	"unit-teuton-worker", "unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman",
 	"unit-teuton-spearman", "unit-teuton-archer",
 	"unit-teuton-ritter", "unit-teuton-knight-lord",
@@ -71,6 +73,7 @@ Units = {
 	"upgrade-faction-alamanni-tribe",
 	"upgrade-faction-hermunduri-tribe", "upgrade-faction-thuringian-tribe",
 	"upgrade-faction-galicia",
+	"upgrade-frankish-civilization",
 	"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman", "unit-frank-spearman",
 	"unit-frank-horseman", "unit-frank-knight-lord",
 	"unit-celt-farm",
@@ -3783,6 +3786,7 @@ Load("scripts/civilizations/celt/units.lua")
 Load("scripts/civilizations/dwarf/units.lua")
 Load("scripts/civilizations/elf/units.lua")
 Load("scripts/civilizations/ettin/units.lua")
+Load("scripts/civilizations/frankish/units.lua")
 Load("scripts/civilizations/germanic/units.lua")
 Load("scripts/civilizations/gnome/units.lua")
 Load("scripts/civilizations/goblin/units.lua")

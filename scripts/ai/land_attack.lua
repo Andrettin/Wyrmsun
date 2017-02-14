@@ -124,13 +124,13 @@ local land_funcs = {
 		end
 	end,
 	function()
-		if (AiGetRace() == "suebi" or AiGetRace() == "teuton") then
+		if (AiGetRace() == "frankish" or AiGetRace() == "suebi" or AiGetRace() == "teuton") then
 			return AiResearch(GetAiUnitType("melee-weapon-2")); -- research this now, since Teutons couldn't before
 		end
 		return false;
 	end,
 	function()
-		if (AiGetRace() == "suebi" or AiGetRace() == "teuton") then
+		if (AiGetRace() == "frankish" or AiGetRace() == "suebi" or AiGetRace() == "teuton") then
 			return AiResearch(GetAiUnitType("iron-shield")); -- research this now, since Teutons couldn't before
 		end
 		return false;

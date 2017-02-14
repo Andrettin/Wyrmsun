@@ -29,7 +29,7 @@ DefineCharacter("volsung", { -- Source: C. Scott Littleton, "The Germanic Sword 
 	Name = "Volsung",
 	Gender = "male",
 	Type = "unit-frank-heroic-swordsman",
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "frank-tribe",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "frank-tribe") then
@@ -43,7 +43,7 @@ DefineCharacter("chlodio", { -- Source: "Medieval Warfare V.2", 2013, p. 6.
 	Name = "Chlodio",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- chieftain/king
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "frank-tribe",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "frank-tribe") then
@@ -58,7 +58,7 @@ DefineCharacter("merovech", { -- Source: "Medieval Warfare V.2", 2013, p. 6.
 	Name = "Merovech",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- chieftain/king
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "frank-tribe",
 	Description = "Merovech was a Frankish chieftain renowned for being the ancestor of the Merovingian dynasty.", -- king of the Franks, but what he ruled was more of a tribal territory than an established polity
 	Father = "chlodio",
@@ -75,7 +75,7 @@ DefineCharacter("chlodwig", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 --	FamilyName = "Merovingian",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- king
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Description = "Chlodwig was the founder of the Frankish kingdom.",
 	Father = "merovech",
@@ -92,7 +92,7 @@ DefineCharacter("chlodomer", { -- son of Chlodwig who ruled in Orléans; died in
 --	FamilyName = "Merovingian",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- king
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Father = "chlodwig",
 	Conditions = function(s)
@@ -108,7 +108,7 @@ DefineCharacter("theuderich", { -- son of Chlodwig who ruled in Reims; died in 5
 --	FamilyName = "Merovingian",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- king
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Father = "chlodwig",
 	Conditions = function(s)
@@ -124,7 +124,7 @@ DefineCharacter("childebert", { -- son of Chlodwig who ruled in Paris; died in 5
 --	FamilyName = "Merovingian",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- king
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Father = "chlodwig",
 	Conditions = function(s)
@@ -140,7 +140,7 @@ DefineCharacter("chlothar", { -- ruled in Soissons; died in 561; Source: Edward 
 --	FamilyName = "Merovingian",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- king
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Father = "chlodwig",
 	Conditions = function(s)
@@ -156,7 +156,7 @@ DefineCharacter("charibert", { -- died in 567; Source: Edward G. Fichtner, "Sigf
 --	FamilyName = "Merovingian",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- king
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "neustria",
 	Father = "chlothar",
 	Conditions = function(s)
@@ -172,7 +172,7 @@ DefineCharacter("chilperich", { -- Source: Edward G. Fichtner, "Sigfrid's Merovi
 --	FamilyName = "Merovingian",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- king
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "salia",
 	Description = "Born to the late Frankish king Chlothar I, Chilperich harbors great ambitions to establish his supremacy over the entire realm, subsuming his brothers' share of their father's inheritance.",
 	HairVariation = "brown-hair",
@@ -191,7 +191,7 @@ DefineCharacter("gunthram", { -- died in 592; Source: Edward G. Fichtner, "Sigfr
 --	FamilyName = "Merovingian",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- king
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "burgundia",
 	Description = "As one of the sons of the Frankish king Chlothar I, Gunthram inherited the Burgundian part of the Frankish realm from his father.",
 	HairVariation = "brown-hair",
@@ -210,7 +210,7 @@ DefineCharacter("sigibert", { -- Sigibert I (535-575), Frankish king; son of Chl
 --	FamilyName = "Merovingian",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- king
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "austrasia",
 	Description = "The son of the Frankish king Chlothar I, Sigibert inherited vast lands upon the death of his father. A courageous hero, Sigibert faces both the enmity of his brother Chilperich and the threat of invasion from abroad.",
 	Icon = "icon-sigibert",
@@ -230,7 +230,7 @@ DefineCharacter("fredegunde", { -- concubine of Chilperich; Source: Edward G. Fi
 	Name = "Fredegunde",
 	Gender = "female",
 	Type = "unit-teuton-worker",
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "salia",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia" or GetPlayerData(trigger_player, "Faction") == "salia" or GetPlayerData(trigger_player, "Faction") == "neustria") then
@@ -244,7 +244,7 @@ DefineCharacter("bodegisel", { -- Frankish duke; died in 585; Source: Archibald 
 	Name = "Bodegisel",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- duke
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
@@ -258,7 +258,7 @@ DefineCharacter("leudegisel", { -- duke under Gunthram; fought the Visigoths in 
 	Name = "Leudegisel",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- duke
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "burgundia",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "burgundia") then
@@ -272,7 +272,7 @@ DefineCharacter("rathar", { -- vassal of a Frankish king Childebert; restored th
 	Name = "Rathar",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- presumably a high-ranking vassal
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
@@ -286,7 +286,7 @@ DefineCharacter("bertha-of-paris", { -- Bertha of Paris, Frankish noblewoman rel
 	Name = "Bertha",
 	Gender = "female",
 	Type = "unit-frank-veteran-swordsman",
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
@@ -300,7 +300,7 @@ DefineCharacter("wintrio-of-champagne", { -- Frankish duke of Champagne between 
 	Name = "Wintrio",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- duke
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
@@ -314,7 +314,7 @@ DefineCharacter("dagobert-i-of-francia", { -- king of the Franks as Dagobert I; 
 	Name = "Dagobert",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- king
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
@@ -328,7 +328,7 @@ DefineCharacter("bobo-of-auvergne", { -- Frankish duke of Auvergne in 639; Sourc
 	Name = "Bobo",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- duke
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
@@ -342,7 +342,7 @@ DefineCharacter("erchinoald-of-neustria", { -- Mayor of the Palace of Neustria; 
 	Name = "Erchinoald",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- mayor of the palace
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "neustria",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "neustria") then
@@ -356,7 +356,7 @@ DefineCharacter("ebroin-of-neustria", { -- Mayor of the Palace of Neustria until
 	Name = "Ebroin",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- mayor of the palace
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "neustria",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "neustria") then
@@ -371,7 +371,7 @@ DefineCharacter("pepin-of-herstal", { -- became Mayor of the Palace of Austrasia
 	ExtraName = "of Herstal",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- Mayor of the Palace of Austrasia
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "austrasia",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "austrasia") then
@@ -385,7 +385,7 @@ DefineCharacter("drogo-of-champagne", { -- son of Pepin II (of Heristal) and duk
 	Name = "Drogo",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- duke
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "austrasia",
 	Father = "pepin-of-herstal",
 	Conditions = function(s)
@@ -400,7 +400,7 @@ DefineCharacter("theoderic-iv-of-francia", { -- king of the Franks as Theoderic 
 	Name = "Theoderic",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- king
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
@@ -415,7 +415,7 @@ DefineCharacter("charles-martel", { -- Charles Martel; became Mayor of the Palac
 	ExtraName = "Martel",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- Mayor of the Palace
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
@@ -429,7 +429,7 @@ DefineCharacter("childebrand", { -- Frankish duke; uncle of Pepin the Short; Sou
 	Name = "Childebrand",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- duke
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
@@ -445,7 +445,7 @@ DefineCharacter("pepin-the-short", { -- became king of the Franks in 751; died i
 --	FamilyName = "Karling",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- king
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Father = "charles-martel",
 	Conditions = function(s)
@@ -461,7 +461,7 @@ DefineCharacter("grifo", { -- Source: "Medieval Warfare V.2", 2013, p. 7; Source
 --	FamilyName = "Karling",
 	Gender = "male",
 	Type = "unit-frank-horseman", -- noble
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Father = "charles-martel",
 	Conditions = function(s)
@@ -476,7 +476,7 @@ DefineCharacter("carloman-karling", { -- son of Charles Martel; Source: "Medieva
 	Name = "Carloman",
 	Gender = "male",
 	Type = "unit-frank-horseman", -- noble
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Father = "charles-martel",
 	Conditions = function(s)
@@ -493,7 +493,7 @@ DefineCharacter("charlemagne", { -- Charles the Great, or Charlemagne; succeeded
 --	FamilyName = "Karling",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- emperor/king
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Father = "pepin-the-short",
 	Conditions = function(s)
@@ -508,7 +508,7 @@ DefineCharacter("carloman-karling-2", { -- son of Pepin the Short; died of illne
 	Name = "Carloman",
 	Gender = "male",
 	Type = "unit-frank-horseman", -- noble
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Father = "pepin-the-short",
 	Conditions = function(s)
@@ -523,7 +523,7 @@ DefineCharacter("drogo-karling", { -- son of Carloman and grandson of Charles Ma
 	Name = "Drogo",
 	Gender = "male",
 	Type = "unit-frank-horseman", -- noble
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Father = "carloman-karling",
 	Conditions = function(s)
@@ -539,7 +539,7 @@ DefineCharacter("louis-the-pious", { -- Louis the Pious, son of Charlemagne; mad
 	ExtraName = "the Pious",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- emperor
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Father = "charlemagne",
 	Trait = "upgrade-pious",
@@ -555,7 +555,7 @@ DefineCharacter("adalgisel", { -- Frankish duke; Source: Archibald R. Lewis, "Th
 	Name = "Adalgisel",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- duke
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
@@ -569,7 +569,7 @@ DefineCharacter("austrovald", { -- Frankish duke; Source: Archibald R. Lewis, "T
 	Name = "Austrovald",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- duke
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
@@ -583,7 +583,7 @@ DefineCharacter("beppelin", { -- Frankish duke; Source: Archibald R. Lewis, "The
 	Name = "Beppelin",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- duke
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
@@ -597,7 +597,7 @@ DefineCharacter("berulf", { -- Frankish duke; Source: Archibald R. Lewis, "The D
 	Name = "Berulf",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- duke
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
@@ -611,7 +611,7 @@ DefineCharacter("bladast", { -- Frankish duke; Source: Archibald R. Lewis, "The 
 	Name = "Bladast",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- duke
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
@@ -625,7 +625,7 @@ DefineCharacter("dragolen", { -- Frankish duke; Source: Archibald R. Lewis, "The
 	Name = "Dragolen",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- duke
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
@@ -639,7 +639,7 @@ DefineCharacter("ebracher", { -- Frankish duke; Source: Archibald R. Lewis, "The
 	Name = "Ebracher",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- duke
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
@@ -653,7 +653,7 @@ DefineCharacter("ragamfred", { -- Mayor of the Palace of Austrasia; Source: Arch
 	Name = "Ragamfred",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- Mayor of the Palace
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "austrasia",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "austrasia") then
@@ -667,7 +667,7 @@ DefineCharacter("sigulf", { -- Frankish duke; Source: Archibald R. Lewis, "The D
 	Name = "Sigulf",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- duke
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
@@ -681,7 +681,7 @@ DefineCharacter("theodulf", { -- Frankish count; Source: Archibald R. Lewis, "Th
 	Name = "Theodulf",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- count
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
@@ -695,7 +695,7 @@ DefineCharacter("wulfoald", { -- Frankish duke; Source: Archibald R. Lewis, "The
 	Name = "Wulfoald",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- duke
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "francia",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
@@ -709,7 +709,7 @@ DefineCharacter("waratto-of-neustria", { -- Mayor of the Palace of Neustria; Sou
 	Name = "Waratto",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- mayor of the palace
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "neustria",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "neustria") then
@@ -723,7 +723,7 @@ DefineCharacter("ghislamar-of-neustria", { -- Source: Archibald R. Lewis, "The D
 	Name = "Ghislamar",
 	Gender = "male",
 	Type = "unit-frank-horseman", -- noble
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "neustria",
 	Father = "waratto-of-neustria",
 	Conditions = function(s)
@@ -738,7 +738,7 @@ DefineCharacter("bechar-of-neustria", { -- Mayor of the Palace of Neustria; Wara
 	Name = "Bechar",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- mayor of the palace
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "neustria",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "neustria") then
