@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016 by Andrettin
+--      (c) Copyright 2016-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -24,6 +24,14 @@
 --      along with this program; if not, write to the Free Software
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
+
+DefineFaction("lydia", {
+	Name = "Lydia",
+	Civilization = "hittite",
+	Type = "polity",
+	Colors = {"teal"},
+	DefaultTier = "kingdom"
+})
 
 DefineFaction("troy", {
 	Name = "Troy",

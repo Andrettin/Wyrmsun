@@ -25,35 +25,35 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("sardis", {
-	Name = "Sardis",
+DefineSettlement("milid", {
+	Name = "Milid",
 	MapTemplate = "earth",
-	Position = {4474, 1170},
+	Position = {4711, 1172},
 	CulturalNames = {
-		"hittite", "Sardis"
+		"assyrian", "Milid"
 	},
 	HistoricalOwners = {
-		-750, "lydia" -- Sardis was a part of the Lydian Kingdom in the 750-625 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-720, "assyria" -- Milid was a part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-750, 0, "unit-latin-town-hall"
+		-720, 0, "unit-latin-farm"
 	},
 	Regions = {"asia"}
 })
 
-DefineSettlement("troy", {
-	Name = "Troy",
+DefineSettlement("tarsus", {
+	Name = "Tarsus",
 	MapTemplate = "earth",
-	Position = {4437, 1140},
+	Position = {4632, 1208},
 	CulturalNames = {
-		"greek", "Ilium", -- Troy/Ilium
-		"hittite", "Troy"
+		"assyrian", "Tarsus"
 	},
 	HistoricalOwners = {
-		-1450, "mycenae" -- Troy was a center of the highest Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-720, "assyria" -- Tarsus was a part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-town-hall"
+		-720, 0, "unit-latin-farm"
 	},
 	Regions = {"asia"}
 })
+

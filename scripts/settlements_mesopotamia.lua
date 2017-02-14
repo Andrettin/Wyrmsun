@@ -121,6 +121,22 @@ DefineSettlement("borsippa", {
 	Regions = {"asia"}
 })
 
+DefineSettlement("calchu", {
+	Name = "Calchu",
+	MapTemplate = "earth",
+	Position = {4825, 1224},
+	CulturalNames = {
+		"assyrian", "Calchu"
+	},
+	HistoricalOwners = {
+		-720, "assyria" -- Calchu was a part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+	},
+	HistoricalBuildings = {
+		-720, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
 DefineSettlement("dur-kurigalzu", {
 	Name = "Dur-Kurigalzu",
 	MapTemplate = "earth",
@@ -149,6 +165,22 @@ DefineSettlement("eridu", {
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
+DefineSettlement("haran", {
+	Name = "Haran",
+	MapTemplate = "earth",
+	Position = {4726, 1205},
+	CulturalNames = {
+		"assyrian", "Haran"
+	},
+	HistoricalOwners = {
+		-720, "assyria" -- Haran was a part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+	},
+	HistoricalBuildings = {
+		-720, 0, "unit-latin-farm"
 	},
 	Regions = {"asia"}
 })
@@ -233,6 +265,22 @@ DefineSettlement("nippur", {
 	Regions = {"asia"}
 })
 
+DefineSettlement("nisibis", {
+	Name = "Nisibis",
+	MapTemplate = "earth",
+	Position = {4788, 1204},
+	CulturalNames = {
+		"assyrian", "Nisibis"
+	},
+	HistoricalOwners = {
+		-720, "assyria" -- Nisibis was a part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+	},
+	HistoricalBuildings = {
+		-720, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
 DefineSettlement("shinpurla", {
 	Name = "Shinpurla",
 	MapTemplate = "earth",
@@ -277,6 +325,22 @@ DefineSettlement("susa", {
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
+DefineSettlement("tadmor", {
+	Name = "Tadmor",
+	MapTemplate = "earth",
+	Position = {4709, 1256},
+	CulturalNames = {
+		"assyrian", "Tadmor"
+	},
+	HistoricalOwners = {
+		-720, "assyria" -- Tadmor was a part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+	},
+	HistoricalBuildings = {
+		-720, 0, "unit-latin-farm"
 	},
 	Regions = {"asia"}
 })

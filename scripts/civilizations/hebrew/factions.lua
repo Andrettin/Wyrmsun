@@ -25,35 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("sardis", {
-	Name = "Sardis",
-	MapTemplate = "earth",
-	Position = {4474, 1170},
-	CulturalNames = {
-		"hittite", "Sardis"
-	},
-	HistoricalOwners = {
-		-750, "lydia" -- Sardis was a part of the Lydian Kingdom in the 750-625 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-	},
-	HistoricalBuildings = {
-		-750, 0, "unit-latin-town-hall"
-	},
-	Regions = {"asia"}
-})
-
-DefineSettlement("troy", {
-	Name = "Troy",
-	MapTemplate = "earth",
-	Position = {4437, 1140},
-	CulturalNames = {
-		"greek", "Ilium", -- Troy/Ilium
-		"hittite", "Troy"
-	},
-	HistoricalOwners = {
-		-1450, "mycenae" -- Troy was a center of the highest Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-	},
-	HistoricalBuildings = {
-		-1450, 0, "unit-latin-town-hall"
-	},
-	Regions = {"asia"}
+DefineFaction("judah", {
+	Name = "Judah",
+	Civilization = "hebrew",
+	Type = "polity",
+	Colors = {"blue"},
+	DefaultTier = "kingdom",
+	DefaultStartPos = {4642, 1327}, -- Jerusalem
+	HistoricalDiplomacyStates = {
+		-750, "assyria", "vassal" -- the Kingdom of Judah was tributary to Assyria in the 750-625 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+	}
 })

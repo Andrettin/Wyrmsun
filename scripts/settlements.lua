@@ -29,6 +29,7 @@
 
 -- Notes on Universities: Given a lack of a university building in the game, they are represented as temples.
 
+Load("scripts/settlements_anatolia.lua")
 Load("scripts/settlements_asia_minor.lua")
 Load("scripts/settlements_austria.lua")
 Load("scripts/settlements_bohemia.lua")

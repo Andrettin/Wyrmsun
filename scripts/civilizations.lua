@@ -2119,6 +2119,15 @@ DefineCivilization("egyptian", {
 	}
 })
 
+DefineCivilization("hebrew", {
+	Display = "Hebrew",
+	Visible = true,
+	Species = "human",
+	ParentCivilization = "greek",
+	Adjective = "Hebrew",
+	Playable = false
+})
+
 DefineCivilization("hittite", {
 	Display = "Hittite",
 	Visible = true,

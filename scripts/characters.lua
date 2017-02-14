@@ -40,6 +40,7 @@ end
 
 Load("scripts/characters_aesir.lua")
 Load("scripts/characters_vanir.lua")
+Load("scripts/civilizations/assyrian/characters.lua")
 Load("scripts/civilizations/dwarf/characters.lua")
 Load("scripts/civilizations/elf/characters.lua")
 Load("scripts/civilizations/ettin/characters.lua")

@@ -25,35 +25,24 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("sardis", {
-	Name = "Sardis",
-	MapTemplate = "earth",
-	Position = {4474, 1170},
-	CulturalNames = {
-		"hittite", "Sardis"
-	},
-	HistoricalOwners = {
-		-750, "lydia" -- Sardis was a part of the Lydian Kingdom in the 750-625 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-	},
-	HistoricalBuildings = {
-		-750, 0, "unit-latin-town-hall"
-	},
-	Regions = {"asia"}
+DefineCharacter("sargon-ii-of-assyria", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+	Name = "Sargon",
+	Gender = "male",
+	Type = "unit-teuton-heroic-swordsman",
+	Civilization = "assyrian",
+	Year = -720,
+	HistoricalTitles = {
+--		"head-of-state", -720, 0, "assyrian", "assyria" -- was Assyrian ruler in 720 BC
+	}
 })
 
-DefineSettlement("troy", {
-	Name = "Troy",
-	MapTemplate = "earth",
-	Position = {4437, 1140},
-	CulturalNames = {
-		"greek", "Ilium", -- Troy/Ilium
-		"hittite", "Troy"
-	},
-	HistoricalOwners = {
-		-1450, "mycenae" -- Troy was a center of the highest Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-	},
-	HistoricalBuildings = {
-		-1450, 0, "unit-latin-town-hall"
-	},
-	Regions = {"asia"}
+DefineCharacter("assurbanipal-of-assyria", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+	Name = "Assurbanipal",
+	Gender = "male",
+	Type = "unit-teuton-heroic-swordsman",
+	Civilization = "assyrian",
+	Year = -640,
+	HistoricalTitles = {
+--		"head-of-state", -640, 0, "assyrian", "assyria" -- was Assyrian ruler in 640 BC
+	}
 })
