@@ -699,8 +699,20 @@ DefineUnitType("unit-germanic-temple", {
 	}
 })
 
+DefineUnitType("unit-germanic-market", {
+	Parent = "unit-template-market",
+	Civilization = "germanic",
+--	Description = _("Germanic peoples were skilled shipwrights. They often lived close to the shore and built sturdy ships capable sailing the seas."),
+	Image = {"file", "germanic/buildings/market.png", "size", {96, 96}},
+	Shadow = {"file", "germanic/buildings/market_shadow.png", "size", {96, 96}},
+	Animations = "animations-building", Icon = "icon-germanic-market",
+	Sounds = {
+		"help", "basic-germanic-voices-help-town"
+	}
+} )
+
 DefineUnitType("unit-germanic-dock", {
-	Name = _("Dock"),
+	Name = "Dock",
 	Parent = "unit-template-dock",
 	Civilization = "germanic",
 	Description = _("Germanic peoples were skilled shipwrights. They often lived close to the shore and built sturdy ships capable sailing the seas."),

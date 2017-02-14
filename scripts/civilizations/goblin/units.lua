@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2014-2016 by Andrettin
+--      (c) Copyright 2014-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -689,6 +689,18 @@ DefineUnitType("unit-goblin-guard-tower", {
 	Image = {"file", "goblin/buildings/guard_tower.png", "size", {64, 64}},
 	Shadow = {"file", "goblin/buildings/guard_tower_shadow.png", "size", {64, 64}},
 	Icon = "icon-goblin-guard-tower",
+	Sounds = {
+		"help", "basic-goblin-voices-help-town"
+	}
+} )
+
+DefineUnitType("unit-goblin-market", {
+	Parent = "unit-template-market",
+	Civilization = "goblin",
+--	Description = _("Germanic peoples were skilled shipwrights. They often lived close to the shore and built sturdy ships capable sailing the seas."),
+	Image = {"file", "goblin/buildings/market.png", "size", {96, 96}},
+	Shadow = {"file", "goblin/buildings/market_shadow.png", "size", {96, 96}},
+	Animations = "animations-building", Icon = "icon-goblin-market",
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
 	}

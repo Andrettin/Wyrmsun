@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2013-2016 by Andrettin
+--      (c) Copyright 2013-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -1297,6 +1297,18 @@ DefineUnitType("unit-dwarven-guard-tower", {
 	RepairCosts = {"lumber", 0},
 	FireResistance = 20,
 	HitPoints = 325, -- 390 with masonry
+	Sounds = {
+		"help", "basic-dwarf-voices-help-town"
+	}
+} )
+
+DefineUnitType("unit-dwarven-market", {
+	Parent = "unit-template-market",
+	Civilization = "dwarf",
+--	Description = _("Germanic peoples were skilled shipwrights. They often lived close to the shore and built sturdy ships capable sailing the seas."),
+	Image = {"file", "dwarf/buildings/market.png", "size", {96, 96}},
+	Shadow = {"file", "dwarf/buildings/market_shadow.png", "size", {96, 96}},
+	Animations = "animations-building", Icon = "icon-dwarven-market",
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}

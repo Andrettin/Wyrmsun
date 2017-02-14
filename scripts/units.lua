@@ -3711,8 +3711,39 @@ DefineUnitType("unit-template-guard-tower", {
 	}
 } )
 
+DefineUnitType("unit-template-market", {
+	Name = "Market",
+	Parent = "unit-template-building",
+	Class = "market",
+	Costs = {"time", 200, "copper", 800, "lumber", 1350},
+	RepairHp = 4,
+	RepairCosts = {"copper", 1, "lumber", 1},
+	Construction = "construction-land",
+	Speed = 0,
+	HitPoints = 917, -- 1100 with masonry
+	TileSize = {3, 3}, BoxSize = {95, 95},
+	Armor = 5, Missile = "missile-none",
+	Priority = 30, AnnoyComputerFactor = 20,
+	Points = 170,
+	Corpse = "unit-destroyed-3x3-place",
+	ExplodeWhenKilled = "missile-explosion",
+	Type = "land",
+	BuilderOutside = true,
+	Drops = {"unit-wood-pile"},
+	RightMouseAction = "rally-point",
+	BurnPercent = 50,
+	BurnDamageRate = 1,
+	Sounds = {
+--		"selected", "lumber-mill-selected",
+--		"acknowledge", "dwarven-lumber-mill-acknowledge",
+--		"ready", "storehouse-ready",
+--		"help", "basic-dwarf-voices-help",
+		"dead", "building-destroyed"
+	}
+} )
+
 DefineUnitType("unit-template-dock", {
-	Name = _("Dock"),
+	Name = "Dock",
 	Parent = "unit-template-building",
 	Class = "dock",
 	Costs = {"time", 200, "copper", 800, "lumber", 1350},
@@ -3892,7 +3923,8 @@ DefineUnitType("unit-long-swordsman", { Name = _("Long Swordsman"),
 	HiddenInEditor = true,
 	Sounds = {
 		"selected", "click",
-		"dead", "basic-human-voices-dead"}
+		"dead", "basic-human-voices-dead"
+	}
 } )
 
 -- define the mercenary camp after the rest because it refers to unit types of the civilizations

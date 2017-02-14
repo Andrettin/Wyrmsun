@@ -200,6 +200,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-germanic-market",
+	Size = {46, 38},
+	File = "germanic/icons/market.png"
+})
+
+DefineIcon({
 	Name = "icon-germanic-dock",
 	Size = {46, 38},
 	File = "germanic/icons/dock.png"
