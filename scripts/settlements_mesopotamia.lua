@@ -33,7 +33,8 @@ DefineSettlement("agad", {
 		"babylonian", "Agad"
 	},
 	HistoricalOwners = {
-		-1450, "babylon" -- Agad was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "babylon", -- Agad was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-640, "assyria" -- Agad's area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"
@@ -94,10 +95,12 @@ DefineSettlement("babylon", {
 	MapTemplate = "earth",
 	Position = {4848, 1300},
 	CulturalNames = {
+		"assyrian", "Babylon",
 		"babylonian", "Babylon"
 	},
 	HistoricalOwners = {
-		-1450, "babylon" -- Babylon was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "babylon", -- Babylon was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-640, "assyria" -- Babylon was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-town-hall"
@@ -110,10 +113,12 @@ DefineSettlement("borsippa", {
 	MapTemplate = "earth",
 	Position = {4842, 1300},
 	CulturalNames = {
+		"assyrian", "Borsippa",
 		"babylonian", "Borsippa"
 	},
 	HistoricalOwners = {
-		-1450, "babylon" -- Borsippa was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "babylon", -- Borsippa was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-640, "assyria" -- Borsippa was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"
@@ -137,6 +142,22 @@ DefineSettlement("calchu", {
 	Regions = {"asia"}
 })
 
+DefineSettlement("dur-ilu", {
+	Name = "Dur-Ilu",
+	MapTemplate = "earth",
+	Position = {4919, 1323},
+	CulturalNames = {
+		"assyrian", "Dur-Ilu"
+	},
+	HistoricalOwners = {
+		-640, "assyria" -- Dur-Ilu was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+	},
+	HistoricalBuildings = {
+		-640, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
 DefineSettlement("dur-kurigalzu", {
 	Name = "Dur-Kurigalzu",
 	MapTemplate = "earth",
@@ -145,10 +166,27 @@ DefineSettlement("dur-kurigalzu", {
 		"babylonian", "Dur-Kurigalzu"
 	},
 	HistoricalOwners = {
-		-1450, "babylon" -- Dur-Kurigalzu was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "babylon", -- Dur-Kurigalzu was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-640, "assyria" -- Dur-Kurigalzu's area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
+DefineSettlement("dur-sharukin", {
+	Name = "Dur-Sharukin",
+	MapTemplate = "earth",
+	Position = {4829, 1208},
+	CulturalNames = {
+		"assyrian", "Dur-Sharukin"
+	},
+	HistoricalOwners = {
+		-640, "assyria" -- Dur-Sharukin/Khorsabad was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+	},
+	HistoricalBuildings = {
+		-640, 0, "unit-latin-farm"
 	},
 	Regions = {"asia"}
 })
@@ -158,10 +196,12 @@ DefineSettlement("eridu", {
 	MapTemplate = "earth",
 	Position = {4902, 1343},
 	CulturalNames = {
+		"assyrian", "Eridu",
 		"babylonian", "Eridu"
 	},
 	HistoricalOwners = {
-		-1450, "babylon" -- Eridu was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "babylon", -- Eridu was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-640, "assyria" -- Eridu was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"
@@ -185,6 +225,22 @@ DefineSettlement("haran", {
 	Regions = {"asia"}
 })
 
+DefineSettlement("holwan", {
+	Name = "Holwan",
+	MapTemplate = "earth",
+	Position = {4924, 1261},
+	CulturalNames = {
+		"assyrian", "Holwan"
+	},
+	HistoricalOwners = {
+		-640, "assyria" -- Holwan was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+	},
+	HistoricalBuildings = {
+		-640, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
 DefineSettlement("kutha", {
 	Name = "Kutha",
 	MapTemplate = "earth",
@@ -193,7 +249,8 @@ DefineSettlement("kutha", {
 		"babylonian", "Kutha"
 	},
 	HistoricalOwners = {
-		-1450, "babylon" -- Kutha was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "babylon", -- Kutha was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-640, "assyria" -- Kutha's area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"
@@ -206,10 +263,12 @@ DefineSettlement("lagash", {
 	MapTemplate = "earth",
 	Position = {4891, 1326},
 	CulturalNames = {
+		"assyrian", "Lagash",
 		"babylonian", "Lagash"
 	},
 	HistoricalOwners = {
-		-1450, "babylon" -- Lagash was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "babylon", -- Lagash was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-640, "assyria" -- Lagash was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"
@@ -222,10 +281,12 @@ DefineSettlement("larsam", {
 	MapTemplate = "earth",
 	Position = {4883, 1336},
 	CulturalNames = {
+		"assyrian", "Larsam",
 		"babylonian", "Larsam"
 	},
 	HistoricalOwners = {
-		-1450, "babylon" -- Larsam was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "babylon", -- Larsam was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-640, "assyria" -- Larsam was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"
@@ -254,10 +315,12 @@ DefineSettlement("nippur", {
 	MapTemplate = "earth",
 	Position = {4865, 1311},
 	CulturalNames = {
+		"assyrian", "Nippur",
 		"babylonian", "Nippur"
 	},
 	HistoricalOwners = {
-		-1450, "babylon" -- Nippur was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "babylon", -- Nippur was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-640, "assyria" -- Nippur was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"
@@ -289,7 +352,8 @@ DefineSettlement("shinpurla", {
 		"babylonian", "Shinpurla"
 	},
 	HistoricalOwners = {
-		-1450, "babylon" -- Shinpurla was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "babylon", -- Shinpurla was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-640, "assyria" -- Shinpurla's area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"
@@ -305,7 +369,8 @@ DefineSettlement("sippar", {
 		"babylonian", "Sippar"
 	},
 	HistoricalOwners = {
-		-1450, "babylon" -- Sippar was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "babylon", -- Sippar was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-640, "assyria" -- Sippar's area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"
@@ -318,10 +383,12 @@ DefineSettlement("susa", {
 	MapTemplate = "earth",
 	Position = {4935, 1313},
 	CulturalNames = {
+		"assyrian", "Susa",
 		"babylonian", "Susa"
 	},
 	HistoricalOwners = {
-		-1450, "babylon" -- Susa was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "babylon", -- Susa was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-640, "assyria" -- Susa was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"
@@ -350,10 +417,12 @@ DefineSettlement("upi", {
 	MapTemplate = "earth",
 	Position = {4848, 1271},
 	CulturalNames = {
+		"assyrian", "Upi",
 		"babylonian", "Upi"
 	},
 	HistoricalOwners = {
-		-1450, "babylon" -- Upi was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "babylon", -- Upi was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-640, "assyria" -- Upi was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"
@@ -366,10 +435,12 @@ DefineSettlement("ur", {
 	MapTemplate = "earth",
 	Position = {4895, 1345},
 	CulturalNames = {
+		"assyrian", "Ur",
 		"babylonian", "Ur"
 	},
 	HistoricalOwners = {
-		-1450, "babylon" -- Ur was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "babylon", -- Ur was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-640, "assyria" -- Ur was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"
@@ -382,10 +453,12 @@ DefineSettlement("uruk", {
 	MapTemplate = "earth",
 	Position = {4879, 1333},
 	CulturalNames = {
+		"assyrian", "Uruk",
 		"babylonian", "Uruk"
 	},
 	HistoricalOwners = {
-		-1450, "babylon" -- Uruk was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "babylon", -- Uruk was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-640, "assyria" -- Uruk was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"
