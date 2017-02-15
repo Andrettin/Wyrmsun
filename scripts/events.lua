@@ -479,14 +479,12 @@ function Event(speaker, event_description, player, options, option_effects, even
 			event_icon = CIcon:Get(GetUnitVariable(speaker, "Icon")).G
 			event_icon:Load()
 			local b = PlayerColorImageWidget(event_icon, GetPlayerData(GetUnitVariable(speaker, "Player"), "Color"))
-			b:setSkinColor(GetUnitVariable(speaker, "SkinColor"))
 			b:setHairColor(GetUnitVariable(speaker, "HairColor"))
 			menu:add(b, 153, 48)
 		elseif (GrandStrategy and not GameRunning and GameResult == GameNoResult) then
 			event_icon = CIcon:Get(GetUnitTypeData(GetGrandStrategyHeroUnitType(speaker), "Icon")).G
 			event_icon:Load()
 			local b = PlayerColorImageWidget(event_icon, GetFactionData(GrandStrategyFaction.Name, "Color"))
-			b:setSkinColor(GetUnitVariable(speaker, "SkinColor"))
 			b:setHairColor(GetUnitVariable(speaker, "HairColor"))
 			menu:add(b, 153, 48)
 		elseif (event_icon ~= nil) then
@@ -618,7 +616,7 @@ function Tip(tip_name, tip_description)
 	end
 end
 
-function GenericDialog(title, message, tooltip, icon, player_color, skin_color, hair_color)
+function GenericDialog(title, message, tooltip, icon, player_color, hair_color)
 	if (GameRunning and not IsNetworkGame()) then
 		SetGamePaused(true)
 	elseif (GrandStrategy) then
@@ -646,9 +644,6 @@ function GenericDialog(title, message, tooltip, icon, player_color, skin_color, 
 			player_color = "red"
 		end
 		local icon_widget = PlayerColorImageWidget(icon_graphics, player_color)
-		if (skin_color and skin_color ~= "" and skin_color ~= "default") then
-			icon_widget:setSkinColor(skin_color)
-		end
 		if (hair_color and hair_color ~= "" and hair_color ~= "default") then
 			icon_widget:setHairColor(hair_color)
 		end

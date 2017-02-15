@@ -36,76 +36,52 @@ DefineUnitType("unit-derro-worker", {
 	Civilization = "gnome",
 	Faction = "derro-tribe",
 	Description = "Derro workers labor silently in their underground caves. Despite their lack of combat training, the sight of one of them still makes travelers wary: the axes used by these laborers to split wood could soon be splitting necks instead.",
-	SkinColor = "pale-blue",
-	HairColor = "gray",
+	Image = {"file", "gnome/units/deep_gnomish_worker_gray_hair.png", "size", {72, 72}},
 	Icon = "icon-derro-worker",
 	DaySightRangeBonus = -1,
 	NightSightRangeBonus = 1,
-	BasicDamage = 6 -- +1 damage
+	BasicDamage = 6, -- +1 damage
+	CanGatherResources = {
+		{
+			"resource-id", "gold",
+			"file-when-loaded", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+		},
+		{
+			"resource-id", "silver",
+			"file-when-loaded", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+		},
+		{
+			"resource-id", "copper",
+			"file-when-loaded", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+		},
+		{
+			"resource-id", "lumber",
+			"file-when-loaded", "gnome/units/deep_gnomish_worker_with_lumber_gray_hair.png"
+		},
+		{
+			"resource-id", "stone",
+			"file-when-loaded", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+		},
+		{
+			"resource-id", "coal",
+			"file-when-loaded", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+		}
+	}
 } )
 
 DefineUnitType("unit-derro-thug", {
-	Name = _("Thug"),
+	Name = "Thug",
 	Parent = "unit-gnomish-recruit",
 	Civilization = "gnome",
 	Faction = "derro-tribe",
 	Description = "Derro thugs are addicted to a brew made of poisonous mushrooms, which also drive them insane. They use this concoction to enter a battle rage, allowing them to keep on fighting with horrendous injuries as they slice and cackle with maddening glee.",
-	SkinColor = "pale-blue",
-	HairColor = "gray",
+	Image = {"file", "gnome/units/deep_gnomish_recruit_gray_hair.png", "size", {72, 72}},
 	Icon = "icon-derro-thug",
 	BasicDamage = 11, Evasion = 10, -- +2 damage, -1 evasion
 	DaySightRangeBonus = -1,
 	NightSightRangeBonus = 1,
 	ButtonKey = "t",
-	ButtonHint = _("Train ~!Thug"),
-	Variations = {
-		{
-			"variation-id", "thrust",
-			"upgrade-forbidden", "upgrade-old",
-			"item-not-equipped", "unit-hammer",
-			"item-not-equipped", "unit-mining-pick"
-		},
-		{
-			"variation-id", "slash",
-			"file", "gnome/units/body_warrior_slash.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
-			"upgrade-forbidden", "upgrade-old",
-			"item-equipped", "unit-hammer",
-			"item-equipped", "unit-mining-pick"
-		},
-		{
-			"layer", "right-arm",
-			"variation-id", "right-arm",
-			"file", "gnome/units/right_arm_warrior.png",
-			"item-not-equipped", "unit-hammer",
-			"item-not-equipped", "unit-mining-pick"
-		},
-		{
-			"layer", "right-arm",
-			"variation-id", "right-arm-slash",
-			"file", "gnome/units/right_arm_warrior_slash.png",
-			"item-equipped", "unit-hammer",
-			"item-equipped", "unit-mining-pick"
-		},
-		{
-			"layer", "weapon",
-			"variation-id", "sword",
-			"item-not-equipped", "unit-hammer",
-			"item-not-equipped", "unit-mining-pick"
-		},
-		{
-			"layer", "weapon",
-			"variation-id", "hammer",
-			"file", "gnome/units/hammer_warrior.png",
-			"item-equipped", "unit-hammer"
-		},
-		{
-			"layer", "weapon",
-			"variation-id", "mining-pick",
-			"file", "gnome/units/mining_pick_warrior.png",
-			"item-equipped", "unit-mining-pick"
-		}
-	}
+	ButtonHint = "Train ~!Thug"
 } )
 
 DefineUnitType("unit-derro-executioner", {
@@ -114,60 +90,11 @@ DefineUnitType("unit-derro-executioner", {
 	Civilization = "gnome",
 	Faction = "derro-tribe",
 	Description = "The poisonous mushroom brew which gives common Derro swordsmen their battlerage exacts a heavy price. The more it is drunk, the more the user's sanity is damaged. The most promising and vicious Derro swordsmen are taken by magisters for a harsh recovery process. Indeed, at the end of it their madness seems gone. But so is much of their personality, leaving little more than a husk, subservient to the magisters' commands.",
-	SkinColor = "pale-blue",
-	HairColor = "gray",
+	Image = {"file", "gnome/units/deep_gnomish_recruit_gray_hair.png", "size", {72, 72}},
 	Icon = "icon-derro-executioner",
 	BasicDamage = 12, Evasion = 11, Armor = 3, -- +2 damage, -2 evasion, +1 armor
 	DaySightRangeBonus = -1,
-	NightSightRangeBonus = 1,
-	Variations = {
-		{
-			"variation-id", "thrust",
-			"upgrade-forbidden", "upgrade-old",
-			"item-not-equipped", "unit-hammer",
-			"item-not-equipped", "unit-mining-pick"
-		},
-		{
-			"variation-id", "slash",
-			"file", "gnome/units/body_warrior_slash.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
-			"upgrade-forbidden", "upgrade-old",
-			"item-equipped", "unit-hammer",
-			"item-equipped", "unit-mining-pick"
-		},
-		{
-			"layer", "right-arm",
-			"variation-id", "right-arm",
-			"file", "gnome/units/right_arm_warrior.png",
-			"item-not-equipped", "unit-hammer",
-			"item-not-equipped", "unit-mining-pick"
-		},
-		{
-			"layer", "right-arm",
-			"variation-id", "right-arm-slash",
-			"file", "gnome/units/right_arm_warrior_slash.png",
-			"item-equipped", "unit-hammer",
-			"item-equipped", "unit-mining-pick"
-		},
-		{
-			"layer", "weapon",
-			"variation-id", "sword",
-			"item-not-equipped", "unit-hammer",
-			"item-not-equipped", "unit-mining-pick"
-		},
-		{
-			"layer", "weapon",
-			"variation-id", "hammer",
-			"file", "gnome/units/hammer_warrior.png",
-			"item-equipped", "unit-hammer"
-		},
-		{
-			"layer", "weapon",
-			"variation-id", "mining-pick",
-			"file", "gnome/units/mining_pick_warrior.png",
-			"item-equipped", "unit-mining-pick"
-		}
-	}
+	NightSightRangeBonus = 1
 } )
 
 DefineUnitType("unit-derro-shadowguard", {
@@ -176,60 +103,11 @@ DefineUnitType("unit-derro-shadowguard", {
 	Civilization = "gnome",
 	Faction = "derro-tribe",
 	Description = "The executioners who prove their skill at arms and start to show a glimmer of morbid cunning are taken by the magisters to receive further training and indoctrination. They are painfully infused with ancient magics that wrack and empower the subjects' body, if they survive the rite. They then become the hidden hand of the Derro clergy, the shadowguards. The few who have fought against a shadowguard and lived often end up half-crazed, telling fantastical stories of dancing shadows.",
-	SkinColor = "pale-blue",
-	HairColor = "gray",
+	Image = {"file", "gnome/units/deep_gnomish_recruit_gray_hair.png", "size", {72, 72}},
 	Icon = "icon-derro-shadowguard",
 	BasicDamage = 14, Evasion = 13, Armor = 3, -- +2 damage, -2 evasion, +1 armor
 	DaySightRangeBonus = -1,
-	NightSightRangeBonus = 1,
-	Variations = {
-		{
-			"variation-id", "thrust",
-			"upgrade-forbidden", "upgrade-old",
-			"item-not-equipped", "unit-hammer",
-			"item-not-equipped", "unit-mining-pick"
-		},
-		{
-			"variation-id", "slash",
-			"file", "gnome/units/body_warrior_slash.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
-			"upgrade-forbidden", "upgrade-old",
-			"item-equipped", "unit-hammer",
-			"item-equipped", "unit-mining-pick"
-		},
-		{
-			"layer", "right-arm",
-			"variation-id", "right-arm",
-			"file", "gnome/units/right_arm_warrior.png",
-			"item-not-equipped", "unit-hammer",
-			"item-not-equipped", "unit-mining-pick"
-		},
-		{
-			"layer", "right-arm",
-			"variation-id", "right-arm-slash",
-			"file", "gnome/units/right_arm_warrior_slash.png",
-			"item-equipped", "unit-hammer",
-			"item-equipped", "unit-mining-pick"
-		},
-		{
-			"layer", "weapon",
-			"variation-id", "sword",
-			"item-not-equipped", "unit-hammer",
-			"item-not-equipped", "unit-mining-pick"
-		},
-		{
-			"layer", "weapon",
-			"variation-id", "hammer",
-			"file", "gnome/units/hammer_warrior.png",
-			"item-equipped", "unit-hammer"
-		},
-		{
-			"layer", "weapon",
-			"variation-id", "mining-pick",
-			"file", "gnome/units/mining_pick_warrior.png",
-			"item-equipped", "unit-mining-pick"
-		}
-	}
+	NightSightRangeBonus = 1
 } )
 
 -- Derro Magisters (Herbalist) - "Derro magisters are feared for their mastery of ancient magics, calling upon the primal forces of the earth with profane incantations. Legends speak of derro conjurers unleashing a host of slimes, or encasing their enemies within prisons of solid rock. Magisters are the ruling elite of Derro society, with a magical hand and a silver tongue."

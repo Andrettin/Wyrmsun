@@ -64,14 +64,12 @@ function RunTechTreeMenu(civilization_number)
 		local tech_description
 		local techicon
 		local techicon_frame = 0
-		local skin_color = ""
 		local hair_color = ""
 		if (string.find(unit, "upgrade-") == nil) then
 			unit_name = GetUnitTypeName(unit)
 			tech_description = GetUnitTypeData(unit, "Description")
 			techicon = CIcon:Get(GetUnitTypeData(unit, "Icon")).G
 			techicon_frame = CIcon:Get(GetUnitTypeData(unit, "Icon")).Frame
-			skin_color = GetUnitTypeData(unit, "SkinColor")
 			hair_color = GetUnitTypeData(unit, "HairColor")
 		else
 			unit_name = CUpgrade:Get(unit).Name
@@ -94,7 +92,6 @@ function RunTechTreeMenu(civilization_number)
 				tech_menu:addLabel(unit_name, 176, 11)
 				local tech_menu_image = PlayerColorImageWidget(techicon, playercolor)
 				tech_menu_image:setImageOrigin(techicon_x_origin, techicon_y_origin)
-				tech_menu_image:setSkinColor(skin_color)
 				tech_menu_image:setHairColor(hair_color)
 				tech_menu:add(tech_menu_image, 153, 48)
 
@@ -114,7 +111,6 @@ function RunTechTreeMenu(civilization_number)
 		)
 		menu:add(b, x, y)
 		b:setImageOrigin(techicon_x_origin, techicon_y_origin)
-		b:setSkinColor(skin_color)
 		b:setHairColor(hair_color)
 		b:setNormalImage(techicon)
 		b:setPressedImage(techicon)

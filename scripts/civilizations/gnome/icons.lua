@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016 by Andrettin
+--      (c) Copyright 2016-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -32,9 +32,27 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-gnomish-worker-black-hair",
+	Size = {46, 38},
+	File = "gnome/icons/worker_black_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-gnomish-worker-gray-hair",
+	Size = {46, 38},
+	File = "gnome/icons/worker_gray_hair.png"
+})
+
+DefineIcon({
 	Name = "icon-gnomish-recruit",
 	Size = {46, 38},
 	File = "gnome/icons/recruit.png"
+})
+
+DefineIcon({
+	Name = "icon-gnomish-recruit-gray-hair",
+	Size = {46, 38},
+	File = "gnome/icons/recruit_gray_hair.png"
 })
 
 DefineIcon({
@@ -44,9 +62,21 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-gnomish-duelist-gray-hair",
+	Size = {46, 38},
+	File = "gnome/icons/duelist_gray_hair.png"
+})
+
+DefineIcon({
 	Name = "icon-gnomish-master-at-arms",
 	Size = {46, 38},
 	File = "gnome/icons/master_at_arms.png"
+})
+
+DefineIcon({
+	Name = "icon-gnomish-master-at-arms-gray-hair",
+	Size = {46, 38},
+	File = "gnome/icons/master_at_arms_gray_hair.png"
 })
 
 DefineIcon({
@@ -127,4 +157,5 @@ DefineIcon({
 	File = "gnome/icons/portent.png"
 })
 
+Load("scripts/civilizations/gnome/icons_deep_gnome.lua")
 Load("scripts/civilizations/gnome/icons_derro.lua")
