@@ -84,6 +84,7 @@ DefineFaction("athens", {
 	Type = "polity",
 	Colors = {"red"},
 	DefaultTier = "county",
+	DefaultAI = "sea-attack",
 	Titles = {
 		"monarchy", "county", "City-State",
 		"republic", "county", "City-State"
@@ -105,6 +106,7 @@ DefineFaction("corinth", {
 	Type = "polity",
 	Colors = {"black"},
 	DefaultTier = "county",
+	DefaultAI = "sea-attack",
 	Titles = {
 		"monarchy", "county", "City-State",
 		"republic", "county", "City-State"
@@ -120,12 +122,22 @@ DefineFaction("epirus", {
 	DefaultTier = "kingdom"
 })
 
+DefineFaction("ionia", {
+	Name = "Ionia",
+	Civilization = "greek",
+	Type = "polity",
+	Colors = {"black"},
+	DefaultTier = "kingdom",
+	DefaultAI = "sea-attack"
+})
+
 DefineFaction("krete", {
 	Name = "Krete",
 	Civilization = "greek",
 	Type = "polity",
 	Colors = {"yellow"},
-	DefaultTier = "kingdom"
+	DefaultTier = "kingdom",
+	DefaultAI = "sea-attack"
 })
 
 DefineFaction("macedon", {

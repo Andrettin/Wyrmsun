@@ -49,10 +49,27 @@ DefineSettlement("aphidnae", {
 		"greek", "Aphidnae"
 	},
 	HistoricalOwners = {
-		-1450, "mycenae" -- Aphidnae was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "mycenae", -- Aphidnae was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-500, "athens" -- Greece at the time of the war with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"
+	},
+	Regions = {"europe", "greece", "west-and-central-europe"}
+})
+
+DefineSettlement("argos", {
+	Name = "Argos",
+	MapTemplate = "earth",
+	Position = {4357, 1191},
+	CulturalNames = {
+		"greek", "Argos"
+	},
+	HistoricalOwners = {
+		-500, "argos" -- Greece at the time of the war with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
+	},
+	HistoricalBuildings = {
+		-500, 0, "unit-latin-town-hall"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -67,12 +84,29 @@ DefineSettlement("athens", {
 	},
 	HistoricalOwners = {
 		-1450, "mycenae", -- Athens was a center of the highest Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-500, "athens", -- Greece at the time of the war with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
 		-146, "rome", -- Athens was acquired by Rome in 146 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1740, "turkey" -- Athens was in possession of the Ottoman Empire in 1740; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	},
 	HistoricalBuildings = {
 		-1450, 1740, "unit-latin-town-hall",
 		1740, 0, "unit-teuton-town-hall"
+	},
+	Regions = {"europe", "greece", "west-and-central-europe"}
+})
+
+DefineSettlement("corinth", {
+	Name = "Corinth",
+	MapTemplate = "earth",
+	Position = {4360, 1185},
+	CulturalNames = {
+		"greek", "Corinth"
+	},
+	HistoricalOwners = {
+		-500, "corinth" -- Greece at the time of the war with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
+	},
+	HistoricalBuildings = {
+		-500, 0, "unit-latin-town-hall"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -133,7 +167,8 @@ DefineSettlement("eleusis", {
 		"greek", "Eleusis"
 	},
 	HistoricalOwners = {
-		-1450, "mycenae" -- Eleusis was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "mycenae", -- Eleusis was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-500, "athens" -- Greece at the time of the war with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"
@@ -149,7 +184,8 @@ DefineSettlement("epidaurus", {
 		"greek", "Epidaurus"
 	},
 	HistoricalOwners = {
-		-1450, "mycenae" -- Epidaurus was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "mycenae", -- Epidaurus was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-500, "argos" -- Greece at the time of the war with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"
@@ -262,10 +298,12 @@ DefineSettlement("mycenae", {
 		"greek", "Mycenae"
 	},
 	HistoricalOwners = {
-		-1450, "mycenae" -- Mycenae was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "mycenae", -- Mycenae was a center of the highest Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-500, "argos" -- Greece at the time of the war with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-town-hall"
+		-1450, -700, "unit-latin-town-hall",
+		-700, 0, "unit-latin-farm"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -310,7 +348,8 @@ DefineSettlement("tiryns", {
 		"greek", "Tiryns"
 	},
 	HistoricalOwners = {
-		-1450, "mycenae" -- Tiryns was a center of the highest Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "mycenae", -- Tiryns was a center of the highest Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-500, "argos" -- Greece at the time of the war with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"

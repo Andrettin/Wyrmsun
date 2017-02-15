@@ -50,7 +50,8 @@ DefineSettlement("troy", {
 		"hittite", "Troy"
 	},
 	HistoricalOwners = {
-		-1450, "mycenae" -- Troy was a center of the highest Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "mycenae", -- Troy was a center of the highest Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-500, "ionia" -- Greece at the time of the war with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-town-hall"

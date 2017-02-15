@@ -217,7 +217,8 @@ DefineSettlement("kadesh", {
 		"egyptian", "Kadesh"
 	},
 	HistoricalOwners = {
-		-1450, "egypt" -- Kadesh was subject to Egypt about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "egypt", -- Kadesh was subject to Egypt about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-720, "assyria" -- Kadesh's area was a part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"
