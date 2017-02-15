@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineButton( { Pos = 1, Level = 2, Icon = "icon-flag-silver-hammer-on-red",
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-flag-black-hammer-on-orange",
 	Action = "research", Value = "upgrade-faction-norlund-clan",
 	Allowed = "check-single-research",
 	Key = "n", Hint = "Found the ~!Norlund Clan", Popup = "popup-research",
@@ -49,7 +49,7 @@ DefineButton( { Pos = 3, Level = 2, Icon = "icon-flag-green-hammer-on-blue",
 	ForUnit = {"unit-dwarven-town-hall", "unit-dwarven-stronghold"}
 } )
 
-DefineButton( { Pos = 4, Level = 2, Icon = "icon-flag-red-hammer-on-silver",
+DefineButton( { Pos = 4, Level = 2, Icon = "icon-flag-green-hammer-on-light-purple",
 	Action = "research", Value = "upgrade-faction-shadowcharm-clan",
 	Allowed = "check-single-research",
 	Key = "c", Hint = "Found the Shadow~!charm Clan", Popup = "popup-research",
@@ -73,7 +73,7 @@ DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-silver-hammer-on-red",
 	ForUnit = {"unit-dwarven-town-hall", "unit-dwarven-stronghold"}
 } )
 
-DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-light-blue-hammer-on-orange",
+DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-blue-hammer-on-yellow",
 	Action = "research", Value = "upgrade-faction-joruvellir",
 	Allowed = "check-single-research",
 	Key = "j", Hint = "Found ~!Joruvellir", Popup = "popup-research",

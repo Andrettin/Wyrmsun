@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016 by Andrettin
+--      (c) Copyright 2016-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -524,6 +524,18 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-flag-black-hammer-on-orange",
+	Size = {46, 38},
+	File = "dwarf/icons/flag_black_hammer_on_orange.png"
+})
+
+DefineIcon({
+	Name = "icon-flag-blue-hammer-on-yellow",
+	Size = {46, 38},
+	File = "dwarf/icons/flag_blue_hammer_on_yellow.png"
+})
+
+DefineIcon({
 	Name = "icon-flag-cyan-hammer-on-green",
 	Size = {46, 38},
 	File = "dwarf/icons/flag_cyan_hammer_on_green.png"
@@ -533,6 +545,12 @@ DefineIcon({
 	Name = "icon-flag-green-hammer-on-blue",
 	Size = {46, 38},
 	File = "dwarf/icons/flag_green_hammer_on_blue.png"
+})
+
+DefineIcon({
+	Name = "icon-flag-green-hammer-on-light-purple",
+	Size = {46, 38},
+	File = "dwarf/icons/flag_green_hammer_on_light_purple.png"
 })
 
 DefineIcon({
