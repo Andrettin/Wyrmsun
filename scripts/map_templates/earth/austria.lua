@@ -25,17 +25,18 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-SetMapTemplateTileTerrain("earth", "shallow-water", 4220, 960, "Lake Neusiedl")
-SetMapTemplateTileTerrain("earth", "shallow-water", 4220, 961, "Lake Neusiedl")
-SetMapTemplateTileTerrain("earth", "shallow-water", 4221, 958, "Lake Neusiedl")
-SetMapTemplateTileTerrain("earth", "shallow-water", 4221, 959, "Lake Neusiedl")
-SetMapTemplateTileTerrain("earth", "shallow-water", 4221, 960, "Lake Neusiedl")
-SetMapTemplateTileTerrain("earth", "shallow-water", 4221, 961, "Lake Neusiedl")
-SetMapTemplateTileTerrain("earth", "shallow-water", 4222, 958, "Lake Neusiedl")
-SetMapTemplateTileTerrain("earth", "shallow-water", 4222, 959, "Lake Neusiedl")
-SetMapTemplateTileTerrain("earth", "shallow-water", 4222, 960, "Lake Neusiedl")
-SetMapTemplateTileTerrain("earth", "shallow-water", 4223, 958, "Lake Neusiedl")
-SetMapTemplateTileTerrain("earth", "shallow-water", 4223, 959, "Lake Neusiedl")
+-- Lake Neusiedl
+SetMapTemplateTileTerrain("earth", "shallow-water", {4220, 960})
+SetMapTemplateTileTerrain("earth", "shallow-water", {4220, 961})
+SetMapTemplateTileTerrain("earth", "shallow-water", {4221, 958})
+SetMapTemplateTileTerrain("earth", "shallow-water", {4221, 959})
+SetMapTemplateTileTerrain("earth", "shallow-water", {4221, 960})
+SetMapTemplateTileTerrain("earth", "shallow-water", {4221, 961})
+SetMapTemplateTileTerrain("earth", "shallow-water", {4222, 958})
+SetMapTemplateTileTerrain("earth", "shallow-water", {4222, 959})
+SetMapTemplateTileTerrain("earth", "shallow-water", {4222, 960})
+SetMapTemplateTileTerrain("earth", "shallow-water", {4223, 958})
+SetMapTemplateTileTerrain("earth", "shallow-water", {4223, 959})
 
 -- Carnuntum
 SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4224, 955}, 170, 171) -- a Roman army numbering 20,000 was stationed near Carnuntum in 170 AD, when it was defeated by the Marcomanni and Quadi; Source: "Ancient Warfare VII.6", 2013, p. 29.

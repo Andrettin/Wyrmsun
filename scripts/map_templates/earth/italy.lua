@@ -26,8 +26,8 @@
 --
 
 -- some coastline changes, to make it easier for ships to reach Trieste
-SetMapTemplateTileTerrain("earth", "shallow-water", 4145, 1008)
-SetMapTemplateTileTerrain("earth", "shallow-water", 4147, 1013)
+SetMapTemplateTileTerrain("earth", "shallow-water", {4145, 1008})
+SetMapTemplateTileTerrain("earth", "shallow-water", {4147, 1013})
 
 -- Aleria
 SetMapTemplateCulturalSettlementName("earth", "Aleria", {4055, 1090}, "latin") -- Source: "Ancient Warfare VII.6", 2013, p. 7.

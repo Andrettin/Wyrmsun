@@ -26,15 +26,15 @@
 --
 
 -- some coastline changes, to allow ships to reach Fiume
-SetMapTemplateTileTerrain("earth", "shallow-water", 4163, 1020)
-SetMapTemplateTileTerrain("earth", "shallow-water", 4165, 1020)
-SetMapTemplateTileTerrain("earth", "shallow-water", 4165, 1021)
-SetMapTemplateTileTerrain("earth", "shallow-water", 4165, 1026)
-SetMapTemplateTileTerrain("earth", "shallow-water", 4166, 1021)
-SetMapTemplateTileTerrain("earth", "shallow-water", 4166, 1022)
-SetMapTemplateTileTerrain("earth", "shallow-water", 4168, 1024)
-SetMapTemplateTileTerrain("earth", "shallow-water", 4170, 1023)
-SetMapTemplateTileTerrain("earth", "shallow-water", 4171, 1018)
+SetMapTemplateTileTerrain("earth", "shallow-water", {4163, 1020})
+SetMapTemplateTileTerrain("earth", "shallow-water", {4165, 1020})
+SetMapTemplateTileTerrain("earth", "shallow-water", {4165, 1021})
+SetMapTemplateTileTerrain("earth", "shallow-water", {4165, 1026})
+SetMapTemplateTileTerrain("earth", "shallow-water", {4166, 1021})
+SetMapTemplateTileTerrain("earth", "shallow-water", {4166, 1022})
+SetMapTemplateTileTerrain("earth", "shallow-water", {4168, 1024})
+SetMapTemplateTileTerrain("earth", "shallow-water", {4170, 1023})
+SetMapTemplateTileTerrain("earth", "shallow-water", {4171, 1018})
 
 -- Narona
 SetMapTemplateCulturalSettlementName("earth", "Narona", {4242, 1068}, "latin") -- Source: "Ancient Warfare VII.6", 2013, p. 7.
