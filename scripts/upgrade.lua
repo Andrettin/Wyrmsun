@@ -223,12 +223,37 @@ DefineUpgrade("upgrade-printing-press", {
 
 -- Faction Type Upgrades
 
+DefineUpgrade("upgrade-mercenary-company", {
+	Name = "Mercenary Company"
+})
+
 DefineUpgrade("upgrade-trading-company", {
 	Name = "Trading Company"
 })
 
+DefineModifier("upgrade-mercenary-company", -- mercenary companies' mercenary camps produce food, to allow them to train units despite not having farms
+	{"Supply", 8},
+	{"apply-to", "unit-mercenary-camp"}
+)
+
+DefineModifier("upgrade-mercenary-company", -- mercenary companies' mercenary camps "regenerate", since they aren't supposed to have workers to repair them
+	{"HitPoints", 1, "Increase"},
+	{"apply-to", "unit-mercenary-camp"}
+)
+
 DefineModifier("upgrade-trading-company", -- trading companies' docks produce food, to allow them to build ships despite not having farms
 	{"Supply", 8},
+	{"apply-to", "unit-germanic-dock"}, {"apply-to", "unit-teuton-dock"},
+	{"apply-to", "unit-dwarven-dock"},
+	{"apply-to", "unit-goblin-dock"}
+)
+
+DefineModifier("upgrade-trading-company", -- trading companies' caravans, ships and docks "regenerate", since they aren't supposed to have workers to repair them
+	{"HitPoints", 1, "Increase"},
+	{"apply-to", "unit-gnomish-caravan"},
+	{"apply-to", "unit-germanic-transport-ship"}, {"apply-to", "unit-teuton-kogge"},
+	{"apply-to", "unit-dwarven-transport-ship"},
+	{"apply-to", "unit-goblin-transport-ship"},
 	{"apply-to", "unit-germanic-dock"}, {"apply-to", "unit-teuton-dock"},
 	{"apply-to", "unit-dwarven-dock"},
 	{"apply-to", "unit-goblin-dock"}
