@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2001-2017 by Lutz Sammer, Jimmy Salmon and Andrettin
+--      (c) Copyright 2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,16 +25,45 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCursor({
-	Name = "cursor-point",
-	Race = "latin",
-	File = "teuton/ui/cursors/teuton_gauntlet.png",
-	HotSpot = {0, 0},
-	Size = {28, 32}
+DefineFaction("argentina", {
+	Name = "Argentina",
+	Civilization = "latin",
+	Type = "polity",
+	Colors = {"cyan", "white"},
+	DefaultTier = "kingdom" -- had the status of viceroyalty
 })
 
-UI.NormalFontColor = "white"
-UI.ReverseFontColor = "yellow"
+DefineFaction("castille", {
+	Name = "Castille",
+	Civilization = "latin",
+	Type = "polity",
+	Colors = {"yellow", "red"},
+	DefaultTier = "kingdom"
+})
 
-UI.MenuButton.Style = FindButtonStyle("main-germanic")
-UI.NetworkDiplomacyButton.Style = FindButtonStyle("main-germanic")
+DefineFaction("paraguay", {
+	Name = "Paraguay",
+	Civilization = "latin",
+	Type = "polity",
+	Colors = {"blue", "red"},
+	DefaultTier = "duchy"
+})
+
+DefineFaction("spain", {
+	Name = "Spain",
+	Civilization = "latin",
+	Type = "polity",
+	Colors = {"yellow", "red"},
+	DefaultTier = "kingdom",
+	SettlementNames = {
+		"Burgos" -- the Spanish town of Burgos; Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
+	}
+})
+
+DefineFaction("uruguay", {
+	Name = "Uruguay",
+	Civilization = "latin",
+	Type = "polity",
+	Colors = {"cyan", "white"},
+	DefaultTier = "duchy"
+})

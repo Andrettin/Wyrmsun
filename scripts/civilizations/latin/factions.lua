@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015-2016 by Andrettin
+--      (c) Copyright 2015-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -314,17 +314,6 @@ DefineFaction("siena", {
 	DefaultTier = "duchy"
 })
 
-DefineFaction("spain", {
-	Name = "Spain",
-	Civilization = "latin",
-	Type = "polity",
-	Colors = {"yellow", "red"},
-	DefaultTier = "kingdom",
-	SettlementNames = {
-		"Burgos" -- the Spanish town of Burgos; Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
-	}
-})
-
 DefineFaction("transylvania", {
 	Name = "Transylvania",
 	Civilization = "latin",
@@ -369,4 +358,5 @@ DefineFaction("wallachia", {
 	}
 })
 
---Load("scripts/civilizations/latin/factions_brazilian.lua")
+Load("scripts/civilizations/latin/factions_brazilian.lua")
+Load("scripts/civilizations/latin/factions_castillian.lua")
