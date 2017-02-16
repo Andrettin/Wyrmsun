@@ -478,6 +478,7 @@ DefineButton( { Pos = 13, Level = 2, Icon = "icon-ethereal-vision",
 } )
 --]]
 
+--[[
 DefineButton( { Pos = 1, Level = 2, Icon = "icon-healing",
 	Action = "learn-ability", Value = "upgrade-healing",
 	Description = "Healing is an active ability that heals an organic unit",
@@ -491,6 +492,7 @@ DefineButton( { Pos = 2, Level = 2, Icon = "icon-precision",
 	Description = "Precision is an active ability that doubles the accuracy of an organic unit while in combat",
 	ForUnit = {"unit-germanic-priest", "unit-teuton-priest", "unit-elven-priest", "unit-dwarven-witness"}
 })
+--]]
 
 DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
 	Action = "button", Value = 0,
