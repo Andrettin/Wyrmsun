@@ -40,7 +40,7 @@ local kobold_funcs = {
 	
 	function() return (GetPlayerData(AiPlayer(), "TotalNumUnitsConstructed") == 0) end, -- if the tribe no longer has any units, stop spawning new ones
 	
-	function() return ((ai_call_counter[AiPlayer()] % 10) ~= 0) end, -- add a little delay between spawnings
+	function() return ((ai_call_counter[AiPlayer()] % 50) ~= 0) end, -- add a little delay between spawnings
 
 	function()
 		stratagus.gameData.AIState.index[AiPlayer() + 1] = 0; -- repeat loop

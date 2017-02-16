@@ -87,7 +87,7 @@ DefineUpgrade("upgrade-item-suffix-of-flame", {
 DefineUpgrade("upgrade-item-suffix-of-frailty", {
 	Name = _("of Frailty"),
 	MagicSuffix = true,
-	ItemSuffix = {"armor", true, "shield", true, "helmet", true, "amulet", true, "ring", true},
+	ItemSuffix = {"armor", true, "shield", true, "helmet", true, "amulet", true, "ring", true, "horn", true},
 	IncompatibleAffixes = {"upgrade-item-prefix-frail"},
 	MagicLevel = 2
 })
@@ -186,7 +186,7 @@ DefineUpgrade("upgrade-item-suffix-of-speed", { -- example: Ring of Speed (from 
 DefineUpgrade("upgrade-item-suffix-of-strength", { -- example: Amulet of Strength (from Wesnoth)
 	Name = _("of Strength"),
 	MagicSuffix = true,
-	ItemSuffix = {"amulet", true, "ring", true},
+	ItemSuffix = {"amulet", true, "ring", true, "horn", true},
 	MagicLevel = 2
 })
 

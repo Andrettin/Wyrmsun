@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015-2016 by Andrettin
+--      (c) Copyright 2015-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -329,7 +329,8 @@ DefineUnitType("unit-horn", {
 	Parent = "unit-template-item",
 	Image = {"file", "germanic/items/bronze_lur.png", "size", {17, 15}},
 	Icon = "icon-germanic-bronze-lur",
-	ItemClass = "horn"
+	ItemClass = "horn",
+	Affixes = {"upgrade-item-suffix-of-frailty"} -- so that it can have a property generated if the dropper's player has no chosen deity
 } )
 
 DefineUnitType("unit-boots", {
@@ -364,7 +365,8 @@ DefineUnitType("unit-amulet", {
 	Parent = "unit-template-item",
 	Image = {"file", "neutral/items/amulet.png", "size", {32, 32}},
 	Icon = "icon-amulet",
-	ItemClass = "amulet"
+	ItemClass = "amulet",
+	Affixes = {"upgrade-item-suffix-of-frailty"} -- so that it can have a property generated if the dropper's player has no chosen deity
 } )
 
 DefineUnitType("unit-ring", {
@@ -372,7 +374,8 @@ DefineUnitType("unit-ring", {
 	Parent = "unit-template-item",
 	Image = {"file", "neutral/items/ring.png", "size", {32, 32}},
 	Icon = "icon-ring",
-	ItemClass = "ring"
+	ItemClass = "ring",
+	Affixes = {"upgrade-item-suffix-of-frailty"} -- so that it can have a property generated if the dropper's player has no chosen deity
 } )
 
 DefineUnitType("unit-arrows", {
