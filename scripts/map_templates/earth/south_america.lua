@@ -29,3 +29,4 @@
 SetMapTemplateTileTerrain("earth", "shallow-water", {2857, 2569})
 SetMapTemplateTileTerrain("earth", "shallow-water", {2857, 2570})
 SetMapTemplateTileTerrain("earth", "shallow-water", {2858, 2569})
+SetMapTemplateTileTerrain("earth", "shallow-water", {2860, 2564})
