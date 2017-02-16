@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2000-2016 by Lutz Sammer, Jimmy Salmon and Andrettin
+--      (c) Copyright 2000-2017 by Lutz Sammer, Jimmy Salmon and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -2070,17 +2070,30 @@ if not (ui_loaded_first_time) then
 				{	HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
 				}, 
-				{ 	Margin = {1, 1},
+				{ 	Margin = {1, 1}, Condition = {FactionUpgrade = "false"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
-				{ 	More = {"Costs", {Font = PopupFont}}, HighlightColor = "yellow",
+				{ 	Condition = {FactionUpgrade = "false"}, More = {"Costs", {Font = PopupFont}}, HighlightColor = "yellow",
 				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
 				{ 	Condition = {HasDescription = true}, HighlightColor = "yellow",
-					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				-- Faction Upgrade Information
+				{ 	Margin = {1, 1}, Condition = {FactionUpgrade = "only"},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {FactionUpgrade = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(_("Civilization: "), UpgradeCivilization("Upgrade")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {FactionUpgrade = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(_("Type: "), UpgradeFactionType("Upgrade")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {FactionUpgrade = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(_("Effects: "), UpgradeEffectsString("Upgrade")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				-- AutoCast Tooltip
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "cast-spell", AutoCast = "only"},
