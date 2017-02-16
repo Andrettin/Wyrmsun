@@ -28,7 +28,7 @@
 DefineCharacter("julius-caesar", { -- Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 227.
 	Name = "Caesar",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-teuton-heroic-swordsman",
 	Civilization = "latin",
 	Faction = "rome",
 	ProvinceOfOrigin = "Latium", -- correct?

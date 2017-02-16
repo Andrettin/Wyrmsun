@@ -337,7 +337,7 @@ DefineDependency("upgrade-teuton-alchemy",
 )
 
 DefineDependency("unit-teuton-stables",
-	{"unit-teuton-lumber-mill"}
+	{"unit-teuton-lumber-mill", "upgrade-latin-civilization", 0}
 )
 
 DefineDependency("unit-teuton-swordsman",
