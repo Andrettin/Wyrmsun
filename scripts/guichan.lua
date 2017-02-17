@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2006-2016 by Jimmy Salmon, Pali Rohár and Andrettin
+--      (c) Copyright 2006-2017 by Jimmy Salmon, Pali Rohár and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -1397,12 +1397,12 @@ function BuildProgramStartMenu()
 		SaveQuestCompletion()
 	end
 	
-	menu:addFullButton(_("~!Single Player Game"), "s", offx + 208, offy + 104 + 36*0,
+	menu:addFullButton(_("~!Single Player Game"), "s", offx + 208, offy + 104 + 36*1,
 		function() RunSinglePlayerGameMenu(); menu:stop(1) end)
-	menu:addFullButton(_("~!Multiplayer Game"), "m", offx + 208, offy + 104 + 36*1,
+	menu:addFullButton(_("~!Multiplayer Game"), "m", offx + 208, offy + 104 + 36*2,
 		function() RunMultiPlayerGameMenu(); menu:stop(1) end)
-	menu:addFullButton(_("~!Grand Strategy Game"), "g", offx + 208, offy + 104 + 36*2,
-		function() RunGrandStrategyGameSetupMenu(); menu:stop(1) end)
+--	menu:addFullButton(_("~!Grand Strategy Game"), "g", offx + 208, offy + 104 + 36*2,
+--		function() RunGrandStrategyGameSetupMenu(); menu:stop(1) end)
 --	menu:addFullButton(_("~!Replay Game"), "r", offx + 208, offy + 104 + 36*3, -- replays are broken at the moment
 --		function() RunReplayGameMenu(); menu:stop(1) end)
 	menu:addFullButton(_("~!Achievements"), "a", offx + 208, offy + 104 + 36*3,

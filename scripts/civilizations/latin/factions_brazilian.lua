@@ -31,5 +31,6 @@ DefineFaction("brazil", {
 	Type = "polity",
 	Colors = {"green"},
 	DefaultTier = "kingdom",
-	DefaultStartPos = {2856, 2569} -- Rio de Janeiro
+	DefaultStartPos = {2856, 2569} -- Rio de Janeiro; Brazilian capital since 1763; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
+	-- Salvador was the Brazilian capital until 1763; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
 })
