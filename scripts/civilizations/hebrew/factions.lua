@@ -25,6 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineFaction("aramaean-tribe", {
+	Name = "Aramaean Tribe",
+	Civilization = "hebrew", -- not quite accurate, should change to something more appropriate
+	Type = "tribe",
+	Colors = {"black"},
+	DefaultTier = "duchy"
+})
+
 DefineFaction("asher-tribe", {
 	Name = "Asher Tribe",
 	Civilization = "hebrew",
@@ -113,12 +121,28 @@ DefineFaction("reuben-tribe", {
 	DefaultTier = "duchy"
 })
 
+DefineFaction("simeon-tribe", {
+	Name = "Simeon Tribe",
+	Civilization = "hebrew",
+	Type = "tribe",
+	Colors = {"orange"},
+	DefaultTier = "duchy"
+})
+
 DefineFaction("zebulon-tribe", {
 	Name = "Zebulon Tribe",
 	Civilization = "hebrew",
 	Type = "tribe",
 	Colors = {"orange"},
 	DefaultTier = "duchy"
+})
+
+DefineFaction("israel", {
+	Name = "Israel",
+	Civilization = "hebrew",
+	Type = "polity",
+	Colors = {"yellow"},
+	DefaultTier = "kingdom"
 })
 
 DefineFaction("judah", {

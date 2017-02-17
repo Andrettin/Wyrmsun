@@ -89,6 +89,54 @@ DefineSettlement("baalbec", {
 	Regions = {"asia"}
 })
 
+DefineSettlement("beersheba", {
+	Name = "Beersheba",
+	MapTemplate = "earth",
+	Position = {4630, 1338},
+	CulturalNames = {
+		"hebrew", "Beersheba"
+	},
+	HistoricalOwners = {
+		-953, "judah" -- Beersheba was a part of the Kingdom of Judah in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+	},
+	HistoricalBuildings = {
+		-953, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
+DefineSettlement("berothai", {
+	Name = "Berothai",
+	MapTemplate = "earth",
+	Position = {4649, 1277},
+	CulturalNames = {
+		"phoenician", "Berothai"
+	},
+	HistoricalOwners = {
+		-1250, "canaanite-tribe" -- Berothai was part of the territory of the Canaanites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+	},
+	HistoricalBuildings = {
+		-1250, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
+DefineSettlement("bethel", {
+	Name = "Bethel",
+	MapTemplate = "earth",
+	Position = {4642, 1316},
+	CulturalNames = {
+		"hebrew", "Bethel"
+	},
+	HistoricalOwners = {
+		-953, "israel" -- Bethel was a part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+	},
+	HistoricalBuildings = {
+		-953, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
 DefineSettlement("byblos", {
 	Name = "Byblos",
 	MapTemplate = "earth",
@@ -97,7 +145,8 @@ DefineSettlement("byblos", {
 		"phoenician", "Gebal" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalOwners = {
-		-1450, "phoenicia" -- Gebal/Byblus was a Phoenician settlement about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "phoenicia", -- Gebal/Byblus was a Phoenician settlement about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1250, "canaanite-tribe" -- Gebal's area was part of the territory of the Canaanites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"
@@ -134,10 +183,27 @@ DefineSettlement("damascus", {
 	},
 	HistoricalOwners = {
 		-1450, "egypt", -- Damascus was subject to Egypt about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1250, "aramaean-tribe", -- Damascus/Dammeshek was part of the territory of the Aramaeans in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria" -- Damascus was a part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-town-hall"
+	},
+	Regions = {"asia"}
+})
+
+DefineSettlement("dor", {
+	Name = "Dor",
+	MapTemplate = "earth",
+	Position = {4635, 1307},
+	CulturalNames = {
+		"phoenician", "Dor"
+	},
+	HistoricalOwners = {
+		-1250, "canaanite-tribe" -- Dor was part of the territory of the Canaanites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+	},
+	HistoricalBuildings = {
+		-1250, 0, "unit-latin-farm"
 	},
 	Regions = {"asia"}
 })
@@ -196,6 +262,22 @@ DefineSettlement("gaza", {
 	Regions = {"asia"}
 })
 
+DefineSettlement("gilgal", {
+	Name = "Gilgal",
+	MapTemplate = "earth",
+	Position = {4647, 1323},
+	CulturalNames = {
+		"hebrew", "Gilgal"
+	},
+	HistoricalOwners = {
+		-953, "israel" -- Gilgal was a part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+	},
+	HistoricalBuildings = {
+		-953, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
 DefineSettlement("hamath", {
 	Name = "Hamath",
 	MapTemplate = "earth",
@@ -222,10 +304,12 @@ DefineSettlement("hebron", {
 		"hebrew", "Hebron"
 	},
 	HistoricalOwners = {
-		-1250, "kenite-tribe" -- Hebron was part of the territory of the Kenites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-1250, "kenite-tribe", -- Hebron was part of the territory of the Kenites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-953, "judah" -- Hebron was a part of the Kingdom of Judah in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 	},
 	HistoricalBuildings = {
-		-1250, 0, "unit-latin-town-hall"
+		-1250, -953, "unit-latin-town-hall",
+		-953, 0, "unit-latin-farm"
 	},
 	Regions = {"asia"}
 })
@@ -238,7 +322,8 @@ DefineSettlement("jericho", {
 		"hebrew", "Jericho"
 	},
 	HistoricalOwners = {
-		-1250, "benjamin-tribe" -- Shiloh was part of the territory of the Benjamin tribe in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-1250, "benjamin-tribe", -- Jericho was part of the territory of the Benjamin tribe in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-953, "israel" -- Jericho was a part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 	},
 	HistoricalBuildings = {
 		-1250, 0, "unit-latin-town-hall"
@@ -251,13 +336,15 @@ DefineSettlement("jerusalem", {
 	MapTemplate = "earth",
 	Position = {4642, 1327},
 	CulturalNames = {
-		"hebrew", "Jerusalem"
+		"hebrew", "Jerusalem",
+		"phoenician", "Jerusalem"
 	},
 	HistoricalOwners = {
-		-750, "judah" -- Jerusalem was a part of the Kingdom of Judah in the 750-625 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-1250, "canaanite-tribe", -- Jerusalem was part of the territory of the Canaanites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-953, "judah" -- Jerusalem was a part of the Kingdom of Judah in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 	},
 	HistoricalBuildings = {
-		-750, 0, "unit-latin-town-hall"
+		-1250, 0, "unit-latin-town-hall"
 	},
 	Regions = {"asia"}
 })
@@ -267,13 +354,15 @@ DefineSettlement("joppa", {
 	MapTemplate = "earth",
 	Position = {4629, 1323},
 	CulturalNames = {
-		"assyrian", "Joppa"
+		"assyrian", "Joppa",
+		"phoenician", "Joppa"
 	},
 	HistoricalOwners = {
+		-1250, "canaanite-tribe", -- Joppa was part of the territory of the Canaanites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria" -- Joppa was a part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-720, 0, "unit-latin-farm"
+		-1250, 0, "unit-latin-farm"
 	},
 	Regions = {"asia"}
 })
@@ -321,6 +410,7 @@ DefineSettlement("megiddo", {
 	},
 	HistoricalOwners = {
 		-1450, "phoenicia", -- Megiddo was a Phoenician settlement about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1250, "canaanite-tribe", -- Megiddo's area was part of the territory of the Canaanites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria" -- Megiddo was a part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
@@ -334,13 +424,15 @@ DefineSettlement("samaria", {
 	MapTemplate = "earth",
 	Position = {4643, 1317},
 	CulturalNames = {
-		"assyrian", "Samaria"
+		"assyrian", "Samaria",
+		"hebrew", "Samaria"
 	},
 	HistoricalOwners = {
+		-953, "israel", -- Samaria was a part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria" -- Samaria was a part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-720, 0, "unit-latin-farm"
+		-953, 0, "unit-latin-farm"
 	},
 	Regions = {"asia"}
 })
@@ -361,6 +453,24 @@ DefineSettlement("selah", {
 	Regions = {"asia"}
 })
 
+DefineSettlement("shechem", {
+	Name = "Shechem",
+	MapTemplate = "earth",
+	Position = {4643, 1313},
+	CulturalNames = {
+		"hebrew", "Shechem",
+		"phoenician", "Shechem"
+	},
+	HistoricalOwners = {
+		-1250, "canaanite-tribe", -- Shechem was part of the territory of the Canaanites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-953, "israel" -- Shechem was a part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+	},
+	HistoricalBuildings = {
+		-1250, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
 DefineSettlement("shiloh", {
 	Name = "Shiloh",
 	MapTemplate = "earth",
@@ -369,7 +479,8 @@ DefineSettlement("shiloh", {
 		"hebrew", "Shiloh"
 	},
 	HistoricalOwners = {
-		-1250, "ephraim-tribe" -- Shiloh was part of the territory of the Ephraim tribe in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-1250, "ephraim-tribe", -- Shiloh was part of the territory of the Ephraim tribe in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-953, "israel" -- Shiloh was a part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 	},
 	HistoricalBuildings = {
 		-1250, 0, "unit-latin-town-hall"
@@ -385,7 +496,8 @@ DefineSettlement("sidon", {
 		"phoenician", "Sidon"
 	},
 	HistoricalOwners = {
-		-1450, "phoenicia" -- Sidon was a Phoenician settlement about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "phoenicia", -- Sidon was a Phoenician settlement about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1250, "canaanite-tribe" -- Sidon was part of the territory of the Canaanites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"
@@ -401,7 +513,8 @@ DefineSettlement("tyre", {
 		"phoenician", "Zor" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalOwners = {
-		-1450, "phoenicia" -- Zor/Tyre was a Phoenician settlement about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "phoenicia", -- Zor/Tyre was a Phoenician settlement about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1250, "canaanite-tribe" -- Zor/Tyre was part of the territory of the Canaanites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-town-hall"

@@ -25,6 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineFaction("canaanite-tribe", {
+	Name = "Canaanite Tribe",
+	Civilization = "phoenician", -- correct?
+	Type = "tribe",
+	Colors = {"red"},
+	DefaultTier = "duchy"
+})
+
 DefineFaction("carthage", {
 	Name = "Carthage",
 	Civilization = "phoenician",

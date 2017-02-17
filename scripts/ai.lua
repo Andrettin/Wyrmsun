@@ -167,10 +167,12 @@ function AiLoop(loop_funcs, indexes)
 	local playerIndex = AiPlayer() + 1
 	
 	-- Some AI cheating for harder levels
-	if (GameSettings.Difficulty == 3) then
-		AiCheat(50, 35, 25)
-	elseif (GameSettings.Difficulty == 4) then
-		AiCheat(100, 75, 50)
+	if (Players[AiPlayer()]:IsAllied(ThisPlayer) == false or IsNetworkGame()) then
+		if (GameSettings.Difficulty == 3) then
+			AiCheat(50, 35, 25)
+		elseif (GameSettings.Difficulty == 4) then
+			AiCheat(100, 75, 50)
+		end
 	end
 
 	while (true) do
