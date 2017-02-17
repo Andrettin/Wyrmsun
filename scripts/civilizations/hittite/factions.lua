@@ -25,6 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineFaction("hatti", {
+	Name = "Hatti",
+	Civilization = "hittite",
+	Type = "polity",
+	Colors = {"green"},
+	DefaultTier = "kingdom"
+})
+
 DefineFaction("lydia", {
 	Name = "Lydia",
 	Civilization = "hittite",

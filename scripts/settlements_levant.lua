@@ -57,6 +57,38 @@ DefineSettlement("arvad", {
 	Regions = {"asia"}
 })
 
+DefineSettlement("ascalon", {
+	Name = "Ascalon",
+	MapTemplate = "earth",
+	Position = {4627, 1326},
+	CulturalNames = {
+		"hebrew", "Ascalon"
+	},
+	HistoricalOwners = {
+		-1250, "philistine-tribe" -- Ascalon was part of the territory of the Philistines in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+	},
+	HistoricalBuildings = {
+		-1250, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
+DefineSettlement("baalbec", {
+	Name = "Baalbec",
+	MapTemplate = "earth",
+	Position = {4665, 1273},
+	CulturalNames = {
+		"hittite", "Baalbec"
+	},
+	HistoricalOwners = {
+		-1250, "hatti" -- Baalbec was a part of Hittite territory in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+	},
+	HistoricalBuildings = {
+		-1250, 0, "unit-latin-town-hall"
+	},
+	Regions = {"asia"}
+})
+
 DefineSettlement("byblos", {
 	Name = "Byblos",
 	MapTemplate = "earth",
@@ -97,7 +129,8 @@ DefineSettlement("damascus", {
 	Position = {4666, 1279},
 	CulturalNames = {
 		"assyrian", "Damascus",
-		"egyptian", "Damascus"
+		"egyptian", "Damascus",
+		"hebrew", "Dammeshek"
 	},
 	HistoricalOwners = {
 		-1450, "egypt", -- Damascus was subject to Egypt about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -147,14 +180,18 @@ DefineSettlement("gaza", {
 	Position = {4621, 1334},
 	CulturalNames = {
 		"assyrian", "Gaza",
+		"hebrew", "Gaza",
 		"phoenician", "Gaza"
 	},
 	HistoricalOwners = {
 		-1450, "phoenicia", -- Gaza was a Phoenician settlement about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1250, "philistine-tribe", -- Gaza was part of the territory of the Philistines in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria" -- Gaza was a part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, -1250, "unit-latin-farm",
+		-1250, -720, "unit-latin-town-hall",
+		-720, 0, "unit-latin-farm"
 	},
 	Regions = {"asia"}
 })
@@ -173,6 +210,38 @@ DefineSettlement("hamath", {
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
+DefineSettlement("hebron", {
+	Name = "Hebron",
+	MapTemplate = "earth",
+	Position = {4638, 1330},
+	CulturalNames = {
+		"hebrew", "Hebron"
+	},
+	HistoricalOwners = {
+		-1250, "kenite-tribe" -- Hebron was part of the territory of the Kenites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+	},
+	HistoricalBuildings = {
+		-1250, 0, "unit-latin-town-hall"
+	},
+	Regions = {"asia"}
+})
+
+DefineSettlement("jericho", {
+	Name = "Jericho",
+	MapTemplate = "earth",
+	Position = {4647, 1322},
+	CulturalNames = {
+		"hebrew", "Jericho"
+	},
+	HistoricalOwners = {
+		-1250, "benjamin-tribe" -- Shiloh was part of the territory of the Benjamin tribe in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+	},
+	HistoricalBuildings = {
+		-1250, 0, "unit-latin-town-hall"
 	},
 	Regions = {"asia"}
 })
@@ -288,6 +357,22 @@ DefineSettlement("selah", {
 	},
 	HistoricalBuildings = {
 		-720, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
+DefineSettlement("shiloh", {
+	Name = "Shiloh",
+	MapTemplate = "earth",
+	Position = {4640, 1318},
+	CulturalNames = {
+		"hebrew", "Shiloh"
+	},
+	HistoricalOwners = {
+		-1250, "ephraim-tribe" -- Shiloh was part of the territory of the Ephraim tribe in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+	},
+	HistoricalBuildings = {
+		-1250, 0, "unit-latin-town-hall"
 	},
 	Regions = {"asia"}
 })

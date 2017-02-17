@@ -231,7 +231,7 @@ DefineUnitType("unit-bearded-throwing-axe", { Name = _("Bearded Throwing Axe"),
 DefineUnitType("unit-wooden-shield", {
 	Name = _("Wooden Shield"),
 	Parent = "unit-template-item",
-	Image = {"file", "dwarf/items/round_shield.png", "size", {13, 13}},
+	Image = {"file", "dwarf/items/round_shield.png", "size", {14, 14}},
 	Icon = "icon-germanic-wooden-oblong-shield",
 	ItemClass = "shield",
 	Armor = 0
@@ -253,7 +253,7 @@ DefineUnitType("unit-bronze-shield", { Name = _("Bronze Shield"),
 DefineUnitType("unit-goblin-rimmed-shield", {
 	Name = _("Rimmed Shield"),
 	Parent = "unit-template-item",
-	Image = {"file", "dwarf/items/round_shield.png", "size", {13, 13}},
+	Image = {"file", "dwarf/items/round_shield.png", "size", {14, 14}},
 	Icon = "icon-goblin-rimmed-shield",
 	ItemClass = "shield",
 	Armor = 2
@@ -270,7 +270,7 @@ DefineUnitType("unit-iron-shield", { Name = _("Iron Shield"),
 DefineUnitType("unit-goblin-embossed-shield", {
 	Name = _("Embossed Shield"),
 	Parent = "unit-template-item",
-	Image = {"file", "dwarf/items/round_shield.png", "size", {13, 13}},
+	Image = {"file", "dwarf/items/round_shield.png", "size", {14, 14}},
 	Icon = "icon-goblin-embossed-shield",
 	ItemClass = "shield",
 	Armor = 4
@@ -294,31 +294,35 @@ DefineUnitType("unit-suebi-shield", { Name = _("Suebi Shield"),
 } )
 --]]
 
-DefineUnitType("unit-round-shield", { Name = _("Round Shield"),
+DefineUnitType("unit-round-shield", {
+	Name = _("Round Shield"),
 	Parent = "unit-template-item",
-	Image = {"file", "dwarf/items/round_shield.png", "size", {13, 13}},
+	Image = {"file", "dwarf/items/round_shield.png", "size", {14, 14}},
 	Icon = "icon-dwarven-shield-1",
 	ItemClass = "shield",
 	Armor = 0
 } )
 
-DefineUnitType("unit-brising-round-shield", { Name = _("Brising Round Shield"),
+DefineUnitType("unit-brising-round-shield", {
+	Name = "Brising Round Shield",
 	Parent = "unit-round-shield",
 	Image = {"file", "dlcs/brising_faction_flair/graphics/items/brising_round_shield.png", "size", {14, 14}},
 	Icon = "icon-brising-round-shield"
 } )
 
-DefineUnitType("unit-heater-shield", { Name = _("Heater Shield"),
+DefineUnitType("unit-heater-shield", {
+	Name = _("Heater Shield"),
 	Parent = "unit-template-item",
-	Image = {"file", "dwarf/items/round_shield.png", "size", {13, 13}},
+	Image = {"file", "dwarf/items/round_shield.png", "size", {14, 14}},
 	Icon = "icon-dwarven-shield-2",
 	ItemClass = "shield",
 	Armor = 2
 } )
 
-DefineUnitType("unit-thrymgjol-shield", { Name = _("Thrymgjol Shield"),
+DefineUnitType("unit-thrymgjol-shield", {
+	Name = _("Thrymgjol Shield"),
 	Parent = "unit-template-item",
-	Image = {"file", "dwarf/items/round_shield.png", "size", {13, 13}},
+	Image = {"file", "dwarf/items/round_shield.png", "size", {14, 14}},
 	Icon = "icon-dwarven-shield-3",
 	ItemClass = "shield",
 	Armor = 4
