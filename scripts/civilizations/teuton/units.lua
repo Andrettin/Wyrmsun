@@ -1022,6 +1022,7 @@ DefineUnitType("unit-teuton-priest", {
 			"file", "germanic/units/priest.png",
 			"icon", "icon-germanic-priest",
 			"type-name", "Priest",
+			"upgrade-forbidden", "upgrade-deity-christian-god",
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
 			"upgrade-forbidden", "upgrade-teuton-civilization"
