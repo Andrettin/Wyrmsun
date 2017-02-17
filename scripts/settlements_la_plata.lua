@@ -30,14 +30,30 @@ DefineSettlement("asuncion", {
 	MapTemplate = "earth",
 	Position = {2527, 2634},
 	CulturalNames = {
---		"castillian", "Asuncion" -- "Asunci�n"
+--		"castillian", "Asuncion" -- "Asunción"
 	},
 	HistoricalOwners = {
-		1536, "spain", -- Asunci�n was founded in 1536; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
+		1536, "spain", -- Asunción was founded in 1536; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
 		1811, "paraguay" -- Uruguay became independent in 1811; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
 	},
 	HistoricalBuildings = {
 		1536, 0, "unit-latin-town-hall"
+	},
+	Regions = {"america", "south-america"}
+})
+
+DefineSettlement("bahia-blanca", {
+	Name = "Bahia Blanca",
+	MapTemplate = "earth",
+	Position = {2418, 2928},
+	CulturalNames = {
+--		"castillian", "Bahia Blanca"
+	},
+	HistoricalOwners = {
+		1863, "argentina" -- Bahia Blanca was founded in 1863; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
+	},
+	HistoricalBuildings = {
+		1863, 0, "unit-latin-town-hall"
 	},
 	Regions = {"america", "south-america"}
 })
@@ -55,6 +71,23 @@ DefineSettlement("buenos-aires", {
 	},
 	HistoricalBuildings = {
 		1535, 0, "unit-latin-town-hall"
+	},
+	Regions = {"america", "south-america"}
+})
+
+DefineSettlement("corrientes", {
+	Name = "Corrientes",
+	MapTemplate = "earth",
+	Position = {2501, 2673},
+	CulturalNames = {
+--		"castillian", "Corrientes"
+	},
+	HistoricalOwners = {
+		1588, "spain", -- Corrientes was founded in 1588; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
+		1810, "argentina" -- Argentina became independent in 1810/1816; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
+	},
+	HistoricalBuildings = {
+		1588, 0, "unit-latin-town-hall"
 	},
 	Regions = {"america", "south-america"}
 })
@@ -77,3 +110,21 @@ DefineSettlement("montevideo", {
 	},
 	Regions = {"america", "south-america"}
 })
+
+DefineSettlement("santa-fe", {
+	Name = "Santa Fe",
+	MapTemplate = "earth",
+	Position = {2457, 2768},
+	CulturalNames = {
+--		"castillian", "Santa Fe" -- "Santa Fé"
+	},
+	HistoricalOwners = {
+		1573, "spain", -- Santa Fé was founded in 1573; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
+		1810, "argentina" -- Argentina became independent in 1810/1816; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
+	},
+	HistoricalBuildings = {
+		1573, 0, "unit-latin-town-hall"
+	},
+	Regions = {"america", "south-america"}
+})
+

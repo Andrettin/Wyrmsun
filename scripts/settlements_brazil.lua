@@ -152,10 +152,10 @@ DefineSettlement("sao-paulo", {
 	MapTemplate = "earth",
 	Position = {2752, 2583},
 	CulturalNames = {
---		"portuguese", "Sao Paulo" -- "São Paulo"
+--		"portuguese", "Sao Paulo" -- "SÃ£o Paulo"
 	},
 	HistoricalOwners = {
-		1532, "portugal", -- São Paulo was founded in 1532/1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
+		1532, "portugal", -- SÃ£o Paulo was founded in 1532/1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
 		1822, "brazil" -- Brazil became independent in 1822; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
 	},
 	HistoricalBuildings = {
