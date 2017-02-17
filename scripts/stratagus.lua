@@ -1298,7 +1298,7 @@ end
 function GetNumRivals(player)
 	local rival_count = 0
 	for i=0,(PlayerMax - 2) do
-		if (player ~= i and (Players[i].Type == PlayerPerson or Players[i].Type == PlayerComputer) and (Players[player]:IsAllied(Players[i]) == false or Players[i]:IsAllied(Players[player]) == false)) then
+		if (player ~= i and (Players[i].Type == PlayerPerson or Players[i].Type == PlayerComputer) and (Players[player]:IsAllied(Players[i]) == false or Players[i]:IsAllied(Players[player]) == false) and (GetPlayerData(i, "Faction") == "" or GetFactionData(GetPlayerData(i, "Faction"), "Type") == "tribe" or GetFactionData(GetPlayerData(i, "Faction"), "Type") == "polity")) then
 			local total_units = GetPlayerData(i, "TotalNumUnitsConstructed") - GetPlayerData(i, "UnitTypesCount", "unit-goblin-glider")
 			total_units = total_units - GetPlayerData(i, "UnitTypesCount", "unit-gold-mine") - GetPlayerData(i, "UnitTypesCount", "unit-silver-mine") - GetPlayerData(i, "UnitTypesCount", "unit-copper-mine")
 			if (GetCivilizationClassUnitType("farm", GetPlayerData(i, "RaceName")) ~= nil) then
