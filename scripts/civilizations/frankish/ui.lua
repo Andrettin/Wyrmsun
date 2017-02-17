@@ -27,7 +27,7 @@
 
 DefineCursor({
 	Name = "cursor-point",
-	Race = "germanic",
+	Race = "frankish",
 	File = "germanic/ui/cursors/germanic_hand.png",
 	HotSpot = {0, 0},
 	Size = {29, 32}
