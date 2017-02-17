@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineButton( { Pos = 1, Level = 2, Icon = "icon-teuton-civilization",
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-flag-black-skull-on-white",
 	Action = "research", Value = "upgrade-faction-aurvang",
 	Allowed = "check-single-research",
 	Key = "a", Hint = "Found ~!Aurvang", Popup = "popup-research",
@@ -33,7 +33,7 @@ DefineButton( { Pos = 1, Level = 2, Icon = "icon-teuton-civilization",
 	ForUnit = {"unit-goblin-town-hall", "unit-goblin-stronghold"}
 } )
 
-DefineButton( { Pos = 2, Level = 2, Icon = "icon-teuton-civilization",
+DefineButton( { Pos = 2, Level = 2, Icon = "icon-flag-black-skull-on-white",
 	Action = "research", Value = "upgrade-faction-ezmarria",
 	Allowed = "check-single-research",
 	Key = "e", Hint = "Found ~!Ezmarria", Popup = "popup-research",
@@ -41,7 +41,7 @@ DefineButton( { Pos = 2, Level = 2, Icon = "icon-teuton-civilization",
 	ForUnit = {"unit-goblin-town-hall", "unit-goblin-stronghold"}
 } )
 
-DefineButton( { Pos = 3, Level = 2, Icon = "icon-teuton-civilization",
+DefineButton( { Pos = 3, Level = 2, Icon = "icon-flag-black-skull-on-white",
 	Action = "research", Value = "upgrade-faction-myridia",
 	Allowed = "check-single-research",
 	Key = "m", Hint = "Found ~!Myridia", Popup = "popup-research",
@@ -49,7 +49,7 @@ DefineButton( { Pos = 3, Level = 2, Icon = "icon-teuton-civilization",
 	ForUnit = {"unit-goblin-town-hall", "unit-goblin-stronghold"}
 } )
 
-DefineButton( { Pos = 4, Level = 2, Icon = "icon-teuton-civilization",
+DefineButton( { Pos = 4, Level = 2, Icon = "icon-flag-black-skull-on-white",
 	Action = "research", Value = "upgrade-faction-stilgar",
 	Allowed = "check-single-research",
 	Key = "s", Hint = "Found ~!Stilgar", Popup = "popup-research",
@@ -57,7 +57,7 @@ DefineButton( { Pos = 4, Level = 2, Icon = "icon-teuton-civilization",
 	ForUnit = {"unit-goblin-town-hall", "unit-goblin-stronghold"}
 } )
 
-DefineButton( { Pos = 5, Level = 2, Icon = "icon-teuton-civilization",
+DefineButton( { Pos = 5, Level = 2, Icon = "icon-flag-black-skull-on-white",
 	Action = "research", Value = "upgrade-faction-tenebris",
 	Allowed = "check-single-research",
 	Key = "t", Hint = "Found ~!Tenebris", Popup = "popup-research",

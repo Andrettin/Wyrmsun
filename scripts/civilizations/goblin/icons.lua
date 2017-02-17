@@ -254,6 +254,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-flag-black-skull-on-white",
+	Size = {46, 38},
+	File = "goblin/icons/flag_black_skull_on_white.png"
+})
+
+DefineIcon({
 	Name = "icon-agniss",
 	Size = {46, 38},
 	File = "goblin/icons/agniss.png"
