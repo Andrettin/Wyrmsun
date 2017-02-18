@@ -100,6 +100,8 @@ DefineSettlement("ascalon", {
 	},
 	HistoricalOwners = {
 		-1250, "philistine-tribe", -- Ascalon was part of the territory of the Philistines in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-1025, "israel", -- Ascalon's area was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-953, "philistine-tribe", -- Ascalon was part of the territory of the Philistines in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria" -- Ascalon's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
@@ -117,6 +119,7 @@ DefineSettlement("baalbec", {
 	},
 	HistoricalOwners = {
 		-1250, "hatti", -- Baalbec was part of Hittite territory in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-1025, "israel", -- Baalbec's area was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria" -- Baalbec's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
@@ -133,10 +136,11 @@ DefineSettlement("beersheba", {
 		"hebrew", "Beersheba"
 	},
 	HistoricalOwners = {
+		-1025, "israel", -- Beersheba was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-953, "judah" -- Beersheba was part of the Kingdom of Judah in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 	},
 	HistoricalBuildings = {
-		-953, 0, "unit-latin-farm"
+		-1025, 0, "unit-latin-farm"
 	},
 	Regions = {"asia"}
 })
@@ -191,6 +195,40 @@ DefineSettlement("bethshean", {
 	Regions = {"asia"}
 })
 
+DefineSettlement("biblah", {
+	Name = "Biblah",
+	MapTemplate = "earth",
+	Position = {4671, 1264},
+	CulturalNames = {
+		"hebrew", "Biblah"
+	},
+	HistoricalOwners = {
+		-1025, "israel", -- Biblah was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-720, "assyria" -- Biblah's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+	},
+	HistoricalBuildings = {
+		-1025, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
+DefineSettlement("bosrah", {
+	Name = "Bosrah",
+	MapTemplate = "earth",
+	Position = {4667, 1310},
+	CulturalNames = {
+		"hebrew", "Bosrah"
+	},
+	HistoricalOwners = {
+		-1025, "israel", -- Bosrah was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-720, "assyria" -- Bosrah's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+	},
+	HistoricalBuildings = {
+		-1025, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
 DefineSettlement("byblos", {
 	Name = "Byblos",
 	MapTemplate = "earth",
@@ -238,6 +276,7 @@ DefineSettlement("damascus", {
 	HistoricalOwners = {
 		-1450, "egypt", -- Damascus was subject to Egypt about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 		-1250, "aramaean-tribe", -- Damascus/Dammeshek was part of the territory of the Aramaeans in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-1025, "israel", -- Damascus/Dammeshek was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria" -- Damascus was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
@@ -254,11 +293,12 @@ DefineSettlement("dan", {
 		"hebrew", "Dan"
 	},
 	HistoricalOwners = {
+		-1025, "israel", -- Dan was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-953, "israel", -- Dan was part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria" -- Dan's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-953, 0, "unit-latin-farm"
+		-1025, 0, "unit-latin-farm"
 	},
 	Regions = {"asia"}
 })
@@ -304,13 +344,15 @@ DefineSettlement("elath", {
 	MapTemplate = "earth",
 	Position = {4637, 1375},
 	CulturalNames = {
-		"assyrian", "Elath"
+		"assyrian", "Elath",
+		"hebrew", "Elath"
 	},
 	HistoricalOwners = {
+		-1025, "israel", -- Elath was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria" -- Elath was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-720, 0, "unit-latin-farm"
+		-1025, 0, "unit-latin-farm"
 	},
 	Regions = {"asia"}
 })
@@ -320,13 +362,15 @@ DefineSettlement("ezion-geber", {
 	MapTemplate = "earth",
 	Position = {4638, 1369},
 	CulturalNames = {
-		"assyrian", "Ezion-Geber"
+		"assyrian", "Ezion-Geber",
+		"hebrew", "Ezion-Geber"
 	},
 	HistoricalOwners = {
+		-1025, "israel", -- Ezion-Geber was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria" -- Ezion-Geber was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-720, 0, "unit-latin-farm"
+		-1025, 0, "unit-latin-farm"
 	},
 	Regions = {"asia"}
 })
@@ -343,12 +387,32 @@ DefineSettlement("gaza", {
 	HistoricalOwners = {
 		-1450, "phoenicia", -- Gaza was a Phoenician settlement about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 		-1250, "philistine-tribe", -- Gaza was part of the territory of the Philistines in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-1025, "israel", -- Gaza was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-953, "philistine-tribe", -- Gaza was part of the territory of the Philistines in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria" -- Gaza was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
 		-1450, -1250, "unit-latin-farm",
 		-1250, -720, "unit-latin-town-hall",
 		-720, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
+DefineSettlement("gilboa", {
+	Name = "Gilboa",
+	MapTemplate = "earth",
+	Position = {4645, 1311},
+	CulturalNames = {
+		"hebrew", "Gilboa"
+	},
+	HistoricalOwners = {
+		-1025, "israel", -- Gilboa was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-953, "israel", -- Gilboa's area was part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-720, "assyria" -- Gilboa's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+	},
+	HistoricalBuildings = {
+		-1025, 0, "unit-latin-farm"
 	},
 	Regions = {"asia"}
 })
@@ -376,14 +440,34 @@ DefineSettlement("hamath", {
 	Position = {4674, 1244},
 	CulturalNames = {
 		"assyrian", "Hamath",
-		"egyptian", "Hamath"
+		"egyptian", "Hamath",
+		"hebrew", "Hamath"
 	},
 	HistoricalOwners = {
 		-1450, "egypt", -- Hamath was subject to Egypt about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1025, "israel", -- Hamath was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria" -- Hamath was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
+DefineSettlement("hazor", {
+	Name = "Hazor",
+	MapTemplate = "earth",
+	Position = {4628, 1325},
+	CulturalNames = {
+		"hebrew", "Hazor"
+	},
+	HistoricalOwners = {
+		-1025, "israel", -- Hazor was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-953, "philistine-tribe", -- Hazor's area was part of the territory of the Philistines in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-720, "assyria" -- Hazor's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+	},
+	HistoricalBuildings = {
+		-1025, 0, "unit-latin-farm"
 	},
 	Regions = {"asia"}
 })
@@ -397,11 +481,12 @@ DefineSettlement("hebron", {
 	},
 	HistoricalOwners = {
 		-1250, "kenite-tribe", -- Hebron was part of the territory of the Kenites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-1025, "israel", -- Hebron was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-953, "judah" -- Hebron was part of the Kingdom of Judah in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 	},
 	HistoricalBuildings = {
-		-1250, -953, "unit-latin-town-hall",
-		-953, 0, "unit-latin-farm"
+		-1250, -1025, "unit-latin-town-hall",
+		-1025, 0, "unit-latin-farm"
 	},
 	Regions = {"asia"}
 })
@@ -431,11 +516,12 @@ DefineSettlement("jabesh", {
 		"hebrew", "Jabesh"
 	},
 	HistoricalOwners = {
+		-1025, "israel", -- Jabesh Gilead was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-953, "israel", -- Jabesh was part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria" -- Jabesh's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-953, 0, "unit-latin-farm"
+		-1025, 0, "unit-latin-farm"
 	},
 	Regions = {"asia"}
 })
@@ -449,6 +535,7 @@ DefineSettlement("jericho", {
 	},
 	HistoricalOwners = {
 		-1250, "benjamin-tribe", -- Jericho was part of the territory of the Benjamin tribe in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-1025, "israel", -- Jericho's area was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-953, "israel", -- Jericho was part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-750, "judah" -- Jericho's area was part of the Kingdom of Judah in the 750-625 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
@@ -469,6 +556,7 @@ DefineSettlement("jerusalem", {
 	},
 	HistoricalOwners = {
 		-1250, "canaanite-tribe", -- Jerusalem was part of the territory of the Canaanites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-1025, "israel", -- Jerusalem was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-953, "judah" -- Jerusalem was part of the Kingdom of Judah in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 	},
 	HistoricalBuildings = {
@@ -505,6 +593,7 @@ DefineSettlement("joppa", {
 	},
 	HistoricalOwners = {
 		-1250, "canaanite-tribe", -- Joppa was part of the territory of the Canaanites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-1025, "israel", -- Joppa was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-953, "philistine-tribe", -- Joppa was part of the territory of the Philistines in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria" -- Joppa was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
@@ -523,10 +612,28 @@ DefineSettlement("kadesh", {
 	},
 	HistoricalOwners = {
 		-1450, "egypt", -- Kadesh was subject to Egypt about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1025, "israel", -- Kadesh's area was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria" -- Kadesh's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
+DefineSettlement("kadesh-barnea", {
+	Name = "Kadesh Barnea",
+	MapTemplate = "earth",
+	Position = {4630, 1359},
+	CulturalNames = {
+		"hebrew", "Kadesh Barnea"
+	},
+	HistoricalOwners = {
+		-1025, "israel", -- Kadesh Barnea was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-720, "assyria" -- Kadesh Barnea's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+	},
+	HistoricalBuildings = {
+		-1025, 0, "unit-latin-farm"
 	},
 	Regions = {"asia"}
 })
@@ -539,11 +646,12 @@ DefineSettlement("kadesh-naphtali", {
 		"hebrew", "Kadesh Naphtali"
 	},
 	HistoricalOwners = {
+		-1025, "israel", -- Kadesh [Naphtali] was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-953, "israel", -- Kadesh Naphtali was part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria" -- Kadesh Naphtali's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-953, 0, "unit-latin-farm"
+		-1025, 0, "unit-latin-farm"
 	},
 	Regions = {"asia"}
 })
@@ -576,6 +684,7 @@ DefineSettlement("megiddo", {
 	HistoricalOwners = {
 		-1450, "phoenicia", -- Megiddo was a Phoenician settlement about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 		-1250, "canaanite-tribe", -- Megiddo's area was part of the territory of the Canaanites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-1025, "israel", -- Megiddo's area was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-953, "israel", -- Megiddo's area was part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria" -- Megiddo was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
@@ -608,13 +717,15 @@ DefineSettlement("selah", {
 	MapTemplate = "earth",
 	Position = {4645, 1358},
 	CulturalNames = {
-		"assyrian", "Selah"
+		"assyrian", "Selah",
+		"hebrew", "Selah"
 	},
 	HistoricalOwners = {
+		-1025, "israel", -- Selah was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria" -- Selah was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-720, 0, "unit-latin-farm"
+		-1025, 0, "unit-latin-farm"
 	},
 	Regions = {"asia"}
 })
@@ -629,6 +740,7 @@ DefineSettlement("shechem", {
 	},
 	HistoricalOwners = {
 		-1250, "canaanite-tribe", -- Shechem was part of the territory of the Canaanites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-1025, "israel", -- Shechem's area was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-953, "israel", -- Shechem was part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria" -- Shechem's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
@@ -647,6 +759,7 @@ DefineSettlement("shiloh", {
 	},
 	HistoricalOwners = {
 		-1250, "ephraim-tribe", -- Shiloh was part of the territory of the Ephraim tribe in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-1025, "israel", -- Shiloh's area was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-953, "israel", -- Shiloh was part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-750, "judah" -- Shiloh's area was part of the Kingdom of Judah in the 750-625 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},

@@ -344,6 +344,23 @@ DefineSettlement("nisibis", {
 	Regions = {"asia"}
 })
 
+DefineSettlement("reseph", {
+	Name = "Reseph",
+	MapTemplate = "earth",
+	Position = {4722, 1238},
+	CulturalNames = {
+		"hebrew", "Reseph"
+	},
+	HistoricalOwners = {
+		-1025, "israel", -- Reseph was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-720, "assyria" -- Reseph's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+	},
+	HistoricalBuildings = {
+		-1025, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
 DefineSettlement("shinpurla", {
 	Name = "Shinpurla",
 	MapTemplate = "earth",
@@ -401,13 +418,32 @@ DefineSettlement("tadmor", {
 	MapTemplate = "earth",
 	Position = {4709, 1256},
 	CulturalNames = {
-		"assyrian", "Tadmor"
+		"assyrian", "Tadmor",
+		"hebrew", "Tadmor"
 	},
 	HistoricalOwners = {
+		-1025, "israel", -- Tadmor was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria" -- Tadmor was a part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-720, 0, "unit-latin-farm"
+		-1025, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
+DefineSettlement("tiphsach", {
+	Name = "Tiphsach",
+	MapTemplate = "earth",
+	Position = {4709, 1231},
+	CulturalNames = {
+		"hebrew", "Tiphsach"
+	},
+	HistoricalOwners = {
+		-1025, "israel", -- Tiphsach/Thapsacus was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-720, "assyria" -- Tiphsach's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+	},
+	HistoricalBuildings = {
+		-1025, 0, "unit-latin-farm"
 	},
 	Regions = {"asia"}
 })
