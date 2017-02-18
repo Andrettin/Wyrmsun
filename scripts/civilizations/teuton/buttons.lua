@@ -119,9 +119,16 @@ DefineButton( { Pos = 6, Level = 1,
 	ForUnit = {"unit-teuton-worker"}
 })
 
+DefineButton( { Pos = 7, Level = 1, Icon = "icon-germanic-temple",
+	Action = "build", Value = "unit-teuton-temple",
+	Key = "p", Hint = "Build Tem~!ple", Popup = "popup-building",
+	ForUnit = {"unit-teuton-worker"}
+})
+
 DefineButton( { Pos = 7, Level = 1, Icon = "icon-teuton-church",
 	Action = "build", Value = "unit-teuton-temple",
-	Key = "p", Hint = _("Build Tem~!ple"), Popup = "popup-building",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-deity-christian-god"},
+	Key = "p", Hint = "Build Tem~!ple", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
 

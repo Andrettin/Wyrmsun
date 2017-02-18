@@ -33,10 +33,42 @@ DefineSettlement("milid", {
 		"assyrian", "Milid"
 	},
 	HistoricalOwners = {
-		-720, "assyria" -- Milid was a part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-720, "assyria" -- Milid was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
 		-720, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
+DefineSettlement("phaselis", {
+	Name = "Phaselis",
+	MapTemplate = "earth",
+	Position = {4534, 1216},
+	CulturalNames = {
+		"hittite", "Phaselis"
+	},
+	HistoricalOwners = {
+		-600, "lydia" -- Phaselis was part of the Lydian Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+	},
+	HistoricalBuildings = {
+		-600, 0, "unit-latin-farm"
+	},
+	Regions = {"asia"}
+})
+
+DefineSettlement("sinope", {
+	Name = "Sinope",
+	MapTemplate = "earth",
+	Position = {4637, 1092},
+	CulturalNames = {
+		"hittite", "Sinope"
+	},
+	HistoricalOwners = {
+		-600, "lydia" -- Sinope was part of the Lydian Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+	},
+	HistoricalBuildings = {
+		-600, 0, "unit-latin-farm"
 	},
 	Regions = {"asia"}
 })
@@ -49,7 +81,7 @@ DefineSettlement("tarsus", {
 		"assyrian", "Tarsus"
 	},
 	HistoricalOwners = {
-		-720, "assyria" -- Tarsus was a part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-720, "assyria" -- Tarsus was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
 		-720, 0, "unit-latin-farm"
