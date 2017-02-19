@@ -65,13 +65,6 @@ SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "celtic-cimmerian-tribe",
 SetMapTemplateCulturalSettlementName("earth", "Paderborn", {4033, 873}, "teuton")
 --SetMapTemplateLayerConnector("earth", "unit-portal", {4033, 873}, "Nidavellir") -- Gnitaheith (where Fafnir dwelled) has been identified with a real location south of Paderborn, so place a portal to Nidavellir there; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 343.
 
--- Regensburg / Ratisbon / Regina Castra
-SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4116, 932}, 170, 172) -- the "Cohors II Aquitanorum equitata civium Romanorum" (a mixed unit, which contained circa 375 auxiliary infantry and 125 cavalry) was stationed at Regensburg-Kumpfmühl when it was attacked and destroyed in 172, during the First Marcomannic War; it likely was stationed there at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
-
 -- Scheidungen
 SetMapTemplateCulturalSettlementName("earth", "Scheidungen", {4107, 873}, "teuton")
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "thuringian-tribe", {4107, 873}, 526) -- Scheidungen was in Thuringian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-
--- Straubing
-SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4124, 934}, 170, 172) -- the "Cohors II Raetorum" (a unit containing 500 infantry) was stationed at Straubing when it was attacked and destroyed in 172, during the First Marcomannic War; it likely was stationed there at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
-SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4124, 934}, 170, 172) -- the "Cohors I Flavia Canathenorum milliaria sagittariorum" (a unit containing 1,000 Syrian archers) was stationed at Straubing when it was attacked and destroyed in 172, during the First Marcomannic War; it likely was stationed there at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.

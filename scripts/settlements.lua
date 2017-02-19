@@ -29,6 +29,8 @@
 
 -- Notes on Universities: Given a lack of a university building in the game, they are represented as temples.
 
+-- Notes on Population: Each 1,000 people are represented as one unit, with the exception of hero units, which represent a single person. The "HistoricalUnits" table contains information for quantity of individuals, in the case of units representing people (i.e. workers, soldiers), and this quantity will be divided by 1,000 when implemented as units in the game (with a minimum of 1 unit).
+
 Load("scripts/settlements_anatolia.lua")
 Load("scripts/settlements_asia_minor.lua")
 Load("scripts/settlements_austria.lua")

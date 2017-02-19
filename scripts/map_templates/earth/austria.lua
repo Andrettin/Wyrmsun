@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016 by Andrettin
+--      (c) Copyright 2016-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -37,10 +37,6 @@ SetMapTemplateTileTerrain("earth", "shallow-water", {4222, 959})
 SetMapTemplateTileTerrain("earth", "shallow-water", {4222, 960})
 SetMapTemplateTileTerrain("earth", "shallow-water", {4223, 958})
 SetMapTemplateTileTerrain("earth", "shallow-water", {4223, 959})
-
--- Carnuntum
-SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4224, 955}, 170, 171) -- a Roman army numbering 20,000 was stationed near Carnuntum in 170 AD, when it was defeated by the Marcomanni and Quadi; Source: "Ancient Warfare VII.6", 2013, p. 29.
-SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4224, 955}, 170, 171)
 
 -- Salzburg / Iuvavum
 SetMapTemplateUnit("earth", "unit-teuton-lumber-mill", "rome", {4135, 960}, 170, 171) -- some buildings for Iuvavum for The First Marcomannic War scenario

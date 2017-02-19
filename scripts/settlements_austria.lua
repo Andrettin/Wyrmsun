@@ -40,6 +40,10 @@ DefineSettlement("carnuntum", {
 		10, 161, "unit-latin-farm", -- Upper Pannonia (where Carnuntum was located) acquired by Rome in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		161, 526, "unit-teuton-guard-tower" -- Legionary base present in Carnuntum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
+	HistoricalUnits = {
+		170, "unit-teuton-swordsman", 20000, "rome", -- a Roman army numbering 20,000 was stationed near Carnuntum in 170 AD, when it was defeated by the Marcomanni and Quadi; Source: "Ancient Warfare VII.6", 2013, p. 29.
+		171, "unit-teuton-swordsman", 0, "rome"
+	},
 	Regions = {"europe", "west-and-central-europe", "roman-danube", "germany-netherlands", "cisleithania"}
 })
 

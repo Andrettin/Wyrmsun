@@ -108,6 +108,7 @@ https://github.com/Andrettin/Wyrmsun
 - Changed the unit type names of the Suebi swordsman, the Frankish swordsman and the Frankish horseman to be based on Old High German words (rather than modern German ones), to better reflect the time period they represent.
 - The name of Frankish and Teuton spearmen has been changed to English, as "Speerkampfer" didn't feel properly early medieval.
 - Added Germanic Priest unit, the Gudjan (icon by Jinn and unit graphics by Jinn and b_o).
+- Units now go search for an attacker when hit by a projectile fired by a unit that is out of sight range.
 
 -----------------------------------------------------------------------
 - 2.5.3
