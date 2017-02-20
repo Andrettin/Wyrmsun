@@ -41,3 +41,19 @@ DefineSettlement("fiume", {
 	},
 	Regions = {"europe", "west-and-central-europe"}
 })
+
+DefineSettlement("pola", {
+	Name = "Pola",
+	MapTemplate = "earth",
+	Position = {4155, 1027},
+	CulturalNames = {
+		"teuton", "Pola"
+	},
+	HistoricalOwners = {
+		1815, "austria" -- Pola was part of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		1815, 0, "unit-teuton-guard-tower" -- Pola had a fortress in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	Regions = {"europe", "west-and-central-europe"}
+})
