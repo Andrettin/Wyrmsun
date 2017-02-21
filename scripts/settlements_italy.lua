@@ -80,7 +80,8 @@ DefineSettlement("cremona", {
 	MapTemplate = "earth",
 	Position = {4066, 1025},
 	CulturalNames = {
-		"latin", "Cremona" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+		"latin", "Cremona", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+		"teuton", "Cremona"
 	},
 	HistoricalOwners = {
 		-218, "rome", -- Cremona founded as a colony in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
@@ -119,7 +120,8 @@ DefineSettlement("milan", {
 	MapTemplate = "earth",
 	Position = {4049, 1013},
 	CulturalNames = {
-		"latin", "Mediolanum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"latin", "Mediolanum", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"teuton", "Milan"
 	},
 	HistoricalOwners = {
 		-161, "rome", -- Mediolanum was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -304,6 +306,9 @@ DefineSettlement("venice", {
 	Name = "Venice",
 	MapTemplate = "earth",
 	Position = {4122, 1011},
+	CulturalNames = {
+		"teuton", "Venice"
+	},
 	HistoricalOwners = {
 		1494, "venice", -- Venice was a possession of the Venetian Republic about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 		1815, "austria" -- Venice was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
@@ -320,7 +325,8 @@ DefineSettlement("verona", {
 	MapTemplate = "earth",
 	Position = {4090, 1014},
 	CulturalNames = {
-		"latin", "Verona" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"latin", "Verona", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"teuton", "Verona"
 	},
 	HistoricalOwners = {
 		161, "rome", -- Verona was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.

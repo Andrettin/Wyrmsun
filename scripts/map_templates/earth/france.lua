@@ -90,6 +90,9 @@ SetMapTemplateUnit("earth", "unit-teuton-farm", "austrasia", {3947, 941}, 561) -
 SetMapTemplateFactionCulturalSettlementName("earth", "Clermont-Ferrand", {3909, 1006}, "france")
 SetMapTemplateUnit("earth", "unit-teuton-farm", "austrasia", {3909, 1006}, 561) -- Arverni went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
+-- Colmar
+-- Parlement or conseil souverain existent in Colmar in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
+
 -- Dijon / Divio
 SetMapTemplateFactionCulturalSettlementName("earth", "Dijon", {3955, 994}, "france")
 SetMapTemplateUnit("earth", "unit-teuton-farm", "burgundia", {3955, 994}, 561) -- Divio went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
@@ -178,21 +181,6 @@ SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {3915, 923}, 395, 526)
 SetMapTemplateUnit("earth", "unit-teuton-temple", "francia", {3915, 923}, 526, 561) -- Soissons was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "salia", {3915, 923}, 561) -- Chlothar (Frankish king) died in 561, and Reims went to his son Chilperich; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328; Gregory of Tours, "History of the Franks", IV.22.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "salia", {3915, 923}, 561)
-
--- Strassburg / Argentoratum
-SetMapTemplateCulturalSettlementName("earth", "Argentoratum", {4013, 948}, "latin")
-SetMapTemplateCulturalSettlementName("earth", "Strassburg", {4013, 948}, "teuton")
-SetMapTemplateFactionCulturalSettlementName("earth", "Strasbourg", {4013, 948}, "france")
-SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4013, 948}, -50, 161) -- Gaul (where Argentoratum was located) was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4013, 948}, 161, 413) -- Legionary base present in Argentorate in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
--- Strassburg was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "burgundy", {4013, 948}, 413, 436) -- Argentoratum/Strassburg conquered by the Burgundians in 413 AD, after which they founded a kingdom that lasted until 436; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
-SetMapTemplateUnit("earth", "unit-teuton-barracks", "alamanni-tribe", {4013, 948}, 481, 506) -- political situation of the territories surrounding the Frankish realm in 481-814 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "francia", {4013, 948}, 506, 561) -- Alemanni lands (Alsace, Baden, Wurtemberg, Augsburg and etc.) conquered by the Franks in 506; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "austrasia", {4013, 948}, 561, 919) -- Argentoratum went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "holy-rome", {4013, 948}, 919) -- Duchy of Swabia; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
--- Prévôt des maréchaux existent in Strasbourg in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
--- Parlement or conseil souverain existent in Colmar in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 
 -- Toul
 SetMapTemplateFactionCulturalSettlementName("earth", "Toul", {3969, 948}, "france")

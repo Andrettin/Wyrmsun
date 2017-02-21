@@ -29,6 +29,7 @@ DefineCivilization("neutral", {
 	Display = "Neutral",
 	Playable = false,
 	Adjective = "Neutral",
+	DefaultColor = "gray",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
 		"stop", "icon-dwarven-shield-1",

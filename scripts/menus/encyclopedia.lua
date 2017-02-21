@@ -468,7 +468,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 		civilization = GetUnitTypeData(unit_name, "Civilization")
 		faction = GetUnitTypeData(unit_name, "Faction")
 		tooltip_name = GetUnitTypeData(unit_name, "Name")
-		if (civilization ~= "") then
+		if (civilization ~= "" and civilization ~= "neutral") then
 			tooltip_civilization = "(" ..  _(GetCivilizationData(civilization, "Display"))
 			if (faction ~= "") then
 				tooltip_civilization = tooltip_civilization ..  ": " .. _(GetFactionData(faction, "Name"))
@@ -524,7 +524,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 		civilization = ""
 		faction = ""
 		tooltip_name = GetUniqueItemData(unit_name, "Name")
-		if (civilization ~= "") then
+		if (civilization ~= "" and civilization ~= "neutral") then
 			tooltip_civilization = "(" ..  _(GetCivilizationData(civilization, "Display"))
 			if (faction ~= "") then
 				tooltip_civilization = tooltip_civilization ..  ": " .. _(GetFactionData(faction, "Name"))
@@ -638,7 +638,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		civilization = GetUnitTypeData(unit_name, "Civilization")
 		faction = GetUnitTypeData(unit_name, "Faction")
 		tooltip_name = GetUnitTypeData(unit_name, "Name")
-		if (civilization ~= "") then
+		if (civilization ~= "" and civilization ~= "neutral") then
 			tooltip_civilization = "(" ..  _(GetCivilizationData(civilization, "Display"))
 			if (faction ~= "") then
 				tooltip_civilization = tooltip_civilization ..  ": " .. _(GetFactionData(faction, "Name"))
@@ -657,7 +657,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		civilization = GetUpgradeData(unit_name, "Civilization")
 		faction = GetUpgradeData(unit_name, "Faction")
 		tooltip_name = CUpgrade:Get(unit_name).Name
-		if (civilization ~= "") then
+		if (civilization ~= "" and civilization ~= "neutral") then
 			tooltip_civilization = "(" ..  _(GetCivilizationData(civilization, "Display"))
 			if (faction ~= "") then
 				tooltip_civilization = tooltip_civilization ..  ": " .. _(GetFactionData(faction, "Name"))
@@ -695,7 +695,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		civilization = ""
 		faction = ""
 		tooltip_name = GetUniqueItemData(unit_name, "Name")
-		if (civilization ~= "") then
+		if (civilization ~= "" and civilization ~= "neutral") then
 			tooltip_civilization = "(" ..  _(GetCivilizationData(civilization, "Display"))
 			if (faction ~= "") then
 				tooltip_civilization = tooltip_civilization ..  ": " .. _(GetFactionData(faction, "Name"))
@@ -740,7 +740,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 	local quote = ""
 	local background = ""
 	if (string.find(unit_name, "unit") ~= nil) then
-		if (GetUnitTypeData(unit_name, "Civilization") ~= "") then
+		if (GetUnitTypeData(unit_name, "Civilization") ~= "" and GetUnitTypeData(unit_name, "Civilization") ~= "neutral") then
 			civilization = "Civilization: " .. _(GetCivilizationData(GetUnitTypeData(unit_name, "Civilization"), "Display")) .. "\n\n"
 			if (GetUnitTypeData(unit_name, "Faction") ~= "") then
 				faction = "Faction: " .. _(GetFactionData(GetUnitTypeData(unit_name, "Faction"), "Name")) .. "\n\n"

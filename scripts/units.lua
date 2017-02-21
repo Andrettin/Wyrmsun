@@ -3937,6 +3937,7 @@ DefineUnitType("unit-long-swordsman", { Name = _("Long Swordsman"),
 DefineUnitType("unit-mercenary-camp", {
 	Name = _("Mercenary Camp"),
 	Parent = "unit-template-building",
+	Civilization = "neutral",
 	Class = "mercenary-camp",
 	Description = _("This camp houses a number of mercenary groups, who offer their talents for hire."),
 	Image = {"file", "neutral/buildings/mercenary_camp.png", "size", {96, 99}},

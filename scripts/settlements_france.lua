@@ -67,6 +67,38 @@ DefineSettlement("nice", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
+DefineSettlement("strassburg", {
+	Name = "Strassburg",
+	MapTemplate = "earth",
+	Position = {4013, 948},
+	CulturalNames = {
+--		"french", "Strasbourg",
+		"latin", "Argentoratum",
+		"teuton", "Strassburg"
+	},
+	HistoricalOwners = {
+		-50, "rome", -- Gaul (where Argentoratum was located) was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		413, "burgundy", -- Argentoratum/Strassburg conquered by the Burgundians in 413 AD, after which they founded a kingdom that lasted until 436; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
+		436, "",
+		481, "alamanni-tribe", -- political situation of the territories surrounding the Frankish realm in 481-814 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		506, "francia", -- the Alemanni lands (Alsace, Baden, Wurtemberg, Augsburg and etc.) were conquered by the Franks in 506; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+		561, "austrasia", -- Argentoratum went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+		919, "holy-rome", -- Duchy of Swabia within the Holy Roman Empire; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		1789, "france" -- Strasburg was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+	},
+	HistoricalBuildings = {
+		-50, 161, "unit-latin-farm",
+		161, 0, "unit-teuton-stronghold", -- Legionary base present in Argentorate in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, 919, "unit-latin-barracks",
+		395, 0, "unit-teuton-temple", -- Strassburg was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		919, 1789, "unit-teuton-barracks",
+		1789, 0, "unit-latin-barracks"
+		-- Bureau de finance and chambre du domaine existent in Strasburg in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
+		-- Prévôt des maréchaux existent in Strasburg in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
 DefineSettlement("toulon", {
 	Name = "Toulon",
 	MapTemplate = "earth",
