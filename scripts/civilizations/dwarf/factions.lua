@@ -124,9 +124,9 @@ DefineFaction("joruvellir", {
 	HistoricalCapitals = {
 		400, "Joruvellir"
 	},
-	HistoricalTechnologies = {
-		"upgrade-dwarven-runewriting", 400, -- polities require writing
-		"upgrade-dwarven-iron-tipped-wood-plow", 534 -- Mushroom Farms existent in Knalga (so possibly also in other polities)
+	HistoricalUpgrades = {
+		400, "upgrade-dwarven-runewriting", true, -- polities require writing
+		534, "upgrade-dwarven-iron-tipped-wood-plow", true -- Mushroom Farms existent in Knalga (so possibly also in other polities)
 	}
 })
 
@@ -148,9 +148,9 @@ DefineFaction("kal-kartha", {
 	HistoricalCapitals = {
 		400, "Kal Kartha"
 	},
-	HistoricalTechnologies = {
-		"upgrade-dwarven-runewriting", 400, -- polities require writing
-		"upgrade-dwarven-iron-tipped-wood-plow", 534 -- Mushroom Farms existent in Knalga (so possibly also in other polities)
+	HistoricalUpgrades = {
+		400, "upgrade-dwarven-runewriting", true, -- polities require writing
+		534, "upgrade-dwarven-iron-tipped-wood-plow", true -- Mushroom Farms existent in Knalga (so possibly also in other polities)
 	}
 })
 
@@ -172,9 +172,9 @@ DefineFaction("knalga", {
 	HistoricalCapitals = {
 		400, "Southern Tunnels"
 	},
-	HistoricalTechnologies = {
-		"upgrade-dwarven-runewriting", 400, -- polities require writing
-		"upgrade-dwarven-iron-tipped-wood-plow", 534 -- Mushroom Farms existent in Knalga
+	HistoricalUpgrades = {
+		400, "upgrade-dwarven-runewriting", true, -- polities require writing
+		534, "upgrade-dwarven-iron-tipped-wood-plow", true -- Mushroom Farms existent in Knalga
 	}
 })
 
@@ -199,8 +199,8 @@ DefineFaction("lyr", {
 	HistoricalCapitals = {
 		400, "Lyr"
 	},
-	HistoricalTechnologies = {
-		"upgrade-dwarven-runewriting", 400, -- polities require writing
-		"upgrade-dwarven-iron-tipped-wood-plow", 534 -- Mushroom Farms existent in Knalga (so possibly also in other polities)
+	HistoricalUpgrades = {
+		400, "upgrade-dwarven-runewriting", true, -- polities require writing
+		534, "upgrade-dwarven-iron-tipped-wood-plow", true -- Mushroom Farms existent in Knalga (so possibly also in other polities)
 	}
 })

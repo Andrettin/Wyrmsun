@@ -122,8 +122,8 @@ DefineFaction("visigoth-tribe", {
 	Colors = {"pink"},
 	DevelopsTo = {"gothia"},
 	HistoricalFactionDerivations = {200, "goth", "goth-tribe"},
-	HistoricalTechnologies = {
-		"upgrade-teuton-coinage", 573 -- Visigothic gold tremissis coined in 573 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 188.
+	HistoricalUpgrades = {
+		573, "upgrade-teuton-coinage", true -- Visigothic gold tremissis coined in 573 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 188.
 	}
 })
 
@@ -136,9 +136,9 @@ DefineFaction("burgundy", {
 	Colors = {"brown"},
 	DefaultTier = "kingdom",
 	HistoricalFactionDerivations = {411, "goth", "burgundian-tribe"}, -- Kingdom of the Burgundians established by Gundahar (a Burgundian tribal chief) in 411 AD, with its center in Borbetomagus (Worms); Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-93.
-	HistoricalTechnologies = {
-		"upgrade-teuton-writing", 0, -- polities must have writing
-		"upgrade-teuton-masonry", 0
+	HistoricalUpgrades = {
+		0, "upgrade-teuton-writing", true, -- polities must have writing
+		0, "upgrade-teuton-masonry", true
 	}
 })
 
@@ -156,9 +156,9 @@ DefineFaction("ostrogothia", {
 	Type = "polity",
 	Colors = {"red"},
 	DefaultTier = "kingdom",
-	HistoricalTechnologies = {
-		"upgrade-teuton-writing", 0, -- polities must have writing
-		"upgrade-teuton-masonry", 0
+	HistoricalUpgrades = {
+		0, "upgrade-teuton-writing", true, -- polities must have writing
+		0, "upgrade-teuton-masonry", true
 	}
 })
 
@@ -168,9 +168,9 @@ DefineFaction("vandalia", {
 	Type = "polity",
 	Colors = {"cyan", "blue"},
 	DefaultTier = "kingdom",
-	HistoricalTechnologies = {
-		"upgrade-teuton-writing", 0, -- polities must have writing
-		"upgrade-teuton-masonry", 0
+	HistoricalUpgrades = {
+		0, "upgrade-teuton-writing", true, -- polities must have writing
+		0, "upgrade-teuton-masonry", true
 	}
 })
 
@@ -180,8 +180,8 @@ DefineFaction("visigothia", {
 	Type = "polity",
 	Colors = {"pink"},
 	DefaultTier = "kingdom",
-	HistoricalTechnologies = {
-		"upgrade-teuton-writing", 0, -- polities must have writing
-		"upgrade-teuton-masonry", 0
+	HistoricalUpgrades = {
+		0, "upgrade-teuton-writing", true, -- polities must have writing
+		0, "upgrade-teuton-masonry", true
 	}
 })

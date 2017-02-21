@@ -59,9 +59,9 @@ DefineFaction("mycenae", {
 	HistoricalCapitals = {
 		-1450, "Argolis" -- Mycenae was the center of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
-	HistoricalTechnologies = {
-		"upgrade-teuton-writing", -1700, -- Linear B tablets found in Mycenae belonging to the period between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
-		"upgrade-teuton-masonry", -1400 -- Construction of palaces in continental Greece around 1400 BC; Source: "Atlas de História Mundial", 2001, p. 66.
+	HistoricalUpgrades = {
+		-1700, "upgrade-teuton-writing", true, -- Linear B tablets found in Mycenae belonging to the period between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
+		-1400, "upgrade-teuton-masonry", true -- Construction of palaces in continental Greece around 1400 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 	}
 })
 

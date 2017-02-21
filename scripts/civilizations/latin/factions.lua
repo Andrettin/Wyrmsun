@@ -266,10 +266,10 @@ DefineFaction("rome", {
 	HistoricalCapitals = {
 		-500, "Latium" -- Rome was Rome's capital by 500 BC (this may seem like a silly remark, but even city-states may happen to change their capitals from their namesake to other cities); Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 	},
-	HistoricalTechnologies = {
-		"upgrade-teuton-writing", 0, -- polities must have writing
-		"upgrade-teuton-masonry", -264, -- Rome should already have masonry technology by then
-		"upgrade-teuton-coinage", -58 -- Silver currency existent in the Roman Republic during Caesar's time, and he issued gold currency during his campaigns in Gaul; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 190.
+	HistoricalUpgrades = {
+		0, "upgrade-teuton-writing", true, -- polities must have writing
+		-264, "upgrade-teuton-masonry", true, -- Rome should already have masonry technology by then
+		-58, "upgrade-teuton-coinage", true -- Silver currency existent in the Roman Republic during Caesar's time, and he issued gold currency during his campaigns in Gaul; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 190.
 	},
 	HistoricalDiplomacyStates = {
 		-54, "eburones-tribe", "war", -- the Eburones attacked the Romans in 54 BC (instigated by the Treviri, of whom they were clients); Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223-224.

@@ -592,17 +592,17 @@ DefineCivilization("dwarf", {
 	ShipNames = {
 --		"Skidbladnir" -- ship built by dwarves in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 101.
 	},
-	HistoricalTechnologies = {
-		"upgrade-dwarven-wood-plow", -3000, -- give plow technology to the dwarven factions
-		"upgrade-dwarven-broad-axe", -1, -- bronze age technologies had already been obtained by the dwarves by this point
-		"upgrade-dwarven-shield-1", -1, -- bronze age technologies had already been obtained by the dwarves by this point
-		"upgrade-dwarven-sharp-throwing-axe", -1, -- bronze age technologies had already been obtained by the dwarves by this point
-		"upgrade-dwarven-masonry", 25, -- dwarves already had castles built of stone masonry by then
-		"upgrade-dwarven-coinage", 400, -- the dwarves should already have Coinage technology by then
-		"upgrade-dwarven-great-axe", 550, -- late iron age technologies already obtained by the dwarves by this point
-		"upgrade-dwarven-shield-2", 550, -- late iron age technologies already obtained by the dwarves by this point
-		"upgrade-dwarven-bearded-throwing-axe", 550, -- late iron age technologies already obtained by the dwarves by this point
-		"upgrade-dwarven-ballista-bolt-1", 550, -- late iron age technologies already obtained by the dwarves by this point
+	HistoricalUpgrades = {
+		-3000, "upgrade-dwarven-wood-plow", true, -- give plow technology to the dwarven factions
+		-1, "upgrade-dwarven-broad-axe", true, -- bronze age technologies had already been obtained by the dwarves by this point
+		-1, "upgrade-dwarven-shield-1", true, -- bronze age technologies had already been obtained by the dwarves by this point
+		-1, "upgrade-dwarven-sharp-throwing-axe", true, -- bronze age technologies had already been obtained by the dwarves by this point
+		25, "upgrade-dwarven-masonry", true, -- dwarves already had castles built of stone masonry by then
+		400, "upgrade-dwarven-coinage", true, -- the dwarves should already have Coinage technology by then
+		550, "upgrade-dwarven-great-axe", true, -- late iron age technologies already obtained by the dwarves by this point
+		550, "upgrade-dwarven-shield-2", true, -- late iron age technologies already obtained by the dwarves by this point
+		550, "upgrade-dwarven-bearded-throwing-axe", true, -- late iron age technologies already obtained by the dwarves by this point
+		550, "upgrade-dwarven-ballista-bolt-1", true -- late iron age technologies already obtained by the dwarves by this point
 	}
 })
 
@@ -1276,11 +1276,11 @@ DefineCivilization("germanic", {
 	ProvinceNames = {
 		"Ansulanda", -- rendering of "Asaland" in Proto-Germanic, as in the Ynglinga saga's story Asaland is the region in "Asia" in which Odin's people (here understood as the Indo-Europeans who went on to settle Scandinavia and become speakers of Proto-Germanic) used to live until they migrated to Scandinavia; alternatively called "Asaheim"; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
 	},
-	HistoricalTechnologies = {
-		"upgrade-germanic-wood-plow", -4000, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
+	HistoricalUpgrades = {
+		-4000, "upgrade-germanic-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
 		-- the prevalence of bronzeworking (compared to copperworking) in Scandinavia began c. 2000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 73.
-		"upgrade-germanic-bronze-shield", -1100, -- bronze shields found in the Danish bogs began to be made; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
-		"upgrade-germanic-broad-sword", -1000 -- broad bronze sword from Føllenslev; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/men-and-woman-in-the-bronze-age/
+		-1100, "upgrade-germanic-bronze-shield", true, -- bronze shields found in the Danish bogs began to be made; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
+		-1000, "upgrade-germanic-broad-sword", true -- broad bronze sword from Føllenslev; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/men-and-woman-in-the-bronze-age/
 	}
 })
 
@@ -1364,8 +1364,8 @@ DefineCivilization("celt", { -- has to be defined after the germanic civilizatio
 		"Penfro", -- cantref (administrative division) of Dyfed; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
 		"Rhos" -- cantref (administrative division) of Dyfed; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
 	},
-	HistoricalTechnologies = {
-		"upgrade-germanic-wood-plow", -4000, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
+	HistoricalUpgrades = {
+		-4000, "upgrade-germanic-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
 		-- metalworking begins in the British Isles at c. 2500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
 		-- bronzeworking begins in the British Isles at c. 2200 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
 		-- swords appear in the Carpathian Basin c. 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 32.
@@ -1770,10 +1770,11 @@ DefineCivilization("teuton", {
 		"Traisen", -- hospital ship; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 38.
 		"Traun" -- steamship; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 38.
 	},
-	HistoricalTechnologies = {
-		"upgrade-teuton-spatha", 180, -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
-		"upgrade-teuton-writing", 800,
-		"upgrade-teuton-masonry", 800
+	HistoricalUpgrades = {
+		180, "upgrade-teuton-spatha", true, -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+		800, "upgrade-teuton-writing", true,
+		800, "upgrade-teuton-masonry", true,
+		919, "upgrade-deity-christian-god", true -- Holy Roman Empire in existence in 919 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	}
 })
 
@@ -1788,8 +1789,8 @@ DefineCivilization("frankish", {
 	CivilizationUpgrade = "upgrade-frankish-civilization",
 	DevelopsFrom = {"germanic"},
 	Description = "The Franks are one of the most powerful Germanic tribes to have existed. From their humble beginnings in their dwellings along the Rhine, they eventually managed to conquer the entirety of Gaul and much of Central Europe.",
-	HistoricalTechnologies = {
-		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+	HistoricalUpgrades = {
+		180, "upgrade-teuton-spatha", true -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	},
 	PersonalNames = {
 		"male", "Answald", -- Old Frankish name; Source: http://www.cnrtl.fr/definition/lourdaud//1
@@ -1808,8 +1809,8 @@ DefineCivilization("suebi", {
 	CivilizationUpgrade = "upgrade-suebi-civilization",
 	DevelopsFrom = {"germanic"},
 	Description = "The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there.",
-	HistoricalTechnologies = {
-		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+	HistoricalUpgrades = {
+		180, "upgrade-teuton-spatha", true -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	},
 	SettlementNames = {
 		"Marobudum" -- alternate name of the Marcomannic capital; either located where modern Prague or Budweis are; Source: Frederick Kohlrausch, "A History of Germany", 1844, p. 57.
@@ -1979,8 +1980,8 @@ DefineCivilization("goth", {
 		"male", "Sarwa", -- the Sörli of Norse mythology, son of Gudrun; Sörli is a reflex of Gothic "sarwa"; Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 118.
 		"male", "Sigismund" -- son of Gundobad; died in 523; became Sigmund (father of Sigurd) in the myths; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.		
 	},
-	HistoricalTechnologies = {
-		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+	HistoricalUpgrades = {
+		180, "upgrade-teuton-spatha", true -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}
 })
 
@@ -2084,7 +2085,10 @@ DefineCivilization("greek", {
 		"Zacynthus", -- Saguntum
 		"Zancle" -- Messana
 	},
-	Description = _("During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. Those who migrated to Greece spoke their own dialect of Indo-European, which eventually would develop into Ancient Greek. Initially a backwater in comparison to the Near East, Greece would eventually become one of the main centers of civilization in antiquity, being widely renowned for the achievements of its people. The rise of the Macedonian empire spread the influence of Greek culture through much of the eastern Mediterranean, Persia, and beyond, and even after the Roman conquest Greek remained widely spoken (both as a mother tongue and as a lingua franca) in the eastern half of the Mediterranean.")
+	Description = "During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. Those who migrated to Greece spoke their own dialect of Indo-European, which eventually would develop into Ancient Greek. Initially a backwater in comparison to the Near East, Greece would eventually become one of the main centers of civilization in antiquity, being widely renowned for the achievements of its people. The rise of the Macedonian empire spread the influence of Greek culture through much of the eastern Mediterranean, Persia, and beyond, and even after the Roman conquest Greek remained widely spoken (both as a mother tongue and as a lingua franca) in the eastern half of the Mediterranean.",
+	HistoricalUpgrades = {
+		-1400, "upgrade-teuton-masonry", true -- Construction of palaces in continental Greece around 1400 BC; Source: "Atlas de História Mundial", 2001, p. 66.
+	}
 })
 
 DefineCivilization("assyrian", {
@@ -2215,8 +2219,8 @@ DefineCivilization("norse", {
 		"Hordaland",
 		"Vestfold" -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
 	},
-	HistoricalTechnologies = {
-		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+	HistoricalUpgrades = {
+		180, "upgrade-teuton-spatha", true -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}
 })
 
@@ -2404,11 +2408,11 @@ DefineCivilization("aesir", {
 		"germanic/ui/buttonpanel.png", -256, -200,
 		"germanic/ui/infopanel.png", 0, -200
 	},
-	HistoricalTechnologies = { -- give the Aesir iron weapons and armor from the beginning
-		"upgrade-germanic-broad-sword", 0,
-		"upgrade-teuton-spatha", 0,
-		"upgrade-germanic-bronze-shield", 0,
-		"upgrade-teuton-iron-shield", 0
+	HistoricalUpgrades = { -- give the Aesir iron weapons and armor from the beginning
+		0, "upgrade-germanic-broad-sword", true,
+		0, "upgrade-teuton-spatha", true,
+		0, "upgrade-germanic-bronze-shield", true,
+		0, "upgrade-teuton-iron-shield", true
 	}
 })
 

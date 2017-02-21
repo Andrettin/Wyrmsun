@@ -38,9 +38,6 @@ DefineFaction("frank-tribe", {
 		"dwarf/ui/resource.png", 0, 0,
 		"dlcs/frankish_faction_flair/graphics/ui/buttonpanel.png", -256, -200,
 		"dlcs/frankish_faction_flair/graphics/ui/infopanel.png", 0, -200
-	},
-	HistoricalTechnologies = {
-		"upgrade-frank-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}
 })
 
@@ -101,10 +98,10 @@ DefineFaction("francia", {
 		"head-of-government", "no-gender", "monarchy", "no-faction-tier", "Mayor of the Palace" -- Source: "Medieval Warfare V.2", 2013, p. 7.
 	},
 	HistoricalFactionDerivations = {481, "frankish", "frank-tribe"}, -- In 481 AD the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-	HistoricalTechnologies = {
-		"upgrade-teuton-writing", 0, -- polities must have writing
-		"upgrade-teuton-masonry", 0,
-		"upgrade-teuton-coinage", 565 -- Merovingian Francia began to issue gold solidi at some point between 565 and 578 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 176.
+	HistoricalUpgrades = {
+		0, "upgrade-teuton-writing", true, -- polities must have writing
+		0, "upgrade-teuton-masonry", true,
+		565, "upgrade-teuton-coinage", true -- Merovingian Francia began to issue gold solidi at some point between 565 and 578 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 176.
 	},
 	HistoricalCapitals = {
 		768, "Lower Rhine" -- Aachen was Francia's capital during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.

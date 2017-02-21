@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016 by Andrettin
+--      (c) Copyright 2016-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -54,8 +54,8 @@ DefineFaction("funnelbeaker-tribe", { -- based on the Funnel Beaker culture of Z
 	Type = "tribe",
 	Colors = {"violet"},
 	HistoricalFactionDerivations = {-6400, "basque", "ertebolle-tribe"}, -- Ertebolle cultured ended and Funnel Beaker culture arose in Zealand in 3950 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
-	HistoricalTechnologies = {
-		"upgrade-germanic-wood-plow", -3600, -- Primitive ard (plow) appears in Northern Europe c. 3600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 297.
+	HistoricalUpgrades = {
+		-3600, "upgrade-germanic-wood-plow", true, -- Primitive ard (plow) appears in Northern Europe c. 3600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 297.
 	}
 })
 
@@ -64,8 +64,8 @@ DefineFaction("gylfing-tribe", { -- Scandinavian pre-Indo-Europeans are very unl
 	Civilization = "basque",
 	Type = "tribe",
 	Colors = {"green", "teal"},
-	HistoricalTechnologies = {
-		"upgrade-germanic-wood-plow", -3600, -- Primitive ard (plow) appears in Northern Europe c. 3600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 297.
+	HistoricalUpgrades = {
+		-3600, "upgrade-germanic-wood-plow", true, -- Primitive ard (plow) appears in Northern Europe c. 3600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 297.
 	}
 })
 
