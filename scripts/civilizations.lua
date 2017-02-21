@@ -1774,7 +1774,7 @@ DefineCivilization("teuton", {
 		180, "upgrade-teuton-spatha", true, -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 		800, "upgrade-teuton-writing", true,
 		800, "upgrade-teuton-masonry", true,
-		919, "upgrade-deity-christian-god", true -- Holy Roman Empire in existence in 919 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		919, "upgrade-deity-christian-god", true -- the Holy Roman Empire was in existence in 919 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	}
 })
 

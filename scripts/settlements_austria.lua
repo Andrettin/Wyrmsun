@@ -25,6 +25,22 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSettlement("adelsberg", {
+	Name = "Adelsberg",
+	MapTemplate = "earth",
+	Position = {4163, 1005},
+	CulturalNames = {
+		"teuton", "Adelsberg"
+	},
+	HistoricalOwners = {
+		1815, "austria" -- Adelsberg was part of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		1815, 0, "farm"
+	},
+	Regions = {"cisleithania", "europe", "germany-netherlands", "west-and-central-europe"}
+})
+
 DefineSettlement("carnuntum", {
 	Name = "Carnuntum",
 	MapTemplate = "earth",

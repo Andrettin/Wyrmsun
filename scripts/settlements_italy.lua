@@ -262,34 +262,6 @@ DefineSettlement("rome", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("trieste", {
-	Name = "Trieste",
-	MapTemplate = "earth",
-	Position = {4154, 1009},
-	CulturalNames = {
-		"latin", "Tergeste",
-		"teuton", "Triest"
-	},
-	HistoricalOwners = {
-		-27, "rome", -- Tergeste existed and was in Roman possession at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		1719, "austria" -- Trieste was a possession of Karl VI of the Holy Roman Empire (ruler of Austria) in 1719; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 464.
-	},
-	HistoricalBuildings = {
-		-27, 1719, "dock",
-		1719, 0, "town-hall", -- Karl VI of the Holy Roman Empire made Trieste a free port ("Freihafen") in 1719; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 464.
-		1719, 0, "dock", "kaiserliche-privilegierte-orientalische-kompagnie", -- "Kaiserliche privilegierte orientalische Kompagnie" founded in Austria's Adriatic possessions in 1719; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 477.
-		1750, 0, "dock", "haubt-handlungs-compagnie-von-triest-und-fiume" -- "Haubt-Handlungs-Compagnie von Triest und Fiume" founded in 1750; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 477.
-	},
-	HistoricalPopulation = {
-		1758, 6424, -- Trieste's population was 6,424 in 1758; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 466.
-		1800, 20900, -- Trieste's population was 20,900 in 1800; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 466.
-		1818, 33510, -- Trieste's population was 33,510 in 1818; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 466.
-		1838, 54387, -- Trieste's population was 54,387 in 1838; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 466.
-		1853, 60860 -- Trieste's population was 60,860 in 1853; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 466.
-	},
-	Regions = {"cisleithania", "europe", "germany-netherlands", "italy", "west-and-central-europe"}
-})
-
 DefineSettlement("venice", {
 	Name = "Venice",
 	MapTemplate = "earth",
@@ -298,8 +270,8 @@ DefineSettlement("venice", {
 		"teuton", "Venice"
 	},
 	HistoricalOwners = {
-		1494, "venice", -- Venice was a possession of the Venetian Republic about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
-		1815, "austria" -- Venice was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		1494, "venice", -- Venice was part of the Venetian Republic about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+		1815, "austria" -- Venice was part of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
 		1494, 0, "town-hall"
