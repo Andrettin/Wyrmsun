@@ -36,7 +36,7 @@ DefineSettlement("abu-simbel", {
 		-1450, "egypt" -- Abu Simbel was an Egyptian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"africa"}
 })
@@ -53,7 +53,7 @@ DefineSettlement("abydos", {
 		-640, "assyria" -- Abidos' area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"africa"}
 })
@@ -71,7 +71,7 @@ DefineSettlement("heliopolis", {
 		-640, "assyria" -- Heliopolis/On was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"africa"}
 })
@@ -88,7 +88,7 @@ DefineSettlement("karnak", {
 		-640, "assyria" -- Karnak's area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"africa"}
 })
@@ -106,7 +106,7 @@ DefineSettlement("memphis", {
 		-640, "assyria" -- Memphis was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-town-hall"
+		-1450, 0, "town-hall"
 	},
 	Regions = {"africa"}
 })
@@ -122,7 +122,7 @@ DefineSettlement("napata", {
 		-1450, "egypt" -- Napata was an Egyptian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"africa"}
 })
@@ -140,7 +140,7 @@ DefineSettlement("sais", {
 		-640, "assyria" -- Sais was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"africa"}
 })
@@ -158,7 +158,7 @@ DefineSettlement("syene", {
 		-640, "assyria" -- Syene was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"africa"}
 })
@@ -176,7 +176,7 @@ DefineSettlement("tanis", {
 		-640, "assyria" -- Tanis was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"africa"}
 })
@@ -193,7 +193,7 @@ DefineSettlement("tentyris", {
 		-640, "assyria" -- Tentyris' area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"africa"}
 })
@@ -211,7 +211,7 @@ DefineSettlement("thebes-egypt", {
 		-640, "assyria" -- Thebes was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-town-hall"
+		-1450, 0, "town-hall"
 	},
 	Regions = {"africa"}
 })
@@ -228,7 +228,7 @@ DefineSettlement("this", {
 		-640, "assyria" -- This' area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"africa"}
 })

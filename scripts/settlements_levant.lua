@@ -37,7 +37,7 @@ DefineSettlement("aphek", {
 		-720, "assyria" -- Aphek's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-953, 0, "unit-latin-farm"
+		-953, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -54,7 +54,7 @@ DefineSettlement("aroer", {
 		-720, "assyria" -- Aroer's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-953, 0, "unit-latin-farm"
+		-953, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -70,7 +70,7 @@ DefineSettlement("arpad", {
 		-720, "assyria" -- Arpad was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-720, 0, "unit-latin-farm"
+		-720, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -86,7 +86,7 @@ DefineSettlement("arvad", {
 		-1450, "phoenicia" -- Arvad was a Phoenician settlement about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -105,7 +105,7 @@ DefineSettlement("ascalon", {
 		-720, "assyria" -- Ascalon's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1250, 0, "unit-latin-farm"
+		-1250, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -123,7 +123,7 @@ DefineSettlement("baalbec", {
 		-720, "assyria" -- Baalbec's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1250, 0, "unit-latin-farm"
+		-1250, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -140,7 +140,7 @@ DefineSettlement("beersheba", {
 		-953, "judah" -- Beersheba was part of the Kingdom of Judah in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 	},
 	HistoricalBuildings = {
-		-1025, 0, "unit-latin-farm"
+		-1025, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -156,7 +156,7 @@ DefineSettlement("berothai", {
 		-1250, "canaanite-tribe" -- Berothai was part of the territory of the Canaanites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 	},
 	HistoricalBuildings = {
-		-1250, 0, "unit-latin-farm"
+		-1250, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -173,7 +173,7 @@ DefineSettlement("bethel", {
 		-750, "judah" -- Bethel's area was part of the Kingdom of Judah in the 750-625 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-953, 0, "unit-latin-farm"
+		-953, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -190,7 +190,7 @@ DefineSettlement("bethshean", {
 		-720, "assyria" -- Bethshean's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-953, 0, "unit-latin-farm"
+		-953, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -207,7 +207,7 @@ DefineSettlement("biblah", {
 		-720, "assyria" -- Biblah's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1025, 0, "unit-latin-farm"
+		-1025, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -224,7 +224,7 @@ DefineSettlement("bosrah", {
 		-720, "assyria" -- Bosrah's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1025, 0, "unit-latin-farm"
+		-1025, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -241,7 +241,7 @@ DefineSettlement("byblos", {
 		-1250, "canaanite-tribe" -- Gebal's area was part of the territory of the Canaanites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -259,7 +259,7 @@ DefineSettlement("carchemish", {
 		-720, "assyria" -- Carchemish was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -280,7 +280,7 @@ DefineSettlement("damascus", {
 		-720, "assyria" -- Damascus was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-town-hall"
+		-1450, 0, "town-hall"
 	},
 	Regions = {"asia"}
 })
@@ -298,7 +298,7 @@ DefineSettlement("dan", {
 		-720, "assyria" -- Dan's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1025, 0, "unit-latin-farm"
+		-1025, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -317,7 +317,7 @@ DefineSettlement("dor", {
 		-720, "assyria" -- Dor's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1250, 0, "unit-latin-farm"
+		-1250, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -334,7 +334,7 @@ DefineSettlement("ekron", {
 		-720, "assyria" -- Ekron's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-953, 0, "unit-latin-farm"
+		-953, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -352,7 +352,7 @@ DefineSettlement("elath", {
 		-720, "assyria" -- Elath was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1025, 0, "unit-latin-farm"
+		-1025, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -370,7 +370,7 @@ DefineSettlement("ezion-geber", {
 		-720, "assyria" -- Ezion-Geber was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1025, 0, "unit-latin-farm"
+		-1025, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -392,9 +392,9 @@ DefineSettlement("gaza", {
 		-720, "assyria" -- Gaza was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, -1250, "unit-latin-farm",
-		-1250, -720, "unit-latin-town-hall",
-		-720, 0, "unit-latin-farm"
+		-1450, -1250, "farm",
+		-1250, -720, "town-hall",
+		-720, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -412,7 +412,7 @@ DefineSettlement("gilboa", {
 		-720, "assyria" -- Gilboa's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1025, 0, "unit-latin-farm"
+		-1025, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -429,7 +429,7 @@ DefineSettlement("gilgal", {
 		-750, "judah" -- Gilgal's area was part of the Kingdom of Judah in the 750-625 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-953, 0, "unit-latin-farm"
+		-953, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -449,7 +449,7 @@ DefineSettlement("hamath", {
 		-720, "assyria" -- Hamath was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -467,7 +467,7 @@ DefineSettlement("hazor", {
 		-720, "assyria" -- Hazor's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1025, 0, "unit-latin-farm"
+		-1025, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -485,8 +485,8 @@ DefineSettlement("hebron", {
 		-953, "judah" -- Hebron was part of the Kingdom of Judah in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 	},
 	HistoricalBuildings = {
-		-1250, -1025, "unit-latin-town-hall",
-		-1025, 0, "unit-latin-farm"
+		-1250, -1025, "town-hall",
+		-1025, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -503,7 +503,7 @@ DefineSettlement("heshbon", {
 		-720, "assyria" -- Heshbon's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-953, 0, "unit-latin-farm"
+		-953, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -521,7 +521,7 @@ DefineSettlement("jabesh", {
 		-720, "assyria" -- Jabesh's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1025, 0, "unit-latin-farm"
+		-1025, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -540,8 +540,8 @@ DefineSettlement("jericho", {
 		-750, "judah" -- Jericho's area was part of the Kingdom of Judah in the 750-625 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1250, -750, "unit-latin-town-hall",
-		-750, 0, "unit-latin-farm"
+		-1250, -750, "town-hall",
+		-750, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -560,7 +560,7 @@ DefineSettlement("jerusalem", {
 		-953, "judah" -- Jerusalem was part of the Kingdom of Judah in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 	},
 	HistoricalBuildings = {
-		-1250, 0, "unit-latin-town-hall"
+		-1250, 0, "town-hall"
 	},
 	Regions = {"asia"}
 })
@@ -577,7 +577,7 @@ DefineSettlement("jezreel", {
 		-720, "assyria" -- Jezreel's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-953, 0, "unit-latin-farm"
+		-953, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -598,7 +598,7 @@ DefineSettlement("joppa", {
 		-720, "assyria" -- Joppa was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1250, 0, "unit-latin-farm"
+		-1250, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -616,7 +616,7 @@ DefineSettlement("kadesh", {
 		-720, "assyria" -- Kadesh's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -633,7 +633,7 @@ DefineSettlement("kadesh-barnea", {
 		-720, "assyria" -- Kadesh Barnea's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1025, 0, "unit-latin-farm"
+		-1025, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -651,7 +651,7 @@ DefineSettlement("kadesh-naphtali", {
 		-720, "assyria" -- Kadesh Naphtali's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1025, 0, "unit-latin-farm"
+		-1025, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -667,7 +667,7 @@ DefineSettlement("khatmar", {
 		-720, "assyria" -- Khatmar/Aleppo was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-720, 0, "unit-latin-farm"
+		-720, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -689,7 +689,7 @@ DefineSettlement("megiddo", {
 		-720, "assyria" -- Megiddo was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -707,7 +707,7 @@ DefineSettlement("samaria", {
 		-720, "assyria" -- Samaria was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-953, 0, "unit-latin-farm"
+		-953, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -725,7 +725,7 @@ DefineSettlement("selah", {
 		-720, "assyria" -- Selah was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1025, 0, "unit-latin-farm"
+		-1025, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -745,7 +745,7 @@ DefineSettlement("shechem", {
 		-720, "assyria" -- Shechem's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1250, 0, "unit-latin-farm"
+		-1250, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -764,8 +764,8 @@ DefineSettlement("shiloh", {
 		-750, "judah" -- Shiloh's area was part of the Kingdom of Judah in the 750-625 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1250, -750, "unit-latin-town-hall",
-		-750, 0, "unit-latin-farm"
+		-1250, -750, "town-hall",
+		-750, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -782,7 +782,7 @@ DefineSettlement("shunem", {
 		-720, "assyria" -- Shunem's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-953, 0, "unit-latin-farm"
+		-953, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -799,7 +799,7 @@ DefineSettlement("sidon", {
 		-1250, "canaanite-tribe" -- Sidon was part of the territory of the Canaanites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -816,7 +816,7 @@ DefineSettlement("tyre", {
 		-1250, "canaanite-tribe" -- Zor/Tyre was part of the territory of the Canaanites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-town-hall"
+		-1450, 0, "town-hall"
 	},
 	Regions = {"asia"}
 })

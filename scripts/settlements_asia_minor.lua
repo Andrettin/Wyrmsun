@@ -36,7 +36,7 @@ DefineSettlement("sardis", {
 		-750, "lydia" -- Sardis was a part of the Lydian Kingdom in the 750-625 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-750, 0, "unit-latin-town-hall"
+		-750, 0, "town-hall"
 	},
 	Regions = {"asia"}
 })
@@ -54,7 +54,7 @@ DefineSettlement("troy", {
 		-500, "ionia" -- Greece at the time of the war with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-town-hall"
+		-1450, 0, "town-hall"
 	},
 	Regions = {"asia"}
 })

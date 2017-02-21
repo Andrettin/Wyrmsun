@@ -37,8 +37,8 @@ DefineSettlement("carnuntum", {
 		526, "" -- Carnuntum no longer under Roman control by 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 	},
 	HistoricalBuildings = {
-		10, 161, "unit-latin-farm", -- Upper Pannonia (where Carnuntum was located) acquired by Rome in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		161, 526, "unit-teuton-guard-tower" -- Legionary base present in Carnuntum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		10, 161, "farm", -- Upper Pannonia (where Carnuntum was located) acquired by Rome in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, 526, "guard-tower" -- Legionary base present in Carnuntum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalUnits = {
 		170, "unit-teuton-swordsman", 20000, "rome", -- a Roman army numbering 20,000 was stationed near Carnuntum in 170 AD, when it was defeated by the Marcomanni and Quadi; Source: "Ancient Warfare VII.6", 2013, p. 29.
@@ -58,7 +58,7 @@ DefineSettlement("graz", {
 		1815, "austria" -- Graz was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		1815, 0, "unit-teuton-town-hall"
+		1815, 0, "town-hall"
 	},
 	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
@@ -74,7 +74,7 @@ DefineSettlement("innsbruck", {
 		1815, "austria" -- Innsbruck was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		1815, 0, "unit-teuton-town-hall"
+		1815, 0, "town-hall"
 	},
 	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
@@ -90,7 +90,7 @@ DefineSettlement("klagenfurt", {
 		1815, "austria" -- Klagenfurt was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		1815, 0, "unit-teuton-town-hall"
+		1815, 0, "town-hall"
 	},
 	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
@@ -106,7 +106,7 @@ DefineSettlement("linz", {
 		1815, "austria" -- Linz was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		1815, 0, "unit-teuton-town-hall"
+		1815, 0, "town-hall"
 	},
 	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
@@ -123,7 +123,7 @@ DefineSettlement("ljubljana", {
 		1815, "austria" -- Laibach was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		1815, 0, "unit-teuton-town-hall"
+		1815, 0, "town-hall"
 	},
 	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
@@ -142,9 +142,9 @@ DefineSettlement("salzburg", {
 		1815, "austria" -- Salzburg was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		45, 526, "unit-latin-town-hall",
-		526, 1815, "unit-teuton-farm",
-		1815, 0, "unit-teuton-town-hall"
+		45, 526, "town-hall",
+		526, 1815, "farm",
+		1815, 0, "town-hall"
 	},
 	Regions = {"europe", "west-and-central-europe", "roman-danube", "germany-netherlands", "cisleithania"}
 })
@@ -165,9 +165,9 @@ DefineSettlement("vienna", {
 		1156, "austria" -- Austria became a duchy with Vienna in its possession in 1156; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalBuildings = {
-		10, 161, "unit-latin-farm",
-		161, 526, "unit-teuton-guard-tower", -- Legionary base present in Vindobona in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		955, 0, "unit-teuton-town-hall"
+		10, 161, "farm",
+		161, 526, "guard-tower", -- Legionary base present in Vindobona in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		955, 0, "town-hall"
 	},
 	Regions = {"europe", "west-and-central-europe", "roman-danube", "germany-netherlands", "cisleithania"}
 })

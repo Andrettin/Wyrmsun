@@ -41,8 +41,8 @@ DefineSettlement("marseilles", {
 		1789, "france" -- Marseilles was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	HistoricalBuildings = {
-		161, 395, "unit-latin-farm",
-		395, 0, "unit-teuton-temple" -- Marseilles was a part of the Roman Empire and was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		161, 395, "farm",
+		395, 0, "temple" -- Marseilles was a part of the Roman Empire and was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -62,7 +62,7 @@ DefineSettlement("nice", {
 		1494, "savoy" -- Nice was a possession of the Duchy of Savoy in 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 	},
 	HistoricalBuildings = {
-		395, 0, "unit-teuton-temple"
+		395, 0, "temple"
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -87,12 +87,10 @@ DefineSettlement("strassburg", {
 		1789, "france" -- Strasburg was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	HistoricalBuildings = {
-		-50, 161, "unit-latin-farm",
-		161, 0, "unit-teuton-stronghold", -- Legionary base present in Argentorate in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		161, 919, "unit-latin-barracks",
-		395, 0, "unit-teuton-temple", -- Strassburg was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		919, 1789, "unit-teuton-barracks",
-		1789, 0, "unit-latin-barracks"
+		-50, 161, "farm",
+		161, 0, "stronghold", -- Legionary base present in Argentorate in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, 0, "barracks",
+		395, 0, "temple" -- Strassburg was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		-- Bureau de finance and chambre du domaine existent in Strasburg in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 		-- Prévôt des maréchaux existent in Strasburg in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 	},
@@ -111,7 +109,7 @@ DefineSettlement("toulon", {
 		1789, "france" -- Toulon was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	HistoricalBuildings = {
-		561, 0, "unit-teuton-farm"
+		561, 0, "farm"
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -130,7 +128,7 @@ DefineSettlement("vienne", {
 		1789, "france" -- Marseilles was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	HistoricalBuildings = {
-		395, 0, "unit-teuton-temple" -- Vienne was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		395, 0, "temple" -- Vienne was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })

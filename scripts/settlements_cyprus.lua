@@ -36,7 +36,7 @@ DefineSettlement("amathus", {
 		-1450, "phoenicia" -- Amathus was a Phoenician settlement about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -52,7 +52,7 @@ DefineSettlement("citium", {
 		-1450, "phoenicia" -- Citium was a Phoenician settlement about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"asia"}
 })

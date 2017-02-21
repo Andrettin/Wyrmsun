@@ -37,7 +37,7 @@ DefineSettlement("asuncion", {
 		1811, "paraguay" -- Uruguay became independent in 1811; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
 	},
 	HistoricalBuildings = {
-		1536, 0, "unit-latin-town-hall"
+		1536, 0, "town-hall"
 	},
 	Regions = {"america", "south-america"}
 })
@@ -53,7 +53,7 @@ DefineSettlement("bahia-blanca", {
 		1863, "argentina" -- Bahia Blanca was founded in 1863; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
 	},
 	HistoricalBuildings = {
-		1863, 0, "unit-latin-town-hall"
+		1863, 0, "town-hall"
 	},
 	Regions = {"america", "south-america"}
 })
@@ -70,7 +70,7 @@ DefineSettlement("buenos-aires", {
 		1810, "argentina" -- Argentina became independent in 1810/1816; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
 	},
 	HistoricalBuildings = {
-		1535, 0, "unit-latin-town-hall"
+		1535, 0, "town-hall"
 	},
 	Regions = {"america", "south-america"}
 })
@@ -87,7 +87,7 @@ DefineSettlement("corrientes", {
 		1810, "argentina" -- Argentina became independent in 1810/1816; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
 	},
 	HistoricalBuildings = {
-		1588, 0, "unit-latin-town-hall"
+		1588, 0, "town-hall"
 	},
 	Regions = {"america", "south-america"}
 })
@@ -106,7 +106,7 @@ DefineSettlement("montevideo", {
 		1828, "uruguay" -- Uruguay became independent of Brazil in 1828; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
 	},
 	HistoricalBuildings = {
-		1723, 0, "unit-latin-town-hall"
+		1723, 0, "town-hall"
 	},
 	Regions = {"america", "south-america"}
 })
@@ -123,7 +123,7 @@ DefineSettlement("santa-fe", {
 		1810, "argentina" -- Argentina became independent in 1810/1816; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
 	},
 	HistoricalBuildings = {
-		1573, 0, "unit-latin-town-hall"
+		1573, 0, "town-hall"
 	},
 	Regions = {"america", "south-america"}
 })

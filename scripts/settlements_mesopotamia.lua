@@ -37,7 +37,7 @@ DefineSettlement("agad", {
 		-640, "assyria" -- Agad's area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -53,7 +53,7 @@ DefineSettlement("amida", {
 		-1450, "assyria" -- Amida was an Assyrian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -69,7 +69,7 @@ DefineSettlement("arbela", {
 		-1450, "assyria" -- Arbela was an Assyrian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -85,7 +85,7 @@ DefineSettlement("assur", {
 		-1450, "assyria" -- Assur was an Assyrian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -103,7 +103,7 @@ DefineSettlement("babylon", {
 		-640, "assyria" -- Babylon was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-town-hall"
+		-1450, 0, "town-hall"
 	},
 	Regions = {"asia"}
 })
@@ -121,7 +121,7 @@ DefineSettlement("borsippa", {
 		-640, "assyria" -- Borsippa was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -137,7 +137,7 @@ DefineSettlement("calchu", {
 		-720, "assyria" -- Calchu was a part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-720, 0, "unit-latin-farm"
+		-720, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -153,7 +153,7 @@ DefineSettlement("dur-ilu", {
 		-640, "assyria" -- Dur-Ilu was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-640, 0, "unit-latin-farm"
+		-640, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -170,7 +170,7 @@ DefineSettlement("dur-kurigalzu", {
 		-640, "assyria" -- Dur-Kurigalzu's area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -186,7 +186,7 @@ DefineSettlement("dur-sharukin", {
 		-640, "assyria" -- Dur-Sharukin/Khorsabad was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-640, 0, "unit-latin-farm"
+		-640, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -204,7 +204,7 @@ DefineSettlement("eridu", {
 		-640, "assyria" -- Eridu was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -220,7 +220,7 @@ DefineSettlement("haran", {
 		-720, "assyria" -- Haran was a part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-720, 0, "unit-latin-farm"
+		-720, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -236,7 +236,7 @@ DefineSettlement("holwan", {
 		-640, "assyria" -- Holwan was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-640, 0, "unit-latin-farm"
+		-640, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -253,7 +253,7 @@ DefineSettlement("kutha", {
 		-640, "assyria" -- Kutha's area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -271,7 +271,7 @@ DefineSettlement("lagash", {
 		-640, "assyria" -- Lagash was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -289,7 +289,7 @@ DefineSettlement("larsam", {
 		-640, "assyria" -- Larsam was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -305,7 +305,7 @@ DefineSettlement("nineveh", {
 		-1450, "assyria" -- Nineveh was an Assyrian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-town-hall"
+		-1450, 0, "town-hall"
 	},
 	Regions = {"asia"}
 })
@@ -323,7 +323,7 @@ DefineSettlement("nippur", {
 		-640, "assyria" -- Nippur was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -339,7 +339,7 @@ DefineSettlement("nisibis", {
 		-720, "assyria" -- Nisibis was a part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-720, 0, "unit-latin-farm"
+		-720, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -356,7 +356,7 @@ DefineSettlement("reseph", {
 		-720, "assyria" -- Reseph's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1025, 0, "unit-latin-farm"
+		-1025, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -373,7 +373,7 @@ DefineSettlement("shinpurla", {
 		-640, "assyria" -- Shinpurla's area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -390,7 +390,7 @@ DefineSettlement("sippar", {
 		-640, "assyria" -- Sippar's area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -408,7 +408,7 @@ DefineSettlement("susa", {
 		-640, "assyria" -- Susa was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -426,7 +426,7 @@ DefineSettlement("tadmor", {
 		-720, "assyria" -- Tadmor was a part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1025, 0, "unit-latin-farm"
+		-1025, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -443,7 +443,7 @@ DefineSettlement("tiphsach", {
 		-720, "assyria" -- Tiphsach's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1025, 0, "unit-latin-farm"
+		-1025, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -461,7 +461,7 @@ DefineSettlement("upi", {
 		-640, "assyria" -- Upi was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -479,7 +479,7 @@ DefineSettlement("ur", {
 		-640, "assyria" -- Ur was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -497,7 +497,7 @@ DefineSettlement("uruk", {
 		-640, "assyria" -- Uruk was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"asia"}
 })

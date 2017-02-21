@@ -39,8 +39,8 @@ DefineSettlement("augsburg", {
 		1815, "bavaria" -- Augsburg was a possession of the Kingdom of Bavaria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		170, 172, "unit-latin-town-hall",
-		1815, 0, "unit-teuton-town-hall"
+		170, 172, "town-hall",
+		1815, 0, "town-hall"
 	},
 	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
@@ -60,14 +60,12 @@ DefineSettlement("cologne", {
 		1815, "prussia" -- Cologne was a possession of the Kingdom of Prussia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		-50, 161, "unit-latin-farm",
-		161, 486, "unit-latin-town-hall", -- Colonia Agrippina was a Roman provincial capital in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		161, 486, "unit-teuton-guard-tower", -- Legionary base present in a location near Colonia Agrippina in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		395, 486, "unit-teuton-temple", -- Cologne was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		486, 1815, "unit-teuton-town-hall",
-		486, 1815, "unit-teuton-temple",
-		1815, 0, "unit-teuton-stronghold", -- Cologne possessed a fortress in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-		1815, 0, "unit-teuton-temple"
+		-50, 161, "farm",
+		161, 1815, "town-hall", -- Colonia Agrippina was a Roman provincial capital in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, 486, "guard-tower", -- Legionary base present in a location near Colonia Agrippina in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		395, 1815, "temple", -- Cologne was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		1815, 0, "stronghold", -- Cologne possessed a fortress in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		1815, 0, "temple"
 	},
 	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
 })
@@ -85,7 +83,7 @@ DefineSettlement("eresburg", {
 		1815, ""
 	},
 	HistoricalBuildings = {
-		775, 1815, "unit-teuton-guard-tower"
+		775, 1815, "guard-tower"
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
@@ -102,7 +100,7 @@ DefineSettlement("flensburg", {
 		1815, "denmark" -- Flensburg was a possession of the Kingdom of Denmark in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		-264, 0, "unit-teuton-town-hall"
+		-264, 0, "town-hall"
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
@@ -119,16 +117,16 @@ DefineSettlement("kiel", {
 		1815, "denmark" -- Kiel was a possession of the Kingdom of Denmark in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		-1600, 1815, "unit-germanic-town-hall",
-		-1600, 1815, "unit-germanic-farm",
-		-1600, 1815, "unit-germanic-farm",
-		-1600, 1815, "unit-germanic-farm",
-		-1600, 1815, "unit-germanic-barracks",
-		-1600, 1815, "unit-germanic-smithy",
-		-1600, 1815, "unit-germanic-carpenters-shop",
-		-1600, 1815, "unit-teuton-watch-tower",
-		-1600, 1815, "unit-teuton-watch-tower",
-		1815, 0, "unit-teuton-town-hall"
+		-1600, 1815, "town-hall",
+		-1600, 1815, "farm",
+		-1600, 1815, "farm",
+		-1600, 1815, "farm",
+		-1600, 1815, "barracks",
+		-1600, 1815, "smithy",
+		-1600, 1815, "lumber-mill",
+		-1600, 1815, "watch-tower",
+		-1600, 1815, "watch-tower",
+		1815, 0, "town-hall"
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
@@ -145,7 +143,7 @@ DefineSettlement("konstanz", {
 		1815, "baden" -- Constance was a possession of the Grand Duchy of Baden in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		561, 0, "unit-teuton-farm"
+		561, 0, "farm"
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
@@ -166,9 +164,9 @@ DefineSettlement("mainz", {
 		1815, "hesse" -- Mayence was a possession of the Grand Duchy of Hesse in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		-50, 161, "unit-latin-farm",
-		161, 395, "unit-teuton-guard-tower", -- Legionary base present in Mogontiacum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		395, 0, "unit-teuton-temple" -- Mayence was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		-50, 161, "farm",
+		161, 395, "guard-tower", -- Legionary base present in Mogontiacum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		395, 0, "temple" -- Mayence was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		-- Mayence possessed a fortress in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
@@ -186,7 +184,7 @@ DefineSettlement("nuremberg", {
 		1815, "bavaria" -- Nuremberg was a possession of the Kingdom of Bavaria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		161, 0, "unit-teuton-town-hall"
+		161, 0, "town-hall"
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
@@ -207,9 +205,9 @@ DefineSettlement("regensburg", {
 		1815, "bavaria" -- Regensburg was a possession of the Kingdom of Bavaria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		170, 172, "unit-teuton-guard-tower",
-		175, 526, "unit-teuton-guard-tower", -- The Legio III Italica began building in 175 the fortress of Castra Regina near where the Regensburg-Kumpfmühl camp had been; Source: "Ancient Warfare VII.6", 2013, p. 25.
-		526, 0, "unit-teuton-town-hall"
+		170, 172, "guard-tower",
+		175, 526, "guard-tower", -- The Legio III Italica began building in 175 the fortress of Castra Regina near where the Regensburg-Kumpfmühl camp had been; Source: "Ancient Warfare VII.6", 2013, p. 25.
+		526, 0, "town-hall"
 	},
 	HistoricalUnits = {
 		170, "unit-teuton-swordsman", 375, "rome", -- the "Cohors II Aquitanorum equitata civium Romanorum" (a mixed unit, which contained circa 375 auxiliary infantry and 125 cavalry) was stationed at Regensburg-Kumpfmühl when it was attacked and destroyed in 172, during the First Marcomannic War; it likely was stationed there at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
@@ -233,8 +231,8 @@ DefineSettlement("straubing", {
 		1815, "bavaria" -- Straubing was a possession of the Kingdom of Bavaria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		170, 172, "unit-teuton-guard-tower", -- a Roman double camp at Straubing was destroyed during the First Marcomannic War in 172; it likely existed at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
-		1815, 0, "unit-teuton-farm"
+		170, 172, "guard-tower", -- a Roman double camp at Straubing was destroyed during the First Marcomannic War in 172; it likely existed at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
+		1815, 0, "farm"
 	},
 	HistoricalUnits = {
 		170, "unit-teuton-swordsman", 500, "rome", -- the "Cohors II Raetorum" (a unit containing 500 infantry) was stationed at Straubing when it was attacked and destroyed in 172, during the First Marcomannic War; it likely was stationed there at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
@@ -258,7 +256,7 @@ DefineSettlement("syburg", {
 		1815, ""
 	},
 	HistoricalBuildings = {
-		775, 1815, "unit-teuton-guard-tower"
+		775, 1815, "guard-tower"
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
@@ -278,7 +276,7 @@ DefineSettlement("trier", {
 		1815, "prussia" -- Trier was a possession of the Kingdom of Prussia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		395, 0, "unit-teuton-temple" -- Trèves was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		395, 0, "temple" -- Trèves was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
 	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
 })
@@ -300,10 +298,10 @@ DefineSettlement("worms", {
 		1815, "hesse" -- Worms was a possession of the Grand Duchy of Hesse in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		395, 413, "unit-teuton-temple", -- Worms was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		413, 436, "unit-teuton-town-hall",
-		413, 436, "unit-teuton-temple",
-		436, 0, "unit-teuton-temple"
+		395, 413, "temple", -- Worms was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		413, 436, "town-hall",
+		413, 436, "temple",
+		436, 0, "temple"
 	},
 	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
 })

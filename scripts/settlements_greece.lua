@@ -36,7 +36,7 @@ DefineSettlement("amyclae", {
 		-1450, "mycenae" -- Amyclae was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -53,7 +53,7 @@ DefineSettlement("aphidnae", {
 		-500, "athens" -- Greece at the time of the war with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -69,7 +69,7 @@ DefineSettlement("argos", {
 		-500, "argos" -- Greece at the time of the war with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
 	},
 	HistoricalBuildings = {
-		-500, 0, "unit-latin-town-hall"
+		-500, 0, "town-hall"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -89,8 +89,7 @@ DefineSettlement("athens", {
 		1740, "turkey" -- Athens was in possession of the Ottoman Empire in 1740; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	},
 	HistoricalBuildings = {
-		-1450, 1740, "unit-latin-town-hall",
-		1740, 0, "unit-teuton-town-hall"
+		-1450, 0, "town-hall"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -106,7 +105,7 @@ DefineSettlement("corinth", {
 		-500, "corinth" -- Greece at the time of the war with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
 	},
 	HistoricalBuildings = {
-		-500, 0, "unit-latin-town-hall"
+		-500, 0, "town-hall"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -122,7 +121,7 @@ DefineSettlement("coulas", {
 		-1450, "mycenae" -- Coulas was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -138,7 +137,7 @@ DefineSettlement("delphi", {
 		-1450, "mycenae" -- Delphi was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -154,7 +153,7 @@ DefineSettlement("dicte", {
 		-1450, "mycenae" -- Dicte was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -171,7 +170,7 @@ DefineSettlement("eleusis", {
 		-500, "athens" -- Greece at the time of the war with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -188,7 +187,7 @@ DefineSettlement("epidaurus", {
 		-500, "argos" -- Greece at the time of the war with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -204,7 +203,7 @@ DefineSettlement("gerenia", {
 		-1450, "mycenae" -- Gerenia was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -220,7 +219,7 @@ DefineSettlement("ialysus", {
 		-1450, "mycenae" -- Ialysus was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -236,7 +235,7 @@ DefineSettlement("iolcus", {
 		-1450, "mycenae" -- Iolcus was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -252,7 +251,7 @@ DefineSettlement("itanus", {
 		-1450, "mycenae" -- Itanus was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -268,7 +267,7 @@ DefineSettlement("knossos", {
 		-1450, "mycenae" -- Cnossus was a center of the highest Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-town-hall"
+		-1450, 0, "town-hall"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -285,7 +284,7 @@ DefineSettlement("krisa", {
 		-1190, "" -- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 	},
 	HistoricalBuildings = {
-		-1700, -1190, "unit-teuton-guard-tower"
+		-1700, -1190, "guard-tower"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -302,8 +301,8 @@ DefineSettlement("mycenae", {
 		-500, "argos" -- Greece at the time of the war with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
 	},
 	HistoricalBuildings = {
-		-1450, -700, "unit-latin-town-hall",
-		-700, 0, "unit-latin-farm"
+		-1450, -700, "town-hall",
+		-700, 0, "farm"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -319,7 +318,7 @@ DefineSettlement("orchomenus", {
 		-1450, "mycenae" -- Orchomenus was a center of the highest Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-town-hall"
+		-1450, 0, "town-hall"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -335,7 +334,7 @@ DefineSettlement("pagasae", {
 		-1450, "mycenae" -- Pagasae was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -352,7 +351,7 @@ DefineSettlement("tiryns", {
 		-500, "argos" -- Greece at the time of the war with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "unit-latin-farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })

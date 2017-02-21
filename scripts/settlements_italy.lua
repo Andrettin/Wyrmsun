@@ -36,7 +36,7 @@ DefineSettlement("aquileia", {
 		-184, "rome" -- Aquileia founded as a colony in 184 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 	},
 	HistoricalBuildings = {
-		-184, 1815, "unit-latin-town-hall"
+		-184, 1815, "town-hall"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -53,7 +53,7 @@ DefineSettlement("bologna", {
 		1494, "papal-states" -- Bologna was a Papal possession about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 	},
 	HistoricalBuildings = {
-		-189, 0, "unit-latin-farm"
+		-189, 0, "farm"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -70,7 +70,7 @@ DefineSettlement("brindisi", {
 		1494, "sicily" -- Brindisi was a possession of the Kingdom of the Two Sicilies about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 	},
 	HistoricalBuildings = {
-		-161, 0, "unit-latin-farm"
+		-161, 0, "farm"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -90,9 +90,7 @@ DefineSettlement("cremona", {
 		1859, "sardinia" -- Cremona became a possession of Sardinia in 1859; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		-218, 1815, "unit-latin-farm",
-		1815, 1859, "unit-teuton-farm",
-		1859, 0, "unit-latin-farm"
+		-218, 0, "farm"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -109,8 +107,8 @@ DefineSettlement("florence", {
 		1494, "florence" -- Florence was a possession of the Republic of Florence about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 	},
 	HistoricalBuildings = {
-		-161, 1494, "unit-latin-farm",
-		1494, 0, "unit-latin-town-hall"
+		-161, 1494, "farm",
+		1494, 0, "town-hall"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -130,10 +128,8 @@ DefineSettlement("milan", {
 		1859, "sardinia" -- Milan became a possession of Sardinia in 1859; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		-161, 1494, "unit-latin-farm",
-		1494, 1815, "unit-latin-town-hall",
-		1815, 1859, "unit-teuton-town-hall",
-		1859, 0, "unit-latin-town-hall"
+		-161, 1494, "farm",
+		1494, 0, "town-hall"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -150,8 +146,8 @@ DefineSettlement("modena", {
 		1494, "modena"
 	},
 	HistoricalBuildings = {
-		-218, 1494, "unit-latin-farm",
-		1494, 0, "unit-latin-town-hall"
+		-218, 1494, "farm",
+		1494, 0, "town-hall"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -168,8 +164,8 @@ DefineSettlement("naples", {
 		1494, "sicily" -- Naples was a possession of the Kingdom of the Two Sicilies about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 	},
 	HistoricalBuildings = {
-		-161, 1494, "unit-latin-farm",
-		1494, 0, "unit-latin-town-hall"
+		-161, 1494, "farm",
+		1494, 0, "town-hall"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -185,7 +181,7 @@ DefineSettlement("oderzo", {
 		161, "rome" -- Opitergium was in existence in the 161-180 AD period, and under Roman ownership; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalBuildings = {
-		161, 1815, "unit-latin-town-hall"
+		161, 1815, "town-hall"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -201,7 +197,7 @@ DefineSettlement("paestum", {
 		-273, "rome" -- Paestum founded as a colony in 273 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 	},
 	HistoricalBuildings = {
-		-273, 1494, "unit-latin-farm"
+		-273, 1494, "farm"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -220,9 +216,7 @@ DefineSettlement("piacenza", {
 		1860, "sardinia" -- Placentia became a possession of Sardinia in 1860; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		-218, 1815, "unit-latin-farm",
-		1815, 1860, "unit-teuton-farm",
-		1860, 0, "unit-latin-farm"
+		-218, 0, "farm"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -240,9 +234,9 @@ DefineSettlement("ravenna", {
 		1494, "papal-states" -- Ravenna was a Papal possession about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 	},
 	HistoricalBuildings = {
-		-161, 526, "unit-latin-farm",
-		526, 1494, "unit-teuton-town-hall",
-		1494, 0, "unit-latin-farm"
+		-161, 526, "farm",
+		526, 1494, "town-hall",
+		1494, 0, "farm"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -261,15 +255,9 @@ DefineSettlement("rome", {
 		1494, "papal-states" -- Rome was a Papal possession about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 	},
 	HistoricalBuildings = {
-		-750, 526, "unit-latin-town-hall",
-		-40, 526, "unit-teuton-temple", -- Temple of Jupiter Capitolinus, Temple of Jupiter Victor, Temple of Vesta, Temple of Fortunus and Temple of Aesculapius existed in Rome in c. 40 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 22-23.
-		-40, 526, "unit-teuton-dock", -- Shipyards ("Navalia") existed in Rome in c. 40 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 22-23.
-		526, 1494, "unit-teuton-town-hall",
-		526, 1494, "unit-teuton-temple",
-		526, 1494, "unit-teuton-dock",
-		1494, 0, "unit-latin-town-hall",
-		1494, 0, "unit-teuton-temple",
-		1494, 0, "unit-teuton-dock"
+		-750, 0, "town-hall",
+		-40, 0, "temple", -- Temple of Jupiter Capitolinus, Temple of Jupiter Victor, Temple of Vesta, Temple of Fortunus and Temple of Aesculapius existed in Rome in c. 40 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 22-23.
+		-40, 0, "dock" -- Shipyards ("Navalia") existed in Rome in c. 40 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 22-23.
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -287,10 +275,10 @@ DefineSettlement("trieste", {
 		1719, "austria" -- Trieste was a possession of Karl VI of the Holy Roman Empire (ruler of Austria) in 1719; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 464.
 	},
 	HistoricalBuildings = {
-		-27, 1719, "unit-teuton-dock",
-		1719, 0, "unit-teuton-town-hall", -- Karl VI of the Holy Roman Empire made Trieste a free port ("Freihafen") in 1719; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 464.
-		1719, 0, "unit-teuton-dock", "kaiserliche-privilegierte-orientalische-kompagnie", -- "Kaiserliche privilegierte orientalische Kompagnie" founded in Austria's Adriatic possessions in 1719; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 477.
-		1750, 0, "unit-teuton-dock", "haubt-handlungs-compagnie-von-triest-und-fiume" -- "Haubt-Handlungs-Compagnie von Triest und Fiume" founded in 1750; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 477.
+		-27, 1719, "dock",
+		1719, 0, "town-hall", -- Karl VI of the Holy Roman Empire made Trieste a free port ("Freihafen") in 1719; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 464.
+		1719, 0, "dock", "kaiserliche-privilegierte-orientalische-kompagnie", -- "Kaiserliche privilegierte orientalische Kompagnie" founded in Austria's Adriatic possessions in 1719; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 477.
+		1750, 0, "dock", "haubt-handlungs-compagnie-von-triest-und-fiume" -- "Haubt-Handlungs-Compagnie von Triest und Fiume" founded in 1750; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 477.
 	},
 	HistoricalPopulation = {
 		1758, 6424, -- Trieste's population was 6,424 in 1758; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 466.
@@ -314,8 +302,7 @@ DefineSettlement("venice", {
 		1815, "austria" -- Venice was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		1494, 1815, "unit-latin-town-hall",
-		1815, 0, "unit-teuton-town-hall"
+		1494, 0, "town-hall"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -334,8 +321,8 @@ DefineSettlement("verona", {
 		1815, "austria" -- Verona was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		161, 1815, "unit-latin-farm",
-		1815, 0, "unit-teuton-guard-tower" -- Verona had a fortress in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		161, 1815, "farm",
+		1815, 0, "guard-tower" -- Verona had a fortress in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })

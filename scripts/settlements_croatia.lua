@@ -37,7 +37,7 @@ DefineSettlement("fiume", {
 		1719, "austria" -- Fiume was a possession of Karl VI of the Holy Roman Empire (ruler of Austria) in 1719; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 464.
 	},
 	HistoricalBuildings = {
-		1719, 0, "unit-teuton-town-hall" -- Karl VI of the Holy Roman Empire made Fiume/Rijeka a free port ("Freihafen") in 1719; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 464.
+		1719, 0, "town-hall" -- Karl VI of the Holy Roman Empire made Fiume/Rijeka a free port ("Freihafen") in 1719; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 464.
 	},
 	Regions = {"europe", "west-and-central-europe"}
 })
@@ -53,7 +53,7 @@ DefineSettlement("pola", {
 		1815, "austria" -- Pola was part of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		1815, 0, "unit-teuton-guard-tower" -- Pola had a fortress in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		1815, 0, "guard-tower" -- Pola had a fortress in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	Regions = {"europe", "west-and-central-europe"}
 })

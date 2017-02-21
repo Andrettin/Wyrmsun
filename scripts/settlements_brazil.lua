@@ -51,7 +51,7 @@ DefineSettlement("laguna", {
 		1822, "brazil" -- Brazil became independent in 1822; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
 	},
 	HistoricalBuildings = {
-		1654, 0, "unit-latin-town-hall"
+		1654, 0, "town-hall"
 	},
 	Regions = {"america", "south-america"}
 })
@@ -68,7 +68,7 @@ DefineSettlement("porto-alegre", {
 		1822, "brazil" -- Brazil became independent in 1822; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
 	},
 	HistoricalBuildings = {
-		1740, 0, "unit-latin-town-hall"
+		1740, 0, "town-hall"
 	},
 	Regions = {"america", "south-america"}
 })
@@ -88,9 +88,7 @@ DefineSettlement("recife", {
 		1822, "brazil" -- Brazil became independent in 1822; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
 	},
 	HistoricalBuildings = {
-		1536, 1630, "unit-latin-town-hall",
-		1630, 1655, "unit-teuton-town-hall",
-		1655, 0, "unit-latin-town-hall"
+		1536, 0, "town-hall"
 	},
 	Regions = {"america", "south-america"}
 })
@@ -107,7 +105,7 @@ DefineSettlement("rio-grande", {
 		1822, "brazil" -- Brazil became independent in 1822; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
 	},
 	HistoricalBuildings = {
-		1736, 0, "unit-latin-town-hall"
+		1736, 0, "town-hall"
 	},
 	Regions = {"america", "south-america"}
 })
@@ -125,7 +123,7 @@ DefineSettlement("rio-de-janeiro", {
 		1822, "brazil" -- Brazil became independent in 1822; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
 	},
 	HistoricalBuildings = {
-		1567, 0, "unit-latin-town-hall"
+		1567, 0, "town-hall"
 	},
 	Regions = {"america", "south-america"}
 })
@@ -142,7 +140,7 @@ DefineSettlement("salvador", {
 		1822, "brazil" -- Brazil became independent in 1822; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
 	},
 	HistoricalBuildings = {
-		1549, 0, "unit-latin-town-hall"
+		1549, 0, "town-hall"
 	},
 	Regions = {"america", "south-america"}
 })
@@ -159,7 +157,7 @@ DefineSettlement("sao-paulo", {
 		1822, "brazil" -- Brazil became independent in 1822; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
 	},
 	HistoricalBuildings = {
-		1532, 0, "unit-latin-town-hall"
+		1532, 0, "town-hall"
 	},
 	Regions = {"america", "south-america"}
 })

@@ -40,8 +40,7 @@ DefineSettlement("leidre", {
 		919, "denmark" -- political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalBuildings = {
-		-2800, -27, "unit-germanic-town-hall",
-		-27, 0, "unit-teuton-town-hall"
+		-2800, 0, "town-hall"
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })

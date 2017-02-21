@@ -39,7 +39,7 @@ DefineSettlement("kremnica", {
 		1815, "austria" -- Körmöczbanya/Kremnitz was a part of the Kingdom of Hungary within the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		161, 0, "unit-teuton-town-hall"
+		161, 0, "town-hall"
 	},
 	Regions = {"czechoslovakia", "europe", "west-and-central-europe"}
 })

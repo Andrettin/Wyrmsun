@@ -36,7 +36,7 @@ DefineSettlement("ecbatana", {
 		-750, "mede-tribe" -- Ecbatana was a part of the territory of the Medes in the 750-625 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	},
 	HistoricalBuildings = {
-		-750, 0, "unit-latin-town-hall"
+		-750, 0, "town-hall"
 	},
 	Regions = {"asia"}
 })

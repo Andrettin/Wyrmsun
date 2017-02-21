@@ -40,8 +40,8 @@ DefineSettlement("prague", {
 		1815, "austria" -- Prague was a part of the Austrian province of Bohemia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		-9, 0, "unit-teuton-town-hall",
-		1347, 0, "unit-teuton-temple" -- University founded in Prague in 1347; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		-9, 0, "town-hall",
+		1347, 0, "temple" -- University founded in Prague in 1347; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	Regions = {"cisleithania", "czechoslovakia", "europe", "west-and-central-europe"}
 })
