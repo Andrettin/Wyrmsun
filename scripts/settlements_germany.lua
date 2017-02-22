@@ -165,7 +165,8 @@ DefineSettlement("mainz", {
 	},
 	HistoricalBuildings = {
 		-50, 161, "farm",
-		161, 395, "guard-tower", -- Legionary base present in Mogontiacum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, 0, "stronghold", -- Legionary base present in Mogontiacum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, 0, "barracks",
 		395, 0, "temple" -- Mayence was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		-- Mayence possessed a fortress in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},

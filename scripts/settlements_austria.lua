@@ -41,6 +41,22 @@ DefineSettlement("adelsberg", {
 	Regions = {"cisleithania", "europe", "germany-netherlands", "west-and-central-europe"}
 })
 
+DefineSettlement("bruck", {
+	Name = "Bruck",
+	MapTemplate = "earth",
+	Position = {4183, 972},
+	CulturalNames = {
+		"teuton", "Bruck"
+	},
+	HistoricalOwners = {
+		1815, "austria" -- Bruck (in Styria) was part of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		1815, 0, "farm"
+	},
+	Regions = {"cisleithania", "europe", "germany-netherlands", "west-and-central-europe"}
+})
+
 DefineSettlement("carnuntum", {
 	Name = "Carnuntum",
 	MapTemplate = "earth",
@@ -49,18 +65,51 @@ DefineSettlement("carnuntum", {
 		"latin", "Carnuntum"
 	},
 	HistoricalOwners = {
-		10, "rome", -- Upper Pannonia (where Carnuntum was located) acquired by Rome in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		526, "" -- Carnuntum no longer under Roman control by 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		10, "rome", -- Upper Pannonia (where Carnuntum was located) was acquired by Rome in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		526, "" -- Carnuntum was no longer under Roman control by 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 	},
 	HistoricalBuildings = {
-		10, 161, "farm", -- Upper Pannonia (where Carnuntum was located) acquired by Rome in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		161, 526, "guard-tower" -- Legionary base present in Carnuntum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		10, 161, "farm", -- Upper Pannonia (where Carnuntum was located) was acquired by Rome in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, 526, "stronghold", -- Legionary base present in Carnuntum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, 526, "barracks"
 	},
 	HistoricalUnits = {
 		170, "unit-teuton-swordsman", 20000, "rome", -- a Roman army numbering 20,000 was stationed near Carnuntum in 170 AD, when it was defeated by the Marcomanni and Quadi; Source: "Ancient Warfare VII.6", 2013, p. 29.
 		171, "unit-teuton-swordsman", 0, "rome"
 	},
 	Regions = {"europe", "west-and-central-europe", "roman-danube", "germany-netherlands", "cisleithania"}
+})
+
+DefineSettlement("cilli", {
+	Name = "Cilli",
+	MapTemplate = "earth",
+	Position = {4183, 997},
+	CulturalNames = {
+		"teuton", "Cilli"
+	},
+	HistoricalOwners = {
+		1815, "austria" -- Cilli was part of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		1815, 0, "farm"
+	},
+	Regions = {"cisleithania", "europe", "germany-netherlands", "west-and-central-europe"}
+})
+
+DefineSettlement("gastein", {
+	Name = "Gastein",
+	MapTemplate = "earth",
+	Position = {4135, 977},
+	CulturalNames = {
+		"teuton", "Gastein"
+	},
+	HistoricalOwners = {
+		1815, "austria" -- Gastein was part of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		1815, 0, "farm"
+	},
+	Regions = {"cisleithania", "europe", "germany-netherlands", "west-and-central-europe"}
 })
 
 DefineSettlement("graz", {
@@ -144,6 +193,22 @@ DefineSettlement("ljubljana", {
 	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
 
+DefineSettlement("marburg", {
+	Name = "Marburg",
+	MapTemplate = "earth",
+	Position = {4213, 988},
+	CulturalNames = {
+		"teuton", "Marburg"
+	},
+	HistoricalOwners = {
+		1815, "austria" -- Marburg was part of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		1815, 0, "farm"
+	},
+	Regions = {"cisleithania", "europe", "germany-netherlands", "west-and-central-europe"}
+})
+
 DefineSettlement("salzburg", {
 	Name = "Salzburg",
 	MapTemplate = "earth",
@@ -182,7 +247,8 @@ DefineSettlement("vienna", {
 	},
 	HistoricalBuildings = {
 		10, 161, "farm",
-		161, 526, "guard-tower", -- Legionary base present in Vindobona in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, 526, "stronghold", -- Legionary base present in Vindobona in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, 526, "barracks",
 		955, 0, "town-hall"
 	},
 	Regions = {"europe", "west-and-central-europe", "roman-danube", "germany-netherlands", "cisleithania"}
