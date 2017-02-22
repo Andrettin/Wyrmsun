@@ -164,7 +164,7 @@ DefineSettlement("berothai", {
 DefineSettlement("bethel", {
 	Name = "Bethel",
 	MapTemplate = "earth",
-	Position = {4642, 1316},
+	Position = {4642, 1322},
 	CulturalNames = {
 		"hebrew", "Bethel"
 	},
@@ -585,7 +585,7 @@ DefineSettlement("jezreel", {
 DefineSettlement("joppa", {
 	Name = "Joppa",
 	MapTemplate = "earth",
-	Position = {4629, 1323},
+	Position = {4630, 1320},
 	CulturalNames = {
 		"assyrian", "Joppa",
 		"hebrew", "Joppa",
@@ -753,7 +753,7 @@ DefineSettlement("shechem", {
 DefineSettlement("shiloh", {
 	Name = "Shiloh",
 	MapTemplate = "earth",
-	Position = {4640, 1318},
+	Position = {4640, 1321},
 	CulturalNames = {
 		"hebrew", "Shiloh"
 	},

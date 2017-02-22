@@ -187,3 +187,20 @@ DefineSettlement("vienna", {
 	},
 	Regions = {"europe", "west-and-central-europe", "roman-danube", "germany-netherlands", "cisleithania"}
 })
+
+DefineSettlement("villach", {
+	Name = "Villach",
+	MapTemplate = "earth",
+	Position = {4155, 988},
+	CulturalNames = {
+		"teuton", "Villach"
+	},
+	HistoricalOwners = {
+		1815, "austria" -- Villach was part of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		1815, 0, "farm"
+	},
+	Regions = {"cisleithania", "europe", "germany-netherlands", "west-and-central-europe"}
+})
+
