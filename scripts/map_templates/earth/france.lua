@@ -101,14 +101,6 @@ SetMapTemplateUnit("earth", "unit-teuton-farm", "burgundia", {3955, 994}, 561) -
 SetMapTemplateFactionCulturalSettlementName("earth", "Langres", {3958, 963}, "france")
 SetMapTemplateUnit("earth", "unit-teuton-farm", "burgundia", {3958, 963}, 561) -- Lingones went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
--- Lyon / Lugdunum
-SetMapTemplateCulturalSettlementName("earth", "Lugdunum", {3947, 1006}, "latin") -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-SetMapTemplateFactionCulturalSettlementName("earth", "Lyon", {3947, 1006}, "france")
-SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {3947, 1006}, 161, 395) -- Lugdunum was a Roman provincial capital in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
-SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {3947, 1006}, 395, 486) -- Lyon was a part of the Roman Empire and was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-SetMapTemplateUnit("earth", "unit-teuton-temple", "burgundy", {3947, 1006}, 486, 561) -- Lyon was a part of the Kingdom of the Burgundians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-SetMapTemplateUnit("earth", "unit-teuton-temple", "burgundia", {3947, 1006}, 561) -- Lugdunum went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-
 -- Metz / Mettis
 SetMapTemplateFactionCulturalSettlementName("earth", "Metz", {3981, 931}, "france")
 SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {3981, 931}, 395, 486) -- Metz was a part of the Roman Empire and was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.

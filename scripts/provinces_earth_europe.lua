@@ -25,118 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineProvince("Abruzzo", {
-	World = "Earth",
-	CulturalNames = {
-		"latin", "Samnium" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-	},
-	Tiles = {
-		{517, 134}, {517, 135},
-		{518, 134}, {518, 135}, {518, 136},
-		{519, 134}, {519, 135}, {519, 136},
-		{520, 135}, {520, 136}, {520, 137},
-		{521, 136}, {521, 137},
-		{522, 137}
-	},
-	SettlementLocation = {518, 135}, -- L'Aquila
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
-	Coastal = true,
-	Regions = {"europe", "italy", "west-and-central-europe"}
-})
-
-DefineProvince("Aetolia", {
-	World = "Earth",
-	Tiles = {
-		{539, 145},
-		{540, 145}, {540, 146},
-		{541, 145},
-		{542, 145},
-		{543, 145},
-		{544, 145}
-	},
-	CulturalNames = {
-		"greek", "Aetolia"
-	},
-	SettlementLocation = {541, 145}, -- Naupactus
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
-	Coastal = true,
-	HistoricalSettlementBuildings = {
-		-1700, "unit-teuton-stronghold", true, -- Mycenaean fortifications present in Krisa (in Locris Ozolis) between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
-		-1190, "unit-teuton-stronghold", false -- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
-	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
-})
-
-DefineProvince("Agder", {
-	World = "Earth",
-	Tiles = {
-		{499, 88}, {499, 89}, {499, 90},
-		{500, 86}, {500, 87}, {500, 88}, {500, 89}, {500, 90},
-		{501, 86}, {501, 87}, {501, 88}, {501, 89}, {501, 90},
-		{502, 88}, {502, 89}, {502, 90},
-		{503, 88}, {503, 89}, {503, 90},
-		{504, 88}, {504, 89},
-		{505, 88}
-	},
-	CulturalNames = {
-		"norse", "Agder"
-	},
-	SettlementLocation = {504, 89}, -- Arendal
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
-	Coastal = true,
-	Claims = {
-		"norse", "norway"
-	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
-})
-
-DefineProvince("Akershus", {
-	World = "Earth",
-	Tiles = {
-		{510, 85}, {510, 86},
-		{511, 84}, {511, 85},
-		{512, 84}, {512, 85},
-		{513, 85}
-	},
-	CulturalNames = {
-		"norse", "Akershus"
-	},
-	SettlementLocation = {510, 85}, -- Oslo
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
-	Coastal = true,
-	Claims = {
-		"norse", "norway"
-	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
-})
-
-DefineProvince("Albania", {
-	World = "Earth",
-	Tiles = {
---		{134, 33}, {134, 34}, -- old map
-		{535, 136}, {535, 138}, {535, 139}, {535, 140}, {535, 141},
-		{536, 135}, {536, 136}, {536, 137}, {536, 138}, {536, 139}, {536, 140}, {536, 141},
-		{537, 135}, {537, 136}, {537, 137}, {537, 138}, {537, 139}, {537, 140}, {537, 141}, {537, 142},
-		{538, 136}, {538, 139}, {538, 140}, {538, 141},
-		{539, 140}
-	},
-	CulturalNames = {
-		"illyrian", "Taulantia",
-		"latin", "Taulantia"
-	},
-	SettlementLocation = {536, 138}, -- Tirana
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
-	Claims = {
-		"illyrian", "taulantii-tribe"
-	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
-})
-
 DefineProvince("Alentejo", {
 	World = "Earth",
 	FactionCulturalNames = {
@@ -203,9 +91,6 @@ DefineProvince("Alsace", {
 	HistoricalCultures = {
 		-54, "celt",
 		481, "teuton"
-	},
-	HistoricalSettlementBuildings = {
-		161, "unit-latin-barracks", true -- Legionary base present in Argentorate in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalModifiers = {
 		1618, "upgrade-university", true, -- University founded in Molsheim in 1618; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
@@ -3865,10 +3750,6 @@ DefineProvince("Lower Austria", {
 		-5500, "basque",
 		-800, "celt"
 	},
-	HistoricalSettlementBuildings = {
-		161, "unit-latin-barracks", true, -- Legionary base present in Vindobona in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		161, "unit-latin-barracks", true -- Legionary base present in Carnuntum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
 	HistoricalModifiers = {
 		1365, "upgrade-university", true, -- University founded in Vienna in 1365; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 --		1815, "upgrade-college", true -- Imperial Polytechnic Institute of Vienna founded in 1815; Source: Silvia Fernanda de Mendonça Figueirôa, "Ciência e tecnologia no Brasil Imperial: Guilherme Schüch, Barão de Capanema (1824-1908)", 2005, p. 442.
@@ -3928,12 +3809,9 @@ DefineProvince("Lower Rhine", {
 		"teuton", "holy-rome"
 	},
 	HistoricalSettlementBuildings = {
-		161, "unit-latin-barracks", true, -- Legionary base present in a location near Colonia Agrippina in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		161, "unit-latin-barracks", true, -- Legionary base present in the area in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		161, "unit-latin-barracks", true, -- Legionary base present (apparently) between the Meuse and Rhine rivers in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		768, "unit-teuton-temple", true, -- Monastery or abbey existent in Prüm during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-		768, "unit-teuton-temple", true, -- Archbishopric existent in Cologne during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-		768, "unit-teuton-temple", true -- Archbishopric existent in Trier during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		768, "unit-teuton-temple", true -- Monastery or abbey existent in Prüm during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
 		1388, "upgrade-university", true, -- University founded in Cologne in 1388; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
@@ -4000,9 +3878,6 @@ DefineProvince("Lyonnais", {
 	},
 	HistoricalClaims = {
 		-50, "latin", "rome"
-	},
-	HistoricalSettlementBuildings = {
-		768, "unit-teuton-temple", true -- Archbishopric existent in Lyon during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
 		1330, "upgrade-university", true, -- University founded in Lyon in 1330; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
@@ -4959,9 +4834,6 @@ DefineProvince("Palatinate", {
 	Claims = {
 		"teuton", "franconia", -- Part of the Duchy of Franconia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		"teuton", "holy-rome"
-	},
-	HistoricalSettlementBuildings = {
-		161, "unit-latin-barracks", true -- Legionary base present in Mogontiacum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalModifiers = {
 		1476, "upgrade-university", true, -- University founded in Mainz in 1476; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.

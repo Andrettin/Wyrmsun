@@ -25,6 +25,27 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSettlement("lyon", {
+	Name = "Lyon",
+	MapTemplate = "earth",
+	Position = {3947, 1006},
+	CulturalNames = {
+--		"french", "Lyon",
+		"latin", "Lugdunum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	HistoricalOwners = {
+		161, "rome", -- Lugdunum was a Roman provincial capital in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		486, "burgundy", -- Lyon was a part of the Kingdom of the Burgundians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		561, "burgundia" -- Lugdunum went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		161, 0, "town-hall",
+		395, 0, "temple" -- Lyon was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		-- Archbishopric existent in Lyon during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
 DefineSettlement("marseilles", {
 	Name = "Marseilles",
 	MapTemplate = "earth",
