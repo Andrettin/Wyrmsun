@@ -260,6 +260,42 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-flag-blue-skull-on-light-blue",
+	Size = {46, 38},
+	File = "goblin/icons/flag_blue_skull_on_light_blue.png"
+})
+
+DefineIcon({
+	Name = "icon-flag-brown-skull-on-red",
+	Size = {46, 38},
+	File = "goblin/icons/flag_brown_skull_on_red.png"
+})
+
+DefineIcon({
+	Name = "icon-flag-green-skull-on-purple",
+	Size = {46, 38},
+	File = "goblin/icons/flag_green_skull_on_purple.png"
+})
+
+DefineIcon({
+	Name = "icon-flag-orange-skull-on-teal",
+	Size = {46, 38},
+	File = "goblin/icons/flag_orange_skull_on_teal.png"
+})
+
+DefineIcon({
+	Name = "icon-flag-purple-skull-on-green",
+	Size = {46, 38},
+	File = "goblin/icons/flag_purple_skull_on_green.png"
+})
+
+DefineIcon({
+	Name = "icon-flag-red-skull-on-yellow",
+	Size = {46, 38},
+	File = "goblin/icons/flag_red_skull_on_yellow.png"
+})
+
+DefineIcon({
 	Name = "icon-agniss",
 	Size = {46, 38},
 	File = "goblin/icons/agniss.png"

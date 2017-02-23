@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineButton( { Pos = 1, Level = 2, Icon = "icon-flag-black-skull-on-white",
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-flag-orange-skull-on-teal",
 	Action = "research", Value = "upgrade-faction-aurvang",
 	Allowed = "check-single-research",
 	Key = "a", Hint = "Found ~!Aurvang", Popup = "popup-research",
@@ -33,7 +33,7 @@ DefineButton( { Pos = 1, Level = 2, Icon = "icon-flag-black-skull-on-white",
 	ForUnit = {"unit-goblin-town-hall", "unit-goblin-stronghold"}
 } )
 
-DefineButton( { Pos = 2, Level = 2, Icon = "icon-flag-black-skull-on-white",
+DefineButton( { Pos = 2, Level = 2, Icon = "icon-flag-green-skull-on-purple",
 	Action = "research", Value = "upgrade-faction-ezmarria",
 	Allowed = "check-single-research",
 	Key = "e", Hint = "Found ~!Ezmarria", Popup = "popup-research",
@@ -41,7 +41,7 @@ DefineButton( { Pos = 2, Level = 2, Icon = "icon-flag-black-skull-on-white",
 	ForUnit = {"unit-goblin-town-hall", "unit-goblin-stronghold"}
 } )
 
-DefineButton( { Pos = 3, Level = 2, Icon = "icon-flag-black-skull-on-white",
+DefineButton( { Pos = 3, Level = 2, Icon = "icon-flag-blue-skull-on-light-blue",
 	Action = "research", Value = "upgrade-faction-myridia",
 	Allowed = "check-single-research",
 	Key = "m", Hint = "Found ~!Myridia", Popup = "popup-research",
@@ -49,7 +49,7 @@ DefineButton( { Pos = 3, Level = 2, Icon = "icon-flag-black-skull-on-white",
 	ForUnit = {"unit-goblin-town-hall", "unit-goblin-stronghold"}
 } )
 
-DefineButton( { Pos = 4, Level = 2, Icon = "icon-flag-black-skull-on-white",
+DefineButton( { Pos = 4, Level = 2, Icon = "icon-flag-purple-skull-on-green",
 	Action = "research", Value = "upgrade-faction-stilgar",
 	Allowed = "check-single-research",
 	Key = "s", Hint = "Found ~!Stilgar", Popup = "popup-research",
