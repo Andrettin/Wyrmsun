@@ -33,5 +33,6 @@ DefineDeity("christian-god", {
 	Gender = "male",
 	Major = true,
 --	Icon = "icon-christianity",
-	Domains = {"charity", "faith", "hope"}
+	Domains = {"charity", "faith", "hope"},
+	HolyOrders = {"cistercian-order"}
 })

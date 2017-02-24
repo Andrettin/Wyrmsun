@@ -223,6 +223,10 @@ DefineUpgrade("upgrade-printing-press", {
 
 -- Faction Type Upgrades
 
+DefineUpgrade("upgrade-holy-order", {
+	Name = "Holy Order"
+})
+
 DefineUpgrade("upgrade-mercenary-company", {
 	Name = "Mercenary Company"
 })
@@ -230,6 +234,40 @@ DefineUpgrade("upgrade-mercenary-company", {
 DefineUpgrade("upgrade-trading-company", {
 	Name = "Trading Company"
 })
+
+DefineModifier("upgrade-holy-order", -- holy orders' temples produce food, to allow them to train units despite not having farms
+	{"Supply", 4},
+	{"apply-to", "unit-germanic-temple"}, {"apply-to", "unit-teuton-temple"},
+	{"apply-to", "unit-dwarven-temple"},
+	{"apply-to", "unit-goblin-temple"}
+)
+
+DefineModifier("upgrade-holy-order", -- holy orders' temples "regenerate", since they aren't supposed to have workers to repair them
+	{"HitPoints", 1, "Increase"},
+	{"apply-to", "unit-germanic-temple"}, {"apply-to", "unit-teuton-temple"},
+	{"apply-to", "unit-dwarven-temple"},
+	{"apply-to", "unit-goblin-temple"}
+)
+
+DefineModifier("upgrade-holy-order", -- holy orders' temples have a unit stock for priests
+	{"unit-stock", "unit-germanic-priest", 2},
+	{"apply-to", "unit-germanic-temple"}
+)
+
+DefineModifier("upgrade-holy-order", -- holy orders' temples have a unit stock for priests
+	{"unit-stock", "unit-teuton-priest", 2},
+	{"apply-to", "unit-teuton-temple"}
+)
+
+DefineModifier("upgrade-holy-order", -- holy orders' temples have a unit stock for priests
+	{"unit-stock", "unit-dwarven-witness", 2},
+	{"apply-to", "unit-dwarven-temple"}
+)
+
+DefineModifier("upgrade-holy-order", -- holy orders' temples have a unit stock for priests
+	{"unit-stock", "unit-goblin-shaman", 2},
+	{"apply-to", "unit-goblin-temple"}
+)
 
 DefineModifier("upgrade-mercenary-company", -- mercenary companies' mercenary camps produce food, to allow them to train units despite not having farms
 	{"Supply", 8},
