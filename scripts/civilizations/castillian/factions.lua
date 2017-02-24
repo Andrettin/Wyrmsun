@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016 by Andrettin
+--      (c) Copyright 2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,57 +25,42 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineWorldMapTile({528, 118}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"slav", "Bratislava",
-		"teuton", "Presburg"
-	}
+DefineFaction("argentina", {
+	Name = "Argentina",
+	Civilization = "castillian",
+	Type = "polity",
+	Colors = {"cyan", "white"},
+	DefaultTier = "kingdom" -- had the status of viceroyalty
 })
 
-DefineWorldMapTile({534, 120}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Aquincum",
-		"magyar", "Buda"
-	}
+DefineFaction("castille", {
+	Name = "Castille",
+	Civilization = "castillian",
+	Type = "polity",
+	Colors = {"yellow", "red"},
+	DefaultTier = "kingdom"
 })
 
-DefineWorldMapTile({535, 120}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"magyar", "Pest"
-	}
+DefineFaction("paraguay", {
+	Name = "Paraguay",
+	Civilization = "castillian",
+	Type = "polity",
+	Colors = {"blue", "red"},
+	DefaultTier = "duchy"
 })
 
-DefineWorldMapTile({536, 127}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"slav", "Novi Sad",
-		"teuton", "Neusatz"
-	}
+DefineFaction("spain", {
+	Name = "Spain",
+	Civilization = "castillian",
+	Type = "polity",
+	Colors = {"yellow", "red"},
+	DefaultTier = "kingdom"
 })
 
-DefineWorldMapTile({545, 122}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Klausenburg"
-	},
-	FactionCulturalSettlementNames = {
-		"romanian", "romania", "Cluj"
-	}
-})
-
-DefineWorldMapTile({545, 126}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Sarmizegetusa" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	}
-})
-
-DefineWorldMapTile({547, 125}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Apulum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	}
+DefineFaction("uruguay", {
+	Name = "Uruguay",
+	Civilization = "castillian",
+	Type = "polity",
+	Colors = {"cyan", "white"},
+	DefaultTier = "duchy"
 })

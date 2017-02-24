@@ -30,7 +30,7 @@ DefineSettlement("asuncion", {
 	MapTemplate = "earth",
 	Position = {2527, 2634},
 	CulturalNames = {
---		"castillian", "Asuncion" -- "Asunción"
+		"castillian", "Asuncion" -- "Asunción"
 	},
 	HistoricalOwners = {
 		1536, "spain", -- Asunción was founded in 1536; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
@@ -47,7 +47,7 @@ DefineSettlement("bahia-blanca", {
 	MapTemplate = "earth",
 	Position = {2418, 2928},
 	CulturalNames = {
---		"castillian", "Bahia Blanca"
+		"castillian", "Bahia Blanca"
 	},
 	HistoricalOwners = {
 		1863, "argentina" -- Bahia Blanca was founded in 1863; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
@@ -63,7 +63,7 @@ DefineSettlement("buenos-aires", {
 	MapTemplate = "earth",
 	Position = {2510, 2835},
 	CulturalNames = {
---		"castillian", "Buenos Aires"
+		"castillian", "Buenos Aires"
 	},
 	HistoricalOwners = {
 		1535, "spain", -- Buenos Ayres was founded by the Spanish in 1535/1580; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 107-110.
@@ -80,7 +80,7 @@ DefineSettlement("corrientes", {
 	MapTemplate = "earth",
 	Position = {2501, 2673},
 	CulturalNames = {
---		"castillian", "Corrientes"
+		"castillian", "Corrientes"
 	},
 	HistoricalOwners = {
 		1588, "spain", -- Corrientes was founded in 1588; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
@@ -97,7 +97,7 @@ DefineSettlement("montevideo", {
 	MapTemplate = "earth",
 	Position = {2561, 2842},
 	CulturalNames = {
---		"castillian", "Montevideo"
+		"castillian", "Montevideo"
 	},
 	HistoricalOwners = {
 		1723, "spain", -- Montevideo was founded in 1723; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
@@ -116,7 +116,7 @@ DefineSettlement("santa-fe", {
 	MapTemplate = "earth",
 	Position = {2457, 2768},
 	CulturalNames = {
---		"castillian", "Santa Fe" -- "Santa Fé"
+		"castillian", "Santa Fe" -- "Santa Fé"
 	},
 	HistoricalOwners = {
 		1573, "spain", -- Santa Fé was founded in 1573; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.

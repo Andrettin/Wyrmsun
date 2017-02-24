@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2017 by Andrettin
+--      (c) Copyright 2015-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,45 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("argentina", {
-	Name = "Argentina",
-	Civilization = "latin",
-	Type = "polity",
-	Colors = {"cyan", "white"},
-	DefaultTier = "kingdom" -- had the status of viceroyalty
-})
-
-DefineFaction("castille", {
-	Name = "Castille",
-	Civilization = "latin",
-	Type = "polity",
-	Colors = {"yellow", "red"},
-	DefaultTier = "kingdom"
-})
-
-DefineFaction("paraguay", {
-	Name = "Paraguay",
-	Civilization = "latin",
-	Type = "polity",
-	Colors = {"blue", "red"},
-	DefaultTier = "duchy"
-})
-
-DefineFaction("spain", {
-	Name = "Spain",
-	Civilization = "latin",
-	Type = "polity",
-	Colors = {"yellow", "red"},
-	DefaultTier = "kingdom",
-	SettlementNames = {
-		"Burgos" -- the Spanish town of Burgos; Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
-	}
-})
-
-DefineFaction("uruguay", {
-	Name = "Uruguay",
-	Civilization = "latin",
-	Type = "polity",
-	Colors = {"cyan", "white"},
-	DefaultTier = "duchy"
+DefineCharacter("geofrei-gaimar", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 76.
+	Name = "Geofrei",
+	FamilyName = "Gaimar", -- was that actually his family name?
+	Gender = "male",
+	Type = "unit-teuton-priest", -- since he is a writer, this seemed like the closest unit type
+	Civilization = "french",
+	Faction = "france",
+	ProvinceOfOrigin = "France", -- accurate?
+	Year = 1135 -- composed Estoire des Anglais c. 1135-1140 AD
 })

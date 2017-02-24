@@ -31,14 +31,14 @@ DefineWorldMapTile({456, 132}, {
 		"latin", "Lucus Augusti"
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "spain", "Corunna"
+		"castillian", "spain", "Corunna"
 	}
 })
 
 DefineWorldMapTile({463, 132}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"latin", "spain", "Oviedo"
+		"castillian", "spain", "Oviedo"
 	}
 })
 
@@ -48,14 +48,14 @@ DefineWorldMapTile({464, 134}, {
 		"latin", "Castra Legionis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "spain", "León" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
+		"castillian", "spain", "León" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
 	}
 })
 
 DefineWorldMapTile({464, 141}, {
 	World = "Earth",
 	FactionCulturalTerrainNames = {
-		"Mountains", "latin", "spain", "Pico Almanzor" -- Source: "Philip's International School Atlas", 2006, p. 69
+		"Mountains", "castillian", "spain", "Pico Almanzor" -- Source: "Philip's International School Atlas", 2006, p. 69
 	}
 })
 
@@ -65,7 +65,7 @@ DefineWorldMapTile({466, 148}, {
 		"latin", "Corduba" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "spain", "Córdova" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
+		"castillian", "spain", "Córdova" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
 	}
 })
 
@@ -75,7 +75,7 @@ DefineWorldMapTile({467, 151}, {
 		"latin", "Malaca" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "spain", "Málaga" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
+		"castillian", "spain", "Málaga" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
 	}
 })
 
@@ -85,7 +85,7 @@ DefineWorldMapTile({468, 142}, {
 		"latin", "Toletum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "spain", "Toledo" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
+		"castillian", "spain", "Toledo" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
 	}
 })
 
@@ -95,14 +95,14 @@ DefineWorldMapTile({469, 141}, {
 		"latin", "Complutum"
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "spain", "Madrid"
+		"castillian", "spain", "Madrid"
 	}
 })
 
 DefineWorldMapTile({470, 150}, {
 	World = "Earth",
 	FactionCulturalTerrainNames = {
-		"Mountains", "latin", "spain", "Mulhacén" -- Source: "Philip's International School Atlas", 2006, p. 69
+		"Mountains", "castillian", "spain", "Mulhacén" -- Source: "Philip's International School Atlas", 2006, p. 69
 	}
 })
 
@@ -112,7 +112,7 @@ DefineWorldMapTile({477, 137}, {
 		"latin", "Caesaraugusta"
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "spain", "Zaragoza"
+		"castillian", "spain", "Zaragoza"
 	}
 })
 
@@ -122,14 +122,14 @@ DefineWorldMapTile({478, 144}, {
 		"latin", "Valentia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "spain", "Valencia" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
+		"castillian", "spain", "Valencia" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
 	}
 })
 
 DefineWorldMapTile({481, 135}, {
 	World = "Earth",
 	FactionCulturalTerrainNames = {
-		"Mountains", "latin", "spain", "Monte Perdido" -- Source: "Philip's International School Atlas", 2006, p. 69
+		"Mountains", "castillian", "spain", "Monte Perdido" -- Source: "Philip's International School Atlas", 2006, p. 69
 	}
 })
 
@@ -139,7 +139,7 @@ DefineWorldMapTile({483, 138}, {
 		"latin", "Tarraco" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "spain", "Tarragona" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
+		"castillian", "spain", "Tarragona" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
 	}
 })
 
@@ -149,6 +149,6 @@ DefineWorldMapTile({487, 143}, {
 		"latin", "Palma" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "spain", "Palma" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
+		"castillian", "spain", "Palma" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
 	}
 })

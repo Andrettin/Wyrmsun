@@ -30,7 +30,7 @@ DefineSettlement("florianopolis", {
 	MapTemplate = "earth",
 	Position = {2732, 2674}, -- is actually in the island of Santa Catharina, but there's not enough space there for a settlement
 	CulturalNames = {
---		"portuguese", "Florianopolis" -- Florianopolis/Desterro
+		"portuguese", "Florianopolis" -- Florianopolis/Desterro
 	},
 	HistoricalOwners = {
 	},
@@ -44,7 +44,7 @@ DefineSettlement("laguna", {
 	MapTemplate = "earth",
 	Position = {2664, 2756},
 	CulturalNames = {
---		"portuguese", "Laguna"
+		"portuguese", "Laguna"
 	},
 	HistoricalOwners = {
 		1654, "portugal", -- Laguna was founded in 1654; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
@@ -61,7 +61,7 @@ DefineSettlement("porto-alegre", {
 	MapTemplate = "earth",
 	Position = {2675, 2733},
 	CulturalNames = {
---		"portuguese", "Porto Alegre"
+		"portuguese", "Porto Alegre"
 	},
 	HistoricalOwners = {
 		1740, "portugal", -- Porto Alegre was founded in 1740; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
@@ -79,7 +79,7 @@ DefineSettlement("recife", {
 	Position = {3046, 2224},
 	CulturalNames = {
 --		"dutch", "Mauritsstad", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 128.
---		"portuguese", "Recife"
+		"portuguese", "Recife"
 	},
 	HistoricalOwners = {
 		1536, "portugal", -- Recife was founded in 1536/1561; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
@@ -98,7 +98,7 @@ DefineSettlement("rio-grande", {
 	MapTemplate = "earth",
 	Position = {2652, 2779},
 	CulturalNames = {
---		"portuguese", "Rio Grande"
+		"portuguese", "Rio Grande"
 	},
 	HistoricalOwners = {
 		1736, "portugal", -- Rio Grande/S. Pedro was founded in 1736; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
@@ -115,8 +115,8 @@ DefineSettlement("rio-de-janeiro", {
 	MapTemplate = "earth",
 	Position = {2856, 2569},
 	CulturalNames = {
---		"french", "Henriville",
---		"portuguese", "Rio de Janeiro"
+		"french", "Henriville",
+		"portuguese", "Rio de Janeiro"
 	},
 	HistoricalOwners = {
 		1567, "portugal", -- Rio de Janeiro was founded by the Portuguese in 1516/1567; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 107-110.
@@ -133,7 +133,7 @@ DefineSettlement("salvador", {
 	MapTemplate = "earth",
 	Position = {2964, 2343},
 	CulturalNames = {
---		"portuguese", "Salvador"
+		"portuguese", "Salvador"
 	},
 	HistoricalOwners = {
 		1549, "portugal", -- Salvador was founded by the Portuguese in 1549; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 107-110, 214-215.
@@ -150,7 +150,7 @@ DefineSettlement("sao-paulo", {
 	MapTemplate = "earth",
 	Position = {2752, 2583},
 	CulturalNames = {
---		"portuguese", "Sao Paulo" -- "São Paulo"
+		"portuguese", "Sao Paulo" -- "São Paulo"
 	},
 	HistoricalOwners = {
 		1532, "portugal", -- São Paulo was founded in 1532/1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.

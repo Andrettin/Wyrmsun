@@ -1998,6 +1998,8 @@ end
 function GetCivilizationBackground(civilization)
 	if (civilization == "basque") then
 		return "ui/backgrounds/gryphon.png"
+	elseif (civilization == "castillian" or civilization == "french" or civilization == "italian" or civilization == "latin" or civilization == "portuguese" or civilization == "romanian") then
+		return "ui/backgrounds/gryphon.png"
 	elseif (civilization == "dwarf") then
 		return "ui/backgrounds/yale.png"
 	elseif (civilization == "elf") then
@@ -2019,8 +2021,6 @@ function GetCivilizationBackground(civilization)
 	elseif (civilization == "kobold") then
 		return "ui/backgrounds/wyrm.png"
 	elseif (civilization == "illyrian") then
-		return "ui/backgrounds/gryphon.png"
-	elseif (civilization == "latin") then
 		return "ui/backgrounds/gryphon.png"
 	elseif (civilization == "minoan") then
 		return "ui/backgrounds/gryphon.png"

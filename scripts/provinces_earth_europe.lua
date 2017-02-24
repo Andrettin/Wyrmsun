@@ -28,7 +28,7 @@
 DefineProvince("Alentejo", {
 	World = "Earth",
 	FactionCulturalNames = {
-		"latin", "portugal", "Alentejo"
+		"portuguese", "portugal", "Alentejo"
 	},
 	Tiles = {
 		{454, 145}, {454, 146},
@@ -43,12 +43,12 @@ DefineProvince("Alentejo", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
---		"latin", "portugal"
+--		"portuguese", "portugal"
 	},
 	HistoricalOwners = {
 		-138, "latin", "rome", -- Lusitania acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		486, "goth", "visigothia", -- Alentejo was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		1560, "latin", "portugal" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "portuguese", "portugal" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
 		-138, "latin", "rome"
@@ -106,8 +106,8 @@ DefineProvince("Andalusia", {
 		"latin", "Farther Baetica"
 	},
 	FactionCulturalNames = {
-		"latin", "portugal", "Andalusia",
-		"latin", "spain", "Andalusia"
+		"portuguese", "portugal", "Andalusia",
+		"castillian", "spain", "Andalusia"
 	},
 	Tiles = {
 --		{115, 37}, {116, 36}, {116, 37}, {117, 36}, {117, 37}, {118, 37}, -- old map
@@ -139,7 +139,7 @@ DefineProvince("Andalusia", {
 		-218, "phoenician", "carthage", -- Carthaginian territory in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 32.
 		-197, "latin", "rome", -- Hispania Tarraconensis and (most of) Farther Baetica acquired by Rome in 197 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		486, "goth", "visigothia", -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		1560, "latin", "spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "castillian", "spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
 		-197, "latin", "rome"
@@ -188,7 +188,7 @@ DefineProvince("Aquitaine", {
 		"latin", "Aquitania",
 	},
 	FactionCulturalNames = {
-		"latin", "france", "Aquitaine"
+		"french", "france", "Aquitaine"
 	},
 	Tiles = {
 --		{119, 31}, {119, 32}, {119, 33}, {120, 31}, {120, 32}, {120, 33}, {121, 31}, {121, 32}, {121, 33}, {122, 32}, -- old map
@@ -217,7 +217,7 @@ DefineProvince("Aquitaine", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"celt", "arverni-tribe"
---		"latin", "France"
+--		"french", "France"
 	},
 	HistoricalOwners = {
 		-- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
@@ -226,7 +226,7 @@ DefineProvince("Aquitaine", {
 		-50, "latin", "rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		412, "goth", "visigoth-tribe", -- The Visigoths migrated to Aquitaine in 412 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		507, "frankish", "francia", -- political situation in 507-534 in Europe; Aquitania conquered by the Franks in 507; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-		1560, "latin", "france" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "french", "france" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
 		-50, "latin", "rome",
@@ -265,8 +265,8 @@ DefineProvince("Aragon", {
 		"latin", "Hither Baetica"
 	},
 	FactionCulturalNames = {
-		"latin", "portugal", "Aragon",
-		"latin", "spain", "Aragon"
+		"portuguese", "portugal", "Aragon",
+		"castillian", "spain", "Aragon"
 	},
 	Tiles = {
 --		{119, 34}, {119, 35}, {119, 36}, {120, 34}, {121, 34}, -- old map
@@ -298,7 +298,7 @@ DefineProvince("Aragon", {
 		-7000, "basque", "cardialware-tribe", -- Cardial Pottery culture existed in the eastern Iberian coast between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
 		-201, "latin", "rome", -- Hither Baetica acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		486, "goth", "visigothia", -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		1560, "latin", "spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "castillian", "spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
 		-7000, "basque" -- Cardial Pottery culture existed in the eastern Iberian coast between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
@@ -413,7 +413,7 @@ DefineProvince("Astrakhan", {
 DefineProvince("Asturias", {
 	World = "Earth",
 	FactionCulturalNames = {
-		"latin", "spain", "Asturias"
+		"castillian", "spain", "Asturias"
 	},
 	Tiles = {
 		{459, 132},
@@ -438,7 +438,7 @@ DefineProvince("Asturias", {
 	HistoricalOwners = {
 		-264, "celt", "cantabri-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		17, "latin", "rome", -- Asturias acquired by Rome in 17 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		1560, "latin", "spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "castillian", "spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
 		-264, "celt"
@@ -599,7 +599,7 @@ DefineProvince("Bavaria", {
 DefineProvince("Beira", {
 	World = "Earth",
 	FactionCulturalNames = {
-		"latin", "portugal", "Beira"
+		"portuguese", "portugal", "Beira"
 	},
 	Tiles = {
 		{453, 144}, {453, 145},
@@ -615,13 +615,13 @@ DefineProvince("Beira", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
---		"latin", "portugal"
+--		"portuguese", "portugal"
 	},
 	HistoricalOwners = {
 		-138, "latin", "rome", -- Lusitania acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		450, "suebi", "suebi-tribe", -- The Suebi were in possession of most of modern Portugal (pretty much everything up to the Tagus river) by around 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
 		486, "goth", "visigothia", -- Portugal up to the Tagus river was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		1560, "latin", "portugal" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "portuguese", "portugal" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
 		-138, "latin", "rome"
@@ -663,7 +663,7 @@ DefineProvince("Belgium", {
 		450, "frankish", "frank-tribe", -- Frankish territory in 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
 		481, "frankish", "francia", -- Frankish territory in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		919, "teuton", "holy-rome", -- Duchy of Lower Lorraine; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-		1560, "latin", "spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "castillian", "spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
 		-50, "latin", "rome",
@@ -681,7 +681,7 @@ DefineProvince("Belgium", {
 DefineProvince("Berry", {
 	World = "Earth",
 	FactionCulturalNames = {
-		"latin", "france", "Berry" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		"french", "france", "Berry" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	Tiles = {
 		{484, 122}, {484, 123},
@@ -694,7 +694,7 @@ DefineProvince("Berry", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
---		"latin", "france"
+--		"french", "france"
 	},
 	HistoricalOwners = {
 		-50, "latin", "rome" -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -734,7 +734,7 @@ DefineProvince("Bessarabia", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"goth", "bastarnae-tribe"
---		"latin", "moldavia"
+--		"romanian", "moldavia"
 	},
 	HistoricalOwners = {
 		-336, "persian", "scythian-tribe", -- Macedonian Empire and environs in 336-323 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
@@ -742,7 +742,7 @@ DefineProvince("Bessarabia", {
 		161, "goth", "bastarnae-tribe", -- The area was inhabited by the Bastarnae (and the Costoboci to the north) in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		200, "goth", "visigoth-tribe", -- The western goths had migrated to the area of modern Romania / ancient Dacia in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		397, "", "", -- The Visigoths migrated to the Western Balkans in 397 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-		1560, "latin", "moldavia" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "romanian", "moldavia" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
 		-336, "persian", "scythian-tribe"
@@ -986,7 +986,7 @@ DefineProvince("Brittany", {
 		"latin", "Armorica"
 	},
 	FactionCulturalNames = {
-		"latin", "france", "Brittany"
+		"french", "france", "Brittany"
 	},
 	SettlementLocation = {475, 119}, -- Rennes
 	Map = "maps/random/random-map-forest.smp",
@@ -1051,7 +1051,7 @@ DefineProvince("Bukowina", {
 	},
 	HistoricalOwners = {
 		161, "thracian", "costoboci-tribe", -- The area was inhabited by the Costoboci in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		1560, "latin", "moldavia" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "romanian", "moldavia" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
 		161, "thracian"
@@ -1101,7 +1101,7 @@ DefineProvince("Bulgaria", {
 DefineProvince("Burgundy", {
 	World = "Earth",
 	FactionCulturalNames = {
-		"latin", "france", "Bourgogne"
+		"french", "france", "Bourgogne"
 	},
 	Tiles = {
 --		{123, 31}, {123, 32}, {124, 30}, {124, 31}, {124, 32}, -- old map
@@ -1117,14 +1117,14 @@ DefineProvince("Burgundy", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"celt", "aedui-tribe"
---		"latin", "france"
+--		"french", "france"
 	},
 	HistoricalOwners = {
 		-- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
 		-- The Aedui inhabited modern Bourgogne; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		-71, "celt", "aedui-tribe",
 		-50, "latin", "rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		919, "latin", "france" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		919, "french", "france" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalClaims = {
 		-50, "latin", "rome"
@@ -1144,7 +1144,7 @@ DefineProvince("Calabria", {
 		"latin", "Brutium" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 30-31.
 	},
 	FactionCulturalNames = {
-		"latin", "italy", "Calabria"
+		"italian", "italy", "Calabria"
 	},
 	Tiles = {
 		{525, 142}, {525, 143}, {525, 146}, {525, 147},
@@ -1220,8 +1220,8 @@ DefineProvince("Castille", {
 		"latin", "Hispania Tarraconensis"
 	},
 	FactionCulturalNames = {
-		"latin", "portugal", "Castille",
-		"latin", "spain", "Castille"
+		"portuguese", "portugal", "Castille",
+		"castillian", "spain", "Castille"
 	},
 	Tiles = {
 --		{115, 34}, {115, 35}, {115, 36}, {116, 33}, {116, 34}, {116, 35}, {117, 33}, {117, 34}, {117, 35}, {118, 33}, {118, 34}, {118, 35}, {118, 36}, -- old map
@@ -1252,7 +1252,7 @@ DefineProvince("Castille", {
 		-- Interior "mesetas" of Iberia settled by farmers c. 4000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 157.
 		-197, "latin", "rome", -- Hispania Tarraconensis and (most of) Farther Baetica acquired by Rome in 197 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		486, "goth", "visigothia", -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		1560, "latin", "spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "castillian", "spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
 		-197, "latin", "rome"
@@ -1288,7 +1288,7 @@ DefineProvince("Castille", {
 DefineProvince("Champagne", { -- includes Brie
 	World = "Earth",
 	FactionCulturalNames = {
-		"latin", "france", "Champagne"
+		"french", "france", "Champagne"
 	},
 	Tiles = {
 		{488, 116},
@@ -1305,7 +1305,7 @@ DefineProvince("Champagne", { -- includes Brie
 	SettlementTerrain = "Plains",
 	Claims = {
 		"frankish", "neustria", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
---		"latin", "france"
+--		"french", "france"
 	},
 	HistoricalOwners = {
 		-50, "latin", "rome" -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -1643,7 +1643,7 @@ DefineProvince("Dalmatia", {
 		412, "", "", -- The Visigoths migrated to Aquitaine in 412 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		507, "goth", "ostrogoth-tribe", -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 		803, "frankish", "francia", -- Charles the Great of Francia acquired Dalmatia in 803/806 AD; Source: "Medieval Warfare V.2", 2013, p. 9.
-		1560, "latin", "venice" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "italian", "venice" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
 		-219, "latin", "rome"
@@ -1657,7 +1657,7 @@ DefineProvince("Dalmatia", {
 DefineProvince("Dauphiny", {
 	World = "Earth",
 	FactionCulturalNames = {
-		"latin", "france", "Dauphiny" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		"french", "france", "Dauphiny" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	Tiles = {
 		{494, 126}, {494, 127}, {494, 128}, {494, 129},
@@ -1671,12 +1671,12 @@ DefineProvince("Dauphiny", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
---		"latin", "france"
+--		"french", "france"
 	},
 	HistoricalOwners = {
 		-121, "latin", "rome", -- Gallia Narbonensis acquired by Rome in 121 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		534, "frankish", "francia", -- The Burgundian realm, which included Dauphiny, was conquered by the Franks in 534; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-		1560, "latin", "france" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "french", "france" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
 		-121, "latin", "rome",
@@ -1813,7 +1813,7 @@ DefineProvince("Don", {
 DefineProvince("Douro", {
 	World = "Earth",
 	FactionCulturalNames = {
-		"latin", "portugal", "Douro"
+		"portuguese", "portugal", "Douro"
 	},
 	Tiles = {
 		{455, 136}, {455, 137}, {455, 138},
@@ -1829,13 +1829,13 @@ DefineProvince("Douro", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
---		"latin", "portugal"
+--		"portuguese", "portugal"
 	},
 	HistoricalOwners = {
 		-138, "latin", "rome", -- Lusitania acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		450, "suebi", "suebi-tribe", -- The Suebi conquered the area between the Minho and the Douro in Portugal in 411 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		486, "suebi", "galicia", -- Suebi kingdom of Galicia; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		1560, "latin", "portugal" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "portuguese", "portugal" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
 		-138, "latin", "rome"
@@ -1873,7 +1873,7 @@ DefineProvince("Drenthe", {
 		161, "teuton", "frisian-tribe", -- Drenthe owned by the Frisii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		481, "frankish", "francia", -- Frankish territory in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		919, "teuton", "holy-rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-		1560, "latin", "spain", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "castillian", "spain", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 		1648, "teuton", "netherlands" -- Political situation in Central Europe in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalClaims = {
@@ -2244,7 +2244,7 @@ DefineProvince("Finland", {
 DefineProvince("France", {
 	World = "Earth",
 	FactionCulturalNames = {
-		"latin", "france", "France",
+		"french", "france", "France",
 		"frankish", "francia", "Neustria", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 53-55.
 		"frankish", "frank-tribe", "Neustria"
 	},
@@ -2272,12 +2272,12 @@ DefineProvince("France", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"frankish", "neustria", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
---		"latin", "france"
+--		"french", "france"
 	},
 	HistoricalOwners = {
 		-50, "latin", "rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		486, "frankish", "francia", -- The Frankish Merovingian king Clovis conquers Syagrius' realm, the last Roman territory in Gaul in 486; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-		919, "latin", "france" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		919, "french", "france" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalClaims = {
 		-50, "latin", "rome",
@@ -2308,7 +2308,7 @@ DefineProvince("Franche Comte", {
 		"latin", "Maxima Sequanorum" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
 	FactionCulturalNames = {
-		"latin", "france", "Franche Comté"
+		"french", "france", "Franche Comté"
 	},
 	Tiles = {
 		{495, 121}, {495, 122}, {495, 123},
@@ -2322,7 +2322,7 @@ DefineProvince("Franche Comte", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"celt", "sequani-tribe"
---		"latin", "france"
+--		"french", "france"
 	},
 	HistoricalOwners = {
 		-- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
@@ -2331,7 +2331,7 @@ DefineProvince("Franche Comte", {
 		-50, "latin", "rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		451, "goth", "burgundy", -- Burgundians fought on both the Roman and Hunnic sides in the Battle of the Catalaunian Fields in (June) 451 AD; with the Roman victory, the Burgundians under Gundioc were granted more land; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 94-95.
 		534, "frankish", "francia", -- The Burgundian realm, which included the Franche Comté, Burgundy, Savoy and most of Switzerland, was conquered by the Franks in 534; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-		1560, "latin", "spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "castillian", "spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
 		-50, "latin", "rome",
@@ -2440,7 +2440,7 @@ DefineProvince("Friesland", {
 		161, "teuton", "frisian-tribe", -- Friesland owned by the Frisii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		734, "frankish", "francia", -- Franks conquered Holland and Friesland in 734 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		919, "teuton", "holy-rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-		1560, "latin", "spain", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "castillian", "spain", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 		1648, "teuton", "netherlands" -- Political situation in Central Europe in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalClaims = {
@@ -2516,8 +2516,8 @@ DefineProvince("Gallaecia", {
 	},
 	FactionCulturalNames = {
 		"suebi", "galicia", "Galicia",
-		"latin", "portugal", "Galicia",
-		"latin", "spain", "Galicia"
+		"portuguese", "portugal", "Galicia",
+		"castillian", "spain", "Galicia"
 	},
 	Tiles = {
 --		{114, 33}, {115, 33}, -- old map
@@ -2539,7 +2539,7 @@ DefineProvince("Gallaecia", {
 		-17, "latin", "rome", -- Gallaecia and Asturias acquired by Rome in 17 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		411, "suebi", "suebi-tribe", -- The Suebi conquered Gallaecia in 411 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		486, "suebi", "galicia", -- Suebi kingdom of Galicia; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		1560, "latin", "spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "castillian", "spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
 		-17, "latin", "rome"
@@ -2944,7 +2944,7 @@ DefineProvince("Holland", {
 		526, "teuton", "frisian-tribe", -- Political situation in 526 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		734, "frankish", "francia", -- Franks conquered Holland and Friesland in 734 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		919, "teuton", "holy-rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-		1560, "latin", "spain", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "castillian", "spain", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 		1648, "teuton", "netherlands" -- Political situation in Central Europe in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalClaims = {
@@ -3465,7 +3465,7 @@ DefineProvince("Leinster", {
 DefineProvince("Liege", { -- also includes Namur and Belgian Limburg
 	World = "Earth",
 	FactionCulturalNames = {
-		"latin", "france", "Liège"
+		"french", "france", "Liège"
 	},
 	Tiles = {
 		{493, 112}, {493, 113},
@@ -3648,7 +3648,7 @@ DefineProvince("Lorraine", {
 		"teuton", "Lothringen"
 	},
 	FactionCulturalNames = {
-		"latin", "france", "Lorraine"
+		"french", "france", "Lorraine"
 	},
 	Tiles = {
 		{495, 116}, {495, 117}, {495, 118},
@@ -3826,7 +3826,7 @@ DefineProvince("Luxemburg", {
 		"teuton", "Luxemburg"
 	},
 	FactionCulturalNames = {
-		"latin", "france", "Luxembourg"
+		"french", "france", "Luxembourg"
 	},
 	Tiles = {
 		{494, 114},
@@ -3845,7 +3845,7 @@ DefineProvince("Luxemburg", {
 		450, "frankish", "frank-tribe", -- Frankish territory in 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
 		481, "frankish", "francia", -- Frankish territory in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		919, "teuton", "holy-rome", -- Duchy of Upper Lorraine; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-		1560, "latin", "spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "castillian", "spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
 		-50, "latin", "rome",
@@ -3860,7 +3860,7 @@ DefineProvince("Luxemburg", {
 DefineProvince("Lyonnais", {
 	World = "Earth",
 	FactionCulturalNames = {
-		"latin", "france", "Lyonnais" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		"french", "france", "Lyonnais" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	Tiles = {
 		{491, 124}, {491, 125}, {491, 126},
@@ -3871,7 +3871,7 @@ DefineProvince("Lyonnais", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
---		"latin", "france"
+--		"french", "france"
 	},
 	HistoricalOwners = {
 		-50, "latin", "rome" -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -3976,7 +3976,7 @@ DefineProvince("Malta", {
 DefineProvince("Marche", {
 	World = "Earth",
 	FactionCulturalNames = {
-		"latin", "france", "Marche" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		"french", "france", "Marche" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	Tiles = {
 		{482, 124},
@@ -3989,7 +3989,7 @@ DefineProvince("Marche", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
---		"latin", "france"
+--		"french", "france"
 	},
 	HistoricalOwners = {
 		-50, "latin", "rome" -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -4178,7 +4178,7 @@ DefineProvince("Moldavia", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
---		"latin", "moldavia",
+--		"romanian", "moldavia",
 		"thracian", "costoboci-tribe"
 	},
 	HistoricalOwners = {
@@ -4188,7 +4188,7 @@ DefineProvince("Moldavia", {
 		200, "goth", "visigoth-tribe", -- The western goths had migrated to the area of modern Romania / ancient Dacia in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 --		275, "", "", -- Dacia lost by Rome in 275 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		397, "", "", -- The Visigoths migrated to the Western Balkans in 397 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-		1560, "latin", "moldavia" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "romanian", "moldavia" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
 		-336, "persian", "scythian-tribe",
@@ -4264,8 +4264,6 @@ DefineProvince("Moravia", {
 		830, "slav" -- Moravia inhabited by Slavic peoples at the time of Mojmír's reign; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 606.
 	},
 	HistoricalSettlementBuildings = {
-		1201, "unit-teuton-temple", true, -- a Cistercian monastery was founded in Velehrad in 1201; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 627.
-		1211, "unit-teuton-temple", true, -- a Cistercian nunnery was founded in Doubravník in 1211; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 627.
 		1225, "unit-teuton-temple", true, -- a nunnery was founded by Hedwig of Znojmo in Oslavany (or Marienthal) (near Brno) in 1225; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 627.
 		1232, "unit-teuton-temple", true, -- Queen Constance founded a cloister called "The Door to Heaven" in Tišňov in 1232; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 627.
 		1251, "unit-teuton-temple", true -- Boček (lord of Kunštát and Poděbrady) founded a monastery in Ždár (Saar) in 1251; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 627.
@@ -4453,7 +4451,7 @@ DefineProvince("Normandy", {
 		"norse", "Normandy"
 	},
 	FactionCulturalNames = {
-		"latin", "france", "Normandy"
+		"french", "france", "Normandy"
 	},
 	SettlementLocation = {482, 115}, -- Rouen
 	Map = "maps/random/random-map-forest.smp",
@@ -4465,7 +4463,7 @@ DefineProvince("Normandy", {
 		-7000, "basque", "bellbeaker-tribe", -- Bell Beaker culture existed in Normandy and the western parts of Great Britain between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
 		-50, "latin", "rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		486, "frankish", "francia", -- The Frankish Merovingian king Clovis conquers Syagrius' realm, the last Roman territory in Gaul; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-		1560, "latin", "france", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "french", "france", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
 		-50, "latin", "rome",
@@ -4571,7 +4569,7 @@ DefineProvince("North Brabant", {
 		-50, "latin", "rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		481, "frankish", "francia", -- Frankish territory in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		919, "teuton", "holy-rome", -- Duchy of Lower Lorraine; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-		1560, "latin", "spain", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "castillian", "spain", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 		1648, "teuton", "netherlands" -- Political situation in Central Europe in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalClaims = {
@@ -4806,7 +4804,7 @@ DefineProvince("Overijssel", {
 		161, "teuton", "chauci-tribe", -- The area was inhabited by the Chauci in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		481, "frankish", "francia", -- Frankish territory in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		919, "teuton", "holy-rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-		1560, "latin", "spain", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "castillian", "spain", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 		1648, "teuton", "netherlands" -- Political situation in Central Europe in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalClaims = {
@@ -4862,14 +4860,14 @@ DefineProvince("Palermo", {
 	Claims = {
 		"latin", "elymian-tribe",
 		"latin", "sicanian-tribe"
---		"latin", "sicily"
+--		"italian", "sicily"
 	},
 	HistoricalOwners = {
 		-500, "latin", "sicanian-tribe", -- Situation of Italy in (apparently) 500 BC; Sicily was inhabited by the Elymians, Sicanians and Sicels; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 		-241, "latin", "rome", -- Sicily acquired by Rome in 241 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		507, "goth", "ostrogoth-tribe", -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-		1072, "latin", "sicily", -- Palermo was conquered by the Norman forces in Sicily in 1072 AD; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
-		1560, "latin", "spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1072, "italian", "sicily", -- Palermo was conquered by the Norman forces in Sicily in 1072 AD; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
+		1560, "castillian", "spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
 		-750, "phoenician", -- Phoenician settlements existed in Phoenicia proper, western north Africa, western Sicily and southern Cyprus between 750 and 625 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.	
@@ -4955,7 +4953,7 @@ DefineProvince("Parma", {
 DefineProvince("Picardy", { -- also includes French Flanders, Hainaut and Artois
 	World = "Earth",
 	FactionCulturalNames = {
-		"latin", "france", "Picardy" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		"french", "france", "Picardy" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	Tiles = {
 		{484, 113}, {484, 114},
@@ -4973,12 +4971,12 @@ DefineProvince("Picardy", { -- also includes French Flanders, Hainaut and Artois
 	Coastal = true,
 	Claims = {
 		"frankish", "austrasia", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
---		"latin", "france"
+--		"french", "france"
 	},
 	HistoricalOwners = {
 		-50, "latin", "rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		481, "frankish", "francia", -- Picardy was a part of Frankish territory in 481 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-		919, "latin", "france" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		919, "french", "france" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalClaims = {
 		-50, "latin", "rome",
@@ -5023,7 +5021,7 @@ DefineProvince("Piedmont", {
 DefineProvince("Poitou", {
 	World = "Earth",
 	FactionCulturalNames = {
-		"latin", "france", "Poitou"
+		"french", "france", "Poitou"
 	},
 	Tiles = {
 		{474, 122},
@@ -5041,7 +5039,7 @@ DefineProvince("Poitou", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
---		"latin", "france"
+--		"french", "france"
 	},
 	HistoricalOwners = {
 		-50, "latin", "rome" -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -5132,7 +5130,7 @@ DefineProvince("Posen", {
 DefineProvince("Provence", {
 	World = "Earth",
 	FactionCulturalNames = {
-		"latin", "france", "Provence"
+		"french", "france", "Provence"
 	},
 	Tiles = {
 		{493, 132},
@@ -5150,12 +5148,12 @@ DefineProvince("Provence", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
---		"latin", "france"
+--		"french", "france"
 	},
 	HistoricalOwners = {
 		-121, "latin", "rome", -- Gallia Narbonensis acquired by Rome in 121 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		537, "frankish", "francia", -- Provence conquered by the Franks in 537; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-		1560, "latin", "france" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "french", "france" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
 		-121, "latin", "rome",
@@ -5461,14 +5459,14 @@ DefineProvince("Savoy", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
---		"latin", "france",
---		"latin", "savoy"
+--		"french", "france",
+--		"italian", "savoy"
 	},
 	HistoricalOwners = {
 		-15, "latin", "rome", -- Pennine Alps acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		451, "goth", "burgundy", -- Burgundians fought on both the Roman and Hunnic sides in the Battle of the Catalaunian Fields in (June) 451 AD; with the Roman victory, the Burgundians under Gundioc were granted more land; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 94-95.
 		534, "frankish", "francia", -- The Burgundian realm, which included Savoy, was conquered by the Franks in 534; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-		1560, "latin", "savoy" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "italian", "savoy" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
 		-15, "latin", "rome",
@@ -6034,14 +6032,14 @@ DefineProvince("Syracuse", {
 	Coastal = true,
 	Claims = {
 		"latin", "sicel-tribe"
---		"latin", "sicily"
+--		"italian", "sicily"
 	},
 	HistoricalOwners = {
 		-500, "latin", "sicel-tribe", -- Situation of Italy in (apparently) 500 BC; Sicily was inhabited by the Elymians, Sicanians and Sicels; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 		-241, "latin", "rome", -- Sicily acquired by Rome in 241 BC; the city of Syracuse was acquired only in 212 BC, but the overwhelming majority of the eastern side of the island was acquired in 241 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		507, "goth", "ostrogoth-tribe", -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-		1061, "latin", "sicily", -- Robert Guiscard invades Sicily in 1061 AD with 13 ships and 270 knights, to which 170 knights were joined in the conquest of Messina (but the source also mentions the victorious battle having 700 knights against 15,000 Muslims); Messina is on the eastern side of the island; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
-		1560, "latin", "spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1061, "italian", "sicily", -- Robert Guiscard invades Sicily in 1061 AD with 13 ships and 270 knights, to which 170 knights were joined in the conquest of Messina (but the source also mentions the victorious battle having 700 knights against 15,000 Muslims); Messina is on the eastern side of the island; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
+		1560, "castillian", "spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
 		-500, "latin"
@@ -6139,7 +6137,7 @@ DefineProvince("Thuringia", {
 DefineProvince("Touraine", {
 	World = "Earth",
 	FactionCulturalNames = {
-		"latin", "france", "Touraine" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		"french", "france", "Touraine" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	Tiles = {
 		{481, 121},
@@ -6150,7 +6148,7 @@ DefineProvince("Touraine", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
---		"latin", "france"
+--		"french", "france"
 	},
 	HistoricalOwners = {
 		-50, "latin", "rome" -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -6196,7 +6194,7 @@ DefineProvince("Transylvania", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
---		"latin", "transylvania"
+--		"romanian", "transylvania"
 		"minoan", "paintedware-tribe",
 		"thracian", "daci-tribe"
 	},
@@ -6206,7 +6204,7 @@ DefineProvince("Transylvania", {
 --		142, "goth", "vandal-tribe", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		161, "latin", "rome", -- The Transylvanian Carpathians were inhabited by the Daci in 161-180 AD, but the Romans held the most of Transylvania; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		275, "", "", -- Dacia lost by Rome in 275 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		1560, "latin", "transylvania", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "romanian", "transylvania", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
 		107, "latin", "rome"
@@ -6607,14 +6605,14 @@ DefineProvince("Venetia", {
 		"basque", "castelnovian-tribe",
 		"basque", "sauveterrian-tribe",
 		"latin", "venetian-tribe",
---		"latin", "venice"
+--		"italian", "venice"
 	},
 	HistoricalOwners = {
 		-6500, "basque", "sauveterrian-tribe", -- The Monteval de Sora site (in San Vito di Cadore, Belluno) belonged to the Sauveterrian culture c. 6500 BC and to the Castelnovian culture c. 5500 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 170.
 		-5500, "basque", "castelnovian-tribe",
 		-500, "latin", "venetian-tribe", -- Situation of Italy in (apparently) 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 		-191, "latin", "rome", -- Cisalpine Gaul acquired by Rome in 191 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		919, "latin", "venice" -- Duchy of Venice; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		919, "italian", "venice" -- Duchy of Venice; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalClaims = {
 		-191, "latin", "rome"
@@ -6819,7 +6817,7 @@ DefineProvince("Wallachia", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
---		"latin", "wallachia",
+--		"romanian", "wallachia",
 		"minoan", "paintedware-tribe",
 		"thracian", "daci-tribe",
 		"thracian", "getae-tribe"
@@ -6832,7 +6830,7 @@ DefineProvince("Wallachia", {
 		200, "goth", "visigoth-tribe", -- The western goths had migrated to the area of modern Romania / ancient Dacia in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 --		275, "", "", -- Dacia lost by Rome in 275 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		397, "", "", -- The Visigoths migrated to the Western Balkans in 397 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-		1560, "latin", "wallachia" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "romanian", "wallachia" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
 		107, "latin", "rome"

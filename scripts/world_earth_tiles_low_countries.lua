@@ -55,14 +55,14 @@ DefineWorldMapTile({495, 111}, {
 		"celt", "Aduatuca" -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223-226.
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "france", "Tongres"
+		"french", "france", "Tongres"
 	}
 })
 
 DefineWorldMapTile({495, 112}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"latin", "france", "Liège"
+		"french", "france", "Liège"
 	}
 })
 
@@ -86,7 +86,7 @@ DefineWorldMapTile({497, 115}, {
 		"teuton", "Luxemburg"
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "france", "Luxembourg"
+		"french", "france", "Luxembourg"
 	}
 })
 

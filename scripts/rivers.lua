@@ -81,8 +81,8 @@ DefineRiver("Don", {
 DefineRiver("Douro", {
 	World = "Earth",
 	FactionCulturalNames = {
-		"latin", "portugal", "Douro", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
-		"latin", "spain", "Duero" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+		"portuguese", "portugal", "Douro", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+		"castillian", "spain", "Duero" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
 	}
 })
 
@@ -156,7 +156,7 @@ DefineRiver("Sado", {
 DefineRiver("Seine", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	World = "Earth",
 	FactionCulturalNames = {
-		"latin", "france", "Seine" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		"french", "france", "Seine" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	}
 })
 

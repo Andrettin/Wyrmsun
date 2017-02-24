@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016 by Andrettin
+--      (c) Copyright 2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,57 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineWorldMapTile({528, 118}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"slav", "Bratislava",
-		"teuton", "Presburg"
-	}
+DefineFaction("portugal", {
+	Name = "Portugal",
+	Civilization = "portuguese",
+	Type = "polity",
+	Colors = {"green", "red"},
+	DefaultTier = "kingdom"
 })
 
-DefineWorldMapTile({534, 120}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Aquincum",
-		"magyar", "Buda"
-	}
-})
-
-DefineWorldMapTile({535, 120}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"magyar", "Pest"
-	}
-})
-
-DefineWorldMapTile({536, 127}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"slav", "Novi Sad",
-		"teuton", "Neusatz"
-	}
-})
-
-DefineWorldMapTile({545, 122}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Klausenburg"
-	},
-	FactionCulturalSettlementNames = {
-		"romanian", "romania", "Cluj"
-	}
-})
-
-DefineWorldMapTile({545, 126}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Sarmizegetusa" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	}
-})
-
-DefineWorldMapTile({547, 125}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Apulum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	}
-})
+Load("scripts/civilizations/portuguese/factions_brazilian.lua")

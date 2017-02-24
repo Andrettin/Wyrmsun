@@ -31,7 +31,7 @@ DefineWorldMapTile({453, 145}, {
 		"latin", "Olisipo"
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "portugal", "Lisbon" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
+		"portuguese", "portugal", "Lisbon" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
 	}
 })
 
@@ -41,13 +41,13 @@ DefineWorldMapTile({456, 137}, {
 		"latin", "Bracara" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "portugal", "Braga" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
+		"portuguese", "portugal", "Braga" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
 	}
 })
 
 DefineWorldMapTile({457, 146}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"latin", "portugal", "Evora" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
+		"portuguese", "portugal", "Evora" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
 	}
 })

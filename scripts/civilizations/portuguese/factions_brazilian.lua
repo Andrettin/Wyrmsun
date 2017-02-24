@@ -27,7 +27,7 @@
 
 DefineFaction("brazil", {
 	Name = "Brazil",
-	Civilization = "latin",
+	Civilization = "portuguese",
 	Type = "polity",
 	Colors = {"green"},
 	DefaultTier = "kingdom",

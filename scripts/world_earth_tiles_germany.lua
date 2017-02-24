@@ -32,7 +32,7 @@ DefineWorldMapTile({498, 111}, {
 		"teuton", "Köln"
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "france", "Cologne"
+		"french", "france", "Cologne"
 	}
 })
 

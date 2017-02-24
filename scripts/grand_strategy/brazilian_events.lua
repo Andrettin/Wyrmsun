@@ -31,7 +31,7 @@ DefineGrandStrategyEvent("Companhia de Carris de Ferro da Cidade a Boavista", { 
 	Conditions = function(s)
 		if (
 			GetProvinceOwner("Rio de Janeiro") == EventFaction.Name
-			and GetProvinceCivilization("Rio de Janeiro") == "latin" -- this should be changed to Portuguese or Brazilian when those cultures get added to the game
+			and GetProvinceCivilization("Rio de Janeiro") == "portuguese"
 			-- add a railroad/tram technology as requirement
 			and SyncRand(20) == 0
 		) then
@@ -58,7 +58,7 @@ DefineGrandStrategyEvent("Companhia do Caminho de Carris de Ferro do Jardim Bota
 	Conditions = function(s)
 		if (
 			GetProvinceOwner("Rio de Janeiro") == EventFaction.Name
-			and GetProvinceCivilization("Rio de Janeiro") == "latin" -- this should be changed to Portuguese or Brazilian when those cultures get added to the game
+			and GetProvinceCivilization("Rio de Janeiro") == "portuguese"
 			-- add a railroad/tram technology as requirement
 			and SyncRand(20) == 0
 		) then
@@ -85,7 +85,7 @@ DefineGrandStrategyEvent("Companhia Ferro-Carril de Sao Cristovao", { -- Source:
 	Conditions = function(s)
 		if (
 			GetProvinceOwner("Rio de Janeiro") == EventFaction.Name
-			and GetProvinceCivilization("Rio de Janeiro") == "latin" -- this should be changed to Portuguese or Brazilian when those cultures get added to the game
+			and GetProvinceCivilization("Rio de Janeiro") == "portuguese"
 			-- add a railroad/tram technology as requirement
 			and SyncRand(20) == 0
 		) then
@@ -112,7 +112,7 @@ DefineGrandStrategyEvent("Companhia Ferro-Carril Carioca", { -- Source: Elisabet
 	Conditions = function(s)
 		if (
 			GetProvinceOwner("Rio de Janeiro") == EventFaction.Name
-			and GetProvinceCivilization("Rio de Janeiro") == "latin" -- this should be changed to Portuguese or Brazilian when those cultures get added to the game
+			and GetProvinceCivilization("Rio de Janeiro") == "portuguese"
 			-- add a railroad/tram technology as requirement
 			and SyncRand(20) == 0
 		) then
@@ -139,7 +139,7 @@ DefineGrandStrategyEvent("Companhia Locomotora", { -- Source: Elisabeth von der 
 	Conditions = function(s)
 		if (
 			GetProvinceOwner("Rio de Janeiro") == EventFaction.Name
-			and GetProvinceCivilization("Rio de Janeiro") == "latin" -- this should be changed to Portuguese or Brazilian when those cultures get added to the game
+			and GetProvinceCivilization("Rio de Janeiro") == "portuguese"
 			-- add a railroad/tram technology as requirement
 			and SyncRand(20) == 0
 		) then
@@ -166,7 +166,7 @@ DefineGrandStrategyEvent("Companhia Ferro-Carril Fluminense", { -- Source: Elisa
 	Conditions = function(s)
 		if (
 			GetProvinceOwner("Rio de Janeiro") == EventFaction.Name
-			and GetProvinceCivilization("Rio de Janeiro") == "latin" -- this should be changed to Portuguese or Brazilian when those cultures get added to the game
+			and GetProvinceCivilization("Rio de Janeiro") == "portuguese"
 			-- add a railroad/tram technology as requirement
 			and SyncRand(20) == 0
 		) then
@@ -193,7 +193,7 @@ DefineGrandStrategyEvent("Companhia de Carris Urbanos", { -- Source: Elisabeth v
 	Conditions = function(s)
 		if (
 			GetProvinceOwner("Rio de Janeiro") == EventFaction.Name
-			and GetProvinceCivilization("Rio de Janeiro") == "latin" -- this should be changed to Portuguese or Brazilian when those cultures get added to the game
+			and GetProvinceCivilization("Rio de Janeiro") == "portuguese"
 			-- add a railroad/tram technology as requirement
 			and GetGrandStrategyProvinceData("Rio de Janeiro", "Modifier", "upgrade-tramway-network") -- since the company is an amalgamation of previously-existing tram companies in Rio de Janeiro, this event should only happen if a tramway network modifier is already present
 			and SyncRand(20) == 0
@@ -220,7 +220,7 @@ DefineGrandStrategyEvent("Companhia Ferro Carril de Vila Isabel", { -- Source: E
 	Conditions = function(s)
 		if (
 			GetProvinceOwner("Rio de Janeiro") == EventFaction.Name
-			and GetProvinceCivilization("Rio de Janeiro") == "latin" -- this should be changed to Portuguese or Brazilian when those cultures get added to the game
+			and GetProvinceCivilization("Rio de Janeiro") == "portuguese"
 			-- add a railroad/tram technology as requirement
 			and SyncRand(20) == 0
 		) then
@@ -247,7 +247,7 @@ DefineGrandStrategyEvent("Companhia Ferro-Carril e Hotel Corcovado", { -- Source
 	Conditions = function(s)
 		if (
 			GetProvinceOwner("Rio de Janeiro") == EventFaction.Name
-			and GetProvinceCivilization("Rio de Janeiro") == "latin" -- this should be changed to Portuguese or Brazilian when those cultures get added to the game
+			and GetProvinceCivilization("Rio de Janeiro") == "portuguese"
 			-- add a railroad/tram technology as requirement
 			-- this was a steam tram company, maybe it should require a more advanced railroad/tram technology?
 			and SyncRand(20) == 0
@@ -275,7 +275,7 @@ DefineGrandStrategyEvent("Exposicao dos Caminhos de Ferro Brasileiros", { -- Sou
 	Conditions = function(s)
 		if (
 			GetProvinceOwner("Rio de Janeiro") == EventFaction.Name
-			and GetProvinceCivilization("Rio de Janeiro") == "latin" -- this should be changed to Portuguese or Brazilian when those cultures get added to the game
+			and GetProvinceCivilization("Rio de Janeiro") == "portuguese"
 			-- add a railroad technology as requirement
 			and SyncRand(20) == 0
 		) then
@@ -301,7 +301,7 @@ DefineGrandStrategyEvent("Sao Paulo Tramway Light and Power Co. Ltd.", { -- Sour
 	Conditions = function(s)
 		if (
 			GetProvinceOwner("Sao Paulo") == EventFaction.Name
-			and GetProvinceCivilization("Sao Paulo") == "latin" -- this should be changed to Portuguese or Brazilian when those cultures get added to the game
+			and GetProvinceCivilization("Sao Paulo") == "portuguese"
 			and GetProvinceCivilization("Ontario") == "teuton" -- this should be changed to English when that culture gets added to the game
 			-- add a railroad/tram technology as requirement
 			and SyncRand(20) == 0
@@ -329,7 +329,7 @@ DefineGrandStrategyEvent("The Rio de Janeiro Tramway, Light and Power Co. Ltd.",
 	Conditions = function(s)
 		if (
 			GetProvinceOwner("Rio de Janeiro") == EventFaction.Name
-			and GetProvinceCivilization("Rio de Janeiro") == "latin" -- this should be changed to Portuguese or Brazilian when those cultures get added to the game
+			and GetProvinceCivilization("Rio de Janeiro") == "portuguese"
 			and GetProvinceCivilization("Ontario") == "teuton" -- this should be changed to English when that culture gets added to the game
 			-- add a railroad/tram technology as requirement
 			and SyncRand(20) == 0

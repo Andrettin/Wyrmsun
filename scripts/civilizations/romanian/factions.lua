@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016 by Andrettin
+--      (c) Copyright 2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,57 +25,55 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineWorldMapTile({528, 118}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"slav", "Bratislava",
-		"teuton", "Presburg"
-	}
-})
-
-DefineWorldMapTile({534, 120}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Aquincum",
-		"magyar", "Buda"
-	}
-})
-
-DefineWorldMapTile({535, 120}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"magyar", "Pest"
-	}
-})
-
-DefineWorldMapTile({536, 127}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"slav", "Novi Sad",
-		"teuton", "Neusatz"
-	}
-})
-
-DefineWorldMapTile({545, 122}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Klausenburg"
+DefineFaction("moldavia", {
+	Name = "Moldavia",
+	Civilization = "romanian",
+	Type = "polity",
+	Colors = {"brown"},
+	DefaultTier = "duchy",
+	Titles = {
+		"monarchy", "duchy", "Principality"
 	},
-	FactionCulturalSettlementNames = {
-		"romanian", "romania", "Cluj"
+	MinisterTitles = {
+		"head-of-state", "male", "monarchy", "duchy", "Prince",
+		"head-of-state", "female", "monarchy", "duchy", "Princess"
 	}
 })
 
-DefineWorldMapTile({545, 126}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Sarmizegetusa" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+DefineFaction("romania", {
+	Name = "Romania",
+	Civilization = "romanian",
+	Type = "polity",
+	Colors = {"yellow", "blue", "red"},
+	DefaultTier = "kingdom"
+})
+
+DefineFaction("transylvania", {
+	Name = "Transylvania",
+	Civilization = "romanian",
+	Type = "polity",
+	Colors = {"cyan"},
+	DefaultTier = "duchy",
+	Titles = {
+		"monarchy", "duchy", "Principality"
+	},
+	MinisterTitles = {
+		"head-of-state", "male", "monarchy", "duchy", "Prince",
+		"head-of-state", "female", "monarchy", "duchy", "Princess"
 	}
 })
 
-DefineWorldMapTile({547, 125}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Apulum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+DefineFaction("wallachia", {
+	Name = "Wallachia",
+	Civilization = "romanian",
+	Type = "polity",
+	Colors = {"brown"},
+	DefaultTier = "duchy",
+	Titles = {
+		"monarchy", "duchy", "Principality"
+	},
+	MinisterTitles = {
+		"head-of-state", "male", "monarchy", "duchy", "Prince",
+		"head-of-state", "female", "monarchy", "duchy", "Princess"
 	}
 })

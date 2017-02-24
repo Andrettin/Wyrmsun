@@ -1925,6 +1925,66 @@ DefineCivilization("latin", {
 	}
 })
 
+DefineCivilization("castillian", {
+	Display = "Castillian",
+	Visible = true,
+	Species = "human",
+	ParentCivilization = "latin",
+	Adjective = "Castillian",
+	Playable = false,
+	SettlementNames = {
+		"Burgos" -- the Spanish town of Burgos; Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
+	}
+})
+
+DefineCivilization("french", {
+	Display = "French",
+	Visible = true,
+	Species = "human",
+	ParentCivilization = "latin",
+	Adjective = "French",
+	Playable = false,
+	PersonalNames = {
+		"male", "Bellaud",
+		"male", "Bonnaud",
+		"male", "Renaud"
+	},
+	SettlementNames = {
+		"Hamelet", -- Source: http://www.cnrtl.fr/definition/hameau
+		"Hamelin", -- Source: http://www.cnrtl.fr/definition/hameau
+		"Hem", -- Source: http://www.cnrtl.fr/definition/hameau
+		"Le Hamel", -- Source: http://www.cnrtl.fr/definition/hameau
+		"Luxembourg"
+	}
+})
+
+DefineCivilization("italian", {
+	Display = "Italian",
+	Visible = true,
+	Species = "human",
+	ParentCivilization = "latin",
+	Adjective = "Italian",
+	Playable = false
+})
+
+DefineCivilization("portuguese", {
+	Display = "Portuguese",
+	Visible = true,
+	Species = "human",
+	ParentCivilization = "latin",
+	Adjective = "Portuguese",
+	Playable = false
+})
+
+DefineCivilization("romanian", {
+	Display = "Romanian",
+	Visible = true,
+	Species = "human",
+	ParentCivilization = "latin",
+	Adjective = "Romanian",
+	Playable = false
+})
+
 DefineCivilization("basque", { -- represents not only the speakers of Vasconic languages, but also various pre-Indo-European cultures
 	Display = "Basque",
 	Visible = true,

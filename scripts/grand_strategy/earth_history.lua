@@ -1336,9 +1336,9 @@ end
 
 if (GrandStrategyYear >= 1560) then
 	-- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	SetProvinceOwner("Brittany", "latin", "france")
+	SetProvinceOwner("Brittany", "french", "france")
 	
-	SetProvinceOwner("Sardinia", "latin", "spain")
+	SetProvinceOwner("Sardinia", "castillian", "spain")
 
 	SetProvinceOwner("Switzerland", "teuton", "switzerland")
 	SetFactionGovernmentType("teuton", "switzerland", "republic")	

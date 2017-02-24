@@ -248,7 +248,7 @@ local EarthEvents = {
 		Conditions = function(s)
 			if (
 				GetProvinceOwner("France") == EventFaction.Name
-				and GetProvinceCivilization("France") == "latin" -- should be French
+				and GetProvinceCivilization("France") == "french"
 			) then
 				return true
 			else
@@ -295,7 +295,7 @@ local EarthEvents = {
 		Conditions = function(s)
 			if (
 				GetProvinceOwner("France") == EventFaction.Name
-				and GetProvinceCivilization("France") == "latin" -- should be French
+				and GetProvinceCivilization("France") == "french"
 			) then
 				return true
 			else

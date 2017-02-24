@@ -144,7 +144,7 @@ DefineProvince("Minas Gerais", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Hills",
 	Claims = {
-		"latin", "brazil"
+		"portuguese", "brazil"
 	},
 	HistoricalModifiers = {
 		1750, "upgrade-college", true, -- Seminary founded in Mariana in 1750. Source: Keila Grinberg; Ricardo Salles, "O Brasil Imperial", vol. I, 2009, p. 296.
@@ -193,7 +193,7 @@ DefineProvince("Pernambuco", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
-		"latin", "brazil"
+		"portuguese", "brazil"
 	},
 	HistoricalModifiers = {
 		1828, "upgrade-college", true -- Law college founded in Olinda in 1828. Source: Jeffrey D. Needell, “Party Formation and State-Making: The Conservative Party and the Reconstruction of the Brazilian State, 1831-1840”, Hispanic American Historical Review, vol. 81, 2001, p. 293.
@@ -222,7 +222,7 @@ DefineProvince("Rio de Janeiro", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
-		"latin", "brazil"
+		"portuguese", "brazil"
 	},
 	HistoricalPopulation = {
 		-- In 1872, the population of the city of Rio de Janeiro was 274,972; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 4.
@@ -264,7 +264,7 @@ DefineProvince("Sao Paulo", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
-		"latin", "brazil"
+		"portuguese", "brazil"
 	},
 	HistoricalModifiers = {
 		1827, "upgrade-college", true, -- Law college existent in São Paulo in 1827. Source: Otávio Tarquínio de Sousa, "Bernardo Pereira de Vasconcelos", p. 66.

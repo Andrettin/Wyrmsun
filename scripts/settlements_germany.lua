@@ -268,7 +268,7 @@ DefineSettlement("trier", {
 	MapTemplate = "earth",
 	Position = {3993, 917},
 	CulturalNames = {
---		"french", "Treves", -- "Trèves"
+		"french", "Treves", -- "Trèves"
 		"teuton", "Trier"
 	},
 	HistoricalOwners = {

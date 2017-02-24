@@ -32,21 +32,21 @@ DefineWorldMapTile({467, 118}, {
 		"latin", "Gesocribate" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "france", "Brest" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		"french", "france", "Brest" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	}
 })
 
 DefineWorldMapTile({475, 119}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"latin", "france", "Rennes"
+		"french", "france", "Rennes"
 	}
 })
 
 DefineWorldMapTile({475, 121}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"latin", "france", "Nantes"
+		"french", "france", "Nantes"
 	}
 })
 
@@ -57,28 +57,28 @@ DefineWorldMapTile({477, 128}, {
 		"latin", "Burdigala" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "france", "Bordeaux" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		"french", "france", "Bordeaux" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	}
 })
 
 DefineWorldMapTile({480, 123}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"latin", "france", "Poitiers" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		"french", "france", "Poitiers" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	}
 })
 
 DefineWorldMapTile({482, 115}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"latin", "france", "Rouen"
+		"french", "france", "Rouen"
 	}
 })
 
 DefineWorldMapTile({482, 121}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"latin", "france", "Tours" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		"french", "france", "Tours" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	}
 })
 
@@ -89,14 +89,14 @@ DefineWorldMapTile({484, 131}, {
 		"latin", "Tolosa" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "france", "Toulouse" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		"french", "france", "Toulouse" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	}
 })
 
 DefineWorldMapTile({485, 124}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"latin", "france", "Guéret" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		"french", "france", "Guéret" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	}
 })
 
@@ -106,7 +106,7 @@ DefineWorldMapTile({486, 114}, {
 		"latin", "Samarobriva" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "france", "Amiens" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		"french", "france", "Amiens" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	}
 })
 
@@ -117,21 +117,21 @@ DefineWorldMapTile({486, 117}, {
 		"latin", "Lutetia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "france", "Paris"
+		"french", "france", "Paris"
 	}
 })
 
 DefineWorldMapTile({487, 122}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"latin", "france", "Bourges" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		"french", "france", "Bourges" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	}
 })
 
 DefineWorldMapTile({491, 118}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"latin", "france", "Troyes" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		"french", "france", "Troyes" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	}
 })
 
@@ -142,14 +142,14 @@ DefineWorldMapTile({493, 125}, {
 		"latin", "Lugdunum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "france", "Lyons" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		"french", "france", "Lyons" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	}
 })
 
 DefineWorldMapTile({494, 121}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"latin", "france", "Dijon"
+		"french", "france", "Dijon"
 	}
 })
 
@@ -160,42 +160,42 @@ DefineWorldMapTile({495, 132}, {
 		"latin", "Massilia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "france", "Marseilles"
+		"french", "france", "Marseilles"
 	}
 })
 
 DefineWorldMapTile({496, 116}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"latin", "france", "Metz"
+		"french", "france", "Metz"
 	}
 })
 
 DefineWorldMapTile({496, 118}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"latin", "france", "Nancy"
+		"french", "france", "Nancy"
 	}
 })
 
 DefineWorldMapTile({496, 126}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"latin", "france", "Chambéry"
+		"french", "france", "Chambéry"
 	}
 })
 
 DefineWorldMapTile({496, 128}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"latin", "france", "Grenoble" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		"french", "france", "Grenoble" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	}
 })
 
 DefineWorldMapTile({497, 121}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"latin", "france", "Besançon"
+		"french", "france", "Besançon"
 	}
 })
 
