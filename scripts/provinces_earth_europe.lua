@@ -4278,8 +4278,6 @@ DefineProvince("Moravia", {
 
 DefineProvince("Moselle", {
 	World = "Earth",
-	CulturalNames = {
-	},
 	Tiles = {
 		{496, 116},
 		{497, 116}, {497, 117},

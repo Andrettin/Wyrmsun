@@ -60,6 +60,28 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-3",
 	}
 } )
 
+-- Units ---------------------------------------------------------
+
+DefineButton( { Pos = 1, Level = 0,
+	Action = "train-unit", Value = "unit-teuton-priest",
+	Key = "g", Hint = "Train ~!Gudjan", Popup = "popup-unit",
+	ForUnit = {"unit-teuton-temple"}
+})
+
+DefineButton( { Pos = 1, Level = 0,
+	Action = "train-unit", Value = "unit-teuton-priest",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-deity-christian-god"},
+	Key = "c", Hint = "Train ~!Cleric", Popup = "popup-unit",
+	ForUnit = {"unit-teuton-temple"}
+})
+
+DefineButton( { Pos = 1, Level = 0,
+	Action = "train-unit", Value = "unit-teuton-priest",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-deity-christian-god", "upgrade-holy-order"},
+	Key = "c", Hint = "Hire ~!Cleric", Popup = "popup-unit",
+	ForUnit = {"unit-teuton-temple"}
+})
+
 -- Buildings -----------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-germanic-town-hall",
@@ -67,7 +89,7 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-germanic-town-hall",
 	Key = "h", Hint = _("Build Chieftain's ~!Hall"), Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
-  
+
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-teuton-town-hall",
 	Action = "build", Value = "unit-teuton-town-hall",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-masonry"},

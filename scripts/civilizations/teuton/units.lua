@@ -995,8 +995,6 @@ DefineUnitType("unit-teuton-priest", {
 	Corpse = "unit-human-dead-body",
 --	WeaponClasses = {"mace"},
 	BluntDamage = true,
-	ButtonKey = "c",
-	ButtonHint = _("Train ~!Cleric"),
 	StartingAbilities = {"upgrade-inspire", "upgrade-precision", "upgrade-healing"},
 	CanCastSpell = {"spell-healing", "spell-precision"},
 	AutoCastActive = {"spell-healing", "spell-precision"},
@@ -1305,7 +1303,6 @@ DefineUnitType("unit-teuton-temple", {
 	Image = {"file", "teuton/buildings/church.png", "size", {96, 96}},
 	Shadow = {"file", "teuton/buildings/church_shadow.png", "size", {96, 96}},
 	Icon = "icon-teuton-church",
-	Trains = {"unit-teuton-priest"},
 	Variations = {
 		{
 			"variation-id", "church",
