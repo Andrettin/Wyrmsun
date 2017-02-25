@@ -387,7 +387,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				GetProvinceOwner("Franconia") == EventFaction.Name
-				and (GetProvinceCivilization("Franconia") == "germanic" or GetProvinceCivilization("Franconia") == "teuton") -- Franconia wouldn't have that name if it isn't germanic-culture (since it receives its name from the Franks, a germanic tribe)
+				and (GetProvinceCivilization("Franconia") == "germanic" or GetProvinceCivilization("Franconia") == "frankish") -- Franconia wouldn't have that name if it isn't germanic-culture (since it receives its name from the Franks, a germanic tribe)
 				and GetProvinceCivilization("Leinster") == "celt"
 			) then
 				EventProvince = WorldMapProvinces.Franconia
@@ -483,7 +483,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				GetProvinceOwner("Overijssel") == EventFaction.Name
-				and GetProvinceCivilization("Essex") == "teuton" -- should be English; Liafwin's province of origin has to be the same culture as he historically was; Essex set because he was from England and this is the province where London lays
+				and GetProvinceCivilization("Essex") == "anglo-saxon" -- should be English; Liafwin's province of origin has to be the same culture as he historically was; Essex set because he was from England and this is the province where London lays
 			) then
 				EventProvince = WorldMapProvinces.Overijssel
 				return true

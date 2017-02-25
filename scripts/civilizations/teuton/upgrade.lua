@@ -26,7 +26,7 @@
 --
 
 DefineUpgrade("upgrade-teuton-spatha", {
-	Name = _("Spatha"),
+	Name = "Spatha",
 	Parent = "upgrade-long-sword",
 	Icon = "icon-teuton-spatha",
 	Civilization = "teuton",
@@ -353,7 +353,7 @@ DefineDependency("unit-teuton-ritter",
 )
 
 DefineDependency("unit-teuton-town-hall",
-	{"upgrade-teuton-civilization", "upgrade-latin-civilization", 0}, "or", {"upgrade-suebi-civilization", "upgrade-latin-civilization", 0}, "or", {"upgrade-frankish-civilization", "upgrade-latin-civilization", 0}
+	{"upgrade-teuton-civilization", "upgrade-latin-civilization", 0}, "or", {"upgrade-suebi-civilization", "upgrade-latin-civilization", 0}, "or", {"upgrade-frankish-civilization", "upgrade-latin-civilization", 0}, "or", {"upgrade-anglo-saxon-civilization", "upgrade-latin-civilization", 0}
 )
 
 DefineDependency("unit-teuton-farm",

@@ -542,6 +542,7 @@ UI.GrandStrategyShowRulerButton:SetCallback(
 	end
 )
 
+Load("scripts/civilizations/anglo_saxon/ui.lua")
 Load("scripts/civilizations/basque/ui.lua")
 Load("scripts/civilizations/celt/ui.lua")
 Load("scripts/civilizations/dwarf/ui.lua")

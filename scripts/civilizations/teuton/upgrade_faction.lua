@@ -25,19 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUpgrade("upgrade-angle-tribe-faction", {
-	Name = "Angle Tribe Faction",
-	EffectsString = "+2 Damage for Kriegers"
-})
-
 DefineUpgrade("upgrade-faction-bavarian-tribe", {
 	Name = "Bavarian Tribe",
 	EffectsString = "+1 Damage and +1 Armor for Kriegers"
-})
-
-DefineUpgrade("upgrade-bernice-tribe-faction", {
-	Name = "Bernice Tribe Faction",
-	EffectsString = "Disembarkment Bonus for Kriegers and Spearmen"
 })
 
 DefineUpgrade("upgrade-faction-cherusci-tribe", {
@@ -48,11 +38,6 @@ DefineUpgrade("upgrade-faction-cherusci-tribe", {
 DefineUpgrade("upgrade-frisian-tribe-faction", {
 	Name = "Frisian Tribe Faction",
 	EffectsString = "+5 HP and +1 Armor for Kriegers"
-})
-
-DefineUpgrade("upgrade-gumeninga-tribe-faction", {
-	Name = "Gumeninga Tribe Faction",
-	EffectsString = "+30 Mana for Clerics"
 })
 
 DefineUpgrade("upgrade-lombard-tribe-faction", {
@@ -136,12 +121,6 @@ DefineUpgrade("upgrade-faction-wurtemberg", {
 	EffectsString = "+2 Armor for Kriegers"
 })
 
-DefineModifier("upgrade-angle-tribe-faction",
-	{"BasicDamage", 2},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
 DefineModifier("upgrade-faction-bavarian-tribe",
 	{"change-faction-to", "bavarian-tribe"}
 )
@@ -151,13 +130,6 @@ DefineModifier("upgrade-faction-bavarian-tribe",
 	{"BasicDamage", 1},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
-DefineModifier("upgrade-bernice-tribe-faction",
-	{"DisembarkmentBonus", 1},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"},
-	{"apply-to", "unit-teuton-spearman"}
 )
 
 DefineModifier("upgrade-faction-cherusci-tribe",
@@ -176,12 +148,6 @@ DefineModifier("upgrade-frisian-tribe-faction",
 	{"HitPoints", 5},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
-DefineModifier("upgrade-gumeninga-tribe-faction",
-	{"Mana", 30},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-priest"}
 )
 
 DefineModifier("upgrade-lombard-tribe-faction",
@@ -405,7 +371,8 @@ DefineDependency("upgrade-faction-wurtemberg",
 	"or", {"upgrade-faction-suebi-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
--- factions which are here because they require a Teuton upgrade
+-- Suebi factions which are here because they require a Teuton upgrade
+
 DefineDependency("upgrade-faction-galicia",
 	{"upgrade-faction-suebi-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
 	"or", {"upgrade-faction-semnone-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
@@ -413,6 +380,8 @@ DefineDependency("upgrade-faction-galicia",
 	"or", {"upgrade-faction-quadi-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
 	"or", {"upgrade-faction-buri-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
+
+-- Frankish factions which are here because they require a Teuton upgrade
 
 DefineDependency("upgrade-faction-francia",
 	{"upgrade-faction-frank-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
@@ -467,3 +436,62 @@ DefineDependency("upgrade-faction-salia",
 	"or", {"upgrade-faction-frank-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
 	"or", {"upgrade-faction-sugambri-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
+
+-- Anglo-Saxon factions which are here because they require a Teuton upgrade
+
+DefineDependency("upgrade-faction-bernice-tribe",
+	{"upgrade-faction-angle-tribe", "upgrade-teuton-spatha", "upgrade-teuton-iron-shield"}
+)
+
+DefineDependency("upgrade-faction-dere-tribe",
+	{"upgrade-faction-angle-tribe", "upgrade-teuton-spatha", "upgrade-teuton-iron-shield"}
+)
+
+DefineDependency("upgrade-faction-gumeninga-tribe",
+	{"upgrade-faction-angle-tribe", "upgrade-teuton-spatha", "upgrade-teuton-iron-shield"}
+)
+
+DefineDependency("upgrade-faction-bernicia",
+	{"upgrade-faction-bernice-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-angle-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-charude-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-deira",
+	{"upgrade-faction-dere-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-angle-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-charude-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-east-anglia",
+	{"upgrade-faction-angle-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-charude-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-essex",
+	{"upgrade-faction-saxon-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-gumeninga-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-jutland",
+	{"upgrade-faction-jute-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-kent",
+	{"upgrade-faction-jute-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-mercia",
+	{"upgrade-faction-angle-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-charude-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-middle-anglia",
+	{"upgrade-faction-angle-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"},
+	"or", {"upgrade-faction-charude-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-wessex",
+	{"upgrade-faction-saxon-tribe", "upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+

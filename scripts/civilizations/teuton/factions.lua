@@ -39,56 +39,6 @@ DefineFaction("saxon-tribe", {
 	}
 })
 
-DefineFaction("angle-tribe", {
-	Name = "Angle Tribe",
-	Civilization = "teuton",
-	Type = "tribe",
-	Colors = {"white"},
-	DevelopsTo = {"england", "bernicia", "deira", "east-anglia", "mercia", "middle-anglia", "northumbria", "scotland"},
-	FactionUpgrade = "upgrade-angle-tribe-faction",
-	SettlementNames = {
-		"Abbandun",  -- Old English name of Abingdon; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Abbodesbyrig", -- Old English name of Abbotsbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p.
-		"Aegelesburg", -- "Ægelesburg"; Old English name of Aylesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Aegelesford", -- "Ægelesford"; Old English name of Aylesford; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Aethelingaig", -- "Æthelingaig"; Old English name of Athelney; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Alre", -- Old English name of Aller; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Ambresbyrig", -- Old English name of Amesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Andeferas", -- Old English name of Andover; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Apuldre", -- Old English name of Appledore; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Assandun", -- Old English name of Ashingdon; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Badecanwiellon", -- Old English name of Bakewell; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Baddanbyrig", -- Old English name of the Badbury Rings; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Baenesingtun", -- "Bænesingtun"; Old English name of Bensington; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Bancornaburg", -- Old English name of Bangor on Dee; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Bardanstapol", -- Old English name of Barnstaple; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Basengum", -- Old English name of Basing; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Bathum", -- Old English name of Bath; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Beamfleot", -- Old English name of Benfleet; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Gumeninga Hearh", -- Old English name of Harrow on the Hill; the name means "the holy place of the Gumeningas"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
-		"Searuburh" -- the modern Salisbury; Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 115.
-	},
-	HistoricalFactionDerivations = {-264, "germanic", "ingaevone-tribe"}
-})
-
-DefineFaction("avione-tribe", {
-	Name = "Avione Tribe",
-	Civilization = "teuton",
-	ParentFaction = "angle-tribe", -- accurate?,
-	Type = "tribe",
-	Colors = {"white"}
-})
-
-DefineFaction("charude-tribe", {
-	Name = "Charude Tribe",
-	Civilization = "teuton", -- were the Charudes actually West Germanic?
-	ParentFaction = "angle-tribe", -- accurate?
-	Type = "tribe",
-	Colors = {"purple"},
-	DevelopsTo = {"jutland"}, -- same general area
-	HistoricalFactionDerivations = {-27, "germanic", "ingaevone-tribe"}
-})
-
 DefineFaction("chauci-tribe", {
 	Name = "Chauci Tribe",
 	Civilization = "teuton",
@@ -119,15 +69,6 @@ DefineFaction("frisian-tribe", {
 	HistoricalFactionDerivations = {-264, "germanic", "ingaevone-tribe"}
 })
 
-DefineFaction("jute-tribe", {
-	Name = "Jute Tribe",
-	Civilization = "teuton",
-	ParentFaction = "angle-tribe", -- accurate?
-	Type = "tribe",
-	Colors = {"red", "white"},
-	DevelopsTo = {"jutland", "kent"}
-})
-
 DefineFaction("lombard-tribe", {
 	Name = "Lombard Tribe",
 	Civilization = "teuton",
@@ -151,11 +92,9 @@ DefineFaction("bavarian-tribe", {
 DefineFaction("teuton-tribe", {
 	Name = "Teuton Tribe",
 	Civilization = "teuton",
-	ParentFaction = "angle-tribe", -- accurate?
 	Type = "tribe",
 	Colors = {"orange"},
-	DevelopsTo = {"jutland"}, -- same general area
-	HistoricalFactionDerivations = {-264, "germanic", "ingaevone-tribe"}
+	DevelopsTo = {"jutland"} -- same general area
 })
 
 DefineFaction("ubii-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 227-228.
@@ -314,15 +253,6 @@ DefineFaction("holy-rome", {
 	}
 })
 
-DefineFaction("jutland", {
-	Name = "Jutland",
-	Civilization = "teuton",
-	ParentFaction = "jute-tribe",
-	Type = "polity",
-	Colors = {"red", "white"},
-	DefaultTier = "duchy"
-})
-
 DefineFaction("lombardy", {
 	Name = "Lombardy",
 	Civilization = "teuton",
@@ -416,5 +346,4 @@ DefineFaction("turkey", {
 
 Load("scripts/civilizations/teuton/factions_austrian.lua")
 Load("scripts/civilizations/teuton/factions_dutch.lua")
-Load("scripts/civilizations/teuton/factions_english.lua")
 Load("scripts/civilizations/teuton/factions_swabian.lua")

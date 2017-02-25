@@ -718,7 +718,7 @@ function StandardTriggers()
 					end
 				end,
 				function()
-					Tip("Krieger", "The Krieger (or Kregar) is the melee infantry unit of the Frankish, Suebi and Teuton civilizations, replacing the Erala.")
+					Tip("Krieger", "The Krieger (or Kregar) is the melee infantry unit of the Anglo-Saxon, Frankish, Suebi and Teuton civilizations, replacing the Erala.")
 					return false
 				end
 			)

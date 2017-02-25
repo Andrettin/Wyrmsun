@@ -29,7 +29,7 @@ DefineDeity("odin", { -- Known as Allfather, the Terrible One, One-eyed, Father 
 	Name = "Odin",
 	Pantheon = "Aesir",
 	HomePlane = "Asgard",
-	Civilizations = {"dwarf", "frankish", "germanic", "norse", "suebi", "teuton"},
+	Civilizations = {"anglo-saxon", "dwarf", "frankish", "germanic", "norse", "suebi", "teuton"},
 	Religions = {"paganism"},
 	Gender = "male",
 	Major = true,
@@ -37,10 +37,10 @@ DefineDeity("odin", { -- Known as Allfather, the Terrible One, One-eyed, Father 
 	Domains = {"aether", "courage", "wisdom"},
 	CharacterUpgrade = "upgrade-character-deity",
 	CulturalNames = {
+		"anglo-saxon", "Woden",
 		"dwarf", "Hroptatyr", -- in Norse mythology, one of the names of Odin, which was used in a verse concerning a charm by the dwarf Thjodrorir in the Hovamol, who sang wisdom for "Hroptatyr" wise; name means "Crier of the Gods", "the Crying God" or "the Prophet"
 		"frankish", "Wodan",
 		"germanic", "Wodanaz", -- "Wōđanaz"; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 128.
---		"teuton", "Woden", -- Anglo-Saxon name for the deity
 		"suebi", "Wodan",
 		"teuton", "Wodan" -- Old High German name for the deity, as seen in the second Merseburg charm; Source: Susan D. Fuller, "Pagan Charms in Tenth-Century Saxony? The Function of the Merseburg Charms", 1909, p. 162.
 	},
@@ -51,13 +51,14 @@ DefineDeity("thor", { -- Son of Odin and Jord (Fjorgyn) and Sif's husband; known
 	Name = "Thor",
 	Pantheon = "Aesir",
 	HomePlane = "Asgard",
-	Civilizations = {"dwarf", "frankish", "germanic", "norse", "suebi", "teuton"},
+	Civilizations = {"anglo-saxon", "dwarf", "frankish", "germanic", "norse", "suebi", "teuton"},
 	Religions = {"paganism"},
 	Gender = "male",
 	Major = true,
 	Icon = "icon-thor",
 	Domains = {"air", "lightning", "order"},
 	CulturalNames = {
+		"anglo-saxon", "Thunor", -- Anglo-Saxon name for the deity; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 98-99.
 --		"dwarf", "Vingthor", -- name used by Thor when revealing himself to the dwarf Alvis; the meaning is "Thor the Hurler"; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 185.
 		"frankish", "Thunor",
 		"germanic", "Thunraz", -- Buchholz gives "Þun(a)raz"; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129.
@@ -70,15 +71,15 @@ DefineDeity("thor", { -- Son of Odin and Jord (Fjorgyn) and Sif's husband; known
 DefineDeity("frigg", { -- First among the goddesses; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129.
 	Name = "Frigg",
 	Pantheon = "Aesir",
-	Civilizations = {"frankish", "germanic", "norse", "suebi", "teuton"},
+	Civilizations = {"anglo-saxon", "frankish", "germanic", "norse", "suebi", "teuton"},
 	Religions = {"paganism"},
 	Gender = "female",
 	CulturalNames = {
+		"anglo-saxon", "Frig", -- "Frig" is the Anglo-Saxon name for the goddess; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 98.
 		"germanic", "Frijjo", -- "Frijjō"; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129.
 		"frankish", "Friia",
 		"suebi", "Friia",
 		"teuton", "Friia" -- as given in the second Merseburg charm (which is in Old High German); in the charm Volla is described as being her sister; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129; Source: Susan D. Fuller, "Pagan Charms in Tenth-Century Saxony? The Function of the Merseburg Charms", 1909, p. 162.
-		-- "Frig" is the Anglo-Saxon name for the goddess; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 98.
 	},
 	Description = "Frigg is Odin's wife and the mother of Balder."
 })
@@ -86,7 +87,7 @@ DefineDeity("frigg", { -- First among the goddesses; Source: Kevin Crossley-Holl
 DefineDeity("seaxneat", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 98.
 	Name = "Seaxneat",
 	Pantheon = "Aesir", -- Seaxneat was a Germanic (Anglo-Saxon) deity, but was he actually considered one of the Aesir?
-	Civilizations = {"teuton"},
+	Civilizations = {"anglo-saxon"},
 	Religions = {"paganism"},
 	Gender = "male",
 	Description = "Seaxneat was claimed by the royal house of Essex as their ancestor."
@@ -111,16 +112,17 @@ DefineDeity("sol", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980,
 DefineDeity("tyr", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, pp. 115, 133.
 	Name = "Tyr",
 	Pantheon = "Aesir",
-	Civilizations = {"frankish", "germanic", "norse", "suebi", "teuton"},
+	Civilizations = {"anglo-saxon", "frankish", "germanic", "norse", "suebi", "teuton"},
 	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {"warfare"}, -- god of war
 	CulturalNames = {
+		"anglo-saxon", "Tiw", -- "Tīw"; Old English name of the god; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115.
 		"frankish", "Ziu",
 		"germanic", "Tiwaz", -- "Tīwaz"; Proto-Germanic name of the god; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115.
 		"norse", "Tyr", -- "Týr"; Old Norse name of the god; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115.
 		"suebi", "Ziu",
-		"teuton", "Ziu" -- Old High German name of the god (in Old English it was Tīw); Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115.
+		"teuton", "Ziu" -- Old High German name of the god; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115.
 	},
 	Description = "Tyr is the son of Odin, and is known as the bravest of the Aesir. In an effort to bind the giant wolf Fenrir, he ended up losing his hand."
 })
@@ -138,11 +140,11 @@ DefineDeity("balder", { -- Due to Loki's mischief, he was killed by Hod; Balder 
 	Name = "Balder",
 	Pantheon = "Aesir",
 	HomePlane = "Asgard",
-	Civilizations = {"norse", "teuton"},
+	Civilizations = {"anglo-saxon", "norse"},
 	Religions = {"paganism"},
 	Gender = "male",
 	CulturalNames = {
-		"teuton", "Baeldaeg", -- "Bældæg"; Anglo-Saxon name for the deity
+		"anglo-saxon", "Baeldaeg", -- "Bældæg"; Anglo-Saxon name for the deity
 	},
 	Description = "The son of Odin and Frigg, Balder is known for his beauty, wisdom and gentleness. As Baeldaeg, the royal houses of both Bernicia and Wessex ascribed their descent to him."
 })
@@ -179,7 +181,7 @@ DefineDeity("eostre", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p
 	Name = "Eostre",
 	Pantheon = "Aesir",
 	HomePlane = "Asgard",
-	Civilizations = {"teuton"}, -- Anglo-Saxon goddess
+	Civilizations = {"anglo-saxon"}, -- Anglo-Saxon goddess
 	Religions = {"paganism"},
 	Gender = "female"
 })
@@ -254,7 +256,7 @@ DefineDeity("hretha", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p
 	Name = "Hretha",
 	Pantheon = "Aesir",
 	HomePlane = "Asgard",
-	Civilizations = {"teuton"}, -- Anglo-Saxon goddess
+	Civilizations = {"anglo-saxon"}, -- Anglo-Saxon goddess
 	Religions = {"paganism"},
 	Gender = "female"
 })

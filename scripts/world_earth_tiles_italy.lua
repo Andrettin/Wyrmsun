@@ -176,7 +176,7 @@ DefineWorldMapTile({515, 136}, {
 		"latin", "Roma" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
-		"teuton", "england", "Rome"
+		"anglo-saxon", "england", "Rome"
 	}
 })
 
@@ -241,7 +241,7 @@ DefineWorldMapTile({522, 150}, {
 		"latin", "Syracusae" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
-		"teuton", "england", "Syracuse"
+		"anglo-saxon", "england", "Syracuse"
 	}
 })
 

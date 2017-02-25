@@ -64,3 +64,13 @@ DefineFaction("uruguay", {
 	Colors = {"cyan", "white"},
 	DefaultTier = "duchy"
 })
+
+-- Holy Orders
+
+DefineFaction("jesuit-order", {
+	Name = "Jesuit Order",
+	Civilization = "castillian",
+	Type = "holy-order",
+	Colors = {"black"},
+	DefaultTier = "duchy"
+})

@@ -194,9 +194,9 @@ DefineUpgrade("upgrade-coinage", {
 })
 
 DefineUpgrade("upgrade-writing", {
-	Name = _("Writing"),
+	Name = "Writing",
 	Class = "writing",
-	Description = _("The invention of writing makes it possible for ideas and traditions to be more easily spread and preserved.\n\nEffect: +10% Time Efficiency for all buildings, changes faction from tribe to polity."),
+	Description = "The invention of writing makes it possible for ideas and traditions to be more easily spread and preserved.\n\nEffect: +10% Time Efficiency for all buildings.",
 	Costs = {"time", 250, "copper", 900, "lumber", 1500},
 	GrandStrategyCosts = {"time", 250, "copper", 900, "lumber", 1500, "research", 2400},
 	GrandStrategyProductionEfficiencyModifier = {"research", 50, "leadership", 25}
@@ -304,6 +304,7 @@ Load("scripts/upgrade_deities.lua")
 Load("scripts/civilizations/celt/upgrade.lua")
 Load("scripts/civilizations/dwarf/upgrade.lua")
 Load("scripts/civilizations/germanic/upgrade.lua")
+Load("scripts/civilizations/anglo_saxon/upgrade.lua")
 Load("scripts/civilizations/frankish/upgrade.lua")
 Load("scripts/civilizations/gnome/upgrade.lua")
 Load("scripts/civilizations/goblin/upgrade.lua")

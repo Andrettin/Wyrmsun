@@ -2006,15 +2006,11 @@ function GetCivilizationBackground(civilization)
 		return "ui/backgrounds/yale.png"
 	elseif (civilization == "ettin") then
 		return "ui/backgrounds/wyrm.png"
-	elseif (civilization == "frankish") then
-		return "ui/backgrounds/wyrm.png"
 	elseif (civilization == "germanic") then
 		return "ui/backgrounds/wyrm.png"
 	elseif (civilization == "gnome") then
 		return "ui/backgrounds/yale.png"
 	elseif (civilization == "goblin") then
-		return "ui/backgrounds/wyrm.png"
-	elseif (civilization == "goth") then
 		return "ui/backgrounds/wyrm.png"
 	elseif (civilization == "greek") then
 		return "ui/backgrounds/gryphon.png"
@@ -2024,8 +2020,6 @@ function GetCivilizationBackground(civilization)
 		return "ui/backgrounds/gryphon.png"
 	elseif (civilization == "minoan") then
 		return "ui/backgrounds/gryphon.png"
-	elseif (civilization == "norse") then
-		return "ui/backgrounds/wyrm.png"
 	elseif (civilization == "orc") then
 		return "ui/backgrounds/wyrm.png"
 	elseif (civilization == "persian") then
@@ -2034,9 +2028,7 @@ function GetCivilizationBackground(civilization)
 		return "ui/backgrounds/gryphon.png"
 	elseif (civilization == "slav") then
 		return "ui/backgrounds/wyrm.png"
-	elseif (civilization == "suebi") then
-		return "ui/backgrounds/wyrm.png"
-	elseif (civilization == "teuton") then
+	elseif (civilization == "anglo-saxon" or civilization == "frankish" or civilization == "goth" or civilization == "norse" or civilization == "suebi" or civilization == "teuton") then
 		return "ui/backgrounds/wyrm.png"
 	end
 	

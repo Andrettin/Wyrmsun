@@ -285,7 +285,8 @@ DefineUnitType("unit-kite-shield", { Name = _("Kite Shield"),
 } )
 
 --[[
-DefineUnitType("unit-suebi-shield", { Name = _("Suebi Shield"),
+DefineUnitType("unit-suebi-shield", {
+	Name = "Suebi Shield",
 	Parent = "unit-template-item",
 	Image = {"file", "suebi/items/suebi_shield.png", "size", {32, 32}},
 	Icon = "icon-teuton-iron-shield", -- each base item type needs to have its own icon

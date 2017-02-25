@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016-2017 by Andrettin
+--      (c) Copyright 2015-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,40 +25,70 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineFaction("angle-tribe", {
+	Name = "Angle Tribe",
+	Civilization = "anglo-saxon",
+	Type = "tribe",
+	Colors = {"white"},
+	DevelopsTo = {"england", "bernicia", "deira", "east-anglia", "mercia", "middle-anglia", "northumbria", "scotland"},
+	FactionUpgrade = "upgrade-faction-angle-tribe"
+})
+
+DefineFaction("avione-tribe", {
+	Name = "Avione Tribe",
+	Civilization = "anglo-saxon", -- accurate?
+	Type = "tribe",
+	Colors = {"white"},
+	FactionUpgrade = "upgrade-faction-avione-tribe"
+})
+
+DefineFaction("charude-tribe", {
+	Name = "Charude Tribe",
+	Civilization = "anglo-saxon", -- accurate?
+	Type = "tribe",
+	Colors = {"purple"},
+	DevelopsTo = {"jutland"}, -- same general area
+	FactionUpgrade = "upgrade-faction-charude-tribe"
+})
+
+DefineFaction("jute-tribe", {
+	Name = "Jute Tribe",
+	Civilization = "anglo-saxon", -- accurate?
+	Type = "tribe",
+	Colors = {"red", "white"},
+	DevelopsTo = {"jutland", "kent"},
+	FactionUpgrade = "upgrade-faction-jute-tribe"
+})
+
 DefineFaction("bernice-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 	Name = "Bernice Tribe",
-	Civilization = "teuton",
-	ParentFaction = "angle-tribe",
+	Civilization = "anglo-saxon",
 	Type = "tribe",
 	Colors = {"brown"},
 	DevelopsTo = {"bernicia", "northumbria", "england", "scotland"},
-	FactionUpgrade = "upgrade-bernice-tribe-faction",
+	FactionUpgrade = "upgrade-faction-bernice-tribe",
 	DefaultAI = "sea-attack",
-	Description = "The Bernice were an Anglian people who established themselves on the Northumbrian coast, eventually managing to conquer the surrounding Celtic territories.",
-	HistoricalFactionDerivations = {526, "teuton", "angle-tribe"}
+	Description = "The Bernice were an Anglian people who established themselves on the Northumbrian coast, eventually managing to conquer the surrounding Celtic territories."
 })
 
 DefineFaction("dere-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 	Name = "Dere Tribe",
-	Civilization = "teuton",
-	ParentFaction = "angle-tribe",
+	Civilization = "anglo-saxon",
 	Type = "tribe",
 	Colors = {"blue"},
 	DevelopsTo = {"deira", "northumbria", "england", "scotland"},
-	FactionUpgrade = "upgrade-bernice-tribe-faction",
+	FactionUpgrade = "upgrade-faction-dere-tribe",
 	DefaultAI = "sea-attack",
-	Description = "The Dere were a group of Anglian peoples, who originally dwelled in the central and eastern parts of modern Yorkshire. Their name comes from the British word \"deifr\" (meaning \"waters\"), likely due to their initial settlements being located at the confluence of multiple rivers into the Humber.",
-	HistoricalFactionDerivations = {500, "teuton", "angle-tribe"} -- The Dere (a collection of Anglian peoples) were in possession of York in 500 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
+	Description = "The Dere were a group of Anglian peoples, who originally dwelled in the central and eastern parts of modern Yorkshire. Their name comes from the British word \"deifr\" (meaning \"waters\"), likely due to their initial settlements being located at the confluence of multiple rivers into the Humber."
 })
 
 DefineFaction("gumeninga-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
 	Name = "Gumeninga Tribe",
-	Civilization = "teuton",
-	ParentFaction = "angle-tribe",
+	Civilization = "anglo-saxon",
 	Type = "tribe",
 	Colors = {"brown"},
 	DevelopsTo = {"england"},
-	FactionUpgrade = "upgrade-gumeninga-tribe-faction", -- since all we know about them is their religious location, it makes sense to give them a priest-related bonus
+	FactionUpgrade = "upgrade-faction-gumeninga-tribe", -- since all we know about them is their religious location, it makes sense to give them a priest-related bonus
 	DefaultAI = "sea-attack",
 	Description = "The Gumeningas were an Anglo-Saxon tribe who inhabited the area of Middlesex.",
 	Background = "The name of the Gumeningas was present in the place name \"Gumeninga hearh\" (the Old English name for Harrow on the Hill), meaning \"the holy place of the Gumeningas\"."
@@ -66,131 +96,127 @@ DefineFaction("gumeninga-tribe", { -- Source: Frank Stenton, "Anglo-Saxon Englan
 
 DefineFaction("bernicia", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
 	Name = "Bernicia",
-	Civilization = "teuton",
-	ParentFaction = "bernice-tribe",
+	Civilization = "anglo-saxon",
 	Type = "polity",
 	Colors = {"brown"},
 	DefaultTier = "kingdom",
 	DevelopsTo = {"northumbria", "england", "scotland"},
-	FactionUpgrade = "upgrade-angle-tribe-faction",
+	FactionUpgrade = "upgrade-faction-bernicia",
 	DefaultAI = "sea-attack",
-	Description = "Bernicia was the kingdom founded by the Bernice people in Northumbria.",
-	HistoricalFactionDerivations = {547, "teuton", "bernice-tribe"} -- the Kingdom of Bernicia was founded in 547 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
+	Description = "Bernicia was the kingdom founded by the Bernice people in Northumbria."
 })
 
 DefineFaction("deira", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
 	Name = "Deira",
-	Civilization = "teuton",
-	ParentFaction = "dere-tribe",
+	Civilization = "anglo-saxon",
 	Type = "polity",
 	Colors = {"blue"},
 	DefaultTier = "kingdom",
 	DevelopsTo = {"northumbria", "england", "scotland"},
-	FactionUpgrade = "upgrade-angle-tribe-faction",
+	FactionUpgrade = "upgrade-faction-deira",
 	DefaultAI = "sea-attack",
-	Description = "Deira was the kingdom founded by the Dere people in Northumbria.",
-	HistoricalFactionDerivations = {588, "teuton", "dere-tribe"} -- according to tradition, Æthelric of Bernicia acquired the kingdom of Deira upon its king Ælle's death in 588 AD; and since their king died in this year, the kingdom existed then
+	Description = "Deira was the kingdom founded by the Dere people in Northumbria."
 })
 
 DefineFaction("east-anglia", {
 	Name = "East Anglia",
-	Civilization = "teuton",
-	ParentFaction = "angle-tribe",
+	Civilization = "anglo-saxon",
 	Type = "polity",
 	Colors = {"pink"},
 	DefaultTier = "kingdom",
 	DevelopsTo = {"england"},
-	Description = "",
-	DefaultAI = "sea-attack",
-	HistoricalFactionDerivations = {616, "teuton", "angle-tribe"} -- The kingdom of East Anglia existed in 616 under Rædwald; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 78-79.
-})
-
-DefineFaction("essex", {
-	Name = "Essex",
-	Civilization = "teuton",
---	ParentFaction = "saxon-tribe",
-	ParentFaction = "angle-tribe",
-	Type = "polity",
-	Colors = {"purple"},
-	DefaultTier = "kingdom",
-	DevelopsTo = {"england"},
---	FactionUpgrade = "upgrade-saxon-tribe-faction",
+	FactionUpgrade = "upgrade-faction-east-anglia",
 	DefaultAI = "sea-attack",
 	Description = ""
 })
 
+DefineFaction("essex", {
+	Name = "Essex",
+	Civilization = "anglo-saxon",
+	Type = "polity",
+	Colors = {"purple"},
+	DefaultTier = "kingdom",
+	DevelopsTo = {"england"},
+	FactionUpgrade = "upgrade-faction-essex",
+	DefaultAI = "sea-attack",
+	Description = ""
+})
+
+DefineFaction("jutland", {
+	Name = "Jutland",
+	Civilization = "anglo-saxon",
+	Type = "polity",
+	Colors = {"red", "white"},
+	DefaultTier = "duchy",
+	FactionUpgrade = "upgrade-faction-jutland"
+})
+
 DefineFaction("kent", {
 	Name = "Kent",
-	Civilization = "teuton",
---	ParentFaction = "jute-tribe",
-	ParentFaction = "angle-tribe",
+	Civilization = "anglo-saxon",
 	Type = "polity",
 	Colors = {"cyan"},
 	DefaultTier = "kingdom",
 	DevelopsTo = {"england"},
+	FactionUpgrade = "upgrade-faction-kent",
 	DefaultAI = "sea-attack",
 	Description = ""
 })
 
 DefineFaction("mercia", {
 	Name = "Mercia",
-	Civilization = "teuton",
-	ParentFaction = "angle-tribe",
+	Civilization = "anglo-saxon",
 	Type = "polity",
 	Colors = {"white"},
 	DefaultTier = "kingdom",
 	DevelopsTo = {"england"},
+	FactionUpgrade = "upgrade-faction-mercia",
 	DefaultAI = "sea-attack",
-	Description = "",
-	HistoricalFactionDerivations = {654, "teuton", "angle-tribe"} -- we have notice of the fall of a king Penda of Mercia in 654 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
+	Description = ""
 })
 
 DefineFaction("middle-anglia", {
 	Name = "Middle Anglia",
-	Civilization = "teuton",
-	ParentFaction = "angle-tribe",
+	Civilization = "anglo-saxon",
 	Type = "polity",
 	Colors = {"violet"},
 	DefaultTier = "kingdom",
 	DevelopsTo = {"england"},
+	FactionUpgrade = "upgrade-faction-middle-anglia",
 	DefaultAI = "sea-attack",
-	Description = "",
-	HistoricalFactionDerivations = {654, "teuton", "angle-tribe"} -- Peada was king of the Middle Angles when Penda fell; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
+	Description = ""
 })
 
 DefineFaction("northumbria", {
 	Name = "Northumbria",
-	Civilization = "teuton",
-	ParentFaction = "bernicia",
+	Civilization = "anglo-saxon",
 	Type = "polity",
 	Colors = {"brown"},
 	DefaultTier = "kingdom",
 	DevelopsTo = {"england", "scotland"},
-	DefaultAI = "sea-attack",
-	HistoricalFactionDerivations = {654, "teuton", "bernicia"} -- Northumbria unified by Oswiu of Bernicia in 654
+	FactionUpgrade = "upgrade-faction-northumbria",
+	DefaultAI = "sea-attack"
 })
 
 DefineFaction("wessex", {
 	Name = "Wessex",
-	Civilization = "teuton",
---	ParentFaction = "saxon-tribe",
-	ParentFaction = "angle-tribe",
+	Civilization = "anglo-saxon",
 	Type = "polity",
 	Colors = {"red"},
 	DefaultTier = "kingdom",
 	DevelopsTo = {"england"},
---	FactionUpgrade = "upgrade-saxon-tribe-faction",
+	FactionUpgrade = "upgrade-faction-wessex",
 	DefaultAI = "sea-attack",
 	Description = ""
 })
 
 DefineFaction("england", {
 	Name = "England",
-	Civilization = "teuton",
+	Civilization = "anglo-saxon",
 	Type = "polity",
 	Colors = {"red", "white"},
 	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-angle-tribe-faction",
+	FactionUpgrade = "upgrade-faction-england",
 	SettlementNames = {
 		"Ashford", -- Source: "Philip's International School Atlas", 2006, p. 64.
 		"Bamburgh", -- Shepherd gives it as "Bamborough" instead; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
@@ -279,10 +305,9 @@ DefineFaction("england", {
 
 DefineFaction("scotland", {
 	Name = "Scotland",
-	Civilization = "teuton",
-	ParentFaction = "england",
+	Civilization = "anglo-saxon",
 	Type = "polity",
 	Colors = {"blue", "white"},
-	DefaultTier = "kingdom"
+	DefaultTier = "kingdom",
+	FactionUpgrade = "upgrade-faction-scotland"
 })
-

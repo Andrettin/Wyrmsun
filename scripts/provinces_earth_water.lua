@@ -463,8 +463,8 @@ DefineProvince("English Channel", {
 		"latin", "British Ocean"
 	},
 	FactionCulturalNames = {
-		"teuton", "england", "English Channel",
-		"teuton", "angle-tribe", "English Channel"
+		"anglo-saxon", "england", "English Channel",
+		"anglo-saxon", "angle-tribe", "English Channel"
 	},
 	Tiles = {
 --		{116, 28}, {117, 28}, {118, 28}, {119, 28}, {120, 27}, {120, 28}, -- old map

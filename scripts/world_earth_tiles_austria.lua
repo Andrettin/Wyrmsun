@@ -25,34 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineWorldMapTile({512, 121}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Innsbruck"
-	}
-})
-
-DefineWorldMapTile({516, 119}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Salzburg"
-	}
-})
-
-DefineWorldMapTile({520, 118}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Linz"
-	}
-})
-
-DefineWorldMapTile({520, 123}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Klagenfurt"
-	}
-})
-
 DefineWorldMapTile({521, 125}, {
 	World = "Earth",
 	CulturalSettlementNames = {

@@ -119,18 +119,18 @@ local land_funcs = {
 		return false;
 	end,
 	function()
-		if (AiGetRace() == "germanic") then -- if is Germanic, wait until becomes Suebi/Teuton for the next step
+		if (AiGetRace() == "germanic") then -- if is Germanic, wait until becomes Anglo-Saxon/Frankish/Suebi/Teuton for the next step
 			return true;
 		end
 	end,
 	function()
-		if (AiGetRace() == "frankish" or AiGetRace() == "suebi" or AiGetRace() == "teuton") then
+		if (AiGetRace() == "anglo-saxon" or AiGetRace() == "frankish" or AiGetRace() == "suebi" or AiGetRace() == "teuton") then
 			return AiResearch(GetAiUnitType("melee-weapon-2")); -- research this now, since Teutons couldn't before
 		end
 		return false;
 	end,
 	function()
-		if (AiGetRace() == "frankish" or AiGetRace() == "suebi" or AiGetRace() == "teuton") then
+		if (AiGetRace() == "anglo-saxon" or AiGetRace() == "frankish" or AiGetRace() == "suebi" or AiGetRace() == "teuton") then
 			return AiResearch(GetAiUnitType("iron-shield")); -- research this now, since Teutons couldn't before
 		end
 		return false;

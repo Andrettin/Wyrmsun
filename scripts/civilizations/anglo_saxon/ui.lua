@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016 by Andrettin
+--      (c) Copyright 2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,40 +25,16 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineWorldMapTile({456, 103}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"anglo-saxon", "england", "Roscommon"
-	}
+DefineCursor({
+	Name = "cursor-point",
+	Race = "anglo-saxon",
+	File = "germanic/ui/cursors/germanic_hand.png",
+	HotSpot = {0, 0},
+	Size = {29, 32}
 })
 
-DefineWorldMapTile({456, 106}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"anglo-saxon", "england", "Tipperary"
-	}
-})
+UI.NormalFontColor = "white"
+UI.ReverseFontColor = "yellow"
 
-DefineWorldMapTile({458, 106}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"anglo-saxon", "england", "Clonmel"
-	}
-})
-
-DefineWorldMapTile({462, 104}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"celt", "Eblana", -- or is this the Latin name? Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	},
-	FactionCulturalSettlementNames = {
-		"anglo-saxon", "england", "Dublin"
-	}
-})
-
-DefineWorldMapTile({463, 100}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"anglo-saxon", "england", "Belfast"
-	}
-})
+UI.MenuButton.Style = FindButtonStyle("main-germanic")
+UI.NetworkDiplomacyButton.Style = FindButtonStyle("main-germanic")

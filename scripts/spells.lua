@@ -320,6 +320,25 @@ DefineSpell("spell-sagan-allegiance",
 	"sound-when-cast", "magic-holy"
 )
 
+DefineSpell("spell-anglo-saxon-allegiance",
+	"showname", "Anglo-Saxon Allegiance",
+	"description", "Changes the unit's type into its Anglo-Saxon equivalent",
+	"manacost", 0,
+	"range", 0,
+	"target", "self",
+	"condition", {
+		"organic", "only",
+		"Building", "false",
+		"civilization-equivalent", "anglo-saxon"
+	},
+	"action", {
+		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
+		{"polymorph", "civilization", "anglo-saxon"}
+	},
+	"item-spell", "scroll",
+	"sound-when-cast", "magic-holy"
+)
+
 DefineSpell("spell-frank-allegiance",
 	"showname", "Frank Allegiance",
 	"description", "Changes the unit's type into its Frankish equivalent",

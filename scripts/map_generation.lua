@@ -1622,6 +1622,9 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 	for i=0,(PlayerMax - 2) do
 		if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
 			local possible_civilizations = {}
+			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("anglo-saxon")) > 0 and TechLevel[i + 1] == "Agrarian (Iron)") then -- allow germanic humans in elven forests since there is no elven civilization yet
+				table.insert(possible_civilizations, "anglo-saxon")
+			end
 			if ((GetCurrentTileset() == "cave" or GetCurrentTileset() == "swamp" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("dwarf")) > 0) then
 				table.insert(possible_civilizations, "dwarf")
 			end
