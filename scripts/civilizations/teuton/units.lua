@@ -996,8 +996,8 @@ DefineUnitType("unit-teuton-priest", {
 --	WeaponClasses = {"mace"},
 	BluntDamage = true,
 	StartingAbilities = {"upgrade-inspire", "upgrade-precision", "upgrade-healing"},
-	CanCastSpell = {"spell-healing", "spell-precision"},
-	AutoCastActive = {"spell-healing", "spell-precision"},
+	CanCastSpell = {"spell-healing", "spell-inspire", "spell-precision"},
+	AutoCastActive = {"spell-healing", "spell-inspire", "spell-precision"},
 	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Variations = {
 		{
