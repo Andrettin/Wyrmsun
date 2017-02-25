@@ -770,6 +770,7 @@
 /graphics/neutral/icons/chest.png (by Vladislav "iDreamRunner") (licensed under the CC0)
 /graphics/neutral/icons/christianity.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/critical_strike.png (by Jinn) (licensed under the CC0)
+/graphics/neutral/icons/crown.png (by Exidelo) (licensed under the CC0)
 /graphics/neutral/icons/cyclops.png (by Jinn and b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/neutral/icons/deadly_precision.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/eagle_eye.png (by Jinn) (licensed under the CC0)

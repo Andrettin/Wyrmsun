@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      buttons.lua - Define the general unit-buttons.
---
 --      (c) Copyright 2001-2017 by Vladi Belperchinov-Shabanski, Lutz Sammer,
 --                                 Jimmy Salmon and Andrettin
 --
@@ -115,10 +113,10 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-rally-point",
 	}
 } )
 
-DefineButton( { Pos = 14, Level = 0, Icon = "icon-teuton-civilization",
+DefineButton( { Pos = 14, Level = 0, Icon = "icon-crown",
 	Action = "button", Value = 2,
 	Allowed = "check-has-sub-buttons",
-	Key = "p", Hint = "View ~!Political Decisions", Popup = "popup-commands",
+	Key = "f", Hint = "~!Found a Faction", Popup = "popup-commands",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
