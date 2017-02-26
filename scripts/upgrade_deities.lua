@@ -224,6 +224,7 @@ DefineUpgrade("upgrade-deity-thor", {
 
 DefineUpgrade("upgrade-deity-gathaarl", {
 	Name = "Gathaarl",
+	Icon = "icon-gathaarl",
 	Costs = {"time", 120, "copper", 750}
 })
 
