@@ -8,9 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      spells.lua - The spells.
---
---      (c) Copyright 1998-2016 by Joris Dauphin, Jimmy Salmon and Andrettin.
+--      (c) Copyright 1998-2017 by Joris Dauphin, Jimmy Salmon and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -34,7 +32,7 @@
 DefineUnitType("unit-revealer", {})
 
 DefineSpell("spell-healing",
-	"showname", _("Healing"),
+	"showname", "Healing",
 	"manacost", 2,
 	"range", 6,
 	"target", "unit",
@@ -340,7 +338,7 @@ DefineSpell("spell-anglo-saxon-allegiance",
 )
 
 DefineSpell("spell-frank-allegiance",
-	"showname", "Frank Allegiance",
+	"showname", "Frankish Allegiance",
 	"description", "Changes the unit's type into its Frankish equivalent",
 	"manacost", 0,
 	"range", 0,
