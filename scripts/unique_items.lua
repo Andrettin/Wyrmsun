@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015-2016 by Andrettin
+--      (c) Copyright 2015-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -45,15 +45,6 @@ DefineUniqueItem("brimir", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Suffix = "upgrade-item-suffix-of-victory",
 	Background = "Brimir was described in Norse mythology as being the best of swords.",
 	Quote = "\"Of all the gods is Odin the greatest,\nAnd Sleipnir the best of steeds;\nBifrost of bridges, Bragi of skalds,\nHobrok of hawks, Garm of hounds,\nand Brimir of swords.\"\n- Grimnismol (Grimnir)"
-} )
-
-DefineUniqueItem("fafnirs-heart", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 380-381.
-	Name = "Fafnir's Heart",
-	Type = "unit-wyrm-heart",
-	Elixir = "upgrade-elixir-fafnirs-heart",
-	Background = "In Norse mythology, the hero Sigurd (identified by scholars with the historical Frankish king Sigibert) cooked the heart of the monster Fafnir, presumably gaining in strength after eating it.",
---	Quote = "\"There sits Sigurd, sprinkled with blood,\nAnd Fafnir's heart with fire he cooks\"\n- Fafnismol"
-	Quote = "\"There sits Sigibert, sprinkled with blood,\nAnd Fafnir's heart with fire he cooks\"\n- Fafnismol"
 } )
 
 DefineUniqueItem("laevatein", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 124; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 245.
@@ -171,6 +162,14 @@ DefineUniqueItem("gjall", { -- Source: Kevin Crossley-Holland, "The Norse Myths"
 	Prefix = "upgrade-item-prefix-jinns",
 	Suffix = "upgrade-item-suffix-of-swiftness",
 	Background = "In Norse mythology, Gjall (\"the Ringing Horn\") was the horn of the god Heimdall, which was heard in all nine worlds when soared."
+} )
+
+DefineUniqueItem("fafnirs-heart", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 380-381.
+	Name = "Fafnir's Heart",
+	Type = "unit-wyrm-heart",
+	Elixir = "upgrade-elixir-fafnirs-heart",
+	Background = "In Norse mythology, the hero Sigurd (identified by scholars with the historical Frankish king Sigibert) cooked the heart of the monster Fafnir, presumably gaining in strength after eating it.",
+	Quote = "\"There sits Sigurd, sprinkled with blood,\nAnd Fafnir's heart with fire he cooks\"\n- Fafnismol"
 } )
 
 DefineUniqueItem("thusagans-book", { -- From Battle for Wesnoth: The Hammer of Thursagan
