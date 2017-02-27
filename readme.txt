@@ -99,6 +99,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Terrain
 - Fixed issue which prevented trees from regrowing.
+- Greatly increased the amount of stone contained in each rock tile from 400 to 10,000, so that destroying rock tiles becomes much harder.
 
 * Units
 - Added Germanic and Teuton level 3 swordsmen.
