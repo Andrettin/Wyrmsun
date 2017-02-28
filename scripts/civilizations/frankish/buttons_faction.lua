@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineButton( { Pos = 6, Level = 2, Icon = "icon-teuton-civilization",
+DefineButton( { Pos = 6, Level = 2, Icon = "icon-flag-old-austria",
 	Action = "research", Value = "upgrade-faction-frank-tribe",
 	Allowed = "check-single-research",
 	Key = "f", Hint = "Found the ~!Frank Tribe", Popup = "popup-research",
@@ -33,7 +33,7 @@ DefineButton( { Pos = 6, Level = 2, Icon = "icon-teuton-civilization",
 	ForUnit = {"unit-germanic-town-hall"}
 } )
 
-DefineButton( { Pos = 7, Level = 2, Icon = "icon-teuton-civilization",
+DefineButton( { Pos = 7, Level = 2, Icon = "icon-flag-old-austria",
 	Action = "research", Value = "upgrade-faction-ampsivarii-tribe",
 	Allowed = "check-single-research",
 	Key = "a", Hint = "Found the ~!Ampsivarii Tribe", Popup = "popup-research",
@@ -41,7 +41,7 @@ DefineButton( { Pos = 7, Level = 2, Icon = "icon-teuton-civilization",
 	ForUnit = {"unit-germanic-town-hall"}
 } )
 
-DefineButton( { Pos = 8, Level = 2, Icon = "icon-teuton-civilization",
+DefineButton( { Pos = 8, Level = 2, Icon = "icon-flag-old-austria",
 	Action = "research", Value = "upgrade-faction-batavian-tribe",
 	Allowed = "check-single-research",
 	Key = "b", Hint = "Found the ~!Batavian Tribe", Popup = "popup-research",
@@ -49,7 +49,7 @@ DefineButton( { Pos = 8, Level = 2, Icon = "icon-teuton-civilization",
 	ForUnit = {"unit-germanic-town-hall"}
 } )
 
-DefineButton( { Pos = 9, Level = 2, Icon = "icon-teuton-civilization",
+DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-old-austria",
 	Action = "research", Value = "upgrade-faction-chamavi-tribe",
 	Allowed = "check-single-research",
 	Key = "c", Hint = "Found the ~!Chamavi Tribe", Popup = "popup-research",
@@ -57,7 +57,7 @@ DefineButton( { Pos = 9, Level = 2, Icon = "icon-teuton-civilization",
 	ForUnit = {"unit-germanic-town-hall"}
 } )
 
-DefineButton( { Pos = 10, Level = 2, Icon = "icon-teuton-civilization",
+DefineButton( { Pos = 10, Level = 2, Icon = "icon-flag-old-austria",
 	Action = "research", Value = "upgrade-faction-chatti-tribe",
 	Allowed = "check-single-research",
 	Key = "t", Hint = "Found the Cha~!tti Tribe", Popup = "popup-research",
@@ -65,7 +65,7 @@ DefineButton( { Pos = 10, Level = 2, Icon = "icon-teuton-civilization",
 	ForUnit = {"unit-germanic-town-hall"}
 } )
 
-DefineButton( { Pos = 11, Level = 2, Icon = "icon-teuton-civilization",
+DefineButton( { Pos = 11, Level = 2, Icon = "icon-flag-old-austria",
 	Action = "research", Value = "upgrade-faction-sugambri-tribe",
 	Allowed = "check-single-research",
 	Key = "s", Hint = "Found the ~!Sugambri Tribe", Popup = "popup-research",
@@ -73,7 +73,7 @@ DefineButton( { Pos = 11, Level = 2, Icon = "icon-teuton-civilization",
 	ForUnit = {"unit-germanic-town-hall"}
 } )
 
-DefineButton( { Pos = 9, Level = 2, Icon = "icon-teuton-civilization",
+DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-old-austria",
 	Action = "research", Value = "upgrade-faction-francia",
 	Allowed = "check-single-research",
 	Key = "f", Hint = "Found ~!Francia", Popup = "popup-research",
@@ -81,7 +81,7 @@ DefineButton( { Pos = 9, Level = 2, Icon = "icon-teuton-civilization",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 10, Level = 2, Icon = "icon-teuton-civilization",
+DefineButton( { Pos = 10, Level = 2, Icon = "icon-flag-old-austria",
 	Action = "research", Value = "upgrade-faction-austrasia",
 	Allowed = "check-single-research",
 	Key = "a", Hint = "Found ~!Austrasia", Popup = "popup-research",
@@ -89,7 +89,7 @@ DefineButton( { Pos = 10, Level = 2, Icon = "icon-teuton-civilization",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 11, Level = 2, Icon = "icon-teuton-civilization",
+DefineButton( { Pos = 11, Level = 2, Icon = "icon-flag-old-austria",
 	Action = "research", Value = "upgrade-faction-neustria",
 	Allowed = "check-single-research",
 	Key = "n", Hint = "Found ~!Neustria", Popup = "popup-research",
@@ -97,7 +97,7 @@ DefineButton( { Pos = 11, Level = 2, Icon = "icon-teuton-civilization",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 12, Level = 2, Icon = "icon-teuton-civilization",
+DefineButton( { Pos = 12, Level = 2, Icon = "icon-flag-old-austria",
 	Action = "research", Value = "upgrade-faction-burgundia",
 	Allowed = "check-single-research",
 	Key = "b", Hint = "Found ~!Burgundia", Popup = "popup-research",
@@ -105,7 +105,7 @@ DefineButton( { Pos = 12, Level = 2, Icon = "icon-teuton-civilization",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 13, Level = 2, Icon = "icon-teuton-civilization",
+DefineButton( { Pos = 13, Level = 2, Icon = "icon-flag-old-austria",
 	Action = "research", Value = "upgrade-faction-salia",
 	Allowed = "check-single-research",
 	Key = "s", Hint = "Found ~!Salia", Popup = "popup-research",
@@ -113,7 +113,7 @@ DefineButton( { Pos = 13, Level = 2, Icon = "icon-teuton-civilization",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 14, Level = 2, Icon = "icon-teuton-civilization",
+DefineButton( { Pos = 14, Level = 2, Icon = "icon-flag-old-austria",
 	Action = "research", Value = "upgrade-faction-east-francia",
 	Allowed = "check-single-research",
 	Key = "e", Hint = "Found ~!East Francia", Popup = "popup-research",

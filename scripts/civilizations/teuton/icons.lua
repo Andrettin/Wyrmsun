@@ -26,12 +26,6 @@
 --
 
 DefineIcon({
-	Name = "icon-teuton-civilization",
-	Size = {46, 38},
-	File = "teuton/icons/teuton_civilization.png"
-})
-
-DefineIcon({
 	Name = "icon-saxon-swordsman",
 	Size = {46, 38},
 	File = "teuton/icons/saxon_swordsman_brown_hair.png"
@@ -221,6 +215,18 @@ DefineIcon({
 	Name = "icon-teuton-coinage",
 	Size = {46, 38},
 	File = "teuton/icons/coinage.png"
+})
+
+DefineIcon({
+	Name = "icon-flag-holy-roman-empire",
+	Size = {46, 38},
+	File = "teuton/icons/flag_holy_roman_empire.png"
+})
+
+DefineIcon({
+	Name = "icon-flag-old-austria",
+	Size = {46, 38},
+	File = "teuton/icons/flag_old_austria.png"
 })
 
 DefineIcon({

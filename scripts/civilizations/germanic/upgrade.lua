@@ -27,9 +27,7 @@
 
 DefineUpgrade("upgrade-teuton-civilization", {
 	Name = "Teuton Civilization",
-	Civilization = "germanic",
-	Icon = "icon-teuton-civilization",
-	Costs = {"time", 200}
+	Civilization = "germanic"
 })
 
 DefineUpgrade("upgrade-germanic-broad-sword", {

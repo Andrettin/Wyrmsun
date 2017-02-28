@@ -26,8 +26,7 @@
 --
 
 DefineUpgrade("upgrade-frankish-civilization", {
-	Name = "Frankish Civilization",
-	Icon = "icon-teuton-civilization"
+	Name = "Frankish Civilization"
 })
 
 DefineModifier("upgrade-frankish-civilization",
