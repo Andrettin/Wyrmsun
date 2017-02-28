@@ -33,7 +33,8 @@ DefineSettlement("ecbatana", {
 		"persian", "Ecbatana"
 	},
 	HistoricalOwners = {
-		-750, "mede-tribe" -- Ecbatana was a part of the territory of the Medes in the 750-625 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-750, "mede-tribe", -- Ecbatana was a part of the territory of the Medes in the 750-625 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "media" -- Ecbatana was part of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-750, 0, "town-hall"

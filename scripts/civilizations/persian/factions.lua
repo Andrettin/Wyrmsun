@@ -113,6 +113,14 @@ DefineFaction("sindi-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	Colors = {"white"}
 })
 
+DefineFaction("media", {
+	Name = "Media",
+	Civilization = "persian",
+	Type = "polity",
+	Colors = {"yellow"},
+	DefaultTier = "kingdom"
+})
+
 DefineFaction("parthia", {
 	Name = "Parthia",
 	Civilization = "persian",

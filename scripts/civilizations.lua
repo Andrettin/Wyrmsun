@@ -1538,23 +1538,7 @@ DefineCivilization("teuton", {
 	CivilizationUpgrade = "upgrade-teuton-civilization",
 	DevelopsFrom = {"germanic"},
 	Description = "During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). Eventually, West Germanic peoples would come to identify themselves with the demonym \"deutsch\", a term often latinized as \"teutonicus\".",
-	Months = { -- Anglo-Saxon months; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 97-98.
-		"january", "Giuli", -- first month of the Anglo-Saxon year; the modern Yule, the name was used for both the last and first month of the year; the year began on the 25th of December, during the night of which the "Modra nect" ("the night of the mothers") was celebrated
-		"february", "Solmonath", -- second month of the Anglo-Saxon year; known as the month of cakes, in which those were offered to the gods
-		"march", "Hrethmonath", -- third month of the Anglo-Saxon year, named after the goddess Hretha
-		"april", "Eosturmonath", -- fourth month of the Anglo-Saxon year, named after the goddess Eostre
-		"may", "Thrimilci", -- fifth month of the Anglo-Saxon year, so named because cows were supposedly milked three times a day during this month
-		"june", "Litha", -- sixth and seventh month of the Anglo-Saxon year, the word supposedly means "moon"
-		"july", "Litha", -- sixth and seventh month of the Anglo-Saxon year, the word supposedly means "moon"
-		"august", "Weodmonath", -- eight month of the Anglo-Saxon year, the name means "the month of weeds"
-		"september", "Halegmonath", -- ninth month of the Anglo-Saxon year, the name means "the month of offerings", due to a festival made at the end of the harvest
-		"october", "Wintirfyllith", -- tenth month of the Anglo-Saxon year, begins with the first winter full moon
-		"november", "Blotmonath", -- eleventh month of the Anglo-Saxon year, "the month of sacrifice", in which animals were sacrificed to the gods
-		"december", "Giuli" -- last month of the Anglo-Saxon year; the modern Yule, the name was used for both the last and first month of the year
-	},
 	PersonalNames = {
-		-- High German names, many are too modern for the time period covered in the game
-		--[[
 		"female", "Hilde",
 		"female", "Wilhelmina",
 		"male", "Adalbert",
@@ -1621,7 +1605,6 @@ DefineCivilization("teuton", {
 		"male", "Wilhelm",
 		"male", "Wolfgang",
 		"male", "Wolfhart"
-		--]]
 	},
 	FamilyNames = {
 		"Muhlhausen" -- "Mühlhausen"; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 104.
@@ -1784,6 +1767,20 @@ DefineCivilization("anglo-saxon", {
 	Description = "When the Angles, Saxons and Jutes migrated to the British Isles, they intermingled and gave rise to a new people - the Anglo-Saxons. Conquering vast swathes of land, they founded seven kingdoms who vied with each other for supremacy. For a time, Anglo-Saxon scholarship was one of the most sophisticated in Europe, and their learned men were invited to the most powerful courts on the Continent.",
 	HistoricalUpgrades = {
 		180, "upgrade-teuton-spatha", true -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+	},
+	Months = { -- Anglo-Saxon months; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 97-98.
+		"january", "Giuli", -- first month of the Anglo-Saxon year; the modern Yule, the name was used for both the last and first month of the year; the year began on the 25th of December, during the night of which the "Modra nect" ("the night of the mothers") was celebrated
+		"february", "Solmonath", -- second month of the Anglo-Saxon year; known as the month of cakes, in which those were offered to the gods
+		"march", "Hrethmonath", -- third month of the Anglo-Saxon year, named after the goddess Hretha
+		"april", "Eosturmonath", -- fourth month of the Anglo-Saxon year, named after the goddess Eostre
+		"may", "Thrimilci", -- fifth month of the Anglo-Saxon year, so named because cows were supposedly milked three times a day during this month
+		"june", "Litha", -- sixth and seventh month of the Anglo-Saxon year, the word supposedly means "moon"
+		"july", "Litha", -- sixth and seventh month of the Anglo-Saxon year, the word supposedly means "moon"
+		"august", "Weodmonath", -- eight month of the Anglo-Saxon year, the name means "the month of weeds"
+		"september", "Halegmonath", -- ninth month of the Anglo-Saxon year, the name means "the month of offerings", due to a festival made at the end of the harvest
+		"october", "Wintirfyllith", -- tenth month of the Anglo-Saxon year, begins with the first winter full moon
+		"november", "Blotmonath", -- eleventh month of the Anglo-Saxon year, "the month of sacrifice", in which animals were sacrificed to the gods
+		"december", "Giuli" -- last month of the Anglo-Saxon year; the modern Yule, the name was used for both the last and first month of the year
 	},
 	SettlementNames = {
 		"Abbandun",  -- Old English name of Abingdon; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.

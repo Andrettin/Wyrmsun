@@ -25,6 +25,22 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSettlement("amisus", {
+	Name = "Amisus",
+	MapTemplate = "earth",
+	Position = {4663, 1106},
+	CulturalNames = {
+		"persian", "Amisus"
+	},
+	HistoricalOwners = {
+		-600, "media" -- Amisus was part of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+	},
+	HistoricalBuildings = {
+		-600, 0, "farm"
+	},
+	Regions = {"asia"}
+})
+
 DefineSettlement("milid", {
 	Name = "Milid",
 	MapTemplate = "earth",
