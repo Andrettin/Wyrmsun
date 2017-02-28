@@ -2094,7 +2094,7 @@ if not (ui_loaded_first_time) then
 					More = {"Text", {Text = Concat(_("Type: "), UpgradeFactionType("Upgrade")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {FactionUpgrade = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = Concat(_("Effects: "), UpgradeEffectsString("Upgrade")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = Concat(_("Faction Bonus: "), UpgradeEffectsString("Upgrade")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				-- AutoCast Tooltip
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "cast-spell", AutoCast = "only"},
