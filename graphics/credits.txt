@@ -1021,6 +1021,7 @@
 /graphics/teuton/icons/cleric_extra_1.png (by Jinn) (licensed under the CC0)
 /graphics/teuton/icons/coinage.png (by Jinn) (licensed under the CC0)
 /graphics/teuton/icons/conrad_the_red.png (by Jinn) (licensed under the CC0)
+/graphics/teuton/icons/flag_habsburg.png (by Jinn) (licensed under the CC0)
 /graphics/teuton/icons/flag_holy_roman_empire.png (by Jinn) (licensed under the CC0)
 /graphics/teuton/icons/flag_old_austria.png (by Exidelo) (licensed under the CC0)
 /graphics/teuton/icons/heroic_saxon_swordsman_black_hair.png (by Jinn and Exidelo) (licensed under the CC0)

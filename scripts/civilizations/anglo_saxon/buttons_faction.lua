@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineButton( { Pos = 7, Level = 2, Icon = "icon-flag-old-austria",
+DefineButton( { Pos = 12, Level = 2, Icon = "icon-flag-habsburg",
 	Action = "research", Value = "upgrade-faction-angle-tribe",
 	Allowed = "check-single-research",
 	Key = "a", Hint = "Found the ~!Angle Tribe", Popup = "popup-research",
@@ -145,7 +145,7 @@ DefineButton( { Pos = 8, Level = 2, Icon = "icon-flag-old-austria",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-old-austria",
+DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-habsburg",
 	Action = "research", Value = "upgrade-faction-wessex",
 	Allowed = "check-single-research",
 	Key = "w", Hint = "Found ~!Wessex", Popup = "popup-research",
@@ -153,7 +153,7 @@ DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-old-austria",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 10, Level = 2, Icon = "icon-flag-old-austria",
+DefineButton( { Pos = 10, Level = 2, Icon = "icon-flag-habsburg",
 	Action = "research", Value = "upgrade-faction-england",
 	Allowed = "check-single-research",
 	Key = "e", Hint = "Found ~!England", Popup = "popup-research",
