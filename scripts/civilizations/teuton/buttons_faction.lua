@@ -49,7 +49,7 @@ DefineButton( { Pos = 1, Level = 2, Icon = "icon-flag-old-austria",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 1, Level = 2, Icon = "icon-flag-habsburg",
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-flag-yellow-lion-on-cyan",
 	Action = "research", Value = "upgrade-faction-thuringia",
 	Allowed = "check-single-research",
 	Key = "b", Hint = "Found ~!Thuringia", Popup = "popup-research",
@@ -73,7 +73,7 @@ DefineButton( { Pos = 3, Level = 2, Icon = "icon-flag-old-austria",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 10, Level = 2, Icon = "icon-flag-habsburg",
+DefineButton( { Pos = 10, Level = 2, Icon = "icon-flag-blue-lion-on-yellow",
 	Action = "research", Value = "upgrade-faction-swabia",
 	Allowed = "check-single-research",
 	Key = "s", Hint = "Found ~!Swabia", Popup = "popup-research",
@@ -89,7 +89,7 @@ DefineButton( { Pos = 11, Level = 2, Icon = "icon-flag-habsburg",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 12, Level = 2, Icon = "icon-flag-habsburg",
+DefineButton( { Pos = 12, Level = 2, Icon = "icon-flag-cyan-lion-on-red",
 	Action = "research", Value = "upgrade-faction-wurtemberg",
 	Allowed = "check-single-research",
 	Key = "w", Hint = "Found ~!Wurtemberg", Popup = "popup-research",
@@ -97,7 +97,7 @@ DefineButton( { Pos = 12, Level = 2, Icon = "icon-flag-habsburg",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 13, Level = 2, Icon = "icon-flag-habsburg",
+DefineButton( { Pos = 13, Level = 2, Icon = "icon-flag-red-lion-on-green",
 	Action = "research", Value = "upgrade-faction-switzerland",
 	Allowed = "check-single-research",
 	Key = "i", Hint = "Found Sw~!itzerland", Popup = "popup-research",
@@ -107,7 +107,7 @@ DefineButton( { Pos = 13, Level = 2, Icon = "icon-flag-habsburg",
 
 -- Saxon Factions
 
-DefineButton( { Pos = 4, Level = 2, Icon = "icon-flag-habsburg",
+DefineButton( { Pos = 4, Level = 2, Icon = "icon-flag-red-lion-on-green",
 	Action = "research", Value = "upgrade-faction-saxon-tribe",
 	Allowed = "check-single-research",
 	Key = "x", Hint = "Found the Sa~!xon Tribe", Popup = "popup-research",
@@ -115,7 +115,7 @@ DefineButton( { Pos = 4, Level = 2, Icon = "icon-flag-habsburg",
 	ForUnit = {"unit-germanic-town-hall"}
 } )
 
-DefineButton( { Pos = 1, Level = 2, Icon = "icon-flag-habsburg",
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-flag-green-lion-on-purple",
 	Action = "research", Value = "upgrade-faction-cherusci-tribe",
 	Allowed = "check-single-research",
 	Key = "c", Hint = "Found the ~!Cherusci Tribe", Popup = "popup-research",
@@ -123,7 +123,7 @@ DefineButton( { Pos = 1, Level = 2, Icon = "icon-flag-habsburg",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 2, Level = 2, Icon = "icon-flag-habsburg",
+DefineButton( { Pos = 2, Level = 2, Icon = "icon-flag-green-lion-on-orange",
 	Action = "research", Value = "upgrade-faction-varini-tribe",
 	Allowed = "check-single-research",
 	Key = "v", Hint = "Found the ~!Varini Tribe", Popup = "popup-research",
@@ -131,7 +131,7 @@ DefineButton( { Pos = 2, Level = 2, Icon = "icon-flag-habsburg",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-habsburg",
+DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-red-lion-on-green",
 	Action = "research", Value = "upgrade-faction-saxony",
 	Allowed = "check-single-research",
 	Key = "x", Hint = "Found Sa~!xony", Popup = "popup-research",

@@ -236,6 +236,42 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-flag-blue-lion-on-yellow",
+	Size = {46, 38},
+	File = "teuton/icons/flag_blue_lion_on_yellow.png"
+})
+
+DefineIcon({
+	Name = "icon-flag-cyan-lion-on-red",
+	Size = {46, 38},
+	File = "teuton/icons/flag_cyan_lion_on_red.png"
+})
+
+DefineIcon({
+	Name = "icon-flag-green-lion-on-orange",
+	Size = {46, 38},
+	File = "teuton/icons/flag_green_lion_on_orange.png"
+})
+
+DefineIcon({
+	Name = "icon-flag-green-lion-on-purple",
+	Size = {46, 38},
+	File = "teuton/icons/flag_green_lion_on_purple.png"
+})
+
+DefineIcon({
+	Name = "icon-flag-red-lion-on-green",
+	Size = {46, 38},
+	File = "teuton/icons/flag_red_lion_on_green.png"
+})
+
+DefineIcon({
+	Name = "icon-flag-yellow-lion-on-cyan",
+	Size = {46, 38},
+	File = "teuton/icons/flag_yellow_lion_on_cyan.png"
+})
+
+DefineIcon({
 	Name = "icon-conrad-the-red",
 	Size = {46, 38},
 	File = "teuton/icons/conrad_the_red.png"
