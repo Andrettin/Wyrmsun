@@ -248,6 +248,42 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-flag-five-black-birds-on-purple",
+	Size = {46, 38},
+	File = "teuton/icons/flag_five_black_birds_on_purple.png"
+})
+
+DefineIcon({
+	Name = "icon-flag-five-blue-birds-on-orange",
+	Size = {46, 38},
+	File = "teuton/icons/flag_five_blue_birds_on_orange.png"
+})
+
+DefineIcon({
+	Name = "icon-flag-five-orange-birds-on-black",
+	Size = {46, 38},
+	File = "teuton/icons/flag_five_orange_birds_on_black.png"
+})
+
+DefineIcon({
+	Name = "icon-flag-five-purple-birds-on-green",
+	Size = {46, 38},
+	File = "teuton/icons/flag_five_purple_birds_on_green.png"
+})
+
+DefineIcon({
+	Name = "icon-flag-five-red-birds-on-yellow",
+	Size = {46, 38},
+	File = "teuton/icons/flag_five_red_birds_on_yellow.png"
+})
+
+DefineIcon({
+	Name = "icon-flag-five-white-birds-on-red",
+	Size = {46, 38},
+	File = "teuton/icons/flag_five_white_birds_on_red.png"
+})
+
+DefineIcon({
 	Name = "icon-flag-green-lion-on-orange",
 	Size = {46, 38},
 	File = "teuton/icons/flag_green_lion_on_orange.png"

@@ -33,7 +33,7 @@ DefineButton( { Pos = 5, Level = 2, Icon = "icon-flag-holy-roman-empire",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 1, Level = 2, Icon = "icon-flag-old-austria",
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-flag-five-white-birds-on-red",
 	Action = "research", Value = "upgrade-faction-bavarian-tribe",
 	Allowed = "check-single-research",
 	Key = "b", Hint = "Found the ~!Bavarian Tribe", Popup = "popup-research",
@@ -41,7 +41,7 @@ DefineButton( { Pos = 1, Level = 2, Icon = "icon-flag-old-austria",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 1, Level = 2, Icon = "icon-flag-old-austria",
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-flag-five-white-birds-on-red",
 	Action = "research", Value = "upgrade-faction-bavaria",
 	Allowed = "check-single-research",
 	Key = "b", Hint = "Found ~!Bavaria", Popup = "popup-research",
@@ -65,7 +65,7 @@ DefineButton( { Pos = 2, Level = 2, Icon = "icon-flag-old-austria",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 3, Level = 2, Icon = "icon-flag-old-austria",
+DefineButton( { Pos = 3, Level = 2, Icon = "icon-flag-five-orange-birds-on-black",
 	Action = "research", Value = "upgrade-faction-carinthia",
 	Allowed = "check-single-research",
 	Key = "c", Hint = "Found ~!Carinthia", Popup = "popup-research",
@@ -141,7 +141,7 @@ DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-red-lion-on-green",
 
 -- Franconian Factions
 
-DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-old-austria",
+DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-five-purple-birds-on-green",
 	Action = "research", Value = "upgrade-faction-franconia",
 	Allowed = "check-single-research",
 	Key = "f", Hint = "Found ~!Franconia", Popup = "popup-research",
