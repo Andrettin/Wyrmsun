@@ -31,6 +31,7 @@ DefineFaction("netherlands", {
 	Type = "polity",
 	Colors = {"orange", "blue"},
 	DefaultTier = "kingdom",
+	FactionUpgrade = "upgrade-faction-netherlands",
 	SettlementNames = {
 		"'s-Hertogenbosch",
 		"Beverwijk",

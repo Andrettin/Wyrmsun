@@ -131,11 +131,45 @@ DefineButton( { Pos = 2, Level = 2, Icon = "icon-flag-green-lion-on-orange",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
+DefineButton( { Pos = 3, Level = 2, Icon = "icon-flag-five-purple-birds-on-green",
+	Action = "research", Value = "upgrade-faction-chauci-tribe",
+	Allowed = "check-single-research",
+	Key = "h", Hint = "Found the C~!hauci Tribe", Popup = "popup-research",
+	Description = "Changes your faction to the Chauci Tribe",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
 DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-red-lion-on-green",
 	Action = "research", Value = "upgrade-faction-saxony",
 	Allowed = "check-single-research",
 	Key = "x", Hint = "Found Sa~!xony", Popup = "popup-research",
 	Description = "Changes your faction to Saxony",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
+DefineButton( { Pos = 10, Level = 2, Icon = "icon-flag-five-white-birds-on-red",
+	Action = "research", Value = "upgrade-faction-bremen",
+	Allowed = "check-single-research",
+	Key = "b", Hint = "Found ~!Bremen", Popup = "popup-research",
+	Description = "Changes your faction to Bremen",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
+-- Frisian Factions
+
+DefineButton( { Pos = 12, Level = 2, Icon = "icon-flag-green-lion-on-orange",
+	Action = "research", Value = "upgrade-faction-frisian-tribe",
+	Allowed = "check-single-research",
+	Key = "f", Hint = "Found the ~!Frisian Tribe", Popup = "popup-research",
+	Description = "Changes your faction to the Frisian Tribe",
+	ForUnit = {"unit-germanic-town-hall"}
+} )
+
+DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-green-lion-on-orange",
+	Action = "research", Value = "upgrade-faction-friesland",
+	Allowed = "check-single-research",
+	Key = "f", Hint = "Found ~!Friesland", Popup = "popup-research",
+	Description = "Changes your faction to Friesland",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
@@ -146,5 +180,15 @@ DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-five-purple-birds-on-green
 	Allowed = "check-single-research",
 	Key = "f", Hint = "Found ~!Franconia", Popup = "popup-research",
 	Description = "Changes your faction to Franconia",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
+-- Dutch Factions
+
+DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-green-lion-on-orange",
+	Action = "research", Value = "upgrade-faction-netherlands",
+	Allowed = "check-single-research",
+	Key = "n", Hint = "Found the ~!Netherlands", Popup = "popup-research",
+	Description = "Changes your faction to the Netherlands",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )

@@ -42,11 +42,10 @@ DefineFaction("saxon-tribe", {
 DefineFaction("chauci-tribe", {
 	Name = "Chauci Tribe",
 	Civilization = "teuton",
-	ParentFaction = "saxon-tribe", -- accurate?
 	Type = "tribe",
 	Colors = {"black"},
-	DevelopsTo = {"bremen"}, -- same general area
-	HistoricalFactionDerivations = {-264, "germanic", "ingaevone-tribe"}
+	FactionUpgrade = "upgrade-faction-chauci-tribe",
+	DevelopsTo = {"bremen"} -- same general area
 })
 
 DefineFaction("cherusci-tribe", {
@@ -65,8 +64,7 @@ DefineFaction("frisian-tribe", {
 	Type = "tribe",
 	Colors = {"violet", "purple"}, -- change to a better one?
 	DevelopsTo = {"friesland", "netherlands"},
-	FactionUpgrade = "upgrade-frisian-tribe-faction",
-	HistoricalFactionDerivations = {-264, "germanic", "ingaevone-tribe"}
+	FactionUpgrade = "upgrade-faction-frisian-tribe"
 })
 
 DefineFaction("lombard-tribe", {
@@ -174,10 +172,10 @@ DefineFaction("brandenburg", {
 DefineFaction("bremen", {
 	Name = "Bremen",
 	Civilization = "teuton",
-	ParentFaction = "saxony",
 	Type = "polity",
 	Colors = {"black"},
-	DefaultTier = "duchy"
+	DefaultTier = "duchy",
+	FactionUpgrade = "upgrade-faction-bremen"
 })
 
 DefineFaction("brunswick", {
@@ -214,10 +212,10 @@ DefineFaction("franconia", { -- represents the German region, so it uses base Te
 DefineFaction("friesland", {
 	Name = "Friesland",
 	Civilization = "teuton",
-	ParentFaction = "frisian-tribe",
 	Type = "polity",
 	Colors = {"black"},
 	DefaultTier = "barony", -- Friesland was a lordship in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
+	FactionUpgrade = "upgrade-faction-friesland",
 	Titles = {
 		"monarchy", "barony", "Lordship"
 	},
