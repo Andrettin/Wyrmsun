@@ -41,6 +41,14 @@ DefineButton( { Pos = 1, Level = 2, Icon = "icon-flag-five-white-birds-on-red",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
+DefineButton( { Pos = 14, Level = 2, Icon = "icon-flag-five-red-birds-on-yellow",
+	Action = "research", Value = "upgrade-faction-teuton-tribe",
+	Allowed = "check-single-research",
+	Key = "t", Hint = "Found the ~!Teuton Tribe", Popup = "popup-research",
+	Description = "Changes your faction to the Teuton Tribe",
+	ForUnit = {"unit-germanic-town-hall"}
+} )
+
 DefineButton( { Pos = 1, Level = 2, Icon = "icon-flag-five-white-birds-on-red",
 	Action = "research", Value = "upgrade-faction-bavaria",
 	Allowed = "check-single-research",
@@ -190,5 +198,23 @@ DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-green-lion-on-orange",
 	Allowed = "check-single-research",
 	Key = "n", Hint = "Found the ~!Netherlands", Popup = "popup-research",
 	Description = "Changes your faction to the Netherlands",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
+-- Lombardic Factions
+
+DefineButton( { Pos = 13, Level = 2, Icon = "icon-flag-five-purple-birds-on-green",
+	Action = "research", Value = "upgrade-faction-lombard-tribe",
+	Allowed = "check-single-research",
+	Key = "l", Hint = "Found the ~!Lombard Tribe", Popup = "popup-research",
+	Description = "Changes your faction to the Lombard Tribe",
+	ForUnit = {"unit-germanic-town-hall"}
+} )
+
+DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-five-purple-birds-on-green",
+	Action = "research", Value = "upgrade-faction-lombardy",
+	Allowed = "check-single-research",
+	Key = "l", Hint = "Found ~!Lombardy", Popup = "popup-research",
+	Description = "Changes your faction to Lombardy",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )

@@ -45,14 +45,19 @@ DefineUpgrade("upgrade-faction-frisian-tribe", {
 	EffectsString = "+5 HP and +1 Armor for Kriegers"
 })
 
-DefineUpgrade("upgrade-lombard-tribe-faction", {
-	Name = "Lombard Tribe Faction",
+DefineUpgrade("upgrade-faction-lombard-tribe", {
+	Name = "Lombard Tribe",
 	EffectsString = "+2 Damage for Kriegers"
 })
 
 DefineUpgrade("upgrade-faction-saxon-tribe", {
 	Name = "Saxon Tribe",
 	EffectsString = "+5 HP and +1 Damage for Kriegers"
+})
+
+DefineUpgrade("upgrade-faction-teuton-tribe", {
+	Name = "Teuton Tribe",
+	EffectsString = "+3 Damage, -1 Armor for Kriegers"
 })
 
 DefineUpgrade("upgrade-ubii-tribe-faction", {
@@ -104,6 +109,11 @@ DefineUpgrade("upgrade-faction-friesland", {
 DefineUpgrade("upgrade-faction-holy-rome", {
 	Name = "Holy Rome",
 	EffectsString = "+2 Armor for Ritters"
+})
+
+DefineUpgrade("upgrade-faction-lombardy", {
+	Name = "Lombardy",
+	EffectsString = "+2 Damage for Ritars"
 })
 
 DefineUpgrade("upgrade-mecklenburg-faction", {
@@ -184,7 +194,11 @@ DefineModifier("upgrade-faction-frisian-tribe",
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
-DefineModifier("upgrade-lombard-tribe-faction",
+DefineModifier("upgrade-faction-lombard-tribe",
+	{"change-faction-to", "lombard-tribe"}
+)
+
+DefineModifier("upgrade-faction-lombard-tribe",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
@@ -197,6 +211,17 @@ DefineModifier("upgrade-faction-saxon-tribe",
 DefineModifier("upgrade-faction-saxon-tribe",
 	{"BasicDamage", 1},
 	{"HitPoints", 5},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
+)
+
+DefineModifier("upgrade-faction-teuton-tribe",
+	{"change-faction-to", "teuton-tribe"}
+)
+
+DefineModifier("upgrade-faction-teuton-tribe",
+	{"BasicDamage", 3},
+	{"Armor", -1},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
@@ -302,6 +327,16 @@ DefineModifier("upgrade-faction-holy-rome",
 	{"apply-to", "unit-teuton-ritter"}, {"apply-to", "unit-teuton-knight-lord"}
 )
 
+DefineModifier("upgrade-faction-lombardy",
+	{"change-faction-to", "lombardy"}
+)
+
+DefineModifier("upgrade-faction-lombardy",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-ritter"}, {"apply-to", "unit-teuton-knight-lord"}
+)
+
 DefineModifier("upgrade-faction-netherlands",
 	{"change-faction-to", "netherlands"}
 )
@@ -383,7 +418,15 @@ DefineDependency("upgrade-faction-frisian-tribe",
 	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
 )
 
+DefineDependency("upgrade-faction-lombard-tribe",
+	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
+)
+
 DefineDependency("upgrade-faction-saxon-tribe",
+	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
+)
+
+DefineDependency("upgrade-faction-teuton-tribe",
 	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
 )
 
@@ -460,6 +503,14 @@ DefinePredependency("upgrade-faction-holy-rome", -- must be either Francia, or o
 
 DefineDependency("upgrade-faction-holy-rome",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry", "upgrade-deity-christian-god"}
+)
+
+DefinePredependency("upgrade-faction-lombardy",
+	{"upgrade-faction-lombard-tribe"}
+)
+
+DefineDependency("upgrade-faction-lombardy",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
 DefinePredependency("upgrade-faction-netherlands",
@@ -683,7 +734,8 @@ DefineDependency("upgrade-faction-essex",
 )
 
 DefinePredependency("upgrade-faction-jutland",
-	{"upgrade-faction-jute-tribe"}
+	{"upgrade-faction-jute-tribe"},
+	"or", {"upgrade-faction-teuton-tribe"}
 )
 
 DefineDependency("upgrade-faction-jutland",

@@ -73,7 +73,7 @@ DefineFaction("lombard-tribe", {
 	Type = "tribe",
 	Colors = {"green"},
 	DevelopsTo = {"lombardy"},
-	FactionUpgrade = "upgrade-lombard-tribe-faction",
+	FactionUpgrade = "upgrade-faction-lombard-tribe",
 	HistoricalFactionDerivations = {-264, "germanic", "istaevone-tribe"}
 })
 
@@ -92,6 +92,7 @@ DefineFaction("teuton-tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
 	Colors = {"orange"},
+	FactionUpgrade = "upgrade-faction-teuton-tribe",
 	DevelopsTo = {"jutland"} -- same general area
 })
 
@@ -254,10 +255,10 @@ DefineFaction("holy-rome", {
 DefineFaction("lombardy", {
 	Name = "Lombardy",
 	Civilization = "teuton",
-	ParentFaction = "lombard-tribe",
 	Type = "polity",
 	Colors = {"green"},
-	DefaultTier = "kingdom"
+	DefaultTier = "kingdom",
+	FactionUpgrade = "upgrade-faction-lombardy"
 })
 
 DefineFaction("magdeburg", {
