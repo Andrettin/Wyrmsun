@@ -93,7 +93,7 @@ DefineModifier("upgrade-suebi-civilization",
 	{"apply-to", "unit-germanic-transport-ship"}, {"convert-to", "unit-teuton-kogge"}
 )
 
-DefineDependency("unit-suebi-swordsman",
+DefinePredependency("unit-suebi-swordsman",
 	{"upgrade-suebi-civilization"}
 )
 

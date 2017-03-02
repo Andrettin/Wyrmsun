@@ -27,34 +27,34 @@
 
 Load("scripts/civilizations/gnome/upgrade_faction.lua")
 
-DefineDependency("unit-gnomish-worker",
-	{"upgrade-acthnic-tribe-faction", 0, "upgrade-derro-tribe-faction", 0, "upgrade-sagan-tribe-faction", 0}
+DefinePredependency("unit-gnomish-worker",
+	{"upgrade-acthnic-tribe-faction", 0, "upgrade-derro-tribe-faction"}
 )
 
-DefineDependency("unit-gnomish-recruit",
-	{"upgrade-acthnic-tribe-faction", 0, "upgrade-derro-tribe-faction", 0, "upgrade-sagan-tribe-faction", 0}
+DefinePredependency("unit-gnomish-recruit",
+	{"upgrade-acthnic-tribe-faction", 0, "upgrade-derro-tribe-faction"}
 )
 
-DefineDependency("unit-gnomish-herbalist",
-	{"upgrade-acthnic-tribe-faction", 0, "upgrade-sagan-tribe-faction", 0}
+DefinePredependency("unit-gnomish-herbalist",
+	{"upgrade-acthnic-tribe-faction", 0}
 )
 
-DefineDependency("unit-deep-gnomish-worker",
+DefinePredependency("unit-deep-gnomish-worker",
 	{"upgrade-acthnic-tribe-faction"}
 )
 
-DefineDependency("unit-deep-gnomish-recruit",
+DefinePredependency("unit-deep-gnomish-recruit",
 	{"upgrade-acthnic-tribe-faction"}
 )
 
-DefineDependency("unit-deep-gnomish-herbalist",
+DefinePredependency("unit-deep-gnomish-herbalist",
 	{"upgrade-acthnic-tribe-faction"}
 )
 
-DefineDependency("unit-derro-worker",
+DefinePredependency("unit-derro-worker",
 	{"upgrade-derro-tribe-faction"}
 )
 
-DefineDependency("unit-derro-thug",
+DefinePredependency("unit-derro-thug",
 	{"upgrade-derro-tribe-faction"}
 )

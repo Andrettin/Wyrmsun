@@ -234,38 +234,54 @@ DefineModifier("upgrade-faction-lyr",
 	{"change-faction-to", "lyr"}
 )
 
-DefineDependency("upgrade-faction-eikinskjaldi-clan",
+DefinePredependency("upgrade-faction-eikinskjaldi-clan",
 	{"upgrade-faction-brising-clan"}
 )
 
-DefineDependency("upgrade-faction-norlund-clan",
+DefinePredependency("upgrade-faction-norlund-clan",
 	{"upgrade-faction-brising-clan"}
 )
 
-DefineDependency("upgrade-faction-shadowcharm-clan",
+DefinePredependency("upgrade-faction-shadowcharm-clan",
 	{"upgrade-faction-brising-clan"}
 )
 
-DefineDependency("upgrade-faction-shinsplitter-clan",
+DefinePredependency("upgrade-faction-shinsplitter-clan",
 	{"upgrade-faction-brising-clan"}
 )
 
-DefineDependency("upgrade-faction-shorbear-clan",
+DefinePredependency("upgrade-faction-shorbear-clan",
 	{"upgrade-faction-brising-clan"}
+)
+
+DefinePredependency("upgrade-faction-joruvellir",
+	{"upgrade-faction-eikinskjaldi-clan"}
 )
 
 DefineDependency("upgrade-faction-joruvellir",
-	{"upgrade-faction-eikinskjaldi-clan", "upgrade-dwarven-runewriting"}
+	{"upgrade-dwarven-runewriting"}
+)
+
+DefinePredependency("upgrade-faction-kal-kartha",
+	{"upgrade-faction-shadowcharm-clan"}, "or", {"upgrade-faction-shinsplitter-clan"}, "or", {"upgrade-faction-shorbear-clan"}
 )
 
 DefineDependency("upgrade-faction-kal-kartha",
-	{"upgrade-faction-shadowcharm-clan", "upgrade-dwarven-runewriting"}, "or", {"upgrade-faction-shinsplitter-clan", "upgrade-dwarven-runewriting"}, "or", {"upgrade-faction-shorbear-clan", "upgrade-dwarven-runewriting"}
+	{"upgrade-dwarven-runewriting"}
+)
+
+DefinePredependency("upgrade-faction-knalga",
+	{"upgrade-faction-norlund-clan"}, "or", {"upgrade-faction-shinsplitter-clan"}, "or", {"upgrade-faction-shorbear-clan"}
 )
 
 DefineDependency("upgrade-faction-knalga",
-	{"upgrade-faction-norlund-clan", "upgrade-dwarven-runewriting"}, "or", {"upgrade-faction-shinsplitter-clan", "upgrade-dwarven-runewriting"}, "or", {"upgrade-faction-shorbear-clan", "upgrade-dwarven-runewriting"}
+	{"upgrade-dwarven-runewriting"}
+)
+
+DefinePredependency("upgrade-faction-lyr",
+	{"upgrade-faction-brising-clan"}
 )
 
 DefineDependency("upgrade-faction-lyr",
-	{"upgrade-faction-brising-clan", "upgrade-dwarven-runewriting"}
+	{"upgrade-dwarven-runewriting"}
 )

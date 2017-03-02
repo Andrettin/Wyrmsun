@@ -181,22 +181,42 @@ DefineModifier("upgrade-faction-tenebris",
 	{"apply-to", "unit-goblin-shaman"}
 )
 
+DefinePredependency("upgrade-faction-aurvang",
+	{"upgrade-faction-aurvangling-tribe"}, "or", {"upgrade-faction-dreadskull-tribe"}, "or", {"upgrade-faction-lggi-tribe"}
+)
+
 DefineDependency("upgrade-faction-aurvang",
-	{"upgrade-faction-aurvangling-tribe", "upgrade-goblin-writing", "upgrade-goblin-masonry"}, "or", {"upgrade-faction-dreadskull-tribe", "upgrade-goblin-writing", "upgrade-goblin-masonry"}, "or", {"upgrade-faction-lggi-tribe", "upgrade-goblin-writing", "upgrade-goblin-masonry"}
+	{"upgrade-goblin-writing", "upgrade-goblin-masonry"}
+)
+
+DefinePredependency("upgrade-faction-ezmarria",
+	{"upgrade-faction-aelak-tribe"}, "or", {"upgrade-faction-issudru-tribe"}, "or", {"upgrade-faction-mabom-tribe"}, "or", {"upgrade-faction-sigre-tribe"}
 )
 
 DefineDependency("upgrade-faction-ezmarria",
-	{"upgrade-faction-aelak-tribe", "upgrade-goblin-writing", "upgrade-goblin-masonry"}, "or", {"upgrade-faction-issudru-tribe", "upgrade-goblin-writing", "upgrade-goblin-masonry"}, "or", {"upgrade-faction-mabom-tribe", "upgrade-goblin-writing", "upgrade-goblin-masonry"}, "or", {"upgrade-faction-sigre-tribe", "upgrade-goblin-writing", "upgrade-goblin-masonry"}
+	{"upgrade-goblin-writing", "upgrade-goblin-masonry"}
+)
+
+DefinePredependency("upgrade-faction-myridia",
+	{"upgrade-faction-aelak-tribe"}, "or", {"upgrade-faction-issudru-tribe"}, "or", {"upgrade-faction-mabom-tribe"}, "or", {"upgrade-faction-sigre-tribe"}
 )
 
 DefineDependency("upgrade-faction-myridia",
-	{"upgrade-faction-aelak-tribe", "upgrade-goblin-writing", "upgrade-goblin-masonry"}, "or", {"upgrade-faction-issudru-tribe", "upgrade-goblin-writing", "upgrade-goblin-masonry"}, "or", {"upgrade-faction-mabom-tribe", "upgrade-goblin-writing", "upgrade-goblin-masonry"}, "or", {"upgrade-faction-sigre-tribe", "upgrade-goblin-writing", "upgrade-goblin-masonry"}
+	{"upgrade-goblin-writing", "upgrade-goblin-masonry"}
+)
+
+DefinePredependency("upgrade-faction-stilgar",
+	{"upgrade-faction-aelak-tribe"}, "or", {"upgrade-faction-issudru-tribe"}, "or", {"upgrade-faction-mabom-tribe"}, "or", {"upgrade-faction-sigre-tribe"}, "or", {"upgrade-faction-khag-tribe"}, "or", {"upgrade-faction-wildfang-tribe"}
 )
 
 DefineDependency("upgrade-faction-stilgar",
-	{"upgrade-faction-aelak-tribe", "upgrade-goblin-writing", "upgrade-goblin-masonry"}, "or", {"upgrade-faction-issudru-tribe", "upgrade-goblin-writing", "upgrade-goblin-masonry"}, "or", {"upgrade-faction-mabom-tribe", "upgrade-goblin-writing", "upgrade-goblin-masonry"}, "or", {"upgrade-faction-sigre-tribe", "upgrade-goblin-writing", "upgrade-goblin-masonry"}, "or", {"upgrade-faction-khag-tribe", "upgrade-goblin-writing", "upgrade-goblin-masonry"}, "or", {"upgrade-faction-wildfang-tribe", "upgrade-goblin-writing", "upgrade-goblin-masonry"}
+	{"upgrade-goblin-writing", "upgrade-goblin-masonry"}
+)
+
+DefinePredependency("upgrade-faction-tenebris",
+	{"upgrade-faction-aelak-tribe"}, "or", {"upgrade-faction-issudru-tribe"}, "or", {"upgrade-faction-mabom-tribe"}, "or", {"upgrade-faction-sigre-tribe"}, "or", {"upgrade-faction-dreadskull-tribe"}
 )
 
 DefineDependency("upgrade-faction-tenebris",
-	{"upgrade-faction-aelak-tribe", "upgrade-goblin-writing", "upgrade-goblin-masonry"}, "or", {"upgrade-faction-issudru-tribe", "upgrade-goblin-writing", "upgrade-goblin-masonry"}, "or", {"upgrade-faction-mabom-tribe", "upgrade-goblin-writing", "upgrade-goblin-masonry"}, "or", {"upgrade-faction-sigre-tribe", "upgrade-goblin-writing", "upgrade-goblin-masonry"}, "or", {"upgrade-faction-dreadskull-tribe", "upgrade-goblin-writing", "upgrade-goblin-masonry"}
+	{"upgrade-goblin-writing", "upgrade-goblin-masonry"}
 )

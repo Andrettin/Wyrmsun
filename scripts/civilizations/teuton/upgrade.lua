@@ -292,12 +292,20 @@ DefineDependency("unit-teuton-catapult",
 	{"unit-teuton-smithy", "unit-teuton-lumber-mill"}, "or", {"unit-latin-smithy", "unit-teuton-lumber-mill"}
 )
 
+DefinePredependency("upgrade-teuton-spatha",
+	{"upgrade-frankish-civilization", 0}
+)
+
 DefineDependency("upgrade-teuton-spatha",
-	{"upgrade-germanic-broad-sword", "upgrade-frankish-civilization", 0}
+	{"upgrade-germanic-broad-sword"}
+)
+
+DefinePredependency("upgrade-frank-spatha",
+	{"upgrade-frankish-civilization"}
 )
 
 DefineDependency("upgrade-frank-spatha",
-	{"upgrade-germanic-broad-sword", "upgrade-frankish-civilization"}
+	{"upgrade-germanic-broad-sword"}
 )
 
 DefineDependency("upgrade-teuton-pike",
@@ -336,35 +344,43 @@ DefineDependency("upgrade-teuton-alchemy",
 	{"upgrade-teuton-writing"}
 )
 
-DefineDependency("unit-teuton-stables",
-	{"unit-teuton-lumber-mill", "upgrade-latin-civilization", 0}
+DefinePredependency("unit-teuton-stables",
+	{"upgrade-latin-civilization", 0}
 )
 
-DefineDependency("unit-teuton-swordsman",
+DefineDependency("unit-teuton-stables",
+	{"unit-teuton-lumber-mill"}
+)
+
+DefinePredependency("unit-teuton-swordsman",
 	{"upgrade-suebi-civilization", 0, "upgrade-frankish-civilization", 0}
 )
 
-DefineDependency("unit-teuton-spearman",
+DefinePredependency("unit-teuton-spearman",
+	{"upgrade-frankish-civilization", 0}
+)
+
+DefinePredependency("unit-teuton-ritter",
 	{"upgrade-frankish-civilization", 0}
 )
 
 DefineDependency("unit-teuton-ritter",
-	{"unit-teuton-smithy", "unit-teuton-stables", "upgrade-frankish-civilization", 0, "upgrade-latin-civilization", 0}, "or", {"unit-latin-smithy", "unit-latin-stables"}
+	{"unit-teuton-smithy", "unit-teuton-stables"}, "or", {"unit-latin-smithy", "unit-latin-stables"}
 )
 
-DefineDependency("unit-teuton-town-hall",
+DefinePredependency("unit-teuton-town-hall",
 	{"upgrade-teuton-civilization", "upgrade-latin-civilization", 0}, "or", {"upgrade-suebi-civilization", "upgrade-latin-civilization", 0}, "or", {"upgrade-frankish-civilization", "upgrade-latin-civilization", 0}, "or", {"upgrade-anglo-saxon-civilization", "upgrade-latin-civilization", 0}
 )
 
-DefineDependency("unit-teuton-farm",
+DefinePredependency("unit-teuton-farm",
 	{"upgrade-latin-civilization", 0}
 )
 
-DefineDependency("unit-teuton-barracks",
+DefinePredependency("unit-teuton-barracks",
 	{"upgrade-latin-civilization", 0}
 )
 
-DefineDependency("unit-teuton-smithy",
+DefinePredependency("unit-teuton-smithy",
 	{"upgrade-latin-civilization", 0}
 )
 

@@ -321,24 +321,28 @@ DefineDependency("upgrade-faction-angle-tribe",
 	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
 )
 
-DefineDependency("upgrade-faction-avione-tribe",
+DefinePredependency("upgrade-faction-avione-tribe",
 	{"upgrade-faction-angle-tribe"}
 )
 
-DefineDependency("upgrade-faction-charude-tribe",
+DefinePredependency("upgrade-faction-charude-tribe",
 	{"upgrade-faction-angle-tribe"}
 )
 
-DefineDependency("upgrade-faction-jute-tribe",
+DefinePredependency("upgrade-faction-jute-tribe",
 	{"upgrade-faction-angle-tribe"}
+)
+
+DefinePredependency("upgrade-faction-northumbria",
+	{"upgrade-faction-bernicia"},
+	"or", {"upgrade-faction-deira"}
 )
 
 DefineDependency("upgrade-faction-northumbria",
-	{"upgrade-faction-bernicia", "unit-teuton-temple"},
-	"or", {"upgrade-faction-deira", "unit-teuton-temple"}
+	{"unit-teuton-temple"}
 )
 
-DefineDependency("upgrade-faction-england",
+DefinePredependency("upgrade-faction-england",
 	{"upgrade-faction-bernicia"},
 	"or", {"upgrade-faction-deira"},
 	"or", {"upgrade-faction-east-anglia"},
@@ -350,7 +354,7 @@ DefineDependency("upgrade-faction-england",
 	"or", {"upgrade-faction-wessex"}
 )
 
-DefineDependency("upgrade-faction-scotland",
+DefinePredependency("upgrade-faction-scotland",
 	{"upgrade-faction-bernicia"},
 	"or", {"upgrade-faction-deira"},
 	"or", {"upgrade-faction-northumbria"}

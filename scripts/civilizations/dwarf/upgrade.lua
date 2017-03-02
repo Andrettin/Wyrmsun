@@ -328,12 +328,20 @@ DefineDependency("unit-dwarven-ballista",
 	{"unit-dwarven-smithy", "unit-dwarven-lumber-mill"}, "or", {"unit-brising-smithy", "unit-dwarven-lumber-mill"}
 )
 
+DefinePredependency("unit-dwarven-yale-pen",
+	{"upgrade-faction-joruvellir", 0, "upgrade-faction-eikinskjaldi-clan", 0}
+)
+
 DefineDependency("unit-dwarven-yale-pen",
-	{"unit-dwarven-lumber-mill", "upgrade-faction-joruvellir", 0, "upgrade-faction-eikinskjaldi-clan", 0}
+	{"unit-dwarven-lumber-mill"}
+)
+
+DefinePredependency("unit-joruvellir-yale-pen",
+	{"upgrade-faction-joruvellir"}, "or", {"upgrade-faction-eikinskjaldi-clan"}
 )
 
 DefineDependency("unit-joruvellir-yale-pen",
-	{"unit-dwarven-lumber-mill", "upgrade-faction-joruvellir"}, "or", {"unit-dwarven-lumber-mill", "upgrade-faction-eikinskjaldi-clan"}
+	{"unit-dwarven-lumber-mill"}
 )
 
 DefineDependency("unit-dwarven-yale-rider",
@@ -360,18 +368,18 @@ DefineDependency("unit-dwarven-gryphon-rider",
 	{"unit-dwarven-stronghold", "unit-dwarven-lumber-mill"}
 )
 
-DefineDependency("unit-dwarven-miner",
+DefinePredependency("unit-dwarven-miner",
 	{"upgrade-faction-brising-clan", 0, "upgrade-faction-lyr", 0}
 )
 
-DefineDependency("unit-brising-miner",
+DefinePredependency("unit-brising-miner",
 	{"upgrade-faction-brising-clan"}, "or", {"upgrade-faction-lyr"}
 )
 
-DefineDependency("unit-dwarven-smithy",
+DefinePredependency("unit-dwarven-smithy",
 	{"upgrade-faction-brising-clan", 0, "upgrade-faction-lyr", 0}
 )
 
-DefineDependency("unit-brising-smithy",
+DefinePredependency("unit-brising-smithy",
 	{"upgrade-faction-brising-clan"}, "or", {"upgrade-faction-lyr"}
 )

@@ -33,6 +33,6 @@ DefineUpgrade("upgrade-celt-civilization", {
 	Costs = {"time", 200}
 })
 
-DefineDependency("unit-celt-farm",
+DefinePredependency("unit-celt-farm",
 	{"upgrade-celt-civilization"}
 )

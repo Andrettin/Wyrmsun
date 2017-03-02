@@ -113,16 +113,20 @@ DefineModifier("upgrade-frankish-civilization",
 	{"apply-to", "unit-germanic-transport-ship"}, {"convert-to", "unit-teuton-kogge"}
 )
 
-DefineDependency("unit-frank-swordsman",
+DefinePredependency("unit-frank-swordsman",
 	{"upgrade-frankish-civilization"}
 )
 
-DefineDependency("unit-frank-spearman",
+DefinePredependency("unit-frank-spearman",
+	{"upgrade-frankish-civilization"}
+)
+
+DefinePredependency("unit-frank-horseman",
 	{"upgrade-frankish-civilization"}
 )
 
 DefineDependency("unit-frank-horseman",
-	{"unit-teuton-smithy", "unit-teuton-stables", "upgrade-frankish-civilization"}
+	{"unit-teuton-smithy", "unit-teuton-stables"}
 )
 
 Load("scripts/civilizations/frankish/upgrade_faction.lua")

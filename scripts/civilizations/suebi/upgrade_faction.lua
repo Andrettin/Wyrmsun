@@ -162,27 +162,27 @@ DefineModifier("upgrade-faction-galicia",
 	{"apply-to", "unit-suebi-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
-DefineDependency("upgrade-faction-alamanni-tribe",
+DefinePredependency("upgrade-faction-alamanni-tribe",
 	{"upgrade-faction-suebi-tribe"}
 )
 
-DefineDependency("upgrade-faction-buri-tribe",
+DefinePredependency("upgrade-faction-buri-tribe",
 	{"upgrade-faction-suebi-tribe"}
 )
 
-DefineDependency("upgrade-faction-hermunduri-tribe",
+DefinePredependency("upgrade-faction-hermunduri-tribe",
 	{"upgrade-faction-suebi-tribe"}
 )
 
-DefineDependency("upgrade-faction-marcomanni-tribe",
+DefinePredependency("upgrade-faction-marcomanni-tribe",
 	{"upgrade-faction-suebi-tribe"}
 )
 
-DefineDependency("upgrade-faction-quadi-tribe",
+DefinePredependency("upgrade-faction-quadi-tribe",
 	{"upgrade-faction-suebi-tribe"}
 )
 
-DefineDependency("upgrade-faction-semnone-tribe",
+DefinePredependency("upgrade-faction-semnone-tribe",
 	{"upgrade-faction-suebi-tribe"}
 )
 
@@ -190,6 +190,6 @@ DefineDependency("upgrade-faction-suebi-tribe",
 	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
 )
 
-DefineDependency("upgrade-faction-thuringian-tribe",
+DefinePredependency("upgrade-faction-thuringian-tribe",
 	{"upgrade-faction-hermunduri-tribe"}
 )
