@@ -183,7 +183,7 @@ DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-green-lion-on-orange",
 
 -- Franconian Factions
 
-DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-five-purple-birds-on-green",
+DefineButton( { Pos = 15, Level = 2, Icon = "icon-flag-five-purple-birds-on-green",
 	Action = "research", Value = "upgrade-faction-franconia",
 	Allowed = "check-single-research",
 	Key = "f", Hint = "Found ~!Franconia", Popup = "popup-research",
@@ -193,11 +193,43 @@ DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-five-purple-birds-on-green
 
 -- Dutch Factions
 
-DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-green-lion-on-orange",
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-flag-green-lion-on-orange",
 	Action = "research", Value = "upgrade-faction-netherlands",
 	Allowed = "check-single-research",
 	Key = "n", Hint = "Found the ~!Netherlands", Popup = "popup-research",
 	Description = "Changes your faction to the Netherlands",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
+DefineButton( { Pos = 2, Level = 2, Icon = "icon-flag-yellow-lion-on-cyan",
+	Action = "research", Value = "upgrade-faction-brabant",
+	Allowed = "check-single-research",
+	Key = "b", Hint = "Found ~!Brabant", Popup = "popup-research",
+	Description = "Changes your faction to Brabant",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
+DefineButton( { Pos = 3, Level = 2, Icon = "icon-flag-five-white-birds-on-red",
+	Action = "research", Value = "upgrade-faction-drenthe",
+	Allowed = "check-single-research",
+	Key = "d", Hint = "Found ~!Drenthe", Popup = "popup-research",
+	Description = "Changes your faction to Drenthe",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
+DefineButton( { Pos = 4, Level = 2, Icon = "icon-flag-habsburg",
+	Action = "research", Value = "upgrade-faction-holland",
+	Allowed = "check-single-research",
+	Key = "h", Hint = "Found ~!Holland", Popup = "popup-research",
+	Description = "Changes your faction to Holland",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
+DefineButton( { Pos = 5, Level = 2, Icon = "icon-flag-five-red-birds-on-yellow",
+	Action = "research", Value = "upgrade-faction-overijssel",
+	Allowed = "check-single-research",
+	Key = "o", Hint = "Found ~!Overijssel", Popup = "popup-research",
+	Description = "Changes your faction to Overijssel",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 

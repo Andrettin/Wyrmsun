@@ -249,7 +249,15 @@ DefineFaction("holy-rome", {
 	HistoricalDiplomacyStates = {
 		985, "bohemia", "war", -- War between Otto II and Bohemia broke out in 985; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 616.
 		987, "bohemia", "overlord" -- Bohemia became again a vassal of the Holy Roman Empire in 987, under heavier subjection; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 616.
-	}
+	},
+	Conditions = function(s)
+		for i=0,(PlayerMax - 2) do
+			if (i ~= trigger_player and GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and (GetPlayerData(i, "RaceName") == "teuton" or GetPlayerData(i, "RaceName") == "frankish" or GetPlayerData(i, "RaceName") == "suebi" or GetPlayerData(i, "Faction") == "rome")) then
+				return false
+			end
+		end
+		return true
+	end
 })
 
 DefineFaction("lombardy", {

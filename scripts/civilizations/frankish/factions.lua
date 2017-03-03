@@ -105,7 +105,15 @@ DefineFaction("francia", {
 	},
 	HistoricalCapitals = {
 		768, "Lower Rhine" -- Aachen was Francia's capital during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-	}
+	},
+	Conditions = function(s)
+		for i=0,(PlayerMax - 2) do
+			if (i ~= trigger_player and GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "RaceName") == "frankish") then
+				return false
+			end
+		end
+		return true
+	end
 })
 
 DefineFaction("austrasia", {

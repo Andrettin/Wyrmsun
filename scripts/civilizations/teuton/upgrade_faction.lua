@@ -86,6 +86,11 @@ DefineUpgrade("upgrade-faction-bavaria", {
 	EffectsString = "+1 Damage and +1 Armor for Kriegers"
 })
 
+DefineUpgrade("upgrade-faction-brabant", {
+	Name = "Brabant",
+	EffectsString = "+2 Armor for Kriegers"
+})
+
 DefineUpgrade("upgrade-faction-bremen", {
 	Name = "Bremen",
 	EffectsString = "+2 Armor for Kogges"
@@ -96,6 +101,11 @@ DefineUpgrade("upgrade-faction-carinthia", {
 	EffectsString = "+10 HP for Clerics"
 })
 
+DefineUpgrade("upgrade-faction-drenthe", {
+	Name = "Drenthe",
+	EffectsString = "+2 Accuracy for Kriegers"
+})
+
 DefineUpgrade("upgrade-faction-franconia", {
 	Name = "Franconia",
 	EffectsString = "+10 HP for Ritters"
@@ -103,6 +113,11 @@ DefineUpgrade("upgrade-faction-franconia", {
 
 DefineUpgrade("upgrade-faction-friesland", {
 	Name = "Friesland",
+	EffectsString = "+2 Food Supply for Docks"
+})
+
+DefineUpgrade("upgrade-faction-holland", {
+	Name = "Holland",
 	EffectsString = "+2 Food Supply for Docks"
 })
 
@@ -123,7 +138,12 @@ DefineUpgrade("upgrade-mecklenburg-faction", {
 
 DefineUpgrade("upgrade-faction-netherlands", {
 	Name = "Netherlands",
-	EffectsString = "+2 Armor for Kogges"
+	EffectsString = "+5% Copper Processing for Rathauses and Burgs"
+})
+
+DefineUpgrade("upgrade-faction-overijssel", {
+	Name = "Overijssel",
+	EffectsString = "+2 Accuracy for Schutzes"
 })
 
 DefineUpgrade("upgrade-faction-saxony", {
@@ -278,6 +298,16 @@ DefineModifier("upgrade-faction-baden",
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
+DefineModifier("upgrade-faction-brabant",
+	{"change-faction-to", "brabant"}
+)
+
+DefineModifier("upgrade-faction-brabant",
+	{"Armor", 2},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
+)
+
 DefineModifier("upgrade-faction-bremen",
 	{"change-faction-to", "bremen"}
 )
@@ -298,6 +328,16 @@ DefineModifier("upgrade-faction-carinthia",
 	{"apply-to", "unit-teuton-priest"}
 )
 
+DefineModifier("upgrade-faction-drenthe",
+	{"change-faction-to", "drenthe"}
+)
+
+DefineModifier("upgrade-faction-drenthe",
+	{"Accuracy", 2},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
+)
+
 DefineModifier("upgrade-faction-franconia",
 	{"change-faction-to", "franconia"}
 )
@@ -313,6 +353,15 @@ DefineModifier("upgrade-faction-friesland",
 )
 
 DefineModifier("upgrade-faction-friesland",
+	{"Supply", 2},
+	{"apply-to", "unit-teuton-dock"}
+)
+
+DefineModifier("upgrade-faction-holland",
+	{"change-faction-to", "holland"}
+)
+
+DefineModifier("upgrade-faction-holland",
 	{"Supply", 2},
 	{"apply-to", "unit-teuton-dock"}
 )
@@ -342,9 +391,18 @@ DefineModifier("upgrade-faction-netherlands",
 )
 
 DefineModifier("upgrade-faction-netherlands",
-	{"Armor", 2},
+	{"improve-production", "copper", 5},
+	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"}
+)
+
+DefineModifier("upgrade-faction-overijssel",
+	{"change-faction-to", "overijssel"}
+)
+
+DefineModifier("upgrade-faction-overijssel",
+	{"Accuracy", 2},
 	{"Points", 10},
-	{"apply-to", "unit-teuton-kogge"}
+	{"apply-to", "unit-teuton-archer"}
 )
 
 DefineModifier("upgrade-faction-saxony",
@@ -459,6 +517,14 @@ DefineDependency("upgrade-faction-bavaria",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
+DefinePredependency("upgrade-faction-brabant",
+	{"upgrade-faction-frank-tribe"}
+)
+
+DefineDependency("upgrade-faction-brabant",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
 DefinePredependency("upgrade-faction-bremen",
 	{"upgrade-faction-saxon-tribe"},
 	"or", {"upgrade-faction-chauci-tribe"}
@@ -476,6 +542,15 @@ DefineDependency("upgrade-faction-carinthia",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
+DefinePredependency("upgrade-faction-drenthe",
+	{"upgrade-faction-frank-tribe"},
+	"or", {"upgrade-faction-ampsivarii-tribe"}
+)
+
+DefineDependency("upgrade-faction-drenthe",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
 DefinePredependency("upgrade-faction-franconia",
 	{"upgrade-faction-frank-tribe"}
 )
@@ -489,6 +564,15 @@ DefinePredependency("upgrade-faction-friesland",
 )
 
 DefineDependency("upgrade-faction-friesland",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefinePredependency("upgrade-faction-holland",
+	{"upgrade-faction-frank-tribe"},
+	"or", {"upgrade-faction-batavian-tribe"}
+)
+
+DefineDependency("upgrade-faction-holland",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
@@ -521,11 +605,24 @@ DefinePredependency("upgrade-faction-netherlands",
 	"or", {"upgrade-faction-frank-tribe"},
 	"or", {"upgrade-faction-sugambri-tribe"},
 	"or", {"upgrade-faction-austrasia"},
+	"or", {"upgrade-faction-brabant"},
+	"or", {"upgrade-faction-drenthe"},
 	"or", {"upgrade-faction-friesland"},
+	"or", {"upgrade-faction-holland"},
+	"or", {"upgrade-faction-overijssel"},
 	"or", {"upgrade-faction-salia"}
 )
 
 DefineDependency("upgrade-faction-netherlands",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefinePredependency("upgrade-faction-overijssel",
+	{"upgrade-faction-frank-tribe"},
+	"or", {"upgrade-faction-chamavi-tribe"}
+)
+
+DefineDependency("upgrade-faction-overijssel",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 

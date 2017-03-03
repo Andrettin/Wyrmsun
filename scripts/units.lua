@@ -51,7 +51,7 @@ Units = {
 	"upgrade-faction-franconia",
 	"upgrade-faction-saxony", "upgrade-faction-bremen",
 	"upgrade-faction-friesland",
-	"upgrade-faction-netherlands",
+	"upgrade-faction-brabant", "upgrade-faction-drenthe", "upgrade-faction-holland", "upgrade-faction-netherlands", "upgrade-faction-overijssel",
 	"upgrade-faction-lombardy",
 	"upgrade-faction-holy-rome",
 	"unit-teuton-worker", "unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman",

@@ -32,6 +32,17 @@ DefineFaction("netherlands", {
 	Colors = {"orange", "blue"},
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-netherlands",
+	Conditions = function(s)
+		for i=0,(PlayerMax - 2) do
+			if (
+				i ~= trigger_player and GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and
+				(GetPlayerData(i, "Faction") == "brabant" or GetPlayerData(i, "Faction") == "drenthe" or GetPlayerData(i, "Faction") == "holland" or GetPlayerData(i, "Faction") == "overijssel")
+			) then
+				return false
+			end
+		end
+		return true
+	end,
 	SettlementNames = {
 		"'s-Hertogenbosch",
 		"Beverwijk",
@@ -49,40 +60,40 @@ DefineFaction("netherlands", {
 DefineFaction("brabant", {
 	Name = "Brabant",
 	Civilization = "teuton",
-	ParentFaction = "netherlands",
 	Type = "polity",
 	Colors = {"cyan"},
 	DefaultTier = "duchy", -- Brabant was a duchy in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
+	FactionUpgrade = "upgrade-faction-brabant",
 	DevelopsTo = {"netherlands"}
 })
 
 DefineFaction("drenthe", {
 	Name = "Drenthe",
 	Civilization = "teuton",
-	ParentFaction = "netherlands",
 	Type = "polity",
 	Colors = {"cyan"},
 	DefaultTier = "county", -- Drenthe was a county in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
+	FactionUpgrade = "upgrade-faction-drenthe",
 	DevelopsTo = {"netherlands"}
 })
 
 DefineFaction("holland", {
 	Name = "Holland",
 	Civilization = "teuton",
-	ParentFaction = "netherlands",
 	Type = "polity",
 	Colors = {"red"},
 	DefaultTier = "county", -- Holland was a county in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
+	FactionUpgrade = "upgrade-faction-holland",
 	DevelopsTo = {"netherlands"}
 })
 
 DefineFaction("overijssel", {
 	Name = "Overijssel",
 	Civilization = "teuton",
-	ParentFaction = "netherlands",
 	Type = "polity",
 	Colors = {"pink"},
 	DefaultTier = "barony", -- Overijssel was a lordship in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
+	FactionUpgrade = "upgrade-faction-overijssel",
 	DevelopsTo = {"netherlands"}
 })
 
