@@ -35,30 +35,7 @@ SetMapTemplateResource("earth", "unit-copper-deposit", {3695, 1201}) -- Copper d
 SetMapTemplateResource("earth", "unit-copper-deposit", {3792, 1194}) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
 
 -- Baena
--- University founded in Baena in 1553. Source: The Cambridge Modern History Atlas, p. 9.
-
--- Barcelona
-SetMapTemplateFactionCulturalSettlementName("earth", "Barcelona", {3889, 1106}, "spain")
-SetMapTemplateUnit("earth", "unit-teuton-farm", "visigothia", {3889, 1106}, 486, 1560) -- Barcelona was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-SetMapTemplateUnit("earth", "unit-latin-farm", "spain", {3889, 1106}, 1560) -- Barcelona was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-
--- Cadiz / Gades
-SetMapTemplateCulturalSettlementName("earth", "Gades", {3699, 1218}, "latin")
-SetMapTemplateCulturalSettlementName("earth", "Gades", {3699, 1218}, "phoenician")
-SetMapTemplateFactionCulturalSettlementName("earth", "Cadiz", {3699, 1218}, "spain")
-SetMapTemplateUnit("earth", "unit-latin-farm", "carthage", {3699, 1218}, -218, -201) -- Gades was in Carthaginian possession in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 32.
-SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {3699, 1218}, -201, 486) -- Gades was acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-SetMapTemplateUnit("earth", "unit-teuton-farm", "visigothia", {3699, 1218}, 486, 1560) -- Cadiz was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-SetMapTemplateUnit("earth", "unit-latin-farm", "spain", {3699, 1218}, 1560) -- Cadiz was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-
--- Cartagena / New Carthage
-SetMapTemplateCulturalSettlementName("earth", "New Carthage", {3816, 1192}, "latin")
-SetMapTemplateCulturalSettlementName("earth", "New Carthage", {3816, 1192}, "phoenician")
-SetMapTemplateFactionCulturalSettlementName("earth", "Cartagena", {3816, 1192}, "spain")
-SetMapTemplateUnit("earth", "unit-latin-farm", "carthage", {3816, 1192}, -218, -201) -- New Carthage was in Carthaginian possession in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 32.
-SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {3816, 1192}, -201, 486) -- New Carthage was acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-SetMapTemplateUnit("earth", "unit-teuton-farm", "visigothia", {3816, 1192}, 486, 1560) -- Cartagena was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-SetMapTemplateUnit("earth", "unit-latin-farm", "spain", {3816, 1192}, 1560) -- Cartagena was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+-- University founded in Baena in 1553. Source: "The Cambridge Modern History Atlas", p. 9.
 
 -- Cordoba / Cordova / Corduba
 SetMapTemplateCulturalSettlementName("earth", "Corduba", {3730, 1183}, "latin")
@@ -95,14 +72,6 @@ SetMapTemplateUnit("earth", "unit-latin-farm", "spain", {3731, 1193}, 1560) -- M
 -- Osuna
 -- Minor university founded in Osuna in 1548. Source: The Cambridge Modern History Atlas, 1912, p. 9 and Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 225.
 -- University abolished in Osuna in 1807. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 225.
-
--- Saguntum
-SetMapTemplateCulturalSettlementName("earth", "Saguntum", {3831, 1144}, "latin")
-SetMapTemplateCulturalSettlementName("earth", "Saguntum", {3831, 1144}, "phoenician")
-SetMapTemplateUnit("earth", "unit-latin-farm", "carthage", {3831, 1144}, -218, -201) -- Saguntum was in Carthaginian possession in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 32.
-SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {3831, 1144}, -201, 486) -- Saguntum was acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-SetMapTemplateUnit("earth", "unit-teuton-farm", "visigothia", {3831, 1144}, 486, 1560) -- Saguntum's area was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-SetMapTemplateUnit("earth", "unit-latin-farm", "spain", {3831, 1144}, 1560) -- Sarguntum's area was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 
 -- Seville / Hispalis
 SetMapTemplateCulturalSettlementName("earth", "Hispalis", {3703, 1195}, "latin")

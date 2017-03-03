@@ -41,3 +41,19 @@ DefineSettlement("fiume", {
 	},
 	Regions = {"europe", "west-and-central-europe"}
 })
+
+DefineSettlement("narona", {
+	Name = "Narona",
+	MapTemplate = "earth",
+	Position = {4242, 1068},
+	CulturalNames = {
+		"latin", "Narona" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	HistoricalOwners = {
+		161, "rome" -- Narona was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	HistoricalBuildings = {
+		161, 0, "farm"
+	},
+	Regions = {"europe", "west-and-central-europe"}
+})

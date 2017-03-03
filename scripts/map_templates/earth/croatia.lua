@@ -35,7 +35,3 @@ SetMapTemplateTileTerrain("earth", "shallow-water", {4166, 1022})
 SetMapTemplateTileTerrain("earth", "shallow-water", {4168, 1024})
 SetMapTemplateTileTerrain("earth", "shallow-water", {4170, 1023})
 SetMapTemplateTileTerrain("earth", "shallow-water", {4171, 1018})
-
--- Narona
-SetMapTemplateCulturalSettlementName("earth", "Narona", {4242, 1068}, "latin") -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4242, 1068}, 161) -- Narona was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
