@@ -25,6 +25,22 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSettlement("aleria", {
+	Name = "Aleria",
+	MapTemplate = "earth",
+	Position = {4055, 1090},
+	CulturalNames = {
+		"latin", "Aleria" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	HistoricalOwners = {
+		161, "rome" -- Aleria was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	HistoricalBuildings = {
+		161, 0, "farm"
+	},
+	Regions = {"europe", "italy", "west-and-central-europe"}
+})
+
 DefineSettlement("aquileia", {
 	Name = "Aquileia",
 	MapTemplate = "earth",
@@ -37,6 +53,22 @@ DefineSettlement("aquileia", {
 	},
 	HistoricalBuildings = {
 		-184, 1815, "town-hall"
+	},
+	Regions = {"europe", "italy", "west-and-central-europe"}
+})
+
+DefineSettlement("ariminum", {
+	Name = "Ariminum",
+	MapTemplate = "earth",
+	Position = {4123, 1044},
+	CulturalNames = {
+		"latin", "Ariminum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+	},
+	HistoricalOwners = {
+		-268, "rome" -- Ariminum founded as a colony in 268 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+	},
+	HistoricalBuildings = {
+		-268, 0, "farm"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -75,6 +107,38 @@ DefineSettlement("brindisi", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
+DefineSettlement("caralis", {
+	Name = "Caralis",
+	MapTemplate = "earth",
+	Position = {4047, 1155},
+	CulturalNames = {
+		"latin", "Caralis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	HistoricalOwners = {
+		161, "rome" -- Caralis was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	HistoricalBuildings = {
+		161, 0, "farm"
+	},
+	Regions = {"europe", "italy", "west-and-central-europe"}
+})
+
+DefineSettlement("cosa", {
+	Name = "Cosa",
+	MapTemplate = "earth",
+	Position = {4095, 1082},
+	CulturalNames = {
+		"latin", "Cosa" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+	},
+	HistoricalOwners = {
+		-273, "rome" -- Cosa founded as a colony in 273 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+	},
+	HistoricalBuildings = {
+		-273, 0, "farm"
+	},
+	Regions = {"europe", "italy", "west-and-central-europe"}
+})
+
 DefineSettlement("cremona", {
 	Name = "Cremona",
 	MapTemplate = "earth",
@@ -95,6 +159,22 @@ DefineSettlement("cremona", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
+DefineSettlement("firmum", {
+	Name = "Firmum",
+	MapTemplate = "earth",
+	Position = {4151, 1064},
+	CulturalNames = {
+		"latin", "Firmum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+	},
+	HistoricalOwners = {
+		-264, "rome" -- Firmum founded as a colony in 264 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+	},
+	HistoricalBuildings = {
+		-264, 0, "farm"
+	},
+	Regions = {"europe", "italy", "west-and-central-europe"}
+})
+
 DefineSettlement("florence", {
 	Name = "Florence",
 	MapTemplate = "earth",
@@ -109,6 +189,22 @@ DefineSettlement("florence", {
 	HistoricalBuildings = {
 		-161, 1494, "farm",
 		1494, 0, "town-hall"
+	},
+	Regions = {"europe", "italy", "west-and-central-europe"}
+})
+
+DefineSettlement("hatria", {
+	Name = "Hatria",
+	MapTemplate = "earth",
+	Position = {4156, 1076},
+	CulturalNames = {
+		"latin", "Hatria" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+	},
+	HistoricalOwners = {
+		-298, "rome" -- Hatria founded as a colony in 298 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+	},
+	HistoricalBuildings = {
+		-298, 0, "farm"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -166,6 +262,22 @@ DefineSettlement("naples", {
 	HistoricalBuildings = {
 		-161, 1494, "farm",
 		1494, 0, "town-hall"
+	},
+	Regions = {"europe", "italy", "west-and-central-europe"}
+})
+
+DefineSettlement("novum-castrum", {
+	Name = "Novum Castrum",
+	MapTemplate = "earth",
+	Position = {4154, 1070},
+	CulturalNames = {
+		"latin", "Novum Castrum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+	},
+	HistoricalOwners = {
+		-283, "rome" -- Novum Castrum founded as a colony in 283 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+	},
+	HistoricalBuildings = {
+		-283, 0, "farm"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -258,6 +370,38 @@ DefineSettlement("rome", {
 		-750, 0, "town-hall",
 		-40, 0, "temple", -- Temple of Jupiter Capitolinus, Temple of Jupiter Victor, Temple of Vesta, Temple of Fortunus and Temple of Aesculapius existed in Rome in c. 40 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 22-23.
 		-40, 0, "dock" -- Shipyards ("Navalia") existed in Rome in c. 40 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 22-23.
+	},
+	Regions = {"europe", "italy", "west-and-central-europe"}
+})
+
+DefineSettlement("sena-gallica", {
+	Name = "Sena Gallica",
+	MapTemplate = "earth",
+	Position = {4138, 1052},
+	CulturalNames = {
+		"latin", "Sena Gallica" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+	},
+	HistoricalOwners = {
+		-283, "rome" -- Sena Gallica founded as a colony in 283 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+	},
+	HistoricalBuildings = {
+		-283, 0, "farm"
+	},
+	Regions = {"europe", "italy", "west-and-central-europe"}
+})
+
+DefineSettlement("spoletum", {
+	Name = "Spoletum",
+	MapTemplate = "earth",
+	Position = {4127, 1074},
+	CulturalNames = {
+		"latin", "Spoletum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+	},
+	HistoricalOwners = {
+		-240, "rome" -- Spoletum founded as a colony in 240 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+	},
+	HistoricalBuildings = {
+		-240, 0, "farm"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })

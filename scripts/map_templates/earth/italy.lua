@@ -29,10 +29,6 @@
 SetMapTemplateTileTerrain("earth", "shallow-water", {4145, 1008})
 SetMapTemplateTileTerrain("earth", "shallow-water", {4147, 1013})
 
--- Aleria
-SetMapTemplateCulturalSettlementName("earth", "Aleria", {4055, 1090}, "latin") -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4055, 1090}, 161) -- Aleria was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
-
 -- Aquileia
 SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 170, 171) -- some buildings for Aquileia for The First Marcomannic War scenario
 SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 170, 171) -- some buildings for Aquileia for The First Marcomannic War scenario
@@ -67,38 +63,18 @@ SetMapTemplateHero("earth", "marcus-claudius-fronto", "rome", {4143, 1005}, 168,
 -- plague swept through Aquileia in 168 AD; Source: "Ancient Warfare VII.6", 2013, p. 28.
 SetMapTemplateHero("earth", "marcus-aurelius", "rome", {4143, 1005}, {169, 9, 15}, 170) -- Marcus Aurelius returned to Aquileia in the middle of September 169, and in the spring of 170 led a force to fight in Dacia or in Iazyge land (alternatively, he could also have been at Carnuntum to prepare against the Marcomanni, but that seems unlikely to me, as if that happened it is probable that we would have heard of him being there in some form while the massive defeat against the Marcomanni happened!); Source: "Ancient Warfare VII.6", 2013, p. 28.
 
--- Ariminum
-SetMapTemplateCulturalSettlementName("earth", "Ariminum", {4123, 1044}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4123, 1044}, -268) -- Ariminum founded as a colony in 268 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-
 -- Broglio di Trebisacce
 SetMapTemplateUnit("earth", "unit-latin-farm", "mycenae", {4214, 1143}, -1350, -1150) -- the site of Broglio di Trebisacce (in the plain of Sybaris) was occupied during the Italian Recent Bronze Age (c. 1350-1150 BC) and in the Italian Final Bronze Age (c. 1150-950 BC), and was possibly a Mycenaean colony; the settlement produced Aegean-type storage jars and grew olives in the Recent Bronze Age; in the Final Bronze Age it had some early ironworking, and possessed a wall as well as a ditch; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 37-38, 40-41.
 SetMapTemplateUnit("earth", "unit-latin-smithy", "mycenae", {4214, 1143}, -1150, -950)
 
--- Caralis
-SetMapTemplateCulturalSettlementName("earth", "Caralis", {4047, 1155}, "latin") -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4047, 1155}, 161) -- Caralis was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
-
 -- Castellaro del Vhò
 SetMapTemplateUnit("earth", "unit-germanic-smithy", "celtic-cimmerian-tribe", {4076, 1021}, -1700, -1350) -- the settlement of Castellaro del Vhò was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC); the settlement (apparently) specialized in metalworking; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
-
--- Cosa
-SetMapTemplateCulturalSettlementName("earth", "Cosa", {4095, 1082}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4095, 1082}, -273) -- Cosa founded as a colony in 273 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 
 -- Fiavè
 SetMapTemplateUnit("earth", "unit-celt-farm", "celtic-cimmerian-tribe", {4087, 1001}, -1700, -1350) -- a settlement at Fiavè was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
 
--- Firmum
-SetMapTemplateCulturalSettlementName("earth", "Firmum", {4151, 1064}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4151, 1064}, -264) -- Firmum founded as a colony in 264 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-
 -- Frattesina
 SetMapTemplateUnit("earth", "unit-germanic-smithy", "celtic-cimmerian-tribe", {4105, 1023}, -1200, -801) -- the site of Frattesina was occupied between the 12th and 9th centuries BC; the settlement imported raw materials (such as amber, ivory, ostrich eggs and copper) and exported manufactured products (such as works in glass, glazed pottery, bone, antler, elephant ivory, bronze, iron and amber); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 39.
-
--- Hatria
-SetMapTemplateCulturalSettlementName("earth", "Hatria", {4156, 1076}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4156, 1076}, -298) -- Hatria founded as a colony in 298 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 
 -- Luni sul Mignone
 SetMapTemplateUnit("earth", "unit-latin-town-hall", "latin-tribe", {4111, 1087}, -1700, -1350) -- two rock-cut longhouses existed at Luni sul Mignone during the Italian Middle Bronze Age (c. 1700-1350 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
@@ -108,10 +84,6 @@ SetMapTemplateUnit("earth", "unit-celt-farm", "celtic-cimmerian-tribe", {4034, 1
 
 -- Nola
 SetMapTemplateUnit("earth", "unit-latin-farm", "samnite-tribe", {4170, 1116}, -2300, -1701) -- the settlement of Nola was inhabited in the Italian Early Bronze Age (c. 2300-1700 BC), until it was destroyed by an eruption of Mount Vesuvius in the 18th century BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 43-44.
-
--- Novum Castrum
-SetMapTemplateCulturalSettlementName("earth", "Novum Castrum", {4154, 1070}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4154, 1070}, -283) -- Novum Castrum founded as a colony in 283 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 
 -- Oderzo / Opitergium
 SetMapTemplateUnit("earth", "unit-teuton-lumber-mill", "rome", {4122, 1005}, 170, 171) -- some buildings for Opitergium for The First Marcomannic War scenario
@@ -158,14 +130,6 @@ SetMapTemplateHero("earth", "marcus-aurelius", "rome", {4126, 1096}, 176, 178) -
 
 -- Santa Rosa di Poviglio
 SetMapTemplateUnit("earth", "unit-celt-farm", "celtic-cimmerian-tribe", {4080, 1026}, -1700, -1350) -- a settlement at Santa Rosa di Poviglio was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
-
--- Sena Gallica
-SetMapTemplateCulturalSettlementName("earth", "Sena Gallica", {4138, 1052}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4138, 1052}, -283) -- Sena Gallica founded as a colony in 283 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-
--- Spoletum
-SetMapTemplateCulturalSettlementName("earth", "Spoletum", {4127, 1074}, "latin") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-SetMapTemplateUnit("earth", "unit-latin-farm", "rome", {4127, 1074}, -240) -- Spoletum founded as a colony in 240 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 
 -- Thapsos
 SetMapTemplateUnit("earth", "unit-teuton-dock", "sicel-tribe", {4185, 1202}, -1700, -1150) -- the settlement of Thapsos was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC) and Recent Bronze Age (c. 1350-1150 BC); it contained circular and sub-circular huts and possibly a stone wall; the settlement was probably built for conducting sea trade; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36-37.
