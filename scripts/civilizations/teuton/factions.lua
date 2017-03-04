@@ -258,10 +258,10 @@ DefineFaction("lombardy", {
 DefineFaction("magdeburg", {
 	Name = "Magdeburg",
 	Civilization = "teuton",
-	ParentFaction = "brandenburg",
 	Type = "polity",
 	Colors = {"black"},
 	DefaultTier = "duchy", -- Magdeburg was an archbishopric in 1547; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 114-115.
+	FactionUpgrade = "upgrade-faction-magdeburg",
 	Titles = {
 		"theocracy", "duchy", "Archbishopric"
 	},
@@ -273,11 +273,10 @@ DefineFaction("magdeburg", {
 DefineFaction("mecklenburg", {
 	Name = "Mecklenburg",
 	Civilization = "teuton",
-	ParentFaction = "saxony",
 	Type = "polity",
 	Colors = {"brown"},
 	DefaultTier = "grand-duchy",
-	FactionUpgrade = "upgrade-mecklenburg-faction"
+	FactionUpgrade = "upgrade-faction-mecklenburg"
 })
 
 DefineFaction("prussia", {
@@ -286,7 +285,8 @@ DefineFaction("prussia", {
 	ParentFaction = "brandenburg",
 	Type = "polity",
 	Colors = {"black", "white"},
-	DefaultTier = "duchy"
+	DefaultTier = "duchy",
+	FactionUpgrade = "upgrade-faction-prussia"
 })
 
 DefineFaction("thuringia", {
@@ -304,10 +304,10 @@ DefineFaction("thuringia", {
 DefineFaction("westphalia", {
 	Name = "Westphalia",
 	Civilization = "teuton",
-	ParentFaction = "saxony",
 	Type = "polity",
 	Colors = {"black"},
-	DefaultTier = "duchy"
+	DefaultTier = "duchy",
+	FactionUpgrade = "upgrade-faction-westphalia"
 })
 
 -- Non-Playable Polities

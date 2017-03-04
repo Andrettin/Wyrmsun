@@ -49,7 +49,7 @@ Units = {
 	"upgrade-faction-thuringia",
 	"upgrade-faction-baden", "upgrade-faction-swabia", "upgrade-faction-switzerland", "upgrade-faction-wurtemberg",
 	"upgrade-faction-cologne", "upgrade-faction-franconia", "upgrade-faction-hesse",
-	"upgrade-faction-saxony", "upgrade-faction-brandenburg", "upgrade-faction-bremen", "upgrade-faction-brunswick",
+	"upgrade-faction-saxony", "upgrade-faction-brandenburg", "upgrade-faction-bremen", "upgrade-faction-brunswick", "upgrade-faction-magdeburg", "upgrade-faction-mecklenburg", "upgrade-faction-prussia", "upgrade-faction-westphalia",
 	"upgrade-faction-friesland",
 	"upgrade-faction-brabant", "upgrade-faction-drenthe", "upgrade-faction-holland", "upgrade-faction-netherlands", "upgrade-faction-overijssel",
 	"upgrade-faction-lombardy",

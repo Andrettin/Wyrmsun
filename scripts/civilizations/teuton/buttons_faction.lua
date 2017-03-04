@@ -179,6 +179,38 @@ DefineButton( { Pos = 12, Level = 2, Icon = "icon-flag-old-austria",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
+DefineButton( { Pos = 13, Level = 2, Icon = "icon-flag-five-white-birds-on-red",
+	Action = "research", Value = "upgrade-faction-magdeburg",
+	Allowed = "check-single-research",
+	Key = "m", Hint = "Found ~!Magdeburg", Popup = "popup-research",
+	Description = "Changes your faction to Magdeburg",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
+DefineButton( { Pos = 14, Level = 2, Icon = "icon-flag-blue-lion-on-yellow",
+	Action = "research", Value = "upgrade-faction-mecklenburg",
+	Allowed = "check-single-research",
+	Key = "k", Hint = "Found Mec~!klenburg", Popup = "popup-research",
+	Description = "Changes your faction to Mecklenburg",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
+DefineButton( { Pos = 15, Level = 2, Icon = "icon-flag-five-black-birds-on-purple",
+	Action = "research", Value = "upgrade-faction-prussia",
+	Allowed = "check-single-research",
+	Key = "p", Hint = "Found ~!Prussia", Popup = "popup-research",
+	Description = "Changes your faction to Prussia",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
+DefineButton( { Pos = 15, Level = 2, Icon = "icon-flag-cyan-lion-on-red",
+	Action = "research", Value = "upgrade-faction-westphalia",
+	Allowed = "check-single-research",
+	Key = "w", Hint = "Found ~!Westphalia", Popup = "popup-research",
+	Description = "Changes your faction to Westphalia",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
 -- Frisian Factions
 
 DefineButton( { Pos = 12, Level = 2, Icon = "icon-flag-green-lion-on-orange",
