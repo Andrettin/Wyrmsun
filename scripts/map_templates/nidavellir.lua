@@ -30,8 +30,8 @@ DefineMapTemplate("nidavellir", {
 	World = "Nidavellir",
 	Width = 984,
 	Height = 728,
-	TerrainFile = "scripts/map_templates/nidavellir.map",
-	OverlayTerrainFile = "scripts/map_templates/nidavellir_overlay.map",
+	TerrainImage = "scripts/map_templates/nidavellir.png",
+	OverlayTerrainImage = "scripts/map_templates/nidavellir_overlay.png",
 	GeneratedTerrains = {
 		"mud", "medium",
 		"rock", "medium",

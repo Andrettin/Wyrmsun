@@ -71,6 +71,7 @@ DefineTerrainType("dirt", {
 DefineTerrainType("mud", {
 	Name = "Mud",
 	Character = "m",
+	Color = {192, 64, 64},
 	Flags = {"land", "no-building", "mud"},
 	InnerBorderTerrains = {"dirt"},
 	Graphics = "terrain/mud.png",
@@ -134,6 +135,7 @@ DefineTerrainType("cave-floor", {
 DefineTerrainType("dry-mud", {
 	Name = "Dry Mud",
 	Character = "r",
+	Color = {128, 64, 0},
 	Buildable = true,
 	Flags = {"land", "mud"},
 	InnerBorderTerrains = {"dirt"},
@@ -179,7 +181,7 @@ DefineTerrainType("dry-mud", {
 DefineTerrainType("grass", {
 	Name = "Grass",
 	Character = "g",
-	Color = {0, 128, 0},
+	Color = {0, 192, 0},
 	Buildable = true,
 	Flags = {"land", "grass"},
 	OuterBorderTerrains = {"dirt", "dry-mud"},
@@ -665,6 +667,7 @@ DefineTerrainType("cave-wall", {
 DefineTerrainType("rock", {
 	Name = "Rock",
 	Character = "k",
+	Color = {128, 128, 128},
 	BaseTerrains = {"dirt", "mud", "dry-mud", "rockbound-cave-floor", "cave-floor"},
 	Overlay = true,
 	Flags = {"land", "rock", "unpassable"},
@@ -739,6 +742,7 @@ DefineTerrainType("fairlimbed-tree", {
 DefineTerrainType("flamefood-tree", {
 	Name = "Flamefood Tree",
 	Character = "l",
+	Color = {128, 128, 0},
 	BaseTerrains = {"dry-mud"},
 	Overlay = true,
 	Flags = {"land", "forest", "unpassable"},
@@ -766,6 +770,7 @@ DefineTerrainType("flamefood-tree", {
 DefineTerrainType("pine-tree", {
 	Name = "Pine Tree",
 	Character = "t",
+	Color = {0, 128, 0},
 	BaseTerrains = {"grass"},
 	Overlay = true,
 	Flags = {"land", "forest", "unpassable"},
