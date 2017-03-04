@@ -28,6 +28,7 @@
 DefineTerrainType("dirt", {
 	Name = "Dirt",
 	Character = "d",
+	Color = {192, 128, 0},
 	Flags = {"land", "dirt"},
 	Graphics = "terrain/dirt.png",
 	SolidTiles = {17, 20, 23},
@@ -178,6 +179,7 @@ DefineTerrainType("dry-mud", {
 DefineTerrainType("grass", {
 	Name = "Grass",
 	Character = "g",
+	Color = {0, 128, 0},
 	Buildable = true,
 	Flags = {"land", "grass"},
 	OuterBorderTerrains = {"dirt", "dry-mud"},
@@ -231,6 +233,7 @@ DefineTerrainType("grass", {
 DefineTerrainType("shallow-water", {
 	Name = "Shallow Water",
 	Character = "w",
+	Color = {0, 128, 255},
 	BaseTerrains = {"dirt", "mud", "rockbound-cave-floor", "cave-floor"},
 	Overlay = true,
 	Flags = {"water"},
