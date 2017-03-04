@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016 by Andrettin
+--      (c) Copyright 2016-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,50 +25,59 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineRiver("Achelos", {
+DefineTerrainFeature("achelos", {
+	Name = "Achelos",
 	World = "Earth",
 	CulturalNames = {
 		"greek", "Achelos" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	}
 })
 
-DefineRiver("Alpheus", {
+DefineTerrainFeature("alpheus", {
+	Name = "Alpheus",
 	World = "Earth",
 	CulturalNames = {
 		"greek", "Alpheus" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	}
 })
 
-DefineRiver("Avon", {
+DefineTerrainFeature("avon", {
+	Name = "Avon",
 	World = "Earth",
 	FactionCulturalNames = {
 		"anglo-saxon", "angle-tribe", "Afene" -- Old English name of the Avon River (the source isn't explicit on which Avon River this refers to, but it is presumably this one); Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 	}
 })
 
-DefineRiver("Danube", {
+DefineTerrainFeature("danube-river", {
+	Name = "Danube River",
+	TerrainType = "shallow-water",
+	Color = {0, 128, 144},
 	World = "Earth",
 	CulturalNames = {
-		"latin", "Danuvius", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		"teuton", "Donau"
+		"latin", "Danuvius River", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		"teuton", "Danube River"
 	}
 })
 
-DefineRiver("Dee", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+DefineTerrainFeature("dee", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+	Name = "Dee",
 	World = "Earth",
 	FactionCulturalNames = {
 		"anglo-saxon", "england", "Dee" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	}
 })
 
-DefineRiver("Dnieper", {
+DefineTerrainFeature("dnieper", {
+	Name = "Dnieper",
 	World = "Earth",
 	CulturalNames = {
 		"latin", "Borysthenes" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	}
 })
 
-DefineRiver("Don", {
+DefineTerrainFeature("don", {
+	Name = "Don",
 	World = "Earth",
 	CulturalNames = {
 		"germanic", "Vanaquisl", -- The Tanais river is said to have been called Vanaquisl or Tanaquisl in the time of the Vana/Asa conflict in the Ynglinga saga; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
@@ -78,7 +87,8 @@ DefineRiver("Don", {
 	}
 })
 
-DefineRiver("Douro", {
+DefineTerrainFeature("douro", {
+	Name = "Douro",
 	World = "Earth",
 	FactionCulturalNames = {
 		"portuguese", "portugal", "Douro", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
@@ -86,62 +96,99 @@ DefineRiver("Douro", {
 	}
 })
 
-DefineRiver("Elbe", {
+DefineTerrainFeature("elbe-river", {
+	Name = "Elbe River",
+	TerrainType = "shallow-water",
+	Color = {0, 144, 176},
 	World = "Earth",
 	CulturalNames = {
-		"latin", "Albis" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		"latin", "Albis River", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		"teuton", "Elbe River"
 	}
 })
 
-DefineRiver("Eurotas", {
+DefineTerrainFeature("eurotas-river", {
+	Name = "Eurotas River",
+	TerrainType = "shallow-water",
+	Color = {0, 144, 144},
 	World = "Earth",
 	CulturalNames = {
-		"greek", "Eurotas" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		"greek", "Eurotas River" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	}
 })
 
-DefineRiver("Garonne", {
+DefineTerrainFeature("garonne", {
+	Name = "Garonne",
 	World = "Earth"
 })
 
-DefineRiver("Guadiana", {
+DefineTerrainFeature("guadiana", {
+	Name = "Guadiana",
 	World = "Earth",
 	CulturalNames = {
+		"castillian", "Guadiana",
 		"latin", "Anas" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	}
 })
 
-DefineRiver("Minho", {
+DefineTerrainFeature("lake-neusiedl", {
+	Name = "Lake Neusiedl",
+	TerrainType = "shallow-water",
+	Color = {0, 128, 176},
+	World = "Earth",
+	CulturalNames = {
+		"teuton", "Lake Neusiedl"
+	}
+})
+
+DefineTerrainFeature("lake-wener", {
+	Name = "Lake Wener",
+	TerrainType = "shallow-water",
+	Color = {0, 176, 176},
+	World = "Earth",
+	CulturalNames = {
+		"norse", "Lake Wener"
+	}
+})
+
+DefineTerrainFeature("minho", {
+	Name = "Minho",
 	World = "Earth"
 })
 
-DefineRiver("Narova", {
+DefineTerrainFeature("narova", {
+	Name = "Narova",
 	World = "Earth"
 })
 
-DefineRiver("Neva", {
+DefineTerrainFeature("neva", {
+	Name = "Neva",
 	World = "Earth"
 })
 
-DefineRiver("Oder", {
+DefineTerrainFeature("oder", {
+	Name = "Oder",
 	World = "Earth"
 })
 
-DefineRiver("Orwell", {
+DefineTerrainFeature("orwell", {
+	Name = "Orwell",
 	World = "Earth",
 	FactionCulturalNames = {
 		"anglo-saxon", "angle-tribe", "Arwe" -- Old English name of the Orwell River (the source isn't explicit on which Avon River this refers to, but it is presumably this one); Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 	}
 })
 
-DefineRiver("Peneus", {
+DefineTerrainFeature("peneus", {
+	Name = "Peneus",
 	World = "Earth",
 	CulturalNames = {
 		"greek", "Peneus" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	}
 })
 
-DefineRiver("Rhine", {
+DefineTerrainFeature("rhine", {
+	Name = "Rhine",
 	World = "Earth",
 	CulturalNames = {
 		"latin", "Rhenus", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -149,39 +196,45 @@ DefineRiver("Rhine", {
 	}
 })
 
-DefineRiver("Sado", {
+DefineTerrainFeature("sado", {
+	Name = "Sado",
 	World = "Earth"
 })
 
-DefineRiver("Seine", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+DefineTerrainFeature("seine", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+	Name = "Seine",
 	World = "Earth",
 	FactionCulturalNames = {
 		"french", "france", "Seine" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	}
 })
 
-DefineRiver("Severn", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+DefineTerrainFeature("severn", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+	Name = "Severn",
 	World = "Earth",
 	FactionCulturalNames = {
 		"anglo-saxon", "england", "Severn" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	}
 })
 
-DefineRiver("Tagus", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+DefineTerrainFeature("tagus", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+	Name = "Tagus",
 	World = "Earth",
 	CulturalNames = {
 		"latin", "Tagus" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	}
 })
 
-DefineRiver("Thames", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+DefineTerrainFeature("thames", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+	Name = "Thames",
 	World = "Earth",
 	FactionCulturalNames = {
 		"anglo-saxon", "england", "Thames" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	}
 })
 
-DefineRiver("Volga", {
+DefineTerrainFeature("volga", {
+	Name = "Volga",
 	World = "Earth",
 	CulturalNames = {
 		"latin", "Rha" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.

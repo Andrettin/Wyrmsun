@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016 by Andrettin
+--      (c) Copyright 2016-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -287,6 +287,10 @@ DefineTerrainType("shallow-water", {
 		"any", "west-east", 130,
 		"any", "west-east", 131,
 		"any", "northwest-northeast-southwest-southeast-inner", 177,
+		"any", "northwest-northeast-inner", 216,
+		"any", "southwest-southeast-inner", 232,
+		"any", "northwest-southwest-inner", 217,
+		"any", "northeast-southeast-inner", 233,
 		"any", "north-southwest-inner-southeast-inner", 208,
 		"any", "north-southwest-inner", 214,
 		"any", "north-southeast-inner", 215,
@@ -556,6 +560,22 @@ DefineTerrainType("dungeon-wall", {
 		"any", "northwest-northeast-southwest-southeast-inner", 20,
 		"any", "northwest-northeast-southwest-southeast-inner", 23,
 		"any", "northwest-northeast-southwest-southeast-inner", 26,
+		"any", "northwest-northeast-inner", 17,
+		"any", "northwest-northeast-inner", 20,
+		"any", "northwest-northeast-inner", 23,
+		"any", "northwest-northeast-inner", 26,
+		"any", "southwest-southeast-inner", 17,
+		"any", "southwest-southeast-inner", 20,
+		"any", "southwest-southeast-inner", 23,
+		"any", "southwest-southeast-inner", 26,
+		"any", "northwest-southwest-inner", 17,
+		"any", "northwest-southwest-inner", 20,
+		"any", "northwest-southwest-inner", 23,
+		"any", "northwest-southwest-inner", 26,
+		"any", "northeast-southeast-inner", 17,
+		"any", "northeast-southeast-inner", 20,
+		"any", "northeast-southeast-inner", 23,
+		"any", "northeast-southeast-inner", 26,
 		"any", "north-southwest-inner-southeast-inner", 17,
 		"any", "north-southwest-inner-southeast-inner", 20,
 		"any", "north-southwest-inner-southeast-inner", 23,

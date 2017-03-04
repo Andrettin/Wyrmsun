@@ -28,7 +28,7 @@
 DefineSettlement("amyclae", {
 	Name = "Amyclae",
 	MapTemplate = "earth",
-	Position = {4349, 1204},
+	Position = {4348, 1206},
 	CulturalNames = {
 		"greek", "Amyclae"
 	},
