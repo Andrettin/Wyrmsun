@@ -25,19 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- Lake Neusiedl
-SetMapTemplateTileTerrain("earth", "shallow-water", {4220, 960})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4220, 961})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4221, 958})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4221, 959})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4221, 960})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4221, 961})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4222, 958})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4222, 959})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4222, 960})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4223, 958})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4223, 959})
-
 -- Salzburg / Iuvavum
 SetMapTemplateUnit("earth", "unit-teuton-lumber-mill", "rome", {4135, 960}, 170, 171) -- some buildings for Iuvavum for The First Marcomannic War scenario
 SetMapTemplateUnit("earth", "unit-latin-smithy", "rome", {4135, 960}, 170, 171) -- some buildings for Iuvavum for The First Marcomannic War scenario
