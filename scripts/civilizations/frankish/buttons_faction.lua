@@ -73,6 +73,14 @@ DefineButton( { Pos = 11, Level = 2, Icon = "icon-flag-five-black-birds-on-purpl
 	ForUnit = {"unit-germanic-town-hall"}
 } )
 
+DefineButton( { Pos = 15, Level = 2, Icon = "icon-flag-habsburg",
+	Action = "research", Value = "upgrade-faction-ubii-tribe",
+	Allowed = "check-single-research",
+	Key = "u", Hint = "Found the ~!Ubii Tribe", Popup = "popup-research",
+	Description = "Changes your faction to the Ubii Tribe",
+	ForUnit = {"unit-germanic-town-hall"}
+} )
+
 DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-old-austria",
 	Action = "research", Value = "upgrade-faction-francia",
 	Allowed = "check-single-research",

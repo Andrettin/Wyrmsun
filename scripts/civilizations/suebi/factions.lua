@@ -42,7 +42,10 @@ DefineFaction("suebi-tribe", {
 	DefaultTier = "duchy",
 	DevelopsTo = {"galicia", "bavaria", "austria", "carinthia"},
 	FactionUpgrade = "upgrade-faction-suebi-tribe",
-	Description = "The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there."
+	Description = "The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there.",
+	HistoricalDiplomacyStates = {
+		-55, "ubii-tribe", "overlord" -- the Ubii were tributaries of the Suebi in 55 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 227-228.
+	}
 })
 
 DefineFaction("buri-tribe", {

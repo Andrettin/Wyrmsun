@@ -86,6 +86,16 @@ DefineFaction("sugambri-tribe", {
 	DevelopsTo = {"westphalia"} -- same general area
 })
 
+DefineFaction("ubii-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 227-228.
+	Name = "Ubii Tribe",
+	Civilization = "frankish",
+	Type = "tribe",
+	FactionUpgrade = "upgrade-faction-ubii-tribe",
+	Colors = {"purple"},
+	DevelopsTo = {"cologne", "hesse"}, -- same general area
+	Description = "The Ubii were a West Germanic tribe who lived by the Rhine, north of the Main river. Due to their location in a central trading spot, they were more advanced than other Germanic tribes. Being allies of Rome, many of them eventually migrated west of the Rhine, dwelling around Colonia Agrippinenses (the modern Cologne). The ones who remained possibly became the Chatti."
+})
+
 DefineFaction("francia", {
 	Name = "Francia",
 	Civilization = "frankish",

@@ -55,6 +55,12 @@ DefineUpgrade("upgrade-faction-sugambri-tribe", {
 	EffectsString = "+2 Accuracy for Schutzes"
 })
 
+DefineUpgrade("upgrade-faction-ubii-tribe", {
+	Name = "Ubii Tribe",
+	GrandStrategyProductionEfficiencyModifier = {"gold", 5, "silver", 5, "copper", 5},
+	EffectsString = "+5% Copper Processing for Rathauses and Burgs"
+})
+
 DefineUpgrade("upgrade-faction-austrasia", {
 	Name = "Austrasia",
 	EffectsString = "+1 Damage and +1 Armor for Ritars"
@@ -147,6 +153,15 @@ DefineModifier("upgrade-faction-sugambri-tribe",
 	{"apply-to", "unit-teuton-archer"}
 )
 
+DefineModifier("upgrade-faction-ubii-tribe",
+	{"change-faction-to", "ubii-tribe"}
+)
+
+DefineModifier("upgrade-faction-ubii-tribe",
+	{"improve-production", "copper", 5}, -- the Ubii were in a central trading position, making them more advanced than other Germanic tribes
+	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"}
+)
+
 DefineModifier("upgrade-faction-austrasia",
 	{"change-faction-to", "austrasia"}
 )
@@ -230,5 +245,9 @@ DefineDependency("upgrade-faction-frank-tribe",
 )
 
 DefineDependency("upgrade-faction-sugambri-tribe",
+	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
+)
+
+DefineDependency("upgrade-faction-ubii-tribe",
 	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
 )

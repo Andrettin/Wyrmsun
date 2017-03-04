@@ -96,27 +96,13 @@ DefineFaction("teuton-tribe", {
 	DevelopsTo = {"jutland"} -- same general area
 })
 
-DefineFaction("ubii-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 227-228.
-	Name = "Ubii Tribe",
-	Civilization = "teuton",
-	Type = "tribe",
-	FactionUpgrade = "upgrade-ubii-tribe-faction",
-	Colors = {"purple"},
-	DevelopsTo = {"cologne", "hesse"}, -- same general area
-	Description = "The Ubii were a West Germanic tribe who lived by the Rhine, north of the Main river. Due to their location in a central trading spot, they were more advanced than other Germanic tribes. Being allies of Rome, many of them eventually migrated west of the Rhine, dwelling around Colonia Agrippinenses (the modern Cologne). The ones who remained possibly became the Chatti.",
-	HistoricalDiplomacyStates = {
-		-55, "suebi-tribe", "vassal" -- the Ubii were tributaries of the Suebi in 55 BC
-	}
-})
-
 DefineFaction("varini-tribe", {
 	Name = "Varini Tribe",
 	Civilization = "teuton",
 	Type = "tribe",
 	Colors = {"brown"},
 	FactionUpgrade = "upgrade-faction-varini-tribe",
-	DevelopsTo = {"mecklenburg"}, -- same general area
-	HistoricalFactionDerivations = {-264, "germanic", "ingaevone-tribe"}
+	DevelopsTo = {"mecklenburg"} -- same general area
 })
 
 -- Teuton polities
@@ -156,10 +142,10 @@ DefineFaction("saxony", {
 DefineFaction("brandenburg", {
 	Name = "Brandenburg",
 	Civilization = "teuton",
-	ParentFaction = "saxony",
 	Type = "polity",
 	Colors = {"blue"},
 	DefaultTier = "duchy",
+	FactionUpgrade = "upgrade-faction-brandenburg",
 	Titles = {
 		"monarchy", "duchy", "Margravate"
 	},
@@ -182,10 +168,10 @@ DefineFaction("bremen", {
 DefineFaction("brunswick", {
 	Name = "Brunswick",
 	Civilization = "teuton",
-	ParentFaction = "saxony",
 	Type = "polity",
 	Colors = {"green"},
-	DefaultTier = "duchy"
+	DefaultTier = "duchy",
+	FactionUpgrade = "upgrade-faction-brunswick"
 })
 
 DefineFaction("cologne", {
@@ -194,7 +180,7 @@ DefineFaction("cologne", {
 	Type = "polity",
 	Colors = {"white"},
 	DefaultTier = "duchy", -- Cologne was an archbishopric in 1378; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 78-79.
---	FactionUpgrade = "upgrade-saxon-tribe-faction",
+	FactionUpgrade = "upgrade-faction-cologne",
 	Titles = {
 		"theocracy", "duchy", "Archbishopric"
 	}
@@ -229,7 +215,7 @@ DefineFaction("hesse", {
 	Type = "polity",
 	Colors = {"black"},
 	DefaultTier = "duchy", -- Hesse was a landgraviate in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
---	FactionUpgrade = "upgrade-saxon-tribe-faction",
+	FactionUpgrade = "upgrade-faction-hesse",
 	Titles = {
 		"monarchy", "duchy", "Landgraviate"
 	},

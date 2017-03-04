@@ -60,12 +60,6 @@ DefineUpgrade("upgrade-faction-teuton-tribe", {
 	EffectsString = "+3 Damage, -1 Armor for Kriegers"
 })
 
-DefineUpgrade("upgrade-ubii-tribe-faction", {
-	Name = "Ubii Tribe Faction",
-	GrandStrategyProductionEfficiencyModifier = {"gold", 5, "silver", 5, "copper", 5},
-	EffectsString = "+5% Copper Processing for Rathauses and Burgs"
-})
-
 DefineUpgrade("upgrade-faction-varini-tribe", {
 	Name = "Varini Tribe",
 	EffectsString = "+10 HP for Kriegers"
@@ -91,14 +85,29 @@ DefineUpgrade("upgrade-faction-brabant", {
 	EffectsString = "+2 Armor for Kriegers"
 })
 
+DefineUpgrade("upgrade-faction-brandenburg", {
+	Name = "Brandenburg",
+	EffectsString = "+5% Lumber Processing for Lumber Mills"
+})
+
 DefineUpgrade("upgrade-faction-bremen", {
 	Name = "Bremen",
 	EffectsString = "+2 Armor for Kogges"
 })
 
+DefineUpgrade("upgrade-faction-brunswick", {
+	Name = "Brunswick",
+	EffectsString = "+10 HP for Kriegers"
+})
+
 DefineUpgrade("upgrade-faction-carinthia", {
 	Name = "Carinthia",
 	EffectsString = "+10 HP for Clerics"
+})
+
+DefineUpgrade("upgrade-faction-cologne", {
+	Name = "Cologne",
+	EffectsString = "+30 Mana for Clerics"
 })
 
 DefineUpgrade("upgrade-faction-drenthe", {
@@ -114,6 +123,11 @@ DefineUpgrade("upgrade-faction-franconia", {
 DefineUpgrade("upgrade-faction-friesland", {
 	Name = "Friesland",
 	EffectsString = "+2 Food Supply for Docks"
+})
+
+DefineUpgrade("upgrade-faction-hesse", {
+	Name = "Hesse",
+	EffectsString = "+2 Damage for Schutzes"
 })
 
 DefineUpgrade("upgrade-faction-holland", {
@@ -246,11 +260,6 @@ DefineModifier("upgrade-faction-teuton-tribe",
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
-DefineModifier("upgrade-ubii-tribe-faction",
-	{"improve-production", "copper", 5}, -- the Ubii were in a central trading position, making them more advanced than other Germanic tribes
-	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"}
-)
-
 DefineModifier("upgrade-faction-varini-tribe",
 	{"change-faction-to", "varini-tribe"}
 )
@@ -308,6 +317,15 @@ DefineModifier("upgrade-faction-brabant",
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
+DefineModifier("upgrade-faction-brandenburg",
+	{"change-faction-to", "brandenburg"}
+)
+
+DefineModifier("upgrade-faction-brandenburg",
+	{"improve-production", "lumber", 5},
+	{"apply-to", "unit-teuton-lumber-mill"}
+)
+
 DefineModifier("upgrade-faction-bremen",
 	{"change-faction-to", "bremen"}
 )
@@ -318,12 +336,32 @@ DefineModifier("upgrade-faction-bremen",
 	{"apply-to", "unit-teuton-kogge"}
 )
 
+DefineModifier("upgrade-faction-brunswick",
+	{"change-faction-to", "brunswick"}
+)
+
+DefineModifier("upgrade-faction-brunswick",
+	{"HitPoints", 10},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
+)
+
 DefineModifier("upgrade-faction-carinthia",
 	{"change-faction-to", "carinthia"}
 )
 
 DefineModifier("upgrade-faction-carinthia",
 	{"HitPoints", 10},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-priest"}
+)
+
+DefineModifier("upgrade-faction-cologne",
+	{"change-faction-to", "cologne"}
+)
+
+DefineModifier("upgrade-faction-cologne",
+	{"Mana", 30},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-priest"}
 )
@@ -355,6 +393,16 @@ DefineModifier("upgrade-faction-friesland",
 DefineModifier("upgrade-faction-friesland",
 	{"Supply", 2},
 	{"apply-to", "unit-teuton-dock"}
+)
+
+DefineModifier("upgrade-faction-hesse",
+	{"change-faction-to", "hesse"}
+)
+
+DefineModifier("upgrade-faction-hesse",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-archer"}
 )
 
 DefineModifier("upgrade-faction-holland",
@@ -525,6 +573,14 @@ DefineDependency("upgrade-faction-brabant",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
+DefinePredependency("upgrade-faction-brandenburg",
+	{"upgrade-faction-saxon-tribe"}
+)
+
+DefineDependency("upgrade-faction-brandenburg",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
 DefinePredependency("upgrade-faction-bremen",
 	{"upgrade-faction-saxon-tribe"},
 	"or", {"upgrade-faction-chauci-tribe"}
@@ -534,11 +590,28 @@ DefineDependency("upgrade-faction-bremen",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
+DefinePredependency("upgrade-faction-brunswick",
+	{"upgrade-faction-saxon-tribe"},
+	"or", {"upgrade-faction-cherusci-tribe"}
+)
+
+DefineDependency("upgrade-faction-brunswick",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
 DefinePredependency("upgrade-faction-carinthia",
 	{"upgrade-faction-bavarian-tribe"}
 )
 
 DefineDependency("upgrade-faction-carinthia",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefinePredependency("upgrade-faction-cologne",
+	{"upgrade-faction-ubii-tribe"}
+)
+
+DefineDependency("upgrade-faction-cologne",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
@@ -567,6 +640,14 @@ DefineDependency("upgrade-faction-friesland",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
+DefinePredependency("upgrade-faction-hesse",
+	{"upgrade-faction-ubii-tribe"}
+)
+
+DefineDependency("upgrade-faction-hesse",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
 DefinePredependency("upgrade-faction-holland",
 	{"upgrade-faction-frank-tribe"},
 	"or", {"upgrade-faction-batavian-tribe"}
@@ -576,10 +657,14 @@ DefineDependency("upgrade-faction-holland",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
-DefinePredependency("upgrade-faction-holy-rome", -- must be either Francia, or one of the stem duchies, or a crownland that gave origin to a Holy Roman Emperor; must also be Christian
+DefinePredependency("upgrade-faction-holy-rome", -- must be either Francia, or one of the stem duchies, or a crownland that gave origin to a Holy Roman Emperor, or an electorate; must also be Christian
 	{"upgrade-faction-francia"},
 	"or", {"upgrade-faction-bavaria"},
+	"or", {"upgrade-faction-brandenburg"},
+	"or", {"upgrade-faction-brunswick"},
+	"or", {"upgrade-faction-cologne"},
 	"or", {"upgrade-faction-franconia"},
+	"or", {"upgrade-faction-hesse"},
 	"or", {"upgrade-faction-saxony"},
 	"or", {"upgrade-faction-swabia"},
 	"or", {"upgrade-faction-austria"}

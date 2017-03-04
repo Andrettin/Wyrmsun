@@ -163,6 +163,22 @@ DefineButton( { Pos = 10, Level = 2, Icon = "icon-flag-five-white-birds-on-red",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
+DefineButton( { Pos = 11, Level = 2, Icon = "icon-flag-five-red-birds-on-yellow",
+	Action = "research", Value = "upgrade-faction-brandenburg",
+	Allowed = "check-single-research",
+	Key = "r", Hint = "Found B~!randenburg", Popup = "popup-research",
+	Description = "Changes your faction to Brandenburg",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
+DefineButton( { Pos = 12, Level = 2, Icon = "icon-flag-old-austria",
+	Action = "research", Value = "upgrade-faction-brunswick",
+	Allowed = "check-single-research",
+	Key = "u", Hint = "Found Br~!unswick", Popup = "popup-research",
+	Description = "Changes your faction to Brunswick",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
 -- Frisian Factions
 
 DefineButton( { Pos = 12, Level = 2, Icon = "icon-flag-green-lion-on-orange",
@@ -188,6 +204,22 @@ DefineButton( { Pos = 15, Level = 2, Icon = "icon-flag-five-purple-birds-on-gree
 	Allowed = "check-single-research",
 	Key = "f", Hint = "Found ~!Franconia", Popup = "popup-research",
 	Description = "Changes your faction to Franconia",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
+DefineButton( { Pos = 14, Level = 2, Icon = "icon-flag-five-black-birds-on-purple",
+	Action = "research", Value = "upgrade-faction-cologne",
+	Allowed = "check-single-research",
+	Key = "c", Hint = "Found ~!Cologne", Popup = "popup-research",
+	Description = "Changes your faction to Cologne",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
+DefineButton( { Pos = 15, Level = 2, Icon = "icon-flag-cyan-lion-on-red",
+	Action = "research", Value = "upgrade-faction-hesse",
+	Allowed = "check-single-research",
+	Key = "h", Hint = "Found ~!Hesse", Popup = "popup-research",
+	Description = "Changes your faction to Hesse",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
