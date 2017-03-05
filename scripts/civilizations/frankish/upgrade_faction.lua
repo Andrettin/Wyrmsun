@@ -27,68 +27,81 @@
 
 DefineUpgrade("upgrade-faction-ampsivarii-tribe", {
 	Name = "Ampsivarii Tribe",
-	EffectsString = "+2 Damage for Kregars"
+	EffectsString = "+2 Damage for Kregars",
+	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
 })
 
 DefineUpgrade("upgrade-faction-batavian-tribe", {
 	Name = "Batavian Tribe",
-	EffectsString = "+3 Damage, -1 Armor for Kregars"
+	EffectsString = "+3 Damage, -1 Armor for Kregars",
+	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
 })
 
 DefineUpgrade("upgrade-faction-chamavi-tribe", {
 	Name = "Chamavi Tribe",
-	EffectsString = "+2 Accuracy for Kregars"
+	EffectsString = "+2 Accuracy for Kregars",
+	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
 })
 
 DefineUpgrade("upgrade-faction-chatti-tribe", {
 	Name = "Chatti Tribe",
-	EffectsString = "+2 Damage for Spearmen"
+	EffectsString = "+2 Damage for Spearmen",
+	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
 })
 
 DefineUpgrade("upgrade-faction-frank-tribe", {
 	Name = "Frank Tribe",
-	EffectsString = "+1 Damage and +1 Armor for Ritars"
+	EffectsString = "+1 Damage and +1 Armor for Ritars",
+	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
 })
 
 DefineUpgrade("upgrade-faction-sugambri-tribe", {
 	Name = "Sugambri Tribe",
-	EffectsString = "+2 Accuracy for Schutzes"
+	EffectsString = "+2 Accuracy for Schutzes",
+	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
 })
 
 DefineUpgrade("upgrade-faction-ubii-tribe", {
 	Name = "Ubii Tribe",
 	GrandStrategyProductionEfficiencyModifier = {"gold", 5, "silver", 5, "copper", 5},
-	EffectsString = "+5% Copper Processing for Rathauses and Burgs"
+	EffectsString = "+5% Copper Processing for Rathauses and Burgs",
+	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
 })
 
 DefineUpgrade("upgrade-faction-austrasia", {
 	Name = "Austrasia",
-	EffectsString = "+1 Damage and +1 Armor for Ritars"
+	EffectsString = "+1 Damage and +1 Armor for Ritars",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-burgundia", {
 	Name = "Burgundia",
-	EffectsString = "+10 HP for Ritars"
+	EffectsString = "+10 HP for Ritars",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-east-francia", {
 	Name = "East Francia",
-	EffectsString = "+2 Armor for Ritars"
+	EffectsString = "+2 Armor for Ritars",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-francia", {
 	Name = "Francia",
-	EffectsString = "+2 Damage for Ritars"
+	EffectsString = "+2 Damage for Ritars",
+	RequirementsString = "Writing, Masonry and no other Frankish faction exists"
 })
 
 DefineUpgrade("upgrade-faction-neustria", {
 	Name = "Neustria",
-	EffectsString = "+1 Accuracy and +1 Armor for Ritars"
+	EffectsString = "+1 Accuracy and +1 Armor for Ritars",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-salia", {
 	Name = "Salia",
-	EffectsString = "+2 Accuracy for Ritars"
+	EffectsString = "+2 Accuracy for Ritars",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineModifier("upgrade-faction-ampsivarii-tribe",

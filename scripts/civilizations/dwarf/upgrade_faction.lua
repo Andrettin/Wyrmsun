@@ -57,22 +57,26 @@ DefineUpgrade("upgrade-faction-shorbear-clan", {
 
 DefineUpgrade("upgrade-faction-joruvellir", {
 	Name = "Joruvellir",
-	EffectsString = "+2 Damage for Scouts, -10% cost for Yale Pens"
+	EffectsString = "+2 Damage for Scouts, -10% cost for Yale Pens",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-kal-kartha", {
 	Name = "Kal Kartha",
-	EffectsString = "-5 HP and +3 Damage for Axefighters"
+	EffectsString = "-5 HP and +3 Damage for Axefighters",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-knalga", {
 	Name = "Knalga",
-	EffectsString = "+2 Damage for Axefighters"
+	EffectsString = "+2 Damage for Axefighters",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-lyr", {
 	Name = "Lyr",
-	EffectsString = "+5 Armor for Towers"
+	EffectsString = "+5 Armor for Towers",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineModifier("upgrade-faction-brising-clan",
@@ -259,7 +263,7 @@ DefinePredependency("upgrade-faction-joruvellir",
 )
 
 DefineDependency("upgrade-faction-joruvellir",
-	{"upgrade-dwarven-runewriting"}
+	{"upgrade-dwarven-runewriting", "upgrade-dwarven-masonry"}
 )
 
 DefinePredependency("upgrade-faction-kal-kartha",
@@ -267,7 +271,7 @@ DefinePredependency("upgrade-faction-kal-kartha",
 )
 
 DefineDependency("upgrade-faction-kal-kartha",
-	{"upgrade-dwarven-runewriting"}
+	{"upgrade-dwarven-runewriting", "upgrade-dwarven-masonry"}
 )
 
 DefinePredependency("upgrade-faction-knalga",
@@ -275,7 +279,7 @@ DefinePredependency("upgrade-faction-knalga",
 )
 
 DefineDependency("upgrade-faction-knalga",
-	{"upgrade-dwarven-runewriting"}
+	{"upgrade-dwarven-runewriting", "upgrade-dwarven-masonry"}
 )
 
 DefinePredependency("upgrade-faction-lyr",
@@ -283,5 +287,5 @@ DefinePredependency("upgrade-faction-lyr",
 )
 
 DefineDependency("upgrade-faction-lyr",
-	{"upgrade-dwarven-runewriting"}
+	{"upgrade-dwarven-runewriting", "upgrade-dwarven-masonry"}
 )

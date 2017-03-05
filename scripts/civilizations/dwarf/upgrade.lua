@@ -29,7 +29,7 @@ DefineUpgrade("upgrade-dwarven-broad-axe", {
 	Parent = "upgrade-broad-axe",
 	Icon = "icon-dwarven-broad-axe",
 	Civilization = "dwarf",
-	Description = _("Dwarven smiths work hard at their craft to improve soldiers' weapons, and with the perfecting of smithing techniques the broadening of axe blades becomes possible.\n\nEffect: +2 Damage for Axefighters, Steelclads, Stonelords, Yale Riders and Yale Lords."),
+	Description = "Dwarven smiths work hard at their craft to improve soldiers' weapons, and with the perfecting of smithing techniques the broadening of axe blades becomes possible.\n\nEffect: +2 Damage for Axefighters, Steelclads, Stonelords, Yale Riders and Yale Lords.",
 	Item = "unit-broad-axe"
 })
 
@@ -37,6 +37,7 @@ DefineUpgrade("upgrade-dwarven-great-axe", {
 	Parent = "upgrade-great-axe",
 	Icon = "icon-dwarven-great-axe",
 	Civilization = "dwarf",
+	RequirementsString = "Broad Axe",
 	Description = _("Further innovations in dwarven smithing allow axes to be made sturdier, and often to carry double blades.\n\nEffect: +2 Damage for Axefighters, Steelclads, Stonelords, Yale Riders and Yale Lords."),
 	Item = "unit-great-axe"
 })
@@ -56,22 +57,23 @@ DefineUpgrade("upgrade-dwarven-pike", {
 })
 
 DefineUpgrade("upgrade-dwarven-shield-1", {
-	Name = _("Heater Shield"),
+	Name = "Heater Shield",
 	Parent = "upgrade-bronze-shield",
 	Icon = "icon-dwarven-shield-2",
 	Civilization = "dwarf",
-	Description = _("Earlier shields provided little more than a minimal degree of protection. With the development of heater shields, dwarven soldiers have a greater chance of survival in battle.\n\nEffect: +2 Armor for Axefighters, Steelclads, Stonelords, Guards and Yale Riders."),
+	Description = "Earlier shields provided little more than a minimal degree of protection. With the development of heater shields, dwarven soldiers have a greater chance of survival in battle.\n\nEffect: +2 Armor for Axefighters, Steelclads, Stonelords, Guards and Yale Riders.",
 	Item = "unit-heater-shield"
 })
 
 DefineUpgrade("upgrade-dwarven-shield-2", {
-	Name = _("Thrymgjol Shield"),
+	Name = "Thrymgjol Shield",
 	Parent = "upgrade-iron-shield",
 	Icon = "icon-dwarven-shield-3",
 	Civilization = "dwarf",
-	Description = _("As shield-making techniques improved, the creation of thrymgjol shields became possible. These shields receive their name from the impregnable gate crafted by the sons of the dwarf Solblindi, due to the mighty protection they give their users.\n\nEffect: +2 Armor for Axefighters, Steelclads, Stonelords, Guards and Yale Riders."),
-	Background = _("The Thrymgjol gate and its makers, the sons of the dwarf Solblindi, are mentioned in the ~<Svipdagsmol~> of Norse mythology. The name \"Thrymgjol\" means \"loud-clanging\"."),
-	Quote = _("\"Thrymgjol they call it; 'twas made by the three,\nThe sons of Solblindi;\nAnd fast as a fetter the farer it holds,\nWhoever shall lift the latch.\"\n- Dwarven Traditional Poetry (The Warder)"),
+	RequirementsString = "Heater Shield",
+	Description = "As shield-making techniques improved, the creation of thrymgjol shields became possible. These shields receive their name from the impregnable gate crafted by the sons of the dwarf Solblindi, due to the mighty protection they give their users.\n\nEffect: +2 Armor for Axefighters, Steelclads, Stonelords, Guards and Yale Riders.",
+	Background = "The Thrymgjol gate and its makers, the sons of the dwarf Solblindi, are mentioned in the ~<Svipdagsmol~> of Norse mythology. The name \"Thrymgjol\" means \"loud-clanging\".",
+	Quote = "\"Thrymgjol they call it; 'twas made by the three,\nThe sons of Solblindi;\nAnd fast as a fetter the farer it holds,\nWhoever shall lift the latch.\"\n- Dwarven Traditional Poetry (The Warder)",
 	Item = "unit-thrymgjol-shield"
 })
 
@@ -90,6 +92,7 @@ DefineUpgrade("upgrade-dwarven-bearded-throwing-axe", {
 	Parent = "upgrade-ranged-projectile-2",
 	Icon = "icon-dwarven-bearded-throwing-axe",
 	Civilization = "dwarf",
+	RequirementsString = "Sharp Throwing Axe",
 	Description = _("The 'bearding' of throwing axes by extending the bottom of their blades is an innovation which makes them more deadly when thrown.\n\nEffect: +2 Damage for Scouts, Pathfinders, Explorers and Gryphon Riders."),
 	Weapon = true,
 	Item = "unit-bearded-throwing-axe"
@@ -145,6 +148,7 @@ DefineUpgrade("upgrade-dwarven-runewriting", {
 DefineUpgrade("upgrade-dwarven-alchemy", {
 	Parent = "upgrade-alchemy",
 	Civilization = "dwarf",
+	RequirementsString = "Dvalic Runewriting",
 	Description = _("Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Scouts, Pathfinders, Explorers and Gryphon Riders, +5 Fire Damage for Ballistas.")
 })
 

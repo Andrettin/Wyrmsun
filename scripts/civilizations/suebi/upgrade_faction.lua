@@ -57,7 +57,8 @@ DefineUpgrade("upgrade-faction-semnone-tribe", {
 
 DefineUpgrade("upgrade-faction-suebi-tribe", {
 	Name = "Suebi Tribe",
-	EffectsString = "+2 Evasion for Kregars"
+	EffectsString = "+2 Evasion for Kregars",
+	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
 })
 
 DefineUpgrade("upgrade-faction-thuringian-tribe", {
@@ -67,7 +68,8 @@ DefineUpgrade("upgrade-faction-thuringian-tribe", {
 
 DefineUpgrade("upgrade-faction-galicia", {
 	Name = "Galicia",
-	EffectsString = "+2 Damage for Kregars"
+	EffectsString = "+2 Damage for Kregars",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineModifier("upgrade-faction-alamanni-tribe",

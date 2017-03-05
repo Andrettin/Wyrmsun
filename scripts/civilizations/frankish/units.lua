@@ -657,6 +657,7 @@ DefineUnitType("unit-frank-horseman", {
 	ButtonKey = "r",
 	ButtonHint = "Train ~!Ritar",
 	Corpse = "unit-human-dead-body",
+	RequirementsString = "Smithy and Stables",
 	Sounds = {
 		"selected", "basic-teuton-voices-selected-group",
 		"acknowledge", "basic-teuton-voices-acknowledge",

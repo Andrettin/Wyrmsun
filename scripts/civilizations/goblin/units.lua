@@ -483,7 +483,8 @@ DefineUnitType("unit-goblin-shaman", {
 	}
 } )
 
-DefineUnitType("unit-goblin-war-machine", { Name = _("War Machine"),
+DefineUnitType("unit-goblin-war-machine", {
+	Name = _("War Machine"),
 	Parent = "unit-template-siege-engine",
 	Civilization = "goblin",
 	Description = _("One recurring element of the goblin architectural style is the use of bones. With their siege weapons, it is no different: the goblin war machine displays a wyrm skull on its front, along with the beast's ribs on its sides. This siege weapon has the marks of goblin craftsmanship, combining brilliant plans and excellent initiative with lack of patience to perfect the machine and make it achieve its full potential. The war machine can hold its own even against warriors skilled in hand-to-hand combat, as the goblins within it won't hesitate to pierce them with their spears. This comes at a cost, however, as cramming a catapult and a couple of goblins in such a relatively small space reduces the structural integrity of the siege weapon. The use of wyrm bones in the construction of the war machine is considered to be something of a profanation by kobolds, who worship the ancient beasts as their progenitors."),
@@ -497,6 +498,7 @@ DefineUnitType("unit-goblin-war-machine", { Name = _("War Machine"),
 	ButtonKey = "m",
 	ButtonHint = _("Build War ~!Machine"),
 	BluntDamage = true,
+	RequirementsString = "Lumber Mill and Fugla Forge",
 	Sounds = {
 --		"acknowledge", "ballista-acknowledge",
 --		"ready", "dwarven-ballista-ready",
@@ -541,6 +543,7 @@ DefineUnitType("unit-goblin-glider", {
 	ButtonKey = "g",
 	ButtonHint = _("Build ~!Glider"),
 	ButtonPos = 7,
+	RequirementsString = "Lumber Mill",
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "glider-flying",
@@ -579,7 +582,8 @@ DefineUnitType("unit-goblin-town-hall", { Name = _("Town Hall"),
 	}
 } )
 
-DefineUnitType("unit-goblin-stronghold", { Name = _("Stronghold"),
+DefineUnitType("unit-goblin-stronghold", {
+	Name = _("Stronghold"),
 	Parent = "unit-template-stronghold",
 	Civilization = "goblin",
 	Description = _("When a goblin tribe becomes large enough, it will build a stronghold in its main settlement to ward off invasions from envious lesser tribes."),
@@ -587,6 +591,7 @@ DefineUnitType("unit-goblin-stronghold", { Name = _("Stronghold"),
 	Shadow = {"file", "goblin/buildings/stronghold_shadow.png", "size", {128, 128}},
 	Icon = "icon-goblin-stronghold",
 	Trains = {"unit-goblin-worker"},
+	RequirementsString = "Mess Hall and Masonry",
 	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"

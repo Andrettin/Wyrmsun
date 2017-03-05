@@ -27,7 +27,8 @@
 
 DefineUpgrade("upgrade-faction-bavarian-tribe", {
 	Name = "Bavarian Tribe",
-	EffectsString = "+1 Damage and +1 Armor for Kriegers"
+	EffectsString = "+1 Damage and +1 Armor for Kriegers",
+	RequirementsString = "Spatha and Iron Shield"
 })
 
 DefineUpgrade("upgrade-faction-chauci-tribe", {
@@ -42,22 +43,26 @@ DefineUpgrade("upgrade-faction-cherusci-tribe", {
 
 DefineUpgrade("upgrade-faction-frisian-tribe", {
 	Name = "Frisian Tribe",
-	EffectsString = "+5 HP and +1 Armor for Kriegers"
+	EffectsString = "+5 HP and +1 Armor for Kriegers",
+	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
 })
 
 DefineUpgrade("upgrade-faction-lombard-tribe", {
 	Name = "Lombard Tribe",
-	EffectsString = "+2 Damage for Kriegers"
+	EffectsString = "+2 Damage for Kriegers",
+	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
 })
 
 DefineUpgrade("upgrade-faction-saxon-tribe", {
 	Name = "Saxon Tribe",
-	EffectsString = "+5 HP and +1 Damage for Kriegers"
+	EffectsString = "+5 HP and +1 Damage for Kriegers",
+	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
 })
 
 DefineUpgrade("upgrade-faction-teuton-tribe", {
 	Name = "Teuton Tribe",
-	EffectsString = "+3 Damage, -1 Armor for Kriegers"
+	EffectsString = "+3 Damage, -1 Armor for Kriegers",
+	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
 })
 
 DefineUpgrade("upgrade-faction-varini-tribe", {
@@ -67,137 +72,164 @@ DefineUpgrade("upgrade-faction-varini-tribe", {
 
 DefineUpgrade("upgrade-faction-austria", {
 	Name = "Austria",
-	EffectsString = "+1 Speed for Schutzes"
+	EffectsString = "+1 Speed for Schutzes",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-baden", {
 	Name = "Baden",
-	EffectsString = "+2 Evasion for Kriegers"
+	EffectsString = "+2 Evasion for Kriegers",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-bavaria", {
 	Name = "Bavaria",
-	EffectsString = "+1 Damage and +1 Armor for Kriegers"
+	EffectsString = "+1 Damage and +1 Armor for Kriegers",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-brabant", {
 	Name = "Brabant",
-	EffectsString = "+2 Armor for Kriegers"
+	EffectsString = "+2 Armor for Kriegers",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-brandenburg", {
 	Name = "Brandenburg",
-	EffectsString = "+5% Lumber Processing for Lumber Mills"
+	EffectsString = "+5% Lumber Processing for Lumber Mills",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-bremen", {
 	Name = "Bremen",
-	EffectsString = "+2 Armor for Kogges"
+	EffectsString = "+2 Armor for Kogges",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-brunswick", {
 	Name = "Brunswick",
-	EffectsString = "+10 HP for Kriegers"
+	EffectsString = "+10 HP for Kriegers",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-carinthia", {
 	Name = "Carinthia",
-	EffectsString = "+10 HP for Clerics"
+	EffectsString = "+10 HP for Clerics",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-cologne", {
 	Name = "Cologne",
-	EffectsString = "+30 Mana for Clerics"
+	EffectsString = "+30 Mana for Clerics",
+	RequirementsString = "Writing, Masonry, Church and Christianity"
 })
 
 DefineUpgrade("upgrade-faction-drenthe", {
 	Name = "Drenthe",
-	EffectsString = "+2 Accuracy for Kriegers"
+	EffectsString = "+2 Accuracy for Kriegers",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-franconia", {
 	Name = "Franconia",
-	EffectsString = "+10 HP for Ritters"
+	EffectsString = "+10 HP for Ritters",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-friesland", {
 	Name = "Friesland",
-	EffectsString = "+2 Food Supply for Docks"
+	EffectsString = "+2 Food Supply for Docks",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-hesse", {
 	Name = "Hesse",
-	EffectsString = "+2 Damage for Schutzes"
+	EffectsString = "+2 Damage for Schutzes",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-holland", {
 	Name = "Holland",
-	EffectsString = "+2 Food Supply for Docks"
+	EffectsString = "+2 Food Supply for Docks",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-holy-rome", {
 	Name = "Holy Rome",
-	EffectsString = "+2 Armor for Ritters"
+	EffectsString = "+2 Armor for Ritters",
+	RequirementsString = "Writing, Masonry, Christianity, no other Frankish, Suebi or Teuton faction exists, no other faction is Rome"
 })
 
 DefineUpgrade("upgrade-faction-lombardy", {
 	Name = "Lombardy",
-	EffectsString = "+2 Damage for Ritters"
+	EffectsString = "+2 Damage for Ritters",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-magdeburg", {
 	Name = "Magdeburg",
-	EffectsString = "+30 Mana for Clerics"
+	EffectsString = "+30 Mana for Clerics",
+	RequirementsString = "Writing, Masonry, Church and Christianity"
 })
 
 DefineUpgrade("upgrade-faction-mecklenburg", {
 	Name = "Mecklenburg",
-	EffectsString = "+2 Armor for Kriegers"
+	EffectsString = "+2 Armor for Kriegers",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-netherlands", {
 	Name = "Netherlands",
-	EffectsString = "+5% Copper Processing for Rathauses and Burgs"
+	EffectsString = "+5% Copper Processing for Rathauses and Burgs",
+	RequirementsString = "Writing, Masonry, no other faction is Brabant, Drenthe, Holland or Overijssel"
 })
 
 DefineUpgrade("upgrade-faction-overijssel", {
 	Name = "Overijssel",
-	EffectsString = "+2 Accuracy for Schutzes"
+	EffectsString = "+2 Accuracy for Schutzes",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-prussia", {
 	Name = "Prussia",
-	EffectsString = "+2 Damage for Ritters"
+	EffectsString = "+2 Damage for Ritters",
+	RequirementsString = "Writing, Masonry, Burg and Barracks"
 })
 
 DefineUpgrade("upgrade-faction-saxony", {
 	Name = "Saxony",
-	EffectsString = "+5 HP and +1 Damage for Kriegers"
+	EffectsString = "+5 HP and +1 Damage for Kriegers",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-swabia", {
 	Name = "Swabia",
-	EffectsString = "+10 HP for Kriegers"
+	EffectsString = "+10 HP for Kriegers",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-switzerland", {
 	Name = "Switzerland",
-	EffectsString = "+2 Damage for Spearmen"
+	EffectsString = "+2 Damage for Spearmen",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-thuringia", {
 	Name = "Thuringia",
-	EffectsString = "+2 Damage for Schutzes"
+	EffectsString = "+2 Damage for Schutzes",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-westphalia", {
 	Name = "Westphalia",
-	EffectsString = "+2 Accuracy for Schutzes"
+	EffectsString = "+2 Accuracy for Schutzes",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-wurtemberg", {
 	Name = "Wurtemberg",
-	EffectsString = "+2 Armor for Kriegers"
+	EffectsString = "+2 Armor for Kriegers",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineModifier("upgrade-faction-bavarian-tribe",

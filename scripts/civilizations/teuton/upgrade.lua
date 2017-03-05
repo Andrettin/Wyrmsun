@@ -30,6 +30,7 @@ DefineUpgrade("upgrade-teuton-spatha", {
 	Parent = "upgrade-long-sword",
 	Icon = "icon-teuton-spatha",
 	Civilization = "teuton",
+	RequirementsString = "Broad Sword",
 	Description = "With the development of iron working, the forging of longer swords became a practical possibility.\n\nEffect: +2 Damage for swordwielders.",
 	Background = "During the Migration Period, Germanic peoples - including West Germanics - used longswords such as these in combat.",
 	Item = "unit-spatha"
@@ -40,6 +41,7 @@ DefineUpgrade("upgrade-frank-spatha", {
 	Parent = "upgrade-teuton-spatha",
 	Icon = "icon-frankish-spatha",
 	Civilization = "frankish",
+	RequirementsString = "Broad Sword",
 	Description = "With the development of iron working, the forging of longer swords became a practical possibility.\n\nEffect: +2 Damage for swordwielders.",
 	Background = "During the Migration Period, Germanic peoples - including West Germanics - used longswords such as these in combat.",
 	Item = "unit-frankish-spatha"
@@ -48,6 +50,7 @@ DefineUpgrade("upgrade-frank-spatha", {
 DefineUpgrade("upgrade-teuton-pike", {
 	Parent = "upgrade-pike",
 	Civilization = "teuton",
+	RequirementsString = "Long Spear",
 	Description = "Much longer than previous spears, pikes can be deadly when used by disciplined groups of soldiers.\n\nEffect: +2 Damage for Spearmen.",
 	Item = "unit-pike"
 })
@@ -56,15 +59,17 @@ DefineUpgrade("upgrade-teuton-iron-shield", {
 	Parent = "upgrade-iron-shield",
 	Icon = "icon-teuton-iron-shield",
 	Civilization = "teuton",
+	RequirementsString = "Bronze Shield",
 	Description = "The development of iron working makes the crafting of sturdier shields possible.\n\nEffect: +2 Armor for melee infantry and cavalry.",
 	Item = "unit-iron-shield"
 })
 
 DefineUpgrade("upgrade-teuton-bodkin-arrow", {
-	Name = _("Bodkin Arrow"),
+	Name = "Bodkin Arrow",
 	Parent = "upgrade-ranged-projectile-2",
 	Icon = "icon-bodkin-arrow",
 	Civilization = "teuton",
+	RequirementsString = "Barbed Arrow",
 	Description = "Bodkin arrows focus pressure on a single point, greatly enhancing their piercing capability.\n\nEffect: +2 Damage for Schutzes.",
 	Arrows = true,
 	Item = "unit-bodkin-arrows"
@@ -73,13 +78,15 @@ DefineUpgrade("upgrade-teuton-bodkin-arrow", {
 DefineUpgrade("upgrade-teuton-catapult-projectile-1", {
 	Parent = "upgrade-catapult-granite-projectile",
 	Civilization = "teuton",
-	Description = _("As siegecrafting techniques develop, catapult rocks made out of sandstone are replaced by ones made of granite, increasing the damage catapults can cause.\n\nEffect: +15 Damage for Catapults.")
+	RequirementsString = "Carpenter's Shop/Lumber Mill",
+	Description = "As siegecrafting techniques develop, catapult rocks made out of sandstone are replaced by ones made of granite, increasing the damage catapults can cause.\n\nEffect: +15 Damage for Catapults."
 })
 
 DefineUpgrade("upgrade-teuton-catapult-projectile-2", {
 	Parent = "upgrade-catapult-metal-projectile",
 	Civilization = "teuton",
-	Description = _("Advances in metalworking make it possible to use metal balls as catapult projectiles, greatly magnifying the destructive power of those siege weapons.\n\nEffect: +15 Damage for Catapults.")
+	RequirementsString = "Carpenter's Shop/Lumber Mill and Catapult Granite Projectile",
+	Description = "Advances in metalworking make it possible to use metal balls as catapult projectiles, greatly magnifying the destructive power of those siege weapons.\n\nEffect: +15 Damage for Catapults."
 })
 
 DefineUpgrade("upgrade-teuton-iron-tipped-wood-plow", {
@@ -90,7 +97,7 @@ DefineUpgrade("upgrade-teuton-iron-tipped-wood-plow", {
 DefineUpgrade("upgrade-teuton-masonry", {
 	Parent = "upgrade-masonry",
 	Civilization = "teuton",
-	Description = _("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings, and allows Watch Towers to be upgraded to Guard Towers and Rathauses to Burgs.")
+	Description = "Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings, and allows Watch Towers to be upgraded to Guard Towers and Rathauses to Burgs."
 })
 
 DefineUpgrade("upgrade-teuton-coinage", {

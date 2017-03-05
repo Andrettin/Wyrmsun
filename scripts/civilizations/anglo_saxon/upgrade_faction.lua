@@ -27,7 +27,8 @@
 
 DefineUpgrade("upgrade-faction-angle-tribe", {
 	Name = "Angle Tribe",
-	EffectsString = "+2 Damage for Kriegers"
+	EffectsString = "+2 Damage for Kriegers",
+	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
 })
 
 DefineUpgrade("upgrade-faction-avione-tribe", {
@@ -37,7 +38,8 @@ DefineUpgrade("upgrade-faction-avione-tribe", {
 
 DefineUpgrade("upgrade-faction-bernice-tribe", {
 	Name = "Bernice Tribe",
-	EffectsString = "Disembarkment Bonus for Kriegers and Spearmen"
+	EffectsString = "Disembarkment Bonus for Kriegers and Spearmen",
+	RequirementsString = "Spatha and Iron Shield"
 })
 
 DefineUpgrade("upgrade-faction-charude-tribe", {
@@ -47,12 +49,14 @@ DefineUpgrade("upgrade-faction-charude-tribe", {
 
 DefineUpgrade("upgrade-faction-dere-tribe", {
 	Name = "Dere Tribe",
-	EffectsString = "Disembarkment Bonus for Schutzes"
+	EffectsString = "Disembarkment Bonus for Schutzes",
+	RequirementsString = "Spatha and Iron Shield"
 })
 
 DefineUpgrade("upgrade-faction-gumeninga-tribe", {
 	Name = "Gumeninga Tribe",
-	EffectsString = "+30 Mana for Clerics"
+	EffectsString = "+30 Mana for Clerics",
+	RequirementsString = "Spatha and Iron Shield"
 })
 
 DefineUpgrade("upgrade-faction-jute-tribe", {
@@ -62,52 +66,62 @@ DefineUpgrade("upgrade-faction-jute-tribe", {
 
 DefineUpgrade("upgrade-faction-bernicia", {
 	Name = "Bernicia",
-	EffectsString = "+1 Damage, +1 Accuracy for Kriegers"
+	EffectsString = "+1 Damage, +1 Accuracy for Kriegers",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-deira", {
 	Name = "Deira",
-	EffectsString = "+1 Damage, +1 Accuracy for Schutzes"
+	EffectsString = "+1 Damage, +1 Accuracy for Schutzes",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-east-anglia", {
 	Name = "East Anglia",
-	EffectsString = "+2 Accuracy for Kriegers"
+	EffectsString = "+2 Accuracy for Kriegers",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-england", {
 	Name = "England",
-	EffectsString = "+2 Damage for Schutzes"
+	EffectsString = "+2 Damage for Schutzes",
+	RequirementsString = "No other Anglo-Saxon faction exists"
 })
 
 DefineUpgrade("upgrade-faction-essex", {
 	Name = "Essex",
-	EffectsString = "+2 Accuracy for Schutzes"
+	EffectsString = "+2 Accuracy for Schutzes",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-jutland", {
 	Name = "Jutland",
-	EffectsString = "+2 Food Supply for Docks"
+	EffectsString = "+2 Food Supply for Docks",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-kent", {
 	Name = "Kent",
-	EffectsString = "+10% Time Efficiency for all buildings"
+	EffectsString = "+10% Time Efficiency for all buildings",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-mercia", {
 	Name = "Mercia",
-	EffectsString = "+2 Armor for Kriegers"
+	EffectsString = "+2 Armor for Kriegers",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-middle-anglia", {
 	Name = "Middle Anglia",
-	EffectsString = "-1 Damage, +3 Armor for Kriegers"
+	EffectsString = "-1 Damage, +3 Armor for Kriegers",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-northumbria", {
 	Name = "Northumbria",
-	EffectsString = "+2 Damage for Kriegers"
+	EffectsString = "+2 Damage for Kriegers",
+	RequirementsString = "Temple/Church"
 })
 
 DefineUpgrade("upgrade-faction-scotland", {
@@ -117,7 +131,8 @@ DefineUpgrade("upgrade-faction-scotland", {
 
 DefineUpgrade("upgrade-faction-wessex", {
 	Name = "Wessex",
-	EffectsString = "+2 Damage for Schutzes"
+	EffectsString = "+2 Damage for Schutzes",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineModifier("upgrade-faction-angle-tribe",

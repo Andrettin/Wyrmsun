@@ -240,7 +240,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-broad-axe",
 	ForUnit = {"unit-dwarven-smithy", "unit-brising-smithy"}
 } )
 
-DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-great-axe",
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-great-axe",
 	Action = "research", Value = "upgrade-dwarven-great-axe",
 	Allowed = "check-single-research",
 	Key = "a", Hint = _("Research Great ~!Axe"), Popup = "popup-research",
@@ -248,7 +248,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-great-axe",
 	ForUnit = {"unit-dwarven-smithy", "unit-brising-smithy"}
 } )
 
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-2",
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-shield-2",
 	Action = "research", Value = "upgrade-dwarven-shield-1",
 	Allowed = "check-single-research",
 	Key = "s", Hint = _("Research Heater ~!Shield"), Popup = "popup-research",
@@ -256,7 +256,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-2",
 	ForUnit = {"unit-dwarven-smithy", "unit-brising-smithy"}
 } )
 
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-3",
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-dwarven-shield-3",
 	Action = "research", Value = "upgrade-dwarven-shield-2",
 	Allowed = "check-single-research",
 	Key = "s", Hint = _("Research Thrymgjol ~!Shield"), Popup = "popup-research",
@@ -264,7 +264,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-3",
 	ForUnit = {"unit-dwarven-smithy", "unit-brising-smithy"}
 } )
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-2",
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-dwarven-ballista-bolt-2",
 	Action = "research", Value = "upgrade-dwarven-ballista-bolt-1",
 	Allowed = "check-single-research",
 	Key = "b", Hint = _("Research Broadhead Ballista ~!Bolt"), Popup = "popup-research",
@@ -272,7 +272,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-2",
 	ForUnit = {"unit-dwarven-smithy", "unit-brising-smithy"}
 } )
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-3",
+DefineButton( { Pos = 6, Level = 0, Icon = "icon-dwarven-ballista-bolt-3",
 	Action = "research", Value = "upgrade-dwarven-ballista-bolt-2",
 	Allowed = "check-single-research",
 	Key = "b", Hint = _("Research Penetrating Ballista ~!Bolt"), Popup = "popup-research",
@@ -288,7 +288,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-long-spear",
 	ForUnit = {"unit-dwarven-lumber-mill"}
 } )
 
-DefineButton( { Pos = 1, Level = 0, Icon = "icon-pike",
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-pike",
 	Action = "research", Value = "upgrade-dwarven-pike",
 	Allowed = "check-single-research",
 	Key = "k", Hint = _("Research Pi~!ke"), Popup = "popup-research",
@@ -296,7 +296,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-pike",
 	ForUnit = {"unit-dwarven-lumber-mill"}
 } )
 
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-sharp-throwing-axe",
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-sharp-throwing-axe",
 	Action = "research", Value = "upgrade-dwarven-sharp-throwing-axe",
 	Allowed = "check-single-research",
 	Key = "t", Hint = _("Research Sharp ~!Throwing Axe"), Popup = "popup-research",
@@ -304,7 +304,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-sharp-throwing-axe",
 	ForUnit = {"unit-dwarven-lumber-mill"}
 } )
 
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-bearded-throwing-axe",
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-dwarven-bearded-throwing-axe",
 	Action = "research", Value = "upgrade-dwarven-bearded-throwing-axe",
 	Allowed = "check-single-research",
 	Key = "t", Hint = _("~!Research Bearded ~!Throwing Axe"), Popup = "popup-research",
@@ -312,7 +312,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-bearded-throwing-axe",
 	ForUnit = {"unit-dwarven-lumber-mill"}
 } )
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-wood-plow",
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-wood-plow",
 	Action = "research", Value = "upgrade-dwarven-wood-plow",
 	Allowed = "check-single-research",
 	Description = _("+1 Food supply for Mushroom Farms."),
@@ -320,7 +320,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-wood-plow",
 	ForUnit = {"unit-dwarven-lumber-mill"}
 } )
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-iron-tipped-wood-plow",
+DefineButton( { Pos = 6, Level = 0, Icon = "icon-iron-tipped-wood-plow",
 	Action = "research", Value = "upgrade-dwarven-iron-tipped-wood-plow",
 	Allowed = "check-single-research",
 	Description = _("+1 Food supply for Mushroom Farms."),
@@ -338,7 +338,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-iron-plow",
 } )
 --]]
 
-DefineButton( { Pos = 4, Level = 0, Icon = "icon-masonry",
+DefineButton( { Pos = 7, Level = 0, Icon = "icon-masonry",
 	Action = "research", Value = "upgrade-dwarven-masonry",
 	Allowed = "check-single-research",
 	Description = _("+20% Hit Points and +5 Armor for buildings, allows Sentry Towers to be upgraded to Guard Towers and Mead Halls to Bastions."),
@@ -362,7 +362,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
 	ForUnit = {"unit-dwarven-stronghold"}
 } )
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-cauldron",
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-cauldron",
 	Action = "research", Value = "upgrade-dwarven-alchemy",
 	Allowed = "check-single-research",
 	Description = _("+1 Fire Damage for Scouts, Pathfinders, Explorers and Gryphon Riders, +5 Fire Damage for Ballistas."),

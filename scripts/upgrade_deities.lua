@@ -203,7 +203,8 @@ DefineUpgrade("upgrade-deity-christian-god", {
 --	Name = "Christian God",
 	Name = "Christianity",
 	Icon = "icon-christianity",
-	Costs = {"time", 120, "copper", 750}
+	Costs = {"time", 120, "copper", 750},
+	RequirementsString = "Writing"
 })
 
 -- Aesir

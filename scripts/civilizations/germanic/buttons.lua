@@ -107,7 +107,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-broad-sword",
 	ForUnit = {"unit-germanic-smithy", "unit-teuton-smithy", "unit-latin-smithy"}
 })
 
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-bronze-shield",
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-bronze-shield",
 	Action = "research", Value = "upgrade-germanic-bronze-shield",
 	Allowed = "check-single-research",
 	Key = "s", Hint = _("Research Bronze ~!Shield"), Popup = "popup-research",
@@ -124,7 +124,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-long-spear",
 	ForUnit = {"unit-teuton-lumber-mill"}
 })
   
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-barbed-arrow",
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-barbed-arrow",
 	Action = "research", Value = "upgrade-germanic-barbed-arrow",
 	Allowed = "check-single-research",
 	Key = "a", Hint = _("Research Barbed ~!Arrow"), Popup = "popup-research",
@@ -132,7 +132,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-barbed-arrow",
 	ForUnit = {"unit-germanic-carpenters-shop", "unit-teuton-lumber-mill"}
 })
   
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-wood-plow",
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-wood-plow",
 	Action = "research", Value = "upgrade-germanic-wood-plow",
 	Allowed = "check-single-research",
 	Description = _("+1 Food supply for Farms."),

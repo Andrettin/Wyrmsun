@@ -598,12 +598,12 @@ DefineUnitType("unit-dwarven-guard", {
 } )
 
 DefineUnitType("unit-dwarven-scout", {
-	Name = _("Scout"),
+	Name = "Scout",
 	Parent = "unit-template-archer",
 	Civilization = "dwarf",
 --	Description = "Dwarven scouts use their lighter armor to their advantage, ranging ahead of the main force and reporting back on troop movements and dispositions, or securing important objectives. Outside of battle, they are often used to relay messages between dwarven communities. These scouts were instrumental for pathfinding during the migration of the group of dwarves led by Dvalin, who left the Heart Mountains, passed through swamps, and finally established themselves in a desert.", -- use the latter part of this for the pathfinder
-	Description = _("Dwarven scouts use their speed to their advantage, ranging ahead of the main force and reporting back on troop movements and dispositions. Outside of battle, they are often used to relay messages between dwarven communities. However, they pay for their speed with the poorer protection provided by their lighter armor."),
---	Background = _("In Norse mythology, there is a mention in the ~<Voluspo~> of a throng of dwarves led by Dvalin who moved away from the rocks and into the sands, these migrants being the ancestors of Lofar."), -- use this for the pathfinder
+	Description = "Dwarven scouts use their speed to their advantage, ranging ahead of the main force and reporting back on troop movements and dispositions. Outside of battle, they are often used to relay messages between dwarven communities. However, they pay for their speed with the poorer protection provided by their lighter armor.",
+--	Background = "In Norse mythology, there is a mention in the ~<Voluspo~> of a throng of dwarves led by Dvalin who moved away from the rocks and into the sands, these migrants being the ancestors of Lofar.", -- use this for the pathfinder
 	Image = {"file", "dwarf/units/dwarven_scout.png", "size", {72, 72}},
 	Animations = "animations-dwarven-scout", Icon = "icon-dwarven-scout",
 	DefaultEquipment = {
@@ -619,6 +619,7 @@ DefineUnitType("unit-dwarven-scout", {
 	HackDamage = true,
 	ButtonKey = "s",
 	ButtonHint = _("Train ~!Scout"),
+	RequirementsString = "Lumber Mill",
 	StartingAbilities = {"upgrade-scouting"},
 	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Variations = {
@@ -771,6 +772,7 @@ DefineUnitType("unit-dwarven-yale-rider", {
 	HackDamage = true,
 	ButtonKey = "y",
 	ButtonHint = _("Train ~!Yale Rider"),
+	RequirementsString = "Smithy and Yale Pen",
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Variations = {
 		{
@@ -971,7 +973,8 @@ DefineUnitType("unit-dwarven-witness", {
 	}
 } )
 
-DefineUnitType("unit-dwarven-gryphon-rider", { Name = _("Gryphon Rider"),
+DefineUnitType("unit-dwarven-gryphon-rider", {
+	Name = _("Gryphon Rider"),
 	Parent = "unit-template-flying-rider",
 	Civilization = "dwarf",
 	Description = _("Only a few dwarves are able to bond with the mighty gryphons. Those who do may become gryphon riders, and discover the world of the skies upon the backs of these flying beasts."),
@@ -990,6 +993,7 @@ DefineUnitType("unit-dwarven-gryphon-rider", { Name = _("Gryphon Rider"),
 	HackDamage = true,
 	ButtonKey = "r",
 	ButtonHint = _("Train Gryphon ~!Rider"),
+	RequirementsString = "Bastion and Lumber Mill",
 	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Variations = {
 		{
@@ -1113,11 +1117,12 @@ DefineUnitType("unit-dwarven-town-hall", {
 	}
 })
 
-DefineUnitType("unit-dwarven-stronghold", { Name = _("Bastion"),
+DefineUnitType("unit-dwarven-stronghold", {
+	Name = "Bastion",
 	Parent = "unit-template-stronghold",
 	Civilization = "dwarf",
 	Description = "A dwarven settlement that has reached a certain status will often oversee the construction of a bastion, enhancing its defensive capabilities.",
-	Quote = _("\"Now answer me, warder, the question I ask,\nFor now the truth would I know:\nWhat call they the hall, encompassed here\nWith flickering magic flames?\"\n- Dwarven Traditional Poetry (Durin)"),
+	Quote = "\"Now answer me, warder, the question I ask,\nFor now the truth would I know:\nWhat call they the hall, encompassed here\nWith flickering magic flames?\"\n- Dwarven Traditional Poetry (Durin)",
 	Image = {"file", "dwarf/buildings/stronghold.png", "size", {128, 128}},
 	Shadow = {"file", "dwarf/buildings/stronghold_shadow.png", "size", {128, 128}},
 	Icon = "icon-dwarven-stronghold",
@@ -1125,6 +1130,7 @@ DefineUnitType("unit-dwarven-stronghold", { Name = _("Bastion"),
 	RepairCosts = {"lumber", 0},
 	FireResistance = 20,
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
+	RequirementsString = "War Hall and Masonry",
 	Variations = {
 		{
 			"variation-id", "dwarf",

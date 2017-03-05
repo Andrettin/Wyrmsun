@@ -2935,6 +2935,7 @@ DefineUnitType("unit-template-archer", { Name = _("Shooter"),
 	Flesh = true,
 	AttackFromTransporter = true,
 	ButtonPos = 3,
+	RequirementsString = "Lumber Mill",
 	Sounds = {
 		"step", "step-dirt",
 		"step-dirt", "step-dirt",
@@ -3109,6 +3110,7 @@ DefineUnitType("unit-template-priest", {
 	Flesh = true,
 	Mana = {Enable = true, Max = 190, Value = 190, Increase = 1},
 	ButtonPos = 1,
+	RequirementsString = "Any Deity or Religion",
 	AiDrops = {"unit-amulet", "unit-ring", "unit-scroll", "unit-book"},
 	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},
 	Sounds = {
@@ -3186,6 +3188,7 @@ DefineUnitType("unit-template-siege-engine", {
 	CanTargetLand = true, CanTargetSea = true,
 	NoFriendlyFire = true, -- don't attack a target if friendly units would get hurt too
 	ButtonPos = 5,
+	RequirementsString = "Lumber Mill and Smithy",
 	Sounds = {
 		"selected", "click",
 		"step", "step-dirt",
@@ -3241,6 +3244,7 @@ DefineUnitType("unit-template-transport-ship", {
 	ButtonPos = 1,
 	ButtonKey = "t",
 	ButtonHint = _("Build ~!Transport"),
+	RequirementsString = "Lumber Mill",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-vulnerability"}
 })
 
@@ -3590,7 +3594,8 @@ DefineUnitType("unit-template-stables", {
 	BurnDamageRate = 1,
 	ButtonPos = 6,
 	ButtonKey = "e",
-	ButtonHint = _("Build Stabl~!es"),
+	ButtonHint = "Build Stabl~!es",
+	RequirementsString = "Lumber Mill",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 		"selected", "stables-selected",
@@ -3628,6 +3633,7 @@ DefineUnitType("unit-template-temple", {
 	ButtonKey = "p",
 	ButtonHint = _("Build Tem~!ple"),
 	UnitStock = {"unit-potion-of-healing", 6},
+	RequirementsString = "Lumber Mill",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	SoldUnits = {"unit-scroll"},
 	AiDrops = {"unit-amulet", "unit-ring", "unit-scroll", "unit-book"},
@@ -3714,6 +3720,7 @@ DefineUnitType("unit-template-guard-tower", {
 	CanAttack = true,
 	BurnPercent = 50,
 	BurnDamageRate = 1,
+	RequirementsString = "Lumber Mill and Masonry",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-the-colossus", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 		"selected", "tower-selected",
@@ -3781,6 +3788,7 @@ DefineUnitType("unit-template-dock", {
 	ButtonPos = 9,
 	ButtonKey = "d",
 	ButtonHint = _("Build ~!Dock"),
+	RequirementsString = "Lumber Mill",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 --		"selected", "lumber-mill-selected",

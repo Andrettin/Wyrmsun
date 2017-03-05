@@ -536,6 +536,7 @@ DefineUnitType("unit-germanic-archer", {
 	PierceDamage = true,
 	CanCastSpell = {"spell-precise-shot"},
 	AutoCastActive = {"spell-precise-shot"},
+	RequirementsString = "Carpenter's Shop",
 	AiDrops = {"unit-arrows", "unit-barbed-arrows", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Variations = {
 		{
@@ -605,6 +606,7 @@ DefineUnitType("unit-germanic-transport-ship", {
 	Image = {"file", "germanic/units/transport_ship.png", "size", {72, 72}},
 	LightImage = {"file", "germanic/units/transport_ship_water.png"},
 	Icon = "icon-germanic-transport-ship",
+	RequirementsString = "Carpenter's Shop",
 	Sounds = {
 		"help", "basic-germanic-voices-help"
 	}
@@ -694,6 +696,7 @@ DefineUnitType("unit-germanic-temple", {
 	Shadow = {"file", "germanic/buildings/temple_shadow.png", "size", {96, 96}},
 	Icon = "icon-germanic-temple",
 	Trains = {"unit-germanic-priest"},
+	RequirementsString = "Carpenter's Shop",
 	Sounds = {
 		"help", "basic-germanic-voices-help-town"
 	}
@@ -719,6 +722,7 @@ DefineUnitType("unit-germanic-dock", {
 	Image = {"file", "germanic/buildings/dock.png", "size", {96, 96}},
 	Shadow = {"file", "germanic/buildings/dock_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-germanic-dock",
+	RequirementsString = "Carpenter's Shop",
 	Sounds = {
 		"help", "basic-germanic-voices-help-town"
 	}

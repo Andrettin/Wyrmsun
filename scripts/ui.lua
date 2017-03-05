@@ -1079,6 +1079,13 @@ if not (ui_loaded_first_time) then
 				{	HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
 				}, 
+				-- Unit Type Requirements (if the unit type is disallowed)
+				{ 	Margin = {1, 1}, Condition = {RequirementsString = "only"},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {RequirementsString = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(_("Requirements: "), TypeRequirementsString("Type")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
@@ -1150,6 +1157,13 @@ if not (ui_loaded_first_time) then
 				{	Condition = {Unique = "only"}, TextColor = "fire", HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
 				}, 
+				-- Unit Type Requirements (if the unit type is disallowed)
+				{ 	Margin = {1, 1}, Condition = {RequirementsString = "only"},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {RequirementsString = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(_("Requirements: "), TypeRequirementsString("Type")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {Opponent = "false", Neutral = "false"}, Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
@@ -2071,6 +2085,14 @@ if not (ui_loaded_first_time) then
 				{	HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
 				}, 
+				-- Upgrade Requirements (if the upgrade is disallowed)
+				{ 	Margin = {1, 1}, Condition = {RequirementsString = "only"},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {RequirementsString = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(_("Requirements: "), UpgradeRequirementsString("Upgrade")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				-- Costs
 				{ 	Margin = {1, 1}, Condition = {FactionUpgrade = "false"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 

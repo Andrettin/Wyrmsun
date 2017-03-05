@@ -35,7 +35,7 @@ DebugPrint("Stratagus default config file loading ...\n")
 wyrmsun = {}
 
 wyrmsun.Name = "Wyrmsun"
-wyrmsun.Version = "2.6.0"
+wyrmsun.Version = "2.6.1"
 wyrmsun.Homepage = ""
 wyrmsun.Licence = "GPL 2.0"
 wyrmsun.Copyright = "Copyright (c) 2013-2017 by Andrettin"

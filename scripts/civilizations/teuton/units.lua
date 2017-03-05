@@ -861,6 +861,7 @@ DefineUnitType("unit-teuton-archer", {
 	AutoCastActive = {"spell-precise-shot"},
 	ButtonKey = "s",
 	ButtonHint = "Train ~!Schutze",
+	RequirementsString = "Carpenter's Shop/Lumber Mill",
 	AiDrops = {"unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Variations = {
 		{
@@ -915,6 +916,7 @@ DefineUnitType("unit-teuton-ritter", {
 	InvertedSoutheastArms = true,
 	ButtonKey = "r",
 	ButtonHint = "Train ~!Ritter",
+	RequirementsString = "Smithy and Stables",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Corpse = "unit-human-dead-body",
 	Variations = {
@@ -1015,6 +1017,7 @@ DefineUnitType("unit-teuton-priest", {
 	CanCastSpell = {"spell-healing", "spell-inspire", "spell-precision"},
 	AutoCastActive = {"spell-healing", "spell-inspire", "spell-precision"},
 	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	RequirementsString = "Any Deity or Religion",
 	Variations = {
 		{
 			"variation-id", "cleric",
@@ -1066,6 +1069,7 @@ DefineUnitType("unit-teuton-catapult", {
 	BluntDamage = true,
 	ButtonKey = "c",
 	ButtonHint = _("Build ~!Catapult"),
+	RequirementsString = "Carpenter's Shop/Lumber Mill and Smithy",
 	Sounds = {
 --		"acknowledge", "ballista-acknowledge",
 --		"ready", "dwarven-ballista-ready",
@@ -1075,15 +1079,16 @@ DefineUnitType("unit-teuton-catapult", {
 } )
 
 DefineUnitType("unit-teuton-kogge", {
-	Name = _("Kogge"),
+	Name = "Kogge",
 	Parent = "unit-template-transport-ship",
 	Civilization = "teuton",
-	Description = _("A mainstay of the Hanseatic vessels of the North Sea, the Kogge is a sturdy ship capable of carrying a large amount of cargo. It is well-suited for commerce, the transport of troops and naval warfare alike."),
+	Description = "A mainstay of the Hanseatic vessels of the North Sea, the Kogge is a sturdy ship capable of carrying a large amount of cargo. It is well-suited for commerce, the transport of troops and naval warfare alike.",
 	Image = {"file", "teuton/units/kogge.png", "size", {72, 72}},
 	LightImage = {"file", "teuton/units/kogge_water.png"},
 	Icon = "icon-teuton-kogge",
 	ButtonKey = "k",
 	ButtonHint = "Build ~!Kogge",
+	RequirementsString = "Carpenter's Shop/Lumber Mill",
 	Variations = {
 		{
 			"variation-id", "kogge",
@@ -1152,11 +1157,12 @@ DefineUnitType("unit-teuton-stronghold", {
 	Name = "Burg",
 	Parent = "unit-template-stronghold",
 	Civilization = "teuton",
-	Description = _("These tall and sturdy structures are built on strategic positions, allowing for easier control and protection of their environs."),
+	Description = "These tall and sturdy structures are built on strategic positions, allowing for easier control and protection of their environs.",
 	Image = {"file", "teuton/buildings/stronghold.png", "size", {128, 128}},
 	Shadow = {"file", "teuton/buildings/stronghold_shadow.png", "size", {128, 128}},
 	Icon = "icon-teuton-stronghold",
 	Trains = {"unit-teuton-worker"},
+	RequirementsString = "Barracks and Masonry",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	DropSpells = {"spell-anglo-saxon-allegiance", "spell-frank-allegiance", "spell-suebi-allegiance", "spell-teuton-allegiance"},
 	Variations = {
@@ -1292,11 +1298,12 @@ DefineUnitType("unit-teuton-smithy", {
 DefineUnitType("unit-teuton-stables", {
 	Parent = "unit-template-stables",
 	Civilization = "teuton",
-	Description = _("The fierce Teutons are renowned for their heavy cavalry. Any military center of import will have stables to provide the well-bred horses such forces require."),
+	Description = "The fierce Teutons are renowned for their heavy cavalry. Any military center of import will have stables to provide the well-bred horses such forces require.",
 	Image = {"file", "teuton/buildings/stables.png", "size", {96, 96}},
 	Shadow = {"file", "teuton/buildings/stables_shadow.png", "size", {96, 96}},
 	Icon = "icon-teuton-stables",
 	Drops = {"unit-horse"},
+	RequirementsString = "Carpenter's Shop/Lumber Mill",
 	Variations = {
 		{
 			"variation-id", "stables",
@@ -1316,13 +1323,14 @@ DefineUnitType("unit-teuton-stables", {
 } )
 
 DefineUnitType("unit-teuton-temple", {
-	Name = _("Church"),
+	Name = "Church",
 	Parent = "unit-template-temple",
 	Civilization = "teuton",
 	Description = _("In early times, Teutons professed faith in polytheistic deities in their houses of worship, the most important one being Woden. Eventually, Christian missionaries managed to expand their faith to the entirety of the Teutonic lands, overtaking the earlier paganism."),
 	Image = {"file", "teuton/buildings/church.png", "size", {96, 96}},
 	Shadow = {"file", "teuton/buildings/church_shadow.png", "size", {96, 96}},
 	Icon = "icon-teuton-church",
+	RequirementsString = "Carpenter's Shop/Lumber Mill",
 	Variations = {
 		{
 			"variation-id", "church",
@@ -1356,20 +1364,22 @@ DefineUnitType("unit-teuton-watch-tower", { Name = _("Watch Tower"),
 	}
 } )
 
-DefineUnitType("unit-teuton-guard-tower", { Name = _("Guard Tower"),
+DefineUnitType("unit-teuton-guard-tower", {
+	Name = "Guard Tower",
 	Parent = "unit-template-guard-tower",
 	Civilization = "teuton",
-	Description = _("Solid stone towers are an essential addition to any fortified position of strategic importance, allowing archers to shoot from a vantage position."),
+	Description = "Solid stone towers are an essential addition to any fortified position of strategic importance, allowing archers to shoot from a vantage position.",
 	Image = {"file", "teuton/buildings/guard_tower.png", "size", {64, 64}},
 	Shadow = {"file", "teuton/buildings/guard_tower_shadow.png", "size", {64, 64}},
 	Icon = "icon-teuton-guard-tower",
+	RequirementsString = "Carpenter's Shop/Lumber Mill and Masonry",
 	Sounds = {
 		"help", "basic-teuton-voices-help-town"
 	}
 } )
 
 DefineUnitType("unit-teuton-dock", {
-	Name = _("Dock"),
+	Name = "Dock",
 	Parent = "unit-template-dock",
 	Civilization = "teuton",
 	Description = _("Shipbuilding is an ancient craft in the Teuton shores. Already in antiquity they constructed sturdy ships, capable of assaulting the vulnerable coasts to the west. During medieval times, their shipbuilding flourished even further, as the Hanseatic League dominated commerce in the Baltic and North Seas."),
@@ -1377,6 +1387,7 @@ DefineUnitType("unit-teuton-dock", {
 	Shadow = {"file", "teuton/buildings/dock_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-teuton-dock",
 	Trains = {"unit-teuton-kogge"},
+	RequirementsString = "Carpenter's Shop/Lumber Mill",
 	Variations = {
 		{
 			"variation-id", "dock",

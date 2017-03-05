@@ -120,7 +120,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-broad-sword",
 	ForUnit = {"unit-goblin-smithy"}
 } )
 
-DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-long-sword",
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-goblin-long-sword",
 	Action = "research", Value = "upgrade-goblin-long-sword",
 	Allowed = "check-single-research",
 	Key = "w", Hint = _("Research Long S~!word"), Popup = "popup-research",
@@ -128,7 +128,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-long-sword",
 	ForUnit = {"unit-goblin-smithy"}
 } )
 
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-goblin-rimmed-shield",
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-goblin-rimmed-shield",
 	Action = "research", Value = "upgrade-goblin-rimmed-shield",
 	Allowed = "check-single-research",
 	Key = "s", Hint = _("Research Rimmed ~!Shield"), Popup = "popup-research",
@@ -136,7 +136,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-goblin-rimmed-shield",
 	ForUnit = {"unit-goblin-smithy"}
 } )
 
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-goblin-embossed-shield",
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-goblin-embossed-shield",
 	Action = "research", Value = "upgrade-goblin-embossed-shield",
 	Allowed = "check-single-research",
 	Key = "s", Hint = _("Research Embossed ~!Shield"), Popup = "popup-research",
@@ -144,7 +144,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-goblin-embossed-shield",
 	ForUnit = {"unit-goblin-smithy"}
 } )
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-2",
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-catapult-projectile-2",
 	Action = "research", Value = "upgrade-goblin-catapult-projectile-1",
 	Allowed = "check-single-research",
 	Key = "c", Hint = _("Research Granite ~!Catapult Projectile"), Popup = "popup-research",
@@ -152,7 +152,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-2",
 	ForUnit = {"unit-goblin-smithy"}
 } )
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-3",
+DefineButton( { Pos = 6, Level = 0, Icon = "icon-catapult-projectile-3",
 	Action = "research", Value = "upgrade-goblin-catapult-projectile-2",
 	Allowed = "check-single-research",
 	Key = "c", Hint = _("Research Metal ~!Catapult Projectile"), Popup = "popup-research",
@@ -168,7 +168,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-long-spear",
 	ForUnit = {"unit-goblin-lumber-mill"}
 } )
 
-DefineButton( { Pos = 1, Level = 0, Icon = "icon-pike",
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-pike",
 	Action = "research", Value = "upgrade-goblin-pike",
 	Allowed = "check-single-research",
 	Key = "k", Hint = _("Research Pi~!ke"), Popup = "popup-research",
@@ -176,7 +176,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-pike",
 	ForUnit = {"unit-goblin-lumber-mill"}
 } )
 
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-barbed-arrow",
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-barbed-arrow",
 	Action = "research", Value = "upgrade-goblin-barbed-arrow",
 	Allowed = "check-single-research",
 	Key = "a", Hint = _("Research Barbed ~!Arrow"), Popup = "popup-research",
@@ -184,7 +184,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-barbed-arrow",
 	ForUnit = {"unit-goblin-lumber-mill"}
 } )
 
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-bodkin-arrow",
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-bodkin-arrow",
 	Action = "research", Value = "upgrade-goblin-bodkin-arrow",
 	Allowed = "check-single-research",
 	Key = "a", Hint = _("Research Bodkin ~!Arrow"), Popup = "popup-research",
@@ -192,7 +192,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-bodkin-arrow",
 	ForUnit = {"unit-goblin-lumber-mill"}
 } )
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-wood-plow",
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-wood-plow",
 	Action = "research", Value = "upgrade-goblin-wood-plow",
 	Allowed = "check-single-research",
 	Description = _("+1 Food supply for Farms."),
@@ -200,7 +200,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-wood-plow",
 	ForUnit = {"unit-goblin-lumber-mill"}
 } )
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-iron-tipped-wood-plow",
+DefineButton( { Pos = 6, Level = 0, Icon = "icon-iron-tipped-wood-plow",
 	Action = "research", Value = "upgrade-goblin-iron-tipped-wood-plow",
 	Allowed = "check-single-research",
 	Description = _("+1 Food supply for Farms."),
@@ -208,7 +208,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-iron-tipped-wood-plow",
 	ForUnit = {"unit-goblin-lumber-mill"}
 } )
 
-DefineButton( { Pos = 4, Level = 0, Icon = "icon-masonry",
+DefineButton( { Pos = 7, Level = 0, Icon = "icon-masonry",
 	Action = "research", Value = "upgrade-goblin-masonry",
 	Allowed = "check-single-research",
 	Key = "m", Hint = _("Research ~!Masonry"), Popup = "popup-research",
@@ -232,7 +232,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
 	ForUnit = {"unit-goblin-stronghold"}
 } )
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-cauldron",
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-cauldron",
 	Action = "research", Value = "upgrade-goblin-alchemy",
 	Allowed = "check-single-research",
 	Description = _("+1 Fire Damage for Archers and Headhunters, +5 Fire Damage for War Machines."),
