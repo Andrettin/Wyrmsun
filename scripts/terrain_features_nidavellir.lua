@@ -25,5 +25,19 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-Load("scripts/terrain_features_earth.lua")
-Load("scripts/terrain_features_nidavellir.lua")
+DefineTerrainFeature("arkanthoria-river", {
+	Name = "Arkanthoria River",
+	TerrainType = "shallow-water",
+	Color = {0, 176, 144},
+	World = "Nidavellir",
+	CulturalNames = {
+		"elf", "Arkanthoria River"
+	}
+})
+
+DefineTerrainFeature("lake-vrug", {
+	Name = "Lake Vrug",
+	TerrainType = "shallow-water",
+	Color = {0, 176, 128},
+	World = "Nidavellir"
+})

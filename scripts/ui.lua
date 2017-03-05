@@ -2110,7 +2110,7 @@ if not (ui_loaded_first_time) then
 		Ident = "popup-unit-under-cursor",
 		BackgroundColor = PopupBackgroundColor,
 		BorderColor = PopupBorderColor,
-		MinWidth = 64,
+		MinWidth = 32,
 		DefaultFont = wyr.preferences.PopupDescriptionFont,
 		Contents = {
 				{	Condition = {Affixed = "false", Unique = "false"}, HighlightColor = "yellow",
