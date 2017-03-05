@@ -31,6 +31,7 @@ DefineTerrainFeature("arkanthoria-river", {
 	Color = {0, 176, 144},
 	World = "Nidavellir",
 	CulturalNames = {
+		"dwarf", "Arkanthoria River",
 		"elf", "Arkanthoria River"
 	}
 })
@@ -39,5 +40,8 @@ DefineTerrainFeature("lake-vrug", {
 	Name = "Lake Vrug",
 	TerrainType = "shallow-water",
 	Color = {0, 176, 128},
-	World = "Nidavellir"
+	World = "Nidavellir",
+	CulturalNames = {
+		"dwarf", "Lake Vrug"
+	}
 })

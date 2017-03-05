@@ -457,12 +457,3 @@ DefineProvince("Deep Sea", {
 		"dwarf", "Deep Sea"
 	}
 })
-
-DefineProvince("Lake Vrug", {
-	World = "Nidavellir",
-	Water = true,
-	Tiles = { {27, 6}, {27, 7}, {27, 8}, {28, 5}, {28, 6}, {28, 7}, {28, 8}, {29, 5}, {29, 6}, {29, 7}, {29, 8}, {30, 5}, {30, 6}, {30, 7}, {31, 7} },
-	CulturalNames = {
-		"dwarf", "Lake Vrug"
-	}
-})
