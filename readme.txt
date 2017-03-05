@@ -63,6 +63,9 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - Buttons for units and upgrades whose prerequisites haven't been met now show up (albeit disabled), and display the requirements when hovered over.
 
+* Units
+- Up to 200 units can now be selected at the same time.
+
 -----------------------------------------------------------------------
 - 2.6.0
 -----------------------------------------------------------------------
