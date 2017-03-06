@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 - 2.6.1
 -----------------------------------------------------------------------
 
+* Heroes
+- Fixed a bug which caused a crash when trying to create a human custom hero.
+
 * Miscellaneous
 - Buttons for units and upgrades whose prerequisites haven't been met now show up (albeit disabled), and display the requirements when hovered over.
 

@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015-2016 by Andrettin
+--      (c) Copyright 2015-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -36,7 +36,7 @@ function CustomHeroCreationMenu(world, quest_menu)
 
 	local hero_civilization_list = {}
 	if (world == "Earth") then
-		table.insert(hero_civilization_list, "Anglo-Saxon")
+		--table.insert(hero_civilization_list, "Anglo-Saxon")
 		table.insert(hero_civilization_list, "Frankish")
 		table.insert(hero_civilization_list, "Germanic")
 		table.insert(hero_civilization_list, "Suebi")
