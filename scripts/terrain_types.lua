@@ -821,7 +821,7 @@ DefineTerrainType("road", {
 --	Color = {0, 128, 255},
 	BaseTerrains = {"dirt", "grass", "dry-mud", "cave-floor"},
 	Overlay = true,
-	Flags = {"land", "no-building", "road", "gravel"},
+	Flags = {"land", "road", "gravel"},
 	AllowSingle = true,
 	Graphics = "terrain/road.png",
 	SolidTiles = {177},
