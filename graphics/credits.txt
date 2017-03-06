@@ -807,6 +807,7 @@
 /graphics/neutral/icons/level_up.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/long_swordsman.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/longspear.png (by Vladislav "iDreamRunner") (licensed under the CC0)
+/graphics/neutral/icons/lumber.png (by Exidelo) (licensed under the CC0)
 /graphics/neutral/icons/mace_mastery.png (by Vladislav "iDreamRunner" and Jinn) (licensed under the CC0)
 /graphics/neutral/icons/masonry.png (by Exidelo) (licensed under the CC0)
 /graphics/neutral/icons/megacricetodon_collongensis.png (by Mrmo Tarius) (licensed under the CC0)
