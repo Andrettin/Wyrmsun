@@ -1097,7 +1097,7 @@ if not (ui_loaded_first_time) then
 				{ 	HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(Concat(_("Class:"), " "), TypeClass("Type")), Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {HitPoints = "only"}, HighlightColor = "yellow",
+				{ 	Condition = {HitPoints = "only", Indestructible = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Hit Points:"), " "), Variable = "HitPoints", Font = wyr.preferences.PopupDescriptionFont}}
 				}, 
 				{ 	Condition = {AttackRange = "only", AttackFromTransporter = "false"}, HighlightColor = "yellow",
@@ -1114,6 +1114,19 @@ if not (ui_loaded_first_time) then
 									If(GreaterThan(TypeVar("TimeEfficiencyBonus", "Value"), 0), "+", "")
 								),
 								String(TypeVar("TimeEfficiencyBonus", "Value"))
+							),
+							"%"
+						),
+						Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {SpeedBonus = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(
+							Concat(
+								Concat(
+									_("Speed Bonus: "),
+									If(GreaterThan(TypeVar("SpeedBonus", "Value"), 0), "+", "")
+								),
+								String(TypeVar("SpeedBonus", "Value"))
 							),
 							"%"
 						),

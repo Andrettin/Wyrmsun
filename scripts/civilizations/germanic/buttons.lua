@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      buttons.ccl - Define the unit-buttons of the germanic civilization.
---
 --      (c) Copyright 2014-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
@@ -49,7 +47,7 @@ DefineButton( { Pos = 3, Level = 1, Icon = "icon-germanic-barracks",
 
 DefineButton( { Pos = 4, Level = 1, Icon = "icon-germanic-carpenters-shop",
 	Action = "build", Value = "unit-germanic-carpenters-shop",
-	Key = "r", Hint = "Build Ca~!rpenter's Shop", Popup = "popup-building",
+	Key = "a", Hint = "Build C~!arpenter's Shop", Popup = "popup-building",
 	ForUnit = {"unit-germanic-worker"}
 })
 

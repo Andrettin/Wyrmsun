@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 - 2.6.2
 -----------------------------------------------------------------------
 
+* Units
+- Workers can now build roads, which increase movement speed by 50%.
+
 * Upgrades
 - The buttons for upgrades that have already been researched now show up, grayed.
 

@@ -713,6 +713,18 @@ DefineButton( { Pos = 12, Level = 1, Icon = "icon-gold-mine",
 	}
 })
 
+DefineButton( { Pos = 13, Level = 1, Icon = "icon-road",
+	Action = "build", Value = "unit-road",
+	Key = "r", Hint = "Build ~!Road", Popup = "popup-building",
+	ForUnit = {
+		"unit-germanic-worker", "unit-teuton-worker",
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
+		"unit-goblin-worker"
+	}
+})
+
 DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 	Action = "button", Value = 0,
 	Key = "escape", Hint = _("Cancel (~<Esc~>)"), Popup = "popup-commands",

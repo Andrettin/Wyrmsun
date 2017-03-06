@@ -4009,6 +4009,36 @@ DefineUnitType("unit-dungeon-wall", {
 	ExplodeWhenKilled = "missile-explosion",
 	Type = "land",
 	Indestructible = true, Building = true, VisibleUnderFog = true, Wall = true,
+	BuilderOutside = true,
+	HiddenInEditor = true,
+	Sounds = {
+		"dead", "building-destroyed"
+	}
+} )
+
+DefineUnitType("unit-road", {
+	Name = "Road",
+	Civilization = "neutral",
+	Class = "road",
+	TerrainType = "road",
+	Image = {"file", "neutral/buildings/road.png", "size", {32, 32}},
+	Animations = "animations-building", Icon = "icon-road",
+	Costs = {"time", 30, "copper", 20, "lumber", 30},
+	Construction = "construction-wall",
+	Speed = 0,
+	HitPoints = 40,
+	DrawLevel = 39,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 1,
+	Armor = 20, Missile = "missile-none",
+	SpeedBonus = 50,
+	Priority = 0, AnnoyComputerFactor = 45,
+	Points = 1,
+--	Corpse = "unit-destroyed-1x1-place",
+	ExplodeWhenKilled = "missile-explosion",
+	Type = "land",
+	Indestructible = true, Building = true, VisibleUnderFog = true,
+	BuilderOutside = true,
 	HiddenInEditor = true,
 	Sounds = {
 		"dead", "building-destroyed"

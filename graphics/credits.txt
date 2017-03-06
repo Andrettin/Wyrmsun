@@ -990,6 +990,7 @@
 /graphics/terrain/gray_shallow_water.png (by Jinn) (licensed under the CC0)
 /graphics/terrain/mud.png (by Jinn) (licensed under the CC0)
 /graphics/terrain/pine_tree.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/terrain/road.png (by Jinn) (licensed under the CC0)
 /graphics/terrain/rock.png (by Jinn) (licensed under the CC0)
 /graphics/terrain/rock_extra_1.png (by Exidelo) (licensed under the CC0)
 /graphics/terrain/rockbound_cave_floor.png (by Jinn) (licensed under the CC0)
