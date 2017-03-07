@@ -168,17 +168,20 @@ DefineConstruction("construction-land2", {
 })
 
 DefineConstruction("construction-wall", {
-  Files = {
-    File = "neutral/buildings/land_construction_site.png",
-    Size = {64, 64}},
-  Constructions = {
-   {Percent = 0,
-    File = "construction",
-    Frame = 0},
-   {Percent = 25,
-    File = "construction",
-    Frame = 1},
-   {Percent = 50,
-    File = "main",
-    Frame = 1}}
+	Files = {
+		File = "neutral/buildings/land_construction_site_1x1.png",
+		Size = {32, 32}
+	},
+	Constructions = {
+		{
+			Percent = 0,
+			File = "construction",
+			Frame = 0
+		},
+		{
+			Percent = 50,
+			File = "main",
+			Frame = 1
+		}
+	}
 })
