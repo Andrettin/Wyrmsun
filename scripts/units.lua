@@ -153,6 +153,7 @@ Units = {
 	"unit-mercenary-camp",
 --	"unit-cavern-entrance",
 --	"unit-portal",
+	"unit-road",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
 	"unit-carrots", "unit-cheese", "unit-wyrm-heart", "unit-potion-of-healing",
 	"upgrade-deity-odin", "upgrade-deity-thor", "upgrade-deity-gathaarl",
@@ -4026,6 +4027,8 @@ DefineUnitType("unit-road", {
 	Animations = "animations-building", Icon = "icon-road",
 	Costs = {"time", 30, "copper", 20, "lumber", 30},
 	Construction = "construction-wall",
+	RepairHp = 4,
+	RepairCosts = {"copper", 1, "lumber", 1},
 	Speed = 0,
 	HitPoints = 40,
 	DrawLevel = 39,
@@ -4041,6 +4044,7 @@ DefineUnitType("unit-road", {
 	Indestructible = true, Building = true, VisibleUnderFog = true,
 	BuilderOutside = true,
 	HiddenInEditor = true,
+	RequirementsString = "Masonry",
 	Sounds = {
 		"dead", "building-destroyed"
 	}

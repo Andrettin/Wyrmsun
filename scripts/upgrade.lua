@@ -321,6 +321,13 @@ Load("scripts/civilizations/latin/upgrade.lua")
 Load("scripts/civilizations/suebi/upgrade.lua")
 Load("scripts/civilizations/teuton/upgrade.lua")
 
+-- dependencies for neutral units
+DefineDependency("unit-road",
+	{"upgrade-dwarven-masonry"},
+	"or", {"upgrade-goblin-masonry"},
+	"or", {"upgrade-teuton-masonry"}
+)
+
 -- dependencies for deity upgrades that require a certain upgrade
 DefineDependency("upgrade-deity-christian-god",
 	{"upgrade-teuton-writing"}

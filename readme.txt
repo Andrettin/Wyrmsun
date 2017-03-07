@@ -61,7 +61,7 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Units
-- Workers can now build roads, which increase movement speed by 50%.
+- Workers can now build roads, which increase movement speed by 25%. Roads require Masonry.
 
 * Upgrades
 - The buttons for upgrades that have already been researched now show up, grayed.

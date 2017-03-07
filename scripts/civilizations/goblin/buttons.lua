@@ -212,7 +212,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-masonry",
 	Action = "research", Value = "upgrade-goblin-masonry",
 	Allowed = "check-single-research",
 	Key = "m", Hint = _("Research ~!Masonry"), Popup = "popup-research",
-	Description = "+20% Hit Points and +5 Armor for buildings, allows Town Halls to be upgraded to Strongholds.",
+	Description = "+20% Hit Points and +5 Armor for buildings, enables Road construction, and allows Watch Towers to be upgraded to Guard Towers and Town Halls to Strongholds.",
 	ForUnit = {"unit-goblin-lumber-mill"}
 } )
 

@@ -97,7 +97,7 @@ DefineUpgrade("upgrade-teuton-iron-tipped-wood-plow", {
 DefineUpgrade("upgrade-teuton-masonry", {
 	Parent = "upgrade-masonry",
 	Civilization = "teuton",
-	Description = "Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings, and allows Watch Towers to be upgraded to Guard Towers and Rathauses to Burgs."
+	Description = "Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings, enables Road construction, and allows Watch Towers to be upgraded to Guard Towers and Rathauses to Burgs."
 })
 
 DefineUpgrade("upgrade-teuton-coinage", {
