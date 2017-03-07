@@ -51,8 +51,7 @@ DefineMapTemplate("earth", {
 		"unit-goat", 32,
 		"unit-boar", 32,
 		"unit-horse", 16,
-		"unit-wolf", 32,
---		"unit-mercenary-camp", 4
+		"unit-wolf", 32
 	},
 	PlayerLocationGeneratedNeutralUnits = {
 		"unit-copper-deposit", 1,
