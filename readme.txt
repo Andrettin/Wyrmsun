@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 - 2.6.2
 -----------------------------------------------------------------------
 
+* Terrain
+- Fixed issue which caused cleared rock on dirt and dry mud to not be buildable upon.
+
 * Units
 - Workers can now build roads, which increase movement speed by 25%. Roads require Masonry.
 
