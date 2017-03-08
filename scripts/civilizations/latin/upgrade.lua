@@ -72,6 +72,10 @@ DefineModifier("upgrade-latin-civilization",
 )
 
 DefineModifier("upgrade-latin-civilization",
+	{"apply-to", "unit-germanic-market"}, {"convert-to", "unit-teuton-market"}
+)
+
+DefineModifier("upgrade-latin-civilization",
 	{"apply-to", "unit-teuton-stables"}, {"convert-to", "unit-latin-stables"}
 )
 

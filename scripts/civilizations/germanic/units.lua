@@ -705,10 +705,11 @@ DefineUnitType("unit-germanic-temple", {
 DefineUnitType("unit-germanic-market", {
 	Parent = "unit-template-market",
 	Civilization = "germanic",
---	Description = _("Germanic peoples were skilled shipwrights. They often lived close to the shore and built sturdy ships capable sailing the seas."),
+	Description = "Trade has brought many benefits to Germanic societies. Through exchanges with their southern Celtic neighbors, they obtained contact with new materials - such as bronze.",
 	Image = {"file", "germanic/buildings/market.png", "size", {96, 96}},
 	Shadow = {"file", "germanic/buildings/market_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-germanic-market",
+	RequirementsString = "Carpenter's Shop",
 	Sounds = {
 		"help", "basic-germanic-voices-help-town"
 	}

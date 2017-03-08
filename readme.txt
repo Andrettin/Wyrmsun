@@ -60,11 +60,14 @@ https://github.com/Andrettin/Wyrmsun
 - 2.6.2
 -----------------------------------------------------------------------
 
+* Buildings
+- Added Market buildings for the Dwarves, Germanics, Goblins and Teutons (graphics by Jinn). Markets allow trading resources.
+
 * Terrain
 - Fixed issue which caused cleared rock on dirt and dry mud to not be buildable upon.
 
 * Units
-- Workers can now build roads, which increase movement speed by 25%. Roads require Masonry.
+- Workers can now build roads, which increase movement speed by 25% (road graphics by Jinn). Roads require Masonry.
 
 * Upgrades
 - The buttons for upgrades that have already been researched now show up, grayed.

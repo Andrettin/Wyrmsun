@@ -290,6 +290,9 @@ DefineModifier("upgrade-mercenary-company", -- mercenary companies' mercenary ca
 
 DefineModifier("upgrade-trading-company", -- trading companies' docks produce food, to allow them to build ships despite not having farms
 	{"Supply", 8},
+	{"apply-to", "unit-germanic-market"}, {"apply-to", "unit-teuton-market"},
+	{"apply-to", "unit-dwarven-market"},
+	{"apply-to", "unit-goblin-market"},
 	{"apply-to", "unit-germanic-dock"}, {"apply-to", "unit-teuton-dock"},
 	{"apply-to", "unit-dwarven-dock"},
 	{"apply-to", "unit-goblin-dock"}
@@ -301,6 +304,9 @@ DefineModifier("upgrade-trading-company", -- trading companies' caravans, ships 
 	{"apply-to", "unit-germanic-transport-ship"}, {"apply-to", "unit-teuton-kogge"},
 	{"apply-to", "unit-dwarven-transport-ship"},
 	{"apply-to", "unit-goblin-transport-ship"},
+	{"apply-to", "unit-germanic-market"}, {"apply-to", "unit-teuton-market"},
+	{"apply-to", "unit-dwarven-market"},
+	{"apply-to", "unit-goblin-market"},
 	{"apply-to", "unit-germanic-dock"}, {"apply-to", "unit-teuton-dock"},
 	{"apply-to", "unit-dwarven-dock"},
 	{"apply-to", "unit-goblin-dock"}

@@ -138,23 +138,33 @@ DefineButton( { Pos = 7, Level = 1, Icon = "icon-dwarven-temple",
 	ForUnit = {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker"
 	}
 })
 
-DefineButton( { Pos = 8, Level = 1, Icon = "icon-dwarven-sentry-tower",
-	Action = "build", Value = "unit-dwarven-sentry-tower",
-	Key = "t", Hint = _("Build Sentry ~!Tower"), Popup = "popup-building",
+DefineButton( { Pos = 8, Level = 1, Icon = "icon-dwarven-market",
+	Action = "build", Value = "unit-dwarven-market",
+	Key = "m", Hint = "Build ~!Market", Popup = "popup-building",
 	ForUnit = {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker"
+	}
+})
+
+DefineButton( { Pos = 9, Level = 1, Icon = "icon-dwarven-sentry-tower",
+	Action = "build", Value = "unit-dwarven-sentry-tower",
+	Key = "t", Hint = "Build Sentry ~!Tower", Popup = "popup-building",
+	ForUnit = {
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker"
 	}
 } )
 
-DefineButton( { Pos = 9, Level = 1, Icon = "icon-dwarven-dock",
+DefineButton( { Pos = 10, Level = 1, Icon = "icon-dwarven-dock",
 	Action = "build", Value = "unit-dwarven-dock",
-	Key = "d", Hint = _("Build ~!Dock"), Popup = "popup-building",
+	Key = "d", Hint = "Build ~!Dock", Popup = "popup-building",
 	ForUnit = {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",

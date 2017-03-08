@@ -59,11 +59,17 @@ DefineButton( { Pos = 5, Level = 1, Icon = "icon-germanic-smithy",
 
 DefineButton( { Pos = 7, Level = 1, Icon = "icon-germanic-temple",
 	Action = "build", Value = "unit-germanic-temple",
-	Key = "p", Hint = _("Build Tem~!ple"), Popup = "popup-building",
+	Key = "p", Hint = "Build Tem~!ple", Popup = "popup-building",
 	ForUnit = {"unit-germanic-worker"}
 })
 
-DefineButton( { Pos = 9, Level = 1, Icon = "icon-germanic-dock",
+DefineButton( { Pos = 8, Level = 1, Icon = "icon-germanic-market",
+	Action = "build", Value = "unit-germanic-market",
+	Key = "m", Hint = "Build ~!Market", Popup = "popup-building",
+	ForUnit = {"unit-germanic-worker"}
+})
+
+DefineButton( { Pos = 10, Level = 1, Icon = "icon-germanic-dock",
 	Action = "build", Value = "unit-germanic-dock",
 	Key = "d", Hint = _("Build ~!Dock"), Popup = "popup-building",
 	ForUnit = {"unit-germanic-worker"}

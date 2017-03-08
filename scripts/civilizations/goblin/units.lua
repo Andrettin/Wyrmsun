@@ -702,10 +702,11 @@ DefineUnitType("unit-goblin-guard-tower", {
 DefineUnitType("unit-goblin-market", {
 	Parent = "unit-template-market",
 	Civilization = "goblin",
---	Description = _("Germanic peoples were skilled shipwrights. They often lived close to the shore and built sturdy ships capable sailing the seas."),
+	Description = "Goblins are renowned for their penchant for commerce, as their merchant guilds trade far and wide.",
 	Image = {"file", "goblin/buildings/market.png", "size", {96, 96}},
 	Shadow = {"file", "goblin/buildings/market_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-goblin-market",
+	TradeEfficiency = 80, -- +10% trade efficiency
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
 	}

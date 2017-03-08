@@ -126,6 +126,10 @@ DefineDependency("unit-germanic-temple",
 	{"unit-germanic-carpenters-shop"}
 )
 
+DefineDependency("unit-germanic-market",
+	{"unit-germanic-carpenters-shop"}
+)
+
 DefineDependency("unit-germanic-priest",
 	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}
 )

@@ -1352,6 +1352,19 @@ DefineUnitType("unit-teuton-temple", {
 	}
 } )
 
+DefineUnitType("unit-teuton-market", {
+	Parent = "unit-template-market",
+	Civilization = "teuton",
+	Description = "Medieval fairs were widespread throughout Europe, bringing in significant revenues to the cities they were located in.",
+	Image = {"file", "germanic/buildings/market.png", "size", {96, 96}},
+	Shadow = {"file", "germanic/buildings/market_shadow.png", "size", {96, 96}},
+	Animations = "animations-building", Icon = "icon-germanic-market",
+	RequirementsString = "Carpenter's Shop/Lumber Mill",
+	Sounds = {
+		"help", "basic-teuton-voices-help-town"
+	}
+} )
+
 DefineUnitType("unit-teuton-watch-tower", { Name = _("Watch Tower"),
 	Parent = "unit-template-watch-tower",
 	Civilization = "teuton",

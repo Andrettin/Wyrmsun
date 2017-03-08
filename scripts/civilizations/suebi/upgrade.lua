@@ -54,6 +54,10 @@ DefineModifier("upgrade-suebi-civilization",
 )
 
 DefineModifier("upgrade-suebi-civilization",
+	{"apply-to", "unit-germanic-market"}, {"convert-to", "unit-teuton-market"}
+)
+
+DefineModifier("upgrade-suebi-civilization",
 	{"apply-to", "unit-germanic-dock"}, {"convert-to", "unit-teuton-dock"}
 )
 

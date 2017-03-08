@@ -1311,7 +1311,7 @@ DefineUnitType("unit-dwarven-guard-tower", {
 DefineUnitType("unit-dwarven-market", {
 	Parent = "unit-template-market",
 	Civilization = "dwarf",
---	Description = _("Germanic peoples were skilled shipwrights. They often lived close to the shore and built sturdy ships capable sailing the seas."),
+	Description = "Commerce is an important part of the dwarven quotidian. Not only are various metals exchanged, but vital supplies of wood are traded to underground settlements.",
 	Image = {"file", "dwarf/buildings/market.png", "size", {96, 96}},
 	Shadow = {"file", "dwarf/buildings/market_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-dwarven-market",

@@ -837,6 +837,7 @@
 /graphics/neutral/icons/spear.png (by Vladislav "iDreamRunner") (licensed under the CC0)
 /graphics/neutral/icons/spear_mastery.png (by Vladislav "iDreamRunner" and Jinn) (licensed under the CC0)
 /graphics/neutral/icons/serfdom.png (by Mrmo Tarius) (licensed under the CC0)
+/graphics/neutral/icons/stone.png (by Exidelo) (licensed under the CC0)
 /graphics/neutral/icons/stun.png (by Vladislav "iDreamRunner") (licensed under the CC0)
 /graphics/neutral/icons/sword_mastery.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/sword_mastery_bronze.png (by Jinn) (licensed under the CC0)

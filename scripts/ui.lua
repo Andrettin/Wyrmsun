@@ -1033,7 +1033,76 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {HasDescription = true}, HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
 				}, 
-				-- Move  hint
+				-- Resource Sell
+				{ 	Margin = {1, 1}, Condition = {ButtonAction = "sell-resource"},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {ButtonAction = "sell-resource"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(
+						Concat("Sell 100 ", ResourceName("Resource")),
+						Concat(
+							Concat(
+								" for ",
+								String(
+									Div(
+										Mul(PlayerData(ActiveUnitVar("Player", "Value"), "Prices", ResourceIdent("Resource")), ActiveUnitVar("TradeEfficiency")),
+										100
+									)
+								)
+							),
+							" Copper"
+						)
+					), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Margin = {1, 1}, Condition = {ButtonAction = "sell-resource"},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {ButtonAction = "sell-resource"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Price: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "Prices", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {ButtonAction = "sell-resource"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = Concat("Trade Efficiency: ", Concat(String(ActiveUnitVar("TradeEfficiency")), "%")), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				-- Resource Buy
+				{ 	Margin = {1, 1}, Condition = {ButtonAction = "buy-resource"},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {ButtonAction = "buy-resource"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(
+						Concat(
+							Concat(
+								"Buy ",
+								String(
+									Div(
+										Mul(
+											Div(
+												Mul(
+													100,
+													100
+												),
+												PlayerData(ActiveUnitVar("Player", "Value"), "Prices", ResourceIdent("Resource"))
+											),
+											ActiveUnitVar("TradeEfficiency")
+										),
+										100
+									)
+								)
+							),
+							Concat(" ", ResourceName("Resource"))
+						),
+						" for 100 Copper"
+					), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Margin = {1, 1}, Condition = {ButtonAction = "buy-resource"},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {ButtonAction = "buy-resource"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Price: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "Prices", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {ButtonAction = "buy-resource"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = Concat("Trade Efficiency: ", Concat(String(ActiveUnitVar("TradeEfficiency")), "%")), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				-- Move hint
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "move", Speed = "only"}, -- speed as a proxy for not being a building
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},

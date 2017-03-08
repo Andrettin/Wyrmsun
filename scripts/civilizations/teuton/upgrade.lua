@@ -180,6 +180,7 @@ DefineModifier("upgrade-teuton-masonry",
 	{"apply-to", "unit-teuton-farm"}, {"apply-to", "unit-teuton-barracks"},
 	{"apply-to", "unit-teuton-lumber-mill"}, {"apply-to", "unit-teuton-smithy"},
 	{"apply-to", "unit-teuton-stables"}, {"apply-to", "unit-teuton-temple"},
+	{"apply-to", "unit-teuton-market"},
 	{"apply-to", "unit-teuton-watch-tower"}, {"apply-to", "unit-teuton-guard-tower"},
 	{"apply-to", "unit-teuton-dock"},
 	{"apply-to", "unit-latin-town-hall"},
@@ -201,6 +202,7 @@ DefineModifier("upgrade-teuton-writing",
 	{"apply-to", "unit-teuton-lumber-mill"}, {"apply-to", "unit-teuton-smithy"},
 --	{"apply-to", "unit-teuton-stables"},
 	{"apply-to", "unit-teuton-temple"},
+--	{"apply-to", "unit-teuton-market"},
 	{"apply-to", "unit-teuton-watch-tower"}, {"apply-to", "unit-teuton-guard-tower"},
 	{"apply-to", "unit-teuton-dock"},
 	{"apply-to", "unit-latin-town-hall"},
@@ -243,6 +245,10 @@ DefineModifier("upgrade-teuton-civilization",
 
 DefineModifier("upgrade-teuton-civilization",
 	{"apply-to", "unit-germanic-temple"}, {"convert-to", "unit-teuton-temple"}
+)
+
+DefineModifier("upgrade-teuton-civilization",
+	{"apply-to", "unit-germanic-market"}, {"convert-to", "unit-teuton-market"}
 )
 
 DefineModifier("upgrade-teuton-civilization",
@@ -392,6 +398,10 @@ DefinePredependency("unit-teuton-smithy",
 )
 
 DefineDependency("unit-teuton-temple",
+	{"unit-teuton-lumber-mill"}
+)
+
+DefineDependency("unit-teuton-market",
 	{"unit-teuton-lumber-mill"}
 )
 

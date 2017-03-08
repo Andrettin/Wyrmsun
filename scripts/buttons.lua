@@ -677,7 +677,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-precise-shot",
 
 -- Buildings ---------------------------------------------------
 
-DefineButton( { Pos = 10, Level = 1, Icon = "icon-copper-mine",
+DefineButton( { Pos = 11, Level = 1, Icon = "icon-copper-mine",
 	Action = "build", Value = "unit-copper-mine",
 	Key = "c", Hint = _("Build ~!Copper Mine"), Popup = "popup-building",
 	ForUnit = {
@@ -689,7 +689,7 @@ DefineButton( { Pos = 10, Level = 1, Icon = "icon-copper-mine",
 	}
 })
 
-DefineButton( { Pos = 11, Level = 1, Icon = "icon-silver-mine",
+DefineButton( { Pos = 12, Level = 1, Icon = "icon-silver-mine",
 	Action = "build", Value = "unit-silver-mine",
 	Key = "v", Hint = _("Build Si~!lver Mine"), Popup = "popup-building",
 	ForUnit = {
@@ -701,7 +701,7 @@ DefineButton( { Pos = 11, Level = 1, Icon = "icon-silver-mine",
 	}
 })
 
-DefineButton( { Pos = 12, Level = 1, Icon = "icon-gold-mine",
+DefineButton( { Pos = 13, Level = 1, Icon = "icon-gold-mine",
 	Action = "build", Value = "unit-gold-mine",
 	Key = "g", Hint = _("Build ~!Gold Mine"), Popup = "popup-building",
 	ForUnit = {
@@ -713,7 +713,7 @@ DefineButton( { Pos = 12, Level = 1, Icon = "icon-gold-mine",
 	}
 })
 
-DefineButton( { Pos = 13, Level = 1, Icon = "icon-road",
+DefineButton( { Pos = 14, Level = 1, Icon = "icon-road",
 	Action = "build", Value = "unit-road",
 	Key = "r", Hint = "Build ~!Road", Popup = "popup-building",
 	ForUnit = {
@@ -828,6 +828,52 @@ DefineButton( { Pos = 12, Level = 0,
 		"unit-goblin-town-hall", "unit-goblin-stronghold",
 		"unit-goblin-temple",
 		"unit-mercenary-camp"
+	}
+})
+
+-- Resource Trade -----------------------------------------------------
+
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-lumber",
+	Action = "sell-resource", Value = "lumber",
+	Hint = "Sell Lumber", Popup = "popup-commands",
+	ForUnit = {
+		"unit-dwarven-market",
+		"unit-germanic-market",
+		"unit-goblin-market",
+		"unit-teuton-market"
+	}
+})
+
+DefineButton( { Pos = 6, Level = 0, Icon = "icon-stone",
+	Action = "sell-resource", Value = "stone",
+	Hint = "Sell Stone", Popup = "popup-commands",
+	ForUnit = {
+		"unit-dwarven-market",
+		"unit-germanic-market",
+		"unit-goblin-market",
+		"unit-teuton-market"
+	}
+})
+
+DefineButton( { Pos = 9, Level = 0, Icon = "icon-lumber",
+	Action = "buy-resource", Value = "lumber",
+	Hint = "Buy Lumber", Popup = "popup-commands",
+	ForUnit = {
+		"unit-dwarven-market",
+		"unit-germanic-market",
+		"unit-goblin-market",
+		"unit-teuton-market"
+	}
+})
+
+DefineButton( { Pos = 10, Level = 0, Icon = "icon-stone",
+	Action = "buy-resource", Value = "stone",
+	Hint = "Buy Stone", Popup = "popup-commands",
+	ForUnit = {
+		"unit-dwarven-market",
+		"unit-germanic-market",
+		"unit-goblin-market",
+		"unit-teuton-market"
 	}
 })
 

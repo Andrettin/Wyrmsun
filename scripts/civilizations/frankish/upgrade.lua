@@ -54,6 +54,10 @@ DefineModifier("upgrade-frankish-civilization",
 )
 
 DefineModifier("upgrade-frankish-civilization",
+	{"apply-to", "unit-germanic-market"}, {"convert-to", "unit-teuton-market"}
+)
+
+DefineModifier("upgrade-frankish-civilization",
 	{"apply-to", "unit-germanic-dock"}, {"convert-to", "unit-teuton-dock"}
 )
 
