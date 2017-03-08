@@ -71,6 +71,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Upgrades
 - The buttons for upgrades that have already been researched now show up, grayed.
+- Coinage now increases trade efficiency for markets.
 
 -----------------------------------------------------------------------
 - 2.6.1

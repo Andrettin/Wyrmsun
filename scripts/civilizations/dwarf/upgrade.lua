@@ -255,6 +255,11 @@ DefineModifier("upgrade-dwarven-coinage",
 	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"}
 )
 
+DefineModifier("upgrade-dwarven-coinage",
+	{"TradeEfficiency", 15},
+	{"apply-to", "unit-dwarven-market"}
+)
+
 DefineModifier("upgrade-dwarven-runewriting",
 	{"TimeEfficiencyBonus", 10},
 	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"},

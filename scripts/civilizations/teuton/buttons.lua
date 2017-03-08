@@ -241,8 +241,8 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-masonry",
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-coinage",
 	Action = "research", Value = "upgrade-teuton-coinage",
 	Allowed = "check-single-research",
-	Description = _("+10% Copper, Silver and Gold Processing."),
-	Key = "c", Hint = _("Research ~!Coinage"), Popup = "popup-research",
+	Description = "+10% Copper, Silver and Gold Processing. +15% Trade Efficiency for Markets.",
+	Key = "c", Hint = "Research ~!Coinage", Popup = "popup-research",
 	ForUnit = {"unit-teuton-stronghold"}
 } )
 

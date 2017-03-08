@@ -104,7 +104,7 @@ DefineUpgrade("upgrade-teuton-coinage", {
 	Parent = "upgrade-coinage",
 	Civilization = "teuton",
 	Icon = "icon-teuton-coinage",
-	Background = _("West Germanic peoples first obtained knowledge of currency throughout their contacts with Celtic tribes and the Romans. Soon afterwards they would adopt the usage of coins, eventually beginning to mint their own.")
+	Background = "West Germanic peoples first obtained knowledge of currency throughout their contacts with Celtic tribes and the Romans. Soon afterwards they would adopt the usage of coins, eventually beginning to mint their own."
 })
 
 DefineUpgrade("upgrade-teuton-writing", {
@@ -193,6 +193,11 @@ DefineModifier("upgrade-teuton-coinage",
 	{"improve-production", "copper", 10},
 	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"},
 	{"apply-to", "unit-latin-town-hall"}
+)
+
+DefineModifier("upgrade-teuton-coinage",
+	{"TradeEfficiency", 15},
+	{"apply-to", "unit-teuton-market"}
 )
 
 DefineModifier("upgrade-teuton-writing",

@@ -234,6 +234,11 @@ DefineModifier("upgrade-goblin-coinage",
 	{"apply-to", "unit-goblin-town-hall"}, {"apply-to", "unit-goblin-stronghold"}
 )
 
+DefineModifier("upgrade-goblin-coinage",
+	{"TradeEfficiency", 15},
+	{"apply-to", "unit-goblin-market"}
+)
+
 DefineModifier("upgrade-goblin-writing",
 	{"TimeEfficiencyBonus", 10},
 	{"apply-to", "unit-goblin-town-hall"}, {"apply-to", "unit-goblin-stronghold"},
