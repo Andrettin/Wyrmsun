@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2001-2016 by Lutz Sammer, Jimmy Salmon and Andrettin
+--      (c) Copyright 2001-2017 by Lutz Sammer, Jimmy Salmon and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -98,6 +98,9 @@ function ApplyTechLevels()
 		end
 	end
 
+	local default_law_upgrades = {
+		"upgrade-free-workers"
+	}
 	local agrarian_upgrades = {
 		"upgrade-dwarven-masonry", "upgrade-dwarven-runewriting",
 		"upgrade-teuton-masonry", "upgrade-teuton-writing",
@@ -130,7 +133,9 @@ function ApplyTechLevels()
 	}
 	
 	local function IsTechnologyUnderMinimumTechLevel(technology, player)
-		if (GetArrayIncludes(bronze_upgrades, technology) and (TechLevel[player + 1] == "Agrarian (Iron)" or TechLevel[player + 1] == "Civilized (Iron)")) then -- if tech level is at least Agrarian (Iron), bronze technologies should begin researched
+		if (GetArrayIncludes(default_law_upgrades, technology)) then
+			return true
+		elseif (GetArrayIncludes(bronze_upgrades, technology) and (TechLevel[player + 1] == "Agrarian (Iron)" or TechLevel[player + 1] == "Civilized (Iron)")) then -- if tech level is at least Agrarian (Iron), bronze technologies should begin researched
 			return true
 		elseif (GetArrayIncludes(agrarian_upgrades, technology) and (TechLevel[player + 1] == "Civilized (Bronze)" or TechLevel[player + 1] == "Civilized (Iron)")) then
 			return true

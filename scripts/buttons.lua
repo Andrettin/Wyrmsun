@@ -127,7 +127,21 @@ DefineButton( { Pos = 14, Level = 0, Icon = "icon-crown",
 	}
 })
 
-DefineButton( { Pos = 15, Level = 0, Icon = "icon-garrison",
+DefineButton( { Pos = 15, Level = 0, Icon = "icon-book-red",
+	Action = "button", Value = 3,
+	Allowed = "check-has-sub-buttons",
+	Key = "l", Hint = "Enact a ~!Law", Popup = "popup-commands",
+	ForUnit = {
+		"unit-latin-town-hall",
+		"unit-germanic-town-hall",
+		"unit-teuton-town-hall", "unit-teuton-stronghold",
+		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
+		"unit-gnomish-town-hall",
+		"unit-goblin-town-hall", "unit-goblin-stronghold"
+	}
+})
+
+DefineButton( { Pos = 16, Level = 0, Icon = "icon-garrison",
 	Action = "button", Value = 1,
 	Allowed = "check-unit-variable", AllowArg = {"Transport", "Value", ">=", "1"},
 	Key = "g", Hint = "View ~!Garrison", Popup = "popup-commands",
@@ -149,6 +163,19 @@ DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 } )
 
 DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
+	Action = "button", Value = 0,
+	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
+	ForUnit = {
+		"unit-latin-town-hall",
+		"unit-germanic-town-hall",
+		"unit-teuton-town-hall", "unit-teuton-stronghold",
+		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
+		"unit-gnomish-town-hall",
+		"unit-goblin-town-hall", "unit-goblin-stronghold"
+	}
+} )
+
+DefineButton( { Pos = 16, Level = 3, Icon = "icon-cancel",
 	Action = "button", Value = 0,
 	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
 	ForUnit = {
@@ -878,6 +905,38 @@ DefineButton( { Pos = 10, Level = 0, Icon = "icon-stone",
 })
 
 -- Units --------------------------------------------------------------
+
+-- Researches ---------------------------------------------------------
+
+DefineButton( { Pos = 1, Level = 3, Icon = "icon-labor",
+	Action = "research", Value = "upgrade-free-workers",
+	Allowed = "check-single-research",
+	Description = "Incompatible with the Serfdom law.",
+	Key = "f", Hint = "Enact ~!Free Workers", Popup = "popup-research",
+	ForUnit = {
+		"unit-latin-town-hall",
+		"unit-germanic-town-hall",
+		"unit-teuton-town-hall", "unit-teuton-stronghold",
+		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
+		"unit-gnomish-town-hall",
+		"unit-goblin-town-hall", "unit-goblin-stronghold"
+	}
+} )
+
+DefineButton( { Pos = 2, Level = 3, Icon = "icon-serfdom",
+	Action = "research", Value = "upgrade-serfdom",
+	Allowed = "check-single-research",
+	Description = "-100 Copper cost for workers, -25% worker gathering rate. Incompatible with the Free Workers law.",
+	Key = "s", Hint = "Enact ~!Serfdom", Popup = "popup-research",
+	ForUnit = {
+		"unit-latin-town-hall",
+		"unit-germanic-town-hall",
+		"unit-teuton-town-hall", "unit-teuton-stronghold",
+		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
+		"unit-gnomish-town-hall",
+		"unit-goblin-town-hall", "unit-goblin-stronghold"
+	}
+} )
 
 -- Items --------------------------------------------------------------
 

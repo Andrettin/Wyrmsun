@@ -72,6 +72,8 @@ https://github.com/Andrettin/Wyrmsun
 * Upgrades
 - The buttons for upgrades that have already been researched now show up, grayed.
 - Coinage now increases trade efficiency for markets.
+- Added the "Serfdom" law upgrade (icon by Mrmo Tarius), which reduces worker cost but also productivity.
+- Added the "Free Workers" law upgrade (icon by Jinn), which is acquired by default and is incompatible with Serfdom (acquiring this upgrade removes Serfdom and vice-versa). The costs of this upgrade scale with quantity of workers owned.
 
 -----------------------------------------------------------------------
 - 2.6.1

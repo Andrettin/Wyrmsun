@@ -194,7 +194,7 @@ DefineUpgrade("upgrade-masonry", {
 DefineUpgrade("upgrade-coinage", {
 	Name = _("Coinage"),
 	Class = "coinage",
-	Description = _("While previously trade was conducted by trading one commodity for another, the introduction of currency provides a more practical means of exchange.\n\nEffect: +10% Copper, Silver and Gold Processing."),
+	Description = _("While previously trade was conducted by trading one commodity for another, the introduction of currency provides a more practical means of exchange.\n\nEffect: +10% Copper, Silver and Gold Processing. +15% Trade Efficiency for Markets."),
 	Costs = {"time", 250, "copper", 1500},
 	RequirementsString = "Smithy",
 	GrandStrategyCosts = {"time", 250, "copper", 1500, "research", 1500},
@@ -314,6 +314,9 @@ DefineModifier("upgrade-trading-company", -- trading companies' caravans, ships 
 
 -- Load the deity upgrades
 Load("scripts/upgrade_deities.lua")
+
+-- Law upgrades
+Load("scripts/upgrade_laws.lua")
 
 -- Load the upgrades of the different civilizations
 Load("scripts/civilizations/celt/upgrade.lua")

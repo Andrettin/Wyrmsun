@@ -156,6 +156,7 @@ Units = {
 	"unit-road",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
 	"unit-carrots", "unit-cheese", "unit-wyrm-heart", "unit-potion-of-healing",
+	"upgrade-free-workers", "upgrade-serfdom",
 	"upgrade-deity-odin", "upgrade-deity-thor", "upgrade-deity-gathaarl",
 	"upgrade-deity-christian-god",
 	"upgrade-deity-domain-air", "upgrade-deity-domain-earth", "upgrade-deity-domain-fire", "upgrade-deity-domain-water", "upgrade-deity-domain-aether", "upgrade-deity-domain-metal", "upgrade-deity-domain-wood", "upgrade-deity-domain-cold", "upgrade-deity-domain-lightning", "upgrade-deity-domain-chaos", "upgrade-deity-domain-order", "upgrade-deity-domain-death", "upgrade-deity-domain-life", "upgrade-deity-domain-darkness", "upgrade-deity-domain-light", "upgrade-deity-domain-sun", "upgrade-deity-domain-moon",
