@@ -1315,6 +1315,9 @@ DefineUnitType("unit-dwarven-market", {
 	Image = {"file", "dwarf/buildings/market.png", "size", {96, 96}},
 	Shadow = {"file", "dwarf/buildings/market_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-dwarven-market",
+	Costs = {"lumber", 900, "stone", 450},
+	RepairCosts = {"copper", 1, "lumber", 1, "stone", 1},
+	FireResistance = 20,
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
