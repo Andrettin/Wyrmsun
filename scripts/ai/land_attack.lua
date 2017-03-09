@@ -147,6 +147,13 @@ local land_funcs = {
 	function() return AiNeed(GetAiUnitType("stables")) end,
 	function() return AiResearch(GetAiUnitType("writing")) end, -- research writing to become a polity
 
+	function() -- certain civilizations acquire serfdom when it becomes available
+		if (AiGetRace() == "teuton" or AiGetRace() == "anglo-saxon" or AiGetRace() == "frankish" or AiGetRace() == "suebi") then
+			return AiResearch("upgrade-serfdom");
+		end
+		return false;
+	end,
+	
 -- BUILDING A DEFENSE
 	function() return AiForce(0, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("cavalry"), 2, GetAiUnitType("siege-engine"), 0}) end,
 
