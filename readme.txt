@@ -63,6 +63,9 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Added Market buildings for the Dwarves, Germanics, Goblins and Teutons (graphics by Jinn). Markets allow trading resources.
 
+* Factions
+- Fixed issue which prevented the Angle Tribe and Jute Tribe factions from being formable via the "Found a Faction" submenu.
+
 * Terrain
 - Fixed issue which caused cleared rock on dirt and dry mud to not be buildable upon.
 

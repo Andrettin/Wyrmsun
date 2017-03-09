@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineButton( { Pos = 12, Level = 2, Icon = "icon-flag-cyan-lion-on-red",
+DefineButton( { Pos = 3, Level = 2, Icon = "icon-flag-cyan-lion-on-red",
 	Action = "research", Value = "upgrade-faction-angle-tribe",
 	Allowed = "check-single-research",
 	Key = "a", Hint = "Found the ~!Angle Tribe", Popup = "popup-research",
@@ -81,7 +81,7 @@ DefineButton( { Pos = 6, Level = 2, Icon = "icon-flag-five-black-birds-on-purple
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 1, Level = 2, Icon = "icon-flag-five-blue-birds-on-orange",
+DefineButton( { Pos = 8, Level = 2, Icon = "icon-flag-five-blue-birds-on-orange",
 	Action = "research", Value = "upgrade-faction-bernicia",
 	Allowed = "check-single-research",
 	Key = "b", Hint = "Found ~!Bernicia", Popup = "popup-research",
@@ -89,7 +89,7 @@ DefineButton( { Pos = 1, Level = 2, Icon = "icon-flag-five-blue-birds-on-orange"
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 2, Level = 2, Icon = "icon-flag-five-red-birds-on-yellow",
+DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-five-red-birds-on-yellow",
 	Action = "research", Value = "upgrade-faction-deira",
 	Allowed = "check-single-research",
 	Key = "d", Hint = "Found ~!Deira", Popup = "popup-research",
@@ -97,7 +97,7 @@ DefineButton( { Pos = 2, Level = 2, Icon = "icon-flag-five-red-birds-on-yellow",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 3, Level = 2, Icon = "icon-flag-five-orange-birds-on-black",
+DefineButton( { Pos = 10, Level = 2, Icon = "icon-flag-five-orange-birds-on-black",
 	Action = "research", Value = "upgrade-faction-east-anglia",
 	Allowed = "check-single-research",
 	Key = "e", Hint = "Found ~!East Anglia", Popup = "popup-research",
@@ -105,7 +105,7 @@ DefineButton( { Pos = 3, Level = 2, Icon = "icon-flag-five-orange-birds-on-black
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 4, Level = 2, Icon = "icon-flag-five-white-birds-on-red",
+DefineButton( { Pos = 12, Level = 2, Icon = "icon-flag-five-white-birds-on-red",
 	Action = "research", Value = "upgrade-faction-essex",
 	Allowed = "check-single-research",
 	Key = "s", Hint = "Found E~!ssex", Popup = "popup-research",
@@ -113,7 +113,15 @@ DefineButton( { Pos = 4, Level = 2, Icon = "icon-flag-five-white-birds-on-red",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 5, Level = 2, Icon = "icon-flag-old-austria",
+DefineButton( { Pos = 12, Level = 2, Icon = "icon-flag-cyan-lion-on-red",
+	Action = "research", Value = "upgrade-faction-jutland",
+	Allowed = "check-single-research",
+	Key = "j", Hint = "Found ~!Jutland", Popup = "popup-research",
+	Description = "Changes your faction to Jutland",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
+DefineButton( { Pos = 13, Level = 2, Icon = "icon-flag-old-austria",
 	Action = "research", Value = "upgrade-faction-kent",
 	Allowed = "check-single-research",
 	Key = "k", Hint = "Found ~!Kent", Popup = "popup-research",
@@ -121,7 +129,7 @@ DefineButton( { Pos = 5, Level = 2, Icon = "icon-flag-old-austria",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 6, Level = 2, Icon = "icon-flag-five-blue-birds-on-orange",
+DefineButton( { Pos = 11, Level = 2, Icon = "icon-flag-five-blue-birds-on-orange",
 	Action = "research", Value = "upgrade-faction-mercia",
 	Allowed = "check-single-research",
 	Key = "m", Hint = "Found ~!Mercia", Popup = "popup-research",
@@ -129,7 +137,7 @@ DefineButton( { Pos = 6, Level = 2, Icon = "icon-flag-five-blue-birds-on-orange"
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 7, Level = 2, Icon = "icon-flag-five-purple-birds-on-green",
+DefineButton( { Pos = 12, Level = 2, Icon = "icon-flag-five-purple-birds-on-green",
 	Action = "research", Value = "upgrade-faction-middle-anglia",
 	Allowed = "check-single-research",
 	Key = "i", Hint = "Found M~!iddle Anglia", Popup = "popup-research",
@@ -137,7 +145,7 @@ DefineButton( { Pos = 7, Level = 2, Icon = "icon-flag-five-purple-birds-on-green
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 8, Level = 2, Icon = "icon-flag-five-orange-birds-on-black",
+DefineButton( { Pos = 13, Level = 2, Icon = "icon-flag-five-orange-birds-on-black",
 	Action = "research", Value = "upgrade-faction-northumbria",
 	Allowed = "check-single-research",
 	Key = "n", Hint = "Found ~!Northumbria", Popup = "popup-research",
@@ -145,7 +153,7 @@ DefineButton( { Pos = 8, Level = 2, Icon = "icon-flag-five-orange-birds-on-black
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-cyan-lion-on-red",
+DefineButton( { Pos = 13, Level = 2, Icon = "icon-flag-cyan-lion-on-red",
 	Action = "research", Value = "upgrade-faction-wessex",
 	Allowed = "check-single-research",
 	Key = "w", Hint = "Found ~!Wessex", Popup = "popup-research",
@@ -153,7 +161,7 @@ DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-cyan-lion-on-red",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 10, Level = 2, Icon = "icon-flag-cyan-lion-on-red",
+DefineButton( { Pos = 14, Level = 2, Icon = "icon-flag-cyan-lion-on-red",
 	Action = "research", Value = "upgrade-faction-england",
 	Allowed = "check-single-research",
 	Key = "e", Hint = "Found ~!England", Popup = "popup-research",
@@ -161,7 +169,7 @@ DefineButton( { Pos = 10, Level = 2, Icon = "icon-flag-cyan-lion-on-red",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 11, Level = 2, Icon = "icon-flag-old-austria",
+DefineButton( { Pos = 15, Level = 2, Icon = "icon-flag-old-austria",
 	Action = "research", Value = "upgrade-faction-scotland",
 	Allowed = "check-single-research",
 	Key = "c", Hint = "Found S~!cotland", Popup = "popup-research",
