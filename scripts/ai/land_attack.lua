@@ -135,6 +135,8 @@ local land_funcs = {
 		end
 		return false;
 	end,
+	function() return AiNeed(GetAiUnitType("market")) end, -- seems like a good point to build it
+
 	function() return AiResearch(GetAiUnitType("masonry")) end, -- needed for the stronghold
 	function() return AiWait(GetAiUnitType("masonry")) end,
 	
