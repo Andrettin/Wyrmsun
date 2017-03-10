@@ -77,6 +77,11 @@ DefineUnitType("unit-dwarven-miner", {
 			"resource-id", "coal",
 			"file-when-loaded", "dwarf/units/miner_with_coal.png",
 			"resource-step", 5
+		},
+		{
+			"resource-id", "furniture",
+			"file-when-loaded", "dwarf/units/miner_with_lumber.png",
+			"resource-step", 3
 		}
 	},
 	Sounds = {
@@ -129,6 +134,10 @@ DefineUnitType("unit-dwarven-skilled-miner", {
 		{
 			"resource-id", "coal",
 			"file-when-loaded", "dwarf/units/miner_with_coal.png"
+		},
+		{
+			"resource-id", "furniture",
+			"file-when-loaded", "dwarf/units/miner_with_lumber.png"
 		}
 	},
 	Sounds = {
@@ -181,6 +190,10 @@ DefineUnitType("unit-dwarven-expert-miner", {
 		{
 			"resource-id", "coal",
 			"file-when-loaded", "dwarf/units/miner_with_coal.png"
+		},
+		{
+			"resource-id", "furniture",
+			"file-when-loaded", "dwarf/units/miner_with_lumber.png"
 		}
 	},
 	Sounds = {

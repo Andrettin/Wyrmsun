@@ -2660,6 +2660,13 @@ DefineUnitType("unit-template-worker", {
 			"resource-step", 4,
 			"wait-at-resource", 12,
 			"wait-at-depot", 150
+		},
+		{
+			"resource-id", "furniture",
+			"resource-capacity", 100,
+			"resource-step", 4,
+			"wait-at-resource", 12,
+			"wait-at-depot", 150
 		}
 	},
 	Sounds = {
@@ -3277,7 +3284,7 @@ DefineUnitType("unit-template-town-hall", {
 	LumberImprove = true, StoneImprove = true,
 	BuilderOutside = true,
 	RecruitHeroes = true,
-	CanStore = {"copper", "silver", "gold", "lumber", "stone", "coal"},
+	CanStore = {"copper", "silver", "gold", "lumber", "stone", "coal", "furniture"},
 	Drops = {"unit-wood-pile"},
 	RightMouseAction = "rally-point",
 	BurnPercent = 50,
@@ -3426,7 +3433,7 @@ DefineUnitType("unit-template-barracks", {
 } )
 
 DefineUnitType("unit-template-lumber-mill", {
-	Name = _("Lumber Mill"),
+	Name = "Lumber Mill",
 	Parent = "unit-template-building",
 	Class = "lumber-mill",
 	Costs = {"time", 150, "copper", 600, "lumber", 1350},
@@ -3447,6 +3454,8 @@ DefineUnitType("unit-template-lumber-mill", {
 	LumberImprove = true,
 	CanStore = {"lumber"},
 	BuilderOutside = true,
+	CanHarvest = true, -- cannot produce a resource inherently, but can produce furniture through a button
+	Inexhaustible = true,
 	Drops = {"unit-wood-pile"},
 	BurnPercent = 50,
 	BurnDamageRate = 1,

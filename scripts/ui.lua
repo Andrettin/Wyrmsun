@@ -641,10 +641,10 @@ DefinePanelContents(
 	{ Pos = {170, 83}, Condition = {ShowOpponent = true}, More = {"Text", {Text = Line(3, UnitTypeName("Active"), 96, "game"), Centered = true}} },
 	
 	-- Resource Left
-	{ Pos = {9, 103}, Condition = {ShowOpponent = false, GiveResource = "only", Build = "false"},
+	{ Pos = {9, 103}, Condition = {ShowOpponent = false, GiveResource = "only", Inexhaustible = "false", Build = "false"},
 		More = {"Text", {Text = Concat(function() return CapitalizeString(GetUnitVariable(-1, "GiveResourceTypeName")) end, " Left:")}}
 	},
-	{ Pos = {115, 103}, Condition = {ShowOpponent = false, GiveResource = "only", Build = "false"},
+	{ Pos = {115, 103}, Condition = {ShowOpponent = false, GiveResource = "only", Inexhaustible = "false", Build = "false"},
 		More = {"Text", {Text = String(ActiveUnitVar("GiveResource", "Value"))}}
 	},
 
@@ -1033,6 +1033,22 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {HasDescription = true}, HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
 				}, 
+				-- Produce Resource
+				{ 	Margin = {1, 1}, Condition = {ButtonAction = "produce-resource", LuxuryResource = "only"},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {ButtonAction = "produce-resource", LuxuryResource = "only"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(ResourceName("Resource"), " is sold automatically if a Market is present"), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Margin = {1, 1}, Condition = {ButtonAction = "produce-resource"},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {ButtonAction = "produce-resource"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Stored: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "Resources", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {ButtonAction = "produce-resource"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Price: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "Prices", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				-- Resource Sell
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "sell-resource"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}

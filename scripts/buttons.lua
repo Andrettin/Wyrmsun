@@ -858,6 +858,20 @@ DefineButton( { Pos = 12, Level = 0,
 	}
 })
 
+-- Resource Production ------------------------------------------------
+
+DefineButton( { Pos = 9, Level = 0, Icon = "icon-furniture",
+	Action = "produce-resource", Value = "furniture",
+	Key = "f", Hint = "Produce ~!Furniture", Popup = "popup-commands",
+	Description = "Allows workers to transform Lumber into Furniture in this building",
+	ForUnit = {
+		"unit-dwarven-lumber-mill",
+		"unit-germanic-carpenters-shop",
+		"unit-goblin-lumber-mill",
+		"unit-teuton-lumber-mill"
+	}
+})
+
 -- Resource Trade -----------------------------------------------------
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-lumber",
