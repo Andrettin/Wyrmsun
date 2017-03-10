@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2013-2016 by Andrettin
+--      (c) Copyright 2013-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -1253,9 +1253,18 @@ function CreateNeutralBuildings(building_type, building_number, min_x, max_x, mi
 		local Count = 0
 		Count = building_number
 		local WhileCount = 0
+		local building_player
+		if (building_type == "unit-mercenary-camp") then
+			building_player = FindUnusedPlayerSlot()
+			Players[building_player].Type = PlayerComputer
+			SetPlayerData(building_player, "RaceName", "dwarf")
+			SetPlayerData(building_player, "Faction", "surghan-mercenaries")
+		else
+			building_player = PlayerNumNeutral
+		end
 		while (Count > 0 and WhileCount < building_number * 100) do
 			local building_spawn_point = FindAppropriateNeutralBuildingSpawnPoint(building_type, min_x, max_x, min_y, max_y, symmetric)
-			unit = CreateUnit(building_type, PlayerNumNeutral, {building_spawn_point[1], building_spawn_point[2]})
+			unit = CreateUnit(building_type, building_player, {building_spawn_point[1], building_spawn_point[2]})
 			Count = Count - 1
 			if (symmetric) then
 				local mirrored_tile_x = building_spawn_point[1] + 1 - 128
@@ -1268,13 +1277,13 @@ function CreateNeutralBuildings(building_type, building_number, min_x, max_x, mi
 					mirrored_tile_y = mirrored_tile_y * -1
 				end
 
-				unit = CreateUnit(building_type, PlayerNumNeutral, {mirrored_tile_x - (GetUnitTypeData(building_type, "TileWidth") - 1), building_spawn_point[2]})
+				unit = CreateUnit(building_type, building_player, {mirrored_tile_x - (GetUnitTypeData(building_type, "TileWidth") - 1), building_spawn_point[2]})
 				Count = Count - 1
 
-				unit = CreateUnit(building_type, PlayerNumNeutral, {building_spawn_point[1], mirrored_tile_y - (GetUnitTypeData(building_type, "TileHeight") - 1)})
+				unit = CreateUnit(building_type, building_player, {building_spawn_point[1], mirrored_tile_y - (GetUnitTypeData(building_type, "TileHeight") - 1)})
 				Count = Count - 1
 
-				unit = CreateUnit(building_type, PlayerNumNeutral, {mirrored_tile_x - (GetUnitTypeData(building_type, "TileWidth") - 1), mirrored_tile_y - (GetUnitTypeData(building_type, "TileHeight") - 1)})
+				unit = CreateUnit(building_type, building_player, {mirrored_tile_x - (GetUnitTypeData(building_type, "TileWidth") - 1), mirrored_tile_y - (GetUnitTypeData(building_type, "TileHeight") - 1)})
 				Count = Count - 1
 			end
 			WhileCount = WhileCount + 1

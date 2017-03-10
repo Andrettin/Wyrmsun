@@ -109,7 +109,6 @@ local land_funcs = {
 	end
   end,
   function() return AiAttackWithForce(1) end,
-  function() return AiSet("unit-surghan-mercenary-steelclad", 4) end, -- make the AI build mercenaries if it manages to get ahold of a mercenary camp
 
 -- PREPARING FIRST SERIOUS ATTACK
 

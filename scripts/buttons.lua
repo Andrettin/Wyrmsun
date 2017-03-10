@@ -225,6 +225,7 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-level-up",
 		"unit-dwarven-guard",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
 		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
+		"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
 		"unit-dwarven-witness",
 		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",
 		"unit-germanic-spearman", "unit-germanic-archer",
@@ -241,8 +242,7 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-level-up",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shadowstalker", "unit-goblin-shaman",
 		"unit-kobold-footpad",
 		"unit-ettin",
-		"unit-elven-swordsman", "unit-elven-priest",
-		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
+		"unit-elven-swordsman", "unit-elven-priest"
 	}
 } )
 
@@ -341,6 +341,7 @@ DefineButton( { Pos = 5, Level = 2, Icon = "icon-critical-strike",
 		"unit-dwarven-guard",
 		"unit-dwarven-yale-lord",
 		"unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
+		"unit-surghan-mercenary-thane",
 		"unit-germanic-chieftain", "unit-germanic-spearman", "unit-germanic-archer",
 		"unit-teuton-heroic-swordsman", "unit-frank-heroic-swordsman",
 		"unit-teuton-spearman", "unit-frank-spearman",
@@ -349,8 +350,7 @@ DefineButton( { Pos = 5, Level = 2, Icon = "icon-critical-strike",
 		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-shadowstalker",
 		"unit-kobold-footpad",
 		"unit-ettin",
-		"unit-elven-swordsman",
-		"unit-surghan-mercenary-thane"
+		"unit-elven-swordsman"
 	}
 } )
 
@@ -362,6 +362,7 @@ DefineButton( { Pos = 5, Level = 2, Icon = "icon-deadly-precision",
 		"unit-dwarven-thane",
 		"unit-dwarven-guard",
 		"unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
+		"unit-surghan-mercenary-thane",
 		"unit-germanic-chieftain", "unit-germanic-spearman", "unit-germanic-archer",
 		"unit-teuton-heroic-swordsman", "unit-frank-heroic-swordsman",
 		"unit-teuton-spearman", "unit-frank-spearman",
@@ -370,8 +371,7 @@ DefineButton( { Pos = 5, Level = 2, Icon = "icon-deadly-precision",
 		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-shadowstalker",
 		"unit-kobold-footpad",
 		"unit-ettin",
-		"unit-elven-swordsman",
-		"unit-surghan-mercenary-thane"
+		"unit-elven-swordsman"
 	}
 } )
 
@@ -384,6 +384,7 @@ DefineButton( { Pos = 6, Level = 2, Icon = "icon-eagle-eye",
 		"unit-dwarven-guard",
 		"unit-dwarven-yale-lord",
 		"unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
+		"unit-surghan-mercenary-thane",
 		"unit-germanic-chieftain", "unit-germanic-spearman", "unit-germanic-archer",
 		"unit-teuton-heroic-swordsman", "unit-frank-heroic-swordsman",
 		"unit-teuton-spearman", "unit-frank-spearman",
@@ -392,8 +393,7 @@ DefineButton( { Pos = 6, Level = 2, Icon = "icon-eagle-eye",
 		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-shadowstalker",
 		"unit-kobold-footpad",
 		"unit-ettin",
-		"unit-elven-swordsman",
-		"unit-surghan-mercenary-thane"
+		"unit-elven-swordsman"
 	}
 } )
 
@@ -404,6 +404,7 @@ DefineButton( { Pos = 7, Level = 2, Icon = "icon-stun",
 	ForUnit = {
 		"unit-dwarven-thane",
 		"unit-dwarven-yale-lord",
+		"unit-surghan-mercenary-thane",
 		"unit-elven-swordsman",
 		"unit-germanic-chieftain",
 		"unit-teuton-heroic-swordsman", "unit-frank-heroic-swordsman",
@@ -412,8 +413,7 @@ DefineButton( { Pos = 7, Level = 2, Icon = "icon-stun",
 		"unit-goblin-warlord",
 		"unit-kobold-footpad",
 		"unit-ettin",
-		"unit-elven-swordsman",
-		"unit-surghan-mercenary-thane"
+		"unit-elven-swordsman"
 	}
 } )
 
@@ -461,13 +461,13 @@ DefineButton( { Pos = 9, Level = 2, Icon = "icon-leadership",
 	Key = "l", Hint = "Learn ~!Leadership Aura", Popup = "popup-commands",
 	Description = "Leadership Aura is an aura ability that increases the damage of nearby friendly units by 10%",
 	ForUnit = {
-		"unit-germanic-chieftain",
-		"unit-teuton-heroic-swordsman", "unit-frank-heroic-swordsman",
 		"unit-dwarven-thane",
 		"unit-dwarven-yale-lord",
+		"unit-surghan-mercenary-thane",
+		"unit-germanic-chieftain",
+		"unit-teuton-heroic-swordsman", "unit-frank-heroic-swordsman",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms",
-		"unit-ettin",
-		"unit-surghan-mercenary-thane"
+		"unit-ettin"
 	}
 } )
 
@@ -483,6 +483,7 @@ DefineButton( { Pos = 13, Level = 2, Icon = "icon-ethereal-vision",
 		"unit-dwarven-yale-lord",
 		"unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
 --		"unit-dwarven-witness",
+		"unit-surghan-mercenary-thane",
 --		"unit-germanic-chieftain", "unit-germanic-spearman", "unit-germanic-archer",
 		"unit-germanic-priest",
 --		"unit-teuton-heroic-swordsman", "unit-frank-heroic-swordsman",
@@ -497,8 +498,7 @@ DefineButton( { Pos = 13, Level = 2, Icon = "icon-ethereal-vision",
 --		"unit-goblin-shaman",
 --		"unit-kobold-footpad",
 		"unit-ettin",
---		"unit-elven-swordsman", "unit-elven-priest",
-		"unit-surghan-mercenary-thane"
+--		"unit-elven-swordsman", "unit-elven-priest"
 	}
 } )
 --]]
@@ -530,6 +530,7 @@ DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
 		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
 		"unit-dwarven-witness",
+		"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",
 		"unit-germanic-spearman", "unit-germanic-archer",
@@ -547,8 +548,7 @@ DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shadowstalker", "unit-goblin-shaman",
 		"unit-kobold-footpad",
 		"unit-ettin",
-		"unit-elven-swordsman", "unit-elven-priest",
-		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
+		"unit-elven-swordsman", "unit-elven-priest"
 	} 
 } )
 
@@ -565,6 +565,7 @@ DefineButton( { Pos = 14, Level = 0, Icon = "icon-inventory",
 		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
 		"unit-dwarven-witness",
 		"unit-dwarven-gryphon-rider",
+		"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
 		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",
 		"unit-germanic-spearman", "unit-germanic-archer",
 		"unit-germanic-priest",
@@ -580,8 +581,7 @@ DefineButton( { Pos = 14, Level = 0, Icon = "icon-inventory",
 		"unit-kobold-footpad",
 		"unit-wyrm",
 		"unit-ettin",
-		"unit-elven-swordsman", "unit-elven-priest",
-		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
+		"unit-elven-swordsman", "unit-elven-priest"
 	}
 } )
 
@@ -608,6 +608,7 @@ DefineButton( { Pos = 16, Level = 3, Icon = "icon-cancel",
 		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
 		"unit-dwarven-witness",
 		"unit-dwarven-gryphon-rider",
+		"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
 		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",
 		"unit-germanic-spearman", "unit-germanic-archer",
 		"unit-germanic-priest",
@@ -623,8 +624,7 @@ DefineButton( { Pos = 16, Level = 3, Icon = "icon-cancel",
 		"unit-kobold-footpad",
 		"unit-wyrm",
 		"unit-ettin",
-		"unit-elven-swordsman", "unit-elven-priest",
-		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
+		"unit-elven-swordsman", "unit-elven-priest"
 	} 
 } )
 
@@ -665,14 +665,14 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-stun",
 	ForUnit = {
 		"unit-dwarven-thane",
 		"unit-dwarven-yale-lord",
+		"unit-surghan-mercenary-thane",
 		"unit-elven-swordsman",
 		"unit-germanic-chieftain",
 		"unit-teuton-heroic-swordsman", "unit-frank-heroic-swordsman", "unit-teuton-knight-lord", "unit-frank-knight-lord",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
 		"unit-goblin-warlord",
 		"unit-kobold-footpad",
-		"unit-ettin",
-		"unit-surghan-mercenary-thane"
+		"unit-ettin"
 	}
 })
 

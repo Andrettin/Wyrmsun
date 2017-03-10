@@ -25,6 +25,10 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineUpgrade("upgrade-dwarven-civilization", {
+	Name = "Dwarven Civilization"
+})
+
 DefineUpgrade("upgrade-dwarven-broad-axe", {
 	Parent = "upgrade-broad-axe",
 	Icon = "icon-dwarven-broad-axe",
@@ -159,7 +163,7 @@ DefineModifier("upgrade-dwarven-broad-axe",
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
 	{"apply-to", "unit-dwarven-yale-rider"}, {"apply-to", "unit-dwarven-yale-lord"},
 	{"apply-to", "unit-brising-militia"},
-	{"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
+	{"apply-to", "unit-surghan-mercenary-axefighter"}, {"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
 )
 
 DefineModifier("upgrade-dwarven-great-axe",
@@ -169,7 +173,7 @@ DefineModifier("upgrade-dwarven-great-axe",
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
 	{"apply-to", "unit-dwarven-yale-rider"}, {"apply-to", "unit-dwarven-yale-lord"},
 	{"apply-to", "unit-brising-militia"},
-	{"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
+	{"apply-to", "unit-surghan-mercenary-axefighter"}, {"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
 )
 
 DefineModifier("upgrade-dwarven-long-spear",
@@ -192,7 +196,7 @@ DefineModifier("upgrade-dwarven-shield-1",
 	{"apply-to", "unit-dwarven-guard"},
 	{"apply-to", "unit-dwarven-yale-rider"}, {"apply-to", "unit-dwarven-yale-lord"},
 	{"apply-to", "unit-brising-militia"},
-	{"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
+	{"apply-to", "unit-surghan-mercenary-axefighter"}, {"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
 )
 
 DefineModifier("upgrade-dwarven-shield-2",
@@ -203,7 +207,7 @@ DefineModifier("upgrade-dwarven-shield-2",
 	{"apply-to", "unit-dwarven-guard"},
 	{"apply-to", "unit-dwarven-yale-rider"}, {"apply-to", "unit-dwarven-yale-lord"},
 	{"apply-to", "unit-brising-militia"},
-	{"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
+	{"apply-to", "unit-surghan-mercenary-axefighter"}, {"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
 )
 
 DefineModifier("upgrade-dwarven-sharp-throwing-axe",
@@ -286,8 +290,24 @@ DefineModifier("upgrade-dwarven-alchemy",
 
 Load("scripts/civilizations/dwarf/upgrade_faction.lua")
 
+DefinePredependency("unit-dwarven-axefighter",
+	{"upgrade-dwarven-civilization", "upgrade-faction-surghan-mercenaries", 0}
+)
+
+DefinePredependency("unit-surghan-mercenary-axefighter",
+	{"upgrade-faction-surghan-mercenaries"}
+)
+
+DefinePredependency("unit-dwarven-guard",
+	{"upgrade-dwarven-civilization"}
+)
+
+DefinePredependency("unit-dwarven-scout",
+	{"upgrade-dwarven-civilization"}
+)
+
 DefineDependency("unit-dwarven-scout",
-	{"unit-dwarven-lumber-mill"}
+	{"unit-dwarven-lumber-mill"}, "or", {"upgrade-mercenary-company"}
 )
 
 DefineDependency("upgrade-dwarven-great-axe",
@@ -334,8 +354,12 @@ DefineDependency("unit-dwarven-guard-tower",
 	{"unit-dwarven-lumber-mill", "upgrade-dwarven-masonry"}
 )
 
+DefinePredependency("unit-dwarven-ballista",
+	{"upgrade-dwarven-civilization"}
+)
+
 DefineDependency("unit-dwarven-ballista",
-	{"unit-dwarven-smithy", "unit-dwarven-lumber-mill"}, "or", {"unit-brising-smithy", "unit-dwarven-lumber-mill"}
+	{"unit-dwarven-smithy", "unit-dwarven-lumber-mill"}, "or", {"unit-brising-smithy", "unit-dwarven-lumber-mill"}, "or", {"upgrade-mercenary-company"}
 )
 
 DefinePredependency("unit-dwarven-yale-pen",
@@ -354,8 +378,12 @@ DefineDependency("unit-joruvellir-yale-pen",
 	{"unit-dwarven-lumber-mill"}
 )
 
+DefinePredependency("unit-dwarven-yale-rider",
+	{"upgrade-dwarven-civilization"}
+)
+
 DefineDependency("unit-dwarven-yale-rider",
-	{"unit-dwarven-smithy", "unit-dwarven-yale-pen"}, "or", {"unit-brising-smithy", "unit-dwarven-yale-pen"}, "or", {"unit-dwarven-smithy", "unit-joruvellir-yale-pen"}
+	{"unit-dwarven-smithy", "unit-dwarven-yale-pen"}, "or", {"unit-brising-smithy", "unit-dwarven-yale-pen"}, "or", {"unit-dwarven-smithy", "unit-joruvellir-yale-pen"}, "or", {"upgrade-mercenary-company"}
 )
 
 DefineDependency("unit-dwarven-temple",
@@ -379,7 +407,7 @@ DefineDependency("unit-dwarven-transport-ship",
 )
 
 DefineDependency("unit-dwarven-gryphon-rider",
-	{"unit-dwarven-stronghold", "unit-dwarven-lumber-mill"}
+	{"unit-dwarven-stronghold", "unit-dwarven-lumber-mill"}, "or", {"upgrade-mercenary-company"}
 )
 
 DefinePredependency("unit-dwarven-miner",

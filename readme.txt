@@ -62,6 +62,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Buildings
 - Added Market buildings for the Dwarves, Germanics, Goblins and Teutons (graphics by Jinn). Markets allow trading resources.
+- Mercenary Camps are now owned by mercenary company neutral factions.
 
 * Factions
 - Fixed issue which prevented the Angle Tribe and Jute Tribe factions from being formable via the "Found a Faction" submenu.
@@ -71,6 +72,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Workers can now build roads, which increase movement speed by 25% (road graphics by Jinn). Roads require Masonry.
+- The Surghan Mercenary portraits are now used for Axefighters, Steelclads and Stonelords hired from the Surghan Mercenaries faction. Dwarven custom heroes can now be a Surghan Axefighter.
 
 * Upgrades
 - The buttons for upgrades that have already been researched now show up, grayed.

@@ -82,28 +82,25 @@ function RunEncyclopediaMenu()
 	menu:addFullButton(_("Magic ~!Suffixes"), "s", offx + 208 + (113 * -1), offy + 104 + 36*8,
 		function() RunEncyclopediaUnitsMenu("item_suffixes") end)
 
-	menu:addFullButton(_("~!Mercenaries"), "m", offx + 208 + (113 * 1), offy + 104 + 36*-1,
-		function() RunEncyclopediaUnitsMenu("mercenaries") end)
-
-	menu:addFullButton(_("P~!lanes"), "l", offx + 208 + (113 * 1), offy + 104 + 36*0,
+	menu:addFullButton(_("P~!lanes"), "l", offx + 208 + (113 * 1), offy + 104 + 36*-1,
 		function() RunEncyclopediaPlanesMenu() end)
 
-	menu:addFullButton(_("Runic Suffix~!es"), "e", offx + 208 + (113 * 1), offy + 104 + 36*1,
+	menu:addFullButton(_("Runic Suffix~!es"), "e", offx + 208 + (113 * 1), offy + 104 + 36*0,
 		function() RunEncyclopediaUnitsMenu("runic_suffixes") end)
 
-	menu:addFullButton(_("~!Technologies"), "t", offx + 208 + (113 * 1), offy + 104 + 36*2,
+	menu:addFullButton(_("~!Technologies"), "t", offx + 208 + (113 * 1), offy + 104 + 36*1,
 		function() RunEncyclopediaUnitsCivilizationMenu("technologies") end)
 
-	menu:addFullButton(_("Te~!xts"), "x", offx + 208 + (113 * 1), offy + 104 + 36*3,
+	menu:addFullButton(_("Te~!xts"), "x", offx + 208 + (113 * 1), offy + 104 + 36*2,
 		function() RunEncyclopediaTextsMenu() end)
 
-	menu:addFullButton(_("U~!niques"), "n", offx + 208 + (113 * 1), offy + 104 + 36*4,
+	menu:addFullButton(_("U~!niques"), "n", offx + 208 + (113 * 1), offy + 104 + 36*3,
 		function() RunEncyclopediaUnitsMenu("unique_items") end)
 
-	menu:addFullButton(_("~!Units"), "u", offx + 208 + (113 * 1), offy + 104 + 36*5,
+	menu:addFullButton(_("~!Units"), "u", offx + 208 + (113 * 1), offy + 104 + 36*4,
 		function() RunEncyclopediaUnitsMenu("units") end)
 
-	menu:addFullButton(_("~!Worlds"), "w", offx + 208 + (113 * 1), offy + 104 + 36*6,
+	menu:addFullButton(_("~!Worlds"), "w", offx + 208 + (113 * 1), offy + 104 + 36*5,
 		function() RunEncyclopediaWorldsMenu() end)
 
 	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
@@ -158,7 +155,6 @@ function RunEncyclopediaUnitsCivilizationMenu(state)
 					)
 					and string.find(unitName, "template") == nil
 					and GetUnitTypeData(unitName, "Building") == (state == "buildings")
-					and (GetUnitTypeData(unitName, "Mercenary") and GetUnitTypeData(unitName, "Building") == false) == (state == "mercenaries")
 					and GetUnitTypeData(unitName, "Item") == (state == "items")
 				) then
 					local element_civilization = GetUnitTypeData(unitName, "Civilization")
@@ -262,8 +258,6 @@ function RunEncyclopediaUnitsCivilizationMenu(state)
 		menu:addLabel("~<Encyclopedia: Heroes~>", offx + 320, offy + 104 + 36*-2)
 	elseif (state == "deities") then
 		menu:addLabel("~<Encyclopedia: Deities~>", offx + 320, offy + 104 + 36*-2)
-	elseif (state == "mercenaries") then
-		menu:addLabel("~<Encyclopedia: Mercenaries~>", offx + 320, offy + 104 + 36*-2)
 	elseif (state == "unique_items") then
 		menu:addLabel("~<Encyclopedia: Uniques~>", offx + 320, offy + 104 + 36*-2)
 	end
@@ -306,7 +300,6 @@ function RunEncyclopediaUnitsMenu(state, civilization)
 					)
 					and string.find(unitName, "template") == nil
 					and GetUnitTypeData(unitName, "Building") == (state == "buildings")
-					and (GetUnitTypeData(unitName, "Mercenary") and GetUnitTypeData(unitName, "Building") == false) == (state == "mercenaries")
 					and GetUnitTypeData(unitName, "Item") == (state == "items")
 				) then
 					addEncyclopediaIcon(unitName, state, menu, offx + 23 + 4 + (54 * icon_x), offy + 10 + 4 + (46 * (icon_y + 1)))
@@ -439,8 +432,6 @@ function RunEncyclopediaUnitsMenu(state, civilization)
 		menu:addLabel("~<Encyclopedia: Heroes~>", offx + 320, offy + 104 + 36*-2)
 	elseif (state == "deities") then
 		menu:addLabel("~<Encyclopedia: Deities~>", offx + 320, offy + 104 + 36*-2)
-	elseif (state == "mercenaries") then
-		menu:addLabel("~<Encyclopedia: Mercenaries~>", offx + 320, offy + 104 + 36*-2)
 	elseif (state == "unique_items") then
 		menu:addLabel("~<Encyclopedia: Uniques~>", offx + 320, offy + 104 + 36*-2)
 	end

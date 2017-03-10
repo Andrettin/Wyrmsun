@@ -104,6 +104,8 @@ DefineFaction("shorbear-clan", {
 	HistoricalFactionDerivations = {-1, "dwarf", "brising-clan"}
 })
 
+-- Polities
+
 DefineFaction("joruvellir", {
 	Name = "Joruvellir",
 	ParentFaction = "eikinskjaldi-clan",
@@ -203,4 +205,17 @@ DefineFaction("lyr", {
 		400, "upgrade-dwarven-runewriting", true, -- polities require writing
 		534, "upgrade-dwarven-iron-tipped-wood-plow", true -- Mushroom Farms existent in Knalga (so possibly also in other polities)
 	}
+})
+
+-- Mercenary Companies
+
+DefineFaction("surghan-mercenaries", {
+	Name = "Surghan Mercenaries",
+	Civilization = "dwarf",
+	Type = "mercenary-company",
+	Colors = {"blue"},
+	DefaultTier = "duchy",
+	FactionUpgrade = "upgrade-faction-surghan-mercenaries",
+	Description = "These scoundrels will hire their axes to the largest bidder, no questions asked. They have participated in a number of engagements, the most dangerous of which was the pursuit of a group of dwarves into the lair of the wyrm Svafnir and beyond.",
+	Quote = "\"It must be one of those Surghan mercenaries. I'll bet those Shinsplitters have hired more of them. That's bad news for us, for they are deadly, combat-hardened warriors.\"\n- Baglur, Retired Norlund Warrior"
 })

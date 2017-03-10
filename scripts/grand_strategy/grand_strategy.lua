@@ -511,9 +511,6 @@ function EndTurn()
 		-- construct buildings, train units and move heroes
 		for i, unitName in ipairs(Units) do
 			if (IsMilitaryUnit(unitName)) then
-				if (GetUnitTypeData(unitName, "Mercenary") and GetProvinceUnderConstructionUnitQuantity(WorldMapProvinces[key].Name, unitName) > 0) then -- if a mercenary group is hired, disable hiring them permanently
-					MercenaryGroups[string.gsub(unitName, "-", "_")] = nil
-				end
 				if (GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) < 0) then
 					SetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName, 0)
 				end
@@ -2617,24 +2614,6 @@ function DrawGrandStrategyInterface()
 								item_x = 0
 								item_y = item_y + 1
 							end
-						end
-					end
-				end
-				
-				-- add units buttons for hiring specific mercenary groups
-				item_x = 0
-				item_y = 1
-				for i, unitName in ipairs(Units) do
-					if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Mercenary") and IsMercenaryAvailableForHiring(SelectedProvince, unitName)) then -- the unit's copper cost is required to be more than 0 to avoid upgraded versions of the same mercenary group to be available for hiring as well
-						local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
-						local icon_offset_y = Video.Height - 186 + 13 + (item_y * 47) + 19 + 4
-
-						AddGrandStrategyMercenaryButton(icon_offset_x, icon_offset_y, unitName)
-							
-						item_x = item_x + 1
-						if (item_x > 3) then
-							item_x = 0
-							item_y = item_y + 1
 						end
 					end
 				end

@@ -1289,12 +1289,6 @@ if not (ui_loaded_first_time) then
 					More = {"Variable", {Text = Concat(_("Settlement: "), UnitSettlementName("Unit")), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				--]]
-				{ 	Condition = {Mercenary = "only", ButtonAction = "train-unit"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Troop Quantity: "), String(TypeTrainQuantity("Type"))), Font = wyr.preferences.PopupDescriptionFont}}
-				},
-				{ 	Condition = {Mercenary = "only", ButtonAction = "editor-unit"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Troop Quantity: "), String(TypeTrainQuantity("Type"))), Font = wyr.preferences.PopupDescriptionFont}}
-				},
 				{ 	Condition = {HitPoints = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Hit Points:"), " "), Variable = "HitPoints", Font = wyr.preferences.PopupDescriptionFont}}
 				},

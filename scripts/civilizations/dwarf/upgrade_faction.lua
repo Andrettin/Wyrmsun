@@ -79,6 +79,11 @@ DefineUpgrade("upgrade-faction-lyr", {
 	RequirementsString = "Writing and Masonry"
 })
 
+DefineUpgrade("upgrade-faction-surghan-mercenaries", {
+	Name = "Surghan Mercenaries",
+	EffectsString = "+2 Damage for Axefighters"
+})
+
 DefineModifier("upgrade-faction-brising-clan",
 	{"BasicDamage", 1},
 	{"Points", 5},
@@ -236,6 +241,18 @@ DefineModifier("upgrade-faction-lyr", -- dummy upgrade modifier to trigger the v
 
 DefineModifier("upgrade-faction-lyr",
 	{"change-faction-to", "lyr"}
+)
+
+DefineModifier("upgrade-faction-surghan-mercenaries",
+	{"apply-to", "unit-dwarven-axefighter"}, {"convert-to", "unit-surghan-mercenary-axefighter"}
+)
+
+DefineModifier("upgrade-faction-surghan-mercenaries",
+	{"apply-to", "unit-dwarven-steelclad"}, {"convert-to", "unit-surghan-mercenary-steelclad"}
+)
+
+DefineModifier("upgrade-faction-surghan-mercenaries",
+	{"apply-to", "unit-dwarven-thane"}, {"convert-to", "unit-surghan-mercenary-thane"}
 )
 
 DefinePredependency("upgrade-faction-eikinskjaldi-clan",

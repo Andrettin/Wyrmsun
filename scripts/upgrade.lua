@@ -230,87 +230,8 @@ DefineUpgrade("upgrade-printing-press", {
 	GrandStrategyProductionEfficiencyModifier = {"research", 25}
 })
 
--- Faction Type Upgrades
-
-DefineUpgrade("upgrade-holy-order", {
-	Name = "Holy Order"
-})
-
-DefineUpgrade("upgrade-mercenary-company", {
-	Name = "Mercenary Company"
-})
-
-DefineUpgrade("upgrade-trading-company", {
-	Name = "Trading Company"
-})
-
-DefineModifier("upgrade-holy-order", -- holy orders' temples produce food, to allow them to train units despite not having farms
-	{"Supply", 4},
-	{"apply-to", "unit-germanic-temple"}, {"apply-to", "unit-teuton-temple"},
-	{"apply-to", "unit-dwarven-temple"},
-	{"apply-to", "unit-goblin-temple"}
-)
-
-DefineModifier("upgrade-holy-order", -- holy orders' temples "regenerate", since they aren't supposed to have workers to repair them
-	{"HitPoints", 1, "Increase"},
-	{"apply-to", "unit-germanic-temple"}, {"apply-to", "unit-teuton-temple"},
-	{"apply-to", "unit-dwarven-temple"},
-	{"apply-to", "unit-goblin-temple"}
-)
-
-DefineModifier("upgrade-holy-order", -- holy orders' temples have a unit stock for priests
-	{"unit-stock", "unit-germanic-priest", 2},
-	{"apply-to", "unit-germanic-temple"}
-)
-
-DefineModifier("upgrade-holy-order", -- holy orders' temples have a unit stock for priests
-	{"unit-stock", "unit-teuton-priest", 2},
-	{"apply-to", "unit-teuton-temple"}
-)
-
-DefineModifier("upgrade-holy-order", -- holy orders' temples have a unit stock for priests
-	{"unit-stock", "unit-dwarven-witness", 2},
-	{"apply-to", "unit-dwarven-temple"}
-)
-
-DefineModifier("upgrade-holy-order", -- holy orders' temples have a unit stock for priests
-	{"unit-stock", "unit-goblin-shaman", 2},
-	{"apply-to", "unit-goblin-temple"}
-)
-
-DefineModifier("upgrade-mercenary-company", -- mercenary companies' mercenary camps produce food, to allow them to train units despite not having farms
-	{"Supply", 8},
-	{"apply-to", "unit-mercenary-camp"}
-)
-
-DefineModifier("upgrade-mercenary-company", -- mercenary companies' mercenary camps "regenerate", since they aren't supposed to have workers to repair them
-	{"HitPoints", 1, "Increase"},
-	{"apply-to", "unit-mercenary-camp"}
-)
-
-DefineModifier("upgrade-trading-company", -- trading companies' docks produce food, to allow them to build ships despite not having farms
-	{"Supply", 8},
-	{"apply-to", "unit-germanic-market"}, {"apply-to", "unit-teuton-market"},
-	{"apply-to", "unit-dwarven-market"},
-	{"apply-to", "unit-goblin-market"},
-	{"apply-to", "unit-germanic-dock"}, {"apply-to", "unit-teuton-dock"},
-	{"apply-to", "unit-dwarven-dock"},
-	{"apply-to", "unit-goblin-dock"}
-)
-
-DefineModifier("upgrade-trading-company", -- trading companies' caravans, ships and docks "regenerate", since they aren't supposed to have workers to repair them
-	{"HitPoints", 1, "Increase"},
-	{"apply-to", "unit-gnomish-caravan"},
-	{"apply-to", "unit-germanic-transport-ship"}, {"apply-to", "unit-teuton-kogge"},
-	{"apply-to", "unit-dwarven-transport-ship"},
-	{"apply-to", "unit-goblin-transport-ship"},
-	{"apply-to", "unit-germanic-market"}, {"apply-to", "unit-teuton-market"},
-	{"apply-to", "unit-dwarven-market"},
-	{"apply-to", "unit-goblin-market"},
-	{"apply-to", "unit-germanic-dock"}, {"apply-to", "unit-teuton-dock"},
-	{"apply-to", "unit-dwarven-dock"},
-	{"apply-to", "unit-goblin-dock"}
-)
+-- Load the faction type upgrades
+Load("scripts/upgrade_faction_types.lua")
 
 -- Load the deity upgrades
 Load("scripts/upgrade_deities.lua")
@@ -326,6 +247,7 @@ Load("scripts/civilizations/anglo_saxon/upgrade.lua")
 Load("scripts/civilizations/frankish/upgrade.lua")
 Load("scripts/civilizations/gnome/upgrade.lua")
 Load("scripts/civilizations/goblin/upgrade.lua")
+Load("scripts/civilizations/kobold/upgrade.lua")
 Load("scripts/civilizations/latin/upgrade.lua")
 Load("scripts/civilizations/suebi/upgrade.lua")
 Load("scripts/civilizations/teuton/upgrade.lua")

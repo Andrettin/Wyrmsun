@@ -25,11 +25,15 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineUpgrade("upgrade-goblin-civilization", {
+	Name = "Goblin Civilization"
+})
+
 DefineUpgrade("upgrade-goblin-broad-sword", {
 	Parent = "upgrade-broad-sword",
 	Icon = "icon-goblin-broad-sword",
 	Civilization = "goblin",
-	Description = _("Made for swift and lethal attacks, goblin broad swords leave bitter memories in raided settlements.\n\nEffect: +2 Damage for Swordsmen, Barbarians and Warlords."),
+	Description = "Made for swift and lethal attacks, goblin broad swords leave bitter memories in raided settlements.\n\nEffect: +2 Damage for Swordsmen, Barbarians and Warlords.",
 	Item = "unit-goblin-broad-sword"
 })
 
@@ -141,6 +145,11 @@ DefineUpgrade("upgrade-goblin-alchemy", {
 	Civilization = "goblin",
 	Description = _("Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Archers and Headhunters, +5 Fire Damage for War Machines.")
 })
+
+DefineModifier("upgrade-goblin-civilization",
+	{"unit-stock", "unit-goblin-thief", 6},
+	{"apply-to", "unit-mercenary-camp"}
+)
 
 DefineModifier("upgrade-goblin-broad-sword",
 	{"BasicDamage", 2},
@@ -280,6 +289,10 @@ DefineDependency("unit-goblin-guard-tower",
 
 DefineDependency("unit-goblin-war-machine",
 	{"unit-goblin-smithy", "unit-goblin-lumber-mill"}
+)
+
+DefinePredependency("unit-goblin-thief",
+	{"upgrade-goblin-civilization"}
 )
 
 DefineDependency("unit-goblin-glider",

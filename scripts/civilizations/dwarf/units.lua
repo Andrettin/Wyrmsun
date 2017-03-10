@@ -487,7 +487,7 @@ DefineUnitType("unit-dwarven-steelclad", {
 })
 
 DefineUnitType("unit-dwarven-thane", {
-	Name = _("Stonelord"),
+	Name = "Stonelord",
 	Parent = "unit-template-heroic-infantry",
 	Civilization = "dwarf",
 	Description = _("Clad in shining armor, these dwarves look like kings from under the mountains. They wield the axe with masterful skill, and though slow on their feet, these dwarves are a testament to the prowess of their kin. Stonelords can yield varied political power, ranging from local chiefs to rulers of realms. One of the first stonelords was Modsognir, the legendary chieftain who led his tribe against the perils of Svarinshaug."),
@@ -1343,17 +1343,72 @@ DefineUnitType("unit-dwarven-dock", {
 Load("scripts/civilizations/dwarf/units_joruvellir.lua")
 Load("scripts/civilizations/dwarf/units_brising.lua")
 
-DefineUnitType("unit-surghan-mercenary-steelclad", {
-	Name = _("Surghan Mercenary"),
-	Parent = "unit-dwarven-steelclad",
-	Class = "",
+DefineUnitType("unit-surghan-mercenary-axefighter", {
+	Parent = "unit-dwarven-axefighter",
 	Civilization = "dwarf",
-	Description = _("These scoundrels will hire their axes to the largest bidder, no questions asked. They have participated in a number of engagements, the most dangerous of which was the pursuit of a group of dwarves into the lair of the wyrm Svafnir and beyond."),
-	Quote = _("\"It must be one of those Surghan mercenaries. I'll bet those Shinsplitters have hired more of them. That's bad news for us, for they are deadly, combat-hardened warriors.\"\n- Baglur, Retired Norlund Warrior"),
-	Animations = "animations-dwarven-axefighter", Icon = "icon-surghan-mercenary-steelclad",
-	Costs = {"time", 0, "copper", 900, "lumber", 0},
-	TrainQuantity = 4,
-	Mercenary = true,
+	Faction = "surghan-mercenaries",
+	Description = "These scoundrels will hire their axes to the largest bidder, no questions asked. They have participated in a number of engagements, the most dangerous of which was the pursuit of a group of dwarves into the lair of the wyrm Svafnir and beyond.",
+	Quote = "\"It must be one of those Surghan mercenaries. I'll bet those Shinsplitters have hired more of them. That's bad news for us, for they are deadly, combat-hardened warriors.\"\n- Baglur, Retired Norlund Warrior",
+	Icon = "icon-surghan-mercenary-steelclad",
+	BasicDamage = 11, -- +2 damage
+	Points = 60, -- +10 points
+	Variations = {
+		{
+			"variation-id", "red-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"layer", "weapon",
+			"variation-id", "axe",
+			"upgrade-forbidden", "upgrade-dwarven-great-axe",
+			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-mining-pick",
+			"item-not-equipped", "unit-great-axe"
+		},
+		{
+			"layer", "weapon",
+			"variation-id", "double-axe",
+			"file", "dwarf/units/weapons/double_axe.png",
+			"upgrade-required", "upgrade-dwarven-great-axe",
+			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-mining-pick",
+			"item-equipped", "unit-great-axe"
+		},
+		{
+			"layer", "weapon",
+			"variation-id", "mace",
+			"file", "dwarf/units/weapons/mace.png",
+			"item-equipped", "unit-hammer",
+			"item-equipped", "unit-mining-pick"
+		},
+		{
+			"layer", "shield",
+			"variation-id", "round-shield",
+			"item-not-equipped", "unit-brising-round-shield"
+		},
+		{
+			"layer", "shield",
+			"variation-id", "round-shield",
+			"item-equipped", "unit-round-shield"
+		},
+		{
+			"layer", "shield",
+			"variation-id", "brising-round-shield",
+			"file", "dlcs/brising_faction_flair/graphics/units/brising_round_shield.png",
+			"item-equipped", "unit-brising-round-shield"
+		}
+	}
+} )
+
+DefineUnitType("unit-surghan-mercenary-steelclad", {
+	Parent = "unit-dwarven-steelclad",
+	Civilization = "dwarf",
+	Faction = "surghan-mercenaries",
+	Description = "These scoundrels will hire their axes to the largest bidder, no questions asked. They have participated in a number of engagements, the most dangerous of which was the pursuit of a group of dwarves into the lair of the wyrm Svafnir and beyond.",
+	Quote = "\"It must be one of those Surghan mercenaries. I'll bet those Shinsplitters have hired more of them. That's bad news for us, for they are deadly, combat-hardened warriors.\"\n- Baglur, Retired Norlund Warrior",
+	Icon = "icon-surghan-mercenary-steelclad",
+	BasicDamage = 12, -- +2 damage
+	Points = 85, -- +10 points
 	Variations = {
 		{
 			"variation-id", "red-hair",
@@ -1397,12 +1452,14 @@ DefineUnitType("unit-surghan-mercenary-steelclad", {
 	}
 } )
 
-DefineUnitType("unit-surghan-mercenary-thane", { Name = _("Surghan Mercenary"),
+DefineUnitType("unit-surghan-mercenary-thane", {
 	Parent = "unit-dwarven-thane",
-	Class = "",
 	Civilization = "dwarf",
-	Image = {"file", "dwarf/units/thane.png", "size", {72, 72}},
-	Animations = "animations-dwarven-axefighter", Icon = "icon-surghan-mercenary-thane",
-	Mercenary = true,
+	Faction = "surghan-mercenaries",
+	Description = "These scoundrels will hire their axes to the largest bidder, no questions asked. They have participated in a number of engagements, the most dangerous of which was the pursuit of a group of dwarves into the lair of the wyrm Svafnir and beyond.",
+	Quote = "\"It must be one of those Surghan mercenaries. I'll bet those Shinsplitters have hired more of them. That's bad news for us, for they are deadly, combat-hardened warriors.\"\n- Baglur, Retired Norlund Warrior",
+	Icon = "icon-surghan-mercenary-thane",
+	BasicDamage = 14, -- +2 damage
+	Points = 110, -- +10 points
 	Variations = {}
 } )

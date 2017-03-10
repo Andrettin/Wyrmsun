@@ -111,6 +111,7 @@ DefineCivilization("dwarf", {
 	DefaultColor = "red",
 	NegativeYearLabel = "BU", -- Before Untersberg
 	YearLabel = "YU", -- Years Untersberg
+	CivilizationUpgrade = "upgrade-dwarven-civilization",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
 		"stop", "icon-dwarven-shield-1",
@@ -1410,6 +1411,7 @@ DefineCivilization("goblin", {
 	DefaultColor = "teal",
 	NegativeYearLabel = "BU", -- Before Untersberg
 	YearLabel = "YU", -- Years Untersberg
+	CivilizationUpgrade = "upgrade-goblin-civilization",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
 		"stop", "icon-goblin-wooden-shield",
@@ -1469,6 +1471,7 @@ DefineCivilization("kobold", {
 	DefaultColor = "violet",
 	NegativeYearLabel = "BU", -- Before Untersberg
 	YearLabel = "YU", -- Years Untersberg
+	CivilizationUpgrade = "upgrade-kobold-civilization",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
 		"stop", "icon-goblin-wooden-shield",

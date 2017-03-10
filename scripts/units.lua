@@ -28,7 +28,7 @@
 UnitTypeFiles = {}
 
 Units = {
-	"upgrade-trading-company",
+	"upgrade-holy-order", "upgrade-mercenary-company", "upgrade-trading-company",
 	"unit-latin-town-hall", "unit-latin-farm", "unit-latin-barracks", "unit-latin-smithy", "unit-latin-stables",
 	"upgrade-latin-civilization",
 	"unit-germanic-worker", "unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain", "unit-germanic-spearman", "unit-germanic-archer",
@@ -90,6 +90,7 @@ Units = {
 	"upgrade-celt-civilization",
 	"upgrade-faction-norlund-clan", "upgrade-faction-shadowcharm-clan", "upgrade-faction-shinsplitter-clan", "upgrade-faction-shorbear-clan", 
 	"upgrade-faction-kal-kartha", "upgrade-faction-knalga",
+	"upgrade-dwarven-civilization",
 	"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner", "unit-dwarven-militia",
 	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
 	"unit-dwarven-guard",
@@ -115,6 +116,8 @@ Units = {
 	"unit-brising-smithy",
 	"upgrade-faction-eikinskjaldi-clan", "upgrade-faction-joruvellir",
 	"unit-joruvellir-yale-pen",
+	"upgrade-faction-surghan-mercenaries",
+	"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
 	"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist", "unit-gnomish-caravan",
 	"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
 	"unit-deep-gnomish-worker", "unit-deep-gnomish-recruit", "unit-deep-gnomish-duelist", "unit-deep-gnomish-master-at-arms", "unit-deep-gnomish-herbalist",
@@ -154,7 +157,6 @@ Units = {
 --	"unit-cavern-entrance",
 --	"unit-portal",
 	"unit-road",
-	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
 	"unit-carrots", "unit-cheese", "unit-wyrm-heart", "unit-potion-of-healing",
 	"upgrade-free-workers", "upgrade-serfdom",
 	"upgrade-deity-odin", "upgrade-deity-thor", "upgrade-deity-gathaarl",
@@ -3956,11 +3958,11 @@ DefineUnitType("unit-long-swordsman", { Name = _("Long Swordsman"),
 
 -- define the mercenary camp after the rest because it refers to unit types of the civilizations
 DefineUnitType("unit-mercenary-camp", {
-	Name = _("Mercenary Camp"),
+	Name = "Mercenary Camp",
 	Parent = "unit-template-building",
 	Civilization = "neutral",
 	Class = "mercenary-camp",
-	Description = _("This camp houses a number of mercenary groups, who offer their talents for hire."),
+	Description = "This camp houses a number of mercenary groups, who offer their talents for hire.",
 	Image = {"file", "neutral/buildings/mercenary_camp.png", "size", {96, 99}},
 	Shadow = {"file", "neutral/buildings/mercenary_camp_shadow.png", "size", {96, 99}},
 	NeutralMinimapColor = {192, 192, 192},
@@ -3983,7 +3985,7 @@ DefineUnitType("unit-mercenary-camp", {
 	BurnDamageRate = 1,
 	RecruitHeroes = true,
 	Trains = {"unit-goblin-thief", "unit-kobold-footpad"},
-	UnitStock = {"unit-goblin-thief", 6, "unit-kobold-footpad", 4},
+	UnitStock = {"unit-dwarven-axefighter", 4, "unit-surghan-mercenary-axefighter", 4, "unit-dwarven-guard", 4, "unit-dwarven-scout", 3, "unit-dwarven-yale-rider", 2, "unit-dwarven-ballista", 1, "unit-dwarven-gryphon-rider", 1, "unit-goblin-thief", 6, "unit-kobold-footpad", 4},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 		"selected", "click",

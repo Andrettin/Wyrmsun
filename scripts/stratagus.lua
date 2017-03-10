@@ -495,7 +495,7 @@ function StandardTriggers()
 					local uncount = 0
 					uncount = GetUnits(i)
 					for unit1 = 1,table.getn(uncount) do 
-						if ((GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-thane") and GetUnitVariable(uncount[unit1], "Idle")) then
+						if ((GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-axefighter" or GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-thane") and GetUnitVariable(uncount[unit1], "Idle")) then
 
 							local enemy_unit = nil
 

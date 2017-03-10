@@ -118,6 +118,9 @@ local land_funcs = {
 	"unit-dwarven-witness", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-dwarven-witness"),
 	"unit-dwarven-ballista", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-dwarven-ballista"),
 	"unit-dwarven-gryphon-rider", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-dwarven-gryphon-rider"),
+	"unit-surghan-mercenary-axefighter", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-surghan-mercenary-axefighter"),
+	"unit-surghan-mercenary-steelclad", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-surghan-mercenary-steelclad"),
+	"unit-surghan-mercenary-thane", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-surghan-mercenary-thane"),
 	"unit-gnomish-recruit", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-gnomish-recruit"),
 	"unit-gnomish-duelist", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-gnomish-duelist"),
 	"unit-gnomish-master-at-arms", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-gnomish-master-at-arms"),
@@ -144,9 +147,7 @@ local land_funcs = {
 	"unit-kobold-footpad", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-kobold-footpad"),
 	"unit-ettin", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-ettin"),
 	"unit-elven-swordsman", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-elven-swordsman"),
-	"unit-elven-priest", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-elven-priest"),
-	"unit-surghan-mercenary-steelclad", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-surghan-mercenary-steelclad"),
-	"unit-surghan-mercenary-thane", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-surghan-mercenary-thane")
+	"unit-elven-priest", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-elven-priest")
   }, true) end,
   function() return AiWaitForce(1) end,
   function() return AiAttackWithForce(1) end,
