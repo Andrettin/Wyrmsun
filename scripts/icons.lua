@@ -150,6 +150,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-furniture",
+	Size = {46, 38},
+	File = "neutral/icons/furniture.png"
+})
+
+DefineIcon({
 	Name = "icon-heater-shield",
 	Size = {46, 38},
 	File = "neutral/icons/heater_shield.png"
@@ -621,12 +627,6 @@ DefineIcon({
 	Name = "icon-table",
 	Size = {46, 38},
 	File = "neutral/icons/table.png"
-})
-
-DefineIcon({
-	Name = "icon-chair",
-	Size = {46, 38},
-	File = "neutral/icons/chair.png"
 })
 
 DefineIcon({

@@ -2152,9 +2152,10 @@ DefineUnitType("unit-table", { Name = _("Table"),
 	}
 } )
 
-DefineUnitType("unit-chair", { Name = _("Chair"),
+DefineUnitType("unit-chair", {
+	Name = "Chair",
 	Image = {"file", "neutral/decorations/chair.png", "size", {32, 32}},
-	Animations = "animations-chair", Icon = "icon-chair",
+	Animations = "animations-chair", Icon = "icon-furniture",
 	NeutralMinimapColor = {128, 128, 0},
 	Speed = 0,
 	HitPoints = 3,
