@@ -64,7 +64,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Market buildings for the Dwarves, Germanics, Goblins and Teutons (graphics by Jinn). Markets allow trading resources.
 - Mercenary Camps are now owned by mercenary company neutral factions.
 - Carpenter's Shops and Lumber Mills now have the option of allowing workers to produce the Furniture luxury resource in them, which is automatically sold if a Market is present.
-- Carpenter's Shops and Lumber Mills can now only be built within a certain distance of town halls.
+- Carpenter's Shops and Lumber Mills now cannot be built too close to town halls.
 
 * Factions
 - Fixed issue which prevented the Angle Tribe and Jute Tribe factions from being formable via the "Found a Faction" submenu.
