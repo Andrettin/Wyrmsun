@@ -244,7 +244,7 @@ DefineModifier("upgrade-goblin-coinage",
 )
 
 DefineModifier("upgrade-goblin-coinage",
-	{"TradeEfficiency", 15},
+	{"TradeCost", -15},
 	{"apply-to", "unit-goblin-market"}
 )
 

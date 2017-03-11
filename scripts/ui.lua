@@ -689,6 +689,14 @@ DefinePanelContents(
 		)}}
 	},
 
+	-- Trade Cost
+	{ Pos = {9, 103}, Condition = {ShowOpponent = false, TradeCost = "only", Build = "false"},
+		More = {"Text", {Text = "Trade Cost:"}}
+	},
+	{ Pos = {115, 103}, Condition = {ShowOpponent = false, TradeCost = "only", Build = "false"},
+		More = {"Text", {Text = Concat(String(ActiveUnitVar("TradeCost", "Value")), "%")}}
+	},
+	
 	-- Construction
 	{ Pos = {25, 152}, Condition = {ShowOpponent = false, HideNeutral = true, Build = "only"},
 		More = {"CompleteBar", {Variable = "Build", Width = 152, Height = 14, Border = false}}
@@ -1049,6 +1057,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {ButtonAction = "produce-resource"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Price: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "Prices", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {ButtonAction = "produce-resource", LuxuryResource = "only"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Demand: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "EffectiveResourceDemand", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				-- Resource Sell
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "sell-resource"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
@@ -1061,7 +1072,10 @@ if not (ui_loaded_first_time) then
 								" for ",
 								String(
 									Div(
-										Mul(PlayerData(ActiveUnitVar("Player", "Value"), "Prices", ResourceIdent("Resource")), ActiveUnitVar("TradeEfficiency")),
+										Mul(
+											PlayerData(ActiveUnitVar("Player", "Value"), "Prices", ResourceIdent("Resource")),
+											Sub(100, ActiveUnitVar("TradeCost"))
+										),
 										100
 									)
 								)
@@ -1077,7 +1091,7 @@ if not (ui_loaded_first_time) then
 					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Price: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "Prices", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {ButtonAction = "sell-resource"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = Concat("Trade Efficiency: ", Concat(String(ActiveUnitVar("TradeEfficiency")), "%")), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = Concat("Trade Cost: ", Concat(String(ActiveUnitVar("TradeCost")), "%")), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				-- Resource Buy
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "buy-resource"},
@@ -1098,7 +1112,7 @@ if not (ui_loaded_first_time) then
 												),
 												PlayerData(ActiveUnitVar("Player", "Value"), "Prices", ResourceIdent("Resource"))
 											),
-											ActiveUnitVar("TradeEfficiency")
+											Sub(100, ActiveUnitVar("TradeCost"))
 										),
 										100
 									)
@@ -1116,7 +1130,7 @@ if not (ui_loaded_first_time) then
 					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Price: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "Prices", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {ButtonAction = "buy-resource"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = Concat("Trade Efficiency: ", Concat(String(ActiveUnitVar("TradeEfficiency")), "%")), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = Concat("Trade Cost: ", Concat(String(ActiveUnitVar("TradeCost")), "%")), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				-- Move hint
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "move", Speed = "only"}, -- speed as a proxy for not being a building

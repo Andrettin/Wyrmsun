@@ -57,16 +57,20 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
-- 2.6.2
+- 2.7.0
 -----------------------------------------------------------------------
 
 * Buildings
 - Added Market buildings for the Dwarves, Germanics, Goblins and Teutons (graphics by Jinn). Markets allow trading resources.
 - Mercenary Camps are now owned by mercenary company neutral factions.
 - Carpenter's Shops and Lumber Mills now have the option of allowing workers to produce the Furniture luxury resource in them, which is automatically sold if a Market is present.
+- Carpenter's Shops and Lumber Mills can now only be built within a certain distance of town halls.
 
 * Factions
 - Fixed issue which prevented the Angle Tribe and Jute Tribe factions from being formable via the "Found a Faction" submenu.
+
+* Miscellaneous
+- Fixed crash which could occur when selecting more than 36 units at the same time.
 
 * Terrain
 - Fixed issue which caused cleared rock on dirt and dry mud to not be buildable upon.
@@ -77,7 +81,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Upgrades
 - The buttons for upgrades that have already been researched now show up, grayed.
-- Coinage now increases trade efficiency for markets.
+- Coinage now decreases trade cost for markets.
 - Added the "Serfdom" law upgrade (icon by Mrmo Tarius), which reduces worker cost but also productivity.
 - Added the "Free Workers" law upgrade (icon by Jinn), which is acquired by default and is incompatible with Serfdom (acquiring this upgrade removes Serfdom and vice-versa). The costs of this upgrade scale with quantity of workers owned.
 

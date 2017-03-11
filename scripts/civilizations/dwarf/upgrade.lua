@@ -260,7 +260,7 @@ DefineModifier("upgrade-dwarven-coinage",
 )
 
 DefineModifier("upgrade-dwarven-coinage",
-	{"TradeEfficiency", 15},
+	{"TradeCost", -15},
 	{"apply-to", "unit-dwarven-market"}
 )
 

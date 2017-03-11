@@ -174,8 +174,11 @@ end
 
 function DefineUnitType(unit_type, data)
 	local town_hall = false
+	local resource_mine = false
 	if (data.Class == "town-hall" or data.Class == "stronghold") then
 		town_hall = true
+	elseif ((data.GivesResource and data.BuildingRules == nil) or data.Class == "lumber-mill") then
+		resource_mine = true
 	end
 	
 	if (data.Parent ~= nil) then
@@ -183,6 +186,11 @@ function DefineUnitType(unit_type, data)
 		data.Parent = nil
 		if ((GetUnitTypeData(unit_type, "Class") == "town-hall" or GetUnitTypeData(unit_type, "Class") == "stronghold") and data.Class == nil) then
 			town_hall = true
+		elseif (
+			(GetUnitTypeData(unit_type, "GivesResource") ~= "" and data.GivesResource == nil and data.BuildingRules == nil)
+			or (GetUnitTypeData(unit_type, "Class") == "lumber-mill" and data.Class == nil)
+		) then
+			resource_mine = true
 		end
 	end
 	
@@ -200,7 +208,25 @@ function DefineUnitType(unit_type, data)
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-rock"},
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-deposit"},
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-mine"},
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine"}
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine"},
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-lumber-mill"},
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-carpenters-shop"},
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-lumber-mill"},
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-lumber-mill"}
+			}
+		}
+	elseif (resource_mine) then
+		data.BuildingRules = {
+			{
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall"},
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-stronghold"},
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-town-hall"},
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"},
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall"},
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-stronghold"},
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-latin-town-hall"},
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-town-hall"},
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-stronghold"}
 			}
 		}
 	end
@@ -315,19 +341,6 @@ DefineUnitType("unit-gold-deposit", { Name = _("Gold Deposit"),
 	Image = {"file", "neutral/buildings/gold_deposit.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/gold_deposit_shadow.png", "size", {96, 96}},
 	Icon = "icon-gold-deposit",
-	BuildingRules = {
-		{
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-stronghold"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-stronghold"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-latin-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-stronghold"}
-		}
-	},
 	GivesResource = "gold"
 } )
 
@@ -356,19 +369,6 @@ DefineUnitType("unit-silver-deposit", {
 	Image = {"file", "neutral/buildings/silver_deposit.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/silver_deposit_shadow.png", "size", {96, 96}},
 	Icon = "icon-silver-deposit",
-	BuildingRules = {
-		{
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-stronghold"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-stronghold"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-latin-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-stronghold"}
-		}
-	},
 	GivesResource = "silver"
 } )
 
@@ -396,19 +396,6 @@ DefineUnitType("unit-copper-deposit", {
 	Image = {"file", "neutral/buildings/copper_deposit.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/copper_deposit_shadow.png", "size", {96, 96}},
 	Icon = "icon-copper-deposit",
-	BuildingRules = {
-		{
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-stronghold"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-stronghold"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-latin-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-stronghold"}
-		}
-	},
 	GivesResource = "copper"
 } )
 
@@ -446,19 +433,6 @@ DefineUnitType("unit-coal-mine", {
 	Corpse = "unit-destroyed-3x3-place",
 	ExplodeWhenKilled = "missile-explosion",
 	Type = "land",
-	BuildingRules = {
-		{
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-stronghold"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-stronghold"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-latin-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-stronghold"}
-		}
-	},
 	GivesResource = "coal", CanHarvest = true,
 	Sounds = {
 		"selected", "gold-mine-selected",
@@ -3279,7 +3253,6 @@ DefineUnitType("unit-template-town-hall", {
 	Corpse = "unit-destroyed-4x4-place",
 	ExplodeWhenKilled = "missile-explosion",
 	Type = "land",
-	TradeEfficiency = 70,
 	TownHall = true,
 	LumberImprove = true, StoneImprove = true,
 	BuilderOutside = true,
@@ -3292,6 +3265,7 @@ DefineUnitType("unit-template-town-hall", {
 	ButtonPos = 1,
 	ButtonKey = "h",
 	ButtonHint = _("Build Town ~!Hall"),
+	ResourceDemand = {"furniture", 5},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-amulet", "unit-ring", "unit-scroll", "unit-book"}, -- worker-related items, as well as those we would expect a center of administration to have
 	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},
@@ -3357,6 +3331,7 @@ DefineUnitType("unit-template-farm", {
 	ButtonKey = "f",
 	ButtonHint = "Build ~!Farm",
 	UnitStock = {"unit-cheese", 3, "unit-carrots", 3},
+	ResourceDemand = {"furniture", 1},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	PersonalNames = {
 		"Blackfield",
@@ -3411,6 +3386,7 @@ DefineUnitType("unit-template-barracks", {
 	ButtonPos = 3,
 	ButtonKey = "b",
 	ButtonHint = _("Build ~!Barracks"),
+	ResourceDemand = {"furniture", 3},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	PersonalNames = {
 		"Axehall",
@@ -3462,6 +3438,7 @@ DefineUnitType("unit-template-lumber-mill", {
 	ButtonPos = 4,
 	ButtonKey = "l",
 	ButtonHint = _("Build ~!Lumber Mill"),
+	ResourceDemand = {"furniture", 3},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	PersonalNames = {
 		"The Black Board",
@@ -3533,6 +3510,7 @@ DefineUnitType("unit-template-smithy", {
 	ButtonKey = "s",
 	ButtonHint = _("Build ~!Smithy"),
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-amulet", "unit-ring"},
+	ResourceDemand = {"furniture", 3},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	PersonalNames = {
 		"The Black Anvil",
@@ -3610,6 +3588,7 @@ DefineUnitType("unit-template-stables", {
 	ButtonPos = 6,
 	ButtonKey = "e",
 	ButtonHint = "Build Stabl~!es",
+	ResourceDemand = {"furniture", 1},
 	RequirementsString = "Lumber Mill",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
@@ -3648,6 +3627,7 @@ DefineUnitType("unit-template-temple", {
 	ButtonKey = "p",
 	ButtonHint = _("Build Tem~!ple"),
 	UnitStock = {"unit-potion-of-healing", 6},
+	ResourceDemand = {"furniture", 3},
 	RequirementsString = "Lumber Mill",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	SoldUnits = {"unit-scroll"},
@@ -3764,11 +3744,13 @@ DefineUnitType("unit-template-market", {
 	ExplodeWhenKilled = "missile-explosion",
 	Type = "land",
 	BuilderOutside = true,
+	Market = true,
 	Drops = {"unit-wood-pile"},
 	RightMouseAction = "rally-point",
 	BurnPercent = 50,
 	BurnDamageRate = 1,
-	TradeEfficiency = 70,
+	TradeCost = 30,
+	ResourceDemand = {"furniture", 3},
 	RequirementsString = "Lumber Mill",
 	Sounds = {
 --		"selected", "lumber-mill-selected",
@@ -3805,6 +3787,7 @@ DefineUnitType("unit-template-dock", {
 	ButtonPos = 9,
 	ButtonKey = "d",
 	ButtonHint = _("Build ~!Dock"),
+	ResourceDemand = {"furniture", 3},
 	RequirementsString = "Lumber Mill",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
