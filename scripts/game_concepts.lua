@@ -70,6 +70,10 @@ GameConcepts = {
 		Name = _("~!Heroes"),
 		Description = _("Heroes belong to one of the normal unit types, but unlike regular units, a hero's experience level and learned abilities are saved across scenarios. Besides the story heroes, players can also create custom heroes to use in scenarios, quests and (single-player) custom games.")
 	},
+	Industry = {
+		Name = "In~!dustry",
+		Description = "Lumber can be transformed into furniture in lumber mills. If the option to produce furniture is active, workers can use the lumber mill similar to how they would a mine, to transform lumber into furniture."
+	},
 	Items = {
 		Name = _("Ite~!ms"),
 		Description = _("Items can be picked up by units with an inventory (persistent heroes as well as Stonelords, Explorers, Gryphon Riders, Warlords and Shadowstalkers). Items come in four types: weapons, shields, boots, rings and potions. Units can equip weapons of a particular class (i.e. Axefighters can equip axes), and non-ranged units may equip shields as well. Any unit can wear boots or drink potions; the latter can be used as a power-up by units who don't have an inventory. Equipping an item will replace the bonuses from weapon technologies with those of the item.\n\nItems are generally dropped by AI-controlled units and buildings, and possess a chance of having a magic affix. Such prefixes and suffixes affect the item's stats, changing its damage, armor and other values. Additionally, unique items also have a chance of dropping. Unique items are often better than magic items, but not necessarily. Items that are neither magic nor unique will disappear five minutes after being dropped.\n\nBesides items, units can also pick up power-ups. These are not restricted to units with inventories, and will perform effects such as restoring HP, causing a status effect or providing resources.")
@@ -82,9 +86,17 @@ GameConcepts = {
 		Name = _("Knowledge (Warfare)"),
 		Description = _("Knowledge (Magic) is a stat primarily relevant for higher-level units. For every five levels in Knowledge (Warfare), the character gains one maximum hit point. The stat is increased mainly by reading the appropriate literary works.")
 	},
+	Laws = {
+		Name = "~!Laws",
+		Description = "Law upgrades can be acquired in the main hall. Contrary to most researches, law upgrades can be incompatible with each other. If a new law upgrade that is incompatible with an existing one is acquired, the older law upgrade will be removed for the player."
+	},
 	Mercenaries = {
 		Name = "Mer~!cenaries",
 		Description = "Mercenaries can be hired at mercenary camps. They do not take any time to train, becoming ready instantly. However, mercenary camp unit stocks take some time to recover."
+	},
+	Trade = {
+		Name = "~!Trade",
+		Description = "Trade is conducted in market buildings, where lumber and stone can be exchanged for copper. Luxury resources, such as furniture, are sold automatically if a market is present. The trade cost percentage is deducted from the copper received when a resource is sold, and from the quantity obtained when a resource is bought."
 	},
 	Traits = {
 		Name = _("Tra~!its"),
