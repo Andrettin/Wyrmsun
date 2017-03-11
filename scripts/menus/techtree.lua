@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2013-2016 by Andrettin
+--      (c) Copyright 2013-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -172,6 +172,9 @@ function RunTechTreeMenu(civilization_number)
 					tech_icon_y = 2
 				elseif (GetUnitTypeData(unitName, "Class") == "lumber-mill") then
 					tech_icon_x = 7
+					tech_icon_y = 2
+				elseif (GetUnitTypeData(unitName, "Class") == "market") then
+					tech_icon_x = 8
 					tech_icon_y = 2
 				elseif (GetUnitTypeData(unitName, "Class") == "smithy") then
 					tech_icon_x = 1
