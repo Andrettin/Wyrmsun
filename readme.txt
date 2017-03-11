@@ -71,6 +71,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - Fixed crash which could occur when selecting more than 36 units at the same time.
+- Added resource trade at Market buildings. By default resource trade has an extra cost of 30% (25% for goblin markets), which can be reduced by researching Coinage.
 
 * Terrain
 - Fixed issue which caused cleared rock on dirt and dry mud to not be buildable upon.

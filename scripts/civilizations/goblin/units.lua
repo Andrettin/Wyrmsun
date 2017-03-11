@@ -711,7 +711,7 @@ DefineUnitType("unit-goblin-market", {
 	Image = {"file", "goblin/buildings/market.png", "size", {96, 96}},
 	Shadow = {"file", "goblin/buildings/market_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-goblin-market",
-	TradeCost = 20, -- -10% trade cost
+	TradeCost = 25, -- -5% trade cost
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
 	}

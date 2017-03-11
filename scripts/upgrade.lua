@@ -192,9 +192,9 @@ DefineUpgrade("upgrade-masonry", {
 })
 
 DefineUpgrade("upgrade-coinage", {
-	Name = _("Coinage"),
+	Name = "Coinage",
 	Class = "coinage",
-	Description = _("While previously trade was conducted by trading one commodity for another, the introduction of currency provides a more practical means of exchange.\n\nEffect: +10% Copper, Silver and Gold Processing. -15% Trade Cost for Markets."),
+	Description = "While previously trade was conducted by trading one commodity for another, the introduction of currency provides a more practical means of exchange.\n\nEffect: +10% Copper, Silver and Gold Processing. -5% Trade Cost for Markets.",
 	Costs = {"time", 250, "copper", 1500},
 	RequirementsString = "Smithy",
 	GrandStrategyCosts = {"time", 250, "copper", 1500, "research", 1500},

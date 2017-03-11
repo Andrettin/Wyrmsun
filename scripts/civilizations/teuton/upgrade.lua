@@ -196,7 +196,7 @@ DefineModifier("upgrade-teuton-coinage",
 )
 
 DefineModifier("upgrade-teuton-coinage",
-	{"TradeCost", -15},
+	{"TradeCost", -5},
 	{"apply-to", "unit-teuton-market"}
 )
 
