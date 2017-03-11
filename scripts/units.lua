@@ -4042,7 +4042,7 @@ DefineUnitType("unit-road", {
 --	Corpse = "unit-destroyed-1x1-place",
 	ExplodeWhenKilled = "missile-explosion",
 	Type = "land",
-	Indestructible = true, Building = true, VisibleUnderFog = true,
+	Building = true, VisibleUnderFog = true,
 	BuilderOutside = true,
 	HiddenInEditor = true,
 	RequirementsString = "Masonry",

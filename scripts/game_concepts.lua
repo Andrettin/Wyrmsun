@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015-2016 by Andrettin
+--      (c) Copyright 2015-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -68,7 +68,7 @@ GameConcepts = {
 	},
 	Heroes = {
 		Name = _("~!Heroes"),
-		Description = _("Heroes belong to one of the normal unit types, but unlike regular units, a hero's experience level and learned abilities are saved across scenarios. Besides the story heroes, players can also create custom heroes to use in quests and (single-player) custom games.")
+		Description = _("Heroes belong to one of the normal unit types, but unlike regular units, a hero's experience level and learned abilities are saved across scenarios. Besides the story heroes, players can also create custom heroes to use in scenarios, quests and (single-player) custom games.")
 	},
 	Items = {
 		Name = _("Ite~!ms"),
@@ -83,84 +83,11 @@ GameConcepts = {
 		Description = _("Knowledge (Magic) is a stat primarily relevant for higher-level units. For every five levels in Knowledge (Warfare), the character gains one maximum hit point. The stat is increased mainly by reading the appropriate literary works.")
 	},
 	Mercenaries = {
-		Name = _("Mer~!cenaries"),
-		Description = _("Groups of mercenaries can be hired at mercenary camps, providing the player with a few experienced warriors, no time needing to be spent in training them. Mercenaries do cost quite a bit of copper, however. Besides mercenary squads, players can also hire thieves in mercenary camps. Like mercenary groups, thieves are hired instantly.")
+		Name = "Mer~!cenaries",
+		Description = "Mercenaries can be hired at mercenary camps. They do not take any time to train, becoming ready instantly. However, mercenary camp unit stocks take some time to recover."
 	},
 	Traits = {
 		Name = _("Tra~!its"),
 		Description = _("Each organic unit has an individual personality or physical trait assigned to it, which affects its stats.\n\nClumsy: -1 Accuracy, -1 Evasion\nDextrous: +1 Accuracy, +1 Evasion\nKeen: +1 Accuracy, +1 Sight\nLimping: -2 Speed\nMighty: +2 Damage\nNear-Sighted: -1 Accuracy, -1 Sight\nOld: -1 Sight, -1 Speed\nQuick: +1 Speed\nReckless: -1 Evasion\nResilient: +5 HP\nSlow: -1 Speed\nStrong: +1 Damage \nVicious: +2 Damage\nWeak: -1 Damage")
-	}
-}
-
-GrandStrategyGameConcepts = {
-	AdministrativeEfficiency = {
-		Name = _("~!Administrative Efficiency"),
-		Description = _("In the Grand Strategy mode, administrative efficiency affected provinces' productivity and research output. Administrative efficiency is 100% by default, but is decreased if the province has a different culture than its owner.")
-	},
-	Attacking = {
-		Name = _("Attacking"),
-		Description = _("Select units (read the \"Units\" Grand Strategy Concept entry for more information on selecting units) or a hero, and then click on a province to attack it. You can only attack provinces that are not owned by any faction, or which are owned by a faction you're at war with. One-province tribes migrate to a province after attacking it, emptying their former province. The former province's population and buildings are carried over to the new one.")
-	},
-	Capital = {
-		Name = _("~!Capital"),
-		Description = _("A faction's capital is marked by a crown symbol appearing over it. Your capital is the center of your transport network. If a faction's capital is conquered, the capital will be transferred to a settlement still under the control of the faction.")
-	},
-	--[[
-	Claims = {
-		Name = _("Claims"),
-		Description = _("In Grand Strategy mode, claims are provinces considered to be an integral part of a country.")
-	},
-	--]]
-	Food = {
-		Name = _("~!Food"),
-		Description = _("In the Grand Strategy mode, food is produced by a province's workers employed in food-producing tiles, generating population growth and being consumed by the province's population. Settlements adjacent to coasts or placed on rivers can fish for food.")
-	},
-	Harvesting = {
-		Name = _("Har~!vesting"),
-		Description = _("In the Grand Strategy mode, resources are harvested by the province's population, if there are enough laborers available.")
-	},
-	Heroes = {
-		Name = _("~!Heroes"),
-		Description = _("You can use heroes to attack and defend provinces. The presence of a hero in a province is marked by a star symbol over the province's settlement.")
-	},
-	Labor = {
-		Name = _("~!Labor"),
-		Description = _("Workers in a province produce Labor (100 for each worker), which is then used to produce resources in the province.")
-	},
-	Objectives = {
-		Name = _("Objectives"),
-		Description = _("In the Grand Strategy mode, there are no preset objectives. You make your own goals, exploring the world at your own pace!")
-	},
-	Prestige = {
-		Name = _("Pre~!stige"),
-		Description = _("Prestige is a Grand Strategy mode only resource. A faction's prestige determines its trade priority, and influences the likelihood of certain positive events. Factions with negative prestige cannot declare war. The results of battles will affect a faction's prestige.")
-	},
-	Research = {
-		Name = _("~!Research"),
-		Description = _("Research is a Grand Strategy mode only resource, which is used to acquire technologies. A faction gains research depending on the ~<proportion~> of its provinces that has town halls, lumber mills and smithies.")
-	},
-	Revolts = {
-		Name = _("Rev~!olts"),
-		Description = _("In Grand Strategy mode, provinces have a chance to revolt against their owner's rule. There is a risk of revolt occurring in recently conquered provinces, as well as ones of a culture different than their owner's.")
-	},
-	Roads = {
-		Name = _("Roads"),
-		Description = _("Building a road on a tile connects it to your transport network. Roads can only be built on tiles adjacent to ones already connected to your capital. Build roads by clicking on the desired tile and then choosing a direction for the road to be built.")
-	},
-	Trade = {
-		Name = _("Tra~!de"),
-		Description = _("In the Grand Strategy mode, factions can trade commodities with one another. Trade priority depends on the faction's prestige, and the price of each commodity will vary depending on demand and supply. Trade is also conducted with provinces, with preference being given to the province's owner. Each province demands a bit of certain commodities every turn, demanding more if the price is currently low, or less if the price is too high.")
-	},
-	TransportCapacity = {
-		Name = _("Transport Capacit~!y"),
-		Description = _("Resource-producing tiles need to be properly connected to your transport network to achieve their full potential. If a tile's resource output is greater than its transport capacity, the overflowing resources will be thrown away. To increase transport capacity in a tile, build a road linking it to your capital. Building a dock on a settlement will link its tile to your transport network as well, at which point it can also serve as a transport hub from which to build roads. Note however that docks can only effectively link a settlement to the transport network if its province's coasts can be reached from a dock already otherwise connected to your transport network.")
-	},
-	Units = {
-		Name = _("Units"),
-		Description = _("Worker units are generated automatically in a province as surplus food is produced. Soldiers, however, have to be trained at the barracks. To do so, click on your province's settlement. Click on the barracks button. Now unit icons will appear in the interface to the right. The right arrow below each unit will train one for you (ready on the next turn), while the left arrow cancels training. To train a unit requires one idle worker.\n\nAfter a unit is trained, you can select it in the main province interface, with the right arrow. After selecting the units, you can move to or attack another province by clicking on it.")
-	},
-	Upkeep = {
-		Name = _("~!Upkeep"),
-		Description = _("In the Grand Strategy mode, each military unit costs some upkeep in copper. If the upkeep is not paid, the unit will be disbanded.")
 	}
 }

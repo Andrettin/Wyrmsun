@@ -67,40 +67,37 @@ function RunEncyclopediaMenu()
 	menu:addFullButton(_("~!Game Concepts"), "g", offx + 208 + (113 * -1), offy + 104 + 36*3,
 		function() RunEncyclopediaGameConceptsMenu(false) end)
 
-	menu:addFullButton(_("Grand Strateg~!y Concepts"), "y", offx + 208 + (113 * -1), offy + 104 + 36*4,
-		function() RunEncyclopediaGameConceptsMenu(true) end)
-
-	menu:addFullButton(_("~!Heroes"), "h", offx + 208 + (113 * -1), offy + 104 + 36*5,
+	menu:addFullButton(_("~!Heroes"), "h", offx + 208 + (113 * -1), offy + 104 + 36*4,
 		function() RunEncyclopediaUnitsMenu("heroes") end)
 
-	menu:addFullButton(_("~!Items"), "i", offx + 208 + (113 * -1), offy + 104 + 36*6,
+	menu:addFullButton(_("~!Items"), "i", offx + 208 + (113 * -1), offy + 104 + 36*5,
 		function() RunEncyclopediaUnitsMenu("items") end)
 
-	menu:addFullButton(_("Magic P~!refixes"), "r", offx + 208 + (113 * -1), offy + 104 + 36*7,
+	menu:addFullButton(_("Magic P~!refixes"), "r", offx + 208 + (113 * -1), offy + 104 + 36*6,
 		function() RunEncyclopediaUnitsMenu("item_prefixes") end)
 
-	menu:addFullButton(_("Magic ~!Suffixes"), "s", offx + 208 + (113 * -1), offy + 104 + 36*8,
+	menu:addFullButton(_("Magic ~!Suffixes"), "s", offx + 208 + (113 * -1), offy + 104 + 36*7,
 		function() RunEncyclopediaUnitsMenu("item_suffixes") end)
 
-	menu:addFullButton(_("P~!lanes"), "l", offx + 208 + (113 * 1), offy + 104 + 36*-1,
+	menu:addFullButton(_("P~!lanes"), "l", offx + 208 + (113 * -1), offy + 104 + 36*8,
 		function() RunEncyclopediaPlanesMenu() end)
 
-	menu:addFullButton(_("Runic Suffix~!es"), "e", offx + 208 + (113 * 1), offy + 104 + 36*0,
+	menu:addFullButton(_("Runic Suffix~!es"), "e", offx + 208 + (113 * 1), offy + 104 + 36*-1,
 		function() RunEncyclopediaUnitsMenu("runic_suffixes") end)
 
-	menu:addFullButton(_("~!Technologies"), "t", offx + 208 + (113 * 1), offy + 104 + 36*1,
+	menu:addFullButton(_("~!Technologies"), "t", offx + 208 + (113 * 1), offy + 104 + 36*0,
 		function() RunEncyclopediaUnitsCivilizationMenu("technologies") end)
 
-	menu:addFullButton(_("Te~!xts"), "x", offx + 208 + (113 * 1), offy + 104 + 36*2,
+	menu:addFullButton(_("Te~!xts"), "x", offx + 208 + (113 * 1), offy + 104 + 36*1,
 		function() RunEncyclopediaTextsMenu() end)
 
-	menu:addFullButton(_("U~!niques"), "n", offx + 208 + (113 * 1), offy + 104 + 36*3,
+	menu:addFullButton(_("U~!niques"), "n", offx + 208 + (113 * 1), offy + 104 + 36*2,
 		function() RunEncyclopediaUnitsMenu("unique_items") end)
 
-	menu:addFullButton(_("~!Units"), "u", offx + 208 + (113 * 1), offy + 104 + 36*4,
+	menu:addFullButton(_("~!Units"), "u", offx + 208 + (113 * 1), offy + 104 + 36*3,
 		function() RunEncyclopediaUnitsMenu("units") end)
 
-	menu:addFullButton(_("~!Worlds"), "w", offx + 208 + (113 * 1), offy + 104 + 36*5,
+	menu:addFullButton(_("~!Worlds"), "w", offx + 208 + (113 * 1), offy + 104 + 36*4,
 		function() RunEncyclopediaWorldsMenu() end)
 
 	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
@@ -1620,12 +1617,7 @@ function RunEncyclopediaGameConceptsMenu(grand_strategy)
 		end
 	end
 	
-	local game_concepts
-	if (grand_strategy) then
-		game_concepts = GrandStrategyGameConcepts
-	else
-		game_concepts = GameConcepts
-	end
+	local game_concepts = GameConcepts
 
 	local menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
@@ -1678,12 +1670,7 @@ function OpenEncyclopediaGameConceptEntry(game_concept_key, grand_strategy)
 		end
 	end
 
-	local game_concepts
-	if (grand_strategy) then
-		game_concepts = GrandStrategyGameConcepts
-	else
-		game_concepts = GameConcepts
-	end
+	local game_concepts = GameConcepts
 
 	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
