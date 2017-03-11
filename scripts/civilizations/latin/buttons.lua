@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016 by Andrettin
+--      (c) Copyright 2016-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -27,7 +27,7 @@
 
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-latin-forum",
 	Action = "build", Value = "unit-latin-town-hall", Popup = "popup-building",
-	Key = "m", Hint = _("Build Foru~!m"),
+	Key = "u", Hint = "Build For~!um",
 	ForUnit = {"unit-teuton-worker"}
 } )
 
