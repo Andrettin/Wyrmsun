@@ -1070,15 +1070,7 @@ if not (ui_loaded_first_time) then
 						Concat(
 							Concat(
 								" for ",
-								String(
-									Div(
-										Mul(
-											PlayerData(ActiveUnitVar("Player", "Value"), "Prices", ResourceIdent("Resource")),
-											Sub(100, ActiveUnitVar("TradeCost"))
-										),
-										100
-									)
-								)
+								String(function() return GetUnitVariable(-1, "EffectiveResourceSellPrice", GetCurrentButtonValueStr()) end)
 							),
 							" Copper"
 						)
@@ -1099,28 +1091,14 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {ButtonAction = "buy-resource"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
+						Concat("Buy 100 ", ResourceName("Resource")),
 						Concat(
 							Concat(
-								"Buy ",
-								String(
-									Div(
-										Mul(
-											Div(
-												Mul(
-													100,
-													100
-												),
-												PlayerData(ActiveUnitVar("Player", "Value"), "Prices", ResourceIdent("Resource"))
-											),
-											Sub(100, ActiveUnitVar("TradeCost"))
-										),
-										100
-									)
-								)
+								" for ",
+								String(function() return GetUnitVariable(-1, "EffectiveResourceBuyPrice", GetCurrentButtonValueStr()) end)
 							),
-							Concat(" ", ResourceName("Resource"))
-						),
-						" for 100 Copper"
+							" Copper"
+						)
 					), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "buy-resource"},
