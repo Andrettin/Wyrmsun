@@ -1180,6 +1180,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {AttackRange = "only", AttackFromTransporter = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Range:"), " "), Variable = "AttackRange", Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {MaxHarvesters = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Max Workers:"), " "), Variable = "MaxHarvesters", Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {Supply = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Food Supply:"), " "), Variable = "Supply", Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -1592,8 +1595,14 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {Speed = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Speed:"), " "), Variable = "Speed", Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {MaxHarvesters = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Max Workers:"), " "), Variable = "MaxHarvesters", Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {Demand = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Food Cost:"), " "), Variable = "Demand", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Supply = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Food Supply:"), " "), Variable = "Supply", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {KnowledgeMagic = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Knowledge (Magic): "), Variable = "KnowledgeMagic", Font = wyr.preferences.PopupDescriptionFont}}

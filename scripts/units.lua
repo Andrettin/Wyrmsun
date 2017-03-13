@@ -324,6 +324,7 @@ DefineUnitType("unit-template-mine", {
 	Type = "land",
 	BuilderOutside = true,
 	CanHarvest = true,
+	MaxHarvesters = 10,
 	BurnPercent = 50,
 	BurnDamageRate = 1,
 	Affixes = {"upgrade-item-prefix-dwindling", "upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-replenishing", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-replenishment", "upgrade-item-suffix-of-vulnerability"},
@@ -435,6 +436,7 @@ DefineUnitType("unit-coal-mine", {
 	ExplodeWhenKilled = "missile-explosion",
 	Type = "land",
 	GivesResource = "coal", CanHarvest = true,
+	MaxHarvesters = 10,
 	Sounds = {
 		"selected", "gold-mine-selected",
 --		"acknowledge", "gold-mine-acknowledge",
@@ -3433,6 +3435,7 @@ DefineUnitType("unit-template-lumber-mill", {
 	BuilderOutside = true,
 	CanHarvest = true, -- cannot produce a resource inherently, but can produce furniture through a button
 	Inexhaustible = true,
+	MaxHarvesters = 5,
 	Drops = {"unit-wood-pile"},
 	BurnPercent = 50,
 	BurnDamageRate = 1,
