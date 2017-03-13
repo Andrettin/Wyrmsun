@@ -42,7 +42,6 @@ DefineUnitType("unit-kobold-footpad", { Name = _("Footpad"),
 		{"shield", "unit-goblin-wooden-shield"},
 		{"boots", "unit-boots"}
 	},
-	Costs = {"time", 0}, -- while it is hireable in the mercenary camp
 	HitPoints = 50,
 	Accuracy = 12,
 	Evasion = 12,

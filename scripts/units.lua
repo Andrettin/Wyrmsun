@@ -2972,7 +2972,7 @@ DefineUnitType("unit-template-thief", {
 	Name = _("Thief"),
 	Parent = "unit-template-sapient-unit",
 	Class = "thief",
-	Costs = {"time", 0, "copper", 400},
+	Costs = {"time", 45, "copper", 400},
 	Dexterity = 11,
 	Intelligence = 11,
 	Charisma = 11,

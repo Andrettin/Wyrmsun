@@ -1385,6 +1385,7 @@ DefineCivilization("gnome", {
 	DefaultColor = "blue",
 	NegativeYearLabel = "BU", -- Before Untersberg
 	YearLabel = "YU", -- Years Untersberg
+	CivilizationUpgrade = "upgrade-gnomish-civilization",
 	ButtonIcons = {
 		"move", "icon-gnomish-boots",
 		"attack", "icon-gnomish-thrusting-sword-1",

@@ -25,14 +25,18 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineUpgrade("upgrade-gnomish-civilization", {
+	Name = "Gnomish Civilization"
+})
+
 Load("scripts/civilizations/gnome/upgrade_faction.lua")
 
 DefinePredependency("unit-gnomish-worker",
-	{"upgrade-acthnic-tribe-faction", 0, "upgrade-derro-tribe-faction"}
+	{"upgrade-acthnic-tribe-faction", 0, "upgrade-derro-tribe-faction", 0}
 )
 
 DefinePredependency("unit-gnomish-recruit",
-	{"upgrade-acthnic-tribe-faction", 0, "upgrade-derro-tribe-faction"}
+	{"upgrade-acthnic-tribe-faction", 0, "upgrade-derro-tribe-faction", 0}
 )
 
 DefinePredependency("unit-gnomish-herbalist",

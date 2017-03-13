@@ -419,7 +419,7 @@ DefineUnitType("unit-potion-of-healing", {
 	Image = {"file", "neutral/items/potion_red.png", "size", {16, 16}},
 	Animations = "animations-potion", Icon = "icon-red-potion",
 	ItemClass = "potion",
-	Costs = {"copper", 150},
+	Costs = {"time", 50, "copper", 150},
 	HitPointHealing = 45,
 	Sounds = {
 		"used", "potion"
@@ -455,7 +455,7 @@ DefineUnitType("unit-cheese", {
 	Image = {"file", "neutral/items/cheese.png", "size", {15, 12}},
 	Icon = "icon-cheese",
 	ItemClass = "food",
-	Costs = {"copper", 25},
+	Costs = {"time", 50, "copper", 25},
 	Dairy = true,
 	HitPointHealing = 5,
 	Sounds = {
@@ -469,7 +469,7 @@ DefineUnitType("unit-carrots", {
 	Image = {"file", "neutral/items/carrots.png", "size", {18, 12}},
 	Icon = "icon-carrots",
 	ItemClass = "food",
-	Costs = {"copper", 25},
+	Costs = {"time", 50, "copper", 25},
 	HitPointHealing = 5,
 	Vegetable = true,
 	Sounds = {

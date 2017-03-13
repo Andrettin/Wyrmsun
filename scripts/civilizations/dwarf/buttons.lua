@@ -95,7 +95,7 @@ DefineButton( { Pos = 4, Level = 1, Icon = "icon-dwarven-lumber-mill",
 	ForUnit = {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker"
 	}
 })
 
@@ -104,7 +104,7 @@ DefineButton( { Pos = 5, Level = 1, Icon = "icon-dwarven-smithy",
 	Key = "s", Hint = _("Build ~!Smithy"), Popup = "popup-building",
 	ForUnit = {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker"
 	}
 })
 
