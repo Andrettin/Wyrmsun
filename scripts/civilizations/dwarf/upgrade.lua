@@ -299,11 +299,11 @@ DefinePredependency("unit-surghan-mercenary-axefighter",
 )
 
 DefinePredependency("unit-dwarven-guard",
-	{"upgrade-dwarven-civilization"}, "or", {"upgrade-gnomish-civilization"}
+	{"upgrade-dwarven-civilization"}, "or", {"unit-gnomish-town-hall"}
 )
 
 DefinePredependency("unit-dwarven-scout",
-	{"upgrade-dwarven-civilization"}, "or", {"upgrade-gnomish-civilization"}
+	{"upgrade-dwarven-civilization"}, "or", {"unit-gnomish-town-hall"}
 )
 
 DefineDependency("unit-dwarven-scout",
@@ -355,7 +355,7 @@ DefineDependency("unit-dwarven-guard-tower",
 )
 
 DefinePredependency("unit-dwarven-ballista",
-	{"upgrade-dwarven-civilization"}, "or", {"upgrade-gnomish-civilization"}
+	{"upgrade-dwarven-civilization"}, "or", {"unit-gnomish-town-hall"}
 )
 
 DefineDependency("unit-dwarven-ballista",
@@ -379,7 +379,7 @@ DefineDependency("unit-joruvellir-yale-pen",
 )
 
 DefinePredependency("unit-dwarven-yale-rider",
-	{"upgrade-dwarven-civilization"}, "or", {"upgrade-gnomish-civilization"}
+	{"upgrade-dwarven-civilization"}, "or", {"unit-gnomish-town-hall"}
 )
 
 DefineDependency("unit-dwarven-yale-rider",
