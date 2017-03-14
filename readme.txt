@@ -63,7 +63,7 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Added Market buildings for the Dwarves, Germanics, Goblins and Teutons (graphics by Jinn). Markets allow trading resources.
 - Mercenary Camps are now owned by mercenary company neutral factions.
-- Carpenter's Shops and Lumber Mills now have the option of allowing workers to produce the Furniture luxury resource in them, which is automatically sold if a Market is present. Up to five workers can produce lumber in a lumber mill at the same time.
+- Carpenter's Shops and Lumber Mills now have the option of allowing workers to produce the Furniture luxury resource in them, which is automatically sold if a Market is present. Up to five workers can produce furniture in a lumber mill at the same time.
 - Carpenter's Shops and Lumber Mills now cannot be built too close to town halls.
 - A maximum of ten workers can now gather resources from a mine at the same time.
 
