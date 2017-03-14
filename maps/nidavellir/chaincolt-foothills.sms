@@ -223,46 +223,6 @@ if (GrandStrategy == false) then
 		unit = CreateUnitInTransporter("unit-dwarven-scout", 2, unit)
 		SetUnitVariable(unit, "Active", false)
 	end
-elseif (GrandStrategyEventMap) then
-	SetAiType(0, "grand-strategy-battle")
-	SetAiType(1, "grand-strategy-battle")
-	SetAiType(2, "grand-strategy-battle")
-
-	unit = CreateUnit("unit-dwarven-town-hall", 0, {46, 6})
-	unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {40, 20})
-
-	CreateProvinceUnits("Caverns of Chaincolt", 0, 3)
-	CreateProvinceCustomHero("Caverns of Chaincolt", 0)
-
-	-- Rugnur
-	if (GetProvinceHero("Caverns of Chaincolt", "Rugnur") == 2) then
-		unit = CreateUnit(GetGrandStrategyHeroUnitType("Rugnur"), 0, {47, 10})
-		SetUnitVariable(unit, "Character", "rugnur")
-	end
-
-	-- Gnomish outpost
---	unit = CreateUnit("unit-gnomish-farm", 1, {8, 60})
-	unit = CreateUnit("unit-gnomish-farm", 1, {6, 65})
-
-	-- Gnomish king
---	unit = CreateUnit("unit-gnomish-master-at-arms", 1, {8, 58})
-
-	CreateProvinceUnits("Brown Hills", 1, 5)
-	CreateProvinceCustomHero("Brown Hills", 1)
-
-	-- Shinsplitter Clan
-	CreateProvinceUnits("Southern Tunnels", 2, 3, false, true)
-	CreateProvinceCustomHero("Southern Tunnels", 2)
-
-	-- if there is at least one steelclad in the Southern Tunnels, make sure that it is used for the raid
-	if (GetNumUnitsAt(GetFactionPlayer("Shinsplitter Clan"), "unit-dwarven-steelclad", {0, 0}, {256, 256}) < 1 and GetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad") >= 1) then
-		unit = CreateUnit("unit-dwarven-steelclad", 2, {Players[2].StartPos.x, Players[2].StartPos.y})
-		SetUnitVariable(unit, "Active", false)
-		ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", -1)
-	end
-	
-	unit = CreateUnit("unit-tree-stump", PlayerNumNeutral, {43, 30})
-	unit = CreateUnit("unit-tree-stump", PlayerNumNeutral, {33, 56})
 end
 
 local arg = {}

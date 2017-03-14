@@ -75,6 +75,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added resource trade at Market buildings. By default resource trade has an extra cost of 30% (25% for goblin markets), which can be reduced by researching Coinage.
 - Added "Industry", "Laws" and "Trade" entries to the Game Concepts section of the encyclopedia.
 - Disabled buttons no longer have a hotkey.
+- Fixed crash which could happen when loading saved games made in certain maps.
 
 * Terrain
 - Fixed issue which caused cleared rock on dirt and dry mud to not be buildable upon.
