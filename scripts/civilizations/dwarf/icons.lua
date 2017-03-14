@@ -512,6 +512,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-surghan-mercenary-axefighter",
+	Size = {46, 38},
+	File = "dwarf/icons/surghan_mercenary_axefighter.png"
+})
+
+DefineIcon({
 	Name = "icon-surghan-mercenary-steelclad",
 	Size = {46, 38},
 	File = "dwarf/icons/surghan_mercenary_steelclad.png"

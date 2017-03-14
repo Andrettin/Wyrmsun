@@ -242,7 +242,7 @@ DefineButton( { Pos = 1, Level = 0,
 	ForUnit = {"unit-mercenary-camp"}
 })
 
-DefineButton( { Pos = 1, Level = 0, Icon = "icon-surghan-mercenary-steelclad",
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-surghan-mercenary-axefighter",
 	Action = "train-unit", Value = "unit-surghan-mercenary-axefighter",
 	Key = "a", Hint = "Hire ~!Axefighter", Popup = "popup-unit",
 	ForUnit = {"unit-mercenary-camp"}
