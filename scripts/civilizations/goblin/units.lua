@@ -538,7 +538,6 @@ DefineUnitType("unit-goblin-glider", {
 	Priority = 40,
 	Points = 40,
 	Demand = 1,
-	Upkeep = 25,
 	Type = "fly",
 --	Corpse = "unit-goblin-dead-body",
 	RightMouseAction = "move",

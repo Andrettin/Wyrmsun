@@ -537,43 +537,6 @@ function EndTurn()
 		end
 	end
 
-	CalculateFactionUpkeeps()
-
-	for key, value in pairs(Factions) do
-		ChangeFactionResource(Factions[key].Civilization, Factions[key].Name, "copper", - GetFactionUpkeep(Factions[key].Civilization, Factions[key].Name))
-	end
-
-	local disbanding_happened = false
-	-- disband units if copper is on the negative and upkeep is higher than income
-	for key, value in pairs(Factions) do
-		if (GetFactionResource(Factions[key].Civilization, Factions[key].Name, "copper") < 0 and GetFactionUpkeep(Factions[key].Civilization, Factions[key].Name) > GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "copper")) then
-			disbanding_happened = true
-			local disband_quota = GetFactionUpkeep(Factions[key].Civilization, Factions[key].Name) - GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "copper")
-			for province_i, province_key in ipairs(Factions[key].OwnedProvinces) do
-				for i, unitName in ipairs(Units) do
-					if (IsMilitaryUnit(unitName)) then
-						if (GetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName) > 0 and GetUnitTypeData(unitName, "Upkeep") > 0) then
-							if (disband_quota > GetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName) * GetUnitTypeData(unitName, "Upkeep")) then
-								disband_quota = disband_quota - GetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName) * GetUnitTypeData(unitName, "Upkeep")
-								SetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName, 0)
-							else
-								SetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName, GetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName) - math.floor(disband_quota / GetUnitTypeData(unitName, "Upkeep")))
-								disband_quota = disband_quota - math.floor(disband_quota / GetUnitTypeData(unitName, "Upkeep")) * GetUnitTypeData(unitName, "Upkeep")
-							end
-						end
-					end
-				end
-				if (disband_quota == 0) then
-					break
-				end
-			end
-		end
-	end
-
-	if (disbanding_happened) then
-		CalculateFactionUpkeeps()
-	end
-
 	DoProspection()
 	
 	GrandStrategyMonth = GrandStrategyMonth + MonthsPerTurn;
@@ -1964,10 +1927,6 @@ function AddGrandStrategyMercenaryButton(x, y, unit_type)
 		cost_tooltip = cost_tooltip .. GetUnitTypeData(unit_type, "Costs", "stone") * GetUnitTypeData(unit_type, "TrainQuantity") .. " Stone"
 	end
 							
-	if (GetUnitTypeData(unit_type, "Upkeep") > 0) then
-		cost_tooltip = cost_tooltip .. "\n" .. GetUnitTypeData(unit_type, "Upkeep") * GetUnitTypeData(unit_type, "TrainQuantity") .. " Copper Upkeep"
-	end
-							
 	local regiment_type_name = GetUnitTypeData(unit_type, "NamePlural")
 							
 	if (GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unit_type) > 0) then
@@ -2436,10 +2395,6 @@ function DrawGrandStrategyInterface()
 								cost_tooltip = cost_tooltip .. GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "stone") .. " Stone"
 							end
 							
-							if (GetUnitTypeData(unitName, "Upkeep") > 0) then
-								cost_tooltip = cost_tooltip .. "\n" .. GetUnitTypeData(unitName, "Upkeep") .. " Copper Upkeep"
-							end
-							
 							local regiment_type_name = GetUnitTypeData(unitName, "NamePlural")
 							b:setTooltip("Train one ".. regiment_type_name .. " regiment" .. "\n" .. cost_tooltip)
 
@@ -2598,10 +2553,6 @@ function DrawGrandStrategyInterface()
 									cost_tooltip = cost_tooltip .. ", "
 								end
 								cost_tooltip = cost_tooltip .. GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "stone") .. " Stone"
-							end
-							
-							if (GetUnitTypeData(unitName, "Upkeep") > 0) then
-								cost_tooltip = cost_tooltip .. "\n" .. GetUnitTypeData(unitName, "Upkeep") .. " Copper Upkeep"
 							end
 							
 							local regiment_type_name = GetUnitTypeData(unitName, "NamePlural")
@@ -3019,7 +2970,7 @@ function AIDoTurn(ai_faction)
 		if (
 			borders_foreign == false
 			or GetFactionBuildingTypeCount(ai_faction, "town-hall") < GetFactionProvinceCount(ai_faction)
-			or ((GetFactionIncome(ai_faction.Civilization, ai_faction.Name, "copper") - GetFactionUpkeep(ai_faction.Civilization, ai_faction.Name)) < 100 and GetFactionResource(ai_faction.Civilization, ai_faction.Name, "copper") < 1500 * 4)
+			or (GetFactionIncome(ai_faction.Civilization, ai_faction.Name, "copper") < 100 and GetFactionResource(ai_faction.Civilization, ai_faction.Name, "copper") < 1500 * 4)
 			or GetProvinceAvailableWorkersForTraining(WorldMapProvinces[key].Name) < 1
 		) then -- don't build any military units if a province is lacking a town hall, if it doesn't border any non-owned provinces, or if net income is too small and copper reserves are too small; 800 is the highest copper cost a unit/building/technology can have
 			desired_infantry_in_province = 0
