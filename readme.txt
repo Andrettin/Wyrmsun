@@ -66,6 +66,7 @@ https://github.com/Andrettin/Wyrmsun
 - Carpenter's Shops and Lumber Mills now have the option of allowing workers to produce the Furniture luxury resource in them, which is automatically sold if a Market is present. Up to five workers can produce furniture in a lumber mill at the same time.
 - Carpenter's Shops and Lumber Mills now cannot be built too close to town halls.
 - A maximum of ten workers can now gather resources from a mine at the same time.
+- Increased the time it takes for unit stocks to recharge.
 
 * Factions
 - Fixed issue which prevented the Angle Tribe and Jute Tribe factions from being formable via the "Found a Faction" submenu.

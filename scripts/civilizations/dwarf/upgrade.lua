@@ -406,6 +406,10 @@ DefineDependency("unit-dwarven-transport-ship",
 	{"unit-dwarven-lumber-mill"}
 )
 
+DefinePredependency("unit-dwarven-gryphon-rider",
+	{"upgrade-dwarven-civilization"}, "or", {"unit-gnomish-town-hall"}
+)
+
 DefineDependency("unit-dwarven-gryphon-rider",
 	{"unit-dwarven-stronghold", "unit-dwarven-lumber-mill"}, "or", {"upgrade-mercenary-company"}
 )

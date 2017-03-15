@@ -1253,17 +1253,27 @@ function CreateNeutralBuildings(building_type, building_number, min_x, max_x, mi
 		local Count = 0
 		Count = building_number
 		local WhileCount = 0
-		local building_player
-		if (building_type == "unit-mercenary-camp") then
-			building_player = FindUnusedPlayerSlot()
-			Players[building_player].Type = PlayerComputer
-			SetPlayerData(building_player, "RaceName", "dwarf")
-			SetPlayerData(building_player, "Faction", "surghan-mercenaries")
-		else
-			building_player = PlayerNumNeutral
-		end
+		local building_player = PlayerNumNeutral
 		while (Count > 0 and WhileCount < building_number * 100) do
 			local building_spawn_point = FindAppropriateNeutralBuildingSpawnPoint(building_type, min_x, max_x, min_y, max_y, symmetric)
+			if (building_type == "unit-mercenary-camp" and building_player == PlayerNumNeutral) then
+				local potential_civilizations = GetTerrainCivilizations(GetTileTerrainName(building_spawn_point[1], building_spawn_point[2]))
+				local all_factions = GetFactions()
+				local potential_factions = {}
+				for i=1, table.getn(all_factions) do
+					if (GetArrayIncludes(potential_civilizations, GetFactionData(all_factions[i], "Civilization")) and GetFactionData(all_factions[i], "Type") == "mercenary-company") then
+						table.insert(potential_factions, all_factions[i])
+					end
+				end
+
+				if (table.getn(potential_factions) > 0) then
+					local neutral_faction = potential_factions[SyncRand(table.getn(potential_factions)) + 1]
+					building_player = FindUnusedPlayerSlot()
+					Players[building_player].Type = PlayerComputer				
+					SetPlayerData(building_player, "RaceName", GetFactionData(neutral_faction, "Civilization"))
+					SetPlayerData(building_player, "Faction", neutral_faction)
+				end
+			end
 			unit = CreateUnit(building_type, building_player, {building_spawn_point[1], building_spawn_point[2]})
 			Count = Count - 1
 			if (symmetric) then
@@ -5766,4 +5776,14 @@ function GenerateBuilding(building_type, player)
 	end
 	
 	unit = CreateBuildingAtRandomLocationNear(building_type, player, {GetUnitVariable(worker,"PosX"), GetUnitVariable(worker,"PosY")}, worker)
+end
+
+function GetTerrainCivilizations(terrain)
+	if (terrain == "dry-mud" or terrain == "cave-floor") then
+		return {"dwarf", "gnome", "goblin", "kobold"}
+	elseif (terrain == "dirt" or terrain == "grass") then
+		return {"anglo-saxon", "frankish", "germanic", "suebi", "teuton"}
+	end
+
+	return {}
 end

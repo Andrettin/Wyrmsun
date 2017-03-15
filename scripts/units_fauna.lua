@@ -33,7 +33,6 @@ DefineUnitType("unit-template-fauna-unit", {
 	Charisma = 2,
 	organic = true,
 	Fauna = true,
-	SelectableByRectangle = false,
 	Traits = {"upgrade-clumsy", "upgrade-dextrous", "upgrade-dim", "upgrade-keen", "upgrade-limping", "upgrade-mighty", "upgrade-near-sighted", "upgrade-old", "upgrade-quick", "upgrade-reckless", "upgrade-resilient", "upgrade-slow", "upgrade-strong", "upgrade-weak"}
 })
 

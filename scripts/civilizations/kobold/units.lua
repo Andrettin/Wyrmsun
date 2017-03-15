@@ -31,7 +31,8 @@
 --	NOTE: Save can generate this table.
 --
 
-DefineUnitType("unit-kobold-footpad", { Name = _("Footpad"),
+DefineUnitType("unit-kobold-footpad", {
+	Name = "Footpad",
 	Parent = "unit-template-infantry",
 	Civilization = "kobold",
 	Image = {"file", "kobold/units/kobold_footpad.png", "size", {72, 72}},
@@ -50,9 +51,6 @@ DefineUnitType("unit-kobold-footpad", { Name = _("Footpad"),
 	NightSightRangeBonus = 1,
 	WeaponClasses = {"sword", "thrusting-sword"},
 	HackDamage = true,
-	ButtonKey = "f",
-	ButtonHint = _("Hire Kobold ~!Footpad"),
-	ButtonPos = 2,
 	Mana = {Enable = true, Max = 75, Value = 75, Increase = 1}, -- since it has no upgrade yet
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-goblin-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Corpse = "unit-kobold-dead-body",

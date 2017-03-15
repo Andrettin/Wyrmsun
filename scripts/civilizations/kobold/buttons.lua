@@ -25,10 +25,10 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUpgrade("upgrade-kobold-civilization", {
-	Name = "Kobold Civilization"
-})
+-- Mercenaries
 
-DefinePredependency("unit-kobold-footpad",
-	{"upgrade-kobold-civilization"}
-)
+DefineButton( { Pos = 1, Level = 0,
+	Action = "train-unit", Value = "unit-kobold-footpad",
+	Key = "f", Hint = "Hire ~!Footpad", Popup = "popup-unit",
+	ForUnit = {"unit-mercenary-camp"}
+})
