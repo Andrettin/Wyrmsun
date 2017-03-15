@@ -25,6 +25,41 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineDeity("poseidon", {
+	Name = "Poseidon",
+	Pantheon = "Olympian",
+	Civilizations = {"greek", "latin"},
+	Religions = {"paganism"},
+	Gender = "male",
+	Major = true,
+	Domains = {"water"},
+	CulturalNames = {
+		"latin", "Neptune"
+	}
+})
+
+DefineDeity("apollo", {
+	Name = "Apollo",
+	Pantheon = "Olympian",
+	Civilizations = {"greek", "latin"},
+	Religions = {"paganism"},
+	Gender = "male",
+	Domains = {"sun"}
+})
+
+DefineDeity("hermes", {
+	Name = "Hermes",
+	Pantheon = "Olympian",
+	Civilizations = {"greek", "latin"},
+	Religions = {"paganism"},
+	Gender = "male",
+--	Domains = {"air"},
+	CulturalNames = {
+		"latin", "Mercury"
+	},
+	HolyOrders = {"hermaistes-apolloniastes-poseidoniastes"}
+})
+
 DefineDeity("roma", { -- goddess who is a personification of the city of Rome; Source: "Ancient Warfare VII.6", 2013, p. 19.
 	Name = "Roma",
 	Pantheon = "Olympian",

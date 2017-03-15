@@ -207,7 +207,7 @@ DefineUpgrade("upgrade-deity-christian-god", {
 	RequirementsString = "Writing"
 })
 
--- Aesir
+-- Aesir Deities
 
 DefineUpgrade("upgrade-deity-odin", {
 	Name = "Odin",
@@ -229,6 +229,26 @@ DefineUpgrade("upgrade-deity-gathaarl", {
 	Costs = {"time", 120, "copper", 750}
 })
 
+-- Olympian Deities
+
+DefineUpgrade("upgrade-deity-apollo", {
+	Name = "Apollo",
+	Icon = "icon-odin",
+	Costs = {"time", 120, "copper", 750}
+})
+
+DefineUpgrade("upgrade-deity-hermes", {
+	Name = "Hermes",
+	Icon = "icon-odin",
+	Costs = {"time", 120, "copper", 750}
+})
+
+DefineUpgrade("upgrade-deity-poseidon", {
+	Name = "Poseidon",
+	Icon = "icon-odin",
+	Costs = {"time", 120, "copper", 750}
+})
+
 -- Modifiers
 
 DefineModifier("upgrade-deity-christian-god",
@@ -239,6 +259,7 @@ DefineModifier("upgrade-deity-christian-god",
 )
 
 DefineModifier("upgrade-deity-christian-god",
+	{"remove-upgrade", "upgrade-deity-apollo"}, {"remove-upgrade", "upgrade-deity-hermes"}, {"remove-upgrade", "upgrade-deity-poseidon"},
 	{"remove-upgrade", "upgrade-deity-odin"}, {"remove-upgrade", "upgrade-deity-thor"}
 )
 
@@ -271,6 +292,10 @@ DefineModifier("upgrade-deity-odin",
 DefineModifier("upgrade-deity-odin",
 	{"apply-to", "unit-germanic-priest"}, {"apply-to", "unit-teuton-priest"}, {"apply-to", "unit-dwarven-witness"},
 	{"apply-to", "unit-teuton-temple"}
+)
+
+DefineModifier("upgrade-deity-poseidon",
+	{"remove-upgrade", "upgrade-deity-christian-god"}
 )
 
 DefineModifier("upgrade-deity-thor",

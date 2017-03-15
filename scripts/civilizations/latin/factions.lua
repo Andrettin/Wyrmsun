@@ -25,6 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+-- Tribes
+
 DefineFaction("aequian-tribe", {
 	Name = "Aequian Tribe",
 	Civilization = "latin",
@@ -138,7 +140,7 @@ DefineFaction("venetian-tribe", {
 	Colors = {"teal"}
 })
 
--- polities
+-- Polities
 
 DefineFaction("rome", {
 	Name = "Rome",
@@ -167,5 +169,21 @@ DefineFaction("rome", {
 		-54, "eburones-tribe", "war", -- the Eburones attacked the Romans in 54 BC (instigated by the Treviri, of whom they were clients); Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223-224.
 		-54, "nervii-tribe", "war", -- the Nervii allied with the Eburones to attack the Romans in 54 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223-224.
 		161, "armenia", "overlord" -- in 161 Armenia was a vassal state of Rome; Source: "Ancient Warfare VII.6", 2013, p. 6.
+	}
+})
+
+-- Holy Orders
+
+DefineFaction("hermaistes-apolloniastes-poseidoniastes", { -- Source: Tenney Frank, "Mercantilism and Rome's Foreign Policy", 1913, p. 243.
+	Name = "Hermaistes", -- "Hermaistes, Apolloniastes, Poseidoniastes"
+	Civilization = "latin",
+	Type = "holy-order",
+	Colors = {"red"},
+	DefaultTier = "barony",
+--	Description = "The \"Hermaistes, Apolloniastes, Poseidoniastes\" was a Roman society founded in Delos around 113 BC.",
+	HistoricalUpgrades = {
+		-113, "upgrade-deity-hermes", true,
+		-113, "upgrade-deity-apollo", true,
+		-113, "upgrade-deity-poseidon", true
 	}
 })

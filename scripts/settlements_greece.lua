@@ -102,10 +102,11 @@ DefineSettlement("corinth", {
 		"greek", "Corinth"
 	},
 	HistoricalOwners = {
-		-500, "corinth" -- Greece at the time of the war with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
+		-500, "corinth", -- Greece at the time of the war with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
+		-146, "" -- Corinth was destroyed by Rome in 146 BC; Source: Tenney Frank, "Mercantilism and Rome's Foreign Policy", 1913, p. 243.
 	},
 	HistoricalBuildings = {
-		-500, 0, "town-hall"
+		-500, -146, "town-hall"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -122,6 +123,25 @@ DefineSettlement("coulas", {
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
+	},
+	Regions = {"europe", "greece", "west-and-central-europe"}
+})
+
+DefineSettlement("delos", {
+	Name = "Delos",
+	MapTemplate = "earth",
+	Position = {4414, 1197},
+	CulturalNames = {
+		"greek", "Delos"
+	},
+	HistoricalOwners = {
+		-167, "rome",
+		-88, "" -- Delos destroyed by Mithradates in 88 BC; Source: Tenney Frank, "Mercantilism and Rome's Foreign Policy", 1913, p. 241.
+	},
+	HistoricalBuildings = {
+		-167, -88, "dock", -- Delos was made a free port by Rome in 167 BC; Source: Tenney Frank, "Mercantilism and Rome's Foreign Policy", 1913, p. 242.
+		-113, -88, "temple", "hermaistes-apolloniastes-poseidoniastes" -- The "Hermaistes, Apolloniastes, Poseidoniastes" Roman society was founded in Delos around 113 BC; Source: Tenney Frank, "Mercantilism and Rome's Foreign Policy", 1913, p. 243.
+		-- Roman freedmen and slaves founded a society for the worship of the "lares compitales" around 100 BC; Source: Tenney Frank, "Mercantilism and Rome's Foreign Policy", 1913, p. 243.
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
