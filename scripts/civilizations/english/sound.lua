@@ -55,3 +55,13 @@ MakeSound("basic-english-voices-acknowledge", {
 	"english/basic_voices/acknowledgement_04.wav",
 	"english/basic_voices/acknowledgement_05.wav"
 })
+
+MakeSound("basic-english-voices-help", {
+	"english/basic_voices/help_01.wav",
+	"english/basic_voices/help_02.wav"
+})
+
+MakeSound("basic-english-voices-help-town", {
+	"english/basic_voices/help_town_01.wav",
+	"english/basic_voices/help_town_02.wav"
+})

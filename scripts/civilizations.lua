@@ -1780,8 +1780,8 @@ DefineCivilization("anglo-saxon", {
 		"selected", "basic-english-voices-selected-group",
 		"acknowledge", "basic-english-voices-acknowledge",
 		"ready", "basic-teuton-voices-ready",
-		"help", "basic-teuton-voices-help",
-		"help-town", "basic-teuton-voices-help-town"
+		"help", "basic-english-voices-help",
+		"help-town", "basic-english-voices-help-town"
 	},
 	HistoricalUpgrades = {
 		180, "upgrade-teuton-spatha", true -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
