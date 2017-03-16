@@ -41,7 +41,9 @@ sound_click = MakeSound("click", "ui/click.wav")
 ------------------------------------------------------------------------------
 --	Define simple dwarf sounds.
 --
+
 MakeSound("basic-dwarf-voices-ready", "dwarf/basic_voices/ready.wav")
+
 MakeSound("basic-dwarf-voices-selected", {
 	"dwarf/basic_voices/selected-1.wav",
 	"dwarf/basic_voices/selected-2.wav",
@@ -49,14 +51,17 @@ MakeSound("basic-dwarf-voices-selected", {
 	"dwarf/basic_voices/selected-4.wav",
 	"dwarf/basic_voices/selected-5.wav"
 })
+
 MakeSound("basic-dwarf-voices-annoyed", {
 	"dwarf/basic_voices/annoy1.wav",
 	"dwarf/basic_voices/annoy2.wav",
 	"dwarf/basic_voices/annoy3.wav",
 	"dwarf/basic_voices/annoy4.wav"
 })
+
 MakeSoundGroup("basic-dwarf-voices-selected-group",
-	"basic-dwarf-voices-selected", "basic-dwarf-voices-annoyed")
+	"basic-dwarf-voices-selected", "basic-dwarf-voices-annoyed"
+)
 MakeSound("basic-dwarf-voices-acknowledge", {
 	"dwarf/basic_voices/acknowledge-1.wav",
 	"dwarf/basic_voices/acknowledge-2.wav",
@@ -66,21 +71,26 @@ MakeSound("basic-dwarf-voices-acknowledge", {
 	"dwarf/basic_voices/acknowledge-6.wav",
 	"dwarf/basic_voices/acknowledge-7.wav"
 })
+
 MakeSound("basic-dwarf-voices-attack", {
 	"dwarf/basic_voices/attack-01.wav",
 	"dwarf/basic_voices/attack-02.wav",
 	"dwarf/basic_voices/move-02.wav"
 })
+
 MakeSound("basic-dwarf-voices-move", {
 	"dwarf/basic_voices/move-01.wav",
 	"dwarf/basic_voices/move-02.wav"
 })
+
 MakeSound("basic-dwarf-voices-help", {
 	"dwarf/basic_voices/help-01.wav"
 })
+
 MakeSound("basic-dwarf-voices-help-town", {
 	"dwarf/basic_voices/town-attack.wav"
 })
+
 MakeSound("basic-dwarf-voices-dead", {
 	"dwarf/basic_voices/dead-1.wav",
 	"dwarf/basic_voices/dead-2.wav"
@@ -969,7 +979,7 @@ DefineGameSounds(
 )
 
 DefineGameSounds(
-	"not-enough-res", {"coal", "anglo-saxon", MakeSound("basic-anglo-saxon-voices-not-enough-coal", "teuton/basic_voices/not_enough_coal.wav")},
+	"not-enough-res", {"coal", "anglo-saxon", MakeSound("basic-anglo-saxon-voices-not-enough-coal", {"english/basic_voices/need_coal_01.wav", "english/basic_voices/need_coal_02.wav"})},
 	"not-enough-res", {"coal", "dwarf", MakeSound("basic-dwarf-voices-not-enough-coal", "dwarf/basic_voices/need-coal.wav")},
 	"not-enough-res", {"coal", "frankish", MakeSound("basic-frankish-voices-not-enough-coal", "teuton/basic_voices/not_enough_coal.wav")},
 	"not-enough-res", {"coal", "germanic", MakeSound("basic-germanic-voices-not-enough-coal", "teuton/basic_voices/not_enough_coal.wav")},
@@ -977,7 +987,7 @@ DefineGameSounds(
 	"not-enough-res", {"coal", "goblin", MakeSound("basic-goblin-voices-not-enough-coal", "goblin/basic_voices/need-coal.wav")},
 	"not-enough-res", {"coal", "suebi", MakeSound("basic-suebi-voices-not-enough-coal", "teuton/basic_voices/not_enough_coal.wav")},
 	"not-enough-res", {"coal", "teuton", MakeSound("basic-teuton-voices-not-enough-coal", "teuton/basic_voices/not_enough_coal.wav")},
-	"not-enough-res", {"copper", "anglo-saxon", MakeSound("basic-anglo-saxon-voices-not-enough-gold", "teuton/basic_voices/not_enough_gold.wav")},
+	"not-enough-res", {"copper", "anglo-saxon", MakeSound("basic-anglo-saxon-voices-not-enough-copper", "english/basic_voices/need_copper.wav")},
 	"not-enough-res", {"copper", "dwarf", MakeSound("basic-dwarf-voices-not-enough-gold", "dwarf/basic_voices/need-gold.wav")},
 	"not-enough-res", {"copper", "frankish", MakeSound("basic-frankish-voices-not-enough-gold", "teuton/basic_voices/not_enough_gold.wav")},
 	"not-enough-res", {"copper", "germanic", MakeSound("basic-germanic-voices-not-enough-gold", "teuton/basic_voices/not_enough_gold.wav")},
@@ -985,7 +995,7 @@ DefineGameSounds(
 	"not-enough-res", {"copper", "goblin", MakeSound("basic-goblin-voices-not-enough-gold", "goblin/basic_voices/need-gold.wav")},
 	"not-enough-res", {"copper", "suebi", MakeSound("basic-suebi-voices-not-enough-gold", "teuton/basic_voices/not_enough_gold.wav")},
 	"not-enough-res", {"copper", "teuton", MakeSound("basic-teuton-voices-not-enough-gold", "teuton/basic_voices/not_enough_gold.wav")},
-	"not-enough-res", {"lumber", "anglo-saxon", MakeSound("basic-anglo-saxon-voices-not-enough-lumber", "teuton/basic_voices/not_enough_lumber.wav")},
+	"not-enough-res", {"lumber", "anglo-saxon", MakeSound("basic-anglo-saxon-voices-not-enough-lumber", "english/basic_voices/need_lumber.wav")},
 	"not-enough-res", {"lumber", "dwarf", MakeSound("basic-dwarf-voices-not-enough-lumber", "dwarf/basic_voices/need-wood.wav")},
 	"not-enough-res", {"lumber", "frankish", MakeSound("basic-frankish-voices-not-enough-lumber", "teuton/basic_voices/not_enough_lumber.wav")},
 	"not-enough-res", {"lumber", "germanic", MakeSound("basic-germanic-voices-not-enough-lumber", "teuton/basic_voices/not_enough_lumber.wav")},
@@ -993,7 +1003,7 @@ DefineGameSounds(
 	"not-enough-res", {"lumber", "goblin", MakeSound("basic-goblin-voices-not-enough-lumber", "goblin/basic_voices/need-wood.wav")},
 	"not-enough-res", {"lumber", "suebi", MakeSound("basic-suebi-voices-not-enough-lumber", "teuton/basic_voices/not_enough_lumber.wav")},
 	"not-enough-res", {"lumber", "teuton", MakeSound("basic-teuton-voices-not-enough-lumber", "teuton/basic_voices/not_enough_lumber.wav")},
-	"not-enough-res", {"stone", "anglo-saxon", MakeSound("basic-anglo-saxon-voices-not-enough-stone", "teuton/basic_voices/not_enough_stone.wav")},
+	"not-enough-res", {"stone", "anglo-saxon", MakeSound("basic-anglo-saxon-voices-not-enough-stone", "english/basic_voices/need_stone.wav")},
 	"not-enough-res", {"stone", "dwarf", MakeSound("basic-dwarf-voices-not-enough-stone", "dwarf/basic_voices/need-stone.wav")},
 	"not-enough-res", {"stone", "frankish", MakeSound("basic-frankish-voices-not-enough-stone", "teuton/basic_voices/not_enough_stone.wav")},
 	"not-enough-res", {"stone", "germanic", MakeSound("basic-germanic-voices-not-enough-stone", "teuton/basic_voices/not_enough_stone.wav")},
