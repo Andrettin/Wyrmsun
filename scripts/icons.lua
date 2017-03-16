@@ -905,6 +905,12 @@ DefineIcon({
 	File = "neutral/icons/road.png"
 })
 
+DefineIcon({
+	Name = "icon-railroad",
+	Size = {46, 38},
+	File = "neutral/icons/railroad.png"
+})
+
 -- tileset-dependent icons
 
 if (GetCurrentTileset() == "swamp" or GetCurrentTileset() == "dungeon") then

@@ -157,7 +157,7 @@ Units = {
 	"unit-mercenary-camp",
 --	"unit-cavern-entrance",
 --	"unit-portal",
-	"unit-road",
+	"unit-road", "unit-railroad",
 	"unit-carrots", "unit-cheese", "unit-wyrm-heart", "unit-potion-of-healing",
 	"upgrade-free-workers", "upgrade-serfdom",
 	"upgrade-deity-odin", "upgrade-deity-thor", "upgrade-deity-gathaarl",
@@ -4042,6 +4042,39 @@ DefineUnitType("unit-road", {
 	BuilderOutside = true,
 	HiddenInEditor = true,
 	RequirementsString = "Masonry",
+	Sounds = {
+		"dead", "building-destroyed"
+	}
+} )
+
+DefineUnitType("unit-railroad", {
+	Name = "Railroad",
+	Civilization = "neutral",
+	Class = "railroad",
+	TerrainType = "railroad",
+	Image = {"file", "neutral/buildings/railroad.png", "size", {32, 32}},
+	Shadow = {"file", "neutral/buildings/railroad_shadow.png", "size", {32, 32}},
+	Animations = "animations-building", Icon = "icon-railroad",
+	Costs = {"time", 30, "copper", 35, "lumber", 15},
+	Construction = "construction-wall",
+	RepairHp = 4,
+	RepairCosts = {"copper", 1, "lumber", 1},
+	Speed = 0,
+	HitPoints = 40,
+	DrawLevel = 39,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 1,
+	Armor = 20, Missile = "missile-none",
+	SpeedBonus = 50,
+	Priority = 0, AnnoyComputerFactor = 45,
+	Points = 1,
+--	Corpse = "unit-destroyed-1x1-place",
+	ExplodeWhenKilled = "missile-explosion",
+	Type = "land",
+	Building = true, VisibleUnderFog = true,
+	BuilderOutside = true,
+	HiddenInEditor = true,
+	RequirementsString = "Steam Engine",
 	Sounds = {
 		"dead", "building-destroyed"
 	}

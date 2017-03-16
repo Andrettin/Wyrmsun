@@ -221,13 +221,21 @@ DefineUpgrade("upgrade-alchemy", {
 })
 
 DefineUpgrade("upgrade-printing-press", {
-	Name = _("Printing Press"),
+	Name = "Printing Press",
 	Class = "printing-press",
-	Description = _("The invention of the printing press allowed knowledge to be more quickly and more efficiently spread."),
+	Description = "The invention of the printing press allowed knowledge to be more quickly and more efficiently spread.",
 	Icon = "icon-printing-press",
 	Costs = {"time", 250, "copper", 2000, "lumber", 2000},
 	GrandStrategyCosts = {"time", 250, "copper", 2000, "lumber", 2000, "research", 4000},
 	GrandStrategyProductionEfficiencyModifier = {"research", 25}
+})
+
+DefineUpgrade("upgrade-steam-engine", {
+	Name = "Steam Engine",
+	Class = "steam-engine",
+--	Description = "The invention of the printing press allowed knowledge to be more quickly and more efficiently spread.",
+	Icon = "icon-printing-press",
+	Costs = {"time", 250, "copper", 2000, "lumber", 2000}
 })
 
 -- Load the faction type upgrades
@@ -257,6 +265,10 @@ DefineDependency("unit-road",
 	{"upgrade-dwarven-masonry"},
 	"or", {"upgrade-goblin-masonry"},
 	"or", {"upgrade-teuton-masonry"}
+)
+
+DefinePredependency("unit-railroad", -- is a predependency because it occupies the same button slot as roads
+	{"upgrade-steam-engine"}
 )
 
 -- dependencies for deity upgrades that require a certain upgrade
