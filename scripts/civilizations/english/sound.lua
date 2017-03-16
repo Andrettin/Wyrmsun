@@ -38,7 +38,10 @@ MakeSound("basic-english-voices-annoyed", {
 	"english/basic_voices/annoyed_02.wav",
 	"english/basic_voices/annoyed_03.wav",
 	"english/basic_voices/annoyed_04.wav",
-	"english/basic_voices/annoyed_05.wav"
+	"english/basic_voices/annoyed_05.wav",
+	"english/basic_voices/to_be_or_not_to_be.wav",
+	"english/basic_voices/my_kingdom_for_a_horse.wav",
+	"english/basic_voices/alas_poor_yorick.wav"
 })
 
 MakeSoundGroup("basic-english-voices-selected-group",

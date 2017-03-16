@@ -267,6 +267,29 @@ Brian Brickwagon Jennings:
 David Slimp:
 /sounds/buildings/gold_mine.wav (licensed under the GPL 2.0)
 
+Johnvarker:
+/sounds/english/basic_voices/acknowledgement_01.wav (licensed under the GPL 2.0 and CC-BY-SA 3.0; copyright held by Andrettin)
+/sounds/english/basic_voices/acknowledgement_02.wav (licensed under the GPL 2.0 and CC-BY-SA 3.0; copyright held by Andrettin)
+/sounds/english/basic_voices/acknowledgement_03.wav (licensed under the GPL 2.0 and CC-BY-SA 3.0; copyright held by Andrettin)
+/sounds/english/basic_voices/acknowledgement_04.wav (licensed under the GPL 2.0 and CC-BY-SA 3.0; copyright held by Andrettin)
+/sounds/english/basic_voices/acknowledgement_05.wav (licensed under the GPL 2.0 and CC-BY-SA 3.0; copyright held by Andrettin)
+/sounds/english/basic_voices/alas_poor_yorick.wav (licensed under the GPL 2.0 and CC-BY-SA 3.0; copyright held by Andrettin)
+/sounds/english/basic_voices/annoyed_01.wav (licensed under the GPL 2.0 and CC-BY-SA 3.0; copyright held by Andrettin)
+/sounds/english/basic_voices/annoyed_02.wav (licensed under the GPL 2.0 and CC-BY-SA 3.0; copyright held by Andrettin)
+/sounds/english/basic_voices/annoyed_03.wav (licensed under the GPL 2.0 and CC-BY-SA 3.0; copyright held by Andrettin)
+/sounds/english/basic_voices/annoyed_04.wav (licensed under the GPL 2.0 and CC-BY-SA 3.0; copyright held by Andrettin)
+/sounds/english/basic_voices/annoyed_05.wav (licensed under the GPL 2.0 and CC-BY-SA 3.0; copyright held by Andrettin)
+/sounds/english/basic_voices/my_kingdom_for_a_horse.wav (licensed under the GPL 2.0 and CC-BY-SA 3.0; copyright held by Andrettin)
+/sounds/english/basic_voices/my_kingdom_for_a_horse_extra.wav (licensed under the GPL 2.0 and CC-BY-SA 3.0; copyright held by Andrettin)
+/sounds/english/basic_voices/my_kingdom_for_a_horse_funny.wav (licensed under the GPL 2.0 and CC-BY-SA 3.0; copyright held by Andrettin)
+/sounds/english/basic_voices/selected_01.wav (licensed under the GPL 2.0 and CC-BY-SA 3.0; copyright held by Andrettin)
+/sounds/english/basic_voices/selected_02.wav (licensed under the GPL 2.0 and CC-BY-SA 3.0; copyright held by Andrettin)
+/sounds/english/basic_voices/selected_03.wav (licensed under the GPL 2.0 and CC-BY-SA 3.0; copyright held by Andrettin)
+/sounds/english/basic_voices/selected_04.wav (licensed under the GPL 2.0 and CC-BY-SA 3.0; copyright held by Andrettin)
+/sounds/english/basic_voices/selected_05.wav (licensed under the GPL 2.0 and CC-BY-SA 3.0; copyright held by Andrettin)
+/sounds/english/basic_voices/to_be_or_not_to_be.wav (licensed under the GPL 2.0 and CC-BY-SA 3.0; copyright held by Andrettin)
+/sounds/english/basic_voices/to_be_or_not_to_be_extra.wav (licensed under the GPL 2.0 and CC-BY-SA 3.0; copyright held by Andrettin)
+
 Jute:
 /sounds/movement/step_dirt/stepdirt_1.wav (licensed under the GPL 2.0)
 /sounds/movement/step_dirt/stepdirt_2.wav (licensed under the GPL 2.0)
