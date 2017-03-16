@@ -97,10 +97,10 @@ DefineUnitType("unit-teuton-worker", {
 		}
 	},
 	Sounds = {
-		"selected", "basic-teuton-voices-selected-group",
-		"acknowledge", "basic-teuton-voices-acknowledge",
-		"ready", "teuton-bauer-ready",
-		"help", "basic-teuton-voices-help",
+--		"selected", "basic-teuton-voices-selected-group",
+--		"acknowledge", "basic-teuton-voices-acknowledge",
+--		"ready", "teuton-bauer-ready",
+--		"help", "basic-teuton-voices-help",
 		"dead", "basic-human-voices-dead",
 		"hit", "mace-attack",
 		"miss", "attack-miss"
@@ -302,10 +302,10 @@ DefineUnitType("unit-teuton-swordsman", {
 		}
 	},
 	Sounds = {
-		"selected", "basic-teuton-voices-selected-group",
-		"acknowledge", "basic-teuton-voices-acknowledge",
-		"ready", "basic-teuton-voices-ready",
-		"help", "basic-teuton-voices-help",
+--		"selected", "basic-teuton-voices-selected-group",
+--		"acknowledge", "basic-teuton-voices-acknowledge",
+--		"ready", "basic-teuton-voices-ready",
+--		"help", "basic-teuton-voices-help",
 		"dead", "basic-human-voices-dead",
 		"hit", "sword-attack",
 		"miss", "attack-miss"
@@ -504,10 +504,10 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 		}
 	},
 	Sounds = {
-		"selected", "basic-teuton-voices-selected-group",
-		"acknowledge", "basic-teuton-voices-acknowledge",
-		"ready", "basic-teuton-voices-ready",
-		"help", "basic-teuton-voices-help",
+--		"selected", "basic-teuton-voices-selected-group",
+--		"acknowledge", "basic-teuton-voices-acknowledge",
+--		"ready", "basic-teuton-voices-ready",
+--		"help", "basic-teuton-voices-help",
 		"dead", "basic-human-voices-dead",
 		"hit", "sword-attack",
 		"miss", "attack-miss"
@@ -708,10 +708,10 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 		}
 	},
 	Sounds = {
-		"selected", "basic-teuton-voices-selected-group",
-		"acknowledge", "basic-teuton-voices-acknowledge",
-		"ready", "basic-teuton-voices-ready",
-		"help", "basic-teuton-voices-help",
+--		"selected", "basic-teuton-voices-selected-group",
+--		"acknowledge", "basic-teuton-voices-acknowledge",
+--		"ready", "basic-teuton-voices-ready",
+--		"help", "basic-teuton-voices-help",
 		"dead", "basic-human-voices-dead",
 		"hit", "sword-attack",
 		"miss", "attack-miss"
@@ -818,10 +818,10 @@ DefineUnitType("unit-teuton-spearman", {
 		}
 	},
 	Sounds = {
-		"selected", "basic-teuton-voices-selected-group",
-		"acknowledge", "basic-teuton-voices-acknowledge",
-		"ready", "basic-teuton-voices-ready",
-		"help", "basic-teuton-voices-help",
+--		"selected", "basic-teuton-voices-selected-group",
+--		"acknowledge", "basic-teuton-voices-acknowledge",
+--		"ready", "basic-teuton-voices-ready",
+--		"help", "basic-teuton-voices-help",
 		"dead", "basic-human-voices-dead"
 	}
 } )
@@ -883,10 +883,10 @@ DefineUnitType("unit-teuton-archer", {
 		}
 	},
 	Sounds = {
-		"selected", "basic-teuton-voices-selected-group",
-		"acknowledge", "basic-teuton-voices-acknowledge",
-		"ready", "basic-teuton-voices-ready",
-		"help", "basic-teuton-voices-help",
+--		"selected", "basic-teuton-voices-selected-group",
+--		"acknowledge", "basic-teuton-voices-acknowledge",
+--		"ready", "basic-teuton-voices-ready",
+--		"help", "basic-teuton-voices-help",
 		"dead", "basic-human-voices-dead",
 		"hit", "dagger-attack",
 		"miss", "attack-miss"
@@ -939,10 +939,10 @@ DefineUnitType("unit-teuton-ritter", {
 		}
 	},
 	Sounds = {
-		"selected", "basic-teuton-voices-selected-group",
-		"acknowledge", "basic-teuton-voices-acknowledge",
-		"ready", "basic-teuton-voices-ready",
-		"help", "basic-teuton-voices-help",
+--		"selected", "basic-teuton-voices-selected-group",
+--		"acknowledge", "basic-teuton-voices-acknowledge",
+--		"ready", "basic-teuton-voices-ready",
+--		"help", "basic-teuton-voices-help",
 		"dead", "basic-human-voices-dead",
 		"hit", "sword-attack",
 		"miss", "attack-miss"
@@ -992,10 +992,10 @@ DefineUnitType("unit-teuton-knight-lord", {
 		}
 	},
 	Sounds = {
-		"selected", "basic-teuton-voices-selected-group",
-		"acknowledge", "basic-teuton-voices-acknowledge",
-		"ready", "basic-teuton-voices-ready",
-		"help", "basic-teuton-voices-help",
+--		"selected", "basic-teuton-voices-selected-group",
+--		"acknowledge", "basic-teuton-voices-acknowledge",
+--		"ready", "basic-teuton-voices-ready",
+--		"help", "basic-teuton-voices-help",
 		"dead", "basic-human-voices-dead",
 		"hit", "sword-attack",
 		"miss", "attack-miss"
@@ -1051,10 +1051,10 @@ DefineUnitType("unit-teuton-priest", {
 		}
 	},
 	Sounds = {
-		"selected", "basic-teuton-voices-selected-group",
-		"acknowledge", "basic-teuton-voices-acknowledge",
-		"ready", "basic-teuton-voices-ready",
-		"help", "basic-teuton-voices-help",
+--		"selected", "basic-teuton-voices-selected-group",
+--		"acknowledge", "basic-teuton-voices-acknowledge",
+--		"ready", "basic-teuton-voices-ready",
+--		"help", "basic-teuton-voices-help",
 		"dead", "basic-human-voices-dead",
 		"hit", "fist-attack",
 		"miss", "attack-miss"
@@ -1077,7 +1077,7 @@ DefineUnitType("unit-teuton-catapult", {
 	Sounds = {
 --		"acknowledge", "ballista-acknowledge",
 --		"ready", "dwarven-ballista-ready",
-		"help", "basic-teuton-voices-help",
+--		"help", "basic-teuton-voices-help",
 		"dead", "explosion"
 	}
 } )
@@ -1109,7 +1109,7 @@ DefineUnitType("unit-teuton-kogge", {
 		}
 	},
 	Sounds = {
-		"help", "basic-teuton-voices-help"
+--		"help", "basic-teuton-voices-help"
 	}
 })
 
@@ -1153,7 +1153,7 @@ DefineUnitType("unit-teuton-town-hall", {
 		}
 	},
 	Sounds = {
-		"help", "basic-teuton-voices-help-town"
+--		"help", "basic-teuton-voices-help-town"
 	}
 } )
 
@@ -1185,7 +1185,7 @@ DefineUnitType("unit-teuton-stronghold", {
 		}
 	},
 	Sounds = {
-		"help", "basic-teuton-voices-help-town"
+--		"help", "basic-teuton-voices-help-town"
 	}
 } )
 
@@ -1213,7 +1213,7 @@ DefineUnitType("unit-teuton-farm", {
 	Sounds = {
 		"selected", "corral-selected",
 		"ready", "corral-ready",
-		"help", "basic-teuton-voices-help-town",
+--		"help", "basic-teuton-voices-help-town",
 		"dead", "building-destroyed"
 	}
 } )
@@ -1242,7 +1242,7 @@ DefineUnitType("unit-teuton-barracks", {
 		}
 	},
 	Sounds = {
-		"help", "basic-teuton-voices-help-town"
+--		"help", "basic-teuton-voices-help-town"
 	}
 } )
 
@@ -1269,7 +1269,7 @@ DefineUnitType("unit-teuton-lumber-mill", { Name = _("Lumber Mill"),
 		}
 	},
 	Sounds = {
-		"help", "basic-teuton-voices-help-town"
+--		"help", "basic-teuton-voices-help-town"
 	}
 } )
 
@@ -1295,7 +1295,7 @@ DefineUnitType("unit-teuton-smithy", {
 		}
 	},
 	Sounds = {
-		"help", "basic-teuton-voices-help-town"
+--		"help", "basic-teuton-voices-help-town"
 	}
 } )
 
@@ -1322,7 +1322,7 @@ DefineUnitType("unit-teuton-stables", {
 		}
 	},
 	Sounds = {
-		"help", "basic-teuton-voices-help-town"
+--		"help", "basic-teuton-voices-help-town"
 	}
 } )
 
@@ -1352,7 +1352,7 @@ DefineUnitType("unit-teuton-temple", {
 		}
 	},
 	Sounds = {
-		"help", "basic-teuton-voices-help-town"
+--		"help", "basic-teuton-voices-help-town"
 	}
 } )
 
@@ -1365,7 +1365,7 @@ DefineUnitType("unit-teuton-market", {
 	Animations = "animations-building", Icon = "icon-germanic-market",
 	RequirementsString = "Carpenter's Shop/Lumber Mill",
 	Sounds = {
-		"help", "basic-teuton-voices-help-town"
+--		"help", "basic-teuton-voices-help-town"
 	}
 } )
 
@@ -1377,7 +1377,7 @@ DefineUnitType("unit-teuton-watch-tower", { Name = _("Watch Tower"),
 	Shadow = {"file", "teuton/buildings/watch_tower_shadow.png", "size", {64, 64}},
 	Icon = "icon-teuton-watch-tower",
 	Sounds = {
-		"help", "basic-teuton-voices-help-town"
+--		"help", "basic-teuton-voices-help-town"
 	}
 } )
 
@@ -1391,7 +1391,7 @@ DefineUnitType("unit-teuton-guard-tower", {
 	Icon = "icon-teuton-guard-tower",
 	RequirementsString = "Carpenter's Shop/Lumber Mill and Masonry",
 	Sounds = {
-		"help", "basic-teuton-voices-help-town"
+--		"help", "basic-teuton-voices-help-town"
 	}
 } )
 
@@ -1419,6 +1419,6 @@ DefineUnitType("unit-teuton-dock", {
 		}
 	},
 	Sounds = {
-		"help", "basic-teuton-voices-help-town"
+--		"help", "basic-teuton-voices-help-town"
 	}
 } )

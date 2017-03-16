@@ -145,10 +145,10 @@ DefineUnitType("unit-suebi-swordsman", {
 		}
 	},
 	Sounds = {
-		"selected", "basic-germanic-voices-selected-group",
-		"acknowledge", "basic-germanic-voices-acknowledge",
-		"ready", "basic-germanic-voices-ready",
-		"help", "basic-germanic-voices-help",
+		"selected", "basic-teuton-voices-selected-group",
+		"acknowledge", "basic-teuton-voices-acknowledge",
+		"ready", "basic-teuton-voices-ready",
+		"help", "basic-teuton-voices-help",
 		"dead", "basic-human-voices-dead",
 		"hit", "sword-attack",
 		"miss", "attack-miss"
