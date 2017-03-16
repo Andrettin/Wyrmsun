@@ -25,6 +25,24 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+MakeSound("basic-english-voices-selected", {
+	"english/basic_voices/selected_01.wav",
+	"english/basic_voices/selected_02.wav",
+	"english/basic_voices/selected_03.wav",
+	"english/basic_voices/selected_04.wav",
+	"english/basic_voices/selected_05.wav"
+})
+
+MakeSound("basic-english-voices-annoyed", {
+	"english/basic_voices/annoyed_01.wav",
+	"english/basic_voices/annoyed_02.wav",
+	"english/basic_voices/annoyed_03.wav"
+})
+
+MakeSoundGroup("basic-english-voices-selected-group",
+	"basic-english-voices-selected", "basic-english-voices-annoyed"
+)
+
 MakeSound("basic-english-voices-acknowledge", {
 	"english/basic_voices/acknowledgement_01.wav",
 	"english/basic_voices/acknowledgement_02.wav",

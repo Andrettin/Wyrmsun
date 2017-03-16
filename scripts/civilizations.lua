@@ -1777,7 +1777,7 @@ DefineCivilization("anglo-saxon", {
 	DevelopsFrom = {"germanic"},
 	Description = "When the Angles, Saxons and Jutes migrated to the British Isles, they intermingled and gave rise to a new people - the Anglo-Saxons. Conquering vast swathes of land, they founded seven kingdoms who vied with each other for supremacy. For a time, Anglo-Saxon scholarship was one of the most sophisticated in Europe, and their learned men were invited to the most powerful courts on the Continent.",
 	UnitSounds = {
-		"selected", "basic-teuton-voices-selected-group",
+		"selected", "basic-english-voices-selected-group",
 		"acknowledge", "basic-english-voices-acknowledge",
 		"ready", "basic-teuton-voices-ready",
 		"help", "basic-teuton-voices-help",
