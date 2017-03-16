@@ -1776,6 +1776,13 @@ DefineCivilization("anglo-saxon", {
 	CivilizationUpgrade = "upgrade-anglo-saxon-civilization",
 	DevelopsFrom = {"germanic"},
 	Description = "When the Angles, Saxons and Jutes migrated to the British Isles, they intermingled and gave rise to a new people - the Anglo-Saxons. Conquering vast swathes of land, they founded seven kingdoms who vied with each other for supremacy. For a time, Anglo-Saxon scholarship was one of the most sophisticated in Europe, and their learned men were invited to the most powerful courts on the Continent.",
+	UnitSounds = {
+		"selected", "basic-teuton-voices-selected-group",
+		"acknowledge", "basic-english-voices-acknowledge",
+		"ready", "basic-teuton-voices-ready",
+		"help", "basic-teuton-voices-help",
+		"help-town", "basic-teuton-voices-help-town"
+	},
 	HistoricalUpgrades = {
 		180, "upgrade-teuton-spatha", true -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	},

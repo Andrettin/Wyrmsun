@@ -872,7 +872,7 @@ DefineTerrainType("road", {
 	}
 })
 
-DefineTerrainType("railroad", {
+DefineTerrainType("railroad", { -- also represents tramways when linking a settlement's buildings
 	Name = "Railroad",
 	BaseTerrains = {"dirt", "grass", "dry-mud", "cave-floor"},
 	Overlay = true,

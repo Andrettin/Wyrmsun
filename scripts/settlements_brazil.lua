@@ -123,7 +123,8 @@ DefineSettlement("rio-de-janeiro", {
 		1822, "brazil" -- Brazil became independent in 1822; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
 	},
 	HistoricalBuildings = {
-		1567, 0, "town-hall"
+		1567, 0, "town-hall",
+		1859, 0, "railroad" -- the "Companhia de Carris de Ferro da Cidade a Boavista" tramway company obtained its concession in Rio de Janeiro in 1856, and began operations in 1859; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 6.
 	},
 	Regions = {"america", "south-america"}
 })
