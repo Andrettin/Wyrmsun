@@ -36,7 +36,9 @@ MakeSound("basic-english-voices-selected", {
 MakeSound("basic-english-voices-annoyed", {
 	"english/basic_voices/annoyed_01.wav",
 	"english/basic_voices/annoyed_02.wav",
-	"english/basic_voices/annoyed_03.wav"
+	"english/basic_voices/annoyed_03.wav",
+	"english/basic_voices/annoyed_04.wav",
+	"english/basic_voices/annoyed_05.wav"
 })
 
 MakeSoundGroup("basic-english-voices-selected-group",
