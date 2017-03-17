@@ -1176,6 +1176,7 @@ DefineCivilization("ettin", {
 	Adjective = "Ettin",
 	Playable = false,
 	DefaultColor = "black",
+	CivilizationUpgrade = "upgrade-ettin-civilization",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
 		"stop", "icon-goblin-wooden-shield",

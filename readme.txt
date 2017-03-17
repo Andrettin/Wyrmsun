@@ -76,6 +76,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Factions
 - Fixed issue which prevented the Angle Tribe and Jute Tribe factions from being formable via the "Found a Faction" submenu.
+- Added Dwarven, Ettin and Kobold Mercenary Company factions.
 
 * Heroes
 - Fixed issue which prevented Frankish hero Kregars from upgrading to Ritars if the player didn't have a Frankish faction.

@@ -250,6 +250,7 @@ Load("scripts/upgrade_laws.lua")
 -- Load the upgrades of the different civilizations
 Load("scripts/civilizations/celt/upgrade.lua")
 Load("scripts/civilizations/dwarf/upgrade.lua")
+Load("scripts/civilizations/ettin/upgrade.lua")
 Load("scripts/civilizations/germanic/upgrade.lua")
 Load("scripts/civilizations/anglo_saxon/upgrade.lua")
 Load("scripts/civilizations/frankish/upgrade.lua")

@@ -5780,7 +5780,7 @@ end
 
 function GetTerrainCivilizations(terrain)
 	if (terrain == "dry-mud" or terrain == "cave-floor") then
-		return {"dwarf", "gnome", "goblin", "kobold"}
+		return {"dwarf", "gnome", "goblin", "kobold", "ettin"}
 	elseif (terrain == "dirt" or terrain == "grass") then
 		return {"anglo-saxon", "frankish", "germanic", "suebi", "teuton"}
 	end
