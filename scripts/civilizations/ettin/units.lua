@@ -56,7 +56,6 @@ DefineUnitType("unit-ettin", {
 	Giant = true,
 	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Sounds = {
-		"selected", "click",
 		"selected", "basic-orc-voices-selected",
 		"acknowledge", "basic-orc-voices-selected",
 		"ready", "basic-orc-voices-selected",
