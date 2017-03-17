@@ -1779,7 +1779,7 @@ DefineCivilization("anglo-saxon", {
 	UnitSounds = {
 		"selected", "basic-english-voices-selected-group",
 		"acknowledge", "basic-english-voices-acknowledge",
-		"ready", "basic-teuton-voices-ready",
+		"ready", "basic-english-voices-ready",
 		"help", "basic-english-voices-help",
 		"help-town", "basic-english-voices-help-town"
 	},
