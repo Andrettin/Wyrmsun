@@ -966,7 +966,7 @@ DefineGameSounds(
 	"building-construction", {"suebi", building_construction},
 	"building-construction", {"teuton", building_construction},
 
-	"work-complete", {"anglo-saxon", MakeSound("basic-anglo-saxon-voices-work-complete", "teuton/bauer/work_complete.wav")},
+	"work-complete", {"anglo-saxon", MakeSound("basic-anglo-saxon-voices-work-complete", {"english/basic_voices/work_complete_01.wav", "english/basic_voices/work_complete_02.wav", "english/basic_voices/work_complete_03.wav"})},
 	"work-complete", {"dwarf", MakeSound("basic-dwarf-voices-work-complete", "dwarf/miner/work-done.wav")},
 	"work-complete", {"frankish", MakeSound("basic-frankish-voices-work-complete", "teuton/bauer/work_complete.wav")},
 	"work-complete", {"germanic", MakeSound("basic-germanic-voices-work-complete", "germanic/bura/work_complete.wav")},

@@ -68,6 +68,9 @@ https://github.com/Andrettin/Wyrmsun
 - A maximum of ten workers can now gather resources from a mine at the same time.
 - Increased the time it takes for unit stocks to recharge.
 
+* Civilizations
+- Anglo-Saxon units now have English voices.
+
 * Factions
 - Fixed issue which prevented the Angle Tribe and Jute Tribe factions from being formable via the "Found a Faction" submenu.
 
