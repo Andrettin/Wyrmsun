@@ -1004,8 +1004,8 @@ DefineUnitType("unit-dwarven-gryphon-rider", {
 	MaxAttackRange = 4,
 	WeaponClasses = {"throwing-axe"},
 	HackDamage = true,
-	ButtonKey = "r",
-	ButtonHint = _("Train Gryphon ~!Rider"),
+	ButtonKey = "p",
+	ButtonHint = _("Train Gry~!phon Rider"),
 	RequirementsString = "Bastion and Lumber Mill",
 	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Variations = {

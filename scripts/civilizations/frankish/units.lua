@@ -654,8 +654,8 @@ DefineUnitType("unit-frank-horseman", {
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-frankish-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
-	ButtonKey = "r",
-	ButtonHint = "Train ~!Ritar",
+	ButtonKey = "t",
+	ButtonHint = "Train Ri~!tar",
 	Corpse = "unit-human-dead-body",
 	RequirementsString = "Smithy and Stables",
 	Sounds = {

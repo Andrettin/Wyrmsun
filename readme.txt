@@ -74,12 +74,16 @@ https://github.com/Andrettin/Wyrmsun
 * Factions
 - Fixed issue which prevented the Angle Tribe and Jute Tribe factions from being formable via the "Found a Faction" submenu.
 
+* Heroes
+- Fixed issue which prevented Frankish hero Kregars from upgrading to Ritars if the player didn't have a Frankish faction.
+
 * Miscellaneous
 - Fixed crash which could occur when selecting more than 36 units at the same time.
 - Added resource trade at Market buildings. By default resource trade has an extra cost of 30% (25% for goblin markets), which can be reduced by researching Coinage.
 - Added "Industry", "Laws" and "Trade" entries to the Game Concepts section of the encyclopedia.
 - Disabled buttons no longer have a hotkey.
 - Fixed crash which could happen when loading saved games made in certain maps.
+- Fixed issue with the rally point button having the same hotkey as some trained units at the barracks.
 
 * Terrain
 - Fixed issue which caused cleared rock on dirt and dry mud to not be buildable upon.

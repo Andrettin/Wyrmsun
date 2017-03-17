@@ -218,7 +218,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-dwarven-ballista",
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-dwarven-gryphon-rider",
 	Action = "train-unit", Value = "unit-dwarven-gryphon-rider",
-	Key = "g", Hint = _("Train ~!Gryphon Rider"), Popup = "popup-unit",
+	Key = "p", Hint = _("Train Gry~!phon Rider"), Popup = "popup-unit",
 	ForUnit = {"unit-dwarven-barracks", "unit-gnomish-barracks"}
 })
 
@@ -274,7 +274,7 @@ DefineButton( { Pos = 5, Level = 0,
 
 DefineButton( { Pos = 6, Level = 0,
 	Action = "train-unit", Value = "unit-dwarven-gryphon-rider",
-	Key = "r", Hint = "Hire Gryphon ~!Rider", Popup = "popup-unit",
+	Key = "p", Hint = "Hire Gry~!phon Rider", Popup = "popup-unit",
 	ForUnit = {"unit-mercenary-camp"}
 })
 

@@ -358,7 +358,7 @@ DefineButton( { Pos = 1, Level = 2,
 
 DefineButton( { Pos = 2, Level = 2, Icon = "icon-teuton-ritter",
 	Action = "experience-upgrade-to", Value = "unit-teuton-ritter",
-	Key = "r", Hint = "Upgrade to ~!Ritter", Popup = "popup-unit",
+	Key = "t", Hint = "Upgrade to Ri~!tter", Popup = "popup-unit",
 	ForUnit = {"unit-teuton-swordsman", "unit-suebi-swordsman"}
 } )
 

@@ -134,8 +134,8 @@ DefineUnitType("unit-gnomish-recruit", {
 	AiDrops = {"unit-thrusting-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-wool-shoes", "unit-furry-wool-shoes", "unit-cheese", "unit-potion-of-healing"},
 	PierceDamage = true,
 	InvertedSoutheastArms = true,
-	ButtonKey = "r",
-	ButtonHint = "Train ~!Recruit",
+	ButtonKey = "t",
+	ButtonHint = "Train Recrui~!t",
 	Variations = {
 		{
 			"variation-id", "blond-hair",
