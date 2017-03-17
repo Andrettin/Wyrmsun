@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      credits.lua - Define the menu for credits.
---
 --      (c) Copyright 2015-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
@@ -152,6 +150,7 @@ function RunShowCreditsMenu()
 		"  Corey Woodworth (woodwizzle)",
 		"  David Slimp",
 		"  J. W. Bjerk (eleazzaar)",
+		"  Johnvarker",
 		"  Jute",
 		"  Lari Nieminen (zookeeper)",
 		"  Manuel Senfft",

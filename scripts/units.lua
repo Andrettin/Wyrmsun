@@ -3754,9 +3754,9 @@ DefineUnitType("unit-template-market", {
 	AiDrops = {"unit-amulet", "unit-ring"},
 	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},
 	Sounds = {
---		"selected", "lumber-mill-selected",
+		"selected", "market-selected",
 --		"acknowledge", "dwarven-lumber-mill-acknowledge",
---		"ready", "storehouse-ready",
+		"ready", "market-ready",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "building-destroyed"
 	}
@@ -3792,9 +3792,9 @@ DefineUnitType("unit-template-dock", {
 	RequirementsString = "Lumber Mill",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
---		"selected", "lumber-mill-selected",
+		"selected", "dock-selected",
 --		"acknowledge", "dwarven-lumber-mill-acknowledge",
---		"ready", "storehouse-ready",
+		"ready", "dock-ready",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "building-destroyed"
 	}
