@@ -130,7 +130,7 @@ AddTrigger("jarl-desires-karling-subjugation",
 AddTrigger("jarl-considers-the-hersings",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-germanic-town-hall") >= 1 and (GetFactionExists("karling-tribe") == false or GetPlayerData(GetFactionPlayer("karling-tribe"), "TotalNumUnits") == 0) and GetFactionExists("hersing-tribe") and GetPlayerData(GetFactionPlayer("hersing-tribe"), "TotalNumUnits") > 0) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-germanic-town-hall") >= 1 and (GetFactionExists("karling-tribe") == false or GetPlayerData(GetFactionPlayer("karling-tribe"), "TotalNumUnits") == 0) and GetPlayerData(i, "CompletedQuest", "jarls-retainers") and GetFactionExists("hersing-tribe") and GetPlayerData(GetFactionPlayer("hersing-tribe"), "TotalNumUnits") > 0) then
 				trigger_player = i
 				return true
 			end
