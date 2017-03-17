@@ -1331,6 +1331,7 @@ DefineUnitType("unit-dwarven-market", {
 	Costs = {"lumber", 900, "stone", 450},
 	RepairCosts = {"copper", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
+	SoldUnits = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-thrusting-sword", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-wool-shoes", "unit-furry-wool-shoes"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}

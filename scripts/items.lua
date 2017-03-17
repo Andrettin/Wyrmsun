@@ -25,7 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUnitType("unit-template-item", { Name = _("Item"),
+DefineUnitType("unit-template-item", {
+	Name = "Item",
 	Image = {"file", "neutral/items/gold_sack.png", "size", {16, 14}},
 	Animations = "animations-item",
 	NeutralMinimapColor = {255, 255, 0},
@@ -45,8 +46,9 @@ DefineUnitType("unit-template-item", { Name = _("Item"),
 } )
 
 DefineUnitType("unit-short-sword", {
-	Name = _("Short Sword"),
+	Name = "Short Sword",
 	Parent = "unit-template-item",
+	Costs = {"copper", 100},
 	Image = {"file", "germanic/items/broad_bronze_sword.png", "size", {32, 32}},
 	Icon = "icon-germanic-short-sword",
 	ItemClass = "sword",
@@ -66,8 +68,9 @@ DefineUnitType("unit-goblin-short-sword", {
 } )
 
 DefineUnitType("unit-broad-sword", {
-	Name = _("Broad Sword"),
+	Name = "Broad Sword",
 	Parent = "unit-template-item",
+	Costs = {"copper", 200},
 	Image = {"file", "germanic/items/broad_bronze_sword.png", "size", {32, 32}},
 	Icon = "icon-germanic-broad-sword",
 	ItemClass = "sword",
@@ -86,8 +89,10 @@ DefineUnitType("unit-goblin-broad-sword", {
 	}
 } )
 
-DefineUnitType("unit-spatha", { Name = _("Spatha"),
+DefineUnitType("unit-spatha", {
+	Name = "Spatha",
 	Parent = "unit-template-item",
+	Costs = {"copper", 400},
 	Image = {"file", "teuton/items/long_iron_sword.png", "size", {32, 32}},
 	Icon = "icon-teuton-spatha",
 	ItemClass = "sword",
@@ -97,13 +102,14 @@ DefineUnitType("unit-spatha", { Name = _("Spatha"),
 	BasicDamage = 4
 } )
 
-DefineUnitType("unit-frankish-spatha", { Name = _("Frankish Spatha"),
+DefineUnitType("unit-frankish-spatha", {
+	Name = "Spatha",
 	Parent = "unit-spatha",
 	Icon = "icon-frankish-spatha"
 } )
 
 DefineUnitType("unit-goblin-long-sword", {
-	Name = _("Long Sword"),
+	Name = "Long Sword",
 	Parent = "unit-spatha",
 	Icon = "icon-goblin-long-sword",
 	ButtonIcons = {
@@ -111,8 +117,10 @@ DefineUnitType("unit-goblin-long-sword", {
 	}
 } )
 
-DefineUnitType("unit-thrusting-sword", { Name = _("Thrusting Sword"),
+DefineUnitType("unit-thrusting-sword", {
+	Name = "Thrusting Sword",
 	Parent = "unit-template-item",
+	Costs = {"copper", 100},
 	Image = {"file", "germanic/items/broad_bronze_sword.png", "size", {32, 32}},
 	Icon = "icon-gnomish-thrusting-sword-1",
 	ItemClass = "thrusting-sword",
@@ -122,8 +130,10 @@ DefineUnitType("unit-thrusting-sword", { Name = _("Thrusting Sword"),
 	BasicDamage = 0
 } )
 
-DefineUnitType("unit-battle-axe", { Name = _("Battle Axe"),
+DefineUnitType("unit-battle-axe", {
+	Name = "Battle Axe",
 	Parent = "unit-template-item",
+	Costs = {"copper", 100},
 	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
 	Icon = "icon-dwarven-battle-axe",
 	ItemClass = "axe",
@@ -133,8 +143,10 @@ DefineUnitType("unit-battle-axe", { Name = _("Battle Axe"),
 	BasicDamage = 0
 } )
 
-DefineUnitType("unit-broad-axe", { Name = _("Broad Axe"),
+DefineUnitType("unit-broad-axe", {
+	Name = "Broad Axe",
 	Parent = "unit-template-item",
+	Costs = {"copper", 200},
 	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
 	Icon = "icon-dwarven-broad-axe",
 	ItemClass = "axe",
@@ -144,8 +156,10 @@ DefineUnitType("unit-broad-axe", { Name = _("Broad Axe"),
 	BasicDamage = 2
 } )
 
-DefineUnitType("unit-great-axe", { Name = _("Great Axe"),
+DefineUnitType("unit-great-axe", {
+	Name = "Great Axe",
 	Parent = "unit-template-item",
+	Costs = {"copper", 400},
 	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
 	Icon = "icon-dwarven-great-axe",
 	ItemClass = "axe",
@@ -155,48 +169,60 @@ DefineUnitType("unit-great-axe", { Name = _("Great Axe"),
 	BasicDamage = 4
 } )
 
-DefineUnitType("unit-hammer", { Name = _("Hammer"),
+DefineUnitType("unit-hammer", {
+	Name = "Hammer",
 	Parent = "unit-template-item",
+	Costs = {"copper", 100},
 	Image = {"file", "neutral/items/hammer.png", "size", {32, 32}},
 	Icon = "icon-hammer",
 	ItemClass = "mace",
 	BasicDamage = 0
 } )
 
-DefineUnitType("unit-mining-pick", { Name = _("Mining Pick"),
+DefineUnitType("unit-mining-pick", {
+	Name = "Mining Pick",
 	Parent = "unit-template-item",
+	Costs = {"copper", 100},
 	Image = {"file", "neutral/items/mining_pick.png", "size", {32, 32}},
 	Icon = "icon-mining-pick",
 	ItemClass = "mace",
 	BasicDamage = 0
 } )
 
-DefineUnitType("unit-short-spear", { Name = _("Short Spear"),
+DefineUnitType("unit-short-spear", {
+	Name = "Short Spear",
 	Parent = "unit-template-item",
+	Costs = {"copper", 100},
 	Image = {"file", "neutral/items/spear.png", "size", {32, 32}},
 	Icon = "icon-spear",
 	ItemClass = "spear",
 	BasicDamage = 0
 } )
 
-DefineUnitType("unit-long-spear", { Name = _("Long Spear"),
+DefineUnitType("unit-long-spear", {
+	Name = "Long Spear",
 	Parent = "unit-template-item",
+	Costs = {"copper", 200},
 	Image = {"file", "neutral/items/spear.png", "size", {32, 32}},
 	Icon = "icon-long-spear",
 	ItemClass = "spear",
 	BasicDamage = 2
 } )
 
-DefineUnitType("unit-pike", { Name = _("Pike"),
+DefineUnitType("unit-pike", {
+	Name = "Pike",
 	Parent = "unit-template-item",
+	Costs = {"copper", 400},
 	Image = {"file", "neutral/items/spear.png", "size", {32, 32}},
 	Icon = "icon-pike",
 	ItemClass = "spear",
 	BasicDamage = 4
 } )
 
-DefineUnitType("unit-throwing-axe", { Name = _("Throwing Axe"),
+DefineUnitType("unit-throwing-axe", {
+	Name = "Throwing Axe",
 	Parent = "unit-template-item",
+	Costs = {"copper", 100},
 	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
 	Icon = "icon-dwarven-throwing-axe",
 	ItemClass = "throwing-axe",
@@ -206,8 +232,10 @@ DefineUnitType("unit-throwing-axe", { Name = _("Throwing Axe"),
 	BasicDamage = 0
 } )
 
-DefineUnitType("unit-sharp-throwing-axe", { Name = _("Sharp Throwing Axe"),
+DefineUnitType("unit-sharp-throwing-axe", {
+	Name = "Sharp Throwing Axe",
 	Parent = "unit-template-item",
+	Costs = {"copper", 200},
 	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
 	Icon = "icon-dwarven-sharp-throwing-axe",
 	ItemClass = "throwing-axe",
@@ -217,8 +245,10 @@ DefineUnitType("unit-sharp-throwing-axe", { Name = _("Sharp Throwing Axe"),
 	BasicDamage = 2
 } )
 
-DefineUnitType("unit-bearded-throwing-axe", { Name = _("Bearded Throwing Axe"),
+DefineUnitType("unit-bearded-throwing-axe", {
+	Name = "Bearded Throwing Axe",
 	Parent = "unit-template-item",
+	Costs = {"copper", 400},
 	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
 	Icon = "icon-dwarven-bearded-throwing-axe",
 	ItemClass = "throwing-axe",
@@ -229,8 +259,9 @@ DefineUnitType("unit-bearded-throwing-axe", { Name = _("Bearded Throwing Axe"),
 } )
 
 DefineUnitType("unit-wooden-shield", {
-	Name = _("Wooden Shield"),
+	Name = "Wooden Shield",
 	Parent = "unit-template-item",
+	Costs = {"copper", 100},
 	Image = {"file", "dwarf/items/round_shield.png", "size", {14, 14}},
 	Icon = "icon-germanic-wooden-oblong-shield",
 	ItemClass = "shield",
@@ -242,8 +273,10 @@ DefineUnitType("unit-goblin-wooden-shield", {
 	Icon = "icon-goblin-wooden-shield"
 } )
 
-DefineUnitType("unit-bronze-shield", { Name = _("Bronze Shield"),
+DefineUnitType("unit-bronze-shield", {
+	Name = "Bronze Shield",
 	Parent = "unit-template-item",
+	Costs = {"copper", 200},
 	Image = {"file", "germanic/items/bronze_shield.png", "size", {32, 32}},
 	Icon = "icon-germanic-bronze-shield",
 	ItemClass = "shield",
@@ -251,16 +284,19 @@ DefineUnitType("unit-bronze-shield", { Name = _("Bronze Shield"),
 } )
 
 DefineUnitType("unit-goblin-rimmed-shield", {
-	Name = _("Rimmed Shield"),
+	Name = "Rimmed Shield",
 	Parent = "unit-template-item",
+	Costs = {"copper", 200},
 	Image = {"file", "dwarf/items/round_shield.png", "size", {14, 14}},
 	Icon = "icon-goblin-rimmed-shield",
 	ItemClass = "shield",
 	Armor = 2
 } )
 
-DefineUnitType("unit-iron-shield", { Name = _("Iron Shield"),
+DefineUnitType("unit-iron-shield", {
+	Name = "Iron Shield",
 	Parent = "unit-template-item",
+	Costs = {"copper", 400},
 	Image = {"file", "teuton/items/saxon_shield.png", "size", {32, 32}},
 	Icon = "icon-teuton-iron-shield",
 	ItemClass = "shield",
@@ -268,16 +304,19 @@ DefineUnitType("unit-iron-shield", { Name = _("Iron Shield"),
 } )
 
 DefineUnitType("unit-goblin-embossed-shield", {
-	Name = _("Embossed Shield"),
+	Name = "Embossed Shield",
 	Parent = "unit-template-item",
+	Costs = {"copper", 400},
 	Image = {"file", "dwarf/items/round_shield.png", "size", {14, 14}},
 	Icon = "icon-goblin-embossed-shield",
 	ItemClass = "shield",
 	Armor = 4
 } )
 
-DefineUnitType("unit-kite-shield", { Name = _("Kite Shield"),
+DefineUnitType("unit-kite-shield", {
+	Name = "Kite Shield",
 	Parent = "unit-template-item",
+	Costs = {"copper", 400},
 	Image = {"file", "teuton/items/saxon_shield.png", "size", {32, 32}},
 	Icon = "icon-heater-shield",
 	ItemClass = "shield",
@@ -296,8 +335,9 @@ DefineUnitType("unit-suebi-shield", {
 --]]
 
 DefineUnitType("unit-round-shield", {
-	Name = _("Round Shield"),
+	Name = "Round Shield",
 	Parent = "unit-template-item",
+	Costs = {"copper", 100},
 	Image = {"file", "dwarf/items/round_shield.png", "size", {14, 14}},
 	Icon = "icon-dwarven-shield-1",
 	ItemClass = "shield",
@@ -307,13 +347,15 @@ DefineUnitType("unit-round-shield", {
 DefineUnitType("unit-brising-round-shield", {
 	Name = "Brising Round Shield",
 	Parent = "unit-round-shield",
+	Costs = {"copper", 100},
 	Image = {"file", "dlcs/brising_faction_flair/graphics/items/brising_round_shield.png", "size", {14, 14}},
 	Icon = "icon-brising-round-shield"
 } )
 
 DefineUnitType("unit-heater-shield", {
-	Name = _("Heater Shield"),
+	Name = "Heater Shield",
 	Parent = "unit-template-item",
+	Costs = {"copper", 200},
 	Image = {"file", "dwarf/items/round_shield.png", "size", {14, 14}},
 	Icon = "icon-dwarven-shield-2",
 	ItemClass = "shield",
@@ -321,8 +363,9 @@ DefineUnitType("unit-heater-shield", {
 } )
 
 DefineUnitType("unit-thrymgjol-shield", {
-	Name = _("Thrymgjol Shield"),
+	Name = "Thrymgjol Shield",
 	Parent = "unit-template-item",
+	Costs = {"copper", 400},
 	Image = {"file", "dwarf/items/round_shield.png", "size", {14, 14}},
 	Icon = "icon-dwarven-shield-3",
 	ItemClass = "shield",
@@ -330,8 +373,9 @@ DefineUnitType("unit-thrymgjol-shield", {
 } )
 
 DefineUnitType("unit-horn", {
-	Name = _("Horn"),
+	Name = "Horn",
 	Parent = "unit-template-item",
+	Costs = {"copper", 100},
 	Image = {"file", "germanic/items/bronze_lur.png", "size", {17, 15}},
 	Icon = "icon-germanic-bronze-lur",
 	ItemClass = "horn",
@@ -339,8 +383,9 @@ DefineUnitType("unit-horn", {
 } )
 
 DefineUnitType("unit-boots", {
-	Name = _("Boots"),
+	Name = "Boots",
 	Parent = "unit-template-item",
+	Costs = {"copper", 100},
 	Image = {"file", "neutral/items/boots.png", "size", {32, 32}},
 	Icon = "icon-dwarven-boots",
 	ItemClass = "boots",
@@ -348,8 +393,9 @@ DefineUnitType("unit-boots", {
 } )
 
 DefineUnitType("unit-wool-shoes", {
-	Name = _("Wool Shoes"),
+	Name = "Wool Shoes",
 	Parent = "unit-template-item",
+	Costs = {"copper", 100},
 	Image = {"file", "neutral/items/boots.png", "size", {32, 32}},
 	Icon = "icon-gnomish-boots",
 	ItemClass = "boots",
@@ -357,8 +403,9 @@ DefineUnitType("unit-wool-shoes", {
 } )
 
 DefineUnitType("unit-furry-wool-shoes", {
-	Name = _("Furry Wool Shoes"),
+	Name = "Furry Wool Shoes",
 	Parent = "unit-template-item",
+	Costs = {"copper", 100},
 	Image = {"file", "neutral/items/boots.png", "size", {32, 32}},
 	Icon = "icon-gnomish-boots-fur",
 	ItemClass = "boots",
@@ -366,8 +413,9 @@ DefineUnitType("unit-furry-wool-shoes", {
 } )
 
 DefineUnitType("unit-amulet", {
-	Name = _("Amulet"),
+	Name = "Amulet",
 	Parent = "unit-template-item",
+	Costs = {"copper", 100},
 	Image = {"file", "neutral/items/amulet.png", "size", {32, 32}},
 	Icon = "icon-amulet",
 	ItemClass = "amulet",
@@ -375,8 +423,9 @@ DefineUnitType("unit-amulet", {
 } )
 
 DefineUnitType("unit-ring", {
-	Name = _("Ring"),
+	Name = "Ring",
 	Parent = "unit-template-item",
+	Costs = {"copper", 100},
 	Image = {"file", "neutral/items/ring.png", "size", {32, 32}},
 	Icon = "icon-ring",
 	ItemClass = "ring",
@@ -384,8 +433,9 @@ DefineUnitType("unit-ring", {
 } )
 
 DefineUnitType("unit-arrows", {
-	Name = _("Arrows"),
+	Name = "Arrows",
 	Parent = "unit-template-item",
+	Costs = {"copper", 100},
 	Image = {"file", "neutral/items/arrow.png", "size", {32, 32}},
 	Icon = "icon-germanic-arrow",
 	ItemClass = "arrows",
@@ -394,8 +444,9 @@ DefineUnitType("unit-arrows", {
 } )
 
 DefineUnitType("unit-barbed-arrows", {
-	Name = _("Barbed Arrows"),
+	Name = "Barbed Arrows",
 	Parent = "unit-template-item",
+	Costs = {"copper", 200},
 	Image = {"file", "neutral/items/arrow.png", "size", {32, 32}},
 	Icon = "icon-germanic-barbed-arrow",
 	ItemClass = "arrows",
@@ -404,8 +455,9 @@ DefineUnitType("unit-barbed-arrows", {
 } )
 
 DefineUnitType("unit-bodkin-arrows", {
-	Name = _("Bodkin Arrows"),
+	Name = "Bodkin Arrows",
 	Parent = "unit-template-item",
+	Costs = {"copper", 400},
 	Image = {"file", "neutral/items/arrow.png", "size", {32, 32}},
 	Icon = "icon-bodkin-arrow",
 	ItemClass = "arrows",
@@ -414,7 +466,7 @@ DefineUnitType("unit-bodkin-arrows", {
 } )
 
 DefineUnitType("unit-potion-of-healing", {
-	Name = _("Potion of Healing"),
+	Name = "Potion of Healing",
 	Parent = "unit-template-item",
 	Image = {"file", "neutral/items/potion_red.png", "size", {16, 16}},
 	Animations = "animations-potion", Icon = "icon-red-potion",
@@ -427,7 +479,7 @@ DefineUnitType("unit-potion-of-healing", {
 } )
 
 DefineUnitType("unit-scroll", {
-	Name = _("Scroll"),
+	Name = "Scroll",
 	Parent = "unit-template-item",
 	Costs = {"copper", 100},
 	Image = {"file", "neutral/items/scroll.png", "size", {32, 32}},
@@ -439,8 +491,9 @@ DefineUnitType("unit-scroll", {
 } )
 
 DefineUnitType("unit-book", {
-	Name = _("Book"),
+	Name = "Book",
 	Parent = "unit-template-item",
+	Costs = {"copper", 300},
 	Image = {"file", "neutral/items/book.png", "size", {32, 32}},
 	Icon = "icon-book-red",
 	ItemClass = "book",
@@ -450,7 +503,7 @@ DefineUnitType("unit-book", {
 } )
 
 DefineUnitType("unit-cheese", {
-	Name = _("Cheese"),
+	Name = "Cheese",
 	Parent = "unit-template-item",
 	Image = {"file", "neutral/items/cheese.png", "size", {15, 12}},
 	Icon = "icon-cheese",
@@ -464,7 +517,7 @@ DefineUnitType("unit-cheese", {
 } )
 
 DefineUnitType("unit-carrots", {
-	Name = _("Carrots"),
+	Name = "Carrots",
 	Parent = "unit-template-item",
 	Image = {"file", "neutral/items/carrots.png", "size", {18, 12}},
 	Icon = "icon-carrots",
@@ -478,7 +531,7 @@ DefineUnitType("unit-carrots", {
 } )
 
 DefineUnitType("unit-wyrm-heart", {
-	Name = _("Wyrm Heart"),
+	Name = "Wyrm Heart",
 	Parent = "unit-template-item",
 	Image = {"file", "neutral/items/wyrm_heart.png", "size", {16, 16}},
 	Icon = "icon-wyrm-heart",

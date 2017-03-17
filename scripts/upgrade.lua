@@ -271,6 +271,216 @@ DefinePredependency("unit-railroad", -- is a predependency because it occupies t
 	{"upgrade-steam-engine"}
 )
 
+-- dependencies for items
+DefineDependency("unit-book",
+	{"upgrade-dwarven-runewriting", "unit-dwarven-temple"},
+	"or", {"upgrade-goblin-writing", "unit-goblin-temple"},
+	"or", {"upgrade-teuton-writing", "unit-teuton-temple"}
+)
+
+DefineDependency("unit-scroll",
+	{"upgrade-dwarven-runewriting", "unit-dwarven-temple"},
+	"or", {"upgrade-goblin-writing", "unit-goblin-temple"},
+	"or", {"upgrade-teuton-writing", "unit-teuton-temple"}
+)
+
+DefineDependency("unit-short-sword",
+	{"unit-germanic-smithy"},
+	"or", {"unit-teuton-smithy"},
+	"or", {"unit-latin-smithy"}
+)
+
+DefineDependency("unit-broad-sword",
+	{"unit-germanic-smithy", "upgrade-germanic-broad-sword"},
+	"or", {"unit-teuton-smithy", "upgrade-germanic-broad-sword"},
+	"or", {"unit-latin-smithy", "upgrade-germanic-broad-sword"}
+)
+
+DefineDependency("unit-spatha",
+	{"unit-teuton-smithy", "upgrade-teuton-spatha"},
+	"or", {"unit-latin-smithy", "upgrade-teuton-spatha"}
+)
+
+DefineDependency("unit-frankish-spatha",
+	{"unit-teuton-smithy", "upgrade-frank-spatha"}
+)
+
+DefineDependency("unit-goblin-short-sword",
+	{"unit-goblin-smithy"}
+)
+
+DefineDependency("unit-goblin-broad-sword",
+	{"unit-goblin-smithy", "upgrade-goblin-broad-sword"}
+)
+
+DefineDependency("unit-goblin-long-sword",
+	{"unit-goblin-smithy", "upgrade-goblin-long-sword"}
+)
+
+DefineDependency("unit-thrusting-sword", -- gnomish
+	{"unit-dwarven-smithy"}
+)
+
+DefineDependency("unit-battle-axe",
+	{"unit-brising-smithy"},
+	"or", {"unit-dwarven-smithy"}
+)
+
+DefineDependency("unit-broad-axe",
+	{"unit-brising-smithy", "upgrade-dwarven-broad-axe"},
+	"or", {"unit-dwarven-smithy", "upgrade-dwarven-broad-axe"}
+)
+
+DefineDependency("unit-great-axe",
+	{"unit-brising-smithy", "upgrade-dwarven-great-axe"},
+	"or", {"unit-dwarven-smithy", "upgrade-dwarven-great-axe"}
+)
+
+DefineDependency("unit-hammer",
+	{"unit-brising-smithy"},
+	"or", {"unit-dwarven-smithy"},
+	"or", {"unit-germanic-smithy"},
+	"or", {"unit-goblin-smithy"},
+	"or", {"unit-latin-smithy"},
+	"or", {"unit-teuton-smithy"}
+)
+
+DefineDependency("unit-mining-pick",
+	{"unit-brising-smithy"},
+	"or", {"unit-dwarven-smithy"},
+	"or", {"unit-germanic-smithy"},
+	"or", {"unit-goblin-smithy"},
+	"or", {"unit-latin-smithy"},
+	"or", {"unit-teuton-smithy"}
+)
+
+DefineDependency("unit-short-spear",
+	{"unit-dwarven-lumber-mill"},
+	"or", {"unit-germanic-carpenters-shop"},
+	"or", {"unit-goblin-lumber-mill"},
+	"or", {"unit-teuton-lumber-mill"}
+)
+
+DefineDependency("unit-long-spear",
+	{"unit-dwarven-lumber-mill", "upgrade-dwarven-long-spear"},
+	"or", {"unit-germanic-carpenters-shop", "upgrade-germanic-long-spear"},
+	"or", {"unit-goblin-lumber-mill", "upgrade-goblin-long-spear"},
+	"or", {"unit-teuton-lumber-mill", "upgrade-germanic-long-spear"}
+)
+
+DefineDependency("unit-pike",
+	{"unit-dwarven-lumber-mill", "upgrade-dwarven-pike"},
+	"or", {"unit-goblin-lumber-mill", "upgrade-goblin-pike"},
+	"or", {"unit-teuton-lumber-mill", "upgrade-teuton-pike"}
+)
+
+DefineDependency("unit-throwing-axe",
+	{"unit-dwarven-lumber-mill"}
+)
+
+DefineDependency("unit-sharp-throwing-axe",
+	{"unit-dwarven-lumber-mill", "upgrade-dwarven-sharp-throwing-axe"}
+)
+
+DefineDependency("unit-bearded-throwing-axe",
+	{"unit-dwarven-lumber-mill", "upgrade-dwarven-bearded-throwing-axe"}
+)
+
+DefineDependency("unit-wooden-shield",
+	{"unit-germanic-smithy"},
+	"or", {"unit-teuton-smithy"},
+	"or", {"unit-latin-smithy"}
+)
+
+DefineDependency("unit-bronze-shield",
+	{"unit-germanic-smithy", "upgrade-germanic-bronze-shield"},
+	"or", {"unit-teuton-smithy", "upgrade-germanic-bronze-shield"},
+	"or", {"unit-latin-smithy", "upgrade-germanic-bronze-shield"}
+)
+
+DefineDependency("unit-iron-shield",
+	{"unit-teuton-smithy", "upgrade-teuton-iron-shield"},
+	"or", {"unit-latin-smithy", "upgrade-teuton-iron-shield"}
+)
+
+DefineDependency("unit-goblin-wooden-shield",
+	{"unit-goblin-smithy"}
+)
+
+DefineDependency("unit-goblin-rimmed-shield",
+	{"unit-goblin-smithy", "upgrade-goblin-rimmed-shield"}
+)
+
+DefineDependency("unit-goblin-embossed-shield",
+	{"unit-goblin-smithy", "upgrade-goblin-embossed-shield"}
+)
+
+DefineDependency("unit-kite-shield",
+	{"unit-teuton-smithy", "upgrade-teuton-iron-shield"}
+)
+
+DefineDependency("unit-round-shield",
+	{"unit-dwarven-smithy"}
+)
+
+DefineDependency("unit-brising-round-shield",
+	{"unit-brising-smithy"}
+)
+
+DefineDependency("unit-heater-shield",
+	{"unit-brising-smithy", "upgrade-dwarven-shield-1"},
+	"or", {"unit-dwarven-smithy", "upgrade-dwarven-shield-1"}
+)
+
+DefineDependency("unit-thrymgjol-shield",
+	{"unit-brising-smithy", "upgrade-dwarven-shield-2"},
+	"or", {"unit-dwarven-smithy", "upgrade-dwarven-shield-2"}
+)
+
+DefineDependency("unit-horn",
+	{"unit-brising-smithy"},
+	"or", {"unit-dwarven-smithy"},
+	"or", {"unit-germanic-smithy"},
+	"or", {"unit-goblin-smithy"},
+	"or", {"unit-latin-smithy"},
+	"or", {"unit-teuton-smithy"}
+)
+
+DefineDependency("unit-arrows",
+	{"unit-germanic-carpenters-shop"},
+	"or", {"unit-goblin-lumber-mill"},
+	"or", {"unit-teuton-lumber-mill"}
+)
+
+DefineDependency("unit-barbed-arrows",
+	{"unit-germanic-carpenters-shop", "upgrade-germanic-barbed-arrow"},
+	"or", {"unit-goblin-lumber-mill", "upgrade-goblin-barbed-arrow"},
+	"or", {"unit-teuton-lumber-mill", "upgrade-germanic-barbed-arrow"}
+)
+
+DefineDependency("unit-bodkin-arrows",
+	{"unit-goblin-lumber-mill", "upgrade-goblin-bodkin-arrow"},
+	"or", {"unit-teuton-lumber-mill", "upgrade-teuton-bodkin-arrow"}
+)
+
+DefineDependency("unit-amulet",
+	{"unit-brising-smithy"},
+	"or", {"unit-dwarven-smithy"},
+	"or", {"unit-germanic-smithy"},
+	"or", {"unit-goblin-smithy"},
+	"or", {"unit-latin-smithy"},
+	"or", {"unit-teuton-smithy"}
+)
+
+DefineDependency("unit-ring",
+	{"unit-brising-smithy"},
+	"or", {"unit-dwarven-smithy"},
+	"or", {"unit-germanic-smithy"},
+	"or", {"unit-goblin-smithy"},
+	"or", {"unit-latin-smithy"},
+	"or", {"unit-teuton-smithy"}
+)
+
 -- dependencies for deity upgrades that require a certain upgrade
 DefineDependency("upgrade-deity-christian-god",
 	{"upgrade-teuton-writing"}

@@ -1364,6 +1364,7 @@ DefineUnitType("unit-teuton-market", {
 	Shadow = {"file", "germanic/buildings/market_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-germanic-market",
 	RequirementsString = "Carpenter's Shop/Lumber Mill",
+	SoldUnits = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	Sounds = {
 --		"help", "basic-teuton-voices-help-town"
 	}

@@ -372,15 +372,15 @@ DefineDependency("upgrade-item-suffix-of-diligence",
 )
 
 DefineDependency("upgrade-item-suffix-of-extinguishment",
-	{"upgrade-deity-domain-water"}
+	{"upgrade-deity-domain-water"}, "or", {"upgrade-deity-domain-hope"}
 )
 
 DefineDependency("upgrade-item-suffix-of-fire",
-	{"upgrade-deity-domain-fire"}
+	{"upgrade-deity-domain-fire"}, "or", {"upgrade-deity-domain-faith"}
 )
 
 DefineDependency("upgrade-item-suffix-of-flame",
-	{"upgrade-deity-domain-fire"}
+	{"upgrade-deity-domain-fire"}, "or", {"upgrade-deity-domain-faith"}
 )
 
 DefineDependency("upgrade-item-suffix-of-frailty",
@@ -396,23 +396,23 @@ DefineDependency("upgrade-item-suffix-of-lightning",
 )
 
 DefineDependency("upgrade-item-suffix-of-perfuration",
-	{"upgrade-deity-domain-archery"}, "or", {"upgrade-deity-domain-warfare"}, "or", {"upgrade-deity-domain-wrath"}
+	{"upgrade-deity-domain-archery"}, "or", {"upgrade-deity-domain-warfare"}, "or", {"upgrade-deity-domain-wrath"}, "or", {"upgrade-deity-domain-faith"}
 )
 
 DefineDependency("upgrade-item-suffix-of-plenty",
-	{"upgrade-deity-domain-life"}
+	{"upgrade-deity-domain-life"}, "or", {"upgrade-deity-domain-charity"}
 )
 
 DefineDependency("upgrade-item-suffix-of-power",
-	{"upgrade-deity-domain-pride"}
+	{"upgrade-deity-domain-pride"}, "or", {"upgrade-deity-domain-faith"}
 )
 
 DefineDependency("upgrade-item-suffix-of-regeneration",
-	{"upgrade-deity-domain-life"}
+	{"upgrade-deity-domain-life"}, "or", {"upgrade-deity-domain-faith"}
 )
 
 DefineDependency("upgrade-item-suffix-of-replenishment",
-	{"upgrade-deity-domain-life"}
+	{"upgrade-deity-domain-life"}, "or", {"upgrade-deity-domain-hope"}
 )
 
 DefineDependency("upgrade-item-suffix-of-the-serpent",
@@ -420,7 +420,7 @@ DefineDependency("upgrade-item-suffix-of-the-serpent",
 )
 
 DefineDependency("upgrade-item-suffix-of-slaughter",
-	{"upgrade-deity-domain-wrath"}
+	{"upgrade-deity-domain-wrath"}, "or", {"upgrade-deity-domain-death"}
 )
 
 DefineDependency("upgrade-item-suffix-of-slowness",
@@ -440,7 +440,7 @@ DefineDependency("upgrade-item-suffix-of-speed",
 )
 
 DefineDependency("upgrade-item-suffix-of-strength",
-	{"upgrade-deity-domain-warfare"}
+	{"upgrade-deity-domain-warfare"}, "or", {"upgrade-deity-domain-faith"}
 )
 
 DefineDependency("upgrade-item-suffix-of-swiftness",
@@ -460,7 +460,7 @@ DefineDependency("upgrade-item-suffix-of-victory",
 )
 
 DefineDependency("upgrade-item-suffix-of-vision",
-	{"upgrade-deity-domain-archery"}
+	{"upgrade-deity-domain-archery"}, "or", {"upgrade-deity-domain-faith"}
 )
 
 DefineDependency("upgrade-item-suffix-of-vulnerability",

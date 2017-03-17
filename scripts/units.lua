@@ -3627,7 +3627,6 @@ DefineUnitType("unit-template-temple", {
 	ResourceDemand = {"furniture", 3},
 	RequirementsString = "Lumber Mill",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
-	SoldUnits = {"unit-scroll"},
 	AiDrops = {"unit-amulet", "unit-ring", "unit-scroll", "unit-book"},
 	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},
 	Sounds = {
@@ -3749,6 +3748,10 @@ DefineUnitType("unit-template-market", {
 	TradeCost = 30,
 	ResourceDemand = {"furniture", 3},
 	RequirementsString = "Lumber Mill",
+	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
+	SoldUnits = {"unit-hammer", "unit-mining-pick", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-horn", "unit-amulet", "unit-ring", "unit-scroll", "unit-book"},
+	AiDrops = {"unit-amulet", "unit-ring"},
+	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},
 	Sounds = {
 --		"selected", "lumber-mill-selected",
 --		"acknowledge", "dwarven-lumber-mill-acknowledge",

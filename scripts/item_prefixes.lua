@@ -259,7 +259,7 @@ DefineDependency("upgrade-item-prefix-dwindling",
 )
 
 DefineDependency("upgrade-item-prefix-flaming",
-	{"upgrade-deity-domain-fire"}
+	{"upgrade-deity-domain-fire"}, "or", {"upgrade-deity-domain-faith"}
 )
 
 DefineDependency("upgrade-item-prefix-frail",
@@ -275,11 +275,11 @@ DefineDependency("upgrade-item-prefix-glacial",
 )
 
 DefineDependency("upgrade-item-prefix-impregnable",
-	{"upgrade-deity-domain-earth"}, "or", {"upgrade-deity-domain-metal"}, "or", {"upgrade-deity-domain-order"}, "or", {"upgrade-deity-domain-warfare"}
+	{"upgrade-deity-domain-earth"}, "or", {"upgrade-deity-domain-metal"}, "or", {"upgrade-deity-domain-order"}, "or", {"upgrade-deity-domain-warfare"}, "or", {"upgrade-deity-domain-faith"}
 )
 
 DefineDependency("upgrade-item-prefix-industrious",
-	{"upgrade-deity-domain-greed"}, "or", {"upgrade-deity-domain-metalworking"}
+	{"upgrade-deity-domain-greed"}, "or", {"upgrade-deity-domain-metalworking"}, "or", {"upgrade-deity-domain-temperance"}
 )
 
 DefineDependency("upgrade-item-prefix-jinns",
@@ -291,11 +291,11 @@ DefineDependency("upgrade-item-prefix-penetrating",
 )
 
 DefineDependency("upgrade-item-prefix-quenching",
-	{"upgrade-deity-domain-water"}
+	{"upgrade-deity-domain-water"}, "or", {"upgrade-deity-domain-hope"}
 )
 
 DefineDependency("upgrade-item-prefix-replenishing",
-	{"upgrade-deity-domain-life"}
+	{"upgrade-deity-domain-life"}, "or", {"upgrade-deity-domain-hope"}
 )
 
 DefineDependency("upgrade-item-prefix-storm",
@@ -303,7 +303,7 @@ DefineDependency("upgrade-item-prefix-storm",
 )
 
 DefineDependency("upgrade-item-prefix-sturdy",
-	{"upgrade-deity-domain-earth"}, "or", {"upgrade-deity-domain-metal"}, "or", {"upgrade-deity-domain-metalworking"}, "or", {"upgrade-deity-domain-order"}, "or", {"upgrade-deity-domain-warfare"}
+	{"upgrade-deity-domain-earth"}, "or", {"upgrade-deity-domain-metal"}, "or", {"upgrade-deity-domain-metalworking"}, "or", {"upgrade-deity-domain-order"}, "or", {"upgrade-deity-domain-warfare"}, "or", {"upgrade-deity-domain-hope"}
 )
 
 DefineDependency("upgrade-item-prefix-swift",

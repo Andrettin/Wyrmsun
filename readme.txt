@@ -67,6 +67,8 @@ https://github.com/Andrettin/Wyrmsun
 - Carpenter's Shops and Lumber Mills now cannot be built too close to town halls.
 - A maximum of ten workers can now gather resources from a mine at the same time.
 - Increased the time it takes for unit stocks to recharge.
+- Scrolls are no longer bought in Temples, but in Markets.
+- Markets provide a wide selection of purchasable items, including magic and (very rarely) unique ones. Which items appear depends on what you have. For example, swords only appear if you have a smithy, magic affixes depend on your deity or religion, and so forth.
 
 * Civilizations
 - Anglo-Saxon units now have English voices.

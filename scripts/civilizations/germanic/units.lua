@@ -714,6 +714,7 @@ DefineUnitType("unit-germanic-market", {
 	Shadow = {"file", "germanic/buildings/market_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-germanic-market",
 	RequirementsString = "Carpenter's Shop",
+	SoldUnits = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows"},
 	Sounds = {
 		"help", "basic-germanic-voices-help-town"
 	}
