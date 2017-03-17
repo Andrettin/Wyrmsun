@@ -304,6 +304,9 @@ Johnvarker:
 /sounds/english/basic_voices/selected_05.wav (licensed under the GPL 2.0 and CC-BY-SA 3.0; copyright held by Andrettin)
 /sounds/english/basic_voices/to_be_or_not_to_be.wav (licensed under the GPL 2.0 and CC-BY-SA 3.0; copyright held by Andrettin)
 /sounds/english/basic_voices/to_be_or_not_to_be_extra.wav (licensed under the GPL 2.0 and CC-BY-SA 3.0; copyright held by Andrettin)
+/sounds/english/basic_voices/work_complete_01.wav (licensed under the GPL 2.0 and CC-BY-SA 3.0; copyright held by Andrettin)
+/sounds/english/basic_voices/work_complete_02.wav (licensed under the GPL 2.0 and CC-BY-SA 3.0; copyright held by Andrettin)
+/sounds/english/basic_voices/work_complete_03.wav (licensed under the GPL 2.0 and CC-BY-SA 3.0; copyright held by Andrettin)
 
 Jute:
 /sounds/movement/step_dirt/stepdirt_1.wav (licensed under the GPL 2.0)
