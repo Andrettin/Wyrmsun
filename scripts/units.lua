@@ -2571,7 +2571,7 @@ DefineUnitType("unit-revealer", { Name = "Revealer",
 -- Template Units
 
 DefineUnitType("unit-template-worker", {
-	Name = _("Worker"),
+	Name = "Worker",
 	Parent = "unit-template-sapient-unit",
 	Class = "worker",
 	Costs = {"time", 45, "copper", 400},

@@ -1884,7 +1884,24 @@ DefineCivilization("latin", {
 	Playable = false,
 	DefaultColor = "red",
 	CivilizationUpgrade = "upgrade-latin-civilization",
-	Description = _("During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. One group of Indo-Europeans spoke a dialect which would later develop into the Celtic and Italic languages. Latins were an Italic people who inhabited Central Italy and who founded many cities, one of them being Rome. With the expansion of consolidation of Roman power, most of Italy would be latinized, and eventually large areas of the Roman empire would speak Latin as their mother tongue."),
+	Description = "During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. One group of Indo-Europeans spoke a dialect which would later develop into the Celtic and Italic languages. Latins were an Italic people who inhabited Central Italy and who founded many cities, one of them being Rome. With the expansion of consolidation of Roman power, most of Italy would be latinized, and eventually large areas of the Roman empire would speak Latin as their mother tongue.",
+	UnitSounds = {
+		"selected", "basic-latin-voices-selected-group",
+		"acknowledge", "basic-latin-voices-acknowledge",
+		"attack", "basic-latin-voices-attack",
+		"build", "basic-latin-voices-build",
+		"repair", "basic-latin-voices-repair",
+		"harvest", "copper", "basic-latin-voices-harvest",
+		"harvest", "silver", "basic-latin-voices-harvest",
+		"harvest", "gold", "basic-latin-voices-harvest",
+		"harvest", "lumber", "basic-latin-voices-harvest",
+		"harvest", "stone", "basic-latin-voices-harvest",
+		"harvest", "coal", "basic-latin-voices-harvest",
+		"harvest", "furniture", "basic-latin-voices-harvest",
+		"ready", "basic-latin-voices-ready",
+		"help", "basic-english-voices-help",
+		"help-town", "basic-english-voices-help-town"
+	},
 	PersonalNames = {
 		"female", "Faustina", -- daughter of Emperor Antoninus Pius who married Marcus Aurelius; Source: "Ancient Warfare VII.6", 2013, pp. 6, 8.
 		"male", "Antoninus", -- Antoninus Pius, Roman emperor; Source: "Ancient Warfare VII.6", 2013, p. 6.
@@ -2100,6 +2117,18 @@ DefineCivilization("greek", {
 	ParentCivilization = "latin",
 	Adjective = "Greek",
 	Playable = false,
+	Description = "During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. Those who migrated to Greece spoke their own dialect of Indo-European, which eventually would develop into Ancient Greek. Initially a backwater in comparison to the Near East, Greece would eventually become one of the main centers of civilization in antiquity, being widely renowned for the achievements of its people. The rise of the Macedonian empire spread the influence of Greek culture through much of the eastern Mediterranean, Persia, and beyond, and even after the Roman conquest Greek remained widely spoken (both as a mother tongue and as a lingua franca) in the eastern half of the Mediterranean.",
+	UnitSounds = {
+		"selected", "basic-greek-voices-selected-group",
+		"acknowledge", "basic-greek-voices-acknowledge",
+--		"attack", "basic-greek-voices-attack",
+		"ready", "basic-greek-voices-ready",
+		"help", "basic-english-voices-help",
+		"help-town", "basic-english-voices-help-town"
+	},
+	HistoricalUpgrades = {
+		-1400, "upgrade-teuton-masonry", true -- Construction of palaces in continental Greece around 1400 BC; Source: "Atlas de História Mundial", 2001, p. 66.
+	},
 	SettlementNames = {
 		"Abdera",
 		"Abydus",
@@ -2191,10 +2220,6 @@ DefineCivilization("greek", {
 		"Trapezus",
 		"Zacynthus", -- Saguntum
 		"Zancle" -- Messana
-	},
-	Description = "During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. Those who migrated to Greece spoke their own dialect of Indo-European, which eventually would develop into Ancient Greek. Initially a backwater in comparison to the Near East, Greece would eventually become one of the main centers of civilization in antiquity, being widely renowned for the achievements of its people. The rise of the Macedonian empire spread the influence of Greek culture through much of the eastern Mediterranean, Persia, and beyond, and even after the Roman conquest Greek remained widely spoken (both as a mother tongue and as a lingua franca) in the eastern half of the Mediterranean.",
-	HistoricalUpgrades = {
-		-1400, "upgrade-teuton-masonry", true -- Construction of palaces in continental Greece around 1400 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 	}
 })
 
