@@ -201,7 +201,7 @@ function DefineUnitType(unit_type, data)
 	
 	if (town_hall) then
 		data.BuildingRules = {
-			{
+			"and", {
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-rock"},
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-deposit"},
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine"},
@@ -220,7 +220,7 @@ function DefineUnitType(unit_type, data)
 		}
 	elseif (resource_mine) then
 		data.BuildingRules = {
-			{
+			"and", {
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall"},
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-stronghold"},
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-town-hall"},
@@ -359,7 +359,7 @@ DefineUnitType("unit-gold-mine", {
 	Icon = "icon-gold-mine",
 --	Costs = {"time", 200, "copper", 700, "lumber", 450},
 	Costs = {"time", 200, "lumber", 2050},
-	BuildingRules = { { "ontop", { Type = "unit-gold-deposit", ReplaceOnDie = true, ReplaceOnBuild = true} } },
+	BuildingRules = { "and", { "ontop", { Type = "unit-gold-deposit", ReplaceOnDie = true, ReplaceOnBuild = true} } },
 	GivesResource = "gold",
 	ButtonPos = 12,
 	ButtonKey = "g",
@@ -386,7 +386,7 @@ DefineUnitType("unit-silver-mine", {
 	LightImage = {"file", "neutral/buildings/silver_mine_light.png"},
 	Icon = "icon-silver-mine",
 	Costs = {"time", 200, "lumber", 2050},
-	BuildingRules = { { "ontop", { Type = "unit-silver-deposit", ReplaceOnDie = true, ReplaceOnBuild = true} } },
+	BuildingRules = { "and", { "ontop", { Type = "unit-silver-deposit", ReplaceOnDie = true, ReplaceOnBuild = true} } },
 	GivesResource = "silver",
 	ButtonPos = 11,
 	ButtonKey = "v",
@@ -413,7 +413,7 @@ DefineUnitType("unit-copper-mine", {
 	LightImage = {"file", "neutral/buildings/copper_mine_light.png"},
 	Icon = "icon-copper-mine",
 	Costs = {"time", 200, "lumber", 2050},
-	BuildingRules = { { "ontop", { Type = "unit-copper-deposit", ReplaceOnDie = true, ReplaceOnBuild = true} } },
+	BuildingRules = { "and", { "ontop", { Type = "unit-copper-deposit", ReplaceOnDie = true, ReplaceOnBuild = true} } },
 	GivesResource = "copper",
 	ButtonPos = 10,
 	ButtonKey = "c",
@@ -4080,6 +4080,12 @@ DefineUnitType("unit-railroad", {
 	BuilderOutside = true,
 	HiddenInEditor = true,
 	RequirementsString = "Steam Engine",
+	BuildingRules = {
+		"distance", { Distance = 3, DistanceType = "<=", Type = "unit-gold-mine"},
+		"distance", { Distance = 3, DistanceType = "<=", Type = "unit-silver-mine"},
+		"distance", { Distance = 3, DistanceType = "<=", Type = "unit-copper-mine"},
+		"distance", { Distance = 3, DistanceType = "<=", Type = "unit-coal-mine"}
+	},
 	Sounds = {
 		"dead", "building-destroyed"
 	}
