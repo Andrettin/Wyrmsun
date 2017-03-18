@@ -26,7 +26,9 @@
 --
 
 UnitStill = {"frame 0", "wait 4", "random-goto 99 no-rotate", "random-rotate 1", "label no-rotate", "wait 1",}
-UnitMove = {"unbreakable begin", 
+
+UnitMove = {
+	"unbreakable begin", 
 	"if-var v.Speed.Value <= 3 speed_3",
 	"if-var v.Speed.Value <= 6 speed_6",
 	"if-var v.Speed.Value == 7 speed_7",
@@ -39,7 +41,6 @@ UnitMove = {"unbreakable begin",
 	"if-var v.Speed.Value == 14 speed_14",
 	"if-var v.Speed.Value == 15 speed_15",
 	"if-var v.Speed.Value >= 16 speed_16",
-	-- speed_3 16 / (3 / 10) = c. 53 waits
 	"label speed_3", -- 16 / (3 / 10) = c. 53 waits
 	"frame 0", "move 3", "wait 5", "frame 5", "move 3", "wait 4",
     "frame 5", "move 3", "wait 5", "frame 10", "move 2", "wait 5",
@@ -125,6 +126,44 @@ UnitMove = {"unbreakable begin",
 	"frame 0", "move 3", "wait 1", "frame 15", "move 3", "wait 1",
 	"frame 15", "move 3", "wait 1", "frame 20", "move 4", "wait 1",
 	"frame 0", "move 3", "goto end",
+	"label end", "unbreakable end", "wait 1",
+}
+
+UnitWheeledMove = {
+	"unbreakable begin",
+	"if-var v.Speed.Value <= 5 speed_5",
+	"if-var v.Speed.Value == 6 speed_6",
+	"if-var v.Speed.Value >= 7 speed_7",
+	"label speed_5", -- 16 / (5 / 10) = 32 waits
+	"frame 0", "wait 1", "frame 5", "move 2", "wait 2",
+	"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
+	"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
+	"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
+	"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
+	"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
+	"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
+	"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
+	"frame 0", "move 2", "goto end",
+	"label speed_6", -- 16 / (6 / 10) = c. 26 waits
+	"frame 0", "wait 1", "frame 5", "move 2", "wait 2",
+	"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 1",
+	"frame 0", "move 2", "wait 1", "frame 5", "move 2", "wait 2",
+	"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 1",
+	"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
+	"frame 0", "move 2", "wait 1", "frame 5", "move 2", "wait 2",
+	"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 1",
+	"frame 0", "move 2", "wait 1", "frame 5", "move 2", "wait 2",
+	"frame 0", "move 2", "goto end",
+	"label speed_7", -- 16 / (7 / 10) = c. 22 waits
+	"frame 0", "wait 1", "frame 5", "move 2", "wait 1",
+	"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 1",
+	"frame 0", "move 2", "wait 1", "frame 5", "move 2", "wait 2",
+	"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 1",
+	"frame 0", "move 2", "wait 1", "frame 5", "move 2", "wait 1",
+	"frame 0", "move 2", "wait 1", "frame 5", "move 2", "wait 2",
+	"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 1",
+	"frame 0", "move 2", "wait 1", "frame 5", "move 2", "wait 1",
+	"frame 0", "move 2", "goto end",
 	"label end", "unbreakable end", "wait 1",
 }
 

@@ -31,17 +31,7 @@
 
 DefineAnimations("animations-teuton-catapult", {
 	Still = {"frame 0", "wait 4", "frame 0", "wait 1",},
-	Move = {
-		"unbreakable begin","frame 0", "wait 1", "frame 5", "move 2", "wait 2",
-		"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-		"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-		"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-		"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-		"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-		"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-		"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-		"frame 0", "move 2", "unbreakable end", "wait 1",
-	},
+	Move = UnitWheeledMove,
 	Attack = {
 		"unbreakable begin", "frame 15", "attack", "sound catapult-attack", "wait 2",
 		"frame 10", "wait 41", "frame 15", "wait 6", "frame 15", "wait 100", "frame 0", "wait 50", "frame 0", "unbreakable end", "wait 1",

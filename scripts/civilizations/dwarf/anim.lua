@@ -109,17 +109,7 @@ DefineAnimations("animations-dwarven-scout", {
 
 DefineAnimations("animations-dwarven-ballista", {
 	Still = {"frame 0", "wait 4", "frame 0", "wait 1",},
-	Move = {
-		"unbreakable begin","frame 0", "wait 1", "frame 5", "move 2", "wait 2",
-		"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-		"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-		"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-		"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-		"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-		"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-		"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-		"frame 0", "move 2", "unbreakable end", "wait 1",
-	},	
+	Move = UnitWheeledMove,
 	Attack = {
 		"unbreakable begin",
 		"frame 10", "wait 25",

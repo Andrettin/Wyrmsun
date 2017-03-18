@@ -137,16 +137,10 @@ DefineAnimations("animations-gnomish-herbalist", {
 --
 
 DefineAnimations("animations-gnomish-caravan", {
-  Still = {"frame 0", "wait 4", "frame 0", "wait 1",},
-  Move = {"unbreakable begin","frame 0", "wait 1", "frame 5", "move 2", "wait 2",
-    "frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-    "frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-    "frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-    "frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-    "frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-    "frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-    "frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-    "frame 0", "move 2", "unbreakable end", "wait 1",},
-  Death = {"unbreakable begin", "frame 10", "wait 3", "frame 15", "wait 3", "frame 20", "wait 3", "frame 25", "wait 100",
-    "frame 25", "unbreakable end", "wait 1",}
+	Still = {"frame 0", "wait 4", "frame 0", "wait 1",},
+	Move = UnitWheeledMove,
+	Death = {
+		"unbreakable begin", "frame 10", "wait 3", "frame 15", "wait 3", "frame 20", "wait 3", "frame 25", "wait 100",
+		"frame 25", "unbreakable end", "wait 1",
+	}
 })
