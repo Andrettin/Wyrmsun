@@ -88,7 +88,7 @@ DefineButton( { Pos = 4, Level = 1, Icon = "icon-goblin-lumber-mill",
 
 DefineButton( { Pos = 5, Level = 1, Icon = "icon-goblin-smithy",
 	Action = "build", Value = "unit-goblin-smithy",
-	Key = "o", Hint = _("Build Fugla F~!orge"), Popup = "popup-building",
+	Key = "e", Hint = _("Build Fugla Forg~!e"), Popup = "popup-building",
 	ForUnit = {"unit-goblin-worker"}
 })
 

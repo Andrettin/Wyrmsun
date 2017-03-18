@@ -268,7 +268,11 @@ DefineDependency("unit-road",
 	"or", {"upgrade-teuton-masonry"}
 )
 
-DefinePredependency("unit-railroad", -- is a predependency because it occupies the same button slot as roads
+DefinePredependency("unit-mine-railroad",
+	{"upgrade-steam-engine"}
+)
+
+DefinePredependency("unit-railroad",
 	{"upgrade-steam-engine"}
 )
 

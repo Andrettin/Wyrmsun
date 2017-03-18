@@ -159,7 +159,7 @@ Units = {
 	"unit-mercenary-camp",
 --	"unit-cavern-entrance",
 --	"unit-portal",
-	"unit-road", "unit-railroad",
+	"unit-road", "unit-mine-railroad", "unit-railroad",
 	"unit-carrots", "unit-cheese", "unit-wyrm-heart", "unit-potion-of-healing",
 	"upgrade-free-workers", "upgrade-serfdom",
 	"upgrade-deity-odin", "upgrade-deity-thor", "upgrade-deity-gathaarl",
@@ -202,34 +202,34 @@ function DefineUnitType(unit_type, data)
 	if (town_hall) then
 		data.BuildingRules = {
 			"and", {
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-rock"},
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-deposit"},
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine"},
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-silver-rock"},
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-silver-deposit"},
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-silver-mine"},
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-rock"},
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-deposit"},
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-mine"},
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine"},
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-lumber-mill"},
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-carpenters-shop"},
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-lumber-mill"},
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-lumber-mill"}
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-rock" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-deposit" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-silver-rock" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-silver-deposit" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-silver-mine" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-rock" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-deposit" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-mine" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-lumber-mill" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-carpenters-shop" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-lumber-mill" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-lumber-mill" }
 			}
 		}
 	elseif (resource_mine) then
 		data.BuildingRules = {
 			"and", {
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall"},
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-stronghold"},
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-town-hall"},
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"},
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall"},
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-stronghold"},
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-latin-town-hall"},
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-town-hall"},
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-stronghold"}
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-stronghold" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-town-hall" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-stronghold" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-latin-town-hall" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-town-hall" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-stronghold" }
 			}
 		}
 	end
@@ -359,11 +359,12 @@ DefineUnitType("unit-gold-mine", {
 	Icon = "icon-gold-mine",
 --	Costs = {"time", 200, "copper", 700, "lumber", 450},
 	Costs = {"time", 200, "lumber", 2050},
-	BuildingRules = { "and", { "ontop", { Type = "unit-gold-deposit", ReplaceOnDie = true, ReplaceOnBuild = true} } },
+	BuildingRules = { "and", { "ontop", { Type = "unit-gold-deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
 	GivesResource = "gold",
 	ButtonPos = 12,
 	ButtonKey = "g",
-	ButtonHint = _("Build ~!Gold Mine")
+	ButtonHint = _("Build ~!Gold Mine"),
+	BuildingRulesString = "Must be built on top of a Gold Deposit"
 } )
 
 DefineUnitType("unit-silver-deposit", {
@@ -386,11 +387,12 @@ DefineUnitType("unit-silver-mine", {
 	LightImage = {"file", "neutral/buildings/silver_mine_light.png"},
 	Icon = "icon-silver-mine",
 	Costs = {"time", 200, "lumber", 2050},
-	BuildingRules = { "and", { "ontop", { Type = "unit-silver-deposit", ReplaceOnDie = true, ReplaceOnBuild = true} } },
+	BuildingRules = { "and", { "ontop", { Type = "unit-silver-deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
 	GivesResource = "silver",
 	ButtonPos = 11,
 	ButtonKey = "v",
-	ButtonHint = _("Build Sil~!ver Mine")
+	ButtonHint = _("Build Sil~!ver Mine"),
+	BuildingRulesString = "Must be built on top of a Silver Deposit"
 } )
 
 DefineUnitType("unit-copper-deposit", {
@@ -413,11 +415,12 @@ DefineUnitType("unit-copper-mine", {
 	LightImage = {"file", "neutral/buildings/copper_mine_light.png"},
 	Icon = "icon-copper-mine",
 	Costs = {"time", 200, "lumber", 2050},
-	BuildingRules = { "and", { "ontop", { Type = "unit-copper-deposit", ReplaceOnDie = true, ReplaceOnBuild = true} } },
+	BuildingRules = { "and", { "ontop", { Type = "unit-copper-deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
 	GivesResource = "copper",
 	ButtonPos = 10,
 	ButtonKey = "c",
-	ButtonHint = _("Build ~!Copper Mine")
+	ButtonHint = _("Build ~!Copper Mine"),
+	BuildingRulesString = "Must be built on top of a Copper Deposit"
 } )
 
 DefineUnitType("unit-coal-mine", {
@@ -3266,6 +3269,7 @@ DefineUnitType("unit-template-town-hall", {
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-amulet", "unit-ring", "unit-scroll", "unit-book"}, -- worker-related items, as well as those we would expect a center of administration to have
 	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},
+	BuildingRulesString = "Cannot be built too close to mines or industrial buildings",
 	Sounds = {
 		"selected", "town-hall-selected",
 --		"acknowledge", "town-hall-acknowledge",
@@ -3437,6 +3441,7 @@ DefineUnitType("unit-template-lumber-mill", {
 	ButtonKey = "l",
 	ButtonHint = _("Build ~!Lumber Mill"),
 	ResourceDemand = {"furniture", 3},
+	BuildingRulesString = "Cannot be built too close to town halls",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	PersonalNames = {
 		"The Black Board",
@@ -4052,6 +4057,50 @@ DefineUnitType("unit-road", {
 	}
 } )
 
+DefineUnitType("unit-mine-railroad", {
+	Name = "Railroad",
+	Civilization = "neutral",
+	Class = "railroad",
+	TerrainType = "railroad",
+	Image = {"file", "neutral/buildings/railroad.png", "size", {32, 32}},
+	Shadow = {"file", "neutral/buildings/railroad_shadow.png", "size", {32, 32}},
+	Animations = "animations-building", Icon = "icon-railroad",
+	Costs = {"time", 30, "copper", 35, "lumber", 15},
+	Construction = "construction-wall",
+	RepairHp = 4,
+	RepairCosts = {"copper", 1, "lumber", 1},
+	Speed = 0,
+	HitPoints = 40,
+	DrawLevel = 39,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 1,
+	Armor = 20, Missile = "missile-none",
+	SpeedBonus = 2,
+	Priority = 0, AnnoyComputerFactor = 45,
+	Points = 1,
+--	Corpse = "unit-destroyed-1x1-place",
+	ExplodeWhenKilled = "missile-explosion",
+	Type = "land",
+	Building = true, VisibleUnderFog = true,
+	BuilderOutside = true,
+	HiddenInEditor = true,
+	RequirementsString = "Steam Engine",
+	BuildingRulesString = "Must be built close to a mine, or on cave floor terrain",
+	BuildingRules = {
+		"distance", { Distance = 4, DistanceType = "<=", Type = "unit-gold-deposit" },
+		"distance", { Distance = 4, DistanceType = "<=", Type = "unit-gold-mine" },
+		"distance", { Distance = 4, DistanceType = "<=", Type = "unit-silver-deposit" },
+		"distance", { Distance = 4, DistanceType = "<=", Type = "unit-silver-mine"},
+		"distance", { Distance = 4, DistanceType = "<=", Type = "unit-copper-deposit" },
+		"distance", { Distance = 4, DistanceType = "<=", Type = "unit-copper-mine" },
+		"distance", { Distance = 4, DistanceType = "<=", Type = "unit-coal-mine" },
+		"terrain", { Terrain = "cave-floor" }
+	},
+	Sounds = {
+		"dead", "building-destroyed"
+	}
+} )
+
 DefineUnitType("unit-railroad", {
 	Name = "Railroad",
 	Civilization = "neutral",
@@ -4080,12 +4129,6 @@ DefineUnitType("unit-railroad", {
 	BuilderOutside = true,
 	HiddenInEditor = true,
 	RequirementsString = "Steam Engine",
-	BuildingRules = {
-		"distance", { Distance = 3, DistanceType = "<=", Type = "unit-gold-mine"},
-		"distance", { Distance = 3, DistanceType = "<=", Type = "unit-silver-mine"},
-		"distance", { Distance = 3, DistanceType = "<=", Type = "unit-copper-mine"},
-		"distance", { Distance = 3, DistanceType = "<=", Type = "unit-coal-mine"}
-	},
 	Sounds = {
 		"dead", "building-destroyed"
 	}
