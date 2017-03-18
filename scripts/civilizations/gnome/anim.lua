@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      anim.lua - The gnome unit animation definitions.
---
 --      (c) Copyright 2014-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify

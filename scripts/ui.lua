@@ -1200,17 +1200,7 @@ if not (ui_loaded_first_time) then
 						Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {SpeedBonus = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = Concat(
-							Concat(
-								Concat(
-									_("Speed Bonus: "),
-									If(GreaterThan(TypeVar("SpeedBonus", "Value"), 0), "+", "")
-								),
-								String(TypeVar("SpeedBonus", "Value"))
-							),
-							"%"
-						),
-						Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Speed Bonus:"), " "), Variable = "SpeedBonus", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {FireResistance = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Fire Resistance: "), String(TypeVar("FireResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}

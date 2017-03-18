@@ -752,7 +752,7 @@ DefineButton( { Pos = 14, Level = 1, Icon = "icon-road",
 	}
 })
 
-DefineButton( { Pos = 14, Level = 1, Icon = "icon-railroad",
+DefineButton( { Pos = 15, Level = 1, Icon = "icon-railroad",
 	Action = "build", Value = "unit-railroad",
 	Key = "r", Hint = "Build ~!Railroad", Popup = "popup-building",
 	ForUnit = {
