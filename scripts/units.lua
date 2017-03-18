@@ -3152,7 +3152,7 @@ DefineUnitType("unit-template-flying-rider", { Name = _("Flying Rider"),
 } )
 
 DefineUnitType("unit-template-siege-engine", {
-	Name = _("Siege Engine"),
+	Name = "Siege Engine",
 	Parent = "unit-template-unit",
 	Class = "siege-engine",
 	Costs = {"time", 250, "copper", 900, "lumber", 900},
