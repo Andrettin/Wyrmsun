@@ -123,6 +123,8 @@ Units = {
 	"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
 	"unit-deep-gnomish-worker", "unit-deep-gnomish-recruit", "unit-deep-gnomish-duelist", "unit-deep-gnomish-master-at-arms", "unit-deep-gnomish-herbalist",
 	"unit-derro-worker", "unit-derro-thug", "unit-derro-executioner", "unit-derro-shadowguard",
+	"upgrade-faction-aelak-tribe", "upgrade-faction-issudru-tribe", "upgrade-faction-mabom-tribe", "upgrade-faction-sigre-tribe",
+	"upgrade-faction-aurvangling-tribe", "upgrade-faction-dreadskull-tribe", "upgrade-faction-khag-tribe", "upgrade-faction-lggi-tribe", "upgrade-faction-wildfang-tribe",
 	"upgrade-faction-aurvang", "upgrade-faction-ezmarria", "upgrade-faction-myridia", "upgrade-faction-stilgar", "upgrade-faction-tenebris",
 	"unit-goblin-worker", "unit-goblin-militia", "unit-goblin-magnate",
 	"unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman",
@@ -159,7 +161,7 @@ Units = {
 	"unit-mercenary-camp",
 --	"unit-cavern-entrance",
 --	"unit-portal",
-	"unit-road", "unit-mine-railroad", "unit-railroad",
+	"unit-road", "unit-railroad",
 	"unit-carrots", "unit-cheese", "unit-wyrm-heart", "unit-potion-of-healing",
 	"upgrade-free-workers", "upgrade-serfdom",
 	"upgrade-deity-odin", "upgrade-deity-thor", "upgrade-deity-gathaarl",
@@ -4057,50 +4059,6 @@ DefineUnitType("unit-road", {
 	}
 } )
 
-DefineUnitType("unit-mine-railroad", {
-	Name = "Railroad",
-	Civilization = "neutral",
-	Class = "railroad",
-	TerrainType = "railroad",
-	Image = {"file", "neutral/buildings/railroad.png", "size", {32, 32}},
-	Shadow = {"file", "neutral/buildings/railroad_shadow.png", "size", {32, 32}},
-	Animations = "animations-building", Icon = "icon-railroad",
-	Costs = {"time", 30, "copper", 35, "lumber", 15},
-	Construction = "construction-wall",
-	RepairHp = 4,
-	RepairCosts = {"copper", 1, "lumber", 1},
-	Speed = 0,
-	HitPoints = 40,
-	DrawLevel = 39,
-	TileSize = {1, 1}, BoxSize = {31, 31},
-	SightRange = 1,
-	Armor = 20, Missile = "missile-none",
-	SpeedBonus = 2,
-	Priority = 0, AnnoyComputerFactor = 45,
-	Points = 1,
---	Corpse = "unit-destroyed-1x1-place",
-	ExplodeWhenKilled = "missile-explosion",
-	Type = "land",
-	Building = true, VisibleUnderFog = true,
-	BuilderOutside = true,
-	HiddenInEditor = true,
-	RequirementsString = "Steam Engine",
-	BuildingRulesString = "Must be built close to a mine, or on cave floor terrain",
-	BuildingRules = {
-		"distance", { Distance = 4, DistanceType = "<=", Type = "unit-gold-deposit" },
-		"distance", { Distance = 4, DistanceType = "<=", Type = "unit-gold-mine" },
-		"distance", { Distance = 4, DistanceType = "<=", Type = "unit-silver-deposit" },
-		"distance", { Distance = 4, DistanceType = "<=", Type = "unit-silver-mine"},
-		"distance", { Distance = 4, DistanceType = "<=", Type = "unit-copper-deposit" },
-		"distance", { Distance = 4, DistanceType = "<=", Type = "unit-copper-mine" },
-		"distance", { Distance = 4, DistanceType = "<=", Type = "unit-coal-mine" },
-		"terrain", { Terrain = "cave-floor" }
-	},
-	Sounds = {
-		"dead", "building-destroyed"
-	}
-} )
-
 DefineUnitType("unit-railroad", {
 	Name = "Railroad",
 	Civilization = "neutral",
@@ -4109,7 +4067,7 @@ DefineUnitType("unit-railroad", {
 	Image = {"file", "neutral/buildings/railroad.png", "size", {32, 32}},
 	Shadow = {"file", "neutral/buildings/railroad_shadow.png", "size", {32, 32}},
 	Animations = "animations-building", Icon = "icon-railroad",
-	Costs = {"time", 30, "copper", 35, "lumber", 15},
+	Costs = {"time", 30, "copper", 350, "lumber", 150},
 	Construction = "construction-wall",
 	RepairHp = 4,
 	RepairCosts = {"copper", 1, "lumber", 1},
@@ -4129,6 +4087,32 @@ DefineUnitType("unit-railroad", {
 	BuilderOutside = true,
 	HiddenInEditor = true,
 	RequirementsString = "Steam Engine",
+--	BuildingRulesString = "Must be built close to a mine, or on cave floor terrain",
+	AiBuildingRules = {
+		"distance", { Distance = 1, DistanceType = "<=", Type = "unit-gold-mine" },
+		"distance", { Distance = 1, DistanceType = "<=", Type = "unit-silver-mine"},
+		"distance", { Distance = 1, DistanceType = "<=", Type = "unit-copper-mine" },
+		"distance", { Distance = 1, DistanceType = "<=", Type = "unit-coal-mine" },
+		"and", {
+			"or", {
+				"distance", { Distance = 4, DistanceType = "<=", Type = "unit-gold-mine" },
+				"distance", { Distance = 4, DistanceType = "<=", Type = "unit-silver-mine"},
+				"distance", { Distance = 4, DistanceType = "<=", Type = "unit-copper-mine" },
+				"distance", { Distance = 4, DistanceType = "<=", Type = "unit-coal-mine" }
+			},
+			"or", {
+				"distance", { Distance = 4, DistanceType = "<=", Type = "unit-dwarven-town-hall" },
+				"distance", { Distance = 4, DistanceType = "<=", Type = "unit-dwarven-stronghold" },
+				"distance", { Distance = 4, DistanceType = "<=", Type = "unit-germanic-town-hall" },
+				"distance", { Distance = 4, DistanceType = "<=", Type = "unit-gnomish-town-hall" },
+				"distance", { Distance = 4, DistanceType = "<=", Type = "unit-goblin-town-hall" },
+				"distance", { Distance = 4, DistanceType = "<=", Type = "unit-goblin-stronghold" },
+				"distance", { Distance = 4, DistanceType = "<=", Type = "unit-latin-town-hall" },
+				"distance", { Distance = 4, DistanceType = "<=", Type = "unit-teuton-town-hall" },
+				"distance", { Distance = 4, DistanceType = "<=", Type = "unit-teuton-stronghold" }
+			}
+		}
+	},
 	Sounds = {
 		"dead", "building-destroyed"
 	}

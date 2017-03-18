@@ -268,10 +268,6 @@ DefineDependency("unit-road",
 	"or", {"upgrade-teuton-masonry"}
 )
 
-DefinePredependency("unit-mine-railroad",
-	{"upgrade-steam-engine"}
-)
-
 DefinePredependency("unit-railroad",
 	{"upgrade-steam-engine"}
 )

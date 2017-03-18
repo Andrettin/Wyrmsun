@@ -753,19 +753,6 @@ DefineButton( { Pos = 14, Level = 1, Icon = "icon-road",
 })
 
 DefineButton( { Pos = 15, Level = 1, Icon = "icon-railroad",
-	Action = "build", Value = "unit-mine-railroad",
-	Key = "r", Hint = "Build ~!Railroad", Popup = "popup-building",
-	ForUnit = {
-		"unit-germanic-worker", "unit-teuton-worker",
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
-		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
-		"unit-goblin-worker"
-	}
-})
-
---[[
-DefineButton( { Pos = 15, Level = 1, Icon = "icon-railroad",
 	Action = "build", Value = "unit-railroad",
 	Key = "r", Hint = "Build ~!Railroad", Popup = "popup-building",
 	ForUnit = {
@@ -776,7 +763,6 @@ DefineButton( { Pos = 15, Level = 1, Icon = "icon-railroad",
 		"unit-goblin-worker"
 	}
 })
---]]
 
 DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 	Action = "button", Value = 0,
