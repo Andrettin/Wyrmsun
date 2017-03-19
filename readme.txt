@@ -105,6 +105,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which made units move to autocast even when ordered to stand ground.
 - Improved unit target-finding code for subterranean maps.
 - Fixed an issue which allowed a unit to pick items over its inventory capacity by using waypoints.
+- Fixed issue which sometimes caused a ring of unexplored terrain to appear around units when loading a saved game.
 
 * Upgrades
 - The buttons for upgrades that have already been researched now show up, grayed.
