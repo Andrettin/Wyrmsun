@@ -57,9 +57,9 @@ SetMapTemplateTileTerrain("earth", "shallow-water", {4383, 1174})
 SetMapTemplateTileTerrain("earth", "shallow-water", {4383, 1176})
 
 -- Diolkos railed way was built in the 6th century BC, during or after the time of Corinth's tyrant Periander (which is c. 600 BC), linking the two parts of the Isthmus of Corinth; Source: M. J. T. Lewis, "Railways in the Greek and Roman World", 2001, pp. 10-12.
-SetMapTemplateTileTerrain("earth", "railroad", {4362, 1184}, -600)
-SetMapTemplateTileTerrain("earth", "railroad", {4362, 1185}, -600)
-SetMapTemplateTileTerrain("earth", "railroad", {4363, 1185}, -600)
+SetMapTemplateTileTerrain("earth", "road", {4362, 1184}, -600) -- given that it was made of stone, it makes more sense to represent it as a road than as an iron railroad
+SetMapTemplateTileTerrain("earth", "road", {4362, 1185}, -600)
+SetMapTemplateTileTerrain("earth", "road", {4363, 1185}, -600)
 
 -- the Diolkos railed way was partially destroyed and likely entirely put out of use in 67 AD; Source: M. J. T. Lewis, "Railways in the Greek and Roman World", 2001, pp. 10-12.
 SetMapTemplateTileTerrain("earth", "", {4362, 1184}, 67)

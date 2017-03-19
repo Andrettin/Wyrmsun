@@ -262,10 +262,6 @@ DefineDependency("upgrade-item-prefix-flaming",
 	{"upgrade-deity-domain-fire"}, "or", {"upgrade-deity-domain-faith"}
 )
 
-DefineDependency("upgrade-item-prefix-frail",
-	{"upgrade-deity-domain-death"}
-)
-
 DefineDependency("upgrade-item-prefix-giantsbane",
 	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}
 )
@@ -300,10 +296,6 @@ DefineDependency("upgrade-item-prefix-replenishing",
 
 DefineDependency("upgrade-item-prefix-storm",
 	{"upgrade-deity-domain-lightning"}
-)
-
-DefineDependency("upgrade-item-prefix-sturdy",
-	{"upgrade-deity-domain-earth"}, "or", {"upgrade-deity-domain-metal"}, "or", {"upgrade-deity-domain-metalworking"}, "or", {"upgrade-deity-domain-order"}, "or", {"upgrade-deity-domain-warfare"}, "or", {"upgrade-deity-domain-hope"}
 )
 
 DefineDependency("upgrade-item-prefix-swift",
