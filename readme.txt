@@ -72,7 +72,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added a message if a unique item becomes available for sale in a Market, so that the player doesn't have to worry about missing it.
 
 * Civilizations
-- Anglo-Saxon units now have English voices.
+- Anglo-Saxon units now have English voices (by Johnvarker).
 
 * Factions
 - Fixed issue which prevented the Angle Tribe and Jute Tribe factions from being formable via the "Found a Faction" submenu.
