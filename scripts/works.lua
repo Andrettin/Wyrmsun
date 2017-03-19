@@ -36,3 +36,8 @@ Load("scripts/civilizations/latin/works.lua")
 Load("scripts/civilizations/norse/works.lua")
 Load("scripts/civilizations/teuton/works.lua")
 Load("scripts/civilizations/troll/works.lua")
+
+local literary_works = GetLiteraryWorks()
+for i = 1, table.getn(literary_works) do
+	table.insert(Units, literary_works[i])
+end
