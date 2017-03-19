@@ -280,7 +280,7 @@ AddTrigger("brawl-at-the-barracks",
 			return false
 		end
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and SyncRand(100) == 0 and GetFactionClassUnitType("barracks", GetPlayerData(i, "Faction")) ~= nil and GetPlayerData(i, "UnitTypesCount", GetFactionClassUnitType("barracks", GetPlayerData(i, "Faction"))) >= 1) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and SyncRand(100) == 0 and GetFactionClassUnitType("barracks", GetPlayerData(i, "Faction")) ~= nil and GetPlayerData(i, "UnitTypesCount", GetFactionClassUnitType("barracks", GetPlayerData(i, "Faction"))) >= 1 and GetPlayerData(i, "NumTownHalls") > 0) then -- require a town hall so that the player does not go below the quantity of resources necessary to build one if they started without it
 				trigger_player = i
 				return true
 			end

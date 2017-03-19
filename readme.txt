@@ -74,6 +74,9 @@ https://github.com/Andrettin/Wyrmsun
 * Civilizations
 - Anglo-Saxon units now have English voices (by Johnvarker).
 
+* Events
+- The "Brawl at the Barracks" random event can no longer fire if the player does not have a town hall. This is to prevent the player losing the necessary resources to build a town hall in scenarios where the player starts with a barracks but no town hall (such as Haimdala's Progeny).
+
 * Factions
 - Fixed issue which prevented the Angle Tribe and Jute Tribe factions from being formable via the "Found a Faction" submenu.
 - Added Dwarven, Ettin and Kobold Mercenary Company factions.
@@ -101,6 +104,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused worker inventories to not have a "cancel" button.
 - Fixed issue which made units move to autocast even when ordered to stand ground.
 - Improved unit target-finding code for subterranean maps.
+- Fixed an issue which allowed a unit to pick items over its inventory capacity by using waypoints.
 
 * Upgrades
 - The buttons for upgrades that have already been researched now show up, grayed.
