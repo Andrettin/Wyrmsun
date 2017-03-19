@@ -99,6 +99,7 @@ https://github.com/Andrettin/Wyrmsun
 - The Surghan Mercenary portraits are now used for Axefighters, Steelclads and Stonelords hired from the Surghan Mercenaries faction. Dwarven custom heroes can now be a Surghan Axefighter.
 - Any level 3 organic unit now has access to an inventory.
 - Fixed issue which caused worker inventories to not have a "cancel" button.
+- Fixed issue which made units move to autocast even when ordered to stand ground.
 
 * Upgrades
 - The buttons for upgrades that have already been researched now show up, grayed.
