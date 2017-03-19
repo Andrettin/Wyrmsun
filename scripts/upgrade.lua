@@ -274,15 +274,15 @@ DefinePredependency("unit-railroad",
 
 -- dependencies for items
 DefineDependency("unit-book",
-	{"upgrade-dwarven-runewriting", "unit-dwarven-temple"},
-	"or", {"upgrade-goblin-writing", "unit-goblin-temple"},
-	"or", {"upgrade-teuton-writing", "unit-teuton-temple"}
+	{"upgrade-dwarven-runewriting"},
+	"or", {"upgrade-goblin-writing"},
+	"or", {"upgrade-teuton-writing"}
 )
 
 DefineDependency("unit-scroll",
-	{"upgrade-dwarven-runewriting", "unit-dwarven-temple"},
-	"or", {"upgrade-goblin-writing", "unit-goblin-temple"},
-	"or", {"upgrade-teuton-writing", "unit-teuton-temple"}
+	{"upgrade-dwarven-runewriting"},
+	"or", {"upgrade-goblin-writing"},
+	"or", {"upgrade-teuton-writing"}
 )
 
 DefineDependency("unit-short-sword",
