@@ -409,7 +409,7 @@ DefineModifier("upgrade-work-gagates-craeftas",
 )
 
 DefineModifier("upgrade-work-historia-ecclesiastica-venerabilis-bedae",
-	{"KnowledgeMagic", 3}
+	{"KnowledgeMagic", 5}
 )
 
 DefineModifier("upgrade-work-nigon-wyrta-galdor",

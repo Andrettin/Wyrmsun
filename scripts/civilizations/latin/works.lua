@@ -112,49 +112,49 @@ DefineUpgrade("upgrade-work-strategemata", { -- Source: "Ancient Warfare VII.6",
 })
 
 DefineModifier("upgrade-work-anabasis",
-	{"KnowledgeWarfare", 3}
+	{"KnowledgeWarfare", 5}
 )
 
 DefineModifier("upgrade-work-belli-parthici",
-	{"KnowledgeWarfare", 3}
+	{"KnowledgeWarfare", 5}
 )
 
 DefineModifier("upgrade-work-bithyniaca",
-	{"KnowledgeWarfare", 3}
+	{"KnowledgeWarfare", 5}
 )
 
 DefineModifier("upgrade-work-de-bello-gallico",
-	{"KnowledgeWarfare", 3}
+	{"KnowledgeWarfare", 5}
 )
 
 DefineModifier("upgrade-work-meditations",
-	{"KnowledgeWarfare", 3}
+	{"KnowledgeWarfare", 5}
 )
 
 DefineModifier("upgrade-work-notitia-dignitatum",
-	{"KnowledgeWarfare", 3}
+	{"KnowledgeWarfare", 5}
 )
 
 DefineModifier("upgrade-work-on-writing-history",
-	{"KnowledgeWarfare", 3} -- should probably be something else
+	{"KnowledgeWarfare", 5} -- should probably be something else
 )
 
 DefineModifier("upgrade-work-parthica",
-	{"KnowledgeWarfare", 3}
+	{"KnowledgeWarfare", 5}
 )
 
 DefineModifier("upgrade-work-principia-historiae",
-	{"KnowledgeWarfare", 3}
+	{"KnowledgeWarfare", 5}
 )
 
 DefineModifier("upgrade-work-pro-lege-manilia",
-	{"KnowledgeWarfare", 3}
+	{"KnowledgeWarfare", 5}
 )
 
 DefineModifier("upgrade-work-scriptores-historiae-augustae",
-	{"KnowledgeWarfare", 3}
+	{"KnowledgeWarfare", 5}
 )
 
 DefineModifier("upgrade-work-strategemata",
-	{"KnowledgeWarfare", 3}
+	{"KnowledgeWarfare", 5}
 )

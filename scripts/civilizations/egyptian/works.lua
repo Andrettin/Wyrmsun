@@ -163,39 +163,39 @@ DefineModifier("upgrade-work-adventures-of-horus-and-seth",
 )
 
 DefineModifier("upgrade-work-book-of-caverns",
-	{"KnowledgeMagic", 3}
+	{"KnowledgeMagic", 5}
 )
 
 DefineModifier("upgrade-work-book-of-the-celestial-cow",
-	{"KnowledgeMagic", 3}
+	{"KnowledgeMagic", 5}
 )
 
 DefineModifier("upgrade-work-book-of-the-dead",
-	{"KnowledgeMagic", 3}
+	{"KnowledgeMagic", 5}
 )
 
 DefineModifier("upgrade-work-book-of-doors",
-	{"KnowledgeMagic", 3}
+	{"KnowledgeMagic", 5}
 )
 
 DefineModifier("upgrade-work-book-of-the-earth",
-	{"KnowledgeMagic", 3}
+	{"KnowledgeMagic", 5}
 )
 
 DefineModifier("upgrade-work-book-of-fayum",
-	{"KnowledgeMagic", 3}
+	{"KnowledgeMagic", 5}
 )
 
 DefineModifier("upgrade-work-book-of-imduat",
-	{"KnowledgeMagic", 3}
+	{"KnowledgeMagic", 5}
 )
 
 DefineModifier("upgrade-work-book-of-nut",
-	{"KnowledgeMagic", 3}
+	{"KnowledgeMagic", 5}
 )
 
 DefineModifier("upgrade-work-book-of-the-two-paths",
-	{"KnowledgeMagic", 3}
+	{"KnowledgeMagic", 5}
 )
 
 DefineModifier("upgrade-work-great-hymn-to-the-nile",
@@ -239,9 +239,9 @@ DefineModifier("upgrade-work-teachings-to-merikara",
 )
 
 DefineModifier("upgrade-work-texts-of-the-pyramids",
-	{"KnowledgeMagic", 3}
+	{"KnowledgeMagic", 5}
 )
 
 DefineModifier("upgrade-work-texts-of-the-sarcophaguses",
-	{"KnowledgeMagic", 3}
+	{"KnowledgeMagic", 5}
 )

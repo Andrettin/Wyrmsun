@@ -84,6 +84,9 @@ https://github.com/Andrettin/Wyrmsun
 * Heroes
 - Fixed issue which prevented Frankish hero Kregars from upgrading to Ritars if the player didn't have a Frankish faction.
 
+* Items
+- Books now increase their respective knowledge stat by 5, rather than 3.
+
 * Miscellaneous
 - Fixed crash which could occur when selecting more than 36 units at the same time.
 - Added resource trade at Market buildings. By default resource trade has an extra cost of 30% (25% for goblin markets), which can be reduced by researching Coinage.
