@@ -148,7 +148,7 @@ local tips = {
 	-- Item-related tips
 	"Potions of healing and food items can be used by damaged units to heal themselves. Right-click on those items to pick them up.",
 	"Healing items in a unit's inventory are automatically used if the unit's health is too low.",
-	"Persistent heroes can carry items, and the same applies to regular dwarven Stonelords, Explorers and Gryphon Riders.",
+	"Persistent heroes can carry items, and the same applies to regular level 3 organic units.",
 	"AI buildings and unique units drop items when killed.",
 	"The chance a unique unit will drop a magic or unique item depends on its level.",
 --	"Magic and unique buildings have a higher chance of dropping magic and unique items.",

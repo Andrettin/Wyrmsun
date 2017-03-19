@@ -71,14 +71,14 @@ DefineButton( { Pos = 1, Level = 0,
 DefineButton( { Pos = 1, Level = 0,
 	Action = "train-unit", Value = "unit-teuton-priest",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-deity-christian-god"},
-	Key = "c", Hint = "Train ~!Cleric", Popup = "popup-unit",
+	Key = "l", Hint = "Train C~!leric", Popup = "popup-unit",
 	ForUnit = {"unit-teuton-temple"}
 })
 
 DefineButton( { Pos = 1, Level = 0,
 	Action = "train-unit", Value = "unit-teuton-priest",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-deity-christian-god", "upgrade-holy-order"},
-	Key = "c", Hint = "Hire ~!Cleric", Popup = "popup-unit",
+	Key = "l", Hint = "Hire C~!leric", Popup = "popup-unit",
 	ForUnit = {"unit-teuton-temple"}
 })
 

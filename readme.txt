@@ -88,6 +88,8 @@ https://github.com/Andrettin/Wyrmsun
 - Disabled buttons no longer have a hotkey.
 - Fixed crash which could happen when loading saved games made in certain maps.
 - Fixed issue with the rally point button having the same hotkey as some trained units at the barracks.
+- Fixed the Buy Healing Potion hotkey (it is now properly H, rather than C).
+- Fixed the Teuton Cleric's hotkey to be L, rather than C, as that conflicted with the hotkey for the Christianity upgrade.
 
 * Terrain
 - Fixed issue which caused cleared rock on dirt and dry mud to not be buildable upon.
@@ -95,6 +97,8 @@ https://github.com/Andrettin/Wyrmsun
 * Units
 - Workers can now build roads, which increase movement speed by 25% (road graphics by Jinn). Roads require Masonry.
 - The Surghan Mercenary portraits are now used for Axefighters, Steelclads and Stonelords hired from the Surghan Mercenaries faction. Dwarven custom heroes can now be a Surghan Axefighter.
+- Any level 3 organic unit now has access to an inventory.
+- Fixed issue which caused worker inventories to not have a "cancel" button.
 
 * Upgrades
 - The buttons for upgrades that have already been researched now show up, grayed.

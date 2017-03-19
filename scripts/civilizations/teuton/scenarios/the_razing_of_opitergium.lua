@@ -103,8 +103,8 @@ AddTrigger("the-razing-of-opitergium-victory",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("Marcomanni Tribe") and PlayerHasObjective(GetFactionPlayer("Marcomanni Tribe"), "- Destroy Opitergium") and GetPlayerData(GetFactionPlayer("Rome"), "TotalNumUnitsConstructed") == 0) then
-			player = GetFactionPlayer("Marcomanni Tribe")
+		if (GetFactionExists("marcomanni-tribe") and PlayerHasObjective(GetFactionPlayer("marcomanni-tribe"), "- Destroy Opitergium") and GetPlayerData(GetFactionPlayer("rome"), "TotalNumUnitsConstructed") <= 0) then
+			player = GetFactionPlayer("marcomanni-tribe")
 			return true
 		end
 		return false

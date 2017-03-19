@@ -8,9 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      cheats.lua - Cheat Codes
---
---      (c) Copyright 2001-2015 by Lutz Sammer, Jimmy Salmon, Pali Rohár and Andrettin
+--      (c) Copyright 2001-2017 by Lutz Sammer, Jimmy Salmon, Pali Rohár and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -28,142 +26,131 @@
 --
 
 InitFuncs:add(function()
-  speedcheat = false
-  godcheat = false
+	speedcheat = false
+	godcheat = false
 end)
 
 function HandleCheats(str)
-  local resources = {"copper", "lumber", "oil", "ore", "stone", "coal", "research", "prestige", "gold", "silver", "furniture", "grain", "mushrooms", "labor", "fish", "leadership"}
+	local resources = {"copper", "lumber", "oil", "ore", "stone", "coal", "research", "prestige", "gold", "silver", "furniture", "grain", "mushrooms", "labor", "fish", "leadership"}
 
-  if (str == "im a lumberjack and its ok") then
-    SetSpeedResourcesHarvest("lumber", 25)
-
-  elseif (str == "otters ransom") then
-	for i = 0, (PlayerMax - 2) do
-		SetPlayerData(i, "Resources", "copper", GetPlayerData(i, "Resources", "copper") + 12000)
-		SetPlayerData(i, "Resources", "lumber", GetPlayerData(i, "Resources", "lumber") + 10000)
-		SetPlayerData(i, "Resources", "oil", GetPlayerData(i, "Resources", "oil") + 10000)
-		SetPlayerData(i, "Resources", "stone", GetPlayerData(i, "Resources", "stone") + 10000)
-		SetPlayerData(i, "Resources", "coal", GetPlayerData(i, "Resources", "coal") + 10000)
-	end
-	AddMessage("Resources increased!")
-
-  elseif (str == "showpath") then
-    RevealMap(true)
-
-  elseif (str == "fow on") then
-    SetFogOfWar(true)
-
-  elseif (str == "fow off") then
-    SetFogOfWar(false)
-
-  elseif (str == "fast debug") then
-    for i = 1,table.getn(resources) do
-      SetSpeedResourcesHarvest(resources[i], 10)
-      SetSpeedResourcesReturn(resources[i], 10)
-    end
-    SetSpeedBuild(10)
-    SetSpeedTrain(10)
-    SetSpeedUpgrade(10)
-    SetSpeedResearch(10)
-    AddMessage("FAST DEBUG SPEED")
-
-  elseif (str == "normal debug") then
-    for i = 1,table.getn(resources) do
-      SetSpeedResourcesHarvest(resources[i], 1)
-      SetSpeedResourcesReturn(resources[i], 1)
-    end
-    SetSpeedBuild(1)
-    SetSpeedTrain(1)
-    SetSpeedUpgrade(1)
-    SetSpeedResearch(1)
-    AddMessage("NORMAL DEBUG SPEED")
-
-  elseif (str == "hermes") then
-    if (speedcheat) then
-      speedcheat = false
-      for i = 0,PlayerMax - 1 do
-		  for j = 1,table.getn(resources) do
-			SetPlayerData(i, "SpeedResourcesHarvest", resources[j], GetPlayerData(i, "SpeedResourcesHarvest", resources[j]) / 10)
-			SetPlayerData(i, "SpeedResourcesReturn", resources[j], GetPlayerData(i, "SpeedResourcesReturn", resources[j]) / 10)
-		  end
-		  SetPlayerData(i, "SpeedBuild", GetPlayerData(i, "SpeedBuild") / 10)
-		  SetPlayerData(i, "SpeedTrain", GetPlayerData(i, "SpeedTrain") / 10)
-		  SetPlayerData(i, "SpeedUpgrade", GetPlayerData(i, "SpeedUpgrade") / 10)
-		  SetPlayerData(i, "SpeedResearch", GetPlayerData(i, "SpeedResearch") / 10)
-	  end
-      AddMessage(_("Faster disabled!"))
-    else
-      speedcheat = true
-	  for i = 0,PlayerMax - 1 do
-		  for j = 1,table.getn(resources) do
-			SetPlayerData(i, "SpeedResourcesHarvest", resources[j], GetPlayerData(i, "SpeedResourcesHarvest", resources[j]) * 10)
-			SetPlayerData(i, "SpeedResourcesReturn", resources[j], GetPlayerData(i, "SpeedResourcesReturn", resources[j]) * 10)
-		  end
-		  SetPlayerData(i, "SpeedBuild", GetPlayerData(i, "SpeedBuild") * 10)
-		  SetPlayerData(i, "SpeedTrain", GetPlayerData(i, "SpeedTrain") * 10)
-		  SetPlayerData(i, "SpeedUpgrade", GetPlayerData(i, "SpeedUpgrade") * 10)
-		  SetPlayerData(i, "SpeedResearch", GetPlayerData(i, "SpeedResearch") * 10)
-	  end
-      AddMessage(_("Faster enabled!"))
-    end
-
-  elseif (str == "valhalla") then
-    ActionVictory()
-
-  elseif (str == "ragnarok") then
-    ActionDefeat()
-
-  elseif (str == "fenrir") then
-	KillUnitAt("any", GetThisPlayer(), GetPlayerData(GetThisPlayer(), "TotalNumUnits"), {0, 0}, {512, 512})
-  
-  elseif (str == "hroptatyr") then
-    if (godcheat) then
-      godcheat = false
-      SetGodMode(false)
-      AddMessage("God Mode Off")
-    else
-      godcheat = true
-      SetGodMode(true)
-      AddMessage("God Mode On")
-    end
-
-  elseif (str == "fill mana") then
-    t = GetUnits("this");
-    for i = 1,table.getn(t) do
-      SetUnitMana(t[i], 255)
-    end
-
-  elseif (str == "mead of wisdom") then
-	AddMessage("All Technologies Allowed")
-	for i, unitName in ipairs(Units) do
-		for j=0,(PlayerMax - 1) do
-			if (((string.find(unitName, "upgrade-") ~= nil and GetUpgradeData(unitName, "Civilization") == GetPlayerData(j, "RaceName")) or (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Civilization") == GetPlayerData(j, "RaceName"))) and GetPlayerData(j, "Allow", unitName) ~= "R") then
-				SetPlayerData(j, "Allow", unitName, "A")
+	if (str == "im a lumberjack and its ok") then
+		SetSpeedResourcesHarvest("lumber", 25)
+	elseif (str == "otters ransom") then
+		for i = 0, (PlayerMax - 2) do
+			SetPlayerData(i, "Resources", "copper", GetPlayerData(i, "Resources", "copper") + 12000)
+			SetPlayerData(i, "Resources", "lumber", GetPlayerData(i, "Resources", "lumber") + 10000)
+			SetPlayerData(i, "Resources", "oil", GetPlayerData(i, "Resources", "oil") + 10000)
+			SetPlayerData(i, "Resources", "stone", GetPlayerData(i, "Resources", "stone") + 10000)
+			SetPlayerData(i, "Resources", "coal", GetPlayerData(i, "Resources", "coal") + 10000)
+		end
+		AddMessage("Resources increased!")
+	elseif (str == "showpath") then
+		RevealMap(true)
+	elseif (str == "fow on") then
+		SetFogOfWar(true)
+	elseif (str == "fow off") then
+		SetFogOfWar(false)
+	elseif (str == "fast debug") then
+		for i = 1,table.getn(resources) do
+			SetSpeedResourcesHarvest(resources[i], 10)
+			SetSpeedResourcesReturn(resources[i], 10)
+		end
+		SetSpeedBuild(10)
+		SetSpeedTrain(10)
+		SetSpeedUpgrade(10)
+		SetSpeedResearch(10)
+		AddMessage("FAST DEBUG SPEED")
+	elseif (str == "normal debug") then
+		for i = 1,table.getn(resources) do
+			SetSpeedResourcesHarvest(resources[i], 1)
+			SetSpeedResourcesReturn(resources[i], 1)
+		end
+		SetSpeedBuild(1)
+		SetSpeedTrain(1)
+		SetSpeedUpgrade(1)
+		SetSpeedResearch(1)
+		AddMessage("NORMAL DEBUG SPEED")
+	elseif (str == "hermes") then
+		if (speedcheat) then
+			speedcheat = false
+			for i = 0,PlayerMax - 1 do
+				for j = 1,table.getn(resources) do
+					SetPlayerData(i, "SpeedResourcesHarvest", resources[j], GetPlayerData(i, "SpeedResourcesHarvest", resources[j]) / 10)
+					SetPlayerData(i, "SpeedResourcesReturn", resources[j], GetPlayerData(i, "SpeedResourcesReturn", resources[j]) / 10)
+				end
+				SetPlayerData(i, "SpeedBuild", GetPlayerData(i, "SpeedBuild") / 10)
+				SetPlayerData(i, "SpeedTrain", GetPlayerData(i, "SpeedTrain") / 10)
+				SetPlayerData(i, "SpeedUpgrade", GetPlayerData(i, "SpeedUpgrade") / 10)
+				SetPlayerData(i, "SpeedResearch", GetPlayerData(i, "SpeedResearch") / 10)
+			end
+			AddMessage(_("Faster disabled!"))
+		else
+			speedcheat = true
+			for i = 0,PlayerMax - 1 do
+				for j = 1,table.getn(resources) do
+					SetPlayerData(i, "SpeedResourcesHarvest", resources[j], GetPlayerData(i, "SpeedResourcesHarvest", resources[j]) * 10)
+					SetPlayerData(i, "SpeedResourcesReturn", resources[j], GetPlayerData(i, "SpeedResourcesReturn", resources[j]) * 10)
+				end
+				SetPlayerData(i, "SpeedBuild", GetPlayerData(i, "SpeedBuild") * 10)
+				SetPlayerData(i, "SpeedTrain", GetPlayerData(i, "SpeedTrain") * 10)
+				SetPlayerData(i, "SpeedUpgrade", GetPlayerData(i, "SpeedUpgrade") * 10)
+				SetPlayerData(i, "SpeedResearch", GetPlayerData(i, "SpeedResearch") * 10)
+			end
+			AddMessage(_("Faster enabled!"))
+		end
+	elseif (str == "valhalla") then
+		ActionVictory()
+	elseif (str == "ragnarok") then
+		ActionDefeat()
+	elseif (str == "fenrir") then
+		KillUnitAt("any", GetThisPlayer(), GetPlayerData(GetThisPlayer(), "TotalNumUnits"), {0, 0}, {512, 512})
+	elseif (str == "hroptatyr") then
+		if (godcheat) then
+			godcheat = false
+			SetGodMode(false)
+			AddMessage("God Mode Off")
+		else
+			godcheat = true
+			SetGodMode(true)
+			AddMessage("God Mode On")
+		end
+	elseif (str == "fill mana") then
+		t = GetUnits("this");
+		for i = 1,table.getn(t) do
+			SetUnitMana(t[i], 255)
+		end
+	elseif (str == "mead of wisdom") then
+		AddMessage("All Technologies Allowed")
+		for i, unitName in ipairs(Units) do
+			for j=0,(PlayerMax - 1) do
+				if (((string.find(unitName, "upgrade-") ~= nil and GetUpgradeData(unitName, "Civilization") == GetPlayerData(j, "RaceName")) or (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Civilization") == GetPlayerData(j, "RaceName"))) and GetPlayerData(j, "Allow", unitName) ~= "R") then
+					SetPlayerData(j, "Allow", unitName, "A")
+				end
 			end
 		end
-	end
-
-  elseif (str == "colossus of rhodes") then -- acquire all bronze age technologies
-	AddMessage("Acquired Bronze Age Technologies")
-	local bronze_upgrades = {
-		"upgrade-dwarven-broad-axe", "upgrade-dwarven-long-spear", "upgrade-dwarven-shield-1", "upgrade-dwarven-sharp-throwing-axe", "upgrade-dwarven-wood-plow",
-		"upgrade-germanic-broad-sword", "upgrade-germanic-long-spear", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow",
-		"upgrade-goblin-broad-sword", "upgrade-goblin-rimmed-shield", "upgrade-goblin-long-spear", "upgrade-goblin-barbed-arrow", "upgrade-goblin-wood-plow"
-	}
-	for i, unitName in ipairs(bronze_upgrades) do
-		for j=0,PlayerMax - 2 do
-			if (Players[j].Type ~= PlayerNobody and unitName == GetFactionClassUnitType(GetUpgradeData(unitName, "Class"), GetPlayerData(j, "Faction"))) then
-				SetPlayerData(j, "Allow", unitName, "R")
+	elseif (str == "colossus of rhodes") then -- acquire all bronze age technologies
+		AddMessage("Acquired Bronze Age Technologies")
+		local bronze_upgrades = {
+			"upgrade-dwarven-broad-axe", "upgrade-dwarven-long-spear", "upgrade-dwarven-shield-1", "upgrade-dwarven-sharp-throwing-axe", "upgrade-dwarven-wood-plow",
+			"upgrade-germanic-broad-sword", "upgrade-germanic-long-spear", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow",
+			"upgrade-goblin-broad-sword", "upgrade-goblin-rimmed-shield", "upgrade-goblin-long-spear", "upgrade-goblin-barbed-arrow", "upgrade-goblin-wood-plow"
+		}
+		for i, unitName in ipairs(bronze_upgrades) do
+			for j=0,PlayerMax - 2 do
+				if (Players[j].Type ~= PlayerNobody and unitName == GetFactionClassUnitType(GetUpgradeData(unitName, "Class"), GetPlayerData(j, "Faction"))) then
+					SetPlayerData(j, "Allow", unitName, "R")
+				end
 			end
 		end
-	end
-  elseif (str == "alsvid") then
+	elseif (str == "alsvid") then
 		SetTimeOfDay(2)
-  elseif (string.sub(str, 0, 7) == "bifrost") then
-	ChangeCurrentMapLayer(tonumber(string.sub(str, 9)))
-  else
-    return false
-  end
-  return true
+	elseif (string.sub(str, 0, 7) == "bifrost") then
+		ChangeCurrentMapLayer(tonumber(string.sub(str, 9)))
+	elseif (string.sub(str, 0, 19) == "numunitsconstructed") then
+		local message_player = tonumber(string.sub(str, 21))
+		AddMessage("Player " .. message_player .. " has " .. Players[message_player].NumBuildingsUnderConstruction .. " under construction buildings.")
+	else
+		return false
+	end
+	return true
 end
