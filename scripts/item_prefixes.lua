@@ -242,10 +242,6 @@ DefineModifier("upgrade-item-prefix-wounding",
 	{"BasicDamage", 2}
 )
 
-DefineDependency("upgrade-item-prefix-accurate",
-	{"upgrade-deity-domain-archery"}, "or", {"upgrade-deity-domain-warfare"}
-)
-
 DefineDependency("upgrade-item-prefix-cold",
 	{"upgrade-deity-domain-cold"}
 )
@@ -259,7 +255,7 @@ DefineDependency("upgrade-item-prefix-dwindling",
 )
 
 DefineDependency("upgrade-item-prefix-flaming",
-	{"upgrade-deity-domain-fire"}, "or", {"upgrade-deity-domain-faith"}
+	{"upgrade-deity-domain-fire"}, "or", {"upgrade-deity-domain-faith"}, "or", {"upgrade-dwarven-alchemy"}, "or", {"upgrade-goblin-alchemy"}, "or", {"upgrade-teuton-alchemy"}
 )
 
 DefineDependency("upgrade-item-prefix-giantsbane",
@@ -282,10 +278,6 @@ DefineDependency("upgrade-item-prefix-jinns",
 	{"upgrade-deity-domain-air"}
 )
 
-DefineDependency("upgrade-item-prefix-penetrating",
-	{"upgrade-deity-domain-archery"}, "or", {"upgrade-deity-domain-metalworking"}, "or", {"upgrade-deity-domain-warfare"}, "or", {"upgrade-deity-domain-warfare"}
-)
-
 DefineDependency("upgrade-item-prefix-quenching",
 	{"upgrade-deity-domain-water"}, "or", {"upgrade-deity-domain-hope"}
 )
@@ -298,18 +290,6 @@ DefineDependency("upgrade-item-prefix-storm",
 	{"upgrade-deity-domain-lightning"}
 )
 
-DefineDependency("upgrade-item-prefix-swift",
-	{"upgrade-deity-domain-air"}, "or", {"upgrade-deity-domain-lightning"}
-)
-
 DefineDependency("upgrade-item-prefix-vicious",
 	{"upgrade-deity-domain-wrath"}
-)
-
-DefineDependency("upgrade-item-prefix-vulnerable",
-	{"upgrade-deity-domain-chaos"}
-)
-
-DefineDependency("upgrade-item-prefix-wounding",
-	{"upgrade-deity-domain-warfare"}, "or", {"upgrade-deity-domain-wrath"}
 )

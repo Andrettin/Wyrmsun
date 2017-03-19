@@ -127,6 +127,18 @@ DefineButton( { Pos = 14, Level = 0, Icon = "icon-crown",
 	}
 })
 
+DefineButton( { Pos = 14, Level = 0, Icon = "icon-chest",
+	Action = "button", Value = 2,
+	Allowed = "check-has-sub-buttons",
+	Key = "b", Hint = "~!Buy Items", Popup = "popup-commands",
+	ForUnit = {
+		"unit-germanic-market",
+		"unit-teuton-market",
+		"unit-dwarven-market",
+		"unit-goblin-market"
+	}
+})
+
 DefineButton( { Pos = 15, Level = 0, Icon = "icon-book-red",
 	Action = "button", Value = 3,
 	Allowed = "check-has-sub-buttons",
@@ -171,7 +183,11 @@ DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
 		"unit-teuton-town-hall", "unit-teuton-stronghold",
 		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
 		"unit-gnomish-town-hall",
-		"unit-goblin-town-hall", "unit-goblin-stronghold"
+		"unit-goblin-town-hall", "unit-goblin-stronghold",
+		"unit-germanic-market",
+		"unit-teuton-market",
+		"unit-dwarven-market",
+		"unit-goblin-market"
 	}
 } )
 
@@ -802,7 +818,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-quest",
 	ForUnit = {"unit-latin-town-hall", "unit-germanic-town-hall", "unit-teuton-town-hall", "unit-teuton-stronghold", "unit-dwarven-town-hall", "unit-dwarven-stronghold", "unit-gnomish-town-hall", "unit-goblin-town-hall", "unit-goblin-stronghold"}
 })
 
--- Item Sell / Hero Recruitment Buttons
+-- Hero Recruitment Buttons
 
 DefineButton( { Pos = 9, Level = 0,
 	Action = "buy", Value = -1,
@@ -860,7 +876,9 @@ DefineButton( { Pos = 12, Level = 0,
 	}
 })
 
-DefineButton( { Pos = 13, Level = 0,
+-- Item Sell Buttons
+
+DefineButton( { Pos = 1, Level = 2,
 	Action = "buy", Value = -1,
 	Key = "", Hint = "Buy", Popup = "popup-unit",
 	ForUnit = {
@@ -871,7 +889,7 @@ DefineButton( { Pos = 13, Level = 0,
 	}
 })
 
-DefineButton( { Pos = 14, Level = 0,
+DefineButton( { Pos = 2, Level = 2,
 	Action = "buy", Value = -1,
 	Key = "", Hint = "Buy", Popup = "popup-unit",
 	ForUnit = {
@@ -882,7 +900,7 @@ DefineButton( { Pos = 14, Level = 0,
 	}
 })
 
-DefineButton( { Pos = 15, Level = 0,
+DefineButton( { Pos = 3, Level = 2,
 	Action = "buy", Value = -1,
 	Key = "", Hint = "Buy", Popup = "popup-unit",
 	ForUnit = {
@@ -893,7 +911,128 @@ DefineButton( { Pos = 15, Level = 0,
 	}
 })
 
-DefineButton( { Pos = 16, Level = 0,
+DefineButton( { Pos = 4, Level = 2,
+	Action = "buy", Value = -1,
+	Key = "", Hint = "Buy", Popup = "popup-unit",
+	ForUnit = {
+		"unit-germanic-market",
+		"unit-teuton-market",
+		"unit-dwarven-market",
+		"unit-goblin-market"
+	}
+})
+
+DefineButton( { Pos = 5, Level = 2,
+	Action = "buy", Value = -1,
+	Key = "", Hint = "Buy", Popup = "popup-unit",
+	ForUnit = {
+		"unit-germanic-market",
+		"unit-teuton-market",
+		"unit-dwarven-market",
+		"unit-goblin-market"
+	}
+})
+
+DefineButton( { Pos = 6, Level = 2,
+	Action = "buy", Value = -1,
+	Key = "", Hint = "Buy", Popup = "popup-unit",
+	ForUnit = {
+		"unit-germanic-market",
+		"unit-teuton-market",
+		"unit-dwarven-market",
+		"unit-goblin-market"
+	}
+})
+
+DefineButton( { Pos = 7, Level = 2,
+	Action = "buy", Value = -1,
+	Key = "", Hint = "Buy", Popup = "popup-unit",
+	ForUnit = {
+		"unit-germanic-market",
+		"unit-teuton-market",
+		"unit-dwarven-market",
+		"unit-goblin-market"
+	}
+})
+
+DefineButton( { Pos = 8, Level = 2,
+	Action = "buy", Value = -1,
+	Key = "", Hint = "Buy", Popup = "popup-unit",
+	ForUnit = {
+		"unit-germanic-market",
+		"unit-teuton-market",
+		"unit-dwarven-market",
+		"unit-goblin-market"
+	}
+})
+
+DefineButton( { Pos = 9, Level = 2,
+	Action = "buy", Value = -1,
+	Key = "", Hint = "Buy", Popup = "popup-unit",
+	ForUnit = {
+		"unit-germanic-market",
+		"unit-teuton-market",
+		"unit-dwarven-market",
+		"unit-goblin-market"
+	}
+})
+
+DefineButton( { Pos = 10, Level = 2,
+	Action = "buy", Value = -1,
+	Key = "", Hint = "Buy", Popup = "popup-unit",
+	ForUnit = {
+		"unit-germanic-market",
+		"unit-teuton-market",
+		"unit-dwarven-market",
+		"unit-goblin-market"
+	}
+})
+
+DefineButton( { Pos = 11, Level = 2,
+	Action = "buy", Value = -1,
+	Key = "", Hint = "Buy", Popup = "popup-unit",
+	ForUnit = {
+		"unit-germanic-market",
+		"unit-teuton-market",
+		"unit-dwarven-market",
+		"unit-goblin-market"
+	}
+})
+
+DefineButton( { Pos = 12, Level = 2,
+	Action = "buy", Value = -1,
+	Key = "", Hint = "Buy", Popup = "popup-unit",
+	ForUnit = {
+		"unit-germanic-market",
+		"unit-teuton-market",
+		"unit-dwarven-market",
+		"unit-goblin-market"
+	}
+})
+
+DefineButton( { Pos = 13, Level = 2,
+	Action = "buy", Value = -1,
+	Key = "", Hint = "Buy", Popup = "popup-unit",
+	ForUnit = {
+		"unit-germanic-market",
+		"unit-teuton-market",
+		"unit-dwarven-market",
+		"unit-goblin-market"
+	}
+})
+
+DefineButton( { Pos = 14, Level = 2,
+	Action = "buy", Value = -1,
+	Key = "", Hint = "Buy", Popup = "popup-unit",
+	ForUnit = {
+		"unit-germanic-market",
+		"unit-teuton-market",
+		"unit-dwarven-market",
+		"unit-goblin-market"
+	}
+})
+
+DefineButton( { Pos = 15, Level = 2,
 	Action = "buy", Value = -1,
 	Key = "", Hint = "Buy", Popup = "popup-unit",
 	ForUnit = {
