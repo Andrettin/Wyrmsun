@@ -100,6 +100,7 @@ https://github.com/Andrettin/Wyrmsun
 - Any level 3 organic unit now has access to an inventory.
 - Fixed issue which caused worker inventories to not have a "cancel" button.
 - Fixed issue which made units move to autocast even when ordered to stand ground.
+- Improved unit target-finding code for subterranean maps.
 
 * Upgrades
 - The buttons for upgrades that have already been researched now show up, grayed.
