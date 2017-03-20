@@ -29,8 +29,9 @@ UnitTypeFiles = {}
 
 Units = {
 	"upgrade-holy-order", "upgrade-mercenary-company", "upgrade-trading-company",
-	"unit-latin-town-hall", "unit-latin-farm", "unit-latin-barracks", "unit-latin-smithy", "unit-latin-stables",
+	"upgrade-egyptian-civilization",
 	"upgrade-latin-civilization",
+	"unit-latin-town-hall", "unit-latin-farm", "unit-latin-barracks", "unit-latin-smithy", "unit-latin-stables",
 	"unit-germanic-worker", "unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain", "unit-germanic-spearman", "unit-germanic-archer",
 	"unit-germanic-priest",
 	"unit-germanic-transport-ship",
@@ -40,6 +41,8 @@ Units = {
 	"upgrade-germanic-broad-sword", "upgrade-germanic-long-spear", "upgrade-germanic-bronze-shield",
 	"upgrade-germanic-barbed-arrow",
 	"upgrade-germanic-wood-plow",
+	"upgrade-greek-civilization",
+	"upgrade-norse-civilization",
 	"upgrade-teuton-civilization",
 	"upgrade-faction-bavarian-tribe", "upgrade-faction-teuton-tribe",
 	"upgrade-faction-saxon-tribe", "upgrade-faction-chauci-tribe", "upgrade-faction-cherusci-tribe", "upgrade-faction-varini-tribe",

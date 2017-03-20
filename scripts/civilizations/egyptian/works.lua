@@ -27,135 +27,113 @@
 
 DefineUpgrade("upgrade-work-adventures-of-horus-and-seth", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 17.
 	Name = _("Adventures of Horus and Seth"),
-	Work = "scroll",
-	Civilization = "egyptian"
+	Work = "scroll"
 })
 
 DefineUpgrade("upgrade-work-book-of-caverns", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 15.
 	Name = _("Book of Caverns"),
-	Work = "book",
-	Civilization = "egyptian"
+	Work = "book"
 })
 
 DefineUpgrade("upgrade-work-book-of-the-celestial-cow", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 17.
 	Name = _("Book of the Celestial Cow"),
-	Work = "book",
-	Civilization = "egyptian"
+	Work = "book"
 })
 
 DefineUpgrade("upgrade-work-book-of-the-dead", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 15.
 	Name = _("Book of the Dead"),
-	Work = "book",
-	Civilization = "egyptian"
+	Work = "book"
 })
 
 DefineUpgrade("upgrade-work-book-of-doors", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 15.
 	Name = _("Book of Doors"),
-	Work = "book",
-	Civilization = "egyptian"
+	Work = "book"
 })
 
 DefineUpgrade("upgrade-work-book-of-the-earth", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 93.
 	Name = _("Book of the Earth"),
-	Work = "book",
-	Civilization = "egyptian"
+	Work = "book"
 })
 
 DefineUpgrade("upgrade-work-book-of-fayum", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 18.
 	Name = _("Book of Fayum"),
-	Work = "book",
-	Civilization = "egyptian"
+	Work = "book"
 })
 
 DefineUpgrade("upgrade-work-book-of-imduat", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 15.
 	Name = _("Book of Imduat"),
-	Work = "book",
-	Civilization = "egyptian"
+	Work = "book"
 })
 
 DefineUpgrade("upgrade-work-book-of-nut", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 50.
 	Name = _("Book of Nut"),
-	Work = "book",
-	Civilization = "egyptian"
+	Work = "book"
 })
 
 DefineUpgrade("upgrade-work-book-of-the-two-paths", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 84.
 	Name = _("Book of the Two Paths"),
-	Work = "book",
-	Civilization = "egyptian"
+	Work = "book"
 })
 
 DefineUpgrade("upgrade-work-great-hymn-to-the-nile", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 16.
 	Name = _("Great Hymn to the Nile"),
-	Work = "scroll",
-	Civilization = "egyptian"
+	Work = "scroll"
 })
 
 DefineUpgrade("upgrade-work-hymn-to-amon", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 49, 52.
 	Name = _("Hymn to Amon"),
-	Work = "scroll",
-	Civilization = "egyptian"
+	Work = "scroll"
 })
 
 DefineUpgrade("upgrade-work-hymn-to-aton", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 55.
 	Name = _("Hymn to Aton"),
-	Work = "scroll",
-	Civilization = "egyptian"
+	Work = "scroll"
 })
 
 DefineUpgrade("upgrade-work-naos-of-ismailia", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 52.
 	Name = _("Naos of Ismailia"),
-	Work = "scroll",
-	Civilization = "egyptian"
+	Work = "scroll"
 })
 
 DefineUpgrade("upgrade-work-prophecy-of-neferty", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 51.
 	Name = _("Prophecy of Neferty"),
-	Work = "scroll",
-	Civilization = "egyptian"
+	Work = "scroll"
 })
 
 DefineUpgrade("upgrade-work-tale-of-the-god-of-the-sea", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 17.
 	Name = _("Tale of the God of the Sea"),
-	Work = "scroll",
-	Civilization = "egyptian"
+	Work = "scroll"
 })
 
 DefineUpgrade("upgrade-work-tale-of-the-ghost", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 52.
 	Name = _("Tale of the Ghost"),
-	Work = "scroll",
-	Civilization = "egyptian"
+	Work = "scroll"
 })
 
 DefineUpgrade("upgrade-work-tale-of-the-two-brothers", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 16-17.
 	Name = _("Tale of the Two Brothers"),
-	Work = "scroll",
-	Civilization = "egyptian"
+	Work = "scroll"
 })
 
 DefineUpgrade("upgrade-work-teachings-of-ani", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 57.
 	Name = _("Teachings of Ani"),
-	Work = "scroll",
-	Civilization = "egyptian"
+	Work = "scroll"
 })
 
 DefineUpgrade("upgrade-work-teachings-to-merikara", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 102.
 	Name = _("Teachings to Merikara"),
 	Work = "scroll",
-	Civilization = "egyptian",
 	Year = -2100 -- dated c. 2100 BC
 })
 
 DefineUpgrade("upgrade-work-texts-of-the-pyramids", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 49, 52.
 	Name = _("Texts of the Pyramids"),
-	Work = "book",
-	Civilization = "egyptian"
+	Work = "book"
 })
 
 DefineUpgrade("upgrade-work-texts-of-the-sarcophaguses", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 48.
 	Name = _("Texts of the Sarcophaguses"),
-	Work = "book",
-	Civilization = "egyptian"
+	Work = "book"
 })
 
 DefineModifier("upgrade-work-adventures-of-horus-and-seth",
@@ -244,4 +222,92 @@ DefineModifier("upgrade-work-texts-of-the-pyramids",
 
 DefineModifier("upgrade-work-texts-of-the-sarcophaguses",
 	{"KnowledgeMagic", 5}
+)
+
+DefineDependency("upgrade-work-adventures-of-horus-and-seth",
+	{"upgrade-egyptian-civilization", "unit-teuton-temple"}
+)
+
+DefineDependency("upgrade-work-book-of-caverns",
+	{"upgrade-egyptian-civilization", "unit-teuton-temple"}
+)
+
+DefineDependency("upgrade-work-book-of-the-celestial-cow",
+	{"upgrade-egyptian-civilization", "unit-teuton-temple"}
+)
+
+DefineDependency("upgrade-work-book-of-the-dead",
+	{"upgrade-egyptian-civilization", "unit-teuton-temple"}
+)
+
+DefineDependency("upgrade-work-book-of-doors",
+	{"upgrade-egyptian-civilization", "unit-teuton-temple"}
+)
+
+DefineDependency("upgrade-work-book-of-the-earth",
+	{"upgrade-egyptian-civilization", "unit-teuton-temple"}
+)
+
+DefineDependency("upgrade-work-book-of-fayum",
+	{"upgrade-egyptian-civilization", "unit-teuton-temple"}
+)
+
+DefineDependency("upgrade-work-book-of-imduat",
+	{"upgrade-egyptian-civilization", "unit-teuton-temple"}
+)
+
+DefineDependency("upgrade-work-book-of-nut",
+	{"upgrade-egyptian-civilization", "unit-teuton-temple"}
+)
+
+DefineDependency("upgrade-work-book-of-the-two-paths",
+	{"upgrade-egyptian-civilization", "unit-teuton-temple"}
+)
+
+DefineDependency("upgrade-work-great-hymn-to-the-nile",
+	{"upgrade-egyptian-civilization", "unit-teuton-temple"}
+)
+
+DefineDependency("upgrade-work-hymn-to-amon",
+	{"upgrade-egyptian-civilization", "unit-teuton-temple"}
+)
+
+DefineDependency("upgrade-work-hymn-to-aton",
+	{"upgrade-egyptian-civilization", "unit-teuton-temple"}
+)
+
+DefineDependency("upgrade-work-naos-of-ismailia",
+	{"upgrade-egyptian-civilization", "unit-teuton-temple"}
+)
+
+DefineDependency("upgrade-work-prophecy-of-neferty",
+	{"upgrade-egyptian-civilization", "unit-teuton-temple"}
+)
+
+DefineDependency("upgrade-work-tale-of-the-god-of-the-sea",
+	{"upgrade-egyptian-civilization", "unit-teuton-temple"}
+)
+
+DefineDependency("upgrade-work-tale-of-the-ghost",
+	{"upgrade-egyptian-civilization", "unit-teuton-temple"}
+)
+
+DefineDependency("upgrade-work-tale-of-the-two-brothers",
+	{"upgrade-egyptian-civilization", "unit-teuton-temple"}
+)
+
+DefineDependency("upgrade-work-teachings-of-ani",
+	{"upgrade-egyptian-civilization", "unit-teuton-temple"}
+)
+
+DefineDependency("upgrade-work-teachings-to-merikara",
+	{"upgrade-egyptian-civilization", "unit-teuton-temple"}
+)
+
+DefineDependency("upgrade-work-texts-of-the-pyramids",
+	{"upgrade-egyptian-civilization", "unit-teuton-temple"}
+)
+
+DefineDependency("upgrade-work-texts-of-the-sarcophaguses",
+	{"upgrade-egyptian-civilization", "unit-teuton-temple"}
 )

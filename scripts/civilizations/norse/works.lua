@@ -25,28 +25,82 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineUpgrade("upgrade-work-alvissmol", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 183-194.
+	Name = "The Ballad of Alvis", -- "Alvissmol"
+	Work = "scroll",
+	Quote = "\"Alvis am I, and under the earth\nMy home 'neath the rocks I have;\nWith the wagon-guider a word do I seek,\nLet the gods their bond not break.\"\n- Alvis"
+})
+
+DefineUpgrade("upgrade-work-fafnismol", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 370-385.
+	Name = "The Ballad of Fafnir", -- "Fafnismol"
+	Work = "scroll",
+	Quote = "\"Hail to thee, Sigurd! Thou victory hast,\nAnd Fafnir in fight hast slain;\nOf all the men who tread the earth,\nMost fearless art thou, methinks.\"\n- Regin"
+})
+
 DefineUpgrade("upgrade-work-heimskringla", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 154-155.
-	Name = _("Heimskringla"),
+	Name = "Heimskringla",
 	Work = "book",
-	Civilization = "norse",
 	Description = "The Heimskringla, or Chronicle of the Kings of Norway, detailed the legendary origins of the Norwegian monarchy, going on to write the stories of a long series of kings of Norway.",
 --	Year = ? -- in which year was it first published?
 })
 
 DefineUpgrade("upgrade-work-historiae-vinlandiae-antiquae", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 154-155.
-	Name = _("Historiae Vinlandiae Antiquae"),
+	Name = "Historiae Vinlandiae Antiquae",
 	Work = "book",
-	Civilization = "norse",
 	Description = "This work tells the history of the Norse settlement in Vinland, in the New World.",
 	Year = 1707
 	-- should probably have some other requirements, like a Norse civilization having been in possession of Greenland at some point
 })
 
-DefineUpgrade("upgrade-work-ynglingatal", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 245, 261.
-	Name = _("Ynglingatal"),
+DefineUpgrade("upgrade-work-reginsmol", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 356-369.
+	Name = "The Ballad of Regin", -- "Reginsmol"
 	Work = "scroll",
-	Civilization = "norse",
+	Quote = "\"Here shall I foster the fearless prince,\nNow Yngvi's heir to us is come;\nThe noblest hero beneath the sun,\nThe threads of his fate all lands enfold.\"\n- Regin"
+})
+
+DefineUpgrade("upgrade-work-ynglingatal", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 245, 261.
+	Name = "Ynglingatal",
+	Work = "scroll",
 	Description = "The Ynglingatal tells the lineage of the Yngling dynasty, legendary kings of Sweden.",
 --	Year = ?, -- in which year was it first published?
 	Quote = "\"The son of kings of Frey's great race,\nFirst in the fray, the fight, the chase,\nFell from his steed - his clotted brains\nLie mixed with mire on Upsal's plains.\""
 })
+
+DefineModifier("upgrade-work-alvissmol",
+	{"KnowledgeMagic", 1}
+)
+
+DefineModifier("upgrade-work-fafnismol",
+	{"KnowledgeWarfare", 1}
+)
+
+DefineModifier("upgrade-work-reginsmol",
+	{"KnowledgeWarfare", 1}
+)
+
+DefineDependency("upgrade-work-alvissmol",
+	{"upgrade-norse-civilization"},
+	"or", {"upgrade-dwarven-civilization"}
+)
+
+DefineDependency("upgrade-work-fafnismol",
+	{"upgrade-norse-civilization"},
+	"or", {"upgrade-dwarven-civilization"}
+)
+
+DefineDependency("upgrade-work-heimskringla",
+	{"upgrade-norse-civilization"}
+)
+
+DefineDependency("upgrade-work-historiae-vinlandiae-antiquae",
+	{"upgrade-norse-civilization", "unit-teuton-dock"}
+)
+
+DefineDependency("upgrade-work-reginsmol",
+	{"upgrade-norse-civilization"},
+	"or", {"upgrade-dwarven-civilization"}
+)
+
+DefineDependency("upgrade-work-ynglingatal",
+	{"upgrade-norse-civilization"}
+)

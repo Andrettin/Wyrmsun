@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016-2017 by Andrettin
+--      (c) Copyright 2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,24 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUpgrade("upgrade-work-geography", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 222.
-	Name = _("Geography"),
-	Work = "book",
-	Description = "In this work various locations and peoples throughout the known world are described.",
-	Year = 20 -- written around 20 AD
+DefineUpgrade("upgrade-norse-civilization", {
+	Name = "Norse Civilization"
 })
-
-DefineUpgrade("upgrade-work-historia-nova", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 320.
-	Name = _("Historia Nova"),
-	Work = "book",
-	Description = "In this work events that occurred as far away as the Netherlands are described.",
-	Year = 500 -- written around 500 AD
-})
-
-DefineDependency("upgrade-work-geography",
-	{"upgrade-greek-civilization"} -- should require a university/academy building when that is added to the game
-)
-
-DefineDependency("upgrade-work-historia-nova",
-	{"upgrade-greek-civilization"} -- should require a university/academy building when that is added to the game
-)

@@ -2117,6 +2117,7 @@ DefineCivilization("greek", {
 	ParentCivilization = "latin",
 	Adjective = "Greek",
 	Playable = false,
+	CivilizationUpgrade = "upgrade-greek-civilization",
 	Description = "During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. Those who migrated to Greece spoke their own dialect of Indo-European, which eventually would develop into Ancient Greek. Initially a backwater in comparison to the Near East, Greece would eventually become one of the main centers of civilization in antiquity, being widely renowned for the achievements of its people. The rise of the Macedonian empire spread the influence of Greek culture through much of the eastern Mediterranean, Persia, and beyond, and even after the Roman conquest Greek remained widely spoken (both as a mother tongue and as a lingua franca) in the eastern half of the Mediterranean.",
 	UnitSounds = {
 		"selected", "basic-greek-voices-selected-group",
@@ -2249,6 +2250,7 @@ DefineCivilization("egyptian", {
 	Adjective = "Egyptian",
 	Playable = false,
 	DefaultColor = "yellow",
+	CivilizationUpgrade = "upgrade-egyptian-civilization",
 	PersonalNames = {
 		"male", "Amenofis", -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 112.
 		"male", "Isi", -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 81.
@@ -2304,6 +2306,7 @@ DefineCivilization("norse", {
 	Adjective = "Norse",
 	Playable = false,
 	DevelopsFrom = {"germanic"},
+	CivilizationUpgrade = "upgrade-norse-civilization",
 	Description = _("During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). While late antiquity saw intense migration of Germanic peoples, the Danes and Swedes remained largely in Scandinavia, well beyond the developments of the Mediterranean."),
 	PersonalNames = {
 		"female", "Alfhild", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 259.
