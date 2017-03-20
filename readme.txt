@@ -86,6 +86,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Items
 - Books now increase their respective knowledge stat by 5, rather than 3.
+- Improved literary work dependencies, so that they can be available for multiple civilizations.
 
 * Miscellaneous
 - Fixed crash which could occur when selecting more than 36 units at the same time.
