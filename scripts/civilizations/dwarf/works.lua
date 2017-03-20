@@ -26,7 +26,7 @@
 --
 
 DefineUpgrade("upgrade-work-alvissmol", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 183-194.
-	Name = "The Lay of Al",
+	Name = "The Ballad of Alvis", -- "Alvissmol"
 	Work = "scroll",
 	Civilization = "dwarf",
 	Quote = "\"Alvis am I, and under the earth\nMy home 'neath the rocks I have;\nWith the wagon-guider a word do I seek,\nLet the gods their bond not break.\"\n- Alvis"

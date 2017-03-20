@@ -37,9 +37,9 @@ DefineUpgrade("upgrade-work-be-galdorstafum", { -- Source: Felix Grendon, "The A
 })
 
 DefineUpgrade("upgrade-work-blodseten", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 200-203.
-	Name = _("Blodseten"),
+	Name = "For Stanching Blood", -- "Blōdseten"
 	Work = "scroll",
-	Quote = "\"For stanching blood in horse or man.\""
+--	Quote = "\"For stanching blood in horse or man.\""
 })
 
 DefineUpgrade("upgrade-work-feld-bot", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 204-205.
@@ -49,7 +49,7 @@ DefineUpgrade("upgrade-work-feld-bot", { -- Source: Felix Grendon, "The Anglo-Sa
 })
 
 DefineUpgrade("upgrade-work-gagates-craeftas", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 200-201.
-	Name = _("Gagates Craeftas"),
+	Name = "The Virtues of Jet", -- "Gagātes Cræftas"
 	Work = "scroll"
 })
 
@@ -60,7 +60,7 @@ DefineUpgrade("upgrade-work-historia-ecclesiastica-venerabilis-bedae", { -- Sour
 })
 
 DefineUpgrade("upgrade-work-nigon-wyrta-galdor", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 190-195.
-	Name = _("Nigon Wyrta Galdor"),
+	Name = "Nine Herbs Charm", -- "Nigon Wyrta Galdor"
 	Work = "scroll",
 	Quote = "\"Now these nine herbs avail against nine accursed spirits\""
 })
@@ -72,10 +72,10 @@ DefineUpgrade("upgrade-work-sidgaldor", { -- Source: Felix Grendon, "The Anglo-S
 })
 
 DefineUpgrade("upgrade-work-wid-aelfadle", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 190-191, 226.
-	Name = _("For Elf-Disease"), -- Wid Aelfadle
+	Name = "For Elf-Disease", -- "Wið Ælfadle"
 	Work = "scroll",
 --	Quote = "\"Then go in silence, and, though something of a fearful kind or a man should come upon you, say not a single word to it until you reach the herb you marked the night before.\"" -- original
-	Quote = "\"Then go in silence, and, though something of a fearful kind or another troll should come upon you, say not a single word to it until you reach the herb you marked the night before.\""
+	Quote = "\"Then go in silence, and, though something of a fearful kind or a person should come upon you, say not a single word to it until you reach the herb you marked the night before.\""
 	-- "Elf-Disease" = bewitchment by elves
 })
 
@@ -97,12 +97,12 @@ DefineUpgrade("upgrade-work-wid-aelfsogothan", { -- Source: Felix Grendon, "The 
 })
 
 DefineUpgrade("upgrade-work-wid-aswollenum-eagum", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 198-199.
-	Name = _("Wid Aswollenum Eagum"),
+	Name = "For Swollen Eyes", -- "Wið Āswollenum Ēagum"
 	Work = "scroll"
 })
 
 DefineUpgrade("upgrade-work-wid-blaece", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 196-197.
-	Name = _("Wid Blaece"),
+	Name = "For Scabies", -- "Wið Blæce"
 	Work = "scroll",
 	Quote = "\"Take this evil, and move away with it.\""
 })
@@ -137,7 +137,7 @@ DefineUpgrade("upgrade-work-wid-cyrnel", { -- Source: Felix Grendon, "The Anglo-
 })
 
 DefineUpgrade("upgrade-work-wid-cyrnla", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 194-197.
-	Name = _("Wid Cyrnla"),
+	Name = "For Kernels", -- "Wið Cyrnla"
 	Work = "scroll",
 	Quote = "\"Ecce dolgula medit dudum\""
 })
@@ -180,7 +180,7 @@ DefineUpgrade("upgrade-work-wid-faerstice", { -- Source: Felix Grendon, "The Ang
 })
 
 DefineUpgrade("upgrade-work-wid-feondes-costunge", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 200-201.
-	Name = _("Wid Feondes Costunge"),
+	Name = "Against the Assaults of the Fiend", -- "Wið Fēondes Costunge"
 	Work = "scroll"
 })
 
@@ -197,19 +197,19 @@ DefineUpgrade("upgrade-work-wid-feos-nimunge", { -- Source: Felix Grendon, "The 
 })
 
 DefineUpgrade("upgrade-work-wid-fleogendan-attre", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 198-199.
-	Name = _("Wid Fleogendan Attre"),
+	Name = "Against Infectious Disease", -- "Wið Flēogendan Āttre"
 	Work = "scroll",
 	Quote = "\"Contriue deus omnem malum et nequitiam, per uirtutem patris et filii et spiritus sancti.\""
 })
 
 DefineUpgrade("upgrade-work-wid-fleogendum-attre", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 196-197.
-	Name = _("Wid Fleogendum Attre"),
+	Name = "For Infectious Disease", -- "Wið Flēogendum Āttre"
 	Work = "scroll",
 	Quote = "\"Sing over it nine times a litany, and nine times the Paternoster, and nine times this charm\""
 })
 
 DefineUpgrade("upgrade-work-wid-heafodece", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 200-201.
-	Name = _("Wid Heafodece"),
+	Name = "For Headache", -- "Wið Hēafodece"
 	Work = "scroll"
 })
 
@@ -226,7 +226,7 @@ DefineUpgrade("upgrade-work-wid-hors-wreccunge", { -- Source: Felix Grendon, "Th
 })
 
 DefineUpgrade("upgrade-work-wid-huntan-bite", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 198-199.
-	Name = _("Wid Huntan Bite"),
+	Name = "For a Spider-Bite", -- "Wið Huntan Bite"
 	Work = "scroll"
 })
 
@@ -259,12 +259,12 @@ DefineUpgrade("upgrade-work-wid-lidwaerce", { -- Source: Felix Grendon, "The Ang
 })
 
 DefineUpgrade("upgrade-work-wid-maran", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 198-199.
-	Name = _("Wid Maran"),
+	Name = "Against an Incubus", -- "Wið Maran"
 	Work = "scroll"
 })
 
 DefineUpgrade("upgrade-work-wid-miclum-gonge", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 190-191.
-	Name = _("Wid Miclum Gonge"),
+	Name = "For Much Travelling", -- "Wið Miclum Gonge"
 	Work = "scroll",
 	Quote = "\"Tollam te artemesia, ne lassus sim in via.\""
 })
@@ -287,7 +287,7 @@ DefineUpgrade("upgrade-work-wid-oman", { -- Source: Felix Grendon, "The Anglo-Sa
 })
 
 DefineUpgrade("upgrade-work-wid-onfealle", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 200-201.
-	Name = _("Wid Onfealle"),
+	Name = "For a Swelling", -- "Wið Onfealle"
 	Work = "scroll"
 })
 
@@ -333,13 +333,13 @@ DefineUpgrade("upgrade-work-wid-utsihte", { -- Source: Felix Grendon, "The Anglo
 })
 
 DefineUpgrade("upgrade-work-wid-waeteraelfadle", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 194-195.
-	Name = _("For the Water-Elf Disease"), -- Wid Waeteraelfadle
+	Name = "For the Water-Elf Disease", -- "Wið Wæterælfādle"
 	Work = "scroll",
 	Quote = "\"Round the wounds I have wreathed the best of healing amulets,\nThat the wounds may neither burn nor burst\""
 })
 
 DefineUpgrade("upgrade-work-wid-wambewaerce", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 198-199.
-	Name = _("Wid Wambewaerce"),
+	Name = "For Bowel-Pain", -- "Wið Wambewærce"
 	Work = "scroll",
 	Quote = "\"Remedium facio ad ventris dolorem.\""
 })
@@ -654,12 +654,34 @@ DefineDependency("upgrade-work-aecer-bot",
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"}
 )
 
-DefineDependency("upgrade-work-wid-aelfsogothan", -- available for dwarves, because they have contact with Vanir or elves in myths
+DefineDependency("upgrade-work-blodseten",
 	{"upgrade-anglo-saxon-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-frankish-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-suebi-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
-	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"}
+	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"}
+)
+
+DefineDependency("upgrade-work-gagates-craeftas",
+	{"upgrade-anglo-saxon-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-frankish-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-suebi-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"}
+)
+
+DefineDependency("upgrade-work-nigon-wyrta-galdor",
+	{"upgrade-anglo-saxon-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-frankish-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-suebi-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"}
 )
 
 DefineDependency("upgrade-work-historia-ecclesiastica-venerabilis-bedae",
@@ -671,6 +693,42 @@ DefineDependency("upgrade-work-sidgaldor",
 	"or", {"upgrade-deity-christian-god", "upgrade-frankish-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-deity-christian-god", "upgrade-suebi-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-deity-christian-god", "upgrade-teuton-civilization", "unit-teuton-temple"}
+)
+
+DefineDependency("upgrade-work-wid-aelfadle", -- available for dwarves, because they have contact with Vanir or elves in myths
+	{"upgrade-anglo-saxon-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-frankish-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-suebi-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"}
+)
+
+DefineDependency("upgrade-work-wid-aelfsogothan", -- available for dwarves, because they have contact with Vanir or elves in myths
+	{"upgrade-anglo-saxon-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-frankish-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-suebi-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"}
+)
+
+DefineDependency("upgrade-work-wid-aswollenum-eagum",
+	{"upgrade-anglo-saxon-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-frankish-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-suebi-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"}
+)
+
+DefineDependency("upgrade-work-wid-blaece",
+	{"upgrade-anglo-saxon-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-frankish-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-suebi-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"}
 )
 
 DefineDependency("upgrade-work-wid-ceapes-lyre", -- not available for fictional civilizations, since their worlds don't have cattle; requires a farm because the charm would only have reason to be available if livestock is kept
@@ -698,6 +756,16 @@ DefineDependency("upgrade-work-wid-corn",
 )
 
 DefineDependency("upgrade-work-wid-cyrnel",
+	{"upgrade-anglo-saxon-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-frankish-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-suebi-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"}
+)
+
+DefineDependency("upgrade-work-wid-cyrnla",
 	{"upgrade-anglo-saxon-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-frankish-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-suebi-civilization", "unit-teuton-temple"},
@@ -743,6 +811,13 @@ DefineDependency("upgrade-work-wid-faerstice",
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"}
 )
 
+DefineDependency("upgrade-work-wid-feondes-costunge",
+	{"upgrade-anglo-saxon-civilization", "upgrade-deity-christian-god", "unit-teuton-temple"},
+	"or", {"upgrade-frankish-civilization", "upgrade-deity-christian-god", "unit-teuton-temple"},
+	"or", {"upgrade-suebi-civilization", "upgrade-deity-christian-god", "unit-teuton-temple"},
+	"or", {"upgrade-teuton-civilization", "upgrade-deity-christian-god", "unit-teuton-temple"}
+)
+
 DefineDependency("upgrade-work-wid-feos-lyre", -- not available for fictional civilizations, since their worlds don't have cattle; requires a farm because the charm would only have reason to be available if livestock is kept
 	{"upgrade-anglo-saxon-civilization", "unit-teuton-temple", "unit-teuton-farm"},
 	"or", {"upgrade-frankish-civilization", "unit-teuton-temple", "unit-teuton-farm"},
@@ -755,6 +830,33 @@ DefineDependency("upgrade-work-wid-feos-nimunge", -- not available for fictional
 	"or", {"upgrade-frankish-civilization", "upgrade-deity-christian-god", "unit-teuton-temple", "unit-teuton-farm"},
 	"or", {"upgrade-suebi-civilization", "upgrade-deity-christian-god", "unit-teuton-temple", "unit-teuton-farm"},
 	"or", {"upgrade-teuton-civilization", "upgrade-deity-christian-god", "unit-teuton-temple", "unit-teuton-farm"}
+)
+
+DefineDependency("upgrade-work-wid-fleogendan-attre", -- has a Latin passage mentioning God
+	{"upgrade-anglo-saxon-civilization", "upgrade-deity-christian-god", "unit-teuton-temple"},
+	"or", {"upgrade-frankish-civilization", "upgrade-deity-christian-god", "unit-teuton-temple"},
+	"or", {"upgrade-suebi-civilization", "upgrade-deity-christian-god", "unit-teuton-temple"},
+	"or", {"upgrade-teuton-civilization", "upgrade-deity-christian-god", "unit-teuton-temple"}
+)
+
+DefineDependency("upgrade-work-wid-fleogendum-attre",
+	{"upgrade-anglo-saxon-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-frankish-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-suebi-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"}
+)
+
+DefineDependency("upgrade-work-wid-heafodece",
+	{"upgrade-anglo-saxon-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-frankish-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-suebi-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"}
 )
 
 DefineDependency("upgrade-work-wid-hors-oman",
@@ -771,6 +873,16 @@ DefineDependency("upgrade-work-wid-hors-wreccunge", -- not available for fiction
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple", "unit-teuton-stables"}
 )
 
+DefineDependency("upgrade-work-wid-huntan-bite", -- mentions spiders, but fictional civilizations may have their own exotic species of spider in their worlds
+	{"upgrade-anglo-saxon-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-frankish-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-suebi-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"}
+)
+
 DefineDependency("upgrade-work-wid-lenctenadle", -- contains a passage in Latin mentioning God
 	{"upgrade-deity-christian-god", "unit-teuton-temple", "upgrade-anglo-saxon-civilization"},
 	"or", {"upgrade-deity-christian-god", "unit-teuton-temple", "upgrade-frankish-civilization"},
@@ -785,11 +897,41 @@ DefineDependency("upgrade-work-wid-lidwaerce",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple", "upgrade-deity-christian-god"}
 )
 
+DefineDependency("upgrade-work-wid-maran",
+	{"upgrade-anglo-saxon-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-frankish-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-suebi-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"}
+)
+
+DefineDependency("upgrade-work-wid-miclum-gonge",
+	{"upgrade-anglo-saxon-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-frankish-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-suebi-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"}
+)
+
 DefineDependency("upgrade-work-wid-oman", -- contains Latin passages
 	{"upgrade-anglo-saxon-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-frankish-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-suebi-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"}
+)
+
+DefineDependency("upgrade-work-wid-onfealle",
+	{"upgrade-anglo-saxon-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-frankish-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-suebi-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"}
 )
 
 DefineDependency("upgrade-work-wid-theofentum",
@@ -827,6 +969,21 @@ DefineDependency("upgrade-work-wid-utsiht",
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"}
+)
+
+DefineDependency("upgrade-work-wid-waeteraelfadle", -- available for dwarves, because they have contact with Vanir or elves in myths
+	{"upgrade-anglo-saxon-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-frankish-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-suebi-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"}
+)
+
+DefineDependency("upgrade-work-wid-wambewaerce", -- contains a Latin passage
+	{"upgrade-anglo-saxon-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-frankish-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-suebi-civilization", "unit-teuton-temple"},
+	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"}
 )
 
 DefineDependency("upgrade-work-wid-wennum",

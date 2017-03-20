@@ -880,7 +880,7 @@ DefineButton( { Pos = 12, Level = 0,
 
 DefineButton( { Pos = 1, Level = 2,
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-unit",
+	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-teuton-market",
@@ -891,7 +891,7 @@ DefineButton( { Pos = 1, Level = 2,
 
 DefineButton( { Pos = 2, Level = 2,
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-unit",
+	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-teuton-market",
@@ -902,7 +902,7 @@ DefineButton( { Pos = 2, Level = 2,
 
 DefineButton( { Pos = 3, Level = 2,
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-unit",
+	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-teuton-market",
@@ -913,7 +913,7 @@ DefineButton( { Pos = 3, Level = 2,
 
 DefineButton( { Pos = 4, Level = 2,
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-unit",
+	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-teuton-market",
@@ -924,7 +924,7 @@ DefineButton( { Pos = 4, Level = 2,
 
 DefineButton( { Pos = 5, Level = 2,
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-unit",
+	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-teuton-market",
@@ -935,7 +935,7 @@ DefineButton( { Pos = 5, Level = 2,
 
 DefineButton( { Pos = 6, Level = 2,
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-unit",
+	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-teuton-market",
@@ -946,7 +946,7 @@ DefineButton( { Pos = 6, Level = 2,
 
 DefineButton( { Pos = 7, Level = 2,
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-unit",
+	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-teuton-market",
@@ -957,7 +957,7 @@ DefineButton( { Pos = 7, Level = 2,
 
 DefineButton( { Pos = 8, Level = 2,
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-unit",
+	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-teuton-market",
@@ -968,7 +968,7 @@ DefineButton( { Pos = 8, Level = 2,
 
 DefineButton( { Pos = 9, Level = 2,
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-unit",
+	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-teuton-market",
@@ -979,7 +979,7 @@ DefineButton( { Pos = 9, Level = 2,
 
 DefineButton( { Pos = 10, Level = 2,
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-unit",
+	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-teuton-market",
@@ -990,7 +990,7 @@ DefineButton( { Pos = 10, Level = 2,
 
 DefineButton( { Pos = 11, Level = 2,
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-unit",
+	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-teuton-market",
@@ -1001,7 +1001,7 @@ DefineButton( { Pos = 11, Level = 2,
 
 DefineButton( { Pos = 12, Level = 2,
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-unit",
+	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-teuton-market",
@@ -1012,7 +1012,7 @@ DefineButton( { Pos = 12, Level = 2,
 
 DefineButton( { Pos = 13, Level = 2,
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-unit",
+	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-teuton-market",
@@ -1023,7 +1023,7 @@ DefineButton( { Pos = 13, Level = 2,
 
 DefineButton( { Pos = 14, Level = 2,
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-unit",
+	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-teuton-market",
@@ -1034,7 +1034,7 @@ DefineButton( { Pos = 14, Level = 2,
 
 DefineButton( { Pos = 15, Level = 2,
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-unit",
+	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-teuton-market",
@@ -1141,7 +1141,7 @@ DefineButton( { Pos = 2, Level = 3, Icon = "icon-serfdom",
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-cheese",
 	Action = "train-unit", Value = "unit-cheese",
-	Key = "c", Hint = _("Buy ~!Cheese"), Popup = "popup-unit",
+	Key = "c", Hint = _("Buy ~!Cheese"), Popup = "popup-item",
 	ForUnit = {
 		"unit-celt-farm", "unit-germanic-farm", "unit-teuton-farm", "unit-latin-farm",
 		"unit-dwarven-mushroom-farm", "unit-gnomish-farm", "unit-goblin-farm"
@@ -1150,7 +1150,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-cheese",
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-carrots",
 	Action = "train-unit", Value = "unit-carrots",
-	Key = "r", Hint = _("Buy Ca~!rrots"), Popup = "popup-unit",
+	Key = "r", Hint = _("Buy Ca~!rrots"), Popup = "popup-item",
 	ForUnit = {
 		"unit-celt-farm", "unit-germanic-farm", "unit-teuton-farm", "unit-latin-farm",
 		"unit-gnomish-farm", "unit-goblin-farm"
@@ -1159,7 +1159,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-carrots",
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-red-potion",
 	Action = "train-unit", Value = "unit-potion-of-healing",
-	Key = "h", Hint = "Buy Potion of ~!Healing", Popup = "popup-unit",
+	Key = "h", Hint = "Buy Potion of ~!Healing", Popup = "popup-item",
 	ForUnit = {"unit-germanic-temple", "unit-teuton-temple", "unit-dwarven-temple", "unit-goblin-temple"}
 })
 

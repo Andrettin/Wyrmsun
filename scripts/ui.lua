@@ -1772,6 +1772,12 @@ if not (ui_loaded_first_time) then
 				{	Condition = {Unique = "only"}, TextColor = "fire", HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
 				}, 
+				{ 	Condition = {ButtonAction = "buy"}, Margin = {1, 1},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{	Condition = {ButtonAction = "buy"},
+					More = {"Costs", {Font = PopupFont}}, HighlightColor = "yellow",
+				}, 
 				{ 	Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
