@@ -690,10 +690,10 @@ DefinePanelContents(
 	},
 
 	-- Trade Cost
-	{ Pos = {9, 103}, Condition = {ShowOpponent = false, TradeCost = "only", Build = "false"},
+	{ Pos = {9, 103}, Condition = {ShowOpponent = false, TradeCost = "only", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
 		More = {"Text", {Text = "Trade Cost:"}}
 	},
-	{ Pos = {115, 103}, Condition = {ShowOpponent = false, TradeCost = "only", Build = "false"},
+	{ Pos = {115, 103}, Condition = {ShowOpponent = false, TradeCost = "only", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
 		More = {"Text", {Text = Concat(String(ActiveUnitVar("TradeCost", "Value")), "%")}}
 	},
 	

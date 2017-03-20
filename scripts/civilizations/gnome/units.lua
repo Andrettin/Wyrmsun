@@ -298,13 +298,23 @@ DefineUnitType("unit-gnomish-caravan", {
 	Demand = 1,
 	Type = "land",
 	Coward = true,
-	RightMouseAction = "move",
+	RightMouseAction = "harvest",
 	MaxOnBoard = 2,
-	CanTransport = {"GroundAttack", "false", "Fauna", "false", "SaveCargo", "false", "Mounted", "false"}, -- forbidding ground attack as an ugly way of making ballistas not be able to enter the transporter; and forbidden "SaveCargo" is an ugly way of making caravans not be able to enter other caravans
+	CanTransport = {"Building", "false", "GroundAttack", "false", "Fauna", "false", "SaveCargo", "false", "Mounted", "false"}, -- forbidding ground attack as an ugly way of making ballistas not be able to enter the transporter; and forbidding "SaveCargo" is an ugly way of making caravans not be able to enter other caravans
 	AttackFromTransporter = true,
 	SaveCargo = true,
 	ButtonKey = "c",
-	ButtonHint = _("Build ~!Caravan"),
+	ButtonHint = "Build ~!Caravan",
+	Trader = true,
+	CanGatherResources = {
+		{
+			"resource-id", "trade",
+			"resource-capacity", 400,
+			"resource-step", 4,
+			"wait-at-resource", 12,
+			"wait-at-depot", 150
+		}
+	},
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "ballista-acknowledge",

@@ -54,6 +54,14 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-portent",
 	ForUnit = {"unit-gnomish-herbalist", "unit-deep-gnomish-herbalist"}
 })
 
+-- Units ---------------------------------------------------------
+
+--DefineButton( { Pos = 1, Level = 0,
+--	Action = "train-unit", Value = "unit-gnomish-caravan",
+--	Key = "c", Hint = "Build ~!Caravan", Popup = "popup-unit",
+--	ForUnit = {"unit-dwarven-market"}
+--})
+
 -- Buildings -----------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-gnomish-town-hall",

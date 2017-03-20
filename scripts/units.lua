@@ -180,10 +180,13 @@ end
 function DefineUnitType(unit_type, data)
 	local town_hall = false
 	local resource_mine = false
+	local market = false
 	if (data.Class == "town-hall" or data.Class == "stronghold") then
 		town_hall = true
-	elseif ((data.GivesResource and data.BuildingRules == nil) or data.Class == "lumber-mill") then
+	elseif ((data.GivesResource and data.BuildingRules == nil and data.GivesResource ~= "trade") or data.Class == "lumber-mill") then
 		resource_mine = true
+	elseif (data.Class == "market") then
+		market = true
 	end
 	
 	if (data.Parent ~= nil) then
@@ -192,10 +195,12 @@ function DefineUnitType(unit_type, data)
 		if ((GetUnitTypeData(unit_type, "Class") == "town-hall" or GetUnitTypeData(unit_type, "Class") == "stronghold") and data.Class == nil) then
 			town_hall = true
 		elseif (
-			(GetUnitTypeData(unit_type, "GivesResource") ~= "" and data.GivesResource == nil and data.BuildingRules == nil)
+			(GetUnitTypeData(unit_type, "GivesResource") ~= "" and GetUnitTypeData(unit_type, "GivesResource") ~= "trade" and data.GivesResource == nil and data.BuildingRules == nil)
 			or (GetUnitTypeData(unit_type, "Class") == "lumber-mill" and data.Class == nil)
 		) then
 			resource_mine = true
+		elseif (GetUnitTypeData(unit_type, "Class") == "market" and data.Class == nil) then
+			market = true
 		end
 	end
 	
@@ -232,6 +237,15 @@ function DefineUnitType(unit_type, data)
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-latin-town-hall" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-town-hall" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-stronghold" }
+			}
+		}
+	elseif (market) then
+		data.BuildingRules = {
+			"and", {
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-market" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-market" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-market" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-market" }
 			}
 		}
 	end
@@ -2744,7 +2758,7 @@ DefineUnitType("unit-template-merchant", { Name = _("Merchant"),
 	Demand = 1,
 	Gender = "male",
 	Type = "land",
-	RightMouseAction = "attack",
+	RightMouseAction = "harvest",
 	CanAttack = true,
 	CanTargetLand = true,
 	Coward = true,
@@ -2752,6 +2766,16 @@ DefineUnitType("unit-template-merchant", { Name = _("Merchant"),
 	ButtonPos = 1,
 	ButtonKey = "m",
 	ButtonHint = _("Train ~!Merchant"),
+	Trader = true,
+	CanGatherResources = {
+		{
+			"resource-id", "trade",
+			"resource-capacity", 100,
+			"resource-step", 4,
+			"wait-at-resource", 12,
+			"wait-at-depot", 150
+		}
+	},
 	Sounds = {
 		"step", "step-dirt",
 		"step-dirt", "step-dirt",
@@ -3195,7 +3219,7 @@ DefineUnitType("unit-template-transport-ship", {
 	Points = 50,
 	Demand = 2,
 	CanTargetLand = true, CanTargetSea = true, CanTargetAir = true,
-	RightMouseAction = "attack",
+	RightMouseAction = "harvest",
 	CanTransport = {"LandUnit", "only"},
 	SideAttack = true,
 	CanAttack = true,
@@ -3205,7 +3229,17 @@ DefineUnitType("unit-template-transport-ship", {
 	ButtonKey = "t",
 	ButtonHint = _("Build ~!Transport"),
 	RequirementsString = "Lumber Mill",
-	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-vulnerability"}
+	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-vulnerability"},
+	Trader = true,
+	CanGatherResources = {
+		{
+			"resource-id", "trade",
+			"resource-capacity", 400,
+			"resource-step", 4,
+			"wait-at-resource", 12,
+			"wait-at-depot", 150
+		}
+	}
 })
 
 DefineUnitType("unit-template-town-hall", {
@@ -3721,6 +3755,11 @@ DefineUnitType("unit-template-market", {
 	Type = "land",
 	BuilderOutside = true,
 	Market = true,
+	GivesResource = "trade",
+	CanStore = {"trade"},
+	CanHarvest = true,
+	Inexhaustible = true,
+	StartingResources = {1000},
 	Drops = {"unit-wood-pile"},
 	RightMouseAction = "rally-point",
 	BurnPercent = 50,
@@ -3760,6 +3799,11 @@ DefineUnitType("unit-template-dock", {
 	Type = "land",
 	BuilderOutside = true,
 	ShoreBuilding = true,
+	GivesResource = "trade",
+	CanStore = {"trade"},
+	CanHarvest = true,
+	Inexhaustible = true,
+	StartingResources = {1000},
 --	Drops = {"unit-wood-pile"},
 	RightMouseAction = "rally-point",
 	BurnPercent = 50,
