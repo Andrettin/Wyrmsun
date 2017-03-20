@@ -43,7 +43,7 @@ DefineDefaultIncomes(
 )
 
 DefineDefaultActions(
-	"stop", "mine", "gather", "drill", "mine", "mine", "mine", "produce", "gain", "mine", "mine", "gather", "grow", "grow", "produce", "catch", "gain"
+	"stop", "mine", "gather", "drill", "mine", "quarry", "mine", "produce", "gain", "mine", "mine", "gather", "grow", "grow", "produce", "catch", "gain"
 )
 
 DefineDefaultResourceNames(

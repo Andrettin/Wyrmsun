@@ -26,7 +26,7 @@
 --
 
 DefineUpgrade("upgrade-item-suffix-of-accuracy", {
-	Name = _("of Accuracy"),
+	Name = "of Accuracy",
 	MagicSuffix = true,
 	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "horn", true},
 	IncompatibleAffixes = {"upgrade-item-prefix-accurate"},
@@ -38,6 +38,13 @@ DefineUpgrade("upgrade-item-suffix-of-betrayal", {
 	MagicSuffix = true,
 	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "amulet", true, "ring", true},
 	MagicLevel = 4
+})
+
+DefineUpgrade("upgrade-item-suffix-of-carpentry", {
+	Name = "of Carpentry",
+	MagicSuffix = true,
+	ItemSuffix = {"mace", true, "amulet", true, "ring", true},
+	MagicLevel = 1
 })
 
 DefineUpgrade("upgrade-item-suffix-of-cold", {
@@ -233,12 +240,23 @@ DefineUpgrade("upgrade-item-suffix-of-vulnerability", {
 	MagicLevel = 1
 })
 
+DefineUpgrade("upgrade-item-suffix-of-the-woodpecker", {
+	Name = "of the Woodpecker",
+	MagicSuffix = true,
+	ItemSuffix = {"mace", true, "amulet", true, "ring", true},
+	MagicLevel = 2
+})
+
 DefineModifier("upgrade-item-suffix-of-accuracy",
 	{"Accuracy", 1}
 )
 
 DefineModifier("upgrade-item-suffix-of-betrayal",
 	{"Backstab", 100}
+)
+
+DefineModifier("upgrade-item-suffix-of-carpentry",
+	{"FurnitureGatheringBonus", 1}
 )
 
 DefineModifier("upgrade-item-suffix-of-cold",
@@ -351,12 +369,20 @@ DefineModifier("upgrade-item-suffix-of-vulnerability",
 	{"Armor", -1}
 )
 
+DefineModifier("upgrade-item-suffix-of-the-woodpecker",
+	{"LumberGatheringBonus", 2}
+)
+
 DefineDependency("upgrade-item-suffix-of-accuracy",
 	{"upgrade-deity-domain-archery"}, "or", {"upgrade-deity-domain-warfare"}
 )
 
 DefineDependency("upgrade-item-suffix-of-betrayal",
 	{"upgrade-deity-domain-envy"}, "or", {"upgrade-deity-domain-greed"}
+)
+
+DefineDependency("upgrade-item-suffix-of-carpentry",
+	{"upgrade-deity-domain-wood"}
 )
 
 DefineDependency("upgrade-item-suffix-of-cold",
@@ -381,10 +407,6 @@ DefineDependency("upgrade-item-suffix-of-fire",
 
 DefineDependency("upgrade-item-suffix-of-flame",
 	{"upgrade-deity-domain-fire"}, "or", {"upgrade-deity-domain-faith"}
-)
-
-DefineDependency("upgrade-item-suffix-of-frailty",
-	{"upgrade-deity-domain-death"}
 )
 
 DefineDependency("upgrade-item-suffix-of-the-jinn",
@@ -463,7 +485,11 @@ DefineDependency("upgrade-item-suffix-of-vision",
 	{"upgrade-deity-domain-archery"}, "or", {"upgrade-deity-domain-faith"}
 )
 
-DefineDependency("upgrade-item-suffix-of-vulnerability",
-	{"upgrade-deity-domain-death"}
+DefineDependency("upgrade-item-suffix-of-the-woodpecker",
+	{"upgrade-deity-domain-wood"}
 )
 
+local item_suffixes = GetItemSuffixes()
+for i = 1, table.getn(item_suffixes) do
+	table.insert(Units, item_suffixes[i])
+end

@@ -343,6 +343,9 @@ function RunEncyclopediaUnitsMenu(state, civilization)
 			else
 				icon_y = icon_y + 1
 			end
+			if (i >= 30) then
+				break
+			end
 		end
 	elseif (state == "heroes") then
 		local heroes = GetCharacters()

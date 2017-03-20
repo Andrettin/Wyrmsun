@@ -43,7 +43,7 @@ DefineUpgrade("upgrade-free-workers", {
 DefineUpgrade("upgrade-serfdom", {
 	Name = "Serfdom",
 	Icon = "icon-serfdom",
---	Description = ".\n\nEffect: -25% worker cost, -25% worker gathering rates.",
+--	Description = ".\n\nEffect: -25% worker cost, -1 worker gathering rate.",
 	Costs = {"time", 200, "copper", 1200},
 	RequirementsString = "Stronghold/Bastion/Burg"
 })

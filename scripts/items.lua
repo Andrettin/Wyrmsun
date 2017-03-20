@@ -378,8 +378,7 @@ DefineUnitType("unit-horn", {
 	Costs = {"copper", 100},
 	Image = {"file", "germanic/items/bronze_lur.png", "size", {17, 15}},
 	Icon = "icon-germanic-bronze-lur",
-	ItemClass = "horn",
-	Affixes = {"upgrade-item-suffix-of-frailty"} -- so that it can have a property generated if the dropper's player has no chosen deity
+	ItemClass = "horn"
 } )
 
 DefineUnitType("unit-boots", {
@@ -418,8 +417,7 @@ DefineUnitType("unit-amulet", {
 	Costs = {"copper", 100},
 	Image = {"file", "neutral/items/amulet.png", "size", {32, 32}},
 	Icon = "icon-amulet",
-	ItemClass = "amulet",
-	Affixes = {"upgrade-item-suffix-of-frailty"} -- so that it can have a property generated if the dropper's player has no chosen deity
+	ItemClass = "amulet"
 } )
 
 DefineUnitType("unit-ring", {
@@ -428,8 +426,7 @@ DefineUnitType("unit-ring", {
 	Costs = {"copper", 100},
 	Image = {"file", "neutral/items/ring.png", "size", {32, 32}},
 	Icon = "icon-ring",
-	ItemClass = "ring",
-	Affixes = {"upgrade-item-suffix-of-frailty"} -- so that it can have a property generated if the dropper's player has no chosen deity
+	ItemClass = "ring"
 } )
 
 DefineUnitType("unit-arrows", {

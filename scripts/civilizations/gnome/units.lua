@@ -44,7 +44,7 @@ DefineUnitType("unit-gnomish-worker", {
 	Accuracy = 9,
 	Evasion = 10,
 	Corpse = "unit-gnomish-dead-body",
-	WeaponClasses = {"mace"},
+	WeaponClasses = {"mace", "axe"},
 	BluntDamage = true,
 	ButtonKey = "s",
 	ButtonHint = _("Train ~!Scavenger"),

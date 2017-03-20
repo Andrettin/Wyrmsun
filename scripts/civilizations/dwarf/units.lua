@@ -43,31 +43,33 @@ DefineUnitType("unit-dwarven-miner", {
 		{"boots", "unit-boots"}
 	},
 	Corpse = "unit-dwarven-dead-body",
-	WeaponClasses = {"mace"},
+	WeaponClasses = {"mace", "axe"},
 	BluntDamage = true,
 	ButtonKey = "m",
 	ButtonHint = _("Train ~!Miner"),
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
+	CopperGatheringBonus = 1,
+	SilverGatheringBonus = 1,
+	GoldGatheringBonus = 1,
+	CoalGatheringBonus = 1,
+	LumberGatheringBonus = -1,
+	FurnitureGatheringBonus = -1,
 	CanGatherResources = {
 		{
 			"resource-id", "gold",
-			"file-when-loaded", "dwarf/units/miner_with_gold.png",
-			"resource-step", 5
+			"file-when-loaded", "dwarf/units/miner_with_gold.png"
 		},
 		{
 			"resource-id", "silver",
-			"file-when-loaded", "dwarf/units/miner_with_gold.png",
-			"resource-step", 5
+			"file-when-loaded", "dwarf/units/miner_with_gold.png"
 		},
 		{
 			"resource-id", "copper",
-			"file-when-loaded", "dwarf/units/miner_with_gold.png",
-			"resource-step", 5
+			"file-when-loaded", "dwarf/units/miner_with_gold.png"
 		},
 		{
 			"resource-id", "lumber",
-			"file-when-loaded", "dwarf/units/miner_with_lumber.png",
-			"resource-step", 3
+			"file-when-loaded", "dwarf/units/miner_with_lumber.png"
 		},
 		{
 			"resource-id", "stone",
@@ -75,13 +77,11 @@ DefineUnitType("unit-dwarven-miner", {
 		},
 		{
 			"resource-id", "coal",
-			"file-when-loaded", "dwarf/units/miner_with_coal.png",
-			"resource-step", 5
+			"file-when-loaded", "dwarf/units/miner_with_coal.png"
 		},
 		{
 			"resource-id", "furniture",
-			"file-when-loaded", "dwarf/units/miner_with_lumber.png",
-			"resource-step", 3
+			"file-when-loaded", "dwarf/units/miner_with_lumber.png"
 		}
 	},
 	Sounds = {

@@ -1200,7 +1200,7 @@ if not (ui_loaded_first_time) then
 						Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {SpeedBonus = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Speed Bonus: +"), Variable = "SpeedBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Speed Bonus: "), Variable = "SpeedBonus", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {FireResistance = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Fire Resistance: "), String(TypeVar("FireResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
@@ -1594,6 +1594,30 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {MaxHarvesters = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Max Workers:"), " "), Variable = "MaxHarvesters", Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {GatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Gathering Bonus: "), Variable = "GatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {CopperGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Copper Mining Bonus: "), Variable = "CopperGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {SilverGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Silver Mining Bonus: "), Variable = "SilverGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {GoldGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Gold Mining Bonus: "), Variable = "GoldGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {LumberGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Lumber Gathering Bonus: "), Variable = "LumberGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {StoneGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Stone Gathering Bonus: "), Variable = "StoneGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {CoalGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Coal Mining Bonus: "), Variable = "CoalGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {FurnitureGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Furniture Production Bonus: "), Variable = "FurnitureGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {Demand = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Food Cost:"), " "), Variable = "Demand", Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -1696,7 +1720,7 @@ if not (ui_loaded_first_time) then
 					More = {"Variable", {Text = _("Thorns Damage: "), Variable = "ThornsDamage", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {Backstab = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Backstab Bonus: +"), String(TypeVar("Backstab","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Backstab Bonus: "), String(TypeVar("Backstab","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {Accuracy = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Accuracy:"), " "), Variable = "Accuracy", Font = wyr.preferences.PopupDescriptionFont}}
@@ -2135,6 +2159,30 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {HitPointHealing = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Healing: "), Variable = "HitPointHealing", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {GatheringBonus = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Gathering Bonus: "), Variable = "GatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {CopperGatheringBonus = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Copper Mining Bonus: "), Variable = "CopperGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {SilverGatheringBonus = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Silver Mining Bonus: "), Variable = "SilverGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {GoldGatheringBonus = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Gold Mining Bonus: "), Variable = "GoldGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {LumberGatheringBonus = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Lumber Gathering Bonus: "), Variable = "LumberGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {StoneGatheringBonus = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Stone Gathering Bonus: "), Variable = "StoneGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {CoalGatheringBonus = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Coal Mining Bonus: "), Variable = "CoalGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {FurnitureGatheringBonus = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Furniture Production Bonus: "), Variable = "FurnitureGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {KnowledgeMagic = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Knowledge (Magic): "), Variable = "KnowledgeMagic", Font = wyr.preferences.PopupDescriptionFont}}

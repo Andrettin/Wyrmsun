@@ -46,7 +46,7 @@ DefineUnitType("unit-germanic-worker", {
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
-	WeaponClasses = {"mace"},
+	WeaponClasses = {"mace", "axe"},
 	BluntDamage = true,
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese", "unit-carrots"},
 	CanGatherResources = {

@@ -123,3 +123,8 @@ DefineDependency("upgrade-item-suffix-of-sigel",
 DefineDependency("upgrade-item-suffix-of-thurs",
 	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}
 )
+
+local runic_suffixes = GetRunicSuffixes()
+for i = 1, table.getn(runic_suffixes) do
+	table.insert(Units, runic_suffixes[i])
+end

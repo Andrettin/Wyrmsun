@@ -46,7 +46,7 @@ DefineUnitType("unit-teuton-worker", {
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
-	WeaponClasses = {"mace"},
+	WeaponClasses = {"mace", "axe"},
 	BluntDamage = true,
 	ButtonKey = "b",
 	ButtonHint = "Train ~!Bura",

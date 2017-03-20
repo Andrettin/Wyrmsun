@@ -1125,7 +1125,7 @@ DefineButton( { Pos = 1, Level = 3, Icon = "icon-labor",
 DefineButton( { Pos = 2, Level = 3, Icon = "icon-serfdom",
 	Action = "research", Value = "upgrade-serfdom",
 	Allowed = "check-single-research",
-	Description = "-100 Copper cost for workers, -25% worker gathering rate. Removes Free Workers.",
+	Description = "-100 Copper cost for workers, -1 worker gathering rate. Removes Free Workers.",
 	Key = "s", Hint = "Enact ~!Serfdom", Popup = "popup-research",
 	ForUnit = {
 		"unit-latin-town-hall",

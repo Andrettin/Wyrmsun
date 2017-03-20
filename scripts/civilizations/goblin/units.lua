@@ -46,7 +46,7 @@ DefineUnitType("unit-goblin-worker", {
 	DaySightRangeBonus = -1,
 	NightSightRangeBonus = 1,
 	Corpse = "unit-goblin-dead-body",
-	WeaponClasses = {"mace"},
+	WeaponClasses = {"mace", "axe"},
 	BluntDamage = true,
 	ButtonKey = "d",
 	ButtonHint = _("Train ~!Drudge"),

@@ -170,10 +170,7 @@ Units = {
 	"upgrade-deity-odin", "upgrade-deity-thor", "upgrade-deity-gathaarl",
 	"upgrade-deity-christian-god",
 	"upgrade-deity-domain-air", "upgrade-deity-domain-earth", "upgrade-deity-domain-fire", "upgrade-deity-domain-water", "upgrade-deity-domain-aether", "upgrade-deity-domain-metal", "upgrade-deity-domain-wood", "upgrade-deity-domain-cold", "upgrade-deity-domain-lightning", "upgrade-deity-domain-chaos", "upgrade-deity-domain-order", "upgrade-deity-domain-death", "upgrade-deity-domain-life", "upgrade-deity-domain-darkness", "upgrade-deity-domain-light", "upgrade-deity-domain-sun", "upgrade-deity-domain-moon",
-	"upgrade-deity-domain-courage", "upgrade-deity-domain-justice", "upgrade-deity-domain-temperance", "upgrade-deity-domain-wisdom", "upgrade-deity-domain-charity", "upgrade-deity-domain-faith", "upgrade-deity-domain-hope", "upgrade-deity-domain-love", "upgrade-deity-domain-envy", "upgrade-deity-domain-gluttony", "upgrade-deity-domain-greed", "upgrade-deity-domain-lust", "upgrade-deity-domain-pride", "upgrade-deity-domain-sloth", "upgrade-deity-domain-wrath", "upgrade-deity-domain-archery", "upgrade-deity-domain-metalworking", "upgrade-deity-domain-poetry", "upgrade-deity-domain-warfare",
-	"upgrade-item-prefix-accurate", "upgrade-item-prefix-cold", "upgrade-item-prefix-cruel", "upgrade-item-prefix-dwindling", "upgrade-item-prefix-flaming", "upgrade-item-prefix-frail", "upgrade-item-prefix-giantsbane", "upgrade-item-prefix-glacial", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-jinns", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-quenching", "upgrade-item-prefix-replenishing", "upgrade-item-prefix-storm", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-swift", "upgrade-item-prefix-vicious", "upgrade-item-prefix-vulnerable", "upgrade-item-prefix-wounding",
-	"upgrade-item-suffix-of-accuracy", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-the-colossus", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-the-jinn", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-plenty", "upgrade-item-suffix-of-power", "upgrade-item-suffix-of-regeneration", "upgrade-item-suffix-of-replenishment", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-slaughter", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-strength", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-trickery", "upgrade-item-suffix-of-victory", "upgrade-item-suffix-of-vision", "upgrade-item-suffix-of-vulnerability",
-	"upgrade-item-suffix-of-aedi", "upgrade-item-suffix-of-ergi", "upgrade-item-suffix-of-os", "upgrade-item-suffix-of-othola", "upgrade-item-suffix-of-sigel", "upgrade-item-suffix-of-thurs"
+	"upgrade-deity-domain-courage", "upgrade-deity-domain-justice", "upgrade-deity-domain-temperance", "upgrade-deity-domain-wisdom", "upgrade-deity-domain-charity", "upgrade-deity-domain-faith", "upgrade-deity-domain-hope", "upgrade-deity-domain-love", "upgrade-deity-domain-envy", "upgrade-deity-domain-gluttony", "upgrade-deity-domain-greed", "upgrade-deity-domain-lust", "upgrade-deity-domain-pride", "upgrade-deity-domain-sloth", "upgrade-deity-domain-wrath", "upgrade-deity-domain-archery", "upgrade-deity-domain-metalworking", "upgrade-deity-domain-poetry", "upgrade-deity-domain-warfare"
 }
 
 if (OldDefineUnitType == nil) then
@@ -2675,24 +2672,10 @@ DefineUnitType("unit-template-skilled-miner", {
 	Accuracy = 9,
 	Points = 45,
 	Level = 2,
-	CanGatherResources = {
-		{
-			"resource-id", "gold",
-			"resource-step", 6
-		},
-		{
-			"resource-id", "silver",
-			"resource-step", 6
-		},
-		{
-			"resource-id", "copper",
-			"resource-step", 6
-		},
-		{
-			"resource-id", "coal",
-			"resource-step", 6
-		}
-	}
+	CopperGatheringBonus = 2,
+	SilverGatheringBonus = 2,
+	GoldGatheringBonus = 2,
+	CoalGatheringBonus = 2
 } )
 
 DefineUnitType("unit-template-expert-miner", {
@@ -2705,24 +2688,10 @@ DefineUnitType("unit-template-expert-miner", {
 	Points = 60,
 	Level = 3,
 	Inventory = true,
-	CanGatherResources = {
-		{
-			"resource-id", "gold",
-			"resource-step", 8
-		},
-		{
-			"resource-id", "silver",
-			"resource-step", 8
-		},
-		{
-			"resource-id", "copper",
-			"resource-step", 8
-		},
-		{
-			"resource-id", "coal",
-			"resource-step", 8
-		}
-	}
+	CopperGatheringBonus = 4,
+	SilverGatheringBonus = 4,
+	GoldGatheringBonus = 4,
+	CoalGatheringBonus = 4
 } )
 
 DefineUnitType("unit-template-militia", { Name = _("Militia"),

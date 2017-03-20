@@ -32,6 +32,20 @@ DefineUpgrade("upgrade-item-prefix-accurate", {
 	MagicLevel = 1
 })
 
+DefineUpgrade("upgrade-item-prefix-chiseling", {
+	Name = "Chiseling",
+	MagicPrefix = true,
+	ItemPrefix = {"mace", true},
+	MagicLevel = 1
+})
+
+DefineUpgrade("upgrade-item-prefix-chopping", {
+	Name = "Chopping",
+	MagicPrefix = true,
+	ItemPrefix = {"axe", true},
+	MagicLevel = 1
+})
+
 DefineUpgrade("upgrade-item-prefix-cold", { -- example: Cold Blade (from Wesnoth)
 	Name = _("Cold"),
 	MagicPrefix = true,
@@ -74,7 +88,7 @@ DefineUpgrade("upgrade-item-prefix-giantsbane", {
 })
 
 DefineUpgrade("upgrade-item-prefix-glacial", {
-	Name = _("Glacial"),
+	Name = "Glacial",
 	MagicPrefix = true,
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
 	MagicLevel = 3
@@ -118,6 +132,13 @@ DefineUpgrade("upgrade-item-prefix-replenishing", {
 	Name = _("Replenishing"),
 	MagicPrefix = true,
 	MagicLevel = 2
+})
+
+DefineUpgrade("upgrade-item-prefix-sawing", {
+	Name = "Sawing",
+	MagicPrefix = true,
+	ItemPrefix = {"axe", true},
+	MagicLevel = 3
 })
 
 DefineUpgrade("upgrade-item-prefix-storm", { -- example: Storm Trident (from Wesnoth)
@@ -164,6 +185,14 @@ DefineUpgrade("upgrade-item-prefix-wounding", {
 
 DefineModifier("upgrade-item-prefix-accurate",
 	{"Accuracy", 1}
+)
+
+DefineModifier("upgrade-item-prefix-chiseling",
+	{"StoneGatheringBonus", 1}
+)
+
+DefineModifier("upgrade-item-prefix-chopping",
+	{"LumberGatheringBonus", 1}
 )
 
 DefineModifier("upgrade-item-prefix-cold",
@@ -216,6 +245,11 @@ DefineModifier("upgrade-item-prefix-quenching",
 
 DefineModifier("upgrade-item-prefix-replenishing",
 	{"GiveResource", 1, "Increase"}
+)
+
+DefineModifier("upgrade-item-prefix-sawing",
+	{"LumberGatheringBonus", 2},
+	{"FurnitureGatheringBonus", 1}
 )
 
 DefineModifier("upgrade-item-prefix-storm",
@@ -293,3 +327,8 @@ DefineDependency("upgrade-item-prefix-storm",
 DefineDependency("upgrade-item-prefix-vicious",
 	{"upgrade-deity-domain-wrath"}
 )
+
+local item_prefixes = GetItemPrefixes()
+for i = 1, table.getn(item_prefixes) do
+	table.insert(Units, item_prefixes[i])
+end
