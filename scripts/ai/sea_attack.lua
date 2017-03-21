@@ -48,6 +48,7 @@ local sea_funcs = {
 
 	function() return AiSet(GetAiUnitType("worker"), 9) end,
 	function() return AiNeed(GetAiUnitType("lumber-mill")) end,
+	function() return AiWait(GetAiUnitType("lumber-mill")) end,
 	function() return AiNeed(GetAiUnitType("market")) end, -- seems like a good point to build one
 	function() return AiNeed(GetAiUnitType("barracks")) end,
 	function() return AiForce(0, {GetAiUnitType("infantry"), 3}) end,
@@ -92,6 +93,36 @@ local sea_funcs = {
 			return AiResearch(GetAiUnitType("ranged-projectile-1"));
 		end
 		return false;
+	end,
+	function()
+		if (AiGetRace() == "germanic") then
+			return AiWait(GetAiUnitType("wood-plow"));
+		end
+		return false;
+	end,
+	function()
+		if (AiGetRace() == "germanic") then
+			return AiWait(GetAiUnitType("melee-weapon-1"));
+		end
+		return false;
+	end,
+	function()
+		if (AiGetRace() == "germanic") then
+			return AiWait(GetAiUnitType("bronze-shield"));
+		end
+		return false;
+	end,
+	function()
+		if (AiGetRace() == "germanic") then
+			return AiWait(GetAiUnitType("ranged-projectile-1"));
+		end
+		return false;
+	end,
+
+	function()
+		if (AiGetRace() == "germanic") then -- if is Germanic, wait until becomes Anglo-Saxon/Frankish/Suebi/Teuton for the next step
+			return true;
+		end
 	end,
 
 	function() return AiResearch(GetAiUnitType("masonry")) end, -- needed for the stronghold
