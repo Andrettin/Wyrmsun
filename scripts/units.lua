@@ -3292,7 +3292,7 @@ DefineUnitType("unit-template-town-hall", {
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-amulet", "unit-ring", "unit-scroll", "unit-book"}, -- worker-related items, as well as those we would expect a center of administration to have
 	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},
-	BuildingRulesString = "Cannot be built too close to mines or industrial buildings",
+	BuildingRulesString = "Cannot be built close to mines or industrial buildings",
 	Sounds = {
 		"selected", "town-hall-selected",
 --		"acknowledge", "town-hall-acknowledge",
@@ -3467,7 +3467,7 @@ DefineUnitType("unit-template-lumber-mill", {
 	ButtonKey = "l",
 	ButtonHint = _("Build ~!Lumber Mill"),
 	ResourceDemand = {"furniture", 3},
-	BuildingRulesString = "Cannot be built too close to town halls",
+	BuildingRulesString = "Cannot be built close to town halls",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	PersonalNames = {
 		"The Black Board",
@@ -3789,7 +3789,7 @@ DefineUnitType("unit-template-market", {
 	TradeCost = 30,
 	ResourceDemand = {"furniture", 3},
 	RequirementsString = "Lumber Mill",
-	BuildingRulesString = "Cannot be built too close to other markets",
+	BuildingRulesString = "Cannot be built close to other markets",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	SoldUnits = {"unit-hammer", "unit-mining-pick", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-horn", "unit-amulet", "unit-ring", "unit-scroll", "unit-book"},
 	AiDrops = {"unit-amulet", "unit-ring"},
@@ -3837,7 +3837,7 @@ DefineUnitType("unit-template-dock", {
 	ButtonHint = _("Build ~!Dock"),
 	ResourceDemand = {"furniture", 3},
 	RequirementsString = "Lumber Mill",
-	BuildingRulesString = "Cannot be built too close to other docks",
+	BuildingRulesString = "Cannot be built close to other docks",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 		"selected", "dock-selected",
