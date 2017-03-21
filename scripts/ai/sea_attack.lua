@@ -48,6 +48,7 @@ local sea_funcs = {
 
 	function() return AiSet(GetAiUnitType("worker"), 9) end,
 	function() return AiNeed(GetAiUnitType("lumber-mill")) end,
+	function() return AiNeed(GetAiUnitType("market")) end, -- seems like a good point to build one
 	function() return AiNeed(GetAiUnitType("barracks")) end,
 	function() return AiForce(0, {GetAiUnitType("infantry"), 3}) end,
 	function() return AiForceRole(0, "defend") end,
@@ -103,7 +104,16 @@ local sea_funcs = {
 --	function() return AiSet(AiTanker(), 1) end,
 --	function() return AiNeed(AiPlatform()) end,
 	function() return AiWait(GetAiUnitType("stronghold")) end,
+	function() return AiResearch(GetAiUnitType("coinage")) end, -- research coinage to improve copper/silver/gold processing
+	function() return AiResearch(GetAiUnitType("writing")) end, -- research writing to become a polity
 
+	function() -- certain civilizations acquire serfdom when it becomes available
+		if (AiGetRace() == "teuton" or AiGetRace() == "anglo-saxon" or AiGetRace() == "frankish" or AiGetRace() == "suebi") then
+			return AiResearch("upgrade-serfdom");
+		end
+		return false;
+	end,
+	
 --	function() return AiSet(AiTanker(), 3) end,
 --	function() return AiForce(1, {AiSubmarine(), 3}) end,
 --	function() return AiWaitForce(1) end,  -- wait until attack force is ready
@@ -133,6 +143,7 @@ local sea_funcs = {
 	function() return AiSleep(500) end,
 	function() return AiResearch(GetAiUnitType("siege-projectile-1")) end,
 	function() return AiNeed(GetAiUnitType("stables")) end,
+	function() return AiResearch(GetAiUnitType("alchemy")) end, -- research alchemy to improve shooters
 	function() return AiForce(0, {GetAiUnitType("infantry"), 3, GetAiUnitType("siege-engine"), 1, GetAiUnitType("glider"), 1}) end,
 --	function() return AiForce(1, {AiSubmarine(), 1, AiDestroyer(), 2, AiBattleship(), 1, GetAiUnitType("glider"), 2}) end,
 	function() return AiSleep(3000) end,

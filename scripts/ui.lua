@@ -1211,11 +1211,11 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {AttackRange = "only", AttackFromTransporter = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Range Bonus: +"), Variable = "AttackRange", Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {IncreasesLuxuryDemand = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = TypeLuxuryDemand("Type"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {RegenerationAura = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Regeneration Aura"), Font = wyr.preferences.PopupDescriptionFont}}
-				},
-				{ 	Condition = {IncreasesLuxuryDemand = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Increases Luxury Demand"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Margin = {1, 1}, Condition = {BuildingRulesString = "only"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
@@ -1642,8 +1642,11 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {LeadershipAura = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Leadership Aura"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {Trader = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Trader"), Font = wyr.preferences.PopupDescriptionFont}}
+				{ 	Condition = {Trader = "only", UnitTypeType = "land"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Trades with foreign markets"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Trader = "only", UnitTypeType = "naval"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Trades with foreign docks"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "editor-unit"}, 
