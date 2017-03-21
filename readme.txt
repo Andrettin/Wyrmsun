@@ -110,6 +110,7 @@ https://github.com/Andrettin/Wyrmsun
 - Improved unit target-finding code for subterranean maps.
 - Fixed an issue which allowed a unit to pick items over its inventory capacity by using waypoints.
 - Fixed issue which sometimes caused a ring of unexplored terrain to appear around units when loading a saved game.
+- Transport ships can now conduct trade with the docks of other players.
 
 * Upgrades
 - The buttons for upgrades that have already been researched now show up, grayed.

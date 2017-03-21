@@ -181,12 +181,15 @@ function DefineUnitType(unit_type, data)
 	local town_hall = false
 	local resource_mine = false
 	local market = false
+	local dock = false
 	if (data.Class == "town-hall" or data.Class == "stronghold") then
 		town_hall = true
 	elseif ((data.GivesResource and data.BuildingRules == nil and data.GivesResource ~= "trade") or data.Class == "lumber-mill") then
 		resource_mine = true
 	elseif (data.Class == "market") then
 		market = true
+	elseif (data.Class == "dock") then
+		dock = true
 	end
 	
 	if (data.Parent ~= nil) then
@@ -201,6 +204,8 @@ function DefineUnitType(unit_type, data)
 			resource_mine = true
 		elseif (GetUnitTypeData(unit_type, "Class") == "market" and data.Class == nil) then
 			market = true
+		elseif (GetUnitTypeData(unit_type, "Class") == "dock" and data.Class == nil) then
+			dock = true
 		end
 	end
 	
@@ -246,6 +251,15 @@ function DefineUnitType(unit_type, data)
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-market" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-market" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-market" }
+			}
+		}
+	elseif (dock) then
+		data.BuildingRules = {
+			"and", {
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-dock" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-dock" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-dock" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-dock" }
 			}
 		}
 	end
@@ -2772,7 +2786,7 @@ DefineUnitType("unit-template-merchant", { Name = _("Merchant"),
 			"resource-id", "trade",
 			"resource-capacity", 100,
 			"resource-step", 4,
-			"wait-at-resource", 12,
+			"wait-at-resource", 6,
 			"wait-at-depot", 150
 		}
 	},
@@ -3225,18 +3239,18 @@ DefineUnitType("unit-template-transport-ship", {
 	CanAttack = true,
 	CanDock = true,
 	AttackFromTransporter = true,
+	Trader = true,
 	ButtonPos = 1,
 	ButtonKey = "t",
 	ButtonHint = _("Build ~!Transport"),
 	RequirementsString = "Lumber Mill",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-vulnerability"},
-	Trader = true,
 	CanGatherResources = {
 		{
 			"resource-id", "trade",
 			"resource-capacity", 400,
 			"resource-step", 4,
-			"wait-at-resource", 12,
+			"wait-at-resource", 6,
 			"wait-at-depot", 150
 		}
 	}
@@ -3265,6 +3279,7 @@ DefineUnitType("unit-template-town-hall", {
 	LumberImprove = true, StoneImprove = true,
 	BuilderOutside = true,
 	RecruitHeroes = true,
+	IncreasesLuxuryDemand = true,
 	CanStore = {"copper", "silver", "gold", "lumber", "stone", "coal", "furniture"},
 	Drops = {"unit-wood-pile"},
 	RightMouseAction = "rally-point",
@@ -3334,6 +3349,7 @@ DefineUnitType("unit-template-farm", {
 	Drops = {"unit-cheese", "unit-carrots", "unit-wood-pile"},
 	Type = "land",
 	BuilderOutside = true,
+	IncreasesLuxuryDemand = true,
 	BurnPercent = 50,
 	BurnDamageRate = 1,
 	ButtonPos = 2,
@@ -3388,6 +3404,7 @@ DefineUnitType("unit-template-barracks", {
 	ExplodeWhenKilled = "missile-explosion",
 	Type = "land",
 	BuilderOutside = true,
+	IncreasesLuxuryDemand = true,
 	Drops = {"unit-wood-pile"},
 	RightMouseAction = "rally-point",
 	BurnPercent = 50,
@@ -3441,6 +3458,7 @@ DefineUnitType("unit-template-lumber-mill", {
 	BuilderOutside = true,
 	CanHarvest = true, -- cannot produce a resource inherently, but can produce furniture through a button
 	Inexhaustible = true,
+	IncreasesLuxuryDemand = true,
 	MaxHarvesters = 5,
 	Drops = {"unit-wood-pile"},
 	BurnPercent = 50,
@@ -3514,6 +3532,7 @@ DefineUnitType("unit-template-smithy", {
 	ExplodeWhenKilled = "missile-explosion",
 	Type = "land",
 	BuilderOutside = true,
+	IncreasesLuxuryDemand = true,
 	Drops = {"unit-wood-pile"},
 	BurnPercent = 50,
 	BurnDamageRate = 1,
@@ -3593,6 +3612,7 @@ DefineUnitType("unit-template-stables", {
 	ExplodeWhenKilled = "missile-explosion",
 	Type = "land",
 	BuilderOutside = true,
+	IncreasesLuxuryDemand = true,
 	Drops = {"unit-wood-pile"},
 	BurnPercent = 50,
 	BurnDamageRate = 1,
@@ -3629,6 +3649,7 @@ DefineUnitType("unit-template-temple", {
 	ExplodeWhenKilled = "missile-explosion",
 	Type = "land",
 	BuilderOutside = true,
+	IncreasesLuxuryDemand = true,
 	RightMouseAction = "rally-point",
 	Drops = {"unit-wood-pile"},
 	BurnPercent = 50,
@@ -3755,6 +3776,7 @@ DefineUnitType("unit-template-market", {
 	Type = "land",
 	BuilderOutside = true,
 	Market = true,
+	IncreasesLuxuryDemand = true,
 	GivesResource = "trade",
 	CanStore = {"trade"},
 	CanHarvest = true,
@@ -3767,6 +3789,7 @@ DefineUnitType("unit-template-market", {
 	TradeCost = 30,
 	ResourceDemand = {"furniture", 3},
 	RequirementsString = "Lumber Mill",
+	BuildingRulesString = "Cannot be built too close to other markets",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	SoldUnits = {"unit-hammer", "unit-mining-pick", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-horn", "unit-amulet", "unit-ring", "unit-scroll", "unit-book"},
 	AiDrops = {"unit-amulet", "unit-ring"},
@@ -3803,6 +3826,7 @@ DefineUnitType("unit-template-dock", {
 	CanStore = {"trade"},
 	CanHarvest = true,
 	Inexhaustible = true,
+	IncreasesLuxuryDemand = true,
 	StartingResources = {1000},
 --	Drops = {"unit-wood-pile"},
 	RightMouseAction = "rally-point",
@@ -3813,6 +3837,7 @@ DefineUnitType("unit-template-dock", {
 	ButtonHint = _("Build ~!Dock"),
 	ResourceDemand = {"furniture", 3},
 	RequirementsString = "Lumber Mill",
+	BuildingRulesString = "Cannot be built too close to other docks",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 		"selected", "dock-selected",

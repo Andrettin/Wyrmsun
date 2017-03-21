@@ -311,7 +311,7 @@ DefineUnitType("unit-gnomish-caravan", {
 			"resource-id", "trade",
 			"resource-capacity", 400,
 			"resource-step", 4,
-			"wait-at-resource", 12,
+			"wait-at-resource", 6,
 			"wait-at-depot", 150
 		}
 	},
