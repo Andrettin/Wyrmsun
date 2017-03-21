@@ -70,6 +70,7 @@ https://github.com/Andrettin/Wyrmsun
 - Scrolls are no longer bought in Temples, but in Markets.
 - Markets provide a wide selection of purchasable items, including magic and (very rarely) unique ones. Which items appear depends on what you have. For example, swords only appear if you have a smithy, magic affixes depend on your deity or religion, and so forth.
 - Added a message if a unique item becomes available for sale in a Market, so that the player doesn't have to worry about missing it.
+- The AI now makes use of Mercenary Camps.
 
 * Civilizations
 - Anglo-Saxon units now have English voices (by Johnvarker).
