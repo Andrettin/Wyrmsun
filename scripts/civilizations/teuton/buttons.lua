@@ -60,6 +60,16 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-3",
 	}
 } )
 
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-teuton-coinage",
+	Action = "harvest",
+	Key = "t", Hint = "~!Trade", Popup = "popup-commands",
+	Description = "Trade with foreign docks",
+	ForUnit = {
+		"unit-germanic-transport-ship",
+		"unit-teuton-kogge"
+	}
+})
+
 -- Units ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 0,

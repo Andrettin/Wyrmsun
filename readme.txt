@@ -99,8 +99,12 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed the Buy Healing Potion hotkey (it is now properly H, rather than C).
 - Fixed the Teuton Cleric's hotkey to be L, rather than C, as that conflicted with the hotkey for the Christianity upgrade.
 
+* Scenarios
+- Fixed some issues which could cause the Haimdala's Progeny scenario quests to break if the player changed their faction from a Germanic one too soon.
+
 * Terrain
 - Fixed issue which caused cleared rock on dirt and dry mud to not be buildable upon.
+- Doubled the time it takes for forests to regrow.
 
 * Units
 - Workers can now build roads, which increase movement speed by 25% (road graphics by Jinn). Roads require Masonry.

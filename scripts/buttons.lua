@@ -63,7 +63,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-repair",
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-harvest",
 	Action = "harvest",
-	Key = "h", Hint = _("~!Harvest Resource"), Popup = "popup-commands",
+	Key = "h", Hint = "~!Harvest Resource", Popup = "popup-commands",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",

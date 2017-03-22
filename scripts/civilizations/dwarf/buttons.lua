@@ -32,7 +32,7 @@
 --		['allowed check ['values]] Key = key, Hint = hint 'for-unit", "units)
 --
 
--- general commands -- almost all units have it -------------------------------
+-- General Commands -------------------------------
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-1",
 	Action = "attack",
@@ -59,6 +59,15 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-3",
 		"unit-dwarven-ballista"
 	}
 } )
+
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-dwarven-coinage",
+	Action = "harvest",
+	Key = "t", Hint = "~!Trade", Popup = "popup-commands",
+	Description = "Trade with foreign docks",
+	ForUnit = {
+		"unit-dwarven-transport-ship"
+	}
+})
 
 -- Buildings -----------------------------------------------------
 

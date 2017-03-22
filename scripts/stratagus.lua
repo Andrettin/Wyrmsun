@@ -130,7 +130,7 @@ SetTrainingQueue(true)
 SetBuildingCapture(false)
 
 --  Set forest regeneration speed. (n* seconds, 0 = disabled)
-SetForestRegeneration(600)
+SetForestRegeneration(1200)
 
 --  Edit this to enable/disable the reveal of the attacker.
 --SetRevealAttacker(true)
