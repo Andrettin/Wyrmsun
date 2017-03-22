@@ -96,7 +96,7 @@ GameConcepts = {
 	},
 	Trade = {
 		Name = "~!Trade",
-		Description = "Trade is conducted in market buildings, where lumber and stone can be exchanged for copper. Luxury resources, such as furniture, are sold automatically if a market is present. The trade cost percentage is deducted from the copper received when a resource is sold, and from the quantity obtained when a resource is bought."
+		Description = "Resource trade is conducted in market buildings, where lumber and stone can be exchanged for copper. Luxury resources, such as furniture, are sold automatically if a market is present. The trade cost percentage is deducted from the copper received when a resource is sold, and from the quantity obtained when a resource is bought.\n\nTrader units can generate copper by trading with foreign markets or docks. The higher the resource price difference with the other player, the more profitable trade with their markets and docks is. When a unit conducts trade, it also converges the prices of both players."
 	},
 	Traits = {
 		Name = _("Tra~!its"),

@@ -1621,6 +1621,18 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {FurnitureGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Furniture Production Bonus: "), Variable = "FurnitureGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {UnitTypeClass = "merchant", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Text", {Text = _("Trade Capacity: 100"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {UnitTypeClass = "heroic-merchant", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Text", {Text = _("Trade Capacity: 100"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {UnitTypeClass = "caravan", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Text", {Text = _("Trade Capacity: 400"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {UnitTypeClass = "transport-ship", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Text", {Text = _("Trade Capacity: 400"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {Demand = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Food Cost:"), " "), Variable = "Demand", Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -2302,15 +2314,31 @@ if not (ui_loaded_first_time) then
 				}, 
 				{	Condition = {Unique = "only"}, TextColor = "fire", HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
-				}
+				},
 				--[[
 				{ 	Condition = {Building = "only", SettlementName = true, ButtonAction = "unit"}, Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {Building = "only", SettlementName = true, ButtonAction = "unit"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Settlement: "), UnitSettlementName("Unit")), Font = wyr.preferences.PopupDescriptionFont}}
-				}
+				},
 				--]]
+				{ 	Condition = {Building = "only", UnitTypeClass = "dock", CanActiveHarvest = true, ButtonAction = "unit"}, Margin = {1, 1},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {Building = "only", UnitTypeClass = "dock", CanActiveHarvest = true, ButtonAction = "unit"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Trade Potential: "),
+						String(function() return GetPlayerData(GetThisPlayer(), "TradePotentialWith", GetUnitVariable(-2, "Player")) end)),
+					Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Building = "only", UnitTypeClass = "market", CanActiveHarvest = true, ButtonAction = "unit"}, Margin = {1, 1},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {Building = "only", UnitTypeClass = "market", CanActiveHarvest = true, ButtonAction = "unit"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Trade Potential: "),
+						String(function() return GetPlayerData(GetThisPlayer(), "TradePotentialWith", GetUnitVariable(-2, "Player")) end)),
+					Font = wyr.preferences.PopupDescriptionFont}}
+				}
 		}	
 	})
 end
