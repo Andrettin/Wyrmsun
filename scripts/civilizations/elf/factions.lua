@@ -58,3 +58,14 @@ DefineFaction("wesmere", {
 	Colors = {"green"},
 	DefaultTier = "kingdom"
 })
+
+-- Mercenary Companies
+
+DefineFaction("bloodleaf-company", {
+	Name = "Bloodleaf Company",
+	Civilization = "elf",
+	Type = "mercenary-company",
+	Colors = {"red"},
+	DefaultTier = "duchy",
+	Description = ""
+})

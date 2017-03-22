@@ -84,6 +84,11 @@ DefineUpgrade("upgrade-faction-surghan-mercenaries", {
 	EffectsString = "+2 Damage for Axefighters"
 })
 
+DefineUpgrade("upgrade-faction-yawning-yales", {
+	Name = "Yawning Yales",
+--	EffectsString = "+1 Speed for Yale Riders"
+})
+
 DefineModifier("upgrade-faction-brising-clan",
 	{"BasicDamage", 1},
 	{"Points", 5},

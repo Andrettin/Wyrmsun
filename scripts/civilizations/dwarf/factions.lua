@@ -219,3 +219,14 @@ DefineFaction("surghan-mercenaries", {
 	Description = "These scoundrels will hire their axes to the largest bidder, no questions asked. They have participated in a number of engagements, the most dangerous of which was the pursuit of a group of dwarves into the lair of the wyrm Svafnir and beyond.",
 	Quote = "\"It must be one of those Surghan mercenaries. I'll bet those Shinsplitters have hired more of them. That's bad news for us, for they are deadly, combat-hardened warriors.\"\n- Baglur, Retired Norlund Warrior"
 })
+
+DefineFaction("yawning-yales", {
+	Name = "Yawning Yales",
+	ParentFaction = "eikinskjaldi-clan", -- Joruvellir
+	Civilization = "dwarf",
+	Type = "mercenary-company",
+	Colors = {"yellow"},
+	DefaultTier = "duchy",
+	FactionUpgrade = "upgrade-faction-yawning-yales",
+	Description = "The mercenaries known as the Yawning Yales originate in the sands of Joruvellir, riding forth to seek employment in military campaigns throughout the dwarven lands."
+})
