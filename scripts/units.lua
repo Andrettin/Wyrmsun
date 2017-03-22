@@ -2815,7 +2815,13 @@ DefineUnitType("unit-template-heroic-merchant", {
 	Points = 90,
 	Level = 3,
 	LeadershipAura = 1,
-	Inventory = true
+	Inventory = true,
+	CanGatherResources = {
+		{
+			"resource-id", "trade",
+			"resource-step", 8
+		}
+	}
 } )
 
 DefineUnitType("unit-template-infantry", {

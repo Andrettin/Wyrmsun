@@ -1654,10 +1654,10 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {LeadershipAura = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Leadership Aura"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {Trader = "only", UnitTypeType = "land"}, HighlightColor = "yellow",
+				{ 	Condition = {Trader = "only", UnitTypeType = "land", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Trades with foreign markets"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {Trader = "only", UnitTypeType = "naval"}, HighlightColor = "yellow",
+				{ 	Condition = {Trader = "only", UnitTypeType = "naval", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Trades with foreign docks"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				-- Description

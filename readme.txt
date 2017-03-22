@@ -84,6 +84,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Heroes
 - Fixed issue which prevented Frankish hero Kregars from upgrading to Ritars if the player didn't have a Frankish faction.
+- The AI now recruits heroes.
 
 * Items
 - Books now increase their respective knowledge stat by 5, rather than 3.
