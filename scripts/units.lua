@@ -4032,8 +4032,9 @@ DefineUnitType("unit-mercenary-camp", {
 	BurnPercent = 50,
 	BurnDamageRate = 1,
 	RecruitHeroes = true,
-	Trains = {"unit-goblin-thief"},
-	UnitStock = {"unit-dwarven-axefighter", 4, "unit-surghan-mercenary-axefighter", 4, "unit-dwarven-guard", 4, "unit-dwarven-scout", 3, "unit-dwarven-yale-rider", 2, "unit-dwarven-ballista", 1, "unit-dwarven-gryphon-rider", 1, "unit-goblin-thief", 6, "unit-kobold-footpad", 4, "unit-ettin", 1},
+	UnitStock = {
+		"unit-dwarven-axefighter", 4, "unit-surghan-mercenary-axefighter", 4, "unit-dwarven-guard", 4, "unit-dwarven-scout", 3, "unit-dwarven-yale-rider", 2, "unit-dwarven-ballista", 1, "unit-dwarven-gryphon-rider", 1,
+		"unit-goblin-thief", 6, "unit-goblin-swordsman", 4, "unit-goblin-spearman", 4, "unit-goblin-archer", 3, "unit-goblin-war-machine", 1, "unit-goblin-glider", 1, "unit-kobold-footpad", 4, "unit-ettin", 1},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 		"selected", "click",

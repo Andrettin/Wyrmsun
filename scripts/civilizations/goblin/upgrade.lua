@@ -146,11 +146,6 @@ DefineUpgrade("upgrade-goblin-alchemy", {
 	Description = _("Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Archers and Headhunters, +5 Fire Damage for War Machines.")
 })
 
-DefineModifier("upgrade-goblin-civilization",
-	{"unit-stock", "unit-goblin-thief", 6},
-	{"apply-to", "unit-mercenary-camp"}
-)
-
 DefineModifier("upgrade-goblin-broad-sword",
 	{"BasicDamage", 2},
 	{"Points", 10},
@@ -271,8 +266,20 @@ DefineModifier("upgrade-goblin-alchemy",
 	{"apply-to", "unit-goblin-war-machine"}
 )
 
+DefinePredependency("unit-goblin-swordsman",
+	{"upgrade-goblin-civilization"}
+)
+
+DefinePredependency("unit-goblin-spearman",
+	{"upgrade-goblin-civilization"}
+)
+
+DefinePredependency("unit-goblin-archer",
+	{"upgrade-goblin-civilization"}
+)
+
 DefineDependency("unit-goblin-archer",
-	{"unit-goblin-lumber-mill"}
+	{"unit-goblin-lumber-mill"}, "or", {"upgrade-mercenary-company"}
 )
 
 DefineDependency("upgrade-goblin-long-sword",
@@ -287,16 +294,24 @@ DefineDependency("unit-goblin-guard-tower",
 	{"unit-goblin-lumber-mill", "upgrade-goblin-masonry"}
 )
 
+DefinePredependency("unit-goblin-war-machine",
+	{"upgrade-goblin-civilization"}
+)
+
 DefineDependency("unit-goblin-war-machine",
-	{"unit-goblin-smithy", "unit-goblin-lumber-mill"}
+	{"unit-goblin-smithy", "unit-goblin-lumber-mill"}, "or", {"upgrade-mercenary-company"}
 )
 
 DefinePredependency("unit-goblin-thief",
 	{"upgrade-goblin-civilization"}
 )
 
+DefinePredependency("unit-goblin-glider",
+	{"upgrade-goblin-civilization"}
+)
+
 DefineDependency("unit-goblin-glider",
-	{"unit-goblin-lumber-mill"}
+	{"unit-goblin-lumber-mill"}, "or", {"upgrade-mercenary-company"}
 )
 
 DefineDependency("upgrade-goblin-pike",

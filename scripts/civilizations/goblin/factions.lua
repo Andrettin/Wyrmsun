@@ -168,3 +168,14 @@ DefineFaction("tenebris", { -- invented by Jesse Crider
 	},
 	Description = "The Tenebris Syndicate is mistrusted by most goblins. Due to the prevalence of mysticism in it, the syndicate is thought of as more of a land of witches and occultists than a true syndicate."
 })
+
+-- Mercenary Companies
+
+DefineFaction("skulking-swords", {
+	Name = "Skulking Swords",
+	Civilization = "goblin",
+	Type = "mercenary-company",
+	Colors = {"black"},
+	DefaultTier = "duchy",
+	Description = "The Skulking Swords are a renowned goblin mercenary company, being often employed by the goblin merchant guilds."
+})

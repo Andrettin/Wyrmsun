@@ -316,7 +316,8 @@ DefineUnitType("unit-goblin-warlord", {
 	}
 } )
 
-DefineUnitType("unit-goblin-spearman", { Name = _("Impaler"),
+DefineUnitType("unit-goblin-spearman", {
+	Name = "Impaler",
 	Parent = "unit-template-spearman",
 	Civilization = "goblin",
 	Image = {"file", "goblin/units/goblin_spearman.png", "size", {72, 72}},
