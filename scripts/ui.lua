@@ -2338,7 +2338,7 @@ if not (ui_loaded_first_time) then
 							local trade_potential = GetPlayerData(GetThisPlayer(), "TradePotentialWith", GetUnitVariable(-2, "Player"))
 							local trade_potential_description = ""
 							if (trade_potential < 100) then
-								trade_potential_description = "Exhausted"
+								trade_potential_description = "Poor"
 							elseif (trade_potential < 800) then
 								trade_potential_description = "Average"
 							elseif (trade_potential < 4000) then
@@ -2361,7 +2361,7 @@ if not (ui_loaded_first_time) then
 							local trade_potential = GetPlayerData(GetThisPlayer(), "TradePotentialWith", GetUnitVariable(-2, "Player"))
 							local trade_potential_description = ""
 							if (trade_potential < 100) then
-								trade_potential_description = "Exhausted"
+								trade_potential_description = "Poor"
 							elseif (trade_potential < 800) then
 								trade_potential_description = "Average"
 							elseif (trade_potential < 4000) then
