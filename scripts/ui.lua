@@ -2334,7 +2334,22 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {Building = "only", UnitTypeClass = "dock", CanActiveHarvest = true, ButtonAction = "unit"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Trade Potential: "),
-						String(function() return GetPlayerData(GetThisPlayer(), "TradePotentialWith", GetUnitVariable(-2, "Player")) end)),
+						function()
+							local trade_potential = GetPlayerData(GetThisPlayer(), "TradePotentialWith", GetUnitVariable(-2, "Player"))
+							local trade_potential_description = ""
+							if (trade_potential < 100) then
+								trade_potential_description = "Exhausted"
+							elseif (trade_potential < 800) then
+								trade_potential_description = "Average"
+							elseif (trade_potential < 4000) then
+								trade_potential_description = "Promising"
+							else
+								trade_potential_description = "Excellent"
+							end
+							trade_potential_description = trade_potential_description .. " (" .. trade_potential .. ")"
+							return trade_potential_description
+						end
+					),
 					Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {Building = "only", UnitTypeClass = "market", CanActiveHarvest = true, ButtonAction = "unit"}, Margin = {1, 1},
@@ -2342,7 +2357,22 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {Building = "only", UnitTypeClass = "market", CanActiveHarvest = true, ButtonAction = "unit"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Trade Potential: "),
-						String(function() return GetPlayerData(GetThisPlayer(), "TradePotentialWith", GetUnitVariable(-2, "Player")) end)),
+						function()
+							local trade_potential = GetPlayerData(GetThisPlayer(), "TradePotentialWith", GetUnitVariable(-2, "Player"))
+							local trade_potential_description = ""
+							if (trade_potential < 100) then
+								trade_potential_description = "Exhausted"
+							elseif (trade_potential < 800) then
+								trade_potential_description = "Average"
+							elseif (trade_potential < 4000) then
+								trade_potential_description = "Promising"
+							else
+								trade_potential_description = "Excellent"
+							end
+							trade_potential_description = trade_potential_description .. " (" .. trade_potential .. ")"
+							return trade_potential_description
+						end
+					),
 					Font = wyr.preferences.PopupDescriptionFont}}
 				}
 		}	
