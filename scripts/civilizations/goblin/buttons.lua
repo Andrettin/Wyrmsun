@@ -299,7 +299,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-gathaarl",
 	Action = "research", Value = "upgrade-deity-gathaarl",
 	Allowed = "check-single-research",
 	Key = "g", Hint = "Worship ~!Gathaarl", Popup = "popup-research",
-	Description = "Choose Gathaarl as your major deity. +2 Damage for Swordsmen, enables Terror spell for Shamans.",
+	Description = "Choose Gathaarl as your major deity. Allows new magic affixes for items sold at the Market. +2 Damage for Swordsmen, enables Terror spell for Shamans.",
 	ForUnit = {"unit-goblin-temple"}
 })
 

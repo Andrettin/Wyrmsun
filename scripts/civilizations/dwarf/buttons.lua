@@ -433,7 +433,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-odin",
 	Action = "research", Value = "upgrade-deity-odin",
 	Allowed = "check-single-research",
 	Key = "h", Hint = "Worship ~!Hroptatyr", Popup = "popup-research",
-	Description = "Choose Hroptatyr as your major deity. +2 Damage for Axefighters, enables Inspire spell for Witnesses. Incompatible with the Thor major deity.",
+	Description = "Choose Hroptatyr as your major deity. +2 Damage for Axefighters, enables Inspire spell for Witnesses. Allows new magic affixes for items sold at the Market. Incompatible with the Thor major deity.",
 	ForUnit = {"unit-dwarven-temple"}
 })
   
@@ -441,7 +441,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-thor",
 	Action = "research", Value = "upgrade-deity-thor",
 	Allowed = "check-single-research",
 	Key = "t", Hint = "Worship ~!Thor", Popup = "popup-research",
-	Description = "Choose Thor as your major deity. +2 Damage for Scouts, enables Precision spell for Witnesses. Incompatible with the Hroptatyr major deity.",
+	Description = "Choose Thor as your major deity. +2 Damage for Scouts, enables Precision spell for Witnesses. Allows new magic affixes for items sold at the Market. Incompatible with the Hroptatyr major deity.",
 	ForUnit = {"unit-dwarven-temple"}
 })
 

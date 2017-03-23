@@ -71,6 +71,8 @@ https://github.com/Andrettin/Wyrmsun
 - Markets provide a wide selection of purchasable items, including magic and (very rarely) unique ones. Which items appear depends on what you have. For example, swords only appear if you have a smithy, magic affixes depend on your deity or religion, and so forth.
 - Added a message if a unique item becomes available for sale in a Market, so that the player doesn't have to worry about missing it.
 - The AI now makes use of Mercenary Camps.
+- Fixed issue which destroyed unique mines built upon deposits when loading a saved game.
+- Fixed issue which reset the resources held of unique deposits/mines when a mine was destroyed, or built upon a deposit.
 
 * Civilizations
 - Anglo-Saxon units now have English voices (by Johnvarker).

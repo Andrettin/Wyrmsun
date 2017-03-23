@@ -105,11 +105,6 @@ if (LoadedGame == false) then
 	unit = CreateUnit("unit-goblin-archer", 5, {Players[5].StartPos.x, Players[5].StartPos.y})
 	SetUnitVariable(unit, "Active", false)
 	
-	SetPlayerData(2, "Allow", "upgrade-goblin-writing", "F")
-	SetPlayerData(3, "Allow", "upgrade-goblin-writing", "F")
-	SetPlayerData(4, "Allow", "upgrade-goblin-writing", "F")
-	SetPlayerData(5, "Allow", "upgrade-goblin-writing", "F")
-		
 	-- the goblins should be allied with one another
 	SetDiplomacy(2, "allied", 3)
 	SetDiplomacy(2, "allied", 4)

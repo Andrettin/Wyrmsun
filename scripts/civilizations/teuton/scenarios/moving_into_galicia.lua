@@ -28,7 +28,6 @@
 --
 
 if (LoadedGame == false) then
-	SetPlayerData(0, "Allow", "upgrade-teuton-writing", "F")
 	SetPlayerData(1, "Faction", "rome")
 	SetPlayerData(0, "Resources", "copper", 5000)
 	SetPlayerData(0, "Resources", "lumber", 5000)
