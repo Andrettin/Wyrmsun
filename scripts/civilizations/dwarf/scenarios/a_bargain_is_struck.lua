@@ -27,9 +27,6 @@
 
 if (LoadedGame == false) then
 	if not (GrandStrategy) then
-		SetPlayerData(0, "Allow", "upgrade-dwarven-runewriting", "F")
-		SetPlayerData(1, "Allow", "upgrade-dwarven-runewriting", "F")
-		SetPlayerData(2, "Allow", "upgrade-dwarven-runewriting", "F")
 		SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-smithy", "F")
 		SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-lumber-mill", "F")
 		SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-sentry-tower", "F")

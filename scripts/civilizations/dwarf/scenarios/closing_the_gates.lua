@@ -26,9 +26,6 @@
 --
 
 if (LoadedGame == false) then
-	SetPlayerData(0, "Allow", "upgrade-dwarven-runewriting", "F")
-	SetPlayerData(1, "Allow", "upgrade-dwarven-runewriting", "F")
-	
 	local transporter
 	if (GameSettings.Difficulty == 3) then -- if the difficulty is hard, add two goblin watch towers to guard the glyphs
 		transporter = CreateUnit("unit-goblin-watch-tower", 2, {43, 50})

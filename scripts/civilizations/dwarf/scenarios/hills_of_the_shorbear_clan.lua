@@ -25,12 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-if (LoadedGame == false) then
-	SetPlayerData(0, "Allow", "upgrade-dwarven-runewriting", "F")
-	SetPlayerData(1, "Allow", "upgrade-dwarven-runewriting", "F")
-	SetPlayerData(2, "Allow", "upgrade-dwarven-runewriting", "F")
-end
-
 -- If Rugnur dies, any quests of the Scepter of Fire campaign currently being pursued fail
 AddTrigger("hills-of-the-shorbear-clan-rugnur-dies",
 	function()

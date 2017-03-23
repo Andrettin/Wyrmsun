@@ -34,7 +34,6 @@ if (LoadedGame == false) then
 		SetPlayerData(1, "Allow", "unit-dwarven-smithy", "F")
 		SetPlayerData(1, "Allow", "unit-dwarven-lumber-mill", "F")
 		SetPlayerData(1, "Allow", "unit-dwarven-stronghold", "F")
-		SetPlayerData(1, "Allow", "upgrade-dwarven-runewriting", "F")
 	end
 	
 	if not (GrandStrategy) then
