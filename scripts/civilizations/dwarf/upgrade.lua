@@ -144,7 +144,7 @@ DefineUpgrade("upgrade-dwarven-runewriting", {
 	Name = _("Dvalic Runewriting"),
 	Parent = "upgrade-writing",
 	Civilization = "dwarf",
-	Description = _("The dwarven system of runewriting is said to have been invented by the dwarven scholar, Dvalin.\n\nEffect: +10% Time Efficiency for all buildings."),
+	Description = "The dwarven system of runewriting is said to have been invented by the dwarven scholar, Dvalin.\n\nEffect: +10% Time Efficiency for all buildings. Allows scrolls and books to be sold at the Market.",
 	Background = _("In the Poetic Edda's ~<Hovamol~>, Dvalin is mentioned as the one who bestowed the knowledge of runes upon the dwarves."),
 	Icon = "icon-norse-runewriting"
 })
