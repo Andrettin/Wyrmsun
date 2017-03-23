@@ -1217,6 +1217,12 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {RegenerationAura = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Regeneration Aura"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {UnitTypeClass = "lumber-mill"}, HighlightColor = "yellow",
+					More = {"Text", {Text = "Allows spears and arrows/throwing axes to be sold at the Market", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {UnitTypeClass = "smithy"}, HighlightColor = "yellow",
+					More = {"Text", {Text = "Allows swords/axes, shields, tools, horns and jewelry to be sold at the Market", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Margin = {1, 1}, Condition = {BuildingRulesString = "only"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},

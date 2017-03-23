@@ -33,7 +33,7 @@ DefineUpgrade("upgrade-dwarven-broad-axe", {
 	Parent = "upgrade-broad-axe",
 	Icon = "icon-dwarven-broad-axe",
 	Civilization = "dwarf",
-	Description = "Dwarven smiths work hard at their craft to improve soldiers' weapons, and with the perfecting of smithing techniques the broadening of axe blades becomes possible.\n\nEffect: +2 Damage for Axefighters, Steelclads, Stonelords, Yale Riders and Yale Lords.",
+	Description = "Dwarven smiths work hard at their craft to improve soldiers' weapons, and with the perfecting of smithing techniques the broadening of axe blades becomes possible.\n\nEffect: +2 Damage for Axefighters and Yale Riders. Allows Broad Axes to be sold at the Market.",
 	Item = "unit-broad-axe"
 })
 
@@ -42,21 +42,21 @@ DefineUpgrade("upgrade-dwarven-great-axe", {
 	Icon = "icon-dwarven-great-axe",
 	Civilization = "dwarf",
 	RequirementsString = "Broad Axe",
-	Description = _("Further innovations in dwarven smithing allow axes to be made sturdier, and often to carry double blades.\n\nEffect: +2 Damage for Axefighters, Steelclads, Stonelords, Yale Riders and Yale Lords."),
+	Description = _("Further innovations in dwarven smithing allow axes to be made sturdier, and often to carry double blades.\n\nEffect: +2 Damage for Axefighters and Yale Riders. Allows Great Axes to be sold at the Market."),
 	Item = "unit-great-axe"
 })
 
 DefineUpgrade("upgrade-dwarven-long-spear", {
 	Parent = "upgrade-long-spear",
 	Civilization = "dwarf",
-	Description = _("With the lengthening of spear shafts, soldiers who wield these weapons have greater reach against their enemies.\n\nEffect: +2 Damage for Guards."),
+	Description = _("With the lengthening of spear shafts, soldiers who wield these weapons have greater reach against their enemies.\n\nEffect: +2 Damage for Guards. Allows Long Spears to be sold at the Market."),
 	Item = "unit-long-spear"
 })
 
 DefineUpgrade("upgrade-dwarven-pike", {
 	Parent = "upgrade-pike",
 	Civilization = "dwarf",
-	Description = _("Much longer than previous spears, pikes can be deadly when used by disciplined groups of soldiers.\n\nEffect: +2 Damage for Guards."),
+	Description = _("Much longer than previous spears, pikes can be deadly when used by disciplined groups of soldiers.\n\nEffect: +2 Damage for Guards. Allows Pikes to be sold at the Market."),
 	Item = "unit-pike"
 })
 
@@ -65,7 +65,7 @@ DefineUpgrade("upgrade-dwarven-shield-1", {
 	Parent = "upgrade-bronze-shield",
 	Icon = "icon-dwarven-shield-2",
 	Civilization = "dwarf",
-	Description = "Earlier shields provided little more than a minimal degree of protection. With the development of heater shields, dwarven soldiers have a greater chance of survival in battle.\n\nEffect: +2 Armor for Axefighters, Steelclads, Stonelords, Guards and Yale Riders.",
+	Description = "Earlier shields provided little more than a minimal degree of protection. With the development of heater shields, dwarven soldiers have a greater chance of survival in battle.\n\nEffect: +2 Armor for Axefighters, Guards and Yale Riders. Allows Heater Shields to be sold at the Market.",
 	Item = "unit-heater-shield"
 })
 
@@ -75,7 +75,7 @@ DefineUpgrade("upgrade-dwarven-shield-2", {
 	Icon = "icon-dwarven-shield-3",
 	Civilization = "dwarf",
 	RequirementsString = "Heater Shield",
-	Description = "As shield-making techniques improved, the creation of thrymgjol shields became possible. These shields receive their name from the impregnable gate crafted by the sons of the dwarf Solblindi, due to the mighty protection they give their users.\n\nEffect: +2 Armor for Axefighters, Steelclads, Stonelords, Guards and Yale Riders.",
+	Description = "As shield-making techniques improved, the creation of thrymgjol shields became possible. These shields receive their name from the impregnable gate crafted by the sons of the dwarf Solblindi, due to the mighty protection they give their users.\n\nEffect: +2 Armor for Axefighters, Guards and Yale Riders. Allows Thrymgjol Shields to be sold at the Market.",
 	Background = "The Thrymgjol gate and its makers, the sons of the dwarf Solblindi, are mentioned in the ~<Svipdagsmol~> of Norse mythology. The name \"Thrymgjol\" means \"loud-clanging\".",
 	Quote = "\"Thrymgjol they call it; 'twas made by the three,\nThe sons of Solblindi;\nAnd fast as a fetter the farer it holds,\nWhoever shall lift the latch.\"\n- Dwarven Traditional Poetry (The Warder)",
 	Item = "unit-thrymgjol-shield"
@@ -86,7 +86,7 @@ DefineUpgrade("upgrade-dwarven-sharp-throwing-axe", {
 	Parent = "upgrade-ranged-projectile-1",
 	Icon = "icon-dwarven-sharp-throwing-axe",
 	Civilization = "dwarf",
-	Description = _("As their craftsmanship progresses, dwarven artisans become capable of improving the basic throwing axe to have sharper blades.\n\nEffect: +2 Damage for Scouts, Pathfinders, Explorers and Gryphon Riders."),
+	Description = _("As their craftsmanship progresses, dwarven artisans become capable of improving the basic throwing axe to have sharper blades.\n\nEffect: +2 Damage for Scouts and Gryphon Riders. Allows Sharp Throwing Axes to be sold at the Market."),
 	Weapon = true,
 	Item = "unit-sharp-throwing-axe"
 })
@@ -97,7 +97,7 @@ DefineUpgrade("upgrade-dwarven-bearded-throwing-axe", {
 	Icon = "icon-dwarven-bearded-throwing-axe",
 	Civilization = "dwarf",
 	RequirementsString = "Sharp Throwing Axe",
-	Description = _("The 'bearding' of throwing axes by extending the bottom of their blades is an innovation which makes them more deadly when thrown.\n\nEffect: +2 Damage for Scouts, Pathfinders, Explorers and Gryphon Riders."),
+	Description = _("The 'bearding' of throwing axes by extending the bottom of their blades is an innovation which makes them more deadly when thrown.\n\nEffect: +2 Damage for Scouts and Gryphon Riders. Allows Bearded Throwing Axes to be sold at the Market."),
 	Weapon = true,
 	Item = "unit-bearded-throwing-axe"
 })
@@ -144,7 +144,7 @@ DefineUpgrade("upgrade-dwarven-runewriting", {
 	Name = _("Dvalic Runewriting"),
 	Parent = "upgrade-writing",
 	Civilization = "dwarf",
-	Description = "The dwarven system of runewriting is said to have been invented by the dwarven scholar, Dvalin.\n\nEffect: +10% Time Efficiency for all buildings. Allows scrolls and books to be sold at the Market.",
+	Description = "The dwarven system of runewriting is said to have been invented by the dwarven scholar, Dvalin.\n\nEffect: +10% Time Efficiency for all buildings. Allows Scrolls and Books to be sold at the Market.",
 	Background = _("In the Poetic Edda's ~<Hovamol~>, Dvalin is mentioned as the one who bestowed the knowledge of runes upon the dwarves."),
 	Icon = "icon-norse-runewriting"
 })

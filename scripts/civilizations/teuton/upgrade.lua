@@ -31,7 +31,7 @@ DefineUpgrade("upgrade-teuton-spatha", {
 	Icon = "icon-teuton-spatha",
 	Civilization = "teuton",
 	RequirementsString = "Broad Sword",
-	Description = "With the development of iron working, the forging of longer swords became a practical possibility.\n\nEffect: +2 Damage for swordwielders.",
+	Description = "With the development of iron working, the forging of longer swords became a practical possibility.\n\nEffect: +2 Damage for swordwielders. Allows Spathas to be sold at the Market.",
 	Background = "During the Migration Period, Germanic peoples - including West Germanics - used longswords such as these in combat.",
 	Item = "unit-spatha"
 })
@@ -42,7 +42,7 @@ DefineUpgrade("upgrade-frank-spatha", {
 	Icon = "icon-frankish-spatha",
 	Civilization = "frankish",
 	RequirementsString = "Broad Sword",
-	Description = "With the development of iron working, the forging of longer swords became a practical possibility.\n\nEffect: +2 Damage for swordwielders.",
+	Description = "With the development of iron working, the forging of longer swords became a practical possibility.\n\nEffect: +2 Damage for swordwielders. Allows Spathas to be sold at the Market.",
 	Background = "During the Migration Period, Germanic peoples - including West Germanics - used longswords such as these in combat.",
 	Item = "unit-frankish-spatha"
 })
@@ -51,7 +51,7 @@ DefineUpgrade("upgrade-teuton-pike", {
 	Parent = "upgrade-pike",
 	Civilization = "teuton",
 	RequirementsString = "Long Spear",
-	Description = "Much longer than previous spears, pikes can be deadly when used by disciplined groups of soldiers.\n\nEffect: +2 Damage for Spearmen.",
+	Description = "Much longer than previous spears, pikes can be deadly when used by disciplined groups of soldiers.\n\nEffect: +2 Damage for Spearmen. Allows Pikes to be sold at the Market.",
 	Item = "unit-pike"
 })
 
@@ -60,7 +60,7 @@ DefineUpgrade("upgrade-teuton-iron-shield", {
 	Icon = "icon-teuton-iron-shield",
 	Civilization = "teuton",
 	RequirementsString = "Bronze Shield",
-	Description = "The development of iron working makes the crafting of sturdier shields possible.\n\nEffect: +2 Armor for melee infantry and cavalry.",
+	Description = "The development of iron working makes the crafting of sturdier shields possible.\n\nEffect: +2 Armor for melee infantry and cavalry. Allows Iron Shields to be sold at the Market.",
 	Item = "unit-iron-shield"
 })
 
@@ -70,7 +70,7 @@ DefineUpgrade("upgrade-teuton-bodkin-arrow", {
 	Icon = "icon-bodkin-arrow",
 	Civilization = "teuton",
 	RequirementsString = "Barbed Arrow",
-	Description = "Bodkin arrows focus pressure on a single point, greatly enhancing their piercing capability.\n\nEffect: +2 Damage for Schutzes.",
+	Description = "Bodkin arrows focus pressure on a single point, greatly enhancing their piercing capability.\n\nEffect: +2 Damage for Schutzes. Allows Bodkin Arrows to be sold at the Market.",
 	Arrows = true,
 	Item = "unit-bodkin-arrows"
 })

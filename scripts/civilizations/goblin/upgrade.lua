@@ -33,7 +33,7 @@ DefineUpgrade("upgrade-goblin-broad-sword", {
 	Parent = "upgrade-broad-sword",
 	Icon = "icon-goblin-broad-sword",
 	Civilization = "goblin",
-	Description = "Made for swift and lethal attacks, goblin broad swords leave bitter memories in raided settlements.\n\nEffect: +2 Damage for Swordsmen, Barbarians and Warlords.",
+	Description = "Made for swift and lethal attacks, goblin broad swords leave bitter memories in raided settlements.\n\nEffect: +2 Damage for Swordsmen. Allows Broad Swords to be sold at the Market.",
 	Item = "unit-goblin-broad-sword"
 })
 
@@ -41,7 +41,7 @@ DefineUpgrade("upgrade-goblin-long-sword", {
 	Parent = "upgrade-long-sword",
 	Icon = "icon-goblin-long-sword",
 	Civilization = "goblin",
-	Description = _("There are few sights more terrifying for dwarven frontier settlements than a charging goblin army entirely equipped with these deadly long swords.\n\nEffect: +2 Damage for Swordsmen, Barbarians and Warlords."),
+	Description = _("There are few sights more terrifying for dwarven frontier settlements than a charging goblin army entirely equipped with these deadly long swords.\n\nEffect: +2 Damage for Swordsmen. Allows Long Swords to be sold at the Market."),
 	Item = "unit-goblin-long-sword"
 })
 
@@ -50,7 +50,7 @@ DefineUpgrade("upgrade-goblin-rimmed-shield", {
 	Parent = "upgrade-bronze-shield",
 	Icon = "icon-goblin-rimmed-shield",
 	Civilization = "goblin",
-	Description = _("The addition of a metal rim to a wooden shield significantly improves its capability from fending off blows from swords and the like.\n\nEffect: +2 Armor for Swordsmen, Barbarians, Warlords, and Spearmen."),
+	Description = _("The addition of a metal rim to a wooden shield significantly improves its capability from fending off blows from swords and the like.\n\nEffect: +2 Armor for Swordsmen and Impalers. Allows Rimmed Shields to be sold at the Market."),
 	Item = "unit-goblin-rimmed-shield"
 })
 
@@ -60,21 +60,21 @@ DefineUpgrade("upgrade-goblin-embossed-shield", {
 	Icon = "icon-goblin-embossed-shield",
 	Civilization = "goblin",
 	RequirementsString = "Rimmed Shield",
-	Description = _("The shield boss, or metal centerpiece, made the shield better capable of deflecting attacks.\n\nEffect: +2 Armor for Swordsmen, Barbarians, Warlords, and Spearmen."),
+	Description = _("The shield boss, or metal centerpiece, made the shield better capable of deflecting attacks.\n\nEffect: +2 Armor for Swordsmen and Impalers. Allows Embossed Shields to be sold at the Market."),
 	Item = "unit-goblin-embossed-shield"
 })
 
 DefineUpgrade("upgrade-goblin-long-spear", {
 	Parent = "upgrade-long-spear",
 	Civilization = "goblin",
-	Description = _("With the lengthening of spear shafts, soldiers who wield these weapons have greater reach against their enemies.\n\nEffect: +2 Damage for Impalers."),
+	Description = _("With the lengthening of spear shafts, soldiers who wield these weapons have greater reach against their enemies.\n\nEffect: +2 Damage for Impalers. Allows Long Spears to be sold at the Market."),
 	Item = "unit-long-spear"
 })
 
 DefineUpgrade("upgrade-goblin-pike", {
 	Parent = "upgrade-pike",
 	Civilization = "goblin",
-	Description = _("Much longer than previous spears, pikes can be deadly when used by disciplined groups of soldiers.\n\nEffect: +2 Damage for Impalers."),
+	Description = _("Much longer than previous spears, pikes can be deadly when used by disciplined groups of soldiers.\n\nEffect: +2 Damage for Impalers. Allows Pikes to be sold at the Market."),
 	Item = "unit-pike"
 })
 
@@ -83,7 +83,7 @@ DefineUpgrade("upgrade-goblin-barbed-arrow", {
 	Parent = "upgrade-ranged-projectile-1",
 	Icon = "icon-germanic-barbed-arrow",
 	Civilization = "goblin",
-	Description = _("An improvement over the basic triangular-shaped arrow, the barbed arrow is much harder to be removed from the wound after puncturing an enemy.\n\nEffect: +2 Damage for Archers, Headhunters and Shadowstalkers."),
+	Description = _("An improvement over the basic triangular-shaped arrow, the barbed arrow is much harder to be removed from the wound after puncturing an enemy.\n\nEffect: +2 Damage for Archers. Allows Barbed Arrows to be sold at the Market."),
 	Arrows = true,
 	Item = "unit-barbed-arrows"
 })
@@ -94,7 +94,7 @@ DefineUpgrade("upgrade-goblin-bodkin-arrow", {
 	Icon = "icon-bodkin-arrow",
 	Civilization = "goblin",
 	RequirementsString = "Barbed Arrow",
-	Description = _("Bodkin arrows focus pressure on a single point, greatly enhancing their piercing capability.\n\nEffect: +2 Damage for Archers, Headhunters and Shadowstalkers."),
+	Description = _("Bodkin arrows focus pressure on a single point, greatly enhancing their piercing capability.\n\nEffect: +2 Damage for Archers. Allows Bodkin Arrows to be sold at the Market."),
 	Arrows = true,
 	Item = "unit-bodkin-arrows"
 })

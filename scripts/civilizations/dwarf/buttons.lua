@@ -293,7 +293,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-broad-axe",
 	Action = "research", Value = "upgrade-dwarven-broad-axe",
 	Allowed = "check-single-research",
 	Key = "a", Hint = _("Research Broad ~!Axe"), Popup = "popup-research",
-	Description = _("+2 Damage for Axefighters, Steelclads, Stonelords, Yale Riders and Yale Lords."),
+	Description = _("+2 Damage for Axefighters and Yale Riders. Allows Broad Axes to be sold at the Market."),
 	ForUnit = {"unit-dwarven-smithy", "unit-brising-smithy"}
 } )
 
@@ -301,7 +301,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-great-axe",
 	Action = "research", Value = "upgrade-dwarven-great-axe",
 	Allowed = "check-single-research",
 	Key = "a", Hint = _("Research Great ~!Axe"), Popup = "popup-research",
-	Description = _("+2 Damage for Axefighters, Steelclads, Stonelords, Yale Riders and Yale Lords."),
+	Description = _("+2 Damage for Axefighters and Yale Riders. Allows Great Axes to be sold at the Market."),
 	ForUnit = {"unit-dwarven-smithy", "unit-brising-smithy"}
 } )
 
@@ -309,7 +309,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-shield-2",
 	Action = "research", Value = "upgrade-dwarven-shield-1",
 	Allowed = "check-single-research",
 	Key = "s", Hint = _("Research Heater ~!Shield"), Popup = "popup-research",
-	Description = _("+2 Armor for Axefighters, Steelclads, Stonelords, Guards and Yale Riders."),
+	Description = _("+2 Armor for Axefighters, Guards and Yale Riders. Allows Heater Shields to be sold at the Market."),
 	ForUnit = {"unit-dwarven-smithy", "unit-brising-smithy"}
 } )
 
@@ -317,7 +317,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-dwarven-shield-3",
 	Action = "research", Value = "upgrade-dwarven-shield-2",
 	Allowed = "check-single-research",
 	Key = "s", Hint = _("Research Thrymgjol ~!Shield"), Popup = "popup-research",
-	Description = _("+2 Armor for Axefighters, Steelclads, Stonelords, Guards and Yale Riders."),
+	Description = _("+2 Armor for Axefighters, Guards and Yale Riders. Allows Thrymgjol Shields to be sold at the Market."),
 	ForUnit = {"unit-dwarven-smithy", "unit-brising-smithy"}
 } )
 
@@ -341,7 +341,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-long-spear",
 	Action = "research", Value = "upgrade-dwarven-long-spear",
 	Allowed = "check-single-research",
 	Key = "s", Hint = _("Research Long ~!Spear"), Popup = "popup-research",
-	Description = _("+2 Damage for Guards."),
+	Description = _("+2 Damage for Guards. Allows Long Spears to be sold at the Market."),
 	ForUnit = {"unit-dwarven-lumber-mill"}
 } )
 
@@ -349,7 +349,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-pike",
 	Action = "research", Value = "upgrade-dwarven-pike",
 	Allowed = "check-single-research",
 	Key = "k", Hint = _("Research Pi~!ke"), Popup = "popup-research",
-	Description = _("+2 Damage for Guards."),
+	Description = _("+2 Damage for Guards. Allows Pikes to be sold at the Market."),
 	ForUnit = {"unit-dwarven-lumber-mill"}
 } )
 
@@ -357,7 +357,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-sharp-throwing-axe",
 	Action = "research", Value = "upgrade-dwarven-sharp-throwing-axe",
 	Allowed = "check-single-research",
 	Key = "t", Hint = _("Research Sharp ~!Throwing Axe"), Popup = "popup-research",
-	Description = _("+2 Damage for Scouts, Pathfinders, Explorers and Gryphon Riders."),
+	Description = _("+2 Damage for Scouts and Gryphon Riders. Allows Sharp Throwing Axes to be sold at the Market."),
 	ForUnit = {"unit-dwarven-lumber-mill"}
 } )
 
@@ -365,7 +365,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-dwarven-bearded-throwing-axe",
 	Action = "research", Value = "upgrade-dwarven-bearded-throwing-axe",
 	Allowed = "check-single-research",
 	Key = "t", Hint = _("~!Research Bearded ~!Throwing Axe"), Popup = "popup-research",
-	Description = _("+1 Damage for Scouts, Pathfinders, Explorers and Gryphon Riders."),
+	Description = _("+1 Damage for Scouts and Gryphon Riders. Allows Bearded Throwing Axes to be sold at the Market."),
 	ForUnit = {"unit-dwarven-lumber-mill"}
 } )
 
@@ -414,7 +414,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-coinage",
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
 	Action = "research", Value = "upgrade-dwarven-runewriting",
 	Allowed = "check-single-research",
-	Description = "+10% Time Efficiency for all buildings. Allows scrolls and books to be sold at the Market.",
+	Description = "+10% Time Efficiency for all buildings. Allows Scrolls and Books to be sold at the Market.",
 	Key = "r", Hint = _("Research Dvalic ~!Runewriting"), Popup = "popup-research",
 	ForUnit = {"unit-dwarven-stronghold"}
 } )

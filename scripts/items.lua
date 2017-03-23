@@ -490,7 +490,7 @@ DefineUnitType("unit-scroll", {
 DefineUnitType("unit-book", {
 	Name = "Book",
 	Parent = "unit-template-item",
-	Costs = {"copper", 300},
+	Costs = {"copper", 500},
 	Image = {"file", "neutral/items/book.png", "size", {32, 32}},
 	Icon = "icon-book-red",
 	ItemClass = "book",

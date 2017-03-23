@@ -204,7 +204,7 @@ DefineUpgrade("upgrade-coinage", {
 DefineUpgrade("upgrade-writing", {
 	Name = "Writing",
 	Class = "writing",
-	Description = "The invention of writing makes it possible for ideas and traditions to be more easily spread and preserved.\n\nEffect: +10% Time Efficiency for all buildings. Allows scrolls and books to be sold at the Market.",
+	Description = "The invention of writing makes it possible for ideas and traditions to be more easily spread and preserved.\n\nEffect: +10% Time Efficiency for all buildings. Allows Scrolls and Books to be sold at the Market.",
 	Costs = {"time", 250, "copper", 900, "lumber", 1500},
 	GrandStrategyCosts = {"time", 250, "copper", 900, "lumber", 1500, "research", 2400},
 	GrandStrategyProductionEfficiencyModifier = {"research", 50, "leadership", 25}

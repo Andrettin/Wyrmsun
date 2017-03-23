@@ -169,7 +169,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-broad-sword",
 	Action = "research", Value = "upgrade-goblin-broad-sword",
 	Allowed = "check-single-research",
 	Key = "w", Hint = _("Research Broad S~!word"), Popup = "popup-research",
-	Description = _("+2 Damage for Swordsmen, Barbarians and Warlords."),
+	Description = _("+2 Damage for Swordsmen. Allows Broad Swords to be sold at the Market."),
 	ForUnit = {"unit-goblin-smithy"}
 } )
 
@@ -177,7 +177,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-goblin-long-sword",
 	Action = "research", Value = "upgrade-goblin-long-sword",
 	Allowed = "check-single-research",
 	Key = "w", Hint = _("Research Long S~!word"), Popup = "popup-research",
-	Description = _("+2 Damage for Swordsmen, Barbarians and Warlords."),
+	Description = _("+2 Damage for Swordsmen. Allows Long Swords to be sold at the Market."),
 	ForUnit = {"unit-goblin-smithy"}
 } )
 
@@ -185,7 +185,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-goblin-rimmed-shield",
 	Action = "research", Value = "upgrade-goblin-rimmed-shield",
 	Allowed = "check-single-research",
 	Key = "s", Hint = _("Research Rimmed ~!Shield"), Popup = "popup-research",
-	Description = _("+2 Armor for Swordsmen, Barbarians, Warlords, and Spearmen."),
+	Description = _("+2 Armor for Swordsmen and Impalers. Allows Rimmed Shields to be sold at the Market."),
 	ForUnit = {"unit-goblin-smithy"}
 } )
 
@@ -193,7 +193,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-goblin-embossed-shield",
 	Action = "research", Value = "upgrade-goblin-embossed-shield",
 	Allowed = "check-single-research",
 	Key = "s", Hint = _("Research Embossed ~!Shield"), Popup = "popup-research",
-	Description = _("+2 Armor for Swordsmen, Barbarians, Warlords, and Spearmen."),
+	Description = _("+2 Armor for Swordsmen and Impalers. Allows Embossed Shields to be sold at the Market."),
 	ForUnit = {"unit-goblin-smithy"}
 } )
 
@@ -217,7 +217,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-long-spear",
 	Action = "research", Value = "upgrade-goblin-long-spear",
 	Allowed = "check-single-research",
 	Key = "s", Hint = _("Research Long ~!Spear"), Popup = "popup-research",
-	Description = _("+2 Damage for Impalers."),
+	Description = _("+2 Damage for Impalers. Allows Long Spears to be sold at the Market."),
 	ForUnit = {"unit-goblin-lumber-mill"}
 } )
 
@@ -225,7 +225,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-pike",
 	Action = "research", Value = "upgrade-goblin-pike",
 	Allowed = "check-single-research",
 	Key = "k", Hint = _("Research Pi~!ke"), Popup = "popup-research",
-	Description = _("+2 Damage for Impalers."),
+	Description = _("+2 Damage for Impalers. Allows Pikes to be sold at the Market."),
 	ForUnit = {"unit-goblin-lumber-mill"}
 } )
 
@@ -233,7 +233,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-barbed-arrow",
 	Action = "research", Value = "upgrade-goblin-barbed-arrow",
 	Allowed = "check-single-research",
 	Key = "a", Hint = _("Research Barbed ~!Arrow"), Popup = "popup-research",
-	Description = "+2 Damage for Archers, Headhunters and Shadowstalkers.",
+	Description = "+2 Damage for Archers. Allows Barbed Arrows to be sold at the Market.",
 	ForUnit = {"unit-goblin-lumber-mill"}
 } )
 
@@ -241,7 +241,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-bodkin-arrow",
 	Action = "research", Value = "upgrade-goblin-bodkin-arrow",
 	Allowed = "check-single-research",
 	Key = "a", Hint = _("Research Bodkin ~!Arrow"), Popup = "popup-research",
-	Description = "+2 Damage for Archers, Headhunters and Shadowstalkers.",
+	Description = "+2 Damage for Archers. Allows Bodkin Arrows to be sold at the Market.",
 	ForUnit = {"unit-goblin-lumber-mill"}
 } )
 
@@ -280,7 +280,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-goblin-coinage",
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
 	Action = "research", Value = "upgrade-goblin-writing",
 	Allowed = "check-single-research",
-	Description = "+10% Time Efficiency for all buildings. Allows scrolls and books to be sold at the Market.",
+	Description = "+10% Time Efficiency for all buildings. Allows Scrolls and Books to be sold at the Market.",
 	Key = "w", Hint = _("Research ~!Writing"), Popup = "popup-research",
 	ForUnit = {"unit-goblin-stronghold"}
 } )

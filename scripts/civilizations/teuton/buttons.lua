@@ -188,7 +188,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-spatha",
 	Action = "research", Value = "upgrade-teuton-spatha",
 	Allowed = "check-single-research",
 	Key = "p", Hint = "Research S~!patha", Popup = "popup-research",
-	Description = "+2 Damage for swordwielders.",
+	Description = "+2 Damage for swordwielders. Allows Spathas to be sold at the Market.",
 	ForUnit = {"unit-teuton-smithy", "unit-latin-smithy"}
 } )
 
@@ -196,7 +196,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-teuton-iron-shield",
 	Action = "research", Value = "upgrade-teuton-iron-shield",
 	Allowed = "check-single-research",
 	Key = "s", Hint = "Research Iron ~!Shield", Popup = "popup-research",
-	Description = "+2 Armor for melee infantry and cavalry.",
+	Description = "+2 Armor for melee infantry and cavalry. Allows Iron Shields to be sold at the Market.",
 	ForUnit = {"unit-teuton-smithy", "unit-latin-smithy"}
 } )
 
@@ -220,7 +220,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-pike",
 	Action = "research", Value = "upgrade-teuton-pike",
 	Allowed = "check-single-research",
 	Key = "k", Hint = _("Research Pi~!ke"), Popup = "popup-research",
-	Description = "+2 Damage for Spearmen.",
+	Description = "+2 Damage for Spearmen. Allows Pikes to be sold at the Market.",
 	ForUnit = {"unit-teuton-lumber-mill"}
 } )
 
@@ -228,7 +228,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-bodkin-arrow",
 	Action = "research", Value = "upgrade-teuton-bodkin-arrow",
 	Allowed = "check-single-research",
 	Key = "a", Hint = _("Research Bodkin ~!Arrow"), Popup = "popup-research",
-	Description = "+2 Damage for Schutzes.",
+	Description = "+2 Damage for Schutzes. Allows Bodkin Arrows to be sold at the Market.",
 	ForUnit = {"unit-teuton-lumber-mill"}
 } )
 
@@ -259,7 +259,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-coinage",
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
 	Action = "research", Value = "upgrade-teuton-writing",
 	Allowed = "check-single-research",
-	Description = "+10% Time Efficiency for all buildings. Allows scrolls and books to be sold at the Market.",
+	Description = "+10% Time Efficiency for all buildings. Allows Scrolls and Books to be sold at the Market.",
 	Key = "w", Hint = "Research ~!Writing", Popup = "popup-research",
 	ForUnit = {"unit-teuton-stronghold"}
 } )

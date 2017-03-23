@@ -31,7 +31,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-frankish-spatha",
 	Action = "research", Value = "upgrade-frank-spatha",
 	Allowed = "check-single-research",
 	Key = "p", Hint = "Research S~!patha", Popup = "popup-research",
-	Description = "+2 Damage for swordwielders.",
+	Description = "+2 Damage for swordwielders. Allows Spathas to be sold at the Market.",
 	ForUnit = {"unit-teuton-smithy"}
 } )
 
