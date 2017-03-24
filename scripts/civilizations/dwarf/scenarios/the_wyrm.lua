@@ -227,26 +227,13 @@ AddTrigger("the-wyrm-shinsplitter-and-kobold-chase",
 		return true
 	end,
 	function() 
-		local thursagan = FindHero("thursagan")
-	
-		if (thursagan == nil) then
-			return true
-		end
-
 		-- make the initial Shinsplitter units attack (later units follow the normal AI attack pattern)
 		if (GetFactionPlayer("Shinsplitter Clan") ~= GetThisPlayer()) then
 			uncount = 0
 			uncount = GetUnits(GetFactionPlayer("Shinsplitter Clan"))
 			for unit1 = 1,table.getn(uncount) do 
-				if (uncount[unit1] and GetUnitVariable(uncount[unit1],"Level") >= 2 and GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-miner" and GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-skilled-miner" and GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-expert-miner" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building") == false) then
-					OrderUnit(1, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(thursagan,"PosX"), GetUnitVariable(thursagan,"PosY")}, "attack")
-					local nearby_uncount = 0
-					nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 6, true)
-					for unit2 = 1,table.getn(nearby_uncount) do 
-						if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetFactionPlayer("Norlund Clan") or GetUnitVariable(nearby_uncount[unit2], "Player") == GetFactionPlayer("Svafnir")) then
-							OrderUnit(1, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(nearby_uncount[unit2],"PosX"), GetUnitVariable(nearby_uncount[unit2],"PosY")}, "attack")
-						end
-					end
+				if (uncount[unit1] and GetUnitVariable(uncount[unit1], "Idle") and GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-miner" and GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-skilled-miner" and GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-expert-miner" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building") == false) then
+					OrderUnit(1, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {27, 63}, "attack")
 				end
 			end
 			
@@ -254,16 +241,9 @@ AddTrigger("the-wyrm-shinsplitter-and-kobold-chase",
 				uncount = 0
 				uncount = GetUnits(GetFactionPlayer("Svafnir"))
 				for unit1 = 1,table.getn(uncount) do 
---					if (GetUnitVariable(uncount[unit1], "Idle")) then
-						OrderUnit(2, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(thursagan,"PosX"), GetUnitVariable(thursagan,"PosY")}, "attack")
-						local nearby_uncount = 0
-						nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 6, true)
-						for unit2 = 1,table.getn(nearby_uncount) do 
-							if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetFactionPlayer("Norlund Clan") or GetUnitVariable(nearby_uncount[unit2], "Player") == GetFactionPlayer("Shinsplitter Clan")) then
-								OrderUnit(2, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(nearby_uncount[unit2],"PosX"), GetUnitVariable(nearby_uncount[unit2],"PosY")}, "attack")
-							end
-						end
---					end
+					if (GetUnitVariable(uncount[unit1], "Idle")) then
+						OrderUnit(2, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {27, 63}, "attack")
+					end
 				end
 			end
 		end
@@ -468,8 +448,8 @@ AddTrigger("the-wyrm-thursagan-reaches-forge",
 				player,
 				{"~!Continue"},
 				{function(s)
-					ChangeUnitOwner(FindHero("thursagan", GetFactionPlayer("Norlund Clan")), PlayerNumNeutral)
 					SetUnitVariable(FindHero("thursagan", GetFactionPlayer("Norlund Clan")), "LastCycle", GameCycle)
+					ChangeUnitOwner(FindHero("thursagan", GetFactionPlayer("Norlund Clan")), PlayerNumNeutral)
 				end}
 			)
 		end
