@@ -71,6 +71,14 @@ DefineDialogue("a-rocky-home-materials-collected", {
 		{
 			"speaker", "character", "modsognir",
 			"text", "The materials we need have been collected. It is time to build our new homes by these rocks!"
+		},
+		{
+			"speaker", "character", "durin",
+			"text", "Aye, chieftain! And we should build a war hall here, to train warriors to fight off any potential foes.",
+			"conditions", function(s)
+				local war_hall = GetFactionClassUnitType("barracks", GetPlayerData(trigger_player, "Faction"))
+				return (war_hall ~= nil and GetPlayerData(trigger_player, "UnitTypesCount", war_hall) == 0)
+			end
 		}
 	}
 })

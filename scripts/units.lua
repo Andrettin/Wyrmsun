@@ -3130,7 +3130,8 @@ DefineUnitType("unit-template-priest", {
 	}
 } )
 
-DefineUnitType("unit-template-flying-rider", { Name = _("Flying Rider"),
+DefineUnitType("unit-template-flying-rider", {
+	Name = "Flying Rider",
 	Parent = "unit-template-sapient-unit",
 	Class = "flying-rider",
 	Costs = {"time", 250, "copper", 1750, "lumber", 750},
