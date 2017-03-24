@@ -3162,6 +3162,8 @@ DefineUnitType("unit-template-flying-rider", {
 	Flesh = true,
 	Mounted = true,
 	Inventory = true,
+	CanCastSpell = {"spell-precise-shot"},
+	AutoCastActive = {"spell-precise-shot"},
 	ButtonPos = 6,
 	AiDrops = {"unit-horn", "unit-amulet", "unit-ring"},
 	Sounds = {

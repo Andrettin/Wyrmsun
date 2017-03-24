@@ -478,47 +478,6 @@ function StandardTriggers()
 		end
 	)
 
-	AddTrigger("ai-attack-with-surghans",
-		function()
-			if (GameCycle == 0) then
-				return false
-			end
-			return true
-		end,
-		function()
-			if (mapinfo.description == "Svafnir's Lair") then -- somewhat ugly way of making this not happen during The Wyrm quest
-				return false
-			end
-			
-			for i=0,(PlayerMax - 2) do
-				if (GetPlayerData(i, "AiEnabled")) then
-					local uncount = 0
-					uncount = GetUnits(i)
-					for unit1 = 1,table.getn(uncount) do 
-						if ((GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-axefighter" or GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-thane") and GetUnitVariable(uncount[unit1], "Idle")) then
-
-							local enemy_unit = nil
-
-							local surghan_uncount = 0
-							surghan_uncount = GetUnits("any")
-							for surghan_unit1 = 1,table.getn(surghan_uncount) do 
-								if (Players[i]:IsEnemy(Players[GetUnitVariable(surghan_uncount[surghan_unit1],"Player")])) then
-									enemy_unit = surghan_uncount[surghan_unit1]
-									break
-								end
-							end
-
-							if (enemy_unit ~= nil) then
-								OrderUnit(i, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(enemy_unit,"PosX"), GetUnitVariable(enemy_unit,"PosY")}, "attack")
-							end
-						end
-					end
-				end
-			end
-			return true
-		end
-	)
-
 	-- Tips
 	if (wyr.preferences.ShowTips and not IsReplayGame() and not IsNetworkGame()) then
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Level Up") == false) then
