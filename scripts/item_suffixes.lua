@@ -33,6 +33,13 @@ DefineUpgrade("upgrade-item-suffix-of-accuracy", {
 	MagicLevel = 1
 })
 
+DefineUpgrade("upgrade-item-suffix-of-the-beaver", {
+	Name = "of the Beaver",
+	MagicSuffix = true,
+	ItemSuffix = {"axe", true, "amulet", true, "ring", true},
+	MagicLevel = 3
+})
+
 DefineUpgrade("upgrade-item-suffix-of-betrayal", {
 	Name = _("of Betrayal"),
 	MagicSuffix = true,
@@ -243,12 +250,16 @@ DefineUpgrade("upgrade-item-suffix-of-vulnerability", {
 DefineUpgrade("upgrade-item-suffix-of-the-woodpecker", {
 	Name = "of the Woodpecker",
 	MagicSuffix = true,
-	ItemSuffix = {"mace", true, "amulet", true, "ring", true},
+	ItemSuffix = {"axe", true, "amulet", true, "ring", true},
 	MagicLevel = 2
 })
 
 DefineModifier("upgrade-item-suffix-of-accuracy",
 	{"Accuracy", 1}
+)
+
+DefineModifier("upgrade-item-suffix-of-the-beaver",
+	{"LumberGatheringBonus", 3}
 )
 
 DefineModifier("upgrade-item-suffix-of-betrayal",
@@ -375,6 +386,10 @@ DefineModifier("upgrade-item-suffix-of-the-woodpecker",
 
 DefineDependency("upgrade-item-suffix-of-accuracy",
 	{"upgrade-deity-domain-archery"}, "or", {"upgrade-deity-domain-warfare"}
+)
+
+DefineDependency("upgrade-item-suffix-of-the-beaver",
+	{"upgrade-deity-domain-wood"}
 )
 
 DefineDependency("upgrade-item-suffix-of-betrayal",
