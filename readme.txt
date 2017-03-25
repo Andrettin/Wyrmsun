@@ -108,6 +108,7 @@ https://github.com/Andrettin/Wyrmsun
 * Terrain
 - Fixed issue which caused cleared rock on dirt and dry mud to not be buildable upon.
 - Doubled the time it takes for forests to regrow.
+- Dungeon walls and cave walls now block unit sight.
 
 * Units
 - Workers can now build roads, which increase movement speed by 25% (road graphics by Jinn). Roads require Masonry.
