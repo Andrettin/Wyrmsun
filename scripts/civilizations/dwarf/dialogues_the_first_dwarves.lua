@@ -57,6 +57,22 @@ DefineDialogue("a-rocky-home-introduction", {
 	}
 })
 
+DefineDialogue("a-rocky-home-mead-hall-built", {
+	Nodes = {
+		{
+			"speaker", "unit", "unit-brising-miner",
+			"text", "The mead hall is built, my chieftain."
+		},
+		{
+			"speaker", "character", "modsognir",
+			"text", "Hmm. That's some good craftsmanship. And now we can begin harvesting the materials we need."
+		},
+		{
+			"text", "Hint: You can acquire side-quests in your Mead Hall, and train new Miners should you need them. If you lack the Food supply to train more units, build farms with your existing miners."
+		}
+	}
+})
+
 DefineDialogue("a-rocky-home-yales-hunted", {
 	Nodes = {
 		{
