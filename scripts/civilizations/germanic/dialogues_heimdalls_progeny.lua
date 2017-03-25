@@ -223,6 +223,9 @@ DefineDialogue("jarls-hall-is-complete", { -- based on the Song of Rig; Source: 
 			"text", "I will need a group of loyal retainers. Once my buras have gathered enough resources, I should begin training brave warriors in the art of the sword."
 		},
 		{
+			"text", "Hint: You can acquire side-quests in your Chieftain's Hall, and train new workers should you need them. If you lack the Food supply to train more units, build farms with your existing workers."
+		},
+		{
 			"text", "Hint: Select a War Lodge and then click on the Train Erala button to train the unit required for this quest.",
 			"option-effects", {
 				function(s)
