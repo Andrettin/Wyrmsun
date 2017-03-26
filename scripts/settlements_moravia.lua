@@ -25,18 +25,53 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSettlement("brunn", {
+	Name = "Brünn",
+	MapTemplate = "earth",
+	Position = {4206, 936},
+	CulturalNames = {
+		"slav", "Brno",
+		"teuton", "Brünn"
+	},
+	HistoricalOwners = {
+		1815, "austria" -- Brünn was a part of the Austrian province of Moravia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		1815, 0, "town-hall"
+	},
+	Regions = {"cisleithania", "czechoslovakia", "europe", "west-and-central-europe"}
+})
+
 DefineSettlement("doubravnik", {
-	Name = "Doubravn�k",
+	Name = "Doubravník",
 	MapTemplate = "earth",
 	Position = {4212, 924},
 	CulturalNames = {
-		"slav", "Doubravn�k"
+		"slav", "Doubravník"
 	},
 	HistoricalOwners = {
 		1211, "cistercian-order"
 	},
 	HistoricalBuildings = {
-		1211, 0, "temple", "cistercian-order" -- a Cistercian nunnery was founded in Doubravn�k in 1211; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 627.
+		1211, 0, "temple", "cistercian-order" -- a Cistercian nunnery was founded in Doubravník in 1211; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 627.
+	},
+	Regions = {"cisleithania", "czechoslovakia", "europe", "west-and-central-europe"}
+})
+
+DefineSettlement("olmutz", {
+	Name = "Olmütz",
+	MapTemplate = "earth",
+	Position = {4232, 921},
+	CulturalNames = {
+		"slav", "Olomouc",
+		"teuton", "Olmütz"
+	},
+	HistoricalOwners = {
+		1815, "austria" -- Olmütz was a part of the Austrian province of Moravia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		1815, 0, "stronghold" -- Olmütz had a fortress in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+
 	},
 	Regions = {"cisleithania", "czechoslovakia", "europe", "west-and-central-europe"}
 })

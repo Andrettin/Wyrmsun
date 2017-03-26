@@ -1627,7 +1627,6 @@ DefineCivilization("teuton", {
 		"Botzen",
 		"Braunau",
 		"Bregenz",
-		"Brünn",
 		"Budweis",
 		"Chlum",
 		"Darmstadt",

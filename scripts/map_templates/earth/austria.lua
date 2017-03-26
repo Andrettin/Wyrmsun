@@ -45,3 +45,7 @@ SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4135, 960}, 170, 171)
 SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
 SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
 SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
+
+SetMapTemplatePathway("earth", "railroad", {4212, 952}, {4206, 936}, {1839, 7, 7}) -- first trains from Vienna arrived in Brno on 1839.7.7; Source: Chad Bryant, "Into an Uncertain Future: Railroads and Vormärz Liberalism in Brno, Vienna, and Prague", 2009, p. 183.
+
+SetMapTemplatePathway("earth", "railroad", {4212, 952}, {4154, 1009}, 1857) -- Vienna-Trieste railroad built in 1857; Source: Ivan Erceg, "Außenhandel der Nordadriatischen Seestädte als Faktor im Entstehen der kapitalistischen Beziehungen in Österreich im 18. und 19. Jahrhundert", 1968, p. 465.

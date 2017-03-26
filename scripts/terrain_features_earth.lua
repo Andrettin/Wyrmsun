@@ -160,6 +160,16 @@ DefineTerrainFeature("lake-wener", {
 	}
 })
 
+DefineTerrainFeature("march-river", {
+	Name = "March River",
+	TerrainType = "shallow-water",
+	Color = {0, 144, 128},
+	World = "Earth",
+	CulturalNames = {
+		"teuton", "March River"
+	}
+})
+
 DefineTerrainFeature("minho-river", {
 	Name = "Minho River",
 	TerrainType = "shallow-water",

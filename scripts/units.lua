@@ -665,7 +665,8 @@ DefineUnitType("unit-wood-pile", {
 --	Corpse = "unit-destroyed-3x3-place",
 	Type = "land",
 	StartingResources = {400},
-	Building = true, VisibleUnderFog = true,
+	NumDirections = 1,
+	Building = false, VisibleUnderFog = true,
 	GivesResource = "lumber", CanHarvest = true,
 	HarvestFromOutside = true,
 	Variations = {
@@ -708,7 +709,8 @@ DefineUnitType("unit-stone-pile", {
 --	Corpse = "unit-destroyed-3x3-place",
 	Type = "land",
 	StartingResources = {200, 400},
-	Building = true, VisibleUnderFog = true,
+	NumDirections = 1,
+	Building = false, VisibleUnderFog = true,
 	GivesResource = "stone", CanHarvest = true,
 	HarvestFromOutside = true,
 	Variations = {
