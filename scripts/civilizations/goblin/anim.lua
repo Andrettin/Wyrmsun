@@ -185,6 +185,7 @@ DefineAnimations("animations-goblin-banner", {
 	},
 	Death = {
 		"unbreakable begin",
+		"if-var v.Build.Value < v.Build.Max end",
 		"if-var v.Variation.Value == 0 variation_1",
 		"if-var v.Variation.Value == 1 variation_2",
 		"label variation_1", "frame 3", "wait 3", "frame 4", "wait 3", "frame 5", "wait 3", "frame 6", "wait 100", "frame 6", "goto end",

@@ -42,6 +42,11 @@ local end_loop_funcs = {
 --	function() return AiUpgradeTo(AiCannonTower()) end,
 	function() return AiNeed(GetAiUnitType("watch-tower")) end,
 	function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
+	-- build some banners for defense as well
+	function() return AiNeed(GetAiUnitType("banner")) end,
+	function() return AiNeed(GetAiUnitType("banner")) end,
+	function() return AiNeed(GetAiUnitType("banner")) end,
+	function() return AiNeed(GetAiUnitType("banner")) end,
 
 	function() return AiForce(0, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("cavalry"), 8, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}) end,
 	function() return AiForce(6, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 10, GetAiUnitType("cavalry"), 20, GetAiUnitType("siege-engine"), 2, GetAiUnitType("priest"), 4}, true) end,
@@ -236,6 +241,9 @@ local land_funcs = {
 	function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
 --	function() return AiNeed(GetAiUnitType("watch-tower")) end,
 --	function() return AiUpgradeTo(AiCannonTower()) end,
+	function() return AiNeed(GetAiUnitType("banner")) end,
+	function() return AiNeed(GetAiUnitType("banner")) end,
+	function() return AiNeed(GetAiUnitType("banner")) end,
 
 -- UPGRADING SHOOTERS
 
@@ -280,9 +288,11 @@ local land_funcs = {
 
 --	function() return AiNeed(GetAiUnitType("watch-tower")) end,
 --	function() return AiUpgradeTo(AiCannonTower()) end,
+	function() return AiNeed(GetAiUnitType("banner")) end,
 
 	function() return AiNeed(GetAiUnitType("watch-tower")) end,
 	function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
+	function() return AiNeed(GetAiUnitType("banner")) end,
 
 -- AEREAL UNITS
 --	function() return AiNeed(AiAirport()) end,
@@ -321,6 +331,14 @@ local land_funcs = {
 --	function() return AiUpgradeTo(AiCannonTower()) end,
 	function() return AiNeed(GetAiUnitType("watch-tower")) end,
 	function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
+	function() return AiNeed(GetAiUnitType("banner")) end,
+	function() return AiNeed(GetAiUnitType("banner")) end,
+	function() return AiNeed(GetAiUnitType("banner")) end,
+	function() return AiNeed(GetAiUnitType("banner")) end,
+	function() return AiNeed(GetAiUnitType("banner")) end,
+	function() return AiNeed(GetAiUnitType("banner")) end,
+	function() return AiNeed(GetAiUnitType("banner")) end,
+	function() return AiNeed(GetAiUnitType("banner")) end,
 
 -- ANOTHER EXPANSION, ANOTHER BIG ATTACK
 
@@ -358,6 +376,14 @@ local land_funcs = {
 --	function() return AiUpgradeTo(AiCannonTower()) end,
 	function() return AiNeed(GetAiUnitType("watch-tower")) end,
 	function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
+	function() return AiNeed(GetAiUnitType("banner")) end,
+	function() return AiNeed(GetAiUnitType("banner")) end,
+	function() return AiNeed(GetAiUnitType("banner")) end,
+	function() return AiNeed(GetAiUnitType("banner")) end,
+	function() return AiNeed(GetAiUnitType("banner")) end,
+	function() return AiNeed(GetAiUnitType("banner")) end,
+	function() return AiNeed(GetAiUnitType("banner")) end,
+	function() return AiNeed(GetAiUnitType("banner")) end,
 
 
 	-- Everything researched...

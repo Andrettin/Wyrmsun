@@ -732,23 +732,28 @@ DefineUnitType("unit-goblin-dock", {
 } )
 
 DefineUnitType("unit-goblin-banner", {
-	Name = _("Goblin Banner"),
+	Name = "Banner",
 	Civilization = "goblin",
-	Image = {"file", "goblin/decorations/goblin_banner.png", "size", {32, 32}},
+	Class = "banner",
+	Image = {"file", "goblin/buildings/goblin_banner.png", "size", {32, 32}},
 	NeutralMinimapColor = {128, 128, 0},
 	Animations = "animations-goblin-banner", Icon = "icon-goblin-banner",
+	Costs = {"time", 30, "copper", 200, "lumber", 300},
+	Construction = "construction-land-1x1-simple",
+	RepairHp = 4,
+	RepairCosts = {"copper", 1, "lumber", 1},
 	Speed = 0,
-	HitPoints = 5,
+	HitPoints = 40,
 	DrawLevel = 30,
 	TileSize = {1, 1}, BoxSize = {31, 31},
 	SightRange = 1,
 	Missile = "missile-none",
 	Priority = 0,
 	Type = "land",
-	NumDirections = 1,
 	VisibleUnderFog = true,
-	IsNotSelectable = true,
 	Building = true,
+	BuilderOutside = true,
+	LeadershipAura = 1,
 	Variations = {
 		{
 			"variation-id", "no-skull"
@@ -761,7 +766,7 @@ DefineUnitType("unit-goblin-banner", {
 		"selected", "click",
 --		"acknowledge", "gold-mine-acknowledge",
 --		"ready", "gold-mine-ready",
---		"help", "gold-mine-help",
+		"help", "basic-goblin-voices-help-town",
 		"dead", "building-destroyed"
 	}
 })

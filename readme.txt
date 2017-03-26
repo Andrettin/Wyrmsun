@@ -73,6 +73,7 @@ https://github.com/Andrettin/Wyrmsun
 - The AI now makes use of Mercenary Camps.
 - Fixed issue which destroyed unique mines built upon deposits when loading a saved game.
 - Fixed issue which reset the resources held of unique deposits/mines when a mine was destroyed, or built upon a deposit.
+- Goblins can now build Banners, which provide the effects of Leadership Aura to nearby friendly units in combat.
 
 * Civilizations
 - Anglo-Saxon units now have English voices (by Johnvarker).

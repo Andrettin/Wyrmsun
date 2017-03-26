@@ -1217,6 +1217,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {RegenerationAura = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Regeneration Aura"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {LeadershipAura = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Leadership Aura"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {UnitTypeClass = "lumber-mill"}, HighlightColor = "yellow",
 					More = {"Text", {Text = "Allows spears and arrows/throwing axes to be sold at the Market", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},

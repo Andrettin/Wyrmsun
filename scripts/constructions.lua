@@ -155,19 +155,25 @@ DefineConstruction("construction-dwarven-sentry-tower", {
 })
 
 DefineConstruction("construction-land2", {
-  Files = {
-    File = "neutral/buildings/land_construction_site.png",
-    Size = {64, 64}},
-  Constructions = {
-   {Percent = 0,
-    File = "construction",
-    Frame = 0},
-   {Percent = 25,
-    File = "construction",
-    Frame = 1}}
+	Files = {
+		File = "neutral/buildings/land_construction_site.png",
+		Size = {64, 64}
+	},
+	Constructions = {
+		{
+			Percent = 0,
+			File = "construction",
+			Frame = 0
+		},
+		{
+			Percent = 25,
+			File = "construction",
+			Frame = 1
+		}
+	}
 })
 
-DefineConstruction("construction-wall", {
+DefineConstruction("construction-land-1x1", {
 	Files = {
 		File = "neutral/buildings/land_construction_site_1x1.png",
 		Size = {32, 32}
@@ -185,3 +191,18 @@ DefineConstruction("construction-wall", {
 		}
 	}
 })
+
+DefineConstruction("construction-land-1x1-simple", {
+	Files = {
+		File = "neutral/buildings/land_construction_site_1x1.png",
+		Size = {32, 32}
+	},
+	Constructions = {
+		{
+			Percent = 0,
+			File = "construction",
+			Frame = 0
+		}
+	}
+})
+
