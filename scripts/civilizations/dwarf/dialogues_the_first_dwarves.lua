@@ -68,7 +68,7 @@ DefineDialogue("a-rocky-home-mead-hall-built", {
 			"text", "Hmm. That's some good craftsmanship. And now we can begin harvesting the materials we need."
 		},
 		{
-			"text", "Hint: You can acquire side-quests in your Mead Hall, and train new Miners should you need them. If you lack the Food supply to train more units, build farms with your existing miners."
+			"text", "Hint: You can acquire side-quests in your Mead Hall, and train new Miners there should you need them. If you lack the Food supply to train more units, build farms with your existing miners."
 		}
 	}
 })
