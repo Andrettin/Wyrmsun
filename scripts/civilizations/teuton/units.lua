@@ -1360,11 +1360,24 @@ DefineUnitType("unit-teuton-market", {
 	Parent = "unit-template-market",
 	Civilization = "teuton",
 	Description = "Medieval fairs were widespread throughout Europe, bringing in significant revenues to the cities they were located in.",
-	Image = {"file", "germanic/buildings/market.png", "size", {96, 96}},
-	Shadow = {"file", "germanic/buildings/market_shadow.png", "size", {96, 96}},
-	Animations = "animations-building", Icon = "icon-germanic-market",
+	Image = {"file", "teuton/buildings/market.png", "size", {96, 96}},
+	Shadow = {"file", "teuton/buildings/market_shadow.png", "size", {96, 96}},
+	Animations = "animations-building", Icon = "icon-teuton-market",
 	RequirementsString = "Carpenter's Shop/Lumber Mill",
 	SoldUnits = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
+	Variations = {
+		{
+			"variation-id", "market",
+			"file", "germanic/buildings/market.png",
+			"shadow-file", "germanic/buildings/market_shadow.png",
+			"icon", "icon-germanic-market",
+			"upgrade-forbidden", "upgrade-teuton-masonry"
+		},
+		{
+			"variation-id", "market",
+			"upgrade-required", "upgrade-teuton-masonry"
+		}
+	},
 	Sounds = {
 --		"help", "basic-teuton-voices-help-town"
 	}
