@@ -57,6 +57,19 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 2.7.1
+-----------------------------------------------------------------------
+
+* AI
+- Improved the road-building AI.
+
+* Scenarios
+- Fixed issue which caused the random generation to sometimes put wood piles and stone piles too close to the player's starting location, blocking their units.
+
+* Units
+- Fixed issue which caused units to attack back against bats even if they had been given another order.
+
+-----------------------------------------------------------------------
 - 2.7.0
 -----------------------------------------------------------------------
 

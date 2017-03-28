@@ -4141,32 +4141,6 @@ DefineUnitType("unit-railroad", {
 	BuilderOutside = true,
 	HiddenInEditor = true,
 	RequirementsString = "Steam Engine",
---	BuildingRulesString = "Must be built close to a mine, or on cave floor terrain",
-	AiBuildingRules = {
-		"distance", { Distance = 1, DistanceType = "<=", Type = "unit-gold-mine" },
-		"distance", { Distance = 1, DistanceType = "<=", Type = "unit-silver-mine"},
-		"distance", { Distance = 1, DistanceType = "<=", Type = "unit-copper-mine" },
-		"distance", { Distance = 1, DistanceType = "<=", Type = "unit-coal-mine" },
-		"and", {
-			"or", {
-				"distance", { Distance = 4, DistanceType = "<=", Type = "unit-gold-mine" },
-				"distance", { Distance = 4, DistanceType = "<=", Type = "unit-silver-mine"},
-				"distance", { Distance = 4, DistanceType = "<=", Type = "unit-copper-mine" },
-				"distance", { Distance = 4, DistanceType = "<=", Type = "unit-coal-mine" }
-			},
-			"or", {
-				"distance", { Distance = 4, DistanceType = "<=", Type = "unit-dwarven-town-hall" },
-				"distance", { Distance = 4, DistanceType = "<=", Type = "unit-dwarven-stronghold" },
-				"distance", { Distance = 4, DistanceType = "<=", Type = "unit-germanic-town-hall" },
-				"distance", { Distance = 4, DistanceType = "<=", Type = "unit-gnomish-town-hall" },
-				"distance", { Distance = 4, DistanceType = "<=", Type = "unit-goblin-town-hall" },
-				"distance", { Distance = 4, DistanceType = "<=", Type = "unit-goblin-stronghold" },
-				"distance", { Distance = 4, DistanceType = "<=", Type = "unit-latin-town-hall" },
-				"distance", { Distance = 4, DistanceType = "<=", Type = "unit-teuton-town-hall" },
-				"distance", { Distance = 4, DistanceType = "<=", Type = "unit-teuton-stronghold" }
-			}
-		}
-	},
 	Sounds = {
 		"dead", "building-destroyed"
 	}

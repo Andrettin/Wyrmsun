@@ -43,6 +43,11 @@ DefineModifier("upgrade-work-pedair-cainc-y-mabinogi",
 	{"KnowledgeMagic", 2}
 )
 
+DefineModifier("upgrade-work-de-mensura-orbis-terrae",
+	{"KnowledgeWarfare", 2},
+	{"KnowledgeMagic", 3}
+)
+
 DefineDependency("upgrade-work-pedair-cainc-y-mabinogi",
 	{"upgrade-celt-civilization", "unit-teuton-temple"}
 )
