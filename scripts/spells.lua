@@ -143,7 +143,7 @@ DefineSpell("spell-terror",
 	"range", 6,
 	"target", "unit",
 	"action", {
-		{"adjust-variable", {Terror = 1000}},
+		{"adjust-variable", {Terror = 500}},
 		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
 	},
 	"condition", {

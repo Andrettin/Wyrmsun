@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 - 2.7.1
 -----------------------------------------------------------------------
 
+* Abilities
+- The Terror spell now lasts for half as long as it did previously.
+
 * AI
 - Improved the road-building AI.
 

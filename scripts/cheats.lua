@@ -50,6 +50,12 @@ function HandleCheats(str)
 		SetFogOfWar(true)
 	elseif (str == "fow off") then
 		SetFogOfWar(false)
+	elseif (str == "fow") then
+		if (GetFogOfWar() == true) then
+			SetFogOfWar(false)
+		else
+			SetFogOfWar(true)
+		end
 	elseif (str == "fast debug") then
 		for i = 1,table.getn(resources) do
 			SetSpeedResourcesHarvest(resources[i], 10)
