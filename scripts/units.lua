@@ -32,6 +32,7 @@ Units = {
 	"upgrade-egyptian-civilization",
 	"upgrade-latin-civilization",
 	"unit-latin-town-hall", "unit-latin-farm", "unit-latin-barracks", "unit-latin-smithy", "unit-latin-stables",
+	"upgrade-germanic-civilization",
 	"unit-germanic-worker", "unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain", "unit-germanic-spearman", "unit-germanic-archer",
 	"unit-germanic-priest",
 	"unit-germanic-transport-ship",

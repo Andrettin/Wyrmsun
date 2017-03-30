@@ -25,9 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineUpgrade("upgrade-germanic-civilization", {
+	Name = "Germanic Civilization"
+})
+
 DefineUpgrade("upgrade-teuton-civilization", {
-	Name = "Teuton Civilization",
-	Civilization = "germanic"
+	Name = "Teuton Civilization"
 })
 
 DefineUpgrade("upgrade-germanic-broad-sword", {
@@ -118,12 +121,40 @@ DefineModifier("upgrade-teuton-civilization",
 
 Load("scripts/civilizations/germanic/upgrade_faction.lua")
 
+DefinePredependency("unit-germanic-town-hall",
+	{"upgrade-germanic-civilization"}, "or", {"upgrade-celt-civilization"}
+)
+
+DefinePredependency("unit-germanic-farm",
+	{"upgrade-germanic-civilization"}, "or", {"upgrade-celt-civilization"}
+)
+
+DefinePredependency("unit-germanic-barracks",
+	{"upgrade-germanic-civilization"}, "or", {"upgrade-celt-civilization"}
+)
+
+DefinePredependency("unit-germanic-carpenters-shop",
+	{"upgrade-germanic-civilization"}, "or", {"upgrade-celt-civilization"}
+)
+
+DefinePredependency("unit-germanic-smithy",
+	{"upgrade-germanic-civilization"}, "or", {"upgrade-celt-civilization"}
+)
+
 DefineDependency("unit-germanic-archer",
 	{"unit-germanic-carpenters-shop"}
 )
 
+DefinePredependency("unit-germanic-temple",
+	{"upgrade-germanic-civilization"}, "or", {"upgrade-celt-civilization"}
+)
+
 DefineDependency("unit-germanic-temple",
 	{"unit-germanic-carpenters-shop"}
+)
+
+DefinePredependency("unit-germanic-market",
+	{"upgrade-germanic-civilization"}, "or", {"upgrade-celt-civilization"}
 )
 
 DefineDependency("unit-germanic-market",
@@ -132,6 +163,10 @@ DefineDependency("unit-germanic-market",
 
 DefineDependency("unit-germanic-priest",
 	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}
+)
+
+DefinePredependency("unit-germanic-dock",
+	{"upgrade-germanic-civilization"}, "or", {"upgrade-celt-civilization"}
 )
 
 DefineDependency("unit-germanic-dock",

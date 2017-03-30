@@ -75,7 +75,8 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-harvest",
 
 DefineButton( { Pos = 13, Level = 0, Icon = "icon-build-basic-structure",
 	Action = "button", Value = 1,
-	Key = "b", Hint = _("~!Build Structure"), Popup = "popup-commands",
+	Allowed = "check-has-sub-buttons",
+	Key = "b", Hint = "~!Build Structure", Popup = "popup-commands",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",

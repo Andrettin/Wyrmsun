@@ -1242,6 +1242,7 @@ DefineCivilization("germanic", {
 	Language = "proto-germanic",
 	Adjective = "Germanic",
 	DefaultColor = "orange",
+	CivilizationUpgrade = "upgrade-germanic-civilization",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
 		"stop", "icon-germanic-wooden-oblong-shield",

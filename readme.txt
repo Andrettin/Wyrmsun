@@ -69,6 +69,9 @@ https://github.com/Andrettin/Wyrmsun
 - Improved the performance of the AI attack code.
 - Improved the performance of the AI healing item pick-up code.
 
+* Heroes
+- Fixed issue which allowed Germanic worker heroes to build Germanic buildings even if controlled by another civilization.
+
 * Items
 - Fixed issue which allowed items to be used or dropped from the unit's main command panel if there were no button there, and its inventory also had an item button at that same spot.
 
