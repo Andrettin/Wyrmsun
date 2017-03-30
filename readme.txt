@@ -62,9 +62,12 @@ https://github.com/Andrettin/Wyrmsun
 
 * Abilities
 - The Terror spell now lasts for half as long as it did previously.
+- Improved the performance of aura application (specially that of the Leadership Aura).
 
 * AI
 - Improved the road-building AI.
+- Improved the performance of the AI attack code.
+- Improved the performance of the AI healing item pick-up code.
 
 * Scenarios
 - Fixed issue which caused the random generation to sometimes put wood piles and stone piles too close to the player's starting location, blocking their units.
