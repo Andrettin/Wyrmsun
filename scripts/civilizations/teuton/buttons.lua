@@ -267,8 +267,8 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-cauldron",
 	Action = "research", Value = "upgrade-teuton-alchemy",
 	Allowed = "check-single-research",
-	Description = "+1 Fire Damage for Schutzes, +5 Fire Damage for Catapults.",
-	Key = "a", Hint = _("Research ~!Alchemy"), Popup = "popup-research",
+	Description = "+1 Fire Damage for Schutzes, +5 Fire Damage for Catapults. Allows new magic affixes for items sold at the Market.",
+	Key = "a", Hint = "Research ~!Alchemy", Popup = "popup-research",
 	ForUnit = {"unit-teuton-stronghold"}
 } )
 

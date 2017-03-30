@@ -422,8 +422,8 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-cauldron",
 	Action = "research", Value = "upgrade-dwarven-alchemy",
 	Allowed = "check-single-research",
-	Description = _("+1 Fire Damage for Scouts, Pathfinders, Explorers and Gryphon Riders, +5 Fire Damage for Ballistas."),
-	Key = "a", Hint = _("Research ~!Alchemy"), Popup = "popup-research",
+	Description = "+1 Fire Damage for Scouts, Pathfinders, Explorers and Gryphon Riders, +5 Fire Damage for Ballistas. Allows new magic affixes for items sold at the Market.",
+	Key = "a", Hint = "Research ~!Alchemy", Popup = "popup-research",
 	ForUnit = {"unit-dwarven-stronghold"}
 } )
 

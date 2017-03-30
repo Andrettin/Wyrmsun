@@ -294,8 +294,8 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-cauldron",
 	Action = "research", Value = "upgrade-goblin-alchemy",
 	Allowed = "check-single-research",
-	Description = _("+1 Fire Damage for Archers and Headhunters, +5 Fire Damage for War Machines."),
-	Key = "a", Hint = _("Research ~!Alchemy"), Popup = "popup-research",
+	Description = "+1 Fire Damage for Archers and Headhunters, +5 Fire Damage for War Machines. Allows new magic affixes for items sold at the Market.",
+	Key = "a", Hint = "Research ~!Alchemy", Popup = "popup-research",
 	ForUnit = {"unit-goblin-stronghold"}
 } )
 
