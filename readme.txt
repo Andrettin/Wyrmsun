@@ -68,6 +68,7 @@ https://github.com/Andrettin/Wyrmsun
 - Improved the road-building AI.
 - Improved the performance of the AI attack code.
 - Improved the performance of the AI healing item pick-up code.
+- AI units will now correctly use wyrm hearts to heal themselves.
 
 * Heroes
 - Fixed issue which allowed Germanic worker heroes to build Germanic buildings even if controlled by another civilization.
