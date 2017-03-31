@@ -73,6 +73,18 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-harvest",
 	}
 })
 
+DefineButton( { Pos = 5, Level = 0,
+	Action = "return-goods",
+	Key = "g", Hint = "Return with ~!Goods", Popup = "popup-commands",
+	ForUnit = {
+		"unit-germanic-worker", "unit-teuton-worker",
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
+		"unit-goblin-worker"
+	}
+})
+
 DefineButton( { Pos = 13, Level = 0, Icon = "icon-build-basic-structure",
 	Action = "button", Value = 1,
 	Allowed = "check-has-sub-buttons",

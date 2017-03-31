@@ -83,6 +83,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Fixed issue which caused units to attack back against bats even if they had been given another order.
+- Fixed issue which caused the "Return Goods" button to be replaced with the "Stand Ground" one when different worker unit types (i.e. Dwarven Miners and Skilled Miners) were grouped together.
 
 -----------------------------------------------------------------------
 - 2.7.0
