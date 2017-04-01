@@ -380,6 +380,88 @@ function GenerateRocks(rock_seed_number, rock_expansions_number, base_tile_type,
 	--]]
 end
 
+function GenerateLand(land_seed_number, land_expansions_number, min_x, max_x, min_y, max_y)
+	if (LoadedGame) then
+		return
+	end
+
+	local RandomNumber = 0
+	local RandomX = 0
+	local RandomY = 0
+	local Count = 0
+	local WhileCount = 0
+
+	-- create initial land seeds
+	Count = land_seed_number
+	while (Count > 0 and WhileCount < land_seed_number * 100) do
+		RandomX = SyncRand(max_x - min_x + 1) + min_x
+		RandomY = SyncRand(max_y - min_y + 1) + min_y
+		if (RawTile(RandomX, RandomY) == "Water") then
+			RandomNumber = SyncRand(4)
+			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Water") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Water") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Water")) then
+				SetRawTile(RandomX, RandomY, "Land")
+				SetRawTile(RandomX - 1, RandomY - 1, "Land")
+				SetRawTile(RandomX - 1, RandomY, "Land")
+				SetRawTile(RandomX, RandomY - 1, "Land")
+				Count = Count - 1
+			elseif (RandomNumber == 1 and (RawTile(RandomX + 1, RandomY - 1) == "Land" or RawTile(RandomX + 1, RandomY - 1) == "Water") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Water") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Water")) then
+				SetRawTile(RandomX, RandomY, "Land")
+				SetRawTile(RandomX + 1, RandomY - 1, "Land")
+				SetRawTile(RandomX, RandomY - 1, "Land")
+				SetRawTile(RandomX + 1, RandomY, "Land")
+				Count = Count - 1
+			elseif (RandomNumber == 2 and (RawTile(RandomX + 1, RandomY + 1) == "Land" or RawTile(RandomX + 1, RandomY + 1) == "Water") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Water") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Water")) then
+				SetRawTile(RandomX, RandomY, "Land")
+				SetRawTile(RandomX + 1, RandomY + 1, "Land")
+				SetRawTile(RandomX + 1, RandomY, "Land")
+				SetRawTile(RandomX, RandomY + 1, "Land")
+				Count = Count - 1
+			elseif (RandomNumber == 3 and (RawTile(RandomX - 1, RandomY + 1) == "Land" or RawTile(RandomX - 1, RandomY + 1) == "Water") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Water") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Water")) then
+				SetRawTile(RandomX, RandomY, "Land")
+				SetRawTile(RandomX - 1, RandomY + 1, "Land")
+				SetRawTile(RandomX - 1, RandomY, "Land")
+				SetRawTile(RandomX, RandomY + 1, "Land")
+				Count = Count - 1
+			end
+		end
+		WhileCount = WhileCount + 1
+	end
+
+	WhileCount = 0
+
+	-- expand land
+	Count = land_expansions_number
+	while (Count > 0 and WhileCount < land_expansions_number * 100) do
+		RandomX = SyncRand(max_x - min_x + 1) + min_x
+		RandomY = SyncRand(max_y - min_y + 1) + min_y
+		if (RawTile(RandomX, RandomY) == "Land") then
+			RandomNumber = SyncRand(4)
+			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Water") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Water") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Water") and (RawTile(RandomX - 1, RandomY - 1) ~= "Land" or RawTile(RandomX - 1, RandomY) ~= "Land" or RawTile(RandomX, RandomY - 1) ~= "Land")) then
+				SetRawTile(RandomX - 1, RandomY - 1, "Land")
+				SetRawTile(RandomX - 1, RandomY, "Land")
+				SetRawTile(RandomX, RandomY - 1, "Land")
+				Count = Count - 1
+			elseif (RandomNumber == 1 and (RawTile(RandomX + 1, RandomY - 1) == "Land" or RawTile(RandomX + 1, RandomY - 1) == "Water") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Water") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Water") and (RawTile(RandomX + 1, RandomY - 1) ~= "Land" or RawTile(RandomX, RandomY - 1) ~= "Land" or RawTile(RandomX + 1, RandomY) ~= "Land")) then
+				SetRawTile(RandomX + 1, RandomY - 1, "Land")
+				SetRawTile(RandomX, RandomY - 1, "Land")
+				SetRawTile(RandomX + 1, RandomY, "Land")
+				Count = Count - 1
+			elseif (RandomNumber == 2 and (RawTile(RandomX + 1, RandomY + 1) == "Land" or RawTile(RandomX + 1, RandomY + 1) == "Water") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Water") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Water") and (RawTile(RandomX + 1, RandomY + 1) ~= "Land" or RawTile(RandomX + 1, RandomY) ~= "Land" or RawTile(RandomX, RandomY + 1) ~= "Land")) then
+				SetRawTile(RandomX + 1, RandomY + 1, "Land")
+				SetRawTile(RandomX + 1, RandomY, "Land")
+				SetRawTile(RandomX, RandomY + 1, "Land")
+				Count = Count - 1
+			elseif (RandomNumber == 3 and (RawTile(RandomX - 1, RandomY + 1) == "Land" or RawTile(RandomX - 1, RandomY + 1) == "Water") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Water") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Water") and (RawTile(RandomX - 1, RandomY + 1) ~= "Land" or RawTile(RandomX - 1, RandomY) ~= "Land" or RawTile(RandomX, RandomY + 1) ~= "Land")) then
+				SetRawTile(RandomX - 1, RandomY + 1, "Land")
+				SetRawTile(RandomX - 1, RandomY, "Land")
+				SetRawTile(RandomX, RandomY + 1, "Land")
+				Count = Count - 1
+			end
+		end
+		WhileCount = WhileCount + 1
+	end
+end
+
 function GenerateWater(water_seed_number, water_expansions_number, min_x, max_x, min_y, max_y)
 	if (LoadedGame) then
 		return
@@ -1642,7 +1724,7 @@ function CreateDecorations()
 	end
 end
 
-function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_halls, symmetric, starting_gold_mine, player_civilizations, player_buildings)
+function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_halls, symmetric, starting_gold_mine, player_civilizations, player_buildings, water_map)
 	-- create player units
 	local symmetric_starting_location = {0, 0}
 	for i=0,(PlayerMax - 2) do
@@ -1769,7 +1851,11 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 					SetPlayerData(i, "Resources", "lumber", 5000)
 					SetPlayerData(i, "Resources", "stone", 5000)
 
-					SetAiType(i, "land-attack")
+					if (water_map) then
+						SetAiType(i, "sea-attack")
+					else
+						SetAiType(i, "land-attack")
+					end
 				end
 			end
 		end
@@ -1816,9 +1902,24 @@ function GenerateRandomMap(arg)
 	if (LoadedGame == false) then
 		CleanRawTiles()
 
-		for x=0,(Map.Info.MapWidth - 1) do
-			for y=0,(Map.Info.MapHeight - 1) do
-				SetRawTile(x, y, "Land")
+		if (arg.WaterMap) then
+			for x=0,(Map.Info.MapWidth - 1) do
+				for y=0,(Map.Info.MapHeight - 1) do
+					SetRawTile(x, y, "Water")
+				end
+			end
+			if (arg.LandQuantity == "high") then
+				GenerateLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 2, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+			elseif (arg.LandQuantity == "medium") then
+				GenerateLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 4, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+			elseif (arg.LandQuantity == "low") then
+				GenerateLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+			end
+		else
+			for x=0,(Map.Info.MapWidth - 1) do
+				for y=0,(Map.Info.MapHeight - 1) do
+					SetRawTile(x, y, "Land")
+				end
 			end
 		end
 		
@@ -2037,7 +2138,7 @@ function GenerateRandomMap(arg)
 			end
 		end
 		
-		CreatePlayers(0, Map.Info.MapWidth, 0, Map.Info.MapHeight, mixed_civilizations, not arg.NoTownHall, symmetric, not arg.NoDeposits, arg.PlayerCivilizations, arg.PlayerBuildings) -- generate players after rocks and water
+		CreatePlayers(0, Map.Info.MapWidth, 0, Map.Info.MapHeight, mixed_civilizations, not arg.NoTownHall, symmetric, not arg.NoDeposits, arg.PlayerCivilizations, arg.PlayerBuildings, arg.WaterMap) -- generate players after rocks and water
 
 		if (arg.RoughLandQuantity == "high") then
 			GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8)
@@ -3738,7 +3839,7 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 	FillArea(0, 0, (Map.Info.MapWidth - 1), (Map.Info.MapHeight - 1), "Land", false)
 	
 	if (direction == "north-south") then
-		CreatePlayers(round(Map.Info.MapWidth / 6), round(Map.Info.MapWidth * 5 / 6), 0, Map.Info.MapHeight, mixed_civilizations, true, false, true, nil, nil)
+		CreatePlayers(round(Map.Info.MapWidth / 6), round(Map.Info.MapWidth * 5 / 6), 0, Map.Info.MapHeight, mixed_civilizations, true, false, true, nil, nil, false)
 		
 		GenerateRocks(((Map.Info.MapWidth / 6 * Map.Info.MapHeight) / 32), ((Map.Info.MapWidth / 6 * Map.Info.MapHeight) / 4), "Land", 0, round(Map.Info.MapWidth / 6), 0, Map.Info.MapHeight)
 		
@@ -3746,7 +3847,7 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 
 		GenerateWater(lake_quantity, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, round(Map.Info.MapWidth / 6), round(Map.Info.MapWidth * 5 / 6), 0, Map.Info.MapHeight)
 	elseif (direction == "west-east") then
-		CreatePlayers(0, Map.Info.MapWidth, round(Map.Info.MapHeight / 6), round(Map.Info.MapHeight * 5 / 6), mixed_civilizations, true, false, true, nil, nil)
+		CreatePlayers(0, Map.Info.MapWidth, round(Map.Info.MapHeight / 6), round(Map.Info.MapHeight * 5 / 6), mixed_civilizations, true, false, true, nil, nil, false)
 		
 		GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight / 6) / 32), ((Map.Info.MapWidth * Map.Info.MapHeight / 6) / 4), "Land", 0, Map.Info.MapWidth, 0, round(Map.Info.MapHeight / 6))
 		
@@ -5679,7 +5780,7 @@ function GenerateCave(town_halls, symmetric)
 
 	SetMapBorders("Rock", true)
 
-	CreatePlayers(16, Map.Info.MapWidth - 16, 16, Map.Info.MapHeight - 16, true, town_halls, symmetric, true, nil, nil)
+	CreatePlayers(16, Map.Info.MapWidth - 16, 16, Map.Info.MapHeight - 16, true, town_halls, symmetric, true, nil, nil, false)
 
 	GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024),  ((Map.Info.MapWidth * Map.Info.MapHeight) / 4), "Land", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 

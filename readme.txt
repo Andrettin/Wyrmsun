@@ -78,7 +78,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which allowed items to be used or dropped from the unit's main command panel if there were no button there, and its inventory also had an item button at that same spot.
 
 * Miscellaneous
-- Fixed saved game load crash issue.
+- Fixed a save game load crash issue.
 
 * Scenarios
 - Fixed issue which caused the random generation to sometimes put wood piles and stone piles too close to the player's starting location, blocking their units.

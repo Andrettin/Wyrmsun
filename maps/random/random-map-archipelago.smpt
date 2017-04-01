@@ -1,0 +1,10 @@
+-- Stratagus Map Presentation
+
+if (GrandStrategy == false) then
+	DefinePlayerTypes("person","person","person","person")
+	PresentMap("Random Archipelago", 4, 128, 128, 1)
+else
+	DefinePlayerTypes("person","person")
+	PresentMap("Random Archipelago", 2, 64, 64, 1)
+end
+MapWorld = "Random"
