@@ -60,6 +60,14 @@ function CustomHeroCreationMenu(world, quest_menu)
 	local variation
 	
 	local language
+	
+	local function GenerateNewHeroName()
+		local generated_personal_name = ""
+		while (generated_personal_name == "" or GetArrayIncludes(GetCustomHeroes(), generated_personal_name)) do
+			generated_personal_name = GeneratePersonalName(hero_class_ident_list[hero_class:getSelected() + 1])
+		end
+		hero_name:setText(generated_personal_name)
+	end
 
 	local function ClassChanged()
 		trait_ident_list = nil
@@ -93,11 +101,7 @@ function CustomHeroCreationMenu(world, quest_menu)
 		
 		if (new_language ~= language) then -- if the language changed, generate a new name for the hero
 			language = new_language
-			local generated_personal_name = ""
-			while (generated_personal_name == "" or GetArrayIncludes(GetCustomHeroes(), generated_personal_name)) do
-				generated_personal_name = GeneratePersonalName(hero_class_ident_list[hero_class:getSelected() + 1])
-			end
-			hero_name:setText(generated_personal_name)
+			GenerateNewHeroName()
 		end
 	end
 	
@@ -159,7 +163,7 @@ function CustomHeroCreationMenu(world, quest_menu)
 	hero_civilization:setSelected(0)
 	CivilizationChanged()
 	
-	menu:addFullButton("Create ~!Hero", "h", 176 - (224 / 2), 352 - 40 * 2,
+	menu:addHalfButton("Crea~!te", "t", 20 + 48, 352 - 40 * 2,
 		function()
 			local hero_ident = hero_name:getText()
 			if (hero_family_name:getText() ~= "") then
@@ -192,6 +196,11 @@ function CustomHeroCreationMenu(world, quest_menu)
 				quest_menu:stop()
 				RunQuestMenu(world)
 			end
+		end
+	)
+	menu:addHalfButton("New ~!Name", "n", 130 + 48, 352 - 40 * 2,
+		function()
+			GenerateNewHeroName()
 		end
 	)
 	menu:addFullButton("~!Cancel", "c", 176 - (224 / 2), 352 - 40 * 1,

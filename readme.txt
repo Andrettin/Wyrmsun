@@ -72,6 +72,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Heroes
 - Fixed issue which allowed Germanic worker heroes to build Germanic buildings even if controlled by another civilization.
+- Added an option to re-generate the custom hero name in the custom hero creation menu.
 
 * Items
 - Fixed issue which allowed items to be used or dropped from the unit's main command panel if there were no button there, and its inventory also had an item button at that same spot.
