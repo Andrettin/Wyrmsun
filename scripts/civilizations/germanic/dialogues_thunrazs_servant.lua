@@ -58,3 +58,11 @@ DefineDialogue("thialfi-settles-gotland", {
 		}
 	}
 })
+
+DefineDialogue("berserker-brides-arrive-on-hlesey", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 119.
+	Nodes = {
+		{
+			"text", "Rumors have reached us that some wild folk have settled on the island of Hersey. It is better to be cautious when navigating the nearby waters..."
+		}
+	}
+})

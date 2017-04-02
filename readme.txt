@@ -63,6 +63,9 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - Minor pathfinding performance improvement.
 
+* Quests
+- Added a new Germanic side-quest, "Slay the Wild Folk at Hlesey".
+
 -----------------------------------------------------------------------
 - 2.7.1
 -----------------------------------------------------------------------

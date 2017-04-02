@@ -1353,11 +1353,10 @@ function CreateNeutralBuildings(building_type, building_number, min_x, max_x, mi
 				end
 
 				if (table.getn(potential_factions) > 0) then
-					local neutral_faction = potential_factions[SyncRand(table.getn(potential_factions)) + 1]
-					building_player = FindUnusedPlayerSlot()
-					Players[building_player].Type = PlayerComputer				
-					SetPlayerData(building_player, "RaceName", GetFactionData(neutral_faction, "Civilization"))
-					SetPlayerData(building_player, "Faction", neutral_faction)
+					building_player = CreatePlayerForFaction(potential_factions[SyncRand(table.getn(potential_factions)) + 1])
+					if (building_player == -1) then
+						return;
+					end
 				end
 			end
 			unit = CreateUnit(building_type, building_player, {building_spawn_point[1], building_spawn_point[2]})
@@ -2954,10 +2953,11 @@ end
 
 function FindUnusedPlayerSlot()
 	for i=0,(PlayerMax - 2) do
-		if (GetPlayerData(i, "TotalNumUnits") == 0) then
+		if (Players[i].Type == PlayerNobody) then
 			return i
 		end
 	end
+	return -1
 end
 
 function GetTileTerrainCount(terrain)
@@ -5905,4 +5905,14 @@ function GetTerrainCivilizations(terrain)
 	end
 
 	return {}
+end
+
+function CreatePlayerForFaction(faction)
+	local faction_player = FindUnusedPlayerSlot()
+	if (faction_player ~= -1) then
+		Players[faction_player].Type = PlayerComputer				
+		SetPlayerData(faction_player, "RaceName", GetFactionData(faction, "Civilization"))
+		SetPlayerData(faction_player, "Faction", faction)
+	end
+	return faction_player
 end

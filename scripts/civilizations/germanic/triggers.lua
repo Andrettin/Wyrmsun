@@ -216,7 +216,7 @@ AddTrigger("the-curved-swords", -- Source: http://natmus.dk/en/historical-knowle
 
 AddTrigger("the-sun-chariot", -- Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-sun-chariot/
 	function()
-		if (SyncRand(10) ~= 0) then -- 1% chance this will trigger every time it is checked
+		if (SyncRand(10) ~= 0) then -- 10% chance this will trigger every time it is checked (and 10% for each player it is checked for, for a chance of 1% for a player that matches the conditions
 			return false
 		end
 		for i=0,(PlayerMax - 2) do
@@ -243,6 +243,50 @@ AddTrigger("the-sun-chariot", -- Source: http://natmus.dk/en/historical-knowledg
 				OptionTooltips = {"+500 Copper"}
 			}
 		)
+		return false
+	end
+)
+
+AddTrigger("berserker-brides-arrive-on-hlesey", -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 119.
+	function()
+		if (SyncRand(100) ~= 0) then -- 1% chance this will trigger every time it is checked
+			return false
+		end
+		if ( -- if Hlesey is empty, but there are certain Germanic structures within a certain range of it
+			GetNumUnitsAt(-2, "any", {4088 - EarthStartX, 744 - EarthStartY}, {4092 - EarthStartX, 746 - EarthStartY}, GetMapLayer("", "Earth", 0)) == 0
+			and GetNumUnitsAt(-2, "unit-germanic-barracks", {4089 - 128 - EarthStartX, 745 - 128 - EarthStartY}, {4089 + 128 - EarthStartX, 745 + 128 - EarthStartY}, GetMapLayer("", "Earth", 0)) > 0 -- a barracks from which the warriors could have come from
+			and GetNumUnitsAt(-2, "unit-germanic-dock", {4089 - 128 - EarthStartX, 745 - 128 - EarthStartY}, {4089 + 128 - EarthStartX, 745 + 128 - EarthStartY}, GetMapLayer("", "Earth", 0)) > 0 -- a dock from which they may have obtained ships
+			and GetNumUnitsAt(-2, "unit-germanic-smithy", {4089 - 128 - EarthStartX, 745 - 128 - EarthStartY}, {4089 + 128 - EarthStartX, 745 + 128 - EarthStartY}, GetMapLayer("", "Earth", 0)) > 0 -- a smithy, as they were said in the myth to have wielded iron clubs
+		) then
+			return true
+		end
+		return false
+	end,
+	function()
+		local hlesing_player = CreatePlayerForFaction("hlesing-tribe")
+		if (hlesing_player == -1) then
+			return false
+		end
+		unit = CreateUnit("unit-teuton-watch-tower", hlesing_player, {4089 - EarthStartX, 745 - EarthStartY})
+		local players_around = GetPlayersAroundUnit(unit, 128)
+		unit = CreateUnitInTransporter("unit-germanic-archer", hlesing_player, unit)
+		unit = CreateUnit("unit-germanic-warrior", hlesing_player, {4089 - EarthStartX, 745 - EarthStartY})
+		unit = CreateUnit("unit-germanic-warrior", hlesing_player, {4089 - EarthStartX, 745 - EarthStartY})
+		unit = CreateUnit("unit-germanic-warrior", hlesing_player, {4089 - EarthStartX, 745 - EarthStartY})
+		unit = CreateUnit("unit-germanic-warrior", hlesing_player, {4089 - EarthStartX, 745 - EarthStartY})
+		
+		for i=0,(PlayerMax - 2) do
+			if (i ~= hlesing_player) then
+				SetDiplomacy(hlesing_player, "enemy", i)
+				SetDiplomacy(i, "enemy", hlesing_player)
+			end
+		end
+
+		for i = 1, table.getn(players_around) do 
+			CallDialogue("berserker-brides-arrive-on-hlesey", players_around[i])
+			unit = CreateUnit("unit-revealer", players_around[i], {4089 - EarthStartX, 745 - EarthStartY})
+			SetUnitVariable(unit, "TTL", 600)
+		end
 		return false
 	end
 )

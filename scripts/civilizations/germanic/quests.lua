@@ -316,3 +316,29 @@ DefineQuest("the-sun-shields", { -- Source: http://en.natmus.dk/historical-knowl
 	Hint = "Select a Smithy and then click on the Research Bronze Shield button to research the technology required for this quest.",
 	ResearchUpgrades = {"upgrade-germanic-bronze-shield"}
 })
+
+DefineQuest("slay-the-berserker-brides-at-hlesey", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 119.
+	Name = "Slay the Wild Folk at Hlesey",
+	Icon = "icon-germanic-warrior",
+	Description = "The wild folk at Hlesey have been attacking passing ships. The priests of Thunraz urge us to eliminate this threat, and restore safe passage in those waters.",
+	Civilization = "germanic",
+	PlayerColor = "white",
+	Conditions = function(s)
+		if (
+			GetFactionExists("hlesing-tribe") -- the Hlesings must exist
+			and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-dock") > 0 -- the player must have a dock
+			and GetPlayerData(trigger_player, "Allow", "upgrade-deity-thor") == "R" -- must be a worshipper of Thor/Thunraz
+			and GetNumUnitsAt(trigger_player, "buildings", {4089 - 128 - EarthStartX, 745 - 128 - EarthStartY}, {4089 + 128 - EarthStartX, 745 + 128 - EarthStartY}, GetMapLayer("", "Earth", 0)) > 0 -- the player must have a building relatively close to Hlesey
+		) then
+			return true
+		end
+		return false
+	end,
+	CompletionEffects = function(s)
+		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 1500)
+	end,
+	Objectives = {"- Destroy the Hlesings"},
+	Rewards = "+1500 Copper",
+	DestroyFactions = {"hlesing-tribe"},
+	Competitive = true
+})
