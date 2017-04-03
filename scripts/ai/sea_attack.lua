@@ -30,7 +30,7 @@
 local end_loop_sea_funcs = {
 	function() DebugPrint("Looping !\n"); return false end,
 --	function() return AiForce(1, {AiDestroyer(), 6, AiBattleship(), 7, GetAiUnitType("glider"), 1}) end,
-	function() return AiForce(2, {GetAiUnitType("infantry"), 4, GetAiUnitType("cavalry"), 4, GetAiUnitType("siege-engine"), 4, GetAiUnitType("transport-ship"), 4}) end,
+	function() return AiForce(2, {GetAiUnitType("infantry"), 4, GetAiUnitType("cavalry"), 4, GetAiUnitType("siege-engine"), 4}) end,
 --	function() return AiWaitForce(1) end,
 	function() return AiWaitForce(2) end,
 --	function() return AiAttackWithForce(1) end,
@@ -55,8 +55,6 @@ local sea_funcs = {
 	function() return AiForceRole(0, "defend") end,
 	function() return AiWaitForce(0) end,
 
-	function() return AiNeed(GetAiUnitType("dock")) end,
-	
 	-- get the necessary upgrades for Germanic civilizations to become Teuton
 	function()
 		if (AiGetRace() == "germanic") then
@@ -134,7 +132,12 @@ local sea_funcs = {
 	function() return AiSet(GetAiUnitType("worker"), 15) end,
 --	function() return AiSet(AiTanker(), 1) end,
 --	function() return AiNeed(AiPlatform()) end,
-	function() return AiWait(GetAiUnitType("stronghold")) end,
+	function()
+		if (AiGetRace() ~= "gnome") then
+			return AiWait(GetAiUnitType("stronghold"))
+		end
+		return false
+	end,
 	function() return AiResearch(GetAiUnitType("coinage")) end, -- research coinage to improve copper/silver/gold processing
 	function() return AiResearch(GetAiUnitType("writing")) end, -- research writing to become a polity
 
@@ -160,7 +163,6 @@ local sea_funcs = {
 --	function() return AiAttackWithForce(1) end,
 
 	function() return AiSleep(500) end,
-	function() return AiNeed(GetAiUnitType("dock")) end,
 	function()
 		if (AiGetRace() ~= "germanic") then
 			return AiNeed(GetAiUnitType("smithy")); -- Germanics needed a smithy earlier to upgrade to Teuton
@@ -185,7 +187,7 @@ local sea_funcs = {
 --	function() return AiForce(3, {AiDestroyer(), 1, GetAiUnitType("glider"), 1}) end,
 --	function() return AiForceRole(3, "defend") end,
 --	function() return AiForce(1, {AiSubmarine(), 1, AiDestroyer(), 2, AiBattleship(), 2, GetAiUnitType("glider"), 2}) end,
-	function() return AiForce(2, {GetAiUnitType("siege-engine"), 2, GetAiUnitType("transport-ship"), 1}) end,
+	function() return AiForce(2, {GetAiUnitType("siege-engine"), 2}) end,
 --	function() return AiWaitForce(1) end,
 	function() return AiWaitForce(2) end,
 --	function() return AiAttackWithForce(1) end,
@@ -197,7 +199,7 @@ local sea_funcs = {
 	function() return AiForce(0, {GetAiUnitType("infantry"), 3, GetAiUnitType("siege-engine"), 1, GetAiUnitType("glider"), 1}) end,
 --	function() return AiForce(3, {AiDestroyer(), 1, AiBattleship(), 1, GetAiUnitType("glider"), 1}) end,
 --	function() return AiForce(1, {AiSubmarine(), 1, AiDestroyer(), 2, AiBattleship(), 3, GetAiUnitType("glider"), 1}) end,
-	function() return AiForce(2, {GetAiUnitType("cavalry"), 1, GetAiUnitType("siege-engine"), 3, GetAiUnitType("transport-ship"), 2}) end,
+	function() return AiForce(2, {GetAiUnitType("cavalry"), 1, GetAiUnitType("siege-engine"), 3}) end,
 --	function() return AiWaitForce(1) end,
 	function() return AiWaitForce(2) end,
 --	function() return AiAttackWithForce(1) end,
@@ -209,7 +211,7 @@ local sea_funcs = {
 	function() return AiForce(0, {GetAiUnitType("infantry"), 3, GetAiUnitType("siege-engine"), 1, GetAiUnitType("glider"), 1}) end,
 --	function() return AiForce(3, {AiDestroyer(), 1, AiBattleship(), 1, GetAiUnitType("glider"), 1}) end,
 --	function() return AiForce(1, {AiSubmarine(), 1, AiDestroyer(), 3, AiBattleship(), 4, GetAiUnitType("glider"), 1}) end,
-	function() return AiForce(2, {GetAiUnitType("cavalry"), 3, GetAiUnitType("siege-engine"), 3, GetAiUnitType("transport-ship"), 2}) end,
+	function() return AiForce(2, {GetAiUnitType("cavalry"), 3, GetAiUnitType("siege-engine"), 3}) end,
 --	function() return AiWaitForce(1) end,
 	function() return AiWaitForce(2) end,
 --	function() return AiAttackWithForce(1) end,
@@ -225,7 +227,7 @@ local sea_funcs = {
 	function() return AiForce(0, {GetAiUnitType("infantry"), 3, GetAiUnitType("siege-engine"), 1, GetAiUnitType("glider"), 1}) end,
 --	function() return AiForce(3, {AiDestroyer(), 1, AiBattleship(), 1, GetAiUnitType("glider"), 1}) end,
 --	function() return AiForce(1, {AiSubmarine(), 1, AiDestroyer(), 4, AiBattleship(), 5, GetAiUnitType("glider"), 1}) end,
-	function() return AiForce(2, {GetAiUnitType("cavalry"), 3, GetAiUnitType("siege-engine"), 3, GetAiUnitType("transport-ship"), 2}) end,
+	function() return AiForce(2, {GetAiUnitType("cavalry"), 3, GetAiUnitType("siege-engine"), 3}) end,
 --	function() return AiWaitForce(1) end,
 	function() return AiWaitForce(2) end,
 --	function() return AiAttackWithForce(1) end,
@@ -235,7 +237,7 @@ local sea_funcs = {
 	function() return AiForce(0, {GetAiUnitType("infantry"), 3, GetAiUnitType("siege-engine"), 1, GetAiUnitType("glider"), 1}) end,
 --	function() return AiForce(3, {AiDestroyer(), 1, AiBattleship(), 1, GetAiUnitType("glider"), 1}) end,
 --	function() return AiForce(1, {AiSubmarine(), 1, AiDestroyer(), 5, AiBattleship(), 6, GetAiUnitType("glider"), 1}) end,
-	function() return AiForce(2, {GetAiUnitType("cavalry"), 3, GetAiUnitType("siege-engine"), 3, GetAiUnitType("transport-ship"), 2}) end,
+	function() return AiForce(2, {GetAiUnitType("cavalry"), 3, GetAiUnitType("siege-engine"), 3}) end,
 --	function() return AiWaitForce(1) end,
 	function() return AiWaitForce(2) end,
 --	function() return AiAttackWithForce(1) end,
