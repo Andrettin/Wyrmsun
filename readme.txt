@@ -62,6 +62,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * AI
 - Improved the AI attack back code.
+- The AI is now better capable of conducting naval assaults.
 
 * Miscellaneous
 - Minor pathfinding performance improvement.

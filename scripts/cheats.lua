@@ -44,8 +44,10 @@ function HandleCheats(str)
 			SetPlayerData(i, "Resources", "coal", GetPlayerData(i, "Resources", "coal") + 10000)
 		end
 		AddMessage("Resources increased!")
-	elseif (str == "showpath") then
+	elseif (str == "showpath") then -- reveals the map only to person players
 		RevealMap(true)
+	elseif (str == "heimdall") then -- reveals the map to all players
+		RevealMap(false)
 	elseif (str == "fow on") then
 		SetFogOfWar(true)
 	elseif (str == "fow off") then
