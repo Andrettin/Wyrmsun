@@ -60,8 +60,12 @@ https://github.com/Andrettin/Wyrmsun
 - 2.7.2
 -----------------------------------------------------------------------
 
+* AI
+- Improved the AI attack back code.
+
 * Miscellaneous
 - Minor pathfinding performance improvement.
+- Fixed crash which could happen when a transport ship was destroyed while a unit with a level-up point was inside.
 
 * Quests
 - Added a new Germanic side-quest, "Slay the Wild Folk at Hlesey".

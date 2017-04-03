@@ -326,6 +326,7 @@ DefineQuest("slay-the-berserker-brides-at-hlesey", { -- Source: Kevin Crossley-H
 	Conditions = function(s)
 		if (
 			GetFactionExists("hlesing-tribe") -- the Hlesings must exist
+			and GetPlayerData(GetFactionPlayer("hlesing-tribe"), "TotalNumUnitsConstructed") > 0
 			and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-dock") > 0 -- the player must have a dock
 			and GetPlayerData(trigger_player, "Allow", "upgrade-deity-thor") == "R" -- must be a worshipper of Thor/Thunraz
 			and GetNumUnitsAt(trigger_player, "buildings", {4089 - 128 - EarthStartX, 745 - 128 - EarthStartY}, {4089 + 128 - EarthStartX, 745 + 128 - EarthStartY}, GetMapLayer("", "Earth", 0)) > 0 -- the player must have a building relatively close to Hlesey

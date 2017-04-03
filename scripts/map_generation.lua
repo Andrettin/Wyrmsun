@@ -1850,11 +1850,7 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 					SetPlayerData(i, "Resources", "lumber", 5000)
 					SetPlayerData(i, "Resources", "stone", 5000)
 
-					if (water_map) then
-						SetAiType(i, "sea-attack")
-					else
-						SetAiType(i, "land-attack")
-					end
+					SetAiType(i, "land-attack")
 				end
 			end
 		end
