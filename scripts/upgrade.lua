@@ -230,6 +230,14 @@ DefineUpgrade("upgrade-printing-press", {
 	GrandStrategyProductionEfficiencyModifier = {"research", 25}
 })
 
+DefineUpgrade("upgrade-engineering", {
+	Name = "Engineering",
+	Class = "engineering",
+--	Description = "The invention of the printing press allowed knowledge to be more quickly and more efficiently spread.",
+	Icon = "icon-printing-press",
+	Costs = {"time", 250, "copper", 2000, "lumber", 2000}
+})
+
 DefineUpgrade("upgrade-steam-engine", {
 	Name = "Steam Engine",
 	Class = "steam-engine",
@@ -272,7 +280,11 @@ DefineDependency("unit-road",
 )
 
 DefinePredependency("unit-railroad",
-	{"upgrade-steam-engine"}
+	{"upgrade-engineering"}
+)
+
+DefinePredependency("unit-minecart",
+	{"upgrade-engineering"}
 )
 
 -- dependencies for items

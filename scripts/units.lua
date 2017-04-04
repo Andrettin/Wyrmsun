@@ -153,6 +153,7 @@ Units = {
 	"unit-orc-spearthrower", "unit-orc-sea-orc", "unit-orc-shaman",
 	"upgrade-ettin-civilization",
 	"unit-ettin",
+	"unit-minecart",
 --	"unit-adelobasileus-cromptoni", "unit-galerix-exilis", "unit-megacricetodon-collongensis", "unit-rat",
 	"unit-adelobasileus-cromptoni", "unit-galerix-exilis", "unit-rat",
 	"unit-goat", "unit-boar", "unit-horse",
@@ -312,6 +313,72 @@ DefineUnitType("unit-template-sapient-unit", { Name = _("Sapient Unit"),
 
 Load("scripts/items.lua")
 Load("scripts/units_fauna.lua")
+
+DefineUnitType("unit-minecart", {
+	Name = "Minecart",
+	Parent = "unit-template-unit",
+	Class = "minecart",
+	Civilization = "neutral",
+	Description = "Minecarts are useful to gather resources from mines in greater bulk.",
+	Image = {"file", "teuton/units/minecart.png", "size", {64, 64}},
+	Animations = "animations-minecart", Icon = "icon-teuton-minecart",
+	Costs = {"time", 250, "copper", 450, "lumber", 450},
+	RepairHp = 4,
+	RepairCosts = {"copper", 1, "lumber", 1},
+	Speed = 5,
+	HitPoints = 110,
+	TileSize = {1, 1}, BoxSize = {42, 42},
+	SightRange = 4,
+	AutoRepairRange = 4,
+	MaxAttackRange = 1,
+	Priority = 55,
+	Points = 50,
+	Demand = 1,
+	Type = "land",
+	Coward = true,
+	RightMouseAction = "harvest",
+	Rail = true,
+	CanGatherResources = {
+		{
+			"resource-id", "gold",
+			"resource-capacity", 200,
+			"resource-step", 4,
+			"wait-at-resource", 12,
+			"wait-at-depot", 150
+		},
+		{
+			"resource-id", "silver",
+			"resource-capacity", 200,
+			"resource-step", 4,
+			"wait-at-resource", 12,
+			"wait-at-depot", 150
+		},
+		{
+			"resource-id", "copper",
+			"resource-capacity", 200,
+			"resource-step", 4,
+			"wait-at-resource", 12,
+			"wait-at-depot", 150
+		},
+		{
+			"resource-id", "coal",
+			"resource-capacity", 200,
+			"resource-step", 4,
+			"wait-at-resource", 12,
+			"wait-at-depot", 150
+		}
+	},
+	Sounds = {
+		"selected", "gold-mine-selected",
+		"step", "step-dirt",
+		"step-dirt", "step-dirt",
+		"step-gravel", "step-gravel",
+		"step-mud", "step-mud",
+		"step-stone", "step-stone",
+		"step-grass", "step-leaves",
+		"dead", "explosion"
+	}
+} )
 
 DefineUnitType("unit-template-deposit", {
 	Name = "Deposit",
@@ -4133,7 +4200,7 @@ DefineUnitType("unit-railroad", {
 	TileSize = {1, 1}, BoxSize = {31, 31},
 	SightRange = 1,
 	Armor = 20, Missile = "missile-none",
-	SpeedBonus = 2,
+	SpeedBonus = 1,
 	Priority = 0, AnnoyComputerFactor = 45,
 	Points = 1,
 --	Corpse = "unit-destroyed-1x1-place",

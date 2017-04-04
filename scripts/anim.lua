@@ -1249,6 +1249,36 @@ DefineAnimations("animations-raft", {
 	Death = BuildingStill,
 })
 
+DefineAnimations("animations-minecart", {
+	Still = {"frame 0", "wait 4", "frame 0", "wait 1",},
+	Move = {
+		"unbreakable begin",
+		"if-var v.Speed.Value <= 5 speed_5",
+		"if-var v.Speed.Value == 6 speed_6",
+		"if-var v.Speed.Value >= 7 speed_7",
+		"label speed_5", -- 16 / (5 / 10) = 32 waits
+		"frame 0", "move 5", "wait 4", "frame 5", "move 5", "wait 5",
+		"frame 0", "move 6", "wait 6", "frame 5", "move 6", "wait 6",
+		"frame 0", "move 5", "wait 5", "frame 5", "move 5", "wait 5",
+		"frame 0", "goto end",
+		"label speed_6", -- 16 / (6 / 10) = c. 26 waits
+		"frame 0", "move 5", "wait 3", "frame 5", "move 5", "wait 4",
+		"frame 0", "move 6", "wait 5", "frame 5", "move 6", "wait 5",
+		"frame 0", "move 5", "wait 4", "frame 5", "move 5", "wait 4",
+		"frame 0", "goto end",
+		"label speed_7", -- 16 / (7 / 10) = c. 22 waits
+		"frame 0", "move 5", "wait 2", "frame 5", "move 5", "wait 4",
+		"frame 0", "move 6", "wait 4", "frame 5", "move 6", "wait 4",
+		"frame 0", "move 5", "wait 3", "frame 5", "move 5", "wait 4",
+		"frame 0", "goto end",
+		"label end", "unbreakable end", "wait 1",
+	},
+	Death = {
+		"unbreakable begin", "frame 10", "wait 3", "frame 15", "wait 3", "frame 20", "wait 3", "frame 25", "wait 100",
+		"frame 25", "unbreakable end", "wait 1",
+	}
+})
+
 DefineAnimations("animations-transport-ship", {
 	Still = {"frame 0", "wait 4", "frame 0", "wait 1",},
 	Move = {

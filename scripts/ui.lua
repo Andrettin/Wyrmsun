@@ -1669,6 +1669,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {Trader = "only", UnitTypeType = "naval", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Trades with foreign docks"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {Rail = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Can only move over railroads"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "editor-unit"}, 
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}

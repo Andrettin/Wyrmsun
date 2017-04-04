@@ -1082,6 +1082,7 @@
 /graphics/teuton/units/kogge_water.png (by Jinn) (licensed under the CC0)
 /graphics/teuton/units/leather_shoes.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/teuton/units/long_iron_sword.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/teuton/units/minecart.png (by Jinn) (licensed under the CC0)
 /graphics/teuton/units/old_man.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/teuton/units/ritter.png (by badbuckle and b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/teuton/units/robe.png (by Jinn and b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)

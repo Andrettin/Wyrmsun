@@ -69,7 +69,8 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-harvest",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
-		"unit-goblin-worker"
+		"unit-goblin-worker",
+		"unit-minecart"
 	}
 })
 
@@ -81,7 +82,8 @@ DefineButton( { Pos = 5, Level = 0,
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
-		"unit-goblin-worker"
+		"unit-goblin-worker",
+		"unit-minecart"
 	}
 })
 
@@ -736,6 +738,23 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-precise-shot",
 		"unit-goblin-shadowstalker"
 	}
 })
+
+-- Units -------------------------------------------------------
+
+--[[
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-minecart",
+	Action = "train-unit", Value = "unit-minecart",
+	Key = "c", Hint = "Build Mine~!cart", Popup = "popup-unit",
+	ForUnit = {
+		"unit-latin-town-hall",
+		"unit-germanic-town-hall",
+		"unit-teuton-town-hall", "unit-teuton-stronghold",
+		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
+		"unit-gnomish-town-hall",
+		"unit-goblin-town-hall", "unit-goblin-stronghold"
+	}
+})
+--]]
 
 -- Buildings ---------------------------------------------------
 
