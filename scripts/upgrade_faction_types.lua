@@ -93,6 +93,7 @@ DefineModifier("upgrade-trading-company", -- trading companies' docks produce fo
 
 DefineModifier("upgrade-trading-company", -- trading companies' caravans, ships and docks "regenerate", since they aren't supposed to have workers to repair them
 	{"HitPoints", 1, "Increase"},
+	{"apply-to", "unit-caravan"},
 	{"apply-to", "unit-gnomish-caravan"},
 	{"apply-to", "unit-germanic-transport-ship"}, {"apply-to", "unit-teuton-kogge"},
 	{"apply-to", "unit-dwarven-transport-ship"},

@@ -900,6 +900,7 @@
 /graphics/neutral/units/blood_bat.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/neutral/units/boar.png (by Jinn and Wildfire Games) (licensed under the CC-BY-SA 3.0)
 /graphics/neutral/units/bug.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/caravan.png (by b_o and Jinn) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/neutral/units/dread_bat.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/neutral/units/dwarven_corpse.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/units/fly.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)

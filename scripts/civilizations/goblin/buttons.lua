@@ -62,6 +62,16 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-3",
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-goblin-coinage",
 	Action = "harvest",
+	Allowed = "check-upgrade-or", AllowArg = {"upgrade-goblin-civilization"},
+	Key = "t", Hint = "~!Trade", Popup = "popup-commands",
+	Description = "Trade with foreign markets",
+	ForUnit = {
+		"unit-caravan"
+	}
+})
+
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-goblin-coinage",
+	Action = "harvest",
 	Key = "t", Hint = "~!Trade", Popup = "popup-commands",
 	Description = "Trade with foreign docks",
 	ForUnit = {

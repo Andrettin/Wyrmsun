@@ -717,7 +717,14 @@ SetSoundRange("step-dirt", 32)
 SetSoundVolumePercent("step-dirt", 33)
 
 MakeSound("step-gravel", {
-	"movement/step_gravel/step_gravel.wav"
+	"movement/step_dirt/stepdirt_1.wav",
+	"movement/step_dirt/stepdirt_2.wav",
+	"movement/step_dirt/stepdirt_3.wav",
+	"movement/step_dirt/stepdirt_4.wav",
+	"movement/step_dirt/stepdirt_5.wav",
+	"movement/step_dirt/stepdirt_6.wav",
+	"movement/step_dirt/stepdirt_7.wav",
+	"movement/step_dirt/stepdirt_8.wav"
 })
 SetSoundRange("step-gravel", 32)
 

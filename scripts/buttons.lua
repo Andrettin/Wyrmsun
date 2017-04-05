@@ -83,7 +83,9 @@ DefineButton( { Pos = 5, Level = 0,
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker",
-		"unit-minecart"
+		"unit-minecart",
+		"unit-caravan", "unit-gnomish-caravan",
+		"unit-germanic-transport-ship", "unit-teuton-kogge", "unit-dwarven-transport-ship", "unit-goblin-transport-ship"
 	}
 })
 
@@ -111,19 +113,23 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-rally-point",
 		"unit-germanic-town-hall",
 		"unit-germanic-barracks",
 		"unit-germanic-temple", "unit-germanic-dock",
+		"unit-germanic-market",
 		"unit-teuton-town-hall", "unit-teuton-stronghold",
 		"unit-teuton-barracks",
 		"unit-teuton-temple", "unit-teuton-dock",
+		"unit-teuton-market",
 		"unit-teuton-watch-tower", "unit-teuton-guard-tower",
 		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
 		"unit-dwarven-barracks",
 		"unit-dwarven-temple", "unit-dwarven-dock",
+		"unit-dwarven-market",
 		"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower",
 		"unit-gnomish-town-hall",
 		"unit-gnomish-barracks",
 		"unit-goblin-town-hall", "unit-goblin-stronghold",
 		"unit-goblin-mess-hall",
 		"unit-goblin-temple", "unit-goblin-dock",
+		"unit-goblin-market",
 		"unit-goblin-watch-tower", "unit-goblin-guard-tower"
 	}
 } )
@@ -755,6 +761,19 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-minecart",
 	}
 })
 --]]
+
+-- Units ---------------------------------------------------------
+
+DefineButton( { Pos = 1, Level = 0,
+	Action = "train-unit", Value = "unit-caravan",
+	Key = "c", Hint = "Build ~!Caravan", Popup = "popup-unit",
+	ForUnit = {
+		"unit-germanic-market",
+		"unit-teuton-market",
+		"unit-dwarven-market",
+		"unit-goblin-market"
+	}
+})
 
 -- Buildings ---------------------------------------------------
 

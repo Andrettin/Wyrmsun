@@ -71,6 +71,9 @@ https://github.com/Andrettin/Wyrmsun
 * Quests
 - Added a new Germanic side-quest, "Slay the Wild Folk at Hlesey".
 
+* Units
+- Caravans can now be built at Markets, allowing trade with foreign markets.
+
 -----------------------------------------------------------------------
 - 2.7.1
 -----------------------------------------------------------------------

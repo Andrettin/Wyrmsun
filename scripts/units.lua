@@ -153,6 +153,7 @@ Units = {
 	"unit-orc-spearthrower", "unit-orc-sea-orc", "unit-orc-shaman",
 	"upgrade-ettin-civilization",
 	"unit-ettin",
+	"unit-caravan",
 	"unit-minecart",
 --	"unit-adelobasileus-cromptoni", "unit-galerix-exilis", "unit-megacricetodon-collongensis", "unit-rat",
 	"unit-adelobasileus-cromptoni", "unit-galerix-exilis", "unit-rat",
@@ -377,6 +378,53 @@ DefineUnitType("unit-minecart", {
 		"step-stone", "step-stone",
 		"step-grass", "step-leaves",
 		"dead", "explosion"
+	}
+} )
+
+DefineUnitType("unit-caravan", {
+	Name = "Caravan",
+	Parent = "unit-template-unit",
+	Class = "caravan",
+	Civilization = "neutral",
+	Description = "Caravans are used by various different cultures to perform commerce.",
+	Image = {"file", "neutral/units/caravan.png", "size", {64, 64}},
+	Animations = "animations-gnomish-caravan", Icon = "icon-caravan",
+	Costs = {"time", 250, "copper", 900, "lumber", 900},
+	RepairHp = 4,
+	RepairCosts = {"copper", 1, "lumber", 1},
+	Speed = 5,
+	HitPoints = 110,
+	TileSize = {1, 1}, BoxSize = {63, 63},
+	SightRange = 4,
+	Priority = 55,
+	Points = 50,
+	Demand = 1,
+	Type = "land",
+	Coward = true,
+	RightMouseAction = "harvest",
+	MaxOnBoard = 2,
+	CanTransport = {"Building", "false", "GroundAttack", "false", "Fauna", "false", "SaveCargo", "false", "Mounted", "false"}, -- forbidding ground attack as an ugly way of making ballistas not be able to enter the transporter; and forbidding "SaveCargo" is an ugly way of making caravans not be able to enter other caravans
+	AttackFromTransporter = true,
+	SaveCargo = true,
+	Trader = true,
+	CanGatherResources = {
+		{
+			"resource-id", "trade",
+			"resource-capacity", 400,
+			"resource-step", 4,
+			"wait-at-resource", 6,
+			"wait-at-depot", 150
+		}
+	},
+	Sounds = {
+		"selected", "click",
+		"dead", "explosion",
+		"step", "step-dirt",
+		"step-dirt", "step-dirt",
+		"step-grass", "step-leaves",
+		"step-gravel", "step-gravel",
+		"step-mud", "step-mud",
+		"step-stone", "step-stone",
 	}
 } )
 

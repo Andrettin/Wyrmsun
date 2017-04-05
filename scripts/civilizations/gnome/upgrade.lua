@@ -62,3 +62,8 @@ DefinePredependency("unit-derro-worker",
 DefinePredependency("unit-derro-thug",
 	{"upgrade-derro-tribe-faction"}
 )
+
+DefinePredependency("unit-gnomish-caravan",
+	{"upgrade-gnomish-civilization"}
+)
+

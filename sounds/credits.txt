@@ -417,7 +417,6 @@ Manuel Senfft:
 /sounds/teuton/bauer/work_complete_extra_1.wav (licensed under the CC0)
 
 TinyWorlds:
-/sounds/movement/step_gravel/step_gravel.wav (licensed under the CC0)
 /sounds/movement/step_leaves/step_leaves_1.wav (licensed under the CC0)
 /sounds/movement/step_leaves/step_leaves_2.wav (licensed under the CC0)
 /sounds/movement/step_mud/step_mud.wav (licensed under the CC0)

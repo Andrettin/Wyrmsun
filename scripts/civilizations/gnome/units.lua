@@ -280,53 +280,15 @@ DefineUnitType("unit-gnomish-herbalist", {
 
 DefineUnitType("unit-gnomish-caravan", {
 	Name = "Caravan",
-	Parent = "unit-template-unit",
-	Class = "caravan",
+	Parent = "unit-caravan",
 	Civilization = "gnome",
 	Description = "These caravans are used by gnomish societies to conduct trade, bringing goods as far as the Heart Mountains.",
 	Image = {"file", "gnome/units/gnomish_caravan.png", "size", {64, 64}},
 	Animations = "animations-gnomish-caravan", Icon = "icon-gnomish-caravan",
-	Costs = {"time", 250, "copper", 900, "lumber", 900},
-	RepairHp = 4,
-	RepairCosts = {"copper", 1, "lumber", 1},
-	Speed = 5,
-	HitPoints = 110,
-	TileSize = {1, 1}, BoxSize = {63, 63},
-	SightRange = 4,
-	Priority = 55,
-	Points = 50,
-	Demand = 1,
-	Type = "land",
-	Coward = true,
-	RightMouseAction = "harvest",
-	MaxOnBoard = 2,
-	CanTransport = {"Building", "false", "GroundAttack", "false", "Fauna", "false", "SaveCargo", "false", "Mounted", "false"}, -- forbidding ground attack as an ugly way of making ballistas not be able to enter the transporter; and forbidding "SaveCargo" is an ugly way of making caravans not be able to enter other caravans
-	AttackFromTransporter = true,
-	SaveCargo = true,
-	ButtonKey = "c",
-	ButtonHint = "Build ~!Caravan",
-	Trader = true,
-	CanGatherResources = {
-		{
-			"resource-id", "trade",
-			"resource-capacity", 400,
-			"resource-step", 4,
-			"wait-at-resource", 6,
-			"wait-at-depot", 150
-		}
-	},
 	Sounds = {
-		"selected", "click",
 --		"acknowledge", "ballista-acknowledge",
 		"ready", "gnomish-caravan-ready",
-		"help", "basic-gnome-voices-help",
-		"dead", "explosion",
-		"step", "step-dirt",
-		"step-dirt", "step-dirt",
-		"step-grass", "step-leaves",
-		"step-gravel", "step-gravel",
-		"step-mud", "step-mud",
-		"step-stone", "step-stone",
+		"help", "basic-gnome-voices-help"
 	}
 } )
 
