@@ -64,6 +64,9 @@ https://github.com/Andrettin/Wyrmsun
 - Improved the AI attack back code.
 - The AI is now better capable of conducting naval assaults.
 
+* Buildings
+- Fixed issue with burning building graphics not appearing.
+
 * Miscellaneous
 - Minor pathfinding performance improvement.
 - Fixed crash which could happen when a transport ship was destroyed while a unit with a level-up point was inside.
@@ -78,6 +81,8 @@ https://github.com/Andrettin/Wyrmsun
 - Caravans can now be built at Markets, allowing trade with foreign markets.
 - Fixed issue which caused transporters to unload all units inside if a transporter unit's button was clicked while the transporter wasn't on a coast.
 - Fixed issue with corpse sight being greater than it should be.
+- A worker who is carrying resources will now return them to a stronghold upon right-clicking on it, instead of garrisoning in it.
+- A worker will now repair damaged garrisonable structures when right-clicking on them, isntead of garrisoning in them.
 
 -----------------------------------------------------------------------
 - 2.7.1

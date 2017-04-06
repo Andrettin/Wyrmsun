@@ -44,9 +44,14 @@ if (LoadedGame == false) then
 	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-germanic-barracks", "F")
 	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-germanic-carpenters-shop", "F")
 	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-germanic-smithy", "F")
+	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-germanic-dock", "F")
+	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-germanic-temple", "F")
+	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-germanic-market", "F")
 	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-gold-mine", "F")
 	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-silver-mine", "F")
 	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-copper-mine", "F")
+	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-road", "F")
+	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-railroad", "F")
 	
 	if (GrandStrategy == false) then
 		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})

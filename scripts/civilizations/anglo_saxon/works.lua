@@ -310,7 +310,7 @@ DefineUpgrade("upgrade-work-wid-theofentum", { -- Source: Felix Grendon, "The An
 })
 
 DefineUpgrade("upgrade-work-wid-todece", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 170-171.
-	Name = "For a Tootache", -- "Wið Tōðece"
+	Name = "For Toothache", -- "Wið Tōðece"
 	Work = "scroll",
 	Quote = "\"Lilumenne, it aches beyond telling when he lies down; it cools when on earth it burns most fiercely; finit, amen.\""
 })
