@@ -77,6 +77,7 @@ https://github.com/Andrettin/Wyrmsun
 * Units
 - Caravans can now be built at Markets, allowing trade with foreign markets.
 - Fixed issue which caused transporters to unload all units inside if a transporter unit's button was clicked while the transporter wasn't on a coast.
+- Fixed issue with corpse sight being greater than it should be.
 
 -----------------------------------------------------------------------
 - 2.7.1
