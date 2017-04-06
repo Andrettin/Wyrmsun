@@ -71,8 +71,12 @@ https://github.com/Andrettin/Wyrmsun
 * Quests
 - Added a new Germanic side-quest, "Slay the Wild Folk at Hlesey".
 
+* Scenarios
+- The scenario maps now contain tree stumps.
+
 * Units
 - Caravans can now be built at Markets, allowing trade with foreign markets.
+- Fixed issue which caused transporters to unload all units inside if a transporter unit's button was clicked while the transporter wasn't on a coast.
 
 -----------------------------------------------------------------------
 - 2.7.1

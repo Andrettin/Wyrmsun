@@ -41,6 +41,7 @@ DefineMapTemplate("nidavellir", {
 		"unit-gold-deposit", 4,
 		"unit-silver-deposit", 4,
 		"unit-copper-deposit", 4,
+		"unit-tree-stump", 16,
 		"unit-snigill", 64,
 		"unit-slime", 32,
 --		"unit-blood-bat", 16,

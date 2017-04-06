@@ -38,6 +38,7 @@ DefineMapTemplate("earth", {
 		"pine-tree", "high"
 	},
 	GeneratedNeutralUnits = {
+		"unit-tree-stump", 16,
 		"unit-bee", 64,
 		"unit-fly", 64,
 		"unit-bug", 64,
