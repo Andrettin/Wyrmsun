@@ -25,6 +25,23 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSettlement("budweis", {
+	Name = "Budweis",
+	MapTemplate = "earth",
+	Position = {4167, 937},
+	CulturalNames = {
+		"slav", "Budejovice",
+		"teuton", "Budweis"
+	},
+	HistoricalOwners = {
+		1815, "austria" -- Budweis was a part of the Austrian province of Bohemia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		1815, 0, "farm"
+	},
+	Regions = {"cisleithania", "czechoslovakia", "europe", "west-and-central-europe"}
+})
+
 DefineSettlement("prague", {
 	Name = "Prague",
 	MapTemplate = "earth",
