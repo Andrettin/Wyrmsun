@@ -70,6 +70,7 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - Minor pathfinding performance improvement.
 - Fixed crash which could happen when a transport ship was destroyed while a unit with a level-up point was inside.
+- Fixed a number of SDL rendering issues.
 
 * Quests
 - Added a new Germanic side-quest, "Slay the Wild Folk at Hlesey".
@@ -83,6 +84,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue with corpse sight being greater than it should be.
 - A worker who is carrying resources will now return them to a stronghold upon right-clicking on it, instead of garrisoning in it.
 - A worker will now repair damaged garrisonable structures when right-clicking on them, isntead of garrisoning in them.
+- Units now only auto-attack while following another unit if already close to them.
 
 -----------------------------------------------------------------------
 - 2.7.1
