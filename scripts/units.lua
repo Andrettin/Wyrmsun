@@ -342,6 +342,7 @@ DefineUnitType("unit-minecart", {
 	CanGatherResources = {
 		{
 			"resource-id", "gold",
+			"file-when-loaded", "teuton/units/minecart_with_gold.png",
 			"resource-capacity", 200,
 			"resource-step", 4,
 			"wait-at-resource", 12,
@@ -349,6 +350,7 @@ DefineUnitType("unit-minecart", {
 		},
 		{
 			"resource-id", "silver",
+			"file-when-loaded", "teuton/units/minecart_with_silver.png",
 			"resource-capacity", 200,
 			"resource-step", 4,
 			"wait-at-resource", 12,
@@ -356,6 +358,7 @@ DefineUnitType("unit-minecart", {
 		},
 		{
 			"resource-id", "copper",
+			"file-when-loaded", "teuton/units/minecart_with_copper.png",
 			"resource-capacity", 200,
 			"resource-step", 4,
 			"wait-at-resource", 12,
@@ -363,6 +366,7 @@ DefineUnitType("unit-minecart", {
 		},
 		{
 			"resource-id", "coal",
+			"file-when-loaded", "teuton/units/minecart_with_coal.png",
 			"resource-capacity", 200,
 			"resource-step", 4,
 			"wait-at-resource", 12,

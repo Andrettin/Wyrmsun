@@ -146,7 +146,7 @@ AddTrigger("jarl-considers-the-hersings",
 AddTrigger("jarl-meets-the-hersings",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil and GetFactionExists("hersing-tribe") and GetPlayerData(i, "HasQuest", "heimdalls-progeny")) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil and GetFactionExists("hersing-tribe") and GetPlayerData(i, "HasQuest", "heimdalls-progeny") and GetPlayerData(i, "HasQuest", "neutralize-the-hersings")) then
 				local erala_hero_unit = FindHero("erala", i)
 				if (GetNumUnitsAt(GetFactionPlayer("hersing-tribe"), "units", {GetUnitVariable(erala_hero_unit, "PosX") - 3, GetUnitVariable(erala_hero_unit, "PosY") - 3}, {GetUnitVariable(erala_hero_unit, "PosX") + 3, GetUnitVariable(erala_hero_unit, "PosY") + 3}) > 0 and Players[GetFactionPlayer("hersing-tribe")]:IsEnemy(Players[i]) == false) then
 					trigger_player = i
