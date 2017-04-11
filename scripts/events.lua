@@ -444,6 +444,10 @@ function Event(speaker, event_description, player, options, option_effects, even
 			menu:setDrawMenusUnder(true)
 		end
 		menu:resize(352, 352)
+		
+		if (speaker == nil) then
+			speaker = ""
+		end
 
 		local title_label = ""
 		if (type(speaker) == "number") then
