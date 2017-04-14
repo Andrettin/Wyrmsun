@@ -180,3 +180,5 @@ Load("scripts/map_templates/nidavellir/svarinshaug.lua")
 Load("scripts/map_templates/nidavellir/untersberg.lua")
 Load("scripts/map_templates/nidavellir/wildlands.lua")
 --Load("scripts/map_templates/nidavellir/caverns_of_chaincolt_city.lua")
+
+Load("scripts/map_templates/nidavellir/island_of_the_lizard_god.lua")

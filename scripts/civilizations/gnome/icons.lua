@@ -80,6 +80,18 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-gnomish-spearman",
+	Size = {46, 38},
+	File = "gnome/icons/spearman.png"
+})
+
+DefineIcon({
+	Name = "icon-gnomish-king",
+	Size = {46, 38},
+	File = "gnome/icons/king.png"
+})
+
+DefineIcon({
 	Name = "icon-gnomish-herbalist",
 	Size = {46, 38},
 	File = "gnome/icons/herbalist.png"
