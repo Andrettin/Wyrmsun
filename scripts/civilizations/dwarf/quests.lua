@@ -482,3 +482,17 @@ DefineQuest("the-mead-of-poetry-kill-kvasir", {
 	DestroyUnits = {"unit-dwarven-witness", "brising-clan", 1} -- placeholder
 })
 
+DefineQuest("island-of-the-lizard-god", {
+	Name = "Island of the Kobold God",
+	Icon = "icon-kobold-footpad",
+	PlayerColor = "green",
+	FailEffects = function(s)
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "island-of-the-lizard-god") then
+			CallDialogue("campaign-defeat", trigger_player)
+		end
+	end,
+	Objectives = {"- Discover the island's secrets"},
+	Uncompleteable = true,
+	Unobtainable = true
+})
+

@@ -1089,12 +1089,10 @@ DefineUnitType("unit-wyrm", {
 		"Goin", -- Wyrm/dragon in Norse mythology
 		"Grabak", -- Grabak is a wyrm/dragon in Norse mythology
 		"Grafvitnir", -- Grafvitnir is a wyrm/dragon in Norse mythology
-		"Grafvolluth", -- Grafvolluth is a wyrm/dragon in Norse mythology
 		"Jormungand", -- Wyrm/dragon in Norse mythology
 		"Ladon", -- Wyrm/dragon in Greek mythology
 		"Moin", -- Wyrm/dragon in Norse mythology
 		"Nidhogg", -- Nidhogg is a wyrm/dragon in Norse mythology
-		"Ofnir", -- Wyrm/dragon in Norse mythology
 		"Svafnir" -- Wyrm/dragon in Norse mythology
 	},
 	Variations = {

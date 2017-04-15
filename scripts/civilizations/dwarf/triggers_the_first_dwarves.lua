@@ -36,7 +36,7 @@ AddTrigger("a-rocky-home-introduction",
 		return false
 	end,
 	function() 
-		CallDialogue("a-rocky-home-introduction", player)
+		CallDialogue("a-rocky-home-introduction", trigger_player)
 		return false
 	end
 )

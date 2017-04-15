@@ -49,6 +49,12 @@ DefineUpgrade("upgrade-faction-aurvang", {
 	RequirementsString = "Writing and Masonry"
 })
 
+DefineUpgrade("upgrade-faction-driftwood", {
+	Name = "Driftwood",
+	EffectsString = "+2 Evasion for Swordsmen",
+	RequirementsString = "Writing and Masonry"
+})
+
 DefineUpgrade("upgrade-faction-ezmarria", {
 	Name = "Ezmarria",
 	EffectsString = "+50% Time Efficiency for Lumber Mills and Fugla Forges",
@@ -146,6 +152,17 @@ DefineModifier("upgrade-faction-aurvang",
 	{"apply-to", "unit-goblin-archer"}, {"apply-to", "unit-goblin-headhunter"}, {"apply-to", "unit-goblin-shadowstalker"}
 )
 
+DefineModifier("upgrade-faction-driftwood",
+	{"change-faction-to", "driftwood"}
+)
+
+DefineModifier("upgrade-faction-driftwood",
+	{"Evasion", 2},
+	{"Points", 10},
+	{"apply-to", "unit-goblin-militia"}, 
+	{"apply-to", "unit-goblin-swordsman"}, {"apply-to", "unit-goblin-barbarian"}, {"apply-to", "unit-goblin-warlord"}
+)
+
 DefineModifier("upgrade-faction-ezmarria",
 	{"change-faction-to", "ezmarria"}
 )
@@ -191,6 +208,14 @@ DefinePredependency("upgrade-faction-aurvang",
 )
 
 DefineDependency("upgrade-faction-aurvang",
+	{"upgrade-goblin-writing", "upgrade-goblin-masonry"}
+)
+
+DefinePredependency("upgrade-faction-driftwood",
+	{"upgrade-faction-aelak-tribe"}, "or", {"upgrade-faction-aurvangling-tribe"}, "or", {"upgrade-faction-dreadskull-tribe"}, "or", {"upgrade-faction-issudru-tribe"}, "or", {"upgrade-faction-khag-tribe"}, "or", {"upgrade-faction-lggi-tribe"}, "or", {"upgrade-faction-mabom-tribe"}, "or", {"upgrade-faction-sigre-tribe"}
+)
+
+DefineDependency("upgrade-faction-driftwood",
 	{"upgrade-goblin-writing", "upgrade-goblin-masonry"}
 )
 

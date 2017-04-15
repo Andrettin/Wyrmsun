@@ -57,6 +57,14 @@ DefineFaction("grafvitning-tribe", {
 	DefaultAI = "kobolds"
 })
 
+DefineFaction("grafvolling-tribe", {
+	Name = "Grafvolling Tribe",
+	Civilization = "kobold",
+	Type = "tribe",
+	Colors = {"red"},
+	DefaultAI = "kobolds"
+})
+
 DefineFaction("moinling-tribe", {
 	Name = "Moinling Tribe",
 	Civilization = "kobold",

@@ -8,10 +8,10 @@ end
 
 --ApplyMapTemplate("earth", 3766, 667) -- once the game has more human civilizations, and if performance is improved enough to allow a 2048x1024 map, this could be changed to the coordinates {3281, 427}, delimiting the map at the end of Iceland to the west, and at the end Scandinavia to the north; thus allowing the map to contain all of Europe and a significant part of the the areas adjacent to it
 
-if (GetCurrentCampaign() == "the-first-dwarves") then
+if (GetCampaignData(GetCurrentCampaign(), "MapTemplate") == "nidavellir") then
 	NidavellirStartX = GetCampaignData(GetCurrentCampaign(), "MapTemplateStartPosX")
 	NidavellirStartY = GetCampaignData(GetCurrentCampaign(), "MapTemplateStartPosY")
-elseif (GetCurrentCampaign() == "heimdalls-progeny" or GetCurrentCampaign() == "the-first-marcomannic-war") then
+elseif (GetCampaignData(GetCurrentCampaign(), "MapTemplate") == "earth") then
 	EarthStartX = GetCampaignData(GetCurrentCampaign(), "MapTemplateStartPosX")
 	EarthStartY = GetCampaignData(GetCurrentCampaign(), "MapTemplateStartPosY")
 end

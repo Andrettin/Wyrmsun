@@ -64,3 +64,12 @@ DefineButton( { Pos = 5, Level = 2, Icon = "icon-flag-black-skull-on-white",
 	Description = "Changes your faction to Tenebris",
 	ForUnit = {"unit-goblin-town-hall", "unit-goblin-stronghold"}
 } )
+
+DefineButton( { Pos = 6, Level = 2, Icon = "icon-flag-red-skull-on-yellow",
+	Action = "research", Value = "upgrade-faction-driftwood",
+	Allowed = "check-single-research",
+	Key = "d", Hint = "Found ~!Driftwood", Popup = "popup-research",
+	Description = "Changes your faction to Driftwood",
+	ForUnit = {"unit-goblin-town-hall", "unit-goblin-stronghold"}
+} )
+

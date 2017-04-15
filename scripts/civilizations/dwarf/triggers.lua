@@ -41,4 +41,5 @@ AddTrigger("the-mead-of-poetry-fjalar-and-galar-conspire",
 	end
 )
 
+Load("scripts/civilizations/dwarf/triggers_island_of_the_lizard_god.lua")
 Load("scripts/civilizations/dwarf/triggers_the_first_dwarves.lua")

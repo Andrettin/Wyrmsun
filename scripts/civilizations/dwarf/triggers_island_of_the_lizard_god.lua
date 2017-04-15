@@ -25,23 +25,18 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineMapTemplate("ofnirs-valley", {
-	Name = "Ofnir's Valley",
-	MainTemplate = "nidavellir",
-	Width = 47,
-	Height = 37,
-	SubtemplatePosition = {648, 157},
-	TerrainFile = "scripts/map_templates/nidavellir/ofnirs_valley.map", -- From Battle for Wesnoth: The Hammer of Thursagan (Mages and Drakes)
-	OverlayTerrainFile = "scripts/map_templates/nidavellir/ofnirs_valley_overlay.map" -- From Battle for Wesnoth: The Hammer of Thursagan (Mages and Drakes)
-})
-
-SetMapTemplateHero("ofnirs-valley", "ofnir", "ofning-tribe", {39, 20})
-SetMapTemplateUnit("ofnirs-valley", "unit-kobold-footpad", "ofning-tribe", {39, 20})
-SetMapTemplateUnit("ofnirs-valley", "unit-kobold-footpad", "ofning-tribe", {39, 20})
-SetMapTemplateUnit("ofnirs-valley", "unit-kobold-footpad", "ofning-tribe", {39, 20})
-SetMapTemplateUnit("ofnirs-valley", "unit-kobold-footpad", "ofning-tribe", {39, 20})
-SetMapTemplateUnit("ofnirs-valley", "unit-kobold-footpad", "ofning-tribe", {39, 20})
-SetMapTemplateUnit("ofnirs-valley", "unit-kobold-footpad", "ofning-tribe", {39, 20})
-SetMapTemplateUnit("ofnirs-valley", "unit-kobold-footpad", "ofning-tribe", {39, 20})
-SetMapTemplateUnit("ofnirs-valley", "unit-kobold-footpad", "ofning-tribe", {39, 20})
-SetMapTemplateUnit("ofnirs-valley", "unit-kobold-footpad", "ofning-tribe", {39, 20})
+AddTrigger("island-of-the-lizard-god-introduction",
+	function()
+		for i=0,(PlayerMax - 2) do
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "RaceName") == "dwarf" and i == GetThisPlayer() and GetCurrentCampaign() == "island-of-the-lizard-god") then
+				trigger_player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function() 
+		CallDialogue("island-of-the-lizard-god-introduction", trigger_player)
+		return false
+	end
+)

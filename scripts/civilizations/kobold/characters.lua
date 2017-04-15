@@ -31,7 +31,23 @@ DefineCharacter("fafnir", {
 	Type = "unit-wyrm",
 	Civilization = "kobold",
 	Faction = "fafning-tribe",
-	Description = _("Fafnir was originally a greedy dwarf, the son of Hreidmar and brother of Regin. Through potent magics he transformed himself into a wyrm."),
+	Description = "Fafnir was originally a greedy dwarf, the son of Hreidmar and brother of Regin. Through potent magics he transformed himself into a wyrm.",
 	Icon = "icon-wyrm-vicious",
 	Trait = "upgrade-vicious"
+})
+
+DefineCharacter("grafvolluth", { -- a wyrm/dragon in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 98.
+	Name = "Grafvolluth", -- means "the Field Gnawer" in Old Norse
+	Gender = "male",
+	Type = "unit-wyrm",
+	Civilization = "kobold",
+	Faction = "grafvolling-tribe"
+})
+
+DefineCharacter("ofnir", { -- a wyrm/dragon in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 98.
+	Name = "Ofnir", -- means "the Bewilderer" in Old Norse
+	Gender = "male",
+	Type = "unit-wyrm",
+	Civilization = "kobold",
+	Faction = "ofning-tribe"
 })

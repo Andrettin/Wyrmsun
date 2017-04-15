@@ -25,23 +25,25 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineMapTemplate("ofnirs-valley", {
-	Name = "Ofnir's Valley",
-	MainTemplate = "nidavellir",
-	Width = 47,
-	Height = 37,
-	SubtemplatePosition = {648, 157},
-	TerrainFile = "scripts/map_templates/nidavellir/ofnirs_valley.map", -- From Battle for Wesnoth: The Hammer of Thursagan (Mages and Drakes)
-	OverlayTerrainFile = "scripts/map_templates/nidavellir/ofnirs_valley_overlay.map" -- From Battle for Wesnoth: The Hammer of Thursagan (Mages and Drakes)
+DefineDialogue("island-of-the-lizard-god-introduction", {
+	Nodes = {
+		{
+			"speaker", "unit", "unit-dwarven-axefighter",
+			"text", "Curse these rocks! Our ship is done for, how will we return home from this strange island?"
+		},
+		{
+			"speaker", "unit", "unit-dwarven-scout",
+			"text", "Our fool of a captain thought he could avoid goblin pirates by sailing far from the coast. Now he is dead, and we are stranded..."
+		},
+		{
+			"speaker", "unit", "unit-dwarven-axefighter",
+			"text", "Aye, but complaining of the dead won't help us any. We need to build shelters for us few survivors.",
+			"option-effects", {
+				function(s)
+					SetPlayerData(trigger_player, "AcceptQuest", "island-of-the-lizard-god")
+--					SetPlayerData(trigger_player, "AcceptQuest", "a-rocky-home")
+				end
+			}
+		}
+	}
 })
-
-SetMapTemplateHero("ofnirs-valley", "ofnir", "ofning-tribe", {39, 20})
-SetMapTemplateUnit("ofnirs-valley", "unit-kobold-footpad", "ofning-tribe", {39, 20})
-SetMapTemplateUnit("ofnirs-valley", "unit-kobold-footpad", "ofning-tribe", {39, 20})
-SetMapTemplateUnit("ofnirs-valley", "unit-kobold-footpad", "ofning-tribe", {39, 20})
-SetMapTemplateUnit("ofnirs-valley", "unit-kobold-footpad", "ofning-tribe", {39, 20})
-SetMapTemplateUnit("ofnirs-valley", "unit-kobold-footpad", "ofning-tribe", {39, 20})
-SetMapTemplateUnit("ofnirs-valley", "unit-kobold-footpad", "ofning-tribe", {39, 20})
-SetMapTemplateUnit("ofnirs-valley", "unit-kobold-footpad", "ofning-tribe", {39, 20})
-SetMapTemplateUnit("ofnirs-valley", "unit-kobold-footpad", "ofning-tribe", {39, 20})
-SetMapTemplateUnit("ofnirs-valley", "unit-kobold-footpad", "ofning-tribe", {39, 20})
