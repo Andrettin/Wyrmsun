@@ -36,6 +36,14 @@ DefineCharacter("fafnir", {
 	Trait = "upgrade-vicious"
 })
 
+DefineCharacter("grafvitnir", { -- a wyrm/dragon in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 98.
+	Name = "Grafvitnir", -- means "the Gnawing Wolf" in Old Norse
+	Gender = "male",
+	Type = "unit-wyrm",
+	Civilization = "kobold",
+	Faction = "grafvitning-tribe"
+})
+
 DefineCharacter("grafvolluth", { -- a wyrm/dragon in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 98.
 	Name = "Grafvolluth", -- means "the Field Gnawer" in Old Norse
 	Gender = "male",

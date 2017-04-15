@@ -67,6 +67,10 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Fixed issue with burning building graphics not appearing.
 
+* Heroes
+- Added a few new wyrm heroes (without new portraits), recruitable at kobold mercenary camps.
+- Fixed issue which made recruitable fauna heroes' stats to not appear properly when hovering over their buttons.
+
 * Miscellaneous
 - Minor pathfinding performance improvement.
 - Fixed crash which could happen when a transport ship was destroyed while a unit with a level-up point was inside.
