@@ -37,13 +37,22 @@ DefineDialogue("island-of-the-lizard-god-introduction", {
 		},
 		{
 			"speaker", "unit", "unit-dwarven-axefighter",
-			"text", "Aye, but complaining of the dead won't help us any. We need to build shelters for those of us who survived.",
+			"text", "Aye, but complaining of the dead won't help us any. We need to build shelters for us survivors. And once we are secure, we can think of building ships to get out of this wooded hell.",
 			"option-effects", {
 				function(s)
 					SetPlayerData(trigger_player, "AcceptQuest", "island-of-the-lizard-god")
---					SetPlayerData(trigger_player, "AcceptQuest", "a-rocky-home")
+					SetPlayerData(trigger_player, "AcceptQuest", "island-of-the-lizard-god-build-shelters")
 				end
 			}
+		}
+	}
+})
+
+DefineDialogue("island-of-the-lizard-god-shelters-built", {
+	Nodes = {
+		{
+			"speaker", "unit", "unit-dwarven-miner",
+			"text", "Our shelters are done. We should now be safe from the elements, but.. might be good to scout the whereabouts."
 		}
 	}
 })

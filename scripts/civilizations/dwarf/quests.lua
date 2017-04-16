@@ -491,8 +491,20 @@ DefineQuest("island-of-the-lizard-god", {
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
-	Objectives = {"- Discover the island's secrets"},
+	Objectives = {"- Explore the island"},
 	Uncompleteable = true,
 	Unobtainable = true
+})
+
+DefineQuest("island-of-the-lizard-god-build-shelters", {
+	Name = "Build Shelters",
+	Icon = "icon-dwarven-mushroom-farm",
+	PlayerColor = "green",
+	CompletionEffects = function(s)
+		CallDialogue("island-of-the-lizard-god-shelters-built", trigger_player)
+	end,
+	Objectives = {"- Build a Mead Hall", "- Build 2 Mushroom Farms"},
+	Unobtainable = true,
+	BuildUnits = {"unit-dwarven-town-hall", 1, "unit-dwarven-mushroom-farm", 2}
 })
 
