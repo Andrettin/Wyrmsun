@@ -48,21 +48,21 @@ DefineTileset("name", "Fairlimbed Forest",
 		},
 		"solid", { "unused",
 			{}},								-- 000
-		"solid", { "shallow-water", "image", "tilesets/forest/terrain/water.png", "water",
+		"solid", { "shallow-water", "water",
 			{ 1, 1, 1, 1}},								-- 010
 		"solid", { "unused",
 			{}},								-- 020
-		"solid", { "dirt", "image", "tilesets/forest/terrain/grass_and_dirt.png", "land", "no-building", "dirt",
+		"solid", { "dirt", "land", "no-building", "dirt",
 			{ 4, 5, 6, 4}},								-- 030
 		"solid", { "unused",
 			{}},										-- 040
-		"solid", { "grass", "image", "tilesets/forest/terrain/grass_and_dirt.png", "land", "grass",
+		"solid", { "grass", "land", "grass",
 			{ 1, 2, 3, 1}},								-- 050
 		"solid", { "unused",
 			{}},										-- 060
-		"solid", { "fairlimbed-tree", "image", "tilesets/fairlimbed_forest/terrain/fairlimbed_tree.png", "land", "forest", "unpassable",
+		"solid", { "fairlimbed-tree", "land", "forest", "unpassable",
 			{ 18, 18, 18, 18}},							-- 070
-		"solid", { "rock", "image", "tilesets/forest/terrain/rock.png", "land", "rock", "unpassable",
+		"solid", { "rock", "land", "rock", "unpassable",
 			{ 1, 2, 3, 1}},								-- 080
 		"solid", { "unused",
 			{}},								-- 090

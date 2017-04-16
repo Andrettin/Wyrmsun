@@ -57,7 +57,7 @@ DefineTileset("name", "Cave",
 			{}},								-- 060
 		"solid", { "unused",
 			{}},								-- 070
-		"solid", { "cave-wall", "image", "tilesets/cave/terrain/rock.png", "land", "rock", "unpassable", "air-unpassable",
+		"solid", { "cave-wall", "land", "rock", "unpassable", "air-unpassable",
 			{ 18, 18, 18, 18}},					-- 080
 		"solid", { "unused",
 			{}},								-- 090

@@ -1088,7 +1088,6 @@ DefineUnitType("unit-wyrm", {
 	PersonalNames = {
 		"Goin", -- Wyrm/dragon in Norse mythology
 		"Grabak", -- Grabak is a wyrm/dragon in Norse mythology
-		"Grafvitnir", -- Grafvitnir is a wyrm/dragon in Norse mythology
 		"Jormungand", -- Wyrm/dragon in Norse mythology
 		"Ladon", -- Wyrm/dragon in Greek mythology
 		"Moin", -- Wyrm/dragon in Norse mythology
