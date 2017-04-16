@@ -31,7 +31,21 @@ DefineMapTemplate("island-of-the-lizard-god", {
 	TerrainImage = "scripts/map_templates/island_of_the_lizard_god.png",
 	Width = 160,
 	Height = 128,
-	SubtemplatePosition = {748 + 80, 536 + 64}
+	SubtemplatePosition = {748 + 80, 536 + 64},
+	GeneratedNeutralUnits = {
+		"unit-copper-deposit", 4,
+		"unit-tree-stump", 4,
+		"unit-snigill", 64,
+		"unit-slime", 32,
+		"unit-blood-bat", 16,
+		"unit-yale", 32,
+		"unit-dread-bat", 8
+	},
+	PlayerLocationGeneratedNeutralUnits = {
+		"unit-copper-deposit", 1,
+		"unit-wood-pile", 16,
+		"unit-stone-pile", 16
+	}
 })
 
 --[[
