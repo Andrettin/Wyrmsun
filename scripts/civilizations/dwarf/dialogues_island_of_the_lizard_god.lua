@@ -51,8 +51,8 @@ DefineDialogue("island-of-the-lizard-god-introduction", {
 DefineDialogue("island-of-the-lizard-god-shelters-built", {
 	Nodes = {
 		{
-			"speaker", "unit", "unit-dwarven-miner",
-			"text", "Our shelters are done. We should now be safe from the elements, but.. might be good to scout the whereabouts."
+			"speaker", "unit", "unit-brising-miner",
+			"text", "Our shelters are done. We should now be safe from the elements, but... might be good to scout the whereabouts."
 		}
 	}
 })
