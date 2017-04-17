@@ -212,6 +212,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-teuton-wall",
+	Size = {46, 38},
+	File = "teuton/icons/wall.png"
+})
+
+DefineIcon({
 	Name = "icon-teuton-spatha",
 	Size = {46, 38},
 	File = "teuton/icons/spatha.png"

@@ -1436,3 +1436,11 @@ DefineUnitType("unit-teuton-dock", {
 --		"help", "basic-teuton-voices-help-town"
 	}
 } )
+
+DefineUnitType("unit-teuton-wall", {
+	Parent = "unit-template-wall",
+	TerrainType = "teuton-wall",
+	Image = {"file", "teuton/buildings/wall.png", "size", {32, 32}},
+	Shadow = {"file", "teuton/buildings/wall_shadow.png", "size", {32, 32}},
+	Icon = "icon-teuton-wall"
+} )

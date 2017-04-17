@@ -70,6 +70,7 @@ Units = {
 	"unit-teuton-stables", "unit-teuton-temple", "unit-teuton-market",
 	"unit-teuton-watch-tower", "unit-teuton-guard-tower",
 	"unit-teuton-dock",
+	"unit-teuton-wall",
 	"upgrade-teuton-spatha", "upgrade-frank-spatha", "upgrade-teuton-pike", "upgrade-teuton-iron-shield", "upgrade-teuton-bodkin-arrow",
 	"upgrade-teuton-catapult-projectile-1", "upgrade-teuton-catapult-projectile-2",
 	"upgrade-teuton-iron-tipped-wood-plow",
@@ -3978,6 +3979,34 @@ DefineUnitType("unit-template-dock", {
 --		"acknowledge", "dwarven-lumber-mill-acknowledge",
 		"ready", "dock-ready",
 --		"help", "basic-dwarf-voices-help",
+		"dead", "building-destroyed"
+	}
+} )
+
+DefineUnitType("unit-template-wall", {
+	Name = "Wall",
+	Class = "wall",
+	Animations = "animations-building",
+	Costs = {"time", 30, "copper", 40, "stone", 60},
+	Construction = "construction-land-1x1",
+	RepairHp = 4,
+	RepairCosts = {"copper", 1, "lumber", 1},
+	Speed = 0,
+	HitPoints = 40,
+	DrawLevel = 39,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 1,
+	Armor = 20, Missile = "missile-none",
+	Priority = 0, AnnoyComputerFactor = 45,
+	Points = 1,
+--	Corpse = "unit-destroyed-1x1-place",
+	ExplodeWhenKilled = "missile-explosion",
+	Type = "land",
+	Building = true, VisibleUnderFog = true, Wall = true,
+	BuilderOutside = true,
+	HiddenInEditor = true,
+	RequirementsString = "Masonry",
+	Sounds = {
 		"dead", "building-destroyed"
 	}
 } )
