@@ -81,6 +81,7 @@ DefineTerrainType("mud", {
 DefineTerrainType("rockbound-cave-floor", {
 	Name = "Rockbound Cave Floor",
 	Character = "b",
+	Color = {128, 128, 160},
 	Flags = {"land", "no-building", "gravel"},
 	InnerBorderTerrains = {"dirt"},
 	Graphics = "terrain/rockbound_cave_floor.png",
@@ -90,6 +91,7 @@ DefineTerrainType("rockbound-cave-floor", {
 DefineTerrainType("cave-floor", {
 	Name = "Cave Floor",
 	Character = "c",
+	Color = {160, 160, 160},
 	Buildable = true,
 	Flags = {"land", "stone-floor"},
 	InnerBorderTerrains = {"dirt"},
@@ -646,6 +648,7 @@ DefineTerrainType("dungeon-wall", {
 DefineTerrainType("cave-wall", {
 	Name = "Cave Wall",
 	Character = "v",
+	Color = {32, 32, 32},
 	BaseTerrains = {"rockbound-cave-floor", "cave-floor"},
 	Overlay = true,
 	Flags = {"land", "rock", "unpassable", "air-unpassable"},
@@ -931,6 +934,7 @@ DefineTerrainType("railroad", { -- also represents tramways when linking a settl
 
 DefineTerrainType("teuton-wall", { -- also represents tramways when linking a settlement's buildings
 	Name = "Wall",
+	Color = {160, 128, 128},
 	BaseTerrains = {"dirt", "grass", "dry-mud", "cave-floor", "floor"},
 	Overlay = true,
 	Flags = {"land", "wall", "unpassable"},

@@ -28,7 +28,7 @@
 DefineMapTemplate("island-of-the-lizard-god", {
 	Name = "Island of the Kobold God",
 	MainTemplate = "nidavellir",
-	TerrainImage = "scripts/map_templates/island_of_the_lizard_god.png",
+	TerrainImage = "scripts/map_templates/nidavellir/island_of_the_lizard_god/island_of_the_lizard_god.png",
 	Width = 160,
 	Height = 128,
 	SubtemplatePositionTopLeft = {748, 536},
@@ -48,15 +48,21 @@ DefineMapTemplate("island-of-the-lizard-god", {
 	}
 })
 
---[[
-DefineMapTemplate("lair-of-the-lizard-god", {
-	Name = "Lair of the Kobold God",
-	MainTemplate = "island-of-the-lizard-god",
-	Width = 32,
-	Height = 32,
-	SubtemplatePositionTopLeft = {0, 48}
+DefineMapTemplate("island-of-the-lizard-god-underground", {
+	Name = "Island of the Kobold God Underground",
+	MainTemplate = "nidavellir-underground",
+	TerrainImage = "scripts/map_templates/nidavellir/island_of_the_lizard_god/island_of_the_lizard_god_underground.png",
+	Width = 160,
+	Height = 128,
+	SubtemplatePositionTopLeft = {748, 536},
+	PlayerLocationGeneratedNeutralUnits = {
+		"unit-copper-deposit", 1,
+		"unit-wood-pile", 16,
+		"unit-stone-pile", 16
+	}
 })
 
+--[[
 DefineMapTemplate("crucible-of-steel", {
 	Name = "Crucible of Steel",
 	MainTemplate = "island-of-the-lizard-god",
@@ -64,55 +70,17 @@ DefineMapTemplate("crucible-of-steel", {
 	Height = 32,
 	SubtemplatePositionTopLeft = {32, 32}
 })
-
-DefineMapTemplate("siren-swamp", {
-	Name = "Siren Swamp",
-	MainTemplate = "island-of-the-lizard-god",
-	Width = 32,
-	Height = 32,
-	SubtemplatePositionTopLeft = {32, 64}
-})
-
-DefineMapTemplate("driftwood", {
-	Name = "Driftwood",
-	MainTemplate = "island-of-the-lizard-god",
-	Width = 32,
-	Height = 32,
-	SubtemplatePositionTopLeft = {32, 96}
-})
-
-DefineMapTemplate("jungle-of-insanity", {
-	Name = "Jungle of Insanity",
-	MainTemplate = "island-of-the-lizard-god",
-	Width = 32,
-	Height = 32,
-	SubtemplatePositionTopLeft = {96, 0}
-})
-
-DefineMapTemplate("blackfang-river", {
-	Name = "Blackfang River",
-	MainTemplate = "island-of-the-lizard-god",
-	Width = 32,
-	Height = 32,
-	SubtemplatePositionTopLeft = {96, 64}
-})
+--]]
 
 DefineMapTemplate("mount-sacrifice", {
 	Name = "Mount Sacrifice",
-	MainTemplate = "island-of-the-lizard-god",
+	MainTemplate = "island-of-the-lizard-god-underground",
 	Width = 32,
-	Height = 32,
-	SubtemplatePositionTopLeft = {128, 48}
+	Height = 24,
+	SubtemplatePositionTopLeft = {128, 54},
+	TerrainImage = "scripts/map_templates/nidavellir/island_of_the_lizard_god/mount_sacrifice.png",
+	OverlayTerrainImage = "scripts/map_templates/nidavellir/island_of_the_lizard_god/mount_sacrifice_overlay.png"
 })
-
-DefineMapTemplate("land-of-the-goliaths", {
-	Name = "Land of the Goliaths",
-	MainTemplate = "island-of-the-lizard-god",
-	Width = 32,
-	Height = 32,
-	SubtemplatePositionTopLeft = {128, 80}
-})
---]]
 
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-cavern-entrance", "", {36, 35}) -- should be a connector to the underground level, to the Crucible of Steel
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-cavern-entrance", "", {133, 72}) -- should be a connector to the underground level, to Mount Sacrifice
