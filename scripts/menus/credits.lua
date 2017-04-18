@@ -187,6 +187,7 @@ function RunShowCreditsMenu()
 		"  Paolo Sammicheli",
 		"  Rob Best",
 		"  Taurus", -- Northern Rebirth maps and scenarios
+		"  Will Doyle", -- the Island of the Lizard God maps
 		_("Lore"),
 		"  Andrettin",
 		"  Battle for Wesnoth Team",
@@ -195,6 +196,7 @@ function RunShowCreditsMenu()
 		"  Joseph Simmons (turin)",
 		"  Lari Nieminen (zookeeper)",
 		"  Piotr Cychowski (Mist/cycholka)",
+		"  Will Doyle", -- the Island of the Lizard God adventure
 		_("Encyclopedia"),
 		"  Andrettin",
 		"  Battle for Wesnoth Team",
