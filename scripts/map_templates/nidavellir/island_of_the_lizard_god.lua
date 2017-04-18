@@ -83,8 +83,10 @@ DefineMapTemplate("mount-sacrifice", {
 })
 
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-cavern-entrance", "", {36, 35}) -- should be a connector to the underground level, to the Crucible of Steel
-SetMapTemplateUnit("island-of-the-lizard-god", "unit-cavern-entrance", "", {133, 72}) -- should be a connector to the underground level, to Mount Sacrifice
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-cavern-entrance", "", {59, 117}) -- should be a connector to the underground level, to Driftwood (which should be an underground settlement)
+
+SetMapTemplateLayerConnector("island-of-the-lizard-god", "unit-cavern-entrance", {133, 72}, 1, "mount-sacrifice-entrance")
+SetMapTemplateLayerConnector("island-of-the-lizard-god-underground", "unit-cavern-entrance", {133, 72}, 0, "mount-sacrifice-entrance")
 
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-dwarven-axefighter", "lyr", {14, 108}, 600)
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-dwarven-axefighter", "lyr", {14, 108}, 600)

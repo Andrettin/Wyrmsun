@@ -392,6 +392,13 @@ DefineUniqueItem("na-slovanech-monastery", { -- Alena Ježková, "77 Prague Lege
 } )
 --]]
 
+-- Layer Connectors
+
+DefineUniqueItem("mount-sacrifice-entrance", { -- from Will Doyle's "Island of the Lizard God"
+	Name = "Mount Sacrifice Entrance",
+	Type = "unit-cavern-entrance"
+} )
+
 -- Unique houses in Prague
 -- "House at Death"; Source: Alena Ježková, "77 Prague Legends", 2006, p. 35.
 -- "House at the Golden Well"; Source: Alena Ježková, "77 Prague Legends", 2006, p. 42.
