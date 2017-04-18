@@ -31,7 +31,7 @@ DefineMapTemplate("island-of-the-lizard-god", {
 	TerrainImage = "scripts/map_templates/island_of_the_lizard_god.png",
 	Width = 160,
 	Height = 128,
-	SubtemplatePosition = {748 + 80, 536 + 64},
+	SubtemplatePosition = {748 + 80 - 1, 536 + 64 - 1},
 	GeneratedNeutralUnits = {
 		"unit-copper-deposit", 4,
 		"unit-tree-stump", 4,
