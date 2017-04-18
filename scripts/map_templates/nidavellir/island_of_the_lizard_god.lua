@@ -116,6 +116,7 @@ DefineMapTemplate("land-of-the-goliaths", {
 
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-cavern-entrance", "", {36, 35}) -- should be a connector to the underground level, to the Crucible of Steel
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-cavern-entrance", "", {133, 72}) -- should be a connector to the underground level, to Mount Sacrifice
+SetMapTemplateUnit("island-of-the-lizard-god", "unit-cavern-entrance", "", {59, 117}) -- should be a connector to the underground level, to Driftwood (which should be an underground settlement)
 
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-dwarven-axefighter", "lyr", {14, 108}, 600)
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-dwarven-axefighter", "lyr", {14, 108}, 600)
@@ -127,15 +128,16 @@ SetMapTemplateUnit("island-of-the-lizard-god", "unit-dwarven-miner", "lyr", {14,
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-dwarven-miner", "lyr", {14, 108}, 600)
 
 SetMapTemplateHero("island-of-the-lizard-god", "grafvolluth", "grafvolling-tribe", {3,62})
+SetMapTemplateUnit("island-of-the-lizard-god", "unit-goblin-guard-tower", "grafvolling-tribe", {101, 68}) -- location of the main kobold Blackfang river fortification
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-kobold-footpad", "grafvolling-tribe", {101, 68})
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-kobold-footpad", "grafvolling-tribe", {101, 68})
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-kobold-footpad", "grafvolling-tribe", {101, 68})
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-kobold-footpad", "grafvolling-tribe", {101, 68})
-SetMapTemplateUnit("island-of-the-lizard-god", "unit-kobold-footpad", "grafvolling-tribe", {101, 68})
-SetMapTemplateUnit("island-of-the-lizard-god", "unit-kobold-footpad", "grafvolling-tribe", {101, 68})
-SetMapTemplateUnit("island-of-the-lizard-god", "unit-kobold-footpad", "grafvolling-tribe", {101, 68})
-SetMapTemplateUnit("island-of-the-lizard-god", "unit-kobold-footpad", "grafvolling-tribe", {101, 68})
-SetMapTemplateUnit("island-of-the-lizard-god", "unit-kobold-footpad", "grafvolling-tribe", {101, 68})
+
+SetMapTemplateUnit("island-of-the-lizard-god", "unit-goblin-guard-tower", "grafvolling-tribe", {78, 64})
+SetMapTemplateUnit("island-of-the-lizard-god", "unit-goblin-guard-tower", "grafvolling-tribe", {88, 80})
+SetMapTemplateUnit("island-of-the-lizard-god", "unit-goblin-guard-tower", "grafvolling-tribe", {110, 52})
+SetMapTemplateUnit("island-of-the-lizard-god", "unit-goblin-guard-tower", "grafvolling-tribe", {120, 63})
 
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-raft", "", {74, 92})
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-raft", "", {74, 93})
