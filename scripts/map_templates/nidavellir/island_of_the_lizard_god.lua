@@ -31,7 +31,7 @@ DefineMapTemplate("island-of-the-lizard-god", {
 	TerrainImage = "scripts/map_templates/island_of_the_lizard_god.png",
 	Width = 160,
 	Height = 128,
-	SubtemplatePosition = {748 + 80 - 1, 536 + 64 - 1},
+	SubtemplatePositionTopLeft = {748, 536},
 	GeneratedNeutralUnits = {
 		"unit-copper-deposit", 4,
 		"unit-tree-stump", 4,
@@ -54,7 +54,7 @@ DefineMapTemplate("lair-of-the-lizard-god", {
 	MainTemplate = "island-of-the-lizard-god",
 	Width = 32,
 	Height = 32,
-	SubtemplatePosition = {0, 48}
+	SubtemplatePositionTopLeft = {0, 48}
 })
 
 DefineMapTemplate("crucible-of-steel", {
@@ -62,7 +62,7 @@ DefineMapTemplate("crucible-of-steel", {
 	MainTemplate = "island-of-the-lizard-god",
 	Width = 32,
 	Height = 32,
-	SubtemplatePosition = {32, 32}
+	SubtemplatePositionTopLeft = {32, 32}
 })
 
 DefineMapTemplate("siren-swamp", {
@@ -70,7 +70,7 @@ DefineMapTemplate("siren-swamp", {
 	MainTemplate = "island-of-the-lizard-god",
 	Width = 32,
 	Height = 32,
-	SubtemplatePosition = {32, 64}
+	SubtemplatePositionTopLeft = {32, 64}
 })
 
 DefineMapTemplate("driftwood", {
@@ -78,7 +78,7 @@ DefineMapTemplate("driftwood", {
 	MainTemplate = "island-of-the-lizard-god",
 	Width = 32,
 	Height = 32,
-	SubtemplatePosition = {32, 96}
+	SubtemplatePositionTopLeft = {32, 96}
 })
 
 DefineMapTemplate("jungle-of-insanity", {
@@ -86,7 +86,7 @@ DefineMapTemplate("jungle-of-insanity", {
 	MainTemplate = "island-of-the-lizard-god",
 	Width = 32,
 	Height = 32,
-	SubtemplatePosition = {96, 0}
+	SubtemplatePositionTopLeft = {96, 0}
 })
 
 DefineMapTemplate("blackfang-river", {
@@ -94,7 +94,7 @@ DefineMapTemplate("blackfang-river", {
 	MainTemplate = "island-of-the-lizard-god",
 	Width = 32,
 	Height = 32,
-	SubtemplatePosition = {96, 64}
+	SubtemplatePositionTopLeft = {96, 64}
 })
 
 DefineMapTemplate("mount-sacrifice", {
@@ -102,7 +102,7 @@ DefineMapTemplate("mount-sacrifice", {
 	MainTemplate = "island-of-the-lizard-god",
 	Width = 32,
 	Height = 32,
-	SubtemplatePosition = {128, 48}
+	SubtemplatePositionTopLeft = {128, 48}
 })
 
 DefineMapTemplate("land-of-the-goliaths", {
@@ -110,9 +110,12 @@ DefineMapTemplate("land-of-the-goliaths", {
 	MainTemplate = "island-of-the-lizard-god",
 	Width = 32,
 	Height = 32,
-	SubtemplatePosition = {128, 80}
+	SubtemplatePositionTopLeft = {128, 80}
 })
 --]]
+
+SetMapTemplateUnit("island-of-the-lizard-god", "unit-cavern-entrance", "", {36, 35}) -- should be a connector to the underground level, to the Crucible of Steel
+SetMapTemplateUnit("island-of-the-lizard-god", "unit-cavern-entrance", "", {133, 72}) -- should be a connector to the underground level, to Mount Sacrifice
 
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-dwarven-axefighter", "lyr", {14, 108}, 600)
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-dwarven-axefighter", "lyr", {14, 108}, 600)
@@ -133,3 +136,8 @@ SetMapTemplateUnit("island-of-the-lizard-god", "unit-kobold-footpad", "grafvolli
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-kobold-footpad", "grafvolling-tribe", {101, 68})
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-kobold-footpad", "grafvolling-tribe", {101, 68})
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-kobold-footpad", "grafvolling-tribe", {101, 68})
+
+SetMapTemplateUnit("island-of-the-lizard-god", "unit-raft", "", {74, 92})
+SetMapTemplateUnit("island-of-the-lizard-god", "unit-raft", "", {74, 93})
+SetMapTemplateUnit("island-of-the-lizard-god", "unit-raft", "", {74, 94})
+SetMapTemplateUnit("island-of-the-lizard-god", "unit-raft", "", {74, 95})
