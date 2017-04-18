@@ -52,3 +52,5 @@ Load("scripts/settlements_moravia.lua")
 Load("scripts/settlements_persia.lua")
 Load("scripts/settlements_slovakia.lua")
 Load("scripts/settlements_spain.lua")
+
+Load("scripts/settlements_nidavellir.lua")

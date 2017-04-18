@@ -123,8 +123,6 @@ SetMapTemplateUnit("island-of-the-lizard-god", "unit-dwarven-miner", "lyr", {14,
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-dwarven-miner", "lyr", {14, 108}, 600)
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-dwarven-miner", "lyr", {14, 108}, 600)
 
-SetMapTemplateUnit("island-of-the-lizard-god", "unit-goblin-town-hall", "driftwood", {59, 117}, 600)
-
 SetMapTemplateHero("island-of-the-lizard-god", "grafvolluth", "grafvolling-tribe", {3,62})
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-kobold-footpad", "grafvolling-tribe", {101, 68})
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-kobold-footpad", "grafvolling-tribe", {101, 68})
