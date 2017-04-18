@@ -36,6 +36,16 @@ DefineTerrainFeature("arkanthoria-river", {
 	}
 })
 
+DefineTerrainFeature("blackfang-river", { -- from Will Doyle's "Island of the Lizard God"
+	Name = "Blackfang River",
+	TerrainType = "shallow-water",
+	Color = {0, 208, 176},
+	World = "Nidavellir",
+	CulturalNames = {
+		"kobold", "Blackfang River"
+	}
+})
+
 DefineTerrainFeature("lake-vrug", {
 	Name = "Lake Vrug",
 	TerrainType = "shallow-water",
