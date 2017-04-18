@@ -41,6 +41,24 @@ SetMapTemplateLayerConnector("island-of-the-lizard-god-underground", "unit-caver
 -- "Surprisingly lightly guarded entry chamber"
 SetMapTemplateUnit("mount-sacrifice", "unit-kobold-footpad", "grafvolling-tribe", {3, 13})
 
+-- "Hundreds of lizardmen cavorting on a ramshackle platform above a sacrifice pool filled with ravenous crocodiles."
+SetMapTemplateUnit("mount-sacrifice", "unit-kobold-footpad", "grafvolling-tribe", {10, 13})
+SetMapTemplateUnit("mount-sacrifice", "unit-kobold-footpad", "grafvolling-tribe", {10, 13})
+SetMapTemplateUnit("mount-sacrifice", "unit-kobold-footpad", "grafvolling-tribe", {10, 13})
+SetMapTemplateUnit("mount-sacrifice", "unit-kobold-footpad", "grafvolling-tribe", {10, 13})
+SetMapTemplateUnit("mount-sacrifice", "unit-kobold-footpad", "grafvolling-tribe", {12, 11})
+SetMapTemplateUnit("mount-sacrifice", "unit-kobold-footpad", "grafvolling-tribe", {12, 11})
+SetMapTemplateUnit("mount-sacrifice", "unit-kobold-footpad", "grafvolling-tribe", {12, 11})
+SetMapTemplateUnit("mount-sacrifice", "unit-kobold-footpad", "grafvolling-tribe", {12, 11})
+SetMapTemplateUnit("mount-sacrifice", "unit-kobold-footpad", "grafvolling-tribe", {12, 15})
+SetMapTemplateUnit("mount-sacrifice", "unit-kobold-footpad", "grafvolling-tribe", {12, 15})
+SetMapTemplateUnit("mount-sacrifice", "unit-kobold-footpad", "grafvolling-tribe", {12, 15})
+SetMapTemplateUnit("mount-sacrifice", "unit-kobold-footpad", "grafvolling-tribe", {12, 15})
+SetMapTemplateUnit("mount-sacrifice", "unit-kobold-footpad", "grafvolling-tribe", {13, 13})
+SetMapTemplateUnit("mount-sacrifice", "unit-kobold-footpad", "grafvolling-tribe", {13, 13})
+SetMapTemplateUnit("mount-sacrifice", "unit-kobold-footpad", "grafvolling-tribe", {13, 13})
+SetMapTemplateUnit("mount-sacrifice", "unit-kobold-footpad", "grafvolling-tribe", {13, 13})
+
 -- "Guard room staffed by drunken lizardmen"
 SetMapTemplateUnit("mount-sacrifice", "unit-table", "", {4, 5})
 SetMapTemplateUnit("mount-sacrifice", "unit-kobold-footpad", "grafvolling-tribe", {4, 5})
