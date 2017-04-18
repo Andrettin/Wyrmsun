@@ -72,21 +72,8 @@ DefineMapTemplate("crucible-of-steel", {
 })
 --]]
 
-DefineMapTemplate("mount-sacrifice", {
-	Name = "Mount Sacrifice",
-	MainTemplate = "island-of-the-lizard-god-underground",
-	Width = 32,
-	Height = 24,
-	SubtemplatePositionTopLeft = {128, 54},
-	TerrainImage = "scripts/map_templates/nidavellir/island_of_the_lizard_god/mount_sacrifice.png",
-	OverlayTerrainImage = "scripts/map_templates/nidavellir/island_of_the_lizard_god/mount_sacrifice_overlay.png"
-})
-
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-cavern-entrance", "", {36, 35}) -- should be a connector to the underground level, to the Crucible of Steel
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-cavern-entrance", "", {59, 117}) -- should be a connector to the underground level, to Driftwood (which should be an underground settlement)
-
-SetMapTemplateLayerConnector("island-of-the-lizard-god", "unit-cavern-entrance", {133, 72}, 1, "mount-sacrifice-entrance")
-SetMapTemplateLayerConnector("island-of-the-lizard-god-underground", "unit-cavern-entrance", {133, 72}, 0, "mount-sacrifice-entrance")
 
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-dwarven-axefighter", "lyr", {14, 108}, 600)
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-dwarven-axefighter", "lyr", {14, 108}, 600)
@@ -113,3 +100,5 @@ SetMapTemplateUnit("island-of-the-lizard-god", "unit-raft", "", {74, 92})
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-raft", "", {74, 93})
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-raft", "", {74, 94})
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-raft", "", {74, 95})
+
+Load("scripts/map_templates/nidavellir/island_of_the_lizard_god/mount_sacrifice.lua")
