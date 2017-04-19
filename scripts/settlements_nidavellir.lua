@@ -36,7 +36,8 @@ DefineSettlement("driftwood", { -- from Will Doyle's "Island of the Lizard God"
 		600, "driftwood"
 	},
 	HistoricalBuildings = {
-		600, 0, "town-hall"
+		600, 0, "town-hall",
+		600, 0, "mercenary-camp", "ape-cartel"
 	},
 	Regions = {}
 })

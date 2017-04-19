@@ -70,7 +70,7 @@ SetMapTemplateUnit("mount-sacrifice", "unit-chair", "", {12, 2})
 SetMapTemplateUnit("mount-sacrifice", "unit-kobold-footpad", "grafvolling-tribe", {12, 2}) -- Kobold king's champion
 
 -- "Lizard king's throne chambers. (Lots of treasure!)"
-SetMapTemplateUnit("mount-sacrifice", "unit-bed", "", {17, 2})
+SetMapTemplateUnit("mount-sacrifice", "unit-gold-chest", "", {17, 2})
 SetMapTemplateUnit("mount-sacrifice", "unit-bed", "", {21, 2})
 SetMapTemplateUnit("mount-sacrifice", "unit-kobold-footpad", "grafvolling-tribe", {17, 2}) -- Kobold king
 
