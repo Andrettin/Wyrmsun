@@ -52,9 +52,16 @@ DefineMapTemplate("island-of-the-lizard-god-underground", {
 	Name = "Island of the Kobold God Underground",
 	MainTemplate = "nidavellir-underground",
 	TerrainImage = "scripts/map_templates/nidavellir/island_of_the_lizard_god/island_of_the_lizard_god_underground.png",
+	OverlayTerrainImage = "scripts/map_templates/nidavellir/island_of_the_lizard_god/island_of_the_lizard_god_underground_overlay.png",
 	Width = 160,
 	Height = 128,
 	SubtemplatePositionTopLeft = {748, 536},
+	GeneratedNeutralUnits = {
+		"unit-copper-deposit", 1,
+		"unit-wood-pile", 64,
+		"unit-snigill", 8,
+		"unit-slime", 4,
+	},
 	PlayerLocationGeneratedNeutralUnits = {
 		"unit-copper-deposit", 1,
 		"unit-wood-pile", 16,
@@ -73,7 +80,9 @@ DefineMapTemplate("crucible-of-steel", {
 --]]
 
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-cavern-entrance", "", {36, 35}) -- should be a connector to the underground level, to the Crucible of Steel
-SetMapTemplateUnit("island-of-the-lizard-god", "unit-cavern-entrance", "", {59, 117}) -- should be a connector to the underground level, to Driftwood (which should be an underground settlement)
+
+SetMapTemplateLayerConnector("island-of-the-lizard-god", "unit-cavern-entrance", {59, 117}, 1, "driftwood-entrance")
+SetMapTemplateLayerConnector("island-of-the-lizard-god-underground", "unit-cavern-entrance", {59, 117}, 0, "driftwood-entrance")
 
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-dwarven-axefighter", "lyr", {14, 108}, 600)
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-dwarven-axefighter", "lyr", {14, 108}, 600)

@@ -27,7 +27,7 @@
 
 DefineSettlement("driftwood", { -- from Will Doyle's "Island of the Lizard God"
 	Name = "Driftwood",
-	MapTemplate = "island-of-the-lizard-god",
+	MapTemplate = "island-of-the-lizard-god-underground",
 	Position = {59, 117},
 	CulturalNames = {
 		"goblin", "Driftwood" -- in the original, it is a town run by a cartel of intelligent apes
