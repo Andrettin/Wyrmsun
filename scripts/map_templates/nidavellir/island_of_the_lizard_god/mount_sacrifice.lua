@@ -30,7 +30,7 @@ DefineMapTemplate("mount-sacrifice", {
 	MainTemplate = "island-of-the-lizard-god-underground",
 	Width = 32,
 	Height = 24,
-	SubtemplatePositionTopLeft = {128, 54},
+	SubtemplatePositionTopLeft = {128, 53},
 	TerrainImage = "scripts/map_templates/nidavellir/island_of_the_lizard_god/mount_sacrifice.png",
 	OverlayTerrainImage = "scripts/map_templates/nidavellir/island_of_the_lizard_god/mount_sacrifice_overlay.png"
 })
@@ -81,4 +81,4 @@ SetMapTemplateUnit("mount-sacrifice", "unit-kobold-footpad", "grafvolling-tribe"
 SetMapTemplateUnit("mount-sacrifice", "unit-kobold-footpad", "grafvolling-tribe", {21, 14})
 
 -- "Prisoners tortured here prior to sacrifice."
-SetMapTemplateUnit("mount-sacrifice", "unit-volcanic-crater", "", {27, 12})
+SetMapTemplateUnit("mount-sacrifice", "unit-volcanic-crater", "", {28, 12})
