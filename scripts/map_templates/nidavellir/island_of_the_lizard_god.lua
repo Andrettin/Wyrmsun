@@ -69,18 +69,6 @@ DefineMapTemplate("island-of-the-lizard-god-underground", {
 	}
 })
 
---[[
-DefineMapTemplate("crucible-of-steel", {
-	Name = "Crucible of Steel",
-	MainTemplate = "island-of-the-lizard-god",
-	Width = 32,
-	Height = 32,
-	SubtemplatePositionTopLeft = {32, 32}
-})
---]]
-
-SetMapTemplateUnit("island-of-the-lizard-god", "unit-cavern-entrance", "", {36, 35}) -- should be a connector to the underground level, to the Crucible of Steel
-
 SetMapTemplateLayerConnector("island-of-the-lizard-god", "unit-cavern-entrance", {59, 117}, 1, "driftwood-entrance")
 SetMapTemplateLayerConnector("island-of-the-lizard-god-underground", "unit-cavern-entrance", {59, 117}, 0, "driftwood-entrance")
 
@@ -110,4 +98,5 @@ SetMapTemplateUnit("island-of-the-lizard-god", "unit-raft", "", {74, 93})
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-raft", "", {74, 94})
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-raft", "", {74, 95})
 
+Load("scripts/map_templates/nidavellir/island_of_the_lizard_god/crucible_of_steel.lua")
 Load("scripts/map_templates/nidavellir/island_of_the_lizard_god/mount_sacrifice.lua")

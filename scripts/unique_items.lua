@@ -394,6 +394,11 @@ DefineUniqueItem("na-slovanech-monastery", { -- Alena Ježková, "77 Prague Lege
 
 -- Layer Connectors
 
+DefineUniqueItem("crucible-of-steel-entrance", { -- from Will Doyle's "Island of the Lizard God"
+	Name = "Crucible of Steel Entrance",
+	Type = "unit-cavern-entrance"
+} )
+
 DefineUniqueItem("driftwood-entrance", { -- from Will Doyle's "Island of the Lizard God"
 	Name = "Driftwood Entrance",
 	Type = "unit-cavern-entrance"
