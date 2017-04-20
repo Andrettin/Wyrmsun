@@ -258,7 +258,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-masonry",
 	ForUnit = {"unit-teuton-lumber-mill"}
 } )
 
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-coinage",
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-coinage",
 	Action = "research", Value = "upgrade-teuton-coinage",
 	Allowed = "check-single-research",
 	Description = "+10% Copper, Silver and Gold Processing. -5% Trade Cost for Markets.",
@@ -266,7 +266,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-coinage",
 	ForUnit = {"unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-norse-runewriting",
 	Action = "research", Value = "upgrade-teuton-writing",
 	Allowed = "check-single-research",
 	Description = "+10% Time Efficiency for all buildings. Allows Scrolls and Books to be sold at the Market.",
@@ -274,12 +274,12 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
 	ForUnit = {"unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 4, Level = 0, Icon = "icon-cauldron",
+DefineButton( { Pos = 8, Level = 0, Icon = "icon-cauldron",
 	Action = "research", Value = "upgrade-teuton-alchemy",
 	Allowed = "check-single-research",
 	Description = "+1 Fire Damage for Schutzes, +5 Fire Damage for Catapults. Allows new magic affixes for items sold at the Market.",
 	Key = "a", Hint = "Research ~!Alchemy", Popup = "popup-research",
-	ForUnit = {"unit-teuton-stronghold"}
+	ForUnit = {"unit-teuton-smithy"}
 } )
 
 -- Deities ----------------------------------------------------------
@@ -357,7 +357,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-guard-tower",
   Key = "g", Hint = "Upgrade to ~!Guard Tower", Popup = "popup-building",
   ForUnit = {"unit-teuton-watch-tower"} } )
 
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-stronghold",
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-stronghold",
 	Action = "upgrade-to", Value = "unit-teuton-stronghold",
 	Allowed = "check-upgrade-to",
 	Key = "u", Hint = "Upgrade to B~!urg", Popup = "popup-building",

@@ -233,8 +233,10 @@ DefineUpgrade("upgrade-printing-press", {
 DefineUpgrade("upgrade-engineering", {
 	Name = "Engineering",
 	Class = "engineering",
---	Description = "The invention of the printing press allowed knowledge to be more quickly and more efficiently spread.",
-	Icon = "icon-printing-press",
+	Civilization = "neutral",
+	Icon = "icon-engineering",
+	Description = "The development of engineering allows the creation of more complex mechanisms.\n\nEffect: Allows siege engines, railroads and minecarts.",
+	RequirementsString = "Writing and Masonry",
 	Costs = {"time", 250, "copper", 2000, "lumber", 2000}
 })
 
@@ -279,12 +281,19 @@ DefineDependency("unit-road",
 	"or", {"upgrade-teuton-masonry"}
 )
 
-DefinePredependency("unit-railroad",
+DefineDependency("unit-railroad",
 	{"upgrade-engineering"}
 )
 
-DefinePredependency("unit-minecart",
+DefineDependency("unit-minecart",
 	{"upgrade-engineering"}
+)
+
+-- dependencies for neutral upgrades
+DefineDependency("upgrade-engineering",
+	{"upgrade-dwarven-runewriting", "upgrade-dwarven-masonry"},
+	"or", {"upgrade-goblin-writing", "upgrade-goblin-masonry"},
+	"or", {"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
 -- dependencies for items

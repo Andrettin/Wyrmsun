@@ -359,7 +359,7 @@ DefinePredependency("unit-dwarven-ballista",
 )
 
 DefineDependency("unit-dwarven-ballista",
-	{"unit-dwarven-smithy", "unit-dwarven-lumber-mill"}, "or", {"unit-brising-smithy", "unit-dwarven-lumber-mill"}, "or", {"upgrade-mercenary-company"}
+	{"unit-dwarven-smithy", "unit-dwarven-lumber-mill", "upgrade-engineering"}, "or", {"unit-brising-smithy", "unit-dwarven-lumber-mill", "upgrade-engineering"}, "or", {"upgrade-mercenary-company", "upgrade-engineering"}
 )
 
 DefinePredependency("unit-dwarven-yale-pen",

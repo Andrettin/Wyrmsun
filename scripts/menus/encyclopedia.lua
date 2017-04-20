@@ -135,6 +135,14 @@ function RunEncyclopediaUnitsCivilizationMenu(state)
 
 	local civilizations = {}
 	
+	local function compare_civilization(a, b)
+		if (a ~= b and (a == "neutral" or b == "neutral")) then
+			return a == "neutral"
+		else
+			return a < b
+		end
+	end
+	
 	if (state ~= "heroes" and state ~= "deities" and state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "runic_suffixes" and state ~= "unique_items") then
 		local units_table = {}
 		if not (state == "items") then
@@ -215,7 +223,16 @@ function RunEncyclopediaUnitsCivilizationMenu(state)
 		end
 	end
 	
-	table.sort(civilizations)
+	table.sort(civilizations, compare_civilization)
+	
+	local civilization_adjectives = {}
+	for i = 1, table.getn(civilizations) do
+		if (civilizations[i] == "neutral") then
+			table.insert(civilization_adjectives, "General")
+		else
+			table.insert(civilization_adjectives, GetCivilizationData(civilizations[i], "Adjective"))
+		end
+	end
 
 	local civilization_x = 0
 	if (GetTableSize(civilizations) > 20) then
@@ -226,7 +243,7 @@ function RunEncyclopediaUnitsCivilizationMenu(state)
 	local civilization_y = -3
 
 	for i = 1, table.getn(civilizations) do
-		menu:addFullButton(_(GetCivilizationData(civilizations[i], "Adjective") .. " " .. _(CapitalizeString(state))), "", offx + 208 + (113 * civilization_x), offy + 104 + (36 * (civilization_y + height_offset)),
+		menu:addFullButton(_(civilization_adjectives[i] .. " " .. CapitalizeString(state)), "", offx + 208 + (113 * civilization_x), offy + 104 + (36 * (civilization_y + height_offset)),
 			function() RunEncyclopediaUnitsMenu(state, civilizations[i]); end)
 
 		if (civilization_y > 5 or (civilization_y > 4 and Video.Height < 600)) then

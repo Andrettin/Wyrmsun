@@ -55,6 +55,11 @@ DefineUpgrade("upgrade-faction-shorbear-clan", {
 	EffectsString = "+15 Damage for Ballistas"
 })
 
+DefineUpgrade("upgrade-faction-whitesteel-clan", {
+	Name = "Whitesteel Clan",
+	EffectsString = "+2 Damage for Guards"
+})
+
 DefineUpgrade("upgrade-faction-joruvellir", {
 	Name = "Joruvellir",
 	EffectsString = "+2 Damage for Scouts, -10% cost for Yale Pens",
@@ -179,6 +184,16 @@ DefineModifier("upgrade-faction-shorbear-clan",
 	{"change-faction-to", "shorbear-clan"}
 )
 
+DefineModifier("upgrade-faction-whitesteel-clan",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-dwarven-guard"}
+)
+
+DefineModifier("upgrade-faction-whitesteel-clan",
+	{"change-faction-to", "whitesteel-clan"}
+)
+
 DefineModifier("upgrade-faction-joruvellir",
 	{"BasicDamage", 2},
 	{"Points", 10},
@@ -280,6 +295,12 @@ DefinePredependency("upgrade-faction-shorbear-clan",
 	{"upgrade-faction-brising-clan"}
 )
 
+DefinePredependency("upgrade-faction-whitesteel-clan",
+	{"upgrade-faction-brising-clan"},
+	"or", {"upgrade-faction-norlund-clan"},
+	"or", {"upgrade-faction-shorbear-clan"}
+)
+
 DefinePredependency("upgrade-faction-joruvellir",
 	{"upgrade-faction-eikinskjaldi-clan"}
 )
@@ -289,7 +310,7 @@ DefineDependency("upgrade-faction-joruvellir",
 )
 
 DefinePredependency("upgrade-faction-kal-kartha",
-	{"upgrade-faction-shadowcharm-clan"}, "or", {"upgrade-faction-shinsplitter-clan"}, "or", {"upgrade-faction-shorbear-clan"}
+	{"upgrade-faction-shadowcharm-clan"}, "or", {"upgrade-faction-shinsplitter-clan"}, "or", {"upgrade-faction-shorbear-clan"}, "or", {"upgrade-faction-whitesteel-clan"}
 )
 
 DefineDependency("upgrade-faction-kal-kartha",
@@ -297,7 +318,7 @@ DefineDependency("upgrade-faction-kal-kartha",
 )
 
 DefinePredependency("upgrade-faction-knalga",
-	{"upgrade-faction-norlund-clan"}, "or", {"upgrade-faction-shinsplitter-clan"}, "or", {"upgrade-faction-shorbear-clan"}
+	{"upgrade-faction-norlund-clan"}, "or", {"upgrade-faction-shinsplitter-clan"}, "or", {"upgrade-faction-shorbear-clan"}, "or", {"upgrade-faction-whitesteel-clan"}
 )
 
 DefineDependency("upgrade-faction-knalga",
@@ -305,7 +326,7 @@ DefineDependency("upgrade-faction-knalga",
 )
 
 DefinePredependency("upgrade-faction-lyr",
-	{"upgrade-faction-brising-clan"}
+	{"upgrade-faction-brising-clan"}, "or", {"upgrade-faction-whitesteel-clan"}
 )
 
 DefineDependency("upgrade-faction-lyr",

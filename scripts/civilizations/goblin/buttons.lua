@@ -285,7 +285,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-masonry",
 	ForUnit = {"unit-goblin-lumber-mill"}
 } )
 
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-goblin-coinage",
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-goblin-coinage",
 	Action = "research", Value = "upgrade-goblin-coinage",
 	Allowed = "check-single-research",
 	Description = "+10% Copper, Silver and Gold Processing. -5% Trade Cost for Markets.",
@@ -293,7 +293,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-goblin-coinage",
 	ForUnit = {"unit-goblin-stronghold"}
 } )
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-norse-runewriting",
 	Action = "research", Value = "upgrade-goblin-writing",
 	Allowed = "check-single-research",
 	Description = "+10% Time Efficiency for all buildings. Allows Scrolls and Books to be sold at the Market.",
@@ -301,12 +301,12 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
 	ForUnit = {"unit-goblin-stronghold"}
 } )
 
-DefineButton( { Pos = 4, Level = 0, Icon = "icon-cauldron",
+DefineButton( { Pos = 8, Level = 0, Icon = "icon-cauldron",
 	Action = "research", Value = "upgrade-goblin-alchemy",
 	Allowed = "check-single-research",
 	Description = "+1 Fire Damage for Archers and Headhunters, +5 Fire Damage for War Machines. Allows new magic affixes for items sold at the Market.",
 	Key = "a", Hint = "Research ~!Alchemy", Popup = "popup-research",
-	ForUnit = {"unit-goblin-stronghold"}
+	ForUnit = {"unit-goblin-smithy"}
 } )
 
 -- Deities ----------------------------------------------------------
@@ -330,7 +330,7 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-gathaarl",
   
 -- Upgrades ---------------------------------------------------------
 
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-goblin-stronghold",
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-goblin-stronghold",
 	Action = "upgrade-to", Value = "unit-goblin-stronghold",
 	Allowed = "check-upgrade-to",
 	Key = "s", Hint = _("Upgrade to ~!Stronghold"), Popup = "popup-building",

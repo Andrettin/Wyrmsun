@@ -66,9 +66,10 @@ https://github.com/Andrettin/Wyrmsun
 
 * Buildings
 - Fixed issue with burning building graphics not appearing.
+- Workers can now build Railroads (which require the Engineering upgrade). Railroads are necessary for minecarts to move on, and provide the same speed bonus as roads to units.
 
 * Heroes
-- Added a few new wyrm heroes (without new portraits), recruitable at kobold mercenary camps.
+- Added a few new wyrm heroes (without specific portraits), recruitable at kobold mercenary camps.
 - Fixed issue which made recruitable fauna heroes' stats to not appear properly when hovering over their buttons.
 
 * Miscellaneous
@@ -89,6 +90,12 @@ https://github.com/Andrettin/Wyrmsun
 - A worker who is carrying resources will now return them to a stronghold upon right-clicking on it, instead of garrisoning in it.
 - A worker will now repair damaged garrisonable structures when right-clicking on them, isntead of garrisoning in them.
 - Units now only auto-attack while following another unit if already close to them.
+- Siege engines now require the Engineering upgrade to be produced.
+- Added Minecart, which can gather metals with greater carrying capacity than a normal worker. Minecarts can only move on railroads, and require the Engineering upgrade.
+
+* Upgrades
+- Added Engineering upgrade (icon by Exidelo) at the Smithy, which allows siege engines, railroads and minecarts.
+- Alchemy is now researched at the Smithy.
 
 -----------------------------------------------------------------------
 - 2.7.1

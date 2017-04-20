@@ -149,7 +149,8 @@ local land_funcs = {
 	function() return AiSet(GetAiUnitType("worker"), 25) end,
 	function() return AiResearch(GetAiUnitType("coinage")) end, -- research coinage to improve copper/silver/gold processing
 	function() return AiNeed(GetAiUnitType("stables")) end,
-	function() return AiResearch(GetAiUnitType("writing")) end, -- research writing to become a polity
+	function() return AiResearch(GetAiUnitType("writing")) end, -- research writing to become a polity, and is needed for Engineering
+	function() return AiWait(GetAiUnitType("writing")) end,	
 
 	function() -- certain civilizations acquire serfdom when it becomes available
 		if (AiGetRace() == "teuton" or AiGetRace() == "anglo-saxon" or AiGetRace() == "frankish" or AiGetRace() == "suebi") then
@@ -179,6 +180,9 @@ local land_funcs = {
 --	function() return AiResearch(AiMageSpell3()) end,
 --	function() return AiResearch(AiMageSpell4()) end,
 --	function() return AiResearch(AiMageSpell5()) end,
+
+	function() return AiResearch(GetAiUnitType("engineering")) end, -- needed for siege engines
+	function() return AiWait(GetAiUnitType("engineering")) end,	
 
 -- PREPARING SECOND ATTACK
 

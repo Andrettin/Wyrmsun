@@ -745,9 +745,8 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-precise-shot",
 	}
 })
 
--- Units -------------------------------------------------------
+-- Units ---------------------------------------------------------
 
---[[
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-minecart",
 	Action = "train-unit", Value = "unit-minecart",
 	Key = "c", Hint = "Build Mine~!cart", Popup = "popup-unit",
@@ -760,9 +759,6 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-minecart",
 		"unit-goblin-town-hall", "unit-goblin-stronghold"
 	}
 })
---]]
-
--- Units ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 0,
 	Action = "train-unit", Value = "unit-caravan",
@@ -1185,6 +1181,20 @@ DefineButton( { Pos = 2, Level = 3, Icon = "icon-serfdom",
 		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
 		"unit-gnomish-town-hall",
 		"unit-goblin-town-hall", "unit-goblin-stronghold"
+	}
+} )
+
+DefineButton( { Pos = 7, Level = 0, Icon = "icon-engineering",
+	Action = "research", Value = "upgrade-engineering",
+	Allowed = "check-single-research",
+	Description = "Allows siege engines, railroads and minecarts.",
+	Key = "e", Hint = "Research ~!Engineering", Popup = "popup-research",
+	ForUnit = {
+		"unit-dwarven-smithy", "unit-brising-smithy",
+--		"unit-germanic-smithy",
+		"unit-goblin-smithy",
+		"unit-latin-smithy",
+		"unit-teuton-smithy"
 	}
 } )
 

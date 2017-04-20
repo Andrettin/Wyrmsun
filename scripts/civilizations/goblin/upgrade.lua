@@ -299,7 +299,7 @@ DefinePredependency("unit-goblin-war-machine",
 )
 
 DefineDependency("unit-goblin-war-machine",
-	{"unit-goblin-smithy", "unit-goblin-lumber-mill"}, "or", {"upgrade-mercenary-company"}
+	{"unit-goblin-smithy", "unit-goblin-lumber-mill", "upgrade-engineering"}, "or", {"upgrade-mercenary-company", "upgrade-engineering"}
 )
 
 DefinePredependency("unit-goblin-thief",

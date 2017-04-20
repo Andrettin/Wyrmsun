@@ -29,6 +29,7 @@ UnitTypeFiles = {}
 
 Units = {
 	"upgrade-holy-order", "upgrade-mercenary-company", "upgrade-trading-company",
+	"upgrade-engineering",
 	"upgrade-egyptian-civilization",
 	"upgrade-latin-civilization",
 	"unit-latin-town-hall", "unit-latin-farm", "unit-latin-barracks", "unit-latin-smithy", "unit-latin-stables",
@@ -93,7 +94,7 @@ Units = {
 	"unit-frank-horseman", "unit-frank-knight-lord",
 	"unit-celt-farm",
 	"upgrade-celt-civilization",
-	"upgrade-faction-norlund-clan", "upgrade-faction-shadowcharm-clan", "upgrade-faction-shinsplitter-clan", "upgrade-faction-shorbear-clan", 
+	"upgrade-faction-norlund-clan", "upgrade-faction-shadowcharm-clan", "upgrade-faction-shinsplitter-clan", "upgrade-faction-shorbear-clan", "upgrade-faction-whitesteel-clan", 
 	"upgrade-faction-kal-kartha", "upgrade-faction-knalga",
 	"upgrade-dwarven-civilization",
 	"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner", "unit-dwarven-militia",
@@ -341,36 +342,37 @@ DefineUnitType("unit-minecart", {
 	Coward = true,
 	RightMouseAction = "harvest",
 	Rail = true,
+	RequirementsString = "Engineering",
 	CanGatherResources = {
 		{
 			"resource-id", "gold",
 			"file-when-loaded", "teuton/units/minecart_with_gold.png",
-			"resource-capacity", 200,
-			"resource-step", 4,
+			"resource-capacity", 400,
+			"resource-step", 6,
 			"wait-at-resource", 12,
 			"wait-at-depot", 150
 		},
 		{
 			"resource-id", "silver",
 			"file-when-loaded", "teuton/units/minecart_with_silver.png",
-			"resource-capacity", 200,
-			"resource-step", 4,
+			"resource-capacity", 400,
+			"resource-step", 6,
 			"wait-at-resource", 12,
 			"wait-at-depot", 150
 		},
 		{
 			"resource-id", "copper",
 			"file-when-loaded", "teuton/units/minecart_with_copper.png",
-			"resource-capacity", 200,
-			"resource-step", 4,
+			"resource-capacity", 400,
+			"resource-step", 6,
 			"wait-at-resource", 12,
 			"wait-at-depot", 150
 		},
 		{
 			"resource-id", "coal",
 			"file-when-loaded", "teuton/units/minecart_with_coal.png",
-			"resource-capacity", 200,
-			"resource-step", 4,
+			"resource-capacity", 400,
+			"resource-step", 6,
 			"wait-at-resource", 12,
 			"wait-at-depot", 150
 		}
@@ -3322,7 +3324,7 @@ DefineUnitType("unit-template-siege-engine", {
 	CanTargetLand = true, CanTargetSea = true,
 	NoFriendlyFire = true, -- don't attack a target if friendly units would get hurt too
 	ButtonPos = 5,
-	RequirementsString = "Lumber Mill and Smithy",
+	RequirementsString = "Lumber Mill, Smithy and Engineering",
 	Sounds = {
 		"selected", "click",
 		"step", "step-dirt",
@@ -4291,7 +4293,7 @@ DefineUnitType("unit-railroad", {
 	Building = true, VisibleUnderFog = true,
 	BuilderOutside = true,
 	HiddenInEditor = true,
-	RequirementsString = "Steam Engine",
+	RequirementsString = "Engineering",
 	Sounds = {
 		"dead", "building-destroyed"
 	}

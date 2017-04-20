@@ -57,7 +57,15 @@ DefineButton( { Pos = 4, Level = 2, Icon = "icon-flag-green-hammer-on-light-purp
 	ForUnit = {"unit-dwarven-town-hall", "unit-dwarven-stronghold"}
 } )
 
-DefineButton( { Pos = 5, Level = 2, Icon = "icon-flag-light-blue-hammer-on-orange",
+DefineButton( { Pos = 5, Level = 2, Icon = "icon-flag-red-hammer-on-silver",
+	Action = "research", Value = "upgrade-faction-whitesteel-clan",
+	Allowed = "check-single-research",
+	Key = "w", Hint = "Found the ~!Whitesteel Clan", Popup = "popup-research",
+	Description = "Changes your faction to the Whitesteel Clan",
+	ForUnit = {"unit-dwarven-town-hall", "unit-dwarven-stronghold"}
+} )
+
+DefineButton( { Pos = 6, Level = 2, Icon = "icon-flag-light-blue-hammer-on-orange",
 	Action = "research", Value = "upgrade-faction-eikinskjaldi-clan",
 	Allowed = "check-single-research",
 	Key = "e", Hint = "Found the ~!Eikinskjaldi Clan", Popup = "popup-research",

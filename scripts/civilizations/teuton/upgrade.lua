@@ -307,7 +307,7 @@ DefineDependency("unit-teuton-guard-tower",
 )
 
 DefineDependency("unit-teuton-catapult",
-	{"unit-teuton-smithy", "unit-teuton-lumber-mill"}, "or", {"unit-latin-smithy", "unit-teuton-lumber-mill"}
+	{"unit-teuton-smithy", "unit-teuton-lumber-mill", "upgrade-engineering"}, "or", {"unit-latin-smithy", "unit-teuton-lumber-mill", "upgrade-engineering"}
 )
 
 DefinePredependency("upgrade-teuton-spatha",

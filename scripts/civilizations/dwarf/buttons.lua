@@ -253,7 +253,7 @@ DefineButton( { Pos = 1, Level = 0,
 	ForUnit = {"unit-dwarven-dock"}
 })
 
--- Mercenaries
+-- Mercenaries ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 0,
 	Action = "train-unit", Value = "unit-dwarven-axefighter",
@@ -413,7 +413,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-masonry",
 	ForUnit = {"unit-dwarven-lumber-mill"}
 } )
 
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-coinage",
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-coinage",
 	Action = "research", Value = "upgrade-dwarven-coinage",
 	Allowed = "check-single-research",
 	Description = "+10% Copper, Silver and Gold Processing. -5% Trade Cost for Markets.",
@@ -421,7 +421,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-coinage",
 	ForUnit = {"unit-dwarven-stronghold"}
 } )
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-norse-runewriting",
 	Action = "research", Value = "upgrade-dwarven-runewriting",
 	Allowed = "check-single-research",
 	Description = "+10% Time Efficiency for all buildings. Allows Scrolls and Books to be sold at the Market.",
@@ -429,12 +429,12 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
 	ForUnit = {"unit-dwarven-stronghold"}
 } )
 
-DefineButton( { Pos = 4, Level = 0, Icon = "icon-cauldron",
+DefineButton( { Pos = 8, Level = 0, Icon = "icon-cauldron",
 	Action = "research", Value = "upgrade-dwarven-alchemy",
 	Allowed = "check-single-research",
 	Description = "+1 Fire Damage for Scouts, Pathfinders, Explorers and Gryphon Riders, +5 Fire Damage for Ballistas. Allows new magic affixes for items sold at the Market.",
 	Key = "a", Hint = "Research ~!Alchemy", Popup = "popup-research",
-	ForUnit = {"unit-dwarven-stronghold"}
+	ForUnit = {"unit-dwarven-smithy", "unit-brising-smithy"}
 } )
 
 -- Deities ----------------------------------------------------------
@@ -833,7 +833,7 @@ DefineButton( { Pos = 2, Level = 2, Icon = "icon-dwarven-gryphon-rider",
 	ForUnit = {"unit-dwarven-pathfinder"}
 } )
 
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-stronghold",
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-stronghold",
 	Action = "upgrade-to", Value = "unit-dwarven-stronghold",
 	Allowed = "check-upgrade-to",
 	Key = "b", Hint = _("Upgrade to ~!Bastion"), Popup = "popup-building",

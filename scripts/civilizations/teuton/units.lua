@@ -1073,7 +1073,7 @@ DefineUnitType("unit-teuton-catapult", {
 	BluntDamage = true,
 	ButtonKey = "c",
 	ButtonHint = _("Build ~!Catapult"),
-	RequirementsString = "Carpenter's Shop/Lumber Mill and Smithy",
+	RequirementsString = "Carpenter's Shop/Lumber Mill, Smithy and Engineering",
 	Sounds = {
 --		"acknowledge", "ballista-acknowledge",
 --		"ready", "dwarven-ballista-ready",
