@@ -92,7 +92,7 @@ DefineDialogue("island-of-the-lizard-god-whitesteel-ghosts-found", {
 		{
 			"speaker", "unit", "unit-dwarven-axefighter", -- should be a dwarven ghost
 			"speaker-player", "whitesteel-clan",
-			"text", "Every once in a while, a merchant ship would come to trade for the mithril. Like the miners, they had every incentive to keep the mithril's location a secret, to avoid having to share the profits with others. The mining settlement here eventually came to call itself the Whitesteel clan, our clan."
+			"text", "Every once in a while, a merchant ship would come to trade for the mithril. Like the miners, they had every incentive to keep the mithril's location a secret, to avoid having to share the profits with others. The dwarven people here eventually came to call itself the Whitesteel clan, our clan."
 		},
 		{
 			"speaker", "unit", "unit-dwarven-axefighter",
@@ -111,7 +111,7 @@ DefineDialogue("island-of-the-lizard-god-whitesteel-ghosts-found", {
 		{
 			"speaker", "unit", "unit-dwarven-axefighter", -- should be a dwarven ghost
 			"speaker-player", "whitesteel-clan",
-			"text", "A mastersmith among us even made a spear out of mithril, and imbued it with wyrmslaying magics. A runesmith, he called himself. And he claimed to know the arts of Thursagan, some legendary mainland smith. Me and some other warriors swore a sacred oath to guard this Spear of Wyrms until the opportunity to slay the kobolds' wyrm came. But it never did - and as our food stores dwindled, so too did our numbers. I even tasted dwarven flesh before dying of hunger... As I succumbed, the hunger went away, but I remained. It seems that the Spear's magic worked to keep this pale shadow of my former self guarding it, as I once swore."
+			"text", "A mastersmith among us even crafted a wondrous spear and imbued it with wyrmslaying magics. A runesmith, he called himself. And he claimed to know the arts of Thursagan, some legendary mainland smith. Me and some other warriors swore a sacred oath to guard this Spear of Wyrms until the opportunity to slay the kobolds' monster came. But it never did - and as our food stores dwindled, so too did our numbers. I even tasted dwarven flesh before dying of hunger... As I succumbed, the hunger went away, but I remained. It seems that the Spear's magic worked to keep this pale shadow of my former self guarding it, as I once swore."
 		},
 		-- if the wyrm is still alive
 		{

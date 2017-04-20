@@ -38,8 +38,9 @@ DefineMapTemplate("crucible-of-steel", {
 SetMapTemplateLayerConnector("island-of-the-lizard-god", "unit-cavern-entrance", {36, 35}, 1, "crucible-of-steel-entrance")
 SetMapTemplateLayerConnector("island-of-the-lizard-god-underground", "unit-cavern-entrance", {36, 35}, 0, "crucible-of-steel-entrance")
 
-SetMapTemplateResource("crucible-of-steel", "unit-copper-deposit", {6, 31}) -- should be an iron deposit
+SetMapTemplateResource("crucible-of-steel", "unit-gold-deposit", {6, 31}) -- should be a mithril deposit
 
+SetMapTemplateTileTerrain("crucible-of-steel", "railroad", {5, 9})
 SetMapTemplateTileTerrain("crucible-of-steel", "railroad", {5, 10})
 SetMapTemplateTileTerrain("crucible-of-steel", "railroad", {5, 11})
 SetMapTemplateTileTerrain("crucible-of-steel", "railroad", {5, 12})
@@ -60,10 +61,11 @@ SetMapTemplateTileTerrain("crucible-of-steel", "railroad", {5, 26})
 SetMapTemplateTileTerrain("crucible-of-steel", "railroad", {5, 27})
 SetMapTemplateTileTerrain("crucible-of-steel", "railroad", {5, 28})
 SetMapTemplateTileTerrain("crucible-of-steel", "railroad", {5, 29})
-SetMapTemplateTileTerrain("crucible-of-steel", "railroad", {6, 10})
+SetMapTemplateTileTerrain("crucible-of-steel", "railroad", {6, 9})
 SetMapTemplateTileTerrain("crucible-of-steel", "railroad", {6, 27})
 SetMapTemplateTileTerrain("crucible-of-steel", "railroad", {6, 28})
 SetMapTemplateTileTerrain("crucible-of-steel", "railroad", {6, 29})
+SetMapTemplateTileTerrain("crucible-of-steel", "railroad", {7, 9})
 SetMapTemplateTileTerrain("crucible-of-steel", "railroad", {7, 10})
 SetMapTemplateTileTerrain("crucible-of-steel", "railroad", {7, 11})
 SetMapTemplateTileTerrain("crucible-of-steel", "railroad", {7, 12})
@@ -82,3 +84,8 @@ SetMapTemplateTileTerrain("crucible-of-steel", "railroad", {7, 24})
 SetMapTemplateTileTerrain("crucible-of-steel", "railroad", {7, 25})
 SetMapTemplateTileTerrain("crucible-of-steel", "railroad", {7, 26})
 SetMapTemplateTileTerrain("crucible-of-steel", "railroad", {7, 27})
+
+SetMapTemplateUnit("crucible-of-steel", "unit-dwarven-smithy", "whitesteel-clan", {6, 7})
+SetMapTemplateUnit("crucible-of-steel", "unit-minecart", "whitesteel-clan", {5, 13})
+SetMapTemplateUnit("crucible-of-steel", "unit-minecart", "whitesteel-clan", {5, 15})
+SetMapTemplateUnit("crucible-of-steel", "unit-minecart", "whitesteel-clan", {5, 17})
