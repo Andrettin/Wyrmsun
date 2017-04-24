@@ -220,7 +220,7 @@ DefineUnitType("unit-gnomish-master-at-arms", {
 	WeaponClasses = {"thrusting-sword", "sword"},
 	CanCastSpell = {"spell-puncture"},
 	AutoCastActive = {"spell-puncture"},
-	AiDrops = {"unit-thrusting-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-wool-shoes", "unit-furry-wool-shoes", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-thrusting-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-wool-shoes", "unit-furry-wool-shoes", "unit-cheese", "unit-potion-of-healing", "unit-elixir-of-dexterity"},
 	PierceDamage = true,
 	InvertedSoutheastArms = true,
 	Variations = {

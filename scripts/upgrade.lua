@@ -309,6 +309,30 @@ DefineDependency("unit-scroll",
 	"or", {"upgrade-teuton-writing"}
 )
 
+DefineDependency("unit-potion-of-healing",
+	{"upgrade-dwarven-alchemy"},
+	"or", {"upgrade-goblin-alchemy"},
+	"or", {"upgrade-teuton-alchemy"}
+)
+
+DefineDependency("unit-elixir-of-dexterity",
+	{"upgrade-dwarven-alchemy"},
+	"or", {"upgrade-goblin-alchemy"},
+	"or", {"upgrade-teuton-alchemy"}
+)
+
+DefineDependency("unit-elixir-of-intelligence",
+	{"upgrade-dwarven-alchemy"},
+	"or", {"upgrade-goblin-alchemy"},
+	"or", {"upgrade-teuton-alchemy"}
+)
+
+DefineDependency("unit-elixir-of-strength",
+	{"upgrade-dwarven-alchemy"},
+	"or", {"upgrade-goblin-alchemy"},
+	"or", {"upgrade-teuton-alchemy"}
+)
+
 DefineDependency("unit-short-sword",
 	{"unit-germanic-smithy"},
 	"or", {"unit-teuton-smithy"},

@@ -72,6 +72,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added a few new wyrm heroes (without specific portraits), recruitable at kobold mercenary camps.
 - Fixed issue which made recruitable fauna heroes' stats to not appear properly when hovering over their buttons.
 
+* Items
+- Added the Elixir of Dexterity, Elixir of Intelligence and Elixir of Strength items. These elixirs give small permanent bonuses to heroes. Each elixir may be consumed once per hero.
+
 * Miscellaneous
 - Minor pathfinding performance improvement.
 - Fixed crash which could happen when a transport ship was destroyed while a unit with a level-up point was inside.

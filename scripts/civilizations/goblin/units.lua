@@ -302,7 +302,7 @@ DefineUnitType("unit-goblin-warlord", {
 	NightSightRangeBonus = 1,
 	WeaponClasses = {"sword", "thrusting-sword"},
 	HackDamage = true,
-	AiDrops = {"unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing", "unit-elixir-of-strength"},
 	Corpse = "unit-goblin-dead-body",
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
@@ -443,7 +443,7 @@ DefineUnitType("unit-goblin-shadowstalker", {
 	Corpse = "unit-goblin-dead-body",
 	WeaponClasses = {"bow"},
 	PierceDamage = true,
-	AiDrops = {"unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit-potion-of-healing", "unit-elixir-of-dexterity"},
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "basic-goblin-voices-acknowledge",

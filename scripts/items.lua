@@ -475,6 +475,45 @@ DefineUnitType("unit-potion-of-healing", {
 	} 
 } )
 
+DefineUnitType("unit-elixir-of-dexterity", {
+	Name = "Elixir of Dexterity",
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/potion_black.png", "size", {16, 16}},
+	Animations = "animations-potion", Icon = "icon-black-potion",
+	ItemClass = "potion",
+	Costs = {"copper", 150},
+	Elixir = "upgrade-elixir-of-dexterity",
+	Sounds = {
+		"used", "potion"
+	} 
+} )
+
+DefineUnitType("unit-elixir-of-intelligence", {
+	Name = "Elixir of Intelligence",
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/potion_orange.png", "size", {16, 16}},
+	Animations = "animations-potion", Icon = "icon-orange-potion",
+	ItemClass = "potion",
+	Costs = {"copper", 150},
+	Elixir = "upgrade-elixir-of-intelligence",
+	Sounds = {
+		"used", "potion"
+	} 
+} )
+
+DefineUnitType("unit-elixir-of-strength", {
+	Name = "Elixir of Strength",
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/potion_white.png", "size", {16, 16}},
+	Animations = "animations-potion", Icon = "icon-white-potion",
+	ItemClass = "potion",
+	Costs = {"copper", 150},
+	Elixir = "upgrade-elixir-of-strength",
+	Sounds = {
+		"used", "potion"
+	} 
+} )
+
 DefineUnitType("unit-scroll", {
 	Name = "Scroll",
 	Parent = "unit-template-item",

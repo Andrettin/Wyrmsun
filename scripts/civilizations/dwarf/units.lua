@@ -518,7 +518,7 @@ DefineUnitType("unit-dwarven-thane", {
 	CanCastSpell = {"spell-axe-twirl"},
 	WeaponClasses = {"axe", "mace"},
 	HackDamage = true,
-	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing", "unit-elixir-of-strength"},
 	Variations = {
 		{
 			"variation-id", "red-hair",
@@ -741,7 +741,7 @@ DefineUnitType("unit-dwarven-explorer", { Name = _("Explorer"),
 	WeaponClasses = {"throwing-axe"},
 	HackDamage = true,
 	StartingAbilities = {"upgrade-scouting"},
-	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-potion-of-healing", "unit-elixir-of-dexterity"},
 	Variations = {
 		{
 			"variation-id", "orange-hair",
@@ -871,7 +871,7 @@ DefineUnitType("unit-dwarven-yale-lord", { Name = _("Yale Lord"),
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClasses = {"axe"},
 	HackDamage = true,
-	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing", "unit-elixir-of-strength"},
 	Variations = {
 		{
 			"variation-id", "red-hair-gray-fur",
@@ -1007,7 +1007,7 @@ DefineUnitType("unit-dwarven-gryphon-rider", {
 	ButtonKey = "p",
 	ButtonHint = _("Train Gry~!phon Rider"),
 	RequirementsString = "Bastion and Lumber Mill",
-	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-potion-of-healing", "unit-elixir-of-dexterity"},
 	Variations = {
 		{
 			"variation-id", "black-hair-brown-feathers",
