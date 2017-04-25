@@ -73,7 +73,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which made recruitable fauna heroes' stats to not appear properly when hovering over their buttons.
 
 * Items
-- Added the Elixir of Dexterity, Elixir of Intelligence and Elixir of Strength items. These elixirs give small permanent bonuses to heroes. Each elixir may be consumed once per hero.
+- Added the Elixir of Dexterity, Elixir of Intelligence and Elixir of Strength items. These elixirs give small permanent bonuses to the unit which drinks them. Each elixir may be consumed once per unit/hero.
 
 * Miscellaneous
 - Minor pathfinding performance improvement.
