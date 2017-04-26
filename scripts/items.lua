@@ -470,6 +470,7 @@ DefineUnitType("unit-potion-of-healing", {
 	ItemClass = "potion",
 	Costs = {"time", 50, "copper", 150},
 	HitPointHealing = 45,
+	RequirementsString = "Alchemy",
 	Sounds = {
 		"used", "potion"
 	} 
