@@ -121,6 +121,7 @@ DefineFaction("driftwood", { -- from Will Doyle's "Island of the Lizard God"
 	DefaultTier = "barony",
 	DefaultGovernmentType = "republic",
 	FactionUpgrade = "upgrade-faction-driftwood",
+	DefaultAI = "passive", -- so that Driftwood remains a small settlement, and doesn't try to attack in the Island of the Lizard God scenario
 	Description = "The cave town of Driftwood was formed from shipwrecks on a kobold isle, and peopled by lost sailors. The town is run by a goblin criminal cartel."
 })
 

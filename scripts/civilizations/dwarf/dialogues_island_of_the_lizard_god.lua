@@ -41,7 +41,7 @@ DefineDialogue("island-of-the-lizard-god-introduction", {
 			"option-effects", {
 				function(s)
 					SetPlayerData(trigger_player, "AcceptQuest", "island-of-the-lizard-god")
-					SetPlayerData(trigger_player, "AcceptQuest", "island-of-the-lizard-god-build-shelters")
+--					SetPlayerData(trigger_player, "AcceptQuest", "island-of-the-lizard-god-build-shelters")
 				end
 			}
 		}

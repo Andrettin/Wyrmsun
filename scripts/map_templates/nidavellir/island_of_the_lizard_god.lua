@@ -77,14 +77,12 @@ DefineMapTemplate("island-of-the-lizard-god-underground", {
 SetMapTemplateLayerConnector("island-of-the-lizard-god", "unit-cavern-entrance", {59, 117}, 1, "driftwood-entrance")
 SetMapTemplateLayerConnector("island-of-the-lizard-god-underground", "unit-cavern-entrance", {59, 117}, 0, "driftwood-entrance")
 
+SetMapTemplateHero("island-of-the-lizard-god", "vindalf", "lyr", {14, 108}, 600)
+SetMapTemplateUnit("island-of-the-lizard-god", "unit-dwarven-axefighter", "lyr", {14, 108}, 600)
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-dwarven-axefighter", "lyr", {14, 108}, 600)
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-dwarven-axefighter", "lyr", {14, 108}, 600)
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-dwarven-scout", "lyr", {14, 108}, 600)
-SetMapTemplateUnit("island-of-the-lizard-god", "unit-dwarven-miner", "lyr", {14, 108}, 600)
-SetMapTemplateUnit("island-of-the-lizard-god", "unit-dwarven-miner", "lyr", {14, 108}, 600)
-SetMapTemplateUnit("island-of-the-lizard-god", "unit-dwarven-miner", "lyr", {14, 108}, 600)
-SetMapTemplateUnit("island-of-the-lizard-god", "unit-dwarven-miner", "lyr", {14, 108}, 600)
-SetMapTemplateUnit("island-of-the-lizard-god", "unit-dwarven-miner", "lyr", {14, 108}, 600)
+SetMapTemplateUnit("island-of-the-lizard-god", "unit-dwarven-scout", "lyr", {14, 108}, 600)
 
 SetMapTemplateHero("island-of-the-lizard-god", "grafvolluth", "grafvolling-tribe", {3,62})
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-goblin-guard-tower", "grafvolling-tribe", {101, 68}) -- location of the main kobold Blackfang river fortification

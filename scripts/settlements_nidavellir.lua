@@ -37,7 +37,15 @@ DefineSettlement("driftwood", { -- from Will Doyle's "Island of the Lizard God"
 	},
 	HistoricalBuildings = {
 		600, 0, "town-hall",
-		600, 0, "mercenary-camp", "ape-cartel"
+		600, 0, "mercenary-camp", "ape-cartel",
+		600, 0, "farm",
+		600, 0, "farm",
+		600, 0, "farm",
+		600, 0, "farm"
+	},
+	HistoricalUnits = { -- some units for defense
+		600, "unit-goblin-swordsman", 3000, "driftwood",
+		600, "unit-goblin-archer", 2000, "driftwood"
 	},
 	Regions = {}
 })
