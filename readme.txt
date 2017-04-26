@@ -74,6 +74,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Items
 - Added the Elixir of Dexterity, Elixir of Intelligence and Elixir of Strength items. These elixirs give small permanent bonuses to the unit which drinks them. Each elixir may be consumed once per unit/hero.
+- Cheese and Carrots are no longer sold at farms, being instead randomly added to the pool of items for sale in markets.
 
 * Miscellaneous
 - Minor pathfinding performance improvement.
