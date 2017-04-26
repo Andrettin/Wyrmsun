@@ -1904,6 +1904,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {Spell = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(_("Casts "), UnitSpell("Unit")), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {Elixir = "only", HitPoints = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Hit Points:"), " "), Variable = "HitPoints", Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {HitPointBonus = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Hit Points:"), " "), Variable = "HitPointBonus", Font = wyr.preferences.PopupDescriptionFont}}
 				},

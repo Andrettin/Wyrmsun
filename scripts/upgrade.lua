@@ -345,6 +345,12 @@ DefineDependency("unit-elixir-of-strength",
 	"or", {"upgrade-teuton-alchemy"}
 )
 
+DefineDependency("unit-elixir-of-vitality",
+	{"upgrade-dwarven-alchemy"},
+	"or", {"upgrade-goblin-alchemy"},
+	"or", {"upgrade-teuton-alchemy"}
+)
+
 DefineDependency("unit-short-sword",
 	{"unit-germanic-smithy"},
 	"or", {"unit-teuton-smithy"},

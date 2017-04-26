@@ -678,6 +678,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-gray-potion",
+	Size = {46, 38},
+	File = "neutral/icons/potion_gray.png"
+})
+
+DefineIcon({
 	Name = "icon-green-potion",
 	Size = {46, 38},
 	File = "neutral/icons/potion_green.png"

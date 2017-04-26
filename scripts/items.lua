@@ -514,6 +514,19 @@ DefineUnitType("unit-elixir-of-strength", {
 	} 
 } )
 
+DefineUnitType("unit-elixir-of-vitality", {
+	Name = "Elixir of Vitality",
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/potion_gray.png", "size", {16, 16}},
+	Animations = "animations-potion", Icon = "icon-gray-potion",
+	ItemClass = "potion",
+	Costs = {"copper", 150},
+	Elixir = "upgrade-elixir-of-vitality",
+	Sounds = {
+		"used", "potion"
+	} 
+} )
+
 DefineUnitType("unit-scroll", {
 	Name = "Scroll",
 	Parent = "unit-template-item",

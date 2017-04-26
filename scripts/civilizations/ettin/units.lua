@@ -54,7 +54,7 @@ DefineUnitType("unit-ettin", {
 --	Corpse = "unit-dwarven-dead-body",
 	BluntDamage = true,
 	Giant = true,
-	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing", "unit-elixir-of-strength"},
+	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing", "unit-elixir-of-strength", "unit-elixir-of-vitality"},
 	Sounds = {
 		"selected", "basic-orc-voices-selected",
 		"acknowledge", "basic-orc-voices-selected",
