@@ -990,6 +990,7 @@
 /graphics/terrain/dirt_extra_1.png (by Exidelo) (licensed under the CC0)
 /graphics/terrain/dry_mud.png (by Jinn) (licensed under the CC0)
 /graphics/terrain/dungeon_wall.png (by b_o) (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/terrain/dwarven_wall.png (by Jinn) (licensed under the CC0)
 /graphics/terrain/fairlimbed_tree.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/terrain/flamefood_tree.png (by Jinn) (licensed under the CC0)
 /graphics/terrain/floor.png (by b_o) (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)

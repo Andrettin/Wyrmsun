@@ -410,6 +410,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-dwarven-wall",
+	Size = {46, 38},
+	File = "dwarf/icons/wall.png"
+})
+
+DefineIcon({
 	Name = "icon-dwarven-battle-axe",
 	Size = {46, 38},
 	File = "dwarf/icons/battle_axe.png"

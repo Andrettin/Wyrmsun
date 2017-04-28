@@ -1354,6 +1354,13 @@ DefineUnitType("unit-dwarven-dock", {
 	}
 } )
 
+DefineUnitType("unit-dwarven-wall", {
+	Parent = "unit-template-wall",
+	TerrainType = "dwarven-wall",
+	Image = {"file", "dwarf/buildings/wall.png", "size", {32, 32}},
+	Icon = "icon-dwarven-wall"
+} )
+
 Load("scripts/civilizations/dwarf/units_joruvellir.lua")
 Load("scripts/civilizations/dwarf/units_brising.lua")
 

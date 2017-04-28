@@ -932,9 +932,67 @@ DefineTerrainType("railroad", { -- also represents tramways when linking a settl
 	}
 })
 
-DefineTerrainType("teuton-wall", { -- also represents tramways when linking a settlement's buildings
+DefineTerrainType("dwarven-wall", {
 	Name = "Wall",
 	Color = {160, 128, 128},
+	BaseTerrains = {"dirt", "grass", "dry-mud", "cave-floor", "floor"},
+	Overlay = true,
+	Flags = {"land", "wall", "unpassable"},
+	AllowSingle = true,
+	Graphics = "terrain/dwarven_wall.png",
+	SolidTiles = {177},
+	DestroyedTiles = {1},
+	TransitionTiles = {
+		"any", "north", 208,
+		"any", "south", 224,
+		"any", "west", 209,
+		"any", "east", 225,
+		"any", "northwest-outer", 112,
+		"any", "northeast-outer", 114,
+		"any", "southwest-outer", 144,
+		"any", "southeast-outer", 146,
+		"any", "northwest-inner", 177,
+		"any", "northeast-inner", 177,
+		"any", "southwest-inner", 177,
+		"any", "southeast-inner", 177,
+		"any", "northwest-southeast-inner", 177,
+		"any", "northeast-southwest-inner", 177,
+		
+		"any", "single", 129,
+		"any", "north-single", 161,
+		"any", "south-single", 193,
+		"any", "west-single", 176,
+		"any", "east-single", 178,
+		"any", "north-south", 113,
+		"any", "north-south", 145,
+		"any", "west-east", 128,
+		"any", "west-east", 130,
+		"any", "northwest-northeast-southwest-southeast-inner", 177,
+		"any", "northwest-northeast-inner", 177,
+		"any", "southwest-southeast-inner", 177,
+		"any", "northwest-southwest-inner", 177,
+		"any", "northeast-southeast-inner", 177,
+		"any", "north-southwest-inner-southeast-inner", 208,
+		"any", "north-southwest-inner", 208,
+		"any", "north-southeast-inner", 208,
+		"any", "south-northwest-inner-northeast-inner", 224,
+		"any", "south-northwest-inner", 224,
+		"any", "south-northeast-inner", 224,
+		"any", "west-northeast-inner-southeast-inner", 209,
+		"any", "west-northeast-inner", 209,
+		"any", "west-southeast-inner", 209,
+		"any", "east-northwest-inner-southwest-inner", 225,
+		"any", "east-northwest-inner", 225,
+		"any", "east-southwest-inner", 225,
+		"any", "northwest-outer-southeast-inner", 112,
+		"any", "northeast-outer-southwest-inner", 114,
+		"any", "southwest-outer-northeast-inner", 144,
+		"any", "southeast-outer-northwest-inner", 146
+	}
+})
+
+DefineTerrainType("teuton-wall", {
+	Name = "Wall",
 	BaseTerrains = {"dirt", "grass", "dry-mud", "cave-floor", "floor"},
 	Overlay = true,
 	Flags = {"land", "wall", "unpassable"},

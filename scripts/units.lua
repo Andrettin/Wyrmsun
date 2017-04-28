@@ -111,6 +111,7 @@ Units = {
 	"unit-dwarven-yale-pen", "unit-dwarven-temple", "unit-dwarven-market",
 	"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower",
 	"unit-dwarven-dock",
+	"unit-dwarven-wall",
 	"upgrade-dwarven-broad-axe", "upgrade-dwarven-great-axe", "upgrade-dwarven-shield-1", "upgrade-dwarven-shield-2",
 	"upgrade-dwarven-long-spear", "upgrade-dwarven-pike",
 	"upgrade-dwarven-sharp-throwing-axe", "upgrade-dwarven-bearded-throwing-axe", "upgrade-dwarven-ballista-bolt-1", "upgrade-dwarven-ballista-bolt-2",
