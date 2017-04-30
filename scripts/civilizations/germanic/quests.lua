@@ -204,7 +204,7 @@ DefineQuest("heimdalls-progeny", {
 		end
 	end,
 	Objectives = {"- Conquer all of your home peninsula", "- Erala must survive"},
-	HeroesMustSurvive = {"Erala"},
+	HeroesMustSurvive = {"erala"},
 	Uncompleteable = true,
 	Unobtainable = true
 })
@@ -222,7 +222,7 @@ DefineQuest("jarls-hall", { -- based on the Song of Rig; Source: Kevin Crossley-
 	Objectives = {"- Acquire some Buras", "- Build a Chieftain's Hall"},
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Chieftain's Hall button to build the structure required for this quest.",
 	BuildUnits = {"unit-germanic-town-hall", 1},
-	HeroesMustSurvive = {"Erala"},
+	HeroesMustSurvive = {"erala"},
 	Unobtainable = true,
 	Unfailable = true
 })
@@ -241,7 +241,7 @@ DefineQuest("jarls-retainers", { -- based on the Song of Rig; Source: Kevin Cros
 	Unfailable = true,
 	Hint = "Select a War Lodge and then click on the Train Erala button to train the unit required for this quest.",
 	BuildUnits = {"unit-germanic-warrior", 5},
-	HeroesMustSurvive = {"Erala"}
+	HeroesMustSurvive = {"erala"}
 })
 
 DefineQuest("master-of-metal", {
@@ -275,7 +275,7 @@ DefineQuest("subjugate-the-karlings", {
 	Civilization = "germanic",
 	PlayerColor = "yellow",
 	Objectives = {"- Subjugate the Karlings"},
-	HeroesMustSurvive = {"Erala"},
+	HeroesMustSurvive = {"erala"},
 	Unobtainable = true,
 	Uncompleteable = true,
 	Unfailable = true
@@ -288,7 +288,7 @@ DefineQuest("neutralize-the-hersings", {
 	Civilization = "germanic",
 	PlayerColor = "yellow",
 	Objectives = {"- Ally with or defeat the Hersings"},
-	HeroesMustSurvive = {"Erala"},
+	HeroesMustSurvive = {"erala"},
 	Unobtainable = true,
 	Uncompleteable = true,
 	Unfailable = true

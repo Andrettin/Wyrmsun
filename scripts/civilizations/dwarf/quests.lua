@@ -39,7 +39,7 @@ DefineQuest("the-first-dwarves", {
 	Objectives = {"- Overcome Svarinshaug's perils", "- Modsognir must survive", "- Durin must survive"},
 	Uncompleteable = true,
 	Unobtainable = true,
-	HeroesMustSurvive = {"Modsognir", "Durin"}
+	HeroesMustSurvive = {"modsognir", "durin"}
 })
 
 DefineQuest("a-rocky-home", {
@@ -57,7 +57,7 @@ DefineQuest("a-rocky-home", {
 	BuildUnits = {"unit-dwarven-town-hall", 1},
 	DestroyUnits = {"unit-yale", "", 8},
 	GatherResources = {"lumber", 800, "stone", 2400},
-	HeroesMustSurvive = {"Modsognir", "Durin"}
+	HeroesMustSurvive = {"modsognir", "durin"}
 })
 
 DefineQuest("the-mead-of-wisdom", {
@@ -112,7 +112,7 @@ DefineQuest("the-slaying-of-grafvitnir", {
 	Unobtainable = true,
 	Uncompleteable = true,
 	Unfailable = true,
-	HeroesMustSurvive = {"Modsognir", "Durin"}
+	HeroesMustSurvive = {"modsognir", "durin"}
 })
 
 DefineQuest("the-dripping-hall", { -- based on the lay of Alvis from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 144.
@@ -491,20 +491,8 @@ DefineQuest("island-of-the-lizard-god", {
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
-	Objectives = {"- Explore the island"},
+	Objectives = {"- Find a way out of the island", "- Vindalf must survive"},
 	Uncompleteable = true,
-	Unobtainable = true
-})
-
-DefineQuest("island-of-the-lizard-god-build-shelters", {
-	Name = "Build Shelters",
-	Icon = "icon-dwarven-mushroom-farm",
-	PlayerColor = "green",
-	CompletionEffects = function(s)
-		CallDialogue("island-of-the-lizard-god-shelters-built", trigger_player)
-	end,
-	Objectives = {"- Build a Mead Hall", "- Build 2 Mushroom Farms"},
 	Unobtainable = true,
-	BuildUnits = {"unit-dwarven-town-hall", 1, "unit-dwarven-mushroom-farm", 2}
+	HeroesMustSurvive = {"vindalf"}
 })
-

@@ -111,7 +111,7 @@ DefineFaction("whitesteel-clan", {
 	Colors = {"white"},
 	DevelopsTo = {"kal-kartha", "knalga", "lyr"},
 	FactionUpgrade = "upgrade-faction-whitesteel-clan",
-	Description = "Attracted by tales of mithril deposits, a group of dwarves established an outpost in a distant kobold island. Enjoying a lucrative trade with the merchant ships who made call at their port, the dwarves established themselves permanently in the island, eventually calling themselves the Whitesteel clan."
+--	Description = "Attracted by tales of mithril deposits, a group of dwarves established an outpost in a distant kobold island. Enjoying a lucrative trade with the merchant ships who made call at their port, the dwarves established themselves permanently in the island, eventually calling themselves the Whitesteel clan."
 })
 
 -- Polities
