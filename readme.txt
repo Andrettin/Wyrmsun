@@ -80,6 +80,7 @@ https://github.com/Andrettin/Wyrmsun
 - Minor pathfinding performance improvement.
 - Fixed crash which could happen when a transport ship was destroyed while a unit with a level-up point was inside.
 - Fixed a number of SDL rendering issues.
+- Fixed a save game loading crash cause.
 
 * Quests
 - Added a new Germanic side-quest, "Slay the Wild Folk at Hlesey".
