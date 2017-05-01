@@ -1864,6 +1864,16 @@ DefineCivilization("suebi", {
 	}
 })
 
+DefineCivilization("ogre", {
+	Display = "Ogre",
+	Visible = true,
+	Species = "ogre",
+	ParentCivilization = "goblin",
+	Adjective = "Ogre",
+	Playable = false,
+	DefaultColor = "red"
+})
+
 DefineCivilization("troll", {
 	Display = "Troll",
 	Visible = true,
