@@ -97,6 +97,7 @@ https://github.com/Andrettin/Wyrmsun
 - Units now only auto-attack while following another unit if already close to them.
 - Siege engines now require the Engineering upgrade to be produced.
 - Added Minecart, which can gather metals with greater carrying capacity than a normal worker. Minecarts can only move on railroads, and require the Engineering upgrade.
+- Added Kobold Slasher (upgrade of the Kobold Footpad, icon by Exidelo).
 
 * Upgrades
 - Added Engineering upgrade (icon by Exidelo) at the Smithy, which allows siege engines, railroads and minecarts.

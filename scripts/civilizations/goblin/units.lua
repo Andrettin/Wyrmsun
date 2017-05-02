@@ -248,10 +248,10 @@ DefineUnitType("unit-goblin-swordsman", {
 } )
 
 DefineUnitType("unit-goblin-barbarian", {
-	Name = _("Barbarian"),
+	Name = "Barbarian",
 	Parent = "unit-template-veteran-infantry",
 	Civilization = "goblin",
-	Description = _("Goblin barbarians are savage warriors, who often partake in raids against dwarves, gnomes or rival tribes. Combining skilled swordsmanship with a lust for battle, they are dangerous foes."),
+	Description = "Goblin barbarians are savage warriors, who often partake in raids against dwarves, gnomes or rival tribes. Combining skilled swordsmanship with a lust for battle, they are dangerous foes.",
 	Image = {"file", "goblin/units/goblin_swordsman.png", "size", {72, 72}},
 	Animations = "animations-goblin-swordsman", Icon = "icon-goblin-barbarian",
 	DefaultEquipment = {

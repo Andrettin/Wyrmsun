@@ -484,7 +484,7 @@ DefineQuest("the-mead-of-poetry-kill-kvasir", {
 
 DefineQuest("island-of-the-lizard-god", {
 	Name = "Island of the Kobold God",
-	Icon = "icon-kobold-footpad",
+	Icon = "icon-kobold-slasher",
 	PlayerColor = "green",
 	FailEffects = function(s)
 		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "island-of-the-lizard-god") then

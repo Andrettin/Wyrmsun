@@ -191,7 +191,7 @@ DefineCharacter("thursagan", { -- from Battle for Wesnoth: The Sceptre of Fire; 
 		{
 			"unique", "the-hammer-of-thursagan",
 			"bound", true
-		},
+		}
 	}
 })
 

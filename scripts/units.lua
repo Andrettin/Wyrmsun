@@ -152,7 +152,7 @@ Units = {
 	"upgrade-goblin-masonry",
 	"upgrade-goblin-coinage", "upgrade-goblin-writing", "upgrade-goblin-alchemy",
 	"upgrade-kobold-civilization",
-	"unit-kobold-footpad",
+	"unit-kobold-footpad", "unit-kobold-slasher",
 	"unit-elven-swordsman", "unit-elven-priest", 
 	"unit-orc-spearthrower", "unit-orc-sea-orc", "unit-orc-shaman",
 	"upgrade-ettin-civilization",

@@ -98,8 +98,8 @@ DefineSpell("spell-inspire",
 	},
 	"sound-when-cast", "magic-holy",
 	"depend-upgrade", "upgrade-inspire",
-	"autocast", {"range", 6, "attacker", "only", "condition", {"Coward", "false", "alliance", "only"}},
-	"ai-cast", {"range", 6, "attacker", "only", "condition", {"Coward", "false", "alliance", "only"}}
+	"autocast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "alliance", "only"}},
+	"ai-cast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "alliance", "only"}}
 )
 
 DefineSpell("spell-precision",
@@ -117,8 +117,8 @@ DefineSpell("spell-precision",
 	},
 	"sound-when-cast", "magic-holy",
 	"depend-upgrade", "upgrade-precision",
-	"autocast", {"range", 6, "attacker", "only", "condition", {"Coward", "false", "alliance", "only"}},
-	"ai-cast", {"range", 6, "attacker", "only", "condition", {"Coward", "false", "alliance", "only"}}
+	"autocast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "alliance", "only"}},
+	"ai-cast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "alliance", "only"}}
 )
 
 DefineSpell("spell-slow",
@@ -152,8 +152,8 @@ DefineSpell("spell-terror",
 	},
 	"sound-when-cast", "magic-holy",
 	"depend-upgrade", "upgrade-terror",
-	"autocast", {"range", 6, "attacker", "only", "condition", {"Coward", "false", "opponent", "only"}},
-	"ai-cast", {"range", 6, "attacker", "only", "condition", {"Coward", "false", "opponent", "only"}}
+	"autocast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only"}},
+	"ai-cast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only"}}
 )
 
 DefineSpell("spell-war-machine-spear-attack",
