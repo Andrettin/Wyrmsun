@@ -25,14 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineMapTemplate("wildlands", { -- From Battle for Wesnoth: The Hammer of Thursagan (Invaders)
+DefineMapTemplate("wildlands", { -- from Battle for Wesnoth: The Hammer of Thursagan (Invaders)
 	Name = "Wildlands",
 	MainTemplate = "nidavellir",
 	Width = 47,
 	Height = 32,
 	SubtemplatePosition = {605, 206},
-	TerrainFile = "scripts/map_templates/nidavellir/wildlands.map",
-	OverlayTerrainFile = "scripts/map_templates/nidavellir/wildlands_overlay.map",
 	GeneratedNeutralUnits = {
 		"unit-copper-deposit", 2
 	},

@@ -25,14 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineMapTemplate("high-pass", { -- From Battle for Wesnoth: The Hammer of Thursagan (High Pass)
+DefineMapTemplate("high-pass", { -- from Battle for Wesnoth: The Hammer of Thursagan (High Pass)
 	Name = "High Pass",
 	MainTemplate = "nidavellir",
 	Width = 32,
 	Height = 22,
-	SubtemplatePosition = {623, 178},
-	TerrainFile = "scripts/map_templates/nidavellir/high_pass.map",
-	OverlayTerrainFile = "scripts/map_templates/nidavellir/high_pass_overlay.map"
+	SubtemplatePosition = {623, 178}
 })
 
 --[[
