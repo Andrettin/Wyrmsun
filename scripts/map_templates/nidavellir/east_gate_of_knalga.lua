@@ -30,7 +30,5 @@ DefineMapTemplate("east-gate-of-knalga", { -- from Battle for Wesnoth: The Hamme
 	MainTemplate = "nidavellir",
 	Width = 47,
 	Height = 32,
-	SubtemplatePosition = {480, 205},
-	TerrainFile = "scripts/map_templates/nidavellir/east_gate_of_knalga.map",
-	OverlayTerrainFile = "scripts/map_templates/nidavellir/east_gate_of_knalga_overlay.map"
+	SubtemplatePosition = {480, 205}
 })
