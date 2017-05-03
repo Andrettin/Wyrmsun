@@ -30,9 +30,8 @@ DefineMapTemplate("ofnirs-valley", {
 	MainTemplate = "nidavellir",
 	Width = 47,
 	Height = 37,
-	SubtemplatePosition = {648, 157},
-	TerrainFile = "scripts/map_templates/nidavellir/ofnirs_valley.map", -- From Battle for Wesnoth: The Hammer of Thursagan (Mages and Drakes)
-	OverlayTerrainFile = "scripts/map_templates/nidavellir/ofnirs_valley_overlay.map" -- From Battle for Wesnoth: The Hammer of Thursagan (Mages and Drakes)
+	-- map layout from Battle for Wesnoth: The Hammer of Thursagan (Mages and Drakes)
+	SubtemplatePosition = {648, 157}
 })
 
 SetMapTemplateHero("ofnirs-valley", "ofnir", "ofning-tribe", {39, 20})

@@ -31,6 +31,7 @@ DefineMapTemplate("aurvang", {
 	Width = 46,
 	Height = 35,
 	SubtemplatePosition = {679, 312},
+	-- map layout from Battle for Wesnoth: Delfador's Memoirs (Showdown in the Northern Swamp)
 	GeneratedNeutralUnits = {
 		"unit-copper-deposit", 2
 	},
