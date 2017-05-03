@@ -41,9 +41,10 @@ DefineMapTemplate("wildlands", { -- from Battle for Wesnoth: The Hammer of Thurs
 	}
 })
 
---SetMapTemplateUnit("wildlands", "unit-goblin-town-hall", "wildfang-tribe", {34, 17})
-SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "wildfang-tribe", {605 + 34 + 100, 206 + 17})
+SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "wildfang-tribe", {605 + 34 + 100, 206 + 17}, -3000, 550)
 
---SetMapTemplateUnit("wildlands", "unit-goblin-watch-tower", "wildfang-tribe", {26, 8})
+SetMapTemplateUnit("wildlands", "unit-goblin-town-hall", "wildfang-tribe", {34, 17}, 550) -- The Hammer of Thursagan happened during 550-551 YW
 
---SetMapTemplateUnit("wildlands", "unit-goblin-watch-tower", "wildfang-tribe", {28, 29})
+SetMapTemplateUnit("wildlands", "unit-goblin-watch-tower", "wildfang-tribe", {26, 8}, 550)
+
+SetMapTemplateUnit("wildlands", "unit-goblin-watch-tower", "wildfang-tribe", {28, 29}, 550)
