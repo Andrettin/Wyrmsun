@@ -74,8 +74,8 @@ DefineMapTemplate("island-of-the-lizard-god-underground", {
 	}
 })
 
-SetMapTemplateLayerConnector("island-of-the-lizard-god", "unit-cavern-entrance", {59, 117}, 1, "driftwood-entrance")
-SetMapTemplateLayerConnector("island-of-the-lizard-god-underground", "unit-cavern-entrance", {59, 117}, 0, "driftwood-entrance")
+SetMapTemplateLayerConnector("island-of-the-lizard-god", "unit-cavern-entrance", {59, 117}, 1)
+SetMapTemplateLayerConnector("island-of-the-lizard-god-underground", "unit-cavern-entrance", {59, 117}, 0)
 
 SetMapTemplateHero("island-of-the-lizard-god", "vindalf", "lyr", {14, 108}, 600)
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-dwarven-axefighter", "lyr", {14, 108}, 600)

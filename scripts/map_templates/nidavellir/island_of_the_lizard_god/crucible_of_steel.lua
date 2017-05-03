@@ -35,8 +35,8 @@ DefineMapTemplate("crucible-of-steel", {
 	OverlayTerrainImage = "scripts/map_templates/nidavellir/island_of_the_lizard_god/crucible_of_steel_overlay.png"
 })
 
-SetMapTemplateLayerConnector("island-of-the-lizard-god", "unit-cavern-entrance", {36, 35}, 1, "crucible-of-steel-entrance")
-SetMapTemplateLayerConnector("island-of-the-lizard-god-underground", "unit-cavern-entrance", {36, 35}, 0, "crucible-of-steel-entrance")
+SetMapTemplateLayerConnector("island-of-the-lizard-god", "unit-cavern-entrance", {36, 35}, 1)
+SetMapTemplateLayerConnector("island-of-the-lizard-god-underground", "unit-cavern-entrance", {36, 35}, 0)
 
 SetMapTemplateResource("crucible-of-steel", "unit-gold-deposit", {6, 31}) -- should be a mithril deposit
 
