@@ -31,8 +31,6 @@ DefineMapTemplate("aurvang", {
 	Width = 46,
 	Height = 35,
 	SubtemplatePosition = {679, 312},
-	TerrainFile = "scripts/map_templates/nidavellir/aurvang.map", -- From Battle for Wesnoth: Delfador's Memoirs (Showdown in the Northern Swamp)
-	OverlayTerrainFile = "scripts/map_templates/nidavellir/aurvang_overlay.map", -- From Battle for Wesnoth: Delfador's Memoirs (Showdown in the Northern Swamp)
 	GeneratedNeutralUnits = {
 		"unit-copper-deposit", 2
 	},
