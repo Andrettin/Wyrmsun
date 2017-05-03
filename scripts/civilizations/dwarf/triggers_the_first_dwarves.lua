@@ -122,7 +122,7 @@ AddTrigger("grafvitning-kobolds-send-attacker",
 AddTrigger("grafvitning-kobolds-attack-modsognirs-clan",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("modsognir", i) ~= nil and FindHero("durin", i) ~= nil) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("modsognir", i) ~= nil and FindHero("durin", i) ~= nil and GetFactionExists("grafvitning-tribe")) then
 				local uncount = 0
 				uncount = GetUnits(GetFactionPlayer("grafvitning-tribe"))
 				for unit1 = 1,table.getn(uncount) do 
@@ -163,7 +163,7 @@ AddTrigger("modsognirs-clan-kills-a-kobold",
 AddTrigger("modsognirs-clan-destroys-the-grafvitnings",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("modsognir", i) ~= nil and FindHero("durin", i) ~= nil and GetPlayerData(GetFactionPlayer("grafvitning-tribe"), "TotalNumUnitsConstructed") == 0) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("modsognir", i) ~= nil and FindHero("durin", i) ~= nil and GetFactionExists("grafvitning-tribe") and GetPlayerData(GetFactionPlayer("grafvitning-tribe"), "TotalNumUnitsConstructed") == 0) then
 				trigger_player = i
 				return true
 			end
