@@ -166,6 +166,7 @@ NidavellirStartY = 132
 Load("scripts/map_templates/nidavellir/aurvang.lua")
 Load("scripts/map_templates/nidavellir/caverns_of_chaincolt_gates.lua")
 Load("scripts/map_templates/nidavellir/chaincolt_foothills.lua")
+Load("scripts/map_templates/nidavellir/east_gate_of_knalga.lua")
 Load("scripts/map_templates/nidavellir/high_pass.lua")
 Load("scripts/map_templates/nidavellir/joruvellir.lua")
 Load("scripts/map_templates/nidavellir/ofnirs_valley.lua")

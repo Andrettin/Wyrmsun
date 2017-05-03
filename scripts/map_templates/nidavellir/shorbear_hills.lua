@@ -31,8 +31,6 @@ DefineMapTemplate("shorbear-hills", { -- From Battle for Wesnoth: The Sceptre of
 	Width = 42,
 	Height = 40,
 	SubtemplatePosition = {516, 225},
-	TerrainFile = "scripts/map_templates/nidavellir/shorbear_hills.map",
-	OverlayTerrainFile = "scripts/map_templates/nidavellir/shorbear_hills_overlay.map",
 	GeneratedNeutralUnits = {
 		"unit-copper-deposit", 2
 	},

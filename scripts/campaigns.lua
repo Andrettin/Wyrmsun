@@ -32,7 +32,8 @@ DefineCampaign("the-first-dwarves", {
 	Faction = "brising-clan",
 	StartYear = -2800,
 	MapTemplate = "nidavellir",
-	MapTemplateStartPos = {525, 132},
+--	MapTemplateStartPos = {525, 132},
+	MapTemplateStartPos = {457, 132},
 	MapSize = {256, 256}
 })
 
