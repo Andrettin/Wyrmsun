@@ -327,7 +327,7 @@ DefineUnitType("unit-minecart", {
 	Description = "Minecarts are useful to gather resources from mines in greater bulk.",
 	Image = {"file", "teuton/units/minecart.png", "size", {64, 64}},
 	Animations = "animations-minecart", Icon = "icon-teuton-minecart",
-	Costs = {"time", 250, "copper", 450, "lumber", 450},
+	Costs = {"time", 250, "copper", 300, "lumber", 300},
 	RepairHp = 4,
 	RepairCosts = {"copper", 1, "lumber", 1},
 	Speed = 5,
@@ -348,7 +348,7 @@ DefineUnitType("unit-minecart", {
 		{
 			"resource-id", "gold",
 			"file-when-loaded", "teuton/units/minecart_with_gold.png",
-			"resource-capacity", 400,
+			"resource-capacity", 200,
 			"resource-step", 6,
 			"wait-at-resource", 12,
 			"wait-at-depot", 150
@@ -356,7 +356,7 @@ DefineUnitType("unit-minecart", {
 		{
 			"resource-id", "silver",
 			"file-when-loaded", "teuton/units/minecart_with_silver.png",
-			"resource-capacity", 400,
+			"resource-capacity", 200,
 			"resource-step", 6,
 			"wait-at-resource", 12,
 			"wait-at-depot", 150
@@ -364,7 +364,7 @@ DefineUnitType("unit-minecart", {
 		{
 			"resource-id", "copper",
 			"file-when-loaded", "teuton/units/minecart_with_copper.png",
-			"resource-capacity", 400,
+			"resource-capacity", 200,
 			"resource-step", 6,
 			"wait-at-resource", 12,
 			"wait-at-depot", 150
@@ -372,7 +372,7 @@ DefineUnitType("unit-minecart", {
 		{
 			"resource-id", "coal",
 			"file-when-loaded", "teuton/units/minecart_with_coal.png",
-			"resource-capacity", 400,
+			"resource-capacity", 200,
 			"resource-step", 6,
 			"wait-at-resource", 12,
 			"wait-at-depot", 150

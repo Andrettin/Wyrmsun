@@ -233,7 +233,6 @@ DefineTerrainType("grass", {
 	}
 })
 
-
 DefineTerrainType("shallow-water", {
 	Name = "Shallow Water",
 	Character = "w",
