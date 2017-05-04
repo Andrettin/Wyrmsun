@@ -327,7 +327,7 @@ DefineUnitType("unit-minecart", {
 	Description = "Minecarts are useful to gather resources from mines in greater bulk.",
 	Image = {"file", "teuton/units/minecart.png", "size", {64, 64}},
 	Animations = "animations-minecart", Icon = "icon-teuton-minecart",
-	Costs = {"time", 250, "copper", 300, "lumber", 300},
+	Costs = {"time", 60, "copper", 200, "lumber", 200},
 	RepairHp = 4,
 	RepairCosts = {"copper", 1, "lumber", 1},
 	Speed = 5,

@@ -178,6 +178,7 @@ Load("scripts/map_templates/nidavellir/outskirts_of_kal_kartha.lua")
 Load("scripts/map_templates/nidavellir/shorbear_hills.lua")
 Load("scripts/map_templates/nidavellir/svarinshaug.lua")
 Load("scripts/map_templates/nidavellir/untersberg.lua")
+Load("scripts/map_templates/nidavellir/west_gate_of_kal_kartha.lua")
 Load("scripts/map_templates/nidavellir/wildlands.lua")
 --Load("scripts/map_templates/nidavellir/caverns_of_chaincolt_city.lua")
 
