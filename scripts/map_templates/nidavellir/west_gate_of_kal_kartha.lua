@@ -30,7 +30,5 @@ DefineMapTemplate("west-gate-of-kal-kartha", { -- from Battle for Wesnoth: The H
 	MainTemplate = "nidavellir",
 	Width = 47,
 	Height = 33,
-	SubtemplatePosition = {710, 75},
-	TerrainFile = "scripts/map_templates/nidavellir/west_gate_of_kal_kartha.map",
-	OverlayTerrainFile = "scripts/map_templates/nidavellir/west_gate_of_kal_kartha_overlay.map"
+	SubtemplatePosition = {710, 75}
 })
