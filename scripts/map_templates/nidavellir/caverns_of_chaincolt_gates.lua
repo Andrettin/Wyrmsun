@@ -31,8 +31,6 @@ DefineMapTemplate("caverns-of-chaincolt-gates", { -- From Battle for Wesnoth: Th
 	Width = 34,
 	Height = 30,
 	SubtemplatePosition = {466, 227},
-	TerrainFile = "scripts/map_templates/nidavellir/caverns_of_chaincolt_gates.map",
-	OverlayTerrainFile = "scripts/map_templates/nidavellir/caverns_of_chaincolt_gates_overlay.map",
 	GeneratedNeutralUnits = {
 		"unit-copper-deposit", 1
 	}

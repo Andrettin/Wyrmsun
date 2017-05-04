@@ -31,8 +31,6 @@ DefineMapTemplate("chaincolt-foothills", { -- From Battle for Wesnoth: The Scept
 	Width = 34,
 	Height = 33,
 	SubtemplatePosition = {453, 252},
-	TerrainFile = "scripts/map_templates/nidavellir/chaincolt_foothills.map",
-	OverlayTerrainFile = "scripts/map_templates/nidavellir/chaincolt_foothills_overlay.map",
 	GeneratedNeutralUnits = {
 		"unit-copper-deposit", 2
 	}
