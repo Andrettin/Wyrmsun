@@ -25,10 +25,10 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineMapTemplate("outskirts-of-kal-kartha", { -- from Battle for Wesnoth: The Hammer of Thursagan (Fear)
-	Name = "Outskirts of Kal Kartha",
+DefineMapTemplate("forbidden-forest", { -- from Battle for Wesnoth: The Hammer of Thursagan (Forbidden Forest)
+	Name = "Forbidden Forest",
 	MainTemplate = "nidavellir",
 	Width = 42,
-	Height = 32,
-	SubtemplatePosition = {663, 143}
+	Height = 37,
+	SubtemplatePosition = {660, 114}
 })
