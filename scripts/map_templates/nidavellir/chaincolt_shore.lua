@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016-2017 by Andrettin
+--      (c) Copyright 2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,22 +25,10 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineMapTemplate("chaincolt-foothills", { -- from Battle for Wesnoth: The Sceptre of Fire (A Bargain is Struck)
-	Name = "Chaincolt Foothills",
+DefineMapTemplate("chaincolt-shore", { -- from Battle for Wesnoth: The Sceptre of Fire (Outriding the Outriders)
+	Name = "Chaincolt Shore",
 	MainTemplate = "nidavellir",
-	Width = 34,
-	Height = 33,
-	SubtemplatePosition = {453, 252},
-	GeneratedNeutralUnits = {
-		"unit-copper-deposit", 2
-	}
+	Width = 26,
+	Height = 74,
+	SubtemplatePosition = {486, 289}
 })
-
-SetMapTemplateUnit("chaincolt-foothills", "unit-dwarven-guard-tower", "norlund-clan", {28, 3}, 24, 25)
-SetMapTemplateHero("chaincolt-foothills", "rugnur", "norlund-clan", {28, 3}, 24, 25)
-SetMapTemplateUnit("chaincolt-foothills", "unit-dwarven-guard-tower", "shinsplitter-clan", {28, 3}, 25)
-
-SetMapTemplateUnit("chaincolt-foothills", "unit-dwarven-guard-tower", "shinsplitter-clan", {25, 28}, 24)
-SetMapTemplateUnit("chaincolt-foothills", "unit-dwarven-steelclad", "shinsplitter-clan", {25, 28}, 24)
-
-SetMapTemplateUnit("chaincolt-foothills", "unit-gnomish-master-at-arms", "untersberg", {5, 27}, 24, 25)

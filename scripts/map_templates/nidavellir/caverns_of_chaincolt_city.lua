@@ -30,8 +30,8 @@ DefineMapTemplate("caverns-of-chaincolt-city", { -- From Battle for Wesnoth: The
 	MainTemplate = "nidavellir",
 	Width = 26,
 	Height = 26,
-	TerrainFile = "scripts/map_templates/caverns_of_chaincolt_city.map",
-	OverlayTerrainFile = "scripts/map_templates/caverns_of_chaincolt_city_overlay.map",
+	TerrainFile = "scripts/map_templates/nidavellir/caverns_of_chaincolt_city.map",
+	OverlayTerrainFile = "scripts/map_templates/nidavellir/caverns_of_chaincolt_city_overlay.map",
 	ExternalGeneratedTerrains = {
 		"rockbound-cave-floor", "medium",
 		"cave-wall", "high"
