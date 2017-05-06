@@ -90,7 +90,6 @@ DefineMapTemplate("nidavellir-underground", {
 	}
 })
 
-SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "khag-tribe", {234, 204})
 SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "lggi-tribe", {802, 292})
 
 --SetMapTemplateUnit("nidavellir-underground", "unit-dwarven-town-hall", "shadowcharm-clan", {-1, -1})
@@ -173,6 +172,7 @@ Load("scripts/map_templates/nidavellir/east_gate_of_knalga.lua")
 Load("scripts/map_templates/nidavellir/forbidden_forest.lua")
 Load("scripts/map_templates/nidavellir/goblin_bridge.lua")
 Load("scripts/map_templates/nidavellir/gryphon_mountain.lua")
+Load("scripts/map_templates/nidavellir/heartfangs_foothills.lua")
 Load("scripts/map_templates/nidavellir/high_pass.lua")
 Load("scripts/map_templates/nidavellir/highbrook_pass.lua")
 Load("scripts/map_templates/nidavellir/joruvellir.lua")
