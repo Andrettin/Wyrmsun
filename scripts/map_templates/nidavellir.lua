@@ -32,11 +32,6 @@ DefineMapTemplate("nidavellir", {
 	Height = 728,
 	TerrainImage = "scripts/map_templates/nidavellir.png",
 	OverlayTerrainImage = "scripts/map_templates/nidavellir_overlay.png",
-	GeneratedTerrains = {
-		"mud", "medium",
-		"rock", "medium",
-		"flamefood-tree", "medium"
-	},
 	GeneratedNeutralUnits = {
 		"unit-gold-deposit", 4,
 		"unit-silver-deposit", 4,

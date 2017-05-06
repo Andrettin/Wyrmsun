@@ -33,7 +33,7 @@ DefineCampaign("the-first-dwarves", {
 	StartYear = -2800,
 	MapTemplate = "nidavellir",
 --	MapTemplateStartPos = {525, 132},
-	MapTemplateStartPos = {457, 132},
+	MapTemplateStartPos = {475, 90},
 	MapSize = {256, 256}
 })
 
