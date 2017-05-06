@@ -88,6 +88,9 @@ https://github.com/Andrettin/Wyrmsun
 * Scenarios
 - The scenario maps now contain tree stumps.
 
+* Terrain
+- Fixed issue with pine trees appearing black on the minimap under SDL rendering.
+
 * Units
 - Caravans can now be built at Markets, allowing trade with foreign markets.
 - Fixed issue which caused transporters to unload all units inside if a transporter unit's button was clicked while the transporter wasn't on a coast.
