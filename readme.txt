@@ -87,9 +87,10 @@ https://github.com/Andrettin/Wyrmsun
 
 * Scenarios
 - The scenario maps now contain tree stumps.
+- Objectives in the Scenario mode are now categorized according to the quest they belong to.
 
 * Terrain
-- Fixed issue with pine trees appearing black on the minimap under SDL rendering.
+- Fixed issue with pine tree and mud tiles appearing black on the minimap under SDL rendering.
 
 * Units
 - Caravans can now be built at Markets, allowing trade with foreign markets.
