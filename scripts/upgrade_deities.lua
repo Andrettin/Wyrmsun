@@ -264,7 +264,7 @@ DefineModifier("upgrade-deity-christian-god",
 )
 
 DefineModifier("upgrade-deity-christian-god", -- dummy upgrade modifier to change variation
-	{"apply-to", "unit-teuton-temple"}
+	{"apply-to", "unit-teuton-priest"}, {"apply-to", "unit-teuton-temple"}
 )
 
 DefineModifier("upgrade-deity-gathaarl",
