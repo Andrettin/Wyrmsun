@@ -805,8 +805,7 @@ DefineAnimations("animations-tree-stump", {
 	},
 	Death = {"unbreakable begin",
 		"frame 1",
-		"label loop", 
-		"wait 100", "exact-frame 1", "goto loop",
+		"wait 200", "exact-frame 1",
 		"unbreakable end", "wait 1",
 	}
 })
