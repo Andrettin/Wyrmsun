@@ -731,6 +731,14 @@ DefineUnitType("unit-goblin-dock", {
 	}
 } )
 
+DefineUnitType("unit-goblin-wall", {
+	Parent = "unit-template-wall",
+	TerrainType = "goblin-wall",
+	Image = {"file", "goblin/buildings/wall.png", "size", {32, 32}},
+	Icon = "icon-goblin-wall"
+} )
+
+
 DefineUnitType("unit-goblin-banner", {
 	Name = "Banner",
 	Civilization = "goblin",
