@@ -68,9 +68,13 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue with burning building graphics not appearing.
 - Workers can now build Railroads (which require the Engineering upgrade). Railroads are necessary for minecarts to move on, and provide the same speed bonus as roads to units.
 
+* Factions
+- Added the dwarven Oinling Clan (+5% Copper Processing).
+
 * Heroes
 - Added a few new wyrm heroes (without specific portraits), recruitable at kobold mercenary camps.
 - Fixed issue which made recruitable fauna heroes' stats to not appear properly when hovering over their buttons.
+- Vindalf can no longer upgrade to a dwarven Explorer.
 
 * Items
 - Added the Elixir of Dexterity, Elixir of Intelligence, Elixir of Strength and Elixir of Vitality items. These elixirs give small permanent bonuses to the unit which drinks them. Each elixir may be consumed once per unit/hero.

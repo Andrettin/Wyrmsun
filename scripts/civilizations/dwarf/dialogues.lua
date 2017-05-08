@@ -25,6 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineDialogue("oin-leaves", {
+	Nodes = {
+		{
+			"text", "According to the latest gossip, it seems that the dwarf Oin moved with his kin and retainers to settle near a waterfall."
+		}
+	}
+})
+
 Load("scripts/civilizations/dwarf/dialogues_island_of_the_lizard_god.lua")
 Load("scripts/civilizations/dwarf/dialogues_the_first_dwarves.lua")
 Load("scripts/civilizations/dwarf/dialogues_the_mead_of_poetry.lua")

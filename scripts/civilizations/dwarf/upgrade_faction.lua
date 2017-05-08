@@ -37,7 +37,14 @@ DefineUpgrade("upgrade-faction-eikinskjaldi-clan", {
 
 DefineUpgrade("upgrade-faction-norlund-clan", {
 	Name = "Norlund Clan",
-	EffectsString = "+1 Damage and +1 Armor for Axefighters"
+	EffectsString = "+1 Damage and +1 Armor for Axefighters",
+	RequirementsString = "Smithy"
+})
+
+DefineUpgrade("upgrade-faction-oinling-clan", {
+	Name = "Oinling Clan",
+	EffectsString = "+5% Copper Processing for Mead Halls and Strongholds",
+	RequirementsString = "Smithy"
 })
 
 DefineUpgrade("upgrade-faction-shadowcharm-clan", {
@@ -47,17 +54,20 @@ DefineUpgrade("upgrade-faction-shadowcharm-clan", {
 
 DefineUpgrade("upgrade-faction-shinsplitter-clan", {
 	Name = "Shinsplitter Clan",
-	EffectsString = "+3 Damage and -1 Armor for Axefighters"
+	EffectsString = "+3 Damage and -1 Armor for Axefighters",
+	RequirementsString = "War Hall"
 })
 
 DefineUpgrade("upgrade-faction-shorbear-clan", {
 	Name = "Shorbear Clan",
-	EffectsString = "+15 Damage for Ballistas"
+	EffectsString = "+15 Damage for Ballistas",
+	RequirementsString = "Smithy"
 })
 
 DefineUpgrade("upgrade-faction-whitesteel-clan", {
 	Name = "Whitesteel Clan",
-	EffectsString = "+2 Damage for Guards"
+	EffectsString = "+2 Damage for Guards",
+	RequirementsString = "Smithy"
 })
 
 DefineUpgrade("upgrade-faction-joruvellir", {
@@ -151,6 +161,15 @@ DefineModifier("upgrade-faction-norlund-clan",
 
 DefineModifier("upgrade-faction-norlund-clan",
 	{"change-faction-to", "norlund-clan"}
+)
+
+DefineModifier("upgrade-faction-oinling-clan",
+	{"improve-production", "copper", 5},
+	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"}
+)
+
+DefineModifier("upgrade-faction-oinling-clan",
+	{"change-faction-to", "oinling-clan"}
 )
 
 DefineModifier("upgrade-faction-shadowcharm-clan",
@@ -280,7 +299,11 @@ DefinePredependency("upgrade-faction-eikinskjaldi-clan",
 )
 
 DefinePredependency("upgrade-faction-norlund-clan",
-	{"upgrade-faction-brising-clan"}
+	{"upgrade-faction-brising-clan", "unit-brising-smithy"}
+)
+
+DefineDependency("upgrade-faction-oinling-clan",
+	{"upgrade-faction-brising-clan", "unit-brising-smithy"}
 )
 
 DefinePredependency("upgrade-faction-shadowcharm-clan",
@@ -288,17 +311,17 @@ DefinePredependency("upgrade-faction-shadowcharm-clan",
 )
 
 DefinePredependency("upgrade-faction-shinsplitter-clan",
-	{"upgrade-faction-brising-clan"}
+	{"upgrade-faction-brising-clan", "unit-dwarven-barracks"}
 )
 
 DefinePredependency("upgrade-faction-shorbear-clan",
-	{"upgrade-faction-brising-clan"}
+	{"upgrade-faction-brising-clan", "unit-brising-smithy"}
 )
 
 DefinePredependency("upgrade-faction-whitesteel-clan",
-	{"upgrade-faction-brising-clan"},
-	"or", {"upgrade-faction-norlund-clan"},
-	"or", {"upgrade-faction-shorbear-clan"}
+	{"upgrade-faction-brising-clan", "unit-brising-smithy"},
+	"or", {"upgrade-faction-norlund-clan", "unit-dwarven-smithy"},
+	"or", {"upgrade-faction-shorbear-clan", "unit-dwarven-smithy"}
 )
 
 DefinePredependency("upgrade-faction-joruvellir",

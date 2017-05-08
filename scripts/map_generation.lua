@@ -5907,12 +5907,21 @@ function GetTerrainCivilizations(terrain)
 	return {}
 end
 
-function CreatePlayerForFaction(faction)
+function CreatePlayerForFaction(faction, init_ai)
 	local faction_player = FindUnusedPlayerSlot()
 	if (faction_player ~= -1) then
 		Players[faction_player].Type = PlayerComputer				
 		SetPlayerData(faction_player, "RaceName", GetFactionData(faction, "Civilization"))
 		SetPlayerData(faction_player, "Faction", faction)
+		if (init_ai) then
+			SetPlayerData(faction_player, "AiEnabled", true)
+			SetAiType(faction_player, GetFactionData(faction, "DefaultAI"))
+			SetPlayerData(faction_player, "Team", 1)
+			SetPlayerData(faction_player, "Resources", "copper", 2500)
+			SetPlayerData(faction_player, "Resources", "lumber", 2500)
+			SetPlayerData(faction_player, "Resources", "stone", 2500)
+			InitAi(faction_player)
+		end
 	end
 	return faction_player
 end

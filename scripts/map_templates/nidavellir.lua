@@ -155,6 +155,8 @@ SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "moinling-tribe", {-1, -
 NidavellirStartX = 525
 NidavellirStartY = 132
 
+SetMapTemplateResource("nidavellir", "unit-gold-deposit", {485, 119}) -- gold deposit for Andvari's clan
+
 Load("scripts/map_templates/nidavellir/aurvang.lua")
 Load("scripts/map_templates/nidavellir/caverns_of_chaincolt_gates.lua")
 Load("scripts/map_templates/nidavellir/chaincolt_foothills.lua")

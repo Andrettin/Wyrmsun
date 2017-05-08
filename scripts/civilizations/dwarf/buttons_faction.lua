@@ -73,6 +73,14 @@ DefineButton( { Pos = 6, Level = 2, Icon = "icon-flag-light-blue-hammer-on-orang
 	ForUnit = {"unit-dwarven-town-hall", "unit-dwarven-stronghold"}
 } )
 
+DefineButton( { Pos = 7, Level = 2, Icon = "icon-flag-blue-hammer-on-yellow",
+	Action = "research", Value = "upgrade-faction-oinling-clan",
+	Allowed = "check-single-research",
+	Key = "i", Hint = "Found the O~!inling Clan", Popup = "popup-research",
+	Description = "Changes your faction to the Oinling Clan",
+	ForUnit = {"unit-dwarven-town-hall", "unit-dwarven-stronghold"}
+} )
+
 DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-silver-hammer-on-red",
 	Action = "research", Value = "upgrade-faction-knalga",
 	Allowed = "check-single-research",

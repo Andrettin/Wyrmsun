@@ -63,7 +63,6 @@ DefineUpgrade("upgrade-faction-sugambri-tribe", {
 
 DefineUpgrade("upgrade-faction-ubii-tribe", {
 	Name = "Ubii Tribe",
-	GrandStrategyProductionEfficiencyModifier = {"gold", 5, "silver", 5, "copper", 5},
 	EffectsString = "+5% Copper Processing for Rathauses and Burgs",
 	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
 })

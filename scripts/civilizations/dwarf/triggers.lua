@@ -41,5 +41,52 @@ AddTrigger("the-mead-of-poetry-fjalar-and-galar-conspire",
 	end
 )
 
+AddTrigger("oin-leaves",
+	function()
+		if (SyncRand(100) ~= 0) then -- 1% chance this will trigger every time it is checked
+			return false
+		end
+		if (GetFactionExists("oinling-clan")) then
+			return false
+		end
+		if ( -- if Andvari's Falls are empty, but there are certain Germanic structures within a certain range of it
+			GetNumUnitsAt(-2, "any", {490 - 16 - NidavellirStartX, 107 - 16 - NidavellirStartY}, {490 + 16 - NidavellirStartX, 107 + 16 - NidavellirStartY}, GetMapLayer("", "Nidavellir", 0)) == 0
+			and GetNumUnitsAt(-2, "unit-dwarven-town-hall", {490 - 256 - NidavellirStartX, 107 - 256 - NidavellirStartY}, {490 + 256 - NidavellirStartX, 107 + 256 - NidavellirStartY}, GetMapLayer("", "Nidavellir", 0)) > 0 -- a dwarven settlement from which Oin could have come from
+			and ( -- Oin's son Andvari had a golden ring, which means goldsmithing must have been developed
+				GetNumUnitsAt(-2, "unit-dwarven-smithy", {490 - 256 - NidavellirStartX, 107 - 256 - NidavellirStartY}, {490 + 256 - NidavellirStartX, 107 + 256 - NidavellirStartY}, GetMapLayer("", "Nidavellir", 0)) > 0
+				or GetNumUnitsAt(-2, "unit-brising-smithy", {490 - 256 - NidavellirStartX, 107 - 256 - NidavellirStartY}, {490 + 256 - NidavellirStartX, 107 + 256 - NidavellirStartY}, GetMapLayer("", "Nidavellir", 0)) > 0
+			)
+		) then
+			return true
+		end
+		return false
+	end,
+	function()
+		local oinling_player = CreatePlayerForFaction("oinling-clan", true)
+		if (oinling_player == -1) then
+			return false
+		end
+		unit = CreateUnit("unit-dwarven-town-hall", oinling_player, {490 - NidavellirStartX, 107 - NidavellirStartY})
+		local players_around = GetPlayersAroundUnit(unit, 256)
+		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {490 - NidavellirStartX, 107 - NidavellirStartY})
+		SetUnitVariable(unit, "Character", "andvari") -- Oin's son
+		unit = CreateUnit("unit-dwarven-miner", oinling_player, {490 - NidavellirStartX, 107 - NidavellirStartY})
+		unit = CreateUnit("unit-dwarven-miner", oinling_player, {490 - NidavellirStartX, 107 - NidavellirStartY})
+		unit = CreateUnit("unit-dwarven-miner", oinling_player, {490 - NidavellirStartX, 107 - NidavellirStartY})
+		unit = CreateUnit("unit-dwarven-miner", oinling_player, {490 - NidavellirStartX, 107 - NidavellirStartY})
+		unit = CreateUnit("unit-dwarven-miner", oinling_player, {490 - NidavellirStartX, 107 - NidavellirStartY})
+		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {490 - NidavellirStartX, 107 - NidavellirStartY})
+		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {490 - NidavellirStartX, 107 - NidavellirStartY})
+		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {490 - NidavellirStartX, 107 - NidavellirStartY})
+		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {490 - NidavellirStartX, 107 - NidavellirStartY})
+		
+		for i = 1, table.getn(players_around) do 
+			CallDialogue("oin-leaves", players_around[i])
+		end
+
+		return false
+	end
+)
+
 Load("scripts/civilizations/dwarf/triggers_island_of_the_lizard_god.lua")
 Load("scripts/civilizations/dwarf/triggers_the_first_dwarves.lua")

@@ -71,6 +71,15 @@ DefineFaction("norlund-clan", {
 	HistoricalFactionDerivations = {-1, "dwarf", "brising-clan"}
 })
 
+DefineFaction("oinling-clan", {
+	Name = "Oinling Clan",
+	Civilization = "dwarf",
+	Type = "tribe",
+	Colors = {"yellow"},
+	FactionUpgrade = "upgrade-faction-oinling-clan",
+	Description = "Oin's kin are known for their love of gold, and their skill in hoarding it."
+})
+
 DefineFaction("shadowcharm-clan", {
 	Name = "Shadowcharm Clan",
 	Civilization = "dwarf",
@@ -100,8 +109,7 @@ DefineFaction("shorbear-clan", {
 --	DevelopsTo = {"knalga"},
 	DevelopsTo = {"joruvellir", "kal-kartha", "knalga", "lyr"},
 	FactionUpgrade = "upgrade-faction-shorbear-clan",
-	Description = "Contrary to many of the other dwarven clans, who prefer to live in mountains, the Shorbears have made their homes in the hills. They are known as excellent crafters of tools.",
-	HistoricalFactionDerivations = {-1, "dwarf", "brising-clan"}
+	Description = "Contrary to many of the other dwarven clans, who prefer to live in mountains, the Shorbears have made their homes in the hills. They are known as excellent crafters of tools."
 })
 
 DefineFaction("whitesteel-clan", {

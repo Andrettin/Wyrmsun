@@ -144,7 +144,8 @@ DefineCharacter("vindalf", {
 	Gender = "male",
 	Type = "unit-dwarven-scout", -- his name means "wind elf", so it makes sense to make him a projectile thrower
 	Civilization = "dwarf",
-	Background = "Vindalf is a dwarf from Norse mythology. His name means \"wind elf\"."
+	Background = "Vindalf is a dwarf from Norse mythology. His name means \"wind elf\".",
+	ForbiddenUpgrades = {"unit-dwarven-explorer"}
 })
 
 DefineCharacter("alvis", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 144-145; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 183-194.
@@ -155,6 +156,17 @@ DefineCharacter("alvis", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 	Background = "In the ~<Alvismol~>, Alvis is an extremely knowledgeable dwarf who desires to marry Thor's daughter. His name means \"all-knowing\" or \"all-wise\".",
 	HairVariation = "gray-hair",
 	Trait = "upgrade-wise"
+})
+
+DefineCharacter("andvari", {
+	Name = "Andvari",
+	Gender = "male",
+	Type = "unit-dwarven-steelclad",
+	Civilization = "dwarf",
+	Faction = "oinling-clan",
+	Description = "The son of Oin, Andvari became famous for his large hoard of gold.",
+	Trait = "upgrade-ambitious",
+	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })
 
 DefineCharacter("regin", {
