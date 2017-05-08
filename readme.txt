@@ -102,6 +102,7 @@ https://github.com/Andrettin/Wyrmsun
 - Siege engines now require the Engineering upgrade to be produced.
 - Added Minecart, which can gather metals with greater carrying capacity than a normal worker. Minecarts can only move on railroads, and require the Engineering upgrade.
 - Added Kobold Slasher (upgrade of the Kobold Footpad, icon by Exidelo).
+- Added Kobold Champion (upgrade of the Kobold Slasher, icon by Exidelo).
 
 * Upgrades
 - Added Engineering upgrade (icon by Exidelo) at the Smithy, which allows siege engines, railroads and minecarts.

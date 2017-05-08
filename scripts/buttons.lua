@@ -278,7 +278,7 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-level-up",
 		"unit-derro-thug", "unit-derro-executioner", "unit-derro-shadowguard",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shadowstalker", "unit-goblin-shaman",
 		"unit-goblin-magnate",
-		"unit-kobold-footpad", "unit-kobold-slasher",
+		"unit-kobold-footpad", "unit-kobold-slasher", "unit-kobold-champion",
 		"unit-ettin",
 		"unit-elven-swordsman", "unit-elven-priest"
 	}
@@ -328,7 +328,7 @@ DefineButton( { Pos = 3, Level = 2, Icon = "icon-sword-mastery-bronze",
 		"unit-teuton-heroic-swordsman", "unit-frank-heroic-swordsman", "unit-teuton-knight-lord", "unit-frank-knight-lord",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
 		"unit-goblin-warlord",
-		"unit-kobold-slasher",
+		"unit-kobold-champion",
 		"unit-elven-swordsman"
 	}
 } )
@@ -343,7 +343,7 @@ DefineButton( { Pos = 3, Level = 2, Icon = "icon-sword-mastery",
 		"unit-teuton-heroic-swordsman", "unit-teuton-knight-lord",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
 		"unit-goblin-warlord",
-		"unit-kobold-slasher",
+		"unit-kobold-champion",
 		"unit-elven-swordsman"
 	}
 } )
@@ -386,7 +386,7 @@ DefineButton( { Pos = 5, Level = 2, Icon = "icon-critical-strike",
 		"unit-teuton-archer", "unit-teuton-knight-lord", "unit-frank-knight-lord",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
 		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-shadowstalker",
-		"unit-kobold-slasher",
+		"unit-kobold-champion",
 		"unit-ettin",
 		"unit-elven-swordsman"
 	}
@@ -407,7 +407,7 @@ DefineButton( { Pos = 5, Level = 2, Icon = "icon-deadly-precision",
 		"unit-teuton-archer", "unit-teuton-knight-lord", "unit-frank-knight-lord",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
 		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-shadowstalker",
-		"unit-kobold-slasher",
+		"unit-kobold-champion",
 		"unit-ettin",
 		"unit-elven-swordsman"
 	}
@@ -429,7 +429,7 @@ DefineButton( { Pos = 6, Level = 2, Icon = "icon-eagle-eye",
 		"unit-teuton-archer", "unit-teuton-knight-lord", "unit-frank-knight-lord",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
 		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-shadowstalker",
-		"unit-kobold-slasher",
+		"unit-kobold-champion",
 		"unit-ettin",
 		"unit-elven-swordsman"
 	}
@@ -449,7 +449,7 @@ DefineButton( { Pos = 7, Level = 2, Icon = "icon-stun",
 		"unit-teuton-knight-lord", "unit-frank-knight-lord",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
 		"unit-goblin-warlord",
-		"unit-kobold-slasher",
+		"unit-kobold-champion",
 		"unit-ettin",
 		"unit-elven-swordsman"
 	}
@@ -535,7 +535,7 @@ DefineButton( { Pos = 13, Level = 2, Icon = "icon-ethereal-vision",
 		"unit-goblin-warlord", "unit-goblin-shadowstalker",
 --		"unit-goblin-shaman",
 		"unit-goblin-magnate",
---		"unit-kobold-slasher",
+--		"unit-kobold-champion",
 		"unit-ettin",
 --		"unit-elven-swordsman", "unit-elven-priest"
 	}
@@ -586,7 +586,7 @@ DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
 		"unit-goblin-worker",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shadowstalker", "unit-goblin-shaman",
 		"unit-goblin-magnate",
-		"unit-kobold-footpad", "unit-kobold-slasher",
+		"unit-kobold-footpad", "unit-kobold-slasher", "unit-kobold-champion",
 		"unit-ettin",
 		"unit-elven-swordsman", "unit-elven-priest"
 	} 
@@ -619,7 +619,7 @@ DefineButton( { Pos = 14, Level = 0, Icon = "icon-inventory",
 		"unit-derro-thug", "unit-derro-executioner", "unit-derro-shadowguard",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shadowstalker", "unit-goblin-shaman",
 		"unit-goblin-magnate",
-		"unit-kobold-footpad", "unit-kobold-slasher",
+		"unit-kobold-footpad", "unit-kobold-slasher", "unit-kobold-champion",
 		"unit-wyrm",
 		"unit-ettin",
 		"unit-elven-swordsman", "unit-elven-priest"
@@ -669,7 +669,7 @@ DefineButton( { Pos = 16, Level = 3, Icon = "icon-cancel",
 		"unit-goblin-worker",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shadowstalker", "unit-goblin-shaman",
 		"unit-goblin-magnate",
-		"unit-kobold-footpad", "unit-kobold-slasher",
+		"unit-kobold-footpad", "unit-kobold-slasher", "unit-kobold-champion",
 		"unit-wyrm",
 		"unit-ettin",
 		"unit-elven-swordsman", "unit-elven-priest"
@@ -719,7 +719,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-stun",
 		"unit-teuton-heroic-swordsman", "unit-frank-heroic-swordsman", "unit-teuton-knight-lord", "unit-frank-knight-lord",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
 		"unit-goblin-warlord",
-		"unit-kobold-slasher",
+		"unit-kobold-champion",
 		"unit-ettin"
 	}
 })

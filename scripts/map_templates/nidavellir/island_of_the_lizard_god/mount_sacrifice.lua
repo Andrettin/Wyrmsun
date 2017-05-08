@@ -67,12 +67,12 @@ SetMapTemplateUnit("mount-sacrifice", "unit-kobold-footpad", "grafvolling-tribe"
 
 -- "Lizard king's throne room. Beware his champion!"
 SetMapTemplateUnit("mount-sacrifice", "unit-chair", "", {12, 2})
-SetMapTemplateUnit("mount-sacrifice", "unit-kobold-slasher", "grafvolling-tribe", {12, 2}) -- Kobold king's champion
+SetMapTemplateUnit("mount-sacrifice", "unit-kobold-champion", "grafvolling-tribe", {12, 2}) -- Kobold king's champion
 
 -- "Lizard king's throne chambers. (Lots of treasure!)"
 SetMapTemplateUnit("mount-sacrifice", "unit-gold-chest", "", {17, 2})
 SetMapTemplateUnit("mount-sacrifice", "unit-bed", "", {21, 2})
-SetMapTemplateUnit("mount-sacrifice", "unit-kobold-slasher", "grafvolling-tribe", {17, 2}) -- Kobold king
+SetMapTemplateUnit("mount-sacrifice", "unit-kobold-champion", "grafvolling-tribe", {17, 2}) -- Kobold king
 
 -- "Prisoners kept here prior to sacrifice."
 SetMapTemplateUnit("mount-sacrifice", "unit-kobold-footpad", "grafvolling-tribe", {17, 12}) -- prison guard

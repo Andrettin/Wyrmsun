@@ -106,7 +106,6 @@ DefineUnitType("unit-kobold-slasher", {
 	NightSightRangeBonus = 1,
 	WeaponClasses = {"sword", "thrusting-sword"},
 	HackDamage = true,
-	Mana = {Enable = true, Max = 150, Value = 150, Increase = 1}, -- since it has no upgrade yet
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-goblin-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Corpse = "unit-kobold-dead-body",
 	Variations = {
@@ -142,4 +141,58 @@ DefineUnitType("unit-kobold-slasher", {
 	}
 })
 
+DefineUnitType("unit-kobold-champion", {
+	Name = "Champion",
+	Parent = "unit-template-heroic-infantry",
+	Civilization = "kobold",
+	Description = "The elite warriors of kobold society, champions utilize savage swordfighting techniques to eliminate their foes.",
+	Image = {"file", "kobold/units/kobold_footpad.png", "size", {72, 72}},
+	Animations = "animations-goblin-spearman", Icon = "icon-kobold-champion",
+	DefaultEquipment = {
+		{"weapon", "unit-short-sword"},
+		{"shield", "unit-goblin-wooden-shield"},
+		{"boots", "unit-boots"}
+	},
+	HitPoints = 80,
+	Accuracy = 12,
+	Evasion = 12,
+	-- don't set gender for Kobolds: since they are reptilian creatures, their graphics can represent both genders)
+	DaySightRangeBonus = -1,
+	NightSightRangeBonus = 1,
+	WeaponClasses = {"sword", "thrusting-sword"},
+	HackDamage = true,
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-goblin-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	Corpse = "unit-kobold-dead-body",
+	Variations = {
+		{
+			"variation-id", "brown-scales"
+		},
+		{
+			"variation-id", "blue-scales",
+			"file", "kobold/units/kobold_footpad_blue_scales.png"
+		},
+		{
+			"variation-id", "purple-scales",
+			"file", "kobold/units/kobold_footpad_purple_scales.png"
+		},
+		{
+			"variation-id", "red-scales",
+			"file", "kobold/units/kobold_footpad_red_scales.png"
+		},
+		{
+			"variation-id", "yellow-scales",
+			"file", "kobold/units/kobold_footpad_yellow_scales.png"
+		}
+	},
+	Sounds = {
+		"selected", "click",
+--		"selected", "basic-goblin-voices-selected-group",
+--		"acknowledge", "basic-goblin-voices-acknowledge",
+--		"ready", "goblin-impaler-ready",
+--		"help", "basic-dwarf-voices-help",
+		"dead", "basic-kobold-voices-dead",
+		"hit", "sword-attack",
+		"miss", "attack-miss"
+	}
+})
 

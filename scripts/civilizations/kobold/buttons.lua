@@ -41,3 +41,9 @@ DefineButton( { Pos = 1, Level = 2, Icon = "icon-kobold-slasher",
 	ForUnit = {"unit-kobold-footpad"}
 } )
 
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-kobold-champion",
+	Action = "experience-upgrade-to", Value = "unit-kobold-champion",
+	Key = "u", Hint = "~!Upgrade to Champion", Popup = "popup-unit",
+	ForUnit = {"unit-kobold-slasher"}
+} )
+

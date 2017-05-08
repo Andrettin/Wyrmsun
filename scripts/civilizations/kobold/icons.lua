@@ -36,3 +36,9 @@ DefineIcon({
 	Size = {46, 38},
 	File = "kobold/icons/slasher.png"
 })
+
+DefineIcon({
+	Name = "icon-kobold-champion",
+	Size = {46, 38},
+	File = "kobold/icons/champion.png"
+})
