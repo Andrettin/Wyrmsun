@@ -299,11 +299,19 @@ DefinePredependency("upgrade-faction-eikinskjaldi-clan",
 )
 
 DefinePredependency("upgrade-faction-norlund-clan",
-	{"upgrade-faction-brising-clan", "unit-brising-smithy"}
+	{"upgrade-faction-brising-clan"}
+)
+
+DefineDependency("upgrade-faction-norlund-clan",
+	{"unit-dwarven-smithy"}, "or", {"unit-brising-smithy"}
+)
+
+DefinePredependency("upgrade-faction-oinling-clan",
+	{"upgrade-faction-brising-clan"}
 )
 
 DefineDependency("upgrade-faction-oinling-clan",
-	{"upgrade-faction-brising-clan", "unit-brising-smithy"}
+	{"unit-dwarven-smithy"}, "or", {"unit-brising-smithy"}
 )
 
 DefinePredependency("upgrade-faction-shadowcharm-clan",
@@ -311,17 +319,29 @@ DefinePredependency("upgrade-faction-shadowcharm-clan",
 )
 
 DefinePredependency("upgrade-faction-shinsplitter-clan",
-	{"upgrade-faction-brising-clan", "unit-dwarven-barracks"}
+	{"upgrade-faction-brising-clan"}
+)
+
+DefineDependency("upgrade-faction-shinsplitter-clan",
+	{"unit-dwarven-barracks"}
 )
 
 DefinePredependency("upgrade-faction-shorbear-clan",
-	{"upgrade-faction-brising-clan", "unit-brising-smithy"}
+	{"upgrade-faction-brising-clan"}
+)
+
+DefineDependency("upgrade-faction-shorbear-clan",
+	{"unit-dwarven-smithy"}, "or", {"unit-brising-smithy"}
 )
 
 DefinePredependency("upgrade-faction-whitesteel-clan",
-	{"upgrade-faction-brising-clan", "unit-brising-smithy"},
-	"or", {"upgrade-faction-norlund-clan", "unit-dwarven-smithy"},
-	"or", {"upgrade-faction-shorbear-clan", "unit-dwarven-smithy"}
+	{"upgrade-faction-brising-clan"},
+	"or", {"upgrade-faction-norlund-clan"},
+	"or", {"upgrade-faction-shorbear-clan"}
+)
+
+DefineDependency("upgrade-faction-whitesteel-clan",
+	{"unit-dwarven-smithy"}, "or", {"unit-brising-smithy"}
 )
 
 DefinePredependency("upgrade-faction-joruvellir",
@@ -333,7 +353,7 @@ DefineDependency("upgrade-faction-joruvellir",
 )
 
 DefinePredependency("upgrade-faction-kal-kartha",
-	{"upgrade-faction-shadowcharm-clan"}, "or", {"upgrade-faction-shinsplitter-clan"}, "or", {"upgrade-faction-shorbear-clan"}, "or", {"upgrade-faction-whitesteel-clan"}
+	{"upgrade-faction-oinling-clan"}, "or", {"upgrade-faction-shadowcharm-clan"}, "or", {"upgrade-faction-shinsplitter-clan"}, "or", {"upgrade-faction-shorbear-clan"}, "or", {"upgrade-faction-whitesteel-clan"}
 )
 
 DefineDependency("upgrade-faction-kal-kartha",
@@ -341,7 +361,7 @@ DefineDependency("upgrade-faction-kal-kartha",
 )
 
 DefinePredependency("upgrade-faction-knalga",
-	{"upgrade-faction-norlund-clan"}, "or", {"upgrade-faction-shinsplitter-clan"}, "or", {"upgrade-faction-shorbear-clan"}, "or", {"upgrade-faction-whitesteel-clan"}
+	{"upgrade-faction-norlund-clan"}, "or", {"upgrade-faction-oinling-clan"}, "or", {"upgrade-faction-shinsplitter-clan"}, "or", {"upgrade-faction-shorbear-clan"}, "or", {"upgrade-faction-whitesteel-clan"}
 )
 
 DefineDependency("upgrade-faction-knalga",
@@ -349,7 +369,7 @@ DefineDependency("upgrade-faction-knalga",
 )
 
 DefinePredependency("upgrade-faction-lyr",
-	{"upgrade-faction-brising-clan"}, "or", {"upgrade-faction-whitesteel-clan"}
+	{"upgrade-faction-brising-clan"}, "or", {"upgrade-faction-oinling-clan"}, "or", {"upgrade-faction-whitesteel-clan"}
 )
 
 DefineDependency("upgrade-faction-lyr",
