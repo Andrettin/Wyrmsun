@@ -401,28 +401,12 @@ DefineQuest("last-stand-at-the-forge", {
 })
 --]]
 
-DefineQuest("andvaris-gold", {
-	Name = "Andvari's Gold",
-	Icon = "icon-gold",
-	Description = "Regin has asked you to help him take Andvari's gold forcibly, giving promises of great wealth.",
-	World = "Nidavellir",
-	Civilization = "dwarf",
-	RequiredQuest = "the-necklace-of-the-brisings", -- this happens long after Modsognir's time
---	QuestGiver = "Regin",
-	Area = "Andvari's Falls",
-	StartSpeech = "Listen... there is a dwarf who lives near here, called Andvari. He has gathered a large gold hoard, by methods unknown. For me alone, it would be too risky to wrest the gold from Andvari. But with your help... can I count on it?",
-	InProgressSpeech = "We shall be very wealthy!",
-	CompletionSpeech = "The hoard is nowhere to be found! Wait, I see some kobold equipment has been left here in their rush to take the hoard away... I think I can identify the tribe they belong to.",
-	Hidden = true
-})
-
 DefineQuest("fafnirs-hoard", {
 	Name = "Fafnir's Hoard",
 	Icon = "icon-wyrm-vicious",
 	Description = "Andvari's gold hoard has been taken by the kobolds who care for the wyrm Fafnir. If you and Regin are to recover the gold, you must enter Fafnir's perilous domain and slay the giant beast.",
 	World = "Nidavellir",
 	Civilization = "dwarf",
-	RequiredQuest = "andvaris-gold",
 --	QuestGiver = "Regin",
 	Area = "Gnitaheith",
 	StartSpeech = "Andvari's gold hoard was taken by a group of treacherous kobolds, who took it to the lair of their wyrm, Fafnir. To recover the precious metal, we must enter the wyrm's lair.",
@@ -452,6 +436,33 @@ DefineQuest("mushroom-fields", { -- inspired by the dialogue in Battle for Wesno
 	Rewards = "+1500 Copper",
 	Hint = "Select a Miner, press the Build Structure button and then click on the Build Mushroom Farm button to build the structure required for this quest.",
 	BuildUnits = {"unit-dwarven-mushroom-farm", 3}
+})
+
+DefineQuest("andvaris-gold", {
+	Name = "Andvari's Gold",
+	Icon = "icon-ring",
+	Description = "Andvari, the son of Oin, is now the leader of their clan. Lately we have discovered that he keeps quite a bit of gold hidden... Some notables are suggesting a raid against Andvari's holding to add his gold to our treasury.",
+	PlayerColor = "yellow",
+	Conditions = function(s)
+		if (
+			GetFactionExists("oinling-clan") -- Andvari's clan must exist
+			and GetNumUnitsAt(trigger_player, "any", {490 - 256 - NidavellirStartX, 107 - 256 - NidavellirStartY}, {490 + 256 - NidavellirStartX, 107 + 256 - NidavellirStartY}, GetMapLayer("", "Nidavellir", 0)) > 0 -- the player must be within a certain distance of Andvari's holding
+		) then
+			return true
+		end
+		return false
+	end,
+	AcceptEffects = function(s)
+		unit = CreateUnit("unit-revealer", trigger_player, {490 - NidavellirStartX, 107 - NidavellirStartY}) -- show the location of Andvari's holding
+		SetUnitVariable(unit, "TTL", 600)
+	end,
+	CompletionEffects = function(s)
+		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 10000)
+	end,
+	Objectives = {"- Destroy the Oinling Clan"},
+	Rewards = "+10,000 Copper, Andvaranaut",
+	DestroyFactions = {"oinling-clan"},
+	Competitive = true
 })
 
 DefineQuest("the-mead-of-poetry-brew-potions-of-invisibility", {

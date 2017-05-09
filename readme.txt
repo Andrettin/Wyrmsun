@@ -87,7 +87,8 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed a save game loading crash cause.
 
 * Quests
-- Added a new Germanic side-quest, "Slay the Wild Folk at Hlesey".
+- Added a new side-quest for the Haimdala's Progeny scenario, "Slay the Wild Folk at Hlesey".
+- Added a new side-quest for the The First Dwarves scenario, "Andvari's Gold".
 
 * Scenarios
 - The scenario maps now contain tree stumps.
