@@ -453,14 +453,26 @@ DefineQuest("andvaris-gold", {
 		return false
 	end,
 	AcceptEffects = function(s)
-		unit = CreateUnit("unit-revealer", trigger_player, {490 - NidavellirStartX, 107 - NidavellirStartY}) -- show the location of Andvari's holding
+		local oinling_player = GetFactionPlayer("oinling-clan")
+		unit = CreateUnit("unit-revealer", trigger_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "Nidavellir", 0)) -- show the location of Andvari's holding
 		SetUnitVariable(unit, "TTL", 600)
 	end,
 	CompletionEffects = function(s)
+		local oinling_player = GetFactionPlayer("oinling-clan")
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 10000)
+		unit = CreateUnit("unit-ring", PlayerNumNeutral, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "Nidavellir", 0))
+		if (GetUniqueItemData("andvaranaut", "CanDrop")) then
+			SetUnitVariable(unit, "Unique", "andvaranaut")
+		else
+			SetUnitVariable(unit, "GenerateSpecialProperties", oinling_player) -- if Andvaranaut cannot drop, then generate a magic ring
+		end
+		SetUnitVariable(unit, "Identified", false)
+		unit = CreateUnit("unit-revealer", trigger_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "Nidavellir", 0)) -- show the location of the ring
+		SetUnitVariable(unit, "TTL", 600)
+		CallDialogue("andvaris-gold-is-ours", trigger_player)
 	end,
 	Objectives = {"- Destroy the Oinling Clan"},
-	Rewards = "+10,000 Copper, Andvaranaut",
+	Rewards = "+10,000 Copper, Magic Ring",
 	DestroyFactions = {"oinling-clan"},
 	Competitive = true
 })

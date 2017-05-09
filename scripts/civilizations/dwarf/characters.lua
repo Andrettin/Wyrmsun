@@ -164,9 +164,15 @@ DefineCharacter("andvari", {
 	Type = "unit-dwarven-steelclad",
 	Civilization = "dwarf",
 	Faction = "oinling-clan",
-	Description = "The son of Oin, Andvari became famous for his large hoard of gold.",
+	Description = "The son of Oin, Andvari is famous for his large hoard of gold.",
 	Trait = "upgrade-ambitious",
-	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
+	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "oinling-clan") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("regin", {
