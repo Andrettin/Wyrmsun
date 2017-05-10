@@ -83,6 +83,14 @@ DefineFaction("mabom-tribe", { -- invented by Jesse Crider
 	FactionUpgrade = "upgrade-faction-mabom-tribe"
 })
 
+DefineFaction("prideblade-tribe", {
+	Name = "Prideblade Tribe",
+	Civilization = "goblin",
+	Type = "tribe",
+	Colors = {"white"},
+	FactionUpgrade = "upgrade-faction-prideblade-tribe"
+})
+
 DefineFaction("sigre-tribe", { -- invented by Jesse Crider
 	Name = "Sigre Tribe",
 	Civilization = "goblin",

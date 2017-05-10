@@ -132,7 +132,7 @@ Units = {
 	"unit-derro-worker", "unit-derro-thug", "unit-derro-executioner", "unit-derro-shadowguard",
 	"upgrade-goblin-civilization",
 	"upgrade-faction-aelak-tribe", "upgrade-faction-issudru-tribe", "upgrade-faction-mabom-tribe", "upgrade-faction-sigre-tribe",
-	"upgrade-faction-aurvangling-tribe", "upgrade-faction-dreadskull-tribe", "upgrade-faction-khag-tribe", "upgrade-faction-lggi-tribe", "upgrade-faction-wildfang-tribe",
+	"upgrade-faction-aurvangling-tribe", "upgrade-faction-dreadskull-tribe", "upgrade-faction-khag-tribe", "upgrade-faction-lggi-tribe", "upgrade-faction-prideblade-tribe", "upgrade-faction-wildfang-tribe",
 	"upgrade-faction-aurvang", "upgrade-faction-driftwood", "upgrade-faction-ezmarria", "upgrade-faction-myridia", "upgrade-faction-stilgar", "upgrade-faction-tenebris",
 	"unit-goblin-worker", "unit-goblin-militia", "unit-goblin-magnate",
 	"unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman",

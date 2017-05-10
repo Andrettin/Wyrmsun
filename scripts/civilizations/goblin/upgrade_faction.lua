@@ -38,8 +38,13 @@ DefineUpgrade("upgrade-faction-lggi-tribe", {
 	EffectsString = "+2 Armor and +1 Evasion for Impalers"
 })
 
+DefineUpgrade("upgrade-faction-prideblade-tribe", {
+	Name = "Prideblade Tribe",
+	EffectsString = "+2 Damage for Swordsmen"
+})
+
 DefineUpgrade("upgrade-faction-wildfang-tribe", {
-	Name = _("Wildfang Tribe"),
+	Name = "Wildfang Tribe",
 	EffectsString = "+2 Damage for Swordsmen"
 })
 
@@ -133,6 +138,13 @@ DefineModifier("upgrade-faction-lggi-tribe",
 	{"Evasion", 1},
 	{"Points", 10},
 	{"apply-to", "unit-goblin-spearman"}
+)
+
+DefineModifier("upgrade-faction-prideblade-tribe",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-goblin-militia"}, 
+	{"apply-to", "unit-goblin-swordsman"}, {"apply-to", "unit-goblin-barbarian"}, {"apply-to", "unit-goblin-warlord"}
 )
 
 DefineModifier("upgrade-faction-wildfang-tribe",
@@ -236,7 +248,7 @@ DefineDependency("upgrade-faction-myridia",
 )
 
 DefinePredependency("upgrade-faction-stilgar",
-	{"upgrade-faction-aelak-tribe"}, "or", {"upgrade-faction-issudru-tribe"}, "or", {"upgrade-faction-mabom-tribe"}, "or", {"upgrade-faction-sigre-tribe"}, "or", {"upgrade-faction-khag-tribe"}, "or", {"upgrade-faction-wildfang-tribe"}
+	{"upgrade-faction-aelak-tribe"}, "or", {"upgrade-faction-issudru-tribe"}, "or", {"upgrade-faction-mabom-tribe"}, "or", {"upgrade-faction-sigre-tribe"}, "or", {"upgrade-faction-khag-tribe"}, "or", {"upgrade-faction-prideblade-tribe"}, "or", {"upgrade-faction-wildfang-tribe"}
 )
 
 DefineDependency("upgrade-faction-stilgar",
