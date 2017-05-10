@@ -82,7 +82,8 @@ DefineUnitType("unit-gnomish-worker", {
 	Variations = {
 		{
 			"variation-id", "blond-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "gray-hair",
@@ -94,7 +95,8 @@ DefineUnitType("unit-gnomish-worker", {
 			"file-when-loaded", "stone", "gnome/units/gnomish_worker_with_gold_gray_hair.png",
 			"file-when-loaded", "coal", "gnome/units/gnomish_worker_with_gold_gray_hair.png",
 			"file-when-loaded", "lumber", "gnome/units/gnomish_worker_with_lumber_gray_hair.png",
-			"file-when-loaded", "furniture", "gnome/units/gnomish_worker_with_lumber_gray_hair.png"
+			"file-when-loaded", "furniture", "gnome/units/gnomish_worker_with_lumber_gray_hair.png",
+			"weight", 1
 		}
 	},
 	Sounds = {
@@ -139,12 +141,14 @@ DefineUnitType("unit-gnomish-recruit", {
 	Variations = {
 		{
 			"variation-id", "blond-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "gray-hair",
 			"icon", "icon-gnomish-recruit-gray-hair",
-			"file", "gnome/units/gnomish_recruit_gray_hair.png"
+			"file", "gnome/units/gnomish_recruit_gray_hair.png",
+			"weight", 1
 		}
 	},
 	Sounds = {
@@ -182,12 +186,14 @@ DefineUnitType("unit-gnomish-duelist", {
 	Variations = {
 		{
 			"variation-id", "blond-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "gray-hair",
 			"icon", "icon-gnomish-duelist-gray-hair",
-			"file", "gnome/units/gnomish_recruit_gray_hair.png"
+			"file", "gnome/units/gnomish_recruit_gray_hair.png",
+			"weight", 1
 		}
 	},
 	Sounds = {
@@ -226,12 +232,14 @@ DefineUnitType("unit-gnomish-master-at-arms", {
 	Variations = {
 		{
 			"variation-id", "blond-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "gray-hair",
 			"icon", "icon-gnomish-master-at-arms-gray-hair",
-			"file", "gnome/units/gnomish_recruit_gray_hair.png"
+			"file", "gnome/units/gnomish_recruit_gray_hair.png",
+			"weight", 1
 		}
 	},
 	Sounds = {

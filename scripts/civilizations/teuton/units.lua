@@ -149,7 +149,8 @@ DefineUnitType("unit-teuton-swordsman", {
 			"variation-id", "brown-hair",
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization"
+			"upgrade-forbidden", "upgrade-latin-civilization",
+			"weight", 4
 		},
 		{
 			"variation-id", "black-hair",
@@ -157,7 +158,8 @@ DefineUnitType("unit-teuton-swordsman", {
 			"hair-color", "black",
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization"
+			"upgrade-forbidden", "upgrade-latin-civilization",
+			"weight", 2
 		},
 		{
 			"variation-id", "blond-hair",
@@ -165,7 +167,8 @@ DefineUnitType("unit-teuton-swordsman", {
 			"hair-color", "blond",
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization"
+			"upgrade-forbidden", "upgrade-latin-civilization",
+			"weight", 4
 		},
 		{
 			"variation-id", "red-hair",
@@ -173,7 +176,8 @@ DefineUnitType("unit-teuton-swordsman", {
 			"hair-color", "red",
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization"
+			"upgrade-forbidden", "upgrade-latin-civilization",
+			"weight", 4
 		},
 		-- variations with an English unit type name for when belonging to another civilization
 		{
@@ -182,7 +186,8 @@ DefineUnitType("unit-teuton-swordsman", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization"
+			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"weight", 4
 		},
 		{
 			"variation-id", "black-hair",
@@ -192,7 +197,8 @@ DefineUnitType("unit-teuton-swordsman", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization"
+			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"weight", 2
 		},
 		{
 			"variation-id", "blond-hair",
@@ -202,7 +208,8 @@ DefineUnitType("unit-teuton-swordsman", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization"
+			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"weight", 4
 		},
 		{
 			"variation-id", "red-hair",
@@ -212,7 +219,8 @@ DefineUnitType("unit-teuton-swordsman", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization"
+			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"weight", 4
 		},
 		{
 			"layer", "left-arm",
@@ -351,7 +359,8 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 			"variation-id", "brown-hair",
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization"
+			"upgrade-forbidden", "upgrade-latin-civilization",
+			"weight", 4
 		},
 		{
 			"variation-id", "black-hair",
@@ -359,7 +368,8 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 			"hair-color", "black",
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization"
+			"upgrade-forbidden", "upgrade-latin-civilization",
+			"weight", 2
 		},
 		{
 			"variation-id", "blond-hair",
@@ -367,7 +377,8 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 			"hair-color", "blond",
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization"
+			"upgrade-forbidden", "upgrade-latin-civilization",
+			"weight", 4
 		},
 		{
 			"variation-id", "red-hair",
@@ -375,7 +386,8 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 			"hair-color", "red",
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization"
+			"upgrade-forbidden", "upgrade-latin-civilization",
+			"weight", 4
 		},
 		-- English type name
 		{
@@ -384,7 +396,8 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization"
+			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"weight", 4
 		},
 		{
 			"variation-id", "black-hair",
@@ -394,7 +407,8 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization"
+			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"weight", 2
 		},
 		{
 			"variation-id", "blond-hair",
@@ -404,7 +418,8 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization"
+			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"weight", 4
 		},
 		{
 			"variation-id", "red-hair",
@@ -414,7 +429,8 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization"
+			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"weight", 4
 		},
 		{
 			"layer", "left-arm",
@@ -555,7 +571,8 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 			"variation-id", "brown-hair",
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization"
+			"upgrade-forbidden", "upgrade-latin-civilization",
+			"weight", 4
 		},
 		{
 			"variation-id", "black-hair",
@@ -563,7 +580,8 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 			"hair-color", "black",
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization"
+			"upgrade-forbidden", "upgrade-latin-civilization",
+			"weight", 2
 		},
 		{
 			"variation-id", "blond-hair",
@@ -571,7 +589,8 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 			"hair-color", "blond",
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization"
+			"upgrade-forbidden", "upgrade-latin-civilization",
+			"weight", 4
 		},
 		{
 			"variation-id", "red-hair",
@@ -579,7 +598,8 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 			"hair-color", "red",
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization"
+			"upgrade-forbidden", "upgrade-latin-civilization",
+			"weight", 4
 		},
 		-- English type name
 		{
@@ -588,7 +608,8 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization"
+			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"weight", 4
 		},
 		{
 			"variation-id", "black-hair",
@@ -598,7 +619,8 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization"
+			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"weight", 2
 		},
 		{
 			"variation-id", "blond-hair",
@@ -608,7 +630,8 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization"
+			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"weight", 4
 		},
 		{
 			"variation-id", "red-hair",
@@ -618,7 +641,8 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization"
+			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"weight", 4
 		},
 		{
 			"layer", "left-arm",

@@ -268,35 +268,41 @@ DefineUnitType("unit-dwarven-axefighter", {
 	Variations = {
 		{
 			"variation-id", "red-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "gray-hair",
 			"layer-file", "hair", "dwarf/units/gray_hair_warrior.png",
-			"icon", "icon-dwarven-axefighter-gray-hair"
+			"icon", "icon-dwarven-axefighter-gray-hair",
+			"weight", 1
 		},
 		{
 			"variation-id", "orange-hair",
 			"layer-file", "hair", "dwarf/units/orange_hair_warrior.png",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "blond-hair",
 			"layer-file", "hair", "dwarf/units/blond_hair_warrior.png",
 			"icon", "icon-dwarven-axefighter-blond-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "black-hair",
 			"layer-file", "hair", "dwarf/units/black_hair_warrior.png",
 			"icon", "icon-dwarven-axefighter-black-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "brown-hair",
 			"layer-file", "hair", "dwarf/units/brown_hair_warrior.png",
 			"icon", "icon-dwarven-axefighter-brown-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"layer", "weapon",
@@ -400,35 +406,41 @@ DefineUnitType("unit-dwarven-steelclad", {
 	Variations = {
 		{
 			"variation-id", "red-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "gray-hair",
 			"layer-file", "hair", "dwarf/units/gray_hair_warrior.png",
-			"icon", "icon-dwarven-steelclad-gray-hair"
+			"icon", "icon-dwarven-steelclad-gray-hair",
+			"weight", 1
 		},
 		{
 			"variation-id", "orange-hair",
 			"layer-file", "hair", "dwarf/units/orange_hair_warrior.png",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "blond-hair",
 			"layer-file", "hair", "dwarf/units/blond_hair_warrior.png",
 			"icon", "icon-dwarven-steelclad-blond-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "black-hair",
 			"layer-file", "hair", "dwarf/units/black_hair_warrior.png",
 			"icon", "icon-dwarven-steelclad-black-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "brown-hair",
 			"layer-file", "hair", "dwarf/units/brown_hair_warrior.png",
 			"icon", "icon-dwarven-steelclad-brown-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"layer", "weapon",
@@ -522,35 +534,41 @@ DefineUnitType("unit-dwarven-thane", {
 	Variations = {
 		{
 			"variation-id", "red-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "gray-hair",
 			"file", "dwarf/units/thane_gray_hair.png",
-			"icon", "icon-dwarven-thane-gray-hair"
+			"icon", "icon-dwarven-thane-gray-hair",
+			"weight", 1
 		},
 		{
 			"variation-id", "orange-hair",
 			"file", "dwarf/units/thane_orange_hair.png",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "blond-hair",
 			"file", "dwarf/units/thane_blond_hair.png",
 			"icon", "icon-dwarven-thane-blond-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "black-hair",
 			"file", "dwarf/units/thane_black_hair.png",
 			"icon", "icon-dwarven-thane-black-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "brown-hair",
 			"file", "dwarf/units/thane_brown_hair.png",
 			"icon", "icon-dwarven-thane-brown-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		}
 	},
 	Sounds = {
@@ -597,7 +615,8 @@ DefineUnitType("unit-dwarven-guard", {
 	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Variations = {
 		{
-			"variation-id", "brown-hair"
+			"variation-id", "brown-hair",
+			"weight", 4
 		}
 	},
 	Sounds = {
@@ -638,34 +657,40 @@ DefineUnitType("unit-dwarven-scout", {
 	Variations = {
 		{
 			"variation-id", "orange-hair-short-beard",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "orange-hair-braided-beard",
 			"icon", "icon-dwarven-scout-braided-beard",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "blond-hair-short-beard",
 			"file", "dwarf/units/dwarven_scout_blond_hair.png",
 			"icon", "icon-dwarven-scout-blond-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "blond-hair-braided-beard",
 			"file", "dwarf/units/dwarven_scout_blond_hair.png",
 			"icon", "icon-dwarven-scout-blond-hair-braided-beard",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "gray-hair-short-beard",
 			"file", "dwarf/units/dwarven_scout_gray_hair.png",
-			"icon", "icon-dwarven-scout-gray-hair"
+			"icon", "icon-dwarven-scout-gray-hair",
+			"weight", 1
 		},
 		{
 			"variation-id", "gray-hair-braided-beard",
 			"file", "dwarf/units/dwarven_scout_gray_hair.png",
-			"icon", "icon-dwarven-scout-gray-hair-braided-beard"
+			"icon", "icon-dwarven-scout-gray-hair-braided-beard",
+			"weight", 1
 		}
 	},
 	Sounds = {
@@ -700,18 +725,21 @@ DefineUnitType("unit-dwarven-pathfinder", { Name = _("Pathfinder"),
 	Variations = {
 		{
 			"variation-id", "orange-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "blond-hair",
 			"file", "dwarf/units/dwarven_scout_blond_hair.png",
 			"icon", "icon-dwarven-pathfinder-blond-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "gray-hair",
 			"file", "dwarf/units/dwarven_scout_gray_hair.png",
-			"icon", "icon-dwarven-pathfinder-gray-hair"
+			"icon", "icon-dwarven-pathfinder-gray-hair",
+			"weight", 1
 		}
 	},
 	Sounds = {
@@ -745,18 +773,21 @@ DefineUnitType("unit-dwarven-explorer", { Name = _("Explorer"),
 	Variations = {
 		{
 			"variation-id", "orange-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "blond-hair",
 			"file", "dwarf/units/dwarven_scout_blond_hair.png",
 			"icon", "icon-dwarven-explorer-blond-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "gray-hair",
 			"file", "dwarf/units/dwarven_scout_gray_hair.png",
-			"icon", "icon-dwarven-explorer-gray-hair"
+			"icon", "icon-dwarven-explorer-gray-hair",
+			"weight", 1
 		}
 	},
 	Sounds = {
@@ -790,59 +821,69 @@ DefineUnitType("unit-dwarven-yale-rider", {
 	Variations = {
 		{
 			"variation-id", "red-hair-gray-fur",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "red-hair-brown-fur",
 			"file", "dwarf/units/yale_rider_red_hair_brown_fur.png",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "black-hair-brown-fur",
 			"file", "dwarf/units/yale_rider_black_hair_brown_fur.png",
 			"icon", "icon-dwarven-yale-rider-black-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "black-hair-gray-brown-fur",
 			"file", "dwarf/units/yale_rider_black_hair_gray_brown_fur.png",
 			"icon", "icon-dwarven-yale-rider-black-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "blond-hair-brown-fur",
 			"file", "dwarf/units/yale_rider_blond_hair_brown_fur.png",
 			"icon", "icon-dwarven-yale-rider-blond-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "brown-hair-brown-fur",
 			"file", "dwarf/units/yale_rider_brown_hair_brown_fur.png",
 			"icon", "icon-dwarven-yale-rider-brown-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "brown-hair-white-fur",
 			"file", "dwarf/units/yale_rider_brown_hair_white_fur.png",
 			"icon", "icon-dwarven-yale-rider-brown-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "gray-hair-gray-brown-fur",
 			"file", "dwarf/units/yale_rider_gray_hair_gray_brown_fur.png",
-			"icon", "icon-dwarven-yale-rider-gray-hair"
+			"icon", "icon-dwarven-yale-rider-gray-hair",
+			"weight", 1
 		},
 		{
 			"variation-id", "orange-hair-brown-fur",
 			"file", "dwarf/units/yale_rider_orange_hair_brown_fur.png",
 			"icon", "icon-dwarven-yale-rider-orange-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "orange-hair-white-fur",
 			"file", "dwarf/units/yale_rider_orange_hair_white_fur.png",
 			"icon", "icon-dwarven-yale-rider-orange-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		}
 	},
 	Sounds = {
@@ -875,59 +916,69 @@ DefineUnitType("unit-dwarven-yale-lord", { Name = _("Yale Lord"),
 	Variations = {
 		{
 			"variation-id", "red-hair-gray-fur",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "red-hair-brown-fur",
 			"file", "dwarf/units/yale_rider_red_hair_brown_fur.png",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "black-hair-brown-fur",
 			"file", "dwarf/units/yale_rider_black_hair_brown_fur.png",
 			"icon", "icon-dwarven-yale-lord-black-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "black-hair-gray-brown-fur",
 			"file", "dwarf/units/yale_rider_black_hair_gray_brown_fur.png",
 			"icon", "icon-dwarven-yale-lord-black-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "blond-hair-brown-fur",
 			"file", "dwarf/units/yale_rider_blond_hair_brown_fur.png",
 			"icon", "icon-dwarven-yale-lord-blond-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "brown-hair-brown-fur",
 			"file", "dwarf/units/yale_rider_brown_hair_brown_fur.png",
 			"icon", "icon-dwarven-yale-lord-brown-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "brown-hair-white-fur",
 			"file", "dwarf/units/yale_rider_brown_hair_white_fur.png",
 			"icon", "icon-dwarven-yale-lord-brown-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "gray-hair-gray-brown-fur",
 			"file", "dwarf/units/yale_rider_gray_hair_gray_brown_fur.png",
-			"icon", "icon-dwarven-yale-lord-gray-hair"
+			"icon", "icon-dwarven-yale-lord-gray-hair",
+			"weight", 1
 		},
 		{
 			"variation-id", "orange-hair-brown-fur",
 			"file", "dwarf/units/yale_rider_orange_hair_brown_fur.png",
 			"icon", "icon-dwarven-yale-lord-orange-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "orange-hair-white-fur",
 			"file", "dwarf/units/yale_rider_orange_hair_white_fur.png",
 			"icon", "icon-dwarven-yale-lord-orange-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		}
 	},
 	Sounds = {
@@ -1011,23 +1062,27 @@ DefineUnitType("unit-dwarven-gryphon-rider", {
 	Variations = {
 		{
 			"variation-id", "black-hair-brown-feathers",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "brown-hair-blue-feathers",
 			"file", "dwarf/units/gryphon_rider_brown_hair_blue_feathers.png",
 			"icon", "icon-dwarven-gryphon-rider-brown-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		},
 		{
 			"variation-id", "gray-hair-brown-feathers",
-			"file", "dwarf/units/gryphon_rider_gray_hair_brown_feathers.png"
+			"file", "dwarf/units/gryphon_rider_gray_hair_brown_feathers.png",
+			"weight", 1
 		},
 		{
 			"variation-id", "red-hair-gray-feathers",
 			"file", "dwarf/units/gryphon_rider_red_hair_gray_feathers.png",
 			"icon", "icon-dwarven-gryphon-rider-red-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
 		}
 	},
 	Sounds = {
@@ -1375,8 +1430,7 @@ DefineUnitType("unit-surghan-mercenary-axefighter", {
 	Points = 60, -- +10 points
 	Variations = {
 		{
-			"variation-id", "red-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"variation-id", "red-hair"
 		},
 		{
 			"layer", "weapon",
@@ -1432,8 +1486,7 @@ DefineUnitType("unit-surghan-mercenary-steelclad", {
 	Points = 85, -- +10 points
 	Variations = {
 		{
-			"variation-id", "red-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"variation-id", "red-hair"
 		},
 		{
 			"layer", "weapon",
