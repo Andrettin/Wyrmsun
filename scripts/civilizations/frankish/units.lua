@@ -551,7 +551,7 @@ DefineUnitType("unit-frank-spearman", {
 			"layer-file", "hair", "human/units/black_hair_warrior_no_beard.png",
 			"icon", "icon-frank-scara-black-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"weight", 4
+			"weight", 2
 		},
 		{
 			"variation-id", "blond-hair",
