@@ -225,8 +225,14 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-scout",
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-dwarven-yale-rider",
 	Action = "train-unit", Value = "unit-dwarven-yale-rider",
-	Key = "y", Hint = _("Train ~!Yale Rider"), Popup = "popup-unit",
+	Key = "y", Hint = "Train ~!Yale Rider", Popup = "popup-unit",
 	ForUnit = {"unit-dwarven-barracks", "unit-gnomish-barracks"}
+})
+
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-joruvellir-yale-rider-black-hair",
+	Action = "train-unit", Value = "unit-joruvellir-yale-rider",
+	Key = "y", Hint = "Train ~!Yale Rider", Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-barracks"}
 })
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-dwarven-ballista",
@@ -281,6 +287,12 @@ DefineButton( { Pos = 3, Level = 0,
 
 DefineButton( { Pos = 4, Level = 0,
 	Action = "train-unit", Value = "unit-dwarven-yale-rider",
+	Key = "y", Hint = "Hire ~!Yale Rider", Popup = "popup-unit",
+	ForUnit = {"unit-mercenary-camp"}
+})
+
+DefineButton( { Pos = 4, Level = 0,
+	Action = "train-unit", Value = "unit-joruvellir-yale-rider",
 	Key = "y", Hint = "Hire ~!Yale Rider", Popup = "popup-unit",
 	ForUnit = {"unit-mercenary-camp"}
 })
@@ -464,6 +476,7 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-odin",
 		"unit-dwarven-guard",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
 		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
+		"unit-joruvellir-yale-rider", "unit-joruvellir-yale-lord",
 		"unit-dwarven-witness",
 		"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
 	}
@@ -478,6 +491,7 @@ DefineButton( { Pos = 10, Level = 0, Icon = "icon-thor",
 		"unit-dwarven-guard",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
 		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
+		"unit-joruvellir-yale-rider", "unit-joruvellir-yale-lord",
 		"unit-dwarven-witness",
 		"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
 	}
@@ -747,6 +761,18 @@ DefineButton( { Pos = 1, Level = 2, Icon = "icon-dwarven-yale-lord-orange-hair",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "9"},
 	Key = "y", Hint = _("Upgrade to ~!Yale Lord"), Popup = "popup-unit",
 	ForUnit = {"unit-dwarven-yale-rider"}
+} )
+
+DefineButton( { Pos = 2, Level = 2,
+	Action = "experience-upgrade-to", Value = "unit-joruvellir-yale-rider",
+	Key = "y", Hint = "Upgrade to ~!Yale Rider", Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-axefighter"}
+} )
+
+DefineButton( { Pos = 1, Level = 2,
+	Action = "experience-upgrade-to", Value = "unit-joruvellir-yale-lord",
+	Key = "y", Hint = "Upgrade to ~!Yale Lord", Popup = "popup-unit",
+	ForUnit = {"unit-joruvellir-yale-rider"}
 } )
 
 DefineButton( { Pos = 1, Level = 2, Icon = "icon-dwarven-pathfinder",

@@ -162,6 +162,7 @@ DefineModifier("upgrade-dwarven-broad-axe",
 	{"apply-to", "unit-dwarven-militia"}, 
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
 	{"apply-to", "unit-dwarven-yale-rider"}, {"apply-to", "unit-dwarven-yale-lord"},
+	{"apply-to", "unit-joruvellir-yale-rider"}, {"apply-to", "unit-joruvellir-yale-lord"},
 	{"apply-to", "unit-brising-militia"},
 	{"apply-to", "unit-surghan-mercenary-axefighter"}, {"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
 )
@@ -172,6 +173,7 @@ DefineModifier("upgrade-dwarven-great-axe",
 	{"apply-to", "unit-dwarven-militia"}, 
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
 	{"apply-to", "unit-dwarven-yale-rider"}, {"apply-to", "unit-dwarven-yale-lord"},
+	{"apply-to", "unit-joruvellir-yale-rider"}, {"apply-to", "unit-joruvellir-yale-lord"},
 	{"apply-to", "unit-brising-militia"},
 	{"apply-to", "unit-surghan-mercenary-axefighter"}, {"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
 )
@@ -195,6 +197,7 @@ DefineModifier("upgrade-dwarven-shield-1",
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
 	{"apply-to", "unit-dwarven-guard"},
 	{"apply-to", "unit-dwarven-yale-rider"}, {"apply-to", "unit-dwarven-yale-lord"},
+	{"apply-to", "unit-joruvellir-yale-rider"}, {"apply-to", "unit-joruvellir-yale-lord"},
 	{"apply-to", "unit-brising-militia"},
 	{"apply-to", "unit-surghan-mercenary-axefighter"}, {"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
 )
@@ -206,6 +209,7 @@ DefineModifier("upgrade-dwarven-shield-2",
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
 	{"apply-to", "unit-dwarven-guard"},
 	{"apply-to", "unit-dwarven-yale-rider"}, {"apply-to", "unit-dwarven-yale-lord"},
+	{"apply-to", "unit-joruvellir-yale-rider"}, {"apply-to", "unit-joruvellir-yale-lord"},
 	{"apply-to", "unit-brising-militia"},
 	{"apply-to", "unit-surghan-mercenary-axefighter"}, {"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
 )
@@ -363,7 +367,7 @@ DefineDependency("unit-dwarven-ballista",
 )
 
 DefinePredependency("unit-dwarven-yale-pen",
-	{"upgrade-faction-joruvellir", 0, "upgrade-faction-eikinskjaldi-clan", 0}
+	{"upgrade-faction-goldhoof-clan", 0, "upgrade-faction-eikinskjaldi-clan", 0, "upgrade-faction-joruvellir", 0, "upgrade-faction-yawning-yales", 0}
 )
 
 DefineDependency("unit-dwarven-yale-pen",
@@ -371,7 +375,7 @@ DefineDependency("unit-dwarven-yale-pen",
 )
 
 DefinePredependency("unit-joruvellir-yale-pen",
-	{"upgrade-faction-joruvellir"}, "or", {"upgrade-faction-eikinskjaldi-clan"}
+	{"upgrade-faction-goldhoof-clan"}, "or", {"upgrade-faction-eikinskjaldi-clan"}, "or", {"upgrade-faction-joruvellir"}, "or", {"upgrade-faction-yawning-yales"}
 )
 
 DefineDependency("unit-joruvellir-yale-pen",
@@ -379,11 +383,23 @@ DefineDependency("unit-joruvellir-yale-pen",
 )
 
 DefinePredependency("unit-dwarven-yale-rider",
-	{"upgrade-dwarven-civilization"}, "or", {"unit-gnomish-town-hall"}
+	{"upgrade-dwarven-civilization", "upgrade-faction-goldhoof-clan", 0, "upgrade-faction-eikinskjaldi-clan", 0, "upgrade-faction-joruvellir", 0, "upgrade-faction-yawning-yales", 0},
+	"or", {"unit-gnomish-town-hall", "upgrade-faction-goldhoof-clan", 0, "upgrade-faction-eikinskjaldi-clan", 0, "upgrade-faction-joruvellir", 0, "upgrade-faction-yawning-yales", 0}
 )
 
 DefineDependency("unit-dwarven-yale-rider",
-	{"unit-dwarven-smithy", "unit-dwarven-yale-pen"}, "or", {"unit-brising-smithy", "unit-dwarven-yale-pen"}, "or", {"unit-dwarven-smithy", "unit-joruvellir-yale-pen"}, "or", {"upgrade-mercenary-company"}
+	{"unit-dwarven-smithy", "unit-dwarven-yale-pen"}, "or", {"unit-brising-smithy", "unit-dwarven-yale-pen"}, "or", {"upgrade-mercenary-company"}
+)
+
+DefinePredependency("unit-joruvellir-yale-rider",
+	{"upgrade-faction-goldhoof-clan"},
+	"or", {"upgrade-faction-eikinskjaldi-clan"},
+	"or", {"upgrade-faction-joruvellir"},
+	"or", {"upgrade-faction-yawning-yales"}
+)
+
+DefineDependency("unit-joruvellir-yale-rider",
+	{"unit-dwarven-smithy", "unit-joruvellir-yale-pen"}, "or", {"upgrade-mercenary-company"}
 )
 
 DefineDependency("unit-dwarven-temple",

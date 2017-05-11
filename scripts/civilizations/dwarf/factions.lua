@@ -45,16 +45,27 @@ DefineFaction("brising-clan", {
 	Background = "In Norse mythology, \"Brising\" was an appelation used for the dwarves in general, or more specifically for the ones who created the necklace Brisingamen. \"Brising\" means \"flame\" in Old Norse."
 })
 
+DefineFaction("goldhoof-clan", {
+	Name = "Goldhoof Clan",
+	Civilization = "dwarf",
+	Type = "tribe",
+	Colors = {"brown"},
+	DevelopsTo = {"joruvellir"},
+	FactionUpgrade = "upgrade-faction-goldhoof-clan",
+	ButtonIcons = {
+		"stop", "icon-joruvellir-shield"
+	},
+	Description = "The Goldhoofs are an ancient clan, who split off from the other dwarves in Svarinshaug to migrate to Joruvellir. There, they gave rise to a multitude of desert dwarven clans, which eventually would unify into the Principality of Joruvellir."
+})
+
 DefineFaction("eikinskjaldi-clan", {
 	Name = "Eikinskjaldi Clan",
 	Civilization = "dwarf",
+	ParentFaction = "goldhoof-clan",
 	Type = "tribe",
 	Colors = {"brown"},
 	DevelopsTo = {"joruvellir", "kal-kartha", "knalga", "lyr"},
 	FactionUpgrade = "upgrade-faction-eikinskjaldi-clan",
-	ButtonIcons = {
-		"stop", "icon-joruvellir-shield"
-	},
 	Description = "The Eikinskjaldi clan traces its origins to Eikinskjaldi, a member of the legendary group of dwarves who migrated to the sandy plains of Joruvellir. One of Eikinskjaldi's descendants was Durahn, a mighty dwarven warlord who was buried in a rich tomb.",
 	Background = "In Norse mythology Eikinskjaldi was the name of a dwarf who migrated from Svarinshaug to Joruvellir. \"Eikinskjaldi\" means \"oaken shield\" in Old Norse."
 })
@@ -126,13 +137,14 @@ DefineFaction("whitesteel-clan", {
 
 DefineFaction("joruvellir", {
 	Name = "Joruvellir",
-	ParentFaction = "eikinskjaldi-clan",
+	ParentFaction = "goldhoof-clan",
 	Civilization = "dwarf",
 	Type = "polity",
 	Colors = {"brown"},
-	DefaultTier = "barony",
+	DefaultTier = "duchy",
 	Titles = {
-		"monarchy", "barony", "Lordship"
+		"monarchy", "barony", "Lordship",
+		"monarchy", "duchy", "Principality"
 	},
 	MinisterTitles = {
 		"head-of-state", "male", "monarchy", "barony", "Lord",
@@ -240,7 +252,7 @@ DefineFaction("surghan-mercenaries", {
 
 DefineFaction("yawning-yales", {
 	Name = "Yawning Yales",
-	ParentFaction = "eikinskjaldi-clan", -- Joruvellir
+	ParentFaction = "goldhoof-clan", -- Joruvellir
 	Civilization = "dwarf",
 	Type = "mercenary-company",
 	Colors = {"yellow"},

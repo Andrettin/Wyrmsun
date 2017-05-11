@@ -32,7 +32,13 @@ DefineUpgrade("upgrade-faction-brising-clan", {
 
 DefineUpgrade("upgrade-faction-eikinskjaldi-clan", {
 	Name = "Eikinskjaldi Clan",
-	EffectsString = "+2 Armor for Axefighters"
+	EffectsString = "+1 Damage for Yale Riders, +1 Armor for Axefighters"
+})
+
+DefineUpgrade("upgrade-faction-goldhoof-clan", {
+	Name = "Goldhoof Clan",
+	EffectsString = "+2 Damage for Yale Riders",
+	RequirementsString = "Yale Pen"
 })
 
 DefineUpgrade("upgrade-faction-norlund-clan", {
@@ -72,7 +78,7 @@ DefineUpgrade("upgrade-faction-whitesteel-clan", {
 
 DefineUpgrade("upgrade-faction-joruvellir", {
 	Name = "Joruvellir",
-	EffectsString = "+2 Damage for Scouts, -10% cost for Yale Pens",
+	EffectsString = "+1 Damage for Yale Riders and Scouts",
 	RequirementsString = "Writing and Masonry"
 })
 
@@ -90,7 +96,7 @@ DefineUpgrade("upgrade-faction-knalga", {
 
 DefineUpgrade("upgrade-faction-lyr", {
 	Name = "Lyr",
-	EffectsString = "+5 Armor for Towers",
+	EffectsString = "+10 HP for Miners, +5 Armor for Towers, +50% Time Efficiency for Smithies",
 	RequirementsString = "Writing and Masonry"
 })
 
@@ -101,7 +107,7 @@ DefineUpgrade("upgrade-faction-surghan-mercenaries", {
 
 DefineUpgrade("upgrade-faction-yawning-yales", {
 	Name = "Yawning Yales",
---	EffectsString = "+1 Speed for Yale Riders"
+	EffectsString = "+2 Damage for Yale Riders"
 })
 
 DefineModifier("upgrade-faction-brising-clan",
@@ -139,9 +145,17 @@ DefineModifier("upgrade-faction-brising-clan",
 )
 
 DefineModifier("upgrade-faction-eikinskjaldi-clan",
-	{"Armor", 2},
-	{"Points", 10},
+	{"Armor", 1},
+	{"Points", 5},
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"}
+)
+
+DefineModifier("upgrade-faction-eikinskjaldi-clan",
+	{"apply-to", "unit-dwarven-yale-rider"}, {"convert-to", "unit-joruvellir-yale-rider"}
+)
+
+DefineModifier("upgrade-faction-eikinskjaldi-clan",
+	{"apply-to", "unit-dwarven-yale-lord"}, {"convert-to", "unit-joruvellir-yale-lord"}
 )
 
 DefineModifier("upgrade-faction-eikinskjaldi-clan",
@@ -150,6 +164,28 @@ DefineModifier("upgrade-faction-eikinskjaldi-clan",
 
 DefineModifier("upgrade-faction-eikinskjaldi-clan",
 	{"change-faction-to", "eikinskjaldi-clan"}
+)
+
+DefineModifier("upgrade-faction-goldhoof-clan",
+	{"BasicDamage", 1},
+	{"Points", 5},
+	{"apply-to", "unit-joruvellir-yale-rider"}, {"apply-to", "unit-joruvellir-yale-lord"}
+)
+
+DefineModifier("upgrade-faction-goldhoof-clan",
+	{"apply-to", "unit-dwarven-yale-rider"}, {"convert-to", "unit-joruvellir-yale-rider"}
+)
+
+DefineModifier("upgrade-faction-goldhoof-clan",
+	{"apply-to", "unit-dwarven-yale-lord"}, {"convert-to", "unit-joruvellir-yale-lord"}
+)
+
+DefineModifier("upgrade-faction-goldhoof-clan",
+	{"apply-to", "unit-dwarven-yale-pen"}, {"convert-to", "unit-joruvellir-yale-pen"}
+)
+
+DefineModifier("upgrade-faction-goldhoof-clan",
+	{"change-faction-to", "goldhoof-clan"}
 )
 
 DefineModifier("upgrade-faction-norlund-clan",
@@ -214,13 +250,21 @@ DefineModifier("upgrade-faction-whitesteel-clan",
 )
 
 DefineModifier("upgrade-faction-joruvellir",
-	{"BasicDamage", 2},
+	{"BasicDamage", 1},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}, {"apply-to", "unit-dwarven-explorer"}
 )
 
 DefineModifier("upgrade-faction-joruvellir",
 	{"change-faction-to", "joruvellir"}
+)
+
+DefineModifier("upgrade-faction-joruvellir",
+	{"apply-to", "unit-dwarven-yale-rider"}, {"convert-to", "unit-joruvellir-yale-rider"}
+)
+
+DefineModifier("upgrade-faction-joruvellir",
+	{"apply-to", "unit-dwarven-yale-lord"}, {"convert-to", "unit-joruvellir-yale-lord"}
 )
 
 DefineModifier("upgrade-faction-joruvellir",
@@ -294,10 +338,35 @@ DefineModifier("upgrade-faction-surghan-mercenaries",
 	{"apply-to", "unit-dwarven-thane"}, {"convert-to", "unit-surghan-mercenary-thane"}
 )
 
+DefineModifier("upgrade-faction-yawning-yales",
+	{"BasicDamage", 1},
+	{"Points", 5},
+	{"apply-to", "unit-joruvellir-yale-rider"}, {"apply-to", "unit-joruvellir-yale-lord"}
+)
+
+DefineModifier("upgrade-faction-yawning-yales",
+	{"apply-to", "unit-dwarven-yale-rider"}, {"convert-to", "unit-joruvellir-yale-rider"}
+)
+
+DefineModifier("upgrade-faction-yawning-yales",
+	{"apply-to", "unit-dwarven-yale-lord"}, {"convert-to", "unit-joruvellir-yale-lord"}
+)
+
+DefineModifier("upgrade-faction-yawning-yales",
+	{"apply-to", "unit-dwarven-yale-pen"}, {"convert-to", "unit-joruvellir-yale-pen"}
+)
+
 DefinePredependency("upgrade-faction-eikinskjaldi-clan",
+	{"upgrade-faction-goldhoof-clan"}
+)
+
+DefinePredependency("upgrade-faction-goldhoof-clan",
 	{"upgrade-faction-brising-clan"}
 )
 
+DefineDependency("upgrade-faction-goldhoof-clan",
+	{"unit-dwarven-yale-pen"}, "or", {"unit-joruvellir-yale-pen"}
+)
 DefinePredependency("upgrade-faction-norlund-clan",
 	{"upgrade-faction-brising-clan"}
 )
@@ -345,7 +414,7 @@ DefineDependency("upgrade-faction-whitesteel-clan",
 )
 
 DefinePredependency("upgrade-faction-joruvellir",
-	{"upgrade-faction-eikinskjaldi-clan"}
+	{"upgrade-faction-eikinskjaldi-clan"}, "or", {"upgrade-faction-goldhoof-clan"}
 )
 
 DefineDependency("upgrade-faction-joruvellir",

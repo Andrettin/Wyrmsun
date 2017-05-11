@@ -65,19 +65,27 @@ DefineButton( { Pos = 5, Level = 2, Icon = "icon-flag-red-hammer-on-silver",
 	ForUnit = {"unit-dwarven-town-hall", "unit-dwarven-stronghold"}
 } )
 
-DefineButton( { Pos = 6, Level = 2, Icon = "icon-flag-light-blue-hammer-on-orange",
-	Action = "research", Value = "upgrade-faction-eikinskjaldi-clan",
-	Allowed = "check-single-research",
-	Key = "e", Hint = "Found the ~!Eikinskjaldi Clan", Popup = "popup-research",
-	Description = "Changes your faction to the Eikinskjaldi Clan",
-	ForUnit = {"unit-dwarven-town-hall", "unit-dwarven-stronghold"}
-} )
-
-DefineButton( { Pos = 7, Level = 2, Icon = "icon-flag-blue-hammer-on-yellow",
+DefineButton( { Pos = 6, Level = 2, Icon = "icon-flag-blue-hammer-on-yellow",
 	Action = "research", Value = "upgrade-faction-oinling-clan",
 	Allowed = "check-single-research",
 	Key = "i", Hint = "Found the O~!inling Clan", Popup = "popup-research",
 	Description = "Changes your faction to the Oinling Clan",
+	ForUnit = {"unit-dwarven-town-hall", "unit-dwarven-stronghold"}
+} )
+
+DefineButton( { Pos = 7, Level = 2, Icon = "icon-flag-yellow-hammer-on-purple",
+	Action = "research", Value = "upgrade-faction-goldhoof-clan",
+	Allowed = "check-single-research",
+	Key = "g", Hint = "Found the ~!Goldhoof Clan", Popup = "popup-research",
+	Description = "Changes your faction to the Goldhoof Clan",
+	ForUnit = {"unit-dwarven-town-hall", "unit-dwarven-stronghold"}
+} )
+
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-flag-light-blue-hammer-on-orange",
+	Action = "research", Value = "upgrade-faction-eikinskjaldi-clan",
+	Allowed = "check-single-research",
+	Key = "e", Hint = "Found the ~!Eikinskjaldi Clan", Popup = "popup-research",
+	Description = "Changes your faction to the Eikinskjaldi Clan",
 	ForUnit = {"unit-dwarven-town-hall", "unit-dwarven-stronghold"}
 } )
 

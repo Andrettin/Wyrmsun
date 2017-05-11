@@ -898,7 +898,8 @@ DefineUnitType("unit-dwarven-yale-rider", {
 	}
 } )
 
-DefineUnitType("unit-dwarven-yale-lord", { Name = _("Yale Lord"),
+DefineUnitType("unit-dwarven-yale-lord", {
+	Name = "Yale Lord",
 	Parent = "unit-template-heroic-cavalry",
 	Civilization = "dwarf",
 	Description = _("Few things are more terrifying than a yale lord leading a throng of mounted dwarves into a crushing charge. Masters of the hills, yale lords are most often present in dwarven clans living above ground."),

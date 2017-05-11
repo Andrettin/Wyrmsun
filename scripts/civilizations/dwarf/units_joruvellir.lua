@@ -31,12 +31,144 @@
 --	NOTE: Save can generate this table.
 --
 
+DefineUnitType("unit-joruvellir-yale-rider", {
+	Parent = "unit-dwarven-yale-rider",
+	Civilization = "dwarf",
+	Faction = "goldhoof-clan",
+	Icon = "icon-joruvellir-yale-rider-black-hair",
+	BasicDamage = 13, -- +1 Damage
+	Points = 80, -- +5 points
+	Variations = {
+		{
+			"variation-id", "black-hair-brown-fur",
+			"file", "dwarf/units/yale_rider_black_hair_brown_fur.png",
+			"icon", "icon-joruvellir-yale-rider-black-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 8
+		},
+		{
+			"variation-id", "black-hair-gray-brown-fur",
+			"file", "dwarf/units/yale_rider_black_hair_gray_brown_fur.png",
+			"icon", "icon-joruvellir-yale-rider-black-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 8
+		},
+		{
+			"variation-id", "blond-hair-brown-fur",
+			"file", "dwarf/units/yale_rider_blond_hair_brown_fur.png",
+			"icon", "icon-joruvellir-yale-rider-blond-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
+		},
+		{
+			"variation-id", "brown-hair-brown-fur",
+			"file", "dwarf/units/yale_rider_brown_hair_brown_fur.png",
+			"icon", "icon-joruvellir-yale-rider-brown-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
+		},
+		{
+			"variation-id", "brown-hair-white-fur",
+			"file", "dwarf/units/yale_rider_brown_hair_white_fur.png",
+			"icon", "icon-joruvellir-yale-rider-brown-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
+		},
+		{
+			"variation-id", "gray-hair-gray-brown-fur",
+			"file", "dwarf/units/yale_rider_gray_hair_gray_brown_fur.png",
+			"icon", "icon-joruvellir-yale-rider-gray-hair",
+			"weight", 1
+		},
+		{
+			"variation-id", "orange-hair-brown-fur",
+			"file", "dwarf/units/yale_rider_orange_hair_brown_fur.png",
+			"icon", "icon-joruvellir-yale-rider-orange-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
+		},
+		{
+			"variation-id", "orange-hair-white-fur",
+			"file", "dwarf/units/yale_rider_orange_hair_white_fur.png",
+			"icon", "icon-joruvellir-yale-rider-orange-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
+		}
+	}
+} )
+
+DefineUnitType("unit-joruvellir-yale-lord", {
+	Parent = "unit-dwarven-yale-lord",
+	Civilization = "dwarf",
+	Faction = "goldhoof-clan",
+	Icon = "icon-joruvellir-yale-lord-black-hair",
+	BasicDamage = 15, -- +1 Damage
+	Points = 105, -- +5 points
+	Variations = {
+		{
+			"variation-id", "black-hair-brown-fur",
+			"file", "dwarf/units/yale_rider_black_hair_brown_fur.png",
+			"icon", "icon-joruvellir-yale-lord-black-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 8
+		},
+		{
+			"variation-id", "black-hair-gray-brown-fur",
+			"file", "dwarf/units/yale_rider_black_hair_gray_brown_fur.png",
+			"icon", "icon-joruvellir-yale-lord-black-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 8
+		},
+		{
+			"variation-id", "blond-hair-brown-fur",
+			"file", "dwarf/units/yale_rider_blond_hair_brown_fur.png",
+			"icon", "icon-joruvellir-yale-lord-blond-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
+		},
+		{
+			"variation-id", "brown-hair-brown-fur",
+			"file", "dwarf/units/yale_rider_brown_hair_brown_fur.png",
+			"icon", "icon-joruvellir-yale-lord-brown-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
+		},
+		{
+			"variation-id", "brown-hair-white-fur",
+			"file", "dwarf/units/yale_rider_brown_hair_white_fur.png",
+			"icon", "icon-joruvellir-yale-lord-brown-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
+		},
+		{
+			"variation-id", "gray-hair-gray-brown-fur",
+			"file", "dwarf/units/yale_rider_gray_hair_gray_brown_fur.png",
+			"icon", "icon-joruvellir-yale-lord-gray-hair",
+			"weight", 1
+		},
+		{
+			"variation-id", "orange-hair-brown-fur",
+			"file", "dwarf/units/yale_rider_orange_hair_brown_fur.png",
+			"icon", "icon-joruvellir-yale-lord-orange-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
+		},
+		{
+			"variation-id", "orange-hair-white-fur",
+			"file", "dwarf/units/yale_rider_orange_hair_white_fur.png",
+			"icon", "icon-joruvellir-yale-lord-orange-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
+		}
+	}
+} )
+
 DefineUnitType("unit-joruvellir-yale-pen", {
 	Parent = "unit-dwarven-yale-pen",
 	Civilization = "dwarf",
-	Faction = "eikinskjaldi-clan",
+	Faction = "goldhoof-clan",
 	Image = {"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_yale_pen.png", "size", {96, 96}},
 	Shadow = {"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_yale_pen_shadow.png", "size", {96, 96}},
 	Icon = "icon-joruvellir-yale-pen",
-	Costs = {"time", 135, "copper", 900, "lumber", 540, "stone", 270} -- 10% cheaper
+--	Costs = {"time", 135, "copper", 900, "lumber", 540, "stone", 270} -- 10% cheaper
 } )
