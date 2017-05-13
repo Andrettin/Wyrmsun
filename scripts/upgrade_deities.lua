@@ -183,6 +183,10 @@ DefineUpgrade("upgrade-deity-domain-archery", {
 	Name = "Archery"
 })
 
+DefineUpgrade("upgrade-deity-domain-magic", {
+	Name = "Magic"
+})
+
 DefineUpgrade("upgrade-deity-domain-metalworking", {
 	Name = "Metalworking"
 })

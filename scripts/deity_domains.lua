@@ -198,6 +198,10 @@ DefineDeityDomain("archery", {
 	Abilities = {"upgrade-precision"}
 })
 
+DefineDeityDomain("magic", {
+	Name = "Magic"
+})
+
 DefineDeityDomain("metalworking", {
 	Name = "Metalworking"
 })

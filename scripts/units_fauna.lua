@@ -922,9 +922,9 @@ DefineUnitType("unit-wolf", {
 	PierceDamage = true,
 	PersonalNames = {
 		"Fenrir", -- Fenrir is a massive wolf in Norse mythology, who was bound by the gods only with great effort; during Ragnarok he will kill Odin; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 193.
-		"Freki", -- Freki is one of Odin's wolves in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 61.
+		"Freki", -- Freki is one of Odin's wolves in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 61; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 31.
 		"Garm", -- Garm is a wolf-hound in Norse mythology, who dwells in a cave at the entrance of Niflheim, and who will kill Tyr during Ragnarok; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 193.
-		"Geri", -- Geri is one of Odin's wolves in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 61.
+		"Geri", -- Geri is one of Odin's wolves in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 61; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 31.
 		"Hati", -- Hati is the wolf who pursues the moon in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63.
 		"Hrodvitnir", -- alternative name for the wolf from Norse mythology, Fenrir; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 245.
 		"Skoll" -- Skoll is the wolf who pursues the sun in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63.
@@ -1527,6 +1527,10 @@ DefineUnitType("unit-dread-bat", {
 -- "Apis", -- name of a bull in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 119.
 -- "Buchis", -- name of a bull in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 119.
 -- "Mnevis" -- name of a bull in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 119.
+
+-- Raven Names:
+-- "Hugin", -- "Huginn", one of Odin's ravens in Norse mythology; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 31.
+-- "Munin", -- "Muninn", one of Odin's ravens in Norse mythology; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 31.
 
 -- Squirrel Names:
  -- "Ratatosk", -- Ratatoskr is a squirrel in Norse mythology; Cleasby gives the meaning of the name as "Tusk the traveller" or "the climber Tusk", while Bellows gives the meaning as "The Swift-Tusked"; "rata" is presumably the genitive form; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 317, 483, 638; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 97.

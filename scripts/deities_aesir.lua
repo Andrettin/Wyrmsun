@@ -34,7 +34,7 @@ DefineDeity("odin", { -- Known as Allfather, the Terrible One, One-eyed, Father 
 	Gender = "male",
 	Major = true,
 	Icon = "icon-odin",
-	Domains = {"aether", "courage", "wisdom"},
+	Domains = {"magic", "courage", "wisdom"},
 	CharacterUpgrade = "upgrade-character-deity",
 	CulturalNames = {
 		"anglo-saxon", "Woden",
@@ -68,20 +68,20 @@ DefineDeity("thor", { -- Son of Odin and Jord (Fjorgyn) and Sif's husband; known
 	Description = "Thor is the son of Odin and Jord, and is married to Sif. He is the foremost protector of the Aesir, using his massive throwing hammer to keep Asgard's enemies at bay. Given his power over the weather, Thor is also worshiped as a fertility god."
 })
 
-DefineDeity("frigg", { -- First among the goddesses; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129.
+DefineDeity("frigg", { -- First among the goddesses; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 51.
 	Name = "Frigg",
 	Pantheon = "Aesir",
 	Civilizations = {"anglo-saxon", "frankish", "germanic", "norse", "suebi", "teuton"},
 	Religions = {"paganism"},
 	Gender = "female",
 	CulturalNames = {
-		"anglo-saxon", "Frig", -- "Frig" is the Anglo-Saxon name for the goddess; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 98.
+		"anglo-saxon", "Frig", -- "Frig" is the Anglo-Saxon name for the goddess according to Stenton, Larrington gives "Fricg" instead; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 98.
 		"germanic", "Frijjo", -- "Frijjō"; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129.
 		"frankish", "Friia",
 		"suebi", "Friia",
 		"teuton", "Friia" -- as given in the second Merseburg charm (which is in Old High German); in the charm Volla is described as being her sister; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129; Source: Susan D. Fuller, "Pagan Charms in Tenth-Century Saxony? The Function of the Merseburg Charms", 1909, p. 162.
 	},
-	Description = "Frigg is Odin's wife and the mother of Balder."
+	Description = "Frigg is a goddess of fate, love and marriage. She is Odin's wife and the mother of Balder. Frigg's hall is Fensalir."
 })
 
 DefineDeity("seaxneat", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 98.
@@ -109,13 +109,13 @@ DefineDeity("sol", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980,
 	Description = "Sol is a sun goddess and the daughter of Mundilfari. Due to her association with the mighty star, she was believed by the Germanics to carry the sun in her chariot with the horses Arvak and Alsvid. In truth, however, Sol is linked to the abstract concept of a sun, rather than to a particular one."
 })
 
-DefineDeity("tyr", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, pp. 115, 133.
+DefineDeity("tyr", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, pp. 115, 133; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 48-49.
 	Name = "Tyr",
 	Pantheon = "Aesir",
 	Civilizations = {"anglo-saxon", "frankish", "germanic", "norse", "suebi", "teuton"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {"warfare"}, -- god of war
+	Domains = {"warfare"}, -- god of war, law and justice
 	CulturalNames = {
 		"anglo-saxon", "Tiw", -- "Tīw"; Old English name of the god; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115.
 		"frankish", "Ziu",
@@ -136,26 +136,28 @@ DefineDeity("aegir", { -- Married to Ran; they have their hall under the sea by 
 	Domains = {"water"} -- god of the sea
 })
 
-DefineDeity("balder", { -- Due to Loki's mischief, he was killed by Hod; Balder returns after Ragnarok; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 240; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
+DefineDeity("balder", { -- Due to Loki's mischief, he was killed by Hod; Balder returns after Ragnarok; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 240; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 40.
 	Name = "Balder",
 	Pantheon = "Aesir",
 	HomePlane = "Asgard",
 	Civilizations = {"anglo-saxon", "norse"},
 	Religions = {"paganism"},
 	Gender = "male",
+	Domains = {"light"},
 	CulturalNames = {
 		"anglo-saxon", "Baeldaeg", -- "Bældæg"; Anglo-Saxon name for the deity
 	},
-	Description = "The son of Odin and Frigg, Balder is known for his beauty, wisdom and gentleness. As Baeldaeg, the royal houses of both Bernicia and Wessex ascribed their descent to him."
+	Description = "The son of Odin and Frigg, Balder is known for his beauty, wisdom and gentleness. Light is said to evoke from him. As Baeldaeg, the royal houses of both Bernicia and Wessex ascribed their descent to him."
 })
 
-DefineDeity("bragi", { -- Son of Odin and husband of Idun; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 240.
+DefineDeity("bragi", { -- son of Odin and husband of Idun; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 240; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 50.
 	Name = "Bragi",
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {"poetry"} -- god of eloquence and poetry
+	Domains = {"poetry"}, -- god of eloquence and poetry
+	Description = "Bragi is a god of poetry and eloquence. He is married to Idun."
 })
 
 DefineDeity("delling", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 5; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 66.
@@ -186,21 +188,27 @@ DefineDeity("eostre", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p
 	Gender = "female"
 })
 
-DefineDeity("forseti", { -- Son of Balder and Nanna; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242.
+DefineDeity("forseti", { -- Son of Balder and Nanna; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 49.
 	Name = "Forseti",
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {"justice"} -- god of justice
+	Domains = {"justice"}, -- god of justice and law
+	Description = "Forseti is a god of justice and law, and his hall is Glitnir. He is the son of Balder."
 })
 
 DefineDeity("fulla", { -- Servant of Frigg; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242.
 	Name = "Fulla",
 	Pantheon = "Aesir",
-	Civilizations = {"norse"},
+	Civilizations = {"norse", "frankish", "suebi", "teuton"},
 	Religions = {"paganism"},
-	Gender = "female"
+	Gender = "female",
+	CulturalNames = {
+		"frankish", "Volla",
+		"suebi", "Volla",
+		"teuton", "Volla" -- Old High German; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 54.
+	}
 })
 
 DefineDeity("gefion", { -- Name means "Giver"; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242.
@@ -288,14 +296,15 @@ DefineDeity("lofn", { -- Goddess who favored illicit unions; Source: Kevin Cross
 	Domains = {"lust"}
 })
 
-DefineDeity("loki", { -- Son of two giants; attractive, mischief-making and ambivalent god; known as the Sly One, the Trickster, the Shape Changer or the Sky Traveller; as time wears on he becomes more evil, culminating in him causing the death of Balder, and Loki is then imprisoned until Ragnarok comes; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 247.
+DefineDeity("loki", { -- Son of two giants; attractive, mischief-making and ambivalent god; known as the Sly One, the Trickster, the Shape Changer or the Sky Traveller; as time wears on he becomes more evil, culminating in him causing the death of Balder, and Loki is then imprisoned until Ragnarok comes; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 247. Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 41-42.
 	Name = "Loki",
 	Pantheon = "Aesir",
-	Civilizations = {"norse"},
+	Civilizations = {"ettin", "norse"}, -- during Ragnarok, he was on the same side as the giants
 	Religions = {"paganism"},
 	Gender = "male",
 	Major = true,
-	Domains = {"chaos", "envy"}
+	Domains = {"chaos", "envy"},
+	Description = "Loki is a trickster god. Though attractive and cunning, he is often causing trouble for the other Aesir. He is the father of Hel."
 })
 
 DefineDeity("mimir", { -- Wise god sent by the Aesir to seal their truce with the Vanir, but was killed by the latter; his head was preserved by Odin and put by Mimir's Well; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 247.
@@ -355,14 +364,14 @@ DefineDeity("syn", { -- Aids defendants in trials; Source: Kevin Crossley-Hollan
 	Gender = "female"
 })
 
-DefineDeity("ull", { -- name means "Glory" or "Brilliance"; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 494; Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 116.
+DefineDeity("ull", { -- name means "Glory" or "Brilliance"; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 494; Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 116; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 50.
 	Name = "Ull",
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {"archery"},
-	Description = "Ull is a god archery and skiing."
+	Description = "Ull is a god archery and skiing. He is the son of Sif. He dwells in Ydalir." -- his dwelling-place name is "Ýdalir" in Old Norse; Ull's father is unknown
 })
 
 DefineDeity("var", { -- name means "Oath"; keeps marriage oaths and punishes those who don't fulfill them; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 252.

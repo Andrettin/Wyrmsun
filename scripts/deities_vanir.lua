@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDeity("frey", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 135; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 551.
+DefineDeity("frey", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 135; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 551; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 45.
 	Name = "Frey",
 	Pantheon = "Vanir",
 	HomePlane = "Vanaheim",
@@ -33,25 +33,25 @@ DefineDeity("frey", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980
 	Religions = {"paganism"},
 	Gender = "male",
 	Major = true,
-	Domains = {"earth", "light"},
+	Domains = {"earth", "light", "warfare"},
 	CulturalNames = {
 		"germanic", "Fraujaz" -- Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 135.
 	},
---	Description = "With the conclusion of the war between the Aesir and the Vanir, the two pantheons agreed to a peace, and that a few of each group should live among the other. Frey was one of the Vanir who went to dwell in Asgard with the Aesir, accompanied by his father Njord and his sister Freyja. At first, the Vanir were worshiped only by elves. As the Aesir were connected to Germanic peoples through their priests, when Frey went to live in Asgard he began to be worshiped by the Germanics as well. Frey is a god of fertility and of light."
+	Description = "With the conclusion of the war between the Aesir and the Vanir, the two pantheons agreed to a peace, and that a few of each group should live among the other. Frey was one of the Vanir who went to dwell in Asgard with the Aesir, accompanied by his father Njord and his sister Freyja. At first, the Vanir were worshiped only by elves. As the Aesir were connected to Germanic peoples through their priests, when Frey went to live in Asgard he began to be worshiped by the Germanics as well. Frey is a god of fertility, light and war."
 })
 
-DefineDeity("freyja", { -- Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 135.
+DefineDeity("freyja", { -- Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 135; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 46-47.
 	Name = "Freyja",
 	Pantheon = "Vanir",
 	HomePlane = "Vanaheim",
 	Civilizations = {"elf", "germanic", "norse"}, -- Alaric Hall proposes that the Vanir are more or less identical with the elves, so it makes sense to make Freyja an elven deity as well; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 135.
 	Religions = {"paganism"},
 	Gender = "female",
-	Domains = {"earth"}, -- fertility goddess
+	Domains = {"earth"}, -- fertility goddess, and a goddess of love
 	CulturalNames = {
 		"germanic", "Fraujon" -- "Fraujōn"; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 135.
 	},
---	Description = "With the conclusion of the war between the Aesir and the Vanir, the two pantheons agreed to a peace, and that a few of each group should live among the other. Freyja was one of the Vanir who went to dwell in Asgard with the Aesir, accompanied by her father Njord and her brother Frey. At first, the Vanir were worshiped only by elves. As the Aesir were connected to Germanic peoples through their priests, when Freyja went to live in Asgard she began to be worshiped by the Germanics as well.",
+	Description = "With the conclusion of the war between the Aesir and the Vanir, the two pantheons agreed to a peace, and that a few of each group should live among the other. Freyja was one of the Vanir who went to dwell in Asgard with the Aesir, accompanied by her father Njord and her brother Frey. At first, the Vanir were worshiped only by elves. As the Aesir were connected to Germanic peoples through their priests, when Freyja went to live in Asgard she began to be worshiped by the Germanics as well.",
 	Feasts = {
 		"Disa Blot" -- great sacrifice held in mid-winter; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 245.
 	}
@@ -65,7 +65,7 @@ DefineDeity("gullveig", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 	Religions = {"paganism"},
 	Gender = "female",
 	Domains = {"greed"},
---	Description = "A gold-loving goddess, Gullveig was burned alive during a visit to the Aesir for her greed. Three times she was burned, and three times she was reborn. The Asgardian treatment of the goddess caused the Aesir-Vanir War. Gullveig is feared for her work of dark magic."
+	Description = "A gold-loving goddess, Gullveig was burned alive during a visit to the Aesir for her greed. Three times she was burned, and three times she was reborn. The Asgardian treatment of the goddess caused the Aesir-Vanir War. Gullveig is feared for her work of dark magic."
 })
 
 DefineDeity("kvasir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 8.
@@ -81,18 +81,29 @@ DefineDeity("kvasir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 19
 --	Description = "The wisest of the Vanir, Kvasir was sent to live with the Aesir in Asgard as a result of the peace treaty which concluded the Aesir-Vanir War."
 })
 
-DefineDeity("njord", { -- Husband of Skadi; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 248; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 135.
+DefineDeity("nerthus", { -- same etymological root as Njord, likely originally the same deity; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 44, 47.
+	Name = "Nerthus",
+	Pantheon = "Vanir", -- since Njord is a part of the Vanir
+	HomePlane = "Vanaheim",
+	Civilizations = {"elf", "suebi", "teuton"}, -- worshipped by the Langobards
+	Religions = {"paganism"},
+	Gender = "female",
+	Domains = {"earth"}, -- earth goddess
+	Description = "Nerthus is an earth goddess."
+})
+
+DefineDeity("njord", { -- Husband of Skadi; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 248; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 135; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 54.
 	Name = "Njord",
 	Pantheon = "Vanir",
 	HomePlane = "Vanaheim",
 	Civilizations = {"elf", "germanic", "norse"}, -- Alaric Hall proposes that the Vanir are more or less identical with the elves, so it makes sense to make Njord an elven deity as well; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 135.
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {"water", "air"}, -- god of the Sea and Wind
+	Domains = {"water"}, -- god of the sea and wind
 	CulturalNames = {
 		"germanic", "Nerthiwiz" -- "Nerþiwiz"; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 135.
 	},
---	Description = "With the conclusion of the war between the Aesir and the Vanir, the two pantheons agreed to a peace, and that a few of each group should live among the other. Njord was one of the Vanir who went to dwell in Asgard with the Aesir, accompanied by his two children, Frey and Freyja. At first, the Vanir were worshiped only by elves. As the Aesir were connected to Germanic peoples through their priests, when Njord went to live in Asgard he began to be worshiped by the Germanics as well."
+	Description = "With the conclusion of the war between the Aesir and the Vanir, the two pantheons agreed to a peace, and that a few of each group should live among the other. Njord was one of the Vanir who went to dwell in Asgard with the Aesir, accompanied by his two children, Frey and Freyja. At first, the Vanir were worshiped only by elves. As the Aesir were connected to Germanic peoples through their priests, when Njord went to live in Asgard he began to be worshiped by the Germanics as well."
 })
 
 DefineDeity("eloh", { -- from Under the Burning Suns (Battle for Wesnoth)
