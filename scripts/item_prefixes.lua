@@ -158,14 +158,14 @@ DefineUpgrade("upgrade-item-prefix-sturdy", {
 DefineUpgrade("upgrade-item-prefix-swift", {
 	Name = _("Swift"),
 	MagicPrefix = true,
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "amulet", true, "ring", true, "horn", true},
 	MagicLevel = 1
 })
 
 DefineUpgrade("upgrade-item-prefix-vicious", {
 	Name = _("Vicious"),
 	MagicPrefix = true,
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "horn", true, "ring", true}, -- allowed for rings to allow Andvaranaut to drop, but its prefix should be changed later
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "amulet", true, "ring", true, "horn", true},
 	MagicLevel = 2
 })
 

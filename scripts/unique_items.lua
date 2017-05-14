@@ -128,6 +128,8 @@ DefineUniqueItem("svalin", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Quote = "\"In front of the sun does Svalin stand,\nThe shield for the shining god;\nMountains and sea would be set in flames\nIf it fell from before the sun.\"\n- Grimnismol (Grimnir)"
 } )
 
+-- Jewelry
+
 DefineUniqueItem("brisingamen", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 177.
 	Name = "Brisingamen",
 	Type = "unit-amulet",
@@ -155,6 +157,16 @@ DefineUniqueItem("draupnir", { -- Source: Kevin Crossley-Holland, "The Norse Myt
 	Quote = "\"The ring I wish not, though burned it was\nOf old with Hroptatyr's son;\nIn my home is no lack of gold\nIn the wealth my father wields.\"\n- Dwarven Traditional Poetry"
 } )
 
+DefineUniqueItem("volunds-ring", { -- Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 75-76.
+	Name = "Volund's Ring",
+	Type = "unit-ring",
+	Prefix = "upgrade-item-prefix-swift",
+	Suffix = "upgrade-item-suffix-of-speed",
+	Description = "The legendary elven smith Volund crafted a wondrous magic ring, and gave it to his wife. The ring was later stolen by an enemy king, who gave it to his daughter."
+} )
+
+-- Horns
+
 DefineUniqueItem("gjall", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 18, 243.
 	Name = "Gjall",
 	Type = "unit-horn",
@@ -163,6 +175,8 @@ DefineUniqueItem("gjall", { -- Source: Kevin Crossley-Holland, "The Norse Myths"
 	Background = "In Norse mythology, Gjall (\"the Ringing Horn\") was the horn of the god Heimdall, which was heard in all nine worlds when soared."
 } )
 
+-- Elixirs
+
 DefineUniqueItem("fafnirs-heart", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 380-381.
 	Name = "Fafnir's Heart",
 	Type = "unit-wyrm-heart",
@@ -170,6 +184,8 @@ DefineUniqueItem("fafnirs-heart", { -- Source: Henry Adams Bellows (transl.), "T
 	Background = "In Norse mythology, the hero Sigurd (identified by scholars with the historical Frankish king Sigibert) cooked the heart of the monster Fafnir, presumably gaining in strength after eating it.",
 	Quote = "\"There sits Sigurd, sprinkled with blood,\nAnd Fafnir's heart with fire he cooks\"\n- Fafnismol"
 } )
+
+-- Books and Scrolls
 
 DefineUniqueItem("thusagans-book", { -- From Battle for Wesnoth: The Hammer of Thursagan
 	Name = "Thursagan's Book",
