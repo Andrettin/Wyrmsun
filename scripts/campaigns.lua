@@ -97,7 +97,6 @@ DefineCampaign("sigiberts-struggle", {
 	Faction = "austrasia",
 	StartYear = 561 -- Sigibert's reign in his lands begins
 })
---]]
 
 DefineCampaign("island-of-the-lizard-god", { -- based on Will Doyle's "Island of the Lizard God" adventure, which he agreed to license under the GPL 2.0; the adventure won the One-Page Dungeon contest in 2014: https://www.dungeoncontest.com/opdc-2014
 	Name = "Island of the Kobold God",
@@ -109,3 +108,4 @@ DefineCampaign("island-of-the-lizard-god", { -- based on Will Doyle's "Island of
 	MapTemplateStartPos = {700, 472},
 	MapSize = {256, 256}
 })
+--]]

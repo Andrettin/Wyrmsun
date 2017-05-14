@@ -28,16 +28,10 @@
 DefineMapTemplate("asgard", {
 	Name = "Asgard",
 	Plane = "Asgard",
-	Width = 64,
-	Height = 64,
+	Width = 256,
+	Height = 256,
+	TerrainImage = "scripts/map_templates/asgard.png",
 	TimeOfDaySeconds = 0, -- always day
-	BaseTerrain = "dirt",
-	GeneratedTerrains = {
-		"rock", "low",
-		"shallow-water", "low",
-		"grass", "extremely-high",
-		"pine-tree", "high"
-	},
 	GeneratedNeutralUnits = {
 		"unit-yale", 4,
 		"unit-goat", 8,

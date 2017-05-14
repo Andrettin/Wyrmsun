@@ -664,7 +664,7 @@ DefineUnitType("unit-horse", {
 		"Grani", -- Gráni was Sigurd's horse in Norse mythology; Cleasby gives "Gráni", while Bellows gives "Grani"; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 259, 303, 342; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 212.
 		"Gullfaxi", -- Gullfaxi was the giant Hrungnir's horse in Norse mythology; name given by Cleasby as meaning "gold-mane"; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 126; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 145.
 		"Gyllir", -- Gyllir was a horse from Norse mythology (name means "Golden"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
-		"Hrimfaxi", -- Hrímfaxi was a horse from Norse mythology (from the Edda), which was the mount of Night; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 145; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 19.
+		"Hrimfaxi", -- Hrímfaxi was a horse from Norse mythology (from the Edda), which was the mount of Night; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 145; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 19; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 62.
 		"Lettfeti", -- Léttfeti was a horse from Norse mythology (name means "light-pacer" according to Cleasby and "light-feet" according to Bellows); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 96-97; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 153, 386.
 		"Melnir", -- Melnir was a horse from Norse mythology (name means "Bit-Bearer" according to Bellows); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 306; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 423.
 		"Mylnir", -- Mylnir was a horse from Norse mythology (name means "The Biter"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 306.
@@ -672,7 +672,7 @@ DefineUnitType("unit-horse", {
 		"Sinir", -- Sinir was a horse from Norse mythology (name means "Sinewy" according to Bellows); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
 		"Silfrintopp", -- Silfrintoppr was a horse from Norse mythology; Cleasby gives the meaning of "silver-tuft", while Bellows gives "silver-topped" instead; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 528, 636.
 		"Skeidbrimir", -- Skeiðbrímir was a horse from Norse mythology (Bellows gives the name as meaning "Swift-Going"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 543.
-		"Skinfaxi", -- Skinfaxi was a sun-horse from Norse mythology (according to Bellows the name means "Shining-Mane"; Cleasby gives the meaning as "Sheen-mane" instead), which was the mount of Day; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 71; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 145, 547; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 19.
+		"Skinfaxi", -- "Skínfaxi"; it was a sun-horse from Norse mythology (according to Bellows the name means "Shining-Mane"; Cleasby gives the meaning as "Sheen-mane" instead), which was the mount of Day; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 71; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 145, 547; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 19; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 62.
 		"Sleipnir", -- Sleipnir was Odin's eight-legged horse in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 102, 159, 196; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 567.
 		"Slongvir", -- Slöngvir was the horse of Adils (Yngling) of Sweden in the Ynglingasaga; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 245.
 		"Sporvitnir", -- Sporvitnir was a horse from Norse mythology (name means "Spur-Wolf"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 306.
@@ -1527,6 +1527,9 @@ DefineUnitType("unit-dread-bat", {
 -- "Apis", -- name of a bull in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 119.
 -- "Buchis", -- name of a bull in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 119.
 -- "Mnevis" -- name of a bull in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 119.
+
+-- Cow Names:
+-- "Audhumla", -- Auðhumla"; name of a cow in Norse mythology; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 59.
 
 -- Raven Names:
 -- "Hugin", -- "Huginn", one of Odin's ravens in Norse mythology; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 31.
