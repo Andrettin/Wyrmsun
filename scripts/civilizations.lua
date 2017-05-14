@@ -1135,6 +1135,7 @@ DefineCivilization("elf", {
 		"male", "Vebrilas", -- from Battle for Wesnoth
 		"male", "Vebrinduil", -- from Battle for Wesnoth
 		"male", "Vel", -- from Battle for Wesnoth
+		"male", "Velent", -- "Vélent"; Völundr's name in the Þiðreks Saga; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 77.
 		"male", "Velon",
 		"male", "Vilith", -- from Battle for Wesnoth
 		"male", "Vol", -- from Battle for Wesnoth
@@ -1149,7 +1150,7 @@ DefineCivilization("elf", {
 		"male", "Vylas", -- from Battle for Wesnoth
 		"male", "Vyldor", -- from Battle for Wesnoth
 		"male", "Wayland", -- Völundr's English name; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 74.
-		"male", "Weland", -- Old English equivalent to Old Norse Völund; Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 118.
+		"male", "Weland", -- Old English equivalent to Old Norse Völund; Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 118; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 77.
 		"male", "Widia", -- son of Weland (Völund); Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, pp. 113, 118.
 		"male", "Wieland" -- Völundr's German name; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 74-75.
 	}
