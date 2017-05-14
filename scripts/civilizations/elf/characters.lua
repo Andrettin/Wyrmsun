@@ -48,3 +48,11 @@ DefineCharacter("hafgan", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch d
 --	ProvinceOfOrigin = "Annwn"
 	-- king in Annwn who opposed Arawn
 })
+
+DefineCharacter("volund", { -- elven smith from Norse mythology; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 74-75.
+	Name = "Volund", -- "Völundr"
+	Gender = "male",
+	Type = "unit-elven-swordsman",
+	Civilization = "elf",
+	Faction = "ulfdalir"
+})

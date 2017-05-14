@@ -310,6 +310,7 @@ AddTrigger("brawl-at-the-barracks",
 )
 
 Load("scripts/civilizations/dwarf/triggers.lua")
+Load("scripts/civilizations/elf/triggers.lua")
 Load("scripts/civilizations/frankish/triggers.lua")
 Load("scripts/civilizations/germanic/triggers.lua")
 Load("scripts/civilizations/norse/triggers.lua")

@@ -90,6 +90,17 @@ DefineCampaign("the-first-marcomannic-war", {
 --]]
 
 --[[
+DefineCampaign("volunds-flight", { -- initial scenario for the Winter War storyline, could be changed later into a longer scenario containing the storyline in its entirety
+	Name = "Volund's Flight",
+	Description = "Imprisoned and humiliated, the elven prince Volund must seek to escape from his captors...",
+	Civilization = "elf",
+	Faction = "ulfdalir",
+	StartYear = 600, -- arbitrary date, should be changed later
+	MapTemplate = "alfheim",
+	MapTemplateStartPos = {728, 0},
+	MapSize = {256, 256}
+})
+
 DefineCampaign("sigiberts-struggle", {
 	Name = "Sigibert's Struggle",
 	Description = "Upon the death of the Frankish king Chlothar I, his realm was divided between his four sons: Charibert, Chilperich, Sigibert and Gunthram. The ambitious Chilperich desires to increase his share of the inheritance at his brothers' expense, his designs on Sigibert's lands threatening to throw Francia into a bitter civil war...",

@@ -28,8 +28,7 @@
 DefineDialogue("the-two-kings-of-annwn-introduction", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 10-11, 13.
 	Nodes = {
 		{
-			"text", "The kingdom of Annwn has fallen into civil war. The scheming Hafgan has claimed king Arawn's throne, with many of the realm's nobles pledging allegiance to him, while others remained loyal to the king. After a year of inconclusive warfare, the two sides have massed their forces for a decisive battle. Arawn is marching with his followers to combat Hafgan and his supporters, who have gathered in a ford.",
-			"conditions", function(s) return GrandStrategy == false; end
+			"text", "The kingdom of Annwn has fallen into civil war. The scheming Hafgan has claimed king Arawn's throne, with many of the realm's nobles pledging allegiance to him, while others remained loyal to the king. After a year of inconclusive warfare, the two sides have massed their forces for a decisive battle. Arawn is marching with his followers to combat Hafgan and his supporters, who have gathered in a ford."
 		},
 		{
 			"speaker", "character", "arawn",
@@ -84,3 +83,5 @@ DefineDialogue("the-two-kings-of-annwn-hafgan-dies", { -- Source: Bernhard Maier
 		}
 	}
 })
+
+Load("scripts/civilizations/elf/dialogues_the_winter_war.lua")

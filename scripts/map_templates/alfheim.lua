@@ -45,5 +45,11 @@ DefineMapTemplate("alfheim", {
 	}
 })
 
-AlfheimStartX = 525
-AlfheimStartY = 132
+AlfheimStartX = 728
+AlfheimStartY = 0
+
+SetMapTemplateHero("alfheim", "volund", "ulfdalir", {764, 52})
+
+-- the king's sons, maybe their unit type should be thieves since they went to Volund's prison secretly, and since then him killing them wouldn't require being an enemy of the Lintanir faction
+SetMapTemplateUnit("alfheim", "unit-elven-swordsman", "lintanir", {767, 50})
+SetMapTemplateUnit("alfheim", "unit-elven-swordsman", "lintanir", {767, 50})

@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016-2017 by Andrettin
+--      (c) Copyright 2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,30 +25,4 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineQuest("the-two-kings-of-annwn", {
-	Name = "The Two Kings of Annwn",
-	Icon = "icon-elven-swordsman",
-	Description = "The kingdom of Annwn has fallen into civil war. The scheming Hafgan has claimed king Arawn's throne, with many of the realm's nobles pledging allegiance to him, while others remained loyal to the king. Arawn now marches with his followers to combat Hafgan and his supporters...\n\nMap: Annwn",
-	World = "Alfheim",
-	Civilization = "elf",
-	Map = "maps/alfheim/annwn.smp",
-	Scenario = "scripts/civilizations/elf/scenarios/the_two_kings_of_annwn.lua",
-	PlayerColor = "white",
-	IntroductionDialogue = "the-two-kings-of-annwn-introduction",
-	Hidden = true
-})
-
-DefineQuest("volunds-flight", {
-	Name = "Volund's Flight",
-	Icon = "icon-elven-swordsman",
-	PlayerColor = "black",
-	FailEffects = function(s)
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "volunds-flight") then
-			CallDialogue("campaign-defeat", trigger_player)
-		end
-	end,
-	Objectives = {"- Escape Saevarstad", "- Volund must survive"},
-	Uncompleteable = true,
-	Unobtainable = true,
-	HeroesMustSurvive = {"volund"}
-})
+Load("scripts/civilizations/elf/triggers_the_winter_war.lua")

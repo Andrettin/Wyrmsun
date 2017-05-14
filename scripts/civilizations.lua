@@ -1140,7 +1140,6 @@ DefineCivilization("elf", {
 		"male", "Vol", -- from Battle for Wesnoth
 		"male", "Vólas", -- from Battle for Wesnoth
 		"male", "Vóldur", -- from Battle for Wesnoth
-		"male", "Volund", -- "Völundr"; elven smith from Norse mythology; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 74-75.
 		"male", "Vondel", -- from Battle for Wesnoth
 		"male", "Vorfin", -- from Battle for Wesnoth
 		"male", "Vorfindil", -- from Battle for Wesnoth
