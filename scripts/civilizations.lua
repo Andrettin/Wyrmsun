@@ -1140,7 +1140,7 @@ DefineCivilization("elf", {
 		"male", "Vol", -- from Battle for Wesnoth
 		"male", "Vólas", -- from Battle for Wesnoth
 		"male", "Vóldur", -- from Battle for Wesnoth
-		"male", "Volund", -- elven smith from Norse mythology, brother of Slagfid and Egil
+		"male", "Volund", -- "Völundr"; elven smith from Norse mythology; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 74-75.
 		"male", "Vondel", -- from Battle for Wesnoth
 		"male", "Vorfin", -- from Battle for Wesnoth
 		"male", "Vorfindil", -- from Battle for Wesnoth
@@ -1149,8 +1149,10 @@ DefineCivilization("elf", {
 		"male", "Vunduil", -- from Battle for Wesnoth
 		"male", "Vylas", -- from Battle for Wesnoth
 		"male", "Vyldor", -- from Battle for Wesnoth
+		"male", "Wayland", -- Völundr's English name; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 74.
 		"male", "Weland", -- Old English equivalent to Old Norse Völund; Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 118.
-		"male", "Widia" -- son of Weland (Völund); Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, pp. 113, 118.
+		"male", "Widia", -- son of Weland (Völund); Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, pp. 113, 118.
+		"male", "Wieland" -- Völundr's German name; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 74-75.
 	}
 })
 

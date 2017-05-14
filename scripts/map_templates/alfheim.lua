@@ -25,9 +25,25 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- Notes on Islands: If a building should exist on an island, but the latter is too small (for instance, if it has a single tile), then the building should be left out, unless the building is vitally important (placing it in the island will already automatically move it to the closest shore).
+DefineMapTemplate("alfheim", {
+	Name = "Alfheim",
+	World = "Alfheim",
+	Width = 984,
+	Height = 728,
+	TerrainImage = "scripts/map_templates/alfheim.png",
+	GeneratedNeutralUnits = {
+		"unit-gold-deposit", 4,
+		"unit-silver-deposit", 4,
+		"unit-copper-deposit", 4,
+		"unit-tree-stump", 16,
+		"unit-unicorn", 32,
+	},
+	PlayerLocationGeneratedNeutralUnits = {
+		"unit-copper-deposit", 1,
+		"unit-wood-pile", 16,
+		"unit-stone-pile", 16
+	}
+})
 
-Load("scripts/map_templates/alfheim.lua")
-Load("scripts/map_templates/earth.lua")
-Load("scripts/map_templates/nidavellir.lua")
-Load("scripts/map_templates/asgard.lua")
+AlfheimStartX = 525
+AlfheimStartY = 132
