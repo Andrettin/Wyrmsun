@@ -48,8 +48,10 @@ DefineMapTemplate("alfheim", {
 AlfheimStartX = 728
 AlfheimStartY = 0
 
-SetMapTemplateHero("alfheim", "volund", "ulfdalir", {764, 52})
+SetMapTemplateUnit("alfheim", "unit-teuton-smithy", "lintanir", {763, 51}) -- smithy in which Volund is set to work in Saevarstad by his enemy king
+
+SetMapTemplateHero("alfheim", "volund", "ulfdalir", {762, 53})
 
 -- the king's sons, maybe their unit type should be thieves since they went to Volund's prison secretly, and since then him killing them wouldn't require being an enemy of the Lintanir faction
-SetMapTemplateUnit("alfheim", "unit-elven-swordsman", "lintanir", {767, 50})
-SetMapTemplateUnit("alfheim", "unit-elven-swordsman", "lintanir", {767, 50})
+SetMapTemplateUnit("alfheim", "unit-elven-swordsman", "lintanir", {764, 54})
+SetMapTemplateUnit("alfheim", "unit-elven-swordsman", "lintanir", {765, 53})

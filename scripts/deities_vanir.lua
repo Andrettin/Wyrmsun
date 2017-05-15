@@ -57,7 +57,7 @@ DefineDeity("freyja", { -- Source: Peter Buchholz, "Perspectives for Historical 
 	}
 })
 
-DefineDeity("gullveig", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 7.
+DefineDeity("gullveig", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 7; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 81-82.
 	Name = "Gullveig",
 	Pantheon = "Vanir",
 	HomePlane = "Vanaheim",

@@ -252,12 +252,13 @@ DefineDeity("hod", { -- Blind god, who through Loki's mischief killed his brothe
 	Gender = "male"
 })
 
-DefineDeity("honir", { -- Long-legged god; indecisive; sent by the Aesir to the Vanir to seal their truce; survives Ragnarok; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 245.
-	Name = "Honir",
+DefineDeity("honir", { -- Long-legged god; indecisive; sent by the Aesir to the Vanir to seal their truce; survives Ragnarok; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 245; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 78-79, 83.
+	Name = "Honir", -- "Hœnir"
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
-	Gender = "male"
+	Gender = "male",
+	Description = "The god Hoenir was sent by the Aesir as a ward to the Vanir, in order to seal their peace, but was later sent back by the Vanir. Honir is believed by the Norse to have given spirit to the first humans."
 })
 
 DefineDeity("hretha", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 97.

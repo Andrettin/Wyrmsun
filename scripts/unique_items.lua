@@ -162,7 +162,7 @@ DefineUniqueItem("volunds-ring", { -- Source: Carolyne Larrington, "The Norse My
 	Type = "unit-ring",
 	Prefix = "upgrade-item-prefix-swift",
 	Suffix = "upgrade-item-suffix-of-speed",
-	Description = "The legendary elven smith Volund crafted a wondrous magic ring, and gave it to his wife. The ring was later stolen by an enemy king, who gave it to his daughter."
+	Description = "The legendary elven smith Volund crafted this wondrous magic ring, and gave it to his wife. The ring was later stolen by an enemy king, who gave it to his daughter."
 } )
 
 -- Horns
