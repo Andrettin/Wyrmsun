@@ -59,9 +59,9 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-joruvellir-shield",
+	Name = "icon-joruvellir-transport-ship",
 	Size = {46, 38},
-	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_shield.png"
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_transport.png"
 })
 
 DefineIcon({
@@ -70,3 +70,44 @@ DefineIcon({
 	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_yale_pen.png"
 })
 
+DefineIcon({
+	Name = "icon-joruvellir-shield",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_shield.png"
+})
+
+DefineIcon({
+	Name = "icon-flag-joruvellir",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/flag_joruvellir.png"
+})
+
+DefineIcon({
+	Name = "icon-flag-blue-yale-skull-on-cyan",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/flag_blue_yale_skull_on_cyan.png"
+})
+
+DefineIcon({
+	Name = "icon-flag-golden-yale-skull-on-green",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/flag_golden_yale_skull_on_green.png"
+})
+
+DefineIcon({
+	Name = "icon-flag-light-blue-yale-skull-on-white",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/flag_light_blue_yale_skull_on_white.png"
+})
+
+DefineIcon({
+	Name = "icon-flag-purple-yale-skull-on-orange",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/flag_purple_yale_skull_on_orange.png"
+})
+
+DefineIcon({
+	Name = "icon-flag-red-yale-skull-on-black",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/flag_red_yale_skull_on_black.png"
+})

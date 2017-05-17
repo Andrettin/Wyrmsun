@@ -73,7 +73,7 @@ DefineButton( { Pos = 6, Level = 2, Icon = "icon-flag-blue-hammer-on-yellow",
 	ForUnit = {"unit-dwarven-town-hall", "unit-dwarven-stronghold"}
 } )
 
-DefineButton( { Pos = 7, Level = 2, Icon = "icon-flag-yellow-hammer-on-purple",
+DefineButton( { Pos = 7, Level = 2, Icon = "icon-flag-golden-yale-skull-on-green",
 	Action = "research", Value = "upgrade-faction-goldhoof-clan",
 	Allowed = "check-single-research",
 	Key = "g", Hint = "Found the ~!Goldhoof Clan", Popup = "popup-research",
@@ -97,7 +97,7 @@ DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-silver-hammer-on-red",
 	ForUnit = {"unit-dwarven-town-hall", "unit-dwarven-stronghold"}
 } )
 
-DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-blue-hammer-on-yellow",
+DefineButton( { Pos = 9, Level = 2, Icon = "icon-flag-joruvellir",
 	Action = "research", Value = "upgrade-faction-joruvellir",
 	Allowed = "check-single-research",
 	Key = "j", Hint = "Found ~!Joruvellir", Popup = "popup-research",

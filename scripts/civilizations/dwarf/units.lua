@@ -1127,7 +1127,10 @@ DefineUnitType("unit-dwarven-transport-ship", {
 		{
 			"variation-id", "dwarf",
 			"upgrade-forbidden", "upgrade-faction-brising-clan",
-			"upgrade-forbidden", "upgrade-faction-lyr"
+			"upgrade-forbidden", "upgrade-faction-lyr",
+			"upgrade-forbidden", "upgrade-faction-goldhoof-clan",
+			"upgrade-forbidden", "upgrade-faction-eikinskjaldi-clan",
+			"upgrade-forbidden", "upgrade-faction-joruvellir"
 		},
 		{
 			"variation-id", "brising",
@@ -1140,6 +1143,24 @@ DefineUnitType("unit-dwarven-transport-ship", {
 			"file", "dlcs/brising_faction_flair/graphics/units/brising_transport.png",
 			"icon", "icon-brising-transport-ship",
 			"upgrade-required", "upgrade-faction-lyr"
+		},
+		{
+			"variation-id", "joruvellir",
+			"file", "dlcs/joruvellir_faction_flair/graphics/units/joruvellir_transport.png",
+			"icon", "icon-joruvellir-transport-ship",
+			"upgrade-required", "upgrade-faction-goldhoof-clan"
+		},
+		{
+			"variation-id", "joruvellir",
+			"file", "dlcs/joruvellir_faction_flair/graphics/units/joruvellir_transport.png",
+			"icon", "icon-joruvellir-transport-ship",
+			"upgrade-required", "upgrade-faction-eikinskjaldi-clan"
+		},
+		{
+			"variation-id", "joruvellir",
+			"file", "dlcs/joruvellir_faction_flair/graphics/units/joruvellir_transport.png",
+			"icon", "icon-joruvellir-transport-ship",
+			"upgrade-required", "upgrade-faction-joruvellir"
 		}
 	},
 	Sounds = {
@@ -1166,7 +1187,10 @@ DefineUnitType("unit-dwarven-town-hall", {
 		{
 			"variation-id", "dwarf",
 			"upgrade-forbidden", "upgrade-faction-brising-clan",
-			"upgrade-forbidden", "upgrade-faction-lyr"
+			"upgrade-forbidden", "upgrade-faction-lyr",
+			"upgrade-forbidden", "upgrade-faction-goldhoof-clan",
+			"upgrade-forbidden", "upgrade-faction-eikinskjaldi-clan",
+			"upgrade-forbidden", "upgrade-faction-joruvellir"
 		},
 		{
 			"variation-id", "brising",
@@ -1179,6 +1203,21 @@ DefineUnitType("unit-dwarven-town-hall", {
 			"file", "dlcs/brising_faction_flair/graphics/buildings/brising_town_hall.png",
 			"icon", "icon-brising-town-hall",
 			"upgrade-required", "upgrade-faction-lyr"
+		},
+		{
+			"variation-id", "joruvellir",
+			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_town_hall.png",
+			"upgrade-required", "upgrade-faction-goldhoof-clan"
+		},
+		{
+			"variation-id", "joruvellir",
+			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_town_hall.png",
+			"upgrade-required", "upgrade-faction-eikinskjaldi-clan"
+		},
+		{
+			"variation-id", "joruvellir",
+			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_town_hall.png",
+			"upgrade-required", "upgrade-faction-joruvellir"
 		}
 	},
 	Sounds = {
@@ -1204,7 +1243,10 @@ DefineUnitType("unit-dwarven-stronghold", {
 		{
 			"variation-id", "dwarf",
 			"upgrade-forbidden", "upgrade-faction-brising-clan",
-			"upgrade-forbidden", "upgrade-faction-lyr"
+			"upgrade-forbidden", "upgrade-faction-lyr",
+			"upgrade-forbidden", "upgrade-faction-goldhoof-clan",
+			"upgrade-forbidden", "upgrade-faction-eikinskjaldi-clan",
+			"upgrade-forbidden", "upgrade-faction-joruvellir"
 		},
 		{
 			"variation-id", "brising",
@@ -1217,6 +1259,21 @@ DefineUnitType("unit-dwarven-stronghold", {
 			"file", "dlcs/brising_faction_flair/graphics/buildings/brising_stronghold.png",
 			"icon", "icon-brising-stronghold",
 			"upgrade-required", "upgrade-faction-lyr"
+		},
+		{
+			"variation-id", "joruvellir",
+			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_stronghold.png",
+			"upgrade-required", "upgrade-faction-goldhoof-clan"
+		},
+		{
+			"variation-id", "joruvellir",
+			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_stronghold.png",
+			"upgrade-required", "upgrade-faction-eikinskjaldi-clan"
+		},
+		{
+			"variation-id", "joruvellir",
+			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_stronghold.png",
+			"upgrade-required", "upgrade-faction-joruvellir"
 		}
 	},
 	Sounds = {
