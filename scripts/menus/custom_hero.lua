@@ -155,7 +155,7 @@ function CustomHeroCreationMenu(world, quest_menu)
 	trait = menu:addDropDown(trait_list, (sizeX / 2) - 60 - 10, 11 + 36 * 5, function(dd) end)
 	trait:setSize(236, 20)
 	
-	menu:addLabel(_("Hair:"), 10, 14 + 36 * 6, Fonts["game"], false)
+	menu:addLabel(_("Variation:"), 10, 14 + 36 * 6, Fonts["game"], false)
 	variation = menu:addDropDown(variation_list, (sizeX / 2) - 60 - 10, 11 + 36 * 6, function(dd) end)
 	variation:setSize(236, 20)
 	variation:setSelected(0)

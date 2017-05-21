@@ -25,6 +25,28 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineCharacter("geirrod-ettin", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 243; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 90.
+	Name = "Geirrod", -- "Geirrøðr"
+	Gender = "male",
+	Type = "unit-ettin",
+	Civilization = "ettin"
+})
+
+DefineCharacter("grid", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 243; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 90.
+	Name = "Grid", -- "Gríðr"
+	Gender = "female",
+	Type = "unit-ettin",
+	Civilization = "ettin"
+	-- giantess who helps Thor and Thialfi against Geirrod in Norse mythology
+})
+
+DefineCharacter("gymir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 244; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 90-91.
+	Name = "Gymir",
+	Gender = "male",
+	Type = "unit-ettin", -- frost giant
+	Civilization = "ettin"
+})
+
 DefineCharacter("hraesvelg", { -- giant who took the form of an eagle in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 18, 245.
 	Name = "Hraesvelg",
 	Gender = "male",
@@ -39,3 +61,10 @@ DefineCharacter("saekmime", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Civilization = "ettin"
 })
 
+DefineCharacter("gerd", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 54-58, 243; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 108-120; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 90-91.
+	Name = "Gerd", -- "Gerðr"
+	Gender = "female",
+	Type = "unit-ettin", -- frost giantess
+	Civilization = "ettin",
+	Father = "gymir"
+})

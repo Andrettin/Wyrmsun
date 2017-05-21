@@ -30,7 +30,7 @@ DefinePlane("Asgard", { -- Source: Anders Andrén, "Behind Heathendom: Archaeolo
 })
 
 DefinePlane("Duat", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 15.
-	Description = _("Duat is the plane in which those who believe in the Pharaonic pantheon experience their afterlife.")
+	Description = _("Duat is the plane where those who believe in the Pharaonic pantheon experience their afterlife.")
 })
 
 DefinePlane("Elysium", { -- Source: Jenny March, "Dictionary of Classical Mythology", 2014, pp. 174-175.
