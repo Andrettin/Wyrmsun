@@ -217,12 +217,15 @@ DefineModifier("upgrade-dwarven-shield-2",
 DefineModifier("upgrade-dwarven-sharp-throwing-axe",
 	{"BasicDamage", 2},
 	{"Points", 10},
-	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}, {"apply-to", "unit-dwarven-explorer"}, {"apply-to", "unit-dwarven-gryphon-rider"})
+	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}, {"apply-to", "unit-dwarven-explorer"}, {"apply-to", "unit-dwarven-gryphon-rider"},
+	{"apply-to", "unit-joruvellir-scout"}
+)
 
 DefineModifier("upgrade-dwarven-bearded-throwing-axe",
 	{"BasicDamage", 2},
 	{"Points", 10},
-	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}, {"apply-to", "unit-dwarven-explorer"}, {"apply-to", "unit-dwarven-gryphon-rider"}
+	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}, {"apply-to", "unit-dwarven-explorer"}, {"apply-to", "unit-dwarven-gryphon-rider"},
+	{"apply-to", "unit-joruvellir-scout"}
 )
 
 DefineModifier("upgrade-dwarven-ballista-bolt-1",
@@ -283,7 +286,8 @@ DefineModifier("upgrade-dwarven-runewriting",
 DefineModifier("upgrade-dwarven-alchemy",
 	{"FireDamage", 1},
 	{"Points", 8},
-	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}, {"apply-to", "unit-dwarven-explorer"}, {"apply-to", "unit-dwarven-gryphon-rider"}
+	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}, {"apply-to", "unit-dwarven-explorer"}, {"apply-to", "unit-dwarven-gryphon-rider"},
+	{"apply-to", "unit-joruvellir-scout"}
 )
 
 DefineModifier("upgrade-dwarven-alchemy",
@@ -307,10 +311,22 @@ DefinePredependency("unit-dwarven-guard",
 )
 
 DefinePredependency("unit-dwarven-scout",
-	{"upgrade-dwarven-civilization"}, "or", {"unit-gnomish-town-hall"}
+	{"upgrade-dwarven-civilization", "upgrade-faction-goldhoof-clan", 0, "upgrade-faction-eikinskjaldi-clan", 0, "upgrade-faction-joruvellir", 0, "upgrade-faction-yawning-yales", 0},
+	"or", {"unit-gnomish-town-hall", "upgrade-faction-goldhoof-clan", 0, "upgrade-faction-eikinskjaldi-clan", 0, "upgrade-faction-joruvellir", 0, "upgrade-faction-yawning-yales", 0}
 )
 
 DefineDependency("unit-dwarven-scout",
+	{"unit-dwarven-lumber-mill"}, "or", {"upgrade-mercenary-company"}
+)
+
+DefinePredependency("unit-joruvellir-scout",
+	{"upgrade-faction-goldhoof-clan"},
+	"or", {"upgrade-faction-eikinskjaldi-clan"},
+	"or", {"upgrade-faction-joruvellir"},
+	"or", {"upgrade-faction-yawning-yales"}
+)
+
+DefineDependency("unit-joruvellir-scout",
 	{"unit-dwarven-lumber-mill"}, "or", {"upgrade-mercenary-company"}
 )
 

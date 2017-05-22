@@ -31,6 +31,54 @@
 --	NOTE: Save can generate this table.
 --
 
+DefineUnitType("unit-joruvellir-scout", {
+	Parent = "unit-dwarven-scout",
+	Civilization = "dwarf",
+	Faction = "goldhoof-clan",
+--	Icon = "icon-joruvellir-scout-black-hair",
+	Icon = "icon-joruvellir-scout-orange-hair",
+	Variations = {
+		--[[
+		{
+			"variation-id", "black-hair",
+			"file", "dwarf/units/dwarven_scout_gray_hair.png",
+			"icon", "icon-joruvellir-scout-black-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 8
+		},
+		--]]
+		{
+			"variation-id", "orange-hair",
+			"file", "dwarf/units/dwarven_scout.png",
+			"icon", "icon-joruvellir-scout-orange-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
+		},
+		{
+			"variation-id", "blond-hair",
+			"file", "dwarf/units/dwarven_scout_blond_hair.png",
+			"icon", "icon-joruvellir-scout-blond-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
+		},
+		--[[
+		{
+			"variation-id", "brown-hair",
+			"file", "dwarf/units/dwarven_scout_gray_hair.png",
+			"icon", "icon-joruvellir-scout-brown-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
+		},
+		--]]
+		{
+			"variation-id", "gray-hair",
+			"file", "dwarf/units/dwarven_scout_gray_hair.png",
+			"icon", "icon-joruvellir-scout-gray-hair",
+			"weight", 1
+		}
+	}
+} )
+
 DefineUnitType("unit-joruvellir-yale-rider", {
 	Parent = "unit-dwarven-yale-rider",
 	Civilization = "dwarf",

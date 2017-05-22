@@ -46,6 +46,13 @@ DefineSpecies("einherjar", {
 	Description = "The Einherjar were originally souls of mortals who believed in the Aesir and ascended to Asgard. Being deemed worthy warriors, they were accepted into Valhalla and became mighty Einherjar."
 })
 
+DefineSpecies("sylph", {
+	Name = "Sylph",
+	HomePlane = "Vanaheim",
+	Sapient = true,
+	Description = "Sylphs are elf-like creatures who possess a pair of butterfly wings. They serve the Vanir."
+})
+
 DefineSpecies("valkyrie", {
 	Name = "Valkyrie",
 	HomePlane = "Asgard",

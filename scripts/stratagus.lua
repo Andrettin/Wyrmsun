@@ -772,7 +772,7 @@ function StandardTriggers()
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Scout") == false) then
 			AddTrigger("tip-scout",
 				function()
-					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-scout") then
+					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-scout" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-joruvellir-scout")) then
 						return true
 					else
 						return false
