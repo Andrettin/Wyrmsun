@@ -109,3 +109,6 @@ SetDLCFileEquivalency("dlcs/joruvellir_faction_flair/graphics/icons/flag_purple_
 SetDLCFileEquivalency("dlcs/joruvellir_faction_flair/graphics/icons/flag_red_yale_skull_on_black.png", "dwarf/icons/flag_green_hammer_on_light_purple.png")
 SetDLCFileEquivalency("dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_transport.png", "dwarf/icons/transport.png")
 SetDLCFileEquivalency("dlcs/joruvellir_faction_flair/graphics/units/joruvellir_transport.png", "dwarf/units/transport.png")
+SetDLCFileEquivalency("dlcs/joruvellir_faction_flair/graphics/ui/buttonpanel.png", "dwarf/ui/buttonpanel.png")
+SetDLCFileEquivalency("dlcs/joruvellir_faction_flair/graphics/ui/filler_bottom.png", "dwarf/ui/filler_bottom.png")
+SetDLCFileEquivalency("dlcs/joruvellir_faction_flair/graphics/ui/infopanel.png", "dwarf/ui/infopanel.png")

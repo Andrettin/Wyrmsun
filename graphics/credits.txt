@@ -990,6 +990,7 @@
 /graphics/terrain/cave_floor.png (by Jinn) (licensed under the CC0)
 /graphics/terrain/cave_wall.png (by Jinn) (licensed under the CC0)
 /graphics/terrain/deep_water.png (by Exidelo) (licensed under the CC0)
+/graphics/terrain/desert_sand.png (by Jinn) (licensed under the CC0)
 /graphics/terrain/dirt.png (by Jinn) (licensed under the CC0)
 /graphics/terrain/dirt_extra_1.png (by Exidelo) (licensed under the CC0)
 /graphics/terrain/dry_mud.png (by Jinn) (licensed under the CC0)

@@ -55,6 +55,12 @@ DefineFaction("goldhoof-clan", {
 	ButtonIcons = {
 		"stop", "icon-joruvellir-shield"
 	},
+	UIFillers = {
+		"dlcs/joruvellir_faction_flair/graphics/ui/filler_bottom.png", 380, -181,
+		"dwarf/ui/resource.png", 0, 0,
+		"dlcs/joruvellir_faction_flair/graphics/ui/buttonpanel.png", -256, -200,
+		"dlcs/joruvellir_faction_flair/graphics/ui/infopanel.png", 0, -200
+	},
 	Description = "The Goldhoofs are an ancient clan, who split off from the other dwarves in Svarinshaug to migrate to Joruvellir. There, they gave rise to a multitude of desert dwarven clans, which eventually would unify into the Principality of Joruvellir."
 })
 

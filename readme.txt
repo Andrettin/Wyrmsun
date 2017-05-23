@@ -96,6 +96,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Terrain
 - Fixed issue with pine tree and mud tiles appearing black on the minimap under SDL rendering.
+- Added Desert Sand tiles (by Jinn).
 
 * Units
 - Caravans can now be built at Markets, allowing trade with foreign markets.
