@@ -66,15 +66,16 @@ DefineCampaign("heimdalls-progeny", {
 	MapSize = {256, 256}
 })
 
---[[
-DefineCampaign("thunrazs-servant", {
+DefineCampaign("thors-servant", {
 	Name = "Thunraz's Servant",
-	Description = "Terrified by a calamitous thunderstorm, Thialfi's parents pledged him to the service of the lightning god Thunraz when he was still a boy. Now a grown up man, during a dream he heard his master command him to sail to an undiscovered island...",
+	Description = "Terrified by a calamitous thunderstorm, Thialfi's parents pledged him to the service of the lightning god Thunraz when he was still a boy. Now a grown man, during a dream he heard the deity command him to sail to an undiscovered island...",
 	Civilization = "germanic",
 	Faction = "thielung-tribe",
-	StartYear = -1101 -- 1100 BC was the first occupation of Gotland (by presumably pre-Germanic or Germanic speakers) we have found through research so far, so we place the campaign start at just before that
+	StartYear = -1101, -- 1100 BC was the first occupation of Gotland (by presumably pre-Germanic or Germanic speakers) we have found through research so far, so we place the campaign start at just before that
+	MapTemplate = "earth",
+	MapTemplateStartPos = {4022, 667},
+	MapSize = {256, 256}
 })
---]]
 
 --[[
 DefineCampaign("the-first-marcomannic-war", {

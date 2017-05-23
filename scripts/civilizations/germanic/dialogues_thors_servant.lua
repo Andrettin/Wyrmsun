@@ -32,9 +32,10 @@ DefineDialogue("thialfi-commanded-to-gotland", {
 			"text", "My master, the god Thunraz, has revealed to me the existence of an island to the east. I am to establish my hearth there, bringing human life to the isle.",
 			"option-effects", {
 				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "thunrazs-servant")
-					SetPlayerData(trigger_player, "AcceptQuest", "the-discovery-of-gotland") -- objective: build a Chieftain's Hall in Gotland
-					KillUnitAt("unit-revealer", trigger_player, 1, {0, 0}, {512, 512})
+					SetPlayerData(trigger_player, "AcceptQuest", "thors-servant")
+					SetPlayerData(trigger_player, "AcceptQuest", "the-discovery-of-gotland")
+					unit = CreateUnit("unit-revealer", trigger_player, {4265 - EarthStartX, 741 - EarthStartY})
+					SetUnitVariable(unit, "TTL", 600)
 				end
 			}
 		}
@@ -52,7 +53,7 @@ DefineDialogue("thialfi-settles-gotland", {
 			"text", "Thunraz told me of a group of wild berserkers living in the island of Hlesey. They attack the passing ships, and must be rooted out to restore safety to that sea passage. The island lies far to the west, beyond the great chain of isles where the Skeldungs dwell.",
 			"option-effects", {
 				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "the-slaying-at-hlesey") -- objective: Kill all units of the "Hlesing Tribe" (Germanic)
+					SetPlayerData(trigger_player, "AcceptQuest", "slay-the-berserker-brides-at-hlesey")
 				end
 			}
 		}

@@ -317,6 +317,35 @@ DefineQuest("the-sun-shields", { -- Source: http://en.natmus.dk/historical-knowl
 	ResearchUpgrades = {"upgrade-germanic-bronze-shield"}
 })
 
+DefineQuest("thors-servant", {
+	Name = "Thunraz's Servant",
+	Icon = "icon-thor",
+	World = "Earth",
+	Civilization = "germanic",
+	PlayerColor = "white",
+	FailEffects = function(s)
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors-servant") then
+			CallDialogue("campaign-defeat", trigger_player)
+		end
+	end,
+	Objectives = {"- Fulfill Thunraz's wishes", "- Thialfi must survive"},
+	HeroesMustSurvive = {"thialfi"},
+	Uncompleteable = true,
+	Unobtainable = true
+})
+
+DefineQuest("the-discovery-of-gotland", {
+	Name = "The Discovery of Gotland",
+	Icon = "icon-germanic-transport-ship",
+	World = "Earth",
+	Civilization = "germanic",
+	PlayerColor = "white",
+	Objectives = {"- Build a Chieftain's Hall in Gotland"},
+	Uncompleteable = true,
+	Unobtainable = true,
+	Unfailable = true
+})
+
 DefineQuest("slay-the-berserker-brides-at-hlesey", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 119.
 	Name = "Slay the Wild Folk at Hlesey",
 	Icon = "icon-germanic-warrior",

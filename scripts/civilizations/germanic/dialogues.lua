@@ -27,4 +27,4 @@
 
 Load("scripts/civilizations/germanic/dialogues_freys_messenger.lua")
 Load("scripts/civilizations/germanic/dialogues_heimdalls_progeny.lua")
-Load("scripts/civilizations/germanic/dialogues_thunrazs_servant.lua")
+Load("scripts/civilizations/germanic/dialogues_thors_servant.lua")

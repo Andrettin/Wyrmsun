@@ -39,7 +39,6 @@ SetMapTemplateUnit("earth", "unit-teuton-temple", "sweden", {4259, 739}, 1164) -
 
 -- Torsburgen / Þorsborg
 SetMapTemplateCulturalSettlementName("earth", "Torsburgen", {4265, 741}, "norse")
-SetMapTemplateUnit("earth", "unit-revealer", "thielung-tribe", {4265, 741}, -1101, -1100)
 SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "gute-tribe", {4265, 741}, 300, 1100) -- the enormous hill fort of Torsburgen had two phases, one dated to 300-400 AD, and the other to 800-1100 AD; Source: "Guta Saga: The History of the Gotlanders", 1999, pp. xxvii-xxviii.
 
 -- the migration from Gotland mentioned in the Guta saga, if it is real, likely occurred c. 475-550 AD; Source: "Guta Saga: The History of the Gotlanders", 1999, pp. xxvi-xxvii.

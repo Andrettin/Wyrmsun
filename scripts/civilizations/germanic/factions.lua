@@ -123,6 +123,7 @@ DefineFaction("thielung-tribe", {
 	Type = "tribe",
 	Colors = {"white"},
 	FactionUpgrade = "upgrade-thielung-tribe-faction",
+	DefaultStartPos = {4265, 741},
 	Background = "In the Gutasaga, Thieluar (who is identified by several scholars with the mythological figure Thialfi) was the first person to discover the island of Gotland. He lifted a curse on the island, and his lineage ruled over it for many years."
 })
 
