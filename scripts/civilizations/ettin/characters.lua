@@ -54,6 +54,22 @@ DefineCharacter("hraesvelg", { -- giant who took the form of an eagle in Norse m
 	Civilization = "ettin"
 })
 
+DefineCharacter("hrungnir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 245.
+	Name = "Hrungnir",
+	Gender = "male",
+	Type = "unit-ettin",
+	Civilization = "ettin",
+	Trait = "upgrade-strong"
+})
+
+DefineCharacter("mokkurkalfi", { -- giant made of clay from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 247.
+	Name = "Mokkurkalfi",
+	Gender = "male",
+	Type = "unit-ettin",
+	Civilization = "ettin",
+	Trait = "upgrade-slow"
+})
+
 DefineCharacter("saekmime", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 228.
 	Name = "Saekmime", -- "Sækmime"
 	Gender = "male",
