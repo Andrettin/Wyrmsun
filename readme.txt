@@ -85,6 +85,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed crash which could happen when a transport ship was destroyed while a unit with a level-up point was inside.
 - Fixed a number of SDL rendering issues.
 - Fixed a save game loading crash cause.
+- Units are now categorized by civilization in the encyclopedia.
 
 * Quests
 - Added a new side-quest for the Haimdala's Progeny scenario, "Slay the Wild Folk at Hlesey".

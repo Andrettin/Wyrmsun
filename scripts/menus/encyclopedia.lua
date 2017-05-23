@@ -95,7 +95,7 @@ function RunEncyclopediaMenu()
 		function() RunEncyclopediaUnitsMenu("unique_items") end)
 
 	menu:addFullButton(_("~!Units"), "u", offx + 208 + (113 * 1), offy + 104 + 36*3,
-		function() RunEncyclopediaUnitsMenu("units") end)
+		function() RunEncyclopediaUnitsCivilizationMenu("units") end)
 
 	menu:addFullButton(_("~!Worlds"), "w", offx + 208 + (113 * 1), offy + 104 + 36*4,
 		function() RunEncyclopediaWorldsMenu() end)
@@ -307,7 +307,8 @@ function RunEncyclopediaUnitsMenu(state, civilization)
 		for i, unitName in ipairs(units_table) do
 			if (state ~= "technologies" and string.find(unitName, "upgrade") == nil) then
 				if (
-					(
+					(civilization == nil or civilization == GetUnitTypeData(unitName, "Civilization") or (civilization == "neutral" and GetUnitTypeData(unitName, "Civilization") == ""))
+					and (
 						GetUnitTypeData(unitName, "Description") ~= ""
 						or GetUnitTypeData(unitName, "Background") ~= ""
 						or (GetUnitTypeData(unitName, "Item") and GetUnitTypeData(unitName, "Class") ~= "")
