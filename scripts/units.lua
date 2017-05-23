@@ -332,7 +332,7 @@ DefineUnitType("unit-minecart", {
 	Costs = {"time", 60, "copper", 200, "lumber", 200},
 	RepairHp = 4,
 	RepairCosts = {"copper", 1, "lumber", 1},
-	Speed = 5,
+	Speed = 7,
 	HitPoints = 110,
 	TileSize = {1, 1}, BoxSize = {42, 42},
 	SightRange = 4,

@@ -1254,7 +1254,8 @@ DefineAnimations("animations-minecart", {
 		"unbreakable begin",
 		"if-var v.Speed.Value <= 5 speed_5",
 		"if-var v.Speed.Value == 6 speed_6",
-		"if-var v.Speed.Value >= 7 speed_7",
+		"if-var v.Speed.Value == 7 speed_7",
+		"if-var v.Speed.Value >= 8 speed_8",
 		"label speed_5", -- 16 / (5 / 10) = 32 waits
 		"frame 0", "move 5", "wait 4", "frame 5", "move 5", "wait 5",
 		"frame 0", "move 6", "wait 6", "frame 5", "move 6", "wait 6",
@@ -1269,6 +1270,11 @@ DefineAnimations("animations-minecart", {
 		"frame 0", "move 5", "wait 2", "frame 5", "move 5", "wait 4",
 		"frame 0", "move 6", "wait 4", "frame 5", "move 6", "wait 4",
 		"frame 0", "move 5", "wait 3", "frame 5", "move 5", "wait 4",
+		"frame 0", "goto end",
+		"label speed_8", -- 16 / (8 / 10) = 20 waits
+		"frame 0", "move 5", "wait 2", "frame 5", "move 5", "wait 3",
+		"frame 0", "move 6", "wait 4", "frame 5", "move 6", "wait 4",
+		"frame 0", "move 5", "wait 3", "frame 5", "move 5", "wait 3",
 		"frame 0", "goto end",
 		"label end", "unbreakable end", "wait 1",
 	},
