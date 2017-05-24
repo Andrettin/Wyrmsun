@@ -158,6 +158,18 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-dwarven-scout-black-hair",
+	Size = {46, 38},
+	File = "dwarf/icons/dwarven_scout_black_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-scout-black-hair-braided-beard",
+	Size = {46, 38},
+	File = "dwarf/icons/dwarven_scout_black_hair_braided_beard.png"
+})
+
+DefineIcon({
 	Name = "icon-dwarven-scout-blond-hair",
 	Size = {46, 38},
 	File = "dwarf/icons/dwarven_scout_blond_hair.png"

@@ -681,6 +681,20 @@ DefineUnitType("unit-dwarven-scout", {
 			"weight", 4
 		},
 		{
+			"variation-id", "black-hair-short-beard",
+			"file", "dwarf/units/dwarven_scout_black_hair.png",
+			"icon", "icon-dwarven-scout-black-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
+		},
+		{
+			"variation-id", "black-hair-braided-beard",
+			"file", "dwarf/units/dwarven_scout_black_hair.png",
+			"icon", "icon-dwarven-scout-black-hair-braided-beard",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
+		},
+		{
 			"variation-id", "gray-hair-short-beard",
 			"file", "dwarf/units/dwarven_scout_gray_hair.png",
 			"icon", "icon-dwarven-scout-gray-hair",
@@ -703,10 +717,11 @@ DefineUnitType("unit-dwarven-scout", {
 	}
 } )
 
-DefineUnitType("unit-dwarven-pathfinder", { Name = _("Pathfinder"),
+DefineUnitType("unit-dwarven-pathfinder", {
+	Name = "Pathfinder",
 	Parent = "unit-template-veteran-shooter",
 	Civilization = "dwarf",
-	Description = _("These hardy dwarves are sometimes away from their caves for long periods, scouting and patrolling the borders. They spend this time watching for invaders, and fighting bandits and thieves who encroach on dwarven territory. Their deftly thrown axes can rival the power and accuracy of a gnomish marksman."),
+	Description = "These hardy dwarves are sometimes away from their caves for long periods, scouting and patrolling the borders. They spend this time watching for invaders, and fighting bandits and thieves who encroach on dwarven territory. Their deftly thrown axes can rival the power and accuracy of a gnomish marksman.",
 	Image = {"file", "dwarf/units/dwarven_scout.png", "size", {72, 72}},
 	Animations = "animations-dwarven-scout", Icon = "icon-dwarven-pathfinder",
 	DefaultEquipment = {
@@ -736,6 +751,13 @@ DefineUnitType("unit-dwarven-pathfinder", { Name = _("Pathfinder"),
 			"weight", 4
 		},
 		{
+			"variation-id", "black-hair",
+			"file", "dwarf/units/dwarven_scout_black_hair.png",
+			"icon", "icon-dwarven-pathfinder-black-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
+		},
+		{
 			"variation-id", "gray-hair",
 			"file", "dwarf/units/dwarven_scout_gray_hair.png",
 			"icon", "icon-dwarven-pathfinder-gray-hair",
@@ -751,10 +773,11 @@ DefineUnitType("unit-dwarven-pathfinder", { Name = _("Pathfinder"),
 	}
 } )
 
-DefineUnitType("unit-dwarven-explorer", { Name = _("Explorer"),
+DefineUnitType("unit-dwarven-explorer", {
+	Name = "Explorer",
 	Parent = "unit-template-heroic-shooter",
 	Civilization = "dwarf",
-	Description = _("Dwarven Explorers are peerless survivalists. Using only the equipment they carry, they can range for months around the forests and mountains looking for new seams of ore and deposits of minerals. Whilst their skill in a melee is less than some other dwarves, they are unmatched with throwing axes, having practiced this skill hunting in the mountains. Their maneuverability makes them dangerous and tricky foes."),
+	Description = "Dwarven Explorers are peerless survivalists. Using only the equipment they carry, they can range for months around the forests and mountains looking for new seams of ore and deposits of minerals. Whilst their skill in a melee is less than some other dwarves, they are unmatched with throwing axes, having practiced this skill hunting in the mountains. Their maneuverability makes them dangerous and tricky foes.",
 	Image = {"file", "dwarf/units/dwarven_scout.png", "size", {72, 72}},
 	Animations = "animations-dwarven-scout", Icon = "icon-dwarven-explorer",
 	DefaultEquipment = {
@@ -780,6 +803,13 @@ DefineUnitType("unit-dwarven-explorer", { Name = _("Explorer"),
 			"variation-id", "blond-hair",
 			"file", "dwarf/units/dwarven_scout_blond_hair.png",
 			"icon", "icon-dwarven-explorer-blond-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
+		},
+		{
+			"variation-id", "black-hair",
+			"file", "dwarf/units/dwarven_scout_black_hair.png",
+			"icon", "icon-dwarven-explorer-black-hair",
 			"upgrade-forbidden", "upgrade-old",
 			"weight", 4
 		},

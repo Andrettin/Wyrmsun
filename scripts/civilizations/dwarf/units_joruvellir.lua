@@ -35,18 +35,22 @@ DefineUnitType("unit-joruvellir-scout", {
 	Parent = "unit-dwarven-scout",
 	Civilization = "dwarf",
 	Faction = "goldhoof-clan",
---	Icon = "icon-joruvellir-scout-black-hair",
-	Icon = "icon-joruvellir-scout-orange-hair",
+	Icon = "icon-joruvellir-scout-black-hair",
 	Variations = {
-		--[[
 		{
 			"variation-id", "black-hair",
-			"file", "dwarf/units/dwarven_scout_gray_hair.png",
+			"file", "dwarf/units/dwarven_scout_black_hair.png",
 			"icon", "icon-joruvellir-scout-black-hair",
 			"upgrade-forbidden", "upgrade-old",
 			"weight", 8
 		},
-		--]]
+		{
+			"variation-id", "black-hair-beardless",
+			"file", "dwarf/units/dwarven_scout_black_hair_beardless.png",
+			"icon", "icon-joruvellir-scout-black-hair-beardless",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 1
+		},
 		{
 			"variation-id", "orange-hair",
 			"file", "dwarf/units/dwarven_scout.png",
@@ -55,25 +59,56 @@ DefineUnitType("unit-joruvellir-scout", {
 			"weight", 4
 		},
 		{
+			"variation-id", "orange-hair-beardless",
+			"file", "dwarf/units/dwarven_scout_beardless.png",
+			"icon", "icon-joruvellir-scout-orange-hair-beardless",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 1
+		},
+		{
 			"variation-id", "blond-hair",
 			"file", "dwarf/units/dwarven_scout_blond_hair.png",
 			"icon", "icon-joruvellir-scout-blond-hair",
 			"upgrade-forbidden", "upgrade-old",
 			"weight", 4
 		},
-		--[[
+		{
+			"variation-id", "blond-hair-beardless",
+			"file", "dwarf/units/dwarven_scout_blond_hair_beardless.png",
+			"icon", "icon-joruvellir-scout-blond-hair-beardless",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 1
+		},
 		{
 			"variation-id", "brown-hair",
-			"file", "dwarf/units/dwarven_scout_gray_hair.png",
+			"file", "dwarf/units/dwarven_scout_brown_hair.png",
 			"icon", "icon-joruvellir-scout-brown-hair",
 			"upgrade-forbidden", "upgrade-old",
 			"weight", 4
 		},
-		--]]
+		{
+			"variation-id", "brown-hair-beardless",
+			"file", "dwarf/units/dwarven_scout_brown_hair_beardless.png",
+			"icon", "icon-joruvellir-scout-brown-hair-beardless",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 1
+		},
 		{
 			"variation-id", "gray-hair",
 			"file", "dwarf/units/dwarven_scout_gray_hair.png",
 			"icon", "icon-joruvellir-scout-gray-hair",
+			"weight", 1
+		},
+		{
+			"variation-id", "gray-hair-beardless",
+			"file", "dwarf/units/dwarven_scout_gray_hair_beardless.png",
+			"icon", "icon-joruvellir-scout-gray-hair-beardless",
+			"weight", 1
+		},
+		{
+			"variation-id", "hairless",
+			"file", "dwarf/units/dwarven_scout_brown_hair_beardless.png",
+			"icon", "icon-joruvellir-scout-hairless",
 			"weight", 1
 		}
 	}

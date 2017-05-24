@@ -351,7 +351,7 @@ DefineQuest("slay-the-berserker-brides-at-hlesey", { -- Source: Kevin Crossley-H
 	Icon = "icon-germanic-warrior",
 	Description = "The wild folk at Hlesey have been attacking passing ships. The priests of Thunraz urge us to eliminate this threat, and restore safe passage in those waters.",
 	Civilization = "germanic",
-	PlayerColor = "white",
+	PlayerColor = "black",
 	Conditions = function(s)
 		if (
 			GetFactionExists("hlesing-tribe") -- the Hlesings must exist

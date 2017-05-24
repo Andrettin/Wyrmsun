@@ -17,15 +17,33 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-joruvellir-scout-blond-hair-beardless",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_scout_blond_hair_beardless.png"
+})
+
+DefineIcon({
 	Name = "icon-joruvellir-scout-brown-hair",
 	Size = {46, 38},
 	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_scout_brown_hair.png"
 })
 
 DefineIcon({
+	Name = "icon-joruvellir-scout-brown-hair-beardless",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_scout_brown_hair_beardless.png"
+})
+
+DefineIcon({
 	Name = "icon-joruvellir-scout-gray-hair",
 	Size = {46, 38},
 	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_scout_gray_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-joruvellir-scout-gray-hair-beardless",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_scout_gray_hair_beardless.png"
 })
 
 DefineIcon({
@@ -38,6 +56,12 @@ DefineIcon({
 	Name = "icon-joruvellir-scout-orange-hair",
 	Size = {46, 38},
 	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_scout_orange_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-joruvellir-scout-orange-hair-beardless",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_scout_orange_hair_beardless.png"
 })
 
 DefineIcon({
