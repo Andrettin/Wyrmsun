@@ -264,7 +264,7 @@ DefineUnitType("unit-dwarven-axefighter", {
 	InvertedSoutheastArms = true,
 	ButtonKey = "a",
 	ButtonHint = _("Train ~!Axefighter"),
-	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "red-hair",
@@ -400,7 +400,7 @@ DefineUnitType("unit-dwarven-steelclad", {
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClasses = {"axe", "mace"},
 	HackDamage = true,
-	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
 	Variations = {
@@ -530,7 +530,7 @@ DefineUnitType("unit-dwarven-thane", {
 	CanCastSpell = {"spell-axe-twirl"},
 	WeaponClasses = {"axe", "mace"},
 	HackDamage = true,
-	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing", "unit-elixir-of-strength", "unit-elixir-of-vitality"},
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing", "unit-elixir-of-strength", "unit-elixir-of-vitality"},
 	Variations = {
 		{
 			"variation-id", "red-hair",
@@ -612,7 +612,7 @@ DefineUnitType("unit-dwarven-guard", {
 	InvertedSoutheastArms = true,
 	ButtonKey = "g",
 	ButtonHint = _("Train ~!Guard"),
-	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "brown-hair",
@@ -847,7 +847,7 @@ DefineUnitType("unit-dwarven-yale-rider", {
 	ButtonKey = "y",
 	ButtonHint = _("Train ~!Yale Rider"),
 	RequirementsString = "Smithy and Yale Pen",
-	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "red-hair-gray-fur",
@@ -943,7 +943,7 @@ DefineUnitType("unit-dwarven-yale-lord", {
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClasses = {"axe"},
 	HackDamage = true,
-	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing", "unit-elixir-of-strength"},
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing", "unit-elixir-of-strength"},
 	Variations = {
 		{
 			"variation-id", "red-hair-gray-fur",
@@ -1267,7 +1267,7 @@ DefineUnitType("unit-dwarven-stronghold", {
 	Costs = {"lumber", 0, "stone", 3600},
 	RepairCosts = {"lumber", 0},
 	FireResistance = 20,
-	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
 	RequirementsString = "War Hall and Masonry",
 	Variations = {
 		{
@@ -1344,7 +1344,7 @@ DefineUnitType("unit-dwarven-barracks", {
 	ButtonKey = "w",
 	ButtonHint = _("Build ~!War Hall"),
 	Drops = {"unit-stone-pile"},
-	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
@@ -1474,7 +1474,7 @@ DefineUnitType("unit-dwarven-market", {
 	Costs = {"lumber", 900, "stone", 450},
 	RepairCosts = {"copper", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
-	SoldUnits = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-thrusting-sword", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-wool-shoes", "unit-furry-wool-shoes"},
+	SoldUnits = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-thrusting-sword", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-wool-shoes", "unit-furry-wool-shoes"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}

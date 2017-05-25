@@ -494,6 +494,14 @@ DefineDependency("unit-brising-round-shield",
 	{"unit-brising-smithy"}
 )
 
+DefinePredependency("unit-joruvellir-wooden-shield",
+	{"upgrade-faction-goldhoof-clan"}, "or", {"upgrade-faction-eikinskjaldi-clan"}, "or", {"upgrade-faction-joruvellir"}, "or", {"upgrade-faction-yawning-yales"}
+)
+
+DefineDependency("unit-joruvellir-wooden-shield",
+	{"unit-dwarven-smithy"}
+)
+
 DefineDependency("unit-heater-shield",
 	{"unit-brising-smithy", "upgrade-dwarven-shield-1"},
 	"or", {"unit-dwarven-smithy", "upgrade-dwarven-shield-1"}

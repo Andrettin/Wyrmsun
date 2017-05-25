@@ -60,6 +60,12 @@ https://github.com/Andrettin/Wyrmsun
 - 2.7.3
 -----------------------------------------------------------------------
 
+* Items
+- Added Joruvellir Wooden Shield item.
+
+* Terrain
+- Added Limestone Rock tiles. When harvested, Limestone converts to regular Stone at a 200% rate.
+
 * Units
 - Dwarven Scouts, Pathfinders and Explorers now have a black-haired variation.
 

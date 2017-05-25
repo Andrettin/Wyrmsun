@@ -796,6 +796,58 @@ DefineTerrainType("rock", {
 	}
 })
 
+DefineTerrainType("limestone-rock", {
+	Name = "Limestone Rock",
+	BaseTerrains = {"dirt", "mud", "dry-mud", "rockbound-cave-floor", "cave-floor", "desert-sand"},
+	Overlay = true,
+	Flags = {"land", "rock", "unpassable"},
+	Graphics = "terrain/limestone_rock.png",
+	SolidTiles = {4, 5, 6},
+	DestroyedTiles = {56, 57, 58},
+	TransitionTiles = {
+		"any", "north", 22,
+		"any", "north", 24,
+		"any", "north", 26,
+		"any", "south", 28,
+		"any", "south", 30,
+		"any", "south", 32,
+		"any", "west", 21,
+		"any", "west", 23,
+		"any", "west", 25,
+		"any", "east", 29,
+		"any", "east", 31,
+		"any", "east", 33,
+		"any", "northwest-outer", 7,
+		"any", "northwest-outer", 9,
+		"any", "northwest-outer", 11,
+		"any", "northeast-outer", 8,
+		"any", "northeast-outer", 10,
+		"any", "northeast-outer", 12,
+		"any", "southwest-outer", 14,
+		"any", "southwest-outer", 16,
+		"any", "southwest-outer", 18,
+		"any", "southeast-outer", 15,
+		"any", "southeast-outer", 17,
+		"any", "southeast-outer", 19,
+		"any", "northwest-inner", 43,
+		"any", "northwest-inner", 45,
+		"any", "northwest-inner", 47,
+		"any", "northeast-inner", 42,
+		"any", "northeast-inner", 44,
+		"any", "northeast-inner", 46,
+		"any", "southwest-inner", 36,
+		"any", "southwest-inner", 38,
+		"any", "southwest-inner", 40,
+		"any", "southeast-inner", 35,
+		"any", "southeast-inner", 37,
+		"any", "southeast-inner", 39,
+		"any", "northwest-southeast-inner", 51,
+		"any", "northwest-southeast-inner", 52,
+		"any", "northeast-southwest-inner", 49,
+		"any", "northeast-southwest-inner", 50
+	}
+})
+
 DefineTerrainType("fairlimbed-tree", {
 	Name = "Fairlimbed Tree",
 	Character = "i",

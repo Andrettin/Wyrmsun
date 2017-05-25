@@ -347,9 +347,14 @@ DefineUnitType("unit-round-shield", {
 DefineUnitType("unit-brising-round-shield", {
 	Name = "Brising Round Shield",
 	Parent = "unit-round-shield",
-	Costs = {"copper", 100},
 	Image = {"file", "dlcs/brising_faction_flair/graphics/items/brising_round_shield.png", "size", {14, 14}},
 	Icon = "icon-brising-round-shield"
+} )
+
+DefineUnitType("unit-joruvellir-wooden-shield", {
+	Name = "Joruvellir Wooden Shield",
+	Parent = "unit-round-shield",
+	Icon = "icon-joruvellir-shield"
 } )
 
 DefineUnitType("unit-heater-shield", {
