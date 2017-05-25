@@ -141,7 +141,7 @@ local tips = {
 	"If a worker is stuck between trees or rocks, it will drop the resources it is carrying to be able to harvest more and escape.",
 	
 	-- Fauna-related tips
-	"Yales are territorial creatures.",
+--	"Yales are territorial creatures.",
 	"Wild gryphons are dangerous predators.",
 	"There is a chance animals will escape from destroyed stables or pens.",
 	

@@ -37,6 +37,7 @@ DefineCampaign("the-first-dwarves", {
 	MapSize = {256, 256}
 })
 
+--[[
 DefineCampaign("a-home-in-the-fields-of-sand", {
 	Name = "A Home in the Fields of Sand",
 	Description = "The disgraced Goldhoof clan must migrate away from the dwarven rocky hills of Svarinshaug, and seek a new home.",
@@ -47,7 +48,6 @@ DefineCampaign("a-home-in-the-fields-of-sand", {
 	MapTemplateStartPos = {655, 155},
 })
 
---[[
 DefineCampaign("the-mead-of-poetry", {
 	Name = "The Mead of Poetry",
 	Description = "The dwarven brothers Fjalar and Galar conspire to kill the wise god Kvasir and brew his blood into a powerful mead.",

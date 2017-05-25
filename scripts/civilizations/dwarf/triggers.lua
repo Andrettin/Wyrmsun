@@ -51,6 +51,8 @@ AddTrigger("oin-leaves",
 		end
 		if ( -- if Andvari's Falls are empty, but there are certain Germanic structures within a certain range of it
 			GetNumUnitsAt(-2, "any", {490 - 16 - NidavellirStartX, 107 - 16 - NidavellirStartY}, {490 + 16 - NidavellirStartX, 107 + 16 - NidavellirStartY}, GetMapLayer("", "Nidavellir", 0)) == 0
+			and (490 - NidavellirStartX) > 0
+			and (107 - NidavellirStartY) > 0
 			and (
 				GetNumUnitsAt(-2, "unit-dwarven-town-hall", {490 - 256 - NidavellirStartX, 107 - 256 - NidavellirStartY}, {490 + 256 - NidavellirStartX, 107 + 256 - NidavellirStartY}, GetMapLayer("", "Nidavellir", 0)) > 0 -- a dwarven settlement from which Oin could have come from
 				or GetNumUnitsAt(-2, "unit-dwarven-stronghold", {490 - 256 - NidavellirStartX, 107 - 256 - NidavellirStartY}, {490 + 256 - NidavellirStartX, 107 + 256 - NidavellirStartY}, GetMapLayer("", "Nidavellir", 0)) > 0
