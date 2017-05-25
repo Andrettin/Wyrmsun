@@ -62,6 +62,13 @@ DefineCharacter("hrungnir", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	Trait = "upgrade-strong"
 })
 
+DefineCharacter("hymir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 245; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 102-105.
+	Name = "Hymir",
+	Gender = "male",
+	Type = "unit-ettin", -- frost giant
+	Civilization = "ettin"
+})
+
 DefineCharacter("mokkurkalfi", { -- giant made of clay from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 247.
 	Name = "Mokkurkalfi",
 	Gender = "male",
