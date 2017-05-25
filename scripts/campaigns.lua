@@ -30,11 +30,21 @@ DefineCampaign("the-first-dwarves", {
 	Description = "A clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home. Beset by hostile forces, can they survive for long?",
 	Civilization = "dwarf",
 	Faction = "brising-clan",
-	StartYear = -2800,
+	StartYear = -3000,
 	MapTemplate = "nidavellir",
 --	MapTemplateStartPos = {525, 132},
 	MapTemplateStartPos = {475, 90},
 	MapSize = {256, 256}
+})
+
+DefineCampaign("a-home-in-the-fields-of-sand", {
+	Name = "A Home in the Fields of Sand",
+	Description = "The disgraced Goldhoof clan must migrate away from the dwarven rocky hills of Svarinshaug, and seek a new home.",
+	Civilization = "dwarf",
+	Faction = "goldhoof-clan",
+	StartYear = -2800,
+	MapTemplate = "nidavellir",
+	MapTemplateStartPos = {655, 155},
 })
 
 --[[
