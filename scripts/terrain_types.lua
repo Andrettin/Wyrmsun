@@ -803,7 +803,7 @@ DefineTerrainType("limestone-rock", {
 	Overlay = true,
 	Flags = {"land", "rock", "unpassable"},
 	Graphics = "terrain/limestone_rock.png",
-	Resource = "stone",
+	Resource = "limestone",
 	SolidTiles = {4, 5, 6},
 	DestroyedTiles = {56, 57, 58},
 	TransitionTiles = {

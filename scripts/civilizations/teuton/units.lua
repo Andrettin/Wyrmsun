@@ -73,6 +73,10 @@ DefineUnitType("unit-teuton-worker", {
 			"file-when-loaded", "germanic/units/worker_with_gold.png"
 		},
 		{
+			"resource-id", "limestone",
+			"file-when-loaded", "germanic/units/worker_with_gold.png"
+		},
+		{
 			"resource-id", "coal",
 			"file-when-loaded", "germanic/units/worker_with_gold.png"
 		},

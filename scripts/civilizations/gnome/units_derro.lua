@@ -63,6 +63,10 @@ DefineUnitType("unit-derro-worker", {
 			"file-when-loaded", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
 		},
 		{
+			"resource-id", "limestone",
+			"file-when-loaded", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+		},
+		{
 			"resource-id", "coal",
 			"file-when-loaded", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
 		},

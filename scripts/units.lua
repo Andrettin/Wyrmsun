@@ -2798,6 +2798,13 @@ DefineUnitType("unit-template-worker", {
 			"wait-at-depot", 150
 		},
 		{
+			"resource-id", "limestone",
+			"resource-capacity", 100,
+			"resource-step", 4,
+			"wait-at-resource", 12,
+			"wait-at-depot", 150
+		},
+		{
 			"resource-id", "coal",
 			"resource-capacity", 100,
 			"resource-step", 4,
@@ -3420,7 +3427,7 @@ DefineUnitType("unit-template-town-hall", {
 	BuilderOutside = true,
 	RecruitHeroes = true,
 	IncreasesLuxuryDemand = true,
-	CanStore = {"copper", "silver", "gold", "lumber", "stone", "coal", "furniture"},
+	CanStore = {"copper", "silver", "gold", "lumber", "stone", "limestone", "coal", "furniture"},
 	Drops = {"unit-wood-pile"},
 	RightMouseAction = "rally-point",
 	BurnPercent = 50,
