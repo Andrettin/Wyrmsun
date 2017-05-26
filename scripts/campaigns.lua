@@ -76,6 +76,7 @@ DefineCampaign("heimdalls-progeny", {
 	MapSize = {256, 256}
 })
 
+--[[
 DefineCampaign("thors-servant", {
 	Name = "Thunraz's Servant",
 	Description = "Terrified by a calamitous thunderstorm, Thialfi's parents pledged him to the service of the lightning god Thunraz when he was still a boy. Now a grown man, during a dream he heard the deity command him to sail to an undiscovered island...",
@@ -87,7 +88,6 @@ DefineCampaign("thors-servant", {
 	MapSize = {256, 256}
 })
 
---[[
 DefineCampaign("the-first-marcomannic-war", {
 	Name = "The First Marcomannic War",
 	Description = "Under the leadership of Ballomar, the Marcomanni wage war with the mighty Roman Empire.",

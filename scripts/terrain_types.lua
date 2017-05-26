@@ -758,6 +758,7 @@ DefineTerrainType("rock", {
 	Overlay = true,
 	Flags = {"land", "rock", "unpassable"},
 	Graphics = "terrain/rock.png",
+	Resource = "stone",
 	SolidTiles = {18, 21, 24},
 	DestroyedTiles = {16},
 	TransitionTiles = {
@@ -802,6 +803,7 @@ DefineTerrainType("limestone-rock", {
 	Overlay = true,
 	Flags = {"land", "rock", "unpassable"},
 	Graphics = "terrain/limestone_rock.png",
+	Resource = "stone",
 	SolidTiles = {4, 5, 6},
 	DestroyedTiles = {56, 57, 58},
 	TransitionTiles = {
@@ -855,6 +857,7 @@ DefineTerrainType("fairlimbed-tree", {
 	Overlay = true,
 	Flags = {"land", "forest", "unpassable"},
 	Graphics = "terrain/fairlimbed_tree.png",
+	Resource = "lumber",
 	SolidTiles = {18},
 	DestroyedTiles = {16, 32, 48},
 	TransitionTiles = {
@@ -885,6 +888,7 @@ DefineTerrainType("flamefood-tree", {
 	Overlay = true,
 	Flags = {"land", "forest", "unpassable"},
 	Graphics = "terrain/flamefood_tree.png",
+	Resource = "lumber",
 	SolidTiles = {18},
 	DestroyedTiles = {16},
 	TransitionTiles = {
@@ -913,6 +917,7 @@ DefineTerrainType("pine-tree", {
 	Overlay = true,
 	Flags = {"land", "forest", "unpassable"},
 	Graphics = "terrain/pine_tree.png",
+	Resource = "lumber",
 	SolidTiles = {18},
 	DestroyedTiles = {16, 32, 48},
 	TransitionTiles = {
