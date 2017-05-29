@@ -62,6 +62,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Items
 - Added Joruvellir Wooden Shield item.
+- Added a new unique item, Hlewagastiz's Horn.
 
 * Terrain
 - Added Limestone Rock tiles. When harvested, Limestone converts to regular Stone at a 200% rate.

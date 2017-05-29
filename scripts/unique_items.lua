@@ -175,6 +175,15 @@ DefineUniqueItem("gjall", { -- Source: Kevin Crossley-Holland, "The Norse Myths"
 	Background = "In Norse mythology, Gjall (\"the Ringing Horn\") was the horn of the god Heimdall, which was heard in all nine worlds when soared."
 } )
 
+DefineUniqueItem("hlewagastizs-horn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 1.2.
+	Name = "Hlewagastiz's Horn",
+	Type = "unit-horn",
+	Prefix = "upgrade-item-prefix-accurate",
+	Suffix = "upgrade-item-suffix-of-accuracy",
+	Background = "In the early 5th century, a horn was made and engraved with runes detailing the name of its maker, Hlewagastiz.",
+	Quote = "\"I, Hlewagastiz of the wood, made the horn.\""
+} )
+
 -- Elixirs
 
 DefineUniqueItem("fafnirs-heart", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 380-381.
