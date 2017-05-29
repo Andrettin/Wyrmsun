@@ -42,7 +42,7 @@ DefineUnitType("unit-joruvellir-scout", {
 			"file", "dwarf/units/dwarven_scout_black_hair.png",
 			"icon", "icon-joruvellir-scout-black-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"weight", 8
+			"weight", 16
 		},
 		{
 			"variation-id", "black-hair-beardless",
@@ -56,7 +56,7 @@ DefineUnitType("unit-joruvellir-scout", {
 			"file", "dwarf/units/dwarven_scout.png",
 			"icon", "icon-joruvellir-scout-orange-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"weight", 4
+			"weight", 8
 		},
 		{
 			"variation-id", "orange-hair-beardless",
@@ -70,7 +70,7 @@ DefineUnitType("unit-joruvellir-scout", {
 			"file", "dwarf/units/dwarven_scout_blond_hair.png",
 			"icon", "icon-joruvellir-scout-blond-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"weight", 4
+			"weight", 8
 		},
 		{
 			"variation-id", "blond-hair-beardless",
@@ -84,7 +84,7 @@ DefineUnitType("unit-joruvellir-scout", {
 			"file", "dwarf/units/dwarven_scout_brown_hair.png",
 			"icon", "icon-joruvellir-scout-brown-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"weight", 4
+			"weight", 8
 		},
 		{
 			"variation-id", "brown-hair-beardless",
@@ -97,7 +97,7 @@ DefineUnitType("unit-joruvellir-scout", {
 			"variation-id", "gray-hair",
 			"file", "dwarf/units/dwarven_scout_gray_hair.png",
 			"icon", "icon-joruvellir-scout-gray-hair",
-			"weight", 1
+			"weight", 2
 		},
 		{
 			"variation-id", "gray-hair-beardless",
@@ -125,7 +125,7 @@ DefineUnitType("unit-joruvellir-pathfinder", {
 			"file", "dwarf/units/dwarven_scout_black_hair.png",
 			"icon", "icon-joruvellir-pathfinder-black-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"weight", 8
+			"weight", 16
 		},
 		{
 			"variation-id", "black-hair-beardless",
@@ -139,7 +139,7 @@ DefineUnitType("unit-joruvellir-pathfinder", {
 			"file", "dwarf/units/dwarven_scout.png",
 			"icon", "icon-joruvellir-pathfinder-orange-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"weight", 4
+			"weight", 8
 		},
 		{
 			"variation-id", "orange-hair-beardless",
@@ -153,7 +153,7 @@ DefineUnitType("unit-joruvellir-pathfinder", {
 			"file", "dwarf/units/dwarven_scout_blond_hair.png",
 			"icon", "icon-joruvellir-pathfinder-blond-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"weight", 4
+			"weight", 8
 		},
 		{
 			"variation-id", "blond-hair-beardless",
@@ -167,7 +167,7 @@ DefineUnitType("unit-joruvellir-pathfinder", {
 			"file", "dwarf/units/dwarven_scout_brown_hair.png",
 			"icon", "icon-joruvellir-pathfinder-brown-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"weight", 4
+			"weight", 8
 		},
 		{
 			"variation-id", "brown-hair-beardless",
@@ -180,7 +180,7 @@ DefineUnitType("unit-joruvellir-pathfinder", {
 			"variation-id", "gray-hair",
 			"file", "dwarf/units/dwarven_scout_gray_hair.png",
 			"icon", "icon-joruvellir-pathfinder-gray-hair",
-			"weight", 1
+			"weight", 2
 		},
 		{
 			"variation-id", "gray-hair-beardless",
