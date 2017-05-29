@@ -65,6 +65,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Terrain
 - Added Limestone Rock tiles. When harvested, Limestone converts to regular Stone at a 200% rate.
+- Fixed crash which could occur if the player built a structure on top of a pathway.
 
 * Units
 - Dwarven Scouts, Pathfinders and Explorers now have a black-haired variation.
