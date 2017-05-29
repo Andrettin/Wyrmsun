@@ -114,6 +114,89 @@ DefineUnitType("unit-joruvellir-scout", {
 	}
 } )
 
+DefineUnitType("unit-joruvellir-pathfinder", {
+	Parent = "unit-dwarven-pathfinder",
+	Civilization = "dwarf",
+	Faction = "goldhoof-clan",
+	Icon = "icon-joruvellir-pathfinder-black-hair",
+	Variations = {
+		{
+			"variation-id", "black-hair",
+			"file", "dwarf/units/dwarven_scout_black_hair.png",
+			"icon", "icon-joruvellir-pathfinder-black-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 8
+		},
+		{
+			"variation-id", "black-hair-beardless",
+			"file", "dwarf/units/dwarven_scout_black_hair_beardless.png",
+			"icon", "icon-joruvellir-pathfinder-black-hair-beardless",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 1
+		},
+		{
+			"variation-id", "orange-hair",
+			"file", "dwarf/units/dwarven_scout.png",
+			"icon", "icon-joruvellir-pathfinder-orange-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
+		},
+		{
+			"variation-id", "orange-hair-beardless",
+			"file", "dwarf/units/dwarven_scout_beardless.png",
+			"icon", "icon-joruvellir-pathfinder-orange-hair-beardless",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 1
+		},
+		{
+			"variation-id", "blond-hair",
+			"file", "dwarf/units/dwarven_scout_blond_hair.png",
+			"icon", "icon-joruvellir-pathfinder-blond-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
+		},
+		{
+			"variation-id", "blond-hair-beardless",
+			"file", "dwarf/units/dwarven_scout_blond_hair_beardless.png",
+			"icon", "icon-joruvellir-pathfinder-blond-hair-beardless",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 1
+		},
+		{
+			"variation-id", "brown-hair",
+			"file", "dwarf/units/dwarven_scout_brown_hair.png",
+			"icon", "icon-joruvellir-pathfinder-brown-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 4
+		},
+		{
+			"variation-id", "brown-hair-beardless",
+			"file", "dwarf/units/dwarven_scout_brown_hair_beardless.png",
+			"icon", "icon-joruvellir-pathfinder-brown-hair-beardless",
+			"upgrade-forbidden", "upgrade-old",
+			"weight", 1
+		},
+		{
+			"variation-id", "gray-hair",
+			"file", "dwarf/units/dwarven_scout_gray_hair.png",
+			"icon", "icon-joruvellir-pathfinder-gray-hair",
+			"weight", 1
+		},
+		{
+			"variation-id", "gray-hair-beardless",
+			"file", "dwarf/units/dwarven_scout_gray_hair_beardless.png",
+			"icon", "icon-joruvellir-pathfinder-gray-hair-beardless",
+			"weight", 1
+		},
+		{
+			"variation-id", "hairless",
+			"file", "dwarf/units/dwarven_scout_brown_hair_beardless.png",
+			"icon", "icon-joruvellir-pathfinder-hairless",
+			"weight", 1
+		}
+	}
+} )
+
 DefineUnitType("unit-joruvellir-yale-rider", {
 	Parent = "unit-dwarven-yale-rider",
 	Civilization = "dwarf",

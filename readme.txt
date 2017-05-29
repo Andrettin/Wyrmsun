@@ -64,6 +64,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added Joruvellir Wooden Shield item.
 - Added a new unique item, Hlewagastiz's Horn.
 
+* Miscellaneous
+- Portraits in encyclopedia entries and dialogues now have a frame.
+
 * Terrain
 - Added Limestone Rock tiles. When harvested, Limestone converts to regular Stone at a 200% rate.
 - Fixed crash which could occur if the player built a structure on top of a pathway.

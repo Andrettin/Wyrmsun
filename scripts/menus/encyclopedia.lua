@@ -727,10 +727,17 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 	end
 
 	if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
-		local menu_image = PlayerColorImageWidget(encyclopedia_icon, playercolor)
+		local menu_image = PlayerColorImageButton("", playercolor)
 		menu_image:setImageOrigin(encyclopedia_icon_x_origin, encyclopedia_icon_y_origin)
 		menu:add(menu_image, (Video.Width / 2) - 23, offy + 104 + 36*-1)
 		menu_image:setHairColor(hair_color)
+		menu_image:setNormalImage(encyclopedia_icon)
+		menu_image:setPressedImage(encyclopedia_icon_pressed)
+		menu_image:setDisabledImage(encyclopedia_icon_disabled)
+		menu_image:setSize(encyclopedia_icon:getWidth(), encyclopedia_icon:getHeight())
+		menu_image:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
+		menu_image:setFrameImage(Preference.IconFrameG)
+		menu_image:setPressedFrameImage(Preference.PressedIconFrameG)
 	end
 	menu:addLabel("~<" .. tooltip_name .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
 

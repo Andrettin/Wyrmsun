@@ -370,23 +370,33 @@ function Event(speaker, event_description, player, options, option_effects, even
 		
 		l:setCaption(_(ProcessEventString(event_description)))
 
+		local b
 		if (type(speaker) == "number") then
 			event_icon = CIcon:Get(GetUnitVariable(speaker, "Icon")).G
 			event_icon:Load()
-			local b = PlayerColorImageWidget(event_icon, GetPlayerData(GetUnitVariable(speaker, "Player"), "Color"))
+			b = PlayerColorImageButton("", GetPlayerData(GetUnitVariable(speaker, "Player"), "Color"))
 			b:setHairColor(GetUnitVariable(speaker, "HairColor"))
 			menu:add(b, 153, 48)
 		elseif (GrandStrategy and not GameRunning and GameResult == GameNoResult) then
 			event_icon = CIcon:Get(GetUnitTypeData(GetGrandStrategyHeroUnitType(speaker), "Icon")).G
 			event_icon:Load()
-			local b = PlayerColorImageWidget(event_icon, GetFactionData(GrandStrategyFaction.Name, "Color"))
+			b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Name, "Color"))
 			b:setHairColor(GetUnitVariable(speaker, "HairColor"))
 			menu:add(b, 153, 48)
 		elseif (event_icon ~= nil) then
 			event_icon = CIcon:Get(event_icon).G
 			event_icon:Load()
-			local b = PlayerColorImageWidget(event_icon, "gray")
+			b = PlayerColorImageButton("", "gray")
 			menu:add(b, 153, 48)
+		end
+		if (b) then
+			b:setNormalImage(event_icon)
+			b:setPressedImage(event_icon)
+			b:setDisabledImage(event_icon)
+			b:setSize(event_icon:getWidth(), event_icon:getHeight())
+			b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
+			b:setFrameImage(Preference.IconFrameG)
+			b:setPressedFrameImage(Preference.PressedIconFrameG)
 		end
 
 		if (event_image ~= nil) then
@@ -538,11 +548,18 @@ function GenericDialog(title, message, tooltip, icon, player_color, hair_color)
 		if not (player_color) then
 			player_color = "red"
 		end
-		local icon_widget = PlayerColorImageWidget(icon_graphics, player_color)
+		local icon_widget = PlayerColorImageButton("", player_color)
 		if (hair_color and hair_color ~= "" and hair_color ~= "default") then
 			icon_widget:setHairColor(hair_color)
 		end
 		menu:add(icon_widget, 105, 48)
+		icon_widget:setNormalImage(icon_graphics)
+		icon_widget:setPressedImage(icon_graphics)
+		icon_widget:setDisabledImage(icon_graphics)
+		icon_widget:setSize(icon_graphics:getWidth(), icon_graphics:getHeight())
+		icon_widget:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
+		icon_widget:setFrameImage(Preference.IconFrameG)
+		icon_widget:setPressedFrameImage(Preference.PressedIconFrameG)
 	end
 
 	local l = MultiLineLabel()

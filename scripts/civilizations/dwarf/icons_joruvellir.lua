@@ -65,6 +65,72 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-joruvellir-pathfinder-black-hair",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_pathfinder_black_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-joruvellir-pathfinder-black-hair-beardless",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_pathfinder_black_hair_beardless.png"
+})
+
+DefineIcon({
+	Name = "icon-joruvellir-pathfinder-blond-hair",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_pathfinder_blond_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-joruvellir-pathfinder-blond-hair-beardless",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_pathfinder_blond_hair_beardless.png"
+})
+
+DefineIcon({
+	Name = "icon-joruvellir-pathfinder-brown-hair",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_pathfinder_brown_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-joruvellir-pathfinder-brown-hair-beardless",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_pathfinder_brown_hair_beardless.png"
+})
+
+DefineIcon({
+	Name = "icon-joruvellir-pathfinder-gray-hair",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_pathfinder_gray_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-joruvellir-pathfinder-gray-hair-beardless",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_pathfinder_gray_hair_beardless.png"
+})
+
+DefineIcon({
+	Name = "icon-joruvellir-pathfinder-hairless",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_pathfinder_hairless.png"
+})
+
+DefineIcon({
+	Name = "icon-joruvellir-pathfinder-orange-hair",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_pathfinder_orange_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-joruvellir-pathfinder-orange-hair-beardless",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_pathfinder_orange_hair_beardless.png"
+})
+
+DefineIcon({
 	Name = "icon-joruvellir-yale-rider-black-hair",
 	Size = {46, 38},
 	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_yale_rider_black_hair.png"

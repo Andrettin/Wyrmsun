@@ -310,7 +310,7 @@ DefineModifier("upgrade-deity-thor",
 	{"apply-to", "unit-suebi-swordsman"},
 	{"apply-to", "unit-frank-swordsman"}, {"apply-to", "unit-frank-veteran-swordsman"}, {"apply-to", "unit-frank-heroic-swordsman"},
 	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}, {"apply-to", "unit-dwarven-explorer"},
-	{"apply-to", "unit-joruvellir-scout"}
+	{"apply-to", "unit-joruvellir-scout"}, {"apply-to", "unit-joruvellir-pathfinder"}
 )
 
 DefineModifier("upgrade-deity-thor",

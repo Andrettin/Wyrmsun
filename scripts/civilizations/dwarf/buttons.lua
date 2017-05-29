@@ -489,7 +489,7 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-odin",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
 		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
 		"unit-dwarven-witness",
-		"unit-joruvellir-scout",
+		"unit-joruvellir-scout", "unit-joruvellir-pathfinder",
 		"unit-joruvellir-yale-rider", "unit-joruvellir-yale-lord",
 		"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
 	}
@@ -505,7 +505,7 @@ DefineButton( { Pos = 10, Level = 0, Icon = "icon-thor",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
 		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
 		"unit-dwarven-witness",
-		"unit-joruvellir-scout",
+		"unit-joruvellir-scout", "unit-joruvellir-pathfinder",
 		"unit-joruvellir-yale-rider", "unit-joruvellir-yale-lord",
 		"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
 	}
@@ -792,49 +792,25 @@ DefineButton( { Pos = 1, Level = 2,
 DefineButton( { Pos = 1, Level = 2,
 	Action = "experience-upgrade-to", Value = "unit-dwarven-pathfinder",
 	Key = "u", Hint = "~!Upgrade to Pathfinder", Popup = "popup-unit",
-	ForUnit = {"unit-dwarven-scout", "unit-joruvellir-scout"}
+	ForUnit = {"unit-dwarven-scout"}
 } )
 
-DefineButton( { Pos = 1, Level = 2, Icon = "icon-dwarven-explorer",
+DefineButton( { Pos = 1, Level = 2,
+	Action = "experience-upgrade-to", Value = "unit-joruvellir-pathfinder",
+	Key = "u", Hint = "~!Upgrade to Pathfinder", Popup = "popup-unit",
+	ForUnit = {"unit-joruvellir-scout"}
+} )
+
+DefineButton( { Pos = 1, Level = 2,
 	Action = "experience-upgrade-to", Value = "unit-dwarven-explorer",
-	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "0"},
-	Key = "u", Hint = _("~!Upgrade to Explorer"), Popup = "popup-unit",
-	ForUnit = {"unit-dwarven-pathfinder"}
+	Key = "u", Hint = "~!Upgrade to Explorer", Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-pathfinder", "unit-joruvellir-pathfinder"}
 } )
 
-DefineButton( { Pos = 1, Level = 2, Icon = "icon-dwarven-explorer-blond-hair",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-explorer",
-	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "1"},
-	Key = "u", Hint = _("~!Upgrade to Explorer"), Popup = "popup-unit",
-	ForUnit = {"unit-dwarven-pathfinder"}
-} )
-
-DefineButton( { Pos = 1, Level = 2, Icon = "icon-dwarven-explorer-gray-hair",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-explorer",
-	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "2"},
-	Key = "u", Hint = _("~!Upgrade to Explorer"), Popup = "popup-unit",
-	ForUnit = {"unit-dwarven-pathfinder"}
-} )
-
-DefineButton( { Pos = 2, Level = 2, Icon = "icon-dwarven-gryphon-rider-red-hair",
+DefineButton( { Pos = 2, Level = 2,
 	Action = "experience-upgrade-to", Value = "unit-dwarven-gryphon-rider",
-	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "0"},
-	Key = "g", Hint = _("Upgrade to ~!Gryphon Rider"), Popup = "popup-unit",
-	ForUnit = {"unit-dwarven-pathfinder"}
-} )
-
-DefineButton( { Pos = 2, Level = 2, Icon = "icon-dwarven-gryphon-rider-brown-hair",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-gryphon-rider",
-	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "1"},
-	Key = "g", Hint = _("Upgrade to ~!Gryphon Rider"), Popup = "popup-unit",
-	ForUnit = {"unit-dwarven-pathfinder"}
-} )
-
-DefineButton( { Pos = 2, Level = 2, Icon = "icon-dwarven-gryphon-rider",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-gryphon-rider",
-	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "2"},
-	Key = "g", Hint = _("Upgrade to ~!Gryphon Rider"), Popup = "popup-unit",
-	ForUnit = {"unit-dwarven-pathfinder"}
+	Key = "g", Hint = "Upgrade to ~!Gryphon Rider", Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-pathfinder", "unit-joruvellir-pathfinder"}
 } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-stronghold",

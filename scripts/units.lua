@@ -122,7 +122,7 @@ Units = {
 	"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner", "unit-brising-militia",
 	"unit-brising-smithy",
 	"upgrade-faction-eikinskjaldi-clan", "upgrade-faction-goldhoof-clan", "upgrade-faction-joruvellir", "upgrade-faction-yawning-yales",
-	"unit-joruvellir-scout",
+	"unit-joruvellir-scout", "unit-joruvellir-pathfinder",
 	"unit-joruvellir-yale-rider", "unit-joruvellir-yale-lord", "unit-joruvellir-yale-pen",
 	"upgrade-faction-surghan-mercenaries",
 	"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
