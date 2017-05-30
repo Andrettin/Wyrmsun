@@ -86,6 +86,10 @@ DefineUnitType("unit-dwarven-miner", {
 		{
 			"resource-id", "furniture",
 			"file-when-loaded", "dwarf/units/miner_with_lumber.png"
+		},
+		{
+			"resource-id", "leather",
+			"file-when-loaded", "dwarf/units/miner_with_gold.png"
 		}
 	},
 	Sounds = {
@@ -146,6 +150,10 @@ DefineUnitType("unit-dwarven-skilled-miner", {
 		{
 			"resource-id", "furniture",
 			"file-when-loaded", "dwarf/units/miner_with_lumber.png"
+		},
+		{
+			"resource-id", "leather",
+			"file-when-loaded", "dwarf/units/miner_with_gold.png"
 		}
 	},
 	Sounds = {
@@ -206,6 +214,10 @@ DefineUnitType("unit-dwarven-expert-miner", {
 		{
 			"resource-id", "furniture",
 			"file-when-loaded", "dwarf/units/miner_with_lumber.png"
+		},
+		{
+			"resource-id", "leather",
+			"file-when-loaded", "dwarf/units/miner_with_gold.png"
 		}
 	},
 	Sounds = {
@@ -1404,10 +1416,10 @@ DefineUnitType("unit-dwarven-smithy", {
 } )
 
 DefineUnitType("unit-dwarven-yale-pen", {
-	Name = _("Yale Pen"),
+	Name = "Yale Pen",
 	Parent = "unit-template-stables",
 	Civilization = "dwarf",
-	Description = _("Although the underground dwarves shun mounted combat, their wild hill-dwelling kin cherish it as a noble tradition. The mobility given by the yale is crucial for traversing their homelands' hills and peaks. Dwarves have been breeding yales since time immemorial, the animals being valuable not only as mounts, but also as beasts of carry."),
+	Description = "Although the underground dwarves shun mounted combat, their wild hill-dwelling kin cherish it as a noble tradition. The mobility given by the yale is crucial for traversing their homelands' hills and peaks. Dwarves have been breeding yales since time immemorial, the animals being valuable not only as mounts, but also as beasts of carry.",
 	Image = {"file", "dwarf/buildings/yale_pen.png", "size", {96, 96}},
 	Shadow = {"file", "dwarf/buildings/yale_pen_shadow.png", "size", {96, 96}},
 	Icon = "icon-dwarven-yale-pen",
@@ -1416,7 +1428,7 @@ DefineUnitType("unit-dwarven-yale-pen", {
 	RepairCosts = {"copper", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
 	ButtonKey = "y",
-	ButtonHint = _("Build ~!Yale Pen"),
+	ButtonHint = "Build ~!Yale Pen",
 	Drops = {"unit-stone-pile", "unit-yale"},
 	Sounds = {
 		"selected", "yale-pen-selected",

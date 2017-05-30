@@ -60,12 +60,16 @@ https://github.com/Andrettin/Wyrmsun
 - 2.7.3
 -----------------------------------------------------------------------
 
+* Buildings
+- Added the Yale Cave (graphics by Jinn), which randomly spawns yales. A Yale Hunting Lodge can be built upon it (similar to how mines are built on top of deposits), providing Food, and allowing the Leather luxury resource to be harvested from it.
+
 * Items
 - Added Joruvellir Wooden Shield item.
 - Added a new unique item, Hlewagastiz's Horn.
 
 * Miscellaneous
 - Portraits in encyclopedia entries and dialogues now have a frame.
+- Added Leather luxury resource, which is automatically sold at the Market.
 
 * Terrain
 - Added Limestone Rock tiles. When harvested, Limestone converts to regular Stone at a 200% rate.

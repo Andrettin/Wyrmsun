@@ -810,6 +810,18 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-yale-cave",
+	Size = {46, 38},
+	File = "neutral/icons/yale_cave.png"
+})
+
+DefineIcon({
+	Name = "icon-yale-hunting-lodge",
+	Size = {46, 38},
+	File = "neutral/icons/yale_hunting_lodge.png"
+})
+
+DefineIcon({
 	Name = "icon-mercenary-camp",
 	Size = {46, 38},
 	File = "neutral/icons/mercenary_camp.png"

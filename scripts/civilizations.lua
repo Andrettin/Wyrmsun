@@ -1908,6 +1908,7 @@ DefineCivilization("latin", {
 		"harvest", "limestone", "basic-latin-voices-harvest",
 		"harvest", "coal", "basic-latin-voices-harvest",
 		"harvest", "furniture", "basic-latin-voices-harvest",
+		"harvest", "leather", "basic-latin-voices-harvest",
 		"ready", "basic-latin-voices-ready",
 		"help", "basic-english-voices-help",
 		"help-town", "basic-english-voices-help-town"

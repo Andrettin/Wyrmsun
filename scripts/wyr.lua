@@ -57,19 +57,9 @@ function CreateUnit(unittype, player, pos, z)
 
 	-- Don't add any units if the player setup the units to use, and don't add scenario units if in a grand strategy game
 	if (
-		(
-			GameSettings.NumUnits >= 1
-			and player ~= PlayerNumNeutral
-			and Players[player].Type ~= PlayerNeutral
-		)
-		or (
-			GrandStrategy
-			and GrandStrategyEventMap == false
-			and (
-				((unittype == "unit-gold-deposit" or unittype == "unit-silver-deposit" or unittype == "unit-copper-deposit" or unittype == "unit-coal-mine" or unittype == "unit-mercenary-camp") and GrandStrategyBattleBaseBuilding == false)
-				or (player ~= PlayerNumNeutral and Players[player].Type ~= PlayerNeutral)
-			)
-		)
+		GameSettings.NumUnits >= 1
+		and player ~= PlayerNumNeutral
+		and Players[player].Type ~= PlayerNeutral
 	) then
 		return nil
 	end

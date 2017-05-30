@@ -71,6 +71,10 @@ DefineUnitType("unit-deep-gnomish-worker", {
 		{
 			"resource-id", "furniture",
 			"file-when-loaded", "gnome/units/deep_gnomish_worker_with_lumber_red_hair.png"
+		},
+		{
+			"resource-id", "leather",
+			"file-when-loaded", "gnome/units/deep_gnomish_worker_with_gold_red_hair.png"
 		}
 	},
 	Variations = {
@@ -90,7 +94,8 @@ DefineUnitType("unit-deep-gnomish-worker", {
 			"file-when-loaded", "limestone", "gnome/units/deep_gnomish_worker_with_gold_blond_hair.png",
 			"file-when-loaded", "coal", "gnome/units/deep_gnomish_worker_with_gold_blond_hair.png",
 			"file-when-loaded", "lumber", "gnome/units/deep_gnomish_worker_with_lumber_blond_hair.png",
-			"file-when-loaded", "furniture", "gnome/units/deep_gnomish_worker_with_lumber_blond_hair.png"
+			"file-when-loaded", "furniture", "gnome/units/deep_gnomish_worker_with_lumber_blond_hair.png",
+			"file-when-loaded", "leather", "gnome/units/deep_gnomish_worker_with_gold_blond_hair.png"
 		},
 		{
 			"variation-id", "gray-hair",
@@ -103,7 +108,8 @@ DefineUnitType("unit-deep-gnomish-worker", {
 			"file-when-loaded", "limestone", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png",
 			"file-when-loaded", "coal", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png",
 			"file-when-loaded", "lumber", "gnome/units/deep_gnomish_worker_with_lumber_gray_hair.png",
-			"file-when-loaded", "furniture", "gnome/units/deep_gnomish_worker_with_lumber_gray_hair.png"
+			"file-when-loaded", "furniture", "gnome/units/deep_gnomish_worker_with_lumber_gray_hair.png",
+			"file-when-loaded", "leather", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
 		},
 		{
 			"variation-id", "green-hair",
@@ -117,7 +123,8 @@ DefineUnitType("unit-deep-gnomish-worker", {
 			"file-when-loaded", "limestone", "gnome/units/deep_gnomish_worker_with_gold_green_hair.png",
 			"file-when-loaded", "coal", "gnome/units/deep_gnomish_worker_with_gold_green_hair.png",
 			"file-when-loaded", "lumber", "gnome/units/deep_gnomish_worker_with_lumber_green_hair.png",
-			"file-when-loaded", "furniture", "gnome/units/deep_gnomish_worker_with_lumber_green_hair.png"
+			"file-when-loaded", "furniture", "gnome/units/deep_gnomish_worker_with_lumber_green_hair.png",
+			"file-when-loaded", "leather", "gnome/units/deep_gnomish_worker_with_gold_green_hair.png"
 		}
 	}
 } )

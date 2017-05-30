@@ -81,6 +81,10 @@ DefineUnitType("unit-gnomish-worker", {
 		{
 			"resource-id", "furniture",
 			"file-when-loaded", "gnome/units/gnomish_worker_with_lumber.png"
+		},
+		{
+			"resource-id", "leather",
+			"file-when-loaded", "gnome/units/gnomish_worker_with_gold.png"
 		}
 	},
 	Variations = {
@@ -101,6 +105,7 @@ DefineUnitType("unit-gnomish-worker", {
 			"file-when-loaded", "coal", "gnome/units/gnomish_worker_with_gold_gray_hair.png",
 			"file-when-loaded", "lumber", "gnome/units/gnomish_worker_with_lumber_gray_hair.png",
 			"file-when-loaded", "furniture", "gnome/units/gnomish_worker_with_lumber_gray_hair.png",
+			"file-when-loaded", "leather", "gnome/units/gnomish_worker_with_gold_gray_hair.png",
 			"weight", 1
 		}
 	},

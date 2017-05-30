@@ -647,6 +647,9 @@ DefinePanelContents(
 	{ Pos = {115, 103}, Condition = {ShowOpponent = false, GiveResource = "only", Inexhaustible = "false", Build = "false"},
 		More = {"Text", {Text = String(ActiveUnitVar("GiveResource", "Value"))}}
 	},
+	{ Pos = {9, 103}, Condition = {ShowOpponent = false, GiveResource = "only", Inexhaustible = "only", Build = "false", LumberImprove = "false", Market = "false", ShoreBuilding = "false"},
+		More = {"Text", {Text = function() return CapitalizeString(GetUnitVariable(-1, "GiveResourceTypeName")) end}}
+	},
 
 	-- Resource Replenishment
 	{ Pos = {9, 116}, Condition = {ShowOpponent = false, GiveResource = "only", Replenishment = "only", Build = "false"},
@@ -654,6 +657,14 @@ DefinePanelContents(
 	},
 	{ Pos = {115, 116}, Condition = {ShowOpponent = false, GiveResource = "only", Replenishment = "only", Build = "false"},
 		More = {"Text", {Text = String(ActiveUnitVar("GiveResource", "Increase"))}}
+	},
+	
+	-- Food Supply
+	{ Pos = {9, 116}, Condition = {ShowOpponent = false, HideNeutral = true, TownHall = "false", Build = "false", Supply = "only", Training = "false", UpgradeTo = "false"},
+		More = {"Text", {Text = "Supply:"}}
+	},
+	{ Pos = {76, 116}, Condition = {ShowOpponent = false, HideNeutral = true, TownHall = "false", Build = "false", Supply = "only", Training = "false", UpgradeTo = "false"},
+		More = {"Text", {Text = String(ActiveUnitVar("Supply", "Value"))}}
 	},
 
 	-- Time Efficiency Bonus
@@ -706,26 +717,6 @@ DefinePanelContents(
 	{ Pos = {107, 78}, Condition = {ShowOpponent = false, HideNeutral = true, Build = "only", BuilderOutside = "false"},
 		More = {"Icon", {Unit = "Worker"}}}
 
-
-  } },
--- Supply Building constructed.----------------
-  {
-  Ident = "panel-building-contents",
-  Pos = {info_panel_x, info_panel_y}, DefaultFont = "game",
-  Condition = {ShowOpponent = false, HideNeutral = true, TownHall = "false", Build = "false", Supply = "only", Training = "false", UpgradeTo = "false"},
-  Contents = {
--- Food building
-	{ Pos = {9, 103}, More = {"Text", "Usage"} },
-	{ Pos = {9, 116}, More = {"Text", {Text = "Supply:"}} },
-	{ Pos = {76, 116}, Condition = {},
-		More = {"Text", {Text = String(PlayerData(ActiveUnitVar("Player", "Value"), "Supply"))}}
-	},
-	{ Pos = {9, 130}, More = { "Text", {Text = "Demand:"}} },
-	{ Pos = {76, 130}, More = { "Text", {Text = If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Demand"),
-										PlayerData(ActiveUnitVar("Player", "Value"), "Supply")),
-										InverseVideo(String(PlayerData(ActiveUnitVar("Player", "Value"), "Demand"))),
-										String(PlayerData(ActiveUnitVar("Player", "Value"), "Demand")) )}}
-    }
 
   } },
   -- Center
@@ -1212,7 +1203,7 @@ if not (ui_loaded_first_time) then
 					More = {"Variable", {Text = _("Range Bonus: +"), Variable = "AttackRange", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {IncreasesLuxuryDemand = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = TypeLuxuryDemand("Type"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = TypeLuxuryDemand("Type"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {RegenerationAura = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Regeneration Aura"), Font = wyr.preferences.PopupDescriptionFont}}

@@ -171,6 +171,7 @@ Units = {
 	"unit-silver-rock", "unit-silver-deposit", "unit-silver-mine",
 	"unit-copper-rock", "unit-copper-deposit", "unit-copper-mine",
 	"unit-coal-mine",
+	"unit-yale-cave", "unit-yale-hunting-lodge",
 	"unit-mercenary-camp",
 --	"unit-cavern-entrance",
 --	"unit-portal",
@@ -234,6 +235,8 @@ function DefineUnitType(unit_type, data)
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-deposit" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-mine" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-yale-cave" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-yale-hunting-lodge" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-lumber-mill" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-carpenters-shop" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-lumber-mill" },
@@ -439,7 +442,7 @@ DefineUnitType("unit-caravan", {
 	}
 } )
 
-DefineUnitType("unit-template-deposit", {
+DefineUnitType("unit-template-base-deposit", {
 	Name = "Deposit",
 	Parent = "unit-template-building",
 	NeutralMinimapColor = {255, 255, 0},
@@ -454,9 +457,9 @@ DefineUnitType("unit-template-deposit", {
 	ExplodeWhenKilled = "missile-explosion",
 	Type = "land",
 	StartingResources = {50000},
-	Affixes = {"upgrade-item-prefix-dwindling", "upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-replenishing", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-replenishment", "upgrade-item-suffix-of-vulnerability"},
+	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
-		"selected", "gold-mine-selected",
+		"selected", "click",
 --		"acknowledge", "gold-mine-acknowledge",
 --		"ready", "gold-mine-ready",
 --		"help", "gold-mine-help",
@@ -464,8 +467,8 @@ DefineUnitType("unit-template-deposit", {
 	}
 } )
 
-DefineUnitType("unit-template-mine", {
-	Name = _("Mine"),
+DefineUnitType("unit-template-base-mine", {
+	Name = "Mine",
 	Parent = "unit-template-building",
 	Animations = "animations-mine",
 	NeutralMinimapColor = {255, 255, 0},
@@ -487,9 +490,9 @@ DefineUnitType("unit-template-mine", {
 	MaxHarvesters = 10,
 	BurnPercent = 50,
 	BurnDamageRate = 1,
-	Affixes = {"upgrade-item-prefix-dwindling", "upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-replenishing", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-replenishment", "upgrade-item-suffix-of-vulnerability"},
+	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
-		"selected", "gold-mine-selected",
+		"selected", "click",
 --		"acknowledge", "gold-mine-acknowledge",
 --		"ready", "gold-mine-ready",
 --		"help", "gold-mine-help",
@@ -497,9 +500,28 @@ DefineUnitType("unit-template-mine", {
 	}
 } )
 
-DefineUnitType("unit-gold-deposit", { Name = _("Gold Deposit"),
+DefineUnitType("unit-template-deposit", {
+	Name = "Deposit",
+	Parent = "unit-template-base-deposit",
+	Affixes = {"upgrade-item-prefix-dwindling", "upgrade-item-prefix-replenishing", "upgrade-item-suffix-of-replenishment"},
+	Sounds = {
+		"selected", "gold-mine-selected"
+	}
+} )
+
+DefineUnitType("unit-template-mine", {
+	Name = "Mine",
+	Parent = "unit-template-base-mine",
+	Affixes = {"upgrade-item-prefix-dwindling", "upgrade-item-prefix-replenishing", "upgrade-item-suffix-of-replenishment"},
+	Sounds = {
+		"selected", "gold-mine-selected"
+	}
+} )
+
+DefineUnitType("unit-gold-deposit", {
+	Name = "Gold Deposit",
 	Parent = "unit-template-deposit",
-	Description = _("Gold deposits contain deep veins of gold, which can be gainfully mined after the proper infrastructure is put into place."),
+	Description = "Gold deposits contain deep veins of gold, which can be gainfully mined after the proper infrastructure is put into place.",
 	Image = {"file", "neutral/buildings/gold_deposit.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/gold_deposit_shadow.png", "size", {96, 96}},
 	Icon = "icon-gold-deposit",
@@ -507,10 +529,10 @@ DefineUnitType("unit-gold-deposit", { Name = _("Gold Deposit"),
 } )
 
 DefineUnitType("unit-gold-mine", {
-	Name = _("Gold Mine"),
+	Name = "Gold Mine",
 	Parent = "unit-template-mine",
 	Class = "gold-mine",
-	Description = _("Gold is a crucial metal for most societies, as it serves both as a durable stock of value, and as a means of exchange with which a myriad of goods and services can be traded for."),
+	Description = "Gold is a crucial metal for most societies, as it serves both as a durable stock of value, and as a means of exchange with which a myriad of goods and services can be traded for.",
 	Image = {"file", "neutral/buildings/gold_mine.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/gold_mine_shadow.png", "size", {96, 96}},
 	LightImage = {"file", "neutral/buildings/gold_mine_light.png"},
@@ -526,9 +548,9 @@ DefineUnitType("unit-gold-mine", {
 } )
 
 DefineUnitType("unit-silver-deposit", {
-	Name = _("Silver Deposit"),
+	Name = "Silver Deposit",
 	Parent = "unit-template-deposit",
-	Description = _("Silver deposits often contain deep veins of silver, which can be gainfully mined after the proper infrastructure is put into place."),
+	Description = "Silver deposits often contain deep veins of silver, which can be gainfully mined after the proper infrastructure is put into place.",
 	Image = {"file", "neutral/buildings/silver_deposit.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/silver_deposit_shadow.png", "size", {96, 96}},
 	Icon = "icon-silver-deposit",
@@ -536,10 +558,10 @@ DefineUnitType("unit-silver-deposit", {
 } )
 
 DefineUnitType("unit-silver-mine", {
-	Name = _("Silver Mine"),
+	Name = "Silver Mine",
 	Parent = "unit-template-mine",
 	Class = "silver-mine",
-	Description = _("Silver is a crucial metal for most societies, as it serves both as a durable stock of value, and as a means of exchange with which a myriad of goods and services can be traded for. Although not as valuable as gold, silver is still a highly sought-after metal."),
+	Description = "Silver is a crucial metal for most societies, as it serves both as a durable stock of value, and as a means of exchange with which a myriad of goods and services can be traded for. Although not as valuable as gold, silver is still a highly sought-after metal.",
 	Image = {"file", "neutral/buildings/silver_mine.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/silver_mine_shadow.png", "size", {96, 96}},
 	LightImage = {"file", "neutral/buildings/silver_mine_light.png"},
@@ -880,6 +902,49 @@ DefineUnitType("unit-stone-pile", {
 --		"ready", "gold-mine-ready",
 --		"help", "gold-mine-help",
 --		"dead", "building-destroyed"
+	}
+} )
+
+DefineUnitType("unit-template-lair", {
+	Name = "Lair",
+	Parent = "unit-template-base-deposit",
+	Inexhaustible = true
+} )
+
+DefineUnitType("unit-template-hunting-lodge", {
+	Name = "Hunting Lodge",
+	Parent = "unit-template-base-mine",
+	Inexhaustible = true
+} )
+
+DefineUnitType("unit-yale-cave", {
+	Name = "Yale Cave",
+	Parent = "unit-template-lair",
+	Description = "Yales shelter in the caves and under the cliffs of the rocky world of Nidavellir.",
+	Image = {"file", "neutral/buildings/yale_cave.png", "size", {96, 96}},
+	Shadow = {"file", "neutral/buildings/yale_cave_shadow.png", "size", {96, 96}},
+	Icon = "icon-yale-cave",
+	GivesResource = "leather",
+	Sounds = {
+		"selected", "yale-pen-selected"
+	}
+} )
+
+DefineUnitType("unit-yale-hunting-lodge", {
+	Name = "Yale Hunting Lodge",
+	Parent = "unit-template-hunting-lodge",
+	Class = "yale-hunting-lodge",
+	Description = "Before the development of farming, the dwarves of Nidavellir hunted and foraged to survive. Yales were one of the principal animals hunted by them, providing food for nourishment and leather for clothing.",
+	Image = {"file", "neutral/buildings/yale_hunting_lodge.png", "size", {96, 96}},
+	Shadow = {"file", "neutral/buildings/yale_hunting_lodge_shadow.png", "size", {96, 96}},
+	Icon = "icon-yale-hunting-lodge",
+	Costs = {"time", 200, "lumber", 2050},
+	Supply = 6,
+	BuildingRules = { "and", { "ontop", { Type = "unit-yale-cave", ReplaceOnDie = true, ReplaceOnBuild = true } } },
+	GivesResource = "leather",
+	BuildingRulesString = "Must be built on top of a Yale Cave",
+	Sounds = {
+		"selected", "yale-pen-selected"
 	}
 } )
 
@@ -2817,6 +2882,13 @@ DefineUnitType("unit-template-worker", {
 			"resource-step", 4,
 			"wait-at-resource", 12,
 			"wait-at-depot", 150
+		},
+		{
+			"resource-id", "leather",
+			"resource-capacity", 100,
+			"resource-step", 4,
+			"wait-at-resource", 12,
+			"wait-at-depot", 150
 		}
 	},
 	Sounds = {
@@ -3427,7 +3499,7 @@ DefineUnitType("unit-template-town-hall", {
 	BuilderOutside = true,
 	RecruitHeroes = true,
 	IncreasesLuxuryDemand = true,
-	CanStore = {"copper", "silver", "gold", "lumber", "stone", "limestone", "coal", "furniture"},
+	CanStore = {"copper", "silver", "gold", "lumber", "stone", "limestone", "coal", "furniture", "leather"},
 	Drops = {"unit-wood-pile"},
 	RightMouseAction = "rally-point",
 	BurnPercent = 50,
@@ -3435,7 +3507,7 @@ DefineUnitType("unit-template-town-hall", {
 	ButtonPos = 1,
 	ButtonKey = "h",
 	ButtonHint = _("Build Town ~!Hall"),
-	ResourceDemand = {"furniture", 5},
+	ResourceDemand = {"furniture", 5, "leather", 5},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-amulet", "unit-ring", "unit-scroll", "unit-book"}, -- worker-related items, as well as those we would expect a center of administration to have
 	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},
@@ -3503,7 +3575,7 @@ DefineUnitType("unit-template-farm", {
 	ButtonKey = "f",
 	ButtonHint = "Build ~!Farm",
 	UnitStock = {"unit-cheese", 3, "unit-carrots", 3},
-	ResourceDemand = {"furniture", 1},
+	ResourceDemand = {"furniture", 1, "leather", 1},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	PersonalNames = {
 		"Blackfield",
@@ -3559,7 +3631,7 @@ DefineUnitType("unit-template-barracks", {
 	ButtonPos = 3,
 	ButtonKey = "b",
 	ButtonHint = _("Build ~!Barracks"),
-	ResourceDemand = {"furniture", 3},
+	ResourceDemand = {"furniture", 3, "leather", 3},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	PersonalNames = {
 		"Axehall",
@@ -3613,7 +3685,7 @@ DefineUnitType("unit-template-lumber-mill", {
 	ButtonPos = 4,
 	ButtonKey = "l",
 	ButtonHint = _("Build ~!Lumber Mill"),
-	ResourceDemand = {"furniture", 3},
+	ResourceDemand = {"furniture", 3, "leather", 3},
 	BuildingRulesString = "Cannot be built close to town halls",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	PersonalNames = {
@@ -3687,7 +3759,7 @@ DefineUnitType("unit-template-smithy", {
 	ButtonKey = "s",
 	ButtonHint = _("Build ~!Smithy"),
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-amulet", "unit-ring"},
-	ResourceDemand = {"furniture", 3},
+	ResourceDemand = {"furniture", 3, "leather", 3},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	PersonalNames = {
 		"The Black Anvil",
@@ -3742,7 +3814,7 @@ DefineUnitType("unit-template-smithy", {
 } )
 
 DefineUnitType("unit-template-stables", {
-	Name = _("Stables"),
+	Name = "Stables",
 	Parent = "unit-template-building",
 	Class = "stables",
 	Costs = {"time", 150, "copper", 1000, "lumber", 900},
@@ -3766,7 +3838,7 @@ DefineUnitType("unit-template-stables", {
 	ButtonPos = 6,
 	ButtonKey = "e",
 	ButtonHint = "Build Stabl~!es",
-	ResourceDemand = {"furniture", 1},
+	ResourceDemand = {"furniture", 1, "leather", 3},
 	RequirementsString = "Lumber Mill",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
@@ -3806,7 +3878,7 @@ DefineUnitType("unit-template-temple", {
 	ButtonKey = "p",
 	ButtonHint = _("Build Tem~!ple"),
 	UnitStock = {"unit-potion-of-healing", 6},
-	ResourceDemand = {"furniture", 3},
+	ResourceDemand = {"furniture", 3, "leather", 3},
 	RequirementsString = "Lumber Mill",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	AiDrops = {"unit-amulet", "unit-ring", "unit-scroll", "unit-book", "unit-potion-of-healing", "unit-elixir-of-dexterity", "unit-elixir-of-intelligence", "unit-elixir-of-strength", "unit-elixir-of-vitality"},
@@ -3934,7 +4006,7 @@ DefineUnitType("unit-template-market", {
 	BurnPercent = 50,
 	BurnDamageRate = 1,
 	TradeCost = 30,
-	ResourceDemand = {"furniture", 3},
+	ResourceDemand = {"furniture", 3, "leather", 3},
 	RequirementsString = "Lumber Mill",
 	BuildingRulesString = "Cannot be built close to other markets",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
@@ -3982,7 +4054,7 @@ DefineUnitType("unit-template-dock", {
 	ButtonPos = 9,
 	ButtonKey = "d",
 	ButtonHint = _("Build ~!Dock"),
-	ResourceDemand = {"furniture", 3},
+	ResourceDemand = {"furniture", 3, "leather", 3},
 	RequirementsString = "Lumber Mill",
 	BuildingRulesString = "Cannot be built close to other docks",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
