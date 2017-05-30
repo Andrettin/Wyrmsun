@@ -1441,6 +1441,8 @@
 /graphics/ui/resources/timber.png (by Jinn) (licensed under the CC0)
 /graphics/ui/resources/timber_extra_1.png (licensed under the GPL 2.0)
 /graphics/ui/status_effects/bleeding.png (by Exidelo) (licensed under the CC0)
+/graphics/ui/status_effects/dehydration.png (by Jinn) (licensed under the CC0)
+/graphics/ui/status_effects/dehydration_extra_1.png (by Jinn) (licensed under the CC0)
 /graphics/ui/status_effects/inspire.png (by Jinn) (licensed under the CC0)
 /graphics/ui/status_effects/inspire_extra_1.png (by Jinn) (licensed under the CC0)
 /graphics/ui/status_effects/leadership.png (by Jinn) (licensed under the CC0)
