@@ -1124,6 +1124,17 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-furniture",
 	}
 })
 
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-furniture",
+	Action = "produce-resource", Value = "leather",
+	Key = "l", Hint = "Produce ~!Leather", Popup = "popup-commands",
+	Description = "Allows workers to gather Leather in this building",
+	ForUnit = {
+		"unit-yale-hunting-lodge",
+		"unit-dwarven-yale-pen",
+		"unit-joruvellir-yale-pen"
+	}
+})
+
 -- Resource Trade -----------------------------------------------------
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-lumber",

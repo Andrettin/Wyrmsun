@@ -1427,9 +1427,15 @@ DefineUnitType("unit-dwarven-yale-pen", {
 	Costs = {"lumber", 600, "stone", 300},
 	RepairCosts = {"copper", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
+	Inexhaustible = true,
+	CanHarvest = true,
+	StartingResources = {1000},
+	GivesResource = "leather",
+	MaxHarvesters = 3,
 	ButtonKey = "y",
 	ButtonHint = "Build ~!Yale Pen",
 	Drops = {"unit-stone-pile", "unit-yale"},
+	BuildingRulesString = "Cannot be built close to town halls",
 	Sounds = {
 		"selected", "yale-pen-selected",
 		"help", "basic-dwarf-voices-help-town"

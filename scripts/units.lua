@@ -240,7 +240,9 @@ function DefineUnitType(unit_type, data)
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-lumber-mill" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-carpenters-shop" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-lumber-mill" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-lumber-mill" }
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-lumber-mill" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-yale-pen" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-joruvellir-yale-pen" }
 			}
 		}
 	elseif (resource_mine) then
@@ -914,7 +916,8 @@ DefineUnitType("unit-template-lair", {
 DefineUnitType("unit-template-hunting-lodge", {
 	Name = "Hunting Lodge",
 	Parent = "unit-template-base-mine",
-	Inexhaustible = true
+	Inexhaustible = true,
+	MaxHarvesters = 3
 } )
 
 DefineUnitType("unit-yale-cave", {

@@ -61,7 +61,8 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Buildings
-- Added the Yale Cave (graphics by Jinn), which randomly spawns yales. A Yale Hunting Lodge can be built upon it (similar to how mines are built on top of deposits), providing Food, and allowing the Leather luxury resource to be harvested from it.
+- Added the Yale Cave (graphics by Jinn), which randomly spawns yales. A Yale Hunting Lodge can be built upon it (similar to how mines are built on top of deposits), providing Food, and allowing the Leather luxury resource to be harvested from it (max 3 workers).
+- Dwarven Yale Pens can now produce Leather (max 3 workers).
 
 * Items
 - Added Joruvellir Wooden Shield item.

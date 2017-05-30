@@ -647,9 +647,6 @@ DefinePanelContents(
 	{ Pos = {115, 103}, Condition = {ShowOpponent = false, GiveResource = "only", Inexhaustible = "false", Build = "false"},
 		More = {"Text", {Text = String(ActiveUnitVar("GiveResource", "Value"))}}
 	},
-	{ Pos = {9, 103}, Condition = {ShowOpponent = false, GiveResource = "only", Inexhaustible = "only", Build = "false", LumberImprove = "false", Market = "false", ShoreBuilding = "false"},
-		More = {"Text", {Text = function() return CapitalizeString(GetUnitVariable(-1, "GiveResourceTypeName")) end}}
-	},
 
 	-- Resource Replenishment
 	{ Pos = {9, 116}, Condition = {ShowOpponent = false, GiveResource = "only", Replenishment = "only", Build = "false"},
