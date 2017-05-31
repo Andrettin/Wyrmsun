@@ -139,7 +139,7 @@ DefineTerrainType("dry-mud", {
 	Character = "r",
 	Color = {128, 64, 0},
 	Buildable = true,
-	Flags = {"land", "mud"},
+	Flags = {"land"},
 	InnerBorderTerrains = {"dirt"},
 	OuterBorderTerrains = {"mud", "cave-floor"},
 	Graphics = "terrain/dry_mud.png",
