@@ -87,7 +87,20 @@ DefineCampaign("thors-servant", {
 	MapTemplateStartPos = {4022, 667},
 	MapSize = {256, 256}
 })
+--]]
 
+DefineCampaign("the-home-of-the-boii", {
+	Name = "The Home of the Boii",
+	Description = "After a devastating conflict with the Romans, Marbod seeks to lead the tribe of the Marcomanni to safer lands.",
+	Civilization = "suebi",
+	Faction = "marcomanni-tribe",
+	StartYear = -9,
+	MapTemplate = "earth",
+	MapTemplateStartPos = {4064, 881},
+	MapSize = {256, 256}
+})
+
+--[[
 DefineCampaign("the-first-marcomannic-war", {
 	Name = "The First Marcomannic War",
 	Description = "Under the leadership of Ballomar, the Marcomanni wage war with the mighty Roman Empire.",

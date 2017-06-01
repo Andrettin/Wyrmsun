@@ -22,6 +22,7 @@
 /graphics/dwarf/buildings/town_hall.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/buildings/town_hall_shadow.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/buildings/wall.png (by Jinn) (licensed under the CC0)
+/graphics/dwarf/buildings/yale_hunting_lodge.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/buildings/yale_pen.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/buildings/yale_pen_shadow.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/icons/baglur.png (by Jinn) (licensed under the GPL 2.0)

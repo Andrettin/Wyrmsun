@@ -946,6 +946,18 @@ DefineUnitType("unit-yale-hunting-lodge", {
 	BuildingRules = { "and", { "ontop", { Type = "unit-yale-cave", ReplaceOnDie = true, ReplaceOnBuild = true } } },
 	GivesResource = "leather",
 	BuildingRulesString = "Must be built on top of a Yale Cave",
+	Variations = {
+		{
+			"variation-id", "general",
+			"upgrade-forbidden", "upgrade-dwarven-civilization"
+		},
+		{
+			"variation-id", "dwarf",
+			"file", "dwarf/buildings/yale_hunting_lodge.png",
+			"icon", "icon-dwarven-yale-hunting-lodge",
+			"upgrade-required", "upgrade-dwarven-civilization"
+		}
+	},
 	Sounds = {
 		"selected", "yale-pen-selected"
 	}

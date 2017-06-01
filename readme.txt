@@ -61,7 +61,7 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Buildings
-- Added the Yale Cave (graphics by Jinn), which randomly spawns yales. A Yale Hunting Lodge can be built upon it (similar to how mines are built on top of deposits), providing Food, and allowing the Leather luxury resource to be harvested from it (max 3 workers).
+- Added the Yale Cave (graphics by Jinn), which randomly spawns yales. A Yale Hunting Lodge can be built upon it (similar to how mines are built on top of deposits), providing Food, and allowing the Leather luxury resource to be harvested from it (max 3 workers). The Yale Hunting Lodge has generic and dwarven graphic variants.
 - Dwarven Yale Pens can now produce Leather (max 3 workers).
 
 * Items
