@@ -829,6 +829,18 @@ DefineButton( { Pos = 13, Level = 1, Icon = "icon-gold-mine",
 	}
 })
 
+DefineButton( { Pos = 13, Level = 5, -- placeholder level, the button shouldn't appear yet since we don't have enough space in the worker building submenu; but it needs to exist so that the game knows that workers can build this structure
+	Action = "build", Value = "unit-yale-hunting-lodge",
+	Key = "y", Hint = "Build ~!Yale Hunting Lodge", Popup = "popup-building",
+	ForUnit = {
+		"unit-germanic-worker", "unit-teuton-worker",
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
+		"unit-goblin-worker"
+	}
+})
+
 DefineButton( { Pos = 14, Level = 1, Icon = "icon-road",
 	Action = "build", Value = "unit-road",
 	Key = "o", Hint = "Build R~!oad", Popup = "popup-building",
@@ -1124,7 +1136,7 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-furniture",
 	}
 })
 
-DefineButton( { Pos = 1, Level = 0, Icon = "icon-furniture",
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-leather",
 	Action = "produce-resource", Value = "leather",
 	Key = "l", Hint = "Produce ~!Leather", Popup = "popup-commands",
 	Description = "Allows workers to gather Leather in this building",

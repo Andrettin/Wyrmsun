@@ -156,6 +156,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-leather",
+	Size = {46, 38},
+	File = "neutral/icons/leather.png"
+})
+
+DefineIcon({
 	Name = "icon-heater-shield",
 	Size = {46, 38},
 	File = "neutral/icons/heater_shield.png"

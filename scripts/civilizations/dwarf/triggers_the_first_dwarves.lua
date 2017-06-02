@@ -60,7 +60,7 @@ AddTrigger("a-rocky-home-mead-hall-built",
 AddTrigger("a-rocky-home-yales-hunted",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "a-rocky-home") and GetPlayerData(i, "UnitTypeKills", "unit-yale") >= 8) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "a-rocky-home") and GetPlayerData(i, "UnitTypesCount", "unit-yale-hunting-lodge") >= 1) then
 				trigger_player = i
 				return true
 			end

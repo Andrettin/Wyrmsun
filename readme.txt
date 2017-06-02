@@ -72,6 +72,9 @@ https://github.com/Andrettin/Wyrmsun
 - Portraits in encyclopedia entries and dialogues now have a frame.
 - Added Leather luxury resource, which is automatically sold at the Market.
 
+* Scenarios
+- The "A Rocky Home" quest in the "The First Dwarves" scenario now requires building a Yale Hunting Lodge instead of killing 8 Yales.
+
 * Terrain
 - Added Limestone Rock tiles. When harvested, Limestone converts to regular Stone at a 200% rate.
 - Fixed crash which could occur if the player built a structure on top of a pathway.

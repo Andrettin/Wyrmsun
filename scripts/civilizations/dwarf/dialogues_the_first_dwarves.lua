@@ -36,7 +36,7 @@ DefineDialogue("a-rocky-home-introduction", {
 		},
 		{
 			"speaker", "character", "durin",
-			"text", "Aye. There are plenty of yales here, we should hunt some."
+			"text", "Aye. There are plenty of yales here, we should hunt some. I saw a yale cave to the southeast when we were on our way here."
 		},
 		{
 			"speaker", "character", "modsognir",
@@ -46,7 +46,7 @@ DefineDialogue("a-rocky-home-introduction", {
 			"text", "Hint: Select a Miner, press the Build Structure button and then click on the Build Mead Hall button to build the structure required for this quest."
 		},
 		{
-			"text", "Hint: Press A and then click on a yale to attack it.",
+			"text", "Hint: Select a Miner and then right-click on a Yale Cave to build a Yale Hunting Lodge.",
 			"option-effects", {
 				function(s)
 					SetPlayerData(trigger_player, "AcceptQuest", "the-first-dwarves")
@@ -77,7 +77,11 @@ DefineDialogue("a-rocky-home-yales-hunted", {
 	Nodes = {
 		{
 			"speaker", "character", "durin",
-			"text", "We have hunted enough of them to last for a while. Ah, nothing like the taste of roasted yale..."
+--			"text", "We have hunted enough of them to last for a while. Ah, nothing like the taste of roasted yale..."
+			"text", "Ah, nothing like the taste of roasted yale..."
+		},
+		{
+			"text", "Hint: Yale Hunting Lodges provide you with food, but that is not all. You can also instruct your workers to gather leather there, which is sold automatically for copper if you have built a market."
 		}
 	}
 })
