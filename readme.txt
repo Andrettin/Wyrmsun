@@ -81,6 +81,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Dwarven Scouts, Pathfinders and Explorers now have a black-haired variation.
+- Fixed the position of the Banner in the goblin Worker structure submenu, so that it doesn't overlap with the Railroad.
 
 -----------------------------------------------------------------------
 - 2.7.2
