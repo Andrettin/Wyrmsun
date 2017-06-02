@@ -41,7 +41,6 @@ DefineMapTemplate("nidavellir", {
 		"unit-snigill", 64,
 		"unit-slime", 32,
 --		"unit-blood-bat", 16,
-		"unit-yale", 256,
 --		"unit-dread-bat", 8,
 --		"unit-gryphon", 8,
 		"unit-wyrm", 4

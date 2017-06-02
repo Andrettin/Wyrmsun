@@ -928,6 +928,7 @@ DefineUnitType("unit-yale-cave", {
 	Shadow = {"file", "neutral/buildings/yale_cave_shadow.png", "size", {96, 96}},
 	Icon = "icon-yale-cave",
 	GivesResource = "leather",
+	SpawnUnits = {"unit-yale"},
 	Sounds = {
 		"selected", "yale-pen-selected"
 	}

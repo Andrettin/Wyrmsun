@@ -38,7 +38,7 @@ DefineMapTemplate("island-of-the-lizard-god", {
 		"unit-snigill", 16,
 		"unit-slime", 16,
 		"unit-blood-bat", 8,
-		"unit-yale", 16,
+		"unit-yale-cave", 2,
 		"unit-dread-bat", 4
 	},
 	PlayerLocationGeneratedNeutralUnits = {
