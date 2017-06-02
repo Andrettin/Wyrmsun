@@ -26,7 +26,7 @@
 --
 
 DefineUnitType("unit-template-fauna-unit", {
-	Name = _("Fauna Unit"),
+	Name = "Fauna Unit",
 	Parent = "unit-template-unit",
 	NeutralMinimapColor = {192, 192, 192},
 	Intelligence = 2,
@@ -37,7 +37,7 @@ DefineUnitType("unit-template-fauna-unit", {
 })
 
 DefineUnitType("unit-template-diminutive-fauna-unit", {
-	Name = _("Diminutive Fauna Unit"),
+	Name = "Diminutive Fauna Unit",
 	Parent = "unit-template-fauna-unit",
 	TileSize = {1, 1}, BoxSize = {15, 15},
 	HitPoints = 1,
@@ -1086,11 +1086,8 @@ DefineUnitType("unit-wyrm", {
 	PierceDamage = true,
 	Drops = {"unit-wyrm-heart"},
 	PersonalNames = {
-		"Goin", -- Wyrm/dragon in Norse mythology
-		"Grabak", -- Grabak is a wyrm/dragon in Norse mythology
 		"Jormungand", -- Wyrm/dragon in Norse mythology
 		"Ladon", -- Wyrm/dragon in Greek mythology
-		"Moin", -- Wyrm/dragon in Norse mythology
 		"Nidhogg", -- Nidhogg is a wyrm/dragon in Norse mythology
 		"Svafnir" -- Wyrm/dragon in Norse mythology
 	},

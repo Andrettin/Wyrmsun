@@ -111,7 +111,7 @@ SetMapTemplateUnit("nidavellir-underground", "unit-kobold-footpad", "fafning-tri
 SetMapTemplateUnit("nidavellir-underground", "unit-kobold-footpad", "fafning-tribe", {-1, -1}, 561, 566)
 SetMapTemplateHero("nidavellir-underground", "fafnir", "fafning-tribe", {-1, -1}, 561, 566) -- Sigibert's campaign begins in 561; Sigibert's encounter with Fafnir (in which the latter was killed) should take place between Sigibert's initial defeat of the Avars and Chilperich in 561-562, and Sigibert's marriage to Brunichilde in 566
 
-SetMapTemplateUnit("nidavellir", "unit-wyrm", "goinling-tribe", {-1, -1})
+SetMapTemplateHero("nidavellir", "goin", "goinling-tribe", {-1, -1})
 SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "goinling-tribe", {-1, -1})
 SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "goinling-tribe", {-1, -1})
 SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "goinling-tribe", {-1, -1})
@@ -122,7 +122,7 @@ SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "goinling-tribe", {-1, -
 SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "goinling-tribe", {-1, -1})
 SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "goinling-tribe", {-1, -1})
 
-SetMapTemplateUnit("nidavellir", "unit-wyrm", "grabakling-tribe", {-1, -1})
+SetMapTemplateHero("nidavellir", "grabak", "grabakling-tribe", {-1, -1})
 SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "grabakling-tribe", {-1, -1})
 SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "grabakling-tribe", {-1, -1})
 SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "grabakling-tribe", {-1, -1})
@@ -133,7 +133,7 @@ SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "grabakling-tribe", {-1,
 SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "grabakling-tribe", {-1, -1})
 SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "grabakling-tribe", {-1, -1})
 
-SetMapTemplateUnit("nidavellir", "unit-wyrm", "moinling-tribe", {-1, -1})
+SetMapTemplateHero("nidavellir", "moin", "moinling-tribe", {-1, -1})
 SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "moinling-tribe", {-1, -1})
 SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "moinling-tribe", {-1, -1})
 SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "moinling-tribe", {-1, -1})

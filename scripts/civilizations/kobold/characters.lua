@@ -36,6 +36,22 @@ DefineCharacter("fafnir", {
 	Trait = "upgrade-vicious"
 })
 
+DefineCharacter("goin", { -- wyrm/dragon in Norse mythology
+	Name = "Goin",
+	Gender = "male",
+	Type = "unit-wyrm",
+	Civilization = "kobold",
+	Faction = "goinling-tribe"
+})
+
+DefineCharacter("grabak", { -- wyrm/dragon in Norse mythology
+	Name = "Grabak",
+	Gender = "male",
+	Type = "unit-wyrm",
+	Civilization = "kobold",
+	Faction = "grabakling-tribe"
+})
+
 DefineCharacter("grafvitnir", { -- a wyrm/dragon in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 98.
 	Name = "Grafvitnir", -- means "the Gnawing Wolf" in Old Norse
 	Gender = "male",
@@ -50,6 +66,14 @@ DefineCharacter("grafvolluth", { -- a wyrm/dragon in Norse mythology; Source: He
 	Type = "unit-wyrm",
 	Civilization = "kobold",
 	Faction = "grafvolling-tribe"
+})
+
+DefineCharacter("moin", { -- wyrm/dragon in Norse mythology
+	Name = "Moin",
+	Gender = "male",
+	Type = "unit-wyrm",
+	Civilization = "kobold",
+	Faction = "moinling-tribe"
 })
 
 DefineCharacter("ofnir", { -- a wyrm/dragon in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 98.

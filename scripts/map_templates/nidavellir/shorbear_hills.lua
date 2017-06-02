@@ -44,7 +44,7 @@ DefineMapTemplate("shorbear-hills", { -- From Battle for Wesnoth: The Sceptre of
 --SetMapTemplateLayerConnector("shorbear-hills", "unit-cavern-entrance", {3, 3}, 1)
 --SetMapTemplateLayerConnector("nidavellir-underground", "unit-cavern-entrance", {3, 3}, 0)
 
-SetMapTemplateResource("nidavellir", "unit-yale-cave", {522, 230}) -- it seems sensible to have a yale cave in the Shorbear Hills; hill dwarves should be some of the dwarven clans that use yales the most
+SetMapTemplateResource("nidavellir", "unit-yale-cave", {522, 230}) -- it seems sensible to have a yale cave in the Shorbear Hills; hill dwarves should be some of the dwarven clans that use yales the most, so they should have some wild yales nearby
 
 SetMapTemplateHero("shorbear-hills", "rugnur", "norlund-clan", {3, 3}, 34, 35)
 SetMapTemplateUnit("shorbear-hills", "unit-gnomish-duelist", "norlund-clan", {3, 3}, 34, 35) -- Gnomish Envoy
