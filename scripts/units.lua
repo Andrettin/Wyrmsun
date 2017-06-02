@@ -3897,7 +3897,7 @@ DefineUnitType("unit-template-temple", {
 	ButtonKey = "p",
 	ButtonHint = _("Build Tem~!ple"),
 	UnitStock = {"unit-potion-of-healing", 6},
-	ResourceDemand = {"furniture", 3, "leather", 3},
+	ResourceDemand = {"furniture", 4, "leather", 4},
 	RequirementsString = "Lumber Mill",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	AiDrops = {"unit-amulet", "unit-ring", "unit-scroll", "unit-book", "unit-potion-of-healing", "unit-elixir-of-dexterity", "unit-elixir-of-intelligence", "unit-elixir-of-strength", "unit-elixir-of-vitality"},
