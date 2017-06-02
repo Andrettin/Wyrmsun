@@ -452,6 +452,8 @@ DefineUnitType("unit-template-base-deposit", {
 	Construction = "construction-land2",
 	Speed = 0,
 	HitPoints = 25500,
+	RepairHp = 4,
+	RepairCosts = {"copper", 1, "lumber", 1, "stone", 1},
 	TileSize = {3, 3}, BoxSize = {95, 95},
 	Armor = 20, Missile = "missile-none",
 	Priority = 0,
@@ -910,7 +912,8 @@ DefineUnitType("unit-stone-pile", {
 DefineUnitType("unit-template-lair", {
 	Name = "Lair",
 	Parent = "unit-template-base-deposit",
-	Inexhaustible = true
+	Inexhaustible = true,
+	HitPoints = 650
 } )
 
 DefineUnitType("unit-template-hunting-lodge", {

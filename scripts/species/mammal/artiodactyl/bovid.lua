@@ -111,7 +111,7 @@ DefineSpecies("yale", {
 	Name = "Yale",
 	Genus = "eale",
 	Homeworld = "Nidavellir",
-	Terrains = {"dry-mud"}, -- should be dark dirt instead?
+	Terrains = {"dry-mud"},
 	EvolvesFrom = {"aragoral"}, -- oldest member of the Caprinae subfamily
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"
