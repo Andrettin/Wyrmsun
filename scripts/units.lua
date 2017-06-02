@@ -913,7 +913,7 @@ DefineUnitType("unit-template-lair", {
 	Name = "Lair",
 	Parent = "unit-template-base-deposit",
 	Inexhaustible = true,
-	HitPoints = 650
+	HitPoints = 800
 } )
 
 DefineUnitType("unit-template-hunting-lodge", {
