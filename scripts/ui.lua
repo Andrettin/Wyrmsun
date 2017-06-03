@@ -1202,9 +1202,6 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {AttackRange = "only", AttackFromTransporter = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Range Bonus: +"), Variable = "AttackRange", Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {IncreasesLuxuryDemand = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = TypeLuxuryDemand("Type"), Font = wyr.preferences.PopupDescriptionFont}}
-				},
 				{ 	Condition = {DehydrationImmunity = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = "Dehydration Immunity", Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -1216,6 +1213,9 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {HydratingAura = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = "Hydrating Aura", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {IncreasesLuxuryDemand = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = TypeLuxuryDemand("Type"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {UnitTypeClass = "lumber-mill"}, HighlightColor = "yellow",
 					More = {"Text", {Text = "Allows spears and arrows/throwing axes to be sold at the Market", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}

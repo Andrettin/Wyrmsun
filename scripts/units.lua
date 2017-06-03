@@ -3582,6 +3582,7 @@ DefineUnitType("unit-template-farm", {
 	Priority = 20, AnnoyComputerFactor = 45,
 	Points = 100,
 	Supply = 4,
+--	HydratingAura = 1,
 	Corpse = "unit-destroyed-2x2-place",
 	ExplodeWhenKilled = "missile-explosion",
 	Drops = {"unit-cheese", "unit-carrots", "unit-wood-pile"},
