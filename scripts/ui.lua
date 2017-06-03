@@ -81,6 +81,7 @@ if not (ui_loaded_first_time) then
 	DefineSprites({Name = "sprite-bleeding", File = "ui/status_effects/bleeding.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-regeneration", File = "ui/status_effects/regeneration.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-terror", File = "ui/status_effects/terror.png", Offset = {1, 1}, Size = {16, 16}})
+	DefineSprites({Name = "sprite-dehydration", File = "ui/status_effects/dehydration.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-level-up", File = "ui/status_effects/level_up.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-hero", File = "ui/icons/star.png", Offset = {1, 1}, Size = {14, 9}})
 
@@ -100,6 +101,8 @@ if not (ui_loaded_first_time) then
 	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-regeneration", 0}}})
 	DefineDecorations({Index = "Terror", ShowOpponent = true, ShowWhenMax = true,
 	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-terror", 0}}})
+	DefineDecorations({Index = "Dehydration", ShowOpponent = true, ShowWhenMax = true,
+	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-dehydration", 0}}})
 	DefineDecorations({Index = "LevelUp", ShowOpponent = false, HideAllied = true, HideNeutral = true, ShowWhenMax = true,
 	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-level-up", 0}}})
 
@@ -1202,11 +1205,17 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {IncreasesLuxuryDemand = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = TypeLuxuryDemand("Type"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {DehydrationImmunity = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = "Dehydration Immunity", Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {RegenerationAura = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Regeneration Aura"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = "Regeneration Aura", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {LeadershipAura = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Leadership Aura"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = "Leadership Aura", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {HydratingAura = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = "Hydrating Aura", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {UnitTypeClass = "lumber-mill"}, HighlightColor = "yellow",
 					More = {"Text", {Text = "Allows spears and arrows/throwing axes to be sold at the Market", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
@@ -1645,11 +1654,17 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {DisembarkmentBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Disembarkment Bonus"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {DehydrationImmunity = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = "Dehydration Immunity", Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {RegenerationAura = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Regeneration Aura"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = "Regeneration Aura", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {LeadershipAura = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Leadership Aura"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = "Leadership Aura", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {HydratingAura = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = "Hydrating Aura", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {Trader = "only", UnitTypeType = "land", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Trades with foreign markets"), Font = wyr.preferences.PopupDescriptionFont}}
