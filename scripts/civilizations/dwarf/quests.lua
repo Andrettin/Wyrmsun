@@ -518,3 +518,5 @@ DefineQuest("island-of-the-lizard-god", {
 	Unobtainable = true,
 	HeroesMustSurvive = {"vindalf"}
 })
+
+Load("scripts/civilizations/dwarf/quests_joruvellir.lua")

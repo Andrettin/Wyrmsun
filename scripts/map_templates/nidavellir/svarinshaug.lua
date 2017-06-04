@@ -64,3 +64,4 @@ SetMapTemplateUnit("nidavellir", "unit-dwarven-scout", "goldhoof-clan", {706, 22
 SetMapTemplateUnit("nidavellir", "unit-dwarven-yale-rider", "goldhoof-clan", {706, 222}, -2800, -2799)
 SetMapTemplateUnit("nidavellir", "unit-dwarven-yale-rider", "goldhoof-clan", {706, 222}, -2800, -2799)
 SetMapTemplateUnit("nidavellir", "unit-dwarven-yale-rider", "goldhoof-clan", {706, 222}, -2800, -2799)
+SetMapTemplateUnit("nidavellir", "unit-dwarven-witness", "goldhoof-clan", {706, 222}, -2800, -2799)

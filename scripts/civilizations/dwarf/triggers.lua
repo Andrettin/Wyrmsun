@@ -95,4 +95,5 @@ AddTrigger("oin-leaves",
 )
 
 Load("scripts/civilizations/dwarf/triggers_island_of_the_lizard_god.lua")
+Load("scripts/civilizations/dwarf/triggers_joruvellir.lua")
 Load("scripts/civilizations/dwarf/triggers_the_first_dwarves.lua")

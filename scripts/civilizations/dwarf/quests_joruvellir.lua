@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016-2017 by Andrettin
+--      (c) Copyright 2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,23 +25,17 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDialogue("oin-leaves", {
-	Nodes = {
-		{
-			"text", "According to the latest gossip, it seems that the dwarf Oin moved with his kin and retainers to settle near a waterfall."
-		}
-	}
+DefineQuest("a-home-in-the-fields-of-sand", {
+	Name = "A Home in the Fields of Sand",
+	Icon = "icon-joruvellir-pathfinder-black-hair",
+	PlayerColor = "brown",
+	FailEffects = function(s)
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "a-home-in-the-fields-of-sand") then
+			CallDialogue("campaign-defeat", trigger_player)
+		end
+	end,
+	Objectives = {"- Build a Mead Hall in Joruvellir", "- Modsognir must survive"},
+	Uncompleteable = true,
+	Unobtainable = true,
+--	HeroesMustSurvive = {"modsognir", "durin"}
 })
-
-DefineDialogue("andvaris-gold-is-ours", {
-	Nodes = {
-		{
-			"text", "We have successfully raided Andvari's holding and obtained his gold. We even found a ring which seems particularly valuable. Andvari spoke a curse upon us for getting the ring... Ramblings of an impoverished dwarf."
-		}
-	}
-})
-
-Load("scripts/civilizations/dwarf/dialogues_a_home_in_the_fields_of_sand.lua")
-Load("scripts/civilizations/dwarf/dialogues_island_of_the_lizard_god.lua")
-Load("scripts/civilizations/dwarf/dialogues_the_first_dwarves.lua")
-Load("scripts/civilizations/dwarf/dialogues_the_mead_of_poetry.lua")

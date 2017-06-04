@@ -60,6 +60,7 @@ SetMapTemplateUnit("nidavellir", "unit-goblin-archer", "aurvangling-tribe", {726
 SetMapTemplateUnit("nidavellir", "unit-goblin-archer", "aurvangling-tribe", {728, 291})
 SetMapTemplateUnit("nidavellir", "unit-goblin-archer", "aurvangling-tribe", {732, 313})
 SetMapTemplateUnit("nidavellir", "unit-goblin-archer", "aurvangling-tribe", {738, 335})
+SetMapTemplateUnit("nidavellir", "unit-goblin-archer", "aurvangling-tribe", {744, 300})
 SetMapTemplateUnit("nidavellir", "unit-goblin-archer", "aurvangling-tribe", {744, 333})
 SetMapTemplateUnit("nidavellir", "unit-goblin-archer", "aurvangling-tribe", {749, 329})
 SetMapTemplateUnit("nidavellir", "unit-goblin-archer", "aurvangling-tribe", {753, 319})

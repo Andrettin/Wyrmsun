@@ -52,6 +52,7 @@ DefineFaction("goldhoof-clan", {
 	Colors = {"brown"},
 	DevelopsTo = {"joruvellir"},
 	FactionUpgrade = "upgrade-faction-goldhoof-clan",
+	DefaultStartPos = {784, 339},
 	ButtonIcons = {
 		"stop", "icon-joruvellir-shield"
 	},
