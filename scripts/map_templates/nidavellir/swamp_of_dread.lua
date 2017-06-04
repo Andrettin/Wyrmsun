@@ -25,10 +25,10 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineMapTemplate("swamp-of-dread", { -- from Battle for Wesnoth: Heir to the Throne (Swamp of Dread)
-	Name = "Swamp of Dread",
-	MainTemplate = "nidavellir",
-	Width = 36,
-	Height = 35,
-	SubtemplatePosition = {756, 276}
-})
+--DefineMapTemplate("swamp-of-dread", { -- from Battle for Wesnoth: Heir to the Throne (Swamp of Dread)
+--	Name = "Swamp of Dread",
+--	MainTemplate = "nidavellir",
+--	Width = 36,
+--	Height = 35,
+--	SubtemplatePosition = {756, 276}
+--})
