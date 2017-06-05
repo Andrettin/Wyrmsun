@@ -25,6 +25,23 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSettlement("amesbury", {
+	Name = "Amesbury",
+	MapTemplate = "earth",
+	Position = {3798, 883},
+	CulturalNames = {
+		"anglo-saxon", "Ambresbyrig", -- Old English name of Amesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+--		"english", "Amesbury"
+	},
+	HistoricalOwners = {
+		802, "wessex" -- Amesbury was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		802, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
 DefineSettlement("athelney", {
 	Name = "Athelney",
 	MapTemplate = "earth",
@@ -37,7 +54,7 @@ DefineSettlement("athelney", {
 		802, "wessex" -- Athelney was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 	},
 	HistoricalBuildings = {
-		802, 0, "town-hall"
+		802, 0, "farm"
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -51,6 +68,23 @@ DefineSettlement("bamburgh", {
 	},
 	HistoricalOwners = {
 		802, "northumbria" -- Bamborough was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		802, 0, "town-hall"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("bath", {
+	Name = "Bath",
+	MapTemplate = "earth",
+	Position = {3786, 877},
+	CulturalNames = {
+		"anglo-saxon", "Bathum", -- Old English name of Bath; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+--		"english", "Bath"
+	},
+	HistoricalOwners = {
+		802, "mercia" -- Bath was a part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 	},
 	HistoricalBuildings = {
 		802, 0, "town-hall"
@@ -72,6 +106,42 @@ DefineSettlement("carlisle", {
 	},
 	HistoricalBuildings = {
 		410, 0, "town-hall"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("dorchester", {
+	Name = "Dorchester",
+	MapTemplate = "earth",
+	Position = {3785, 894},
+	CulturalNames = {
+--		"english", "Dorchester",
+		"celt", "Durnovaria",
+		"latin", "Durnovaria" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+	},
+	HistoricalOwners = {
+		802, "wessex" -- Dorchester was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		802, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("exeter", {
+	Name = "Exeter",
+	MapTemplate = "earth",
+	Position = {3760, 894},
+	CulturalNames = {
+--		"english", "Exeter",
+		"celt", "Isca Dumnoniorum",
+		"latin", "Isca Dumnoniorum" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+	},
+	HistoricalOwners = {
+		802, "wessex" -- Exeter was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		802, 0, "farm"
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -104,6 +174,22 @@ DefineSettlement("salisbury", {
 	},
 	HistoricalOwners = {
 		802, "wessex" -- Salisbury was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		802, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("winchester", {
+	Name = "Winchester",
+	MapTemplate = "earth",
+	Position = {3810, 885},
+	CulturalNames = {
+--		"english", "Winchester"
+	},
+	HistoricalOwners = {
+		802, "wessex" -- Winchester was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 	},
 	HistoricalBuildings = {
 		802, 0, "town-hall"

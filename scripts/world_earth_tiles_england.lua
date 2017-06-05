@@ -47,13 +47,6 @@ DefineWorldMapTile({468, 112}, {
 	}
 })
 
-DefineWorldMapTile({470, 111}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"anglo-saxon", "england", "Exeter"
-	}
-})
-
 DefineWorldMapTile({471, 104}, {
 	World = "Earth",
 	CulturalSettlementNames = {
@@ -89,14 +82,6 @@ DefineWorldMapTile({472, 111}, {
 	}
 })
 
-DefineWorldMapTile({473, 109}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"anglo-saxon", "angle-tribe", "Bathum", -- Old English name of Bath; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"anglo-saxon", "england", "Bath"
-	}
-})
-
 DefineWorldMapTile({473, 110}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
@@ -118,14 +103,6 @@ DefineWorldMapTile({474, 109}, {
 	},
 	FactionCulturalResourceNames = {
 		"grain", "anglo-saxon", "angle-tribe", "Weoland", -- Old English field-name; Weoland was near the location of Wootton Bassett; the first part of the name is formed by a variant of the Old English word "weoh"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
-	}
-})
-
-DefineWorldMapTile({474, 110}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"anglo-saxon", "angle-tribe", "Ambresbyrig", -- Old English name of Amesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"anglo-saxon", "england", "Amesbury"
 	}
 })
 
@@ -192,7 +169,6 @@ DefineWorldMapTile({476, 110}, {
 	FactionCulturalSettlementNames = {
 		"anglo-saxon", "angle-tribe", "Basengum", -- Old English name of Basing; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"anglo-saxon", "angle-tribe", "Andeferas", -- Old English name of Andover; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"anglo-saxon", "england", "Winchester",
 		"anglo-saxon", "england", "Basing",
 		"anglo-saxon", "england", "Andover"
 	}

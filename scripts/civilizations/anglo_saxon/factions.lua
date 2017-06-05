@@ -240,7 +240,6 @@ DefineFaction("england", {
 		"Chesterfield",
 		"Dartford",
 		"Dartmouth",
-		"Dorchester",
 		"Durham", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 		"Edinburgh", -- in Scotland
 		"Falmouth",
