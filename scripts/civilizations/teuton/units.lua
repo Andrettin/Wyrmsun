@@ -1278,7 +1278,8 @@ DefineUnitType("unit-teuton-barracks", {
 	}
 } )
 
-DefineUnitType("unit-teuton-lumber-mill", { Name = _("Lumber Mill"),
+DefineUnitType("unit-teuton-lumber-mill", {
+	Name = "Lumber Mill",
 	Parent = "unit-template-lumber-mill",
 	Civilization = "teuton",
 	Description = _("A lumber mill provides a settlement with more advanced methods for processing timber, and it is also in this structure where woodworkers seek to improve arrows and construction techniques."),

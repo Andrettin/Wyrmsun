@@ -118,6 +118,12 @@ DefineUpgrade("upgrade-faction-middle-anglia", {
 	RequirementsString = "Writing and Masonry"
 })
 
+DefineUpgrade("upgrade-faction-middlesex", {
+	Name = "Middlesex",
+	EffectsString = "-5% Trade Cost for Markets",
+	RequirementsString = "Writing and Masonry"
+})
+
 DefineUpgrade("upgrade-faction-northumbria", {
 	Name = "Northumbria",
 	EffectsString = "+2 Damage for Kriegers",
@@ -302,6 +308,15 @@ DefineModifier("upgrade-faction-middle-anglia",
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
+DefineModifier("upgrade-faction-middlesex",
+	{"change-faction-to", "middlesex"}
+)
+
+DefineModifier("upgrade-faction-middlesex",
+	{"TradeCost", -5},
+	{"apply-to", "unit-teuton-market"}
+)
+
 DefineModifier("upgrade-faction-northumbria",
 	{"change-faction-to", "northumbria"}
 )
@@ -365,6 +380,7 @@ DefinePredependency("upgrade-faction-england",
 	"or", {"upgrade-faction-kent"},
 	"or", {"upgrade-faction-mercia"},
 	"or", {"upgrade-faction-middle-anglia"},
+	"or", {"upgrade-faction-middlesex"},
 	"or", {"upgrade-faction-northumbria"},
 	"or", {"upgrade-faction-wessex"}
 )

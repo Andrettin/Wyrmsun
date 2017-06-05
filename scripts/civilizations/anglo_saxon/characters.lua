@@ -32,6 +32,7 @@ DefineCharacter("aelle", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Civilization = "anglo-saxon",
 	Faction = "deira",
 	DeathYear = 588, -- died
+	Background = "Aelle is the first known king of Deira.",
 	HistoricalTitles = {
 		"head-of-state", 0, 588, "anglo-saxon", "deira" -- first recorded king of Deira
 	},
@@ -417,6 +418,7 @@ DefineCharacter("oswiu", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Father = "aethelfrith", -- he was a brother of Oswald's, so also of Eanfrith's, and as such likely also a son of Æthelfrith
 	Year = 641,
 	DeathYear = 670,
+	Background = "Oswiu unified the kingdoms of Bernicia and Deira into Northumbria in 654 AD.",
 	HistoricalTitles = {
 		"head-of-state", 641, 654, "anglo-saxon", "bernicia", -- became king of Bernicia on the death of his brother Oswald
 		"head-of-state", 654, 670, "anglo-saxon", "northumbria" -- Northumbria unified in 654

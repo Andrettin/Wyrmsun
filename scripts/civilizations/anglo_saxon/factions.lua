@@ -187,6 +187,18 @@ DefineFaction("middle-anglia", {
 	Description = ""
 })
 
+DefineFaction("middlesex", {
+	Name = "Middlesex",
+	Civilization = "anglo-saxon",
+	Type = "polity",
+	Colors = {"blue"},
+	DefaultTier = "kingdom",
+	DevelopsTo = {"england"},
+	FactionUpgrade = "upgrade-faction-middlesex",
+	DefaultAI = "sea-attack",
+	Description = ""
+})
+
 DefineFaction("northumbria", {
 	Name = "Northumbria",
 	Civilization = "anglo-saxon",
@@ -219,7 +231,6 @@ DefineFaction("england", {
 	FactionUpgrade = "upgrade-faction-england",
 	SettlementNames = {
 		"Ashford", -- Source: "Philip's International School Atlas", 2006, p. 64.
-		"Bamburgh", -- Shepherd gives it as "Bamborough" instead; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 		"Bedford", -- Source: "Philip's International School Atlas", 2006, p. 64.
 		"Blackburn", -- Source: "Philip's International School Atlas", 2006, p. 64.
 		"Blackpool", -- Source: "Philip's International School Atlas", 2006, p. 64.

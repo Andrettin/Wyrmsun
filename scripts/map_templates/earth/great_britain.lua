@@ -31,7 +31,7 @@ SetMapTemplateTileLabel("earth", "The Weald", {3843, 886})
 
 SetMapTemplateResource("earth", "unit-copper-deposit", {3727, 902}) -- Tin deposits; Source: "Atlas de História Mundial", 2001, p. 41.
 
--- In Welsh legends, Gorsedd Arberth (a hill/burial mound near Arberth) was a gateway to Annwn; thus it could be a portal that leads to Annwn in Alfheim; ; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 124.
+-- In Welsh legends, Gorsedd Arberth (a hill/burial mound near Arberth) was a gateway to Annwn; thus it could be a portal that leads to Annwn in Alfheim; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 124.
 
 -- Fengate (in Flag Fen, England)
 SetMapTemplateUnit("earth", "unit-celt-farm", "celtic-cimmerian-tribe", {3835, 851}, -2500, -900) -- a ditched field system was used during 2500-900 BC at Fengate; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 67.

@@ -59,6 +59,24 @@ DefineSettlement("carlisle", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
+DefineSettlement("london", {
+	Name = "London",
+	MapTemplate = "earth",
+	Position = {3839, 875},
+	CulturalNames = {
+		"anglo-saxon", "London",
+		"celt", "Londinium",
+		"latin", "Londinium" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	HistoricalOwners = {
+		802, "middlesex" -- London was a part of Middlesex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		802, 0, "town-hall"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
 DefineSettlement("york", {
 	Name = "York",
 	MapTemplate = "earth",

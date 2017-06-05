@@ -1069,6 +1069,14 @@ DefineDependency("upgrade-faction-middle-anglia",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
+DefinePredependency("upgrade-faction-middlesex",
+	{"upgrade-faction-saxon-tribe"}
+)
+
+DefineDependency("upgrade-faction-middlesex",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
 DefinePredependency("upgrade-faction-wessex",
 	{"upgrade-faction-saxon-tribe"}
 )
