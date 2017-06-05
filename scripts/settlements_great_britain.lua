@@ -25,12 +25,29 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSettlement("athelney", {
+	Name = "Athelney",
+	MapTemplate = "earth",
+	Position = {3774, 887},
+	CulturalNames = {
+		"anglo-saxon", "Aethelingaig", -- "Æthelingaig"; Old English name of Athelney; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+--		"english", "Athelney"
+	},
+	HistoricalOwners = {
+		802, "wessex" -- Athelney was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		802, 0, "town-hall"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
 DefineSettlement("bamburgh", {
 	Name = "Bamburgh",
 	MapTemplate = "earth",
 	Position = {3801, 783},
 	CulturalNames = {
-		"anglo-saxon", "Bamburgh" -- as given by Stenton; Shepherd gives it as "Bamborough" instead; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
+--		"english", "Bamburgh" -- as given by Stenton; Shepherd gives it as "Bamborough" instead; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 	},
 	HistoricalOwners = {
 		802, "northumbria" -- Bamborough was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
@@ -46,7 +63,7 @@ DefineSettlement("carlisle", {
 	MapTemplate = "earth",
 	Position = {3773, 800},
 	CulturalNames = {
-		"anglo-saxon", "Carlisle",
+--		"english", "Carlisle",
 		"latin", "Luguvallium" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	},
 	HistoricalOwners = {
@@ -64,12 +81,29 @@ DefineSettlement("london", {
 	MapTemplate = "earth",
 	Position = {3839, 875},
 	CulturalNames = {
-		"anglo-saxon", "London",
 		"celt", "Londinium",
+--		"english", "London",
 		"latin", "Londinium" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
 		802, "middlesex" -- London was a part of Middlesex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		802, 0, "town-hall"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("salisbury", {
+	Name = "Salisbury",
+	MapTemplate = "earth",
+	Position = {3799, 886},
+	CulturalNames = {
+		"anglo-saxon", "Searuburh", -- Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 115.
+--		"english", "Salisbury"
+	},
+	HistoricalOwners = {
+		802, "wessex" -- Salisbury was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 	},
 	HistoricalBuildings = {
 		802, 0, "town-hall"
@@ -82,8 +116,8 @@ DefineSettlement("york", {
 	MapTemplate = "earth",
 	Position = {3815, 819},
 	CulturalNames = {
-		"anglo-saxon", "York",
 		"celt", "Eboracum",
+--		"english", "York",
 		"latin", "Eboracum"
 	},
 	HistoricalOwners = {

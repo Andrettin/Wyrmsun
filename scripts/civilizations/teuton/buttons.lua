@@ -113,7 +113,7 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-germanic-town-hall",
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-teuton-town-hall",
 	Action = "build", Value = "unit-teuton-town-hall",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-masonry"},
-	Key = "h", Hint = _("Build Rat~!haus"), Popup = "popup-building",
+	Key = "h", Hint = "Build Rat~!haus", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
 

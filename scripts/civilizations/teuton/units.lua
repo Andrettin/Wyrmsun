@@ -1171,10 +1171,9 @@ DefineUnitType("unit-teuton-town-hall", {
 		{
 			"variation-id", "town-hall",
 			"upgrade-required", "upgrade-teuton-masonry",
-			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization"
+			"upgrade-forbidden", "upgrade-anglo-saxon-civilization"
 		},
-		-- English type name for when owned by other civilizations (i.e. Latins)
+		-- English type name for when owned by other civilizations
 		{
 			"variation-id", "town-hall",
 			"type-name", "Town Hall",

@@ -73,14 +73,6 @@ DefineWorldMapTile({471, 105}, {
 	}
 })
 
-DefineWorldMapTile({471, 110}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"anglo-saxon", "angle-tribe", "Æthelingaig", -- Old English name of Athelney; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"anglo-saxon", "england", "Athelney"
-	}
-})
-
 DefineWorldMapTile({472, 110}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
@@ -259,17 +251,6 @@ DefineWorldMapTile({479, 110}, {
 	FactionCulturalTerrainNames = {
 		"Conifer Forest", "anglo-saxon", "angle-tribe", "Andredesweald", -- Old English name of The Weald; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Conifer Forest", "anglo-saxon", "england", "The Weald" -- The Weald was a forest, but of what kind?
-	}
-})
-
-DefineWorldMapTile({480, 109}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"celt", "Londinium",
-		"latin", "Londinium" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	FactionCulturalSettlementNames = {
-		"anglo-saxon", "england", "London"
 	}
 })
 
