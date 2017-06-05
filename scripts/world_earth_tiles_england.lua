@@ -54,13 +54,6 @@ DefineWorldMapTile({470, 111}, {
 	}
 })
 
-DefineWorldMapTile({471, 100}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"anglo-saxon", "england", "Carlisle"
-	}
-})
-
 DefineWorldMapTile({471, 104}, {
 	World = "Earth",
 	CulturalSettlementNames = {
@@ -152,13 +145,6 @@ DefineWorldMapTile({474, 111}, {
 	},
 	FactionCulturalResourceNames = {
 		"grain", "anglo-saxon", "angle-tribe", "Wedone", -- Old English field-name; Wedone was near the location of Damerham; the first part of the name is formed by a variant of the Old English word "weoh"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
-	}
-})
-
-DefineWorldMapTile({475, 98}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"anglo-saxon", "england", "Bamburgh" -- Shepherd gives it as "Bamborough" instead; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 	}
 })
 
