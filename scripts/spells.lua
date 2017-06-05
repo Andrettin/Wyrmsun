@@ -299,25 +299,6 @@ DefineSpell("spell-acthnic-allegiance",
 	"sound-when-cast", "magic-holy"
 )
 
-DefineSpell("spell-sagan-allegiance",
-	"showname", _("Sagan Allegiance"),
-	"description", _("Changes the unit's type into its Sagan faction-specific equivalent"),
-	"manacost", 0,
-	"range", 0,
-	"target", "self",
-	"condition", {
-		"organic", "only",
-		"Building", "false",
-		"faction-equivalent", "gnome", "sagan-tribe"
-	},
-	"action", {
-		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
-		{"polymorph", "civilization", "gnome", "faction", "sagan-tribe"}
-	},
-	"item-spell", "scroll",
-	"sound-when-cast", "magic-holy"
-)
-
 DefineSpell("spell-anglo-saxon-allegiance",
 	"showname", "Anglo-Saxon Allegiance",
 	"description", "Changes the unit's type into its Anglo-Saxon equivalent",
@@ -413,3 +394,23 @@ DefineSpell("spell-detachment",
 	"item-spell", "scroll",
 	"sound-when-cast", "magic-holy"
 )
+
+DefineSpell("spell-joruvellir-allegiance",
+	"showname", "Joruvellir Allegiance",
+	"description", "Changes the unit's type into its Joruvellir equivalent",
+	"manacost", 0,
+	"range", 0,
+	"target", "self",
+	"condition", {
+		"organic", "only",
+		"Building", "false",
+		"faction-equivalent", "dwarf", "goldhoof-clan"
+	},
+	"action", {
+		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
+		{"polymorph", "civilization", "dwarf", "faction", "goldhoof-clan"}
+	},
+	"item-spell", "scroll",
+	"sound-when-cast", "magic-holy"
+)
+

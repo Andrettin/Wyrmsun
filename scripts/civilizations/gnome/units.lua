@@ -323,7 +323,7 @@ DefineUnitType("unit-gnomish-town-hall", {
 	Animations = "animations-building", Icon = "icon-gnomish-town-hall",
 	Trains = {"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker"},
 	AiDrops = {"unit-wool-shoes", "unit-furry-wool-shoes"},
-	DropSpells = {"spell-acthnic-allegiance", "spell-sagan-allegiance"},
+	DropSpells = {"spell-acthnic-allegiance"},
 	Sounds = {
 		"ready", "basic-gnome-voices-work-complete",
 		"help", "basic-gnome-voices-help-town"

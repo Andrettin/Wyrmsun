@@ -1237,6 +1237,7 @@ DefineUnitType("unit-dwarven-town-hall", {
 	ButtonHint = _("Build Mead ~!Hall"),
 	Drops = {"unit-stone-pile"},
 	AiDrops = {"unit-boots"},
+	DropSpells = {"spell-joruvellir-allegiance"},
 	Variations = {
 		{
 			"variation-id", "dwarf",
@@ -1293,6 +1294,7 @@ DefineUnitType("unit-dwarven-stronghold", {
 	FireResistance = 20,
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
 	RequirementsString = "War Hall and Masonry",
+	DropSpells = {"spell-joruvellir-allegiance"},
 	Variations = {
 		{
 			"variation-id", "dwarf",
