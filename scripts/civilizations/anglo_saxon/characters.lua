@@ -143,7 +143,7 @@ DefineCharacter("ceawlin", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	end
 })
 
-DefineCharacter("edwin-of-deira", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 78-81.
+DefineCharacter("edwin-of-deira", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 78-81, 113.
 	Name = "Edwin",
 	Gender = "male",
 	Type = "unit-teuton-heroic-swordsman", -- king
@@ -153,6 +153,7 @@ DefineCharacter("edwin-of-deira", { -- Source: Frank Stenton, "Anglo-Saxon Engla
 	Year = 616, -- in 616 Rædwald of East Anglia (with whom Edwin had taken refuge), fought and won against Æthelfrith of Bernicia to support Edwin's claim to the Deiran throne
 	DeathYear = 632, -- died in 632 in battle against Cadwallon of Gwynedd
 	ViolentDeath = true,
+	-- married Æthelberg in 625
 	HistoricalTitles = {
 		"head-of-state", 616, 632, "anglo-saxon", "bernicia",
 		"head-of-state", 616, 632, "anglo-saxon", "deira" -- was the heir to Deira, but also became the king of Bernicia after the battle against Æthelfrith in 616
@@ -198,16 +199,53 @@ DefineCharacter("lilla", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	end
 })
 
-DefineCharacter("aethelberht", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 79.
+DefineCharacter("aethelberht", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 79, 105, 112.
 	Name = "Aethelberht", -- "Æthelberht"
 	Gender = "male",
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
 	Faction = "kent",
 	-- his daughter married Edwin of Deira
+	-- married Bertha of Paris before 588
+	DeathYear = 616,
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "anglo-saxon", "kent" -- king of Kent
+		"head-of-state", 597, 616, "anglo-saxon", "kent" -- was king of Kent in 597
 	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "kent") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("saberht", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 109.
+	Name = "Saberht",
+	Gender = "male",
+	Type = "unit-teuton-heroic-swordsman", -- king
+	Civilization = "anglo-saxon",
+	Faction = "essex",
+	HistoricalTitles = {
+		"head-of-state", 604, 0, "anglo-saxon", "essex" -- was king of Essex in 604
+	},
+	-- son of king Æthelberht of Kent's sister
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "essex") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("aethelberg", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 113.
+	Name = "Aethelberg", -- "Æthelberg"
+	Gender = "female",
+	Type = "unit-teuton-swordsman",
+	Civilization = "anglo-saxon",
+	Faction = "kent",
+	Father = "aethelberht",
+	Deities = {"christian-god"},
+	-- married king Edwin of Northumbria in 625
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "kent") then
 			return true

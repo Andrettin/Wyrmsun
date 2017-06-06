@@ -119,7 +119,7 @@ DefineCharacter("theuderich", { -- son of Chlodwig who ruled in Reims; died in 5
 	end
 })
 
-DefineCharacter("childebert", { -- son of Chlodwig who ruled in Paris; died in 558; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
+DefineCharacter("childebert", { -- son of Chlodwig who ruled in Paris; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
 	Name = "Childebert",
 --	FamilyName = "Merovingian",
 	Gender = "male",
@@ -127,6 +127,7 @@ DefineCharacter("childebert", { -- son of Chlodwig who ruled in Paris; died in 5
 	Civilization = "frankish",
 	Faction = "francia",
 	Father = "chlodwig",
+	DeathYear = 558,
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
 			return true
@@ -135,7 +136,7 @@ DefineCharacter("childebert", { -- son of Chlodwig who ruled in Paris; died in 5
 	end
 })
 
-DefineCharacter("chlothar", { -- ruled in Soissons; died in 561; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
+DefineCharacter("chlothar", { -- ruled in Soissons; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
 	Name = "Chlothar",
 --	FamilyName = "Merovingian",
 	Gender = "male",
@@ -143,6 +144,7 @@ DefineCharacter("chlothar", { -- ruled in Soissons; died in 561; Source: Edward 
 	Civilization = "frankish",
 	Faction = "francia",
 	Father = "chlodwig",
+	DeathYear = 561,
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
 			return true
@@ -151,7 +153,7 @@ DefineCharacter("chlothar", { -- ruled in Soissons; died in 561; Source: Edward 
 	end
 })
 
-DefineCharacter("charibert", { -- died in 567; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
+DefineCharacter("charibert", { -- Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
 	Name = "Charibert",
 --	FamilyName = "Merovingian",
 	Gender = "male",
@@ -159,6 +161,7 @@ DefineCharacter("charibert", { -- died in 567; Source: Edward G. Fichtner, "Sigf
 	Civilization = "frankish",
 	Faction = "neustria",
 	Father = "chlothar",
+	DeathYear = 567,
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "neustria") then
 			return true
@@ -186,7 +189,7 @@ DefineCharacter("chilperich", { -- Source: Edward G. Fichtner, "Sigfrid's Merovi
 	end
 })
 
-DefineCharacter("gunthram", { -- died in 592; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
+DefineCharacter("gunthram", { -- Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
 	Name = "Gunthram",
 --	FamilyName = "Merovingian",
 	Gender = "male",
@@ -197,6 +200,7 @@ DefineCharacter("gunthram", { -- died in 592; Source: Edward G. Fichtner, "Sigfr
 	HairVariation = "brown-hair",
 	Trait = "upgrade-dextrous",
 	Father = "chlothar",
+	DeathYear = 592,
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia" or GetPlayerData(trigger_player, "Faction") == "burgundia") then
 			return true
@@ -217,6 +221,7 @@ DefineCharacter("sigibert", { -- Sigibert I (535-575), Frankish king; son of Chl
 	HairVariation = "brown-hair",
 	Trait = "upgrade-strong",
 	Father = "chlothar",
+	DeathYear = 575,
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia" or GetPlayerData(trigger_player, "Faction") == "austrasia") then
 			return true
@@ -282,14 +287,55 @@ DefineCharacter("rathar", { -- vassal of a Frankish king Childebert; restored th
 	end
 })
 
-DefineCharacter("bertha-of-paris", { -- Bertha of Paris, Frankish noblewoman related to or a part of the Merovingians; married Æthelberht of Kent; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 79.
+DefineCharacter("bertha-of-paris", { -- Bertha of Paris, daughter of the Frankish king Charibert; married Æthelberht of Kent before 588; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 79, 105.
 	Name = "Bertha",
 	Gender = "female",
 	Type = "unit-frank-veteran-swordsman",
 	Civilization = "frankish",
 	Faction = "francia",
+	Father = "charibert", -- is this the correct Charibert who is her father?
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("eadbald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 112-113.
+	Name = "Eadbald", -- needs to be placed here instead of in the Anglo-Saxon character file to be able to set the parents correctly
+	Gender = "male",
+	Type = "unit-teuton-heroic-swordsman", -- king
+	Civilization = "anglo-saxon",
+	Faction = "kent",
+	Father = "aethelberht",
+	Mother = "bertha-of-paris",
+	DeathYear = 640, -- reign ended
+	HistoricalTitles = {
+		"head-of-state", 616, 640, "anglo-saxon", "kent" -- became king of Kent in 616, and ceased to be king in 640
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "kent") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("eorcenberht", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 113.
+	Name = "Eorcenberht", -- needs to be placed here instead of in the Anglo-Saxon character file to be able to set the parents correctly
+	Gender = "male",
+	Type = "unit-teuton-heroic-swordsman", -- king
+	Civilization = "anglo-saxon",
+	Faction = "kent",
+	Father = "eadbald",
+	Deities = {"christian-god"},
+	HistoricalTitles = {
+		"head-of-state", 640, 0, "anglo-saxon", "kent"
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "kent") then
 			return true
 		end
 		return false

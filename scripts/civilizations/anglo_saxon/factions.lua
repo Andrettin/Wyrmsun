@@ -160,7 +160,11 @@ DefineFaction("kent", {
 	DevelopsTo = {"england"},
 	FactionUpgrade = "upgrade-faction-kent",
 	DefaultAI = "sea-attack",
-	Description = ""
+	Description = "",
+	HistoricalUpgrades = {
+		597, "upgrade-deity-christian-god", true, -- king Æthelberht of Kent converted to Christianity in 597 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 105-106.
+--		616, "upgrade-deity-christian-god", false -- king Eadbald of Kent was openly pagan; he acceeded in 616 AD; later, however, he accepted Christianity; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 112.
+	}
 })
 
 DefineFaction("mercia", {
@@ -207,7 +211,11 @@ DefineFaction("northumbria", {
 	DefaultTier = "kingdom",
 	DevelopsTo = {"england", "scotland"},
 	FactionUpgrade = "upgrade-faction-northumbria",
-	DefaultAI = "sea-attack"
+	DefaultAI = "sea-attack",
+	HistoricalUpgrades = {
+		627, "upgrade-deity-christian-god", true, -- king Edwin of Northumbria was baptized in 627 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 115.
+		632, "upgrade-deity-christian-god", false -- the Christian mission to Northumbria supported by king Edwin collapsed in 632 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 115.
+	}
 })
 
 DefineFaction("sussex", {

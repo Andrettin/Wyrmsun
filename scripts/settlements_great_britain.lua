@@ -100,10 +100,11 @@ DefineSettlement("canterbury", {
 --		"english", "Canterbury"
 	},
 	HistoricalOwners = {
-		802, "kent" -- Canterbury was a part of Kent c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		597, "kent" -- Canterbury was a part of Kent in 597 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 105-106.
 	},
 	HistoricalBuildings = {
-		802, 0, "town-hall"
+		597, 0, "town-hall",
+		597, 0, "temple" -- Augustine and his followers performed religious services in a church in Canterbury in 597 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 105-106.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -292,6 +293,38 @@ DefineSettlement("jarrow", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
+DefineSettlement("leicester", {
+	Name = "Leicester",
+	MapTemplate = "earth",
+	Position = {3815, 850},
+	CulturalNames = {
+--		"english", "Leicester"
+	},
+	HistoricalOwners = {
+		802, "mercia" -- Leicester was a part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		737, 0, "temple" -- diocese of Leicester founded in 737 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 109.
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("lincoln", {
+	Name = "Lincoln",
+	MapTemplate = "earth",
+	Position = {3825, 837},
+	CulturalNames = {
+--		"english", "Lincoln"
+	},
+	HistoricalOwners = {
+		802, "mercia" -- Lincoln was a part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		627, 0, "temple" -- a church was in existence in Lincoln in 627 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 115.
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
 DefineSettlement("loidis", {
 	Name = "Loidis", -- Leeds?
 	MapTemplate = "earth",
@@ -318,10 +351,12 @@ DefineSettlement("london", {
 		"latin", "Londinium" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
+		604, "essex", -- London was the capital of the East Saxons in 604 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 109.
 		802, "middlesex" -- London was a part of Middlesex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 	},
 	HistoricalBuildings = {
-		802, 0, "town-hall"
+		604, 0, "town-hall",
+		604, 0, "temple" -- a church was built in London in 604 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 109.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -342,6 +377,23 @@ DefineSettlement("pevensey", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
+DefineSettlement("reculver", {
+	Name = "Reculver",
+	MapTemplate = "earth",
+	Position = {3868, 879},
+	CulturalNames = {
+--		"english", "Reculver"
+	},
+	HistoricalOwners = {
+		604, "kent" -- Reculver was a part of Kent in 669 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 111.
+	},
+	HistoricalBuildings = {
+		-- the area is too small to accomodate the settlement's buildings, given the other more important settlements nearby
+--		604, 0, "temple" -- a church was founded in Reculver in 669 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 111.
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
 DefineSettlement("rochester", {
 	Name = "Rochester",
 	MapTemplate = "earth",
@@ -350,10 +402,10 @@ DefineSettlement("rochester", {
 --		"english", "Rochester"
 	},
 	HistoricalOwners = {
-		802, "kent" -- Rochester was a part of Kent c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		604, "kent" -- Rochester was a part of Kent in 604 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 109.
 	},
 	HistoricalBuildings = {
-		802, 0, "farm"
+		604, 0, "temple" -- king Æthelberht of Kent built a church in Rochester in 604 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 109.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -456,7 +508,8 @@ DefineSettlement("york", {
 		1560, "england" -- political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		500, 0, "town-hall"
+		500, 0, "town-hall",
+		735, 0, "temple" -- archbishopric of York permanently instituted in 735 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 109.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
