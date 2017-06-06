@@ -196,6 +196,38 @@ DefineSettlement("exeter", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
+DefineSettlement("godmundingham", {
+	Name = "Godmundingham",
+	MapTemplate = "earth",
+	Position = {3825, 820},
+	CulturalNames = {
+--		"english", "Godmundingham"
+	},
+	HistoricalOwners = {
+		802, "northumbria" -- Godmundingham was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		802, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("heathfield", {
+	Name = "Heathfield",
+	MapTemplate = "earth",
+	Position = {3821, 827},
+	CulturalNames = {
+--		"english", "Heathfield"
+	},
+	HistoricalOwners = {
+		802, "northumbria" -- Heathfield was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		802, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
 DefineSettlement("jarrow", {
 	Name = "Jarrow",
 	MapTemplate = "earth",
@@ -205,6 +237,22 @@ DefineSettlement("jarrow", {
 	},
 	HistoricalOwners = {
 		802, "northumbria" -- Jarrow was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		802, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("loidis", {
+	Name = "Loidis", -- Leeds?
+	MapTemplate = "earth",
+	Position = {3804, 822},
+	CulturalNames = {
+		"anglo-saxon", "Loidis"
+	},
+	HistoricalOwners = {
+		802, "northumbria" -- Loidis was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 	},
 	HistoricalBuildings = {
 		802, 0, "farm"
@@ -263,6 +311,22 @@ DefineSettlement("wearmouth", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
+DefineSettlement("whilby", {
+	Name = "Whilby",
+	MapTemplate = "earth",
+	Position = {3825, 808},
+	CulturalNames = {
+--		"english", "Whilby"
+	},
+	HistoricalOwners = {
+		802, "northumbria" -- Whilby was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		802, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
 DefineSettlement("winchester", {
 	Name = "Winchester",
 	MapTemplate = "earth",
@@ -275,6 +339,23 @@ DefineSettlement("winchester", {
 	},
 	HistoricalBuildings = {
 		802, 0, "town-hall"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("winwaedsfield", {
+	Name = "Winwaedsfield",
+	MapTemplate = "earth",
+	Position = {3803, 820},
+	CulturalNames = {
+		"anglo-saxon", "Winwaedsfield",
+--		"english", "Winwaedsfield"
+	},
+	HistoricalOwners = {
+		802, "northumbria" -- Winwaedsfield was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		802, 0, "farm"
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
