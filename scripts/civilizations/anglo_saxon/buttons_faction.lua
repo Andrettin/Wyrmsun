@@ -105,6 +105,14 @@ DefineButton( { Pos = 10, Level = 2, Icon = "icon-flag-five-orange-birds-on-blac
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
+DefineButton( { Pos = 10, Level = 2, Icon = "icon-flag-yellow-lion-on-cyan",
+	Action = "research", Value = "upgrade-faction-sussex",
+	Allowed = "check-single-research",
+	Key = "x", Hint = "Found Susse~!x", Popup = "popup-research",
+	Description = "Changes your faction to Sussex",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
 DefineButton( { Pos = 11, Level = 2, Icon = "icon-flag-five-purple-birds-on-green",
 	Action = "research", Value = "upgrade-faction-middlesex",
 	Allowed = "check-single-research",

@@ -135,6 +135,12 @@ DefineUpgrade("upgrade-faction-scotland", {
 	EffectsString = "+2 Damage for Kriegers"
 })
 
+DefineUpgrade("upgrade-faction-sussex", {
+	Name = "Sussex",
+	EffectsString = "+10 HP for Schutzes",
+	RequirementsString = "Writing and Masonry"
+})
+
 DefineUpgrade("upgrade-faction-wessex", {
 	Name = "Wessex",
 	EffectsString = "+2 Damage for Schutzes",
@@ -337,6 +343,16 @@ DefineModifier("upgrade-faction-scotland",
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
+DefineModifier("upgrade-faction-sussex",
+	{"change-faction-to", "sussex"}
+)
+
+DefineModifier("upgrade-faction-sussex",
+	{"HitPoints", 10},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-archer"}
+)
+
 DefineModifier("upgrade-faction-wessex",
 	{"change-faction-to", "wessex"}
 )
@@ -382,6 +398,7 @@ DefinePredependency("upgrade-faction-england",
 	"or", {"upgrade-faction-middle-anglia"},
 	"or", {"upgrade-faction-middlesex"},
 	"or", {"upgrade-faction-northumbria"},
+	"or", {"upgrade-faction-sussex"},
 	"or", {"upgrade-faction-wessex"}
 )
 

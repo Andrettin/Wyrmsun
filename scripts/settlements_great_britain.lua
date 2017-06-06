@@ -212,6 +212,22 @@ DefineSettlement("godmundingham", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
+DefineSettlement("hastings", {
+	Name = "Hastings",
+	MapTemplate = "earth",
+	Position = {3860, 888},
+	CulturalNames = {
+--		"english", "Hastings"
+	},
+	HistoricalOwners = {
+		802, "sussex" -- Hastings was a part of Sussex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		802, 0, "town-hall"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
 DefineSettlement("heathfield", {
 	Name = "Heathfield",
 	MapTemplate = "earth",
@@ -274,6 +290,22 @@ DefineSettlement("london", {
 	},
 	HistoricalBuildings = {
 		802, 0, "town-hall"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("pevensey", {
+	Name = "Pevensey",
+	MapTemplate = "earth",
+	Position = {3849, 890},
+	CulturalNames = {
+--		"english", "Pevensey"
+	},
+	HistoricalOwners = {
+		802, "sussex" -- Pevensey was a part of Sussex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		802, 0, "farm"
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })

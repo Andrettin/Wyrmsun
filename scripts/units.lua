@@ -79,7 +79,7 @@ Units = {
 	"upgrade-teuton-coinage", "upgrade-teuton-writing", "upgrade-teuton-alchemy",
 	"upgrade-anglo-saxon-civilization",
 	"upgrade-faction-angle-tribe", "upgrade-faction-avione-tribe", "upgrade-faction-bernice-tribe", "upgrade-faction-charude-tribe", "upgrade-faction-dere-tribe", "upgrade-faction-gumeninga-tribe", "upgrade-faction-jute-tribe",
-	"upgrade-faction-bernicia", "upgrade-faction-deira", "upgrade-faction-east-anglia", "upgrade-faction-england", "upgrade-faction-essex", "upgrade-faction-jutland", "upgrade-faction-kent", "upgrade-faction-mercia", "upgrade-faction-middle-anglia", "upgrade-faction-middlesex", "upgrade-faction-northumbria", "upgrade-faction-scotland", "upgrade-faction-wessex",
+	"upgrade-faction-bernicia", "upgrade-faction-deira", "upgrade-faction-east-anglia", "upgrade-faction-england", "upgrade-faction-essex", "upgrade-faction-jutland", "upgrade-faction-kent", "upgrade-faction-mercia", "upgrade-faction-middle-anglia", "upgrade-faction-middlesex", "upgrade-faction-northumbria", "upgrade-faction-scotland", "upgrade-faction-sussex", "upgrade-faction-wessex",
 	"upgrade-suebi-civilization",
 	"upgrade-faction-suebi-tribe", "upgrade-faction-semnone-tribe",
 	"upgrade-faction-marcomanni-tribe", "upgrade-faction-quadi-tribe", "upgrade-faction-buri-tribe",

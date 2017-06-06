@@ -210,6 +210,18 @@ DefineFaction("northumbria", {
 	DefaultAI = "sea-attack"
 })
 
+DefineFaction("sussex", {
+	Name = "Sussex",
+	Civilization = "anglo-saxon",
+	Type = "polity",
+	Colors = {"blue"},
+	DefaultTier = "kingdom",
+	DevelopsTo = {"england"},
+	FactionUpgrade = "upgrade-faction-sussex",
+	DefaultAI = "sea-attack",
+	Description = ""
+})
+
 DefineFaction("wessex", {
 	Name = "Wessex",
 	Civilization = "anglo-saxon",
