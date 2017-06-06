@@ -92,6 +92,22 @@ DefineSettlement("bath", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
+DefineSettlement("canterbury", {
+	Name = "Canterbury",
+	MapTemplate = "earth",
+	Position = {3866, 880},
+	CulturalNames = {
+--		"english", "Canterbury"
+	},
+	HistoricalOwners = {
+		802, "kent" -- Canterbury was a part of Kent c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		802, 0, "town-hall"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
 DefineSettlement("carlisle", {
 	Name = "Carlisle",
 	MapTemplate = "earth",
@@ -139,6 +155,22 @@ DefineSettlement("dorchester", {
 	},
 	HistoricalOwners = {
 		802, "wessex" -- Dorchester was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		802, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("dover", {
+	Name = "Dover",
+	MapTemplate = "earth",
+	Position = {3869, 884},
+	CulturalNames = {
+--		"english", "Dover" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+	},
+	HistoricalOwners = {
+		802, "kent" -- Dover was a part of Kent c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 	},
 	HistoricalBuildings = {
 		802, 0, "farm"
@@ -215,7 +247,7 @@ DefineSettlement("godmundingham", {
 DefineSettlement("hastings", {
 	Name = "Hastings",
 	MapTemplate = "earth",
-	Position = {3860, 888},
+	Position = {3859, 888},
 	CulturalNames = {
 --		"english", "Hastings"
 	},
@@ -223,7 +255,7 @@ DefineSettlement("hastings", {
 		802, "sussex" -- Hastings was a part of Sussex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 	},
 	HistoricalBuildings = {
-		802, 0, "town-hall"
+		802, 0, "farm"
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -303,6 +335,22 @@ DefineSettlement("pevensey", {
 	},
 	HistoricalOwners = {
 		802, "sussex" -- Pevensey was a part of Sussex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		802, 0, "town-hall"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("rochester", {
+	Name = "Rochester",
+	MapTemplate = "earth",
+	Position = {3850, 878},
+	CulturalNames = {
+--		"english", "Rochester"
+	},
+	HistoricalOwners = {
+		802, "kent" -- Rochester was a part of Kent c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 	},
 	HistoricalBuildings = {
 		802, 0, "farm"

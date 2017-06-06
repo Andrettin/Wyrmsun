@@ -245,13 +245,6 @@ DefineWorldMapTile({482, 110}, {
 	}
 })
 
-DefineWorldMapTile({483, 110}, { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"anglo-saxon", "england", "Dover"
-	}
-})
-
 DefineWorldMapTile({484, 106}, { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	World = "Earth",
 	FactionCulturalSettlementNames = {
