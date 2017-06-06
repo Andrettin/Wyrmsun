@@ -110,6 +110,24 @@ DefineSettlement("carlisle", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
+DefineSettlement("chester", {
+	Name = "Chester",
+	MapTemplate = "earth",
+	Position = {3774, 836},
+	CulturalNames = {
+		"celt", "Deva",
+--		"english", "Chester", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+		"latin", "Deva" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	HistoricalOwners = {
+		802, "mercia" -- Chester was a part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		802, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
 DefineSettlement("dorchester", {
 	Name = "Dorchester",
 	MapTemplate = "earth",
@@ -128,6 +146,38 @@ DefineSettlement("dorchester", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
+DefineSettlement("durham", {
+	Name = "Durham",
+	MapTemplate = "earth",
+	Position = {3806, 802},
+	CulturalNames = {
+--		"english", "Durham" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+	},
+	HistoricalOwners = {
+		802, "northumbria" -- Durham was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		802, 0, "town-hall"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("edinburgh", {
+	Name = "Edinburgh",
+	MapTemplate = "earth",
+	Position = {3767, 774},
+	CulturalNames = {
+--		"english", "Edinburgh"
+	},
+	HistoricalOwners = {
+		802, "northumbria" -- Edinburgh was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		802, 0, "farm"
+	},
+	Regions = {"british-isles", "europe", "northwest-europe", "scotland", "west-and-central-europe"}
+})
+
 DefineSettlement("exeter", {
 	Name = "Exeter",
 	MapTemplate = "earth",
@@ -139,6 +189,22 @@ DefineSettlement("exeter", {
 	},
 	HistoricalOwners = {
 		802, "wessex" -- Exeter was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		802, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("jarrow", {
+	Name = "Jarrow",
+	MapTemplate = "earth",
+	Position = {3807, 797},
+	CulturalNames = {
+--		"english", "Jarrow"
+	},
+	HistoricalOwners = {
+		802, "northumbria" -- Jarrow was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 	},
 	HistoricalBuildings = {
 		802, 0, "farm"
@@ -170,10 +236,26 @@ DefineSettlement("salisbury", {
 	Position = {3799, 886},
 	CulturalNames = {
 		"anglo-saxon", "Searuburh", -- Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 115.
---		"english", "Salisbury"
+--		"english", "Salisbury" -- Source: "Philip's International School Atlas", 2006, p. 64.
 	},
 	HistoricalOwners = {
 		802, "wessex" -- Salisbury was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		802, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("wearmouth", {
+	Name = "Wearmouth",
+	MapTemplate = "earth",
+	Position = {3808, 799},
+	CulturalNames = {
+--		"english", "Wearmouth"
+	},
+	HistoricalOwners = {
+		802, "northumbria" -- Wearmouth was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 	},
 	HistoricalBuildings = {
 		802, 0, "farm"

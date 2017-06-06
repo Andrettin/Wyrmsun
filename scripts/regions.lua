@@ -186,6 +186,10 @@ DefineRegion("scandinavia", {
 	}
 })
 
+DefineRegion("scotland", {
+	Name = "Scotland"
+})
+
 DefineRegion("south-america", {
 	Name = "South America"
 })

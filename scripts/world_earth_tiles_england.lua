@@ -47,17 +47,6 @@ DefineWorldMapTile({468, 112}, {
 	}
 })
 
-DefineWorldMapTile({471, 104}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"celt", "Deva",
-		"latin", "Deva" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	FactionCulturalSettlementNames = {
-		"anglo-saxon", "england", "Chester" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-	}
-})
-
 DefineWorldMapTile({471, 105}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
@@ -121,13 +110,6 @@ DefineWorldMapTile({475, 99}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
 		"anglo-saxon", "england", "Newcastle" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-	}
-})
-
-DefineWorldMapTile({475, 100}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"anglo-saxon", "england", "Durham" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	}
 })
 

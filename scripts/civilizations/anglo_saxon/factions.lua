@@ -236,12 +236,9 @@ DefineFaction("england", {
 		"Blackpool", -- Source: "Philip's International School Atlas", 2006, p. 64.
 		"Blackwall",
 		"Chatham",
-		"Chester",
 		"Chesterfield",
 		"Dartford",
 		"Dartmouth",
-		"Durham", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-		"Edinburgh", -- in Scotland
 		"Falmouth",
 		"Fishguard", -- Source: "Philip's International School Atlas", 2006, p. 64.
 		"Gateshead", -- Source: "Philip's International School Atlas", 2006, p. 64.
@@ -272,7 +269,6 @@ DefineFaction("england", {
 		"Portsmouth",
 		"Reading",
 		"Redditch", -- Source: "Philip's International School Atlas", 2006, p. 64.
-		"Salisbury", -- Source: "Philip's International School Atlas", 2006, p. 64.
 		"Scarborough",
 		"Shrewsbury", -- Source: "Philip's International School Atlas", 2006, p. 64.
 		"Stockport", -- Source: "Philip's International School Atlas", 2006, p. 64.
