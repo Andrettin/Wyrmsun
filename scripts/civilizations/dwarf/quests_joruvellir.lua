@@ -27,7 +27,7 @@
 
 DefineQuest("a-home-in-the-fields-of-sand", {
 	Name = "A Home in the Fields of Sand",
-	Icon = "icon-joruvellir-pathfinder-black-hair",
+	Icon = "icon-joruvellir-scout-black-hair",
 	PlayerColor = "brown",
 	FailEffects = function(s)
 		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "a-home-in-the-fields-of-sand") then

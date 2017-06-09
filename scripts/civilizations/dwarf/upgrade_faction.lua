@@ -159,6 +159,10 @@ DefineModifier("upgrade-faction-eikinskjaldi-clan",
 )
 
 DefineModifier("upgrade-faction-eikinskjaldi-clan",
+	{"apply-to", "unit-dwarven-explorer"}, {"convert-to", "unit-joruvellir-explorer"}
+)
+
+DefineModifier("upgrade-faction-eikinskjaldi-clan",
 	{"apply-to", "unit-dwarven-yale-rider"}, {"convert-to", "unit-joruvellir-yale-rider"}
 )
 
@@ -186,6 +190,10 @@ DefineModifier("upgrade-faction-goldhoof-clan",
 
 DefineModifier("upgrade-faction-goldhoof-clan",
 	{"apply-to", "unit-dwarven-pathfinder"}, {"convert-to", "unit-joruvellir-pathfinder"}
+)
+
+DefineModifier("upgrade-faction-goldhoof-clan",
+	{"apply-to", "unit-dwarven-explorer"}, {"convert-to", "unit-joruvellir-explorer"}
 )
 
 DefineModifier("upgrade-faction-goldhoof-clan",
@@ -268,7 +276,7 @@ DefineModifier("upgrade-faction-whitesteel-clan",
 DefineModifier("upgrade-faction-joruvellir",
 	{"BasicDamage", 1},
 	{"Points", 10},
-	{"apply-to", "unit-joruvellir-scout"}, {"apply-to", "unit-joruvellir-pathfinder"}, {"apply-to", "unit-dwarven-explorer"}
+	{"apply-to", "unit-joruvellir-scout"}, {"apply-to", "unit-joruvellir-pathfinder"}, {"apply-to", "unit-joruvellir-explorer"}
 )
 
 DefineModifier("upgrade-faction-joruvellir",
@@ -281,6 +289,10 @@ DefineModifier("upgrade-faction-joruvellir",
 
 DefineModifier("upgrade-faction-joruvellir",
 	{"apply-to", "unit-dwarven-pathfinder"}, {"convert-to", "unit-joruvellir-pathfinder"}
+)
+
+DefineModifier("upgrade-faction-joruvellir",
+	{"apply-to", "unit-dwarven-explorer"}, {"convert-to", "unit-joruvellir-explorer"}
 )
 
 DefineModifier("upgrade-faction-joruvellir",
@@ -374,6 +386,10 @@ DefineModifier("upgrade-faction-yawning-yales",
 
 DefineModifier("upgrade-faction-yawning-yales",
 	{"apply-to", "unit-dwarven-pathfinder"}, {"convert-to", "unit-joruvellir-pathfinder"}
+)
+
+DefineModifier("upgrade-faction-yawning-yales",
+	{"apply-to", "unit-dwarven-explorer"}, {"convert-to", "unit-joruvellir-explorer"}
 )
 
 DefineModifier("upgrade-faction-yawning-yales",

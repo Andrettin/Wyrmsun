@@ -131,6 +131,72 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-joruvellir-explorer-black-hair",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_explorer_black_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-joruvellir-explorer-black-hair-beardless",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_explorer_black_hair_beardless.png"
+})
+
+DefineIcon({
+	Name = "icon-joruvellir-explorer-blond-hair",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_explorer_blond_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-joruvellir-explorer-blond-hair-beardless",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_explorer_blond_hair_beardless.png"
+})
+
+DefineIcon({
+	Name = "icon-joruvellir-explorer-brown-hair",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_explorer_brown_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-joruvellir-explorer-brown-hair-beardless",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_explorer_brown_hair_beardless.png"
+})
+
+DefineIcon({
+	Name = "icon-joruvellir-explorer-gray-hair",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_explorer_gray_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-joruvellir-explorer-gray-hair-beardless",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_explorer_gray_hair_beardless.png"
+})
+
+DefineIcon({
+	Name = "icon-joruvellir-explorer-hairless",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_explorer_hairless.png"
+})
+
+DefineIcon({
+	Name = "icon-joruvellir-explorer-orange-hair",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_explorer_orange_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-joruvellir-explorer-orange-hair-beardless",
+	Size = {46, 38},
+	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_explorer_orange_hair_beardless.png"
+})
+
+DefineIcon({
 	Name = "icon-joruvellir-yale-rider-black-hair",
 	Size = {46, 38},
 	File = "dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_yale_rider_black_hair.png"

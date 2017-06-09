@@ -33,7 +33,7 @@ DefineMapTemplate("earth", {
 	TerrainImage = "scripts/map_templates/earth.png",
 	GeneratedTerrains = {
 		"rock", "low",
-		"limestone-rock", "very-low",
+--		"limestone-rock", "very-low",
 		"grass", "extremely-high",
 		"dirt", "medium",
 		"pine-tree", "high"

@@ -218,14 +218,14 @@ DefineModifier("upgrade-dwarven-sharp-throwing-axe",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}, {"apply-to", "unit-dwarven-explorer"}, {"apply-to", "unit-dwarven-gryphon-rider"},
-	{"apply-to", "unit-joruvellir-scout"}, {"apply-to", "unit-joruvellir-pathfinder"}
+	{"apply-to", "unit-joruvellir-scout"}, {"apply-to", "unit-joruvellir-pathfinder"}, {"apply-to", "unit-joruvellir-explorer"}
 )
 
 DefineModifier("upgrade-dwarven-bearded-throwing-axe",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}, {"apply-to", "unit-dwarven-explorer"}, {"apply-to", "unit-dwarven-gryphon-rider"},
-	{"apply-to", "unit-joruvellir-scout"}, {"apply-to", "unit-joruvellir-pathfinder"}
+	{"apply-to", "unit-joruvellir-scout"}, {"apply-to", "unit-joruvellir-pathfinder"}, {"apply-to", "unit-joruvellir-explorer"}
 )
 
 DefineModifier("upgrade-dwarven-ballista-bolt-1",
@@ -287,7 +287,7 @@ DefineModifier("upgrade-dwarven-alchemy",
 	{"FireDamage", 1},
 	{"Points", 8},
 	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}, {"apply-to", "unit-dwarven-explorer"}, {"apply-to", "unit-dwarven-gryphon-rider"},
-	{"apply-to", "unit-joruvellir-scout"}, {"apply-to", "unit-joruvellir-pathfinder"}
+	{"apply-to", "unit-joruvellir-scout"}, {"apply-to", "unit-joruvellir-pathfinder"}, {"apply-to", "unit-joruvellir-explorer"}
 )
 
 DefineModifier("upgrade-dwarven-alchemy",

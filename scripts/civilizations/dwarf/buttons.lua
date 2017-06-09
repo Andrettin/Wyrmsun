@@ -489,7 +489,7 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-odin",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
 		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
 		"unit-dwarven-witness",
-		"unit-joruvellir-scout", "unit-joruvellir-pathfinder",
+		"unit-joruvellir-scout", "unit-joruvellir-pathfinder", "unit-joruvellir-explorer",
 		"unit-joruvellir-yale-rider", "unit-joruvellir-yale-lord",
 		"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
 	}
@@ -505,7 +505,7 @@ DefineButton( { Pos = 10, Level = 0, Icon = "icon-thor",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
 		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
 		"unit-dwarven-witness",
-		"unit-joruvellir-scout", "unit-joruvellir-pathfinder",
+		"unit-joruvellir-scout", "unit-joruvellir-pathfinder", "unit-joruvellir-explorer",
 		"unit-joruvellir-yale-rider", "unit-joruvellir-yale-lord",
 		"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
 	}
@@ -804,7 +804,13 @@ DefineButton( { Pos = 1, Level = 2,
 DefineButton( { Pos = 1, Level = 2,
 	Action = "experience-upgrade-to", Value = "unit-dwarven-explorer",
 	Key = "u", Hint = "~!Upgrade to Explorer", Popup = "popup-unit",
-	ForUnit = {"unit-dwarven-pathfinder", "unit-joruvellir-pathfinder"}
+	ForUnit = {"unit-dwarven-pathfinder"}
+} )
+
+DefineButton( { Pos = 1, Level = 2,
+	Action = "experience-upgrade-to", Value = "unit-joruvellir-explorer",
+	Key = "u", Hint = "~!Upgrade to Explorer", Popup = "popup-unit",
+	ForUnit = {"unit-joruvellir-pathfinder"}
 } )
 
 DefineButton( { Pos = 2, Level = 2,
