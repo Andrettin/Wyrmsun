@@ -51,8 +51,7 @@ DefineCharacter("casnar-wledig", { -- Source: Bernhard Maier (trans.), "Das Sage
 	ExtraName = "Wledig",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
-	Civilization = "celt",
---	ProvinceOfOrigin = ?
+	Civilization = "celt"
 })
 
 DefineCharacter("gloyw-wallt-lydan", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 35.
@@ -61,7 +60,6 @@ DefineCharacter("gloyw-wallt-lydan", { -- Source: Bernhard Maier (trans.), "Das 
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
---	ProvinceOfOrigin = ?
 	Father = "casnar-wledig"
 })
 
@@ -71,6 +69,87 @@ DefineCharacter("gwyn-gohoyw", { -- Source: Bernhard Maier (trans.), "Das Sagenb
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
---	ProvinceOfOrigin = ?
 	Father = "gloyw-wallt-lydan"
+})
+
+DefineCharacter("cigfa", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 35.
+	Name = "Cigfa",
+	Gender = "female",
+	Type = "unit-germanic-archer",
+	Civilization = "celt",
+	Father = "gwyn-gohoyw"
+	-- wife of Pryderi
+})
+
+DefineCharacter("maelgwn", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 76.
+	Name = "Maelgwn", -- Maelgwn of Gwynedd
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "celt",
+	Faction = "gwynedd",
+	DeathDate = 547
+})
+
+DefineCharacter("dutigern", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 76.
+	Name = "dutigern", -- a British king who fought against king Ida of Bernicia
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "celt"
+	-- was a contemporary of Maelgwn
+})
+
+DefineCharacter("cynan", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 78.
+	Name = "Cynan",
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "celt",
+	Faction = "powys" -- presumably
+})
+
+DefineCharacter("solomon-of-powys", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 78.
+	Name = "Solomon",
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "celt",
+	Faction = "powys",
+	Father = "cynan",
+	Date = 613, -- at some point between 613 and 616, he was defeated by the Bernicians at Chester
+	HistoricalTitles = {
+		"head-of-state", 613, 0, "celt", "powys" -- king of Powys; at some point between 613 and 616, he was defeated by the Bernicians at Chester
+	}
+})
+
+DefineCharacter("cadwallon", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 80-81.
+	Name = "Cadwallon",
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "celt",
+	Faction = "gwynedd",
+	Date = 632,
+	DeathDate = 633, -- killed by Oswald of Bernicia in 633
+	ViolentDeath = true,
+	HistoricalTitles = {
+		"head-of-state", 632, 0, "celt", "gwynedd" -- king of Gwynedd; in 632 AD attacked Northumbria, and fought Edwin in Hatfield Chase, ending with the latter's death and that of Edwin's son Osfrith
+	}
+})
+
+DefineCharacter("cadafael", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 83-84.
+	Name = "Cadafael", -- Cadafael of Gwynedd
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "celt",
+	Faction = "gwynedd",
+	Date = 654 -- went with Penda to attack Oswiu of Bernicia
+})
+
+DefineCharacter("certic", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 80.
+	Name = "Certic",
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "celt",
+	Faction = "elmet",
+	-- was a contemporary of Edwin of Deira, who conquered his kingdom
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "celt", "elmet" -- king of Elmet
+	}
 })

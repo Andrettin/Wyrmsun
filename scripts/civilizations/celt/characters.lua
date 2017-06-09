@@ -25,4 +25,44 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineCharacter("aedan-mac-gabrain", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 77, 86.
+	Name = "Aedan", -- the king of a kingdom founded in Argyll by Irish settlers
+	ExtraName = "mac Gabrain",
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "celt",
+	Faction = "argyll",
+--	ProvinceOfOrigin = "Highland Scotland",
+	Date = 574, -- became king
+	-- attacked the Bernicians in 603 AD
+	HistoricalTitles = {
+		"head-of-state", 574, 0, "celt", "argyll"
+	}
+})
+
+DefineCharacter("bruide-mac-beli", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 87-88.
+	Name = "Bruide",
+	ExtraName = "mac Beli";
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "celt",
+	Faction = "pict-tribe",
+--	ProvinceOfOrigin = "Strathclyde", -- son of the king of Strathclyde
+	Date = 672,
+	DeathDate = 693, -- died
+	HistoricalTitles = {
+		"head-of-state", 672, 693, "celt", "pict-tribe" -- became king of the Picts in 672
+	}
+})
+
+DefineCharacter("dicuil", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 40.
+	Name = "Dicuil", -- Irish monk who became notable for his scholarship
+	Gender = "male",
+	Type = "unit-teuton-priest",
+	Civilization = "celt", -- presumably
+--	ProvinceOfOrigin = "Leinster", -- correct?
+	Date = 825, -- wrote "De Mensura Orbis Terrae"
+	AuthoredWorks = {"upgrade-work-de-mensura-orbis-terrae"}
+})
+
 Load("scripts/civilizations/celt/characters_briton.lua")

@@ -30,7 +30,7 @@ DefineCharacter("sargon-ii-of-assyria", { -- Source: William R. Shepherd, "Histo
 	Gender = "male",
 	Type = "unit-teuton-heroic-swordsman",
 	Civilization = "assyrian",
-	Year = -720,
+	Date = -720,
 	HistoricalTitles = {
 --		"head-of-state", -720, 0, "assyrian", "assyria" -- was Assyrian ruler in 720 BC
 	}
@@ -41,7 +41,7 @@ DefineCharacter("assurbanipal-of-assyria", { -- Source: William R. Shepherd, "Hi
 	Gender = "male",
 	Type = "unit-teuton-heroic-swordsman",
 	Civilization = "assyrian",
-	Year = -640,
+	Date = -640,
 	HistoricalTitles = {
 --		"head-of-state", -640, 0, "assyrian", "assyria" -- was Assyrian ruler in 640 BC
 	}

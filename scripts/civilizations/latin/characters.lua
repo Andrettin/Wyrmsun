@@ -32,7 +32,7 @@ DefineCharacter("julius-caesar", { -- Source: Heiko Steuer, "Warrior bands, war 
 	Civilization = "latin",
 	Faction = "rome",
 	ProvinceOfOrigin = "Latium", -- correct?
-	Year = -58, -- De Bello Gallico was written 58-52 BC
+	Date = -58, -- De Bello Gallico was written 58-52 BC
 	AuthoredWorks = {"upgrade-work-de-bello-gallico"}
 })
 
@@ -44,8 +44,8 @@ DefineCharacter("marcus-aurelius", { -- Source: "Ancient Warfare VII.6", 2013, p
 	Civilization = "latin",
 	Faction = "rome",
 	ProvinceOfOrigin = "Latium", -- put him in Rome's province since we don't have information on his actual province of origin
-	Year = 121, -- born on 26 April 121
-	DeathYear = 180, -- died on 17 March 180, of smallpox or cancer
+	Date = 121, -- born on 26 April 121
+	DeathDate = 180, -- died on 17 March 180, of smallpox or cancer
 	Trait = "upgrade-dutiful", -- placed strong importance on doing one's duty in his "Meditations"
 	AuthoredWorks = {"upgrade-work-meditations"},
 	HistoricalTitles = {
@@ -64,8 +64,8 @@ DefineCharacter("lucius-verus", { -- Source: "Ancient Warfare VII.6", 2013, pp. 
 	Civilization = "latin",
 	Faction = "rome",
 	ProvinceOfOrigin = "Latium", -- put him in Rome's province since we don't have information on his actual province of origin
-	Year = 161, -- became co-emperor in 161
-	DeathYear = 168, -- died (apparently) in 168 of a stroke
+	Date = 161, -- became co-emperor in 161
+	DeathDate = 168, -- died (apparently) in 168 of a stroke
 	HistoricalTitles = {
 		-- Roman Emperor from 161 (as co-emperor to Marcus Aurelius, but Marcus Aurelius seemed to be the one who held more power)
 	}

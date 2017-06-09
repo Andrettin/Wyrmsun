@@ -112,8 +112,8 @@ DefineCharacter("ricimer", { -- Source: Norman Davies, "Vanished Kingdoms", 2012
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton", -- correct?
-	Year = 405, -- born
-	DeathYear = 472 -- died
+	Date = 405, -- born
+	DeathDate = 472 -- died
 })
 
 DefineCharacter("adalbert", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 141.
@@ -124,7 +124,7 @@ DefineCharacter("adalbert", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Faction = "bremen",
 	Deities = {"christian-god"},
 	ProvinceOfOrigin = "Bremen", -- presumably
-	DeathYear = 1075 -- died
+	DeathDate = 1075 -- died
 })
 
 DefineCharacter("judith-von-babenberg", { -- Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 620.

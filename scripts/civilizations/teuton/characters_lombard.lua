@@ -115,7 +115,7 @@ DefineCharacter("desiderius", { -- Source: "Medieval Warfare V.2", 2013, p. 7.
 	Type = "unit-teuton-knight-lord", -- king
 	Civilization = "teuton",
 	Faction = "lombardy",
-	Year = 772, -- was king of the Lombards in 772, when Carloman the Younger Carolingian's wife fled to his court
+	Date = 772, -- was king of the Lombards in 772, when Carloman the Younger Carolingian's wife fled to his court
 	HistoricalTitles = {
 		"head-of-state", 772, 0, "teuton", "lombardy" -- was king of the Lombards in 772, when Carloman the Younger Carolingian's wife fled to his court
 	},

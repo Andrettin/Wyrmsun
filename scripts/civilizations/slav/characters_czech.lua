@@ -31,8 +31,8 @@ DefineCharacter("charles", { -- Source: Alena Ježková, "77 Prague Legends", 20
 	Type = "unit-teuton-knight-lord", -- emperor/king
 	Civilization = "slav",
 	ProvinceOfOrigin = "Bohemia", -- presumably
-	Year = 1357, -- The foundation stone of a new bridge to replace Judita Bridge was laid in the 9th of July 1357 by Emperor and King Charles IV
-	DeathYear = 1378, -- Charles IV was on his deathbed in November 1378, in Prague Castle
+	Date = 1357, -- The foundation stone of a new bridge to replace Judita Bridge was laid in the 9th of July 1357 by Emperor and King Charles IV
+	DeathDate = 1378, -- Charles IV was on his deathbed in November 1378, in Prague Castle
 	HistoricalTitles = {
 		"head-of-state", 0, 1378, "slav", "bohemia"
 	}
@@ -45,5 +45,5 @@ DefineCharacter("humprecht-cernin-of-chudenice", { -- Source: Alena Ježková, "
 	Type = "unit-teuton-swordsman",
 	Civilization = "slav",
 	ProvinceOfOrigin = "Bohemia", -- presumably
-	Year = 1669 -- Had the Černín Palace built in Prague for him in 1669
+	Date = 1669 -- Had the Černín Palace built in Prague for him in 1669
 })

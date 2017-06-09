@@ -32,8 +32,8 @@ DefineCharacter("hraudung", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	Civilization = "goth",
 	Faction = "goth-tribe",
 --	ProvinceOfOrigin = "?",
---	Year = ?,
---	DeathYear = ?
+--	Date = ?,
+--	DeathDate = ?
 })
 
 DefineCharacter("agnar", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 59-60.
@@ -43,8 +43,8 @@ DefineCharacter("agnar", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 	Civilization = "goth",
 	Faction = "goth-tribe",
 --	ProvinceOfOrigin = "?",
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "hraudung"
 })
 
@@ -56,8 +56,8 @@ DefineCharacter("geirrod", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Faction = "goth-tribe",
 	Trait = "upgrade-cruel", -- was a cruel, tyrannical ruler; had sudden fits of anger; nevertheless, was generous and welcoming of guests
 --	ProvinceOfOrigin = "?",
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "hraudung"
 })
 
@@ -69,8 +69,8 @@ DefineCharacter("agnar-ii", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	Faction = "goth-tribe",
 	Trait = "upgrade-compassionate", -- when Grimnir (Odin in disguise) suffered, Agnar suffered with him; gave Grimnir a horn with drink
 --	ProvinceOfOrigin = "?",
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "geirrod"
 })
 
@@ -82,7 +82,7 @@ DefineCharacter("airmanareiks", { -- Source: Henry Adams Bellows (transl.), "The
 	Faction = "ostrogoth-tribe",
 	ProvinceOfOrigin = "Ukraine", -- accurate?
 	Trait = "upgrade-cruel", -- described as generous, cruel, wrathful, faithless, savage; Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxx.
-	DeathYear = 376, -- died
+	DeathDate = 376, -- died
 	HistoricalTitles = {
 		"head-of-state", 0, 376, "goth", "ostrogoth-tribe"
 	}
@@ -107,8 +107,8 @@ DefineCharacter("walamer-amelung", { -- Source: F. E. Sandbach, "The Heroic Saga
 	Civilization = "goth",
 	Faction = "ostrogoth-tribe",
 	ProvinceOfOrigin = "Pannonia",
-	Year = 453, -- ruled over the Ostrogoths when Attila died and his Hunnic empire collapsed in 453 AD
-	DeathYear = 472, -- died
+	Date = 453, -- ruled over the Ostrogoths when Attila died and his Hunnic empire collapsed in 453 AD
+	DeathDate = 472, -- died
 	HistoricalTitles = {
 		"head-of-state", 453, 472, "goth", "ostrogoth-tribe"
 	}
@@ -122,8 +122,8 @@ DefineCharacter("theodemer-amelung", { -- Source: F. E. Sandbach, "The Heroic Sa
 	Civilization = "goth",
 	Faction = "ostrogoth-tribe",
 	ProvinceOfOrigin = "Pannonia",
-	Year = 472,
-	DeathYear = 474, -- died
+	Date = 472,
+	DeathDate = 474, -- died
 	HistoricalTitles = {
 		"head-of-state", 472, 474, "goth", "ostrogoth-tribe" -- by 472 AD Theodemer has become king of the Ostrogoths; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7.
 	}
@@ -149,8 +149,8 @@ DefineCharacter("thiudareiks-amelung", { -- Source: F. E. Sandbach, "The Heroic 
 	Civilization = "goth",
 	Faction = "ostrogoth-tribe",
 	ProvinceOfOrigin = "Pannonia",
-	Year = 454, -- born (was 8 years old in 462 AD)
-	DeathYear = 526, -- died; he was put in a magnificent marble tomb in Ravenna
+	Date = 454, -- born (was 8 years old in 462 AD)
+	DeathDate = 526, -- died; he was put in a magnificent marble tomb in Ravenna
 	Father = "theodemer-amelung",
 	HistoricalTitles = {
 		"head-of-state", 474, 526, "goth", "ostrogoth-tribe" -- In 474 AD the Ostrogoths left Pannonia to settle in Macedonia under the aegis of the Eastern Roman Emperor, and in that same year Theodemer died, being succeeded by Theoderic; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 7.
@@ -163,8 +163,8 @@ DefineCharacter("odoacer", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle o
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
 --	ProvinceOfOrigin = "?",
-	Year = 480, -- Odoacer deposed Romulus Augustus in 480 AD, going then on to rule Italy as an independent king
-	DeathYear = 493, -- was put to death by Theoderic in 493 AD
+	Date = 480, -- Odoacer deposed Romulus Augustus in 480 AD, going then on to rule Italy as an independent king
+	DeathDate = 493, -- was put to death by Theoderic in 493 AD
 	ViolentDeath = true
 })
 
@@ -174,8 +174,8 @@ DefineCharacter("tufa", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of D
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
 --	ProvinceOfOrigin = "?",
-	Year = 489,
-	DeathYear = 493 -- was probably put to death by Theoderic in 493 AD when the defenders of Ravenna (including Odoacer) were
+	Date = 489,
+	DeathDate = 493 -- was probably put to death by Theoderic in 493 AD when the defenders of Ravenna (including Odoacer) were
 })
 
 DefineCharacter("vulfshardus", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 28-29, 63.

@@ -32,7 +32,7 @@ DefineCharacter("gibica", { -- Source: Norman Davies, "Vanished Kingdoms", 2012,
 	Civilization = "goth",
 	Faction = "burgundian-tribe",
 	ProvinceOfOrigin = "Franconia", -- place where the Burgundians dwelled before moving to the area of the Palatinate
-	DeathYear = 411,
+	DeathDate = 411,
 	HistoricalTitles = {
 		"head-of-state", 0, 411, "goth", "burgundian-tribe"
 	}
@@ -55,8 +55,8 @@ DefineCharacter("gundahar", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	Faction = "burgundy",
 	ProvinceOfOrigin = "Franconia", -- place where the Burgundians dwelled before moving to the area of the Palatinate
 	Trait = "upgrade-generous", -- in the Anglo-Saxon poem "Widsith", Gundahar (Gunthere) gave the poet "a shining treasure" for his songs
-	Year = 406, -- Gundahar and his father Gibica brought the Burgundians over the Rhine in 406/407 AD
-	DeathYear = 437, -- invasion of Gundahar's kingdom in 437 AD by Attila's Huns
+	Date = 406, -- Gundahar and his father Gibica brought the Burgundians over the Rhine in 406/407 AD
+	DeathDate = 437, -- invasion of Gundahar's kingdom in 437 AD by Attila's Huns
 	ViolentDeath = true, -- presumably
 	Father = "gibica",
 	Mother = "grimhild",
@@ -165,8 +165,8 @@ DefineCharacter("gundioc", { -- Source: Norman Davies, "Vanished Kingdoms", 2012
 	Civilization = "goth",
 	Faction = "burgundy",
 	ProvinceOfOrigin = "Palatinate",
-	Year = 437, -- Gundioc became king of the Burgundians in 437 AD
-	DeathYear = 474, -- end of reign
+	Date = 437, -- Gundioc became king of the Burgundians in 437 AD
+	DeathDate = 474, -- end of reign
 	Father = "gundahar", -- from Gibica's line (so presumably a child of Gundahar's)
 	Mother = "glaumvor", -- if he was a child of Gundahar's, then his mother would likely be Glaumvor
 	HistoricalTitles = {
@@ -181,8 +181,8 @@ DefineCharacter("chilperic", { -- Source: Norman Davies, "Vanished Kingdoms", 20
 	Civilization = "goth",
 	Faction = "burgundy",
 	ProvinceOfOrigin = "Switzerland", -- the Burgundian kingdom was centered in Genava (Geneva); Source: Norman Davies, "Vanished Kingdoms", 2012, p. 95.
-	Year = 474, -- beginning of Chilperic's reign over the Burgundians in 474 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
-	DeathYear = 480, -- end of reign
+	Date = 474, -- beginning of Chilperic's reign over the Burgundians in 474 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+	DeathDate = 480, -- end of reign
 	Father = "gundioc", -- from Gibica's line (so presumably a child of Gundioc's)
 	HistoricalTitles = {
 		"head-of-state", 474, 480, "goth", "burgundy"
@@ -197,8 +197,8 @@ DefineCharacter("clothilda", { -- Source: Norman Davies, "Vanished Kingdoms", 20
 	Faction = "burgundy",
 	Trait = "upgrade-pious",
 	ProvinceOfOrigin = "Switzerland",
-	Year = 474, -- born
-	DeathYear = 545, -- died
+	Date = 474, -- born
+	DeathDate = 545, -- died
 	Father = "chilperic"
 })
 
@@ -210,8 +210,8 @@ DefineCharacter("gundobad", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	Faction = "burgundy",
 	Trait = "upgrade-wise",
 	ProvinceOfOrigin = "Switzerland",
-	Year = 480, -- beginning of Gundobad's reign over the Burgundians in 480 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
-	DeathYear = 516, -- end of reign
+	Date = 480, -- beginning of Gundobad's reign over the Burgundians in 480 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+	DeathDate = 516, -- end of reign
 	Father = "gundioc", -- was Chilperic's brother, so presumably a child of Gundioc's
 	HistoricalTitles = {
 		"head-of-state", 480, 516, "goth", "burgundy"
@@ -226,8 +226,8 @@ DefineCharacter("sigismund", { -- Source: Norman Davies, "Vanished Kingdoms", 20
 	Faction = "burgundy",
 	ProvinceOfOrigin = "Switzerland",
 	Trait = "upgrade-pious",
-	Year = 516, -- beginning of Sigismund's reign over the Burgundians in 516 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
-	DeathYear = 523, -- end of reign
+	Date = 516, -- beginning of Sigismund's reign over the Burgundians in 516 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+	DeathDate = 523, -- end of reign
 	Father = "gundobad", -- son of Gundobad
 	HistoricalTitles = {
 		"head-of-state", 516, 523, "goth", "burgundy"
@@ -241,8 +241,8 @@ DefineCharacter("gundimar", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	Civilization = "goth",
 	Faction = "burgundy",
 	ProvinceOfOrigin = "Switzerland",
-	Year = 523, -- beginning of Gundimar's reign over the Burgundians in 523 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
-	DeathYear = 534, -- end of reign (was proscribed, pursued and executed by the Franks, and his realm was annexed by them)
+	Date = 523, -- beginning of Gundimar's reign over the Burgundians in 523 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+	DeathDate = 534, -- end of reign (was proscribed, pursued and executed by the Franks, and his realm was annexed by them)
 	ViolentDeath = true,
 	Father = "sigismund", -- from Gibica's line (so presumably a child of Sigismund's)
 	HistoricalTitles = {

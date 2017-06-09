@@ -32,8 +32,8 @@ DefineCharacter("ariovistus", {
 	Civilization = "suebi",
 	Faction = "suebi-tribe",
 	ProvinceOfOrigin = "Brandenburg",
-	Year = -71, -- The Suebic king Ariovistus entered Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
-	DeathYear = -54, -- Ariovistus died in 54 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 222.
+	Date = -71, -- The Suebic king Ariovistus entered Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
+	DeathDate = -54, -- Ariovistus died in 54 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 222.
 	ViolentDeath = true,
 	HistoricalTitles = {
 		"head-of-state", -71, -54, "suebi", "suebi-tribe"
@@ -57,8 +57,8 @@ DefineCharacter("marbod", {
 	Description = "A young chieftain of the Marcomanni, Marbod aspires to forge a realm for his tribe capable of withstanding the test of time.",
 	Icon = "icon-marbod",
 	ProvinceOfOrigin = "Brandenburg",
-	Year = -9, -- Marbod, king of the Suebic tribe of the Marcomanni, conquers Bohemia in 9 BC
-	DeathYear = 19, -- Marbod deposed in 19 AD
+	Date = -9, -- Marbod, king of the Suebic tribe of the Marcomanni, conquers Bohemia in 9 BC
+	DeathDate = 19, -- Marbod deposed in 19 AD
 	ViolentDeath = true, -- to represent him being deposed; remove when his DeathYear is replaced with his actual year of death
 	HistoricalTitles = {
 		"head-of-state", -9, 19, "suebi", "marcomanni-tribe"

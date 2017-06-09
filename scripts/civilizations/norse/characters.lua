@@ -1514,8 +1514,8 @@ DefineCharacter("halfdan-the-black-yngling", { -- Source: Snorri Sturlson, "Heim
 	Father = "gudrod-the-magnificent-yngling",
 	Mother = "aasa",
 	HairVariation = "black-hair",
-	Year = 841, -- reign began
-	DeathYear = 863 -- reign ended
+	Date = 841, -- reign began
+	DeathDate = 863 -- reign ended
 })
 
 DefineCharacter("alfgeir", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 260.
@@ -1587,8 +1587,8 @@ DefineCharacter("svan-the-red", { -- Source: Kevin Crossley-Holland, "The Norse 
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Hordaland", -- one of his descendants was a warrior of the king of Horthaland
---	Year = ?,
---	DeathYear = ?
+--	Date = ?,
+--	DeathDate = ?
 })
 
 DefineCharacter("saefari", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
@@ -1597,8 +1597,8 @@ DefineCharacter("saefari", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Hordaland", -- one of his descendants was a warrior of the king of Horthaland
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "svan-the-red"
 })
 
@@ -1608,8 +1608,8 @@ DefineCharacter("ulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Hordaland", -- his grandson was a warrior of the king of Horthaland
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "saefari"
 })
 
@@ -1620,8 +1620,8 @@ DefineCharacter("alf-the-old", { -- Source: Kevin Crossley-Holland, "The Norse M
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Hordaland", -- his son was a warrior of the king of Horthaland
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "ulf"
 })
 
@@ -1632,8 +1632,8 @@ DefineCharacter("instein", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Civilization = "norse",
 	Faction = "hordaland",
 	ProvinceOfOrigin = "Hordaland",
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "alf-the-old"
 })
 
@@ -1643,8 +1643,8 @@ DefineCharacter("saekonung", { -- Source: Kevin Crossley-Holland, "The Norse Myt
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Hordaland", -- a kinsman was a warrior of the king of Horthaland
---	Year = ?,
---	DeathYear = ?
+--	Date = ?,
+--	DeathDate = ?
 })
 
 DefineCharacter("svava", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101.
@@ -1653,8 +1653,8 @@ DefineCharacter("svava", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 	Type = "unit-teuton-archer",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Hordaland", -- a kinsman was a warrior of the king of Horthaland
---	Year = ?,
---	DeathYear = ?
+--	Date = ?,
+--	DeathDate = ?
 })
 
 DefineCharacter("klypp", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
@@ -1663,8 +1663,8 @@ DefineCharacter("klypp", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Hordaland", -- a kinsman was a warrior of the king of Horthaland
---	Year = ?,
---	DeathYear = ?
+--	Date = ?,
+--	DeathDate = ?
 })
 
 DefineCharacter("ketil-hortha-kari", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
@@ -1674,8 +1674,8 @@ DefineCharacter("ketil-hortha-kari", { -- Source: Kevin Crossley-Holland, "The N
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Hordaland", -- a kinsman was a warrior of the king of Horthaland
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "klypp"
 })
 
@@ -1685,8 +1685,8 @@ DefineCharacter("hildigun", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	Type = "unit-teuton-archer",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Hordaland", -- a kinsman was a warrior of the king of Horthaland
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "saekonung",
 	Mother = "svava"
 })
@@ -1697,8 +1697,8 @@ DefineCharacter("frodi", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Hordaland", -- a kinsman was a warrior of the king of Horthaland
---	Year = ?,
---	DeathYear = ?
+--	Date = ?,
+--	DeathDate = ?
 })
 -- "Frodi came before Kari" is said later; could this be the same Frodi as this one? The Kari here is perhaps Ketil Hortha-Kari, but he came before this Frodi, not after; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 223-224.
 
@@ -1708,8 +1708,8 @@ DefineCharacter("friaut", { -- Source: Kevin Crossley-Holland, "The Norse Myths"
 	Type = "unit-teuton-archer",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Hordaland", -- a kinsman was a warrior of the king of Horthaland
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "ketil-hortha-kari",
 	Mother = "hildigun"
 })
@@ -1721,8 +1721,8 @@ DefineCharacter("hledis", { -- Source: Kevin Crossley-Holland, "The Norse Myths"
 	Civilization = "norse",
 	Faction = "hordaland",
 	ProvinceOfOrigin = "Hordaland", -- her husband was a warrior of the king of Horthaland
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "frodi",
 	Mother = "friaut"
 })
@@ -1734,8 +1734,8 @@ DefineCharacter("ottar", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 	Civilization = "norse",
 	Faction = "hordaland",
 	ProvinceOfOrigin = "Hordaland", -- his father was a warrior of the king of Horthaland
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "instein",
 	Mother = "hledis"
 })
@@ -1746,8 +1746,8 @@ DefineCharacter("nokkvi", { -- Source: Kevin Crossley-Holland, "The Norse Myths"
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 --	ProvinceOfOrigin = "?",
---	Year = ?,
---	DeathYear = ?
+--	Date = ?,
+--	DeathDate = ?
 })
 
 DefineCharacter("nanna", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
@@ -1756,8 +1756,8 @@ DefineCharacter("nanna", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 	Type = "unit-teuton-archer",
 	Civilization = "norse",
 --	ProvinceOfOrigin = "?",
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "nokkvi"
 })
 
@@ -1767,8 +1767,8 @@ DefineCharacter("skekil", { -- Source: Kevin Crossley-Holland, "The Norse Myths"
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 --	ProvinceOfOrigin = "?",
---	Year = ?,
---	DeathYear = ?
+--	Date = ?,
+--	DeathDate = ?
 })
 
 DefineCharacter("olmod", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
@@ -1777,8 +1777,8 @@ DefineCharacter("olmod", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 --	ProvinceOfOrigin = "?",
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "ketil-hortha-kari"
 })
 
@@ -1788,8 +1788,8 @@ DefineCharacter("skurhold", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	Type = "unit-teuton-archer",
 	Civilization = "norse",
 --	ProvinceOfOrigin = "?",
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "skekil"
 })
 
@@ -1799,8 +1799,8 @@ DefineCharacter("isulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 --	ProvinceOfOrigin = "?",
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "olmod",
 	Mother = "skurhold" -- presumably, since she was the wife of his father
 })
@@ -1811,8 +1811,8 @@ DefineCharacter("osulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 --	ProvinceOfOrigin = "?",
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "olmod",
 	Mother = "skurhold" -- presumably, since she was the wife of his father
 })
@@ -1823,8 +1823,8 @@ DefineCharacter("hild", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 	Type = "unit-teuton-archer",
 	Civilization = "norse",
 --	ProvinceOfOrigin = "?",
---	Year = ?,
---	DeathYear = ?
+--	Date = ?,
+--	DeathDate = ?
 })
 
 DefineCharacter("half", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
@@ -1834,8 +1834,8 @@ DefineCharacter("half", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 	Civilization = "norse",
 	Faction = "hordaland",
 	ProvinceOfOrigin = "Hordaland",
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Mother = "hild"
 })
 
@@ -1845,8 +1845,8 @@ DefineCharacter("arngrim", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Gotaland", -- his sons were born in the island of Bolmsö off Smaland
---	Year = ?,
---	DeathYear = ?
+--	Date = ?,
+--	DeathDate = ?
 })
 
 DefineCharacter("eyfura", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102.
@@ -1855,8 +1855,8 @@ DefineCharacter("eyfura", { -- Source: Kevin Crossley-Holland, "The Norse Myths"
 	Type = "unit-teuton-archer",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Gotaland", -- her sons were born in the island of Bolmsö off Smaland
---	Year = ?,
---	DeathYear = ?
+--	Date = ?,
+--	DeathDate = ?
 })
 
 DefineCharacter("hervard", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 225.
@@ -1865,8 +1865,8 @@ DefineCharacter("hervard", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Gotaland", -- Bolmsö is an island off Smaland
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "arngrim",
 	Mother = "eyfura"
 })
@@ -1877,8 +1877,8 @@ DefineCharacter("hjorvard", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Gotaland", -- Bolmsö is an island off Smaland
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "arngrim",
 	Mother = "eyfura"
 })
@@ -1889,8 +1889,8 @@ DefineCharacter("hrani", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Gotaland", -- Bolmsö is an island off Smaland
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "arngrim",
 	Mother = "eyfura"
 })
@@ -1901,8 +1901,8 @@ DefineCharacter("argantyr", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Gotaland", -- Bolmsö is an island off Smaland
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "arngrim",
 	Mother = "eyfura"
 })
@@ -1913,8 +1913,8 @@ DefineCharacter("bui", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Gotaland", -- Bolmsö is an island off Smaland
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "arngrim",
 	Mother = "eyfura"
 })
@@ -1925,8 +1925,8 @@ DefineCharacter("brami", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Gotaland", -- Bolmsö is an island off Smaland
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "arngrim",
 	Mother = "eyfura"
 })
@@ -1937,8 +1937,8 @@ DefineCharacter("barri", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Gotaland", -- Bolmsö is an island off Smaland
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "arngrim",
 	Mother = "eyfura"
 })
@@ -1949,8 +1949,8 @@ DefineCharacter("reifnir", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Gotaland", -- Bolmsö is an island off Smaland
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "arngrim",
 	Mother = "eyfura"
 })
@@ -1961,8 +1961,8 @@ DefineCharacter("tind", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Gotaland", -- Bolmsö is an island off Smaland
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "arngrim",
 	Mother = "eyfura"
 })
@@ -1973,8 +1973,8 @@ DefineCharacter("tyrfing", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Gotaland", -- Bolmsö is an island off Smaland
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "arngrim",
 	Mother = "eyfura"
 })
@@ -1985,8 +1985,8 @@ DefineCharacter("hadding", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Gotaland", -- Bolmsö is an island off Smaland
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "arngrim",
 	Mother = "eyfura"
 })
@@ -1997,8 +1997,8 @@ DefineCharacter("hadding-ii", { -- Source: Kevin Crossley-Holland, "The Norse My
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Gotaland", -- Bolmsö is an island off Smaland
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "arngrim",
 	Mother = "eyfura"
 })
@@ -2009,8 +2009,8 @@ DefineCharacter("hvedna", { -- Source: Kevin Crossley-Holland, "The Norse Myths"
 	Type = "unit-teuton-archer",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Gotaland", -- her father (if indeed the same as the previously-mentioned berserk) was born in the island of Bolmsö off Smaland
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "hjorvard" -- her father was called Hjorvard; presumably the same berserk mentioned previously
 })
 
@@ -2020,8 +2020,8 @@ DefineCharacter("haki", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Gotaland", -- his grandfather (if indeed the same as the previously-mentioned berserk) was born in the island of Bolmsö off Smaland
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Mother = "hvedna"
 })
 
@@ -2032,8 +2032,8 @@ DefineCharacter("hrorek-the-ring-giver", { -- Source: Kevin Crossley-Holland, "T
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden", -- his father-in-law was king of Sweden
---	Year = ?,
---	DeathYear = ?
+--	Date = ?,
+--	DeathDate = ?
 })
 
 DefineCharacter("ivar", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 227.
@@ -2043,8 +2043,8 @@ DefineCharacter("ivar", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 	Civilization = "norse",
 	Faction = "sweden",
 	ProvinceOfOrigin = "Sweden",
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "sweden"
 	}
@@ -2058,8 +2058,8 @@ DefineCharacter("aud-the-profound", { -- Source: Kevin Crossley-Holland, "The No
 	Civilization = "norse",
 	Faction = "sweden",
 	ProvinceOfOrigin = "Sweden", -- her father was king of Sweden
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "ivar"
 })
 
@@ -2071,8 +2071,8 @@ DefineCharacter("harald-war-tooth", { -- Source: Kevin Crossley-Holland, "The No
 	Civilization = "norse",
 	Faction = "sweden",
 	ProvinceOfOrigin = "Sweden", -- his grandfather was king of Sweden
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "hrorek-the-ring-giver",
 	Mother = "aud-the-profound"
 })
@@ -2083,8 +2083,8 @@ DefineCharacter("rathbard", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse", -- correct?
 	ProvinceOfOrigin = "Russia", -- from Russia
---	Year = ?,
---	DeathYear = ?
+--	Date = ?,
+--	DeathDate = ?
 })
 
 DefineCharacter("randver", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 227.
@@ -2093,8 +2093,8 @@ DefineCharacter("randver", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse", -- correct?
 	ProvinceOfOrigin = "Russia", -- his father was a king from Russia
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "rathbard",
 	Mother = "aud-the-profound"
 })
@@ -2106,8 +2106,8 @@ DefineCharacter("sigurd-ring", { -- Source: Henry Adams Bellows (transl.), "The 
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse", -- correct?
 	ProvinceOfOrigin = "Russia", -- his grandfather was a king from Russia
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "randver"
 })
 
@@ -2117,8 +2117,8 @@ DefineCharacter("skelfir", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 --	ProvinceOfOrigin = "?",
---	Year = ?,
---	DeathYear = ?
+--	Date = ?,
+--	DeathDate = ?
 })
 
 DefineCharacter("helgi-hundingsbane-ylfing", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 221.
@@ -2129,8 +2129,8 @@ DefineCharacter("helgi-hundingsbane-ylfing", { -- Source: Henry Adams Bellows (t
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 --	ProvinceOfOrigin = "?",
---	Year = ?,
---	DeathYear = ?
+--	Date = ?,
+--	DeathDate = ?
 })
 
 DefineCharacter("gautrek", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
@@ -2139,8 +2139,8 @@ DefineCharacter("gautrek", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Gotaland", -- his son was king of Gautland
---	Year = ?,
---	DeathYear = ?
+--	Date = ?,
+--	DeathDate = ?
 })
 
 DefineCharacter("hrolf-the-old", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
@@ -2151,8 +2151,8 @@ DefineCharacter("hrolf-the-old", { -- Source: Henry Adams Bellows (transl.), "Th
 	Civilization = "norse",
 	Faction = "gautland",
 	ProvinceOfOrigin = "Gotaland",
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "gautrek",
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "gautland"
@@ -2167,8 +2167,8 @@ DefineCharacter("gunnar-the-bulwark", { -- Source: Henry Adams Bellows (transl.)
 	Civilization = "norse",
 	Faction = "gautland",
 	ProvinceOfOrigin = "Gotaland", -- was in Hrolf the Old's household
---	Year = ?,
---	DeathYear = ?
+--	Date = ?,
+--	DeathDate = ?
 })
 
 DefineCharacter("thorkel", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
@@ -2178,8 +2178,8 @@ DefineCharacter("thorkel", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Civilization = "norse",
 	Faction = "gautland",
 	ProvinceOfOrigin = "Gotaland", -- his son was in Hrolf the Old's household
---	Year = ?,
---	DeathYear = ?
+--	Date = ?,
+--	DeathDate = ?
 })
 
 DefineCharacter("grim-the-hardy", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
@@ -2190,8 +2190,8 @@ DefineCharacter("grim-the-hardy", { -- Source: Henry Adams Bellows (transl.), "T
 	Civilization = "norse",
 	Faction = "gautland",
 	ProvinceOfOrigin = "Gotaland", -- was in Hrolf the Old's household
---	Year = ?,
---	DeathYear = ?,
+--	Date = ?,
+--	DeathDate = ?,
 	Father = "thorkel"
 })
 
@@ -2203,8 +2203,8 @@ DefineCharacter("thorir-the-iron-shield", { -- Source: Henry Adams Bellows (tran
 	Civilization = "norse",
 	Faction = "gautland",
 	ProvinceOfOrigin = "Gotaland", -- was in Hrolf the Old's household
---	Year = ?,
---	DeathYear = ?
+--	Date = ?,
+--	DeathDate = ?
 })
 
 DefineCharacter("ulf-the-gaper", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
@@ -2215,8 +2215,8 @@ DefineCharacter("ulf-the-gaper", { -- Source: Henry Adams Bellows (transl.), "Th
 	Civilization = "norse",
 	Faction = "gautland",
 	ProvinceOfOrigin = "Gotaland", -- was in Hrolf the Old's household
---	Year = ?,
---	DeathYear = ?
+--	Date = ?,
+--	DeathDate = ?
 })
 
 DefineCharacter("brodd", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
@@ -2226,8 +2226,8 @@ DefineCharacter("brodd", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 	Civilization = "norse",
 	Faction = "gautland",
 	ProvinceOfOrigin = "Gotaland", -- was in Hrolf the Old's household
---	Year = ?,
---	DeathYear = ?
+--	Date = ?,
+--	DeathDate = ?
 })
 
 DefineCharacter("horvir", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
@@ -2237,8 +2237,8 @@ DefineCharacter("horvir", { -- Source: Henry Adams Bellows (transl.), "The Poeti
 	Civilization = "norse",
 	Faction = "gautland",
 	ProvinceOfOrigin = "Gotaland", -- was in Hrolf the Old's household
---	Year = ?,
---	DeathYear = ?
+--	Date = ?,
+--	DeathDate = ?
 })
 
 DefineCharacter("eric-red", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 161.
@@ -2248,7 +2248,7 @@ DefineCharacter("eric-red", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Iceland",
-	Year = 986 -- in the Spring of 986 Eric Red migrated from Iceland to Greenland with Heriulf Bardson, settling in Brattalid (in Ericsfiord)
+	Date = 986 -- in the Spring of 986 Eric Red migrated from Iceland to Greenland with Heriulf Bardson, settling in Brattalid (in Ericsfiord)
 })
 
 DefineCharacter("heriulf-bardson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 161.
@@ -2258,7 +2258,7 @@ DefineCharacter("heriulf-bardson", { -- Source: Snorri Sturlson, "Heimskringla",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Iceland",
-	Year = 986 -- in the Spring of 986 migrated from Iceland to Greenland with Eric Red, settling in Heriulfsness
+	Date = 986 -- in the Spring of 986 migrated from Iceland to Greenland with Eric Red, settling in Heriulfsness
 })
 
 DefineCharacter("biorne", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 161.
@@ -2268,7 +2268,7 @@ DefineCharacter("biorne", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Civilization = "norse",
 	ProvinceOfOrigin = "Iceland", -- correct?
 	Father = "heriulf-bardson",
-	Year = 986 -- was in Norway when his father Heriulf Bardson migrated from Iceland to Greenland in the Spring of 986
+	Date = 986 -- was in Norway when his father Heriulf Bardson migrated from Iceland to Greenland in the Spring of 986
 })
 
 DefineCharacter("leif", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 162-163.
@@ -2278,7 +2278,7 @@ DefineCharacter("leif", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	Civilization = "norse",
 	ProvinceOfOrigin = "Iceland", -- correct?
 	Father = "eric-red",
-	Year = 1000 -- went forth from Greenland c. 1000 with a ship he bought from Biorne to find the lands Biorne had seen; Leif's crew had 35 men
+	Date = 1000 -- went forth from Greenland c. 1000 with a ship he bought from Biorne to find the lands Biorne had seen; Leif's crew had 35 men
 	-- Leif named three countries he found: Hellaland (a plain of flat slaty stones), Markland (a wooded country with many cliffs of white sand) and Vinland (a country with vines and grapes)
 })
 
@@ -2289,7 +2289,7 @@ DefineCharacter("thorwald", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Civilization = "norse",
 	ProvinceOfOrigin = "Iceland", -- correct?
 	Father = "eric-red", -- presumably, since he was Leif's brother
-	Year = 1002 -- went forth from Greenland in 1002 with Leif's ship to Vinland
+	Date = 1002 -- went forth from Greenland in 1002 with Leif's ship to Vinland
 	-- Thorwald named a headland Kialarness
 	-- Thorwald died in an attack from the Skraelings (probably Indians), and was buried at a place named Crossness
 })
@@ -2301,8 +2301,8 @@ DefineCharacter("swerre", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Civilization = "norse",
 	Faction = "norway",
 	ProvinceOfOrigin = "Akershus", -- put the character in the province where the Norwegian capital is, since we don't know from where in Norway he came
-	Year = 1177, -- reign began
-	DeathYear = 1203, -- reign ended
+	Date = 1177, -- reign began
+	DeathDate = 1203, -- reign ended
 	HistoricalTitles = {
 		"head-of-state", 1177, 1203, "norse", "norway"
 	}
@@ -2316,7 +2316,7 @@ DefineCharacter("magnus-the-saint", { -- Source: Snorri Sturlson, "Heimskringla"
 	Civilization = "norse",
 	Faction = "orkney",
 	ProvinceOfOrigin = "Orkney", -- presumably
-	DeathYear = 1129, -- presumably, since this is the date Kala was made Earl of Orkney
+	DeathDate = 1129, -- presumably, since this is the date Kala was made Earl of Orkney
 	HistoricalTitles = {
 		"head-of-state", 0, 1129, "norse", "orkney"
 	}
@@ -2338,7 +2338,7 @@ DefineCharacter("kala", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	Civilization = "norse",
 	Faction = "orkney",
 	ProvinceOfOrigin = "Orkney", -- presumably
-	Year = 1129, -- was made Earl of Orkney
+	Date = 1129, -- was made Earl of Orkney
 	Father = "koll",
 	HistoricalTitles = {
 		"head-of-state", 1129, 0, "norse", "orkney"
@@ -2352,7 +2352,7 @@ DefineCharacter("arnold", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Civilization = "norse", -- presumably
 	ProvinceOfOrigin = "Scania", -- presumably, since he was ordained there
 	Deities = {"christian-god"},
-	Year = 1121 -- ordained Bishop of Greenland by the Archbishop of Lund (in Scania)
+	Date = 1121 -- ordained Bishop of Greenland by the Archbishop of Lund (in Scania)
 })
 
 DefineCharacter("sturla-thordarson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 188.
@@ -2373,8 +2373,8 @@ DefineCharacter("snorri-sturlson", { -- Source: Snorri Sturlson, "Heimskringla",
 	ProvinceOfOrigin = "Iceland",
 	Father = "sturla-thordarson",
 	Trait = "upgrade-ambitious", -- described as greedy, selfish, ambitious, rapacious, bold, unprincipled and of intellectual powers far above that of his contemporaries
-	Year = 1178, -- born in 1178 at Hvam, in western Iceland
-	DeathYear = 1241, -- Snorri was murdered by his three sons-in-law, Gizurr Thórvaldsson, Kolbein and Arne, in Iceland in September 1241
+	Date = 1178, -- born in 1178 at Hvam, in western Iceland
+	DeathDate = 1241, -- Snorri was murdered by his three sons-in-law, Gizurr Thórvaldsson, Kolbein and Arne, in Iceland in September 1241
 	ViolentDeath = true
 })
 
@@ -2397,7 +2397,7 @@ DefineCharacter("hakon-hakonson", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Civilization = "norse",
 	Faction = "norway",
 	ProvinceOfOrigin = "Akershus", -- put the character in the province where the Norwegian capital is, since we don't know from where in Norway he came
-	Year = 1261, -- annexed the Norse settlements in Greenland to Norway in 1261 AD
+	Date = 1261, -- annexed the Norse settlements in Greenland to Norway in 1261 AD
 	Father = "hakon",
 	HistoricalTitles = {
 		"head-of-state", 1261, 0, "norse", "norway"
@@ -2411,7 +2411,7 @@ DefineCharacter("alf", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 
 	Civilization = "norse", -- presumably
 	Deities = {"christian-god"},
 --	ProvinceOfOrigin = "Greenland", -- possibly he was from elsewhere, but we have no information about that
-	DeathYear = 1378 -- died in Greenland
+	DeathDate = 1378 -- died in Greenland
 })
 
 DefineCharacter("margaret", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 146-147.
@@ -2421,7 +2421,7 @@ DefineCharacter("margaret", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Civilization = "norse",
 	Faction = "denmark",
 --	ProvinceOfOrigin = "?",
-	Year = 1387, -- the three northern crowns devolved to her in 1387 AD
+	Date = 1387, -- the three northern crowns devolved to her in 1387 AD
 	HistoricalTitles = {
 		"head-of-state", 1387, 0, "norse", "denmark", -- the three northern crowns devolved to her in 1387 AD
 		"head-of-state", 1387, 0, "norse", "sweden",
@@ -2437,7 +2437,7 @@ DefineCharacter("henry-of-greenland", { -- Source: Snorri Sturlson, "Heimskringl
 	Civilization = "norse", -- presumably
 	Deities = {"christian-god"},
 --	ProvinceOfOrigin = "?",
-	Year = 1389 -- appointed Bishop of Greenland
+	Date = 1389 -- appointed Bishop of Greenland
 })
 
 DefineCharacter("askil", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
@@ -2447,7 +2447,7 @@ DefineCharacter("askil", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	Civilization = "norse", -- presumably
 	Deities = {"christian-god"},
 --	ProvinceOfOrigin = "?",
-	Year = 1406 -- appointed Bishop of Greenland to succeed Henry in case he was dead
+	Date = 1406 -- appointed Bishop of Greenland to succeed Henry in case he was dead
 })
 
 DefineCharacter("andreas", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
@@ -2465,7 +2465,7 @@ DefineCharacter("endrede", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 	Civilization = "norse", -- presumably
 	Deities = {"christian-god"},
 --	ProvinceOfOrigin = "Greenland", -- accurate?
-	Year = 1409, -- executed a marriage settlement at Garda (the episcopal seat of Greenland) in 1409
+	Date = 1409, -- executed a marriage settlement at Garda (the episcopal seat of Greenland) in 1409
 	Father = "andreas"
 })
 
@@ -2477,7 +2477,7 @@ DefineCharacter("magnus-eyolfson", { -- Source: Snorri Sturlson, "Heimskringla",
 	Civilization = "norse", -- correct?
 	Deities = {"christian-god"},
 	ProvinceOfOrigin = "Iceland", -- correct?
-	Year = 1477 -- was bishop of Skalholt (in Iceland) in 1477
+	Date = 1477 -- was bishop of Skalholt (in Iceland) in 1477
 })
 
 DefineCharacter("thormod-torfaeus", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 154-155.
@@ -2487,7 +2487,7 @@ DefineCharacter("thormod-torfaeus", { -- Source: Snorri Sturlson, "Heimskringla"
 	Type = "unit-teuton-priest", -- put as a priest since there isn't any other unit type more appropriate for a writer
 	Civilization = "norse",
 	ProvinceOfOrigin = "Akershus", -- Norwegian? put the character in the province where the Norwegian capital is, since we don't know from where in Norway he came (if he's Norwegian at all)
-	Year = 1707, -- his "Historiae Vinlandiae Antiquae" dates from 1707
+	Date = 1707, -- his "Historiae Vinlandiae Antiquae" dates from 1707
 	AuthoredWorks = {"upgrade-work-historiae-vinlandiae-antiquae"}
 })
 
@@ -2499,5 +2499,5 @@ DefineCharacter("hans-egide", { -- Source: Snorri Sturlson, "Heimskringla", 1844
 	Civilization = "norse",
 	Deities = {"christian-god"},
 	ProvinceOfOrigin = "Akershus", -- put the character in the province where the Norwegian capital is, since we don't know from where in Norway he came
-	Year = 1721 -- settled in Greenland amongst the eskimos as a missionary in 1721
+	Date = 1721 -- settled in Greenland amongst the eskimos as a missionary in 1721
 })

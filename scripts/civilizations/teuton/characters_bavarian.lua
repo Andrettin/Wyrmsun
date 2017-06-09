@@ -31,7 +31,7 @@ DefineCharacter("tassilo", { -- Source: "Medieval Warfare V.2", 2013, p. 8.
 	Type = "unit-teuton-heroic-swordsman",
 	Civilization = "teuton",
 	Faction = "bavaria",
-	Year = 784, -- revolted against Frankish rule in 784
+	Date = 784, -- revolted against Frankish rule in 784
 	HistoricalTitles = {
 		"head-of-state", 784, 787, "teuton", "bavaria" -- revolted against Frankish rule in 784, and was forced to submit to them by Charles the Great three years later
 	},

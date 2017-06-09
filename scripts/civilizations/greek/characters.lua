@@ -31,8 +31,8 @@ DefineCharacter("strabo", { -- Source: H. H. Howorth, "The Ethnology of Germany,
 	Type = "unit-teuton-priest",
 	Civilization = "greek",
 --	ProvinceOfOrigin = ?,
-	Year = -60, -- born
-	DeathYear = 24, -- died
+	Date = -60, -- born
+	DeathDate = 24, -- died
 	AuthoredWorks = {"upgrade-work-geography"}
 })
 
@@ -43,8 +43,8 @@ DefineCharacter("galen-of-pergamon", { -- Source: "Ancient Warfare VII.6", 2013,
 	Type = "unit-teuton-priest", -- personal physician of the Roman emperor Marcus Aurelius; he also wrote literary works
 	Civilization = "greek", -- his mother tongue was Greek
 --	ProvinceOfOrigin = "Asia Minor",
-	Year = 130, -- born
-	DeathYear = 210 -- died
+	Date = 130, -- born
+	DeathDate = 210 -- died
 })
 
 DefineCharacter("zosimus", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 320.
@@ -53,6 +53,6 @@ DefineCharacter("zosimus", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Pr
 	Type = "unit-teuton-priest",
 	Civilization = "greek",
 	ProvinceOfOrigin = "Thrace",
-	Year = 500, -- wrote "Historia nova" around 500 AD
+	Date = 500, -- wrote "Historia nova" around 500 AD
 	AuthoredWorks = {"upgrade-work-historia-nova"}
 })

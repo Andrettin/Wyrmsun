@@ -132,8 +132,8 @@ DefineCharacter("henry-of-saxony", { -- Source: Susan D. Fuller, "Pagan Charms i
 	Type = "unit-teuton-knight-lord", -- noble, and during his reign horses were made a main element of the Saxon military; duke
 	Civilization = "teuton",
 	ProvinceOfOrigin = "Hanover", -- correct?
-	Year = 919, -- reign began
-	DeathYear = 936, -- reign ended
+	Date = 919, -- reign began
+	DeathDate = 936, -- reign ended
 	HistoricalTitles = {
 		"head-of-state", 919, 936, "teuton", "holy-rome",
 		"head-of-state", 919, 936, "teuton", "saxony" -- duke of Saxony (from when until when? here we use the same dates as for his other title)

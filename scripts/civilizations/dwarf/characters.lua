@@ -39,7 +39,7 @@ DefineCharacter("modsognir", { -- one of the earliest dwarven leaders
 	HairVariation = "brown-hair",
 	Trait = "upgrade-mighty",
 	ProvinceOfOrigin = "Svarinshaug",
-	Year = -3000,
+	Date = -3000,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	HistoricalTitles = {
 		"head-of-state", -3000, -3000 + 30, "dwarf", "brising-clan"
@@ -64,7 +64,7 @@ DefineCharacter("durin", {
 	HairVariation = "brown-hair",
 	Trait = "upgrade-dextrous",
 	ProvinceOfOrigin = "Svarinshaug",
-	Year = -3000,
+	Date = -3000,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Allow", "upgrade-dwarven-runewriting") ~= "R") then -- Durin shouldn't appear in eras with too advanced technology
@@ -83,7 +83,7 @@ DefineCharacter("fjalar", { -- dwarf from Norse mythology who, with the help of 
 	Description = "The greedy Fjalar is joint chieftain of the Shadowcharm Clan together with his brother Galar. He is adept at deception and stealth.",
 	HairVariation = "brown-hair",
 	Trait = "upgrade-cruel",
-	Year = -3000,
+	Date = -3000,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "shadowcharm-clan") then
@@ -102,7 +102,7 @@ DefineCharacter("galar", {
 	Description = "The envious Galar is joint chieftain of the Shadowcharm Clan together with his brother Fjalar. He is known for his thieving skills and his dabbling in magic.",
 	HairVariation = "brown-hair",
 	Trait = "upgrade-cruel",
-	Year = -3000,
+	Date = -3000,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "shadowcharm-clan") then
@@ -121,7 +121,7 @@ DefineCharacter("thjodrorir", { -- dwarf from Norse mythology; Source: Kevin Cro
 	Background = "In Norse mythology, Thjodrorir was a dwarf who knew a potent magic charm. This he sang before the doors of the god Delling, to bring might for the gods, glory for the elves and wisdom for Odin. Thjodrorir is mentioned in the ~<Hovamol~>.",
 	HairVariation = "gray-hair",
 	Trait = "upgrade-wise",
-	Year = -3000,
+	Date = -3000,
 	-- worships deities: Hroptatyr (Odin) and Delling
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") ~= "shadowcharm-clan") then
@@ -201,8 +201,8 @@ DefineCharacter("thursagan", { -- from Battle for Wesnoth: The Sceptre of Fire; 
 	Icon = "icon-thursagan",
 	HairVariation = "gray-hair",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
-	Year = -1,
-	DeathYear = 40, -- died in 40 AD of a violent death
+	Date = -1,
+	DeathDate = 40, -- died in 40 AD of a violent death
 	ViolentDeath = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	Items = {
@@ -225,8 +225,8 @@ DefineCharacter("baglur", { -- from Battle for Wesnoth: The Sceptre of Fire; vet
 	Trait = "upgrade-resilient",
 	HairVariation = "gray-hair",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
-	Year = -1,
-	DeathYear = 40, -- died in 40 AD of a violent death
+	Date = -1,
+	DeathDate = 40, -- died in 40 AD of a violent death
 	ViolentDeath = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })
@@ -242,8 +242,8 @@ DefineCharacter("durstorn", { -- from Battle for Wesnoth: The Sceptre of Fire; c
 	Trait = "upgrade-strong",
 	HairVariation = "brown-hair",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
-	Year = -1,
-	DeathYear = 35, -- died in 35 AD of a violent death
+	Date = -1,
+	DeathDate = 35, -- died in 35 AD of a violent death
 	ViolentDeath = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	HistoricalTitles = {
@@ -258,8 +258,8 @@ DefineCharacter("glonoin", { -- from Battle for Wesnoth: The Sceptre of Fire; ch
 	Civilization = "dwarf",
 	Faction = "shorbear-clan",
 	ProvinceOfOrigin = "Shorbear Hills",
-	Year = -1,
-	DeathYear = 29, -- Shorbear Hold conquered in 29 AD by Rugnur's and Durstorn's Clan
+	Date = -1,
+	DeathDate = 29, -- Shorbear Hold conquered in 29 AD by Rugnur's and Durstorn's Clan
 	ViolentDeath = true,
 	HistoricalTitles = {
 		"head-of-state", -1, 29, "dwarf", "shorbear-clan"
@@ -284,8 +284,8 @@ DefineCharacter("rugnur", { -- from Battle for Wesnoth: The Sceptre of Fire; lea
 	Trait = "upgrade-keen", -- not the best fit for this character, should be replaced with something else perhaps?
 	HairVariation = "brown-hair",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
-	Year = 25,
-	DeathYear = 40, -- died in 40 AD of a violent death
+	Date = 25,
+	DeathDate = 40, -- died in 40 AD of a violent death
 	ViolentDeath = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })

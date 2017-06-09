@@ -127,7 +127,7 @@ DefineCharacter("childebert", { -- son of Chlodwig who ruled in Paris; Source: E
 	Civilization = "frankish",
 	Faction = "francia",
 	Father = "chlodwig",
-	DeathYear = 558,
+	DeathDate = 558,
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
 			return true
@@ -144,7 +144,7 @@ DefineCharacter("chlothar", { -- ruled in Soissons; Source: Edward G. Fichtner, 
 	Civilization = "frankish",
 	Faction = "francia",
 	Father = "chlodwig",
-	DeathYear = 561,
+	DeathDate = 561,
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
 			return true
@@ -161,7 +161,7 @@ DefineCharacter("charibert", { -- Source: Edward G. Fichtner, "Sigfrid's Merovin
 	Civilization = "frankish",
 	Faction = "neustria",
 	Father = "chlothar",
-	DeathYear = 567,
+	DeathDate = 567,
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "neustria") then
 			return true
@@ -200,7 +200,7 @@ DefineCharacter("gunthram", { -- Source: Edward G. Fichtner, "Sigfrid's Meroving
 	HairVariation = "brown-hair",
 	Trait = "upgrade-dextrous",
 	Father = "chlothar",
-	DeathYear = 592,
+	DeathDate = 592,
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia" or GetPlayerData(trigger_player, "Faction") == "burgundia") then
 			return true
@@ -221,7 +221,7 @@ DefineCharacter("sigibert", { -- Sigibert I (535-575), Frankish king; son of Chl
 	HairVariation = "brown-hair",
 	Trait = "upgrade-strong",
 	Father = "chlothar",
-	DeathYear = 575,
+	DeathDate = 575,
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia" or GetPlayerData(trigger_player, "Faction") == "austrasia") then
 			return true
@@ -311,7 +311,7 @@ DefineCharacter("eadbald", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Faction = "kent",
 	Father = "aethelberht",
 	Mother = "bertha-of-paris",
-	DeathYear = 640, -- reign ended
+	DeathDate = 640, -- reign ended
 	HistoricalTitles = {
 		"head-of-state", 616, 640, "anglo-saxon", "kent" -- became king of Kent in 616, and ceased to be king in 640
 	},
