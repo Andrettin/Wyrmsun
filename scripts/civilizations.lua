@@ -291,7 +291,6 @@ DefineCivilization("dwarf", {
 		"male", "Delling", -- dwarf from Norse mythology
 		"male", "Dolgthvari", -- dwarf from Norse mythology
 		"male", "Dori", -- dwarf from Norse mythology
-		"male", "Draupnir", -- dwarf from Norse mythology
 		"male", "Duf", -- dwarf from Norse mythology
 		"male", "Dulaithil", -- from Battle for Wesnoth
 		"male", "Dulaithing", -- from Battle for Wesnoth
@@ -333,14 +332,12 @@ DefineCivilization("dwarf", {
 		"male", "Dursil", -- dwarf from Battle for Wesnoth: The Rise of Wesnoth
 		"male", "Dvalin", -- dwarf from Norse mythology; gave the knowledge of runes to the dwarves; one of the four who crafted the Necklace of the Brisings
 		"male", "Eggerich", -- dwarf from German sagas
-		"male", "Eikinskjaldi", -- dwarf from Norse mythology
 		"male", "Eitri", -- dwarf from Norse mythology; expert smith and brother of Brokk
 		"male", "Fal", -- dwarf from Norse mythology
 		"male", "Fid", -- dwarf from Norse mythology
 		"male", "Fili", -- dwarf from Norse mythology
 		"male", "Frag", -- dwarf from Norse mythology
 		"male", "Frar", -- dwarf from Norse mythology
-		"male", "Frosti", -- dwarf from Norse mythology
 		"male", "Fundin", -- dwarf from Norse mythology
 		"male", "Galar", -- dwarf from Norse mythology who, with the help of his brother Fjalar, brew Kvasir's blood into the Mead of Poetry
 		"male", "Ginnar", -- dwarf from Norse mythology

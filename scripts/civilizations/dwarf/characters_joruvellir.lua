@@ -70,3 +70,24 @@ DefineCharacter("eikinskjaldi", { -- Source: Henry Adams Bellows (transl.), "The
 		return false
 	end
 })
+
+DefineCharacter("frosti", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 7-8.
+	Name = "Frosti",
+	Gender = "male",
+	Type = "unit-joruvellir-yale-rider",
+	Civilization = "dwarf",
+	Faction = "goldhoof-clan",
+	Description = "Frosti was one of the Goldhoof dwarves who moved from Svarinshaug to Joruvellir under the leadership of Draupnir.",
+	Background = "In Norse mythology, Eikinskjaldi is one of the dwarves mentioned in the ~<Voluspo~> to have migrated from the rocks to Joruvellir.",
+	Trait = "upgrade-resilient",
+--	Date = -2800,
+--	HistoricalLocations = {
+--		-2800, "nidavellir", {706, 222}
+--	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "goldhoof-clan" or GetPlayerData(trigger_player, "Faction") == "joruvellir") then
+			return true
+		end
+		return false
+	end
+})
