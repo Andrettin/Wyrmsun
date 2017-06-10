@@ -304,14 +304,14 @@ DefineCharacter("osfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	end
 })
 
-DefineCharacter("penda", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 75, 80-81, 83-84.
+DefineCharacter("penda", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 75, 80-81, 83-84, 120.
 	Name = "Penda",
 	Gender = "male",
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
 	Faction = "mercia",
 	Date = 632, -- in 632, Penda (still a noble belonging to the Mercian royal house with no throne) allied himself Cadwallon of Gwynedd against Edwin of Deira
-	DeathDate = 654, -- died fighting against Oswiu of Bernicia
+	DeathDate = 654, -- died fighting against Oswiu of Bernicia; died in the autumn of 654
 	ViolentDeath = true,
 	HistoricalTitles = {
 		"head-of-state", 632, 654, "anglo-saxon", "mercia" -- became king of Mercia in 632 after Edwin's demise
@@ -603,26 +603,62 @@ DefineCharacter("cenwalh", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	-- was forced into exile from his lands by Penda of Mercia
 })
 
-DefineCharacter("peada", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
+DefineCharacter("cuthbert-of-lindisfarne", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 126.
+	Name = "Cuthbert",
+	Gender = "male",
+	Type = "unit-teuton-priest",
+	Civilization = "anglo-saxon",
+	Faction = "northumbria",
+	Date = 651, -- became a novice in Melrose in 651
+	DeathDate = {687, 3, 20},
+	-- moved to Lindisfarne in 664
+	-- was elected bishop in 684, being consecrated on the 26th of March 685
+	Deities = {"christian-god"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("peada", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 84, 120.
 	Name = "Peada", -- king of the Middle Angles
 	Gender = "male",
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
 	Faction = "middle-anglia",
 	Father = "penda",
-	Date = 654, -- was given the Mercian territories south of the Trent after Penda's fall, at which point he was already king of the Middle Angles
+	Date = 653, -- was ruling the Middle Angles in 653 when he was baptized
 	DeathDate = 656, -- murdered in the spring of 656
 	ViolentDeath = true,
 	HistoricalTitles = {
 		"head-of-state", 654, 656, "anglo-saxon", "middle-anglia"
 	},
+	-- was given the Mercian territories south of the Trent after Penda's fall, at which point he was already king of the Middle Angles
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "middle-anglia") then
 			return true
 		end
 		return false
 	end
-	-- married the daughter of Oswiu of Bernicia
+	-- married Alhflæd, the daughter of Oswiu of Bernicia, in 653
+})
+
+DefineCharacter("alhflaed", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 120.
+	Name = "Alhflaed", -- "Alhflæd"
+	Gender = "female",
+	Type = "unit-teuton-archer",
+	Civilization = "anglo-saxon",
+	Faction = "northumbria",
+	Father = "oswiu", -- Oswiu of Bernicia
+	Date = 653, -- married Peada in 653
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("wulfhere", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 84-85.
@@ -644,6 +680,55 @@ DefineCharacter("wulfhere", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	end
 	-- became overlord of the kings of Essex in 665
 	-- invaded Northumbria in 674, possessing an army gathered from all Anglo-Saxon kingdoms south of the Humber
+})
+
+DefineCharacter("wine", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 122.
+	Name = "Wine",
+	Gender = "male",
+	Type = "unit-teuton-priest",
+	Civilization = "anglo-saxon",
+	Faction = "wessex",
+	Date = 660, -- became bishop of Winchester around 660
+	Deities = {"christian-god"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "wessex") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("hild-of-streoneshalh", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 123.
+	Name = "Hild",
+	Gender = "female",
+	Type = "unit-teuton-priest",
+	Civilization = "anglo-saxon",
+	Faction = "northumbria",
+	Date = 663, -- was abbess of a monastery in Streoneshalh, in Northumbria, in 663
+	Deities = {"christian-god"},
+	-- was related to king Oswiu of Northumbria
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("wilfrid", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 123.
+	Name = "Wilfrid",
+	Gender = "male",
+	Type = "unit-teuton-priest",
+	Civilization = "anglo-saxon",
+	Faction = "northumbria", -- from Northumbria
+	Date = 663, -- participated in a synod in Streoneshalh, in Northumbria, in 663
+	Deities = {"christian-god"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("ecgfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 85, 88.

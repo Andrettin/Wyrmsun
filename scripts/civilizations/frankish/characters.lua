@@ -398,6 +398,18 @@ DefineCharacter("erchinoald-of-neustria", { -- Mayor of the Palace of Neustria; 
 	end
 })
 
+DefineCharacter("agilbert", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 122-123.
+	Name = "Agilbert",
+	Gender = "male",
+	Type = "unit-teuton-priest",
+	Civilization = "frankish",
+	Faction = "francia", -- correct? was bishop of Paris
+	Date = 663, -- attended a synod in Streoneshalh, in Northumbria, in 663
+	-- became bishop of Paris in 667 or 668
+	DeathDate = 679, -- remained bishop of Paris for at least twelve years
+	Deities = {"christian-god"}
+})
+
 DefineCharacter("ebroin-of-neustria", { -- Mayor of the Palace of Neustria until 675; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 405.
 	Name = "Ebroin",
 	Gender = "male",

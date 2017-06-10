@@ -51,14 +51,14 @@ DefineCharacter("aidan", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Deities = {"christian-god"}
 })
 
-DefineCharacter("finan", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 120.
+DefineCharacter("finan", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 120, 122.
 	Name = "Finan",
 	Gender = "male",
 	Type = "unit-teuton-priest",
 	Civilization = "celt", -- monk from Iona, a northern Irish or Pictish monastery
 	Faction = "northumbria",
 	Date = 651, -- succeeded Aidan
-	DeathDate = 661, -- died, or else ceased his religious function at Lindisfarne
+	DeathDate = 660, -- died; as given on page 122, on page 120 Stenton gives him as having lived until 661
 	Deities = {"christian-god"}
 })
 

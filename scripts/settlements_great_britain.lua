@@ -443,18 +443,19 @@ DefineSettlement("wearmouth", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("whilby", {
-	Name = "Whilby",
+DefineSettlement("whitby", {
+	Name = "Whitby",
 	MapTemplate = "earth",
 	Position = {3825, 808},
 	CulturalNames = {
---		"english", "Whilby"
+		"anglo-saxon", "Streoneshalh", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 123.
+--		"english", "Whitby"
 	},
 	HistoricalOwners = {
-		802, "northumbria" -- Whilby was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		663, "northumbria" -- Streoneshalh was a part of Northumbria in 663 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 122-123.
 	},
 	HistoricalBuildings = {
-		802, 0, "farm"
+		663, 0, "temple" -- Streoneshalh had a monastery in 663; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 123.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
