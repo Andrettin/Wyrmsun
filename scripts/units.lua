@@ -989,6 +989,7 @@ DefineUnitType("unit-tree-stump", {
 	StartingResources = {200},
 	GivesResource = "lumber", CanHarvest = true,
 	HarvestFromOutside = true,
+	Building = true,
 	RightMouseAction = "rally-point",
 	Variations = {
 		{
