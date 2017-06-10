@@ -66,3 +66,4 @@ DefineCharacter("dicuil", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 })
 
 Load("scripts/civilizations/celt/characters_briton.lua")
+Load("scripts/civilizations/celt/characters_gaul.lua")

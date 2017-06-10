@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015-2017 by Andrettin
+--      (c) Copyright 2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,41 +25,39 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCharacter("arawn", { -- Arawn was king of the otherworld Annwn in Welsh legends; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 10, 16, 119-120.
-	Name = "Arawn",
+DefineCharacter("ambiorix", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
+	Name = "Ambiorix",
 	Gender = "male",
-	Type = "unit-elven-swordsman", -- should be a rider
-	Civilization = "elf",
-	Faction = "annwn",
---	ProvinceOfOrigin = "Annwn",
-	Trait = "upgrade-wise",
+	Type = "unit-germanic-warrior",
+	Civilization = "celt",
+	Faction = "eburones-tribe",
+	Date = -54,
 	HistoricalTitles = {
---		"head-of-state", 0, 0, "elf", "annwn" -- king of Annwn
+		"head-of-state", -54, 0, "celt", "eburones-tribe" -- was chieftain of the Eburones tribe in 54 BC (together with Cativolcus)
 	}
-	-- wore gray-brown clothing when hunting, along with a hunting horn hanging over his neck
 })
 
-DefineCharacter("hafgan", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 11.
-	Name = "Hafgan",
+DefineCharacter("cativolcus", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223, 225.
+	Name = "Cativolcus",
 	Gender = "male",
-	Type = "unit-elven-swordsman",
-	Civilization = "elf",
-	Faction = "annwn",
---	ProvinceOfOrigin = "Annwn"
-	-- king in Annwn who opposed Arawn
+	Type = "unit-germanic-warrior",
+	Civilization = "celt",
+	Faction = "eburones-tribe",
+	Date = -54,
+	DeathDate = -53, -- poisoned himself after the Romans devastated the lands of his people
+	ViolentDeath = true,
+	Trait = "upgrade-old"
+	-- was chieftain of the Eburones tribe in 54 BC (together with Ambiorix)
 })
 
-DefineCharacter("volund", { -- elven smith from Norse mythology; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 74-75.
-	Name = "Volund", -- "Völundr"
+DefineCharacter("indutiomarus", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 224.
+	Name = "Indutiomarus",
 	Gender = "male",
-	Type = "unit-elven-swordsman",
-	Civilization = "elf",
-	Faction = "ulfdalir"
-})
-
-DefineCharacter("argante", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 90.
-	Name = "Argante", -- Elven Queen whom King Arthur met; described as beautiful
-	Gender = "female",
-	Type = "unit-elven-swordsman",
-	Civilization = "elf"
+	Type = "unit-germanic-warrior",
+	Civilization = "celt",
+	Faction = "treviri-tribe",
+	Date = -54,
+	HistoricalTitles = {
+		"head-of-state", -54, 0, "celt", "treviri-tribe" -- was chieftain of the Treviri in 54 BC
+	}
 })
