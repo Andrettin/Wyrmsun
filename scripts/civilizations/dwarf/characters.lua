@@ -38,7 +38,6 @@ DefineCharacter("modsognir", { -- one of the earliest dwarven leaders
 	Icon = "icon-modsognir",
 	HairVariation = "brown-hair",
 	Trait = "upgrade-mighty",
-	ProvinceOfOrigin = "Svarinshaug",
 	Date = -3000,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	HistoricalTitles = {
@@ -63,7 +62,6 @@ DefineCharacter("durin", {
 	Icon = "icon-durin",
 	HairVariation = "brown-hair",
 	Trait = "upgrade-dextrous",
-	ProvinceOfOrigin = "Svarinshaug",
 	Date = -3000,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	Conditions = function(s)
@@ -185,6 +183,8 @@ DefineCharacter("regin", {
 	Background = "In Norse mythology, Regin was a skilled dwarven smith and the brother of the dragon Fafnir.",
 	HairVariation = "brown-hair",
 	Trait = "upgrade-intelligent",
+	Date = 561, -- Sigibert's campaign begins in 561; Sigibert's encounter with Regin (which causes the latter's death in the end) should take place between Sigibert's initial defeat of the Avars and Chilperich in 561-562, and Sigibert's marriage to Brunichilde in 566
+	DeathDate = 566,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })
 
