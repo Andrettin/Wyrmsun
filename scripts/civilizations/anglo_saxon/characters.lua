@@ -993,7 +993,7 @@ DefineCharacter("alcuin", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Gender = "male",
 	Type = "unit-teuton-priest", -- correct?
 	Civilization = "anglo-saxon",
-	Faction = "northumbria",
+	Faction = "francia",
 	Deities = {"christian-god"},
 	Date = 782, -- moved from England to the court of Charlemagne
 	Conditions = function(s)

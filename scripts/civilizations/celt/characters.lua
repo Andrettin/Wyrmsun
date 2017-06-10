@@ -40,6 +40,28 @@ DefineCharacter("aedan-mac-gabrain", { -- Source: Frank Stenton, "Anglo-Saxon En
 	}
 })
 
+DefineCharacter("aidan", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 118.
+	Name = "Aidan",
+	Gender = "male",
+	Type = "unit-teuton-priest",
+	Civilization = "celt", -- monk from Iona, a northern Irish or Pictish monastery
+	Faction = "northumbria",
+	Date = 634, -- arrived in 634 in Northumbria with a group of monks, and they went to live in the island of Lindisfarne
+	DeathDate = 651, -- died
+	Deities = {"christian-god"}
+})
+
+DefineCharacter("finan", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 120.
+	Name = "Finan",
+	Gender = "male",
+	Type = "unit-teuton-priest",
+	Civilization = "celt", -- monk from Iona, a northern Irish or Pictish monastery
+	Faction = "northumbria",
+	Date = 651, -- succeeded Aidan
+	DeathDate = 661, -- died, or else ceased his religious function at Lindisfarne
+	Deities = {"christian-god"}
+})
+
 DefineCharacter("bruide-mac-beli", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 87-88.
 	Name = "Bruide",
 	ExtraName = "mac Beli";
@@ -62,6 +84,7 @@ DefineCharacter("dicuil", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Civilization = "celt", -- presumably
 --	ProvinceOfOrigin = "Leinster", -- correct?
 	Date = 825, -- wrote "De Mensura Orbis Terrae"
+	Deities = {"christian-god"},
 	AuthoredWorks = {"upgrade-work-de-mensura-orbis-terrae"}
 })
 

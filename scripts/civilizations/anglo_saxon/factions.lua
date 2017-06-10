@@ -214,7 +214,8 @@ DefineFaction("northumbria", {
 	DefaultAI = "sea-attack",
 	HistoricalUpgrades = {
 		627, "upgrade-deity-christian-god", true, -- king Edwin of Northumbria was baptized in 627 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 115.
-		632, "upgrade-deity-christian-god", false -- the Christian mission to Northumbria supported by king Edwin collapsed in 632 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 115.
+		632, "upgrade-deity-christian-god", false, -- the Christian mission to Northumbria supported by king Edwin collapsed in 632 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 115.
+		634, "upgrade-deity-christian-god", true -- Aidan and his monks arrived in Northumbria in 634 to establish Christianity there as per king Oswald's request; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 118.
 	}
 })
 
