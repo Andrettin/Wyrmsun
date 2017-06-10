@@ -28,18 +28,16 @@
 DefineDialogue("a-home-in-the-fields-of-sand-introduction", {
 	Nodes = {
 		{
-			"speaker", "unit", "unit-joruvellir-yale-rider",
-			"speaker-player", "goldhoof-clan",
+			"speaker", "character", "draupnir",
 			"text", "Svarinshaug is filled with dwarves to the brim. When our ancestors first came to these rocky hills, we were few, but since then we have greatly multiplied. My followers! The time has come for us to abandon the land of our forefathers, and settle in a new home."
 		},
 		{
 			"speaker", "unit", "unit-dwarven-witness",
 			"speaker-player", "goldhoof-clan",
-			"text", "Fellow Goldhoof dwarves, Hroptatyr has shown me the way! Beyond the Aurvang swamplands to our southeast lie sprawling fields of sand, named Joruvellir. A harsh place, to be sure, but rich in ore and stone. There shall we found a new realm!"
+			"text", "Fellow Goldhoof dwarves, Hroptatyr has shown me the way! Beyond the Aurvang swamplands to our southeast lie sprawling fields of sand, named Joruvellir. A harsh place, to be sure, but livable enough, and safe. There shall we found a new realm!"
 		},
 		{
-			"speaker", "unit", "unit-joruvellir-scout",
-			"speaker-player", "goldhoof-clan",
+			"speaker", "character", "eikinskjaldi",
 			"text", "Travel through the Aurvang swamplands? That place is filled with goblins, we must beware...",
 			"option-effects", {
 				function(s)
@@ -72,17 +70,34 @@ DefineDialogue("aurvangling-goblins-sighted", {
 DefineDialogue("joruvellir-sighted", {
 	Nodes = {
 		{
-			"speaker", "unit", "unit-joruvellir-yale-rider",
-			"speaker-player", "goldhoof-clan",
+			"speaker", "character", "draupnir",
 			"text", "At last, we are almost to Joruvellir!"
 		},
 		{
-			"speaker", "unit", "unit-joruvellir-scout",
-			"speaker-player", "goldhoof-clan",
+			"speaker", "character", "draupnir",
 			"text", "The sun is scorching in these parts, and it will be worse in the desert. It would be best to travel through it during the night."
 		},
 		{
 			"text", "Hint: Organic units suffer from dehydration in the desert, which slowly depletes their HP. The effect can be avoided by journeying through the desert at night, and some units (like wyrms) are immune to it."
+		}
+	}
+})
+
+DefineDialogue("joruvellir-hall-completed", {
+	Nodes = {
+		{
+			"speaker", "character", "draupnir",
+			"text", "The foundations of our new settlement have been laid. After a long journey, we can finally rejoice in the safety our new dwelling!",
+			"option-effects", {
+				function(s)
+					if (GetPlayerData(trigger_player, "HasQuest", "a-home-in-the-fields-of-sand")) then
+						if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "a-home-in-the-fields-of-sand") then
+							CallDialogue("campaign-victory", trigger_player)
+						end
+						SetPlayerData(trigger_player, "CompleteQuest", "a-home-in-the-fields-of-sand")
+					end
+				end
+			}
 		}
 	}
 })

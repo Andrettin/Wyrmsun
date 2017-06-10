@@ -34,8 +34,8 @@ DefineQuest("a-home-in-the-fields-of-sand", {
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
-	Objectives = {"- Build a Mead Hall in Joruvellir", "- Modsognir must survive"},
+	Objectives = {"- Build a Mead Hall in Joruvellir", "- Draupnir must survive"},
 	Uncompleteable = true,
 	Unobtainable = true,
---	HeroesMustSurvive = {"modsognir", "durin"}
+	HeroesMustSurvive = {"draupnir"}
 })

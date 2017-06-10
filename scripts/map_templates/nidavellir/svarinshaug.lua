@@ -48,6 +48,8 @@ SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "grafvitning-tribe", {65
 --SetMapTemplateLayerConnector("nidavellir", "unit-cavern-entrance", {704, 177}, 1)
 --SetMapTemplateLayerConnector("nidavellir-underground", "unit-cavern-entrance", {704, 177}, 0)
 
+SetMapTemplateHero("nidavellir", "draupnir", "goldhoof-clan", {706, 222}, -2800, -2799)
+SetMapTemplateHero("nidavellir", "eikinskjaldi", "goldhoof-clan", {706, 222}, -2800, -2799)
 SetMapTemplateUnit("nidavellir", "unit-dwarven-miner", "goldhoof-clan", {706, 222}, -2800, -2799)
 SetMapTemplateUnit("nidavellir", "unit-dwarven-miner", "goldhoof-clan", {706, 222}, -2800, -2799)
 SetMapTemplateUnit("nidavellir", "unit-dwarven-miner", "goldhoof-clan", {706, 222}, -2800, -2799)

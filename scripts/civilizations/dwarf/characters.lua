@@ -289,3 +289,5 @@ DefineCharacter("rugnur", { -- from Battle for Wesnoth: The Sceptre of Fire; lea
 	ViolentDeath = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })
+
+Load("scripts/civilizations/dwarf/characters_joruvellir.lua")

@@ -82,3 +82,19 @@ AddTrigger("joruvellir-sighted",
 		return false
 	end
 )
+
+AddTrigger("joruvellir-hall-completed",
+	function()
+		for i=0,(PlayerMax - 2) do
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "a-home-in-the-fields-of-sand") and GetNumUnitsAt(i, "unit-dwarven-town-hall", {754 - NidavellirStartX, 323 - NidavellirStartY}, {822 - NidavellirStartX, 374 - NidavellirStartY}) > 0) then
+				trigger_player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function() 
+		CallDialogue("joruvellir-hall-completed", trigger_player)
+		return false
+	end
+)
