@@ -98,3 +98,19 @@ AddTrigger("joruvellir-hall-completed",
 		return false
 	end
 )
+
+AddTrigger("joruvellir-hall-construction-failed",
+	function()
+		for i=0,(PlayerMax - 2) do
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "a-home-in-the-fields-of-sand") and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-miner") == 0 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-skilled-miner") == 0 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-expert-miner") == 0) then
+				trigger_player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function() 
+		CallDialogue("joruvellir-hall-construction-failed", trigger_player)
+		return false
+	end
+)

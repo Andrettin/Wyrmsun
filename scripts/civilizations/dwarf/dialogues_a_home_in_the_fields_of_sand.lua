@@ -101,3 +101,17 @@ DefineDialogue("joruvellir-hall-completed", {
 		}
 	}
 })
+
+DefineDialogue("joruvellir-hall-construction-failed", {
+	Nodes = {
+		{
+			"speaker", "character", "draupnir",
+			"text", "Our workers have been lost... how will we build our settlement now?",
+			"option-effects", {
+				function(s)
+					SetPlayerData(trigger_player, "FailQuest", "a-home-in-the-fields-of-sand")
+				end
+			}
+		}
+	}
+})
