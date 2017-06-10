@@ -19,7 +19,7 @@ DefineUpgrade("upgrade-faction-sigre-tribe", {
 })
 
 DefineUpgrade("upgrade-faction-aurvangling-tribe", {
-	Name = _("Aurvangling Tribe"),
+	Name = "Aurvangling Tribe",
 	EffectsString = "+2 Damage for Archers"
 })
 
