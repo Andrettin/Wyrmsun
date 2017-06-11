@@ -1168,8 +1168,14 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {HitPoints = "only", Indestructible = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Hit Points:"), " "), Variable = "HitPoints", Font = wyr.preferences.PopupDescriptionFont}}
 				}, 
+				{ 	Condition = {SightRange = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Sight:"), " "), Variable = "SightRange", Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {AttackRange = "only", AttackFromTransporter = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Range:"), " "), Variable = "AttackRange", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {OwnershipInfluenceRange = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Influence Range:"), " "), Variable = "OwnershipInfluenceRange", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {MaxHarvesters = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Max Workers:"), " "), Variable = "MaxHarvesters", Font = wyr.preferences.PopupDescriptionFont}}
@@ -1599,6 +1605,9 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {Speed = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Speed:"), " "), Variable = "Speed", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {OwnershipInfluenceRange = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Influence Range:"), " "), Variable = "OwnershipInfluenceRange", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {MaxHarvesters = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Max Workers:"), " "), Variable = "MaxHarvesters", Font = wyr.preferences.PopupDescriptionFont}}

@@ -1067,6 +1067,7 @@ DefineTerrainType("dwarven-wall", {
 	Flags = {"land", "wall", "unpassable"},
 	AllowSingle = true,
 	Graphics = "terrain/dwarven_wall.png",
+	PlayerColorGraphics = "terrain/dwarven_wall_player_color.png",
 	SolidTiles = {177},
 	DestroyedTiles = {160},
 	TransitionTiles = {
@@ -1130,6 +1131,7 @@ DefineTerrainType("goblin-wall", {
 	Flags = {"land", "wall", "unpassable"},
 	AllowSingle = true,
 	Graphics = "terrain/goblin_wall.png",
+	PlayerColorGraphics = "terrain/goblin_wall_player_color.png",
 	SolidTiles = {177},
 	DestroyedTiles = {160},
 	TransitionTiles = {
@@ -1192,6 +1194,7 @@ DefineTerrainType("teuton-wall", {
 	Flags = {"land", "wall", "unpassable"},
 	AllowSingle = true,
 	Graphics = "terrain/teuton_wall.png",
+	PlayerColorGraphics = "terrain/teuton_wall_player_color.png",
 	SolidTiles = {177},
 	DestroyedTiles = {160},
 	TransitionTiles = {
@@ -1246,3 +1249,65 @@ DefineTerrainType("teuton-wall", {
 		"any", "southeast-outer-northwest-inner", 146
 	}
 })
+
+DefineTerrainType("border", {
+	Name = "Border",
+	BaseTerrains = {"dirt", "mud", "rockbound-cave-floor", "cave-floor", "dry-mud", "grass"},
+	Overlay = true,
+	AllowSingle = true,
+	Hidden = true,
+	Graphics = "terrain/border.png",
+	PlayerColorGraphics = "terrain/border_player_color.png",
+	SolidTiles = {17, 20, 23},
+	TransitionTiles = {
+		"any", "north", 1,
+		"any", "south", 33,
+		"any", "west", 16,
+		"any", "east", 18,
+		"any", "northwest-outer", 0,
+		"any", "northeast-outer", 2,
+		"any", "southwest-outer", 32,
+		"any", "southeast-outer", 34,
+		"any", "northwest-inner", 48,
+		"any", "northeast-inner", 49,
+		"any", "southwest-inner", 64,
+		"any", "southeast-inner", 65,
+		"any", "northwest-southeast-inner", 81,
+		"any", "northeast-southwest-inner", 80,
+		
+		"any", "single", 129,
+		"any", "north-single", 161,
+		"any", "south-single", 193,
+		"any", "west-single", 176,
+		"any", "east-single", 178,
+		"any", "north-south", 113,
+		"any", "west-east", 128,
+		"any", "northwest-northeast-southwest-southeast-inner", 177,
+		"any", "northwest-northeast-inner", 216,
+		"any", "southwest-southeast-inner", 232,
+		"any", "northwest-southwest-inner", 217,
+		"any", "northeast-southeast-inner", 233,
+		"any", "northwest-northeast-southwest-inner", 218,
+		"any", "northwest-northeast-southeast-inner", 219,
+		"any", "northwest-southwest-southeast-inner", 234,
+		"any", "northeast-southwest-southeast-inner", 235,
+		"any", "north-southwest-inner-southeast-inner", 208,
+		"any", "north-southwest-inner", 214,
+		"any", "north-southeast-inner", 215,
+		"any", "south-northwest-inner-northeast-inner", 224,
+		"any", "south-northwest-inner", 230,
+		"any", "south-northeast-inner", 231,
+		"any", "west-northeast-inner-southeast-inner", 209,
+		"any", "west-northeast-inner", 212,
+		"any", "west-southeast-inner", 228,
+		"any", "east-northwest-inner-southwest-inner", 225,
+		"any", "east-northwest-inner", 213,
+		"any", "east-southwest-inner", 229,
+		"any", "northwest-outer-southeast-inner", 112,
+		"any", "northeast-outer-southwest-inner", 114,
+		"any", "southwest-outer-northeast-inner", 144,
+		"any", "southeast-outer-northwest-inner", 146
+	}
+})
+
+SetBorderTerrain("border")
