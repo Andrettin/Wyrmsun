@@ -61,8 +61,8 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Buildings
-- Added the Yale Cave (graphics by Jinn), which randomly spawns yales. A Yale Hunting Lodge can be built upon it (similar to how mines are built on top of deposits), providing Food, and allowing the Leather luxury resource to be harvested from it (max 3 workers). The Yale Hunting Lodge has generic and dwarven graphic variants.
-- Dwarven Yale Pens can now produce Leather (max 3 workers).
+- Added the Yale Cave (graphics by Jinn), which randomly spawns yales. A Yale Hunting Lodge can be built upon it (similar to how mines are built on top of deposits), providing Food, and allowing the Leather luxury resource to be harvested from it (max. 3 workers). The Yale Hunting Lodge has generic and dwarven graphic variants.
+- Dwarven Yale Pens can now produce Leather (max. 3 workers).
 
 * Items
 - Added Joruvellir Wooden Shield item.
@@ -74,9 +74,10 @@ https://github.com/Andrettin/Wyrmsun
 
 * Scenarios
 - The "A Rocky Home" quest in the "The First Dwarves" scenario now requires building a Yale Hunting Lodge instead of killing 8 Yales.
+- Added the "A Home in the Fields of Sand" scenario.
 
 * Terrain
-- Added Limestone Rock tiles. When harvested, Limestone converts to regular Stone at a 200% rate.
+- Added Desert Sand terrain (graphics by Jinn).
 - Fixed crash which could occur if the player built a structure on top of a pathway.
 
 * Units

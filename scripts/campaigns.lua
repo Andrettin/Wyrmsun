@@ -39,7 +39,7 @@ DefineCampaign("the-first-dwarves", {
 
 DefineCampaign("a-home-in-the-fields-of-sand", {
 	Name = "A Home in the Fields of Sand",
-	Description = "The disgraced Goldhoof clan must migrate away from the dwarven rocky hills of Svarinshaug, and seek a new home.",
+	Description = "As Svarinshaug proves too small for the growing dwarven population, the Goldhoof clan must move away and seek a new home.",
 	Civilization = "dwarf",
 	Faction = "goldhoof-clan",
 	StartYear = -2800,
