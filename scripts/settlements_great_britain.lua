@@ -117,6 +117,7 @@ DefineSettlement("carlisle", {
 	Position = {3773, 800},
 	CulturalNames = {
 		"anglo-saxon", "Luel", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"celt", "Luguvallium",
 --		"english", "Carlisle",
 		"latin", "Luguvallium" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	},
@@ -155,8 +156,8 @@ DefineSettlement("dorchester", {
 	Position = {3785, 894},
 	CulturalNames = {
 		"anglo-saxon", "Dornwaraceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
---		"english", "Dorchester",
 		"celt", "Durnovaria",
+--		"english", "Dorchester",
 		"latin", "Durnovaria" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	},
 	HistoricalOwners = {
@@ -224,8 +225,8 @@ DefineSettlement("exeter", {
 	Position = {3760, 894},
 	CulturalNames = {
 		"anglo-saxon", "Escanceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
---		"english", "Exeter",
 		"celt", "Isca Dumnoniorum",
+--		"english", "Exeter",
 		"latin", "Isca Dumnoniorum" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	},
 	HistoricalOwners = {
