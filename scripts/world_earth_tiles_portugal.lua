@@ -25,26 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineWorldMapTile({453, 145}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Olisipo"
-	},
-	FactionCulturalSettlementNames = {
-		"portuguese", "portugal", "Lisbon" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
-	}
-})
-
-DefineWorldMapTile({456, 137}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Bracara" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	FactionCulturalSettlementNames = {
-		"portuguese", "portugal", "Braga" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
-	}
-})
-
 DefineWorldMapTile({457, 146}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {

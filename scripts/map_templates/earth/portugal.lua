@@ -31,10 +31,3 @@ SetMapTemplateResource("earth", "unit-copper-deposit", {3680, 1109}) -- Iron dep
 -- Três Minas
 SetMapTemplateResource("earth", "unit-gold-deposit", {3665, 1095}) -- gold present in Três Minas; Source: M. J. T. Lewis, "Railways in the Greek and Roman World", 2001, p. 15.
 SetMapTemplateUnit("earth", "unit-gold-mine", "rome", {3665, 1095}, 1, 100) -- Três Minas was the location of a Roman gold mine in the 1st century AD; Source: M. J. T. Lewis, "Railways in the Greek and Roman World", 2001, p. 15.
-
--- Lisbon / Olisipo
-SetMapTemplateCulturalSettlementName("earth", "Olisipo", {3632, 1166}, "latin")
-SetMapTemplateFactionCulturalSettlementName("earth", "Lisbon", {3632, 1166}, "portugal")
-SetMapTemplateUnit("earth", "unit-latin-town-hall", "rome", {3632, 1166}, -146, 486) -- Olisipo was acquired by Rome in 146 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-SetMapTemplateUnit("earth", "unit-teuton-town-hall", "visigothia", {3632, 1166}, 486, 1560) -- Lisbon was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-SetMapTemplateUnit("earth", "unit-latin-town-hall", "portugal", {3632, 1166}, 1560) -- political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.

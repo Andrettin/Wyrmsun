@@ -51,6 +51,7 @@ Load("scripts/settlements_levant.lua")
 Load("scripts/settlements_mesopotamia.lua")
 Load("scripts/settlements_moravia.lua")
 Load("scripts/settlements_persia.lua")
+Load("scripts/settlements_portugal.lua")
 Load("scripts/settlements_slovakia.lua")
 Load("scripts/settlements_spain.lua")
 

@@ -42,6 +42,23 @@ DefineSettlement("barcelona", {
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
+DefineSettlement("burgos", {
+	Name = "Burgos",
+	MapTemplate = "earth",
+	Position = {3756, 1083},
+	CulturalNames = {
+		"castillian", "Burgos",
+		"latin", "Burgiorum" -- Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
+	},
+	HistoricalOwners = {
+		910, "leon" -- Burgos was a part of the Kingdom of León in 910; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+	},
+	HistoricalBuildings = {
+		910, 0, "farm"
+	},
+	Regions = {"europe", "iberia", "west-and-central-europe"}
+})
+
 DefineSettlement("cadiz", {
 	Name = "Cadiz",
 	MapTemplate = "earth",
@@ -80,6 +97,24 @@ DefineSettlement("cartagena", {
 	},
 	HistoricalBuildings = {
 		-218, 0, "farm"
+	},
+	Regions = {"europe", "iberia", "west-and-central-europe"}
+})
+
+DefineSettlement("merida", {
+	Name = "Merida",
+	MapTemplate = "earth",
+	Position = {3688, 1167},
+	CulturalNames = {
+		"castillian", "Merida", -- "Mérida"
+		"latin", "Emerita Augusta", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	},
+	HistoricalOwners = {
+		-138, "rome", -- Emerita Augusta was acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		486, "visigothia" -- Mérida was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+	},
+	HistoricalBuildings = {
+		-138, 0, "town-hall"
 	},
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })

@@ -25,60 +25,39 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("argentina", {
-	Name = "Argentina",
-	Civilization = "castillian",
-	Type = "polity",
-	Colors = {"cyan", "white"},
-	DefaultTier = "kingdom" -- had the status of viceroyalty
+DefineSettlement("braga", {
+	Name = "Braga",
+	MapTemplate = "earth",
+	Position = {3651, 1096},
+	CulturalNames = {
+		"latin", "Bracara", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		"portuguese", "Braga"
+	},
+	HistoricalOwners = {
+		-138, "rome", -- Bracara was acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		486, "galicia" -- Braga was a part of Suebic Galicia in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+	},
+	HistoricalBuildings = {
+		-138, 0, "town-hall"
+	},
+	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
-DefineFaction("castille", {
-	Name = "Castille",
-	Civilization = "castillian",
-	Type = "polity",
-	Colors = {"yellow", "red"},
-	DefaultTier = "kingdom"
-})
-
-DefineFaction("leon", {
-	Name = "Leon",
-	Civilization = "castillian",
-	Type = "polity",
-	Colors = {"red"},
-	DefaultTier = "kingdom"
-})
-
-DefineFaction("paraguay", {
-	Name = "Paraguay",
-	Civilization = "castillian",
-	Type = "polity",
-	Colors = {"blue", "red"},
-	DefaultTier = "duchy"
-})
-
-DefineFaction("spain", {
-	Name = "Spain",
-	Civilization = "castillian",
-	Type = "polity",
-	Colors = {"yellow", "red"},
-	DefaultTier = "kingdom"
-})
-
-DefineFaction("uruguay", {
-	Name = "Uruguay",
-	Civilization = "castillian",
-	Type = "polity",
-	Colors = {"cyan", "white"},
-	DefaultTier = "duchy"
-})
-
--- Holy Orders
-
-DefineFaction("jesuit-order", {
-	Name = "Jesuit Order",
-	Civilization = "castillian",
-	Type = "holy-order",
-	Colors = {"black"},
-	DefaultTier = "duchy"
+DefineSettlement("lisbon", {
+	Name = "Lisbon",
+	MapTemplate = "earth",
+	Position = {3632, 1166},
+	CulturalNames = {
+		"latin", "Olisipo", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		"portuguese", "Lisbon"
+	},
+	HistoricalOwners = {
+		-138, "rome", -- Olisipo was acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		486, "visigothia", -- Lisbon was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		1560, "portugal" -- political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		-138, 0, "town-hall"
+	},
+	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
