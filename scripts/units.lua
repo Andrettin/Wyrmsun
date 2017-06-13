@@ -3641,7 +3641,7 @@ DefineUnitType("unit-template-barracks", {
 	Speed = 0,
 	HitPoints = 667, -- 800 with masonry
 	TileSize = {3, 3}, BoxSize = {95, 95},
-	OwnershipInfluenceRange = 1,
+	OwnershipInfluenceRange = 2,
 	Armor = 5, Missile = "missile-none",
 	Priority = 30, AnnoyComputerFactor = 35,
 	Points = 160,
@@ -3692,7 +3692,7 @@ DefineUnitType("unit-template-lumber-mill", {
 	Speed = 0,
 	HitPoints = 500, -- 600 with masonry
 	TileSize = {3, 3}, BoxSize = {95, 95},
-	OwnershipInfluenceRange = 1,
+	OwnershipInfluenceRange = 2,
 	Armor = 5, Missile = "missile-none",
 	Priority = 25, AnnoyComputerFactor = 15,
 	Points = 150,
@@ -3771,7 +3771,7 @@ DefineUnitType("unit-template-smithy", {
 	Speed = 0,
 	HitPoints = 646, -- 775 with masonry
 	TileSize = {3, 3}, BoxSize = {95, 95},
-	OwnershipInfluenceRange = 1,
+	OwnershipInfluenceRange = 2,
 	Armor = 5, Missile = "missile-none",
 	Priority = 15, AnnoyComputerFactor = 20,
 	Points = 170,
@@ -3852,7 +3852,7 @@ DefineUnitType("unit-template-stables", {
 	Speed = 0,
 	HitPoints = 417, -- 500 with masonry
 	TileSize = {3, 3}, BoxSize = {95, 95},
-	OwnershipInfluenceRange = 1,
+	OwnershipInfluenceRange = 2,
 	Armor = 5, Missile = "missile-none",
 	Priority = 15, AnnoyComputerFactor = 15,
 	Points = 210,
@@ -4020,7 +4020,7 @@ DefineUnitType("unit-template-market", {
 	Speed = 0,
 	HitPoints = 917, -- 1100 with masonry
 	TileSize = {3, 3}, BoxSize = {95, 95},
-	OwnershipInfluenceRange = 1,
+	OwnershipInfluenceRange = 2,
 	Armor = 5, Missile = "missile-none",
 	Priority = 30, AnnoyComputerFactor = 20,
 	Points = 170,
@@ -4067,7 +4067,7 @@ DefineUnitType("unit-template-dock", {
 	Speed = 0,
 	HitPoints = 917, -- 1100 with masonry
 	TileSize = {3, 3}, BoxSize = {95, 95},
-	OwnershipInfluenceRange = 1,
+	OwnershipInfluenceRange = 2,
 	Armor = 5, Missile = "missile-none",
 	Priority = 30, AnnoyComputerFactor = 20,
 	Points = 170,
