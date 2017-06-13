@@ -581,7 +581,6 @@ DefineCivilization("dwarf", {
 		"Dwarven Doors", -- from Battle for Wesnoth
 		"Kal Kartha", -- from Battle for Wesnoth: The Hammer of Thursagan
 		"Knalga", -- from Battle for Wesnoth
-		"Svarinshaug",
 		"Lyr"
 	},
 	ProvinceNames = {

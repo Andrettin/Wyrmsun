@@ -50,3 +50,19 @@ DefineSettlement("driftwood", { -- from Will Doyle's "Island of the Lizard God"
 	},
 	Regions = {}
 })
+
+DefineSettlement("svarinshaug", {
+	Name = "Svarinshaug",
+	MapTemplate = "nidavellir",
+	Position = {691, 193},
+	CulturalNames = {
+		"dwarf", "Svarinshaug"
+	},
+	HistoricalOwners = {
+		-2999, "brising-clan"
+	},
+	HistoricalBuildings = {
+		-2999, 0, "town-hall"
+	},
+	Regions = {}
+})

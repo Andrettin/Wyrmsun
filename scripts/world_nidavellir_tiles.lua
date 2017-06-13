@@ -39,13 +39,6 @@ DefineWorldMapTile({33, 15}, {
 	}
 })
 
-DefineWorldMapTile({44, 11}, {
-	World = "Nidavellir",
-	CulturalTerrainNames = {
-		"Hills", "dwarf", "Svarinshaug"
-	}
-})
-
 DefineWorldMapTile({45, 5}, {
 	World = "Nidavellir",
 	CulturalSettlementNames = {
@@ -57,15 +50,6 @@ DefineWorldMapTile({50, 13}, {
 	World = "Nidavellir",
 	CulturalSettlementNames = {
 		"dwarf", "Lyr"
-	}
-})
-
-DefineWorldMapTile({-1, -1}, { -- having no coordinates means it will be randomly placed in the map, according to its settings
-	World = "Nidavellir",
-	Province = "Untersberg",
-	Capital = true,
-	CulturalSettlementNames = {
-		"gnome", "Gnana" -- capital of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 179.
 	}
 })
 

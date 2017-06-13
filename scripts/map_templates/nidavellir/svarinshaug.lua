@@ -27,7 +27,6 @@
 
 SetMapTemplateResource("nidavellir", "unit-yale-cave", {698, 208})
 
-SetMapTemplateUnit("nidavellir", "unit-dwarven-town-hall", "brising-clan", {691, 193}, -2999)
 SetMapTemplateUnit("nidavellir", "unit-brising-miner", "brising-clan", {691, 193}, -3000, -2999)
 SetMapTemplateUnit("nidavellir", "unit-brising-miner", "brising-clan", {691, 193}, -3000, -2999)
 SetMapTemplateUnit("nidavellir", "unit-brising-miner", "brising-clan", {691, 193}, -3000, -2999)
