@@ -126,7 +126,7 @@ DefinePredependency("unit-germanic-town-hall",
 )
 
 DefinePredependency("unit-germanic-farm",
-	{"upgrade-germanic-civilization"}, "or", {"upgrade-celt-civilization"}
+	{"upgrade-germanic-civilization"}
 )
 
 DefinePredependency("unit-germanic-barracks",

@@ -64,6 +64,7 @@ DefineSettlement("bamburgh", {
 	MapTemplate = "earth",
 	Position = {3801, 783},
 	CulturalNames = {
+		"anglo-saxon", "Bebbanburg", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 --		"english", "Bamburgh" -- as given by Stenton; Shepherd gives it as "Bamborough" instead; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 	},
 	HistoricalOwners = {
@@ -97,6 +98,7 @@ DefineSettlement("canterbury", {
 	MapTemplate = "earth",
 	Position = {3866, 880},
 	CulturalNames = {
+		"anglo-saxon", "Cantwaraburg", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 --		"english", "Canterbury"
 	},
 	HistoricalOwners = {
@@ -114,6 +116,7 @@ DefineSettlement("carlisle", {
 	MapTemplate = "earth",
 	Position = {3773, 800},
 	CulturalNames = {
+		"anglo-saxon", "Luel", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 --		"english", "Carlisle",
 		"latin", "Luguvallium" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	},
@@ -132,6 +135,7 @@ DefineSettlement("chester", {
 	MapTemplate = "earth",
 	Position = {3774, 836},
 	CulturalNames = {
+		"anglo-saxon", "Legaceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"celt", "Deva",
 --		"english", "Chester", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 		"latin", "Deva" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -150,6 +154,7 @@ DefineSettlement("dorchester", {
 	MapTemplate = "earth",
 	Position = {3785, 894},
 	CulturalNames = {
+		"anglo-saxon", "Dornwaraceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 --		"english", "Dorchester",
 		"celt", "Durnovaria",
 		"latin", "Durnovaria" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
@@ -168,6 +173,7 @@ DefineSettlement("dover", {
 	MapTemplate = "earth",
 	Position = {3869, 884},
 	CulturalNames = {
+		"anglo-saxon", "Dofras", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 --		"english", "Dover" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	},
 	HistoricalOwners = {
@@ -184,6 +190,7 @@ DefineSettlement("durham", {
 	MapTemplate = "earth",
 	Position = {3806, 802},
 	CulturalNames = {
+		"anglo-saxon", "Dunholm", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 --		"english", "Durham" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	},
 	HistoricalOwners = {
@@ -216,6 +223,7 @@ DefineSettlement("exeter", {
 	MapTemplate = "earth",
 	Position = {3760, 894},
 	CulturalNames = {
+		"anglo-saxon", "Escanceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 --		"english", "Exeter",
 		"celt", "Isca Dumnoniorum",
 		"latin", "Isca Dumnoniorum" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
@@ -229,12 +237,13 @@ DefineSettlement("exeter", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("godmundingham", {
-	Name = "Godmundingham",
+DefineSettlement("goodmanham", {
+	Name = "Goodmanham",
 	MapTemplate = "earth",
 	Position = {3825, 820},
 	CulturalNames = {
---		"english", "Godmundingham"
+		"anglo-saxon", "Godmunddingaham", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+--		"english", "Goodmanham"
 	},
 	HistoricalOwners = {
 		802, "northumbria" -- Godmundingham was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
@@ -250,6 +259,7 @@ DefineSettlement("hastings", {
 	MapTemplate = "earth",
 	Position = {3859, 888},
 	CulturalNames = {
+		"anglo-saxon", "Haestingaceaster", -- "Hæstingaceaster"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 --		"english", "Hastings"
 	},
 	HistoricalOwners = {
@@ -282,6 +292,7 @@ DefineSettlement("jarrow", {
 	MapTemplate = "earth",
 	Position = {3807, 797},
 	CulturalNames = {
+		"anglo-saxon", "Gyruum", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 --		"english", "Jarrow"
 	},
 	HistoricalOwners = {
@@ -298,6 +309,7 @@ DefineSettlement("leicester", {
 	MapTemplate = "earth",
 	Position = {3815, 850},
 	CulturalNames = {
+		"anglo-saxon", "Ligoraceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 --		"english", "Leicester"
 	},
 	HistoricalOwners = {
@@ -314,6 +326,7 @@ DefineSettlement("lincoln", {
 	MapTemplate = "earth",
 	Position = {3825, 837},
 	CulturalNames = {
+		"anglo-saxon", "Lindcylene", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 --		"english", "Lincoln"
 	},
 	HistoricalOwners = {
@@ -325,12 +338,13 @@ DefineSettlement("lincoln", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("loidis", {
-	Name = "Loidis", -- Leeds?
+DefineSettlement("leeds", {
+	Name = "Leeds",
 	MapTemplate = "earth",
 	Position = {3804, 822},
 	CulturalNames = {
-		"anglo-saxon", "Loidis"
+		"anglo-saxon", "Loidis", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+--		"english", "Leeds"
 	},
 	HistoricalOwners = {
 		802, "northumbria" -- Loidis was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
@@ -346,6 +360,7 @@ DefineSettlement("london", {
 	MapTemplate = "earth",
 	Position = {3839, 875},
 	CulturalNames = {
+		"anglo-saxon", "Lunden", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"celt", "Londinium",
 --		"english", "London",
 		"latin", "Londinium" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -366,6 +381,7 @@ DefineSettlement("pevensey", {
 	MapTemplate = "earth",
 	Position = {3849, 890},
 	CulturalNames = {
+		"anglo-saxon", "Pefenesea", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 --		"english", "Pevensey"
 	},
 	HistoricalOwners = {
@@ -382,6 +398,7 @@ DefineSettlement("reculver", {
 	MapTemplate = "earth",
 	Position = {3868, 879},
 	CulturalNames = {
+		"anglo-saxon", "Reculf", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 --		"english", "Reculver"
 	},
 	HistoricalOwners = {
@@ -399,6 +416,7 @@ DefineSettlement("rochester", {
 	MapTemplate = "earth",
 	Position = {3850, 878},
 	CulturalNames = {
+		"anglo-saxon", "Hrofesceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 --		"english", "Rochester"
 	},
 	HistoricalOwners = {
@@ -415,6 +433,7 @@ DefineSettlement("salisbury", {
 	MapTemplate = "earth",
 	Position = {3799, 886},
 	CulturalNames = {
+		"anglo-saxon", "Searoburg", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 		"anglo-saxon", "Searuburh", -- Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 115.
 --		"english", "Salisbury" -- Source: "Philip's International School Atlas", 2006, p. 64.
 	},
@@ -448,7 +467,7 @@ DefineSettlement("whitby", {
 	MapTemplate = "earth",
 	Position = {3825, 808},
 	CulturalNames = {
-		"anglo-saxon", "Streoneshalh", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 123.
+		"anglo-saxon", "Streonaeshalch", -- "Streonæshalch"; on page 123 Stenton gives "Streoneshalh" instead; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 --		"english", "Whitby"
 	},
 	HistoricalOwners = {
@@ -465,6 +484,7 @@ DefineSettlement("winchester", {
 	MapTemplate = "earth",
 	Position = {3810, 885},
 	CulturalNames = {
+		"anglo-saxon", "Witanceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 734.
 --		"english", "Winchester"
 	},
 	HistoricalOwners = {
@@ -498,6 +518,7 @@ DefineSettlement("york", {
 	MapTemplate = "earth",
 	Position = {3815, 819},
 	CulturalNames = {
+		"anglo-saxon", "Eoforwic", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"celt", "Eboracum",
 --		"english", "York",
 		"latin", "Eboracum"

@@ -1271,14 +1271,12 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {Opponent = "false", Neutral = "false"}, Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
-				--[[
 				{ 	Condition = {Opponent = "only", SettlementName = true}, Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {Neutral = "only", SettlementName = true}, Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
-				--]]
 				{ 	Condition = {ButtonAction = "buy", Item = "only"}, Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
@@ -1306,11 +1304,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {Class = true, ButtonAction = "editor-unit"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(Concat(_("Class:"), " "), TypeClass("Type")), Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				--[[
 				{ 	Condition = {SettlementName = true, ButtonAction = "unit"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Settlement: "), UnitSettlementName("Unit")), Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				--]]
 				{ 	Condition = {HitPoints = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Hit Points:"), " "), Variable = "HitPoints", Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -2348,14 +2344,12 @@ if not (ui_loaded_first_time) then
 				{	Condition = {Unique = "only"}, TextColor = "fire", HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
 				},
-				--[[
 				{ 	Condition = {Building = "only", SettlementName = true, ButtonAction = "unit"}, Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {Building = "only", SettlementName = true, ButtonAction = "unit"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Settlement: "), UnitSettlementName("Unit")), Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				--]]
 				{ 	Condition = {Building = "only", UnitTypeClass = "dock", CanActiveHarvest = true, ButtonAction = "unit"}, Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},

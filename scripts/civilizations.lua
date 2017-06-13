@@ -1224,6 +1224,11 @@ DefineCivilization("ettin", {
 		"male", "Vafthrudnir", -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 252.
 		"male", "Ymir" -- the first frost giant in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 240, 253; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 58.
 	},
+	SettlementNames = {
+		"Hnitbjorg", -- mountain
+		"Lyfjaberg", -- hill
+		"Utgard"
+	},
 	ShipNames = {
 		"Naglfar" -- ship of the giants in Norse mythology, whose helmsman is Hrym; made of dead men's nails; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 21.
 	}
@@ -1375,7 +1380,14 @@ DefineCivilization("gnome", {
 		"male", "Rubezahl"
 	},
 	SettlementNames = {
-		"Gnana" -- name of the capital of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 179.
+		"Gnana", -- name of the capital of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 179.
+		
+		-- dwarven settlement names
+		"Dwarven Doors", -- from Battle for Wesnoth
+		"Kal Kartha", -- from Battle for Wesnoth: The Hammer of Thursagan
+		"Knalga", -- from Battle for Wesnoth
+		"Svarinshaug",
+		"Lyr"
 	}
 })
 
@@ -1435,6 +1447,20 @@ DefineCivilization("goblin", {
 		"male", "Vrunt",
 		"male", "Zhuk",
 		"male", "Zuzerd"
+	},
+	SettlementNames = {
+		-- ettin settlement names
+		"Hnitbjorg", -- mountain
+		"Lyfjaberg", -- hill
+		"Utgard",
+
+		-- orc settlement names
+		"Barag Gór", -- from Battle for Wesnoth
+		"Bitok", -- from Battle for Wesnoth
+		"Borstep", -- from Battle for Wesnoth
+		"Lmarig", -- from Battle for Wesnoth
+		"Prestim", -- from Battle for Wesnoth
+		"Tirigaz" -- from Battle for Wesnoth
 	}
 })
 
@@ -1505,6 +1531,14 @@ DefineCivilization("orc", {
 		"dwarf/ui/resource.png", 0, 0,
 		"dwarf/ui/buttonpanel.png", -256, -200,
 		"dwarf/ui/infopanel.png", 0, -200
+	},
+	SettlementNames = {
+		"Barag Gór", -- from Battle for Wesnoth
+		"Bitok", -- from Battle for Wesnoth
+		"Borstep", -- from Battle for Wesnoth
+		"Lmarig", -- from Battle for Wesnoth
+		"Prestim", -- from Battle for Wesnoth
+		"Tirigaz" -- from Battle for Wesnoth
 	}
 })
 

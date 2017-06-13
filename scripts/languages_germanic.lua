@@ -268,7 +268,26 @@ DefineLanguage("english", {
 		"Basengum", "Basing", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Bathum", "Bath", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Beamfleot", "Benfleet", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Bebbanburg", "Bamburgh", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Cantwaraburg", "Canterbury", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Dofras", "Dover", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"Dornwaraceaster", "Dorchester", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"Dunholm", "Durham", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"Eoforwic", "York", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"Escanceaster", "Exeter", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"Gyruum", "Jarrow", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"Haestingaceaster", "Hastings", -- Hæstingaceaster -> Hastings; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"Hrofesceaster", "Rochester", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"Legaceaster", "Chester", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"Ligoraceaster", "Leicester", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"Lindcylene", "Lincoln", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"Loidis", "Leeds", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"Lunden", "London", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"Pefenesea", "Pevensey", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
+		"Reculf", "Reculver", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
+		"Searoburg", "Salisbury", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 		"Searuburh", "Salisbury", -- Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 115.
+		"Witanceaster", "Winchester", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 734.
 		-- German Personal Names
 		"Bernhard", "Bernard",
 		"Franz", "Francis",
