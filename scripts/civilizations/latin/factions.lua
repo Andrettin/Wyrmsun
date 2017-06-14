@@ -149,7 +149,6 @@ DefineFaction("rome", {
 	Colors = {"red", "yellow"},
 	DefaultTier = "kingdom",
 	DefaultStartPos = {4126, 1096}, -- Rome
-	HistoricalFactionDerivations = {-500, "latin", "latin-tribe"},
 	HistoricalGovernmentTypes = {
 		-500, "republic", -- correct?
 		-27, "monarchy" -- Augustus assumed power in Rome; was this the date in which he actually became emperor?

@@ -78,6 +78,7 @@ DefineSettlement("trieste", {
 	MapTemplate = "earth",
 	Position = {4154, 1009},
 	CulturalNames = {
+		"italian", "Trieste",
 		"latin", "Tergeste",
 		"teuton", "Triest"
 	},

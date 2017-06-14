@@ -78,6 +78,7 @@ DefineSettlement("bologna", {
 	MapTemplate = "earth",
 	Position = {4096, 1034},
 	CulturalNames = {
+		"italian", "Bologna",
 		"latin", "Bononia" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 	},
 	HistoricalOwners = {
@@ -95,6 +96,7 @@ DefineSettlement("brindisi", {
 	MapTemplate = "earth",
 	Position = {4245, 1123},
 	CulturalNames = {
+		"italian", "Brindisi",
 		"latin", "Brundisium" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
@@ -144,6 +146,7 @@ DefineSettlement("cremona", {
 	MapTemplate = "earth",
 	Position = {4066, 1025},
 	CulturalNames = {
+		"italian", "Cremona",
 		"latin", "Cremona", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 		"teuton", "Cremona"
 	},
@@ -180,6 +183,7 @@ DefineSettlement("florence", {
 	MapTemplate = "earth",
 	Position = {4095, 1054},
 	CulturalNames = {
+		"italian", "Florence",
 		"latin", "Florentia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
@@ -214,6 +218,7 @@ DefineSettlement("milan", {
 	MapTemplate = "earth",
 	Position = {4049, 1013},
 	CulturalNames = {
+		"italian", "Milan",
 		"latin", "Mediolanum", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 		"teuton", "Milan"
 	},
@@ -235,6 +240,7 @@ DefineSettlement("modena", {
 	MapTemplate = "earth",
 	Position = {4089, 1032},
 	CulturalNames = {
+		"italian", "Modena",
 		"latin", "Mutina" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 	},
 	HistoricalOwners = {
@@ -253,6 +259,7 @@ DefineSettlement("naples", {
 	MapTemplate = "earth",
 	Position = {4163, 1117},
 	CulturalNames = {
+		"italian", "Naples",
 		"latin", "Neapolis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
@@ -287,6 +294,7 @@ DefineSettlement("oderzo", {
 	MapTemplate = "earth",
 	Position = {4122, 1005},
 	CulturalNames = {
+		"italian", "Oderzo",
 		"latin", "Opitergium" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 26-27; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
@@ -319,6 +327,7 @@ DefineSettlement("piacenza", {
 	MapTemplate = "earth",
 	Position = {4056, 1028},
 	CulturalNames = {
+		"italian", "Piacenza",
 		"latin", "Placentia" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 	},
 	HistoricalOwners = {
@@ -338,6 +347,7 @@ DefineSettlement("ravenna", {
 	MapTemplate = "earth",
 	Position = {4114, 1035},
 	CulturalNames = {
+		"italian", "Ravenna",
 		"latin", "Ravenna" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
@@ -358,6 +368,7 @@ DefineSettlement("rome", {
 	MapTemplate = "earth",
 	Position = {4126, 1096},
 	CulturalNames = {
+		"italian", "Rome",
 		"latin", "Rome"
 	},
 	HistoricalOwners = {
@@ -413,6 +424,7 @@ DefineSettlement("venice", {
 	MapTemplate = "earth",
 	Position = {4122, 1011},
 	CulturalNames = {
+		"italian", "Venice",
 		"teuton", "Venice"
 	},
 	HistoricalOwners = {
@@ -430,6 +442,7 @@ DefineSettlement("verona", {
 	MapTemplate = "earth",
 	Position = {4090, 1014},
 	CulturalNames = {
+		"italian", "Verona",
 		"latin", "Verona", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 		"teuton", "Verona"
 	},

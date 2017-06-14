@@ -34,7 +34,8 @@ DefineSettlement("agad", {
 	},
 	HistoricalOwners = {
 		-1450, "babylon", -- Agad was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-640, "assyria" -- Agad's area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-640, "assyria", -- Agad's area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "babylon" -- Agad's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -50,7 +51,8 @@ DefineSettlement("amida", {
 		"assyrian", "Amida"
 	},
 	HistoricalOwners = {
-		-1450, "assyria" -- Amida was an Assyrian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "assyria", -- Amida was an Assyrian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-600, "media" -- Amida's area was part of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -66,7 +68,8 @@ DefineSettlement("arbela", {
 		"assyrian", "Arbela"
 	},
 	HistoricalOwners = {
-		-1450, "assyria" -- Arbela was an Assyrian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "assyria", -- Arbela was an Assyrian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-600, "babylon" -- Arbela's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -82,7 +85,8 @@ DefineSettlement("assur", {
 		"assyrian", "Assur"
 	},
 	HistoricalOwners = {
-		-1450, "assyria" -- Assur was an Assyrian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "assyria", -- Assur was an Assyrian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-600, "babylon" -- Assur's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -100,7 +104,8 @@ DefineSettlement("babylon", {
 	},
 	HistoricalOwners = {
 		-1450, "babylon", -- Babylon was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-640, "assyria" -- Babylon was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-640, "assyria", -- Babylon was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "babylon" -- Babylon was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "town-hall"
@@ -118,7 +123,8 @@ DefineSettlement("borsippa", {
 	},
 	HistoricalOwners = {
 		-1450, "babylon", -- Borsippa was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-640, "assyria" -- Borsippa was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-640, "assyria", -- Borsippa was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "babylon" -- Borsippa's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -134,10 +140,27 @@ DefineSettlement("calchu", {
 		"assyrian", "Calchu"
 	},
 	HistoricalOwners = {
-		-720, "assyria" -- Calchu was a part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-720, "assyria", -- Calchu was a part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "media" -- Calchu's area was part of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-720, 0, "farm"
+	},
+	Regions = {"asia"}
+})
+
+DefineSettlement("circesium", {
+	Name = "Circesium",
+	MapTemplate = "earth",
+	Position = {4752, 1245},
+	CulturalNames = {
+		"babylonian", "Circesium"
+	},
+	HistoricalOwners = {
+		-600, "babylon" -- Circesium was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+	},
+	HistoricalBuildings = {
+		-600, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -150,7 +173,8 @@ DefineSettlement("dur-ilu", {
 		"assyrian", "Dur-Ilu"
 	},
 	HistoricalOwners = {
-		-640, "assyria" -- Dur-Ilu was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-640, "assyria", -- Dur-Ilu was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "babylon" -- Dur-Ilu's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-640, 0, "farm"
@@ -167,7 +191,8 @@ DefineSettlement("dur-kurigalzu", {
 	},
 	HistoricalOwners = {
 		-1450, "babylon", -- Dur-Kurigalzu was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-640, "assyria" -- Dur-Kurigalzu's area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-640, "assyria", -- Dur-Kurigalzu's area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "babylon" -- Dur-Kurigalzu's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -183,7 +208,8 @@ DefineSettlement("dur-sharukin", {
 		"assyrian", "Dur-Sharukin"
 	},
 	HistoricalOwners = {
-		-640, "assyria" -- Dur-Sharukin/Khorsabad was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-640, "assyria", -- Dur-Sharukin/Khorsabad was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "media" -- Dur-Sharukin's area was part of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-640, 0, "farm"
@@ -201,7 +227,8 @@ DefineSettlement("eridu", {
 	},
 	HistoricalOwners = {
 		-1450, "babylon", -- Eridu was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-640, "assyria" -- Eridu was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-640, "assyria", -- Eridu was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "babylon" -- Eridu's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -217,7 +244,8 @@ DefineSettlement("haran", {
 		"assyrian", "Haran"
 	},
 	HistoricalOwners = {
-		-720, "assyria" -- Haran was a part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-720, "assyria", -- Haran was a part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "babylon" -- Haran's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-720, 0, "farm"
@@ -233,7 +261,8 @@ DefineSettlement("holwan", {
 		"assyrian", "Holwan"
 	},
 	HistoricalOwners = {
-		-640, "assyria" -- Holwan was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-640, "assyria", -- Holwan was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "media" -- Holwan's area was part of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-640, 0, "farm"
@@ -250,7 +279,8 @@ DefineSettlement("kutha", {
 	},
 	HistoricalOwners = {
 		-1450, "babylon", -- Kutha was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-640, "assyria" -- Kutha's area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-640, "assyria", -- Kutha's area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "babylon" -- Kutha's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -268,7 +298,8 @@ DefineSettlement("lagash", {
 	},
 	HistoricalOwners = {
 		-1450, "babylon", -- Lagash was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-640, "assyria" -- Lagash was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-640, "assyria", -- Lagash was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "babylon" -- Lagash's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -286,7 +317,8 @@ DefineSettlement("larsam", {
 	},
 	HistoricalOwners = {
 		-1450, "babylon", -- Larsam was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-640, "assyria" -- Larsam was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-640, "assyria", -- Larsam was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "babylon" -- Larsam's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -299,10 +331,12 @@ DefineSettlement("nineveh", {
 	MapTemplate = "earth",
 	Position = {4828, 1214},
 	CulturalNames = {
-		"assyrian", "Nineveh"
+		"assyrian", "Nineveh",
+		"persian", "Nineveh"
 	},
 	HistoricalOwners = {
-		-1450, "assyria" -- Nineveh was an Assyrian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1450, "assyria", -- Nineveh was an Assyrian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-600, "media" -- Nineveh was part of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "town-hall"
@@ -320,7 +354,8 @@ DefineSettlement("nippur", {
 	},
 	HistoricalOwners = {
 		-1450, "babylon", -- Nippur was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-640, "assyria" -- Nippur was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-640, "assyria", -- Nippur was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "babylon" -- Nippur's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -336,7 +371,8 @@ DefineSettlement("nisibis", {
 		"assyrian", "Nisibis"
 	},
 	HistoricalOwners = {
-		-720, "assyria" -- Nisibis was a part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-720, "assyria", -- Nisibis was a part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "babylon" -- Nisibis' area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-720, 0, "farm"
@@ -353,7 +389,8 @@ DefineSettlement("reseph", {
 	},
 	HistoricalOwners = {
 		-1025, "israel", -- Reseph was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
-		-720, "assyria" -- Reseph's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-720, "assyria", -- Reseph's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "babylon" -- Reseph's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1025, 0, "farm"
@@ -370,7 +407,8 @@ DefineSettlement("shinpurla", {
 	},
 	HistoricalOwners = {
 		-1450, "babylon", -- Shinpurla was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-640, "assyria" -- Shinpurla's area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-640, "assyria", -- Shinpurla's area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "babylon" -- Shinpurla's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -387,7 +425,8 @@ DefineSettlement("sippar", {
 	},
 	HistoricalOwners = {
 		-1450, "babylon", -- Sippar was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-640, "assyria" -- Sippar's area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-640, "assyria", -- Sippar's area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "babylon" -- Sippar's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -423,7 +462,8 @@ DefineSettlement("tadmor", {
 	},
 	HistoricalOwners = {
 		-1025, "israel", -- Tadmor was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
-		-720, "assyria" -- Tadmor was a part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-720, "assyria", -- Tadmor was a part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "babylon" -- Tadmor's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1025, 0, "farm"
@@ -431,16 +471,18 @@ DefineSettlement("tadmor", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("tiphsach", {
-	Name = "Tiphsach",
+DefineSettlement("thapsacus", {
+	Name = "Thapsacus",
 	MapTemplate = "earth",
 	Position = {4709, 1231},
 	CulturalNames = {
+		"babylonian", "Thapsacus",
 		"hebrew", "Tiphsach"
 	},
 	HistoricalOwners = {
 		-1025, "israel", -- Tiphsach/Thapsacus was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
-		-720, "assyria" -- Tiphsach's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-720, "assyria", -- Tiphsach's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "babylon" -- Thapsacus was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1025, 0, "farm"
@@ -458,7 +500,8 @@ DefineSettlement("upi", {
 	},
 	HistoricalOwners = {
 		-1450, "babylon", -- Upi was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-640, "assyria" -- Upi was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-640, "assyria", -- Upi was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "babylon" -- Upi's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -476,7 +519,8 @@ DefineSettlement("ur", {
 	},
 	HistoricalOwners = {
 		-1450, "babylon", -- Ur was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-640, "assyria" -- Ur was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-640, "assyria", -- Ur was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "babylon" -- Ur's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -494,7 +538,8 @@ DefineSettlement("uruk", {
 	},
 	HistoricalOwners = {
 		-1450, "babylon", -- Uruk was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-640, "assyria" -- Uruk was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-640, "assyria", -- Uruk was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "babylon" -- Uruk's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"

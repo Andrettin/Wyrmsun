@@ -252,11 +252,13 @@ DefineSettlement("carchemish", {
 	Position = {4704, 1209},
 	CulturalNames = {
 		"assyrian", "Carchemish",
+		"babylonian", "Carchemish",
 		"egyptian", "Carchemish"
 	},
 	HistoricalOwners = {
 		-1450, "egypt", -- Carchemish was subject to Egypt about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-720, "assyria" -- Carchemish was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-720, "assyria", -- Carchemish was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "babylon" -- Carchemish was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -270,6 +272,7 @@ DefineSettlement("damascus", {
 	Position = {4666, 1279},
 	CulturalNames = {
 		"assyrian", "Damascus",
+		"babylonian", "Damascus",
 		"egyptian", "Damascus",
 		"hebrew", "Dammeshek"
 	},
@@ -277,7 +280,8 @@ DefineSettlement("damascus", {
 		-1450, "egypt", -- Damascus was subject to Egypt about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 		-1250, "aramaean-tribe", -- Damascus/Dammeshek was part of the territory of the Aramaeans in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-1025, "israel", -- Damascus/Dammeshek was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
-		-720, "assyria" -- Damascus was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-720, "assyria", -- Damascus was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "babylon" -- Damascus was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "town-hall"
@@ -381,6 +385,7 @@ DefineSettlement("gaza", {
 	Position = {4621, 1334},
 	CulturalNames = {
 		"assyrian", "Gaza",
+		"babylonian", "Gaza",
 		"hebrew", "Gaza",
 		"phoenician", "Gaza"
 	},
@@ -389,7 +394,8 @@ DefineSettlement("gaza", {
 		-1250, "philistine-tribe", -- Gaza was part of the territory of the Philistines in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-1025, "israel", -- Gaza was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-953, "philistine-tribe", -- Gaza was part of the territory of the Philistines in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
-		-720, "assyria" -- Gaza was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-720, "assyria", -- Gaza was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "babylon" -- Gaza was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, -1250, "farm",
@@ -551,13 +557,15 @@ DefineSettlement("jerusalem", {
 	MapTemplate = "earth",
 	Position = {4642, 1327},
 	CulturalNames = {
+		"babylonian", "Jerusalem",
 		"hebrew", "Jerusalem",
 		"phoenician", "Jerusalem"
 	},
 	HistoricalOwners = {
 		-1250, "canaanite-tribe", -- Jerusalem was part of the territory of the Canaanites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-1025, "israel", -- Jerusalem was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
-		-953, "judah" -- Jerusalem was part of the Kingdom of Judah in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-953, "judah", -- Jerusalem was part of the Kingdom of Judah in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-600, "babylon" -- Jerusalem was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1250, 0, "town-hall"
@@ -678,6 +686,7 @@ DefineSettlement("megiddo", {
 	Position = {4639, 1305},
 	CulturalNames = {
 		"assyrian", "Megiddo",
+		"babylonian", "Megiddo",
 		"hebrew", "Megiddo",
 		"phoenician", "Megiddo"
 	},
@@ -686,7 +695,8 @@ DefineSettlement("megiddo", {
 		-1250, "canaanite-tribe", -- Megiddo's area was part of the territory of the Canaanites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-1025, "israel", -- Megiddo's area was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-953, "israel", -- Megiddo's area was part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
-		-720, "assyria" -- Megiddo was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-720, "assyria", -- Megiddo was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "babylon" -- Megiddo was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -809,11 +819,13 @@ DefineSettlement("tyre", {
 	MapTemplate = "earth",
 	Position = {4642, 1290},
 	CulturalNames = {
+		"babylonian", "Tyre",
 		"phoenician", "Zor" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalOwners = {
 		-1450, "phoenicia", -- Zor/Tyre was a Phoenician settlement about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-1250, "canaanite-tribe" -- Zor/Tyre was part of the territory of the Canaanites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-1250, "canaanite-tribe", -- Zor/Tyre was part of the territory of the Canaanites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-600, "babylon" -- Tyre was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "town-hall"
