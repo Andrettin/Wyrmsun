@@ -50,7 +50,8 @@ DefineSettlement("abydos", {
 	},
 	HistoricalOwners = {
 		-1450, "egypt", -- Abydos was an Egyptian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-640, "assyria" -- Abidos' area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-640, "assyria", -- Abydos' area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "egypt" -- Abydos' area was part of the Egyptian Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -68,7 +69,8 @@ DefineSettlement("heliopolis", {
 	},
 	HistoricalOwners = {
 		-1450, "egypt", -- Heliopolis/On was an Egyptian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-640, "assyria" -- Heliopolis/On was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-640, "assyria", -- Heliopolis/On was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "egypt" -- Heliopolis/On's area was part of the Egyptian Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -85,7 +87,8 @@ DefineSettlement("karnak", {
 	},
 	HistoricalOwners = {
 		-1450, "egypt", -- Karnak was an Egyptian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-640, "assyria" -- Karnak's area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-640, "assyria", -- Karnak's area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "egypt" -- Karnak's area was part of the Egyptian Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -103,10 +106,27 @@ DefineSettlement("memphis", {
 	},
 	HistoricalOwners = {
 		-1450, "egypt", -- Memphis/Men-nofer was an Egyptian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-640, "assyria" -- Memphis was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-640, "assyria", -- Memphis was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "egypt" -- Memphis was part of the Egyptian Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "town-hall"
+	},
+	Regions = {"africa"}
+})
+
+DefineSettlement("momemphis", {
+	Name = "Momemphis",
+	MapTemplate = "earth",
+	Position = {4543, 1350},
+	CulturalNames = {
+		"egyptian", "Momemphis"
+	},
+	HistoricalOwners = {
+		-600, "egypt" -- Momemphis was part of the Egyptian Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+	},
+	HistoricalBuildings = {
+		-600, 0, "farm"
 	},
 	Regions = {"africa"}
 })
@@ -127,6 +147,22 @@ DefineSettlement("napata", {
 	Regions = {"africa"}
 })
 
+DefineSettlement("pelusium", {
+	Name = "Pelusium",
+	MapTemplate = "earth",
+	Position = {4579, 1340},
+	CulturalNames = {
+		"egyptian", "Pelusium"
+	},
+	HistoricalOwners = {
+		-600, "egypt" -- Pelusium was part of the Egyptian Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+	},
+	HistoricalBuildings = {
+		-600, 0, "farm"
+	},
+	Regions = {"africa"}
+})
+
 DefineSettlement("sais", {
 	Name = "Sais",
 	MapTemplate = "earth",
@@ -137,7 +173,8 @@ DefineSettlement("sais", {
 	},
 	HistoricalOwners = {
 		-1450, "egypt", -- Sais was an Egyptian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-640, "assyria" -- Sais was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-640, "assyria", -- Sais was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "egypt" -- Sais was the capital of the Egyptian Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -155,7 +192,8 @@ DefineSettlement("syene", {
 	},
 	HistoricalOwners = {
 		-1450, "egypt", -- Syene/Assuan was an Egyptian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-640, "assyria" -- Syene was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-640, "assyria", -- Syene was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "egypt" -- Syene's area was part of the Egyptian Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -173,7 +211,8 @@ DefineSettlement("tanis", {
 	},
 	HistoricalOwners = {
 		-1450, "egypt", -- Tanis was a part of Egypt about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-640, "assyria" -- Tanis was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-640, "assyria", -- Tanis was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "egypt" -- Tanis' area was part of the Egyptian Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -190,7 +229,8 @@ DefineSettlement("tentyris", {
 	},
 	HistoricalOwners = {
 		-1450, "egypt", -- Tentyris/Dendera was an Egyptian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-640, "assyria" -- Tentyris' area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-640, "assyria", -- Tentyris' area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "egypt" -- Tentyris' area was part of the Egyptian Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -208,7 +248,8 @@ DefineSettlement("thebes-egypt", {
 	},
 	HistoricalOwners = {
 		-1450, "egypt", -- Thebes/Diospolis/Luxor was an Egyptian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-640, "assyria" -- Thebes was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-640, "assyria", -- Thebes was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "egypt" -- Thebes was part of the Egyptian Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "town-hall"
@@ -225,7 +266,8 @@ DefineSettlement("this", {
 	},
 	HistoricalOwners = {
 		-1450, "egypt", -- This was an Egyptian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-640, "assyria" -- This' area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-640, "assyria", -- This' area was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-600, "egypt" -- This' area was part of the Egyptian Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
