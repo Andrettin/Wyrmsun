@@ -25,15 +25,33 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSettlement("calchedon", {
+	Name = "Calchedon",
+	MapTemplate = "earth",
+	Position = {4502, 1114},
+	CulturalNames = {
+		"persian", "Calchedon"
+	},
+	HistoricalOwners = {
+		-500, "persia" -- Calchedon was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+	},
+	HistoricalBuildings = {
+		-500, 0, "town-hall"
+	},
+	Regions = {"asia"}
+})
+
 DefineSettlement("sardis", {
 	Name = "Sardis",
 	MapTemplate = "earth",
 	Position = {4474, 1170},
 	CulturalNames = {
-		"hittite", "Sardis"
+		"hittite", "Sardis",
+		"persian", "Sardis"
 	},
 	HistoricalOwners = {
-		-750, "lydia" -- Sardis was a part of the Lydian Kingdom in the 750-625 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-750, "lydia", -- Sardis was a part of the Lydian Kingdom in the 750-625 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-500, "persia" -- Sardis was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-750, 0, "town-hall"

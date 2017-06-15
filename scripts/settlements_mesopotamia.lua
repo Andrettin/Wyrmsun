@@ -65,11 +65,13 @@ DefineSettlement("arbela", {
 	MapTemplate = "earth",
 	Position = {4841, 1224},
 	CulturalNames = {
-		"assyrian", "Arbela"
+		"assyrian", "Arbela",
+		"persian", "Arbela"
 	},
 	HistoricalOwners = {
 		-1450, "assyria", -- Arbela was an Assyrian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-600, "babylon" -- Arbela's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Arbela's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Arbela was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -100,12 +102,14 @@ DefineSettlement("babylon", {
 	Position = {4848, 1300},
 	CulturalNames = {
 		"assyrian", "Babylon",
-		"babylonian", "Babylon"
+		"babylonian", "Babylon",
+		"persian", "Babylon"
 	},
 	HistoricalOwners = {
 		-1450, "babylon", -- Babylon was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 		-640, "assyria", -- Babylon was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Babylon was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Babylon was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Babylon was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "town-hall"
@@ -434,24 +438,6 @@ DefineSettlement("sippar", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("susa", {
-	Name = "Susa",
-	MapTemplate = "earth",
-	Position = {4935, 1313},
-	CulturalNames = {
-		"assyrian", "Susa",
-		"babylonian", "Susa"
-	},
-	HistoricalOwners = {
-		-1450, "babylon", -- Susa was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-640, "assyria" -- Susa was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-	},
-	HistoricalBuildings = {
-		-1450, 0, "farm"
-	},
-	Regions = {"asia"}
-})
-
 DefineSettlement("tadmor", {
 	Name = "Tadmor",
 	MapTemplate = "earth",
@@ -477,12 +463,14 @@ DefineSettlement("thapsacus", {
 	Position = {4709, 1231},
 	CulturalNames = {
 		"babylonian", "Thapsacus",
-		"hebrew", "Tiphsach"
+		"hebrew", "Tiphsach",
+		"persian", "Thapsacus"
 	},
 	HistoricalOwners = {
 		-1025, "israel", -- Tiphsach/Thapsacus was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria", -- Tiphsach's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Thapsacus was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Thapsacus was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Thapsacus was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1025, 0, "farm"

@@ -94,6 +94,22 @@ DefineSettlement("athens", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
+DefineSettlement("byzantium", {
+	Name = "Byzantium",
+	MapTemplate = "earth",
+	Position = {4498, 1114},
+	CulturalNames = {
+		"persian", "Byzantium"
+	},
+	HistoricalOwners = {
+		-500, "persia" -- Byzantium was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+	},
+	HistoricalBuildings = {
+		-500, 0, "town-hall"
+	},
+	Regions = {"europe", "greece", "west-and-central-europe"}
+})
+
 DefineSettlement("corinth", {
 	Name = "Corinth",
 	MapTemplate = "earth",

@@ -33,7 +33,8 @@ DefineSettlement("amisus", {
 		"persian", "Amisus"
 	},
 	HistoricalOwners = {
-		-600, "media" -- Amisus was part of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "media", -- Amisus was part of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Amisus' area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-600, 0, "town-hall"
@@ -49,7 +50,8 @@ DefineSettlement("milid", {
 		"assyrian", "Milid"
 	},
 	HistoricalOwners = {
-		-720, "assyria" -- Milid was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-720, "assyria", -- Milid was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-500, "persia" -- Milid's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-720, 0, "farm"
@@ -65,7 +67,8 @@ DefineSettlement("phaselis", {
 		"hittite", "Phaselis"
 	},
 	HistoricalOwners = {
-		-600, "lydia" -- Phaselis was part of the Lydian Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "lydia", -- Phaselis was part of the Lydian Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Phaselis' area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-600, 0, "town-hall"
@@ -81,7 +84,8 @@ DefineSettlement("sinope", {
 		"hittite", "Sinope"
 	},
 	HistoricalOwners = {
-		-600, "lydia" -- Sinope was part of the Lydian Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "lydia", -- Sinope was part of the Lydian Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Sinope's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-600, 0, "town-hall"
@@ -94,10 +98,12 @@ DefineSettlement("tarsus", {
 	MapTemplate = "earth",
 	Position = {4632, 1208},
 	CulturalNames = {
-		"assyrian", "Tarsus"
+		"assyrian", "Tarsus",
+		"persian", "Tarsus"
 	},
 	HistoricalOwners = {
-		-720, "assyria" -- Tarsus was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-720, "assyria", -- Tarsus was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-500, "persia" -- Tarsus was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-720, 0, "farm"

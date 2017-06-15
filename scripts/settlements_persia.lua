@@ -33,7 +33,8 @@ DefineSettlement("arachotus", {
 		"persian", "Arachotus"
 	},
 	HistoricalOwners = {
-		-600, "media" -- Arachotus was part of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "media", -- Arachotus was part of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Arachotus' area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-600, 0, "town-hall"
@@ -49,7 +50,8 @@ DefineSettlement("bactra", {
 		"persian", "Bactra"
 	},
 	HistoricalOwners = {
-		-600, "media" -- Bactra was part of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "media", -- Bactra was part of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Bactra was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-600, 0, "town-hall"
@@ -65,7 +67,8 @@ DefineSettlement("cazaca", {
 		"persian", "Cazaca"
 	},
 	HistoricalOwners = {
-		-600, "media" -- Cazaca was part of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "media", -- Cazaca was part of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Cazaca's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-600, 0, "town-hall"
@@ -82,7 +85,8 @@ DefineSettlement("ecbatana", {
 	},
 	HistoricalOwners = {
 		-750, "mede-tribe", -- Ecbatana was part of the territory of the Medes in the 750-625 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "media" -- Ecbatana was part of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "media", -- Ecbatana was part of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Ecbatana was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-750, 0, "town-hall"
@@ -98,7 +102,8 @@ DefineSettlement("harmozia", {
 		"persian", "Harmozia"
 	},
 	HistoricalOwners = {
-		-600, "media" -- Harmozia was part of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "media", -- Harmozia was part of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Harmozia's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-600, 0, "town-hall"
@@ -114,7 +119,8 @@ DefineSettlement("pasargadae", {
 		"persian", "Pasargadae"
 	},
 	HistoricalOwners = {
-		-600, "media" -- Pasargadae was part of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "media", -- Pasargadae was part of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Pasargadae was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-600, 0, "town-hall"
@@ -130,10 +136,31 @@ DefineSettlement("rhagae", {
 		"persian", "Rhagae"
 	},
 	HistoricalOwners = {
-		-600, "media" -- Rhagae was part of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "media", -- Rhagae was part of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Rhagae's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-600, 0, "town-hall"
+	},
+	Regions = {"asia"}
+})
+
+DefineSettlement("susa", {
+	Name = "Susa",
+	MapTemplate = "earth",
+	Position = {4935, 1313},
+	CulturalNames = {
+		"assyrian", "Susa",
+		"babylonian", "Susa",
+		"persian", "Susa"
+	},
+	HistoricalOwners = {
+		-1450, "babylon", -- Susa was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-640, "assyria", -- Susa was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-500, "persia" -- Susa was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+	},
+	HistoricalBuildings = {
+		-1450, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -146,7 +173,8 @@ DefineSettlement("tarua", {
 		"persian", "Tarua"
 	},
 	HistoricalOwners = {
-		-600, "media" -- Tarua was part of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "media", -- Tarua was part of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Tarua's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-600, 0, "town-hall"
