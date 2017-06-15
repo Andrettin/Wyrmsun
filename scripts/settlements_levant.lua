@@ -35,7 +35,8 @@ DefineSettlement("aphek", {
 	HistoricalOwners = {
 		-953, "israel", -- Aphek was part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria", -- Aphek's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Aphek's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Aphek's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Aphek's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-953, 0, "farm"
@@ -53,7 +54,8 @@ DefineSettlement("aroer", {
 	HistoricalOwners = {
 		-953, "israel", -- Aroer was part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria", -- Aroer's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Aroer's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Aroer's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Aroer's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-953, 0, "farm"
@@ -70,7 +72,8 @@ DefineSettlement("arpad", {
 	},
 	HistoricalOwners = {
 		-720, "assyria", -- Arpad was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Arpad's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Arpad's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Arpad's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-720, 0, "farm"
@@ -87,7 +90,8 @@ DefineSettlement("arvad", {
 	},
 	HistoricalOwners = {
 		-1450, "phoenicia", -- Arvad was a Phoenician settlement about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-600, "babylon" -- Arvad's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Arvad's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Arvad's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -107,7 +111,8 @@ DefineSettlement("ascalon", {
 		-1025, "israel", -- Ascalon's area was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-953, "philistine-tribe", -- Ascalon was part of the territory of the Philistines in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria", -- Ascalon's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Ascalon's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Ascalon's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Ascalon's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1250, 0, "farm"
@@ -126,7 +131,8 @@ DefineSettlement("baalbec", {
 		-1250, "hatti", -- Baalbec was part of Hittite territory in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-1025, "israel", -- Baalbec's area was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria", -- Baalbec's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Baalbec's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Baalbec's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Baalbec's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1250, 0, "farm"
@@ -144,7 +150,8 @@ DefineSettlement("beersheba", {
 	HistoricalOwners = {
 		-1025, "israel", -- Beersheba was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-953, "judah", -- Beersheba was part of the Kingdom of Judah in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
-		-600, "babylon" -- Beersheba's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Beersheba's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Beersheba's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1025, 0, "farm"
@@ -161,7 +168,8 @@ DefineSettlement("berothai", {
 	},
 	HistoricalOwners = {
 		-1250, "canaanite-tribe", -- Berothai was part of the territory of the Canaanites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
-		-600, "babylon" -- Berothai's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Berothai's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Berothai's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1250, 0, "farm"
@@ -179,7 +187,8 @@ DefineSettlement("bethel", {
 	HistoricalOwners = {
 		-953, "israel", -- Bethel was part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-750, "judah", -- Bethel's area was part of the Kingdom of Judah in the 750-625 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Bethel's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Bethel's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Bethel's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-953, 0, "farm"
@@ -197,7 +206,8 @@ DefineSettlement("bethshean", {
 	HistoricalOwners = {
 		-953, "israel", -- Bethshean was part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria", -- Bethshean's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Bethshean's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Bethshean's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Bethshean's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-953, 0, "farm"
@@ -215,7 +225,8 @@ DefineSettlement("biblah", {
 	HistoricalOwners = {
 		-1025, "israel", -- Biblah was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria", -- Biblah's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Biblah's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Biblah's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Biblah's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1025, 0, "farm"
@@ -233,7 +244,8 @@ DefineSettlement("bosrah", {
 	HistoricalOwners = {
 		-1025, "israel", -- Bosrah was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria", -- Bosrah's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Bosrah's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Bosrah's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Bosrah's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1025, 0, "farm"
@@ -251,7 +263,8 @@ DefineSettlement("byblos", {
 	HistoricalOwners = {
 		-1450, "phoenicia", -- Gebal/Byblus was a Phoenician settlement about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 		-1250, "canaanite-tribe", -- Gebal's area was part of the territory of the Canaanites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
-		-600, "babylon" -- Gebal's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Gebal's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Gebal's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -272,6 +285,7 @@ DefineSettlement("carchemish", {
 		-1450, "egypt", -- Carchemish was subject to Egypt about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 		-720, "assyria", -- Carchemish was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 		-600, "babylon", -- Carchemish was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Carchemish's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -315,7 +329,8 @@ DefineSettlement("dan", {
 		-1025, "israel", -- Dan was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-953, "israel", -- Dan was part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria", -- Dan's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Dan's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Dan's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Dan's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1025, 0, "farm"
@@ -335,7 +350,8 @@ DefineSettlement("dor", {
 		-1250, "canaanite-tribe", -- Dor was part of the territory of the Canaanites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-953, "israel", -- Dor was part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria", -- Dor's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Dor's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Dor's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Dor's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1250, 0, "farm"
@@ -353,7 +369,8 @@ DefineSettlement("ekron", {
 	HistoricalOwners = {
 		-953, "philistine-tribe", -- Ekron was part of the territory of the Philistines in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria", -- Ekron's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Ekron's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Ekron's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Ekron's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-953, 0, "farm"
@@ -371,7 +388,8 @@ DefineSettlement("elath", {
 	},
 	HistoricalOwners = {
 		-1025, "israel", -- Elath was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
-		-720, "assyria" -- Elath was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-720, "assyria", -- Elath was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-500, "persia" -- Elath's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1025, 0, "farm"
@@ -389,7 +407,8 @@ DefineSettlement("ezion-geber", {
 	},
 	HistoricalOwners = {
 		-1025, "israel", -- Ezion-Geber was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
-		-720, "assyria" -- Ezion-Geber was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-720, "assyria", -- Ezion-Geber was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-500, "persia" -- Ezion-Geber's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1025, 0, "farm"
@@ -413,7 +432,8 @@ DefineSettlement("gaza", {
 		-1025, "israel", -- Gaza was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-953, "philistine-tribe", -- Gaza was part of the territory of the Philistines in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria", -- Gaza was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Gaza was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Gaza was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Gaza's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, -1250, "farm",
@@ -434,7 +454,8 @@ DefineSettlement("gilboa", {
 		-1025, "israel", -- Gilboa was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-953, "israel", -- Gilboa's area was part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria", -- Gilboa's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Gilboa's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Gilboa's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Gilboa's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1025, 0, "farm"
@@ -452,7 +473,8 @@ DefineSettlement("gilgal", {
 	HistoricalOwners = {
 		-953, "israel", -- Gilgal was part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-750, "judah", -- Gilgal's area was part of the Kingdom of Judah in the 750-625 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Gilgal's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Gilgal's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Gilgal's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-953, 0, "farm"
@@ -473,7 +495,8 @@ DefineSettlement("hamath", {
 		-1450, "egypt", -- Hamath was subject to Egypt about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 		-1025, "israel", -- Hamath was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria", -- Hamath was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Hamath's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Hamath's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Hamath's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -492,7 +515,8 @@ DefineSettlement("hazor", {
 		-1025, "israel", -- Hazor was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-953, "philistine-tribe", -- Hazor's area was part of the territory of the Philistines in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria", -- Hazor's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Hazor's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Hazor's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Hazor's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1025, 0, "farm"
@@ -511,7 +535,8 @@ DefineSettlement("hebron", {
 		-1250, "kenite-tribe", -- Hebron was part of the territory of the Kenites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-1025, "israel", -- Hebron was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-953, "judah", -- Hebron was part of the Kingdom of Judah in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
-		-600, "babylon" -- Hebron's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Hebron's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Hebron's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1250, -1025, "town-hall",
@@ -530,7 +555,8 @@ DefineSettlement("heshbon", {
 	HistoricalOwners = {
 		-953, "israel", -- Heshbon was part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria", -- Heshbon's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Heshbon's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Heshbon's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Heshbon's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-953, 0, "farm"
@@ -549,7 +575,8 @@ DefineSettlement("jabesh", {
 		-1025, "israel", -- Jabesh Gilead was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-953, "israel", -- Jabesh was part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria", -- Jabesh's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Jabesh's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Jabesh's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Jabesh's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1025, 0, "farm"
@@ -569,7 +596,8 @@ DefineSettlement("jericho", {
 		-1025, "israel", -- Jericho's area was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-953, "israel", -- Jericho was part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-750, "judah", -- Jericho's area was part of the Kingdom of Judah in the 750-625 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Jericho's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Jericho's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Jericho's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1250, -750, "town-hall",
@@ -611,7 +639,8 @@ DefineSettlement("jezreel", {
 	HistoricalOwners = {
 		-953, "israel", -- Jezreel was part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria", -- Jezreel's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Jezreel's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Jezreel's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Jezreel's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-953, 0, "farm"
@@ -633,7 +662,8 @@ DefineSettlement("joppa", {
 		-1025, "israel", -- Joppa was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-953, "philistine-tribe", -- Joppa was part of the territory of the Philistines in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria", -- Joppa was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Joppa's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Joppa's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Joppa's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1250, 0, "farm"
@@ -652,7 +682,8 @@ DefineSettlement("kadesh", {
 		-1450, "egypt", -- Kadesh was subject to Egypt about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 		-1025, "israel", -- Kadesh's area was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria", -- Kadesh's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Kadesh's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Kadesh's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Kadesh's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -688,7 +719,8 @@ DefineSettlement("kadesh-naphtali", {
 		-1025, "israel", -- Kadesh [Naphtali] was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-953, "israel", -- Kadesh Naphtali was part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria", -- Kadesh Naphtali's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Kadesh Naphtali's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Kadesh Naphtali's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Kadesh Naphtali's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1025, 0, "farm"
@@ -705,7 +737,8 @@ DefineSettlement("khatmar", {
 	},
 	HistoricalOwners = {
 		-720, "assyria", -- Khatmar/Aleppo was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Khatmar/Aleppo's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Khatmar/Aleppo's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Khatmar/Aleppo's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-720, 0, "farm"
@@ -729,7 +762,8 @@ DefineSettlement("megiddo", {
 		-1025, "israel", -- Megiddo's area was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-953, "israel", -- Megiddo's area was part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria", -- Megiddo was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Megiddo was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Megiddo was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Megiddo's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
@@ -748,7 +782,8 @@ DefineSettlement("samaria", {
 	HistoricalOwners = {
 		-953, "israel", -- Samaria was part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria", -- Samaria was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Samaria's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Samaria's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Samaria's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-953, 0, "farm"
@@ -766,7 +801,8 @@ DefineSettlement("selah", {
 	},
 	HistoricalOwners = {
 		-1025, "israel", -- Selah was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
-		-720, "assyria" -- Selah was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-720, "assyria", -- Selah was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-500, "persia" -- Selah's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1025, 0, "farm"
@@ -787,7 +823,8 @@ DefineSettlement("shechem", {
 		-1025, "israel", -- Shechem's area was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-953, "israel", -- Shechem was part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria", -- Shechem's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Shechem's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Shechem's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Shechem's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1250, 0, "farm"
@@ -807,7 +844,8 @@ DefineSettlement("shiloh", {
 		-1025, "israel", -- Shiloh's area was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-953, "israel", -- Shiloh was part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-750, "judah", -- Shiloh's area was part of the Kingdom of Judah in the 750-625 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Shiloh's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Shiloh's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Shiloh's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1250, -750, "town-hall",
@@ -826,7 +864,8 @@ DefineSettlement("shunem", {
 	HistoricalOwners = {
 		-953, "israel", -- Shunem was part of the Kingdom of Israel in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
 		-720, "assyria", -- Shunem's area was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon" -- Shunem's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Shunem's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Shunem's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-953, 0, "farm"
@@ -844,7 +883,8 @@ DefineSettlement("sidon", {
 	HistoricalOwners = {
 		-1450, "phoenicia", -- Sidon was a Phoenician settlement about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 		-1250, "canaanite-tribe", -- Sidon was part of the territory of the Canaanites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
-		-600, "babylon" -- Sidon's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-600, "babylon", -- Sidon's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Sidon's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"

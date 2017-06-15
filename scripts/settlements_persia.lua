@@ -59,6 +59,22 @@ DefineSettlement("bactra", {
 	Regions = {"asia"}
 })
 
+DefineSettlement("bagistana", {
+	Name = "Bagistana",
+	MapTemplate = "earth",
+	Position = {4918, 1277},
+	CulturalNames = {
+		"persian", "Bagistana"
+	},
+	HistoricalOwners = {
+		-500, "persia" -- Bagistana was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+	},
+	HistoricalBuildings = {
+		-500, 0, "town-hall"
+	},
+	Regions = {"asia"}
+})
+
 DefineSettlement("cazaca", {
 	Name = "Cazaca",
 	MapTemplate = "earth",
@@ -72,6 +88,22 @@ DefineSettlement("cazaca", {
 	},
 	HistoricalBuildings = {
 		-600, 0, "town-hall"
+	},
+	Regions = {"asia"}
+})
+
+DefineSettlement("cyropolis", {
+	Name = "Cyropolis",
+	MapTemplate = "earth",
+	Position = {5395, 1153},
+	CulturalNames = {
+		"persian", "Cyropolis"
+	},
+	HistoricalOwners = {
+		-500, "persia" -- Cyropolis was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+	},
+	HistoricalBuildings = {
+		-500, 0, "town-hall"
 	},
 	Regions = {"asia"}
 })
@@ -124,6 +156,22 @@ DefineSettlement("pasargadae", {
 	},
 	HistoricalBuildings = {
 		-600, 0, "town-hall"
+	},
+	Regions = {"asia"}
+})
+
+DefineSettlement("persepolis", {
+	Name = "Persepolis",
+	MapTemplate = "earth",
+	Position = {5040, 1371},
+	CulturalNames = {
+		"persian", "Persepolis"
+	},
+	HistoricalOwners = {
+		-500, "persia" -- Persepolis was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+	},
+	HistoricalBuildings = {
+		-500, 0, "town-hall"
 	},
 	Regions = {"asia"}
 })

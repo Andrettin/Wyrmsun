@@ -25,71 +25,50 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("calchedon", {
-	Name = "Calchedon",
+DefineSettlement("ammonium", {
+	Name = "Ammonium",
 	MapTemplate = "earth",
-	Position = {4502, 1114},
+	Position = {4431, 1385},
 	CulturalNames = {
-		"persian", "Calchedon"
+		"persian", "Ammonium"
 	},
 	HistoricalOwners = {
-		-500, "persia" -- Calchedon was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Ammonium was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-500, 0, "town-hall"
 	},
-	Regions = {"asia"}
+	Regions = {"africa"}
 })
 
-DefineSettlement("dascylium", {
-	Name = "Dascylium",
+DefineSettlement("barca", {
+	Name = "Barca",
 	MapTemplate = "earth",
-	Position = {4495, 1129},
+	Position = {4332, 1306},
 	CulturalNames = {
-		"persian", "Dascylium"
+		"persian", "Barca"
 	},
 	HistoricalOwners = {
-		-500, "persia" -- Dascylium was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Barca was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-500, 0, "town-hall"
 	},
-	Regions = {"asia"}
+	Regions = {"africa"}
 })
 
-DefineSettlement("sardis", {
-	Name = "Sardis",
+DefineSettlement("cyrene", {
+	Name = "Cyrene",
 	MapTemplate = "earth",
-	Position = {4474, 1170},
+	Position = {4342, 1301},
 	CulturalNames = {
-		"hittite", "Sardis",
-		"persian", "Sardis"
+		"persian", "Cyrene"
 	},
 	HistoricalOwners = {
-		-750, "lydia", -- Sardis was a part of the Lydian Kingdom in the 750-625 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-500, "persia" -- Sardis was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Cyrene was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-750, 0, "town-hall"
+		-500, 0, "town-hall"
 	},
-	Regions = {"asia"}
-})
-
-DefineSettlement("troy", {
-	Name = "Troy",
-	MapTemplate = "earth",
-	Position = {4437, 1140},
-	CulturalNames = {
-		"greek", "Ilium", -- Troy/Ilium
-		"hittite", "Troy"
-	},
-	HistoricalOwners = {
-		-1450, "mycenae", -- Troy was a center of the highest Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-600, "lydia", -- Troy's area was part of the Lydian Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
-		-500, "ionia" -- Greece at the time of the war with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
-	},
-	HistoricalBuildings = {
-		-1450, 0, "town-hall"
-	},
-	Regions = {"asia"}
+	Regions = {"africa"}
 })

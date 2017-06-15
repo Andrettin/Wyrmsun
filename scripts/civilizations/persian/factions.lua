@@ -142,7 +142,8 @@ DefineFaction("persia", {
 	Civilization = "persian",
 	Type = "polity",
 	Colors = {"yellow", "green"},
-	DefaultTier = "kingdom"
+	DefaultTier = "kingdom",
+	DefaultStartPos = {5040, 1371} -- Persepolis
 })
 
 -- Non-Playable
