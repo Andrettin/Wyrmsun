@@ -30,5 +30,6 @@ DefineFaction("babylon", {
 	Civilization = "babylonian",
 	Type = "polity",
 	Colors = {"red"},
-	DefaultTier = "kingdom"
+	DefaultTier = "kingdom",
+	DefaultStartPos = {4848, 1300} -- Babylon
 })

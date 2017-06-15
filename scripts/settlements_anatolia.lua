@@ -36,7 +36,7 @@ DefineSettlement("amisus", {
 		-600, "media" -- Amisus was part of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-600, 0, "farm"
+		-600, 0, "town-hall"
 	},
 	Regions = {"asia"}
 })
@@ -68,7 +68,7 @@ DefineSettlement("phaselis", {
 		-600, "lydia" -- Phaselis was part of the Lydian Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-600, 0, "farm"
+		-600, 0, "town-hall"
 	},
 	Regions = {"asia"}
 })
@@ -84,7 +84,7 @@ DefineSettlement("sinope", {
 		-600, "lydia" -- Sinope was part of the Lydian Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-600, 0, "farm"
+		-600, 0, "town-hall"
 	},
 	Regions = {"asia"}
 })

@@ -51,6 +51,7 @@ DefineSettlement("troy", {
 	},
 	HistoricalOwners = {
 		-1450, "mycenae", -- Troy was a center of the highest Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-600, "lydia", -- Troy's area was part of the Lydian Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 		-500, "ionia" -- Greece at the time of the war with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
 	},
 	HistoricalBuildings = {
