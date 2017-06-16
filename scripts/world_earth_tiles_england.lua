@@ -156,17 +156,6 @@ DefineWorldMapTile({476, 110}, {
 	}
 })
 
-DefineWorldMapTile({477, 102}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"celt", "Eboracum",
-		"latin", "Eboracum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	FactionCulturalSettlementNames = {
-		"anglo-saxon", "england", "York" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-	}
-})
-
 DefineWorldMapTile({477, 108}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {

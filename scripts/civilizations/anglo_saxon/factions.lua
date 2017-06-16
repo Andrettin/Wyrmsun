@@ -67,7 +67,6 @@ DefineFaction("bernice-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England"
 	Colors = {"brown"},
 	DevelopsTo = {"bernicia", "northumbria", "england", "scotland"},
 	FactionUpgrade = "upgrade-faction-bernice-tribe",
-	DefaultAI = "sea-attack",
 	Description = "The Bernice were an Anglian people who established themselves on the Northumbrian coast, eventually managing to conquer the surrounding Celtic territories."
 })
 
@@ -78,7 +77,6 @@ DefineFaction("dere-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Colors = {"blue"},
 	DevelopsTo = {"deira", "northumbria", "england", "scotland"},
 	FactionUpgrade = "upgrade-faction-dere-tribe",
-	DefaultAI = "sea-attack",
 	Description = "The Dere were a group of Anglian peoples, who originally dwelled in the central and eastern parts of modern Yorkshire. Their name comes from the British word \"deifr\" (meaning \"waters\"), likely due to their initial settlements being located at the confluence of multiple rivers into the Humber."
 })
 
@@ -89,7 +87,6 @@ DefineFaction("gumeninga-tribe", { -- Source: Frank Stenton, "Anglo-Saxon Englan
 	Colors = {"brown"},
 	DevelopsTo = {"england"},
 	FactionUpgrade = "upgrade-faction-gumeninga-tribe", -- since all we know about them is their religious location, it makes sense to give them a priest-related bonus
-	DefaultAI = "sea-attack",
 	Description = "The Gumeningas were an Anglo-Saxon tribe who inhabited the area of Middlesex.",
 	Background = "The name of the Gumeningas was present in the place name \"Gumeninga hearh\" (the Old English name for Harrow on the Hill), meaning \"the holy place of the Gumeningas\"."
 })
@@ -102,7 +99,6 @@ DefineFaction("bernicia", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	DefaultTier = "kingdom",
 	DevelopsTo = {"northumbria", "england", "scotland"},
 	FactionUpgrade = "upgrade-faction-bernicia",
-	DefaultAI = "sea-attack",
 	Description = "Bernicia was the kingdom founded by the Bernice people in Northumbria."
 })
 
@@ -114,7 +110,6 @@ DefineFaction("deira", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, 
 	DefaultTier = "kingdom",
 	DevelopsTo = {"northumbria", "england", "scotland"},
 	FactionUpgrade = "upgrade-faction-deira",
-	DefaultAI = "sea-attack",
 	Description = "Deira was the kingdom founded by the Dere people in Northumbria."
 })
 
@@ -126,7 +121,6 @@ DefineFaction("east-anglia", {
 	DefaultTier = "kingdom",
 	DevelopsTo = {"england"},
 	FactionUpgrade = "upgrade-faction-east-anglia",
-	DefaultAI = "sea-attack",
 	Description = ""
 })
 
@@ -138,7 +132,6 @@ DefineFaction("essex", {
 	DefaultTier = "kingdom",
 	DevelopsTo = {"england"},
 	FactionUpgrade = "upgrade-faction-essex",
-	DefaultAI = "sea-attack",
 	Description = ""
 })
 
@@ -159,7 +152,6 @@ DefineFaction("kent", {
 	DefaultTier = "kingdom",
 	DevelopsTo = {"england"},
 	FactionUpgrade = "upgrade-faction-kent",
-	DefaultAI = "sea-attack",
 	Description = "",
 	HistoricalUpgrades = {
 		597, "upgrade-deity-christian-god", true, -- king Æthelberht of Kent converted to Christianity in 597 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 105-106.
@@ -175,7 +167,6 @@ DefineFaction("mercia", {
 	DefaultTier = "kingdom",
 	DevelopsTo = {"england"},
 	FactionUpgrade = "upgrade-faction-mercia",
-	DefaultAI = "sea-attack",
 	Description = ""
 })
 
@@ -187,7 +178,6 @@ DefineFaction("middle-anglia", {
 	DefaultTier = "kingdom",
 	DevelopsTo = {"england"},
 	FactionUpgrade = "upgrade-faction-middle-anglia",
-	DefaultAI = "sea-attack",
 	Description = ""
 })
 
@@ -199,7 +189,6 @@ DefineFaction("middlesex", {
 	DefaultTier = "kingdom",
 	DevelopsTo = {"england"},
 	FactionUpgrade = "upgrade-faction-middlesex",
-	DefaultAI = "sea-attack",
 	Description = ""
 })
 
@@ -211,7 +200,6 @@ DefineFaction("northumbria", {
 	DefaultTier = "kingdom",
 	DevelopsTo = {"england", "scotland"},
 	FactionUpgrade = "upgrade-faction-northumbria",
-	DefaultAI = "sea-attack",
 	HistoricalUpgrades = {
 		627, "upgrade-deity-christian-god", true, -- king Edwin of Northumbria was baptized in 627 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 115.
 		632, "upgrade-deity-christian-god", false, -- the Christian mission to Northumbria supported by king Edwin collapsed in 632 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 115.
@@ -227,7 +215,6 @@ DefineFaction("sussex", {
 	DefaultTier = "kingdom",
 	DevelopsTo = {"england"},
 	FactionUpgrade = "upgrade-faction-sussex",
-	DefaultAI = "sea-attack",
 	Description = ""
 })
 
@@ -239,8 +226,8 @@ DefineFaction("wessex", {
 	DefaultTier = "kingdom",
 	DevelopsTo = {"england"},
 	FactionUpgrade = "upgrade-faction-wessex",
-	DefaultAI = "sea-attack",
-	Description = ""
+	Description = "",
+	DefaultStartPos = {3810, 885} -- Winchester
 })
 
 DefineFaction("england", {

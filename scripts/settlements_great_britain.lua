@@ -522,7 +522,7 @@ DefineSettlement("york", {
 		"anglo-saxon", "Eoforwic", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"celt", "Eboracum",
 --		"english", "York",
-		"latin", "Eboracum"
+		"latin", "Eboracum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
 		500, "dere-tribe", -- the Dere (a collection of Anglian peoples) were in possession of York in 500 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
