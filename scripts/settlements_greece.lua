@@ -66,10 +66,10 @@ DefineSettlement("argos", {
 		"greek", "Argos"
 	},
 	HistoricalOwners = {
-		-500, "argos" -- Greece at the time of the war with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
+		-700, "argos" -- Argos was part of the state of Argolis/Argos in the 700-600 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-500, 0, "town-hall"
+		-700, 0, "town-hall"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -84,7 +84,7 @@ DefineSettlement("athens", {
 	},
 	HistoricalOwners = {
 		-1450, "mycenae", -- Athens was a center of the highest Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-500, "athens", -- Greece at the time of the war with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
+		-700, "athens", -- Athens was part of the state of Attica/Athens in the 700-600 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 		-146, "rome", -- Athens was acquired by Rome in 146 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1740, "turkey" -- Athens was in possession of the Ottoman Empire in 1740; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	},
@@ -118,11 +118,12 @@ DefineSettlement("corinth", {
 		"greek", "Corinth"
 	},
 	HistoricalOwners = {
+		-700, "argos", -- Corinth was part of the state of Argolis/Argos in the 700-600 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 		-500, "corinth", -- Greece at the time of the war with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
 		-146, "" -- Corinth was destroyed by Rome in 146 BC; Source: Tenney Frank, "Mercantilism and Rome's Foreign Policy", 1913, p. 243.
 	},
 	HistoricalBuildings = {
-		-500, -146, "town-hall"
+		-700, -146, "town-hall"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -375,6 +376,38 @@ DefineSettlement("pagasae", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
+DefineSettlement("sicyon", {
+	Name = "Sicyon",
+	MapTemplate = "earth",
+	Position = {4356, 1183},
+	CulturalNames = {
+		"greek", "Sicyon"
+	},
+	HistoricalOwners = {
+		-700, "argos" -- Sicyon was part of the state of Argolis/Argos in the 700-600 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+	},
+	HistoricalBuildings = {
+		-700, 0, "farm"
+	},
+	Regions = {"europe", "greece", "west-and-central-europe"}
+})
+
+DefineSettlement("thebes", {
+	Name = "Thebes",
+	MapTemplate = "earth",
+	Position = {4369, 1176},
+	CulturalNames = {
+		"greek", "Thebes"
+	},
+	HistoricalOwners = {
+		-700, "thebes" -- Thebes was part of the state of Boeotia/Thebes in the 700-600 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+	},
+	HistoricalBuildings = {
+		-700, 0, "town-hall"
+	},
+	Regions = {"europe", "greece", "west-and-central-europe"}
+})
+
 DefineSettlement("tiryns", {
 	Name = "Tiryns",
 	MapTemplate = "earth",
@@ -384,7 +417,7 @@ DefineSettlement("tiryns", {
 	},
 	HistoricalOwners = {
 		-1450, "mycenae", -- Tiryns was a center of the highest Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-500, "argos" -- Greece at the time of the war with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
+		-700, "argos" -- Tiryns was part of the state of Argolis/Argos in the 700-600 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
