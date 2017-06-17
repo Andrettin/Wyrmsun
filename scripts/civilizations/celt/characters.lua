@@ -37,7 +37,13 @@ DefineCharacter("aedan-mac-gabrain", { -- Source: Frank Stenton, "Anglo-Saxon En
 	-- attacked the Bernicians in 603 AD
 	HistoricalTitles = {
 		"head-of-state", 574, 0, "celt", "argyll"
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "argyll") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("aidan", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 118.
@@ -74,7 +80,13 @@ DefineCharacter("bruide-mac-beli", { -- Source: Frank Stenton, "Anglo-Saxon Engl
 	DeathDate = 693, -- died
 	HistoricalTitles = {
 		"head-of-state", 672, 693, "celt", "pict-tribe" -- became king of the Picts in 672
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "pict-tribe") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("dicuil", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 40.

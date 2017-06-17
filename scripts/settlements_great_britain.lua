@@ -403,11 +403,11 @@ DefineSettlement("reculver", {
 --		"english", "Reculver"
 	},
 	HistoricalOwners = {
-		604, "kent" -- Reculver was a part of Kent in 669 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 111.
+		669, "kent" -- Reculver was a part of Kent in 669 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 111.
 	},
 	HistoricalBuildings = {
 		-- the area is too small to accomodate the settlement's buildings, given the other more important settlements nearby
---		604, 0, "temple" -- a church was founded in Reculver in 669 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 111.
+--		669, 0, "temple" -- a church was founded in Reculver in 669 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 111.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })

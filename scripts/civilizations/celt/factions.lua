@@ -155,11 +155,43 @@ DefineFaction("argyll", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971,
 	DefaultTier = "kingdom"
 })
 
+DefineFaction("dalriada", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	Name = "Dalriada",
+	Civilization = "celt", -- Scottish kingdom
+	Type = "polity",
+	Colors = {"brown"},
+	DefaultTier = "kingdom"
+})
+
+DefineFaction("ireland", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	Name = "Ireland",
+	Civilization = "celt",
+	Type = "polity",
+	Colors = {"brown"},
+	DefaultTier = "kingdom"
+})
+
 DefineFaction("meath", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 88.
 	Name = "Meath",
 	Civilization = "celt", -- it was an Irish kingdom
 	Type = "polity",
 	Colors = {"red"},
+	DefaultTier = "kingdom"
+})
+
+DefineFaction("pictland", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	Name = "Pictland",
+	Civilization = "celt",
+	Type = "polity",
+	Colors = {"black"},
+	DefaultTier = "kingdom"
+})
+
+DefineFaction("scotland-celtic", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	Name = "Scotland",
+	Civilization = "celt",
+	Type = "polity",
+	Colors = {"brown"},
 	DefaultTier = "kingdom"
 })
 

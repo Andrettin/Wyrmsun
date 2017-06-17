@@ -34,7 +34,13 @@ DefineCharacter("ambiorix", { -- Source: H. H. Howorth, "The Ethnology of German
 	Date = -54,
 	HistoricalTitles = {
 		"head-of-state", -54, 0, "celt", "eburones-tribe" -- was chieftain of the Eburones tribe in 54 BC (together with Cativolcus)
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "eburones-tribe") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("cativolcus", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223, 225.
@@ -46,7 +52,13 @@ DefineCharacter("cativolcus", { -- Source: H. H. Howorth, "The Ethnology of Germ
 	Date = -54,
 	DeathDate = -53, -- poisoned himself after the Romans devastated the lands of his people
 	ViolentDeath = true,
-	Trait = "upgrade-old"
+	Trait = "upgrade-old",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "eburones-tribe") then
+			return true
+		end
+		return false
+	end
 	-- was chieftain of the Eburones tribe in 54 BC (together with Ambiorix)
 })
 
@@ -59,5 +71,11 @@ DefineCharacter("indutiomarus", { -- Source: H. H. Howorth, "The Ethnology of Ge
 	Date = -54,
 	HistoricalTitles = {
 		"head-of-state", -54, 0, "celt", "treviri-tribe" -- was chieftain of the Treviri in 54 BC
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "treviri-tribe") then
+			return true
+		end
+		return false
+	end
 })

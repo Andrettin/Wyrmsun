@@ -33,7 +33,13 @@ DefineCharacter("pwyll", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch de
 	Faction = "dyfed",
 	HistoricalTitles = {
 --		"head-of-state", 0, 0, "celt", "dyfed" -- prince of Dyfed, lord of the seven Cantrefis of Dyfed
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "dyfed") then
+			return true
+		end
+		return false
+	end
 	-- married to Rhiannon
 })
 
@@ -87,7 +93,13 @@ DefineCharacter("pendaran-dyfed", { -- Source: Bernhard Maier (trans.), "Das Sag
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
-	Faction = "dyfed"
+	Faction = "dyfed",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "dyfed") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("pryderi", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 31, 33-35.
@@ -100,8 +112,14 @@ DefineCharacter("pryderi", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch 
 	Father = "pwyll",
 	Mother = "rhiannon",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "celt", "gwent-is-coed" -- prince of Dyfed
-	}
+		"head-of-state", 0, 0, "celt", "dyfed" -- prince of Dyfed
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "dyfed") then
+			return true
+		end
+		return false
+	end
 	-- married to Cigfa
 })
 
@@ -146,7 +164,13 @@ DefineCharacter("maelgwn", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
 	Faction = "gwynedd",
-	DeathDate = 547
+	DeathDate = 547,
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "gwynedd") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("dutigern", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 76.
@@ -175,7 +199,13 @@ DefineCharacter("solomon-of-powys", { -- Source: Frank Stenton, "Anglo-Saxon Eng
 	Date = 613, -- at some point between 613 and 616, he was defeated by the Bernicians at Chester
 	HistoricalTitles = {
 		"head-of-state", 613, 0, "celt", "powys" -- king of Powys; at some point between 613 and 616, he was defeated by the Bernicians at Chester
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "powys") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("cadwallon", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 80-81.
@@ -189,7 +219,13 @@ DefineCharacter("cadwallon", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 	ViolentDeath = true,
 	HistoricalTitles = {
 		"head-of-state", 632, 0, "celt", "gwynedd" -- king of Gwynedd; in 632 AD attacked Northumbria, and fought Edwin in Hatfield Chase, ending with the latter's death and that of Edwin's son Osfrith
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "gwynedd") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("cadafael", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 83-84.
@@ -198,7 +234,13 @@ DefineCharacter("cadafael", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
 	Faction = "gwynedd",
-	Date = 654 -- went with Penda to attack Oswiu of Bernicia
+	Date = 654, -- went with Penda to attack Oswiu of Bernicia
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "gwynedd") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("certic", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 80.
@@ -210,5 +252,11 @@ DefineCharacter("certic", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	-- was a contemporary of Edwin of Deira, who conquered his kingdom
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "celt", "elmet" -- king of Elmet
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "elmet") then
+			return true
+		end
+		return false
+	end
 })
