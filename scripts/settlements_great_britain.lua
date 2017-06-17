@@ -150,6 +150,23 @@ DefineSettlement("chester", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
+DefineSettlement("colchester", {
+	Name = "Colchester",
+	MapTemplate = "earth",
+	Position = {3861, 867},
+	CulturalNames = {
+		"anglo-saxon", "Colneceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+--		"english", "Colchester"
+	},
+	HistoricalOwners = {
+		802, "essex" -- Chester was a part of Essex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		802, 0, "town-hall"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
 DefineSettlement("dorchester", {
 	Name = "Dorchester",
 	MapTemplate = "earth",

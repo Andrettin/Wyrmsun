@@ -2259,6 +2259,15 @@ DefineCivilization("babylonian", {
 	Playable = false
 })
 
+DefineCivilization("chinese", {
+	Display = "Chinese",
+	Visible = true,
+	Species = "human",
+	ParentCivilization = "greek",
+	Adjective = "Chinese",
+	Playable = false
+})
+
 DefineCivilization("egyptian", {
 	Display = "Egyptian",
 	Visible = true,
