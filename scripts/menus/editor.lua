@@ -408,7 +408,7 @@ function RunEditorPlayerProperties()
 	menu:addLabel("Player Properties", sizeX / 2, 11)
 
 	local types = {"neutral", "nobody", "computer", "person", "rescue-passive", "rescue-active"}
-	local civilization_names = GetCivilizations()
+	local civilization_names = GetCivilizations(true)
 	local faction_list = {}
 	local ais = { "passive", "land-attack", "northern-wastelands-goblins", "grand-strategy-battle" }
 
@@ -418,7 +418,7 @@ function RunEditorPlayerProperties()
 	for i = 1,(16 - 1) do -- allow only 16 players in the editor
 		player_properties[i] = {}
 		player_properties[i]["Type"] = Map.Info.PlayerType[i-1] - 2
-		player_properties[i]["Civilization"] = Players[i-1].Race
+		player_properties[i]["Civilization"] = GetPlayerData(i-1, "RaceName")
 		player_properties[i]["Faction"] = GetPlayerData(i-1, "Faction")
 		player_properties[i]["AI"] = 0
 		for j = 1,table.getn(ais) do
@@ -447,7 +447,7 @@ function RunEditorPlayerProperties()
 	
 	local function PlayerChanged()
 		current_player_type:setSelected(player_properties[current_player:getSelected() + 1].Type)
-		current_player_civilization:setSelected(player_properties[current_player:getSelected() + 1].Civilization)
+		current_player_civilization:setSelected(GetElementIndexFromArray(civilization_names, player_properties[current_player:getSelected() + 1].Civilization) - 1)
 		
 		faction_list = GetCivilizationFactionNames(civilization_names[current_player_civilization:getSelected() + 1])
 		table.insert(faction_list, "")
@@ -486,7 +486,7 @@ function RunEditorPlayerProperties()
 	
 	current_player_civilization_label = menu:addLabel(_("Civilization:"), 10, 14 + 36 * 3, Fonts["game"], false)
 	current_player_civilization = menu:addDropDown(civilization_names, (sizeX / 2) - 60 - 10, 11 + 36 * 3, function(dd)
-		player_properties[current_player:getSelected() + 1].Civilization = current_player_civilization:getSelected()
+		player_properties[current_player:getSelected() + 1].Civilization = civilization_names[current_player_civilization:getSelected() + 1]
 		PlayerChanged()
 	end)
 	current_player_civilization:setSize(236, 20)
@@ -525,13 +525,17 @@ function RunEditorPlayerProperties()
 	menu:addHalfButton("~!OK", "o", 20 + 48, sizeY - 40,
 		function()
 			for i = 0,(PlayerMax - 2) do
-				Map.Info.PlayerType[i] = player_properties[i + 1].Type + 2
-				Players[i].Race = player_properties[i + 1].Civilization
-				SetPlayerData(i, "Faction", player_properties[i + 1].Faction)
-				Players[i].AiName = ais[player_properties[i + 1].AI + 1]
-				Players[i].Resources[1] = player_properties[i + 1].Copper
-				Players[i].Resources[2] = player_properties[i + 1].Lumber
-				Players[i].Resources[5] = player_properties[i + 1].Stone
+				if (i < table.getn(player_properties)) then
+					Map.Info.PlayerType[i] = player_properties[i + 1].Type + 2
+					Players[i].Race = GetCivilizationID(player_properties[i + 1].Civilization)
+					SetPlayerData(i, "Faction", player_properties[i + 1].Faction)
+					Players[i].AiName = ais[player_properties[i + 1].AI + 1]
+					Players[i].Resources[1] = player_properties[i + 1].Copper
+					Players[i].Resources[2] = player_properties[i + 1].Lumber
+					Players[i].Resources[5] = player_properties[i + 1].Stone
+				else
+					break
+				end
 			end
 			menu:stop()
 		end

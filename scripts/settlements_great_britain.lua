@@ -79,7 +79,7 @@ DefineSettlement("bamburgh", {
 DefineSettlement("bath", {
 	Name = "Bath",
 	MapTemplate = "earth",
-	Position = {3786, 877},
+	Position = {3781, 879},
 	CulturalNames = {
 		"anglo-saxon", "Bathum", -- Old English name of Bath; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"celt", "Aquae Solis",
@@ -166,12 +166,14 @@ DefineSettlement("chester", {
 		"anglo-saxon", "Legaceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"celt", "Deva",
 --		"english", "Chester", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-		"latin", "Deva" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"latin", "Deva" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
+		410, "rome", -- Deva/Chester was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 		802, "mercia" -- Chester was a part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 	},
 	HistoricalBuildings = {
+		410, 802, "town-hall",
 		802, 0, "farm"
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
@@ -564,6 +566,44 @@ DefineSettlement("salisbury", {
 	},
 	HistoricalBuildings = {
 		802, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("silchester", {
+	Name = "Silchester",
+	MapTemplate = "earth",
+	Position = {3814, 878},
+	CulturalNames = {
+		"celt", "Calleva",
+--		"english", "Silchester",
+		"latin", "Calleva" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+	},
+	HistoricalOwners = {
+		410, "rome", -- Calleva/Silchester was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+		802, "wessex" -- Silchester's area was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		410, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("speen", {
+	Name = "Speen",
+	MapTemplate = "earth",
+	Position = {3809, 877},
+	CulturalNames = {
+		"celt", "Spinae",
+--		"english", "Speen",
+		"latin", "Spinae" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+	},
+	HistoricalOwners = {
+		410, "rome", -- Spinae/Speen was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+		802, "wessex" -- Spinae's area was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		410, 0, "farm"
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
