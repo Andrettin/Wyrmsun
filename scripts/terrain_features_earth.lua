@@ -240,6 +240,7 @@ DefineTerrainFeature("seine-river", { -- Source: William R. Shepherd, "Historica
 DefineTerrainFeature("severn-river", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	Name = "Severn River",
 	TerrainType = "shallow-water",
+	Color = {0, 144, 208},
 	World = "Earth",
 	CulturalNames = {
 		"anglo-saxon", "Saefern River", -- "Sæfern"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.

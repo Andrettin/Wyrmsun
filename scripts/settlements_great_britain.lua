@@ -82,13 +82,16 @@ DefineSettlement("bath", {
 	Position = {3786, 877},
 	CulturalNames = {
 		"anglo-saxon", "Bathum", -- Old English name of Bath; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
---		"english", "Bath"
+		"celt", "Aquae Solis",
+--		"english", "Bath",
+		"latin", "Aquae Solis" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
+		410, "rome", -- Aquae Solis/Bath was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 		802, "mercia" -- Bath was a part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 	},
 	HistoricalBuildings = {
-		802, 0, "town-hall"
+		410, 0, "farm"
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -300,6 +303,26 @@ DefineSettlement("exeter", {
 	},
 	HistoricalBuildings = {
 		410, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("gloucester", {
+	Name = "Gloucester",
+	MapTemplate = "earth",
+	Position = {3783, 873},
+	CulturalNames = {
+		"anglo-saxon", "Gleawanceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"celt", "Glevum",
+--		"english", "Gloucester",
+		"latin", "Glevum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+	},
+	HistoricalOwners = {
+		410, "rome", -- Glevum/Gloucester was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+		802, "mercia" -- Gloucester area was a part of Mercia in 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		410, 0, "town-hall"
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
