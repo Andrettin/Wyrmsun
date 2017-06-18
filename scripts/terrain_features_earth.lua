@@ -47,8 +47,8 @@ DefineTerrainFeature("avon-river", {
 	Name = "Avon River",
 	TerrainType = "shallow-water",
 	World = "Earth",
-	FactionCulturalNames = {
-		"anglo-saxon", "angle-tribe", "Afene River" -- Old English name of the Avon River (the source isn't explicit on which Avon River this refers to, but it is presumably this one); Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+	CulturalNames = {
+		"anglo-saxon", "Afene River" -- Old English name of the Avon River (the source isn't explicit on which Avon River this refers to, but it is presumably this one); Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 	}
 })
 
@@ -67,8 +67,8 @@ DefineTerrainFeature("dee-river", { -- Source: William R. Shepherd, "Historical 
 	Name = "Dee River",
 	TerrainType = "shallow-water",
 	World = "Earth",
-	FactionCulturalNames = {
-		"anglo-saxon", "england", "Dee River" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+	CulturalNames = {
+--		"english", "Dee River" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	}
 })
 
@@ -198,8 +198,8 @@ DefineTerrainFeature("orwell-river", {
 	Name = "Orwell River",
 	TerrainType = "shallow-water",
 	World = "Earth",
-	FactionCulturalNames = {
-		"anglo-saxon", "angle-tribe", "Arwe River" -- Old English name of the Orwell River (the source isn't explicit on which Avon River this refers to, but it is presumably this one); Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+	CulturalNames = {
+		"anglo-saxon", "Arwe River" -- Old English name of the Orwell River (the source isn't explicit on which Avon River this refers to, but it is presumably this one); Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 	}
 })
 
@@ -241,8 +241,9 @@ DefineTerrainFeature("severn-river", { -- Source: William R. Shepherd, "Historic
 	Name = "Severn River",
 	TerrainType = "shallow-water",
 	World = "Earth",
-	FactionCulturalNames = {
-		"anglo-saxon", "england", "Severn River" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+	CulturalNames = {
+		"anglo-saxon", "Saefern River", -- "Sæfern"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
+--		"english", "Severn River" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	}
 })
 
@@ -258,9 +259,11 @@ DefineTerrainFeature("tagus-river", { -- Source: William R. Shepherd, "Historica
 DefineTerrainFeature("thames-river", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	Name = "Thames River",
 	TerrainType = "shallow-water",
+	Color = {0, 176, 208},
 	World = "Earth",
-	FactionCulturalNames = {
-		"anglo-saxon", "england", "Thames River" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+	CulturalNames = {
+		"anglo-saxon", "Temes River" -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
+--		"english", "Thames River" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	}
 })
 

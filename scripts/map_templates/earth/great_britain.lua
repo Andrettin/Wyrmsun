@@ -44,7 +44,7 @@ SetMapTemplateUnit("earth", "unit-germanic-smithy", "celtic-cimmerian-tribe", {3
 -- the Stonehenge experienced its second construction phase in c. 2900-2400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 62.
 -- the Stonehenge experienced its third construction phase between c. 2550-2450 and 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 64.
 
--- Hadrian's Wall about 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+-- Hadrian's Wall about 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 SetMapTemplateTileTerrain("earth", "teuton-wall", {3763, 799}, 410)
 SetMapTemplateTileTerrain("earth", "teuton-wall", {3764, 799}, 410)
 SetMapTemplateTileTerrain("earth", "teuton-wall", {3765, 799}, 410)
@@ -94,7 +94,7 @@ SetMapTemplateTileTerrain("earth", "teuton-wall", {3805, 796}, 410)
 SetMapTemplateTileTerrain("earth", "teuton-wall", {3806, 796}, 410)
 SetMapTemplateTileTerrain("earth", "teuton-wall", {3807, 796}, 410)
 
--- Antonine Wall about 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+-- Antonine Wall about 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 SetMapTemplateTileTerrain("earth", "teuton-wall", {3735, 775}, 410)
 SetMapTemplateTileTerrain("earth", "teuton-wall", {3736, 775}, 410)
 SetMapTemplateTileTerrain("earth", "teuton-wall", {3737, 775}, 410)
@@ -122,7 +122,7 @@ SetMapTemplateTileTerrain("earth", "teuton-wall", {3757, 774}, 410)
 SetMapTemplateTileTerrain("earth", "teuton-wall", {3758, 774}, 410)
 SetMapTemplateTileTerrain("earth", "teuton-wall", {3759, 774}, 410)
 
--- Roman roads in Britain about 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+-- Roman roads in Britain about 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 -- road between Isca Dumnoniorum (Exeter) and Durnovaria (Dorchester)
 SetMapTemplateTileTerrain("earth", "road", {3760, 894}, 410)
 SetMapTemplateTileTerrain("earth", "road", {3761, 894}, 410)
