@@ -270,11 +270,16 @@ DefineLanguage("english", {
 		"Beamfleot", "Benfleet", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Bebbanburg", "Bamburgh", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Cantwaraburg", "Canterbury", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Cirenceaster", "Cirencester", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Cisseceaster", "Chichester", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Colneceaster", "Colchester", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Dofras", "Dover", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"Dornwaraceaster", "Dorchester", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"Dunholm", "Durham", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"Eoforwic", "York", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"Escanceaster", "Exeter", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"Gleawanceaster", "Gloucester", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"Godmunddingaham", "Goodmanham", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"Gyruum", "Jarrow", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"Haestingaceaster", "Hastings", -- Hæstingaceaster -> Hastings; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"Hrofesceaster", "Rochester", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.

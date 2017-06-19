@@ -199,19 +199,42 @@ DefineSettlement("chichester", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
+DefineSettlement("cirencester", {
+	Name = "Cirencester",
+	MapTemplate = "earth",
+	Position = {3796, 874},
+	CulturalNames = {
+		"anglo-saxon", "Cirenceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"celt", "Corinium",
+--		"english", "Cirencester",
+		"latin", "Corinium" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+	},
+	HistoricalOwners = {
+		410, "rome", -- Corinium/Cirencester was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+		802, "wessex" -- Cirencester's area was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		410, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
 DefineSettlement("colchester", {
 	Name = "Colchester",
 	MapTemplate = "earth",
 	Position = {3861, 867},
 	CulturalNames = {
 		"anglo-saxon", "Colneceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
---		"english", "Colchester"
+		"celt", "Camulodunum",
+--		"english", "Colchester",
+		"latin", "Camulodunum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
-		802, "essex" -- Chester was a part of Essex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		410, "rome", -- Camulodunum/Colchester was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+		802, "essex" -- Colchester was a part of Essex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 	},
 	HistoricalBuildings = {
-		802, 0, "town-hall"
+		410, 0, "town-hall"
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -419,12 +442,16 @@ DefineSettlement("lincoln", {
 	Position = {3825, 837},
 	CulturalNames = {
 		"anglo-saxon", "Lindcylene", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
---		"english", "Lincoln"
+		"celt", "Lincoln",
+--		"english", "Lincoln",
+		"latin", "Lincoln" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
+		410, "rome", -- Lindum/Lincoln was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 		802, "mercia" -- Lincoln was a part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 	},
 	HistoricalBuildings = {
+		410, 627, "farm",
 		627, 0, "temple" -- a church was in existence in Lincoln in 627 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 115.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
@@ -465,6 +492,25 @@ DefineSettlement("london", {
 	HistoricalBuildings = {
 		410, 0, "town-hall",
 		604, 0, "temple" -- a church was built in London in 604 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 109.
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("old-sarum", {
+	Name = "Old Sarum",
+	MapTemplate = "earth",
+	Position = {3798, 885},
+	CulturalNames = {
+		"celt", "Sorbiodunum",
+--		"english", "Old Sarum",
+		"latin", "Sorbiodunum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+	},
+	HistoricalOwners = {
+		410, "rome", -- Sorbiodunum/Old Sarum was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+		802, "wessex" -- Old Sarum was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		410, 0, "farm"
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
