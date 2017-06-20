@@ -79,6 +79,25 @@ DefineCivilization("neutral", {
 		"Ringhorn", -- Balder's ship in Norse mythology in which he was cremanted; ; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 155, 249.
 		"Skidbladnir", -- ship built by dwarves in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 101.
 		"Skrauti" -- dragon ship which appears in the Norse saga of Sörli the Strong; Sörli might be Norse himself, but the source does not mention his actual origins; the name means "precious thing"; Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 119.
+	},
+	UnitClassNames = {
+		"farm", "Blackfield",
+		"farm", "Blackgarden",
+		"farm", "Brownfield",
+		"farm", "Browngarden",
+		"farm", "Greengarden",
+		"farm", "Greenfield",
+		"farm", "Lushfield",
+		"farm", "Newfield",
+		"farm", "Newgarden",
+		"farm", "Oldfield",
+		"farm", "Oldgarden",
+		"farm", "Redfield",
+		"farm", "Redgarden",
+		"farm", "Stonefield",
+		"farm", "Stonegarden",
+		"farm", "Whitefield",
+		"farm", "Whitegarden"
 	}
 })
 
@@ -1828,6 +1847,10 @@ DefineCivilization("anglo-saxon", {
 		"Basengum", -- Old English name of Basing; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Beamfleot", -- Old English name of Benfleet; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Gumeninga Hearh" -- Old English name of Harrow on the Hill; the name means "the holy place of the Gumeningas"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
+	},
+	UnitClassNames = {
+		"farm", "Wedone", -- Old English field-name; Wedone was near the location of Damerham; the first part of the name is formed by a variant of the Old English word "weoh"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
+		"farm", "Weoland" -- Old English field-name; Weoland was near the location of Wootton Bassett; the first part of the name is formed by a variant of the Old English word "weoh"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
 	}
 })
 

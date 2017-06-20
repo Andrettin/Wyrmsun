@@ -354,6 +354,24 @@ DefineSettlement("durham", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
+DefineSettlement("durolipons", {
+	Name = "Durolipons",
+	MapTemplate = "earth",
+	Position = {3838, 859},
+	CulturalNames = {
+		"celt", "Durolipons",
+		"latin", "Durolipons" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+	},
+	HistoricalOwners = {
+		410, "rome", -- Durolipons was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+		802, "mercia" -- Durolipons' area was a part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		410, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
 DefineSettlement("edinburgh", {
 	Name = "Edinburgh",
 	MapTemplate = "earth",
@@ -483,12 +501,16 @@ DefineSettlement("leicester", {
 	Position = {3815, 850},
 	CulturalNames = {
 		"anglo-saxon", "Ligoraceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
---		"english", "Leicester"
+		"celt", "Ratae",
+--		"english", "Leicester",
+		"latin", "Ratae" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
+		410, "rome", -- Ratae/Leicester was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 		802, "mercia" -- Leicester was a part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 	},
 	HistoricalBuildings = {
+		410, 737, "farm",
 		737, 0, "temple" -- diocese of Leicester founded in 737 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 109.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
