@@ -671,7 +671,7 @@ DefineSettlement("saint-albans", {
 		802, "middlesex" -- St. Albans was a part of Middlesex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 	},
 	HistoricalBuildings = {
-		410, 0, "town-hall"
+		410, 0, "farm"
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })

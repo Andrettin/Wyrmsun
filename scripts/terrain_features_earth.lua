@@ -130,6 +130,16 @@ DefineTerrainFeature("garonne-river", {
 	World = "Earth"
 })
 
+DefineTerrainFeature("great-ouse-river", {
+	Name = "Great Ouse River",
+	TerrainType = "shallow-water",
+	Color = {0, 160, 208},
+	World = "Earth",
+	CulturalNames = {
+--		"english", "Great Ouse River"
+	}
+})
+
 DefineTerrainFeature("guadiana-river", {
 	Name = "Guadiana River",
 	TerrainType = "shallow-water",
