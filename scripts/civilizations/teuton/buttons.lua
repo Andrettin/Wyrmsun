@@ -181,6 +181,14 @@ DefineButton( { Pos = 7, Level = 1, Icon = "icon-teuton-church",
 	ForUnit = {"unit-teuton-worker"}
 })
 
+--[[
+DefineButton( { Pos = 7, Level = 1, Icon = "icon-teuton-university",
+	Action = "build", Value = "unit-teuton-university",
+	Key = "u", Hint = "Build ~!University", Popup = "popup-building",
+	ForUnit = {"unit-teuton-worker"}
+})
+--]]
+
 DefineButton( { Pos = 8, Level = 1,
 	Action = "build", Value = "unit-teuton-market",
 	Key = "m", Hint = "Build ~!Market", Popup = "popup-building",
@@ -286,7 +294,7 @@ DefineButton( { Pos = 8, Level = 0, Icon = "icon-cauldron",
 	Allowed = "check-single-research",
 	Description = "+1 Fire Damage for Schutzes, +5 Fire Damage for Catapults. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market.",
 	Key = "a", Hint = "Research ~!Alchemy", Popup = "popup-research",
-	ForUnit = {"unit-teuton-smithy"}
+	ForUnit = {"unit-teuton-smithy", "unit-teuton-university"}
 } )
 
 -- Deities ----------------------------------------------------------

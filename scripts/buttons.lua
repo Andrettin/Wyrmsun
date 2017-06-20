@@ -1243,7 +1243,8 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-engineering",
 --		"unit-germanic-smithy",
 		"unit-goblin-smithy",
 		"unit-latin-smithy",
-		"unit-teuton-smithy"
+		"unit-teuton-smithy",
+		"unit-teuton-university"
 	}
 } )
 

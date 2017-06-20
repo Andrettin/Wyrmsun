@@ -1039,6 +1039,8 @@
 /graphics/teuton/buildings/stronghold_shadow.png (by Jinn) (licensed under the CC0)
 /graphics/teuton/buildings/town_hall.png (by Jinn) (licensed under the CC0)
 /graphics/teuton/buildings/town_hall_shadow.png (by Jinn) (licensed under the CC0)
+/graphics/teuton/buildings/university.png (by Jinn) (licensed under the CC0)
+/graphics/teuton/buildings/university_shadow.png (by Jinn) (licensed under the CC0)
 /graphics/teuton/buildings/wall.png (by Jinn) (licensed under the CC0)
 /graphics/teuton/buildings/wall_shadow.png (by Jinn) (licensed under the CC0)
 /graphics/teuton/buildings/watch_tower.png (by Jinn) (licensed under the CC0)

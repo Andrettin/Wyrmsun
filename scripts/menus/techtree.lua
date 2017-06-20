@@ -185,6 +185,9 @@ function RunTechTreeMenu(civilization_number)
 				elseif (GetUnitTypeData(unitName, "Class") == "temple") then
 					tech_icon_x = 10
 					tech_icon_y = 2
+				elseif (GetUnitTypeData(unitName, "Class") == "university") then
+					tech_icon_x = 10
+					tech_icon_y = 4
 				elseif (GetUnitTypeData(unitName, "Class") == "dock") then
 					tech_icon_x = 6
 					tech_icon_y = 5

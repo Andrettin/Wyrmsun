@@ -249,7 +249,7 @@ DefineModifier("upgrade-goblin-writing",
 	{"apply-to", "unit-goblin-farm"}, {"apply-to", "unit-goblin-mess-hall"},
 	{"apply-to", "unit-goblin-lumber-mill"}, {"apply-to", "unit-goblin-smithy"},
 	{"apply-to", "unit-goblin-temple"},
-	--{"apply-to", "unit-goblin-market"},
+	{"apply-to", "unit-goblin-market"},
 	{"apply-to", "unit-goblin-watch-tower"}, {"apply-to", "unit-goblin-guard-tower"},
 	{"apply-to", "unit-goblin-dock"}
 )

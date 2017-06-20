@@ -53,5 +53,5 @@ DefineDependency("upgrade-work-pedair-cainc-y-mabinogi",
 )
 
 DefineDependency("upgrade-work-de-mensura-orbis-terrae",
-	{"upgrade-celt-civilization"} -- could require a university building, when that is added to the game
+	{"upgrade-celt-civilization", "unit-teuton-university"}
 )

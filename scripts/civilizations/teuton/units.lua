@@ -1415,6 +1415,20 @@ DefineUnitType("unit-teuton-market", {
 	}
 } )
 
+DefineUnitType("unit-teuton-university", {
+	Name = "University",
+	Parent = "unit-template-university",
+	Civilization = "teuton",
+	Description = "As the society of the Holy Roman Empire increased in sophistication, its first universities were founded. Initially providing higher education in theology and law, universities would eventually encompass many other areas of knowledge, such as natural science.",
+	Image = {"file", "teuton/buildings/university.png", "size", {96, 96}},
+	Shadow = {"file", "teuton/buildings/university_shadow.png", "size", {96, 96}},
+	Icon = "icon-teuton-university",
+	RequirementsString = "Writing",
+	Sounds = {
+--		"help", "basic-teuton-voices-help-town"
+	}
+} )
+
 DefineUnitType("unit-teuton-watch-tower", { Name = _("Watch Tower"),
 	Parent = "unit-template-watch-tower",
 	Civilization = "teuton",

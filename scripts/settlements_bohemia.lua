@@ -58,7 +58,7 @@ DefineSettlement("prague", {
 	},
 	HistoricalBuildings = {
 		-9, 0, "town-hall",
-		1347, 0, "temple" -- University founded in Prague in 1347; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		1347, 0, "university" -- University founded in Prague in 1347; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	Regions = {"cisleithania", "czechoslovakia", "europe", "west-and-central-europe"}
 })
