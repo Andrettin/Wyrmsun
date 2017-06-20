@@ -115,6 +115,45 @@ DefineSettlement("bitterne", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
+DefineSettlement("brancaster", {
+	Name = "Brancaster",
+	MapTemplate = "earth",
+	Position = {3853, 843},
+	CulturalNames = {
+		"celt", "Branodunum",
+--		"english", "Brancaster",
+		"latin", "Branodunum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+	},
+	HistoricalOwners = {
+		410, "rome", -- Branodunum/Brancaster was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+		802, "east-anglia" -- Branodunum's area was a part of East Anglia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		410, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("cambridge", {
+	Name = "Cambridge",
+	MapTemplate = "earth",
+	Position = {3845, 861},
+	CulturalNames = {
+		"anglo-saxon", "Grantanbrycg", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"celt", "Camboricum",
+--		"english", "Cambridge",
+		"latin", "Camboricum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+	},
+	HistoricalOwners = {
+		410, "rome", -- Camboricum/Cambridge was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+		802, "mercia" -- Camboricum's area was a part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		410, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
 DefineSettlement("canterbury", {
 	Name = "Canterbury",
 	MapTemplate = "earth",
@@ -154,6 +193,25 @@ DefineSettlement("carlisle", {
 	HistoricalBuildings = {
 		410, 802, "farm",
 		802, 0, "town-hall"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("castor-near-norwich", {
+	Name = "Castor near Norwich",
+	MapTemplate = "earth",
+	Position = {3868, 850},
+	CulturalNames = {
+		"celt", "Venta Icenorum",
+--		"english", "Castor",
+		"latin", "Venta Icenorum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+	},
+	HistoricalOwners = {
+		410, "rome", -- Venta Icenorum/Castor near Norwich was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+		802, "east-anglia" -- Venta Icenorum's area was a part of East Anglia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		410, 0, "farm"
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -598,6 +656,26 @@ DefineSettlement("rochester", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
+DefineSettlement("saint-albans", {
+	Name = "St. Albans",
+	MapTemplate = "earth",
+	Position = {3832, 870},
+	CulturalNames = {
+		"anglo-saxon", "Sanctae Albanes", -- "Sanctæ Albanes"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
+		"celt", "Verulamium",
+--		"english", "St. Albans",
+		"latin", "Verulamium" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+	},
+	HistoricalOwners = {
+		410, "rome", -- Verulamium/St. Albans was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+		802, "middlesex" -- St. Albans was a part of Middlesex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		410, 0, "town-hall"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
 DefineSettlement("salisbury", {
 	Name = "Salisbury",
 	MapTemplate = "earth",
@@ -628,6 +706,24 @@ DefineSettlement("silchester", {
 	HistoricalOwners = {
 		410, "rome", -- Calleva/Silchester was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 		802, "wessex" -- Silchester's area was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+	},
+	HistoricalBuildings = {
+		410, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("sitomagus", {
+	Name = "Sitomagus",
+	MapTemplate = "earth",
+	Position = {3875, 857},
+	CulturalNames = {
+		"celt", "Sitomagus",
+		"latin", "Sitomagus" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+	},
+	HistoricalOwners = {
+		410, "rome", -- Sitomagus was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+		802, "east-anglia" -- Sitomagus' area was a part of East Anglia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 	},
 	HistoricalBuildings = {
 		410, 0, "farm"
