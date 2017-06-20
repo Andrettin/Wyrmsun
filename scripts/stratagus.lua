@@ -1892,6 +1892,10 @@ end
 Preference.PlayerColorCircle = wyr.preferences.PlayerColorCircle
 Preference.HotkeySetup = wyr.preferences.HotkeySetup
 
+if not (CanAccessFile("preferences.lua")) then
+	SavePreferences()
+end
+
 --- Uses Stratagus Library path!
 Load("scripts/dlc_file_equivalencies.lua")
 Load("scripts/icons.lua")
