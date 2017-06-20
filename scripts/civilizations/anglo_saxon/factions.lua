@@ -317,7 +317,7 @@ DefineFaction("england", {
 	},
 	Conditions = function(s)
 		for i=0,(PlayerMax - 2) do
-			if (i ~= trigger_player and GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "RaceName") == "anglo-saxon") then
+			if (i ~= trigger_player and GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "RaceName") == "anglo-saxon" and GetPlayerData(i, "Faction") ~= "scotland") then
 				return false
 			end
 		end
