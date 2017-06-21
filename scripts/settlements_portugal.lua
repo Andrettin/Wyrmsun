@@ -35,10 +35,32 @@ DefineSettlement("braga", {
 	},
 	HistoricalOwners = {
 		-138, "rome", -- Bracara was acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		486, "galicia" -- Braga was a part of Suebic Galicia in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		486, "galicia", -- Braga was a part of Suebic Galicia in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		1560, "portugal" -- Braga's area was a part of the Kingdom of Portugal in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		-138, 0, "town-hall"
+		-138, 1560, "town-hall",
+		1560, 0, "farm"
+	},
+	Regions = {"europe", "iberia", "west-and-central-europe"}
+})
+
+DefineSettlement("coimbra", {
+	Name = "Coimbra",
+	MapTemplate = "earth",
+	Position = {3639, 1133},
+	CulturalNames = {
+		"latin", "Bracara", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		"portuguese", "Coimbra"
+	},
+	HistoricalOwners = {
+		486, "galicia", -- Coimbra was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		1560, "portugal" -- Coimbra was a part of the Kingdom of Portugal in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		486, 1308, "farm",
+		1308, 0, "university", -- University founded in Coimbra in 1308; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		-- University moved permanently from Lisbon to Coimbra in 1537; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
@@ -54,10 +76,28 @@ DefineSettlement("lisbon", {
 	HistoricalOwners = {
 		-138, "rome", -- Olisipo was acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		486, "visigothia", -- Lisbon was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		1560, "portugal" -- political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "portugal" -- Lisbon was a part of the Kingdom of Portugal in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		-138, 0, "town-hall"
+		-138, 0, "town-hall",
+		1911, 0, "university" -- University founded in Lisbon in 1911; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
+	},
+	Regions = {"europe", "iberia", "west-and-central-europe"}
+})
+
+DefineSettlement("oporto", {
+	Name = "Oporto",
+	MapTemplate = "earth",
+	Position = {3645, 1113},
+	CulturalNames = {
+		"portuguese", "Oporto"
+	},
+	HistoricalOwners = {
+		1560, "portugal" -- Oporto was a part of the Kingdom of Portugal in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		1560, 0, "town-hall",
+		1911, 0, "university" -- University founded in Oporto in 1911; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	},
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })

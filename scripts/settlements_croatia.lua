@@ -57,3 +57,22 @@ DefineSettlement("narona", {
 	},
 	Regions = {"europe", "west-and-central-europe"}
 })
+
+DefineSettlement("zagreb", {
+	Name = "Zagreb",
+	MapTemplate = "earth",
+	Position = {4204, 1005},
+	CulturalNames = {
+		"slav", "Zagreb",
+		"teuton", "Agram"
+	},
+	HistoricalOwners = {
+		1815, "austria" -- Agram was a part of the Empire of Austria in 1815 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		1815, 0, "town-hall",
+		1537, 0, "university" -- University founded in Zagreb in 1874; Source: A.J.P. Taylor, "The Habsburg Monarchy, 1809-1918", 1964, p. 203.
+	},
+	Regions = {"europe", "west-and-central-europe"}
+})
+

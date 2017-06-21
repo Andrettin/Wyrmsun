@@ -148,7 +148,7 @@ DefineCharacter("franz-joseph-von-habsburg", { -- Source: Waltraud Heindl, "Jose
 	}
 })
 
-DefineCharacter("victor-andrian-werburg", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 46; Source: A.J.P. Taylor, The Habsburg Monarchy, 1809-1918, 1964, pp. 55-56.
+DefineCharacter("victor-andrian-werburg", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 46; Source: A.J.P. Taylor, "The Habsburg Monarchy, 1809-1918", 1964, pp. 55-56.
 	Name = "Victor",
 	FamilyName = "Andrian-Werburg", -- presumably
 	Gender = "male",

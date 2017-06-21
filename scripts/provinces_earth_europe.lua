@@ -618,10 +618,6 @@ DefineProvince("Beira", {
 	HistoricalClaims = {
 		-138, "latin", "rome"
 	},
-	HistoricalModifiers = {
-		1537, "upgrade-university", true, -- University moved from Lisbon to Coimbra in 1537; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		1911, "upgrade-university", true -- University founded in Lisbon in 1911; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
-	},
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
@@ -1560,9 +1556,6 @@ DefineProvince("Croatia", {
 	Claims = {
 		"slav", "croatia"
 	},
-	HistoricalModifiers = {
-		1874, "upgrade-university", true -- University founded in Zagreb in 1874; Source: A.J.P. Taylor, The Habsburg Monarchy, 1809-1918, 1964, p. 203.
-	},
 	Regions = {"europe", "roman-danube", "west-and-central-europe"}
 })
 
@@ -1830,9 +1823,6 @@ DefineProvince("Douro", {
 	HistoricalClaims = {
 		-138, "latin", "rome"
 	},
-	HistoricalModifiers = {
-		1911, "upgrade-university", true -- University founded in Oporto in 1911; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
-	},
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
@@ -1906,9 +1896,6 @@ DefineProvince("Durham", {
 	},
 	HistoricalClaims = {
 		43, "latin", "rome"
-	},
-	HistoricalModifiers = {
-		1832, "upgrade-university", true -- University founded in Durham in 1832; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -2079,9 +2066,6 @@ DefineProvince("Essex", {
 	HistoricalCultures = {
 		-27, "celt",
 		526, "teuton"
-	},
-	HistoricalModifiers = {
-		1836, "upgrade-university", true -- University founded in London in 1836; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -3370,8 +3354,7 @@ DefineProvince("Latium", {
 		768, "unit-teuton-temple", true -- Monastery or abbey existent in Farfa during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
-		166, "upgrade-smallpox", true, -- a sort of smallpox reached Rome from the east in 166; Source: "Ancient Warfare VII.6", 2013, p. 6.
-		1303, "upgrade-university", true -- University founded in Rome in 1303; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		166, "upgrade-smallpox", true -- a sort of smallpox reached Rome from the east in 166; Source: "Ancient Warfare VII.6", 2013, p. 6.
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -3445,9 +3428,6 @@ DefineProvince("Leinster", {
 	},
 	HistoricalCultures = {
 		-27, "celt"
-	},
-	HistoricalModifiers = {
-		1312, "upgrade-university", true, -- University founded in Dublin in 1312; Source: "Atlas de História Mundial", p. 144.
 	},
 	Regions = {"british-isles", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -3626,9 +3606,6 @@ DefineProvince("Lombardy", {
 	HistoricalSettlementBuildings = {
 		768, "unit-teuton-temple", true -- Archbishopric existent in Milan during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
-	HistoricalModifiers = {
-		1565, "upgrade-university", true, -- University founded in Milan in 1565; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
-	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
@@ -3693,9 +3670,6 @@ DefineProvince("Lothian", { -- includes Borders
 	HistoricalCultures = {
 		-27, "celt"
 	},
-	HistoricalModifiers = {
-		1582, "upgrade-university", true -- University founded in Edinburgh in 1582; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
-	},
 	Regions = {"british-isles", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
@@ -3739,10 +3713,6 @@ DefineProvince("Lower Austria", {
 	HistoricalCultures = {
 		-5500, "basque",
 		-800, "celt"
-	},
-	HistoricalModifiers = {
-		1365, "upgrade-university", true, -- University founded in Vienna in 1365; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
---		1815, "upgrade-college", true -- Imperial Polytechnic Institute of Vienna founded in 1815; Source: Silvia Fernanda de Mendonça Figueirôa, "Ciência e tecnologia no Brasil Imperial: Guilherme Schüch, Barão de Capanema (1824-1908)", 2005, p. 442.
 	},
 	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
@@ -4117,7 +4087,6 @@ DefineProvince("Mercia", {
 		526, "teuton"
 	},
 	HistoricalModifiers = {
-		1250, "upgrade-university", true, -- University existent in Cambridge in 1250; Source: "Atlas de História Mundial", p. 144.
 		1250, "upgrade-university", true, -- University existent in Oxford in 1250; Source: "Atlas de História Mundial", p. 144.
 		1851, "upgrade-university", true, -- University founded in Manchester in 1851; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 		1900, "upgrade-university", true, -- University founded in Birmingham in 1900; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
@@ -4259,7 +4228,6 @@ DefineProvince("Moravia", {
 		1251, "unit-teuton-temple", true -- Boček (lord of Kunštát and Poděbrady) founded a monastery in Ždár (Saar) in 1251; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 627.
 	},
 	HistoricalModifiers = {
-		1581, "upgrade-university", true, -- University founded in Olmütz in 1581; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 		-- First trains from Vienna arrived in Brünn on the 07.07.1839; Source: Chad Bryant, "Into an Uncertain Future: Railroads and Vormärz Liberalism in Brno, Vienna, and Prague", 2009, p. 183.
 		-- Nordbahn reached Olmütz in 1841; Source: Chad Bryant, "Into an Uncertain Future: Railroads and Vormärz Liberalism in Brno, Vienna, and Prague", 2009, p. 187.
 	},
@@ -4352,7 +4320,6 @@ DefineProvince("Naples", {
 		768, "unit-teuton-temple", true -- Monastery or abbey existent in Monte Cassino during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
-		1224, "upgrade-university", true, -- University founded in Naples in 1224; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1250, "upgrade-university", true -- University existent in Salerno in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
@@ -4932,9 +4899,6 @@ DefineProvince("Parma", {
 	HistoricalSettlementBuildings = {
 		768, "unit-teuton-temple", true -- Monastery or abbey existent in Bobbio during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
-	HistoricalModifiers = {
-		1248, "upgrade-university", true -- University founded in Piacenza in 1248; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
@@ -5281,7 +5245,6 @@ DefineProvince("Romagna", {
 		768, "unit-teuton-temple", true -- Archbishopric existent in Ravenna during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
-		1250, "upgrade-university", true, -- University existent in Bologna in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
 		1391, "upgrade-university", true -- University founded in Ferrara in 1391; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
@@ -5867,9 +5830,6 @@ DefineProvince("Styria", {
 	},
 	HistoricalCultures = {
 		-800, "celt"
-	},
-	HistoricalModifiers = {
-		1585, "upgrade-university", true -- University founded in Graz in 1585; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
@@ -7095,11 +7055,7 @@ DefineProvince("York", {
 		500, "teuton"
 	},
 	HistoricalModifiers = {
-		1904, "upgrade-university", true, -- University founded in Leeds in 1904; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 		1905, "upgrade-university", true -- University founded in Sheffield in 1905; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
-	},
-	HistoricalSettlementBuildings = {
-		161, "unit-latin-barracks", true -- Legionary base present in Eboracum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })

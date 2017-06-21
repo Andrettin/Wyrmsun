@@ -67,11 +67,14 @@ DefineSettlement("olmutz", {
 		"teuton", "Olmütz"
 	},
 	HistoricalOwners = {
+		1560, "austria", -- Olmütz was a part of the Habsburg monarchy in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 		1815, "austria" -- Olmütz was a part of the Austrian province of Moravia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		1815, 0, "stronghold" -- Olmütz had a fortress in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-
+		1560, 1815, "town-hall",
+		1581, 1815, "university", -- University founded in Olmütz in 1581; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+		1815, 0, "stronghold", -- Olmütz had a fortress in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		1815, 0, "university"
 	},
 	Regions = {"cisleithania", "czechoslovakia", "europe", "west-and-central-europe"}
 })

@@ -86,7 +86,8 @@ DefineSettlement("bologna", {
 		1494, "papal-states" -- Bologna was a Papal possession about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 	},
 	HistoricalBuildings = {
-		-189, 0, "farm"
+		-189, 1250, "farm",
+		1250, 0, "university" -- University existent in Bologna in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -230,7 +231,8 @@ DefineSettlement("milan", {
 	},
 	HistoricalBuildings = {
 		-161, 1494, "farm",
-		1494, 0, "town-hall"
+		1494, 0, "town-hall",
+		1565, 0, "university" -- University founded in Milan in 1565; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -264,11 +266,13 @@ DefineSettlement("naples", {
 	},
 	HistoricalOwners = {
 		-161, "rome", -- Neapolis was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		1204, "sicily", -- Naples was a part of the Kingdom of the Two Sicilies c. 1204; Source: William R. Shepherd, "Historical Atlas", 1911, p. 73.
 		1494, "sicily" -- Naples was a possession of the Kingdom of the Two Sicilies about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 	},
 	HistoricalBuildings = {
-		-161, 1494, "farm",
-		1494, 0, "town-hall"
+		-161, 1204, "farm",
+		1204, 0, "town-hall",
+		1224, 0, "university" -- University founded in Naples in 1224; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -337,7 +341,8 @@ DefineSettlement("piacenza", {
 		1860, "sardinia" -- Placentia became a possession of Sardinia in 1860; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		-218, 0, "farm"
+		-218, 1248, "farm",
+		1248, 0, "university" -- University founded in Piacenza in 1248; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -382,7 +387,8 @@ DefineSettlement("rome", {
 		-192, 0, "dock", -- Mercantile docks were built at Rome in 192 BC and 174 BC; Source: Tenney Frank, "Mercantilism and Rome's Foreign Policy", 1913, p. 244.
 		-40, 0, "temple", -- Temple of Jupiter Capitolinus, Temple of Jupiter Victor, Temple of Vesta, Temple of Fortunus and Temple of Aesculapius existed in Rome in c. 40 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 22-23.
 --		-40, 0, "dock", -- Shipyards ("Navalia") existed in Rome in c. 40 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 22-23.
-		-40, 0, "road" -- Roads existed in Rome in c. 40 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 22-23.
+		-40, 0, "road", -- Roads existed in Rome in c. 40 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 22-23.
+		1303, 0, "university" -- University founded in Rome in 1303; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })

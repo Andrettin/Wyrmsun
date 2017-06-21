@@ -156,7 +156,8 @@ DefineSettlement("cambridge", {
 		1560, "england" -- Cambridge was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		410, 0, "farm"
+		410, 1250, "farm",
+		1250, 0, "university" -- University existent in Cambridge in 1250; Source: "Atlas de História Mundial", p. 144.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -366,7 +367,8 @@ DefineSettlement("durham", {
 		1560, "england" -- Durham's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		802, 0, "town-hall"
+		802, 0, "town-hall",
+		1832, 0, "university" -- University founded in Durham in 1832; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -402,7 +404,9 @@ DefineSettlement("edinburgh", {
 		1560, "scotland" -- Edinburgh was a part of Scotland in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		802, 0, "farm"
+		802, 1560, "farm",
+		1560, 0, "town-hall",
+		1582, 0, "university" -- University founded in Edinburgh in 1582; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"british-isles", "europe", "northwest-europe", "scotland", "west-and-central-europe"}
 })
@@ -577,7 +581,8 @@ DefineSettlement("leeds", {
 		1560, "england" -- Leeds' area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		802, 0, "farm"
+		802, 1904, "farm",
+		1904, 0, "university" -- University founded in Leeds in 1904; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -600,7 +605,8 @@ DefineSettlement("london", {
 	},
 	HistoricalBuildings = {
 		410, 0, "town-hall",
-		604, 0, "temple" -- a church was built in London in 604 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 109.
+		604, 0, "temple", -- a church was built in London in 604 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 109.
+		1836, 0, "university" -- University founded in London in 1836; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -916,14 +922,15 @@ DefineSettlement("york", {
 		"latin", "Eboracum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
-		410, "rome", -- Eboracum/York was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+		43, "rome", -- Eburacum/York was acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		500, "dere-tribe", -- the Dere (a collection of Anglian peoples) were in possession of York in 500 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 		588, "bernicia", -- according to tradition, Æthelric of Bernicia acquired the kingdom of Deira upon its king Ælle's death in 588 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
 		654, "northumbria", -- Northumbria unified by Oswiu of Bernicia in 654
 		1560, "england" -- York was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		410, 0, "town-hall",
+		43, 161, "town-hall",
+		161, 0, "stronghold", -- Legionary base present in Eboracum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		735, 0, "temple" -- archbishopric of York permanently instituted in 735 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 109.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}

@@ -99,7 +99,12 @@ DefineLanguage("castillian", {
 
 DefineLanguage("portuguese", {
 	Name = "Portuguese",
-	Family = "italic"
+	Family = "italic",
+	NameTranslations = {
+		-- Latin Settlement Names
+		"Bracara", "Braga",
+		"Olisipo", "Lisbon"
+	}
 })
 
 DefineLanguage("catalan", {

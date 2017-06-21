@@ -120,10 +120,12 @@ DefineSettlement("graz", {
 		"teuton", "Graz" -- from the same Slavic root as "Grad"
 	},
 	HistoricalOwners = {
+		1560, "austria", -- Gratz was a part of the Habsburg monarchy in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 		1815, "austria" -- Graz was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		1815, 0, "town-hall"
+		1560, 0, "town-hall",
+		1585, 0, "university" -- University founded in Graz in 1585; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
@@ -265,7 +267,9 @@ DefineSettlement("vienna", {
 		10, 161, "farm",
 		161, 526, "stronghold", -- Legionary base present in Vindobona in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		161, 526, "barracks",
-		955, 0, "town-hall"
+		955, 0, "town-hall",
+		1365, 0, "university" -- University founded in Vienna in 1365; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		-- Imperial Polytechnic Institute of Vienna founded in 1815; Source: Silvia Fernanda de Mendonça Figueirôa, "Ciência e tecnologia no Brasil Imperial: Guilherme Schüch, Barão de Capanema (1824-1908)", 2005, p. 442.
 	},
 	Regions = {"europe", "west-and-central-europe", "roman-danube", "germany-netherlands", "cisleithania"}
 })
