@@ -67,6 +67,9 @@ https://github.com/Andrettin/Wyrmsun
 * Map Editor
 - Fixed an issue which prevented closing the player properties window by clicking "OK".
 
+* Miscellaneous
+- Removed support for resolutions lower than 800x600, so that more content may be added to the interface later on (i.e. new icons at the top bar).
+
 * Multiplayer
 - Fixed a potential desync cause related to unique item drop.
 
