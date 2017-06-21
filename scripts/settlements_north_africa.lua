@@ -25,10 +25,34 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- Carthage
-SetMapTemplateCulturalSettlementName("earth", "Carthage", {4074, 1208}, "phoenician")
-SetMapTemplateUnit("earth", "unit-latin-town-hall", "carthage", {4074, 1208}, -218) -- Carthage was in Carthaginian possession in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 32.
+DefineSettlement("carthage", {
+	Name = "Carthage",
+	MapTemplate = "earth",
+	Position = {4074, 1208},
+	CulturalNames = {
+		"phoenician", "Carthage"
+	},
+	HistoricalOwners = {
+		-218, "carthage" -- Carthage was in Carthaginian possession in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 32.
+	},
+	HistoricalBuildings = {
+		-218, 0, "town-hall"
+	},
+	Regions = {"africa"}
+})
 
--- Utica
-SetMapTemplateCulturalSettlementName("earth", "Utica", {4070, 1205}, "phoenician")
-SetMapTemplateUnit("earth", "unit-latin-farm", "carthage", {4070, 1205}, -218) -- Utica was in Carthaginian possession in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 32.
+DefineSettlement("utica", {
+	Name = "Utica",
+	MapTemplate = "earth",
+	Position = {4070, 1205},
+	CulturalNames = {
+		"phoenician", "Utica"
+	},
+	HistoricalOwners = {
+		-218, "carthage" -- Utica was in Carthaginian possession in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 32.
+	},
+	HistoricalBuildings = {
+		-218, 0, "farm"
+	},
+	Regions = {"africa"}
+})
