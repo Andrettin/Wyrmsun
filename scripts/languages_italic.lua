@@ -82,7 +82,19 @@ DefineLanguage("provencal", {
 
 DefineLanguage("castillian", {
 	Name = "Castillian",
-	Family = "italic"
+	Family = "italic",
+	NameTranslations = {
+		-- Latin Settlement Names
+		"Burgiorum", "Burgos", -- Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
+		"Corduba", "Cordoba",
+		"Dertosa", "Tortosa",
+		"Emerita Augusta", "Merida", -- "Emerita Augusta" -> "Mérida"
+		"Gades", "Cadiz",
+		"Malaca", "Malaga", -- "Malaca" -> "Málaga"
+		"Tarraco", "Tarragona",
+		"Toletum", "Toledo",
+		"Valentia", "Valencia"
+	}
 })
 
 DefineLanguage("portuguese", {

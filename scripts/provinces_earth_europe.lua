@@ -145,12 +145,10 @@ DefineProvince("Andalusia", {
 		-197, "latin", "rome"
 	},
 	HistoricalModifiers = {
-		1504, "upgrade-university", true, -- Major university founded in Seville in 1504; Source: "The Cambridge Modern History Atlas", p. 9; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
-		1531, "upgrade-university", true, -- University founded in Granada in 1526 (as given by Martínez Ruiz and Maqueda, The Cambridge Modern History Atlas gives 1531 instead), containing law studies; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225; Source: "The Cambridge Modern History Atlas", p. 9.
+		1531, "upgrade-university", true, -- University founded in Granada in 1526 (as given by Martínez Ruiz and Maqueda, The Cambridge Modern History Atlas gives 1531 instead), containing law studies; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 		1548, "upgrade-university", true, -- Minor university founded in Osuna in 1548; Source: "The Cambridge Modern History Atlas", 1912, p. 9; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
-		1552, "upgrade-university", true, -- Minor university founded in Orihuela in 1552; Source: "The Cambridge Modern History Atlas", p. 9; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
-		1553, "upgrade-university", true, -- University founded in Baena in 1553; Source: "The Cambridge Modern History Atlas", p. 9.
-		1572, "upgrade-university", true, -- Minor university founded in Cordoba in 1572; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
+		1552, "upgrade-university", true, -- Minor university founded in Orihuela in 1552; Source: "The Cambridge Modern History Atlas", 1912, p. 9; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
+		1553, "upgrade-university", true, -- University founded in Baena in 1553; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 		1614, "upgrade-university", true, -- Minor university founded in Murcia in 1614; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 --		1806, "upgrade-university", false, -- Minor university abolished in Murcia in 1806; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 --		1807, "upgrade-university", false, -- Minor university abolished in Orihuela in 1807; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
@@ -309,15 +307,9 @@ DefineProvince("Aragon", {
 	HistoricalModifiers = {
 		1300, "upgrade-university", true, -- Major university founded in Lerida in 1300; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 		1354, "upgrade-university", true, -- Major university founded in Huesca in 1354; Source: "The Cambridge Modern History Atlas", 1912, p. 9, Atlas de História Mundial, 2001, p. 144; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
-		1430, "upgrade-university", true, -- University founded in Barcelona in 1430; Source: "The Cambridge Modern History Atlas", 1912, p. 9; Source: "Atlas de História Mundial", 2001, p. 144.
-		1474, "upgrade-university", true, -- University founded in Zaragoza in 1474; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1483, "upgrade-university", true, -- University founded in Palma in 1483; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		1500, "upgrade-university", true, -- University founded in Valencia in 1500; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1599, "upgrade-university", true, -- Minor university founded in Vich in 1599; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
-		1645, "upgrade-university", true, -- Minor university founded in Tortosa in 1645; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
---		1707, "upgrade-university", false, -- Minor university in Vich abolished in 1707; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
---		1717, "upgrade-university", false, -- Minor university in Tortosa abolished in 1717; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
---		1717, "upgrade-university", false -- University abolished in Barcelona in 1717; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
+--		1707, "upgrade-university", false -- Minor university in Vich abolished in 1707; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 	},
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
@@ -450,7 +442,7 @@ DefineProvince("Asturias", {
 		-- Pottery existent in the Cantabrian Coast in c. 4900 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 159.
 		-- Domesticated animals existent in the Cantabrian Coast in c. 4200 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 159.
 		-- First sure evidence of farming in the Cantabrian coast in c. 4150 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 160.
-		1580, "upgrade-university", true, -- University founded in Oviedo in 1580; Source: "The Cambridge Modern History Atlas", p. 9.
+		1580, "upgrade-university", true, -- University founded in Oviedo in 1580; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 		1608, "upgrade-university", false -- University abolished in Oviedo in 1608; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 	},
 	Regions = {"europe", "iberia", "west-and-central-europe"}
@@ -1264,12 +1256,11 @@ DefineProvince("Castille", {
 		1212, "upgrade-university", true, -- University founded in Palencia in 1212; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1230, "upgrade-university", true, -- University founded in Salamanca in 1230; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1346, "upgrade-university", true, -- University founded in Valladolid in 1346; Source: "Atlas de História Mundial", 2001, p. 144.
-		1474, "upgrade-university", true, -- Minor university founded in Toledo in 1474; Source: "The Cambridge Modern History Atlas", 1912, p. 9; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 		1489, "upgrade-university", true, -- Minor university founded in Siguenza in 1489; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 		1499, "upgrade-university", true, -- University founded in Alcalá de Henares in 1499; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1542, "upgrade-university", true, -- Minor university founded in Oñate in 1542; Source: "The Cambridge Modern History Atlas", 1912, p. 9; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 		1550, "upgrade-university", true, -- Minor university founded in Avila in 1550; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
-		1550, "upgrade-university", true, -- Minor university founded in Osma in 1550; Source: "The Cambridge Modern History Atlas", p. 9; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
+		1550, "upgrade-university", true, -- Minor university founded in Osma in 1550; Source: "The Cambridge Modern History Atlas", 1912, p. 9; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 		1553, "upgrade-university", true, -- Minor university founded in Almagro in 1553; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 		1605, "upgrade-university", true, -- Minor university founded in Irache in 1605; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 		1628, "upgrade-university", true, -- Major university founded in Pamplona in 1628; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
@@ -1277,7 +1268,6 @@ DefineProvince("Castille", {
 --		1725, "upgrade-university", false, -- Major university abolished in Pamplona in 1725; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 --		1787, "upgrade-university", false, -- Minor university abolished in Avila in 1787; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 --		1787, "upgrade-university", false, -- Minor university abolished in Almagro in 1787; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
---		1807, "upgrade-university", false, -- Minor university abolished in Toledo in 1807; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 --		1807, "upgrade-university", false, -- Minor university abolished in Osma in 1807; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 --		1807, "upgrade-university", false, -- Minor university abolished in Oñate in 1807; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 --		1807, "upgrade-university", false -- Minor university in Irache abolished in 1807; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
@@ -2451,7 +2441,7 @@ DefineProvince("Friesland", {
 		-264, "teuton"
 	},
 	HistoricalModifiers = {
-		1585, "upgrade-university", true -- University founded in Franeker in 1585; Source: "The Cambridge Modern History Atlas", p. 9.
+		1585, "upgrade-university", true -- University founded in Franeker in 1585; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"europe", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
 })
@@ -2545,7 +2535,7 @@ DefineProvince("Gallaecia", {
 		-17, "latin", "rome"
 	},
 	HistoricalModifiers = {
-		1532, "upgrade-university", true -- University founded in Santiago de Compostela in 1532; Source: "The Cambridge Modern History Atlas", p. 9.
+		1532, "upgrade-university", true -- University founded in Santiago de Compostela in 1532; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
@@ -2954,7 +2944,7 @@ DefineProvince("Holland", {
 		-264, "teuton"
 	},
 	HistoricalModifiers = {
-		1575, "upgrade-university", true, -- University founded in Leyden in 1575; Source: "The Cambridge Modern History Atlas", p. 9.
+		1575, "upgrade-university", true, -- University founded in Leyden in 1575; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 		1877, "upgrade-university", true, -- State university founded in Amsterdam in 1877; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 		1905, "upgrade-university", true -- Calvinist university founded in Amsterdam in 1905; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	},
@@ -3637,7 +3627,7 @@ DefineProvince("Lombardy", {
 		768, "unit-teuton-temple", true -- Archbishopric existent in Milan during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
-		1565, "upgrade-university", true, -- University founded in Milan in 1565; Source: "The Cambridge Modern History Atlas", p. 9.
+		1565, "upgrade-university", true, -- University founded in Milan in 1565; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -3704,7 +3694,7 @@ DefineProvince("Lothian", { -- includes Borders
 		-27, "celt"
 	},
 	HistoricalModifiers = {
-		1582, "upgrade-university", true -- University founded in Edinburgh in 1582; Source: "The Cambridge Modern History Atlas", p. 9.
+		1582, "upgrade-university", true -- University founded in Edinburgh in 1582; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"british-isles", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -4269,7 +4259,7 @@ DefineProvince("Moravia", {
 		1251, "unit-teuton-temple", true -- Boček (lord of Kunštát and Poděbrady) founded a monastery in Ždár (Saar) in 1251; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 627.
 	},
 	HistoricalModifiers = {
-		1581, "upgrade-university", true, -- University founded in Olmütz in 1581; Source: "The Cambridge Modern History Atlas", p. 9.
+		1581, "upgrade-university", true, -- University founded in Olmütz in 1581; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 		-- First trains from Vienna arrived in Brünn on the 07.07.1839; Source: Chad Bryant, "Into an Uncertain Future: Railroads and Vormärz Liberalism in Brno, Vienna, and Prague", 2009, p. 183.
 		-- Nordbahn reached Olmütz in 1841; Source: Chad Bryant, "Into an Uncertain Future: Railroads and Vormärz Liberalism in Brno, Vienna, and Prague", 2009, p. 187.
 	},
@@ -4875,7 +4865,7 @@ DefineProvince("Palermo", {
 		-241, "latin", "rome"
 	},
 	HistoricalModifiers = {
-		1394, "upgrade-university", true -- University founded in Palermo in 1394; Source: "The Cambridge Modern History Atlas", p. 9.
+		1394, "upgrade-university", true -- University founded in Palermo in 1394; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -5879,7 +5869,7 @@ DefineProvince("Styria", {
 		-800, "celt"
 	},
 	HistoricalModifiers = {
-		1585, "upgrade-university", true -- University founded in Graz in 1585; Source: "The Cambridge Modern History Atlas", p. 9.
+		1585, "upgrade-university", true -- University founded in Graz in 1585; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
@@ -6047,7 +6037,7 @@ DefineProvince("Syracuse", {
 	},
 	HistoricalModifiers = {
 		1444, "upgrade-university", true, -- University founded in Catania in 1444; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		1548, "upgrade-university", true -- University founded in Messina in 1548; Source: "The Cambridge Modern History Atlas", p. 9.
+		1548, "upgrade-university", true -- University founded in Messina in 1548; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -6214,7 +6204,7 @@ DefineProvince("Transylvania", {
 		161, "unit-latin-barracks", true -- Legionary base present in Apulum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalModifiers = {
-		1580, "upgrade-university", true, -- University founded in Cluj in 1580; Source: "The Cambridge Modern History Atlas", p. 9.
+		1580, "upgrade-university", true, -- University founded in Cluj in 1580; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"europe", "west-and-central-europe"}
 })
@@ -6442,7 +6432,7 @@ DefineProvince("Umbria", {
 	},
 	HistoricalModifiers = {
 		1308, "upgrade-university", true, -- University founded in Perugia in 1308; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		1540, "upgrade-university", true -- University founded in Macerata in 1540; Source: "The Cambridge Modern History Atlas", p. 9.
+		1540, "upgrade-university", true -- University founded in Macerata in 1540; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })

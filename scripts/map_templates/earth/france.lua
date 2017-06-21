@@ -109,7 +109,7 @@ SetMapTemplateUnit("earth", "unit-teuton-town-hall", "austrasia", {3981, 931}, 5
 SetMapTemplateUnit("earth", "unit-teuton-temple", "austrasia", {3981, 931}, 561)
 
 -- Molsheim
--- University founded in Molsheim in 1618. Source: The Cambridge Modern History Atlas, 1912, p. 9.
+-- University founded in Molsheim in 1618. Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 
 -- Nantes / Namnetes
 SetMapTemplateFactionCulturalSettlementName("earth", "Nantes", {3804, 972}, "france")

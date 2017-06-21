@@ -37,7 +37,9 @@ DefineSettlement("barcelona", {
 		1560, "spain" -- Barcelona was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		486, 0, "farm"
+		486, 1430, "farm",
+		1430, 1717, "university", -- University founded in Barcelona in 1430; Source: "The Cambridge Modern History Atlas", 1912, p. 9; Source: "Atlas de História Mundial", 2001, p. 144. University abolished in Barcelona in 1717; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
+		1717, 0, "farm"
 	},
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
@@ -101,6 +103,45 @@ DefineSettlement("cartagena", {
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
+DefineSettlement("cordoba", {
+	Name = "Cordoba",
+	MapTemplate = "earth",
+	Position = {3730, 1183},
+	CulturalNames = {
+		"castillian", "Cordoba",
+		"latin", "Corduba"
+	},
+	HistoricalOwners = {
+		-197, "rome", -- Corduba was acquired by Rome in 197 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		486, "visigothia", -- Cordova was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		1560, "spain" -- Cordova was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		-197, 1572, "farm",
+		1572, 0, "university" -- Minor university founded in Cordoba in 1572; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
+	},
+	Regions = {"europe", "iberia", "west-and-central-europe"}
+})
+
+DefineSettlement("malaga", {
+	Name = "Malaga",
+	MapTemplate = "earth",
+	Position = {3739, 1211},
+	CulturalNames = {
+		"castillian", "Malaga", -- "Málaga"
+		"latin", "Malaca"
+	},
+	HistoricalOwners = {
+		-201, "rome", -- Malaca was acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		486, "visigothia", -- Málaga was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		1560, "spain" -- Malaga was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		-201, 0, "farm"
+	},
+	Regions = {"europe", "iberia", "west-and-central-europe"}
+})
+
 DefineSettlement("merida", {
 	Name = "Merida",
 	MapTemplate = "earth",
@@ -111,10 +152,29 @@ DefineSettlement("merida", {
 	},
 	HistoricalOwners = {
 		-138, "rome", -- Emerita Augusta was acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		486, "visigothia" -- Mérida was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		486, "visigothia", -- Mérida was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		1560, "spain" -- Mérida's area was a part of the Kingdom of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		-138, 0, "town-hall"
+	},
+	Regions = {"europe", "iberia", "west-and-central-europe"}
+})
+
+DefineSettlement("munda", {
+	Name = "Munda",
+	MapTemplate = "earth",
+	Position = {3731, 1193},
+	CulturalNames = {
+		"latin", "Munda"
+	},
+	HistoricalOwners = {
+		-197, "rome", -- Munda was acquired by Rome in 197 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		486, "visigothia", -- Munda's area was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		1560, "spain" -- Munda's area was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		-197, 0, "farm"
 	},
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
@@ -135,6 +195,125 @@ DefineSettlement("saguntum", {
 	},
 	HistoricalBuildings = {
 		-218, 0, "farm"
+	},
+	Regions = {"europe", "iberia", "west-and-central-europe"}
+})
+
+DefineSettlement("seville", {
+	Name = "Seville",
+	MapTemplate = "earth",
+	Position = {3703, 1195},
+	CulturalNames = {
+		"castillian", "Seville",
+		"latin", "Hispalis"
+	},
+	HistoricalOwners = {
+		-201, "rome", -- Hispalis was acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		486, "visigothia", -- Seville was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		1560, "spain" -- Seville was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		-201, 1504, "farm",
+		1504, 0, "university" -- Major university founded in Seville in 1504; Source: "The Cambridge Modern History Atlas", 1912, p. 9; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
+	},
+	Regions = {"europe", "iberia", "west-and-central-europe"}
+})
+
+DefineSettlement("tarragona", {
+	Name = "Tarragona",
+	MapTemplate = "earth",
+	Position = {3881, 1109},
+	CulturalNames = {
+		"castillian", "Tarragona",
+		"latin", "Tarraco"
+	},
+	HistoricalOwners = {
+		-201, "rome", -- Tarraco was acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		486, "visigothia", -- Tarragona was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		1560, "spain" -- Tarragona was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		-201, 0, "farm"
+	},
+	Regions = {"europe", "iberia", "west-and-central-europe"}
+})
+
+DefineSettlement("toledo", {
+	Name = "Toledo",
+	MapTemplate = "earth",
+	Position = {3756, 1139},
+	CulturalNames = {
+		"castillian", "Toledo",
+		"latin", "Toletum"
+	},
+	HistoricalOwners = {
+		-197, "rome", -- Toletum was acquired by Rome in 197 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		486, "visigothia", -- Toledo was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		1560, "spain" -- Toledo was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		-197, 486, "farm",
+		486, 0, "town-hall",
+		1474, 1807, "university" -- Minor university founded in Toledo in 1474; Source: "The Cambridge Modern History Atlas", 1912, p. 9; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225. Minor university abolished in Toledo in 1807; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
+	},
+	Regions = {"europe", "iberia", "west-and-central-europe"}
+})
+
+DefineSettlement("tortosa", {
+	Name = "Tortosa",
+	MapTemplate = "earth",
+	Position = {3855, 1120},
+	CulturalNames = {
+		"castillian", "Tortosa",
+		"latin", "Dertosa"
+	},
+	HistoricalOwners = {
+		-201, "rome", -- Dertosa was acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		486, "visigothia", -- Tortosa was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		1560, "spain" -- Tortosa was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		-201, 1645, "farm",
+		1645, 1717, "university", -- Minor university founded in Tortosa in 1645; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225. Minor university in Tortosa abolished in 1717; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
+		1717, 0, "farm"
+	},
+	Regions = {"europe", "iberia", "west-and-central-europe"}
+})
+
+DefineSettlement("valencia", {
+	Name = "Valencia",
+	MapTemplate = "earth",
+	Position = {3833, 1148},
+	CulturalNames = {
+		"castillian", "Valencia",
+		"latin", "Valentia"
+	},
+	HistoricalOwners = {
+		-201, "rome", -- Valentia was acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		486, "visigothia", -- Valencia was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		1560, "spain" -- Valencia was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		-201, 1500, "farm",
+		1500, 0, "university" -- University founded in Valencia in 1500; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+	},
+	Regions = {"europe", "iberia", "west-and-central-europe"}
+})
+
+DefineSettlement("zaragoza", {
+	Name = "Zaragoza",
+	MapTemplate = "earth",
+	Position = {3824, 1103},
+	CulturalNames = {
+		"castillian", "Zaragoza"
+	},
+	HistoricalOwners = {
+		486, "visigothia", -- Saragossa was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		1560, "spain" -- Saragossa was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		486, 1474, "farm",
+		1474, 0, "university" -- University founded in Zaragoza in 1474; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
