@@ -30,28 +30,12 @@ SetMapTemplateTileTerrain("earth", "shallow-water", {3812, 1030}) -- to make the
 
 SetMapTemplateResource("earth", "unit-copper-deposit", {3749, 956}) -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
 
--- Amiens / Ambiani
-SetMapTemplateFactionCulturalSettlementName("earth", "Amiens", {3888, 913}, "france")
-SetMapTemplateUnit("earth", "unit-teuton-farm", "salia", {3888, 913}, 561) -- Ambiani went to Chilperich when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-
--- Antibes / Antipolis
-SetMapTemplateFactionCulturalSettlementName("earth", "Antibes", {3995, 1056}, "france")
-SetMapTemplateUnit("earth", "unit-teuton-farm", "burgundia", {3995, 1056}, 561) -- Antipolis went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-
 -- Arles / Arelatum
 SetMapTemplateFactionCulturalSettlementName("earth", "Arles", {3948, 1053}, "france")
 SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {3948, 1053}, 395, 480) -- Arles was a part of the Roman Empire and was the seat of a metropolitanate (archbishopric) in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "visigothia", {3948, 1053}, 480, 526) -- Arles became a part of the Kingdom of the Visigoths in 480; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "ostrogothia", {3948, 1053}, 526, 561) -- Arles was a part of the Kingdom of the Ostrogoths in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "burgundia", {3948, 1053}, 561) -- Arelatum went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-
--- Autin / Augustodunum
-SetMapTemplateFactionCulturalSettlementName("earth", "Autin", {3933, 981}, "france")
-SetMapTemplateUnit("earth", "unit-teuton-farm", "burgundia", {3933, 981}, 561) -- Augustodunum went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-
--- Avignon / Avinio
-SetMapTemplateFactionCulturalSettlementName("earth", "Avignon", {3952, 1045}, "france")
-SetMapTemplateUnit("earth", "unit-teuton-farm", "austrasia", {3952, 1045}, 561) -- Avinio went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
 -- Besançon / Vesontio
 SetMapTemplateFactionCulturalSettlementName("earth", "Besancon", {3973, 978}, "france") -- "Besançon"
@@ -86,20 +70,8 @@ SetMapTemplateUnit("earth", "unit-teuton-farm", "rome", {3947, 941}, 395, 486) -
 SetMapTemplateUnit("earth", "unit-teuton-farm", "francia", {3947, 941}, 486, 561) -- Châlons' area became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 SetMapTemplateUnit("earth", "unit-teuton-farm", "austrasia", {3947, 941}, 561) -- Châlons' area went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
--- Clermont-Ferrand / Arverni
-SetMapTemplateFactionCulturalSettlementName("earth", "Clermont-Ferrand", {3909, 1006}, "france")
-SetMapTemplateUnit("earth", "unit-teuton-farm", "austrasia", {3909, 1006}, 561) -- Arverni went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-
 -- Colmar
 -- Parlement or conseil souverain existent in Colmar in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
-
--- Dijon / Divio
-SetMapTemplateFactionCulturalSettlementName("earth", "Dijon", {3955, 994}, "france")
-SetMapTemplateUnit("earth", "unit-teuton-farm", "burgundia", {3955, 994}, 561) -- Divio went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-
--- Langres / Lingones
-SetMapTemplateFactionCulturalSettlementName("earth", "Langres", {3958, 963}, "france")
-SetMapTemplateUnit("earth", "unit-teuton-farm", "burgundia", {3958, 963}, 561) -- Lingones went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
 -- Metz / Mettis
 SetMapTemplateFactionCulturalSettlementName("earth", "Metz", {3981, 931}, "france")
@@ -123,8 +95,6 @@ SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {3914, 1063}, 395, 486
 SetMapTemplateUnit("earth", "unit-teuton-temple", "visigothia", {3914, 1063}, 486) -- Narbonne was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 
 -- Orléans / Aurehani
-SetMapTemplateFactionCulturalSettlementName("earth", "Orleans", {3884, 961}, "france") -- "Orléans"
-SetMapTemplateUnit("earth", "unit-teuton-town-hall", "burgundia", {3884, 961}, 561) -- Chlothar (Frankish king) died in 561, and Orléans went to his son Gunthram; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328; Gregory of Tours, "History of the Franks", IV.22.
 SetMapTemplateHero("earth", "gunthram", "burgundia", {3884, 961}, 561, 592)
 
 -- Paris / Lutetia
@@ -150,10 +120,6 @@ SetMapTemplateUnit("earth", "unit-teuton-temple", "francia", {3930, 926}, 526, 5
 SetMapTemplateUnit("earth", "unit-teuton-town-hall", "austrasia", {3930, 926}, 561) -- Chlothar (Frankish king) died in 561, and Reims went to his son Sigibert, becoming his capital; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328; Gregory of Tours, "History of the Franks", IV.22.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "austrasia", {3930, 926}, 561)
 SetMapTemplateHero("earth", "sigibert", "austrasia", {3930, 926}, 561, 575)
-
--- Rodez / Ruthenis
-SetMapTemplateFactionCulturalSettlementName("earth", "Rodez", {3895, 1030}, "france")
-SetMapTemplateUnit("earth", "unit-teuton-farm", "austrasia", {3895, 1030}, 561) -- Ruthenis went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
 -- Rouen / Rotomagus
 SetMapTemplateFactionCulturalSettlementName("earth", "Rouen", {3871, 926}, "france")
@@ -190,8 +156,6 @@ SetMapTemplateUnit("earth", "unit-teuton-temple", "francia", {3867, 1048}, 526, 
 SetMapTemplateUnit("earth", "unit-teuton-temple", "neustria", {3867, 1048}, 561) -- Tolosa went to Charibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
 -- Tournai / Tornacum
-SetMapTemplateFactionCulturalSettlementName("earth", "Tournai", {3917, 896}, "france")
-SetMapTemplateUnit("earth", "unit-teuton-farm", "salia", {3917, 896}, 561) -- Tornacum went to Chilperich when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 SetMapTemplateHero("earth", "chilperich", "salia", {3917, 896}, 561, 584)
 
 -- Tours / Turones
@@ -200,18 +164,6 @@ SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {3857, 971}, 395, 486)
 SetMapTemplateUnit("earth", "unit-teuton-temple", "visigothia", {3857, 971}, 486, 526) -- Tours was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "francia", {3857, 971}, 526, 561) -- Tours' area was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 SetMapTemplateUnit("earth", "unit-teuton-temple", "neustria", {3857, 971}, 561) -- Turones went to Charibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-
--- Troyes / Trecae
-SetMapTemplateFactionCulturalSettlementName("earth", "Troyes", {3923, 952}, "france")
-SetMapTemplateUnit("earth", "unit-teuton-farm", "burgundia", {3923, 952}, 561) -- Trecae went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-
--- Uzès / Ucetia
-SetMapTemplateFactionCulturalSettlementName("earth", "Uzes", {3941, 1044}, "france") -- "Uzès"
-SetMapTemplateUnit("earth", "unit-teuton-farm", "austrasia", {3941, 1044}, 561) -- Ucetia went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-
--- Valence / Valentia
-SetMapTemplateFactionCulturalSettlementName("earth", "Valence", {3952, 1026}, "france")
-SetMapTemplateUnit("earth", "unit-teuton-farm", "burgundia", {3952, 1026}, 561) -- Valentia went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
 -- Verdun
 SetMapTemplateFactionCulturalSettlementName("earth", "Verdun", {3957, 927}, "france")

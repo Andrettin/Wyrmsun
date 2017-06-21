@@ -25,11 +25,131 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSettlement("amiens", {
+	Name = "Amiens",
+	MapTemplate = "earth",
+	Position = {3888, 913},
+	CulturalNames = {
+		"frankish", "Ambiani",
+		"french", "Amiens"
+	},
+	HistoricalOwners = {
+		561, "salia" -- Ambiani went to Chilperich when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		561, 0, "farm"
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
+DefineSettlement("antibes", {
+	Name = "Antibes",
+	MapTemplate = "earth",
+	Position = {3995, 1056},
+	CulturalNames = {
+		"frankish", "Antipolis",
+		"french", "Antibes"
+	},
+	HistoricalOwners = {
+		561, "burgundia" -- Antipolis went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		561, 0, "farm"
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
+DefineSettlement("autin", {
+	Name = "Autin",
+	MapTemplate = "earth",
+	Position = {3933, 981},
+	CulturalNames = {
+		"frankish", "Augustodunum",
+		"french", "Autin"
+	},
+	HistoricalOwners = {
+		561, "burgundia" -- Augustodunum went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		561, 0, "farm"
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
+DefineSettlement("avignon", {
+	Name = "Avignon",
+	MapTemplate = "earth",
+	Position = {3952, 1045},
+	CulturalNames = {
+		"frankish", "Avinio",
+		"french", "Avignon"
+	},
+	HistoricalOwners = {
+		561, "austrasia" -- Avinio went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		561, 0, "farm"
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
+DefineSettlement("clermont-ferrand", {
+	Name = "Clermont-Ferrand",
+	MapTemplate = "earth",
+	Position = {3909, 1006},
+	CulturalNames = {
+		"frankish", "Arverni",
+		"french", "Clermont-Ferrand"
+	},
+	HistoricalOwners = {
+		561, "austrasia" -- Arverni went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		561, 0, "farm"
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
+DefineSettlement("dijon", {
+	Name = "Dijon",
+	MapTemplate = "earth",
+	Position = {3955, 994},
+	CulturalNames = {
+		"frankish", "Divio",
+		"french", "Dijon"
+	},
+	HistoricalOwners = {
+		561, "burgundia" -- Divio went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		561, 0, "farm"
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
+DefineSettlement("langres", {
+	Name = "Langres",
+	MapTemplate = "earth",
+	Position = {3958, 963},
+	CulturalNames = {
+		"frankish", "Lingones",
+		"french", "Langres"
+	},
+	HistoricalOwners = {
+		561, "burgundia" -- Lingones went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		561, 0, "farm"
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
 DefineSettlement("lyon", {
 	Name = "Lyon",
 	MapTemplate = "earth",
 	Position = {3947, 1006},
 	CulturalNames = {
+		"frankish", "Lugdunum",
 		"french", "Lyon",
 		"latin", "Lugdunum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
@@ -51,6 +171,7 @@ DefineSettlement("marseilles", {
 	MapTemplate = "earth",
 	Position = {3962, 1062},
 	CulturalNames = {
+		"frankish", "Massilia",
 		"french", "Marseilles",
 		"latin", "Massilia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
@@ -73,6 +194,7 @@ DefineSettlement("nice", {
 	MapTemplate = "earth",
 	Position = {4006, 1052},
 	CulturalNames = {
+		"frankish", "Nicea",
 		"french", "Nice",
 		"latin", "Nicaea"
 	},
@@ -88,11 +210,46 @@ DefineSettlement("nice", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
+DefineSettlement("orleans", {
+	Name = "Orleans",
+	MapTemplate = "earth",
+	Position = {3884, 961},
+	CulturalNames = {
+		"frankish", "Aurehani",
+		"french", "Orleans" -- "Orléans"
+	},
+	HistoricalOwners = {
+		561, "burgundia" -- Chlothar (Frankish king) died in 561, and Orléans/Aurehani went to his son Gunthram; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328; Gregory of Tours, "History of the Franks", IV.22.
+	},
+	HistoricalBuildings = {
+		561, 0, "town-hall"
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
+DefineSettlement("rodez", {
+	Name = "Rodez",
+	MapTemplate = "earth",
+	Position = {3895, 1030},
+	CulturalNames = {
+		"frankish", "Ruthenis",
+		"french", "Rodez"
+	},
+	HistoricalOwners = {
+		561, "austrasia" -- Ruthenis went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		561, 0, "farm"
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
 DefineSettlement("strassburg", {
 	Name = "Strassburg",
 	MapTemplate = "earth",
 	Position = {4013, 948},
 	CulturalNames = {
+		"frankish", "Argentoratum",
 		"french", "Strasbourg",
 		"latin", "Argentoratum",
 		"teuton", "Strassburg"
@@ -123,11 +280,80 @@ DefineSettlement("toulon", {
 	MapTemplate = "earth",
 	Position = {3974, 1065},
 	CulturalNames = {
+		"frankish", "Tolo",
 		"french", "Toulon"
 	},
 	HistoricalOwners = {
 		561, "burgundia", -- Tolo went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 		1789, "france" -- Toulon was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+	},
+	HistoricalBuildings = {
+		561, 0, "farm"
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
+DefineSettlement("tournai", {
+	Name = "Tournai",
+	MapTemplate = "earth",
+	Position = {3917, 896},
+	CulturalNames = {
+		"frankish", "Tornacum",
+		"french", "Tournai"
+	},
+	HistoricalOwners = {
+		561, "salia" -- Tornacum went to Chilperich when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		561, 0, "farm"
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
+DefineSettlement("troyes", {
+	Name = "Troyes",
+	MapTemplate = "earth",
+	Position = {3923, 952},
+	CulturalNames = {
+		"frankish", "Trecae",
+		"french", "Troyes"
+	},
+	HistoricalOwners = {
+		561, "burgundia" -- Trecae went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		561, 0, "farm"
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
+DefineSettlement("uzes", {
+	Name = "Uzes",
+	MapTemplate = "earth",
+	Position = {3941, 1044},
+	CulturalNames = {
+		"frankish", "Ucetia",
+		"french", "Uzes" -- "Uzès"
+	},
+	HistoricalOwners = {
+		561, "austrasia" -- Ucetia went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		561, 0, "farm"
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
+DefineSettlement("valence", {
+	Name = "Valence",
+	MapTemplate = "earth",
+	Position = {3952, 1026},
+	CulturalNames = {
+		"frankish", "Valentia",
+		"french", "Valence"
+	},
+	HistoricalOwners = {
+		561, "burgundia" -- Valentia went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 	},
 	HistoricalBuildings = {
 		561, 0, "farm"
@@ -146,7 +372,7 @@ DefineSettlement("vienne", {
 		395, "rome", -- Vienne was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		486, "burgundy", -- Vienne was a part of the Kingdom of the Burgundians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		561, "burgundia", -- Vienne's area went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-		1789, "france" -- Marseilles was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		1789, "france" -- Vienne was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	HistoricalBuildings = {
 		395, 0, "temple" -- Vienne was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
