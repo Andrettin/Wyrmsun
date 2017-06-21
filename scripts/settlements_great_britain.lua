@@ -34,7 +34,8 @@ DefineSettlement("amesbury", {
 --		"english", "Amesbury"
 	},
 	HistoricalOwners = {
-		802, "wessex" -- Amesbury was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "wessex", -- Amesbury was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Amesbury's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		802, 0, "farm"
@@ -51,7 +52,8 @@ DefineSettlement("athelney", {
 --		"english", "Athelney"
 	},
 	HistoricalOwners = {
-		802, "wessex" -- Athelney was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "wessex", -- Athelney was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Athelney's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		802, 0, "farm"
@@ -68,7 +70,8 @@ DefineSettlement("bamburgh", {
 --		"english", "Bamburgh" -- as given by Stenton; Shepherd gives it as "Bamborough" instead; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 	},
 	HistoricalOwners = {
-		802, "northumbria" -- Bamborough was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "northumbria", -- Bamborough was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Bamburgh's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		802, 0, "town-hall"
@@ -88,7 +91,8 @@ DefineSettlement("bath", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Aquae Solis/Bath was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "mercia" -- Bath was a part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "mercia", -- Bath was a part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Bath's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 0, "farm"
@@ -107,7 +111,8 @@ DefineSettlement("bitterne", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Clausentum/Bitterne was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "wessex" -- Bitterne's area was a part of Wessex in 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "wessex", -- Bitterne's area was a part of Wessex in 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Bitterne's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 0, "farm"
@@ -126,7 +131,8 @@ DefineSettlement("brancaster", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Branodunum/Brancaster was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "east-anglia" -- Branodunum's area was a part of East Anglia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "east-anglia", -- Branodunum's area was a part of East Anglia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Branodunum's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 0, "farm"
@@ -146,7 +152,8 @@ DefineSettlement("cambridge", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Camboricum/Cambridge was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "mercia" -- Camboricum's area was a part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "mercia", -- Camboricum's area was a part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Cambridge was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 0, "farm"
@@ -166,7 +173,8 @@ DefineSettlement("canterbury", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Durovernum/Canterbury was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		597, "kent" -- Canterbury was a part of Kent in 597 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 105-106.
+		597, "kent", -- Canterbury was a part of Kent in 597 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 105-106.
+		1560, "england" -- Canterbury was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 597, "farm",
@@ -188,7 +196,8 @@ DefineSettlement("carlisle", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Luguvallium was a part of the Roman empire c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "strathclyde" -- Carlisle was a part of Strathclyde c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "strathclyde", -- Carlisle was a part of Strathclyde c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Carlisle was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 802, "farm",
@@ -208,7 +217,8 @@ DefineSettlement("castor-near-norwich", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Venta Icenorum/Castor near Norwich was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "east-anglia" -- Venta Icenorum's area was a part of East Anglia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "east-anglia", -- Venta Icenorum's area was a part of East Anglia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Venta Icenorum's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 0, "farm"
@@ -228,7 +238,8 @@ DefineSettlement("chester", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Deva/Chester was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "mercia" -- Chester was a part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "mercia", -- Chester was a part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Chester's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 802, "town-hall",
@@ -249,7 +260,8 @@ DefineSettlement("chichester", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Regnum/Chichester was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "sussex" -- Chichester's area was a part of Sussex in 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "sussex", -- Chichester's area was a part of Sussex in 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Chichester's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 0, "farm"
@@ -269,7 +281,8 @@ DefineSettlement("cirencester", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Corinium/Cirencester was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "wessex" -- Cirencester's area was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "wessex", -- Cirencester's area was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Cirencester's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 0, "farm"
@@ -289,7 +302,8 @@ DefineSettlement("colchester", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Camulodunum/Colchester was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "essex" -- Colchester was a part of Essex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "essex", -- Colchester was a part of Essex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Colchester's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 0, "town-hall"
@@ -309,7 +323,8 @@ DefineSettlement("dorchester", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Durnovaria/Dorchester was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "wessex" -- Dorchester was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "wessex", -- Dorchester was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Dorchester's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 0, "farm"
@@ -329,7 +344,8 @@ DefineSettlement("dover", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Dubrae/Dover was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "kent" -- Dover was a part of Kent c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "kent", -- Dover was a part of Kent c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Dover was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 0, "farm"
@@ -346,7 +362,8 @@ DefineSettlement("durham", {
 --		"english", "Durham" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	},
 	HistoricalOwners = {
-		802, "northumbria" -- Durham was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "northumbria", -- Durham was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Durham's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		802, 0, "town-hall"
@@ -364,7 +381,8 @@ DefineSettlement("durolipons", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Durolipons was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "mercia" -- Durolipons' area was a part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "mercia", -- Durolipons' area was a part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Durolipons' area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 0, "farm"
@@ -380,7 +398,8 @@ DefineSettlement("edinburgh", {
 --		"english", "Edinburgh"
 	},
 	HistoricalOwners = {
-		802, "northumbria" -- Edinburgh was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "northumbria", -- Edinburgh was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "scotland" -- Edinburgh was a part of Scotland in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		802, 0, "farm"
@@ -400,7 +419,8 @@ DefineSettlement("exeter", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Isca Dumnoniorum/Exeter was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "wessex" -- Exeter was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "wessex", -- Exeter was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Exeter's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 0, "farm"
@@ -420,7 +440,8 @@ DefineSettlement("gloucester", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Glevum/Gloucester was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "mercia" -- Gloucester area was a part of Mercia in 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "mercia", -- Gloucester was a part of Mercia in 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Gloucester was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 0, "town-hall"
@@ -437,7 +458,8 @@ DefineSettlement("goodmanham", {
 --		"english", "Goodmanham"
 	},
 	HistoricalOwners = {
-		802, "northumbria" -- Godmundingham was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "northumbria", -- Godmundingham was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Goodmanham's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		802, 0, "farm"
@@ -454,7 +476,8 @@ DefineSettlement("hastings", {
 --		"english", "Hastings"
 	},
 	HistoricalOwners = {
-		802, "sussex" -- Hastings was a part of Sussex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "sussex", -- Hastings was a part of Sussex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Hastings' area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		802, 0, "farm"
@@ -470,7 +493,8 @@ DefineSettlement("heathfield", {
 --		"english", "Heathfield"
 	},
 	HistoricalOwners = {
-		802, "northumbria" -- Heathfield was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "northumbria", -- Heathfield was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Heathfield's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		802, 0, "farm"
@@ -487,7 +511,8 @@ DefineSettlement("jarrow", {
 --		"english", "Jarrow"
 	},
 	HistoricalOwners = {
-		802, "northumbria" -- Jarrow was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "northumbria", -- Jarrow was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Jarrow's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		802, 0, "farm"
@@ -507,7 +532,8 @@ DefineSettlement("leicester", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Ratae/Leicester was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "mercia" -- Leicester was a part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "mercia", -- Leicester was a part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Leicester was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 737, "farm",
@@ -528,7 +554,8 @@ DefineSettlement("lincoln", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Lindum/Lincoln was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "mercia" -- Lincoln was a part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "mercia", -- Lincoln was a part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Lincoln's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 627, "farm",
@@ -546,7 +573,8 @@ DefineSettlement("leeds", {
 --		"english", "Leeds"
 	},
 	HistoricalOwners = {
-		802, "northumbria" -- Loidis was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "northumbria", -- Loidis was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Leeds' area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		802, 0, "farm"
@@ -567,7 +595,8 @@ DefineSettlement("london", {
 	HistoricalOwners = {
 		410, "rome", -- Londinium/London was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 		604, "essex", -- London was the capital of the East Saxons in 604 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 109.
-		802, "middlesex" -- London was a part of Middlesex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "middlesex", -- London was a part of Middlesex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- London was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 0, "town-hall",
@@ -587,7 +616,8 @@ DefineSettlement("old-sarum", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Sorbiodunum/Old Sarum was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "wessex" -- Old Sarum was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "wessex", -- Old Sarum was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Old Sarum's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 0, "farm"
@@ -607,7 +637,8 @@ DefineSettlement("pevensey", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Anderida/Pevensey was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "sussex" -- Pevensey was a part of Sussex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "sussex", -- Pevensey was a part of Sussex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Pevensey's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 802, "farm",
@@ -628,7 +659,8 @@ DefineSettlement("reculver", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Regulbium/Reculver was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		669, "kent" -- Reculver was a part of Kent in 669 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 111.
+		669, "kent", -- Reculver was a part of Kent in 669 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 111.
+		1560, "england" -- Reculver's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 669, "farm",
@@ -648,8 +680,9 @@ DefineSettlement("richborough", {
 		"latin", "Rutupiae" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
-		410, "rome", -- Regulbium/Reculver was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "kent" -- Richborough's area was a part of Kent in 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		410, "rome", -- Rutupiae/Richborough was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+		802, "kent", -- Richborough's area was a part of Kent in 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Richborough's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 0, "farm"
@@ -669,7 +702,8 @@ DefineSettlement("rochester", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Durobrivae/Rochester was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		604, "kent" -- Rochester was a part of Kent in 604 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 109.
+		604, "kent", -- Rochester was a part of Kent in 604 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 109.
+		1560, "england" -- Rochester's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 604, "farm",
@@ -690,7 +724,8 @@ DefineSettlement("saint-albans", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Verulamium/St. Albans was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "middlesex" -- St. Albans was a part of Middlesex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "middlesex", -- St. Albans was a part of Middlesex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- St. Albans' area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 0, "farm"
@@ -708,7 +743,8 @@ DefineSettlement("salisbury", {
 --		"english", "Salisbury" -- Source: "Philip's International School Atlas", 2006, p. 64.
 	},
 	HistoricalOwners = {
-		802, "wessex" -- Salisbury was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "wessex", -- Salisbury was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Salisbury's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		802, 0, "farm"
@@ -727,7 +763,8 @@ DefineSettlement("silchester", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Calleva/Silchester was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "wessex" -- Silchester's area was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "wessex", -- Silchester's area was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Silchester's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 0, "farm"
@@ -745,7 +782,8 @@ DefineSettlement("sitomagus", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Sitomagus was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "east-anglia" -- Sitomagus' area was a part of East Anglia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "east-anglia", -- Sitomagus' area was a part of East Anglia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Sitomagus' area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 0, "farm"
@@ -764,7 +802,8 @@ DefineSettlement("speen", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Spinae/Speen was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "wessex" -- Spinae's area was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "wessex", -- Speen's area was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Speen's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 0, "farm"
@@ -782,7 +821,8 @@ DefineSettlement("vindogladia", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Vindogladia was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "wessex" -- Vindogladia's area was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "wessex", -- Vindogladia's area was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Vindogladia's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 0, "farm"
@@ -798,7 +838,8 @@ DefineSettlement("wearmouth", {
 --		"english", "Wearmouth"
 	},
 	HistoricalOwners = {
-		802, "northumbria" -- Wearmouth was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "northumbria", -- Wearmouth was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Wearmouth's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		802, 0, "farm"
@@ -815,7 +856,8 @@ DefineSettlement("whitby", {
 --		"english", "Whitby"
 	},
 	HistoricalOwners = {
-		663, "northumbria" -- Streoneshalh was a part of Northumbria in 663 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 122-123.
+		663, "northumbria", -- Streoneshalh was a part of Northumbria in 663 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 122-123.
+		1560, "england" -- Whitby's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		663, 0, "temple" -- Streoneshalh had a monastery in 663; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 123.
@@ -835,7 +877,8 @@ DefineSettlement("winchester", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Verita Belgarum/Winchester was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "wessex" -- Winchester was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "wessex", -- Winchester was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Winchester's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 802, "farm",
@@ -853,7 +896,8 @@ DefineSettlement("winwaedsfield", {
 --		"english", "Winwaedsfield"
 	},
 	HistoricalOwners = {
-		802, "northumbria" -- Winwaedsfield was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "northumbria", -- Winwaedsfield was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Winwaedsfield's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		802, 0, "farm"
@@ -876,7 +920,7 @@ DefineSettlement("york", {
 		500, "dere-tribe", -- the Dere (a collection of Anglian peoples) were in possession of York in 500 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 		588, "bernicia", -- according to tradition, Æthelric of Bernicia acquired the kingdom of Deira upon its king Ælle's death in 588 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
 		654, "northumbria", -- Northumbria unified by Oswiu of Bernicia in 654
-		1560, "england" -- political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "england" -- York was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 0, "town-hall",
