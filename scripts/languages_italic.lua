@@ -62,7 +62,15 @@ DefineLanguage("old-french", {
 
 DefineLanguage("french", {
 	Name = "French",
-	Family = "italic"
+	Family = "italic",
+	NameTranslations = {
+		-- Latin Settlement Names
+		"Burdigala", "Bordeaux",
+		"Lugdunum", "Lyon",
+		"Massilia", "Marseilles",
+		"Nicaea", "Nice",
+		"Tolosa", "Toulouse"
+	}
 })
 
 DefineLanguage("liegeois", { -- should be a dialect instead of its own language

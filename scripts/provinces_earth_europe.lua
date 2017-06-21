@@ -215,7 +215,7 @@ DefineProvince("Aquitaine", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"celt", "arverni-tribe"
---		"french", "France"
+--		"french", "france"
 	},
 	HistoricalOwners = {
 		-- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
@@ -238,11 +238,9 @@ DefineProvince("Aquitaine", {
 		768, "unit-teuton-temple", true -- Archbishopric existent in Narbonne during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
-		1230, "upgrade-university", true, -- University founded in Toulouse in 1230; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1250, "upgrade-university", true, -- University existent in Montpellier in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
 		1332, "upgrade-university", true, -- University founded in Cahors in 1332; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1349, "upgrade-university", true, -- University founded in Perpignan in 1349; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		1441, "upgrade-university", true, -- University founded in Bordeaux in 1441; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1789, "upgrade-courthouse", true, -- Prévôt des maréchaux existent in Limoges in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 		1789, "upgrade-courthouse", true, -- Chief court of the salt tax existent in Clermont-Ferrand in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 		1789, "upgrade-courthouse", true, -- Parlement or conseil souverain, court of admiralty, prévôt des maréchaux and chief court of the salt tax existent in Toulouse in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
@@ -694,7 +692,6 @@ DefineProvince("Berry", {
 		768, "unit-teuton-temple", true -- Archbishopric existent in Bourges during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
-		1464, "upgrade-university", true, -- University founded in Bourges in 1464; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1789, "upgrade-courthouse", true -- Prévôt des maréchaux and chief court of the salt tax existent in Bourges in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
 	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
@@ -981,7 +978,6 @@ DefineProvince("Brittany", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	HistoricalModifiers = {
-		1460, "upgrade-university", true, -- University founded in Nantes in 1460; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1789, "upgrade-courthouse", true, -- Chambre des comptes existent in Nantes in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 		1789, "upgrade-courthouse", true, -- Parlement or conseil souverain, court of admiralty and prévôt des maréchaux existent in Rennes in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
@@ -1304,7 +1300,6 @@ DefineProvince("Champagne", { -- includes Brie
 		768, "unit-teuton-temple", true -- Archbishopric existent in Sens during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
-		1547, "upgrade-university", true, -- University founded in Reims in 1547; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 		1789, "upgrade-courthouse", true -- Chief court of the salt tax existent in Troyes in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
 	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
@@ -1671,7 +1666,6 @@ DefineProvince("Dauphiny", {
 	},
 	HistoricalModifiers = {
 		1339, "upgrade-university", true, -- University founded in Grenoble in 1339; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		1459, "upgrade-university", true, -- University founded in Valence in 1459; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1789, "upgrade-courthouse", true, -- Chief court of the salt tax existent in Valence in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 		1789, "upgrade-courthouse", true -- Parlement or conseil souverain, prévôt des maréchaux and chief court of the salt tax existent in Grenoble in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
@@ -2261,9 +2255,7 @@ DefineProvince("France", {
 		768, "unit-teuton-temple", true -- Monastery or abbey existent in St. Denis during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
-		1250, "upgrade-university", true, -- University existent in Paris in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
 		1250, "upgrade-university", true, -- University existent in Angers in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
-		1305, "upgrade-university", true, -- University founded in Orléans in 1305; Source: "Atlas de História Mundial", 2001, p. 144.
 		1789, "upgrade-courthouse", true, -- Parlement or conseil souverain, cour des aides, cambre des comptes, court of admiralty, cour des monnaies, prévôt des maréchaux and chief court of the salt tax existent in Paris in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 		1789, "upgrade-courthouse", true, -- Prévôt des maréchaux and chief court of the salt tax existent in Soissons in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 		1789, "upgrade-courthouse", true, -- Chambre des comptes existent in Nevers in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
@@ -2321,7 +2313,6 @@ DefineProvince("Franche Comte", {
 	},
 	HistoricalModifiers = {
 		1422, "upgrade-university", true, -- University founded in Dôle in 1422; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		1485, "upgrade-university", true, -- University founded in Besançon in 1485; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1789, "upgrade-courthouse", true -- Parlement or conseil souverain and prévôt des maréchaux existent in Besançon in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
 	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
@@ -3840,7 +3831,6 @@ DefineProvince("Lyonnais", {
 		-50, "latin", "rome"
 	},
 	HistoricalModifiers = {
-		1330, "upgrade-university", true, -- University founded in Lyon in 1330; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 		1789, "upgrade-courthouse", true -- Chief court of the salt tax existent in Lyon in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
 	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
@@ -5000,7 +4990,6 @@ DefineProvince("Poitou", {
 		-50, "latin", "rome"
 	},
 	HistoricalModifiers = {
-		1431, "upgrade-university", true, -- University founded in Poitiers in 1431; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1789, "upgrade-courthouse", true -- Prévôt des maréchaux existent in Poitiers in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
 	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
@@ -5116,7 +5105,6 @@ DefineProvince("Provence", {
 		768, "unit-teuton-temple", true -- Archbishopric existent in Arles during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
-		1303, "upgrade-university", true, -- University founded in Avignon in 1303; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1409, "upgrade-university", true, -- University founded in Aix-en-Provence in 1409; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1789, "upgrade-courthouse", true -- Parlement or conseil souverain, chambre des comptes, court of admiralty, chief court of the salt tax and prévôt des maréchaux existent in Aix-en-Provence in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},

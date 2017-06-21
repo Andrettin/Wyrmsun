@@ -59,6 +59,26 @@ DefineSettlement("antibes", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
+DefineSettlement("arles", {
+	Name = "Arles",
+	MapTemplate = "earth",
+	Position = {3948, 1053},
+	CulturalNames = {
+		"frankish", "Arelatum",
+		"french", "Arles"
+	},
+	HistoricalOwners = {
+		395, "rome", -- Arles was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		480, "visigothia", -- Arles became a part of the Kingdom of the Visigoths in 480; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		526, "ostrogothia", -- Arles was a part of the Kingdom of the Ostrogoths in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		561, "burgundia" -- Arelatum went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		395, 0, "temple" -- Arles was the seat of a metropolitanate (archbishopric) in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
 DefineSettlement("autin", {
 	Name = "Autin",
 	MapTemplate = "earth",
@@ -88,7 +108,113 @@ DefineSettlement("avignon", {
 		561, "austrasia" -- Avinio went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 	},
 	HistoricalBuildings = {
-		561, 0, "farm"
+		561, 1303, "farm",
+		1303, 0, "university" -- University founded in Avignon in 1303; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
+DefineSettlement("besancon", {
+	Name = "Besancon",
+	MapTemplate = "earth",
+	Position = {3973, 978},
+	CulturalNames = {
+		"frankish", "Vesontio",
+		"french", "Besancon" -- "Besançon"
+	},
+	HistoricalOwners = {
+		395, "rome", -- Besançon was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		486, "burgundy", -- Besançon was a part of the Kingdom of the Burgundians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		561, "burgundia" -- Vesontio went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		395, 0, "town-hall",
+		395, 0, "temple", -- Besançon was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		1485, 0, "university" -- University founded in Besançon in 1485; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
+DefineSettlement("bordeaux", {
+	Name = "Bordeaux",
+	MapTemplate = "earth",
+	Position = {3826, 1029},
+	CulturalNames = {
+		"celt", "Burdigala",
+		"frankish", "Burdegala",
+		"french", "Bordeaux",
+		"latin", "Burdigala" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	HistoricalOwners = {
+		161, "rome", -- Burdigala was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		395, "rome", -- Bordeaux was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		486, "visigothia", -- Bordeaux was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		526, "francia", -- Bordeaux's area was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		561, "neustria" -- Burdegala went to Charibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		161, 395, "farm",
+		395, 0, "town-hall",
+		395, 0, "temple", -- Bordeaux was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		1441, 0, "university" -- University founded in Bordeaux in 1441; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
+DefineSettlement("bourges", {
+	Name = "Bourges",
+	MapTemplate = "earth",
+	Position = {3894, 975},
+	CulturalNames = {
+		"frankish", "Bituricae",
+		"french", "Bourges"
+	},
+	HistoricalOwners = {
+		395, "rome", -- Bourges was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		486, "visigothia", -- Bourges was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		526, "francia", -- Bourges' area was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		561, "burgundia" -- Bituricae went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		395, 0, "town-hall",
+		395, 0, "temple", -- Bourges was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		1464, 0, "university" -- University founded in Bourges in 1464; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
+DefineSettlement("brest", {
+	Name = "Brest",
+	MapTemplate = "earth",
+	Position = {3736, 946},
+	CulturalNames = {
+		"celt", "Gesocribate",
+		"french", "Brest",
+		"latin", "Gesocribate" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	HistoricalOwners = {
+		161, "rome" -- Gesocribate was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	HistoricalBuildings = {
+		161, 0, "farm"
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
+DefineSettlement("chalons", {
+	Name = "Chalons",
+	MapTemplate = "earth",
+	Position = {3947, 941},
+	CulturalNames = {
+		"french", "Chalons" -- "Châlons"
+	},
+	HistoricalOwners = {
+		395, "rome", -- Châlons was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		486, "francia", -- Châlons' area became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		561, "austrasia" -- Châlons' area went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		395, 0, "farm"
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -149,6 +275,7 @@ DefineSettlement("lyon", {
 	MapTemplate = "earth",
 	Position = {3947, 1006},
 	CulturalNames = {
+		"celt", "Lugdunum",
 		"frankish", "Lugdunum",
 		"french", "Lyon",
 		"latin", "Lugdunum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -160,8 +287,9 @@ DefineSettlement("lyon", {
 	},
 	HistoricalBuildings = {
 		161, 0, "town-hall",
-		395, 0, "temple" -- Lyon was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		395, 0, "temple", -- Lyon was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		-- Archbishopric existent in Lyon during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		1330, 0, "university" -- University founded in Lyon in 1330; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -171,6 +299,7 @@ DefineSettlement("marseilles", {
 	MapTemplate = "earth",
 	Position = {3962, 1062},
 	CulturalNames = {
+		"celt", "Massilia",
 		"frankish", "Massilia",
 		"french", "Marseilles",
 		"latin", "Massilia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -189,11 +318,72 @@ DefineSettlement("marseilles", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
+DefineSettlement("metz", {
+	Name = "Metz",
+	MapTemplate = "earth",
+	Position = {3981, 931},
+	CulturalNames = {
+		"frankish", "Mettis",
+		"french", "Metz"
+	},
+	HistoricalOwners = {
+		395, "rome", -- Metz was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		486, "francia", -- Metz was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		561, "austrasia" -- Mettis went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		395, 561, "temple", -- Metz was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		561, 0, "town-hall",
+		561, 0, "temple"
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
+DefineSettlement("nantes", {
+	Name = "Nantes",
+	MapTemplate = "earth",
+	Position = {3804, 972},
+	CulturalNames = {
+		"frankish", "Namnetes",
+		"french", "Nantes"
+	},
+	HistoricalOwners = {
+		395, "rome", -- Nantes was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		486, "francia", -- Nantes was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		561, "neustria" -- Namnetes went to Charibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		395, 0, "town-hall",
+		395, 0, "temple", -- Nantes was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		1460, 0, "university" -- University founded in Nantes in 1460; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
+DefineSettlement("narbonne", {
+	Name = "Narbonne",
+	MapTemplate = "earth",
+	Position = {3914, 1063},
+	CulturalNames = {
+		"frankish", "Namnetes",
+		"french", "Narbonne"
+	},
+	HistoricalOwners = {
+		395, "rome", -- Narbonne was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		486, "visigothia" -- Narbonne was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+	},
+	HistoricalBuildings = {
+		395, 0, "temple" -- Narbonne was the seat of a metropolitanate (archbishopric) in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
 DefineSettlement("nice", {
 	Name = "Nice",
 	MapTemplate = "earth",
 	Position = {4006, 1052},
 	CulturalNames = {
+		"celt", "Nicaea",
 		"frankish", "Nicea",
 		"french", "Nice",
 		"latin", "Nicaea"
@@ -222,7 +412,77 @@ DefineSettlement("orleans", {
 		561, "burgundia" -- Chlothar (Frankish king) died in 561, and Orléans/Aurehani went to his son Gunthram; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328; Gregory of Tours, "History of the Franks", IV.22.
 	},
 	HistoricalBuildings = {
-		561, 0, "town-hall"
+		561, 0, "town-hall",
+		1305, 0, "university" -- University founded in Orléans in 1305; Source: "Atlas de História Mundial", 2001, p. 144.
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
+DefineSettlement("paris", {
+	Name = "Paris",
+	MapTemplate = "earth",
+	Position = {3891, 937},
+	CulturalNames = {
+		"celt", "Lutetia",
+		"frankish", "Parisii",
+		"french", "Paris",
+		"latin", "Lutetia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	HistoricalOwners = {
+		161, "rome", -- Lutetia was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		561, "neustria" -- Parisii went to Charibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		161, 395, "farm",
+		395, 0, "town-hall",
+		395, 0, "temple", -- Paris was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		1250, 0, "university" -- University existent in Paris in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
+DefineSettlement("poitiers", {
+	Name = "Poitiers",
+	MapTemplate = "earth",
+	Position = {3845, 990},
+	CulturalNames = {
+		"frankish", "Pictavis",
+		"french", "Poitiers"
+	},
+	HistoricalOwners = {
+		395, "rome", -- Poitiers was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		486, "visigothia", -- Poitiers was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		526, "francia", -- Poitiers' area was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		561, "neustria" -- Pictavis went to Charibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		395, 0, "town-hall",
+		395, 0, "temple", -- Poitiers was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		1431, 0, "university" -- University founded in Poitiers in 1431; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
+DefineSettlement("reims", {
+	Name = "Reims",
+	MapTemplate = "earth",
+	Position = {3930, 926},
+	CulturalNames = {
+		"celt", "Durocortorum",
+		"frankish", "Remi",
+		"french", "Reims",
+		"latin", "Durocortorum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	HistoricalOwners = {
+		-50, "rome", -- Durocortorum was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		526, "francia", -- Reims was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		561, "austrasia" -- Chlothar (Frankish king) died in 561, and Reims/Remi went to his son Sigibert, becoming his capital; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328; Gregory of Tours, "History of the Franks", IV.22; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		-50, 395, "farm",
+		395, 0, "town-hall",
+		395, 0, "temple", -- Reims was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		1547, 0, "university" -- University founded in Reims in 1547; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -249,6 +509,7 @@ DefineSettlement("strassburg", {
 	MapTemplate = "earth",
 	Position = {4013, 948},
 	CulturalNames = {
+		"celt", "Argentoratum",
 		"frankish", "Argentoratum",
 		"french", "Strasbourg",
 		"latin", "Argentoratum",
@@ -289,6 +550,31 @@ DefineSettlement("toulon", {
 	},
 	HistoricalBuildings = {
 		561, 0, "farm"
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
+DefineSettlement("toulouse", {
+	Name = "Toulouse",
+	MapTemplate = "earth",
+	Position = {3867, 1048},
+	CulturalNames = {
+		"celt", "Tolosa",
+		"frankish", "Tolosa",
+		"french", "Toulouse",
+		"latin", "Tolosa" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	HistoricalOwners = {
+		161, "rome", -- Tolosa was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		486, "visigothia", -- Toulouse was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		526, "francia", -- Toulouse was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		561, "neustria" -- Tolosa went to Charibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		161, 395, "farm",
+		395, 0, "town-hall",
+		395, 0, "temple", -- Toulouse was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		1230, 0, "university" -- University founded in Toulouse in 1230; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -356,7 +642,8 @@ DefineSettlement("valence", {
 		561, "burgundia" -- Valentia went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 	},
 	HistoricalBuildings = {
-		561, 0, "farm"
+		561, 1459, "farm",
+		1459, 0, "university" -- University founded in Valence in 1459; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
