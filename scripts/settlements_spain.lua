@@ -53,7 +53,8 @@ DefineSettlement("burgos", {
 		"latin", "Burgiorum" -- Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
 	},
 	HistoricalOwners = {
-		910, "leon" -- Burgos was a part of the Kingdom of León in 910; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+		910, "leon", -- Burgos was a part of the Kingdom of León in 910; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+		1560, "spain" -- Burgos was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		910, 0, "farm"
