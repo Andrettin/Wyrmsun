@@ -222,6 +222,13 @@ DefineTerrainFeature("peneus-river", {
 	}
 })
 
+DefineTerrainFeature("po-river", {
+	Name = "Po River",
+	TerrainType = "shallow-water",
+	World = "Earth",
+	Color = {0, 128, 208}
+})
+
 DefineTerrainFeature("rhine-river", {
 	Name = "Rhine River",
 	TerrainType = "shallow-water",

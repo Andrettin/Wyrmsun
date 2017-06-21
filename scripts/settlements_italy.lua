@@ -145,7 +145,7 @@ DefineSettlement("cosa", {
 DefineSettlement("cremona", {
 	Name = "Cremona",
 	MapTemplate = "earth",
-	Position = {4066, 1025},
+	Position = {4067, 1021},
 	CulturalNames = {
 		"italian", "Cremona",
 		"latin", "Cremona", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
