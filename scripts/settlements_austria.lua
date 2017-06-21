@@ -226,8 +226,9 @@ DefineSettlement("salzburg", {
 	},
 	HistoricalBuildings = {
 		45, 526, "town-hall",
-		526, 1815, "farm",
-		1815, 0, "town-hall"
+		526, 768, "farm",
+		768, 0, "town-hall",
+		768, 0, "temple" -- Archbishopric existent in Salzburg during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	Regions = {"europe", "west-and-central-europe", "roman-danube", "germany-netherlands", "cisleithania"}
 })

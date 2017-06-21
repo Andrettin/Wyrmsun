@@ -233,10 +233,6 @@ DefineProvince("Aquitaine", {
 	HistoricalCultures = {
 		-71, "celt"
 	},
-	HistoricalSettlementBuildings = {
-		768, "unit-teuton-temple", true, -- Archbishopric existent in Bordeaux during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-		768, "unit-teuton-temple", true -- Archbishopric existent in Narbonne during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-	},
 	HistoricalModifiers = {
 		1250, "upgrade-university", true, -- University existent in Montpellier in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
 		1332, "upgrade-university", true, -- University founded in Cahors in 1332; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
@@ -687,9 +683,6 @@ DefineProvince("Berry", {
 	},
 	HistoricalClaims = {
 		-50, "latin", "rome"
-	},
-	HistoricalSettlementBuildings = {
-		768, "unit-teuton-temple", true -- Archbishopric existent in Bourges during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
 		1789, "upgrade-courthouse", true -- Prévôt des maréchaux and chief court of the salt tax existent in Bourges in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
@@ -1296,7 +1289,6 @@ DefineProvince("Champagne", { -- includes Brie
 		-50, "latin", "rome"
 	},
 	HistoricalSettlementBuildings = {
-		768, "unit-teuton-temple", true, -- Archbishopric existent in Reims during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		768, "unit-teuton-temple", true -- Archbishopric existent in Sens during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
@@ -2308,8 +2300,7 @@ DefineProvince("Franche Comte", {
 		-71, "celt"
 	},
 	HistoricalSettlementBuildings = {
-		768, "unit-teuton-temple", true, -- Monastery or abbey existent in Luxeuil during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-		768, "unit-teuton-temple", true -- Archbishopric existent in Besançon during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		768, "unit-teuton-temple", true -- Monastery or abbey existent in Luxeuil during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
 		1422, "upgrade-university", true, -- University founded in Dôle in 1422; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
@@ -3593,9 +3584,6 @@ DefineProvince("Lombardy", {
 	},
 	HistoricalCultures = {
 		-5930, "basque"
-	},
-	HistoricalSettlementBuildings = {
-		768, "unit-teuton-temple", true -- Archbishopric existent in Milan during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -5101,8 +5089,7 @@ DefineProvince("Provence", {
 		537, "frankish", "francia"
 	},
 	HistoricalSettlementBuildings = {
-		768, "unit-teuton-temple", true, -- Archbishopric existent in Aix during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-		768, "unit-teuton-temple", true -- Archbishopric existent in Arles during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		768, "unit-teuton-temple", true -- Archbishopric existent in Aix during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
 		1409, "upgrade-university", true, -- University founded in Aix-en-Provence in 1409; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
@@ -5229,9 +5216,6 @@ DefineProvince("Romagna", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Coastal = true,
-	HistoricalSettlementBuildings = {
-		768, "unit-teuton-temple", true -- Archbishopric existent in Ravenna during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-	},
 	HistoricalModifiers = {
 		1391, "upgrade-university", true -- University founded in Ferrara in 1391; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
@@ -5356,9 +5340,6 @@ DefineProvince("Salzburg", {
 	},
 	HistoricalCultures = {
 		-800, "celt"
-	},
-	HistoricalSettlementBuildings = {
-		768, "unit-teuton-temple", true -- Archbishopric existent in Salzburg during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })

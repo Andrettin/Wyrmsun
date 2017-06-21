@@ -130,6 +130,7 @@ DefineSettlement("besancon", {
 	HistoricalBuildings = {
 		395, 0, "town-hall",
 		395, 0, "temple", -- Besançon was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		-- Archbishopric existent in Besançon during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		1485, 0, "university" -- University founded in Besançon in 1485; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
@@ -156,6 +157,7 @@ DefineSettlement("bordeaux", {
 		161, 395, "farm",
 		395, 0, "town-hall",
 		395, 0, "temple", -- Bordeaux was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		-- Archbishopric existent in Bordeaux during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		1441, 0, "university" -- University founded in Bordeaux in 1441; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
@@ -178,6 +180,7 @@ DefineSettlement("bourges", {
 	HistoricalBuildings = {
 		395, 0, "town-hall",
 		395, 0, "temple", -- Bourges was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		-- Archbishopric existent in Bourges during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		1464, 0, "university" -- University founded in Bourges in 1464; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
@@ -482,6 +485,7 @@ DefineSettlement("reims", {
 		-50, 395, "farm",
 		395, 0, "town-hall",
 		395, 0, "temple", -- Reims was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		-- Archbishopric existent in Reims during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		1547, 0, "university" -- University founded in Reims in 1547; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
