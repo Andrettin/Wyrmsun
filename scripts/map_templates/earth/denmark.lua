@@ -43,9 +43,6 @@ SetMapTemplateTileTerrain("earth", "shallow-water", {4126, 773})
 
 SetMapTemplateResource("earth", "unit-gold-deposit", {4078, 745}) -- Amber; Source: "Atlas de História Mundial", 2001, p. 89.
 
--- Brødrene Gram (southern Jutland)
-SetMapTemplateUnit("earth", "unit-germanic-town-hall", "jarling-tribe", {4051, 790}, -1500, -1300) -- a longhouse existed in Brødrene Gram (in southern Jutland) in the period II of the Nordic Bronze Age (1500-1300 BC), interpreted as a chiefly residence; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 73, 77-78.
-
 -- Buddinge (near Copenhagen)
 -- a burial mound was created at Buddinge (near Copenhagen) in c. 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 75.
 
@@ -63,9 +60,6 @@ SetMapTemplateUnit("earth", "unit-germanic-warrior", "hlesing-tribe", {4089, 745
 SetMapTemplateUnit("earth", "unit-germanic-warrior", "hlesing-tribe", {4089, 745}, -1101, -1100)
 
 -- Legård (northwestern Jutland)
-SetMapTemplateUnit("earth", "unit-germanic-carpenters-shop", "karling-tribe", {4033, 751}, -1600, -1500)
-SetMapTemplateUnit("earth", "unit-germanic-farm", "karling-tribe", {4033, 751}, -1600, -1500)
-SetMapTemplateUnit("earth", "unit-germanic-farm", "karling-tribe", {4033, 751}, -1600, -1500)
 SetMapTemplateHero("earth", "karla", "karling-tribe", {4033, 751}, -1600, -1599)
 SetMapTemplateUnit("earth", "unit-germanic-worker", "karling-tribe", {4033, 751}, -1600, -1500)
 SetMapTemplateUnit("earth", "unit-germanic-worker", "karling-tribe", {4033, 751}, -1600, -1500)
@@ -74,23 +68,19 @@ SetMapTemplateUnit("earth", "unit-germanic-worker", "karling-tribe", {4033, 751}
 SetMapTemplateUnit("earth", "unit-germanic-archer", "karling-tribe", {4033, 751}, -1600, -1500)
 SetMapTemplateUnit("earth", "unit-germanic-archer", "karling-tribe", {4033, 751}, -1600, -1500)
 SetMapTemplateUnit("earth", "unit-germanic-archer", "karling-tribe", {4033, 751}, -1600, -1500)
-SetMapTemplateUnit("earth", "unit-germanic-farm", "jarling-tribe", {4033, 751}, -1500, -1300) -- a longhouse existed in Legård (in northwestern Jutland) in the period II of the Nordic Bronze Age (1500-1300 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 73, 78.
 
 -- Lusehøj
 -- a burial mound was created at Lusehøj in the period V of the Nordic Bronze Age (900-700 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 73, 77.
 
 -- Store Tyrrestrup (Vendsyssel)
-SetMapTemplateUnit("earth", "unit-germanic-farm", "thralling-tribe", {4070, 743}, -1600, -1500)
 SetMapTemplateHero("earth", "thrahila", "thralling-tribe", {4070, 743}, -1600, -1599)
 SetMapTemplateUnit("earth", "unit-germanic-worker", "thralling-tribe", {4070, 743}, -1600, -1500)
 SetMapTemplateUnit("earth", "unit-germanic-worker", "thralling-tribe", {4070, 743}, -1600, -1500)
 SetMapTemplateUnit("earth", "unit-germanic-worker", "thralling-tribe", {4070, 743}, -1600, -1500)
 SetMapTemplateUnit("earth", "unit-germanic-worker", "thralling-tribe", {4070, 743}, -1600, -1500)
-SetMapTemplateUnit("earth", "unit-germanic-farm", "jarling-tribe", {4070, 743}, -1500, -1300) -- a longhouse existed in Store Tyrrestrup (Vendsyssel) in the period II of the Nordic Bronze Age (1500-1300 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 73-74.
 
 -- Strandtved (near Svendborg)
 -- a burial mound was created at Strandtved (near Svendborg) in c. 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 76.
 
 -- Vejle
-SetMapTemplateUnit("earth", "unit-germanic-barracks", "jarling-tribe", {4058, 779}, -1600, -1599) -- regarding the place of Jarl's dwelling, it should be in a mountainous area, but also near a sound (since in the myth Jarl swam across sounds in his infancy); the lands between Jarl's hall and that of Hersir should contain boggy ground somewhere
 SetMapTemplateHero("earth", "erala", "jarling-tribe", {4058, 779}, -1600, -1599)

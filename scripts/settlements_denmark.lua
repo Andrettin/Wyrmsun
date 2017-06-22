@@ -25,12 +25,48 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSettlement("brodrene-gram", {
+	Name = "Brodrene Gram", -- in southern Jutland
+	MapTemplate = "earth",
+	Position = {4051, 790},
+	CulturalNames = {
+		"norse", "Brodrene Gram" -- "Brødrene Gram"
+	},
+	HistoricalOwners = {
+		-1500, "jarling-tribe"
+	},
+	HistoricalBuildings = {
+		-1500, -1300, "town-hall" -- a longhouse existed in Brødrene Gram (in southern Jutland) in the period II of the Nordic Bronze Age (1500-1300 BC), interpreted as a chiefly residence; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 73, 77-78.
+	},
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+})
+
+DefineSettlement("legard", {
+	Name = "Legard", -- in northwestern Jutland
+	MapTemplate = "earth",
+	Position = {4033, 751},
+	CulturalNames = {
+		"norse", "Legard" -- Legård
+	},
+	HistoricalOwners = {
+		-1600, "karling-tribe", -- seems like a good place to place the Karlings
+		-1500, "jarling-tribe"
+	},
+	HistoricalBuildings = {
+		-1600, -1500, "lumber-mill",
+		-1600, -1500, "farm",
+		-1600, -1500, "farm",
+		-1500, -1300, "farm" -- a longhouse existed in Legård (in northwestern Jutland) in the period II of the Nordic Bronze Age (1500-1300 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 73, 78.
+	},
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+})
+
 DefineSettlement("leidre", {
 	Name = "Leidre",
 	MapTemplate = "earth",
 	Position = {4112, 784},
 	CulturalNames = {
-		"germanic", "Leidre", -- should be a rendeing of Lejre in Proto-Germanic instead
+		"germanic", "Leidre", -- should be a rendering of Lejre in Proto-Germanic instead
 		"norse", "Leidre"
 	},
 	HistoricalOwners = {
@@ -41,6 +77,40 @@ DefineSettlement("leidre", {
 	},
 	HistoricalBuildings = {
 		-2800, 0, "town-hall"
+	},
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+})
+
+DefineSettlement("store-tyrrestrup", {
+	Name = "Store Tyrrestrup",
+	MapTemplate = "earth",
+	Position = {4070, 743},
+	CulturalNames = {
+		"norse", "Store Tyrrestrup"
+	},
+	HistoricalOwners = {
+		-1600, "thralling-tribe", -- seems like a good place to place the Thrahilings
+		-1500, "jarling-tribe"
+	},
+	HistoricalBuildings = {
+		-1600, -1500, "farm",
+		-1500, -1300, "farm" -- a longhouse existed in Store Tyrrestrup (Vendsyssel) in the period II of the Nordic Bronze Age (1500-1300 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 73-74.
+	},
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+})
+
+DefineSettlement("velje", {
+	Name = "Velje",
+	MapTemplate = "earth",
+	Position = {4058, 779},
+	CulturalNames = {
+		"norse", "Velje"
+	},
+	HistoricalOwners = {
+		-1600, "jarling-tribe" -- regarding the place of Jarl's dwelling, it should be in a mountainous area, but also near a sound (since in the myth Jarl swam across sounds in his infancy); the lands between Jarl's hall and that of Hersir should contain boggy ground somewhere; Velje's location seems to fit well enough
+	},
+	HistoricalBuildings = {
+		-1600, -1599, "barracks"
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
