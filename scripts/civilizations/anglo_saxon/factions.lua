@@ -200,6 +200,14 @@ DefineFaction("northumbria", {
 	DefaultTier = "kingdom",
 	DevelopsTo = {"england", "scotland"},
 	FactionUpgrade = "upgrade-faction-northumbria",
+	Conditions = function(s)
+		for i=0,(PlayerMax - 2) do
+			if (i ~= trigger_player and GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and (GetPlayerData(i, "Faction") == "bernicia" or GetPlayerData(i, "Faction") == "deira")) then
+				return false
+			end
+		end
+		return true
+	end,
 	HistoricalUpgrades = {
 		627, "upgrade-deity-christian-god", true, -- king Edwin of Northumbria was baptized in 627 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 115.
 		632, "upgrade-deity-christian-god", false, -- the Christian mission to Northumbria supported by king Edwin collapsed in 632 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 115.

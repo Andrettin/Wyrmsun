@@ -127,7 +127,7 @@ DefineUpgrade("upgrade-faction-middlesex", {
 DefineUpgrade("upgrade-faction-northumbria", {
 	Name = "Northumbria",
 	EffectsString = "+2 Damage for Kriegers",
-	RequirementsString = "Temple/Church"
+	RequirementsString = "Temple/Church, no other faction is Bernicia or Deira"
 })
 
 DefineUpgrade("upgrade-faction-scotland", {
