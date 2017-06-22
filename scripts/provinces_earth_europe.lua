@@ -70,7 +70,7 @@ DefineProvince("Alsace", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
-		"celt", "tribocci-tribe",
+		"gaul", "tribocci-tribe",
 		"suebi", "alamanni-tribe",
 		"teuton", "swabia", -- Part of the Duchy of Swabia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		"teuton", "holy-rome"				
@@ -78,7 +78,7 @@ DefineProvince("Alsace", {
 	HistoricalOwners = {
 		-61, "suebi", "suebi-tribe", -- The Battle of Magetobria, in which Ariovistus defeated a number of Gaulish tribes, and afterwards established himself in Alsace and began lording over the Gauls, occurred in 61 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 139; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 218.
 		-58, "", "", -- in 58 BC Caesar fought Ariovistus' Suebi and the latter were terribly beaten; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 219.
-		-54, "celt", "tribocci-tribe", -- the Tribocci held the lands between Strasbourg and Artzenheim (apparently) in 54 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 222.
+		-54, "gaul", "tribocci-tribe", -- the Tribocci held the lands between Strasbourg and Artzenheim (apparently) in 54 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 222.
 		-50, "latin", "rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		481, "suebi", "alamanni-tribe", -- Political situation of the territories surrounding the Frankish realm in 481-814 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		506, "frankish", "francia", -- Alemanni lands (Alsace, Baden, Wurtemberg, Augsburg and etc.) conquered by the Franks in 506; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
@@ -214,13 +214,13 @@ DefineProvince("Aquitaine", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
-		"celt", "arverni-tribe"
+		"gaul", "arverni-tribe"
 --		"french", "france"
 	},
 	HistoricalOwners = {
 		-- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
 		-- The Arverni inhabited Aquitania; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		-71, "celt", "arverni-tribe",
+		-71, "gaul", "arverni-tribe",
 		-50, "latin", "rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		412, "goth", "visigoth-tribe", -- The Visigoths migrated to Aquitaine in 412 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		507, "frankish", "francia", -- political situation in 507-534 in Europe; Aquitania conquered by the Franks in 507; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
@@ -419,10 +419,10 @@ DefineProvince("Asturias", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
-		"celt", "cantabri-tribe"
+		"gaul", "cantabri-tribe"
 	},
 	HistoricalOwners = {
-		-264, "celt", "cantabri-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		-264, "gaul", "cantabri-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		17, "latin", "rome", -- Asturias acquired by Rome in 17 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1560, "castillian", "spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
@@ -553,7 +553,7 @@ DefineProvince("Bavaria", {
 		"teuton", "holy-rome"
 	},
 	HistoricalOwners = {
-		-800, "celt", "norici-tribe", -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
+		-800, "gaul", "norici-tribe", -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
 		-15, "latin", "rome", -- Raetia and Vindelicia acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		507, "goth", "ostrogoth-tribe", -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 		526, "teuton", "bavarian-tribe", -- political situation in 526 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
@@ -760,6 +760,7 @@ DefineProvince("Bohemia", {
 	World = "Earth",
 	CulturalNames = {
 		"celt", "Boiohaemum",
+		"gaul", "Boiohaemum",
 		"germanic", "Boiohaemum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		"latin", "Boiohaemum",
 		"slav", "Bohemia",
@@ -790,14 +791,14 @@ DefineProvince("Bohemia", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"basque", "linearware-tribe",
-		"celt", "boii-tribe",
+		"gaul", "boii-tribe",
 		"slav", "bohemia",
 		"suebi", "marcomanni-tribe",
 		"teuton", "holy-rome"
 	},
 	HistoricalOwners = {
 		-5500, "basque", "linearware-tribe", -- Linear Pottery culture existed in parts of Central Europe between 7000 and 2000 BC; since the other source gives them as arriving in northern Poland and Germany c. 5500 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
-		-400, "celt", "boii-tribe", -- Boii attested c. 400 BC; Source: John T. Koch, "Celtic Culture: Aberdeen breviary-celticism", 2006, pp. 223-224.
+		-400, "gaul", "boii-tribe", -- Boii attested c. 400 BC; Source: John T. Koch, "Celtic Culture: Aberdeen breviary-celticism", 2006, pp. 223-224.
 		-9, "suebi", "marcomanni-tribe", -- Marbod, king of the Suebic tribe of the Marcomanni, conquers Bohemia
 		526, "teuton", "bavarian-tribe", -- political situation in 526 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		788, "slav", "bohemia", -- (Slavic) Bohemians inhabited Bohemia in 788; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 611.
@@ -1093,13 +1094,13 @@ DefineProvince("Burgundy", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
-		"celt", "aedui-tribe"
+		"gaul", "aedui-tribe"
 --		"french", "france"
 	},
 	HistoricalOwners = {
 		-- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
 		-- The Aedui inhabited modern Bourgogne; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		-71, "celt", "aedui-tribe",
+		-71, "gaul", "aedui-tribe",
 		-50, "latin", "rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		919, "french", "france" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
@@ -1152,13 +1153,13 @@ DefineProvince("Carinthia", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
-		"celt", "norici-tribe",
+		"gaul", "norici-tribe",
 		"teuton", "austria",
 		"teuton", "carinthia",
 		"teuton", "holy-rome"
 	},
 	HistoricalOwners = {
-		-800, "celt", "norici-tribe", -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
+		-800, "gaul", "norici-tribe", -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
 		-15, "latin", "rome", -- Noricum acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		507, "goth", "ostrogoth-tribe", -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 		919, "teuton", "holy-rome", -- Duchy of Carinthia within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
@@ -1300,7 +1301,7 @@ DefineProvince("Champagne", { -- includes Brie
 DefineProvince("Connaught", {
 	World = "Earth",
 	CulturalNames = {
-		"celt", "Connaught"
+		"gael", "Connaught"
 	},
 	FactionCulturalNames = {
 		"anglo-saxon", "england", "Connaught"
@@ -1318,11 +1319,11 @@ DefineProvince("Connaught", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
-		"celt", "gangani-tribe"
+		"gael", "gangani-tribe"
 	},
 	HistoricalOwners = {
-		-27, "celt", "gangani-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		161, "celt", "scot-tribe" -- The area was inhabited by the Scotti in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		-27, "gael", "gangani-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		161, "gael", "scot-tribe" -- The area was inhabited by the Scotti in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalCultures = {
 		-27, "celt"
@@ -1368,11 +1369,11 @@ DefineProvince("Cornwall", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
-		"celt", "dumnonii-tribe",
+		"briton", "dumnonii-tribe",
 		"anglo-saxon", "england"
 	},
 	HistoricalOwners = {
-		-27, "celt", "dumnonii-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		-27, "briton", "dumnonii-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		43, "latin", "rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1560, "anglo-saxon", "england" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
@@ -1562,12 +1563,12 @@ DefineProvince("Cumbria", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
-		"celt", "brigantes-tribe",
-		"celt", "selgovae-tribe",
+		"briton", "brigantes-tribe",
+		"briton", "selgovae-tribe",
 		"anglo-saxon", "england"
 	},
 	HistoricalOwners = {
-		-264, "celt", "brigantes-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		-264, "briton", "brigantes-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		43, "latin", "rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1560, "anglo-saxon", "england" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
@@ -1682,12 +1683,12 @@ DefineProvince("Devon", {
 	Coastal = true,
 	Claims = {
 		"basque", "bellbeaker-tribe",
-		"celt", "dumnonii-tribe",
+		"briton", "dumnonii-tribe",
 		"anglo-saxon", "england"
 	},
 	HistoricalOwners = {
 		-7000, "basque", "bellbeaker-tribe", -- Bell Beaker culture existed in Normandy and the southwestern parts of Great Britain between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
-		-27, "celt", "dumnonii-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		-27, "briton", "dumnonii-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		43, "latin", "rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1560, "anglo-saxon", "england" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
@@ -1889,7 +1890,7 @@ DefineProvince("Durham", {
 DefineProvince("Dyfed", {
 	World = "Earth",
 	CulturalNames = {
-		"celt", "Dyfed",
+		"welsh", "Dyfed",
 		"latin", "Demetia" -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
 	},
 	Tiles = {
@@ -1904,8 +1905,8 @@ DefineProvince("Dyfed", {
 	Coastal = true,
 	Claims = {
 		"basque", "bellbeaker-tribe",
-		"celt", "demetae-tribe", -- The main settlement of the Demetae was Moridunum (modern Carmarthen); Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
-		"celt", "dyfed"
+		"briton", "demetae-tribe", -- The main settlement of the Demetae was Moridunum (modern Carmarthen); Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
+		"welsh", "dyfed"
 	},
 	HistoricalOwners = {
 		-7000, "basque", "bellbeaker-tribe", -- Bell Beaker culture existed in Normandy and the southwestern parts of Great Britain between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
@@ -1937,11 +1938,11 @@ DefineProvince("East Anglia", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
-		"celt", "iceni-tribe",
+		"briton", "iceni-tribe",
 		"anglo-saxon", "england"
 	},
 	HistoricalOwners = {
-		-27, "celt", "iceni-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		-27, "briton", "iceni-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		43, "latin", "rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		526, "anglo-saxon", "angle-tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		616, "anglo-saxon", "east-anglia", -- we have notice that Rædwald was king of East Anglia then; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 78-79.
@@ -2036,12 +2037,12 @@ DefineProvince("Essex", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
-		"celt", "trinobantes-tribe",
+		"briton", "trinobantes-tribe",
 		"anglo-saxon", "gumeninga-tribe", -- the Gumeningas were present in Harrow on the Hill (which was in Old English called "Gumeninga hearh"); Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
 		"anglo-saxon", "england"
 	},
 	HistoricalOwners = {
-		-27, "celt", "trinobantes-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		-27, "briton", "trinobantes-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		43, "latin", "rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		526, "teuton", "saxon-tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		1560, "anglo-saxon", "england" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
@@ -2279,13 +2280,13 @@ DefineProvince("Franche Comte", {
 	Map = "maps/earth/belfort.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
-		"celt", "sequani-tribe"
+		"gaul", "sequani-tribe"
 --		"french", "france"
 	},
 	HistoricalOwners = {
 		-- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
 		-- The Sequani inhabited the Franche-Comté; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		-71, "celt", "sequani-tribe",
+		-71, "gaul", "sequani-tribe",
 		-50, "latin", "rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		451, "goth", "burgundy", -- Burgundians fought on both the Roman and Hunnic sides in the Battle of the Catalaunian Fields in (June) 451 AD; with the Roman victory, the Burgundians under Gundioc were granted more land; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 94-95.
 		534, "frankish", "francia", -- The Burgundian realm, which included the Franche Comté, Burgundy, Savoy and most of Switzerland, was conquered by the Franks in 534; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
@@ -2334,7 +2335,7 @@ DefineProvince("Franconia", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"basque", "linearware-tribe",
-		"celt", "turone-tribe",
+		"gaul", "turone-tribe",
 		"suebi", "hermunduri-tribe",
 		"suebi", "thuringian-tribe",
 		"teuton", "franconia", -- Part of the Duchy of Franconia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
@@ -2343,7 +2344,7 @@ DefineProvince("Franconia", {
 	HistoricalOwners = {
 		-5500, "basque", "linearware-tribe", -- Linear Pottery culture existed in parts of Central Europe between 7000 and 2000 BC; since the other source gives them as arriving in northern Poland and Germany c. 5500 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
 		-264, "suebi", "hermunduri-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		-27, "celt", "turone-tribe", -- Political situation in Europe (presumably) at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		-27, "gaul", "turone-tribe", -- Political situation in Europe (presumably) at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		161, "suebi", "hermunduri-tribe", -- The area was inhabited by the Hermunduri in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		507, "suebi", "thuringian-tribe", -- Political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 		531, "frankish", "francia", -- Conquest of the Thuringian lands by Francia in 531 AD; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
@@ -2523,13 +2524,13 @@ DefineProvince("Galloway", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
-		"celt", "sovantae-tribe",
+		"briton", "sovantae-tribe",
 		"anglo-saxon", "scotland"
 	},
 	HistoricalOwners = {
-		-27, "celt", "sovantae-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		-27, "briton", "sovantae-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		80, "latin", "rome", -- The area between the Wall of Antoninus (or Severus) and Hadrian's Wall was acquired by Rome in 80 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		161, "celt", "selgovae-tribe", -- The area was inhabited by the Selgovae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "briton", "selgovae-tribe", -- The area was inhabited by the Selgovae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		1560, "anglo-saxon", "scotland" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
@@ -2626,7 +2627,7 @@ DefineProvince("Gotland", {
 DefineProvince("Gwynedd", { -- also includes Clwyd
 	World = "Earth",
 	CulturalNames = {
-		"celt", "Gwynedd"
+		"welsh", "Gwynedd"
 	},
 	Tiles = {
 		{467, 105},
@@ -2640,12 +2641,12 @@ DefineProvince("Gwynedd", { -- also includes Clwyd
 	Coastal = true,
 	Claims = {
 		"basque", "bellbeaker-tribe",
-		"celt", "ordovices-tribe",
-		"celt", "gwynedd"
+		"briton", "ordovices-tribe",
+		"welsh", "gwynedd"
 	},
 	HistoricalOwners = {
 		-7000, "basque", "bellbeaker-tribe", -- Bell Beaker culture existed in Normandy and the southwestern parts of Great Britain between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
-		-27, "celt", "ordovices-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		-27, "briton", "ordovices-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		43, "latin", "rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1560, "anglo-saxon", "england" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
@@ -2774,7 +2775,7 @@ DefineProvince("Highland Scotland", {
 	},
 	FactionCulturalNames = {
 		"anglo-saxon", "england", "Highland Scotland",
-		"celt", "scot-tribe", "Highland Scotland",
+		"gael", "scot-tribe", "Highland Scotland",
 		"anglo-saxon", "scotland", "Highland Scotland"
 	},
 	Tiles = {
@@ -2801,14 +2802,14 @@ DefineProvince("Highland Scotland", {
 	SettlementTerrain = "Hills",
 	Coastal = true,
 	Claims = {
-		"celt", "caledonii-tribe",
-		"celt", "pict-tribe",
+		"briton", "caledonii-tribe",
+		"briton", "pict-tribe",
 		"anglo-saxon", "scotland"
 	},
 	HistoricalOwners = {
-		-27, "celt", "caledonii-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		161, "celt", "caledonii-tribe", -- The area was inhabited by the Caledonii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		395, "celt", "pict-tribe", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		-27, "briton", "caledonii-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		161, "briton", "caledonii-tribe", -- The area was inhabited by the Caledonii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		395, "briton", "pict-tribe", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		1560, "anglo-saxon", "scotland" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
@@ -3225,11 +3226,11 @@ DefineProvince("Kent", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
-		"celt", "cantii-tribe",
+		"briton", "cantii-tribe",
 		"anglo-saxon", "england"
 	},
 	HistoricalOwners = {
-		-27, "celt", "cantii-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		-27, "briton", "cantii-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		43, "latin", "rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		526, "anglo-saxon", "jute-tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		1560, "anglo-saxon", "england" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
@@ -3379,7 +3380,7 @@ DefineProvince("Latvia", {
 DefineProvince("Leinster", {
 	World = "Earth",
 	CulturalNames = {
-		"celt", "Leinster"
+		"gael", "Leinster"
 	},
 	FactionCulturalNames = {
 		"anglo-saxon", "england", "Leinster"
@@ -3398,13 +3399,13 @@ DefineProvince("Leinster", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
-		"celt", "cauci-tribe",
-		"celt", "scot-tribe"
+		"gael", "cauci-tribe",
+		"gael", "scot-tribe"
 	},
 	HistoricalOwners = {
-		-27, "celt", "cauci-tribe", -- British tribes (apparently) in the time of Augustus; the Brigantes occupied the extreme south of Leinster; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		161, "celt", "hibernii-tribe", -- The area was inhabited by the Hibernii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		395, "celt", "scot-tribe" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		-27, "gael", "cauci-tribe", -- British tribes (apparently) in the time of Augustus; the Brigantes occupied the extreme south of Leinster; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		161, "gael", "hibernii-tribe", -- The area was inhabited by the Hibernii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		395, "gael", "scot-tribe" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
 	HistoricalCultures = {
 		-27, "celt"
@@ -3427,15 +3428,15 @@ DefineProvince("Liege", { -- also includes Namur and Belgian Limburg
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
-		"celt", "caerasi-tribe", -- The Caerasi inhabited the Pagus Caroascus/Carascus in 54 BC (was that actually within the boundaries of this province?); Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
-		"celt", "condrusi-tribe", -- The Condrusi inhabited the strip of land from Namur towards Lüttich called Condruz/le Condros/Pagus Condrosius/Condruscus/Condrust/Condorusts in 54 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
-		"celt", "eburones-tribe",
-		"celt", "poemanni-tribe", -- The Poemanni inhabited the distric of Famen (also known as Pagus Falmenna/Pagus Falmenensis) in 54 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
-		"celt", "segni-tribe", -- The Segni inhabited the location of the modern town of Sinei/Signei in the county of Namur in 54 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
+		"gaul", "caerasi-tribe", -- The Caerasi inhabited the Pagus Caroascus/Carascus in 54 BC (was that actually within the boundaries of this province?); Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
+		"gaul", "condrusi-tribe", -- The Condrusi inhabited the strip of land from Namur towards Lüttich called Condruz/le Condros/Pagus Condrosius/Condruscus/Condrust/Condorusts in 54 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
+		"gaul", "eburones-tribe",
+		"gaul", "poemanni-tribe", -- The Poemanni inhabited the distric of Famen (also known as Pagus Falmenna/Pagus Falmenensis) in 54 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
+		"gaul", "segni-tribe", -- The Segni inhabited the location of the modern town of Sinei/Signei in the county of Namur in 54 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
 		"frankish", "austrasia" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 	},
 	HistoricalOwners = {
-		-54, "celt", "eburones-tribe", -- The Eburones lived largely between the Maas and the Rhine in 54 BC (both the modern cities of Tongres and Spa were in their territory), when they entered conflict with the Romans; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223-226.
+		-54, "gaul", "eburones-tribe", -- The Eburones lived largely between the Maas and the Rhine in 54 BC (both the modern cities of Tongres and Spa were in their territory), when they entered conflict with the Romans; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223-226.
 		-51, "", "", -- Caesar's Roman forces ravaged the Eburones' land, nigh annihilating them; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 226.
 		-50, "latin", "rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		450, "frankish", "frank-tribe", -- Frankish territory in 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
@@ -3459,7 +3460,7 @@ DefineProvince("Liege", { -- also includes Namur and Belgian Limburg
 DefineProvince("Liguria", {
 	World = "Earth",
 	CulturalNames = {
-		"celt", "Liguria",
+		"gaul", "Liguria",
 		"latin", "Liguria"
 	},
 	Tiles = {
@@ -3475,7 +3476,7 @@ DefineProvince("Liguria", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
-		"celt", "ligurian-tribe"
+		"gaul", "ligurian-tribe"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -3495,11 +3496,11 @@ DefineProvince("Lincoln", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
-		"celt", "coritani-tribe",
+		"briton", "coritani-tribe",
 		"anglo-saxon", "england"
 	},
 	HistoricalOwners = {
-		-27, "celt", "coritani-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		-27, "briton", "coritani-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		43, "latin", "rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		526, "anglo-saxon", "angle-tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		654, "anglo-saxon", "middle-anglia", -- Peada was king of the Middle Angles when Penda fell; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
@@ -3554,7 +3555,7 @@ DefineProvince("Lithuania", {
 DefineProvince("Lombardy", {
 	World = "Earth",
 	CulturalNames = {
-		"celt", "Transpadane Gaul",
+		"gaul", "Transpadane Gaul",
 		"latin", "Transpadane Gaul"
 	},
 	Tiles = {
@@ -3632,13 +3633,13 @@ DefineProvince("Lothian", { -- includes Borders
 	SettlementTerrain = "Hills",
 	Coastal = true,
 	Claims = {
-		"celt", "otalini-tribe",
+		"briton", "otalini-tribe",
 		"anglo-saxon", "scotland" -- should be English
 	},
 	HistoricalOwners = {
-		-27, "celt", "otalini-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		-27, "briton", "otalini-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		80, "latin", "rome", -- The area between the Wall of Antoninus (or Severus) and Hadrian's Wall was acquired by Rome in 80 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		161, "celt", "selgovae-tribe", -- The area was inhabited by the Selgovae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "briton", "selgovae-tribe", -- The area was inhabited by the Selgovae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		1560, "anglo-saxon", "scotland" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
@@ -3669,7 +3670,7 @@ DefineProvince("Lower Austria", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"basque", "linearware-tribe",
-		"celt", "norici-tribe",
+		"gaul", "norici-tribe",
 		"teuton", "austria",
 		"teuton", "holy-rome"
 	},
@@ -3677,7 +3678,7 @@ DefineProvince("Lower Austria", {
 		-- The people of the Linear Pottery culture arrived in northern Poland and Germany about 5500 BC, possessing knowledge of agriculture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 139.
 		-- Linear Pottery culture existed in parts of Central Europe between 7000 and 2000 BC; since the other source gives them as arriving in northern Poland and Germany c. 5500 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
 		-5500, "basque", "linearware-tribe",
-		-800, "celt", "norici-tribe", -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
+		-800, "gaul", "norici-tribe", -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
 		-15, "latin", "rome", -- Noricum acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		507, "goth", "ostrogoth-tribe", -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 		919, "teuton", "holy-rome", -- Bavarian East March; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
@@ -3689,7 +3690,7 @@ DefineProvince("Lower Austria", {
 	},
 	HistoricalCultures = {
 		-5500, "basque",
-		-800, "celt"
+		-800, "gaul"
 	},
 	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
@@ -4037,11 +4038,11 @@ DefineProvince("Mercia", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
-		"celt", "coritani-tribe",
+		"briton", "coritani-tribe",
 		"anglo-saxon", "england"
 	},
 	HistoricalOwners = {
-		-27, "celt", "coritani-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		-27, "briton", "coritani-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		43, "latin", "rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		526, "anglo-saxon", "angle-tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		632, "anglo-saxon", "mercia", -- Penda became king of Mercia in 632 after the demise of Edwin of Deira; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 75, 80-81, 83-84.
@@ -4229,7 +4230,7 @@ DefineProvince("Moselle", {
 DefineProvince("Munster", {
 	World = "Earth",
 	CulturalNames = {
-		"celt", "Munster"
+		"gael", "Munster"
 	},
 	FactionCulturalNames = {
 		"anglo-saxon", "england", "Munster"
@@ -4250,14 +4251,14 @@ DefineProvince("Munster", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
-		"celt", "gangani-tribe",
-		"celt", "hibernii-tribe",
-		"celt", "scot-tribe"
+		"gael", "gangani-tribe",
+		"gael", "hibernii-tribe",
+		"gael", "scot-tribe"
 	},
 	HistoricalOwners = {
-		-27, "celt", "hibernii-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		161, "celt", "hibernii-tribe", -- The area was inhabited by the Hibernii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		395, "celt", "scot-tribe" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		-27, "gael", "hibernii-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		161, "gael", "hibernii-tribe", -- The area was inhabited by the Hibernii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		395, "gael", "scot-tribe" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
 	HistoricalCultures = {
 		-27, "celt"
@@ -4486,13 +4487,13 @@ DefineProvince("North Brabant", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
-		"celt", "menapii-tribe",
+		"gaul", "menapii-tribe",
 		"teuton", "brabant",
 		"teuton", "netherlands",
 		"teuton", "holy-rome"
 	},
 	HistoricalOwners = {
-		-56, "celt", "menapii-tribe", -- correct? The Menapii inhabited the part of the Rhine not far from where it meets the sea (apparently) in 56 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
+		-56, "gaul", "menapii-tribe", -- correct? The Menapii inhabited the part of the Rhine not far from where it meets the sea (apparently) in 56 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
 		-50, "latin", "rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		481, "frankish", "francia", -- Frankish territory in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		919, "teuton", "holy-rome", -- Duchy of Lower Lorraine; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
@@ -4504,7 +4505,7 @@ DefineProvince("North Brabant", {
 		481, "frankish", "francia"
 	},
 	HistoricalCultures = {
-		-56, "celt"
+		-56, "gaul"
 	},
 	Regions = {"europe", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
 })
@@ -4558,7 +4559,7 @@ DefineProvince("Northumberland", {
 	},
 	HistoricalOwners = {
 		80, "latin", "rome", -- The area between the Wall of Antoninus (or Severus) and Hadrian's Wall was acquired by Rome in 80 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		161, "celt", "selgovae-tribe", -- The area was inhabited by the Selgovae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "briton", "selgovae-tribe", -- The area was inhabited by the Selgovae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		526, "anglo-saxon", "bernice-tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		547, "anglo-saxon", "bernicia", -- the Kingdom of Bernicia was founded in 547 AD; in 600 AD, the Bernice people (who were Anglians) were centered in Bamburgh; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 74-75.
 		654, "anglo-saxon", "northumbria", -- Northumbria unified by Oswiu of Bernicia in 654
@@ -5196,7 +5197,7 @@ DefineProvince("Rogaland", {
 DefineProvince("Romagna", {
 	World = "Earth",
 	CulturalNames = {
-		"celt", "Cispadane Gaul",
+		"gaul", "Cispadane Gaul",
 		"latin", "Cispadane Gaul"
 	},
 	Tiles = {
@@ -5315,12 +5316,12 @@ DefineProvince("Salzburg", {
 	Map = "maps/earth/salzburg.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
-		"celt", "norici-tribe",
+		"gaul", "norici-tribe",
 		"teuton", "austria",
 		"teuton", "holy-rome"
 	},
 	HistoricalOwners = {
-		-800, "celt", "norici-tribe", -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
+		-800, "gaul", "norici-tribe", -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
 		-15, "latin", "rome", -- Noricum acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		507, "goth", "ostrogoth-tribe", -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 		537, "frankish", "francia", -- region of Altbayern, Salzburg and Tyrol conquered by the Franks in 537; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
@@ -5332,7 +5333,7 @@ DefineProvince("Salzburg", {
 		919, "teuton", "bavaria" -- Duchy of Bavaria within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalCultures = {
-		-800, "celt"
+		-800, "gaul"
 	},
 	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
@@ -5618,14 +5619,14 @@ DefineProvince("Slovakia", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"basque", "linearware-tribe",
-		"celt", "cotini-tribe",
+		"gaul", "cotini-tribe",
 		"goth", "gepidae-tribe",
 		"suebi", "quadi-tribe",
 		"thracian", "carpi-tribe"
 	},
 	HistoricalOwners = {
 		-5500, "basque", "linearware-tribe", -- Linear Pottery culture existed in parts of Central Europe between 7000 and 2000 BC; since the other source gives them as arriving in northern Poland and Germany c. 5500 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
-		-264, "celt", "cotini-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		-264, "gaul", "cotini-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		-9, "suebi", "quadi-tribe", -- if the Boii were conquered by the Marcomanni in 9 BC, the Quadi probably moved to Moravia and Slovakia at around the same time
 		161, "suebi", "quadi-tribe", -- Slovakia was inhabited by the Quadi in 161-180 AD (while the Cotini inhabited eastern Slovakia); Source: "Ancient Warfare VII.6", 2013, p. 7.
 		526, "teuton", "lombard-tribe", -- Political situation in 526 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
@@ -5634,7 +5635,7 @@ DefineProvince("Slovakia", {
 	},
 	HistoricalCultures = {
 		-5500, "basque",
-		-264, "celt",
+		-264, "gaul",
 		-9, "teuton"
 	},
 	HistoricalSettlementBuildings = {
@@ -5665,18 +5666,18 @@ DefineProvince("Somerset", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"basque", "bellbeaker-tribe",
-		"celt", "belgae-tribe",
+		"briton", "belgae-tribe",
 		"anglo-saxon", "england"
 	},
 	HistoricalOwners = {
 		-7000, "basque", "bellbeaker-tribe", -- Bell Beaker culture existed in Normandy and the southwestern parts of Great Britain between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
-		-27, "celt", "belgae-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		-27, "briton", "belgae-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		43, "latin", "rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1560, "anglo-saxon", "england" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
 		-7000, "basque",
-		-27, "celt"
+		-27, "briton"
 	},
 	HistoricalClaims = {
 		43, "latin", "rome"
@@ -5734,14 +5735,14 @@ DefineProvince("Strathclyde", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
-		"celt", "damnii-tribe",
-		"celt", "strathclyde",
+		"briton", "damnii-tribe",
+		"briton", "strathclyde",
 		"anglo-saxon", "scotland"
 	},
 	HistoricalOwners = {
-		-27, "celt", "damnii-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		-27, "briton", "damnii-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		80, "latin", "rome", -- The area between the Wall of Antoninus (or Severus) and Hadrian's Wall was acquired by Rome in 80 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		161, "celt", "selgovae-tribe", -- The area was inhabited by the Selgovae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "briton", "selgovae-tribe", -- The area was inhabited by the Selgovae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		1560, "anglo-saxon", "scotland" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
@@ -5775,12 +5776,12 @@ DefineProvince("Styria", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
-		"celt", "norici-tribe",
+		"gaul", "norici-tribe",
 		"teuton", "austria",
 		"teuton", "holy-rome"
 	},
 	HistoricalOwners = {
-		-800, "celt", "norici-tribe", -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
+		-800, "gaul", "norici-tribe", -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
 		-15, "latin", "rome", -- Noricum acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		507, "goth", "ostrogoth-tribe", -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 		919, "teuton", "holy-rome", -- Duchy of Carinthia within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
@@ -5791,7 +5792,7 @@ DefineProvince("Styria", {
 		919, "teuton", "carinthia", -- Duchy of Carinthia within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalCultures = {
-		-800, "celt"
+		-800, "gaul"
 	},
 	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
@@ -5883,7 +5884,7 @@ DefineProvince("Sweden", {
 DefineProvince("Switzerland", {
 	World = "Earth",
 	CulturalNames = {
-		"celt", "Helvetia",
+		"gaul", "Helvetia",
 		"latin", "Helvetia",
 		"teuton", "Switzerland"
 	},
@@ -5907,7 +5908,7 @@ DefineProvince("Switzerland", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Mountains",
 	Claims = {
-		"celt", "helvetii-tribe",
+		"gaul", "helvetii-tribe",
 		"teuton", "switzerland",
 		"teuton", "holy-rome"
 	},
@@ -6183,13 +6184,13 @@ DefineProvince("Tyrol", {
 	SettlementTerrain = "Mountains",
 	Claims = {
 		"basque", "sauveterrian-tribe",
-		"celt", "norici-tribe",
+		"gaul", "norici-tribe",
 		"teuton", "austria",
 		"teuton", "holy-rome"
 	},
 	HistoricalOwners = {
 		-7040, "basque", "sauveterrian-tribe", -- a site belonging to the Sauveterrian culture existed between 7040 and 6813 BC in the Lago delle Buse; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 170.
-		-800, "celt", "norici-tribe", -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
+		-800, "gaul", "norici-tribe", -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
 		-15, "latin", "rome", -- Raetia acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		507, "goth", "ostrogoth-tribe", -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 		537, "frankish", "francia", -- region of Altbayern, Salzburg and Tyrol conquered by the Franks in 537; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
@@ -6203,7 +6204,7 @@ DefineProvince("Tyrol", {
 	},
 	HistoricalCultures = {
 		-7040, "basque",
-		-800, "celt"
+		-800, "gaul"
 	},
 	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
@@ -6295,7 +6296,7 @@ DefineProvince("Ukraine", {
 DefineProvince("Ulster", {
 	World = "Earth",
 	CulturalNames = {
-		"celt", "Ulster"
+		"gael", "Ulster"
 	},
 	FactionCulturalNames = {
 		"anglo-saxon", "england", "Ulster"
@@ -6315,18 +6316,18 @@ DefineProvince("Ulster", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
-		"celt", "darini-tribe",
-		"celt", "scot-tribe"
+		"gael", "darini-tribe",
+		"gael", "scot-tribe"
 	},
 	HistoricalOwners = {
 		-- The Mount Sandel site (River Bann valley, Northern Ireland) was occupied in the late 9th millenium BC; in the site were found narrow-bladed, geometric microliths, wild boar bones, remains of birds such as mallard, teal, wigeon, grouse, capercaillie and snipe/woodcock, remains of fishes such as salmon, sea trout, eel and bass, hazelnuts, pears, apples and water-lilies; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 146.
 		-- Occupation of Mount Sandel in Ireland may have begun by 8000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 152.
-		-27, "celt", "darini-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		161, "celt", "scot-tribe", -- The area was inhabited by the Scotti in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		395, "celt", "scot-tribe" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		-27, "gael", "darini-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		161, "gael", "scot-tribe", -- The area was inhabited by the Scotti in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		395, "gael", "scot-tribe" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
 	HistoricalCultures = {
-		-27, "celt"
+		-27, "gael"
 	},
 	Regions = {"british-isles", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -6375,12 +6376,12 @@ DefineProvince("Upper Austria", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
-		"celt", "norici-tribe",
+		"gaul", "norici-tribe",
 		"teuton", "austria",
 		"teuton", "holy-rome"
 	},
 	HistoricalOwners = {
-		-800, "celt", "norici-tribe", -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
+		-800, "gaul", "norici-tribe", -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
 		-15, "latin", "rome", -- Noricum acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		507, "goth", "ostrogoth-tribe", -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 		919, "teuton", "holy-rome", -- Duchy of Bavaria within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
@@ -6391,7 +6392,7 @@ DefineProvince("Upper Austria", {
 		919, "teuton", "bavaria" -- Duchy of Bavaria within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalCultures = {
-		-800, "celt"
+		-800, "gaul"
 	},
 	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
@@ -6659,7 +6660,7 @@ DefineProvince("Vojvodina", {
 DefineProvince("Wales", {
 	World = "Earth",
 	CulturalNames = {
-		"celt", "Wales"
+		"welsh", "Wales"
 	},
 	FactionCulturalNames = {
 		"anglo-saxon", "england", "Wales"
@@ -6676,14 +6677,14 @@ DefineProvince("Wales", {
 	Coastal = true,
 	Claims = {
 		"basque", "bellbeaker-tribe",
-		"celt", "silures-tribe",
-		"celt", "powys" -- Powys encompassed the area between the upper Severn and the Dee rivers; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 78.
+		"briton", "silures-tribe",
+		"welsh", "powys" -- Powys encompassed the area between the upper Severn and the Dee rivers; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 78.
 	},
 	HistoricalOwners = {
 		-7000, "basque", "bellbeaker-tribe", -- Bell Beaker culture existed in Normandy and the southwestern parts of Great Britain between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
-		-27, "celt", "silures-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		-27, "briton", "silures-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		43, "latin", "rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		613, "celt", "powys", -- at some point between 613 and 616, the king of Powys was defeated by the Bernicians at Chester, so the kingdom must have existed by then; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 78.
+		613, "welsh", "powys", -- at some point between 613 and 616, the king of Powys was defeated by the Bernicians at Chester, so the kingdom must have existed by then; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 78.
 		1560, "anglo-saxon", "england" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
@@ -6776,12 +6777,12 @@ DefineProvince("Wessex", {
 	Coastal = true,
 	Claims = {
 		"basque", "bellbeaker-tribe",
-		"celt", "regni-tribe",
+		"briton", "regni-tribe",
 		"anglo-saxon", "england"
 	},
 	HistoricalOwners = {
 		-7000, "basque", "bellbeaker-tribe", -- Bell Beaker culture existed in Normandy and the southwestern parts of Great Britain between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
-		-27, "celt", "regni-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		-27, "briton", "regni-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		43, "latin", "rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		526, "teuton", "saxon-tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		1560, "anglo-saxon", "england" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
@@ -6988,7 +6989,7 @@ DefineProvince("York", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
-		"celt", "brigantes-tribe",
+		"briton", "brigantes-tribe",
 		"anglo-saxon", "dere-tribe", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 		"anglo-saxon", "england",
 		"anglo-saxon", "northumbria"
@@ -6996,7 +6997,7 @@ DefineProvince("York", {
 	HistoricalOwners = {
 		-- The Star Carr site (in Yorkshire, England) underwent two occupation periods in the middle of the 9th millenium BC; in the site were found microliths (i.e. arrowheads), barbed antler points, moose bones, wild cattle bones, red and roe deer bones, pine marten bones, fox bones, beaver bones, remains of birds such as the red-breasted-merganser, red-throated diver and great crested grebe, water chestnuts, bog bean, fat hen, nettle and hazelnuts; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 146.
 		-- Occupation of the Star Carr site (in North Yorkshire, England) occurred from c. 8700 BC to c. 8400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 154.
-		-264, "celt", "brigantes-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		-264, "briton", "brigantes-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		43, "latin", "rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		500, "anglo-saxon", "dere-tribe", -- The Dere (a collection of Anglian peoples) were in possession of York in 500 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 		588, "anglo-saxon", "bernicia", -- according to tradition, Æthelric of Bernicia acquired the kingdom of Deira upon its king Ælle's death in 588 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
@@ -7008,7 +7009,7 @@ DefineProvince("York", {
 		588, "anglo-saxon", "deira" -- since their king died in this year, the kingdom existed then
 	},
 	HistoricalCultures = {
-		-264, "celt",
+		-264, "briton",
 		500, "teuton"
 	},
 	HistoricalModifiers = {

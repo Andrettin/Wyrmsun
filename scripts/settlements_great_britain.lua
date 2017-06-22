@@ -85,6 +85,7 @@ DefineSettlement("bath", {
 	Position = {3781, 879},
 	CulturalNames = {
 		"anglo-saxon", "Bathum", -- Old English name of Bath; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"briton", "Aquae Solis",
 		"celt", "Aquae Solis",
 --		"english", "Bath",
 		"latin", "Aquae Solis" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
@@ -105,6 +106,7 @@ DefineSettlement("bitterne", {
 	MapTemplate = "earth",
 	Position = {3810, 890},
 	CulturalNames = {
+		"briton", "Clausentum",
 		"celt", "Clausentum",
 --		"english", "Bitterne",
 		"latin", "Clausentum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
@@ -125,6 +127,7 @@ DefineSettlement("brancaster", {
 	MapTemplate = "earth",
 	Position = {3853, 843},
 	CulturalNames = {
+		"briton", "Branodunum",
 		"celt", "Branodunum",
 --		"english", "Brancaster",
 		"latin", "Branodunum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
@@ -146,6 +149,7 @@ DefineSettlement("cambridge", {
 	Position = {3845, 861},
 	CulturalNames = {
 		"anglo-saxon", "Grantanbrycg", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"briton", "Camboricum",
 		"celt", "Camboricum",
 --		"english", "Cambridge",
 		"latin", "Camboricum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
@@ -168,6 +172,7 @@ DefineSettlement("canterbury", {
 	Position = {3866, 880},
 	CulturalNames = {
 		"anglo-saxon", "Cantwaraburg", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"briton", "Durovernum",
 --		"english", "Canterbury",
 		"celt", "Durovernum",
 		"latin", "Durovernum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
@@ -191,6 +196,7 @@ DefineSettlement("carlisle", {
 	Position = {3773, 800},
 	CulturalNames = {
 		"anglo-saxon", "Luel", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"briton", "Luguvallium",
 		"celt", "Luguvallium",
 --		"english", "Carlisle",
 		"latin", "Luguvallium" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
@@ -212,6 +218,7 @@ DefineSettlement("castor-near-norwich", {
 	MapTemplate = "earth",
 	Position = {3868, 850},
 	CulturalNames = {
+		"briton", "Venta Icenorum",
 		"celt", "Venta Icenorum",
 --		"english", "Castor",
 		"latin", "Venta Icenorum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
@@ -233,6 +240,7 @@ DefineSettlement("chester", {
 	Position = {3774, 836},
 	CulturalNames = {
 		"anglo-saxon", "Legaceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"briton", "Deva",
 		"celt", "Deva",
 --		"english", "Chester", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 		"latin", "Deva" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51; Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -255,6 +263,7 @@ DefineSettlement("chichester", {
 	Position = {3822, 890},
 	CulturalNames = {
 		"anglo-saxon", "Cisseceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"briton", "Regnum",
 		"celt", "Regnum",
 --		"english", "Chichester",
 		"latin", "Regnum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
@@ -276,6 +285,7 @@ DefineSettlement("cirencester", {
 	Position = {3796, 874},
 	CulturalNames = {
 		"anglo-saxon", "Cirenceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"briton", "Corinium",
 		"celt", "Corinium",
 --		"english", "Cirencester",
 		"latin", "Corinium" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
@@ -297,6 +307,7 @@ DefineSettlement("colchester", {
 	Position = {3861, 867},
 	CulturalNames = {
 		"anglo-saxon", "Colneceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"briton", "Camulodunum",
 		"celt", "Camulodunum",
 --		"english", "Colchester",
 		"latin", "Camulodunum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
@@ -318,6 +329,7 @@ DefineSettlement("dorchester", {
 	Position = {3785, 894},
 	CulturalNames = {
 		"anglo-saxon", "Dornwaraceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"briton", "Durnovaria",
 		"celt", "Durnovaria",
 --		"english", "Dorchester",
 		"latin", "Durnovaria" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
@@ -339,6 +351,7 @@ DefineSettlement("dover", {
 	Position = {3869, 884},
 	CulturalNames = {
 		"anglo-saxon", "Dofras", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"briton", "Dubrae",
 		"celt", "Dubrae",
 --		"english", "Dover", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 		"latin", "Dubrae" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
@@ -378,6 +391,7 @@ DefineSettlement("durolipons", {
 	MapTemplate = "earth",
 	Position = {3838, 859},
 	CulturalNames = {
+		"briton", "Durolipons",
 		"celt", "Durolipons",
 		"latin", "Durolipons" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
@@ -417,6 +431,7 @@ DefineSettlement("exeter", {
 	Position = {3760, 894},
 	CulturalNames = {
 		"anglo-saxon", "Escanceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"briton", "Isca Dumnoniorum",
 		"celt", "Isca Dumnoniorum",
 --		"english", "Exeter",
 		"latin", "Isca Dumnoniorum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
@@ -438,6 +453,7 @@ DefineSettlement("gloucester", {
 	Position = {3783, 873},
 	CulturalNames = {
 		"anglo-saxon", "Gleawanceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"briton", "Glevum",
 		"celt", "Glevum",
 --		"english", "Gloucester",
 		"latin", "Glevum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
@@ -530,6 +546,7 @@ DefineSettlement("leicester", {
 	Position = {3815, 850},
 	CulturalNames = {
 		"anglo-saxon", "Ligoraceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"briton", "Ratae",
 		"celt", "Ratae",
 --		"english", "Leicester",
 		"latin", "Ratae" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
@@ -552,6 +569,7 @@ DefineSettlement("lincoln", {
 	Position = {3825, 837},
 	CulturalNames = {
 		"anglo-saxon", "Lindcylene", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"briton", "Lincoln",
 		"celt", "Lincoln",
 --		"english", "Lincoln",
 		"latin", "Lincoln" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
@@ -593,6 +611,7 @@ DefineSettlement("london", {
 	Position = {3839, 875},
 	CulturalNames = {
 		"anglo-saxon", "Lunden", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"briton", "Londinium",
 		"celt", "Londinium",
 --		"english", "London",
 		"latin", "Londinium" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51; Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -616,6 +635,7 @@ DefineSettlement("old-sarum", {
 	MapTemplate = "earth",
 	Position = {3798, 885},
 	CulturalNames = {
+		"briton", "Sorbiodunum",
 		"celt", "Sorbiodunum",
 --		"english", "Old Sarum",
 		"latin", "Sorbiodunum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
@@ -637,6 +657,7 @@ DefineSettlement("pevensey", {
 	Position = {3849, 890},
 	CulturalNames = {
 		"anglo-saxon", "Pefenesea", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
+		"briton", "Anderida",
 		"celt", "Anderida",
 --		"english", "Pevensey",
 		"latin", "Anderida" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
@@ -659,6 +680,7 @@ DefineSettlement("reculver", {
 	Position = {3868, 879},
 	CulturalNames = {
 		"anglo-saxon", "Reculf", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
+		"briton", "Regulbium",
 		"celt", "Regulbium",
 --		"english", "Reculver",
 		"latin", "Regulbium" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
@@ -681,6 +703,7 @@ DefineSettlement("richborough", {
 	MapTemplate = "earth",
 	Position = {3870, 881},
 	CulturalNames = {
+		"briton", "Rutupiae",
 		"celt", "Rutupiae",
 --		"english", "Richborough",
 		"latin", "Rutupiae" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
@@ -702,6 +725,7 @@ DefineSettlement("rochester", {
 	Position = {3850, 878},
 	CulturalNames = {
 		"anglo-saxon", "Hrofesceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"briton", "Durobrivae",
 		"celt", "Durobrivae",
 --		"english", "Rochester",
 		"latin", "Durobrivae" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
@@ -724,6 +748,7 @@ DefineSettlement("saint-albans", {
 	Position = {3832, 870},
 	CulturalNames = {
 		"anglo-saxon", "Sanctae Albanes", -- "Sanctæ Albanes"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
+		"briton", "Verulamium",
 		"celt", "Verulamium",
 --		"english", "St. Albans",
 		"latin", "Verulamium" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
@@ -746,6 +771,8 @@ DefineSettlement("salisbury", {
 	CulturalNames = {
 		"anglo-saxon", "Searoburg", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 		"anglo-saxon", "Searuburh", -- Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 115.
+		"briton", "Sorbidunom", -- Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 115.
+		"celt", "Sorbidunom",
 --		"english", "Salisbury" -- Source: "Philip's International School Atlas", 2006, p. 64.
 	},
 	HistoricalOwners = {
@@ -763,6 +790,7 @@ DefineSettlement("silchester", {
 	MapTemplate = "earth",
 	Position = {3814, 878},
 	CulturalNames = {
+		"briton", "Calleva",
 		"celt", "Calleva",
 --		"english", "Silchester",
 		"latin", "Calleva" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
@@ -783,6 +811,7 @@ DefineSettlement("sitomagus", {
 	MapTemplate = "earth",
 	Position = {3875, 857},
 	CulturalNames = {
+		"briton", "Sitomagus",
 		"celt", "Sitomagus",
 		"latin", "Sitomagus" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
@@ -802,6 +831,7 @@ DefineSettlement("speen", {
 	MapTemplate = "earth",
 	Position = {3809, 877},
 	CulturalNames = {
+		"briton", "Spinae",
 		"celt", "Spinae",
 --		"english", "Speen",
 		"latin", "Spinae" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
@@ -822,6 +852,7 @@ DefineSettlement("vindogladia", {
 	MapTemplate = "earth",
 	Position = {3794, 889},
 	CulturalNames = {
+		"briton", "Vindogladia",
 		"celt", "Vindogladia",
 		"latin", "Vindogladia" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
@@ -877,6 +908,7 @@ DefineSettlement("winchester", {
 	Position = {3810, 885},
 	CulturalNames = {
 		"anglo-saxon", "Witanceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 734.
+		"briton", "Verita Belgarum",
 		"celt", "Verita Belgarum",
 --		"english", "Winchester",
 		"latin", "Verita Belgarum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
@@ -917,6 +949,7 @@ DefineSettlement("york", {
 	Position = {3815, 819},
 	CulturalNames = {
 		"anglo-saxon", "Eoforwic", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"briton", "Eboracum",
 		"celt", "Eboracum",
 --		"english", "York",
 		"latin", "Eboracum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51; Source: "Ancient Warfare VII.6", 2013, p. 7.

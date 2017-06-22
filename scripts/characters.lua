@@ -47,6 +47,8 @@ Load("scripts/civilizations/elf/characters.lua")
 Load("scripts/civilizations/ettin/characters.lua")
 Load("scripts/civilizations/finnish/characters.lua")
 Load("scripts/civilizations/frankish/characters.lua")
+Load("scripts/civilizations/gael/characters.lua")
+Load("scripts/civilizations/gaul/characters.lua")
 Load("scripts/civilizations/germanic/characters.lua")
 Load("scripts/civilizations/gnome/characters.lua")
 Load("scripts/civilizations/goblin/characters.lua")
@@ -58,8 +60,8 @@ Load("scripts/civilizations/norse/characters.lua")
 Load("scripts/civilizations/persian/characters.lua")
 Load("scripts/civilizations/suebi/characters.lua")
 Load("scripts/civilizations/teuton/characters.lua")
-Load("scripts/civilizations/celt/characters.lua") -- define after Teuton ones, because some Celtic characters refer to Teutonic ones
 Load("scripts/civilizations/slav/characters.lua") -- define after Teuton ones, because some Slavic characters refer to Teutonic ones
+Load("scripts/civilizations/welsh/characters.lua")
 
 -- Basque heroes
 

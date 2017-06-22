@@ -374,7 +374,7 @@ DefineCharacter("talorcan", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Faction = "bernicia",
 	Father = "eanfrith",
 	HistoricalTitles = {
-		"head-of-state", 632, 633, "celt", "pict-tribe" -- was king of the Picts
+		"head-of-state", 632, 633, "briton", "pict-tribe" -- was king of the Picts
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "bernicia") then

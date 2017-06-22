@@ -57,7 +57,12 @@ DefineLanguage("old-welsh", {
 
 DefineLanguage("welsh", {
 	Name = "Welsh",
-	Family = "celtic"
+	Family = "celtic",
+	NameTranslations = {
+		-- Proto-Celtic Personal Names
+		"Rigantona", "Rhiannon", -- "Rīgantonā" is the Proto-Celtic version of the Welsh name "Rhiannon"; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 124.
+		"Tigernonos", "Teyrnon" -- "Tigernonos" is the Proto-Celtic version of the Welsh name "Teyrnon"; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 126.
+	}
 })
 
 DefineLanguage("middle-welsh", {
@@ -98,3 +103,9 @@ DefineLanguage("modern-irish", {
 	Family = "celtic",
 	DialectOf = "irish"
 })
+
+DefineLanguage("scottish", {
+	Name = "Scottish",
+	Family = "celtic"
+})
+

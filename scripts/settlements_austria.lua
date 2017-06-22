@@ -275,6 +275,7 @@ DefineSettlement("vienna", {
 	Position = {4212, 952},
 	CulturalNames = {
 		"celt", "Vindobona",
+		"gaul", "Vindobona",
 		"latin", "Vindobona", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 		"teuton", "Vienna" -- Wien
 	},

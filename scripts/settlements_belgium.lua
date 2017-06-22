@@ -30,8 +30,9 @@ DefineSettlement("tongres", {
 	MapTemplate = "earth",
 	Position = {3966, 884},
 	CulturalNames = {
-		"celt", "Aduatuca", -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223-226.
-		"french", "Tongres"
+		"celt", "Aduatuca",
+		"french", "Tongres",
+		"gaul", "Aduatuca" -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223-226.
 	},
 	HistoricalOwners = {
 		395, "rome", -- Tongres was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.

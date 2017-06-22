@@ -33,6 +33,7 @@ DefineSettlement("amiens", {
 		"celt", "Samarobriva",
 		"frankish", "Ambiani",
 		"french", "Amiens", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		"gaul", "Samarobriva",
 		"latin", "Samarobriva" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	},
 	HistoricalOwners = {
@@ -146,6 +147,7 @@ DefineSettlement("bordeaux", {
 		"celt", "Burdigala",
 		"frankish", "Burdegala",
 		"french", "Bordeaux", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		"gaul", "Burdigala",
 		"latin", "Burdigala" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
@@ -195,6 +197,7 @@ DefineSettlement("brest", {
 	CulturalNames = {
 		"celt", "Gesocribate",
 		"french", "Brest", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		"gaul", "Gesocribate",
 		"latin", "Gesocribate" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
@@ -283,6 +286,7 @@ DefineSettlement("lyon", {
 		"celt", "Lugdunum",
 		"frankish", "Lugdunum",
 		"french", "Lyon",
+		"gaul", "Lugdunum",
 		"latin", "Lugdunum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
@@ -307,6 +311,7 @@ DefineSettlement("marseilles", {
 		"celt", "Massilia",
 		"frankish", "Massilia",
 		"french", "Marseilles",
+		"gaul", "Massilia",
 		"latin", "Massilia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
@@ -391,6 +396,7 @@ DefineSettlement("nice", {
 		"celt", "Nicaea",
 		"frankish", "Nicea",
 		"french", "Nice",
+		"gaul", "Nicaea",
 		"latin", "Nicaea"
 	},
 	HistoricalOwners = {
@@ -431,6 +437,7 @@ DefineSettlement("paris", {
 		"celt", "Lutetia",
 		"frankish", "Parisii",
 		"french", "Paris",
+		"gaul", "Lutetia",
 		"latin", "Lutetia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
@@ -476,6 +483,7 @@ DefineSettlement("reims", {
 		"celt", "Durocortorum",
 		"frankish", "Remi",
 		"french", "Reims",
+		"gaul", "Durocortorum",
 		"latin", "Durocortorum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
@@ -518,6 +526,7 @@ DefineSettlement("strassburg", {
 		"celt", "Argentoratum",
 		"frankish", "Argentoratum",
 		"french", "Strasbourg",
+		"gaul", "Argentoratum",
 		"latin", "Argentoratum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		"teuton", "Strassburg"
 	},
@@ -568,6 +577,7 @@ DefineSettlement("toulouse", {
 		"celt", "Tolosa",
 		"frankish", "Tolosa",
 		"french", "Toulouse", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		"gaul", "Tolosa",
 		"latin", "Tolosa" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {

@@ -27,14 +27,14 @@
 
 DefineFaction("aedui-tribe", {
 	Name = "Aedui Tribe",
-	Civilization = "celt",
+	Civilization = "gaul",
 	Type = "tribe",
 	Colors = {"green"}
 })
 
 DefineFaction("arverni-tribe", {
 	Name = "Arverni Tribe",
-	Civilization = "celt",
+	Civilization = "gaul",
 	Type = "tribe",
 	Colors = {"blue"},
 	HistoricalDiplomacyStates = {
@@ -44,21 +44,21 @@ DefineFaction("arverni-tribe", {
 
 DefineFaction("caerasi-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
 	Name = "Caerasi Tribe",
-	Civilization = "celt",
+	Civilization = "gaul",
 	Type = "tribe",
 	Colors = {"white"}
 })
 
 DefineFaction("condrusi-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
 	Name = "Condrusi Tribe",
-	Civilization = "celt",
+	Civilization = "gaul",
 	Type = "tribe",
 	Colors = {"brown"}
 })
 
 DefineFaction("eburones-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223-226.
 	Name = "Eburones Tribe",
-	Civilization = "celt",
+	Civilization = "gaul",
 	Type = "tribe",
 	Colors = {"yellow"},
 --	Description = _("The Eburones were a Gaulish tribe which dwelled largely between the Rhine and the Meuse. They fought fiercely against Caesar's Romans, but ended up being annihilated by them."),
@@ -69,49 +69,49 @@ DefineFaction("eburones-tribe", { -- Source: H. H. Howorth, "The Ethnology of Ge
 
 DefineFaction("helvetii-tribe", {
 	Name = "Helvetii Tribe",
-	Civilization = "celt",
+	Civilization = "gaul",
 	Type = "tribe",
 	Colors = {"violet"} -- another color, perhaps?
 })
 
 DefineFaction("ligurian-tribe", {
 	Name = "Ligurian Tribe",
-	Civilization = "celt", -- were they really Celts?
+	Civilization = "gaul", -- were they really Celts?
 	Type = "tribe",
 	Colors = {"green"}
 })
 
 DefineFaction("menapii-tribe", {
 	Name = "Menapii Tribe",
-	Civilization = "celt",
+	Civilization = "gaul",
 	Type = "tribe",
 	Colors = {"yellow"}
 })
 
 DefineFaction("nervii-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 224.
 	Name = "Nervii Tribe",
-	Civilization = "celt",
+	Civilization = "gaul",
 	Type = "tribe",
 	Colors = {"orange"}
 })
 
 DefineFaction("poemanni-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
 	Name = "Poemanni Tribe",
-	Civilization = "celt",
+	Civilization = "gaul",
 	Type = "tribe",
 	Colors = {"red"}
 })
 
 DefineFaction("segni-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
 	Name = "Segni Tribe",
-	Civilization = "celt",
+	Civilization = "gaul",
 	Type = "tribe",
 	Colors = {"blue"}
 })
 
 DefineFaction("sequani-tribe", {
 	Name = "Sequani Tribe",
-	Civilization = "celt",
+	Civilization = "gaul",
 	Type = "tribe",
 	Colors = {"pink", "red"},
 	HistoricalDiplomacyStates = {
@@ -121,7 +121,7 @@ DefineFaction("sequani-tribe", {
 
 DefineFaction("treviri-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
 	Name = "Treviri Tribe",
-	Civilization = "celt", -- a Belgic tribe
+	Civilization = "gaul", -- a Belgic tribe
 	Type = "tribe",
 	Colors = {"green"},
 	HistoricalDiplomacyStates = {
@@ -132,15 +132,51 @@ DefineFaction("treviri-tribe", { -- Source: H. H. Howorth, "The Ethnology of Ger
 
 DefineFaction("tribocci-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 222.
 	Name = "Tribocci Tribe",
-	Civilization = "celt",
+	Civilization = "gaul",
 	Type = "tribe",
 	Colors = {"green"}
 })
 
 DefineFaction("turone-tribe", {
 	Name = "Turone Tribe",
-	Civilization = "celt",
+	Civilization = "gaul",
 	Type = "tribe",
-	Colors = {"cyan"},
-	HistoricalFactionDerivations = {-27, "celt", "boii-tribe"}
+	Colors = {"cyan"}
+})
+
+
+
+DefineFaction("astures-tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	Name = "Astures Tribe",
+	Civilization = "gaul", -- correct?
+	Type = "tribe",
+	Colors = {"brown"}
+})
+
+DefineFaction("boii-tribe", {
+	Name = "Boii Tribe",
+	Civilization = "gaul",
+	Type = "tribe",
+	Colors = {"brown"}
+})
+
+DefineFaction("cantabri-tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	Name = "Cantabri Tribe",
+	Civilization = "gaul", -- correct?
+	Type = "tribe",
+	Colors = {"orange"}
+})
+
+DefineFaction("cotini-tribe", {
+	Name = "Cotini Tribe",
+	Civilization = "gaul",
+	Type = "tribe",
+	Colors = {"teal"}
+})
+
+DefineFaction("norici-tribe", {
+	Name = "Norici Tribe",
+	Civilization = "gaul",
+	Type = "tribe",
+	Colors = {"white"} -- another color, perhaps?
 })

@@ -30,7 +30,7 @@ DefineSettlement("armagh", {
 	MapTemplate = "earth",
 	Position = {3691, 810},
 	CulturalNames = {
-		"celt", "Armagh",
+		"gael", "Armagh",
 --		"english", "Armagh"
 	},
 	HistoricalOwners = {
@@ -48,7 +48,7 @@ DefineSettlement("dublin", {
 	Position = {3698, 834},
 	CulturalNames = {
 		"celt", "Eblana", -- or is this the Latin name? Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
---		"celt", "Dublin",
+		"gael", "Dublin",
 --		"english", "Dublin"
 	},
 	HistoricalOwners = {

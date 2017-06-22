@@ -29,14 +29,14 @@ DefineCharacter("aedan-mac-gabrain", { -- Source: Frank Stenton, "Anglo-Saxon En
 	Name = "Aedan", -- the king of a kingdom founded in Argyll by Irish settlers
 	ExtraName = "mac Gabrain",
 	Gender = "male",
-	Type = "unit-germanic-warrior",
-	Civilization = "celt",
+	Type = "unit-teuton-swordsman",
+	Civilization = "gael",
 	Faction = "argyll",
 --	ProvinceOfOrigin = "Highland Scotland",
 	Date = 574, -- became king
 	-- attacked the Bernicians in 603 AD
 	HistoricalTitles = {
-		"head-of-state", 574, 0, "celt", "argyll"
+		"head-of-state", 574, 0, "gael", "argyll"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "argyll") then
@@ -50,7 +50,7 @@ DefineCharacter("aidan", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Name = "Aidan",
 	Gender = "male",
 	Type = "unit-teuton-priest",
-	Civilization = "celt", -- monk from Iona, a northern Irish or Pictish monastery
+	Civilization = "gael", -- monk from Iona, a northern Irish or Pictish monastery
 	Faction = "northumbria",
 	Date = 634, -- arrived in 634 in Northumbria with a group of monks, and they went to live in the island of Lindisfarne
 	DeathDate = 651, -- died
@@ -61,7 +61,7 @@ DefineCharacter("finan", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Name = "Finan",
 	Gender = "male",
 	Type = "unit-teuton-priest",
-	Civilization = "celt", -- monk from Iona, a northern Irish or Pictish monastery
+	Civilization = "gael", -- monk from Iona, a northern Irish or Pictish monastery
 	Faction = "northumbria",
 	Date = 651, -- succeeded Aidan
 	DeathDate = 660, -- died; as given on page 122, on page 120 Stenton gives him as having lived until 661
@@ -72,14 +72,14 @@ DefineCharacter("bruide-mac-beli", { -- Source: Frank Stenton, "Anglo-Saxon Engl
 	Name = "Bruide",
 	ExtraName = "mac Beli";
 	Gender = "male",
-	Type = "unit-germanic-warrior",
-	Civilization = "celt",
+	Type = "unit-teuton-swordsman",
+	Civilization = "gael",
 	Faction = "pict-tribe",
 --	ProvinceOfOrigin = "Strathclyde", -- son of the king of Strathclyde
 	Date = 672,
 	DeathDate = 693, -- died
 	HistoricalTitles = {
-		"head-of-state", 672, 693, "celt", "pict-tribe" -- became king of the Picts in 672
+		"head-of-state", 672, 693, "briton", "pict-tribe" -- became king of the Picts in 672
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "pict-tribe") then
@@ -93,12 +93,8 @@ DefineCharacter("dicuil", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Name = "Dicuil", -- Irish monk who became notable for his scholarship
 	Gender = "male",
 	Type = "unit-teuton-priest",
-	Civilization = "celt", -- presumably
---	ProvinceOfOrigin = "Leinster", -- correct?
+	Civilization = "gael",
 	Date = 825, -- wrote "De Mensura Orbis Terrae"
 	Deities = {"christian-god"},
 	AuthoredWorks = {"upgrade-work-de-mensura-orbis-terrae"}
 })
-
-Load("scripts/civilizations/celt/characters_briton.lua")
-Load("scripts/civilizations/celt/characters_gaul.lua")
