@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016-2017 by Andrettin
+--      (c) Copyright 2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,12 +25,34 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- Boge
--- 4267, 735
--- a grave (called "Tjelvars grav") was built in Boge between 1000 and 300 BC; Source: "Guta Saga: The History of the Gotlanders", 1999, p. xviii.
+DefineSettlement("roma-gotland", {
+	Name = "Roma",
+	MapTemplate = "earth",
+	Position = {4259, 739},
+	CulturalNames = {
+		"norse", "Roma"
+	},
+	HistoricalOwners = {
+		{1164, 9, 9}, "cistercian-order"
+	},
+	HistoricalBuildings = {
+		{1164, 9, 9}, 0, "temple", "cistercian-order" -- a Cistercian monastery, the Beata Maria de Gutnalia, was established on September 9th of 1164 at Roma; Source: "Guta Saga: The History of the Gotlanders", 1999, p. xlvii.
+	},
+	Regions = {"europe", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
+})
 
--- Fröjel
--- 4254, 743
--- a stone ship grave was established at Gannarve (Fröjel Parish, Gotland) in the Late Bronze Age of Scandinavia (1100-700 BC); Source: Peter Skoglund, "Stone Ships: Continuity and Change in Scandinavian Prehistory", 2008, pp. 394, 398.
-
--- the migration from Gotland mentioned in the Guta saga, if it is real, likely occurred c. 475-550 AD; Source: "Guta Saga: The History of the Gotlanders", 1999, pp. xxvi-xxvii.
+DefineSettlement("torsburgen", {
+	Name = "Torsburgen",
+	MapTemplate = "earth",
+	Position = {4265, 741},
+	CulturalNames = {
+		"norse", "Torsburgen"
+	},
+	HistoricalOwners = {
+		300, "gute-tribe"
+	},
+	HistoricalBuildings = {
+		300, 1100, "watch-tower" -- the enormous hill fort of Torsburgen had two phases, one dated to 300-400 AD, and the other to 800-1100 AD; Source: "Guta Saga: The History of the Gotlanders", 1999, pp. xxvii-xxviii.
+	},
+	Regions = {"europe", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
+})
