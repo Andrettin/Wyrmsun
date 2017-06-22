@@ -46,16 +46,6 @@ DefineWorldMapTile({458, 106}, {
 	}
 })
 
-DefineWorldMapTile({462, 104}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"celt", "Eblana", -- or is this the Latin name? Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	},
-	FactionCulturalSettlementNames = {
-		"anglo-saxon", "england", "Dublin"
-	}
-})
-
 DefineWorldMapTile({463, 100}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {

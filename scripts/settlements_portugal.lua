@@ -36,7 +36,7 @@ DefineSettlement("braga", {
 	HistoricalOwners = {
 		-138, "rome", -- Bracara was acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		486, "galicia", -- Braga was a part of Suebic Galicia in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		1560, "portugal" -- Braga's area was a part of the Kingdom of Portugal in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1150, "portugal" -- Braga was a part of the Kingdom of Portugal in 1150 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 82.
 	},
 	HistoricalBuildings = {
 		-138, 1560, "town-hall",
@@ -55,7 +55,7 @@ DefineSettlement("coimbra", {
 	},
 	HistoricalOwners = {
 		486, "galicia", -- Coimbra was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		1560, "portugal" -- Coimbra was a part of the Kingdom of Portugal in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1064, "portugal" -- Coimbra was acquired by the Kingdom of Portugal in 1064 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 82.
 	},
 	HistoricalBuildings = {
 		486, 1308, "farm",
@@ -76,7 +76,7 @@ DefineSettlement("lisbon", {
 	HistoricalOwners = {
 		-138, "rome", -- Olisipo was acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		486, "visigothia", -- Lisbon was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		1560, "portugal" -- Lisbon was a part of the Kingdom of Portugal in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1148, "portugal" -- Lisbon was acquired by the Kingdom of Portugal in 1148 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 82.
 	},
 	HistoricalBuildings = {
 		-138, 0, "town-hall",
@@ -93,10 +93,10 @@ DefineSettlement("oporto", {
 		"portuguese", "Oporto"
 	},
 	HistoricalOwners = {
-		1560, "portugal" -- Oporto was a part of the Kingdom of Portugal in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1150, "portugal" -- Oporto was a part of the Kingdom of Portugal in 1150 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 82.
 	},
 	HistoricalBuildings = {
-		1560, 0, "town-hall",
+		1150, 0, "town-hall",
 		1911, 0, "university" -- University founded in Oporto in 1911; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	},
 	Regions = {"europe", "iberia", "west-and-central-europe"}

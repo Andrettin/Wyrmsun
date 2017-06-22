@@ -62,17 +62,6 @@ DefineWorldMapTile({505, 144}, {
 	}
 })
 
-DefineWorldMapTile({506, 126}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Mediolanum", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-		"teuton", "Mailand"
-	},
-	FactionCulturalSettlementNames = {
-		"italian", "italy", "Milan"
-	}
-})
-
 DefineWorldMapTile({506, 136}, {
 	World = "Earth",
 	CulturalSettlementNames = {
@@ -90,76 +79,10 @@ DefineWorldMapTile({506, 142}, {
 DefineWorldMapTile({509, 128}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"latin", "Parma",
-		"latin", "Placentia" -- Piacenza
+		"latin", "Parma"
 	},
 	FactionCulturalSettlementNames = {
-		"italian", "italy", "Parma",
-		"italian", "italy", "Piacenza"
-	}
-})
-
-DefineWorldMapTile({511, 126}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Verona" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	FactionCulturalSettlementNames = {
-		"italian", "italy", "Verona" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
-	}
-})
-
-DefineWorldMapTile({511, 129}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"italian", "italy", "Modena"
-	}
-})
-
-DefineWorldMapTile({512, 129}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Bononia"
-	},
-	FactionCulturalSettlementNames = {
-		"italian", "italy", "Bologna"
-	}
-})
-
-DefineWorldMapTile({512, 131}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Florentia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	FactionCulturalSettlementNames = {
-		"italian", "italy", "Florence"
-	}
-})
-
-DefineWorldMapTile({514, 126}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Opitergium" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	FactionCulturalSettlementNames = {
-		"italian", "italy", "Oderzo" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	}
-})
-
-DefineWorldMapTile({514, 129}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Ravenna" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	}
-})
-
-DefineWorldMapTile({515, 126}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Venedig"
-	},
-	FactionCulturalSettlementNames = {
-		"italian", "italy", "Venice"
+		"italian", "italy", "Parma"
 	}
 })
 
@@ -174,9 +97,6 @@ DefineWorldMapTile({515, 136}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"latin", "Roma" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	FactionCulturalSettlementNames = {
-		"anglo-saxon", "england", "Rome"
 	}
 })
 
@@ -191,13 +111,6 @@ DefineWorldMapTile({517, 147}, {
 	}
 })
 
-DefineWorldMapTile({518, 125}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Aquileia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	}
-})
-
 DefineWorldMapTile({518, 135}, {
 	World = "Earth",
 	CulturalSettlementNames = {
@@ -205,25 +118,6 @@ DefineWorldMapTile({518, 135}, {
 	},
 	FactionCulturalSettlementNames = {
 		"italian", "italy", "L'Aquila"
-	}
-})
-
-DefineWorldMapTile({519, 126}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Tergeste", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"teuton", "Triest"
-	},
-	FactionCulturalSettlementNames = {
-		"italian", "italy", "Trieste"
-	}
-})
-
-DefineWorldMapTile({520, 139}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"greek", "Neapolis",
-		"latin", "Neapolis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
@@ -239,9 +133,6 @@ DefineWorldMapTile({522, 150}, {
 	CulturalSettlementNames = {
 		"greek", "Syracusae",
 		"latin", "Syracusae" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	FactionCulturalSettlementNames = {
-		"anglo-saxon", "england", "Syracuse"
 	}
 })
 
@@ -264,11 +155,3 @@ DefineWorldMapTile({527, 139}, {
 		"italian", "italy", "Bari"
 	}
 })
-
-DefineWorldMapTile({530, 140}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Brundisium" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	}
-})
-

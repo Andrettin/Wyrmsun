@@ -30,8 +30,10 @@ DefineSettlement("amiens", {
 	MapTemplate = "earth",
 	Position = {3888, 913},
 	CulturalNames = {
+		"celt", "Samarobriva",
 		"frankish", "Ambiani",
-		"french", "Amiens"
+		"french", "Amiens", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		"latin", "Samarobriva" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	},
 	HistoricalOwners = {
 		561, "salia" -- Ambiani went to Chilperich when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
@@ -143,7 +145,7 @@ DefineSettlement("bordeaux", {
 	CulturalNames = {
 		"celt", "Burdigala",
 		"frankish", "Burdegala",
-		"french", "Bordeaux",
+		"french", "Bordeaux", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 		"latin", "Burdigala" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
@@ -169,7 +171,7 @@ DefineSettlement("bourges", {
 	Position = {3894, 975},
 	CulturalNames = {
 		"frankish", "Bituricae",
-		"french", "Bourges"
+		"french", "Bourges" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	HistoricalOwners = {
 		395, "rome", -- Bourges was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
@@ -192,7 +194,7 @@ DefineSettlement("brest", {
 	Position = {3736, 946},
 	CulturalNames = {
 		"celt", "Gesocribate",
-		"french", "Brest",
+		"french", "Brest", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 		"latin", "Gesocribate" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
@@ -450,7 +452,7 @@ DefineSettlement("poitiers", {
 	Position = {3845, 990},
 	CulturalNames = {
 		"frankish", "Pictavis",
-		"french", "Poitiers"
+		"french", "Poitiers" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	HistoricalOwners = {
 		395, "rome", -- Poitiers was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
@@ -516,7 +518,7 @@ DefineSettlement("strassburg", {
 		"celt", "Argentoratum",
 		"frankish", "Argentoratum",
 		"french", "Strasbourg",
-		"latin", "Argentoratum",
+		"latin", "Argentoratum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		"teuton", "Strassburg"
 	},
 	HistoricalOwners = {
@@ -565,7 +567,7 @@ DefineSettlement("toulouse", {
 	CulturalNames = {
 		"celt", "Tolosa",
 		"frankish", "Tolosa",
-		"french", "Toulouse",
+		"french", "Toulouse", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 		"latin", "Tolosa" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
@@ -606,7 +608,7 @@ DefineSettlement("troyes", {
 	Position = {3923, 952},
 	CulturalNames = {
 		"frankish", "Trecae",
-		"french", "Troyes"
+		"french", "Troyes" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	HistoricalOwners = {
 		561, "burgundia" -- Trecae went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.

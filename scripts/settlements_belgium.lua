@@ -30,6 +30,7 @@ DefineSettlement("tongres", {
 	MapTemplate = "earth",
 	Position = {3966, 884},
 	CulturalNames = {
+		"celt", "Aduatuca", -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223-226.
 		"french", "Tongres"
 	},
 	HistoricalOwners = {

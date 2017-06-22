@@ -27,7 +27,6 @@
 
 --Load("scripts/world_earth_tiles_africa.lua")
 --Load("scripts/world_earth_tiles_asia.lua")
-Load("scripts/world_earth_tiles_austria.lua") -- German-speaking territories of the Empire of Austria, as well as Carniola
 Load("scripts/world_earth_tiles_bulgaria.lua")
 --Load("scripts/world_earth_tiles_egypt.lua")
 Load("scripts/world_earth_tiles_england.lua")

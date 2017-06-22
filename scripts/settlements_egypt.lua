@@ -106,6 +106,8 @@ DefineSettlement("memphis", {
 	CulturalNames = {
 		"assyrian", "Memphis",
 		"egyptian", "Memphis",
+		"greek", "Memphis",
+		"latin", "Memphis", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 		"persian", "Memphis"
 	},
 	HistoricalOwners = {
@@ -198,7 +200,8 @@ DefineSettlement("syene", {
 	Position = {4589, 1498},
 	CulturalNames = {
 		"assyrian", "Syene",
-		"egyptian", "Syene"
+		"egyptian", "Syene",
+		"latin", "Syene" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
 		-1450, "egypt", -- Syene/Assuan was an Egyptian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.

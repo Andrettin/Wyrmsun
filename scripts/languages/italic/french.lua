@@ -44,14 +44,14 @@ DefineLanguageWord("Aud", { -- a suffix
 	Language = "french",
 	Type = "noun", -- correct?
 	Meanings = {},
-	DerivesFrom = {"old-french", "noun", "Alt"} -- http://www.cnrtl.fr/definition/lourdaud//1
+	DerivesFrom = {"old-french", "noun", "Alt"} -- Source: http://www.cnrtl.fr/definition/lourdaud//1
 })
 
 DefineLanguageWord("Aut", { -- a suffix
 	Language = "french",
 	Type = "noun", -- correct?
 	Meanings = {},
-	DerivesFrom = {"old-french", "noun", "Alt"} -- http://www.cnrtl.fr/definition/lourdaud//1
+	DerivesFrom = {"old-french", "noun", "Alt"} -- Source: http://www.cnrtl.fr/definition/lourdaud//1
 })
 
 DefineLanguageWord("Barguigner", {

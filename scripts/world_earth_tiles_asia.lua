@@ -25,14 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineWorldMapTile({554, 142}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"greek", "Troy",
-		"hittite", "Troy"
-	}
-})
-
 DefineWorldMapTile({557, 144}, {
 	World = "Earth",
 	CulturalSettlementNames = {
@@ -163,12 +155,5 @@ DefineWorldMapTile({607, 161}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"persian", "Ctesiphon" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	}
-})
-
-DefineWorldMapTile({617, 157}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"persian", "Ecbatana" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })

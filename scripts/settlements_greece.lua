@@ -30,7 +30,7 @@ DefineSettlement("amyclae", {
 	MapTemplate = "earth",
 	Position = {4348, 1206},
 	CulturalNames = {
-		"greek", "Amyclae"
+		"greek", "Amyclae" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalOwners = {
 		-1450, "mycenae" -- Amyclae was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -46,7 +46,7 @@ DefineSettlement("aphidnae", {
 	MapTemplate = "earth",
 	Position = {4382, 1179},
 	CulturalNames = {
-		"greek", "Aphidnae"
+		"greek", "Aphidnae" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalOwners = {
 		-1450, "mycenae", -- Aphidnae was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -79,7 +79,7 @@ DefineSettlement("athens", {
 	MapTemplate = "earth",
 	Position = {4380, 1184},
 	CulturalNames = {
-		"greek", "Athens",
+		"greek", "Athens", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 		"latin", "Athens"
 	},
 	HistoricalOwners = {
@@ -99,6 +99,8 @@ DefineSettlement("byzantium", {
 	MapTemplate = "earth",
 	Position = {4498, 1114},
 	CulturalNames = {
+		"greek", "Byzantium",
+		"latin", "Constantinople",
 		"persian", "Byzantium"
 	},
 	HistoricalOwners = {
@@ -133,7 +135,7 @@ DefineSettlement("coulas", {
 	MapTemplate = "earth",
 	Position = {4366, 1172},
 	CulturalNames = {
-		"greek", "Coulas"
+		"greek", "Coulas" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalOwners = {
 		-1450, "mycenae" -- Coulas was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -168,7 +170,7 @@ DefineSettlement("delphi", {
 	MapTemplate = "earth",
 	Position = {4352, 1172},
 	CulturalNames = {
-		"greek", "Delphi"
+		"greek", "Delphi" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalOwners = {
 		-1450, "mycenae" -- Delphi was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -184,7 +186,7 @@ DefineSettlement("dicte", {
 	MapTemplate = "earth",
 	Position = {4420, 1247},
 	CulturalNames = {
-		"greek", "Dicte"
+		"greek", "Dicte" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalOwners = {
 		-1450, "mycenae" -- Dicte was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -200,7 +202,7 @@ DefineSettlement("eleusis", {
 	MapTemplate = "earth",
 	Position = {4374, 1181},
 	CulturalNames = {
-		"greek", "Eleusis"
+		"greek", "Eleusis" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalOwners = {
 		-1450, "mycenae", -- Eleusis was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -217,7 +219,7 @@ DefineSettlement("epidaurus", {
 	MapTemplate = "earth",
 	Position = {4366, 1190},
 	CulturalNames = {
-		"greek", "Epidaurus"
+		"greek", "Epidaurus" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalOwners = {
 		-1450, "mycenae", -- Epidaurus was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -234,7 +236,7 @@ DefineSettlement("gerenia", {
 	MapTemplate = "earth",
 	Position = {4344, 1206},
 	CulturalNames = {
-		"greek", "Gerenia"
+		"greek", "Gerenia" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalOwners = {
 		-1450, "mycenae" -- Gerenia was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -250,7 +252,7 @@ DefineSettlement("ialysus", {
 	MapTemplate = "earth",
 	Position = {4480, 1220},
 	CulturalNames = {
-		"greek", "Ialysus"
+		"greek", "Ialysus" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalOwners = {
 		-1450, "mycenae" -- Ialysus was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -266,7 +268,7 @@ DefineSettlement("iolcus", {
 	MapTemplate = "earth",
 	Position = {4363, 1150},
 	CulturalNames = {
-		"greek", "Iolcus"
+		"greek", "Iolcus" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalOwners = {
 		-1450, "mycenae" -- Iolcus was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -282,7 +284,7 @@ DefineSettlement("itanus", {
 	MapTemplate = "earth",
 	Position = {4437, 1247},
 	CulturalNames = {
-		"greek", "Itanus"
+		"greek", "Itanus" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalOwners = {
 		-1450, "mycenae" -- Itanus was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -298,7 +300,8 @@ DefineSettlement("knossos", {
 	MapTemplate = "earth",
 	Position = {4410, 1244},
 	CulturalNames = {
-		"greek", "Knossos"
+		"greek", "Knossos",
+		"latin", "Cnossus"
 	},
 	HistoricalOwners = {
 		-1450, "mycenae" -- Cnossus was a center of the highest Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -331,7 +334,7 @@ DefineSettlement("mycenae", {
 	MapTemplate = "earth",
 	Position = {4358, 1188},
 	CulturalNames = {
-		"greek", "Mycenae"
+		"greek", "Mycenae" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalOwners = {
 		-1450, "mycenae", -- Mycenae was a center of the highest Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -349,7 +352,7 @@ DefineSettlement("orchomenus", {
 	MapTemplate = "earth",
 	Position = {4360, 1172},
 	CulturalNames = {
-		"greek", "Orchomenus"
+		"greek", "Orchomenus" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalOwners = {
 		-1450, "mycenae" -- Orchomenus was a center of the highest Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -365,7 +368,7 @@ DefineSettlement("pagasae", {
 	MapTemplate = "earth",
 	Position = {4361, 1152},
 	CulturalNames = {
-		"greek", "Pagasae"
+		"greek", "Pagasae" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalOwners = {
 		-1450, "mycenae" -- Pagasae was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -413,7 +416,7 @@ DefineSettlement("tiryns", {
 	MapTemplate = "earth",
 	Position = {4359, 1191},
 	CulturalNames = {
-		"greek", "Tiryns"
+		"greek", "Tiryns" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalOwners = {
 		-1450, "mycenae", -- Tiryns was a center of the highest Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.

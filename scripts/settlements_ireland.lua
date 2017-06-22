@@ -47,7 +47,8 @@ DefineSettlement("dublin", {
 	MapTemplate = "earth",
 	Position = {3698, 834},
 	CulturalNames = {
-		"celt", "Dublin",
+		"celt", "Eblana", -- or is this the Latin name? Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+--		"celt", "Dublin",
 --		"english", "Dublin"
 	},
 	HistoricalOwners = {

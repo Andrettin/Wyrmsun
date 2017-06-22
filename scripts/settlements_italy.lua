@@ -46,7 +46,7 @@ DefineSettlement("aquileia", {
 	MapTemplate = "earth",
 	Position = {4143, 1005},
 	CulturalNames = {
-		"latin", "Aquileia" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 26-27, 29.
+		"latin", "Aquileia" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 26-27, 29; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
 		-184, "rome" -- Aquileia founded as a colony in 184 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
@@ -221,7 +221,7 @@ DefineSettlement("milan", {
 	CulturalNames = {
 		"italian", "Milan",
 		"latin", "Mediolanum", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-		"teuton", "Milan"
+		"teuton", "Milan" -- Mailand
 	},
 	HistoricalOwners = {
 		-161, "rome", -- Mediolanum was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -262,6 +262,7 @@ DefineSettlement("naples", {
 	MapTemplate = "earth",
 	Position = {4163, 1117},
 	CulturalNames = {
+		"greek", "Neapolis",
 		"italian", "Naples",
 		"latin", "Neapolis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
@@ -299,7 +300,7 @@ DefineSettlement("oderzo", {
 	MapTemplate = "earth",
 	Position = {4122, 1005},
 	CulturalNames = {
-		"italian", "Oderzo",
+		"italian", "Oderzo", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 		"latin", "Opitergium" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 26-27; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
@@ -433,7 +434,7 @@ DefineSettlement("venice", {
 	Position = {4122, 1011},
 	CulturalNames = {
 		"italian", "Venice",
-		"teuton", "Venice"
+		"teuton", "Venice" -- Venedig
 	},
 	HistoricalOwners = {
 		1494, "venice", -- Venice was part of the Venetian Republic about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
@@ -450,7 +451,7 @@ DefineSettlement("verona", {
 	MapTemplate = "earth",
 	Position = {4090, 1014},
 	CulturalNames = {
-		"italian", "Verona",
+		"italian", "Verona", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 		"latin", "Verona", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 		"teuton", "Verona"
 	},

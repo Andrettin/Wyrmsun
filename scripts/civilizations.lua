@@ -1954,6 +1954,9 @@ DefineCivilization("frankish", {
 	PersonalNames = {
 		"male", "Answald", -- Old Frankish name; Source: http://www.cnrtl.fr/definition/lourdaud//1
 		"male", "Grimwald" -- Old Frankish name; Source: http://www.cnrtl.fr/definition/lourdaud//1
+	},
+	SettlementNames = {
+		"Haim" -- the French settlement names "Le Hamel", "Hamelet", "Hamelin" and "Hem" come from or have the same origin as the Old French "ham", which in turn comes from Old Frankish "haim"; Source: http://www.cnrtl.fr/definition/hameau
 	}
 })
 
@@ -2140,9 +2143,9 @@ DefineCivilization("french", {
 	Adjective = "French",
 	Playable = false,
 	PersonalNames = {
-		"male", "Bellaud",
-		"male", "Bonnaud",
-		"male", "Renaud"
+		"male", "Bellaud", -- Source: http://www.cnrtl.fr/definition/lourdaud//1
+		"male", "Bonnaud", -- Source: http://www.cnrtl.fr/definition/lourdaud//1
+		"male", "Renaud" -- Source: http://www.cnrtl.fr/definition/lourdaud//1
 	},
 	SettlementNames = {
 		"Hamelet", -- Source: http://www.cnrtl.fr/definition/hameau

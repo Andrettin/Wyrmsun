@@ -79,7 +79,7 @@ DefineSettlement("trieste", {
 	Position = {4154, 1009},
 	CulturalNames = {
 		"italian", "Trieste",
-		"latin", "Tergeste",
+		"latin", "Tergeste", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		"teuton", "Triest"
 	},
 	HistoricalOwners = {

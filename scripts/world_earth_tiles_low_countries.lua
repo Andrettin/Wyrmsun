@@ -35,27 +35,10 @@ DefineWorldMapTile({492, 111}, {
 	}
 })
 
-DefineWorldMapTile({493, 107}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"teuton", "netherlands", "Amsterdam"
-	}
-})
-
 DefineWorldMapTile({494, 109}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
 		"teuton", "netherlands", "'s-Hertogenbosch"
-	}
-})
-
-DefineWorldMapTile({495, 111}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"celt", "Aduatuca" -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223-226.
-	},
-	FactionCulturalSettlementNames = {
-		"french", "france", "Tongres"
 	}
 })
 

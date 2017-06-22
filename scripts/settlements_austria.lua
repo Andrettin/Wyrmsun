@@ -62,7 +62,7 @@ DefineSettlement("carnuntum", {
 	MapTemplate = "earth",
 	Position = {4224, 955},
 	CulturalNames = {
-		"latin", "Carnuntum"
+		"latin", "Carnuntum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
 		10, "rome", -- Upper Pannonia (where Carnuntum was located) was acquired by Rome in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -202,6 +202,7 @@ DefineSettlement("ljubljana", {
 	MapTemplate = "earth",
 	Position = {4170, 1000},
 	CulturalNames = {
+		"latin", "Emona", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		"slav", "Ljubljana",
 		"teuton", "Laibach" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
@@ -274,8 +275,8 @@ DefineSettlement("vienna", {
 	Position = {4212, 952},
 	CulturalNames = {
 		"celt", "Vindobona",
-		"latin", "Vindobona",
-		"teuton", "Vienna"
+		"latin", "Vindobona", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"teuton", "Vienna" -- Wien
 	},
 	HistoricalOwners = {
 		10, "rome", -- Upper Pannonia (where Vindobona was located) acquired by Rome in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.

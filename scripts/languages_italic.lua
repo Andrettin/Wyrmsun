@@ -57,19 +57,33 @@ DefineLanguage("gallo-romance", {
 
 DefineLanguage("old-french", {
 	Name = "Old French",
-	Family = "italic"
+	Family = "italic",
+	NameTranslations = {
+		-- Old Frankish Settlement Names
+		"Haim", "Ham"
+	}
 })
 
 DefineLanguage("french", {
 	Name = "French",
 	Family = "italic",
 	NameTranslations = {
+		-- Old French Settlement Names
+		"Ham", "Le Hamel",
+		"Ham", "Hamelet",
+		"Ham", "Hamelin",
+		"Ham", "Hem",
 		-- Latin Settlement Names
 		"Burdigala", "Bordeaux",
 		"Lugdunum", "Lyon",
 		"Massilia", "Marseilles",
 		"Nicaea", "Nice",
-		"Tolosa", "Toulouse"
+		"Tolosa", "Toulouse",
+		-- Old Frankish Settlement Names
+		"Haim", "Le Hamel",
+		"Haim", "Hamelet",
+		"Haim", "Hamelin",
+		"Haim", "Hem"
 	}
 })
 
