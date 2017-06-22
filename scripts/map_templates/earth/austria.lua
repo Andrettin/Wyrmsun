@@ -25,10 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- Gossensass
-SetMapTemplateResource("earth", "unit-silver-deposit", {4095, 983})
-SetMapTemplateUnit("earth", "unit-silver-mine", "austria", {4095, 983}, 1480) -- the silver-lead mine Gossensass was in existence in 1427; and in c. 1480 it had railways within it; Source: M. J. T. Lewis, "Railways in the Greek and Roman World", 2001, p. 16.
-
 -- Salzburg / Iuvavum
 SetMapTemplateUnit("earth", "unit-teuton-lumber-mill", "rome", {4135, 960}, 170, 171) -- some buildings for Iuvavum for The First Marcomannic War scenario
 SetMapTemplateUnit("earth", "unit-latin-smithy", "rome", {4135, 960}, 170, 171) -- some buildings for Iuvavum for The First Marcomannic War scenario
