@@ -62,7 +62,6 @@ SetMapTemplateUnit("earth", "unit-germanic-town-hall", "celtic-cimmerian-tribe",
 SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "celtic-cimmerian-tribe", {4101, 882}, -1600, -1599) -- the fortified settlement of Mittelberg (near Nebra) existed in 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 27.
 
 -- Paderborn
-SetMapTemplateCulturalSettlementName("earth", "Paderborn", {4033, 873}, "teuton")
 --SetMapTemplateLayerConnector("earth", "unit-portal", {4033, 873}, "Nidavellir") -- Gnitaheith (where Fafnir dwelled) has been identified with a real location south of Paderborn, so place a portal to Nidavellir there; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 343.
 
 -- Scheidungen

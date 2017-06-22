@@ -2910,9 +2910,7 @@ DefineProvince("Holland", {
 		-264, "teuton"
 	},
 	HistoricalModifiers = {
-		1575, "upgrade-university", true, -- University founded in Leyden in 1575; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
-		1877, "upgrade-university", true, -- State university founded in Amsterdam in 1877; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
-		1905, "upgrade-university", true -- Calvinist university founded in Amsterdam in 1905; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
+		1575, "upgrade-university", true -- University founded in Leyden in 1575; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"europe", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
 })
@@ -3751,10 +3749,6 @@ DefineProvince("Lower Rhine", {
 		161, "unit-latin-barracks", true, -- Legionary base present in the area in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		161, "unit-latin-barracks", true, -- Legionary base present (apparently) between the Meuse and Rhine rivers in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		768, "unit-teuton-temple", true -- Monastery or abbey existent in Prüm during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-	},
-	HistoricalModifiers = {
-		1388, "upgrade-university", true, -- University founded in Cologne in 1388; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		1454, "upgrade-university", true -- University founded in Trier in 1454; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
 })
@@ -4767,7 +4761,6 @@ DefineProvince("Palatinate", {
 		"teuton", "holy-rome"
 	},
 	HistoricalModifiers = {
-		1476, "upgrade-university", true, -- University founded in Mainz in 1476; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1578, "upgrade-university", true -- University founded in Neustadt in 1578; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
@@ -6881,12 +6874,7 @@ DefineProvince("Westphalia", {
 	},
 	HistoricalSettlementBuildings = {
 		768, "unit-teuton-temple", true, -- Monastery or abbey existent in Werden during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-		768, "unit-teuton-temple", true, -- Monastery or abbey existent in Corvey during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-		768, "unit-teuton-stronghold", true, -- Fort existent in Eresburg during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-		768, "unit-teuton-stronghold", true -- Fort existent in Syburg during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-	},
-	HistoricalModifiers = {
-		1614, "upgrade-university", true -- University founded in Paderborn in 1614; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+		768, "unit-teuton-temple", true -- Monastery or abbey existent in Corvey during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })

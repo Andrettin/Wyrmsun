@@ -65,8 +65,10 @@ DefineSettlement("cologne", {
 		161, 486, "guard-tower", -- Legionary base present in a location near Colonia Agrippina in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		395, 1815, "temple", -- Cologne was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		-- Archbishopric existent in Cologne during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		1388, 1815, "university", -- University founded in Cologne in 1388; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1815, 0, "stronghold", -- Cologne possessed a fortress in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-		1815, 0, "temple"
+		1815, 0, "temple",
+		1815, 0, "university"
 	},
 	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
 })
@@ -76,7 +78,7 @@ DefineSettlement("eresburg", {
 	MapTemplate = "earth",
 	Position = {4043, 879},
 	CulturalNames = {
---		"frankish", "Eresburg",
+		"frankish", "Eresburg",
 		"teuton", "Eresburg"
 	},
 	HistoricalOwners = {
@@ -168,7 +170,8 @@ DefineSettlement("mainz", {
 		-50, 161, "farm",
 		161, 0, "stronghold", -- Legionary base present in Mogontiacum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		161, 0, "barracks",
-		395, 0, "temple" -- Mayence was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		395, 0, "temple", -- Mayence was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		1476, 0, "university" -- University founded in Mainz in 1476; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		-- Mayence possessed a fortress in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
@@ -187,6 +190,23 @@ DefineSettlement("nuremberg", {
 	},
 	HistoricalBuildings = {
 		161, 0, "town-hall"
+	},
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+})
+
+DefineSettlement("paderborn", {
+	Name = "Paderborn",
+	MapTemplate = "earth",
+	Position = {4033, 873},
+	CulturalNames = {
+		"teuton", "Paderborn"
+	},
+	HistoricalOwners = {
+		919, "saxony" -- Paderborn was a part of the Duchy of Saxony (within the Holy Roman Empire) in the 919-1125 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalBuildings = {
+		919, 1614, "farm",
+		1614, 0, "university" -- University founded in Paderborn in 1614; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
@@ -250,7 +270,7 @@ DefineSettlement("syburg", {
 	MapTemplate = "earth",
 	Position = {4019, 876},
 	CulturalNames = {
---		"frankish", "Syburg",
+		"frankish", "Syburg",
 		"teuton", "Syburg"
 	},
 	HistoricalOwners = {
@@ -278,8 +298,10 @@ DefineSettlement("trier", {
 		1815, "prussia" -- Trier was a possession of the Kingdom of Prussia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		395, 0, "temple" -- Trèves was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		395, 0, "town-hall",
+		395, 0, "temple", -- Trèves was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		-- Archbishopric existent in Trier during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		1454, 0, "university" -- University founded in Trier in 1454; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
 })
