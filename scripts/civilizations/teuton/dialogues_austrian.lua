@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016-2017 by Andrettin
+--      (c) Copyright 2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,4 +25,26 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-Load("scripts/civilizations/teuton/triggers_austrian.lua")
+DefineDialogue("mcz-3328-1853", { -- Source: "Minister-Conferenz-Kanzlei MCZ 3328/1853".
+	Nodes = {
+		{
+			"text", "A few years ago, a decree was made obligating the denizens of one of our provinces to perform road construction labor. The bishop of Agram, Georg von Haulik, has now plead that the clergy be freed of this duty. The provincial government, however, has assured us of the importance of this policy in providing the road work without exorbitating costs.", -- "one of our provinces" = Croatia
+			"options", {"Free the clergy", "We need their labor"},
+			"option-effects", {
+				function(s)
+					SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") - 500)
+				end,
+				function(s)
+					local uncount = GetUnits(trigger_player)
+					for unit1 = 1,table.getn(uncount) do 
+						if (GetUnitVariable(uncount[unit1], "Ident") == "unit-teuton-priest") then
+							RemoveUnit(uncount[unit1])
+							KillUnit(uncount[unit1])
+						end
+					end
+				end
+			},
+			"option-tooltips", {"-500 Copper", "Lose a priest"}
+		}
+	}
+})

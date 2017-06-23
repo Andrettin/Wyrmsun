@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016-2017 by Andrettin
+--      (c) Copyright 2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,4 +25,21 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-Load("scripts/civilizations/teuton/triggers_austrian.lua")
+AddTrigger("mcz-3328-1853", -- Source: "Minister-Conferenz-Kanzlei MCZ 3328/1853".
+	function()
+		if (SyncRand(10) ~= 0) then -- 10% chance this will trigger every time it is checked (and 10% for each player it is checked for, for a chance of 1% for a player that matches the conditions
+			return false
+		end
+		for i=0,(PlayerMax - 2) do
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and SyncRand(10) == 0 and GetPlayerData(i, "RaceName") == "teuton" and CheckDependency(i, "unit-road") and GetPlayerData(i, "Allow", "upgrade-deity-christian-god") == "R" and GetPlayerData(i, "UnitTypesCount", "unit-teuton-priest") >= 1 and GetPlayerData(i, "Resources", "copper") >= 500 and GetPlayerData(i, "HasSettlement", "Agram")) then
+				trigger_player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function()
+		CallDialogue("mcz-3328-1853", trigger_player)
+		return false
+	end
+)

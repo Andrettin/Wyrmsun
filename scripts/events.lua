@@ -306,6 +306,50 @@ function ProcessEventString(event_string)
 	if (string.find(event_string, "TRIGGER_HERO") ~= nil) then
 		event_string = string.gsub(event_string, "TRIGGER_HERO", GetCharacterData(trigger_hero, "Name"))
 	end
+	
+	if (string.find(event_string, "HEAD_OF_STATE_TITLE") ~= nil) then
+		event_string = string.gsub(event_string, "HEAD_OF_STATE_TITLE", GetPlayerData(trigger_player, "CharacterTitle", "head-of-state", "male"))
+	end
+
+	if (string.find(event_string, "HEAD_OF_GOVERNMENT_TITLE") ~= nil) then
+		event_string = string.gsub(event_string, "HEAD_OF_GOVERNMENT_TITLE", GetPlayerData(trigger_player, "CharacterTitle", "head-of-government", "male"))
+	end
+
+	if (string.find(event_string, "EDUCATION_MINISTER_TITLE") ~= nil) then
+		event_string = string.gsub(event_string, "EDUCATION_MINISTER_TITLE", GetPlayerData(trigger_player, "CharacterTitle", "education-minister", "male"))
+	end
+
+	if (string.find(event_string, "FINANCE_MINISTER_TITLE") ~= nil) then
+		event_string = string.gsub(event_string, "FINANCE_MINISTER_TITLE", GetPlayerData(trigger_player, "CharacterTitle", "finance-minister", "male"))
+	end
+
+	if (string.find(event_string, "FOREIGN_MINISTER_TITLE") ~= nil) then
+		event_string = string.gsub(event_string, "FOREIGN_MINISTER_TITLE", GetPlayerData(trigger_player, "CharacterTitle", "foreign-minister", "male"))
+	end
+
+	if (string.find(event_string, "INTELLIGENCE_MINISTER_TITLE") ~= nil) then
+		event_string = string.gsub(event_string, "INTELLIGENCE_MINISTER_TITLE", GetPlayerData(trigger_player, "CharacterTitle", "intelligence-minister", "male"))
+	end
+
+	if (string.find(event_string, "INTERIOR_MINISTER_TITLE") ~= nil) then
+		event_string = string.gsub(event_string, "INTERIOR_MINISTER_TITLE", GetPlayerData(trigger_player, "CharacterTitle", "interior-minister", "male"))
+	end
+
+	if (string.find(event_string, "JUSTICE_MINISTER_TITLE") ~= nil) then
+		event_string = string.gsub(event_string, "JUSTICE_MINISTER_TITLE", GetPlayerData(trigger_player, "CharacterTitle", "justice-minister", "male"))
+	end
+
+	if (string.find(event_string, "WAR_MINISTER_TITLE") ~= nil) then
+		event_string = string.gsub(event_string, "WAR_MINISTER_TITLE", GetPlayerData(trigger_player, "CharacterTitle", "war-minister", "male"))
+	end
+
+	if (string.find(event_string, "GOVERNOR_TITLE") ~= nil) then
+		event_string = string.gsub(event_string, "GOVERNOR_TITLE", GetPlayerData(trigger_player, "CharacterTitle", "governor", "male"))
+	end
+
+	if (string.find(event_string, "MAYOR_TITLE") ~= nil) then
+		event_string = string.gsub(event_string, "MAYOR_TITLE", GetPlayerData(trigger_player, "CharacterTitle", "mayor", "male"))
+	end
 
 	return event_string
 end
