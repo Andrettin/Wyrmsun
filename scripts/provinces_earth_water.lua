@@ -463,7 +463,7 @@ DefineProvince("English Channel", {
 		"latin", "British Ocean"
 	},
 	FactionCulturalNames = {
-		"anglo-saxon", "england", "English Channel",
+		"english", "england", "English Channel",
 		"anglo-saxon", "angle-tribe", "English Channel"
 	},
 	Tiles = {

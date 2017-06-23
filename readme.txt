@@ -67,6 +67,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Factions
 - Forming Northumbria now requires that no other player have the Bernicia or Deira faction.
+- Anglo-Saxon factions can now form "Englaland", instead of England. England itself can be formed when higher technological knowledge has been obtained, and forming the faction changes personal names etc. to English (Anglo-Saxons use Old English).
 
 * Items
 - The tooltip for literary works now describes the effects of increasing their respective knowledge stat.

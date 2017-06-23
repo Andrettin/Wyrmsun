@@ -178,17 +178,9 @@ DefineButton( { Pos = 13, Level = 2, Icon = "icon-flag-cyan-lion-on-red",
 } )
 
 DefineButton( { Pos = 14, Level = 2, Icon = "icon-flag-cyan-lion-on-red",
-	Action = "research", Value = "upgrade-faction-england",
+	Action = "research", Value = "upgrade-faction-englaland",
 	Allowed = "check-single-research",
-	Key = "e", Hint = "Found ~!England", Popup = "popup-research",
-	Description = "Changes your faction to England",
-	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
-} )
-
-DefineButton( { Pos = 15, Level = 2, Icon = "icon-flag-old-austria",
-	Action = "research", Value = "upgrade-faction-scotland",
-	Allowed = "check-single-research",
-	Key = "c", Hint = "Found S~!cotland", Popup = "popup-research",
-	Description = "Changes your faction to Scotland",
+	Key = "e", Hint = "Found ~!Englaland", Popup = "popup-research",
+	Description = "Changes your faction to Englaland",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )

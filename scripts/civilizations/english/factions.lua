@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016-2017 by Andrettin
+--      (c) Copyright 2015-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,30 +25,33 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineWorldMapTile({467, 97}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"english", "england", "Glasgow"
-	}
+DefineFaction("england", {
+	Name = "England",
+	Civilization = "english",
+	Type = "polity",
+	Colors = {"red", "white"},
+	DefaultTier = "kingdom",
+	FactionUpgrade = "upgrade-faction-england",
+	Conditions = function(s)
+		for i=0,(PlayerMax - 2) do
+			if (
+				i ~= trigger_player
+				and GetPlayerData(i, "TotalNumUnitsConstructed") > 0
+				and (GetPlayerData(i, "RaceName") == "anglo-saxon" or GetPlayerData(i, "RaceName") == "english")
+				and GetPlayerData(i, "Faction") ~= "scotland"
+			) then
+				return false
+			end
+		end
+		return true
+	end
 })
 
-DefineWorldMapTile({469, 93}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"english", "england", "Dumfries"
-	}
-})
-
-DefineWorldMapTile({470, 87}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"english", "england", "Kirkwall"
-	}
-})
-
-DefineWorldMapTile({473, 93}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"english", "england", "Aberdeen"
-	}
+DefineFaction("scotland", {
+	Name = "Scotland",
+	Civilization = "english",
+	Type = "polity",
+	Colors = {"blue", "white"},
+	DefaultTier = "kingdom",
+	FactionUpgrade = "upgrade-faction-scotland"
 })

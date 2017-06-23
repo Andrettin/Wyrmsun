@@ -93,6 +93,7 @@ DefineUnitType("unit-teuton-worker", {
 		{
 			"variation-id", "brown-hair",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
+			"upgrade-forbidden", "upgrade-english-civilization",
 			"upgrade-forbidden", "upgrade-latin-civilization"
 		},
 		-- English type name for when owned by other civilizations (i.e. Latins)
@@ -157,6 +158,7 @@ DefineUnitType("unit-teuton-swordsman", {
 			"variation-id", "brown-hair",
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
+			"upgrade-forbidden", "upgrade-english-civilization",
 			"upgrade-forbidden", "upgrade-latin-civilization",
 			"weight", 4
 		},
@@ -166,6 +168,7 @@ DefineUnitType("unit-teuton-swordsman", {
 			"hair-color", "black",
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
+			"upgrade-forbidden", "upgrade-english-civilization",
 			"upgrade-forbidden", "upgrade-latin-civilization",
 			"weight", 2
 		},
@@ -175,6 +178,7 @@ DefineUnitType("unit-teuton-swordsman", {
 			"hair-color", "blond",
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
+			"upgrade-forbidden", "upgrade-english-civilization",
 			"upgrade-forbidden", "upgrade-latin-civilization",
 			"weight", 4
 		},
@@ -184,6 +188,7 @@ DefineUnitType("unit-teuton-swordsman", {
 			"hair-color", "red",
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
+			"upgrade-forbidden", "upgrade-english-civilization",
 			"upgrade-forbidden", "upgrade-latin-civilization",
 			"weight", 4
 		},
@@ -367,6 +372,7 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 			"variation-id", "brown-hair",
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
+			"upgrade-forbidden", "upgrade-english-civilization",
 			"upgrade-forbidden", "upgrade-latin-civilization",
 			"weight", 4
 		},
@@ -376,6 +382,7 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 			"hair-color", "black",
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
+			"upgrade-forbidden", "upgrade-english-civilization",
 			"upgrade-forbidden", "upgrade-latin-civilization",
 			"weight", 2
 		},
@@ -385,6 +392,7 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 			"hair-color", "blond",
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
+			"upgrade-forbidden", "upgrade-english-civilization",
 			"upgrade-forbidden", "upgrade-latin-civilization",
 			"weight", 4
 		},
@@ -394,6 +402,7 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 			"hair-color", "red",
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
+			"upgrade-forbidden", "upgrade-english-civilization",
 			"upgrade-forbidden", "upgrade-latin-civilization",
 			"weight", 4
 		},
@@ -579,6 +588,7 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 			"variation-id", "brown-hair",
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
+			"upgrade-forbidden", "upgrade-english-civilization",
 			"upgrade-forbidden", "upgrade-latin-civilization",
 			"weight", 4
 		},
@@ -588,6 +598,7 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 			"hair-color", "black",
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
+			"upgrade-forbidden", "upgrade-english-civilization",
 			"upgrade-forbidden", "upgrade-latin-civilization",
 			"weight", 2
 		},
@@ -597,6 +608,7 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 			"hair-color", "blond",
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
+			"upgrade-forbidden", "upgrade-english-civilization",
 			"upgrade-forbidden", "upgrade-latin-civilization",
 			"weight", 4
 		},
@@ -606,6 +618,7 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 			"hair-color", "red",
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
+			"upgrade-forbidden", "upgrade-english-civilization",
 			"upgrade-forbidden", "upgrade-latin-civilization",
 			"weight", 4
 		},
@@ -903,6 +916,7 @@ DefineUnitType("unit-teuton-archer", {
 		{
 			"variation-id", "blond-hair",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
+			"upgrade-forbidden", "upgrade-english-civilization",
 			"upgrade-forbidden", "upgrade-latin-civilization"
 		},
 		-- English type name for when owned by another civilizations (i.e. Latins)
@@ -959,6 +973,7 @@ DefineUnitType("unit-teuton-ritter", {
 		{
 			"variation-id", "brown-hair",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
+			"upgrade-forbidden", "upgrade-english-civilization",
 			"upgrade-forbidden", "upgrade-latin-civilization"
 		},
 		-- English type name for when owned by another civilizations (i.e. Latins)
@@ -1012,6 +1027,7 @@ DefineUnitType("unit-teuton-knight-lord", {
 		{
 			"variation-id", "brown-hair",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
+			"upgrade-forbidden", "upgrade-english-civilization",
 			"upgrade-forbidden", "upgrade-latin-civilization"
 		},
 		-- English type name for when owned by another civilizations (i.e. Latins)
@@ -1068,6 +1084,7 @@ DefineUnitType("unit-teuton-priest", {
 			"type-name", "Gudjan",
 			"upgrade-forbidden", "upgrade-deity-christian-god",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
+			"upgrade-forbidden", "upgrade-english-civilization",
 			"upgrade-forbidden", "upgrade-latin-civilization"
 		},
 		-- English type name
@@ -1129,6 +1146,7 @@ DefineUnitType("unit-teuton-kogge", {
 		{
 			"variation-id", "kogge",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
+			"upgrade-forbidden", "upgrade-english-civilization",
 			"upgrade-forbidden", "upgrade-latin-civilization"
 		},
 		-- English type name for when owned by other civilizations (i.e. Latins)
@@ -1171,7 +1189,8 @@ DefineUnitType("unit-teuton-town-hall", {
 		{
 			"variation-id", "town-hall",
 			"upgrade-required", "upgrade-teuton-masonry",
-			"upgrade-forbidden", "upgrade-anglo-saxon-civilization"
+			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
+			"upgrade-forbidden", "upgrade-english-civilization"
 		},
 		-- English type name for when owned by other civilizations
 		{
@@ -1204,6 +1223,7 @@ DefineUnitType("unit-teuton-stronghold", {
 		{
 			"variation-id", "stronghold",
 			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
+			"upgrade-forbidden", "upgrade-english-civilization",
 			"upgrade-forbidden", "upgrade-latin-civilization"
 		},
 		-- English type name for when owned by other civilizations (i.e. Latins)

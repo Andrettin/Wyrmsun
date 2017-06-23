@@ -1093,3 +1093,10 @@ DefineDependency("upgrade-faction-wessex",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
+DefineDependency("upgrade-faction-england",
+	{"upgrade-teuton-coinage", "upgrade-engineering", "upgrade-deity-christian-god"}
+)
+
+DefineDependency("upgrade-faction-scotland",
+	{"upgrade-teuton-coinage", "upgrade-engineering", "upgrade-deity-christian-god"}
+)

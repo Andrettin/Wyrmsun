@@ -1735,6 +1735,9 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 			if ((GetCurrentTileset() == "cave" or GetCurrentTileset() == "swamp" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("dwarf")) > 0) then
 				table.insert(possible_civilizations, "dwarf")
 			end
+			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("english")) > 0 and TechLevel[i + 1] == "Agrarian (Iron)") then -- allow germanic humans in elven forests since there is no elven civilization yet
+				table.insert(possible_civilizations, "english")
+			end
 			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("frankish")) > 0 and TechLevel[i + 1] == "Agrarian (Iron)") then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "frankish")
 			end
@@ -5901,7 +5904,7 @@ function GetTerrainCivilizations(terrain)
 	if (terrain == "dry-mud" or terrain == "cave-floor") then
 		return {"dwarf", "gnome", "goblin", "kobold", "ettin"}
 	elseif (terrain == "dirt" or terrain == "grass") then
-		return {"anglo-saxon", "frankish", "germanic", "suebi", "teuton"}
+		return {"anglo-saxon", "english", "frankish", "germanic", "suebi", "teuton"}
 	end
 
 	return {}

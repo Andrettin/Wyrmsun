@@ -82,10 +82,10 @@ DefineUpgrade("upgrade-faction-east-anglia", {
 	RequirementsString = "Writing and Masonry"
 })
 
-DefineUpgrade("upgrade-faction-england", {
-	Name = "England",
+DefineUpgrade("upgrade-faction-englaland", {
+	Name = "Englaland",
 	EffectsString = "+2 Damage for Schutzes",
-	RequirementsString = "No other Anglo-Saxon faction exists"
+	RequirementsString = "No other Anglo-Saxon or English faction exists"
 })
 
 DefineUpgrade("upgrade-faction-essex", {
@@ -128,11 +128,6 @@ DefineUpgrade("upgrade-faction-northumbria", {
 	Name = "Northumbria",
 	EffectsString = "+2 Damage for Kriegers",
 	RequirementsString = "Temple/Church, no other player is Bernicia or Deira"
-})
-
-DefineUpgrade("upgrade-faction-scotland", {
-	Name = "Scotland",
-	EffectsString = "+2 Damage for Kriegers"
 })
 
 DefineUpgrade("upgrade-faction-sussex", {
@@ -249,11 +244,11 @@ DefineModifier("upgrade-faction-east-anglia",
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
-DefineModifier("upgrade-faction-england",
-	{"change-faction-to", "england"}
+DefineModifier("upgrade-faction-englaland",
+	{"change-faction-to", "englaland"}
 )
 
-DefineModifier("upgrade-faction-england",
+DefineModifier("upgrade-faction-englaland",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-archer"}
@@ -333,16 +328,6 @@ DefineModifier("upgrade-faction-northumbria",
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
-DefineModifier("upgrade-faction-scotland",
-	{"change-faction-to", "scotland"}
-)
-
-DefineModifier("upgrade-faction-scotland",
-	{"BasicDamage", 2},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
 DefineModifier("upgrade-faction-sussex",
 	{"change-faction-to", "sussex"}
 )
@@ -388,7 +373,7 @@ DefineDependency("upgrade-faction-northumbria",
 	{"unit-teuton-temple"}
 )
 
-DefinePredependency("upgrade-faction-england",
+DefinePredependency("upgrade-faction-englaland",
 	{"upgrade-faction-bernicia"},
 	"or", {"upgrade-faction-deira"},
 	"or", {"upgrade-faction-east-anglia"},
@@ -400,10 +385,4 @@ DefinePredependency("upgrade-faction-england",
 	"or", {"upgrade-faction-northumbria"},
 	"or", {"upgrade-faction-sussex"},
 	"or", {"upgrade-faction-wessex"}
-)
-
-DefinePredependency("upgrade-faction-scotland",
-	{"upgrade-faction-bernicia"},
-	"or", {"upgrade-faction-deira"},
-	"or", {"upgrade-faction-northumbria"}
 )

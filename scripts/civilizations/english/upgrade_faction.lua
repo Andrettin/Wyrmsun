@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016-2017 by Andrettin
+--      (c) Copyright 2014-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,30 +25,43 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineWorldMapTile({467, 97}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"english", "england", "Glasgow"
-	}
+DefineUpgrade("upgrade-faction-england", {
+	Name = "England",
+	EffectsString = "+2 Damage for Schutzes",
+	RequirementsString = "Coinage, Engineering and Christianity, no other Anglo-Saxon or English faction exists"
 })
 
-DefineWorldMapTile({469, 93}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"english", "england", "Dumfries"
-	}
+DefineUpgrade("upgrade-faction-scotland", {
+	Name = "Scotland",
+	EffectsString = "+2 Damage for Kriegers",
+	RequirementsString = "Coinage, Engineering and Christianity"
 })
 
-DefineWorldMapTile({470, 87}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"english", "england", "Kirkwall"
-	}
-})
+DefineModifier("upgrade-faction-england",
+	{"change-faction-to", "england"}
+)
 
-DefineWorldMapTile({473, 93}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"english", "england", "Aberdeen"
-	}
-})
+DefineModifier("upgrade-faction-england",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-archer"}
+)
+
+DefineModifier("upgrade-faction-scotland",
+	{"change-faction-to", "scotland"}
+)
+
+DefineModifier("upgrade-faction-scotland",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
+)
+
+DefinePredependency("upgrade-faction-england",
+	{"upgrade-faction-englaland"}
+)
+
+DefinePredependency("upgrade-faction-scotland",
+	{"upgrade-faction-bernicia"},
+	"or", {"upgrade-faction-northumbria"}
+)

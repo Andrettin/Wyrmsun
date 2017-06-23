@@ -1194,7 +1194,7 @@ DefineCharacter("nicolas-breakspear", { -- Source: Snorri Sturlson, "Heimskringl
 	ExtraName = "Breakspear", -- I assume this isn't his family name, but a nickname or something of the sort
 	Gender = "male",
 	Type = "unit-teuton-priest",
-	Civilization = "anglo-saxon",
+	Civilization = "anglo-saxon", -- English?
 	Faction = "england",
 	Deities = {"christian-god"},
 	Date = 1154, -- elected Pope

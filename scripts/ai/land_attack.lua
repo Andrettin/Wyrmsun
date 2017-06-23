@@ -153,7 +153,7 @@ local land_funcs = {
 	function() return AiWait(GetAiUnitType("writing")) end,	
 
 	function() -- certain civilizations acquire serfdom when it becomes available
-		if (AiGetRace() == "teuton" or AiGetRace() == "anglo-saxon" or AiGetRace() == "frankish" or AiGetRace() == "suebi") then
+		if (AiGetRace() == "teuton" or AiGetRace() == "anglo-saxon" or AiGetRace() == "english" or AiGetRace() == "frankish" or AiGetRace() == "suebi") then
 			return AiResearch("upgrade-serfdom");
 		end
 		return false;

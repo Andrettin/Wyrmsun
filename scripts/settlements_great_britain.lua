@@ -31,7 +31,7 @@ DefineSettlement("amesbury", {
 	Position = {3798, 883},
 	CulturalNames = {
 		"anglo-saxon", "Ambresbyrig", -- Old English name of Amesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
---		"english", "Amesbury"
+		"english", "Amesbury"
 	},
 	HistoricalOwners = {
 		802, "wessex", -- Amesbury was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
@@ -49,7 +49,7 @@ DefineSettlement("athelney", {
 	Position = {3774, 887},
 	CulturalNames = {
 		"anglo-saxon", "Aethelingaig", -- "Æthelingaig"; Old English name of Athelney; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
---		"english", "Athelney"
+		"english", "Athelney"
 	},
 	HistoricalOwners = {
 		802, "wessex", -- Athelney was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
@@ -67,7 +67,7 @@ DefineSettlement("bamburgh", {
 	Position = {3801, 783},
 	CulturalNames = {
 		"anglo-saxon", "Bebbanburg", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
---		"english", "Bamburgh" -- as given by Stenton; Shepherd gives it as "Bamborough" instead; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
+		"english", "Bamburgh" -- as given by Stenton; Shepherd gives it as "Bamborough" instead; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 	},
 	HistoricalOwners = {
 		802, "northumbria", -- Bamborough was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
@@ -87,7 +87,7 @@ DefineSettlement("bath", {
 		"anglo-saxon", "Bathum", -- Old English name of Bath; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"briton", "Aquae Solis",
 		"celt", "Aquae Solis",
---		"english", "Bath",
+		"english", "Bath",
 		"latin", "Aquae Solis" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
@@ -108,7 +108,7 @@ DefineSettlement("bitterne", {
 	CulturalNames = {
 		"briton", "Clausentum",
 		"celt", "Clausentum",
---		"english", "Bitterne",
+		"english", "Bitterne",
 		"latin", "Clausentum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
@@ -129,7 +129,7 @@ DefineSettlement("brancaster", {
 	CulturalNames = {
 		"briton", "Branodunum",
 		"celt", "Branodunum",
---		"english", "Brancaster",
+		"english", "Brancaster",
 		"latin", "Branodunum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
@@ -151,7 +151,7 @@ DefineSettlement("cambridge", {
 		"anglo-saxon", "Grantanbrycg", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"briton", "Camboricum",
 		"celt", "Camboricum",
---		"english", "Cambridge",
+		"english", "Cambridge",
 		"latin", "Camboricum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
@@ -173,7 +173,7 @@ DefineSettlement("canterbury", {
 	CulturalNames = {
 		"anglo-saxon", "Cantwaraburg", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"briton", "Durovernum",
---		"english", "Canterbury",
+		"english", "Canterbury",
 		"celt", "Durovernum",
 		"latin", "Durovernum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
@@ -198,7 +198,7 @@ DefineSettlement("carlisle", {
 		"anglo-saxon", "Luel", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"briton", "Luguvallium",
 		"celt", "Luguvallium",
---		"english", "Carlisle",
+		"english", "Carlisle",
 		"latin", "Luguvallium" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
@@ -220,7 +220,7 @@ DefineSettlement("castor-near-norwich", {
 	CulturalNames = {
 		"briton", "Venta Icenorum",
 		"celt", "Venta Icenorum",
---		"english", "Castor",
+		"english", "Castor",
 		"latin", "Venta Icenorum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
@@ -242,7 +242,7 @@ DefineSettlement("chester", {
 		"anglo-saxon", "Legaceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"briton", "Deva",
 		"celt", "Deva",
---		"english", "Chester", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+		"english", "Chester", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 		"latin", "Deva" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
@@ -265,7 +265,7 @@ DefineSettlement("chichester", {
 		"anglo-saxon", "Cisseceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"briton", "Regnum",
 		"celt", "Regnum",
---		"english", "Chichester",
+		"english", "Chichester",
 		"latin", "Regnum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
@@ -287,7 +287,7 @@ DefineSettlement("cirencester", {
 		"anglo-saxon", "Cirenceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"briton", "Corinium",
 		"celt", "Corinium",
---		"english", "Cirencester",
+		"english", "Cirencester",
 		"latin", "Corinium" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
@@ -309,7 +309,7 @@ DefineSettlement("colchester", {
 		"anglo-saxon", "Colneceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"briton", "Camulodunum",
 		"celt", "Camulodunum",
---		"english", "Colchester",
+		"english", "Colchester",
 		"latin", "Camulodunum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
@@ -331,7 +331,7 @@ DefineSettlement("dorchester", {
 		"anglo-saxon", "Dornwaraceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"briton", "Durnovaria",
 		"celt", "Durnovaria",
---		"english", "Dorchester",
+		"english", "Dorchester",
 		"latin", "Durnovaria" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
@@ -353,7 +353,7 @@ DefineSettlement("dover", {
 		"anglo-saxon", "Dofras", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"briton", "Dubrae",
 		"celt", "Dubrae",
---		"english", "Dover", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+		"english", "Dover", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 		"latin", "Dubrae" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
@@ -373,7 +373,7 @@ DefineSettlement("durham", {
 	Position = {3806, 802},
 	CulturalNames = {
 		"anglo-saxon", "Dunholm", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
---		"english", "Durham" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+		"english", "Durham" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	},
 	HistoricalOwners = {
 		802, "northumbria", -- Durham was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
@@ -411,7 +411,7 @@ DefineSettlement("edinburgh", {
 	MapTemplate = "earth",
 	Position = {3767, 774},
 	CulturalNames = {
---		"english", "Edinburgh"
+		"english", "Edinburgh"
 	},
 	HistoricalOwners = {
 		802, "northumbria", -- Edinburgh was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
@@ -433,7 +433,7 @@ DefineSettlement("exeter", {
 		"anglo-saxon", "Escanceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"briton", "Isca Dumnoniorum",
 		"celt", "Isca Dumnoniorum",
---		"english", "Exeter",
+		"english", "Exeter",
 		"latin", "Isca Dumnoniorum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
@@ -455,7 +455,7 @@ DefineSettlement("gloucester", {
 		"anglo-saxon", "Gleawanceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"briton", "Glevum",
 		"celt", "Glevum",
---		"english", "Gloucester",
+		"english", "Gloucester",
 		"latin", "Glevum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
@@ -475,7 +475,7 @@ DefineSettlement("goodmanham", {
 	Position = {3825, 820},
 	CulturalNames = {
 		"anglo-saxon", "Godmunddingaham", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
---		"english", "Goodmanham"
+		"english", "Goodmanham"
 	},
 	HistoricalOwners = {
 		802, "northumbria", -- Godmundingham was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
@@ -493,7 +493,7 @@ DefineSettlement("hastings", {
 	Position = {3859, 888},
 	CulturalNames = {
 		"anglo-saxon", "Haestingaceaster", -- "Hæstingaceaster"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
---		"english", "Hastings"
+		"english", "Hastings"
 	},
 	HistoricalOwners = {
 		802, "sussex", -- Hastings was a part of Sussex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
@@ -510,7 +510,7 @@ DefineSettlement("heathfield", {
 	MapTemplate = "earth",
 	Position = {3821, 827},
 	CulturalNames = {
---		"english", "Heathfield"
+		"english", "Heathfield"
 	},
 	HistoricalOwners = {
 		802, "northumbria", -- Heathfield was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
@@ -528,7 +528,7 @@ DefineSettlement("jarrow", {
 	Position = {3807, 797},
 	CulturalNames = {
 		"anglo-saxon", "Gyruum", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
---		"english", "Jarrow"
+		"english", "Jarrow"
 	},
 	HistoricalOwners = {
 		802, "northumbria", -- Jarrow was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
@@ -548,7 +548,7 @@ DefineSettlement("leicester", {
 		"anglo-saxon", "Ligoraceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"briton", "Ratae",
 		"celt", "Ratae",
---		"english", "Leicester",
+		"english", "Leicester",
 		"latin", "Ratae" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
@@ -571,7 +571,7 @@ DefineSettlement("lincoln", {
 		"anglo-saxon", "Lindcylene", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"briton", "Lincoln",
 		"celt", "Lincoln",
---		"english", "Lincoln",
+		"english", "Lincoln",
 		"latin", "Lincoln" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
@@ -592,7 +592,7 @@ DefineSettlement("leeds", {
 	Position = {3804, 822},
 	CulturalNames = {
 		"anglo-saxon", "Loidis", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
---		"english", "Leeds"
+		"english", "Leeds"
 	},
 	HistoricalOwners = {
 		802, "northumbria", -- Loidis was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
@@ -613,7 +613,7 @@ DefineSettlement("london", {
 		"anglo-saxon", "Lunden", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"briton", "Londinium",
 		"celt", "Londinium",
---		"english", "London",
+		"english", "London",
 		"latin", "Londinium" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
@@ -637,7 +637,7 @@ DefineSettlement("old-sarum", {
 	CulturalNames = {
 		"briton", "Sorbiodunum",
 		"celt", "Sorbiodunum",
---		"english", "Old Sarum",
+		"english", "Old Sarum",
 		"latin", "Sorbiodunum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
@@ -659,7 +659,7 @@ DefineSettlement("pevensey", {
 		"anglo-saxon", "Pefenesea", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 		"briton", "Anderida",
 		"celt", "Anderida",
---		"english", "Pevensey",
+		"english", "Pevensey",
 		"latin", "Anderida" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
@@ -682,7 +682,7 @@ DefineSettlement("reculver", {
 		"anglo-saxon", "Reculf", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 		"briton", "Regulbium",
 		"celt", "Regulbium",
---		"english", "Reculver",
+		"english", "Reculver",
 		"latin", "Regulbium" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
@@ -705,7 +705,7 @@ DefineSettlement("richborough", {
 	CulturalNames = {
 		"briton", "Rutupiae",
 		"celt", "Rutupiae",
---		"english", "Richborough",
+		"english", "Richborough",
 		"latin", "Rutupiae" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
@@ -727,7 +727,7 @@ DefineSettlement("rochester", {
 		"anglo-saxon", "Hrofesceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"briton", "Durobrivae",
 		"celt", "Durobrivae",
---		"english", "Rochester",
+		"english", "Rochester",
 		"latin", "Durobrivae" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
@@ -750,7 +750,7 @@ DefineSettlement("saint-albans", {
 		"anglo-saxon", "Sanctae Albanes", -- "Sanctæ Albanes"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 		"briton", "Verulamium",
 		"celt", "Verulamium",
---		"english", "St. Albans",
+		"english", "St. Albans",
 		"latin", "Verulamium" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
@@ -773,7 +773,7 @@ DefineSettlement("salisbury", {
 		"anglo-saxon", "Searuburh", -- Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 115.
 		"briton", "Sorbidunom", -- Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 115.
 		"celt", "Sorbidunom",
---		"english", "Salisbury" -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"english", "Salisbury" -- Source: "Philip's International School Atlas", 2006, p. 64.
 	},
 	HistoricalOwners = {
 		802, "wessex", -- Salisbury was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
@@ -792,7 +792,7 @@ DefineSettlement("silchester", {
 	CulturalNames = {
 		"briton", "Calleva",
 		"celt", "Calleva",
---		"english", "Silchester",
+		"english", "Silchester",
 		"latin", "Calleva" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
@@ -833,7 +833,7 @@ DefineSettlement("speen", {
 	CulturalNames = {
 		"briton", "Spinae",
 		"celt", "Spinae",
---		"english", "Speen",
+		"english", "Speen",
 		"latin", "Spinae" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
@@ -872,7 +872,7 @@ DefineSettlement("wearmouth", {
 	MapTemplate = "earth",
 	Position = {3808, 799},
 	CulturalNames = {
---		"english", "Wearmouth"
+		"english", "Wearmouth"
 	},
 	HistoricalOwners = {
 		802, "northumbria", -- Wearmouth was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
@@ -890,7 +890,7 @@ DefineSettlement("whitby", {
 	Position = {3825, 808},
 	CulturalNames = {
 		"anglo-saxon", "Streonaeshalch", -- "Streonæshalch"; on page 123 Stenton gives "Streoneshalh" instead; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
---		"english", "Whitby"
+		"english", "Whitby"
 	},
 	HistoricalOwners = {
 		663, "northumbria", -- Streoneshalh was a part of Northumbria in 663 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 122-123.
@@ -910,7 +910,7 @@ DefineSettlement("winchester", {
 		"anglo-saxon", "Witanceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 734.
 		"briton", "Verita Belgarum",
 		"celt", "Verita Belgarum",
---		"english", "Winchester",
+		"english", "Winchester",
 		"latin", "Verita Belgarum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
@@ -931,7 +931,7 @@ DefineSettlement("winwaedsfield", {
 	Position = {3803, 820},
 	CulturalNames = {
 		"anglo-saxon", "Winwaedsfield",
---		"english", "Winwaedsfield"
+		"english", "Winwaedsfield"
 	},
 	HistoricalOwners = {
 		802, "northumbria", -- Winwaedsfield was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
@@ -951,7 +951,7 @@ DefineSettlement("york", {
 		"anglo-saxon", "Eoforwic", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"briton", "Eboracum",
 		"celt", "Eboracum",
---		"english", "York",
+		"english", "York",
 		"latin", "Eboracum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {

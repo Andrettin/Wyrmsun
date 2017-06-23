@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016-2017 by Andrettin
+--      (c) Copyright 2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,30 +25,16 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineWorldMapTile({467, 97}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"english", "england", "Glasgow"
-	}
+DefineCursor({
+	Name = "cursor-point",
+	Race = "english",
+	File = "teuton/ui/cursors/teuton_gauntlet.png",
+	HotSpot = {0, 0},
+	Size = {28, 32}
 })
 
-DefineWorldMapTile({469, 93}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"english", "england", "Dumfries"
-	}
-})
+UI.NormalFontColor = "white"
+UI.ReverseFontColor = "yellow"
 
-DefineWorldMapTile({470, 87}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"english", "england", "Kirkwall"
-	}
-})
-
-DefineWorldMapTile({473, 93}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"english", "england", "Aberdeen"
-	}
-})
+UI.MenuButton.Style = FindButtonStyle("main-germanic")
+UI.NetworkDiplomacyButton.Style = FindButtonStyle("main-germanic")

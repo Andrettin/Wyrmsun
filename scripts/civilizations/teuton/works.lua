@@ -75,20 +75,17 @@ DefineDependency("upgrade-work-austria-and-her-future",
 DefineDependency("upgrade-work-hildebrandslied",
 	{"upgrade-teuton-civilization"},
 	"or", {"upgrade-suebi-civilization"},
-	"or", {"upgrade-anglo-saxon-civilization"},
 	"or", {"upgrade-frankish-civilization"}
 )
 
 DefineDependency("upgrade-work-merseburg-charm-1",
 	{"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-suebi-civilization", "unit-teuton-temple"},
-	"or", {"upgrade-anglo-saxon-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-frankish-civilization", "unit-teuton-temple"}
 )
 
 DefineDependency("upgrade-work-merseburg-charm-2",
 	{"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-suebi-civilization", "unit-teuton-temple"},
-	"or", {"upgrade-anglo-saxon-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-frankish-civilization", "unit-teuton-temple"}
 )

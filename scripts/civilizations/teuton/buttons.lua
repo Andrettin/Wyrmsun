@@ -62,7 +62,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-3",
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-teuton-coinage",
 	Action = "harvest",
-	Allowed = "check-upgrade-or", AllowArg = {"upgrade-germanic-civilization", "upgrade-anglo-saxon-civilization", "upgrade-frankish-civilization", "upgrade-suebi-civilization", "upgrade-teuton-civilization", "upgrade-celt-civilization"},
+	Allowed = "check-upgrade-or", AllowArg = {"upgrade-germanic-civilization", "upgrade-anglo-saxon-civilization", "upgrade-english-civilization", "upgrade-frankish-civilization", "upgrade-suebi-civilization", "upgrade-teuton-civilization", "upgrade-celt-civilization"},
 	Key = "t", Hint = "~!Trade", Popup = "popup-commands",
 	Description = "Trade with foreign markets",
 	ForUnit = {
@@ -120,6 +120,13 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-teuton-town-hall",
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-teuton-town-hall",
 	Action = "build", Value = "unit-teuton-town-hall",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-masonry", "upgrade-anglo-saxon-civilization"},
+	Key = "h", Hint = "Build Town ~!Hall", Popup = "popup-building",
+	ForUnit = {"unit-teuton-worker"}
+})
+
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-teuton-town-hall",
+	Action = "build", Value = "unit-teuton-town-hall",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-masonry", "upgrade-english-civilization"},
 	Key = "h", Hint = "Build Town ~!Hall", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })

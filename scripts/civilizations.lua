@@ -1258,19 +1258,6 @@ DefineCivilization("elf", {
 	}
 })
 
---[[
-DefineCivilization("english", { -- information for later use
-	Display = "English",
-	Visible = true,
-	Species = "human",
-	ParentCivilization = "teuton",
-	Language = "english",
-	Adjective = "English",
-	DefaultColor = "red",
-	DevelopsFrom = {"teuton"}
-})
---]]
-
 DefineCivilization("ettin", {
 	Display = "Ettin",
 	Visible = true,
@@ -1890,6 +1877,114 @@ DefineCivilization("anglo-saxon", {
 	UnitClassNames = {
 		"farm", "Wedone", -- Old English field-name; Wedone was near the location of Damerham; the first part of the name is formed by a variant of the Old English word "weoh"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
 		"farm", "Weoland" -- Old English field-name; Weoland was near the location of Wootton Bassett; the first part of the name is formed by a variant of the Old English word "weoh"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
+	}
+})
+
+DefineCivilization("english", {
+	Display = "English",
+	Visible = true,
+	Species = "human",
+	Language = "english",
+	ParentCivilization = "anglo-saxon",
+	Adjective = "English",
+	DefaultColor = "red",
+	CivilizationUpgrade = "upgrade-english-civilization",
+	DevelopsFrom = {"anglo-saxon"},
+	UnitSounds = {
+		"selected", "basic-english-voices-selected-group",
+		"acknowledge", "basic-english-voices-acknowledge",
+		"ready", "basic-english-voices-ready",
+		"help", "basic-english-voices-help",
+		"help-town", "basic-english-voices-help-town"
+	},
+	PersonalNames = {
+		"male", "Bernard",
+		"male", "Charles",
+		"male", "Francis",
+		"male", "Frederick",
+		"male", "Henry",
+		"male", "John",
+		"male", "Lewis",
+		"male", "Peter",
+		"male", "William"
+	},
+	SettlementNames = {
+		"Ashford", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Bedford", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Blackburn", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Blackpool", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Blackwall",
+		"Chatham",
+		"Chesterfield",
+		"Dartford",
+		"Dartmouth",
+		"Falmouth",
+		"Fishguard", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Gateshead", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Greenwich",
+		"Guildford", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Harrow on the Hill",
+		"Hempstead", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Holyhead",
+		"Hull", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+		"Huntingdon",
+		"Kingston",
+		"Kirkwall", -- in Scotland
+		"Liverpool", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Longford", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Maidstone", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Mansfield",
+		"Marshfield",
+		"Newbury", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Newcastle", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+		"Newhaven", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+		"Newport", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Newquay", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Northfleet",
+		"Norwich",
+		"Oldham",
+		"Oxford", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Plymouth",
+		"Portsmouth",
+		"Reading",
+		"Redditch", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Scarborough",
+		"Shrewsbury", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Stockport", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Stonehaven", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Swanscombe",
+		"Swansea", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Torbay", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Waterford",
+		"Wells",
+		"Westbury",
+		"Westport",
+		"Whitehaven", -- Source: "Philip's International School Atlas", 2006, p. 64.
+		"Wimbledon",
+		"Woodbridge",
+		"Woolwich",
+		"Wormshill",
+		"Yarmouth" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+	},
+	ProvinceNames = {
+		"Berkshire",
+		"Cheshire",
+		"Cornwall",
+		"Dorset",
+		"East Anglia",
+		"Essex",
+		"Hampshire",
+		"Lancashire",
+		"Middlesex",
+		"Norfolk",
+		"Northumberland",
+		"Portland", -- duchy
+		"Shropshire",
+		"Somerset",
+		"Suffolk",
+		"Sussex",
+		"Wessex",
+		"Wiltshire"
 	}
 })
 

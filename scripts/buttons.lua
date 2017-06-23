@@ -39,9 +39,9 @@
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-attack-ground",
 	Action = "attack-ground",
-	Key = "g", Hint = _("Attack ~!Ground"), Popup = "popup-commands",
+	Key = "g", Hint = "Attack ~!Ground", Popup = "popup-commands",
 	ForUnit = {
-		"unit-teuton-catapult", "germanic-group", "anglo-saxon-group", "frankish-group", "suebi-group", "teuton-group",
+		"unit-teuton-catapult", "germanic-group", "anglo-saxon-group", "english-group", "frankish-group", "suebi-group", "teuton-group",
 		"unit-dwarven-ballista", "dwarf-group",
 		"unit-goblin-war-machine", "goblin-group"
 	}
@@ -1262,6 +1262,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-red-potion",
 Load("scripts/civilizations/anglo_saxon/buttons.lua")
 Load("scripts/civilizations/celt/buttons.lua")
 Load("scripts/civilizations/dwarf/buttons.lua")
+Load("scripts/civilizations/english/buttons.lua")
 Load("scripts/civilizations/ettin/buttons.lua")
 Load("scripts/civilizations/frankish/buttons.lua")
 Load("scripts/civilizations/germanic/buttons.lua")

@@ -388,7 +388,7 @@ DefineDependency("unit-teuton-ritter",
 )
 
 DefinePredependency("unit-teuton-town-hall",
-	{"upgrade-teuton-civilization", "upgrade-latin-civilization", 0}, "or", {"upgrade-suebi-civilization", "upgrade-latin-civilization", 0}, "or", {"upgrade-frankish-civilization", "upgrade-latin-civilization", 0}, "or", {"upgrade-anglo-saxon-civilization", "upgrade-latin-civilization", 0}
+	{"upgrade-teuton-civilization", "upgrade-latin-civilization", 0}, "or", {"upgrade-suebi-civilization", "upgrade-latin-civilization", 0}, "or", {"upgrade-frankish-civilization", "upgrade-latin-civilization", 0}, "or", {"upgrade-anglo-saxon-civilization", "upgrade-latin-civilization", 0}, "or", {"upgrade-english-civilization", "upgrade-latin-civilization", 0}
 )
 
 DefinePredependency("unit-teuton-farm",

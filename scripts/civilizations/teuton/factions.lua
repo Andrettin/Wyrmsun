@@ -30,7 +30,6 @@ DefineFaction("saxon-tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
 	Colors = {"pink"},
-	DevelopsTo = {"saxony", "brandenburg", "essex", "wessex", "england", "prussia"},
 	FactionUpgrade = "upgrade-faction-saxon-tribe",
 	SettlementNames = {
 		"Hardego", -- one of the pagi in Eastphalia in 852; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 610.
@@ -44,8 +43,7 @@ DefineFaction("chauci-tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
 	Colors = {"black"},
-	FactionUpgrade = "upgrade-faction-chauci-tribe",
-	DevelopsTo = {"bremen"} -- same general area
+	FactionUpgrade = "upgrade-faction-chauci-tribe"
 })
 
 DefineFaction("cherusci-tribe", {
@@ -54,7 +52,6 @@ DefineFaction("cherusci-tribe", {
 	Type = "tribe",
 	Colors = {"teal"},
 	FactionUpgrade = "upgrade-faction-cherusci-tribe",
-	DevelopsTo = {"brunswick", "magdeburg"}, -- same general area
 	HistoricalFactionDerivations = {-264, "germanic", "ingaevone-tribe"}
 })
 
@@ -63,7 +60,6 @@ DefineFaction("frisian-tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
 	Colors = {"violet", "purple"}, -- change to a better one?
-	DevelopsTo = {"friesland", "netherlands"},
 	FactionUpgrade = "upgrade-faction-frisian-tribe"
 })
 
@@ -72,7 +68,6 @@ DefineFaction("lombard-tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
 	Colors = {"green"},
-	DevelopsTo = {"lombardy"},
 	FactionUpgrade = "upgrade-faction-lombard-tribe",
 	HistoricalFactionDerivations = {-264, "germanic", "istaevone-tribe"}
 })
@@ -82,7 +77,6 @@ DefineFaction("bavarian-tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
 	Colors = {"cyan", "white"},
-	DevelopsTo = {"bavaria", "austria", "carinthia"},
 	FactionUpgrade = "upgrade-faction-bavarian-tribe",
 	Description = "The early Bavarians were a West Germanic people who traced their origins to the Marcomanni. Their name means \"men of Bohemia\", an appelation they gained due to the Marcomanni having established themselves in Bohemia under Marbod. The Bavarians migrated south, giving their newly-settled land the name it has to this day, Bavaria."
 })
@@ -92,8 +86,7 @@ DefineFaction("teuton-tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
 	Colors = {"orange"},
-	FactionUpgrade = "upgrade-faction-teuton-tribe",
-	DevelopsTo = {"jutland"} -- same general area
+	FactionUpgrade = "upgrade-faction-teuton-tribe"
 })
 
 DefineFaction("varini-tribe", {
@@ -101,8 +94,7 @@ DefineFaction("varini-tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
 	Colors = {"brown"},
-	FactionUpgrade = "upgrade-faction-varini-tribe",
-	DevelopsTo = {"mecklenburg"} -- same general area
+	FactionUpgrade = "upgrade-faction-varini-tribe"
 })
 
 -- Teuton polities
@@ -117,7 +109,6 @@ DefineFaction("bavaria", {
 		"monarchy", "duchy", "Duchy",
 		"monarchy", "kingdom", "Kingdom"
 	},
-	DevelopsTo = {"holy-rome"}, -- Bavaria was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	FactionUpgrade = "upgrade-faction-bavaria",
 	HistoricalDiplomacyStates = {
 		784, "francia", "war", -- Bavaria revolted against Frankish rule under Tassilo in 784; Source: "Medieval Warfare V.2", 2013, p. 8.
@@ -135,8 +126,7 @@ DefineFaction("saxony", {
 	Titles = {
 		"monarchy", "duchy", "Duchy",
 		"monarchy", "kingdom", "Kingdom"
-	},
-	DevelopsTo = {"holy-rome"} -- Saxony was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	}
 })
 
 DefineFaction("brandenburg", {
@@ -152,8 +142,7 @@ DefineFaction("brandenburg", {
 	MinisterTitles = {
 		"head-of-state", "male", "monarchy", "duchy", "Margrave",
 		"head-of-state", "female", "monarchy", "duchy", "Margrave" -- correct?
-	},
-	DevelopsTo = {"prussia"} -- allow Prussia to be formed by a Brandenburg that expands to encompass it
+	}
 })
 
 DefineFaction("bremen", {
@@ -192,8 +181,7 @@ DefineFaction("franconia", { -- represents the German region, so it uses base Te
 	Type = "polity",
 	Colors = {"blue"},
 	DefaultTier = "duchy", -- Franconia was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-	FactionUpgrade = "upgrade-faction-franconia",
-	DevelopsTo = {"holy-rome", "francia"} -- Franconia was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	FactionUpgrade = "upgrade-faction-franconia"
 })
 
 DefineFaction("friesland", {
@@ -205,8 +193,7 @@ DefineFaction("friesland", {
 	FactionUpgrade = "upgrade-faction-friesland",
 	Titles = {
 		"monarchy", "barony", "Lordship"
-	},
-	DevelopsTo = {"netherlands"}
+	}
 })
 
 DefineFaction("hesse", {

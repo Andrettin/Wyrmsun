@@ -55,7 +55,7 @@ function panel(n)
 			GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/panel_4.png",
 			GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/panel_5.png"
 		}
-	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "anglo-saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
+	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "anglo-saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "english" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
 		panels = {
 			"germanic/ui/panel_1.png",
 			"germanic/ui/panel_2.png",
@@ -166,7 +166,7 @@ function AddMenuHelpers(menu)
 			g_bln = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-large-normal.png")
 			g_blp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-large-pressed.png")
 			g_blg = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-large-grayed.png")
-		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "anglo-saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
+		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "anglo-saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "english" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
 			g_bln = CGraphic:New("germanic/ui/widgets/button-large-normal.png")
 			g_blp = CGraphic:New("germanic/ui/widgets/button-large-pressed.png")
 			g_blg = CGraphic:New("germanic/ui/widgets/button-large-grayed.png")
@@ -200,7 +200,7 @@ function AddMenuHelpers(menu)
 			g_bsn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-small-normal.png")
 			g_bsp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-small-pressed.png")
 			g_bsg = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-small-grayed.png")
-		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "anglo-saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
+		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "anglo-saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "english" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
 			g_bsn = CGraphic:New("germanic/ui/widgets/button-small-normal.png")
 			g_bsp = CGraphic:New("germanic/ui/widgets/button-small-pressed.png")
 			g_bsg = CGraphic:New("germanic/ui/widgets/button-small-grayed.png")
@@ -240,7 +240,7 @@ function AddMenuHelpers(menu)
 		if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf" or GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
 			g_lslider_n = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/left-arrow-normal.png")
 			g_lslider_p = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/left-arrow-pressed.png")
-		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "anglo-saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
+		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "anglo-saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "english" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
 			g_lslider_n = CGraphic:New("germanic/ui/widgets/left-arrow-normal.png")
 			g_lslider_p = CGraphic:New("germanic/ui/widgets/left-arrow-pressed.png")
 		else
@@ -264,7 +264,7 @@ function AddMenuHelpers(menu)
 		if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf" or GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
 			g_marker = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/slider-knob.png")
 			g_slider = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/slider-bar-normal.png")
-		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "anglo-saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
+		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "anglo-saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "english" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
 			g_marker = CGraphic:New("germanic/ui/widgets/slider-knob.png")
 			g_slider = CGraphic:New("germanic/ui/widgets/slider-bar-normal.png")
 		else
@@ -292,7 +292,7 @@ function AddMenuHelpers(menu)
 		if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf" or GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
 			g_rslider_n = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/right-arrow-normal.png")
 			g_rslider_p = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/right-arrow-pressed.png")
-		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "anglo-saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
+		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "anglo-saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "english" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
 			g_rslider_n = CGraphic:New("germanic/ui/widgets/right-arrow-normal.png")
 			g_rslider_p = CGraphic:New("germanic/ui/widgets/right-arrow-pressed.png")
 		else
@@ -483,7 +483,7 @@ function AddMenuHelpers(menu)
 			g_checkbox_off2 = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/radio-pressed-unselected.png")
 			g_checkbox_on = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/radio-normal-selected.png")
 			g_checkbox_on2 = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/radio-pressed-selected.png")
-		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "anglo-saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
+		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "anglo-saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "english" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
 			g_checkbox_off = CGraphic:New("germanic/ui/widgets/radio-normal-unselected.png")
 			g_checkbox_off2 = CGraphic:New("germanic/ui/widgets/radio-pressed-unselected.png")
 			g_checkbox_on = CGraphic:New("germanic/ui/widgets/radio-normal-selected.png")
@@ -537,7 +537,7 @@ function AddMenuHelpers(menu)
 			g_radio_off2 = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/radio-pressed-unselected.png")
 			g_radio_on = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/radio-normal-selected.png")
 			g_radio_on2 = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/radio-pressed-selected.png")
-		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "anglo-saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
+		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "anglo-saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "english" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
 			g_radio_off = CGraphic:New("germanic/ui/widgets/radio-normal-unselected.png")
 			g_radio_off2 = CGraphic:New("germanic/ui/widgets/radio-pressed-unselected.png")
 			g_radio_on = CGraphic:New("germanic/ui/widgets/radio-normal-selected.png")
@@ -577,7 +577,7 @@ function AddMenuHelpers(menu)
 			g_bar = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/pulldown-bar-normal.png")
 			g_dslider_n = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/down-arrow-normal.png")
 			g_dslider_p = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/down-arrow-pressed.png")
-		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "anglo-saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
+		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "anglo-saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "english" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
 			g_bar = CGraphic:New("germanic/ui/widgets/pulldown-bar-normal.png")
 			g_dslider_n = CGraphic:New("germanic/ui/widgets/down-arrow-normal.png")
 			g_dslider_p = CGraphic:New("germanic/ui/widgets/down-arrow-pressed.png")
@@ -1318,6 +1318,7 @@ function RunSinglePlayerCustomGameMenu()
 					and (civilizations[i] ~= "frankish" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)")
 					and (civilizations[i] ~= "suebi" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)")
 					and (civilizations[i] ~= "teuton" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)")
+					and (civilizations[i] ~= "dutch" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)")
 					and (civilizations[i] ~= "english" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)")
 				) then
 					local playable_civilization_species = CapitalizeString(GetCivilizationData(civilizations[i], "Species"))

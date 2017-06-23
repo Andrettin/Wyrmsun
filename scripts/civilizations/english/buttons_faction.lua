@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016-2017 by Andrettin
+--      (c) Copyright 2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,30 +25,18 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineWorldMapTile({467, 97}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"english", "england", "Glasgow"
-	}
-})
+DefineButton( { Pos = 14, Level = 2, Icon = "icon-flag-cyan-lion-on-red",
+	Action = "research", Value = "upgrade-faction-england",
+	Allowed = "check-single-research",
+	Key = "e", Hint = "Found ~!England", Popup = "popup-research",
+	Description = "Changes your faction to England",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
 
-DefineWorldMapTile({469, 93}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"english", "england", "Dumfries"
-	}
-})
-
-DefineWorldMapTile({470, 87}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"english", "england", "Kirkwall"
-	}
-})
-
-DefineWorldMapTile({473, 93}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"english", "england", "Aberdeen"
-	}
-})
+DefineButton( { Pos = 15, Level = 2, Icon = "icon-flag-old-austria",
+	Action = "research", Value = "upgrade-faction-scotland",
+	Allowed = "check-single-research",
+	Key = "c", Hint = "Found S~!cotland", Popup = "popup-research",
+	Description = "Changes your faction to Scotland",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
