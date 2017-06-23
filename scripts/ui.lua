@@ -2240,6 +2240,19 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {KnowledgeWarfare = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Knowledge (Warfare): "), Variable = "KnowledgeWarfare", Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				-- Knowledge effects
+				{ 	Condition = {KnowledgeMagic = "only"},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {KnowledgeMagic = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = _("Every 5 levels in Knowledge (Magic) grant +1 Mana"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {KnowledgeWarfare = "only"},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {KnowledgeWarfare = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Every 5 levels in Knowledge (Warfare) grant +1 HP"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}

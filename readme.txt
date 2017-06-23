@@ -67,8 +67,12 @@ https://github.com/Andrettin/Wyrmsun
 * Factions
 - Forming Northumbria now requires that no other player have the Bernicia or Deira faction.
 
+* Items
+- The tooltip for literary works now describes the effects of increasing their respective knowledge stat.
+
 * Map Editor
 - Fixed an issue which prevented closing the player properties window by clicking "OK".
+- Fixed an issue which could potentially cause the map editor to freeze when loading a map.
 
 * Miscellaneous
 - Removed support for resolutions lower than 800x600, so that more content may be added to the interface later on (i.e. new icons at the top bar).
