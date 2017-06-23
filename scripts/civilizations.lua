@@ -1898,14 +1898,21 @@ DefineCivilization("english", {
 		"help-town", "basic-english-voices-help-town"
 	},
 	PersonalNames = {
+		"male", "Albert",
+		"male", "Anthony",
 		"male", "Bernard",
 		"male", "Charles",
+		"male", "Edward",
 		"male", "Francis",
 		"male", "Frederick",
+		"male", "George",
 		"male", "Henry",
 		"male", "John",
+		"male", "Joseph",
 		"male", "Lewis",
+		"male", "Paul",
 		"male", "Peter",
+		"male", "Theodore",
 		"male", "William"
 	},
 	SettlementNames = {
