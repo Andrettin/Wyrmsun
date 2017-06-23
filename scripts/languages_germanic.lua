@@ -280,6 +280,7 @@ DefineLanguage("english", {
 		"Escanceaster", "Exeter", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"Gleawanceaster", "Gloucester", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"Godmunddingaham", "Goodmanham", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"Grantanbrycg", "Cambridge", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"Gyruum", "Jarrow", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"Haestingaceaster", "Hastings", -- Hæstingaceaster -> Hastings; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"Hrofesceaster", "Rochester", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
@@ -290,6 +291,7 @@ DefineLanguage("english", {
 		"Lunden", "London", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"Pefenesea", "Pevensey", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 		"Reculf", "Reculver", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
+		"Sanctae Albanes", "St. Albans", -- Sanctæ Albanes -> St. Albans; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 		"Searoburg", "Salisbury", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 		"Searuburh", "Salisbury", -- Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 115.
 		"Witanceaster", "Winchester", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 734.

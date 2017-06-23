@@ -29,8 +29,7 @@
 
 DefineUpgrade("upgrade-celt-civilization", {
 	Name = _("Celt Civilization"),
-	Civilization = "celt",
-	Costs = {"time", 200}
+	Civilization = "celt"
 })
 
 DefinePredependency("unit-celt-farm",

@@ -1992,6 +1992,25 @@ DefineCivilization("english", {
 		"Sussex",
 		"Wessex",
 		"Wiltshire"
+	},
+	UnitClassNames = {
+		"farm", "Blackfield",
+		"farm", "Blackgarden",
+		"farm", "Brownfield",
+		"farm", "Browngarden",
+		"farm", "Greengarden",
+		"farm", "Greenfield",
+		"farm", "Lushfield",
+		"farm", "Newfield",
+		"farm", "Newgarden",
+		"farm", "Oldfield",
+		"farm", "Oldgarden",
+		"farm", "Redfield",
+		"farm", "Redgarden",
+		"farm", "Stonefield",
+		"farm", "Stonegarden",
+		"farm", "Whitefield",
+		"farm", "Whitegarden"
 	}
 })
 
