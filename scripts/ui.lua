@@ -1656,6 +1656,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {KnowledgeWarfare = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Knowledge (Warfare): "), Variable = "KnowledgeWarfare", Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {KnowledgeMining = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Knowledge (Mining): "), Variable = "KnowledgeMining", Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {DisembarkmentBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Disembarkment Bonus"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -2240,6 +2243,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {KnowledgeWarfare = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Knowledge (Warfare): "), Variable = "KnowledgeWarfare", Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {KnowledgeMining = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Knowledge (Mining): "), Variable = "KnowledgeMining", Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				-- Knowledge effects
 				{ 	Condition = {KnowledgeMagic = "only"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
@@ -2252,6 +2258,12 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {KnowledgeWarfare = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Every 5 levels in Knowledge (Warfare) grant +1 HP"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {KnowledgeMining = "only"},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {KnowledgeMining = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Every 25 levels in Knowledge (Mining) grant +1 Mining Bonus"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
