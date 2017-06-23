@@ -1348,12 +1348,12 @@ if (GrandStrategyYear >= 1560) then
 	SetProvinceOwner("Carniola", "teuton", "austria")
 	SetProvinceOwner("Istria", "teuton", "austria") -- the outer parts of Istria were owned by Venice, but the inner parts (including Trieste) were owned by Austria)
 	
-	SetProvinceOwner("Croatia", "teuton", "turkey")
-	SetProvinceOwner("Bosnia", "teuton", "turkey")
+	SetProvinceOwner("Croatia", "turkish", "turkey")
+	SetProvinceOwner("Bosnia", "turkish", "turkey")
 	
 	SetProvinceOwner("Posen", "slav", "poland")
 	
-	SetProvinceOwner("Dobruja", "teuton", "turkey")
+	SetProvinceOwner("Dobruja", "turkish", "turkey")
 end
 
 if (GrandStrategyYear >= 1586) then -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 14.

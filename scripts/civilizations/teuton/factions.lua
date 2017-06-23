@@ -310,33 +310,6 @@ DefineFaction("westphalia", {
 	FactionUpgrade = "upgrade-faction-westphalia"
 })
 
--- Non-Playable Polities
-
-DefineFaction("crimea", {
-	Name = "Crimea",
-	Civilization = "teuton",
-	Type = "polity",
-	Colors = {"brown"},
-	Playable = false,
-	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Khanate"
-	},
-	MinisterTitles = {
-		"head-of-state", "male", "monarchy", "kingdom", "Khan",
-		"head-of-state", "female", "monarchy", "kingdom", "Khan" -- correct?
-	}
-})
-
-DefineFaction("turkey", {
-	Name = "Turkey",
-	Civilization = "teuton",
-	Type = "polity",
-	Colors = {"brown"},
-	Playable = false,
-	DefaultTier = "empire"
-})
-
 Load("scripts/civilizations/teuton/factions_austrian.lua")
 Load("scripts/civilizations/teuton/factions_dutch.lua")
 Load("scripts/civilizations/teuton/factions_swabian.lua")

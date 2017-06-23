@@ -71,6 +71,7 @@ Load("scripts/civilizations/suebi/factions.lua")
 Load("scripts/civilizations/teuton/factions.lua")
 Load("scripts/civilizations/thracian/factions.lua")
 Load("scripts/civilizations/troll/factions.lua")
+Load("scripts/civilizations/turkish/factions.lua")
 Load("scripts/civilizations/welsh/factions.lua")
 
 -- deity factions

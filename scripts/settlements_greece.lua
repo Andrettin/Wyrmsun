@@ -101,7 +101,8 @@ DefineSettlement("byzantium", {
 	CulturalNames = {
 		"greek", "Byzantium",
 		"latin", "Constantinople",
-		"persian", "Byzantium"
+		"persian", "Byzantium",
+		"turkish", "Istanbul"
 	},
 	HistoricalOwners = {
 		-500, "persia" -- Byzantium was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.

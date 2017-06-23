@@ -27,7 +27,3 @@
 
 SetMapTemplateResource("earth", "unit-copper-deposit", {3655, 1192}) -- Iron deposits; Source: http://www.lib.utexas.edu/maps/europe/portugal_econ_1972.jpg
 SetMapTemplateResource("earth", "unit-copper-deposit", {3680, 1109}) -- Iron deposits; Source: http://www.lib.utexas.edu/maps/europe/portugal_econ_1972.jpg
-
--- Três Minas
-SetMapTemplateResource("earth", "unit-gold-deposit", {3665, 1095}) -- gold present in Três Minas; Source: M. J. T. Lewis, "Railways in the Greek and Roman World", 2001, p. 15.
-SetMapTemplateUnit("earth", "unit-gold-mine", "rome", {3665, 1095}, 1, 100) -- Três Minas was the location of a Roman gold mine in the 1st century AD; Source: M. J. T. Lewis, "Railways in the Greek and Roman World", 2001, p. 15.

@@ -126,7 +126,7 @@ DefineSettlement("Gossensass", {
 		1427, 0, "silver-mine" -- the silver-lead mine Gossensass was in existence in 1427; and in c. 1480 it had railways within it; Source: M. J. T. Lewis, "Railways in the Greek and Roman World", 2001, p. 16.
 	},
 	HistoricalResources = {
-		1427, 0, "unit-silver-deposit", 0
+		0, 0, "unit-silver-deposit", 0
 	},
 	Regions = {"cisleithania", "europe", "germany-netherlands", "west-and-central-europe"}
 })

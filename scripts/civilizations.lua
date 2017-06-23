@@ -1937,7 +1937,7 @@ DefineCivilization("suebi", {
 
 DefineCivilization("gaul", {
 	Display = "Gaul",
-	Visible = true,
+	Visible = false,
 	Species = "human",
 	Language = "gaulish",
 	ParentCivilization = "teuton", -- so that it can use Teuton buildings/units
@@ -1952,7 +1952,7 @@ DefineCivilization("gaul", {
 
 DefineCivilization("briton", {
 	Display = "Briton",
-	Visible = true,
+	Visible = false,
 	Species = "human",
 	Language = "british",
 	ParentCivilization = "teuton", -- so that it can use Teuton buildings/units
@@ -1978,7 +1978,7 @@ DefineCivilization("briton", {
 
 DefineCivilization("welsh", {
 	Display = "Welsh",
-	Visible = true,
+	Visible = false,
 	Species = "human",
 	Language = "welsh",
 	ParentCivilization = "briton",
@@ -2032,7 +2032,7 @@ DefineCivilization("welsh", {
 
 DefineCivilization("gael", {
 	Display = "Gael",
-	Visible = true,
+	Visible = false,
 	Species = "human",
 	Language = "irish",
 	ParentCivilization = "teuton", -- so that it can use Teuton buildings/units
@@ -2711,6 +2711,15 @@ DefineCivilization("thracian", {
 	Language = "thracian",
 	ParentCivilization = "greek",
 	Adjective = "Thracian",
+	Playable = false
+})
+
+DefineCivilization("turkish", {
+	Display = "Turkish",
+	Visible = false,
+	Species = "human",
+	ParentCivilization = "greek", -- so that it can use Greek/Latin units and buildings
+	Adjective = "Turkish",
 	Playable = false
 })
 

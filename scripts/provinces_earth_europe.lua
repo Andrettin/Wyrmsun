@@ -1500,12 +1500,12 @@ DefineProvince("Crimea", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"greek", "cimmerian-bosphorus"
---		"teuton", "crimea"
+--		"turkish", "crimea"
 	},
 	HistoricalOwners = {
 		-264, "greek", "cimmerian-bosphorus", -- Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		161, "persian", "scythian-tribe", -- The area was inhabited by the Scythae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		1560, "teuton", "crimea" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "turkish", "crimea" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
 		161, "persian"
@@ -1766,7 +1766,7 @@ DefineProvince("Don", {
 		-3000, "celt", "vana-tribe",
 		-2800, "", "",
 		161, "persian", "sarmatian-tribe", -- The area was inhabited by the Sarmatae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		1560, "teuton", "crimea" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "turkish", "crimea" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
 		161, "persian"
@@ -3015,7 +3015,7 @@ DefineProvince("Hungary", {
 		161, "persian", "iazyge-tribe", -- The area was inhabited by the Iazyges in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		896, "magyar", "magyar-tribe", -- Magyars held the lands between the Danube and the Theiss in 896; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 610.
 		919, "magyar", "hungary", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-		1560, "teuton", "turkey" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "turkish", "turkey" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
 		-264, "persian",
@@ -3269,7 +3269,7 @@ DefineProvince("Khersonska", {
 	HistoricalOwners = {
 		-264, "persian", "alazone-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		161, "persian", "scythian-tribe", -- The area was inhabited by the Scythae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		1560, "teuton", "crimea" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "turkish", "crimea" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
 		-264, "persian"
@@ -4599,7 +4599,7 @@ DefineProvince("Odeska", {
 	HistoricalOwners = {
 		-336, "persian", "scythian-tribe", -- Macedonian Empire and environs in 336-323 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
 		161, "goth", "bastarnae-tribe", -- The area was inhabited by the Bastarnae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		1560, "teuton", "turkey" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "turkish", "turkey" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
 		-336, "persian",
@@ -4838,7 +4838,7 @@ DefineProvince("Pannonia", {
 		453, "goth", "ostrogoth-tribe", -- Walamer was king over the Ostrogoths in Pannonia (between the Danube and the Drave) when Attila's empire collapsed in 453 AD; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
 		474, "", "", -- In 474 AD the Ostrogoths left Pannonia to settle in Macedonia under the aegis of the Eastern Roman Emperor, and in that same year Theodemer died, being succeeded by Theoderic; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 7.
 		919, "magyar", "hungary", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-		1560, "teuton", "turkey" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "turkish", "turkey" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
 		-5500, "basque"
@@ -6646,7 +6646,7 @@ DefineProvince("Vojvodina", {
 		-6000, "minoan", "starcevo-tribe", -- The Starčevo culture began c. 6000 BC (they were presumably named after the site of Starčevo, in Vojvodina); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 177.
 		107, "latin", "rome", -- Dacia acquired by Rome in 107 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		275, "", "", -- Dacia lost by Rome in 275 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		1560, "teuton", "turkey" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "turkish", "turkey" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
 		107, "latin", "rome"
