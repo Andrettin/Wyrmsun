@@ -31,7 +31,16 @@ AddTrigger("mcz-3328-1853", -- Source: "Minister-Conferenz-Kanzlei MCZ 3328/1853
 			return false
 		end
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and SyncRand(10) == 0 and GetPlayerData(i, "RaceName") == "teuton" and CheckDependency(i, "unit-road") and GetPlayerData(i, "Allow", "upgrade-deity-christian-god") == "R" and GetPlayerData(i, "UnitTypesCount", "unit-teuton-priest") >= 1 and GetPlayerData(i, "Resources", "copper") >= 500 and GetPlayerData(i, "HasSettlement", "Agram")) then
+			if (
+				GetPlayerData(i, "TotalNumUnitsConstructed") > 0
+				and SyncRand(10) == 0
+				and GetPlayerData(i, "RaceName") == "teuton"
+				and CheckDependency(i, "unit-road") -- the act is about labor requirement for road construction
+				and GetPlayerData(i, "Allow", "upgrade-deity-christian-god") == "R" -- discusses a complaint by the bishop of Agram
+				and GetPlayerData(i, "UnitTypesCount", "unit-teuton-priest") >= 1 -- one of the event's options makes the player lose a priest
+				and GetPlayerData(i, "Resources", "copper") >= 500 -- one of the event's options makes the player lose 500 copper
+				and GetPlayerData(i, "HasSettlement", "Agram")
+			) then
 				trigger_player = i
 				return true
 			end

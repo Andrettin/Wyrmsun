@@ -25,10 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-SetMapTemplatePathway("earth", "railroad", "linz", "budweis", 1832) -- Linz-Budweiser Pferdeeisenbahn commissioned in 1832; Source: Hans Peter Hye, "Die Wende zur Industrie- und Wissensgesselschaft", 2010, p. 23.
-
-SetMapTemplatePathway("earth", "railroad", "vienna", "brunn", {1839, 7, 7}) -- first trains from Vienna arrived in Brno on 1839.7.7; Source: Chad Bryant, "Into an Uncertain Future: Railroads and Vorm‰rz Liberalism in Brno, Vienna, and Prague", 2009, p. 183.
-
-SetMapTemplatePathway("earth", "railroad", "olmutz", "prague", 1845) -- Olomouc-Prague State Railroad Company opened for business in 1845; Source: Chad Bryant, "Into an Uncertain Future: Railroads and Vorm‰rz Liberalism in Brno, Vienna, and Prague", 2009, p. 187.
-
-SetMapTemplatePathway("earth", "railroad", "vienna", "trieste", 1857) -- Vienna-Trieste railroad built in 1857; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 465.
+DefineButton( { Pos = 1, Level = 4, Icon = "icon-flag-old-austria",
+	Action = "grant-settlement", Value = "austria",
+	Key = "a", Hint = "Grant to ~!Austria", Popup = "popup-commands",
+	Description = "Grants this settlement to Austria as your vassal",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )

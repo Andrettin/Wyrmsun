@@ -286,6 +286,7 @@ DefineTerrainType("shallow-water", {
 	Flags = {"water"},
 	AllowSingle = true,
 	Graphics = "terrain/shallow_water.png",
+	ElevationGraphics = "terrain/shallow_water_shore.png",
 	SolidTiles = {17, 20, 23},
 	TransitionTiles = {
 		"any", "north", 1,
@@ -366,6 +367,7 @@ DefineTerrainType("gray-shallow-water", {
 	Overlay = true,
 	Flags = {"water"},
 	Graphics = "terrain/gray_shallow_water.png",
+	ElevationGraphics = "terrain/gray_shallow_water_shore.png",
 	SolidTiles = {17, 20, 23},
 	TransitionTiles = {
 		"any", "north", 1,

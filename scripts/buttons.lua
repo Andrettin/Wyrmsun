@@ -185,6 +185,22 @@ DefineButton( { Pos = 16, Level = 0, Icon = "icon-garrison",
 	}
 })
 
+--[[
+DefineButton( { Pos = 16, Level = 0, Icon = "icon-crown",
+	Action = "button", Value = 4,
+	Allowed = "check-has-sub-buttons",
+	Key = "g", Hint = "~!Grant Settlement to Faction", Popup = "popup-commands",
+	ForUnit = {
+		"unit-latin-town-hall",
+		"unit-germanic-town-hall",
+		"unit-teuton-town-hall", "unit-teuton-stronghold",
+		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
+		"unit-gnomish-town-hall",
+		"unit-goblin-town-hall", "unit-goblin-stronghold"
+	}
+})
+--]]
+
 DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 	Action = "button", Value = 0,
 	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
