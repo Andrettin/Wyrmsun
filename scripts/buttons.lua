@@ -1249,6 +1249,36 @@ DefineButton( { Pos = 2, Level = 3, Icon = "icon-serfdom",
 	}
 } )
 
+DefineButton( { Pos = 9, Level = 0, Icon = "icon-shield-wall",
+	Action = "research", Value = "upgrade-shield-wall",
+	Allowed = "check-single-research",
+	Description = "+2 Armor for infantry. Removes Svinfylking.",
+	Key = "w", Hint = "Develop Shield ~!Wall", Popup = "popup-research",
+	ForUnit = {
+		"unit-latin-barracks",
+		"unit-germanic-barracks",
+		"unit-teuton-barracks",
+		"unit-dwarven-barracks",
+		"unit-gnomish-barracks",
+		"unit-goblin-mess-hall"
+	}
+} )
+
+DefineButton( { Pos = 10, Level = 0, Icon = "icon-shield-wall",
+	Action = "research", Value = "upgrade-svinfylking",
+	Allowed = "check-single-research",
+	Description = "+2 Damage for infantry. Removes Shield Wall.",
+	Key = "f", Hint = "Develop Svin~!fylking", Popup = "popup-research",
+	ForUnit = {
+		"unit-latin-barracks",
+		"unit-germanic-barracks",
+		"unit-teuton-barracks",
+		"unit-dwarven-barracks",
+		"unit-gnomish-barracks",
+		"unit-goblin-mess-hall"
+	}
+} )
+
 DefineButton( { Pos = 7, Level = 0, Icon = "icon-engineering",
 	Action = "research", Value = "upgrade-engineering",
 	Allowed = "check-single-research",

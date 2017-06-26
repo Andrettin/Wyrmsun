@@ -180,6 +180,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-shield-wall",
+	Size = {46, 38},
+	File = "norse/icons/shield_wall.png"
+})
+
+DefineIcon({
 	Name = "icon-level-up",
 	Size = {46, 38},
 	File = "neutral/icons/level_up.png"

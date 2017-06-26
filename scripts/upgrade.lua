@@ -257,6 +257,9 @@ Load("scripts/upgrade_deities.lua")
 -- Law upgrades
 Load("scripts/upgrade_laws.lua")
 
+-- Military doctrine upgrades
+Load("scripts/upgrade_military_doctrines.lua")
+
 -- Load the upgrades of the different civilizations
 Load("scripts/civilizations/celt/upgrade.lua")
 Load("scripts/civilizations/dwarf/upgrade.lua")

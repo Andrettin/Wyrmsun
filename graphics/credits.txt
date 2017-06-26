@@ -981,6 +981,7 @@
 /graphics/neutral/units/yale_young.png (by b_o and Jinn) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/norse/icons/odin.png (by Exidelo) (licensed under the CC0)
 /graphics/norse/icons/runewriting.png (by Jinn) (licensed under the CC0)
+/graphics/norse/icons/shield_wall.png (by Exidelo) (licensed under the CC0)
 /graphics/norse/icons/thor.png (by Exidelo) (licensed under the CC0)
 /graphics/orc/icons/sea_orc.png (by Jinn) (licensed under the CC0)
 /graphics/orc/icons/shaman.png (by Jinn) (licensed under the CC0)

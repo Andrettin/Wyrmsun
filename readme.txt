@@ -82,6 +82,9 @@ https://github.com/Andrettin/Wyrmsun
 * Multiplayer
 - Fixed a potential desync cause related to unique item drop.
 
+* Upgrades
+- Added the Shield Wall (+2 armor for infantry) and Svinfylking (+2 damage for infantry) military doctrine upgrades, researched at the barracks. These two upgrades are mutually exclusive.
+
 
 -----------------------------------------------------------------------
 - 2.7.3

@@ -223,6 +223,7 @@ local sea_funcs = {
 	function() return AiResearch(GetAiUnitType("bronze-shield")) end,
 	function() return AiResearch(GetAiUnitType("melee-weapon-2")) end,
 	function() return AiResearch(GetAiUnitType("iron-shield")) end,
+	function() return AiResearch("upgrade-shield-wall") end, -- acquire the shield wall military doctrine
 --	function() return AiSet(AiTanker(), 5) end,
 	function() return AiForce(0, {GetAiUnitType("infantry"), 3, GetAiUnitType("siege-engine"), 1, GetAiUnitType("glider"), 1}) end,
 --	function() return AiForce(3, {AiDestroyer(), 1, AiBattleship(), 1, GetAiUnitType("glider"), 1}) end,

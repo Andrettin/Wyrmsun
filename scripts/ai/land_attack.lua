@@ -85,6 +85,8 @@ local land_funcs = {
 	function() return AiResearch(GetAiUnitType("bronze-shield")) end,
 	function() return AiResearch(GetAiUnitType("melee-weapon-2")) end,
 	function() return AiResearch(GetAiUnitType("iron-shield")) end,
+	function() return AiResearch("upgrade-shield-wall") end, -- acquire the shield wall military doctrine
+	
 
 -- FAST AND FURIOUS
 	function() return AiForce(1, {GetAiUnitType("infantry"), 1}, true) end,
