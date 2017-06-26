@@ -28,13 +28,13 @@
 DefineUpgrade("upgrade-shield-wall", {
 	Name = "Shield Wall",
 	Icon = "icon-shield-wall",
-	Costs = {"time", 200, "copper", 1200}
+	Costs = {"time", 250, "copper", 2400}
 })
 
 DefineUpgrade("upgrade-svinfylking", {
 	Name = "Svinfylking",
 	Icon = "icon-shield-wall",
-	Costs = {"time", 200, "copper", 1200}
+	Costs = {"time", 250, "copper", 2400}
 })
 
 DefineModifier("upgrade-shield-wall",

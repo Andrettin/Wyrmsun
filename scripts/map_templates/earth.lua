@@ -30,6 +30,7 @@ DefineMapTemplate("earth", {
 	World = "Earth",
 	Width = 8192,
 	Height = 4096,
+--	Scale = 2,
 	TerrainImage = "scripts/map_templates/earth.png",
 	GeneratedTerrains = {
 		"rock", "low",
