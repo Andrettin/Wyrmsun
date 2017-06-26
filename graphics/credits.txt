@@ -982,6 +982,7 @@
 /graphics/norse/icons/odin.png (by Exidelo) (licensed under the CC0)
 /graphics/norse/icons/runewriting.png (by Jinn) (licensed under the CC0)
 /graphics/norse/icons/shield_wall.png (by Exidelo) (licensed under the CC0)
+/graphics/norse/icons/svinfylking.png (by Exidelo) (licensed under the CC0)
 /graphics/norse/icons/thor.png (by Exidelo) (licensed under the CC0)
 /graphics/orc/icons/sea_orc.png (by Jinn) (licensed under the CC0)
 /graphics/orc/icons/shaman.png (by Jinn) (licensed under the CC0)

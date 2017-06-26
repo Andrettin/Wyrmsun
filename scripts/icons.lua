@@ -186,6 +186,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-svinfylking",
+	Size = {46, 38},
+	File = "norse/icons/svinfylking.png"
+})
+
+DefineIcon({
 	Name = "icon-level-up",
 	Size = {46, 38},
 	File = "neutral/icons/level_up.png"

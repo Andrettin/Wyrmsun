@@ -33,7 +33,7 @@ DefineUpgrade("upgrade-shield-wall", {
 
 DefineUpgrade("upgrade-svinfylking", {
 	Name = "Svinfylking",
-	Icon = "icon-shield-wall",
+	Icon = "icon-svinfylking",
 	Costs = {"time", 250, "copper", 2400}
 })
 

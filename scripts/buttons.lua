@@ -1264,7 +1264,7 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-shield-wall",
 	}
 } )
 
-DefineButton( { Pos = 10, Level = 0, Icon = "icon-shield-wall",
+DefineButton( { Pos = 10, Level = 0, Icon = "icon-svinfylking",
 	Action = "research", Value = "upgrade-svinfylking",
 	Allowed = "check-single-research",
 	Description = "+2 Damage for infantry. Removes Shield Wall.",
