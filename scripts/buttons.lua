@@ -1288,6 +1288,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-engineering",
 		"unit-dwarven-smithy", "unit-brising-smithy",
 --		"unit-germanic-smithy",
 		"unit-goblin-smithy",
+		"unit-goblin-academy",
 		"unit-latin-smithy",
 		"unit-teuton-smithy",
 		"unit-teuton-university"

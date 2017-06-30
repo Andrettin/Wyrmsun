@@ -728,6 +728,20 @@ DefineUnitType("unit-goblin-market", {
 	}
 } )
 
+DefineUnitType("unit-goblin-academy", {
+	Name = "Academy",
+	Parent = "unit-template-university",
+	Civilization = "goblin",
+	Description = "Goblins perform wild experiments in this structure, seeking to understand the mysteries of life and matter.",
+	Image = {"file", "goblin/buildings/academy.png", "size", {96, 96}},
+	Shadow = {"file", "goblin/buildings/academy_shadow.png", "size", {96, 96}},
+	Icon = "icon-goblin-academy",
+	RequirementsString = "Writing",
+	Sounds = {
+		"help", "basic-goblin-voices-help-town"
+	}
+} )
+
 DefineUnitType("unit-goblin-dock", {
 	Parent = "unit-template-dock",
 	Civilization = "goblin",

@@ -155,6 +155,14 @@ DefineButton( { Pos = 7, Level = 1, Icon = "icon-goblin-temple",
 	ForUnit = {"unit-goblin-worker"}
 })
 
+--[[
+DefineButton( { Pos = 7, Level = 1, Icon = "icon-goblin-academy",
+	Action = "build", Value = "unit-goblin-academy",
+	Key = "a", Hint = "Build ~!Academy", Popup = "popup-building",
+	ForUnit = {"unit-goblin-worker"}
+})
+--]]
+
 DefineButton( { Pos = 8, Level = 1, Icon = "icon-goblin-market",
 	Action = "build", Value = "unit-goblin-market",
 	Key = "m", Hint = "Build ~!Market", Popup = "popup-building",
@@ -306,7 +314,7 @@ DefineButton( { Pos = 8, Level = 0, Icon = "icon-cauldron",
 	Allowed = "check-single-research",
 	Description = "+1 Fire Damage for Archers and Headhunters, +5 Fire Damage for War Machines. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market.",
 	Key = "a", Hint = "Research ~!Alchemy", Popup = "popup-research",
-	ForUnit = {"unit-goblin-smithy"}
+	ForUnit = {"unit-goblin-smithy", "unit-goblin-academy"}
 } )
 
 -- Deities ----------------------------------------------------------
