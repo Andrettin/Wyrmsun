@@ -1295,6 +1295,17 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-engineering",
 	}
 } )
 
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-architecture",
+	Action = "research", Value = "upgrade-architecture",
+	Allowed = "check-single-research",
+	Description = "+20% Hit Points and +5 Armor for buildings.",
+	Key = "c", Hint = "Research Ar~!chitecture", Popup = "popup-research",
+	ForUnit = {
+		"unit-goblin-academy",
+		"unit-teuton-university"
+	}
+} )
+
 -- Items --------------------------------------------------------------
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-red-potion",

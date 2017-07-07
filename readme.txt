@@ -83,7 +83,8 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed a potential desync cause related to unique item drop.
 
 * Upgrades
-- Added the Shield Wall (+2 armor for infantry) and Svinfylking (+2 damage for infantry) military doctrine upgrades, researched at the barracks. These two upgrades are mutually exclusive.
+- Added the Shield Wall (+2 armor for infantry) and Svinfylking (+2 damage for infantry) military doctrine upgrades, researched at the barracks (icons by Exidelo). These two upgrades are mutually exclusive.
+- Added the Architecture upgrade (icon by Exidelo), which increases HP and armor for buildings.
 
 
 -----------------------------------------------------------------------

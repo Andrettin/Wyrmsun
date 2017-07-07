@@ -29,7 +29,7 @@ UnitTypeFiles = {}
 
 Units = {
 	"upgrade-holy-order", "upgrade-mercenary-company", "upgrade-trading-company",
-	"upgrade-engineering",
+	"upgrade-engineering", "upgrade-architecture",
 	"upgrade-egyptian-civilization",
 	"upgrade-latin-civilization",
 	"unit-latin-town-hall", "unit-latin-farm", "unit-latin-barracks", "unit-latin-smithy", "unit-latin-stables",

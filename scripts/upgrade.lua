@@ -240,6 +240,16 @@ DefineUpgrade("upgrade-engineering", {
 	Costs = {"time", 250, "copper", 2000, "lumber", 2000}
 })
 
+DefineUpgrade("upgrade-architecture", {
+	Name = "Architecture",
+	Class = "architecture",
+	Civilization = "neutral",
+	Icon = "icon-architecture",
+	Description = "The development of architecture as an area of knowledge results in better construction techniques.\n\nEffect: Allows siege engines, railroads and minecarts.",
+	RequirementsString = "Writing and Masonry",
+	Costs = {"time", 250, "copper", 2000, "lumber", 2000}
+})
+
 DefineUpgrade("upgrade-steam-engine", {
 	Name = "Steam Engine",
 	Class = "steam-engine",
@@ -247,6 +257,36 @@ DefineUpgrade("upgrade-steam-engine", {
 	Icon = "icon-printing-press",
 	Costs = {"time", 250, "copper", 2000, "lumber", 2000}
 })
+
+DefineModifier("upgrade-architecture",
+	{"HitPoints", 20, "Percent"},
+	{"Armor", 5},
+	{"Points", 10},
+	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"},
+	{"apply-to", "unit-dwarven-mushroom-farm"}, {"apply-to", "unit-dwarven-barracks"},
+	{"apply-to", "unit-dwarven-lumber-mill"}, {"apply-to", "unit-dwarven-smithy"}, {"apply-to", "unit-brising-smithy"},
+	{"apply-to", "unit-dwarven-yale-pen"}, {"apply-to", "unit-joruvellir-yale-pen"},
+	{"apply-to", "unit-dwarven-temple"}, {"apply-to", "unit-dwarven-market"},
+	{"apply-to", "unit-dwarven-sentry-tower"}, {"apply-to", "unit-dwarven-guard-tower"},
+	{"apply-to", "unit-dwarven-dock"},
+	{"apply-to", "unit-goblin-town-hall"}, {"apply-to", "unit-goblin-stronghold"},
+	{"apply-to", "unit-goblin-farm"}, {"apply-to", "unit-goblin-mess-hall"},
+	{"apply-to", "unit-goblin-lumber-mill"}, {"apply-to", "unit-goblin-smithy"},
+	{"apply-to", "unit-goblin-temple"}, {"apply-to", "unit-goblin-market"}, {"apply-to", "unit-goblin-academy"},
+	{"apply-to", "unit-goblin-watch-tower"}, {"apply-to", "unit-goblin-guard-tower"},
+	{"apply-to", "unit-goblin-dock"},
+	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"},
+	{"apply-to", "unit-teuton-farm"}, {"apply-to", "unit-teuton-barracks"},
+	{"apply-to", "unit-teuton-lumber-mill"}, {"apply-to", "unit-teuton-smithy"},
+	{"apply-to", "unit-teuton-stables"}, {"apply-to", "unit-teuton-temple"},
+	{"apply-to", "unit-teuton-market"}, {"apply-to", "unit-teuton-university"},
+	{"apply-to", "unit-teuton-watch-tower"}, {"apply-to", "unit-teuton-guard-tower"},
+	{"apply-to", "unit-teuton-dock"},
+	{"apply-to", "unit-latin-town-hall"},
+	{"apply-to", "unit-latin-farm"}, {"apply-to", "unit-latin-barracks"},
+	{"apply-to", "unit-latin-smithy"},
+	{"apply-to", "unit-latin-stables"}
+)
 
 -- Load the faction type upgrades
 Load("scripts/upgrade_faction_types.lua")
@@ -295,6 +335,12 @@ DefineDependency("unit-minecart",
 
 -- dependencies for neutral upgrades
 DefineDependency("upgrade-engineering",
+	{"upgrade-dwarven-runewriting", "upgrade-dwarven-masonry"},
+	"or", {"upgrade-goblin-writing", "upgrade-goblin-masonry"},
+	"or", {"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-architecture",
 	{"upgrade-dwarven-runewriting", "upgrade-dwarven-masonry"},
 	"or", {"upgrade-goblin-writing", "upgrade-goblin-masonry"},
 	"or", {"upgrade-teuton-writing", "upgrade-teuton-masonry"}

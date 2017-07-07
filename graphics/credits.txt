@@ -764,6 +764,7 @@
 /graphics/neutral/decorations/yale_excrement_green.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/neutral/icons/adelobasileus.png (by Mrmo Tarius and Jinn) (licensed under the CC0)
 /graphics/neutral/icons/amulet.png (by Vladislav "iDreamRunner") (licensed under the CC0)
+/graphics/neutral/icons/architecture.png (by Exidelo) (licensed under the CC0)
 /graphics/neutral/icons/attack_ground.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/axe_mastery.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/boar.png (by Exidelo) (licensed under the CC0)

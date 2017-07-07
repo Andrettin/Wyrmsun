@@ -188,6 +188,7 @@ local land_funcs = {
 
 	function() return AiResearch(GetAiUnitType("engineering")) end, -- needed for siege engines
 	function() return AiWait(GetAiUnitType("engineering")) end,	
+	function() return AiResearch(GetAiUnitType("architecture")) end, -- improve buildings
 
 -- PREPARING SECOND ATTACK
 
