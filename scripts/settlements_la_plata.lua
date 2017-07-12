@@ -34,7 +34,7 @@ DefineSettlement("asuncion", {
 	},
 	HistoricalOwners = {
 		1536, "spain", -- Asunción was founded in 1536; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
-		1811, "paraguay" -- Uruguay became independent in 1811; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
+		1811, "paraguay" -- Paraguay became independent in 1811; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
 	},
 	HistoricalBuildings = {
 		1536, 0, "town-hall"
