@@ -364,7 +364,7 @@ DefineDependency("upgrade-goblin-coinage",
 )
 
 DefineDependency("upgrade-goblin-alchemy",
-	{"upgrade-goblin-writing"}
+	{"upgrade-goblin-writing", "upgrade-mathematics"}
 )
 
 DefineDependency("unit-goblin-transport-ship",

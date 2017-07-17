@@ -1279,23 +1279,29 @@ DefineButton( { Pos = 10, Level = 0, Icon = "icon-svinfylking",
 	}
 } )
 
-DefineButton( { Pos = 7, Level = 0, Icon = "icon-engineering",
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-mathematics",
+	Action = "research", Value = "upgrade-mathematics",
+	Allowed = "check-single-research",
+	Description = "-5% Trade Cost for Markets.",
+	Key = "m", Hint = "Research ~!Mathematics", Popup = "popup-research",
+	ForUnit = {
+		"unit-goblin-academy",
+		"unit-teuton-university"
+	}
+} )
+
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-engineering",
 	Action = "research", Value = "upgrade-engineering",
 	Allowed = "check-single-research",
 	Description = "Allows siege engines, railroads and minecarts.",
 	Key = "e", Hint = "Research ~!Engineering", Popup = "popup-research",
 	ForUnit = {
-		"unit-dwarven-smithy", "unit-brising-smithy",
---		"unit-germanic-smithy",
-		"unit-goblin-smithy",
 		"unit-goblin-academy",
-		"unit-latin-smithy",
-		"unit-teuton-smithy",
 		"unit-teuton-university"
 	}
 } )
 
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-architecture",
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-architecture",
 	Action = "research", Value = "upgrade-architecture",
 	Allowed = "check-single-research",
 	Description = "+20% Hit Points and +5 Armor for buildings.",

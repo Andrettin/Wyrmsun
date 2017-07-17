@@ -152,7 +152,7 @@ DefineUpgrade("upgrade-dwarven-runewriting", {
 DefineUpgrade("upgrade-dwarven-alchemy", {
 	Parent = "upgrade-alchemy",
 	Civilization = "dwarf",
-	RequirementsString = "Dvalic Runewriting",
+	RequirementsString = "Dvalic Runewriting and Mathematics",
 	Description = "Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Scouts, Pathfinders, Explorers and Gryphon Riders, +5 Fire Damage for Ballistas. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market."
 })
 
@@ -367,7 +367,7 @@ DefineDependency("upgrade-dwarven-coinage",
 )
 
 DefineDependency("upgrade-dwarven-alchemy",
-	{"upgrade-dwarven-runewriting"}
+	{"upgrade-dwarven-runewriting", "upgrade-mathematics"}
 )
 
 DefineDependency("unit-dwarven-guard-tower",

@@ -125,7 +125,7 @@ if (GrandStrategyYear >= -7200) then
 end
 
 if (GrandStrategyYear >= -7000) then
-	-- Foundation of pre-pottery Jericho in 7000 BC (this information could be useful later if the map is extended); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 42.
+	-- Foundation of pre-pottery Jericho in 7000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 42.
 	
 	-- By 7000 BC the predominant vegetation in Europe had become mixed deciduous forests, with fauna such as red deer, aurochs (wild oxes) and wild boars; this fauna had been more dispersed than the fauna of the previous late-glacial tundra; with this new vegetation came a myriad of eatable plant species (such as hazelnuts, berries, fruits, fungi and bracken rhizomes); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 127.
 	

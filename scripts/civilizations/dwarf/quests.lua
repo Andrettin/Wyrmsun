@@ -233,7 +233,7 @@ DefineQuest("the-burner", { -- based on the lay of Alvis from Norse mythology; S
 	end,
 	Objectives = {"- Research Alchemy"},
 	Rewards = "+1000 Copper, +1000 Lumber, +500 Stone",
-	Hint = "Select a Bastion and then click on the Research Alchemy button to research the technology required for this quest.",
+	Hint = "Select an Academy and then click on the Research Alchemy button to research the technology required for this quest.",
 	ResearchUpgrades = {"upgrade-dwarven-alchemy"}
 })
 

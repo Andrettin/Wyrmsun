@@ -215,7 +215,7 @@ DefineUpgrade("upgrade-alchemy", {
 	Class = "alchemy",
 	Icon = "icon-cauldron",
 	Description = "Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.",
-	RequirementsString = "Writing",
+	RequirementsString = "Writing and Mathematics",
 	Costs = {"time", 250, "copper", 4000},
 	GrandStrategyCosts = {"time", 250, "copper", 4000, "research", 4000}
 })
@@ -230,13 +230,23 @@ DefineUpgrade("upgrade-printing-press", {
 	GrandStrategyProductionEfficiencyModifier = {"research", 25}
 })
 
+DefineUpgrade("upgrade-mathematics", {
+	Name = "Mathematics",
+	Class = "mathematics",
+	Civilization = "neutral",
+	Icon = "icon-mathematics",
+	Description = "The understanding of even a basic level of mathematics has significant benefits for a civilization, particularly in matters such as keeping account of trade.",
+	RequirementsString = "Writing",
+	Costs = {"time", 250, "copper", 2000, "lumber", 2000}
+})
+
 DefineUpgrade("upgrade-engineering", {
 	Name = "Engineering",
 	Class = "engineering",
 	Civilization = "neutral",
 	Icon = "icon-engineering",
 	Description = "The development of engineering allows the creation of more complex mechanisms.\n\nEffect: Allows siege engines, railroads and minecarts.",
-	RequirementsString = "Writing and Masonry",
+	RequirementsString = "Mathematics and Masonry",
 	Costs = {"time", 250, "copper", 2000, "lumber", 2000}
 })
 
@@ -257,6 +267,14 @@ DefineUpgrade("upgrade-steam-engine", {
 	Icon = "icon-printing-press",
 	Costs = {"time", 250, "copper", 2000, "lumber", 2000}
 })
+
+DefineModifier("upgrade-mathematics",
+	{"TradeCost", -5},
+	{"apply-to", "unit-dwarven-market"},
+	{"apply-to", "unit-germanic-market"},
+	{"apply-to", "unit-goblin-market"},
+	{"apply-to", "unit-teuton-market"}
+)
 
 DefineModifier("upgrade-architecture",
 	{"HitPoints", 20, "Percent"},
@@ -334,10 +352,16 @@ DefineDependency("unit-minecart",
 )
 
 -- dependencies for neutral upgrades
+DefineDependency("upgrade-mathematics",
+	{"upgrade-dwarven-runewriting"},
+	"or", {"upgrade-goblin-writing"},
+	"or", {"upgrade-teuton-writing"}
+)
+
 DefineDependency("upgrade-engineering",
-	{"upgrade-dwarven-runewriting", "upgrade-dwarven-masonry"},
-	"or", {"upgrade-goblin-writing", "upgrade-goblin-masonry"},
-	"or", {"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-mathematics", "upgrade-dwarven-masonry"},
+	"or", {"upgrade-mathematics", "upgrade-goblin-masonry"},
+	"or", {"upgrade-mathematics", "upgrade-teuton-masonry"}
 )
 
 DefineDependency("upgrade-architecture",

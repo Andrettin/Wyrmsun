@@ -360,7 +360,7 @@ DefineDependency("upgrade-teuton-coinage",
 )
 
 DefineDependency("upgrade-teuton-alchemy",
-	{"upgrade-teuton-writing"}
+	{"upgrade-teuton-writing", "upgrade-mathematics"}
 )
 
 DefinePredependency("unit-teuton-stables",

@@ -296,12 +296,12 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-norse-runewriting",
 	ForUnit = {"unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 8, Level = 0, Icon = "icon-cauldron",
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-cauldron",
 	Action = "research", Value = "upgrade-teuton-alchemy",
 	Allowed = "check-single-research",
 	Description = "+1 Fire Damage for Schutzes, +5 Fire Damage for Catapults. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market.",
 	Key = "a", Hint = "Research ~!Alchemy", Popup = "popup-research",
-	ForUnit = {"unit-teuton-smithy", "unit-teuton-university"}
+	ForUnit = {"unit-teuton-university"}
 } )
 
 -- Deities ----------------------------------------------------------

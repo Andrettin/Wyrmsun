@@ -186,6 +186,8 @@ local land_funcs = {
 --	function() return AiNeed(GetAiUnitType("university")) end, -- needed for engineering
 --	function() return AiWait(GetAiUnitType("university")) end,
 
+	function() return AiResearch(GetAiUnitType("mathematics")) end, -- needed for engineering
+	function() return AiWait(GetAiUnitType("mathematics")) end,	
 	function() return AiResearch(GetAiUnitType("engineering")) end, -- needed for siege engines
 	function() return AiWait(GetAiUnitType("engineering")) end,	
 	function() return AiResearch(GetAiUnitType("architecture")) end, -- improve buildings

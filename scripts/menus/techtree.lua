@@ -257,9 +257,30 @@ function RunTechTreeMenu(civilization_number)
 				elseif (GetUpgradeData(unitName, "Class") == "writing") then
 					tech_icon_x = 5
 					tech_icon_y = 4
-				elseif (GetUpgradeData(unitName, "Class") == "alchemy") then
-					tech_icon_x = 5
+				elseif (GetUpgradeData(unitName, "Class") == "mathematics") then
+					tech_icon_x = 10
+					tech_icon_y = 5
+					if (GetCivilizationClassUnitType("university", civilization) == nil) then
+						tech_allowed = false
+					end
+				elseif (GetUpgradeData(unitName, "Class") == "architecture") then
+					tech_icon_x = 9
+					tech_icon_y = 5
+					if (GetCivilizationClassUnitType("university", civilization) == nil) then
+						tech_allowed = false
+					end
+				elseif (GetUpgradeData(unitName, "Class") == "engineering") then
+					tech_icon_x = 10
 					tech_icon_y = 6
+					if (GetCivilizationClassUnitType("university", civilization) == nil) then
+						tech_allowed = false
+					end
+				elseif (GetUpgradeData(unitName, "Class") == "alchemy") then
+					tech_icon_x = 10
+					tech_icon_y = 7
+					if (GetCivilizationClassUnitType("university", civilization) == nil) then
+						tech_allowed = false
+					end
 				else
 					tech_allowed = false
 				end

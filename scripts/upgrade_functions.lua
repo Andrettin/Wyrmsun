@@ -109,7 +109,10 @@ function ApplyTechLevels()
 	local civilized_upgrades = {
 		"upgrade-dwarven-coinage", "upgrade-dwarven-alchemy",
 		"upgrade-teuton-coinage", "upgrade-teuton-alchemy",
-		"upgrade-goblin-coinage", "upgrade-goblin-alchemy"
+		"upgrade-goblin-coinage", "upgrade-goblin-alchemy",
+		"upgrade-mathematics",
+		"upgrade-engineering",
+		"upgrade-architecture"
 	}
 	local bronze_upgrades = {
 		"upgrade-dwarven-broad-axe", "upgrade-dwarven-long-spear", "upgrade-dwarven-shield-1", "upgrade-dwarven-sharp-throwing-axe",
