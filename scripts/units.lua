@@ -111,6 +111,7 @@ Units = {
 	"unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
 	"unit-dwarven-lumber-mill", "unit-dwarven-smithy",
 	"unit-dwarven-yale-pen", "unit-dwarven-temple", "unit-dwarven-market",
+	"unit-dwarven-academy",
 	"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower",
 	"unit-dwarven-dock",
 	"unit-dwarven-wall",

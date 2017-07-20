@@ -66,6 +66,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused severely a damaged building's fire to disappear when it was almost at 0 HP.
 - Added a University building for the Teutons (graphics by Jinn).
 - Added an Academy building the Goblins (graphics by Jinn).
+- Added an Academy building the Dwarves (graphics by Jinn).
 
 * Factions
 - Forming Northumbria now requires that no other player have the Bernicia or Deira faction.

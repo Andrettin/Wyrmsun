@@ -1285,6 +1285,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-mathematics",
 	Description = "-5% Trade Cost for Markets.",
 	Key = "m", Hint = "Research ~!Mathematics", Popup = "popup-research",
 	ForUnit = {
+		"unit-dwarven-academy",
 		"unit-goblin-academy",
 		"unit-teuton-university"
 	}
@@ -1296,6 +1297,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-engineering",
 	Description = "Allows siege engines, railroads and minecarts.",
 	Key = "e", Hint = "Research ~!Engineering", Popup = "popup-research",
 	ForUnit = {
+		"unit-dwarven-academy",
 		"unit-goblin-academy",
 		"unit-teuton-university"
 	}
@@ -1307,6 +1309,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-architecture",
 	Description = "+20% Hit Points and +5 Armor for buildings.",
 	Key = "c", Hint = "Research Ar~!chitecture", Popup = "popup-research",
 	ForUnit = {
+		"unit-dwarven-academy",
 		"unit-goblin-academy",
 		"unit-teuton-university"
 	}
