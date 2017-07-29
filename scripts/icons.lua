@@ -420,6 +420,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-philosophy",
+	Size = {46, 38},
+	File = "neutral/icons/philosophy.png"
+})
+
+DefineIcon({
 	Name = "icon-printing-press",
 	Size = {46, 38},
 	File = "neutral/icons/printing_press.png"
