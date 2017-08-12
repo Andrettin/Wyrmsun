@@ -372,6 +372,18 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-left-arrow",
+	Size = {46, 38},
+	File = "neutral/icons/left_arrow.png"
+})
+
+DefineIcon({
+	Name = "icon-right-arrow",
+	Size = {46, 38},
+	File = "neutral/icons/right_arrow.png"
+})
+
+DefineIcon({
 	Name = "icon-build-basic-structure",
 	Size = {46, 38},
 	File = "neutral/icons/build_basic_structure.png"

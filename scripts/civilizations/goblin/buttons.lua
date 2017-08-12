@@ -155,14 +155,6 @@ DefineButton( { Pos = 7, Level = 1, Icon = "icon-goblin-temple",
 	ForUnit = {"unit-goblin-worker"}
 })
 
---[[
-DefineButton( { Pos = 7, Level = 1, Icon = "icon-goblin-academy",
-	Action = "build", Value = "unit-goblin-academy",
-	Key = "a", Hint = "Build ~!Academy", Popup = "popup-building",
-	ForUnit = {"unit-goblin-worker"}
-})
---]]
-
 DefineButton( { Pos = 8, Level = 1, Icon = "icon-goblin-market",
 	Action = "build", Value = "unit-goblin-market",
 	Key = "m", Hint = "Build ~!Market", Popup = "popup-building",
@@ -178,6 +170,12 @@ DefineButton( { Pos = 9, Level = 1, Icon = "icon-goblin-watch-tower",
 DefineButton( { Pos = 10, Level = 1, Icon = "icon-goblin-dock",
 	Action = "build", Value = "unit-goblin-dock",
 	Key = "d", Hint = _("Build ~!Dock"), Popup = "popup-building",
+	ForUnit = {"unit-goblin-worker"}
+})
+
+DefineButton( { Pos = 11, Level = 1, Icon = "icon-goblin-academy",
+	Action = "build", Value = "unit-goblin-academy",
+	Key = "a", Hint = "Build ~!Academy", Popup = "popup-building",
 	ForUnit = {"unit-goblin-worker"}
 })
 

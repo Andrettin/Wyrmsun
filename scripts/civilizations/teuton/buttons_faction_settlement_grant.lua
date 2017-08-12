@@ -25,9 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineButton( { Pos = 1, Level = 4, Icon = "icon-flag-old-austria",
-	Action = "grant-settlement", Value = "austria",
-	Key = "a", Hint = "Grant to ~!Austria", Popup = "popup-commands",
-	Description = "Grants this settlement to Austria as your vassal",
-	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
-} )
+--DefineButton( { Pos = 1, Level = 4, Icon = "icon-flag-old-austria",
+--	Action = "grant-settlement", Value = "austria",
+--	Key = "a", Hint = "Grant to ~!Austria", Popup = "popup-commands",
+--	Description = "Grants this settlement to Austria as your vassal",
+--	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+--} )

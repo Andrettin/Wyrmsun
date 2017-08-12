@@ -188,14 +188,6 @@ DefineButton( { Pos = 7, Level = 1, Icon = "icon-teuton-church",
 	ForUnit = {"unit-teuton-worker"}
 })
 
---[[
-DefineButton( { Pos = 7, Level = 1, Icon = "icon-teuton-university",
-	Action = "build", Value = "unit-teuton-university",
-	Key = "u", Hint = "Build ~!University", Popup = "popup-building",
-	ForUnit = {"unit-teuton-worker"}
-})
---]]
-
 DefineButton( { Pos = 8, Level = 1,
 	Action = "build", Value = "unit-teuton-market",
 	Key = "m", Hint = "Build ~!Market", Popup = "popup-building",
@@ -211,6 +203,12 @@ DefineButton( { Pos = 9, Level = 1, Icon = "icon-teuton-watch-tower",
 DefineButton( { Pos = 10, Level = 1,
 	Action = "build", Value = "unit-teuton-dock",
 	Key = "d", Hint = _("Build ~!Dock"), Popup = "popup-building",
+	ForUnit = {"unit-teuton-worker"}
+})
+
+DefineButton( { Pos = 11, Level = 1, Icon = "icon-teuton-university",
+	Action = "build", Value = "unit-teuton-university",
+	Key = "u", Hint = "Build ~!University", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
