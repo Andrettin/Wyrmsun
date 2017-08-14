@@ -28,11 +28,11 @@
 DefineDialogue("mcz-3328-1853", { -- Source: "Minister-Conferenz-Kanzlei MCZ 3328/1853".
 	Nodes = {
 		{
-			"text", "A few years ago, a decree was made obligating the denizens of one of our provinces to perform road construction labor. The bishop of Agram, Georg von Haulik, has now plead that the clergy be freed of this duty. The provincial government, however, has assured us of the importance of this policy in providing the road work without exorbitating costs.", -- "one of our provinces" = Croatia
+			"text", "A few years ago, a decree was made obligating the denizens of one of our provinces to perform road construction labor. The bishop of Agram, Georg von Haulik, has now plead that the clergy be freed of this duty. The provincial government, however, has assured us of the importance of this policy in providing road work without exorbitating costs.", -- "one of our provinces" = Croatia
 			"options", {"Free the clergy", "We need their labor"},
 			"option-effects", {
 				function(s)
-					SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") - 500)
+					SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") - 1000)
 				end,
 				function(s)
 					local uncount = GetUnits(trigger_player)
@@ -40,11 +40,12 @@ DefineDialogue("mcz-3328-1853", { -- Source: "Minister-Conferenz-Kanzlei MCZ 332
 						if (GetUnitVariable(uncount[unit1], "Ident") == "unit-teuton-priest") then
 							RemoveUnit(uncount[unit1])
 							KillUnit(uncount[unit1])
+							break
 						end
 					end
 				end
 			},
-			"option-tooltips", {"-500 Copper", "Lose a priest"}
+			"option-tooltips", {"-1000 Copper", "Lose a priest"}
 		}
 	}
 })
