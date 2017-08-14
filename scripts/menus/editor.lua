@@ -1067,6 +1067,9 @@ function EditUnitProperties()
 				end
 				if (GetUnitUnderCursor().Type.GivesResource ~= 0) then
 					GetUnitUnderCursor().ResourcesHeld = resourceValue:getText();
+					if (GetUnitUnderCursor().ResourcesHeld > 1000000) then -- 1 million maximum
+						GetUnitUnderCursor().ResourcesHeld = 1000000;
+					end
 				else
 					GetUnitUnderCursor().Active = activeCheckBox:isMarked();
 				end

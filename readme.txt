@@ -62,6 +62,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Map Editor
 - Fixed crash which happened when placing a railroad over a neutral copper mine.
+- Deposits and other resource units can no longer be set to store more than 1 million of their respective resource, as overly large numbers could cause issues for the game.
 
 -----------------------------------------------------------------------
 - 2.8.0
