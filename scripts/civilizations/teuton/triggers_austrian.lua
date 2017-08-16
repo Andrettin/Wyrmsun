@@ -39,7 +39,7 @@ AddTrigger("mcz-3328-1853", -- Source: "Minister-Conferenz-Kanzlei MCZ 3328/1853
 				and GetPlayerData(i, "Allow", "upgrade-deity-christian-god") == "R" -- discusses a complaint by the bishop of Agram
 				and GetPlayerData(i, "UnitTypesCount", "unit-teuton-priest") >= 1 -- one of the event's options makes the player lose a priest
 				and GetPlayerData(i, "Resources", "copper") >= 500 -- one of the event's options makes the player lose 500 copper
-				and GetPlayerData(i, "HasSettlement", "Agram")
+				and GetPlayerData(i, "HasSettlement", "zagreb")
 			) then
 				trigger_player = i
 				return true
