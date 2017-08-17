@@ -231,24 +231,6 @@ function DefineUnitType(unit_type, data)
 		data.BuildingRules = {
 			"and", {
 				"ontop", { Type = "unit-settlement-site", ReplaceOnDie = true, ReplaceOnBuild = true },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-rock" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-deposit" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-silver-rock" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-silver-deposit" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-silver-mine" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-rock" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-deposit" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-mine" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-yale-cave" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-yale-hunting-lodge" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-lumber-mill" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-carpenters-shop" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-lumber-mill" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-lumber-mill" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-yale-pen" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-joruvellir-yale-pen" }
 			}
 		}
 	elseif (resource_mine) then
@@ -3543,7 +3525,7 @@ DefineUnitType("unit-template-town-hall", {
 	Costs = {"time", 255, "copper", 1200, "lumber", 2400},
 	RepairHp = 4,
 	RepairCosts = {"copper", 1, "lumber", 1},
-	Construction = "construction-mine",
+	Construction = "construction-town-hall",
 	Speed = 0,
 	HitPoints = 1000, -- 1200 with masonry
 	TileSize = {4, 4}, BoxSize = {127, 127},

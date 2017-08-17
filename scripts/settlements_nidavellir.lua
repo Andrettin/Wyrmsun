@@ -25,6 +25,41 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSettlement("aurvang", { -- Aurvang settlement site; Aurvang is a region rather than a settlement, but we have no name for a settlement there yet
+	Name = "Aurvang",
+	MapTemplate = "nidavellir",
+	Position = {751, 272},
+	Major = true,
+	CulturalNames = {
+		"dwarf", "Aurvang",
+		"goblin", "Aurvang"
+	},
+	HistoricalOwners = {
+		-3000, "aurvangling-tribe"
+	},
+	HistoricalBuildings = {
+		-3000, 0, "town-hall"
+	},
+	Regions = {}
+})
+
+DefineSettlement("dreadskull", { -- Dreadskull tribe settlement site; this is the name of a tribe rather than a settlement, but we have no name for a settlement there yet
+	Name = "Dreadskull",
+	MapTemplate = "aurvang",
+	Position = {12, 3},
+	Major = true,
+	CulturalNames = {
+		"goblin", "Dreadskull"
+	},
+	HistoricalOwners = {
+		-3000, "dreadskull-tribe"
+	},
+	HistoricalBuildings = {
+		-3000, 0, "town-hall"
+	},
+	Regions = {}
+})
+
 DefineSettlement("driftwood", { -- from Will Doyle's "Island of the Lizard God"
 	Name = "Driftwood",
 	MapTemplate = "island-of-the-lizard-god-underground",
@@ -52,6 +87,51 @@ DefineSettlement("driftwood", { -- from Will Doyle's "Island of the Lizard God"
 	Regions = {}
 })
 
+DefineSettlement("joruvellir", { -- Joruvellir settlement site; Joruvellir is a region rather than a settlement, but we have no name for a settlement there yet
+	Name = "Joruvellir",
+	MapTemplate = "nidavellir",
+	Position = {784, 339},
+	Major = true,
+	CulturalNames = {
+		"dwarf", "Joruvellir"
+	},
+	Regions = {}
+})
+
+DefineSettlement("khag", { -- Khag tribe settlement site; this is the name of a tribe rather than a settlement, but we have no name for a settlement there yet
+	Name = "Khag",
+	MapTemplate = "heartfangs-foothills",
+	Position = {19, 30},
+	Major = true,
+	CulturalNames = {
+		"goblin", "Khag"
+	},
+	HistoricalOwners = {
+		-3000, "khag-tribe"
+	},
+	HistoricalBuildings = {
+		-3000, 0, "town-hall"
+	},
+	Regions = {}
+})
+
+DefineSettlement("lggi", { -- Lggi tribe settlement site; this is the name of a tribe rather than a settlement, but we have no name for a settlement there yet
+	Name = "Lggi",
+	MapTemplate = "peaceful-valley",
+	Position = {8, 3},
+	Major = true,
+	CulturalNames = {
+		"goblin", "Lggi"
+	},
+	HistoricalOwners = {
+		-3000, "lggi-tribe"
+	},
+	HistoricalBuildings = {
+		-3000, 0, "town-hall"
+	},
+	Regions = {}
+})
+
 DefineSettlement("svarinshaug", {
 	Name = "Svarinshaug",
 	MapTemplate = "nidavellir",
@@ -68,3 +148,21 @@ DefineSettlement("svarinshaug", {
 	},
 	Regions = {}
 })
+
+DefineSettlement("wildfang", { -- Wildfang tribe settlement site; this is the name of a tribe rather than a settlement, but we have no name for a settlement there yet
+	Name = "Wildfang",
+	MapTemplate = "wildlands",
+	Position = {34, 17},
+	Major = true,
+	CulturalNames = {
+		"goblin", "Wildfang"
+	},
+	HistoricalOwners = {
+		-3000, "wildfang-tribe"
+	},
+	HistoricalBuildings = {
+		-3000, 0, "town-hall"
+	},
+	Regions = {}
+})
+

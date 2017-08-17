@@ -32,5 +32,3 @@ DefineMapTemplate("heartfangs-foothills", { -- from Battle for Wesnoth: Liberty 
 	Height = 32,
 	SubtemplatePosition = {234, 204}
 })
-
-SetMapTemplateUnit("heartfangs-foothills", "unit-goblin-town-hall", "khag-tribe", {19, 30})

@@ -32,5 +32,3 @@ DefineMapTemplate("peaceful-valley", { -- from Battle for Wesnoth: Descent into 
 	Height = 22,
 	SubtemplatePosition = {802, 292}
 })
-
-SetMapTemplateUnit("peaceful-valley", "unit-goblin-town-hall", "lggi-tribe", {8, 3})

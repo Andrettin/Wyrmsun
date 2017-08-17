@@ -41,8 +41,6 @@ DefineMapTemplate("wildlands", { -- from Battle for Wesnoth: The Hammer of Thurs
 	}
 })
 
-SetMapTemplateUnit("wildlands", "unit-goblin-town-hall", "wildfang-tribe", {34, 17})
-
 SetMapTemplateUnit("wildlands", "unit-goblin-watch-tower", "wildfang-tribe", {26, 8})
 
 SetMapTemplateUnit("wildlands", "unit-goblin-watch-tower", "wildfang-tribe", {28, 29})

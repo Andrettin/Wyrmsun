@@ -104,6 +104,26 @@ DefineConstruction("construction-mine", {
 	}
 })
 
+DefineConstruction("construction-town-hall", {
+	Constructions = {
+		{
+			Percent = 0,
+			File = "main",
+			Frame = 1
+		},
+		{
+			Percent = 25,
+			File = "main",
+			Frame = 1
+		},
+		{
+			Percent = 50,
+			File = "main",
+			Frame = 1
+		}
+	}
+})
+
 DefineConstruction("construction-dock", {
 	Constructions = {
 		{

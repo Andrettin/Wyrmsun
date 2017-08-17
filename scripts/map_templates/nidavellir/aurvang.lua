@@ -42,11 +42,8 @@ DefineMapTemplate("aurvang", {
 	}
 })
 
-SetMapTemplateUnit("aurvang", "unit-goblin-town-hall", "dreadskull-tribe", {12, 3})
-
 SetMapTemplateUnit("aurvang", "unit-goblin-watch-tower", "dreadskull-tribe", {31, 7})
 
-SetMapTemplateUnit("nidavellir", "unit-goblin-town-hall", "aurvangling-tribe", {751, 272})
 SetMapTemplateUnit("nidavellir", "unit-goblin-guard-tower", "aurvangling-tribe", {740, 268})
 SetMapTemplateUnit("nidavellir", "unit-goblin-guard-tower", "aurvangling-tribe", {746, 261})
 SetMapTemplateUnit("nidavellir", "unit-goblin-guard-tower", "aurvangling-tribe", {722, 259})
