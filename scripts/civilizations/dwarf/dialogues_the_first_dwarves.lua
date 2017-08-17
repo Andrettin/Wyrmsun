@@ -43,7 +43,7 @@ DefineDialogue("a-rocky-home-introduction", {
 			"text", "There are many perils laying about. We need to be ready quickly."
 		},
 		{
-			"text", "Hint: Select a Miner, press the Build Structure button and then click on the Build Mead Hall button to build the structure required for this quest."
+			"text", "Hint: Select a Miner, press the Build Structure button and then click on the Build Mead Hall button to build the structure required for this quest. The Mead Hall can only be built on a Settlement Site."
 		},
 		{
 			"text", "Hint: Select a Miner and then right-click on a Yale Cave to build a Yale Hunting Lodge.",

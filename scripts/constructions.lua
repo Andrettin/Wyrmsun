@@ -120,38 +120,52 @@ DefineConstruction("construction-dock", {
 })
 
 DefineConstruction("construction-germanic-town-hall", {
-  Files = {
-    File = "neutral/buildings/land_construction_site.png",
-    Size = {64, 64}},
-  Constructions = {
-   {Percent = 0,
-    File = "construction",
-    Frame = 0},
-   {Percent = 25,
-    File = "construction",
-    Frame = 1},
-   {Percent = 50,
-    File = "main",
-    Frame = 3}}
+	Constructions = {
+		{
+			Percent = 0,
+			File = "main",
+			Frame = 3
+		},
+		{
+			Percent = 25,
+			File = "main",
+			Frame = 3
+		},
+		{
+			Percent = 50,
+			File = "main",
+			Frame = 3
+		}
+	}
 })
 
 DefineConstruction("construction-dwarven-sentry-tower", {
-  Files = {
-    File = "neutral/buildings/land_construction_site.png",
-    Size = {64, 64}},
-  Constructions = {
-   {Percent = 0,
-    File = "construction",
-    Frame = 0},
-   {Percent = 25,
-    File = "construction",
-    Frame = 1},
-   {Percent = 50,
-    File = "main",
-    Frame = 1},
-   {Percent = 75,
-    File = "main",
-    Frame = 2}}
+	Files = {
+		File = "neutral/buildings/land_construction_site.png",
+		Size = {64, 64}
+	},
+	Constructions = {
+		{
+			Percent = 0,
+			File = "construction",
+			Frame = 0
+		},
+		{
+			Percent = 25,
+			File = "construction",
+			Frame = 1
+		},
+		{
+			Percent = 50,
+			File = "main",
+			Frame = 1
+		},
+		{
+			Percent = 75,
+			File = "main",
+			Frame = 2
+		}
+	}
 })
 
 DefineConstruction("construction-land2", {

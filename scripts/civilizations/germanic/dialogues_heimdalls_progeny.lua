@@ -120,7 +120,7 @@ DefineDialogue("thrallings-subjugated", {
 			}
 		},
 		{
-			"text", "Hint: Select a Bura, press the Build Structure button and then click on the Build Chieftain's Hall button to build the structure required for this quest."
+			"text", "Hint: Select a Bura, press the Build Structure button and then click on the Build Chieftain's Hall button to build the structure required for this quest. The Chieftain's Hall can only be built on a Settlement Site."
 		}
 	}
 })

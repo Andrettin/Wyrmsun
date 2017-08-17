@@ -3543,7 +3543,7 @@ DefineUnitType("unit-template-town-hall", {
 	Costs = {"time", 255, "copper", 1200, "lumber", 2400},
 	RepairHp = 4,
 	RepairCosts = {"copper", 1, "lumber", 1},
-	Construction = "construction-land",
+	Construction = "construction-mine",
 	Speed = 0,
 	HitPoints = 1000, -- 1200 with masonry
 	TileSize = {4, 4}, BoxSize = {127, 127},
