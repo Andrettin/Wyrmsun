@@ -170,6 +170,7 @@ Units = {
 	"unit-wolf",
 	"unit-slime", "unit-yale", "unit-gryphon", "unit-wyrm", "unit-water-elemental",
 	"unit-unicorn",
+	"unit-settlement-site",
 	"unit-gold-rock", "unit-gold-deposit", "unit-gold-mine",
 	"unit-silver-rock", "unit-silver-deposit", "unit-silver-mine",
 	"unit-copper-rock", "unit-copper-deposit", "unit-copper-mine",
@@ -229,6 +230,7 @@ function DefineUnitType(unit_type, data)
 	if (town_hall) then
 		data.BuildingRules = {
 			"and", {
+				"ontop", { Type = "unit-settlement-site", ReplaceOnDie = true, ReplaceOnBuild = true },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-rock" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-deposit" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine" },
@@ -252,6 +254,7 @@ function DefineUnitType(unit_type, data)
 	elseif (resource_mine) then
 		data.BuildingRules = {
 			"and", {
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-settlement-site" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-stronghold" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-town-hall" },
@@ -466,6 +469,35 @@ DefineUnitType("unit-template-base-deposit", {
 	Type = "land",
 	StartingResources = {50000},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
+	Sounds = {
+		"selected", "click",
+--		"acknowledge", "gold-mine-acknowledge",
+--		"ready", "gold-mine-ready",
+--		"help", "gold-mine-help",
+		"dead", "building-destroyed"
+	}
+} )
+
+DefineUnitType("unit-settlement-site", {
+	Name = "Settlement Site",
+	Parent = "unit-template-building",
+	Description = "A site which is a prime spot for building a settlement.",
+	Image = {"file", "germanic/buildings/town_hall.png", "size", {128, 128}}, -- placeholder
+	Shadow = {"file", "germanic/buildings/town_hall_shadow.png", "size", {128, 128}}, -- placeholder
+	Icon = "icon-germanic-town-hall", -- placeholder
+	NeutralMinimapColor = {255, 255, 0},
+	Construction = "construction-land2",
+	Speed = 0,
+	HitPoints = 25500,
+	RepairHp = 4,
+	RepairCosts = {"copper", 1, "lumber", 1, "stone", 1},
+	TileSize = {4, 4}, BoxSize = {127, 127},
+	Armor = 20, Missile = "missile-none",
+	Priority = 0,
+	Corpse = "unit-destroyed-4x4-place",
+	ExplodeWhenKilled = "missile-explosion",
+	Type = "land",
+	Indestructible = true,
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "gold-mine-acknowledge",
@@ -3541,7 +3573,7 @@ DefineUnitType("unit-template-town-hall", {
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-amulet", "unit-ring", "unit-scroll", "unit-book"}, -- worker-related items, as well as those we would expect a center of administration to have
 	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},
-	BuildingRulesString = "Cannot be built close to mines or industrial buildings",
+	BuildingRulesString = "Must be built on top of a Settlement Site",
 	Sounds = {
 		"selected", "town-hall-selected",
 --		"acknowledge", "town-hall-acknowledge",
@@ -4353,3 +4385,5 @@ DefineUnitType("unit-railroad", {
 		"dead", "building-destroyed"
 	}
 } )
+
+SetSettlementSiteUnit("unit-settlement-site")

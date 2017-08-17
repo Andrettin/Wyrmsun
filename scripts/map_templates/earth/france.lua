@@ -54,13 +54,6 @@ SetMapTemplateUnit("earth", "unit-teuton-farm", "rome", {3911, 958}, 395, 486) -
 SetMapTemplateUnit("earth", "unit-teuton-farm", "francia", {3911, 958}, 486, 561) -- Sens' area became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 SetMapTemplateUnit("earth", "unit-teuton-farm", "burgundia", {3911, 958}, 561) -- Senonae went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 
--- Soissons
-SetMapTemplateFactionCulturalSettlementName("earth", "Soissons", {3915, 923}, "france")
-SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {3915, 923}, 395, 526) -- Soissons was a part of the Roman Empire and was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-SetMapTemplateUnit("earth", "unit-teuton-temple", "francia", {3915, 923}, 526, 561) -- Soissons was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-SetMapTemplateUnit("earth", "unit-teuton-town-hall", "salia", {3915, 923}, 561) -- Chlothar (Frankish king) died in 561, and Reims went to his son Chilperich; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328; Gregory of Tours, "History of the Franks", IV.22.
-SetMapTemplateUnit("earth", "unit-teuton-temple", "salia", {3915, 923}, 561)
-
 -- Toul
 SetMapTemplateFactionCulturalSettlementName("earth", "Toul", {3969, 948}, "france")
 SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {3969, 948}, 395, 486) -- Toul was a part of the Roman Empire and was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.

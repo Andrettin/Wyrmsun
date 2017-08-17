@@ -27,11 +27,6 @@
 
 SetMapTemplateResource("earth", "unit-gold-deposit", {4110, 819}) -- Amber; Source: "Atlas de História Mundial", 2001, p. 89.
 
--- Bernstorf (Bavaria)
-SetMapTemplateCulturalSettlementName("earth", "Bernstorf", {4104, 946}, "teuton")
-SetMapTemplateUnit("earth", "unit-germanic-town-hall", "celtic-cimmerian-tribe", {4104, 946}, -1600, -1400)
-SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "celtic-cimmerian-tribe", {4104, 946}, -1600, -1400) -- a fortified settlement existed c. 1600-1400 BC in Bernstorf (Bavaria); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 29.
-
 -- Eining
 SetMapTemplateCulturalSettlementName("earth", "Eining", {4104, 936}, "teuton")
 SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4104, 936}, 173, 179) -- the "Legio III Italica" was stationed at the location of Eining from c. 173 to 179; Source: "Ancient Warfare VII.6", 2013, p. 25.
@@ -50,20 +45,8 @@ SetMapTemplateUnit("earth", "unit-germanic-archer", "hersing-tribe", {4069, 811}
 SetMapTemplateUnit("earth", "unit-germanic-archer", "hersing-tribe", {4069, 811}, -1600, -1599)
 SetMapTemplateUnit("earth", "unit-germanic-archer", "hersing-tribe", {4069, 811}, -1600, -1599)
 
--- Konnenberg
-SetMapTemplateCulturalSettlementName("earth", "Konnenberg", {4045, 857}, "teuton")
-SetMapTemplateUnit("earth", "unit-teuton-town-hall", "saxon-tribe", {4045, 857}, 526) -- Konnenberg was in Saxon possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-
 -- Leubingen
 -- in c. 1900 BC a barrow was built at Leubingen (in Saxo-Thuringia in central Germany); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 23.
 
--- Mittelberg
-SetMapTemplateUnit("earth", "unit-germanic-town-hall", "celtic-cimmerian-tribe", {4101, 882}, -1600, -1599)
-SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "celtic-cimmerian-tribe", {4101, 882}, -1600, -1599) -- the fortified settlement of Mittelberg (near Nebra) existed in 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 27.
-
 -- Paderborn
 --SetMapTemplateLayerConnector("earth", "unit-portal", {4033, 873}, "Nidavellir") -- Gnitaheith (where Fafnir dwelled) has been identified with a real location south of Paderborn, so place a portal to Nidavellir there; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 343.
-
--- Scheidungen
-SetMapTemplateCulturalSettlementName("earth", "Scheidungen", {4107, 873}, "teuton")
-SetMapTemplateUnit("earth", "unit-teuton-town-hall", "thuringian-tribe", {4107, 873}, 526) -- Scheidungen was in Thuringian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.

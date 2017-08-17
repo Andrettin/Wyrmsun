@@ -25,6 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSettlement("aarhus", {
+	Name = "Aarhus",
+	MapTemplate = "earth",
+	Position = {4066, 777},
+	Major = true,
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+})
+
 DefineSettlement("brodrene-gram", {
 	Name = "Brodrene Gram", -- in southern Jutland
 	MapTemplate = "earth",
@@ -65,6 +73,7 @@ DefineSettlement("leidre", {
 	Name = "Leidre",
 	MapTemplate = "earth",
 	Position = {4112, 784},
+	Major = true,
 	CulturalNames = {
 		"germanic", "Leidre", -- should be a rendering of Lejre in Proto-Germanic instead
 		"norse", "Leidre"

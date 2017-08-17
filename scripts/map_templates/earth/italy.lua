@@ -76,9 +76,6 @@ SetMapTemplateUnit("earth", "unit-celt-farm", "celtic-cimmerian-tribe", {4087, 1
 -- Frattesina
 SetMapTemplateUnit("earth", "unit-germanic-smithy", "celtic-cimmerian-tribe", {4105, 1023}, -1200, -801) -- the site of Frattesina was occupied between the 12th and 9th centuries BC; the settlement imported raw materials (such as amber, ivory, ostrich eggs and copper) and exported manufactured products (such as works in glass, glazed pottery, bone, antler, elephant ivory, bronze, iron and amber); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 39.
 
--- Luni sul Mignone
-SetMapTemplateUnit("earth", "unit-latin-town-hall", "latin-tribe", {4111, 1087}, -1700, -1350) -- two rock-cut longhouses existed at Luni sul Mignone during the Italian Middle Bronze Age (c. 1700-1350 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
-
 -- Mercurago
 SetMapTemplateUnit("earth", "unit-celt-farm", "celtic-cimmerian-tribe", {4034, 1007}, -1700, -1350) -- the settlement of Mercurago was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
 
@@ -102,10 +99,6 @@ SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4122, 1005}, 170, 171
 SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
 SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
 SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
-
--- Poggiomarino
-SetMapTemplateUnit("earth", "unit-latin-town-hall", "samnite-tribe", {4170, 1119}, -1600, -501) -- the settlement of Poggiomarino was inhabited continuously between the 16th and 6th centuries BC; due to environmental reasons the settlement had to be forsaken, at which point they founded the city of Pompeii; Poggiomarino was a major industrial center in southern central Italy; it contained a furnace for copper smelting and mold casts for making bronze objects; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 42-44.
-SetMapTemplateUnit("earth", "unit-latin-smithy", "samnite-tribe", {4170, 1119}, -1600, -501)
 
 -- Punta Milazzese
 --SetMapTemplateUnit("earth", "unit-latin-farm", "sicel-tribe", {4179, 1172}, -1700, -1350) -- the settlement of Punta Milazzese (located on the island of Lipari) was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC); it contained around fifty drystone huts; it was destroyed violently at the end of the Italian Middle Bronze Age; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 37.

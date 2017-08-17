@@ -38,7 +38,27 @@ DefineSettlement("roma-gotland", {
 	HistoricalBuildings = {
 		{1164, 9, 9}, 0, "temple", "cistercian-order" -- a Cistercian monastery, the Beata Maria de Gutnalia, was established on September 9th of 1164 at Roma; Source: "Guta Saga: The History of the Gotlanders", 1999, p. xlvii.
 	},
-	Regions = {"europe", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+})
+
+DefineSettlement("sigtun", {
+	Name = "Sigtun",
+	MapTemplate = "earth",
+	Position = {4243, 692},
+	Major = true,
+	CulturalNames = {
+		"germanic", "Segiztuna", -- "Segiztûna" is a rendering of "Sigtun" in Proto-Germanic, since the Ynglinga saga the city was founded when the cultural ancestors of the Germanic peoples (= Odin's people) first settled Scandinavia
+		"norse", "Sigtun"
+	},
+	HistoricalOwners = {
+		-2800, "yngling-tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples; the Ynglings were the dynasty founded by Odin's son Yngve, who ruled the Swedish lands
+		-264, "swede-tribe", -- tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		1560, "sweden" -- political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		-2800, 0, "town-hall"
+	},
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
 DefineSettlement("torsburgen", {
@@ -54,5 +74,5 @@ DefineSettlement("torsburgen", {
 	HistoricalBuildings = {
 		300, 1100, "watch-tower" -- the enormous hill fort of Torsburgen had two phases, one dated to 300-400 AD, and the other to 800-1100 AD; Source: "Guta Saga: The History of the Gotlanders", 1999, pp. xxvii-xxviii.
 	},
-	Regions = {"europe", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })

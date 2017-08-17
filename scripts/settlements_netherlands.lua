@@ -29,6 +29,7 @@ DefineSettlement("amsterdam", {
 	Name = "Amsterdam",
 	MapTemplate = "earth",
 	Position = {3953, 857},
+	Major = true,
 	CulturalNames = {
 --		"dutch", "Amsterdam"
 	},

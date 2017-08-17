@@ -29,6 +29,7 @@ DefineSettlement("brunn", {
 	Name = "Brünn",
 	MapTemplate = "earth",
 	Position = {4206, 936},
+	Major = true,
 	CulturalNames = {
 		"slav", "Brno",
 		"teuton", "Brünn"
@@ -62,6 +63,7 @@ DefineSettlement("olmutz", {
 	Name = "Olmütz",
 	MapTemplate = "earth",
 	Position = {4232, 921},
+	Major = true,
 	CulturalNames = {
 		"slav", "Olomouc",
 		"teuton", "Olmütz"

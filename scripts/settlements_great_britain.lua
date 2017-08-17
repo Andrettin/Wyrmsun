@@ -65,6 +65,7 @@ DefineSettlement("bamburgh", {
 	Name = "Bamburgh",
 	MapTemplate = "earth",
 	Position = {3801, 783},
+	Major = true,
 	CulturalNames = {
 		"anglo-saxon", "Bebbanburg", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"english", "Bamburgh" -- as given by Stenton; Shepherd gives it as "Bamborough" instead; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
@@ -410,6 +411,7 @@ DefineSettlement("edinburgh", {
 	Name = "Edinburgh",
 	MapTemplate = "earth",
 	Position = {3767, 774},
+	Major = true,
 	CulturalNames = {
 		"english", "Edinburgh"
 	},
@@ -418,8 +420,7 @@ DefineSettlement("edinburgh", {
 		1560, "scotland" -- Edinburgh was a part of Scotland in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		802, 1560, "farm",
-		1560, 0, "town-hall",
+		802, 0, "town-hall",
 		1582, 0, "university" -- University founded in Edinburgh in 1582; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"british-isles", "europe", "northwest-europe", "scotland", "west-and-central-europe"}
@@ -609,6 +610,7 @@ DefineSettlement("london", {
 	Name = "London",
 	MapTemplate = "earth",
 	Position = {3839, 875},
+	Major = true,
 	CulturalNames = {
 		"anglo-saxon", "Lunden", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"briton", "Londinium",
@@ -906,6 +908,7 @@ DefineSettlement("winchester", {
 	Name = "Winchester",
 	MapTemplate = "earth",
 	Position = {3810, 885},
+	Major = true,
 	CulturalNames = {
 		"anglo-saxon", "Witanceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 734.
 		"briton", "Verita Belgarum",
@@ -919,8 +922,7 @@ DefineSettlement("winchester", {
 		1560, "england" -- Winchester's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		410, 802, "farm",
-		802, 0, "town-hall"
+		410, 0, "town-hall"
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -947,6 +949,7 @@ DefineSettlement("york", {
 	Name = "York",
 	MapTemplate = "earth",
 	Position = {3815, 819},
+	Major = true,
 	CulturalNames = {
 		"anglo-saxon", "Eoforwic", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"briton", "Eboracum",

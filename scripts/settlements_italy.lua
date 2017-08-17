@@ -214,6 +214,23 @@ DefineSettlement("hatria", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
+DefineSettlement("luni-sul-mignone", {
+	Name = "Luni sul Mignone",
+	MapTemplate = "earth",
+	Position = {4111, 1087},
+	CulturalNames = {
+		"italian", "Luni sul Mignone"
+	},
+	HistoricalOwners = {
+		-1700, "latin-tribe",
+		-1350, ""
+	},
+	HistoricalBuildings = {
+		-1700, -1350, "farm" -- two rock-cut longhouses existed at Luni sul Mignone during the Italian Middle Bronze Age (c. 1700-1350 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
+	},
+	Regions = {"europe", "italy", "west-and-central-europe"}
+})
+
 DefineSettlement("milan", {
 	Name = "Milan",
 	MapTemplate = "earth",
@@ -345,6 +362,23 @@ DefineSettlement("piacenza", {
 	HistoricalBuildings = {
 		-218, 1248, "farm",
 		1248, 0, "university" -- University founded in Piacenza in 1248; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+	},
+	Regions = {"europe", "italy", "west-and-central-europe"}
+})
+
+DefineSettlement("poggiomarino", {
+	Name = "Poggiomarino",
+	MapTemplate = "earth",
+	Position = {4170, 1119},
+	CulturalNames = {
+		"italian", "Poggiomarino"
+	},
+	HistoricalOwners = {
+		-1600, "samnite-tribe",
+		-501, ""
+	},
+	HistoricalBuildings = {
+		-1600, -501, "smithy" -- the settlement of Poggiomarino was inhabited continuously between the 16th and 6th centuries BC; due to environmental reasons the settlement had to be forsaken, at which point they founded the city of Pompeii; Poggiomarino was a major industrial center in southern central Italy; it contained a furnace for copper smelting and mold casts for making bronze objects; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 42-44.
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })

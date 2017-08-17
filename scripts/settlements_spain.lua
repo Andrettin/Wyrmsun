@@ -243,6 +243,7 @@ DefineSettlement("toledo", {
 	Name = "Toledo",
 	MapTemplate = "earth",
 	Position = {3756, 1139},
+	Major = true,
 	CulturalNames = {
 		"castillian", "Toledo",
 		"latin", "Toletum"
@@ -253,8 +254,7 @@ DefineSettlement("toledo", {
 		1560, "spain" -- Toledo was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		-197, 486, "farm",
-		486, 0, "town-hall",
+		-197, 0, "town-hall",
 		1474, 1807, "university" -- Minor university founded in Toledo in 1474; Source: "The Cambridge Modern History Atlas", 1912, p. 9; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225. Minor university abolished in Toledo in 1807; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 	},
 	Regions = {"europe", "iberia", "west-and-central-europe"}

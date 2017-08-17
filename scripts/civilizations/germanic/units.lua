@@ -706,10 +706,10 @@ DefineUnitType("unit-germanic-transport-ship", {
 })
 
 DefineUnitType("unit-germanic-town-hall", {
-	Name = _("Chieftain's Hall"),
+	Name = "Chieftain's Hall",
 	Parent = "unit-template-town-hall",
 	Civilization = "germanic",
-	Description = _("The chieftain's hall serves both as the dwelling of a Germanic tribe's chieftain and as the center of its political life."),
+	Description = "The chieftain's hall serves both as the dwelling of a Germanic tribe's chieftain and as the center of its political life.",
 	Image = {"file", "germanic/buildings/town_hall.png", "size", {128, 128}},
 	Shadow = {"file", "germanic/buildings/town_hall_shadow.png", "size", {128, 128}},
 	Animations = "animations-germanic-town-hall", Icon = "icon-germanic-town-hall",

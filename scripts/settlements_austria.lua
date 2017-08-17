@@ -135,6 +135,7 @@ DefineSettlement("graz", {
 	Name = "Graz",
 	MapTemplate = "earth",
 	Position = {4190, 981},
+	Major = true,
 	CulturalNames = {
 		"teuton", "Graz" -- from the same Slavic root as "Grad"
 	},
@@ -153,6 +154,7 @@ DefineSettlement("innsbruck", {
 	Name = "Innsbruck",
 	MapTemplate = "earth",
 	Position = {4102, 972},
+	Major = true,
 	CulturalNames = {
 		"teuton", "Innsbruck"
 	},
@@ -169,6 +171,7 @@ DefineSettlement("klagenfurt", {
 	Name = "Klagenfurt",
 	MapTemplate = "earth",
 	Position = {4166, 987},
+	Major = true,
 	CulturalNames = {
 		"teuton", "Klagenfurt"
 	},
@@ -185,6 +188,7 @@ DefineSettlement("linz", {
 	Name = "Linz",
 	MapTemplate = "earth",
 	Position = {4162, 949},
+	Major = true,
 	CulturalNames = {
 		"teuton", "Linz"
 	},
@@ -201,6 +205,7 @@ DefineSettlement("ljubljana", {
 	Name = "Ljubljana",
 	MapTemplate = "earth",
 	Position = {4170, 1000},
+	Major = true,
 	CulturalNames = {
 		"latin", "Emona", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		"slav", "Ljubljana",
@@ -235,6 +240,7 @@ DefineSettlement("salzburg", {
 	Name = "Salzburg",
 	MapTemplate = "earth",
 	Position = {4135, 960},
+	Major = true,
 	CulturalNames = {
 		"latin", "Iuvavum",
 		"teuton", "Salzburg"
@@ -245,9 +251,7 @@ DefineSettlement("salzburg", {
 		1815, "austria" -- Salzburg was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		45, 526, "town-hall",
-		526, 768, "farm",
-		768, 0, "town-hall",
+		45, 0, "town-hall",
 		768, 0, "temple" -- Archbishopric existent in Salzburg during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	Regions = {"europe", "west-and-central-europe", "roman-danube", "germany-netherlands", "cisleithania"}
@@ -273,6 +277,7 @@ DefineSettlement("vienna", {
 	Name = "Vienna",
 	MapTemplate = "earth",
 	Position = {4212, 952},
+	Major = true,
 	CulturalNames = {
 		"celt", "Vindobona",
 		"gaul", "Vindobona",
@@ -286,7 +291,7 @@ DefineSettlement("vienna", {
 		1156, "austria" -- Austria became a duchy with Vienna in its possession in 1156; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalBuildings = {
-		10, 161, "farm",
+		10, 161, "town-hall",
 		161, 526, "stronghold", -- Legionary base present in Vindobona in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		161, 526, "barracks",
 		955, 0, "town-hall",

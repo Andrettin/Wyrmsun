@@ -107,13 +107,6 @@ SetMapTemplateResource("earth", "unit-copper-deposit", {4335, 547}) -- Iron depo
 -- Kivik
 -- a man was buried in the Bredarör cairn at Kivik in c. 1400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 84.
 
--- Sigtun / Segiztûna
-SetMapTemplateCulturalSettlementName("earth", "Segiztuna", {4243, 692}, "germanic") -- "Segiztûna" is a rendering of "Sigtun" in Proto-Germanic, since the Ynglinga saga the city was founded when the cultural ancestors of the Germanic peoples (= Odin's people) first settled Scandinavia
-SetMapTemplateCulturalSettlementName("earth", "Sigtun", {4243, 692}, "norse")
-SetMapTemplateUnit("earth", "unit-germanic-town-hall", "yngling-tribe", {4243, 692}, -2800, -264) -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples; "Segiztûna" is a rendering of "Sigtun" in Proto-Germanic, since the Ynglinga saga the city was founded when the cultural ancestors of the Germanic peoples (= Odin's people) first settled Scandinavia; the Ynglings were the dynasty founded by Odin's son Yngve, who ruled the Swedish lands
-SetMapTemplateUnit("earth", "unit-teuton-town-hall", "swede-tribe", {4243, 692}, -264, 1560) -- tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-SetMapTemplateUnit("earth", "unit-teuton-town-hall", "swede-tribe", {4243, 692}, 1560) -- political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-
 -- Uppsala
 SetMapTemplateCulturalSettlementName("earth", "Uppsala", {4241, 686}, "norse")
 SetMapTemplateUnit("earth", "unit-teuton-temple", "sweden", {4241, 686}, 1164) -- Swedish archbishopric founded in Uppsala in 1164; Source: "Guta Saga: The History of the Gotlanders", 1999, p. vii.

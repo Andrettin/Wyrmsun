@@ -590,7 +590,7 @@ function StandardTriggers()
 					end
 				end,
 				function()
-					Tip("Chieftain's Hall", "The Chieftain's Hall can be used to train worker units. It also serves as a place where workers can return resources to, after harvesting.")
+					Tip("Chieftain's Hall", "The Chieftain's Hall can be used to train worker units. It also serves as a place where workers can return resources to, after harvesting. This structure can only be built on top of a Settlement Site.")
 					return false
 				end
 			)
@@ -811,7 +811,7 @@ function StandardTriggers()
 					end
 				end,
 				function()
-					Tip("Mead Hall", "The Mead Hall can be used to train worker units. It also serves as a place where workers can return resources to, after harvesting.")
+					Tip("Mead Hall", "The Mead Hall can be used to train worker units. It also serves as a place where workers can return resources to, after harvesting. This structure can only be built on top of a Settlement Site.")
 					return false
 				end
 			)

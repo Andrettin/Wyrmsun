@@ -73,6 +73,7 @@ DefineSettlement("prague", {
 	Name = "Prague",
 	MapTemplate = "earth",
 	Position = {4169, 908},
+	Major = true,
 	CulturalNames = {
 		"slav", "Prague",
 		"suebi", "Bubienum", -- name of the Marcomannic capital; also known as Marobudum; either located where modern Prague or Budweis are; Source: Frederick Kohlrausch, "A History of Germany", 1844, p. 57.

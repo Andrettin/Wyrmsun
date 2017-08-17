@@ -45,10 +45,28 @@ DefineSettlement("augsburg", {
 	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
 
+DefineSettlement("bernstorf", { -- Bernstorf, Bavaria
+	Name = "Bernstorf",
+	MapTemplate = "earth",
+	Position = {4104, 946},
+	CulturalNames = {
+		"teuton", "Bernstorf"
+	},
+	HistoricalOwners = {
+		-1600, "celtic-cimmerian-tribe",
+		-1400, ""
+	},
+	HistoricalBuildings = {
+		-1600, -1400, "watch-tower" -- a fortified settlement existed c. 1600-1400 BC in Bernstorf (Bavaria); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 29.
+	},
+	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
+})
+
 DefineSettlement("cologne", {
 	Name = "Cologne",
 	MapTemplate = "earth",
 	Position = {3998, 887},
+	Major = true,
 	CulturalNames = {
 		"latin", "Colonia Agrippina",
 		"teuton", "Cologne"
@@ -60,8 +78,8 @@ DefineSettlement("cologne", {
 		1815, "prussia" -- Cologne was a possession of the Kingdom of Prussia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		-50, 161, "farm",
-		161, 1815, "town-hall", -- Colonia Agrippina was a Roman provincial capital in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		-50, 1815, "town-hall",
+		-- Colonia Agrippina was a Roman provincial capital in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		161, 486, "guard-tower", -- Legionary base present in a location near Colonia Agrippina in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		395, 1815, "temple", -- Cologne was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		-- Archbishopric existent in Cologne during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
@@ -95,6 +113,7 @@ DefineSettlement("flensburg", {
 	Name = "Flensburg",
 	MapTemplate = "earth",
 	Position = {4054, 801},
+	Major = true,
 	CulturalNames = {
 		"teuton", "Flensburg"
 	},
@@ -112,6 +131,7 @@ DefineSettlement("kiel", {
 	Name = "Kiel",
 	MapTemplate = "earth",
 	Position = {4069, 811},
+	Major = true,
 	CulturalNames = {
 		"teuton", "Kiel"
 	},
@@ -130,6 +150,22 @@ DefineSettlement("kiel", {
 		-1600, 1815, "watch-tower",
 		-1600, 1815, "watch-tower",
 		1815, 0, "town-hall"
+	},
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+})
+
+DefineSettlement("konnenberg", {
+	Name = "Konnenberg",
+	MapTemplate = "earth",
+	Position = {4045, 857},
+	CulturalNames = {
+		"teuton", "Konnenberg"
+	},
+	HistoricalOwners = {
+		526, "saxon-tribe" -- Konnenberg was in Saxon possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+	},
+	HistoricalBuildings = {
+		526, 0, "farm"
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
@@ -175,6 +211,23 @@ DefineSettlement("mainz", {
 		-- Mayence possessed a fortress in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
+})
+
+DefineSettlement("mittelberg", {
+	Name = "Mittelberg",
+	MapTemplate = "earth",
+	Position = {4101, 882},
+	CulturalNames = {
+		"teuton", "Mittelberg"
+	},
+	HistoricalOwners = {
+		-1600, "celtic-cimmerian-tribe",
+		-1599, ""
+	},
+	HistoricalBuildings = {
+		-1600, -1599, "watch-tower" -- the fortified settlement of Mittelberg (near Nebra) existed in 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 27.
+	},
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
 DefineSettlement("nuremberg", {
@@ -240,6 +293,22 @@ DefineSettlement("regensburg", {
 	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
 
+DefineSettlement("scheidungen", {
+	Name = "Scheidungen",
+	MapTemplate = "earth",
+	Position = {4107, 873},
+	CulturalNames = {
+		"teuton", "Scheidungen"
+	},
+	HistoricalOwners = {
+		526, "thuringian-tribe" -- Scheidungen was in Thuringian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+	},
+	HistoricalBuildings = {
+		526, 0, "farm"
+	},
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+})
+
 DefineSettlement("straubing", {
 	Name = "Straubing",
 	MapTemplate = "earth",
@@ -287,6 +356,7 @@ DefineSettlement("trier", {
 	Name = "Trier",
 	MapTemplate = "earth",
 	Position = {3993, 917},
+	Major = true,
 	CulturalNames = {
 		"french", "Treves", -- "Trèves"
 		"teuton", "Trier"
@@ -310,6 +380,7 @@ DefineSettlement("worms", {
 	Name = "Worms",
 	MapTemplate = "earth",
 	Position = {4033, 920},
+	Major = true,
 	CulturalNames = {
 		"latin", "Borbetomagus",
 		"teuton", "Worms"
@@ -323,10 +394,8 @@ DefineSettlement("worms", {
 		1815, "hesse" -- Worms was a possession of the Grand Duchy of Hesse in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		395, 413, "temple", -- Worms was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		413, 436, "town-hall",
-		413, 436, "temple",
-		436, 0, "temple"
+		395, 0, "town-hall",
+		395, 0, "temple" -- Worms was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
 	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
 })

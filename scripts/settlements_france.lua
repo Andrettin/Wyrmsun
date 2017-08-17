@@ -518,6 +518,26 @@ DefineSettlement("rodez", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
+DefineSettlement("soissons", {
+	Name = "Soissons",
+	MapTemplate = "earth",
+	Position = {3915, 923},
+	Major = true,
+	CulturalNames = {
+		"french", "Soissons"
+	},
+	HistoricalOwners = {
+		395, "rome", -- Soissons was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		526, "francia", -- Soissons was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		561, "salia" -- Chlothar (Frankish king) died in 561, and Soissons went to his son Chilperich; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328; Gregory of Tours, "History of the Franks", IV.22.
+	},
+	HistoricalBuildings = {
+		395, 0, "town-hall",
+		395, 0, "temple" -- Soissons was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
 DefineSettlement("strassburg", {
 	Name = "Strassburg",
 	MapTemplate = "earth",
