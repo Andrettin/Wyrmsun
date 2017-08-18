@@ -30,6 +30,9 @@ DefineSettlement("aarhus", {
 	MapTemplate = "earth",
 	Position = {4066, 777},
 	Major = true,
+	CulturalNames = {
+		"norse", "Aarhus"
+	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
