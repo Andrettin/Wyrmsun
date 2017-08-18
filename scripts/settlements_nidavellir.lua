@@ -25,6 +25,24 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSettlement("acthna", {
+	Name = "Acthna",
+	MapTemplate = "nidavellir",
+	Position = {378, 198},
+	Major = true,
+	CulturalNames = {
+		"gnome", "Acthna"
+	},
+	HistoricalOwners = {
+		-3000, "acthnic-tribe", -- maybe should be later?
+		1, "acthna" -- maybe should be at another date?
+	},
+	HistoricalBuildings = {
+		-3000, 0, "town-hall"
+	},
+	Regions = {}
+})
+
 DefineSettlement("aurvang", { -- Aurvang settlement site; Aurvang is a region rather than a settlement, but we have no name for a settlement there yet
 	Name = "Aurvang",
 	MapTemplate = "nidavellir",
@@ -83,6 +101,25 @@ DefineSettlement("driftwood", { -- from Will Doyle's "Island of the Lizard God"
 	HistoricalUnits = { -- some units for defense
 		600, "unit-goblin-swordsman", 3000, "driftwood",
 		600, "unit-goblin-archer", 2000, "driftwood"
+	},
+	Regions = {}
+})
+
+DefineSettlement("gnana", { -- capital of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 179.
+	Name = "Gnana",
+	MapTemplate = "nidavellir",
+--	Position = {329, 221},
+	Position = {355, 209},
+	Major = true,
+	CulturalNames = {
+		"gnome", "Gnana"
+	},
+	HistoricalOwners = {
+		-3000, "sagan-tribe", -- maybe should be later?
+		1, "untersberg" -- maybe should be at another date?
+	},
+	HistoricalBuildings = {
+		-3000, 0, "town-hall"
 	},
 	Regions = {}
 })

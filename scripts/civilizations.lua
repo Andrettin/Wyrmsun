@@ -1423,16 +1423,6 @@ DefineCivilization("gnome", {
 	Description = _("Gnomes usually live in the hills and forests of Nidavellir, and often seek contact with nature. Although they have a different outlook on life than the dwarves, not rarely both two peoples live side by side, with gnomish minorities permeating dwarven settlements and vice-versa. These contacts have brought much benefit to both of them, both through trade and via the spread of gnomish technologies northwards."),
 	PersonalNames = {
 		"male", "Rubezahl"
-	},
-	SettlementNames = {
-		"Gnana", -- name of the capital of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 179.
-		
-		-- dwarven settlement names
-		"Dwarven Doors", -- from Battle for Wesnoth
-		"Kal Kartha", -- from Battle for Wesnoth: The Hammer of Thursagan
-		"Knalga", -- from Battle for Wesnoth
-		"Svarinshaug",
-		"Lyr"
 	}
 })
 
