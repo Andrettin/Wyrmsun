@@ -103,6 +103,7 @@ DefineSettlement("memphis", {
 	Name = "Memphis",
 	MapTemplate = "earth",
 	Position = {4546, 1363},
+	Major = true,
 	CulturalNames = {
 		"assyrian", "Memphis",
 		"egyptian", "Memphis",
@@ -258,6 +259,7 @@ DefineSettlement("thebes-egypt", {
 	Name = "Thebes",
 	MapTemplate = "earth",
 	Position = {4582, 1466},
+	Major = true,
 	CulturalNames = {
 		"assyrian", "Thebes",
 		"egyptian", "Thebes",

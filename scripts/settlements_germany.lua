@@ -191,7 +191,9 @@ DefineSettlement("mainz", {
 	Name = "Mainz",
 	MapTemplate = "earth",
 	Position = {4029, 911},
+	Major = true,
 	CulturalNames = {
+		"french", "Mayence",
 		"latin", "Mogontiacum",
 		"teuton", "Mainz"
 	},

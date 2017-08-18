@@ -29,6 +29,7 @@ DefineSettlement("florianopolis", {
 	Name = "Florianopolis",
 	MapTemplate = "earth",
 	Position = {2732, 2674}, -- is actually in the island of Santa Catharina, but there's not enough space there for a settlement
+	Major = true,
 	CulturalNames = {
 		"portuguese", "Florianopolis" -- Florianopolis/Desterro
 	},
@@ -60,6 +61,7 @@ DefineSettlement("porto-alegre", {
 	Name = "Porto Alegre",
 	MapTemplate = "earth",
 	Position = {2675, 2733},
+	Major = true,
 	CulturalNames = {
 		"portuguese", "Porto Alegre"
 	},
@@ -77,6 +79,7 @@ DefineSettlement("recife", {
 	Name = "Recife",
 	MapTemplate = "earth",
 	Position = {3046, 2224},
+	Major = true,
 	CulturalNames = {
 --		"dutch", "Mauritsstad", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 128.
 		"portuguese", "Recife"
@@ -114,6 +117,7 @@ DefineSettlement("rio-de-janeiro", {
 	Name = "Rio de Janeiro",
 	MapTemplate = "earth",
 	Position = {2856, 2569},
+	Major = true,
 	CulturalNames = {
 		"french", "Henriville",
 		"portuguese", "Rio de Janeiro"
@@ -133,6 +137,7 @@ DefineSettlement("salvador", {
 	Name = "Salvador",
 	MapTemplate = "earth",
 	Position = {2964, 2343},
+	Major = true,
 	CulturalNames = {
 		"portuguese", "Salvador"
 	},
@@ -150,6 +155,7 @@ DefineSettlement("sao-paulo", {
 	Name = "Sao Paulo",
 	MapTemplate = "earth",
 	Position = {2752, 2583},
+	Major = true,
 	CulturalNames = {
 		"portuguese", "Sao Paulo" -- "São Paulo"
 	},

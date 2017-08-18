@@ -29,6 +29,7 @@ DefineSettlement("fiume", {
 	Name = "Fiume",
 	MapTemplate = "earth",
 	Position = {4170, 1016},
+	Major = true,
 	CulturalNames = {
 		"slav", "Rijeka",
 		"teuton", "Fiume"
@@ -62,6 +63,7 @@ DefineSettlement("zagreb", {
 	Name = "Zagreb",
 	MapTemplate = "earth",
 	Position = {4204, 1005},
+	Major = true,
 	CulturalNames = {
 		"slav", "Zagreb",
 		"teuton", "Agram"

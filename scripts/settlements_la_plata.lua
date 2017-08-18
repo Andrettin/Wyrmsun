@@ -29,6 +29,7 @@ DefineSettlement("asuncion", {
 	Name = "Asuncion",
 	MapTemplate = "earth",
 	Position = {2527, 2634},
+	Major = true,
 	CulturalNames = {
 		"castillian", "Asuncion" -- "Asunción"
 	},
@@ -62,6 +63,7 @@ DefineSettlement("buenos-aires", {
 	Name = "Buenos Aires",
 	MapTemplate = "earth",
 	Position = {2510, 2835},
+	Major = true,
 	CulturalNames = {
 		"castillian", "Buenos Aires"
 	},
@@ -96,6 +98,7 @@ DefineSettlement("montevideo", {
 	Name = "Montevideo",
 	MapTemplate = "earth",
 	Position = {2561, 2842},
+	Major = true,
 	CulturalNames = {
 		"castillian", "Montevideo"
 	},

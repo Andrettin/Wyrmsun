@@ -79,6 +79,7 @@ DefineSettlement("troy", {
 	Name = "Troy",
 	MapTemplate = "earth",
 	Position = {4437, 1140},
+	Major = true,
 	CulturalNames = {
 		"greek", "Ilium", -- Troy/Ilium
 		"hittite", "Troy"

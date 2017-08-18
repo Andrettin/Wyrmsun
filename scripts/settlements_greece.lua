@@ -69,7 +69,7 @@ DefineSettlement("argos", {
 		-700, "argos" -- Argos was part of the state of Argolis/Argos in the 700-600 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-700, 0, "town-hall"
+		-700, 0, "farm"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -78,6 +78,7 @@ DefineSettlement("athens", {
 	Name = "Athens",
 	MapTemplate = "earth",
 	Position = {4380, 1184},
+	Major = true,
 	CulturalNames = {
 		"greek", "Athens", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 		"latin", "Athens"
@@ -117,16 +118,18 @@ DefineSettlement("corinth", {
 	Name = "Corinth",
 	MapTemplate = "earth",
 	Position = {4360, 1185},
+	Major = true,
 	CulturalNames = {
 		"greek", "Corinth"
 	},
 	HistoricalOwners = {
+		-1450, "mycenae", -- Corinth's area was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 		-700, "argos", -- Corinth was part of the state of Argolis/Argos in the 700-600 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 		-500, "corinth", -- Greece at the time of the war with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
 		-146, "" -- Corinth was destroyed by Rome in 146 BC; Source: Tenney Frank, "Mercantilism and Rome's Foreign Policy", 1913, p. 243.
 	},
 	HistoricalBuildings = {
-		-700, -146, "town-hall"
+		-1450, -146, "town-hall"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -300,6 +303,7 @@ DefineSettlement("knossos", {
 	Name = "Knossos",
 	MapTemplate = "earth",
 	Position = {4410, 1244},
+	Major = true,
 	CulturalNames = {
 		"greek", "Knossos",
 		"latin", "Cnossus"
@@ -342,8 +346,7 @@ DefineSettlement("mycenae", {
 		-500, "argos" -- Greece at the time of the war with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
 	},
 	HistoricalBuildings = {
-		-1450, -700, "town-hall",
-		-700, 0, "farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -359,7 +362,7 @@ DefineSettlement("orchomenus", {
 		-1450, "mycenae" -- Orchomenus was a center of the highest Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "town-hall"
+		-1450, 0, "farm"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -399,15 +402,18 @@ DefineSettlement("sicyon", {
 DefineSettlement("thebes", {
 	Name = "Thebes",
 	MapTemplate = "earth",
-	Position = {4369, 1176},
+--	Position = {4369, 1176},
+	Position = {4357, 1170}, -- moved here to give Athens more space
+	Major = true,
 	CulturalNames = {
 		"greek", "Thebes"
 	},
 	HistoricalOwners = {
+		-1450, "mycenae", -- Thebes' area was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 		-700, "thebes" -- Thebes was part of the state of Boeotia/Thebes in the 700-600 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-700, 0, "town-hall"
+		-1450, 0, "town-hall"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })

@@ -29,6 +29,7 @@ DefineSettlement("carthage", {
 	Name = "Carthage",
 	MapTemplate = "earth",
 	Position = {4074, 1208},
+	Major = true,
 	CulturalNames = {
 		"phoenician", "Carthage"
 	},

@@ -121,6 +121,7 @@ DefineSettlement("besancon", {
 	Name = "Besancon",
 	MapTemplate = "earth",
 	Position = {3973, 978},
+	Major = true,
 	CulturalNames = {
 		"frankish", "Vesontio",
 		"french", "Besancon" -- "Besançon"
@@ -332,6 +333,7 @@ DefineSettlement("metz", {
 	Name = "Metz",
 	MapTemplate = "earth",
 	Position = {3981, 931},
+	Major = true,
 	CulturalNames = {
 		"frankish", "Mettis",
 		"french", "Metz"
@@ -542,6 +544,7 @@ DefineSettlement("strassburg", {
 	Name = "Strassburg",
 	MapTemplate = "earth",
 	Position = {4013, 948},
+	Major = true,
 	CulturalNames = {
 		"celt", "Argentoratum",
 		"frankish", "Argentoratum",

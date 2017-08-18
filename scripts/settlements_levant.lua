@@ -297,6 +297,7 @@ DefineSettlement("damascus", {
 	Name = "Damascus",
 	MapTemplate = "earth",
 	Position = {4666, 1279},
+	Major = true,
 	CulturalNames = {
 		"assyrian", "Damascus",
 		"babylonian", "Damascus",
@@ -896,6 +897,7 @@ DefineSettlement("tyre", {
 	Name = "Tyre",
 	MapTemplate = "earth",
 	Position = {4642, 1290},
+	Major = true,
 	CulturalNames = {
 		"babylonian", "Tyre",
 		"persian", "Tyre",

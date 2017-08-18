@@ -183,6 +183,7 @@ DefineSettlement("florence", {
 	Name = "Florence",
 	MapTemplate = "earth",
 	Position = {4095, 1054},
+	Major = true,
 	CulturalNames = {
 		"italian", "Florence",
 		"latin", "Florentia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -235,6 +236,7 @@ DefineSettlement("milan", {
 	Name = "Milan",
 	MapTemplate = "earth",
 	Position = {4049, 1013},
+	Major = true,
 	CulturalNames = {
 		"italian", "Milan",
 		"latin", "Mediolanum", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -259,6 +261,7 @@ DefineSettlement("modena", {
 	Name = "Modena",
 	MapTemplate = "earth",
 	Position = {4089, 1032},
+	Major = true,
 	CulturalNames = {
 		"italian", "Modena",
 		"latin", "Mutina" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
@@ -278,6 +281,7 @@ DefineSettlement("naples", {
 	Name = "Naples",
 	MapTemplate = "earth",
 	Position = {4163, 1117},
+	Major = true,
 	CulturalNames = {
 		"greek", "Neapolis",
 		"italian", "Naples",
@@ -409,6 +413,7 @@ DefineSettlement("rome", {
 	Name = "Rome",
 	MapTemplate = "earth",
 	Position = {4126, 1096},
+	Major = true,
 	CulturalNames = {
 		"italian", "Rome",
 		"latin", "Rome"
@@ -466,6 +471,7 @@ DefineSettlement("venice", {
 	Name = "Venice",
 	MapTemplate = "earth",
 	Position = {4122, 1011},
+	Major = true,
 	CulturalNames = {
 		"italian", "Venice",
 		"teuton", "Venice" -- Venedig
