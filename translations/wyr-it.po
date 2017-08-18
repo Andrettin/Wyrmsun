@@ -16,20 +16,20 @@ msgstr ""
 "X-Poedit-SearchPath-0: c:/Program Files/Wyrmsun/scripts\n"
 
 msgid "~!Single Player Game"
-msgstr "Giocatore singolo"
+msgstr "Giocatore ~!singolo"
 
 msgid "~!Multi Player Game"
-msgstr "Multigiocatore"
+msgstr "~!Multigiocatore"
 
 # This translation is literal, but "Gioco strategico(strategic game)" or "Battaglia strategica(strategic battle, sounds better in my opinion)" may be more appropriate
 msgid "~!Grand Strategy Game"
-msgstr "Il Grande Gioco Di Strategia"
+msgstr "Il ~!Grande Gioco Di Strategia"
 
 msgid "Load Game"
 msgstr "Carica partita"
 
 msgid "~!Load Game"
-msgstr "Carica partita"
+msgstr "Carica partita (~!L)"
 
 # This one is literal, it may need some work
 msgid "Replay Game"
@@ -37,7 +37,7 @@ msgstr "Replay del gioco"
 
 # same as Replay Game
 msgid "~!Replay Game"
-msgstr "Replay del giuoco"
+msgstr "~!Replay del giuoco"
 
 msgid "Map Editor"
 msgstr "Editor Mappe"
@@ -55,13 +55,13 @@ msgid "En~!cyclopedia"
 msgstr "En~!ciclopedia"
 
 msgid "S~!how Credits"
-msgstr "Riconoscimenti"
+msgstr "Riconoscimenti (~!H)"
 
 msgid "E~!xit Program"
-msgstr "E~!sci dal Programma"
+msgstr "Esci dal Programma (~!X)"
 
 msgid "~!Quests"
-msgstr "~!Missioni"
+msgstr "Missioni (~!Q)"
 
 msgid "~<Quests~>"
 msgstr "~<Missioni~>"

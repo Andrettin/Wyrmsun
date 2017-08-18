@@ -809,6 +809,7 @@
 /graphics/neutral/icons/gryphon.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/gryphon_blue_feathers.png (by Jinn) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/neutral/icons/gryphon_white_feathers.png (by Jinn) (licensed under the CC0)
+/graphics/neutral/icons/gunpowder.png (by Exidelo) (licensed under the CC0)
 /graphics/neutral/icons/halberd.png (by Vladislav "iDreamRunner") (licensed under the CC0)
 /graphics/neutral/icons/harvest.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/healing.png (by Jinn) (licensed under the CC0)
