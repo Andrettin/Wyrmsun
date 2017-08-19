@@ -62,6 +62,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Buildings
 - Town Halls can now only be built on top of Settlement Sites.
+- Smithies can now store Copper, Silver, Gold and Coal.
 
 * Map Editor
 - Fixed crash which happened when placing a railroad over a neutral copper mine.

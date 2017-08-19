@@ -3743,6 +3743,7 @@ DefineUnitType("unit-template-smithy", {
 	ButtonPos = 5,
 	ButtonKey = "s",
 	ButtonHint = _("Build ~!Smithy"),
+	CanStore = {"copper", "silver", "gold", "coal"},
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-amulet", "unit-ring"},
 	ResourceDemand = {"furniture", 3, "leather", 3},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
