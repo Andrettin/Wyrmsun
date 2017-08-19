@@ -2791,6 +2791,8 @@ function ApplyRawTiles()
 	end
 		
 	CleanRawTiles()
+	
+	Map:AdjustMap()
 end
 
 function FindAppropriateSpawnPoint(min_x, max_x, min_y, max_y)
