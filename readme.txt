@@ -68,6 +68,9 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed crash which happened when placing a railroad over a neutral copper mine.
 - Deposits and other resource units can no longer be set to store more than 1 million of their respective resource, as overly large numbers could cause issues for the game.
 
+* Maps
+- Fixed issue which caused some maps (i.e. Aquitania) to potentially start with tile irregularities.
+
 * Miscellaneous
 - Fixed the "northwest-northeast-inner" border graphics, which were incorrectly using the graphics for the "northwest-northeast-southwest-inner" border.
 
