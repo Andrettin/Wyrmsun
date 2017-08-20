@@ -270,9 +270,10 @@ DefineDeity("hretha", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p
 	Gender = "female"
 })
 
-DefineDeity("idun", { -- Wife of Bragi; she takes care of the golden apples of youth; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 246.
+DefineDeity("idun", { -- wife of Bragi; she takes care of the golden apples of youth; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 246; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 107-109.
 	Name = "Idun",
 	Pantheon = "Aesir",
+	HomePlane = "Asgard",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "female",

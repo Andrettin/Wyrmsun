@@ -1294,7 +1294,6 @@ DefineCivilization("ettin", {
 		"female", "Jarnsaxa", -- giantess from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 246.
 		"female", "Laufey", -- giantess from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 246.
 		"female", "Menglad", -- giantess from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 122-123.
-		"female", "Skadi", -- giantess from Norse mythology, the daughter of Thiazi; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 250; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 52.
 		"female", "Thokk", -- giantess from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251.
 		"male", "Aurgelmir", -- other name for Ymir, the first frost giant in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 240; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 58.
 		"male", "Baugi", -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 240.
@@ -1308,7 +1307,6 @@ DefineCivilization("ettin", {
 		"male", "Skrymir", -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 250.
 		"male", "Surt", -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 250.
 		"male", "Suttung", -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 250.
-		"male", "Thiazi", -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251.
 		"male", "Thrym", -- frost giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251.
 		"male", "Vafthrudnir", -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 252.
 		"male", "Ymir" -- the first frost giant in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 240, 253; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 58.

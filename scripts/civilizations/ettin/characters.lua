@@ -91,3 +91,18 @@ DefineCharacter("gerd", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 	Civilization = "ettin",
 	Father = "gymir"
 })
+
+DefineCharacter("thiazi", { -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 106-109.
+	Name = "Thiazi", -- "Þjazi"
+	Gender = "male",
+	Type = "unit-ettin",
+	Civilization = "ettin"
+})
+
+DefineCharacter("skadi", { -- giantess from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 250; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 52, 106, 109.
+	Name = "Skadi", -- "Skaði"
+	Gender = "female",
+	Type = "unit-ettin",
+	Civilization = "ettin",
+	Father = "thiazi"
+})
