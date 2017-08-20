@@ -196,12 +196,15 @@ end
 function DefineUnitType(unit_type, data)
 	local town_hall = false
 	local resource_mine = false
+	local smithy = false
 	local market = false
 	local dock = false
 	if (data.Class == "town-hall" or data.Class == "stronghold") then
 		town_hall = true
 	elseif ((data.GivesResource and data.BuildingRules == nil and data.GivesResource ~= "trade") or data.Class == "lumber-mill") then
 		resource_mine = true
+	elseif (data.Class == "smithy") then
+		smithy = true
 	elseif (data.Class == "market") then
 		market = true
 	elseif (data.Class == "dock") then
@@ -218,6 +221,8 @@ function DefineUnitType(unit_type, data)
 			or (GetUnitTypeData(unit_type, "Class") == "lumber-mill" and data.Class == nil)
 		) then
 			resource_mine = true
+		elseif (GetUnitTypeData(unit_type, "Class") == "smithy" and data.Class == nil) then
+			smithy = true
 		elseif (GetUnitTypeData(unit_type, "Class") == "market" and data.Class == nil) then
 			market = true
 		elseif (GetUnitTypeData(unit_type, "Class") == "dock" and data.Class == nil) then
@@ -246,6 +251,24 @@ function DefineUnitType(unit_type, data)
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-latin-town-hall" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-town-hall" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-stronghold" }
+			}
+		}
+	elseif (smithy) then
+		data.BuildingRules = {
+			"and", {
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-deposit" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-silver-deposit" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-silver-mine" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-deposit" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-mine" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine" },
+--				"distance", { Distance = 3, DistanceType = ">", Type = "unit-yale-cave" },
+--				"distance", { Distance = 3, DistanceType = ">", Type = "unit-yale-hunting-lodge" },
+--				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-lumber-mill" },
+--				"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-carpenters-shop" },
+--				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-yale-pen" },
+--				"distance", { Distance = 3, DistanceType = ">", Type = "unit-joruvellir-yale-pen" }
 			}
 		}
 	elseif (market) then
@@ -3539,7 +3562,7 @@ DefineUnitType("unit-template-town-hall", {
 	ExplodeWhenKilled = "missile-explosion",
 	Type = "land",
 	TownHall = true,
-	LumberImprove = true, StoneImprove = true,
+	MetalImprove = true, LumberImprove = true, StoneImprove = true,
 	BuilderOutside = true,
 	RecruitHeroes = true,
 	IncreasesLuxuryDemand = true,
@@ -3555,7 +3578,7 @@ DefineUnitType("unit-template-town-hall", {
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-amulet", "unit-ring", "unit-scroll", "unit-book"}, -- worker-related items, as well as those we would expect a center of administration to have
 	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},
-	BuildingRulesString = "Must be built on top of a Settlement Site",
+	BuildingRulesString = "Must be built on a Settlement Site",
 	Sounds = {
 		"selected", "town-hall-selected",
 --		"acknowledge", "town-hall-acknowledge",
@@ -3737,6 +3760,7 @@ DefineUnitType("unit-template-smithy", {
 	Type = "land",
 	BuilderOutside = true,
 	IncreasesLuxuryDemand = true,
+	MetalImprove = true,
 	CanStore = {"copper", "silver", "gold", "coal"},
 	Drops = {"unit-wood-pile"},
 	BurnPercent = 50,
@@ -3746,6 +3770,7 @@ DefineUnitType("unit-template-smithy", {
 	ButtonHint = _("Build ~!Smithy"),
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-amulet", "unit-ring"},
 	ResourceDemand = {"furniture", 3, "leather", 3},
+	BuildingRulesString = "Cannot be built close to mines",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 		"selected", "smithy-selected",

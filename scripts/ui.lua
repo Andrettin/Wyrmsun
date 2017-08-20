@@ -680,10 +680,10 @@ DefinePanelContents(
 	},
 
 	-- Time Efficiency Bonus
-	{ Pos = {9, 103}, Condition = {ShowOpponent = false, TimeEfficiencyBonus = "only", GiveResource = "false", Supply = "false", LumberImprove = "false", AttackRange = "false", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
+	{ Pos = {9, 103}, Condition = {ShowOpponent = false, TimeEfficiencyBonus = "only", GiveResource = "false", Supply = "false", MetalImprove = "false", LumberImprove = "false", AttackRange = "false", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
 		More = {"Text", {Text = "Time Eff.:"}}
 	},
-	{ Pos = {115, 103}, Condition = {ShowOpponent = false, TimeEfficiencyBonus = "only", GiveResource = "false", Supply = "false", LumberImprove = "false", AttackRange = "false", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
+	{ Pos = {115, 103}, Condition = {ShowOpponent = false, TimeEfficiencyBonus = "only", GiveResource = "false", Supply = "false", MetalImprove = "false", LumberImprove = "false", AttackRange = "false", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
 		More = {"Text", {Text = Concat(
 			If(GreaterThan(ActiveUnitVar("TimeEfficiencyBonus", "Value"), 0), "+", ""),
 			Concat(String(ActiveUnitVar("TimeEfficiencyBonus", "Value")), "%")
@@ -691,6 +691,16 @@ DefinePanelContents(
 	},
 	
 	-- Time Efficiency Bonus
+	{ Pos = {9, 158}, Condition = {ShowOpponent = false, TimeEfficiencyBonus = "only", GiveResource = "false", MetalImprove = "only", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
+		More = {"Text", {Text = "Time Eff.:"}}
+	},
+	{ Pos = {115, 158}, Condition = {ShowOpponent = false, TimeEfficiencyBonus = "only", GiveResource = "false", MetalImprove = "only", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
+		More = {"Text", {Text = Concat(
+			If(GreaterThan(ActiveUnitVar("TimeEfficiencyBonus", "Value"), 0), "+", ""),
+			Concat(String(ActiveUnitVar("TimeEfficiencyBonus", "Value")), "%")
+		)}}
+	},
+
 	{ Pos = {9, 158}, Condition = {ShowOpponent = false, TimeEfficiencyBonus = "only", GiveResource = "false", LumberImprove = "only", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
 		More = {"Text", {Text = "Time Eff.:"}}
 	},
@@ -758,9 +768,16 @@ DefinePanelContents(
   Pos = {info_panel_x, info_panel_y}, DefaultFont = "game",
   Condition = {ShowOpponent = false, HideNeutral = true, TownHall = "false", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
   Contents = {
+	{ Pos = {9, 103}, Condition = {MetalImprove = "only"}, More = {"Text", _("Processing")} },
 	{ Pos = {9, 103}, Condition = {LumberImprove = "only"}, More = {"Text", _("Processing")} },
 	{ Pos = {9, 103}, Condition = {StoneImprove = "only"}, More = {"Text", _("Processing")} },
 --	{ Pos = {9, 103}, Condition = {OilImprove = "only"}, More = {"Text", "Processing"} },
+	{ Pos = {9, 116}, Condition = {MetalImprove = "only"}, More = {"Text", {Text = _("Copper:")}}},
+	{ Pos = {115, 116}, Condition = {MetalImprove = "only"}, HighlightColor = "yellow", More = { "Text", {Text = Concat("100",
+										If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "copper"), 100),
+										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "copper"), 100)))),
+										"" ))}}
+    },
 	{ Pos = {9, 116}, Condition = {LumberImprove = "only"}, More = {"Text", {Text = _("Lumber:")}}},
 	{ Pos = {115, 116}, Condition = {LumberImprove = "only"}, HighlightColor = "yellow", More = { "Text", {Text = Concat("100",
 										If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "lumber"), 100),

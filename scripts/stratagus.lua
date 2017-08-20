@@ -65,7 +65,7 @@ function InitGameVariables()
 	end
 end
 
-DefineBoolFlags("LumberImprove", "OilImprove", "StoneImprove")
+DefineBoolFlags("MetalImprove", "LumberImprove", "OilImprove", "StoneImprove")
 
 --  Edit the next sections to get your look and feel.
 --  Note, some of those values are overridden by user preferences,
