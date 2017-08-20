@@ -112,6 +112,7 @@ DefineSettlement("ecbatana", {
 	Name = "Ecbatana",
 	MapTemplate = "earth",
 	Position = {4958, 1246},
+	Major = true,
 	CulturalNames = {
 		"persian", "Ecbatana" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},

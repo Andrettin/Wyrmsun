@@ -103,6 +103,7 @@ DefineSettlement("babylon", {
 	Name = "Babylon",
 	MapTemplate = "earth",
 	Position = {4848, 1300},
+	Major = true,
 	CulturalNames = {
 		"assyrian", "Babylon",
 		"babylonian", "Babylon",
@@ -349,6 +350,7 @@ DefineSettlement("nineveh", {
 	Name = "Nineveh",
 	MapTemplate = "earth",
 	Position = {4828, 1214},
+	Major = true,
 	CulturalNames = {
 		"assyrian", "Nineveh",
 		"persian", "Nineveh"
@@ -524,6 +526,7 @@ DefineSettlement("ur", {
 	Name = "Ur",
 	MapTemplate = "earth",
 	Position = {4895, 1345},
+	Major = true,
 	CulturalNames = {
 		"assyrian", "Ur",
 		"babylonian", "Ur"
@@ -535,7 +538,7 @@ DefineSettlement("ur", {
 		-500, "persia" -- Ur's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "farm"
+		-1450, 0, "town-hall"
 	},
 	Regions = {"asia"}
 })

@@ -29,6 +29,7 @@ DefineSettlement("amisus", {
 	Name = "Amisus",
 	MapTemplate = "earth",
 	Position = {4663, 1106},
+	Major = true,
 	CulturalNames = {
 		"persian", "Amisus"
 	},
@@ -63,6 +64,7 @@ DefineSettlement("phaselis", {
 	Name = "Phaselis",
 	MapTemplate = "earth",
 	Position = {4534, 1216},
+	Major = true,
 	CulturalNames = {
 		"hittite", "Phaselis"
 	},
@@ -80,6 +82,7 @@ DefineSettlement("sinope", {
 	Name = "Sinope",
 	MapTemplate = "earth",
 	Position = {4637, 1092},
+	Major = true,
 	CulturalNames = {
 		"hittite", "Sinope"
 	},

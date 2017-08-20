@@ -61,6 +61,7 @@ DefineSettlement("sardis", {
 	Name = "Sardis",
 	MapTemplate = "earth",
 	Position = {4474, 1170},
+	Major = true,
 	CulturalNames = {
 		"hittite", "Sardis",
 		"persian", "Sardis"

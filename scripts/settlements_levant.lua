@@ -25,6 +25,24 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSettlement("akko", {
+	Name = "Akko",
+	MapTemplate = "earth",
+	Position = {4638, 1299},
+	CulturalNames = {
+		"phoenician", "Akko"
+	},
+	HistoricalOwners = {
+		-953, "philistine-tribe", -- Akko was part of the territory of the Phoenicians in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		-600, "babylon", -- Akko's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-500, "persia" -- Akko's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+	},
+	HistoricalBuildings = {
+		-953, 0, "farm"
+	},
+	Regions = {"asia"}
+})
+
 DefineSettlement("aphek", {
 	Name = "Aphek",
 	MapTemplate = "earth",
@@ -437,9 +455,7 @@ DefineSettlement("gaza", {
 		-500, "persia" -- Gaza's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-1450, -1250, "farm",
-		-1250, -720, "town-hall",
-		-720, 0, "farm"
+		-1450, 0, "farm"
 	},
 	Regions = {"asia"}
 })
@@ -611,6 +627,7 @@ DefineSettlement("jerusalem", {
 	Name = "Jerusalem",
 	MapTemplate = "earth",
 	Position = {4642, 1327},
+	Major = true,
 	CulturalNames = {
 		"babylonian", "Jerusalem",
 		"hebrew", "Jerusalem",
