@@ -169,6 +169,25 @@ DefineSettlement("lggi", { -- Lggi tribe settlement site; this is the name of a 
 	Regions = {}
 })
 
+DefineSettlement("shorbear-hold", { -- From Battle for Wesnoth: The Sceptre of Fire (Hills of the Shorbear Clan, Towards the Caves)
+	Name = "Shorbear Hold",
+	MapTemplate = "shorbear-hills",
+	Position = {19, 17},
+	Major = true,
+	CulturalNames = {
+		"dwarf", "Shorbear Hold"
+	},
+	HistoricalOwners = {
+		24, "shorbear-clan",
+		35, "norlund-clan",
+		40, ""
+	},
+	HistoricalBuildings = {
+		24, 35, "stronghold"
+	},
+	Regions = {}
+})
+
 DefineSettlement("svarinshaug", {
 	Name = "Svarinshaug",
 	MapTemplate = "nidavellir",

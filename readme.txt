@@ -74,6 +74,7 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - Fixed the "northwest-northeast-inner" border graphics, which were incorrectly using the graphics for the "northwest-northeast-southwest-inner" border.
 - The initial random seed for the game now varies according to the computer's time and date, so that random maps should no longer yield the same result multiple times.
+- Added encyclopedia page explaining the No Randomness mode in the Game Concepts section.
 
 -----------------------------------------------------------------------
 - 2.8.0

@@ -90,6 +90,10 @@ GameConcepts = {
 		Name = "Mer~!cenaries",
 		Description = "Mercenaries can be hired at mercenary camps. They do not take any time to train, becoming ready instantly. However, mercenary camp unit stocks take some time to recover."
 	},
+	NoRandomness = {
+		Name = _("No Randomness"),
+		Description = _("In the No Randomness mode, damage does not randomly vary. There is also no random chance to miss attacks, with accuracy providing a bonus to damage instead, and evasion to armor. Furthermore, traits for non-hero units have no effect.")
+	},
 	Trade = {
 		Name = "~!Trade",
 		Description = "Resource trade is conducted in market buildings, where lumber and stone can be exchanged for copper. Luxury resources, such as furniture, are sold automatically if a market is present. The trade cost percentage is deducted from the copper received when a resource is sold, and from the quantity obtained when a resource is bought.\n\nTrader units can generate copper by trading with foreign markets or docks. The higher the resource price difference with the other player, the more profitable trade with their markets and docks is. When a unit conducts trade, it also converges the prices of both players."

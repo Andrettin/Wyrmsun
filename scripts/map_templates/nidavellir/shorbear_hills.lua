@@ -58,6 +58,4 @@ SetMapTemplateUnit("shorbear-hills", "unit-dwarven-steelclad", "norlund-clan", {
 --SetMapTemplateLayerConnector("shorbear-hills", "unit-cavern-entrance", {36, 3}, 1)
 --SetMapTemplateLayerConnector("nidavellir-underground", "unit-cavern-entrance", {36, 3}, 0)
 
-SetMapTemplateUnit("shorbear-hills", "unit-dwarven-stronghold", "shorbear-clan", {19, 17}, 24, 35)
-SetMapTemplateUnit("shorbear-hills", "unit-dwarven-thane", "shorbear-clan", {19, 17}, 24, 35) -- Glonoin
-SetMapTemplateUnit("shorbear-hills", "unit-dwarven-stronghold", "norlund-clan", {19, 17}, 35, 40)
+SetMapTemplateUnit("shorbear-hills", "unit-dwarven-thane", "shorbear-clan", {19, 17}, 24, 35) -- Glonoin (location of the Shorbear Hold)
