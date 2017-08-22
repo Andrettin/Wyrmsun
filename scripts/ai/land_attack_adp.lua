@@ -63,9 +63,6 @@ function AiLandAttack()
 		town_halls = town_halls + GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("stronghold"))
 	end
 	
-	if (CheckDependency(AiPlayer(), GetAiUnitType("town-hall")) and town_halls < 1) then
-		AiSet(GetAiUnitType("town-hall"), 1)
-	end
 	if (CheckDependency(AiPlayer(), GetAiUnitType("worker")) and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) < 1) then
 		AiSet(GetAiUnitType("worker"), 1)
 	end
@@ -188,9 +185,6 @@ function AiLandAttack()
 			end
 			if (GetAiUnitType("alchemy") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("alchemy"))) then
 				AiResearch(GetAiUnitType("alchemy")) -- if has a stronghold, research alchemy
-			end
-			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("town-hall")) < 2) then
-				AiSet(GetAiUnitType("town-hall"), 2) -- make an expansion
 			end
 			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) < 3) then
 				AiSet(GetAiUnitType("barracks"), 3)

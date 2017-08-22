@@ -41,9 +41,7 @@ local end_loop_sea_funcs = {
 
 local sea_funcs = {
 	function() return AiSleep(AiGetSleepCycles()) end,
-	function() return AiNeed(GetAiUnitType("town-hall")) end,
 	function() return AiSet(GetAiUnitType("worker"), 1) end,
-	function() return AiWait(GetAiUnitType("town-hall")) end,
 	function() return AiWait(GetAiUnitType("worker")) end,  -- start hangs if nothing is available
 
 	function() return AiSet(GetAiUnitType("worker"), 9) end,
@@ -207,7 +205,6 @@ local sea_funcs = {
 
 	function() return AiSleep(500) end,
 --	function() return AiResearch(AiUpgradeShipCannon2()) end,
-	function() return AiNeed(GetAiUnitType("town-hall")) end,
 	function() return AiForce(0, {GetAiUnitType("infantry"), 3, GetAiUnitType("siege-engine"), 1, GetAiUnitType("glider"), 1}) end,
 --	function() return AiForce(3, {AiDestroyer(), 1, AiBattleship(), 1, GetAiUnitType("glider"), 1}) end,
 --	function() return AiForce(1, {AiSubmarine(), 1, AiDestroyer(), 3, AiBattleship(), 4, GetAiUnitType("glider"), 1}) end,

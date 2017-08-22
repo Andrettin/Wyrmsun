@@ -32,7 +32,6 @@ local end_loop_funcs = {
 
 -- EXPANSION AND DEFENSE
 
-	function() return AiNeed(GetAiUnitType("town-hall")) end,
 	function() return AiNeed(GetAiUnitType("lumber-mill")) end,
 --	function() return AiNeed(GetAiUnitType("watch-tower")) end,
 --	function() return AiUpgradeTo(AiCannonTower()) end,
@@ -70,9 +69,7 @@ local land_funcs = {
 		end
 		return false;
 	end,
-	function() return AiNeed(GetAiUnitType("town-hall")) end,
 	function() return AiSet(GetAiUnitType("worker"), 1) end,
-	function() return AiWait(GetAiUnitType("town-hall")) end,
 	function() return AiWait(GetAiUnitType("worker")) end, -- start hangs if nothing available
 
 	function() return AiSet(GetAiUnitType("worker"), 4) end, -- 4
@@ -206,7 +203,6 @@ local land_funcs = {
 
 -- EXPANSION
 
-	function() return AiNeed(GetAiUnitType("town-hall")) end,
 	function() return AiNeed(GetAiUnitType("barracks")) end,
 	
 -- ATTACK!!
@@ -245,7 +241,6 @@ local land_funcs = {
 -- EXPANSION
 
 	function() return AiSet(GetAiUnitType("worker"), 45) end,
-	function() return AiNeed(GetAiUnitType("town-hall")) end,
 --	function() return AiNeed(GetAiUnitType("watch-tower")) end,
 --	function() return AiUpgradeTo(AiCannonTower()) end,
 	function() return AiNeed(GetAiUnitType("banner")) end,
@@ -265,7 +260,6 @@ local land_funcs = {
 	function() return AiResearch(GetAiUnitType("alchemy")) end, -- research alchemy to improve shooters
 
 	function() return AiSet(GetAiUnitType("worker"), 40) end,
-	function() return AiNeed(GetAiUnitType("town-hall")) end,
 	
 
 -- SECOND BIG WAVE
