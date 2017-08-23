@@ -69,6 +69,7 @@ https://github.com/Andrettin/Wyrmsun
 - Deposits and other resource units can no longer be set to store more than 1 million of their respective resource, as overly large numbers could cause issues for the game.
 - When creating a new map, the map width and height can now be chosen by inputing a number. Any number between 32 and 512 can be chosen.
 - Fixed player properties screen issue for new maps.
+- Added option to delete custom unit types.
 
 * Maps
 - Fixed issue which caused some maps (i.e. Aquitania) to potentially start with tile irregularities.

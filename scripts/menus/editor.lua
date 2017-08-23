@@ -850,7 +850,7 @@ function RunEditorFactionProperties()
 				function() confirm:stop() end
 			)
 
-			confirm:run()
+			confirm:run(false)
 		end
 	)
 	
@@ -1246,9 +1246,35 @@ function EditUnitTypeProperties(unit_type)
 		end
 	)
 	
+	local delete_button = menu:addFullButton(_("~!Delete"), "d", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 0),
+		function()
+			local confirm = WarGameMenu(panel(4))
+
+			confirm:resize(288,128)
+
+			confirm:addLabel("Delete " .. GetUnitTypeName(unit_type), 288 / 2, 11)
+			confirm:addLabel("Are you sure? This cannot be undone.", 288 / 2, 45, Fonts["game"])
+
+			confirm:addHalfButton("~!Yes", "y", 1 * (288 / 3) - 90, 120 - 16 - 27,
+				function()
+					DeleteModUnitType(unit_type)
+					confirm:stop()
+					menu:stop()
+				end
+			)
+
+			confirm:addHalfButton("~!No", "n", 3 * (288 / 3) - 116, 120 - 16 - 27,
+				function() confirm:stop() end
+			)
+
+			confirm:run(false)
+		end
+	)
+	
 	if (GetUnitTypeData(unit_type, "Mod") ~= Map.Info.Filename) then
 		main_properties_button:setEnabled(false)
 		graphics_properties_button:setEnabled(false)
+		delete_button:setEnabled(false)
 	end
 
 	menu:run(false)
