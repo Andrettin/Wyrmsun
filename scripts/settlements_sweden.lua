@@ -25,6 +25,22 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSettlement("goteborg", {
+	Name = "Göteborg",
+	MapTemplate = "earth",
+	Position = {4105, 726},
+	Major = true,
+	CulturalNames = {
+		"goth", "Gothenburg",
+		"norse", "Göteborg"
+	},
+	HistoricalOwners = {
+	},
+	HistoricalBuildings = {
+	},
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+})
+
 DefineSettlement("malmo", {
 	Name = "Malmö",
 	MapTemplate = "earth",

@@ -75,13 +75,6 @@ DefineWorldMapTile({510, 81}, {
 	}
 })
 
-DefineWorldMapTile({510, 85}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"norse", "Oslo"
-	}
-})
-
 DefineWorldMapTile({511, 86}, {
 	World = "Earth",
 	CulturalSettlementNames = {
@@ -103,25 +96,10 @@ DefineWorldMapTile({512, 83}, {
 	}
 })
 
-DefineWorldMapTile({513, 91}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"goth", "Gothenburg",
-		"norse", "Göteborg"
-	}
-})
-
 DefineWorldMapTile({515, 97}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"norse", "Copenhagen"
-	}
-})
-
-DefineWorldMapTile({517, 97}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"norse", "Malmö"
 	}
 })
 
@@ -143,13 +121,6 @@ DefineWorldMapTile({530, 77}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"norse", "Härnösand"
-	}
-})
-
-DefineWorldMapTile({532, 92}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"norse", "Wisby"
 	}
 })
 
