@@ -25,6 +25,21 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSettlement("malmo", {
+	Name = "Malmö",
+	MapTemplate = "earth",
+	Position = {4136, 782},
+	Major = true,
+	CulturalNames = {
+		"norse", "Malmö"
+	},
+	HistoricalOwners = {
+	},
+	HistoricalBuildings = {
+	},
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+})
+
 DefineSettlement("roma-gotland", {
 	Name = "Roma",
 	MapTemplate = "earth",
@@ -47,7 +62,7 @@ DefineSettlement("sigtun", {
 	Position = {4243, 692},
 	Major = true,
 	CulturalNames = {
-		"germanic", "Segiztuna", -- "Segizt�na" is a rendering of "Sigtun" in Proto-Germanic, since the Ynglinga saga the city was founded when the cultural ancestors of the Germanic peoples (= Odin's people) first settled Scandinavia
+		"germanic", "Segiztuna", -- "Segiztûna" is a rendering of "Sigtun" in Proto-Germanic, since the Ynglinga saga the city was founded when the cultural ancestors of the Germanic peoples (= Odin's people) first settled Scandinavia
 		"norse", "Sigtun"
 	},
 	HistoricalOwners = {
@@ -73,6 +88,21 @@ DefineSettlement("torsburgen", {
 	},
 	HistoricalBuildings = {
 		300, 1100, "watch-tower" -- the enormous hill fort of Torsburgen had two phases, one dated to 300-400 AD, and the other to 800-1100 AD; Source: "Guta Saga: The History of the Gotlanders", 1999, pp. xxvii-xxviii.
+	},
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+})
+
+DefineSettlement("visby", {
+	Name = "Visby",
+	MapTemplate = "earth",
+	Position = {4259, 735},
+	Major = true,
+	CulturalNames = {
+		"norse", "Visby"
+	},
+	HistoricalOwners = {
+	},
+	HistoricalBuildings = {
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })

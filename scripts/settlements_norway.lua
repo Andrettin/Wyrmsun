@@ -25,49 +25,17 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("gdansk", {
-	Name = "Gdansk",
+DefineSettlement("oslo", {
+	Name = "Oslo",
 	MapTemplate = "earth",
-	Position = {4265, 811},
+	Position = {4085, 684},
 	Major = true,
 	CulturalNames = {
-		"slav", "Gdansk", -- "Gdańsk"
-		"teuton", "Danzig"
+		"norse", "Oslo"
 	},
 	HistoricalOwners = {
 	},
 	HistoricalBuildings = {
 	},
-	Regions = {"europe", "poland", "west-and-central-europe"}
-})
-
-DefineSettlement("konigsberg", {
-	Name = "Königsberg",
-	MapTemplate = "earth",
-	Position = {4302, 804},
-	Major = true,
-	CulturalNames = {
-		"teuton", "Königsberg"
-	},
-	HistoricalOwners = {
-	},
-	HistoricalBuildings = {
-	},
-	Regions = {"europe", "west-and-central-europe"}
-})
-
-DefineSettlement("szczecin", {
-	Name = "Szczecin",
-	MapTemplate = "earth",
-	Position = {4170, 829},
-	Major = true,
-	CulturalNames = {
-		"slav", "Szczecin",
-		"teuton", "Stettin"
-	},
-	HistoricalOwners = {
-	},
-	HistoricalBuildings = {
-	},
-	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
