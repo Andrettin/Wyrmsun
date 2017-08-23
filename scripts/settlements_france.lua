@@ -124,18 +124,19 @@ DefineSettlement("besancon", {
 	Major = true,
 	CulturalNames = {
 		"frankish", "Vesontio",
-		"french", "Besancon" -- "Besan�on"
+		"french", "Besancon" -- "Besançon"
 	},
 	HistoricalOwners = {
-		395, "rome", -- Besan�on was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		486, "burgundy", -- Besan�on was a part of the Kingdom of the Burgundians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		-71, "sequani-tribe", -- The Suebic king Ariovistus entered Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
+		395, "rome", -- Besançon was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		486, "burgundy", -- Besançon was a part of the Kingdom of the Burgundians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		561, "burgundia" -- Vesontio went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 	},
 	HistoricalBuildings = {
-		395, 0, "town-hall",
-		395, 0, "temple", -- Besan�on was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		-- Archbishopric existent in Besan�on during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-		1485, 0, "university" -- University founded in Besan�on in 1485; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		-71, 0, "town-hall",
+		395, 0, "temple", -- Besançon was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		-- Archbishopric existent in Besançon during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		1485, 0, "university" -- University founded in Besançon in 1485; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -215,12 +216,12 @@ DefineSettlement("chalons", {
 	MapTemplate = "earth",
 	Position = {3947, 941},
 	CulturalNames = {
-		"french", "Chalons" -- "Ch�lons"
+		"french", "Chalons" -- "Châlons"
 	},
 	HistoricalOwners = {
-		395, "rome", -- Ch�lons was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		486, "francia", -- Ch�lons' area became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		561, "austrasia" -- Ch�lons' area went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+		395, "rome", -- Châlons was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		486, "francia", -- Châlons' area became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		561, "austrasia" -- Châlons' area went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 	},
 	HistoricalBuildings = {
 		395, 0, "farm"
@@ -232,15 +233,17 @@ DefineSettlement("clermont-ferrand", {
 	Name = "Clermont-Ferrand",
 	MapTemplate = "earth",
 	Position = {3909, 1006},
+	Major = true,
 	CulturalNames = {
 		"frankish", "Arverni",
 		"french", "Clermont-Ferrand"
 	},
 	HistoricalOwners = {
+		-71, "arverni-tribe", -- The Suebic king Ariovistus entered Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
 		561, "austrasia" -- Arverni went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 	},
 	HistoricalBuildings = {
-		561, 0, "farm"
+		-71, 0, "town-hall"
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -248,16 +251,18 @@ DefineSettlement("clermont-ferrand", {
 DefineSettlement("dijon", {
 	Name = "Dijon",
 	MapTemplate = "earth",
-	Position = {3955, 994},
+	Position = {3955, 972},
+	Major = true,
 	CulturalNames = {
 		"frankish", "Divio",
 		"french", "Dijon"
 	},
 	HistoricalOwners = {
+		-71, "aedui-tribe", -- The Suebic king Ariovistus entered Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
 		561, "burgundia" -- Divio went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 	},
 	HistoricalBuildings = {
-		561, 0, "farm"
+		-71, 0, "town-hall"
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -283,6 +288,7 @@ DefineSettlement("lyon", {
 	Name = "Lyon",
 	MapTemplate = "earth",
 	Position = {3947, 1006},
+	Major = true,
 	CulturalNames = {
 		"celt", "Lugdunum",
 		"frankish", "Lugdunum",
@@ -308,6 +314,7 @@ DefineSettlement("marseilles", {
 	Name = "Marseilles",
 	MapTemplate = "earth",
 	Position = {3962, 1062},
+	Major = true,
 	CulturalNames = {
 		"celt", "Massilia",
 		"frankish", "Massilia",
@@ -419,14 +426,14 @@ DefineSettlement("orleans", {
 	Position = {3884, 961},
 	CulturalNames = {
 		"frankish", "Aurehani",
-		"french", "Orleans" -- "Orl�ans"
+		"french", "Orleans" -- "Orléans"
 	},
 	HistoricalOwners = {
-		561, "burgundia" -- Chlothar (Frankish king) died in 561, and Orl�ans/Aurehani went to his son Gunthram; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328; Gregory of Tours, "History of the Franks", IV.22.
+		561, "burgundia" -- Chlothar (Frankish king) died in 561, and Orléans/Aurehani went to his son Gunthram; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328; Gregory of Tours, "History of the Franks", IV.22.
 	},
 	HistoricalBuildings = {
 		561, 0, "town-hall",
-		1305, 0, "university" -- University founded in Orl�ans in 1305; Source: "Atlas de Hist�ria Mundial", 2001, p. 144.
+		1305, 0, "university" -- University founded in Orléans in 1305; Source: "Atlas de História Mundial", 2001, p. 144.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -435,6 +442,7 @@ DefineSettlement("paris", {
 	Name = "Paris",
 	MapTemplate = "earth",
 	Position = {3891, 937},
+	Major = true,
 	CulturalNames = {
 		"celt", "Lutetia",
 		"frankish", "Parisii",
@@ -450,7 +458,7 @@ DefineSettlement("paris", {
 		161, 395, "farm",
 		395, 0, "town-hall",
 		395, 0, "temple", -- Paris was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		1250, 0, "university" -- University existent in Paris in 1250; Source: "Atlas de Hist�ria Mundial", 2001, p. 144.
+		1250, 0, "university" -- University existent in Paris in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -541,7 +549,7 @@ DefineSettlement("soissons", {
 })
 
 DefineSettlement("strassburg", {
-	Name = "Strassburg",
+	Name = "Strasbourg",
 	MapTemplate = "earth",
 	Position = {4013, 948},
 	Major = true,
@@ -554,22 +562,25 @@ DefineSettlement("strassburg", {
 		"teuton", "Strassburg"
 	},
 	HistoricalOwners = {
+		-61, "suebi-tribe", -- the Battle of Magetobria, in which Ariovistus defeated a number of Gaulish tribes, and afterwards established himself in Alsace and began lording over the Gauls, occurred in 61 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 139; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 218.
+		-58, "", -- in 58 BC Caesar fought Ariovistus' Suebi and the latter were terribly beaten; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 219.
+		-54, "tribocci-tribe", -- the Tribocci held the lands between Strasbourg and Artzenheim (apparently) in 54 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 222.
 		-50, "rome", -- Gaul (where Argentoratum was located) was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		413, "burgundy", -- Argentoratum/Strassburg conquered by the Burgundians in 413 AD, after which they founded a kingdom that lasted until 436; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
 		436, "",
 		481, "alamanni-tribe", -- political situation of the territories surrounding the Frankish realm in 481-814 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-		506, "francia", -- the Alemanni lands (Alsace, Baden, Wurtemberg, Augsburg and etc.) were conquered by the Franks in 506; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit �ber 1200 Karten", 2009, p. 60.
+		506, "francia", -- the Alemanni lands (Alsace, Baden, Wurtemberg, Augsburg and etc.) were conquered by the Franks in 506; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 		561, "austrasia", -- Argentoratum went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 		919, "holy-rome", -- Duchy of Swabia within the Holy Roman Empire; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1789, "france" -- Strasburg was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	HistoricalBuildings = {
-		-50, 161, "farm",
+		-61, 161, "town-hall",
 		161, 0, "stronghold", -- Legionary base present in Argentorate in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		161, 0, "barracks",
 		395, 0, "temple" -- Strassburg was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		-- Bureau de finance and chambre du domaine existent in Strasburg in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
-		-- Pr�v�t des mar�chaux existent in Strasburg in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
+		-- Prévôt des maréchaux existent in Strasburg in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -658,7 +669,7 @@ DefineSettlement("uzes", {
 	Position = {3941, 1044},
 	CulturalNames = {
 		"frankish", "Ucetia",
-		"french", "Uzes" -- "Uz�s"
+		"french", "Uzes" -- "Uzès"
 	},
 	HistoricalOwners = {
 		561, "austrasia" -- Ucetia went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.

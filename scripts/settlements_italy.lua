@@ -249,8 +249,7 @@ DefineSettlement("milan", {
 		1859, "sardinia" -- Milan became a possession of Sardinia in 1859; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		-161, 760, "farm",
-		760, 0, "town-hall",
+		-161, 0, "town-hall",
 		768, 0, "temple", -- Archbishopric existent in Milan during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		1565, 0, "university" -- University founded in Milan in 1565; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
@@ -271,8 +270,7 @@ DefineSettlement("modena", {
 		1494, "modena"
 	},
 	HistoricalBuildings = {
-		-218, 1494, "farm",
-		1494, 0, "town-hall"
+		-218, 0, "town-hall"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })

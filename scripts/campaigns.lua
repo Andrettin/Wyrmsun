@@ -90,6 +90,17 @@ DefineCampaign("thors-servant", {
 --]]
 
 --[[
+DefineCampaign("the-movements-of-ariovistus", {
+	Name = "The Movements of Ariovistus",
+	Description = "Under the leadership of Ariovistus, we have crossed the Rhine to aid the Sequani and the Arverni in defeating the Aedui, and now an Aedui army approaches the Sequani settlement of Magetobria...",
+	Civilization = "suebi",
+	Faction = "suebi-tribe",
+	StartYear = -61,
+	MapTemplate = "earth",
+	MapTemplateStartPos = {3871, 821},
+	MapSize = {256, 256}
+})
+
 DefineCampaign("the-home-of-the-boii", {
 	Name = "The Home of the Boii",
 	Description = "After a devastating conflict with the Romans, Marbod seeks to lead the tribe of the Marcomanni to safer lands.",
