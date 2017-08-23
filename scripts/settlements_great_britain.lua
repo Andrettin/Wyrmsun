@@ -910,7 +910,7 @@ DefineSettlement("winchester", {
 	Position = {3810, 885},
 	Major = true,
 	CulturalNames = {
-		"anglo-saxon", "Witanceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 734.
+		"anglo-saxon", "Wintanceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 734.
 		"briton", "Verita Belgarum",
 		"celt", "Verita Belgarum",
 		"english", "Winchester",
