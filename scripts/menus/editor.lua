@@ -88,7 +88,6 @@ local function RunEditorNewMapMenu()
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	local tilesets = editor_tilesets
-	local mapSizes = {"32", "64", "96", "128", "256"}
 
 	menu:addLabel("Map Description:", offx + 208, offy + 104 + 32 * 0, Fonts["game"], false)
 	local mapDescription = menu:addTextInputField("", offx + 208, offy + 104 + 32 * 1, 200)
@@ -96,34 +95,45 @@ local function RunEditorNewMapMenu()
 	local dropDownTileset = menu:addDropDown(editor_tilesets, offx + 208 + 60, offy + 104 + 32 * 2, function() end)
 	dropDownTileset:setSize(152, 20)
 
-	menu:addLabel("Size:", offx + 208, offy + 104 + 32 * 3, Fonts["game"], false)
-	local mapSizex = menu:addDropDown(mapSizes, offx + 208 + 50, offy + 104 + 32 * 3, function() end)
-	mapSizex:setSize(50, 20)
-	menu:addLabel("x", offx + 208 + 110, offy + 104 + 32 * 3, Fonts["game"], false)
-	local mapSizey = menu:addDropDown(mapSizes, offx + 208 + 125, offy + 104 + 32 * 3, function() end)
-	mapSizey:setSize(50, 20)
+	menu:addLabel("Width:", offx + 208, offy + 104 + 32 * 3, Fonts["game"], false)
+	local mapSizex = menu:addTextInputField(128, offx + 208 + 60, offy + 104 + 32 * 3, 60)
+	menu:addLabel("Height:", offx + 208, offy + 104 + 32 * 4, Fonts["game"], false)
+	local mapSizey = menu:addTextInputField(128, offx + 208 + 60, offy + 104 + 32 * 4, 60)
 
 	menu:addFullButton(_("~!New Map"), "n", offx + 208, offy + 104 + 36 * 5,
 	function()
-		-- TODO : check value
-		Map.Info.Description = mapDescription:getText()
-		Map.Info.MapWidth = mapSizes[1 + mapSizex:getSelected()]
-		Map.Info.MapHeight = mapSizes[1 + mapSizey:getSelected()]
-		Map.Info.Filename = "new_map"
-		if (CanAccessFile("scripts/tilesets/" .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")) then
-			LoadTileModels("scripts/tilesets/" .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")
-		else -- if the tileset doesn't exist in the base game, check if any enabled mod has this tileset
-			for i=1,table.getn(Mods) do
-				if (CanAccessFile(string.gsub(Mods[i], "info.lua", "scripts/tilesets/") .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")) then
-					LoadTileModels(string.gsub(Mods[i], "info.lua", "scripts/tilesets/") .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")
-					break
+		if (tonumber(mapSizex:getText()) == nil) then
+			GenericDialog("Error", "The map width must be a number.")
+		elseif (tonumber(mapSizey:getText()) == nil) then
+			GenericDialog("Error", "The map height must be a number.")
+		elseif (tonumber(mapSizex:getText()) < 32) then
+			GenericDialog("Error", "The map width must be at least 32.")
+		elseif (tonumber(mapSizey:getText()) < 32) then
+			GenericDialog("Error", "The map height must be at least 32.")
+		elseif (tonumber(mapSizex:getText()) > 512) then
+			GenericDialog("Error", "The map width must be at most 512.")
+		elseif (tonumber(mapSizey:getText()) > 512) then
+			GenericDialog("Error", "The map height must be at most 512.")
+		else
+			Map.Info.Description = mapDescription:getText()
+			Map.Info.MapWidth = tonumber(mapSizex:getText())
+			Map.Info.MapHeight = tonumber(mapSizey:getText())
+			Map.Info.Filename = "new_map"
+			if (CanAccessFile("scripts/tilesets/" .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")) then
+				LoadTileModels("scripts/tilesets/" .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")
+			else -- if the tileset doesn't exist in the base game, check if any enabled mod has this tileset
+				for i=1,table.getn(Mods) do
+					if (CanAccessFile(string.gsub(Mods[i], "info.lua", "scripts/tilesets/") .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")) then
+						LoadTileModels(string.gsub(Mods[i], "info.lua", "scripts/tilesets/") .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")
+						break
+					end
 				end
 			end
+			menu:stop()
+			StartEditor(nil, false)
+			ReloadMods()
+			RunEditorMenu()
 		end
-		menu:stop()
-		StartEditor(nil, false)
-		ReloadMods()
-		RunEditorMenu()
 	end)
 	menu:addFullButton(_("~!Cancel"), "c", offx + 208, offy + 104 + 36 * 6, function() menu:stop(1); RunEditorMenu() end)
 	return menu:run()
