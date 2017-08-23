@@ -1365,12 +1365,22 @@ function EditUnitTypePropertiesGraphics(unit_type)
 
 	local unit_graphics_list = GetUnitGraphics()
 	
+	local unit_graphics_shadow_list = {}
+	for i = 1,table.getn(unit_graphics_list) do
+		if (string.find(unit_graphics_list[i], "_shadow") ~= nil) then
+			table.insert(unit_graphics_shadow_list, unit_graphics_list[i])
+		end
+	end
+	table.insert(unit_graphics_shadow_list, "")
+	
 	local animation_list = GetAnimations()
 	
 	local icon_list = GetIcons()
 	
 	local unit_graphics
 	local unit_graphics_label
+	local unit_graphics_shadow
+	local unit_graphics_shadow_label
 	local animation
 	local animation_label
 	local icon
@@ -1385,14 +1395,19 @@ function EditUnitTypePropertiesGraphics(unit_type)
 		unit_graphics:setSelected(GetElementIndexFromArray(unit_graphics_list, GetUnitTypeData(unit_type, "Image")) - 1)
 	end
 	
-	menu:addLabel(_("Frame Width:"), 10, 12 + 36 * 2, Fonts["game"], false)
-	local frame_width_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Width"), (sizeX / 2) - 60 - 10, 11 + 36 * 2, 60)
-
-	menu:addLabel(_("Frame Height:"), (sizeX / 2) + 10, 12 + 36 * 2, Fonts["game"], false)
-	local frame_height_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Height"), sizeX - 60 - 10, 11 + 36 * 2, 60)
+	unit_graphics_shadow_label = menu:addLabel(_("Shadow:"), 10, 14 + 36 * 2, Fonts["game"], false)
+	unit_graphics_shadow = menu:addDropDown(unit_graphics_shadow_list, (sizeX / 2) - 60 - 10, 11 + 36 * 2, function(dd) end)
+	unit_graphics_shadow:setSize(236, 20)
+	unit_graphics_shadow:setSelected(GetElementIndexFromArray(unit_graphics_shadow_list, GetUnitTypeData(unit_type, "Shadow")) - 1)
 	
-	animation_label = menu:addLabel(_("Animations:"), 10, 14 + 36 * 3, Fonts["game"], false)
-	animation = menu:addDropDown(animation_list, (sizeX / 2) - 60 - 10, 11 + 36 * 3, function(dd) end)
+	menu:addLabel(_("Frame Width:"), 10, 12 + 36 * 3, Fonts["game"], false)
+	local frame_width_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Width"), (sizeX / 2) - 60 - 10, 11 + 36 * 3, 60)
+
+	menu:addLabel(_("Frame Height:"), (sizeX / 2) + 10, 12 + 36 * 3, Fonts["game"], false)
+	local frame_height_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Height"), sizeX - 60 - 10, 11 + 36 * 3, 60)
+	
+	animation_label = menu:addLabel(_("Animations:"), 10, 14 + 36 * 4, Fonts["game"], false)
+	animation = menu:addDropDown(animation_list, (sizeX / 2) - 60 - 10, 11 + 36 * 4, function(dd) end)
 	animation:setSize(236, 20)
 	if (GetUnitTypeData(unit_type, "Animations") == "") then
 		animation:setSelected(0)
@@ -1400,8 +1415,8 @@ function EditUnitTypePropertiesGraphics(unit_type)
 		animation:setSelected(GetElementIndexFromArray(animation_list, GetUnitTypeData(unit_type, "Animations")) - 1)
 	end
 	
-	icon_label = menu:addLabel(_("Icon:"), 10, 14 + 36 * 4, Fonts["game"], false)
-	icon = menu:addDropDown(icon_list, (sizeX / 2) - 60 - 10, 11 + 36 * 4, function(dd) end)
+	icon_label = menu:addLabel(_("Icon:"), 10, 14 + 36 * 5, Fonts["game"], false)
+	icon = menu:addDropDown(icon_list, (sizeX / 2) - 60 - 10, 11 + 36 * 5, function(dd) end)
 	icon:setSize(236, 20)
 	if (GetUnitTypeData(unit_type, "Icon") == "") then
 		icon:setSelected(0)
@@ -1413,6 +1428,7 @@ function EditUnitTypePropertiesGraphics(unit_type)
 		function()
 			local graphic_width = 0
 			local graphic_height = 0
+			
 			local graphic = CGraphic:Get(unit_graphics_list[unit_graphics:getSelected() + 1])
 			if (graphic == nil) then
 				graphic = CGraphic:New(unit_graphics_list[unit_graphics:getSelected() + 1])
@@ -1424,6 +1440,22 @@ function EditUnitTypePropertiesGraphics(unit_type)
 				graphic_width = graphic:getGraphicWidth()
 				graphic_height = graphic:getGraphicHeight()
 			end
+			
+			local shadow_graphic_width = 0
+			local shadow_graphic_height = 0
+			if (unit_graphics_shadow_list[unit_graphics_shadow:getSelected() + 1] ~= "") then
+				local shadow_graphic = CGraphic:Get(unit_graphics_shadow_list[unit_graphics_shadow:getSelected() + 1])
+				if (shadow_graphic == nil) then
+					shadow_graphic = CGraphic:New(unit_graphics_shadow_list[unit_graphics_shadow:getSelected() + 1])
+					shadow_graphic:Load()
+					shadow_graphic_width = shadow_graphic:getGraphicWidth()
+					shadow_graphic_height = shadow_graphic:getGraphicHeight()
+					CGraphic:Free(shadow_graphic)
+				else
+					shadow_graphic_width = shadow_graphic:getGraphicWidth()
+					shadow_graphic_height = shadow_graphic:getGraphicHeight()
+				end
+			end
 
 			if (tonumber(frame_width_value:getText()) == nil) then
 				GenericDialog("Error", "The frame width must be a number.")
@@ -1433,6 +1465,10 @@ function EditUnitTypePropertiesGraphics(unit_type)
 				GenericDialog("Error", "The image graphic's width (" .. graphic_width .. ") must be divisible by the frame width.")
 			elseif (graphic_height % tonumber(frame_height_value:getText()) ~= 0) then
 				GenericDialog("Error", "The image graphic's height (" .. graphic_height .. ") must be divisible by the frame height.")
+			elseif (shadow_graphic_width % tonumber(frame_width_value:getText()) ~= 0) then
+				GenericDialog("Error", "The shadow image graphic's width (" .. shadow_graphic_width .. ") must be divisible by the frame width.")
+			elseif (shadow_graphic_height % tonumber(frame_height_value:getText()) ~= 0) then
+				GenericDialog("Error", "The shadow image graphic's height (" .. shadow_graphic_height .. ") must be divisible by the frame height.")
 			else
 				local unit_type_definition = {}
 
@@ -1443,6 +1479,16 @@ function EditUnitTypePropertiesGraphics(unit_type)
 					if (frame_width_value:getText() ~= GetUnitTypeData(unit_type, "Width") or frame_height_value:getText() ~= GetUnitTypeData(unit_type, "Height")) then
 						table.insert(unit_type_definition.Image, "size")
 						table.insert(unit_type_definition.Image, {tonumber(frame_width_value:getText()), tonumber(frame_height_value:getText())})
+					end
+				end
+
+				if (unit_graphics_shadow_list[unit_graphics_shadow:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Shadow")) then
+					unit_type_definition.Shadow = {}
+					table.insert(unit_type_definition.Shadow, "file")
+					table.insert(unit_type_definition.Shadow, unit_graphics_shadow_list[unit_graphics_shadow:getSelected() + 1])
+					if (frame_width_value:getText() ~= GetUnitTypeData(unit_type, "Width") or frame_height_value:getText() ~= GetUnitTypeData(unit_type, "Height")) then
+						table.insert(unit_type_definition.Shadow, "size")
+						table.insert(unit_type_definition.Shadow, {tonumber(frame_width_value:getText()), tonumber(frame_height_value:getText())})
 					end
 				end
 

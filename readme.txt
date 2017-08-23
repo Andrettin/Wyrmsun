@@ -70,6 +70,7 @@ https://github.com/Andrettin/Wyrmsun
 - When creating a new map, the map width and height can now be chosen by inputing a number. Any number between 32 and 512 can be chosen.
 - Fixed player properties screen issue for new maps.
 - Added option to delete custom unit types.
+- Added drop-down in the unit type graphic properties to choose a shadow image for the unit type.
 
 * Maps
 - Fixed issue which caused some maps (i.e. Aquitania) to potentially start with tile irregularities.
