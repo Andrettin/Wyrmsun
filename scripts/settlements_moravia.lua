@@ -26,7 +26,7 @@
 --
 
 DefineSettlement("brunn", {
-	Name = "Brünn",
+	Name = "Brno",
 	MapTemplate = "earth",
 	Position = {4206, 936},
 	Major = true,
@@ -44,11 +44,11 @@ DefineSettlement("brunn", {
 })
 
 DefineSettlement("doubravnik", {
-	Name = "Doubravník",
+	Name = "Doubravnik",
 	MapTemplate = "earth",
 	Position = {4212, 924},
 	CulturalNames = {
-		"slav", "Doubravník"
+		"slav", "Doubravnik" -- "Doubravník"
 	},
 	HistoricalOwners = {
 		1211, "cistercian-order"
@@ -60,7 +60,7 @@ DefineSettlement("doubravnik", {
 })
 
 DefineSettlement("olmutz", {
-	Name = "Olmütz",
+	Name = "Olomouc",
 	MapTemplate = "earth",
 	Position = {4232, 921},
 	Major = true,

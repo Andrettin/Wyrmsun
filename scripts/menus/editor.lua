@@ -457,12 +457,22 @@ function RunEditorPlayerProperties()
 	
 	local function PlayerChanged()
 		current_player_type:setSelected(player_properties[current_player:getSelected() + 1].Type)
-		current_player_civilization:setSelected(GetElementIndexFromArray(civilization_names, player_properties[current_player:getSelected() + 1].Civilization) - 1)
+		if (GetElementIndexFromArray(civilization_names, player_properties[current_player:getSelected() + 1].Civilization)) then
+			current_player_civilization:setSelected(GetElementIndexFromArray(civilization_names, player_properties[current_player:getSelected() + 1].Civilization) - 1)
+		else
+			current_player_civilization:setSelected(0)
+			player_properties[current_player:getSelected() + 1].Civilization = civilization_names[current_player_civilization:getSelected() + 1]
+		end
 		
 		faction_list = GetCivilizationFactionNames(civilization_names[current_player_civilization:getSelected() + 1])
 		table.insert(faction_list, "")
 		current_player_faction:setList(faction_list)
-		current_player_faction:setSelected(GetElementIndexFromArray(faction_list, player_properties[current_player:getSelected() + 1].Faction) - 1)
+		if (GetElementIndexFromArray(faction_list, player_properties[current_player:getSelected() + 1].Faction)) then
+			current_player_faction:setSelected(GetElementIndexFromArray(faction_list, player_properties[current_player:getSelected() + 1].Faction) - 1)
+		else
+			current_player_faction:setSelected(0)
+			player_properties[current_player:getSelected() + 1].Faction = faction_list[current_player_faction:getSelected() + 1]
+		end
 		current_player_faction:setSize(236, 20)
 		
 		current_player_ai:setSelected(player_properties[current_player:getSelected() + 1].AI)
