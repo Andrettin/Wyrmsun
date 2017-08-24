@@ -2895,8 +2895,25 @@ function FindAppropriateGoldMineSpawnPoint(min_x, max_x, min_y, max_y, symmetric
 			
 			local unit_quantity = GetNumUnitsAt(PlayerNumNeutral, "unit-gold-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-silver-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-copper-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-coal-mine", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-dwarven-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-germanic-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-gnomish-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-goblin-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-teuton-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-latin-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
 			
-			if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false and GetTileTerrainHasFlag(RandomX, RandomY, "no-building") == false and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "land") and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "unpassable") == false and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "no-building") == false and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "land") and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "unpassable") == false and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "no-building") == false) then
-				if (unit_quantity < 1) then
+			if (unit_quantity < 1) then
+				local space_available = true
+				for sub_x=-2,4 do
+					for sub_y=-2,4 do
+						if (GetTileTerrainHasFlag(RandomX + sub_x, RandomY + sub_y, "land") == false or GetTileTerrainHasFlag(RandomX + sub_x, RandomY + sub_y, "unpassable")) then
+							space_available = false
+							break
+						end
+					end
+				end
+				for sub_x=0,2 do
+					for sub_y=0,2 do
+						if (GetTileTerrainHasFlag(RandomX + sub_x, RandomY + sub_y, "no-building")) then
+							space_available = false
+							break
+						end
+					end
+				end
+				if (space_available) then
 					location_found = true
 				end
 			end
@@ -3748,9 +3765,9 @@ function CreateStartingGoldMine(player, x, y)
 			free_square = false
 		end
 		if (free_square) then
-			for sub_x=-1,3 do
-				for sub_y=-1,3 do
-					SetRawTile(gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y, "Road") -- add road so that there are no transition issues
+			for sub_x=-2,4 do
+				for sub_y=-2,4 do
+					SetRawTile(gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y, "Road") -- add "road" so that there are no transition issues
 				end
 			end
 			for sub_x=0,(GetUnitTypeData("unit-copper-deposit", "TileWidth") - 1) do
