@@ -108,6 +108,23 @@ DefineSettlement("torsburgen", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
+DefineSettlement("uppsala", {
+	Name = "Uppsala",
+	MapTemplate = "earth",
+	Position = {4241, 686},
+	Major = true,
+	CulturalNames = {
+		"norse", "Uppsala"
+	},
+	HistoricalOwners = {
+		1164, "sweden"
+	},
+	HistoricalBuildings = {
+		1164, 0, "temple" -- Swedish archbishopric founded in Uppsala in 1164; Source: "Guta Saga: The History of the Gotlanders", 1999, p. vii.
+	},
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+})
+
 DefineSettlement("visby", {
 	Name = "Visby",
 	MapTemplate = "earth",

@@ -27,10 +27,6 @@
 
 SetMapTemplateResource("earth", "unit-gold-deposit", {4110, 819}) -- Amber; Source: "Atlas de História Mundial", 2001, p. 89.
 
--- Eining
-SetMapTemplateCulturalSettlementName("earth", "Eining", {4104, 936}, "teuton")
-SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4104, 936}, 173, 179) -- the "Legio III Italica" was stationed at the location of Eining from c. 173 to 179; Source: "Ancient Warfare VII.6", 2013, p. 25.
-
 -- Helmsdorf
 -- in c. 1800 BC a barrow was built near Helmsdorf (in Saxo-Thuringia in central Germany); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 23.
 

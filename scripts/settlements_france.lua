@@ -528,6 +528,44 @@ DefineSettlement("rodez", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
+DefineSettlement("rouen", {
+	Name = "Rouen",
+	MapTemplate = "earth",
+	Position = {3871, 926},
+	CulturalNames = {
+		"frankish", "Rotomagus",
+		"french", "Rouen"
+	},
+	HistoricalOwners = {
+		395, "rome", -- Rouen was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		486, "francia", -- Rouen's area became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		561, "neustria" -- Rotomagus went to Charibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		395, 0, "farm"
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
+DefineSettlement("sens", {
+	Name = "Sens",
+	MapTemplate = "earth",
+	Position = {3911, 958},
+	CulturalNames = {
+		"frankish", "Senonae",
+		"french", "Sens"
+	},
+	HistoricalOwners = {
+		395, "rome", -- Sens was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		486, "francia", -- Sens' area became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		561, "burgundia" -- Senonae went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		395, 0, "farm"
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
 DefineSettlement("soissons", {
 	Name = "Soissons",
 	MapTemplate = "earth",
@@ -581,6 +619,24 @@ DefineSettlement("strassburg", {
 		395, 0, "temple" -- Strassburg was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		-- Bureau de finance and chambre du domaine existent in Strasburg in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 		-- Prévôt des maréchaux existent in Strasburg in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
+DefineSettlement("toul", {
+	Name = "Toul",
+	MapTemplate = "earth",
+	Position = {3969, 948},
+	CulturalNames = {
+		"french", "Toul"
+	},
+	HistoricalOwners = {
+		395, "rome", -- Toul was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		486, "francia", -- Toul's area was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		561, "austrasia" -- Toul's area went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		395, 0, "temple" -- Toul was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -646,6 +702,26 @@ DefineSettlement("tournai", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
+DefineSettlement("tours", {
+	Name = "Tours",
+	MapTemplate = "earth",
+	Position = {3857, 971},
+	CulturalNames = {
+		"frankish", "Turones",
+		"french", "Tours"
+	},
+	HistoricalOwners = {
+		395, "rome", -- Tours was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		486, "visigothia", -- Tours was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		526, "francia", -- Tours' area was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		561, "neustria" -- Turones went to Charibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		395, 0, "temple" -- Tours was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
 DefineSettlement("troyes", {
 	Name = "Troyes",
 	MapTemplate = "earth",
@@ -694,6 +770,24 @@ DefineSettlement("valence", {
 	HistoricalBuildings = {
 		561, 1459, "farm",
 		1459, 0, "university" -- University founded in Valence in 1459; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
+DefineSettlement("verdun", {
+	Name = "Verdun",
+	MapTemplate = "earth",
+	Position = {3957, 927},
+	CulturalNames = {
+		"french", "Verdun"
+	},
+	HistoricalOwners = {
+		395, "rome", -- Verdun was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		486, "francia", -- Verdun's area was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		561, "austrasia" -- Verdun's area went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		395, 0, "temple" -- Verdun was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })

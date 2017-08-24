@@ -42,36 +42,5 @@ SetMapTemplateHero("earth", "gunthram", "burgundia", {3884, 961}, 561, 592)
 -- Reims / Durocortorum
 SetMapTemplateHero("earth", "sigibert", "austrasia", {3930, 926}, 561, 575)
 
--- Rouen / Rotomagus
-SetMapTemplateFactionCulturalSettlementName("earth", "Rouen", {3871, 926}, "france")
-SetMapTemplateUnit("earth", "unit-teuton-farm", "rome", {3871, 926}, 395, 486) -- Rouen was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-SetMapTemplateUnit("earth", "unit-teuton-farm", "francia", {3871, 926}, 486, 561) -- Rouen's area became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-SetMapTemplateUnit("earth", "unit-teuton-farm", "neustria", {3871, 926}, 561) -- Rotomagus went to Charibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-
--- Sens / Senonae
-SetMapTemplateFactionCulturalSettlementName("earth", "Sens", {3911, 958}, "france")
-SetMapTemplateUnit("earth", "unit-teuton-farm", "rome", {3911, 958}, 395, 486) -- Sens was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-SetMapTemplateUnit("earth", "unit-teuton-farm", "francia", {3911, 958}, 486, 561) -- Sens' area became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-SetMapTemplateUnit("earth", "unit-teuton-farm", "burgundia", {3911, 958}, 561) -- Senonae went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-
--- Toul
-SetMapTemplateFactionCulturalSettlementName("earth", "Toul", {3969, 948}, "france")
-SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {3969, 948}, 395, 486) -- Toul was a part of the Roman Empire and was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-SetMapTemplateUnit("earth", "unit-teuton-temple", "francia", {3969, 948}, 486, 561) -- Toul's area was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-SetMapTemplateUnit("earth", "unit-teuton-temple", "austrasia", {3969, 948}, 561) -- Toul's area went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-
 -- Tournai / Tornacum
 SetMapTemplateHero("earth", "chilperich", "salia", {3917, 896}, 561, 584)
-
--- Tours / Turones
-SetMapTemplateFactionCulturalSettlementName("earth", "Tours", {3857, 971}, "france")
-SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {3857, 971}, 395, 486) -- Tours was a part of the Roman Empire and was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-SetMapTemplateUnit("earth", "unit-teuton-temple", "visigothia", {3857, 971}, 486, 526) -- Tours was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-SetMapTemplateUnit("earth", "unit-teuton-temple", "francia", {3857, 971}, 526, 561) -- Tours' area was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-SetMapTemplateUnit("earth", "unit-teuton-temple", "neustria", {3857, 971}, 561) -- Turones went to Charibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-
--- Verdun
-SetMapTemplateFactionCulturalSettlementName("earth", "Verdun", {3957, 927}, "france")
-SetMapTemplateUnit("earth", "unit-teuton-temple", "rome", {3957, 927}, 395, 486) -- Verdun was a part of the Roman Empire and was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-SetMapTemplateUnit("earth", "unit-teuton-temple", "francia", {3957, 927}, 486, 561) -- Verdun's area was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-SetMapTemplateUnit("earth", "unit-teuton-temple", "austrasia", {3957, 927}, 561) -- Verdun's area went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.

@@ -107,10 +107,6 @@ SetMapTemplateResource("earth", "unit-copper-deposit", {4335, 547}) -- Iron depo
 -- Kivik
 -- a man was buried in the Bredarör cairn at Kivik in c. 1400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 84.
 
--- Uppsala
-SetMapTemplateCulturalSettlementName("earth", "Uppsala", {4241, 686}, "norse")
-SetMapTemplateUnit("earth", "unit-teuton-temple", "sweden", {4241, 686}, 1164) -- Swedish archbishopric founded in Uppsala in 1164; Source: "Guta Saga: The History of the Gotlanders", 1999, p. vii.
-
 -- Västervik
 SetMapTemplateHero("earth", "thialfi", "thielung-tribe", {4218, 734}, -1101, -1100) -- in the Guta saga, Thieluar was Gotland's discoverer, here we place his journey just before 1100 BC since that's the first occupation of Gotland (by presumably pre-Germanic or Germanic speakers) we have found through research so far
 SetMapTemplateUnit("earth", "unit-germanic-worker", "thielung-tribe", {4218, 734}, -1101, -1100)

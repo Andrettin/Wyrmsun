@@ -91,6 +91,24 @@ DefineSettlement("cologne", {
 	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
 })
 
+DefineSettlement("eining", {
+	Name = "Eining",
+	MapTemplate = "earth",
+	Position = {4104, 936},
+	CulturalNames = {
+		"teuton", "Eining"
+	},
+	HistoricalOwners = {
+		173, "rome",
+		179, ""
+	},
+	HistoricalUnits = {
+		173, "unit-teuton-swordsman", 5000, "rome", -- the "Legio III Italica" was stationed at the location of Eining from c. 173 to 179; Source: "Ancient Warfare VII.6", 2013, p. 25.
+		179, "unit-teuton-swordsman", 0, "rome"
+	},
+	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
+})
+
 DefineSettlement("eresburg", {
 	Name = "Eresburg",
 	MapTemplate = "earth",
@@ -275,7 +293,7 @@ DefineSettlement("regensburg", {
 		"teuton", "Regensburg"
 	},
 	HistoricalOwners = {
-		170, "rome", -- a Roman camp at Regensburg-Kumpfmühl was destroyed during the First Marcomannic War in 172; it likely existed at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
+		170, "rome", -- a Roman camp at Regensburg-Kumpfmühl was destroyed during the First Marcomannic War in 172; it thus likely existed at the beginning of that war; Source: "Ancient Warfare VII.6", 2013, p. 25.
 		172, "",
 		175, "rome",
 		526, "bavarian-tribe", -- Ratisbon was in Bavarian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.

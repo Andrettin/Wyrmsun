@@ -45,6 +45,7 @@ DefineSettlement("aquileia", {
 	Name = "Aquileia",
 	MapTemplate = "earth",
 	Position = {4143, 1005},
+	Major = true,
 	CulturalNames = {
 		"latin", "Aquileia" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 26-27, 29; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
@@ -189,12 +190,11 @@ DefineSettlement("florence", {
 		"latin", "Florentia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
-		-161, "rome", -- Florentia was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "rome", -- Florentia was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		1494, "florence" -- Florence was a possession of the Republic of Florence about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 	},
 	HistoricalBuildings = {
-		-161, 1494, "farm",
-		1494, 0, "town-hall"
+		161, 0, "town-hall"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
