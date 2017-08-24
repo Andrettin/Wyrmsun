@@ -208,6 +208,8 @@
 /graphics/dwarf/units/weapons/double_axe.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/dwarf/units/weapons/mace.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/units/weapons/spear.png (by b_o and badbuckle) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/ballista_warship.png (by Jinn) (licensed under the CC0)
+/graphics/dwarf/units/ballista_warship_water.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/units/dwarven_axefighter.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/dwarf/units/dwarven_axefighter_black_hair.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/dwarf/units/dwarven_axefighter_blond_hair.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)

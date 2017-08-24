@@ -106,14 +106,14 @@ DefineUpgrade("upgrade-dwarven-ballista-bolt-1", {
 	Parent = "upgrade-broadhead-ballista-bolt",
 	Icon = "icon-dwarven-ballista-bolt-2",
 	Civilization = "dwarf",
-	Description = _("While the earliest dwarven ballista bolts had been little more than tree trunks cut to have more penetrating effect, these bolts exhibit a broad metal head capable of slicing enemy foes and structures alike.\n\nEffect: +15 Damage for Ballistas.")
+	Description = "While the earliest dwarven ballista bolts had been little more than tree trunks cut to have more penetrating effect, these bolts exhibit a broad metal head capable of slicing enemy foes and structures alike.\n\nEffect: +15 Damage for Ballistas."
 })
 
 DefineUpgrade("upgrade-dwarven-ballista-bolt-2", {
 	Parent = "upgrade-penetrating-ballista-bolt",
 	Icon = "icon-dwarven-ballista-bolt-3",
 	Civilization = "dwarf",
-	Description = _("Although the slicing power of broadhead ballista bolts was a great improvement over previous bolts, it was still far from ideal. Th penetrating ballista bolts instead do not slice their targets, but concentrate their might on a single point, maximizing puncturing power and thus their capability to breach enemy walls.\n\nEffect: +15 Damage for Ballistas.")
+	Description = "Although the slicing power of broadhead ballista bolts was a great improvement over previous bolts, it was still far from ideal. Th penetrating ballista bolts instead do not slice their targets, but concentrate their might on a single point, maximizing puncturing power and thus their capability to breach enemy walls.\n\nEffect: +15 Damage for Ballistas."
 })
 
 DefineUpgrade("upgrade-dwarven-wood-plow", {
@@ -153,7 +153,7 @@ DefineUpgrade("upgrade-dwarven-alchemy", {
 	Parent = "upgrade-alchemy",
 	Civilization = "dwarf",
 	RequirementsString = "Dvalic Runewriting and Mathematics",
-	Description = "Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Scouts, Pathfinders, Explorers and Gryphon Riders, +5 Fire Damage for Ballistas. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market."
+	Description = "Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Scouts, Pathfinders, Explorers and Gryphon Riders, +5 Fire Damage for Ballistas and Ballista Warships. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market."
 })
 
 DefineModifier("upgrade-dwarven-broad-axe",
@@ -231,12 +231,26 @@ DefineModifier("upgrade-dwarven-bearded-throwing-axe",
 DefineModifier("upgrade-dwarven-ballista-bolt-1",
 	{"BasicDamage", 15},
 	{"Points", 10},
-	{"apply-to", "unit-dwarven-ballista"})
+	{"apply-to", "unit-dwarven-ballista"}
+)
+
+DefineModifier("upgrade-dwarven-ballista-bolt-1",
+	{"BasicDamage", 5},
+	{"Points", 10},
+	{"apply-to", "unit-dwarven-ballista-warship"}
+)
 
 DefineModifier("upgrade-dwarven-ballista-bolt-2",
 	{"BasicDamage", 15},
 	{"Points", 10},
-	{"apply-to", "unit-dwarven-ballista"})
+	{"apply-to", "unit-dwarven-ballista"}
+)
+
+DefineModifier("upgrade-dwarven-ballista-bolt-2",
+	{"BasicDamage", 5},
+	{"Points", 10},
+	{"apply-to", "unit-dwarven-ballista-warship"}
+)
 
 DefineModifier("upgrade-dwarven-wood-plow",
 	{"Supply", 1},
@@ -295,7 +309,7 @@ DefineModifier("upgrade-dwarven-alchemy",
 DefineModifier("upgrade-dwarven-alchemy",
 	{"FireDamage", 5},
 	{"Points", 5},
-	{"apply-to", "unit-dwarven-ballista"}
+	{"apply-to", "unit-dwarven-ballista"}, {"apply-to", "unit-dwarven-ballista-warship"}
 )
 
 Load("scripts/civilizations/dwarf/upgrade_faction.lua")
@@ -381,7 +395,9 @@ DefinePredependency("unit-dwarven-ballista",
 )
 
 DefineDependency("unit-dwarven-ballista",
-	{"unit-dwarven-smithy", "unit-dwarven-lumber-mill", "upgrade-engineering"}, "or", {"unit-brising-smithy", "unit-dwarven-lumber-mill", "upgrade-engineering"}, "or", {"upgrade-mercenary-company", "upgrade-engineering"}
+	{"unit-dwarven-smithy", "unit-dwarven-lumber-mill", "upgrade-engineering"},
+	"or", {"unit-brising-smithy", "unit-dwarven-lumber-mill", "upgrade-engineering"},
+	"or", {"upgrade-mercenary-company", "upgrade-engineering"}
 )
 
 DefinePredependency("unit-dwarven-yale-pen",
@@ -442,6 +458,11 @@ DefineDependency("unit-dwarven-dock",
 
 DefineDependency("unit-dwarven-transport-ship",
 	{"unit-dwarven-lumber-mill"}
+)
+
+DefineDependency("unit-dwarven-ballista-warship",
+	{"unit-dwarven-smithy", "unit-dwarven-lumber-mill", "upgrade-engineering"},
+	"or", {"unit-brising-smithy", "unit-dwarven-lumber-mill", "upgrade-engineering"}
 )
 
 DefinePredependency("unit-dwarven-gryphon-rider",

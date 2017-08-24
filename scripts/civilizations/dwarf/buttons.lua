@@ -36,27 +36,27 @@
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-1",
 	Action = "attack",
-	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	Key = "a", Hint = "~!Attack", Popup = "popup-commands",
 	ForUnit = {
-		"unit-dwarven-ballista"
+		"unit-dwarven-ballista", "unit-dwarven-ballista-warship"
 	}
 } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-2",
 	Action = "attack",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-ballista-bolt-1"},
-	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	Key = "a", Hint = "~!Attack", Popup = "popup-commands",
 	ForUnit = {
-		"unit-dwarven-ballista"
+		"unit-dwarven-ballista", "unit-dwarven-ballista-warship"
 	}
 } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-3",
 	Action = "attack",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-ballista-bolt-2"},
-	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	Key = "a", Hint = "~!Attack", Popup = "popup-commands",
 	ForUnit = {
-		"unit-dwarven-ballista"
+		"unit-dwarven-ballista", "unit-dwarven-ballista-warship"
 	}
 } )
 
@@ -253,7 +253,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-joruvellir-yale-rider-black-hai
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-dwarven-ballista",
 	Action = "train-unit", Value = "unit-dwarven-ballista",
-	Key = "b", Hint = _("Build ~!Ballista"), Popup = "popup-unit",
+	Key = "b", Hint = "Build ~!Ballista", Popup = "popup-unit",
 	ForUnit = {"unit-dwarven-barracks", "unit-gnomish-barracks"}
 })
 
@@ -271,7 +271,13 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-witness",
 
 DefineButton( { Pos = 1, Level = 0,
 	Action = "train-unit", Value = "unit-dwarven-transport-ship",
-	Key = "t", Hint = _("Build ~!Transport"), Popup = "popup-unit",
+	Key = "t", Hint = "Build ~!Transport", Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-dock"}
+})
+
+DefineButton( { Pos = 2, Level = 0,
+	Action = "train-unit", Value = "unit-dwarven-ballista-warship",
+	Key = "b", Hint = "Build ~!Ballista Warship", Popup = "popup-unit",
 	ForUnit = {"unit-dwarven-dock"}
 })
 
@@ -368,8 +374,8 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-dwarven-shield-3",
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-dwarven-ballista-bolt-2",
 	Action = "research", Value = "upgrade-dwarven-ballista-bolt-1",
 	Allowed = "check-single-research",
-	Key = "b", Hint = _("Research Broadhead Ballista ~!Bolt"), Popup = "popup-research",
-	Description = _("+15 Damage for Ballistas."),
+	Key = "b", Hint = "Research Broadhead Ballista ~!Bolt", Popup = "popup-research",
+	Description = "+15 Damage for Ballistas, +5 Damage for Ballista Warships.",
 	ForUnit = {"unit-dwarven-smithy", "unit-brising-smithy"}
 } )
 
@@ -377,7 +383,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-dwarven-ballista-bolt-3",
 	Action = "research", Value = "upgrade-dwarven-ballista-bolt-2",
 	Allowed = "check-single-research",
 	Key = "b", Hint = _("Research Penetrating Ballista ~!Bolt"), Popup = "popup-research",
-	Description = _("+15 Damage for Ballistas."),
+	Description = _("+15 Damage for Ballistas, +5 Damage for Ballista Warships."),
 	ForUnit = {"unit-dwarven-smithy", "unit-brising-smithy"}
 } )
 
@@ -466,7 +472,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-norse-runewriting",
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-cauldron",
 	Action = "research", Value = "upgrade-dwarven-alchemy",
 	Allowed = "check-single-research",
-	Description = "+1 Fire Damage for Scouts, Pathfinders, Explorers and Gryphon Riders, +5 Fire Damage for Ballistas. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market.",
+	Description = "+1 Fire Damage for Scouts, Pathfinders, Explorers and Gryphon Riders, +5 Fire Damage for Ballistas and Ballista Warships. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market.",
 	Key = "a", Hint = "Research ~!Alchemy", Popup = "popup-research",
 	ForUnit = {"unit-dwarven-academy"}
 } )

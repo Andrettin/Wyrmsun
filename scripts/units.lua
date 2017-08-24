@@ -106,7 +106,7 @@ Units = {
 	"unit-dwarven-yale-rider", "unit-dwarven-yale-lord", "unit-dwarven-ballista",
 	"unit-dwarven-witness", 
 	"unit-dwarven-gryphon-rider",
-	"unit-dwarven-transport-ship",
+	"unit-dwarven-transport-ship", "unit-dwarven-ballista-warship",
 	"unit-dwarven-town-hall", "unit-dwarven-stronghold",
 	"unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
 	"unit-dwarven-lumber-mill", "unit-dwarven-smithy",
@@ -503,6 +503,7 @@ DefineUnitType("unit-settlement-site", {
 	ExplodeWhenKilled = "missile-explosion",
 	Type = "land",
 	Indestructible = true,
+	TownHall = true,
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "gold-mine-acknowledge",
@@ -3485,7 +3486,7 @@ DefineUnitType("unit-template-siege-engine", {
 } )
 
 DefineUnitType("unit-template-ship", {
-	Name = _("Ship"),
+	Name = "Ship",
 	Parent = "unit-template-unit",
 	RepairHp = 4,
 	RepairCosts = {"copper", 1, "lumber", 1},
@@ -3500,11 +3501,10 @@ DefineUnitType("unit-template-ship", {
 })
 
 DefineUnitType("unit-template-transport-ship", {
-	Name = _("Transport"),
+	Name = "Transport",
 	Parent = "unit-template-ship",
 	Class = "transport-ship",
 	Animations = "animations-transport-ship", 
---	Costs = {"time", 70, "copper", 600, "lumber", 200, "oil", 500},
 	Costs = {"time", 70, "copper", 600, "lumber", 2100},
 	Speed = 10,
 	HitPoints = 150,
@@ -3539,6 +3539,33 @@ DefineUnitType("unit-template-transport-ship", {
 			"wait-at-depot", 150
 		}
 	}
+})
+
+DefineUnitType("unit-template-siege-warship", {
+	Name = "Siege Warship",
+	Parent = "unit-template-ship",
+	Class = "siege-warship",
+	Animations = "animations-transport-ship", 
+	Costs = {"time", 90, "copper", 700, "lumber", 3150},
+	Speed = 10,
+	HitPoints = 100,
+	TileSize = {2, 2}, BoxSize = {63, 63},
+	SightRange = 8,
+	Armor = 10, BasicDamage = 35, Missile = "missile-catapult-sandstone-rock",
+	MaxAttackRange = 4,
+	Accuracy = 8,
+	Evasion = 5,
+	Priority = 65, AnnoyComputerFactor = 20,
+	Points = 150,
+	Demand = 2,
+	CanTargetLand = true, CanTargetSea = true, CanTargetAir = true,
+	RightMouseAction = "attack",
+	SideAttack = true,
+	CanAttack = true,
+	CanDock = true,
+	GroundAttack = true,
+	NoFriendlyFire = true, -- don't attack a target if friendly units would get hurt too
+	RequirementsString = "Lumber Mill, Smithy and Engineering"
 })
 
 DefineUnitType("unit-template-town-hall", {

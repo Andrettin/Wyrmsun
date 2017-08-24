@@ -1150,10 +1150,11 @@ DefineUnitType("unit-dwarven-gryphon-rider", {
 	}
 } )
 
-DefineUnitType("unit-dwarven-ballista", { Name = _("Ballista"),
+DefineUnitType("unit-dwarven-ballista", {
+	Name = "Ballista",
 	Parent = "unit-template-siege-engine",
 	Civilization = "dwarf",
-	Description = _("Dwarves employ heavy ballistas as their siege weapon of choice, with devastating effects on enemy fortifications."),
+	Description = "Dwarves employ heavy ballistas as their siege weapon of choice, with devastating effects on enemy fortifications.",
 	Image = {"file", "dwarf/units/dwarven_ballista.png", "size", {64, 64}},
 	Animations = "animations-dwarven-ballista", Icon = "icon-dwarven-ballista",
 	Missile = "missile-dwarven-ballista-bolt",
@@ -1173,7 +1174,7 @@ DefineUnitType("unit-dwarven-transport-ship", {
 	Name = "Transport",
 	Parent = "unit-template-transport-ship",
 	Civilization = "dwarf",
-	Description = _("Sailing the Deep Sea and underground rivers alike, these ships are manned by hearty dwarven crews. Every journey brings back new tales, be it of a kobold dwarf-eating tribe, or of treacherous goblin pirates..."),
+	Description = "Sailing the Deep Sea and underground rivers alike, these ships are manned by hearty dwarven crews. Every journey brings back new tales, be it of a kobold dwarf-eating tribe, or of treacherous goblin pirates...",
 	Image = {"file", "dwarf/units/transport.png", "size", {72, 72}},
 	LightImage = {"file", "dwarf/units/transport_water.png"},
 	Icon = "icon-dwarven-transport-ship",
@@ -1222,12 +1223,29 @@ DefineUnitType("unit-dwarven-transport-ship", {
 	}
 })
 
+DefineUnitType("unit-dwarven-ballista-warship", {
+	Name = "Ballista Warship",
+	Parent = "unit-template-siege-warship",
+	Civilization = "dwarf",
+	Description = "Crafty dwarven engineers are responsible for the creation of the complicated mechanism which made ballista warships possible.",
+	Image = {"file", "dwarf/units/ballista_warship.png", "size", {72, 72}},
+	LightImage = {"file", "dwarf/units/ballista_warship_water.png"},
+	Icon = "icon-dwarven-ballista-warship",
+	Missile = "missile-dwarven-ballista-bolt",
+	FireMissile = "missile-flaming-dwarven-ballista-bolt",
+	PierceDamage = true,
+	SideAttack = false,
+	Sounds = {
+		"help", "basic-dwarf-voices-help"
+	}
+})
+
 DefineUnitType("unit-dwarven-town-hall", {
-	Name = _("Mead Hall"),
+	Name = "Mead Hall",
 	Parent = "unit-template-town-hall",
 	Civilization = "dwarf",
-	Description = _("The mead hall is the center of any sizable dwarven settlement, where they gather to discuss the issues facing the community and drink their strong mead. It was in one such hall that Fjalar and Galar feasted on the mead they made out of the blood of a dwarven sage, believing that it would grant them his breadth of knowledge. One of the most magnificent mead halls ever built is that of Lyr."),
-	Background = _("Mead was a recurring theme in Germanic mythology, from which dwarves originate. In one particular myth, the dwarves Fjalar and Galar invited the sage Kvasir to a large feast in their dwelling, only to murder him and brew his blood into a special mead, the ~<Mead of Poetry~>. As the pair of ruthless dwarves expected, drinking the mead imbibed them with Kvasir's breadth of knowledge. In the ~<Voluspo~> it is mentioned that a dwarven hall made of gold existed in Nidavellir. The hall of Lyr is mentioned in the ~<Svipdagsmol~>."),
+	Description = "The mead hall is the center of any sizable dwarven settlement, where they gather to discuss the issues facing the community and drink their strong mead. It was in one such hall that Fjalar and Galar feasted on the mead they made out of the blood of a dwarven sage, believing that it would grant them his breadth of knowledge. One of the most magnificent mead halls ever built is that of Lyr.",
+	Background = "Mead was a recurring theme in Germanic mythology, from which dwarves originate. In one particular myth, the dwarves Fjalar and Galar invited the sage Kvasir to a large feast in their dwelling, only to murder him and brew his blood into a special mead, the ~<Mead of Poetry~>. As the pair of ruthless dwarves expected, drinking the mead imbibed them with Kvasir's breadth of knowledge. In the ~<Voluspo~> it is mentioned that a dwarven hall made of gold existed in Nidavellir. The hall of Lyr is mentioned in the ~<Svipdagsmol~>.",
 	Image = {"file", "dwarf/buildings/town_hall.png", "size", {128, 128}},
 	Shadow = {"file", "dwarf/buildings/town_hall_shadow.png", "size", {128, 128}},
 	Icon = "icon-dwarven-town-hall",

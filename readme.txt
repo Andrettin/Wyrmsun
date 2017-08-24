@@ -74,11 +74,15 @@ https://github.com/Andrettin/Wyrmsun
 
 * Maps
 - Fixed issue which caused some maps (i.e. Aquitania) to potentially start with tile irregularities.
+- Fixed the starting stone in the Little Island custom map, to allow dwarven players to build a mead hall.
 
 * Miscellaneous
 - Fixed the "northwest-northeast-inner" border graphics, which were incorrectly using the graphics for the "northwest-northeast-southwest-inner" border.
 - The initial random seed for the game now varies according to the computer's time and date, so that random maps should no longer yield the same result multiple times.
 - Added an encyclopedia page explaining the No Randomness mode in the Game Concepts section.
+
+* Units
+- Added dwarven Ballista Warship (graphics by Jinn).
 
 -----------------------------------------------------------------------
 - 2.8.0
