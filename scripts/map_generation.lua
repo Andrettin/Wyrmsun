@@ -1486,15 +1486,27 @@ function CreateCritters(arg)
 			end
 			RandomX = SyncRand(Map.Info.MapWidth)
 			RandomY = SyncRand(Map.Info.MapHeight)
-			if (
-				((
-					GetUnitTypeData(critter_unit_type, "Type") == "land" and GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false)
-					or (GetUnitTypeData(critter_unit_type, "Type") == "naval" and GetTileTerrainHasFlag(RandomX, RandomY, "water") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false)
-					or (GetUnitTypeData(critter_unit_type, "Type") == "fly-low" and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false)
-					or (GetUnitTypeData(critter_unit_type, "Type") == "fly" and GetTileTerrainHasFlag(RandomX, RandomY, "air-unpassable") == false)
-				)
-				and (GetArrayIncludes(critter_terrains[chosen_critter], GetTileTerrainName(RandomX, RandomY)) or GetArrayIncludes(GetSpeciesData(GetUnitTypeData(critter_unit_type, "Species"), "Terrains"), GetTileTerrainName(RandomX, RandomY)))
-			) then
+			
+			local correct_tile = true
+			for sub_x = -(GetUnitTypeData(critter_unit_type, "TileWidth")), GetUnitTypeData(critter_unit_type, "TileWidth") do
+				for sub_y = -(GetUnitTypeData(critter_unit_type, "TileHeight")), GetUnitTypeData(critter_unit_type, "TileHeight") do
+					if not (
+						(
+							(
+								GetUnitTypeData(critter_unit_type, "Type") == "land" and GetTileTerrainHasFlag(RandomX + sub_x, RandomY + sub_y, "land") and GetTileTerrainHasFlag(RandomX + sub_x, RandomY + sub_y, "unpassable") == false
+							)
+							or (GetUnitTypeData(critter_unit_type, "Type") == "naval" and GetTileTerrainHasFlag(RandomX + sub_x, RandomY + sub_y, "water") and GetTileTerrainHasFlag(RandomX + sub_x, RandomY + sub_y, "unpassable") == false)
+							or (GetUnitTypeData(critter_unit_type, "Type") == "fly-low" and GetTileTerrainHasFlag(RandomX + sub_x, RandomY + sub_y, "unpassable") == false)
+							or (GetUnitTypeData(critter_unit_type, "Type") == "fly" and GetTileTerrainHasFlag(RandomX + sub_x, RandomY + sub_y, "air-unpassable") == false)
+						)
+						and (GetArrayIncludes(critter_terrains[chosen_critter], GetTileTerrainName(RandomX + sub_x, RandomY + sub_y)) or GetArrayIncludes(GetSpeciesData(GetUnitTypeData(critter_unit_type, "Species"), "Terrains"), GetTileTerrainName(RandomX + sub_x, RandomY + sub_y)))
+					) then
+						correct_tile = false
+						break
+					end
+				end
+			end
+			if (correct_tile) then
 				local unit_quantity = 0
 				for i=0,(PlayerMax - 2) do
 					unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 16, RandomY - 16}, {RandomX + 16, RandomY + 16})
