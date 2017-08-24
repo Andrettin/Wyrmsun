@@ -75,7 +75,7 @@ https://github.com/Andrettin/Wyrmsun
 * Maps
 - Fixed issue which caused some maps (i.e. Aquitania) to potentially start with tile irregularities.
 - Increased the starting stone in the Little Island custom map, to allow give dwarven players an easier time in constructing buildings.
-- Added a starting town hall for players in the Central Park and Little Island custom maps.
+- Added a starting town hall for players in the Central Park, Little Island, Looking Upwards, No Man's Land, North-South Conflict, Northern Lakes and Time for Decisions custom maps.
 
 * Miscellaneous
 - Fixed the "northwest-northeast-inner" border graphics, which were incorrectly using the graphics for the "northwest-northeast-southwest-inner" border.
