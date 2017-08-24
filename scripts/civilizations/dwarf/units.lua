@@ -1227,7 +1227,7 @@ DefineUnitType("unit-dwarven-ballista-warship", {
 	Name = "Ballista Warship",
 	Parent = "unit-template-siege-warship",
 	Civilization = "dwarf",
-	Description = "Crafty dwarven engineers are responsible for the creation of the complicated mechanism which made ballista warships possible.",
+	Description = "The complicated mechanism utilized for ballista warships was made possible through the excellent craftsmanship of dwarven engineers.",
 	Image = {"file", "dwarf/units/ballista_warship.png", "size", {72, 72}},
 	LightImage = {"file", "dwarf/units/ballista_warship_water.png"},
 	Icon = "icon-dwarven-ballista-warship",
