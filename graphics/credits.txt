@@ -97,6 +97,7 @@
 /graphics/dwarf/icons/thane_brown_hair.png (by Jinn) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/dwarf/icons/thane_gray_hair.png (by Jinn) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/dwarf/icons/throwing_axe.png (by Jinn) (licensed under the CC0)
+/graphics/dwarf/icons/thunderer.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/icons/thursagan.png (by Exidelo) (licensed under the GPL 2.0)
 /graphics/dwarf/icons/witness.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/icons/yale_rider.png (by Jinn) (licensed under the CC0)
