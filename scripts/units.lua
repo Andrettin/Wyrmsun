@@ -503,7 +503,6 @@ DefineUnitType("unit-settlement-site", {
 	ExplodeWhenKilled = "missile-explosion",
 	Type = "land",
 	Indestructible = true,
-	TownHall = true,
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "gold-mine-acknowledge",
