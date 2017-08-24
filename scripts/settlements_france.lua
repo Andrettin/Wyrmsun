@@ -620,6 +620,10 @@ DefineSettlement("strassburg", {
 		-- Bureau de finance and chambre du domaine existent in Strasburg in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 		-- Prévôt des maréchaux existent in Strasburg in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 	},
+	HistoricalUnits = {
+		-61, "unit-suebi-swordsman", 135000, "suebi-tribe", -- 135,000 (15,000 + 120,000) Germanic warriors participated in Ariovistus' invasion of Gaul; Source: Caius Julius Caesar, "Caesar's Commentaries", 1915.
+		-58, "unit-suebi-swordsman", 0, "suebi-tribe" -- in 58 BC Caesar fought Ariovistus' Suebi and the latter were terribly beaten; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 219.
+	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 

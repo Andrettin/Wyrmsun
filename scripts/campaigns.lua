@@ -90,9 +90,9 @@ DefineCampaign("thors-servant", {
 --]]
 
 --[[
-DefineCampaign("the-movements-of-ariovistus", {
-	Name = "The Movements of Ariovistus",
-	Description = "Under the leadership of Ariovistus, we have crossed the Rhine to aid the Sequani and the Arverni in defeating the Aedui, and now an Aedui army approaches the Sequani settlement of Magetobria...",
+DefineCampaign("ariovistus-ambition", {
+	Name = "Ariovistus' Ambition",
+	Description = "Under the leadership of Ariovistus, the Suebi have crossed the Rhine to aid the Sequani and the Arverni in defeating the Aedui. The Suebi leader has, however, greater ambitions than his allies suppose... he wishes to conquer the entirety of Gaul.",
 	Civilization = "suebi",
 	Faction = "suebi-tribe",
 	StartYear = -61,

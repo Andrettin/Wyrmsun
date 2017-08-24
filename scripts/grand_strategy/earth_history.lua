@@ -765,7 +765,7 @@ if (GrandStrategyYear >= -71) then -- The Suebic king Ariovistus enters Gaul at 
 	
 	SetProvinceUnitQuantity("Belgium", "unit-germanic-warrior", 8) -- enough troops for them to be able to hold their own
 	
-	SetProvinceUnitQuantity("Brandenburg", "unit-suebi-swordsman", 13) -- 135,000 (15,000 + 120,000) Germanic warriors who participated in Ariovistus' invasion of Gaul; one unit per 10,000 troops, as that is more practical for game purposes; Source: http://www.gutenberg.org/cache/epub/10657/pg10657.html
+	SetProvinceUnitQuantity("Brandenburg", "unit-suebi-swordsman", 13) -- 135,000 (15,000 + 120,000) Germanic warriors who participated in Ariovistus' invasion of Gaul; one unit per 10,000 troops, as that is more practical for game purposes; Source: http://www.gutenberg.org/cache/epub/10657/pg10657-images.html
 	
 	SetProvinceUnitQuantity("Provence", "unit-teuton-swordsman", 30) -- enough troops to vanquish Ariovistus (in reality Caesar won while outnumbered)
 	

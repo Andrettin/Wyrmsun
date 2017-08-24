@@ -2435,6 +2435,7 @@ DefineCivilization("greek", {
 		"help-town", "basic-english-voices-help-town"
 	},
 	HistoricalUpgrades = {
+		-1700, "upgrade-teuton-writing", true, -- Linear B tablets found in Mycenae belonging to the period between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
 		-1400, "upgrade-teuton-masonry", true -- Construction of palaces in continental Greece around 1400 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 	},
 	SettlementNames = {

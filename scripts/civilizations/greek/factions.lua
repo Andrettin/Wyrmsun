@@ -44,27 +44,6 @@ DefineFaction("dolopes-tribe", {
 
 -- polities
 
-DefineFaction("mycenae", {
-	Name = "Mycenae",
-	Civilization = "greek",
-	Type = "polity",
-	Colors = {"orange"},
-	DefaultTier = "county",
-	DefaultAI = "sea-attack",
-	DefaultStartPos = {4358, 1188}, -- Mycenae
-	Titles = {
-		"monarchy", "county", "City-State",
-		"republic", "county", "City-State"
-	},
-	HistoricalCapitals = {
-		-1450, "Argolis" -- Mycenae was the center of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-	},
-	HistoricalUpgrades = {
-		-1700, "upgrade-teuton-writing", true, -- Linear B tablets found in Mycenae belonging to the period between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
-		-1400, "upgrade-teuton-masonry", true -- Construction of palaces in continental Greece around 1400 BC; Source: "Atlas de História Mundial", 2001, p. 66.
-	}
-})
-
 DefineFaction("argos", {
 	Name = "Argos",
 	Civilization = "greek",
@@ -74,8 +53,7 @@ DefineFaction("argos", {
 	Titles = {
 		"monarchy", "county", "City-State",
 		"republic", "county", "City-State"
-	},
-	HistoricalFactionDerivations = {-700, "greek", "mycenae"}
+	}
 })
 
 DefineFaction("athens", {
@@ -89,7 +67,10 @@ DefineFaction("athens", {
 		"monarchy", "county", "City-State",
 		"republic", "county", "City-State"
 	},
-	HistoricalFactionDerivations = {-700, "greek", "mycenae"}
+	HistoricalDiplomacyStates = {
+		-450, "argos", "alliance", -- Argos was allied with Athens as of c. 450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
+		-431, "argos", "peace" -- Argos was neutral in the beginning of the Peloponnesian War in 431 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.
+	}
 })
 
 DefineFaction("cimmerian-bosphorus", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -111,7 +92,9 @@ DefineFaction("corinth", {
 		"monarchy", "county", "City-State",
 		"republic", "county", "City-State"
 	},
-	HistoricalFactionDerivations = {-700, "greek", "mycenae"}
+	HistoricalDiplomacyStates = {
+		-431, "athens", "war" -- Corinth was allied with Sparta against Athens in 431 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.
+	}
 })
 
 DefineFaction("epirus", {
@@ -145,7 +128,30 @@ DefineFaction("macedon", {
 	Civilization = "greek",
 	Type = "polity",
 	Colors = {"brown", "red"},
-	DefaultTier = "kingdom"
+	DefaultTier = "kingdom",
+	HistoricalDiplomacyStates = {
+		-431, "athens", "war" -- Macedon was allied with Sparta against Athens in 431 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.
+	}
+})
+
+DefineFaction("mycenae", {
+	Name = "Mycenae",
+	Civilization = "greek",
+	Type = "polity",
+	Colors = {"orange"},
+	DefaultTier = "county",
+	DefaultAI = "sea-attack",
+	DefaultStartPos = {4358, 1188}, -- Mycenae
+	Titles = {
+		"monarchy", "county", "City-State",
+		"republic", "county", "City-State"
+	},
+	HistoricalCapitals = {
+		-1450, "Argolis" -- Mycenae was the center of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	},
+	HistoricalUpgrades = {
+		-1700, "upgrade-teuton-writing", true -- Linear B tablets found in Mycenae belonging to the period between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
+	}
 })
 
 DefineFaction("sparta", {
@@ -158,7 +164,10 @@ DefineFaction("sparta", {
 		"monarchy", "county", "City-State",
 		"republic", "county", "City-State"
 	},
-	HistoricalFactionDerivations = {-700, "greek", "mycenae"}
+	HistoricalDiplomacyStates = {
+		-431, "corinth", "alliance", -- Corinth was allied with Sparta against Athens in 431 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.
+		-431, "macedon", "alliance" -- Macedon was allied with Sparta against Athens in 431 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.
+	}
 })
 
 DefineFaction("thebes", {
@@ -171,7 +180,11 @@ DefineFaction("thebes", {
 		"monarchy", "county", "City-State",
 		"republic", "county", "City-State"
 	},
-	HistoricalFactionDerivations = {-700, "greek", "mycenae"}
+	HistoricalDiplomacyStates = {
+		-450, "athens", "alliance", -- Thebes was allied with Athens as of c. 450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
+		-431, "sparta", "alliance", -- Thebes was allied with Sparta against Athens in 431 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.
+		-431, "athens", "war"
+	}
 })
 
 DefineFaction("thrace", {
