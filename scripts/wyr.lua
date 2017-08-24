@@ -55,13 +55,18 @@ function CreateUnit(unittype, player, pos, z)
 		return OldCreateUnit(unittype, player, pos, z)
 	end
 
-	-- Don't add any units if the player setup the units to use, and don't add scenario units if in a grand strategy game
+	-- Don't add any units if the player setup the units to use
 	if (
 		GameSettings.NumUnits >= 1
 		and player ~= PlayerNumNeutral
 		and Players[player].Type ~= PlayerNeutral
 	) then
-		return nil
+		if (GameSettings.NumUnits == 1 and GetUnitTypeData(unittype, "TownHall")) then -- if starting with 1 worker, replace town halls with settlement sites
+			unittype = "unit-settlement-site"
+			player = PlayerNumNeutral
+		else
+			return nil
+		end
 	end
 
 	-- Leave neutral the way it is
