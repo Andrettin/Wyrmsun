@@ -28,7 +28,6 @@
 DefineCampaign("the-first-dwarves", {
 	Name = "The First Dwarves",
 	Description = "A clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home. Beset by hostile forces, can they survive for long?",
-	Civilization = "dwarf",
 	Faction = "brising-clan",
 	StartYear = -3000,
 	MapTemplate = "nidavellir",
@@ -40,7 +39,6 @@ DefineCampaign("the-first-dwarves", {
 DefineCampaign("a-home-in-the-fields-of-sand", {
 	Name = "A Home in the Fields of Sand",
 	Description = "As Svarinshaug proves too small for the growing dwarven population, the Goldhoof clan must move away and seek a new home.",
-	Civilization = "dwarf",
 	Faction = "goldhoof-clan",
 	StartYear = -2800,
 	MapTemplate = "nidavellir",
@@ -51,7 +49,6 @@ DefineCampaign("a-home-in-the-fields-of-sand", {
 DefineCampaign("the-mead-of-poetry", {
 	Name = "The Mead of Poetry",
 	Description = "The dwarven brothers Fjalar and Galar conspire to kill the wise god Kvasir and brew his blood into a powerful mead.",
-	Civilization = "dwarf",
 	Faction = "shadowcharm-clan",
 	StartYear = -2800
 })
@@ -59,7 +56,6 @@ DefineCampaign("the-mead-of-poetry", {
 DefineCampaign("freys-messenger", {
 	Name = "Frey's Messenger",
 	Description = "Skirnir, the human servant of the god Frey, must perform important deeds for his master.",
-	Civilization = "germanic",
 	Faction = "yngling-tribe", -- Yngve is identified with Frey
 	StartYear = -2800 -- when Scandinavia was historically settled by Indo-Europeans; Yngve ruled over the Swedes in the Ynglinga saga soon after Odin's people settled Scandinavia in that saga; since Skirnir was a servant of Frey in mythology, let's make him a contemporary of Yngve
 })
@@ -68,7 +64,6 @@ DefineCampaign("freys-messenger", {
 DefineCampaign("heimdalls-progeny", {
 	Name = "Haimadala's Progeny",
 	Description = "The young warrior Erala believes his true father to be the god Haimadala. Feeling that his divine heritage has fated him to rule over vast lands, Erala sets off to establish a hall and gather followers...", -- in the original myth his parents were "Fathir" and "Mothir"; "Fadēr" is the word which gave origin to "Fathir", while "Môder" gave origin to "Mothir"
-	Civilization = "germanic",
 	Faction = "jarling-tribe",
 	StartYear = -1600, -- the introduction of stronger social differentiation occurred in Scandinavia around 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 73. As such, it makes sense to make the Rig myth (in which the different Scandinavian social classes are originated) take place around this time
 	MapTemplate = "earth",
@@ -80,7 +75,6 @@ DefineCampaign("heimdalls-progeny", {
 DefineCampaign("thors-servant", {
 	Name = "Thunraz's Servant",
 	Description = "Terrified by a calamitous thunderstorm, Thialfi's parents pledged him to the service of the lightning god Thunraz when he was still a boy. Now a grown man, during a dream he heard the deity command him to sail to an undiscovered island...",
-	Civilization = "germanic",
 	Faction = "thielung-tribe",
 	StartYear = -1101, -- 1100 BC was the first occupation of Gotland (by presumably pre-Germanic or Germanic speakers) we have found through research so far, so we place the campaign start at just before that
 	MapTemplate = "earth",
@@ -93,7 +87,6 @@ DefineCampaign("thors-servant", {
 DefineCampaign("ariovistus-ambition", {
 	Name = "Ariovistus' Ambition",
 	Description = "Under the leadership of Ariovistus, the Suebi have crossed the Rhine to aid the Sequani and the Arverni in defeating the Aedui. The Suebi leader has, however, greater ambitions than his allies suppose... he wishes to conquer the entirety of Gaul.",
-	Civilization = "suebi",
 	Faction = "suebi-tribe",
 	StartYear = -61,
 	MapTemplate = "earth",
@@ -104,7 +97,6 @@ DefineCampaign("ariovistus-ambition", {
 DefineCampaign("the-home-of-the-boii", {
 	Name = "The Home of the Boii",
 	Description = "After a devastating conflict with the Romans, Marbod seeks to lead the tribe of the Marcomanni to safer lands.",
-	Civilization = "suebi",
 	Faction = "marcomanni-tribe",
 	StartYear = -9,
 	MapTemplate = "earth",
@@ -115,7 +107,6 @@ DefineCampaign("the-home-of-the-boii", {
 DefineCampaign("the-first-marcomannic-war", {
 	Name = "The First Marcomannic War",
 	Description = "Under the leadership of Ballomar, the Marcomanni wage war with the mighty Roman Empire.",
-	Civilization = "suebi",
 	Faction = "marcomanni-tribe",
 	StartYear = 170, -- beginning of the First Marcomannic War
 	MapTemplate = "earth",
@@ -128,7 +119,6 @@ DefineCampaign("the-first-marcomannic-war", {
 DefineCampaign("volunds-flight", { -- initial scenario for the Winter War storyline, could be changed later into a longer scenario containing the storyline in its entirety
 	Name = "Volund's Flight",
 	Description = "Imprisoned and humiliated, the elven prince Volund must seek to escape from his captors...",
-	Civilization = "elf",
 	Faction = "ulfdalir",
 	StartYear = 600, -- arbitrary date, should be changed later
 	MapTemplate = "alfheim",
@@ -139,7 +129,6 @@ DefineCampaign("volunds-flight", { -- initial scenario for the Winter War storyl
 DefineCampaign("sigiberts-struggle", {
 	Name = "Sigibert's Struggle",
 	Description = "Upon the death of the Frankish king Chlothar I, his realm was divided between his four sons: Charibert, Chilperich, Sigibert and Gunthram. The ambitious Chilperich desires to increase his share of the inheritance at his brothers' expense, his designs on Sigibert's lands threatening to throw Francia into a bitter civil war...",
-	Civilization = "frankish",
 	Faction = "austrasia",
 	StartYear = 561 -- Sigibert's reign in his lands begins
 })
@@ -147,7 +136,6 @@ DefineCampaign("sigiberts-struggle", {
 DefineCampaign("island-of-the-lizard-god", { -- based on Will Doyle's "Island of the Lizard God" adventure, which he agreed to license under the GPL 2.0; the adventure won the One-Page Dungeon contest in 2014: https://www.dungeoncontest.com/opdc-2014
 	Name = "Island of the Kobold God",
 	Description = "Shipwrecked on a remote island, a group of dwarves face off against a kobold cult and their primal god!",
-	Civilization = "dwarf",
 	Faction = "lyr",
 	StartYear = 600, -- approximate date; a seafaring dwarven lordship should already exist
 	MapTemplate = "nidavellir",
@@ -158,7 +146,6 @@ DefineCampaign("island-of-the-lizard-god", { -- based on Will Doyle's "Island of
 DefineCampaign("the-heirs-return", {
 	Name = "The Heir's Return",
 	Description = "Upon the death of Aelle of Deira, his kingdom was taken over by the monarch of Bernicia. Aelle's son Edwin, then only a child, was taken in secret to another realm for the sake of his survival. After nearly twenty years of exile, Edwin has gathered an army, seeking to recover his birthright...",
-	Civilization = "anglo-saxon",
 	Faction = "deira",
 	StartYear = 616,
 	MapTemplate = "earth",
