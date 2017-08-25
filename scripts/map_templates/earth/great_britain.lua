@@ -78,7 +78,7 @@ SetMapTemplateTileTerrain("earth", "teuton-wall", {3789, 797}, 410)
 SetMapTemplateTileTerrain("earth", "teuton-wall", {3790, 796}, 410)
 SetMapTemplateTileTerrain("earth", "teuton-wall", {3791, 796}, 410)
 SetMapTemplateTileTerrain("earth", "teuton-wall", {3792, 796}, 410)
-SetMapTemplateTileTerrain("earth", "teuton-wall", {3793, 796}, 410)
+--SetMapTemplateTileTerrain("earth", "teuton-wall", {3793, 796}, 410) -- where the Ermine Street went through Hadrian's wall
 SetMapTemplateTileTerrain("earth", "teuton-wall", {3794, 796}, 410)
 SetMapTemplateTileTerrain("earth", "teuton-wall", {3795, 796}, 410)
 SetMapTemplateTileTerrain("earth", "teuton-wall", {3796, 796}, 410)

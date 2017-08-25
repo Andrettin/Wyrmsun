@@ -328,6 +328,31 @@ DefineSettlement("colchester", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
+DefineSettlement("corbridge", {
+	Name = "Corbridge",
+	MapTemplate = "earth",
+	Position = {3794, 797},
+	CulturalNames = {
+		"anglo-saxon", "Corebricg", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"briton", "Corstopitum",
+		"celt", "Corstopitum",
+		"english", "Corbridge",
+		"latin", "Corstopitum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+	},
+	HistoricalOwners = {
+		410, "rome", -- Corstopitum was a part of the Roman empire c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+		526, "bernice-tribe", -- Corbridge's area was Anglo-Saxon territory in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		547, "bernicia", -- the Kingdom of Bernicia was founded in 547 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 74-75.
+		654, "northumbria", -- Northumbria unified by Oswiu of Bernicia in 654
+		802, "northumbria", -- Corbridge's area was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Corbridge's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		410, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
 DefineSettlement("dorchester", {
 	Name = "Dorchester",
 	MapTemplate = "earth",
