@@ -242,6 +242,7 @@ DefineSettlement("chester", {
 	Name = "Chester",
 	MapTemplate = "earth",
 	Position = {3774, 836},
+	Major = true,
 	CulturalNames = {
 		"anglo-saxon", "Legaceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"briton", "Deva",
@@ -255,8 +256,7 @@ DefineSettlement("chester", {
 		1560, "england" -- Chester's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		410, 802, "town-hall",
-		802, 0, "farm"
+		410, 0, "town-hall"
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -309,6 +309,7 @@ DefineSettlement("colchester", {
 	Name = "Colchester",
 	MapTemplate = "earth",
 	Position = {3861, 867},
+	Major = true,
 	CulturalNames = {
 		"anglo-saxon", "Colneceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"briton", "Camulodunum",
