@@ -50,6 +50,7 @@ function RunShowCreditsMenu()
 		"  DinkyDyeAussie",
 		"  Dmitry Marakasov",
 		"  marcelofg55",
+		"  Morel Bérenger",
 		"  Spfnym",
 		"  Szunti",
 		"  Martin Renold",
