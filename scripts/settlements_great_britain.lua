@@ -265,6 +265,7 @@ DefineSettlement("chichester", {
 	Name = "Chichester",
 	MapTemplate = "earth",
 	Position = {3822, 890},
+	Major = true,
 	CulturalNames = {
 		"anglo-saxon", "Cisseceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"briton", "Regnum",
@@ -278,7 +279,7 @@ DefineSettlement("chichester", {
 		1560, "england" -- Chichester's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		410, 0, "farm"
+		410, 0, "town-hall"
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
