@@ -45,6 +45,7 @@ DefineSettlement("barca", {
 	Name = "Barca",
 	MapTemplate = "earth",
 	Position = {4332, 1306},
+	Major = true,
 	CulturalNames = {
 		"persian", "Barca"
 	},
@@ -61,6 +62,7 @@ DefineSettlement("cyrene", {
 	Name = "Cyrene",
 	MapTemplate = "earth",
 	Position = {4342, 1301},
+	Major = true,
 	CulturalNames = {
 		"persian", "Cyrene"
 	},

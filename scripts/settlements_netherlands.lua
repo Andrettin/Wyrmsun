@@ -34,12 +34,47 @@ DefineSettlement("amsterdam", {
 --		"dutch", "Amsterdam"
 	},
 	HistoricalOwners = {
+		-264, "batavian-tribe", -- Amsterdam's area was territory of the Batavians in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1815, "netherlands" -- Amsterdam was a part of the Kingdom of the Netherlands in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		1815, 0, "town-hall",
+		-264, 0, "town-hall",
 		1877, 0, "university" -- State university founded in Amsterdam in 1877; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 		-- Calvinist university founded in Amsterdam in 1905; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
+	},
+	Regions = {"europe", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("franeker", {
+	Name = "Franeker",
+	MapTemplate = "earth",
+	Position = {3966, 837},
+	CulturalNames = {
+--		"dutch", "Franeker"
+	},
+	HistoricalOwners = {
+		1585, "netherlands"
+	},
+	HistoricalBuildings = {
+		1585, 0, "university" -- University founded in Franeker in 1585; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+	},
+	Regions = {"europe", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("leeuwarden", {
+	Name = "Leeuwarden",
+	MapTemplate = "earth",
+	Position = {3968, 837},
+	Major = true,
+	CulturalNames = {
+--		"dutch", "Leeuwarden" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
+	},
+	HistoricalOwners = {
+		-264, "frisian-tribe", -- Leeuwarden's area was territory of the Frisians in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		1815, "netherlands" -- Leeuwarden's area was part of the Kingdom of the Netherlands in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		-264, 0, "town-hall"
 	},
 	Regions = {"europe", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
 })

@@ -49,13 +49,6 @@ DefineWorldMapTile({495, 112}, {
 	}
 })
 
-DefineWorldMapTile({496, 104}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"teuton", "netherlands", "Leeuwarden" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
-	}
-})
-
 DefineWorldMapTile({497, 106}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {

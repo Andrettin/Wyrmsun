@@ -667,6 +667,7 @@ DefineSettlement("toulouse", {
 	Name = "Toulouse",
 	MapTemplate = "earth",
 	Position = {3867, 1048},
+	Major = true,
 	CulturalNames = {
 		"celt", "Tolosa",
 		"frankish", "Tolosa",

@@ -93,24 +93,6 @@ DefineWorldMapTile({515, 134}, {
 	}
 })
 
-DefineWorldMapTile({515, 136}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Roma" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	}
-})
-
-DefineWorldMapTile({517, 147}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"greek", "Panormus",
-		"latin", "Panormus" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 12.
-	},
-	FactionCulturalSettlementNames = {
-		"italian", "italy", "Palermo"
-	}
-})
-
 DefineWorldMapTile({518, 135}, {
 	World = "Earth",
 	CulturalSettlementNames = {
@@ -125,14 +107,6 @@ DefineWorldMapTile({522, 148}, {
 	World = "Earth",
 	CulturalTerrainNames = {
 		"Mountains", "latin", "Etna"
-	}
-})
-
-DefineWorldMapTile({522, 150}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"greek", "Syracusae",
-		"latin", "Syracusae" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 

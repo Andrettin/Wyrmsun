@@ -250,6 +250,24 @@ DefineSettlement("mittelberg", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
+DefineSettlement("munster", {
+	Name = "Münster",
+	MapTemplate = "earth",
+	Position = {3992, 865},
+	Major = true,
+	CulturalNames = {
+		"teuton", "Münster"
+	},
+	HistoricalOwners = {
+		-264, "sugambri-tribe", -- Münster's area was territory of the Sugambri in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		1815, "prussia" -- Münster was a part of the Kingdom of Prussia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		-264, 0, "town-hall"
+	},
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+})
+
 DefineSettlement("nuremberg", {
 	Name = "Nuremberg",
 	MapTemplate = "earth",

@@ -2407,9 +2407,6 @@ DefineProvince("Friesland", {
 		-3950, "basque",
 		-264, "teuton"
 	},
-	HistoricalModifiers = {
-		1585, "upgrade-university", true -- University founded in Franeker in 1585; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
-	},
 	Regions = {"europe", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
 })
 
