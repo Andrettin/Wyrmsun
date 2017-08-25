@@ -116,7 +116,7 @@ SetMapTemplateTileTerrain("earth", "teuton-wall", {3751, 774}, 410)
 SetMapTemplateTileTerrain("earth", "teuton-wall", {3752, 774}, 410)
 SetMapTemplateTileTerrain("earth", "teuton-wall", {3753, 774}, 410)
 SetMapTemplateTileTerrain("earth", "teuton-wall", {3754, 774}, 410)
-SetMapTemplateTileTerrain("earth", "teuton-wall", {3755, 774}, 410)
+--SetMapTemplateTileTerrain("earth", "teuton-wall", {3755, 774}, 410) -- approximately where a Roman road met the wall
 SetMapTemplateTileTerrain("earth", "teuton-wall", {3756, 774}, 410)
 SetMapTemplateTileTerrain("earth", "teuton-wall", {3757, 774}, 410)
 SetMapTemplateTileTerrain("earth", "teuton-wall", {3758, 774}, 410)

@@ -603,10 +603,10 @@ DefineSettlement("lincoln", {
 	Position = {3825, 837},
 	CulturalNames = {
 		"anglo-saxon", "Lindcylene", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
-		"briton", "Lincoln",
-		"celt", "Lincoln",
+		"briton", "Lindum",
+		"celt", "Lindum",
 		"english", "Lincoln",
-		"latin", "Lincoln" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+		"latin", "Lindum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
 		410, "rome", -- Lindum/Lincoln was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
