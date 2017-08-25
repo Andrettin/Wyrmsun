@@ -116,14 +116,13 @@ DefineCharacter("aethelfrith", { -- Source: Frank Stenton, "Anglo-Saxon England"
 		"head-of-state", 593, 616, "anglo-saxon", "deira"
 	},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "bernicia" or GetPlayerData(trigger_player, "Faction") == "deira") then
+		if (GetPlayerData(trigger_player, "Faction") == "bernicia" or GetPlayerData(trigger_player, "Faction") == "northumbria") then
 			return true
 		end
 		return false
 	end
 	-- married the daughter of the Deiran king Ælle
 	-- at some point between 613 and 616, he defeated the Britons at Chester; before the battle of Chester, Æthelfrith's warriors killed a group of British monks who stemmed from the monastery of Bangor Iscoed, and had come to pray for the Briton forces; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 77-78
-	-- at some point between 613 and 616, he defeated the Britons at Chester; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 77-78
 })
 
 DefineCharacter("ceawlin", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 76.
@@ -159,7 +158,7 @@ DefineCharacter("edwin-of-deira", { -- Source: Frank Stenton, "Anglo-Saxon Engla
 		"head-of-state", 616, 632, "anglo-saxon", "deira" -- was the heir to Deira, but also became the king of Bernicia after the battle against Æthelfrith in 616
 	},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "deira" or GetPlayerData(trigger_player, "Faction") == "bernicia") then
+		if (GetPlayerData(trigger_player, "Faction") == "deira" or GetPlayerData(trigger_player, "Faction") == "northumbria") then
 			return true
 		end
 		return false

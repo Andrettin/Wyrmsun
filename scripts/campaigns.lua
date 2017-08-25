@@ -154,4 +154,15 @@ DefineCampaign("island-of-the-lizard-god", { -- based on Will Doyle's "Island of
 	MapTemplateStartPos = {700, 472},
 	MapSize = {256, 256}
 })
+
+DefineCampaign("the-heirs-return", {
+	Name = "The Heir's Return",
+	Description = "Upon the death of Aelle of Deira, his kingdom was taken over by the monarch of Bernicia. Aelle's son Edwin, then only a child, was taken in secret to another realm for the sake of his survival. After nearly twenty years of exile, Edwin has gathered an army, seeking to recover his birthright...",
+	Civilization = "anglo-saxon",
+	Faction = "deira",
+	StartYear = 616,
+	MapTemplate = "earth",
+	MapTemplateStartPos = {3627, 695},
+	MapSize = {256, 256}
+})
 --]]

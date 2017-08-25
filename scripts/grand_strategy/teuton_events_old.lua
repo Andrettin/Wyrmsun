@@ -389,7 +389,7 @@ local TeutonEvents = {
 		Conditions = function(s)
 			if (
 				GetProvinceOwner("Essex") == EventFaction.Name -- since this was presumably in England, and Essex is where the London lays
-				and GetProvinceCivilization("Essex") == "teuton" -- should be English
+				and GetProvinceCivilization("Essex") == "english"
 			) then
 				return true
 			else
@@ -487,7 +487,7 @@ local TeutonEvents = {
 		Conditions = function(s)
 			if (
 				GetProvinceOwner("Lothian") == EventFaction.Name -- where was he actually born in Scotland?
-				and GetProvinceCivilization("Lothian") == "teuton" -- should be English instead of Teuton
+				and GetProvinceCivilization("Lothian") == "english"
 			) then
 				return true
 			else
@@ -510,7 +510,7 @@ local TeutonEvents = {
 		Conditions = function(s)
 			if (
 				GetProvinceOwner("Essex") == EventFaction.Name -- since this was presumably in England, and Essex is where the London lays
-				and GetProvinceCivilization("Essex") == "teuton" -- should be English
+				and GetProvinceCivilization("Essex") == "english"
 			) then
 				return true
 			else
@@ -533,7 +533,7 @@ local TeutonEvents = {
 		Conditions = function(s)
 			if (
 				GetProvinceOwner("Lothian") == EventFaction.Name
-				and GetProvinceCivilization("Lothian") == "teuton" -- should be English instead of Teuton
+				and GetProvinceCivilization("Lothian") == "english"
 			) then
 				return true
 			else
@@ -556,7 +556,7 @@ local TeutonEvents = {
 		Conditions = function(s)
 			if (
 				GetProvinceOwner("Essex") == EventFaction.Name -- since this was presumably in England, and Essex is where the London lays
-				and GetProvinceCivilization("Essex") == "teuton" -- should be English
+				and GetProvinceCivilization("Essex") == "english"
 			) then
 				return true
 			else

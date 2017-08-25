@@ -3631,7 +3631,7 @@ DefineProvince("Lothian", { -- includes Borders
 	Coastal = true,
 	Claims = {
 		"briton", "otalini-tribe",
-		"english", "scotland" -- should be English
+		"english", "scotland"
 	},
 	HistoricalOwners = {
 		-27, "briton", "otalini-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
@@ -4675,7 +4675,7 @@ DefineProvince("Orkney", {
 	Coastal = true,
 	Claims = {
 		"norse", "orkney",
-		"english", "scotland" -- should be English-cultured instead
+		"english", "scotland"
 	},
 	HistoricalOwners = {
 		1099, "norse", "orkney", -- since the faction had a ruler at this date, then it must have existed

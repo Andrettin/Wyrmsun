@@ -71,11 +71,14 @@ DefineSettlement("bamburgh", {
 		"english", "Bamburgh" -- as given by Stenton; Shepherd gives it as "Bamborough" instead; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 	},
 	HistoricalOwners = {
+		526, "bernice-tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		547, "bernicia", -- the Kingdom of Bernicia was founded in 547 AD; by 600 AD, the Bernice people (who were Anglians) were centered in Bamburgh; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 74-75.
+		654, "northumbria", -- Northumbria unified by Oswiu of Bernicia in 654
 		802, "northumbria", -- Bamborough was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 		1560, "england" -- Bamburgh's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		802, 0, "town-hall"
+		526, 0, "town-hall"
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -171,6 +174,7 @@ DefineSettlement("canterbury", {
 	Name = "Canterbury",
 	MapTemplate = "earth",
 	Position = {3866, 880},
+	Major = true,
 	CulturalNames = {
 		"anglo-saxon", "Cantwaraburg", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"briton", "Durovernum",
@@ -184,8 +188,7 @@ DefineSettlement("canterbury", {
 		1560, "england" -- Canterbury was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		410, 597, "farm",
-		597, 0, "town-hall",
+		410, 0, "town-hall",
 		597, 0, "temple" -- Augustine and his followers performed religious services in a church in Canterbury in 597 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 105-106.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
@@ -416,11 +419,14 @@ DefineSettlement("edinburgh", {
 		"english", "Edinburgh"
 	},
 	HistoricalOwners = {
+		-27, "otalini-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		80, "rome", -- The area between the Wall of Antoninus (or Severus) and Hadrian's Wall was acquired by Rome in 80 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "selgovae-tribe", -- The area was inhabited by the Selgovae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		802, "northumbria", -- Edinburgh was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 		1560, "scotland" -- Edinburgh was a part of Scotland in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		802, 0, "town-hall",
+		-27, 0, "town-hall",
 		1582, 0, "university" -- University founded in Edinburgh in 1582; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"british-isles", "europe", "northwest-europe", "scotland", "west-and-central-europe"}
@@ -452,6 +458,7 @@ DefineSettlement("gloucester", {
 	Name = "Gloucester",
 	MapTemplate = "earth",
 	Position = {3783, 873},
+	Major = true,
 	CulturalNames = {
 		"anglo-saxon", "Gleawanceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"briton", "Glevum",
@@ -958,6 +965,7 @@ DefineSettlement("york", {
 		"latin", "Eboracum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
+		-264, "brigantes-tribe", -- York's environs were territory of the Brigantes in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		43, "rome", -- Eburacum/York was acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		500, "dere-tribe", -- the Dere (a collection of Anglian peoples) were in possession of York in 500 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 		588, "bernicia", -- according to tradition, Æthelric of Bernicia acquired the kingdom of Deira upon its king Ælle's death in 588 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.

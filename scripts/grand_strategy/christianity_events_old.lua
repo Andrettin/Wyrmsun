@@ -483,7 +483,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				GetProvinceOwner("Overijssel") == EventFaction.Name
-				and GetProvinceCivilization("Essex") == "anglo-saxon" -- should be English; Liafwin's province of origin has to be the same culture as he historically was; Essex set because he was from England and this is the province where London lays
+				and GetProvinceCivilization("Essex") == "anglo-saxon" -- Liafwin's province of origin has to be the same culture as he historically was; Essex set because he was from England and this is the province where London lays
 			) then
 				EventProvince = WorldMapProvinces.Overijssel
 				return true
