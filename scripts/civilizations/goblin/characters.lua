@@ -38,7 +38,7 @@ DefineCharacter("agniss-tenebris", { -- invented by Jesse Crider
 --	Icon = "icon-agniss",
 	ProvinceOfOrigin = "Tenebris",
 	HistoricalTitles = {
---		"head-of-state", 0, 0, "goblin", "tenebris"
+--		"head-of-state", 0, 0, "tenebris"
 	}
 })
 
@@ -55,7 +55,7 @@ DefineCharacter("dremac-paarsins", { -- invented by Jesse Crider
 	Icon = "icon-dremac-paarsins",
 	ProvinceOfOrigin = "Myridia",
 	HistoricalTitles = {
---		"head-of-state", 0, 0, "goblin", "myridia"
+--		"head-of-state", 0, 0, "myridia"
 	}
 })
 
@@ -72,7 +72,7 @@ DefineCharacter("ioun-stilgar", { -- invented by Jesse Crider
 	Icon = "icon-ioun",
 	ProvinceOfOrigin = "Stilgar",
 	HistoricalTitles = {
---		"head-of-state", 0, 0, "goblin", "stilgar"
+--		"head-of-state", 0, 0, "stilgar"
 	}
 })
 
@@ -89,7 +89,7 @@ DefineCharacter("orza-chahax", { -- invented by Jesse Crider
 	Icon = "icon-orza-chahax",
 	ProvinceOfOrigin = "Ezmarria",
 	HistoricalTitles = {
---		"head-of-state", 0, 0, "goblin", "ezmarria"
+--		"head-of-state", 0, 0, "ezmarria"
 	}
 })
 

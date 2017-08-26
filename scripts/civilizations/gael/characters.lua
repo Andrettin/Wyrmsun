@@ -36,7 +36,7 @@ DefineCharacter("aedan-mac-gabrain", { -- Source: Frank Stenton, "Anglo-Saxon En
 	Date = 574, -- became king
 	-- attacked the Bernicians in 603 AD
 	HistoricalTitles = {
-		"head-of-state", 574, 0, "gael", "argyll"
+		"head-of-state", 574, 0, "argyll"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "argyll") then
@@ -79,7 +79,7 @@ DefineCharacter("bruide-mac-beli", { -- Source: Frank Stenton, "Anglo-Saxon Engl
 	Date = 672,
 	DeathDate = 693, -- died
 	HistoricalTitles = {
-		"head-of-state", 672, 693, "briton", "pict-tribe" -- became king of the Picts in 672
+		"head-of-state", 672, 693, "pict-tribe" -- became king of the Picts in 672
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "pict-tribe") then

@@ -33,7 +33,7 @@ DefineCharacter("ambiorix", { -- Source: H. H. Howorth, "The Ethnology of German
 	Faction = "eburones-tribe",
 	Date = -54,
 	HistoricalTitles = {
-		"head-of-state", -54, 0, "gaul", "eburones-tribe" -- was chieftain of the Eburones tribe in 54 BC (together with Cativolcus)
+		"head-of-state", -54, 0, "eburones-tribe" -- was chieftain of the Eburones tribe in 54 BC (together with Cativolcus)
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "eburones-tribe") then
@@ -70,7 +70,7 @@ DefineCharacter("indutiomarus", { -- Source: H. H. Howorth, "The Ethnology of Ge
 	Faction = "treviri-tribe",
 	Date = -54,
 	HistoricalTitles = {
-		"head-of-state", -54, 0, "gaul", "treviri-tribe" -- was chieftain of the Treviri in 54 BC
+		"head-of-state", -54, 0, "treviri-tribe" -- was chieftain of the Treviri in 54 BC
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "treviri-tribe") then

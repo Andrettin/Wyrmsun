@@ -36,7 +36,7 @@ DefineCharacter("ariovistus", {
 	DeathDate = -54, -- Ariovistus died in 54 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 222.
 	ViolentDeath = true,
 	HistoricalTitles = {
-		"head-of-state", -71, -54, "suebi", "suebi-tribe"
+		"head-of-state", -71, -54, "suebi-tribe"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "suebi-tribe") then
@@ -61,7 +61,7 @@ DefineCharacter("marbod", {
 	DeathDate = 19, -- Marbod deposed in 19 AD
 	ViolentDeath = true, -- to represent him being deposed; remove when his DeathYear is replaced with his actual year of death
 	HistoricalTitles = {
-		"head-of-state", -9, 19, "suebi", "marcomanni-tribe"
+		"head-of-state", -9, 19, "marcomanni-tribe"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "marcomanni-tribe") then
@@ -78,7 +78,7 @@ DefineCharacter("catualda", { -- Marcomannic noble who was exiled by Marbod, and
 	Civilization = "suebi",
 	Faction = "marcomanni-tribe",
 	HistoricalTitles = {
-		"head-of-state", 19, 0, "suebi", "marcomanni-tribe" -- deposed Marbod in 19 AD
+		"head-of-state", 19, 0, "marcomanni-tribe" -- deposed Marbod in 19 AD
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "marcomanni-tribe") then

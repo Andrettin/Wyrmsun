@@ -40,7 +40,7 @@ DefineCharacter("draupnir", { -- Source: Henry Adams Bellows (transl.), "The Poe
 --		-2800, "nidavellir", {706, 222}
 --	},
 	HistoricalTitles = {
-		"head-of-state", -2800, -2800 + 30, "dwarf", "goldhoof-clan"
+		"head-of-state", -2800, -2800 + 30, "goldhoof-clan"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "goldhoof-clan" or GetPlayerData(trigger_player, "Faction") == "joruvellir") then

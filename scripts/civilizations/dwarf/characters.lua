@@ -41,7 +41,7 @@ DefineCharacter("modsognir", { -- one of the earliest dwarven leaders
 	Date = -3000,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	HistoricalTitles = {
-		"head-of-state", -3000, -3000 + 30, "dwarf", "brising-clan"
+		"head-of-state", -3000, -3000 + 30, "brising-clan"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Allow", "upgrade-dwarven-runewriting") ~= "R") then -- Modsognir shouldn't appear in eras with too advanced technology
@@ -247,7 +247,7 @@ DefineCharacter("durstorn", { -- from Battle for Wesnoth: The Sceptre of Fire; c
 	ViolentDeath = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	HistoricalTitles = {
-		"head-of-state", -1, 35, "dwarf", "norlund-clan"
+		"head-of-state", -1, 35, "norlund-clan"
 	}
 })
 
@@ -262,7 +262,7 @@ DefineCharacter("glonoin", { -- from Battle for Wesnoth: The Sceptre of Fire; ch
 	DeathDate = 29, -- Shorbear Hold conquered in 29 AD by Rugnur's and Durstorn's Clan
 	ViolentDeath = true,
 	HistoricalTitles = {
-		"head-of-state", -1, 29, "dwarf", "shorbear-clan"
+		"head-of-state", -1, 29, "shorbear-clan"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "shorbear-clan") then

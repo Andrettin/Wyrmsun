@@ -33,7 +33,7 @@ DefineCharacter("tassilo", { -- Source: "Medieval Warfare V.2", 2013, p. 8.
 	Faction = "bavaria",
 	Date = 784, -- revolted against Frankish rule in 784
 	HistoricalTitles = {
-		"head-of-state", 784, 787, "teuton", "bavaria" -- revolted against Frankish rule in 784, and was forced to submit to them by Charles the Great three years later
+		"head-of-state", 784, 787, "bavaria" -- revolted against Frankish rule in 784, and was forced to submit to them by Charles the Great three years later
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "bavaria") then

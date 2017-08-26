@@ -59,7 +59,7 @@ DefineCharacter("froste", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Civilization = "finnish", -- presumably
 	ProvinceOfOrigin = "Finland",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "finnish", "fenni-tribe" -- he was chieftain over the Finns, and the Fenni tribe seems like a fair enough representation of that
+		"head-of-state", 0, 0, "fenni-tribe" -- he was chieftain over the Finns, and the Fenni tribe seems like a fair enough representation of that
 	}
 })
 

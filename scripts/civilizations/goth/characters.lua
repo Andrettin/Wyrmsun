@@ -84,7 +84,7 @@ DefineCharacter("airmanareiks", { -- Source: Henry Adams Bellows (transl.), "The
 	Trait = "upgrade-cruel", -- described as generous, cruel, wrathful, faithless, savage; Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxx.
 	DeathDate = 376, -- died
 	HistoricalTitles = {
-		"head-of-state", 0, 376, "goth", "ostrogoth-tribe"
+		"head-of-state", 0, 376, "ostrogoth-tribe"
 	}
 })
 
@@ -110,7 +110,7 @@ DefineCharacter("walamer-amelung", { -- Source: F. E. Sandbach, "The Heroic Saga
 	Date = 453, -- ruled over the Ostrogoths when Attila died and his Hunnic empire collapsed in 453 AD
 	DeathDate = 472, -- died
 	HistoricalTitles = {
-		"head-of-state", 453, 472, "goth", "ostrogoth-tribe"
+		"head-of-state", 453, 472, "ostrogoth-tribe"
 	}
 })
 
@@ -125,7 +125,7 @@ DefineCharacter("theodemer-amelung", { -- Source: F. E. Sandbach, "The Heroic Sa
 	Date = 472,
 	DeathDate = 474, -- died
 	HistoricalTitles = {
-		"head-of-state", 472, 474, "goth", "ostrogoth-tribe" -- by 472 AD Theodemer has become king of the Ostrogoths; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7.
+		"head-of-state", 472, 474, "ostrogoth-tribe" -- by 472 AD Theodemer has become king of the Ostrogoths; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7.
 	}
 })
 
@@ -153,7 +153,7 @@ DefineCharacter("thiudareiks-amelung", { -- Source: F. E. Sandbach, "The Heroic 
 	DeathDate = 526, -- died; he was put in a magnificent marble tomb in Ravenna
 	Father = "theodemer-amelung",
 	HistoricalTitles = {
-		"head-of-state", 474, 526, "goth", "ostrogoth-tribe" -- In 474 AD the Ostrogoths left Pannonia to settle in Macedonia under the aegis of the Eastern Roman Emperor, and in that same year Theodemer died, being succeeded by Theoderic; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 7.
+		"head-of-state", 474, 526, "ostrogoth-tribe" -- In 474 AD the Ostrogoths left Pannonia to settle in Macedonia under the aegis of the Eastern Roman Emperor, and in that same year Theodemer died, being succeeded by Theoderic; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 7.
 	}
 })
 

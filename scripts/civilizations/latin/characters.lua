@@ -51,7 +51,7 @@ DefineCharacter("marcus-aurelius", { -- Source: "Ancient Warfare VII.6", 2013, p
 	HistoricalTitles = {
 		-- was consul when he was 18 years old
 		-- in 140 he became consul a second time
-		"head-of-state", 161, 0, "latin", "rome" -- Roman Emperor from 161 (with Lucius Verus as his co-emperor)
+		"head-of-state", 161, 0, "rome" -- Roman Emperor from 161 (with Lucius Verus as his co-emperor)
 	}
 	-- married to Faustina the Younger
 })

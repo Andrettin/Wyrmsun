@@ -33,7 +33,7 @@ DefineCharacter("geirthiof", { -- Source: Snorri Sturlson, "Heimskringla", 1844,
 	ProvinceOfOrigin = "Holstein", -- correct? was from "Saxonland"
 	-- Adils Yngling went on a viking expedition to raid Saxonland when Geirthiof was king there
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "teuton", "saxon-tribe" -- was king of "Saxonland"
+		"head-of-state", 0, 0, "saxon-tribe" -- was king of "Saxonland"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "saxon-tribe") then
@@ -91,7 +91,7 @@ DefineCharacter("rolf-krake-skjoldung", { -- Source: Snorri Sturlson, "Heimskrin
 	Father = "helge-skjoldung",
 	Mother = "yrsa",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "dane-tribe"
+		"head-of-state", 0, 0, "dane-tribe"
 	}
 })
 
@@ -135,8 +135,8 @@ DefineCharacter("henry-of-saxony", { -- Source: Susan D. Fuller, "Pagan Charms i
 	Date = 919, -- reign began
 	DeathDate = 936, -- reign ended
 	HistoricalTitles = {
-		"head-of-state", 919, 936, "teuton", "holy-rome",
-		"head-of-state", 919, 936, "teuton", "saxony" -- duke of Saxony (from when until when? here we use the same dates as for his other title)
+		"head-of-state", 919, 936, "holy-rome",
+		"head-of-state", 919, 936, "saxony" -- duke of Saxony (from when until when? here we use the same dates as for his other title)
 	}
 })
 --]]

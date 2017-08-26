@@ -73,7 +73,7 @@ DefineCharacter("gylve", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Faction = "gylfing-tribe",
 	ProvinceOfOrigin = "Scania",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "basque", "gylfing-tribe"
+		"head-of-state", 0, 0, "gylfing-tribe"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "gylfing-tribe") then

@@ -34,7 +34,7 @@ DefineCharacter("gibica", { -- Source: Norman Davies, "Vanished Kingdoms", 2012,
 	ProvinceOfOrigin = "Franconia", -- place where the Burgundians dwelled before moving to the area of the Palatinate
 	DeathDate = 411,
 	HistoricalTitles = {
-		"head-of-state", 0, 411, "goth", "burgundian-tribe"
+		"head-of-state", 0, 411, "burgundian-tribe"
 	}
 })
 
@@ -61,7 +61,7 @@ DefineCharacter("gundahar", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	Father = "gibica",
 	Mother = "grimhild",
 	HistoricalTitles = {
-		"head-of-state", 411, 437, "goth", "burgundy" -- Kingdom of the Burgundians established by Gundahar (a Burgundian tribal chief) in 411 AD, with its center in Borbetomagus (Worms); Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-93.
+		"head-of-state", 411, 437, "burgundy" -- Kingdom of the Burgundians established by Gundahar (a Burgundian tribal chief) in 411 AD, with its center in Borbetomagus (Worms); Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-93.
 	}
 })
 
@@ -170,7 +170,7 @@ DefineCharacter("gundioc", { -- Source: Norman Davies, "Vanished Kingdoms", 2012
 	Father = "gundahar", -- from Gibica's line (so presumably a child of Gundahar's)
 	Mother = "glaumvor", -- if he was a child of Gundahar's, then his mother would likely be Glaumvor
 	HistoricalTitles = {
-		"head-of-state", 437, 474, "goth", "burgundy"
+		"head-of-state", 437, 474, "burgundy"
 	}
 })
 
@@ -185,7 +185,7 @@ DefineCharacter("chilperic", { -- Source: Norman Davies, "Vanished Kingdoms", 20
 	DeathDate = 480, -- end of reign
 	Father = "gundioc", -- from Gibica's line (so presumably a child of Gundioc's)
 	HistoricalTitles = {
-		"head-of-state", 474, 480, "goth", "burgundy"
+		"head-of-state", 474, 480, "burgundy"
 	}
 })
 
@@ -214,7 +214,7 @@ DefineCharacter("gundobad", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	DeathDate = 516, -- end of reign
 	Father = "gundioc", -- was Chilperic's brother, so presumably a child of Gundioc's
 	HistoricalTitles = {
-		"head-of-state", 480, 516, "goth", "burgundy"
+		"head-of-state", 480, 516, "burgundy"
 	}
 })
 
@@ -230,7 +230,7 @@ DefineCharacter("sigismund", { -- Source: Norman Davies, "Vanished Kingdoms", 20
 	DeathDate = 523, -- end of reign
 	Father = "gundobad", -- son of Gundobad
 	HistoricalTitles = {
-		"head-of-state", 516, 523, "goth", "burgundy"
+		"head-of-state", 516, 523, "burgundy"
 	}
 })
 
@@ -246,6 +246,6 @@ DefineCharacter("gundimar", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	ViolentDeath = true,
 	Father = "sigismund", -- from Gibica's line (so presumably a child of Sigismund's)
 	HistoricalTitles = {
-		"head-of-state", 523, 534, "goth", "burgundy"
+		"head-of-state", 523, 534, "burgundy"
 	}
 })

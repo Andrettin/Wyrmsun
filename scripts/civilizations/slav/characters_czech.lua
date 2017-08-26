@@ -34,7 +34,7 @@ DefineCharacter("charles", { -- Source: Alena Ježková, "77 Prague Legends", 20
 	Date = 1357, -- The foundation stone of a new bridge to replace Judita Bridge was laid in the 9th of July 1357 by Emperor and King Charles IV
 	DeathDate = 1378, -- Charles IV was on his deathbed in November 1378, in Prague Castle
 	HistoricalTitles = {
-		"head-of-state", 0, 1378, "slav", "bohemia"
+		"head-of-state", 0, 1378, "bohemia"
 	}
 })
 

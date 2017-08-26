@@ -294,48 +294,10 @@ DefineCharacter("bertha-of-paris", { -- Bertha of Paris, daughter of the Frankis
 	Civilization = "frankish",
 	Faction = "francia",
 	Father = "charibert", -- is this the correct Charibert who is her father?
+	Children = {"eadbald"}, -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 112-113.
 	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
-			return true
-		end
-		return false
-	end
-})
-
-DefineCharacter("eadbald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 112-113.
-	Name = "Eadbald", -- needs to be placed here instead of in the Anglo-Saxon character file to be able to set the parents correctly
-	Gender = "male",
-	Type = "unit-teuton-heroic-swordsman", -- king
-	Civilization = "anglo-saxon",
-	Faction = "kent",
-	Father = "aethelberht",
-	Mother = "bertha-of-paris",
-	DeathDate = 640, -- reign ended
-	HistoricalTitles = {
-		"head-of-state", 616, 640, "anglo-saxon", "kent" -- became king of Kent in 616, and ceased to be king in 640
-	},
-	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "kent") then
-			return true
-		end
-		return false
-	end
-})
-
-DefineCharacter("eorcenberht", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 113.
-	Name = "Eorcenberht", -- needs to be placed here instead of in the Anglo-Saxon character file to be able to set the parents correctly
-	Gender = "male",
-	Type = "unit-teuton-heroic-swordsman", -- king
-	Civilization = "anglo-saxon",
-	Faction = "kent",
-	Father = "eadbald",
-	Deities = {"christian-god"},
-	HistoricalTitles = {
-		"head-of-state", 640, 0, "anglo-saxon", "kent"
-	},
-	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "kent") then
 			return true
 		end
 		return false

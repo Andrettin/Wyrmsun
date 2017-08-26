@@ -32,7 +32,7 @@ DefineCharacter("pwyll", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch de
 	Civilization = "welsh",
 	Faction = "dyfed",
 	HistoricalTitles = {
---		"head-of-state", 0, 0, "welsh", "dyfed" -- prince of Dyfed, lord of the seven Cantrefis of Dyfed
+--		"head-of-state", 0, 0, "dyfed" -- prince of Dyfed, lord of the seven Cantrefis of Dyfed
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "dyfed") then
@@ -83,7 +83,7 @@ DefineCharacter("teyrnon-twryf-liant", { -- Source: Bernhard Maier (trans.), "Da
 	Civilization = "welsh",
 	ProvinceOfOrigin = "Wales", -- Gwent Is Coed
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "welsh", "gwent-is-coed" -- lord of Gwent Is Coed
+		"head-of-state", 0, 0, "gwent-is-coed" -- lord of Gwent Is Coed
 	}
 })
 
@@ -112,7 +112,7 @@ DefineCharacter("pryderi", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch 
 	Father = "pwyll",
 	Mother = "rhiannon",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "welsh", "dyfed" -- prince of Dyfed
+		"head-of-state", 0, 0, "dyfed" -- prince of Dyfed
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "dyfed") then
@@ -208,7 +208,7 @@ DefineCharacter("solomon-of-powys", { -- Source: Frank Stenton, "Anglo-Saxon Eng
 	Father = "cynan",
 	Date = 613, -- at some point between 613 and 616, he was defeated by the Bernicians at Chester
 	HistoricalTitles = {
-		"head-of-state", 613, 0, "welsh", "powys" -- king of Powys; at some point between 613 and 616, he was defeated by the Bernicians at Chester
+		"head-of-state", 613, 0, "powys" -- king of Powys; at some point between 613 and 616, he was defeated by the Bernicians at Chester
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "powys") then
@@ -228,7 +228,7 @@ DefineCharacter("cadwallon", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 	DeathDate = 633, -- killed by Oswald of Bernicia in 633
 	ViolentDeath = true,
 	HistoricalTitles = {
-		"head-of-state", 632, 0, "welsh", "gwynedd" -- king of Gwynedd; in 632 AD attacked Northumbria, and fought Edwin in Hatfield Chase, ending with the latter's death and that of Edwin's son Osfrith
+		"head-of-state", 632, 0, "gwynedd" -- king of Gwynedd; in 632 AD attacked Northumbria, and fought Edwin in Hatfield Chase, ending with the latter's death and that of Edwin's son Osfrith
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "gwynedd") then
@@ -261,7 +261,7 @@ DefineCharacter("certic", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Faction = "elmet",
 	-- was a contemporary of Edwin of Deira, who conquered his kingdom
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "welsh", "elmet" -- king of Elmet
+		"head-of-state", 0, 0, "elmet" -- king of Elmet
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "elmet") then

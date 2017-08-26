@@ -91,7 +91,7 @@ DefineCharacter("leopold-hasner", { -- Source: Waltraud Heindl, "Josephinische M
 	Date = 1818, -- born
 	DeathDate = 1891, -- died
 	HistoricalTitles = {
-		"education-minister", 0, 0, "teuton", "austria"
+		"education-minister", 0, 0, "austria"
 	}
 	-- Knight (Ritter) of Artha
 })
@@ -130,7 +130,7 @@ DefineCharacter("von-pillersdorf", { -- Source: Waltraud Heindl, "Josephinische 
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Date = 1848, -- became Minister-President of Austria in 1848
 	HistoricalTitles = {
-		"head-of-government", 1848, 1848, "teuton", "austria" -- was Minister-President of Austria during 1848
+		"head-of-government", 1848, 1848, "austria" -- was Minister-President of Austria during 1848
 	}
 })
 
@@ -144,7 +144,7 @@ DefineCharacter("franz-joseph-von-habsburg", { -- Source: Waltraud Heindl, "Jose
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Date = 1830, -- born (became Emperor in 1848, when he was 18 years old)
 	HistoricalTitles = {
-		"head-of-state", 1848, 0, "teuton", "austria" -- became Emperor of Austria in 1848
+		"head-of-state", 1848, 0, "austria" -- became Emperor of Austria in 1848
 	}
 })
 
@@ -172,7 +172,7 @@ DefineCharacter("franz-seraph-stadion", { -- Source: Waltraud Heindl, "Josephini
 	Date = 1806, -- born
 	DeathDate = 1853, -- died
 	HistoricalTitles = {
-		"interior-minister", 1848, 1849, "teuton", "austria" -- Interior Minister (Innenminister) of Austria until May 1849, when he became severely ill; was already Interior Minister by 7.11.1848
+		"interior-minister", 1848, 1849, "austria" -- Interior Minister (Innenminister) of Austria until May 1849, when he became severely ill; was already Interior Minister by 7.11.1848
 	}
 	-- count (of where?)
 })
@@ -188,7 +188,7 @@ DefineCharacter("alexander-von-bach", { -- Source: Waltraud Heindl, "Josephinisc
 	Date = 1813, -- born
 	DeathDate = 1893, -- died
 	HistoricalTitles = {
-		"interior-minister", 1849, 1859, "teuton", "austria" -- became Interior Minister (Innenminister) of Austria on 15.08.1849, and ceased that function in 1859
+		"interior-minister", 1849, 1859, "austria" -- became Interior Minister (Innenminister) of Austria on 15.08.1849, and ceased that function in 1859
 	}
 })
 
@@ -216,7 +216,7 @@ DefineCharacter("anton-hye-von-glunek", { -- Source: Waltraud Heindl, "Josephini
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Date = 1849, -- became part of the ministerial council of the Austrian Ministry of Justice in 1849
 	HistoricalTitles = {
-		"justice-minister", 1867, 1867, "teuton", "austria" -- was Justice Minister (Justizminister) of Austria from June to December of 1867
+		"justice-minister", 1867, 1867, "austria" -- was Justice Minister (Justizminister) of Austria from June to December of 1867
 	}
 })
 
@@ -230,7 +230,7 @@ DefineCharacter("adolph-pratobevera-von-wiesborn",  { -- Source: Waltraud Heindl
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Date = 1852, -- became councillor (Hofrat) in the supreme court (Oberster Gerichtshof) in 1852
 	HistoricalTitles = {
-		"justice-minister", 1861, 1862, "teuton", "austria" -- was Justice Minister (Justizminister) of Austria from 1861 to 1862
+		"justice-minister", 1861, 1862, "austria" -- was Justice Minister (Justizminister) of Austria from 1861 to 1862
 	}
 	-- had the reputation of being a freethinker
 })
