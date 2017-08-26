@@ -112,7 +112,6 @@ DefineSettlement("uppsala", {
 	Name = "Uppsala",
 	MapTemplate = "earth",
 	Position = {4241, 686},
-	Major = true,
 	CulturalNames = {
 		"norse", "Uppsala"
 	},

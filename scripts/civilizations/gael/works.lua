@@ -25,20 +25,19 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-Load("scripts/civilizations/anglo_saxon/works.lua")
-Load("scripts/civilizations/gael/works.lua")
-Load("scripts/civilizations/dwarf/works.lua")
-Load("scripts/civilizations/egyptian/works.lua")
-Load("scripts/civilizations/gnome/works.lua")
-Load("scripts/civilizations/goblin/works.lua")
-Load("scripts/civilizations/greek/works.lua")
-Load("scripts/civilizations/latin/works.lua")
-Load("scripts/civilizations/norse/works.lua")
-Load("scripts/civilizations/teuton/works.lua")
-Load("scripts/civilizations/troll/works.lua")
-Load("scripts/civilizations/welsh/works.lua")
+DefineUpgrade("upgrade-work-de-mensura-orbis-terrae", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 40.
+	Name = "De Mensura Orbis Terrae",
+	Work = "book",
+	Description = "In this cosmographical work, the author laments that the islands to the north of Great Britain, which had for 100 years been locations with a strong hermit presence, have now been emptied due to attacks from Norsemen..",
+	Year = 825
+	-- should probably have some other requirements, like any Norwegian province being Norse-cultured (or even better, the one from which those attackers actually were)
+})
 
-local literary_works = GetLiteraryWorks()
-for i = 1, table.getn(literary_works) do
-	table.insert(Units, literary_works[i])
-end
+DefineModifier("upgrade-work-de-mensura-orbis-terrae",
+	{"KnowledgeWarfare", 2},
+	{"KnowledgeMagic", 3}
+)
+
+DefineDependency("upgrade-work-de-mensura-orbis-terrae",
+	{"upgrade-celt-civilization", "unit-teuton-university"}
+)

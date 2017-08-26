@@ -158,6 +158,16 @@ DefineCharacter("cigfa", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch de
 	-- wife of Pryderi
 })
 
+DefineCharacter("gildas", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 2.
+	Name = "Gildas",
+	Gender = "male",
+	Type = "unit-teuton-priest",
+	Civilization = "welsh", -- British monk
+	Date = 547, -- wrote "De Excidio et Conquestu Britanniae" a bit before 547
+	Deities = {"christian-god"},
+	AuthoredWorks = {"upgrade-work-de-excidio-et-conquestu-britanniae"}
+})
+
 DefineCharacter("maelgwn", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 76.
 	Name = "Maelgwn", -- Maelgwn of Gwynedd
 	Gender = "male",

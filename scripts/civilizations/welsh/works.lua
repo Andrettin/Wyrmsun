@@ -25,33 +25,32 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineUpgrade("upgrade-work-de-excidio-et-conquestu-britanniae", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 2.
+	Name = "De Excidio et Conquestu Britanniae",
+	Work = "book",
+	Description = "This book describes the conquest of Britain by Angles and Saxons, claiming that it happened due to the wickedness of Briton rulers, and urges them to repent to God.",
+	Year = 547 -- written a bit before 547
+})
+
 DefineUpgrade("upgrade-work-pedair-cainc-y-mabinogi", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 100-101.
-	Name = _("The Four Branches of the Mabinogi"),
+	Name = "The Four Branches of the Mabinogi",
 	Work = "book"
 })
 
-DefineUpgrade("upgrade-work-de-mensura-orbis-terrae", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 40.
-	Name = _("De Mensura Orbis Terrae"),
-	Work = "book",
-	Description = "In this cosmographical work, the author laments that the islands to the north of Great Britain, which had for 100 years been locations with a strong hermit presence, have now been emptied due to attacks from Norsemen..",
-	Year = 825
-	-- should probably have some other requirements, like any Norwegian province being Norse-cultured (or even better, the one from which those attackers actually were)
-})
+DefineModifier("upgrade-work-de-excidio-et-conquestu-britanniae",
+	{"KnowledgeWarfare", 4},
+	{"KnowledgeMagic", 1}
+)
 
 DefineModifier("upgrade-work-pedair-cainc-y-mabinogi",
 	{"KnowledgeWarfare", 3},
 	{"KnowledgeMagic", 2}
 )
 
-DefineModifier("upgrade-work-de-mensura-orbis-terrae",
-	{"KnowledgeWarfare", 2},
-	{"KnowledgeMagic", 3}
+DefineDependency("upgrade-work-de-excidio-et-conquestu-britanniae",
+	{"upgrade-celt-civilization", "unit-teuton-temple", "upgrade-deity-christian-god"}
 )
 
 DefineDependency("upgrade-work-pedair-cainc-y-mabinogi",
 	{"upgrade-celt-civilization", "unit-teuton-temple"}
-)
-
-DefineDependency("upgrade-work-de-mensura-orbis-terrae",
-	{"upgrade-celt-civilization", "unit-teuton-university"}
 )
