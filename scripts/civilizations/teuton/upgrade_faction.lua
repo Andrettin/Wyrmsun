@@ -980,6 +980,14 @@ DefineDependency("upgrade-faction-bernice-tribe",
 	{"upgrade-teuton-spatha", "upgrade-teuton-iron-shield"}
 )
 
+DefinePredependency("upgrade-faction-cantware-tribe",
+	{"upgrade-faction-jute-tribe"}
+)
+
+DefineDependency("upgrade-faction-cantware-tribe",
+	{"upgrade-teuton-spatha", "upgrade-teuton-iron-shield"}
+)
+
 DefinePredependency("upgrade-faction-dere-tribe",
 	{"upgrade-faction-angle-tribe"}
 )
@@ -993,6 +1001,22 @@ DefinePredependency("upgrade-faction-gumeninga-tribe",
 )
 
 DefineDependency("upgrade-faction-gumeninga-tribe",
+	{"upgrade-teuton-spatha", "upgrade-teuton-iron-shield"}
+)
+
+DefinePredependency("upgrade-faction-lindisfaran-tribe",
+	{"upgrade-faction-angle-tribe"}
+)
+
+DefineDependency("upgrade-faction-lindisfaran-tribe",
+	{"upgrade-teuton-spatha", "upgrade-teuton-iron-shield"}
+)
+
+DefinePredependency("upgrade-faction-mierce-tribe",
+	{"upgrade-faction-angle-tribe"}
+)
+
+DefineDependency("upgrade-faction-mierce-tribe",
 	{"upgrade-teuton-spatha", "upgrade-teuton-iron-shield"}
 )
 

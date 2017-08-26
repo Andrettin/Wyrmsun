@@ -57,6 +57,14 @@ DefineButton( { Pos = 3, Level = 2, Icon = "icon-flag-five-purple-birds-on-green
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 
+DefineButton( { Pos = 3, Level = 2, Icon = "icon-flag-old-austria",
+	Action = "research", Value = "upgrade-faction-cantware-tribe",
+	Allowed = "check-single-research",
+	Key = "c", Hint = "Found the ~!Cantware Tribe", Popup = "popup-research",
+	Description = "Changes your faction to the Cantware Tribe",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
 DefineButton( { Pos = 4, Level = 2, Icon = "icon-flag-five-blue-birds-on-orange",
 	Action = "research", Value = "upgrade-faction-bernice-tribe",
 	Allowed = "check-single-research",
@@ -78,6 +86,22 @@ DefineButton( { Pos = 6, Level = 2, Icon = "icon-flag-five-black-birds-on-purple
 	Allowed = "check-single-research",
 	Key = "g", Hint = "Found the ~!Gumeninga Tribe", Popup = "popup-research",
 	Description = "Changes your faction to the Gumeninga Tribe",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
+DefineButton( { Pos = 7, Level = 2, Icon = "icon-flag-five-blue-birds-on-orange",
+	Action = "research", Value = "upgrade-faction-mierce-tribe",
+	Allowed = "check-single-research",
+	Key = "m", Hint = "Found the ~!Mierce Tribe", Popup = "popup-research",
+	Description = "Changes your faction to the Mierce Tribe",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
+
+DefineButton( { Pos = 8, Level = 2, Icon = "icon-flag-five-white-birds-on-red",
+	Action = "research", Value = "upgrade-faction-lindisfaran-tribe",
+	Allowed = "check-single-research",
+	Key = "l", Hint = "Found the ~!Lindisfaran Tribe", Popup = "popup-research",
+	Description = "Changes your faction to the Lindisfaran Tribe",
 	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
 } )
 

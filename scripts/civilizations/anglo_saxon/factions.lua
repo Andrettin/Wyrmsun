@@ -66,6 +66,15 @@ DefineFaction("bernice-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England"
 	Description = "The Bernice were an Anglian people who established themselves on the Northumbrian coast, eventually managing to conquer the surrounding Celtic territories."
 })
 
+DefineFaction("cantware-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 37.
+	Name = "Cantware Tribe",
+	Civilization = "anglo-saxon",
+	Type = "tribe",
+	Colors = {"cyan"},
+	FactionUpgrade = "upgrade-faction-cantware-tribe",
+	Description = "The Cantware were a Jutish people who established themselves in southeastern England. Their name means \"men of Kent\"."
+})
+
 DefineFaction("dere-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 	Name = "Dere Tribe",
 	Civilization = "anglo-saxon",
@@ -83,6 +92,24 @@ DefineFaction("gumeninga-tribe", { -- Source: Frank Stenton, "Anglo-Saxon Englan
 	FactionUpgrade = "upgrade-faction-gumeninga-tribe", -- since all we know about them is their religious location, it makes sense to give them a priest-related bonus
 	Description = "The Gumeningas were an Anglo-Saxon tribe who inhabited the area of Middlesex.",
 	Background = "The name of the Gumeningas was present in the place name \"Gumeninga hearh\" (the Old English name for Harrow on the Hill), meaning \"the holy place of the Gumeningas\"."
+})
+
+DefineFaction("lindisfaran-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 37.
+	Name = "Lindisfaran Tribe",
+	Civilization = "anglo-saxon",
+	Type = "tribe",
+	Colors = {"purple"},
+	FactionUpgrade = "upgrade-faction-lindisfaran-tribe",
+	Description = "The Lindisfaran were an Anglian people who inhabited the lands between the rivers Witham and Humber."
+})
+
+DefineFaction("mierce-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 37.
+	Name = "Mierce Tribe",
+	Civilization = "anglo-saxon",
+	Type = "tribe",
+	Colors = {"white"},
+	FactionUpgrade = "upgrade-faction-mierce-tribe",
+	Description = "The Mierce, or Mercians, were an Anglian people who inhabited marchlands close to Celtic territory."
 })
 
 DefineFaction("bernicia", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
@@ -155,7 +182,7 @@ DefineFaction("mercia", {
 	Colors = {"white"},
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-mercia",
-	Description = ""
+	Description = "Mercia was an Anglo-Saxon kingdom in the central parts of England."
 })
 
 DefineFaction("middle-anglia", {

@@ -42,6 +42,12 @@ DefineUpgrade("upgrade-faction-bernice-tribe", {
 	RequirementsString = "Spatha and Iron Shield"
 })
 
+DefineUpgrade("upgrade-faction-cantware-tribe", {
+	Name = "Cantware Tribe",
+	EffectsString = "+10% Time Efficiency for all buildings",
+	RequirementsString = "Spatha and Iron Shield"
+})
+
 DefineUpgrade("upgrade-faction-charude-tribe", {
 	Name = "Charude Tribe",
 	EffectsString = "+2 Armor for Schutzes"
@@ -62,6 +68,18 @@ DefineUpgrade("upgrade-faction-gumeninga-tribe", {
 DefineUpgrade("upgrade-faction-jute-tribe", {
 	Name = "Jute Tribe",
 	EffectsString = "+2 Food Supply for Docks"
+})
+
+DefineUpgrade("upgrade-faction-lindisfaran-tribe", {
+	Name = "Lindisfaran Tribe",
+	EffectsString = "+2 Accuracy for Kriegers",
+	RequirementsString = "Spatha and Iron Shield"
+})
+
+DefineUpgrade("upgrade-faction-mierce-tribe", {
+	Name = "Mierce Tribe",
+	EffectsString = "+2 Armor for Kriegers",
+	RequirementsString = "Spatha and Iron Shield"
 })
 
 DefineUpgrade("upgrade-faction-bernicia", {
@@ -173,6 +191,21 @@ DefineModifier("upgrade-faction-bernice-tribe",
 	{"apply-to", "unit-teuton-spearman"}
 )
 
+DefineModifier("upgrade-faction-cantware-tribe",
+	{"change-faction-to", "cantware-tribe"}
+)
+
+DefineModifier("upgrade-faction-cantware-tribe",
+	{"TimeEfficiencyBonus", 10},
+	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"},
+	{"apply-to", "unit-teuton-farm"}, {"apply-to", "unit-teuton-barracks"},
+	{"apply-to", "unit-teuton-lumber-mill"}, {"apply-to", "unit-teuton-smithy"},
+--	{"apply-to", "unit-teuton-stables"},
+	{"apply-to", "unit-teuton-temple"}, {"apply-to", "unit-teuton-university"},
+	{"apply-to", "unit-teuton-watch-tower"}, {"apply-to", "unit-teuton-guard-tower"},
+	{"apply-to", "unit-teuton-dock"}
+)
+
 DefineModifier("upgrade-faction-charude-tribe",
 	{"change-faction-to", "charude-tribe"}
 )
@@ -210,6 +243,26 @@ DefineModifier("upgrade-faction-jute-tribe",
 DefineModifier("upgrade-faction-jute-tribe",
 	{"Supply", 2},
 	{"apply-to", "unit-teuton-dock"}
+)
+
+DefineModifier("upgrade-faction-lindisfaran-tribe",
+	{"change-faction-to", "lindisfaran-tribe"}
+)
+
+DefineModifier("upgrade-faction-lindisfaran-tribe",
+	{"Accuracy", 2},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
+)
+
+DefineModifier("upgrade-faction-mierce-tribe",
+	{"change-faction-to", "mierce-tribe"}
+)
+
+DefineModifier("upgrade-faction-mierce-tribe",
+	{"Armor", 2},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
 DefineModifier("upgrade-faction-bernicia",

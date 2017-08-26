@@ -1201,6 +1201,21 @@ DefineCharacter("eanred", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	end
 })
 
+DefineCharacter("wulfred", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 36.
+	Name = "Wulfred",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- archbishop of Canterbury
+	Civilization = "anglo-saxon",
+	Faction = "kent",
+	Date = 811, -- archbishop of Canterbury in 811
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "kent" or GetPlayerData(trigger_player, "Faction") == "englaland") then
+			return true
+		end
+		return false
+	end
+})
+
 DefineCharacter("egbert-of-wessex", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 95.
 	Name = "Egbert",
 	Gender = "male",
