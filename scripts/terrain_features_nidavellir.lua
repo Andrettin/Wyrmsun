@@ -57,6 +57,27 @@ DefineTerrainFeature("forbidden-forest", { -- from Battle for Wesnoth: The Hamme
 	}
 })
 
+DefineTerrainFeature("gryphon-mountain", { -- from Battle for Wesnoth: Heir to the Throne (Gryphon Mountain)
+	Name = "Gryphon Mountain",
+	TerrainType = "rock",
+	World = "Nidavellir",
+	CulturalNames = {
+		"dwarf", "Gryphon Mountain",
+		"gnome", "Gryphon Mountain"
+	}
+})
+
+--[[
+DefineTerrainFeature("joruvellir", {
+	Name = "Joruvellir",
+	TerrainType = "desert-sand",
+	World = "Nidavellir",
+	CulturalNames = {
+		"dwarf", "Joruvellir"
+	}
+})
+--]]
+
 DefineTerrainFeature("jungle-of-insanity", { -- from Will Doyle's "Island of the Lizard God"
 	Name = "Jungle of Insanity",
 	TerrainType = "flamefood-tree",
@@ -74,5 +95,14 @@ DefineTerrainFeature("lake-vrug", {
 	RandomAllowed = false,
 	CulturalNames = {
 		"dwarf", "Lake Vrug"
+	}
+})
+
+DefineTerrainFeature("svarinshaug", {
+	Name = "Svarinshaug",
+	TerrainType = "rock", -- hill
+	World = "Nidavellir",
+	CulturalNames = {
+		"dwarf", "Svarinshaug"
 	}
 })

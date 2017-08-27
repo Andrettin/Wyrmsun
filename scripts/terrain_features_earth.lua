@@ -45,6 +45,30 @@ DefineTerrainFeature("alpheus-river", {
 	}
 })
 
+DefineTerrainFeature("alps", {
+	Name = "Alps",
+	TerrainType = "rock", -- mountains
+	World = "Earth"
+})
+
+DefineTerrainFeature("apennines", {
+	Name = "Apennines",
+	TerrainType = "rock", -- mountains
+	World = "Earth"
+})
+
+DefineTerrainFeature("cantabrian-mountains", {
+	Name = "Cantabrian Mountains",
+	TerrainType = "rock", -- mountains
+	World = "Earth"
+})
+
+DefineTerrainFeature("carpathians", {
+	Name = "Carpathians",
+	TerrainType = "rock", -- mountains
+	World = "Earth"
+})
+
 DefineTerrainFeature("danube-river", {
 	Name = "Danube River",
 	TerrainType = "shallow-water",
@@ -143,17 +167,6 @@ DefineTerrainFeature("lake-neusiedl", {
 	}
 })
 
-DefineTerrainFeature("lake-wener", {
-	Name = "Lake Wener",
-	TerrainType = "shallow-water",
-	Color = {0, 176, 176},
-	World = "Earth",
-	RandomAllowed = false,
-	CulturalNames = {
-		"norse", "Lake Wener"
-	}
-})
-
 DefineTerrainFeature("march-river", {
 	Name = "March River",
 	TerrainType = "shallow-water",
@@ -211,6 +224,12 @@ DefineTerrainFeature("po-river", {
 	RandomAllowed = false
 })
 
+DefineTerrainFeature("pyrenees", {
+	Name = "Pyrenees",
+	TerrainType = "rock", -- mountains
+	World = "Earth"
+})
+
 DefineTerrainFeature("rhine-river", {
 	Name = "Rhine River",
 	TerrainType = "shallow-water",
@@ -249,6 +268,12 @@ DefineTerrainFeature("tagus-river", { -- Source: William R. Shepherd, "Historica
 	}
 })
 
+DefineTerrainFeature("ural-mountains", {
+	Name = "Ural Mountains",
+	TerrainType = "rock", -- mountains
+	World = "Earth"
+})
+
 DefineTerrainFeature("volga-river", {
 	Name = "Volga River",
 	TerrainType = "shallow-water",
@@ -258,3 +283,13 @@ DefineTerrainFeature("volga-river", {
 		"latin", "Rha River" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	}
 })
+
+DefineTerrainFeature("wicklow-mountains", { -- Source: "Philip's International School Atlas", 2006, p. 64.
+	Name = "Wicklow Mountains",
+	TerrainType = "rock", -- mountains
+	World = "Earth",
+	CulturalNames = {
+		"english", "Wicklow Mountains"
+	}
+})
+

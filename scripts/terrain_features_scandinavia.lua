@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2017 by Andrettin
+--      (c) Copyright 2016-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,47 +25,41 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineTerrainFeature("forest-of-thelien", { -- from Battle for Wesnoth: Son of the Black–Eye
-	Name = "Forest of Thelien",
-	TerrainType = "flamefood-tree",
-	World = "Jotunheim",
-	CulturalNames = {
-		"orc", "Forest of Thelien"
-	}
-})
-
-DefineTerrainFeature("green-forest", { -- from Battle for Wesnoth: Son of the Black–Eye
-	Name = "Green Forest",
-	TerrainType = "flamefood-tree",
-	World = "Jotunheim",
-	CulturalNames = {
-		"orc", "Green Forest"
-	}
-})
-
-DefineTerrainFeature("hnitbjorg", { -- mountain in Jotunheim in Norse mythology; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 99.
-	Name = "Hnitbjorg",
+DefineTerrainFeature("galdhopiggen", { -- Source: "Philip's International School Atlas", 2006, p. 63.
+	Name = "Galdhoppigen",
 	TerrainType = "rock", -- mountain
-	World = "Jotunheim",
+	World = "Earth",
 	CulturalNames = {
-		"ettin", "Hnitbjorg" -- "Hnitbjörg"
+		"norse", "Galdhoppigen" -- "Galdhøppigen"
 	}
 })
 
-DefineTerrainFeature("lyfjaberg", { -- mountain next to Menglad's hall in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 247.
-	Name = "Lyfjaberg",
+DefineTerrainFeature("jotunheimen", { -- Source: "Philip's International School Atlas", 2006, p. 63.
+	Name = "Jotunheimen",
+	TerrainType = "rock", -- mountains
+	World = "Earth",
+	CulturalNames = {
+		"norse", "Jotunheimen"
+	}
+})
+
+DefineTerrainFeature("lake-wener", {
+	Name = "Lake Wener",
+	TerrainType = "shallow-water",
+	Color = {0, 176, 176},
+	World = "Earth",
+	RandomAllowed = false,
+	CulturalNames = {
+		"norse", "Lake Wener"
+	}
+})
+
+DefineTerrainFeature("snohetta", { -- Source: "Philip's International School Atlas", 2006, p. 63.
+	Name = "Snohetta",
 	TerrainType = "rock", -- mountain
-	World = "Jotunheim",
+	World = "Earth",
 	CulturalNames = {
-		"ettin", "Lyfjaberg" -- name means "Hill of Healing"
+		"norse", "Snohetta" -- "Snøhetta"
 	}
 })
 
-DefineTerrainFeature("silent-forest", { -- from Battle for Wesnoth: Son of the Black–Eye
-	Name = "Silent Forest",
-	TerrainType = "flamefood-tree",
-	World = "Jotunheim",
-	CulturalNames = {
-		"orc", "Silent Forest"
-	}
-})

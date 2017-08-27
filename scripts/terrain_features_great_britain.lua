@@ -35,6 +35,17 @@ DefineTerrainFeature("avon-river", {
 	}
 })
 
+DefineTerrainFeature("berkshire-downs", {
+--	Name = "Berkshire Downs",
+	Name = "Aescesdun",
+	TerrainType = "rock", -- hills
+	World = "Earth",
+	CulturalNames = {
+		"anglo-saxon", "Aescesdun", -- "Æscesdun"; Old English name of the Berkshire Downs; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"english", "Berkshire Downs"
+	}
+})
+
 DefineTerrainFeature("bromswold-forest", {
 	Name = "Bromswold Forest",
 	TerrainType = "pine-tree",
@@ -45,6 +56,15 @@ DefineTerrainFeature("bromswold-forest", {
 	}
 })
 
+DefineTerrainFeature("cambrian-mountains", { -- Source: "Philip's International School Atlas", 2006, p. 64.
+	Name = "Cambrian Mountains",
+	TerrainType = "rock", -- mountains
+	World = "Earth",
+	CulturalNames = {
+		"english", "Cambrian Mountains"
+	}
+})
+
 DefineTerrainFeature("dee-river", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	Name = "Dee River",
 	TerrainType = "shallow-water",
@@ -52,6 +72,15 @@ DefineTerrainFeature("dee-river", { -- Source: William R. Shepherd, "Historical 
 	RandomAllowed = false,
 	CulturalNames = {
 		"english", "Dee River" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+	}
+})
+
+DefineTerrainFeature("grampian-mountains", { -- Source: "Philip's International School Atlas", 2006, p. 64.
+	Name = "Grampian Mountains",
+	TerrainType = "rock", -- mountains
+	World = "Earth",
+	CulturalNames = {
+		"english", "Grampian Mountains"
 	}
 })
 
@@ -97,6 +126,15 @@ DefineTerrainFeature("orwell-river", {
 	}
 })
 
+DefineTerrainFeature("pennines", { -- Source: "Philip's International School Atlas", 2006, p. 64.
+	Name = "Pennines",
+	TerrainType = "rock", -- mountains
+	World = "Earth",
+	CulturalNames = {
+		"english", "Pennines"
+	}
+})
+
 DefineTerrainFeature("sherwood-forest", {
 	Name = "Sherwood Forest",
 	TerrainType = "pine-tree",
@@ -126,6 +164,15 @@ DefineTerrainFeature("severn-river", { -- Source: William R. Shepherd, "Historic
 	CulturalNames = {
 		"anglo-saxon", "Saefern River", -- "Sæfern"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 		"english", "Severn River" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+	}
+})
+
+DefineTerrainFeature("snowdon", { -- Source: "Philip's International School Atlas", 2006, p. 64.
+	Name = "Snowdon",
+	TerrainType = "rock", -- mountain
+	World = "Earth",
+	CulturalNames = {
+		"english", "Snowdon"
 	}
 })
 
