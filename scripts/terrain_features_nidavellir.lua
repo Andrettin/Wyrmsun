@@ -37,6 +37,18 @@ DefineTerrainFeature("arkanthoria-river", {
 	}
 })
 
+DefineTerrainFeature("aurvang", {
+	Name = "Aurvang",
+	TerrainType = "mud",
+	World = "Nidavellir",
+	Color = {192, 80, 64},
+	RandomAllowed = false, -- not enough mud features yet
+	CulturalNames = {
+		"dwarf", "Aurvang",
+		"goblin", "Aurvang"
+	}
+})
+
 DefineTerrainFeature("blackfang-river", { -- from Will Doyle's "Island of the Lizard God"
 	Name = "Blackfang River",
 	TerrainType = "shallow-water",
