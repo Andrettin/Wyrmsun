@@ -30,7 +30,6 @@ DefineTerrainFeature("arkanthoria-river", {
 	TerrainType = "shallow-water",
 	Color = {0, 176, 144},
 	World = "Nidavellir",
-	RandomAllowed = false,
 	CulturalNames = {
 		"dwarf", "Arkanthoria River",
 		"elf", "Arkanthoria River"
@@ -42,7 +41,6 @@ DefineTerrainFeature("aurvang", {
 	TerrainType = "mud",
 	World = "Nidavellir",
 	Color = {192, 80, 64},
-	RandomAllowed = false, -- not enough mud features yet
 	CulturalNames = {
 		"dwarf", "Aurvang",
 		"goblin", "Aurvang"
@@ -54,7 +52,6 @@ DefineTerrainFeature("blackfang-river", { -- from Will Doyle's "Island of the Li
 	TerrainType = "shallow-water",
 	Color = {0, 208, 176},
 	World = "Nidavellir",
-	RandomAllowed = false,
 	CulturalNames = {
 		"kobold", "Blackfang River"
 	}
@@ -107,7 +104,6 @@ DefineTerrainFeature("joruvellir", {
 	TerrainType = "desert-sand",
 	World = "Nidavellir",
 	Color = {255, 255, 16},
-	RandomAllowed = false, -- not enough desert terrain features yet
 	CulturalNames = {
 		"dwarf", "Joruvellir"
 	}
@@ -117,7 +113,6 @@ DefineTerrainFeature("jungle-of-insanity", { -- from Will Doyle's "Island of the
 	Name = "Jungle of Insanity",
 	TerrainType = "flamefood-tree",
 	World = "Nidavellir",
-	RandomAllowed = false,
 	CulturalNames = {
 		"kobold", "Jungle of Insanity"
 	}
@@ -128,7 +123,6 @@ DefineTerrainFeature("lake-vrug", {
 	TerrainType = "shallow-water",
 	Color = {0, 176, 128},
 	World = "Nidavellir",
-	RandomAllowed = false,
 	CulturalNames = {
 		"dwarf", "Lake Vrug"
 	}

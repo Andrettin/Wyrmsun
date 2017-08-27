@@ -48,7 +48,6 @@ DefineTerrainFeature("lake-wener", {
 	TerrainType = "shallow-water",
 	Color = {0, 176, 176},
 	World = "Earth",
-	RandomAllowed = false,
 	CulturalNames = {
 		"norse", "Lake Wener"
 	}

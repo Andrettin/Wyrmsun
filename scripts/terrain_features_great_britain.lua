@@ -29,7 +29,6 @@ DefineTerrainFeature("avon-river", {
 	Name = "Avon River",
 	TerrainType = "shallow-water",
 	World = "Earth",
-	RandomAllowed = false,
 	CulturalNames = {
 		"anglo-saxon", "Afene River" -- Old English name of the Avon River (the source isn't explicit on which Avon River this refers to, but it is presumably this one); Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 	}
@@ -69,7 +68,6 @@ DefineTerrainFeature("dee-river", { -- Source: William R. Shepherd, "Historical 
 	Name = "Dee River",
 	TerrainType = "shallow-water",
 	World = "Earth",
-	RandomAllowed = false,
 	CulturalNames = {
 		"english", "Dee River" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	}
@@ -89,7 +87,6 @@ DefineTerrainFeature("great-ouse-river", {
 	TerrainType = "shallow-water",
 	Color = {0, 160, 208},
 	World = "Earth",
-	RandomAllowed = false,
 	CulturalNames = {
 		"english", "Great Ouse River"
 	}
@@ -119,7 +116,6 @@ DefineTerrainFeature("orwell-river", {
 	Name = "Orwell River",
 	TerrainType = "shallow-water",
 	World = "Earth",
-	RandomAllowed = false,
 	CulturalNames = {
 		"anglo-saxon", "Arwe River", -- Old English name of the Orwell River (the source isn't explicit on which Avon River this refers to, but it is presumably this one); Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"english", "Orwell River"
@@ -160,7 +156,6 @@ DefineTerrainFeature("severn-river", { -- Source: William R. Shepherd, "Historic
 	TerrainType = "shallow-water",
 	Color = {0, 144, 208},
 	World = "Earth",
-	RandomAllowed = false,
 	CulturalNames = {
 		"anglo-saxon", "Saefern River", -- "Sæfern"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 		"english", "Severn River" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
@@ -181,7 +176,6 @@ DefineTerrainFeature("thames-river", { -- Source: William R. Shepherd, "Historic
 	TerrainType = "shallow-water",
 	Color = {0, 176, 208},
 	World = "Earth",
-	RandomAllowed = false,
 	CulturalNames = {
 		"anglo-saxon", "Temes River", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 		"english", "Thames River" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.

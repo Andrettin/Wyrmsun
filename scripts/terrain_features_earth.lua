@@ -29,7 +29,6 @@ DefineTerrainFeature("achelos-river", {
 	Name = "Achelos River",
 	TerrainType = "shallow-water",
 	World = "Earth",
-	RandomAllowed = false,
 	CulturalNames = {
 		"greek", "Achelos River" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	}
@@ -39,7 +38,6 @@ DefineTerrainFeature("alpheus-river", {
 	Name = "Alpheus River",
 	TerrainType = "shallow-water",
 	World = "Earth",
-	RandomAllowed = false,
 	CulturalNames = {
 		"greek", "Alpheus River" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	}
@@ -55,6 +53,17 @@ DefineTerrainFeature("apennines", {
 	Name = "Apennines",
 	TerrainType = "rock", -- mountains
 	World = "Earth"
+})
+
+DefineTerrainFeature("baltic-sea", { -- Source: http://www.euratlas.net/history/europe/1/index.html
+	Name = "Baltic Sea",
+	TerrainType = "shallow-water",
+	World = "Earth",
+	Color = {16, 120, 144},
+	CulturalNames = {
+		"latin", "Suebic Sea", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"suebi", "Suebic Sea" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
 })
 
 DefineTerrainFeature("cantabrian-mountains", {
@@ -74,7 +83,6 @@ DefineTerrainFeature("danube-river", {
 	TerrainType = "shallow-water",
 	Color = {0, 128, 144},
 	World = "Earth",
-	RandomAllowed = false,
 	CulturalNames = {
 		"latin", "Danuvius River", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		"teuton", "Danube River"
@@ -85,7 +93,6 @@ DefineTerrainFeature("dnieper-river", {
 	Name = "Dnieper River",
 	TerrainType = "shallow-water",
 	World = "Earth",
-	RandomAllowed = false,
 	CulturalNames = {
 		"latin", "Borysthenes River" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	}
@@ -95,7 +102,6 @@ DefineTerrainFeature("don-river", {
 	Name = "Don River",
 	TerrainType = "shallow-water",
 	World = "Earth",
-	RandomAllowed = false,
 	CulturalNames = {
 		"germanic", "Vanaquisl River", -- The Tanais river is said to have been called Vanaquisl or Tanaquisl in the time of the Vana/Asa conflict in the Ynglinga saga; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
 		"greek", "Tanais River",
@@ -108,7 +114,6 @@ DefineTerrainFeature("douro-river", {
 	Name = "Douro River",
 	TerrainType = "shallow-water",
 	World = "Earth",
-	RandomAllowed = false,
 	CulturalNames = {
 		"portuguese", "Douro River", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
 		"castillian", "Duero River" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
@@ -120,7 +125,6 @@ DefineTerrainFeature("elbe-river", {
 	TerrainType = "shallow-water",
 	Color = {0, 144, 176},
 	World = "Earth",
-	RandomAllowed = false,
 	CulturalNames = {
 		"latin", "Albis River", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		"teuton", "Elbe River"
@@ -132,7 +136,6 @@ DefineTerrainFeature("eurotas-river", {
 	TerrainType = "shallow-water",
 	Color = {0, 144, 144},
 	World = "Earth",
-	RandomAllowed = false,
 	CulturalNames = {
 		"greek", "Eurotas River" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	}
@@ -141,18 +144,37 @@ DefineTerrainFeature("eurotas-river", {
 DefineTerrainFeature("garonne-river", {
 	Name = "Garonne River",
 	TerrainType = "shallow-water",
-	World = "Earth",
-	RandomAllowed = false
+	World = "Earth"
 })
 
 DefineTerrainFeature("guadiana-river", {
 	Name = "Guadiana River",
 	TerrainType = "shallow-water",
 	World = "Earth",
-	RandomAllowed = false,
 	CulturalNames = {
 		"castillian", "Guadiana River",
 		"latin", "Anas River" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	}
+})
+
+DefineTerrainFeature("gulf-of-bothnia", { -- Source: http://www.euratlas.net/history/europe/1/index.html
+	Name = "Gulf of Bothnia",
+	TerrainType = "shallow-water",
+	World = "Earth",
+	Color = {16, 144, 144},
+	CulturalNames = {
+		"latin", "Suebic Sea", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"suebi", "Suebic Sea" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+})
+
+DefineTerrainFeature("kattegat", { -- Source: "Limits of Oceans and Seas", 1953, p. 5.
+	Name = "Kattegat",
+	TerrainType = "shallow-water",
+	World = "Earth",
+	Color = {16, 144, 120},
+	CulturalNames = {
+		"norse", "Kattegat"
 	}
 })
 
@@ -161,7 +183,6 @@ DefineTerrainFeature("lake-neusiedl", {
 	TerrainType = "shallow-water",
 	Color = {0, 128, 176},
 	World = "Earth",
-	RandomAllowed = false,
 	CulturalNames = {
 		"teuton", "Lake Neusiedl"
 	}
@@ -172,7 +193,6 @@ DefineTerrainFeature("march-river", {
 	TerrainType = "shallow-water",
 	Color = {0, 144, 128},
 	World = "Earth",
-	RandomAllowed = false,
 	CulturalNames = {
 		"teuton", "March River"
 	}
@@ -181,36 +201,44 @@ DefineTerrainFeature("march-river", {
 DefineTerrainFeature("minho-river", {
 	Name = "Minho River",
 	TerrainType = "shallow-water",
-	World = "Earth",
-	RandomAllowed = false
+	World = "Earth"
 })
 
 DefineTerrainFeature("narova-river", {
 	Name = "Narova River",
 	TerrainType = "shallow-water",
-	World = "Earth",
-	RandomAllowed = false
+	World = "Earth"
 })
 
 DefineTerrainFeature("neva-river", {
 	Name = "Neva River",
 	TerrainType = "shallow-water",
+	World = "Earth"
+})
+
+DefineTerrainFeature("north-sea", { -- Source: http://www.euratlas.net/history/europe/1/index.html
+	Name = "North Sea",
+	TerrainType = "shallow-water",
 	World = "Earth",
-	RandomAllowed = false
+	Color = {0, 144, 120},
+	CulturalNames = {
+		"germanic", "German Ocean",
+		"goth", "German Ocean",
+		"latin", "German Ocean", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"suebi", "German Ocean"
+	}
 })
 
 DefineTerrainFeature("oder-river", {
 	Name = "Oder River",
 	TerrainType = "shallow-water",
-	World = "Earth",
-	RandomAllowed = false
+	World = "Earth"
 })
 
 DefineTerrainFeature("peneus-river", {
 	Name = "Peneus River",
 	TerrainType = "shallow-water",
 	World = "Earth",
-	RandomAllowed = false,
 	CulturalNames = {
 		"greek", "Peneus River" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	}
@@ -220,8 +248,7 @@ DefineTerrainFeature("po-river", {
 	Name = "Po River",
 	TerrainType = "shallow-water",
 	World = "Earth",
-	Color = {0, 128, 208},
-	RandomAllowed = false
+	Color = {0, 128, 208}
 })
 
 DefineTerrainFeature("pyrenees", {
@@ -234,7 +261,6 @@ DefineTerrainFeature("rhine-river", {
 	Name = "Rhine River",
 	TerrainType = "shallow-water",
 	World = "Earth",
-	RandomAllowed = false,
 	CulturalNames = {
 		"latin", "Rhenus River", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		"teuton", "Rhine River"
@@ -244,17 +270,25 @@ DefineTerrainFeature("rhine-river", {
 DefineTerrainFeature("sado-river", {
 	Name = "Sado River",
 	TerrainType = "shallow-water",
-	World = "Earth",
-	RandomAllowed = false
+	World = "Earth"
 })
 
 DefineTerrainFeature("seine-river", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	Name = "Seine River",
 	TerrainType = "shallow-water",
 	World = "Earth",
-	RandomAllowed = false,
 	CulturalNames = {
 		"french", "Seine River" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+	}
+})
+
+DefineTerrainFeature("skagerrak", { -- Source: "Limits of Oceans and Seas", 1953, p. 6.
+	Name = "Skagerrak",
+	TerrainType = "shallow-water",
+	World = "Earth",
+	Color = {0, 120, 144},
+	CulturalNames = {
+		"norse", "Skagerrak"
 	}
 })
 
@@ -262,7 +296,6 @@ DefineTerrainFeature("tagus-river", { -- Source: William R. Shepherd, "Historica
 	Name = "Tagus River",
 	TerrainType = "shallow-water",
 	World = "Earth",
-	RandomAllowed = false,
 	CulturalNames = {
 		"latin", "Tagus River" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	}
@@ -278,7 +311,6 @@ DefineTerrainFeature("volga-river", {
 	Name = "Volga River",
 	TerrainType = "shallow-water",
 	World = "Earth",
-	RandomAllowed = false,
 	CulturalNames = {
 		"latin", "Rha River" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	}
