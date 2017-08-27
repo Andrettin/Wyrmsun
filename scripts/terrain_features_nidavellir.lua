@@ -61,27 +61,51 @@ DefineTerrainFeature("gryphon-mountain", { -- from Battle for Wesnoth: Heir to t
 	Name = "Gryphon Mountain",
 	TerrainType = "rock",
 	World = "Nidavellir",
+	Color = {128, 144, 128},
 	CulturalNames = {
 		"dwarf", "Gryphon Mountain",
 		"gnome", "Gryphon Mountain"
 	}
 })
 
---[[
+DefineTerrainFeature("heartfangs", {
+	Name = "Heartfangs",
+	TerrainType = "rock", -- mountains
+	World = "Nidavellir",
+	Color = {128, 128, 144},
+	CulturalNames = {
+		"dwarf", "Heartfangs",
+		"goblin", "Heartfangs"
+	}
+})
+
+DefineTerrainFeature("heart-mountains", {
+	Name = "Heart Mountains",
+	TerrainType = "rock", -- mountains
+	World = "Nidavellir",
+	Color = {128, 144, 144},
+	CulturalNames = {
+		"dwarf", "Heart Mountains",
+		"goblin", "Heart Mountains"
+	}
+})
+
 DefineTerrainFeature("joruvellir", {
 	Name = "Joruvellir",
 	TerrainType = "desert-sand",
 	World = "Nidavellir",
+	Color = {255, 255, 16},
+	RandomAllowed = false, -- not enough desert terrain features yet
 	CulturalNames = {
 		"dwarf", "Joruvellir"
 	}
 })
---]]
 
 DefineTerrainFeature("jungle-of-insanity", { -- from Will Doyle's "Island of the Lizard God"
 	Name = "Jungle of Insanity",
 	TerrainType = "flamefood-tree",
 	World = "Nidavellir",
+	RandomAllowed = false,
 	CulturalNames = {
 		"kobold", "Jungle of Insanity"
 	}
@@ -98,10 +122,21 @@ DefineTerrainFeature("lake-vrug", {
 	}
 })
 
+DefineTerrainFeature("shorbear-hills", { -- from Battle for Wesnoth: The Sceptre of Fire
+	Name = "Shorbear Hills",
+	TerrainType = "rock", -- hills
+	World = "Nidavellir",
+	Color = {144, 144, 128},
+	CulturalNames = {
+		"dwarf", "Shorbear Hills"
+	}
+})
+
 DefineTerrainFeature("svarinshaug", {
 	Name = "Svarinshaug",
 	TerrainType = "rock", -- hill
 	World = "Nidavellir",
+	Color = {144, 128, 128},
 	CulturalNames = {
 		"dwarf", "Svarinshaug"
 	}
