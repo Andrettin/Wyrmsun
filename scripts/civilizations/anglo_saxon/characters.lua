@@ -303,7 +303,7 @@ DefineCharacter("osfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	end
 })
 
-DefineCharacter("penda", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 75, 80-81, 83-84, 120.
+DefineCharacter("penda", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 39, 75, 80-81, 83-84, 120.
 	Name = "Penda",
 	Gender = "male",
 	Type = "unit-teuton-heroic-swordsman", -- king

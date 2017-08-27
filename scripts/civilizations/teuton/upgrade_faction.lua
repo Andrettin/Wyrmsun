@@ -1032,6 +1032,7 @@ DefineDependency("upgrade-faction-bernicia",
 
 DefinePredependency("upgrade-faction-deira",
 	{"upgrade-faction-dere-tribe"},
+	"or", {"upgrade-faction-lindisfaran-tribe"},
 	"or", {"upgrade-faction-angle-tribe"},
 	"or", {"upgrade-faction-charude-tribe"}
 )
@@ -1068,7 +1069,8 @@ DefineDependency("upgrade-faction-jutland",
 )
 
 DefinePredependency("upgrade-faction-kent",
-	{"upgrade-faction-jute-tribe"}
+	{"upgrade-faction-cantware-tribe"},
+	"or", {"upgrade-faction-jute-tribe"}
 )
 
 DefineDependency("upgrade-faction-kent",
@@ -1076,7 +1078,9 @@ DefineDependency("upgrade-faction-kent",
 )
 
 DefinePredependency("upgrade-faction-mercia",
-	{"upgrade-faction-angle-tribe"},
+	{"upgrade-faction-mierce-tribe"},
+	"or", {"upgrade-faction-lindisfaran-tribe"},
+	"or", {"upgrade-faction-angle-tribe"},
 	"or", {"upgrade-faction-charude-tribe"}
 )
 
