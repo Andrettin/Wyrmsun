@@ -84,6 +84,9 @@ https://github.com/Andrettin/Wyrmsun
 - The initial random seed for the game now varies according to the computer's time and date, so that random maps should no longer yield the same result multiple times.
 - Added an encyclopedia page explaining the No Randomness mode in the Game Concepts section.
 
+* Terrain
+- Terrain features (i.e. rivers) are now properly stored when saving a game.
+
 * Units
 - Added dwarven Ballista Warship (graphics by Jinn).
 
