@@ -85,6 +85,10 @@ DefineUnitType("unit-germanic-worker", {
 		{
 			"resource-id", "leather",
 			"file-when-loaded", "germanic/units/worker_with_gold.png"
+		},
+		{
+			"resource-id", "diamonds",
+			"file-when-loaded", "germanic/units/worker_with_gold.png"
 		}
 	},
 	Sounds = {

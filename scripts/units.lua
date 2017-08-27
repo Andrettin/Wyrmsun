@@ -395,6 +395,14 @@ DefineUnitType("unit-minecart", {
 			"resource-step", 6,
 			"wait-at-resource", 12,
 			"wait-at-depot", 150
+		},
+		{
+			"resource-id", "diamonds",
+			"file-when-loaded", "teuton/units/minecart_with_silver.png",
+			"resource-capacity", 200,
+			"resource-step", 6,
+			"wait-at-resource", 12,
+			"wait-at-depot", 150
 		}
 	},
 	Sounds = {
@@ -2955,6 +2963,13 @@ DefineUnitType("unit-template-worker", {
 			"resource-step", 4,
 			"wait-at-resource", 12,
 			"wait-at-depot", 150
+		},
+		{
+			"resource-id", "diamonds",
+			"resource-capacity", 100,
+			"resource-step", 4,
+			"wait-at-resource", 12,
+			"wait-at-depot", 150
 		}
 	},
 	Sounds = {
@@ -2979,7 +2994,8 @@ DefineUnitType("unit-template-skilled-miner", {
 	CopperGatheringBonus = 2,
 	SilverGatheringBonus = 2,
 	GoldGatheringBonus = 2,
-	CoalGatheringBonus = 2
+	CoalGatheringBonus = 2,
+	DiamondsGatheringBonus = 2
 } )
 
 DefineUnitType("unit-template-expert-miner", {
@@ -2995,7 +3011,8 @@ DefineUnitType("unit-template-expert-miner", {
 	CopperGatheringBonus = 4,
 	SilverGatheringBonus = 4,
 	GoldGatheringBonus = 4,
-	CoalGatheringBonus = 4
+	CoalGatheringBonus = 4,
+	DiamondsGatheringBonus = 4
 } )
 
 DefineUnitType("unit-template-militia", { Name = _("Militia"),
@@ -3592,7 +3609,7 @@ DefineUnitType("unit-template-town-hall", {
 	BuilderOutside = true,
 	RecruitHeroes = true,
 	IncreasesLuxuryDemand = true,
-	CanStore = {"copper", "silver", "gold", "lumber", "stone", "limestone", "coal", "furniture", "leather"},
+	CanStore = {"copper", "silver", "gold", "lumber", "stone", "limestone", "coal", "furniture", "leather", "diamonds"},
 	Drops = {"unit-wood-pile"},
 	RightMouseAction = "rally-point",
 	BurnPercent = 50,
