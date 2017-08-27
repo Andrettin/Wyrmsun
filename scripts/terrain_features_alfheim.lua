@@ -25,8 +25,56 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-Load("scripts/terrain_features_alfheim.lua")
-Load("scripts/terrain_features_earth.lua")
-Load("scripts/terrain_features_great_britain.lua")
-Load("scripts/terrain_features_jotunheim.lua")
-Load("scripts/terrain_features_nidavellir.lua")
+DefineTerrainFeature("aethenwood", { -- from Battle for Wesnoth
+	Name = "Aethenwood",
+	TerrainType = "fairlimbed-tree",
+	World = "Alfheim",
+	CulturalNames = {
+		"elf", "Aethenwood"
+	}
+})
+
+DefineTerrainFeature("ironwood", { -- home of the trolls in Norse mythology
+	Name = "Ironwood",
+	TerrainType = "fairlimbed-tree",
+	World = "Alfheim",
+	CulturalNames = {
+		"troll", "Ironwood"
+	}
+})
+
+DefineTerrainFeature("forest-of-gitamoth", { -- from Battle for Wesnoth: Legend of Wesmere (End of War); part of Lintanir forest
+	Name = "Forest of Gitamoth",
+	TerrainType = "fairlimbed-tree",
+	World = "Alfheim",
+	CulturalNames = {
+		"elf", "Forest of Gitamoth"
+	}
+})
+
+DefineTerrainFeature("lintanir-forest", { -- from Battle for Wesnoth
+	Name = "Lintanir Forest",
+	TerrainType = "fairlimbed-tree",
+	World = "Alfheim",
+	CulturalNames = {
+		"elf", "Lintanir Forest"
+	}
+})
+
+DefineTerrainFeature("oldwood-forest", { -- from Battle for Wesnoth: The Rise of Wesnoth; home to Wose
+	Name = "Oldwood Forest",
+	TerrainType = "fairlimbed-tree",
+	World = "Alfheim",
+	CulturalNames = {
+		"wose", "Oldwood Forest"
+	}
+})
+
+DefineTerrainFeature("wesmere-forest", { -- from Battle for Wesnoth
+	Name = "Wesmere Forest",
+	TerrainType = "fairlimbed-tree",
+	World = "Alfheim",
+	CulturalNames = {
+		"elf", "Wesmere Forest"
+	}
+})
