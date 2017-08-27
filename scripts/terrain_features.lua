@@ -26,4 +26,6 @@
 --
 
 Load("scripts/terrain_features_earth.lua")
+Load("scripts/terrain_features_great_britain.lua")
+Load("scripts/terrain_features_jotunheim.lua")
 Load("scripts/terrain_features_nidavellir.lua")

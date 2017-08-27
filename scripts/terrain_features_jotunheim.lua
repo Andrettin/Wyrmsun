@@ -25,54 +25,29 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineTerrainFeature("arkanthoria-river", {
-	Name = "Arkanthoria River",
-	TerrainType = "shallow-water",
-	Color = {0, 176, 144},
-	World = "Nidavellir",
-	RandomAllowed = false,
-	CulturalNames = {
-		"dwarf", "Arkanthoria River",
-		"elf", "Arkanthoria River"
-	}
-})
-
-DefineTerrainFeature("blackfang-river", { -- from Will Doyle's "Island of the Lizard God"
-	Name = "Blackfang River",
-	TerrainType = "shallow-water",
-	Color = {0, 208, 176},
-	World = "Nidavellir",
-	RandomAllowed = false,
-	CulturalNames = {
-		"kobold", "Blackfang River"
-	}
-})
-
-DefineTerrainFeature("forbidden-forest", { -- from Battle for Wesnoth: The Hammer of Thursagan (Forbidden Forest)
-	Name = "Forbidden Forest",
+DefineTerrainFeature("forest-of-thelien", { -- from Battle for Wesnoth: Son of the Black–Eye
+	Name = "Forest of Thelien",
 	TerrainType = "flamefood-tree",
-	World = "Nidavellir",
+	World = "Jotunheim",
 	CulturalNames = {
-		"gnome", "Forbidden Forest"
+		"orc", "Forest of Thelien"
 	}
 })
 
-DefineTerrainFeature("jungle-of-insanity", { -- from Will Doyle's "Island of the Lizard God"
-	Name = "Jungle of Insanity",
+DefineTerrainFeature("green-forest", { -- from Battle for Wesnoth: Son of the Black–Eye
+	Name = "Green Forest",
 	TerrainType = "flamefood-tree",
-	World = "Nidavellir",
+	World = "Jotunheim",
 	CulturalNames = {
-		"kobold", "Jungle of Insanity"
+		"orc", "Green Forest"
 	}
 })
 
-DefineTerrainFeature("lake-vrug", {
-	Name = "Lake Vrug",
-	TerrainType = "shallow-water",
-	Color = {0, 176, 128},
-	World = "Nidavellir",
-	RandomAllowed = false,
+DefineTerrainFeature("silent-forest", { -- from Battle for Wesnoth: Son of the Black–Eye
+	Name = "Silent Forest",
+	TerrainType = "flamefood-tree",
+	World = "Jotunheim",
 	CulturalNames = {
-		"dwarf", "Lake Vrug"
+		"orc", "Silent Forest"
 	}
 })

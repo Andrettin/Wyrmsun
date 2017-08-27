@@ -29,6 +29,7 @@ DefineTerrainFeature("achelos-river", {
 	Name = "Achelos River",
 	TerrainType = "shallow-water",
 	World = "Earth",
+	RandomAllowed = false,
 	CulturalNames = {
 		"greek", "Achelos River" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	}
@@ -38,17 +39,9 @@ DefineTerrainFeature("alpheus-river", {
 	Name = "Alpheus River",
 	TerrainType = "shallow-water",
 	World = "Earth",
+	RandomAllowed = false,
 	CulturalNames = {
 		"greek", "Alpheus River" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-	}
-})
-
-DefineTerrainFeature("avon-river", {
-	Name = "Avon River",
-	TerrainType = "shallow-water",
-	World = "Earth",
-	CulturalNames = {
-		"anglo-saxon", "Afene River" -- Old English name of the Avon River (the source isn't explicit on which Avon River this refers to, but it is presumably this one); Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 	}
 })
 
@@ -57,18 +50,10 @@ DefineTerrainFeature("danube-river", {
 	TerrainType = "shallow-water",
 	Color = {0, 128, 144},
 	World = "Earth",
+	RandomAllowed = false,
 	CulturalNames = {
 		"latin", "Danuvius River", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		"teuton", "Danube River"
-	}
-})
-
-DefineTerrainFeature("dee-river", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-	Name = "Dee River",
-	TerrainType = "shallow-water",
-	World = "Earth",
-	CulturalNames = {
---		"english", "Dee River" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	}
 })
 
@@ -76,6 +61,7 @@ DefineTerrainFeature("dnieper-river", {
 	Name = "Dnieper River",
 	TerrainType = "shallow-water",
 	World = "Earth",
+	RandomAllowed = false,
 	CulturalNames = {
 		"latin", "Borysthenes River" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	}
@@ -85,6 +71,7 @@ DefineTerrainFeature("don-river", {
 	Name = "Don River",
 	TerrainType = "shallow-water",
 	World = "Earth",
+	RandomAllowed = false,
 	CulturalNames = {
 		"germanic", "Vanaquisl River", -- The Tanais river is said to have been called Vanaquisl or Tanaquisl in the time of the Vana/Asa conflict in the Ynglinga saga; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
 		"greek", "Tanais River",
@@ -97,6 +84,7 @@ DefineTerrainFeature("douro-river", {
 	Name = "Douro River",
 	TerrainType = "shallow-water",
 	World = "Earth",
+	RandomAllowed = false,
 	CulturalNames = {
 		"portuguese", "Douro River", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
 		"castillian", "Duero River" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
@@ -108,6 +96,7 @@ DefineTerrainFeature("elbe-river", {
 	TerrainType = "shallow-water",
 	Color = {0, 144, 176},
 	World = "Earth",
+	RandomAllowed = false,
 	CulturalNames = {
 		"latin", "Albis River", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		"teuton", "Elbe River"
@@ -119,6 +108,7 @@ DefineTerrainFeature("eurotas-river", {
 	TerrainType = "shallow-water",
 	Color = {0, 144, 144},
 	World = "Earth",
+	RandomAllowed = false,
 	CulturalNames = {
 		"greek", "Eurotas River" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	}
@@ -127,23 +117,15 @@ DefineTerrainFeature("eurotas-river", {
 DefineTerrainFeature("garonne-river", {
 	Name = "Garonne River",
 	TerrainType = "shallow-water",
-	World = "Earth"
-})
-
-DefineTerrainFeature("great-ouse-river", {
-	Name = "Great Ouse River",
-	TerrainType = "shallow-water",
-	Color = {0, 160, 208},
 	World = "Earth",
-	CulturalNames = {
---		"english", "Great Ouse River"
-	}
+	RandomAllowed = false
 })
 
 DefineTerrainFeature("guadiana-river", {
 	Name = "Guadiana River",
 	TerrainType = "shallow-water",
 	World = "Earth",
+	RandomAllowed = false,
 	CulturalNames = {
 		"castillian", "Guadiana River",
 		"latin", "Anas River" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -155,6 +137,7 @@ DefineTerrainFeature("lake-neusiedl", {
 	TerrainType = "shallow-water",
 	Color = {0, 128, 176},
 	World = "Earth",
+	RandomAllowed = false,
 	CulturalNames = {
 		"teuton", "Lake Neusiedl"
 	}
@@ -165,6 +148,7 @@ DefineTerrainFeature("lake-wener", {
 	TerrainType = "shallow-water",
 	Color = {0, 176, 176},
 	World = "Earth",
+	RandomAllowed = false,
 	CulturalNames = {
 		"norse", "Lake Wener"
 	}
@@ -175,6 +159,7 @@ DefineTerrainFeature("march-river", {
 	TerrainType = "shallow-water",
 	Color = {0, 144, 128},
 	World = "Earth",
+	RandomAllowed = false,
 	CulturalNames = {
 		"teuton", "March River"
 	}
@@ -183,40 +168,36 @@ DefineTerrainFeature("march-river", {
 DefineTerrainFeature("minho-river", {
 	Name = "Minho River",
 	TerrainType = "shallow-water",
-	World = "Earth"
+	World = "Earth",
+	RandomAllowed = false
 })
 
 DefineTerrainFeature("narova-river", {
 	Name = "Narova River",
 	TerrainType = "shallow-water",
-	World = "Earth"
+	World = "Earth",
+	RandomAllowed = false
 })
 
 DefineTerrainFeature("neva-river", {
 	Name = "Neva River",
 	TerrainType = "shallow-water",
-	World = "Earth"
+	World = "Earth",
+	RandomAllowed = false
 })
 
 DefineTerrainFeature("oder-river", {
 	Name = "Oder River",
 	TerrainType = "shallow-water",
-	World = "Earth"
-})
-
-DefineTerrainFeature("orwell-river", {
-	Name = "Orwell River",
-	TerrainType = "shallow-water",
 	World = "Earth",
-	CulturalNames = {
-		"anglo-saxon", "Arwe River" -- Old English name of the Orwell River (the source isn't explicit on which Avon River this refers to, but it is presumably this one); Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-	}
+	RandomAllowed = false
 })
 
 DefineTerrainFeature("peneus-river", {
 	Name = "Peneus River",
 	TerrainType = "shallow-water",
 	World = "Earth",
+	RandomAllowed = false,
 	CulturalNames = {
 		"greek", "Peneus River" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	}
@@ -226,13 +207,15 @@ DefineTerrainFeature("po-river", {
 	Name = "Po River",
 	TerrainType = "shallow-water",
 	World = "Earth",
-	Color = {0, 128, 208}
+	Color = {0, 128, 208},
+	RandomAllowed = false
 })
 
 DefineTerrainFeature("rhine-river", {
 	Name = "Rhine River",
 	TerrainType = "shallow-water",
 	World = "Earth",
+	RandomAllowed = false,
 	CulturalNames = {
 		"latin", "Rhenus River", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		"teuton", "Rhine River"
@@ -242,26 +225,17 @@ DefineTerrainFeature("rhine-river", {
 DefineTerrainFeature("sado-river", {
 	Name = "Sado River",
 	TerrainType = "shallow-water",
-	World = "Earth"
+	World = "Earth",
+	RandomAllowed = false
 })
 
 DefineTerrainFeature("seine-river", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	Name = "Seine River",
 	TerrainType = "shallow-water",
 	World = "Earth",
+	RandomAllowed = false,
 	CulturalNames = {
 		"french", "Seine River" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	}
-})
-
-DefineTerrainFeature("severn-river", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-	Name = "Severn River",
-	TerrainType = "shallow-water",
-	Color = {0, 144, 208},
-	World = "Earth",
-	CulturalNames = {
-		"anglo-saxon", "Saefern River", -- "Sæfern"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
---		"english", "Severn River" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	}
 })
 
@@ -269,19 +243,9 @@ DefineTerrainFeature("tagus-river", { -- Source: William R. Shepherd, "Historica
 	Name = "Tagus River",
 	TerrainType = "shallow-water",
 	World = "Earth",
+	RandomAllowed = false,
 	CulturalNames = {
 		"latin", "Tagus River" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	}
-})
-
-DefineTerrainFeature("thames-river", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-	Name = "Thames River",
-	TerrainType = "shallow-water",
-	Color = {0, 176, 208},
-	World = "Earth",
-	CulturalNames = {
-		"anglo-saxon", "Temes River" -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
---		"english", "Thames River" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	}
 })
 
@@ -289,6 +253,7 @@ DefineTerrainFeature("volga-river", {
 	Name = "Volga River",
 	TerrainType = "shallow-water",
 	World = "Earth",
+	RandomAllowed = false,
 	CulturalNames = {
 		"latin", "Rha River" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	}
