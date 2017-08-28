@@ -45,7 +45,7 @@ DefineSettlement("armagh", {
 DefineSettlement("dublin", {
 	Name = "Dublin",
 	MapTemplate = "earth",
-	Position = {3698, 834},
+	Position = {3696, 834},
 	Major = true,
 	CulturalNames = {
 		"celt", "Eblana", -- or is this the Latin name? Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.

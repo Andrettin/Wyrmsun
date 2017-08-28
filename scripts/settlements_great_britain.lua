@@ -64,7 +64,7 @@ DefineSettlement("athelney", {
 DefineSettlement("bamburgh", {
 	Name = "Bamburgh",
 	MapTemplate = "earth",
-	Position = {3801, 783},
+	Position = {3800, 784},
 	Major = true,
 	CulturalNames = {
 		"anglo-saxon", "Bebbanburg", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
@@ -241,7 +241,7 @@ DefineSettlement("castor-near-norwich", {
 DefineSettlement("chester", {
 	Name = "Chester",
 	MapTemplate = "earth",
-	Position = {3774, 836},
+	Position = {3774, 837},
 	Major = true,
 	CulturalNames = {
 		"anglo-saxon", "Legaceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
@@ -264,7 +264,7 @@ DefineSettlement("chester", {
 DefineSettlement("chichester", {
 	Name = "Chichester",
 	MapTemplate = "earth",
-	Position = {3822, 890},
+	Position = {3821, 890},
 	Major = true,
 	CulturalNames = {
 		"anglo-saxon", "Cisseceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
@@ -440,7 +440,7 @@ DefineSettlement("durolipons", {
 DefineSettlement("edinburgh", {
 	Name = "Edinburgh",
 	MapTemplate = "earth",
-	Position = {3767, 774},
+	Position = {3766, 775},
 	Major = true,
 	CulturalNames = {
 		"english", "Edinburgh"
@@ -484,7 +484,7 @@ DefineSettlement("exeter", {
 DefineSettlement("gloucester", {
 	Name = "Gloucester",
 	MapTemplate = "earth",
-	Position = {3783, 873},
+	Position = {3784, 874},
 	Major = true,
 	CulturalNames = {
 		"anglo-saxon", "Gleawanceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
@@ -643,7 +643,7 @@ DefineSettlement("leeds", {
 DefineSettlement("london", {
 	Name = "London",
 	MapTemplate = "earth",
-	Position = {3839, 875},
+	Position = {3839, 873},
 	Major = true,
 	CulturalNames = {
 		"anglo-saxon", "Lunden", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.

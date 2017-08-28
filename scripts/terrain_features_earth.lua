@@ -55,6 +55,13 @@ DefineTerrainFeature("apennines", {
 	World = "Earth"
 })
 
+DefineTerrainFeature("atlantic-ocean", { -- Source: "Limits of Oceans and Seas", 1953, p. 12. (see corrections as well)
+	Name = "Atlantic Ocean",
+	TerrainType = "shallow-water",
+	World = "Earth",
+	Color = {48, 176, 176}
+})
+
 DefineTerrainFeature("baltic-sea", { -- Source: http://www.euratlas.net/history/europe/1/index.html
 	Name = "Baltic Sea",
 	TerrainType = "shallow-water",
@@ -131,6 +138,17 @@ DefineTerrainFeature("elbe-river", {
 	}
 })
 
+DefineTerrainFeature("english-channel", { -- Source: "Limits of Oceans and Seas", 1953, p. 12. (see corrections as well)
+	Name = "English Channel",
+	TerrainType = "shallow-water",
+	World = "Earth",
+	Color = {48, 128, 128},
+	CulturalNames = {
+		"celt", "British Ocean",
+		"latin", "British Ocean"
+	}
+})
+
 DefineTerrainFeature("eurotas-river", {
 	Name = "Eurotas River",
 	TerrainType = "shallow-water",
@@ -165,6 +183,17 @@ DefineTerrainFeature("gulf-of-bothnia", { -- Source: http://www.euratlas.net/his
 	CulturalNames = {
 		"latin", "Suebic Sea", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 		"suebi", "Suebic Sea" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+})
+
+DefineTerrainFeature("irish-sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 12. (see corrections as well)
+	Name = "Irish Sea",
+	TerrainType = "shallow-water",
+	World = "Earth",
+	Color = {48, 144, 144},
+	CulturalNames = {
+		"celt", "Hibernian Ocean",
+		"latin", "Hibernian Ocean"
 	}
 })
 

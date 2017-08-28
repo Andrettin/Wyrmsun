@@ -152,4 +152,14 @@ DefineCampaign("the-heirs-return", {
 	MapTemplateStartPos = {3627, 695},
 	MapSize = {256, 256}
 })
+
+DefineCampaign("the-fall-of-mercia", {
+	Name = "The Fall of Mercia",
+	Description = "For decades has Mercia enjoyed supremacy in England. Sensing an opportunity, king Egbert of Wessex desires to strike hard and fast into Mercian territory, and break their overlordship over the other southern English kingdoms forever.",
+	Faction = "wessex",
+	StartYear = 825,
+	MapTemplate = "earth",
+	MapTemplateStartPos = {3627, 695},
+	MapSize = {256, 256}
+})
 --]]
