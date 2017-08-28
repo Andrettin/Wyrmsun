@@ -36,8 +36,7 @@ DefineMapTemplate("earth", {
 		"rock", "low",
 --		"limestone-rock", "very-low",
 		"grass", "extremely-high",
-		"dirt", "medium",
-		"pine-tree", "high"
+		"dirt", "medium"
 	},
 	GeneratedNeutralUnits = {
 		"unit-tree-stump", 16,
