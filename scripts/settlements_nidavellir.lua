@@ -46,7 +46,7 @@ DefineSettlement("acthna", {
 DefineSettlement("aurvang", { -- Aurvang settlement site; Aurvang is a region rather than a settlement, but we have no name for a settlement there yet
 	Name = "Aurvang",
 	MapTemplate = "nidavellir",
-	Position = {751, 272},
+	Position = {750, 277},
 	Major = true,
 	CulturalNames = {
 		"dwarf", "Aurvang",
