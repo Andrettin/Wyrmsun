@@ -147,6 +147,23 @@ DefineSettlement("brancaster", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
+DefineSettlement("bristol", {
+	Name = "Bristol",
+	MapTemplate = "earth",
+	Position = {3782, 878},
+	CulturalNames = {
+		"english", "Bristol"
+	},
+	HistoricalOwners = {
+		802, "mercia", -- Bristol was a part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Bristol's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		802, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
 DefineSettlement("cambridge", {
 	Name = "Cambridge",
 	MapTemplate = "earth",
@@ -462,6 +479,7 @@ DefineSettlement("exeter", {
 	Name = "Exeter",
 	MapTemplate = "earth",
 	Position = {3760, 894},
+	Major = true,
 	CulturalNames = {
 		"anglo-saxon", "Escanceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"briton", "Isca Dumnoniorum",
@@ -475,7 +493,24 @@ DefineSettlement("exeter", {
 		1560, "england" -- Exeter's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		410, 0, "farm"
+		410, 0, "town-hall"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("glastonbury", {
+	Name = "Glastonbury",
+	MapTemplate = "earth",
+	Position = {3778, 884},
+	CulturalNames = {
+		"english", "Glastonbury"
+	},
+	HistoricalOwners = {
+		802, "wessex", -- Glastonbury was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Glastonbury's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		802, 0, "farm"
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -574,6 +609,23 @@ DefineSettlement("jarrow", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
+DefineSettlement("kingston", {
+	Name = "Kingston",
+	MapTemplate = "earth",
+	Position = {3838, 878},
+	CulturalNames = {
+		"english", "Kingston"
+	},
+	HistoricalOwners = {
+		802, "wessex", -- Kingston was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Kingston's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		802, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
 DefineSettlement("leicester", {
 	Name = "Leicester",
 	MapTemplate = "earth",
@@ -665,6 +717,40 @@ DefineSettlement("london", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
+DefineSettlement("malmesbury", {
+	Name = "Malmesbury",
+	MapTemplate = "earth",
+	Position = {3794, 879},
+	CulturalNames = {
+		"english", "Wilton"
+	},
+	HistoricalOwners = {
+		802, "wessex", -- Malmesbury was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Malmesbury's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		802, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("ockley", {
+	Name = "Ockley",
+	MapTemplate = "earth",
+	Position = {3836, 883},
+	CulturalNames = {
+		"english", "Ockley"
+	},
+	HistoricalOwners = {
+		802, "wessex", -- Ockley was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Ockley's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		802, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
 DefineSettlement("old-sarum", {
 	Name = "Old Sarum",
 	MapTemplate = "earth",
@@ -704,6 +790,23 @@ DefineSettlement("pevensey", {
 	},
 	HistoricalBuildings = {
 		410, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("reading", {
+	Name = "Reading",
+	MapTemplate = "earth",
+	Position = {3817, 876},
+	CulturalNames = {
+		"english", "Reading"
+	},
+	HistoricalOwners = {
+		802, "wessex", -- Reading was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Reading's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		802, 0, "farm"
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -860,6 +963,23 @@ DefineSettlement("sitomagus", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
+DefineSettlement("southampton", {
+	Name = "Southampton",
+	MapTemplate = "earth",
+	Position = {3808, 888},
+	CulturalNames = {
+		"english", "Southampton"
+	},
+	HistoricalOwners = {
+		802, "wessex", -- Southampton was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Southampton's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		802, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
 DefineSettlement("speen", {
 	Name = "Speen",
 	MapTemplate = "earth",
@@ -932,6 +1052,23 @@ DefineSettlement("whitby", {
 	},
 	HistoricalBuildings = {
 		663, 0, "temple" -- Streoneshalh had a monastery in 663; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 123.
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("wilton", {
+	Name = "Wilton",
+	MapTemplate = "earth",
+	Position = {3796, 885},
+	CulturalNames = {
+		"english", "Wilton"
+	},
+	HistoricalOwners = {
+		802, "wessex", -- Wilton was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Wilton's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		802, 0, "farm"
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
