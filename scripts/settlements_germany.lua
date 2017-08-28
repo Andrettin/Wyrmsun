@@ -130,7 +130,7 @@ DefineSettlement("eresburg", {
 DefineSettlement("flensburg", {
 	Name = "Flensburg",
 	MapTemplate = "earth",
-	Position = {4054, 801},
+	Position = {4054, 802},
 	Major = true,
 	CulturalNames = {
 		"teuton", "Flensburg"
@@ -148,7 +148,7 @@ DefineSettlement("flensburg", {
 DefineSettlement("kiel", {
 	Name = "Kiel",
 	MapTemplate = "earth",
-	Position = {4069, 811},
+	Position = {4068, 811},
 	Major = true,
 	CulturalNames = {
 		"teuton", "Kiel"

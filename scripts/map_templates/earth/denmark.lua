@@ -41,7 +41,7 @@ SetMapTemplateTileTerrain("earth", "shallow-water", {4115, 796})
 SetMapTemplateTileTerrain("earth", "shallow-water", {4125, 772})
 SetMapTemplateTileTerrain("earth", "shallow-water", {4126, 773})
 
-SetMapTemplateResource("earth", "unit-gold-deposit", {4078, 745}) -- Amber; Source: "Atlas de História Mundial", 2001, p. 89.
+SetMapTemplateResource("earth", "unit-gold-deposit", {4078, 744}) -- Amber; Source: "Atlas de História Mundial", 2001, p. 89.
 
 -- Buddinge (near Copenhagen)
 -- a burial mound was created at Buddinge (near Copenhagen) in c. 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 75.

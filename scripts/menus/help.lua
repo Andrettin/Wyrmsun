@@ -118,7 +118,7 @@ local tips = {
 	-- Unit type-related tips
 	"Unlike the dwarves, humans and goblins have no flying rider unit. Their archers have a bonus against flying units, however.",
 	"It is not safe to get close to a goblin war machine.",
-	"Spearmen have a bonus against mounted units.",
+	"Spearmen deal extra damage to mounted units.",
 	"Ranged units can shoot from within towers, strongholds and transport ships, with extra range.",
 
 	-- Building-related tips

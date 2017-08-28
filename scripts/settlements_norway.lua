@@ -28,7 +28,7 @@
 DefineSettlement("oslo", {
 	Name = "Oslo",
 	MapTemplate = "earth",
-	Position = {4085, 684},
+	Position = {4085, 682},
 	Major = true,
 	CulturalNames = {
 		"norse", "Oslo"

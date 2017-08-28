@@ -28,7 +28,7 @@
 DefineSettlement("goteborg", {
 	Name = "Göteborg",
 	MapTemplate = "earth",
-	Position = {4105, 726},
+	Position = {4104, 725},
 	Major = true,
 	CulturalNames = {
 		"goth", "Gothenburg",
@@ -44,7 +44,7 @@ DefineSettlement("goteborg", {
 DefineSettlement("malmo", {
 	Name = "Malmö",
 	MapTemplate = "earth",
-	Position = {4136, 782},
+	Position = {4136, 783},
 	Major = true,
 	CulturalNames = {
 		"norse", "Malmö"
@@ -127,7 +127,7 @@ DefineSettlement("uppsala", {
 DefineSettlement("visby", {
 	Name = "Visby",
 	MapTemplate = "earth",
-	Position = {4259, 735},
+	Position = {4259, 736},
 	Major = true,
 	CulturalNames = {
 		"norse", "Visby"

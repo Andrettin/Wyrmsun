@@ -28,7 +28,7 @@
 DefineSettlement("aarhus", {
 	Name = "Aarhus",
 	MapTemplate = "earth",
-	Position = {4066, 777},
+	Position = {4064, 777},
 	Major = true,
 	CulturalNames = {
 		"norse", "Aarhus"
@@ -55,7 +55,7 @@ DefineSettlement("brodrene-gram", {
 DefineSettlement("legard", {
 	Name = "Legard", -- in northwestern Jutland
 	MapTemplate = "earth",
-	Position = {4033, 751},
+	Position = {4034, 752},
 	CulturalNames = {
 		"norse", "Legard" -- Legård
 	},
