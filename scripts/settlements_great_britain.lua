@@ -370,6 +370,23 @@ DefineSettlement("corbridge", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
+DefineSettlement("deorham", {
+	Name = "Deorham",
+	MapTemplate = "earth",
+	Position = {3781, 877},
+	CulturalNames = {
+		"english", "Deorham"
+	},
+	HistoricalOwners = {
+		802, "mercia", -- Deorham was a part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Deorham's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		802, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
 DefineSettlement("dorchester", {
 	Name = "Dorchester",
 	MapTemplate = "earth",
