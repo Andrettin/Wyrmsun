@@ -195,7 +195,7 @@ DefineSettlement("bourges", {
 DefineSettlement("brest", {
 	Name = "Brest",
 	MapTemplate = "earth",
-	Position = {3736, 946},
+	Position = {3735, 945},
 	CulturalNames = {
 		"celt", "Gesocribate",
 		"french", "Brest", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.

@@ -31,13 +31,13 @@ DefineSettlement("armagh", {
 	Position = {3691, 810},
 	CulturalNames = {
 		"gael", "Armagh",
---		"english", "Armagh"
+		"english", "Armagh"
 	},
 	HistoricalOwners = {
 		802, "ireland" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 	},
 	HistoricalBuildings = {
-		802, 0, "town-hall"
+		802, 0, "farm"
 	},
 	Regions = {"british-isles", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -50,7 +50,7 @@ DefineSettlement("dublin", {
 	CulturalNames = {
 		"celt", "Eblana", -- or is this the Latin name? Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		"gael", "Dublin",
---		"english", "Dublin"
+		"english", "Dublin"
 	},
 	HistoricalOwners = {
 		802, "ireland" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
@@ -67,13 +67,13 @@ DefineSettlement("waterford", {
 	MapTemplate = "earth",
 	Position = {3678, 858},
 	CulturalNames = {
---		"english", "Waterford"
+		"english", "Waterford"
 	},
 	HistoricalOwners = {
 		802, "ireland" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 	},
 	HistoricalBuildings = {
-		802, 0, "town-hall"
+		802, 0, "farm"
 	},
 	Regions = {"british-isles", "europe", "northwest-europe", "west-and-central-europe"}
 })

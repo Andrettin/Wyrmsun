@@ -108,7 +108,7 @@ DefineSettlement("bath", {
 DefineSettlement("bitterne", {
 	Name = "Bitterne",
 	MapTemplate = "earth",
-	Position = {3810, 890},
+	Position = {3810, 889},
 	CulturalNames = {
 		"briton", "Clausentum",
 		"celt", "Clausentum",
@@ -211,8 +211,7 @@ DefineSettlement("carlisle", {
 		1560, "england" -- Carlisle was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		410, 802, "farm",
-		802, 0, "town-hall"
+		410, 0, "farm"
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -379,7 +378,7 @@ DefineSettlement("dorchester", {
 DefineSettlement("dover", {
 	Name = "Dover",
 	MapTemplate = "earth",
-	Position = {3869, 884},
+	Position = {3866, 884},
 	CulturalNames = {
 		"anglo-saxon", "Dofras", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"briton", "Dubrae",
@@ -411,7 +410,7 @@ DefineSettlement("durham", {
 		1560, "england" -- Durham's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		802, 0, "town-hall",
+		802, 1832, "farm",
 		1832, 0, "university" -- University founded in Durham in 1832; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
@@ -525,7 +524,7 @@ DefineSettlement("goodmanham", {
 DefineSettlement("hastings", {
 	Name = "Hastings",
 	MapTemplate = "earth",
-	Position = {3859, 888},
+	Position = {3859, 887},
 	CulturalNames = {
 		"anglo-saxon", "Haestingaceaster", -- "Hæstingaceaster"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"english", "Hastings"
@@ -690,7 +689,7 @@ DefineSettlement("old-sarum", {
 DefineSettlement("pevensey", {
 	Name = "Pevensey",
 	MapTemplate = "earth",
-	Position = {3849, 890},
+	Position = {3848, 889},
 	CulturalNames = {
 		"anglo-saxon", "Pefenesea", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 		"briton", "Anderida",
@@ -704,8 +703,7 @@ DefineSettlement("pevensey", {
 		1560, "england" -- Pevensey's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		410, 802, "farm",
-		802, 0, "town-hall"
+		410, 0, "farm"
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -750,7 +748,7 @@ DefineSettlement("richborough", {
 		1560, "england" -- Richborough's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		410, 0, "farm"
+--		410, 0, "farm" -- not enough space
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -758,7 +756,7 @@ DefineSettlement("richborough", {
 DefineSettlement("rochester", {
 	Name = "Rochester",
 	MapTemplate = "earth",
-	Position = {3850, 878},
+	Position = {3850, 879},
 	CulturalNames = {
 		"anglo-saxon", "Hrofesceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"briton", "Durobrivae",
@@ -906,7 +904,7 @@ DefineSettlement("vindogladia", {
 DefineSettlement("wearmouth", {
 	Name = "Wearmouth",
 	MapTemplate = "earth",
-	Position = {3808, 799},
+	Position = {3807, 799},
 	CulturalNames = {
 		"english", "Wearmouth"
 	},
@@ -923,7 +921,7 @@ DefineSettlement("wearmouth", {
 DefineSettlement("whitby", {
 	Name = "Whitby",
 	MapTemplate = "earth",
-	Position = {3825, 808},
+	Position = {3825, 809},
 	CulturalNames = {
 		"anglo-saxon", "Streonaeshalch", -- "Streonæshalch"; on page 123 Stenton gives "Streoneshalh" instead; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 		"english", "Whitby"
