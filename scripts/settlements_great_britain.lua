@@ -325,7 +325,7 @@ DefineSettlement("cirencester", {
 DefineSettlement("colchester", {
 	Name = "Colchester",
 	MapTemplate = "earth",
-	Position = {3861, 867},
+	Position = {3860, 866},
 	Major = true,
 	CulturalNames = {
 		"anglo-saxon", "Colneceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
@@ -514,7 +514,7 @@ DefineSettlement("edinburgh", {
 DefineSettlement("exeter", {
 	Name = "Exeter",
 	MapTemplate = "earth",
-	Position = {3760, 894},
+	Position = {3759, 893},
 	Major = true,
 	CulturalNames = {
 		"anglo-saxon", "Escanceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
@@ -648,7 +648,7 @@ DefineSettlement("hereford", {
 DefineSettlement("hexham", {
 	Name = "Hexham",
 	MapTemplate = "earth",
-	Position = {3790, 797},
+	Position = {3791, 798},
 	CulturalNames = {
 		"anglo-saxon", "Hagustaldesea", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"english", "Hexham"
