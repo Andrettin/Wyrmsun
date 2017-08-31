@@ -708,6 +708,25 @@ DefineSettlement("leeds", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
+DefineSettlement("lichfield", {
+	Name = "Lichfield",
+	MapTemplate = "earth",
+	Position = {3797, 849},
+	CulturalNames = {
+		"anglo-saxon", "Liccidfeld", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"english", "Lichfield"
+	},
+	HistoricalOwners = {
+		669, "mercia", -- Lichfield was a part of Mercia in 669; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 132.
+		802, "mercia", -- Lichfield's area was a part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Lichfield's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		669, 0, "temple" -- Lichfield became a bishopric in 669; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 132.
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
 DefineSettlement("london", {
 	Name = "London",
 	MapTemplate = "earth",
@@ -1108,7 +1127,8 @@ DefineSettlement("winchester", {
 		1560, "england" -- Winchester's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		410, 0, "town-hall"
+		410, 0, "town-hall",
+		660, 0, "temple" -- Winchester was a bishopric as of c. 660; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 122.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -1154,7 +1174,7 @@ DefineSettlement("york", {
 	HistoricalBuildings = {
 		43, 161, "town-hall",
 		161, 0, "stronghold", -- Legionary base present in Eboracum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		735, 0, "temple" -- archbishopric of York permanently instituted in 735 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 109.
+		735, 0, "temple" -- archbishopric of York permanently instituted in 735 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 109, 133.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })

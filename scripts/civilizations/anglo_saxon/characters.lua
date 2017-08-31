@@ -699,6 +699,21 @@ DefineCharacter("alhflaed", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	end
 })
 
+DefineCharacter("deusdedit", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 130.
+	Name = "Deusdedit",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- archbishop
+	Civilization = "anglo-saxon",
+	Faction = "kent",
+	Date = 654, -- became archbishop of Canterbury in the spring of 654
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "kent" or GetPlayerData(trigger_player, "Faction") == "englaland") then
+			return true
+		end
+		return false
+	end
+})
+
 DefineCharacter("wulfhere", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 34, 84-85.
 	Name = "Wulfhere",
 	Gender = "male",
@@ -764,6 +779,56 @@ DefineCharacter("wilfrid", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("egbert-of-kent", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 130.
+	Name = "Egbert",
+	Gender = "male",
+	Type = "unit-teuton-heroic-swordsman", -- king
+	Civilization = "anglo-saxon",
+	Faction = "kent",
+	Date = 667, -- was king of Kent as of 667
+	HistoricalTitles = {
+		"head-of-state", 667, 0, "kent" -- was king of Kent as of 667
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "kent") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("wighard", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 130.
+	Name = "Wighard",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- archbishop
+	Civilization = "anglo-saxon",
+	Faction = "kent",
+	Date = 667, -- became archbishop of Canterbury in 667
+	DeathDate = 667, -- died very soon after becoming archbishop, when he was sent to Rome to be consecrated, and died of plague
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "kent" or GetPlayerData(trigger_player, "Faction") == "englaland") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("leuthere", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 132-133.
+	Name = "Leuthere",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- bishop
+	Civilization = "anglo-saxon",
+	Faction = "wessex",
+	Date = 670, -- became bishop of Winchester in 670 (consecrated by archbishop Theodore of Canterbury)
+	-- nephew of Agilbert
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "wessex") then
 			return true
 		end
 		return false
@@ -1224,7 +1289,7 @@ DefineCharacter("egbert-of-wessex", { -- Source: Frank Stenton, "Anglo-Saxon Eng
 	Faction = "wessex",
 	Date = 829,
 	HistoricalTitles = {
-		"head-of-state", 829, 0, "wessex" -- was king of Mercia in 829 when Eanred of Northumbria submitted to him
+		"head-of-state", 829, 0, "wessex" -- was king of Wessex in 829 when Eanred of Northumbria submitted to him
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "wessex") then
