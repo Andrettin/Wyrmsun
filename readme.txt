@@ -62,7 +62,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Buildings
 - Town Halls can now only be built on top of Settlement Sites.
-- Smithies can now store Copper, Silver, Gold and Coal. Smithies now can only be built within a certain distance of deposits and mines.
+- Smithies can now store Copper, Silver, Gold, Coal and Diamonds. Smithies now can only be built within a certain distance of deposits and mines.
 - Added Diamond Deposit/Mine (recolor of the Copper Deposit/Mine by Kriss7475). Diamonds convert to copper at a 800% rate.
 
 * Map Editor

@@ -3884,7 +3884,7 @@ DefineUnitType("unit-template-smithy", {
 	BuilderOutside = true,
 	IncreasesLuxuryDemand = true,
 	MetalImprove = true,
-	CanStore = {"copper", "silver", "gold", "coal"},
+	CanStore = {"copper", "silver", "gold", "coal", "diamonds"},
 	Drops = {"unit-wood-pile"},
 	BurnPercent = 50,
 	BurnDamageRate = 1,
