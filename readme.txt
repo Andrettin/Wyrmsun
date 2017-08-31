@@ -63,6 +63,7 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Town Halls can now only be built on top of Settlement Sites.
 - Smithies can now store Copper, Silver, Gold and Coal. Smithies now can only be built within a certain distance of deposits and mines.
+- Added Diamond Deposit/Mine (recolor of the Copper Deposit/Mine by Kriss7475). Diamonds convert to copper at a 800% rate.
 
 * Map Editor
 - Fixed crash which happened when placing a railroad over a neutral copper mine.
@@ -83,6 +84,10 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed the "northwest-northeast-inner" border graphics, which were incorrectly using the graphics for the "northwest-northeast-southwest-inner" border.
 - The initial random seed for the game now varies according to the computer's time and date, so that random maps should no longer yield the same result multiple times.
 - Added an encyclopedia page explaining the No Randomness mode in the Game Concepts section.
+- Added Diamond Rock (recolor of the Copper Rock by Kriss7475). 
+
+* Scenarios
+- A diamond deposit is now generated for the Nidavellir map.
 
 * Terrain
 - Terrain features (groups of tiles with the same terrain type and with a particular name for the feature) are now properly stored when saving a game.

@@ -2787,13 +2787,13 @@ function ApplyRawTiles()
 		end
 		
 		if (Editor.Running == EditorNotRunning) then
-			if ((GetNumUnitsAt(PlayerNumNeutral, "unit-gold-rock", {0, 0}, {512, 512}) + GetNumUnitsAt(PlayerNumNeutral, "unit-silver-rock", {0, 0}, {512, 512}) + GetNumUnitsAt(PlayerNumNeutral, "unit-copper-rock", {0, 0}, {512, 512})) >= 1) then
+			if ((GetNumUnitsAt(PlayerNumNeutral, "unit-gold-rock", {0, 0}, {512, 512}) + GetNumUnitsAt(PlayerNumNeutral, "unit-silver-rock", {0, 0}, {512, 512}) + GetNumUnitsAt(PlayerNumNeutral, "unit-copper-rock", {0, 0}, {512, 512}) + GetNumUnitsAt(PlayerNumNeutral, "unit-diamond-rock", {0, 0}, {512, 512})) >= 1) then
 				-- destroy gold and silver rocks that ended up in inappropriate locations
 				local uncount = 0
 				uncount = GetUnits(PlayerNumNeutral)
 				for unit1 = 1,table.getn(uncount) do 
 					if (uncount[unit1]) then
-						if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-rock" or GetUnitVariable(uncount[unit1], "Ident") == "unit-silver-rock" or GetUnitVariable(uncount[unit1], "Ident") == "unit-copper-rock") then
+						if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-rock" or GetUnitVariable(uncount[unit1], "Ident") == "unit-silver-rock" or GetUnitVariable(uncount[unit1], "Ident") == "unit-copper-rock" or GetUnitVariable(uncount[unit1], "Ident") == "unit-diamond-rock") then
 							if (RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Water" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Rock" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Tree") then
 								KillUnitAt(GetUnitVariable(uncount[unit1], "Ident"), PlayerNumNeutral, 1, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
 							end
@@ -2879,8 +2879,8 @@ function FindAppropriatePlayerSpawnPoint(min_x, max_x, min_y, max_y)
 					unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 16, RandomY - 16}, {RandomX + 16, RandomY + 16})
 				end
 
-				local gold_mine_quantity = GetNumUnitsAt(PlayerNumNeutral, "unit-gold-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-silver-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-copper-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
-				local close_gold_mine_quantity = GetNumUnitsAt(PlayerNumNeutral, "unit-gold-deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6}) + GetNumUnitsAt(PlayerNumNeutral, "unit-silver-deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6}) + GetNumUnitsAt(PlayerNumNeutral, "unit-copper-deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6})
+				local gold_mine_quantity = GetNumUnitsAt(PlayerNumNeutral, "unit-gold-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-silver-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-copper-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-diamond-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
+				local close_gold_mine_quantity = GetNumUnitsAt(PlayerNumNeutral, "unit-gold-deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6}) + GetNumUnitsAt(PlayerNumNeutral, "unit-silver-deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6}) + GetNumUnitsAt(PlayerNumNeutral, "unit-copper-deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6}) + GetNumUnitsAt(PlayerNumNeutral, "unit-diamond-deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6})
 
 				if (unit_quantity < 1 and (gold_mine_quantity >= 1 or (GrandStrategy and GrandStrategyBattleBaseBuilding == false)) and close_gold_mine_quantity < 1) then
 					location_found = true
@@ -2907,7 +2907,7 @@ function FindAppropriateGoldMineSpawnPoint(min_x, max_x, min_y, max_y, symmetric
 				RandomY = SyncRand(max_y - min_y + 1) + min_y
 			end
 			
-			local unit_quantity = GetNumUnitsAt(PlayerNumNeutral, "unit-gold-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-silver-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-copper-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-coal-mine", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-dwarven-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-germanic-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-gnomish-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-goblin-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-teuton-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-latin-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
+			local unit_quantity = GetNumUnitsAt(PlayerNumNeutral, "unit-gold-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-silver-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-copper-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-coal-mine", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-diamond-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-dwarven-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-germanic-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-gnomish-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-goblin-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-teuton-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-latin-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
 			
 			if (unit_quantity < 1) then
 				local space_available = true

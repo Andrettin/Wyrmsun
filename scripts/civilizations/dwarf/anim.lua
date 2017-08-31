@@ -39,6 +39,7 @@ DefineAnimations("animations-dwarven-miner", {
 	Harvest_lumber = WorkerLumberHarvesting,
 	Harvest_stone = WorkerStoneMining,
 	Harvest_limestone = WorkerStoneMining,
+	Harvest_diamonds = WorkerStoneMining,
 	Repair = {
 		"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
 		"frame 40", "sound construction-stone", "wait 5", "frame 45", "wait 3",

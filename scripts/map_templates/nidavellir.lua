@@ -37,6 +37,7 @@ DefineMapTemplate("nidavellir", {
 		"unit-silver-deposit", 4,
 		"unit-copper-deposit", 4,
 		"unit-yale-cave", 8,
+		"unit-diamond-deposit", 1,
 		"unit-tree-stump", 16,
 		"unit-snigill", 64,
 		"unit-slime", 32,

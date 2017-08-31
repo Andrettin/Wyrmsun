@@ -101,7 +101,7 @@ AddTrigger("expert-miner",
 		for i=0,(PlayerMax - 2) do
 			local percent_chance = 0
 			-- this event can only trigger if the player owns a mine, and it is more probable that it will trigger if the player owns a more valuable mine
-			if (GetPlayerData(i, "UnitTypesCount", "unit-gold-mine") > 0) then
+			if (GetPlayerData(i, "UnitTypesCount", "unit-gold-mine") > 0 or GetPlayerData(i, "UnitTypesCount", "unit-diamond-mine") > 0) then
 				percent_chance = 4
 			elseif (GetPlayerData(i, "UnitTypesCount", "unit-silver-mine") > 0) then
 				percent_chance = 2

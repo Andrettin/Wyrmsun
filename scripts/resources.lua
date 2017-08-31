@@ -110,5 +110,8 @@ SetResourceInputResource("furniture", "lumber")
 
 SetResourceBasePrice("leather", 100)
 
+SetResourceFinalResource("diamonds", "copper")
+SetResourceFinalResourceConversionRate("diamonds", 800)
+
 SetResourceFinalResource("trade", "copper")
 SetResourceFinalResourceConversionRate("trade", 100)

@@ -815,55 +815,7 @@ DefineButton( { Pos = 1, Level = 0,
 
 -- Buildings ---------------------------------------------------
 
-DefineButton( { Pos = 12, Level = 1, Icon = "icon-copper-mine",
-	Action = "build", Value = "unit-copper-mine",
-	Key = "c", Hint = _("Build ~!Copper Mine"), Popup = "popup-building",
-	ForUnit = {
-		"unit-germanic-worker", "unit-teuton-worker",
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
-		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
-		"unit-goblin-worker"
-	}
-})
-
-DefineButton( { Pos = 13, Level = 1, Icon = "icon-silver-mine",
-	Action = "build", Value = "unit-silver-mine",
-	Key = "v", Hint = _("Build Si~!lver Mine"), Popup = "popup-building",
-	ForUnit = {
-		"unit-germanic-worker", "unit-teuton-worker",
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
-		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
-		"unit-goblin-worker"
-	}
-})
-
-DefineButton( { Pos = 14, Level = 1, Icon = "icon-gold-mine",
-	Action = "build", Value = "unit-gold-mine",
-	Key = "g", Hint = _("Build ~!Gold Mine"), Popup = "popup-building",
-	ForUnit = {
-		"unit-germanic-worker", "unit-teuton-worker",
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
-		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
-		"unit-goblin-worker"
-	}
-})
-
-DefineButton( { Pos = 13, Level = 5, -- placeholder level, the button shouldn't appear yet since we don't have enough space in the worker building submenu (and maybe should never be visible since it wouldn't make sense to appear for Earth maps and such); but it needs to exist so that the game knows that workers can build this structure
-	Action = "build", Value = "unit-yale-hunting-lodge",
-	Key = "y", Hint = "Build ~!Yale Hunting Lodge", Popup = "popup-building",
-	ForUnit = {
-		"unit-germanic-worker", "unit-teuton-worker",
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
-		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
-		"unit-goblin-worker"
-	}
-})
-
-DefineButton( { Pos = 1, Level = 4, Icon = "icon-road",
+DefineButton( { Pos = 12, Level = 1, Icon = "icon-road",
 	Action = "build", Value = "unit-road",
 	Key = "o", Hint = "Build R~!oad", Popup = "popup-building",
 	ForUnit = {
@@ -875,7 +827,7 @@ DefineButton( { Pos = 1, Level = 4, Icon = "icon-road",
 	}
 })
 
-DefineButton( { Pos = 2, Level = 4, Icon = "icon-railroad",
+DefineButton( { Pos = 13, Level = 1, Icon = "icon-railroad",
 	Action = "build", Value = "unit-railroad",
 	Key = "r", Hint = "Build ~!Railroad", Popup = "popup-building",
 	ForUnit = {
@@ -886,6 +838,67 @@ DefineButton( { Pos = 2, Level = 4, Icon = "icon-railroad",
 		"unit-goblin-worker"
 	}
 })
+
+DefineButton( { Pos = 14, Level = 1, Icon = "icon-copper-mine",
+	Action = "build", Value = "unit-copper-mine",
+	Key = "c", Hint = _("Build ~!Copper Mine"), Popup = "popup-building",
+	ForUnit = {
+		"unit-germanic-worker", "unit-teuton-worker",
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
+		"unit-goblin-worker"
+	}
+})
+
+DefineButton( { Pos = 1, Level = 4, Icon = "icon-silver-mine",
+	Action = "build", Value = "unit-silver-mine",
+	Key = "v", Hint = _("Build Si~!lver Mine"), Popup = "popup-building",
+	ForUnit = {
+		"unit-germanic-worker", "unit-teuton-worker",
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
+		"unit-goblin-worker"
+	}
+})
+
+DefineButton( { Pos = 2, Level = 4, Icon = "icon-gold-mine",
+	Action = "build", Value = "unit-gold-mine",
+	Key = "g", Hint = _("Build ~!Gold Mine"), Popup = "popup-building",
+	ForUnit = {
+		"unit-germanic-worker", "unit-teuton-worker",
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
+		"unit-goblin-worker"
+	}
+})
+
+DefineButton( { Pos = 3, Level = 4, Icon = "icon-diamond-mine",
+	Action = "build", Value = "unit-diamond-mine",
+	Key = "d", Hint = "Build ~!Diamond Mine", Popup = "popup-building",
+	ForUnit = {
+		"unit-germanic-worker", "unit-teuton-worker",
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
+		"unit-goblin-worker"
+	}
+})
+
+DefineButton( { Pos = 4, Level = 4,
+	Action = "build", Value = "unit-yale-hunting-lodge",
+	Key = "y", Hint = "Build ~!Yale Hunting Lodge", Popup = "popup-building",
+	ForUnit = {
+		"unit-germanic-worker", "unit-teuton-worker",
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
+		"unit-goblin-worker"
+	}
+})
+
 DefineButton( { Pos = 15, Level = 1, Icon = "icon-right-arrow",
 	Action = "button", Value = 4,
 	Key = "pagedown", Hint = "Next (~<PgDwn~>)", Popup = "popup-commands",

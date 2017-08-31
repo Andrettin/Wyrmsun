@@ -54,6 +54,7 @@ DefineUnitType("unit-dwarven-miner", {
 	CoalGatheringBonus = 1,
 	LumberGatheringBonus = -1,
 	FurnitureGatheringBonus = -1,
+	DiamondsGatheringBonus = 1,
 	CanGatherResources = {
 		{
 			"resource-id", "gold",
@@ -89,6 +90,10 @@ DefineUnitType("unit-dwarven-miner", {
 		},
 		{
 			"resource-id", "leather",
+			"file-when-loaded", "dwarf/units/miner_with_gold.png"
+		},
+		{
+			"resource-id", "diamonds",
 			"file-when-loaded", "dwarf/units/miner_with_gold.png"
 		}
 	},
@@ -154,6 +159,10 @@ DefineUnitType("unit-dwarven-skilled-miner", {
 		{
 			"resource-id", "leather",
 			"file-when-loaded", "dwarf/units/miner_with_gold.png"
+		},
+		{
+			"resource-id", "diamonds",
+			"file-when-loaded", "dwarf/units/miner_with_gold.png"
 		}
 	},
 	Sounds = {
@@ -217,6 +226,10 @@ DefineUnitType("unit-dwarven-expert-miner", {
 		},
 		{
 			"resource-id", "leather",
+			"file-when-loaded", "dwarf/units/miner_with_gold.png"
+		},
+		{
+			"resource-id", "diamonds",
 			"file-when-loaded", "dwarf/units/miner_with_gold.png"
 		}
 	},
