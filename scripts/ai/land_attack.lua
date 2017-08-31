@@ -180,8 +180,8 @@ local land_funcs = {
 --	function() return AiResearch(AiMageSpell4()) end,
 --	function() return AiResearch(AiMageSpell5()) end,
 
---	function() return AiNeed(GetAiUnitType("university")) end, -- needed for engineering
---	function() return AiWait(GetAiUnitType("university")) end,
+	function() return AiNeed(GetAiUnitType("university")) end, -- needed for engineering
+	function() return AiWait(GetAiUnitType("university")) end,
 
 	function() return AiResearch(GetAiUnitType("mathematics")) end, -- needed for engineering
 	function() return AiWait(GetAiUnitType("mathematics")) end,	
