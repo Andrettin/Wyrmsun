@@ -81,6 +81,21 @@ DefineCharacter("agilulf", { -- king of the Lombards (from 591 to 616); Source: 
 	end
 })
 
+DefineCharacter("perctarit", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 136.
+	Name = "Perctarit",
+	Gender = "male",
+	Type = "unit-teuton-knight-lord", -- king
+	Civilization = "teuton",
+	Faction = "lombardy",
+	Date = 678, -- was king of the Lombards as of 678
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "lombardy") then
+			return true
+		end
+		return false
+	end
+})
+
 DefineCharacter("liudprand", { -- given by Medieval Warfare as "Liutprand", and by Archibald Lewis as "Liudprand"; king of the Lombards (from 712 to 744); Source: "Medieval Warfare IV.6", 2013, p. 9; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 400.
 	Name = "Liudprand",
 	Gender = "male",

@@ -641,7 +641,7 @@ DefineCharacter("cenwalh", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	-- was forced into exile from his lands by Penda of Mercia
 })
 
-DefineCharacter("cuthbert-of-lindisfarne", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 126.
+DefineCharacter("cuthbert-of-lindisfarne", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 126, 138.
 	Name = "Cuthbert",
 	Gender = "male",
 	Type = "unit-teuton-priest",
@@ -650,10 +650,10 @@ DefineCharacter("cuthbert-of-lindisfarne", { -- Source: Frank Stenton, "Anglo-Sa
 	Date = 651, -- became a novice in Melrose in 651
 	DeathDate = {687, 3, 20},
 	-- moved to Lindisfarne in 664
-	-- was elected bishop in 684, being consecrated on the 26th of March 685
+	-- was elected bishop of Hexham in 684, being consecrated on the 26th of March 685
 	Deities = {"christian-god"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
+		if (GetPlayerData(trigger_player, "Faction") == "northumbria" or GetPlayerData(trigger_player, "Faction") == "bernicia") then
 			return true
 		end
 		return false
@@ -706,6 +706,7 @@ DefineCharacter("deusdedit", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 	Civilization = "anglo-saxon",
 	Faction = "kent",
 	Date = 654, -- became archbishop of Canterbury in the spring of 654
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "kent" or GetPlayerData(trigger_player, "Faction") == "englaland") then
 			return true
@@ -769,16 +770,20 @@ DefineCharacter("hild-of-streoneshalh", { -- Source: Frank Stenton, "Anglo-Saxon
 	end
 })
 
-DefineCharacter("wilfrid", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 123.
+DefineCharacter("wilfrid", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 123, 135-138.
 	Name = "Wilfrid",
 	Gender = "male",
 	Type = "unit-teuton-priest",
 	Civilization = "anglo-saxon",
 	Faction = "northumbria", -- from Northumbria
 	Date = 663, -- participated in a synod in Streoneshalh, in Northumbria, in 663
+	-- predominated over the whole Northumbrian church in the 669-677 period
+	-- expelled from Northumbria in 677
+	-- was restored to his see in York in 679.10 by Rome, but this decision was not obeyed in Northumbria
+	-- in 681 he found refuge in Sussex
 	Deities = {"christian-god"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
+		if (GetPlayerData(trigger_player, "Faction") == "northumbria" or GetPlayerData(trigger_player, "Faction") == "sussex") then
 			return true
 		end
 		return false
@@ -811,6 +816,7 @@ DefineCharacter("wighard", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Faction = "kent",
 	Date = 667, -- became archbishop of Canterbury in 667
 	DeathDate = 667, -- died very soon after becoming archbishop, when he was sent to Rome to be consecrated, and died of plague
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "kent" or GetPlayerData(trigger_player, "Faction") == "englaland") then
 			return true
@@ -819,14 +825,16 @@ DefineCharacter("wighard", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	end
 })
 
-DefineCharacter("leuthere", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 132-133.
+DefineCharacter("leuthere", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 132-134.
 	Name = "Leuthere",
 	Gender = "male",
 	Type = "unit-teuton-priest", -- bishop
 	Civilization = "anglo-saxon",
 	Faction = "wessex",
 	Date = 670, -- became bishop of Winchester in 670 (consecrated by archbishop Theodore of Canterbury)
+	DeathDate = 676, -- succeeded by Hæddi as bishop of Winchester in 676
 	-- nephew of Agilbert
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "wessex") then
 			return true
@@ -856,6 +864,55 @@ DefineCharacter("ecgfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	end
 	-- was defeated in 678 by Æthelred, Wulfhere's brother, in a battle close to the Trent river
 	-- in 684 had an army sent to Ireland against the kingdom of Meath
+})
+
+DefineCharacter("haeddi", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 134.
+	Name = "Haeddi", -- "Hæddi"
+	Gender = "male",
+	Type = "unit-teuton-priest", -- bishop
+	Civilization = "anglo-saxon",
+	Faction = "wessex",
+	Date = 676, -- became bishop of Winchester in 676, succeeding Leuthere
+	-- friend of archbishop Theodore of Canterbury
+	Deities = {"christian-god"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "wessex") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("bosa", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 135-136.
+	Name = "Bosa",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- bishop
+	Civilization = "anglo-saxon",
+	Faction = "northumbria",
+	Date = 677, -- became bishop of Deira in 677
+	Deities = {"christian-god"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "northumbria" or GetPlayerData(trigger_player, "Faction") == "deira") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("eata", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 135-136.
+	Name = "Eata",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- bishop
+	Civilization = "anglo-saxon",
+	Faction = "northumbria",
+	Date = 677, -- became bishop of Bernicia in 677
+	Deities = {"christian-god"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "northumbria" or GetPlayerData(trigger_player, "Faction") == "bernicia") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("beornhaeth", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 88.
@@ -888,6 +945,41 @@ DefineCharacter("aethelred-of-mercia", { -- Source: Frank Stenton, "Anglo-Saxon 
 	end
 })
 
+DefineCharacter("aethelwalh", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 137-138.
+	Name = "Aethelwalh", -- "Æthelwalh"
+	Gender = "male",
+	Type = "unit-teuton-heroic-swordsman", -- king
+	Civilization = "anglo-saxon",
+	Faction = "sussex",
+	Date = 681, -- was king of the South Saxons as of 681
+	DeathDate = 686, -- died in 686, having been killed by Cædwalla
+	HistoricalTitles = {
+		"head-of-state", 681, 686, "sussex"
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "sussex") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("tunberht", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 138.
+	Name = "Tunberht",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- bishop
+	Civilization = "anglo-saxon",
+	Faction = "northumbria",
+	DeathDate = 684, -- was deposed as bishop of Hexham in 684
+	Deities = {"christian-god"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "northumbria" or GetPlayerData(trigger_player, "Faction") == "bernicia") then
+			return true
+		end
+		return false
+	end
+})
+
 DefineCharacter("aldfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 88.
 	Name = "Aldfrith",
 	Gender = "male",
@@ -908,14 +1000,29 @@ DefineCharacter("aldfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	end
 })
 
+DefineCharacter("caedwalla", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 137-138.
+	Name = "Caedwalla", -- "Cædwalla"
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "anglo-saxon",
+	Faction = "wessex", -- West Saxon exile
+	Date = 686, -- killed king Aethelwalh of Sussex in 686
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "wessex") then
+			return true
+		end
+		return false
+	end
+})
+
 DefineCharacter("aldhelm", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 89; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 98.
 	Name = "Aldhelm", -- abbot of Malmesbury, composed the "Helleborus" riddle
 	Gender = "male",
 	Type = "unit-teuton-priest",
 	Civilization = "anglo-saxon",
 	Faction = "wessex",
-	Deities = {"christian-god"},
 	DeathDate = 709, -- died in 709/710
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "wessex") then
 			return true
@@ -987,8 +1094,8 @@ DefineCharacter("bede", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	Civilization = "anglo-saxon",
 	Faction = "angle-tribe", -- so that the name will be added to the name generation correctly
 	-- from which part of England?
-	Deities = {"christian-god"},
 	Date = 731, -- wrote "Historia Ecclesiastica Venerabilis Bedae" around 731 AD
+	Deities = {"christian-god"},
 	AuthoredWorks = {"upgrade-work-historia-ecclesiastica-venerabilis-bedae"}
 })
 
@@ -1272,6 +1379,7 @@ DefineCharacter("wulfred", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Type = "unit-teuton-priest", -- archbishop of Canterbury
 	Civilization = "anglo-saxon",
 	Faction = "kent",
+	Deities = {"christian-god"},
 	Date = 811, -- archbishop of Canterbury in 811
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "kent" or GetPlayerData(trigger_player, "Faction") == "englaland") then

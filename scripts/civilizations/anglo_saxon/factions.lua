@@ -234,7 +234,10 @@ DefineFaction("sussex", {
 	Colors = {"blue"},
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-sussex",
-	Description = ""
+	Description = "",
+	HistoricalUpgrades = {
+		686, "upgrade-deity-christian-god", true -- king Æthelwalh of the South Saxons had been converted to Christianity by 686; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 138.
+	}
 })
 
 DefineFaction("wessex", {

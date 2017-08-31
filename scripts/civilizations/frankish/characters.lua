@@ -318,12 +318,13 @@ DefineCharacter("wintrio-of-champagne", { -- Frankish duke of Champagne between 
 	end
 })
 
-DefineCharacter("dagobert-i-of-francia", { -- king of the Franks as Dagobert I; died in 639; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 81; Source: "Medieval Warfare V.2", 2013, p. 7.
+DefineCharacter("dagobert-i-of-francia", { -- king of the Franks as Dagobert I; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 81; Source: "Medieval Warfare V.2", 2013, p. 7.
 	Name = "Dagobert",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- king
 	Civilization = "frankish",
 	Faction = "francia",
+	DeathDate = 639, -- died in 639
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
 			return true
@@ -332,12 +333,13 @@ DefineCharacter("dagobert-i-of-francia", { -- king of the Franks as Dagobert I; 
 	end
 })
 
-DefineCharacter("bobo-of-auvergne", { -- Frankish duke of Auvergne in 639; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 397.
+DefineCharacter("bobo-of-auvergne", { -- Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 397.
 	Name = "Bobo",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- duke
 	Civilization = "frankish",
 	Faction = "francia",
+	Date = 639, -- Frankish duke of Auvergne in 639
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
 			return true
@@ -393,6 +395,21 @@ DefineCharacter("pepin-of-herstal", { -- became Mayor of the Palace of Austrasia
 	Type = "unit-frank-knight-lord", -- Mayor of the Palace of Austrasia
 	Civilization = "frankish",
 	Faction = "austrasia",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "austrasia") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("dagobert-ii-of-austrasia", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 136.
+	Name = "Dagobert",
+	Gender = "male",
+	Type = "unit-frank-knight-lord", -- king
+	Civilization = "frankish",
+	Faction = "austrasia",
+	Date = 678, -- was king of Austrasia as of 678
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "austrasia") then
 			return true

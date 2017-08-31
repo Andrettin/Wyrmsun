@@ -62,10 +62,20 @@ DefineCharacter("theodore", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Gender = "male",
 	Type = "unit-teuton-priest", -- monk, and later archbishop
 	Civilization = "greek", -- from Tarsus
---	Faction = "kent",
-	Date = 667 -- ordained subdeacon in 667
+	Faction = "kent",
+	Date = 667, -- ordained subdeacon in 667
+	Deities = {"christian-god"}
 	-- forsook the eastern tonsure for the Roman one in 668.3.26, and was then consecrated by the Pope as archbishop of Canterbury
 	-- on 668.5.27 he left Rome for Britain
 	-- arrived in Canterbury on 669.5.27
+})
+
+DefineCharacter("constantine-pogonatus", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 137.
+	Name = "Constantine",
+	ExtraName = "Pogonatus",
+	Gender = "male",
+	Type = "unit-teuton-knight-lord", -- emperor
+	Civilization = "greek",
+	Date = 678 -- Emperor of the Eastern Roman Empire as of 678
 })
 

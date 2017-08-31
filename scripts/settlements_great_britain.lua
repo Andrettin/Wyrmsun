@@ -431,6 +431,25 @@ DefineSettlement("dover", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
+DefineSettlement("dunwich", {
+	Name = "Dunwich",
+	MapTemplate = "earth",
+	Position = {3874, 859},
+	CulturalNames = {
+		"anglo-saxon", "Dommocceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"english", "Dunwich"
+	},
+	HistoricalOwners = {
+		672, "east-anglia",
+		802, "east-anglia", -- Dunwich's area was a part of East Anglia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Dunwich's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		672, 0, "temple" -- Dunwich was a bishopric as of 672; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 134.
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
 DefineSettlement("durham", {
 	Name = "Durham",
 	MapTemplate = "earth",
@@ -608,6 +627,43 @@ DefineSettlement("heathfield", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
+DefineSettlement("hereford", {
+	Name = "Hereford",
+	MapTemplate = "earth",
+	Position = {3775, 863},
+	CulturalNames = {
+		"english", "Hereford"
+	},
+	HistoricalOwners = {
+		680, "mercia", -- Hereford was a part of Mercia by 680; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 134.
+		802, "mercia", -- Hereford's area was a part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Hereford's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		680, 0, "temple" -- archbishop Theodore of Canterbury made Hereford into a separate diocese before 680; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 134.
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("hexham", {
+	Name = "Hexham",
+	MapTemplate = "earth",
+	Position = {3790, 797},
+	CulturalNames = {
+		"anglo-saxon", "Hagustaldesea", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"english", "Hexham"
+	},
+	HistoricalOwners = {
+		684, "northumbria", -- Hexham was a part of Northumbria in 684; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 138.
+		802, "northumbria", -- Hexham's area was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Hexham's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		684, 0, "temple" -- an episcopal see was existent in Hexham as of 684; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 138.
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
 DefineSettlement("jarrow", {
 	Name = "Jarrow",
 	MapTemplate = "earth",
@@ -661,7 +717,7 @@ DefineSettlement("leicester", {
 	},
 	HistoricalBuildings = {
 		410, 737, "farm",
-		737, 0, "temple" -- diocese of Leicester founded in 737 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 109.
+		737, 0, "temple" -- diocese of Leicester permanently founded in 737 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 109, 134.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -679,12 +735,15 @@ DefineSettlement("lincoln", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Lindum/Lincoln was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+		674, "northumbria", -- Lindsey was conquered by Ecgfrith of Northumbria in 674; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 134.
+		678, "mercia", -- Lindsey was conquered by Æthelred of Mercia in 678; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 134.
 		802, "mercia", -- Lincoln was a part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 		1560, "england" -- Lincoln's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		410, 627, "farm",
 		627, 0, "temple" -- a church was in existence in Lincoln in 627 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 115.
+		-- Lindsey became a separate diocese in 677; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 134.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -1147,6 +1206,25 @@ DefineSettlement("winwaedsfield", {
 	},
 	HistoricalBuildings = {
 		802, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("worcester", {
+	Name = "Worcester",
+	MapTemplate = "earth",
+	Position = {3788, 861},
+	CulturalNames = {
+		"anglo-saxon", "Weogornaceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
+		"english", "Worcester"
+	},
+	HistoricalOwners = {
+		680, "mercia", -- Worcester was a part of Mercia by 680; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 134.
+		802, "mercia", -- Worcester was a part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Worcester's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		680, 0, "temple" -- archbishop Theodore of Canterbury made Worcester into a separate diocese before 680; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 134.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })

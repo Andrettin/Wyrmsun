@@ -97,3 +97,12 @@ DefineCharacter("tiberius-claudius-pompeianus", { -- Source: "Ancient Warfare VI
 	Civilization = "latin",
 	Faction = "rome"
 })
+
+DefineCharacter("agatho", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 136.
+	Name = "Agatho",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- Pope
+	Civilization = "latin",
+	Date = 679, -- Pope as of 679.10
+	Deities = {"christian-god"}
+})
