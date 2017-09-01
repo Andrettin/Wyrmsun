@@ -276,7 +276,7 @@ AddInventoryButton(129, 97)
 AddInventoryButton(185, 97)
 AddInventoryButton(17, 140)
 AddInventoryButton(73, 140)
-AddInventoryButton(129, 140)
+--AddInventoryButton(129, 140)
 
 b = CUIButton:new()
 --b.X = 12
