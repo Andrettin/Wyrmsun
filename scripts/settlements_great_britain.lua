@@ -807,6 +807,7 @@ DefineSettlement("london", {
 	HistoricalBuildings = {
 		410, 0, "town-hall",
 		604, 0, "temple", -- a church was built in London in 604 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 109.
+		-- London possessed a bishopric as of 704/705; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 142.
 		1836, 0, "university" -- University founded in London in 1836; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
@@ -817,14 +818,16 @@ DefineSettlement("malmesbury", {
 	MapTemplate = "earth",
 	Position = {3794, 879},
 	CulturalNames = {
-		"english", "Wilton"
+		"anglo-saxon", "Maeldubesburg", -- "Mældubesburg"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"english", "Malmesbury"
 	},
 	HistoricalOwners = {
+		705, "wessex", -- Malmesbury was (presumably) a part of Wessex in 705 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 142.
 		802, "wessex", -- Malmesbury was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 		1560, "england" -- Malmesbury's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		802, 0, "farm"
+		705, 0, "temple" -- an abbey existed in Malmesbury as of 705; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 142.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -863,6 +866,24 @@ DefineSettlement("old-sarum", {
 	},
 	HistoricalBuildings = {
 		410, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("oundle", {
+	Name = "Oundle",
+	MapTemplate = "earth",
+	Position = {3816, 854},
+	CulturalNames = {
+		"english", "Oundle"
+	},
+	HistoricalOwners = {
+		709, "mercia", -- Oundle was a part of Mercia in 709; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 143, 145.
+		802, "mercia", -- Oundle's area was a part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Oundle's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		709, 0, "temple" -- Oundle possessed a monastery as of 709; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 145.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -1032,6 +1053,24 @@ DefineSettlement("salisbury", {
 	},
 	HistoricalBuildings = {
 		802, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("sherborne", {
+	Name = "Sherborne",
+	MapTemplate = "earth",
+	Position = {3783, 891},
+	CulturalNames = {
+		"anglo-saxon", "Scireburnan", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
+		"english", "Sherborne"
+	},
+	HistoricalOwners = {
+		705, "wessex", -- Sherborne was a part of Wessex in 705 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 142.
+		1560, "england" -- Sherborne's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		705, 0, "temple" -- a bishopric was established in Sherborne in 705 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 142.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })

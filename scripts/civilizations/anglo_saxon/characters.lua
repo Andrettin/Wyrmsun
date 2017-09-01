@@ -772,7 +772,7 @@ DefineCharacter("hild-of-streoneshalh", { -- Source: Frank Stenton, "Anglo-Saxon
 	end
 })
 
-DefineCharacter("wilfrid", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 123, 135-139.
+DefineCharacter("wilfrid", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 123, 135-139, 143-145.
 	Name = "Wilfrid",
 	Gender = "male",
 	Type = "unit-teuton-priest",
@@ -785,6 +785,8 @@ DefineCharacter("wilfrid", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	-- in 681 he found refuge in Sussex
 	-- was allowed to return to Northumbria in 686, having his residence at Ripon
 	-- administered the see of Lindisfarne after Cuthbert died in 687.3
+	-- expelled from Northumbria again in 691, due to his ambition to once more predominate over the entirety of the Northumbrian church, moving to Mercia
+	DeathDate = 709, -- died in 709 at Oundle
 	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria" or GetPlayerData(trigger_player, "Faction") == "sussex") then
@@ -986,7 +988,7 @@ DefineCharacter("tunberht", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	end
 })
 
-DefineCharacter("aldfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 88.
+DefineCharacter("aldfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 88, 144.
 	Name = "Aldfrith",
 	Gender = "male",
 	Type = "unit-teuton-heroic-swordsman", -- king
@@ -994,9 +996,9 @@ DefineCharacter("aldfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Faction = "northumbria",
 	Father = "oswiu",
 	Date = {685, 5, 20},
-	DeathDate = 704, -- end of reign
+	DeathDate = 704, -- died on 704.12
 	HistoricalTitles = {
-		"head-of-state", {685, 5, 20}, 704, "northumbria" -- succeeded his brother Ecgfrith as king of Northumbria
+		"head-of-state", {685, 5, 20}, 704, "northumbria" -- succeeded his brother Ecgfrith as king of Northumbria on 685.5.20
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
@@ -1038,16 +1040,35 @@ DefineCharacter("john-of-beverley", { -- Source: Frank Stenton, "Anglo-Saxon Eng
 	end
 })
 
-DefineCharacter("aldhelm", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 89; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 98.
-	Name = "Aldhelm", -- abbot of Malmesbury, composed the "Helleborus" riddle
+DefineCharacter("berhtwald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 142, 145.
+	Name = "Berhtwald",
 	Gender = "male",
-	Type = "unit-teuton-priest",
+	Type = "unit-teuton-priest", -- abbot, and later archbishop
 	Civilization = "anglo-saxon",
-	Faction = "wessex",
-	DeathDate = 709, -- died in 709/710
+	Faction = "kent",
+	Date = {692, 7, 1}, -- became archbishop of Canterbury on 692.7.1, having previously been abbot of Reculver
+	DeathDate = 731, -- died in 731
 	Deities = {"christian-god"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "wessex") then
+		if (GetPlayerData(trigger_player, "Faction") == "kent" or GetPlayerData(trigger_player, "Faction") == "englaland") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("wihtred", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 142.
+	Name = "Wihtred",
+	Gender = "male",
+	Type = "unit-teuton-heroic-swordsman", -- king
+	Civilization = "anglo-saxon",
+	Faction = "kent",
+	Date = 695,
+	HistoricalTitles = {
+		"head-of-state", 695, 0, "kent" -- king of Kent as of 695
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "kent") then
 			return true
 		end
 		return false
@@ -1070,6 +1091,58 @@ DefineCharacter("osred", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("waldhere", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 142.
+	Name = "Waldhere",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- bishop
+	Civilization = "anglo-saxon",
+	Faction = "essex",
+	Date = 704, -- was bishop of London as of 704/705
+	Deities = {"christian-god"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "middlesex" or GetPlayerData(trigger_player, "Faction") == "essex") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("cenred", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 142.
+	Name = "Cenred",
+	Gender = "male",
+	Type = "unit-teuton-heroic-swordsman", -- king
+	Civilization = "anglo-saxon",
+	Faction = "mercia",
+	Date = 704,
+	HistoricalTitles = {
+		"head-of-state", 704, 0, "mercia" -- king of Mercia as of 704/705
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "mercia") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("aldhelm", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 89; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 98, 142.
+	Name = "Aldhelm",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- abbot, and later bishop
+	Civilization = "anglo-saxon",
+	Faction = "wessex",
+	Date = 705, -- became bishop at Sherborne in 705, having previously been abbot of Malmesbury
+	DeathDate = 709, -- died in 709/710
+	Deities = {"christian-god"},
+	 -- composed the "Helleborus" riddle
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "wessex") then
 			return true
 		end
 		return false
@@ -1104,6 +1177,23 @@ DefineCharacter("ceolwulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("tatwine", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 145.
+	Name = "Tatwine",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- abbot, and later archbishop
+	Civilization = "anglo-saxon",
+	Faction = "kent", -- archbishop of Canterbury, but was a Mercian abbot
+	Date = 731, -- succeeded Behrtwald as archbishop of Canterbury after he had died in 731
+	DeathDate = 734, -- died in 734
+	Deities = {"christian-god"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "kent" or GetPlayerData(trigger_player, "Faction") == "mercia" or GetPlayerData(trigger_player, "Faction") == "englaland") then
 			return true
 		end
 		return false
@@ -1174,14 +1264,15 @@ DefineCharacter("offa-of-northumbria", { -- Source: Frank Stenton, "Anglo-Saxon 
 	end
 })
 
-DefineCharacter("egbert", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 92.
-	Name = "Egbert", -- archbishop of York
+DefineCharacter("egbert", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 92, 145.
+	Name = "Egbert",
 	Gender = "male",
-	Type = "unit-teuton-priest", -- archbishop
+	Type = "unit-teuton-priest", -- bishop, and later archbishop
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
 	Deities = {"christian-god"},
 	-- was Eadberht of Northumbria's brother
+	Date = 735, -- became archbishop of York in 735, having been previously bishop of York
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
 			return true

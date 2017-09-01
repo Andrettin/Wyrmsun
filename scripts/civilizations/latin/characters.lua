@@ -106,3 +106,21 @@ DefineCharacter("agatho", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Date = 679, -- Pope as of 679.10
 	Deities = {"christian-god"}
 })
+
+DefineCharacter("pope-sergius-i", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 143.
+	Name = "Sergius",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- Pope
+	Civilization = "latin",
+	Date = 699, -- Pope as of 699/700
+	Deities = {"christian-god"}
+})
+
+DefineCharacter("pope-gregory-iii", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 145.
+	Name = "Gregory",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- Pope
+	Civilization = "latin",
+	Date = 735, -- Pope as of 735
+	Deities = {"christian-god"}
+})

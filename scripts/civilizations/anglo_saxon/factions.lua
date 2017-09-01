@@ -172,6 +172,7 @@ DefineFaction("kent", {
 	HistoricalUpgrades = {
 		597, "upgrade-deity-christian-god", true, -- king Æthelberht of Kent converted to Christianity in 597 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 105-106.
 --		616, "upgrade-deity-christian-god", false -- king Eadbald of Kent was openly pagan; he acceeded in 616 AD; later, however, he accepted Christianity; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 112.
+		-- king Wihtred of Kent exempted the church from taxation in 695; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 142.
 	}
 })
 
