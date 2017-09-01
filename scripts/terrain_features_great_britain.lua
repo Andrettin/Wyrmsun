@@ -49,6 +49,7 @@ DefineTerrainFeature("bromswold-forest", {
 	Name = "Bromswold Forest",
 	TerrainType = "pine-tree",
 	World = "Earth",
+	Color = {0, 120, 0},
 	CulturalNames = {
 		"anglo-saxon", "Bruneswald", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"english", "Bromswold Forest"
@@ -135,6 +136,7 @@ DefineTerrainFeature("sherwood-forest", {
 	Name = "Sherwood Forest",
 	TerrainType = "pine-tree",
 	World = "Earth",
+	Color = {0, 136, 0},
 	CulturalNames = {
 		"anglo-saxon", "Scirwudu", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 		"english", "Sherwood Forest"
@@ -145,6 +147,7 @@ DefineTerrainFeature("selwood", {
 	Name = "Selwood",
 	TerrainType = "pine-tree",
 	World = "Earth",
+	Color = {0, 112, 0},
 	CulturalNames = {
 		"anglo-saxon", "Sealwudu", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 		"english", "Selwood"
@@ -186,6 +189,7 @@ DefineTerrainFeature("the-weald", {
 	Name = "The Weald",
 	TerrainType = "pine-tree", -- The Weald was a forest, but of what kind?
 	World = "Earth",
+	Color = {0, 144, 0},
 	CulturalNames = {
 		"anglo-saxon", "Andredesweald", -- Old English name of The Weald; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"english", "The Weald"
