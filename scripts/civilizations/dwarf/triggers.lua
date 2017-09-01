@@ -49,7 +49,7 @@ AddTrigger("oin-leaves",
 		if (GetFactionExists("oinling-clan")) then
 			return false
 		end
-		if ( -- if Andvari's Falls are empty, but there are certain Germanic structures within a certain range of it
+		if ( -- if Andvari's Falls are empty, but there are certain Dwarven structures within a certain range of it
 			GetNumUnitsAt(-2, "any", {490 - 16 - NidavellirStartX, 107 - 16 - NidavellirStartY}, {490 + 16 - NidavellirStartX, 107 + 16 - NidavellirStartY}, GetMapLayer("", "Nidavellir", 0)) == 0
 			and (490 - NidavellirStartX) > 0
 			and (107 - NidavellirStartY) > 0
@@ -72,19 +72,14 @@ AddTrigger("oin-leaves",
 			return false
 		end
 		SetStartView(oinling_player, 490 - NidavellirStartX, 107 - NidavellirStartY, GetMapLayer("", "Nidavellir", 0))
-		unit = CreateUnit("unit-dwarven-town-hall", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "Nidavellir", 0))
+		unit = CreateUnit("unit-dwarven-mushroom-farm", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "Nidavellir", 0))
 		local players_around = GetPlayersAroundUnit(unit, 256)
 		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "Nidavellir", 0))
+		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "Nidavellir", 0))
+		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "Nidavellir", 0))
+		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "Nidavellir", 0))
+		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "Nidavellir", 0))
 		SetUnitVariable(unit, "Character", "andvari") -- Oin's son
-		unit = CreateUnit("unit-dwarven-miner", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "Nidavellir", 0))
-		unit = CreateUnit("unit-dwarven-miner", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "Nidavellir", 0))
-		unit = CreateUnit("unit-dwarven-miner", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "Nidavellir", 0))
-		unit = CreateUnit("unit-dwarven-miner", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "Nidavellir", 0))
-		unit = CreateUnit("unit-dwarven-miner", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "Nidavellir", 0))
-		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "Nidavellir", 0))
-		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "Nidavellir", 0))
-		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "Nidavellir", 0))
-		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "Nidavellir", 0))
 		
 		for i = 1, table.getn(players_around) do 
 			CallDialogue("oin-leaves", players_around[i])
