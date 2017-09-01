@@ -951,6 +951,25 @@ DefineSettlement("richborough", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
+DefineSettlement("ripon", {
+	Name = "Ripon",
+	MapTemplate = "earth",
+	Position = {3828, 816},
+	CulturalNames = {
+		"anglo-saxon", "Hrypum", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"english", "Ripon"
+	},
+	HistoricalOwners = {
+		686, "northumbria", -- Ripon was a part of Northumbria in 686; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 139.
+		802, "northumbria", -- Ripon's area was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Ripon's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		686, 0, "temple" -- a church was existent in Ripon as of 686; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 139.
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
 DefineSettlement("rochester", {
 	Name = "Rochester",
 	MapTemplate = "earth",

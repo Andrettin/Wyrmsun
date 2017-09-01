@@ -57,13 +57,14 @@ DefineCharacter("zosimus", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Pr
 	AuthoredWorks = {"upgrade-work-historia-nova"}
 })
 
-DefineCharacter("theodore", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 131-132.
+DefineCharacter("theodore", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 131-132, 139.
 	Name = "Theodore",
 	Gender = "male",
 	Type = "unit-teuton-priest", -- monk, and later archbishop
 	Civilization = "greek", -- from Tarsus
 	Faction = "kent",
 	Date = 667, -- ordained subdeacon in 667
+	DeathDate = {690, 9, 19}, -- died on 690.9.19
 	Deities = {"christian-god"}
 	-- forsook the eastern tonsure for the Roman one in 668.3.26, and was then consecrated by the Pope as archbishop of Canterbury
 	-- on 668.5.27 he left Rome for Britain

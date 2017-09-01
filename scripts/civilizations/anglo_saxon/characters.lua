@@ -641,16 +641,18 @@ DefineCharacter("cenwalh", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	-- was forced into exile from his lands by Penda of Mercia
 })
 
-DefineCharacter("cuthbert-of-lindisfarne", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 126, 138.
+DefineCharacter("cuthbert-of-lindisfarne", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 126, 138-139.
 	Name = "Cuthbert",
 	Gender = "male",
 	Type = "unit-teuton-priest",
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
 	Date = 651, -- became a novice in Melrose in 651
-	DeathDate = {687, 3, 20},
 	-- moved to Lindisfarne in 664
 	-- was elected bishop of Hexham in 684, being consecrated on the 26th of March 685
+	-- retired from the world in 687
+	DeathDate = {687, 3, 20}, -- died on 687.3.20
+	-- became a saint
 	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria" or GetPlayerData(trigger_player, "Faction") == "bernicia") then
@@ -770,7 +772,7 @@ DefineCharacter("hild-of-streoneshalh", { -- Source: Frank Stenton, "Anglo-Saxon
 	end
 })
 
-DefineCharacter("wilfrid", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 123, 135-138.
+DefineCharacter("wilfrid", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 123, 135-139.
 	Name = "Wilfrid",
 	Gender = "male",
 	Type = "unit-teuton-priest",
@@ -781,6 +783,8 @@ DefineCharacter("wilfrid", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	-- expelled from Northumbria in 677
 	-- was restored to his see in York in 679.10 by Rome, but this decision was not obeyed in Northumbria
 	-- in 681 he found refuge in Sussex
+	-- was allowed to return to Northumbria in 686, having his residence at Ripon
+	-- administered the see of Lindisfarne after Cuthbert died in 687.3
 	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria" or GetPlayerData(trigger_player, "Faction") == "sussex") then
@@ -851,7 +855,7 @@ DefineCharacter("ecgfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Faction = "northumbria",
 	Father = "oswiu",
 	Date = 674, -- defeated Wulfhere of Mercia's invasion of Northumbria in 674
-	DeathDate = 685, -- died in the 20th of May 685 at Duin Nechtain / Nechtanesmere while leading a raid against the Picts under their king Bruide
+	DeathDate = {685, 5, 20}, -- died in the 20th of May 685 at Duin Nechtain / Nechtanesmere while leading a raid against the Picts under their king Bruide
 	ViolentDeath = true,
 	HistoricalTitles = {
 		"head-of-state", 674, 685, "northumbria" -- king of Northumbria
@@ -883,13 +887,14 @@ DefineCharacter("haeddi", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	end
 })
 
-DefineCharacter("bosa", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 135-136.
+DefineCharacter("bosa", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 135-136, 139.
 	Name = "Bosa",
 	Gender = "male",
 	Type = "unit-teuton-priest", -- bishop
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
-	Date = 677, -- became bishop of Deira in 677
+	Date = 677, -- became bishop of Deira (with seat in York) in 677
+	DeathDate = 705, -- died in 705
 	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria" or GetPlayerData(trigger_player, "Faction") == "deira") then
@@ -899,13 +904,14 @@ DefineCharacter("bosa", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971,
 	end
 })
 
-DefineCharacter("eata", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 135-136.
+DefineCharacter("eata", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 135-136, 139.
 	Name = "Eata",
 	Gender = "male",
 	Type = "unit-teuton-priest", -- bishop
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
 	Date = 677, -- became bishop of Bernicia in 677
+	DeathDate = 686, -- died just before Wilfrid's return to Northumbria in 686
 	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria" or GetPlayerData(trigger_player, "Faction") == "bernicia") then
@@ -987,10 +993,10 @@ DefineCharacter("aldfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
 	Father = "oswiu",
-	Date = 685,
+	Date = {685, 5, 20},
 	DeathDate = 704, -- end of reign
 	HistoricalTitles = {
-		"head-of-state", 685, 704, "northumbria" -- succeeded his brother Ecgfrith as king of Northumbria
+		"head-of-state", {685, 5, 20}, 704, "northumbria" -- succeeded his brother Ecgfrith as king of Northumbria
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
@@ -1009,6 +1015,23 @@ DefineCharacter("caedwalla", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 	Date = 686, -- killed king Aethelwalh of Sussex in 686
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "wessex") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("john-of-beverley", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 139.
+	Name = "John",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- bishop
+	Civilization = "anglo-saxon",
+	Faction = "northumbria",
+	Date = 686, -- succeeded Eata as bishop of Hexham
+	-- moved to York in 705
+	Deities = {"christian-god"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
 			return true
 		end
 		return false
