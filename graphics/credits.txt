@@ -702,6 +702,8 @@
 /graphics/neutral/buildings/portal_purple.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/buildings/railroad.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/buildings/road.png (by Jinn) (licensed under the CC0)
+/graphics/neutral/buildings/settlement_site.png (by Exidelo) (licensed under the CC0)
+/graphics/neutral/buildings/settlement_site_shadow.png (by Exidelo) (licensed under the CC0)
 /graphics/neutral/buildings/silver_deposit.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/buildings/silver_deposit_shadow.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/buildings/silver_mine.png (by Jinn) (licensed under the CC0)
