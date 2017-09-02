@@ -350,6 +350,12 @@ DefineLanguageWord("Molere", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	-- also given as "Molō" (if it is indeed the same word); Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 })
 
+DefineLanguageWord("Monasterium", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 148.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Monastery"}
+})
+
 DefineLanguageWord("Numerus", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 121.
 	Language = "latin",
 	Type = "noun",

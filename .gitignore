@@ -41,3 +41,10 @@ graphics/ui/backgrounds/yale.png
 graphics/ui/backgrounds/yale_4_3.png
 graphics/ui/backgrounds/yale_profile.png
 graphics/ui/backgrounds/yale_small.png
+
+## Steam Workshop Mod Uploader
+CSteamworks.dll
+ModCreator.exe
+steam_api.dll
+steam_appid.txt
+Steamworks.NET.dll

@@ -32,3 +32,10 @@ DefineLanguageWord("Cirice", { -- Source: D. H. Green, "From Germania to Europe:
 	DerivesFrom = {"west-germanic", "noun", "Kirika"}
 })
 
+DefineLanguageWord("Mynster", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 148.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Monastery"},
+	DerivesFrom = {"latin", "noun", "Monasterium"}
+})
+

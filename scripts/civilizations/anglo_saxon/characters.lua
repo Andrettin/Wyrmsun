@@ -988,6 +988,22 @@ DefineCharacter("tunberht", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	end
 })
 
+DefineCharacter("berhtwald-of-mercia", { -- probably not the same Berhtwald as the archbishop of Canterbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 151.
+	Name = "Berhtwald",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "anglo-saxon",
+	Faction = "mercia",
+	-- nephew of king Æthelred of Mercia
+	Date = 685, -- gave forty hides to abbot Aldhelm in 685
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "mercia") then
+			return true
+		end
+		return false
+	end
+})
+
 DefineCharacter("aldfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 88, 144.
 	Name = "Aldfrith",
 	Gender = "male",
@@ -1131,18 +1147,36 @@ DefineCharacter("cenred", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	end
 })
 
-DefineCharacter("aldhelm", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 89; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 98, 142.
+DefineCharacter("aldhelm", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 89, 142, 151; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 98.
 	Name = "Aldhelm",
 	Gender = "male",
 	Type = "unit-teuton-priest", -- abbot, and later bishop
 	Civilization = "anglo-saxon",
 	Faction = "wessex",
-	Date = 705, -- became bishop at Sherborne in 705, having previously been abbot of Malmesbury
+	Date = 685, -- received forty hides from Berhtwald in 685
+	-- became bishop at Sherborne in 705, having previously been abbot of Malmesbury
 	DeathDate = 709, -- died in 709/710
 	Deities = {"christian-god"},
 	 -- composed the "Helleborus" riddle
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "wessex") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("acca", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 151.
+	Name = "Acca",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- bishop
+	Civilization = "anglo-saxon",
+	Faction = "northumbria",
+	-- was bishop of Hexham
+	DeathDate = 740, -- died in 740
+	Deities = {"christian-god"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
 			return true
 		end
 		return false
