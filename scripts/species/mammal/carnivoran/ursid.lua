@@ -45,7 +45,7 @@ DefineSpecies("hemicyon-sansaniense", { -- Source: Mauricio Antón and Jorge Mor
 	Name = "Hemicyon", -- Hemicyon sansaniense
 	Genus = "hemicyon",
 	Species = "sansaniense",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
 	Era = "miocene", -- Middle Miocene
@@ -57,7 +57,7 @@ DefineSpecies("hemicyon-sansaniense", { -- Source: Mauricio Antón and Jorge Mor
 
 DefineSpecies("bear", {
 	Name = "Bear",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"amphicyon-giganteus", "amphicyon-major", "hemicyon-sansaniense", "miacis"},
 	ChildUpgrade = "upgrade-child"
 })

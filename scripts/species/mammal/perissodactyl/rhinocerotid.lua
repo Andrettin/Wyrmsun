@@ -49,7 +49,7 @@ DefineSpecies("aceratherium-incisivum", { -- Source: Mauricio Antón and Jorge M
 	Name = "Aceratherium", -- Aceratherium incisivum
 	Genus = "aceratherium",
 	Species = "incisivum",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"palaeotherium"},
 	Era = "miocene",
@@ -64,7 +64,7 @@ DefineSpecies("hispanotherium-matritense", { -- Source: Mauricio Antón and Jorg
 	Name = "Hispanotherium", -- Madrilenian Hispanotherium
 	Genus = "hispanotherium",
 	Species = "matritense",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"palaeotherium"},
 	Era = "miocene", -- Middle and Upper Miocene
@@ -81,7 +81,7 @@ DefineSpecies("rhinoceros-unicornis", { -- Source: http://www.itis.gov/servlet/S
 	Name = "Rhinoceros", -- One-Horned Rhinoceros
 	Genus = "rhinoceros",
 	Species = "unicornis",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"aceratherium-incisivum", "hispanotherium-matritense"}, -- earlier Rhinocerotids
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"

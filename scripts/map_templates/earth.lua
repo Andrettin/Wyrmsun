@@ -27,7 +27,7 @@
 
 DefineMapTemplate("earth", {
 	Name = "Earth",
-	World = "Earth",
+	World = "earth",
 	Width = 8192,
 	Height = 4096,
 --	Scale = 2,
@@ -62,7 +62,7 @@ DefineMapTemplate("earth", {
 	}
 })
 
---SetMapTemplateLayerConnector("earth", "unit-portal", {-1, -1}, "Asgard")
+--SetMapTemplateLayerConnector("earth", "unit-portal", {-1, -1}, "asgard")
 
 EarthStartX = 4022
 EarthStartY = 667

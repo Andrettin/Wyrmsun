@@ -51,7 +51,7 @@ DefineSpecies("amphicyon-giganteus", { -- Source: Mauricio Antón and Jorge Mora
 	Name = "Giant Amphicyon", -- Amphicyon giganteus
 	Genus = "amphicyon",
 	Species = "giganteus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
 	Era = "miocene", -- Middle Miocene
 	Prehistoric = true,
@@ -64,7 +64,7 @@ DefineSpecies("amphicyon-major", { -- Source: Mauricio Antón and Jorge Morales,
 	Name = "Amphicyon", -- Amphicyon major
 	Genus = "amphicyon",
 	Species = "major",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
 	Era = "miocene", -- Middle and Upper Miocene
@@ -81,7 +81,7 @@ DefineSpecies("daphoenodon-superbus", { -- Source: Mauricio Antón and Jorge Mor
 	Name = "Daphoenodon", -- Daphoenodon superbus
 	Genus = "daphoenodon",
 	Species = "superbus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
 	Era = "miocene", -- Lower Miocene
 	Prehistoric = true,
@@ -94,7 +94,7 @@ DefineSpecies("magericyon-anceps", { -- Source: Mauricio Antón and Jorge Morale
 	Name = "Magericyon", -- Magericyon anceps
 	Genus = "magericyon",
 	Species = "anceps", -- "cutting" in Latin
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
 	Era = "miocene", -- Upper Miocene

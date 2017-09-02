@@ -26,7 +26,7 @@
 --
 
 DefineProvince("Adriatic Sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 17.
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	CulturalNames = {
 		"latin", "Adriatic Sea" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -59,7 +59,7 @@ DefineProvince("Adriatic Sea", { -- Source: "Limits of Oceans and Seas", 1953, p
 })
 
 DefineProvince("Aegean Sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 18.
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	Tiles = {
 --		{136, 35}, {137, 35}, {137, 36}, {137, 37}, {137, 38}, {138, 35}, {138, 36}, {138, 37}, {138, 38}, {139, 35}, {139, 38}, {140, 35}, -- old map
@@ -82,7 +82,7 @@ DefineProvince("Aegean Sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 
 })
 
 DefineProvince("Alboran Sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 16.
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	Tiles = {
 		{463, 153},
@@ -103,7 +103,7 @@ DefineProvince("Alboran Sea", { -- Source: "Limits of Oceans and Seas", 1953, p.
 })
 
 DefineProvince("Atlantic Ocean", {
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	Tiles = {
 --		{102, 16}, {102, 17}, {102, 18}, {102, 19}, {102, 20}, {102, 21}, {102, 22}, {102, 23}, {102, 24}, {102, 25}, {102, 26}, {102, 27}, {102, 28}, {102, 29}, {102, 30}, {102, 31}, {102, 32}, {102, 33}, {102, 34}, {102, 35}, {102, 36}, {102, 37}, {102, 38}, {103, 16}, {103, 18}, {103, 19}, {103, 20}, {103, 21}, {103, 22}, {103, 23}, {103, 24}, {103, 25}, {103, 26}, {103, 27}, {103, 28}, {103, 29}, {103, 30}, {103, 31}, {103, 32}, {103, 33}, {103, 34}, {103, 35}, {103, 36}, {103, 37}, {103, 38}, {104, 16}, {104, 19}, {104, 20}, {104, 21}, {104, 22}, {104, 23}, {104, 24}, {104, 25}, {104, 26}, {104, 27}, {104, 28}, {104, 29}, {104, 30}, {104, 31}, {104, 32}, {104, 33}, {104, 34}, {104, 35}, {104, 36}, {104, 37}, {104, 38}, {105, 16}, {105, 19}, {105, 20}, {105, 21}, {105, 22}, {105, 23}, {105, 24}, {105, 25}, {105, 26}, {105, 27}, {105, 28}, {105, 29}, {105, 30}, {105, 31}, {105, 32}, {105, 33}, {105, 34}, {105, 35}, {105, 36}, {105, 37}, {105, 38}, {106, 16}, {106, 19}, {106, 20}, {106, 21}, {106, 22}, {106, 23}, {106, 24}, {106, 25}, {106, 26}, {106, 27}, {106, 28}, {106, 29}, {106, 30}, {106, 31}, {106, 32}, {106, 33}, {106, 34}, {106, 35}, {106, 36}, {106, 37}, {106, 38}, {107, 16}, {107, 19}, {107, 20}, {107, 21}, {107, 22}, {107, 23}, {107, 24}, {107, 25}, {107, 26}, {107, 27}, {107, 28}, {107, 29}, {107, 30}, {107, 31}, {107, 32}, {107, 33}, {107, 34}, {107, 35}, {107, 36}, {107, 37}, {107, 38}, {108, 16}, {108, 18}, {108, 19}, {108, 20}, {108, 21}, {108, 22}, {108, 23}, {108, 24}, {108, 25}, {108, 26}, {108, 27}, {108, 28}, {108, 29}, {108, 30}, {108, 31}, {108, 32}, {108, 33}, {108, 34}, {108, 35}, {108, 36}, {108, 37}, {108, 38}, {109, 16}, {109, 18}, {109, 19}, {109, 20}, {109, 21}, {109, 22}, {109, 23}, {109, 24}, {109, 25}, {109, 26}, {109, 27}, {109, 28}, {109, 29}, {109, 30}, {109, 31}, {109, 32}, {109, 33}, {109, 34}, {109, 35}, {109, 36}, {109, 37}, {109, 38}, {110, 16}, {110, 17}, {110, 18}, {110, 19}, {110, 20}, {110, 21}, {110, 22}, {110, 23}, {110, 24}, {110, 25}, {110, 26}, {110, 27}, {110, 28}, {110, 29}, {110, 30}, {110, 31}, {110, 32}, {110, 33}, {110, 34}, {110, 35}, {110, 36}, {110, 37}, {110, 38}, {111, 16}, {111, 17}, {111, 18}, {111, 19}, {111, 20}, {111, 21}, {111, 22}, {111, 23}, {111, 24}, {111, 25}, {111, 26}, {111, 27}, {111, 28}, {111, 29}, {111, 30}, {111, 31}, {111, 32}, {111, 33}, {111, 34}, {111, 35}, {111, 36}, {111, 37}, {111, 38}, {112, 16}, {112, 17}, {112, 18}, {112, 19}, {112, 20}, {112, 21}, {112, 22}, {112, 23}, {112, 24}, {112, 25}, {112, 26}, {112, 27}, {112, 28}, {112, 29}, {112, 30}, {112, 31}, {112, 32}, {112, 33}, {112, 34}, {112, 35}, {112, 36}, {112, 37}, {112, 38}, {113, 16}, {113, 17}, {113, 18}, {113, 19}, {113, 20}, {113, 21}, {113, 22}, {113, 23}, {113, 24}, {113, 28}, {113, 29}, {113, 30}, {113, 31}, {113, 32}, {113, 33}, {113, 34}, {113, 35}, {113, 36}, {113, 37}, {113, 38}, {114, 16}, {114, 17}, {114, 18}, {114, 19}, {114, 20}, {114, 21}, {114, 22}, {114, 23}, {114, 24}, {114, 28}, {114, 29}, {114, 30}, {114, 31}, {114, 38}, {115, 16}, {115, 17}, {115, 18}, {115, 19}, {115, 20}, {115, 21}, {115, 22}, {115, 23}, {115, 24}, {115, 28}, {115, 29}, {115, 30}, {115, 38}, {116, 16}, {116, 17}, {116, 18}, {116, 19}, {116, 20}, {116, 21}, {117, 16}, {117, 17}, {117, 18}, {117, 19}, {117, 20}, {117, 21}, {118, 16}, {118, 17}, {118, 18}, {118, 19}, {118, 20}, {119, 16}, {119, 17}, {119, 18}, {119, 19}, {120, 16}, {120, 17}, {120, 18}, {120, 19}, {121, 16}, {121, 17}, {121, 18}, {121, 19}, {122, 16}, {122, 17}, {122, 18}, {122, 19}, {123, 16}, {123, 17}, {123, 18}, {123, 19}, {124, 16}, {124, 17}, {124, 18}, {124, 19}, {125, 16}, {125, 17}, {125, 18}, {126, 16}, {126, 17}, {126, 18}, {127, 16}, {127, 17}, {128, 16}, -- old map
@@ -178,7 +178,7 @@ DefineProvince("Atlantic Ocean", {
 })
 
 DefineProvince("Balearic Sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 16.
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	Tiles = {
 --		{116, 38}, {117, 38}, {118, 38}, {119, 37}, {119, 38}, {120, 35}, {120, 36}, {120, 37}, {121, 35}, {121, 36}, {121, 37}, {122, 33}, {122, 34}, {122, 35}, {122, 36}, {122, 37}, {123, 33}, {123, 34}, {123, 35}, {123, 36}, {123, 37}, {124, 33}, {124, 34}, {124, 35}, {124, 36}, {124, 37}, {125, 34}, {125, 35}, {125, 36}, {125, 37}, {126, 35}, -- old map
@@ -199,7 +199,7 @@ DefineProvince("Balearic Sea", { -- Source: "Limits of Oceans and Seas", 1953, p
 })
 
 DefineProvince("Baltic Sea", { -- Source: http://www.euratlas.net/history/europe/1/index.html
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	ReferenceProvince = "Hither Pomerania", -- province used as a reference for this province's name
 	CulturalNames = {
@@ -246,7 +246,7 @@ DefineProvince("Baltic Sea", { -- Source: http://www.euratlas.net/history/europe
 })
 
 DefineProvince("Bay of Biscay", {
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	Tiles = {
 --		{114, 32}, {115, 31}, {115, 32}, {116, 29}, {116, 30}, {116, 31}, {116, 32}, {117, 30}, {117, 31}, {117, 32}, {118, 31}, {118, 32}, -- old map
@@ -273,7 +273,7 @@ DefineProvince("Bay of Biscay", {
 })
 
 DefineProvince("Black Sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 18.
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	CulturalNames = {
 		"latin", "Pontus Euxinos" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -325,7 +325,7 @@ DefineProvince("Black Sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 1
 })
 
 DefineProvince("Bristol Channel", { -- Source: "Limits of Oceans and Seas", 1953, p. 13. (see corrections as well)
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	Tiles = {
 		{466, 109},
@@ -336,7 +336,7 @@ DefineProvince("Bristol Channel", { -- Source: "Limits of Oceans and Seas", 1953
 
 --[[
 DefineProvince("Caspian Sea", {
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	CulturalNames = {
 		"latin", "Caspian Sea" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -347,7 +347,7 @@ DefineProvince("Caspian Sea", {
 --]]
 
 DefineProvince("Celtic Sea", { -- Source: "Limits of Oceans and Seas", 1953. (see corrections)
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	Tiles = {
 		{447, 110}, {447, 111}, {447, 112}, {447, 113}, {447, 114}, {447, 115}, {447, 116},
@@ -374,7 +374,7 @@ DefineProvince("Celtic Sea", { -- Source: "Limits of Oceans and Seas", 1953. (se
 })
 
 DefineProvince("Eastern Mediterranean Sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 15.
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	Tiles = {
 		{509, 158}, {509, 159},
@@ -455,7 +455,7 @@ DefineProvince("Eastern Mediterranean Sea", { -- Source: "Limits of Oceans and S
 })
 
 DefineProvince("English Channel", {
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	ReferenceProvince = "Wessex", -- province used as a reference for this province's name
 	CulturalNames = {
@@ -493,7 +493,7 @@ DefineProvince("English Channel", {
 })
 
 DefineProvince("Gulf of Bothnia", { -- Source: "Limits of Oceans and Seas", 1953, p. 5.
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	Tiles = {
 		{529, 80}, {529, 81}, {529, 82},
@@ -523,7 +523,7 @@ DefineProvince("Gulf of Bothnia", { -- Source: "Limits of Oceans and Seas", 1953
 })
 
 DefineProvince("Gulf of Finland", { -- Source: "Limits of Oceans and Seas", 1953, p. 5.
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	Tiles = {
 		{545, 86},
@@ -551,7 +551,7 @@ DefineProvince("Gulf of Finland", { -- Source: "Limits of Oceans and Seas", 1953
 })
 
 DefineProvince("Gulf of Riga", { -- Source: "Limits of Oceans and Seas", 1953, p. 5.
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	Tiles = {
 		{542, 91},
@@ -566,7 +566,7 @@ DefineProvince("Gulf of Riga", { -- Source: "Limits of Oceans and Seas", 1953, p
 })
 
 DefineProvince("Inner Seas", { -- Source: "Limits of Oceans and Seas", 1953, p. 12.
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	Tiles = {
 		{457, 95}, {457, 96}, {457, 97}, {457, 98},
@@ -582,7 +582,7 @@ DefineProvince("Inner Seas", { -- Source: "Limits of Oceans and Seas", 1953, p. 
 })
 
 DefineProvince("Ionian Sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 17.
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	Tiles = {
 --		{128, 38}, {128, 39}, {129, 38}, {129, 39}, {129, 40}, {130, 37}, {130, 38}, {130, 39}, {130, 40}, {131, 37}, {131, 38}, {131, 39}, {131, 40}, {131, 41}, {132, 36}, {132, 37}, {132, 38}, {132, 39}, {133, 36}, {133, 37}, {133, 38}, {134, 36}, {134, 37}, {134, 38}, {135, 38}, {136, 38}, -- old map
@@ -612,7 +612,7 @@ DefineProvince("Ionian Sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 
 })
 
 DefineProvince("Irish Sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 12. (see corrections as well)
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	ReferenceProvince = "Leinster", -- province used as a reference for this province's name
 	CulturalNames = {
@@ -635,7 +635,7 @@ DefineProvince("Irish Sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 1
 })
 
 DefineProvince("Kattegat", { -- Source: "Limits of Oceans and Seas", 1953, p. 5.
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	Tiles = {
 		{507, 97}, {507, 98}, {507, 99},
@@ -652,7 +652,7 @@ DefineProvince("Kattegat", { -- Source: "Limits of Oceans and Seas", 1953, p. 5.
 })
 
 DefineProvince("Lake Beloye", {
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	Tiles = {
 		{586, 84}, {587, 84}
@@ -660,7 +660,7 @@ DefineProvince("Lake Beloye", {
 })
 
 DefineProvince("Lake Chudskoye", {
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	Tiles = {
 		{557, 88},
@@ -669,7 +669,7 @@ DefineProvince("Lake Chudskoye", {
 })
 
 DefineProvince("Lake Ilmen", {
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	Tiles = {
 		{568, 90}, {569, 90}
@@ -677,7 +677,7 @@ DefineProvince("Lake Ilmen", {
 })
 
 DefineProvince("Lake Ladoga", {
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	Tiles = {
 		{566, 81}, {566, 82},
@@ -692,7 +692,7 @@ DefineProvince("Lake Ladoga", {
 })
 
 DefineProvince("Lake Vattern", {
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	ReferenceProvince = "Sweden",
 	CulturalNames = {
@@ -704,7 +704,7 @@ DefineProvince("Lake Vattern", {
 })
 
 DefineProvince("Lake Wener", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 120.
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	ReferenceProvince = "Sweden",
 	CulturalNames = {
@@ -720,7 +720,7 @@ DefineProvince("Lake Wener", { -- Source: William R. Shepherd, "Historical Atlas
 
 --[[
 DefineProvince("Libyan Sea", {
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	Tiles = {
 		{132, 40}, {132, 41}, {133, 39}, {133, 40}, {133, 41}, {134, 39}, {134, 40}, {135, 39}, {135, 40}, {136, 39}, {136, 40}, {137, 40}, {138, 40}, {139, 39}, {139, 40} -- old map
@@ -729,7 +729,7 @@ DefineProvince("Libyan Sea", {
 
 --]]
 DefineProvince("Ligurian Sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 16.
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	Tiles = {
 --				{125, 33}, {126, 33}, {127, 33}, -- old map
@@ -744,7 +744,7 @@ DefineProvince("Ligurian Sea", { -- Source: "Limits of Oceans and Seas", 1953, p
 })
 
 DefineProvince("North Sea", { -- Source: http://www.euratlas.net/history/europe/1/index.html
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	ReferenceProvince = "Hanover", -- province used as a reference for this province's name
 	CulturalNames = {
@@ -796,7 +796,7 @@ DefineProvince("North Sea", { -- Source: http://www.euratlas.net/history/europe/
 })
 
 DefineProvince("Sea of Azov", { -- Source: "Limits of Oceans and Seas", 1953, p. 18.
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	CulturalNames = {
 		"greek", "Lake Maeotis",
@@ -820,7 +820,7 @@ DefineProvince("Sea of Azov", { -- Source: "Limits of Oceans and Seas", 1953, p.
 })
 
 DefineProvince("Sea of Marmara", { -- Source: "Limits of Oceans and Seas", 1953, p. 18.
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	CulturalNames = {
 		"greek", "Propontis" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -840,7 +840,7 @@ DefineProvince("Sea of Marmara", { -- Source: "Limits of Oceans and Seas", 1953,
 })
 
 DefineProvince("Skagerrak", { -- Source: "Limits of Oceans and Seas", 1953, p. 6.
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	Tiles = {
 		{500, 91},
@@ -860,7 +860,7 @@ DefineProvince("Skagerrak", { -- Source: "Limits of Oceans and Seas", 1953, p. 6
 })
 
 DefineProvince("Thracian Sea", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	Tiles = {
 		{544, 141},
@@ -877,7 +877,7 @@ DefineProvince("Thracian Sea", { -- Source: William R. Shepherd, "Historical Atl
 })
 
 DefineProvince("Tyrrhenian Sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 17.
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	CulturalNames = {
 		"latin", "Tyrrhenian Sea" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -909,7 +909,7 @@ DefineProvince("Tyrrhenian Sea", { -- Source: "Limits of Oceans and Seas", 1953,
 })
 
 DefineProvince("Western Mediterranean Sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 15.
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	Tiles = {
 		{474, 151},
@@ -957,7 +957,7 @@ DefineProvince("Western Mediterranean Sea", { -- Source: "Limits of Oceans and S
 })
 
 DefineProvince("White Sea", {
-	World = "Earth",
+	World = "earth",
 	Water = true,
 	Tiles = { {145, 17}, {146, 17}, {147, 17} }
 })

@@ -30,7 +30,7 @@ DefineQuest("the-battle-of-magetobria", {
 	Icon = "icon-suebi-swordsman",
 	Description = "Under the leadership of Ariovistus, we have crossed the Rhine to aid the Sequani and the Arverni in defeating the Aedui, and now an Aedui army approaches the Sequani settlement of Magetobria...\n\nMap: Belfort",
 	RequiredQuest = "gylves-realm",
-	World = "Earth",
+	World = "earth",
 	Civilization = "suebi",
 	Map = "maps/earth/belfort.smp",
 	Scenario = "scripts/civilizations/teuton/scenarios/the_battle_of_magetobria.lua",
@@ -42,7 +42,7 @@ DefineQuest("the-home-of-the-boii", {
 	Icon = "icon-marbod",
 	Description = "After a devastating conflict with the Romans, Marbod seeks to lead the tribe of the Marcomanni to safer lands.\n\nMap: Prague",
 	RequiredQuest = "the-battle-of-magetobria",
-	World = "Earth",
+	World = "earth",
 	Civilization = "suebi",
 	Map = "maps/earth/prague.smp",
 	Scenario = "scripts/civilizations/teuton/scenarios/the_home_of_the_boii.lua",
@@ -74,7 +74,7 @@ DefineQuest("the-sack-of-iuvavum", {
 		local rome_player = GetFactionPlayer("rome")
 		if (
 			GetPlayerData(trigger_player, "RaceName") == "suebi" and rome_player ~= nil and Players[trigger_player]:IsEnemy(Players[rome_player])
-			and (GetNumUnitsAt(rome_player, "unit-latin-town-hall", {4135 - EarthStartX, 960 - EarthStartY}, {4135 - EarthStartX, 960 - EarthStartY}, GetMapLayer("", "Earth", 0)) > 0 or GetNumUnitsAt(rome_player, "unit-teuton-stronghold", {4135 - EarthStartX, 960 - EarthStartY}, {4135 - EarthStartX, 960 - EarthStartY}, GetMapLayer("", "Earth", 0)) > 0)
+			and (GetNumUnitsAt(rome_player, "unit-latin-town-hall", {4135 - EarthStartX, 960 - EarthStartY}, {4135 - EarthStartX, 960 - EarthStartY}, GetMapLayer("", "earth", 0)) > 0 or GetNumUnitsAt(rome_player, "unit-teuton-stronghold", {4135 - EarthStartX, 960 - EarthStartY}, {4135 - EarthStartX, 960 - EarthStartY}, GetMapLayer("", "earth", 0)) > 0)
 		) then
 			return true
 		end
@@ -98,7 +98,7 @@ DefineQuest("the-razing-of-opitergium", {
 		local rome_player = GetFactionPlayer("rome")
 		if (
 			GetPlayerData(trigger_player, "RaceName") == "suebi" and rome_player ~= nil and Players[trigger_player]:IsEnemy(Players[rome_player])
-			and (GetNumUnitsAt(rome_player, "unit-latin-town-hall", {4122 - EarthStartX, 1005 - EarthStartY}, {4122 - EarthStartX, 1005 - EarthStartY}, GetMapLayer("", "Earth", 0)) > 0 or GetNumUnitsAt(rome_player, "unit-teuton-stronghold", {4122 - EarthStartX, 1005 - EarthStartY}, {4122 - EarthStartX, 1005 - EarthStartY}, GetMapLayer("", "Earth", 0)) > 0)
+			and (GetNumUnitsAt(rome_player, "unit-latin-town-hall", {4122 - EarthStartX, 1005 - EarthStartY}, {4122 - EarthStartX, 1005 - EarthStartY}, GetMapLayer("", "earth", 0)) > 0 or GetNumUnitsAt(rome_player, "unit-teuton-stronghold", {4122 - EarthStartX, 1005 - EarthStartY}, {4122 - EarthStartX, 1005 - EarthStartY}, GetMapLayer("", "earth", 0)) > 0)
 		) then
 			return true
 		end
@@ -119,7 +119,7 @@ DefineQuest("the-sack-of-iuvavum", {
 	Icon = "icon-teuton-spatha",
 	Description = "Almost two centuries after the time of Marbod, the Marcomanni chieftain Ballomar has gathered more than a dozen Germanic tribes in an alliance to invade the Roman Empire.\n\nMap: Salzburg",
 	RequiredQuest = "the-home-of-the-boii",
-	World = "Earth",
+	World = "earth",
 	Civilization = "suebi",
 	Map = "maps/earth/salzburg.smp",
 	Scenario = "scripts/civilizations/teuton/scenarios/the_sack_of_iuvavum.lua",
@@ -131,7 +131,7 @@ DefineQuest("the-razing-of-opitergium", {
 	Icon = "icon-latin-forum",
 	Description = "Leaving a trail of destruction behind them, the Marcomanni have now reached Italy and lay siege to the Roman city of Opitergium.\n\nMap: Oderzo",
 	RequiredQuest = "the-sack-of-iuvavum",
-	World = "Earth",
+	World = "earth",
 	Civilization = "suebi",
 	Map = "maps/earth/oderzo.smp",
 	Scenario = "scripts/civilizations/teuton/scenarios/the_razing_of_opitergium.lua",
@@ -143,7 +143,7 @@ DefineQuest("moving-into-galicia", { -- happened in 411 AD
 	Icon = "icon-teuton-town-hall",
 	Description = "Times are changing. The Roman Empire, once invincible, is now falling prey to a conjunction of domestic troubles and external pressures. A group of Suebi has decided to take on this opportunity, moving into the Roman province of Galicia...\n\nMap: Braga",
 	RequiredQuest = "the-razing-of-opitergium",
-	World = "Earth",
+	World = "earth",
 	Civilization = "suebi",
 	Map = "maps/earth/braga.smp",
 	Scenario = "scripts/civilizations/teuton/scenarios/moving_into_galicia.lua",
@@ -155,7 +155,7 @@ DefineQuest("the-blue-danube", {
 	Icon = "icon-saxon-swordsman",
 	Description = "As time passed, the Marcomanni abandoned their old name and adopted a new one - that of the Bavarians. Expelled from Bohemia by the Lombards, they must now seek a home on the margins of the Danube, facing the forces of the crumbling Roman Empire, if need be.\n\nMap: Regensburg",
 	RequiredQuest = "the-razing-of-opitergium",
-	World = "Earth",
+	World = "earth",
 	Civilization = "teuton",
 	Map = "maps/earth/regensburg.smp",
 	Scenario = "scripts/civilizations/teuton/scenarios/the_blue_danube.lua",

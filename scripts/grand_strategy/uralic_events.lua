@@ -27,7 +27,7 @@
 
 DefineGrandStrategyEvent("Finnish Culture Develops", {
 	Description = "With the passage of time, our customs and language have diverged significantly from the general Uralic ones. The Finnish tongue has become predominant amongst us, and with it the Finnish culture.",
-	World = "Earth",
+	World = "earth",
 	Conditions = function(s)
 		if (
 			EventFaction.Civilization == "uralic"
@@ -96,7 +96,7 @@ DefineGrandStrategyEvent("Finnish Culture Develops", {
 
 DefineGrandStrategyEvent("Finnish Culture Spreads", {
 	Description = "The people of PROVINCE_NAME have adopted Finnish culture.",
-	World = "Earth",
+	World = "earth",
 	Conditions = function(s)
 		if (EventFaction.Civilization ~= "magyar") then
 			for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
@@ -124,7 +124,7 @@ DefineGrandStrategyEvent("Finnish Culture Spreads", {
 
 DefineGrandStrategyEvent("Magyar Culture Develops", {
 	Description = "With the passage of time, our customs and language have diverged significantly from the general Uralic ones. The Magyar tongue has become predominant amongst us, and with it the Magyar culture.",
-	World = "Earth",
+	World = "earth",
 	Conditions = function(s)
 		if (
 			EventFaction.Civilization == "uralic"
@@ -193,7 +193,7 @@ DefineGrandStrategyEvent("Magyar Culture Develops", {
 
 DefineGrandStrategyEvent("Magyar Culture Spreads", {
 	Description = "The people of PROVINCE_NAME have adopted Magyar culture.",
-	World = "Earth",
+	World = "earth",
 	Conditions = function(s)
 		if (EventFaction.Civilization ~= "finnish") then
 			for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do

@@ -27,7 +27,7 @@
 
 DefineSpecies("wose", {
 	Name = "Wose",
-	Homeworld = "Alfheim",
+	Homeworld = "alfheim",
 	Terrains = {"grass"},
 	Sapient = true -- sentient tree-like being
 })

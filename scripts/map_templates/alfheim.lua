@@ -27,7 +27,7 @@
 
 DefineMapTemplate("alfheim", {
 	Name = "Alfheim",
-	World = "Alfheim",
+	World = "alfheim",
 	Width = 984,
 	Height = 728,
 	TerrainImage = "scripts/map_templates/alfheim.png",

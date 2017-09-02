@@ -63,7 +63,7 @@ DefineSpeciesGenus("tethytragus", { -- Source: Mauricio Antón and Jorge Morales
 DefineSpecies("aragoral", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=86341
 	Name = "Aragoral",
 	Genus = "aragoral",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"diacodexis"}, -- presumably, since Ilingoceros does
 	Era = "miocene",
 	Prehistoric = true,
@@ -76,7 +76,7 @@ DefineSpecies("tethytragus-langai", { -- Source: Mauricio Antón and Jorge Moral
 	Name = "Tethytragus", -- Tethytragus langai
 	Genus = "tethytragus",
 	Species = "langai",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
 	Era = "miocene", -- Middle Miocene
@@ -90,7 +90,7 @@ DefineSpecies("cow", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRp
 	Name = "Cow",
 	Genus = "bos",
 	Species = "taurus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"ilingoceros"}, -- shares a common ancestor with the bison
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"
@@ -100,7 +100,7 @@ DefineSpecies("goat", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleR
 	Name = "Goat",
 	Genus = "capra",
 	Species = "hircus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt"},
 	EvolvesFrom = {"aragoral"}, -- oldest member of the Caprinae subfamily
 	Era = "holocene",
@@ -110,7 +110,7 @@ DefineSpecies("goat", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleR
 DefineSpecies("yale", {
 	Name = "Yale",
 	Genus = "eale",
-	Homeworld = "Nidavellir",
+	Homeworld = "nidavellir",
 	Terrains = {"dry-mud"},
 	EvolvesFrom = {"aragoral"}, -- oldest member of the Caprinae subfamily
 	Era = "holocene",
@@ -120,7 +120,7 @@ DefineSpecies("yale", {
 DefineSpecies("minotaur", {
 	Name = "Minotaur",
 --	Family = "bovidae",
-	Homeworld = "Jotunheim",
+	Homeworld = "jotunheim",
 	Era = "holocene",
 	Sapient = true
 })

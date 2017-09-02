@@ -26,7 +26,7 @@
 --
 
 DefineWorldMapTile({456, 132}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Lucus Augusti"
 	},
@@ -36,14 +36,14 @@ DefineWorldMapTile({456, 132}, {
 })
 
 DefineWorldMapTile({463, 132}, {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalSettlementNames = {
 		"castillian", "spain", "Oviedo"
 	}
 })
 
 DefineWorldMapTile({464, 134}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Castra Legionis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
@@ -53,14 +53,14 @@ DefineWorldMapTile({464, 134}, {
 })
 
 DefineWorldMapTile({464, 141}, {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalTerrainNames = {
 		"Mountains", "castillian", "spain", "Pico Almanzor" -- Source: "Philip's International School Atlas", 2006, p. 69.
 	}
 })
 
 DefineWorldMapTile({466, 148}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Corduba" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
@@ -70,7 +70,7 @@ DefineWorldMapTile({466, 148}, {
 })
 
 DefineWorldMapTile({467, 151}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Malaca" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
@@ -80,7 +80,7 @@ DefineWorldMapTile({467, 151}, {
 })
 
 DefineWorldMapTile({468, 142}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Toletum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
@@ -90,7 +90,7 @@ DefineWorldMapTile({468, 142}, {
 })
 
 DefineWorldMapTile({469, 141}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Complutum"
 	},
@@ -100,14 +100,14 @@ DefineWorldMapTile({469, 141}, {
 })
 
 DefineWorldMapTile({470, 150}, {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalTerrainNames = {
 		"Mountains", "castillian", "spain", "Mulhacén" -- Source: "Philip's International School Atlas", 2006, p. 69.
 	}
 })
 
 DefineWorldMapTile({477, 137}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Caesaraugusta"
 	},
@@ -117,7 +117,7 @@ DefineWorldMapTile({477, 137}, {
 })
 
 DefineWorldMapTile({478, 144}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Valentia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
@@ -127,14 +127,14 @@ DefineWorldMapTile({478, 144}, {
 })
 
 DefineWorldMapTile({481, 135}, {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalTerrainNames = {
 		"Mountains", "castillian", "spain", "Monte Perdido" -- Source: "Philip's International School Atlas", 2006, p. 69.
 	}
 })
 
 DefineWorldMapTile({483, 138}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Tarraco" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
@@ -144,7 +144,7 @@ DefineWorldMapTile({483, 138}, {
 })
 
 DefineWorldMapTile({487, 143}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Palma" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},

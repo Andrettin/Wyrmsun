@@ -828,9 +828,6 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		if (GetCharacterData(unit_name, "Type") ~= "") then
 			unit_type_type = "Type: " .. _(GetUnitTypeData(GetCharacterData(unit_name, "Type"), "Name")) .. "\n\n"
 		end
-		if (GetUnitTypeData(GetCharacterData(unit_name, "Type"), "Class") ~= "") then
-			unit_type_class = "Class: " .. _(FullyCapitalizeString(string.gsub(GetUnitTypeData(GetCharacterData(unit_name, "Type"), "Class"), "-", " "))) .. "\n\n"
-		end
 		if (GetCharacterData(unit_name, "Description") ~= "") then
 			description = "Description: " .. GetCharacterData(unit_name, "Description") .. "\n\n"
 		end
@@ -845,7 +842,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			description = description .. "Pantheon: " .. GetDeityData(unit_name, "Pantheon") .. "\n\n"
 		end
 		if (GetDeityData(unit_name, "HomePlane") ~= "") then
-			description = description .. "Home Plane: " .. GetDeityData(unit_name, "HomePlane") .. "\n\n"
+			description = description .. "Home Plane: " .. GetPlaneData(GetDeityData(unit_name, "HomePlane"), "Name") .. "\n\n"
 		end
 		if (GetDeityData(unit_name, "Major")) then
 			description = description .. "Rank: Major\n\n"
@@ -1541,7 +1538,7 @@ function OpenEncyclopediaWorldEntry(world)
 	encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*0)
 	local description = ""
 	if (GetWorldData(world, "Plane") ~= "") then
-		description = "Plane: " .. GetWorldData(world, "Plane") .. "\n\n"
+		description = "Plane: " .. GetPlaneData(GetWorldData(world, "Plane"), "Name") .. "\n\n"
 	end
 	local species = GetWorldData(world, "Species")
 	table.sort(species)

@@ -32,7 +32,7 @@ DefineSpeciesFamily("canidae", { -- Source: Mauricio Antón and Jorge Morales, "
 
 DefineSpecies("osteoborus", {
 	Name = "Osteoborus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"amphicyon-giganteus", "amphicyon-major", "hemicyon-sansaniense", "miacis"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -40,7 +40,7 @@ DefineSpecies("osteoborus", {
 
 DefineSpecies("wolf", {
 	Name = "Wolf",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"osteoborus"},
 	ChildUpgrade = "upgrade-child"
 })

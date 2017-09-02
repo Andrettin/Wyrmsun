@@ -27,7 +27,7 @@
 
 DefineMapTemplate("nidavellir", {
 	Name = "Nidavellir",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Width = 984,
 	Height = 728,
 	TerrainImage = "scripts/map_templates/nidavellir.png",
@@ -55,7 +55,7 @@ DefineMapTemplate("nidavellir", {
 
 DefineMapTemplate("nidavellir-underground", {
 	Name = "Nidavellir Underground",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Layer = 1,
 	Width = 984,
 	Height = 728,
@@ -145,9 +145,9 @@ SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "moinling-tribe", {-1, -
 SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "moinling-tribe", {-1, -1})
 SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "moinling-tribe", {-1, -1})
 
---SetMapTemplateLayerConnector("nidavellir", "unit-portal", {-1, -1}, "Asgard")
+--SetMapTemplateLayerConnector("nidavellir", "unit-portal", {-1, -1}, "asgard")
 --SetMapTemplateLayerConnector("nidavellir", "unit-cavern-entrance", {-1, -1}, 1)
---SetMapTemplateLayerConnector("nidavellir-underground", "unit-portal", {-1, -1}, "Earth")
+--SetMapTemplateLayerConnector("nidavellir-underground", "unit-portal", {-1, -1}, "earth")
 --SetMapTemplateLayerConnector("nidavellir-underground", "unit-cavern-entrance", {-1, -1}, 0)
 
 --NidavellirStartX = 404

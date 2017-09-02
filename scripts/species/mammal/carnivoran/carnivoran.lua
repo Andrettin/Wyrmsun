@@ -99,7 +99,7 @@ DefineSpecies("eomellivora-wimani", { -- Source: Mauricio Antón and Jorge Moral
 	Name = "Eomellivora",
 	Genus = "eomellivora",
 	Species = "wimani",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"}, -- common ancestor with Amphicyon, which was also a carnivoran
 	Era = "miocene", -- Upper Miocene
@@ -116,7 +116,7 @@ Load("scripts/species/mammal/carnivoran/ursid.lua")
 
 DefineSpecies("chapalmalania", {
 	Name = "Chapalmalania",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"amphicyon-giganteus", "amphicyon-major", "hemicyon-sansaniense", "miacis"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -125,7 +125,7 @@ DefineSpecies("chapalmalania", {
 DefineSpecies("nimravus", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=41043 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1067195
 	Name = "Nimravus",
 	Genus = "nimravus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 --	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"},
 --	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes", "miacis"},
 	EvolvesFrom = {"alphadon", "zalambdalestes", "miacis"},
@@ -137,7 +137,7 @@ DefineSpecies("nimravus", { -- Source: http://fossilworks.org/bridge.pl?action=t
 
 DefineSpecies("raccoon", {
 	Name = "Raccoon",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"amphicyon-giganteus", "amphicyon-major", "hemicyon-sansaniense", "miacis"},
 	ChildUpgrade = "upgrade-child"
 })

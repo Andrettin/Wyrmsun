@@ -27,7 +27,7 @@
 
 DefineGrandStrategyEvent("Teuton Culture Develops", {
 	Description = "With the passage of time, our customs and language have diverged significantly from the general Germanic ones. The West Germanic tongue has become predominant amongst us, and with it the Teuton culture.",
-	World = "Earth",
+	World = "earth",
 	Conditions = function(s)
 		if (
 			EventFaction.Civilization == "germanic"
@@ -96,7 +96,7 @@ DefineGrandStrategyEvent("Teuton Culture Develops", {
 
 DefineGrandStrategyEvent("Teuton Culture Spreads", {
 	Description = "The people of PROVINCE_NAME have adopted Teutonic culture.",
-	World = "Earth",
+	World = "earth",
 	Conditions = function(s)
 		if (EventFaction.Civilization ~= "goth" and EventFaction.Civilization ~= "norse") then
 			for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
@@ -124,7 +124,7 @@ DefineGrandStrategyEvent("Teuton Culture Spreads", {
 
 DefineGrandStrategyEvent("The Confirmation of Seignorial Privileges", { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 18.
 	Description = "The aristocrats of Livonia and Estonia have managed to acquire an official confirmation of their privileges, which in fact goes beyond a mere statement of the status quo and accepts extended privileges for the landed nobility in these provinces.",
-	World = "Earth",
+	World = "earth",
 	Conditions = function(s)
 		if (
 			EventFaction.Name == "prussia" -- should also be possible for other countries, but let's leave this here for now so that this event doesn't trigger in antiquity

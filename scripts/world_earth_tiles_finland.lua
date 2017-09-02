@@ -26,14 +26,14 @@
 --
 
 DefineWorldMapTile({550, 84}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"finnish", "Helsinki"
 	}
 })
 
 DefineWorldMapTile({561, 83}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"norse", "Viborg"
 	}

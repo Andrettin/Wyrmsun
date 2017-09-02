@@ -1448,7 +1448,7 @@ function CreateCritters(arg)
 			if (
 				species ~= ""
 				and GetUnitTypeData(unit_type_list[i], "Fauna")
-				and (MapWorld == "" or MapWorld == "Random" or MapWorld == GetSpeciesData(species, "Homeworld"))
+				and (MapWorld == "" or MapWorld == "Random" or MapWorld == GetWorldData(GetSpeciesData(species, "Homeworld"), "Name"))
 				and (GetUnitTypeData(unit_type_list[i], "Predator") == false or not arg.NoPredators)
 				and (GetUnitTypeData(unit_type_list[i], "Type") ~= "fly" or GetUnitTypeData(unit_type_list[i], "Predator") == false or not arg.NoFlyingCreeps)
 				and (GetUnitTypeData(unit_type_list[i], "Level") < 3 or GetUnitTypeData(unit_type_list[i], "Predator") == false or not arg.NoMightyCreeps)

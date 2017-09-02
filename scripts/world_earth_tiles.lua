@@ -48,21 +48,21 @@ Load("scripts/world_earth_tiles_ukraine.lua")
 Load("scripts/world_earth_tiles_wales.lua")
 
 DefineWorldMapTile({418, 73}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"norse", "Reykjavik"
 	}
 })
 
 DefineWorldMapTile({501, 122}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Bern"
 	}
 })
 
 DefineWorldMapTile({520, 113}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"slav", "Prague",
 		"suebi", "Bubienum", -- name of the Marcomannic capital; also known as Marobudum; either located where modern Prague or Budweis are; Source: Frederick Kohlrausch, "A History of Germany", 1844, p. 57.
@@ -71,35 +71,35 @@ DefineWorldMapTile({520, 113}, {
 })
 
 DefineWorldMapTile({521, 153}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		-- Valetta (in Maltese?)
 	}
 })
 
 DefineWorldMapTile({538, 107}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"slav", "Warsaw"
 	}
 })
 
 DefineWorldMapTile({543, 110}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"slav", "Lublin"
 	}
 })
 
 DefineWorldMapTile({547, 95}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Mitau"
 	}
 })
 
 DefineWorldMapTile({547, 114}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"slav", "Lvov",
 		"teuton", "Lemberg"
@@ -107,14 +107,14 @@ DefineWorldMapTile({547, 114}, {
 })
 
 DefineWorldMapTile({548, 94}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Riga"
 	}
 })
 
 DefineWorldMapTile({550, 87}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"finnish", "Tallinn", -- Estonian
 		"teuton", "Reval"
@@ -122,49 +122,49 @@ DefineWorldMapTile({550, 87}, {
 })
 
 DefineWorldMapTile({552, 100}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		-- Lithuanian name: "Vilnius"
 	}
 })
 
 DefineWorldMapTile({552, 119}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Czernowitz"
 	}
 })
 
 DefineWorldMapTile({559, 102}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"slav", "Minsk"
 	}
 })
 
 DefineWorldMapTile({562, 122}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"slav", "Kishinev"
 	}
 })
 
 DefineWorldMapTile({566, 86}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"slav", "Saint Petersburg"
 	}
 })
 
 DefineWorldMapTile({587, 97}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"slav", "Moscow"
 	}
 })
 
 DefineWorldMapTile({592, 121}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"greek", "Tanais",
 		"latin", "Tanais" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -175,7 +175,7 @@ DefineWorldMapTile({592, 121}, {
 })
 
 DefineWorldMapTile({618, 124}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"germanic", "Ansugárdiz"
 	},

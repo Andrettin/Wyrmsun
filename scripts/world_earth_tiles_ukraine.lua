@@ -26,49 +26,49 @@
 --
 
 DefineWorldMapTile({561, 116}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"slav", "Vinnytsya"
 	}
 })
 
 DefineWorldMapTile({566, 112}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"slav", "Kiev"
 	}
 })
 
 DefineWorldMapTile({566, 124}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Tyras" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({567, 123}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"slav", "Odesa"
 	}
 })
 
 DefineWorldMapTile({570, 122}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Olbia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({572, 123}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"slav", "Kherson"
 	}
 })
 
 DefineWorldMapTile({576, 128}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"greek", "Heraclea Chersonesus", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
 		"slav", "Simferopol"
@@ -76,7 +76,7 @@ DefineWorldMapTile({576, 128}, {
 })
 
 DefineWorldMapTile({583, 127}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Panticapaeum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}

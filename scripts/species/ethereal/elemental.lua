@@ -52,39 +52,39 @@ DefineSpeciesClass("terra", {
 
 DefineSpecies("air-elemental", {
 	Name = "Air Elemental",
-	HomePlane = "Olympus", -- change this to something else?
+	HomePlane = "olympus", -- change this to something else?
 	Sapient = true
 })
 
 DefineSpecies("djinn", {
 	Name = "Djinn",
 	-- Class: Aer
-	HomePlane = "Olympus", -- change this to something else?
+	HomePlane = "olympus", -- change this to something else?
 	Sapient = true
 })
 
 DefineSpecies("earth-elemental", {
 	Name = "Earth Elemental",
-	HomePlane = "Tartarus", -- change this to something else?
+	HomePlane = "tartarus", -- change this to something else?
 	Sapient = true
 })
 
 DefineSpecies("efreet", {
 	Name = "Efreet",
 	-- Class: Ignis
-	HomePlane = "Hades", -- change this to something else?
+	HomePlane = "hades", -- change this to something else?
 	Sapient = true
 })
 
 DefineSpecies("fire-elemental", {
 	Name = "Fire Elemental",
-	HomePlane = "Hades", -- change this to something else?
+	HomePlane = "hades", -- change this to something else?
 	Sapient = true
 })
 
 DefineSpecies("water-elemental", {
 	Name = "Water Elemental",
-	HomePlane = "Nun",
+	HomePlane = "nun",
 	Sapient = true
 })
 

@@ -27,7 +27,7 @@
 
 DefineMapTemplate("asgard", {
 	Name = "Asgard",
-	Plane = "Asgard",
+	Plane = "asgard",
 	Width = 256,
 	Height = 256,
 	TerrainImage = "scripts/map_templates/asgard.png",
@@ -42,5 +42,5 @@ DefineMapTemplate("asgard", {
 SetMapTemplateHero("asgard", "odin", "asgard", {-1, -1})
 SetMapTemplateHero("asgard", "kvasir", "asgard", {-1, -1})
 
---SetMapTemplateLayerConnector("asgard", "unit-portal", {-1, -1}, "Earth")
---SetMapTemplateLayerConnector("asgard", "unit-portal", {-1, -1}, "Nidavellir")
+--SetMapTemplateLayerConnector("asgard", "unit-portal", {-1, -1}, "earth")
+--SetMapTemplateLayerConnector("asgard", "unit-portal", {-1, -1}, "nidavellir")

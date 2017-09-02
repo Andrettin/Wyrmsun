@@ -26,21 +26,21 @@
 --
 
 DefineWorldMapTile({538, 144}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"greek", "Nicopolis"
 	}
 })
 
 DefineWorldMapTile({541, 145}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"greek", "Naupactus"
 	}
 })
 
 DefineWorldMapTile({542, 140}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"greek", "Aegae",
 		"latin", "Edessa"
@@ -48,56 +48,56 @@ DefineWorldMapTile({542, 140}, {
 })
 
 DefineWorldMapTile({543, 143}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"greek", "Larissa"
 	}
 })
 
 DefineWorldMapTile({543, 150}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"greek", "Sparta"
 	}
 })
 
 DefineWorldMapTile({545, 140}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Thessalonica" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({545, 148}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Corinthus", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({547, 147}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Athenae" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({548, 145}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"greek", "Chalcis"
 	}
 })
 
 DefineWorldMapTile({551, 156}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Gortyna" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({552, 139}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"greek", "Komotiní"
 	}

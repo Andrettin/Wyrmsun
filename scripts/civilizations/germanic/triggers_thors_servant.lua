@@ -47,10 +47,10 @@ AddTrigger("berserker-brides-arrive-on-hlesey", -- Source: Kevin Crossley-Hollan
 			return false
 		end
 		if ( -- if Hlesey is empty, but there are certain Germanic structures within a certain range of it
-			GetNumUnitsAt(-2, "any", {4088 - EarthStartX, 744 - EarthStartY}, {4092 - EarthStartX, 746 - EarthStartY}, GetMapLayer("", "Earth", 0)) == 0
-			and GetNumUnitsAt(-2, "unit-germanic-barracks", {4089 - 128 - EarthStartX, 745 - 128 - EarthStartY}, {4089 + 128 - EarthStartX, 745 + 128 - EarthStartY}, GetMapLayer("", "Earth", 0)) > 0 -- a barracks from which the warriors could have come from
-			and GetNumUnitsAt(-2, "unit-germanic-dock", {4089 - 128 - EarthStartX, 745 - 128 - EarthStartY}, {4089 + 128 - EarthStartX, 745 + 128 - EarthStartY}, GetMapLayer("", "Earth", 0)) > 0 -- a dock from which they may have obtained ships
-			and GetNumUnitsAt(-2, "unit-germanic-smithy", {4089 - 128 - EarthStartX, 745 - 128 - EarthStartY}, {4089 + 128 - EarthStartX, 745 + 128 - EarthStartY}, GetMapLayer("", "Earth", 0)) > 0 -- a smithy, as they were said in the myth to have wielded iron clubs
+			GetNumUnitsAt(-2, "any", {4088 - EarthStartX, 744 - EarthStartY}, {4092 - EarthStartX, 746 - EarthStartY}, GetMapLayer("", "earth", 0)) == 0
+			and GetNumUnitsAt(-2, "unit-germanic-barracks", {4089 - 128 - EarthStartX, 745 - 128 - EarthStartY}, {4089 + 128 - EarthStartX, 745 + 128 - EarthStartY}, GetMapLayer("", "earth", 0)) > 0 -- a barracks from which the warriors could have come from
+			and GetNumUnitsAt(-2, "unit-germanic-dock", {4089 - 128 - EarthStartX, 745 - 128 - EarthStartY}, {4089 + 128 - EarthStartX, 745 + 128 - EarthStartY}, GetMapLayer("", "earth", 0)) > 0 -- a dock from which they may have obtained ships
+			and GetNumUnitsAt(-2, "unit-germanic-smithy", {4089 - 128 - EarthStartX, 745 - 128 - EarthStartY}, {4089 + 128 - EarthStartX, 745 + 128 - EarthStartY}, GetMapLayer("", "earth", 0)) > 0 -- a smithy, as they were said in the myth to have wielded iron clubs
 		) then
 			return true
 		end

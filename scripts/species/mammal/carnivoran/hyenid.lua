@@ -40,7 +40,7 @@ DefineSpecies("protictitherium-crassum", { -- Source: Mauricio Antón and Jorge 
 	Name = "Protictitherium", -- Protictitherium crassum
 	Genus = "protictitherium",
 	Species = "crassum",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 --	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"},
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes", "miacis"},
@@ -54,14 +54,14 @@ DefineSpecies("protictitherium-crassum", { -- Source: Mauricio Antón and Jorge 
 
 DefineSpecies("hyena", {
 	Name = "Hyena",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"protictitherium-crassum"}, -- earlier hyenid
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("gnoll", {
 	Name = "Gnoll",
-	Homeworld = "Alfheim",
+	Homeworld = "alfheim",
 	EvolvesFrom = {"protictitherium-crassum"}, -- common ancestor with hyenas
 	Sapient = true
 })

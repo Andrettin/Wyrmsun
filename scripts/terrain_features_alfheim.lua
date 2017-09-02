@@ -28,7 +28,7 @@
 DefineTerrainFeature("aethenwood", { -- from Battle for Wesnoth
 	Name = "Aethenwood",
 	TerrainType = "fairlimbed-tree",
-	World = "Alfheim",
+	World = "alfheim",
 	CulturalNames = {
 		"elf", "Aethenwood"
 	}
@@ -37,7 +37,7 @@ DefineTerrainFeature("aethenwood", { -- from Battle for Wesnoth
 DefineTerrainFeature("brightleaf-wood", { -- from Battle for Wesnoth: Legend of Wesmere; part of Wesmere Forest
 	Name = "Brightleaf Wood",
 	TerrainType = "fairlimbed-tree",
-	World = "Alfheim",
+	World = "alfheim",
 	CulturalNames = {
 		"elf", "Brightleaf Wood"
 	}
@@ -46,7 +46,7 @@ DefineTerrainFeature("brightleaf-wood", { -- from Battle for Wesnoth: Legend of 
 DefineTerrainFeature("ironwood", { -- home of the trolls in Norse mythology
 	Name = "Ironwood",
 	TerrainType = "fairlimbed-tree",
-	World = "Alfheim",
+	World = "alfheim",
 	CulturalNames = {
 		"troll", "Ironwood"
 	}
@@ -55,7 +55,7 @@ DefineTerrainFeature("ironwood", { -- home of the trolls in Norse mythology
 DefineTerrainFeature("gitamoth-forest", { -- from Battle for Wesnoth: Legend of Wesmere (End of War); part of Lintanir Forest
 	Name = "Gitamoth Forest",
 	TerrainType = "fairlimbed-tree",
-	World = "Alfheim",
+	World = "alfheim",
 	CulturalNames = {
 		"elf", "Gitamoth Forest"
 	}
@@ -64,7 +64,7 @@ DefineTerrainFeature("gitamoth-forest", { -- from Battle for Wesnoth: Legend of 
 DefineTerrainFeature("lintanir-forest", { -- from Battle for Wesnoth
 	Name = "Lintanir Forest",
 	TerrainType = "fairlimbed-tree",
-	World = "Alfheim",
+	World = "alfheim",
 	CulturalNames = {
 		"elf", "Lintanir Forest"
 	}
@@ -73,7 +73,7 @@ DefineTerrainFeature("lintanir-forest", { -- from Battle for Wesnoth
 DefineTerrainFeature("oldwood-forest", { -- from Battle for Wesnoth: The Rise of Wesnoth; home to Wose
 	Name = "Oldwood Forest",
 	TerrainType = "fairlimbed-tree",
-	World = "Alfheim",
+	World = "alfheim",
 	CulturalNames = {
 		"wose", "Oldwood Forest"
 	}
@@ -82,7 +82,7 @@ DefineTerrainFeature("oldwood-forest", { -- from Battle for Wesnoth: The Rise of
 DefineTerrainFeature("southwind-wood", { -- from Battle for Wesnoth: Legend of Wesmere; part of Wesmere Forest
 	Name = "Southwind Wood",
 	TerrainType = "fairlimbed-tree",
-	World = "Alfheim",
+	World = "alfheim",
 	CulturalNames = {
 		"elf", "Southwind Wood"
 	}
@@ -91,7 +91,7 @@ DefineTerrainFeature("southwind-wood", { -- from Battle for Wesnoth: Legend of W
 DefineTerrainFeature("wesmere-forest", { -- from Battle for Wesnoth
 	Name = "Wesmere Forest",
 	TerrainType = "fairlimbed-tree",
-	World = "Alfheim",
+	World = "alfheim",
 	CulturalNames = {
 		"elf", "Wesmere Forest"
 	}
@@ -100,7 +100,7 @@ DefineTerrainFeature("wesmere-forest", { -- from Battle for Wesnoth
 DefineTerrainFeature("westwind-wood", { -- from Battle for Wesnoth: Legend of Wesmere; part of Wesmere Forest
 	Name = "Westwind Wood",
 	TerrainType = "fairlimbed-tree",
-	World = "Alfheim",
+	World = "alfheim",
 	CulturalNames = {
 		"elf", "Westwind Wood"
 	}

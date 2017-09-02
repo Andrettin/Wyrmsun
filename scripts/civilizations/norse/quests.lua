@@ -29,7 +29,7 @@ DefineQuest("trors-inheritance", {
 	Name = "Tror's Inheritance",
 	Icon = "icon-germanic-short-sword",
 	Description = "The young Tror has come of age, and requested you bring his father's weapons to him.",
-	World = "Earth",
+	World = "earth",
 	Civilization = "germanic",
 	QuestGiver = "Tror",
 	Area = "Asaland",
@@ -43,7 +43,7 @@ DefineQuest("the-chieftains-sparrow", { -- Source: Snorri Sturlson, "Heimskringl
 	Name = "The Chieftain's Sparrow",
 	Icon = "icon-gryphon", -- should be a sparrow
 	Description = "My chieftain, I bring sad news of the sparrow you worked so hard to train. A few days ago it flew to a farm called Varva in Reidgotaland. Upon seeing the bird close to his crops, a peasant threw a stone and killed it! Shall we take revenge and burn Varva to the ground?",
-	World = "Earth",
+	World = "earth",
 	Civilization = "norse",
 	PlayerColor = "blue",
 	Conditions = function(s)
@@ -66,7 +66,7 @@ DefineQuest("the-roadmaker", { -- Source: Snorri Sturlson, "Heimskringla", 1844,
 	Name = "The Roadmaker", -- Onund Roadmaker was a Swedish king known for building roads through all of Sweden
 	Icon = "icon-germanic-worker", -- should be a Norse worker
 	Description = "Our realm has many uninhabited wildernesses which take a long time to journey through. If we are to increase our settled areas, roads should be built throughout the land.",
-	World = "Earth",
+	World = "earth",
 	Civilization = "norse",
 	PlayerColor = "blue",
 	Conditions = function(s)
@@ -89,7 +89,7 @@ DefineQuest("ottars-lineage", {
 	Name = "Ottar's Lineage",
 	Icon = "icon-saxon-swordsman",
 	Description = "Ottar has bet his entire inheritance against Argantyr, to see who has the better lineage. He now asks you to take him to a seeress who can tell him about his bloodline.",
-	World = "Earth",
+	World = "earth",
 	Civilization = "norse",
 	QuestGiver = "Ottar",
 	Area = "Hordaland",

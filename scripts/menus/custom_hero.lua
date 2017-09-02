@@ -35,13 +35,13 @@ function CustomHeroCreationMenu(world, quest_menu)
 	local sizeY = 352
 
 	local hero_civilization_list = {}
-	if (world == "Earth") then
+	if (world == "earth") then
 		--table.insert(hero_civilization_list, "Anglo-Saxon")
 		table.insert(hero_civilization_list, "Frankish")
 		table.insert(hero_civilization_list, "Germanic")
 		table.insert(hero_civilization_list, "Suebi")
 		table.insert(hero_civilization_list, "Teuton")
-	elseif (world == "Nidavellir") then
+	elseif (world == "nidavellir") then
 		table.insert(hero_civilization_list, "Dwarf")
 		table.insert(hero_civilization_list, "Gnome")
 		table.insert(hero_civilization_list, "Goblin")

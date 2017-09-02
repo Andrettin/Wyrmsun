@@ -103,7 +103,7 @@ DefineSpeciesGenus("unicornis", {
 DefineSpecies("mesohippus", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43010
 	Name = "Mesohippus",
 	Genus = "mesohippus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"palaeotherium"},
 	Era = "eocene",
 	Prehistoric = true,
@@ -115,7 +115,7 @@ DefineSpecies("anchitherium-alberdiae", { -- Source: Mauricio Antón and Jorge M
 	Name = "Alberd Anchitherium", -- Anchitherium alberdiae
 	Genus = "anchitherium",
 	Species = "alberdiae",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 	-- present in Madrid
@@ -125,7 +125,7 @@ DefineSpecies("anchitherium-cursor", { -- Source: Mauricio Antón and Jorge Mora
 	Name = "Anchitherium", -- Anchitherium cursor
 	Genus = "anchitherium",
 	Species = "cursor",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"mesohippus"}, -- earlier equid
 	Era = "miocene", -- Middle Miocene
@@ -140,7 +140,7 @@ DefineSpecies("hipparion-primigenium", { -- Source: Mauricio Antón and Jorge Mo
 	Name = "Hipparion", -- Hipparion primigenium
 	Genus = "hipparion",
 	Species = "primigenium",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"mesohippus"}, -- earlier equid
 	Era = "miocene", -- Upper Miocene
@@ -154,7 +154,7 @@ DefineSpecies("hipparion-primigenium", { -- Source: Mauricio Antón and Jorge Mo
 DefineSpecies("merychippus", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43009
 	Name = "Merychippus",
 	Genus = "merychippus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"mesohippus"}, -- earlier equid
 	Era = "miocene",
 	Prehistoric = true,
@@ -165,7 +165,7 @@ DefineSpecies("merychippus", { -- Source: http://fossilworks.org/bridge.pl?a=tax
 DefineSpecies("nannippus", { -- Source: http://fossilworks.org/?a=taxonInfo&taxon_no=43012
 	Name = "Nannippus",
 	Genus = "nannippus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"mesohippus"}, -- earlier equid
 	Era = "miocene",
 	Prehistoric = true,
@@ -177,7 +177,7 @@ DefineSpecies("parahippus", { -- Source: http://fossilworks.org/bridge.pl?a=taxo
 	Name = "Parahippus",
 	Genus = "parahippus",
 	Species = "cognatus", -- type species of the Parahippus genus
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"mesohippus"}, -- earlier equid
 	Era = "miocene", -- also occurred in the Oligocene, but in a much lesser frequency; Parahippus cognatus (the type species) is given as appearing only in the Miocene, Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=44053
 	Prehistoric = true,
@@ -188,7 +188,7 @@ DefineSpecies("parahippus", { -- Source: http://fossilworks.org/bridge.pl?a=taxo
 DefineSpecies("pliohippus", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43019
 	Name = "Pliohippus",
 	Genus = "pliohippus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"mesohippus"}, -- earlier equid
 	Era = "miocene",
 	Prehistoric = true,
@@ -200,7 +200,7 @@ DefineSpecies("horse", { -- Source: http://www.itis.gov/servlet/SingleRpt/Single
 	Name = "Horse",
 	Genus = "equus",
 	Species = "caballus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt"}, -- correct?
 	EvolvesFrom = {"anchitherium-cursor", "hipparion-primigenium", "merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
 	ChildUpgrade = "upgrade-child"
@@ -209,7 +209,7 @@ DefineSpecies("horse", { -- Source: http://www.itis.gov/servlet/SingleRpt/Single
 DefineSpecies("pegasus", {
 	Name = "Pegasus",
 	Genus = "pegasus",
-	Homeworld = "Alfheim",
+	Homeworld = "alfheim",
 	EvolvesFrom = {"anchitherium-cursor", "hipparion-primigenium", "merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"
@@ -220,7 +220,7 @@ DefineSpecies("sleipnir", {
 	Name = "Sleipnir", -- eight-legged horse from Norse mythology
 	Genus = "sleipnir",
 	Species = "polypus", -- "many feet" in Latin
-	Homeworld = "Jotunheim", -- perhaps should be in Alfheim instead?
+	Homeworld = "jotunheim", -- perhaps should be in Alfheim instead?
 	EvolvesFrom = {"anchitherium-cursor", "hipparion-primigenium", "merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"
@@ -230,7 +230,7 @@ DefineSpecies("sleipnir", {
 DefineSpecies("unicorn", {
 	Name = "Unicorn",
 	Genus = "unicornis",
-	Homeworld = "Alfheim",
+	Homeworld = "alfheim",
 	Terrains = {"grass"}, -- unicorns live in woodlands
 	EvolvesFrom = {"anchitherium-cursor", "hipparion-primigenium", "merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
 	Era = "holocene",
@@ -240,7 +240,7 @@ DefineSpecies("unicorn", {
 DefineSpecies("centaur", {
 	Name = "Centaur",
 	Genus = "centaurus",
-	Homeworld = "Alfheim",
+	Homeworld = "alfheim",
 	EvolvesFrom = {"anchitherium-cursor", "hipparion-primigenium", "merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
 	Sapient = true
 	-- in Wyrmsun, centaurs are entirely equid, rather than being half-horse, half-human; they keep the same morphology, however; this means that they have a humanoid upper body, but with equid features like fur throughout the body and horse-like facial features

@@ -27,7 +27,7 @@
 
 DefineSpecies("rhipidistian fish", {
 	Name = "Rhipidistian Fish",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 })

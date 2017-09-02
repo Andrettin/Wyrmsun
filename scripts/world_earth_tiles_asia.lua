@@ -26,133 +26,133 @@
 --
 
 DefineWorldMapTile({557, 144}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Pergamum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({557, 147}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Ephesus" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({565, 140}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Nicomedia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({565, 152}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Myra" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({572, 156}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Paphus" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({579, 137}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Sinope" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({579, 151}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Tarsus" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({580, 161}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Tyrus" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({580, 165}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Hierosolyma" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({581, 169}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Petra" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({582, 153}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Antiochia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({583, 163}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Bostra" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({587, 150}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Zeugma" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({589, 146}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Melitene" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({592, 142}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Satala" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({598, 135}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Phasis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({606, 141}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 --		"armenian", "Vagharshapat" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({606, 161}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"persian", "Seleucia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({607, 161}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"persian", "Ctesiphon" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}

@@ -28,7 +28,7 @@
 DefineTerrainFeature("galdhopiggen", { -- Source: "Philip's International School Atlas", 2006, p. 63.
 	Name = "Galdhoppigen",
 	TerrainType = "rock", -- mountain
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"norse", "Galdhoppigen" -- "Galdhøppigen"
 	}
@@ -37,7 +37,7 @@ DefineTerrainFeature("galdhopiggen", { -- Source: "Philip's International School
 DefineTerrainFeature("jotunheimen", { -- Source: "Philip's International School Atlas", 2006, p. 63.
 	Name = "Jotunheimen",
 	TerrainType = "rock", -- mountains
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"norse", "Jotunheimen"
 	}
@@ -47,7 +47,7 @@ DefineTerrainFeature("lake-wener", {
 	Name = "Lake Wener",
 	TerrainType = "shallow-water",
 	Color = {0, 176, 176},
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"norse", "Lake Wener"
 	}
@@ -56,7 +56,7 @@ DefineTerrainFeature("lake-wener", {
 DefineTerrainFeature("snohetta", { -- Source: "Philip's International School Atlas", 2006, p. 63.
 	Name = "Snohetta",
 	TerrainType = "rock", -- mountain
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"norse", "Snohetta" -- "Snøhetta"
 	}

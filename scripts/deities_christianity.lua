@@ -27,7 +27,7 @@
 
 DefineDeity("christian-god", {
 	Name = "Christian God",
-	HomePlane = "Heaven",
+	HomePlane = "heaven",
 	Civilizations = {"anglo-saxon", "english", "frankish", "french", "italian", "latin", "portuguese", "romanian", "slav", "suebi", "teuton"},
 	Religions = {"christianity"},
 	Gender = "male",

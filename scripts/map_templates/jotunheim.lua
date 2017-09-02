@@ -27,7 +27,7 @@
 
 DefineMapTemplate("jotunheim", {
 	Name = "Jotunheim",
-	World = "Jotunheim",
+	World = "jotunheim",
 	Width = 984,
 	Height = 728,
 	TerrainImage = "scripts/map_templates/jotunheim.png",

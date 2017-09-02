@@ -26,28 +26,28 @@
 --
 
 DefineWorldMapTile({554, 129}, {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalSettlementNames = {
 		"romanian", "romania", "Bucharest"
 	}
 })
 
 DefineWorldMapTile({557, 121}, {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalSettlementNames = {
 		"romanian", "romania", "Iași"
 	}
 })
 
 DefineWorldMapTile({560, 127}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Troesmis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({560, 130}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Tomi", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	},

@@ -26,7 +26,7 @@
 --
 
 DefineWorldMapTile({498, 111}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Colonia Agrippina", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		"teuton", "Köln"
@@ -37,14 +37,14 @@ DefineWorldMapTile({498, 111}, {
 })
 
 DefineWorldMapTile({500, 109}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Düsseldorf"
 	}
 })
 
 DefineWorldMapTile({502, 115}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Borbetomagus", -- not actually the same city as Kaiserslautern (Borbetomagus is Worms), but nevertheless in the Palatinate; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		"teuton", "Kaiserslautern"
@@ -52,14 +52,14 @@ DefineWorldMapTile({502, 115}, {
 })
 
 DefineWorldMapTile({503, 104}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Oldenburg"
 	}
 })
 
 DefineWorldMapTile({503, 114}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Mogontiacum", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 		"teuton", "Mainz"
@@ -67,28 +67,28 @@ DefineWorldMapTile({503, 114}, {
 })
 
 DefineWorldMapTile({503, 117}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Rastatt"
 	}
 })
 
 DefineWorldMapTile({504, 104}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Bremen"
 	}
 })
 
 DefineWorldMapTile({506, 100}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Flensburg"
 	}
 })
 
 DefineWorldMapTile({506, 109}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Kassel"
 	},
@@ -98,14 +98,14 @@ DefineWorldMapTile({506, 109}, {
 })
 
 DefineWorldMapTile({506, 117}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Stuttgart"
 	}
 })
 
 DefineWorldMapTile({507, 107}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Hannover"
 	},
@@ -115,21 +115,21 @@ DefineWorldMapTile({507, 107}, {
 })
 
 DefineWorldMapTile({508, 101}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Kiel"
 	}
 })
 
 DefineWorldMapTile({508, 114}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Würzburg"
 	}
 })
 
 DefineWorldMapTile({509, 107}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Braunschweig"
 	},
@@ -139,14 +139,14 @@ DefineWorldMapTile({509, 107}, {
 })
 
 DefineWorldMapTile({510, 102}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Lübeck"
 	}
 })
 
 DefineWorldMapTile({510, 118}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Augusta Vindelicorum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		"teuton", "Augsburg"
@@ -154,28 +154,28 @@ DefineWorldMapTile({510, 118}, {
 })
 
 DefineWorldMapTile({511, 110}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Erfurt"
 	}
 })
 
 DefineWorldMapTile({512, 103}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Schwerin"
 	}
 })
 
 DefineWorldMapTile({513, 107}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Magdeburg"
 	}
 })
 
 DefineWorldMapTile({514, 116}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Regina Castra",
 		"teuton", "Regensburg"
@@ -184,70 +184,70 @@ DefineWorldMapTile({514, 116}, {
 })
 
 DefineWorldMapTile({515, 109}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Leipzig"
 	}
 })
 
 DefineWorldMapTile({518, 106}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Berlin"
 	}
 })
 
 DefineWorldMapTile({520, 109}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Bautzen"
 	}
 })
 
 DefineWorldMapTile({521, 103}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Stettin"
 	}
 })
 
 DefineWorldMapTile({521, 108}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Guben"
 	}
 })
 
 DefineWorldMapTile({522, 106}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Küstrin"
 	}
 })
 
 DefineWorldMapTile({523, 102}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Kolberg"
 	}
 })
 
 DefineWorldMapTile({526, 110}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Breslau"
 	}
 })
 
 DefineWorldMapTile({528, 107}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Posen"
 	}
 })
 
 DefineWorldMapTile({532, 101}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"slav", "Gdańsk", -- Polish
 		"teuton", "Danzig"
@@ -255,7 +255,7 @@ DefineWorldMapTile({532, 101}, {
 })
 
 DefineWorldMapTile({537, 100}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Königsberg"
 	}

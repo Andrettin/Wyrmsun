@@ -49,6 +49,7 @@ function RunQuestWorldMenu()
 			quest_world_hotkey = string.lower(quest_world_hotkey)
 		end
 		local quest_world_name = string.gsub(QuestWorlds[i], "~!", "")
+		quest_world_name = string.lower(quest_world_name)
 		
 		menu:addFullButton(_(QuestWorlds[i]), quest_world_hotkey, offx + 208, offy + 104 + 36*quest_world_y,
 		function()
@@ -164,10 +165,10 @@ function RunQuestMenu(world)
 	local hero_name_list = {}
 	for i=1,table.getn(custom_heroes) do
 		if (
-			(world == "Earth" and (GetCustomHeroData(custom_heroes[i], "Civilization") == "germanic" or GetCustomHeroData(custom_heroes[i], "Civilization") == "anglo-saxon" or GetCustomHeroData(custom_heroes[i], "Civilization") == "english" or GetCustomHeroData(custom_heroes[i], "Civilization") == "frankish" or GetCustomHeroData(custom_heroes[i], "Civilization") == "suebi" or GetCustomHeroData(custom_heroes[i], "Civilization") == "teuton"))
-			or (world == "Nidavellir" and GetCustomHeroData(custom_heroes[i], "Civilization") == "dwarf")
-			or (world == "Nidavellir" and GetCustomHeroData(custom_heroes[i], "Civilization") == "gnome")
-			or (world == "Nidavellir" and GetCustomHeroData(custom_heroes[i], "Civilization") == "goblin")
+			(world == "earth" and (GetCustomHeroData(custom_heroes[i], "Civilization") == "germanic" or GetCustomHeroData(custom_heroes[i], "Civilization") == "anglo-saxon" or GetCustomHeroData(custom_heroes[i], "Civilization") == "english" or GetCustomHeroData(custom_heroes[i], "Civilization") == "frankish" or GetCustomHeroData(custom_heroes[i], "Civilization") == "suebi" or GetCustomHeroData(custom_heroes[i], "Civilization") == "teuton"))
+			or (world == "nidavellir" and GetCustomHeroData(custom_heroes[i], "Civilization") == "dwarf")
+			or (world == "nidavellir" and GetCustomHeroData(custom_heroes[i], "Civilization") == "gnome")
+			or (world == "nidavellir" and GetCustomHeroData(custom_heroes[i], "Civilization") == "goblin")
 		) then
 			table.insert(hero_list, custom_heroes[i])
 		end

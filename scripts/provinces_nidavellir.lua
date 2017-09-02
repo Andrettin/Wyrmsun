@@ -26,7 +26,7 @@
 --
 
 DefineProvince("Acthna", {
-	World = "Nidavellir",
+	World = "nidavellir",
 	Tiles = {},
 	CulturalNames = {
 		"gnome", "Acthna"
@@ -48,7 +48,7 @@ DefineProvince("Acthna", {
 })
 
 DefineProvince("Aurvang", {
-	World = "Nidavellir",
+	World = "nidavellir",
 	Tiles = {},
 	CulturalNames = {
 		"dwarf", "Aurvang"
@@ -58,7 +58,7 @@ DefineProvince("Aurvang", {
 })
 
 DefineProvince("Brown Hills", {
-	World = "Nidavellir",
+	World = "nidavellir",
 	Tiles = { {18, 29}, {18, 30}, {19, 28}, {19, 29}, {19, 30}, {20, 28}, {20, 29}, {20, 30}, {20, 31}, {20, 32}, {21, 28}, {21, 29}, {21, 30}, {21, 31}, {21, 32}, {22, 25}, {22, 26}, {22, 27}, {22, 28}, {22, 29}, {22, 30}, {22, 31}, {22, 32}, {23, 25}, {23, 26}, {23, 27}, {23, 28}, {23, 29}, {23, 30}, {23, 31}, {23, 32}, {24, 24}, {24, 25}, {24, 26}, {24, 27}, {24, 28}, {24, 29}, {24, 30}, {24, 31}, {24, 32}, {25, 24}, {25, 25}, {25, 26}, {25, 27}, {25, 28}, {25, 29}, {25, 30}, {25, 31}, {25, 32}, {26, 24}, {26, 25}, {26, 26}, {26, 27}, {26, 28}, {26, 29}, {26, 30}, {26, 31}, {27, 26}, {27, 27}, {27, 28}, {27, 29}, {27, 30}, {28, 28}, {29, 28} },
 	CulturalNames = {
 		"dwarf", "Brown Hills",
@@ -82,7 +82,7 @@ DefineProvince("Brown Hills", {
 })
 
 DefineProvince("Caverns of Chaincolt", {
-	World = "Nidavellir",
+	World = "nidavellir",
 	Tiles = { {25, 14}, {25, 15}, {25, 16}, {26, 11}, {26, 14}, {26, 15}, {27, 11}, {27, 12}, {27, 13}, {27, 14}, {27, 15}, {27, 16}, {28, 9}, {28, 10}, {28, 11}, {28, 12}, {28, 13}, {28, 14}, {28, 15}, {28, 16}, {28, 17}, {29, 9}, {29, 10}, {29, 11}, {29, 12}, {29, 13}, {29, 14}, {29, 15}, {29, 16}, {29, 17}, {29, 18}, {29, 19}, {29, 20}, {30, 9}, {30, 10}, {30, 11}, {30, 12}, {30, 13}, {30, 14}, {30, 15}, {30, 16}, {30, 17}, {30, 18}, {30, 19}, {30, 20}, {31, 9}, {31, 10}, {31, 11}, {31, 12}, {31, 13}, {31, 15}, {31, 19}, {32, 9}, {32, 10}, {32, 11}, {32, 12} },
 	CulturalNames = {
 		"dwarf", "Caverns of Chaincolt"
@@ -101,7 +101,7 @@ DefineProvince("Caverns of Chaincolt", {
 })
 
 DefineProvince("Caverns of Flame", {
-	World = "Nidavellir",
+	World = "nidavellir",
 	Tiles = {
 		{39, 2}, {39, 3}, {39, 4}, {39, 9},
 		{40, 0}, {40, 1}, {40, 2}, {40, 3}, {40, 4}, {40, 5}, {40, 6}, {40, 7}, {40, 8}, {40, 9},
@@ -122,7 +122,7 @@ DefineProvince("Caverns of Flame", {
 })
 
 DefineProvince("Eastern Mines", {
-	World = "Nidavellir",
+	World = "nidavellir",
 	Tiles = {
 		{22, 0}, {22, 1}, {22, 2},
 		{23, 0}, {23, 1}, {23, 2}, {23, 3}, {23, 4},
@@ -153,7 +153,7 @@ DefineProvince("Eastern Mines", {
 })
 
 DefineProvince("Ezmarria", {
-	World = "Nidavellir",
+	World = "nidavellir",
 	Tiles = {},
 	CulturalNames = {
 		"goblin", "Ezmarria"
@@ -166,7 +166,7 @@ DefineProvince("Ezmarria", {
 })
 
 DefineProvince("Gryphon Mountain", {
-	World = "Nidavellir",
+	World = "nidavellir",
 	Tiles = { {24, 22}, {24, 23}, {25, 20}, {25, 21}, {25, 22}, {25, 23}, {26, 20}, {26, 21}, {26, 22}, {26, 23}, {27, 20}, {27, 21}, {27, 22}, {27, 23}, {27, 24}, {27, 25}, {28, 20}, {28, 21}, {28, 22}, {28, 23}, {28, 24}, {28, 25}, {28, 26}, {28, 27}, {29, 21}, {29, 22}, {29, 23}, {29, 24}, {29, 25}, {29, 26}, {29, 27}, {30, 21}, {30, 23}, {30, 24}, {30, 25}, {30, 26}, {30, 27}, {31, 23}, {31, 24}, {31, 25}, {31, 26}, {32, 23}, {32, 24} },
 	CulturalNames = {
 		"dwarf", "Gryphon Mountain"
@@ -177,7 +177,7 @@ DefineProvince("Gryphon Mountain", {
 })
 
 DefineProvince("Heartfangs", {
-	World = "Nidavellir",
+	World = "nidavellir",
 	Tiles = { {14, 10}, {14, 11}, {15, 7}, {15, 8}, {15, 9}, {15, 10}, {15, 11}, {15, 12}, {16, 7}, {16, 8}, {16, 9}, {16, 10}, {16, 11}, {16, 12}, {17, 8}, {17, 9}, {17, 10}, {17, 11}, {17, 12}, {17, 13}, {18, 6}, {18, 9}, {18, 10}, {18, 11}, {18, 12}, {19, 5}, {19, 6}, {19, 8}, {19, 9}, {19, 10}, {19, 11}, {19, 12}, {19, 13}, {20, 4}, {20, 5}, {20, 6}, {20, 7}, {20, 8}, {20, 9}, {20, 10}, {20, 11}, {20, 12}, {20, 13}, {21, 4}, {21, 5}, {21, 6}, {21, 7}, {21, 8}, {21, 9}, {21, 10}, {21, 11}, {21, 12}, {21, 13}, {22, 4}, {22, 5}, {22, 6}, {22, 7}, {22, 8}, {22, 9}, {22, 10}, {22, 11}, {22, 12}, {22, 13}, {23, 5}, {23, 6}, {23, 7}, {23, 8}, {23, 9}, {23, 10}, {23, 11}, {23, 12}, {23, 13}, {24, 6}, {24, 7}, {24, 8}, {24, 9}, {24, 10}, {24, 11}, {24, 12}, {24, 13}, {24, 14}, {25, 6}, {25, 7}, {25, 8}, {25, 9}, {25, 10}, {25, 11}, {25, 12}, {25, 13}, {26, 6}, {26, 7}, {26, 8}, {26, 9}, {26, 10}, {26, 12}, {26, 13}, {27, 9}, {27, 10} },
 	CulturalNames = {
 		"dwarf", "Heartfangs"
@@ -191,7 +191,7 @@ DefineProvince("Heartfangs", {
 })
 
 DefineProvince("High Pass", {
-	World = "Nidavellir",
+	World = "nidavellir",
 	Tiles = { {39, 12}, {40, 10}, {40, 11}, {40, 12}, {41, 10}, {41, 11}, {41, 12}, {42, 11} },
 	SettlementLocation = {40, 12},
 	CulturalNames = {
@@ -202,7 +202,7 @@ DefineProvince("High Pass", {
 })
 
 DefineProvince("Highbrook Pass", {
-	World = "Nidavellir",
+	World = "nidavellir",
 	Tiles = { {33, 10}, {33, 11}, {34, 9}, {34, 10}, {34, 11}, {35, 10}, {35, 11}, {35, 12}, {35, 14}, {35, 15}, {36, 10}, {36, 11}, {36, 12}, {36, 13}, {36, 14}, {36, 15}, {37, 11}, {37, 12}, {37, 13}, {37, 14}, {37, 15}, {38, 10}, {38, 11}, {38, 12}, {38, 13}, {38, 14}, {39, 10}, {39, 11}, {39, 13}, {39, 14} },
 	CulturalNames = {
 		"dwarf", "Highbrook Pass"
@@ -222,7 +222,7 @@ DefineProvince("Highbrook Pass", {
 })
 
 DefineProvince("Joruvellir", {
-	World = "Nidavellir",
+	World = "nidavellir",
 	Tiles = {},
 	CulturalNames = {
 		"dwarf", "Joruvellir"
@@ -236,7 +236,7 @@ DefineProvince("Joruvellir", {
 })
 
 DefineProvince("Kal Kartha", {
-	World = "Nidavellir",
+	World = "nidavellir",
 	Tiles = {
 		{42, 8}, {42, 9}, {42, 10},
 		{43, 4}, {43, 5}, {43, 7}, {43, 8}, {43, 9}, {43, 10},
@@ -270,7 +270,7 @@ DefineProvince("Kal Kartha", {
 })
 
 DefineProvince("Lyr", {
-	World = "Nidavellir",
+	World = "nidavellir",
 	Tiles = { {47, 13}, {47, 14}, {47, 15}, {47, 16}, {48, 13}, {48, 14}, {48, 15}, {48, 16}, {49, 12}, {49, 13}, {49, 14}, {49, 15}, {49, 16}, {49, 17}, {50, 12}, {50, 13}, {50, 14}, {50, 15}, {50, 16}, {50, 17}, {51, 12}, {51, 13}, {51, 14}, {51, 15}, {51, 16}, {51, 17}, {52, 13}, {52, 14}, {52, 15}, {52, 16}, {52, 17}, {53, 13}, {53, 14}, {53, 15}, {53, 16}, {54, 13}, {54, 14}, {54, 15}, {54, 16}, {55, 13}, {55, 14}, {55, 15}, {55, 16}, {56, 13}, {56, 14}, {56, 15}, {56, 16} },
 	CulturalNames = {
 		"dwarf", "Lyr"
@@ -284,7 +284,7 @@ DefineProvince("Lyr", {
 })
 
 DefineProvince("Myridia", {
-	World = "Nidavellir",
+	World = "nidavellir",
 	Tiles = {},
 	CulturalNames = {
 		"goblin", "Myridia"
@@ -297,7 +297,7 @@ DefineProvince("Myridia", {
 })
 
 DefineProvince("Northern Wastelands", {
-	World = "Nidavellir",
+	World = "nidavellir",
 	Tiles = {
 		{12, 3}, {12, 4},
 		{13, 2}, {13, 3}, {13, 4},
@@ -324,7 +324,7 @@ DefineProvince("Northern Wastelands", {
 })
 
 DefineProvince("Peaceful Valley", {
-	World = "Nidavellir",
+	World = "nidavellir",
 	Tiles = { {49, 18}, {50, 18}, {50, 19}, {50, 20}, {51, 18}, {51, 19}, {51, 20}, {52, 18}, {52, 19}, {52, 20}, {53, 17}, {53, 18}, {53, 19}, {53, 20}, {54, 17}, {54, 18}, {54, 19}, {55, 17}, {55, 18}, {55, 19}, {56, 17}, {56, 18} },
 	CulturalNames = {
 		"goblin", "Peaceful Valley"
@@ -338,7 +338,7 @@ DefineProvince("Peaceful Valley", {
 })
 
 DefineProvince("Shorbear Hills", {
-	World = "Nidavellir",
+	World = "nidavellir",
 	Tiles = { {31, 16}, {31, 17}, {31, 18}, {32, 15}, {32, 16}, {32, 17}, {32, 18}, {32, 19}, {33, 14}, {33, 15}, {33, 16}, {33, 17}, {33, 18}, {33, 19}, {34, 14}, {34, 15}, {34, 16}, {34, 17} },
 	CulturalNames = {
 		"dwarf", "Shorbear Hills"
@@ -359,7 +359,7 @@ DefineProvince("Shorbear Hills", {
 })
 
 DefineProvince("Southern Tunnels", {
-	World = "Nidavellir",
+	World = "nidavellir",
 	Tiles = { {31, 14}, {32, 13}, {32, 14}, {33, 12}, {33, 13}, {34, 12}, {34, 13}, {35, 13} },
 	CulturalNames = {
 		"dwarf", "Southern Tunnels"
@@ -379,7 +379,7 @@ DefineProvince("Southern Tunnels", {
 })
 
 DefineProvince("Stilgar", {
-	World = "Nidavellir",
+	World = "nidavellir",
 	Tiles = {},
 	CulturalNames = {
 		"goblin", "Stilgar"
@@ -392,7 +392,7 @@ DefineProvince("Stilgar", {
 })
 
 DefineProvince("Svarinshaug", {
-	World = "Nidavellir",
+	World = "nidavellir",
 	Tiles = { {40, 13}, {40, 14}, {41, 13}, {41, 14}, {42, 12}, {42, 13}, {42, 14}, {43, 11}, {43, 12}, {43, 13}, {43, 14}, {44, 9}, {44, 10}, {44, 11}, {44, 12}, {44, 13}, {44, 14}, {45, 9}, {45, 10}, {45, 11}, {45, 12}, {45, 13}, {45, 14}, {46, 9}, {46, 10}, {46, 11}, {46, 12}, {46, 13}, {46, 14}, {47, 10}, {47, 11}, {47, 12}, {48, 10}, {48, 11}, {48, 12}, {49, 11} },
 	CulturalNames = {
 		"dwarf", "Svarinshaug"
@@ -406,7 +406,7 @@ DefineProvince("Svarinshaug", {
 })
 
 DefineProvince("Tenebris", {
-	World = "Nidavellir",
+	World = "nidavellir",
 	Tiles = {},
 	CulturalNames = {
 		"goblin", "Tenebris"
@@ -419,7 +419,7 @@ DefineProvince("Tenebris", {
 })
 
 DefineProvince("Untersberg", {
-	World = "Nidavellir",
+	World = "nidavellir",
 	Tiles = {},
 	CulturalNames = {
 		"gnome", "Untersberg"
@@ -445,7 +445,7 @@ DefineProvince("Untersberg", {
 })
 
 DefineProvince("Deep Sea", {
-	World = "Nidavellir",
+	World = "nidavellir",
 	Water = true,
 	Tiles = {
 		{44, 0}, {44, 1},

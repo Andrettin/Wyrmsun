@@ -32,13 +32,13 @@ DefineSpeciesPhylum("angelia", {
 
 DefineSpecies("angel", {
 	Name = "Angel",
-	HomePlane = "Heaven",
+	HomePlane = "heaven",
 	Sapient = true
 })
 
 DefineSpecies("archangel", {
 	Name = "Archangel",
-	HomePlane = "Heaven",
+	HomePlane = "heaven",
 	Sapient = true
 })
 

@@ -95,7 +95,7 @@ DefineSpeciesGenus("triceromeryx", { -- Source: Mauricio Antón and Jorge Morale
 
 DefineSpecies("diacodexis", {
 	Name = "Diacodexis",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"chriacus", "hyopsodus", "phenacodus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -104,7 +104,7 @@ DefineSpecies("diacodexis", {
 DefineSpecies("helohyus", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=42348 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1446494
 	Name = "Helohyus",
 	Genus = "helohyus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"chriacus", "phenacodus"},
 	Era = "eocene",
 	Prehistoric = true,
@@ -116,7 +116,7 @@ DefineSpecies("cainotherium-miocaenicum", { -- Source: Mauricio Antón and Jorge
 	Name = "Cainotherium",
 	Genus = "cainotherium",
 	Species = "miocaenicum",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
 	Era = "miocene", -- Middle Aragonian
@@ -128,7 +128,7 @@ DefineSpecies("dorcatherium-crassum", { -- Source: Mauricio Antón and Jorge Mor
 	Name = "Dorcatherium", -- Dorcatherium crassum
 	Genus = "dorcatherium",
 	Species = "crassum",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
 	Era = "miocene", -- Lower Miocene to the Lower Pliocene
@@ -143,7 +143,7 @@ DefineSpecies("ilingoceros", { -- Source: http://fossilworks.org/bridge.pl?a=tax
 	Name = "Ilingoceros",
 	Genus = "ilingoceros",
 	Species = "alexandrae", -- type species of the Ilingoceros genus
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"diacodexis"},
 	Era = "miocene",
 	Prehistoric = true,
@@ -153,7 +153,7 @@ DefineSpecies("ilingoceros", { -- Source: http://fossilworks.org/bridge.pl?a=tax
 
 DefineSpecies("megaloceros", {
 	Name = "Megaloceros",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"diacodexis"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -163,7 +163,7 @@ DefineSpecies("micromeryx-azanzae", { -- Source: Mauricio Antón and Jorge Moral
 	Name = "Micromeryx", -- Micromeryx azanzae
 	Genus = "micromeryx",
 	Species = "azanzae",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
 	Era = "miocene", -- end of the Middle Miocene and beginning of the Upper Miocene
@@ -179,7 +179,7 @@ DefineSpecies("micromeryx-soriae", { -- Source: Mauricio Antón and Jorge Morale
 	Name = "Micromeryx Soriae", -- Micromeryx soriae
 	Genus = "micromeryx",
 	Species = "soriae",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"diacodexis"},
 	Era = "miocene", -- Upper Vallensian
 	Prehistoric = true,
@@ -190,7 +190,7 @@ DefineSpecies("triceromeryx-pachecoi", { -- Source: Mauricio Antón and Jorge Mo
 	Name = "Triceromeryx",
 	Genus = "triceromeryx",
 	Species = "pachecoi",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
 	Era = "miocene", -- Middle Miocene
@@ -202,28 +202,28 @@ DefineSpecies("triceromeryx-pachecoi", { -- Source: Mauricio Antón and Jorge Mo
 
 DefineSpecies("antelope", {
 	Name = "Antelope",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"ilingoceros"},
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("bison", {
 	Name = "Bison",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"ilingoceros"},
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("giraffe", {
 	Name = "Giraffe",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"diacodexis"},
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("hippopotamus", {
 	Name = "Hippopotamus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"helohyus"},
 	ChildUpgrade = "upgrade-child"
 })

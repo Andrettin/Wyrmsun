@@ -59,7 +59,7 @@ DefineSpecies("eritherium-azzouzorum", { -- Source: Mauricio Antón and Jorge Mo
 	Name = "Eritherium", -- Eritherium azzouzorum
 	Genus = "eritherium",
 	Species = "azzouzorum",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"chriacus", "hyopsodus", "phenacodus"},
 	Era = "paleocene",
 	Prehistoric = true,
@@ -73,7 +73,7 @@ DefineSpecies("numidotherium-koholense", { -- Source: Mauricio Antón and Jorge 
 	Name = "Numidotherium", -- Numidotherium koholense
 	Genus = "numidotherium",
 	Species = "koholense",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"eritherium-azzouzorum"}, -- earlier proboscid
 	Era = "eocene", -- Middle Eocene
 	Prehistoric = true,
@@ -83,7 +83,7 @@ DefineSpecies("numidotherium-koholense", { -- Source: Mauricio Antón and Jorge 
 
 DefineSpecies("phiomia", {
 	Name = "Phiomia",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"eritherium-azzouzorum"}, -- earlier proboscid
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -93,7 +93,7 @@ DefineSpecies("gomphotherium-angustidens", { -- Source: Mauricio Antón and Jorg
 	Name = "Gomphotherium", -- Gomphotherium angustidens
 	Genus = "gomphotherium",
 	Species = "angustidens",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"numidotherium-koholense", "phiomia"}, -- earlier proboscids
 	Era = "miocene", -- Miocene and Pliocene
@@ -110,7 +110,7 @@ DefineSpecies("tetralophodon-longirostris", { -- Source: Mauricio Antón and Jor
 	Name = "Tetralophodon", -- Tetralophodon longirostris
 	Genus = "tetralophodon",
 	Species = "longirostris",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"numidotherium-koholense", "phiomia"}, -- earlier proboscids
 	Era = "miocene", -- Miocene and Pliocene
@@ -123,14 +123,14 @@ DefineSpecies("tetralophodon-longirostris", { -- Source: Mauricio Antón and Jor
 
 DefineSpecies("elephant", {
 	Name = "Elephant",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"phiomia"},
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("mammoth", {
 	Name = "Mammoth",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"phiomia"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -138,7 +138,7 @@ DefineSpecies("mammoth", {
 
 DefineSpecies("platybeledon", {
 	Name = "Platybeledon",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"phiomia"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"

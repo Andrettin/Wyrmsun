@@ -50,7 +50,7 @@ DefineSpecies("heteroprox-moralesi", { -- Source: Mauricio Antón and Jorge Mora
 	Name = "Heteroprox", -- Heteroprox moralesi
 	Genus = "heteroprox",
 	Species = "moralesi",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
 	Era = "miocene", -- Middle Miocene
@@ -65,7 +65,7 @@ DefineSpecies("procervulus-dichotomus", { -- Source: Mauricio Antón and Jorge M
 	Name = "Procervulus", -- Procervulus dichotomus
 	Genus = "procervulus",
 	Species = "dichotomus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
 	Era = "miocene", -- Middle Miocene
@@ -79,7 +79,7 @@ DefineSpecies("deer", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleR
 	Name = "Deer", -- Red Deer
 	Genus = "cervus",
 	Species = "elaphus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"heteroprox-moralesi", "procervulus-dichotomus"}, -- earlier cervids
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"

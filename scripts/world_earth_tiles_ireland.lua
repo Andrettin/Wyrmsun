@@ -26,28 +26,28 @@
 --
 
 DefineWorldMapTile({456, 103}, {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalSettlementNames = {
 		"english", "england", "Roscommon"
 	}
 })
 
 DefineWorldMapTile({456, 106}, {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalSettlementNames = {
 		"english", "england", "Tipperary"
 	}
 })
 
 DefineWorldMapTile({458, 106}, {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalSettlementNames = {
 		"english", "england", "Clonmel"
 	}
 })
 
 DefineWorldMapTile({463, 100}, {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalSettlementNames = {
 		"english", "england", "Belfast"
 	}

@@ -26,7 +26,7 @@
 --
 
 DefineWorldMapTile({528, 118}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"slav", "Bratislava",
 		"teuton", "Presburg"
@@ -34,7 +34,7 @@ DefineWorldMapTile({528, 118}, {
 })
 
 DefineWorldMapTile({534, 120}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Aquincum",
 		"magyar", "Buda"
@@ -42,14 +42,14 @@ DefineWorldMapTile({534, 120}, {
 })
 
 DefineWorldMapTile({535, 120}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"magyar", "Pest"
 	}
 })
 
 DefineWorldMapTile({536, 127}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"slav", "Novi Sad",
 		"teuton", "Neusatz"
@@ -57,7 +57,7 @@ DefineWorldMapTile({536, 127}, {
 })
 
 DefineWorldMapTile({545, 122}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Klausenburg"
 	},
@@ -67,14 +67,14 @@ DefineWorldMapTile({545, 122}, {
 })
 
 DefineWorldMapTile({545, 126}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Sarmizegetusa" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({547, 125}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Apulum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}

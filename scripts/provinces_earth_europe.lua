@@ -26,7 +26,7 @@
 --
 
 DefineProvince("Alentejo", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"portuguese", "portugal", "Alentejo"
 	},
@@ -57,7 +57,7 @@ DefineProvince("Alentejo", {
 })
 
 DefineProvince("Alsace", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Alsace" -- Elsass
 	},
@@ -101,7 +101,7 @@ DefineProvince("Alsace", {
 })
 
 DefineProvince("Andalusia", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"latin", "Farther Baetica"
 	},
@@ -158,7 +158,7 @@ DefineProvince("Andalusia", {
 })
 
 DefineProvince("Apulia", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"latin", "Apulia" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 30-31.
 	},
@@ -181,7 +181,7 @@ DefineProvince("Apulia", {
 })
 
 DefineProvince("Aquitaine", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"latin", "Aquitania",
 	},
@@ -252,7 +252,7 @@ DefineProvince("Aquitaine", {
 })
 
 DefineProvince("Aragon", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"latin", "Hither Baetica"
 	},
@@ -309,7 +309,7 @@ DefineProvince("Aragon", {
 })
 
 DefineProvince("Argolis", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 --		{135, 37}, {136, 37}, -- old map
 		{540, 148},
@@ -337,7 +337,7 @@ DefineProvince("Argolis", {
 })
 
 DefineProvince("Astrakhan", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"germanic", "Ansulanda" -- rendering of "Asaland" in Proto-Germanic, as in the Ynglinga saga's story Asaland is the region in "Asia" in which Odin's people (here understood as the Indo-Europeans who went on to settle Scandinavia and become speakers of Proto-Germanic) used to live until they migrated to Scandinavia; alternatively called "Asaheim"; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
 	},
@@ -397,7 +397,7 @@ DefineProvince("Astrakhan", {
 })
 
 DefineProvince("Asturias", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"castillian", "spain", "Asturias"
 	},
@@ -443,7 +443,7 @@ DefineProvince("Asturias", {
 })
 
 DefineProvince("Attica", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 --				{135, 36}, {136, 36}, -- old map
 		{546, 147},
@@ -467,7 +467,7 @@ DefineProvince("Attica", {
 })
 
 DefineProvince("Augsburg", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"latin", "Augusta Vindelicorum",
 		"teuton", "Augsburg"
@@ -491,7 +491,7 @@ DefineProvince("Augsburg", {
 })
 
 DefineProvince("Baden", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"latin", "Agri Decumates", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		"teuton", "Baden"
@@ -525,7 +525,7 @@ DefineProvince("Baden", {
 })
 
 DefineProvince("Bavaria", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"latin", "Raetia",
 		"teuton", "Bavaria"
@@ -583,7 +583,7 @@ DefineProvince("Bavaria", {
 })
 
 DefineProvince("Beira", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"portuguese", "portugal", "Beira"
 	},
@@ -616,7 +616,7 @@ DefineProvince("Beira", {
 })
 
 DefineProvince("Belgium", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"latin", "Belgica"
 	},
@@ -661,7 +661,7 @@ DefineProvince("Belgium", {
 })
 
 DefineProvince("Berry", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"french", "france", "Berry" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
@@ -691,7 +691,7 @@ DefineProvince("Berry", {
 })
 
 DefineProvince("Bessarabia", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{553, 118},
 		{554, 118},
@@ -733,7 +733,7 @@ DefineProvince("Bessarabia", {
 })
 
 DefineProvince("Boeotia", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{544, 146},
 		{545, 146},
@@ -757,7 +757,7 @@ DefineProvince("Boeotia", {
 })
 
 DefineProvince("Bohemia", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"celt", "Boiohaemum",
 		"gaul", "Boiohaemum",
@@ -826,7 +826,7 @@ DefineProvince("Bohemia", {
 })
 
 DefineProvince("Bornholm", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"goth", "Burgundarholm",
 		"norse", "Burgundarholm" -- Old Norse name of the island; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 89.
@@ -844,7 +844,7 @@ DefineProvince("Bornholm", {
 })
 
 DefineProvince("Bosnia", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{525, 127}, {525, 128},
 		{526, 127}, {526, 128}, {526, 129},
@@ -865,7 +865,7 @@ DefineProvince("Bosnia", {
 })
 
 DefineProvince("Brandenburg", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Brandenburg"
 	},
@@ -909,7 +909,7 @@ DefineProvince("Brandenburg", {
 })
 
 DefineProvince("Bremen", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Bremen"
 	},
@@ -946,7 +946,7 @@ DefineProvince("Bremen", {
 })
 
 DefineProvince("Brittany", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 --		{117, 29}, {118, 29}, {118, 30}, -- old map
 		{467, 118}, {467, 119},
@@ -979,7 +979,7 @@ DefineProvince("Brittany", {
 })
 
 DefineProvince("Brunswick", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Brunswick" -- Braunschweig
 	},
@@ -1012,7 +1012,7 @@ DefineProvince("Brunswick", {
 })
 
 DefineProvince("Bukowina", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Bukowina"
 	},
@@ -1038,7 +1038,7 @@ DefineProvince("Bukowina", {
 })
 
 DefineProvince("Bulgaria", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 --		{136, 33}, {137, 33}, {138, 33}, {139, 33}, -- old map
 		{544, 131}, {544, 132}, {544, 134}, {544, 135},
@@ -1077,7 +1077,7 @@ DefineProvince("Bulgaria", {
 })
 
 DefineProvince("Burgundy", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"french", "france", "Bourgogne"
 	},
@@ -1117,7 +1117,7 @@ DefineProvince("Burgundy", {
 })
 
 DefineProvince("Calabria", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"latin", "Brutium" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 30-31.
 	},
@@ -1138,7 +1138,7 @@ DefineProvince("Calabria", {
 })
 
 DefineProvince("Carinthia", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Carinthia"
 	},
@@ -1175,7 +1175,7 @@ DefineProvince("Carinthia", {
 })
 
 DefineProvince("Carniola", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Krain"
 	},
@@ -1193,7 +1193,7 @@ DefineProvince("Carniola", {
 })
 
 DefineProvince("Castille", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"latin", "Hispania Tarraconensis"
 	},
@@ -1262,7 +1262,7 @@ DefineProvince("Castille", {
 })
 
 DefineProvince("Champagne", { -- includes Brie
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"french", "france", "Champagne"
 	},
@@ -1299,7 +1299,7 @@ DefineProvince("Champagne", { -- includes Brie
 })
 
 DefineProvince("Connaught", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"gael", "Connaught"
 	},
@@ -1332,7 +1332,7 @@ DefineProvince("Connaught", {
 })
 
 DefineProvince("Corinth", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{545, 147}, {545, 148}
 	},
@@ -1354,7 +1354,7 @@ DefineProvince("Corinth", {
 })
 
 DefineProvince("Cornwall", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"english", "england", "Cornwall"
 	},
@@ -1387,7 +1387,7 @@ DefineProvince("Cornwall", {
 })
 
 DefineProvince("Corsica", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"latin", "Corsica"
 	},
@@ -1404,7 +1404,7 @@ DefineProvince("Corsica", {
 })
 
 DefineProvince("Courland", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Kurland"
 	},
@@ -1446,7 +1446,7 @@ DefineProvince("Courland", {
 })
 
 DefineProvince("Crete", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 --		{137, 39}, {138, 39}, -- old map
 		{547, 155},
@@ -1477,7 +1477,7 @@ DefineProvince("Crete", {
 })
 
 DefineProvince("Crimea", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"greek", "Tauric Chersonese",
 		"latin", "Tauric Chersonese" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -1514,7 +1514,7 @@ DefineProvince("Crimea", {
 })
 
 DefineProvince("Croatia", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"slav", "Croatia"
 	},
@@ -1548,7 +1548,7 @@ DefineProvince("Croatia", {
 })
 
 DefineProvince("Cumbria", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"english", "england", "Cumbria"
 	},
@@ -1583,7 +1583,7 @@ DefineProvince("Cumbria", {
 })
 
 DefineProvince("Dalmatia", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"latin", "Illyricum",
 		"teuton", "Dalmatia"
@@ -1626,7 +1626,7 @@ DefineProvince("Dalmatia", {
 })
 
 DefineProvince("Dauphiny", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"french", "france", "Dauphiny" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
@@ -1666,7 +1666,7 @@ DefineProvince("Dauphiny", {
 })
 
 DefineProvince("Devon", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"anglo-saxon", "angle-tribe", "Devon",
 		"english", "england", "Devon"
@@ -1703,7 +1703,7 @@ DefineProvince("Devon", {
 })
 
 DefineProvince("Dobruja", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"latin", "Lesser Scythia"
 	},
@@ -1729,7 +1729,7 @@ DefineProvince("Dobruja", {
 })
 
 DefineProvince("Don", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"greek", "Tanais"
 	},
@@ -1781,7 +1781,7 @@ DefineProvince("Don", {
 })
 
 DefineProvince("Douro", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"portuguese", "portugal", "Douro"
 	},
@@ -1814,7 +1814,7 @@ DefineProvince("Douro", {
 })
 
 DefineProvince("Drenthe", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"teuton", "netherlands", "Drenthe" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	},
@@ -1854,7 +1854,7 @@ DefineProvince("Drenthe", {
 })
 
 DefineProvince("Durham", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"english", "england", "Durham"
 	},
@@ -1888,7 +1888,7 @@ DefineProvince("Durham", {
 })
 
 DefineProvince("Dyfed", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"welsh", "Dyfed",
 		"latin", "Demetia" -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
@@ -1923,7 +1923,7 @@ DefineProvince("Dyfed", {
 })
 
 DefineProvince("East Anglia", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"english", "england", "East Anglia"
 	},
@@ -1960,7 +1960,7 @@ DefineProvince("East Anglia", {
 })
 
 DefineProvince("East Friesland", { -- also includes Osnabrück
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "East Friesland"
 	},
@@ -1997,7 +1997,7 @@ DefineProvince("East Friesland", { -- also includes Osnabrück
 })
 
 DefineProvince("Epirus", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{537, 143},
 		{538, 142}, {538, 143}, {538, 144},
@@ -2019,7 +2019,7 @@ DefineProvince("Epirus", {
 })
 
 DefineProvince("Essex", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"anglo-saxon", "angle-tribe", "Essex",
 		"english", "england", "Essex"
@@ -2058,7 +2058,7 @@ DefineProvince("Essex", {
 })
 
 DefineProvince("Estonia", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Estland"
 	},
@@ -2099,7 +2099,7 @@ DefineProvince("Estonia", {
 })
 
 DefineProvince("Euboea", { -- to make this island appear separated from Attica, it was necessary to "bump" it one tile to the north and one tile to the east into the sea
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{547, 144},
 		{548, 144}, {548, 145},
@@ -2119,7 +2119,7 @@ DefineProvince("Euboea", { -- to make this island appear separated from Attica, 
 })
 
 DefineProvince("Farther Pomerania", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Farther Pomerania" -- Hinterpommern
 	},
@@ -2155,7 +2155,7 @@ DefineProvince("Farther Pomerania", {
 })
 
 DefineProvince("Finland", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{540, 77}, {540, 78},
 		{541, 76}, {541, 77}, {541, 78}, {541, 79}, {541, 80}, {541, 81}, {541, 82}, {541, 83},
@@ -2203,7 +2203,7 @@ DefineProvince("Finland", {
 })
 
 DefineProvince("France", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"french", "france", "France",
 		"frankish", "francia", "Neustria", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 53-55.
@@ -2261,7 +2261,7 @@ DefineProvince("France", {
 })
 
 DefineProvince("Franche Comte", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"celt", "Maxima Sequanorum",
 		"latin", "Maxima Sequanorum" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
@@ -2311,7 +2311,7 @@ DefineProvince("Franche Comte", {
 })
 
 DefineProvince("Franconia", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Franconia"
 	},
@@ -2366,7 +2366,7 @@ DefineProvince("Franconia", {
 })
 
 DefineProvince("Friesland", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Friesland" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	},
@@ -2411,7 +2411,7 @@ DefineProvince("Friesland", {
 })
 
 DefineProvince("Galicia", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"suebi", "Galicia"
 	},
@@ -2464,7 +2464,7 @@ DefineProvince("Galicia", {
 })
 
 DefineProvince("Gallaecia", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"latin", "Gallaecia"
 	},
@@ -2505,7 +2505,7 @@ DefineProvince("Gallaecia", {
 })
 
 DefineProvince("Galloway", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"english", "england", "Galloway"
 	},
@@ -2540,7 +2540,7 @@ DefineProvince("Galloway", {
 })
 
 DefineProvince("Gotaland", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"goth", "Gothland",
 		"norse", "Gotaland"
@@ -2591,7 +2591,7 @@ DefineProvince("Gotaland", {
 })
 
 DefineProvince("Gotland", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"goth", "Gotland"
 	},
@@ -2622,7 +2622,7 @@ DefineProvince("Gotland", {
 })
 
 DefineProvince("Gwynedd", { -- also includes Clwyd
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"welsh", "Gwynedd"
 	},
@@ -2658,7 +2658,7 @@ DefineProvince("Gwynedd", { -- also includes Clwyd
 })
 
 DefineProvince("Hanover", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Hannover" -- is this a settlement-derived name?
 	},
@@ -2694,7 +2694,7 @@ DefineProvince("Hanover", {
 })
 
 DefineProvince("Hedmark", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{508, 79},
 		{509, 78}, {509, 79}, {509, 80},
@@ -2718,7 +2718,7 @@ DefineProvince("Hedmark", {
 })
 
 DefineProvince("Hesse", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Hesse" -- Hessen
 	},
@@ -2765,7 +2765,7 @@ DefineProvince("Hesse", {
 })
 
 DefineProvince("Highland Scotland", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"celt", "Caledonia",
 		"latin", "Caledonia"
@@ -2820,7 +2820,7 @@ DefineProvince("Highland Scotland", {
 })
 
 DefineProvince("Hither Pomerania", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Hither Pomerania" -- Vorpommern
 	},
@@ -2860,7 +2860,7 @@ DefineProvince("Hither Pomerania", {
 })
 
 DefineProvince("Holland", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"latin", "Batavia"
 	},
@@ -2914,7 +2914,7 @@ DefineProvince("Holland", {
 })
 
 DefineProvince("Holstein", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Holstein" -- is this a settlement-derived name?
 	},
@@ -2956,7 +2956,7 @@ DefineProvince("Holstein", {
 })
 
 DefineProvince("Hordaland", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{494, 83},
 		{495, 83}, {495, 84}, {495, 85}, {495, 86},
@@ -2981,7 +2981,7 @@ DefineProvince("Hordaland", {
 })
 
 DefineProvince("Hungary", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"magyar", "hungary", "Hungary"
 	},
@@ -3026,7 +3026,7 @@ DefineProvince("Hungary", {
 })
 
 DefineProvince("Iceland", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 --				{103, 17}, {104, 17}, {104, 18}, {105, 17}, {105, 18}, {106, 17}, {106, 18}, {107, 17}, {107, 18}, {108, 17}, {109, 17}, -- old map
 		{412, 68}, {412, 69},
@@ -3067,7 +3067,7 @@ DefineProvince("Iceland", {
 })
 
 DefineProvince("Ingria", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"norse", "Ingermanland",
 		"slav", "Ingria"
@@ -3102,7 +3102,7 @@ DefineProvince("Ingria", {
 })
 
 DefineProvince("Istria", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"latin", "Istria",
 		"teuton", "Küstenland"
@@ -3135,7 +3135,7 @@ DefineProvince("Istria", {
 })
 
 DefineProvince("Jutland", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"goth", "Reidgothland", -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
 		"teuton", "Jutland",
@@ -3190,7 +3190,7 @@ DefineProvince("Jutland", {
 
 --[[
 DefineProvince("Karelia", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 	},
 	CulturalNames = {
@@ -3207,7 +3207,7 @@ DefineProvince("Karelia", {
 --]]
 
 DefineProvince("Kent", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"anglo-saxon", "angle-tribe", "Kent",
 		"english", "england", "Kent"
@@ -3243,7 +3243,7 @@ DefineProvince("Kent", {
 })
 
 DefineProvince("Khersonska", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"slav", "Khersons'ka"
 	},
@@ -3275,7 +3275,7 @@ DefineProvince("Khersonska", {
 })
 
 DefineProvince("Lacedaemonia", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{541, 150},
 		{542, 150},
@@ -3301,7 +3301,7 @@ DefineProvince("Lacedaemonia", {
 })
 
 DefineProvince("Latium", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 --		{129, 33}, {129, 34}, -- old map
 		{513, 134}, {513, 135},
@@ -3338,7 +3338,7 @@ DefineProvince("Latium", {
 })
 
 DefineProvince("Latvia", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Lettland"
 	},
@@ -3375,7 +3375,7 @@ DefineProvince("Latvia", {
 })
 
 DefineProvince("Leinster", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"gael", "Leinster"
 	},
@@ -3411,7 +3411,7 @@ DefineProvince("Leinster", {
 })
 
 DefineProvince("Liege", { -- also includes Namur and Belgian Limburg
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"french", "france", "Liège"
 	},
@@ -3455,7 +3455,7 @@ DefineProvince("Liege", { -- also includes Namur and Belgian Limburg
 })
 
 DefineProvince("Liguria", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"gaul", "Liguria",
 		"latin", "Liguria"
@@ -3479,7 +3479,7 @@ DefineProvince("Liguria", {
 })
 
 DefineProvince("Lincoln", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"english", "england", "Lincoln"
 	},
@@ -3517,7 +3517,7 @@ DefineProvince("Lincoln", {
 })
 
 DefineProvince("Lithuania", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Litauen"
 	},
@@ -3550,7 +3550,7 @@ DefineProvince("Lithuania", {
 })
 
 DefineProvince("Lombardy", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"gaul", "Transpadane Gaul",
 		"latin", "Transpadane Gaul"
@@ -3585,7 +3585,7 @@ DefineProvince("Lombardy", {
 })
 
 DefineProvince("Lorraine", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Lothringen"
 	},
@@ -3612,7 +3612,7 @@ DefineProvince("Lorraine", {
 })
 
 DefineProvince("Lothian", { -- includes Borders
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"latin", "Valentia" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	},
@@ -3649,7 +3649,7 @@ DefineProvince("Lothian", { -- includes Borders
 })
 
 DefineProvince("Lower Austria", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Lower Austria"
 	},
@@ -3693,7 +3693,7 @@ DefineProvince("Lower Austria", {
 })
 
 DefineProvince("Lower Lusatia", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Lower Lusatia"
 	},
@@ -3727,7 +3727,7 @@ DefineProvince("Lower Lusatia", {
 })
 
 DefineProvince("Lower Rhine", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{497, 110}, {497, 111}, {497, 112}, {497, 113}, {497, 114},
 		{498, 111}, {498, 112}, {498, 113}, {498, 114}, {498, 115}, {498, 116},
@@ -3752,7 +3752,7 @@ DefineProvince("Lower Rhine", {
 })
 
 DefineProvince("Luxemburg", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Luxemburg"
 	},
@@ -3789,7 +3789,7 @@ DefineProvince("Luxemburg", {
 })
 
 DefineProvince("Lyonnais", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"french", "france", "Lyonnais" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
@@ -3817,7 +3817,7 @@ DefineProvince("Lyonnais", {
 })
 
 DefineProvince("Macedonia", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 --		{134, 35}, {135, 34}, {135, 35}, {136, 34}, {137, 34}, -- old map
 		{540, 140}, {540, 141},
@@ -3846,7 +3846,7 @@ DefineProvince("Macedonia", {
 })
 
 DefineProvince("Magdeburg", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Magdeburg"
 	},
@@ -3887,7 +3887,7 @@ DefineProvince("Magdeburg", {
 })
 
 DefineProvince("Malta", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"latin", "Melita" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	},
@@ -3904,7 +3904,7 @@ DefineProvince("Malta", {
 })
 
 DefineProvince("Marche", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"french", "france", "Marche" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
@@ -3931,7 +3931,7 @@ DefineProvince("Marche", {
 })
 
 DefineProvince("Mazovia", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"slav", "Mazovia"
 	},
@@ -3970,7 +3970,7 @@ DefineProvince("Mazovia", {
 })
 
 DefineProvince("Mecklenburg", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Mecklenburg"
 	},
@@ -4013,7 +4013,7 @@ DefineProvince("Mecklenburg", {
 })
 
 DefineProvince("Mercia", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"anglo-saxon", "angle-tribe", "Mercia",
 		"english", "england", "Mercia"
@@ -4069,7 +4069,7 @@ DefineProvince("Mercia", {
 })
 
 DefineProvince("Modena", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{508, 130},
 		{509, 130},
@@ -4087,7 +4087,7 @@ DefineProvince("Modena", {
 })
 
 DefineProvince("Moldavia", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"latin", "Northern Lower Dacia"
 	},
@@ -4132,7 +4132,7 @@ DefineProvince("Moldavia", {
 })
 
 DefineProvince("Montenegro", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{533, 133}, {533, 134}, {533, 135},
 		{534, 132}, {534, 133}, {534, 134}, {534, 135}, {534, 136},
@@ -4148,7 +4148,7 @@ DefineProvince("Montenegro", {
 })
 
 DefineProvince("Moravia", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"slav", "Moravia",
 		"teuton", "Moravia" -- Mähren
@@ -4205,7 +4205,7 @@ DefineProvince("Moravia", {
 })
 
 DefineProvince("Moselle", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{496, 116},
 		{497, 116}, {497, 117},
@@ -4225,7 +4225,7 @@ DefineProvince("Moselle", {
 })
 
 DefineProvince("Munster", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"gael", "Munster"
 	},
@@ -4264,7 +4264,7 @@ DefineProvince("Munster", {
 })
 
 DefineProvince("Naples", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"greek", "Magna Graecia",
 		"latin", "Campania" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 30-31.
@@ -4296,7 +4296,7 @@ DefineProvince("Naples", {
 })
 
 DefineProvince("Neumark", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Neumark" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 134-135.
 	},
@@ -4326,7 +4326,7 @@ DefineProvince("Neumark", {
 })
 
 DefineProvince("Nordland", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{514, 70},
 		{515, 69}, {515, 70},
@@ -4361,7 +4361,7 @@ DefineProvince("Nordland", {
 })
 
 DefineProvince("Normandy", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{475, 115}, {476, 115}, {476, 116}, {476, 117},
 		{477, 116}, {477, 117},
@@ -4411,7 +4411,7 @@ DefineProvince("Normandy", {
 })
 
 DefineProvince("Norrland", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{514, 75}, {514, 76}, {514, 77}, {514, 78},
 		{515, 74}, {515, 75}, {515, 76}, {515, 77}, {515, 78}, {515, 79}, {515, 80},
@@ -4470,7 +4470,7 @@ DefineProvince("Norrland", {
 })
 
 DefineProvince("North Brabant", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"teuton", "netherlands", "Noord-Brabant"
 	},
@@ -4508,7 +4508,7 @@ DefineProvince("North Brabant", {
 })
 
 DefineProvince("North Trondelag", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{510, 74},
 		{511, 72}, {511, 73}, {511, 74}, {511, 75},
@@ -4535,7 +4535,7 @@ DefineProvince("North Trondelag", {
 })
 
 DefineProvince("Northumberland", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"anglo-saxon", "angle-tribe", "Bernicia",
 		"english", "england", "Northumberland"
@@ -4574,7 +4574,7 @@ DefineProvince("Northumberland", {
 })
 
 DefineProvince("Odeska", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"slav", "Odes'ka"
 	},
@@ -4606,7 +4606,7 @@ DefineProvince("Odeska", {
 })
 
 DefineProvince("Oldenburg", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Oldenburg"
 	},
@@ -4639,7 +4639,7 @@ DefineProvince("Oldenburg", {
 })
 
 DefineProvince("Oppland", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{502, 79},
 		{503, 79}, {503, 80}, {503, 81},
@@ -4665,7 +4665,7 @@ DefineProvince("Oppland", {
 })
 
 DefineProvince("Orkney", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{470, 87}
 	},
@@ -4685,7 +4685,7 @@ DefineProvince("Orkney", {
 })
 
 DefineProvince("Ostfold", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{511, 86}, {511, 87},
 		{512, 86}, {512, 87},
@@ -4705,7 +4705,7 @@ DefineProvince("Ostfold", {
 })
 
 DefineProvince("Overijssel", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"teuton", "netherlands", "Overijssel" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	},
@@ -4742,7 +4742,7 @@ DefineProvince("Overijssel", {
 })
 
 DefineProvince("Palatinate", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Pfalz"
 	},
@@ -4765,7 +4765,7 @@ DefineProvince("Palatinate", {
 })
 
 DefineProvince("Palermo", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"greek", "Panormus",
 		"latin", "Panormus"
@@ -4807,7 +4807,7 @@ DefineProvince("Palermo", {
 })
 
 DefineProvince("Pannonia", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"latin", "Pannonia"
 	},
@@ -4853,7 +4853,7 @@ DefineProvince("Pannonia", {
 })
 
 DefineProvince("Parma", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"latin", "Aemilia"
 	},
@@ -4872,7 +4872,7 @@ DefineProvince("Parma", {
 })
 
 DefineProvince("Picardy", { -- also includes French Flanders, Hainaut and Artois
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"french", "france", "Picardy" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
@@ -4919,7 +4919,7 @@ DefineProvince("Picardy", { -- also includes French Flanders, Hainaut and Artois
 })
 
 DefineProvince("Piedmont", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{500, 125}, {500, 128}, {500, 129},
 		{501, 125}, {501, 126}, {501, 127}, {501, 128}, {501, 129},
@@ -4940,7 +4940,7 @@ DefineProvince("Piedmont", {
 })
 
 DefineProvince("Poitou", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"french", "france", "Poitou"
 	},
@@ -4975,7 +4975,7 @@ DefineProvince("Poitou", {
 })
 
 DefineProvince("Pomerelia", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"goth", "Gothiscandza",
 		"slav", "Pomerelia",
@@ -5022,7 +5022,7 @@ DefineProvince("Pomerelia", {
 })
 
 DefineProvince("Posen", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Posen"
 	},
@@ -5048,7 +5048,7 @@ DefineProvince("Posen", {
 })
 
 DefineProvince("Provence", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"french", "france", "Provence"
 	},
@@ -5090,7 +5090,7 @@ DefineProvince("Provence", {
 })
 
 DefineProvince("Prussia", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "East Prussia" -- Ostpreussen
 	},
@@ -5120,7 +5120,7 @@ DefineProvince("Prussia", {
 })
 
 DefineProvince("Rhodes", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{559, 152}, {559, 153}
 	},
@@ -5135,7 +5135,7 @@ DefineProvince("Rhodes", {
 })
 
 DefineProvince("Rhodope", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{550, 139},
 		{551, 139},
@@ -5171,7 +5171,7 @@ DefineProvince("Rhodope", {
 })
 
 DefineProvince("Rogaland", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{496, 88}, {496, 89},
 		{497, 86}, {497, 87}, {497, 88}, {497, 89},
@@ -5192,7 +5192,7 @@ DefineProvince("Rogaland", {
 })
 
 DefineProvince("Romagna", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"gaul", "Cispadane Gaul",
 		"latin", "Cispadane Gaul"
@@ -5214,7 +5214,7 @@ DefineProvince("Romagna", {
 })
 
 DefineProvince("Russia", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"norse", "Gardarike",
 		"slav", "Russia"
@@ -5299,7 +5299,7 @@ DefineProvince("Russia", {
 })
 
 DefineProvince("Salzburg", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Salzburg"
 	},
@@ -5336,7 +5336,7 @@ DefineProvince("Salzburg", {
 })
 
 DefineProvince("Sardinia", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"latin", "Sardinia"
 	},
@@ -5355,7 +5355,7 @@ DefineProvince("Sardinia", {
 })
 
 DefineProvince("Savoy", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"latin", "Pennine Alps"
 	},
@@ -5391,7 +5391,7 @@ DefineProvince("Savoy", {
 })
 
 DefineProvince("Scania", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"norse", "Scania"
 	},
@@ -5446,7 +5446,7 @@ DefineProvince("Scania", {
 })
 
 DefineProvince("Schleswig", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Schleswig" -- is this a settlement-derived name?
 	},
@@ -5475,7 +5475,7 @@ DefineProvince("Schleswig", {
 })
 
 DefineProvince("Serbia", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 --		{134, 32}, {135, 32}, {135, 33}, -- old map
 		{535, 129}, {535, 132},
@@ -5519,7 +5519,7 @@ DefineProvince("Serbia", {
 })
 
 DefineProvince("Silesia", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Silesia" -- Schlesien
 	},
@@ -5560,7 +5560,7 @@ DefineProvince("Silesia", {
 })
 
 DefineProvince("Skopje", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"latin", "Scupi"
 	},
@@ -5583,7 +5583,7 @@ DefineProvince("Skopje", {
 })
 
 DefineProvince("Slovakia", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"slav", "Slovakia"
 	},
@@ -5645,7 +5645,7 @@ DefineProvince("Slovakia", {
 })
 
 DefineProvince("Somerset", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"anglo-saxon", "angle-tribe", "Somerset",
 		"english", "england", "Somerset"
@@ -5686,7 +5686,7 @@ DefineProvince("Somerset", {
 })
 
 DefineProvince("South Trondelag", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{504, 75},
 		{505, 75}, {505, 76},
@@ -5714,7 +5714,7 @@ DefineProvince("South Trondelag", {
 })
 
 DefineProvince("Strathclyde", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"celt", "Strathclyde"
 	},
@@ -5755,7 +5755,7 @@ DefineProvince("Strathclyde", {
 })
 
 DefineProvince("Styria", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Styria" -- Steiermark
 	},
@@ -5795,7 +5795,7 @@ DefineProvince("Styria", {
 })
 
 DefineProvince("Sussex", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"anglo-saxon", "angle-tribe", "Sussex",
 		"english", "england", "Sussex"
@@ -5828,7 +5828,7 @@ DefineProvince("Sussex", {
 })
 
 DefineProvince("Sweden", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 --		{129, 20}, {130, 20}, {130, 21}, {131, 21}, {132, 21}, -- old map
 		{521, 85}, {521, 86}, {521, 87}, {521, 88},
@@ -5879,7 +5879,7 @@ DefineProvince("Sweden", {
 })
 
 DefineProvince("Switzerland", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"gaul", "Helvetia",
 		"latin", "Helvetia",
@@ -5923,7 +5923,7 @@ DefineProvince("Switzerland", {
 })
 
 DefineProvince("Syracuse", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"greek", "Syracusae",
 		"latin", "Syracusae"
@@ -5963,7 +5963,7 @@ DefineProvince("Syracuse", {
 })
 
 DefineProvince("Thessaly", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{541, 142}, {541, 143}, {541, 144},
 		{542, 142}, {542, 143}, {542, 144},
@@ -5984,7 +5984,7 @@ DefineProvince("Thessaly", {
 })
 
 DefineProvince("Thrace", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 --		{138, 34}, {139, 34}, -- old map
 		{555, 138}, {555, 139},
@@ -6006,7 +6006,7 @@ DefineProvince("Thrace", {
 })
 
 DefineProvince("Thuringia", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Thuringia" -- Thüringen
 	},
@@ -6043,7 +6043,7 @@ DefineProvince("Thuringia", {
 })
 
 DefineProvince("Touraine", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"french", "france", "Touraine" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
@@ -6074,7 +6074,7 @@ DefineProvince("Touraine", {
 })
 
 DefineProvince("Transylvania", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"latin", "Upper Dacia",
 		"teuton", "Siebenbürgen"
@@ -6130,7 +6130,7 @@ DefineProvince("Transylvania", {
 })
 
 DefineProvince("Tuscany", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"latin", "Etruria",
 		"etruscan", "Etruria"
@@ -6160,7 +6160,7 @@ DefineProvince("Tuscany", {
 })
 
 DefineProvince("Tyrol", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Tyrol"
 	},
@@ -6207,7 +6207,7 @@ DefineProvince("Tyrol", {
 })
 
 DefineProvince("Ukraine", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"goth", "Danparstathir", -- name used in the Hervararsaga for a field of battle between the Goths and Huns, possibly the region of the Dnieper; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 484.
 		"norse", "Danparstathir",
@@ -6291,7 +6291,7 @@ DefineProvince("Ukraine", {
 })
 
 DefineProvince("Ulster", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"gael", "Ulster"
 	},
@@ -6330,7 +6330,7 @@ DefineProvince("Ulster", {
 })
 
 DefineProvince("Umbria", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"latin", "Umbria"
 	},
@@ -6358,7 +6358,7 @@ DefineProvince("Umbria", {
 })
 
 DefineProvince("Upper Austria", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Upper Austria"
 	},
@@ -6395,7 +6395,7 @@ DefineProvince("Upper Austria", {
 })
 
 DefineProvince("Upper Lusatia", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Upper Lusatia"
 	},
@@ -6425,7 +6425,7 @@ DefineProvince("Upper Lusatia", {
 })
 
 DefineProvince("Upper Saxony", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Upper Saxony" -- Obersachsen
 	},
@@ -6461,7 +6461,7 @@ DefineProvince("Upper Saxony", {
 })
 
 DefineProvince("Varmland", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{514, 85}, {514, 86},
 		{515, 83}, {515, 85}, {515, 86}, {515, 87},
@@ -6491,7 +6491,7 @@ DefineProvince("Varmland", {
 })
 
 DefineProvince("Venetia", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"latin", "Venetia"
 	},
@@ -6539,7 +6539,7 @@ DefineProvince("Venetia", {
 })
 
 DefineProvince("Vestfold", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{508, 87},
 		{509, 86}, {509, 87}
@@ -6558,7 +6558,7 @@ DefineProvince("Vestfold", {
 })
 
 DefineProvince("Viborg", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"norse", "Viborg"
 	},
@@ -6590,7 +6590,7 @@ DefineProvince("Viborg", {
 })
 
 DefineProvince("Vinnytska", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"slav", "Vinnyts'ka"
 	},
@@ -6623,7 +6623,7 @@ DefineProvince("Vinnytska", {
 })
 
 DefineProvince("Vojvodina", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{534, 125}, {534, 126}, {534, 127},
 		{535, 125}, {535, 126}, {535, 127},
@@ -6655,7 +6655,7 @@ DefineProvince("Vojvodina", {
 })
 
 DefineProvince("Wales", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"welsh", "Wales"
 	},
@@ -6698,7 +6698,7 @@ DefineProvince("Wales", {
 })
 
 DefineProvince("Wallachia", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"latin", "Southern Lower Dacia"
 	},
@@ -6752,7 +6752,7 @@ DefineProvince("Wallachia", {
 })
 
 DefineProvince("Wessex", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"anglo-saxon", "angle-tribe", "Wessex",
 		"english", "england", "Wessex"
@@ -6796,7 +6796,7 @@ DefineProvince("Wessex", {
 })
 
 DefineProvince("West Galicia", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Westgalizien"
 	},
@@ -6833,7 +6833,7 @@ DefineProvince("West Galicia", {
 })
 
 DefineProvince("Westphalia", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Westphalia" -- Westfalen
 	},
@@ -6878,7 +6878,7 @@ DefineProvince("Westphalia", {
 })
 
 DefineProvince("White Russia", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"slav", "White Russia"
 	},
@@ -6935,7 +6935,7 @@ DefineProvince("White Russia", {
 })
 
 DefineProvince("Wurtemberg", {
-	World = "Earth",
+	World = "earth",
 	CulturalNames = {
 		"teuton", "Württemberg" -- is this a settlement-derived name?
 	},
@@ -6967,7 +6967,7 @@ DefineProvince("Wurtemberg", {
 })
 
 DefineProvince("York", {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalNames = {
 		"anglo-saxon", "angle-tribe", "Deira",
 		"english", "england", "York"
@@ -7016,7 +7016,7 @@ DefineProvince("York", {
 })
 
 DefineProvince("Zealand", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{508, 98},
 		{509, 98},

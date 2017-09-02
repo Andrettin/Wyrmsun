@@ -77,7 +77,7 @@ DefineSpecies("proailurus-lemanensis", { -- Source: Mauricio Antón and Jorge Mo
 	Name = "Proailurus", -- Proailurus lemanensis
 	Genus = "proailurus",
 	Species = "lemanensis",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"nimravus"}, -- earlier feliform
 	Era = "oligocene", -- Upper Oligocene
 	Prehistoric = true,
@@ -90,7 +90,7 @@ DefineSpecies("felis-attica", { -- Source: Mauricio Antón and Jorge Morales, "M
 	Name = "Felis", -- Felis attica
 	Genus = "felis",
 	Species = "attica",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
 	Era = "miocene", -- Upper Miocene
@@ -105,7 +105,7 @@ DefineSpecies("machairodus-aphanistus", { -- Source: Mauricio Antón and Jorge M
 	Name = "Machairodus", -- Machairodus aphanistus
 	Genus = "machairodus",
 	Species = "aphanistus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
 	Era = "miocene", -- Upper Miocene
@@ -122,7 +122,7 @@ DefineSpecies("pristinosmilus-ogygia", { -- Source: Mauricio Antón and Jorge Mo
 	Name = "Pristinosmilus", -- Pristinosmilus ogygia
 	Genus = "pristinosmilus",
 	Species = "ogygia",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
 	Era = "miocene", -- Upper Miocene
@@ -139,7 +139,7 @@ DefineSpecies("pseudaelurus-quadridentatus", { -- Source: Mauricio Antón and Jo
 	Name = "Pseudaelurus", -- Pseudaelurus quadridentatus
 	Genus = "pseudaelurus",
 	Species = "quadridentatus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
 	Era = "miocene", -- Middle Miocene
 	Prehistoric = true,
@@ -154,7 +154,7 @@ DefineSpecies("schizaelurus-lorteti", { -- Source: Mauricio Antón and Jorge Mor
 	Name = "Schizaelurus", -- Schizaelurus lorteti
 	Genus = "schizaelurus",
 	Species = "lorteti",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
 	Era = "miocene", -- Middle Miocene
@@ -170,7 +170,7 @@ DefineSpecies("lion", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleR
 	Name = "Lion",
 	Genus = "panthera",
 	Species = "leo",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"felis-attica", "schizaelurus-lorteti"}, -- earlier felines (the pantherinae originated from the felinae)
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"
@@ -178,7 +178,7 @@ DefineSpecies("lion", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleR
 
 DefineSpecies("sabertooth", {
 	Name = "Sabertooth",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -188,7 +188,7 @@ DefineSpecies("tiger", { -- Source: http://www.itis.gov/servlet/SingleRpt/Single
 	Name = "Tiger",
 	Genus = "panthera",
 	Species = "tigris",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"felis-attica", "schizaelurus-lorteti"}, -- earlier felines (the pantherinae originated from the felinae)
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"

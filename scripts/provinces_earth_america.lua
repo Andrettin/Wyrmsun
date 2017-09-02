@@ -26,7 +26,7 @@
 --
 
 DefineProvince("Argentina", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -40,7 +40,7 @@ DefineProvince("Argentina", {
 })
 
 DefineProvince("Bolivia", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -51,7 +51,7 @@ DefineProvince("Bolivia", {
 })
 
 DefineProvince("Chile", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -63,7 +63,7 @@ DefineProvince("Chile", {
 })
 
 DefineProvince("Colombia", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -77,7 +77,7 @@ DefineProvince("Colombia", {
 })
 
 DefineProvince("Cuba", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -89,7 +89,7 @@ DefineProvince("Cuba", {
 })
 
 DefineProvince("Ecuador", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -101,7 +101,7 @@ DefineProvince("Ecuador", {
 })
 
 DefineProvince("Guatemala", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -113,7 +113,7 @@ DefineProvince("Guatemala", {
 })
 
 DefineProvince("Massachusetts", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -125,7 +125,7 @@ DefineProvince("Massachusetts", {
 })
 
 DefineProvince("Mexico", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -139,7 +139,7 @@ DefineProvince("Mexico", {
 })
 
 DefineProvince("Minas Gerais", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Hills",
@@ -155,7 +155,7 @@ DefineProvince("Minas Gerais", {
 })
 
 DefineProvince("Nicaragua", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -167,7 +167,7 @@ DefineProvince("Nicaragua", {
 })
 
 DefineProvince("Ontario", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -176,7 +176,7 @@ DefineProvince("Ontario", {
 })
 
 DefineProvince("Paraguay", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -187,7 +187,7 @@ DefineProvince("Paraguay", {
 })
 
 DefineProvince("Pernambuco", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -202,7 +202,7 @@ DefineProvince("Pernambuco", {
 })
 
 DefineProvince("Peru", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -216,7 +216,7 @@ DefineProvince("Peru", {
 })
 
 DefineProvince("Rio de Janeiro", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -246,7 +246,7 @@ DefineProvince("Rio de Janeiro", {
 })
 
 DefineProvince("Santo Domingo", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -258,7 +258,7 @@ DefineProvince("Santo Domingo", {
 })
 
 DefineProvince("Sao Paulo", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -274,7 +274,7 @@ DefineProvince("Sao Paulo", {
 })
 
 DefineProvince("Venezuela", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",

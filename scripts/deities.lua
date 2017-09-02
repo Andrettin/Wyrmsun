@@ -56,7 +56,7 @@ DefineDeity("gaia", { -- Source: Jenny March, "Dictionary of Classical Mythology
 DefineDeity("gathaarl", { -- from Tyrant, Goblin God of Battle
 	Name = "Gathaarl",
 	Pantheon = "Goblin",
-	HomePlane = "Helheim",
+	HomePlane = "helheim",
 	Civilizations = {"goblin"},
 	Religions = {"paganism"},
 	Domains = {"chaos", "earth", "wrath"},
@@ -72,7 +72,7 @@ DefineDeity("gathaarl", { -- from Tyrant, Goblin God of Battle
 
 DefineDeity("griknagh", { -- From Under the Burning Suns (Battle for Wesnoth)
 	Name = "Griknagh",
-	HomePlane = "Helheim",
+	HomePlane = "helheim",
 	Civilizations = {"troll"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -81,7 +81,7 @@ DefineDeity("griknagh", { -- From Under the Burning Suns (Battle for Wesnoth)
 
 DefineDeity("mzivult", { -- by Jesse Crider
 	Name = "Mzivult",
-	HomePlane = "Helheim",
+	HomePlane = "helheim",
 	Civilizations = {"gnome"}, -- Derro deity
 	Religions = {"paganism"},
 	Domains = {"wrath", "earth", "darkness"},

@@ -75,7 +75,7 @@ DefineSpeciesGenus("sciurus", { -- Source: http://www.itis.gov/servlet/SingleRpt
 
 DefineSpecies("ischyromys", {
 	Name = "Ischyromys",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"alphadon", "crusafontia", "leptictidium", "megazostrodon", "zalambdalestes"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -85,7 +85,7 @@ DefineSpecies("megacricetodon-collongensis", { -- Source: Mauricio Antón and Jo
 	Name = "Megacricetodon", -- Megacricetodon collongensis
 	Genus = "megacricetodon",
 	Species = "collongensis",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"ischyromys"},
 	Era = "miocene", -- Middle Miocene
@@ -98,7 +98,7 @@ DefineSpecies("megacricetodon-collongensis", { -- Source: Mauricio Antón and Jo
 
 DefineSpecies("beaver", {
 	Name = "Beaver",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"megacricetodon-collongensis"}, -- earlier rodent
 	ChildUpgrade = "upgrade-child"
 })
@@ -106,7 +106,7 @@ DefineSpecies("beaver", {
 DefineSpecies("carrat", { -- rodent with the morphology akin to that of a canid; goblins keep this beast as a mount
 	Name = "Carrat",
 --	Family = "muridae", -- same as rats
-	Homeworld = "Nidavellir",
+	Homeworld = "nidavellir",
 	Terrains = {"cave-floor", "rockbound-cave-floor", "dry-mud", "mud"}, -- correct?
 	EvolvesFrom = {"megacricetodon-collongensis"}, -- shares a common ancestor with rats
 	Era = "holocene",
@@ -115,7 +115,7 @@ DefineSpecies("carrat", { -- rodent with the morphology akin to that of a canid;
 
 DefineSpecies("mouse", {
 	Name = "Mouse",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"megacricetodon-collongensis"}, -- earlier rodent
 	ChildUpgrade = "upgrade-child"
 })
@@ -124,7 +124,7 @@ DefineSpecies("rat", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRp
 	Name = "Rat",
 	Genus = "rattus",
 	Species = "norvegicus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "cave-floor", "rockbound-cave-floor"}, -- correct?
 	EvolvesFrom = {"megacricetodon-collongensis"}, -- earlier rodent
 	ChildUpgrade = "upgrade-child"
@@ -134,7 +134,7 @@ DefineSpecies("squirrel", { -- Source: http://www.itis.gov/servlet/SingleRpt/Sin
 	Name = "Squirrel", -- Eurasian Red Squirrel
 	Genus = "sciurus",
 	Species = "vulgaris",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"megacricetodon-collongensis"}, -- earlier rodent
 	ChildUpgrade = "upgrade-child"
 })

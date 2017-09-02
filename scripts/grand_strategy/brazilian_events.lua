@@ -27,7 +27,7 @@
 
 DefineGrandStrategyEvent("Companhia de Carris de Ferro da Cidade a Boavista", { -- Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 6.
 	Description = "A new tram company has been founded in PROVINCE_SETTLEMENT_NAME, the \"Companhia de Carris de Ferro da Cidade a Boavista\"! The trams run by this company link the old center of the city to the Tijuca district.",
-	World = "Earth",
+	World = "earth",
 	Conditions = function(s)
 		if (
 			GetProvinceOwner("Rio de Janeiro") == EventFaction.Name
@@ -54,7 +54,7 @@ DefineGrandStrategyEvent("Companhia de Carris de Ferro da Cidade a Boavista", { 
 
 DefineGrandStrategyEvent("Companhia do Caminho de Carris de Ferro do Jardim Botanico", { -- Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", pp. 7-9, 19.
 	Description = "A new tram company has been founded in PROVINCE_SETTLEMENT_NAME, the \"Companhia do Caminho de Carris de Ferro do Jardim Botanico\"! The trams run by this company link the city center to the district of Gavea, where the Jardim Botanico (the city's botanical garden) is located.",
-	World = "Earth",
+	World = "earth",
 	Conditions = function(s)
 		if (
 			GetProvinceOwner("Rio de Janeiro") == EventFaction.Name
@@ -81,7 +81,7 @@ DefineGrandStrategyEvent("Companhia do Caminho de Carris de Ferro do Jardim Bota
 
 DefineGrandStrategyEvent("Companhia Ferro-Carril de Sao Cristovao", { -- Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", pp. 9-10.
 	Description = "A new tram company has been founded in PROVINCE_SETTLEMENT_NAME, the \"Companhia Ferro-Carril de Sao Cristovao\"! The trams run by this company link the city center to the districts of Sao Cristovao, Caju, Rio Comprido and Saco do Alferes.",
-	World = "Earth",
+	World = "earth",
 	Conditions = function(s)
 		if (
 			GetProvinceOwner("Rio de Janeiro") == EventFaction.Name
@@ -108,7 +108,7 @@ DefineGrandStrategyEvent("Companhia Ferro-Carril de Sao Cristovao", { -- Source:
 
 DefineGrandStrategyEvent("Companhia Ferro-Carril Carioca", { -- Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", pp. 11-12.
 	Description = "A new tram company has been founded in PROVINCE_SETTLEMENT_NAME, the \"Companhia Ferro-Carril Carioca\"! The trams run by this company link the hills of Santa Teresa and Paula Mattos to the Santo Antonio hill in the city center, building their terminal station at its foot, in the Largo da Carioca.",
-	World = "Earth",
+	World = "earth",
 	Conditions = function(s)
 		if (
 			GetProvinceOwner("Rio de Janeiro") == EventFaction.Name
@@ -135,7 +135,7 @@ DefineGrandStrategyEvent("Companhia Ferro-Carril Carioca", { -- Source: Elisabet
 
 DefineGrandStrategyEvent("Companhia Locomotora", { -- Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 12.
 	Description = "A new tram company has been founded in PROVINCE_SETTLEMENT_NAME, the \"Companhia Locomotora\"! The trams run by this company transport cargo through the city center.",
-	World = "Earth",
+	World = "earth",
 	Conditions = function(s)
 		if (
 			GetProvinceOwner("Rio de Janeiro") == EventFaction.Name
@@ -162,7 +162,7 @@ DefineGrandStrategyEvent("Companhia Locomotora", { -- Source: Elisabeth von der 
 
 DefineGrandStrategyEvent("Companhia Ferro-Carril Fluminense", { -- Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 12.
 	Description = "A new tram company has been founded in PROVINCE_SETTLEMENT_NAME, the \"Companhia Ferro-Carril Fluminense\"! The trams run by this company function in the city's center, transporting both passagengers and cargo.",
-	World = "Earth",
+	World = "earth",
 	Conditions = function(s)
 		if (
 			GetProvinceOwner("Rio de Janeiro") == EventFaction.Name
@@ -189,7 +189,7 @@ DefineGrandStrategyEvent("Companhia Ferro-Carril Fluminense", { -- Source: Elisa
 
 DefineGrandStrategyEvent("Companhia de Carris Urbanos", { -- Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 12.
 	Description = "A number of tram companies located in PROVINCE_SETTLEMENT_NAME have been amalgamated into a new enterprise, the \"Companhia de Carris Urbanos\"! The trams run by this company link the city center to ferry and railway terminals, specializing in the transport of cargo.",
-	World = "Earth",
+	World = "earth",
 	Conditions = function(s)
 		if (
 			GetProvinceOwner("Rio de Janeiro") == EventFaction.Name
@@ -216,7 +216,7 @@ DefineGrandStrategyEvent("Companhia de Carris Urbanos", { -- Source: Elisabeth v
 
 DefineGrandStrategyEvent("Companhia Ferro Carril de Vila Isabel", { -- Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 13.
 	Description = "A new tram company has been founded in PROVINCE_SETTLEMENT_NAME, the \"Companhia Ferro Carril de Vila Isabel\"! The trams run by this company link the city center to the districts of Engenho Novo and Andarai Grande. The company also engaged in the real estate business, buying and selling land in the area served by their tramways, as the new transport linkages increased the value of such land.",
-	World = "Earth",
+	World = "earth",
 	Conditions = function(s)
 		if (
 			GetProvinceOwner("Rio de Janeiro") == EventFaction.Name
@@ -243,7 +243,7 @@ DefineGrandStrategyEvent("Companhia Ferro Carril de Vila Isabel", { -- Source: E
 
 DefineGrandStrategyEvent("Companhia Ferro-Carril e Hotel Corcovado", { -- Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 18.
 	Description = "A new tram company has been founded in PROVINCE_SETTLEMENT_NAME, the \"Companhia Ferro-Carril e Hotel Corcovado\"! The trams run by this company link Cosme Velho to Corcovado. The company also possesses a hotel in front of one of their stations.",
-	World = "Earth",
+	World = "earth",
 	Conditions = function(s)
 		if (
 			GetProvinceOwner("Rio de Janeiro") == EventFaction.Name
@@ -271,7 +271,7 @@ DefineGrandStrategyEvent("Companhia Ferro-Carril e Hotel Corcovado", { -- Source
 
 DefineGrandStrategyEvent("Exposicao dos Caminhos de Ferro Brasileiros", { -- Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 18.
 	Description = "The \"Exposicao dos Caminhos de Ferro Brasileiros\" fair has taken place in Rio de Janeiro, exhibiting various sorts of rail machinery. A gleam of progress!",
-	World = "Earth",
+	World = "earth",
 	Conditions = function(s)
 		if (
 			GetProvinceOwner("Rio de Janeiro") == EventFaction.Name
@@ -297,7 +297,7 @@ DefineGrandStrategyEvent("Exposicao dos Caminhos de Ferro Brasileiros", { -- Sou
 
 DefineGrandStrategyEvent("Sao Paulo Tramway Light and Power Co. Ltd.", { -- Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", pp. 20-21.
 	Description = "A new tram company has been founded in PROVINCE_SETTLEMENT_NAME, the \"Sao Paulo Tramway Light and Power Co. Ltd.\"! The company was founded with Canadian capital, and was heavily invested in the electricity business as well.",
-	World = "Earth",
+	World = "earth",
 	Conditions = function(s)
 		if (
 			GetProvinceOwner("Sao Paulo") == EventFaction.Name
@@ -325,7 +325,7 @@ DefineGrandStrategyEvent("Sao Paulo Tramway Light and Power Co. Ltd.", { -- Sour
 
 DefineGrandStrategyEvent("The Rio de Janeiro Tramway, Light and Power Co. Ltd.", { -- Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 24.
 	Description = "A new tram company has been founded in PROVINCE_SETTLEMENT_NAME, the \"The Rio de Janeiro Tramway, Light and Power Co. Ltd.\"! The company was founded with Canadian capital, and was heavily invested in the electricity business as well.",
-	World = "Earth",
+	World = "earth",
 	Conditions = function(s)
 		if (
 			GetProvinceOwner("Rio de Janeiro") == EventFaction.Name

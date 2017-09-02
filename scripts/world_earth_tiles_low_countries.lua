@@ -26,7 +26,7 @@
 --
 
 DefineWorldMapTile({492, 111}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Aduatuca"
 	},
@@ -36,28 +36,28 @@ DefineWorldMapTile({492, 111}, {
 })
 
 DefineWorldMapTile({494, 109}, {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalSettlementNames = {
 		"teuton", "netherlands", "'s-Hertogenbosch"
 	}
 })
 
 DefineWorldMapTile({495, 112}, {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalSettlementNames = {
 		"french", "france", "Liège"
 	}
 })
 
 DefineWorldMapTile({497, 106}, {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalSettlementNames = {
 		"teuton", "netherlands", "Zwolle" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	}
 })
 
 DefineWorldMapTile({497, 115}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Luxemburg"
 	},
@@ -67,14 +67,14 @@ DefineWorldMapTile({497, 115}, {
 })
 
 DefineWorldMapTile({498, 105}, {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalSettlementNames = {
 		"teuton", "netherlands", "Assen" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	}
 })
 
 DefineWorldMapTile({500, 104}, {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalSettlementNames = {
 		"teuton", "netherlands", "Emden"
 	}

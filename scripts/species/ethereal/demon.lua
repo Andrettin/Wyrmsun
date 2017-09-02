@@ -68,7 +68,7 @@ DefineSpeciesClass("superbia", {
 DefineSpecies("imp", {
 	Name = "Imp",
 	-- Class: Invidia
-	HomePlane = "Hell",
+	HomePlane = "hell",
 	Sapient = true
 })
 
@@ -77,13 +77,13 @@ DefineSpecies("ixthala-demon", { -- from Wesnoth
 	-- Class: Ira
 --	Genus = "ixthala",
 	Species = "ignis",
-	HomePlane = "Hell",
+	HomePlane = "hell",
 	Sapient = true
 })
 
 DefineSpecies("succubus", {
 	Name = "Succubus",
 	-- Class: Luxuria
-	HomePlane = "Hell",
+	HomePlane = "hell",
 	Sapient = true
 })

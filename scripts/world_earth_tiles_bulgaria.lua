@@ -26,7 +26,7 @@
 --
 
 DefineWorldMapTile({546, 134}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Ulpia",
 		-- Sardica
@@ -35,14 +35,14 @@ DefineWorldMapTile({546, 134}, {
 })
 
 DefineWorldMapTile({552, 132}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Novae" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({557, 130}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Durostorum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}

@@ -29,7 +29,7 @@ DefineQuest("gathaarls-children", { -- based on the description of Gathaarl in T
 	Name = "Gathaarl's Children",
 	Icon = "icon-goblin-farm",
 	Description = "One of the main doctrines of our god Gathaarl is that we should multiply ourselves to outnumber our enemies. Build some farms to feed our people... and let's begin covering the land in goblin green.",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Civilization = "goblin",
 	PlayerColor = "teal",
 	Conditions = function(s)
@@ -52,7 +52,7 @@ DefineQuest("agniss-mysticism", { -- based on the description of Agniss Tenebris
 	Name = "Agniss' Mysticism",
 	Icon = "icon-goblin-temple",
 	Description = "The hooded witch Agniss finds it imperative for us to build a temple, so that we may develop our mystical power. She adds that the terror-inspiring shamans trained there will bring fear to the heart of our enemies, and keep our population in line.",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Civilization = "goblin",
 	PlayerColor = "black",
 	Conditions = function(s)
@@ -76,7 +76,7 @@ DefineQuest("dremacs-wealth", { -- based on the description of Dremac Paarsins b
 	Name = "Dremac's Wealth",
 	Icon = "icon-goblin-coinage",
 	Description = "The wealthy merchant lord Dremac Paarsins seeks to implement a coinage system amongst us, to improve the exchange of goods and services. Doing so will need a significant investment, however.",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Civilization = "goblin",
 	PlayerColor = "cyan",
 	Conditions = function(s)
@@ -100,7 +100,7 @@ DefineQuest("iouns-tactics", { -- based on the description of Ioun Stilgar by Je
 	Name = "Ioun's Tactics",
 	Icon = "icon-goblin-mess-hall",
 	Description = "The veteran tactician Ioun declares that we must soon build a mess hall, to allow us to train soldiers and to improve our knowledge of tactics. He says that failure to do so in a timely manner may well result in our death at the hands of our enemies.",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Civilization = "goblin",
 	PlayerColor = "blue",
 	Conditions = function(s)
@@ -124,7 +124,7 @@ DefineQuest("orzas-scholarship", { -- based on the description of Orza Chahax by
 	Name = "Orza's Scholarship",
 	Icon = "icon-norse-runewriting",
 	Description = "The scholar Orza Chahax finds that our civilization's sophistication leaves much to be desired. He says that we should promote the creation of a system of writing, so that knowledge may be more easily passed on from generation to generation.",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Civilization = "goblin",
 	PlayerColor = "white",
 	Conditions = function(s)

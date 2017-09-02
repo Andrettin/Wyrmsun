@@ -27,7 +27,7 @@
 
 DefineGrandStrategyEvent("Palladius, Bishop of Ireland", { -- Source: Philip Schaff, "History of the Christian Church", 1997, §14.
 	Description = "The Pope has ordained the Briton deacon Palladius as the first bishop of Ireland, sending him to administer the small community of the faithful there, and to promote Christianity amongst the non-believers.",
-	World = "Earth",
+	World = "earth",
 	MinYear = 431,
 	MaxYear = 431,
 	Conditions = function(s)

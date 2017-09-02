@@ -26,7 +26,7 @@
 --
 
 DefineWorldMapTile({523, 130}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Iadera", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		"slav", "Zara"
@@ -34,7 +34,7 @@ DefineWorldMapTile({523, 130}, {
 })
 
 DefineWorldMapTile({525, 125}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Celeta", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		"slav", "Zagreb"
@@ -42,21 +42,21 @@ DefineWorldMapTile({525, 125}, {
 })
 
 DefineWorldMapTile({529, 133}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Narona" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({532, 131}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"slav", "Sarajevo"
 	}
 })
 
 DefineWorldMapTile({534, 135}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Doclea", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		"slav", "Podgorica"
@@ -64,7 +64,7 @@ DefineWorldMapTile({534, 135}, {
 })
 
 DefineWorldMapTile({535, 127}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Sirmium" -- Source: "Ancient Warfare VII.6", 2013, p. 11.
 	},
@@ -74,7 +74,7 @@ DefineWorldMapTile({535, 127}, {
 })
 
 DefineWorldMapTile({536, 138}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"greek", "Epidamnus",
 		"latin", "Dyrrhachium"
@@ -82,7 +82,7 @@ DefineWorldMapTile({536, 138}, {
 })
 
 DefineWorldMapTile({538, 129}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Singidunum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		"slav", "Belgrade"
@@ -90,14 +90,14 @@ DefineWorldMapTile({538, 129}, {
 })
 
 DefineWorldMapTile({540, 129}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Viminacium" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({540, 136}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Scupi", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		"slav", "Skopje"

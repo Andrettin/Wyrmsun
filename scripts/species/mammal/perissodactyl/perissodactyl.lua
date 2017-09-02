@@ -49,7 +49,7 @@ DefineSpeciesGenus("chalicotherium", { -- Source: Mauricio Antón and Jorge Mora
 
 DefineSpecies("palaeotherium", {
 	Name = "Palaeotherium",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"phenacodus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -57,7 +57,7 @@ DefineSpecies("palaeotherium", {
 
 DefineSpecies("coelodonta", {
 	Name = "Coelodonta",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"palaeotherium"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -65,7 +65,7 @@ DefineSpecies("coelodonta", {
 
 DefineSpecies("indricotherium", {
 	Name = "Indricotherium",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"palaeotherium"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -75,7 +75,7 @@ DefineSpecies("chalicotherium-grande", { -- Source: Mauricio Antón and Jorge Mo
 	Name = "Chalicotherium", -- Chalicotherium grande
 	Genus = "chalicotherium",
 	Species = "grande",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"palaeotherium"},
 	Era = "miocene", -- Middle Miocene

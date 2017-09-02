@@ -28,7 +28,7 @@
 DefineDeity("odin", { -- Known as Allfather, the Terrible One, One-eyed, Father of Battle; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 248; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, pp. 128, 132.
 	Name = "Odin",
 	Pantheon = "Aesir",
-	HomePlane = "Asgard",
+	HomePlane = "asgard",
 	Civilizations = {"anglo-saxon", "dwarf", "frankish", "germanic", "norse", "suebi", "teuton"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -50,7 +50,7 @@ DefineDeity("odin", { -- Known as Allfather, the Terrible One, One-eyed, Father 
 DefineDeity("thor", { -- Son of Odin and Jord (Fjorgyn) and Sif's husband; known as the Thunder God and the Charioteer; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 98-99.
 	Name = "Thor",
 	Pantheon = "Aesir",
-	HomePlane = "Asgard",
+	HomePlane = "asgard",
 	Civilizations = {"anglo-saxon", "dwarf", "frankish", "germanic", "norse", "suebi", "teuton"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -139,7 +139,7 @@ DefineDeity("aegir", { -- Married to Ran; they have their hall under the sea by 
 DefineDeity("balder", { -- Due to Loki's mischief, he was killed by Hod; Balder returns after Ragnarok; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 240; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 40.
 	Name = "Balder",
 	Pantheon = "Aesir",
-	HomePlane = "Asgard",
+	HomePlane = "asgard",
 	Civilizations = {"anglo-saxon", "norse"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -182,7 +182,7 @@ DefineDeity("eir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980,
 DefineDeity("eostre", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 97.
 	Name = "Eostre",
 	Pantheon = "Aesir",
-	HomePlane = "Asgard",
+	HomePlane = "asgard",
 	Civilizations = {"anglo-saxon"}, -- Anglo-Saxon goddess
 	Religions = {"paganism"},
 	Gender = "female"
@@ -236,7 +236,7 @@ DefineDeity("heimdall", { -- the horn Gjall belongs to him; identified with Rig 
 DefineDeity("hel", { -- Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 116.
 	Name = "Hel",
 	Pantheon = "Aesir",
-	HomePlane = "Helheim",
+	HomePlane = "helheim",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -264,7 +264,7 @@ DefineDeity("honir", { -- Long-legged god; indecisive; sent by the Aesir to the 
 DefineDeity("hretha", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 97.
 	Name = "Hretha",
 	Pantheon = "Aesir",
-	HomePlane = "Asgard",
+	HomePlane = "asgard",
 	Civilizations = {"anglo-saxon"}, -- Anglo-Saxon goddess
 	Religions = {"paganism"},
 	Gender = "female"
@@ -273,7 +273,7 @@ DefineDeity("hretha", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p
 DefineDeity("idun", { -- wife of Bragi; she takes care of the golden apples of youth; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 246; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 107-109.
 	Name = "Idun",
 	Pantheon = "Aesir",
-	HomePlane = "Asgard",
+	HomePlane = "asgard",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "female",

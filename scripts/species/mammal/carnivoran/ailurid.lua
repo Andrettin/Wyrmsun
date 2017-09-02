@@ -50,7 +50,7 @@ DefineSpecies("amphictis-ambiguus", { -- Source: Mauricio Antón and Jorge Moral
 	Name = "Amphictis",
 	Genus = "amphictis",
 	Species = "ambiguus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 --	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"},
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes", "miacis"},
 	Era = "oligocene", -- Upper Oligocene and Lower Miocene (25-18 million years ago)
@@ -65,7 +65,7 @@ DefineSpecies("magerictis-imperialensis", { -- Source: Mauricio Antón and Jorge
 	Name = "Magerictis", -- Magerictis imperialensis
 	Genus = "magerictis",
 	Species = "imperialensis",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"amphictis-ambiguus"}, -- earlier ailurid
 	Era = "miocene", -- Middle Miocene
 	Prehistoric = true,
@@ -78,7 +78,7 @@ DefineSpecies("simocyon-batalleri", { -- Source: Mauricio Antón and Jorge Moral
 	Name = "Simocyon", -- Simocyon batalleri
 	Genus = "simocyon",
 	Species = "batalleri",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"amphictis-ambiguus"}, -- earlier ailurid
 	Era = "miocene", -- Upper Miocene
 	Prehistoric = true,

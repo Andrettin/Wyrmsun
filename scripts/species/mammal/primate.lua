@@ -87,7 +87,7 @@ DefineSpeciesGenus("orcus", {
 
 DefineSpecies("plesiadapis", {
 	Name = "Plesiadapis",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -95,21 +95,21 @@ DefineSpecies("plesiadapis", {
 
 DefineSpecies("lemur", {
 	Name = "Lemur",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"plesiadapis"},
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("monkey", {
 	Name = "Monkey",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"plesiadapis"},
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("dryopithecus", {
 	Name = "Dryopithecus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"plesiadapis"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -117,7 +117,7 @@ DefineSpecies("dryopithecus", {
 
 DefineSpecies("chimpanzee", {
 	Name = "Chimpanzee",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"dryopithecus"},
 	ChildUpgrade = "upgrade-child"
 })
@@ -126,7 +126,7 @@ DefineSpecies("australopithecus", {
 	Name = "Australopithecus",
 	Genus = "australopithecus",
 	Species = "afarensis", -- the Australopithecus afarensis is also known as Praeanthropus africanus; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=83054
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"dryopithecus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -136,7 +136,7 @@ DefineSpecies("cyclops", {
 	Name = "Cyclops",
 	Genus = "gigans", -- "giant" in Latin; cyclops are of the same genus as ettins
 	Species = "cyclops",
-	Homeworld = "Jotunheim",
+	Homeworld = "jotunheim",
 	Era = "holocene",
 	Sapient = true
 })
@@ -145,7 +145,7 @@ DefineSpecies("derro", {
 	Name = "Derro",
 	Genus = "gnomus", -- "gnome" in Latin
 	Species = "detrimenti", -- "detrimental" in Latin
-	Homeworld = "Nidavellir",
+	Homeworld = "nidavellir",
 	EvolvesFrom = {"australopithecus"}, -- could descend from another closely-related species instead; dwarves and gnomes should have a common ancestor
 	Era = "holocene",
 	Sapient = true
@@ -156,7 +156,7 @@ DefineSpecies("dwarf", {
 	Name = "Dwarf",
 	Genus = "nanus", -- "dwarf" in Latin
 	Species = "sapiens",
-	Homeworld = "Nidavellir",
+	Homeworld = "nidavellir",
 	EvolvesFrom = {"australopithecus"}, -- could descend from another closely-related species instead; dwarves and gnomes should have a common ancestor
 	Era = "holocene",
 	Sapient = true
@@ -167,7 +167,7 @@ DefineSpecies("elf", {
 	Name = "Elf",
 	Genus = "alfus", -- "elf" in Latin
 	Species = "sapiens",
-	Homeworld = "Alfheim",
+	Homeworld = "alfheim",
 	EvolvesFrom = {"australopithecus"}, -- could descend from another closely-related species instead
 	Era = "holocene",
 	Sapient = true
@@ -177,7 +177,7 @@ DefineSpecies("ettin", {
 	Name = "Ettin",
 	Genus = "gigans", -- "giant" in Latin
 	Species = "sapiens",
-	Homeworld = "Jotunheim",
+	Homeworld = "jotunheim",
 	Era = "holocene",
 	Sapient = true
 })
@@ -186,7 +186,7 @@ DefineSpecies("gnome", {
 	Name = "Gnome",
 	Genus = "gnomus", -- "gnome" in Latin
 	Species = "sapiens",
-	Homeworld = "Nidavellir",
+	Homeworld = "nidavellir",
 	EvolvesFrom = {"australopithecus"}, -- could descend from another closely-related species instead; dwarves and gnomes should have a common ancestor
 	Era = "holocene",
 	Sapient = true
@@ -197,7 +197,7 @@ DefineSpecies("goblin", {
 	Name = "Goblin",
 	Genus = "gobelinus", -- "goblin" in Latin
 	Species = "brevis", -- "small"/"short" in Latin (as it is smaller than a hobgoblin)
-	Homeworld = "Nidavellir",
+	Homeworld = "nidavellir",
 	Era = "holocene",
 	Sapient = true
 })
@@ -206,7 +206,7 @@ DefineSpecies("hobgoblin", {
 	Name = "Hobgoblin",
 	Genus = "gobelinus", -- "goblin" in Latin
 	Species = "magnus", -- "big" in Latin" (as it is bigger than a goblin)
-	Homeworld = "Nidavellir",
+	Homeworld = "nidavellir",
 	Era = "holocene",
 	Sapient = true
 })
@@ -215,7 +215,7 @@ DefineSpecies("human", { -- Source: http://www.itis.gov/servlet/SingleRpt/Single
 	Name = "Human",
 	Genus = "homo",
 	Species = "sapiens",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"australopithecus"}, -- possibly
 	Era = "holocene",
 	Sapient = true
@@ -224,7 +224,7 @@ DefineSpecies("human", { -- Source: http://www.itis.gov/servlet/SingleRpt/Single
 DefineSpecies("ogre", {
 	Name = "Ogre",
 	Species = "sapiens",
-	Homeworld = "Jotunheim",
+	Homeworld = "jotunheim",
 	Era = "holocene",
 	Sapient = true
 })
@@ -233,14 +233,14 @@ DefineSpecies("orc", {
 	Name = "Orc",
 	Genus = "orcus", -- "orc" in Latin
 	Species = "sapiens",
-	Homeworld = "Jotunheim",
+	Homeworld = "jotunheim",
 	Era = "holocene",
 	Sapient = true
 })
 
 DefineSpecies("troll", {
 	Name = "Troll",
-	Homeworld = "Alfheim",
+	Homeworld = "alfheim",
 	Era = "holocene",
 	Sapient = true
 })

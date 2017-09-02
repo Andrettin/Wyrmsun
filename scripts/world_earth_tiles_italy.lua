@@ -26,7 +26,7 @@
 --
 
 DefineWorldMapTile({502, 127}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Augusta Taurinorum"
 	},
@@ -36,7 +36,7 @@ DefineWorldMapTile({502, 127}, {
 })
 
 DefineWorldMapTile({505, 129}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Genua"
 	},
@@ -46,14 +46,14 @@ DefineWorldMapTile({505, 129}, {
 })
 
 DefineWorldMapTile({505, 135}, {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalTerrainNames = {
 		"Mountains", "italian", "italy", "Monte Cinto" -- Source: "Philip's International School Atlas", 2006, p. 70
 	}
 })
 
 DefineWorldMapTile({505, 144}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Caralis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
@@ -63,21 +63,21 @@ DefineWorldMapTile({505, 144}, {
 })
 
 DefineWorldMapTile({506, 136}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Aleria" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
 DefineWorldMapTile({506, 142}, {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalTerrainNames = {
 		"Mountains", "italian", "italy", "Monti del Gennargentu" -- Source: "Philip's International School Atlas", 2006, p. 70
 	}
 })
 
 DefineWorldMapTile({509, 128}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Parma"
 	},
@@ -87,14 +87,14 @@ DefineWorldMapTile({509, 128}, {
 })
 
 DefineWorldMapTile({515, 134}, {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalSettlementNames = {
 		"italian", "italy", "Perugia"
 	}
 })
 
 DefineWorldMapTile({518, 135}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Amiternum"
 	},
@@ -104,14 +104,14 @@ DefineWorldMapTile({518, 135}, {
 })
 
 DefineWorldMapTile({522, 148}, {
-	World = "Earth",
+	World = "earth",
 	CulturalTerrainNames = {
 		"Mountains", "latin", "Etna"
 	}
 })
 
 DefineWorldMapTile({526, 145}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Castra Hannibalis"
 	},
@@ -121,7 +121,7 @@ DefineWorldMapTile({526, 145}, {
 })
 
 DefineWorldMapTile({527, 139}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Barium"
 	},

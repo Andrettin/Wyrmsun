@@ -66,7 +66,7 @@ DefineSpeciesGenus("tyrannosaurus", { -- Source: http://fossilworks.org/bridge.p
 
 DefineSpecies("edaphosaurus", {
 	Name = "Edaphosaurus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"hylonomus", "pantylus", "tuditanus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -74,7 +74,7 @@ DefineSpecies("edaphosaurus", {
 
 DefineSpecies("pareiasaurus", {
 	Name = "Pareiasaurus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"diadectes", "hylonomus", "pantylus", "platyhystrix", "tuditanus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -82,7 +82,7 @@ DefineSpecies("pareiasaurus", {
 
 DefineSpecies("petrolacosaurus", {
 	Name = "Petrolacosaurus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"hylonomus", "pantylus", "peltobatrachus", "platyhystrix", "tuditanus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -90,7 +90,7 @@ DefineSpecies("petrolacosaurus", {
 
 DefineSpecies("sphenacodon", {
 	Name = "Sphenacodon",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"diadectes", "peltobatrachus", "platyhystrix", "seymouria"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -98,7 +98,7 @@ DefineSpecies("sphenacodon", {
 
 DefineSpecies("thadeosaurus", {
 	Name = "Thadeosaurus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"diadectes", "petrolacosaurus", "seymouria"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -106,7 +106,7 @@ DefineSpecies("thadeosaurus", {
 
 DefineSpecies("dryosaurus", {
 	Name = "Dryosaurus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"pareiasaurus", "petrolacosaurus", "thadeosaurus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -114,14 +114,14 @@ DefineSpecies("dryosaurus", {
 
 DefineSpecies("lizard", {
 	Name = "Lizard",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"petrolacosaurus", "thadeosaurus"},
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("ornithosuchus", {
 	Name = "Ornithosuchus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"hylonomus", "petrolacosaurus", "thadeosaurus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -129,7 +129,7 @@ DefineSpecies("ornithosuchus", {
 
 DefineSpecies("saltopus", {
 	Name = "Saltopus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"edaphosaurus", "petrolacosaurus", "thadeosaurus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -137,7 +137,7 @@ DefineSpecies("saltopus", {
 
 DefineSpecies("scelidosaurus", {
 	Name = "Scelidosaurus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"edaphosaurus", "petrolacosaurus", "sphenacodon", "thadeosaurus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -145,14 +145,14 @@ DefineSpecies("scelidosaurus", {
 
 DefineSpecies("snake", {
 	Name = "Snake",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"petrolacosaurus", "thadeosaurus"},
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("ticinosuchus", {
 	Name = "Ticinosuchus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"hylonomus", "pareiasaurus", "petrolacosaurus", "sphenacodon", "thadeosaurus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -160,7 +160,7 @@ DefineSpecies("ticinosuchus", {
 
 DefineSpecies("allosaurus", {
 	Name = "Allosaurus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"saltopus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -168,7 +168,7 @@ DefineSpecies("allosaurus", {
 
 DefineSpecies("apatosaurus", {
 	Name = "Apatosaurus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"saltopus", "ticinosuchus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -176,7 +176,7 @@ DefineSpecies("apatosaurus", {
 
 DefineSpecies("brachiosaurus", {
 	Name = "Brachiosaurus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"saltopus", "scelidosaurus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -184,7 +184,7 @@ DefineSpecies("brachiosaurus", {
 
 DefineSpecies("compsognathus", {
 	Name = "Compsognathus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"ornithosuchus", "saltopus", "ticinosuchus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -192,7 +192,7 @@ DefineSpecies("compsognathus", {
 
 DefineSpecies("deinonychus", {
 	Name = "Deinonychus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"dryosaurus", "saltopus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -200,7 +200,7 @@ DefineSpecies("deinonychus", {
 
 DefineSpecies("dilophosaurus", {
 	Name = "Dilophosaurus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"ornithosuchus", "saltopus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -208,7 +208,7 @@ DefineSpecies("dilophosaurus", {
 
 DefineSpecies("gracilisuchus", {
 	Name = "Gracilisuchus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"ornithosuchus", "ticinosuchus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -216,7 +216,7 @@ DefineSpecies("gracilisuchus", {
 
 DefineSpecies("iguanodon", {
 	Name = "Iguanodon",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"dryosaurus", "ornithosuchus", "saltopus", "scelidosaurus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -224,7 +224,7 @@ DefineSpecies("iguanodon", {
 
 DefineSpecies("kentrosaurus", {
 	Name = "Kentrosaurus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"dryosaurus", "saltopus", "scelidosaurus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -232,7 +232,7 @@ DefineSpecies("kentrosaurus", {
 
 DefineSpecies("pachycephalosaurus", {
 	Name = "Pachycephalosaurus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"dryosaurus", "ornithosuchus", "scelidosaurus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -240,7 +240,7 @@ DefineSpecies("pachycephalosaurus", {
 
 DefineSpecies("protoceratops", {
 	Name = "Protoceratops",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"dryosaurus", "scelidosaurus", "ticinosuchus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -248,7 +248,7 @@ DefineSpecies("protoceratops", {
 
 DefineSpecies("ramphorhynchus", {
 	Name = "Ramphorhynchus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"ornithosuchus", "ticinosuchus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -256,7 +256,7 @@ DefineSpecies("ramphorhynchus", {
 
 DefineSpecies("stegosaurus", {
 	Name = "Stegosaurus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"dryosaurus", "scelidosaurus", "ticinosuchus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -264,7 +264,7 @@ DefineSpecies("stegosaurus", {
 
 DefineSpecies("velociraptor", {
 	Name = "Velociraptor",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"compsognathus", "deinonychus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -272,7 +272,7 @@ DefineSpecies("velociraptor", {
 
 DefineSpecies("ankylosaurus", {
 	Name = "Ankylosaurus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"kentrosaurus", "protoceratops", "stegosaurus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -280,7 +280,7 @@ DefineSpecies("ankylosaurus", {
 
 DefineSpecies("deinosuchus", {
 	Name = "Deinosuchus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"gracilisuchus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -288,7 +288,7 @@ DefineSpecies("deinosuchus", {
 
 DefineSpecies("diplodocus", {
 	Name = "Diplodocus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"apatosaurus", "brachiosaurus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -296,7 +296,7 @@ DefineSpecies("diplodocus", {
 
 DefineSpecies("parasaurolophus", {
 	Name = "Parasaurolophus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"iguanodon", "pachycephalosaurus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -304,7 +304,7 @@ DefineSpecies("parasaurolophus", {
 
 DefineSpecies("pterodactylus", {
 	Name = "Pterodactylus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"ramphorhynchus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -312,7 +312,7 @@ DefineSpecies("pterodactylus", {
 
 DefineSpecies("triceratops", {
 	Name = "Triceratops",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"kentrosaurus", "protoceratops", "stegosaurus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -322,7 +322,7 @@ DefineSpecies("tyrannosaurus-rex", { -- Source: http://fossilworks.org/bridge.pl
 	Name = "Tyrannosaurus Rex",
 	Genus = "tyrannosaurus",
 	Species = "rex",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"allosaurus", "dilophosaurus"}, -- should be ancestors to all Tyrannosauruses
 	Era = "cretaceous",
 	Prehistoric = true,
@@ -334,7 +334,7 @@ DefineSpecies("tyrannosaurus-rex", { -- Source: http://fossilworks.org/bridge.pl
 
 DefineSpecies("dicynodon", {
 	Name = "Dicynodon",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"edaphosaurus", "petrolacosaurus", "sphenacodon", "thadeosaurus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -342,7 +342,7 @@ DefineSpecies("dicynodon", {
 
 DefineSpecies("dimetrodon", {
 	Name = "Dimetrodon",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"edaphosaurus", "hylonomus", "petrolacosaurus", "sphenacodon"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -350,7 +350,7 @@ DefineSpecies("dimetrodon", {
 
 DefineSpecies("lycaenops", {
 	Name = "Lycaenops",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"edaphosaurus", "pareiasaurus", "sphenacodon", "thadeosaurus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -358,7 +358,7 @@ DefineSpecies("lycaenops", {
 
 DefineSpecies("lystrosaurus", {
 	Name = "Lystrosaurus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"edaphosaurus", "sphenacodon"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -366,7 +366,7 @@ DefineSpecies("lystrosaurus", {
 
 DefineSpecies("thrinaxodon", {
 	Name = "Thrinaxodon",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"edaphosaurus", "pareiasaurus", "sphenacodon"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -376,7 +376,7 @@ DefineSpecies("adelobasileus-cromptoni", { -- Source: Spencer G. Lucas and Zhexi
 	Name = "Adelobasileus",
 	Genus = "adelobasileus",
 	Species = "cromptoni",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt"}, -- correct?
 	EvolvesFrom = {"dicynodon", "dimetrodon", "lycaenops", "lystrosaurus", "thrinaxodon"},
 	Era = "triassic",
@@ -387,20 +387,20 @@ DefineSpecies("adelobasileus-cromptoni", { -- Source: Spencer G. Lucas and Zhexi
 
 DefineSpecies("basilisk", {
 	Name = "Basilisk",
-	Homeworld = "Alfheim",
+	Homeworld = "alfheim",
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("crocodile", {
 	Name = "Crocodile",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"deinosuchus"},
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("hydra", {
 	Name = "Hydra",
-	Homeworld = "Jotunheim",
+	Homeworld = "jotunheim",
 	ChildUpgrade = "upgrade-child"
 })
 

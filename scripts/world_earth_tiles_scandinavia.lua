@@ -26,28 +26,28 @@
 --
 
 DefineWorldMapTile({495, 84}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"norse", "Bergen"
 	}
 })
 
 DefineWorldMapTile({496, 88}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"norse", "Stavanger"
 	}
 })
 
 DefineWorldMapTile({504, 89}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"norse", "Arendal"
 	}
 })
 
 DefineWorldMapTile({508, 86}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"norse", "Skiringssalr", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 257.
 		"norse", "Geirstadir" -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 261.
@@ -55,70 +55,70 @@ DefineWorldMapTile({508, 86}, {
 })
 
 DefineWorldMapTile({509, 75}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"norse", "Trondheim"
 	}
 })
 
 DefineWorldMapTile({509, 87}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"norse", "Tønsberg"
 	}
 })
 
 DefineWorldMapTile({510, 81}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"norse", "Lillehammar"
 	}
 })
 
 DefineWorldMapTile({511, 86}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"norse", "Moss"
 	}
 })
 
 DefineWorldMapTile({512, 73}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"norse", "Steinkjet"
 	}
 })
 
 DefineWorldMapTile({512, 83}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"norse", "Hamar"
 	}
 })
 
 DefineWorldMapTile({515, 97}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"norse", "Copenhagen"
 	}
 })
 
 DefineWorldMapTile({518, 86}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"norse", "Karlstad"
 	}
 })
 
 DefineWorldMapTile({521, 64}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"norse", "Bodø"
 	}
 })
 
 DefineWorldMapTile({530, 77}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"norse", "Härnösand"
 	}

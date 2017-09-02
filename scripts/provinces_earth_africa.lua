@@ -26,7 +26,7 @@
 --
 
 DefineProvince("Algeria", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains", -- correct?
@@ -47,7 +47,7 @@ DefineProvince("Algeria", {
 })
 
 DefineProvince("Egypt", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains", -- correct?
@@ -58,7 +58,7 @@ DefineProvince("Egypt", {
 })
 
 DefineProvince("Libya", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains", -- correct?
@@ -72,7 +72,7 @@ DefineProvince("Libya", {
 })
 
 DefineProvince("Morocco", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains", -- correct?
@@ -86,7 +86,7 @@ DefineProvince("Morocco", {
 })
 
 DefineProvince("Oyo", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains", -- correct?
@@ -97,7 +97,7 @@ DefineProvince("Oyo", {
 })
 
 DefineProvince("Tunisia", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains", -- correct?

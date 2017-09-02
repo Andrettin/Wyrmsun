@@ -26,7 +26,7 @@
 --
 
 DefineWorldMapTile({565, 167}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"greek", "Alexandria",
 		"latin", "Alexandria" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -34,7 +34,7 @@ DefineWorldMapTile({565, 167}, {
 })
 
 DefineWorldMapTile({573, 183}, {
-	World = "Earth",
+	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Thebae" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}

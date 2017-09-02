@@ -64,7 +64,7 @@ DefineSpecies("bunolistriodon-lockarti", { -- Source: Mauricio Antón and Jorge 
 	Name = "Bunolistriodon", -- Bunolistriodon lockarti
 	Genus = "bunolistriodon",
 	Species = "lockarti",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"helohyus"},
 	Era = "miocene", -- Middle Miocene
@@ -79,7 +79,7 @@ DefineSpecies("conohyus-simorrense", { -- Source: Mauricio Antón and Jorge Mora
 	Name = "Conohyus", -- Conohyus simorrense
 	Genus = "conohyus",
 	Species = "simorrense",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"helohyus"},
 	Era = "miocene", -- Middle Miocene
@@ -95,7 +95,7 @@ DefineSpecies("microstonyx-major", { -- Source: Mauricio Antón and Jorge Morale
 	Name = "Microstonyx", -- Microstonyx major
 	Genus = "microstonyx",
 	Species = "major",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"helohyus"},
 	Era = "miocene", -- Upper Miocene
@@ -110,7 +110,7 @@ DefineSpecies("boar", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleR
 	Name = "Boar",
 	Genus = "sus",
 	Species = "scrofa",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass"},
 	EvolvesFrom = {"bunolistriodon-lockarti", "conohyus-simorrense", "microstonyx-major"}, -- earlier suids
 	Era = "holocene",
@@ -121,7 +121,7 @@ DefineSpecies("gullinbursti", { -- named after the mythical boar (in Norse mytho
 	Name = "Gullinbursti",
 	Genus = "seta", -- "bristle" in Latin
 	Species = "aurea", -- "golden" in Latin
-	Homeworld = "Nidavellir",
+	Homeworld = "nidavellir",
 	Terrains = {"dry-mud", "mud"}, -- should be dark dirt instead of dry-mud and mud
 	EvolvesFrom = {"bunolistriodon-lockarti", "conohyus-simorrense", "microstonyx-major"}, -- earlier suids
 	Era = "holocene",

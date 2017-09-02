@@ -26,7 +26,7 @@
 --
 
 DefineProvince("Aethenwood", { -- from Wesnoth
-	World = "Alfheim",
+	World = "alfheim",
 	Tiles = {},
 	CulturalNames = {
 		"elf", "Aethenwood"
@@ -36,7 +36,7 @@ DefineProvince("Aethenwood", { -- from Wesnoth
 })
 
 DefineProvince("Annwn", {
-	World = "Alfheim",
+	World = "alfheim",
 	Tiles = {},
 	CulturalNames = {
 		"elf", "Annwn"
@@ -49,7 +49,7 @@ DefineProvince("Annwn", {
 })
 
 DefineProvince("Lintanir", { -- from Wesnoth
-	World = "Alfheim",
+	World = "alfheim",
 	Tiles = {},
 	CulturalNames = {
 		"elf", "Lintanir"
@@ -62,7 +62,7 @@ DefineProvince("Lintanir", { -- from Wesnoth
 })
 
 DefineProvince("Ulfdalir", {
-	World = "Alfheim",
+	World = "alfheim",
 	Tiles = {},
 	CulturalNames = {
 		"elf", "Ulfdalir"
@@ -75,7 +75,7 @@ DefineProvince("Ulfdalir", {
 })
 
 DefineProvince("Wesmere", { -- from Wesnoth
-	World = "Alfheim",
+	World = "alfheim",
 	Tiles = {},
 	CulturalNames = {
 		"elf", "Wesmere"

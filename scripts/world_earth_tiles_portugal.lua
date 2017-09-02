@@ -26,7 +26,7 @@
 --
 
 DefineWorldMapTile({457, 146}, {
-	World = "Earth",
+	World = "earth",
 	FactionCulturalSettlementNames = {
 		"portuguese", "portugal", "Evora" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
 	}

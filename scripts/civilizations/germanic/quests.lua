@@ -29,7 +29,7 @@ DefineQuest("on-the-vanaquisl", {
 	Name = "On the Vanaquisl",
 	Icon = "icon-germanic-warrior",
 	Description = "Having assembled a great army, we are to attack the people of Vanaland and take their lands into our possession.\n\nMap: Tanais",
-	World = "Earth",
+	World = "earth",
 	Civilization = "germanic",
 	Map = "maps/earth/tanais.smp",
 	Scenario = "scripts/civilizations/germanic/scenarios/on_the_vanaquisl.lua",
@@ -43,7 +43,7 @@ DefineQuest("westward-migration", {
 	Icon = "icon-germanic-worker",
 	Description = "With expansion through Vanaland denied to us, we seek an alternative migration route to the west.\n\nMap: Holmgard",
 	RequiredQuest = "on-the-vanaquisl",
-	World = "Earth",
+	World = "earth",
 	Civilization = "germanic",
 	Map = "maps/earth/novgorod.smp",
 	Scenario = "scripts/civilizations/germanic/scenarios/westward_migration.lua",
@@ -57,7 +57,7 @@ DefineQuest("northwards-to-the-sea", {
 	Icon = "icon-germanic-town-hall",
 	Description = "After moving southwest, we now find ourselves near a peninsula which seems promising for settlement.\n\nMap: Jutland",
 	RequiredQuest = "westward-migration",
-	World = "Earth",
+	World = "earth",
 	Civilization = "germanic",
 	Map = "maps/earth/jutland.smp",
 	Scenario = "scripts/civilizations/germanic/scenarios/northwards_to_the_sea.lua",
@@ -71,7 +71,7 @@ DefineQuest("gylves-realm", {
 	Icon = "icon-germanic-barbed-arrow",
 	Description = "After establishing ourselves in Jutland and the islands of Fyen and Zealand we journeyed north, but we do not seem welcome in these new shores...\n\nMap: Malmo",
 	RequiredQuest = "northwards-to-the-sea",
-	World = "Earth",
+	World = "earth",
 	Civilization = "germanic",
 	Map = "maps/earth/malmo.smp",
 	Scenario = "scripts/civilizations/germanic/scenarios/gylves_realm.lua",
@@ -84,7 +84,7 @@ DefineQuest("the-great-temple-at-upsal", { -- Source: Snorri Sturlson, "Heimskri
 	Name = "The Great Temple", -- the great temple built by Freyr (Yngve) in the Ynglinga saga in Upsal
 	Icon = "icon-germanic-farm",
 	Description = "My chieftain, we should buy a new, great temple for our people. Not only will it give them a new place of worship, but the wise priests it will host shall help us with tax collection.",
-	World = "Earth",
+	World = "earth",
 	Civilization = "germanic",
 	PlayerColor = "blue",
 	Conditions = function(s)
@@ -107,7 +107,7 @@ DefineQuest("the-good-seasons", { -- Source: Snorri Sturlson, "Heimskringla", 18
 	Name = "The Good Seasons", -- the Swedes believed their chieftain Yngve (identified with Freyr) provided them good seasons
 	Icon = "icon-germanic-farm",
 	Description = "My chieftain, our lands have been blessed with good seasons, which our people ascribe to you. We should build more farms to take advantage of these fortunate times.",
-	World = "Earth",
+	World = "earth",
 	Civilization = "germanic",
 	PlayerColor = "blue",
 	Conditions = function(s)
@@ -130,7 +130,7 @@ DefineQuest("thralls-logging", { -- based on the Song of Rig; Source: Kevin Cros
 	Name = "Thrahila's Logging", -- in the Song of Rig, Rig (the god Heimdall) fathers Thrall, Karl and Jarl, each of which originates a class of the Norse world; namely serfs, peasants and warriors; "thrall" is a reflex of Proto-Germanic "þrahila"
 	Icon = "icon-germanic-carpenters-shop",
 	Description = "The robust serf Thrahila meekly suggests that we gather some wood for our people to warm themselves and build new homes.",
-	World = "Earth",
+	World = "earth",
 	Civilization = "germanic",
 	PlayerColor = "orange",
 	Conditions = function(s)
@@ -152,7 +152,7 @@ DefineQuest("thralls-hut", { -- based on the Song of Rig; Source: Kevin Crossley
 	Name = "Thrahila's Hut", -- in the Song of Rig, Rig (the god Heimdall), Thrall's ten sons shore up the hut of their parents and grandparents, afterwards tending to goats and pigs near it
 	Icon = "icon-germanic-farm",
 	Description = "The hard-working serf Thrahila timidly proposes that a new hut for him and his family be built. It would house him, his wife and their twelve sons and nine daughters, who would tend to goats and pigs in its environs.", -- his wife was Thir; their sons were: Fjosnir, Klur, Hreim, Klajja (Crossley-Holland gives "kreggi", while Bellows gives "kleggi", both with the meaning of horse-fly; "kleggi" is listed by Fick also as meaning horse-fly, and as a reflex of Proto-Germanic "klajja(n)"), Kefsir, Fulnir, Drumb, Digraldi, Drott, Leggjaldi, Lut and Hosvir; their daughters were: Drumba, Kumba, Okkvinkalfa, Arinnefja, Ysja, Ambott, Eikintjasna, Totrughypja and Tronubeina; it would be nice if the description of the quest also listed their names, as we manage to convert them to Proto-Germanic
-	World = "Earth",
+	World = "earth",
 	Civilization = "germanic",
 	PlayerColor = "orange",
 	Conditions = function(s)
@@ -174,7 +174,7 @@ DefineQuest("karls-farm", { -- based on the Song of Rig; Source: Kevin Crossley-
 	Name = "Karla's Farm", -- in the Song of Rig, Rig (the god Heimdall) fathers Thrall, Karl and Jarl, each of which originates a class of the Norse world; namely serfs, peasants and warriors; "karl" is a reflex of Proto-Germanic "karla"
 	Icon = "icon-germanic-farm",
 	Description = "The young peasant Karla, son of Aban and Ammon, is a rapid learner. He is mastering the construction of huts and farms, and proposes the erection of a new farm to complete his learning process.", -- his parents were "Afi" and "Amma" in the Old Norse original, which are (respectively) reflexes of Proto-Germanic "Aban" and "Ammôn"
-	World = "Earth",
+	World = "earth",
 	Civilization = "germanic",
 	PlayerColor = "orange",
 	Conditions = function(s)
@@ -195,7 +195,7 @@ DefineQuest("karls-farm", { -- based on the Song of Rig; Source: Kevin Crossley-
 DefineQuest("heimdalls-progeny", {
 	Name = "Haimadala's Progeny",
 	Icon = "icon-jarl",
-	World = "Earth",
+	World = "earth",
 	Civilization = "germanic",
 	PlayerColor = "yellow",
 	FailEffects = function(s)
@@ -213,7 +213,7 @@ DefineQuest("jarls-hall", { -- based on the Song of Rig; Source: Kevin Crossley-
 	Name = "Erala's Hall", -- in the Song of Rig, Rig (the god Heimdall) fathers Thrall, Karl and Jarl, each of which originates a class of the Norse world; namely serfs, peasants and warriors; "jarl" is a reflex of Proto-Germanic "erala"
 	Icon = "icon-germanic-town-hall",
 	Description = "The fierce warrior Erala seeks to establish a hall for himself.",
-	World = "Earth",
+	World = "earth",
 	Civilization = "germanic",
 	PlayerColor = "yellow",
 	CompletionEffects = function(s)
@@ -231,7 +231,7 @@ DefineQuest("jarls-retainers", { -- based on the Song of Rig; Source: Kevin Cros
 	Name = "Erala's Retainers",
 	Icon = "icon-germanic-warrior",
 	Description = "The young warrior Erala was fast to master the art of the sword. He proposes to train a few brave warriors to protect our homeland.",
-	World = "Earth",
+	World = "earth",
 	Civilization = "germanic",
 	PlayerColor = "yellow",
 	CompletionEffects = function(s)
@@ -248,7 +248,7 @@ DefineQuest("master-of-metal", {
 	Name = "Master of Metal",
 	Icon = "icon-germanic-smithy",
 	Description = "Control over metalworking is essential for a chieftain's status to be maintained. Building a smithy will foster your mastery over metal and attract followers.",
-	World = "Earth",
+	World = "earth",
 	Civilization = "germanic",
 	PlayerColor = "yellow",
 	Conditions = function(s)
@@ -271,7 +271,7 @@ DefineQuest("master-of-metal", {
 DefineQuest("subjugate-the-karlings", {
 	Name = "Subjugate the Karlings",
 	Icon = "icon-germanic-worker",
-	World = "Earth",
+	World = "earth",
 	Civilization = "germanic",
 	PlayerColor = "yellow",
 	Objectives = {"- Subjugate the Karlings"},
@@ -284,7 +284,7 @@ DefineQuest("subjugate-the-karlings", {
 DefineQuest("neutralize-the-hersings", {
 	Name = "Neutralize the Hersings",
 	Icon = "icon-germanic-chieftain",
-	World = "Earth",
+	World = "earth",
 	Civilization = "germanic",
 	PlayerColor = "yellow",
 	Objectives = {"- Ally with or defeat the Hersings"},
@@ -298,7 +298,7 @@ DefineQuest("the-sun-shields", { -- Source: http://en.natmus.dk/historical-knowl
 	Name = "The Sun Shields", -- the Swedes believed their chieftain Yngve (identified with Freyr) provided them good seasons
 	Icon = "icon-germanic-bronze-shield",
 	Description = "A group of artisans has come to you with plans to produce circular bronze shields, embellished with details symbolizing the sun and the cycle of the seasons. However, they require investments in order to bring those plans to fruition.",
-	World = "Earth",
+	World = "earth",
 	Civilization = "germanic",
 	PlayerColor = "orange",
 	Conditions = function(s)
@@ -320,7 +320,7 @@ DefineQuest("the-sun-shields", { -- Source: http://en.natmus.dk/historical-knowl
 DefineQuest("thors-servant", {
 	Name = "Thunraz's Servant",
 	Icon = "icon-thor",
-	World = "Earth",
+	World = "earth",
 	Civilization = "germanic",
 	PlayerColor = "white",
 	FailEffects = function(s)
@@ -337,7 +337,7 @@ DefineQuest("thors-servant", {
 DefineQuest("the-discovery-of-gotland", {
 	Name = "The Discovery of Gotland",
 	Icon = "icon-germanic-transport-ship",
-	World = "Earth",
+	World = "earth",
 	Civilization = "germanic",
 	PlayerColor = "white",
 	Objectives = {"- Build a Chieftain's Hall in Gotland"},
@@ -358,7 +358,7 @@ DefineQuest("slay-the-berserker-brides-at-hlesey", { -- Source: Kevin Crossley-H
 			and GetPlayerData(GetFactionPlayer("hlesing-tribe"), "TotalNumUnitsConstructed") > 0
 			and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-dock") > 0 -- the player must have a dock
 			and GetPlayerData(trigger_player, "Allow", "upgrade-deity-thor") == "R" -- must be a worshipper of Thor/Thunraz
-			and GetNumUnitsAt(trigger_player, "buildings", {4089 - 128 - EarthStartX, 745 - 128 - EarthStartY}, {4089 + 128 - EarthStartX, 745 + 128 - EarthStartY}, GetMapLayer("", "Earth", 0)) > 0 -- the player must have a building relatively close to Hlesey
+			and GetNumUnitsAt(trigger_player, "buildings", {4089 - 128 - EarthStartX, 745 - 128 - EarthStartY}, {4089 + 128 - EarthStartX, 745 + 128 - EarthStartY}, GetMapLayer("", "earth", 0)) > 0 -- the player must have a building relatively close to Hlesey
 		) then
 			return true
 		end

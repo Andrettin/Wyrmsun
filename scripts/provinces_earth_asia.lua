@@ -26,7 +26,7 @@
 --
 
 DefineProvince("Anatolia", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -39,7 +39,7 @@ DefineProvince("Anatolia", {
 })
 
 DefineProvince("Arabia", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -57,7 +57,7 @@ DefineProvince("Arabia", {
 })
 
 DefineProvince("Armenia", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -72,7 +72,7 @@ DefineProvince("Armenia", {
 })
 
 DefineProvince("Asia Minor", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {
 		{554, 142} -- Troy
 	},
@@ -87,7 +87,7 @@ DefineProvince("Asia Minor", {
 })
 
 DefineProvince("Caucasus", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -107,7 +107,7 @@ DefineProvince("Caucasus", {
 })
 
 DefineProvince("India", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -119,7 +119,7 @@ DefineProvince("India", {
 })
 
 DefineProvince("Lebanon", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -127,7 +127,7 @@ DefineProvince("Lebanon", {
 })
 
 DefineProvince("Mesopotamia", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -135,7 +135,7 @@ DefineProvince("Mesopotamia", {
 })
 
 DefineProvince("Palestine", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -146,7 +146,7 @@ DefineProvince("Palestine", {
 })
 
 DefineProvince("Philippines", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -158,7 +158,7 @@ DefineProvince("Philippines", {
 })
 
 DefineProvince("Syria", {
-	World = "Earth",
+	World = "earth",
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",

@@ -28,7 +28,7 @@
 DefineQuest("the-first-dwarves", {
 	Name = "The First Dwarves",
 	Icon = "icon-modsognir",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Civilization = "dwarf",
 	PlayerColor = "red",
 	FailEffects = function(s)
@@ -46,7 +46,7 @@ DefineQuest("a-rocky-home", {
 	Name = "A Rocky Home",
 	Icon = "icon-modsognir",
 	Description = "A clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home. Beset by hostile natural forces on all sides, can they survive their first winter?",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Civilization = "dwarf",
 	PlayerColor = "red",
 	CompletionEffects = function(s)
@@ -63,7 +63,7 @@ DefineQuest("the-mead-of-wisdom", {
 	Name = "The Mead of Wisdom",
 	Icon = "icon-durin",
 	Description = "The sage of Modsognir's clan has disappeared, taken by two dwarves called Fjalar and Galar. Modsognir has sent Durin to enter their hall, rescue the sage - or what remains of him - and bring the evil pair to justice.\n\nMap: Fjalar's and Galar's Hall",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Civilization = "dwarf",
 	Map = "maps/nidavellir/fjalars-and-galars-hall.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/the_mead_of_wisdom.lua",
@@ -77,7 +77,7 @@ DefineQuest("the-treasures-of-svarinshaug", {
 	Icon = "icon-brising-smithy",
 	Description = "The dwarven smiths Brokk and Eitri are competing with the renowned sons of Ivaldi to craft the best artifacts for Modsognir. To obtain the necessary high quality ores will be perilous, however, as dangerous creatures abound in the deep mines where they lay...\n\nMap: Eastern Mines",
 	RequiredQuest = "the-mead-of-wisdom",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Civilization = "dwarf",
 	Map = "maps/nidavellir/eastern-mines.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/the_treasures_of_svarinshaug.lua",
@@ -91,7 +91,7 @@ DefineQuest("the-necklace-of-the-brisings", {
 	Icon = "icon-dwarven-steelclad",
 	Description = "The necklace made for Modsognir's wife by a group of four dwarven smiths has been stolen! The culprits, a band of local dwarven thieves, sneaked away with the necklace last night, going back to their hideout. We must recover the necklace from these bandits!\n\nMap: Aurvang",
 	RequiredQuest = "the-treasures-of-svarinshaug",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Civilization = "dwarf",
 	Map = "maps/nidavellir/aurvang.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/the_necklace_of_the_brisings.lua",
@@ -104,7 +104,7 @@ DefineQuest("the-slaying-of-grafvitnir", {
 	Name = "The Slaying of Grafvitnir",
 	Icon = "icon-wyrm",
 	Description = "Svarinshaug has been discovered to house a kobold tribe, who will attack the dwarves on sight for trespassing on their sacred ground. Modsognir's clan must now slay the kobolds and the wyrm they worship, Grafvitnir.",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Civilization = "dwarf",
 	PlayerColor = "black",
 	Objectives = {"- Destroy the Grafvitning Tribe"},
@@ -118,7 +118,7 @@ DefineQuest("the-dripping-hall", { -- based on the lay of Alvis from Norse mytho
 	Name = "The Dripping Hall",
 	Icon = "icon-dwarven-gryphon-rider",
 	Description = "We call the sky \"the dripping hall\", for the water that falls from it from time to time. The loremaster Alvis asks you to train a gryphon rider, so that we may better explore the skies.",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Civilization = "dwarf",
 	PlayerColor = "red",
 	Conditions = function(s)
@@ -142,7 +142,7 @@ DefineQuest("the-gleamer", { -- based on the lay of Alvis from Norse mythology; 
 	Name = "The Gleamer",
 	Icon = "icon-cauldron",
 	Description = "We call our moon \"the Gleamer\", for its reflection of light, and our sun \"Dvalin's Deceiver\", for the dangers Dvalin faced during the day outside the safety of our underground homes. The loremaster Alvis asks you to instigate our sages to discover the secrets of the moon, the sun and the stars.",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Civilization = "dwarf",
 	PlayerColor = "red",
 	Conditions = function(s)
@@ -168,7 +168,7 @@ DefineQuest("the-days-refuge", { -- based on the lay of Alvis from Norse mytholo
 	Name = "The Day's Refuge",
 	Icon = "icon-norse-runewriting",
 	Description = "We call the calm \"the day's refuge\", for the peace and safety enjoyed under the earth in our homes. The loremaster Alvis asks you to promote the invention of a system of writing, so that we may write treatises and learn more about the art of diplomacy and peace-making.",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Civilization = "dwarf",
 	PlayerColor = "red",
 	Conditions = function(s)
@@ -193,7 +193,7 @@ DefineQuest("the-deep", { -- based on the lay of Alvis from Norse mythology; Sou
 	Name = "The Deep",
 	Icon = "icon-dwarven-transport-ship",
 	Description = "We call the sea \"the deep\", for the profoundity of its waters. The loremaster Alvis asks you to build a ship, so that we may better explore the seas.",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Civilization = "dwarf",
 	PlayerColor = "red",
 	Conditions = function(s)
@@ -217,7 +217,7 @@ DefineQuest("the-burner", { -- based on the lay of Alvis from Norse mythology; S
 	Name = "The Burner",
 	Icon = "icon-cauldron",
 	Description = "We call fire \"the burner\", for the damage it inflicts on the body. The loremaster Alvis asks you to instigate our sages to discover the secrets of making potent flammable liquids.",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Civilization = "dwarf",
 	PlayerColor = "red",
 	Conditions = function(s)
@@ -241,7 +241,7 @@ DefineQuest("the-weaver-of-dreams", { -- based on the lay of Alvis from Norse my
 	Name = "The Weaver of Dreams",
 	Icon = "icon-dwarven-temple",
 	Description = "We call the night \"the weaver of dreams\", for the figments wrought into our minds as we sleep at night. The loremaster Alvis asks you to build a temple, so that we may train priests skilled in discerning visions from the dreamworld.",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Civilization = "dwarf",
 	PlayerColor = "red",
 	Conditions = function(s)
@@ -266,7 +266,7 @@ DefineQuest("the-tomb-of-durahn-eikinskjaldi", {
 	Icon = "icon-dwarven-shield-3",
 	Description = "The dwarves of the Eikinskjaldi Clan need to recover Durahn Eikinskjaldi's skull to prove their claim in the lordship of Joruvellir, but Durahn's tomb has fallen prey to a band of gnomish raiders...\n\nMap: Tomb of Durahn Eikinskjaldi",
 	RequiredQuest = "the-necklace-of-the-brisings",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Civilization = "dwarf",
 	Map = "maps/nidavellir/tomb-of-durahn-eikinskjaldi.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/the_tomb_of_durahn_eikinskjaldi.lua",
@@ -277,7 +277,7 @@ DefineQuest("shorbear-hold", {
 	Name = "Shorbear Hold",
 	Icon = "icon-dwarven-stronghold",
 	Description = "Our clan is renowned for its toolmaking and engineering prowess. Our skills would be well put to use in the construction of a stronghold to protect us against our enemies.",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Civilization = "dwarf",
 	PlayerColor = "blue",
 	Conditions = function(s)
@@ -301,7 +301,7 @@ DefineQuest("a-bargain-is-struck", {
 	Icon = "icon-rugnur",
 	Description = "A gnomish monarch arrives at a small border outpost led by Rugnur, asking that his clan craft a special scepter for him.\n\nMap: Chaincolt Foothills",
 	RequiredQuest = "the-tomb-of-durahn-eikinskjaldi",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Civilization = "dwarf",
 	Map = "maps/nidavellir/chaincolt-foothills.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/a_bargain_is_struck.lua",
@@ -314,7 +314,7 @@ DefineQuest("closing-the-gates", {
 	Icon = "icon-baglur",
 	Description = "Having retreated from the raiders' onslaught, Rugnur reaches the gates of his clan's tunnels.\n\nMap: Caverns of Chaincolt",
 	RequiredQuest = "a-bargain-is-struck",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Civilization = "dwarf",
 	Map = "maps/nidavellir/caverns-of-chaincolt.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/closing_the_gates.lua",
@@ -327,7 +327,7 @@ DefineQuest("searching-for-the-runecrafter", {
 	Icon = "icon-thursagan",
 	Description = "Rugnur's expedition reaches the northlands, and begin to search for the runesmith named Thursagan - the sage of fire.\n\nMap: Northern Wastelands",
 	RequiredQuest = "closing-the-gates",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Civilization = "dwarf",
 	Map = "maps/nidavellir/northern-wastelands.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/searching_for_the_runecrafter.lua",
@@ -340,7 +340,7 @@ DefineQuest("gathering-materials", {
 	Icon = "icon-dwarven-miner",
 	Description = "Rugnur and his brave companions, having spent two years harvesting materials in the tunnels of the eastern mines, now venture into the very heart of the goblins' territory to obtain the last materials needed...\n\nMap: Eastern Mines",
 	RequiredQuest = "searching-for-the-runecrafter",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Civilization = "dwarf",
 	Map = "maps/nidavellir/eastern-mines.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/gathering_materials.lua",
@@ -353,7 +353,7 @@ DefineQuest("hills-of-the-shorbear-clan", {
 	Icon = "icon-durstorn",
 	Description = "Durstorn, Rugnur and their companions travel to the hills of the Shorbear Clan, seeking access to that tribe's magnificent tools, which are needed to craft the Scepter of Fire.\n\nMap: Shorbear Hills",
 	RequiredQuest = "gathering-materials",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Civilization = "dwarf",
 	Map = "maps/nidavellir/shorbear-hills.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/hills_of_the_shorbear_clan.lua",
@@ -366,7 +366,7 @@ DefineQuest("the-wyrm", {
 	Icon = "icon-wyrm-vicious",
 	Description = "Rugnur's dwarves delve deep into underground caves, seeking to escape from the Shinsplitter Clan. However, the section of the old eastern mines that they reached had long since become the lair of Svafnir... the wyrm.\n\nMap: Svafnir's Lair",
 	RequiredQuest = "hills-of-the-shorbear-clan",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Civilization = "dwarf",
 	Map = "maps/nidavellir/svafnirs-lair.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/the_wyrm.lua",
@@ -379,7 +379,7 @@ DefineQuest("caverns-of-flame", {
 	Icon = "icon-goblin-swordsman",
 	Description = "Rugnur and his companions reach deep into the Caverns of Flame, where they find an ancient dwarven mechanism which may just allow them to prevent the Shinsplitters from getting their hands on the Scepter.\n\nMap: Caverns of Flame",
 	RequiredQuest = "the-wyrm",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Civilization = "dwarf",
 	Map = "maps/nidavellir/caverns-of-flame.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/caverns_of_flame.lua",
@@ -393,7 +393,7 @@ DefineQuest("last-stand-at-the-forge", {
 	Icon = "icon-dwarven-smithy",
 	Description = "Goblins are overruning dwarven settlements in the region of the Caverns of Flame. The volcanic forge must be defended, lest the goblins be able to use it to craft wondrous weapon with which they could inflict even more damage on dwarven societies.\n\nMap: Svafnir's Lair",
 	RequiredTechnology = "upgrade-dwarven-alchemy",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Civilization = "dwarf",
 	Map = "maps/nidavellir/svafnirs-lair.smp",
 	PlayerColor = "red"
@@ -404,7 +404,7 @@ DefineQuest("fafnirs-hoard", {
 	Name = "Fafnir's Hoard",
 	Icon = "icon-wyrm-vicious",
 	Description = "Andvari's gold hoard has been taken by the kobolds who care for the wyrm Fafnir. If you and Regin are to recover the gold, you must enter Fafnir's perilous domain and slay the giant beast.",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Civilization = "dwarf",
 --	QuestGiver = "Regin",
 	Area = "Gnitaheith",
@@ -418,7 +418,7 @@ DefineQuest("mushroom-fields", { -- inspired by the dialogue in Battle for Wesno
 	Name = "Mushroom Fields",
 	Icon = "icon-dwarven-mushroom-farm",
 	Description = "The harsh soil of Nidavellir supports little life. Long ago, our people learned how to grow mushrooms as a nutritive source of sustenance, which has allowed us to survive and multiply. We would do well to build a few mushroom farms to support ourselves here.",
-	World = "Nidavellir",
+	World = "nidavellir",
 	Civilization = "dwarf",
 	PlayerColor = "red",
 	Conditions = function(s)
@@ -445,7 +445,7 @@ DefineQuest("andvaris-gold", {
 	Conditions = function(s)
 		if (
 			GetFactionExists("oinling-clan") -- Andvari's clan must exist
-			and GetNumUnitsAt(trigger_player, "any", {490 - 256 - NidavellirStartX, 107 - 256 - NidavellirStartY}, {490 + 256 - NidavellirStartX, 107 + 256 - NidavellirStartY}, GetMapLayer("", "Nidavellir", 0)) > 0 -- the player must be within a certain distance of Andvari's holding
+			and GetNumUnitsAt(trigger_player, "any", {490 - 256 - NidavellirStartX, 107 - 256 - NidavellirStartY}, {490 + 256 - NidavellirStartX, 107 + 256 - NidavellirStartY}, GetMapLayer("", "nidavellir", 0)) > 0 -- the player must be within a certain distance of Andvari's holding
 		) then
 			return true
 		end
@@ -453,20 +453,20 @@ DefineQuest("andvaris-gold", {
 	end,
 	AcceptEffects = function(s)
 		local oinling_player = GetFactionPlayer("oinling-clan")
-		unit = CreateUnit("unit-revealer", trigger_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "Nidavellir", 0)) -- show the location of Andvari's holding
+		unit = CreateUnit("unit-revealer", trigger_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "nidavellir", 0)) -- show the location of Andvari's holding
 		SetUnitVariable(unit, "TTL", 600)
 	end,
 	CompletionEffects = function(s)
 		local oinling_player = GetFactionPlayer("oinling-clan")
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 10000)
-		unit = CreateUnit("unit-ring", PlayerNumNeutral, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "Nidavellir", 0))
+		unit = CreateUnit("unit-ring", PlayerNumNeutral, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "nidavellir", 0))
 		if (GetUniqueItemData("andvaranaut", "CanDrop")) then
 			SetUnitVariable(unit, "Unique", "andvaranaut")
 		else
 			SetUnitVariable(unit, "GenerateSpecialProperties", oinling_player) -- if Andvaranaut cannot drop, then generate a magic ring
 		end
 		SetUnitVariable(unit, "Identified", false)
-		unit = CreateUnit("unit-revealer", trigger_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "Nidavellir", 0)) -- show the location of the ring
+		unit = CreateUnit("unit-revealer", trigger_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "nidavellir", 0)) -- show the location of the ring
 		SetUnitVariable(unit, "TTL", 600)
 		CallDialogue("andvaris-gold-is-ours", trigger_player)
 	end,
@@ -479,7 +479,7 @@ DefineQuest("andvaris-gold", {
 DefineQuest("the-mead-of-poetry-brew-potions-of-invisibility", {
 	Name = "Brew Potions of Invisibility",
 	Icon = "icon-red-potion",
---	World = "Nidavellir",
+--	World = "nidavellir",
 --	Civilization = "dwarf",
 	PlayerColor = "black",
 	Unobtainable = true,
@@ -493,7 +493,7 @@ DefineQuest("the-mead-of-poetry-brew-potions-of-invisibility", {
 DefineQuest("the-mead-of-poetry-kill-kvasir", {
 	Name = "Kill Kvasir",
 	Icon = "icon-dwarven-witness",
---	World = "Nidavellir",
+--	World = "nidavellir",
 --	Civilization = "dwarf",
 	PlayerColor = "black",
 	Unobtainable = true,

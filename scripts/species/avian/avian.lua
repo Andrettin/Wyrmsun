@@ -50,7 +50,7 @@ DefineSpeciesGenus("haliaeetus", { -- Source: http://www.itis.gov/servlet/Single
 
 DefineSpecies("archaeopteryx", {
 	Name = "Archaeopteryx",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"compsognathus", "deinonychus", "saltopus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -58,7 +58,7 @@ DefineSpecies("archaeopteryx", {
 
 DefineSpecies("gallimimus", {
 	Name = "Gallimimus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"compsognathus", "deinonychus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -66,7 +66,7 @@ DefineSpecies("gallimimus", {
 
 DefineSpecies("ichthyornis", {
 	Name = "Ichthyornis",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"archaeopteryx", "gallimimus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -74,7 +74,7 @@ DefineSpecies("ichthyornis", {
 
 DefineSpecies("presbyornis", {
 	Name = "Presbyornis",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"archaeopteryx", "gallimimus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -82,7 +82,7 @@ DefineSpecies("presbyornis", {
 
 DefineSpecies("hoatzin", {
 	Name = "Hoatzin",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"ichthyornis", "presbyornis"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -92,7 +92,7 @@ DefineSpecies("bald-eagle", { -- Source: http://www.itis.gov/servlet/SingleRpt/S
 	Name = "Eagle", -- Bald Eagle
 	Genus = "haliaeetus",
 	Species = "leucocephalus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 --	Terrains = {"grass", "dirt", "pine-tree", "rock"}, -- correct?
 	EvolvesFrom = {"hoatzin"},
 	Era = "holocene",
@@ -101,7 +101,7 @@ DefineSpecies("bald-eagle", { -- Source: http://www.itis.gov/servlet/SingleRpt/S
 
 DefineSpecies("bird", {
 	Name = "Bird",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "pine-tree", "rock", "shallow-water", "dry-mud", "mud"}, -- correct?
 	EvolvesFrom = {"ichthyornis", "presbyornis"}, -- seems sensible, given the songbird is set to descend from these
 	ChildUpgrade = "upgrade-child"
@@ -109,7 +109,7 @@ DefineSpecies("bird", {
 
 DefineSpecies("crow", {
 	Name = "Crow",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "pine-tree", "rock"}, -- correct?
 	EvolvesFrom = {"ichthyornis", "presbyornis"}, -- seems sensible, given the songbird is set to descend from these
 	ChildUpgrade = "upgrade-child"
@@ -117,7 +117,7 @@ DefineSpecies("crow", {
 
 DefineSpecies("diatryma", {
 	Name = "Diatryma",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"ichthyornis", "presbyornis"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -125,49 +125,49 @@ DefineSpecies("diatryma", {
 
 DefineSpecies("duck", {
 	Name = "Duck",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"ichthyornis", "presbyornis"},
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("ostrich", {
 	Name = "Ostrich",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"ichthyornis", "presbyornis"},
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("owl", {
 	Name = "Owl",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"ichthyornis", "presbyornis"},
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("parrot", {
 	Name = "Parrot",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"hoatzin"},
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("passenger-pigeon", {
 	Name = "Passenger Pigeon",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"hoatzin"},
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("pelican", {
 	Name = "Pelican",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"ichthyornis", "presbyornis"},
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("phorusrhacus", {
 	Name = "Phorusrhacus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"ichthyornis", "presbyornis"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -175,7 +175,7 @@ DefineSpecies("phorusrhacus", {
 
 DefineSpecies("roc", {
 	Name = "Roc",
-	Homeworld = "Jotunheim",
+	Homeworld = "jotunheim",
 	EvolvesFrom = {"hoatzin"}, -- the Roc has a common ancestor with eagles
 	Era = "holocene",
 	ChildUpgrade = "upgrade-gryphon-child"
@@ -183,7 +183,7 @@ DefineSpecies("roc", {
 
 DefineSpecies("songbird", {
 	Name = "Songbird",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"ichthyornis", "presbyornis"},
 	ChildUpgrade = "upgrade-child"
 })

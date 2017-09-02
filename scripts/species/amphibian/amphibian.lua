@@ -27,7 +27,7 @@
 
 DefineSpecies("acanthostega", {
 	Name = "Acanthostega",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"rhipidistian fish"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -35,7 +35,7 @@ DefineSpecies("acanthostega", {
 
 DefineSpecies("elginerpeton", {
 	Name = "Elginerpeton",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"rhipidistian fish"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -43,7 +43,7 @@ DefineSpecies("elginerpeton", {
 
 DefineSpecies("hylerpeton", {
 	Name = "Hylerpeton",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"rhipidistian fish"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -51,7 +51,7 @@ DefineSpecies("hylerpeton", {
 
 DefineSpecies("ichthyostega", {
 	Name = "Ichthyostega",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"rhipidistian fish"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -59,7 +59,7 @@ DefineSpecies("ichthyostega", {
 
 DefineSpecies("tulerpeton", {
 	Name = "Tulerpeton",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"rhipidistian fish"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -67,7 +67,7 @@ DefineSpecies("tulerpeton", {
 
 DefineSpecies("ventastega", {
 	Name = "Ventastega",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"rhipidistian fish"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -75,7 +75,7 @@ DefineSpecies("ventastega", {
 
 DefineSpecies("aistopod", {
 	Name = "Aistopod",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"elginerpeton", "hylerpeton", "tulerpeton"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -83,7 +83,7 @@ DefineSpecies("aistopod", {
 
 DefineSpecies("cacops", {
 	Name = "Cacops",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"acanthostega", "ichthyostega", "ventastega"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -91,7 +91,7 @@ DefineSpecies("cacops", {
 
 DefineSpecies("diplocaulus", {
 	Name = "Diplocaulus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"elginerpeton", "ichthyostega", "tulerpeton"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -99,7 +99,7 @@ DefineSpecies("diplocaulus", {
 
 DefineSpecies("eogyrinus", {
 	Name = "Eogyrinus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"elginerpeton", "hylerpeton", "ventastega"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -107,7 +107,7 @@ DefineSpecies("eogyrinus", {
 
 DefineSpecies("greererpeton", {
 	Name = "Greererpeton",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"acanthostega", "ichthyostega", "tulerpeton"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -115,7 +115,7 @@ DefineSpecies("greererpeton", {
 
 DefineSpecies("diadectes", {
 	Name = "Diadectes",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"cacops", "diplocaulus", "eogyrinus", "greererpeton"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -123,7 +123,7 @@ DefineSpecies("diadectes", {
 
 DefineSpecies("pantylus", {
 	Name = "Pantylus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"aistopod", "diplocaulus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -131,7 +131,7 @@ DefineSpecies("pantylus", {
 
 DefineSpecies("peltobatrachus", {
 	Name = "Peltobatrachus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"cacops", "eogyrinus", "greererpeton"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -139,7 +139,7 @@ DefineSpecies("peltobatrachus", {
 
 DefineSpecies("platyhystrix", {
 	Name = "Platyhystrix",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"cacops", "eogyrinus", "greererpeton"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -147,7 +147,7 @@ DefineSpecies("platyhystrix", {
 
 DefineSpecies("seymouria", {
 	Name = "Seymouria",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"acanthostega", "hylerpeton", "ventastega"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -155,7 +155,7 @@ DefineSpecies("seymouria", {
 
 DefineSpecies("tuditanus", {
 	Name = "Tuditanus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"aistopod", "diplocaulus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -163,7 +163,7 @@ DefineSpecies("tuditanus", {
 
 DefineSpecies("hylonomus", {
 	Name = "Hylonomus",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"diadectes", "pantylus", "peltobatrachus", "platyhystrix", "seymouria", "tuditanus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -171,7 +171,7 @@ DefineSpecies("hylonomus", {
 
 DefineSpecies("frog", {
 	Name = "Frog",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- correct?
 	EvolvesFrom = {"peltobatrachus", "platyhystrix"},
 	ChildUpgrade = "upgrade-child"
@@ -179,7 +179,7 @@ DefineSpecies("frog", {
 
 DefineSpecies("salamander", {
 	Name = "Salamander",
-	Homeworld = "Earth",
+	Homeworld = "earth",
 	EvolvesFrom = {"peltobatrachus", "platyhystrix"},
 	ChildUpgrade = "upgrade-child"
 })
