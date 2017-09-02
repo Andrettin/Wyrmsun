@@ -1521,6 +1521,40 @@ DefineCharacter("egbert-of-wessex", { -- Source: Frank Stenton, "Anglo-Saxon Eng
 	end
 })
 
+DefineCharacter("swithun", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 147.
+	Name = "Swithun",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- bishop
+	Civilization = "anglo-saxon",
+	Faction = "wessex",
+	Date = 858, -- was bishop at Winchester as of 858
+	Deities = {"christian-god"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "wessex") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("aethelbald-of-wessex", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 147.
+	Name = "Aethelbald", -- "Æthelbald"
+	Gender = "male",
+	Type = "unit-teuton-heroic-swordsman", -- king
+	Civilization = "anglo-saxon",
+	Faction = "wessex",
+	Date = 858,
+	HistoricalTitles = {
+		"head-of-state", 858, 0, "wessex" -- was king of Wessex as of 858
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "wessex") then
+			return true
+		end
+		return false
+	end
+})
+
 --[[
 DefineCharacter("ethelred", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 127.
 	Name = "Ethelred", -- did the massacre of the Danes in 1002 AD

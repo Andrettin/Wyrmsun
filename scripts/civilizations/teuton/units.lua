@@ -96,18 +96,18 @@ DefineUnitType("unit-teuton-worker", {
 	Variations = {
 		{
 			"variation-id", "brown-hair",
-			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-english-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization"
+--			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
+--			"upgrade-forbidden", "upgrade-english-civilization",
+--			"upgrade-forbidden", "upgrade-latin-civilization"
 		},
 		-- English type name for when owned by other civilizations (i.e. Latins)
-		{
-			"variation-id", "brown-hair",
-			"type-name", "Worker",
-			"upgrade-forbidden", "upgrade-frankish-civilization",
-			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization"
-		}
+--		{
+--			"variation-id", "brown-hair",
+--			"type-name", "Worker",
+--			"upgrade-forbidden", "upgrade-frankish-civilization",
+--			"upgrade-forbidden", "upgrade-suebi-civilization",
+--			"upgrade-forbidden", "upgrade-teuton-civilization"
+--		}
 	},
 	Sounds = {
 --		"selected", "basic-teuton-voices-selected-group",
@@ -1193,18 +1193,18 @@ DefineUnitType("unit-teuton-town-hall", {
 		{
 			"variation-id", "town-hall",
 			"upgrade-required", "upgrade-teuton-masonry",
-			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-english-civilization"
+--			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
+--			"upgrade-forbidden", "upgrade-english-civilization"
 		},
 		-- English type name for when owned by other civilizations
-		{
-			"variation-id", "town-hall",
-			"type-name", "Town Hall",
-			"upgrade-required", "upgrade-teuton-masonry",
-			"upgrade-forbidden", "upgrade-frankish-civilization",
-			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization"
-		}
+--		{
+--			"variation-id", "town-hall",
+--			"type-name", "Town Hall",
+--			"upgrade-required", "upgrade-teuton-masonry",
+--			"upgrade-forbidden", "upgrade-frankish-civilization",
+--			"upgrade-forbidden", "upgrade-suebi-civilization",
+--			"upgrade-forbidden", "upgrade-teuton-civilization"
+--		}
 	},
 	Sounds = {
 --		"help", "basic-teuton-voices-help-town"

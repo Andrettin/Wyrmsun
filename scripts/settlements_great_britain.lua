@@ -534,6 +534,25 @@ DefineSettlement("exeter", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
+DefineSettlement("farnham", {
+	Name = "Farnham",
+	MapTemplate = "earth",
+	Position = {3821, 883},
+	CulturalNames = {
+		"anglo-saxon", "Fearnhamm", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"english", "Farnham"
+	},
+	HistoricalOwners = {
+		802, "wessex", -- Farnham's area was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		858, "wessex", -- Farnham was given to king Æthelbald of Wessex by bishop Swithun in 858; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 146.
+		1560, "england" -- Farnham's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		802, 0, "farm"
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
 DefineSettlement("glastonbury", {
 	Name = "Glastonbury",
 	MapTemplate = "earth",
@@ -717,7 +736,7 @@ DefineSettlement("leicester", {
 	},
 	HistoricalBuildings = {
 		410, 737, "farm",
-		737, 0, "temple" -- diocese of Leicester permanently founded in 737 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 109, 134.
+		737, 0, "temple" -- diocese of Leicester permanently founded in 737 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 109, 134, 146.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -987,6 +1006,7 @@ DefineSettlement("ripon", {
 	},
 	HistoricalBuildings = {
 		686, 0, "temple" -- a church was existent in Ripon as of 686; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 139.
+		-- Ripon ceased to be a bishopric when Wilfrid died in 709; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 145-146.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -1207,6 +1227,25 @@ DefineSettlement("whitby", {
 		663, 0, "temple" -- Streoneshalh had a monastery in 663; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 123.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("whithorn", {
+	Name = "Whithorn",
+	MapTemplate = "earth",
+	Position = {3739, 802},
+	CulturalNames = {
+		"anglo-saxon", "Hwitern", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		"english", "Whithorn"
+	},
+	HistoricalOwners = {
+		731, "northumbria", -- Whithorn was a part of Northumbria in c. 731; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 146.
+		802, "strathclyde", -- Whithorn's area was a part of Strathclyde c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "scotland" -- Whithorn's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		731, 0, "temple" -- a bishopric was founded at Whithorn in c. 731; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 146.
+	},
+	Regions = {"british-isles", "europe", "northwest-europe", "scotland", "west-and-central-europe"}
 })
 
 DefineSettlement("wilton", {
