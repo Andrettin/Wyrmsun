@@ -501,7 +501,7 @@ DefineUnitType("unit-settlement-site", {
 	Image = {"file", "neutral/buildings/settlement_site.png", "size", {128, 128}},
 	Shadow = {"file", "neutral/buildings/settlement_site_shadow.png", "size", {128, 128}},
 	Icon = "icon-settlement-site",
-	NeutralMinimapColor = {255, 255, 0},
+	NeutralMinimapColor = {128, 128, 0},
 	Construction = "construction-land2",
 	Speed = 0,
 	HitPoints = 25500,
