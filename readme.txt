@@ -80,6 +80,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added a starting town hall for players in the Central Park, Little Island, Looking Upwards, No Man's Land, North-South Conflict, Northern Lakes and Time for Decisions custom maps.
 - Increased the amount of space around deposits in random maps.
 - Unicorns (and other animals) can no longer start trapped in a single tile between trees/rocks on random custom maps.
+- Yale caves are now generated for random custom maps which use the Swamp tileset.
 
 * Miscellaneous
 - Fixed the "northwest-northeast-inner" border graphics, which were incorrectly using the graphics for the "northwest-northeast-southwest-inner" border.

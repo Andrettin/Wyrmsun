@@ -2274,6 +2274,10 @@ function GenerateRandomMap(arg)
 	--		end
 	--	end
 
+		if (GetCurrentTileset() == "swamp") then
+			CreateNeutralBuildings("unit-yale-cave", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
+		end
+		
 		CreateCritters(arg)
 
 		if (GetCurrentTileset() == "swamp" or GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest") then
