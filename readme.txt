@@ -92,9 +92,6 @@ https://github.com/Andrettin/Wyrmsun
 * Terrain
 - Terrain features (groups of tiles with the same terrain type and with a particular name for the feature) are now properly stored when saving a game.
 
-* Units
-- Added dwarven Ballista Warship (graphics by Jinn).
-
 -----------------------------------------------------------------------
 - 2.8.0
 -----------------------------------------------------------------------

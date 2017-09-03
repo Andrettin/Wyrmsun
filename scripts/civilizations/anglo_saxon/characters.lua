@@ -995,7 +995,7 @@ DefineCharacter("berhtwald-of-mercia", { -- probably not the same Berhtwald as t
 	Civilization = "anglo-saxon",
 	Faction = "mercia",
 	-- nephew of king Æthelred of Mercia
-	Date = 685, -- gave forty hides to abbot Aldhelm in 685
+	Date = 685, -- gave forty hides (a measure of land area) to abbot Aldhelm in 685
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "mercia") then
 			return true
@@ -1153,7 +1153,7 @@ DefineCharacter("aldhelm", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Type = "unit-teuton-priest", -- abbot, and later bishop
 	Civilization = "anglo-saxon",
 	Faction = "wessex",
-	Date = 685, -- received forty hides from Berhtwald in 685
+	Date = 685, -- received forty hides (a measure of land area) from Berhtwald in 685
 	-- became bishop at Sherborne in 705, having previously been abbot of Malmesbury
 	DeathDate = 709, -- died in 709/710
 	Deities = {"christian-god"},
