@@ -50,12 +50,6 @@ DefinePlane("heaven", {
 	Description = _("Within Heaven the monotheistic God dwells, served by a large host of angels. The forces of Heaven deplore those they deem to be false deities, such as the Aesir, a sentiment which sometimes erupts into open hostility. Their greatest enemies, however, are the demons of Hell.")
 })
 
-DefinePlane("helheim", {
-	Name = "Helheim",
---	Description = _("Inhabited by the monstrous Hel, this realm is one of the many underworld planes. It harbors the souls of the dead who worshiped the Aesir, and yet were deemed unworthy of entry into Asgard. In Helheim lies one of the roots of the mighty interplanar tree, Yggdrasill, the root having been corrupted by the dark forces of the plane.")
-	Description = _("Inhabited by the monstrous Hel, this realm is one of the many underworld planes. It harbors the souls of the dead who worshiped the Aesir, but were denied entry into Asgard by virtue of not having died in battle.")
-})
-
 DefinePlane("hell", {
 	Name = "Hell",
 	Description = _("Hell is the home to the sadistic creatures known as demons. Though its vicious inhabitants are powerful creatures, they are kept at bay by the forces of Heaven.")
@@ -64,6 +58,18 @@ DefinePlane("hell", {
 DefinePlane("material-plane", {
 	Name = "Material Plane",
 	Description = _("The material plane is the normal plane of existence, where worlds such as Earth and Nidavellir are located. As the other planes are made of pure magic, it is almost impossible for their inhabitants to travel to the material plane, as the difference in the composition of the realms would risk the traveller's very existence. The major exception being that particularly powerful mortal sorcerers are sometimes able to summon extraplanar beings for very short periods of time, maintaining their presence in a great effort of magical prowess. As more powerful extraplanar creatures are generally more rich in magic, they are also more difficult to summon.")
+})
+
+DefinePlane("muspelheim", {
+	Name = "Muspelheim",
+	Description = _("A primordial realm of flame, Muspelheim is inhabited by fiery creatures."),
+	Background = _("Muspelheim was the fire world of Norse mythology, the encounter of its heat with Niflheim's cold resulting in the creation of the cosmos.")
+})
+
+DefinePlane("niflheim", {
+	Name = "Niflheim",
+	Description = _("A dark, cold plane, Niflheim is inhabited by icy beings who can thrive in its freezing conditions. The abode of the goddess Hel is located in Niflheim. The plane harbors the souls of the dead who worshiped the Aesir, and yet were deemed unworthy of entry into Asgard by virtue of not having died in battle. In Helheim lies one of the roots of the mighty interplanar tree, Yggdrasill, the root having been corrupted by the dark forces of the plane."),
+	Background = _("Niflheim was the ice world of Norse mythology, the encounter of its cold with Muspelheim's heat resulting in the creation of the cosmos. Hel was a part of Niflheim.")
 })
 
 DefinePlane("nun", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 50.

@@ -236,7 +236,7 @@ DefineDeity("heimdall", { -- the horn Gjall belongs to him; identified with Rig 
 DefineDeity("hel", { -- Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 116.
 	Name = "Hel",
 	Pantheon = "Aesir",
-	HomePlane = "helheim",
+	HomePlane = "niflheim",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "male",

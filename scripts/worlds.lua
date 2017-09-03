@@ -48,13 +48,6 @@ DefineWorld("jotunheim", {
 	Background = _("Jotunheim was the world of the giants in Norse mythology. The ~<Alvissmol~> mentions that the giants call the sun \"Ever-Bright\", and the moon \"Rapid Traveller\".")
 })
 
-DefineWorld("muspelheim", {
-	Name = "Muspelheim",
-	Plane = "material-plane",
-	Description = _("A volcanic planet, Muspelheim is inhabited by fiery creatures."),
-	Background = _("Muspelheim was the fire world of Norse mythology, the encounter of its heat with Niflheim's cold resulting in the creation of the cosmos.")
-})
-
 DefineWorld("nidavellir", {
 	Name = "Nidavellir",
 	Plane = "material-plane",
@@ -62,11 +55,4 @@ DefineWorld("nidavellir", {
 	Description = _("The dark plains and mountains of Nidavellir are home to the dwarves, gnomes, goblins and kobolds. Of these diminutive races, the gnomes established the first civilization, and the dwarves the greatest. Nidavellir orbits around a star known as Dvalin's Deceiver, which received its name from Dvalin's dislike of sunlight. The legendary dwarf allegedly preferred the dark even more than most dwarves, complaining incessantly if the sunlight caught him unaware during his travels. The Deep Sea which lies to the east of the dwarven realms of Kal Kartha and Lyr remained unexplored for a long time, until dwarves began building ships robust enough to sail through it. Nidavellir has one moon, which is called \"the Gleamer\". Living beings were first introduced into Nidavellir by the Aesir, who greatly strained themselves to magically transport a few specimens from other worlds."),
 	Background = _("Nidavellir was the world of the dwarves in Norse mythology. The name means \"the Dark Fields\" or \"the Dark Crags\". Nidavellir is mentioned in the ~<Voluspo~>. In the ~<Alvissmol~> it is said that \"the Gleamer\" is the dwarves' term for the moon, while \"the Deceiver of Dvalin\" is their term for the sun."),
 	BaseTerrain = "Dark Plains"
-})
-
-DefineWorld("niflheim", {
-	Name = "Niflheim",
-	Plane = "material-plane",
-	Description = _("A dark, cold world, Niflheim is inhabited by resilient creatures who can thrive in its freezing conditions."),
-	Background = _("Niflheim was the ice world of Norse mythology, the encounter of its cold with Muspelheim's heat resulting in the creation of the cosmos. Hel was a part of Niflheim.")
 })

@@ -78,7 +78,13 @@ DefineSpecies("efreet", {
 
 DefineSpecies("fire-elemental", {
 	Name = "Fire Elemental",
-	HomePlane = "hades", -- change this to something else?
+	HomePlane = "muspelheim",
+	Sapient = true
+})
+
+DefineSpecies("ice-elemental", {
+	Name = "Ice Elemental",
+	HomePlane = "niflheim",
 	Sapient = true
 })
 

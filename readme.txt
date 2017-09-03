@@ -87,6 +87,7 @@ https://github.com/Andrettin/Wyrmsun
 - The initial random seed for the game now varies according to the computer's time and date, so that random maps should no longer yield the same result multiple times.
 - Added an encyclopedia page explaining the No Randomness mode in the Game Concepts section.
 - Added Diamond Rock (recolor of the Copper Rock by Kriss7475).
+- Muspelheim and Niflheim are now described as planes, rather than worlds. Helheim has now been subsumed into Niflheim, which is more accurate to the mythology.
 
 * Scenarios
 - A diamond deposit is now generated for the Nidavellir map.

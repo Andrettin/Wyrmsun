@@ -4324,9 +4324,10 @@ DefineUnitType("unit-orc-shaman", { Name = _("Shaman"),
 	HiddenInEditor = true
 } )
 
-DefineUnitType("unit-water-elemental", { Name = _("Water Elemental"),
+DefineUnitType("unit-water-elemental", {
+	Name = "Water Elemental",
 	Parent = "unit-template-unit",
---	Description = _("These creatures inhabit the warmer parts of the world of Niflheim. Although in many respects they act like a living being, they seem to be nearly entirely made out of water, putting in doubt just what they really are."),
+--	Description = "These creatures inhabit the primordial water plane of Nun. Although in many respects they act like a living being, they seem to be nearly entirely made out of water, putting in doubt just what they really are.",
 --	Image = {"file", "dwarf/units/dwarven_axefighter.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-water-elemental",
 	Costs = {"time", 70, "copper", 500, "lumber", 150},
