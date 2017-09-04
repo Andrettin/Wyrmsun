@@ -67,6 +67,12 @@ DefineMissileType("missile-javelin", {
 	DrawLevel = 50, Class = "missile-class-point-to-point", Sleep = 1, Speed = 32, Range = 0
 })
 
+DefineMissileType("missile-bullet", {
+	File = "missiles/bullet.png", Size = {32, 32}, Frames = 3, NumDirections = 1,
+	ImpactSound = "bow-hit",
+	DrawLevel = 50, Class = "missile-class-point-to-point", Sleep = 1, Speed = 32, Range = 0
+})
+
 DefineMissileType("missile-dwarven-ballista-bolt", {
 	File = "missiles/dwarven_ballista_bolt.png", Size = {64, 64}, Frames = 5, NumDirections = 9,
 	DrawLevel = 44, ImpactSound = "explosion",
@@ -87,7 +93,7 @@ DefineMissileType("missile-catapult-sandstone-rock", {
 	DrawLevel = 44, Class = "missile-class-point-to-point-cycle-once", Sleep = 1, Speed = 8, Range = 2,
 	ImpactMissile = "missile-impact", SplashFactor = 4
 })
-  
+
 DefineMissileType("missile-flaming-catapult-rock", {
 	File = "missiles/flaming_catapult_rock.png", Size = {32, 32}, Frames = 15, NumDirections = 9,
 	ImpactSound = "explosion",
