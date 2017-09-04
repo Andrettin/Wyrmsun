@@ -155,8 +155,8 @@ DefineSettlement("khag", { -- Khag tribe settlement site; this is the name of a 
 
 DefineSettlement("lggi", { -- Lggi tribe settlement site; this is the name of a tribe rather than a settlement, but we have no name for a settlement there yet
 	Name = "Lggi",
-	MapTemplate = "peaceful-valley",
-	Position = {8, 3},
+	MapTemplate = "nidavellir",
+	Position = {800, 285},
 	Major = true,
 	CulturalNames = {
 		"goblin", "Lggi"

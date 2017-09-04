@@ -25,10 +25,4 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineMapTemplate("peaceful-valley", { -- from Battle for Wesnoth: Descent into Darkness (Peaceful Valley)
-	Name = "Peaceful Valley",
-	MainTemplate = "nidavellir",
-	Width = 22,
-	Height = 22,
-	SubtemplatePosition = {802, 292}
-})
+-- from Battle for Wesnoth: Descent into Darkness (Peaceful Valley)
