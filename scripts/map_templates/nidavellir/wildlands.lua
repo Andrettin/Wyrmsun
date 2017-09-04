@@ -25,22 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineMapTemplate("wildlands", { -- from Battle for Wesnoth: The Hammer of Thursagan (Invaders)
-	Name = "Wildlands",
-	MainTemplate = "nidavellir",
-	Width = 47,
-	Height = 32,
-	SubtemplatePosition = {605, 206},
-	GeneratedNeutralUnits = {
-		"unit-copper-deposit", 2
-	},
-	PlayerLocationGeneratedNeutralUnits = {
-		"unit-copper-deposit", 1,
-		"unit-wood-pile", 16,
-		"unit-stone-pile", 16
-	}
-})
+-- from Battle for Wesnoth: The Hammer of Thursagan (Invaders)
 
-SetMapTemplateUnit("wildlands", "unit-goblin-watch-tower", "wildfang-tribe", {26, 8})
+SetMapTemplateUnit("nidavellir", "unit-goblin-watch-tower", "wildfang-tribe", {505, 199})
 
-SetMapTemplateUnit("wildlands", "unit-goblin-watch-tower", "wildfang-tribe", {28, 29})
+SetMapTemplateUnit("nidavellir", "unit-goblin-watch-tower", "wildfang-tribe", {607, 220})

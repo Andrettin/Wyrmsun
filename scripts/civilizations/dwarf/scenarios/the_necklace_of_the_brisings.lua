@@ -34,67 +34,23 @@ if (LoadedGame == false) then
 	SetPlayerData(1, "Resources", "copper", 5000)
 	SetPlayerData(1, "Resources", "lumber", 2000)
 	SetPlayerData(1, "Resources", "stone", 3000)
-	if not (GrandStrategy) then
-		SetPlayerData(1, "Allow", "unit-dwarven-smithy", "F")
-		SetPlayerData(1, "Allow", "unit-dwarven-lumber-mill", "F")
-		SetPlayerData(1, "Allow", "unit-dwarven-guard-tower", "F")
-		SetPlayerData(1, "Allow", "unit-dwarven-stronghold", "F")
-	end
+	SetPlayerData(1, "Allow", "unit-dwarven-smithy", "F")
+	SetPlayerData(1, "Allow", "unit-dwarven-lumber-mill", "F")
+	SetPlayerData(1, "Allow", "unit-dwarven-guard-tower", "F")
+	SetPlayerData(1, "Allow", "unit-dwarven-stronghold", "F")
 	
-	if not (GrandStrategy) then
-		unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Character", "modsognir")
-		unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Character", "durin")
-		unit = CreateUnit("unit-dwarven-steelclad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-		SetUnitVariable(unit, "Active", false)
-	elseif (GrandStrategyEventMap) then
-		CreateProvinceUnits("Svarinshaug", 0, 1, false, true)
-		CreateProvinceCustomHero("Svarinshaug", 0)
-		
-		if (FactionHasHero("dwarf", "brising-clan", "Modsognir")) then
-			unit = CreateUnit(GetGrandStrategyHeroUnitType("Modsognir"), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-			SetUnitVariable(unit, "Character", "modsognir")
-		end
-		if (FactionHasHero("dwarf", "brising-clan", "Durin")) then
-			unit = CreateUnit(GetGrandStrategyHeroUnitType("Durin"), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-			SetUnitVariable(unit, "Character", "durin")
-		end
-		
-		CreateProvinceUnits("Aurvang", 1, 1)
-		
-		if (GrandStrategyBattleBaseBuilding == false) then
-			-- don't allow the player to build/train units if in grand strategy mode if base-building is not active
-			SetPlayerData(0, "Allow", "unit-brising-miner", "F")
-			SetPlayerData(0, "Allow", "unit-dwarven-town-hall", "F")
-			SetPlayerData(0, "Allow", "unit-dwarven-mushroom-farm", "F")
-			SetPlayerData(0, "Allow", "unit-dwarven-barracks", "F")
-			SetPlayerData(0, "Allow", "unit-brising-smithy", "F")
-			SetPlayerData(0, "Allow", "unit-dwarven-lumber-mill", "F")
-			SetPlayerData(0, "Allow", "unit-dwarven-sentry-tower", "F")
-			SetPlayerData(0, "Allow", "unit-gold-mine", "F")
-			SetPlayerData(0, "Allow", "unit-silver-mine", "F")
-			SetPlayerData(0, "Allow", "unit-copper-mine", "F")
-			SetPlayerData(1, "Allow", "unit-dwarven-miner", "F")
-			SetPlayerData(1, "Allow", "unit-dwarven-town-hall", "F")
-			SetPlayerData(1, "Allow", "unit-dwarven-mushroom-farm", "F")
-			SetPlayerData(1, "Allow", "unit-dwarven-barracks", "F")
-			SetPlayerData(1, "Allow", "unit-dwarven-smithy", "F")
-			SetPlayerData(1, "Allow", "unit-dwarven-lumber-mill", "F")
-			SetPlayerData(1, "Allow", "unit-dwarven-sentry-tower", "F")
-			SetPlayerData(1, "Allow", "unit-gold-mine", "F")
-			SetPlayerData(1, "Allow", "unit-silver-mine", "F")
-			SetPlayerData(1, "Allow", "unit-copper-mine", "F")
-		end
-	end
+	unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+	SetUnitVariable(unit, "Character", "modsognir")
+	unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+	SetUnitVariable(unit, "Character", "durin")
+	unit = CreateUnit("unit-dwarven-steelclad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+	SetUnitVariable(unit, "Active", false)
 	
-	if (GrandStrategy == false or (GrandStrategyEventMap and GrandStrategyBattleBaseBuilding)) then
-		unit = CreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-	end
+	unit = CreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+	unit = CreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+	unit = CreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+	unit = CreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+	unit = CreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 end
 
 RemovePlayerObjective(GetFactionPlayer("Brising Clan"), "- Defeat your rivals")
@@ -160,10 +116,7 @@ AddTrigger("the-necklace-of-the-brisings-introduction",
 				)
 				end}
 			)
-			end},
-			nil,
-			nil,
-			GrandStrategy
+			end}
 		)
 		return false
 	end
@@ -200,9 +153,7 @@ AddTrigger("the-necklace-of-the-brisings-victory",
 					{"~!Continue"},
 					{function(s)
 						ActionVictory()
-						if (GrandStrategy == false) then
-							SetQuestCompleted("the-necklace-of-the-brisings", GameSettings.Difficulty)
-						end
+						SetQuestCompleted("the-necklace-of-the-brisings", GameSettings.Difficulty)
 					end}
 				)
 				end}

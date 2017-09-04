@@ -63,8 +63,9 @@ DefineSettlement("aurvang", { -- Aurvang settlement site; Aurvang is a region ra
 
 DefineSettlement("dreadskull", { -- Dreadskull tribe settlement site; this is the name of a tribe rather than a settlement, but we have no name for a settlement there yet
 	Name = "Dreadskull",
-	MapTemplate = "aurvang",
-	Position = {12, 3},
+	MapTemplate = "nidavellir",
+--	Position = {669, 298},
+	Position = {669, 296}, -- because of the mud tiles in its former position
 	Major = true,
 	CulturalNames = {
 		"goblin", "Dreadskull"
@@ -207,8 +208,8 @@ DefineSettlement("svarinshaug", {
 
 DefineSettlement("wildfang", { -- Wildfang tribe settlement site; this is the name of a tribe rather than a settlement, but we have no name for a settlement there yet
 	Name = "Wildfang",
-	MapTemplate = "wildlands",
-	Position = {34, 17},
+	MapTemplate = "nidavellir",
+	Position = {613, 208},
 	Major = true,
 	CulturalNames = {
 		"goblin", "Wildfang"
