@@ -1412,7 +1412,7 @@ DefineUnitType("unit-dwarven-lumber-mill", {
 	Parent = "unit-template-lumber-mill",
 	Civilization = "dwarf",
 	Description = _("Dwarven culture places a great emphasis on handling stone and metal, to the detriment of woodworking. Nevertheless, the lumber mill employs a number of dwarven artisans skilled in woodworking, who strive to improve methods of lumber production and the scouts' throwing axes."),
-	Background = _("In Germanic mythology, one instance related to dwarven woodwork to be found is the crafting of the ship Skidbladnir and the throwing spear Gungnir by the sons of Ivaldi. Skidbladnir is mentioned in the ~<Grimnismol~>."),
+	Background = _("In Norse mythology, one instance related to dwarven woodwork to be found is the crafting of the ship Skidbladnir and the throwing spear Gungnir by the sons of Ivaldi. Skidbladnir is mentioned in the ~<Grimnismol~>."),
 	Image = {"file", "dwarf/buildings/lumber_mill.png", "size", {96, 96}},
 	Shadow = {"file", "dwarf/buildings/lumber_mill_shadow.png", "size", {96, 96}},
 	Icon = "icon-dwarven-lumber-mill",
@@ -1443,6 +1443,22 @@ DefineUnitType("unit-dwarven-smithy", {
 	FireResistance = 20,
 	Drops = {"unit-stone-pile"},
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-spatha"}, -- drops Spatha to allow dropping dwarven unique swords
+	Sounds = {
+		"help", "basic-dwarf-voices-help-town"
+	}
+} )
+
+DefineUnitType("unit-dwarven-masons-shop", {
+	Parent = "unit-template-masons-shop",
+	Civilization = "dwarf",
+	Description = "Dwarven construction makes heavy use of stone as a material, so that the existence of a mason's shop in a settlement is all the more important.",
+	Background = "Dwarves are strongly associated with stone in Norse mythology, making their homes in rocky hills and stony caves. In the ~<Voluspo~> they are called \"the masters of the rocks\".",
+	Image = {"file", "dwarf/buildings/masons_shop.png", "size", {96, 96}},
+	Shadow = {"file", "dwarf/buildings/masons_shop_shadow.png", "size", {96, 96}},
+	Icon = "icon-dwarven-masons-shop",
+	Costs = {"time", 165, "copper", 660, "lumber", 0, "stone", 1485},
+	RepairCosts = {"lumber", 0, "stone", 1},
+	FireResistance = 20,
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}

@@ -680,10 +680,10 @@ DefinePanelContents(
 	},
 
 	-- Time Efficiency Bonus
-	{ Pos = {9, 103}, Condition = {ShowOpponent = false, TimeEfficiencyBonus = "only", GiveResource = "false", Supply = "false", MetalImprove = "false", LumberImprove = "false", AttackRange = "false", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
+	{ Pos = {9, 103}, Condition = {ShowOpponent = false, TimeEfficiencyBonus = "only", GiveResource = "false", Supply = "false", MetalImprove = "false", LumberImprove = "false", StoneImprove = "false", AttackRange = "false", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
 		More = {"Text", {Text = "Time Eff.:"}}
 	},
-	{ Pos = {115, 103}, Condition = {ShowOpponent = false, TimeEfficiencyBonus = "only", GiveResource = "false", Supply = "false", MetalImprove = "false", LumberImprove = "false", AttackRange = "false", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
+	{ Pos = {115, 103}, Condition = {ShowOpponent = false, TimeEfficiencyBonus = "only", GiveResource = "false", Supply = "false", MetalImprove = "false", LumberImprove = "false", StoneImprove = "false", AttackRange = "false", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
 		More = {"Text", {Text = Concat(
 			If(GreaterThan(ActiveUnitVar("TimeEfficiencyBonus", "Value"), 0), "+", ""),
 			Concat(String(ActiveUnitVar("TimeEfficiencyBonus", "Value")), "%")
@@ -705,6 +705,16 @@ DefinePanelContents(
 		More = {"Text", {Text = "Time Eff.:"}}
 	},
 	{ Pos = {115, 158}, Condition = {ShowOpponent = false, TimeEfficiencyBonus = "only", GiveResource = "false", LumberImprove = "only", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
+		More = {"Text", {Text = Concat(
+			If(GreaterThan(ActiveUnitVar("TimeEfficiencyBonus", "Value"), 0), "+", ""),
+			Concat(String(ActiveUnitVar("TimeEfficiencyBonus", "Value")), "%")
+		)}}
+	},
+
+	{ Pos = {9, 158}, Condition = {ShowOpponent = false, TimeEfficiencyBonus = "only", GiveResource = "false", StoneImprove = "only", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
+		More = {"Text", {Text = "Time Eff.:"}}
+	},
+	{ Pos = {115, 158}, Condition = {ShowOpponent = false, TimeEfficiencyBonus = "only", GiveResource = "false", StoneImprove = "only", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
 		More = {"Text", {Text = Concat(
 			If(GreaterThan(ActiveUnitVar("TimeEfficiencyBonus", "Value"), 0), "+", ""),
 			Concat(String(ActiveUnitVar("TimeEfficiencyBonus", "Value")), "%")

@@ -109,7 +109,7 @@ Units = {
 	"unit-dwarven-transport-ship", "unit-dwarven-ballista-warship",
 	"unit-dwarven-town-hall", "unit-dwarven-stronghold",
 	"unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
-	"unit-dwarven-lumber-mill", "unit-dwarven-smithy",
+	"unit-dwarven-lumber-mill", "unit-dwarven-smithy", "unit-dwarven-masons-shop",
 	"unit-dwarven-yale-pen", "unit-dwarven-temple", "unit-dwarven-market",
 	"unit-dwarven-academy",
 	"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower",
@@ -3899,6 +3899,44 @@ DefineUnitType("unit-template-smithy", {
 		"selected", "smithy-selected",
 --		"acknowledge", "dwarven-lumber-mill-acknowledge",
 		"ready", "smithy-ready",
+--		"help", "basic-dwarf-voices-help",
+		"dead", "building-destroyed"
+	}
+} )
+
+DefineUnitType("unit-template-masons-shop", {
+	Name = "Mason's Shop",
+	Parent = "unit-template-building",
+	Class = "masons-shop",
+	Costs = {"time", 150, "copper", 600, "lumber", 1350},
+	RepairHp = 4,
+	RepairCosts = {"copper", 1, "lumber", 1},
+	ImproveProduction = {"stone", 25},
+	Construction = "construction-land",
+	Speed = 0,
+	HitPoints = 500, -- 600 with masonry
+	TileSize = {3, 3}, BoxSize = {95, 95},
+	OwnershipInfluenceRange = 2,
+	Armor = 5, Missile = "missile-none",
+	Priority = 25, AnnoyComputerFactor = 15,
+	Points = 150,
+	Corpse = "unit-destroyed-3x3-place",
+	ExplodeWhenKilled = "missile-explosion",
+	Type = "land",
+	StoneImprove = true,
+	CanStore = {"stone"},
+	BuilderOutside = true,
+	IncreasesLuxuryDemand = true,
+	MaxHarvesters = 5,
+	Drops = {"unit-wood-pile", "unit-stone-pile"},
+	BurnPercent = 50,
+	BurnDamageRate = 1,
+	ResourceDemand = {"furniture", 3, "leather", 3},
+	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
+	Sounds = {
+		"selected", "click",
+--		"acknowledge", "dwarven-lumber-mill-acknowledge",
+		"ready", "storehouse-ready",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "building-destroyed"
 	}

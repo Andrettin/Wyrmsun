@@ -1234,13 +1234,11 @@ DefineCharacter("tatwine", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	end
 })
 
-DefineCharacter("bede", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 34.
+DefineCharacter("bede", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 34, 160-161.
 	Name = "Bede",
 	Gender = "male",
 	Type = "unit-teuton-priest",
 	Civilization = "anglo-saxon",
-	Faction = "angle-tribe", -- so that the name will be added to the name generation correctly
-	-- from which part of England?
 	Date = 731, -- wrote "Historia Ecclesiastica Venerabilis Bedae" around 731 AD
 	Deities = {"christian-god"},
 	AuthoredWorks = {"upgrade-work-historia-ecclesiastica-venerabilis-bedae"}
@@ -1298,7 +1296,7 @@ DefineCharacter("offa-of-northumbria", { -- Source: Frank Stenton, "Anglo-Saxon 
 	end
 })
 
-DefineCharacter("egbert", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 92, 145.
+DefineCharacter("egbert", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 92, 145, 160-161.
 	Name = "Egbert",
 	Gender = "male",
 	Type = "unit-teuton-priest", -- bishop, and later archbishop
@@ -1306,7 +1304,8 @@ DefineCharacter("egbert", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Faction = "northumbria",
 	Deities = {"christian-god"},
 	-- was Eadberht of Northumbria's brother
-	Date = 735, -- became archbishop of York in 735, having been previously bishop of York
+	Date = 734, -- was bishop of York in 734, when Bede wrote a letter to him
+	-- became archbishop of York in 735, having been previously bishop of York
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
 			return true

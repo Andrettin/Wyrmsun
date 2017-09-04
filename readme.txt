@@ -65,6 +65,7 @@ https://github.com/Andrettin/Wyrmsun
 - Smithies can now store Copper, Silver, Gold, Coal and Diamonds. Smithies now can only be built within a certain distance of deposits and mines.
 - Added Diamond Deposit/Mine (recolor of the Copper Deposit/Mine by Kriss7475). Diamonds convert to copper at a 800% rate.
 - Decorations are now removed when a building is constructed over a tile.
+- Added a Mason's Shop building for the dwarves, which stores stone and improves its processing by 25%.
 
 * Map Editor
 - Fixed crash which happened when placing a railroad over a neutral copper mine.
@@ -80,7 +81,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added a starting town hall for players in the Central Park, Little Island, Looking Upwards, No Man's Land, North-South Conflict, Northern Lakes and Time for Decisions custom maps.
 - Increased the amount of space around deposits in random maps.
 - Unicorns (and other animals) can no longer start trapped in a single tile between trees/rocks on random custom maps.
-- Yale caves are now generated for random custom maps which use the Swamp tileset.
+- Yale Caves are now generated for random custom maps which use the Swamp tileset.
 
 * Miscellaneous
 - Fixed the "northwest-northeast-inner" border graphics, which were incorrectly using the graphics for the "northwest-northeast-southwest-inner" border.
@@ -95,6 +96,9 @@ https://github.com/Andrettin/Wyrmsun
 * Terrain
 - Terrain features (groups of tiles with the same terrain type and with a particular name for the feature) are now properly stored when saving a game.
 - Decorations are now removed when a pathway is built over a tile.
+
+* Upgrades
+- Masonry is now researched at the Mason's Shop for the dwarves.
 
 -----------------------------------------------------------------------
 - 2.8.0

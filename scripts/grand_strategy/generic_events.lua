@@ -82,7 +82,7 @@ DefineGrandStrategyEvent("Skilled Masons", {
 			and FactionHasTechnologyType(EventFaction, "masonry")
 		) then
 			for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
-				if (SyncRand(100) < 1 and ProvinceHasBuildingClass(WorldMapProvinces[province_key].Name, "lumber-mill")) then
+				if (SyncRand(100) < 1 and ProvinceHasBuildingClass(WorldMapProvinces[province_key].Name, "masons-shop")) then
 					EventProvince = WorldMapProvinces[province_key]
 					return true
 				end

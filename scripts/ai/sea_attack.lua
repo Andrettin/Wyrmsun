@@ -47,6 +47,12 @@ local sea_funcs = {
 	function() return AiSet(GetAiUnitType("worker"), 9) end,
 	function() return AiNeed(GetAiUnitType("lumber-mill")) end,
 	function() return AiWait(GetAiUnitType("lumber-mill")) end,
+	function()
+		if (AiGetRace() == "dwarf") then
+			return AiNeed(GetAiUnitType("masons-shop"));
+		end
+		return false;
+	end,
 	function() return AiNeed(GetAiUnitType("market")) end, -- seems like a good point to build one
 	function() return AiNeed(GetAiUnitType("barracks")) end,
 	function() return AiForce(0, {GetAiUnitType("infantry"), 3}) end,

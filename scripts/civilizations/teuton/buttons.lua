@@ -171,44 +171,44 @@ DefineButton( { Pos = 5, Level = 1,
 	ForUnit = {"unit-teuton-worker"}
 })
   
-DefineButton( { Pos = 6, Level = 1,
+DefineButton( { Pos = 7, Level = 1,
 	Action = "build", Value = "unit-teuton-stables",
 	Key = "e", Hint = _("Build Stabl~!es"), Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
-DefineButton( { Pos = 7, Level = 1, Icon = "icon-germanic-temple",
+DefineButton( { Pos = 8, Level = 1, Icon = "icon-germanic-temple",
 	Action = "build", Value = "unit-teuton-temple",
 	Key = "p", Hint = "Build Tem~!ple", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
-DefineButton( { Pos = 7, Level = 1, Icon = "icon-teuton-church",
+DefineButton( { Pos = 8, Level = 1, Icon = "icon-teuton-church",
 	Action = "build", Value = "unit-teuton-temple",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-deity-christian-god"},
 	Key = "p", Hint = "Build Tem~!ple", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
-DefineButton( { Pos = 8, Level = 1,
+DefineButton( { Pos = 9, Level = 1,
 	Action = "build", Value = "unit-teuton-market",
 	Key = "m", Hint = "Build ~!Market", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
-DefineButton( { Pos = 9, Level = 1, Icon = "icon-teuton-watch-tower",
+DefineButton( { Pos = 10, Level = 1, Icon = "icon-teuton-watch-tower",
 	Action = "build", Value = "unit-teuton-watch-tower",
 	Key = "t", Hint = _("Build Watch ~!Tower"), Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
-DefineButton( { Pos = 10, Level = 1,
+DefineButton( { Pos = 11, Level = 1,
 	Action = "build", Value = "unit-teuton-dock",
 	Key = "d", Hint = _("Build ~!Dock"), Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
-DefineButton( { Pos = 11, Level = 1, Icon = "icon-teuton-university",
+DefineButton( { Pos = 12, Level = 1, Icon = "icon-teuton-university",
 	Action = "build", Value = "unit-teuton-university",
 	Key = "u", Hint = "Build ~!University", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}

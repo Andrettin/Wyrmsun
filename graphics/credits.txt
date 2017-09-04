@@ -11,6 +11,8 @@
 /graphics/dwarf/buildings/lumber_mill_shadow.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/buildings/market.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/buildings/market_shadow.png (by Jinn) (licensed under the CC0)
+/graphics/dwarf/buildings/masons_shop.png (by Jinn) (licensed under the CC0)
+/graphics/dwarf/buildings/masons_shop_shadow.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/buildings/mushroom_farm.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/buildings/mushroom_farm_shadow.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/buildings/sentry_tower.png (by Jinn) (licensed under the CC0)

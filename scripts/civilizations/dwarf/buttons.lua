@@ -110,7 +110,7 @@ DefineButton( { Pos = 3, Level = 1, Icon = "icon-dwarven-barracks",
 
 DefineButton( { Pos = 4, Level = 1, Icon = "icon-dwarven-lumber-mill",
 	Action = "build", Value = "unit-dwarven-lumber-mill",
-	Key = "l", Hint = _("Build ~!Lumber Mill"), Popup = "popup-building",
+	Key = "l", Hint = "Build ~!Lumber Mill", Popup = "popup-building",
 	ForUnit = {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
@@ -133,7 +133,17 @@ DefineButton( { Pos = 5, Level = 1, Icon = "icon-brising-smithy",
 	ForUnit = {"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner"}
 })
 
-DefineButton( { Pos = 6, Level = 1, Icon = "icon-dwarven-yale-pen",
+DefineButton( { Pos = 6, Level = 1, Icon = "icon-dwarven-masons-shop",
+	Action = "build", Value = "unit-dwarven-masons-shop",
+	Key = "n", Hint = "Build Maso~!n's Shop", Popup = "popup-building",
+	ForUnit = {
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker"
+	}
+})
+
+DefineButton( { Pos = 7, Level = 1, Icon = "icon-dwarven-yale-pen",
 	Action = "build", Value = "unit-dwarven-yale-pen",
 	Key = "y", Hint = _("Build ~!Yale Pen"), Popup = "popup-building",
 	ForUnit = {
@@ -143,7 +153,7 @@ DefineButton( { Pos = 6, Level = 1, Icon = "icon-dwarven-yale-pen",
 	}
 })
 
-DefineButton( { Pos = 6, Level = 1, Icon = "icon-joruvellir-yale-pen",
+DefineButton( { Pos = 7, Level = 1, Icon = "icon-joruvellir-yale-pen",
 	Action = "build", Value = "unit-joruvellir-yale-pen",
 	Key = "y", Hint = _("Build ~!Yale Pen"), Popup = "popup-building",
 	ForUnit = {
@@ -151,7 +161,7 @@ DefineButton( { Pos = 6, Level = 1, Icon = "icon-joruvellir-yale-pen",
 	}
 })
 
-DefineButton( { Pos = 7, Level = 1, Icon = "icon-dwarven-temple",
+DefineButton( { Pos = 8, Level = 1, Icon = "icon-dwarven-temple",
 	Action = "build", Value = "unit-dwarven-temple",
 	Key = "p", Hint = _("Build Tem~!ple"), Popup = "popup-building",
 	ForUnit = {
@@ -161,7 +171,7 @@ DefineButton( { Pos = 7, Level = 1, Icon = "icon-dwarven-temple",
 	}
 })
 
-DefineButton( { Pos = 8, Level = 1, Icon = "icon-dwarven-market",
+DefineButton( { Pos = 9, Level = 1, Icon = "icon-dwarven-market",
 	Action = "build", Value = "unit-dwarven-market",
 	Key = "m", Hint = "Build ~!Market", Popup = "popup-building",
 	ForUnit = {
@@ -171,7 +181,7 @@ DefineButton( { Pos = 8, Level = 1, Icon = "icon-dwarven-market",
 	}
 })
 
-DefineButton( { Pos = 9, Level = 1, Icon = "icon-dwarven-sentry-tower",
+DefineButton( { Pos = 10, Level = 1, Icon = "icon-dwarven-sentry-tower",
 	Action = "build", Value = "unit-dwarven-sentry-tower",
 	Key = "t", Hint = "Build Sentry ~!Tower", Popup = "popup-building",
 	ForUnit = {
@@ -181,7 +191,7 @@ DefineButton( { Pos = 9, Level = 1, Icon = "icon-dwarven-sentry-tower",
 	}
 } )
 
-DefineButton( { Pos = 10, Level = 1, Icon = "icon-dwarven-dock",
+DefineButton( { Pos = 11, Level = 1, Icon = "icon-dwarven-dock",
 	Action = "build", Value = "unit-dwarven-dock",
 	Key = "d", Hint = "Build ~!Dock", Popup = "popup-building",
 	ForUnit = {
@@ -191,7 +201,7 @@ DefineButton( { Pos = 10, Level = 1, Icon = "icon-dwarven-dock",
 	}
 } )
 
-DefineButton( { Pos = 11, Level = 1, Icon = "icon-dwarven-academy",
+DefineButton( { Pos = 12, Level = 1, Icon = "icon-dwarven-academy",
 	Action = "build", Value = "unit-dwarven-academy",
 	Key = "a", Hint = "Build ~!Academy", Popup = "popup-building",
 	ForUnit = {
@@ -447,12 +457,12 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-iron-plow",
 } )
 --]]
 
-DefineButton( { Pos = 7, Level = 0, Icon = "icon-masonry",
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-masonry",
 	Action = "research", Value = "upgrade-dwarven-masonry",
 	Allowed = "check-single-research",
 	Description = _("+20% Hit Points and +5 Armor for buildings, enables Road construction, and allows Sentry Towers to be upgraded to Guard Towers and Mead Halls to Bastions."),
-	Key = "m", Hint = _("Research ~!Masonry"), Popup = "popup-research",
-	ForUnit = {"unit-dwarven-lumber-mill"}
+	Key = "m", Hint = "Research ~!Masonry", Popup = "popup-research",
+	ForUnit = {"unit-dwarven-masons-shop"}
 } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-coinage",

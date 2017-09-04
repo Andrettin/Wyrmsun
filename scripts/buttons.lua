@@ -815,7 +815,7 @@ DefineButton( { Pos = 1, Level = 0,
 
 -- Buildings ---------------------------------------------------
 
-DefineButton( { Pos = 12, Level = 1, Icon = "icon-road",
+DefineButton( { Pos = 13, Level = 1, Icon = "icon-road",
 	Action = "build", Value = "unit-road",
 	Key = "o", Hint = "Build R~!oad", Popup = "popup-building",
 	ForUnit = {
@@ -827,7 +827,7 @@ DefineButton( { Pos = 12, Level = 1, Icon = "icon-road",
 	}
 })
 
-DefineButton( { Pos = 13, Level = 1, Icon = "icon-railroad",
+DefineButton( { Pos = 14, Level = 1, Icon = "icon-railroad",
 	Action = "build", Value = "unit-railroad",
 	Key = "r", Hint = "Build ~!Railroad", Popup = "popup-building",
 	ForUnit = {
@@ -839,7 +839,7 @@ DefineButton( { Pos = 13, Level = 1, Icon = "icon-railroad",
 	}
 })
 
-DefineButton( { Pos = 14, Level = 1, Icon = "icon-copper-mine",
+DefineButton( { Pos = 1, Level = 4, Icon = "icon-copper-mine",
 	Action = "build", Value = "unit-copper-mine",
 	Key = "c", Hint = _("Build ~!Copper Mine"), Popup = "popup-building",
 	ForUnit = {
@@ -851,7 +851,7 @@ DefineButton( { Pos = 14, Level = 1, Icon = "icon-copper-mine",
 	}
 })
 
-DefineButton( { Pos = 1, Level = 4, Icon = "icon-silver-mine",
+DefineButton( { Pos = 2, Level = 4, Icon = "icon-silver-mine",
 	Action = "build", Value = "unit-silver-mine",
 	Key = "v", Hint = _("Build Si~!lver Mine"), Popup = "popup-building",
 	ForUnit = {
@@ -863,7 +863,7 @@ DefineButton( { Pos = 1, Level = 4, Icon = "icon-silver-mine",
 	}
 })
 
-DefineButton( { Pos = 2, Level = 4, Icon = "icon-gold-mine",
+DefineButton( { Pos = 3, Level = 4, Icon = "icon-gold-mine",
 	Action = "build", Value = "unit-gold-mine",
 	Key = "g", Hint = _("Build ~!Gold Mine"), Popup = "popup-building",
 	ForUnit = {
@@ -875,7 +875,7 @@ DefineButton( { Pos = 2, Level = 4, Icon = "icon-gold-mine",
 	}
 })
 
-DefineButton( { Pos = 3, Level = 4, Icon = "icon-diamond-mine",
+DefineButton( { Pos = 4, Level = 4, Icon = "icon-diamond-mine",
 	Action = "build", Value = "unit-diamond-mine",
 	Key = "d", Hint = "Build ~!Diamond Mine", Popup = "popup-building",
 	ForUnit = {
@@ -887,7 +887,7 @@ DefineButton( { Pos = 3, Level = 4, Icon = "icon-diamond-mine",
 	}
 })
 
-DefineButton( { Pos = 4, Level = 4,
+DefineButton( { Pos = 5, Level = 4,
 	Action = "build", Value = "unit-yale-hunting-lodge",
 	Key = "y", Hint = "Build ~!Yale Hunting Lodge", Popup = "popup-building",
 	ForUnit = {

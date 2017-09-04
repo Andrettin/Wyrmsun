@@ -33,6 +33,12 @@ local end_loop_funcs = {
 -- EXPANSION AND DEFENSE
 
 	function() return AiNeed(GetAiUnitType("lumber-mill")) end,
+	function()
+		if (AiGetRace() == "dwarf") then
+			return AiNeed(GetAiUnitType("masons-shop"));
+		end
+		return false;
+	end,
 --	function() return AiNeed(GetAiUnitType("watch-tower")) end,
 --	function() return AiUpgradeTo(AiCannonTower()) end,
 	function() return AiNeed(GetAiUnitType("banner")) end,
@@ -143,6 +149,13 @@ local land_funcs = {
 	function() return AiResearch(GetAiUnitType("masonry")) end, -- needed for the stronghold
 	function() return AiWait(GetAiUnitType("masonry")) end,
 	
+	function()
+		if (AiGetRace() == "dwarf") then
+			return AiNeed(GetAiUnitType("masons-shop"));
+		end
+		return false;
+	end,
+
 	function() return AiUpgradeTo(GetAiUnitType("stronghold")) end,
 	function() return AiWait(GetAiUnitType("stronghold")) end,
 	function() return AiSet(GetAiUnitType("worker"), 25) end,
