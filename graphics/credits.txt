@@ -1447,6 +1447,7 @@
 /graphics/ui/resources/coal.png (by Jinn) (licensed under the CC0)
 /graphics/ui/resources/coal_extra_1.png (by Jinn) (licensed under the CC0)
 /graphics/ui/resources/copper.png (by Jinn) (licensed under the CC0)
+/graphics/ui/resources/diamonds.png (by Kriss7475) (licensed under the CC0)
 /graphics/ui/resources/fish.png (by Jinn) (licensed under the CC0)
 /graphics/ui/resources/food.png (by Jinn) (licensed under the CC0)
 /graphics/ui/resources/fuel.png (by Jinn) (licensed under the CC0)
