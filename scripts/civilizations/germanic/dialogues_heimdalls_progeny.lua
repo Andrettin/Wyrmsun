@@ -116,11 +116,12 @@ DefineDialogue("thrallings-subjugated", {
 							ConvertUnit(uncount[unit1], GetFactionClassUnitType(GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class"), GetPlayerData(trigger_player, "Faction")))
 						end
 					end
+					SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 2500)
 				end
 			}
 		},
 		{
-			"text", "Hint: Select a Bura, press the Build Structure button and then click on the Build Chieftain's Hall button to build the structure required for this quest. The Chieftain's Hall can only be built on a Settlement Site."
+			"text", "Hint: Select a Bura, press the Build Structure button and then click on the Build Chieftain's Hall button to build the structure required for this quest. The Chieftain's Hall can only be built on a Settlement Site. A Settlement Site is present near your starting War Lodge."
 		}
 	}
 })
@@ -170,6 +171,7 @@ DefineDialogue("jarl-attacks-the-karlings", {
 							OrderUnit(GetFactionPlayer("karling-tribe"), GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, {GetUnitVariable(erala_hero_unit, "PosX"), GetUnitVariable(erala_hero_unit, "PosY")}, "attack")
 						end
 					end
+					SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 2500)
 				end
 			}
 		}
