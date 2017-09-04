@@ -99,6 +99,9 @@ https://github.com/Andrettin/Wyrmsun
 - Terrain features (groups of tiles with the same terrain type and with a particular name for the feature) are now properly stored when saving a game.
 - Decorations are now removed when a pathway is built over a tile.
 
+* Units
+- Increased transport ship trade capacity.
+
 * Upgrades
 - Masonry is now researched at the Mason's Shop for the dwarves.
 

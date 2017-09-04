@@ -3629,7 +3629,7 @@ DefineUnitType("unit-template-transport-ship", {
 	CanGatherResources = {
 		{
 			"resource-id", "trade",
-			"resource-capacity", 400,
+			"resource-capacity", 600,
 			"resource-step", 4,
 			"wait-at-resource", 6,
 			"wait-at-depot", 150
