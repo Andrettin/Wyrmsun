@@ -92,6 +92,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * Scenarios
 - A diamond deposit is now generated for the Nidavellir map.
+- Added passages between the patches of dry mud within the Joruvellir desert.
+- Added some rock and tree tiles to Joruvellir.
 
 * Terrain
 - Terrain features (groups of tiles with the same terrain type and with a particular name for the feature) are now properly stored when saving a game.
