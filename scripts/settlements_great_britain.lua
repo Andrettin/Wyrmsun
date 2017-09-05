@@ -851,6 +851,24 @@ DefineSettlement("malmesbury", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
+DefineSettlement("nursling", {
+	Name = "Nursling",
+	MapTemplate = "earth",
+	Position = {3808, 889},
+	CulturalNames = {
+		"english", "Nursling"
+	},
+	HistoricalOwners = {
+		716, "wessex",
+		802, "wessex", -- Nursling's area was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "england" -- Nursling's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		-- 716, 0, "temple" -- the West Saxon Wynfrith/Boniface was the head of the monastic school at a monastery in Nursling in 716, when he left it to go perform missionary work in Frisia; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 168.
+	},
+	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+})
+
 DefineSettlement("ockley", {
 	Name = "Ockley",
 	MapTemplate = "earth",

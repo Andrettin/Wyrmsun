@@ -252,7 +252,8 @@ DefineSettlement("salzburg", {
 	},
 	HistoricalBuildings = {
 		45, 0, "town-hall",
-		768, 0, "temple" -- Archbishopric existent in Salzburg during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		739, 0, "temple" -- Salzburg became a bishopric in 739; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 169.
+		-- archbishopric existent in Salzburg during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	Regions = {"europe", "west-and-central-europe", "roman-danube", "germany-netherlands", "cisleithania"}
 })

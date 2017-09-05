@@ -152,6 +152,7 @@ DefineCampaign("the-heirs-return", {
 	MapTemplateStartPos = {3627, 695},
 	MapSize = {256, 256}
 })
+--]]
 
 DefineCampaign("the-fall-of-mercia", {
 	Name = "The Fall of Mercia",
@@ -162,4 +163,3 @@ DefineCampaign("the-fall-of-mercia", {
 	MapTemplateStartPos = {3627, 695},
 	MapSize = {256, 256}
 })
---]]

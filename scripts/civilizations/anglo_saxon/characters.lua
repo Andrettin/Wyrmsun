@@ -1004,6 +1004,25 @@ DefineCharacter("berhtwald-of-mercia", { -- probably not the same Berhtwald as t
 	end
 })
 
+DefineCharacter("aldhelm", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 89, 142, 151; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 98.
+	Name = "Aldhelm",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- abbot, and later bishop
+	Civilization = "anglo-saxon",
+	Faction = "wessex",
+	Date = 685, -- received forty hides (a measure of land area) from Berhtwald in 685
+	-- became bishop at Sherborne in 705, having previously been abbot of Malmesbury
+	DeathDate = 709, -- died in 709/710
+	Deities = {"christian-god"},
+	 -- composed the "Helleborus" riddle
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "wessex") then
+			return true
+		end
+		return false
+	end
+})
+
 DefineCharacter("aldfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 88, 144.
 	Name = "Aldfrith",
 	Gender = "male",
@@ -1073,6 +1092,23 @@ DefineCharacter("swithberht", { -- Source: Frank Stenton, "Anglo-Saxon England",
 	end
 })
 
+DefineCharacter("berhtwald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 142, 145.
+	Name = "Berhtwald",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- abbot, and later archbishop
+	Civilization = "anglo-saxon",
+	Faction = "kent",
+	Date = {692, 7, 1}, -- became archbishop of Canterbury on 692.7.1, having previously been abbot of Reculver
+	DeathDate = 731, -- died in 731
+	Deities = {"christian-god"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "kent" or GetPlayerData(trigger_player, "Faction") == "englaland") then
+			return true
+		end
+		return false
+	end
+})
+
 DefineCharacter("willibrord", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 166-167.
 	Name = "Willibrord",
 	Gender = "male",
@@ -1085,23 +1121,6 @@ DefineCharacter("willibrord", { -- Source: Frank Stenton, "Anglo-Saxon England",
 	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria" or GetPlayerData(trigger_player, "Faction") == "englaland") then
-			return true
-		end
-		return false
-	end
-})
-
-DefineCharacter("berhtwald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 142, 145.
-	Name = "Berhtwald",
-	Gender = "male",
-	Type = "unit-teuton-priest", -- abbot, and later archbishop
-	Civilization = "anglo-saxon",
-	Faction = "kent",
-	Date = {692, 7, 1}, -- became archbishop of Canterbury on 692.7.1, having previously been abbot of Reculver
-	DeathDate = 731, -- died in 731
-	Deities = {"christian-god"},
-	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "kent" or GetPlayerData(trigger_player, "Faction") == "englaland") then
 			return true
 		end
 		return false
@@ -1182,25 +1201,6 @@ DefineCharacter("cenred", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	end
 })
 
-DefineCharacter("aldhelm", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 89, 142, 151; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 98.
-	Name = "Aldhelm",
-	Gender = "male",
-	Type = "unit-teuton-priest", -- abbot, and later bishop
-	Civilization = "anglo-saxon",
-	Faction = "wessex",
-	Date = 685, -- received forty hides (a measure of land area) from Berhtwald in 685
-	-- became bishop at Sherborne in 705, having previously been abbot of Malmesbury
-	DeathDate = 709, -- died in 709/710
-	Deities = {"christian-god"},
-	 -- composed the "Helleborus" riddle
-	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "wessex") then
-			return true
-		end
-		return false
-	end
-})
-
 DefineCharacter("acca", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 151.
 	Name = "Acca",
 	Gender = "male",
@@ -1227,6 +1227,43 @@ DefineCharacter("beorhtfrith", { -- Source: Frank Stenton, "Anglo-Saxon England"
 	Date = 711, -- defeated a Pictish army in the Scottish central plain in 711
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("wynfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 168-169.
+	Name = "Wynfrith", -- also known as Boniface
+	Gender = "male",
+	Type = "unit-teuton-priest",
+	Civilization = "anglo-saxon",
+	Faction = "wessex",
+	-- born just before 675
+	Date = 716, -- was the head of the monastic school at a monastery in Nursling in 716, when he left it to go perform missionary work in Frisia
+	-- his mission to Frisia was cancelled due to the pagan Frisians reconquering land from the Franks in 717 
+	-- on 722.11.30 he was consecrated as bishop to the Germans by the pope
+	-- became archbishop in 732 (though without a permanent seat)
+	-- in 747 he settled the seat of his archbishopric at Mainz
+	Deities = {"christian-god"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "wessex" or GetPlayerData(trigger_player, "Faction") == "englaland") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("daniel", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 168.
+	Name = "Daniel",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- bishop
+	Civilization = "anglo-saxon",
+	Faction = "wessex",
+	Date = 718, -- was the bishop of Winchester as of 718
+	Deities = {"christian-god"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "wessex" or GetPlayerData(trigger_player, "Faction") == "englaland") then
 			return true
 		end
 		return false

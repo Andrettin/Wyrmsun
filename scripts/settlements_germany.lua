@@ -145,6 +145,22 @@ DefineSettlement("flensburg", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
+DefineSettlement("freising", {
+	Name = "Freising",
+	MapTemplate = "earth",
+	Position = {4114, 947},
+	CulturalNames = {
+		"teuton", "Freising"
+	},
+	HistoricalOwners = {
+		526, "bavarian-tribe", -- Freising's area was in Bavarian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+	},
+	HistoricalBuildings = {
+		739, 0, "temple" -- Freising became a bishopric in 739; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 169.
+	},
+	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
+})
+
 DefineSettlement("kiel", {
 	Name = "Kiel",
 	MapTemplate = "earth",
@@ -227,6 +243,7 @@ DefineSettlement("mainz", {
 		161, 0, "stronghold", -- Legionary base present in Mogontiacum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		161, 0, "barracks",
 		395, 0, "temple", -- Mayence was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		-- in 747 Wynfrith/Boniface settled the seat of his archbishopric at Mainz; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 169.
 		1476, 0, "university" -- University founded in Mainz in 1476; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		-- Mayence possessed a fortress in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
@@ -302,6 +319,22 @@ DefineSettlement("paderborn", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
+DefineSettlement("passau", {
+	Name = "Passau",
+	MapTemplate = "earth",
+	Position = {4149, 945},
+	CulturalNames = {
+		"teuton", "Passau"
+	},
+	HistoricalOwners = {
+		526, "bavarian-tribe", -- Passau's area was in Bavarian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+	},
+	HistoricalBuildings = {
+		739, 0, "temple" -- Passau became a bishopric in 739; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 169.
+	},
+	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
+})
+
 DefineSettlement("regensburg", {
 	Name = "Regensburg",
 	MapTemplate = "earth",
@@ -320,7 +353,8 @@ DefineSettlement("regensburg", {
 	HistoricalBuildings = {
 		170, 172, "guard-tower",
 		175, 526, "guard-tower", -- The Legio III Italica began building in 175 the fortress of Castra Regina near where the Regensburg-Kumpfmühl camp had been; Source: "Ancient Warfare VII.6", 2013, p. 25.
-		526, 0, "town-hall"
+		526, 0, "town-hall",
+		739, 0, "temple" -- Regensburg became a bishopric in 739; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 169.
 	},
 	HistoricalUnits = {
 		170, "unit-teuton-swordsman", 375, "rome", -- the "Cohors II Aquitanorum equitata civium Romanorum" (a mixed unit, which contained circa 375 auxiliary infantry and 125 cavalry) was stationed at Regensburg-Kumpfmühl when it was attacked and destroyed in 172, during the First Marcomannic War; it likely was stationed there at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
