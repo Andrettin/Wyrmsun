@@ -25,6 +25,22 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSettlement("echternach", {
+	Name = "Echternach",
+	MapTemplate = "earth",
+	Position = {3967, 911},
+	CulturalNames = {
+		"teuton", "Echternach"
+	},
+	HistoricalOwners = {
+		739, "francia"
+	},
+	HistoricalBuildings = {
+		739, 0, "temple" -- a monastery under the protection of Francia existed in Echternach as of 739; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 167.
+	},
+	Regions = {"europe", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
+})
+
 DefineSettlement("tongres", {
 	Name = "Tongres",
 	MapTemplate = "earth",

@@ -1056,6 +1056,41 @@ DefineCharacter("john-of-beverley", { -- Source: Frank Stenton, "Anglo-Saxon Eng
 	end
 })
 
+DefineCharacter("swithberht", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 166.
+	Name = "Swithberht",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- bishop
+	Civilization = "anglo-saxon",
+	Faction = "northumbria", -- received consecration from Wilfrid of Northumbria
+	Date = 692, -- was consecrated bishop with seat at Wijk bij Duurstede in 692/693
+	-- partook in a mission to Frisia
+	Deities = {"christian-god"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "northumbria" or GetPlayerData(trigger_player, "Faction") == "englaland") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("willibrord", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 166-167.
+	Name = "Willibrord",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- bishop
+	Civilization = "anglo-saxon",
+	Faction = "northumbria", -- from Northumbria
+	Date = 695, -- was the leader of the mission to Frisia as of 695
+	-- became bishop of Frisia on 695.11.21, being consecrated by pope Sergius I
+	DeathDate = 739, -- died in 739 in the monastery of Echternach
+	Deities = {"christian-god"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "northumbria" or GetPlayerData(trigger_player, "Faction") == "englaland") then
+			return true
+		end
+		return false
+	end
+})
+
 DefineCharacter("berhtwald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 142, 145.
 	Name = "Berhtwald",
 	Gender = "male",

@@ -78,3 +78,21 @@ DefineSettlement("leeuwarden", {
 	},
 	Regions = {"europe", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
 })
+
+DefineSettlement("wijk-bij-duurstede", {
+	Name = "Wijk bij Duurstede",
+	MapTemplate = "earth",
+	Position = {3959, 866},
+	CulturalNames = {
+--		"dutch", "Wijk bij Duurstede"
+	},
+	HistoricalOwners = {
+		692, "northumbria",
+		695, "francia", -- by 695 Pippin, who de facto ruled Francia, had taken the mission under his wing; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 166-167.
+		1560, "spain" -- Wijk bij Duurstede's area was a Spanish possession in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		692, 0, "temple" -- Swithberht was consecrated bishop with seat at Wijk bij Duurstede in 692/693 by Wilfrid of Northumbria; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 166.
+	},
+	Regions = {"europe", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
+})

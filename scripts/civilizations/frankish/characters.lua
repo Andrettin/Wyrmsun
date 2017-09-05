@@ -374,12 +374,16 @@ DefineCharacter("agilbert", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Deities = {"christian-god"}
 })
 
-DefineCharacter("ebroin-of-neustria", { -- Mayor of the Palace of Neustria until 675; Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 405.
+DefineCharacter("ebroin-of-neustria", { -- Source: Archibald R. Lewis, "The Dukes in the Regnum Francorum, A.D. 550-751", 1976, p. 405.
 	Name = "Ebroin",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- mayor of the palace
 	Civilization = "frankish",
 	Faction = "neustria",
+	DeathDate = 675, -- ceased to be mayor of the palace of Neustria
+	HistoricalTitles = {
+		"head-of-government", 0, 675, "neustria" -- Mayor of the Palace of Neustria until 675
+	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "neustria") then
 			return true
@@ -388,13 +392,19 @@ DefineCharacter("ebroin-of-neustria", { -- Mayor of the Palace of Neustria until
 	end
 })
 
-DefineCharacter("pepin-of-herstal", { -- became Mayor of the Palace of Austrasia in 675; died in 714; Source: "Medieval Warfare V.2", 2013, p. 7.
+DefineCharacter("pepin-of-herstal", { -- Source: "Medieval Warfare V.2", 2013, p. 7.
 	Name = "Pepin",
 	ExtraName = "of Herstal",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- Mayor of the Palace of Austrasia
 	Civilization = "frankish",
 	Faction = "austrasia",
+	Date = 675,
+	-- won the battle of Tertry, in 687, and as a result enjoyed supremacy in all of Francia; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 166.
+	DeathDate = 714, -- died in 714; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 167.
+	HistoricalTitles = {
+		"head-of-government", 675, 714, "austrasia" -- became Mayor of the Palace of Austrasia in 675
+	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "austrasia") then
 			return true
