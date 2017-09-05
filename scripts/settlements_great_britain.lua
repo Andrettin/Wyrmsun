@@ -826,7 +826,7 @@ DefineSettlement("london", {
 	HistoricalBuildings = {
 		410, 0, "town-hall",
 		604, 0, "temple", -- a church was built in London in 604 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 109.
-		-- London possessed a bishopric as of 704/705; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 142.
+		-- London possessed a bishopric as of 704; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 142, 179.
 		1836, 0, "university" -- University founded in London in 1836; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}

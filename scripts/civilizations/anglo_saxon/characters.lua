@@ -1167,13 +1167,13 @@ DefineCharacter("osred", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	end
 })
 
-DefineCharacter("waldhere", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 142.
+DefineCharacter("waldhere", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 142, 179.
 	Name = "Waldhere",
 	Gender = "male",
 	Type = "unit-teuton-priest", -- bishop
 	Civilization = "anglo-saxon",
 	Faction = "essex",
-	Date = 704, -- was bishop of London as of 704/705
+	Date = 704, -- was bishop of London as of 704
 	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "middlesex" or GetPlayerData(trigger_player, "Faction") == "essex") then
