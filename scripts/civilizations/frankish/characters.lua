@@ -457,13 +457,18 @@ DefineCharacter("theoderic-iv-of-francia", { -- king of the Franks as Theoderic 
 	end
 })
 
-DefineCharacter("charles-martel", { -- Charles Martel; became Mayor of the Palace of Francia in 718; died in 741; Source: "Medieval Warfare V.2", 2013, p. 7.
+DefineCharacter("charles-martel", { -- Charles Martel; Source: "Medieval Warfare V.2", 2013, p. 7.
 	Name = "Karl", -- correct in Old Frankish?
 	ExtraName = "Martel",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- Mayor of the Palace
 	Civilization = "frankish",
 	Faction = "francia",
+	Date = 718,
+	DeathDate = 741, -- died in 741; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 169.
+	HistoricalTitles = {
+		"head-of-government", 718, 741, "francia" -- became Mayor of the Palace of Francia in 718
+	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
 			return true
@@ -486,7 +491,7 @@ DefineCharacter("childebrand", { -- Frankish duke; uncle of Pepin the Short; Sou
 	end
 })
 
-DefineCharacter("pepin-the-short", { -- became king of the Franks in 751; died in 768; Source: "Medieval Warfare V.2", 2013, p. 7.
+DefineCharacter("pepin-the-short", { -- Source: "Medieval Warfare V.2", 2013, p. 7.
 	Name = "Pepin",
 	ExtraName = "the Short",
 --	FamilyName = "Karling",
@@ -494,7 +499,12 @@ DefineCharacter("pepin-the-short", { -- became king of the Franks in 751; died i
 	Type = "unit-frank-knight-lord", -- king
 	Civilization = "frankish",
 	Faction = "francia",
-	Father = "charles-martel",
+	Father = "charles-martel", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 169-170.
+	Date = 751,
+	DeathDate = 768, -- died in 768
+	HistoricalTitles = {
+		"head-of-state", 751, 768, "francia" -- became king of the Franks in 751; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 170.
+	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
 			return true
@@ -519,13 +529,14 @@ DefineCharacter("grifo", { -- Source: "Medieval Warfare V.2", 2013, p. 7; Source
 	end
 })
 
-DefineCharacter("carloman-karling", { -- son of Charles Martel; Source: "Medieval Warfare V.2", 2013, p. 7.
+DefineCharacter("carloman-karling", { -- Source: "Medieval Warfare V.2", 2013, p. 7.
 	Name = "Carloman",
 	Gender = "male",
 	Type = "unit-frank-horseman", -- noble
 	Civilization = "frankish",
 	Faction = "francia",
-	Father = "charles-martel",
+	Father = "charles-martel", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 169-170.
+	DeathDate = 747, -- retired from the world in 747; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 170.
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
 			return true

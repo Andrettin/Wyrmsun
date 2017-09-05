@@ -56,3 +56,20 @@ DefineCharacter("bubo", { -- Frisian ruler defeated by Charles Martel in 736; So
 		return false
 	end
 })
+
+DefineCharacter("liudger", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 175.
+	Name = "Liudger",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- bishop
+	Civilization = "teuton", -- Frisian
+	Faction = "northumbria",
+	Deities = {"christian-god"},
+	-- became the first bishop of Münster
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "frisian-tribe" or GetPlayerData(trigger_player, "Faction") == "friesland") then
+			return true
+		end
+		return false
+	end
+})
+

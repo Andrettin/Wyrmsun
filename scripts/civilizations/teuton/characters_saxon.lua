@@ -101,6 +101,8 @@ DefineCharacter("widukind", { -- Saxon leader who resisted Charlemagne's forces 
 	Type = "unit-teuton-heroic-swordsman", -- chieftain
 	Civilization = "teuton",
 	Faction = "saxon-tribe",
+	Date = 772,
+	-- led a Saxon rising in 782; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 176.
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "saxon-tribe") then
 			return true

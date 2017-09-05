@@ -1233,7 +1233,7 @@ DefineCharacter("beorhtfrith", { -- Source: Frank Stenton, "Anglo-Saxon England"
 	end
 })
 
-DefineCharacter("wynfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 168-169.
+DefineCharacter("wynfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 168-169, 171.
 	Name = "Wynfrith", -- also known as Boniface
 	Gender = "male",
 	Type = "unit-teuton-priest",
@@ -1245,6 +1245,7 @@ DefineCharacter("wynfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	-- on 722.11.30 he was consecrated as bishop to the Germans by the pope
 	-- became archbishop in 732 (though without a permanent seat)
 	-- in 747 he settled the seat of his archbishopric at Mainz
+	DeathDate = {754, 6, 5}, -- killed at Dockum by pagans on 754.6.5, while conducting missionary work in Frisia
 	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "wessex" or GetPlayerData(trigger_player, "Faction") == "englaland") then
@@ -1262,6 +1263,46 @@ DefineCharacter("daniel", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Faction = "wessex",
 	Date = 718, -- was the bishop of Winchester as of 718
 	Deities = {"christian-god"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "wessex" or GetPlayerData(trigger_player, "Faction") == "englaland") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("willibald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 174-175.
+	Name = "Willibald",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- pilgrim, and later priest, and afterwards bishop
+	Civilization = "anglo-saxon",
+	Faction = "wessex", -- was from eastern Wessex
+	Deities = {"christian-god"},
+	-- brother of Wynbald and Waldburg
+	Date = 720, -- began a pilgrimage to the Middle East in 720 with his brother Wynbald and their father
+	-- returned to Rome in 730
+	-- became a priest in 740
+	-- became bishop of Eichstätt in 741
+	DeathDate = 786, -- died in 786
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "wessex" or GetPlayerData(trigger_player, "Faction") == "englaland") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("wynbald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 174-175.
+	Name = "Wynbald",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- pilgrim, and later head of a monastery
+	Civilization = "anglo-saxon",
+	Faction = "wessex", -- was from eastern Wessex
+	Deities = {"christian-god"},
+	-- brother of Willibald and Waldburg
+	Date = 720, -- began a pilgrimage to the Middle East in 720 with his brother Willibald and their father
+	-- by 750 had become the head of a double monastery at Heidenheim together with his sister Waldburg
+	DeathDate = 761, -- died in 761
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "wessex" or GetPlayerData(trigger_player, "Faction") == "englaland") then
 			return true
@@ -1386,6 +1427,17 @@ DefineCharacter("egbert", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	end
 })
 
+DefineCharacter("leofwine", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 169.
+	Name = "Leofwine", -- also known as Lebuin
+	Gender = "male",
+	Type = "unit-teuton-priest", -- bishop, and later missionary
+	Civilization = "anglo-saxon",
+	Date = 747, -- was a bishop who worked with Boniface in 747
+	-- later went to perform missionary work in Frisia
+	-- eventually came to be regarded as a saint
+	Deities = {"christian-god"}
+})
+
 DefineCharacter("oswulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 92.
 	Name = "Oswulf",
 	Gender = "male",
@@ -1396,6 +1448,56 @@ DefineCharacter("oswulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	DeathDate = 758, -- killed by his retainers in the summer of 758
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("dynne", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 173.
+	Name = "Dynne",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- unknown, but he was a friend of Boniface, so he could have been a priest or monk
+	Civilization = "anglo-saxon",
+	Faction = "wessex", -- was a West Saxon
+	Deities = {"christian-god"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "wessex" or GetPlayerData(trigger_player, "Faction") == "englaland") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("waldburg", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 175.
+	Name = "Waldburg",
+	Gender = "female",
+	Type = "unit-teuton-priest",
+	Civilization = "anglo-saxon",
+	Faction = "wessex",
+	Deities = {"christian-god"},
+	-- sister of Willibald and Wynbald
+	Date = 750, -- by 750 had become the head of a double monastery at Heidenheim together with her brother Willibald
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "wessex" or GetPlayerData(trigger_player, "Faction") == "englaland") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("leofgyth", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 173.
+	Name = "Leofgyth",
+	Gender = "female",
+	Type = "unit-teuton-priest", -- abbess
+	Civilization = "anglo-saxon",
+	Faction = "wessex", -- her father was a West Saxon
+	Father = "dynne",
+	Date = 754, -- was abbess of Tauberbischofsheim as of 754
+	DeathDate = 780, -- died in 780
+	Deities = {"christian-god"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "wessex" or GetPlayerData(trigger_player, "Faction") == "englaland") then
 			return true
 		end
 		return false
@@ -1434,6 +1536,40 @@ DefineCharacter("alhred", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("aluberht", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 175.
+	Name = "Aluberht",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- bishop
+	Civilization = "anglo-saxon",
+	Faction = "northumbria",
+	Deities = {"christian-god"},
+	Date = 767, -- became bishop of the Old Saxons in 767, being consecrated at York
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "northumbria" or GetPlayerData(trigger_player, "Faction") == "englaland") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("willehad", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 175-176.
+	Name = "Willehad",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- bishop
+	Civilization = "anglo-saxon",
+	Faction = "northumbria",
+	Deities = {"christian-god"},
+	Date = 780, -- went to preach to the Saxons between the Elbe and the Weser at the behest of Charlemagne in 780
+	-- became bishop of Bremen in 785
+	DeathDate = 789,
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "northumbria" or GetPlayerData(trigger_player, "Faction") == "englaland") then
 			return true
 		end
 		return false

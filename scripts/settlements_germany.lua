@@ -62,6 +62,22 @@ DefineSettlement("bernstorf", { -- Bernstorf, Bavaria
 	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
 
+DefineSettlement("bremen", {
+	Name = "Bremen",
+	MapTemplate = "earth",
+	Position = {4044, 841},
+	CulturalNames = {
+		"teuton", "Bremen"
+	},
+	HistoricalOwners = {
+		526, "saxon-tribe", -- Bremen's area was a Saxon possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+	},
+	HistoricalBuildings = {
+		785, 0, "temple" -- Willehad became bishop of Bremen in 785; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 176.
+	},
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+})
+
 DefineSettlement("cologne", {
 	Name = "Cologne",
 	MapTemplate = "earth",
@@ -89,6 +105,22 @@ DefineSettlement("cologne", {
 		1815, 0, "university"
 	},
 	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
+})
+
+DefineSettlement("eichstatt", {
+	Name = "Eichstatt",
+	MapTemplate = "earth",
+	Position = {4092, 926},
+	CulturalNames = {
+		"teuton", "Eichstatt" -- "Eichstätt"
+	},
+	HistoricalOwners = {
+		526, "thuringian-tribe", -- Eichstätt's area was a Thuringian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+	},
+	HistoricalBuildings = {
+		741, 0, "temple" -- the bishopric of Eichstätt existed as of 741; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 175.
+	},
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
 DefineSettlement("eining", {
@@ -159,6 +191,22 @@ DefineSettlement("freising", {
 		739, 0, "temple" -- Freising became a bishopric in 739; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 169.
 	},
 	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
+})
+
+DefineSettlement("fulda", {
+	Name = "Fulda",
+	MapTemplate = "earth",
+	Position = {4058, 895},
+	CulturalNames = {
+		"teuton", "Fulda"
+	},
+	HistoricalOwners = {
+		526, "thuringian-tribe", -- Fulda's area was in Thuringian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+	},
+	HistoricalBuildings = {
+		744, 0, "temple" -- the abbey of Fulda was founded on 744 by Boniface; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 172.
+	},
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
 DefineSettlement("kiel", {
@@ -420,6 +468,22 @@ DefineSettlement("syburg", {
 	},
 	HistoricalBuildings = {
 		775, 1815, "guard-tower"
+	},
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+})
+
+DefineSettlement("tauberbischofsheim", {
+	Name = "Tauberbischofsheim",
+	MapTemplate = "earth",
+	Position = {4044, 922},
+	CulturalNames = {
+		"teuton", "Tauberbischofsheim"
+	},
+	HistoricalOwners = {
+		526, "francia", -- Tauberbischofsheim's area was a part of Francia in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+	},
+	HistoricalBuildings = {
+		754, 0, "temple" -- the abbey of Tauberbischofsheim existed as of 754; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 173.
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })

@@ -101,19 +101,19 @@ DefineCharacter("tiberius-claudius-pompeianus", { -- Source: "Ancient Warfare VI
 DefineCharacter("agatho", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 136.
 	Name = "Agatho",
 	Gender = "male",
-	Type = "unit-teuton-priest", -- Pope
+	Type = "unit-teuton-priest", -- pope
 	Civilization = "latin",
-	Date = 679, -- Pope as of 679.10
+	Date = 679, -- pope as of 679.10
 	Deities = {"christian-god"}
 })
 
 DefineCharacter("pope-sergius-i", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 143, 167.
 	Name = "Sergius",
 	Gender = "male",
-	Type = "unit-teuton-priest", -- Pope
+	Type = "unit-teuton-priest", -- pope
 	Civilization = "latin",
-	Date = {699, 11, 21}, -- Pope as of 695.11.21
-	-- Pope as of 699/700
+	Date = {699, 11, 21}, -- pope as of 695.11.21
+	-- pope as of 699/700
 	Deities = {"christian-god"}
 })
 
@@ -129,9 +129,27 @@ DefineCharacter("pope-gregory-ii", { -- Source: Frank Stenton, "Anglo-Saxon Engl
 DefineCharacter("pope-gregory-iii", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 145, 169.
 	Name = "Gregory",
 	Gender = "male",
-	Type = "unit-teuton-priest", -- Pope
+	Type = "unit-teuton-priest", -- pope
 	Civilization = "latin",
-	Date = 732, -- Pope as of 732
-	-- Pope as of 735
+	Date = 732, -- pope as of 732
+	-- pope as of 735
+	Deities = {"christian-god"}
+})
+
+DefineCharacter("pope-zacharias", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 170.
+	Name = "Zacharias",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- pope
+	Civilization = "latin",
+	Date = 751, -- pope as of 751
+	Deities = {"christian-god"}
+})
+
+DefineCharacter("pope-stephen-ii", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 171.
+	Name = "Zacharias",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- pope
+	Civilization = "latin",
+	Date = 752, -- pope as of 752
 	Deities = {"christian-god"}
 })
