@@ -65,7 +65,7 @@ https://github.com/Andrettin/Wyrmsun
 - Smithies can now store Copper, Silver, Gold, Coal and Diamonds. Smithies now can only be built within a certain distance of deposits and mines.
 - Added Diamond Deposit/Mine (recolor of the Copper Deposit/Mine by Kriss7475). Diamonds convert to copper at a 800% rate.
 - Decorations are now removed when a building is constructed over a tile.
-- Added a Mason's Shop building for the dwarves, which stores stone and improves its processing by 25%.
+- Added a Mason's Shop building for the dwarves, which stores stone and improves its processing by 25% (graphics by Jinn).
 
 * Map Editor
 - Fixed crash which happened when placing a railroad over a neutral copper mine.
