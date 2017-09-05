@@ -1367,6 +1367,7 @@ DefineSettlement("york", {
 	HistoricalBuildings = {
 		43, 161, "town-hall",
 		161, 0, "stronghold", -- Legionary base present in Eboracum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, 0, "barracks",
 		735, 0, "temple" -- archbishopric of York permanently instituted in 735 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 109, 133.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
