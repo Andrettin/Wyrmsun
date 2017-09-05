@@ -155,9 +155,9 @@ function RunTechTreeMenu(civilization_number)
 				elseif (GetUnitTypeData(unitName, "Class") == "transport-ship") then
 					tech_icon_x = 6
 					tech_icon_y = 6
---				elseif (GetUnitTypeData(unitName, "Class") == "siege-warship") then
---					tech_icon_x = 7
---					tech_icon_y = 6
+				elseif (GetUnitTypeData(unitName, "Class") == "siege-warship") then
+					tech_icon_x = 7
+					tech_icon_y = 6
 				elseif (GetUnitTypeData(unitName, "Class") == "flying-rider") then
 					tech_icon_x = 8
 					tech_icon_y = 4

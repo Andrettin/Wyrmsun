@@ -285,13 +285,11 @@ DefineButton( { Pos = 1, Level = 0,
 	ForUnit = {"unit-dwarven-dock"}
 })
 
---[[
 DefineButton( { Pos = 2, Level = 0,
 	Action = "train-unit", Value = "unit-dwarven-ballista-warship",
 	Key = "b", Hint = "Build ~!Ballista Warship", Popup = "popup-unit",
 	ForUnit = {"unit-dwarven-dock"}
 })
---]]
 
 -- Mercenaries ---------------------------------------------------------
 

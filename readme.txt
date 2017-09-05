@@ -101,6 +101,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Increased transport ship trade capacity.
+- Increased transport ship armor.
+- Added dwarven Ballista Warship (graphics by Jinn).
 
 * Upgrades
 - Masonry is now researched at the Mason's Shop for the dwarves.

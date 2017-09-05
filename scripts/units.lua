@@ -3292,7 +3292,8 @@ DefineUnitType("unit-template-spearman", {
 	}
 })
 
-DefineUnitType("unit-template-archer", { Name = _("Shooter"),
+DefineUnitType("unit-template-archer", {
+	Name = "Shooter",
 	Parent = "unit-template-sapient-unit",
 	Class = "shooter",
 	Costs = {"time", 70, "copper", 500, "lumber", 150},
@@ -3607,6 +3608,7 @@ DefineUnitType("unit-template-transport-ship", {
 	MaxOnBoard = 3,
 	TileSize = {2, 2}, BoxSize = {63, 63},
 	SightRange = 4,
+	Armor = 5,
 	Missile = "missile-none",
 	MaxAttackRange = 1,
 	Evasion = 5,
@@ -3647,7 +3649,8 @@ DefineUnitType("unit-template-siege-warship", {
 	HitPoints = 100,
 	TileSize = {2, 2}, BoxSize = {63, 63},
 	SightRange = 8,
-	Armor = 10, BasicDamage = 35, Missile = "missile-catapult-sandstone-rock",
+	Armor = 10,
+	BasicDamage = 35, Missile = "missile-catapult-sandstone-rock",
 	MaxAttackRange = 4,
 	Accuracy = 8,
 	Evasion = 5,
