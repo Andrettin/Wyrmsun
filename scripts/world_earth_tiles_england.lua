@@ -164,13 +164,6 @@ DefineWorldMapTile({477, 108}, {
 	}
 })
 
-DefineWorldMapTile({477, 110}, {
-	World = "earth",
-	FactionCulturalSettlementNames = {
-		"english", "england", "Farnham"
-	}
-})
-
 DefineWorldMapTile({478, 102}, {
 	World = "earth",
 	FactionCulturalSettlementNames = {
@@ -183,14 +176,6 @@ DefineWorldMapTile({479, 109}, {
 	FactionCulturalSettlementNames = {
 		"anglo-saxon", "angle-tribe", "Gumeninga Hearh", -- Old English name of Harrow on the Hill; the name means "the holy place of the Gumeningas"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
 		"english", "england", "Harrow on the Hill"
-	}
-})
-
-DefineWorldMapTile({479, 110}, {
-	World = "earth",
-	FactionCulturalTerrainNames = {
-		"Conifer Forest", "anglo-saxon", "angle-tribe", "Andredesweald", -- Old English name of The Weald; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Conifer Forest", "english", "england", "The Weald" -- The Weald was a forest, but of what kind?
 	}
 })
 

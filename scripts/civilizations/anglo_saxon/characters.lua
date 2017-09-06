@@ -1330,13 +1330,13 @@ DefineCharacter("ceolwulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	end
 })
 
-DefineCharacter("tatwine", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 145.
+DefineCharacter("tatwine", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 145, 183.
 	Name = "Tatwine",
 	Gender = "male",
 	Type = "unit-teuton-priest", -- abbot, and later archbishop
 	Civilization = "anglo-saxon",
-	Faction = "kent", -- archbishop of Canterbury, but was a Mercian abbot
-	Date = 731, -- succeeded Behrtwald as archbishop of Canterbury after he had died in 731
+	Faction = "kent", -- archbishop of Canterbury, but he was Mercian
+	Date = 731, -- became archbishop of Canterbury in 731, having previously been abbot of Breedon, Leicestershire
 	DeathDate = 734, -- died in 734
 	Deities = {"christian-god"},
 	Conditions = function(s)
