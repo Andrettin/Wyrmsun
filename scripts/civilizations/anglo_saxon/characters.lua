@@ -872,6 +872,24 @@ DefineCharacter("ecgfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	-- in 684 had an army sent to Ireland against the kingdom of Meath
 })
 
+DefineCharacter("benedict-biscop", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 184-185.
+	Name = "Benedict",
+	ExtraName = "Biscop",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- founder of monasteries
+	Civilization = "anglo-saxon",
+	Faction = "northumbria",
+	Date = 674, -- founded a monastery at Wearmouth in 674, with the land being given by king Ecgfrith of Northumbria
+	DeathDate = 689, -- died in 689
+	Deities = {"christian-god"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
+			return true
+		end
+		return false
+	end
+})
+
 DefineCharacter("haeddi", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 134.
 	Name = "Haeddi", -- "Hæddi"
 	Gender = "male",
@@ -1347,14 +1365,23 @@ DefineCharacter("tatwine", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	end
 })
 
-DefineCharacter("bede", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 34, 160-161.
+DefineCharacter("bede", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 34; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 160-161, 185-186.
 	Name = "Bede",
 	Gender = "male",
 	Type = "unit-teuton-priest",
 	Civilization = "anglo-saxon",
-	Date = 731, -- wrote "Historia Ecclesiastica Venerabilis Bedae" around 731 AD
+	Faction = "northumbria", -- studied at a Northumbrian monastery
+	Date = 703, -- wrote "De Temporibus" in 703
+	-- wrote "De Temporum Ratione" in 725
+	-- wrote "Historia Ecclesiastica Venerabilis Bedae" in 731 AD
 	Deities = {"christian-god"},
-	AuthoredWorks = {"upgrade-work-historia-ecclesiastica-venerabilis-bedae"}
+	AuthoredWorks = {"upgrade-work-historia-ecclesiastica-venerabilis-bedae"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("eadberht", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 92.

@@ -41,15 +41,6 @@ if (LoadedGame == false) then
 	else
 		SetPlayerData(1, "Faction", GetProvinceOwner("Jutland"))
 	end
-	
-	if (GrandStrategyEventMap) then
-		-- Asa units
-		CreateProvinceUnits("Brandenburg", 4)
-		CreateProvinceCustomHero("Brandenburg", 4)
-		
-		-- native units
-		CreateProvinceUnits("Jutland", 1)
-	end
 end
 
 -- Northwards to the Sea introduction

@@ -692,11 +692,13 @@ DefineSettlement("jarrow", {
 		"english", "Jarrow"
 	},
 	HistoricalOwners = {
+		681, "northumbria",
 		802, "northumbria", -- Jarrow was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 		1560, "england" -- Jarrow's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		802, 0, "farm"
+		681, 0, "temple" -- Benedict Biscop founded a monastery at Jarrow in 681, with the land being given by king Ecgfrith of Northumbria; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 185.
+		-- Benedict Biscop travelled to Rome in 684 to acquire relics and books for the monastery at Jarrow; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 185.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
@@ -1220,11 +1222,12 @@ DefineSettlement("wearmouth", {
 		"english", "Wearmouth"
 	},
 	HistoricalOwners = {
+		674, "northumbria",
 		802, "northumbria", -- Wearmouth was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 		1560, "england" -- Wearmouth's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		802, 0, "farm"
+		674, 0, "temple" -- Benedict Biscop founded a monastery at Wearmouth in 674, with the land being given by king Ecgfrith of Northumbria; Benedict Biscop transported his large collection of books to Wearmouth, establishing a library at the monastery; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 184-185.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
