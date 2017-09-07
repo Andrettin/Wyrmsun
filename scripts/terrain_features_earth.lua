@@ -109,6 +109,7 @@ DefineTerrainFeature("don-river", {
 	Name = "Don River",
 	TerrainType = "shallow-water",
 	World = "earth",
+	Color = {16, 128, 176},
 	CulturalNames = {
 		"germanic", "Vanaquisl River", -- The Tanais river is said to have been called Vanaquisl or Tanaquisl in the time of the Vana/Asa conflict in the Ynglinga saga; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
 		"greek", "Tanais River",
