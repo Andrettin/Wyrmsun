@@ -30,49 +30,16 @@ if (LoadedGame == false) then
 	SetPlayerData(0, "Resources", "copper", 2000)
 	SetPlayerData(0, "Resources", "lumber", 2000)
 	SetPlayerData(0, "Resources", "stone", 1000)
-	SetPlayerData(0, "Resources", "oil", 0)
-	SetAiType(0, "land-attack")
 	SetPlayerData(1, "Faction", "vana-tribe")
 	SetPlayerData(1, "Resources", "copper", 2000)
 	SetPlayerData(1, "Resources", "lumber", 2000)
 	SetPlayerData(1, "Resources", "stone", 1000)
-	SetPlayerData(1, "Resources", "oil", 0)
-	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "upgrade-teuton-civilization", "F")
-	SetPlayerData(GetFactionPlayer("Vana Tribe"), "Allow", "unit-germanic-town-hall", "F")
-	SetPlayerData(GetFactionPlayer("Vana Tribe"), "Allow", "unit-germanic-barracks", "F")
 
-	unit = OldCreateUnit("unit-germanic-town-hall", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 	if (GameSettings.Difficulty <= 2) then -- if the difficulty is normal or lower
 		SetUnitVariable(unit, "Prefix", "upgrade-item-prefix-frail")
 		SetUnitVariable(unit, "Suffix", "upgrade-item-suffix-of-vulnerability")
 	end
 	if (GrandStrategy == false) then
-		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Active", false)
-		
-		unit = CreateUnit("unit-germanic-warrior", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-germanic-warrior", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-germanic-warrior", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-		SetUnitVariable(unit, "Active", false)
-		
 		if (GameSettings.Difficulty == 1) then -- if difficulty is easy
 			CreateCreeps(1, "unit-germanic-warrior", 4, Map.Info.MapWidth / 4, Map.Info.MapWidth * 7 / 8, Map.Info.MapHeight / 6, Map.Info.MapHeight * 5 / 6)
 		elseif (GameSettings.Difficulty == 2) then -- if difficulty is normal
@@ -82,22 +49,13 @@ if (LoadedGame == false) then
 		elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
 			CreateCreeps(1, "unit-germanic-warrior", 36, Map.Info.MapWidth / 4, Map.Info.MapWidth * 7 / 8, Map.Info.MapHeight / 6, Map.Info.MapHeight * 5 / 6)
 		end
-	elseif (GrandStrategyEventMap) then
-		-- Asa units
-		CreateProvinceUnits("Astrakhan", 0)
-		CreateProvinceCustomHero("Astrakhan", 0)
-		
-		-- Vana units
-		CreateProvinceUnits("Don", 1)
 	end
 	
-	if (GrandStrategy == false or (GrandStrategyEventMap and GrandStrategyBattleBaseBuilding)) then
-		unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-		unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-		unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-		unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-		unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-	end
+	unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+	unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+	unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+	unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+	unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 	
 	-- create raft in the nearest coast tile to the Vana settlement
 	local nearest_coast = FindNearestTerrainFlagTile("coast", Players[1].StartPos.x, Players[1].StartPos.y)
@@ -105,43 +63,6 @@ if (LoadedGame == false) then
 		unit = CreateUnit("unit-raft", PlayerNumNeutral, nearest_coast)
 	end
 end
-
--- On the Vanaquisl introduction
--- based on the Ynglinga saga and on the Indo-European migration according to the Kurgan hypothesis
-AddTrigger("on-the-vanaquisl-introduction",
-	function()
-		if (GameCycle == 0) then
-			return false
-		end
-		if (PlayerHasObjective(GetFactionPlayer("Asa Tribe"), "- Destroy Vanaland's Chieftain's Hall") == false) then
-			player = GetFactionPlayer("Asa Tribe")
-			return true
-		end
-		return false
-	end,
-	function() 
-		Event(
-			"",
-			"We have assembled a great army to attack those who live on the Vanaquisl, the people of Vanaland. Their territory shall be taken into our possession, providing our people with the lands we much need to prosper. Onward to victory!",
-			player,
-			{"~!Continue"},
-			{function(s)
-				RemovePlayerObjective(player, "- Defeat your rivals")
-				AddPlayerObjective(player, "- Destroy Vanaland's Chieftain's Hall")
-			end}
-		)
-		Event(
-			"",
-			"Defend our settlement against the surprise Asa raid!",
-			GetFactionPlayer("Vana Tribe"),
-			{"~!Continue"},
-			{function(s)
-				AddPlayerObjective(GetFactionPlayer("Vana Tribe"), "- Protect our chieftain's hall")
-			end}
-		)
-		return false
-	end
-)
 
 AddTrigger("on-the-vanaquisl-vana-sighted",
 	function()

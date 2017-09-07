@@ -92,4 +92,5 @@ AddTrigger("the-sun-chariot", -- Source: http://natmus.dk/en/historical-knowledg
 )
 
 Load("scripts/civilizations/germanic/triggers_heimdalls_progeny.lua")
+Load("scripts/civilizations/germanic/triggers_the_settlement_of_scandinavia.lua")
 Load("scripts/civilizations/germanic/triggers_thors_servant.lua")

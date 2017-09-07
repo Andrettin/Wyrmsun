@@ -42,6 +42,10 @@ DefineSettlement("azov", {
 		-3000, -2800, "town-hall",
 		-3000, -2800, "barracks"
 	},
+	HistoricalUnits = {
+		-3000, "unit-germanic-warrior", 9000, "asa-tribe", -- the great army assembled to fight the Vana
+		-2999, "unit-germanic-warrior", 0, "asa-tribe"
+	},
 	Regions = {"eurasia", "europe"}
 })
 
@@ -51,7 +55,8 @@ DefineSettlement("rostov-on-don", {
 	Position = {4738, 970},
 	Major = true,
 	CulturalNames = {
-		"germanic", "Vanaquisl",
+		"celt", "Vanaquisl",
+		"germanic", "Vanaquisl", -- the Tanais river is said to have been called Vanaquisl or Tanaquisl in the time of the Vana/Asa conflict in the Ynglinga saga, so it makes sense to call the city of Tanais, which shares the name of the river, "Vanaquisl" as well; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
 		"greek", "Tanais",
 		"latin", "Tanais", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 		"slav", "Rostov-on-Don"
@@ -63,6 +68,10 @@ DefineSettlement("rostov-on-don", {
 	HistoricalBuildings = {
 		-3000, -2800, "town-hall",
 		-3000, -2800, "barracks"
+	},
+	HistoricalUnits = {
+		-3000, "unit-germanic-warrior", 3000, "vana-tribe", -- Vana defensive forces
+		-2999, "unit-germanic-warrior", 0, "vana-tribe"
 	},
 	Regions = {"eurasia", "europe"}
 })

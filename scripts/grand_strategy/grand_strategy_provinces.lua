@@ -66,18 +66,6 @@ function LoadProvinces(world)
 	end
 
 	local EarthProvinces = {
-		Astrakhan = {
-			Name = "Astrakhan",
-			Units = {
-				unit_germanic_warrior = 8
-			}
-		},
-		Don = {
-			Name = "Don",
-			Units = {
-				unit_germanic_warrior = 4
-			}
-		},
 		Jutland = {
 			Name = "Jutland",
 			Units = {

@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016-2017 by Andrettin
+--      (c) Copyright 2014-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,7 +25,40 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-Load("scripts/civilizations/germanic/dialogues_freys_messenger.lua")
-Load("scripts/civilizations/germanic/dialogues_heimdalls_progeny.lua")
-Load("scripts/civilizations/germanic/dialogues_the_settlement_of_scandinavia.lua")
-Load("scripts/civilizations/germanic/dialogues_thors_servant.lua")
+DefineDialogue("on-the-vanaquisl-introduction", {
+	Nodes = {
+		{
+			"text", "We have assembled a great army to attack those who live on the Vanaquisl, the people of Vanaland. Their territory shall be taken into our possession, providing our people with the lands we much need to prosper. Onward to victory!",
+			"option-effects", {
+				function(s)
+					SetPlayerData(trigger_player, "AcceptQuest", "on-the-vanaquisl")
+					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("vana-tribe"))
+				end
+			}
+		}
+	}
+})
+
+DefineDialogue("asa-raid", {
+	Nodes = {
+		{
+			"text", "The Asa people are coming with a large force to raid us, prepare our defenses!",
+			"options", {"Defend our homeland!"}
+		}
+	}
+})
+
+DefineDialogue("on-the-vanaquisl-victory", {
+	Nodes = {
+		{
+			"text", "We ravaged Vanaland and pillaged its wealth. Victory is ours!",
+			"option-effects", {
+				function(s)
+					if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "on-the-vanaquisl") then
+						CallDialogue("campaign-victory", trigger_player)
+					end
+				end
+			}
+		}
+	}
+})

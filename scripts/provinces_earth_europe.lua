@@ -1730,7 +1730,6 @@ DefineProvince("Don", {
 		"celt", "vana-tribe", "Vanaland" -- alternatively called "Vanaheim"; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
 	},
 	Tiles = {
---		{147, 30}, {148, 29}, {148, 30}, {149, 29}, {149, 30}, {150, 28}, {150, 29}, {150, 30}, -- old map
 		{588, 113},
 		{589, 112}, {589, 113}, {589, 121},
 		{590, 111}, {590, 112}, {590, 113}, {590, 120}, {590, 121},
@@ -1756,8 +1755,6 @@ DefineProvince("Don", {
 		"celt", "vana-tribe"
 	},
 	HistoricalOwners = {
-		-3000, "celt", "vana-tribe",
-		-2800, "", "",
 		161, "persian", "sarmatian-tribe", -- The area was inhabited by the Sarmatae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		1560, "turkish", "crimea" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},

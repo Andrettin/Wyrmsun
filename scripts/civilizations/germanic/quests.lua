@@ -28,21 +28,25 @@
 DefineQuest("on-the-vanaquisl", {
 	Name = "On the Vanaquisl",
 	Icon = "icon-germanic-warrior",
-	Description = "Having assembled a great army, we are to attack the people of Vanaland and take their lands into our possession.\n\nMap: Tanais",
-	World = "earth",
 	Civilization = "germanic",
-	Map = "maps/earth/tanais.smp",
-	Scenario = "scripts/civilizations/germanic/scenarios/on_the_vanaquisl.lua",
 	PlayerColor = "orange",
-	LoadingMusic = "GermanicLoading",
-	MapMusic = "GermanicTheme"
+	CompletionEffects = function(s)
+		CallDialogue("on-the-vanaquisl-victory", trigger_player)
+	end,
+	FailEffects = function(s)
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "on-the-vanaquisl") then
+			CallDialogue("campaign-defeat", trigger_player)
+		end
+	end,
+	Objectives = {"- Destroy Vanaland's Chieftain's Hall"},
+	DestroyUnits = {"unit-germanic-town-hall", "vana-tribe", 1},
+	Unobtainable = true
 })
 
 DefineQuest("westward-migration", {
 	Name = "Westward Migration",
 	Icon = "icon-germanic-worker",
 	Description = "With expansion through Vanaland denied to us, we seek an alternative migration route to the west.\n\nMap: Holmgard",
-	RequiredQuest = "on-the-vanaquisl",
 	World = "earth",
 	Civilization = "germanic",
 	Map = "maps/earth/novgorod.smp",
@@ -195,7 +199,6 @@ DefineQuest("karls-farm", { -- based on the Song of Rig; Source: Kevin Crossley-
 DefineQuest("heimdalls-progeny", {
 	Name = "Haimadala's Progeny",
 	Icon = "icon-jarl",
-	World = "earth",
 	Civilization = "germanic",
 	PlayerColor = "yellow",
 	FailEffects = function(s)

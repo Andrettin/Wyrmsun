@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016-2017 by Andrettin
+--      (c) Copyright 2014-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,7 +25,24 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-Load("scripts/civilizations/germanic/dialogues_freys_messenger.lua")
-Load("scripts/civilizations/germanic/dialogues_heimdalls_progeny.lua")
-Load("scripts/civilizations/germanic/dialogues_the_settlement_of_scandinavia.lua")
-Load("scripts/civilizations/germanic/dialogues_thors_servant.lua")
+-- On the Vanaquisl introduction
+-- based on the Ynglinga saga and on the Indo-European migration according to the Kurgan hypothesis
+AddTrigger("on-the-vanaquisl-introduction",
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		for i=0,(PlayerMax - 2) do
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "Faction") == "asa-tribe" and GetFactionExists("vana-tribe")) then
+				trigger_player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function()
+		CallDialogue("on-the-vanaquisl-introduction", trigger_player)
+		CallDialogue("asa-raid", GetFactionPlayer("vana-tribe"))
+		return false
+	end
+)
