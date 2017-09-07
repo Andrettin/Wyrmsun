@@ -46,7 +46,7 @@ DefineQuest("on-the-vanaquisl", {
 DefineQuest("westward-migration", {
 	Name = "Westward Migration",
 	Icon = "icon-germanic-worker",
-	Description = "With expansion through Vanaland denied to us, we seek an alternative migration route to the west.\n\nMap: Holmgard",
+	Description = "As food becomes scarce in our native steppes to feed our growing population, we must seek a migration route to the west.\n\nMap: Holmgard",
 	World = "earth",
 	Civilization = "germanic",
 	Map = "maps/earth/novgorod.smp",
