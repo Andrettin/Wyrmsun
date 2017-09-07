@@ -25,16 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCampaign("on-the-vanaquisl", {
-	Name = "On the Vanaquisl",
-	Description = "Having assembled a great army, the Asa decided to attack the people of Vanaland and take possession of their lands...",
-	Faction = "asa-tribe",
-	StartYear = -3000,
-	MapTemplate = "earth",
-	MapTemplateStartPos = {4728, 850},
-	MapSize = {256, 256}
-})
-
 DefineCampaign("the-first-dwarves", {
 	Name = "The First Dwarves",
 	Description = "A clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home. Beset by hostile forces, can they survive for long?",
