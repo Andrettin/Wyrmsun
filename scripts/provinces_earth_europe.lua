@@ -342,7 +342,6 @@ DefineProvince("Astrakhan", {
 		"germanic", "Ansulanda" -- rendering of "Asaland" in Proto-Germanic, as in the Ynglinga saga's story Asaland is the region in "Asia" in which Odin's people (here understood as the Indo-Europeans who went on to settle Scandinavia and become speakers of Proto-Germanic) used to live until they migrated to Scandinavia; alternatively called "Asaheim"; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
 	},
 	Tiles = {
---		{151, 30}, {152, 28}, {152, 29}, {152, 30}, {152, 31}, {153, 28}, {153, 29}, {153, 30}, {153, 31}, {154, 28}, {154, 29}, {154, 30}, {155, 29}, {155, 30}, -- old map
 		{601, 120}, {601, 121}, {601, 122},
 		{602, 119}, {602, 120}, {602, 121}, {602, 122}, {602, 123}, {602, 124},
 		{603, 118}, {603, 119}, {603, 120}, {603, 121}, {603, 122}, {603, 123}, {603, 124},
@@ -386,12 +385,6 @@ DefineProvince("Astrakhan", {
 	},
 	HistoricalCultures = {
 		-336, "persian",
-	},
-	HistoricalSettlementBuildings = {
-		-3000, "unit-germanic-town-hall", true,
-		-3000, "unit-germanic-barracks", true,
-		-2800, "unit-germanic-town-hall", false,
-		-2800, "unit-germanic-barracks", false
 	},
 	Regions = {"eurasia", "europe"}
 })
@@ -1770,12 +1763,6 @@ DefineProvince("Don", {
 	},
 	HistoricalCultures = {
 		161, "persian"
-	},
-	HistoricalSettlementBuildings = {
-		-3000, "unit-germanic-town-hall", true,
-		-3000, "unit-germanic-barracks", true,
-		-2800, "unit-germanic-town-hall", false,
-		-2800, "unit-germanic-barracks", false
 	},
 	Regions = {"eurasia", "europe"}
 })

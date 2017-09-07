@@ -163,22 +163,8 @@ DefineWorldMapTile({587, 97}, {
 	}
 })
 
-DefineWorldMapTile({592, 121}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"greek", "Tanais",
-		"latin", "Tanais" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	FactionCulturalSettlementNames = {
-		"slav", "russia", "Rostov-on-Don"
-	}
-})
-
 DefineWorldMapTile({618, 124}, {
 	World = "earth",
-	CulturalSettlementNames = {
-		"germanic", "Ansugárdiz"
-	},
 	FactionCulturalSettlementNames = {
 		"slav", "russia", "Astrakhan"
 	}
