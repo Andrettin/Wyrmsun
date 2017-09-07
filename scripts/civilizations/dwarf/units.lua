@@ -32,11 +32,11 @@
 --
 
 DefineUnitType("unit-dwarven-miner", {
-	Name = _("Miner"),
+	Name = "Miner",
 	Parent = "unit-template-worker",
 	Civilization = "dwarf",
-	Description = _("Dwarven miners are the grunt workers of dwarven society. They take the precious ores out of the ground, but do not ever take part in the crafting of weapons or artifacts. Although their expertise makes them quite efficient in mining, this comes at the cost of neglecting training in the harvesting of timber."),
-	Background = _("In Norse mythology, dwarves were shown to have an affinity for metals, and often they lived in mountainous homes."),
+	Description = "Dwarven miners are the grunt workers of dwarven society. They take the precious ores out of the ground, but do not ever take part in the crafting of weapons or artifacts. Although their expertise makes them quite efficient in mining, this comes at the cost of neglecting training in the harvesting of timber.",
+	Background = "In Norse mythology, dwarves were shown to have an affinity for metals, and often they lived in mountainous homes.",
 	Image = {"file", "dwarf/units/miner.png", "size", {72, 72}},
 	Animations = "animations-dwarven-miner", Icon = "icon-dwarven-miner",
 	DefaultEquipment = {
@@ -46,7 +46,7 @@ DefineUnitType("unit-dwarven-miner", {
 	WeaponClasses = {"mace", "axe"},
 	BluntDamage = true,
 	ButtonKey = "m",
-	ButtonHint = _("Train ~!Miner"),
+	ButtonHint = "Train ~!Miner",
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
 	CopperGatheringBonus = 1,
 	SilverGatheringBonus = 1,
@@ -110,10 +110,10 @@ DefineUnitType("unit-dwarven-miner", {
 } )
 
 DefineUnitType("unit-dwarven-skilled-miner", {
-	Name = _("Skilled Miner"),
+	Name = "Skilled Miner",
 	Parent = "unit-template-skilled-miner",
 	Civilization = "dwarf",
-	Description = _("Dwarven miners who become experienced in their craft can harvest metals more efficiently than others."),
+	Description = "Dwarven miners who become experienced in their craft can harvest metals more efficiently than others.",
 	Image = {"file", "dwarf/units/miner.png", "size", {72, 72}},
 	Animations = "animations-dwarven-miner", Icon = "icon-dwarven-skilled-miner",
 	DefaultEquipment = {
@@ -178,10 +178,10 @@ DefineUnitType("unit-dwarven-skilled-miner", {
 } )
 
 DefineUnitType("unit-dwarven-expert-miner", {
-	Name = _("Expert Miner"),
+	Name = "Expert Miner",
 	Parent = "unit-template-expert-miner",
 	Civilization = "dwarf",
-	Description = _("The dwarves who have mastered the craft of mining can gather metals with extreme efficiency."),
+	Description = "The dwarves who have mastered the craft of mining can gather metals with extreme efficiency.",
 	Image = {"file", "dwarf/units/miner.png", "size", {72, 72}},
 	Animations = "animations-dwarven-miner", Icon = "icon-dwarven-expert-miner",
 	DefaultEquipment = {
@@ -248,7 +248,7 @@ DefineUnitType("unit-dwarven-expert-miner", {
 DefineUnitType("unit-dwarven-militia", {
 	Parent = "unit-template-militia",
 	Civilization = "dwarf",
-	Description = _("When enemies approach, dwarven miners pick up arms from the nearest storage center in defense of their homelands."),
+	Description = "When enemies approach, dwarven miners pick up arms from the nearest storage center in defense of their homelands.",
 	Image = {"file", "dwarf/units/militia.png", "size", {72, 72}},
 	Animations = "animations-dwarven-militia", Icon = "icon-dwarven-militia",
 	DefaultEquipment = {
@@ -273,10 +273,10 @@ DefineUnitType("unit-dwarven-militia", {
 } )
 
 DefineUnitType("unit-dwarven-axefighter", {
-	Name = _("Axefighter"),
+	Name = "Axefighter",
 	Parent = "unit-template-infantry",
 	Civilization = "dwarf",
-	Description = _("Dwarven axefighters wield mighty battle axes, which make them feared opponents in close-range combat. Veteran axefighters often use the pay they've managed to spare to purchase steel armor for themselves at the local smithy."),
+	Description = "Dwarven axefighters wield mighty battle axes, which make them feared opponents in close-range combat. Veteran axefighters often use the pay they've managed to spare to purchase steel armor for themselves at the local smithy.",
 	Image = {"file", "dwarf/units/body_warrior.png", "size", {72, 72}},
 	LayerImages = {
 		{"layer", "right-arm", "file", "dwarf/units/right_arm_warrior.png"},
@@ -300,7 +300,7 @@ DefineUnitType("unit-dwarven-axefighter", {
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
 	ButtonKey = "a",
-	ButtonHint = _("Train ~!Axefighter"),
+	ButtonHint = "Train ~!Axefighter",
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Variations = {
 		{
@@ -411,10 +411,10 @@ DefineUnitType("unit-dwarven-axefighter", {
 } )
 
 DefineUnitType("unit-dwarven-steelclad", {
-	Name = _("Steelclad"),
+	Name = "Steelclad",
 	Parent = "unit-template-veteran-infantry",
 	Civilization = "dwarf",
-	Description = _("The more experienced dwarven steelclad fighters wear heavy chain mail and plate armor, for which they are rightly famous."),
+	Description = "The more experienced dwarven steelclad fighters wear heavy chain mail and plate armor, for which they are rightly famous.",
 	Image = {"file", "dwarf/units/body_warrior.png", "size", {72, 72}},
 	LayerImages = {
 		{"layer", "right-arm", "file", "dwarf/units/right_arm_warrior.png"},
@@ -552,9 +552,9 @@ DefineUnitType("unit-dwarven-thane", {
 	Name = "Stonelord",
 	Parent = "unit-template-heroic-infantry",
 	Civilization = "dwarf",
-	Description = _("Clad in shining armor, these dwarves look like kings from under the mountains. They wield the axe with masterful skill, and though slow on their feet, these dwarves are a testament to the prowess of their kin. Stonelords can yield varied political power, ranging from local chiefs to rulers of realms. One of the first stonelords was Modsognir, the legendary chieftain who led his tribe against the perils of Svarinshaug."),
-	Quote = _("\"There was Modsognir the mightiest made\nOf all the dwarfs, and Durin next;\nMany a likeness of apes they made,\nThe dwarves in the earth, as Durin said.\"\n- Dwarven Traditional Poetry"),
-	Background = _("In Norse mythology, the dwarven leader Modsognir appears in the ~<Voluspo~> as one of the first dwarves and the mightiest of them."),
+	Description = "Clad in shining armor, these dwarves look like kings from under the mountains. They wield the axe with masterful skill, and though slow on their feet, these dwarves are a testament to the prowess of their kin. Stonelords can yield varied political power, ranging from local chiefs to rulers of realms. One of the first stonelords was Modsognir, the legendary chieftain who led his tribe against the perils of Svarinshaug.",
+	Quote = "\"There was Modsognir the mightiest made\nOf all the dwarfs, and Durin next;\nMany a likeness of apes they made,\nThe dwarves in the earth, as Durin said.\"\n- Dwarven Traditional Poetry",
+	Background = "In Norse mythology, the dwarven leader Modsognir appears in the ~<Voluspo~> as one of the first dwarves and the mightiest of them.",
 	Image = {"file", "dwarf/units/thane.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-thane",
 	DefaultEquipment = {
@@ -621,10 +621,10 @@ DefineUnitType("unit-dwarven-thane", {
 } )
 
 DefineUnitType("unit-dwarven-guard", {
-	Name = _("Guard"),
+	Name = "Guard",
 	Parent = "unit-template-spearman",
 	Civilization = "dwarf",
-	Description = _("Dwarven guards are the first line of defense of the dwarven homelands. With their sturdy shields, they can often mount an unassailable defense against attackers."),
+	Description = "Dwarven guards are the first line of defense of the dwarven homelands. With their sturdy shields, they can often mount an unassailable defense against attackers.",
 	Image = {"file", "dwarf/units/body_warrior.png", "size", {72, 72}},
 	LayerImages = {
 		{"layer", "right-arm", "file", "dwarf/units/right_arm_spear.png"},
@@ -648,7 +648,7 @@ DefineUnitType("unit-dwarven-guard", {
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
 	ButtonKey = "g",
-	ButtonHint = _("Train ~!Guard"),
+	ButtonHint = "Train ~!Guard",
 	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Variations = {
 		{
@@ -687,7 +687,7 @@ DefineUnitType("unit-dwarven-scout", {
 	WeaponClasses = {"throwing-axe"},
 	HackDamage = true,
 	ButtonKey = "s",
-	ButtonHint = _("Train ~!Scout"),
+	ButtonHint = "Train ~!Scout",
 	RequirementsString = "Lumber Mill",
 	StartingAbilities = {"upgrade-scouting"},
 	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
@@ -867,10 +867,10 @@ DefineUnitType("unit-dwarven-explorer", {
 } )
 
 DefineUnitType("unit-dwarven-yale-rider", {
-	Name = _("Yale Rider"),
+	Name = "Yale Rider",
 	Parent = "unit-template-cavalry",
 	Civilization = "dwarf",
-	Description = _("Although dwarves have a stronger affinity for fighting on foot than many other peoples, they nevertheless possess formidable cavalry in the form of yale riders. These mounted dwarves are fierce in the battlefield, and their yales can easily traverse the mountainous terrain dwarves usually inhabit."),
+	Description = "Although dwarves have a stronger affinity for fighting on foot than many other peoples, they nevertheless possess formidable cavalry in the form of yale riders. These mounted dwarves are fierce in the battlefield, and their yales can easily traverse the mountainous terrain dwarves usually inhabit.",
 	Image = {"file", "dwarf/units/yale_rider_red_hair_gray_fur.png", "size", {72, 72}},
 	Animations = "animations-melee-unit", Icon = "icon-dwarven-yale-rider",
 	DefaultEquipment = {
@@ -882,7 +882,7 @@ DefineUnitType("unit-dwarven-yale-rider", {
 	WeaponClasses = {"axe"},
 	HackDamage = true,
 	ButtonKey = "y",
-	ButtonHint = _("Train ~!Yale Rider"),
+	ButtonHint = "Train ~!Yale Rider",
 	RequirementsString = "Smithy and Yale Pen",
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Variations = {
@@ -969,7 +969,7 @@ DefineUnitType("unit-dwarven-yale-lord", {
 	Name = "Yale Lord",
 	Parent = "unit-template-heroic-cavalry",
 	Civilization = "dwarf",
-	Description = _("Few things are more terrifying than a yale lord leading a throng of mounted dwarves into a crushing charge. Masters of the hills, yale lords are most often present in dwarven clans living above ground."),
+	Description = "Few things are more terrifying than a yale lord leading a throng of mounted dwarves into a crushing charge. Masters of the hills, yale lords are most often present in dwarven clans living above ground.",
 	Image = {"file", "dwarf/units/yale_rider_red_hair_gray_fur.png", "size", {72, 72}},
 	Animations = "animations-melee-unit", Icon = "icon-dwarven-yale-lord",
 	DefaultEquipment = {
@@ -1062,13 +1062,13 @@ DefineUnitType("unit-dwarven-yale-lord", {
 } )
 
 DefineUnitType("unit-dwarven-witness", {
-	Name = _("Witness"),
+	Name = "Witness",
 	Parent = "unit-template-priest",
 	Civilization = "dwarf",
---	Description = _("A witness functions as the eyes of the dwarves' history, a deep lore that they almost never share with outsiders. The presence of a witness inspires dwarven warriors with the knowledge that their deeds (and their deaths) will not go unrecorded. The person of a witness is considered sacred, and witnesses are often used as envoys between dwarven clans. The earliest known dwarven witness was Thjodrorir, sage of the Brising Clan. The best known of them, however, was Dvalin. He created the dwarven runes and shifted lorekeeping away from being an oral practice."),
-	Description = _("A witness functions as the eyes of the dwarves' history, a deep lore that they almost never share with outsiders. The presence of a witness inspires dwarven warriors with the knowledge that their deeds (and their deaths) will not go unrecorded. The person of a witness is considered sacred, and witnesses are often used as envoys between dwarven clans."),
-	Quote = _("\"Might he sang for the gods, and glory for dwarves,\nAnd wisdom for Hroptatyr wise.\"\n- Dwarven Traditional Poetry"),
-	Background = _("In Norse mythology, Thjodrorir was a dwarf who knew a potent magic charm. Thjodrorir is mentioned in the ~<Hovamol~>. Dvalin was a dwarf in Norse mythology who was said in the Hovamol to have taught the art of runes to his people."),
+--	Description = "A witness functions as the eyes of the dwarves' history, a deep lore that they almost never share with outsiders. The presence of a witness inspires dwarven warriors with the knowledge that their deeds (and their deaths) will not go unrecorded. The person of a witness is considered sacred, and witnesses are often used as envoys between dwarven clans. The earliest known dwarven witness was Thjodrorir, sage of the Brising Clan. The best known of them, however, was Dvalin. He created the dwarven runes and shifted lorekeeping away from being an oral practice.",
+	Description = "A witness functions as the eyes of the dwarves' history, a deep lore that they almost never share with outsiders. The presence of a witness inspires dwarven warriors with the knowledge that their deeds (and their deaths) will not go unrecorded. The person of a witness is considered sacred, and witnesses are often used as envoys between dwarven clans.",
+	Quote = "\"Might he sang for the gods, and glory for dwarves,\nAnd wisdom for Hroptatyr wise.\"\n- Dwarven Traditional Poetry",
+	Background = "In Norse mythology, Thjodrorir was a dwarf who knew a potent magic charm. Thjodrorir is mentioned in the ~<Hovamol~>. Dvalin was a dwarf in Norse mythology who was said in the Hovamol to have taught the art of runes to his people.",
 	Image = {"file", "dwarf/units/body_warrior.png", "size", {72, 72}},
 	LayerImages = {
 		{"layer", "right-arm", "file", "dwarf/units/right_arm_warrior.png"},
@@ -1106,11 +1106,11 @@ DefineUnitType("unit-dwarven-witness", {
 } )
 
 DefineUnitType("unit-dwarven-gryphon-rider", {
-	Name = _("Gryphon Rider"),
+	Name = "Gryphon Rider",
 	Parent = "unit-template-flying-rider",
 	Civilization = "dwarf",
-	Description = _("Only a few dwarves are able to bond with the mighty gryphons. Those who do may become gryphon riders, and discover the world of the skies upon the backs of these flying beasts."),
-	Quote = _("\"Ha ha! Gryphons as mounts, that is naught but the stuff of legends! Is there no end to your folly?\"\n- Relgorn, Chieftain of the Norlund Clan"),
+	Description = "Only a few dwarves are able to bond with the mighty gryphons. Those who do may become gryphon riders, and discover the world of the skies upon the backs of these flying beasts.",
+	Quote = "\"Ha ha! Gryphons as mounts, that is naught but the stuff of legends! Is there no end to your folly?\"\n- Relgorn, Chieftain of the Norlund Clan",
 	Image = {"file", "dwarf/units/gryphon_rider.png", "size", {100, 100}},
 	Animations = "animations-dwarven-gryphon-rider", Icon = "icon-dwarven-gryphon-rider",
 	DefaultEquipment = {
@@ -1124,7 +1124,7 @@ DefineUnitType("unit-dwarven-gryphon-rider", {
 	WeaponClasses = {"throwing-axe"},
 	HackDamage = true,
 	ButtonKey = "p",
-	ButtonHint = _("Train Gry~!phon Rider"),
+	ButtonHint = "Train Gry~!phon Rider",
 	RequirementsString = "Bastion and Lumber Mill",
 	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-potion-of-healing", "unit-elixir-of-dexterity"},
 	Variations = {
@@ -1174,7 +1174,7 @@ DefineUnitType("unit-dwarven-ballista", {
 	FireMissile = "missile-flaming-dwarven-ballista-bolt",
 	PierceDamage = true,
 	ButtonKey = "b",
-	ButtonHint = _("Build ~!Ballista"),
+	ButtonHint = "Build ~!Ballista",
 	Sounds = {
 --		"acknowledge", "ballista-acknowledge",
 		"ready", "dwarven-ballista-ready",
@@ -1265,7 +1265,7 @@ DefineUnitType("unit-dwarven-town-hall", {
 	Costs = {"lumber", 0, "stone", 2400},
 	RepairCosts = {"lumber", 0, "stone", 1},
 	FireResistance = 20,
-	ButtonHint = _("Build Mead ~!Hall"),
+	ButtonHint = "Build Mead ~!Hall",
 	Drops = {"unit-stone-pile"},
 	AiDrops = {"unit-boots"},
 	DropSpells = {"spell-joruvellir-allegiance"},
@@ -1369,11 +1369,11 @@ DefineUnitType("unit-dwarven-stronghold", {
 })
 
 DefineUnitType("unit-dwarven-mushroom-farm", {
-	Name = _("Mushroom Farm"),
+	Name = "Mushroom Farm",
 	Parent = "unit-template-farm",
 	Civilization = "dwarf",
-	Description = _("For aeons, dwarves have practiced mushroom farming underground. At first, their crude agricultural methods allowed them only to use mushroom farming as a supplementary means of nutrition, so that they could remain in a given area for a longer time before migrating. Eventually, however, dwarven mushroom farming techniques developed to the point that dwarves were able to establish their first permanent communities."),
-	Quote = _("\"This is how we get our food, me lad. Since we are a tad close to the surface here, some sunlight shines down through the cracks in the roof. If we baby the plants, we can usually get enough. They taste unco' foul but that's how we ha' survived all these long years.\"\n- Hamel, Lord of Knalga"),
+	Description = "For aeons, dwarves have practiced mushroom farming underground. At first, their crude agricultural methods allowed them only to use mushroom farming as a supplementary means of nutrition, so that they could remain in a given area for a longer time before migrating. Eventually, however, dwarven mushroom farming techniques developed to the point that dwarves were able to establish their first permanent communities.",
+	Quote = "\"This is how we get our food, me lad. Since we are a tad close to the surface here, some sunlight shines down through the cracks in the roof. If we baby the plants, we can usually get enough. They taste unco' foul but that's how we ha' survived all these long years.\"\n- Hamel, Lord of Knalga",
 	Image = {"file", "dwarf/buildings/mushroom_farm.png", "size", {64, 64}},
 	Shadow = {"file", "dwarf/buildings/mushroom_farm_shadow.png", "size", {64, 64}},
 	Icon = "icon-dwarven-mushroom-farm",
@@ -1387,11 +1387,11 @@ DefineUnitType("unit-dwarven-mushroom-farm", {
 } )
 
 DefineUnitType("unit-dwarven-barracks", {
-	Name = _("War Hall"),
+	Name = "War Hall",
 	Parent = "unit-template-barracks",
 	Civilization = "dwarf",
-	Description = _("The war hall is where dwarves meet to train and hone their axefighting skills. Since early times, dwarves have faced many perils in the dark plains and caves of Nidavellir, such as goblins or hostile dwarven clans. To fight off these menaces, clans gradually developed means of organizing themselves militarily."),
-	Quote = _("\"Loud roar the dwarves by the doors of stone,\nThe masters of the rocks: would you know yet more?\"\n- Dwarven Traditional Poetry"),
+	Description = "The war hall is where dwarves meet to train and hone their axefighting skills. Since early times, dwarves have faced many perils in the dark plains and caves of Nidavellir, such as goblins or hostile dwarven clans. To fight off these menaces, clans gradually developed means of organizing themselves militarily.",
+	Quote = "\"Loud roar the dwarves by the doors of stone,\nThe masters of the rocks: would you know yet more?\"\n- Dwarven Traditional Poetry",
 	Image = {"file", "dwarf/buildings/barracks.png", "size", {96, 96}},
 	Shadow = {"file", "dwarf/buildings/barracks_shadow.png", "size", {96, 96}},
 	Icon = "icon-dwarven-barracks",
@@ -1399,7 +1399,7 @@ DefineUnitType("unit-dwarven-barracks", {
 	RepairCosts = {"lumber", 0, "stone", 1},
 	FireResistance = 20,
 	ButtonKey = "w",
-	ButtonHint = _("Build ~!War Hall"),
+	ButtonHint = "Build ~!War Hall",
 	Drops = {"unit-stone-pile"},
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
 	Sounds = {
@@ -1408,11 +1408,11 @@ DefineUnitType("unit-dwarven-barracks", {
 } )
 
 DefineUnitType("unit-dwarven-lumber-mill", {
-	Name = _("Lumber Mill"),
+	Name = "Lumber Mill",
 	Parent = "unit-template-lumber-mill",
 	Civilization = "dwarf",
-	Description = _("Dwarven culture places a great emphasis on handling stone and metal, to the detriment of woodworking. Nevertheless, the lumber mill employs a number of dwarven artisans skilled in woodworking, who strive to improve methods of lumber production and the scouts' throwing axes."),
-	Background = _("In Norse mythology, one instance related to dwarven woodwork to be found is the crafting of the ship Skidbladnir and the throwing spear Gungnir by the sons of Ivaldi. Skidbladnir is mentioned in the ~<Grimnismol~>."),
+	Description = "Dwarven culture places a great emphasis on handling stone and metal, to the detriment of woodworking. Nevertheless, the lumber mill employs a number of dwarven artisans skilled in woodworking, who strive to improve methods of lumber production and the scouts' throwing axes.",
+	Background = "In Norse mythology, one instance related to dwarven woodwork to be found is the crafting of the ship Skidbladnir and the throwing spear Gungnir by the sons of Ivaldi. Skidbladnir is mentioned in the ~<Grimnismol~>.",
 	Image = {"file", "dwarf/buildings/lumber_mill.png", "size", {96, 96}},
 	Shadow = {"file", "dwarf/buildings/lumber_mill_shadow.png", "size", {96, 96}},
 	Icon = "icon-dwarven-lumber-mill",
@@ -1427,14 +1427,14 @@ DefineUnitType("unit-dwarven-lumber-mill", {
 } )
 
 DefineUnitType("unit-dwarven-smithy", {
-	Name = _("Smithy"),
+	Name = "Smithy",
 	Parent = "unit-template-smithy",
 	Civilization = "dwarf",
---	Description = _("Smithing is a highly-valued skill in dwarven society, and it is in this structure that dwarven smiths gather to produce weapons and armor for troops. Dwarves are renowned for their smithing abilities, and their craft attracts many non-dwarven customers. The most prestigious of dwarven metalworkers are the runesmiths, Thursagan being the greatest among them."),
-	Description = _("Smithing is a highly-valued skill in dwarven society, leading many to dedicate themselves to that profession. Dwarven smiths are renowned for their abilities, and their craft attracts many foreign customers. The most prestigious of dwarven metalworkers are the runesmiths."),
-	Quote = _("\"The land of Untersberg's banner bold\nComes not from its own land;\nIt comes from Dwarfdom, grim and old\nMade by a runesmith's hand.\"\n- The Scepter of Fire"),
-	Background = _("One of the primary talents of the dwarves in Norse mythology was smithing. In a number of myths, dwarven smiths would craft marvelous artifacts for the gods, and sometimes even for mortals."),
---	Background = _("One of the primary talents of the dwarves in Norse mythology was smithing. In a number of myths, dwarven smiths would craft marvelous artifacts for the gods, and sometimes even for mortals. One example of such an artifact is Mjollnir, the famous hammer of the Norse god Thor, which was made by the dwarves Brokk and Eitri. Another example is the sword Gram, crafted by the dwarf Regin in the ~<Reginsmol~>.\n\nRunesmiths feature in the Battle for Wesnoth, and are mentioned in ~<The Sceptre of Fire~> poem."),
+--	Description = "Smithing is a highly-valued skill in dwarven society, and it is in this structure that dwarven smiths gather to produce weapons and armor for troops. Dwarves are renowned for their smithing abilities, and their craft attracts many non-dwarven customers. The most prestigious of dwarven metalworkers are the runesmiths, Thursagan being the greatest among them.",
+	Description = "Smithing is a highly-valued skill in dwarven society, leading many to dedicate themselves to that profession. Dwarven smiths are renowned for their abilities, and their craft attracts many foreign customers. The most prestigious of dwarven metalworkers are the runesmiths.",
+	Quote = "\"The land of Untersberg's banner bold\nComes not from its own land;\nIt comes from Dwarfdom, grim and old\nMade by a runesmith's hand.\"\n- The Scepter of Fire",
+	Background = "One of the primary talents of the dwarves in Norse mythology was smithing. In a number of myths, dwarven smiths would craft marvelous artifacts for the gods, and sometimes even for mortals.",
+--	Background = "One of the primary talents of the dwarves in Norse mythology was smithing. In a number of myths, dwarven smiths would craft marvelous artifacts for the gods, and sometimes even for mortals. One example of such an artifact is Mjollnir, the famous hammer of the Norse god Thor, which was made by the dwarves Brokk and Eitri. Another example is the sword Gram, crafted by the dwarf Regin in the ~<Reginsmol~>.\n\nRunesmiths feature in the Battle for Wesnoth, and are mentioned in ~<The Sceptre of Fire~> poem.",
 	Image = {"file", "dwarf/buildings/smithy.png", "size", {96, 96}},
 	Shadow = {"file", "dwarf/buildings/smithy_shadow.png", "size", {96, 96}},
 	Icon = "icon-dwarven-smithy",
@@ -1492,10 +1492,10 @@ DefineUnitType("unit-dwarven-yale-pen", {
 } )
 
 DefineUnitType("unit-dwarven-temple", {
-	Name = _("Temple"),
+	Name = "Temple",
 	Parent = "unit-template-temple",
 	Civilization = "dwarf",
-	Description = _("Dwarven temples are built as underground vaults, where they keep their mystic texts. The temple vault has many layers, with only dwarven sages of the highest caliber being granted access to the deepest ones."),
+	Description = "Dwarven temples are built as underground vaults, where they keep their mystic texts. The temple vault has many layers, with only dwarven sages of the highest caliber being granted access to the deepest ones.",
 	Image = {"file", "dwarf/buildings/temple.png", "size", {96, 96}},
 	Shadow = {"file", "dwarf/buildings/temple_shadow.png", "size", {96, 96}},
 	Icon = "icon-dwarven-temple",
@@ -1508,10 +1508,11 @@ DefineUnitType("unit-dwarven-temple", {
 	}
 } )
 
-DefineUnitType("unit-dwarven-sentry-tower", { Name = _("Sentry Tower"),
+DefineUnitType("unit-dwarven-sentry-tower", {
+	Name = "Sentry Tower",
 	Parent = "unit-template-watch-tower",
 	Civilization = "dwarf",
-	Description = _("In these solid towers dwarves keep watch of threats approaching their settlements."),
+	Description = "In these solid towers dwarves keep watch of threats approaching their settlements.",
 	Image = {"file", "dwarf/buildings/sentry_tower.png", "size", {64, 64}},
 	Shadow = {"file", "dwarf/buildings/sentry_tower_shadow.png", "size", {64, 64}},
 	Animations = "animations-dwarven-sentry-tower", Icon = "icon-dwarven-sentry-tower",
@@ -1520,17 +1521,17 @@ DefineUnitType("unit-dwarven-sentry-tower", { Name = _("Sentry Tower"),
 	FireResistance = 20,
 	HitPoints = 250, -- 300 with masonry
 	Construction = "construction-dwarven-sentry-tower",
-	ButtonHint = _("Build Sentry ~!Tower"),
+	ButtonHint = "Build Sentry ~!Tower",
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
 } )
 
 DefineUnitType("unit-dwarven-guard-tower", {
-	Name = _("Guard Tower"),
+	Name = "Guard Tower",
 	Parent = "unit-template-guard-tower",
 	Civilization = "dwarf",
-	Description = _("Often garrisoned by dwarven scouts, these towers are an essential part of a dwarven settlement's sturdy defenses."),
+	Description = "Often garrisoned by dwarven scouts, these towers are an essential part of a dwarven settlement's sturdy defenses.",
 	Image = {"file", "dwarf/buildings/guard_tower.png", "size", {64, 64}},
 	Shadow = {"file", "dwarf/buildings/guard_tower_shadow.png", "size", {64, 64}},
 	Animations = "animations-dwarven-guard-tower", Icon = "icon-dwarven-guard-tower",
@@ -1574,10 +1575,10 @@ DefineUnitType("unit-dwarven-academy", {
 } )
 
 DefineUnitType("unit-dwarven-dock", {
-	Name = _("Dock"),
+	Name = "Dock",
 	Parent = "unit-template-dock",
 	Civilization = "dwarf",
-	Description = _("Although nautical dwarves are few in number, dwarven shipwrighting is a refined craft. They construct sturdy ships, capable of braving oceans and subterranean rivers alike."),
+	Description = "Although nautical dwarves are few in number, dwarven shipwrighting is a refined craft. They construct sturdy ships, capable of braving oceans and subterranean rivers alike.",
 	Image = {"file", "dwarf/buildings/dock.png", "size", {96, 96}},
 	Shadow = {"file", "dwarf/buildings/dock_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-dwarven-dock",

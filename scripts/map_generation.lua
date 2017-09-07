@@ -1575,8 +1575,13 @@ function GetRandomCritterUnitType()
 	return critter_unit_type
 end
 
-function CreateCreeps(player, creep_type, creep_number, min_x, max_x, min_y, max_y)
+function CreateCreeps(player, creep_type, creep_number, min_x, min_y, max_x, max_y)
 	if (LoadedGame == false) then
+		min_x = math.max(min_x, 0)
+		max_x = math.min(max_x, Map.Info.MapWidth - 1)
+		min_y = math.max(min_y, 0)
+		max_y = math.min(max_y, Map.Info.MapHeight - 1)
+	
 		local RandomX = 0
 		local RandomY = 0
 		local Count = 0

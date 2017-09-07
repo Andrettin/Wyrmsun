@@ -313,7 +313,7 @@ end
 
 if (LoadedGame == false) then
 	-- create some gryphons
-	CreateCreeps(PlayerNumNeutral, "unit-gryphon", 3, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2)
+	CreateCreeps(PlayerNumNeutral, "unit-gryphon", 3, 0, 0, Map.Info.MapWidth - 2, Map.Info.MapHeight - 2)
 
 	CreateCritters()
 

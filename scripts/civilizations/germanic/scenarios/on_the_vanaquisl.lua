@@ -39,23 +39,6 @@ if (LoadedGame == false) then
 		SetUnitVariable(unit, "Prefix", "upgrade-item-prefix-frail")
 		SetUnitVariable(unit, "Suffix", "upgrade-item-suffix-of-vulnerability")
 	end
-	if (GrandStrategy == false) then
-		if (GameSettings.Difficulty == 1) then -- if difficulty is easy
-			CreateCreeps(1, "unit-germanic-warrior", 4, Map.Info.MapWidth / 4, Map.Info.MapWidth * 7 / 8, Map.Info.MapHeight / 6, Map.Info.MapHeight * 5 / 6)
-		elseif (GameSettings.Difficulty == 2) then -- if difficulty is normal
-			CreateCreeps(1, "unit-germanic-warrior", 9, Map.Info.MapWidth / 4, Map.Info.MapWidth * 7 / 8, Map.Info.MapHeight / 6, Map.Info.MapHeight * 5 / 6)
-		elseif (GameSettings.Difficulty == 3) then -- if difficulty is hard
-			CreateCreeps(1, "unit-germanic-warrior", 18, Map.Info.MapWidth / 4, Map.Info.MapWidth * 7 / 8, Map.Info.MapHeight / 6, Map.Info.MapHeight * 5 / 6)
-		elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
-			CreateCreeps(1, "unit-germanic-warrior", 36, Map.Info.MapWidth / 4, Map.Info.MapWidth * 7 / 8, Map.Info.MapHeight / 6, Map.Info.MapHeight * 5 / 6)
-		end
-	end
-	
-	unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-	unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-	unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-	unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-	unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 	
 	-- create raft in the nearest coast tile to the Vana settlement
 	local nearest_coast = FindNearestTerrainFlagTile("coast", Players[1].StartPos.x, Players[1].StartPos.y)
@@ -189,60 +172,6 @@ AddTrigger("on-the-vanaquisl-vanaquisl-sighted",
 			{"~!Continue"},
 			{function(s)
 			end}
-		)
-		return false
-	end
-)
-
-AddTrigger("on-the-vanaquisl-vana-hall-destroyed",
-	function()
-		if (GameCycle == 0) then
-			return false
-		end
-		if (PlayerHasObjective(GetFactionPlayer("Asa Tribe"), "- Destroy Vanaland's Chieftain's Hall") and GetPlayerData(GetFactionPlayer("Vana Tribe"), "UnitTypesCount", "unit-germanic-town-hall") < 1) then
-			player = GetFactionPlayer("Asa Tribe")
-			return true
-		end
-		return false
-	end,
-	function()
-		local vana_unit = FindUnit("unit-germanic-warrior", GetFactionPlayer("Vana Tribe"))
-		
-		if not (vana_unit) then
-			vana_unit = ""
-		end
-		
-		Event(
-			vana_unit,
-			"What is this disturbance in our home?",
-			player,
-			{"~!Continue"},
-			{function(s)
-				CreateCreeps(1, "unit-germanic-warrior", 9 - GetPlayerData(GetFactionPlayer("Vana Tribe"), "UnitTypesCount", "unit-germanic-warrior"), math.floor(Map.Info.MapWidth / 4), math.floor(Map.Info.MapWidth * 7 / 8), math.floor(Map.Info.MapHeight / 6), math.floor(Map.Info.MapHeight * 4 / 6))
-				
-				local asa_warrior = nil
-			
-				local uncount = 0
-				uncount = GetUnits(GetFactionPlayer("Asa Tribe"))
-				for unit1 = 1,table.getn(uncount) do 
-					if (GetUnitVariable(uncount[unit1],"Ident") == "unit-germanic-warrior") then
-						asa_warrior = uncount[unit1]
-					end
-				end
-
-				if (asa_warrior) then
-					uncount = 0
-					uncount = GetUnits(GetFactionPlayer("Vana Tribe"))
-					for unit1 = 1,table.getn(uncount) do 
-						if (GetUnitVariable(uncount[unit1],"Ident") == "unit-germanic-warrior") then
-							OrderUnit(1, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(asa_warrior,"PosX"), GetUnitVariable(asa_warrior,"PosY")}, "attack")
-						end
-					end
-				end
-			end},
-			nil,
-			nil,
-			vana_unit == ""
 		)
 		return false
 	end

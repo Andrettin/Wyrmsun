@@ -398,7 +398,6 @@ DefineProvince("Svarinshaug", {
 		"dwarf", "Svarinshaug"
 	},
 	SettlementLocation = {44, 11},
-	Map = "maps/nidavellir/svarinshaug.smp",
 	SettlementTerrain = "Hills",
 	Claims = {
 		"dwarf", "brising-clan"

@@ -48,6 +48,29 @@ DefineDialogue("asa-raid", {
 	}
 })
 
+DefineDialogue("on-the-vanaquisl-vana-hall-destroyed", {
+	Nodes = {
+		{
+			"speaker", "unit", "unit-germanic-warrior",
+			"speaker-player", "vana-tribe",
+			"text", "What is this disturbance in our home?",
+			"option-effects", {
+				function(s)
+					local asa_warrior = FindUnit("unit-germanic-warrior", trigger_player)
+					if (asa_warrior) then
+						local uncount = GetUnits(GetFactionPlayer("vana-tribe"))
+						for unit1 = 1,table.getn(uncount) do 
+							if (GetUnitVariable(uncount[unit1],"Ident") == "unit-germanic-warrior") then
+								OrderUnit(GetFactionPlayer("vana-tribe"), GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(asa_warrior,"PosX"), GetUnitVariable(asa_warrior,"PosY")}, "attack")
+							end
+						end
+					end
+				end
+			}
+		}
+	}
+})
+
 DefineDialogue("on-the-vanaquisl-victory", {
 	Nodes = {
 		{

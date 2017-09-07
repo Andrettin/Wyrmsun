@@ -61,21 +61,21 @@ if (LoadedGame == false) then
 
 	-- create blood bats and dread bats
 	if (GameSettings.Difficulty == 1) then -- if difficulty is easy
-		CreateCreeps(PlayerNumNeutral, "unit-slime", 4, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-		CreateCreeps(PlayerNumNeutral, "unit-blood-bat", 4, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-		CreateCreeps(PlayerNumNeutral, "unit-dread-bat", 2, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+		CreateCreeps(PlayerNumNeutral, "unit-slime", 4, 0, 0, Map.Info.MapWidth - 1, Map.Info.MapHeight - 1)
+		CreateCreeps(PlayerNumNeutral, "unit-blood-bat", 4, 0, 0, Map.Info.MapWidth - 1, Map.Info.MapHeight - 1)
+		CreateCreeps(PlayerNumNeutral, "unit-dread-bat", 2, 0, 0, Map.Info.MapWidth - 1, Map.Info.MapHeight - 1)
 	elseif (GameSettings.Difficulty == 2) then -- if difficulty is normal
-		CreateCreeps(PlayerNumNeutral, "unit-slime", 8, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-		CreateCreeps(PlayerNumNeutral, "unit-blood-bat", 8, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-		CreateCreeps(PlayerNumNeutral, "unit-dread-bat", 4, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+		CreateCreeps(PlayerNumNeutral, "unit-slime", 8, 0, 0, Map.Info.MapWidth - 1, Map.Info.MapHeight - 1)
+		CreateCreeps(PlayerNumNeutral, "unit-blood-bat", 8, 0, 0, Map.Info.MapWidth - 1, Map.Info.MapHeight - 1)
+		CreateCreeps(PlayerNumNeutral, "unit-dread-bat", 4, 0, 0, Map.Info.MapWidth - 1, Map.Info.MapHeight - 1)
 	elseif (GameSettings.Difficulty == 3) then -- if difficulty is hard
-		CreateCreeps(PlayerNumNeutral, "unit-slime", 16, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-		CreateCreeps(PlayerNumNeutral, "unit-blood-bat", 16, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-		CreateCreeps(PlayerNumNeutral, "unit-dread-bat", 8, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+		CreateCreeps(PlayerNumNeutral, "unit-slime", 16, 0, 0, Map.Info.MapWidth - 1, Map.Info.MapHeight - 1)
+		CreateCreeps(PlayerNumNeutral, "unit-blood-bat", 16, 0, 0, Map.Info.MapWidth - 1, Map.Info.MapHeight - 1)
+		CreateCreeps(PlayerNumNeutral, "unit-dread-bat", 8, 0, 0, Map.Info.MapWidth - 1, Map.Info.MapHeight - 1)
 	elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
-		CreateCreeps(PlayerNumNeutral, "unit-slime", 32, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-		CreateCreeps(PlayerNumNeutral, "unit-blood-bat", 32, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-		CreateCreeps(PlayerNumNeutral, "unit-dread-bat", 16, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+		CreateCreeps(PlayerNumNeutral, "unit-slime", 32, 0, 0, Map.Info.MapWidth - 1, Map.Info.MapHeight - 1)
+		CreateCreeps(PlayerNumNeutral, "unit-blood-bat", 32, 0, 0, Map.Info.MapWidth - 1, Map.Info.MapHeight - 1)
+		CreateCreeps(PlayerNumNeutral, "unit-dread-bat", 16, 0, 0, Map.Info.MapWidth - 1, Map.Info.MapHeight - 1)
 	end
 end
 
