@@ -68,42 +68,18 @@ DefineLuxuryResources("furniture", "leather")
 
 SetResourceFinalResource("gold", "copper")
 SetResourceFinalResourceConversionRate("gold", 400)
-SetResourceBaseLaborInput("gold", 100)
-SetResourceBaseOutput("gold", 200)
 
 SetResourceFinalResource("silver", "copper")
 SetResourceFinalResourceConversionRate("silver", 200)
-SetResourceBaseLaborInput("silver", 100)
-SetResourceBaseOutput("silver", 200)
-
-SetResourceBaseLaborInput("copper", 100)
-SetResourceBaseOutput("copper", 200)
 
 SetResourceBasePrice("lumber", 100)
-SetResourceBaseLaborInput("lumber", 100)
-SetResourceBaseOutput("lumber", 100)
 
 SetResourceBasePrice("stone", 100)
-SetResourceBaseLaborInput("stone", 100)
-SetResourceBaseOutput("stone", 100)
 
 SetResourceFinalResource("limestone", "stone")
 SetResourceFinalResourceConversionRate("limestone", 200)
 
-SetResourceBaseLaborInput("grain", 100)
-SetResourceBaseOutput("grain", 100)
-SetResourceGrandStrategyBuildingVariations("grain", 4)
-
-SetResourceBaseLaborInput("mushrooms", 100)
-SetResourceBaseOutput("mushrooms", 100)
-SetResourceGrandStrategyBuildingVariations("mushrooms", 4)
-
-SetResourceBaseLaborInput("fish", 100)
-SetResourceBaseOutput("fish", 100)
-
 SetResourceBasePrice("coal", 100)
-SetResourceBaseLaborInput("coal", 100)
-SetResourceBaseOutput("coal", 100)
 
 SetResourceBasePrice("furniture", 200)
 SetResourceInputResource("furniture", "lumber")
