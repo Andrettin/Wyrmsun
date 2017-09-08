@@ -61,7 +61,8 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Map Editor
-- Wood piles now use their different variations in the editor.
+- Wood Piles now display their different variations in the editor.
+- Gold Rocks now display their different variations in the editor.
 
 * Maps
 - Revamped the Svarinshaug map, so that it now uses data from the Nidavellir map template and is 256x256.

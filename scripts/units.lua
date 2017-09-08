@@ -305,7 +305,8 @@ Load("scripts/anim.lua")
 --
 --	NOTE: Save can generate this table.
 --
-DefineUnitType("unit-template-unit", { Name = _("Unit"),
+DefineUnitType("unit-template-unit", {
+	Name = "Unit",
 	TileSize = {1, 1}, BoxSize = {31, 31}, -- default tile and box size
 	Animations = "animations-melee-unit-new",
 	DrawLevel = 40,
@@ -327,7 +328,8 @@ DefineUnitType("unit-template-building", {
 	ButtonPopup = "popup-building"
 })
 
-DefineUnitType("unit-template-sapient-unit", { Name = _("Sapient Unit"),
+DefineUnitType("unit-template-sapient-unit", {
+	Name = "Sapient Unit",
 	Parent = "unit-template-unit",
 	NeutralMinimapColor = {192, 192, 192},
 	Strength = 10,
@@ -601,7 +603,7 @@ DefineUnitType("unit-gold-mine", {
 	GivesResource = "gold",
 	ButtonPos = 12,
 	ButtonKey = "g",
-	ButtonHint = _("Build ~!Gold Mine"),
+	ButtonHint = "Build ~!Gold Mine",
 	BuildingRulesString = "Must be built on top of a Gold Deposit"
 } )
 
@@ -630,14 +632,14 @@ DefineUnitType("unit-silver-mine", {
 	GivesResource = "silver",
 	ButtonPos = 11,
 	ButtonKey = "v",
-	ButtonHint = _("Build Sil~!ver Mine"),
+	ButtonHint = "Build Sil~!ver Mine",
 	BuildingRulesString = "Must be built on top of a Silver Deposit"
 } )
 
 DefineUnitType("unit-copper-deposit", {
-	Name = _("Copper Deposit"),
+	Name = "Copper Deposit",
 	Parent = "unit-template-deposit",
-	Description = _("Copper deposits contain deep veins of copper, which can be gainfully mined after the proper infrastructure is put into place."),
+	Description = "Copper deposits contain deep veins of copper, which can be gainfully mined after the proper infrastructure is put into place.",
 	Image = {"file", "neutral/buildings/copper_deposit.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/copper_deposit_shadow.png", "size", {96, 96}},
 	Icon = "icon-copper-deposit",
@@ -645,11 +647,11 @@ DefineUnitType("unit-copper-deposit", {
 } )
 
 DefineUnitType("unit-copper-mine", {
-	Name = _("Copper Mine"),
+	Name = "Copper Mine",
 	Parent = "unit-template-mine",
 	Class = "copper-mine",
 	Civilization = "neutral",
-	Description = _("More common than either gold or silver, copper has a multitude of uses. It not only serves as a stock of value and means of exchange, but also as a material for utensils and as an ingredient to the making of bronze."),
+	Description = "More common than either gold or silver, copper has a multitude of uses. It not only serves as a stock of value and means of exchange, but also as a material for utensils and as an ingredient to the making of bronze.",
 	Image = {"file", "neutral/buildings/copper_mine.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/copper_mine_shadow.png", "size", {96, 96}},
 	LightImage = {"file", "neutral/buildings/copper_mine_light.png"},
@@ -659,14 +661,14 @@ DefineUnitType("unit-copper-mine", {
 	GivesResource = "copper",
 	ButtonPos = 10,
 	ButtonKey = "c",
-	ButtonHint = _("Build ~!Copper Mine"),
+	ButtonHint = "Build ~!Copper Mine",
 	BuildingRulesString = "Must be built on top of a Copper Deposit"
 } )
 
 DefineUnitType("unit-coal-mine", {
-	Name = _("Coal Mine"),
+	Name = "Coal Mine",
 	Parent = "unit-template-building",
-	Description = _("Coal is a valuable heating material."),
+	Description = "Coal is a valuable heating material.",
 	Image = {"file", "neutral/buildings/coal_mine.png", "size", {96, 96}},
 	Animations = "animations-mine", Icon = "icon-coal-mine",
 	NeutralMinimapColor = {255, 255, 0},
@@ -718,9 +720,9 @@ DefineUnitType("unit-diamond-mine", {
 } )
 
 DefineUnitType("unit-gold-rock", {
-	Name = _("Gold Rock"),
-	Image = {"file", "neutral/buildings/gold_rock.png", "size", {43, 43}},
-	Shadow = {"file", "neutral/buildings/gold_rock_shadow.png", "size", {43, 43}},
+	Name = "Gold Rock",
+	Image = {"file", "neutral/buildings/gold_rock_1.png", "size", {43, 43}},
+	Shadow = {"file", "neutral/buildings/gold_rock_1_shadow.png", "size", {43, 43}},
 	Animations = "animations-decoration", Icon = "icon-gold-rock",
 	NeutralMinimapColor = {255, 255, 0},
 	Costs = {"time", 150},
@@ -746,31 +748,45 @@ DefineUnitType("unit-gold-rock", {
 		},
 		{
 			"variation-id", "2",
-			"resource-min", 501
+			"resource-min", 501,
+			"file", "neutral/buildings/gold_rock_2.png",
+			"shadow-file", "neutral/buildings/gold_rock_2_shadow.png"
 		},
 		{
 			"variation-id", "3",
-			"resource-min", 501
+			"resource-min", 501,
+			"file", "neutral/buildings/gold_rock_3.png",
+			"shadow-file", "neutral/buildings/gold_rock_3_shadow.png"
 		},
 		{
 			"variation-id", "4",
-			"resource-min", 501
+			"resource-min", 501,
+			"file", "neutral/buildings/gold_rock_4.png",
+			"shadow-file", "neutral/buildings/gold_rock_4_shadow.png"
 		},
 		{
 			"variation-id", "small-1",
-			"resource-max", 500
+			"resource-max", 500,
+			"file", "neutral/buildings/gold_rock_small_1.png",
+			"shadow-file", "neutral/buildings/gold_rock_small_1_shadow.png"
 		},
 		{
 			"variation-id", "small-2",
-			"resource-max", 500
+			"resource-max", 500,
+			"file", "neutral/buildings/gold_rock_small_2.png",
+			"shadow-file", "neutral/buildings/gold_rock_small_2_shadow.png"
 		},
 		{
 			"variation-id", "small-3",
-			"resource-max", 500
+			"resource-max", 500,
+			"file", "neutral/buildings/gold_rock_small_3.png",
+			"shadow-file", "neutral/buildings/gold_rock_small_3_shadow.png"
 		},
 		{
 			"variation-id", "small-4",
-			"resource-max", 500
+			"resource-max", 500,
+			"file", "neutral/buildings/gold_rock_small_4.png",
+			"shadow-file", "neutral/buildings/gold_rock_small_4_shadow.png"
 		}
 	},
 	Sounds = {
@@ -783,7 +799,7 @@ DefineUnitType("unit-gold-rock", {
 } )
 
 DefineUnitType("unit-silver-rock", {
-	Name = _("Silver Rock"),
+	Name = "Silver Rock",
 	Image = {"file", "neutral/buildings/silver_rock_1.png", "size", {43, 43}},
 	Shadow = {"file", "neutral/buildings/silver_rock_1_shadow.png", "size", {43, 43}},
 	Animations = "animations-building", Icon = "icon-silver-rock",
@@ -834,7 +850,7 @@ DefineUnitType("unit-silver-rock", {
 } )
 
 DefineUnitType("unit-copper-rock", {
-	Name = _("Copper Rock"),
+	Name = "Copper Rock",
 	Image = {"file", "neutral/buildings/copper_rock_1.png", "size", {43, 43}},
 	Shadow = {"file", "neutral/buildings/copper_rock_1_shadow.png", "size", {43, 43}},
 	Animations = "animations-building", Icon = "icon-copper-rock",
@@ -982,7 +998,7 @@ DefineUnitType("unit-wood-pile", {
 } )
 
 DefineUnitType("unit-stone-pile", {
-	Name = _("Stone Pile"),
+	Name = "Stone Pile",
 	Image = {"file", "neutral/buildings/stone_pile.png", "size", {43, 43}},
 	Shadow = {"file", "neutral/buildings/stone_pile_shadow.png", "size", {43, 43}},
 	Animations = "animations-decoration", Icon = "icon-stone-pile",
@@ -1105,7 +1121,7 @@ DefineUnitType("unit-yale-hunting-lodge", {
 } )
 
 DefineUnitType("unit-tree-stump", {
-	Name = _("Tree Stump"),
+	Name = "Tree Stump",
 	Image = {"file", "neutral/buildings/tree_stump.png", "size", {72, 72}},
 	NeutralMinimapColor = {128, 128, 0},
 	Animations = "animations-tree-stump", Icon = "icon-tree-stump",
@@ -1158,7 +1174,8 @@ DefineUnitType("unit-tree-stump", {
 	}
 } )
 
-DefineUnitType("unit-hole", { Name = _("Hole"),
+DefineUnitType("unit-hole", {
+	Name = "Hole",
 	Image = {"file", "tilesets/cave/neutral/buildings/hole.png", "size", {64, 64}},
 	NeutralMinimapColor = {128, 128, 0},
 	Animations = "animations-tree-stump", Icon = "icon-hole",
@@ -1186,7 +1203,7 @@ DefineUnitType("unit-hole", { Name = _("Hole"),
 } )
 
 DefineUnitType("unit-cavern-entrance", {
-	Name = _("Cavern Entrance"),
+	Name = "Cavern Entrance",
 	Image = {"file", "neutral/buildings/cavern_entrance.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/cavern_entrance_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-cavern-entrance",
@@ -1222,7 +1239,7 @@ DefineUnitType("unit-cavern-entrance", {
 } )
 
 DefineUnitType("unit-portal", {
-	Name = _("Portal"),
+	Name = "Portal",
 	Image = {"file", "neutral/buildings/portal_frame.png", "size", {96, 96}},
 	LightImage = {"file", "neutral/buildings/portal.png"},
 	Animations = "animations-portal", Icon = "icon-portal",
@@ -1569,7 +1586,8 @@ DefineUnitType("unit-fern", { Name = "Fern",
 	Sounds = {}
 } )
 
-DefineUnitType("unit-twigs", { Name = _("Twigs"),
+DefineUnitType("unit-twigs", {
+	Name = "Twigs",
 	Image = {"file", "neutral/decorations/twigs.png", "size", {32, 32}},
 	Animations = "animations-decoration", Icon = "icon-twigs",
 	Speed = 0,
@@ -1793,7 +1811,8 @@ DefineUnitType("unit-small-rocks", { Name = "Small Rocks",
 	Sounds = {} }
 )
 
-DefineUnitType("unit-stalagmites", { Name = _("Stalagmites"),
+DefineUnitType("unit-stalagmites", {
+	Name = "Stalagmites",
 	Image = {"file", "neutral/decorations/stalagmites.png", "size", {32, 32}},
 	Animations = "animations-decoration", Icon = "icon-stalagmites",
 	Speed = 0,
@@ -1844,7 +1863,8 @@ function VolcanicCraterSpit(unit) -- this is called every second
 	end
 end
 
-DefineUnitType("unit-volcanic-crater", { Name = _("Volcanic Crater"),
+DefineUnitType("unit-volcanic-crater", {
+	Name = "Volcanic Crater",
 	Image = {"file", "neutral/decorations/volcanic_crater.png", "size", {64, 64}},
 	Animations = "animations-volcanic-crater", Icon = "icon-volcanic-crater",
 	Speed = 0,
@@ -1870,7 +1890,7 @@ DefineUnitType("unit-volcanic-crater", { Name = _("Volcanic Crater"),
 )
 
 DefineUnitType("unit-glyph", {
-	Name = _("Glyph"),
+	Name = "Glyph",
 	Image = {"file", "neutral/buildings/glyph.png", "size", {32, 32}},
 	NeutralMinimapColor = {128, 128, 0},
 	Animations = "animations-decoration", Icon = "icon-glyph",
@@ -1971,7 +1991,8 @@ DefineUnitType("unit-glyph", {
 	}
 })
 
-DefineUnitType("unit-stairs", { Name = _("Stairs"),
+DefineUnitType("unit-stairs", {
+	Name = "Stairs",
 	Image = {"file", "neutral/buildings/stairs.png", "size", {32, 32}},
 	NeutralMinimapColor = {128, 128, 0},
 	Animations = "animations-decoration", Icon = "icon-stairs",
@@ -2001,7 +2022,7 @@ DefineUnitType("unit-stairs", { Name = _("Stairs"),
 )
 
 DefineUnitType("unit-door", {
-	Name = _("Door"),
+	Name = "Door",
 	Image = {"file", "tilesets/dungeon/neutral/decorations/door_left.png", "size", {32, 32}},
 	Animations = "animations-door", Icon = "icon-door",
 	NeutralMinimapColor = {128, 128, 0},
@@ -2263,7 +2284,8 @@ DefineUnitType("unit-kobold-dead-body", {
 --	Vanishes = true,
 --	Sounds = {} } )
 
-DefineUnitType("unit-raft", { Name = _("Raft"),
+DefineUnitType("unit-raft", {
+	Name = "Raft",
 	Image = {"file", "neutral/units/raft.png", "size", {72, 72}},
 	Animations = "animations-raft", Icon = "icon-raft",
 	NeutralMinimapColor = {128, 128, 0},
@@ -2283,7 +2305,8 @@ DefineUnitType("unit-raft", { Name = _("Raft"),
 	} 
 } )
 
-DefineUnitType("unit-scepter-of-fire", { Name = _("Scepter of Fire"),
+DefineUnitType("unit-scepter-of-fire", {
+	Name = "Scepter of Fire",
 	Image = {"file", "neutral/items/scepter.png", "size", {32, 32}},
 	Animations = "animations-item", Icon = "icon-scepter",
 	NeutralMinimapColor = {255, 255, 0},
@@ -2303,7 +2326,8 @@ DefineUnitType("unit-scepter-of-fire", { Name = _("Scepter of Fire"),
 	} 
 } )
 
-DefineUnitType("unit-gold-coins", { Name = _("Gold Coins"),
+DefineUnitType("unit-gold-coins", {
+	Name = "Gold Coins",
 	Image = {"file", "neutral/items/gold_coins.png", "size", {12, 13}},
 	Animations = "animations-item", Icon = "icon-gold-coins",
 	NeutralMinimapColor = {255, 255, 0},
@@ -2326,7 +2350,7 @@ DefineUnitType("unit-gold-coins", { Name = _("Gold Coins"),
 } )
 
 DefineUnitType("unit-gold-sack", {
-	Name = _("Gold Sack"),
+	Name = "Gold Sack",
 	Image = {"file", "neutral/items/gold_sack.png", "size", {16, 14}},
 	Animations = "animations-item", Icon = "icon-gold-sack",
 	NeutralMinimapColor = {255, 255, 0},
@@ -2349,7 +2373,8 @@ DefineUnitType("unit-gold-sack", {
 	} 
 } )
 
-DefineUnitType("unit-gold-chest", { Name = _("Chest"),
+DefineUnitType("unit-gold-chest", {
+	Name = "Chest",
 	Image = {"file", "neutral/items/chest.png", "size", {32, 32}},
 	Animations = "animations-gold-chest", Icon = "icon-chest",
 	NeutralMinimapColor = {255, 255, 0},
@@ -2366,7 +2391,8 @@ DefineUnitType("unit-gold-chest", { Name = _("Chest"),
 		"selected", "click",
 		"dead", "building-destroyed"} } )
 
-DefineUnitType("unit-gold-and-gems-chest", { Name = _("Chest"),
+DefineUnitType("unit-gold-and-gems-chest", {
+	Name = "Chest",
 	Image = {"file", "neutral/items/chest.png", "size", {32, 32}},
 	Animations = "animations-gold-and-gems-chest", Icon = "icon-chest",
 	NeutralMinimapColor = {255, 255, 0},
@@ -2383,7 +2409,8 @@ DefineUnitType("unit-gold-and-gems-chest", { Name = _("Chest"),
 		"selected", "click",
 		"dead", "building-destroyed"} } )
 
-DefineUnitType("unit-alchemy-bench", { Name = _("Alchemy Bench"),
+DefineUnitType("unit-alchemy-bench", {
+	Name = "Alchemy Bench",
 	Image = {"file", "neutral/items/alchemy_bench.png", "size", {32, 32}},
 	Animations = "animations-alchemy-bench", Icon = "icon-alchemy-bench",
 	NeutralMinimapColor = {128, 128, 0},
@@ -2406,7 +2433,8 @@ DefineUnitType("unit-alchemy-bench", { Name = _("Alchemy Bench"),
 	}
 } )
 
-DefineUnitType("unit-table", { Name = _("Table"),
+DefineUnitType("unit-table", {
+	Name = "Table",
 	Image = {"file", "neutral/decorations/table.png", "size", {32, 32}},
 	Animations = "animations-table", Icon = "icon-table",
 	NeutralMinimapColor = {128, 128, 0},
@@ -2552,7 +2580,8 @@ DefineUnitType("unit-chair", {
 	}
 } )
 
-DefineUnitType("unit-bed", { Name = _("Bed"),
+DefineUnitType("unit-bed", {
+	Name = "Bed",
 	Image = {"file", "neutral/decorations/bed.png", "size", {32, 32}},
 	Animations = "animations-bed", Icon = "icon-bed",
 	NeutralMinimapColor = {128, 128, 0},
@@ -2581,7 +2610,8 @@ DefineUnitType("unit-bed", { Name = _("Bed"),
 	}
 } )
 
-DefineUnitType("unit-potion-of-decay", { Name = _("Potion of Decay"),
+DefineUnitType("unit-potion-of-decay", {
+	Name = "Potion of Decay",
 	Image = {"file", "neutral/items/potion_blue.png", "size", {16, 16}},
 	Animations = "animations-potion", Icon = "icon-blue-potion",
 	NeutralMinimapColor = {255, 255, 0},
@@ -2602,7 +2632,8 @@ DefineUnitType("unit-potion-of-decay", { Name = _("Potion of Decay"),
 	} 
 } )
 
-DefineUnitType("unit-potion-of-slowness", { Name = _("Potion of Slowness"),
+DefineUnitType("unit-potion-of-slowness", {
+	Name = "Potion of Slowness",
 	Image = {"file", "neutral/items/potion_purple.png", "size", {16, 16}},
 	Animations = "animations-potion", Icon = "icon-purple-potion",
 	NeutralMinimapColor = {255, 255, 0},
@@ -2623,7 +2654,8 @@ DefineUnitType("unit-potion-of-slowness", { Name = _("Potion of Slowness"),
 	} 
 } )
 
-DefineUnitType("unit-barrel", { Name = _("Barrel"),
+DefineUnitType("unit-barrel", {
+	Name = "Barrel",
 	Image = {"file", "neutral/items/barrel.png", "size", {32, 32}},
 	Animations = "animations-barrel", Icon = "icon-barrel",
 	NeutralMinimapColor = {128, 128, 0},
@@ -2654,7 +2686,8 @@ DefineUnitType("unit-barrel", { Name = _("Barrel"),
 	}
 } )
 
-DefineUnitType("unit-explosive-barrel", { Name = _("Explosive Barrel"),
+DefineUnitType("unit-explosive-barrel", {
+	Name = "Explosive Barrel",
 	Image = {"file", "neutral/items/explosive_barrel.png", "size", {32, 32}},
 	Animations = "animations-barrel", Icon = "icon-barrel",
 	NeutralMinimapColor = {128, 128, 0},
@@ -2677,7 +2710,8 @@ DefineUnitType("unit-explosive-barrel", { Name = _("Explosive Barrel"),
 	}
 } )
 
-DefineUnitType("unit-gryphon-feather", { Name = _("Gryphon Feather"),
+DefineUnitType("unit-gryphon-feather", {
+	Name = "Gryphon Feather",
 	Image = {"file", "neutral/items/gryphon_feather.png", "size", {28, 26}},
 	Animations = "animations-item", Icon = "icon-gryphon-feather",
 	NeutralMinimapColor = {255, 255, 0},
@@ -2694,7 +2728,8 @@ DefineUnitType("unit-gryphon-feather", { Name = _("Gryphon Feather"),
 	Sounds = {}
 } )
 
-DefineUnitType("unit-caltrops", { Name = _("Caltrops"),
+DefineUnitType("unit-caltrops", {
+	Name = "Caltrops",
 	Image = {"file", "neutral/items/caltrops.png", "size", {32, 32}},
 	Animations = "animations-decoration", Icon = "icon-caltrops",
 	NeutralMinimapColor = {255, 255, 0},
@@ -2734,7 +2769,8 @@ DefineUnitType("unit-caltrops", { Name = _("Caltrops"),
 	} 
 } )
 
-DefineUnitType("unit-trap", { Name = _("Trap"),
+DefineUnitType("unit-trap", {
+	Name = "Trap",
 	Image = {"file", "neutral/items/trap.png", "size", {32, 32}},
 	Animations = "animations-trap", Icon = "icon-trap",
 	NeutralMinimapColor = {255, 255, 0},
@@ -2755,7 +2791,8 @@ DefineUnitType("unit-trap", { Name = _("Trap"),
 	} 
 } )
 
-DefineUnitType("unit-roaming-fog", { Name = _("Roaming Fog"),
+DefineUnitType("unit-roaming-fog", {
+	Name = "Roaming Fog",
 	Image = {"file", "neutral/decorations/roaming_fog.png", "size", {498, 277}},
 	Animations = "animations-roaming-fog", Icon = "icon-roaming-fog",
 	NeutralMinimapColor = {192, 192, 192},
@@ -2788,7 +2825,8 @@ DefineUnitType("unit-roaming-fog", { Name = _("Roaming Fog"),
 	}
 } )
 
-DefineUnitType("unit-roaming-fog-small", { Name = _("Roaming Fog"),
+DefineUnitType("unit-roaming-fog-small", {
+	Name = "Roaming Fog",
 	Image = {"file", "neutral/decorations/roaming_fog_small.png", "size", {256, 171}},
 	Animations = "animations-roaming-fog", Icon = "icon-roaming-fog",
 	NeutralMinimapColor = {192, 192, 192},
@@ -2821,7 +2859,8 @@ DefineUnitType("unit-roaming-fog-small", { Name = _("Roaming Fog"),
 	}
 } )
 
-DefineUnitType("unit-miasma", { Name = _("Miasma"),
+DefineUnitType("unit-miasma", {
+	Name = "Miasma",
 	Image = {"file", "neutral/decorations/miasma.png", "size", {128, 128}},
 	Animations = "animations-roaming-fog", Icon = "icon-miasma",
 	NeutralMinimapColor = {192, 192, 192},
@@ -2982,7 +3021,7 @@ DefineUnitType("unit-template-worker", {
 	Flesh = true,
 	ButtonPos = 1,
 	ButtonKey = "w",
-	ButtonHint = _("Train ~!Worker"),
+	ButtonHint = "Train ~!Worker",
 	CanGatherResources = {
 		{
 			"resource-id", "gold",
@@ -3066,7 +3105,7 @@ DefineUnitType("unit-template-worker", {
 } )
 
 DefineUnitType("unit-template-skilled-miner", {
-	Name = _("Skilled Miner"),
+	Name = "Skilled Miner",
 	Parent = "unit-template-worker",
 	Class = "skilled-miner",
 	HitPoints = 40,
@@ -3082,7 +3121,7 @@ DefineUnitType("unit-template-skilled-miner", {
 } )
 
 DefineUnitType("unit-template-expert-miner", {
-	Name = _("Expert Miner"),
+	Name = "Expert Miner",
 	Parent = "unit-template-skilled-miner",
 	Class = "expert-miner",
 	HitPoints = 50,
@@ -3098,7 +3137,8 @@ DefineUnitType("unit-template-expert-miner", {
 	DiamondsGatheringBonus = 4
 } )
 
-DefineUnitType("unit-template-militia", { Name = _("Militia"),
+DefineUnitType("unit-template-militia", {
+	Name = "Militia",
 	Parent = "unit-template-sapient-unit",
 	Class = "militia",
 	Speed = 10,
@@ -3128,7 +3168,8 @@ DefineUnitType("unit-template-militia", { Name = _("Militia"),
 	}
 } )
 
-DefineUnitType("unit-template-merchant", { Name = _("Merchant"),
+DefineUnitType("unit-template-merchant", {
+	Name = "Merchant",
 	Parent = "unit-template-sapient-unit",
 	Class = "merchant",
 	Strength = 10,
@@ -3155,7 +3196,7 @@ DefineUnitType("unit-template-merchant", { Name = _("Merchant"),
 	Flesh = true,
 	ButtonPos = 1,
 	ButtonKey = "m",
-	ButtonHint = _("Train ~!Merchant"),
+	ButtonHint = "Train ~!Merchant",
 	Trader = true,
 	CanGatherResources = {
 		{
@@ -3177,7 +3218,7 @@ DefineUnitType("unit-template-merchant", { Name = _("Merchant"),
 } )
 
 DefineUnitType("unit-template-heroic-merchant", {
-	Name = _("Heroic Merchant"),
+	Name = "Heroic Merchant",
 	Parent = "unit-template-merchant",
 	Class = "heroic-merchant",
 	Costs = {"time", 120, "copper", 1200},
@@ -3201,7 +3242,7 @@ DefineUnitType("unit-template-heroic-merchant", {
 } )
 
 DefineUnitType("unit-template-infantry", {
-	Name = _("Infantry"),
+	Name = "Infantry",
 	Parent = "unit-template-sapient-unit",
 	Class = "infantry",
 	Costs = {"time", 60, "copper", 600},
@@ -3334,7 +3375,7 @@ DefineUnitType("unit-template-archer", {
 } )
 
 DefineUnitType("unit-template-veteran-shooter", {
-	Name = _("Veteran Shooter"),
+	Name = "Veteran Shooter",
 	Parent = "unit-template-archer",
 	Class = "veteran-shooter",
 	Costs = {"time", 105, "copper", 750, "lumber", 225},
@@ -3350,7 +3391,8 @@ DefineUnitType("unit-template-veteran-shooter", {
 	AiDrops = {"unit-horn", "unit-amulet", "unit-ring"}
 } )
 
-DefineUnitType("unit-template-heroic-shooter", { Name = _("Heroic Shooter"),
+DefineUnitType("unit-template-heroic-shooter", {
+	Name = "Heroic Shooter",
 	Parent = "unit-template-veteran-shooter",
 	Class = "heroic-shooter",
 	Costs = {"time", 140, "copper", 1000, "lumber", 300},
@@ -3370,7 +3412,7 @@ DefineUnitType("unit-template-heroic-shooter", { Name = _("Heroic Shooter"),
 } )
 
 DefineUnitType("unit-template-thief", {
-	Name = _("Thief"),
+	Name = "Thief",
 	Parent = "unit-template-sapient-unit",
 	Class = "thief",
 	Costs = {"time", 45, "copper", 400},
@@ -3409,7 +3451,7 @@ DefineUnitType("unit-template-thief", {
 } )
 
 DefineUnitType("unit-template-cavalry", {
-	Name = _("Cavalry"),
+	Name = "Cavalry",
 	Parent = "unit-template-sapient-unit",
 	Class = "cavalry",
 	Costs = {"time", 90, "copper", 900},
@@ -3449,7 +3491,8 @@ DefineUnitType("unit-template-cavalry", {
 	}
 } )
 
-DefineUnitType("unit-template-heroic-cavalry", { Name = _("Heroic Cavalry"),
+DefineUnitType("unit-template-heroic-cavalry", {
+	Name = "Heroic Cavalry",
 	Parent = "unit-template-cavalry",
 	Class = "heroic-cavalry",
 	Costs = {"time", 120, "copper", 1200},
@@ -3468,7 +3511,7 @@ DefineUnitType("unit-template-heroic-cavalry", { Name = _("Heroic Cavalry"),
 } )
 
 DefineUnitType("unit-template-priest", {
-	Name = _("Priest"),
+	Name = "Priest",
 	Parent = "unit-template-sapient-unit",
 	Class = "priest",
 	Costs = {"time", 80, "copper", 700},
@@ -3628,7 +3671,7 @@ DefineUnitType("unit-template-transport-ship", {
 	Trader = true,
 	ButtonPos = 1,
 	ButtonKey = "t",
-	ButtonHint = _("Build ~!Transport"),
+	ButtonHint = "Build ~!Transport",
 	RequirementsString = "Lumber Mill",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-vulnerability"},
 	CanGatherResources = {
@@ -3702,7 +3745,7 @@ DefineUnitType("unit-template-town-hall", {
 	BurnDamageRate = 1,
 	ButtonPos = 1,
 	ButtonKey = "h",
-	ButtonHint = _("Build Town ~!Hall"),
+	ButtonHint = "Build Town ~!Hall",
 	ResourceDemand = {"furniture", 5, "leather", 5},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-amulet", "unit-ring", "unit-scroll", "unit-book"}, -- worker-related items, as well as those we would expect a center of administration to have
@@ -3718,7 +3761,7 @@ DefineUnitType("unit-template-town-hall", {
 } )
 
 DefineUnitType("unit-template-stronghold", {
-	Name = _("Stronghold"),
+	Name = "Stronghold",
 	Parent = "unit-template-town-hall",
 	Class = "stronghold",
 	Costs = {"time", 200, "copper", 2000, "lumber", 2100, "stone", 1500},
@@ -3811,7 +3854,7 @@ DefineUnitType("unit-template-barracks", {
 	BurnDamageRate = 1,
 	ButtonPos = 3,
 	ButtonKey = "b",
-	ButtonHint = _("Build ~!Barracks"),
+	ButtonHint = "Build ~!Barracks",
 	ResourceDemand = {"furniture", 3, "leather", 3},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
@@ -3855,7 +3898,7 @@ DefineUnitType("unit-template-lumber-mill", {
 	BurnDamageRate = 1,
 	ButtonPos = 4,
 	ButtonKey = "l",
-	ButtonHint = _("Build ~!Lumber Mill"),
+	ButtonHint = "Build ~!Lumber Mill",
 	ResourceDemand = {"furniture", 3, "leather", 3},
 	BuildingRulesString = "Cannot be built close to town halls",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
@@ -3896,7 +3939,7 @@ DefineUnitType("unit-template-smithy", {
 	BurnDamageRate = 1,
 	ButtonPos = 5,
 	ButtonKey = "s",
-	ButtonHint = _("Build ~!Smithy"),
+	ButtonHint = "Build ~!Smithy",
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-amulet", "unit-ring"},
 	ResourceDemand = {"furniture", 3, "leather", 3},
 	BuildingRulesString = "Cannot be built close to mines",
@@ -4014,7 +4057,7 @@ DefineUnitType("unit-template-temple", {
 	RegenerationAura = 1,
 	ButtonPos = 7,
 	ButtonKey = "p",
-	ButtonHint = _("Build Tem~!ple"),
+	ButtonHint = "Build Tem~!ple",
 	UnitStock = {"unit-potion-of-healing", 6},
 	ResourceDemand = {"furniture", 4, "leather", 4},
 	RequirementsString = "Lumber Mill",
@@ -4069,7 +4112,7 @@ DefineUnitType("unit-template-university", {
 } )
 
 DefineUnitType("unit-template-watch-tower", {
-	Name = _("Watch Tower"),
+	Name = "Watch Tower",
 	Parent = "unit-template-building",
 	Class = "watch-tower",
 	Costs = {"time", 60, "copper", 550, "lumber", 300, "stone", 300},
@@ -4101,7 +4144,7 @@ DefineUnitType("unit-template-watch-tower", {
 	BurnDamageRate = 1,
 	ButtonPos = 8,
 	ButtonKey = "t",
-	ButtonHint = _("Build Watch ~!Tower"),
+	ButtonHint = "Build Watch ~!Tower",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-the-colossus", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 		"selected", "tower-selected",
@@ -4113,7 +4156,7 @@ DefineUnitType("unit-template-watch-tower", {
 } )
 
 DefineUnitType("unit-template-guard-tower", {
-	Name = _("Guard Tower"),
+	Name = "Guard Tower",
 	Parent = "unit-template-building",
 	Class = "guard-tower",
 	Costs = {"time", 140, "copper", 500, "lumber", 225, "stone", 225},
@@ -4233,7 +4276,7 @@ DefineUnitType("unit-template-dock", {
 	BurnDamageRate = 1,
 	ButtonPos = 9,
 	ButtonKey = "d",
-	ButtonHint = _("Build ~!Dock"),
+	ButtonHint = "Build ~!Dock",
 	ResourceDemand = {"furniture", 3, "leather", 3},
 	RequirementsString = "Lumber Mill",
 	BuildingRulesString = "Cannot be built close to other docks",
@@ -4291,10 +4334,11 @@ Load("scripts/civilizations/latin/units.lua")
 
 -- Other civilizations' units
 
-DefineUnitType("unit-orc-spearthrower", { Name = _("Spearthrower"),
+DefineUnitType("unit-orc-spearthrower", {
+	Name = "Spearthrower",
 	Parent = "unit-template-archer",
 	Civilization = "orc",
---	Description = _("Amongst orcs, throwing spears are often regarded as a cowardly weapon; but even orcs, especially youths and those of slight build, are pragmatic enough to use them in spite of this. Orcish spearthrowers are seldom well equipped, and have no semblance of training. Even as poorly handled as they are, their weapons can still be quite deadly, and the wielders thereof rarely march alone."),
+--	Description = "Amongst orcs, throwing spears are often regarded as a cowardly weapon; but even orcs, especially youths and those of slight build, are pragmatic enough to use them in spite of this. Orcish spearthrowers are seldom well equipped, and have no semblance of training. Even as poorly handled as they are, their weapons can still be quite deadly, and the wielders thereof rarely march alone.",
 	Image = {"file", "dwarf/units/dwarven_scout.png", "size", {72, 72}},
 	Animations = "animations-dwarven-scout", Icon = "icon-orc-spearthrower",
 	Missile = "missile-javelin",
@@ -4311,11 +4355,12 @@ DefineUnitType("unit-orc-spearthrower", { Name = _("Spearthrower"),
 	}
 } )
 
-DefineUnitType("unit-orc-sea-orc", { Name = _("Sea Orc"),
+DefineUnitType("unit-orc-sea-orc", {
+	Name = "Sea Orc",
 	Parent = "unit-template-unit",
 	Class = "marine-infantry",
 	Civilization = "orc",
---	Description = _("While often viewed as inferior to their land-loving counterparts, sea orcs represent a great leap for all orcs as they have adapted to aquatic environments. These orcs use their ships to raid the coasts of the Eelhome Sea. With their curved swords they are competent warriors, although their poor fighting skills on land do represent a strategic weakness."),
+--	Description = "While often viewed as inferior to their land-loving counterparts, sea orcs represent a great leap for all orcs as they have adapted to aquatic environments. These orcs use their ships to raid the coasts of the Eelhome Sea. With their curved swords they are competent warriors, although their poor fighting skills on land do represent a strategic weakness.",
 --	Image = {"file", "dwarf/units/dwarven_axefighter.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-orc-sea-orc",
 	Costs = {"time", 60, "copper", 600},
@@ -4342,11 +4387,12 @@ DefineUnitType("unit-orc-sea-orc", { Name = _("Sea Orc"),
 	}
 } )
 
-DefineUnitType("unit-orc-shaman", { Name = _("Shaman"),
+DefineUnitType("unit-orc-shaman", {
+	Name = "Shaman",
 	Parent = "unit-template-unit",
 	Class = "priest",
 	Civilization = "orc",
---	Description = _("Orc shamans are the guardians of orcish magic. Respected among orcish tribes, they form the Orcish Council, which makes important decisions for the whole orcish community and arbitrates the many conflicts that arise between tribes of this argumentative race."),
+--	Description = "Orc shamans are the guardians of orcish magic. Respected among orcish tribes, they form the Orcish Council, which makes important decisions for the whole orcish community and arbitrates the many conflicts that arise between tribes of this argumentative race.",
 --	Image = {"file", "dwarf/units/dwarven_axefighter.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-orc-shaman",
 	Costs = {"time", 60, "copper", 600},
@@ -4396,7 +4442,8 @@ DefineUnitType("unit-water-elemental", {
 	}
 } )
 
-DefineUnitType("unit-long-swordsman", { Name = _("Long Swordsman"),
+DefineUnitType("unit-long-swordsman", {
+	Name = "Long Swordsman",
 	Parent = "unit-template-unit",
 	Image = {"file", "neutral/units/long_swordsman.png", "size", {72, 72}},
 	Animations = "animations-static-npc", Icon = "icon-long-swordsman",
