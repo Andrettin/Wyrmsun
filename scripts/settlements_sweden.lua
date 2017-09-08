@@ -87,7 +87,8 @@ DefineSettlement("sigtun", {
 		1560, "sweden" -- political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		-2800, 0, "town-hall"
+		-2800, 0, "town-hall",
+		-2800, 0, "temple" -- in the Ynglinga saga, Odin erects a large temple after he arrived in Sigtun (here understood to correspond to the time when Indo-Europeans reached Scandinavia); Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 220.
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
@@ -111,7 +112,7 @@ DefineSettlement("torsburgen", {
 DefineSettlement("uppsala", {
 	Name = "Uppsala",
 	MapTemplate = "earth",
-	Position = {4241, 686},
+	Position = {4241, 684},
 	CulturalNames = {
 		"norse", "Uppsala"
 	},
@@ -119,7 +120,8 @@ DefineSettlement("uppsala", {
 		1164, "sweden"
 	},
 	HistoricalBuildings = {
-		1164, 0, "temple" -- Swedish archbishopric founded in Uppsala in 1164; Source: "Guta Saga: The History of the Gotlanders", 1999, p. vii.
+		1164, 1477, "temple", -- Swedish archbishopric founded in Uppsala in 1164; Source: "Guta Saga: The History of the Gotlanders", 1999, p. vii.
+		1477, 0, "university" -- University founded in Uppsala in 1477; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })

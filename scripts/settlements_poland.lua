@@ -52,8 +52,25 @@ DefineSettlement("konigsberg", {
 	HistoricalOwners = {
 	},
 	HistoricalBuildings = {
+		1544, 0, "university" -- University founded in Königsberg in 1544; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"europe", "west-and-central-europe"}
+})
+
+DefineSettlement("krakow", {
+	Name = "Krakow",
+	MapTemplate = "earth",
+	Position = {4293, 907},
+	Major = true,
+	CulturalNames = {
+		"slav", "Krakow"
+	},
+	HistoricalOwners = {
+	},
+	HistoricalBuildings = {
+		1364, 0, "university" -- University founded in Krakow in 1364; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+	},
+	Regions = {"cisleithania", "europe", "poland", "west-and-central-europe"}
 })
 
 DefineSettlement("szczecin", {

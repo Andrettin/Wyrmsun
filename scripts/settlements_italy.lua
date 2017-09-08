@@ -364,7 +364,8 @@ DefineSettlement("palermo", {
 		1494, "sicily" -- Palermo was part of the Kingdom of the Two Sicilies about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 	},
 	HistoricalBuildings = {
-		-550, 0, "town-hall"
+		-550, 0, "town-hall",
+		1394, 0, "university" -- University founded in Palermo in 1394; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })

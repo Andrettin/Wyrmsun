@@ -94,7 +94,6 @@ DefineProvince("Alsace", {
 	},
 	HistoricalModifiers = {
 		1618, "upgrade-university", true, -- University founded in Molsheim in 1618; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
-		1789, "upgrade-courthouse", true, -- Prévôt des maréchaux existent in Strasbourg in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 		1789, "upgrade-courthouse", true -- Parlement or conseil souverain existent in Colmar in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
 	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
@@ -2441,9 +2440,6 @@ DefineProvince("Galicia", {
 		-264, "goth",
 		161, "teuton"
 	},
-	HistoricalModifiers = {
-		1364, "upgrade-university", true -- University founded in Krakow in 1364; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-	},
 	Regions = {"cisleithania", "europe", "poland", "west-and-central-europe"}
 })
 
@@ -4784,9 +4780,6 @@ DefineProvince("Palermo", {
 	HistoricalClaims = {
 		-241, "latin", "rome"
 	},
-	HistoricalModifiers = {
-		1394, "upgrade-university", true -- University founded in Palermo in 1394; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
-	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
@@ -5096,9 +5089,6 @@ DefineProvince("Prussia", {
 	Coastal = true,
 	Claims = {
 		"teuton", "prussia"
-	},
-	HistoricalModifiers = {
-		1544, "upgrade-university", true -- University founded in Königsberg in 1544; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"europe", "west-and-central-europe"}
 })
@@ -5852,12 +5842,6 @@ DefineProvince("Sweden", {
 	HistoricalCultures = {
 		-2800, "germanic",
 		-264, "norse"
-	},
-	HistoricalSettlementBuildings = {
---		-2800, "unit-teuton-temple", true -- in the Ynglinga saga, Odin erects a large temple after he arrived in Sigtun (here understood to correspond to the time when Indo-Europeans reached Scandinavia); Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 220.
-	},
-	HistoricalModifiers = {
-		1477, "upgrade-university", true -- University founded in Uppsala in 1477; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
