@@ -64,11 +64,6 @@ function RunResultsMenu()
 --	menu:addLabel(result, offx + 106, offy + top_offset + 21, Fonts["large-title"])
 	menu:addLabel(result, offx + 106, offy + top_offset + 21, Fonts["large"])
 
-	if (GrandStrategy and GrandStrategyEventMap == false) then
-		menu:addLabel("Province", Video.Width - offx - 106, offy + top_offset)
---		menu:addLabel(GetProvinceName(AttackedProvince), Video.Width - offx - 106, offy + top_offset + 21, Fonts["large-title"])
-		menu:addLabel(GetProvinceName(AttackedProvince), Video.Width - offx - 106, offy + top_offset + 21, Fonts["large"])
-	end
 	menu:addLabel("Units", offx + 50, offy + bottom_offset, Fonts["large"], true)
 	menu:addLabel("Buildings", offx + 140, offy + bottom_offset, Fonts["large"], true)
 	menu:addLabel("Copper", offx + 230, offy + bottom_offset, Fonts["large"], true)
@@ -133,13 +128,8 @@ function RunResultsMenu()
 --	menu:addFullButton(_("~!Continue"), "c", offx + 400, offy + 440,
 	menu:addFullButton(_("~!Continue"), "c", (Video.Width / 2) - 112, offy + 440,
 		function()
-			if not (GrandStrategy) then
-				CleanPlayers()
-			end
+			CleanPlayers()
 			StopMusic();
-			if (GrandStrategy) then
-				PlayMusicByGroupAndFactionRandom("map", GrandStrategyFaction.Civilization, GrandStrategyFaction.Name)
-			end
 			menu:stop()
 		end)
 

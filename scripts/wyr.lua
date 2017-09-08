@@ -102,82 +102,18 @@ function SetPlayerData(player, data, arg1, arg2)
 			arg1 = GetCivilizations()[GameSettings.Presets[player].Race + 1]
 		end
 		
-		if (GrandStrategy and GrandStrategyFaction ~= nil) then
-			if (ThisPlayer ~= nil and ThisPlayer.Index == player) then
-				arg1 = GrandStrategyFaction.Civilization
-			end
-
-			if (ThisPlayer ~= nil and ThisPlayer.Index ~= player and GrandStrategyEventMap == false) then
-				if (GetProvinceOwner(AttackedProvince.Name) ~= "" and GetGrandStrategyProvinceData(AttackedProvince.Name, "Water") == false) then
-					if (GrandStrategyFaction.Name == Attacker and GetFactionFromName(Defender) ~= nil) then
-						arg1 = GetFactionFromName(Defender).Civilization
-					elseif (GrandStrategyFaction.Name == Defender and GetFactionFromName(Attacker) ~= nil) then
-						arg1 = GetFactionFromName(Attacker).Civilization
-					end
-				elseif (GetProvinceCivilization(AttackedProvince.Name) ~= "") then
-					arg1 = GetProvinceCivilization(AttackedProvince.Name)
-				else
-					if (GrandStrategyWorld == "Earth") then
-						arg1 = "germanic"
-					elseif (GrandStrategyWorld == "Nidavellir") then
-						arg1 = "goblin"
-					else
-						arg1 = "goblin"
-					end
-				end
-			end
-		end
-		
 		if (player == GetThisPlayer()) then
 			LoadCivilizationUI(arg1)
-		end
-	elseif (data == "Faction") then
-		if (GrandStrategy and GrandStrategyFaction ~= nil) then
-			if (ThisPlayer ~= nil and ThisPlayer.Index == player) then
-				arg1 = GrandStrategyFaction.Name
-			end
-
-			if (ThisPlayer ~= nil and ThisPlayer.Index ~= player and GrandStrategyEventMap == false) then
-				if (GetProvinceOwner(AttackedProvince.Name) ~= "" and GetGrandStrategyProvinceData(AttackedProvince.Name, "Water") == false) then
-					if (GrandStrategyFaction.Name == Attacker and GetFactionFromName(Defender) ~= nil) then
-						arg1 = Defender
-					elseif (GrandStrategyFaction.Name == Defender and GetFactionFromName(Attacker) ~= nil) then
-						arg1 = Attacker
-					end
-				end
-			end
-		end
-	elseif (data == "Name") then
-		if (GrandStrategy and GrandStrategyFaction ~= nil) then
-			if (ThisPlayer ~= nil and ThisPlayer.Index == player) then
-				arg1 = GetFactionData(GrandStrategyFaction.Name, "Name")
-			end
-
-			if (ThisPlayer ~= nil and ThisPlayer.Index ~= player and GrandStrategyEventMap == false) then
-				if (GrandStrategyFaction.Name == Attacker and Defender ~= "") then
-					if (GetFactionFromName(Defender) ~= nil) then
-						arg1 = GetFactionData(Defender, "Name")
-					else
-						arg1 = Defender
-					end
-				elseif (GrandStrategyFaction.Name == Defender and Attacker ~= "") then
-					arg1 = GetFactionData(Attacker, "Name")
-				end
-			end
 		end
 	elseif (data == "Resources") then
 		if (GameSettings.Resources == 1) then
 			res = {2000, 2000, 2000, 0, 2000, 0, 0, 0, 0, 0, 0, 0, 0}
-		elseif (GameSettings.Resources == 2 or (GrandStrategy and GrandStrategyBattleBaseBuilding)) then
+		elseif (GameSettings.Resources == 2) then
 			res = {5000, 5000, 5000, 0, 5000, 0, 0, 0, 0, 0, 0, 0, 0}
 		elseif (GameSettings.Resources == 3) then
 			res = {10000, 10000, 10000, 0, 10000, 0, 0, 0, 0, 0, 0, 0, 0}
 		end
-		if (GrandStrategy == false or GrandStrategyEventMap or GrandStrategyBattleBaseBuilding) then
-			arg2 = res[GetResourceIdByName(arg1)]
-		else
-			arg2 = 0
-		end
+		arg2 = res[GetResourceIdByName(arg1)]
 	end
 
 	OldSetPlayerData(player, data, arg1, arg2)
@@ -237,19 +173,6 @@ function SetPlayerData(player, data, arg1, arg2)
 					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
 				end
 			end
-			if (GrandStrategy and GrandStrategyEventMap == false and GrandStrategyBattle and GrandStrategyFaction ~= nil) then
-				if (player ~= PlayerNumNeutral and (Players[player].Type == PlayerPerson or Players[player].Type == PlayerComputer)) then
-					if (Players[player].Type == PlayerPerson) then
-						SetPlayerData(player, "Faction", GrandStrategyFaction.Name)
-					elseif (Players[player].Type == PlayerComputer) then
-						if (GrandStrategyFaction.Name == Attacker and GetProvinceOwner(AttackedProvince.Name) ~= "") then
-							SetPlayerData(player, "Faction", Defender)
-						elseif (GrandStrategyFaction.Name == Defender) then
-							SetPlayerData(player, "Faction", Attacker)
-						end
-					end
-				end
-			end
 		end
 	end
 end
@@ -273,24 +196,6 @@ function LoadCivilizationUI(civilization)
 	UI.GrandStrategyEndTurnButton.Style = UI.MenuButton.Style
 	UI.GrandStrategyShowHeroesButton.Style = UI.MenuButton.Style
 	UI.GrandStrategyShowRulerButton.Style = UI.MenuButton.Style
-end
-
--- override normal AI setting when in grand strategy mode
-if (OldSetAiType == nil) then
-	OldSetAiType = SetAiType
-end
-
--- Override with game settings
-function SetAiType(player, arg)
-	if (GrandStrategy and GrandStrategyEventMap == false and GrandStrategyBattleBaseBuilding) then
-		arg = "land-attack"
-	elseif (GrandStrategy and GrandStrategyEventMap == false and GrandStrategyBattleBaseBuilding == false and (Defender == GetPlayerData(player, "Name") or Defender == GetPlayerData(player, "Faction")) and ProvinceHasBuildingClass(AttackedProvince.Name, "stronghold")) then
-		arg = "passive" -- if has a stronghold, don't attack, but wait for the enemy to come to you
-	elseif ((GrandStrategy and GrandStrategyEventMap == false and GrandStrategyBattleBaseBuilding == false) or ((GameSettings.NumUnits == 3 or GameSettings.NumUnits == 4 or GameSettings.NumUnits == 5) and arg ~= "passive")) then
-		arg = "grand-strategy-battle"
-	end
-
-	OldSetAiType(player, arg)
 end
 
 if (OldDefinePlayerTypes == nil) then

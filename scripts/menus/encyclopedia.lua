@@ -34,10 +34,6 @@ function GetGenusCommonName(genus)
 end
 
 function RunEncyclopediaMenu()
-	if (GrandStrategy) then
-		GrandStrategyGamePaused = true
-	end
-	
 	Load("scripts/game_concepts.lua")
 
 	if (RunningScenario == false) then
@@ -105,9 +101,6 @@ function RunEncyclopediaMenu()
 			Worlds = nil;
 			CivilizationsEncyclopedia = nil;
 			menu:stop();
-			if (GrandStrategy) then
-				GrandStrategyGamePaused = false
-			end
 		end
 	)
 

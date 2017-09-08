@@ -44,17 +44,11 @@ function RunGameMenu()
 		
 	local b = menu:addFullButton("Save (~<F11~>)", "f11", 16, 40 + 34*3,
 		function() RunSaveMenu() end
-	)	
-	if (GrandStrategy) then
-		b:setEnabled(false)
-	end
+	)
  
 	b = menu:addFullButton("Load (~<F12~>)", "f12", 16, 40 + 34*4,
 		function() RunGameLoadGameMenu() end
 	)
-	if (GrandStrategy) then
-		b:setEnabled(false)
-	end
 	
 	menu:addFullButton("~!End Mission", "e", 16, 40 + 34*5,
 		function() RunEndScenarioMenu() end)

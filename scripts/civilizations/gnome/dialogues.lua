@@ -28,8 +28,7 @@
 DefineDialogue("pypos-gold-introduction", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 10-20.
 	Nodes = {
 		{
-			"text", "A dwarven noble arrives in Untersberg, together with his entourage...",
-			"conditions", function(s) return GrandStrategy == false; end
+			"text", "A dwarven noble arrives in Untersberg, together with his entourage..."
 		},
 		{
 			"speaker", "unit", "unit-dwarven-witness",

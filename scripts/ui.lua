@@ -480,10 +480,7 @@ UI.MenuButton.Y = 1
 UI.MenuButton.Text = "Menu (~<F10~>)"
 UI.MenuButton:SetCallback(
 	function()
-		if (GrandStrategy and not GrandStrategyGamePaused and not GameRunning and GameResult == GameNoResult) then
-			GrandStrategyGamePaused = true
-			RunGrandStrategyGameMenu()
-		elseif (Editor.Running == EditorNotRunning) then
+		if (Editor.Running == EditorNotRunning) then
 			RunGameMenu()
 		else
 			RunInEditorMenu()

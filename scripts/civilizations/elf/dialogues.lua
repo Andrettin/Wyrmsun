@@ -75,9 +75,7 @@ DefineDialogue("the-two-kings-of-annwn-hafgan-dies", { -- Source: Bernhard Maier
 			"option-effects", {
 				function(s)
 					ActionVictory()
-					if (GrandStrategy == false) then
-						SetQuestCompleted("the-two-kings-of-annwn", GameSettings.Difficulty)
-					end
+					SetQuestCompleted("the-two-kings-of-annwn", GameSettings.Difficulty)
 				end
 			}
 		}

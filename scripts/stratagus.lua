@@ -327,27 +327,6 @@ function SinglePlayerTriggers()
 		end
 	)
 
-	if (GrandStrategy and GrandStrategyEventMap == false) then
-		AddTrigger("grand-strategy-battle-message",
-			function()
-				return true
-			end,
-			function()
-				local revolt = false
-				if (GetFactionProvinceCount(GetFactionFromName(Attacker)) == 0 and GetProvinceOwner(AttackedProvince.Name) ~= "" and GetFactionDiplomacyState(GetFactionFromName(Attacker).Civilization, Attacker, GetFactionFromName(Defender).Civilization, Defender) == "peace") then -- if the attacker doesn't own any provinces, then this must be a revolt
-					revolt = true
-				end
-				
-				if not (revolt) then
-					AddMessage("Battle in " .. GetProvinceName(AttackedProvince))
-				else
-					AddMessage("Revolt in " .. GetProvinceName(AttackedProvince))
-				end
-				return false
-			end
-		)
-	end
-	
 	if (LoadedGame == false) then
 		for key, value in pairs(CustomPlayerData) do
 			for i=1,table.getn(CustomPlayerData[key].Objectives) do
@@ -376,49 +355,9 @@ function SinglePlayerTriggers()
 
 	StandardTriggers()
 
-	-- make players have the correct names in grand strategy mode
-	for i=0,(PlayerMax - 2) do
-		if (GrandStrategy and GrandStrategyEventMap == false and GrandStrategyBattle and GrandStrategyFaction ~= nil) then
-			if (Players[i].Type == PlayerPerson or Players[i].Type == PlayerComputer) then
-				if (Players[i].Type == PlayerPerson) then
-					SetPlayerData(i, "Name", GetFactionData(GrandStrategyFaction.Name, "Name"))
-				elseif (Players[i].Type == PlayerComputer) then
-					if (GrandStrategyFaction.Name == Attacker) then
-						if (GetFactionFromName(Defender) ~= nil) then
-							SetPlayerData(i, "Name", GetFactionData(Defender, "Name"))
-						else
-							SetPlayerData(i, "Name", Defender)
-						end
-					elseif (GrandStrategyFaction.Name == Defender) then
-						SetPlayerData(i, "Name", GetFactionData(Attacker, "Name"))
-					end
-				end
-			end
-		end
-	end
-	
 	if (LoadedGame == false) then
 		DefineAllowNormalUnits("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-		if (GrandStrategy == false) then
-			ApplyTechLevels()
-		end
-		if (GrandStrategy) then
-			for i=0,(PlayerMax - 2) do
-				if (GetPlayerData(i, "Name") == Attacker or GetPlayerData(i, "Faction") == Attacker or ((GetPlayerData(i, "Name") == Defender or GetPlayerData(i, "Faction") == Defender) and GetProvinceOwner(AttackedProvince.Name) ~= "")) then
-					if (GetFactionFromName(GetPlayerData(i, "Name")) ~= nil) then
-						for j, unitName in ipairs(Units) do -- if in grand strategy mode, apply upgrades researched
-							if (string.find(unitName, "upgrade-") ~= nil) then
-								if (GetFactionTechnology(GetPlayerData(i, "RaceName"), GetPlayerData(i, "Name"), unitName)) then
-									SetPlayerData(i, "Allow", unitName, "R")
-								else
-									SetPlayerData(i, "Allow", unitName, "F")
-								end
-							end
-						end
-					end
-				end
-			end
-		end
+		ApplyTechLevels()
 	end
 
 	if (GetCurrentQuest() ~= "" and GetQuestData(GetCurrentQuest(), "Scenario") ~= "") then
@@ -1413,26 +1352,6 @@ function FindUnit(unit_type, player, random_unit, last_unit)
 	end
 	
 	return nil
-end
-
-function GetPlayerClassType(unit_class, player, use_province_civilization)
-	if (use_province_civilization and GetPlayerData(player, "Faction") ~= "" and GetPlayerData(player, "RaceName") == GetProvinceCivilization(AttackedProvince.Name)) then
-		return GetFactionClassUnitType(unit_class, GetPlayerData(player, "Faction"))
-	elseif (use_province_civilization and GetProvinceCivilization(AttackedProvince.Name) ~= "") then
-		return GetCivilizationClassUnitType(unit_class, GetProvinceCivilization(AttackedProvince.Name))
-	elseif (use_province_civilization) then
-		if (GrandStrategyWorld == "Earth") then
-			return GetCivilizationClassUnitType(unit_class, "germanic")
-		elseif (GrandStrategyWorld == "Nidavellir") then
-			return GetCivilizationClassUnitType(unit_class, "goblin")
-		else
-			return GetCivilizationClassUnitType(unit_class, "goblin")
-		end
-	elseif (GetPlayerData(player, "Faction") ~= "") then
-		return GetFactionClassUnitType(unit_class, GetPlayerData(player, "Faction"))
-	else
-		return GetCivilizationClassUnitType(unit_class, GetPlayerData(player, "RaceName"))
-	end
 end
 
 function FindUnitOfClass(unit_class, player, random_unit, last_unit)

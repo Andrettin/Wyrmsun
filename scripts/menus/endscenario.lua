@@ -4,21 +4,18 @@ function RunEndScenarioMenu()
 	menu:addLabel("End Mission", 128, 11)
 	local b = menu:addFullButton("~!Restart Mission", "r", 16, 40 + (36 * 0),
 		function()
-			if not (IsNetworkGame() or GrandStrategy) then
+			if not (IsNetworkGame()) then
 				RunRestartConfirmMenu()
 			end
 		end
 	)
-	if (IsNetworkGame() or GrandStrategy) then
+	if (IsNetworkGame()) then
 		b:setEnabled(false)
 	end
 --	menu:addFullButton("~!Resign", "r", 16, 40 + (36 * 1),
 --		function() RunSurrenderConfirmMenu() end)
 	b = menu:addFullButton("~!Quit Mission", "q", 16, 40 + (36 * 1),
 		function() RunQuitToMenuConfirmMenu() end)
-	if (GrandStrategy) then
-		b:setEnabled(false)
-	end
 	
 	menu:addFullButton("E~!xit to Desktop", "x", 16, 40 + (36 * 2),
 		function() RunExitConfirmMenu() end

@@ -21,15 +21,11 @@ local function HandleIngameCommandKey(key, ctrl, alt, shift)
 		if (not IsNetworkGame()) then SetGamePaused(true) end
 		RunGameMenu()
 	elseif ((key == "s" and alt) or key == "f11") then
-		if (GrandStrategy == false) then
-			if (not IsNetworkGame()) then SetGamePaused(true) end
-			RunSaveMenu()
-		end
+		if (not IsNetworkGame()) then SetGamePaused(true) end
+		RunSaveMenu()
 	elseif ((key == "l" and alt) or key == "f12") then
-		if (GrandStrategy == false) then
-			if (not IsNetworkGame()) then SetGamePaused(true) end
-			RunGameLoadGameMenu()
-		end
+		if (not IsNetworkGame()) then SetGamePaused(true) end
+		RunGameLoadGameMenu()
 	elseif (key == "q" and (ctrl or alt)) then
 		if (not IsNetworkGame()) then SetGamePaused(true) end
 		RunQuitToMenuConfirmMenu()

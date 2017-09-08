@@ -1452,7 +1452,7 @@ function CreateCritters(arg)
 				and (GetUnitTypeData(unit_type_list[i], "Predator") == false or not arg.NoPredators)
 				and (GetUnitTypeData(unit_type_list[i], "Type") ~= "fly" or GetUnitTypeData(unit_type_list[i], "Predator") == false or not arg.NoFlyingCreeps)
 				and (GetUnitTypeData(unit_type_list[i], "Level") < 3 or GetUnitTypeData(unit_type_list[i], "Predator") == false or not arg.NoMightyCreeps)
-				and (GetSpeciesData(species, "Prehistoric") == false or (GetCurrentQuest() == "" and GetCurrentCampaign() == "" and GrandStrategy == false)) -- don't generate prehistoric fauna if playing a quest or the grand strategy mode
+				and (GetSpeciesData(species, "Prehistoric") == false or (GetCurrentQuest() == "" and GetCurrentCampaign() == ""))
 			) then
 				local has_terrain = false
 				local species_terrains = GetSpeciesData(species, "Terrains")
@@ -1863,10 +1863,6 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 							CreateStartingBuilding(i, player_buildings[i + 1][j]) -- give the player initial buildings
 						end
 					end
-					if (GrandStrategy and GrandStrategyEventMap == false and (Defender == GetPlayerData(i, "Faction") or Defender == GetPlayerData(i, "Name")) and ProvinceHasBuildingClass(AttackedProvince.Name, "stronghold")) then
-						CreateStartingBuilding(i, "Stronghold Guard Tower") -- give the defender two guard towers if a stronghold is built
-						CreateStartingBuilding(i, "Stronghold Guard Tower")
-					end
 
 					SetPlayerData(i, "Resources", "copper", 5000)
 					SetPlayerData(i, "Resources", "lumber", 5000)
@@ -2231,40 +2227,35 @@ function GenerateRandomMap(arg)
 
 		CreateDecorations()	
 
-		if (GrandStrategy == false or GrandStrategyBattleBaseBuilding) then
-			if (arg.WorkerQuantity) then
-				for i=0,(PlayerMax - 2) do
-					if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
-						for j=1,arg.WorkerQuantity do
-							unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-							if (GrandStrategy and GrandStrategyBattleBaseBuilding) then
-								SetUnitVariable(unit, "Starting", false)
-							end
-						end
-					end
-				end
-			end
-
+		if (arg.WorkerQuantity) then
 			for i=0,(PlayerMax - 2) do
 				if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
-					if (GetPlayerData(i, "RaceName") == "dwarf") then
-						CreateStartingLocationResourcePiles(i, "unit-stone-pile", 12)
-						CreateStartingLocationResourcePiles(i, "unit-wood-pile", 4)
-					else
-						CreateStartingLocationResourcePiles(i, "unit-wood-pile", 16)
+					for j=1,arg.WorkerQuantity do
+						unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
 					end
 				end
 			end
-			
-			if (arg.NoDeposits) then
-				CreateGoldRocks((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
-			else
-				CreateGoldSpots((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
-			end
+		end
 
-			if (arg.MercenaryCamp) then
-				CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
+		for i=0,(PlayerMax - 2) do
+			if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
+				if (GetPlayerData(i, "RaceName") == "dwarf") then
+					CreateStartingLocationResourcePiles(i, "unit-stone-pile", 12)
+					CreateStartingLocationResourcePiles(i, "unit-wood-pile", 4)
+				else
+					CreateStartingLocationResourcePiles(i, "unit-wood-pile", 16)
+				end
 			end
+		end
+			
+		if (arg.NoDeposits) then
+			CreateGoldRocks((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
+		else
+			CreateGoldSpots((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
+		end
+
+		if (arg.MercenaryCamp) then
+			CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
 		end
 
 		-- create oil patches
@@ -2891,7 +2882,7 @@ function FindAppropriatePlayerSpawnPoint(min_x, max_x, min_y, max_y)
 				local gold_mine_quantity = GetNumUnitsAt(PlayerNumNeutral, "unit-gold-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-silver-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-copper-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-diamond-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
 				local close_gold_mine_quantity = GetNumUnitsAt(PlayerNumNeutral, "unit-gold-deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6}) + GetNumUnitsAt(PlayerNumNeutral, "unit-silver-deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6}) + GetNumUnitsAt(PlayerNumNeutral, "unit-copper-deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6}) + GetNumUnitsAt(PlayerNumNeutral, "unit-diamond-deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6})
 
-				if (unit_quantity < 1 and (gold_mine_quantity >= 1 or (GrandStrategy and GrandStrategyBattleBaseBuilding == false)) and close_gold_mine_quantity < 1) then
+				if (unit_quantity < 1 and gold_mine_quantity >= 1 and close_gold_mine_quantity < 1) then
 					location_found = true
 				end
 			end
@@ -3929,12 +3920,10 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 		end
 	end
 
-	if (GrandStrategy == false or GrandStrategyBattleBaseBuilding) then
-		CreateGoldSpots((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
+	CreateGoldSpots((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
 
-		if (GetCurrentTileset() == "swamp" or GetCurrentTileset() == "cave") then
-			CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
-		end
+	if (GetCurrentTileset() == "swamp" or GetCurrentTileset() == "cave") then
+		CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
 	end
 
 	CreateRoamingFog((Map.Info.MapWidth * Map.Info.MapHeight) / 4096)
@@ -5874,17 +5863,12 @@ function GenerateCave(town_halls, symmetric)
 	end
 
 	
-	if (GrandStrategy == false or GrandStrategyBattleBaseBuilding) then
-		CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
+	CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
 
-		for i=0,(PlayerMax - 2) do
-			if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
-				for j=1,5 do
-					unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-					if (GrandStrategy and GrandStrategyBattleBaseBuilding) then
-						SetUnitVariable(unit, "Starting", false)
-					end
-				end
+	for i=0,(PlayerMax - 2) do
+		if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
+			for j=1,5 do
+				unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
 			end
 		end
 	end
