@@ -360,16 +360,11 @@ function Event(speaker, event_description, player, options, option_effects, even
 	end
 
 	if (
-		(
-			(GrandStrategy and not GameRunning and GameResult == GameNoResult and player == GetPlayerFactionName())
-			or (GameRunning and GetThisPlayer() == player)
-		)
+		GameRunning and GetThisPlayer() == player
 		and (continue_automatically == nil or continue_automatically == false)
 	) then
 		if (GameRunning and not IsNetworkGame()) then
 			SetGamePaused(true)
-		elseif (GrandStrategy) then
-			GrandStrategyGamePaused = true
 		end
 		
 		if (GameRunning) then
@@ -402,7 +397,7 @@ function Event(speaker, event_description, player, options, option_effects, even
 		l:setFont(Fonts["game"])
 		l:setSize(324, 324)
 		l:setLineWidth(324)
-		if (event_icon == nil and type(speaker) == "string" and not (GrandStrategy and not GameRunning and GameResult == GameNoResult)) then
+		if (event_icon == nil and type(speaker) == "string") then
 			--if (title_label ~= "") then
 				menu:add(l, 14, 76)
 			--else
@@ -419,12 +414,6 @@ function Event(speaker, event_description, player, options, option_effects, even
 			event_icon = CIcon:Get(GetUnitVariable(speaker, "Icon")).G
 			event_icon:Load()
 			b = PlayerColorImageButton("", GetPlayerData(GetUnitVariable(speaker, "Player"), "Color"))
-			b:setHairColor(GetUnitVariable(speaker, "HairColor"))
-			menu:add(b, 153, 48)
-		elseif (GrandStrategy and not GameRunning and GameResult == GameNoResult) then
-			event_icon = CIcon:Get(GetUnitTypeData(GetGrandStrategyHeroUnitType(speaker), "Icon")).G
-			event_icon:Load()
-			b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Name, "Color"))
 			b:setHairColor(GetUnitVariable(speaker, "HairColor"))
 			menu:add(b, 153, 48)
 		elseif (event_icon ~= nil) then
@@ -461,8 +450,6 @@ function Event(speaker, event_description, player, options, option_effects, even
 				function(s)
 					if (GameRunning and not IsNetworkGame()) then
 						SetGamePaused(false)
-					elseif (GrandStrategy) then
-						GrandStrategyGamePaused = false
 					end
 					menu:stop()
 					option_effects[i]()
@@ -479,8 +466,6 @@ function Event(speaker, event_description, player, options, option_effects, even
 				function(s)
 					if (GameRunning and not IsNetworkGame()) then
 						SetGamePaused(false)
-					elseif (GrandStrategy) then
-						GrandStrategyGamePaused = false
 					end
 					menu:stop()
 					option_effects[1]()
@@ -507,8 +492,6 @@ function Tip(tip_name, tip_description)
 
 	if (GameRunning and not IsNetworkGame()) then
 		SetGamePaused(true)
-	elseif (GrandStrategy) then
-		GrandStrategyGamePaused = true
 	end
 	
 	local menu
@@ -539,8 +522,6 @@ function Tip(tip_name, tip_description)
 		function()
 			if (GameRunning and not IsNetworkGame()) then
 				SetGamePaused(false)
-			elseif (GrandStrategy) then
-				GrandStrategyGamePaused = false
 			end
 			menu:stop()
 		end
@@ -550,8 +531,6 @@ function Tip(tip_name, tip_description)
 		function()
 			if (GameRunning and not IsNetworkGame()) then
 				SetGamePaused(false)
-			elseif (GrandStrategy) then
-				GrandStrategyGamePaused = false
 			end
 			menu:stop()
 		end,
@@ -568,8 +547,6 @@ end
 function GenericDialog(title, message, tooltip, icon, player_color, hair_color)
 	if (GameRunning and not IsNetworkGame()) then
 		SetGamePaused(true)
-	elseif (GrandStrategy) then
-		GrandStrategyGamePaused = true
 	end
 	
 	local menu
@@ -621,8 +598,6 @@ function GenericDialog(title, message, tooltip, icon, player_color, hair_color)
 		function()
 			if (GameRunning and not IsNetworkGame()) then
 				SetGamePaused(false)
-			elseif (GrandStrategy) then
-				GrandStrategyGamePaused = false
 			end
 			menu:stop()
 		end
@@ -635,8 +610,6 @@ function GenericDialog(title, message, tooltip, icon, player_color, hair_color)
 		function()
 			if (GameRunning and not IsNetworkGame()) then
 				SetGamePaused(false)
-			elseif (GrandStrategy) then
-				GrandStrategyGamePaused = false
 			end
 			menu:stop()
 		end,
