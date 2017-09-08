@@ -57,3 +57,27 @@ AddTrigger("on-the-vanaquisl-introduction",
 		return false
 	end
 )
+
+AddTrigger("on-the-vanaquisl-vana-sighted",
+	function()
+		for i=0,(PlayerMax - 2) do
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("voden", i) ~= nil and GetFactionExists("vana-tribe") and GetPlayerData(i, "HasQuest", "on-the-vanaquisl")) then
+				local uncount = GetUnits(GetFactionPlayer("vana-tribe"))
+				for unit1 = 1,table.getn(uncount) do 
+					if (uncount[unit1] and GetUnitVariable(uncount[unit1], "Ident") == "unit-germanic-warrior") then
+						local unit_quantity = GetNumUnitsAt(i, "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3, GetUnitVariable(uncount[unit1],"PosY") + 3})
+						if (unit_quantity > 0) then
+							trigger_player = i
+							return true
+						end
+					end
+				end
+			end
+		end
+		return false
+	end,
+	function()
+		CallDialogue("on-the-vanaquisl-vana-sighted", trigger_player)
+		return false
+	end
+)

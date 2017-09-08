@@ -58,6 +58,34 @@ DefineDialogue("asa-raid", {
 	}
 })
 
+DefineDialogue("on-the-vanaquisl-vanaquisl-sighted", { -- unused, since the Asa begin near the Vanaquisl river as well, so the line wouldn't make much sense; would be triggered when an Asa unit gets close to the Vanaquisl river, or close to the Tanais/Vanaquisl Vana settlement
+	Nodes = {
+		{
+			"speaker", "character", "voden",
+			"text", "Ah, the great Vanaquisl! These riverlands could help feed many mouths."
+		}
+	}
+})
+
+DefineDialogue("on-the-vanaquisl-vana-sighted", {
+	Nodes = {
+		{
+			"speaker", "unit", "unit-germanic-warrior",
+			"speaker-player", "vana-tribe",
+			"text", "The Asa! What are you here for?"
+		},
+		{
+			"speaker", "character", "voden",
+			"text", "We are here for Vanaland."
+		},
+		{
+			"speaker", "unit", "unit-germanic-warrior",
+			"speaker-player", "vana-tribe",
+			"text", "You shall have our homelands... as your burial ground."
+		}
+	}
+})
+
 DefineDialogue("on-the-vanaquisl-victory", {
 	Nodes = {
 		{
