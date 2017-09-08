@@ -138,7 +138,7 @@ local tips = {
 	-- Resource-related tips
 	"You can build gold mines on top of gold deposits.",
 	"Silver and gold are converted into copper when delivered, at a rate of 200% and 400%, respectively.",
-	"If a worker is stuck between trees or rocks, it will drop the resources it is carrying to be able to harvest more and escape.",
+	"If a worker unit is stuck between trees or rocks, it will drop the resources it is carrying to be able to harvest more and escape.",
 	
 	-- Fauna-related tips
 --	"Yales are territorial creatures.",
