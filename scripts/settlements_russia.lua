@@ -43,8 +43,11 @@ DefineSettlement("azov", {
 		-3000, -2800, "barracks"
 	},
 	HistoricalUnits = {
-		-3000, "unit-germanic-warrior", 9000, "asa-tribe", -- the great army assembled to fight the Vana
+		-3000, "unit-germanic-warrior", 8000, "asa-tribe", -- the great army assembled to fight the Vana
 		-2999, "unit-germanic-warrior", 0, "asa-tribe"
+	},
+	HistoricalHeroes = {
+		-3000, -2999, "voden", "asa-tribe"
 	},
 	Regions = {"eurasia", "europe"}
 })

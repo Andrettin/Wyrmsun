@@ -38,8 +38,9 @@ DefineQuest("on-the-vanaquisl", {
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
-	Objectives = {"- Destroy Vanaland's Chieftain's Hall"},
+	Objectives = {"- Destroy Vanaland's Chieftain's Hall", "- Wodanaz must survive"},
 	DestroyUnits = {"unit-germanic-town-hall", "vana-tribe", 1},
+	HeroesMustSurvive = {"voden"},
 	Unobtainable = true
 })
 

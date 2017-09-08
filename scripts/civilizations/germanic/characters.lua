@@ -313,12 +313,13 @@ DefineCharacter("friallaf", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 })
 
 DefineCharacter("voden", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
-	Name = "Voden", -- "Vóden"; euhemerized version of Odin; "far-famed for his wisdom and every accomplishment"; had "second sight"
+	Name = "Wodanaz", -- Proto-Germanic name of Odin
+	-- "Vóden"; euhemerized version of Odin; "far-famed for his wisdom and every accomplishment"; had "second sight"
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Astrakhan",
 	Trait = "upgrade-wise",
+	HairVariation = "gray-hair",
 	Date = -3000 + 12 + (10 * 18),
 	DeathDate = -2800 + (30 * 1), -- with Voden begins a new genealogy, and he can live the standard 30 years
 	Father = "friallaf",

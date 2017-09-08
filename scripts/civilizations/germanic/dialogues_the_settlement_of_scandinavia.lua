@@ -28,7 +28,8 @@
 DefineDialogue("on-the-vanaquisl-introduction", {
 	Nodes = {
 		{
-			"text", "We have assembled a great army to attack those who live on the Vanaquisl, the people of Vanaland. Their territory shall be taken into our possession, providing our people with the lands we much need to prosper. Onward to victory!",
+			"speaker", "character", "voden",
+			"text", "We have assembled a great army to attack the people of Vanaland. Their territory shall be taken into our possession, providing our tribesfolk with the lands we much need to prosper. Onward to victory!",
 			"option-effects", {
 				function(s)
 					SetPlayerData(trigger_player, "AcceptQuest", "on-the-vanaquisl")
@@ -42,6 +43,8 @@ DefineDialogue("on-the-vanaquisl-introduction", {
 DefineDialogue("asa-raid", {
 	Nodes = {
 		{
+			"speaker", "unit", "unit-germanic-warrior",
+			"speaker-player", "vana-tribe",
 			"text", "The Asa people are coming with a large force to raid us, prepare our defenses!",
 			"options", {"Defend our homeland!"}
 		}
@@ -72,6 +75,7 @@ DefineDialogue("on-the-vanaquisl-victory", {
 			}
 		},
 		{
+			"speaker", "character", "voden",
 			"text", "We ravaged Vanaland and pillaged its wealth. Victory is ours!",
 			"option-effects", {
 				function(s)
