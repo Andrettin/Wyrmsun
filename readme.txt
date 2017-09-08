@@ -60,6 +60,10 @@ https://github.com/Andrettin/Wyrmsun
 - 2.8.2
 -----------------------------------------------------------------------
 
+* Maps
+- Revamped the Svarinshaug map, so that it now uses data from the Nidavellir map template and is 256x256.
+- Revamped the Tanais map, so that it now uses data from the Earth map template and is 256x256.
+
 * Scenarios
 - The "On the Vanaquisl" quest has been moved to the Scenario mode as its own scenario.
 

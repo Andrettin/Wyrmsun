@@ -4,41 +4,10 @@ else
 	LoadTileModels("scripts/tilesets/conifer_forest_autumn.lua")
 end
 
-if (LoadedGame == false) then
-	GenerateRandomMap({
---		RockQuantity = "low",
-		TreeQuantity = "high",
---		WaterQuantity = "low",
---		DarkLandQuantity = "medium",
---		DarkRoughLandQuantity = "medium",
-		RoughLandQuantity = "low",
-		WorkerQuantity = 0,
-		PlayerCivilizations = {"germanic", "celt"},
-		NoTownHall = true,
-		PlayerBuildings = {
-			{},
-			{"Farm", "Farm"}
-		},
-		WaterLayout = {
-			{ 0,  0,  0,  0,  0,  0,  0,  0},
-			{ 0,  0,  0,  0,  0,  0,  0,  0},
-			{ 0,  0,  0,  0,  0,  0,  0,  0},
-			{ 0,  0,  0,  0,  0,  0,  0,  0},
-			{ 0,  0,  0,  0,  0,  0, 18, 10},
-			{ 0,  0,  0, 18, 10, 10, 16,  0}
-		},
-		StartingLocationLayout = {
-			{-2, -2, -2, -2, -1, -1, -1, -1},
-			{-2, -2, -2, -2, -2, -2, -2, -1},
-			{-2, -2, -2, -2, -2, -2, -2, -1},
-			{-2, -2, -2, -2, -2, -2, -2, -2},
-			{-2, -2, -2, -2,  1, -2, -2, -2},
-			{-2, -2, -2, -2, -2, -2, -2, -2}
-		},
-		NoDeposits = true
-	})
-end
+ApplyMapTemplate("earth", 4728, 850)
 
-if (GetCurrentQuest() == "on-the-vanaquisl") then
-	SetAiType(1, "passive")
-end
+SetPlayerData(PlayerNumNeutral, "RaceName", "neutral")
+
+CreateGoldMines(6, 50000, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, false, false)
+
+CreatePlayers(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1, true, true, false, true, nil, nil, false, true)

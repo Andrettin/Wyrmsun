@@ -1256,11 +1256,11 @@ function CreateGoldMines(gold_mine_number, gold_quantity, min_x, max_x, min_y, m
 			local RandomNumber = SyncRand(3)
 			local deposit_type
 			if (RandomNumber == 0 or no_convertibles) then
-				deposit_type = "unit-gold-deposit"
+				deposit_type = "unit-copper-deposit"
 			elseif (RandomNumber == 1) then
 				deposit_type = "unit-silver-deposit"
 			elseif (RandomNumber == 2) then
-				deposit_type = "unit-copper-deposit"
+				deposit_type = "unit-gold-deposit"
 			end
 			unit = CreateUnit(deposit_type, PlayerNumNeutral, {gold_mine_spawn_point[1], gold_mine_spawn_point[2]})
 			SetResourcesHeld(unit, gold_quantity)
@@ -1742,7 +1742,7 @@ function CreateDecorations()
 	end
 end
 
-function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_halls, symmetric, starting_gold_mine, player_civilizations, player_buildings, water_map)
+function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_halls, symmetric, starting_gold_mine, player_civilizations, player_buildings, water_map, no_raw_tile)
 	-- create player units
 	local symmetric_starting_location = {0, 0}
 	for i=0,(PlayerMax - 2) do
@@ -1827,8 +1827,14 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 					
 					for sub_x=-4,7 do
 						for sub_y=-4,7 do
-							if (RawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y) == "Rock" or RawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y) == "Water") then
-								starting_point_found = false
+							if (no_raw_tile) then
+								if (GetTileTerrainHasFlag(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y, "no-building") or GetTileTerrainHasFlag(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y, "unpassable") or GetTileTerrainHasFlag(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y, "water")) then
+									starting_point_found = false
+								end
+							else
+								if (RawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y) == "Rock" or RawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y) == "Water") then
+									starting_point_found = false
+								end
 							end
 						end
 					end
@@ -1843,24 +1849,40 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 					else
 						SetPlayerData(i, "RaceName", possible_civilizations[SyncRand(table.getn(possible_civilizations)) + 1])
 					end
-					for sub_x=-1,4 do
-						for sub_y=-1,4 do
-							SetRawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y, "Road")
+					if (no_raw_tile) then
+						unit = CreateUnit("unit-germanic-town-hall", i, {player_spawn_point[1], player_spawn_point[2]})
+						unit = CreateUnit("unit-germanic-worker", i, {player_spawn_point[1], player_spawn_point[2]})
+						unit = CreateUnit("unit-germanic-worker", i, {player_spawn_point[1], player_spawn_point[2]})
+						unit = CreateUnit("unit-germanic-worker", i, {player_spawn_point[1], player_spawn_point[2]})
+						unit = CreateUnit("unit-germanic-worker", i, {player_spawn_point[1], player_spawn_point[2]})
+						unit = CreateUnit("unit-germanic-worker", i, {player_spawn_point[1], player_spawn_point[2]})
+						CreateStartingGoldMine(i, nil, nil, true) -- create the player's gold mine
+						if (GetPlayerData(i, "RaceName") == "dwarf") then
+							CreateStartingLocationResourcePiles(i, "unit-stone-pile", 12)
+							CreateStartingLocationResourcePiles(i, "unit-wood-pile", 4)
+						else
+							CreateStartingLocationResourcePiles(i, "unit-wood-pile", 16)
 						end
-					end
-					if (town_halls) then
-						for sub_x=0,3 do
-							for sub_y=0,3 do
-								SetRawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y, "Town Hall " .. i)
+					else
+						for sub_x=-1,4 do
+							for sub_y=-1,4 do
+								SetRawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y, "Road")
 							end
 						end
-					end
-					if (starting_gold_mine) then
-						CreateStartingGoldMine(i) -- create the player's gold mine
-					end
-					if (player_buildings ~= nil and player_buildings[i + 1] ~= nil) then
-						for j=1,table.getn(player_buildings[i + 1]) do
-							CreateStartingBuilding(i, player_buildings[i + 1][j]) -- give the player initial buildings
+						if (town_halls) then
+							for sub_x=0,3 do
+								for sub_y=0,3 do
+									SetRawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y, "Town Hall " .. i)
+								end
+							end
+						end
+						if (starting_gold_mine) then
+							CreateStartingGoldMine(i) -- create the player's gold mine
+						end
+						if (player_buildings ~= nil and player_buildings[i + 1] ~= nil) then
+							for j=1,table.getn(player_buildings[i + 1]) do
+								CreateStartingBuilding(i, player_buildings[i + 1][j]) -- give the player initial buildings
+							end
 						end
 					end
 
@@ -3748,7 +3770,7 @@ function ReplaceTiles(x1, y1, x2, y2, from, to)
 	end
 end
 
-function CreateStartingGoldMine(player, x, y)
+function CreateStartingGoldMine(player, x, y, no_raw_tile)
 	local WhileCount = 0
 	local gold_mine_built = false
 	while (gold_mine_built == false and WhileCount < 100) do
@@ -3770,23 +3792,37 @@ function CreateStartingGoldMine(player, x, y)
 		local free_square = true
 		for sub_x=-1,3 do
 			for sub_y=-1,3 do
+				if (no_raw_tile) then
+					if (GetTileTerrainHasFlag(gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y, "unpassable") or GetTileTerrainHasFlag(gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y, "no-building") or GetTileTerrainHasFlag(gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y, "water")) then
+						free_square = false
+					end
+				else
 					if (RawTile(gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y) ~= "Land" and RawTile(gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y) ~= "Dark-Land") then
 						free_square = false
 					end
+				end
 			end
 		end
 		if ((gold_mine_spawn_point[1] + 2) > Map.Info.MapWidth or (gold_mine_spawn_point[2] + 2) > Map.Info.MapHeight or gold_mine_spawn_point[1] < 0 or gold_mine_spawn_point[2] < 0) then
 			free_square = false
 		end
 		if (free_square) then
-			for sub_x=-2,4 do
-				for sub_y=-2,4 do
-					SetRawTile(gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y, "Road") -- add "road" so that there are no transition issues
+			if (no_raw_tile) then
+				unit = CreateUnit("unit-copper-deposit", PlayerNumNeutral, {gold_mine_spawn_point[1], gold_mine_spawn_point[2]})
+				SetResourcesHeld(unit, 50000)
+				for i = 1, 9 do
+					unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {gold_mine_spawn_point[1] + 1, gold_mine_spawn_point[2] + 1})
 				end
-			end
-			for sub_x=0,(GetUnitTypeData("unit-copper-deposit", "TileWidth") - 1) do
-				for sub_y=0,(GetUnitTypeData("unit-copper-deposit", "TileHeight") - 1) do
-					SetRawTile(gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y, "Starting Gold Mine")
+			else
+				for sub_x=-2,4 do
+					for sub_y=-2,4 do
+						SetRawTile(gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y, "Road") -- add "road" so that there are no transition issues
+					end
+				end
+				for sub_x=0,(GetUnitTypeData("unit-copper-deposit", "TileWidth") - 1) do
+					for sub_y=0,(GetUnitTypeData("unit-copper-deposit", "TileHeight") - 1) do
+						SetRawTile(gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y, "Starting Gold Mine")
+					end
 				end
 			end
 			gold_mine_built = true
