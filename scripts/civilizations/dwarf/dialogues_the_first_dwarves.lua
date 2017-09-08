@@ -53,9 +53,6 @@ DefineDialogue("a-rocky-home-introduction", {
 		},
 		{
 			"text", "Hint: Select a Miner and then right-click on a Yale Cave to build a Yale Hunting Lodge."
-		},
-		{
-			"text", "Hint: You can harvest stone from Stone Piles, as well as from rock tiles."
 		}
 	}
 })
@@ -72,6 +69,9 @@ DefineDialogue("a-rocky-home-mead-hall-built", {
 		},
 		{
 			"text", "Hint: You can acquire side-quests in your Mead Hall, and train new Miners there should you need them. If you lack the Food supply to train more units, build farms with your existing miners."
+		},
+		{
+			"text", "Hint: You can harvest stone from Stone Piles, as well as from rock tiles."
 		}
 	}
 })
