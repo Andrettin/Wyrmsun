@@ -36,6 +36,13 @@ DefineDialogue("on-the-vanaquisl-introduction", {
 					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("vana-tribe"))
 				end
 			}
+		},
+		{
+			"speaker", "character", "voden",
+			"text", "The Vana live on the other side of the Vanaquisl river... there is a crossing further to the east we can take."
+		},
+		{
+			"text", "Hint: Press Alt+Q to select your entire army."
 		}
 	}
 })
