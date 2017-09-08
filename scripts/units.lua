@@ -936,9 +936,9 @@ DefineUnitType("unit-diamond-rock", {
 } )
 
 DefineUnitType("unit-wood-pile", {
-	Name = _("Wood Pile"),
-	Image = {"file", "neutral/buildings/wood_pile.png", "size", {43, 43}},
-	Animations = "animations-decoration", Icon = "icon-wood-pile",
+	Name = "Wood Pile",
+	Image = {"file", "neutral/buildings/wood_pile_1.png", "size", {43, 43}},
+	Animations = "animations-building", Icon = "icon-wood-pile",
 	NeutralMinimapColor = {165, 42, 42},
 	Costs = {"time", 150},
 	Speed = 0,
@@ -960,13 +960,16 @@ DefineUnitType("unit-wood-pile", {
 			"variation-id", "1"
 		},
 		{
-			"variation-id", "2"
+			"variation-id", "2",
+			"file", "neutral/buildings/wood_pile_2.png"
 		},
 		{
-			"variation-id", "3"
+			"variation-id", "3",
+			"file", "neutral/buildings/wood_pile_3.png"
 		},
 		{
-			"variation-id", "4"
+			"variation-id", "4",
+			"file", "neutral/buildings/wood_pile_4.png"
 		}
 	},
 	Sounds = {

@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 - 2.8.2
 -----------------------------------------------------------------------
 
+* Map Editor
+- Wood piles now use their different variations in the editor.
+
 * Maps
 - Revamped the Svarinshaug map, so that it now uses data from the Nidavellir map template and is 256x256.
 - Revamped the Tanais map, so that it now uses data from the Earth map template and is 256x256.
