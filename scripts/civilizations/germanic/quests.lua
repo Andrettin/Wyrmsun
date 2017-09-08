@@ -32,10 +32,6 @@ DefineQuest("on-the-vanaquisl", {
 	PlayerColor = "orange",
 	CompletionEffects = function(s)
 		CallDialogue("on-the-vanaquisl-victory", trigger_player)
-		
-		if (FindUnit("unit-germanic-warrior", GetFactionPlayer("vana-tribe"))) then
-		--	CallDialogue("on-the-vanaquisl-vana-hall-destroyed", trigger_player) -- causing the previous dialogue call to be repeated again and again
-		end
 	end,
 	FailEffects = function(s)
 		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "on-the-vanaquisl") then

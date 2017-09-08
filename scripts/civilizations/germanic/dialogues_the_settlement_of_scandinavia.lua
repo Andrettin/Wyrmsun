@@ -48,12 +48,15 @@ DefineDialogue("asa-raid", {
 	}
 })
 
-DefineDialogue("on-the-vanaquisl-vana-hall-destroyed", {
+DefineDialogue("on-the-vanaquisl-victory", {
 	Nodes = {
 		{
 			"speaker", "unit", "unit-germanic-warrior",
 			"speaker-player", "vana-tribe",
 			"text", "What is this disturbance in our home?",
+			"conditions", function(s)
+				return (FindUnit("unit-germanic-warrior", GetFactionPlayer("vana-tribe")) ~= nil)
+			end,
 			"option-effects", {
 				function(s)
 					local asa_warrior = FindUnit("unit-germanic-warrior", trigger_player)
@@ -67,12 +70,7 @@ DefineDialogue("on-the-vanaquisl-vana-hall-destroyed", {
 					end
 				end
 			}
-		}
-	}
-})
-
-DefineDialogue("on-the-vanaquisl-victory", {
-	Nodes = {
+		},
 		{
 			"text", "We ravaged Vanaland and pillaged its wealth. Victory is ours!",
 			"option-effects", {
