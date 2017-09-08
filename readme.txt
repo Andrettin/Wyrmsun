@@ -69,8 +69,12 @@ https://github.com/Andrettin/Wyrmsun
 - Revamped the Svarinshaug map, so that it now uses data from the Nidavellir map template and is 256x256.
 - Revamped the Tanais map, so that it now uses data from the Earth map template and is 256x256.
 
+* Miscellaneous
+- Added 1200 as a possible resolution height.
+
 * Scenarios
 - The "On the Vanaquisl" quest has been moved to the Scenario mode as its own scenario.
+- Added hint to the "The First Dwarves" scenario explaining that stone can be harvested from rock tiles.
 
 -----------------------------------------------------------------------
 - 2.8.1

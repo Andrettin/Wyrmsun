@@ -40,19 +40,22 @@ DefineDialogue("a-rocky-home-introduction", {
 		},
 		{
 			"speaker", "character", "modsognir",
-			"text", "There are many perils laying about. We need to be ready quickly."
-		},
-		{
-			"text", "Hint: Select a Miner, press the Build Structure button and then click on the Build Mead Hall button to build the structure required for this quest. The Mead Hall can only be built on a Settlement Site."
-		},
-		{
-			"text", "Hint: Select a Miner and then right-click on a Yale Cave to build a Yale Hunting Lodge.",
+			"text", "There are many perils laying about. We need to be ready quickly.",
 			"option-effects", {
 				function(s)
 					SetPlayerData(trigger_player, "AcceptQuest", "the-first-dwarves")
 					SetPlayerData(trigger_player, "AcceptQuest", "a-rocky-home")
 				end
 			}
+		},
+		{
+			"text", "Hint: Select a Miner, press the Build Structure button and then click on the Build Mead Hall button to build the structure required for this quest. The Mead Hall can only be built on a Settlement Site."
+		},
+		{
+			"text", "Hint: Select a Miner and then right-click on a Yale Cave to build a Yale Hunting Lodge."
+		},
+		{
+			"text", "Hint: You can harvest stone from Stone Piles, as well as from rock tiles."
 		}
 	}
 })
