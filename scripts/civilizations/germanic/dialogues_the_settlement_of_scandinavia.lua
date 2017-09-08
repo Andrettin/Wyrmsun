@@ -42,7 +42,7 @@ DefineDialogue("on-the-vanaquisl-introduction", {
 			"text", "The Vana live on the other side of the Vanaquisl river... there is a crossing further to the east we can take."
 		},
 		{
-			"text", "Hint: Press Alt+Q to select your entire army."
+			"text", "Hint: Press Alt+Q to select your entire army. Although you begin with a settlement and a worker, you only need your initial army to complete this scenario."
 		}
 	}
 })
