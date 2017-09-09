@@ -25,34 +25,17 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("kiev", {
-	Name = "Kiev",
+DefineSettlement("simferopol", {
+	Name = "Simferopol",
 	MapTemplate = "earth",
-	Position = {4532, 905},
+	Position = {4615, 1024},
 	Major = true,
 	CulturalNames = {
-		"slav", "Kiev"
+		"slav", "Simferopol"
 	},
 	HistoricalOwners = {
 	},
 	HistoricalBuildings = {
-	},
-	Regions = {"eurasia", "europe"}
-})
-
-DefineSettlement("zaporizhzhya", {
-	Name = "Zaporizhzhya",
-	MapTemplate = "earth",
-	Position = {4642, 959},
-	Major = true,
-	CulturalNames = {
-		"slav", "Zaporizhzhya"
-	},
-	HistoricalOwners = {
-		-3500, "celtic-cimmerian-tribe" -- Zaporizhzhya's area was part of the Indo-European homeland in 3500-3000 BC; Source: David W. Anthony, "The Horse, the Wheel, and Language", 2007, p. 84.
-	},
-	HistoricalBuildings = {
-		-3500, 0, "town-hall"
 	},
 	Regions = {"eurasia", "europe"}
 })
