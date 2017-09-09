@@ -390,6 +390,7 @@ DefineSettlement("regensburg", {
 	CulturalNames = {
 		"latin", "Regina Castra",
 		"teuton", "Regensburg"
+		-- Ratisbon
 	},
 	HistoricalOwners = {
 		170, "rome", -- a Roman camp at Regensburg-Kumpfmühl was destroyed during the First Marcomannic War in 172; it thus likely existed at the beginning of that war; Source: "Ancient Warfare VII.6", 2013, p. 25.

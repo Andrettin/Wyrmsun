@@ -513,7 +513,7 @@ DefineSettlement("venice", {
 	Major = true,
 	CulturalNames = {
 		"italian", "Venice",
-		"teuton", "Venice" -- Venedig
+		-- "teuton", "Venice" -- Venedig
 	},
 	HistoricalOwners = {
 		-500, "venetian-tribe", -- Venice's area was territory of the Venetians in the 500-100 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
@@ -533,8 +533,7 @@ DefineSettlement("verona", {
 	Position = {4090, 1014},
 	CulturalNames = {
 		"italian", "Verona", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
-		"latin", "Verona", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-		"teuton", "Verona"
+		"latin", "Verona" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
 		161, "rome", -- Verona was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.

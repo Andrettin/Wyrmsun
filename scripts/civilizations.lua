@@ -1363,7 +1363,7 @@ DefineCivilization("germanic", {
 		"germanic/ui/buttonpanel.png", -256, -200,
 		"germanic/ui/infopanel.png", 0, -200
 	},
-	Description = _("During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. Those who migrated to Scandinavia spoke their own dialect of Indo-European, which eventually would develop into Germanic. Contact with the Celtic peoples to their south was beneficial to the Germanics, as they were able to incorporate more advanced techniques from Central Europe in areas such as metalworking."),
+	Description = "During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. Those who migrated to Scandinavia spoke their own dialect of Indo-European, which eventually would develop into Germanic. Contact with the Celtic peoples to their south was beneficial to the Germanics, as they were able to incorporate more advanced techniques from Central Europe in areas such as metalworking.",
 	PersonalNames = {
 		"female", "Ammon", -- Proto-Germanic rendering of "Amma", Karl's mother in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 21.
 		"female", "Moder", -- Proto-Germanic rendering of "Mothir", Jarl's mother in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 22.
@@ -1400,7 +1400,7 @@ DefineCivilization("celt", { -- has to be defined after the germanic civilizatio
 	Playable = false,
 	DefaultColor = "green",
 	CivilizationUpgrade = "upgrade-celt-civilization",
-	Description = _("During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. One group of Indo-Europeans spoke a dialect which would later develop into the Celtic and Italic languages. Celtic peoples occupied large swathes of Europe, from France to the Middle Danube. They had trade contacts with Greeks and Romans, and warred a number of times with the latter. Eventually, most Celts would be conquered and assimilated by other peoples, leaving only small areas where Celtic languages were still spoken."),
+	Description = "During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. One group of Indo-Europeans spoke a dialect which would later develop into the Celtic and Italic languages. Celtic peoples occupied large swathes of Europe, from France to the Middle Danube. They had trade contacts with Greeks and Romans, and warred a number of times with the latter. Eventually, most Celts would be conquered and assimilated by other peoples, leaving only small areas where Celtic languages were still spoken.",
 	PersonalNames = {
 		"female", "Rigantona", -- "Rīgantonā"; Proto-Celtic version of the Welsh name "Rhiannon"; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 124.
 		"male", "Cassivellaunus", -- ancient Celt; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 137.
@@ -1434,7 +1434,7 @@ DefineCivilization("gnome", {
 		"stand-ground", "icon-germanic-stand-ground",
 		"return-goods", "icon-dwarven-return-goods"
 	},
-	Description = _("Gnomes usually live in the hills and forests of Nidavellir, and often seek contact with nature. Although they have a different outlook on life than the dwarves, not rarely both two peoples live side by side, with gnomish minorities permeating dwarven settlements and vice-versa. These contacts have brought much benefit to both of them, both through trade and via the spread of gnomish technologies northwards."),
+	Description = "Gnomes usually live in the hills and forests of Nidavellir, and often seek contact with nature. Although they have a different outlook on life than the dwarves, not rarely both two peoples live side by side, with gnomish minorities permeating dwarven settlements and vice-versa. These contacts have brought much benefit to both of them, both through trade and via the spread of gnomish technologies northwards.",
 	PersonalNames = {
 		"male", "Rubezahl"
 	}
@@ -1539,7 +1539,7 @@ DefineCivilization("kobold", {
 		"goblin/ui/buttonpanel.png", -256, -200,
 		"goblin/ui/infopanel.png", 0, -200
 	},
-	Description = _("Kobolds live in the deep caves of Nidavellir, and worship wyrms as sacred ancestors. They share the dwarven passion for mining and metals, but not their technological advancement. Although kobolds can be inventive, their isolation from other communities has made the spread of progress to their lands more difficult. Being the sole intelligent reptilian race in Nidavellir, they feel threatened by the presence of dwarves, gnomes and goblins - all of which they call \"breastlings\"."),
+	Description = "Kobolds live in the deep caves of Nidavellir, and worship wyrms as sacred ancestors. They share the dwarven passion for mining and metals, but not their technological advancement. Although kobolds can be inventive, their isolation from other communities has made the spread of progress to their lands more difficult. Being the sole intelligent reptilian race in Nidavellir, they feel threatened by the presence of dwarves, gnomes and goblins - all of which they call \"breastlings\".",
 	PersonalNames = {
 		"Hodeke", -- Source: Jacob Grimm, "Deutsche Mythologie", pp. 392, 1049, 1080.
 		"Hoidike", -- Source: Jacob Grimm, "Deutsche Mythologie", p. 392.
@@ -2054,9 +2054,6 @@ DefineCivilization("suebi", {
 	Description = "The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there.",
 	HistoricalUpgrades = {
 		180, "upgrade-teuton-spatha", true -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
-	},
-	SettlementNames = {
-		"Marobudum" -- alternate name of the Marcomannic capital; either located where modern Prague or Budweis are; Source: Frederick Kohlrausch, "A History of Germany", 1844, p. 57.
 	}
 })
 
@@ -2239,80 +2236,57 @@ DefineCivilization("latin", {
 	SettlementNames = {
 		"Agrigentum",
 		"Alba",
-		"Aleria",
 		"Antium",
 		"Ardea",
-		"Ariminum",
 		"Arretium",
 		"Beneventum",
-		"Bononia",
 		"Bracara Augusta", -- Braga
-		"Brundisium",
 		"Buxentum",
 		"Caesaraugusta",
 		"Capua",
-		"Caralis",
 		"Circeii",
 		"Clusium",
 		"Corfinium",
 		"Cora",
-		"Corduba",
-		"Cosa",
-		"Cremona",
 		"Croton",
 		"Cumae",
 		"Emporium",
-		"Firmum",
 		"Fregellae",
 		"Fregena",
 		"Fyrgi",
 		"Genua", -- Genoa
-		"Hatria",
 		"Heraclea",
 		"Locri",
 		"Luceria",
 		"Lucus Augusti",
 		"Mariana",
-		"Mediolanum", -- Milan
 		"Minturnae",
-		"Mutina",
 		"Narnia",
 		"Nora",
 		"Norba",
-		"Novum Castrum",
 		"Olbia",
-		"Olisipo",
 		"Ostia",
-		"Paestum",
-		"Placentia",
 		"Puteoli",
-		"Regina Castra", -- Ratisbon/Regensburg
 		"Rhegium",
-		"Saguntum",
 		"Salernum",
 		"Salicula",
 		"Satricum",
 		"Segontium", -- Roman fortress, located where the modern Caernarfon is; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 135.
-		"Sena Gallica",
 		"Setia",
 		"Signia",
 		"Sinuessa",
 		"Sora",
-		"Spoletium",
 		"Sulci",
 		"Sutrium",
 		"Sybaris",
-		"Syracusae",
 		"Tarentum",
 		"Tarracina",
 		"Thurii",
-		"Toletum",
 		"Turnis Libisonis",
 		"Usellis",
 		"Velitrae",
 		"Venusia",
 		"Vibo Valentia",
-		"Vindobona", -- Vienna
 		"Vulturnus"
 	}
 })
@@ -2641,7 +2615,7 @@ DefineCivilization("norse", {
 	Playable = false,
 	DevelopsFrom = {"germanic"},
 	CivilizationUpgrade = "upgrade-norse-civilization",
-	Description = _("During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). While late antiquity saw intense migration of Germanic peoples, the Danes and Swedes remained largely in Scandinavia, well beyond the developments of the Mediterranean."),
+	Description = "During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). While late antiquity saw intense migration of Germanic peoples, the Danes and Swedes remained largely in Scandinavia, well beyond the developments of the Mediterranean.",
 	PersonalNames = {
 		"female", "Alfhild", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 259.
 		"female", "Almveig", -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
