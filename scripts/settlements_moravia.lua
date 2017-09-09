@@ -66,7 +66,7 @@ DefineSettlement("olmutz", {
 	Major = true,
 	CulturalNames = {
 		"slav", "Olomouc",
-		"teuton", "Olmütz"
+		"teuton", "Olmutz" -- "Olmütz"
 	},
 	HistoricalOwners = {
 		1560, "austria", -- Olmütz was a part of the Habsburg monarchy in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.

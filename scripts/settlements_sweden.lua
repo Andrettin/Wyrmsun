@@ -26,13 +26,13 @@
 --
 
 DefineSettlement("goteborg", {
-	Name = "Göteborg",
+	Name = "Goteborg",
 	MapTemplate = "earth",
 	Position = {4104, 725},
 	Major = true,
 	CulturalNames = {
 		"goth", "Gothenburg",
-		"norse", "Göteborg"
+		"norse", "Goteborg" -- "Göteborg"
 	},
 	HistoricalOwners = {
 	},
@@ -42,12 +42,12 @@ DefineSettlement("goteborg", {
 })
 
 DefineSettlement("malmo", {
-	Name = "Malmö",
+	Name = "Malmo",
 	MapTemplate = "earth",
 	Position = {4136, 783},
 	Major = true,
 	CulturalNames = {
-		"norse", "Malmö"
+		"norse", "Malmo" -- "Malmö"
 	},
 	HistoricalOwners = {
 	},

@@ -493,55 +493,6 @@ UI.NetworkDiplomacyButton.Y = 1
 UI.NetworkDiplomacyButton.Text = "Diplomacy"
 UI.NetworkDiplomacyButton:SetCallback(function() RunDiplomacyMenu() end)
 
-UI.GrandStrategyOKButton.X = Video.Width - 243 + 72
-UI.GrandStrategyOKButton.Y = Video.Height - (15 * 2) - 8
-UI.GrandStrategyOKButton.Text = "~!OK"
-UI.GrandStrategyOKButton:SetCallback(
-	function()
-		if (GrandStrategyInterfaceState == "Ruler") then
-			if (ProvinceHasBuildingClass(SelectedProvince.Name, "stronghold")) then
-				GrandStrategyInterfaceState = "stronghold"
-			else
-				GrandStrategyInterfaceState = "town-hall"
-			end
-		else
-			GrandStrategyInterfaceState = "Province"
-		end
-		DrawGrandStrategyInterface()
-	end
-)
-
-UI.GrandStrategyEndTurnButton.X = Video.Width - 243 + 72
-UI.GrandStrategyEndTurnButton.Y = Video.Height - (15 * 1) - 8
-UI.GrandStrategyEndTurnButton.Text = "~!End Turn"
-UI.GrandStrategyEndTurnButton:SetCallback(
-	function()
-		if (ProcessingEndTurn == false) then
-			EndTurn()
-		end
-	end
-)
-
-UI.GrandStrategyShowHeroesButton.X = Video.Width - 243 + 72
-UI.GrandStrategyShowHeroesButton.Y = Video.Height - (15 * 2) - 8
-UI.GrandStrategyShowHeroesButton.Text = "Show ~!Heroes"
-UI.GrandStrategyShowHeroesButton:SetCallback(
-	function()
-		GrandStrategyInterfaceState = "Heroes"
-		DrawGrandStrategyInterface()
-	end
-)
-
-UI.GrandStrategyShowRulerButton.X = Video.Width - 243 + 72
-UI.GrandStrategyShowRulerButton.Y = Video.Height - (15 * 3) - 8
-UI.GrandStrategyShowRulerButton.Text = "Show ~!Ruler"
-UI.GrandStrategyShowRulerButton:SetCallback(
-	function()
-		GrandStrategyInterfaceState = "Ruler"
-		DrawGrandStrategyInterface()
-	end
-)
-
 Load("scripts/civilizations/anglo_saxon/ui.lua")
 Load("scripts/civilizations/basque/ui.lua")
 Load("scripts/civilizations/celt/ui.lua")
@@ -568,11 +519,6 @@ Load("scripts/civilizations/suebi/ui.lua")
 Load("scripts/civilizations/teuton/ui.lua")
 Load("scripts/civilizations/thracian/ui.lua")
 Load("scripts/civilizations/troll/ui.lua")
-
-UI.GrandStrategyOKButton.Style = UI.MenuButton.Style
-UI.GrandStrategyEndTurnButton.Style = UI.MenuButton.Style
-UI.GrandStrategyShowHeroesButton.Style = UI.MenuButton.Style
-UI.GrandStrategyShowRulerButton.Style = UI.MenuButton.Style
 
 
 

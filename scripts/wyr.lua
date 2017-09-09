@@ -192,10 +192,6 @@ function LoadCivilizationUI(civilization)
 	if (CanAccessFile(ui_file)) then
 		Load(ui_file)
 	end
-	UI.GrandStrategyOKButton.Style = UI.MenuButton.Style
-	UI.GrandStrategyEndTurnButton.Style = UI.MenuButton.Style
-	UI.GrandStrategyShowHeroesButton.Style = UI.MenuButton.Style
-	UI.GrandStrategyShowRulerButton.Style = UI.MenuButton.Style
 end
 
 if (OldDefinePlayerTypes == nil) then

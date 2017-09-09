@@ -220,8 +220,6 @@ function RunGrandStrategyGameSetupMenu()
 				end
 			end
 			
-			InitializeGrandStrategyMinimap()
-
 			FinalizeGrandStrategyInitialization()
 			
 			-- initialize province variables
@@ -941,8 +939,6 @@ function AcquireProvince(province, faction)
 		end
 		SetProvinceCurrentConstruction(province.Name, "")
 	end
-	
-	UpdateProvinceMinimap(province.Name)
 end
 
 function CalculateProvinceBorderTiles()
@@ -1454,8 +1450,6 @@ function RunGrandStrategyLoadGameMenu()
 			end
 			
 			wyr[saved_games_list[saved_games:getSelected() + 1]] = nil
-			
-			InitializeGrandStrategyMinimap()
 			
 			FinalizeGrandStrategyInitialization()
 			
@@ -2302,27 +2296,6 @@ function DrawGrandStrategyInterface()
 				local item_x = 0
 				local item_y = 0
 
-				-- workers (to show how many are available for training
-				local worker_unit_type
-				if (GetFactionFromName(GetProvinceOwner(SelectedProvince.Name)).Civilization == GetProvinceCivilization(SelectedProvince.Name)) then
-					worker_unit_type = GetFactionClassUnitType("worker", GetProvinceCivilization(SelectedProvince.Name), GetProvinceOwner(SelectedProvince.Name))
-				else
-					worker_unit_type = GetCivilizationClassUnitType("worker", GetProvinceCivilization(SelectedProvince.Name))
-				end
-				if (worker_unit_type ~= nil) then
-					local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
-					local icon_offset_y = Video.Height - 186 + 13 + (item_y * (47 + 19 + 4))
-
-					AddGrandStrategyUnitButton(icon_offset_x, icon_offset_y, worker_unit_type)
-					AddGrandStrategyLabel(GetProvinceAvailableWorkersForTraining(SelectedProvince.Name) .. "/" .. GetProvinceUnitQuantity(SelectedProvince.Name, worker_unit_type), icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
-
-					item_x = item_x + 1
-					if (item_x > 3) then
-						item_x = 0
-						item_y = item_y + 1
-					end
-				end
-				
 				-- add units buttons for training
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
@@ -2971,7 +2944,6 @@ function AIDoTurn(ai_faction)
 			borders_foreign == false
 			or GetFactionBuildingTypeCount(ai_faction, "town-hall") < GetFactionProvinceCount(ai_faction)
 			or (GetFactionIncome(ai_faction.Civilization, ai_faction.Name, "copper") < 100 and GetFactionResource(ai_faction.Civilization, ai_faction.Name, "copper") < 1500 * 4)
-			or GetProvinceAvailableWorkersForTraining(WorldMapProvinces[key].Name) < 1
 		) then -- don't build any military units if a province is lacking a town hall, if it doesn't border any non-owned provinces, or if net income is too small and copper reserves are too small; 800 is the highest copper cost a unit/building/technology can have
 			desired_infantry_in_province = 0
 			desired_archers_in_province = 0
@@ -3213,7 +3185,6 @@ function CanTrainUnit(province, unit_type)
 		GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "copper") < GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "copper")
 		or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "lumber") < GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "lumber")
 		or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "stone") < GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "stone")
-		or (GetProvinceAvailableWorkersForTraining(province.Name) < 1 and GetUnitTypeData(unit_type, "Class") ~= "thief")
 	) then
 		return false
 	end
