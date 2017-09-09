@@ -453,6 +453,9 @@ DefineSettlement("rome", {
 		-40, 0, "road", -- Roads existed in Rome in c. 40 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 22-23.
 		1303, 0, "university" -- University founded in Rome in 1303; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
+	HistoricalPopulation = {
+		1600, 100000 -- Rome had a population of 100,000 in 1600; Source: Henry Kamen, "The Iron Century", p. 419.
+	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 

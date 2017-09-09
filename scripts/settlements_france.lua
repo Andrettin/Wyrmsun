@@ -477,6 +477,9 @@ DefineSettlement("paris", {
 		395, 0, "temple", -- Paris was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		1250, 0, "university" -- University existent in Paris in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
 	},
+	HistoricalPopulation = {
+		1789, 500000 -- Paris had a population of 500,000 in 1789; Source: Eric J. Hobsbawm, "The Age of Revolution, Europe 1789-1848", p. 28.
+	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 

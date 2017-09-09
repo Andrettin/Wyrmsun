@@ -831,6 +831,12 @@ DefineSettlement("london", {
 		-- London possessed a bishopric as of 704; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 142, 179.
 		1836, 0, "university" -- University founded in London in 1836; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	},
+	HistoricalPopulation = {
+		1500, 60000, -- London had a population of 60,000 in 1500; Source: Lawrence Stone, "As Causas da Revolução Inglesa: 1529-1642", pp. 134-135.
+		1640, 450000, -- London had a population of 450,000 in 1640; Source: Lawrence Stone, "As Causas da Revolução Inglesa: 1529-1642", pp. 134-135.
+		1789, 1000000, -- London had a population of around 1,000,000 in 1789; Source: Eric J. Hobsbawm, "The Age of Revolution, Europe 1789-1848", p. 28.
+		1801, 959000 -- London had a population of 959,000 in 1801; Source: "Atlas de História Mundial", 2001.
+	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
