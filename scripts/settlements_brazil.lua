@@ -128,6 +128,7 @@ DefineSettlement("rio-de-janeiro", {
 	},
 	HistoricalBuildings = {
 		1567, 0, "town-hall",
+		1810, 0, "barracks", -- Academia Real Militar founded in Rio de Janeiro in 1810. Source: Silvia Fernanda de Mendonça Figueirôa, "Ciência e tecnologia no Brasil Imperial: Guilherme Schüch, Barão de Capanema (1824-1908)", 2005, p. 440.
 		1859, 0, "railroad" -- the "Companhia de Carris de Ferro da Cidade a Boavista" tramway company obtained its concession in Rio de Janeiro in 1856, and began operations in 1859; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 6.
 	},
 	Regions = {"america", "south-america"}

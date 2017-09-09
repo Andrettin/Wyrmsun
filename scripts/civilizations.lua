@@ -2371,7 +2371,10 @@ DefineCivilization("etruscan", {
 	Language = "etruscan",
 	ParentCivilization = "latin",
 	Adjective = "Etruscan",
-	Playable = false
+	Playable = false,
+	HistoricalUpgrades = {
+		-750, "upgrade-architecture", true -- the usage of an arch in construction was first properly developed by the Etruscans c. 750 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 93-94.
+	}
 })
 
 DefineCivilization("goth", {
@@ -2529,7 +2532,11 @@ DefineCivilization("assyrian", {
 	Species = "human",
 	ParentCivilization = "greek",
 	Adjective = "Assyrian",
-	Playable = false
+	Playable = false,
+	HistoricalUpgrades = {
+		-3500, "upgrade-teuton-writing", true, -- writing was developed in Sumeria around 3500 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 70-72.
+		-1800, "upgrade-mathematics", true -- the Sumerian/Babylonian numerical system was developed around 1800 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, p. 82.
+	}
 })
 
 DefineCivilization("babylonian", {
@@ -2538,7 +2545,11 @@ DefineCivilization("babylonian", {
 	Species = "human",
 	ParentCivilization = "greek",
 	Adjective = "Babylonian",
-	Playable = false
+	Playable = false,
+	HistoricalUpgrades = {
+		-3500, "upgrade-teuton-writing", true, -- writing was developed in Sumeria around 3500 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 70-72.
+		-1800, "upgrade-mathematics", true -- the Sumerian/Babylonian numerical system was developed around 1800 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, p. 82.
+	}
 })
 
 DefineCivilization("chinese", {
@@ -2802,7 +2813,11 @@ DefineCivilization("sumerian", {
 	Species = "human",
 	ParentCivilization = "greek",
 	Adjective = "Sumerian",
-	Playable = false
+	Playable = false,
+	HistoricalUpgrades = {
+		-3500, "upgrade-teuton-writing", true, -- writing was developed in Sumeria around 3500 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 70-72.
+		-1800, "upgrade-mathematics", true -- the Sumerian/Babylonian numerical system was developed around 1800 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, p. 82.
+	}
 })
 
 DefineCivilization("thracian", {

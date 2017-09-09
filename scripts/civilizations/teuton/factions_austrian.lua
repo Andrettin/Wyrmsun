@@ -106,12 +106,12 @@ DefineFaction("haubt-handlungs-compagnie-von-triest-und-fiume", { -- Source: Iva
 })
 
 DefineFaction("temisvarer-privilegierte-handelskompagnie", { -- Source: Ivan Erceg, "Außenhandel der Nordadriatischen Seestädte als Faktor im Entstehen der kapitalistischen Beziehungen in Österreich im 18. und 19. Jahrhundert", 1968, pp. 477-478.
-	Name = "Privileged Trading Company of Temesvar",
+	Name = "Privileged Temesvaran Trading Company",
 	Civilization = "teuton",
 	Type = "trading-company",
 	Colors = {"white"},
 	DefaultTier = "barony",
---	Description = "The \"Temisvarer privilegierte Handelskompagnie\", or Privileged Trading Company of Temesvar, is an Austrian trading company with triple headquarters in Vienna, Trieste and Temesvar. It specializes in connecting the fertile lands of the Danube with the Adriatic Sea, bringing livestock and agricultural goods to the port and selling foreign imports along the Danube.",
+--	Description = "The \"Temisvarer privilegierte Handelskompagnie\", or Privileged Temesvaran Trading Company, is an Austrian trading company with triple headquarters in Vienna, Trieste and Temesvar. It specializes in connecting the fertile lands of the Danube with the Adriatic Sea, bringing livestock and agricultural goods to port and selling foreign imports along the Danube.",
 	HistoricalDiplomacyStates = {
 		1759, "austria", "vassal" -- "Temisvarer privilegierte Handelskompagnie" founded in 1759 in Austrian possessions; Source: Ivan Erceg, "Außenhandel der Nordadriatischen Seestädte als Faktor im Entstehen der kapitalistischen Beziehungen in Österreich im 18. und 19. Jahrhundert", 1968, pp. 477-478.
 	}
