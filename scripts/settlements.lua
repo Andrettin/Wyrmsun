@@ -62,5 +62,6 @@ Load("scripts/settlements_russia.lua")
 Load("scripts/settlements_slovakia.lua")
 Load("scripts/settlements_spain.lua")
 Load("scripts/settlements_sweden.lua")
+Load("scripts/settlements_ukraine.lua")
 
 Load("scripts/settlements_nidavellir.lua")

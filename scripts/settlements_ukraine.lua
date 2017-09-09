@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016-2017 by Andrettin
+--      (c) Copyright 2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,52 +25,17 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineWorldMapTile({561, 116}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"slav", "Vinnytsya"
-	}
-})
-
-DefineWorldMapTile({566, 124}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"latin", "Tyras" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	}
-})
-
-DefineWorldMapTile({567, 123}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"slav", "Odesa"
-	}
-})
-
-DefineWorldMapTile({570, 122}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"latin", "Olbia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	}
-})
-
-DefineWorldMapTile({572, 123}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"slav", "Kherson"
-	}
-})
-
-DefineWorldMapTile({576, 128}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"greek", "Heraclea Chersonesus", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
-		"slav", "Simferopol"
-	}
-})
-
-DefineWorldMapTile({583, 127}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"latin", "Panticapaeum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	}
+DefineSettlement("kiev", {
+	Name = "Kiev",
+	MapTemplate = "earth",
+	Position = {4532, 905},
+	Major = true,
+	CulturalNames = {
+		"slav", "Kiev"
+	},
+	HistoricalOwners = {
+	},
+	HistoricalBuildings = {
+	},
+	Regions = {"eurasia", "europe"}
 })
