@@ -359,6 +359,22 @@ DefineSettlement("metz", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
+DefineSettlement("molsheim", {
+	Name = "Molsheim",
+	MapTemplate = "earth",
+	Position = {4010, 948},
+	CulturalNames = {
+		"teuton", "Molsheim"
+	},
+	HistoricalOwners = {
+		919, "holy-rome", -- Molsheim's area was a part of the duchy of Swabia within the Holy Roman Empire in the 919-1125 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalBuildings = {
+		1618, 0, "university" -- University founded in Molsheim in 1618; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
 DefineSettlement("nantes", {
 	Name = "Nantes",
 	MapTemplate = "earth",

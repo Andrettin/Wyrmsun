@@ -723,7 +723,7 @@ DefineUnitType("unit-gold-rock", {
 	Name = "Gold Rock",
 	Image = {"file", "neutral/buildings/gold_rock_1.png", "size", {43, 43}},
 	Shadow = {"file", "neutral/buildings/gold_rock_1_shadow.png", "size", {43, 43}},
-	Animations = "animations-decoration", Icon = "icon-gold-rock",
+	Animations = "animations-building", Icon = "icon-gold-rock",
 	NeutralMinimapColor = {255, 255, 0},
 	Costs = {"time", 150},
 	Speed = 0,

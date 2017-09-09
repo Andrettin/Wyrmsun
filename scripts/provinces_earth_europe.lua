@@ -93,7 +93,6 @@ DefineProvince("Alsace", {
 		481, "teuton"
 	},
 	HistoricalModifiers = {
-		1618, "upgrade-university", true, -- University founded in Molsheim in 1618; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 		1789, "upgrade-courthouse", true -- Parlement or conseil souverain existent in Colmar in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
 	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
