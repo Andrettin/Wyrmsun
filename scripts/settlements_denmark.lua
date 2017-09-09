@@ -31,6 +31,7 @@ DefineSettlement("aarhus", {
 	Position = {4064, 777},
 	Major = true,
 	CulturalNames = {
+		"germanic", "Ahvoosa", -- tentative rendering of "Aarhus" in Proto-Germanic
 		"norse", "Aarhus"
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}

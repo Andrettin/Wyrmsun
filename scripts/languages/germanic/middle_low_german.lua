@@ -301,6 +301,14 @@ DefineLanguageWord("Stapel", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Stok", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 247.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Stick", "Tree Stump", "Beehive"}, -- source gives the German "Stock, Baumstumpf, Bienenstock"
+	Gender = "masculine",
+	DerivesFrom = {"old-saxon", "noun", "Stok"}
+})
+
 DefineLanguageWord("Sûd", { -- source also gives the alternative form "sûder"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
 	Language = "middle-low-german",
 	Type = "adverb",

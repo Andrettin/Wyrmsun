@@ -32,6 +32,14 @@ DefineLanguageWord("Af", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Ge
 	DerivesFrom = {"proto-germanic", "adposition", "Af"}
 })
 
+DefineLanguageWord("Ahva", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 13.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"River"}, -- source gives the German "Fluß" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Ahvô"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Aihts", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "gothic",
 	Type = "noun",

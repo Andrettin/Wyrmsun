@@ -956,7 +956,8 @@ DefineLanguageWord("Hill", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Hill"},
-	Gender = "neuter"
+	Gender = "neuter",
+	DerivesFrom = {"old-english", "noun", "Hyll"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
 })
 
 DefineLanguageWord("Hoard", {
@@ -1820,7 +1821,8 @@ DefineLanguageWord("Stock", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Stock"},
-	Gender = "neuter"
+	Gender = "neuter",
+	DerivesFrom = {"old-english", "noun", "Stock"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 247.
 })
 
 DefineLanguageWord("Stone", {

@@ -536,6 +536,14 @@ DefineLanguageWord("Stēn", { -- as given by Lehmann; Fick gives "stên" instead
 	Gender = "masculine" -- as given by Fick
 })
 
+DefineLanguageWord("Stok", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 247.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Stick", "Tree Trunk", "Tree Stump"}, -- source gives the German "Stock, Baumstamm, Baumstumpf"
+	Gender = "masculine",
+	DerivesFrom = {"proto-germanic", "noun", "Stukka"}
+})
+
 DefineLanguageWord("Sumur", { -- Fick also gives the alternative forms "Summer" and "Somer"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223; Source: http://www.cnrtl.fr/definition/sombre//3
 	Language = "old-frisian",
 	Type = "noun",

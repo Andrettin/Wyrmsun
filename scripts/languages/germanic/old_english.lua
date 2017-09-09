@@ -471,6 +471,14 @@ DefineLanguageWord("Duru", { -- at first the source gives "duru", but later on i
 	DerivesFrom = {"proto-germanic", "noun", "Dur"}
 })
 
+DefineLanguageWord("Éa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 13.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Water", "River"}, -- source gives the German "Wasser, Fluß" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Ahvô"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Eald", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
 	Language = "old-english",
 	Type = "adjective",
@@ -1021,6 +1029,14 @@ DefineLanguageWord("Hnutu", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	}
 })
 
+DefineLanguageWord("Holm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Island", "Wave", "Sea"}, -- source gives the German "Land das sich aus dem Wasser erhebt, Insel, Meereswoge, Meer"
+	Gender = "masculine",
+	DerivesFrom = {"proto-germanic", "noun", "Hulma"}
+})
+
 DefineLanguageWord("Hoppestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
 	Language = "old-english",
 	Type = "noun",
@@ -1050,6 +1066,12 @@ DefineLanguageWord("Hræn", { -- source also gives the alternative form "Hærn";
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Hund", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Dog"}
+})
+
 DefineLanguageWord("Hundred", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
 	Language = "old-english",
 	Type = "numeral", -- presumably
@@ -1070,17 +1092,19 @@ DefineLanguageWord("Hweowol", { -- Source: Richard M. Runge, "The Phonetic Reali
 	Meanings = {"Wheel"}
 })
 
-DefineLanguageWord("Hund", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-	Language = "old-english",
-	Type = "noun",
-	Meanings = {"Dog"}
-})
-
 DefineLanguageWord("Hwīt", { -- Fick gives "hwit" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 67.
 	Language = "old-english",
 	Type = "adjective",
 	Meanings = {"White"},
 	DerivesFrom = {"proto-germanic", "adjective", "Hvîta"} -- as given by Fick
+})
+
+DefineLanguageWord("Hyll", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Hill"}, -- source gives the German "Hügel"
+	Gender = "masculine", -- can be both masculine and feminine
+	DerivesFrom = {"proto-germanic", "noun", "Hulnia"}
 })
 
 DefineLanguageWord("Ieldran", { -- this is the plural; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
@@ -1718,6 +1742,14 @@ DefineLanguageWord("Stīgan", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Type = "verb",
 	Meanings = {"Climb"},
 	DerivesFrom = {"proto-germanic", "verb", "Steig"}
+})
+
+DefineLanguageWord("Stock", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 247.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Stick", "Tree Trunk", "Tree Stump"}, -- source gives the German "Stock, Baumstamm, Baumstumpf"
+	Gender = "masculine",
+	DerivesFrom = {"proto-germanic", "noun", "Stukka"}
 })
 
 DefineLanguageWord("Sumor", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.

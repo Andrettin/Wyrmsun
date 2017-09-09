@@ -111,6 +111,12 @@ DefineLanguageWord("Χórtos", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Meanings = {"Garden"}
 })
 
+DefineLanguageWord("Χολωνός", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Hill"} -- source gives the German "Hügel" as the meaning
+})
+
 DefineLanguageWord("Χράτος", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 48.
 	Language = "greek",
 	Type = "noun",

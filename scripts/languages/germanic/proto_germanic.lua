@@ -41,6 +41,13 @@ DefineLanguageWord("Af", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Ge
 	Meanings = {"From"}
 })
 
+DefineLanguageWord("Ahvô", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 13.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Water"}, -- source gives the German "Wasser" as the meaning
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Aiza", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 11.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -828,6 +835,19 @@ DefineLanguageWord("Hri", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	Meanings = {"Shout"} -- source gives the German "schreien" as the meaning
 })
 
+DefineLanguageWord("Hulma", { -- Fick and Kroonen both give "hulma(n)"; Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 254; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Small Island", "Helm", "Helmet"}, -- Kroonen gives "small island", while Fick gives the German "Helm, Insel"
+	Gender = "masculine" -- as given by both Fick and Kroonen
+})
+
+DefineLanguageWord("Hulnia", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {}
+})
+
 DefineLanguageWord("Hunhru", { -- source also gives the alternative form "hungru"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 44.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -1165,6 +1185,13 @@ DefineLanguageWord("Nurþa", { -- source also gives the alternative form "Nurþr
 	Meanings = {"North"} -- source gives the German "nördlich" as the meaning
 })
 
+DefineLanguageWord("Ôsa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Rivermouth"}, -- source gives the German "Flußmundung" as the meaning
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Razdō", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -1405,6 +1432,13 @@ DefineLanguageWord("Steig", { -- source gives "steig-"; source also later gives 
 	Participles = {
 		"past", "Staig"
 	}
+})
+
+DefineLanguageWord("Stukka", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 247.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Stick"}, -- source gives the German "Stock"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Sumara", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.

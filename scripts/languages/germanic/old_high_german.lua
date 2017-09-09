@@ -46,6 +46,14 @@ DefineLanguageWord("Adelâr", { -- could be a compound of "Adel" (noble) with "�
 	Meanings = {"Noble Eagle"}
 })
 
+DefineLanguageWord("Aha", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 13.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Water", "River"}, -- source gives the German "Wasser, Fluß" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Ahvô"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Alt", { -- source also gives the alternative form "altêr" (or is that the comparative?); Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
 	Language = "old-high-german",
 	Type = "adjective",
@@ -1596,6 +1604,14 @@ DefineLanguageWord("Stīgan", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Participles = {
 		"past", "Steig"
 	}
+})
+
+DefineLanguageWord("Stoc", { -- source gives "stoc (-ck-)"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 247.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Stick", "Rod", "Tree Trunk"}, -- source gives the German "Stock, Stab, Baumstamm"
+	Gender = "masculine",
+	DerivesFrom = {"proto-germanic", "noun", "Stukka"}
 })
 
 DefineLanguageWord("Stōzan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.

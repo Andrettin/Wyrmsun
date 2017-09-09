@@ -1881,6 +1881,14 @@ DefineLanguageWord("Steinern", {
 	Meanings = {"Stone"}
 })
 
+DefineLanguageWord("Stock", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Stick"},
+	Gender = "masculine",
+	DerivesFrom = {"middle-high-german", "noun", "Stoc"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 247.
+})
+
 DefineLanguageWord("Stuhl", {
 	Language = "high-german",
 	Type = "noun",

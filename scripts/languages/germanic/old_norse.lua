@@ -932,6 +932,14 @@ DefineLanguageWord("Hodd", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	DerivesFrom = {"proto-germanic", "noun", "Huzda"}
 })
 
+DefineLanguageWord("Holmr", { -- Fick and Kroonen also give the alternative form "holmi"; Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 254; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Small Island"}, -- Kroonen gives "small island", while Fick gives the German "Holm = See- oder Flußinsel"
+	Gender = "masculine", -- as given by both Fick and Kroonen
+	DerivesFrom = {"proto-germanic", "noun", "Hulma"} -- as given by both Fick and Kroonen
+})
+
 DefineLanguageWord("Hôr", { -- source also gives the alternative form "hâr"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
 	Language = "old-norse",
 	Type = "adjective",
@@ -1364,6 +1372,17 @@ DefineLanguageWord("Nŷr", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	DerivesFrom = {"proto-germanic", "adjective", "Neuja"}
 })
 
+DefineLanguageWord("Ǫ̂", { -- source also gives the alternative form "â"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 13.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"River"}, -- source gives the German "Fluß" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Ahvô"},
+	Gender = "feminine",
+	NumberCaseInflections = {
+		"singular", "nominative", "Âr"
+	}
+})
+
 DefineLanguageWord("Oddr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
 	Language = "old-norse",
 	Type = "noun",
@@ -1386,6 +1405,14 @@ DefineLanguageWord("Ormr", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Worm", "Serpent"}, -- source gives the German "Wurm, Schlange" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Vurma"},
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Ôss", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Mouth"}, -- source gives the German "Mündung" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Ôsa"},
 	Gender = "masculine"
 })
 
@@ -1590,6 +1617,14 @@ DefineLanguageWord("Stīga", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Type = "verb",
 	Meanings = {"Climb"},
 	DerivesFrom = {"proto-germanic", "verb", "Steig"}
+})
+
+DefineLanguageWord("Stokkr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 247.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Tree Trunk", "Pile", "Block"}, -- source gives the German "Baumstamm, Pfahl, Block"
+	Gender = "masculine",
+	DerivesFrom = {"proto-germanic", "noun", "Stukka"}
 })
 
 DefineLanguageWord("Stǫpull", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 241.

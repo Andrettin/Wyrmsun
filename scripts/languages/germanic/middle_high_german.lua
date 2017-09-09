@@ -33,6 +33,14 @@ DefineLanguageWord("Adel", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Ahe", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 13.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Water", "River"}, -- source gives the German "Wasser, Fluß" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Aha"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Alp", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
 	Language = "middle-high-german",
 	Type = "noun",
@@ -879,6 +887,14 @@ DefineLanguageWord("Stein", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"Stone"}, -- source gives the German "Stein" as the meaning
 	DerivesFrom = {"old-high-german", "noun", "Steinn"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Stoc", { -- source gives "stoc (-ck-)"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 247.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Stick", "Rod", "Tree Trunk"}, -- source gives the German "Stock, Stab, Baumstamm"
+	Gender = "masculine",
+	DerivesFrom = {"old-high-german", "noun", "Stoc"}
 })
 
 DefineLanguageWord("Sumer", { -- source also gives the alternative form "Summer"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.

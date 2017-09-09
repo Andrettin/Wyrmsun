@@ -76,7 +76,6 @@ DefineSettlement("sigtun", {
 	Name = "Sigtun",
 	MapTemplate = "earth",
 	Position = {4243, 692},
-	Major = true,
 	CulturalNames = {
 		"germanic", "Segiztuna", -- "Segiztûna" is a rendering of "Sigtun" in Proto-Germanic, since the Ynglinga saga the city was founded when the cultural ancestors of the Germanic peoples (= Odin's people) first settled Scandinavia
 		"norse", "Sigtun"
@@ -87,8 +86,27 @@ DefineSettlement("sigtun", {
 		1560, "sweden" -- political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		-2800, 0, "town-hall",
 		-2800, 0, "temple" -- in the Ynglinga saga, Odin erects a large temple after he arrived in Sigtun (here understood to correspond to the time when Indo-Europeans reached Scandinavia); Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 220.
+	},
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+})
+
+DefineSettlement("stockholm", {
+	Name = "Stockholm",
+	MapTemplate = "earth",
+	Position = {4253, 693},
+	Major = true,
+	CulturalNames = {
+		"germanic", "Stukkahulma", -- tentative rendering of "Stockholm" in Proto-Germanic
+		"norse", "Stockholm"
+	},
+	HistoricalOwners = {
+		-2800, "yngling-tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples; the Ynglings were the dynasty founded by Odin's son Yngve, who ruled the Swedish lands
+		-264, "swede-tribe", -- tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		1560, "sweden" -- political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		-2800, 0, "town-hall"
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })

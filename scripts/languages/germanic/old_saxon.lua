@@ -25,6 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Aha", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 13.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Water", "River"}, -- source gives the German "Wasser, Fluß" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Ahvô"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Ald", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
 	Language = "old-saxon",
 	Type = "adjective",
@@ -415,6 +423,14 @@ DefineLanguageWord("Hôh", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	DerivesFrom = {"proto-germanic", "adjective", "Hauha"}
 })
 
+DefineLanguageWord("Holm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Hill"}, -- source gives the German "Hügel"
+	Gender = "masculine",
+	DerivesFrom = {"proto-germanic", "noun", "Hulma"}
+})
+
 DefineLanguageWord("Hord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Language = "old-saxon",
 	Type = "noun",
@@ -752,6 +768,14 @@ DefineLanguageWord("Stên", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"Stone"}, -- source (apparently) gives the German "Stein" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Staynas"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Stok", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 247.
+	Language = "old-saxon", -- source gives Old Low German
+	Type = "noun",
+	Meanings = {"Stick", "Stalk"}, -- source gives the German "Stock, Stengel"
+	Gender = "masculine",
+	DerivesFrom = {"proto-germanic", "noun", "Stukka"}
 })
 
 DefineLanguageWord("Suht", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
