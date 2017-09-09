@@ -31,7 +31,7 @@ DefineCampaign("on-the-vanaquisl", {
 	Faction = "asa-tribe",
 	StartYear = -3000,
 	MapTemplate = "earth",
-	MapTemplateStartPos = {4728, 850},
+	MapTemplateStartPos = {4668, 850},
 	MapSize = {256, 256}
 })
 
