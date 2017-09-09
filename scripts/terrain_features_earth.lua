@@ -100,6 +100,7 @@ DefineTerrainFeature("dnieper-river", {
 	Name = "Dnieper River",
 	TerrainType = "shallow-water",
 	World = "earth",
+	Color = {32, 128, 176},
 	CulturalNames = {
 		"latin", "Borysthenes River" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	}
