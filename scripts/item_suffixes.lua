@@ -41,7 +41,7 @@ DefineUpgrade("upgrade-item-suffix-of-the-beaver", {
 })
 
 DefineUpgrade("upgrade-item-suffix-of-betrayal", {
-	Name = _("of Betrayal"),
+	Name = "of Betrayal",
 	MagicSuffix = true,
 	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "amulet", true, "ring", true},
 	MagicLevel = 4
@@ -55,7 +55,7 @@ DefineUpgrade("upgrade-item-suffix-of-carpentry", {
 })
 
 DefineUpgrade("upgrade-item-suffix-of-cold", {
-	Name = _("of Cold"),
+	Name = "of Cold",
 	MagicSuffix = true,
 	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
 	IncompatibleAffixes = {"upgrade-item-prefix-cold"},
@@ -63,27 +63,27 @@ DefineUpgrade("upgrade-item-suffix-of-cold", {
 })
 
 DefineUpgrade("upgrade-item-suffix-of-the-colossus", {
-	Name = _("of the Colossus"),
+	Name = "of the Colossus",
 	MagicSuffix = true,
 	ItemSuffix = {"armor", true, "shield", true, "helmet", true},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-suffix-of-diligence", {
-	Name = _("of Diligence"),
+	Name = "of Diligence",
 	MagicSuffix = true,
 	MagicLevel = 1
 })
 
 DefineUpgrade("upgrade-item-suffix-of-extinguishment", {
-	Name = _("of Extinguishment"),
+	Name = "of Extinguishment",
 	MagicSuffix = true,
 	ItemSuffix = {"armor", true, "shield", true, "helmet", true},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-suffix-of-fire", {
-	Name = _("of Fire"),
+	Name = "of Fire",
 	MagicSuffix = true,
 	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
 	IncompatibleAffixes = {"upgrade-item-prefix-flaming"},
@@ -91,7 +91,7 @@ DefineUpgrade("upgrade-item-suffix-of-fire", {
 })
 
 DefineUpgrade("upgrade-item-suffix-of-flame", {
-	Name = _("of Flame"),
+	Name = "of Flame",
 	MagicSuffix = true,
 	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
 	IncompatibleAffixes = {"upgrade-item-prefix-flaming"},
@@ -99,7 +99,7 @@ DefineUpgrade("upgrade-item-suffix-of-flame", {
 })
 
 DefineUpgrade("upgrade-item-suffix-of-frailty", {
-	Name = _("of Frailty"),
+	Name = "of Frailty",
 	MagicSuffix = true,
 	ItemSuffix = {"armor", true, "shield", true, "helmet", true, "amulet", true, "ring", true, "horn", true},
 	IncompatibleAffixes = {"upgrade-item-prefix-frail"},
@@ -107,7 +107,7 @@ DefineUpgrade("upgrade-item-suffix-of-frailty", {
 })
 
 DefineUpgrade("upgrade-item-suffix-of-the-jinn", {
-	Name = _("of the Jinn"),
+	Name = "of the Jinn",
 	MagicSuffix = true,
 	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "horn", true},
 	IncompatibleAffixes = {"upgrade-item-prefix-jinns"},
@@ -115,136 +115,143 @@ DefineUpgrade("upgrade-item-suffix-of-the-jinn", {
 })
 
 DefineUpgrade("upgrade-item-suffix-of-lightning", {
-	Name = _("of Lightning"),
+	Name = "of Lightning",
 	MagicSuffix = true,
 	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-suffix-of-perfuration", {
-	Name = _("of Perfuration"),
+	Name = "of Perfuration",
 	MagicSuffix = true,
 	ItemSuffix = {"arrows", true, "dagger", true, "javelin", true, "spear", true, "sword", true, "thrusting-sword", true},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-suffix-of-plenty", {
-	Name = _("of Plenty"),
+	Name = "of Plenty",
 	MagicSuffix = true,
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-suffix-of-power", { -- example: Ring of Power (from Wesnoth)
-	Name = _("of Power"),
+	Name = "of Power",
 	MagicSuffix = true,
 	ItemSuffix = {"horn", true, "amulet", true, "ring", true},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-suffix-of-regeneration", { -- example: Ring of Regeneration (from Wesnoth)
-	Name = _("of Regeneration"),
+	Name = "of Regeneration",
 	MagicSuffix = true,
 	ItemSuffix = {"amulet", true, "ring", true},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-suffix-of-replenishment", {
-	Name = _("of Replenishment"),
+	Name = "of Replenishment",
 	MagicSuffix = true,
 	IncompatibleAffixes = {"upgrade-item-prefix-replenishing"},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-suffix-of-the-serpent", {
-	Name = _("of the Serpent"),
+	Name = "of the Serpent",
 	MagicSuffix = true,
 	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "horn", true, "amulet", true, "ring", true},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-suffix-of-slaughter", {
-	Name = _("of Slaughter"),
+	Name = "of Slaughter",
 	MagicSuffix = true,
 	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "horn", true},
 	MagicLevel = 3
 })
 
 DefineUpgrade("upgrade-item-suffix-of-slowness", { -- example: Ring of Slowness (from Wesnoth)
-	Name = _("of Slowness"),
+	Name = "of Slowness",
 	MagicSuffix = true,
 	ItemSuffix = {"boots", true, "amulet", true, "ring", true},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-suffix-of-the-snail", {
-	Name = _("of the Snail"),
+	Name = "of the Snail",
 	MagicSuffix = true,
 	ItemSuffix = {"boots", true, "amulet", true, "ring", true},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-suffix-of-the-snigill", {
-	Name = _("of the Snigill"),
+	Name = "of the Snigill",
 	MagicSuffix = true,
 	ItemSuffix = {"boots", true, "amulet", true, "ring", true},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-suffix-of-speed", { -- example: Ring of Speed (from Wesnoth)
-	Name = _("of Speed"),
+	Name = "of Speed",
 	MagicSuffix = true,
 	ItemSuffix = {"boots", true, "amulet", true, "ring", true},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-suffix-of-strength", { -- example: Amulet of Strength (from Wesnoth)
-	Name = _("of Strength"),
+	Name = "of Strength",
 	MagicSuffix = true,
 	ItemSuffix = {"amulet", true, "ring", true, "horn", true},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-suffix-of-swiftness", {
-	Name = _("of Swiftness"),
+	Name = "of Swiftness",
 	MagicSuffix = true,
 	ItemSuffix = {"horn", true, "boots", true, "amulet", true, "ring", true},
 	MagicLevel = 3
 })
 
 DefineUpgrade("upgrade-item-suffix-of-thorns", {
-	Name = _("of Thorns"),
+	Name = "of Thorns",
 	MagicSuffix = true,
 	ItemSuffix = {"armor", true, "shield", true, "helmet", true, "amulet", true, "ring", true},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-suffix-of-trickery", {
-	Name = _("of Trickery"),
+	Name = "of Trickery",
 	MagicSuffix = true,
 	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "horn", true},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-suffix-of-victory", {
-	Name = _("of Victory"),
+	Name = "of Victory",
 	MagicSuffix = true,
 	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
 	MagicLevel = 3
 })
 
 DefineUpgrade("upgrade-item-suffix-of-vision", {
-	Name = _("of Vision"),
+	Name = "of Vision",
 	MagicSuffix = true,
 	ItemSuffix = {"amulet", true, "ring", true},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-suffix-of-vulnerability", {
-	Name = _("of Vulnerability"),
+	Name = "of Vulnerability",
 	MagicSuffix = true,
 	ItemSuffix = {"armor", true, "shield", true, "helmet", true, "amulet", true, "ring", true},
 	IncompatibleAffixes = {"upgrade-item-prefix-vulnerable"},
 	MagicLevel = 1
+})
+
+DefineUpgrade("upgrade-item-suffix-of-the-wolf", {
+	Name = "of the Wolf",
+	MagicSuffix = true,
+	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
+	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-suffix-of-the-woodpecker", {
@@ -380,6 +387,11 @@ DefineModifier("upgrade-item-suffix-of-vulnerability",
 	{"Armor", -1}
 )
 
+DefineModifier("upgrade-item-suffix-of-the-wolf",
+	{"Accuracy", 1},
+	{"BasicDamage", 1}
+)
+
 DefineModifier("upgrade-item-suffix-of-the-woodpecker",
 	{"LumberGatheringBonus", 2}
 )
@@ -498,6 +510,10 @@ DefineDependency("upgrade-item-suffix-of-victory",
 
 DefineDependency("upgrade-item-suffix-of-vision",
 	{"upgrade-deity-domain-archery"}, "or", {"upgrade-deity-domain-faith"}
+)
+
+DefineDependency("upgrade-item-suffix-of-the-wolf",
+	{"upgrade-deity-domain-moon"}, "or", {"upgrade-deity-domain-warfare"}
 )
 
 DefineDependency("upgrade-item-suffix-of-the-woodpecker",

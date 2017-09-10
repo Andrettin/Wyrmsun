@@ -38,10 +38,12 @@ function DefineUniqueItem(unique_item, data)
 	OldDefineUniqueItem(unique_item, data)
 end
 
+-- Weapons
+
 DefineUniqueItem("brimir", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 102.
 	Name = "Brimir",
 	Type = "unit-broad-sword",
-	Prefix = "upgrade-item-prefix-penetrating",
+	Prefix = "upgrade-item-prefix-giants",
 	Suffix = "upgrade-item-suffix-of-victory",
 	Background = "Brimir was described in Norse mythology as being the best of swords.",
 	Quote = "\"Of all the gods is Odin the greatest,\nAnd Sleipnir the best of steeds;\nBifrost of bridges, Bragi of skalds,\nHobrok of hawks, Garm of hounds,\nand Brimir of swords.\"\n- Grimnismol (Grimnir)"
@@ -54,6 +56,14 @@ DefineUniqueItem("laevatein", { -- Source: Kevin Crossley-Holland, "The Norse My
 	Suffix = "upgrade-item-suffix-of-slaughter",
 	Background = "In Norse mythology, Laevatein (\"the Wounding Wand\") was a sword forged by Loki with runes at the doors of Niflheim, and was placed under nine locks in Laegjarn's chest, with Sinmora guarding over it.",
 	Quote = "\"Laevatein is there that Lopt with runes\nOnce made by the doors of death;\nIn Laegjarn's chest by Sinmora lies it,\nAnd nine locks fasten it firm.\"\n- Svipdagsmol (Fjolsvith)"
+} )
+
+DefineUniqueItem("wolfs-claw", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 778.
+	Name = "Wolf's Claw",
+	Type = "unit-broad-sword",
+	Prefix = "upgrade-item-prefix-wolfs",
+	Suffix = "upgrade-item-suffix-of-the-wolf",
+	Description = "Wolf's Claw is named after a star, and is said to derive power from it."
 } )
 
 DefineUniqueItem("freys-sword", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 55-57; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 110, 114-115.
@@ -118,6 +128,8 @@ DefineUniqueItem("toporik", { -- name means "hatchet" in Russian; renaming of th
 	Background = "In Slavic mythology, the god Perun wielded a throwing axe. Perun's axe has often been identified with Thor's Mjollnir hammer in function and origin. The name Toporik means \"hatchet\" in Russian.",
 	Quote = "\"The wise Vingthor\nHas nine sons:\nThree strike, three thunder,\nThree lighten.\"\n- Dwarven Traditional Poetry" -- Source: W. R. S. Ralston, "Songs of the Russian People", 1872, p. 90.
 } )
+
+-- Shields
 
 DefineUniqueItem("svalin", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 100.
 	Name = "Svalin",

@@ -26,7 +26,7 @@
 --
 
 DefineUpgrade("upgrade-item-prefix-accurate", {
-	Name = _("Accurate"),
+	Name = "Accurate",
 	MagicPrefix = true,
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "horn", true},
 	MagicLevel = 1
@@ -47,37 +47,44 @@ DefineUpgrade("upgrade-item-prefix-chopping", {
 })
 
 DefineUpgrade("upgrade-item-prefix-cold", { -- example: Cold Blade (from Wesnoth)
-	Name = _("Cold"),
+	Name = "Cold",
 	MagicPrefix = true,
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-prefix-cruel", {
-	Name = _("Cruel"),
+	Name = "Cruel",
 	MagicPrefix = true,
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
 	MagicLevel = 1
 })
 
 DefineUpgrade("upgrade-item-prefix-dwindling", {
-	Name = _("Dwindling"),
+	Name = "Dwindling",
 	MagicPrefix = true,
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-prefix-flaming", { -- example: Flaming Sword (from Wesnoth)
-	Name = _("Flaming"),
+	Name = "Flaming",
 	MagicPrefix = true,
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "horn", true, "amulet", true, "ring", true}, -- so that Brisingamen and Draupnir can drop
 	MagicLevel = 3
 })
 
 DefineUpgrade("upgrade-item-prefix-frail", {
-	Name = _("Frail"),
+	Name = "Frail",
 	MagicPrefix = true,
 	ItemPrefix = {"armor", true, "shield", true, "helmet", true},
 	MagicLevel = 2
+})
+
+DefineUpgrade("upgrade-item-prefix-giants", {
+	Name = "Giant's",
+	MagicPrefix = true,
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
+	MagicLevel = 3
 })
 
 DefineUpgrade("upgrade-item-prefix-giantsbane", {
@@ -95,41 +102,41 @@ DefineUpgrade("upgrade-item-prefix-glacial", {
 })
 
 DefineUpgrade("upgrade-item-prefix-impregnable", {
-	Name = _("Impregnable"),
+	Name = "Impregnable",
 	MagicPrefix = true,
 	ItemPrefix = {"armor", true, "shield", true, "helmet", true},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-prefix-industrious", {
-	Name = _("Industrious"),
+	Name = "Industrious",
 	MagicPrefix = true,
 	MagicLevel = 1
 })
 
 DefineUpgrade("upgrade-item-prefix-jinns", {
-	Name = _("Jinn's"),
+	Name = "Jinn's",
 	MagicPrefix = true,
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "horn", true},
 	MagicLevel = 3
 })
 
 DefineUpgrade("upgrade-item-prefix-penetrating", {
-	Name = _("Penetrating"),
+	Name = "Penetrating",
 	MagicPrefix = true,
 	ItemPrefix = {"arrows", true, "dagger", true, "javelin", true, "spear", true, "sword", true, "thrusting-sword", true},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-prefix-quenching", {
-	Name = _("Quenching"),
+	Name = "Quenching",
 	MagicPrefix = true,
 	ItemPrefix = {"armor", true, "shield", true, "helmet", true},
 	MagicLevel = 1
 })
 
 DefineUpgrade("upgrade-item-prefix-replenishing", {
-	Name = _("Replenishing"),
+	Name = "Replenishing",
 	MagicPrefix = true,
 	MagicLevel = 2
 })
@@ -142,42 +149,49 @@ DefineUpgrade("upgrade-item-prefix-sawing", {
 })
 
 DefineUpgrade("upgrade-item-prefix-storm", { -- example: Storm Trident (from Wesnoth)
-	Name = _("Storm"),
+	Name = "Storm",
 	MagicPrefix = true,
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-prefix-sturdy", {
-	Name = _("Sturdy"),
+	Name = "Sturdy",
 	MagicPrefix = true,
 	ItemPrefix = {"armor", true, "shield", true, "helmet", true},
 	MagicLevel = 1
 })
 
 DefineUpgrade("upgrade-item-prefix-swift", {
-	Name = _("Swift"),
+	Name = "Swift",
 	MagicPrefix = true,
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "amulet", true, "ring", true, "horn", true},
 	MagicLevel = 1
 })
 
 DefineUpgrade("upgrade-item-prefix-vicious", {
-	Name = _("Vicious"),
+	Name = "Vicious",
 	MagicPrefix = true,
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "amulet", true, "ring", true, "horn", true},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-prefix-vulnerable", {
-	Name = _("Vulnerable"),
+	Name = "Vulnerable",
 	MagicPrefix = true,
 	ItemPrefix = {"armor", true, "shield", true, "helmet", true},
 	MagicLevel = 1
 })
 
+DefineUpgrade("upgrade-item-prefix-wolfs", {
+	Name = "Wolf's",
+	MagicPrefix = true,
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
+	MagicLevel = 2
+})
+
 DefineUpgrade("upgrade-item-prefix-wounding", {
-	Name = _("Wounding"),
+	Name = "Wounding",
 	MagicPrefix = true,
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
 	MagicLevel = 2
@@ -213,6 +227,10 @@ DefineModifier("upgrade-item-prefix-flaming",
 
 DefineModifier("upgrade-item-prefix-frail",
 	{"Armor", -2}
+)
+
+DefineModifier("upgrade-item-prefix-giants",
+	{"BasicDamage", 3}
 )
 
 DefineModifier("upgrade-item-prefix-giantsbane",
@@ -272,6 +290,11 @@ DefineModifier("upgrade-item-prefix-vulnerable",
 	{"Armor", -1}
 )
 
+DefineModifier("upgrade-item-prefix-wolfs",
+	{"Accuracy", 1},
+	{"BasicDamage", 1}
+)
+
 DefineModifier("upgrade-item-prefix-wounding",
 	{"BasicDamage", 2}
 )
@@ -290,6 +313,10 @@ DefineDependency("upgrade-item-prefix-dwindling",
 
 DefineDependency("upgrade-item-prefix-flaming",
 	{"upgrade-deity-domain-fire"}, "or", {"upgrade-deity-domain-faith"}, "or", {"upgrade-dwarven-alchemy"}, "or", {"upgrade-goblin-alchemy"}, "or", {"upgrade-teuton-alchemy"}
+)
+
+DefineDependency("upgrade-item-prefix-giants",
+	{"upgrade-deity-domain-chaos"}
 )
 
 DefineDependency("upgrade-item-prefix-giantsbane",
@@ -326,6 +353,10 @@ DefineDependency("upgrade-item-prefix-storm",
 
 DefineDependency("upgrade-item-prefix-vicious",
 	{"upgrade-deity-domain-wrath"}
+)
+
+DefineDependency("upgrade-item-prefix-wolfs",
+	{"upgrade-deity-domain-moon"}, "or", {"upgrade-deity-domain-warfare"}
 )
 
 local item_prefixes = GetItemPrefixes()
