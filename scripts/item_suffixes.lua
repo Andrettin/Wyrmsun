@@ -79,7 +79,8 @@ DefineUpgrade("upgrade-item-suffix-of-extinguishment", {
 	Name = "of Extinguishment",
 	MagicSuffix = true,
 	ItemSuffix = {"armor", true, "shield", true, "helmet", true},
-	MagicLevel = 2
+	IncompatibleAffixes = {"upgrade-item-prefix-extinguishing"},
+	MagicLevel = 3
 })
 
 DefineUpgrade("upgrade-item-suffix-of-fire", {
@@ -251,6 +252,7 @@ DefineUpgrade("upgrade-item-suffix-of-the-wolf", {
 	Name = "of the Wolf",
 	MagicSuffix = true,
 	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
+	IncompatibleAffixes = {"upgrade-item-prefix-wolfs"},
 	MagicLevel = 2
 })
 
@@ -425,7 +427,7 @@ DefineDependency("upgrade-item-suffix-of-diligence",
 )
 
 DefineDependency("upgrade-item-suffix-of-extinguishment",
-	{"upgrade-deity-domain-water"}, "or", {"upgrade-deity-domain-hope"}
+	{"upgrade-deity-domain-water"}, "or", {"upgrade-deity-domain-hope"}, "or", {"upgrade-deity-domain-fire"}
 )
 
 DefineDependency("upgrade-item-suffix-of-fire",
@@ -509,7 +511,7 @@ DefineDependency("upgrade-item-suffix-of-victory",
 )
 
 DefineDependency("upgrade-item-suffix-of-vision",
-	{"upgrade-deity-domain-archery"}, "or", {"upgrade-deity-domain-faith"}
+	{"upgrade-deity-domain-archery"}, "or", {"upgrade-deity-domain-faith"}, "or", {"upgrade-deity-domain-light"}
 )
 
 DefineDependency("upgrade-item-suffix-of-the-wolf",

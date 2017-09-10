@@ -40,6 +40,8 @@ end
 
 -- Weapons
 
+-- Broad Swords
+
 DefineUniqueItem("brimir", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 102.
 	Name = "Brimir",
 	Type = "unit-broad-sword",
@@ -63,8 +65,11 @@ DefineUniqueItem("wolfs-claw", { -- Source: Richard Cleasby and Gudbrand Vigfuss
 	Type = "unit-broad-sword",
 	Prefix = "upgrade-item-prefix-wolfs",
 	Suffix = "upgrade-item-suffix-of-the-wolf",
-	Description = "Wolf's Claw is named after a star, and is said to derive power from it."
+	Description = "This sword is named after a star, and is said to derive power from it.",
+	Background = "The Norse named a star (or an asterism) \"Wolf's Claws\"."
 } )
+
+-- Longswords
 
 DefineUniqueItem("freys-sword", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 55-57; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 110, 114-115.
 	Name = "Frey's Sword",
@@ -111,6 +116,8 @@ DefineUniqueItem("sigrljoma", { -- Source: Paul Beekman Taylor, "Searoniðas: Ol
 	Background = "In Norse mythology, Sigrljóma (\"Battle-Light\") was the magic sword which Högni used to combat Sörli the Strong."
 } )
 
+-- Hammers
+
 DefineUniqueItem("the-hammer-of-thursagan", {
 	Name = "The Hammer of Thursagan",
 	Type = "unit-hammer",
@@ -119,6 +126,8 @@ DefineUniqueItem("the-hammer-of-thursagan", {
 --	Quote = "\"The very tool with which our greatest runesmith made the Scepter of Fire. But it is ancient, far older than Thursagan; he was but the last to wield it, and our oldest histories hint that this very hammer was used to forge the dwarves themselves in the heart of the earth.\"\n- Angarthing"
 	Quote = "\"The very tool with which our greatest runesmith made the Scepter of Fire. But it is ancient, far older than Thursagan; he was but the last to wield it.\"\n- Angarthing"
 } )
+
+-- Throwing Axes
 
 DefineUniqueItem("toporik", { -- name means "hatchet" in Russian; renaming of the Axe of Perun (Perun is a god from Slavic mythology), here made into a dwarven unique throwing axe (since it wouldn't make much sense for the dwarves to have a throwing axe named after a god from a human mythology); was made a dwarven item under the following premise: many scholars associate the Axe of Perun with Thor's Mjollnir hammer in function and origin, and the latter was made by dwarves
 	Name = "Toporik",
@@ -140,7 +149,29 @@ DefineUniqueItem("svalin", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Quote = "\"In front of the sun does Svalin stand,\nThe shield for the shining god;\nMountains and sea would be set in flames\nIf it fell from before the sun.\"\n- Grimnismol (Grimnir)"
 } )
 
+-- Boots
+
+DefineUniqueItem("alsvids-hooves", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 778.
+	Name = "Alsvid's Hooves", -- source gives "Hoof of Alsvinn" instead, but also mentions it being a sun horse, so that it is probably the same as Alsviðr
+	Type = "unit-boots",
+	Prefix = "upgrade-item-prefix-swift-boots",
+	Suffix = "upgrade-item-suffix-of-speed",
+	Description = "These boots are named after a star, and are said to derive power from it.",
+	Background = "The Norse named a star \"Alsvid's Hoof\". Alsvid is one of the sun horses in Norse myths."
+} )
+
 -- Jewelry
+
+-- Amulets
+
+DefineUniqueItem("arvaks-ear", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 778.
+	Name = "Arvak's Ear",
+	Type = "unit-amulet",
+	Prefix = "upgrade-item-prefix-quenching",
+	Suffix = "upgrade-item-suffix-of-extinguishment",
+	Description = "This amulet is named after a star, and are said to derive power from it.",
+	Background = "The Norse named a star \"Arvak's Ear\". Arvak is one of the sun horses in Norse myths."
+} )
 
 DefineUniqueItem("brisingamen", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 177.
 	Name = "Brisingamen",
@@ -150,6 +181,8 @@ DefineUniqueItem("brisingamen", { -- Source: Henry Adams Bellows (transl.), "The
 	Background = "In Norse mythology, Brisingamen (\"The Necklace of the Brisings\") was a golden necklace crafted by four dwarven smiths for the goddess Freyja.",
 	Quote = "\"The dwelling great of the dwarves was shaken,\nAnd burst was the mighty Brisings' necklace.\"\n- Dwarven Traditional Poetry"
 } )
+
+-- Rings
 
 DefineUniqueItem("andvaranaut", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 114, 360; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 21.
 	Name = "Andvaranaut",
@@ -172,7 +205,7 @@ DefineUniqueItem("draupnir", { -- Source: Kevin Crossley-Holland, "The Norse Myt
 DefineUniqueItem("volunds-ring", { -- Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 75-76.
 	Name = "Volund's Ring",
 	Type = "unit-ring",
-	Prefix = "upgrade-item-prefix-swift",
+	Prefix = "upgrade-item-prefix-swift-boots",
 	Suffix = "upgrade-item-suffix-of-speed",
 	Description = "The legendary elven smith Volund crafted this wondrous magic ring, and gave it to his wife. The ring was later stolen by an enemy king, who gave it to his daughter."
 } )

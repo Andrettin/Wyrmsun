@@ -66,6 +66,13 @@ DefineUpgrade("upgrade-item-prefix-dwindling", {
 	MagicLevel = 2
 })
 
+DefineUpgrade("upgrade-item-prefix-extinguishing", {
+	Name = "Extinguishing",
+	MagicPrefix = true,
+	ItemPrefix = {"armor", true, "shield", true, "helmet", true},
+	MagicLevel = 3
+})
+
 DefineUpgrade("upgrade-item-prefix-flaming", { -- example: Flaming Sword (from Wesnoth)
 	Name = "Flaming",
 	MagicPrefix = true,
@@ -165,8 +172,15 @@ DefineUpgrade("upgrade-item-prefix-sturdy", {
 DefineUpgrade("upgrade-item-prefix-swift", {
 	Name = "Swift",
 	MagicPrefix = true,
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "amulet", true, "ring", true, "horn", true},
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
 	MagicLevel = 1
+})
+
+DefineUpgrade("upgrade-item-prefix-swift-boots", {
+	Name = "Swift",
+	MagicPrefix = true,
+	ItemPrefix = {"boots", true, "amulet", true, "ring", true, "horn", true},
+	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-prefix-vicious", {
@@ -219,6 +233,10 @@ DefineModifier("upgrade-item-prefix-cruel",
 
 DefineModifier("upgrade-item-prefix-dwindling",
 	{"GiveResource", -1, "Increase"}
+)
+
+DefineModifier("upgrade-item-prefix-extinguishing",
+	{"FireResistance", 30}
 )
 
 DefineModifier("upgrade-item-prefix-flaming",
@@ -282,6 +300,10 @@ DefineModifier("upgrade-item-prefix-swift",
 	{"Accuracy", 1}
 )
 
+DefineModifier("upgrade-item-prefix-swift-boots",
+	{"Speed", 1}
+)
+
 DefineModifier("upgrade-item-prefix-vicious",
 	{"BasicDamage", 2}
 )
@@ -309,6 +331,10 @@ DefineDependency("upgrade-item-prefix-cruel",
 
 DefineDependency("upgrade-item-prefix-dwindling",
 	{"upgrade-deity-domain-death"}
+)
+
+DefineDependency("upgrade-item-prefix-extinguishing",
+	{"upgrade-deity-domain-water"}, "or", {"upgrade-deity-domain-hope"}, "or", {"upgrade-deity-domain-fire"}
 )
 
 DefineDependency("upgrade-item-prefix-flaming",
@@ -340,7 +366,7 @@ DefineDependency("upgrade-item-prefix-jinns",
 )
 
 DefineDependency("upgrade-item-prefix-quenching",
-	{"upgrade-deity-domain-water"}, "or", {"upgrade-deity-domain-hope"}
+	{"upgrade-deity-domain-water"}, "or", {"upgrade-deity-domain-hope"}, "or", {"upgrade-deity-domain-fire"}
 )
 
 DefineDependency("upgrade-item-prefix-replenishing",

@@ -913,9 +913,6 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		if (GetUniqueItemData(unit_name, "Type") ~= "") then
 			unit_type_type = "Type: " .. _(GetUnitTypeData(GetUniqueItemData(unit_name, "Type"), "Name")) .. "\n\n"
 		end
-		if (GetUnitTypeData(GetUniqueItemData(unit_name, "Type"), "Class") ~= "") then
-			unit_type_class = "Class: " .. _(FullyCapitalizeString(string.gsub(GetUnitTypeData(GetUniqueItemData(unit_name, "Type"), "Class"), "-", " "))) .. "\n\n"
-		end
 		if (GetUniqueItemData(unit_name, "Description") ~= "") then
 			description = "Description: " .. GetUniqueItemData(unit_name, "Description") .. "\n\n"
 		end

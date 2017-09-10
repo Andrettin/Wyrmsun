@@ -63,8 +63,10 @@ https://github.com/Andrettin/Wyrmsun
 * Items
 - Items sold at the Market now have a smaller chance of being magic or unique.
 - Added a new unique broad sword, Wolf's Claw.
+- Added new unique boots, Alsvid's Hooves.
+- Added a new unique amulet, Arvak's Ear.
 - The unique broad sword Brimir is now stronger.
-- Added the magic affixes "Giant's", "Wolf's" and "of the Wolf".
+- Added the magic affixes "Extinguishing", "Giant's", "Wolf's" and "of the Wolf".
 
 * Map Editor
 - Wood Piles now display their different variations in the editor.
