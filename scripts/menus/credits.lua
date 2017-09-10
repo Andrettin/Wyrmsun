@@ -132,6 +132,7 @@ function RunShowCreditsMenu()
 		"  J. W. Bjerk (eleazzaar)",
 		"  Jim16",
 		"  KPJ",
+		"  Kriss7475",
 		"  Mikodrak",
 		"  Nikita_Sadkov",
 		"  Oray Studios",

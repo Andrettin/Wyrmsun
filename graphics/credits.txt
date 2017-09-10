@@ -894,6 +894,7 @@
 /graphics/neutral/icons/research.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/right_arrow.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/ring.png (by Vladislav "iDreamRunner") (licensed under the CC0)
+/graphics/neutral/icons/salvage.png (by Exidelo) (licensed under the CC0)
 /graphics/neutral/icons/scouting.png (by Exidelo) (licensed under the CC0)
 /graphics/neutral/icons/slime.png (by Exidelo) (licensed under the CC0)
 /graphics/neutral/icons/slime_blue.png (by Exidelo) (licensed under the CC0)
