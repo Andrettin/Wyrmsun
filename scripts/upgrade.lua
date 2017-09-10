@@ -26,33 +26,33 @@
 --
 
 DefineUpgrade("upgrade-melee-weapon-1", {
-	Name = _("Melee Weapon 1"),
+	Name = "Melee Weapon 1",
 	Class = "melee-weapon-1",
 	Weapon = true
 })
 
 DefineUpgrade("upgrade-broad-sword", {
-	Name = _("Broad Sword"),
+	Name = "Broad Sword",
 	Parent = "upgrade-melee-weapon-1",
 	Costs = {"time", 200, "copper", 800},
 	GrandStrategyCosts = {"time", 200, "copper", 800, "research", 800}
 })
 
 DefineUpgrade("upgrade-broad-axe", {
-	Name = _("Broad Axe"),
+	Name = "Broad Axe",
 	Parent = "upgrade-melee-weapon-1",
 	Costs = {"time", 200, "copper", 500, "lumber", 300},
 	GrandStrategyCosts = {"time", 200, "copper", 500, "lumber", 300, "research", 800}
 })
 
 DefineUpgrade("upgrade-melee-weapon-2", {
-	Name = _("Melee Weapon 2"),
+	Name = "Melee Weapon 2",
 	Class = "melee-weapon-2",
 	Weapon = true
 })
 
 DefineUpgrade("upgrade-long-sword", {
-	Name = _("Long Sword"),
+	Name = "Long Sword",
 	Parent = "upgrade-melee-weapon-2",
 	Costs = {"time", 250, "copper", 2400},
 	RequirementsString = "Broad Sword",
@@ -60,16 +60,16 @@ DefineUpgrade("upgrade-long-sword", {
 })
 
 DefineUpgrade("upgrade-great-axe", {
-	Name = _("Great Axe"),
+	Name = "Great Axe",
 	Parent = "upgrade-melee-weapon-2",
 	Costs = {"time", 250, "copper", 1500, "lumber", 900},
 	GrandStrategyCosts = {"time", 250, "copper", 1500, "lumber", 900, "research", 2400}
 })
 
 DefineUpgrade("upgrade-long-spear", {
-	Name = _("Long Spear"),
+	Name = "Long Spear",
 	Class = "long-spear",
-	Description = _("With the lengthening of spear shafts, soldiers who wield these weapons have greater reach against their enemies."),
+	Description = "With the lengthening of spear shafts, soldiers who wield these weapons have greater reach against their enemies.",
 	Icon = "icon-long-spear",
 	Weapon = true,
 	Costs = {"time", 200, "copper", 400, "lumber", 400},
@@ -88,7 +88,7 @@ DefineUpgrade("upgrade-pike", {
 })
 
 DefineUpgrade("upgrade-bronze-shield", {
-	Name = _("Bronze Shield"),
+	Name = "Bronze Shield",
 	Class = "bronze-shield",
 	Shield = true,
 	Costs = {"time", 200, "copper", 300, "lumber", 900},
@@ -96,7 +96,7 @@ DefineUpgrade("upgrade-bronze-shield", {
 })
 
 DefineUpgrade("upgrade-iron-shield", {
-	Name = _("Iron Shield"),
+	Name = "Iron Shield",
 	Class = "iron-shield",
 	Shield = true,
 	Costs = {"time", 250, "copper", 900, "lumber", 1500},
@@ -104,26 +104,26 @@ DefineUpgrade("upgrade-iron-shield", {
 })
 
 DefineUpgrade("upgrade-ranged-projectile-1", {
-	Name = _("Ranged Projectile 1"),
+	Name = "Ranged Projectile 1",
 	Class = "ranged-projectile-1",
 	Costs = {"time", 200, "copper", 300, "lumber", 900},
 	GrandStrategyCosts = {"time", 200, "copper", 300, "lumber", 900, "research", 1200}
 })
 
 DefineUpgrade("upgrade-ranged-projectile-2", {
-	Name = _("Ranged Projectile 2"),
+	Name = "Ranged Projectile 2",
 	Class = "ranged-projectile-2",
 	Costs = {"time", 250, "copper", 900, "lumber", 1500},
 	GrandStrategyCosts = {"time", 250, "copper", 900, "lumber", 1500, "research", 2400}
 })
 
 DefineUpgrade("upgrade-siege-projectile-1", {
-	Name = _("Siege Projectile 1"),
+	Name = "Siege Projectile 1",
 	Class = "siege-projectile-1"
 })
 
 DefineUpgrade("upgrade-catapult-granite-projectile", {
-	Name = _("Catapult Granite Projectile"),
+	Name = "Catapult Granite Projectile",
 	Parent = "upgrade-siege-projectile-1",
 	Icon = "icon-catapult-projectile-2",
 	Costs = {"time", 250, "copper", 1000, "stone", 500},
@@ -140,12 +140,12 @@ DefineUpgrade("upgrade-broadhead-ballista-bolt", {
 })
 
 DefineUpgrade("upgrade-siege-projectile-2", {
-	Name = _("Siege Projectile 2"),
+	Name = "Siege Projectile 2",
 	Class = "siege-projectile-2"
 })
 
 DefineUpgrade("upgrade-catapult-metal-projectile", {
-	Name = _("Catapult Metal Projectile"),
+	Name = "Catapult Metal Projectile",
 	Parent = "upgrade-siege-projectile-2",
 	Icon = "icon-catapult-projectile-3",
 	Costs = {"time", 250, "copper", 4000},
@@ -162,10 +162,10 @@ DefineUpgrade("upgrade-penetrating-ballista-bolt", {
 })
 
 DefineUpgrade("upgrade-wood-plow", {
-	Name = _("Wood Plow"),
+	Name = "Wood Plow",
 	Class = "wood-plow",
 	Icon = "icon-wood-plow",
-	Description = _("While at the dawn of agriculture seeds were simply spread over the soil, the invention of the plow allows farmers to more easily make furrows where seeds would be planted. This made way for the cultivation of heavier soils, and planting over larger areas became a more practical possibility.\n\nEffect: +1 Food supply for farms."),
+	Description = "While at the dawn of agriculture seeds were simply spread over the soil, the invention of the plow allows farmers to more easily make furrows where seeds would be planted. This made way for the cultivation of heavier soils, and planting over larger areas became a more practical possibility.\n\nEffect: +1 Food supply for farms.",
 	Costs = {"time", 200, "copper", 300, "lumber", 900},
 	GrandStrategyCosts = {"time", 200, "copper", 300, "lumber", 900, "research", 1200},
 	GrandStrategyProductionEfficiencyModifier = {"grain", 100, "mushrooms", 100}
@@ -186,7 +186,7 @@ DefineUpgrade("upgrade-masonry", {
 	Name = "Masonry",
 	Class = "masonry",
 	Icon = "icon-masonry",
-	Description = _("Masonry is the craft of building structures from blocks, which are bound together with mortar."),
+	Description = "Masonry is the craft of building structures from blocks, which are bound together with mortar.",
 	Costs = {"time", 250, "copper", 900, "lumber", 1000, "stone", 500},
 	GrandStrategyCosts = {"time", 250, "copper", 900, "lumber", 1000, "stone", 500, "research", 2400}
 })
@@ -640,10 +640,10 @@ DefineDependency("upgrade-deity-christian-god",
 
 -- miscellaneous individual upgrades
 local misc_individual_upgrades = {
-	{"upgrade-child", _("Child")},
-	{"upgrade-bee-child", _("Bee Child")},
-	{"upgrade-gryphon-child", _("Gryphon Child")},
-	{"upgrade-wyrm-child", _("Wyrm Child")}
+	{"upgrade-child", "Child"},
+	{"upgrade-bee-child", "Bee Child"},
+	{"upgrade-gryphon-child", "Gryphon Child"},
+	{"upgrade-wyrm-child", "Wyrm Child"}
 }
 
 for i = 1,table.getn(misc_individual_upgrades) do
@@ -676,18 +676,19 @@ DefineModifier("upgrade-wyrm-child",
 Load("scripts/item_prefixes.lua")
 Load("scripts/item_suffixes.lua")
 Load("scripts/item_suffixes_runic.lua")
+Load("scripts/item_sets.lua")
 Load("scripts/province_modifiers.lua")
 Load("scripts/traits.lua")
 Load("scripts/elixirs.lua")
 Load("scripts/works.lua")
 
 DefineUpgrade("upgrade-character-deity", {
-	Name = _("Deity Character Upgrade"),
+	Name = "Deity Character Upgrade",
 	Icon = "icon-level-up"
 })
 
 DefineUpgrade("upgrade-kvasir-character", {
-	Name = _("Kvasir Character Upgrade"),
+	Name = "Kvasir Character Upgrade",
 	Icon = "icon-kvasir"
 })
 

@@ -198,10 +198,14 @@ DefineSettlement("svarinshaug", {
 		"dwarf", "Svarinshaug"
 	},
 	HistoricalOwners = {
-		-2999, "brising-clan"
+		-3000, "brising-clan"
 	},
 	HistoricalBuildings = {
 		-2999, 0, "town-hall"
+	},
+	HistoricalHeroes = {
+		-3000, -2999, "modsognir", "brising-clan",
+		-3000, -2999, "durin", "brising-clan"
 	},
 	Regions = {}
 })

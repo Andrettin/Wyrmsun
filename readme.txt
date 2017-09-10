@@ -62,9 +62,9 @@ https://github.com/Andrettin/Wyrmsun
 
 * Items
 - Items sold at the Market now have a smaller chance of being magic or unique.
+- Added support for unique item sets, providing a bonus if all items in a set are equipped.
 - Added a new unique broad sword, Wolf's Claw.
-- Added new unique boots, Alsvid's Hooves.
-- Added a new unique amulet, Arvak's Ear.
+- Added new unique boots, Alsvid's Hooves and a new unique amulet, Arvak's Ear. These items are part of the The Sun Horses' Stars unique item set.
 - The unique broad sword Brimir is now stronger.
 - Added the magic affixes "Extinguishing", "Giant's", "Wolf's" and "of the Wolf".
 

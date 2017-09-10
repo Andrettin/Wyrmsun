@@ -2242,6 +2242,15 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {KnowledgeMining = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Every 25 levels in Knowledge (Mining) grant +1 Mining Bonus"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Margin = {1, 1}, Condition = {Unique = "only", Identified = "only", UniqueSet = "only"}, 
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				}, 
+				{ 	Condition = {Unique = "only", Identified = "only", UniqueSet = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Set: "), UnitUniqueSet("Unit")), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Unique = "only", Identified = "only", UniqueSet = "only"}, HighlightColor = "gray",
+					More = {"Text", {Text = UnitUniqueSetItems("Unit"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}

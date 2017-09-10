@@ -913,6 +913,9 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		if (GetUniqueItemData(unit_name, "Type") ~= "") then
 			unit_type_type = "Type: " .. _(GetUnitTypeData(GetUniqueItemData(unit_name, "Type"), "Name")) .. "\n\n"
 		end
+		if (GetUniqueItemData(unit_name, "Set") ~= "") then
+			unit_type_type = "Set: " .. _(GetUpgradeData(GetUniqueItemData(unit_name, "Set"), "Name")) .. "\n\n"
+		end
 		if (GetUniqueItemData(unit_name, "Description") ~= "") then
 			description = "Description: " .. GetUniqueItemData(unit_name, "Description") .. "\n\n"
 		end

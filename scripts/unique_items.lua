@@ -156,6 +156,7 @@ DefineUniqueItem("alsvids-hooves", { -- Source: Richard Cleasby and Gudbrand Vig
 	Type = "unit-boots",
 	Prefix = "upgrade-item-prefix-swift-boots",
 	Suffix = "upgrade-item-suffix-of-speed",
+	Set = "upgrade-item-set-the-sun-horses",
 	Description = "These boots are named after a star, and are said to derive power from it.",
 	Background = "The Norse named a star \"Alsvid's Hoof\". Alsvid is one of the sun horses in Norse myths."
 } )
@@ -169,6 +170,7 @@ DefineUniqueItem("arvaks-ear", { -- Source: Richard Cleasby and Gudbrand Vigfuss
 	Type = "unit-amulet",
 	Prefix = "upgrade-item-prefix-quenching",
 	Suffix = "upgrade-item-suffix-of-extinguishment",
+	Set = "upgrade-item-set-the-sun-horses",
 	Description = "This amulet is named after a star, and are said to derive power from it.",
 	Background = "The Norse named a star \"Arvak's Ear\". Arvak is one of the sun horses in Norse myths."
 } )
