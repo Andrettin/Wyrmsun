@@ -112,6 +112,3 @@ SetMapTemplateHero("earth", "thialfi", "thielung-tribe", {4218, 734}, -1101, -11
 SetMapTemplateUnit("earth", "unit-germanic-worker", "thielung-tribe", {4218, 734}, -1101, -1100)
 SetMapTemplateUnit("earth", "unit-germanic-worker", "thielung-tribe", {4218, 734}, -1101, -1100)
 SetMapTemplateUnit("earth", "unit-germanic-transport-ship", "thielung-tribe", {4218, 734}, -1101, -1100)
-
--- Vitemölla (Southeast Sweden)
---SetMapTemplateUnit("earth", "unit-germanic-temple", "skeldung-tribe", {4162, 780}, -1700, -500) -- the archaeoastronomical observatory termed by archaeologists as "Heimdall's Stones" was constructed and in use during the Bronze Age; between 600 and 500 BC it was covered by sands; Source: Nils-Axel Mörner, Bob G. Lind and Göran Possnert, "Heimdall's Stones at Vitemölla in SE Sweden and the Chronology and Stratigraphy of the Surroundings", 2009, pp. 209-212.
