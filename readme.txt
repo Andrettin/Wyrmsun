@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 - 2.8.2
 -----------------------------------------------------------------------
 
+* Buildings
+- Added a button to salvage your own buildings, destroying them and restoring resources used in their construction. The quantity of resources restored starts out at 75%, but decreases as Masonry and Architecture are researched. The percentage of resources restored also varies according to how much HP a building has.
+
 * Items
 - Items sold at the Market now have a smaller chance of being magic or unique.
 - Added support for unique item sets, providing a bonus if all items in a set are equipped.

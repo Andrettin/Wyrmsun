@@ -458,7 +458,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-iron-plow",
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-masonry",
 	Action = "research", Value = "upgrade-dwarven-masonry",
 	Allowed = "check-single-research",
-	Description = _("+20% Hit Points and +5 Armor for buildings, enables Road construction, and allows Sentry Towers to be upgraded to Guard Towers and Mead Halls to Bastions."),
+	Description = "+20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road construction, and allows Sentry Towers to be upgraded to Guard Towers and Mead Halls to Bastions.",
 	Key = "m", Hint = "Research ~!Masonry", Popup = "popup-research",
 	ForUnit = {"unit-dwarven-masons-shop"}
 } )

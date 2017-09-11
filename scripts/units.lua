@@ -126,7 +126,8 @@ Units = {
 	"unit-brising-smithy",
 	"upgrade-faction-eikinskjaldi-clan", "upgrade-faction-goldhoof-clan", "upgrade-faction-joruvellir", "upgrade-faction-yawning-yales",
 	"unit-joruvellir-scout", "unit-joruvellir-pathfinder", "unit-joruvellir-explorer",
-	"unit-joruvellir-yale-rider", "unit-joruvellir-yale-lord", "unit-joruvellir-yale-pen",
+	"unit-joruvellir-yale-rider", "unit-joruvellir-yale-lord",
+	"unit-joruvellir-yale-pen",
 	"upgrade-faction-surghan-mercenaries",
 	"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
 	"upgrade-gnomish-civilization",
@@ -324,6 +325,7 @@ DefineUnitType("unit-template-building", {
 	Building = true,
 	VisibleUnderFog = true,
 	SelectableByRectangle = true,
+	SalvageFactor = 75,
 	ButtonLevel = 1,
 	ButtonPopup = "popup-building"
 })

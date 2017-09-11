@@ -56,7 +56,7 @@ DefineMapTemplate("nidavellir", {
 DefineMapTemplate("nidavellir-underground", {
 	Name = "Nidavellir Underground",
 	World = "nidavellir",
-	Layer = 1,
+	SurfaceLayer = 1,
 	Width = 984,
 	Height = 728,
 	TerrainImage = "scripts/map_templates/nidavellir_underground.png",

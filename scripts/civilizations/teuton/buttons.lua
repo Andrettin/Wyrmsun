@@ -275,8 +275,8 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-iron-tipped-wood-plow",
 DefineButton( { Pos = 7, Level = 0, Icon = "icon-masonry",
 	Action = "research", Value = "upgrade-teuton-masonry",
 	Allowed = "check-single-research",
-	Key = "m", Hint = _("Research ~!Masonry"), Popup = "popup-research",
-	Description = "+20% Hit Points and +5 Armor for buildings, enables Road construction, and allows Watch Towers to be upgraded to Guard Towers and Rathauses to Burgs.",
+	Key = "m", Hint = "Research ~!Masonry", Popup = "popup-research",
+	Description = "+20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road construction, and allows Watch Towers to be upgraded to Guard Towers and Rathauses to Burgs.",
 	ForUnit = {"unit-teuton-lumber-mill"}
 } )
 

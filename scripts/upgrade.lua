@@ -255,7 +255,7 @@ DefineUpgrade("upgrade-architecture", {
 	Class = "architecture",
 	Civilization = "neutral",
 	Icon = "icon-architecture",
-	Description = "The development of architecture as an area of knowledge results in better construction techniques.\n\nEffect: Allows siege engines, railroads and minecarts.",
+	Description = "The development of architecture as an area of knowledge results in better construction techniques.",
 	RequirementsString = "Writing and Masonry",
 	Costs = {"time", 250, "copper", 2000, "lumber", 2000}
 })
@@ -279,6 +279,7 @@ DefineModifier("upgrade-mathematics",
 DefineModifier("upgrade-architecture",
 	{"HitPoints", 20, "Percent"},
 	{"Armor", 5},
+	{"SalvageFactor", -25},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"},
 	{"apply-to", "unit-dwarven-mushroom-farm"}, {"apply-to", "unit-dwarven-barracks"},

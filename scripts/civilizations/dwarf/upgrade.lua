@@ -42,21 +42,21 @@ DefineUpgrade("upgrade-dwarven-great-axe", {
 	Icon = "icon-dwarven-great-axe",
 	Civilization = "dwarf",
 	RequirementsString = "Broad Axe",
-	Description = _("Further innovations in dwarven smithing allow axes to be made sturdier, and often to carry double blades.\n\nEffect: +2 Damage for Axefighters and Yale Riders. Allows Great Axes to be sold at the Market."),
+	Description = "Further innovations in dwarven smithing allow axes to be made sturdier, and often to carry double blades.\n\nEffect: +2 Damage for Axefighters and Yale Riders. Allows Great Axes to be sold at the Market.",
 	Item = "unit-great-axe"
 })
 
 DefineUpgrade("upgrade-dwarven-long-spear", {
 	Parent = "upgrade-long-spear",
 	Civilization = "dwarf",
-	Description = _("With the lengthening of spear shafts, soldiers who wield these weapons have greater reach against their enemies.\n\nEffect: +2 Damage for Guards. Allows Long Spears to be sold at the Market."),
+	Description = "With the lengthening of spear shafts, soldiers who wield these weapons have greater reach against their enemies.\n\nEffect: +2 Damage for Guards. Allows Long Spears to be sold at the Market.",
 	Item = "unit-long-spear"
 })
 
 DefineUpgrade("upgrade-dwarven-pike", {
 	Parent = "upgrade-pike",
 	Civilization = "dwarf",
-	Description = _("Much longer than previous spears, pikes can be deadly when used by disciplined groups of soldiers.\n\nEffect: +2 Damage for Guards. Allows Pikes to be sold at the Market."),
+	Description = "Much longer than previous spears, pikes can be deadly when used by disciplined groups of soldiers.\n\nEffect: +2 Damage for Guards. Allows Pikes to be sold at the Market.",
 	Item = "unit-pike"
 })
 
@@ -82,22 +82,22 @@ DefineUpgrade("upgrade-dwarven-shield-2", {
 })
 
 DefineUpgrade("upgrade-dwarven-sharp-throwing-axe", {
-	Name = _("Sharp Throwing Axe"),
+	Name = "Sharp Throwing Axe",
 	Parent = "upgrade-ranged-projectile-1",
 	Icon = "icon-dwarven-sharp-throwing-axe",
 	Civilization = "dwarf",
-	Description = _("As their craftsmanship progresses, dwarven artisans become capable of improving the basic throwing axe to have sharper blades.\n\nEffect: +2 Damage for Scouts and Gryphon Riders. Allows Sharp Throwing Axes to be sold at the Market."),
+	Description = "As their craftsmanship progresses, dwarven artisans become capable of improving the basic throwing axe to have sharper blades.\n\nEffect: +2 Damage for Scouts and Gryphon Riders. Allows Sharp Throwing Axes to be sold at the Market.",
 	Weapon = true,
 	Item = "unit-sharp-throwing-axe"
 })
 
 DefineUpgrade("upgrade-dwarven-bearded-throwing-axe", {
-	Name = _("Bearded Throwing Axe"),
+	Name = "Bearded Throwing Axe",
 	Parent = "upgrade-ranged-projectile-2",
 	Icon = "icon-dwarven-bearded-throwing-axe",
 	Civilization = "dwarf",
 	RequirementsString = "Sharp Throwing Axe",
-	Description = _("The 'bearding' of throwing axes by extending the bottom of their blades is an innovation which makes them more deadly when thrown.\n\nEffect: +2 Damage for Scouts and Gryphon Riders. Allows Bearded Throwing Axes to be sold at the Market."),
+	Description = "The 'bearding' of throwing axes by extending the bottom of their blades is an innovation which makes them more deadly when thrown.\n\nEffect: +2 Damage for Scouts and Gryphon Riders. Allows Bearded Throwing Axes to be sold at the Market.",
 	Weapon = true,
 	Item = "unit-bearded-throwing-axe"
 })
@@ -129,7 +129,7 @@ DefineUpgrade("upgrade-dwarven-iron-tipped-wood-plow", {
 DefineUpgrade("upgrade-dwarven-masonry", {
 	Parent = "upgrade-masonry",
 	Civilization = "dwarf",
-	Description = _("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings, enables Road construction, and allows Sentry Towers to be upgraded to Guard Towers and Mead Halls to Bastions."),
+	Description = "Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road construction, and allows Sentry Towers to be upgraded to Guard Towers and Mead Halls to Bastions.",
 	Costs = {"time", 250, "copper", 900, "lumber", 0, "stone", 1500},
 	GrandStrategyCosts = {"time", 250, "copper", 900, "lumber", 0, "stone", 1500, "research", 2400}
 })
@@ -141,11 +141,11 @@ DefineUpgrade("upgrade-dwarven-coinage", {
 })
 
 DefineUpgrade("upgrade-dwarven-runewriting", {
-	Name = _("Dvalic Runewriting"),
+	Name = "Dvalic Runewriting",
 	Parent = "upgrade-writing",
 	Civilization = "dwarf",
 	Description = "The dwarven system of runewriting is said to have been invented by the dwarven scholar, Dvalin.\n\nEffect: +10% Time Efficiency for all buildings. Allows Scrolls and Books to be sold at the Market.",
-	Background = _("In the Poetic Edda's ~<Hovamol~>, Dvalin is mentioned as the one who bestowed the knowledge of runes upon the dwarves."),
+	Background = "In the Poetic Edda's ~<Hovamol~>, Dvalin is mentioned as the one who bestowed the knowledge of runes upon the dwarves.",
 	Icon = "icon-norse-runewriting"
 })
 
@@ -265,6 +265,7 @@ DefineModifier("upgrade-dwarven-iron-tipped-wood-plow",
 DefineModifier("upgrade-dwarven-masonry",
 	{"HitPoints", 20, "Percent"},
 	{"Armor", 5},
+	{"SalvageFactor", -25},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"},
 	{"apply-to", "unit-dwarven-mushroom-farm"}, {"apply-to", "unit-dwarven-barracks"},

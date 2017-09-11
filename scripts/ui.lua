@@ -1072,6 +1072,28 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {ButtonAction = "buy-resource"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = Concat("Trade Cost: ", Concat(String(ActiveUnitVar("TradeCost")), "%")), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				-- Salvage Building
+				{ 	Margin = {1, 1}, Condition = {ButtonAction = "salvage"},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {ButtonAction = "salvage"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(
+							Concat(
+								_("Salvage this building for "),
+								String(
+									Div(
+										Mul(
+											ActiveUnitVar("SalvageFactor"),
+											ActiveUnitVar("HitPoints")
+										),
+										ActiveUnitVar("HitPoints", "Max")
+									)
+								)
+							),
+							"% of the resources used to construct it"
+						),
+						MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				-- Move hint
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "move", Speed = "only"}, -- speed as a proxy for not being a building
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
