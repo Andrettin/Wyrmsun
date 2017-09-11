@@ -51,7 +51,7 @@ AddTrigger("on-the-vanaquisl-introduction",
 		elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
 			vana_defender_quantity = 36
 		end
-		CreateCreeps(GetFactionPlayer("vana-tribe"), "unit-germanic-warrior", vana_defender_quantity, 4732 - EarthStartX, 920 - EarthStartY, 4782 - EarthStartX, 964 - EarthStartY)
+		CreateCreeps(GetFactionPlayer("vana-tribe"), "unit-germanic-warrior", vana_defender_quantity, 4732 - EarthStartX, 935 - EarthStartY, 4782 - EarthStartX, 964 - EarthStartY)
 		CallDialogue("on-the-vanaquisl-introduction", trigger_player)
 		CallDialogue("asa-raid", GetFactionPlayer("vana-tribe"))
 		return false
