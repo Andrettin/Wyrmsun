@@ -27,39 +27,24 @@
 
 -- Buildings
 
-DefineUpgrade("upgrade-library", {
-	Name = _("Library"),
-	ModifierGraphicFile = "ui/modifiers/book.png",
-	GrandStrategyProductionModifier = {"research", 1}
-})
-
 DefineUpgrade("upgrade-college", {
-	Name = _("College"),
-	ModifierGraphicFile = "ui/modifiers/diploma.png",
-	GrandStrategyProductionModifier = {"research", 1}
+	Name = _("College")
 })
 
 DefineUpgrade("upgrade-university", {
-	Name = _("University"),
-	ModifierGraphicFile = "ui/modifiers/university.png",
-	GrandStrategyProductionModifier = {"research", 2}
+	Name = _("University")
 })
 
 DefineUpgrade("upgrade-courthouse", {
-	Name = _("Courthouse"),
-	ModifierGraphicFile = "ui/modifiers/courthouse.png",
-	RevoltRiskModifier = -1
+	Name = _("Courthouse")
 })
 
 DefineUpgrade("upgrade-tramway-network", { -- this modifier cannot be gotten yet; it is here to allow history to provinces as a preliminary thing for when we expand the game's technology tree to encompass the industrial era (in a few years from now?)
-	Name = _("Tramway Network"),
-	ModifierGraphicFile = "ui/modifiers/courthouse.png", -- should be changed to its own icon later (i.e. a tramway)
-	AdministrativeEfficiencyModifier = 10
+	Name = _("Tramway Network")
 })
 
 -- Diseases
 
 DefineUpgrade("upgrade-smallpox", {
-	Name = _("Smallpox"),
-	ModifierGraphicFile = "ui/modifiers/terror.png"
+	Name = _("Smallpox")
 })

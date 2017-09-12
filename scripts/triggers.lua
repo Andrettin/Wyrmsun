@@ -179,7 +179,7 @@ AddTrigger("skilled-masons",
 			return false
 		end
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and SyncRand(100) == 0 and GetFactionClassUnitType("masons-shop", GetPlayerData(i, "Faction")) ~= nil and GetPlayerData(i, "UnitTypesCount", GetFactionClassUnitType("masons-shop", GetPlayerData(i, "Faction"))) >= 1 and GetFactionClassUnitType("masonry", GetPlayerData(i, "Faction")) ~= nil and GetPlayerData(i, "Allow", GetFactionClassUnitType("masonry", GetPlayerData(i, "Faction"))) == "R") then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and SyncRand(100) == 0 and GetFactionClassUnitType("masons-shop", GetPlayerData(i, "Faction")) ~= nil and GetPlayerData(i, "UnitTypesCount", GetFactionClassUnitType("masons-shop", GetPlayerData(i, "Faction"))) >= 1) then
 				trigger_player = i
 				return true
 			end
@@ -187,9 +187,10 @@ AddTrigger("skilled-masons",
 		return false
 	end,
 	function()
+		local masons_shop = FindUnitOfClass("masons-shop", trigger_player, true)
 		Event(
 			"Skilled Masons",
-			"A group of skilled masons has come to our country, taking up employment at a local workshop.",
+			"A group of skilled masons has come to our country, taking up employment at " .. GetUnitVariable(masons_shop, "Name") .. ".",
 			trigger_player,
 			{"~!OK"},
 			{function(s)
