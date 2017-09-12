@@ -1475,9 +1475,9 @@ function PersistencyUpdates()
 		SaveHeroes()
 	end
 	
-	if (wyr.preferences.SavedGrandStrategyGames ~= nil) then -- grand strategy games are now saved in separate files
+	if (wyr.preferences.SavedGrandStrategyGames ~= nil) then
 		wyr.preferences.SavedGrandStrategyGames = nil
-	elseif (wyr.preferences.GrandStrategySaveGames ~= nil) then -- grand strategy games are now saved in separate files
+	elseif (wyr.preferences.GrandStrategySaveGames ~= nil) then
 		wyr.preferences.GrandStrategySaveGames = nil
 		SavePreferences()
 	end

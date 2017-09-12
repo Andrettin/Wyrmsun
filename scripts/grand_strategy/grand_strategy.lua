@@ -1689,94 +1689,6 @@ function AddGrandStrategyUnitButton(x, y, unit_type)
 	return UIElements[table.getn(UIElements)]
 end
 
-function AddGrandStrategyTechnologyButton(x, y, unit_type)
-	local b
-	local unit_icon
-	
-	b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Name, "Color"))
-
-	if (GetFactionCurrentResearch(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name) == unit_type) then -- if already being researched, make icon gray
-		unit_icon = CUpgrade:Get(unit_type).Icon.GScale
-	else
-		unit_icon = CUpgrade:Get(unit_type).Icon.G
-	end
-	UIElements[table.getn(UIElements) + 1] = b
-	UIElements[table.getn(UIElements)]:setActionCallback(
-		function()
-			PlaySound("click")
-			if (GetFactionCurrentResearch(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name) ~= unit_type and GetFactionTechnology(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type) == false) then
-				ResearchTechnology(SelectedProvince, unit_type)
-			elseif (GetFactionCurrentResearch(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name) == unit_type) then
-				CancelResearchTechnology(SelectedProvince, unit_type)
-			end
-			DrawGrandStrategyInterface()
-		end
-	)
-	GrandStrategyMenu:add(UIElements[table.getn(UIElements)], x, y)
-	UIElements[table.getn(UIElements)]:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
-
---	UIElements[table.getn(UIElements)]:setBaseColor(Color(0,0,0,0))
---	UIElements[table.getn(UIElements)]:setForegroundColor(Color(0,0,0,0))
---	UIElements[table.getn(UIElements)]:setBackgroundColor(Color(0,0,0,0))
-	UIElements[table.getn(UIElements)]:setNormalImage(unit_icon)
-	UIElements[table.getn(UIElements)]:setPressedImage(unit_icon)
-	UIElements[table.getn(UIElements)]:setDisabledImage(unit_icon)
-	UIElements[table.getn(UIElements)]:setSize(46, 38)
-	UIElements[table.getn(UIElements)]:setFont(Fonts["game"])
-
-	local cost_tooltip = ""
-	if (CUpgrade:Get(unit_type).GrandStrategyCosts[7] > 0) then -- research cost
-		if (cost_tooltip == "") then
-			cost_tooltip = "Costs "
-		else
-			cost_tooltip = cost_tooltip .. ", "
-		end
-		cost_tooltip = cost_tooltip .. CUpgrade:Get(unit_type).GrandStrategyCosts[7] .. " Research"
-	end
-	if (CUpgrade:Get(unit_type).GrandStrategyCosts[1] > 0) then -- copper cost
-		if (cost_tooltip == "") then
-			cost_tooltip = "Costs "
-		else
-			cost_tooltip = cost_tooltip .. ", "
-		end
-		cost_tooltip = cost_tooltip .. CUpgrade:Get(unit_type).GrandStrategyCosts[1] .. " Copper"
-	end
-	if (CUpgrade:Get(unit_type).GrandStrategyCosts[2] > 0) then -- lumber cost
-		if (cost_tooltip == "") then
-			cost_tooltip = "Costs "
-		else
-			cost_tooltip = cost_tooltip .. ", "
-		end
-		cost_tooltip = cost_tooltip .. CUpgrade:Get(unit_type).GrandStrategyCosts[2] .. " Lumber"
-	end
-	if (CUpgrade:Get(unit_type).GrandStrategyCosts[5] > 0) then -- stone cost
-		if (cost_tooltip == "") then
-			cost_tooltip = "Costs "
-		else
-			cost_tooltip = cost_tooltip .. ", "
-		end
-		cost_tooltip = cost_tooltip .. CUpgrade:Get(unit_type).GrandStrategyCosts[5] .. " Stone"
-	end
-	if (CUpgrade:Get(unit_type).GrandStrategyCosts[8] > 0) then -- prestige cost
-		if (cost_tooltip == "") then
-			cost_tooltip = "Costs "
-		else
-			cost_tooltip = cost_tooltip .. ", "
-		end
-		cost_tooltip = cost_tooltip .. CUpgrade:Get(unit_type).GrandStrategyCosts[8] .. " prestige"
-	end
-
-	if (GetFactionCurrentResearch(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name) == unit_type) then
-		UIElements[table.getn(UIElements)]:setTooltip(CUpgrade:Get(unit_type).Name .. " being researched")
-	else
-		UIElements[table.getn(UIElements)]:setTooltip("Research " .. CUpgrade:Get(unit_type).Name .. "\n" .. cost_tooltip .. "\n" .. GetUpgradeEffectsString(unit_type, true, true))
-	end
-	UIElements[table.getn(UIElements)]:setFrameImage(Preference.CommandButtonFrameG)
-	UIElements[table.getn(UIElements)]:setPressedFrameImage(Preference.CommandButtonFrameG)
-	
-	return UIElements[table.getn(UIElements)]
-end
-
 function AddGrandStrategyHeroButton(x, y, hero_name)
 	local b
 	local unit_icon
@@ -2368,77 +2280,6 @@ function DrawGrandStrategyInterface()
 						end
 					end
 				end
-			elseif (GrandStrategyInterfaceState == "lumber-mill") then
-				if ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetCivilizationData(GetProvinceCivilization(SelectedProvince.Name), "ParentCivilization") == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the germanic lumber mill
-					AddGrandStrategyLabel(GetUnitTypeName("unit-germanic-carpenters-shop"), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
-				else
-					AddGrandStrategyLabel(GetUnitTypeName(GetFactionClassUnitType(GrandStrategyInterfaceState, GetProvinceCivilization(SelectedProvince.Name), faction)), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
-				end
-				
-				local item_x = 0
-				local item_y = 0
-				for i, unitName in ipairs(Units) do
-					if (string.find(unitName, "upgrade-") ~= nil) then
-						if (GetUnitTypeInterfaceState(unitName) == GrandStrategyInterfaceState and IsTechnologyAvailable(SelectedProvince, unitName)) then
-							local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
-							local icon_offset_y = Video.Height - 186 + 13 + (item_y * 47)
-
-							AddGrandStrategyTechnologyButton(icon_offset_x, icon_offset_y, unitName)
-							
-							item_x = item_x + 1
-							if (item_x > 3) then
-								item_x = 0
-								item_y = item_y + 1
-							end
-						end
-					end
-				end
-			elseif (GrandStrategyInterfaceState == "smithy") then
-				if ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetCivilizationData(GetProvinceCivilization(SelectedProvince.Name), "ParentCivilization") == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the germanic lumber mill
-					AddGrandStrategyLabel(GetUnitTypeName("unit-germanic-smithy"), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
-				else
-					AddGrandStrategyLabel(GetUnitTypeName(GetFactionClassUnitType(GrandStrategyInterfaceState, GetProvinceCivilization(SelectedProvince.Name), faction)), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
-				end
-				
-				local item_x = 0
-				local item_y = 0
-				for i, unitName in ipairs(Units) do
-					if (string.find(unitName, "upgrade-") ~= nil) then
-						if (GetUnitTypeInterfaceState(unitName) == GrandStrategyInterfaceState and IsTechnologyAvailable(SelectedProvince, unitName)) then
-							local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
-							local icon_offset_y = Video.Height - 186 + 13 + (item_y * 47)
-
-							AddGrandStrategyTechnologyButton(icon_offset_x, icon_offset_y, unitName)
-							
-							item_x = item_x + 1
-							if (item_x > 3) then
-								item_x = 0
-								item_y = item_y + 1
-							end
-						end
-					end
-				end
-			elseif (GrandStrategyInterfaceState == "stables" or GrandStrategyInterfaceState == "temple" or GrandStrategyInterfaceState == "dock") then
-				AddGrandStrategyLabel(GetUnitTypeName(GetFactionClassUnitType(GrandStrategyInterfaceState, GetProvinceCivilization(SelectedProvince.Name), faction)), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
-				
-				local item_x = 0
-				local item_y = 0
-				for i, unitName in ipairs(Units) do
-					if (string.find(unitName, "upgrade-") ~= nil) then
-						if (GetUnitTypeInterfaceState(unitName) == GrandStrategyInterfaceState and IsTechnologyAvailable(SelectedProvince, unitName)) then
-							local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
-							local icon_offset_y = Video.Height - 186 + 13 + (item_y * 47)
-
-							AddGrandStrategyTechnologyButton(icon_offset_x, icon_offset_y, unitName)
-							
-							item_x = item_x + 1
-							if (item_x > 3) then
-								item_x = 0
-								item_y = item_y + 1
-							end
-						end
-					end
-				end
 			elseif (GrandStrategyInterfaceState == "mercenary-camp") then
 				AddGrandStrategyLabel(GetUnitTypeName("unit-mercenary-camp"), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				
@@ -2656,33 +2497,6 @@ function AIDoTurn(ai_faction)
 			faction = ai_faction.Name
 		end
 	
-		-- try to first research masonry, then writing, then coinage, and only then try to research other technologies
-		if (GetFactionClassUnitType("masonry", GetProvinceCivilization(WorldMapProvinces[key].Name), faction) ~= nil and CanResearchTechnology(WorldMapProvinces[key], GetFactionClassUnitType("masonry", GetProvinceCivilization(WorldMapProvinces[key].Name), faction))) then
-			ResearchTechnology(WorldMapProvinces[key], GetFactionClassUnitType("masonry", GetProvinceCivilization(WorldMapProvinces[key].Name), faction))
-		end
-		if (GetFactionClassUnitType("writing", GetProvinceCivilization(WorldMapProvinces[key].Name), faction) ~= nil and CanResearchTechnology(WorldMapProvinces[key], GetFactionClassUnitType("writing", GetProvinceCivilization(WorldMapProvinces[key].Name), faction))) then
-			ResearchTechnology(WorldMapProvinces[key], GetFactionClassUnitType("writing", GetProvinceCivilization(WorldMapProvinces[key].Name), faction))
-		end
-		if (GetFactionClassUnitType("coinage", GetProvinceCivilization(WorldMapProvinces[key].Name), faction) ~= nil and CanResearchTechnology(WorldMapProvinces[key], GetFactionClassUnitType("coinage", GetProvinceCivilization(WorldMapProvinces[key].Name), faction))) then
-			ResearchTechnology(WorldMapProvinces[key], GetFactionClassUnitType("coinage", GetProvinceCivilization(WorldMapProvinces[key].Name), faction))
-		end
-		if (GetFactionClassUnitType("wood-plow", GetProvinceCivilization(WorldMapProvinces[key].Name), faction) ~= nil and CanResearchTechnology(WorldMapProvinces[key], GetFactionClassUnitType("wood-plow", GetProvinceCivilization(WorldMapProvinces[key].Name), faction))) then
-			ResearchTechnology(WorldMapProvinces[key], GetFactionClassUnitType("wood-plow", GetProvinceCivilization(WorldMapProvinces[key].Name), faction))
-		end
-		if (GetFactionClassUnitType("iron-tipped-wood-plow", GetProvinceCivilization(WorldMapProvinces[key].Name), faction) ~= nil and CanResearchTechnology(WorldMapProvinces[key], GetFactionClassUnitType("iron-tipped-wood-plow", GetProvinceCivilization(WorldMapProvinces[key].Name), faction))) then
-			ResearchTechnology(WorldMapProvinces[key], GetFactionClassUnitType("iron-tipped-wood-plow", GetProvinceCivilization(WorldMapProvinces[key].Name), faction))
-		end
-		for i, unitName in ipairs(Units) do
-			if (string.find(unitName, "upgrade-") ~= nil) then
-				if (CanResearchTechnology(WorldMapProvinces[key], unitName)) then
---					if (GetUpgradeData(unitName, "Class") == "melee-weapon-1") then
-						ResearchTechnology(WorldMapProvinces[key], unitName)
-						break
---					end
-				end
-			end
-		end
-
 		for i, unitName in ipairs(Units) do
 			if (IsGrandStrategyBuilding(unitName)) then
 				if (CanBuildStructure(WorldMapProvinces[key], unitName)) then
@@ -3356,38 +3170,6 @@ function IsTechnologyAvailable(province, unit_type)
 	end
 	
 	return true
-end
-
-function CanResearchTechnology(province, unit_type)
-	if (GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "copper") < CUpgrade:Get(unit_type).GrandStrategyCosts[1] or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber") < CUpgrade:Get(unit_type).GrandStrategyCosts[2] or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone") < CUpgrade:Get(unit_type).GrandStrategyCosts[5] or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "research") < CUpgrade:Get(unit_type).GrandStrategyCosts[7]) then
-		return false
-	end
-	
-	return IsTechnologyAvailable(province, unit_type)
-end
-
-function ResearchTechnology(province, unit_type)
-	if (CanResearchTechnology(province, unit_type)) then
-		if (GetFactionCurrentResearch(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name)) ~= "") then
-			CancelResearchTechnology(province, GetFactionCurrentResearch(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name))) -- it doesn't matter that the province given here is this one and not the one used to originally set that technology to be researched, since the CancelResearchTechnology function only refers to the province's owner
-		end
-
-		SetFactionCurrentResearch(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type)
-		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "copper", - CUpgrade:Get(unit_type).GrandStrategyCosts[1])
-		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber", - CUpgrade:Get(unit_type).GrandStrategyCosts[2])
-		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone", - CUpgrade:Get(unit_type).GrandStrategyCosts[5])
-		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "research", - CUpgrade:Get(unit_type).GrandStrategyCosts[7])
-	end
-end
-
-function CancelResearchTechnology(province, unit_type)
-	if (GetFactionCurrentResearch(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name)) == unit_type) then
-		SetFactionCurrentResearch(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "")
-		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "copper", CUpgrade:Get(unit_type).GrandStrategyCosts[1])
-		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber", CUpgrade:Get(unit_type).GrandStrategyCosts[2])
-		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone", CUpgrade:Get(unit_type).GrandStrategyCosts[5])
-		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "research", CUpgrade:Get(unit_type).GrandStrategyCosts[7])
-	end
 end
 
 function ClearGrandStrategyVariables()

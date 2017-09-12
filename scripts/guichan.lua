@@ -25,9 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-GrandStrategy = false
-
-
 SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
 -- Global useful objects for menus  ----------
@@ -991,7 +988,6 @@ function RunSinglePlayerCustomGameMenu()
 	
 	local hero_list = {}
 	
-	GrandStrategy = false
 	RunningScenario = false
 	
 	local maps = {}
@@ -1401,8 +1397,6 @@ function BuildProgramStartMenu()
 		function() RunSinglePlayerGameMenu(); menu:stop(1) end)
 	menu:addFullButton(_("~!Multiplayer Game"), "m", offx + 208, offy + 104 + 36*2,
 		function() RunMultiPlayerGameMenu(); menu:stop(1) end)
---	menu:addFullButton(_("~!Grand Strategy Game"), "g", offx + 208, offy + 104 + 36*2,
---		function() RunGrandStrategyGameSetupMenu(); menu:stop(1) end)
 --	menu:addFullButton(_("~!Replay Game"), "r", offx + 208, offy + 104 + 36*3, -- replays are broken at the moment
 --		function() RunReplayGameMenu(); menu:stop(1) end)
 	menu:addFullButton(_("~!Achievements"), "a", offx + 208, offy + 104 + 36*3,
