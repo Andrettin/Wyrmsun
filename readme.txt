@@ -62,6 +62,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Buildings
 - Added a button to salvage your own buildings, destroying them and restoring resources used in their construction. The quantity of resources restored starts out at 75%, but decreases as Masonry and Architecture are researched. The percentage of resources restored also varies according to how much HP out of its max HP a building has.
+- Farms now have slightly greater territory ownership influence range.
 
 * Items
 - Items sold at the Market now have a smaller chance of being magic or unique.

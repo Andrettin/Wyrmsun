@@ -3801,7 +3801,7 @@ DefineUnitType("unit-template-farm", {
 	Speed = 0,
 	HitPoints = 334, -- 400 with masonry
 	TileSize = {2, 2}, BoxSize = {63, 63},
-	OwnershipInfluenceRange = 1,
+	OwnershipInfluenceRange = 2,
 	Armor = 5, Missile = "missile-none",
 	Priority = 20, AnnoyComputerFactor = 45,
 	Points = 100,

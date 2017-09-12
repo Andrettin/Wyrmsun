@@ -553,6 +553,27 @@ DefineSettlement("farnham", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
+DefineSettlement("glasgow", {
+	Name = "Glasgow",
+	MapTemplate = "earth",
+	Position = {3741, 777},
+	Major = true,
+	CulturalNames = {
+		"english", "Glasgow"
+	},
+	HistoricalOwners = {
+		-27, "damnii-tribe", -- Glasgow's area was territory of the Damnii (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		80, "rome", -- Glasgow's area was acquired by Rome in 80 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		802, "strathclyde", -- Glasgow's area was a part of Strathclyde c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		1560, "scotland" -- Glasgow was a part of Scotland in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		-27, 0, "town-hall",
+		1450, 0, "university" -- University founded in Glasgow in 1450; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+	},
+	Regions = {"british-isles", "europe", "northwest-europe", "scotland", "west-and-central-europe"}
+})
+
 DefineSettlement("glastonbury", {
 	Name = "Glastonbury",
 	MapTemplate = "earth",

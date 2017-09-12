@@ -3702,9 +3702,6 @@ DefineProvince("Strathclyde", {
 	HistoricalCultures = {
 		-27, "celt"
 	},
-	HistoricalModifiers = {
-		1450, "upgrade-university", true -- University founded in Glasgow in 1450; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-	},
 	Regions = {"british-isles", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
