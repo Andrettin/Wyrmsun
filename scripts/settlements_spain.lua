@@ -124,6 +124,23 @@ DefineSettlement("cordoba", {
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
+DefineSettlement("granada", {
+	Name = "Granada",
+	MapTemplate = "earth",
+	Position = {3758, 1201},
+	CulturalNames = {
+		"castillian", "Granada"
+	},
+	HistoricalOwners = {
+		1492, "castille", -- Granada became a part of the Kingdom of Castille in 1492; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+		1560, "spain" -- Granada was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		1526, 0, "university" -- University founded in Granada in 1526 (as given by Martínez Ruiz and Maqueda, The Cambridge Modern History Atlas gives 1531 instead), containing law studies; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+	},
+	Regions = {"europe", "iberia", "west-and-central-europe"}
+})
+
 DefineSettlement("malaga", {
 	Name = "Malaga",
 	MapTemplate = "earth",
@@ -176,6 +193,42 @@ DefineSettlement("munda", {
 	},
 	HistoricalBuildings = {
 		-197, 0, "farm"
+	},
+	Regions = {"europe", "iberia", "west-and-central-europe"}
+})
+
+DefineSettlement("murcia", {
+	Name = "Murcia",
+	MapTemplate = "earth",
+	Position = {3812, 1186},
+	CulturalNames = {
+		"castillian", "Murcia"
+	},
+	HistoricalOwners = {
+		1212, "castille", -- Murcia was a part of the Kingdom of Castille and León (and dependencies) in the 1212-1492 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+		1560, "spain" -- Murcia was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		1614, 1806, "university" -- Minor university founded in Murcia in 1614; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
+		-- Minor university abolished in Murcia in 1806; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
+	},
+	Regions = {"europe", "iberia", "west-and-central-europe"}
+})
+
+DefineSettlement("orihuela", {
+	Name = "Orihuela",
+	MapTemplate = "earth",
+	Position = {3819, 1184},
+	CulturalNames = {
+		"castillian", "Orihuela"
+	},
+	HistoricalOwners = {
+		1212, "castille", -- Orihuela was a part of the Kingdom of Castille and León (and dependencies) in the 1212-1492 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+		1560, "spain" -- Orihuela's area was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		1552, 1807, "university" -- Minor university founded in Orihuela in 1552; Source: "The Cambridge Modern History Atlas", 1912, p. 9; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
+		-- Minor university abolished in Orihuela in 1807; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 	},
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
