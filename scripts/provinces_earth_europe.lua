@@ -2041,18 +2041,6 @@ DefineProvince("Jutland", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
---[[
-DefineProvince("Karelia", {
-	World = "earth",
-	CulturalNames = {
-		"finnish", "Karelia",
-		"slav", "Karelia"
-	},
---	SettlementLocation = {550, 84}, -- Helsinki
-	Regions = {"eurasia", "europe"}
-})
---]]
-
 DefineProvince("Kent", {
 	World = "earth",
 	FactionCulturalNames = {

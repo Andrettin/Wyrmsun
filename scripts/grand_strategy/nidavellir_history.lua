@@ -3,150 +3,11 @@ LoadFactions("Nidavellir")
 
 LoadProvinces("Nidavellir")
 
--- generate procedural provinces
-GenerateProvince({
-	Province = WorldMapProvinces.Aurvang,
-	BorderProvinces = {"Svarinshaug"},
-	BorderProvinceSouth = true,
-	Resources = {
-		lumber = 3,
-		mushrooms = 1
-	}
-})
-
-GenerateProvince({
-	Province = WorldMapProvinces.Joruvellir,
-	BorderProvinces = {"Aurvang"},
-	BorderProvinceSouth = true,
-	Resources = {
-		gold = 1,
-		lumber = 1,
-		mushrooms = 2,
-		stone = 2
-	}
-})
-
-GenerateProvince({
-	Province = WorldMapWaterProvinces.DeepSea,
-	BorderProvinces = {"Kal Kartha", "Lyr"},
-	BorderProvinceEast = true,
-	Water = true,
-	MaximumSize = 300
-})
-
-GenerateProvince({
-	Province = WorldMapProvinces.Stilgar,
-	BorderProvinces = {"Peaceful Valley", "Deep Sea"},
-	Resources = {
-		gold = SyncRand(2),
-		silver = SyncRand(2),
-		copper = SyncRand(2),
-		lumber = SyncRand(3),
-		stone = SyncRand(3),
-		mushrooms = SyncRand(3) + 1
-	}
-})
-
-GenerateProvince({
-	Province = WorldMapProvinces.Myridia,
-	BorderProvinces = {"Stilgar", "Deep Sea"},
-	Resources = {
-		gold = SyncRand(2),
-		silver = SyncRand(2),
-		copper = SyncRand(2),
-		lumber = SyncRand(3),
-		stone = SyncRand(3),
-		mushrooms = SyncRand(3) + 1
-	}
-})
-
-GenerateProvince({
-	Province = WorldMapProvinces.Tenebris,
-	BorderProvinces = {"Myridia", "Deep Sea"},
-	Resources = {
-		gold = SyncRand(2),
-		silver = SyncRand(2),
-		copper = SyncRand(2),
-		lumber = SyncRand(3),
-		stone = SyncRand(3),
-		mushrooms = SyncRand(3) + 1
-	}
-})
-
-GenerateProvince({
-	Province = WorldMapProvinces.Ezmarria,
-	BorderProvinces = {"Tenebris", "Deep Sea"},
-	Resources = {
-		gold = SyncRand(2),
-		silver = SyncRand(2),
-		copper = SyncRand(2),
-		lumber = SyncRand(3),
-		stone = SyncRand(3),
-		mushrooms = SyncRand(3) + 1
-	}
-})
-
-GenerateProvince({
-	Province = WorldMapProvinces.Untersberg,
-	BorderProvinces = {"Brown Hills"},
-	Resources = {
-		gold = 2,
-		lumber = 1,
-		stone = 1,
-		mushrooms = 4
-	}
-})
-
-GenerateProvince({
-	Province = WorldMapProvinces.Acthna,
-	BorderProvinces = {"Untersberg"},
-	Resources = {
-		silver = 2,
-		stone = 1,
-		mushrooms = 3
-	}
-})
-
--- generate resources for provinces
---AddProvinceResource(WorldMapProvinces.BrownHills, "gold", 1)
-AddProvinceResource(WorldMapProvinces.BrownHills, "mushrooms", 2)
-AddProvinceResource(WorldMapProvinces.BrownHills, "stone", 1)
-AddProvinceResource(WorldMapProvinces.CavernsofChaincolt, "mushrooms", 3)
-AddProvinceResource(WorldMapProvinces.CavernsofChaincolt, "stone", 1)
-AddProvinceResource(WorldMapProvinces.CavernsofFlame, "mushrooms", 1)
-AddProvinceResource(WorldMapProvinces.EasternMines, "mushrooms", 1)
-AddProvinceResource(WorldMapProvinces.Heartfangs, "mushrooms", 1)
-AddProvinceResource(WorldMapProvinces.Heartfangs, "stone", 3)
-AddProvinceResource(WorldMapProvinces.HighPass, "mushrooms", 1)
-AddProvinceResource(WorldMapProvinces.HighPass, "stone", 1)
-AddProvinceResource(WorldMapProvinces.HighbrookPass, "mushrooms", 2)
-AddProvinceResource(WorldMapProvinces.HighbrookPass, "stone", 1)
-AddProvinceResource(WorldMapProvinces.KalKartha, "mushrooms", 4)
-AddProvinceResource(WorldMapProvinces.KalKartha, "stone", 1)
-AddProvinceResource(WorldMapProvinces.Lyr, "mushrooms", 3)
-AddProvinceResource(WorldMapProvinces.Lyr, "stone", 1)
-AddProvinceResource(WorldMapProvinces.NorthernWastelands, "mushrooms", 1)
-AddProvinceResource(WorldMapProvinces.NorthernWastelands, "stone", 1)
-AddProvinceResource(WorldMapProvinces.PeacefulValley, "mushrooms", 1)
-AddProvinceResource(WorldMapProvinces.ShorbearHills, "mushrooms", 2)
-AddProvinceResource(WorldMapProvinces.ShorbearHills, "stone", 1)
-AddProvinceResource(WorldMapProvinces.SouthernTunnels, "mushrooms", 2)
-AddProvinceResource(WorldMapProvinces.SouthernTunnels, "stone", 1)
---AddProvinceResource(WorldMapProvinces.Svarinshaug, "gold", 1)
-AddProvinceResource(WorldMapProvinces.Svarinshaug, "mushrooms", 2)
-AddProvinceResource(WorldMapProvinces.Svarinshaug, "lumber", 1)
-AddProvinceResource(WorldMapProvinces.Svarinshaug, "stone", 1)
-
 MercenaryGroups = {
 	unit_surghan_mercenary_steelclad = 4
 }
 
 LoadEvents("Nidavellir")
-
-if (GrandStrategyYear >= -3000) then
-	SetProvinceHero("Svarinshaug", "Modsognir", 2) 
-	SetProvinceHero("Svarinshaug", "Durin", 2)
-end
 
 if (GrandStrategyYear >= -2970) then -- estimated date
 	GrandStrategyEvents.TheMeadOfWisdom = nil -- should be placed at an earlier date
@@ -157,9 +18,6 @@ if (GrandStrategyYear >= -2970) then -- estimated date
 	SetProvinceUnitQuantity("Aurvang", "unit-dwarven-axefighter", 0)
 	SetProvinceUnitQuantity("Aurvang", "unit-goblin-spearman", 6) -- place some goblins in Aurvang after the dwarven bandits are gone
 	SetProvinceUnitQuantity("Aurvang", "unit-goblin-archer", 3)
-		
-	SetProvinceHero("Svarinshaug", "Modsognir", 0)
-	SetProvinceHero("Svarinshaug", "Durin", 0)
 end
 
 if (GrandStrategyYear >= -1) then

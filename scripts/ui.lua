@@ -432,30 +432,10 @@ UI.Resources[ManaResCost].IconY = -100
 UI.Resources[ManaResCost].TextX = -100
 UI.Resources[ManaResCost].TextY = -100
 
-UI.Resources[GetResourceIdByName("grain")].G = CGraphic:New("ui/resources/grain.png", 14, 14)
-UI.Resources[GetResourceIdByName("grain")].IconFrame = 0
-UI.Resources[GetResourceIdByName("grain")].IconX = Video.Width
-UI.Resources[GetResourceIdByName("grain")].IconY = Video.Height
-
-UI.Resources[GetResourceIdByName("mushrooms")].G = CGraphic:New("ui/resources/mushrooms.png", 14, 14)
-UI.Resources[GetResourceIdByName("mushrooms")].IconFrame = 0
-UI.Resources[GetResourceIdByName("mushrooms")].IconX = Video.Width
-UI.Resources[GetResourceIdByName("mushrooms")].IconY = Video.Height
-
-UI.Resources[GetResourceIdByName("fish")].G = CGraphic:New("ui/resources/fish.png", 14, 14)
-UI.Resources[GetResourceIdByName("fish")].IconFrame = 0
-UI.Resources[GetResourceIdByName("fish")].IconX = Video.Width
-UI.Resources[GetResourceIdByName("fish")].IconY = Video.Height
-
 UI.Resources[GetResourceIdByName("silver")].G = CGraphic:New("ui/resources/silver.png", 14, 14)
 UI.Resources[GetResourceIdByName("silver")].IconFrame = 0
 UI.Resources[GetResourceIdByName("silver")].IconX = Video.Width
 UI.Resources[GetResourceIdByName("silver")].IconY = Video.Height
-
-UI.Resources[GetResourceIdByName("labor")].G = CGraphic:New("ui/resources/labor.png", 14, 14)
-UI.Resources[GetResourceIdByName("labor")].IconFrame = 0
-UI.Resources[GetResourceIdByName("labor")].IconX = Video.Width
-UI.Resources[GetResourceIdByName("labor")].IconY = Video.Height
 
 UI.Resources[GetResourceIdByName("research")].G = CGraphic:New("ui/resources/research.png", 14, 14)
 UI.Resources[GetResourceIdByName("research")].IconFrame = 0

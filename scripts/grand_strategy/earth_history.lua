@@ -30,31 +30,6 @@ LoadFactions("Earth")
 
 LoadProvinces("Earth")
 
-AddProvinceResource(WorldMapProvinces.Astrakhan, "grain", 1)
-AddProvinceResource(WorldMapProvinces.FartherPomerania, "grain", 4)
-AddProvinceResource(WorldMapProvinces.Galicia, "grain", 1)
-AddProvinceResource(WorldMapProvinces.Mazovia, "grain", 4)
-AddProvinceResource(WorldMapProvinces.Pomerelia, "grain", 1)
-AddProvinceResource(WorldMapProvinces.Prussia, "grain", 1)
-AddProvinceResource(WorldMapProvinces.Russia, "grain", 15)
-AddProvinceResource(WorldMapProvinces.Silesia, "grain", 2)
-AddProvinceResource(WorldMapProvinces.WestGalicia, "grain", 5)
-AddProvinceResource(WorldMapProvinces.WhiteRussia, "grain", 13)
-
--- generate resources while there aren't sufficient predefined resources for the provinces
-for key, value in pairs(WorldMapProvinces) do
-	if (GetProvinceFoodCapacity(WorldMapProvinces[key].Name, false) == 0) then
-		AddProvinceResource(WorldMapProvinces[key], "grain", 1) -- generate food resources to provinces that have none, and that don't have coastal settlements (which produce fish)
-	end
-	AddProvinceResource(WorldMapProvinces[key], "lumber", SyncRand(3))
-	AddProvinceResource(WorldMapProvinces[key], "stone", SyncRand(2))
-	AddProvinceResource(WorldMapProvinces[key], "gold", SyncRand(2))
-	AddProvinceResource(WorldMapProvinces[key], "silver", SyncRand(2))
-end
-
-MercenaryGroups = {
-}
-
 LoadEvents("Earth")
 
 if (GrandStrategyYear >= -38000) then

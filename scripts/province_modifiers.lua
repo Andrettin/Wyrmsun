@@ -61,6 +61,5 @@ DefineUpgrade("upgrade-tramway-network", { -- this modifier cannot be gotten yet
 
 DefineUpgrade("upgrade-smallpox", {
 	Name = _("Smallpox"),
-	ModifierGraphicFile = "ui/modifiers/terror.png",
-	GrandStrategyProductionEfficiencyModifier = {"grain", -25, "mushrooms", -25, "fish", -25}
+	ModifierGraphicFile = "ui/modifiers/terror.png"
 })

@@ -403,12 +403,6 @@ function GenerateRandomWorldMap()
 		end
 	end
 	
-	-- generate food resources
-	for key, value in pairs(WorldMapProvinces) do
-		AddProvinceResource(WorldMapProvinces[key], "grain", SyncRand(2) + 1) -- at least one grain per province
-		AddProvinceResource(WorldMapProvinces[key], "mushrooms", SyncRand(3))
-	end
-	
 	MercenaryGroups = {
 		unit_surghan_mercenary_steelclad = 4
 	}
@@ -758,10 +752,6 @@ function AddProvinceResource(province, resource, quantity)
 	end
 
 	local WhileCount = 0
-	if (resource ~= "grain" and resource ~= "mushrooms" and resource ~= "fish" and quantity > math.floor(GetProvinceFoodCapacity(province.Name, true) / 100)) then
-		quantity = math.floor(GetProvinceFoodCapacity(province.Name, true) / 100)
-	end
-	
 	while (quantity > 0) do
 		local random_tile = province.Tiles[SyncRand(table.getn(province.Tiles)) + 1]
 		local prospected = resource ~= "gold" and resource ~= "silver" and resource ~= "copper"
@@ -786,24 +776,6 @@ function AddProvinceResource(province, resource, quantity)
 					or (GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Dark Plains" and WhileCount > 1000)
 					or (GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Hills" and WhileCount > 1000)
 					or (GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Mountains" and WhileCount > 1000)
-				)
-			)
-			or (
-				(resource == "grain")
-				and (
-					GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Plains"
-					or (GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Scrub Forest" and WhileCount > 1000)
-					or (GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Conifer Forest" and WhileCount > 1000)
-				)
-			)
-			or (
-				(resource == "mushrooms")
-				and (
-					GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Hills"
-					or GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Mountains"
-					or GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Dark Plains"
-					or (GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Scrub Forest" and WhileCount > 1000)
-					or (GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Conifer Forest" and WhileCount > 1000)
 				)
 			)
 		) then

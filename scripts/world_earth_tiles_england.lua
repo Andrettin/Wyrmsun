@@ -89,9 +89,6 @@ DefineWorldMapTile({474, 109}, {
 	World = "earth",
 	FactionCulturalSettlementNames = {
 		"english", "england", "Wootton Bassett"
-	},
-	FactionCulturalResourceNames = {
-		"grain", "anglo-saxon", "angle-tribe", "Weoland", -- Old English field-name; Weoland was near the location of Wootton Bassett; the first part of the name is formed by a variant of the Old English word "weoh"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
 	}
 })
 
@@ -100,9 +97,6 @@ DefineWorldMapTile({474, 111}, {
 	FactionCulturalSettlementNames = {
 		"anglo-saxon", "angle-tribe", "Baddanbyrig", -- Old English name of the Badbury Rings; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"english", "england", "Damerham"
-	},
-	FactionCulturalResourceNames = {
-		"grain", "anglo-saxon", "angle-tribe", "Wedone", -- Old English field-name; Wedone was near the location of Damerham; the first part of the name is formed by a variant of the Old English word "weoh"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
 	}
 })
 
