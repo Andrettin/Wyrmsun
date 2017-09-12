@@ -1602,8 +1602,8 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {CoalGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Coal Mining Bonus: "), Variable = "CoalGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {DiamondsGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Diamond Mining Bonus: "), Variable = "DiamondsGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				{ 	Condition = {GemsGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Gem Mining Bonus: "), Variable = "GemsGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {FurnitureGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Furniture Production Bonus: "), Variable = "FurnitureGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
@@ -2210,8 +2210,8 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {CoalGatheringBonus = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Coal Mining Bonus: "), Variable = "CoalGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {DiamondsGatheringBonus = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Diamond Mining Bonus: "), Variable = "DiamondsGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				{ 	Condition = {GemsGatheringBonus = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Gem Mining Bonus: "), Variable = "GemsGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {FurnitureGatheringBonus = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Furniture Production Bonus: "), Variable = "FurnitureGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}

@@ -301,6 +301,7 @@ DefineAnimations("animations-worker", {
 	Harvest_stone = WorkerStoneMining,
 	Harvest_limestone = WorkerStoneMining,
 	Harvest_diamonds = WorkerStoneMining,
+	Harvest_emeralds = WorkerStoneMining,
 	Repair = {
 		"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
 		"frame 40", "sound construction-wood", "wait 5", "frame 45", "wait 3",
