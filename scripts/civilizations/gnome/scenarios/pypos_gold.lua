@@ -30,25 +30,9 @@ if (LoadedGame == false) then
 	SetPlayerData(0, "Faction", "untersberg")
 	SetPlayerData(1, "RaceName", "dwarf")
 	SetPlayerData(1, "Faction", "random")
-	if not (GrandStrategy) then
-		SetPlayerData(1, "Allow", "unit-dwarven-smithy", "F")
-		SetPlayerData(1, "Allow", "unit-dwarven-lumber-mill", "F")
-		SetPlayerData(1, "Allow", "unit-dwarven-stronghold", "F")
-	end
 	
-	if not (GrandStrategy) then
-		unit = CreateUnit("unit-gnomish-master-at-arms", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Character", "pypo")
-	elseif (GrandStrategyEventMap) then
-		CreateProvinceUnits("Untersberg", 0, 1, false, false)
-		CreateProvinceCustomHero("Untersberg", 0)
-	
-		if (FactionHasHero("gnome", "untersberg", "Pypo")) then
-			unit = CreateUnit(GetGrandStrategyHeroUnitType("Pypo"), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-			SetUnitVariable(unit, "Character", "pypo")
-		end
-		
-	end
+	unit = CreateUnit("unit-gnomish-master-at-arms", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+	SetUnitVariable(unit, "Character", "pypo")
 
 	unit = CreateUnit("unit-dwarven-yale-rider", 1, {Players[1].StartPos.x, Players[1].StartPos.y}) -- dwarven noble
 	SetUnitVariable(unit, "Starting", false)
@@ -73,7 +57,7 @@ AddTrigger("pypos-gold-victory",
 	end,
 	function()
 		ActionVictory()
-		if (player == GetThisPlayer() and GrandStrategy == false) then
+		if (player == GetThisPlayer()) then
 			SetQuestCompleted("pypos-gold", GameSettings.Difficulty)
 		end
 		return false

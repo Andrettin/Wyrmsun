@@ -42,30 +42,19 @@ if (LoadedGame == false) then
 	SetAiType(1, "land-attack")
 	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "upgrade-teuton-civilization", "F")
 	
-	if (GrandStrategy == false) then
-		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-germanic-archer", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Active", false)
+	unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+	SetUnitVariable(unit, "Active", false)
+	unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+	SetUnitVariable(unit, "Active", false)
+	unit = CreateUnit("unit-germanic-archer", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+	SetUnitVariable(unit, "Active", false)
 		
-		unit = CreateUnit("unit-germanic-warrior", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-germanic-warrior", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-germanic-archer", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-		SetUnitVariable(unit, "Active", false)
-	elseif (GrandStrategyEventMap) then
-		SetAiType(1, "passive")
-		
-		-- Asa units
-		CreateProvinceUnits("Jutland", 0)
-		CreateProvinceCustomHero("Jutland", 0)
-		
-		-- Gylfing units
-		CreateProvinceUnits("Scania", 1)
-	end
+	unit = CreateUnit("unit-germanic-warrior", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+	SetUnitVariable(unit, "Active", false)
+	unit = CreateUnit("unit-germanic-warrior", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+	SetUnitVariable(unit, "Active", false)
+	unit = CreateUnit("unit-germanic-archer", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+	SetUnitVariable(unit, "Active", false)
 end
 
 -- Gylve's Realm introduction
@@ -116,9 +105,7 @@ AddTrigger("gylves-realm-victory",
 			{function(s)
 				if (player == GetThisPlayer()) then
 					ActionVictory()
-					if (GrandStrategy == false) then
-						SetQuestCompleted("gylves-realm", GameSettings.Difficulty)
-					end
+					SetQuestCompleted("gylves-realm", GameSettings.Difficulty)
 				end
 			end}
 		)

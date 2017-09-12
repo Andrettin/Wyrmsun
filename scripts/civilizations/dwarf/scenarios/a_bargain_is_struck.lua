@@ -26,12 +26,10 @@
 --
 
 if (LoadedGame == false) then
-	if not (GrandStrategy) then
-		SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-smithy", "F")
-		SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-lumber-mill", "F")
-		SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-sentry-tower", "F")
-		SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-stronghold", "F")
-	end
+	SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-smithy", "F")
+	SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-lumber-mill", "F")
+	SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-sentry-tower", "F")
+	SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-stronghold", "F")
 	
 	if (GameSettings.Difficulty <= 2) then -- if the difficulty is normal or lower, add a raft
 		unit = CreateUnit("unit-raft", PlayerNumNeutral, {14, 32})
@@ -351,32 +349,17 @@ AddTrigger("a-bargain-is-struck-introduction",
 									Players[GetFactionPlayer("Shinsplitter Clan")].Type = PlayerNeutral
 
 									KillUnitAt("unit-revealer", player, 1, {0, 0}, {512, 512})
-									if (GrandStrategy) then -- if is grand strategy, begin war between Norlund Clan and Untersberg if Rugnur decided to attack the gnomish monarch
-										SetFactionDiplomacyState("dwarf", "norlund-clan", "gnome", "untersberg", "war")
-									end
 								end}
 							)
 							end}
 						)
-						end},
-						nil,
-						nil,
-						GrandStrategy
+						end}
 					)
-					end},
-					nil,
-					nil,
-					GrandStrategy
+					end}
 				)
-				end},
-				nil,
-				nil,
-				GrandStrategy
+				end}
 			)
-			end},
-			nil,
-			nil,
-			GrandStrategy
+			end}
 		)
 
 		-- Follow-up of the A Bargain is Struck initial dialogue
@@ -471,7 +454,17 @@ AddTrigger("a-bargain-is-struck-introduction",
 
 												local second_bandit_player = FindUnusedPlayerSlot()
 												Players[second_bandit_player].Type = PlayerComputer
-												if (GrandStrategy == false) then
+
+												unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+												SetUnitVariable(unit, "Active", false)
+												unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+												SetUnitVariable(unit, "Active", false)
+												unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+												SetUnitVariable(unit, "Active", false)
+
+												unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {(Players[bandit_player].StartPos.x + Players[player].StartPos.x) / 2, (Players[bandit_player].StartPos.y + Players[player].StartPos.y) / 2})
+												SetUnitVariable(unit, "Active", false)
+												if (GameSettings.Difficulty == 3) then -- if difficulty is hard
 													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
 													SetUnitVariable(unit, "Active", false)
 													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
@@ -481,43 +474,32 @@ AddTrigger("a-bargain-is-struck-introduction",
 
 													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {(Players[bandit_player].StartPos.x + Players[player].StartPos.x) / 2, (Players[bandit_player].StartPos.y + Players[player].StartPos.y) / 2})
 													SetUnitVariable(unit, "Active", false)
-													if (GameSettings.Difficulty == 3) then -- if difficulty is hard
-														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
-														SetUnitVariable(unit, "Active", false)
-														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
-														SetUnitVariable(unit, "Active", false)
-														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
-														SetUnitVariable(unit, "Active", false)
+												elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+													SetUnitVariable(unit, "Active", false)
+													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+													SetUnitVariable(unit, "Active", false)
+													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+													SetUnitVariable(unit, "Active", false)
+													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+													SetUnitVariable(unit, "Active", false)
+													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+													SetUnitVariable(unit, "Active", false)
+													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+													SetUnitVariable(unit, "Active", false)
+													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+													SetUnitVariable(unit, "Active", false)
+													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+													SetUnitVariable(unit, "Active", false)
+													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+													SetUnitVariable(unit, "Active", false)
 
-														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {(Players[bandit_player].StartPos.x + Players[player].StartPos.x) / 2, (Players[bandit_player].StartPos.y + Players[player].StartPos.y) / 2})
-														SetUnitVariable(unit, "Active", false)
-													elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
-														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
-														SetUnitVariable(unit, "Active", false)
-														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
-														SetUnitVariable(unit, "Active", false)
-														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
-														SetUnitVariable(unit, "Active", false)
-														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
-														SetUnitVariable(unit, "Active", false)
-														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
-														SetUnitVariable(unit, "Active", false)
-														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
-														SetUnitVariable(unit, "Active", false)
-														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
-														SetUnitVariable(unit, "Active", false)
-														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
-														SetUnitVariable(unit, "Active", false)
-														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
-														SetUnitVariable(unit, "Active", false)
-
-														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {(Players[bandit_player].StartPos.x + Players[player].StartPos.x) / 2, (Players[bandit_player].StartPos.y + Players[player].StartPos.y) / 2})
-														SetUnitVariable(unit, "Active", false)
-														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {(Players[bandit_player].StartPos.x + Players[player].StartPos.x) / 2, (Players[bandit_player].StartPos.y + Players[player].StartPos.y) / 2})
-														SetUnitVariable(unit, "Active", false)
-														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {(Players[bandit_player].StartPos.x + Players[player].StartPos.x) / 2, (Players[bandit_player].StartPos.y + Players[player].StartPos.y) / 2})
-														SetUnitVariable(unit, "Active", false)
-													end
+													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {(Players[bandit_player].StartPos.x + Players[player].StartPos.x) / 2, (Players[bandit_player].StartPos.y + Players[player].StartPos.y) / 2})
+													SetUnitVariable(unit, "Active", false)
+													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {(Players[bandit_player].StartPos.x + Players[player].StartPos.x) / 2, (Players[bandit_player].StartPos.y + Players[player].StartPos.y) / 2})
+													SetUnitVariable(unit, "Active", false)
+													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {(Players[bandit_player].StartPos.x + Players[player].StartPos.x) / 2, (Players[bandit_player].StartPos.y + Players[player].StartPos.y) / 2})
+													SetUnitVariable(unit, "Active", false)
 												end
 
 												SetPlayerData(second_bandit_player, "Name", "Raiders")
@@ -529,13 +511,8 @@ AddTrigger("a-bargain-is-struck-introduction",
 												SetDiplomacy(bandit_player, "allied", second_bandit_player)
 												SetDiplomacy(second_bandit_player, "allied", bandit_player)
 												KillUnitAt("unit-revealer", player, 2, {0, 0}, {512, 512})
-												if (GrandStrategy) then
-													SetFactionDiplomacyState("dwarf", "norlund-clan", "dwarf", "shinsplitter-clan", "war") -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
-													ChangeFactionResource("gnome", "untersberg", "copper", -10000) -- decrease gnomish treasury by 5000 silver
-												else
-													if (wyr.preferences.ShowTips and not IsReplayGame() and not IsNetworkGame()) then
-														Tip("", "Your enemies in this scenario are more resourceful than you - it is better to quickly assemble troops to escort the caravans, as the enemy is likely to eventually overwhelm you.")
-													end
+												if (wyr.preferences.ShowTips and not IsReplayGame()) then
+													Tip("", "Your enemies in this scenario are more resourceful than you - it is better to quickly assemble troops to escort the caravans, as the enemy is likely to eventually overwhelm you.")
 												end
 											end}
 										)
@@ -626,7 +603,7 @@ AddTrigger("a-bargain-is-struck-gnomish-envoy-arrives",
 									ChangeFactionResource("dwarf", "norlund-clan", "copper", 10000) -- 5000 silver, and for our purposes silver is considered to be worth 200% of copper
 								end
 							end
-							if (player == GetThisPlayer() and GrandStrategy == false) then
+							if (player == GetThisPlayer()) then
 								SetQuestCompleted("a-bargain-is-struck", GameSettings.Difficulty)
 							end
 						end}
@@ -693,7 +670,7 @@ AddTrigger("a-bargain-is-struck-caravans-arrived",
 							ChangeFactionResource("dwarf", "norlund-clan", "copper", 10000) -- 5000 silver, and for our purposes silver is considered to be worth 200% of copper
 						end
 					end
-					if (player == GetThisPlayer() and GrandStrategy == false) then
+					if (player == GetThisPlayer()) then
 						SetQuestCompleted("a-bargain-is-struck", GameSettings.Difficulty)
 					end
 				end}
@@ -762,7 +739,7 @@ AddTrigger("a-bargain-is-struck-quest-completion",
 				ChangeFactionResource("dwarf", "norlund-clan", "copper", 10000) -- 5000 silver, and for our purposes silver is considered to be worth 200% of copper
 			end
 		end
-		if (player == GetThisPlayer() and GrandStrategy == false) then
+		if (player == GetThisPlayer()) then
 			SetQuestCompleted("a-bargain-is-struck", GameSettings.Difficulty)
 		end
 		return false
@@ -962,7 +939,7 @@ AddTrigger("a-bargain-is-struck-safe-passage-achievement",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionPlayer("Norlund Clan") == GetThisPlayer() and PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") and GrandStrategy == false and GetNumRivals(GetThisPlayer()) == 0 and GameSettings.Difficulty >= GetAchievementData("safe-passage", "Difficulty")) then
+		if (GetFactionPlayer("Norlund Clan") == GetThisPlayer() and PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") and GetNumRivals(GetThisPlayer()) == 0 and GameSettings.Difficulty >= GetAchievementData("safe-passage", "Difficulty")) then
 			return true
 		end
 		return false

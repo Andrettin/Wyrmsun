@@ -74,7 +74,7 @@ function RunGrandStrategyGameSetupMenu()
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
-	local world_list = {"Earth", "Nidavellir", "Random"}
+	local world_list = {"Earth", "Nidavellir"}
 	local world
 	local bookmark_list = {}
 	local bookmark
@@ -125,13 +125,9 @@ function RunGrandStrategyGameSetupMenu()
 			GrandStrategyGamePaused = false
 			GameResult = GameNoResult
 			GrandStrategyYear = math.floor(date_slider:getValue())
-			if (world_list[world:getSelected() + 1] ~= "Random") then
-				InitializeGrandStrategyWorldMap()
-				Load("scripts/grand_strategy/" .. string.lower(world_list[world:getSelected() + 1]) .. "_world_map.lua");
-				Load("scripts/grand_strategy/" .. string.lower(world_list[world:getSelected() + 1]) .. "_history.lua");
-			else
-				GenerateRandomWorldMap()
-			end
+			InitializeGrandStrategyWorldMap()
+			Load("scripts/grand_strategy/" .. string.lower(world_list[world:getSelected() + 1]) .. "_world_map.lua");
+			Load("scripts/grand_strategy/" .. string.lower(world_list[world:getSelected() + 1]) .. "_history.lua");
 			
 			GrandStrategyFaction = GetFactionFromName(faction_list[faction:getSelected() + 1])
 			SetPlayerFaction(GetFactionFromName(faction_list[faction:getSelected() + 1]).Civilization, GetFactionFromName(faction_list[faction:getSelected() + 1]).Name)
@@ -390,13 +386,6 @@ function RunGrandStrategyGameSetupMenu()
 						"40 AD", -- end of The Scepter of Fire
 						"550 AD" -- beginning of The Hammer of Thursagan
 					}
-				elseif (GrandStrategyWorld == "Random") then
-					date_minimum = -3000
-					date_maximum = -3000
-					
-					bookmark_list = {
-						"3000 BC"
-					}
 				end
 				
 				date_slider:setScale(date_minimum, date_maximum)
@@ -414,25 +403,19 @@ function RunGrandStrategyGameSetupMenu()
 		date_label:adjustSize();
 	
 		if (IsMouseLeftButtonPressed() == false or ignore_mouse_state) then
-			if (world_list[world:getSelected() + 1] ~= "Random") then
-				InitializeGrandStrategyWorldMap()
-				Load("scripts/grand_strategy/" .. string.lower(world_list[world:getSelected() + 1]) .. "_world_map.lua");
-				Load("scripts/grand_strategy/" .. string.lower(world_list[world:getSelected() + 1]) .. "_history.lua");
+			InitializeGrandStrategyWorldMap()
+			Load("scripts/grand_strategy/" .. string.lower(world_list[world:getSelected() + 1]) .. "_world_map.lua");
+			Load("scripts/grand_strategy/" .. string.lower(world_list[world:getSelected() + 1]) .. "_history.lua");
 				
-				faction_list = {}
-				faction_name_list = {}
-				faction_civilization_list = {}
-				for key, value in pairsByKeys(Factions) do
-					if (GetFactionProvinceCountPreGame(Factions[key].Name) > 0 and GetCivilizationData(Factions[key].Civilization, "Playable") and GetFactionData(Factions[key].Name, "Playable")) then
-						table.insert(faction_list, Factions[key].Name)
-						table.insert(faction_civilization_list, Factions[key].Civilization)
-						table.insert(faction_name_list, GetFactionData(Factions[key].Name, "Name"))
-					end
+			faction_list = {}
+			faction_name_list = {}
+			faction_civilization_list = {}
+			for key, value in pairsByKeys(Factions) do
+				if (GetFactionProvinceCountPreGame(Factions[key].Name) > 0 and GetCivilizationData(Factions[key].Civilization, "Playable") and GetFactionData(Factions[key].Name, "Playable")) then
+					table.insert(faction_list, Factions[key].Name)
+					table.insert(faction_civilization_list, Factions[key].Civilization)
+					table.insert(faction_name_list, GetFactionData(Factions[key].Name, "Name"))
 				end
-			else
-				faction_list = {"asa-tribe", "brising-clan", "eikinskjaldi-clan", "khag-tribe", "lggi-tribe", "norlund-clan", "shinsplitter-clan", "shorbear-clan"}
-				faction_civilization_list = {"germanic", "dwarf", "dwarf", "goblin", "goblin", "dwarf", "dwarf", "dwarf"}
-				faction_name_list = {"Asa Tribe", "Brising Clan", "Eikinskjaldi Clan", "Khag Tribe", "Lggi Tribe", "Norlund Clan", "Shinsplitter Clan", "Shorbear Clan"}
 			end
 
 			faction:setList(faction_name_list)

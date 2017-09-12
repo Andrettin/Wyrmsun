@@ -297,10 +297,7 @@ AddTrigger("caverns-of-flame-introduction",
 				)
 				end}
 			)
-			end},
-			nil,
-			nil,
-			GrandStrategy
+			end}
 		)
 		return false
 	end
@@ -318,32 +315,9 @@ AddTrigger("caverns-of-flame-shinsplitters-caught-up",
 		return false
 	end,
 	function()
-		if (GrandStrategy == false) then
-			unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y})
-			SetUnitVariable(unit, "Active", false)
-			OrderUnit(GetFactionPlayer("Shinsplitter Clan"), "unit-dwarven-thane", {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y}, {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7}, "move")
-		elseif (GrandStrategyEventMap) then
-			-- Shinsplitters
-			local units_to_be_created = {}
-			for i, unitName in ipairs(Units) do
-				if (IsOffensiveMilitaryUnit(unitName)) then
-					units_to_be_created[string.gsub(unitName, "-", "_")] = 0
-					units_to_be_created[string.gsub(unitName, "-", "_")] = GetProvinceUnitQuantity("Southern Tunnels", unitName)
-					SetProvinceUnitQuantity("Southern Tunnels", unitName, GetProvinceUnitQuantity("Southern Tunnels", unitName) - units_to_be_created[string.gsub(unitName, "-", "_")])
-				end
-			end
-			for i, unitName in ipairs(Units) do
-				if (IsOffensiveMilitaryUnit(unitName)) then
-					if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
-						for i=1,(units_to_be_created[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
-							unit = OldCreateUnit(unitName, 1, {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
-							SetUnitVariable(unit, "Active", false)
-							SetUnitVariable(unit, "CustomAIState", SyncRand(4)+1)
-						end
-					end
-				end
-			end
-		end
+		unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y})
+		SetUnitVariable(unit, "Active", false)
+		OrderUnit(GetFactionPlayer("Shinsplitter Clan"), "unit-dwarven-thane", {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y}, {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7}, "move")
 			
 		local event_player = player
 		if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
@@ -853,7 +827,7 @@ AddTrigger("caverns-of-flame-ending",
 											{function(s)
 												if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 													ActionVictory()
-													if (player == GetThisPlayer() and GrandStrategy == false) then
+													if (player == GetThisPlayer()) then
 														SetQuestCompleted("caverns-of-flame", GameSettings.Difficulty)
 													end
 												end

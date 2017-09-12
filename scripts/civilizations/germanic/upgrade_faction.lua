@@ -53,8 +53,7 @@ DefineUpgrade("upgrade-thielung-tribe-faction", {
 })
 
 DefineUpgrade("upgrade-thralling-tribe-faction", {
-	Name = _("Thrahiling Tribe Faction"),
-	GrandStrategyProductionEfficiencyModifier = {"lumber", 5},
+	Name = "Thrahiling Tribe Faction",
 	EffectsString = "+5% Lumber Processing for Carpenter's Shops"
 })
 
