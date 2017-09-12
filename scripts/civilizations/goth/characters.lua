@@ -30,10 +30,7 @@ DefineCharacter("hraudung", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "goth-tribe",
---	ProvinceOfOrigin = "?",
---	Date = ?,
---	DeathDate = ?
+	Faction = "goth-tribe"
 })
 
 DefineCharacter("agnar", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 59-60.
@@ -42,9 +39,6 @@ DefineCharacter("agnar", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
 	Faction = "goth-tribe",
---	ProvinceOfOrigin = "?",
---	Date = ?,
---	DeathDate = ?,
 	Father = "hraudung"
 })
 
@@ -55,9 +49,6 @@ DefineCharacter("geirrod", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Civilization = "goth",
 	Faction = "goth-tribe",
 	Trait = "upgrade-cruel", -- was a cruel, tyrannical ruler; had sudden fits of anger; nevertheless, was generous and welcoming of guests
---	ProvinceOfOrigin = "?",
---	Date = ?,
---	DeathDate = ?,
 	Father = "hraudung"
 })
 
@@ -68,9 +59,6 @@ DefineCharacter("agnar-ii", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	Civilization = "goth",
 	Faction = "goth-tribe",
 	Trait = "upgrade-compassionate", -- when Grimnir (Odin in disguise) suffered, Agnar suffered with him; gave Grimnir a horn with drink
---	ProvinceOfOrigin = "?",
---	Date = ?,
---	DeathDate = ?,
 	Father = "geirrod"
 })
 
@@ -80,7 +68,6 @@ DefineCharacter("airmanareiks", { -- Source: Henry Adams Bellows (transl.), "The
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
 	Faction = "ostrogoth-tribe",
-	ProvinceOfOrigin = "Ukraine", -- accurate?
 	Trait = "upgrade-cruel", -- described as generous, cruel, wrathful, faithless, savage; Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxx.
 	DeathDate = 376, -- died
 	HistoricalTitles = {
@@ -95,7 +82,6 @@ DefineCharacter("frithareiks", { -- Source: F. E. Sandbach, "The Heroic Saga-Cyc
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
 	Faction = "ostrogoth-tribe",
-	ProvinceOfOrigin = "Pannonia", -- presumably, because this is Airmanareiks' province of origin
 	Father = "airmanareiks"
 })
 
@@ -106,7 +92,6 @@ DefineCharacter("walamer-amelung", { -- Source: F. E. Sandbach, "The Heroic Saga
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
 	Faction = "ostrogoth-tribe",
-	ProvinceOfOrigin = "Pannonia",
 	Date = 453, -- ruled over the Ostrogoths when Attila died and his Hunnic empire collapsed in 453 AD
 	DeathDate = 472, -- died
 	HistoricalTitles = {
@@ -121,7 +106,6 @@ DefineCharacter("theodemer-amelung", { -- Source: F. E. Sandbach, "The Heroic Sa
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
 	Faction = "ostrogoth-tribe",
-	ProvinceOfOrigin = "Pannonia",
 	Date = 472,
 	DeathDate = 474, -- died
 	HistoricalTitles = {
@@ -135,8 +119,7 @@ DefineCharacter("widemer-amelung", { -- Source: F. E. Sandbach, "The Heroic Saga
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "ostrogoth-tribe",
-	ProvinceOfOrigin = "Pannonia",
+	Faction = "ostrogoth-tribe"
 	-- same generation as Walamer
 })
 
@@ -148,7 +131,6 @@ DefineCharacter("thiudareiks-amelung", { -- Source: F. E. Sandbach, "The Heroic 
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
 	Faction = "ostrogoth-tribe",
-	ProvinceOfOrigin = "Pannonia",
 	Date = 454, -- born (was 8 years old in 462 AD)
 	DeathDate = 526, -- died; he was put in a magnificent marble tomb in Ravenna
 	Father = "theodemer-amelung",
@@ -162,7 +144,6 @@ DefineCharacter("odoacer", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle o
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
---	ProvinceOfOrigin = "?",
 	Date = 480, -- Odoacer deposed Romulus Augustus in 480 AD, going then on to rule Italy as an independent king
 	DeathDate = 493, -- was put to death by Theoderic in 493 AD
 	ViolentDeath = true
@@ -173,7 +154,6 @@ DefineCharacter("tufa", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of D
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
---	ProvinceOfOrigin = "?",
 	Date = 489,
 	DeathDate = 493 -- was probably put to death by Theoderic in 493 AD when the defenders of Ravenna (including Odoacer) were
 })
@@ -185,7 +165,6 @@ DefineCharacter("vulfshardus", { -- Source: F. E. Sandbach, "The Heroic Saga-Cyc
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
 	Faction = "ostrogoth-tribe",
-	ProvinceOfOrigin = "Pannonia", -- presumably, because this is Theoderic's province of origin
 	-- contemporary of Theoderic
 })
 

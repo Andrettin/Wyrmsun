@@ -146,19 +146,9 @@ DefineProvince("Aquitaine", {
 		-71, "celt"
 	},
 	HistoricalModifiers = {
-		1250, "upgrade-university", true, -- University existent in Montpellier in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
-		1332, "upgrade-university", true, -- University founded in Cahors in 1332; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		1349, "upgrade-university", true, -- University founded in Perpignan in 1349; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1789, "upgrade-courthouse", true, -- Prévôt des maréchaux existent in Limoges in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
-		1789, "upgrade-courthouse", true, -- Chief court of the salt tax existent in Clermont-Ferrand in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
-		1789, "upgrade-courthouse", true, -- Parlement or conseil souverain, court of admiralty, prévôt des maréchaux and chief court of the salt tax existent in Toulouse in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 		1789, "upgrade-courthouse", true, -- Chambre des comptes and prévôt des maréchaux existent in Montauban in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
-		1789, "upgrade-courthouse", true, -- Parlement or conseil souverain, chambre des comptes, court of admiralty and prévôt des maréchaux existent in Bordeaux in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
-		1789, "upgrade-courthouse", true, -- Parlement or conseil souverain and prévôt des maréchaux existent in Pau in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
-		1789, "upgrade-courthouse", true, -- Cour des aides and chief court of the salt tax existent in Montpellier in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
-		1789, "upgrade-courthouse", true, -- Chief court of the salt tax existent in Rodez in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
-		1789, "upgrade-courthouse", true, -- Chief court of the salt tax existent in Narbonne in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
-		1789, "upgrade-courthouse", true -- Parlement or conseil souverain and prévôt des maréchaux existent in Perpignan in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
+		1789, "upgrade-courthouse", true -- Parlement or conseil souverain and prévôt des maréchaux existent in Pau in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
 	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
 })
@@ -189,7 +179,6 @@ DefineProvince("Aragon", {
 		-201, "latin", "rome"
 	},
 	HistoricalModifiers = {
-		1300, "upgrade-university", true, -- Major university founded in Lerida in 1300; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 		1354, "upgrade-university", true, -- Major university founded in Huesca in 1354; Source: "The Cambridge Modern History Atlas", 1912, p. 9, Atlas de História Mundial, 2001, p. 144; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 		1483, "upgrade-university", true, -- University founded in Palma in 1483; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1599, "upgrade-university", true, -- Minor university founded in Vich in 1599; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
@@ -278,10 +267,6 @@ DefineProvince("Attica", {
 	SettlementLocation = {547, 147}, -- Athens
 	Claims = {
 		"greek", "athens"
-	},
-	HistoricalSettlementBuildings = {
-		-1700, "unit-teuton-stronghold", true, -- Mycenaean fortifications present in Athens between 1700 and 1200 BC, as well as in Aghia Irini (in the island of Ceos); Source: "Atlas de História Mundial", 2001, p. 67.
-		-1190, "unit-teuton-stronghold", false -- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -441,9 +426,6 @@ DefineProvince("Berry", {
 	},
 	HistoricalClaims = {
 		-50, "latin", "rome"
-	},
-	HistoricalModifiers = {
-		1789, "upgrade-courthouse", true -- Prévôt des maréchaux and chief court of the salt tax existent in Bourges in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
 	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
 })
@@ -835,12 +817,6 @@ DefineProvince("Champagne", { -- includes Brie
 	},
 	HistoricalClaims = {
 		-50, "latin", "rome"
-	},
-	HistoricalSettlementBuildings = {
-		768, "unit-teuton-temple", true -- Archbishopric existent in Sens during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-	},
-	HistoricalModifiers = {
-		1789, "upgrade-courthouse", true -- Chief court of the salt tax existent in Troyes in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
 	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
 })

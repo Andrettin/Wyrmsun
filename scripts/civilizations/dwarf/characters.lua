@@ -200,7 +200,6 @@ DefineCharacter("thursagan", { -- from Battle for Wesnoth: The Sceptre of Fire; 
 	Trait = "upgrade-strong",
 	Icon = "icon-thursagan",
 	HairVariation = "gray-hair",
-	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Date = -1,
 	DeathDate = 40, -- died in 40 AD of a violent death
 	ViolentDeath = true,
@@ -224,7 +223,6 @@ DefineCharacter("baglur", { -- from Battle for Wesnoth: The Sceptre of Fire; vet
  	Icon = "icon-baglur",
 	Trait = "upgrade-resilient",
 	HairVariation = "gray-hair",
-	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Date = -1,
 	DeathDate = 40, -- died in 40 AD of a violent death
 	ViolentDeath = true,
@@ -241,7 +239,6 @@ DefineCharacter("durstorn", { -- from Battle for Wesnoth: The Sceptre of Fire; c
 	Icon = "icon-durstorn",
 	Trait = "upgrade-strong",
 	HairVariation = "brown-hair",
-	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Date = -1,
 	DeathDate = 35, -- died in 35 AD of a violent death
 	ViolentDeath = true,
@@ -257,7 +254,6 @@ DefineCharacter("glonoin", { -- from Battle for Wesnoth: The Sceptre of Fire; ch
 	Type = "unit-dwarven-thane",
 	Civilization = "dwarf",
 	Faction = "shorbear-clan",
-	ProvinceOfOrigin = "Shorbear Hills",
 	Date = -1,
 	DeathDate = 29, -- Shorbear Hold conquered in 29 AD by Rugnur's and Durstorn's Clan
 	ViolentDeath = true,
@@ -283,7 +279,6 @@ DefineCharacter("rugnur", { -- from Battle for Wesnoth: The Sceptre of Fire; lea
 	HeroicIcon = "icon-rugnur-older",
 	Trait = "upgrade-keen", -- not the best fit for this character, should be replaced with something else perhaps?
 	HairVariation = "brown-hair",
-	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Date = 25,
 	DeathDate = 40, -- died in 40 AD of a violent death
 	ViolentDeath = true,

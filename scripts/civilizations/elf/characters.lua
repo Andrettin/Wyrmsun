@@ -31,7 +31,6 @@ DefineCharacter("arawn", { -- Arawn was king of the otherworld Annwn in Welsh le
 	Type = "unit-elven-swordsman", -- should be a rider
 	Civilization = "elf",
 	Faction = "annwn",
---	ProvinceOfOrigin = "Annwn",
 	Trait = "upgrade-wise",
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "annwn" -- king of Annwn
@@ -44,8 +43,7 @@ DefineCharacter("hafgan", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch d
 	Gender = "male",
 	Type = "unit-elven-swordsman",
 	Civilization = "elf",
-	Faction = "annwn",
---	ProvinceOfOrigin = "Annwn"
+	Faction = "annwn"
 	-- king in Annwn who opposed Arawn
 })
 

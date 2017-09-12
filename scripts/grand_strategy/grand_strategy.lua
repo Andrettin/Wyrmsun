@@ -486,10 +486,6 @@ function RunGrandStrategyGame()
 end
 
 function EndTurn()
-	if (GrandStrategyYear % 10 == 0 and GrandStrategyMonth == 0) then
-		GrandStrategyGameSave("autosave")
-	end
-
 	ProcessingEndTurn = true
 	
 --	CalculateFactionDisembarkmentProvinces()
@@ -1360,7 +1356,6 @@ function RunGrandStrategySaveMenu()
 			table.foreachi(t, function(k,v) name = string.gsub(name, v, "_") end)
 			GrandStrategyGamePaused = false
 
-			GrandStrategyGameSave(name)
     		menu:stop()
 			ClearGrandStrategyUIVariables()
 			GrandStrategyMenu:stop();
@@ -4147,27 +4142,6 @@ function GetUnitTypeRequiredTechnologies(unit_type, owner_civilization, owner_fa
 		end
 	end
 	return required_technologies
-end
-
-function GrandStrategyGameSave(name)
-	wyr[name] = {
-		SavedGrandStrategyFactionName = GrandStrategyFaction.Name,
-		SavedGrandStrategyYear = GrandStrategyYear,
-		SavedGrandStrategyMonth = GrandStrategyMonth,
-		SavedGrandStrategyWorld = GrandStrategyWorld,
-		SavedWorldMapProvinces = WorldMapProvinces,
-		SavedWorldMapWaterProvinces = WorldMapWaterProvinces,
-		SavedFactions = Factions,
-		SavedGrandStrategyCommodities = GrandStrategyCommodities,
-		SavedMercenaryGroups = MercenaryGroups,
-		SavedGrandStrategyEvents = {}
-	}
-	for key, value in pairs(GrandStrategyEvents) do
-		table.insert(wyr[name].SavedGrandStrategyEvents, key)
-	end
-	
-	SaveGrandStrategyGame(name)
-	wyr[name] = nil
 end
 
 function EqualizeProvinceUnits(faction)

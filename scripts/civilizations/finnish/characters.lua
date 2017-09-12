@@ -30,8 +30,7 @@ DefineCharacter("snio-the-old", { -- Source: Snorri Sturlson, "Heimskringla", 18
 	ExtraName = "the Old",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
-	Civilization = "finnish", -- presumably
-	ProvinceOfOrigin = "Finland"
+	Civilization = "finnish" -- presumably
 })
 
 DefineCharacter("drisa", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 228.
@@ -39,7 +38,6 @@ DefineCharacter("drisa", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "finnish", -- presumably
-	ProvinceOfOrigin = "Finland",
 	Father = "snio-the-old"
 })
 
@@ -47,8 +45,7 @@ DefineCharacter("hulda", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	Name = "Hulda",
 	Gender = "female",
 	Type = "unit-teuton-priest",
-	Civilization = "finnish", -- presumably
-	ProvinceOfOrigin = "Finland"
+	Civilization = "finnish" -- presumably
 	-- placed a charm on Vanland Yngling for Drisa
 })
 
@@ -57,7 +54,6 @@ DefineCharacter("froste", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "finnish", -- presumably
-	ProvinceOfOrigin = "Finland",
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "fenni-tribe" -- he was chieftain over the Finns, and the Fenni tribe seems like a fair enough representation of that
 	}
@@ -68,7 +64,6 @@ DefineCharacter("loge", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "finnish", -- presumably
-	ProvinceOfOrigin = "Finland",
 	Father = "froste"
 })
 

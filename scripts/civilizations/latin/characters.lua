@@ -31,7 +31,6 @@ DefineCharacter("julius-caesar", { -- Source: Heiko Steuer, "Warrior bands, war 
 	Type = "unit-teuton-heroic-swordsman",
 	Civilization = "latin",
 	Faction = "rome",
-	ProvinceOfOrigin = "Latium", -- correct?
 	Date = -58, -- De Bello Gallico was written 58-52 BC
 	AuthoredWorks = {"upgrade-work-de-bello-gallico"}
 })
@@ -43,7 +42,6 @@ DefineCharacter("marcus-aurelius", { -- Source: "Ancient Warfare VII.6", 2013, p
 	Type = "unit-teuton-heroic-swordsman", -- emperor
 	Civilization = "latin",
 	Faction = "rome",
-	ProvinceOfOrigin = "Latium", -- put him in Rome's province since we don't have information on his actual province of origin
 	Date = 121, -- born on 26 April 121
 	DeathDate = 180, -- died on 17 March 180, of smallpox or cancer
 	Trait = "upgrade-dutiful", -- placed strong importance on doing one's duty in his "Meditations"
@@ -63,7 +61,6 @@ DefineCharacter("lucius-verus", { -- Source: "Ancient Warfare VII.6", 2013, pp. 
 	Type = "unit-teuton-heroic-swordsman", -- emperor
 	Civilization = "latin",
 	Faction = "rome",
-	ProvinceOfOrigin = "Latium", -- put him in Rome's province since we don't have information on his actual province of origin
 	Date = 161, -- became co-emperor in 161
 	DeathDate = 168, -- died (apparently) in 168 of a stroke
 	HistoricalTitles = {

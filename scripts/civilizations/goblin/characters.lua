@@ -36,7 +36,6 @@ DefineCharacter("agniss-tenebris", { -- invented by Jesse Crider
 	Trait = "upgrade-intelligent",
 	Description = _("The leader of the Tenebris Syndicate, Agniss rules through mysticism and paranoia. The hooded hag is well-known amongst goblins for the terror she inspires."),
 --	Icon = "icon-agniss",
-	ProvinceOfOrigin = "Tenebris",
 	HistoricalTitles = {
 --		"head-of-state", 0, 0, "tenebris"
 	}
@@ -53,7 +52,6 @@ DefineCharacter("dremac-paarsins", { -- invented by Jesse Crider
 	Trait = "upgrade-genius",
 	Description = _("Dremac Paarsins is the gluttonous leader of the Myridian Syndicate. An extremely wealthy merchant lord, Dremac is known for his opulence and cunning. It is rumored that he rose to his ruling position by a mix of political blackmailing and the influence of his wealth."),
 	Icon = "icon-dremac-paarsins",
-	ProvinceOfOrigin = "Myridia",
 	HistoricalTitles = {
 --		"head-of-state", 0, 0, "myridia"
 	}
@@ -70,7 +68,6 @@ DefineCharacter("ioun-stilgar", { -- invented by Jesse Crider
 	Trait = "upgrade-keen", -- a "just" trait would fit better
 	Description = _("Ioun is a veteran tactician who leads the Stilgar Syndicate. He is known as \"Ioun the Just\" due to his record of honoring the contracts he enters."),
 	Icon = "icon-ioun",
-	ProvinceOfOrigin = "Stilgar",
 	HistoricalTitles = {
 --		"head-of-state", 0, 0, "stilgar"
 	}
@@ -87,7 +84,6 @@ DefineCharacter("orza-chahax", { -- invented by Jesse Crider
 	Trait = "upgrade-intelligent",
 	Description = _("Orza Chahax is the leader of the Ezmarrian Syndicate. As a scholar, he is dedicated to science, though his methods are often questionable in their morality."),
 	Icon = "icon-orza-chahax",
-	ProvinceOfOrigin = "Ezmarria",
 	HistoricalTitles = {
 --		"head-of-state", 0, 0, "ezmarria"
 	}

@@ -996,9 +996,7 @@ end
 
 if (GrandStrategyYear >= 486) then
 	SetProvinceOwner("Corsica", "goth", "vandalia") -- Corsica was a part of the Kingdom of the Vandals in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-	SetProvinceUnitQuantity("Corsica", "unit-germanic-warrior", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
 	SetProvinceOwner("Sardinia", "goth", "vandalia") -- Sardinia was a part of the Kingdom of the Vandals in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-	SetProvinceUnitQuantity("Sardinia", "unit-germanic-warrior", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
 end
 
 if (GrandStrategyYear >= 488) then

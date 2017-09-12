@@ -32,6 +32,5 @@ DefineCharacter("geofrei-gaimar", { -- Source: Alaric Hall, "The Meanings of Elf
 	Type = "unit-teuton-priest", -- since he is a writer, this seemed like the closest unit type
 	Civilization = "french",
 	Faction = "france",
-	ProvinceOfOrigin = "France", -- accurate?
 	Year = 1135 -- composed Estoire des Anglais c. 1135-1140 AD
 })

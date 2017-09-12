@@ -25,6 +25,25 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSettlement("aghia-irini", {
+	Name = "Aghia Irini",
+	MapTemplate = "earth",
+	Position = {4393, 1191},
+	CulturalNames = {
+		"greek", "Aghia Irini"
+	},
+	HistoricalOwners = {
+		-1700, "mycenae",
+		-1190, ""
+	},
+	HistoricalBuildings = {
+		-1700, -1190, "guard-tower" -- Mycenaean fortifications present in Aghia Irini (in the island of Ceos) between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
+		-- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
+		
+	},
+	Regions = {"europe", "greece", "west-and-central-europe"}
+})
+
 DefineSettlement("amyclae", {
 	Name = "Amyclae",
 	MapTemplate = "earth",
@@ -84,13 +103,18 @@ DefineSettlement("athens", {
 		"latin", "Athens"
 	},
 	HistoricalOwners = {
-		-1450, "mycenae", -- Athens was a center of the highest Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-1700, "mycenae",
+		-1190, "",
+		-- Athens was a center of the highest Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 		-700, "athens", -- Athens was part of the state of Attica/Athens in the 700-600 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 		-146, "rome", -- Athens was acquired by Rome in 146 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1740, "turkey" -- Athens was in possession of the Ottoman Empire in 1740; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "town-hall"
+		-1700, -1190, "stronghold", -- Mycenaean fortifications present in Athens between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
+		-- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
+		-700, 0, "town-hall"
+		
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })

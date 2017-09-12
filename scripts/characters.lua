@@ -71,7 +71,6 @@ DefineCharacter("gylve", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Type = "unit-germanic-warrior",
 	Civilization = "basque",
 	Faction = "gylfing-tribe",
-	ProvinceOfOrigin = "Scania",
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "gylfing-tribe"
 	},

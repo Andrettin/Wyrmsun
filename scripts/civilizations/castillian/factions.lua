@@ -25,6 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineFaction("aragon", {
+	Name = "Aragon",
+	Civilization = "castillian",
+	Type = "polity",
+	Colors = {"purple", "yellow"},
+	DefaultTier = "kingdom"
+})
+
 DefineFaction("argentina", {
 	Name = "Argentina",
 	Civilization = "castillian",

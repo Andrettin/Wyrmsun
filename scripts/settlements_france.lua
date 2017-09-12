@@ -145,6 +145,7 @@ DefineSettlement("bordeaux", {
 	Name = "Bordeaux",
 	MapTemplate = "earth",
 	Position = {3826, 1029},
+	Major = true,
 	CulturalNames = {
 		"celt", "Burdigala",
 		"frankish", "Burdegala",
@@ -160,11 +161,11 @@ DefineSettlement("bordeaux", {
 		561, "neustria" -- Burdegala went to Charibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 	},
 	HistoricalBuildings = {
-		161, 395, "farm",
-		395, 0, "town-hall",
+		161, 0, "town-hall",
 		395, 0, "temple", -- Bordeaux was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		-- Archbishopric existent in Bordeaux during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		1441, 0, "university" -- University founded in Bordeaux in 1441; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		-- Parlement or conseil souverain, chambre des comptes, court of admiralty and prévôt des maréchaux existent in Bordeaux in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -188,6 +189,7 @@ DefineSettlement("bourges", {
 		395, 0, "temple", -- Bourges was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		-- Archbishopric existent in Bourges during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		1464, 0, "university" -- University founded in Bourges in 1464; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		-- Prévôt des maréchaux and chief court of the salt tax existent in Bourges in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -208,6 +210,22 @@ DefineSettlement("brest", {
 	},
 	HistoricalBuildings = {
 		161, 0, "farm"
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
+DefineSettlement("cahors", {
+	Name = "Cahors",
+	MapTemplate = "earth",
+	Position = {3875, 1033},
+	CulturalNames = {
+		"french", "Cahors"
+	},
+	HistoricalOwners = {
+		1560, "france" -- Cahors' area was a part of the Kingdom of France in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		1332, 0, "university" -- University founded in Cahors in 1332; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -245,6 +263,7 @@ DefineSettlement("clermont-ferrand", {
 	},
 	HistoricalBuildings = {
 		-71, 0, "town-hall"
+		-- Chief court of the salt tax existent in Clermont-Ferrand in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -375,6 +394,23 @@ DefineSettlement("molsheim", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
+DefineSettlement("montpellier", {
+	Name = "Montpellier",
+	MapTemplate = "earth",
+	Position = {3924, 1054},
+	CulturalNames = {
+		"french", "Montpellier"
+	},
+	HistoricalOwners = {
+		1560, "france" -- Montpellier's area was a part of the Kingdom of France in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		1250, 0, "university" -- University existent in Montpellier in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
+		-- Cour des aides and chief court of the salt tax existent in Montpellier in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
 DefineSettlement("nantes", {
 	Name = "Nantes",
 	MapTemplate = "earth",
@@ -410,6 +446,7 @@ DefineSettlement("narbonne", {
 	},
 	HistoricalBuildings = {
 		395, 0, "temple" -- Narbonne was the seat of a metropolitanate (archbishopric) in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		-- Chief court of the salt tax existent in Narbonne in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -483,6 +520,23 @@ DefineSettlement("paris", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
+DefineSettlement("perpignan", {
+	Name = "Perpignan",
+	MapTemplate = "earth",
+	Position = {3907, 1077},
+	CulturalNames = {
+		"french", "Perpignan"
+	},
+	HistoricalOwners = {
+		1560, "spain" -- Perpignan was a part of the Kingdom of Spain in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		1349, 0, "university" -- University founded in Perpignan in 1349; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		-- Parlement or conseil souverain and prévôt des maréchaux existent in Perpignan in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
 DefineSettlement("poitiers", {
 	Name = "Poitiers",
 	MapTemplate = "earth",
@@ -544,6 +598,7 @@ DefineSettlement("rodez", {
 	},
 	HistoricalBuildings = {
 		561, 0, "farm"
+		-- Chief court of the salt tax existent in Rodez in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -581,7 +636,8 @@ DefineSettlement("sens", {
 		561, "burgundia" -- Senonae went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 	},
 	HistoricalBuildings = {
-		395, 0, "farm"
+		395, 768, "farm",
+		768, 0, "temple" -- Archbishopric existent in Sens during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -706,6 +762,7 @@ DefineSettlement("toulouse", {
 		395, 0, "town-hall",
 		395, 0, "temple", -- Toulouse was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		1230, 0, "university" -- University founded in Toulouse in 1230; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		-- Parlement or conseil souverain, court of admiralty, prévôt des maréchaux and chief court of the salt tax existent in Toulouse in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -760,6 +817,7 @@ DefineSettlement("troyes", {
 	},
 	HistoricalBuildings = {
 		561, 0, "farm"
+		-- Chief court of the salt tax existent in Troyes in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })

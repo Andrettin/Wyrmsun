@@ -32,7 +32,6 @@ DefineCharacter("aedan-mac-gabrain", { -- Source: Frank Stenton, "Anglo-Saxon En
 	Type = "unit-teuton-swordsman",
 	Civilization = "gael",
 	Faction = "argyll",
---	ProvinceOfOrigin = "Highland Scotland",
 	Date = 574, -- became king
 	-- attacked the Bernicians in 603 AD
 	HistoricalTitles = {
@@ -75,7 +74,7 @@ DefineCharacter("bruide-mac-beli", { -- Source: Frank Stenton, "Anglo-Saxon Engl
 	Type = "unit-teuton-swordsman",
 	Civilization = "gael",
 	Faction = "pict-tribe",
---	ProvinceOfOrigin = "Strathclyde", -- son of the king of Strathclyde
+	-- son of the king of Strathclyde
 	Date = 672,
 	DeathDate = 693, -- died
 	HistoricalTitles = {

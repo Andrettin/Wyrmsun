@@ -81,7 +81,7 @@ DefineCharacter("teyrnon-twryf-liant", { -- Source: Bernhard Maier (trans.), "Da
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "welsh",
-	ProvinceOfOrigin = "Wales", -- Gwent Is Coed
+	Faction = "gwent-is-coed",
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "gwent-is-coed" -- lord of Gwent Is Coed
 	}

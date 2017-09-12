@@ -30,7 +30,6 @@ DefineCharacter("lorikus", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain/duke
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Astrakhan",
 	Date = -3000, -- beginning of the process of the Indo-European migrations to Scandinavia
 	DeathDate = -3000 + 12, -- Trór becomes 12 years old and slays Lóríkus
 	ViolentDeath = true,
@@ -44,7 +43,6 @@ DefineCharacter("lora", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 	Gender = "female",
 	Type = "unit-germanic-archer",
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Astrakhan",
 	Date = -3000
 })
 
@@ -53,7 +51,6 @@ DefineCharacter("troan", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Gender = "female",
 	Type = "unit-germanic-archer",
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Astrakhan",
 	Date = -3000,
 	DeathDate = -3000 + 10
 })
@@ -63,7 +60,6 @@ DefineCharacter("tror", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Astrakhan",
 	Trait = "upgrade-mighty", -- described as goodly to look upon; very strong
 	HairVariation = "blond-hair", -- his hair was "fairer than gold"
 	Date = -3000, -- born
@@ -79,7 +75,6 @@ DefineCharacter("loridi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Astrakhan",
 	Date = -3000 + 12 + (10 * 1),
 	DeathDate = -3000 + 12 + (10 * 2),
 	Father = "tror",
@@ -93,7 +88,6 @@ DefineCharacter("einridi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Astrakhan",
 	Date = -3000 + 12 + (10 * 2),
 	DeathDate = -3000 + 12 + (10 * 3),
 	Father = "loridi",
@@ -107,7 +101,6 @@ DefineCharacter("vingethor", { -- Source: Snorri Sturlson, "The Prose Edda", 191
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Astrakhan",
 	Date = -3000 + 12 + (10 * 3),
 	DeathDate = -3000 + 12 + (10 * 4),
 	Father = "einridi",
@@ -121,7 +114,6 @@ DefineCharacter("vingener", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Astrakhan",
 	Date = -3000 + 12 + (10 * 4),
 	DeathDate = -3000 + 12 + (10 * 5),
 	Father = "vingethor",
@@ -135,7 +127,6 @@ DefineCharacter("moda", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Astrakhan",
 	Date = -3000 + 12 + (10 * 5),
 	DeathDate = -3000 + 12 + (10 * 6),
 	Father = "vingener",
@@ -149,7 +140,6 @@ DefineCharacter("magan", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Astrakhan",
 	Date = -3000 + 12 + (10 * 6),
 	DeathDate = -3000 + 12 + (10 * 7),
 	Father = "moda",
@@ -163,7 +153,6 @@ DefineCharacter("seskef", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Astrakhan",
 	Date = -3000 + 12 + (10 * 7),
 	DeathDate = -3000 + 12 + (10 * 8),
 	Father = "magan",
@@ -177,7 +166,6 @@ DefineCharacter("bedvig", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Astrakhan",
 	Date = -3000 + 12 + (10 * 8),
 	DeathDate = -3000 + 12 + (10 * 9),
 	Father = "seskef",
@@ -191,7 +179,6 @@ DefineCharacter("athra", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Astrakhan",
 	Date = -3000 + 12 + (10 * 9),
 	DeathDate = -3000 + 12 + (10 * 10),
 	Father = "bedvig",
@@ -205,7 +192,6 @@ DefineCharacter("itermann", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Astrakhan",
 	Date = -3000 + 12 + (10 * 10),
 	DeathDate = -3000 + 12 + (10 * 11),
 	Father = "athra",
@@ -219,7 +205,6 @@ DefineCharacter("heremod", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Astrakhan",
 	Date = -3000 + 12 + (10 * 11),
 	DeathDate = -3000 + 12 + (10 * 12),
 	Father = "itermann",
@@ -233,7 +218,6 @@ DefineCharacter("skjaldun", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Astrakhan",
 	Date = -3000 + 12 + (10 * 12),
 	DeathDate = -3000 + 12 + (10 * 13),
 	Father = "heremod",
@@ -247,7 +231,6 @@ DefineCharacter("bjaf", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Astrakhan",
 	Date = -3000 + 12 + (10 * 13),
 	DeathDate = -3000 + 12 + (10 * 14),
 	Father = "skjaldun",
@@ -261,7 +244,6 @@ DefineCharacter("jat", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Astrakhan",
 	Date = -3000 + 12 + (10 * 14),
 	DeathDate = -3000 + 12 + (10 * 15),
 	Father = "bjaf",
@@ -275,7 +257,6 @@ DefineCharacter("gudawulfa", { -- Source: Snorri Sturlson, "The Prose Edda", 191
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Astrakhan",
 	Date = -3000 + 12 + (10 * 15),
 	DeathDate = -3000 + 12 + (10 * 16),
 	Father = "jat",
@@ -289,7 +270,6 @@ DefineCharacter("finn", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Astrakhan",
 	Date = -3000 + 12 + (10 * 16),
 	DeathDate = -3000 + 12 + (10 * 17),
 	Father = "gudawulfa",
@@ -303,7 +283,6 @@ DefineCharacter("friallaf", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Astrakhan",
 	Date = -3000 + 12 + (10 * 17),
 	DeathDate = -3000 + 12 + (10 * 18),
 	Father = "finn",
@@ -333,7 +312,6 @@ DefineCharacter("frigida", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 	Gender = "female",
 	Type = "unit-germanic-archer",
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Astrakhan",
 	Trait = "upgrade-wise",
 	Date = -3000 + 12 + (10 * 18),
 	DeathDate = -2800 + (30 * 1)
@@ -344,7 +322,6 @@ DefineCharacter("yngve", { -- Source: Snorri Sturlson, "Heimskringla", 1844; Sou
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Astrakhan",
 	Date = -2800,
 	DeathDate = -2800 + (30 * 2),
 	Father = "voden", -- another account gives Yngve as the son of Halfdan the Old
@@ -365,7 +342,6 @@ DefineCharacter("vegdeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Astrakhan",
 	Trait = "upgrade-mighty", -- described as a "mighty king"
 	Date = -2800,
 	DeathDate = -2800 + (30 * 2),
@@ -378,7 +354,7 @@ DefineCharacter("vitgils", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Jutland", -- his father was in the Prose Edda set to rule over East Saxland; but since that region wasn't settled by Germanic peoples yet, place Vegdeg's family in the region settled by Germanics which would later give rise to West Germanic culture (Jutland)
+	-- his father was in the Prose Edda set to rule over East Saxland
 	Father = "vegdeg"
 })
 
@@ -387,7 +363,6 @@ DefineCharacter("vitta", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Jutland",
 	Father = "vitgils"
 })
 
@@ -396,7 +371,6 @@ DefineCharacter("heingistr", { -- Source: Snorri Sturlson, "The Prose Edda", 191
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Jutland",
 	Father = "vitta"
 })
 
@@ -406,7 +380,6 @@ DefineCharacter("sigarr", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Jutland",
 	Father = "vitgils"
 })
 
@@ -415,7 +388,6 @@ DefineCharacter("svebdeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Jutland",
 	Father = "sigarr"
 })
 
@@ -424,7 +396,6 @@ DefineCharacter("beldeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Astrakhan",
 	Date = -2800,
 	DeathDate = -2800 + (30 * 2),
 	Father = "voden",
@@ -436,7 +407,7 @@ DefineCharacter("branda", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Jutland", -- his father was in the Prose Edda set to rule over Westphalia; but since that region wasn't settled by Germanic peoples yet, place Beldeg's family in the region settled by Germanics which would later give rise to West Germanic culture (Jutland)
+	-- his father was in the Prose Edda set to rule over Westphalia
 	Father = "beldeg"
 })
 
@@ -445,7 +416,6 @@ DefineCharacter("frjodigar", { -- Source: Snorri Sturlson, "The Prose Edda", 191
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Jutland",
 	Father = "branda"
 })
 
@@ -454,7 +424,6 @@ DefineCharacter("freovin", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Jutland",
 	Father = "frjodigar"
 })
 
@@ -463,7 +432,6 @@ DefineCharacter("uvigg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Jutland",
 	Father = "freovin"
 })
 
@@ -472,7 +440,6 @@ DefineCharacter("gevis", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Jutland",
 	Father = "uvigg"
 })
 
@@ -481,7 +448,6 @@ DefineCharacter("sigi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Astrakhan",
 	Date = -2800,
 	DeathDate = -2800 + (30 * 2),
 	Father = "voden",
@@ -493,7 +459,7 @@ DefineCharacter("rerir", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Jutland", -- his father was in the Prose Edda set to rule over Frankland; but since that region wasn't settled by Germanic peoples yet, place Sigi's family in the region settled by Germanics which would later give rise to West Germanic culture (Jutland)
+	-- his father was in the Prose Edda set to rule over Frankland
 	Father = "sigi"
 })
 
@@ -503,7 +469,6 @@ DefineCharacter("skeldu", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Astrakhan",
 	Date = -2800,
 	DeathDate = -2800 + (30 * 2), -- 30 years is the default lifetime of a hero after having risen to prominence
 	Father = "voden",
@@ -526,7 +491,7 @@ DefineCharacter("fridleifr-skeldung", { -- Source: Snorri Sturlson, "The Prose E
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Zealand",
+	Faction = "skeldung-tribe",
 	Father = "skeldu",
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "skeldung-tribe"
@@ -545,7 +510,6 @@ DefineCharacter("saemingr-yngling", { -- Source: Snorri Sturlson, "Heimskringla"
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	ProvinceOfOrigin = "Sweden",
 	Father = "yngve"
 })
 

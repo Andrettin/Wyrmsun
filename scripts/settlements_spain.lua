@@ -141,6 +141,23 @@ DefineSettlement("granada", {
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
+DefineSettlement("lerida", {
+	Name = "Lerida",
+	MapTemplate = "earth",
+	Position = {3854, 1110},
+	CulturalNames = {
+		"castillian", "Lerida" -- "Lérida"
+	},
+	HistoricalOwners = {
+		1212, "aragon", -- Lérida was a part of the Principality of Catalonia within the Crown of Aragon in the 1212-1492 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+		1560, "spain" -- Lérida was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		1300, 0, "university" -- Major university founded in Lerida in 1300; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
+	},
+	Regions = {"europe", "iberia", "west-and-central-europe"}
+})
+
 DefineSettlement("malaga", {
 	Name = "Malaga",
 	MapTemplate = "earth",

@@ -33,7 +33,7 @@ DefineCharacter("eylimi-othling", { -- Source: Kevin Crossley-Holland, "The Nors
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton", -- Norse?
 	Faction = "frank-tribe", -- what should it be instead, Dane Tribe?
-	ProvinceOfOrigin = "Zealand" -- since he descends from Halfdan the Old of Denmark
+	-- he descends from Halfdan the Old of Denmark
 })
 
 DefineCharacter("signy-volsung", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, pp. 2-3.
@@ -43,7 +43,6 @@ DefineCharacter("signy-volsung", { -- Source: C. Scott Littleton, "The Germanic 
 	Type = "unit-teuton-archer",
 	Civilization = "teuton",
 	Faction = "frank-tribe",
---	ProvinceOfOrigin = "?",
 	Father = "volsung"
 	-- wedded to Siggeir
 })
@@ -54,7 +53,6 @@ DefineCharacter("siggeir", { -- Source: C. Scott Littleton, "The Germanic Sword 
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
 	Faction = "frank-tribe",
---	ProvinceOfOrigin = "?",
 	-- comes from the same generation as Signy Volsung
 	-- wedded to Signy
 })
@@ -66,7 +64,6 @@ DefineCharacter("siegmund-volsung", { -- Source: Norman Davies, "Vanished Kingdo
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
 	Faction = "frank-tribe",
---	ProvinceOfOrigin = "?",
 	Father = "volsung"
 })
 
@@ -77,7 +74,7 @@ DefineCharacter("sieglind-hraudung", { -- Source: Norman Davies, "Vanished Kingd
 	Type = "unit-teuton-archer",
 	Civilization = "teuton", -- Norse?
 	Faction = "frank-tribe", -- seems unlikely to be correct
-	ProvinceOfOrigin = "Zealand", -- since he descends from Halfdan the Old of Denmark
+	-- he descends from Halfdan the Old of Denmark
 	Father = "eylimi-othling"
 })
 
@@ -88,7 +85,6 @@ DefineCharacter("sinfiotli-volsung", { -- Source: C. Scott Littleton, "The Germa
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
 	Faction = "frank-tribe",
---	ProvinceOfOrigin = "?",
 	Father = "siegmund-volsung",
 	Mother = "signy-volsung"
 })
@@ -101,7 +97,6 @@ DefineCharacter("svanhild-volsung", { -- Source: Henry Adams Bellows (transl.), 
 	Type = "unit-teuton-archer",
 	Civilization = "teuton",
 	Faction = "frank-tribe",
---	ProvinceOfOrigin = "?",
 --	Father = "siegfried-volsung", -- daughter of Siegfried/Sigurd in the myths
 	Mother = "gudrun"
 })
@@ -123,7 +118,6 @@ DefineCharacter("adalbert", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Civilization = "teuton", -- presumably
 	Faction = "bremen",
 	Deities = {"christian-god"},
-	ProvinceOfOrigin = "Bremen", -- presumably
 	DeathDate = 1075 -- died
 })
 
@@ -133,7 +127,7 @@ DefineCharacter("judith-von-babenberg", { -- Source: James Westfall Thompson, "M
 	Gender = "female",
 	Type = "unit-teuton-priest", -- correct?
 	Civilization = "teuton",
-	ProvinceOfOrigin = "Bavaria" -- her brother was margrave of Nordgau
+	-- her brother was margrave of Nordgau
 	-- was abducted by and married to Duke Břetislav I of Bohemia
 })
 
