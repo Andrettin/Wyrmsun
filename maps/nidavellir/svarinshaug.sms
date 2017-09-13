@@ -1,6 +1,6 @@
 LoadTileModels("scripts/tilesets/swamp.lua")
 
-ApplyMapTemplate("nidavellir", 475, 90)
+ApplyMapTemplate("nidavellir", GetCampaignData("the-first-dwarves", "MapTemplateStartPosX"), GetCampaignData("the-first-dwarves", "MapTemplateStartPosY"))
 
 SetPlayerData(PlayerNumNeutral, "RaceName", "neutral")
 

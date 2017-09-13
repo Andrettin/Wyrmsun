@@ -4,10 +4,8 @@ else
 	LoadTileModels("scripts/tilesets/conifer_forest_autumn.lua")
 end
 
-ApplyMapTemplate("earth", 4728, 850)
+ApplyMapTemplate("earth", GetCampaignData("on-the-vanaquisl", "MapTemplateStartPosX"), GetCampaignData("on-the-vanaquisl", "MapTemplateStartPosY"))
 
 SetPlayerData(PlayerNumNeutral, "RaceName", "neutral")
-
-CreateGoldMines(6, 50000, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, false, false)
 
 CreatePlayers(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1, true, true, false, true, nil, nil, false, true)
