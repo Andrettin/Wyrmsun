@@ -49,9 +49,6 @@ DefineSettlement("azov", {
 		-2999, "unit-germanic-worker", 0, "asa-tribe",
 		-2999, "unit-germanic-warrior", 0, "asa-tribe"
 	},
-	HistoricalHeroes = {
-		-3000, -2999, "voden", "asa-tribe"
-	},
 	Regions = {"eurasia", "europe"}
 })
 

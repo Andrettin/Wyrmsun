@@ -40,6 +40,9 @@ DefineCharacter("modsognir", { -- one of the earliest dwarven leaders
 	Trait = "upgrade-mighty",
 	Date = -3000,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
+	HistoricalLocations = {
+		-3000, "nidavellir", "svarinshaug"
+	},
 	HistoricalTitles = {
 		"head-of-state", -3000, -3000 + 30, "brising-clan"
 	},
@@ -64,6 +67,9 @@ DefineCharacter("durin", {
 	Trait = "upgrade-dextrous",
 	Date = -3000,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
+	HistoricalLocations = {
+		-3000, "nidavellir", "svarinshaug"
+	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Allow", "upgrade-dwarven-runewriting") ~= "R") then -- Durin shouldn't appear in eras with too advanced technology
 			return true

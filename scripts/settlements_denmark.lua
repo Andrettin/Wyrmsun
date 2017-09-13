@@ -112,15 +112,15 @@ DefineSettlement("store-tyrrestrup", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
-DefineSettlement("velje", {
-	Name = "Velje",
+DefineSettlement("vejle", {
+	Name = "Vejle",
 	MapTemplate = "earth",
 	Position = {4058, 779},
 	CulturalNames = {
-		"norse", "Velje"
+		"norse", "Vejle"
 	},
 	HistoricalOwners = {
-		-1600, "jarling-tribe" -- regarding the place of Jarl's dwelling, it should be in a mountainous area, but also near a sound (since in the myth Jarl swam across sounds in his infancy); the lands between Jarl's hall and that of Hersir should contain boggy ground somewhere; Velje's location seems to fit well enough
+		-1600, "jarling-tribe" -- regarding the place of Jarl's dwelling, it should be in a mountainous area, but also near a sound (since in the myth Jarl swam across sounds in his infancy); the lands between Jarl's hall and that of Hersir should contain boggy ground somewhere; Vejle's location seems to fit well enough
 	},
 	HistoricalBuildings = {
 		-1600, -1599, "barracks"

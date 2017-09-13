@@ -81,6 +81,3 @@ SetMapTemplateUnit("earth", "unit-germanic-worker", "thralling-tribe", {4070, 74
 
 -- Strandtved (near Svendborg)
 -- a burial mound was created at Strandtved (near Svendborg) in c. 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 76.
-
--- Vejle
-SetMapTemplateHero("earth", "erala", "jarling-tribe", {4058, 779}, -1600, -1599)

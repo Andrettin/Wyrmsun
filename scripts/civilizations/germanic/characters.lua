@@ -297,13 +297,17 @@ DefineCharacter("voden", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
+	Faction = "asa-tribe",
 	Trait = "upgrade-wise",
 	HairVariation = "gray-hair",
-	Date = -3000 + 12 + (10 * 18),
-	DeathDate = -2800 + (30 * 1), -- with Voden begins a new genealogy, and he can live the standard 30 years
+	Date = -3000,
+	DeathDate = -2800,
 	Father = "friallaf",
+	HistoricalLocations = {
+		-3000, "earth", "azov"
+	},
 	HistoricalTitles = {
-		"head-of-state", -3000 + 12 + (10 * 18), -2800 + (30 * 1), "asa-tribe"
+		"head-of-state", -3000, -2800, "asa-tribe"
 	}
 })
 
@@ -543,7 +547,11 @@ DefineCharacter("erala", {
 	Description = "The young warrior Erala believes his true father to be the god Rig. Feeling that his divine heritage has fated him to rule over vast lands, Erala sets about to carve territory for himself.",
 	Icon = "icon-jarl",
 	HairVariation = "blond-hair",
-	Trait = "upgrade-strong"
+	Trait = "upgrade-strong",
+	Date = -1600,
+	HistoricalLocations = {
+		-1600, "earth", "vejle"
+	}
 })
 
 DefineCharacter("thialfi", { -- Thor's servant in Norse mythology; associated by several scholars with Þieluar, the discoverer of Gotland; Source: "Guta Saga: The History of the Gotlanders", 1999, pp. xvii-xviii, 3.

@@ -34,11 +34,11 @@ DefineCharacter("draupnir", { -- Source: Henry Adams Bellows (transl.), "The Poe
 	Description = "The chieftain of the Goldhoof clan, Draupnir led his people to their new homes in Joruvellir.",
 	Background = "In Norse mythology, Draupnir is the first dwarf mentioned in the ~<Voluspo~> to have migrated from the rocks to Joruvellir. His name means \"dropper\".",
 	Trait = "upgrade-dextrous",
---	Date = -2800,
+	Date = -2800,
 	ForbiddenUpgrades = {"unit-dwarven-gryphon-rider"},
---	HistoricalLocations = {
---		-2800, "nidavellir", {706, 222}
---	},
+	HistoricalLocations = {
+		-2800, "nidavellir", {706, 222}
+	},
 	HistoricalTitles = {
 		"head-of-state", -2800, -2800 + 30, "goldhoof-clan"
 	},
@@ -59,10 +59,10 @@ DefineCharacter("eikinskjaldi", { -- Source: Henry Adams Bellows (transl.), "The
 	Description = "Eikinskjaldi was one of the Goldhoof dwarves who moved from Svarinshaug to Joruvellir under the leadership of Draupnir. His descendants formed their own clan in the desert sands he had moved to.",
 	Background = "In Norse mythology, Eikinskjaldi is one of the dwarves mentioned in the ~<Voluspo~> to have migrated from the rocks to Joruvellir. His name means \"oaken shield\".",
 	Trait = "upgrade-resilient",
---	Date = -2800,
---	HistoricalLocations = {
---		-2800, "nidavellir", {706, 222}
---	},
+	Date = -2800,
+	HistoricalLocations = {
+		-2800, "nidavellir", {706, 222}
+	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "goldhoof-clan" or GetPlayerData(trigger_player, "Faction") == "eikinskjaldi-clan" or GetPlayerData(trigger_player, "Faction") == "joruvellir") then
 			return true
@@ -80,10 +80,10 @@ DefineCharacter("frosti", { -- Source: Henry Adams Bellows (transl.), "The Poeti
 	Description = "Frosti was one of the Goldhoof dwarves who moved from Svarinshaug to Joruvellir under the leadership of Draupnir.",
 	Background = "In Norse mythology, Eikinskjaldi is one of the dwarves mentioned in the ~<Voluspo~> to have migrated from the rocks to Joruvellir.",
 	Trait = "upgrade-resilient",
---	Date = -2800,
---	HistoricalLocations = {
---		-2800, "nidavellir", {706, 222}
---	},
+	Date = -2800,
+	HistoricalLocations = {
+		-2800, "nidavellir", {706, 222}
+	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "goldhoof-clan" or GetPlayerData(trigger_player, "Faction") == "joruvellir") then
 			return true
