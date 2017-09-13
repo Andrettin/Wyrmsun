@@ -73,6 +73,10 @@ DefineMapTemplate("earth", {
 		"dirt", "medium"
 	},
 	GeneratedNeutralUnits = {
+		"unit-diamond-deposit", 1,
+		"unit-gold-deposit", 2,
+		"unit-silver-deposit", 2,
+		"unit-copper-deposit", 2,
 		"unit-tree-stump", 16,
 		"unit-bee", 64,
 		"unit-fly", 64,
