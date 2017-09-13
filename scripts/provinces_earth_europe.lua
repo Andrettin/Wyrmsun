@@ -2098,7 +2098,7 @@ DefineProvince("Lacedaemonia", {
 		"greek", "sparta"
 	},
 	HistoricalSettlementBuildings = {
-		-1700, "unit-teuton-stronghold", true, -- Mycenaean fortifications present in Elliniko and Peristeria (both in the western coast of Messenia) between 1700 and 1200 BC, as well as in Phylakopi (in the island of Melos); Source: "Atlas de História Mundial", 2001, p. 67.
+		-1700, "unit-teuton-stronghold", true, -- Mycenaean fortifications present in Elliniko and Peristeria (both in the western coast of Messenia) between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
 		-1190, "unit-teuton-stronghold", false -- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}

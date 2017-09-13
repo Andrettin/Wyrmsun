@@ -25,26 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineMapTemplate("alfheim", {
-	Name = "Alfheim",
-	World = "alfheim",
-	Width = 984,
-	Height = 728,
-	TerrainImage = "scripts/map_templates/alfheim.png",
-	GeneratedNeutralUnits = {
-		"unit-gold-deposit", 4,
-		"unit-silver-deposit", 4,
-		"unit-copper-deposit", 4,
-		"unit-tree-stump", 16,
-		"unit-unicorn", 32,
-	},
-	PlayerLocationGeneratedNeutralUnits = {
-		"unit-copper-deposit", 1,
-		"unit-wood-pile", 16,
-		"unit-stone-pile", 16
-	}
-})
-
 AlfheimStartX = 728
 AlfheimStartY = 0
 

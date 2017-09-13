@@ -913,7 +913,7 @@ DefineSettlement("sidon", {
 DefineSettlement("tyre", {
 	Name = "Tyre",
 	MapTemplate = "earth",
-	Position = {4642, 1290},
+	Position = {4642, 1291},
 	Major = true,
 	CulturalNames = {
 		"babylonian", "Tyre",

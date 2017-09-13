@@ -25,10 +25,205 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- Notes on Islands: If a building should exist on an island, but the latter is too small (for instance, if it has a single tile), then the building should be left out, unless the building is vitally important (placing it in the island will already automatically move it to the closest shore).
+DefineMapTemplate("alfheim", {
+	Name = "Alfheim",
+	World = "alfheim",
+	Width = 984,
+	Height = 728,
+	TerrainImage = "scripts/map_templates/alfheim.png",
+	GeneratedNeutralUnits = {
+		"unit-gold-deposit", 4,
+		"unit-silver-deposit", 4,
+		"unit-copper-deposit", 4,
+		"unit-tree-stump", 16,
+		"unit-unicorn", 32,
+	},
+	PlayerLocationGeneratedNeutralUnits = {
+		"unit-copper-deposit", 1,
+		"unit-wood-pile", 16,
+		"unit-stone-pile", 16
+	}
+})
 
-Load("scripts/map_templates/alfheim.lua")
-Load("scripts/map_templates/earth.lua")
-Load("scripts/map_templates/jotunheim.lua")
-Load("scripts/map_templates/nidavellir.lua")
-Load("scripts/map_templates/asgard.lua")
+DefineMapTemplate("asgard", {
+	Name = "Asgard",
+	Plane = "asgard",
+	Width = 256,
+	Height = 256,
+	TerrainImage = "scripts/map_templates/asgard.png",
+	TimeOfDaySeconds = 0, -- always day
+	GeneratedNeutralUnits = {
+		"unit-yale", 4,
+		"unit-goat", 8,
+		"unit-horse", 4
+	}
+})
+
+DefineMapTemplate("earth", {
+	Name = "Earth",
+	World = "earth",
+	Width = 8192,
+	Height = 4096,
+--	Scale = 2,
+	TerrainImage = "scripts/map_templates/earth.png",
+	GeneratedTerrains = {
+		"rock", "low",
+--		"limestone-rock", "very-low",
+		"grass", "extremely-high",
+		"dirt", "medium"
+	},
+	GeneratedNeutralUnits = {
+		"unit-tree-stump", 16,
+		"unit-bee", 64,
+		"unit-fly", 64,
+		"unit-bug", 64,
+		"unit-worm", 64,
+		"unit-snail", 64,
+		"unit-slug", 64,
+		"unit-frog", 64,
+		"unit-bird", 64,
+		"unit-crow", 64,
+		"unit-rat", 64,
+		"unit-goat", 32,
+		"unit-boar", 32,
+		"unit-horse", 16,
+		"unit-wolf", 32
+	},
+	PlayerLocationGeneratedNeutralUnits = {
+		"unit-copper-deposit", 1,
+		"unit-wood-pile", 16,
+		"unit-stone-pile", 8
+	}
+})
+
+DefineMapTemplate("jotunheim", {
+	Name = "Jotunheim",
+	World = "jotunheim",
+	Width = 984,
+	Height = 728,
+	TerrainImage = "scripts/map_templates/jotunheim.png",
+	OverlayTerrainImage = "scripts/map_templates/jotunheim_overlay.png",
+	GeneratedNeutralUnits = {
+		"unit-gold-deposit", 4,
+		"unit-silver-deposit", 4,
+		"unit-copper-deposit", 4,
+		"unit-tree-stump", 16
+	},
+	PlayerLocationGeneratedNeutralUnits = {
+		"unit-copper-deposit", 1,
+		"unit-wood-pile", 16,
+		"unit-stone-pile", 16
+	}
+})
+
+DefineMapTemplate("nidavellir", {
+	Name = "Nidavellir",
+	World = "nidavellir",
+	Width = 984,
+	Height = 728,
+	TerrainImage = "scripts/map_templates/nidavellir.png",
+	OverlayTerrainImage = "scripts/map_templates/nidavellir_overlay.png",
+	GeneratedNeutralUnits = {
+		"unit-gold-deposit", 4,
+		"unit-silver-deposit", 4,
+		"unit-copper-deposit", 4,
+		"unit-yale-cave", 8,
+		"unit-diamond-deposit", 1,
+		"unit-tree-stump", 16,
+		"unit-snigill", 64,
+		"unit-slime", 32,
+--		"unit-blood-bat", 16,
+--		"unit-dread-bat", 8,
+--		"unit-gryphon", 8,
+		"unit-wyrm", 4
+	},
+	PlayerLocationGeneratedNeutralUnits = {
+		"unit-copper-deposit", 1,
+		"unit-wood-pile", 16,
+		"unit-stone-pile", 16
+	}
+})
+
+DefineMapTemplate("nidavellir-underground", {
+	Name = "Nidavellir Underground",
+	World = "nidavellir",
+	SurfaceLayer = 1,
+	Width = 984,
+	Height = 728,
+	TerrainImage = "scripts/map_templates/nidavellir_underground.png",
+	OverlayTerrainImage = "scripts/map_templates/nidavellir_underground_overlay.png",
+	GeneratedNeutralUnits = {
+		"unit-gold-deposit", 2,
+		"unit-silver-deposit", 2,
+		"unit-copper-deposit", 2,
+		"unit-wood-pile", 64,
+		"unit-wood-pile", 64,
+		"unit-wood-pile", 64,
+		"unit-wood-pile", 64,
+		"unit-wood-pile", 64,
+		"unit-wood-pile", 64,
+		"unit-wood-pile", 64,
+		"unit-wood-pile", 64,
+		"unit-snigill", 64,
+		"unit-slime", 32,
+		"unit-blood-bat", 16,
+		"unit-dread-bat", 8,
+		"unit-wyrm", 4
+	},
+	PlayerLocationGeneratedNeutralUnits = {
+		"unit-copper-deposit", 1,
+		"unit-wood-pile", 16,
+		"unit-stone-pile", 16
+	}
+})
+
+-- Subtemplates that have subtemplates of their own
+
+DefineMapTemplate("island-of-the-lizard-god", {
+	Name = "Island of the Kobold God",
+	MainTemplate = "nidavellir",
+	TerrainImage = "scripts/map_templates/nidavellir/island_of_the_lizard_god/island_of_the_lizard_god.png",
+	Width = 160,
+	Height = 128,
+	SubtemplatePositionTopLeft = {748, 536},
+	GeneratedNeutralUnits = {
+		"unit-copper-deposit", 4,
+		"unit-tree-stump", 4,
+		"unit-snigill", 16,
+		"unit-slime", 16,
+		"unit-blood-bat", 8,
+		"unit-yale-cave", 2,
+		"unit-dread-bat", 4
+	},
+	PlayerLocationGeneratedNeutralUnits = {
+		"unit-copper-deposit", 1,
+		"unit-wood-pile", 16,
+		"unit-stone-pile", 16
+	}
+})
+
+DefineMapTemplate("island-of-the-lizard-god-underground", {
+	Name = "Island of the Kobold God Underground",
+	MainTemplate = "nidavellir-underground",
+	TerrainImage = "scripts/map_templates/nidavellir/island_of_the_lizard_god/island_of_the_lizard_god_underground.png",
+	OverlayTerrainImage = "scripts/map_templates/nidavellir/island_of_the_lizard_god/island_of_the_lizard_god_underground_overlay.png",
+	Width = 160,
+	Height = 128,
+	SubtemplatePositionTopLeft = {748, 536},
+	GeneratedNeutralUnits = {
+		"unit-copper-deposit", 1,
+		"unit-wood-pile", 32,
+		"unit-wood-pile", 32,
+		"unit-wood-pile", 32,
+		"unit-wood-pile", 32,
+		"unit-wood-pile", 32,
+		"unit-wood-pile", 32,
+		"unit-snigill", 8,
+		"unit-slime", 4
+	},
+	PlayerLocationGeneratedNeutralUnits = {
+		"unit-copper-deposit", 1,
+		"unit-wood-pile", 16,
+		"unit-stone-pile", 16
+	}
+})

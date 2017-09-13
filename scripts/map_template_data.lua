@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2017 by Andrettin
+--      (c) Copyright 2016-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,5 +25,10 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-JotunheimStartX = 0
-JotunheimStartY = 0
+-- Notes on Islands: If a building should exist on an island, but the latter is too small (for instance, if it has a single tile), then the building should be left out, unless the building is vitally important (placing it in the island will already automatically move it to the closest shore).
+
+Load("scripts/map_templates/alfheim.lua")
+Load("scripts/map_templates/earth.lua")
+Load("scripts/map_templates/jotunheim.lua")
+Load("scripts/map_templates/nidavellir.lua")
+Load("scripts/map_templates/asgard.lua")

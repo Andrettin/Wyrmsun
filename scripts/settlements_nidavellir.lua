@@ -81,7 +81,7 @@ DefineSettlement("dreadskull", { -- Dreadskull tribe settlement site; this is th
 
 DefineSettlement("driftwood", { -- from Will Doyle's "Island of the Lizard God"
 	Name = "Driftwood",
-	MapTemplate = "island-of-the-lizard-god-underground",
+	MapTemplate = "island-of-the-lizard-god",
 	Position = {59, 117},
 	Major = true,
 	CulturalNames = {
@@ -138,8 +138,8 @@ DefineSettlement("joruvellir", { -- Joruvellir settlement site; Joruvellir is a 
 
 DefineSettlement("khag", { -- Khag tribe settlement site; this is the name of a tribe rather than a settlement, but we have no name for a settlement there yet
 	Name = "Khag",
-	MapTemplate = "heartfangs-foothills",
-	Position = {19, 30},
+	MapTemplate = "nidavellir",
+	Position = {243, 218},
 	Major = true,
 	CulturalNames = {
 		"goblin", "Khag"

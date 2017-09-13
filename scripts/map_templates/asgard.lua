@@ -25,20 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineMapTemplate("asgard", {
-	Name = "Asgard",
-	Plane = "asgard",
-	Width = 256,
-	Height = 256,
-	TerrainImage = "scripts/map_templates/asgard.png",
-	TimeOfDaySeconds = 0, -- always day
-	GeneratedNeutralUnits = {
-		"unit-yale", 4,
-		"unit-goat", 8,
-		"unit-horse", 4
-	}
-})
-
 SetMapTemplateHero("asgard", "odin", "asgard", {-1, -1})
 SetMapTemplateHero("asgard", "kvasir", "asgard", {-1, -1})
 

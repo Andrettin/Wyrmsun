@@ -25,67 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineMapTemplate("nidavellir", {
-	Name = "Nidavellir",
-	World = "nidavellir",
-	Width = 984,
-	Height = 728,
-	TerrainImage = "scripts/map_templates/nidavellir.png",
-	OverlayTerrainImage = "scripts/map_templates/nidavellir_overlay.png",
-	GeneratedNeutralUnits = {
-		"unit-gold-deposit", 4,
-		"unit-silver-deposit", 4,
-		"unit-copper-deposit", 4,
-		"unit-yale-cave", 8,
-		"unit-diamond-deposit", 1,
-		"unit-tree-stump", 16,
-		"unit-snigill", 64,
-		"unit-slime", 32,
---		"unit-blood-bat", 16,
---		"unit-dread-bat", 8,
---		"unit-gryphon", 8,
-		"unit-wyrm", 4
-	},
-	PlayerLocationGeneratedNeutralUnits = {
-		"unit-copper-deposit", 1,
-		"unit-wood-pile", 16,
-		"unit-stone-pile", 16
-	}
-})
-
-DefineMapTemplate("nidavellir-underground", {
-	Name = "Nidavellir Underground",
-	World = "nidavellir",
-	SurfaceLayer = 1,
-	Width = 984,
-	Height = 728,
-	TerrainImage = "scripts/map_templates/nidavellir_underground.png",
-	OverlayTerrainImage = "scripts/map_templates/nidavellir_underground_overlay.png",
-	GeneratedNeutralUnits = {
-		"unit-gold-deposit", 2,
-		"unit-silver-deposit", 2,
-		"unit-copper-deposit", 2,
-		"unit-wood-pile", 64,
-		"unit-wood-pile", 64,
-		"unit-wood-pile", 64,
-		"unit-wood-pile", 64,
-		"unit-wood-pile", 64,
-		"unit-wood-pile", 64,
-		"unit-wood-pile", 64,
-		"unit-wood-pile", 64,
-		"unit-snigill", 64,
-		"unit-slime", 32,
-		"unit-blood-bat", 16,
-		"unit-dread-bat", 8,
-		"unit-wyrm", 4
-	},
-	PlayerLocationGeneratedNeutralUnits = {
-		"unit-copper-deposit", 1,
-		"unit-wood-pile", 16,
-		"unit-stone-pile", 16
-	}
-})
-
 --SetMapTemplateUnit("nidavellir-underground", "unit-dwarven-town-hall", "shadowcharm-clan", {-1, -1})
 --SetMapTemplateHero("nidavellir-underground", "fjalar", "shadowcharm-clan", {-1, -1}, -2800, -2799) -- Fjalar's and Galar's campaign begins in 2800 BC
 --SetMapTemplateHero("nidavellir-underground", "galar", "shadowcharm-clan", {-1, -1}, -2800, -2799)
@@ -170,7 +109,6 @@ Load("scripts/map_templates/nidavellir/east_gate_of_knalga.lua")
 Load("scripts/map_templates/nidavellir/forbidden_forest.lua")
 Load("scripts/map_templates/nidavellir/goblin_bridge.lua")
 Load("scripts/map_templates/nidavellir/gryphon_mountain.lua")
-Load("scripts/map_templates/nidavellir/heartfangs_foothills.lua")
 Load("scripts/map_templates/nidavellir/high_pass.lua")
 Load("scripts/map_templates/nidavellir/highbrook_pass.lua")
 Load("scripts/map_templates/nidavellir/joruvellir.lua")

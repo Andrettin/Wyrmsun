@@ -96,7 +96,7 @@ DefineSettlement("argos", {
 DefineSettlement("athens", {
 	Name = "Athens",
 	MapTemplate = "earth",
-	Position = {4380, 1184},
+	Position = {4380, 1183},
 	Major = true,
 	CulturalNames = {
 		"greek", "Athens", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -141,7 +141,7 @@ DefineSettlement("byzantium", {
 DefineSettlement("corinth", {
 	Name = "Corinth",
 	MapTemplate = "earth",
-	Position = {4360, 1185},
+	Position = {4360, 1186},
 	Major = true,
 	CulturalNames = {
 		"greek", "Corinth"
@@ -326,7 +326,7 @@ DefineSettlement("itanus", {
 DefineSettlement("knossos", {
 	Name = "Knossos",
 	MapTemplate = "earth",
-	Position = {4410, 1244},
+	Position = {4410, 1245},
 	Major = true,
 	CulturalNames = {
 		"greek", "Knossos",
@@ -403,6 +403,25 @@ DefineSettlement("pagasae", {
 	},
 	HistoricalBuildings = {
 		-1450, 0, "farm"
+	},
+	Regions = {"europe", "greece", "west-and-central-europe"}
+})
+
+DefineSettlement("phylakopi", {
+	Name = "Phylakopi",
+	MapTemplate = "earth",
+	Position = {4396, 1212},
+	CulturalNames = {
+		"greek", "Phylakopi"
+	},
+	HistoricalOwners = {
+		-1700, "mycenae",
+		-1190, ""
+	},
+	HistoricalBuildings = {
+		-1700, -1190, "guard-tower" -- Mycenaean fortifications present in Phylakopi (in the island of Melos) between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
+		-- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
+		
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
