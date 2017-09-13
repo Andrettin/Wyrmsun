@@ -83,6 +83,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - Added 1200 as a possible resolution height.
+- Fixed an issue which could cause a crash with saved games.
 
 * Scenarios
 - The "On the Vanaquisl" quest has been moved to the Scenario mode as its own scenario.
