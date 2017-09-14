@@ -45,6 +45,27 @@ DefineSettlement("augsburg", {
 	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
 
+DefineSettlement("berlin", {
+	Name = "Berlin",
+	MapTemplate = "earth",
+	Position = {4145, 853},
+	Major = true,
+	CulturalNames = {
+		"teuton", "Berlin"
+	},
+	Cores = {
+		"semnone-tribe",
+		"suebi-tribe"
+	},
+	HistoricalOwners = {
+		-264, "semnone-tribe" -- Berlin's area was territory of the Sueves/Semnones between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	},
+	HistoricalBuildings = {
+		-264, 0, "town-hall"
+	},
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+})
+
 DefineSettlement("bernstorf", { -- Bernstorf, Bavaria
 	Name = "Bernstorf",
 	MapTemplate = "earth",
@@ -288,7 +309,7 @@ DefineSettlement("lubeck", {
 		"saxon-tribe"
 	},
 	HistoricalOwners = {
-		-264, "saxon-tribe" -- Kiel's area was territory of the Saxons between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		-264, "saxon-tribe" -- Lübeck's area was territory of the Saxons between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	},
 	HistoricalBuildings = {
 		-264, 0, "town-hall"
