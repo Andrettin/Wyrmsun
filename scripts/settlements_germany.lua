@@ -58,7 +58,7 @@ DefineSettlement("berlin", {
 		"suebi-tribe"
 	},
 	HistoricalOwners = {
-		-264, "semnone-tribe" -- Berlin's area was territory of the Sueves/Semnones between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		-264, "semnone-tribe" -- Berlin's area was territory of the Sueves/Semnones in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	},
 	HistoricalBuildings = {
 		-264, 0, "town-hall"
@@ -233,6 +233,26 @@ DefineSettlement("fulda", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
+DefineSettlement("hanover", {
+	Name = "Hanover",
+	MapTemplate = "earth",
+	Position = {4063, 855},
+	Major = true,
+	CulturalNames = {
+		"teuton", "Hanover"
+	},
+	Cores = {
+		"lombard-tribe"
+	},
+	HistoricalOwners = {
+		-264, "lombard-tribe" -- Hanover's area was territory of the Lombards in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	},
+	HistoricalBuildings = {
+		-264, 0, "town-hall"
+	},
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+})
+
 DefineSettlement("kiel", {
 	Name = "Kiel",
 	MapTemplate = "earth",
@@ -247,7 +267,7 @@ DefineSettlement("kiel", {
 	},
 	HistoricalOwners = {
 		-1600, "hersing-tribe", -- Hersir's tribe, from the Norse myth of Rig; in the myths, there was a boggy ground between Jarl's hall and that of Hersir
-		-264, "teuton-tribe", -- Kiel's area was territory of the Teutones between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		-264, "teuton-tribe", -- Kiel's area was territory of the Teutones in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1815, "denmark" -- Kiel was a possession of the Kingdom of Denmark in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
@@ -309,7 +329,7 @@ DefineSettlement("lubeck", {
 		"saxon-tribe"
 	},
 	HistoricalOwners = {
-		-264, "saxon-tribe" -- Lübeck's area was territory of the Saxons between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		-264, "saxon-tribe" -- Lübeck's area was territory of the Saxons in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	},
 	HistoricalBuildings = {
 		-264, 0, "town-hall"
