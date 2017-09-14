@@ -1707,7 +1707,7 @@ DefineProvince("Gwynedd", { -- also includes Clwyd
 DefineProvince("Hanover", {
 	World = "earth",
 	CulturalNames = {
-		"teuton", "Hannover" -- is this a settlement-derived name?
+		"teuton", "Hannover"
 	},
 	SettlementLocation = {507, 107}, -- Hanover
 	Claims = {
@@ -1879,7 +1879,7 @@ DefineProvince("Holland", {
 DefineProvince("Holstein", {
 	World = "earth",
 	CulturalNames = {
-		"teuton", "Holstein" -- is this a settlement-derived name?
+		"teuton", "Holstein"
 	},
 	SettlementLocation = {508, 101}, -- Kiel
 	Claims = {
@@ -3478,7 +3478,7 @@ DefineProvince("Scania", {
 DefineProvince("Schleswig", {
 	World = "earth",
 	CulturalNames = {
-		"teuton", "Schleswig" -- is this a settlement-derived name?
+		"teuton", "Schleswig"
 	},
 	SettlementLocation = {506, 100}, -- Flensburg
 	Claims = {
@@ -4422,7 +4422,7 @@ DefineProvince("White Russia", {
 DefineProvince("Wurtemberg", {
 	World = "earth",
 	CulturalNames = {
-		"teuton", "Württemberg" -- is this a settlement-derived name?
+		"teuton", "Württemberg"
 	},
 	SettlementLocation = {506, 117}, -- Stuttgart
 	Claims = {

@@ -221,14 +221,16 @@ DefineSettlement("kiel", {
 		"teuton", "Kiel"
 	},
 	Cores = {
-		"hersing-tribe"
+		"hersing-tribe",
+		"teuton-tribe"
 	},
 	HistoricalOwners = {
 		-1600, "hersing-tribe", -- Hersir's tribe, from the Norse myth of Rig; in the myths, there was a boggy ground between Jarl's hall and that of Hersir
+		-264, "teuton-tribe", -- Kiel's area was territory of the Teutones between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1815, "denmark" -- Kiel was a possession of the Kingdom of Denmark in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		-1600, 1815, "town-hall",
+		-1600, 0, "town-hall",
 		-1600, 1815, "farm",
 		-1600, 1815, "farm",
 		-1600, 1815, "farm",
@@ -236,8 +238,7 @@ DefineSettlement("kiel", {
 		-1600, 1815, "smithy",
 		-1600, 1815, "lumber-mill",
 		-1600, 1815, "watch-tower",
-		-1600, 1815, "watch-tower",
-		1815, 0, "town-hall"
+		-1600, 1815, "watch-tower"
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
@@ -271,6 +272,26 @@ DefineSettlement("konstanz", {
 	},
 	HistoricalBuildings = {
 		561, 0, "farm"
+	},
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+})
+
+DefineSettlement("lubeck", {
+	Name = "Lubeck",
+	MapTemplate = "earth",
+	Position = {4083, 821},
+	Major = true,
+	CulturalNames = {
+		"teuton", "Lubeck" -- "Lübeck"
+	},
+	Cores = {
+		"saxon-tribe"
+	},
+	HistoricalOwners = {
+		-264, "saxon-tribe" -- Kiel's area was territory of the Saxons between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	},
+	HistoricalBuildings = {
+		-264, 0, "town-hall"
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
