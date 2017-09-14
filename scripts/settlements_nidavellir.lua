@@ -33,6 +33,10 @@ DefineSettlement("acthna", {
 	CulturalNames = {
 		"gnome", "Acthna"
 	},
+	Cores = {
+		"acthnic-tribe",
+		"acthna"
+	},
 	HistoricalOwners = {
 		-3000, "acthnic-tribe", -- maybe should be later?
 		1, "acthna" -- maybe should be at another date?
@@ -51,6 +55,10 @@ DefineSettlement("aurvang", { -- Aurvang settlement site; Aurvang is a region ra
 	CulturalNames = {
 		"dwarf", "Aurvang",
 		"goblin", "Aurvang"
+	},
+	Cores = {
+		"aurvangling-tribe",
+		"aurvang"
 	},
 	HistoricalOwners = {
 		-3000, "aurvangling-tribe"
@@ -87,6 +95,9 @@ DefineSettlement("driftwood", { -- from Will Doyle's "Island of the Lizard God"
 	CulturalNames = {
 		"goblin", "Driftwood" -- in the original, it is a town run by a cartel of intelligent apes
 	},
+	Cores = {
+		"driftwood"
+	},
 	HistoricalOwners = {
 		600, "driftwood"
 	},
@@ -115,6 +126,9 @@ DefineSettlement("gnana", { -- capital of Untersberg; Source: Franz Hartmann, "A
 	CulturalNames = {
 		"gnome", "Gnana"
 	},
+	Cores = {
+		"untersberg"
+	},
 	HistoricalOwners = {
 		-3000, "sagan-tribe", -- maybe should be later?
 		1, "untersberg" -- maybe should be at another date?
@@ -132,6 +146,9 @@ DefineSettlement("joruvellir", { -- Joruvellir settlement site; Joruvellir is a 
 	Major = true,
 	CulturalNames = {
 		"dwarf", "Joruvellir"
+	},
+	Cores = {
+		"joruvellir"
 	},
 	Regions = {}
 })
@@ -177,6 +194,9 @@ DefineSettlement("shorbear-hold", { -- From Battle for Wesnoth: The Sceptre of F
 	Major = true,
 	CulturalNames = {
 		"dwarf", "Shorbear Hold"
+	},
+	Cores = {
+		"shorbear-clan"
 	},
 	HistoricalOwners = {
 		24, "shorbear-clan",

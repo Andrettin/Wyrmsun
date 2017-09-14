@@ -79,6 +79,9 @@ DefineSettlement("prague", {
 		"suebi", "Bubienum", -- name of the Marcomannic capital; also known as Marobudum; either located where modern Prague or Budweis are; Source: Frederick Kohlrausch, "A History of Germany", 1844, p. 57.
 		"teuton", "Prague"
 	},
+	Cores = {
+		"marcomanni-tribe"
+	},
 	HistoricalOwners = {
 		-9, "marcomanni-tribe", -- Marbod, king of the Suebic tribe of the Marcomanni, conquered Bohemia in 9 BC
 		526, "bavarian-tribe", -- Bohemia was in Bavarian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.

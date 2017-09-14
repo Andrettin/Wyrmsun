@@ -167,6 +167,9 @@ DefineSettlement("flensburg", {
 	CulturalNames = {
 		"teuton", "Flensburg"
 	},
+	Cores = {
+		"angle-tribe"
+	},
 	HistoricalOwners = {
 		-264, "angle-tribe", -- tribes in Europe between 264 BC and 180 AD (Schleswig was inhabited by the Angles); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1815, "denmark" -- Flensburg was a possession of the Kingdom of Denmark in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
@@ -216,6 +219,9 @@ DefineSettlement("kiel", {
 	Major = true,
 	CulturalNames = {
 		"teuton", "Kiel"
+	},
+	Cores = {
+		"hersing-tribe"
 	},
 	HistoricalOwners = {
 		-1600, "hersing-tribe", -- Hersir's tribe, from the Norse myth of Rig; in the myths, there was a boggy ground between Jarl's hall and that of Hersir

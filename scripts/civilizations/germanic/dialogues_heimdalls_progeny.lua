@@ -110,6 +110,15 @@ DefineDialogue("thrallings-subjugated", {
 				function(s)
 					local uncount = GetUnits(GetFactionPlayer("thralling-tribe"))
 					for unit1 = 1,table.getn(uncount) do
+						-- stop Eraling units from attacking the unit
+						local nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 4, true)
+						for unit2 = 1,table.getn(nearby_uncount) do 
+							if (GetUnitVariable(nearby_uncount[unit2], "Player") == trigger_player) then
+								OrderUnit(trigger_player, GetUnitVariable(nearby_uncount[unit2], "Ident"), {GetUnitVariable(nearby_uncount[unit2], "PosX"), GetUnitVariable(nearby_uncount[unit2], "PosY")}, nil, "stop")
+							end
+						end
+						
+						-- change the unit's owner to the Eraling Tribe
 						ChangeUnitOwner(uncount[unit1], trigger_player)
 						OrderUnit(trigger_player, GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, nil, "stop")
 						if (GetUnitVariable(uncount[unit1], "Ident") ~= GetFactionClassUnitType(GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class"), GetPlayerData(trigger_player, "Faction"))) then
@@ -201,6 +210,15 @@ DefineDialogue("karlings-subjugated", {
 				function(s)
 					local uncount = GetUnits(GetFactionPlayer("karling-tribe"))
 					for unit1 = 1,table.getn(uncount) do
+						-- stop Eraling units from attacking the unit
+						local nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 4, true)
+						for unit2 = 1,table.getn(nearby_uncount) do 
+							if (GetUnitVariable(nearby_uncount[unit2], "Player") == trigger_player) then
+								OrderUnit(trigger_player, GetUnitVariable(nearby_uncount[unit2], "Ident"), {GetUnitVariable(nearby_uncount[unit2], "PosX"), GetUnitVariable(nearby_uncount[unit2], "PosY")}, nil, "stop")
+							end
+						end
+						
+						-- change the unit's owner to the Eraling Tribe
 						ChangeUnitOwner(uncount[unit1], trigger_player)
 						OrderUnit(trigger_player, GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, nil, "stop")
 						if (GetUnitVariable(uncount[unit1], "Ident") ~= GetFactionClassUnitType(GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class"), GetPlayerData(trigger_player, "Faction"))) then

@@ -2331,6 +2331,15 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {FactionUpgrade = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(_("Faction Bonus: "), UpgradeEffectsString("Upgrade")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Margin = {1, 1}, Condition = {FactionUpgrade = "only", FactionUpgradeCoreSettlements = "only"}, 
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {FactionUpgrade = "only", FactionUpgradeCoreSettlements = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = _("Required Settlements:"), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {FactionUpgrade = "only", FactionUpgradeCoreSettlements = "only"}, HighlightColor = "gray",
+					More = {"Text", {Text = FactionUpgradeCoreSettlements("Upgrade"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				-- AutoCast Tooltip
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "cast-spell", AutoCast = "only"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
