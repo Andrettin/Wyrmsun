@@ -289,7 +289,7 @@ DefineSpell("spell-acthnic-allegiance",
 	"condition", {
 		"organic", "only",
 		"Building", "false",
-		"faction-equivalent", "gnome", "acthnic-tribe"
+		"faction-equivalent", "acthnic-tribe"
 	},
 	"action", {
 		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
@@ -404,7 +404,7 @@ DefineSpell("spell-joruvellir-allegiance",
 	"condition", {
 		"organic", "only",
 		"Building", "false",
-		"faction-equivalent", "dwarf", "goldhoof-clan"
+		"faction-equivalent", "goldhoof-clan"
 	},
 	"action", {
 		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},

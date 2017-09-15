@@ -494,18 +494,6 @@ function EndTurn()
 		end
 	end
 	
-	-- research technologies
-
-	for key, value in pairs(WorldMapProvinces) do
-		-- effect attacks
-		if (GetProvinceAttackedBy(WorldMapProvinces[key].Name) ~= "") then
-			AttackProvince(WorldMapProvinces[key], GetProvinceAttackedBy(WorldMapProvinces[key].Name))
-			SetProvinceAttackedBy(WorldMapProvinces[key].Name, "", "")
-		end
-	end
-
-	DoProspection()
-	
 	GrandStrategyMonth = GrandStrategyMonth + MonthsPerTurn;
 	if (GrandStrategyMonth >= 12) then
 		GrandStrategyMonth = 0;
@@ -585,282 +573,6 @@ function EndTurn()
 	ProcessingEndTurn = false
 end
 
-function AttackProvince(province, faction)
-	MapAttacker = nil
-	MapDefender = nil
-	if (province == nil or faction == nil or faction == "") then
-		return
-	end
-	GetMapInfo(GetProvinceData(province.Name, "Map"))
-	Attacker = faction
-	local empty_province = false
-	if (GetProvinceOwner(province.Name) ~= "") then
-		Defender = GetProvinceOwner(province.Name)
-	else
-		Defender = GetProvinceName(province) .. " Province"
-		empty_province = true
-	end
-	local revolt = false
-	if (empty_province == false and GetFactionProvinceCount(GetFactionFromName(Attacker)) == 0 and GetFactionDiplomacyState(GetFactionFromName(Attacker).Civilization, Attacker, GetFactionFromName(Defender).Civilization, Defender) == "peace") then -- if the attacker doesn't own any provinces, then this must be a revolt
-		revolt = true
-	end
-	AttackedProvince = province
-	
-	local victorious_player = ""
-	
-	local attacker_prestige = math.floor(10 * GetProvinceMilitaryScore(province.Name, false, true) / GetProvinceMilitaryScore(province.Name, true, true)) -- 10 prestige if military scores are equal
-	local defender_prestige = math.floor(10 * GetProvinceMilitaryScore(province.Name, true, true) / GetProvinceMilitaryScore(province.Name, false, true)) -- 10 prestige if military scores are equal
-	
-	local units_lost = {}
-	for i, unitName in ipairs(Units) do
-		if (IsMilitaryUnit(unitName)) then
-			if (GrandStrategyFaction.Name == Attacker) then
-				units_lost[string.gsub(unitName, "-", "_")] = GetProvinceAttackingUnitQuantity(province.Name, unitName)
-			elseif (GrandStrategyFaction.Name == Defender) then
-				units_lost[string.gsub(unitName, "-", "_")] = GetProvinceUnitQuantity(province.Name, unitName)
-			end
-		end
-	end
-
-	if (GrandStrategyFaction ~= nil and (Attacker == GrandStrategyFaction.Name or Defender == GrandStrategyFaction.Name) and wyr.preferences.AutomaticBattles == false) then -- if the human player is involved and automatic battles is deactivated, run a RTS battle map, and if not autoresolve the battle
-		if (MapAttacker ~= nil and MapDefender ~= nil) then
-			for k=1,mapinfo.nplayers do
-				if (k == MapAttacker + 1) then
-					if (Defender == GrandStrategyFaction.Name) then
-						GameSettings.Presets[k-1].Type = PlayerComputer
-					end
-				elseif (k == MapDefender + 1) then
-					if (Attacker == GrandStrategyFaction.Name) then
-						GameSettings.Presets[k-1].Type = PlayerComputer
-					end
-				else
-					GameSettings.Presets[k-1].Type = PlayerNobody
-				end
-			end
-		else
-			local person_player_found = false
-			local computer_player_found = false
-			for k=1,mapinfo.nplayers do
-				if (mapinfo.playertypes[k] == "person" and person_player_found == false) then
-					person_player_found = true
-				elseif (mapinfo.playertypes[k] == "person" and person_player_found == true and computer_player_found == false) then
-					GameSettings.Presets[k-1].Type = PlayerComputer
-					computer_player_found = true
-				elseif (mapinfo.playertypes[k] == "computer" and computer_player_found == false) then
-					computer_player_found = true
-				elseif (mapinfo.playertypes[k] == "person" or mapinfo.playertypes[k] == "computer") then
-					GameSettings.Presets[k-1].Type = PlayerNobody
-				end
-			end
-		end
-		GrandStrategyBattle = true
-		RunMap(GetProvinceData(province.Name, "Map"))
-
-		if (GameResult == GameVictory) then
-			victorious_player = GrandStrategyFaction.Name
-		elseif (Attacker == GrandStrategyFaction.Name) then
-			victorious_player = Defender
-		elseif (Defender == GrandStrategyFaction.Name) then
-			victorious_player = Attacker
-		end
-		local victorious_player_name = ""
-		if (GetFactionFromName(victorious_player) ~= nil) then
-			victorious_player_name = GetFactionData(victorious_player, "Name")
-		else
-			victorious_player_name = victorious_player
-		end
-		-- set the new unit quantity to the surviving units of the victorious side
-		for i, unitName in ipairs(Units) do
-			if (IsOffensiveMilitaryUnit(unitName)) then
-				SetProvinceUnitQuantity(province.Name, unitName, math.ceil(GetPlayerData(GetFactionPlayer(victorious_player_name), "UnitTypesStartingNonHeroCount", unitName) / BattalionMultiplier))
-			end
-		end
-		
-		local grand_strategy_heroes = GetGrandStrategyHeroes()
-		local victorious_player_heroes = GetPlayerData(GetFactionPlayer(victorious_player_name), "Heroes")
-		for i = 1, table.getn(grand_strategy_heroes) do
-			if (GetProvinceHero(province.Name, grand_strategy_heroes[i]) ~= 0 and GetProvinceHero(province.Name, grand_strategy_heroes[i]) ~= 4) then
-				if (GetArrayIncludes(victorious_player_heroes, grand_strategy_heroes[i])) then
-					SetProvinceHero(province.Name, grand_strategy_heroes[i], 2)
-				else
-					SetProvinceHero(province.Name, grand_strategy_heroes[i], 0)
-				end
-			end
-		end
-		
-		GrandStrategyBattle = false
-	else
-		local attacker_military_score = GetProvinceMilitaryScore(province.Name, true, true)
-		local defender_military_score = GetProvinceMilitaryScore(province.Name, false, true)
-		if (attacker_military_score > defender_military_score) then -- if military score is the same, then defenders win
-			victorious_player = Attacker
-			for i, unitName in ipairs(Units) do
-				if (IsOffensiveMilitaryUnit(unitName)) then
-					SetProvinceUnitQuantity(province.Name, unitName, round(GetProvinceAttackingUnitQuantity(province.Name, unitName) * (attacker_military_score - defender_military_score) / attacker_military_score)) -- formula for calculating units belonging to the victorious player that were killed
-				end
-			end
-			
-			local grand_strategy_heroes = GetGrandStrategyHeroes()
-			for i = 1, table.getn(grand_strategy_heroes) do -- kill off defending heroes if the attacking player was the victorious one
-				if (GetProvinceHero(province.Name, grand_strategy_heroes[i]) == 2) then
-					SetProvinceHero(province.Name, grand_strategy_heroes[i], 0)
-				elseif (GetProvinceHero(province.Name, grand_strategy_heroes[i]) == 3) then
-					SetProvinceHero(province.Name, grand_strategy_heroes[i], 2)
-				end
-			end
-		else
-			victorious_player = Defender
-			for i, unitName in ipairs(Units) do
-				if (IsOffensiveMilitaryUnit(unitName)) then
-					SetProvinceUnitQuantity(province.Name, unitName, round(
-						GetProvinceUnitQuantity(province.Name, unitName)
-						* (defender_military_score - attacker_military_score)
-						/ defender_military_score
-					))
-				end
-			
-				local grand_strategy_heroes = GetGrandStrategyHeroes()
-				for i = 1, table.getn(grand_strategy_heroes) do -- kill off attacking heroes if the defending player was the victorious one
-					if (GetProvinceHero(province.Name, grand_strategy_heroes[i]) == 3) then
-						SetProvinceHero(province.Name, grand_strategy_heroes[i], 0)
-					end
-				end
-			end
-		end
-	end
-
-	for i, unitName in ipairs(Units) do
-		if (IsMilitaryUnit(unitName)) then
-			if (victorious_player == GrandStrategyFaction.Name) then
-				units_lost[string.gsub(unitName, "-", "_")] = units_lost[string.gsub(unitName, "-", "_")] - GetProvinceUnitQuantity(province.Name, unitName)
-			end
-		end
-	end
-	
-	local units_lost_string = "None"
-	local first_unit = true
-	for i, unitName in ipairs(Units) do
-		if (IsMilitaryUnit(unitName)) then
-			if (units_lost[string.gsub(unitName, "-", "_")] ~= nil and units_lost[string.gsub(unitName, "-", "_")] > 0) then
-				if not (first_unit) then
-					units_lost_string = units_lost_string .. ", "
-				else
-					first_unit = false
-					units_lost_string = ""
-				end
-				units_lost_string = units_lost_string .. units_lost[string.gsub(unitName, "-", "_")] .. " "
-				if (units_lost[string.gsub(unitName, "-", "_")] > 1) then
-					units_lost_string = units_lost_string .. GetUnitTypeData(unitName, "NamePlural")
-				else
-					units_lost_string = units_lost_string .. GetUnitTypeName(unitName)
-				end
-			end
-		end
-	end
-	
-	if (victorious_player == Attacker) then
-		local migration = empty_province and GetFactionProvinceCount(GetFactionFromName(Attacker)) == 1 and GetFactionData(GetFactionFromName(Attacker).Name, "Type") == "tribe"
-		AcquireProvince(province, victorious_player)
-		if (migration) then
-			for province_i, province_key in ipairs(GetFactionFromName(Attacker).OwnedProvinces) do
-				for i, unitName in ipairs(Units) do
-					if (string.find(unitName, "upgrade-") == nil) then
-						if (GetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName) > 1) then
-							local quantity_to_move = GetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName)
-							if (GetUnitTypeData(unitName, "Class") == "worker") then
-								quantity_to_move = quantity_to_move - 1
-							end
-							ChangeProvinceUnitQuantity(province.Name, unitName, quantity_to_move)
-							ChangeProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName, - quantity_to_move)
-						elseif (IsGrandStrategyBuilding(unitName) and GetProvinceSettlementBuilding(WorldMapProvinces[province_key].Name, unitName)) then
-							SetProvinceSettlementBuilding(province.Name, unitName, true)
-						end
-					end
-				end
-				local grand_strategy_heroes = GetGrandStrategyHeroes()
-				for i = 1, table.getn(grand_strategy_heroes) do -- kill off attacking heroes if the defending player was the victorious one
-					if (GetProvinceHero(WorldMapProvinces[province_key].Name, grand_strategy_heroes[i]) ~= 0) then
-						SetProvinceHero(province.Name, grand_strategy_heroes[i], GetProvinceHero(WorldMapProvinces[province_key].Name, grand_strategy_heroes[i]))
-					end
-				end
-				SetProvinceCivilization(province.Name, GetFactionFromName(Attacker).Civilization)
-				AcquireProvince(WorldMapProvinces[province_key], "")
-			end
-		end
-		
-		if (GrandStrategyFaction ~= nil and SelectedProvince == province) then
-			if (Attacker == GrandStrategyFaction.Name) then -- this is here to make it so the right interface state happens if the province is selected (a conquered province that is selected will have the interface state switched from diplomacy to province)
-				GrandStrategyInterfaceState = "Province"
-			elseif (Defender == GrandStrategyFaction.Name) then -- this is here to make it so the right interface state happens if the province is selected (a lost province that is selected will have the interface state switched from province to diplomacy)
-				GrandStrategyInterfaceState = "Diplomacy"
-			end
-		end
-		ChangeFactionResource(GetFactionFromName(Attacker).Civilization, GetFactionFromName(Attacker).Name, "prestige", attacker_prestige + 5) -- plus five for acquiring the territory
-		if (empty_province == false) then
-			ChangeFactionResource(GetFactionFromName(Defender).Civilization, GetFactionFromName(Defender).Name, "prestige", - attacker_prestige - 5) -- minus five for losing the territory
-			
-			if (revolt) then
-				SetFactionDiplomacyState(GetFactionFromName(Attacker).Civilization, Attacker, GetFactionFromName(Defender).Civilization, Defender, "war")
-				AcquireFactionTechnologies(GetFactionFromName(Defender).Civilization, GetFactionFromName(Defender).Name, GetFactionFromName(Attacker).Civilization, GetFactionFromName(Attacker).Name)
-			end
-		end
-	else
-		if (empty_province == false) then
-			ChangeFactionResource(GetFactionFromName(Defender).Civilization, GetFactionFromName(Defender).Name, "prestige", defender_prestige)
-		end
-		ChangeFactionResource(GetFactionFromName(Attacker).Civilization, GetFactionFromName(Attacker).Name, "prestige", - defender_prestige)
-	end
-				
-	for i, unitName in ipairs(Units) do
-		if (IsMilitaryUnit(unitName)) then
-			SetProvinceAttackingUnitQuantity(province.Name, unitName, 0)
-		end
-	end
-	if (empty_province == false and GetFactionProvinceCount(GetFactionFromName(Defender)) == 0) then
-		local defender_faction_key = GetFactionKeyFromName(Defender)
-		for key, value in pairs(Factions) do -- if the defender lost his last province, end wars between him and other factions
-			SetFactionDiplomacyState(Factions[key].Civilization, Factions[key].Name, Factions[defender_faction_key].Civilization, Factions[defender_faction_key].Name, "peace")
-			SetFactionDiplomacyStateProposal(Factions[key].Civilization, Factions[key].Name, Factions[defender_faction_key].Civilization, Factions[defender_faction_key].Name, "")
-		end
-		SetFactionCommodityTrade(Factions[defender_faction_key].Civilization, Factions[defender_faction_key].Name, "lumber", 0) -- remove offers and bids from the eliminated faction
-		SetFactionCommodityTrade(Factions[defender_faction_key].Civilization, Factions[defender_faction_key].Name, "stone", 0) -- remove offers and bids from the eliminated faction
-	end
-
-	if ((Attacker == GrandStrategyFaction.Name or Defender == GrandStrategyFaction.Name) and wyr.preferences.AutomaticBattles) then -- show a battle report if the player was involved in the battle, and has automatic battles activated
-		local battle_report_title = "Battle in " .. GetProvinceName(AttackedProvince)
-		if (revolt) then
-			battle_report_title = "Revolt in " .. GetProvinceName(AttackedProvince)
-		end
-		local battle_report_message = ""
-		if (revolt == false and Defender == GrandStrategyFaction.Name and victorious_player == Defender and empty_province == false) then
-			battle_report_message = "My lord, the " .. GetFactionFullName(GetFactionFromName(Attacker).Civilization, Attacker) .. " has made a failed attack against us in " .. GetProvinceName(AttackedProvince) .. "!"
-		elseif (revolt == false and Defender == GrandStrategyFaction.Name and victorious_player == Attacker and empty_province == false) then
-			battle_report_message = "My lord, the " .. GetFactionFullName(GetFactionFromName(Attacker).Civilization, Attacker) .. " has taken our province of " .. GetProvinceName(AttackedProvince) .. "!"
-		elseif (Attacker == GrandStrategyFaction.Name and victorious_player == Defender and empty_province == false) then
-			battle_report_message = "My lord, our attack against the " .. GetProvinceName(AttackedProvince) .. " province of the " .. GetFactionFullName(GetFactionFromName(Defender).Civilization, Defender) .. " has failed!"
-		elseif (Attacker == GrandStrategyFaction.Name and victorious_player == Attacker and empty_province == false) then
-			battle_report_message = "My lord, we have taken the province of " .. GetProvinceName(AttackedProvince) .. " from the " .. GetFactionFullName(GetFactionFromName(Defender).Civilization, Defender) .. "!"
-		elseif (Attacker == GrandStrategyFaction.Name and victorious_player == Defender and empty_province) then
-			battle_report_message = "My lord, our attempt to conquer the wildlands of " .. GetProvinceName(AttackedProvince) .. " has failed!"
-		elseif (Attacker == GrandStrategyFaction.Name and victorious_player == Attacker and empty_province) then
-			battle_report_message = "My lord, we have taken the province of " .. GetProvinceName(AttackedProvince) .. "!"
-		elseif (revolt and Defender == GrandStrategyFaction.Name and victorious_player == Defender and empty_province == false) then
-			battle_report_message = "My lord, a failed revolt to declare the independence of the " .. GetFactionFullName(GetFactionFromName(Attacker).Civilization, Attacker) .. " has occurred in " .. GetProvinceName(AttackedProvince) .. "!"
-		elseif (revolt and Defender == GrandStrategyFaction.Name and victorious_player == Attacker and empty_province == false) then
-			battle_report_message = "My lord, the province of " .. GetProvinceName(AttackedProvince) .. " has risen in rebellion, resulting in the declaration of independence of the " .. GetFactionFullName(GetFactionFromName(Attacker).Civilization, Attacker) .. "!"
-		end
-		battle_report_message = battle_report_message .. "\n\nUnits Lost: " .. units_lost_string
-		GenericDialog(battle_report_title, battle_report_message)
-	end
-	
-	Attacker = ""
-	Defender = ""
-	AttackedProvince = nil
-	GameResult = GameNoResult
-	CleanPlayers()
-	SetPlayerData(GetThisPlayer(), "RaceName", GrandStrategyFaction.Civilization)
-end
-
 function AcquireProvince(province, faction)
 	if (GetProvinceOwner(province.Name) ~= "") then
 		RemoveElementFromArray(GetFactionFromName(GetProvinceOwner(province.Name)).OwnedProvinces, GetProvinceKeyFromName(province.Name))
@@ -880,10 +592,6 @@ function AcquireProvince(province, faction)
 	if (faction ~= "") then
 		table.insert(GetFactionFromName(faction).OwnedProvinces, GetProvinceKeyFromName(province.Name))
 		
-		if (GetProvinceCivilization(province.Name) == "") then -- if province has no culture, make it that of the one who acquired it
-			SetProvinceCivilization(province.Name, GetFactionFromName(faction).Civilization)
-		end
-
 		local grand_strategy_heroes = GetGrandStrategyHeroes()
 		for i = 1, table.getn(grand_strategy_heroes) do
 			if (GetProvinceHero(province.Name, grand_strategy_heroes[i]) == 1) then -- if a hero is moving here, remove him
@@ -891,7 +599,6 @@ function AcquireProvince(province, faction)
 			end
 		end
 	elseif (faction == "") then
-		SetProvinceCivilization(province.Name, "")
 		for i, unitName in ipairs(Units) do
 			if (IsGrandStrategyBuilding(unitName)) then
 				if (GetProvinceSettlementBuilding(province.Name, unitName)) then
@@ -1500,305 +1207,6 @@ function AddGrandStrategyImageButton(caption, hotkey, x, y, callback)
 	)
 	GrandStrategyMenu:add(UIElements[table.getn(UIElements)], x, y)
 	UIElements[table.getn(UIElements)]:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
-	return UIElements[table.getn(UIElements)]
-end
-
-function AddGrandStrategyThinImageButton(caption, hotkey, x, y, callback, tooltip)
-	local b = AddGrandStrategyImageButton(caption, hotkey, x, y, callback)
-	b:setBaseColor(Color(0,0,0,0))
-	b:setForegroundColor(Color(0,0,0,0))
-	b:setBackgroundColor(Color(0,0,0,0))
-	local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-normal.png")
-	local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-pressed.png")
-	g_btn:Load()
-	g_btp:Load()
-	b:setNormalImage(g_btn)
-	b:setPressedImage(g_btp)
-	b:setSize(99, 13)
-	b:setFont(Fonts["game"])
-	if (tooltip) then
-		b:setTooltip(tooltip)
-	end
-	return b
-end
-				
-function AddGrandStrategyBuildingButton(x, y, unit_type)
-	local b
-	local unit_icon
-	
-	local old_unit_type = unit_type
-	
-	if ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetCivilizationData(GetProvinceCivilization(SelectedProvince.Name), "ParentCivilization") == "teuton") and GetUnitTypeData(unit_type, "Class") == "town-hall" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
-		unit_type = "unit-germanic-town-hall"
-	elseif ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetCivilizationData(GetProvinceCivilization(SelectedProvince.Name), "ParentCivilization") == "teuton") and GetUnitTypeData(unit_type, "Class") == "barracks" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
-		unit_type = "unit-germanic-barracks"
-	elseif ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetCivilizationData(GetProvinceCivilization(SelectedProvince.Name), "ParentCivilization") == "teuton") and GetUnitTypeData(unit_type, "Class") == "lumber-mill" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the teuton lumber mill
-		unit_type = "unit-germanic-carpenters-shop"
-	elseif ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetCivilizationData(GetProvinceCivilization(SelectedProvince.Name), "ParentCivilization") == "teuton") and GetUnitTypeData(unit_type, "Class") == "smithy" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
-		unit_type = "unit-germanic-smithy"
-	end
-	
-	b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Name, "Color"))
-	if (GetProvinceSettlementBuilding(SelectedProvince.Name, old_unit_type) == false) then -- if not built, make icon gray
-		unit_icon = CIcon:Get(GetUnitTypeData(unit_type, "Icon")).GScale
-	else
-		unit_icon = CIcon:Get(GetUnitTypeData(unit_type, "Icon")).G
-	end
-	
-	local unit_type_name = GetUnitTypeName(unit_type)
-	
-	unit_type = old_unit_type
-	
-	UIElements[table.getn(UIElements) + 1] = b
-	UIElements[table.getn(UIElements)]:setActionCallback(
-		function()
-			PlaySound("click")
-			if (GetProvinceCurrentConstruction(SelectedProvince.Name) ~= unit_type and GetProvinceSettlementBuilding(SelectedProvince.Name, unit_type) == false) then
-				BuildStructure(SelectedProvince, unit_type)
-			elseif (GetProvinceSettlementBuilding(SelectedProvince.Name, unit_type)) then
-				UseBuilding(SelectedProvince, unit_type)
-			end
-		end
-	)
-	GrandStrategyMenu:add(UIElements[table.getn(UIElements)], x, y)
-	UIElements[table.getn(UIElements)]:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
-
---	UIElements[table.getn(UIElements)]:setBaseColor(Color(0,0,0,0))
---	UIElements[table.getn(UIElements)]:setForegroundColor(Color(0,0,0,0))
---	UIElements[table.getn(UIElements)]:setBackgroundColor(Color(0,0,0,0))
-	UIElements[table.getn(UIElements)]:setNormalImage(unit_icon)
-	UIElements[table.getn(UIElements)]:setPressedImage(unit_icon)
-	UIElements[table.getn(UIElements)]:setDisabledImage(unit_icon)
-	UIElements[table.getn(UIElements)]:setSize(46, 38)
-	UIElements[table.getn(UIElements)]:setFont(Fonts["game"])
-
-	local building_cost_tooltip = ""
-	if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type, "copper") > 0) then
-		if (building_cost_tooltip == "") then
-			building_cost_tooltip = "Costs "
-		else
-			building_cost_tooltip = building_cost_tooltip .. ", "
-		end
-		building_cost_tooltip = building_cost_tooltip .. GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type, "copper") .. " Copper"
-	end
-	if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type, "lumber") > 0) then
-		if (building_cost_tooltip == "") then
-			building_cost_tooltip = "Costs "
-		else
-			building_cost_tooltip = building_cost_tooltip .. ", "
-		end
-		building_cost_tooltip = building_cost_tooltip .. GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type, "lumber") .. " Lumber"
-	end
-	if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type, "stone") > 0) then
-		if (building_cost_tooltip == "") then
-			building_cost_tooltip = "Costs "
-		else
-			building_cost_tooltip = building_cost_tooltip .. ", "
-		end
-		building_cost_tooltip = building_cost_tooltip .. GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type, "stone") .. " Stone"
-	end
-	
-	local building_function_tooltip = ""
-	if (GetUnitTypeData(unit_type, "Class") == "town-hall") then
-		building_function_tooltip = "More province information and trading of resources\nAllows resource gathering in the province\nIncreases research output"
-	elseif (GetUnitTypeData(unit_type, "Class") == "stronghold") then
-		building_function_tooltip = "More province information and trading of resources\nProvides defensive towers"
-	elseif (GetUnitTypeData(unit_type, "Class") == "barracks") then
-		building_function_tooltip = "Recruits units"
-	elseif (GetUnitTypeData(unit_type, "Class") == "lumber-mill") then
-		building_function_tooltip = "Researches projectile upgrades\nIncreases lumber production efficiency by 25%\nIncreases research output"
-	elseif (GetUnitTypeData(unit_type, "Class") == "smithy") then
-		building_function_tooltip = "Researches melee weapon, shield and siege weapon upgrades\nIncreases research output"
-	elseif (GetUnitTypeData(unit_type, "Class") == "stables") then
-		building_function_tooltip = "Allows cavalry units to be trained"
-	elseif (GetUnitTypeData(unit_type, "Class") == "temple") then
-		building_function_tooltip = "Increases research output"
-	elseif (GetUnitTypeData(unit_type, "Class") == "dock") then
-		building_function_tooltip = "Allows fishing and attacking nearby coasts\nConnects this province's settlement to your capital"
-	elseif (GetUnitTypeData(unit_type, "Class") == "mercenary-camp") then
-		building_function_tooltip = "Hires mercenaries and thieves"
-	end
-	if (GetProvinceSettlementBuilding(SelectedProvince.Name, unit_type)) then
-		UIElements[table.getn(UIElements)]:setTooltip("Use " .. unit_type_name .. "\n" .. building_function_tooltip)
-	elseif (GetProvinceCurrentConstruction(SelectedProvince.Name) == unit_type) then
-		UIElements[table.getn(UIElements)]:setTooltip(unit_type_name .. " in " .. GetProvinceName(SelectedProvince) .. " under construction")
-	else
-		UIElements[table.getn(UIElements)]:setTooltip("Build " .. unit_type_name .. " in " .. GetProvinceName(SelectedProvince) .. "\n" .. building_cost_tooltip .. "\n" .. building_function_tooltip)
-	end
-	UIElements[table.getn(UIElements)]:setFrameImage(Preference.IconFrameG)
-	UIElements[table.getn(UIElements)]:setPressedFrameImage(Preference.PressedIconFrameG)
-	
-	return UIElements[table.getn(UIElements)]
-end
-
-function AddGrandStrategyUnitButton(x, y, unit_type)
-	UIElements[table.getn(UIElements) + 1] = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Name, "Color"))
-	UIElements[table.getn(UIElements)]:setActionCallback(
-		function()
-			PlaySound("click")
-		end
-	)
-	GrandStrategyMenu:add(UIElements[table.getn(UIElements)], x, y)
-	UIElements[table.getn(UIElements)]:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
-
---	UIElements[table.getn(UIElements)]:setBaseColor(Color(0,0,0,0))
---	UIElements[table.getn(UIElements)]:setForegroundColor(Color(0,0,0,0))
---	UIElements[table.getn(UIElements)]:setBackgroundColor(Color(0,0,0,0))
-	local unit_icon = CIcon:Get(GetUnitTypeData(unit_type, "Icon")).G
-	unit_icon:Load()
-	UIElements[table.getn(UIElements)]:setNormalImage(unit_icon)
-	UIElements[table.getn(UIElements)]:setPressedImage(unit_icon)
-	UIElements[table.getn(UIElements)]:setDisabledImage(unit_icon)
-	UIElements[table.getn(UIElements)]:setSize(46, 38)
-	UIElements[table.getn(UIElements)]:setFont(Fonts["game"])
-
-	if (GetUnitTypeData(unit_type, "Class") == "worker") then
-		UIElements[table.getn(UIElements)]:setTooltip("You have " .. GetProvinceUnitQuantity(SelectedProvince.Name, unit_type) .. " " .. GetUnitTypeName(unit_type) .. " units in " .. GetProvinceName(SelectedProvince))
-	else
-		UIElements[table.getn(UIElements)]:setTooltip("You have " .. GetProvinceUnitQuantity(SelectedProvince.Name, unit_type) .. " " .. GetUnitTypeName(unit_type) .. " regiments in " .. GetProvinceName(SelectedProvince))
-	end
-	
-	return UIElements[table.getn(UIElements)]
-end
-
-function AddGrandStrategyHeroButton(x, y, hero_name)
-	local b
-	local unit_icon
-	
-	b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Name, "Color"))
-	if (SelectedHero == hero_name) then -- if hero is already selected, make icon gray
-		unit_icon = CIcon:Get(GetGrandStrategyHeroIcon(hero_name)).GScale
-	else
-		unit_icon = CIcon:Get(GetGrandStrategyHeroIcon(hero_name)).G
-	end
-	UIElements[table.getn(UIElements) + 1] = b
-	UIElements[table.getn(UIElements)]:setActionCallback(
-		function()
-			PlaySound("click")
-			if (SelectedHero == hero_name) then
-				SelectedHero = ""
-			else
-				SelectedHero = hero_name
-			end
-		end
-	)
-	GrandStrategyMenu:add(UIElements[table.getn(UIElements)], x, y)
-	UIElements[table.getn(UIElements)]:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
-
---	UIElements[table.getn(UIElements)]:setBaseColor(Color(0,0,0,0))
---	UIElements[table.getn(UIElements)]:setForegroundColor(Color(0,0,0,0))
---	UIElements[table.getn(UIElements)]:setBackgroundColor(Color(0,0,0,0))
-	UIElements[table.getn(UIElements)]:setNormalImage(unit_icon)
-	UIElements[table.getn(UIElements)]:setPressedImage(unit_icon)
-	UIElements[table.getn(UIElements)]:setDisabledImage(unit_icon)
-	UIElements[table.getn(UIElements)]:setSize(46, 38)
-	UIElements[table.getn(UIElements)]:setFont(Fonts["game"])
-
-	if (SelectedHero == hero_name) then
-		UIElements[table.getn(UIElements)]:setTooltip("Unselect " .. GetGrandStrategyHeroBestDisplayTitle(hero_name) .. " " .. hero_name)
-	else
-		UIElements[table.getn(UIElements)]:setTooltip("Select " .. GetGrandStrategyHeroBestDisplayTitle(hero_name) .. " " .. hero_name)
-	end
-	UIElements[table.getn(UIElements)]:setFrameImage(Preference.IconFrameG)
-	UIElements[table.getn(UIElements)]:setPressedFrameImage(Preference.PressedIconFrameG)
-	
-	return UIElements[table.getn(UIElements)]
-end
-
-function AddGrandStrategyMinisterButton(x, y, hero_name)
-	UIElements[table.getn(UIElements) + 1] = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Name, "Color"))
-	UIElements[table.getn(UIElements)]:setActionCallback(
-		function()
-			PlaySound("click")
-		end
-	)
-	GrandStrategyMenu:add(UIElements[table.getn(UIElements)], x, y)
-	UIElements[table.getn(UIElements)]:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
-
-	local unit_icon = CIcon:Get(GetGrandStrategyHeroIcon(hero_name)).G
---	UIElements[table.getn(UIElements)]:setBaseColor(Color(0,0,0,0))
---	UIElements[table.getn(UIElements)]:setForegroundColor(Color(0,0,0,0))
---	UIElements[table.getn(UIElements)]:setBackgroundColor(Color(0,0,0,0))
-	UIElements[table.getn(UIElements)]:setNormalImage(unit_icon)
-	UIElements[table.getn(UIElements)]:setPressedImage(unit_icon)
-	UIElements[table.getn(UIElements)]:setDisabledImage(unit_icon)
-	UIElements[table.getn(UIElements)]:setSize(46, 38)
-	UIElements[table.getn(UIElements)]:setFont(Fonts["game"])
-
-	UIElements[table.getn(UIElements)]:setTooltip(GetGrandStrategyHeroTooltip(hero_name))
-	
-	return UIElements[table.getn(UIElements)]
-end
-
-function AddGrandStrategyMercenaryButton(x, y, unit_type)
-	local b
-	local unit_icon
-	
-	b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Name, "Color"))
-	if (GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unit_type) > 0) then -- if mercenary group is already being hired, make icon gray
-		unit_icon = CIcon:Get(GetUnitTypeData(unit_type, "Icon")).GScale
-	else
-		unit_icon = CIcon:Get(GetUnitTypeData(unit_type, "Icon")).G
-	end
-	UIElements[table.getn(UIElements) + 1] = b
-	UIElements[table.getn(UIElements)]:setActionCallback(
-		function()
-			PlaySound("click")
-			if (GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unit_type) < 1) then
-				HireMercenary(SelectedProvince, unit_type)
-			else
-				CancelHireMercenary(SelectedProvince, unit_type)
-			end
-		end
-	)
-	GrandStrategyMenu:add(UIElements[table.getn(UIElements)], x, y)
-	UIElements[table.getn(UIElements)]:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
-
---	UIElements[table.getn(UIElements)]:setBaseColor(Color(0,0,0,0))
---	UIElements[table.getn(UIElements)]:setForegroundColor(Color(0,0,0,0))
---	UIElements[table.getn(UIElements)]:setBackgroundColor(Color(0,0,0,0))
-	UIElements[table.getn(UIElements)]:setNormalImage(unit_icon)
-	UIElements[table.getn(UIElements)]:setPressedImage(unit_icon)
-	UIElements[table.getn(UIElements)]:setDisabledImage(unit_icon)
-	UIElements[table.getn(UIElements)]:setSize(46, 38)
-	UIElements[table.getn(UIElements)]:setFont(Fonts["game"])
-
-	local cost_tooltip = ""
-	if (GetUnitTypeData(unit_type, "Costs", "copper") > 0) then
-		if (cost_tooltip == "") then
-			cost_tooltip = "Costs "
-		else
-			cost_tooltip = cost_tooltip .. ", "
-		end
-		cost_tooltip = cost_tooltip .. GetUnitTypeData(unit_type, "Costs", "copper") * GetUnitTypeData(unit_type, "TrainQuantity") .. " Copper"
-	end
-	if (GetUnitTypeData(unit_type, "Costs", "lumber") > 0) then
-		if (cost_tooltip == "") then
-			cost_tooltip = "Costs "
-		else
-			cost_tooltip = cost_tooltip .. ", "
-		end
-		cost_tooltip = cost_tooltip .. GetUnitTypeData(unit_type, "Costs", "lumber") * GetUnitTypeData(unit_type, "TrainQuantity") .. " Lumber"
-	end
-	if (GetUnitTypeData(unit_type, "Costs", "stone") > 0) then
-		if (cost_tooltip == "") then
-			cost_tooltip = "Costs "
-		else
-			cost_tooltip = cost_tooltip .. ", "
-		end
-		cost_tooltip = cost_tooltip .. GetUnitTypeData(unit_type, "Costs", "stone") * GetUnitTypeData(unit_type, "TrainQuantity") .. " Stone"
-	end
-							
-	local regiment_type_name = GetUnitTypeData(unit_type, "NamePlural")
-							
-	if (GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unit_type) > 0) then
-		UIElements[table.getn(UIElements)]:setTooltip("Cancel hiring " .. regiment_type_name)
-	else
-		UIElements[table.getn(UIElements)]:setTooltip("Hire " .. regiment_type_name .. cost_tooltip)
-	end
-	UIElements[table.getn(UIElements)]:setFrameImage(Preference.IconFrameG)
-	UIElements[table.getn(UIElements)]:setPressedFrameImage(Preference.PressedIconFrameG)
-	
 	return UIElements[table.getn(UIElements)]
 end
 
@@ -2809,23 +2217,8 @@ function GrandStrategyEvent(faction, event)
 			event_name = event.Name
 		end
 		if (EventProvince ~= nil) then
-			if (string.find(event_name, "PROVINCE_NAME") ~= nil) then
-				event_name = string.gsub(event_name, "PROVINCE_NAME", GetProvinceName(EventProvince))
-			end
-			if (string.find(event_name, "PROVINCE_SETTLEMENT_NAME") ~= nil) then
-				if (GetProvinceSettlementName(EventProvince) ~= nil) then
-					event_name = string.gsub(event_name, "PROVINCE_SETTLEMENT_NAME", GetProvinceSettlementName(EventProvince))
-				else
-					event_name = string.gsub(event_name, "PROVINCE_SETTLEMENT_NAME", GetProvinceName(EventProvince) .. "'s capital")
-				end
-			end
 			if (string.find(event_name, "CULTURE_NAME") ~= nil) then
 				event_name = string.gsub(event_name, "CULTURE_NAME", GetCivilizationData(EventFaction.Civilization, "Adjective"))
-			end
-		end
-		if (SecondEventProvince ~= nil) then
-			if (string.find(event_name, "SECOND_PROVINCE_NAME") ~= nil) then
-				event_name = string.gsub(event_name, "SECOND_PROVINCE_NAME", GetProvinceName(SecondEventProvince))
 			end
 		end
 		menu:addLabel(event_name, 176, 11)
@@ -2846,23 +2239,8 @@ function GrandStrategyEvent(faction, event)
 			event_description = event.Description
 		end
 		if (EventProvince ~= nil) then
-			if (string.find(event_description, "PROVINCE_NAME") ~= nil) then
-				event_description = string.gsub(event_description, "PROVINCE_NAME", GetProvinceName(EventProvince))
-			end
-			if (string.find(event_description, "PROVINCE_SETTLEMENT_NAME") ~= nil) then
-				if (GetProvinceSettlementName(EventProvince) ~= nil) then
-					event_description = string.gsub(event_description, "PROVINCE_SETTLEMENT_NAME", GetProvinceSettlementName(EventProvince))
-				else
-					event_description = string.gsub(event_description, "PROVINCE_SETTLEMENT_NAME", GetProvinceName(EventProvince) .. "'s capital")
-				end
-			end
 			if (string.find(event_description, "CULTURE_NAME") ~= nil) then
 				event_description = string.gsub(event_description, "CULTURE_NAME", GetCivilizationData(EventFaction.Civilization, "Adjective"))
-			end
-		end
-		if (SecondEventProvince ~= nil) then
-			if (string.find(event_description, "SECOND_PROVINCE_NAME") ~= nil) then
-				event_description = string.gsub(event_description, "SECOND_PROVINCE_NAME", GetProvinceName(SecondEventProvince))
 			end
 		end
 		l:setCaption(event_description)
@@ -2925,16 +2303,6 @@ function GrandStrategyEvent(faction, event)
 				if (event_option_tooltips ~= nil and event_option_tooltips[i] ~= nil) then
 					local tooltip = event_option_tooltips[i]
 					if (EventProvince ~= nil) then
-						if (string.find(tooltip, "PROVINCE_NAME") ~= nil) then
-							tooltip = string.gsub(tooltip, "PROVINCE_NAME", GetProvinceName(EventProvince))
-						end
-						if (string.find(tooltip, "PROVINCE_SETTLEMENT_NAME") ~= nil) then
-							if (GetProvinceSettlementName(EventProvince) ~= nil) then
-								tooltip = string.gsub(tooltip, "PROVINCE_SETTLEMENT_NAME", GetProvinceSettlementName(EventProvince))
-							else
-								tooltip = string.gsub(tooltip, "PROVINCE_SETTLEMENT_NAME", GetProvinceName(EventProvince) .. "'s capital")
-							end
-						end
 						if (string.find(tooltip, "CULTURE_NAME") ~= nil) then
 							tooltip = string.gsub(tooltip, "CULTURE_NAME", GetCivilizationData(EventFaction.Civilization, "Adjective"))
 						end
@@ -2998,10 +2366,6 @@ function DoEvents()
 			end
 		end
 	end
-end
-
-function FormFactionLua(old_faction, new_faction)
-	FormFaction(old_faction.Civilization, old_faction.Name, new_faction.Civilization, new_faction.Name)
 end
 
 function GetUnitTypeInterfaceState(unit_type)
@@ -3270,14 +2634,6 @@ function IsMilitaryUnit(unit_type)
 	else
 		return false
 	end
-end
-
-function GetProvinceName(province)
-	return GetProvinceCulturalName(province.Name)
-end
-
-function GetProvinceSettlementName(province)
-	return GetProvinceCulturalSettlementName(province.Name)
 end
 
 function CanDeclareWar(faction_from, faction_to)

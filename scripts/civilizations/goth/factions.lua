@@ -29,24 +29,21 @@ DefineFaction("goth-tribe", {
 	Name = "Goth Tribe",
 	Civilization = "goth",
 	Type = "tribe",
-	Colors = {"red"},
-	HistoricalFactionDerivations = {-325, "germanic", "yngling-tribe"}
+	Colors = {"red"}
 })
 
 DefineFaction("bastarnae-tribe", {
 	Name = "Bastarnae Tribe",
 	Civilization = "goth",
 	Type = "tribe",
-	Colors = {"blue"},
-	HistoricalFactionDerivations = {-264, "goth", "goth-tribe"}
+	Colors = {"blue"}
 })
 
 DefineFaction("burgundian-tribe", {
 	Name = "Burgundian Tribe",
 	Civilization = "goth",
 	Type = "tribe",
-	Colors = {"brown"},
-	HistoricalFactionDerivations = {-264, "goth", "goth-tribe"}
+	Colors = {"brown"}
 })
 
 DefineFaction("gepidae-tribe", {
@@ -60,8 +57,7 @@ DefineFaction("herulian-tribe", {
 	Name = "Herulian Tribe",
 	Civilization = "goth",
 	Type = "tribe",
-	Colors = {"green"},
-	HistoricalFactionDerivations = {-27, "goth", "goth-tribe"}
+	Colors = {"green"}
 })
 
 DefineFaction("lugii-tribe", {
@@ -75,40 +71,35 @@ DefineFaction("ostrogoth-tribe", {
 	Name = "Ostrogoth Tribe",
 	Civilization = "goth",
 	Type = "tribe",
-	Colors = {"red"},
-	HistoricalFactionDerivations = {200, "goth", "goth-tribe"}
+	Colors = {"red"}
 })
 
 DefineFaction("rugian-tribe", {
 	Name = "Rugian Tribe",
 	Civilization = "goth",
 	Type = "tribe",
-	Colors = {"red", "orange"}, -- change to a better one?
-	HistoricalFactionDerivations = {-264, "goth", "goth-tribe"}
+	Colors = {"red", "orange"} -- change to a better one?
 })
 
 DefineFaction("silingae-tribe", {
 	Name = "Silingae Tribe",
 	Civilization = "goth",
 	Type = "tribe",
-	Colors = {"orange"},
-	HistoricalFactionDerivations = {-264, "goth", "goth-tribe"}
+	Colors = {"orange"}
 })
 
 DefineFaction("turcilingian-tribe", {
 	Name = "Turcilingian Tribe",
 	Civilization = "goth",
 	Type = "tribe",
-	Colors = {"blue"},
-	HistoricalFactionDerivations = {-264, "goth", "goth-tribe"}
+	Colors = {"blue"}
 })
 
 DefineFaction("vandal-tribe", {
 	Name = "Vandal Tribe",
 	Civilization = "goth",
 	Type = "tribe",
-	Colors = {"cyan", "blue"},
-	HistoricalFactionDerivations = {-264, "goth", "goth-tribe"}
+	Colors = {"cyan", "blue"}
 })
 
 DefineFaction("visigoth-tribe", {
@@ -116,7 +107,6 @@ DefineFaction("visigoth-tribe", {
 	Civilization = "goth",
 	Type = "tribe",
 	Colors = {"pink"},
-	HistoricalFactionDerivations = {200, "goth", "goth-tribe"},
 	HistoricalUpgrades = {
 		573, "upgrade-teuton-coinage", true -- Visigothic gold tremissis coined in 573 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 188.
 	}
@@ -130,7 +120,7 @@ DefineFaction("burgundy", {
 	Type = "polity",
 	Colors = {"brown"},
 	DefaultTier = "kingdom",
-	HistoricalFactionDerivations = {411, "goth", "burgundian-tribe"}, -- Kingdom of the Burgundians established by Gundahar (a Burgundian tribal chief) in 411 AD, with its center in Borbetomagus (Worms); Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-93.
+	-- Kingdom of the Burgundians established by Gundahar (a Burgundian tribal chief) in 411 AD, with its center in Borbetomagus (Worms); Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-93.
 	HistoricalUpgrades = {
 		0, "upgrade-teuton-writing", true, -- polities must have writing
 		0, "upgrade-teuton-masonry", true

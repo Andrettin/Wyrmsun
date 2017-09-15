@@ -34,8 +34,6 @@ function LoadProvinces(world)
 	WorldMapWaterProvinces = nil
 	WorldMapWaterProvinces = {}
 	
-	InitializeGrandStrategyProvinces()
-	
 	local provinces = GetGrandStrategyProvinces()
 	for i = 1,table.getn(provinces) do
 		local province_key = string.gsub(provinces[i], " ", "")
@@ -221,9 +219,6 @@ function LoadProvinces(world)
 		for key, value in pairs(province_table) do
 			if (province_table[key].Owner ~= nil) then
 				SetProvinceOwner(province_table[key].Name, GetFactionFromName(province_table[key].Owner).Civilization, province_table[key].Owner)
-			end
-			if (province_table[key].Civilization ~= nil) then
-				SetProvinceCivilization(WorldMapProvinces[key].Name, province_table[key].Civilization)
 			end
 			if (province_table[key].Units ~= nil) then
 				for second_key, second_value in pairs(province_table[key].Units) do

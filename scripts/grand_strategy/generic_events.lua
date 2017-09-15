@@ -85,32 +85,6 @@ DefineGrandStrategyEvent("Build Monument?", {
 	OptionTooltips = {"-500 Copper\n+5 Prestige", ""}
 })
 
-DefineGrandStrategyEvent("PROVINCE_NAME Assimilates", {
-	Description = "The people of PROVINCE_NAME have assimilated into our CULTURE_NAME culture.",
-	Conditions = function(s)
-		for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
-			if (
-				GetProvinceCivilization(WorldMapProvinces[province_key].Name) ~= EventFaction.Civilization
-				and GetCivilizationData(GetProvinceCivilization(WorldMapProvinces[province_key].Name), "Species") == GetCivilizationData(EventFaction.Civilization, "Species") -- assimilation can only happen between civilizations which belong to the same species
-				and SyncRand(200) < 1
-				and ProvinceBordersCulture(WorldMapProvinces[province_key], EventFaction.Civilization)
-			) then
-				EventProvince = WorldMapProvinces[province_key]
-				return true
-			end
-		end
-		return false
-	end,
-	Persistent = true,
-	Options = {"~!OK"},
-	OptionEffects = {
-		function(s)
-			SetProvinceCivilization(EventProvince.Name, EventFaction.Civilization)
-		end
-	},
-	OptionTooltips = {"The culture of PROVINCE_NAME changes to CULTURE_NAME"}
-})
-
 DefineGrandStrategyEvent("Smallpox Outbreak in PROVINCE_NAME", {
 	Description = "There has been a smallpox outbreak in PROVINCE_NAME! Many are succumbing to the disease.",
 	Conditions = function(s)

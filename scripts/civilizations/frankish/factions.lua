@@ -100,7 +100,7 @@ DefineFaction("francia", {
 	MinisterTitles = {
 		"head-of-government", "no-gender", "monarchy", "no-faction-tier", "Mayor of the Palace" -- Source: "Medieval Warfare V.2", 2013, p. 7.
 	},
-	HistoricalFactionDerivations = {481, "frankish", "frank-tribe"}, -- In 481 AD the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+	-- In 481 AD the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 	HistoricalUpgrades = {
 		0, "upgrade-teuton-writing", true, -- polities must have writing
 		0, "upgrade-teuton-masonry", true,
@@ -141,7 +141,7 @@ DefineFaction("east-francia", { -- Source: James Westfall Thompson, "Medieval Ge
 	Colors = {"blue"},
 	FactionUpgrade = "upgrade-faction-east-francia",
 	DefaultTier = "kingdom",
-	HistoricalFactionDerivations = {869, "frankish", "francia"}, -- East Francia existed in 869, when it conquered Moravia; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
+	-- East Francia existed in 869, when it conquered Moravia; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
 	--[[
 	HistoricalDiplomacyStates = {
 		871, "moravia", "war", -- Moravia rose against East Frankish rule in 871; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.

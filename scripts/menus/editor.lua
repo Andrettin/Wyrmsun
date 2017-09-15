@@ -464,7 +464,7 @@ function RunEditorPlayerProperties()
 			player_properties[current_player:getSelected() + 1].Civilization = civilization_names[current_player_civilization:getSelected() + 1]
 		end
 		
-		faction_list = GetCivilizationFactionNames(civilization_names[current_player_civilization:getSelected() + 1])
+		faction_list = GetFactions(civilization_names[current_player_civilization:getSelected() + 1])
 		table.insert(faction_list, "")
 		current_player_faction:setList(faction_list)
 		if (GetElementIndexFromArray(faction_list, player_properties[current_player:getSelected() + 1].Faction)) then
@@ -837,7 +837,7 @@ function RunEditorFactionProperties()
 
 			confirm:addHalfButton("~!Yes", "y", 1 * (288 / 3) - 90, 120 - 16 - 27,
 				function()
-					DeleteModFaction(civilization_ident_list[current_civilization:getSelected() + 1], faction_list[current_civilization:getSelected() + 1][current_faction:getSelected() + 1])
+					DeleteModFaction(faction_list[current_civilization:getSelected() + 1][current_faction:getSelected() + 1])
 					RemoveElementFromArray(civilization_factions[current_civilization:getSelected() + 1], faction_list[current_civilization:getSelected() + 1][current_faction:getSelected() + 1])
 					RemoveElementFromArray(faction_list[current_civilization:getSelected() + 1], faction_list[current_civilization:getSelected() + 1][current_faction:getSelected() + 1])
 					faction_properties[current_civilization:getSelected() + 1][current_faction:getSelected() + 1] = nil

@@ -30,8 +30,7 @@ DefineFaction("sitone-tribe", { -- Tribes in Europe between 264 BC and 180 AD; S
 	Civilization = "norse", -- correct?
 	Type = "tribe",
 	Colors = {"brown"},
-	DefaultAI = "sea-attack",
-	HistoricalFactionDerivations = {-264, "germanic", "yngling-tribe"}
+	DefaultAI = "sea-attack"
 })
 
 DefineFaction("swede-tribe", {
@@ -39,8 +38,7 @@ DefineFaction("swede-tribe", {
 	Civilization = "norse",
 	Type = "tribe",
 	Colors = {"blue", "yellow"},
-	DefaultAI = "sea-attack",
-	HistoricalFactionDerivations = {-264, "germanic", "yngling-tribe"}
+	DefaultAI = "sea-attack"
 })
 
 DefineFaction("dane-tribe", {
@@ -48,8 +46,8 @@ DefineFaction("dane-tribe", {
 	Civilization = "norse",
 	Type = "tribe",
 	Colors = {"red", "white"},
-	DefaultAI = "sea-attack",
-	HistoricalFactionDerivations = {526, "norse", "swede-tribe"} -- Danes were in Scania and Zealand in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+	DefaultAI = "sea-attack"
+	-- Danes were in Scania and Zealand in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 })
 
 DefineFaction("geat-tribe", {

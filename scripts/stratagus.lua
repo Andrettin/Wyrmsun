@@ -1127,7 +1127,7 @@ function StandardTriggers()
 end
 
 function GetCivilizationAvailableFactions(civilization)
-	local civilization_factions = GetCivilizationFactionNames(civilization)
+	local civilization_factions = GetFactions(civilization)
 
 	-- remove faction names already in use
 	for i=0,(PlayerMax - 2) do

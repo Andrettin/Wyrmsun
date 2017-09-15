@@ -1247,11 +1247,11 @@ function RunSinglePlayerCustomGameMenu()
 		new_civilization = string.lower(new_civilization)
 		
 		if (race:getSelected() > 0) then
-			for i=1,table.getn(GetCivilizationFactionNames(new_civilization)) do
-				if ((GetFactionData(GetCivilizationFactionNames(new_civilization)[i], "Type") == "tribe" and (tech_level:getSelected() - 1 == -1 or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)")) or (GetFactionData(GetCivilizationFactionNames(new_civilization)[i], "Type") == "polity" and (tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)"))) then
-					if (GetFactionData(GetCivilizationFactionNames(new_civilization)[i], "Playable")) then
-						table.insert(faction_ident_list, GetCivilizationFactionNames(new_civilization)[i])
-						table.insert(faction_list, _(GetFactionData(GetCivilizationFactionNames(new_civilization)[i], "Name")))
+			for i=1,table.getn(GetFactions(new_civilization)) do
+				if ((GetFactionData(GetFactions(new_civilization)[i], "Type") == "tribe" and (tech_level:getSelected() - 1 == -1 or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)")) or (GetFactionData(GetFactions(new_civilization)[i], "Type") == "polity" and (tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)"))) then
+					if (GetFactionData(GetFactions(new_civilization)[i], "Playable")) then
+						table.insert(faction_ident_list, GetFactions(new_civilization)[i])
+						table.insert(faction_list, _(GetFactionData(GetFactions(new_civilization)[i], "Name")))
 					end
 				end
 			end

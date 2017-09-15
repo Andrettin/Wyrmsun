@@ -36,16 +36,16 @@ DefineFaction("kongemose-tribe", { -- based on the Kongemose culture of Zealand 
 	Name = "Kongemose Tribe",
 	Civilization = "basque",
 	Type = "tribe",
-	Colors = {"red", "white"},
-	HistoricalFactionDerivations = {-6400, "basque", "maglemose-tribe"} -- Maglemose cultured ended and Kongemose culture arose in Zealand in 6400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
+	Colors = {"red", "white"}
+	-- Maglemose cultured ended and Kongemose culture arose in Zealand in 6400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
 })
 
 DefineFaction("ertebolle-tribe", { -- based on the Ertebolle culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
 	Name = "Ertebolle Tribe",
 	Civilization = "basque",
 	Type = "tribe",
-	Colors = {"red", "white"},
-	HistoricalFactionDerivations = {-6400, "basque", "kongemose-tribe"} -- Kongemose cultured ended and Ertebolle culture arose in Zealand in 5400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
+	Colors = {"red", "white"}
+	-- Kongemose cultured ended and Ertebolle culture arose in Zealand in 5400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
 })
 
 DefineFaction("funnelbeaker-tribe", { -- based on the Funnel Beaker culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
@@ -53,7 +53,7 @@ DefineFaction("funnelbeaker-tribe", { -- based on the Funnel Beaker culture of Z
 	Civilization = "basque",
 	Type = "tribe",
 	Colors = {"violet"},
-	HistoricalFactionDerivations = {-6400, "basque", "ertebolle-tribe"}, -- Ertebolle cultured ended and Funnel Beaker culture arose in Zealand in 3950 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
+	-- Ertebolle cultured ended and Funnel Beaker culture arose in Zealand in 3950 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
 	HistoricalUpgrades = {
 		-3600, "upgrade-germanic-wood-plow", true, -- Primitive ard (plow) appears in Northern Europe c. 3600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 297.
 	}
@@ -101,6 +101,6 @@ DefineFaction("castelnovian-tribe", { -- Source: "Ancient Europe 8000 B.C.-A.D. 
 	Name = "Castelnovian Tribe",
 	Civilization = "basque", -- not actually Basque, but a pre-Indo-European people as well
 	Type = "tribe",
-	Colors = {"white"},
-	HistoricalFactionDerivations = {-5930, "basque", "sauveterrian-tribe"} -- succeeded the Sauveterrian culture
+	Colors = {"white"}
+	-- succeeded the Sauveterrian culture
 })
