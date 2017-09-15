@@ -144,6 +144,20 @@ DefineSettlement("uppsala", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
+DefineSettlement("vastervik", {
+	Name = "Vastervik",
+	MapTemplate = "earth",
+	Position = {4218, 734},
+	CulturalNames = {
+		"norse", "Vastervik" -- "Västervik"
+	},
+	HistoricalOwners = {
+	},
+	HistoricalBuildings = {
+	},
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+})
+
 DefineSettlement("visby", {
 	Name = "Visby",
 	MapTemplate = "earth",

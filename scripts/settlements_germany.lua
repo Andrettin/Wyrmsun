@@ -55,7 +55,8 @@ DefineSettlement("berlin", {
 	},
 	Cores = {
 		"semnone-tribe",
-		"suebi-tribe"
+		"suebi-tribe",
+		"brandenburg"
 	},
 	HistoricalOwners = {
 		-264, "semnone-tribe" -- Berlin's area was territory of the Sueves/Semnones in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -87,8 +88,13 @@ DefineSettlement("bremen", {
 	Name = "Bremen",
 	MapTemplate = "earth",
 	Position = {4044, 841},
+	Major = true,
 	CulturalNames = {
 		"teuton", "Bremen"
+	},
+	Cores = {
+		"bremen",
+		"holy-rome"
 	},
 	HistoricalOwners = {
 		526, "saxon-tribe", -- Bremen's area was a Saxon possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
@@ -242,7 +248,9 @@ DefineSettlement("hanover", {
 		"teuton", "Hanover"
 	},
 	Cores = {
-		"lombard-tribe"
+		"lombard-tribe",
+		"brunswick",
+		"holy-rome"
 	},
 	HistoricalOwners = {
 		-264, "lombard-tribe" -- Hanover's area was territory of the Lombards in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -337,6 +345,25 @@ DefineSettlement("lubeck", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
+DefineSettlement("magdeburg", {
+	Name = "Magdeburg",
+	MapTemplate = "earth",
+	Position = {4104, 861},
+	Major = true,
+	CulturalNames = {
+		"teuton", "Magdeburg"
+	},
+	Cores = {
+		"magdeburg",
+		"holy-rome"
+	},
+	HistoricalOwners = {
+	},
+	HistoricalBuildings = {
+	},
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+})
+
 DefineSettlement("mainz", {
 	Name = "Mainz",
 	MapTemplate = "earth",
@@ -389,7 +416,10 @@ DefineSettlement("munster", {
 	Position = {3992, 865},
 	Major = true,
 	CulturalNames = {
-		"teuton", "Münster"
+		"teuton", "Munster" -- "Münster"
+	},
+	Cores = {
+--		"westphalia"
 	},
 	HistoricalOwners = {
 		-264, "sugambri-tribe", -- Münster's area was territory of the Sugambri in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -480,6 +510,24 @@ DefineSettlement("regensburg", {
 		172, "unit-teuton-ritter", 0, "rome"
 	},
 	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
+})
+
+DefineSettlement("rostock", {
+	Name = "Rostock",
+	MapTemplate = "earth",
+	Position = {4126, 817},
+	Major = true,
+	CulturalNames = {
+		"teuton", "Rostock"
+	},
+	Cores = {
+		"mecklenburg"
+	},
+	HistoricalOwners = {
+	},
+	HistoricalBuildings = {
+	},
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
 DefineSettlement("scheidungen", {

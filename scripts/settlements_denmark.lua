@@ -53,6 +53,20 @@ DefineSettlement("brodrene-gram", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
+DefineSettlement("egtved", {
+	Name = "Egtved",
+	MapTemplate = "earth",
+	Position = {4055, 781},
+	CulturalNames = {
+		"norse", "Egtved"
+	},
+	HistoricalOwners = {
+	},
+	HistoricalBuildings = {
+	},
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+})
+
 DefineSettlement("legard", {
 	Name = "Legard", -- in northwestern Jutland
 	MapTemplate = "earth",

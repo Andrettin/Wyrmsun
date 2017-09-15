@@ -47,7 +47,10 @@ DefineSettlement("konigsberg", {
 	Position = {4302, 804},
 	Major = true,
 	CulturalNames = {
-		"teuton", "Königsberg"
+		"teuton", "Konigsberg" -- "Königsberg"
+	},
+	Cores = {
+		"prussia"
 	},
 	HistoricalOwners = {
 	},
