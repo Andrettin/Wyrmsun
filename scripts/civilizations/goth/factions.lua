@@ -30,7 +30,6 @@ DefineFaction("goth-tribe", {
 	Civilization = "goth",
 	Type = "tribe",
 	Colors = {"red"},
-	DevelopsTo = {"gothia"},
 	HistoricalFactionDerivations = {-325, "germanic", "yngling-tribe"}
 })
 
@@ -47,7 +46,6 @@ DefineFaction("burgundian-tribe", {
 	Civilization = "goth",
 	Type = "tribe",
 	Colors = {"brown"},
-	DevelopsTo = {"burgundy"},
 	HistoricalFactionDerivations = {-264, "goth", "goth-tribe"}
 })
 
@@ -78,7 +76,6 @@ DefineFaction("ostrogoth-tribe", {
 	Civilization = "goth",
 	Type = "tribe",
 	Colors = {"red"},
-	DevelopsTo = {"gothia"},
 	HistoricalFactionDerivations = {200, "goth", "goth-tribe"}
 })
 
@@ -111,7 +108,6 @@ DefineFaction("vandal-tribe", {
 	Civilization = "goth",
 	Type = "tribe",
 	Colors = {"cyan", "blue"},
-	DevelopsTo = {"vandalia"},
 	HistoricalFactionDerivations = {-264, "goth", "goth-tribe"}
 })
 
@@ -120,7 +116,6 @@ DefineFaction("visigoth-tribe", {
 	Civilization = "goth",
 	Type = "tribe",
 	Colors = {"pink"},
-	DevelopsTo = {"gothia"},
 	HistoricalFactionDerivations = {200, "goth", "goth-tribe"},
 	HistoricalUpgrades = {
 		573, "upgrade-teuton-coinage", true -- Visigothic gold tremissis coined in 573 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 188.

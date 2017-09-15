@@ -72,8 +72,7 @@ DefineFaction("demetae-tribe", { -- Source: Bernhard Maier (trans.), "Das Sagenb
 	Civilization = "briton",
 	Type = "tribe",
 	-- the Demetae gave origin to Dyfed, which was a Welsh principality
-	Colors = {"red"},
-	DevelopsTo = {"dyfed"} -- the Demetae gave origin to Dyfed
+	Colors = {"red"}
 })
 
 DefineFaction("dumnonii-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.

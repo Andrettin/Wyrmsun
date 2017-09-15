@@ -30,7 +30,6 @@ DefineFaction("sitone-tribe", { -- Tribes in Europe between 264 BC and 180 AD; S
 	Civilization = "norse", -- correct?
 	Type = "tribe",
 	Colors = {"brown"},
-	DevelopsTo = {"sweden"}, -- same general area
 	DefaultAI = "sea-attack",
 	HistoricalFactionDerivations = {-264, "germanic", "yngling-tribe"}
 })
@@ -40,7 +39,6 @@ DefineFaction("swede-tribe", {
 	Civilization = "norse",
 	Type = "tribe",
 	Colors = {"blue", "yellow"},
-	DevelopsTo = {"sweden"},
 	DefaultAI = "sea-attack",
 	HistoricalFactionDerivations = {-264, "germanic", "yngling-tribe"}
 })
@@ -50,7 +48,6 @@ DefineFaction("dane-tribe", {
 	Civilization = "norse",
 	Type = "tribe",
 	Colors = {"red", "white"},
-	DevelopsTo = {"denmark"},
 	DefaultAI = "sea-attack",
 	HistoricalFactionDerivations = {526, "norse", "swede-tribe"} -- Danes were in Scania and Zealand in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 })
@@ -60,7 +57,6 @@ DefineFaction("geat-tribe", {
 	Civilization = "norse",
 	Type = "tribe",
 	Colors = {"teal"},
-	DevelopsTo = {"gautland"},
 	DefaultAI = "sea-attack"
 })
 
@@ -69,7 +65,6 @@ DefineFaction("gute-tribe", {
 	Civilization = "norse",
 	Type = "tribe",
 	Colors = {"cyan"},
-	DevelopsTo = {"gotland"},
 	DefaultAI = "sea-attack"
 })
 
@@ -108,7 +103,6 @@ DefineFaction("halogaland", {
 	Type = "polity",
 	Colors = {"purple"},
 	DefaultTier = "kingdom",
-	DevelopsTo = {"norway"},
 	DefaultAI = "sea-attack"
 })
 
@@ -126,7 +120,6 @@ DefineFaction("hordaland", {
 	Type = "polity",
 	Colors = {"cyan"},
 	DefaultTier = "kingdom",
-	DevelopsTo = {"norway"}, -- allow Hordaland to become Norway if it unifies its territories
 	DefaultAI = "sea-attack"
 })
 
@@ -152,7 +145,6 @@ DefineFaction("orkney", { -- Earldom of Orkney
 		"head-of-state", "male", "monarchy", "duchy", "Earl",
 		"head-of-state", "female", "monarchy", "duchy", "Earl" -- correct?
 	},
-	DevelopsTo = {"norway"},
 	DefaultAI = "sea-attack"
 })
 
@@ -162,7 +154,6 @@ DefineFaction("scania", {
 	Type = "polity",
 	Colors = {"green"},
 	DefaultTier = "kingdom",
-	DevelopsTo = {"denmark", "sweden"},
 	DefaultAI = "sea-attack"
 })
 

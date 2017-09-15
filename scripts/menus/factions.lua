@@ -33,11 +33,7 @@ function ChooseFaction(old_civilization, old_faction)
 	local chosen_faction
 	local current_civilization = GetPlayerData(GetThisPlayer(), "RaceName")
 	
-	if (old_faction ~= "" and table.getn(GetFactionDevelopsTo(old_civilization, old_faction, current_civilization)) > 0) then
-		potential_factions = GetFactionDevelopsTo(old_civilization, old_faction, current_civilization)
-	else
-		potential_factions = GetFactions(current_civilization)
-	end
+	potential_factions = GetFactions(current_civilization)
 	
 	for i=1,table.getn(potential_factions) do
 		if (GetFactionData(potential_factions[i], "Playable")) then

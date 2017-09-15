@@ -63,8 +63,7 @@ DefineFaction("brabant", {
 	Type = "polity",
 	Colors = {"cyan"},
 	DefaultTier = "duchy", -- Brabant was a duchy in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
-	FactionUpgrade = "upgrade-faction-brabant",
-	DevelopsTo = {"netherlands"}
+	FactionUpgrade = "upgrade-faction-brabant"
 })
 
 DefineFaction("drenthe", {
@@ -73,8 +72,7 @@ DefineFaction("drenthe", {
 	Type = "polity",
 	Colors = {"cyan"},
 	DefaultTier = "county", -- Drenthe was a county in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
-	FactionUpgrade = "upgrade-faction-drenthe",
-	DevelopsTo = {"netherlands"}
+	FactionUpgrade = "upgrade-faction-drenthe"
 })
 
 DefineFaction("holland", {
@@ -83,8 +81,7 @@ DefineFaction("holland", {
 	Type = "polity",
 	Colors = {"red"},
 	DefaultTier = "county", -- Holland was a county in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
-	FactionUpgrade = "upgrade-faction-holland",
-	DevelopsTo = {"netherlands"}
+	FactionUpgrade = "upgrade-faction-holland"
 })
 
 DefineFaction("overijssel", {
@@ -93,7 +90,6 @@ DefineFaction("overijssel", {
 	Type = "polity",
 	Colors = {"pink"},
 	DefaultTier = "barony", -- Overijssel was a lordship in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
-	FactionUpgrade = "upgrade-faction-overijssel",
-	DevelopsTo = {"netherlands"}
+	FactionUpgrade = "upgrade-faction-overijssel"
 })
 

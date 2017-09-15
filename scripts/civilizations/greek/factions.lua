@@ -31,8 +31,7 @@ DefineFaction("chaoni-tribe", {
 	Name = "Chaoni Tribe",
 	Civilization = "greek",
 	Type = "tribe",
-	Colors = {"yellow"},
-	DevelopsTo = {"epirus"}
+	Colors = {"yellow"}
 })
 
 DefineFaction("dolopes-tribe", {
@@ -102,7 +101,8 @@ DefineFaction("epirus", {
 	Civilization = "greek",
 	Type = "polity",
 	Colors = {"yellow"},
-	DefaultTier = "kingdom"
+	DefaultTier = "kingdom",
+	DevelopsFrom = {"chaoni-tribe"}
 })
 
 DefineFaction("ionia", {

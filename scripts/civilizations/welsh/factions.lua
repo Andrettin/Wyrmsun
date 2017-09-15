@@ -41,6 +41,7 @@ DefineFaction("dyfed", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der 
 	Type = "polity",
 	Colors = {"red"},
 	DefaultTier = "duchy",
+	DevelopsFrom = {"demetae-tribe"}, -- the Demetae gave origin to Dyfed,
 	Titles = {
 		"monarchy", "duchy", "Principality"
 	}

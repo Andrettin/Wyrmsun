@@ -41,7 +41,6 @@ DefineFaction("herminone-tribe", { -- according to Tacitus one of the earliest G
 	ParentFaction = "asa-tribe",
 	Type = "tribe",
 	Colors = {"green"},
-	DevelopsTo = {"frank-tribe"},
 	FactionUpgrade = "upgrade-skeldung-tribe-faction"
 })
 
@@ -70,7 +69,6 @@ DefineFaction("ingaevone-tribe", { -- according to Tacitus one of the earliest G
 	ParentFaction = "asa-tribe",
 	Type = "tribe",
 	Colors = {"white"},
-	DevelopsTo = {"angle-tribe", "frisian-tribe", "saxon-tribe"},
 	FactionUpgrade = "upgrade-yngling-tribe-faction"
 	-- lived near the sea
 })
@@ -81,7 +79,6 @@ DefineFaction("istaevone-tribe", { -- according to Tacitus one of the earliest G
 	ParentFaction = "asa-tribe",
 	Type = "tribe",
 	Colors = {"black"},
-	DevelopsTo = {"lombard-tribe", "suebi-tribe"},
 	FactionUpgrade = "upgrade-asa-tribe-faction"
 })
 
@@ -110,8 +107,6 @@ DefineFaction("skeldung-tribe", { -- Skjoldung in the original Norse sagas, here
 	ParentFaction = "asa-tribe",
 	Type = "tribe",
 	Colors = {"red", "white"},
---	DevelopsTo = {"dane-tribe", "goth-tribe", "herulian-tribe", "jute-tribe"}
-	DevelopsTo = {"dane-tribe", "goth-tribe", "herulian-tribe"},
 	FactionUpgrade = "upgrade-skeldung-tribe-faction",
 --	DefaultAI = "sea-attack",
 	HistoricalFactionDerivations = {-2800, "germanic", "asa-tribe"}
@@ -143,7 +138,6 @@ DefineFaction("yngling-tribe", { -- mythical Swedish dynasty, Yngve was a son of
 	ParentFaction = "asa-tribe",
 	Type = "tribe",
 	Colors = {"blue", "yellow"},
-	DevelopsTo = {"goth-tribe", "swede-tribe"},
 	FactionUpgrade = "upgrade-yngling-tribe-faction",
 --	DefaultAI = "sea-attack",
 	HistoricalFactionDerivations = {-2770, "germanic", "asa-tribe"}

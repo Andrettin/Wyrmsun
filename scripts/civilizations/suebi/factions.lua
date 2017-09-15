@@ -30,7 +30,6 @@ DefineFaction("alamanni-tribe", {
 	Civilization = "suebi",
 	Type = "tribe",
 	Colors = {"blue"},
-	DevelopsTo = {"baden", "swabia", "switzerland", "wurtemberg"},
 	FactionUpgrade = "upgrade-faction-alamanni-tribe"
 })
 
@@ -40,7 +39,6 @@ DefineFaction("suebi-tribe", {
 	Type = "tribe",
 	Colors = {"black"},
 	DefaultTier = "duchy",
-	DevelopsTo = {"galicia", "bavaria", "austria", "carinthia"},
 	FactionUpgrade = "upgrade-faction-suebi-tribe",
 	Description = "The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there.",
 	HistoricalDiplomacyStates = {
@@ -54,8 +52,7 @@ DefineFaction("buri-tribe", {
 	ParentFaction = "suebi-tribe", -- accurate?
 	Type = "tribe",
 	Colors = {"violet"},
-	FactionUpgrade = "upgrade-faction-buri-tribe",
-	DevelopsTo = {"bavaria", "galicia", "austria", "carinthia"} -- accurate?
+	FactionUpgrade = "upgrade-faction-buri-tribe"
 })
 
 DefineFaction("hermunduri-tribe", {
@@ -63,7 +60,6 @@ DefineFaction("hermunduri-tribe", {
 	Civilization = "suebi", -- accurate?
 	Type = "tribe",
 	Colors = {"blue"},
-	DevelopsTo = {"thuringia"}, -- same general area
 	FactionUpgrade = "upgrade-faction-hermunduri-tribe",
 	HistoricalDiplomacyStates = {
 		170, "rome", "war", -- in 170 a coalition led by the Marcomanni (which included the Hermunduri) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.
@@ -76,7 +72,6 @@ DefineFaction("marcomanni-tribe", {
 	Civilization = "suebi",
 	Type = "tribe",
 	Colors = {"orange", "red"}, -- change to a better one?
-	DevelopsTo = {"bavarian-tribe", "bavaria", "galicia", "austria", "carinthia"},
 	FactionUpgrade = "upgrade-faction-marcomanni-tribe",
 	Description = "The Marcomanni were a Suebic tribe. Eventually they migrated to the east, settling in Bohemia and expelling the local Boii tribe. In the 2nd century they fought the terrible Marcomannic Wars against the Romans. The name \"Marcomanni\" means \"march-men\", or \"frontier-men\".",
 	HistoricalDiplomacyStates = {
@@ -95,7 +90,7 @@ DefineFaction("quadi-tribe", {
 	Type = "tribe",
 	Colors = {"brown"},
 	FactionUpgrade = "upgrade-faction-quadi-tribe",
-	DevelopsTo = {"bavaria", "galicia", "austria", "carinthia"}, -- the Quadi were a Suebic tribe
+	-- the Quadi were a Suebic tribe
 	HistoricalDiplomacyStates = {
 		170, "rome", "war", -- in 170 a coalition led by the Marcomanni (which included the Quadi) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.
 		170, "marcomanni-tribe", "alliance",
@@ -112,8 +107,7 @@ DefineFaction("semnone-tribe", {
 	Civilization = "suebi",
 	Type = "tribe",
 	Colors = {"brown"},
-	FactionUpgrade = "upgrade-faction-semnone-tribe",
-	DevelopsTo = {"suebi-tribe", "bavaria", "austria", "carinthia"}
+	FactionUpgrade = "upgrade-faction-semnone-tribe"
 })
 
 DefineFaction("thuringian-tribe", {

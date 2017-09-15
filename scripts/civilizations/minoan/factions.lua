@@ -29,8 +29,7 @@ DefineFaction("minoan-tribe", {
 	Name = "Minoan Tribe",
 	Civilization = "minoan",
 	Type = "tribe",
-	Colors = {"yellow"},
-	DevelopsTo = {"crete"}
+	Colors = {"yellow"}
 })
 
 DefineFaction("impressedware-tribe", {
@@ -70,6 +69,7 @@ DefineFaction("crete", { -- Minoans
 	Type = "polity",
 	Colors = {"yellow"},
 	DefaultTier = "kingdom",
+	DevelopsFrom = {"minoan-tribe"},
 	HistoricalUpgrades = {
 		-2000, "upgrade-teuton-writing", true, -- Linear A and Linear B tablets found in Crete belonging to the period between 2000 and 1400 BC; Source: "Atlas de História Mundial", 2001, p. 67.
 		-1900, "upgrade-teuton-masonry", true -- Beginning of the age of the first Minoan palaces around 1900 BC; Source: "Atlas de História Mundial", 2001, p. 66.

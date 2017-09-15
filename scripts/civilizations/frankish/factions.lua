@@ -30,7 +30,6 @@ DefineFaction("frank-tribe", {
 	Civilization = "frankish",
 	Type = "tribe",
 	Colors = {"green", "orange"},
-	DevelopsTo = {"francia", "franconia", "austrasia", "neustria", "salia", "east-francia", "netherlands"},
 	FactionUpgrade = "upgrade-faction-frank-tribe",
 	Description = "The Franks are one of the most powerful Germanic tribes to have existed. From their humble beginnings in their dwellings along the Rhine, they eventually managed to conquer the entirety of Gaul and much of Central Europe.",
 	UIFillers = {
@@ -46,8 +45,7 @@ DefineFaction("ampsivarii-tribe", {
 	Civilization = "frankish", -- accurate?
 	Type = "tribe",
 	Colors = {"cyan"},
-	FactionUpgrade = "upgrade-faction-ampsivarii-tribe",
-	DevelopsTo = {"drenthe", "netherlands"} -- same general area
+	FactionUpgrade = "upgrade-faction-ampsivarii-tribe"
 })
 
 DefineFaction("batavian-tribe", {
@@ -55,8 +53,7 @@ DefineFaction("batavian-tribe", {
 	Civilization = "frankish", -- accurate?
 	Type = "tribe",
 	Colors = {"orange"},
-	FactionUpgrade = "upgrade-faction-batavian-tribe",
-	DevelopsTo = {"holland", "netherlands"} -- same general area
+	FactionUpgrade = "upgrade-faction-batavian-tribe"
 })
 
 DefineFaction("chamavi-tribe", {
@@ -64,8 +61,7 @@ DefineFaction("chamavi-tribe", {
 	Civilization = "frankish", -- accurate?
 	Type = "tribe",
 	Colors = {"pink"},
-	FactionUpgrade = "upgrade-faction-chamavi-tribe",
-	DevelopsTo = {"overijssel", "netherlands"} -- same general area
+	FactionUpgrade = "upgrade-faction-chamavi-tribe"
 })
 
 DefineFaction("chatti-tribe", {
@@ -73,8 +69,7 @@ DefineFaction("chatti-tribe", {
 	Civilization = "frankish", -- accurate?
 	Type = "tribe",
 	Colors = {"yellow"},
-	FactionUpgrade = "upgrade-faction-chatti-tribe",
-	DevelopsTo = {"hesse"} -- same general area
+	FactionUpgrade = "upgrade-faction-chatti-tribe"
 })
 
 DefineFaction("sugambri-tribe", {
@@ -82,8 +77,7 @@ DefineFaction("sugambri-tribe", {
 	Civilization = "frankish", -- accurate?
 	Type = "tribe",
 	Colors = {"black"},
-	FactionUpgrade = "upgrade-faction-sugambri-tribe",
-	DevelopsTo = {"westphalia"} -- same general area
+	FactionUpgrade = "upgrade-faction-sugambri-tribe"
 })
 
 DefineFaction("ubii-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 227-228.
@@ -92,7 +86,6 @@ DefineFaction("ubii-tribe", { -- Source: H. H. Howorth, "The Ethnology of German
 	Type = "tribe",
 	FactionUpgrade = "upgrade-faction-ubii-tribe",
 	Colors = {"purple"},
-	DevelopsTo = {"cologne", "hesse"}, -- same general area
 	Description = "The Ubii were a West Germanic tribe who lived by the Rhine, north of the Main river. Due to their location in a central trading spot, they were more advanced than other Germanic tribes. Being allies of Rome, many of them eventually migrated west of the Rhine, dwelling around Colonia Agrippinenses (the modern Cologne). The ones who remained possibly became the Chatti."
 })
 
@@ -134,7 +127,6 @@ DefineFaction("austrasia", {
 	Colors = {"pink"},
 	DefaultTier = "kingdom", -- correct?
 	FactionUpgrade = "upgrade-faction-austrasia",
-	DevelopsTo = {"francia", "holy-rome"},
 	DefaultStartPos = {3930, 926}, -- Reims
 	MinisterTitles = {
 		"head-of-government", "no-gender", "monarchy", "no-faction-tier", "Mayor of the Palace" -- Source: "Medieval Warfare V.2", 2013, p. 7.
@@ -149,7 +141,6 @@ DefineFaction("east-francia", { -- Source: James Westfall Thompson, "Medieval Ge
 	Colors = {"blue"},
 	FactionUpgrade = "upgrade-faction-east-francia",
 	DefaultTier = "kingdom",
-	DevelopsTo = {"holy-rome", "francia"},
 	HistoricalFactionDerivations = {869, "frankish", "francia"}, -- East Francia existed in 869, when it conquered Moravia; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
 	--[[
 	HistoricalDiplomacyStates = {
@@ -168,7 +159,6 @@ DefineFaction("neustria", {
 	Colors = {"orange"},
 	FactionUpgrade = "upgrade-faction-neustria",
 	DefaultTier = "kingdom", -- correct?
-	DevelopsTo = {"francia", "holy-rome"},
 	DefaultStartPos = {3891, 937}, -- Paris
 	MinisterTitles = {
 		"head-of-government", "no-gender", "monarchy", "no-faction-tier", "Mayor of the Palace" -- Source: "Medieval Warfare V.2", 2013, p. 7.
@@ -183,7 +173,6 @@ DefineFaction("salia", {
 	Colors = {"pink"},
 	FactionUpgrade = "upgrade-faction-salia",
 	DefaultTier = "kingdom",
-	DevelopsTo = {"austrasia", "francia", "holy-rome"},
 	DefaultStartPos = {3915, 923} -- Soissons
 })
 
@@ -195,6 +184,5 @@ DefineFaction("burgundia", { -- Frankish kingdom of Burgundy (not to be confused
 	Colors = {"green"},
 	FactionUpgrade = "upgrade-faction-burgundia",
 	DefaultTier = "kingdom",
-	DevelopsTo = {"francia", "holy-rome"},
 	DefaultStartPos = {3884, 961} -- Orléans
 })
