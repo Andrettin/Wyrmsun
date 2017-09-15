@@ -98,7 +98,7 @@ SetMapTemplateResource("earth", "unit-copper-deposit", {4165, 698}) -- Iron depo
 SetMapTemplateResource("earth", "unit-copper-deposit", {4197, 694}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
 SetMapTemplateResource("earth", "unit-copper-deposit", {4200, 667}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
 SetMapTemplateResource("earth", "unit-copper-deposit", {4201, 690}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
-SetMapTemplateResource("earth", "unit-copper-deposit", {4203, 693}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
+SetMapTemplateResource("earth", "unit-copper-deposit", {4203, 694}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
 SetMapTemplateResource("earth", "unit-copper-deposit", {4205, 713}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
 SetMapTemplateResource("earth", "unit-copper-deposit", {4207, 663}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
 SetMapTemplateResource("earth", "unit-copper-deposit", {4208, 671}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
