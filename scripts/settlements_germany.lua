@@ -93,11 +93,13 @@ DefineSettlement("bremen", {
 		"teuton", "Bremen"
 	},
 	Cores = {
+		"chauci-tribe",
 		"bremen",
 		"holy-rome"
 	},
 	HistoricalOwners = {
-		526, "saxon-tribe", -- Bremen's area was a Saxon possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		-264, "chauci-tribe", -- Bremen's area was territory of the Chauci in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		526, "saxon-tribe" -- Bremen's area was a Saxon possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 	},
 	HistoricalBuildings = {
 		785, 0, "temple" -- Willehad became bishop of Bremen in 785; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 176.
@@ -354,10 +356,12 @@ DefineSettlement("magdeburg", {
 		"teuton", "Magdeburg"
 	},
 	Cores = {
+		"cherusci-tribe",
 		"magdeburg",
 		"holy-rome"
 	},
 	HistoricalOwners = {
+		-264, "cherusci-tribe" -- Magdeburg's area was territory of the Cherusci in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	},
 	HistoricalBuildings = {
 	},
