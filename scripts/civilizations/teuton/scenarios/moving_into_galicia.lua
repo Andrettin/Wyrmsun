@@ -51,16 +51,6 @@ if (LoadedGame == false) then
 		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-teuton-archer", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		SetUnitVariable(unit, "Active", false)
-	elseif (GrandStrategyEventMap) then
-		local units_to_be_created = {}
-		
-		-- Suebi units
-		CreateProvinceUnits("Brandenburg", 0)
-		CreateProvinceCustomHero("Brandenburg", 0)
-		
-		-- Roman units
-		CreateProvinceUnits("Douro", 1, 4)
-		CreateProvinceCustomHero("Douro", 1)
 	end
 end
 

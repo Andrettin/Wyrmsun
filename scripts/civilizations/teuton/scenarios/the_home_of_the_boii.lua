@@ -80,25 +80,6 @@ if (LoadedGame == false) then
 				end
 			end
 		end
-	elseif (GrandStrategyEventMap) then
-		local units_to_be_created = {}
-		
-		-- Marcomanni units
-		CreateProvinceUnits("Brandenburg", 0, 2)
-		CreateProvinceCustomHero("Brandenburg", 0)
-		unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Character", "marbod")
-		SetUnitVariable(unit, "Active", false)
-		
-		-- Boii units
-		CreateProvinceUnits("Bohemia", 1)
-		CreateProvinceCustomHero("Bohemia", 1)
-		
-		if (GrandStrategyBattleBaseBuilding == false) then
-			-- don't allow the player to build/train units if in grand strategy mode if base-building is not active
-			SetPlayerData(0, "Allow", "unit-teuton-worker", "F")
-			SetPlayerData(1, "Allow", "unit-germanic-worker", "F")
-		end
 	end
 	
 	-- create allied Germanic forces

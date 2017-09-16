@@ -80,17 +80,6 @@ if (LoadedGame == false) then
 		unit = CreateUnit("unit-teuton-archer", 4, {Players[4].StartPos.x, Players[4].StartPos.y})
 		unit = CreateUnit("unit-teuton-archer", 4, {Players[4].StartPos.x, Players[4].StartPos.y})
 		unit = CreateUnit("unit-teuton-archer", 4, {Players[4].StartPos.x, Players[4].StartPos.y})
-	elseif (GrandStrategyEventMap) then
-		local units_to_be_created = {}
-		
-		-- Marcomanni units
-		CreateProvinceUnits("Bohemia", 4)
-		CreateProvinceCustomHero("Bohemia", 4)
-	--	unit = CreateUnit("unit-suebi-swordsman", 4, {Players[4].StartPos.x, Players[4].StartPos.y}) -- add Ballomar here later
-		
-		-- Roman units
-		CreateProvinceUnits("Salzburg", 0, 4)
-		CreateProvinceCustomHero("Salzburg", 0)
 	end
 end
 

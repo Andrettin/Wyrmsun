@@ -809,7 +809,6 @@ AddTrigger("caverns-of-flame-ending",
 									if (GrandStrategy) then
 										ChangeFactionResource("dwarf", "norlund-clan", "copper", 10000)
 										ChangeFactionResource("gnome", "untersberg", "copper", -10000)
-										AcquireProvince(WorldMapProvinces.ShorbearHills, "norlund-clan")
 										SetFactionDiplomacyState("dwarf", "norlund-clan", "dwarf", "shinsplitter-clan", "peace")
 										ChangeFactionResource("dwarf", "norlund-clan", "prestige", 100) -- a lot of prestige for completing the legendary scepter
 									end

@@ -88,11 +88,9 @@ local TeutonEvents = {
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
 						AcquireProvince(WorldMapProvinces.Alsace, "suebi-tribe")
-						RestoreScenarioUnitsToProvince({ProvinceName = "Alsace", FactionName = "suebi-tribe"})
 						SetProvinceUnitQuantity("Burgundy", "unit-germanic-warrior", 6) -- to give the Aedui something of a defense
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Alsace.SettlementLocation[1], WorldMapProvinces.Alsace.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
-						RestoreScenarioUnitsToProvince({ProvinceName = "Burgundy", FactionName = "aedui-tribe"})
 					end
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "suebi-tribe" or wyr.preferences.AutomaticBattles)) then
 					AcquireProvince(WorldMapProvinces.Alsace, "suebi-tribe")
@@ -155,13 +153,8 @@ local TeutonEvents = {
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
 						AcquireProvince(WorldMapProvinces.Bohemia, "marcomanni-tribe")
-						RestoreScenarioUnitsToProvince({ProvinceName = "Bohemia", FactionName = "marcomanni-tribe", Heroes = {"Marbod"}})
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Bohemia.SettlementLocation[1], WorldMapProvinces.Bohemia.SettlementLocation[2])
 						AcquireFactionTechnologies(Factions.suebi_tribe.Civilization, Factions.suebi_tribe.Name, Factions.marcomanni_tribe.Civilization, "marcomanni-tribe")
-
-						SetProvinceCivilization("Bohemia", "teuton")
-					elseif (GameResult == GameDefeat) then
-						RestoreScenarioUnitsToProvince({ProvinceName = "Bohemia", FactionName = "boii-tribe"})
 					end
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "suebi-tribe" or wyr.preferences.AutomaticBattles)) then
 					AcquireProvince(WorldMapProvinces.Bohemia, "marcomanni-tribe")
@@ -237,10 +230,7 @@ local TeutonEvents = {
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
 						AcquireProvince(WorldMapProvinces.Salzburg, "marcomanni-tribe")
-						RestoreScenarioUnitsToProvince({ProvinceName = "Salzburg", FactionName = "marcomanni-tribe"})
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Salzburg.SettlementLocation[1], WorldMapProvinces.Salzburg.SettlementLocation[2])
-					elseif (GameResult == GameDefeat) then
-						RestoreScenarioUnitsToProvince({ProvinceName = "Salzburg", FactionName = "rome"})
 					end
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "marcomanni-tribe" or wyr.preferences.AutomaticBattles)) then
 					AcquireProvince(WorldMapProvinces.Salzburg, "marcomanni-tribe")
@@ -289,10 +279,8 @@ local TeutonEvents = {
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
 						AcquireProvince(WorldMapProvinces.Venetia, "marcomanni-tribe")
-						RestoreScenarioUnitsToProvince({ProvinceName = "Venetia", FactionName = "marcomanni-tribe"})
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Venetia.SettlementLocation[1], WorldMapProvinces.Venetia.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
-						RestoreScenarioUnitsToProvince({ProvinceName = "Venetia", FactionName = "rome"})
 					end
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "marcomanni-tribe" or wyr.preferences.AutomaticBattles)) then
 					AcquireProvince(WorldMapProvinces.Venetia, "marcomanni-tribe")

@@ -108,7 +108,6 @@ AddTrigger("closing-the-gates-rugnur-dies",
 						-- if defenses have been breached, then the Shinsplitter Clan conquers the province
 						SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist", 0) -- kill off the gnomish envoy if the province has been conquered
 						SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-master-at-arms", 0)
-						AcquireProvince(WorldMapProvinces.CavernsofChaincolt, "shinsplitter-clan")
 					end
 				end
 			end
@@ -303,7 +302,6 @@ AddTrigger("closing-the-gates-introduction",
 																	-- if defenses have been breached, then the Shinsplitter Clan conquers the province
 																	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist", 0) -- kill off the gnomish envoy if the province has been conquered
 																	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-master-at-arms", 0)
-																	AcquireProvince(WorldMapProvinces.CavernsofChaincolt, "shinsplitter-clan")
 																end
 																ActionDefeat()
 															end}
@@ -667,7 +665,6 @@ AddTrigger("closing-the-gates-shinsplitter-victory",
 				-- if defenses have been breached, then the Shinsplitter Clan conquers the province
 				SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist", 0) -- kill off the gnomish envoy if the province has been conquered
 				SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-master-at-arms", 0)
-				AcquireProvince(WorldMapProvinces.CavernsofChaincolt, "shinsplitter-clan")
 			end
 			ActionVictory()
 		else
@@ -718,7 +715,6 @@ AddTrigger("closing-the-gates-baglur-dies",
 					-- if defenses have been breached, then the Shinsplitter Clan conquers the province
 					SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist", 0) -- kill off the gnomish envoy if the province has been conquered
 					SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-master-at-arms", 0)
-					AcquireProvince(WorldMapProvinces.CavernsofChaincolt, "shinsplitter-clan")
 				end
 			end
 		end

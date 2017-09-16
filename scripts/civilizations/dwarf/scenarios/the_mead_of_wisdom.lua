@@ -45,9 +45,6 @@ if (LoadedGame == false) then
 		elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
 			unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		end
-	elseif (GrandStrategyEventMap) then
-		CreateProvinceUnits("Svarinshaug", 0, 2, false, true)
-		CreateProvinceCustomHero("Svarinshaug", 0)
 	end
 end
 

@@ -57,8 +57,6 @@ local NidavellirEvents = {
 					RunMap("maps/nidavellir/fjalars-and-galars-hall.smp")
 					GrandStrategyEventMap = false
 					
-					RestoreScenarioUnitsToProvince({ProvinceName = "Svarinshaug", FactionName = "brising-clan", Heroes = {"Durin"}})
-					
 					if (GameResult == GameVictory) then
 						ChangeFactionResource("dwarf", "brising-clan", "prestige", 10) -- prestige for punishing the evil doers and recovering the sage's remains
 					end
@@ -107,7 +105,6 @@ local NidavellirEvents = {
 					RunMap("maps/nidavellir/eastern-mines.smp")
 					GrandStrategyEventMap = false
 					
-					RestoreScenarioUnitsToProvince({ProvinceName = "Svarinshaug", FactionName = "brising-clan"})
 					if (GameResult == GameVictory) then
 						ChangeFactionResource("dwarf", "brising-clan", "prestige", 30) -- prestige for obtaining the wondrous artifacts
 						ChangeFactionResource("dwarf", "brising-clan", "copper", 1000) -- copper value of Draupnir
@@ -156,8 +153,6 @@ local NidavellirEvents = {
 					SetCurrentQuest("the-necklace-of-the-brisings")
 					RunMap("maps/nidavellir/aurvang.smp")
 					GrandStrategyEventMap = false
-					
-					RestoreScenarioUnitsToProvince({ProvinceName = "Svarinshaug", FactionName = "brising-clan", Heroes = {"Modsognir", "Durin"}})
 					
 					if (GameResult == GameVictory) then
 						ChangeFactionResource("dwarf", "brising-clan", "prestige", 5) -- prestige for rooting out the bandits
@@ -236,10 +231,6 @@ local NidavellirEvents = {
 				SetCurrentQuest("a-bargain-is-struck")
 				RunMap("maps/nidavellir/chaincolt-foothills.smp")
 				GrandStrategyEventMap = false
-
-				RestoreScenarioUnitsToProvince({ProvinceName = "Caverns of Chaincolt", FactionName = "norlund-clan", Heroes = {"Rugnur"}})
-				RestoreScenarioUnitsToProvince({ProvinceName = "Untersberg", FactionName = "untersberg"})
-				RestoreScenarioUnitsToProvince({ProvinceName = "Southern Tunnels", FactionName = "shinsplitter-clan"})
 			end
 			if (("norlund-clan" ~= GrandStrategyFaction.Name or wyr.preferences.AutomaticBattles) and ("shinsplitter-clan" ~= GrandStrategyFaction.Name or wyr.preferences.AutomaticBattles)) then -- if neither Norlund Clan nor Shinsplitter Clan are played by the human player, then enact the effects of the bargain between the gnomes and Rugnur successfully being struck
 				SetFactionDiplomacyState("dwarf", "norlund-clan", "dwarf", "shinsplitter-clan", "war") -- begin war between Norlund Clan and Shinsplitter Clan
@@ -274,10 +265,6 @@ local NidavellirEvents = {
 				SetCurrentQuest("a-bargain-is-struck")
 				RunMap("maps/nidavellir/chaincolt-foothills.smp")
 				GrandStrategyEventMap = false
-
-				RestoreScenarioUnitsToProvince({ProvinceName = "Caverns of Chaincolt", FactionName = "norlund-clan", Heroes = {"Rugnur"}})
-				RestoreScenarioUnitsToProvince({ProvinceName = "Untersberg", FactionName = "untersberg"})
-				RestoreScenarioUnitsToProvince({ProvinceName = "Southern Tunnels", FactionName = "shinsplitter-clan"})
 			end
 			if (GrandStrategyFaction.Name == "shinsplitter-clan" and wyr.preferences.AutomaticBattles) then
 				GenericDialog("A Bargain is Struck", "The Norlund clan refused to pay the toll! We tried to intercept the caravans and the envoy who carried the gnomish Ruby of Fire, but we failed...")
@@ -311,16 +298,6 @@ local NidavellirEvents = {
 				SetCurrentQuest("closing-the-gates")
 				RunMap("maps/nidavellir/caverns-of-chaincolt.smp")
 				GrandStrategyEventMap = false
-
-				if (GetProvinceOwner("Caverns of Chaincolt") == "shinsplitter-clan") then
-					RestoreScenarioUnitsToProvince({ProvinceName = "Caverns of Chaincolt", FactionName = "shinsplitter-clan"})
-					SetProvinceHero("Caverns of Chaincolt", "Rugnur", 0)
-					SetProvinceHero("Caverns of Chaincolt", "Baglur", 0)
-					SetProvinceHero("Caverns of Chaincolt", "Durstorn", 0)
-				else
-					RestoreScenarioUnitsToProvince({ProvinceName = "Caverns of Chaincolt", FactionName = "norlund-clan", Heroes = {"Rugnur", "Baglur"}})
-					RestoreScenarioUnitsToProvince({ProvinceName = "Southern Tunnels", FactionName = "shinsplitter-clan"})
-				end
 			end
 			if (("norlund-clan" ~= GrandStrategyFaction.Name or wyr.preferences.AutomaticBattles) and ("shinsplitter-clan" ~= GrandStrategyFaction.Name or wyr.preferences.AutomaticBattles)) then
 				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", -1)
@@ -350,16 +327,6 @@ local NidavellirEvents = {
 				SetCurrentQuest("closing-the-gates")
 				RunMap("maps/nidavellir/caverns-of-chaincolt.smp")
 				GrandStrategyEventMap = false
-
-				if (GetProvinceOwner("Caverns of Chaincolt") == "shinsplitter-clan") then
-					RestoreScenarioUnitsToProvince({ProvinceName = "Caverns of Chaincolt", FactionName = "shinsplitter-clan"})
-					SetProvinceHero("Caverns of Chaincolt", "Rugnur", 0)
-					SetProvinceHero("Caverns of Chaincolt", "Baglur", 0)
-					SetProvinceHero("Caverns of Chaincolt", "Durstorn", 0)
-				else
-					RestoreScenarioUnitsToProvince({ProvinceName = "Caverns of Chaincolt", FactionName = "norlund-clan", Heroes = {"Rugnur", "Baglur"}})
-					RestoreScenarioUnitsToProvince({ProvinceName = "Southern Tunnels", FactionName = "shinsplitter-clan"})
-				end
 			end
 			if (GrandStrategyFaction.Name == "shinsplitter-clan" and wyr.preferences.AutomaticBattles) then
 				GenericDialog("Closing the Gates", "Again, the Norlunds foiled us. They managed to close the gates to their caves, blocking us outside. We will keep watch - someday they must exit their caves again, and then we will get what is due to us.")
@@ -391,8 +358,6 @@ local NidavellirEvents = {
 				SetCurrentQuest("searching-for-the-runecrafter")
 				RunMap("maps/nidavellir/northern-wastelands.smp")
 				GrandStrategyEventMap = false
-
-				RestoreScenarioUnitsToProvince({ProvinceName = "Caverns of Chaincolt", FactionName = "norlund-clan", Heroes = {"Rugnur", "Baglur", "Thursagan"}})
 			elseif ("norlund-clan" ~= GrandStrategyFaction.Name or wyr.preferences.AutomaticBattles) then
 				SetProvinceHero("Caverns of Chaincolt", "Thursagan", 2)
 				SetProvinceSettlementBuilding("Northern Wastelands", "unit-dwarven-smithy", false)
@@ -431,8 +396,6 @@ local NidavellirEvents = {
 				SetCurrentQuest("gathering-materials")
 				RunMap("maps/nidavellir/eastern-mines.smp")
 				GrandStrategyEventMap = false
-
-				RestoreScenarioUnitsToProvince({ProvinceName = "Caverns of Chaincolt", FactionName = "norlund-clan", Heroes = {"Rugnur", "Baglur", "Thursagan"}})
 			elseif ("norlund-clan" ~= GrandStrategyFaction.Name or wyr.preferences.AutomaticBattles) then
 				ChangeFactionResource("dwarf", "norlund-clan", "coal", 20000)
 --				SetProvinceUnitQuantity("Eastern Mines", "unit-goblin-spearman", GetProvinceUnitQuantity("Eastern Mines", "unit-goblin-spearman") / 2)
@@ -473,9 +436,6 @@ local NidavellirEvents = {
 				RunMap("maps/nidavellir/shorbear-hills.smp")
 				GrandStrategyEventMap = false
 
-				RestoreScenarioUnitsToProvince({ProvinceName = "Caverns of Chaincolt", FactionName = "norlund-clan", Heroes = {"Rugnur", "Baglur", "Thursagan", "Durstorn"}})
-				RestoreScenarioUnitsToProvince({ProvinceName = "Southern Tunnels", FactionName = "shinsplitter-clan"})
-				RestoreScenarioUnitsToProvince({ProvinceName = "Shorbear Hills", FactionName = "shorbear-clan"})
 				if (GetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist") >= 1) then
 					ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist", -1)
 				end
@@ -530,9 +490,6 @@ local NidavellirEvents = {
 				RunMap("maps/nidavellir/shorbear-hills.smp")
 				GrandStrategyEventMap = false
 
-				RestoreScenarioUnitsToProvince({ProvinceName = "Caverns of Chaincolt", FactionName = "norlund-clan", Heroes = {"Rugnur", "Baglur", "Thursagan", "Durstorn"}})
-				RestoreScenarioUnitsToProvince({ProvinceName = "Southern Tunnels", FactionName = "shinsplitter-clan"})
-				RestoreScenarioUnitsToProvince({ProvinceName = "Shorbear Hills", FactionName = "shorbear-clan"})
 				if (GetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist") >= 1) then
 					ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist", -1)
 				end
@@ -563,9 +520,6 @@ local NidavellirEvents = {
 				RunMap("maps/nidavellir/shorbear-hills.smp")
 				GrandStrategyEventMap = false
 
-				RestoreScenarioUnitsToProvince({ProvinceName = "Caverns of Chaincolt", FactionName = "norlund-clan", Heroes = {"Rugnur", "Baglur", "Thursagan", "Durstorn"}})
-				RestoreScenarioUnitsToProvince({ProvinceName = "Southern Tunnels", FactionName = "shinsplitter-clan"})
-				RestoreScenarioUnitsToProvince({ProvinceName = "Shorbear Hills", FactionName = "shorbear-clan"})
 				if (GetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist") >= 1) then
 					ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist", -1)
 				end
@@ -608,8 +562,6 @@ local NidavellirEvents = {
 				RunMap("maps/nidavellir/svafnirs-lair.smp")
 				GrandStrategyEventMap = false
 
-				RestoreScenarioUnitsToProvince({ProvinceName = "Caverns of Chaincolt", FactionName = "norlund-clan", Heroes = {"Rugnur", "Baglur", "Thursagan"}, IgnoredUnitClasses = {"infantry", "spearman", "shooter"}})
-				RestoreScenarioUnitsToProvince({ProvinceName = "Southern Tunnels", FactionName = "shinsplitter-clan", IgnoredUnitClasses = {"infantry", "spearman", "shooter"}})
 				if (GameResult == GameVictory) then
 					ChangeFactionResource("dwarf", "norlund-clan", "coal", -20000) -- Scepter of Fire crafted
 					GrandStrategyEvent(Factions.norlund_clan, GrandStrategyEvents.CavernsOfFlame)
@@ -654,9 +606,6 @@ local NidavellirEvents = {
 				RunMap("maps/nidavellir/svafnirs-lair.smp")
 				GrandStrategyEventMap = false
 
-				RestoreScenarioUnitsToProvince({ProvinceName = "Caverns of Chaincolt", FactionName = "norlund-clan", Heroes = {"Rugnur", "Baglur", "Thursagan"}, IgnoredUnitClasses = {"infantry", "spearman", "shooter"}})
-				RestoreScenarioUnitsToProvince({ProvinceName = "Southern Tunnels", FactionName = "shinsplitter-clan", IgnoredUnitClasses = {"infantry", "spearman", "shooter"}})
-				
 				if (GameResult ~= GameVictory and GetProvinceHero("Caverns of Chaincolt", "Rugnur") == 2 and GetProvinceHero("Caverns of Chaincolt", "Baglur") == 2 and GetProvinceHero("Caverns of Chaincolt", "Thursagan") == 2) then
 					ChangeFactionResource("dwarf", "norlund-clan", "coal", -20000) -- Scepter of Fire crafted
 					SetProvinceHero("Caverns of Chaincolt", "Durstorn", 0)
@@ -693,9 +642,6 @@ local NidavellirEvents = {
 				SetCurrentQuest("caverns-of-flame")
 				RunMap("maps/nidavellir/caverns-of-flame.smp")
 				GrandStrategyEventMap = false
-
-				RestoreScenarioUnitsToProvince({ProvinceName = "Caverns of Chaincolt", FactionName = "norlund-clan"})
-				RestoreScenarioUnitsToProvince({ProvinceName = "Southern Tunnels", FactionName = "shinsplitter-clan"})
 			end
 				
 			if ("shinsplitter-clan" == GrandStrategyFaction.Name) then
@@ -744,9 +690,6 @@ local NidavellirEvents = {
 				SetCurrentQuest("caverns-of-flame")
 				RunMap("maps/nidavellir/caverns-of-flame.smp")
 				GrandStrategyEventMap = false
-
-				RestoreScenarioUnitsToProvince({ProvinceName = "Caverns of Chaincolt", FactionName = "norlund-clan"})
-				RestoreScenarioUnitsToProvince({ProvinceName = "Southern Tunnels", FactionName = "shinsplitter-clan"})
 			end
 			if (GrandStrategyFaction.Name == EventFaction.Name and wyr.preferences.AutomaticBattles) then
 				GenericDialog("Caverns of Flame", "We reached the goblins' tunnels. The Norlunds were somewhere nearby, still alive. Unexplicably, a dormant volcano began to erupt, obliterating our valiant kin!")
@@ -795,8 +738,6 @@ local NidavellirEvents = {
 					GetMapInfo("maps/nidavellir/goblin-thief-hideout.smp")
 					RunMap("maps/nidavellir/goblin-thief-hideout.smp")
 					GrandStrategyEventMap = false
-
-					RestoreScenarioUnitsToProvince({ProvinceName = EventProvince.Name, FactionName = EventFaction.Name, Heroes = "any"})
 					
 					if (GameResult == GameVictory) then
 						ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)

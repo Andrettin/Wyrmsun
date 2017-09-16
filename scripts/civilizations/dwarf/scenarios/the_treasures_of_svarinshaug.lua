@@ -38,24 +38,6 @@ if (LoadedGame == false) then
 		AcquireTrait(unit, "upgrade-dextrous")
 		SetUnitVariable(unit, "Name", "Eitri")
 		unit = CreateUnit("unit-dwarven-scout", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-	elseif (GrandStrategyEventMap) then
-		unit = CreateUnit("unit-dwarven-steelclad", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Name", "Brokk")
-		AcquireTrait(unit, "upgrade-keen")
-		unit = CreateUnit("unit-dwarven-steelclad", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Name", "Eitri")
-		AcquireTrait(unit, "upgrade-dextrous")
-		
-		CreateProvinceUnits("Svarinshaug", 0, 2, false, true)
-		CreateProvinceCustomHero("Svarinshaug", 0)
-		
-		if (GrandStrategyBattleBaseBuilding == false) then
-			-- don't allow the player to build/train units if in grand strategy mode if base-building is not active
-			SetPlayerData(0, "Allow", "unit-dwarven-barracks", "F")
-			SetPlayerData(0, "Allow", "unit-brising-smithy", "F")
-			SetPlayerData(0, "Allow", "unit-dwarven-lumber-mill", "F")
-			SetPlayerData(0, "Allow", "unit-dwarven-sentry-tower", "F")
-		end
 	end
 	
 

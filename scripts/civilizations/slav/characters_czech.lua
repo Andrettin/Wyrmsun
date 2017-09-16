@@ -25,6 +25,32 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineCharacter("otakar-i-premysl", { -- Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 628.
+	Name = "Otakar", -- King Otakar I of Bohemia
+	FamilyName = "Premysl", -- "Přemysl"; Source: Alena Ježková, "77 Prague Legends", 2006, p. 36.
+	Gender = "male",
+	Type = "unit-teuton-knight-lord", -- king
+	Civilization = "slav",
+	Date = 1198, -- reign began
+	DeathDate = 1230, -- reign ended
+	HistoricalTitles = {
+		"head-of-state", 1198, 1230, "bohemia" -- king of Bohemia in 1198-1230
+	}
+})
+
+DefineCharacter("agnes-premyslovna", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 36.
+	Name = "Agnes",
+	FamilyName = "Premyslovna", -- "Přemyslovna"
+	Gender = "female",
+	Type = "unit-teuton-priest", -- mother superior of a cloister
+	Civilization = "slav",
+	Father = "otakar-i-premysl", -- youngest daughter of the Czech king Přemysl Otakar I
+	Date = 1231, -- founded the St. Agnes' Cloister (in Prague) in 1231, and became its mother superior
+	HistoricalLocations = {
+--		1231, "earth", "prague"
+	}
+})
+
 DefineCharacter("charles", { -- Source: Alena Ježková, "77 Prague Legends", 2006, pp. 45, 87.
 	Name = "Charles", -- Emperor and king Charles IV
 	Gender = "male",

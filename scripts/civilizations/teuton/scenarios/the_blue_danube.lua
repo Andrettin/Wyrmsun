@@ -57,16 +57,6 @@ if (LoadedGame == false) then
 		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-teuton-catapult", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 		SetUnitVariable(unit, "Active", false)
-	elseif (GrandStrategyEventMap) then
-		local units_to_be_created = {}
-		
-		-- Bavarian units
-		CreateProvinceUnits("Bohemia", 0)
-		CreateProvinceCustomHero("Bohemia", 0)
-		
-		-- Roman units
-		CreateProvinceUnits("Bavaria", 1, 4)
-		CreateProvinceCustomHero("Bavaria", 1)
 	end
 end
 

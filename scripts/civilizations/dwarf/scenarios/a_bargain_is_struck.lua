@@ -874,10 +874,6 @@ AddTrigger("a-bargain-is-struck-rugnur-dies",
 				if (PlayerHasObjective(GetThisPlayer(), "- Have one unit standing on each glyph at the same time")) then
 					ChangeFactionResource("dwarf", "norlund-clan", "copper", -10000)
 					ChangeFactionResource("dwarf", "shinsplitter-clan", "copper", 10000)
-					-- if defenses have been breached, then the Shinsplitter Clan conquers the province
-					SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist", 0) -- kill off the gnomish envoy if the province has been conquered
-					SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-master-at-arms", 0)
-					AcquireProvince(WorldMapProvinces.CavernsofChaincolt, "shinsplitter-clan")
 				end
 			end
 		end

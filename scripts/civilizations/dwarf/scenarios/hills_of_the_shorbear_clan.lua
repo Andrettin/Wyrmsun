@@ -778,9 +778,6 @@ AddTrigger("hills-of-the-shorbear-clan-gates-sealed",
 							SetUnitVariable(unit, "Active", false)
 							ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane", -1)
 						end
-						
-						-- if in grand strategy mode, give the province to the Shinsplitters
-						AcquireProvince(WorldMapProvinces.ShorbearHills, "shinsplitter-clan")
 					end
 				end
 				
@@ -1152,10 +1149,6 @@ AddTrigger("hills-of-the-shorbear-clan-shinsplitter-ending",
 			player,
 			{"~!Continue"},
 			{function(s)
-				if (GrandStrategyEventMap) then
-					-- if in grand strategy mode, give the province to the Shinsplitters
-					AcquireProvince(WorldMapProvinces.ShorbearHills, "shinsplitter-clan")
-				end
 				ActionDraw()
 			end}
 		)
@@ -1183,10 +1176,6 @@ AddTrigger("hills-of-the-shorbear-clan-shorbear-ending",
 			player,
 			{"~!Continue"},
 			{function(s)
-				if (GrandStrategyEventMap) then
-					-- if in grand strategy mode, give the province to the Shinsplitters
-					AcquireProvince(WorldMapProvinces.ShorbearHills, "shinsplitter-clan")
-				end
 				ActionDefeat()
 			end}
 		)
