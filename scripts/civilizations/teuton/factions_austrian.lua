@@ -31,8 +31,10 @@ DefineFaction("austria", {
 	Type = "polity",
 	Colors = {"white", "red"},
 	DefaultTier = "duchy",
-	DefaultStartPos = {4212, 952}, -- Vienna
 	FactionUpgrade = "upgrade-faction-austria",
+	Icon = "icon-flag-old-austria",
+	DefaultStartPos = {4212, 952}, -- Vienna
+	DevelopsFrom = {"bavarian-tribe"},
 	Titles = {
 		"monarchy", "grand-duchy", "Archduchy"
 	},
@@ -76,7 +78,9 @@ DefineFaction("carinthia", {
 	Type = "polity",
 	Colors = {"brown"},
 	FactionUpgrade = "upgrade-faction-carinthia",
-	DefaultTier = "duchy" -- Duchy of Carinthia within the Holy Roman Empire; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	Icon = "icon-flag-five-orange-birds-on-black",
+	DefaultTier = "duchy", -- Duchy of Carinthia within the Holy Roman Empire; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	DevelopsFrom = {"bavarian-tribe"}
 })
 
 -- Trading Companies

@@ -25,14 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("alamanni-tribe", {
-	Name = "Alamanni Tribe",
-	Civilization = "suebi",
-	Type = "tribe",
-	Colors = {"blue"},
-	FactionUpgrade = "upgrade-faction-alamanni-tribe"
-})
-
 DefineFaction("suebi-tribe", {
 	Name = "Suebi Tribe",
 	Civilization = "suebi",
@@ -40,10 +32,22 @@ DefineFaction("suebi-tribe", {
 	Colors = {"black"},
 	DefaultTier = "duchy",
 	FactionUpgrade = "upgrade-faction-suebi-tribe",
+	Icon = "icon-flag-green-lion-on-purple",
+	DevelopsFrom = {"asa-tribe", "herminone-tribe", "hersing-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"},
 	Description = "The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there.",
 	HistoricalDiplomacyStates = {
 		-55, "ubii-tribe", "overlord" -- the Ubii were tributaries of the Suebi in 55 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 227-228.
 	}
+})
+
+DefineFaction("alamanni-tribe", {
+	Name = "Alamanni Tribe",
+	Civilization = "suebi",
+	Type = "tribe",
+	Colors = {"blue"},
+	FactionUpgrade = "upgrade-faction-alamanni-tribe",
+	Icon = "icon-flag-blue-lion-on-yellow",
+	DevelopsFrom = {"suebi-tribe"}
 })
 
 DefineFaction("buri-tribe", {
@@ -52,7 +56,9 @@ DefineFaction("buri-tribe", {
 	ParentFaction = "suebi-tribe", -- accurate?
 	Type = "tribe",
 	Colors = {"violet"},
-	FactionUpgrade = "upgrade-faction-buri-tribe"
+	FactionUpgrade = "upgrade-faction-buri-tribe",
+	Icon = "icon-flag-red-lion-on-green",
+	DevelopsFrom = {"suebi-tribe"}
 })
 
 DefineFaction("hermunduri-tribe", {
@@ -61,6 +67,8 @@ DefineFaction("hermunduri-tribe", {
 	Type = "tribe",
 	Colors = {"blue"},
 	FactionUpgrade = "upgrade-faction-hermunduri-tribe",
+	Icon = "icon-flag-habsburg",
+	DevelopsFrom = {"suebi-tribe"},
 	HistoricalDiplomacyStates = {
 		170, "rome", "war", -- in 170 a coalition led by the Marcomanni (which included the Hermunduri) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.
 		171, "rome", "peace" -- in 171 the Romans forced most of the tribes of the Marcomannic coalition to a peace; Source: "Ancient Warfare VII.6", 2013, p. 32.
@@ -73,6 +81,8 @@ DefineFaction("marcomanni-tribe", {
 	Type = "tribe",
 	Colors = {"orange", "red"}, -- change to a better one?
 	FactionUpgrade = "upgrade-faction-marcomanni-tribe",
+	Icon = "icon-flag-cyan-lion-on-red",
+	DevelopsFrom = {"suebi-tribe"},
 	Description = "The Marcomanni were a Suebic tribe. Eventually they migrated to the east, settling in Bohemia and expelling the local Boii tribe. In the 2nd century they fought the terrible Marcomannic Wars against the Romans. The name \"Marcomanni\" means \"march-men\", or \"frontier-men\".",
 	HistoricalDiplomacyStates = {
 		170, "rome", "war", -- in 170 a coalition led by the Marcomanni (which included the Quadi and the Hermunduri) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.
@@ -90,7 +100,8 @@ DefineFaction("quadi-tribe", {
 	Type = "tribe",
 	Colors = {"brown"},
 	FactionUpgrade = "upgrade-faction-quadi-tribe",
-	-- the Quadi were a Suebic tribe
+	Icon = "icon-flag-green-lion-on-orange",
+	DevelopsFrom = {"suebi-tribe"}, -- the Quadi were a Suebic tribe
 	HistoricalDiplomacyStates = {
 		170, "rome", "war", -- in 170 a coalition led by the Marcomanni (which included the Quadi) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.
 		170, "marcomanni-tribe", "alliance",
@@ -107,7 +118,9 @@ DefineFaction("semnone-tribe", {
 	Civilization = "suebi",
 	Type = "tribe",
 	Colors = {"brown"},
-	FactionUpgrade = "upgrade-faction-semnone-tribe"
+	FactionUpgrade = "upgrade-faction-semnone-tribe",
+	Icon = "icon-flag-green-lion-on-purple",
+	DevelopsFrom = {"suebi-tribe"}
 })
 
 DefineFaction("thuringian-tribe", {
@@ -115,7 +128,9 @@ DefineFaction("thuringian-tribe", {
 	Civilization = "suebi",
 	Type = "tribe",
 	Colors = {"green"},
-	FactionUpgrade = "upgrade-faction-thuringian-tribe"
+	FactionUpgrade = "upgrade-faction-thuringian-tribe",
+	Icon = "icon-flag-yellow-lion-on-cyan",
+	DevelopsFrom = {"hermunduri-tribe"}
 })
 
 DefineFaction("galicia", { -- Suebi kingdom of Galicia
@@ -124,5 +139,7 @@ DefineFaction("galicia", { -- Suebi kingdom of Galicia
 	Type = "polity",
 	Colors = {"black"},
 	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-galicia"
+	FactionUpgrade = "upgrade-faction-galicia",
+	Icon = "icon-flag-green-lion-on-purple",
+	DevelopsFrom = {"suebi-tribe", "semnone-tribe", "marcomanni-tribe", "quadi-tribe", "buri-tribe"}
 })

@@ -233,18 +233,10 @@ DefineUpgrade("upgrade-faction-wurtemberg", {
 })
 
 DefineModifier("upgrade-faction-bavarian-tribe",
-	{"change-faction-to", "bavarian-tribe"}
-)
-
-DefineModifier("upgrade-faction-bavarian-tribe",
 	{"Armor", 1},
 	{"BasicDamage", 1},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
-DefineModifier("upgrade-faction-chauci-tribe",
-	{"change-faction-to", "chauci-tribe"}
 )
 
 DefineModifier("upgrade-faction-chauci-tribe",
@@ -254,18 +246,10 @@ DefineModifier("upgrade-faction-chauci-tribe",
 )
 
 DefineModifier("upgrade-faction-cherusci-tribe",
-	{"change-faction-to", "cherusci-tribe"}
-)
-
-DefineModifier("upgrade-faction-cherusci-tribe",
 	{"BasicDamage", 1},
 	{"HitPoints", 5},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-spearman"}
-)
-
-DefineModifier("upgrade-faction-frisian-tribe",
-	{"change-faction-to", "frisian-tribe"}
 )
 
 DefineModifier("upgrade-faction-frisian-tribe",
@@ -276,17 +260,9 @@ DefineModifier("upgrade-faction-frisian-tribe",
 )
 
 DefineModifier("upgrade-faction-lombard-tribe",
-	{"change-faction-to", "lombard-tribe"}
-)
-
-DefineModifier("upgrade-faction-lombard-tribe",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
-DefineModifier("upgrade-faction-saxon-tribe",
-	{"change-faction-to", "saxon-tribe"}
 )
 
 DefineModifier("upgrade-faction-saxon-tribe",
@@ -294,10 +270,6 @@ DefineModifier("upgrade-faction-saxon-tribe",
 	{"HitPoints", 5},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
-DefineModifier("upgrade-faction-teuton-tribe",
-	{"change-faction-to", "teuton-tribe"}
 )
 
 DefineModifier("upgrade-faction-teuton-tribe",
@@ -308,27 +280,15 @@ DefineModifier("upgrade-faction-teuton-tribe",
 )
 
 DefineModifier("upgrade-faction-varini-tribe",
-	{"change-faction-to", "varini-tribe"}
-)
-
-DefineModifier("upgrade-faction-varini-tribe",
 	{"HitPoints", 10},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
 DefineModifier("upgrade-faction-austria",
-	{"change-faction-to", "austria"}
-)
-
-DefineModifier("upgrade-faction-austria",
 	{"Speed", 1},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-archer"}
-)
-
-DefineModifier("upgrade-faction-bavaria",
-	{"change-faction-to", "bavaria"}
 )
 
 DefineModifier("upgrade-faction-bavaria",
@@ -339,17 +299,9 @@ DefineModifier("upgrade-faction-bavaria",
 )
 
 DefineModifier("upgrade-faction-baden",
-	{"change-faction-to", "baden"}
-)
-
-DefineModifier("upgrade-faction-baden",
 	{"Evasion", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
-DefineModifier("upgrade-faction-brabant",
-	{"change-faction-to", "brabant"}
 )
 
 DefineModifier("upgrade-faction-brabant",
@@ -359,16 +311,8 @@ DefineModifier("upgrade-faction-brabant",
 )
 
 DefineModifier("upgrade-faction-brandenburg",
-	{"change-faction-to", "brandenburg"}
-)
-
-DefineModifier("upgrade-faction-brandenburg",
 	{"improve-production", "lumber", 5},
 	{"apply-to", "unit-teuton-lumber-mill"}
-)
-
-DefineModifier("upgrade-faction-bremen",
-	{"change-faction-to", "bremen"}
 )
 
 DefineModifier("upgrade-faction-bremen",
@@ -378,37 +322,21 @@ DefineModifier("upgrade-faction-bremen",
 )
 
 DefineModifier("upgrade-faction-brunswick",
-	{"change-faction-to", "brunswick"}
-)
-
-DefineModifier("upgrade-faction-brunswick",
 	{"HitPoints", 10},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
 DefineModifier("upgrade-faction-carinthia",
-	{"change-faction-to", "carinthia"}
-)
-
-DefineModifier("upgrade-faction-carinthia",
 	{"HitPoints", 10},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-priest"}
 )
 
 DefineModifier("upgrade-faction-cologne",
-	{"change-faction-to", "cologne"}
-)
-
-DefineModifier("upgrade-faction-cologne",
 	{"Mana", 30},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-priest"}
-)
-
-DefineModifier("upgrade-faction-drenthe",
-	{"change-faction-to", "drenthe"}
 )
 
 DefineModifier("upgrade-faction-drenthe",
@@ -418,26 +346,14 @@ DefineModifier("upgrade-faction-drenthe",
 )
 
 DefineModifier("upgrade-faction-franconia",
-	{"change-faction-to", "franconia"}
-)
-
-DefineModifier("upgrade-faction-franconia",
 	{"HitPoints", 10},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-ritter"}, {"apply-to", "unit-teuton-knight-lord"}
 )
 
 DefineModifier("upgrade-faction-friesland",
-	{"change-faction-to", "friesland"}
-)
-
-DefineModifier("upgrade-faction-friesland",
 	{"Supply", 2},
 	{"apply-to", "unit-teuton-dock"}
-)
-
-DefineModifier("upgrade-faction-hesse",
-	{"change-faction-to", "hesse"}
 )
 
 DefineModifier("upgrade-faction-hesse",
@@ -447,26 +363,14 @@ DefineModifier("upgrade-faction-hesse",
 )
 
 DefineModifier("upgrade-faction-holland",
-	{"change-faction-to", "holland"}
-)
-
-DefineModifier("upgrade-faction-holland",
 	{"Supply", 2},
 	{"apply-to", "unit-teuton-dock"}
-)
-
-DefineModifier("upgrade-faction-holy-rome",
-	{"change-faction-to", "holy-rome"}
 )
 
 DefineModifier("upgrade-faction-holy-rome",
 	{"Armor", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-ritter"}, {"apply-to", "unit-teuton-knight-lord"}
-)
-
-DefineModifier("upgrade-faction-lombardy",
-	{"change-faction-to", "lombardy"}
 )
 
 DefineModifier("upgrade-faction-lombardy",
@@ -476,27 +380,15 @@ DefineModifier("upgrade-faction-lombardy",
 )
 
 DefineModifier("upgrade-faction-magdeburg",
-	{"change-faction-to", "magdeburg"}
-)
-
-DefineModifier("upgrade-faction-magdeburg",
 	{"Mana", 30},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-priest"}
 )
 
 DefineModifier("upgrade-faction-mecklenburg",
-	{"change-faction-to", "mecklenburg"}
-)
-
-DefineModifier("upgrade-faction-mecklenburg",
 	{"Armor", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
-DefineModifier("upgrade-faction-netherlands",
-	{"change-faction-to", "netherlands"}
 )
 
 DefineModifier("upgrade-faction-netherlands",
@@ -505,27 +397,15 @@ DefineModifier("upgrade-faction-netherlands",
 )
 
 DefineModifier("upgrade-faction-overijssel",
-	{"change-faction-to", "overijssel"}
-)
-
-DefineModifier("upgrade-faction-overijssel",
 	{"Accuracy", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-archer"}
 )
 
 DefineModifier("upgrade-faction-prussia",
-	{"change-faction-to", "prussia"}
-)
-
-DefineModifier("upgrade-faction-prussia",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-ritter"}, {"apply-to", "unit-teuton-knight-lord"}
-)
-
-DefineModifier("upgrade-faction-saxony",
-	{"change-faction-to", "saxony"}
 )
 
 DefineModifier("upgrade-faction-saxony",
@@ -536,17 +416,9 @@ DefineModifier("upgrade-faction-saxony",
 )
 
 DefineModifier("upgrade-faction-swabia",
-	{"change-faction-to", "swabia"}
-)
-
-DefineModifier("upgrade-faction-swabia",
 	{"HitPoints", 10},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
-DefineModifier("upgrade-faction-switzerland",
-	{"change-faction-to", "switzerland"}
 )
 
 DefineModifier("upgrade-faction-switzerland",
@@ -556,17 +428,9 @@ DefineModifier("upgrade-faction-switzerland",
 )
 
 DefineModifier("upgrade-faction-thuringia",
-	{"change-faction-to", "thuringia"}
-)
-
-DefineModifier("upgrade-faction-thuringia",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-archer"}
-)
-
-DefineModifier("upgrade-faction-westphalia",
-	{"change-faction-to", "westphalia"}
 )
 
 DefineModifier("upgrade-faction-westphalia",
@@ -576,29 +440,13 @@ DefineModifier("upgrade-faction-westphalia",
 )
 
 DefineModifier("upgrade-faction-wurtemberg",
-	{"change-faction-to", "wurtemberg"}
-)
-
-DefineModifier("upgrade-faction-wurtemberg",
 	{"Armor", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
-DefinePredependency("upgrade-faction-bavarian-tribe",
-	{"upgrade-faction-marcomanni-tribe"}, "or", {"upgrade-faction-quadi-tribe"}, "or", {"upgrade-faction-buri-tribe"} -- must be the Marcomanni or a closely related tribe to found the Bavarian Tribe
-)
-
 DefineDependency("upgrade-faction-bavarian-tribe",
-	{"upgrade-teuton-spatha", "upgrade-teuton-iron-shield"} -- needs some more advanced technology (as the Bavarians from the early Middle Ages)
-)
-
-DefinePredependency("upgrade-faction-chauci-tribe",
-	{"upgrade-faction-saxon-tribe"}
-)
-
-DefinePredependency("upgrade-faction-cherusci-tribe",
-	{"upgrade-faction-saxon-tribe"}
+	{"upgrade-teuton-spatha", "upgrade-teuton-iron-shield"} -- needs more advanced technology than the others (as the Bavarians are from the early Middle Ages)
 )
 
 DefineDependency("upgrade-faction-frisian-tribe",
@@ -617,259 +465,108 @@ DefineDependency("upgrade-faction-teuton-tribe",
 	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
 )
 
-DefinePredependency("upgrade-faction-varini-tribe",
-	{"upgrade-faction-saxon-tribe"}
-)
-
-DefinePredependency("upgrade-faction-austria",
-	{"upgrade-faction-bavarian-tribe"}
-)
-
 DefineDependency("upgrade-faction-austria",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
-)
-
-DefinePredependency("upgrade-faction-baden",
-	{"upgrade-faction-alamanni-tribe"},
-	"or", {"upgrade-faction-suebi-tribe"}
 )
 
 DefineDependency("upgrade-faction-baden",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
-DefinePredependency("upgrade-faction-bavaria",
-	{"upgrade-faction-bavarian-tribe"}
-)
-
 DefineDependency("upgrade-faction-bavaria",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
-)
-
-DefinePredependency("upgrade-faction-brabant",
-	{"upgrade-faction-frank-tribe"}
 )
 
 DefineDependency("upgrade-faction-brabant",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
-DefinePredependency("upgrade-faction-brandenburg",
-	{"upgrade-faction-saxon-tribe"}
-)
-
 DefineDependency("upgrade-faction-brandenburg",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
-)
-
-DefinePredependency("upgrade-faction-bremen",
-	{"upgrade-faction-saxon-tribe"},
-	"or", {"upgrade-faction-chauci-tribe"}
 )
 
 DefineDependency("upgrade-faction-bremen",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
-DefinePredependency("upgrade-faction-brunswick",
-	{"upgrade-faction-saxon-tribe"},
-	"or", {"upgrade-faction-cherusci-tribe"}
-)
-
 DefineDependency("upgrade-faction-brunswick",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
-)
-
-DefinePredependency("upgrade-faction-carinthia",
-	{"upgrade-faction-bavarian-tribe"}
 )
 
 DefineDependency("upgrade-faction-carinthia",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
-DefinePredependency("upgrade-faction-cologne",
-	{"upgrade-faction-ubii-tribe"}
-)
-
 DefineDependency("upgrade-faction-cologne",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry", "unit-teuton-temple", "upgrade-deity-christian-god"}
-)
-
-DefinePredependency("upgrade-faction-drenthe",
-	{"upgrade-faction-frank-tribe"},
-	"or", {"upgrade-faction-ampsivarii-tribe"}
 )
 
 DefineDependency("upgrade-faction-drenthe",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
-DefinePredependency("upgrade-faction-franconia",
-	{"upgrade-faction-frank-tribe"}
-)
-
 DefineDependency("upgrade-faction-franconia",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
-)
-
-DefinePredependency("upgrade-faction-friesland",
-	{"upgrade-faction-frisian-tribe"}
 )
 
 DefineDependency("upgrade-faction-friesland",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
-DefinePredependency("upgrade-faction-hesse",
-	{"upgrade-faction-ubii-tribe"}
-)
-
 DefineDependency("upgrade-faction-hesse",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
-)
-
-DefinePredependency("upgrade-faction-holland",
-	{"upgrade-faction-frank-tribe"},
-	"or", {"upgrade-faction-batavian-tribe"}
 )
 
 DefineDependency("upgrade-faction-holland",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
-DefinePredependency("upgrade-faction-holy-rome", -- must be either Francia, or one of the stem duchies, or a crownland that gave origin to a Holy Roman Emperor, or an electorate; must also be Christian
-	{"upgrade-faction-francia"},
-	"or", {"upgrade-faction-bavaria"},
-	"or", {"upgrade-faction-brandenburg"},
-	"or", {"upgrade-faction-brunswick"},
-	"or", {"upgrade-faction-cologne"},
-	"or", {"upgrade-faction-franconia"},
-	"or", {"upgrade-faction-hesse"},
-	"or", {"upgrade-faction-saxony"},
-	"or", {"upgrade-faction-swabia"},
-	"or", {"upgrade-faction-austria"}
-)
-
-DefineDependency("upgrade-faction-holy-rome",
+DefineDependency("upgrade-faction-holy-rome", -- must be Christian
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry", "upgrade-deity-christian-god"}
-)
-
-DefinePredependency("upgrade-faction-lombardy",
-	{"upgrade-faction-lombard-tribe"}
 )
 
 DefineDependency("upgrade-faction-lombardy",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
-DefinePredependency("upgrade-faction-magdeburg",
-	{"upgrade-faction-saxon-tribe"},
-	"or", {"upgrade-faction-cherusci-tribe"}
-)
-
 DefineDependency("upgrade-faction-magdeburg",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry", "unit-teuton-temple", "upgrade-deity-christian-god"}
-)
-
-DefinePredependency("upgrade-faction-mecklenburg",
-	{"upgrade-faction-saxon-tribe"},
-	"or", {"upgrade-faction-varini-tribe"}
 )
 
 DefineDependency("upgrade-faction-mecklenburg",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
-DefinePredependency("upgrade-faction-netherlands",
-	{"upgrade-faction-ampsivarii-tribe"},
-	"or", {"upgrade-faction-batavian-tribe"},
-	"or", {"upgrade-faction-chamavi-tribe"},
-	"or", {"upgrade-faction-chatti-tribe"},
-	"or", {"upgrade-faction-frank-tribe"},
-	"or", {"upgrade-faction-sugambri-tribe"},
-	"or", {"upgrade-faction-austrasia"},
-	"or", {"upgrade-faction-brabant"},
-	"or", {"upgrade-faction-drenthe"},
-	"or", {"upgrade-faction-friesland"},
-	"or", {"upgrade-faction-holland"},
-	"or", {"upgrade-faction-overijssel"},
-	"or", {"upgrade-faction-salia"}
-)
-
 DefineDependency("upgrade-faction-netherlands",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
-)
-
-DefinePredependency("upgrade-faction-overijssel",
-	{"upgrade-faction-frank-tribe"},
-	"or", {"upgrade-faction-chamavi-tribe"}
 )
 
 DefineDependency("upgrade-faction-overijssel",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
-DefinePredependency("upgrade-faction-prussia",
-	{"upgrade-faction-brandenburg"}
-)
-
 DefineDependency("upgrade-faction-prussia",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry", "unit-teuton-stronghold", "unit-teuton-barracks"}
-)
-
-DefinePredependency("upgrade-faction-saxony",
-	{"upgrade-faction-saxon-tribe"},
-	"or", {"upgrade-faction-cherusci-tribe"},
-	"or", {"upgrade-faction-varini-tribe"},
-	"or", {"upgrade-faction-brandenburg"},
-	"or", {"upgrade-faction-bremen"},
-	"or", {"upgrade-faction-brunswick"},
-	"or", {"upgrade-faction-magdeburg"},
-	"or", {"upgrade-faction-mecklenburg"}
 )
 
 DefineDependency("upgrade-faction-saxony",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
-DefinePredependency("upgrade-faction-swabia",
-	{"upgrade-faction-alamanni-tribe"},
-	"or", {"upgrade-faction-suebi-tribe"}
-)
-
 DefineDependency("upgrade-faction-swabia",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
-)
-
-DefinePredependency("upgrade-faction-switzerland",
-	{"upgrade-faction-alamanni-tribe"},
-	"or", {"upgrade-faction-suebi-tribe"}
 )
 
 DefineDependency("upgrade-faction-switzerland",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
-DefinePredependency("upgrade-faction-thuringia",
-	{"upgrade-faction-thuringian-tribe"}
-)
-
 DefineDependency("upgrade-faction-thuringia",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
-DefinePredependency("upgrade-faction-westphalia",
-	{"upgrade-faction-saxon-tribe"}
-)
-
 DefineDependency("upgrade-faction-westphalia",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
-)
-
-DefinePredependency("upgrade-faction-wurtemberg",
-	{"upgrade-faction-alamanni-tribe"},
-	"or", {"upgrade-faction-suebi-tribe"}
 )
 
 DefineDependency("upgrade-faction-wurtemberg",
@@ -877,14 +574,6 @@ DefineDependency("upgrade-faction-wurtemberg",
 )
 
 -- Suebi factions which are here because they require a Teuton upgrade
-
-DefinePredependency("upgrade-faction-galicia",
-	{"upgrade-faction-suebi-tribe"},
-	"or", {"upgrade-faction-semnone-tribe"},
-	"or", {"upgrade-faction-marcomanni-tribe"},
-	"or", {"upgrade-faction-quadi-tribe"},
-	"or", {"upgrade-faction-buri-tribe"}
-)
 
 DefineDependency("upgrade-faction-galicia",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}

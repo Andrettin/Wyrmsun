@@ -55,7 +55,8 @@ DefineUpgrade("upgrade-faction-oinling-clan", {
 
 DefineUpgrade("upgrade-faction-shadowcharm-clan", {
 	Name = "Shadowcharm Clan",
-	EffectsString = "+2 Evasion for Axefighters"
+	EffectsString = "+2 Evasion for Axefighters",
+	RequirementsString = "War Hall"
 })
 
 DefineUpgrade("upgrade-faction-shinsplitter-clan", {
@@ -140,10 +141,6 @@ DefineModifier("upgrade-faction-brising-clan", -- dummy upgrade modifier to trig
 	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"}, {"apply-to", "unit-dwarven-transport-ship"}
 )
 
-DefineModifier("upgrade-faction-brising-clan",
-	{"change-faction-to", "brising-clan"}
-)
-
 DefineModifier("upgrade-faction-eikinskjaldi-clan",
 	{"Armor", 1},
 	{"Points", 5},
@@ -172,10 +169,6 @@ DefineModifier("upgrade-faction-eikinskjaldi-clan",
 
 DefineModifier("upgrade-faction-eikinskjaldi-clan",
 	{"apply-to", "unit-dwarven-yale-pen"}, {"convert-to", "unit-joruvellir-yale-pen"}
-)
-
-DefineModifier("upgrade-faction-eikinskjaldi-clan",
-	{"change-faction-to", "eikinskjaldi-clan"}
 )
 
 DefineModifier("upgrade-faction-goldhoof-clan",
@@ -208,10 +201,6 @@ DefineModifier("upgrade-faction-goldhoof-clan",
 	{"apply-to", "unit-dwarven-yale-pen"}, {"convert-to", "unit-joruvellir-yale-pen"}
 )
 
-DefineModifier("upgrade-faction-goldhoof-clan",
-	{"change-faction-to", "goldhoof-clan"}
-)
-
 DefineModifier("upgrade-faction-norlund-clan",
 	{"BasicDamage", 1},
 	{"Armor", 1},
@@ -219,27 +208,15 @@ DefineModifier("upgrade-faction-norlund-clan",
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"}
 )
 
-DefineModifier("upgrade-faction-norlund-clan",
-	{"change-faction-to", "norlund-clan"}
-)
-
 DefineModifier("upgrade-faction-oinling-clan",
 	{"improve-production", "copper", 5},
 	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"}
-)
-
-DefineModifier("upgrade-faction-oinling-clan",
-	{"change-faction-to", "oinling-clan"}
 )
 
 DefineModifier("upgrade-faction-shadowcharm-clan",
 	{"Evasion", 2},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"}
-)
-
-DefineModifier("upgrade-faction-shadowcharm-clan",
-	{"change-faction-to", "shadowcharm-clan"}
 )
 
 DefineModifier("upgrade-faction-shinsplitter-clan",
@@ -249,18 +226,10 @@ DefineModifier("upgrade-faction-shinsplitter-clan",
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"}
 )
 
-DefineModifier("upgrade-faction-shinsplitter-clan",
-	{"change-faction-to", "shinsplitter-clan"}
-)
-
 DefineModifier("upgrade-faction-shorbear-clan",
 	{"BasicDamage", 15},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-ballista"}
-)
-
-DefineModifier("upgrade-faction-shorbear-clan",
-	{"change-faction-to", "shorbear-clan"}
 )
 
 DefineModifier("upgrade-faction-whitesteel-clan",
@@ -269,18 +238,10 @@ DefineModifier("upgrade-faction-whitesteel-clan",
 	{"apply-to", "unit-dwarven-guard"}
 )
 
-DefineModifier("upgrade-faction-whitesteel-clan",
-	{"change-faction-to", "whitesteel-clan"}
-)
-
 DefineModifier("upgrade-faction-joruvellir",
 	{"BasicDamage", 1},
 	{"Points", 10},
 	{"apply-to", "unit-joruvellir-scout"}, {"apply-to", "unit-joruvellir-pathfinder"}, {"apply-to", "unit-joruvellir-explorer"}
-)
-
-DefineModifier("upgrade-faction-joruvellir",
-	{"change-faction-to", "joruvellir"}
 )
 
 DefineModifier("upgrade-faction-joruvellir",
@@ -314,18 +275,10 @@ DefineModifier("upgrade-faction-kal-kartha",
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"}
 )
 
-DefineModifier("upgrade-faction-kal-kartha",
-	{"change-faction-to", "kal-kartha"}
-)
-
 DefineModifier("upgrade-faction-knalga",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"}
-)
-
-DefineModifier("upgrade-faction-knalga",
-	{"change-faction-to", "knalga"}
 )
 
 DefineModifier("upgrade-faction-lyr",
@@ -356,10 +309,6 @@ DefineModifier("upgrade-faction-lyr",
 
 DefineModifier("upgrade-faction-lyr", -- dummy upgrade modifier to trigger the variation change
 	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"}, {"apply-to", "unit-dwarven-transport-ship"}
-)
-
-DefineModifier("upgrade-faction-lyr",
-	{"change-faction-to", "lyr"}
 )
 
 DefineModifier("upgrade-faction-surghan-mercenaries",
@@ -404,89 +353,44 @@ DefineModifier("upgrade-faction-yawning-yales",
 	{"apply-to", "unit-dwarven-yale-pen"}, {"convert-to", "unit-joruvellir-yale-pen"}
 )
 
-DefinePredependency("upgrade-faction-eikinskjaldi-clan",
-	{"upgrade-faction-goldhoof-clan"}
-)
-
-DefinePredependency("upgrade-faction-goldhoof-clan",
-	{"upgrade-faction-brising-clan"}
-)
-
 DefineDependency("upgrade-faction-goldhoof-clan",
 	{"unit-dwarven-yale-pen"}, "or", {"unit-joruvellir-yale-pen"}
-)
-DefinePredependency("upgrade-faction-norlund-clan",
-	{"upgrade-faction-brising-clan"}
 )
 
 DefineDependency("upgrade-faction-norlund-clan",
 	{"unit-dwarven-smithy"}, "or", {"unit-brising-smithy"}
 )
 
-DefinePredependency("upgrade-faction-oinling-clan",
-	{"upgrade-faction-brising-clan"}
-)
-
 DefineDependency("upgrade-faction-oinling-clan",
 	{"unit-dwarven-smithy"}, "or", {"unit-brising-smithy"}
 )
 
-DefinePredependency("upgrade-faction-shadowcharm-clan",
-	{"upgrade-faction-brising-clan"}
-)
-
-DefinePredependency("upgrade-faction-shinsplitter-clan",
-	{"upgrade-faction-brising-clan"}
+DefineDependency("upgrade-faction-shadowcharm-clan",
+	{"unit-dwarven-barracks"}
 )
 
 DefineDependency("upgrade-faction-shinsplitter-clan",
 	{"unit-dwarven-barracks"}
 )
 
-DefinePredependency("upgrade-faction-shorbear-clan",
-	{"upgrade-faction-brising-clan"}
-)
-
 DefineDependency("upgrade-faction-shorbear-clan",
 	{"unit-dwarven-smithy"}, "or", {"unit-brising-smithy"}
-)
-
-DefinePredependency("upgrade-faction-whitesteel-clan",
-	{"upgrade-faction-brising-clan"},
-	"or", {"upgrade-faction-norlund-clan"},
-	"or", {"upgrade-faction-shorbear-clan"}
 )
 
 DefineDependency("upgrade-faction-whitesteel-clan",
 	{"unit-dwarven-smithy"}, "or", {"unit-brising-smithy"}
 )
 
-DefinePredependency("upgrade-faction-joruvellir",
-	{"upgrade-faction-eikinskjaldi-clan"}, "or", {"upgrade-faction-goldhoof-clan"}
-)
-
 DefineDependency("upgrade-faction-joruvellir",
 	{"upgrade-dwarven-runewriting", "upgrade-dwarven-masonry"}
-)
-
-DefinePredependency("upgrade-faction-kal-kartha",
-	{"upgrade-faction-oinling-clan"}, "or", {"upgrade-faction-shadowcharm-clan"}, "or", {"upgrade-faction-shinsplitter-clan"}, "or", {"upgrade-faction-shorbear-clan"}, "or", {"upgrade-faction-whitesteel-clan"}
 )
 
 DefineDependency("upgrade-faction-kal-kartha",
 	{"upgrade-dwarven-runewriting", "upgrade-dwarven-masonry"}
 )
 
-DefinePredependency("upgrade-faction-knalga",
-	{"upgrade-faction-norlund-clan"}, "or", {"upgrade-faction-oinling-clan"}, "or", {"upgrade-faction-shinsplitter-clan"}, "or", {"upgrade-faction-shorbear-clan"}, "or", {"upgrade-faction-whitesteel-clan"}
-)
-
 DefineDependency("upgrade-faction-knalga",
 	{"upgrade-dwarven-runewriting", "upgrade-dwarven-masonry"}
-)
-
-DefinePredependency("upgrade-faction-lyr",
-	{"upgrade-faction-brising-clan"}, "or", {"upgrade-faction-oinling-clan"}, "or", {"upgrade-faction-whitesteel-clan"}
 )
 
 DefineDependency("upgrade-faction-lyr",

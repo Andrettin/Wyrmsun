@@ -25,6 +25,50 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineFaction("brabant", {
+	Name = "Brabant",
+	Civilization = "teuton",
+	Type = "polity",
+	Colors = {"cyan"},
+	DefaultTier = "duchy", -- Brabant was a duchy in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
+	FactionUpgrade = "upgrade-faction-brabant",
+	Icon = "icon-flag-yellow-lion-on-cyan",
+	DevelopsFrom = {"frank-tribe"}
+})
+
+DefineFaction("drenthe", {
+	Name = "Drenthe",
+	Civilization = "teuton",
+	Type = "polity",
+	Colors = {"cyan"},
+	DefaultTier = "county", -- Drenthe was a county in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
+	FactionUpgrade = "upgrade-faction-drenthe",
+	Icon = "icon-flag-five-white-birds-on-red",
+	DevelopsFrom = {"frank-tribe", "ampsivarii-tribe"}
+})
+
+DefineFaction("holland", {
+	Name = "Holland",
+	Civilization = "teuton",
+	Type = "polity",
+	Colors = {"red"},
+	DefaultTier = "county", -- Holland was a county in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
+	FactionUpgrade = "upgrade-faction-holland",
+	Icon = "icon-flag-habsburg",
+	DevelopsFrom = {"frank-tribe", "batavian-tribe"}
+})
+
+DefineFaction("overijssel", {
+	Name = "Overijssel",
+	Civilization = "teuton",
+	Type = "polity",
+	Colors = {"pink"},
+	DefaultTier = "barony", -- Overijssel was a lordship in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
+	FactionUpgrade = "upgrade-faction-overijssel",
+	Icon = "icon-flag-five-red-birds-on-yellow",
+	DevelopsFrom = {"frank-tribe", "chamavi-tribe"}
+})
+
 DefineFaction("netherlands", {
 	Name = "Netherlands",
 	Civilization = "teuton",
@@ -32,6 +76,9 @@ DefineFaction("netherlands", {
 	Colors = {"orange", "blue"},
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-netherlands",
+	Icon = "icon-flag-green-lion-on-orange",
+	DefiniteArticle = true,
+	DevelopsFrom = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "frank-tribe", "sugambri-tribe", "austrasia", "brabant", "drenthe", "friesland", "holland", "overijssel", "salia"},
 	Conditions = function(s)
 		for i=0,(PlayerMax - 2) do
 			if (
@@ -56,40 +103,3 @@ DefineFaction("netherlands", {
 		"Gelderland"
 	}
 })
-
-DefineFaction("brabant", {
-	Name = "Brabant",
-	Civilization = "teuton",
-	Type = "polity",
-	Colors = {"cyan"},
-	DefaultTier = "duchy", -- Brabant was a duchy in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
-	FactionUpgrade = "upgrade-faction-brabant"
-})
-
-DefineFaction("drenthe", {
-	Name = "Drenthe",
-	Civilization = "teuton",
-	Type = "polity",
-	Colors = {"cyan"},
-	DefaultTier = "county", -- Drenthe was a county in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
-	FactionUpgrade = "upgrade-faction-drenthe"
-})
-
-DefineFaction("holland", {
-	Name = "Holland",
-	Civilization = "teuton",
-	Type = "polity",
-	Colors = {"red"},
-	DefaultTier = "county", -- Holland was a county in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
-	FactionUpgrade = "upgrade-faction-holland"
-})
-
-DefineFaction("overijssel", {
-	Name = "Overijssel",
-	Civilization = "teuton",
-	Type = "polity",
-	Colors = {"pink"},
-	DefaultTier = "barony", -- Overijssel was a lordship in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
-	FactionUpgrade = "upgrade-faction-overijssel"
-})
-

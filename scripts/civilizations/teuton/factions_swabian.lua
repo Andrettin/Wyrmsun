@@ -30,8 +30,11 @@ DefineFaction("baden", {
 	Civilization = "teuton",
 	Type = "polity",
 	Colors = {"black"},
+	DefaultTier = "grand-duchy",
 	FactionUpgrade = "upgrade-faction-baden",
-	DefaultTier = "grand-duchy"
+	Icon = "icon-flag-habsburg",
+	DevelopsFrom = {"alamanni-tribe", "suebi-tribe"}
+	
 })
 
 DefineFaction("swabia", {
@@ -40,7 +43,9 @@ DefineFaction("swabia", {
 	Type = "polity",
 	Colors = {"orange"},
 	DefaultTier = "duchy", -- Swabia was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-	FactionUpgrade = "upgrade-faction-swabia"
+	FactionUpgrade = "upgrade-faction-swabia",
+	Icon = "icon-flag-blue-lion-on-yellow",
+	DevelopsFrom = {"alamanni-tribe", "suebi-tribe"}
 	-- Swabia was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 })
 
@@ -51,6 +56,8 @@ DefineFaction("switzerland", {
 	Colors = {"red", "white"},
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-switzerland",
+	Icon = "icon-flag-red-lion-on-green",
+	DevelopsFrom = {"alamanni-tribe", "suebi-tribe"},
 	Titles = {
 		"republic", "kingdom", "Confederation"
 	}
@@ -62,7 +69,9 @@ DefineFaction("wurtemberg", {
 	ParentFaction = "swabia",
 	Type = "polity",
 	Colors = {"red"},
+	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-wurtemberg",
-	DefaultTier = "kingdom"
+	Icon = "icon-flag-cyan-lion-on-red",
+	DevelopsFrom = {"alamanni-tribe", "suebi-tribe"}
 })
 

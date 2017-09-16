@@ -409,5 +409,3 @@ DefineButton( { Pos = 1, Level = 2,
 	Key = "l", Hint = "Upgrade to ~!Landesherr", Popup = "popup-unit",
 	ForUnit = {"unit-teuton-ritter"}
 } )
-
-Load("scripts/civilizations/teuton/buttons_faction.lua")

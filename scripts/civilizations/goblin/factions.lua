@@ -116,6 +116,8 @@ DefineFaction("aurvang", {
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "monarchy",
 	FactionUpgrade = "upgrade-faction-aurvang",
+	Icon = "icon-flag-orange-skull-on-teal",
+	DevelopsFrom = {"aurvangling-tribe", "dreadskull-tribe", "lggi-tribe"},
 	Titles = {
 		"monarchy", "duchy", "Principality"
 	}
@@ -128,8 +130,10 @@ DefineFaction("driftwood", { -- from Will Doyle's "Island of the Lizard God"
 	Colors = {"brown"},
 	DefaultTier = "barony",
 	DefaultGovernmentType = "republic",
-	FactionUpgrade = "upgrade-faction-driftwood",
 	DefaultAI = "passive", -- so that Driftwood remains a small settlement, and doesn't try to attack in the Island of the Lizard God scenario
+	FactionUpgrade = "upgrade-faction-driftwood",
+	Icon = "icon-flag-red-skull-on-yellow",
+	DevelopsFrom = {"aelak-tribe", "aurvangling-tribe", "dreadskull-tribe", "issudru-tribe", "khag-tribe", "lggi-tribe", "mabom-tribe", "sigre-tribe"},
 	Description = "The cave town of Driftwood was formed from shipwrecks on a kobold isle, and peopled by lost sailors. The town is run by a goblin criminal cartel."
 })
 
@@ -141,6 +145,8 @@ DefineFaction("ezmarria", { -- invented by Jesse Crider
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "republic",
 	FactionUpgrade = "upgrade-faction-ezmarria",
+	Icon = "icon-flag-green-skull-on-purple",
+	DevelopsFrom = {"aelak-tribe", "issudru-tribe", "mabom-tribe", "sigre-tribe"},
 	Titles = {
 		"republic", "duchy", "Syndicate"
 	},
@@ -155,6 +161,8 @@ DefineFaction("myridia", { -- invented by Jesse Crider
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "republic",
 	FactionUpgrade = "upgrade-faction-myridia",
+	Icon = "icon-flag-blue-skull-on-light-blue",
+	DevelopsFrom = {"aelak-tribe", "issudru-tribe", "mabom-tribe", "sigre-tribe"},
 	Titles = {
 		"republic", "duchy", "Syndicate"
 	},
@@ -169,6 +177,8 @@ DefineFaction("stilgar", { -- invented by Jesse Crider
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "republic",
 	FactionUpgrade = "upgrade-faction-stilgar",
+	Icon = "icon-flag-purple-skull-on-green",
+	DevelopsFrom = {"aelak-tribe", "issudru-tribe", "mabom-tribe", "sigre-tribe", "khag-tribe", "prideblade-tribe", "wildfang-tribe"},
 	Titles = {
 		"republic", "duchy", "Syndicate"
 	},
@@ -183,6 +193,8 @@ DefineFaction("tenebris", { -- invented by Jesse Crider
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "republic",
 	FactionUpgrade = "upgrade-faction-tenebris",
+	Icon = "icon-flag-black-skull-on-white",
+	DevelopsFrom = {"aelak-tribe", "issudru-tribe", "mabom-tribe", "sigre-tribe", "dreadskull-tribe"},
 	Titles = {
 		"republic", "duchy", "Syndicate"
 	},

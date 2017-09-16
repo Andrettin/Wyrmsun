@@ -73,27 +73,15 @@ DefineUpgrade("upgrade-faction-galicia", {
 })
 
 DefineModifier("upgrade-faction-alamanni-tribe",
-	{"change-faction-to", "alamanni-tribe"}
-)
-
-DefineModifier("upgrade-faction-alamanni-tribe",
 	{"HitPoints", 10},
 	{"Points", 10},
 	{"apply-to", "unit-suebi-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
 DefineModifier("upgrade-faction-buri-tribe",
-	{"change-faction-to", "buri-tribe"}
-)
-
-DefineModifier("upgrade-faction-buri-tribe",
 	{"Speed", 1},
 	{"Points", 10},
 	{"apply-to", "unit-suebi-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
-DefineModifier("upgrade-faction-hermunduri-tribe",
-	{"change-faction-to", "hermunduri-tribe"}
 )
 
 DefineModifier("upgrade-faction-hermunduri-tribe",
@@ -104,27 +92,15 @@ DefineModifier("upgrade-faction-hermunduri-tribe",
 )
 
 DefineModifier("upgrade-faction-marcomanni-tribe",
-	{"change-faction-to", "marcomanni-tribe"}
-)
-
-DefineModifier("upgrade-faction-marcomanni-tribe",
 	{"Accuracy", 2},
 	{"Points", 10},
 	{"apply-to", "unit-suebi-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
 DefineModifier("upgrade-faction-quadi-tribe",
-	{"change-faction-to", "quadi-tribe"}
-)
-
-DefineModifier("upgrade-faction-quadi-tribe",
 	{"Armor", 2},
 	{"Points", 10},
 	{"apply-to", "unit-suebi-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
-DefineModifier("upgrade-faction-semnone-tribe",
-	{"change-faction-to", "semnone-tribe"}
 )
 
 DefineModifier("upgrade-faction-semnone-tribe",
@@ -135,17 +111,9 @@ DefineModifier("upgrade-faction-semnone-tribe",
 )
 
 DefineModifier("upgrade-faction-suebi-tribe",
-	{"change-faction-to", "suebi-tribe"}
-)
-
-DefineModifier("upgrade-faction-suebi-tribe",
 	{"Evasion", 2},
 	{"Points", 10},
 	{"apply-to", "unit-suebi-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
-DefineModifier("upgrade-faction-thuringian-tribe",
-	{"change-faction-to", "thuringian-tribe"}
 )
 
 DefineModifier("upgrade-faction-thuringian-tribe",
@@ -155,43 +123,11 @@ DefineModifier("upgrade-faction-thuringian-tribe",
 )
 
 DefineModifier("upgrade-faction-galicia",
-	{"change-faction-to", "galicia"}
-)
-
-DefineModifier("upgrade-faction-galicia",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-suebi-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
-DefinePredependency("upgrade-faction-alamanni-tribe",
-	{"upgrade-faction-suebi-tribe"}
-)
-
-DefinePredependency("upgrade-faction-buri-tribe",
-	{"upgrade-faction-suebi-tribe"}
-)
-
-DefinePredependency("upgrade-faction-hermunduri-tribe",
-	{"upgrade-faction-suebi-tribe"}
-)
-
-DefinePredependency("upgrade-faction-marcomanni-tribe",
-	{"upgrade-faction-suebi-tribe"}
-)
-
-DefinePredependency("upgrade-faction-quadi-tribe",
-	{"upgrade-faction-suebi-tribe"}
-)
-
-DefinePredependency("upgrade-faction-semnone-tribe",
-	{"upgrade-faction-suebi-tribe"}
-)
-
 DefineDependency("upgrade-faction-suebi-tribe",
 	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
-)
-
-DefinePredependency("upgrade-faction-thuringian-tribe",
-	{"upgrade-faction-hermunduri-tribe"}
 )

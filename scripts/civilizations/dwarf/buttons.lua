@@ -865,5 +865,3 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-guard-tower",
 --  Action = "cast-spell", Value = "spell-axe-twirl",
 --  Key = "w", Hint = _("Axe T~!wirl"), Popup = "popup-commands",
 --  ForUnit = {"unit-dwarven-thane", "unit-hero-rugnur-thane"} } )
-
-Load("scripts/civilizations/dwarf/buttons_faction.lua")

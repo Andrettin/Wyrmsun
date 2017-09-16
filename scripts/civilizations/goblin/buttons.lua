@@ -373,5 +373,3 @@ DefineButton( { Pos = 1, Level = 2, Icon = "icon-goblin-shadowstalker",
 	Key = "u", Hint = _("~!Upgrade to Shadowstalker"), Popup = "popup-unit",
 	ForUnit = {"unit-goblin-headhunter"}
 } )
-
-Load("scripts/civilizations/goblin/buttons_faction.lua")
