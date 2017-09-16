@@ -31,6 +31,7 @@ DefineFaction("frank-tribe", {
 	Type = "tribe",
 	Colors = {"green", "orange"},
 	FactionUpgrade = "upgrade-faction-frank-tribe",
+	Icon = "icon-flag-old-austria",
 	Description = "The Franks are one of the most powerful Germanic tribes to have existed. From their humble beginnings in their dwellings along the Rhine, they eventually managed to conquer the entirety of Gaul and much of Central Europe.",
 	UIFillers = {
 		"dlcs/frankish_faction_flair/graphics/ui/filler_bottom.png", 380, -181,
@@ -45,7 +46,8 @@ DefineFaction("ampsivarii-tribe", {
 	Civilization = "frankish", -- accurate?
 	Type = "tribe",
 	Colors = {"cyan"},
-	FactionUpgrade = "upgrade-faction-ampsivarii-tribe"
+	FactionUpgrade = "upgrade-faction-ampsivarii-tribe",
+	Icon = "icon-flag-five-purple-birds-on-green"
 })
 
 DefineFaction("batavian-tribe", {
@@ -53,7 +55,8 @@ DefineFaction("batavian-tribe", {
 	Civilization = "frankish", -- accurate?
 	Type = "tribe",
 	Colors = {"orange"},
-	FactionUpgrade = "upgrade-faction-batavian-tribe"
+	FactionUpgrade = "upgrade-faction-batavian-tribe",
+	Icon = "icon-flag-five-blue-birds-on-orange"
 })
 
 DefineFaction("chamavi-tribe", {
@@ -61,7 +64,8 @@ DefineFaction("chamavi-tribe", {
 	Civilization = "frankish", -- accurate?
 	Type = "tribe",
 	Colors = {"pink"},
-	FactionUpgrade = "upgrade-faction-chamavi-tribe"
+	FactionUpgrade = "upgrade-faction-chamavi-tribe",
+	Icon = "icon-flag-five-orange-birds-on-black"
 })
 
 DefineFaction("chatti-tribe", {
@@ -69,7 +73,8 @@ DefineFaction("chatti-tribe", {
 	Civilization = "frankish", -- accurate?
 	Type = "tribe",
 	Colors = {"yellow"},
-	FactionUpgrade = "upgrade-faction-chatti-tribe"
+	FactionUpgrade = "upgrade-faction-chatti-tribe",
+	Icon = "icon-flag-five-red-birds-on-yellow"
 })
 
 DefineFaction("sugambri-tribe", {
@@ -77,15 +82,17 @@ DefineFaction("sugambri-tribe", {
 	Civilization = "frankish", -- accurate?
 	Type = "tribe",
 	Colors = {"black"},
-	FactionUpgrade = "upgrade-faction-sugambri-tribe"
+	FactionUpgrade = "upgrade-faction-sugambri-tribe",
+	Icon = "icon-flag-five-black-birds-on-purple"
 })
 
 DefineFaction("ubii-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 227-228.
 	Name = "Ubii Tribe",
 	Civilization = "frankish",
 	Type = "tribe",
-	FactionUpgrade = "upgrade-faction-ubii-tribe",
 	Colors = {"purple"},
+	FactionUpgrade = "upgrade-faction-ubii-tribe",
+	Icon = "icon-flag-habsburg",
 	Description = "The Ubii were a West Germanic tribe who lived by the Rhine, north of the Main river. Due to their location in a central trading spot, they were more advanced than other Germanic tribes. Being allies of Rome, many of them eventually migrated west of the Rhine, dwelling around Colonia Agrippinenses (the modern Cologne). The ones who remained possibly became the Chatti."
 })
 
@@ -97,6 +104,8 @@ DefineFaction("francia", {
 	Colors = {"green", "orange"},
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-francia",
+	Icon = "icon-flag-old-austria",
+	DevelopsFrom = {"frank-tribe"},
 	MinisterTitles = {
 		"head-of-government", "no-gender", "monarchy", "no-faction-tier", "Mayor of the Palace" -- Source: "Medieval Warfare V.2", 2013, p. 7.
 	},
@@ -127,7 +136,10 @@ DefineFaction("austrasia", {
 	Colors = {"pink"},
 	DefaultTier = "kingdom", -- correct?
 	FactionUpgrade = "upgrade-faction-austrasia",
+	Icon = "icon-flag-five-black-birds-on-purple",
 	DefaultStartPos = {3930, 926}, -- Reims
+	DevelopsFrom = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "frank-tribe", "sugambri-tribe"},
+	DevelopsTo = {"francia"},
 	MinisterTitles = {
 		"head-of-government", "no-gender", "monarchy", "no-faction-tier", "Mayor of the Palace" -- Source: "Medieval Warfare V.2", 2013, p. 7.
 	}
@@ -139,8 +151,11 @@ DefineFaction("east-francia", { -- Source: James Westfall Thompson, "Medieval Ge
 	ParentFaction = "francia",
 	Type = "polity",
 	Colors = {"blue"},
-	FactionUpgrade = "upgrade-faction-east-francia",
 	DefaultTier = "kingdom",
+	FactionUpgrade = "upgrade-faction-east-francia",
+	Icon = "icon-flag-five-white-birds-on-red",
+	DevelopsFrom = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "frank-tribe", "sugambri-tribe"},
+	DevelopsTo = {"francia"},
 	-- East Francia existed in 869, when it conquered Moravia; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
 	--[[
 	HistoricalDiplomacyStates = {
@@ -157,9 +172,12 @@ DefineFaction("neustria", {
 	ParentFaction = "francia",
 	Type = "polity",
 	Colors = {"orange"},
+	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-neustria",
-	DefaultTier = "kingdom", -- correct?
+	Icon = "icon-flag-five-orange-birds-on-black",
 	DefaultStartPos = {3891, 937}, -- Paris
+	DevelopsFrom = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "frank-tribe", "sugambri-tribe"},
+	DevelopsTo = {"francia"},
 	MinisterTitles = {
 		"head-of-government", "no-gender", "monarchy", "no-faction-tier", "Mayor of the Palace" -- Source: "Medieval Warfare V.2", 2013, p. 7.
 	}
@@ -171,9 +189,12 @@ DefineFaction("salia", {
 	ParentFaction = "francia",
 	Type = "polity",
 	Colors = {"pink"},
-	FactionUpgrade = "upgrade-faction-salia",
 	DefaultTier = "kingdom",
-	DefaultStartPos = {3915, 923} -- Soissons
+	FactionUpgrade = "upgrade-faction-salia",
+	Icon = "icon-flag-five-red-birds-on-yellow",
+	DefaultStartPos = {3915, 923}, -- Soissons
+	DevelopsFrom = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "frank-tribe", "sugambri-tribe"},
+	DevelopsTo = {"francia"}
 })
 
 DefineFaction("burgundia", { -- Frankish kingdom of Burgundy (not to be confused with the original Kingdom of the Burgundians - an East Germanic people - or the French region)
@@ -182,7 +203,10 @@ DefineFaction("burgundia", { -- Frankish kingdom of Burgundy (not to be confused
 	ParentFaction = "francia",
 	Type = "polity",
 	Colors = {"green"},
-	FactionUpgrade = "upgrade-faction-burgundia",
 	DefaultTier = "kingdom",
-	DefaultStartPos = {3884, 961} -- Orléans
+	FactionUpgrade = "upgrade-faction-burgundia",
+	Icon = "icon-flag-five-purple-birds-on-green",
+	DefaultStartPos = {3884, 961}, -- Orléans
+	DevelopsFrom = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "frank-tribe", "sugambri-tribe"},
+	DevelopsTo = {"francia"}
 })

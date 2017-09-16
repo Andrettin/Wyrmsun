@@ -60,5 +60,3 @@ DefineButton( { Pos = 1, Level = 2,
 	Key = "h", Hint = "Upgrade to ~!Heriro", Popup = "popup-unit",
 	ForUnit = {"unit-frank-horseman"}
 } )
-
-Load("scripts/civilizations/frankish/buttons_faction.lua")

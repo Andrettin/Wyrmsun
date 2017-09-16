@@ -104,17 +104,9 @@ DefineUpgrade("upgrade-faction-salia", {
 })
 
 DefineModifier("upgrade-faction-ampsivarii-tribe",
-	{"change-faction-to", "ampsivarii-tribe"}
-)
-
-DefineModifier("upgrade-faction-ampsivarii-tribe",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-frank-swordsman"}, {"apply-to", "unit-frank-veteran-swordsman"}, {"apply-to", "unit-frank-heroic-swordsman"}
-)
-
-DefineModifier("upgrade-faction-batavian-tribe",
-	{"change-faction-to", "batavian-tribe"}
 )
 
 DefineModifier("upgrade-faction-batavian-tribe",
@@ -125,17 +117,9 @@ DefineModifier("upgrade-faction-batavian-tribe",
 )
 
 DefineModifier("upgrade-faction-chamavi-tribe",
-	{"change-faction-to", "chamavi-tribe"}
-)
-
-DefineModifier("upgrade-faction-chamavi-tribe",
 	{"Accuracy", 2},
 	{"Points", 10},
 	{"apply-to", "unit-frank-swordsman"}, {"apply-to", "unit-frank-veteran-swordsman"}, {"apply-to", "unit-frank-heroic-swordsman"}
-)
-
-DefineModifier("upgrade-faction-chatti-tribe",
-	{"change-faction-to", "chatti-tribe"}
 )
 
 DefineModifier("upgrade-faction-chatti-tribe",
@@ -145,18 +129,10 @@ DefineModifier("upgrade-faction-chatti-tribe",
 )
 
 DefineModifier("upgrade-faction-frank-tribe",
-	{"change-faction-to", "frank-tribe"}
-)
-
-DefineModifier("upgrade-faction-frank-tribe",
 	{"BasicDamage", 1},
 	{"Armor", 1},
 	{"Points", 10},
 	{"apply-to", "unit-frank-horseman"}, {"apply-to", "unit-frank-knight-lord"}
-)
-
-DefineModifier("upgrade-faction-sugambri-tribe",
-	{"change-faction-to", "sugambri-tribe"}
 )
 
 DefineModifier("upgrade-faction-sugambri-tribe",
@@ -166,16 +142,8 @@ DefineModifier("upgrade-faction-sugambri-tribe",
 )
 
 DefineModifier("upgrade-faction-ubii-tribe",
-	{"change-faction-to", "ubii-tribe"}
-)
-
-DefineModifier("upgrade-faction-ubii-tribe",
 	{"improve-production", "copper", 5}, -- the Ubii were in a central trading position, making them more advanced than other Germanic tribes
 	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"}
-)
-
-DefineModifier("upgrade-faction-austrasia",
-	{"change-faction-to", "austrasia"}
 )
 
 DefineModifier("upgrade-faction-austrasia",
@@ -186,17 +154,9 @@ DefineModifier("upgrade-faction-austrasia",
 )
 
 DefineModifier("upgrade-faction-burgundia",
-	{"change-faction-to", "burgundia"}
-)
-
-DefineModifier("upgrade-faction-burgundia",
 	{"HitPoints", 10},
 	{"Points", 10},
 	{"apply-to", "unit-frank-horseman"}, {"apply-to", "unit-frank-knight-lord"}
-)
-
-DefineModifier("upgrade-faction-east-francia",
-	{"change-faction-to", "east-francia"}
 )
 
 DefineModifier("upgrade-faction-east-francia",
@@ -206,17 +166,9 @@ DefineModifier("upgrade-faction-east-francia",
 )
 
 DefineModifier("upgrade-faction-francia",
-	{"change-faction-to", "francia"}
-)
-
-DefineModifier("upgrade-faction-francia",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-frank-horseman"}, {"apply-to", "unit-frank-knight-lord"}
-)
-
-DefineModifier("upgrade-faction-neustria",
-	{"change-faction-to", "neustria"}
 )
 
 DefineModifier("upgrade-faction-neustria",
@@ -224,10 +176,6 @@ DefineModifier("upgrade-faction-neustria",
 	{"Armor", 1},
 	{"Points", 10},
 	{"apply-to", "unit-frank-horseman"}, {"apply-to", "unit-frank-knight-lord"}
-)
-
-DefineModifier("upgrade-faction-salia",
-	{"change-faction-to", "salia"}
 )
 
 DefineModifier("upgrade-faction-salia",

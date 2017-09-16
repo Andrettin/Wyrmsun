@@ -581,78 +581,24 @@ DefineDependency("upgrade-faction-galicia",
 
 -- Frankish factions which are here because they require a Teuton upgrade
 
-DefinePredependency("upgrade-faction-francia",
-	{"upgrade-faction-frank-tribe"},
-	"or", {"upgrade-faction-austrasia"},
-	"or", {"upgrade-faction-burgundia"},
-	"or", {"upgrade-faction-east-francia"},
-	"or", {"upgrade-faction-neustria"},
-	"or", {"upgrade-faction-salia"}
-)
-
 DefineDependency("upgrade-faction-francia",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
-)
-
-DefinePredependency("upgrade-faction-austrasia",
-	{"upgrade-faction-ampsivarii-tribe"},
-	"or", {"upgrade-faction-batavian-tribe"},
-	"or", {"upgrade-faction-chamavi-tribe"},
-	"or", {"upgrade-faction-chatti-tribe"},
-	"or", {"upgrade-faction-frank-tribe"},
-	"or", {"upgrade-faction-sugambri-tribe"}
 )
 
 DefineDependency("upgrade-faction-austrasia",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
-DefinePredependency("upgrade-faction-burgundia",
-	{"upgrade-faction-ampsivarii-tribe"},
-	"or", {"upgrade-faction-batavian-tribe"},
-	"or", {"upgrade-faction-chamavi-tribe"},
-	"or", {"upgrade-faction-chatti-tribe"},
-	"or", {"upgrade-faction-frank-tribe"},
-	"or", {"upgrade-faction-sugambri-tribe"}
-)
-
 DefineDependency("upgrade-faction-burgundia",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
-)
-
-DefinePredependency("upgrade-faction-east-francia",
-	{"upgrade-faction-ampsivarii-tribe"},
-	"or", {"upgrade-faction-batavian-tribe"},
-	"or", {"upgrade-faction-chamavi-tribe"},
-	"or", {"upgrade-faction-chatti-tribe"},
-	"or", {"upgrade-faction-frank-tribe"},
-	"or", {"upgrade-faction-sugambri-tribe"}
 )
 
 DefineDependency("upgrade-faction-east-francia",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
-DefinePredependency("upgrade-faction-neustria",
-	{"upgrade-faction-ampsivarii-tribe"},
-	"or", {"upgrade-faction-batavian-tribe"},
-	"or", {"upgrade-faction-chamavi-tribe"},
-	"or", {"upgrade-faction-chatti-tribe"},
-	"or", {"upgrade-faction-frank-tribe"},
-	"or", {"upgrade-faction-sugambri-tribe"}
-)
-
 DefineDependency("upgrade-faction-neustria",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
-)
-
-DefinePredependency("upgrade-faction-salia",
-	{"upgrade-faction-ampsivarii-tribe"},
-	"or", {"upgrade-faction-batavian-tribe"},
-	"or", {"upgrade-faction-chamavi-tribe"},
-	"or", {"upgrade-faction-chatti-tribe"},
-	"or", {"upgrade-faction-frank-tribe"},
-	"or", {"upgrade-faction-sugambri-tribe"}
 )
 
 DefineDependency("upgrade-faction-salia",

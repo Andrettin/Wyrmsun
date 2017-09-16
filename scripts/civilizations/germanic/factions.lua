@@ -32,7 +32,8 @@ DefineFaction("asa-tribe", {
 	Colors = {"orange", "red"},
 	FactionUpgrade = "upgrade-asa-tribe-faction",
 	Description = "The Asa are the legendary progenitors of the Germanic peoples.",
-	Background = "In the Ynglinga Saga, the Asa (another name for the Aesir) were Odin's people, who originally lived in Asaland (identified with Asia), a realm centered in the city of Asgard. They went forth from their original lands to Scandinavia and northern Central Europe, establishing themselves in those regions."
+	Background = "In the Ynglinga Saga, the Asa (another name for the Aesir) were Odin's people, who originally lived in Asaland (identified with Asia), a realm centered in the city of Asgard. They went forth from their original lands to Scandinavia and northern Central Europe, establishing themselves in those regions.",
+	DevelopsTo = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "frank-tribe", "sugambri-tribe", "ubii-tribe"}
 })
 
 DefineFaction("herminone-tribe", { -- according to Tacitus one of the earliest Germanic tribes; Source: Tacitus, "The Germany and the Agricola of Tacitus", 1897, section 2.
@@ -51,7 +52,8 @@ DefineFaction("hersing-tribe", {
 	Colors = {"white"},
 	FactionUpgrade = "upgrade-skeldung-tribe-faction",
 	DefaultAI = "hersing-tribe",
-	Background = "In Norse mythology, Hersir was a chieftain whose daughter married Jarl."
+	Background = "In Norse mythology, Hersir was a chieftain whose daughter married Jarl.",
+	DevelopsTo = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "frank-tribe", "sugambri-tribe", "ubii-tribe"}
 })
 
 DefineFaction("hlesing-tribe", {
@@ -79,7 +81,8 @@ DefineFaction("istaevone-tribe", { -- according to Tacitus one of the earliest G
 	ParentFaction = "asa-tribe",
 	Type = "tribe",
 	Colors = {"black"},
-	FactionUpgrade = "upgrade-asa-tribe-faction"
+	FactionUpgrade = "upgrade-asa-tribe-faction",
+	DevelopsTo = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "frank-tribe", "sugambri-tribe", "ubii-tribe"}
 })
 
 DefineFaction("jarling-tribe", {
@@ -88,7 +91,8 @@ DefineFaction("jarling-tribe", {
 	Type = "tribe",
 	Colors = {"yellow"},
 	FactionUpgrade = "upgrade-jarling-tribe-faction",
-	Background = "In Norse mythology, Jarl (rendered in Proto-Germanic as Erala) was one of the sons of the god Rig, and the ancestor of those belonging to the social class of warriors. Unlike his treatment of his other sons, Rig revealed himself to Jarl as his father, and taught him the art of runes and magic."
+	Background = "In Norse mythology, Jarl (rendered in Proto-Germanic as Erala) was one of the sons of the god Rig, and the ancestor of those belonging to the social class of warriors. Unlike his treatment of his other sons, Rig revealed himself to Jarl as his father, and taught him the art of runes and magic.",
+	DevelopsTo = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "frank-tribe", "sugambri-tribe", "ubii-tribe"}
 })
 
 DefineFaction("karling-tribe", {
@@ -98,7 +102,8 @@ DefineFaction("karling-tribe", {
 	Colors = {"brown"},
 	FactionUpgrade = "upgrade-karling-tribe-faction",
 	DefaultAI = "passive",
-	Background = "In Norse mythology, Karl (rendered in Proto-Germanic as Karla) was one of the sons of the god Rig, and the ancestor of those belonging to the social class of peasants."
+	Background = "In Norse mythology, Karl (rendered in Proto-Germanic as Karla) was one of the sons of the god Rig, and the ancestor of those belonging to the social class of peasants.",
+	DevelopsTo = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "frank-tribe", "sugambri-tribe", "ubii-tribe"}
 })
 
 DefineFaction("skeldung-tribe", { -- Skjoldung in the original Norse sagas, here rendered in Proto-Germanic; mythical Danish dynasty, Skjöldr was a son of Odin set to rule over Reidgothland (Jutland) and Zealand; Source: Snorri Sturlson, "Heimskringla", 1844; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
@@ -128,7 +133,8 @@ DefineFaction("thralling-tribe", {
 	Colors = {"black"},
 	FactionUpgrade = "upgrade-thralling-tribe-faction",
 	DefaultAI = "passive",
-	Background = "In Norse mythology, Thrall (rendered in Proto-Germanic as Thrahila) was one of the sons of the god Rig, and the ancestor of those belonging to the social class of thralls."
+	Background = "In Norse mythology, Thrall (rendered in Proto-Germanic as Thrahila) was one of the sons of the god Rig, and the ancestor of those belonging to the social class of thralls.",
+	DevelopsTo = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "frank-tribe", "sugambri-tribe", "ubii-tribe"}
 })
 
 DefineFaction("yngling-tribe", { -- mythical Swedish dynasty, Yngve was a son of Odin set to succeed him in the rule of Sweden; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 9.
