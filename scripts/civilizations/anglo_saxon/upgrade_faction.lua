@@ -161,27 +161,15 @@ DefineUpgrade("upgrade-faction-wessex", {
 })
 
 DefineModifier("upgrade-faction-angle-tribe",
-	{"change-faction-to", "angle-tribe"}
-)
-
-DefineModifier("upgrade-faction-angle-tribe",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
 DefineModifier("upgrade-faction-avione-tribe",
-	{"change-faction-to", "avione-tribe"}
-)
-
-DefineModifier("upgrade-faction-avione-tribe",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-archer"}
-)
-
-DefineModifier("upgrade-faction-bernice-tribe",
-	{"change-faction-to", "bernice-tribe"}
 )
 
 DefineModifier("upgrade-faction-bernice-tribe",
@@ -192,10 +180,6 @@ DefineModifier("upgrade-faction-bernice-tribe",
 )
 
 DefineModifier("upgrade-faction-cantware-tribe",
-	{"change-faction-to", "cantware-tribe"}
-)
-
-DefineModifier("upgrade-faction-cantware-tribe",
 	{"TimeEfficiencyBonus", 10},
 	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"},
 	{"apply-to", "unit-teuton-farm"}, {"apply-to", "unit-teuton-barracks"},
@@ -207,17 +191,9 @@ DefineModifier("upgrade-faction-cantware-tribe",
 )
 
 DefineModifier("upgrade-faction-charude-tribe",
-	{"change-faction-to", "charude-tribe"}
-)
-
-DefineModifier("upgrade-faction-charude-tribe",
 	{"Armor", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-archer"}
-)
-
-DefineModifier("upgrade-faction-dere-tribe",
-	{"change-faction-to", "dere-tribe"}
 )
 
 DefineModifier("upgrade-faction-dere-tribe",
@@ -227,36 +203,19 @@ DefineModifier("upgrade-faction-dere-tribe",
 )
 
 DefineModifier("upgrade-faction-gumeninga-tribe",
-	{"change-faction-to", "gumeninga-tribe"}
-)
-
-DefineModifier("upgrade-faction-gumeninga-tribe",
 	{"Mana", 30},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-priest"}
 )
 
 DefineModifier("upgrade-faction-jute-tribe",
-	{"change-faction-to", "jute-tribe"}
-)
-
-DefineModifier("upgrade-faction-jute-tribe",
 	{"Supply", 2},
 	{"apply-to", "unit-teuton-dock"}
 )
-
-DefineModifier("upgrade-faction-lindisfaran-tribe",
-	{"change-faction-to", "lindisfaran-tribe"}
-)
-
 DefineModifier("upgrade-faction-lindisfaran-tribe",
 	{"Accuracy", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
-DefineModifier("upgrade-faction-mierce-tribe",
-	{"change-faction-to", "mierce-tribe"}
 )
 
 DefineModifier("upgrade-faction-mierce-tribe",
@@ -266,18 +225,10 @@ DefineModifier("upgrade-faction-mierce-tribe",
 )
 
 DefineModifier("upgrade-faction-bernicia",
-	{"change-faction-to", "bernicia"}
-)
-
-DefineModifier("upgrade-faction-bernicia",
 	{"BasicDamage", 1},
 	{"Accuracy", 1},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
-DefineModifier("upgrade-faction-deira",
-	{"change-faction-to", "deira"}
 )
 
 DefineModifier("upgrade-faction-deira",
@@ -288,17 +239,9 @@ DefineModifier("upgrade-faction-deira",
 )
 
 DefineModifier("upgrade-faction-east-anglia",
-	{"change-faction-to", "east-anglia"}
-)
-
-DefineModifier("upgrade-faction-east-anglia",
 	{"Accuracy", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
-DefineModifier("upgrade-faction-englaland",
-	{"change-faction-to", "englaland"}
 )
 
 DefineModifier("upgrade-faction-englaland",
@@ -308,26 +251,14 @@ DefineModifier("upgrade-faction-englaland",
 )
 
 DefineModifier("upgrade-faction-essex",
-	{"change-faction-to", "essex"}
-)
-
-DefineModifier("upgrade-faction-essex",
 	{"Accuracy", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-archer"}
 )
 
 DefineModifier("upgrade-faction-jutland",
-	{"change-faction-to", "jutland"}
-)
-
-DefineModifier("upgrade-faction-jutland",
 	{"Supply", 2},
 	{"apply-to", "unit-teuton-dock"}
-)
-
-DefineModifier("upgrade-faction-kent",
-	{"change-faction-to", "kent"}
 )
 
 DefineModifier("upgrade-faction-kent",
@@ -342,17 +273,9 @@ DefineModifier("upgrade-faction-kent",
 )
 
 DefineModifier("upgrade-faction-mercia",
-	{"change-faction-to", "mercia"}
-)
-
-DefineModifier("upgrade-faction-mercia",
 	{"Armor", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
-DefineModifier("upgrade-faction-middle-anglia",
-	{"change-faction-to", "middle-anglia"}
 )
 
 DefineModifier("upgrade-faction-middle-anglia",
@@ -363,16 +286,8 @@ DefineModifier("upgrade-faction-middle-anglia",
 )
 
 DefineModifier("upgrade-faction-middlesex",
-	{"change-faction-to", "middlesex"}
-)
-
-DefineModifier("upgrade-faction-middlesex",
 	{"TradeCost", -5},
 	{"apply-to", "unit-teuton-market"}
-)
-
-DefineModifier("upgrade-faction-northumbria",
-	{"change-faction-to", "northumbria"}
 )
 
 DefineModifier("upgrade-faction-northumbria",
@@ -382,17 +297,9 @@ DefineModifier("upgrade-faction-northumbria",
 )
 
 DefineModifier("upgrade-faction-sussex",
-	{"change-faction-to", "sussex"}
-)
-
-DefineModifier("upgrade-faction-sussex",
 	{"HitPoints", 10},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-archer"}
-)
-
-DefineModifier("upgrade-faction-wessex",
-	{"change-faction-to", "wessex"}
 )
 
 DefineModifier("upgrade-faction-wessex",
@@ -405,37 +312,6 @@ DefineDependency("upgrade-faction-angle-tribe",
 	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
 )
 
-DefinePredependency("upgrade-faction-avione-tribe",
-	{"upgrade-faction-angle-tribe"}
-)
-
-DefinePredependency("upgrade-faction-charude-tribe",
-	{"upgrade-faction-angle-tribe"}
-)
-
-DefinePredependency("upgrade-faction-jute-tribe",
-	{"upgrade-faction-angle-tribe"}
-)
-
-DefinePredependency("upgrade-faction-northumbria",
-	{"upgrade-faction-bernicia"},
-	"or", {"upgrade-faction-deira"}
-)
-
 DefineDependency("upgrade-faction-northumbria",
 	{"unit-teuton-temple"}
-)
-
-DefinePredependency("upgrade-faction-englaland",
-	{"upgrade-faction-bernicia"},
-	"or", {"upgrade-faction-deira"},
-	"or", {"upgrade-faction-east-anglia"},
-	"or", {"upgrade-faction-essex"},
-	"or", {"upgrade-faction-kent"},
-	"or", {"upgrade-faction-mercia"},
-	"or", {"upgrade-faction-middle-anglia"},
-	"or", {"upgrade-faction-middlesex"},
-	"or", {"upgrade-faction-northumbria"},
-	"or", {"upgrade-faction-sussex"},
-	"or", {"upgrade-faction-wessex"}
 )

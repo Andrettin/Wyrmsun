@@ -32,6 +32,8 @@ DefineFaction("england", {
 	Colors = {"red", "white"},
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-england",
+	Icon = "icon-flag-cyan-lion-on-red",
+	DevelopsFrom = {"englaland"},
 	Conditions = function(s)
 		for i=0,(PlayerMax - 2) do
 			if (
@@ -53,5 +55,7 @@ DefineFaction("scotland", {
 	Type = "polity",
 	Colors = {"blue", "white"},
 	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-scotland"
+	FactionUpgrade = "upgrade-faction-scotland",
+	Icon = "icon-flag-old-austria",
+	DevelopsFrom = {"bernicia", "northumbria"}
 })

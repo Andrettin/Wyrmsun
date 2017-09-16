@@ -34,6 +34,9 @@ DefineSettlement("aarhus", {
 		"germanic", "Ahvoosa", -- tentative rendering of "Aarhus" in Proto-Germanic
 		"norse", "Aarhus"
 	},
+	Cores = {
+		"jute-tribe"
+	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 

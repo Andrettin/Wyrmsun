@@ -607,149 +607,68 @@ DefineDependency("upgrade-faction-salia",
 
 -- Anglo-Saxon factions which are here because they require a Teuton upgrade
 
-DefinePredependency("upgrade-faction-bernice-tribe",
-	{"upgrade-faction-angle-tribe"}
-)
-
 DefineDependency("upgrade-faction-bernice-tribe",
 	{"upgrade-teuton-spatha", "upgrade-teuton-iron-shield"}
-)
-
-DefinePredependency("upgrade-faction-cantware-tribe",
-	{"upgrade-faction-jute-tribe"}
 )
 
 DefineDependency("upgrade-faction-cantware-tribe",
 	{"upgrade-teuton-spatha", "upgrade-teuton-iron-shield"}
 )
 
-DefinePredependency("upgrade-faction-dere-tribe",
-	{"upgrade-faction-angle-tribe"}
-)
-
 DefineDependency("upgrade-faction-dere-tribe",
 	{"upgrade-teuton-spatha", "upgrade-teuton-iron-shield"}
-)
-
-DefinePredependency("upgrade-faction-gumeninga-tribe",
-	{"upgrade-faction-angle-tribe"}
 )
 
 DefineDependency("upgrade-faction-gumeninga-tribe",
 	{"upgrade-teuton-spatha", "upgrade-teuton-iron-shield"}
 )
 
-DefinePredependency("upgrade-faction-lindisfaran-tribe",
-	{"upgrade-faction-angle-tribe"}
-)
-
 DefineDependency("upgrade-faction-lindisfaran-tribe",
 	{"upgrade-teuton-spatha", "upgrade-teuton-iron-shield"}
-)
-
-DefinePredependency("upgrade-faction-mierce-tribe",
-	{"upgrade-faction-angle-tribe"}
 )
 
 DefineDependency("upgrade-faction-mierce-tribe",
 	{"upgrade-teuton-spatha", "upgrade-teuton-iron-shield"}
 )
 
-DefinePredependency("upgrade-faction-bernicia",
-	{"upgrade-faction-bernice-tribe"},
-	"or", {"upgrade-faction-angle-tribe"},
-	"or", {"upgrade-faction-charude-tribe"}
-)
-
 DefineDependency("upgrade-faction-bernicia",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
-)
-
-DefinePredependency("upgrade-faction-deira",
-	{"upgrade-faction-dere-tribe"},
-	"or", {"upgrade-faction-lindisfaran-tribe"},
-	"or", {"upgrade-faction-angle-tribe"},
-	"or", {"upgrade-faction-charude-tribe"}
 )
 
 DefineDependency("upgrade-faction-deira",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
-DefinePredependency("upgrade-faction-east-anglia",
-	{"upgrade-faction-angle-tribe"},
-	"or", {"upgrade-faction-charude-tribe"}
-)
-
 DefineDependency("upgrade-faction-east-anglia",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
-)
-
-DefinePredependency("upgrade-faction-essex",
-	{"upgrade-faction-saxon-tribe"},
-	"or", {"upgrade-faction-gumeninga-tribe"}
 )
 
 DefineDependency("upgrade-faction-essex",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
-DefinePredependency("upgrade-faction-jutland",
-	{"upgrade-faction-jute-tribe"},
-	"or", {"upgrade-faction-teuton-tribe"}
-)
-
 DefineDependency("upgrade-faction-jutland",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
-)
-
-DefinePredependency("upgrade-faction-kent",
-	{"upgrade-faction-cantware-tribe"},
-	"or", {"upgrade-faction-jute-tribe"}
 )
 
 DefineDependency("upgrade-faction-kent",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
-DefinePredependency("upgrade-faction-mercia",
-	{"upgrade-faction-mierce-tribe"},
-	"or", {"upgrade-faction-lindisfaran-tribe"},
-	"or", {"upgrade-faction-angle-tribe"},
-	"or", {"upgrade-faction-charude-tribe"}
-)
-
 DefineDependency("upgrade-faction-mercia",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
-)
-
-DefinePredependency("upgrade-faction-middle-anglia",
-	{"upgrade-faction-angle-tribe"},
-	"or", {"upgrade-faction-charude-tribe"}
 )
 
 DefineDependency("upgrade-faction-middle-anglia",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
-DefinePredependency("upgrade-faction-middlesex",
-	{"upgrade-faction-saxon-tribe"}
-)
-
 DefineDependency("upgrade-faction-middlesex",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
-DefinePredependency("upgrade-faction-sussex",
-	{"upgrade-faction-saxon-tribe"}
-)
-
 DefineDependency("upgrade-faction-sussex",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
-)
-
-DefinePredependency("upgrade-faction-wessex",
-	{"upgrade-faction-saxon-tribe"}
 )
 
 DefineDependency("upgrade-faction-wessex",

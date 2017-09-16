@@ -38,30 +38,13 @@ DefineUpgrade("upgrade-faction-scotland", {
 })
 
 DefineModifier("upgrade-faction-england",
-	{"change-faction-to", "england"}
-)
-
-DefineModifier("upgrade-faction-england",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-archer"}
 )
 
 DefineModifier("upgrade-faction-scotland",
-	{"change-faction-to", "scotland"}
-)
-
-DefineModifier("upgrade-faction-scotland",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
-DefinePredependency("upgrade-faction-england",
-	{"upgrade-faction-englaland"}
-)
-
-DefinePredependency("upgrade-faction-scotland",
-	{"upgrade-faction-bernicia"},
-	"or", {"upgrade-faction-northumbria"}
 )

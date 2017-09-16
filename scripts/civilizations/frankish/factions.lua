@@ -33,6 +33,7 @@ DefineFaction("frank-tribe", {
 	FactionUpgrade = "upgrade-faction-frank-tribe",
 	Icon = "icon-flag-old-austria",
 	Description = "The Franks are one of the most powerful Germanic tribes to have existed. From their humble beginnings in their dwellings along the Rhine, they eventually managed to conquer the entirety of Gaul and much of Central Europe.",
+	DevelopsFrom = {"asa-tribe", "hersing-tribe", "istaevone-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"},
 	UIFillers = {
 		"dlcs/frankish_faction_flair/graphics/ui/filler_bottom.png", 380, -181,
 		"dwarf/ui/resource.png", 0, 0,
@@ -47,7 +48,8 @@ DefineFaction("ampsivarii-tribe", {
 	Type = "tribe",
 	Colors = {"cyan"},
 	FactionUpgrade = "upgrade-faction-ampsivarii-tribe",
-	Icon = "icon-flag-five-purple-birds-on-green"
+	Icon = "icon-flag-five-purple-birds-on-green",
+	DevelopsFrom = {"asa-tribe", "hersing-tribe", "istaevone-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"}
 })
 
 DefineFaction("batavian-tribe", {
@@ -56,7 +58,8 @@ DefineFaction("batavian-tribe", {
 	Type = "tribe",
 	Colors = {"orange"},
 	FactionUpgrade = "upgrade-faction-batavian-tribe",
-	Icon = "icon-flag-five-blue-birds-on-orange"
+	Icon = "icon-flag-five-blue-birds-on-orange",
+	DevelopsFrom = {"asa-tribe", "hersing-tribe", "istaevone-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"}
 })
 
 DefineFaction("chamavi-tribe", {
@@ -65,7 +68,8 @@ DefineFaction("chamavi-tribe", {
 	Type = "tribe",
 	Colors = {"pink"},
 	FactionUpgrade = "upgrade-faction-chamavi-tribe",
-	Icon = "icon-flag-five-orange-birds-on-black"
+	Icon = "icon-flag-five-orange-birds-on-black",
+	DevelopsFrom = {"asa-tribe", "hersing-tribe", "istaevone-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"}
 })
 
 DefineFaction("chatti-tribe", {
@@ -74,7 +78,8 @@ DefineFaction("chatti-tribe", {
 	Type = "tribe",
 	Colors = {"yellow"},
 	FactionUpgrade = "upgrade-faction-chatti-tribe",
-	Icon = "icon-flag-five-red-birds-on-yellow"
+	Icon = "icon-flag-five-red-birds-on-yellow",
+	DevelopsFrom = {"asa-tribe", "hersing-tribe", "istaevone-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"}
 })
 
 DefineFaction("sugambri-tribe", {
@@ -83,7 +88,8 @@ DefineFaction("sugambri-tribe", {
 	Type = "tribe",
 	Colors = {"black"},
 	FactionUpgrade = "upgrade-faction-sugambri-tribe",
-	Icon = "icon-flag-five-black-birds-on-purple"
+	Icon = "icon-flag-five-black-birds-on-purple",
+	DevelopsFrom = {"asa-tribe", "hersing-tribe", "istaevone-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"}
 })
 
 DefineFaction("ubii-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 227-228.
@@ -93,7 +99,8 @@ DefineFaction("ubii-tribe", { -- Source: H. H. Howorth, "The Ethnology of German
 	Colors = {"purple"},
 	FactionUpgrade = "upgrade-faction-ubii-tribe",
 	Icon = "icon-flag-habsburg",
-	Description = "The Ubii were a West Germanic tribe who lived by the Rhine, north of the Main river. Due to their location in a central trading spot, they were more advanced than other Germanic tribes. Being allies of Rome, many of them eventually migrated west of the Rhine, dwelling around Colonia Agrippinenses (the modern Cologne). The ones who remained possibly became the Chatti."
+	Description = "The Ubii were a West Germanic tribe who lived by the Rhine, north of the Main river. Due to their location in a central trading spot, they were more advanced than other Germanic tribes. Being allies of Rome, many of them eventually migrated west of the Rhine, dwelling around Colonia Agrippinenses (the modern Cologne). The ones who remained possibly became the Chatti.",
+	DevelopsFrom = {"asa-tribe", "hersing-tribe", "istaevone-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"}
 })
 
 DefineFaction("francia", {
