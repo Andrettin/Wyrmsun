@@ -25,17 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineWorldMapTile({498, 111}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"latin", "Colonia Agrippina", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		"teuton", "Köln"
-	},
-	FactionCulturalSettlementNames = {
-		"french", "france", "Cologne"
-	}
-})
-
 DefineWorldMapTile({500, 109}, {
 	World = "earth",
 	CulturalSettlementNames = {
@@ -46,7 +35,6 @@ DefineWorldMapTile({500, 109}, {
 DefineWorldMapTile({502, 115}, {
 	World = "earth",
 	CulturalSettlementNames = {
-		"latin", "Borbetomagus", -- not actually the same city as Kaiserslautern (Borbetomagus is Worms), but nevertheless in the Palatinate; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		"teuton", "Kaiserslautern"
 	}
 })
@@ -58,32 +46,10 @@ DefineWorldMapTile({503, 104}, {
 	}
 })
 
-DefineWorldMapTile({503, 114}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"latin", "Mogontiacum", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-		"teuton", "Mainz"
-	}
-})
-
 DefineWorldMapTile({503, 117}, {
 	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Rastatt"
-	}
-})
-
-DefineWorldMapTile({504, 104}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"teuton", "Bremen"
-	}
-})
-
-DefineWorldMapTile({506, 100}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"teuton", "Flensburg"
 	}
 })
 
@@ -104,23 +70,6 @@ DefineWorldMapTile({506, 117}, {
 	}
 })
 
-DefineWorldMapTile({507, 107}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"teuton", "Hannover"
-	},
-	FactionCulturalSettlementNames = {
-		"english", "england", "Hanover"
-	}
-})
-
-DefineWorldMapTile({508, 101}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"teuton", "Kiel"
-	}
-})
-
 DefineWorldMapTile({508, 114}, {
 	World = "earth",
 	CulturalSettlementNames = {
@@ -138,21 +87,6 @@ DefineWorldMapTile({509, 107}, {
 	}
 })
 
-DefineWorldMapTile({510, 102}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"teuton", "Lübeck"
-	}
-})
-
-DefineWorldMapTile({510, 118}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"latin", "Augusta Vindelicorum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"teuton", "Augsburg"
-	}
-})
-
 DefineWorldMapTile({511, 110}, {
 	World = "earth",
 	CulturalSettlementNames = {
@@ -167,22 +101,6 @@ DefineWorldMapTile({512, 103}, {
 	}
 })
 
-DefineWorldMapTile({513, 107}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"teuton", "Magdeburg"
-	}
-})
-
-DefineWorldMapTile({514, 116}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"latin", "Regina Castra",
-		"teuton", "Regensburg"
-		-- also "Ratisbon"
-	}
-})
-
 DefineWorldMapTile({515, 109}, {
 	World = "earth",
 	CulturalSettlementNames = {
@@ -190,24 +108,10 @@ DefineWorldMapTile({515, 109}, {
 	}
 })
 
-DefineWorldMapTile({518, 106}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"teuton", "Berlin"
-	}
-})
-
 DefineWorldMapTile({520, 109}, {
 	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Bautzen"
-	}
-})
-
-DefineWorldMapTile({521, 103}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"teuton", "Stettin"
 	}
 })
 
@@ -245,19 +149,3 @@ DefineWorldMapTile({528, 107}, {
 		"teuton", "Posen"
 	}
 })
-
-DefineWorldMapTile({532, 101}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"slav", "Gdańsk", -- Polish
-		"teuton", "Danzig"
-	}
-})
-
-DefineWorldMapTile({537, 100}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"teuton", "Königsberg"
-	}
-})
-

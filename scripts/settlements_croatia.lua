@@ -42,7 +42,7 @@ DefineSettlement("fiume", {
 		1719, 0, "dock", -- Karl VI of the Holy Roman Empire made Fiume/Rijeka a free port ("Freihafen") in 1719; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 464.
 		1750, 0, "dock", "haubt-handlungs-compagnie-von-triest-und-fiume" -- "Haubt-Handlungs-Compagnie von Triest und Fiume" founded in 1750; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 477.
 	},
-	Regions = {"europe", "west-and-central-europe"}
+	Regions = {"europe", "roman-danube", "west-and-central-europe"}
 })
 
 DefineSettlement("narona", {
@@ -58,7 +58,7 @@ DefineSettlement("narona", {
 	HistoricalBuildings = {
 		161, 0, "farm"
 	},
-	Regions = {"europe", "west-and-central-europe"}
+	Regions = {"europe", "roman-danube", "west-and-central-europe"}
 })
 
 DefineSettlement("zagreb", {
@@ -67,16 +67,20 @@ DefineSettlement("zagreb", {
 	Position = {4204, 1005},
 	Major = true,
 	CulturalNames = {
+		"latin", "Celeta", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		"slav", "Zagreb",
 		"teuton", "Agram"
+	},
+	Cores = {
+		"croatia"
 	},
 	HistoricalOwners = {
 		1815, "austria" -- Agram was a part of the Empire of Austria in 1815 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
 		1815, 0, "town-hall",
-		1537, 0, "university" -- University founded in Zagreb in 1874; Source: A.J.P. Taylor, "The Habsburg Monarchy, 1809-1918", 1964, p. 203.
+		1874, 0, "university" -- University founded in Zagreb in 1874; Source: A.J.P. Taylor, "The Habsburg Monarchy, 1809-1918", 1964, p. 203.
 	},
-	Regions = {"europe", "west-and-central-europe"}
+	Regions = {"europe", "roman-danube", "west-and-central-europe"}
 })
 

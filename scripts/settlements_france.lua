@@ -790,7 +790,7 @@ DefineSettlement("tours", {
 	Position = {3857, 971},
 	CulturalNames = {
 		"frankish", "Turones",
-		"french", "Tours"
+		"french", "Tours" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	HistoricalOwners = {
 		395, "rome", -- Tours was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.

@@ -263,6 +263,7 @@ DefineSettlement("thebes-egypt", {
 	CulturalNames = {
 		"assyrian", "Thebes",
 		"egyptian", "Thebes",
+		"latin", "Thebes", -- "Thebae"; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		"persian", "Thebes"
 	},
 	HistoricalOwners = {

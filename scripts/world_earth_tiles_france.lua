@@ -32,31 +32,10 @@ DefineWorldMapTile({475, 119}, {
 	}
 })
 
-DefineWorldMapTile({482, 115}, {
-	World = "earth",
-	FactionCulturalSettlementNames = {
-		"french", "france", "Rouen"
-	}
-})
-
-DefineWorldMapTile({482, 121}, {
-	World = "earth",
-	FactionCulturalSettlementNames = {
-		"french", "france", "Tours" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	}
-})
-
 DefineWorldMapTile({485, 124}, {
 	World = "earth",
 	FactionCulturalSettlementNames = {
 		"french", "france", "Guéret" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	}
-})
-
-DefineWorldMapTile({493, 125}, {
-	World = "earth",
-	FactionCulturalSettlementNames = {
-		"french", "france", "Lyons" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	}
 })
 

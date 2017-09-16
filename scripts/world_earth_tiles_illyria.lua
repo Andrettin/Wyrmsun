@@ -33,21 +33,6 @@ DefineWorldMapTile({523, 130}, {
 	}
 })
 
-DefineWorldMapTile({525, 125}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"latin", "Celeta", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"slav", "Zagreb"
-	}
-})
-
-DefineWorldMapTile({529, 133}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"latin", "Narona" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	}
-})
-
 DefineWorldMapTile({532, 131}, {
 	World = "earth",
 	CulturalSettlementNames = {

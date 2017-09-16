@@ -951,21 +951,6 @@ DefineProvince("Crimea", {
 	Regions = {"eurasia", "europe"}
 })
 
-DefineProvince("Croatia", {
-	World = "earth",
-	CulturalNames = {
-		"slav", "Croatia"
-	},
-	FactionCulturalNames = {
-		"slav", "croatia", "Croatia"
-	},
-	SettlementLocation = {525, 125}, -- Zagreb
-	Claims = {
-		"slav", "croatia"
-	},
-	Regions = {"europe", "roman-danube", "west-and-central-europe"}
-})
-
 DefineProvince("Cumbria", {
 	World = "earth",
 	FactionCulturalNames = {

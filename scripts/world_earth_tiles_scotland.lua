@@ -25,13 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineWorldMapTile({467, 97}, {
-	World = "earth",
-	FactionCulturalSettlementNames = {
-		"english", "england", "Glasgow"
-	}
-})
-
 DefineWorldMapTile({469, 93}, {
 	World = "earth",
 	FactionCulturalSettlementNames = {

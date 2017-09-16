@@ -113,8 +113,9 @@ DefineSettlement("cologne", {
 	Position = {3998, 887},
 	Major = true,
 	CulturalNames = {
-		"latin", "Colonia Agrippina",
-		"teuton", "Cologne"
+		"french", "Cologne",
+		"latin", "Colonia Agrippina", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"teuton", "Cologne" -- "Köln"
 	},
 	HistoricalOwners = {
 		-50, "rome", -- Gaul (where Colonia Agrippina was located) was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -247,7 +248,7 @@ DefineSettlement("hanover", {
 	Position = {4063, 855},
 	Major = true,
 	CulturalNames = {
-		"teuton", "Hanover"
+		"teuton", "Hanover" -- "Hannover"
 	},
 	Cores = {
 		"lombard-tribe",
@@ -375,7 +376,7 @@ DefineSettlement("mainz", {
 	Major = true,
 	CulturalNames = {
 		"french", "Mayence",
-		"latin", "Mogontiacum",
+		"latin", "Mogontiacum", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 		"teuton", "Mainz"
 	},
 	HistoricalOwners = {
@@ -639,7 +640,7 @@ DefineSettlement("worms", {
 	Position = {4033, 920},
 	Major = true,
 	CulturalNames = {
-		"latin", "Borbetomagus",
+		"latin", "Borbetomagus", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		"teuton", "Worms"
 	},
 	HistoricalOwners = {

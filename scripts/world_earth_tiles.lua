@@ -25,28 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
---Load("scripts/world_earth_tiles_africa.lua")
---Load("scripts/world_earth_tiles_asia.lua")
-Load("scripts/world_earth_tiles_bulgaria.lua")
---Load("scripts/world_earth_tiles_egypt.lua")
-Load("scripts/world_earth_tiles_england.lua")
-Load("scripts/world_earth_tiles_finland.lua")
-Load("scripts/world_earth_tiles_france.lua") -- modern France (excluding Corsica)
-Load("scripts/world_earth_tiles_germany.lua") -- territory of Imperial Germany (excluding Alsace-Lorraine)
-Load("scripts/world_earth_tiles_greece.lua") -- territory of modern Greece
-Load("scripts/world_earth_tiles_hungary.lua") -- includes Transylvania, Slovakia and Vojvodina
-Load("scripts/world_earth_tiles_illyria.lua") -- Western Balkans: Albania and former Yugoslavia (sans Slovenia, Vojvodina and Istria)
-Load("scripts/world_earth_tiles_ireland.lua")
-Load("scripts/world_earth_tiles_italy.lua") -- includes Corsica since it is closer to the Italian mainland than to France, and since for centuries it belonged to Genoa
-Load("scripts/world_earth_tiles_low_countries.lua") -- Netherlands, Belgium and Luxembourg
-Load("scripts/world_earth_tiles_portugal.lua")
-Load("scripts/world_earth_tiles_romania.lua") -- Moldavia, Wallachia, Dobruja and Bessarabia
-Load("scripts/world_earth_tiles_scandinavia.lua")
-Load("scripts/world_earth_tiles_scotland.lua")
-Load("scripts/world_earth_tiles_spain.lua")
-Load("scripts/world_earth_tiles_ukraine.lua")
-Load("scripts/world_earth_tiles_wales.lua")
-
 DefineWorldMapTile({418, 73}, {
 	World = "earth",
 	CulturalSettlementNames = {
@@ -58,15 +36,6 @@ DefineWorldMapTile({501, 122}, {
 	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Bern"
-	}
-})
-
-DefineWorldMapTile({520, 113}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"slav", "Prague",
-		"suebi", "Bubienum", -- name of the Marcomannic capital; also known as Marobudum; either located where modern Prague or Budweis are; Source: Frederick Kohlrausch, "A History of Germany", 1844, p. 57.
-		"teuton", "Prague"
 	}
 })
 

@@ -31,6 +31,7 @@ DefineSettlement("carthage", {
 	Position = {4074, 1208},
 	Major = true,
 	CulturalNames = {
+		"latin", "Carthage", -- "Carthago"; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		"phoenician", "Carthage"
 	},
 	HistoricalOwners = {
