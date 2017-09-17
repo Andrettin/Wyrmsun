@@ -84,19 +84,26 @@ DefineCharacter("saekmime", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Civilization = "ettin"
 })
 
+DefineCharacter("thiazi", { -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 106-109.
+	Name = "Thiazi", -- "Þjazi"
+	Gender = "male",
+	Type = "unit-ettin",
+	Civilization = "ettin"
+})
+
+DefineCharacter("thrym", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 109-112.
+	Name = "Thrym", -- "Þrymr"
+	Gender = "male",
+	Type = "unit-ettin",
+	Civilization = "ettin" -- frost giant from Norse mythology
+})
+
 DefineCharacter("gerd", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 54-58, 243; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 108-120; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 90-91.
 	Name = "Gerd", -- "Gerðr"
 	Gender = "female",
 	Type = "unit-ettin", -- frost giantess
 	Civilization = "ettin",
 	Father = "gymir"
-})
-
-DefineCharacter("thiazi", { -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 106-109.
-	Name = "Thiazi", -- "Þjazi"
-	Gender = "male",
-	Type = "unit-ettin",
-	Civilization = "ettin"
 })
 
 DefineCharacter("skadi", { -- giantess from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 250; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 52, 106, 109.

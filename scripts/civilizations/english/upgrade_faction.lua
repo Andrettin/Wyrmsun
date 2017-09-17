@@ -27,13 +27,13 @@
 
 DefineUpgrade("upgrade-faction-england", {
 	Name = "England",
-	EffectsString = "+2 Damage for Schutzes",
+	EffectsString = "+2 Damage for Archers",
 	RequirementsString = "Coinage, Engineering and Christianity, no other Anglo-Saxon or English faction exists"
 })
 
 DefineUpgrade("upgrade-faction-scotland", {
 	Name = "Scotland",
-	EffectsString = "+2 Damage for Kriegers",
+	EffectsString = "+2 Damage for Swordsmen",
 	RequirementsString = "Coinage, Engineering and Christianity"
 })
 

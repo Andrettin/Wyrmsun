@@ -1326,7 +1326,6 @@ DefineCivilization("ettin", {
 		"male", "Skrymir", -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 250.
 		"male", "Surt", -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 250.
 		"male", "Suttung", -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 250.
-		"male", "Thrym", -- frost giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251.
 		"male", "Vafthrudnir", -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 252.
 		"male", "Ymir" -- the first frost giant in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 240, 253; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 58.
 	},
