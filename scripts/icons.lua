@@ -114,6 +114,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-unload",
+	Size = {46, 38},
+	File = "neutral/icons/unload.png"
+})
+
+DefineIcon({
 	Name = "icon-rally-point",
 	Size = {46, 38},
 	File = "neutral/icons/rally_point.png"

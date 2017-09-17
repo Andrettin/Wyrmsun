@@ -47,6 +47,15 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-attack-ground",
 	}
 })
 
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-unload",
+	Action = "unload",
+	Key = "u", Hint = "~!Unload", Popup = "popup-commands",
+	ForUnit = {
+		"unit-caravan", "unit-gnomish-caravan",
+		"unit-germanic-transport-ship", "unit-teuton-kogge", "unit-dwarven-transport-ship", "unit-goblin-transport-ship"
+	}
+})
+
 -- Worker Commands ------------------------------------------------------
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-repair",
@@ -250,7 +259,7 @@ DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 	ForUnit = {
 		"unit-teuton-stronghold",
 		"unit-dwarven-stronghold",
-		"unit-goblin-stronghold",
+		"unit-goblin-stronghold"
 	}
 } )
 

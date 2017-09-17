@@ -912,6 +912,7 @@
 /graphics/neutral/icons/terror_extra_1.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/unicorn.png (by Mrmo Tarius and Jinn) (licensed under the CC0)
 /graphics/neutral/icons/unicorn_extra_1.png (by Mrmo Tarius and Jinn) (licensed under the CC0)
+/graphics/neutral/icons/unload.png (by Exidelo) (licensed under the CC0)
 /graphics/neutral/icons/water_elemental.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/wolf.png (by Exidelo) (licensed under the CC0)
 /graphics/neutral/icons/wood_plow.png (by Jinn) (licensed under the CC0)

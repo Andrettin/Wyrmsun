@@ -66,6 +66,9 @@ https://github.com/Andrettin/Wyrmsun
 * Items
 - Added Crown item.
 
+* Units
+- Added button to transports to unload all units within (icon by Exidelo).
+
 -----------------------------------------------------------------------
 - 2.8.2
 -----------------------------------------------------------------------

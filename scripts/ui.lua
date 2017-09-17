@@ -245,12 +245,13 @@ function AddTransportingButton(x, y)
 	UI.TransportingButtons:push_back(b)
 end
 
-AddTransportingButton(17, 65)
-AddTransportingButton(73, 65)
-AddTransportingButton(129, 65)
-AddTransportingButton(17, 119)
-AddTransportingButton(73, 119)
-AddTransportingButton(129, 119)
+AddTransportingButton(17, 97)
+AddTransportingButton(73, 97)
+AddTransportingButton(129, 97)
+AddTransportingButton(185, 97)
+AddTransportingButton(17, 140)
+AddTransportingButton(73, 140)
+AddTransportingButton(129, 140)
 
 UI.InventoryButtons:clear()
 
@@ -276,7 +277,7 @@ AddInventoryButton(129, 97)
 AddInventoryButton(185, 97)
 AddInventoryButton(17, 140)
 AddInventoryButton(73, 140)
---AddInventoryButton(129, 140)
+AddInventoryButton(129, 140)
 
 b = CUIButton:new()
 --b.X = 12
