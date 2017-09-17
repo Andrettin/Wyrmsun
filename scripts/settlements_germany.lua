@@ -165,8 +165,7 @@ DefineSettlement("eining", {
 		179, ""
 	},
 	HistoricalUnits = {
-		173, "unit-teuton-swordsman", 5000, "rome", -- the "Legio III Italica" was stationed at the location of Eining from c. 173 to 179; Source: "Ancient Warfare VII.6", 2013, p. 25.
-		179, "unit-teuton-swordsman", 0, "rome"
+		173, 179, "unit-teuton-swordsman", 5000, "rome" -- the "Legio III Italica" was stationed at the location of Eining from c. 173 to 179; Source: "Ancient Warfare VII.6", 2013, p. 25.
 	},
 	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
@@ -509,10 +508,8 @@ DefineSettlement("regensburg", {
 		739, 0, "temple" -- Regensburg became a bishopric in 739; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 169.
 	},
 	HistoricalUnits = {
-		170, "unit-teuton-swordsman", 375, "rome", -- the "Cohors II Aquitanorum equitata civium Romanorum" (a mixed unit, which contained circa 375 auxiliary infantry and 125 cavalry) was stationed at Regensburg-Kumpfmühl when it was attacked and destroyed in 172, during the First Marcomannic War; it likely was stationed there at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
-		170, "unit-teuton-ritter", 125, "rome",
-		172, "unit-teuton-swordsman", 0, "rome",
-		172, "unit-teuton-ritter", 0, "rome"
+		170, 172, "unit-teuton-swordsman", 375, "rome", -- the "Cohors II Aquitanorum equitata civium Romanorum" (a mixed unit, which contained circa 375 auxiliary infantry and 125 cavalry) was stationed at Regensburg-Kumpfmühl when it was attacked and destroyed in 172, during the First Marcomannic War; it likely was stationed there at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
+		170, 172, "unit-teuton-ritter", 125, "rome"
 	},
 	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
@@ -568,10 +565,8 @@ DefineSettlement("straubing", {
 		1815, 0, "farm"
 	},
 	HistoricalUnits = {
-		170, "unit-teuton-swordsman", 500, "rome", -- the "Cohors II Raetorum" (a unit containing 500 infantry) was stationed at Straubing when it was attacked and destroyed in 172, during the First Marcomannic War; it likely was stationed there at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
-		170, "unit-teuton-archer", 1000, "rome", -- the "Cohors I Flavia Canathenorum milliaria sagittariorum" (a unit containing 1,000 Syrian archers) was stationed at Straubing when it was attacked and destroyed in 172, during the First Marcomannic War; it likely was stationed there at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
-		172, "unit-teuton-swordsman", 0, "rome",
-		172, "unit-teuton-archer", 0, "rome"
+		170, 172, "unit-teuton-swordsman", 500, "rome", -- the "Cohors II Raetorum" (a unit containing 500 infantry) was stationed at Straubing when it was attacked and destroyed in 172, during the First Marcomannic War; it likely was stationed there at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
+		170, 172, "unit-teuton-archer", 1000, "rome" -- the "Cohors I Flavia Canathenorum milliaria sagittariorum" (a unit containing 1,000 Syrian archers) was stationed at Straubing when it was attacked and destroyed in 172, during the First Marcomannic War; it likely was stationed there at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })

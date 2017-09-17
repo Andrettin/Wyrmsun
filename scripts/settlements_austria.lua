@@ -74,8 +74,7 @@ DefineSettlement("carnuntum", {
 		161, 526, "barracks"
 	},
 	HistoricalUnits = {
-		170, "unit-teuton-swordsman", 20000, "rome", -- a Roman army numbering 20,000 was stationed near Carnuntum in 170 AD, when it was defeated by the Marcomanni and Quadi; Source: "Ancient Warfare VII.6", 2013, p. 29.
-		171, "unit-teuton-swordsman", 0, "rome"
+		170, 171, "unit-teuton-swordsman", 20000, "rome" -- a Roman army numbering 20,000 was stationed near Carnuntum in 170 AD, when it was defeated by the Marcomanni and Quadi; Source: "Ancient Warfare VII.6", 2013, p. 29.
 	},
 	Regions = {"europe", "west-and-central-europe", "roman-danube", "germany-netherlands", "cisleithania"}
 })

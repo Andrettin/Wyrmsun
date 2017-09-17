@@ -44,10 +44,8 @@ DefineSettlement("azov", {
 		-3000, -2800, "farm"
 	},
 	HistoricalUnits = {
-		-3000, "unit-germanic-worker", 1000, "asa-tribe",
-		-3000, "unit-germanic-warrior", 8000, "asa-tribe", -- the great army assembled to fight the Vana
-		-2999, "unit-germanic-worker", 0, "asa-tribe",
-		-2999, "unit-germanic-warrior", 0, "asa-tribe"
+		-3000, -2999, "unit-germanic-worker", 1000, "asa-tribe",
+		-3000, -2999, "unit-germanic-warrior", 8000, "asa-tribe" -- the great army assembled to fight the Vana
 	},
 	Regions = {"eurasia", "europe"}
 })
@@ -74,8 +72,7 @@ DefineSettlement("rostov-on-don", {
 		-3000, -2800, "farm"
 	},
 	HistoricalUnits = {
-		-3000, "unit-germanic-warrior", 3000, "vana-tribe", -- Vana defensive forces
-		-2999, "unit-germanic-warrior", 0, "vana-tribe"
+		-3000, -2999, "unit-germanic-warrior", 3000, "vana-tribe" -- Vana defensive forces
 	},
 	Regions = {"eurasia", "europe"}
 })
