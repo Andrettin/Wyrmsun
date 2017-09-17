@@ -63,6 +63,9 @@ https://github.com/Andrettin/Wyrmsun
 * Factions
 - In the Scenario mode, founding certain factions now depends on possessing the correct settlements.
 
+* Items
+- Added Crown item.
+
 -----------------------------------------------------------------------
 - 2.8.2
 -----------------------------------------------------------------------
