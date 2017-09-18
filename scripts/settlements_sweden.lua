@@ -195,7 +195,7 @@ DefineSettlement("vitemolla", {
 		-1700, "yngling-tribe"
 	},
 	HistoricalBuildings = {
-		-1700, -500, "temple" -- the archaeoastronomical observatory termed by archaeologists as "Heimdall's Stones" was constructed and in use during the Bronze Age; between 600 and 500 BC it was covered by sands; Source: Nils-Axel Mörner, Bob G. Lind, Göran Possnert, "Heimdall's Stones at Vitemölla in SE Sweden and the Chronology and Stratigraphy of the Surroundings", 2009, pp. 209-212.
+		-1700, -500, "temple", "heimdalls-stones" -- the archaeoastronomical observatory termed by archaeologists as "Heimdall's Stones" was constructed and in use during the Bronze Age; between 600 and 500 BC it was covered by sands; Source: Nils-Axel Mörner, Bob G. Lind, Göran Possnert, "Heimdall's Stones at Vitemölla in SE Sweden and the Chronology and Stratigraphy of the Surroundings", 2009, pp. 209-212.
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })

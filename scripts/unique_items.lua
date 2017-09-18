@@ -283,6 +283,14 @@ DefineUniqueItem("smitna", { -- Source: Alena Ježková, "22 Böhmische Legenden
 
 -- Buildings
 
+DefineUniqueItem("heimdalls-stones", { -- Source: Nils-Axel Mörner, Bob G. Lind, Göran Possnert, "Heimdall's Stones at Vitemölla in SE Sweden and the Chronology and Stratigraphy of the Surroundings", 2009, pp. 209-212.
+	Name = "Heimdall's Stones",
+	Type = "unit-germanic-temple",
+	Prefix = "upgrade-item-prefix-industrious",
+	Suffix = "upgrade-item-suffix-of-diligence",
+	Background = "Heimdall's Stones was a mystical site which during the Nordic Bronze Age was used to track the movements of the stars. Its name was given to it by modern archaeologists."
+} )
+
 DefineUniqueItem("the-house-of-seven-fathers", { -- Source: Peter Christen Asbjørnsen and Jørgen Moe, "Norwegian Folktales", 1960, pp. 13-14.
 	Name = "The House of Seven Fathers",
 	Type = "unit-teuton-farm",

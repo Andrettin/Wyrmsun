@@ -204,7 +204,7 @@ DefineSettlement("shorbear-hold", { -- From Battle for Wesnoth: The Sceptre of F
 		40, ""
 	},
 	HistoricalBuildings = {
-		24, 35, "stronghold"
+		24, 35, "stronghold", "shorbear-hold"
 	},
 	Regions = {}
 })
