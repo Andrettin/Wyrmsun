@@ -73,7 +73,7 @@ DefineFaction("austria", {
 })
 
 DefineFaction("carinthia", {
-	Name = "Carinthia",
+	Name = "Carinthia", -- "Kärnten"
 	Civilization = "teuton",
 	Type = "polity",
 	Colors = {"brown"},

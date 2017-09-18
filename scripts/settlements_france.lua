@@ -340,6 +340,7 @@ DefineSettlement("marseilles", {
 		"frankish", "Massilia",
 		"french", "Marseilles",
 		"gaul", "Massilia",
+		"greek", "Massilia",
 		"latin", "Massilia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {

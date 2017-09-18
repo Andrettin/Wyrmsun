@@ -146,7 +146,7 @@ DefineFaction("whitesteel-clan", {
 
 -- Polities
 
-DefineFaction("joruvellir", {
+DefineFaction("joruvellir", { -- from Norse mythology, "Joruvellir" = "Fields of Sand"
 	Name = "Joruvellir",
 	ParentFaction = "goldhoof-clan",
 	Civilization = "dwarf",

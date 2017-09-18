@@ -116,7 +116,7 @@ DefineFaction("varini-tribe", {
 -- Teuton polities
 
 DefineFaction("bavaria", {
-	Name = "Bavaria",
+	Name = "Bavaria", -- "Bayern"
 	Civilization = "teuton",
 	Type = "polity",
 	Colors = {"cyan", "white"},
@@ -270,7 +270,7 @@ DefineFaction("mecklenburg", {
 })
 
 DefineFaction("prussia", {
-	Name = "Prussia",
+	Name = "Prussia", -- "Preussen"
 	Civilization = "teuton",
 	ParentFaction = "brandenburg",
 	Type = "polity",
@@ -296,7 +296,7 @@ DefineFaction("thuringia", {
 })
 
 DefineFaction("westphalia", {
-	Name = "Westphalia",
+	Name = "Westphalia", -- "Westfalen"
 	Civilization = "teuton",
 	Type = "polity",
 	Colors = {"black"},
@@ -307,7 +307,7 @@ DefineFaction("westphalia", {
 })
 
 DefineFaction("saxony", {
-	Name = "Saxony",
+	Name = "Saxony", -- "Sachsen"
 	Civilization = "teuton",
 	Type = "polity",
 	Colors = {"pink"},

@@ -45,35 +45,6 @@ DefineCivilization("neutral", {
 		"dwarf/ui/buttonpanel.png", -256, -200,
 		"dwarf/ui/infopanel.png", 0, -200
 	},
-	SettlementNames = { -- some English placenames which are generic enough to fit pretty much any civilization
-		"Ashford",
-		"Bedford",
-		"Blackpool",
-		"Blackwall",
-		"Blackwood",
-		"Dartford",
-		"Dartmouth",
-		"Fishguard",
-		"Gateshead",
-		"Guildford",
-		"Holyhead",
-		"Longford",
-		"Maidstone",
-		"Marshfield",
-		"Newcastle",
-		"Newhaven",
-		"Newport",
-		"Newquay",
-		"Portsmouth",
-		"Redditch",
-		"Redwood",
-		"Stockport",
-		"Stonehaven",
-		"Waterford",
-		"Westport",
-		"Whitehaven",
-		"Woodbridge"
-	},
 	ShipNames = {
 		"Naglfar", -- ship of the giants in Norse mythology, whose helmsman is Hrym; made of dead men's nails; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 21.
 		"Ringhorn", -- Balder's ship in Norse mythology in which he was cremanted; ; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 155, 249.
@@ -704,9 +675,6 @@ DefineCivilization("dwarf", {
 		"Kal Kartha", -- from Battle for Wesnoth: The Hammer of Thursagan
 		"Knalga", -- from Battle for Wesnoth
 		"Lyr"
-	},
-	ProvinceNames = {
-		"Joruvellir" -- from Norse mythology, "Joruvellir" = "Fields of Sand"
 	},
 	ShipNames = {
 --		"Skidbladnir" -- ship built by dwarves in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 101.
@@ -1778,27 +1746,19 @@ DefineCivilization("teuton", {
 	},
 	ProvinceNames = {
 		"Altmark", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 134-135.
-		"Baden",
-		"Bavaria", -- "Bayern"
-		"Brandenburg",
 		"Burgenland",
-		"Carinthia", -- "Kärnten"
 		"Holstein",
-		"Mecklenburg",
 		"Mittelmark", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 134-135.
 		"Neumark", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 134-135.
 		"Nordgau",
 		"Ostmark",
 		"Pomerania",
-		"Prussia", -- "Preussen"
-		"Saxony", -- "Sachsen"
 		"Schlesien",
 		"Schleswig",
 		"Siebenbürgen",
 		"Styria", -- "Steiermark"
 		"Tyrol", -- "Tirol"
-		"Vorarlberg",
-		"Westphalia" -- "Westfalen"
+		"Vorarlberg" 
 	},
 	ShipNames = {
 		-- Austrian ship names
@@ -1943,7 +1903,6 @@ DefineCivilization("english", {
 		"Holyhead",
 		"Hull", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 		"Huntingdon",
-		"Kingston",
 		"Kirkwall", -- in Scotland
 		"Liverpool", -- Source: "Philip's International School Atlas", 2006, p. 64.
 		"Longford", -- Source: "Philip's International School Atlas", 2006, p. 64.
@@ -1961,7 +1920,6 @@ DefineCivilization("english", {
 		"Oxford", -- Source: "Philip's International School Atlas", 2006, p. 64.
 		"Plymouth",
 		"Portsmouth",
-		"Reading",
 		"Redditch", -- Source: "Philip's International School Atlas", 2006, p. 64.
 		"Scarborough",
 		"Shrewsbury", -- Source: "Philip's International School Atlas", 2006, p. 64.
@@ -1970,7 +1928,6 @@ DefineCivilization("english", {
 		"Swanscombe",
 		"Swansea", -- Source: "Philip's International School Atlas", 2006, p. 64.
 		"Torbay", -- Source: "Philip's International School Atlas", 2006, p. 64.
-		"Waterford",
 		"Wells",
 		"Westbury",
 		"Westport",
@@ -1998,7 +1955,6 @@ DefineCivilization("english", {
 		"Somerset",
 		"Suffolk",
 		"Sussex",
-		"Wessex",
 		"Wiltshire"
 	},
 	UnitClassNames = {
@@ -2145,7 +2101,6 @@ DefineCivilization("welsh", {
 		"Bychan",  -- cantref (administrative division) of Ystrad Tywi; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 128-129.
 		"Cemais", -- cantref (administrative division) of Dyfed; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
 		"Deugledyff", -- cantref (administrative division) of Dyfed; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
-		"Dyfed", -- Welsh kingdom -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
 		"Eginog",  -- cantref (administrative division) of Ystrad Tywi; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 128-129.
 		"Emlyn", -- cantref (administrative division) of Dyfed; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
 		"Gwarthaf", -- cantref (administrative division) of Dyfed; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
@@ -2302,10 +2257,7 @@ DefineCivilization("castillian", {
 	Species = "human",
 	ParentCivilization = "latin",
 	Adjective = "Castillian",
-	Playable = false,
-	SettlementNames = {
-		"Burgos" -- the Spanish town of Burgos; Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
-	}
+	Playable = false
 })
 
 DefineCivilization("french", {
@@ -2443,14 +2395,9 @@ DefineCivilization("greek", {
 		"Acragas", -- Agrigentum
 		"Agathe",
 		"Ainos",
-		"Alalia", -- Aleria
 		"Alonae",
-		"Amisus",
 		"Amphipolis",
 		"Apollonia",
-		"Argos",
-		"Barca",
-		"Byzantium",
 		"Calchedon", -- Chalcedon
 		"Callatis",
 		"Callipolis",
@@ -2462,7 +2409,6 @@ DefineCivilization("greek", {
 		"Cotyora",
 		"Cume", -- Cumae
 		"Cydonia",
-		"Cyrene",
 		"Dioscurias",
 		"Elea",
 		"Elis",
@@ -2476,15 +2422,11 @@ DefineCivilization("greek", {
 		"Heraclea Chersonesus",
 		"Hesperis",
 		"Himera",
-		"Ialysus",
 		"Ilios",
 		"Istrus",
-		"Itanus",
-		"Knossos",
 		"Larissa",
 		"Lissus",
 		"Locri",
-		"Massilia", -- Marseilles
 		"Medama",
 		"Megara",
 		"Megara Hyblaca",
@@ -2492,18 +2434,15 @@ DefineCivilization("greek", {
 		"Metapontium",
 		"Methone",
 		"Miletus",
-		"Mycenae",
 		"Motye",
 		"Naucratis",
 		"Naupactus",
 		"Naxos",
-		"Neapolis",
 		"Nicopolis",
 		"Odessus",
 		"Olbia",
 		"Parthenope", -- Neapolis/Naples
 		"Perinthus",
-		"Phaselis",
 		"Phasis",
 		"Pityus",
 		"Posidonia", -- Paestum
@@ -2513,15 +2452,12 @@ DefineCivilization("greek", {
 		"Selimis",
 		"Selinus",
 		"Selymbria",
-		"Sinope",
 		"Smyrna",
 		"Soli",
 		"Sparta",
 		"Sybaris",
-		"Syracusae",
 		"Tanais",
 		"Taras", -- Tarentum
-		"Tarsus",
 		"Theodosia",
 		"Thurii",
 		"Tomi",
@@ -2675,7 +2611,6 @@ DefineCivilization("norse", {
 	},
 	ProvinceNames = {
 		"Gardarike",
-		"Hordaland",
 		"Vestfold" -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
 	},
 	HistoricalUpgrades = {

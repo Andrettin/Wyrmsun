@@ -1089,7 +1089,6 @@ DefineUnitType("unit-wyrm", {
 	PersonalNames = {
 		"Jormungand", -- Wyrm/dragon in Norse mythology
 		"Ladon", -- Wyrm/dragon in Greek mythology
-		"Nidhogg", -- Nidhogg is a wyrm/dragon in Norse mythology
 		"Svafnir" -- Wyrm/dragon in Norse mythology
 	},
 	Variations = {

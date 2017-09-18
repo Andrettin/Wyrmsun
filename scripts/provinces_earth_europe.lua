@@ -3760,10 +3760,6 @@ DefineProvince("Switzerland", {
 
 DefineProvince("Syracuse", {
 	World = "earth",
-	CulturalNames = {
-		"greek", "Syracusae",
-		"latin", "Syracusae"
-	},
 	SettlementLocation = {522, 150}, -- Syracuse
 	Claims = {
 		"latin", "sicel-tribe"
@@ -3773,7 +3769,7 @@ DefineProvince("Syracuse", {
 		-500, "latin", "sicel-tribe", -- Situation of Italy in (apparently) 500 BC; Sicily was inhabited by the Elymians, Sicanians and Sicels; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 		-241, "latin", "rome", -- Sicily acquired by Rome in 241 BC; the city of Syracuse was acquired only in 212 BC, but the overwhelming majority of the eastern side of the island was acquired in 241 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		507, "goth", "ostrogoth-tribe", -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-		1061, "italian", "sicily", -- Robert Guiscard invades Sicily in 1061 AD with 13 ships and 270 knights, to which 170 knights were joined in the conquest of Messina (but the source also mentions the victorious battle having 700 knights against 15,000 Muslims); Messina is on the eastern side of the island; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
+		1061, "italian", "sicily", -- Robert Guiscard invaded Sicily in 1061 AD with 13 ships and 270 knights, to which 170 knights were joined in the conquest of Messina (but the source also mentions the victorious battle having 700 knights against 15,000 Muslims); Messina is on the eastern side of the island; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
 		1560, "castillian", "spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {

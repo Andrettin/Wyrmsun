@@ -35,13 +35,13 @@ DefineFaction("deheubarth", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch
 	DefaultTier = "kingdom"
 })
 
-DefineFaction("dyfed", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 9, 117.
+DefineFaction("dyfed", { -- Welsh kingdom; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 9, 117.
 	Name = "Dyfed",
-	Civilization = "welsh", -- it was a Welsh principality
+	Civilization = "welsh",
 	Type = "polity",
 	Colors = {"red"},
 	DefaultTier = "duchy",
-	DevelopsFrom = {"demetae-tribe"}, -- the Demetae gave origin to Dyfed,
+	DevelopsFrom = {"demetae-tribe"}, -- the Demetae gave origin to Dyfed
 	Titles = {
 		"monarchy", "duchy", "Principality"
 	}

@@ -30,6 +30,7 @@ DefineSettlement("aleria", {
 	MapTemplate = "earth",
 	Position = {4055, 1090},
 	CulturalNames = {
+		"greek", "Alalia",
 		"latin", "Aleria" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {

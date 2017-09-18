@@ -31,6 +31,7 @@ DefineSettlement("amisus", {
 	Position = {4663, 1106},
 	Major = true,
 	CulturalNames = {
+		"greek", "Amisus",
 		"persian", "Amisus"
 	},
 	HistoricalOwners = {
@@ -66,6 +67,7 @@ DefineSettlement("phaselis", {
 	Position = {4534, 1216},
 	Major = true,
 	CulturalNames = {
+		"greek", "Phaselis",
 		"hittite", "Phaselis"
 	},
 	HistoricalOwners = {
@@ -84,7 +86,9 @@ DefineSettlement("sinope", {
 	Position = {4637, 1092},
 	Major = true,
 	CulturalNames = {
-		"hittite", "Sinope"
+		"greek", "Sinope",
+		"hittite", "Sinope",
+		"latin", "Sinope" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
 		-600, "lydia", -- Sinope was part of the Lydian Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
@@ -102,6 +106,8 @@ DefineSettlement("tarsus", {
 	Position = {4632, 1208},
 	CulturalNames = {
 		"assyrian", "Tarsus",
+		"greek", "Tarsus",
+		"latin", "Tarsus", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 		"persian", "Tarsus"
 	},
 	HistoricalOwners = {

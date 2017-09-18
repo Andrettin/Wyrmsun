@@ -86,3 +86,9 @@ DefineCharacter("gylve", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 -- Hun personal names: "Attila" (known as Atli in Norse myths; invaded Gundahar's kingdom in 437 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 93-94; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6)
 
 -- Sphinx names: "Tutu" (a female sphinx from Egyptian mythology; the same as the Greek "Titoés"; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 86)
+
+DefineCharacter("nidhogg", { -- wyrm/dragon in Norse mythology, who lived in Niflheim
+	Name = "Nidhogg",
+	Gender = "male",
+	Type = "unit-wyrm"
+})

@@ -47,6 +47,7 @@ DefineSettlement("barca", {
 	Position = {4332, 1306},
 	Major = true,
 	CulturalNames = {
+		"greek", "Barca",
 		"persian", "Barca"
 	},
 	HistoricalOwners = {
@@ -64,6 +65,8 @@ DefineSettlement("cyrene", {
 	Position = {4342, 1301},
 	Major = true,
 	CulturalNames = {
+		"greek", "Cyrene",
+		"latin", "Cyrene", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 		"persian", "Cyrene"
 	},
 	HistoricalOwners = {
