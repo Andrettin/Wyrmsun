@@ -78,7 +78,7 @@ DefineFaction("rugian-tribe", {
 	Name = "Rugian Tribe",
 	Civilization = "goth",
 	Type = "tribe",
-	Colors = {"red", "orange"} -- change to a better one?
+	Colors = {"red", "orange"}
 })
 
 DefineFaction("silingae-tribe", {

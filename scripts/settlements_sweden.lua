@@ -49,9 +49,20 @@ DefineSettlement("malmo", {
 	CulturalNames = {
 		"norse", "Malmo" -- "Malmö"
 	},
+	Cores = {
+		"scania"
+	},
 	HistoricalOwners = {
+		-7000, "kongemose-tribe", -- Kongemose culture present in Scania c. 7000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 185.
+		-5800, "ertebolle-tribe", -- Coastal Ertebolle Mesolithic sites and shell middens begin being occupied c. 5800 BC; they lived in eastern Jutland (i.e. Ertebolle itself on the Limfjord in northern Jutland, Bjornsholm), the Danish isles (the Karrebaek-Dybso Fjord sites in Zealand - which could sustain c. 250 people), and southern Sweden (Tagerup in a fjord on Scania - this site had a previous Kongemose occupation); Ertebolle people used pottery and did large-quantity fishing via traps or weirs; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 136.
+		-3000, "gylfing-tribe", -- around this time Gylve or his ancestors should have begun to rule in Scania
+		-2800, "yngling-tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; the Ynglings were the dynasty founded by Odin's son Yngve, who ruled the Swedish lands
+		161, "swede-tribe", -- Scania was inhabited by the Suiones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		526, "dane-tribe", -- Danes were in Scania in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		1560, "denmark" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
+		-7000, 0, "town-hall"
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
@@ -81,7 +92,7 @@ DefineSettlement("sigtun", {
 		"norse", "Sigtun"
 	},
 	HistoricalOwners = {
-		-2800, "yngling-tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples; the Ynglings were the dynasty founded by Odin's son Yngve, who ruled the Swedish lands
+		-2800, "yngling-tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; the Ynglings were the dynasty founded by Odin's son Yngve, who ruled the Swedish lands
 		-264, "swede-tribe", -- tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1560, "sweden" -- political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
@@ -101,7 +112,7 @@ DefineSettlement("stockholm", {
 		"norse", "Stockholm"
 	},
 	HistoricalOwners = {
-		-2800, "yngling-tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples; the Ynglings were the dynasty founded by Odin's son Yngve, who ruled the Swedish lands
+		-2800, "yngling-tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; the Ynglings were the dynasty founded by Odin's son Yngve, who ruled the Swedish lands
 		-264, "swede-tribe", -- tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1560, "sweden" -- political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
@@ -181,7 +192,7 @@ DefineSettlement("vitemolla", {
 		"norse", "Vitemolla" -- "Vitemölla"
 	},
 	HistoricalOwners = {
-		-1700, "skeldung-tribe"
+		-1700, "yngling-tribe"
 	},
 	HistoricalBuildings = {
 		-1700, -500, "temple" -- the archaeoastronomical observatory termed by archaeologists as "Heimdall's Stones" was constructed and in use during the Bronze Age; between 600 and 500 BC it was covered by sands; Source: Nils-Axel Mörner, Bob G. Lind, Göran Possnert, "Heimdall's Stones at Vitemölla in SE Sweden and the Chronology and Stratigraphy of the Surroundings", 2009, pp. 209-212.
