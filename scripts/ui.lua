@@ -2319,27 +2319,27 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {HasDescription = true}, HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				-- Faction Upgrade Information
+				-- Faction Button Information
 				{ 	Margin = {1, 1}, Condition = {FactionUpgrade = "only"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {FactionUpgrade = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = Concat(_("Civilization: "), UpgradeCivilization("Upgrade")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = Concat(_("Civilization: "), FactionCivilization("Faction")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {FactionUpgrade = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = Concat(_("Type: "), UpgradeFactionType("Upgrade")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = Concat(_("Type: "), FactionType("Faction")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {FactionUpgrade = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(_("Faction Bonus: "), UpgradeEffectsString("Upgrade")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Margin = {1, 1}, Condition = {FactionUpgrade = "only", FactionUpgradeCoreSettlements = "only"}, 
+				{ 	Margin = {1, 1}, Condition = {FactionUpgrade = "only", FactionCoreSettlements = "only"}, 
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
-				{ 	Condition = {FactionUpgrade = "only", FactionUpgradeCoreSettlements = "only"}, HighlightColor = "yellow",
+				{ 	Condition = {FactionUpgrade = "only", FactionCoreSettlements = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = _("Required Settlements:"), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {FactionUpgrade = "only", FactionUpgradeCoreSettlements = "only"}, HighlightColor = "gray",
-					More = {"Text", {Text = FactionUpgradeCoreSettlements("Upgrade"), Font = wyr.preferences.PopupDescriptionFont}}
+				{ 	Condition = {FactionUpgrade = "only", FactionCoreSettlements = "only"}, HighlightColor = "gray",
+					More = {"Text", {Text = FactionCoreSettlements("Faction"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				-- AutoCast Tooltip
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "cast-spell", AutoCast = "only"},
