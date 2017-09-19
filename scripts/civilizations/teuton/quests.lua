@@ -34,7 +34,8 @@ DefineQuest("the-battle-of-magetobria", {
 	Civilization = "suebi",
 	Map = "maps/earth/belfort.smp",
 	Scenario = "scripts/civilizations/teuton/scenarios/the_battle_of_magetobria.lua",
-	PlayerColor = "black"
+	PlayerColor = "black",
+	Unobtainable = true
 })
 
 DefineQuest("the-home-of-the-boii", {
@@ -46,7 +47,8 @@ DefineQuest("the-home-of-the-boii", {
 	Civilization = "suebi",
 	Map = "maps/earth/prague.smp",
 	Scenario = "scripts/civilizations/teuton/scenarios/the_home_of_the_boii.lua",
-	PlayerColor = "orange"
+	PlayerColor = "orange",
+	Unobtainable = true
 })
 
 DefineQuest("the-first-marcomannic-war", {
@@ -123,7 +125,8 @@ DefineQuest("the-sack-of-iuvavum", {
 	Civilization = "suebi",
 	Map = "maps/earth/salzburg.smp",
 	Scenario = "scripts/civilizations/teuton/scenarios/the_sack_of_iuvavum.lua",
-	PlayerColor = "orange"
+	PlayerColor = "orange",
+	Unobtainable = true
 })
 
 DefineQuest("the-razing-of-opitergium", {
@@ -135,7 +138,8 @@ DefineQuest("the-razing-of-opitergium", {
 	Civilization = "suebi",
 	Map = "maps/earth/oderzo.smp",
 	Scenario = "scripts/civilizations/teuton/scenarios/the_razing_of_opitergium.lua",
-	PlayerColor = "orange"
+	PlayerColor = "orange",
+	Unobtainable = true
 })
 
 DefineQuest("moving-into-galicia", { -- happened in 411 AD
@@ -147,7 +151,8 @@ DefineQuest("moving-into-galicia", { -- happened in 411 AD
 	Civilization = "suebi",
 	Map = "maps/earth/braga.smp",
 	Scenario = "scripts/civilizations/teuton/scenarios/moving_into_galicia.lua",
-	PlayerColor = "black"
+	PlayerColor = "black",
+	Unobtainable = true
 })
 
 DefineQuest("the-blue-danube", {
@@ -159,7 +164,8 @@ DefineQuest("the-blue-danube", {
 	Civilization = "teuton",
 	Map = "maps/earth/regensburg.smp",
 	Scenario = "scripts/civilizations/teuton/scenarios/the_blue_danube.lua",
-	PlayerColor = "cyan"
+	PlayerColor = "cyan",
+	Unobtainable = true
 })
 
 Load("scripts/civilizations/teuton/quests_frank.lua")

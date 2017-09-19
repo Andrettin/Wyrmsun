@@ -1314,7 +1314,7 @@ function OrderUnitBlock(player, unit, fromx, fromy, width, height, tox, toy, ord
     end
 end
 
-function FindUnit(unit_type, player, random_unit, last_unit)
+function FindUnit(unit_type, player, random_unit, last_unit, settlement)
 	local uncount = 0
 	
 	if (player ~= nil) then
@@ -1328,7 +1328,7 @@ function FindUnit(unit_type, player, random_unit, last_unit)
 	if (last_unit) then
 		for unit1 = table.getn(uncount), 1, -1 do
 			if (GetUnitVariable(uncount[unit1], "Ident") == unit_type or (unit_type == "town_hall" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "TownHall")) or (unit_type == "any_organic" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) or unit_type == "any") then
-				if (GetUnitVariable(uncount[unit1], "HitPoints") > 0 and GetUnitVariable(uncount[unit1], "Built")) then
+				if (GetUnitVariable(uncount[unit1], "HitPoints") > 0 and GetUnitVariable(uncount[unit1], "Built") and (settlement == nil or GetUnitVariable(uncount[unit1], "Settlement") == settlement)) then
 					return uncount[unit1]
 				end
 			end
@@ -1336,7 +1336,7 @@ function FindUnit(unit_type, player, random_unit, last_unit)
 	else
 		for unit1 = 1,table.getn(uncount) do 
 			if (GetUnitVariable(uncount[unit1], "Ident") == unit_type or (unit_type == "town_hall" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "TownHall")) or (unit_type == "any_organic" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) or unit_type == "any") then
-				if (GetUnitVariable(uncount[unit1], "HitPoints") > 0 and GetUnitVariable(uncount[unit1], "Built")) then
+				if (GetUnitVariable(uncount[unit1], "HitPoints") > 0 and GetUnitVariable(uncount[unit1], "Built") and (settlement == nil or GetUnitVariable(uncount[unit1], "Settlement") == settlement)) then
 					if (random_unit) then
 						table.insert(units_found, uncount[unit1])
 					else

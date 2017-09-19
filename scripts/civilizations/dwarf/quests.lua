@@ -69,7 +69,8 @@ DefineQuest("the-mead-of-wisdom", {
 	Scenario = "scripts/civilizations/dwarf/scenarios/the_mead_of_wisdom.lua",
 	PlayerColor = "white",
 	LoadingMusic = "DwarfLoading",
-	MapMusic = "DwarfTheme2"
+	MapMusic = "DwarfTheme2",
+	Unobtainable = true
 })
 
 DefineQuest("the-treasures-of-svarinshaug", {
@@ -83,7 +84,8 @@ DefineQuest("the-treasures-of-svarinshaug", {
 	Scenario = "scripts/civilizations/dwarf/scenarios/the_treasures_of_svarinshaug.lua",
 	PlayerColor = "white",
 	LoadingMusic = "DwarfLoading",
---	MapMusic = "DwarfTheme3"
+--	MapMusic = "DwarfTheme3",
+	Unobtainable = true
 })
 
 DefineQuest("the-necklace-of-the-brisings", {
@@ -97,7 +99,8 @@ DefineQuest("the-necklace-of-the-brisings", {
 	Scenario = "scripts/civilizations/dwarf/scenarios/the_necklace_of_the_brisings.lua",
 	PlayerColor = "black",
 	LoadingMusic = "DwarfLoading",
---	MapMusic = "DwarfTheme4"
+--	MapMusic = "DwarfTheme4",
+	Unobtainable = true
 })
 
 DefineQuest("the-slaying-of-grafvitnir", {
@@ -270,29 +273,22 @@ DefineQuest("the-tomb-of-durahn-eikinskjaldi", {
 	Civilization = "dwarf",
 	Map = "maps/nidavellir/tomb-of-durahn-eikinskjaldi.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/the_tomb_of_durahn_eikinskjaldi.lua",
-	PlayerColor = "brown"
+	PlayerColor = "brown",
+	Unobtainable = true
 })
 
 DefineQuest("shorbear-hold", {
 	Name = "Shorbear Hold",
 	Icon = "icon-dwarven-stronghold",
-	Description = "Our clan is renowned for its toolmaking and engineering prowess. Our skills would be well put to use in the construction of a stronghold to protect us against our enemies.",
-	World = "nidavellir",
-	Civilization = "dwarf",
+	Description = "The Shorbear Hold is a highly defensive location, due to the narrow passages that grant access to it. Nevertheless, we cannot rely on nature alone for its protection. Our builders suggest constructing a Bastion there, to make it truly impregnable.",
 	PlayerColor = "blue",
-	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "shorbear-clan" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-stronghold") == 0 and CheckDependency(trigger_player, "unit-dwarven-stronghold") and GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-town-hall") > 0 and GetUniqueItemData("shorbear-hold", "CanDrop")) then
-			return true
-		end
-		return false
-	end,
 	CompletionEffects = function(s)
-		SetUnitVariable(FindUnit("unit-dwarven-stronghold", trigger_player, false, true), "Unique", "shorbear-hold")
+		SetUnitVariable(FindUnit("unit-dwarven-stronghold", trigger_player, false, true, "shorbear-hold"), "Unique", "shorbear-hold")
 	end,
-	Objectives = {"- Build a Bastion"},
+	Objectives = {"- Build a Bastion for the Shorbear Hold"},
 	Rewards = "The Bastion will become the Shorbear Hold unique building",
-	Hint = "Select a Mead Hall and then click on the Upgrade to Bastion button to transform it into a bastion.",
-	BuildUnits = {"unit-dwarven-stronghold", 1},
+	Hint = "Select the Mead Hall of the Shorbear Hold settlement and then click on the Upgrade to Bastion button to transform it into a bastion.",
+	BuildSettlementUnits = {"shorbear-hold", "unit-dwarven-stronghold", 1},
 	Competitive = true
 })
 
@@ -306,7 +302,8 @@ DefineQuest("a-bargain-is-struck", {
 	Map = "maps/nidavellir/chaincolt-foothills.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/a_bargain_is_struck.lua",
 	PlayerColor = "red",
-	MapMusic = "ABargainIsStruck"
+	MapMusic = "ABargainIsStruck",
+	Unobtainable = true
 })
 
 DefineQuest("closing-the-gates", {
@@ -319,7 +316,8 @@ DefineQuest("closing-the-gates", {
 	Map = "maps/nidavellir/caverns-of-chaincolt.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/closing_the_gates.lua",
 	PlayerColor = "red",
-	MapMusic = "ClosingTheGates"
+	MapMusic = "ClosingTheGates",
+	Unobtainable = true
 })
 
 DefineQuest("searching-for-the-runecrafter", {
@@ -332,7 +330,8 @@ DefineQuest("searching-for-the-runecrafter", {
 	Map = "maps/nidavellir/northern-wastelands.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/searching_for_the_runecrafter.lua",
 	PlayerColor = "red",
-	MapMusic = "SearchingForTheRunecrafter"
+	MapMusic = "SearchingForTheRunecrafter",
+	Unobtainable = true
 })
 
 DefineQuest("gathering-materials", {
@@ -345,7 +344,8 @@ DefineQuest("gathering-materials", {
 	Map = "maps/nidavellir/eastern-mines.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/gathering_materials.lua",
 	PlayerColor = "red",
-	MapMusic = "GatheringMaterials"
+	MapMusic = "GatheringMaterials",
+	Unobtainable = true
 })
 
 DefineQuest("hills-of-the-shorbear-clan", {
@@ -358,7 +358,8 @@ DefineQuest("hills-of-the-shorbear-clan", {
 	Map = "maps/nidavellir/shorbear-hills.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/hills_of_the_shorbear_clan.lua",
 	PlayerColor = "red",
-	MapMusic = "HillsOfTheShorbearClan"
+	MapMusic = "HillsOfTheShorbearClan",
+	Unobtainable = true
 })
 
 DefineQuest("the-wyrm", {
@@ -371,7 +372,8 @@ DefineQuest("the-wyrm", {
 	Map = "maps/nidavellir/svafnirs-lair.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/the_wyrm.lua",
 	PlayerColor = "red",
-	MapMusic = "TheWyrm"
+	MapMusic = "TheWyrm",
+	Unobtainable = true
 })
 
 DefineQuest("caverns-of-flame", {
@@ -384,7 +386,8 @@ DefineQuest("caverns-of-flame", {
 	Map = "maps/nidavellir/caverns-of-flame.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/caverns_of_flame.lua",
 	PlayerColor = "red",
-	MapMusic = "CavernsOfFlame"
+	MapMusic = "CavernsOfFlame",
+	Unobtainable = true
 })
 
 --[[
@@ -396,7 +399,8 @@ DefineQuest("last-stand-at-the-forge", {
 	World = "nidavellir",
 	Civilization = "dwarf",
 	Map = "maps/nidavellir/svafnirs-lair.smp",
-	PlayerColor = "red"
+	PlayerColor = "red",
+	Unobtainable = true
 })
 --]]
 
@@ -479,8 +483,6 @@ DefineQuest("andvaris-gold", {
 DefineQuest("the-mead-of-poetry-brew-potions-of-invisibility", {
 	Name = "Brew Potions of Invisibility",
 	Icon = "icon-red-potion",
---	World = "nidavellir",
---	Civilization = "dwarf",
 	PlayerColor = "black",
 	Unobtainable = true,
 	CompletionEffects = function(s)
@@ -493,8 +495,6 @@ DefineQuest("the-mead-of-poetry-brew-potions-of-invisibility", {
 DefineQuest("the-mead-of-poetry-kill-kvasir", {
 	Name = "Kill Kvasir",
 	Icon = "icon-dwarven-witness",
---	World = "nidavellir",
---	Civilization = "dwarf",
 	PlayerColor = "black",
 	Unobtainable = true,
 	CompletionEffects = function(s)

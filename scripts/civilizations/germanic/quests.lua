@@ -54,7 +54,8 @@ DefineQuest("westward-migration", {
 	Scenario = "scripts/civilizations/germanic/scenarios/westward_migration.lua",
 	PlayerColor = "orange",
 	LoadingMusic = "GermanicLoading",
-	MapMusic = "GermanicTheme2"
+	MapMusic = "GermanicTheme2",
+	Unobtainable = true
 })
 
 DefineQuest("northwards-to-the-sea", {
@@ -68,7 +69,8 @@ DefineQuest("northwards-to-the-sea", {
 	Scenario = "scripts/civilizations/germanic/scenarios/northwards_to_the_sea.lua",
 	PlayerColor = "orange",
 	LoadingMusic = "GermanicLoading",
-	MapMusic = "GermanicTheme3"
+	MapMusic = "GermanicTheme3",
+	Unobtainable = true
 })
 
 DefineQuest("gylves-realm", {
@@ -82,30 +84,25 @@ DefineQuest("gylves-realm", {
 	Scenario = "scripts/civilizations/germanic/scenarios/gylves_realm.lua",
 	PlayerColor = "orange",
 	LoadingMusic = "GermanicLoading",
---	MapMusic = "GermanicTheme4"
+--	MapMusic = "GermanicTheme4",
+	Unobtainable = true
 })
 
 DefineQuest("the-great-temple-at-upsal", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 225.
 	Name = "The Great Temple", -- the great temple built by Freyr (Yngve) in the Ynglinga saga in Upsal
-	Icon = "icon-germanic-farm",
-	Description = "My chieftain, we should buy a new, great temple for our people. Not only will it give them a new place of worship, but the wise priests it will host shall help us with tax collection.",
+	Icon = "icon-germanic-temple",
+	Description = "My chieftain, we should buy a new, great temple for our people near Stukkahulma. Not only will it give them a new place of worship, but the wise priests it will host shall help us with tax collection.",
 	World = "earth",
 	Civilization = "germanic",
 	PlayerColor = "blue",
-	Conditions = function(s)
-		if ((GetPlayerData(trigger_player, "Faction") == "yngling-tribe" or GetPlayerData(trigger_player, "Faction") == "asa-tribe") and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-worker") > 0 and CheckDependency(trigger_player, "unit-teuton-temple")) then
-			return true
-		end
-		return false
-	end,
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 2000)
 	end,
-	Objectives = {"- Build a Temple"},
+	Objectives = {"- Build a Temple in Stukkahulma"},
 	Rewards = "+2000 Copper",
-	Hint = "Select a Bura, press the Build Structure button and then click on the Temple button to build the structure required for this quest.",
-	BuildUnits = {"unit-teuton-temple", 1}, -- should be a Germanic Temple, of course
-	Hidden = true
+	Hint = "Select a Bura, press the Build Structure button and then click on the Temple button to build the structure required for this quest. Make sure it is closer to Stukkahulma's Chieftain's Hall than to that of another settlement.",
+	BuildSettlementUnits = {"stockholm", "unit-germanic-temple", 1},
+	Competitive = true
 })
 
 DefineQuest("the-good-seasons", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 225.
@@ -358,9 +355,7 @@ DefineQuest("slay-the-berserker-brides-at-hlesey", { -- Source: Kevin Crossley-H
 	PlayerColor = "black",
 	Conditions = function(s)
 		if (
-			GetFactionExists("hlesing-tribe") -- the Hlesings must exist
-			and GetPlayerData(GetFactionPlayer("hlesing-tribe"), "TotalNumUnitsConstructed") > 0
-			and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-dock") > 0 -- the player must have a dock
+			GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-dock") > 0 -- the player must have a dock
 			and GetPlayerData(trigger_player, "Allow", "upgrade-deity-thor") == "R" -- must be a worshipper of Thor/Thunraz
 			and GetNumUnitsAt(trigger_player, "buildings", {4089 - 128 - EarthStartX, 745 - 128 - EarthStartY}, {4089 + 128 - EarthStartX, 745 + 128 - EarthStartY}, GetMapLayer("", "earth", 0)) > 0 -- the player must have a building relatively close to Hlesey
 		) then
