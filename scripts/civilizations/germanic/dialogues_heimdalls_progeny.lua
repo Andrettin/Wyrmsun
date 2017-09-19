@@ -419,3 +419,27 @@ DefineDialogue("jarl-conquers-jutland", {
 		}
 	}
 })
+
+DefineDialogue("journey-to-heimdalls-stones-completed", {
+	Nodes = {
+		{
+			"speaker", "character", "erala",
+			"text", "This is a mystical place... I can feel Haimadala's might pulsing throughout the local atmosphere."
+		},
+		{
+			"speaker", "character", "erala",
+			"text", "When I was a child, my mother told me that the god Haimadala once roamed the land, and came to my family's dwelling. He was well-received. Food and drink were shared with him, as well as the roof, and even the bed... nine months later I was born."
+		},
+		{
+			"speaker", "character", "erala",
+			"text", "And now I am at my father's sacred stones... there is much to be learned from them.",
+			"options", {"A valuable journey"},
+			"option-effects", {
+				function(s)
+					SetPlayerData(trigger_player, "CompleteQuest", "journey-to-heimdalls-stones")
+				end
+			},
+			"option-tooltips", {"+500 XP for Erala"}
+		}
+	}
+})

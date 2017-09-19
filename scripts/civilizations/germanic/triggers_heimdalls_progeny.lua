@@ -181,3 +181,28 @@ AddTrigger("jarl-conquers-jutland",
 		return false
 	end
 )
+
+AddTrigger("journey-to-heimdalls-stones-completed",
+	function()
+		for i=0,(PlayerMax - 2) do
+			if (
+				GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil
+				and GetPlayerData(i, "HasQuest", "journey-to-heimdalls-stones")
+			) then
+				local nearby_uncount = GetUnitsAroundUnit(FindHero("erala", i), 1, true)
+				for unit2 = 1,table.getn(nearby_uncount) do 
+					if (GetUnitVariable(nearby_uncount[unit2], "Unique") == "heimdalls-stones") then
+						trigger_player = i
+						return true
+					end
+				end
+			end
+		end
+		return false
+	end,
+	function()
+		trigger_unit = FindHero("erala", trigger_player)
+		CallDialogue("journey-to-heimdalls-stones-completed", trigger_player)
+		return false
+	end
+)

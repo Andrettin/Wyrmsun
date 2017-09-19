@@ -66,6 +66,9 @@ https://github.com/Andrettin/Wyrmsun
 * Items
 - Added Crown item.
 
+* Scenarios
+- Added the "Journey to Haimadala's Stones" (side-)quest for the Haimadala's Progeny scenario.
+
 * Units
 - Added button to transports to unload all units within (icon by Exidelo).
 

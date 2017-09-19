@@ -282,6 +282,12 @@ DefineQuest("shorbear-hold", {
 	Icon = "icon-dwarven-stronghold",
 	Description = "The Shorbear Hold is a highly defensive location, due to the narrow passages that grant access to it. Nevertheless, we cannot rely on nature alone for its protection. Our builders suggest constructing a Bastion there, to make it truly impregnable.",
 	PlayerColor = "blue",
+	Conditions = function(s)
+		if (GetUniqueItemData("shorbear-hold", "CanDrop")) then
+			return true
+		end
+		return false
+	end,
 	CompletionEffects = function(s)
 		SetUnitVariable(FindUnit("unit-dwarven-stronghold", trigger_player, false, true, "shorbear-hold"), "Unique", "shorbear-hold")
 	end,

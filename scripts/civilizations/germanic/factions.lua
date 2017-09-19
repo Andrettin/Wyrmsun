@@ -138,5 +138,6 @@ DefineFaction("yngling-tribe", { -- mythical Swedish dynasty, Yngve was a son of
 	Type = "tribe",
 	Colors = {"blue", "yellow"},
 	FactionUpgrade = "upgrade-yngling-tribe-faction",
---	DefaultAI = "sea-attack"
+--	DefaultAI = "sea-attack",
+	DefaultStartPos = {4243, 692} -- Sigtun
 })

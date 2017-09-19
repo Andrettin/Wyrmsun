@@ -245,6 +245,67 @@ DefineQuest("jarls-retainers", { -- based on the Song of Rig; Source: Kevin Cros
 	HeroesMustSurvive = {"erala"}
 })
 
+DefineQuest("heimdalls-stones", {
+	Name = "Haimadala's Stones",
+	Icon = "icon-germanic-temple",
+	Description = "Our priests declare that the environs of Malmo would be a particularly auspicious location for building a temple dedicated to the god Haimadala, and urge you to begin its construction.",
+	PlayerColor = "yellow",
+	Conditions = function(s)
+		if (
+			GetUniqueItemData("heimdalls-stones", "CanDrop")
+			and ( -- must be pagan (in the future could just require having the Heimdall deity instead)
+				GetPlayerData(trigger_player, "Allow", "upgrade-deity-odin") == "R"
+				or GetPlayerData(trigger_player, "Allow", "upgrade-deity-thor") == "R"
+			)
+		) then
+			return true
+		end
+		return false
+	end,
+	CompletionEffects = function(s)
+		SetUnitVariable(FindUnit("unit-germanic-temple", trigger_player, false, true, "malmo"), "Unique", "heimdalls-stones")
+	end,
+	Objectives = {"- Build a Temple in Malmo"},
+	Rewards = "The Temple will become the Haimadala's Stones unique building",
+	Hint = "Select a Bura, press the Build Structure button and then click on the Build Temple button to build the structure required for this quest.",
+	BuildSettlementUnits = {"malmo", "unit-germanic-temple", 1},
+	Competitive = true
+})
+
+DefineQuest("journey-to-heimdalls-stones", {
+	Name = "Journey to Haimadala's Stones",
+	Icon = "icon-germanic-temple",
+	Description = "Rumors have reached Erala's ears of a holy site called Haimadala's Stones. A visit to that location could grant him new insights into the god he holds to be his father.",
+	PlayerColor = "yellow",
+	AcceptEffects = function(s)
+		local heimdalls_stones_unit = FindUnique("heimdalls-stones")
+		unit = CreateUnit("unit-revealer", trigger_player, {GetUnitVariable(heimdalls_stones_unit, "PosX"), GetUnitVariable(heimdalls_stones_unit, "PosY")}, GetMapLayer("", "earth", 0))
+		SetUnitVariable(unit, "TTL", 600)
+	end,
+	Conditions = function(s)
+		if (
+			GetUniqueItemData("heimdalls-stones", "CanDrop") == false -- Heimdall's Stones must exist
+			and ( -- must be pagan (in the future could just require having the Heimdall deity instead)
+				GetPlayerData(trigger_player, "Allow", "upgrade-deity-odin") == "R"
+				or GetPlayerData(trigger_player, "Allow", "upgrade-deity-thor") == "R"
+			)
+		) then
+			return true
+		end
+		return false
+	end,
+	CompletionEffects = function(s)
+		SetUnitVariable(trigger_unit, "Xp", GetUnitVariable(trigger_unit, "Xp", "Max") + 500, "Max")
+		SetUnitVariable(trigger_unit, "Xp", GetUnitVariable(trigger_unit, "Xp", "Max"))
+	end,
+	Objectives = {"- Visit Haimadala's Stones with Erala"},
+	Rewards = "+500 XP for Erala",
+	Hint = "A transport ship will likely be needed for Erala to reach Haimadala's Stones.",
+	HeroesMustSurvive = {"erala"},
+	Uncompleteable = true, -- completed by trigger
+	Competitive = true
+})
+
 DefineQuest("master-of-metal", {
 	Name = "Master of Metal",
 	Icon = "icon-germanic-smithy",
