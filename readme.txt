@@ -65,6 +65,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Items
 - Added Crown item.
+- Added two new unique items, both belonging to The Dragon's Stars item set, the Dragon's Tail (Spatha) and the Dragon's Head (Crown).
 
 * Scenarios
 - Added the "Journey to Haimadala's Stones" (side-)quest for the Haimadala's Progeny scenario.

@@ -145,7 +145,7 @@ DefineUpgrade("upgrade-item-suffix-of-power", { -- example: Ring of Power (from 
 DefineUpgrade("upgrade-item-suffix-of-regeneration", { -- example: Ring of Regeneration (from Wesnoth)
 	Name = "of Regeneration",
 	MagicSuffix = true,
-	ItemSuffix = {"amulet", true, "ring", true},
+	ItemSuffix = {"helmet", true, "amulet", true, "ring", true},
 	MagicLevel = 2
 })
 

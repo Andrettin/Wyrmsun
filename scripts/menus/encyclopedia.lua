@@ -918,6 +918,9 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		end
 		if (GetUniqueItemData(unit_name, "Description") ~= "") then
 			description = "Description: " .. GetUniqueItemData(unit_name, "Description") .. "\n\n"
+			if (GetUniqueItemData(unit_name, "Set") ~= "" and GetUpgradeData(GetUniqueItemData(unit_name, "Set"), "Description") ~= "") then
+				description = description .. GetUpgradeData(GetUniqueItemData(unit_name, "Set"), "Description") .. "\n\n"
+			end
 		end
 		if (GetUniqueItemEffectsString(unit_name) ~= "") then
 			effects = "Effects: " .. GetUniqueItemEffectsString(unit_name) .. ".\n\n"
@@ -927,6 +930,9 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		end
 		if (GetUniqueItemData(unit_name, "Background") ~= "") then
 			background = "Background: " .. GetUniqueItemData(unit_name, "Background") .. "\n\n"
+			if (GetUniqueItemData(unit_name, "Set") ~= "" and GetUpgradeData(GetUniqueItemData(unit_name, "Set"), "Background") ~= "") then
+				background = background .. GetUpgradeData(GetUniqueItemData(unit_name, "Set"), "Background") .. "\n\n"
+			end
 		end
 	end
 	l:setCaption(civilization .. faction .. unit_type_type .. unit_type_class .. description .. quote .. effects .. applies_to .. background)

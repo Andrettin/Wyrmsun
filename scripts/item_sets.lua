@@ -25,11 +25,20 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineUpgrade("upgrade-item-set-the-dragons-stars", { -- Source: Richard Hinckley Allen, "Star-Names and their Meanings", 1874, pp. 202-206.
+	Name = "The Dragon's Stars",
+	MagicLevel = 2, -- should approximately reflect the level of the bonus divided by the number of items in the set
+	Description = "The Dragon's Stars are a group of artifacts believed to derive power from the constellation of Draco - the Dragon."
+})
+
 DefineUpgrade("upgrade-item-set-the-sun-horses", {
 	Name = "The Sun Horses' Stars",
 	MagicLevel = 2 -- should approximately reflect the level of the bonus divided by the number of items in the set
 })
 
+DefineModifier("upgrade-item-set-the-dragons-stars",
+	{"FireDamage", 2}
+)
 DefineModifier("upgrade-item-set-the-sun-horses",
 	{"SightRange", 2}
 )

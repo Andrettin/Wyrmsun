@@ -71,6 +71,15 @@ DefineUniqueItem("wolfs-claw", { -- Source: Richard Cleasby and Gudbrand Vigfuss
 
 -- Longswords
 
+DefineUniqueItem("dragons-tail", { -- Source: Richard Hinckley Allen, "Star-Names and their Meanings", 1874, pp. 206-207.
+	Name = "Dragon's Tail",
+	Type = "unit-spatha",
+	Prefix = "upgrade-item-prefix-wounding",
+	Suffix = "upgrade-item-suffix-of-slaughter",
+	Set = "upgrade-item-set-the-dragons-stars",
+	Description = "This sword is named after the first star in the constellation of Draco, and is said to derive power from it."
+} )
+
 DefineUniqueItem("freys-sword", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 55-57; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 110, 114-115.
 	Name = "Frey's Sword",
 	Type = "unit-spatha",
@@ -147,6 +156,19 @@ DefineUniqueItem("svalin", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Suffix = "upgrade-item-suffix-of-extinguishment",
 	Background = "In Norse mythology, Svalin (\"the Cooling\") was the shield which stood in front of the sun, protecting the mountains and the sea from burning in flames.",
 	Quote = "\"In front of the sun does Svalin stand,\nThe shield for the shining god;\nMountains and sea would be set in flames\nIf it fell from before the sun.\"\n- Grimnismol (Grimnir)"
+} )
+
+-- Armor
+
+-- Helmets
+
+DefineUniqueItem("dragons-head", { -- Source: Richard Hinckley Allen, "Star-Names and their Meanings", 1874, p. 207.
+	Name = "Dragon's Head",
+	Type = "unit-crown",
+	Prefix = "upgrade-item-prefix-impregnable",
+	Suffix = "upgrade-item-suffix-of-regeneration",
+	Set = "upgrade-item-set-the-dragons-stars",
+	Description = "This helmet is named after the second star in the constellation of Draco, and is said to derive power from it."
 } )
 
 -- Boots
