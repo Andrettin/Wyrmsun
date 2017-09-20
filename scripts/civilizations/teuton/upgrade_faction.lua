@@ -102,7 +102,7 @@ DefineUpgrade("upgrade-faction-brandenburg", {
 
 DefineUpgrade("upgrade-faction-bremen", {
 	Name = "Bremen",
-	EffectsString = "+2 Armor for Kogges",
+	EffectsString = "+2 Armor for Cogs",
 	RequirementsString = "Writing and Masonry"
 })
 

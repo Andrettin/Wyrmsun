@@ -71,6 +71,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Added button to transports to unload all units within (icon by Exidelo).
+- Renamed the "Kogge" to "Cog".
 
 -----------------------------------------------------------------------
 - 2.8.2

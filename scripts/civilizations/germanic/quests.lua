@@ -277,11 +277,6 @@ DefineQuest("journey-to-heimdalls-stones", {
 	Icon = "icon-germanic-temple",
 	Description = "Rumors have reached Erala's ears of a holy site called Haimadala's Stones. A visit to that location could grant him new insights into the god he holds to be his father.",
 	PlayerColor = "yellow",
-	AcceptEffects = function(s)
-		local heimdalls_stones_unit = FindUnique("heimdalls-stones")
-		unit = CreateUnit("unit-revealer", trigger_player, {GetUnitVariable(heimdalls_stones_unit, "PosX"), GetUnitVariable(heimdalls_stones_unit, "PosY")}, GetMapLayer("", "earth", 0))
-		SetUnitVariable(unit, "TTL", 600)
-	end,
 	Conditions = function(s)
 		if (
 			GetUniqueItemData("heimdalls-stones", "CanDrop") == false -- Heimdall's Stones must exist
@@ -293,6 +288,11 @@ DefineQuest("journey-to-heimdalls-stones", {
 			return true
 		end
 		return false
+	end,
+	AcceptEffects = function(s)
+		local heimdalls_stones_unit = FindUnique("heimdalls-stones")
+		unit = CreateUnit("unit-revealer", trigger_player, {GetUnitVariable(heimdalls_stones_unit, "PosX"), GetUnitVariable(heimdalls_stones_unit, "PosY")}, GetMapLayer("", "earth", 0))
+		SetUnitVariable(unit, "TTL", 600)
 	end,
 	CompletionEffects = function(s)
 		SetUnitVariable(trigger_unit, "Xp", GetUnitVariable(trigger_unit, "Xp", "Max") + 500, "Max")

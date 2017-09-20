@@ -1129,15 +1129,15 @@ DefineUnitType("unit-teuton-catapult", {
 } )
 
 DefineUnitType("unit-teuton-kogge", {
-	Name = "Kogge",
+	Name = "Cog",
 	Parent = "unit-template-transport-ship",
 	Civilization = "teuton",
-	Description = "A mainstay of the Hanseatic vessels of the North Sea, the Kogge is a sturdy ship capable of carrying a large amount of cargo. It is well-suited for commerce, the transport of troops and naval warfare alike.",
+	Description = "A mainstay of the Hanseatic vessels of the North Sea, the Kogge, or Cog, is a sturdy ship capable of carrying a large amount of cargo. It is well-suited for commerce, the transport of troops and naval warfare alike.",
 	Image = {"file", "teuton/units/kogge.png", "size", {72, 72}},
 	LightImage = {"file", "teuton/units/kogge_water.png"},
 	Icon = "icon-teuton-kogge",
-	ButtonKey = "k",
-	ButtonHint = "Build ~!Kogge",
+	ButtonKey = "c",
+	ButtonHint = "Build ~!Cog",
 	RequirementsString = "Carpenter's Shop/Lumber Mill",
 	Variations = {
 		{
