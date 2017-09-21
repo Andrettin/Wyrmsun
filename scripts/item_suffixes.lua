@@ -87,7 +87,7 @@ DefineUpgrade("upgrade-item-suffix-of-fire", {
 	Name = "of Fire",
 	MagicSuffix = true,
 	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
-	IncompatibleAffixes = {"upgrade-item-prefix-flaming"},
+	IncompatibleAffixes = {"upgrade-item-prefix-fiery", "upgrade-item-prefix-flaming"},
 	MagicLevel = 2
 })
 
@@ -95,8 +95,8 @@ DefineUpgrade("upgrade-item-suffix-of-flame", {
 	Name = "of Flame",
 	MagicSuffix = true,
 	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
-	IncompatibleAffixes = {"upgrade-item-prefix-flaming"},
-	MagicLevel = 3
+	IncompatibleAffixes = {"upgrade-item-prefix-fiery", "upgrade-item-prefix-flaming"},
+	MagicLevel = 4
 })
 
 DefineUpgrade("upgrade-item-suffix-of-frailty", {
@@ -112,7 +112,7 @@ DefineUpgrade("upgrade-item-suffix-of-the-jinn", {
 	MagicSuffix = true,
 	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "horn", true},
 	IncompatibleAffixes = {"upgrade-item-prefix-jinns"},
-	MagicLevel = 3
+	MagicLevel = 4
 })
 
 DefineUpgrade("upgrade-item-suffix-of-lightning", {

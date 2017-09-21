@@ -73,11 +73,18 @@ DefineUpgrade("upgrade-item-prefix-extinguishing", {
 	MagicLevel = 3
 })
 
+DefineUpgrade("upgrade-item-prefix-fiery", {
+	Name = "Fiery",
+	MagicPrefix = true,
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "horn", true, "amulet", true, "ring", true}, -- so that Brisingamen and Draupnir can drop
+	MagicLevel = 2
+})
+
 DefineUpgrade("upgrade-item-prefix-flaming", { -- example: Flaming Sword (from Wesnoth)
 	Name = "Flaming",
 	MagicPrefix = true,
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "horn", true, "amulet", true, "ring", true}, -- so that Brisingamen and Draupnir can drop
-	MagicLevel = 3
+	MagicLevel = 4
 })
 
 DefineUpgrade("upgrade-item-prefix-frail", {
@@ -105,7 +112,7 @@ DefineUpgrade("upgrade-item-prefix-glacial", {
 	Name = "Glacial",
 	MagicPrefix = true,
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
-	MagicLevel = 3
+	MagicLevel = 4
 })
 
 DefineUpgrade("upgrade-item-prefix-impregnable", {
@@ -125,7 +132,7 @@ DefineUpgrade("upgrade-item-prefix-jinns", {
 	Name = "Jinn's",
 	MagicPrefix = true,
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "horn", true},
-	MagicLevel = 3
+	MagicLevel = 4
 })
 
 DefineUpgrade("upgrade-item-prefix-penetrating", {
@@ -239,6 +246,10 @@ DefineModifier("upgrade-item-prefix-extinguishing",
 	{"FireResistance", 30}
 )
 
+DefineModifier("upgrade-item-prefix-fiery",
+	{"FireDamage", 1}
+)
+
 DefineModifier("upgrade-item-prefix-flaming",
 	{"FireDamage", 2}
 )
@@ -335,6 +346,10 @@ DefineDependency("upgrade-item-prefix-dwindling",
 
 DefineDependency("upgrade-item-prefix-extinguishing",
 	{"upgrade-deity-domain-water"}, "or", {"upgrade-deity-domain-hope"}, "or", {"upgrade-deity-domain-fire"}
+)
+
+DefineDependency("upgrade-item-prefix-fiery",
+	{"upgrade-deity-domain-fire"}, "or", {"upgrade-deity-domain-faith"}, "or", {"upgrade-dwarven-alchemy"}, "or", {"upgrade-goblin-alchemy"}, "or", {"upgrade-teuton-alchemy"}
 )
 
 DefineDependency("upgrade-item-prefix-flaming",

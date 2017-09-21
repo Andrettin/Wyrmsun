@@ -149,6 +149,15 @@ DefineUniqueItem("toporik", { -- name means "hatchet" in Russian; renaming of th
 
 -- Shields
 
+DefineUniqueItem("dragons-jaw", { -- Source: Richard Hinckley Allen, "Star-Names and their Meanings", 1874, pp. 211-212.
+	Name = "Dragon's Jaw",
+	Type = "unit-iron-shield",
+	Prefix = "upgrade-item-prefix-sturdy",
+	Suffix = "upgrade-item-suffix-of-thorns",
+	Set = "upgrade-item-set-the-dragons-stars",
+	Description = "This shield is named after the eighth star in the constellation of Draco, and is said to derive power from it."
+} )
+
 DefineUniqueItem("svalin", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 100.
 	Name = "Svalin",
 	Type = "unit-bronze-shield",
@@ -162,13 +171,21 @@ DefineUniqueItem("svalin", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 
 -- Helmets
 
-DefineUniqueItem("dragons-head", { -- Source: Richard Hinckley Allen, "Star-Names and their Meanings", 1874, p. 207.
+DefineUniqueItem("dragons-head", { -- Source: Richard Hinckley Allen, "Star-Names and their Meanings", 1874, pp. 207-209.
 	Name = "Dragon's Head",
 	Type = "unit-crown",
 	Prefix = "upgrade-item-prefix-impregnable",
 	Suffix = "upgrade-item-suffix-of-regeneration",
 	Set = "upgrade-item-set-the-dragons-stars",
-	Description = "This helmet is named after the second star in the constellation of Draco, and is said to derive power from it."
+	Description = "This helmet is named after the third star in the constellation of Draco, and is said to derive power from it."
+} )
+
+DefineUniqueItem("hippopotamus-head", { -- Source: Richard Hinckley Allen, "Star-Names and their Meanings", 1874, pp. 205, 208.
+	Name = "Hippopotamus' Head",
+	Type = "unit-crown",
+	Prefix = "upgrade-item-prefix-sturdy",
+	Suffix = "upgrade-item-suffix-of-strength",
+	Description = "This helmet is named after a star in the Egyptian constellation of the Hippopotamus, and is said to derive power from it."
 } )
 
 -- Boots
@@ -206,6 +223,15 @@ DefineUniqueItem("brisingamen", { -- Source: Henry Adams Bellows (transl.), "The
 	Quote = "\"The dwelling great of the dwarves was shaken,\nAnd burst was the mighty Brisings' necklace.\"\n- Dwarven Traditional Poetry"
 } )
 
+DefineUniqueItem("dragons-eye", { -- Source: Richard Hinckley Allen, "Star-Names and their Meanings", 1874, p. 207.
+	Name = "Dragon's Eye",
+	Type = "unit-amulet",
+	Prefix = "upgrade-item-prefix-vicious",
+	Suffix = "upgrade-item-suffix-of-vision",
+	Set = "upgrade-item-set-the-dragons-stars",
+	Description = "This amulet is named after the second star in the constellation of Draco, and is said to derive power from it."
+} )
+
 -- Rings
 
 DefineUniqueItem("andvaranaut", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 114, 360; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 21.
@@ -215,6 +241,24 @@ DefineUniqueItem("andvaranaut", { -- Source: Henry Adams Bellows (transl.), "The
 	Suffix = "upgrade-item-suffix-of-betrayal",
 	Background = "In Norse mythology, Andvaranaut (\"Andvari's Booty\") was a gold ring owned by Andvari and forcibly taken from him by Loki. Upon the ring's theft, Andvari cursed whoever would come to own it. The ring had the power to make gold.",
 	Quote = "\"Now shall the gold that I once had\nBring their death to warriors twain,\nAnd evil be for heroes eight;\nJoy of my wealth shall no dwarf win.\"\n- Reginsmol (Andvari)"
+} )
+
+DefineUniqueItem("dragons-second-knot", { -- Source: Richard Hinckley Allen, "Star-Names and their Meanings", 1874, pp. 209-210.
+	Name = "Dragon's Second Knot",
+	Type = "unit-ring",
+	Prefix = "upgrade-item-prefix-swift",
+	Suffix = "upgrade-item-suffix-of-speed",
+	Set = "upgrade-item-set-the-dragons-stars",
+	Description = "This ring is named after the fourth star in the constellation of Draco, and is said to derive power from it."
+} )
+
+DefineUniqueItem("dragons-tongue", { -- Source: Richard Hinckley Allen, "Star-Names and their Meanings", 1874, p. 211.
+	Name = "Dragon's Tongue",
+	Type = "unit-ring",
+	Prefix = "upgrade-item-prefix-fiery",
+	Suffix = "upgrade-item-suffix-of-fire",
+	Set = "upgrade-item-set-the-dragons-stars",
+	Description = "This ring is named after the seventh star in the constellation of Draco, and is said to derive power from it."
 } )
 
 DefineUniqueItem("draupnir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 241; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 114.

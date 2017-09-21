@@ -65,7 +65,9 @@ https://github.com/Andrettin/Wyrmsun
 
 * Items
 - Added Crown item.
-- Added two new unique items, both belonging to The Dragon's Stars item set, the Dragon's Tail (Spatha) and the Dragon's Head (Crown).
+- Added three new unique items, both belonging to The Dragon's Stars item set, the Dragon's Tail (spatha), the Dragon's Head (crown), the Dragon's Eye (amulet), the Dragon's Second Knot (ring) and the Dragon's Tongue (ring).
+- Added the Hippopotamus' Head unique crown.
+- Added the "Fiery" magic affix.
 
 * Scenarios
 - Added the "Journey to Haimadala's Stones" (side-)quest for the Haimadala's Progeny scenario.

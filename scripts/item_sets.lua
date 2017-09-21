@@ -27,7 +27,7 @@
 
 DefineUpgrade("upgrade-item-set-the-dragons-stars", { -- Source: Richard Hinckley Allen, "Star-Names and their Meanings", 1874, pp. 202-206.
 	Name = "The Dragon's Stars",
-	MagicLevel = 2, -- should approximately reflect the level of the bonus divided by the number of items in the set
+	MagicLevel = 1, -- should approximately reflect the level of the bonus divided by the number of items in the set
 	Description = "The Dragon's Stars are a group of artifacts believed to derive power from the constellation of Draco - the Dragon."
 })
 
