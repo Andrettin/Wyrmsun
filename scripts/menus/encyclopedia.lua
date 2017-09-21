@@ -914,7 +914,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			unit_type_type = "Type: " .. _(GetUnitTypeData(GetUniqueItemData(unit_name, "Type"), "Name")) .. "\n\n"
 		end
 		if (GetUniqueItemData(unit_name, "Set") ~= "") then
-			unit_type_type = "Set: " .. _(GetUpgradeData(GetUniqueItemData(unit_name, "Set"), "Name")) .. "\n\n"
+			unit_type_type = unit_type_type .. "Set: " .. _(GetUpgradeData(GetUniqueItemData(unit_name, "Set"), "Name")) .. "\n\n"
 		end
 		if (GetUniqueItemData(unit_name, "Description") ~= "") then
 			description = "Description: " .. GetUniqueItemData(unit_name, "Description") .. "\n\n"
@@ -922,8 +922,11 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 				description = description .. GetUpgradeData(GetUniqueItemData(unit_name, "Set"), "Description") .. "\n\n"
 			end
 		end
+		if (GetUniqueItemData(unit_name, "MagicLevel") > 0) then
+			effects = "Magic Level: " .. GetUniqueItemData(unit_name, "MagicLevel") .. "\n\n"
+		end
 		if (GetUniqueItemEffectsString(unit_name) ~= "") then
-			effects = "Effects: " .. GetUniqueItemEffectsString(unit_name) .. ".\n\n"
+			effects = effects .. "Effects: " .. GetUniqueItemEffectsString(unit_name) .. ".\n\n"
 		end
 		if (GetUniqueItemData(unit_name, "Quote") ~= "") then
 			quote = "Quote: " .. GetUniqueItemData(unit_name, "Quote") .. "\n\n"

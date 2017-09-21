@@ -243,15 +243,6 @@ DefineUniqueItem("andvaranaut", { -- Source: Henry Adams Bellows (transl.), "The
 	Quote = "\"Now shall the gold that I once had\nBring their death to warriors twain,\nAnd evil be for heroes eight;\nJoy of my wealth shall no dwarf win.\"\n- Reginsmol (Andvari)"
 } )
 
-DefineUniqueItem("dragons-second-knot", { -- Source: Richard Hinckley Allen, "Star-Names and their Meanings", 1874, pp. 209-210.
-	Name = "Dragon's Second Knot",
-	Type = "unit-ring",
-	Prefix = "upgrade-item-prefix-swift",
-	Suffix = "upgrade-item-suffix-of-speed",
-	Set = "upgrade-item-set-the-dragons-stars",
-	Description = "This ring is named after the fourth star in the constellation of Draco, and is said to derive power from it."
-} )
-
 DefineUniqueItem("dragons-tongue", { -- Source: Richard Hinckley Allen, "Star-Names and their Meanings", 1874, p. 211.
 	Name = "Dragon's Tongue",
 	Type = "unit-ring",
