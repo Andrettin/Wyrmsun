@@ -1605,9 +1605,13 @@ DefineUnitType("unit-dwarven-dock", {
 
 DefineUnitType("unit-dwarven-wall", {
 	Parent = "unit-template-wall",
+	Civilization = "dwarf",
 	TerrainType = "dwarven-wall",
 	Image = {"file", "dwarf/buildings/wall.png", "size", {32, 32}},
-	Icon = "icon-dwarven-wall"
+	Icon = "icon-dwarven-wall",
+	Description = "Masters of stonecraft, dwarves erect mighty walls in the protection of their settlements. The fabled gate Thrymgjol, built by the sons of the dwarf Solblindi, is said to provide the strongest protection of all.",
+	Background = "The Thrymgjol gate and its makers, the sons of the dwarf Solblindi, are mentioned in the ~<Svipdagsmol~> of Norse mythology. The name \"Thrymgjol\" means \"loud-clanging\".",
+	HitPoints = 250 -- +50 HP
 } )
 
 Load("scripts/civilizations/dwarf/units_joruvellir.lua")

@@ -767,9 +767,11 @@ DefineUnitType("unit-goblin-dock", {
 
 DefineUnitType("unit-goblin-wall", {
 	Parent = "unit-template-wall",
+	Civilization = "goblin",
 	TerrainType = "goblin-wall",
 	Image = {"file", "goblin/buildings/wall.png", "size", {32, 32}},
-	Icon = "icon-goblin-wall"
+	Icon = "icon-goblin-wall",
+	Description = "Goblin stonecrafters build sturdy walls, masses of stone that fortify their settlements from enemy attack."
 } )
 
 
