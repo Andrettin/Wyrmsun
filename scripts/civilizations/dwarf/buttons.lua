@@ -211,6 +211,16 @@ DefineButton( { Pos = 12, Level = 1, Icon = "icon-dwarven-academy",
 	}
 })
 
+DefineButton( { Pos = 1, Level = 4, Icon = "icon-dwarven-wall",
+	Action = "build", Value = "unit-dwarven-wall",
+	Key = "w", Hint = "Build ~!Wall", Popup = "popup-building",
+	ForUnit = {
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker"
+	}
+})
+
 -- Units --------------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-miner",
@@ -458,7 +468,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-iron-plow",
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-masonry",
 	Action = "research", Value = "upgrade-dwarven-masonry",
 	Allowed = "check-single-research",
-	Description = "+20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road construction, and allows Sentry Towers to be upgraded to Guard Towers and Mead Halls to Bastions.",
+	Description = "+20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road and Wall construction, and allows Sentry Towers to be upgraded to Guard Towers and Mead Halls to Bastions.",
 	Key = "m", Hint = "Research ~!Masonry", Popup = "popup-research",
 	ForUnit = {"unit-dwarven-masons-shop"}
 } )

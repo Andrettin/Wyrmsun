@@ -214,6 +214,14 @@ DefineButton( { Pos = 12, Level = 1, Icon = "icon-teuton-university",
 	ForUnit = {"unit-teuton-worker"}
 })
 
+DefineButton( { Pos = 1, Level = 4, Icon = "icon-teuton-wall",
+	Action = "build", Value = "unit-teuton-wall",
+	Key = "w", Hint = "Build ~!Wall", Popup = "popup-building",
+	ForUnit = {
+		"unit-teuton-worker"
+	}
+})
+
 -- Researches ---------------------------------------------------------
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-spatha",
@@ -276,7 +284,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-masonry",
 	Action = "research", Value = "upgrade-teuton-masonry",
 	Allowed = "check-single-research",
 	Key = "m", Hint = "Research ~!Masonry", Popup = "popup-research",
-	Description = "+20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road construction, and allows Watch Towers to be upgraded to Guard Towers and Rathauses to Burgs.",
+	Description = "+20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road and Wall construction, and allows Watch Towers to be upgraded to Guard Towers and Rathauses to Burgs.",
 	ForUnit = {"unit-teuton-lumber-mill"}
 } )
 

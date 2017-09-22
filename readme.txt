@@ -60,12 +60,15 @@ https://github.com/Andrettin/Wyrmsun
 - 2.8.3
 -----------------------------------------------------------------------
 
+* Buildings
+- Dwarven Walls, Goblin Walls and Teuton Walls are now buildable (graphics by Jinn). Walls require Masonry to be available.
+
 * Factions
 - In the Scenario mode, founding certain factions now depends on possessing the correct settlements.
 
 * Items
 - Added Crown item.
-- Added three new unique items, both belonging to The Dragon's Stars item set, the Dragon's Tail (spatha), the Dragon's Head (crown), the Dragon's Eye (amulet) and the Dragon's Tongue (ring).
+- Added five new unique items belonging to The Dragon's Stars item set, the Dragon's Tail (spatha), the Dragon's Head (crown), the Dragon's Eye (amulet), the Dragon's Tongue (ring) and the Dragon's Jaw (shield).
 - Added the Hippopotamus' Head unique crown.
 - Added the "Fiery" magic affix.
 - Unique item encyclopedia entries now display their magic level.

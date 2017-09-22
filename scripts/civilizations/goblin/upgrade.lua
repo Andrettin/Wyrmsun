@@ -124,7 +124,7 @@ DefineUpgrade("upgrade-goblin-iron-tipped-wood-plow", {
 DefineUpgrade("upgrade-goblin-masonry", {
 	Parent = "upgrade-masonry",
 	Civilization = "goblin",
-	Description = "Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road construction, and allows Watch Towers to be upgraded to Guard Towers and Town Halls to Strongholds."
+	Description = "Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road and Wall construction, and allows Watch Towers to be upgraded to Guard Towers and Town Halls to Strongholds."
 })
 
 DefineUpgrade("upgrade-goblin-coinage", {
@@ -295,6 +295,10 @@ DefineDependency("upgrade-goblin-embossed-shield",
 
 DefineDependency("unit-goblin-guard-tower",
 	{"unit-goblin-lumber-mill", "upgrade-goblin-masonry"}
+)
+
+DefineDependency("unit-goblin-wall",
+	{"upgrade-goblin-masonry"}
 )
 
 DefinePredependency("unit-goblin-war-machine",

@@ -185,6 +185,14 @@ DefineButton( { Pos = 7, Level = 1, Icon = "icon-goblin-banner",
 	ForUnit = {"unit-goblin-worker"}
 })
 
+DefineButton( { Pos = 1, Level = 4, Icon = "icon-goblin-wall",
+	Action = "build", Value = "unit-goblin-wall",
+	Key = "w", Hint = "Build ~!Wall", Popup = "popup-building",
+	ForUnit = {
+		"unit-goblin-worker"
+	}
+})
+
 -- Researches ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-broad-sword",
@@ -287,7 +295,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-masonry",
 	Action = "research", Value = "upgrade-goblin-masonry",
 	Allowed = "check-single-research",
 	Key = "m", Hint = "Research ~!Masonry", Popup = "popup-research",
-	Description = "+20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road construction, and allows Watch Towers to be upgraded to Guard Towers and Town Halls to Strongholds.",
+	Description = "+20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road and Wall construction, and allows Watch Towers to be upgraded to Guard Towers and Town Halls to Strongholds.",
 	ForUnit = {"unit-goblin-lumber-mill"}
 } )
 

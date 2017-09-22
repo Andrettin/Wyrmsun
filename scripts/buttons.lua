@@ -60,7 +60,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-unload",
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-repair",
 	Action = "repair",
-	Key = "r", Hint = _("~!Repair"), Popup = "popup-commands",
+	Key = "r", Hint = "~!Repair", Popup = "popup-commands",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
@@ -627,13 +627,13 @@ DefineButton( { Pos = 13, Level = 2, Icon = "icon-ethereal-vision",
 DefineButton( { Pos = 1, Level = 2, Icon = "icon-healing",
 	Action = "learn-ability", Value = "upgrade-healing",
 	Description = "Healing is an active ability that heals an organic unit",
-	Key = "h", Hint = _("Learn ~!Healing"), Popup = "popup-commands",
+	Key = "h", Hint = "Learn ~!Healing", Popup = "popup-commands",
 	ForUnit = {"unit-dwarven-witness"}
 })
 
 DefineButton( { Pos = 2, Level = 2, Icon = "icon-precision",
 	Action = "learn-ability", Value = "upgrade-precision",
-	Key = "r", Hint = _("Learn P~!recision"), Popup = "popup-commands",
+	Key = "r", Hint = "Learn P~!recision", Popup = "popup-commands",
 	Description = "Precision is an active ability that doubles the accuracy of an organic unit while in combat",
 	ForUnit = {"unit-germanic-priest", "unit-teuton-priest", "unit-elven-priest", "unit-dwarven-witness"}
 })
@@ -775,7 +775,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-inspire",
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-terror",
 	Action = "cast-spell", Value = "spell-terror",
 	Description = "Makes a unit flee in terror",
-	Key = "t", Hint = _("~!Terror"), Popup = "popup-commands",
+	Key = "t", Hint = "~!Terror", Popup = "popup-commands",
 	ForUnit = {"unit-goblin-shaman"}
 })
 
@@ -796,7 +796,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-precision",
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-stun",
 	Action = "cast-spell", Value = "spell-stun",
 	Description = "Does a stunning attack on a target, leaving it paralyzed for a few moments",
-	Key = "u", Hint = _("St~!un"), Popup = "popup-commands",
+	Key = "u", Hint = "St~!un", Popup = "popup-commands",
 	ForUnit = {
 		"unit-dwarven-thane",
 		"unit-dwarven-yale-lord",
@@ -815,7 +815,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-stun",
 DefineButton( { Pos = 7, Level = 0, Icon = "icon-puncture",
 	Action = "cast-spell", Value = "spell-puncture",
 	Description = "Makes the target bleed for a certain duration. Only usable with melee weapons capable of doing thrusting attacks",
-	Key = "r", Hint = _("Punctu~!re"), Popup = "popup-commands",
+	Key = "r", Hint = "Punctu~!re", Popup = "popup-commands",
 	ForUnit = {
 		"unit-germanic-chieftain", "unit-germanic-spearman",
 		"unit-teuton-heroic-swordsman", "unit-frank-heroic-swordsman", "unit-teuton-spearman", "unit-frank-spearman",
@@ -829,7 +829,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-puncture",
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-precise-shot",
 	Action = "cast-spell", Value = "spell-precise-shot",
 	Description = "Deals an attack which always results in a critical hit. Only usable with ranged weapons",
-	Key = "r", Hint = _("P~!recise Shot"), Popup = "popup-commands",
+	Key = "r", Hint = "P~!recise Shot", Popup = "popup-commands",
 	ForUnit = {
 		"unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
 		"unit-joruvellir-explorer",
@@ -891,9 +891,9 @@ DefineButton( { Pos = 14, Level = 1, Icon = "icon-railroad",
 	}
 })
 
-DefineButton( { Pos = 1, Level = 4, Icon = "icon-copper-mine",
+DefineButton( { Pos = 2, Level = 4, Icon = "icon-copper-mine",
 	Action = "build", Value = "unit-copper-mine",
-	Key = "c", Hint = _("Build ~!Copper Mine"), Popup = "popup-building",
+	Key = "c", Hint = "Build ~!Copper Mine", Popup = "popup-building",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
@@ -903,9 +903,9 @@ DefineButton( { Pos = 1, Level = 4, Icon = "icon-copper-mine",
 	}
 })
 
-DefineButton( { Pos = 2, Level = 4, Icon = "icon-silver-mine",
+DefineButton( { Pos = 3, Level = 4, Icon = "icon-silver-mine",
 	Action = "build", Value = "unit-silver-mine",
-	Key = "v", Hint = _("Build Si~!lver Mine"), Popup = "popup-building",
+	Key = "v", Hint = "Build Si~!lver Mine", Popup = "popup-building",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
@@ -915,9 +915,9 @@ DefineButton( { Pos = 2, Level = 4, Icon = "icon-silver-mine",
 	}
 })
 
-DefineButton( { Pos = 3, Level = 4, Icon = "icon-gold-mine",
+DefineButton( { Pos = 4, Level = 4, Icon = "icon-gold-mine",
 	Action = "build", Value = "unit-gold-mine",
-	Key = "g", Hint = _("Build ~!Gold Mine"), Popup = "popup-building",
+	Key = "g", Hint = "Build ~!Gold Mine", Popup = "popup-building",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
@@ -927,7 +927,7 @@ DefineButton( { Pos = 3, Level = 4, Icon = "icon-gold-mine",
 	}
 })
 
-DefineButton( { Pos = 4, Level = 4, Icon = "icon-diamond-mine",
+DefineButton( { Pos = 5, Level = 4, Icon = "icon-diamond-mine",
 	Action = "build", Value = "unit-diamond-mine",
 	Key = "d", Hint = "Build ~!Diamond Mine", Popup = "popup-building",
 	ForUnit = {
@@ -939,7 +939,7 @@ DefineButton( { Pos = 4, Level = 4, Icon = "icon-diamond-mine",
 	}
 })
 
-DefineButton( { Pos = 5, Level = 4,
+DefineButton( { Pos = 6, Level = 4,
 	Action = "build", Value = "unit-yale-hunting-lodge",
 	Key = "y", Hint = "Build ~!Yale Hunting Lodge", Popup = "popup-building",
 	ForUnit = {

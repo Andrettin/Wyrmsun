@@ -129,7 +129,7 @@ DefineUpgrade("upgrade-dwarven-iron-tipped-wood-plow", {
 DefineUpgrade("upgrade-dwarven-masonry", {
 	Parent = "upgrade-masonry",
 	Civilization = "dwarf",
-	Description = "Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road construction, and allows Sentry Towers to be upgraded to Guard Towers and Mead Halls to Bastions.",
+	Description = "Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road and Wall construction, and allows Sentry Towers to be upgraded to Guard Towers and Mead Halls to Bastions.",
 	Costs = {"time", 250, "copper", 900, "lumber", 0, "stone", 1500}
 })
 
@@ -390,6 +390,10 @@ DefineDependency("upgrade-dwarven-alchemy",
 
 DefineDependency("unit-dwarven-guard-tower",
 	{"unit-dwarven-lumber-mill", "upgrade-dwarven-masonry"}
+)
+
+DefineDependency("unit-dwarven-wall",
+	{"upgrade-dwarven-masonry"}
 )
 
 DefinePredependency("unit-dwarven-ballista",
