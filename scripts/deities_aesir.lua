@@ -106,13 +106,14 @@ DefineDeity("sol", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980,
 		"suebi", "Sunna",
 		"teuton", "Sunna" -- The second Merseburg charm (written in Old High German) attests a deity named Sunna, which seems likely to be the Old High German name for Sol; in the charm her sister is Sinhtgunt; Source: Susan D. Fuller, "Pagan Charms in Tenth-Century Saxony? The Function of the Merseburg Charms", 1909, p. 162.
 	},
-	Description = "Sol is a sun goddess and the daughter of Mundilfari. Due to her association with the mighty star, she was believed by the Germanics to carry the sun in her chariot with the horses Arvak and Alsvid. In truth, however, Sol is linked to the abstract concept of a sun, rather than to a particular one."
+	Description = "Sol is a sun goddess and the daughter of Mundilfari. Due to her association with the mighty star, she was believed to carry the sun in her chariot with the horses Arvak and Alsvid." --  In truth, however (within the game's universe), Sol is linked to the abstract concept of a sun, rather than to a particular one
 })
 
-DefineDeity("tyr", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, pp. 115, 133; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 48-49.
+DefineDeity("tyr", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 34-36, 251; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, pp. 115, 133; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 48-49.
 	Name = "Tyr",
 	Pantheon = "Aesir",
-	Civilizations = {"anglo-saxon", "frankish", "germanic", "norse", "suebi", "teuton"},
+	HomePlane = "asgard",
+	Civilizations = {"anglo-saxon", "dwarf", "frankish", "germanic", "norse", "suebi", "teuton"}, -- available for the dwarves since he is connected to dwarves in Norse myths (though it is rather a small connection, with Tyr helping the gods bind Fenrir with the dwarven fetter Gleipnir)
 	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {"warfare"}, -- god of war, law and justice
@@ -124,7 +125,7 @@ DefineDeity("tyr", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980,
 		"suebi", "Ziu",
 		"teuton", "Ziu" -- Old High German name of the god; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115.
 	},
-	Description = "Tyr is the son of Odin, and is known as the bravest of the Aesir. In an effort to bind the giant wolf Fenrir, he ended up losing his hand."
+	Description = "Tyr is the son of Odin, and is known as the bravest of the Aesir. In an effort to bind the giant wolf Fenrir, he ended up losing his hand while the Aesir chain the beast with the dwarven fetter Gleipnir."
 })
 
 DefineDeity("aegir", { -- Married to Ran; they have their hall under the sea by the island of Hlesey; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 239.
@@ -241,7 +242,7 @@ DefineDeity("hel", { -- Source: Anders Andrén, "Behind Heathendom: Archaeologic
 	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {"death"},
-	Description = "Hel is a goddess of death who dwells in Helheim."
+	Description = "Hel is a goddess of death who dwells in Niflheim."
 })
 
 DefineDeity("hod", { -- Blind god, who through Loki's mischief killed his brother Balder; returns after Ragnarok; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 245.
@@ -342,12 +343,14 @@ DefineDeity("saga", { -- Drinks every day with Odin in her hall, Sokkvabekk; Sou
 	Gender = "female"
 })
 
-DefineDeity("sif", { -- Thor's wife; had golden hair, which were cut by Loki; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 249.
+DefineDeity("sif", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. xxxi, 48-49, 198-199, 249.
 	Name = "Sif",
 	Pantheon = "Aesir",
-	Civilizations = {"norse"},
+	HomePlane = "asgard",
+	Civilizations = {"dwarf", "norse"}, -- available for dwarves due to her connection (though small) with them in the Norse myth
 	Religions = {"paganism"},
-	Gender = "female"
+	Gender = "female",
+	Description = "Sif is a fertility goddess, and the wife of Thor. Her cherished golden hair was cut off by Loki while she slept. The sons of the dwarf Ivaldi crafted a replacement for it upon the gods' request."
 })
 
 DefineDeity("sjofn", { -- inspired human passion; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 249.

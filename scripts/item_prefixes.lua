@@ -333,7 +333,7 @@ DefineModifier("upgrade-item-prefix-wounding",
 )
 
 DefineDependency("upgrade-item-prefix-cold",
-	{"upgrade-deity-domain-cold"}
+	{"upgrade-deity-domain-ice"}
 )
 
 DefineDependency("upgrade-item-prefix-cruel",
@@ -365,7 +365,7 @@ DefineDependency("upgrade-item-prefix-giantsbane",
 )
 
 DefineDependency("upgrade-item-prefix-glacial",
-	{"upgrade-deity-domain-cold"}
+	{"upgrade-deity-domain-ice"}
 )
 
 DefineDependency("upgrade-item-prefix-impregnable",

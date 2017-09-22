@@ -61,8 +61,8 @@ DefineUpgrade("upgrade-deity-domain-wood", {
 
 -- Other Elements
 
-DefineUpgrade("upgrade-deity-domain-cold", {
-	Name = "Cold"
+DefineUpgrade("upgrade-deity-domain-ice", {
+	Name = "Ice"
 })
 
 DefineUpgrade("upgrade-deity-domain-lightning", {

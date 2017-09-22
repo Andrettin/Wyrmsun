@@ -415,7 +415,7 @@ DefineDependency("upgrade-item-suffix-of-carpentry",
 )
 
 DefineDependency("upgrade-item-suffix-of-cold",
-	{"upgrade-deity-domain-cold"}
+	{"upgrade-deity-domain-ice"}
 )
 
 DefineDependency("upgrade-item-suffix-of-the-colossus",
