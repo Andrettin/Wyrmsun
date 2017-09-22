@@ -41,8 +41,24 @@ DefineSettlement("gdansk", {
 	Regions = {"europe", "poland", "west-and-central-europe"}
 })
 
+DefineSettlement("gniezno", {
+	Name = "Gniezno",
+	MapTemplate = "earth",
+	Position = {4248, 853},
+	Major = true,
+	CulturalNames = {
+		"slav", "Gniezno",
+		"teuton", "Gnesen" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalOwners = {
+	},
+	HistoricalBuildings = {
+	},
+	Regions = {"europe", "poland", "west-and-central-europe"}
+})
+
 DefineSettlement("konigsberg", {
-	Name = "Königsberg",
+	Name = "Konigsberg",
 	MapTemplate = "earth",
 	Position = {4302, 804},
 	Major = true,
@@ -74,6 +90,22 @@ DefineSettlement("krakow", {
 		1364, 0, "university" -- University founded in Krakow in 1364; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	Regions = {"cisleithania", "europe", "poland", "west-and-central-europe"}
+})
+
+DefineSettlement("poznan", {
+	Name = "Poznan",
+	MapTemplate = "earth",
+	Position = {4225, 855},
+	Major = true,
+	CulturalNames = {
+		"slav", "Poznan", -- "Poznań"
+		"teuton", "Posen" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalOwners = {
+	},
+	HistoricalBuildings = {
+	},
+	Regions = {"europe", "poland", "west-and-central-europe"}
 })
 
 DefineSettlement("szczecin", {
