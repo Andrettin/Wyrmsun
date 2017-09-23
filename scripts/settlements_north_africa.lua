@@ -28,7 +28,7 @@
 DefineSettlement("carthage", {
 	Name = "Carthage",
 	MapTemplate = "earth",
-	Position = {4074, 1208},
+	Position = {4071, 1209},
 	Major = true,
 	CulturalNames = {
 		"latin", "Carthage", -- "Carthago"; Source: "Ancient Warfare VII.6", 2013, p. 7.

@@ -94,6 +94,16 @@ DefineCampaign("thors-servant", {
 --]]
 
 --[[
+DefineCampaign("the-second-punic-war", {
+	Name = "The Second Punic War",
+	Description = "",
+	Faction = "rome",
+	StartYear = -218,
+	MapTemplate = "earth",
+	MapTemplateStartPos = {3766, 881},
+	MapSize = {512, 512}
+})
+
 DefineCampaign("ariovistus-ambition", {
 	Name = "Ariovistus' Ambition",
 	Description = "Under the leadership of Ariovistus, the Suebi have crossed the Rhine to aid the Sequani and the Arverni in defeating the Aedui. The Suebi leader has, however, greater ambitions than his allies suppose... he wishes to conquer the entirety of Gaul.",

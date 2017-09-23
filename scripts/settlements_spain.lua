@@ -84,9 +84,9 @@ DefineSettlement("cadiz", {
 })
 
 DefineSettlement("cartagena", {
-	Name = "Cartagena",
+	Name = "New Carthage",
 	MapTemplate = "earth",
-	Position = {3816, 1192},
+	Position = {3816, 1191},
 	CulturalNames = {
 		"castillian", "Cartagena",
 		"latin", "New Carthage",

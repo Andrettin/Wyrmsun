@@ -333,7 +333,7 @@ DefineSettlement("lyon", {
 DefineSettlement("marseilles", {
 	Name = "Marseilles",
 	MapTemplate = "earth",
-	Position = {3962, 1062},
+	Position = {3963, 1061},
 	Major = true,
 	CulturalNames = {
 		"celt", "Massilia",

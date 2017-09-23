@@ -276,7 +276,7 @@ DefineSettlement("trent", {
 DefineSettlement("vienna", {
 	Name = "Vienna",
 	MapTemplate = "earth",
-	Position = {4212, 952},
+	Position = {4212, 953},
 	Major = true,
 	CulturalNames = {
 		"celt", "Vindobona",

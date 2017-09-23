@@ -45,7 +45,7 @@ DefineSettlement("aleria", {
 DefineSettlement("aquileia", {
 	Name = "Aquileia",
 	MapTemplate = "earth",
-	Position = {4143, 1005},
+	Position = {4143, 1004},
 	Major = true,
 	CulturalNames = {
 		"latin", "Aquileia" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 26-27, 29; Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -132,7 +132,7 @@ DefineSettlement("caralis", {
 DefineSettlement("cosa", {
 	Name = "Cosa",
 	MapTemplate = "earth",
-	Position = {4095, 1082},
+	Position = {4095, 1081},
 	CulturalNames = {
 		"latin", "Cosa" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 	},
@@ -281,7 +281,7 @@ DefineSettlement("modena", {
 DefineSettlement("naples", {
 	Name = "Naples",
 	MapTemplate = "earth",
-	Position = {4163, 1117},
+	Position = {4163, 1116},
 	Major = true,
 	CulturalNames = {
 		"greek", "Neapolis",
@@ -352,7 +352,7 @@ DefineSettlement("paestum", {
 DefineSettlement("palermo", {
 	Name = "Palermo",
 	MapTemplate = "earth",
-	Position = {4143, 1180},
+	Position = {4141, 1181},
 	Major = true,
 	CulturalNames = {
 		"greek", "Panormus",
@@ -495,7 +495,7 @@ DefineSettlement("spoletum", {
 DefineSettlement("syracuse", {
 	Name = "Syracuse",
 	MapTemplate = "earth",
-	Position = {4187, 1204},
+	Position = {4184, 1204},
 	Major = true,
 	CulturalNames = {
 		"greek", "Syracuse" -- "Syracusae"; Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -513,7 +513,7 @@ DefineSettlement("syracuse", {
 DefineSettlement("venice", {
 	Name = "Venice",
 	MapTemplate = "earth",
-	Position = {4122, 1011},
+	Position = {4121, 1009},
 	Major = true,
 	CulturalNames = {
 		"italian", "Venice",

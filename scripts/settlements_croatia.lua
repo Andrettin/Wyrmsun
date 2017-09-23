@@ -28,7 +28,7 @@
 DefineSettlement("fiume", {
 	Name = "Fiume",
 	MapTemplate = "earth",
-	Position = {4170, 1016},
+	Position = {4171, 1015},
 	Major = true,
 	CulturalNames = {
 		"slav", "Rijeka",
