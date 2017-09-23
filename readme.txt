@@ -73,6 +73,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added the "Fiery" magic affix.
 - Unique item encyclopedia entries now display their magic level.
 
+* Miscellaneous
+- Fixed a crash which could occur after loading a saved game.
+
 * Scenarios
 - Added the "Journey to Haimadala's Stones" (side-)quest for the Haimadala's Progeny scenario.
 

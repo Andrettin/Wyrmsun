@@ -62,11 +62,10 @@ DefineDialogue("the-house-of-seven-fathers", { -- based on the "The Seventh Fath
 			"options", {"An interesting experience"},
 			"option-effects", {
 				function(s)
-					local hero_unit = FindHero(trigger_hero)
-					SetUnitVariable(hero_unit, "Xp", GetUnitVariable(hero_unit, "Xp", "Max") + 100, "Max")
-					SetUnitVariable(hero_unit, "Xp", GetUnitVariable(hero_unit, "Xp", "Max"))
-					SetUnitVariable(hero_unit, "HitPoints", GetUnitVariable(hero_unit, "HitPoints", "Max"))
-					SetUnitVariable(hero_unit, "Mana", GetUnitVariable(hero_unit, "Mana", "Max"))
+					SetUnitVariable(trigger_unit, "Xp", GetUnitVariable(trigger_unit, "Xp", "Max") + 100, "Max")
+					SetUnitVariable(trigger_unit, "Xp", GetUnitVariable(trigger_unit, "Xp", "Max"))
+					SetUnitVariable(trigger_unit, "HitPoints", GetUnitVariable(trigger_unit, "HitPoints", "Max"))
+					SetUnitVariable(trigger_unit, "Mana", GetUnitVariable(trigger_unit, "Mana", "Max"))
 				end
 			},
 			"option-tooltips", {"+100 XP and restored HP and mana for TRIGGER_HERO"}

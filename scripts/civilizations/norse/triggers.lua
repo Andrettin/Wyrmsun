@@ -171,6 +171,7 @@ AddTrigger("the-house-of-seven-fathers",
 					trigger_player = GetUnitVariable(uncount[unit1], "Player")
 					second_trigger_player = GetUnitVariable(the_house_of_seven_fathers, "Player")
 					trigger_hero = GetUnitVariable(uncount[unit1], "Character")
+					trigger_unit = uncount[unit1]
 					return true
 				end
 			end
