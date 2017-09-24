@@ -67,7 +67,8 @@ DefineUpgrade("upgrade-faction-gumeninga-tribe", {
 
 DefineUpgrade("upgrade-faction-jute-tribe", {
 	Name = "Jute Tribe",
-	EffectsString = "+2 Food Supply for Docks"
+	EffectsString = "+2 Food Supply for Docks",
+	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
 })
 
 DefineUpgrade("upgrade-faction-lindisfaran-tribe", {
@@ -80,6 +81,12 @@ DefineUpgrade("upgrade-faction-mierce-tribe", {
 	Name = "Mierce Tribe",
 	EffectsString = "+2 Armor for Swordsmen",
 	RequirementsString = "Spatha and Iron Shield"
+})
+
+DefineUpgrade("upgrade-faction-teuton-tribe", {
+	Name = "Teuton Tribe",
+	EffectsString = "+3 Damage, -1 Armor for Kriegers",
+	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
 })
 
 DefineUpgrade("upgrade-faction-bernicia", {
@@ -212,6 +219,7 @@ DefineModifier("upgrade-faction-jute-tribe",
 	{"Supply", 2},
 	{"apply-to", "unit-teuton-dock"}
 )
+
 DefineModifier("upgrade-faction-lindisfaran-tribe",
 	{"Accuracy", 2},
 	{"Points", 10},
@@ -220,6 +228,13 @@ DefineModifier("upgrade-faction-lindisfaran-tribe",
 
 DefineModifier("upgrade-faction-mierce-tribe",
 	{"Armor", 2},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
+)
+
+DefineModifier("upgrade-faction-teuton-tribe",
+	{"BasicDamage", 3},
+	{"Armor", -1},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
@@ -309,6 +324,14 @@ DefineModifier("upgrade-faction-wessex",
 )
 
 DefineDependency("upgrade-faction-angle-tribe",
+	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
+)
+
+DefineDependency("upgrade-faction-jute-tribe",
+	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
+)
+
+DefineDependency("upgrade-faction-teuton-tribe",
 	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
 )
 

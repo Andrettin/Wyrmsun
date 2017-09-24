@@ -62,7 +62,17 @@ DefineFaction("jute-tribe", {
 	Colors = {"red", "white"},
 	FactionUpgrade = "upgrade-faction-jute-tribe",
 	Icon = "icon-flag-five-purple-birds-on-green",
-	DevelopsFrom = {"angle-tribe"}
+	DevelopsFrom = {"asa-tribe", "hersing-tribe", "hlesing-tribe", "ingaevone-tribe", "jarling-tribe", "karling-tribe", "skeldung-tribe", "thielung-tribe", "thralling-tribe", "yngling-tribe"},
+})
+
+DefineFaction("teuton-tribe", {
+	Name = "Teuton Tribe",
+	Civilization = "anglo-saxon",
+	Type = "tribe",
+	Colors = {"orange"},
+	FactionUpgrade = "upgrade-faction-teuton-tribe",
+	Icon = "icon-flag-five-red-birds-on-yellow",
+	DevelopsFrom = {"asa-tribe", "hersing-tribe", "hlesing-tribe", "ingaevone-tribe", "jarling-tribe", "karling-tribe", "skeldung-tribe", "thielung-tribe", "thralling-tribe", "yngling-tribe"}
 })
 
 DefineFaction("bernice-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
@@ -187,7 +197,7 @@ DefineFaction("jutland", {
 	DefaultTier = "duchy",
 	FactionUpgrade = "upgrade-faction-jutland",
 	Icon = "icon-flag-cyan-lion-on-red",
-	DevelopsFrom = {"jute-tribe"}
+	DevelopsFrom = {"jute-tribe", "teuton-tribe"}
 })
 
 DefineFaction("kent", {

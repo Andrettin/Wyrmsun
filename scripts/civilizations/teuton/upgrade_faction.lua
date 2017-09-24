@@ -59,12 +59,6 @@ DefineUpgrade("upgrade-faction-saxon-tribe", {
 	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
 })
 
-DefineUpgrade("upgrade-faction-teuton-tribe", {
-	Name = "Teuton Tribe",
-	EffectsString = "+3 Damage, -1 Armor for Kriegers",
-	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
-})
-
 DefineUpgrade("upgrade-faction-varini-tribe", {
 	Name = "Varini Tribe",
 	EffectsString = "+10 HP for Kriegers"
@@ -272,13 +266,6 @@ DefineModifier("upgrade-faction-saxon-tribe",
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
-DefineModifier("upgrade-faction-teuton-tribe",
-	{"BasicDamage", 3},
-	{"Armor", -1},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
 DefineModifier("upgrade-faction-varini-tribe",
 	{"HitPoints", 10},
 	{"Points", 10},
@@ -458,10 +445,6 @@ DefineDependency("upgrade-faction-lombard-tribe",
 )
 
 DefineDependency("upgrade-faction-saxon-tribe",
-	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
-)
-
-DefineDependency("upgrade-faction-teuton-tribe",
 	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
 )
 

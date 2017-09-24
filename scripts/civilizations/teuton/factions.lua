@@ -92,17 +92,6 @@ DefineFaction("bavarian-tribe", {
 	Description = "The early Bavarians were a West Germanic people who traced their origins to the Marcomanni. Their name means \"men of Bohemia\", an appelation they gained due to the Marcomanni having established themselves in Bohemia under Marbod. The Bavarians migrated south, giving their newly-settled land the name it has to this day, Bavaria."
 })
 
-DefineFaction("teuton-tribe", {
-	Name = "Teuton Tribe",
-	Civilization = "teuton",
-	Type = "tribe",
-	Colors = {"orange"},
-	FactionUpgrade = "upgrade-faction-teuton-tribe",
-	Icon = "icon-flag-five-red-birds-on-yellow",
-	DevelopsFrom = {"asa-tribe", "hersing-tribe", "hlesing-tribe", "ingaevone-tribe", "jarling-tribe", "karling-tribe", "skeldung-tribe", "thielung-tribe", "thralling-tribe", "yngling-tribe"},
-	DevelopsTo = {"jutland"}
-})
-
 DefineFaction("varini-tribe", {
 	Name = "Varini Tribe",
 	Civilization = "teuton",

@@ -582,7 +582,9 @@ DefineCharacter("roskva", { -- Source: Carolyne Larrington, "The Norse Myths: A 
 	Name = "Roskva", -- "Röskva"
 	Gender = "female",
 	Type = "unit-germanic-worker",
-	Civilization = "germanic"
+	Civilization = "germanic",
+	Faction = "thielung-tribe",
+	Father = "egill"
 	-- Thor's servant in Norse mythology
 })
 
