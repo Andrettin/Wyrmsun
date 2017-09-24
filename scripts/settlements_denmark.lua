@@ -35,6 +35,7 @@ DefineSettlement("aarhus", {
 		"norse", "Aarhus"
 	},
 	Cores = {
+		"charude-tribe",
 		"jute-tribe"
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}

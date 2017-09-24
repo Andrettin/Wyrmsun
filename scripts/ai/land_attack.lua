@@ -146,9 +146,6 @@ local land_funcs = {
 	end,
 	function() return AiNeed(GetAiUnitType("market")) end, -- seems like a good point to build it
 
-	function() return AiResearch(GetAiUnitType("masonry")) end, -- needed for the stronghold
-	function() return AiWait(GetAiUnitType("masonry")) end,
-	
 	function()
 		if (AiGetRace() == "dwarf") then
 			return AiNeed(GetAiUnitType("masons-shop"));
@@ -156,6 +153,16 @@ local land_funcs = {
 		return false;
 	end,
 
+	function()
+		if (AiGetRace() == "dwarf") then
+			return AiWait(GetAiUnitType("masons-shop"));
+		end
+		return false;
+	end,
+
+	function() return AiResearch(GetAiUnitType("masonry")) end, -- needed for the stronghold
+	function() return AiWait(GetAiUnitType("masonry")) end,
+	
 	function() return AiUpgradeTo(GetAiUnitType("stronghold")) end,
 	function() return AiWait(GetAiUnitType("stronghold")) end,
 	function() return AiSet(GetAiUnitType("worker"), 25) end,
