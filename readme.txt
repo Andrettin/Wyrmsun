@@ -62,6 +62,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - Unit and building encyclopedia entries now contain their costs and stats.
+- Stone piles now always hold 400 stone (previously they were randomly generated with 200 or 400 stone).
 
 * Units
 - Added dwarven Thunderer (icon by Jinn and unit graphics by Jinn and b_o).

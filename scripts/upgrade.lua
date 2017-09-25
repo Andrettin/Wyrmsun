@@ -360,6 +360,11 @@ DefineDependency("upgrade-architecture",
 	"or", {"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )
 
+DefinePredependency("upgrade-gunpowder",
+	{"upgrade-dwarven-civilization"},
+	"or", {"upgrade-gnomish-civilization"}
+)
+
 DefineDependency("upgrade-gunpowder",
 	{"upgrade-dwarven-alchemy"},
 	"or", {"upgrade-goblin-alchemy"},
