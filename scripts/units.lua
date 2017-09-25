@@ -29,7 +29,7 @@ UnitTypeFiles = {}
 
 Units = {
 	"upgrade-holy-order", "upgrade-mercenary-company", "upgrade-trading-company",
-	"upgrade-mathematics", "upgrade-engineering", "upgrade-architecture",
+	"upgrade-mathematics", "upgrade-engineering", "upgrade-architecture", "upgrade-gunpowder",
 	"upgrade-egyptian-civilization",
 	"upgrade-latin-civilization",
 	"unit-latin-town-hall", "unit-latin-farm", "unit-latin-barracks", "unit-latin-smithy", "unit-latin-stables",
@@ -103,6 +103,7 @@ Units = {
 	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
 	"unit-dwarven-guard",
 	"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer",
+	"unit-dwarven-thunderer",
 	"unit-dwarven-yale-rider", "unit-dwarven-yale-lord", "unit-dwarven-ballista",
 	"unit-dwarven-witness", 
 	"unit-dwarven-gryphon-rider",
@@ -3430,6 +3431,21 @@ DefineUnitType("unit-template-heroic-shooter", {
 	AiDrops = {"unit-crown"}
 } )
 
+DefineUnitType("unit-template-gunpowder-infantry", {
+	Name = "Gunpowder Infantry",
+	Parent = "unit-template-archer",
+	Class = "gunpowder-infantry",
+	Costs = {"time", 70, "copper", 800, "lumber", 0},
+	BasicDamage = 18,
+	Missile = "missile-bullet",
+	MaxAttackRange = 4,
+	Accuracy = 7,
+	Priority = 55,
+	Points = 95,
+	Gender = "male",
+	RequirementsString = "Smithy and Gunpowder"
+} )
+
 DefineUnitType("unit-template-thief", {
 	Name = "Thief",
 	Parent = "unit-template-sapient-unit",
@@ -4521,7 +4537,7 @@ DefineUnitType("unit-mercenary-camp", {
 	BurnDamageRate = 1,
 	RecruitHeroes = true,
 	UnitStock = {
-		"unit-dwarven-axefighter", 4, "unit-surghan-mercenary-axefighter", 4, "unit-dwarven-guard", 4, "unit-dwarven-scout", 3, "unit-joruvellir-scout", 3, "unit-dwarven-yale-rider", 2, "unit-joruvellir-yale-rider", 2, "unit-dwarven-ballista", 1, "unit-dwarven-gryphon-rider", 1,
+		"unit-dwarven-axefighter", 4, "unit-surghan-mercenary-axefighter", 4, "unit-dwarven-guard", 4, "unit-dwarven-scout", 3, "unit-joruvellir-scout", 3, "unit-dwarven-thunderer", 3, "unit-dwarven-yale-rider", 2, "unit-joruvellir-yale-rider", 2, "unit-dwarven-ballista", 1, "unit-dwarven-gryphon-rider", 1,
 		"unit-goblin-thief", 6, "unit-goblin-swordsman", 4, "unit-goblin-spearman", 4, "unit-goblin-archer", 3, "unit-goblin-war-machine", 1, "unit-goblin-glider", 1, "unit-kobold-footpad", 4, "unit-ettin", 1
 	},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},

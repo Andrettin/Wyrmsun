@@ -283,6 +283,12 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-dwarven-gryphon-rider",
 	ForUnit = {"unit-dwarven-barracks", "unit-gnomish-barracks"}
 })
 
+DefineButton( { Pos = 7, Level = 0, Icon = "icon-dwarven-thunderer",
+	Action = "train-unit", Value = "unit-dwarven-thunderer",
+	Key = "t", Hint = "Train ~!Thunderer", Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-barracks", "unit-gnomish-barracks"}
+})
+
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-witness",
 	Action = "train-unit", Value = "unit-dwarven-witness",
 	Key = "w", Hint = _("Train ~!Witness"), Popup = "popup-unit",
@@ -354,6 +360,12 @@ DefineButton( { Pos = 5, Level = 0,
 DefineButton( { Pos = 6, Level = 0,
 	Action = "train-unit", Value = "unit-dwarven-gryphon-rider",
 	Key = "p", Hint = "Hire Gry~!phon Rider", Popup = "popup-unit",
+	ForUnit = {"unit-mercenary-camp"}
+})
+
+DefineButton( { Pos = 7, Level = 0,
+	Action = "train-unit", Value = "unit-dwarven-thunderer",
+	Key = "t", Hint = "Hire ~!Thunderer", Popup = "popup-unit",
 	ForUnit = {"unit-mercenary-camp"}
 })
 
@@ -522,7 +534,9 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-odin",
 	ForUnit = {
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
 		"unit-dwarven-guard",
-		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
+		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer",
+		"unit-dwarven-thunderer",
+		"unit-dwarven-gryphon-rider",
 		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
 		"unit-dwarven-witness",
 		"unit-joruvellir-scout", "unit-joruvellir-pathfinder", "unit-joruvellir-explorer",
@@ -538,7 +552,9 @@ DefineButton( { Pos = 10, Level = 0, Icon = "icon-thor",
 	ForUnit = {
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
 		"unit-dwarven-guard",
-		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
+		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer",
+		"unit-dwarven-thunderer",
+		"unit-dwarven-gryphon-rider",
 		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
 		"unit-dwarven-witness",
 		"unit-joruvellir-scout", "unit-joruvellir-pathfinder", "unit-joruvellir-explorer",

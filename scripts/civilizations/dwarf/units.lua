@@ -878,6 +878,32 @@ DefineUnitType("unit-dwarven-explorer", {
 	}
 } )
 
+DefineUnitType("unit-dwarven-thunderer", {
+	Name = "Thunderer",
+	Parent = "unit-template-gunpowder-infantry",
+	Civilization = "dwarf",
+	Description = "Many of the races of Nidavellir have been mystified by the power of dwarven Thunderers, who are able to hurl death from afar through the apparatus of these strange wands they carried into battle. The deafening noise of these 'thundersticks' is terrifying to behold, and is made more so by the secrecy which dwarves wrap about their workings.",
+	Image = {"file", "dwarf/units/thunderer.png", "size", {72, 72}},
+	Animations = "animations-gunpowder-infantry", Icon = "icon-dwarven-thunderer",
+	DefaultEquipment = {
+--		{"weapon", "unit-throwing-axe"},
+		{"boots", "unit-boots"}
+	},
+	Corpse = "unit-dwarven-dead-body",
+--	WeaponClasses = {"throwing-axe"},
+	PierceDamage = true,
+--	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	Sounds = {
+		"selected", "basic-dwarf-voices-selected-group",
+		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"attack", "basic-dwarf-voices-attack",
+		"ready", "basic-dwarf-voices-ready",
+		"help", "basic-dwarf-voices-help",
+		"dead", "basic-dwarf-voices-dead"
+	}
+} )
+
 DefineUnitType("unit-dwarven-yale-rider", {
 	Name = "Yale Rider",
 	Parent = "unit-template-cavalry",

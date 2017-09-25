@@ -57,6 +57,16 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 2.8.4
+-----------------------------------------------------------------------
+
+* Units
+- Added dwarven Thunderer (icon by Jinn and unit graphics by Jinn and b_o).
+
+* Upgrades
+- Added the Gunpowder upgrade (researchable at the Academy/University), which unlocks gunpowder units.
+
+-----------------------------------------------------------------------
 - 2.8.3
 -----------------------------------------------------------------------
 

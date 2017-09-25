@@ -134,6 +134,9 @@ function ApplyTechLevels()
 		"upgrade-goblin-catapult-projectile-1", "upgrade-goblin-catapult-projectile-2",
 		"upgrade-goblin-iron-tipped-wood-plow"
 	}
+	local gunpowder_upgrades = {
+		"upgrade-gunpowder"
+	}
 	
 	local function IsTechnologyUnderMinimumTechLevel(technology, player)
 		if (GetArrayIncludes(default_law_upgrades, technology)) then

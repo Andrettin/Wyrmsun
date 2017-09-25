@@ -236,6 +236,16 @@ DefineUpgrade("upgrade-architecture", {
 	Costs = {"time", 250, "copper", 2000, "lumber", 2000}
 })
 
+DefineUpgrade("upgrade-gunpowder", {
+	Name = "Gunpowder",
+	Class = "gunpowder",
+	Civilization = "neutral",
+	Icon = "icon-gunpowder",
+	Description = "The explosive material known as gunpowder has a varied number of potential applications. Early gunpowder weapons, such as the hand cannon, can have a significant impact on the battlefield. Further developments could even possess the potential to revolutionize warfare as a whole...\n\nEffect: Allows gunpowder infantry.",
+	RequirementsString = "Alchemy",
+	Costs = {"time", 250, "copper", 4000}
+})
+
 DefineUpgrade("upgrade-steam-engine", {
 	Name = "Steam Engine",
 	Class = "steam-engine",
@@ -348,6 +358,12 @@ DefineDependency("upgrade-architecture",
 	{"upgrade-dwarven-runewriting", "upgrade-dwarven-masonry"},
 	"or", {"upgrade-goblin-writing", "upgrade-goblin-masonry"},
 	"or", {"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-gunpowder",
+	{"upgrade-dwarven-alchemy"},
+	"or", {"upgrade-goblin-alchemy"},
+	"or", {"upgrade-teuton-alchemy"}
 )
 
 -- dependencies for items

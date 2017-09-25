@@ -303,7 +303,7 @@ DefineModifier("upgrade-dwarven-runewriting",
 
 DefineModifier("upgrade-dwarven-alchemy",
 	{"FireDamage", 1},
-	{"Points", 8},
+	{"Points", 10},
 	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}, {"apply-to", "unit-dwarven-explorer"}, {"apply-to", "unit-dwarven-gryphon-rider"},
 	{"apply-to", "unit-joruvellir-scout"}, {"apply-to", "unit-joruvellir-pathfinder"}, {"apply-to", "unit-joruvellir-explorer"}
 )
@@ -346,6 +346,10 @@ DefinePredependency("unit-joruvellir-scout",
 
 DefineDependency("unit-joruvellir-scout",
 	{"unit-dwarven-lumber-mill"}, "or", {"upgrade-mercenary-company"}
+)
+
+DefineDependency("unit-dwarven-thunderer",
+	{"unit-dwarven-smithy", "upgrade-gunpowder"}, "or", {"unit-brising-smithy", "upgrade-gunpowder"}, "or", {"upgrade-mercenary-company", "upgrade-gunpowder"}
 )
 
 DefineDependency("upgrade-dwarven-great-axe",
