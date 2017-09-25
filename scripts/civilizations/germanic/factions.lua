@@ -30,7 +30,7 @@ DefineFaction("asa-tribe", {
 	Civilization = "germanic",
 	Type = "tribe",
 	Colors = {"orange", "red"},
-	FactionUpgrade = "upgrade-asa-tribe-faction",
+	FactionUpgrade = "upgrade-faction-asa-tribe",
 	Description = "The Asa are the legendary progenitors of the Germanic peoples.",
 	Background = "In the Ynglinga Saga, the Asa (another name for the Aesir) were Odin's people, who originally lived in Asaland (identified with Asia), a realm centered in the city of Asgard. They went forth from their original lands to Scandinavia and northern Central Europe, establishing themselves in those regions."
 })
@@ -41,7 +41,7 @@ DefineFaction("herminone-tribe", { -- according to Tacitus one of the earliest G
 	ParentFaction = "asa-tribe",
 	Type = "tribe",
 	Colors = {"green"},
-	FactionUpgrade = "upgrade-skeldung-tribe-faction"
+	FactionUpgrade = "upgrade-faction-skeldung-tribe"
 })
 
 DefineFaction("hersing-tribe", {
@@ -49,7 +49,7 @@ DefineFaction("hersing-tribe", {
 	Civilization = "germanic",
 	Type = "tribe",
 	Colors = {"white"},
-	FactionUpgrade = "upgrade-skeldung-tribe-faction",
+	FactionUpgrade = "upgrade-faction-skeldung-tribe",
 	DefaultAI = "hersing-tribe",
 	Background = "In Norse mythology, Hersir was a chieftain whose daughter married Jarl."
 })
@@ -59,7 +59,7 @@ DefineFaction("hlesing-tribe", {
 	Civilization = "germanic",
 	Type = "tribe",
 	Colors = {"black"},
-	FactionUpgrade = "upgrade-jarling-tribe-faction",
+	FactionUpgrade = "upgrade-faction-jarling-tribe",
 	Background = "In Norse mythology, Thor (accompanied by Thialfi) slew a group of savage brides of berserkers at the island of Hlesey."
 })
 
@@ -69,7 +69,7 @@ DefineFaction("ingaevone-tribe", { -- according to Tacitus one of the earliest G
 	ParentFaction = "asa-tribe",
 	Type = "tribe",
 	Colors = {"white"},
-	FactionUpgrade = "upgrade-yngling-tribe-faction"
+	FactionUpgrade = "upgrade-faction-yngling-tribe"
 	-- lived near the sea
 })
 
@@ -79,7 +79,7 @@ DefineFaction("istaevone-tribe", { -- according to Tacitus one of the earliest G
 	ParentFaction = "asa-tribe",
 	Type = "tribe",
 	Colors = {"black"},
-	FactionUpgrade = "upgrade-asa-tribe-faction"
+	FactionUpgrade = "upgrade-faction-asa-tribe"
 })
 
 DefineFaction("jarling-tribe", {
@@ -87,7 +87,7 @@ DefineFaction("jarling-tribe", {
 	Civilization = "germanic",
 	Type = "tribe",
 	Colors = {"yellow"},
-	FactionUpgrade = "upgrade-jarling-tribe-faction",
+	FactionUpgrade = "upgrade-faction-jarling-tribe",
 	Background = "In Norse mythology, Jarl (rendered in Proto-Germanic as Erala) was one of the sons of the god Rig, and the ancestor of those belonging to the social class of warriors. Unlike his treatment of his other sons, Rig revealed himself to Jarl as his father, and taught him the art of runes and magic."
 })
 
@@ -96,7 +96,7 @@ DefineFaction("karling-tribe", {
 	Civilization = "germanic",
 	Type = "tribe",
 	Colors = {"brown"},
-	FactionUpgrade = "upgrade-karling-tribe-faction",
+	FactionUpgrade = "upgrade-faction-karling-tribe",
 	DefaultAI = "passive",
 	Background = "In Norse mythology, Karl (rendered in Proto-Germanic as Karla) was one of the sons of the god Rig, and the ancestor of those belonging to the social class of peasants."
 })
@@ -107,7 +107,7 @@ DefineFaction("skeldung-tribe", { -- Skjoldung in the original Norse sagas, here
 	ParentFaction = "asa-tribe",
 	Type = "tribe",
 	Colors = {"red", "white"},
-	FactionUpgrade = "upgrade-skeldung-tribe-faction",
+	FactionUpgrade = "upgrade-faction-skeldung-tribe",
 --	DefaultAI = "sea-attack",
 })
 
@@ -116,7 +116,7 @@ DefineFaction("thielung-tribe", {
 	Civilization = "germanic",
 	Type = "tribe",
 	Colors = {"white"},
-	FactionUpgrade = "upgrade-thielung-tribe-faction",
+	FactionUpgrade = "upgrade-faction-thielung-tribe",
 	DefaultStartPos = {4265, 741},
 	Background = "In the Gutasaga, Thieluar (who is identified by several scholars with the mythological figure Thialfi) was the first person to discover the island of Gotland. He lifted a curse on the island, and his lineage ruled over it for many years."
 })
@@ -126,7 +126,7 @@ DefineFaction("thralling-tribe", {
 	Civilization = "germanic",
 	Type = "tribe",
 	Colors = {"black"},
-	FactionUpgrade = "upgrade-thralling-tribe-faction",
+	FactionUpgrade = "upgrade-faction-thralling-tribe",
 	DefaultAI = "passive",
 	Background = "In Norse mythology, Thrall (rendered in Proto-Germanic as Thrahila) was one of the sons of the god Rig, and the ancestor of those belonging to the social class of thralls."
 })
@@ -137,7 +137,7 @@ DefineFaction("yngling-tribe", { -- mythical Swedish dynasty, Yngve was a son of
 	ParentFaction = "asa-tribe",
 	Type = "tribe",
 	Colors = {"blue", "yellow"},
-	FactionUpgrade = "upgrade-yngling-tribe-faction",
+	FactionUpgrade = "upgrade-faction-yngling-tribe",
 --	DefaultAI = "sea-attack",
 	DefaultStartPos = {4243, 692} -- Sigtun
 })

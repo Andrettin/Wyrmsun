@@ -34,6 +34,7 @@ Units = {
 	"upgrade-latin-civilization",
 	"unit-latin-town-hall", "unit-latin-farm", "unit-latin-barracks", "unit-latin-smithy", "unit-latin-stables",
 	"upgrade-germanic-civilization",
+	"upgrade-faction-asa-tribe", "upgrade-faction-jarling-tribe", "upgrade-faction-karling-tribe", "upgrade-faction-skeldung-tribe", "upgrade-faction-thielung-tribe", "upgrade-faction-thralling-tribe", "upgrade-faction-yngling-tribe",
 	"unit-germanic-worker", "unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain", "unit-germanic-spearman", "unit-germanic-archer",
 	"unit-germanic-priest",
 	"unit-germanic-transport-ship",

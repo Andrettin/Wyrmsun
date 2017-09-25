@@ -27,42 +27,42 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUpgrade("upgrade-asa-tribe-faction", {
+DefineUpgrade("upgrade-faction-asa-tribe", {
 	Name = _("Asa Tribe Faction"),
 	EffectsString = "+5 HP and +1 Damage for Eralas"
 })
 
-DefineUpgrade("upgrade-jarling-tribe-faction", {
+DefineUpgrade("upgrade-faction-jarling-tribe", {
 	Name = _("Eraling Tribe Faction"),
 	EffectsString = "+2 Damage for Eralas"
 })
 
-DefineUpgrade("upgrade-karling-tribe-faction", {
+DefineUpgrade("upgrade-faction-karling-tribe", {
 	Name = _("Karling Tribe Faction"),
 	EffectsString = "+1 Food Supply for Farms"
 })
 
-DefineUpgrade("upgrade-skeldung-tribe-faction", {
+DefineUpgrade("upgrade-faction-skeldung-tribe", {
 	Name = _("Skeldung Tribe Faction"),
 	EffectsString = "+1 Damage and +1 Armor for Eralas"
 })
 
-DefineUpgrade("upgrade-thielung-tribe-faction", {
+DefineUpgrade("upgrade-faction-thielung-tribe", {
 	Name = _("Thielung Tribe Faction"),
 	EffectsString = "+1 Damage and +1 Accuracy for Eralas"
 })
 
-DefineUpgrade("upgrade-thralling-tribe-faction", {
+DefineUpgrade("upgrade-faction-thralling-tribe", {
 	Name = "Thrahiling Tribe Faction",
 	EffectsString = "+5% Lumber Processing for Carpenter's Shops"
 })
 
-DefineUpgrade("upgrade-yngling-tribe-faction", {
+DefineUpgrade("upgrade-faction-yngling-tribe", {
 	Name = _("Yngling Tribe Faction"),
 	EffectsString = "+2 Damage for Skutans"
 })
 
-DefineModifier("upgrade-asa-tribe-faction",
+DefineModifier("upgrade-faction-asa-tribe",
 	{"BasicDamage", 1},
 	{"HitPoints", 5},
 	{"Points", 10},
@@ -71,7 +71,7 @@ DefineModifier("upgrade-asa-tribe-faction",
 	{"apply-to", "unit-germanic-chieftain"}
 )
 
-DefineModifier("upgrade-jarling-tribe-faction",
+DefineModifier("upgrade-faction-jarling-tribe",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-germanic-warrior"},
@@ -79,12 +79,12 @@ DefineModifier("upgrade-jarling-tribe-faction",
 	{"apply-to", "unit-germanic-chieftain"}
 )
 
-DefineModifier("upgrade-karling-tribe-faction",
+DefineModifier("upgrade-faction-karling-tribe",
 	{"Supply", 1},
 	{"apply-to", "unit-germanic-farm"}
 )
 
-DefineModifier("upgrade-skeldung-tribe-faction",
+DefineModifier("upgrade-faction-skeldung-tribe",
 	{"BasicDamage", 1},
 	{"Armor", 1},
 	{"Points", 10},
@@ -93,7 +93,7 @@ DefineModifier("upgrade-skeldung-tribe-faction",
 	{"apply-to", "unit-germanic-chieftain"}
 )
 
-DefineModifier("upgrade-thielung-tribe-faction",
+DefineModifier("upgrade-faction-thielung-tribe",
 	{"BasicDamage", 1},
 	{"Accuracy", 1},
 	{"Points", 10},
@@ -102,12 +102,12 @@ DefineModifier("upgrade-thielung-tribe-faction",
 	{"apply-to", "unit-germanic-chieftain"}
 )
 
-DefineModifier("upgrade-thralling-tribe-faction",
+DefineModifier("upgrade-faction-thralling-tribe",
 	{"improve-production", "lumber", 5},
 	{"apply-to", "unit-germanic-carpenters-shop"}
 )
 
-DefineModifier("upgrade-yngling-tribe-faction",
+DefineModifier("upgrade-faction-yngling-tribe",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-germanic-archer"}
