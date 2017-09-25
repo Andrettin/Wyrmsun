@@ -30,49 +30,27 @@
 -- based on the Gathering Materials scenario of the Sceptre of Fire campaign from Battle for Wesnoth
 
 if (LoadedGame == false) then
-	if (GrandStrategy == false or GrandStrategyEventMap) then
-		SetPlayerData(0, "Faction", "norlund-clan")
-		
-		SetDiplomacy(0, "enemy", 1)
-		SetDiplomacy(0, "enemy", 2)
-		SetDiplomacy(0, "enemy", 3)
-		SetDiplomacy(1, "enemy", 0)
-		SetDiplomacy(1, "enemy", 2)
-		SetDiplomacy(1, "enemy", 3)
-		SetDiplomacy(2, "enemy", 0)
-		SetDiplomacy(2, "enemy", 1)
-		SetDiplomacy(2, "enemy", 3)
-		SetDiplomacy(3, "enemy", 0)
-		SetDiplomacy(3, "enemy", 1)
-		SetDiplomacy(3, "enemy", 2)
-	end
+	SetPlayerData(0, "Faction", "norlund-clan")
+	
+	SetDiplomacy(0, "enemy", 1)
+	SetDiplomacy(0, "enemy", 2)
+	SetDiplomacy(0, "enemy", 3)
+	SetDiplomacy(1, "enemy", 0)
+	SetDiplomacy(1, "enemy", 2)
+	SetDiplomacy(1, "enemy", 3)
+	SetDiplomacy(2, "enemy", 0)
+	SetDiplomacy(2, "enemy", 1)
+	SetDiplomacy(2, "enemy", 3)
+	SetDiplomacy(3, "enemy", 0)
+	SetDiplomacy(3, "enemy", 1)
+	SetDiplomacy(3, "enemy", 2)
 
-	if (GrandStrategy == false) then
-		unit = CreateUnit("unit-dwarven-axefighter", 0, {19, 47})
-		SetUnitVariable(unit, "Character", "rugnur")
-		unit = CreateUnit("unit-dwarven-steelclad", 0, {19, 47})
-		SetUnitVariable(unit, "Character", "baglur")
-		unit = CreateUnit("unit-dwarven-thane", 0, {19, 47})
-		SetUnitVariable(unit, "Character", "thursagan")
-	elseif (GrandStrategyEventMap) then
-		-- Rugnur
-		if (GetProvinceHero("Caverns of Chaincolt", "Rugnur") == 2) then
-			unit = CreateUnit(GetGrandStrategyHeroUnitType("Rugnur"), 0, {19, 47})
-			SetUnitVariable(unit, "Character", "rugnur")
-		end
-
-		-- Baglur
-		if (GetProvinceHero("Caverns of Chaincolt", "Baglur") == 2) then
-			unit = CreateUnit(GetGrandStrategyHeroUnitType("Baglur"), 0, {19, 47})
-			SetUnitVariable(unit, "Character", "baglur")
-		end
-
-		-- Thursagan
-		if (GetProvinceHero("Caverns of Chaincolt", "Thursagan") == 2) then
-			unit = CreateUnit(GetGrandStrategyHeroUnitType("Thursagan"), 0, {19, 47})
-			SetUnitVariable(unit, "Character", "thursagan")
-		end
-	end
+	unit = CreateUnit("unit-dwarven-axefighter", 0, {19, 47})
+	SetUnitVariable(unit, "Character", "rugnur")
+	unit = CreateUnit("unit-dwarven-steelclad", 0, {19, 47})
+	SetUnitVariable(unit, "Character", "baglur")
+	unit = CreateUnit("unit-dwarven-thane", 0, {19, 47})
+	SetUnitVariable(unit, "Character", "thursagan")
 	
 	unit = CreateUnit("unit-goblin-spearman", 1, {59, 53})
 	IncreaseUnitLevel(unit, 1)
@@ -329,7 +307,15 @@ AddTrigger("gathering-materials-introduction",
 		end
 		if (PlayerHasObjective(GetThisPlayer(), "- Collect 10000 copper and 20000 coal") == false and GetNumUnitsAt(-1, "unit-gold-deposit", {0, 0}, {512, 512}) >= 1 and GetNumUnitsAt(-1, "unit-coal-mine", {0, 0}, {512, 512}) >= 2) then
 			for i=0, (PlayerMax - 2) do
-				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= "Shinsplitter Clan" and FindHero("rugnur", i) ~= nil and FindHero("baglur", i) ~= nil and FindHero("thursagan", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
+				if (
+					GetPlayerData(i, "RaceName") == "dwarf"
+					and (GetPlayerData(i, "Faction") == "norlund-clan" or GetPlayerData(i, "Faction") == "shinsplitter-clan" or GetPlayerData(i, "Faction") == "knalga")
+					and GetPlayerData(i, "Name") ~= "Shinsplitter Clan"
+					and FindHero("rugnur", i) ~= nil
+					and FindHero("baglur", i) ~= nil
+					and FindHero("thursagan", i) ~= nil
+					and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1
+				) then
 					player = i
 					return true
 				end
@@ -395,15 +381,9 @@ AddTrigger("gathering-materials-introduction",
 					)
 					end}
 				)
-				end},
-				nil,
-				nil,
-				GrandStrategy
+				end}
 			)
-			end},
-			nil,
-			nil,
-			GrandStrategy
+			end}
 		)
 		return false
 	end

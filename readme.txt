@@ -76,6 +76,9 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - Fixed a crash which could occur after loading a saved game.
 
+* Quests
+- Fixed issue which caused the Gathering Materials quest's initial dialogue to not trigger.
+
 * Scenarios
 - Added the "Journey to Haimadala's Stones" (side-)quest for the Haimadala's Progeny scenario.
 
