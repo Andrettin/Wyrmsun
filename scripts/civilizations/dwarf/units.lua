@@ -1106,7 +1106,7 @@ DefineUnitType("unit-dwarven-witness", {
 --	Description = "A witness functions as the eyes of the dwarves' history, a deep lore that they almost never share with outsiders. The presence of a witness inspires dwarven warriors with the knowledge that their deeds (and their deaths) will not go unrecorded. The person of a witness is considered sacred, and witnesses are often used as envoys between dwarven clans. The earliest known dwarven witness was Thjodrorir, sage of the Brising Clan. The best known of them, however, was Dvalin. He created the dwarven runes and shifted lorekeeping away from being an oral practice.",
 	Description = "A witness functions as the eyes of the dwarves' history, a deep lore that they almost never share with outsiders. The presence of a witness inspires dwarven warriors with the knowledge that their deeds (and their deaths) will not go unrecorded. The person of a witness is considered sacred, and witnesses are often used as envoys between dwarven clans.",
 	Quote = "\"Might he sang for the gods, and glory for dwarves,\nAnd wisdom for Hroptatyr wise.\"\n- Dwarven Traditional Poetry",
-	Background = "In Norse mythology, Thjodrorir was a dwarf who knew a potent magic charm. Thjodrorir is mentioned in the ~<Hovamol~>. Dvalin was a dwarf in Norse mythology who was said in the Hovamol to have taught the art of runes to his people.",
+	Background = "In the ~<Hovamol~>, Thjodrorir was a dwarf who knew a potent magic charm, and Dvalin was a dwarf who was said to have taught the art of runes to his people.",
 	Image = {"file", "dwarf/units/body_warrior.png", "size", {72, 72}},
 	LayerImages = {
 		{"layer", "right-arm", "file", "dwarf/units/right_arm_warrior.png"},

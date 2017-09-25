@@ -786,7 +786,6 @@ DefineUnitType("unit-goblin-banner", {
 	Construction = "construction-land-1x1-simple",
 	RepairHp = 4,
 	RepairCosts = {"copper", 1, "lumber", 1},
-	Speed = 0,
 	HitPoints = 40,
 	DrawLevel = 30,
 	TileSize = {1, 1}, BoxSize = {31, 31},

@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 - 2.8.4
 -----------------------------------------------------------------------
 
+* Miscellaneous
+- Unit and building encyclopedia entries now contain their costs and stats.
+
 * Units
 - Added dwarven Thunderer (icon by Jinn and unit graphics by Jinn and b_o).
 

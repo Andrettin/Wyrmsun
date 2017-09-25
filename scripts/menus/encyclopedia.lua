@@ -764,7 +764,33 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		if (GetUnitTypeData(unit_name, "Quote") ~= "") then
 			quote = "Quote: " .. GetUnitTypeData(unit_name, "Quote") .. "\n\n"
 		end
-		if (GetUnitTypeData(unit_name, "Item") and GetItemEffectsString(unit_name) ~= "") then
+		if (GetUnitTypeData(unit_name, "Item") == false and GetUnitTypeStatsString(unit_name) ~= "") then
+			local costs_string = ""
+			local first_cost = true
+			for i = 1, (MaxCosts - 1) do
+				local resource_name = GetResourceNameById(i)
+				if (GetUnitTypeData(unit_name, "Costs", resource_name) > 0) then
+					if (first_cost) then
+						first_cost = false
+					else
+						costs_string = costs_string .. ", "
+					end
+					costs_string = costs_string .. GetUnitTypeData(unit_name, "Costs", resource_name) .. " " .. CapitalizeString(resource_name)
+				end
+			end
+			if (GetUnitTypeData(unit_name, "Demand") > 0) then
+				if (first_cost) then
+					first_cost = false
+				else
+					costs_string = costs_string .. ", "
+				end
+				costs_string = costs_string .. GetUnitTypeData(unit_name, "Demand") .. " Food"
+			end
+			if (costs_string ~= "") then
+				effects = "Costs: " .. costs_string .. ".\n\n"
+			end
+			effects = effects .. "Stats: " .. GetUnitTypeStatsString(unit_name) .. ".\n\n"
+		elseif (GetUnitTypeData(unit_name, "Item") and GetItemEffectsString(unit_name) ~= "") then
 			effects = "Effects: " .. GetItemEffectsString(unit_name) .. ".\n\n"
 		end
 		if (GetUnitTypeData(unit_name, "Background") ~= "") then
