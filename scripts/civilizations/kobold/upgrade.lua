@@ -28,7 +28,3 @@
 DefineUpgrade("upgrade-kobold-civilization", {
 	Name = "Kobold Civilization"
 })
-
-DefinePredependency("unit-kobold-footpad",
-	{"upgrade-kobold-civilization"}
-)

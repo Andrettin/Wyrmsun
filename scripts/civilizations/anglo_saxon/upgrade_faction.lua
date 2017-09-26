@@ -327,14 +327,82 @@ DefineDependency("upgrade-faction-angle-tribe",
 	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
 )
 
+DefineDependency("upgrade-faction-bernice-tribe",
+	{"upgrade-teuton-spatha", "upgrade-teuton-iron-shield"}
+)
+
+DefineDependency("upgrade-faction-cantware-tribe",
+	{"upgrade-teuton-spatha", "upgrade-teuton-iron-shield"}
+)
+
+DefineDependency("upgrade-faction-dere-tribe",
+	{"upgrade-teuton-spatha", "upgrade-teuton-iron-shield"}
+)
+
+DefineDependency("upgrade-faction-gumeninga-tribe",
+	{"upgrade-teuton-spatha", "upgrade-teuton-iron-shield"}
+)
+
 DefineDependency("upgrade-faction-jute-tribe",
 	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
+)
+
+DefineDependency("upgrade-faction-lindisfaran-tribe",
+	{"upgrade-teuton-spatha", "upgrade-teuton-iron-shield"}
+)
+
+DefineDependency("upgrade-faction-mierce-tribe",
+	{"upgrade-teuton-spatha", "upgrade-teuton-iron-shield"}
 )
 
 DefineDependency("upgrade-faction-teuton-tribe",
 	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
 )
 
+DefineDependency("upgrade-faction-bernicia",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-deira",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-east-anglia",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-essex",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-jutland",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-kent",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-mercia",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-middle-anglia",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-middlesex",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
 DefineDependency("upgrade-faction-northumbria",
 	{"unit-teuton-temple"}
+)
+
+DefineDependency("upgrade-faction-sussex",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-wessex",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )

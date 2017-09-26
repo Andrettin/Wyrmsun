@@ -48,3 +48,11 @@ DefineModifier("upgrade-faction-scotland",
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
+
+DefineDependency("upgrade-faction-england",
+	{"upgrade-teuton-coinage", "upgrade-engineering", "upgrade-deity-christian-god"}
+)
+
+DefineDependency("upgrade-faction-scotland",
+	{"upgrade-teuton-coinage", "upgrade-engineering", "upgrade-deity-christian-god"}
+)

@@ -211,3 +211,27 @@ DefineDependency("upgrade-faction-sugambri-tribe",
 DefineDependency("upgrade-faction-ubii-tribe",
 	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
 )
+
+DefineDependency("upgrade-faction-francia",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-austrasia",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-burgundia",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-east-francia",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-neustria",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-salia",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)

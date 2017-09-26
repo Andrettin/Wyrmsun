@@ -8,9 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      upgrade.ccl - Define the celt dependencies and upgrades.
---
---      (c) Copyright 2014-2017 by Andrettin
+--      (c) Copyright 2001-2017 by Lutz Sammer, Jimmy Salmon and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -27,7 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUpgrade("upgrade-celt-civilization", {
-	Name = "Celt Civilization",
-	Civilization = "celt"
-})
+Load("scripts/civilizations/anglo_saxon/upgrade_faction.lua")
+Load("scripts/civilizations/dwarf/upgrade_faction.lua")
+Load("scripts/civilizations/english/upgrade_faction.lua")
+Load("scripts/civilizations/frankish/upgrade_faction.lua")
+Load("scripts/civilizations/germanic/upgrade_faction.lua")
+Load("scripts/civilizations/gnome/upgrade_faction.lua")
+Load("scripts/civilizations/goblin/upgrade_faction.lua")
+Load("scripts/civilizations/suebi/upgrade_faction.lua")
+Load("scripts/civilizations/teuton/upgrade_faction.lua")

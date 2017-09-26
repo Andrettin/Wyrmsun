@@ -28,7 +28,3 @@
 DefineUpgrade("upgrade-ettin-civilization", {
 	Name = "Ettin Civilization"
 })
-
-DefinePredependency("unit-ettin",
-	{"upgrade-ettin-civilization"}
-)

@@ -96,9 +96,3 @@ DefineModifier("upgrade-suebi-civilization",
 DefineModifier("upgrade-suebi-civilization",
 	{"apply-to", "unit-germanic-transport-ship"}, {"convert-to", "unit-teuton-kogge"}
 )
-
-DefinePredependency("unit-suebi-swordsman",
-	{"upgrade-suebi-civilization"}
-)
-
-Load("scripts/civilizations/suebi/upgrade_faction.lua")

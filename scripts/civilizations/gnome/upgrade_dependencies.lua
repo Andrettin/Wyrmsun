@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      upgrade.ccl - Define the celt dependencies and upgrades.
---
 --      (c) Copyright 2014-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
@@ -27,7 +25,38 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUpgrade("upgrade-celt-civilization", {
-	Name = "Celt Civilization",
-	Civilization = "celt"
-})
+DefinePredependency("unit-gnomish-worker",
+	{"upgrade-acthnic-tribe-faction", 0, "upgrade-derro-tribe-faction", 0}
+)
+
+DefinePredependency("unit-gnomish-recruit",
+	{"upgrade-acthnic-tribe-faction", 0, "upgrade-derro-tribe-faction", 0}
+)
+
+DefinePredependency("unit-gnomish-herbalist",
+	{"upgrade-acthnic-tribe-faction", 0}
+)
+
+DefinePredependency("unit-deep-gnomish-worker",
+	{"upgrade-acthnic-tribe-faction"}
+)
+
+DefinePredependency("unit-deep-gnomish-recruit",
+	{"upgrade-acthnic-tribe-faction"}
+)
+
+DefinePredependency("unit-deep-gnomish-herbalist",
+	{"upgrade-acthnic-tribe-faction"}
+)
+
+DefinePredependency("unit-derro-worker",
+	{"upgrade-derro-tribe-faction"}
+)
+
+DefinePredependency("unit-derro-thug",
+	{"upgrade-derro-tribe-faction"}
+)
+
+DefinePredependency("unit-gnomish-caravan",
+	{"upgrade-gnomish-civilization"}
+)

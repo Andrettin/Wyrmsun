@@ -27,7 +27,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUpgrade("upgrade-celt-civilization", {
-	Name = "Celt Civilization",
-	Civilization = "celt"
-})
+DefinePredependency("unit-celt-farm",
+	{"upgrade-celt-civilization"}
+)

@@ -114,27 +114,3 @@ DefineModifier("upgrade-latin-civilization",
 DefineModifier("upgrade-latin-civilization",
 	{"apply-to", "unit-germanic-transport-ship"}, {"convert-to", "unit-teuton-kogge"}
 )
-
-DefinePredependency("unit-latin-town-hall",
-	{"upgrade-latin-civilization"}
-)
-
-DefinePredependency("unit-latin-farm",
-	{"upgrade-latin-civilization"}
-)
-
-DefinePredependency("unit-latin-barracks",
-	{"upgrade-latin-civilization"}
-)
-
-DefinePredependency("unit-latin-smithy",
-	{"upgrade-latin-civilization"}
-)
-
-DefinePredependency("unit-latin-stables",
-	{"upgrade-latin-civilization"}
-)
-
-DefineDependency("unit-latin-stables",
-	{"unit-teuton-lumber-mill"}
-)

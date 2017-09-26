@@ -92,5 +92,3 @@ DefineModifier("upgrade-anglo-saxon-civilization",
 DefineModifier("upgrade-anglo-saxon-civilization",
 	{"apply-to", "unit-germanic-transport-ship"}, {"convert-to", "unit-teuton-kogge"}
 )
-
-Load("scripts/civilizations/anglo_saxon/upgrade_faction.lua")

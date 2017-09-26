@@ -8,9 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      upgrade.ccl - Define the celt dependencies and upgrades.
---
---      (c) Copyright 2014-2017 by Andrettin
+--      (c) Copyright 2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -27,7 +25,18 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUpgrade("upgrade-celt-civilization", {
-	Name = "Celt Civilization",
-	Civilization = "celt"
-})
+DefinePredependency("unit-frank-swordsman",
+	{"upgrade-frankish-civilization"}
+)
+
+DefinePredependency("unit-frank-spearman",
+	{"upgrade-frankish-civilization"}
+)
+
+DefinePredependency("unit-frank-horseman",
+	{"upgrade-frankish-civilization"}
+)
+
+DefineDependency("unit-frank-horseman",
+	{"unit-teuton-smithy", "unit-teuton-stables"}
+)

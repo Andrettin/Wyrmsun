@@ -131,3 +131,7 @@ DefineModifier("upgrade-faction-galicia",
 DefineDependency("upgrade-faction-suebi-tribe",
 	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
 )
+
+DefineDependency("upgrade-faction-galicia",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
