@@ -894,6 +894,18 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-emerald-deposit",
+	Size = {46, 38},
+	File = "neutral/icons/emerald_deposit.png"
+})
+
+DefineIcon({
+	Name = "icon-emerald-mine",
+	Size = {46, 38},
+	File = "neutral/icons/emerald_mine.png"
+})
+
+DefineIcon({
 	Name = "icon-yale-cave",
 	Size = {46, 38},
 	File = "neutral/icons/yale_cave.png"
@@ -945,6 +957,12 @@ DefineIcon({
 	Name = "icon-diamond-rock",
 	Size = {46, 38},
 	File = "neutral/icons/diamond_rock.png"
+})
+
+DefineIcon({
+	Name = "icon-emerald-rock",
+	Size = {46, 38},
+	File = "neutral/icons/emerald_rock.png"
 })
 
 DefineIcon({

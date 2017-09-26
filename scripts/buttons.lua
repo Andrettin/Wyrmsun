@@ -231,7 +231,7 @@ DefineButton( { Pos = 16, Level = 0, Icon = "icon-salvage",
 		"unit-goblin-banner",
 		"unit-gold-mine", "unit-silver-mine", "unit-copper-mine",
 --		"unit-coal-mine",
-		"unit-diamond-mine",
+		"unit-diamond-mine", "unit-emerald-mine",
 		"unit-yale-hunting-lodge",
 		"unit-mercenary-camp"
 	}
@@ -958,6 +958,18 @@ DefineButton( { Pos = 4, Level = 4, Icon = "icon-gold-mine",
 DefineButton( { Pos = 5, Level = 4, Icon = "icon-diamond-mine",
 	Action = "build", Value = "unit-diamond-mine",
 	Key = "d", Hint = "Build ~!Diamond Mine", Popup = "popup-building",
+	ForUnit = {
+		"unit-germanic-worker", "unit-teuton-worker",
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
+		"unit-goblin-worker"
+	}
+})
+
+DefineButton( { Pos = 6, Level = 10, Icon = "icon-emerald-mine", -- unreachable level so that the mine is buildable, but the button doesn't actually appear
+	Action = "build", Value = "unit-emerald-mine",
+	Key = "e", Hint = "Build ~!Emerald Mine", Popup = "popup-building",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",

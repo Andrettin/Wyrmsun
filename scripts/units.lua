@@ -181,6 +181,7 @@ Units = {
 	"unit-copper-rock", "unit-copper-deposit", "unit-copper-mine",
 	"unit-coal-mine",
 	"unit-diamond-rock", "unit-diamond-deposit", "unit-diamond-mine",
+	"unit-emerald-rock", "unit-emerald-deposit", "unit-emerald-mine",
 	"unit-yale-cave", "unit-yale-hunting-lodge",
 	"unit-mercenary-camp",
 --	"unit-cavern-entrance",
@@ -271,6 +272,8 @@ function DefineUnitType(unit_type, data)
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-diamond-deposit" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-diamond-mine" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-emerald-deposit" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-emerald-mine" },
 --				"distance", { Distance = 3, DistanceType = ">", Type = "unit-yale-cave" },
 --				"distance", { Distance = 3, DistanceType = ">", Type = "unit-yale-hunting-lodge" },
 --				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-lumber-mill" },
@@ -706,7 +709,7 @@ DefineUnitType("unit-coal-mine", {
 DefineUnitType("unit-diamond-deposit", {
 	Name = "Diamond Deposit",
 	Parent = "unit-template-deposit",
-	Description = "Diamond deposits often contain deep sources of diamonds, which can be gainfully mined after the proper infrastructure is put into place.",
+	Description = "Diamond deposits contain deep sources of diamonds, which can be gainfully mined after the proper infrastructure is put into place.",
 	Image = {"file", "neutral/buildings/diamond_deposit.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/copper_deposit_shadow.png", "size", {96, 96}},
 	Icon = "icon-diamond-deposit",
@@ -727,6 +730,32 @@ DefineUnitType("unit-diamond-mine", {
 	BuildingRules = { "and", { "ontop", { Type = "unit-diamond-deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
 	GivesResource = "diamonds",
 	BuildingRulesString = "Must be built on top of a Diamond Deposit"
+} )
+
+DefineUnitType("unit-emerald-deposit", {
+	Name = "Emerald Deposit",
+	Parent = "unit-template-deposit",
+--	Description = "Emerald deposits contain deep sources of emeralds, which can be gainfully mined after the proper infrastructure is put into place.",
+	Image = {"file", "neutral/buildings/emerald_deposit.png", "size", {96, 96}},
+	Shadow = {"file", "neutral/buildings/gold_deposit_shadow.png", "size", {96, 96}},
+	Icon = "icon-emerald-deposit",
+	GivesResource = "emeralds"
+} )
+
+DefineUnitType("unit-emerald-mine", {
+	Name = "Emerald Mine",
+	Parent = "unit-template-mine",
+	Class = "emerald-mine",
+	Civilization = "neutral",
+--	Description = "Emeralds are valuable gems, and can be mined for high profits.",
+	Image = {"file", "neutral/buildings/emerald_mine.png", "size", {96, 96}},
+	Shadow = {"file", "neutral/buildings/gold_mine_shadow.png", "size", {96, 96}},
+	LightImage = {"file", "neutral/buildings/gold_mine_light.png"},
+	Icon = "icon-emerald-mine",
+	Costs = {"time", 200, "lumber", 2050},
+	BuildingRules = { "and", { "ontop", { Type = "unit-emerald-deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
+	GivesResource = "emeralds",
+	BuildingRulesString = "Must be built on top of an Emerald Deposit"
 } )
 
 DefineUnitType("unit-gold-rock", {
@@ -946,6 +975,56 @@ DefineUnitType("unit-diamond-rock", {
 			"variation-id", "4",
 			"file", "neutral/buildings/diamond_rock_4.png",
 			"shadow-file", "neutral/buildings/copper_rock_4_shadow.png"
+		}
+	},
+	Sounds = {
+		"selected", "metal-selected",
+--		"acknowledge", "gold-mine-acknowledge",
+--		"ready", "gold-mine-ready",
+--		"help", "gold-mine-help",
+--		"dead", "building-destroyed"
+	}
+} )
+
+DefineUnitType("unit-emerald-rock", {
+	Name = "Emerald Rock",
+	Image = {"file", "neutral/buildings/emerald_rock_1.png", "size", {43, 43}},
+	Shadow = {"file", "neutral/buildings/gold_rock_1_shadow.png", "size", {43, 43}},
+	Animations = "animations-building", Icon = "icon-emerald-rock",
+	Offset = {0, -2},
+	NeutralMinimapColor = {255, 255, 0},
+	Costs = {"time", 150},
+	HitPoints = 25500,
+	DrawLevel = 40,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 1,
+	Armor = 20, Missile = "missile-none",
+	Priority = 0,
+--	Corpse = "unit-destroyed-3x3-place",
+	Type = "land",
+	StartingResources = {1000},
+	NumDirections = 1,
+	Building = false, VisibleUnderFog = true,
+	GivesResource = "emeralds", CanHarvest = true,
+	HarvestFromOutside = true,
+	Variations = {
+		{
+			"variation-id", "1"
+		},
+		{
+			"variation-id", "2",
+			"file", "neutral/buildings/emerald_rock_2.png",
+			"shadow-file", "neutral/buildings/gold_rock_2_shadow.png"
+		},
+		{
+			"variation-id", "3",
+			"file", "neutral/buildings/emerald_rock_3.png",
+			"shadow-file", "neutral/buildings/gold_rock_3_shadow.png"
+		},
+		{
+			"variation-id", "4",
+			"file", "neutral/buildings/emerald_rock_4.png",
+			"shadow-file", "neutral/buildings/gold_rock_4_shadow.png"
 		}
 	},
 	Sounds = {
