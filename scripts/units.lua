@@ -3954,7 +3954,7 @@ DefineUnitType("unit-template-masons-shop", {
 	ResourceDemand = {"furniture", 3, "leather", 3},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
-		"selected", "click",
+		"selected", "storehouse-selected",
 --		"acknowledge", "dwarven-lumber-mill-acknowledge",
 		"ready", "storehouse-ready",
 --		"help", "basic-dwarf-voices-help",

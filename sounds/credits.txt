@@ -455,6 +455,7 @@ Wildfire Games (http://www.wildfiregames.com/):
 /sounds/buildings/sel_farmstead.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/sel_fortress.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/sel_market.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/sel_storehouse.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/sel_temple.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/sel_tower.wav (licensed under the CC-BY-SA 3.0)
 /sounds/greek/basic_voices/civ_male_asyouwish_1.wav (licensed under the CC-BY-SA 3.0)
