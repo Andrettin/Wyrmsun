@@ -79,7 +79,15 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-goblin-coinage",
 	}
 })
 
--- Mercenaries
+-- Units --------------------------------------------------------------
+
+DefineButton( { Pos = 8, Level = 0, Icon = "icon-goblin-gunpowder-infantry",
+	Action = "train-unit", Value = "unit-goblin-gunpowder-infantry",
+	Key = "p", Hint = "Train Gun~!powder Infantry", Popup = "popup-unit",
+	ForUnit = {"unit-goblin-mess-hall"}
+})
+
+-- Mercenaries --------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 0,
 	Action = "train-unit", Value = "unit-goblin-thief",
@@ -114,6 +122,12 @@ DefineButton( { Pos = 6, Level = 0,
 DefineButton( { Pos = 7, Level = 0,
 	Action = "train-unit", Value = "unit-goblin-glider",
 	Key = "g", Hint = "Hire ~!Glider", Popup = "popup-unit",
+	ForUnit = {"unit-mercenary-camp"}
+})
+
+DefineButton( { Pos = 8, Level = 0,
+	Action = "train-unit", Value = "unit-goblin-gunpowder-infantry",
+	Key = "p", Hint = "Hire Gun~!power Infantry", Popup = "popup-unit",
 	ForUnit = {"unit-mercenary-camp"}
 })
 
@@ -338,7 +352,10 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-gathaarl",
 	Key = "g", Hint = "Worship ~!Gathaarl", Popup = "popup-research",
 	Description = "Choose Gathaarl as your hero's major deity. +2 Damage for Swordsmen, enables Terror spell for Shamans.",
 	ForUnit = {
-		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shadowstalker", "unit-goblin-shaman"
+		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman",
+		"unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shadowstalker",
+		"unit-goblin-gunpowder-infantry",
+		"unit-goblin-shaman"
 	}
 })
   

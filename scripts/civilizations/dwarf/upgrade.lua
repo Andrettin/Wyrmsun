@@ -325,12 +325,12 @@ DefinePredependency("unit-surghan-mercenary-axefighter",
 )
 
 DefinePredependency("unit-dwarven-guard",
-	{"upgrade-dwarven-civilization"}, "or", {"unit-gnomish-town-hall"}
+	{"upgrade-dwarven-civilization"}, "or", {"upgrade-gnomish-civilization"}
 )
 
 DefinePredependency("unit-dwarven-scout",
 	{"upgrade-dwarven-civilization", "upgrade-faction-goldhoof-clan", 0, "upgrade-faction-eikinskjaldi-clan", 0, "upgrade-faction-joruvellir", 0, "upgrade-faction-yawning-yales", 0},
-	"or", {"unit-gnomish-town-hall", "upgrade-faction-goldhoof-clan", 0, "upgrade-faction-eikinskjaldi-clan", 0, "upgrade-faction-joruvellir", 0, "upgrade-faction-yawning-yales", 0}
+	"or", {"upgrade-gnomish-civilization"}
 )
 
 DefineDependency("unit-dwarven-scout",
@@ -346,6 +346,10 @@ DefinePredependency("unit-joruvellir-scout",
 
 DefineDependency("unit-joruvellir-scout",
 	{"unit-dwarven-lumber-mill"}, "or", {"upgrade-mercenary-company"}
+)
+
+DefinePredependency("unit-dwarven-thunderer",
+	{"upgrade-dwarven-civilization"}, "or", {"upgrade-gnomish-civilization"}
 )
 
 DefineDependency("unit-dwarven-thunderer",
@@ -401,7 +405,7 @@ DefineDependency("unit-dwarven-wall",
 )
 
 DefinePredependency("unit-dwarven-ballista",
-	{"upgrade-dwarven-civilization"}, "or", {"unit-gnomish-town-hall"}
+	{"upgrade-dwarven-civilization"}, "or", {"upgrade-gnomish-civilization"}
 )
 
 DefineDependency("unit-dwarven-ballista",
@@ -428,7 +432,7 @@ DefineDependency("unit-joruvellir-yale-pen",
 
 DefinePredependency("unit-dwarven-yale-rider",
 	{"upgrade-dwarven-civilization", "upgrade-faction-goldhoof-clan", 0, "upgrade-faction-eikinskjaldi-clan", 0, "upgrade-faction-joruvellir", 0, "upgrade-faction-yawning-yales", 0},
-	"or", {"unit-gnomish-town-hall", "upgrade-faction-goldhoof-clan", 0, "upgrade-faction-eikinskjaldi-clan", 0, "upgrade-faction-joruvellir", 0, "upgrade-faction-yawning-yales", 0}
+	"or", {"upgrade-gnomish-civilization"}
 )
 
 DefineDependency("unit-dwarven-yale-rider",
@@ -476,7 +480,7 @@ DefineDependency("unit-dwarven-ballista-warship",
 )
 
 DefinePredependency("unit-dwarven-gryphon-rider",
-	{"upgrade-dwarven-civilization"}, "or", {"unit-gnomish-town-hall"}
+	{"upgrade-dwarven-civilization"}, "or", {"upgrade-gnomish-civilization"}
 )
 
 DefineDependency("unit-dwarven-gryphon-rider",

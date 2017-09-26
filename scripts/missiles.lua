@@ -69,7 +69,7 @@ DefineMissileType("missile-javelin", {
 
 DefineMissileType("missile-bullet", {
 	File = "missiles/bullet.png", Size = {32, 32}, Frames = 3, NumDirections = 1,
-	ImpactSound = "bow-hit",
+--	ImpactSound = "bow-hit",
 	DrawLevel = 50, Class = "missile-class-point-to-point", Sleep = 1, Speed = 32, Range = 0
 })
 

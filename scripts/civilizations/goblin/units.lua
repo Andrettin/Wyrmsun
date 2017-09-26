@@ -476,6 +476,37 @@ DefineUnitType("unit-goblin-shadowstalker", {
 	}
 } )
 
+DefineUnitType("unit-goblin-gunpowder-infantry", {
+	Name = "Gunpowder Infantry",
+	Parent = "unit-template-gunpowder-infantry",
+	Civilization = "goblin",
+	Description = "Once gunpowder was developed among goblins, it didn't take long for them to put together an improvised boomstick, as deadly for its wielder as for its target. Over time, however, these ramshackle weapons have grown more stable - and deadlier for those who stand in their aim.",
+	Image = {"file", "goblin/units/gunpowder_infantry.png", "size", {72, 72}},
+	Animations = "animations-gunpowder-infantry", Icon = "icon-goblin-gunpowder-infantry",
+	DefaultEquipment = {
+--		{"weapon", "unit-throwing-axe"},
+		{"boots", "unit-boots"}
+	},
+	HitPoints = 35,
+	Accuracy = 9,
+	Evasion = 12,
+	DaySightRangeBonus = -1,
+	NightSightRangeBonus = 1,
+	Corpse = "unit-goblin-dead-body",
+--	WeaponClasses = {"throwing-axe"},
+	PierceDamage = true,
+--	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	Sounds = {
+		"selected", "basic-goblin-voices-selected-group",
+		"acknowledge", "basic-goblin-voices-acknowledge",
+		"attack", "basic-goblin-voices-attack",
+--		"ready", "goblin-archer-ready",
+		"help", "basic-goblin-voices-help",
+		"dead", "basic-goblin-voices-dead"
+	}
+} )
+
 DefineUnitType("unit-goblin-shaman", {
 	Name = _("Shaman"),
 	Parent = "unit-template-priest",

@@ -600,6 +600,12 @@ SetSoundRange("throwing-axe-hit", 32)
 MakeSound("catapult-attack", "neutral/onager_shooting.wav")
 SetSoundRange("catapult-attack", 32)
 
+MakeSound("thunderstick", "missiles/thunderstick.wav")
+SetSoundRange("thunderstick", 32)
+
+MakeSound("bow-hit", "missiles/bow_hit.wav")
+SetSoundRange("bow-hit", 32)
+
 MakeSound("attack-miss",
 	{"missiles/miss-1.wav",
 	"missiles/miss-2.wav",

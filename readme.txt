@@ -68,6 +68,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Added dwarven Thunderer (icon by Jinn and unit graphics by Jinn and b_o).
+- Added goblin Gunpowder Infantry (icon by Jinn and unit graphics by Jinn and b_o).
 
 * Upgrades
 - Added the Gunpowder upgrade (researchable at the Academy/University), which unlocks gunpowder units.

@@ -362,7 +362,8 @@ DefineDependency("upgrade-architecture",
 
 DefinePredependency("upgrade-gunpowder",
 	{"upgrade-dwarven-civilization"},
-	"or", {"upgrade-gnomish-civilization"}
+	"or", {"upgrade-gnomish-civilization"},
+	"or", {"upgrade-goblin-civilization"}
 )
 
 DefineDependency("upgrade-gunpowder",

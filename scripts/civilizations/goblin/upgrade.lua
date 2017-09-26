@@ -285,6 +285,14 @@ DefineDependency("unit-goblin-archer",
 	{"unit-goblin-lumber-mill"}, "or", {"upgrade-mercenary-company"}
 )
 
+DefinePredependency("unit-goblin-gunpowder-infantry",
+	{"upgrade-goblin-civilization"}
+)
+
+DefineDependency("unit-goblin-gunpowder-infantry",
+	{"unit-goblin-smithy", "upgrade-gunpowder"}
+)
+
 DefineDependency("upgrade-goblin-long-sword",
 	{"upgrade-goblin-broad-sword"}
 )

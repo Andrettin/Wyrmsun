@@ -328,7 +328,7 @@ DefineAnimations("animations-gunpowder-infantry", {
 	Attack = {
 		"unbreakable begin", 
 		"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
-		"frame 40", "attack", "sound throwing-axe", "wait 12",
+		"frame 40", "attack", "sound thunderstick", "wait 12",
 		"frame 0", "wait 18", "frame 0",
 		"unbreakable end", "wait 1",
 	},

@@ -143,7 +143,9 @@ Units = {
 	"upgrade-faction-aurvang", "upgrade-faction-driftwood", "upgrade-faction-ezmarria", "upgrade-faction-myridia", "upgrade-faction-stilgar", "upgrade-faction-tenebris",
 	"unit-goblin-worker", "unit-goblin-militia", "unit-goblin-magnate",
 	"unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman",
-	"unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shadowstalker", "unit-goblin-thief", "unit-goblin-shaman",
+	"unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shadowstalker",
+	"unit-goblin-gunpowder-infantry",
+	"unit-goblin-thief", "unit-goblin-shaman",
 	"unit-goblin-war-machine", "unit-goblin-glider",
 	"unit-goblin-transport-ship",
 	"unit-goblin-town-hall", "unit-goblin-stronghold",
@@ -4463,7 +4465,8 @@ DefineUnitType("unit-mercenary-camp", {
 	RecruitHeroes = true,
 	UnitStock = {
 		"unit-dwarven-axefighter", 4, "unit-surghan-mercenary-axefighter", 4, "unit-dwarven-guard", 4, "unit-dwarven-scout", 3, "unit-joruvellir-scout", 3, "unit-dwarven-thunderer", 3, "unit-dwarven-yale-rider", 2, "unit-joruvellir-yale-rider", 2, "unit-dwarven-ballista", 1, "unit-dwarven-gryphon-rider", 1,
-		"unit-goblin-thief", 6, "unit-goblin-swordsman", 4, "unit-goblin-spearman", 4, "unit-goblin-archer", 3, "unit-goblin-war-machine", 1, "unit-goblin-glider", 1, "unit-kobold-footpad", 4, "unit-ettin", 1
+		"unit-goblin-thief", 6, "unit-goblin-swordsman", 4, "unit-goblin-spearman", 4, "unit-goblin-archer", 3, "unit-goblin-gunpowder-infantry", 3, "unit-goblin-war-machine", 1, "unit-goblin-glider", 1,
+		"unit-kobold-footpad", 4, "unit-ettin", 1
 	},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
