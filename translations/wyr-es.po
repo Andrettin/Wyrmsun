@@ -634,7 +634,7 @@ msgid "~!Acquire"
 msgstr "~!Adquirir"
 
 msgid "~!Close"
-msgstr "~!Cerrrar"
+msgstr "~!Cerrar"
 
 msgid "Up axes!"
 msgstr "Arriba las hachas!"
