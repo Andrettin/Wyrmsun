@@ -162,9 +162,6 @@ msgstr "Nivel tecnologia:"
 msgid "Max Tech Level:"
 msgstr "Maxima tecnologia:"
 
-msgid "Custom Hero:"
-msgstr "Heroe personalizado:"
-
 msgid "Resources:"
 msgstr "Recursos:"
 
