@@ -402,10 +402,23 @@ DefineQuest("the-discovery-of-gotland", {
 	World = "earth",
 	Civilization = "germanic",
 	PlayerColor = "white",
+	CompletionEffects = function(s)
+		if (GetCurrentCampaign() == "thors-servant") then
+			local thialfi_unit = FindHero("thialfi", trigger_player)
+			if (thialfi_unit) then
+				while (GetUnitVariable(thialfi_unit, "Level") < 2) do
+					local xp_required = GetUnitVariable(thialfi_unit, "XPRequired")
+					SetUnitVariable(thialfi_unit, "Xp", xp_required, "Max")
+					SetUnitVariable(thialfi_unit, "Xp", xp_required)
+				end
+			end
+		end
+		CallDialogue("thialfi-settles-gotland", trigger_player)
+	end,
 	Objectives = {"- Build a Chieftain's Hall in Gotland"},
-	Uncompleteable = true,
+	BuildSettlementUnits = {"visby", "unit-germanic-town-hall", 1},
 	Unobtainable = true,
-	Unfailable = true
+	Competitive = true
 })
 
 DefineQuest("slay-the-berserker-brides-at-hlesey", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 119.
@@ -426,6 +439,16 @@ DefineQuest("slay-the-berserker-brides-at-hlesey", { -- Source: Kevin Crossley-H
 	end,
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 1500)
+		if (GetCurrentCampaign() == "thors-servant") then
+			local thialfi_unit = FindHero("thialfi", trigger_player)
+			if (thialfi_unit) then
+				while (GetUnitVariable(thialfi_unit, "Level") < 3) do
+					local xp_required = GetUnitVariable(thialfi_unit, "XPRequired")
+					SetUnitVariable(thialfi_unit, "Xp", xp_required, "Max")
+					SetUnitVariable(thialfi_unit, "Xp", xp_required)
+				end
+			end
+		end
 	end,
 	Objectives = {"- Destroy the Hlesings"},
 	Rewards = "+1500 Copper",
