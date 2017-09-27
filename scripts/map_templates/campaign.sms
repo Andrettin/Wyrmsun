@@ -18,7 +18,9 @@ end
 
 ApplyMapTemplate(GetCampaignData(GetCurrentCampaign(), "MapTemplate"), GetCampaignData(GetCurrentCampaign(), "MapTemplateStartPosX"), GetCampaignData(GetCurrentCampaign(), "MapTemplateStartPosY"))
 
-if (GetCurrentCampaign() == "island-of-the-lizard-god") then
+if (GetCurrentCampaign() == "thors-servant") then
+	ApplyMapTemplate("jotunheim", 710 - ((GetCampaignData(GetCurrentCampaign(), "MapWidth") - 1) / 2), 335 - ((GetCampaignData(GetCurrentCampaign(), "MapHeight") - 1) / 2), 0, 0, 1)
+elseif (GetCurrentCampaign() == "island-of-the-lizard-god") then
 	ApplyMapTemplate("nidavellir-underground", GetCampaignData(GetCurrentCampaign(), "MapTemplateStartPosX"), GetCampaignData(GetCurrentCampaign(), "MapTemplateStartPosY"), 0, 0, 1)
 end
 

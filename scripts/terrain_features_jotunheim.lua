@@ -61,6 +61,17 @@ DefineTerrainFeature("lyfjaberg", { -- mountain next to Menglad's hall in Norse 
 	}
 })
 
+DefineTerrainFeature("mountains-of-haag", { -- from Battle for Wesnoth: Son of the Black–Eye
+	Name = "Mountains of Haag",
+	TerrainType = "rock",
+	World = "nidavellir",
+	Color = {128, 144, 176},
+	CulturalNames = {
+		"ettin", "Mountains of Haag",
+		"orc", "Mountains of Haag"
+	}
+})
+
 DefineTerrainFeature("silent-forest", { -- from Battle for Wesnoth: Son of the Black–Eye
 	Name = "Silent Forest",
 	TerrainType = "flamefood-tree",

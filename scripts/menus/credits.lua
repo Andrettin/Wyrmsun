@@ -210,6 +210,7 @@ function RunShowCreditsMenu()
 		_("Translation"),
 		"  Dmitry Shamshurin",
 		"  dragut",
+		"  Franco514",
 		"  Lorenzo Romoli",
 		"  Pawonashi",
 		_("Testing"),
