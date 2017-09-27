@@ -399,8 +399,6 @@ DefineQuest("thors-servant", {
 DefineQuest("the-discovery-of-gotland", {
 	Name = "The Discovery of Gotland",
 	Icon = "icon-germanic-transport-ship",
-	World = "earth",
-	Civilization = "germanic",
 	PlayerColor = "white",
 	CompletionEffects = function(s)
 		if (GetCurrentCampaign() == "thors-servant") then
@@ -421,11 +419,35 @@ DefineQuest("the-discovery-of-gotland", {
 	Competitive = true
 })
 
+DefineQuest("thors-servant-thors-temple", {
+	Name = "Thunraz's Temple",
+	Icon = "icon-germanic-temple",
+	PlayerColor = "white",
+	CompletionEffects = function(s)
+		if (GetCurrentCampaign() == "thors-servant") then
+			local thialfi_unit = FindHero("thialfi", trigger_player)
+			if (thialfi_unit) then
+				while (GetUnitVariable(thialfi_unit, "Level") < 3) do
+					local xp_required = GetUnitVariable(thialfi_unit, "XPRequired")
+					SetUnitVariable(thialfi_unit, "Xp", xp_required, "Max")
+					SetUnitVariable(thialfi_unit, "Xp", xp_required)
+				end
+			end
+		end
+		CallDialogue("thors-servant-temple-complete", trigger_player)
+	end,
+	Objectives = {"- Build a Temple in Gotland", "- Worship Thunraz"},
+	BuildSettlementUnits = {"visby", "unit-germanic-temple", 1},
+	ResearchUpgrades = {"upgrade-deity-thor"},
+	Unobtainable = true,
+	Unfailable = true, -- to prevent the mission failing from a lack of a Carpenter's Shop
+	Competitive = true
+})
+
 DefineQuest("slay-the-berserker-brides-at-hlesey", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 119.
 	Name = "Slay the Wild Folk at Hlesey",
 	Icon = "icon-germanic-warrior",
 	Description = "The wild folk at Hlesey have been attacking passing ships. The priests of Thunraz urge us to eliminate this threat, and restore safe passage in those waters.",
-	Civilization = "germanic",
 	PlayerColor = "black",
 	Conditions = function(s)
 		if (
@@ -442,7 +464,7 @@ DefineQuest("slay-the-berserker-brides-at-hlesey", { -- Source: Kevin Crossley-H
 		if (GetCurrentCampaign() == "thors-servant") then
 			local thialfi_unit = FindHero("thialfi", trigger_player)
 			if (thialfi_unit) then
-				while (GetUnitVariable(thialfi_unit, "Level") < 3) do
+				while (GetUnitVariable(thialfi_unit, "Level") < 4) do
 					local xp_required = GetUnitVariable(thialfi_unit, "XPRequired")
 					SetUnitVariable(thialfi_unit, "Xp", xp_required, "Max")
 					SetUnitVariable(thialfi_unit, "Xp", xp_required)

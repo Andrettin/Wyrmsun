@@ -46,11 +46,25 @@ DefineDialogue("thialfi-settles-gotland", {
 	Nodes = {
 		{
 			"speaker", "character", "thialfi",
-			"text", "My new home is ready! From this base of operations established I can gather the necessary forces to deal with my next task."
+			"text", "At last, my hall is complete. But it is not enough. I am pledged to Thunraz, and if this is my dwelling, then there must also be a temple to the god on this island.",
+			"option-effects", {
+				function(s)
+					SetPlayerData(trigger_player, "AcceptQuest", "thors-servant-thors-temple")
+				end
+			}
+		}
+	}
+})
+
+DefineDialogue("thors-servant-temple-complete", {
+	Nodes = {
+		{
+			"speaker", "character", "thialfi",
+			"text", "The temple to Thunraz is finished. From my island I shall gather the necessary forces to deal with my next task."
 		},
 		{
 			"speaker", "character", "thialfi",
-			"text", "Thunraz has shown me that a group of wild berserkers living in the island of Hlesey. They attack the passing ships, and must be rooted out to restore safety to that sea passage. The island lies far to the west, beyond the great chain of isles where the Skeldungs dwell.",
+			"text", "The priests of Thunraz have told me that a group of wild berserkers are living in the island of Hlesey. They attack the passing ships, and must be rooted out to restore safety to that sea passage. The island lies far to the west, beyond the great chain of isles where the Skeldungs dwell.",
 			"option-effects", {
 				function(s)
 					unit = CreateUnit("unit-revealer", trigger_player, {4089 - EarthStartX, 745 - EarthStartY})

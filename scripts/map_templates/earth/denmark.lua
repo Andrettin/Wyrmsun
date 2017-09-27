@@ -53,7 +53,7 @@ SetMapTemplateResource("earth", "unit-gold-deposit", {4078, 744}) -- Amber; Sour
 -- three people were buried in oak coffins in the Eshøj mound, one of them in c. 1351 BC and another in c. 1345 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 81.
 
 -- Hlesey Island
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "hlesing-tribe", {4089, 745}, -1101, -1100) -- put a guard tower there to make the berserker women more capable of attacking passing ships
+SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "hlesing-tribe", {4089, 745}, -1101, -1100) -- put a watch tower there to make the berserker women more capable of attacking passing ships
 SetMapTemplateUnit("earth", "unit-germanic-warrior", "hlesing-tribe", {4089, 745}, -1101, -1100) -- in Norse mythology, Thor (accompanied by Thialfi) slew a group of "brides of the berserkers" at Hlesey; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 119.
 SetMapTemplateUnit("earth", "unit-germanic-warrior", "hlesing-tribe", {4089, 745}, -1101, -1100)
 SetMapTemplateUnit("earth", "unit-germanic-warrior", "hlesing-tribe", {4089, 745}, -1101, -1100)
