@@ -474,6 +474,36 @@ UI.NetworkDiplomacyButton.Y = 1
 UI.NetworkDiplomacyButton.Text = "Diplomacy"
 UI.NetworkDiplomacyButton:SetCallback(function() RunDiplomacyMenu() end)
 
+local earth_id = GetWorldData("earth", "ID")
+if (GetMapLayer("", "earth", 0) ~= -1) then
+	UI.WorldButtons:at(earth_id).X = 16 + (19  * 0)
+	UI.WorldButtons:at(earth_id).Y = Video.Height - 23
+	UI.WorldButtons:at(earth_id).Style = FindButtonStyle("world-earth")
+else
+	UI.WorldButtons:at(earth_id).X = -1
+	UI.WorldButtons:at(earth_id).Y = -1
+end
+
+local nidavellir_id = GetWorldData("nidavellir", "ID")
+if (GetMapLayer("", "nidavellir", 0) ~= -1) then
+	UI.WorldButtons:at(nidavellir_id).X = 16 + (19  * 1)
+	UI.WorldButtons:at(nidavellir_id).Y = Video.Height - 23
+	UI.WorldButtons:at(nidavellir_id).Style = FindButtonStyle("world-nidavellir")
+else
+	UI.WorldButtons:at(nidavellir_id).X = -1
+	UI.WorldButtons:at(nidavellir_id).Y = -1
+end
+
+local jotunheim_id = GetWorldData("jotunheim", "ID")
+if (GetMapLayer("", "jotunheim", 0) ~= -1) then
+	UI.WorldButtons:at(jotunheim_id).X = 16 + (19  * 2)
+	UI.WorldButtons:at(jotunheim_id).Y = Video.Height - 23
+	UI.WorldButtons:at(jotunheim_id).Style = FindButtonStyle("world-jotunheim")
+else
+	UI.WorldButtons:at(jotunheim_id).X = -1
+	UI.WorldButtons:at(jotunheim_id).Y = -1
+end
+
 Load("scripts/civilizations/anglo_saxon/ui.lua")
 Load("scripts/civilizations/basque/ui.lua")
 Load("scripts/civilizations/celt/ui.lua")

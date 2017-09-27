@@ -400,7 +400,7 @@ msgstr "Casa de guerra"
 msgid "Lumber Mill"
 msgstr "Aserradero"
 
-msgid "Smith"
+msgid "Smithy"
 msgstr "Forja"
 
 msgid "Sentry Tower"

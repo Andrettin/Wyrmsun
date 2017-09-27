@@ -10,7 +10,7 @@
 --
 --      widgets.lua - Define the widgets
 --
---      (c) Copyright 2004-2015 by Jimmy Salmon and Andrettin
+--      (c) Copyright 2004-2017 by Jimmy Salmon and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -211,4 +211,58 @@ DefineButtonStyle("icon", {
 			Color = {128, 128, 128}, Size = 0,
 		},
 	},
+})
+
+DefineButtonStyle("world-earth", {
+	Size = {19, 19},
+	Font = "game",
+	TextNormalColor = "white",
+	TextReverseColor = "yellow",
+	TextAlign = "Center",
+	TextPos = {10, 0},
+	Default = {
+		File = "germanic/ui/widgets/radio-normal-selected.png", Size = {19, 19}, Frame = 0,
+	},
+	Hover = {
+		TextNormalColor = "yellow",
+	},
+	Clicked = {
+		File = "germanic/ui/widgets/radio-pressed-selected.png", Size = {19, 19}, Frame = 0
+	}
+})
+
+DefineButtonStyle("world-jotunheim", {
+	Size = {19, 19},
+	Font = "game",
+	TextNormalColor = "white",
+	TextReverseColor = "yellow",
+	TextAlign = "Center",
+	TextPos = {10, 0},
+	Default = {
+		File = "goblin/ui/widgets/radio-normal-selected.png", Size = {19, 19}, Frame = 0,
+	},
+	Hover = {
+		TextNormalColor = "yellow",
+	},
+	Clicked = {
+		File = "goblin/ui/widgets/radio-pressed-selected.png", Size = {19, 19}, Frame = 0
+	}
+})
+
+DefineButtonStyle("world-nidavellir", {
+	Size = {19, 19},
+	Font = "game",
+	TextNormalColor = "white",
+	TextReverseColor = "yellow",
+	TextAlign = "Center",
+	TextPos = {10, 0},
+	Default = {
+		File = "dwarf/ui/widgets/radio-normal-selected.png", Size = {19, 19}, Frame = 0,
+	},
+	Hover = {
+		TextNormalColor = "yellow",
+	},
+	Clicked = {
+		File = "dwarf/ui/widgets/radio-pressed-selected.png", Size = {19, 19}, Frame = 0
+	}
 })
