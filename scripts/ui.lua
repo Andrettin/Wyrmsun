@@ -474,6 +474,20 @@ UI.NetworkDiplomacyButton.Y = 1
 UI.NetworkDiplomacyButton.Text = "Diplomacy"
 UI.NetworkDiplomacyButton:SetCallback(function() RunDiplomacyMenu() end)
 
+-- Plane Map Layer Buttons
+
+local asgard_id = GetPlaneData("asgard", "ID")
+if (GetMapLayer("asgard", "", 0) ~= -1) then
+	UI.PlaneButtons:at(asgard_id).X = 16 + (19  * 0)
+	UI.PlaneButtons:at(asgard_id).Y = Video.Height - 178
+	UI.PlaneButtons:at(asgard_id).Style = FindButtonStyle("world-earth")
+else
+	UI.PlaneButtons:at(asgard_id).X = -1
+	UI.PlaneButtons:at(asgard_id).Y = -1
+end
+
+-- World Map Layer Buttons
+
 local earth_id = GetWorldData("earth", "ID")
 if (GetMapLayer("", "earth", 0) ~= -1) then
 	UI.WorldButtons:at(earth_id).X = 16 + (19  * 0)
@@ -503,6 +517,12 @@ else
 	UI.WorldButtons:at(jotunheim_id).X = -1
 	UI.WorldButtons:at(jotunheim_id).Y = -1
 end
+
+-- Surface Layer Map Layer Buttons
+UI.SurfaceLayerButtons:at(0).Style = FindButtonStyle("world-nidavellir")
+UI.SurfaceLayerButtons:at(1).Style = FindButtonStyle("world-jotunheim")
+
+UpdateSurfaceLayerButtons()
 
 Load("scripts/civilizations/anglo_saxon/ui.lua")
 Load("scripts/civilizations/basque/ui.lua")
