@@ -22,20 +22,20 @@ msgid "~!Multiplayer Game"
 msgstr "~!Multi jugador"
 
 msgid "~!Achievements"
-msgstr "~!Logros"
+msgstr "Logros (~!A)"
 
 msgid "~!Options"
 msgstr "~!Opciones"
 
 # This translation is literal, but "Gioco strategico(strategic game)" or "Battaglia strategica(strategic battle, sounds better in my opinion)" may be more appropriate
 msgid "~!Grand Strategy Game"
-msgstr "Juego estrategia a gran escala"
+msgstr "Juego estrategia a ~!gran escala"
 
 msgid "Load Game"
 msgstr "Cargar partida"
 
 msgid "~!Load Game"
-msgstr "~!Cargar partida"
+msgstr "Cargar partida (~!L)"
 
 # This one is literal, it may need some work
 msgid "Replay Game"
@@ -64,25 +64,25 @@ msgid "Cred~!its"
 msgstr "Cred~!itos"
 
 msgid "E~!xit"
-msgstr "S~!alir"
+msgstr "Salir (~!X)"
 
 # options menu
 msgid "~<Options~>"
 msgstr "~<Opciones~>"
 
 msgid "~!Gameplay Options"
-msgstr "~!Opciones de juego"
+msgstr "Opciones de jue~!go"
 
 msgid "~!Video and Audio Options"
-msgstr "~!Opciones de audio y video"
+msgstr "Opciones de audio y ~!video"
 
 #singleplayer
 
 msgid "~!Scenarios"
-msgstr "~!Escenarios"
+msgstr "E~!scenarios"
 
 msgid "C~!ustom Game"
-msgstr "P~!artida personalizada"
+msgstr "Partida personalizada (~!U)"
 
 msgid "~<Scenarios~>"
 msgstr "~<Escenarios~>"
@@ -97,10 +97,10 @@ msgid "No Randomness"
 msgstr "No Aleatoriedad"
 
 msgid "~!Start Scenario"
-msgstr "~!Iniciar escenario"
+msgstr "Iniciar e~!scenario"
 
 msgid "~!Quests"
-msgstr "~!Misiones"
+msgstr "Misiones (~!Q)"
 
 msgid "~<Quests~>"
 msgstr "~<Misiones~>"
@@ -121,13 +121,13 @@ msgid "Create Custom ~!Hero"
 msgstr "Crear ~!Heroe"
 
 msgid "~!Delete Custom Hero"
-msgstr "Borrar ~!Heroe"
+msgstr "Borrar Heroe (~!D)"
 
 msgid "Technology Points: "
 msgstr "Puntos tecnologia:"
 
 msgid "~!Start Game"
-msgstr "~!Iniciar Partida"
+msgstr "Iniciar Partida (~!S)"
 
 msgid "~!Cancel"
 msgstr "~!Cancelar"
@@ -172,7 +172,7 @@ msgid "~<World:~>"
 msgstr "~<Mundo:~>"
 
 msgid "~!Worlds"
-msgstr "~!Mundos"
+msgstr "Mundos (~!W)"
 
 msgid "Map:"
 msgstr "Mapa:"
@@ -512,7 +512,7 @@ msgid "Glyph"
 msgstr "Grypho"
 
 msgid "~!Attack"
-msgstr "Atacar"
+msgstr "~!Atacar"
 
 msgid "Earth"
 msgstr "Tierra"
@@ -628,16 +628,16 @@ msgid "Hills of the Shorbear Clan"
 msgstr "La Collina del Clan Shorbear"
 
 msgid "~!Previous Menu"
-msgstr "Menu Anterior"
+msgstr "Menu Anterior (~!P)"
 
 msgid "~!Continue"
-msgstr "Continuar"
+msgstr "~!Continuar"
 
 msgid "~!Acquire"
-msgstr "Adquirir"
+msgstr "~!Adquirir"
 
 msgid "~!Close"
-msgstr "Cerrrar"
+msgstr "~!Cerrrar"
 
 msgid "Up axes!"
 msgstr "Arriba las hachas!"
@@ -689,10 +689,10 @@ msgid "We come to make a bargain with you."
 msgstr "Hemos venido a hacer un trato contigo."
 
 msgid "~!Listen to him"
-msgstr "~!Escuchenlo"
+msgstr "Escuchen~!lo"
 
 msgid "~!Up axes! (Forego Quest)"
-msgstr "~!Arriba las hachas! (Mission Anterior)"
+msgstr "Arriba las hachas! (Mission Anterior) (~!U)"
 
 msgid "~!Discuss his offer"
 msgstr "~!Discusion de la ofera"
@@ -964,10 +964,10 @@ msgstr ""
 "negoziare con noi."
 
 msgid "~!Listen to Baglur"
-msgstr "~!Ascoltate Baglur"
+msgstr "Asco~!ltate Baglur"
 
 msgid "~!Surrender (Defeat)"
-msgstr "~!Arrenditi (Sconfitta)"
+msgstr "Arrenditi (Sconfitta) (~!S)"
 
 msgid "Baglur, how do ye close the gates?"
 msgstr "Beglur, come si chiudono quei cancelli?"

@@ -29,7 +29,12 @@ DefineCharacter("geirrod-ettin", { -- Source: Kevin Crossley-Holland, "The Norse
 	Name = "Geirrod", -- "Geirrøðr"
 	Gender = "male",
 	Type = "unit-ettin",
-	Civilization = "ettin"
+	Civilization = "ettin",
+	Faction = "geirrodung-clan",
+	Date = -1101, -- should be present for Thialfi's scenario
+	HistoricalLocations = {
+		-1101, "jotunheim", "geirrods-hall"
+	}
 })
 
 DefineCharacter("grid", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 243; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 90.

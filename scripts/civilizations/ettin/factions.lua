@@ -25,6 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineFaction("geirrodung-clan", {
+	Name = "Geirrodung Clan",
+	Civilization = "ettin",
+	Type = "tribe",
+	Colors = {"red", "orange", "fire"}
+})
+
 -- Mercenary Companies
 
 DefineFaction("greedstone-company", {

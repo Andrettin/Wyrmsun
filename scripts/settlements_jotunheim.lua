@@ -25,19 +25,22 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("geirrods-hall", {
+DefineSettlement("geirrods-hall", { -- Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 90.
 	Name = "Geirrod's Hall",
 	MapTemplate = "jotunheim",
-	Position = {710, 335},
+	Position = {710, 335}, -- Geirrod's hall is located in mountains and near a river
 	Major = true,
 	CulturalNames = {
 		"ettin", "Geirrod's Hall"
 	},
 	Cores = {
+		"geirrodung-clan"
 	},
 	HistoricalOwners = {
+		-1101, "geirrodung-clan" -- should be present for Thialfi's scenario
 	},
 	HistoricalBuildings = {
+--		-1101, 0, "town-hall"
 	},
 	Regions = {}
 })
