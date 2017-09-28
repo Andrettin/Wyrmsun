@@ -49,10 +49,25 @@ DefineCharacter("hafgan", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch d
 
 DefineCharacter("volund", { -- elven smith from Norse mythology; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 74-75.
 	Name = "Volund", -- "Völundr"
+	AlternateNames = {
+		"Velent", -- "Vélent"; Völundr's name in the Þiðreks Saga; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 77.
+		"Wayland", -- Völundr's English name; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 74.
+		"Weland", -- Old English equivalent to Old Norse Völund; Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 118; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 77.
+		"Wieland" -- Völundr's German name; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 74-75.
+	},
+	Gender = "male",
+	Type = "unit-elven-swordsman", -- elven smith
+	Civilization = "elf",
+	Faction = "ulfdalir"
+})
+
+DefineCharacter("widia", { -- son of Weland (Völund); Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, pp. 113, 118.
+	Name = "Widia",
 	Gender = "male",
 	Type = "unit-elven-swordsman",
 	Civilization = "elf",
-	Faction = "ulfdalir"
+	Faction = "ulfdalir",
+	Father = "volund"
 })
 
 DefineCharacter("argante", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 90.

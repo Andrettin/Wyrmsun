@@ -32,7 +32,7 @@ DefineSettlement("brunn", {
 	Major = true,
 	CulturalNames = {
 		"slav", "Brno",
-		"teuton", "Brünn"
+		"teuton", "Brunn" -- "Brünn"
 	},
 	HistoricalOwners = {
 		1815, "austria" -- Brünn was a part of the Austrian province of Moravia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.

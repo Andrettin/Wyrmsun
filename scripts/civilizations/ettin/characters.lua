@@ -25,6 +25,16 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineCharacter("ymir", { -- the first frost giant in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 240, 253; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 58.
+	Name = "Ymir",
+	AlternateNames = {
+		"Aurgelmir" -- other name for Ymir, the first frost giant in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 240; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 58.
+	},
+	Gender = "male",
+	Type = "unit-ettin",
+	Civilization = "ettin" -- frost giant
+})
+
 DefineCharacter("geirrod-ettin", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 243; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 90.
 	Name = "Geirrod", -- "Geirrøðr"
 	Gender = "male",

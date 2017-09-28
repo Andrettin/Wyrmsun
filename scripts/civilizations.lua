@@ -1224,7 +1224,6 @@ DefineCivilization("elf", {
 		"male", "Vebrilas", -- from Battle for Wesnoth
 		"male", "Vebrinduil", -- from Battle for Wesnoth
 		"male", "Vel", -- from Battle for Wesnoth
-		"male", "Velent", -- "Vélent"; Völundr's name in the Þiðreks Saga; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 77.
 		"male", "Velon",
 		"male", "Vilith", -- from Battle for Wesnoth
 		"male", "Vol", -- from Battle for Wesnoth
@@ -1237,11 +1236,7 @@ DefineCivilization("elf", {
 		"male", "Vuldur", -- from Battle for Wesnoth
 		"male", "Vunduil", -- from Battle for Wesnoth
 		"male", "Vylas", -- from Battle for Wesnoth
-		"male", "Vyldor", -- from Battle for Wesnoth
-		"male", "Wayland", -- Völundr's English name; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 74.
-		"male", "Weland", -- Old English equivalent to Old Norse Völund; Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 118; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 77.
-		"male", "Widia", -- son of Weland (Völund); Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, pp. 113, 118.
-		"male", "Wieland" -- Völundr's German name; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 74-75.
+		"male", "Vyldor" -- from Battle for Wesnoth
 	}
 })
 
@@ -1282,7 +1277,6 @@ DefineCivilization("ettin", {
 		"female", "Laufey", -- giantess from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 246.
 		"female", "Menglad", -- giantess from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 122-123.
 		"female", "Thokk", -- giantess from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251.
-		"male", "Aurgelmir", -- other name for Ymir, the first frost giant in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 240; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 58.
 		"male", "Baugi", -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 240.
 		"male", "Bergelmir", -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 240.
 		"male", "Farbauti", -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 241.
@@ -1294,8 +1288,7 @@ DefineCivilization("ettin", {
 		"male", "Skrymir", -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 250.
 		"male", "Surt", -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 250.
 		"male", "Suttung", -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 250.
-		"male", "Vafthrudnir", -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 252.
-		"male", "Ymir" -- the first frost giant in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 240, 253; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 58.
+		"male", "Vafthrudnir" -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 252.
 	},
 	SettlementNames = {
 		"Hnitbjorg", -- mountain
