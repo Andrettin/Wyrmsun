@@ -133,13 +133,13 @@ local land_funcs = {
 		end
 	end,
 	function()
-		if (AiGetRace() == "anglo-saxon" or AiGetRace() == "frankish" or AiGetRace() == "suebi" or AiGetRace() == "teuton") then
+		if (AiGetRace() == "anglo-saxon" or AiGetRace() == "frankish" or AiGetRace() == "suebi" or AiGetRace() == "teuton" or AiGetRace() == "goth") then
 			return AiResearch(GetAiUnitType("melee-weapon-2")); -- research this now, since Teutons couldn't before
 		end
 		return false;
 	end,
 	function()
-		if (AiGetRace() == "anglo-saxon" or AiGetRace() == "frankish" or AiGetRace() == "suebi" or AiGetRace() == "teuton") then
+		if (AiGetRace() == "anglo-saxon" or AiGetRace() == "frankish" or AiGetRace() == "suebi" or AiGetRace() == "teuton" or AiGetRace() == "goth") then
 			return AiResearch(GetAiUnitType("iron-shield")); -- research this now, since Teutons couldn't before
 		end
 		return false;
@@ -172,7 +172,7 @@ local land_funcs = {
 	function() return AiWait(GetAiUnitType("writing")) end,	
 
 	function() -- certain civilizations acquire serfdom when it becomes available
-		if (AiGetRace() == "teuton" or AiGetRace() == "anglo-saxon" or AiGetRace() == "english" or AiGetRace() == "frankish" or AiGetRace() == "suebi") then
+		if (AiGetRace() == "teuton" or AiGetRace() == "anglo-saxon" or AiGetRace() == "english" or AiGetRace() == "frankish" or AiGetRace() == "suebi" or AiGetRace() == "goth") then
 			return AiResearch("upgrade-serfdom");
 		end
 		return false;

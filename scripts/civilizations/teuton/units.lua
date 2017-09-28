@@ -1188,7 +1188,7 @@ DefineUnitType("unit-teuton-town-hall", {
 	Icon = "icon-teuton-town-hall",
 	Trains = {"unit-teuton-worker"},
 	AiDrops = {"unit-boots"},
-	DropSpells = {"spell-anglo-saxon-allegiance", "spell-frank-allegiance", "spell-suebi-allegiance", "spell-teuton-allegiance"},
+	DropSpells = {"spell-anglo-saxon-allegiance", "spell-frank-allegiance", "spell-goth-allegiance", "spell-suebi-allegiance", "spell-teuton-allegiance"},
 	Variations = {
 		{
 			"variation-id", "town-hall",
@@ -1233,7 +1233,7 @@ DefineUnitType("unit-teuton-stronghold", {
 	Trains = {"unit-teuton-worker"},
 	RequirementsString = "Barracks and Masonry",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
-	DropSpells = {"spell-anglo-saxon-allegiance", "spell-frank-allegiance", "spell-suebi-allegiance", "spell-teuton-allegiance"},
+	DropSpells = {"spell-anglo-saxon-allegiance", "spell-frank-allegiance", "spell-goth-allegiance", "spell-suebi-allegiance", "spell-teuton-allegiance"},
 	Variations = {
 		{
 			"variation-id", "stronghold",

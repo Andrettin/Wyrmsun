@@ -25,28 +25,113 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineUpgrade("upgrade-faction-bastarnae-tribe", {
+	Name = "Bastarnae Tribe",
+	EffectsString = "+3 Damage and -1 Evasion for Kriegers"
+})
+
 DefineUpgrade("upgrade-faction-burgundian-tribe", {
 	Name = "Burgundian Tribe",
-	EffectsString = "+10 HP for Kriegers"
+	EffectsString = "+10 HP for Kriegers",
+	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
+})
+
+DefineUpgrade("upgrade-faction-gepidae-tribe", {
+	Name = "Gepidae Tribe",
+	EffectsString = "+1 Speed for Kriegers"
 })
 
 DefineUpgrade("upgrade-faction-goth-tribe", {
 	Name = "Goth Tribe",
-	EffectsString = "+2 Damage for Kriegers"
+	EffectsString = "+2 Damage for Kriegers",
+	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
+})
+
+DefineUpgrade("upgrade-faction-herulian-tribe", {
+	Name = "Herulian Tribe",
+	EffectsString = "Disembarkment Bonus for Kriegers and Spearmen"
+})
+
+DefineUpgrade("upgrade-faction-lugii-tribe", {
+	Name = "Lugii Tribe",
+	EffectsString = "+2 Evasion for Spearmen"
+})
+
+DefineUpgrade("upgrade-faction-ostrogoth-tribe", {
+	Name = "Ostrogoth Tribe",
+	EffectsString = "+2 Damage for Horse Riders"
+})
+
+DefineUpgrade("upgrade-faction-rugian-tribe", {
+	Name = "Rugian Tribe",
+	EffectsString = "+2 Accuracy for Kriegers"
+})
+
+DefineUpgrade("upgrade-faction-silingae-tribe", {
+	Name = "Silingae Tribe",
+	EffectsString = "+2 Accuracy for Schutzes"
+})
+
+DefineUpgrade("upgrade-faction-turcilingian-tribe", {
+	Name = "Turcilingian Tribe",
+	EffectsString = "+2 Evasion for Schutzes"
+})
+
+DefineUpgrade("upgrade-faction-vandal-tribe", {
+	Name = "Vandal Tribe",
+	EffectsString = "+2 Damage for Schutzes"
+})
+
+DefineUpgrade("upgrade-faction-visigoth-tribe", {
+	Name = "Visigoth Tribe",
+	EffectsString = "+1 Speed for Horse Riders"
 })
 
 DefineUpgrade("upgrade-faction-burgundy", {
 	Name = "Burgundy",
-	EffectsString = "+10 HP for Horse Riders"
+	EffectsString = "+10 HP for Horse Riders",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-gothia", {
 	Name = "Gothia",
-	EffectsString = "+2 Damage for Horse Riders"
+	EffectsString = "+2 Damage for Horse Riders",
+	RequirementsString = "Writing and Masonry"
 })
+
+DefineUpgrade("upgrade-faction-ostrogothia", {
+	Name = "Ostrogothia",
+	EffectsString = "+2 Damage for Horse Riders",
+	RequirementsString = "Writing and Masonry"
+})
+
+DefineUpgrade("upgrade-faction-vandalia", {
+	Name = "Vandalia",
+	EffectsString = "+1 Speed for Cogs",
+	RequirementsString = "Writing and Masonry"
+})
+
+DefineUpgrade("upgrade-faction-visigothia", {
+	Name = "Visigothia",
+	EffectsString = "+1 Speed for Horse Riders",
+	RequirementsString = "Writing and Masonry"
+})
+
+DefineModifier("upgrade-faction-bastarnae-tribe",
+	{"BasicDamage", 3},
+	{"Evasion", -1},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
+)
 
 DefineModifier("upgrade-faction-burgundian-tribe",
 	{"HitPoints", 10},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
+)
+
+DefineModifier("upgrade-faction-gepidae-tribe",
+	{"Speed", 1},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
@@ -57,6 +142,55 @@ DefineModifier("upgrade-faction-goth-tribe",
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
+DefineModifier("upgrade-faction-herulian-tribe",
+	{"DisembarkmentBonus", 1},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"},
+	{"apply-to", "unit-teuton-spearman"}
+)
+
+DefineModifier("upgrade-faction-lugii-tribe",
+	{"Evasion", 2},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-spearman"}
+)
+
+DefineModifier("upgrade-faction-ostrogoth-tribe",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-gothic-horse-rider"}, {"apply-to", "unit-gothic-horse-lord"}
+)
+
+DefineModifier("upgrade-faction-rugian-tribe",
+	{"Accuracy", 2},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
+)
+
+DefineModifier("upgrade-faction-silingae-tribe",
+	{"Accuracy", 2},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-archer"}
+)
+
+DefineModifier("upgrade-faction-turcilingian-tribe",
+	{"Evasion", 2},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-archer"}
+)
+
+DefineModifier("upgrade-faction-vandal-tribe",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-archer"}
+)
+
+DefineModifier("upgrade-faction-visigoth-tribe",
+	{"Speed", 1},
+	{"Points", 10},
+	{"apply-to", "unit-gothic-horse-rider"}, {"apply-to", "unit-gothic-horse-lord"}
+)
+
 DefineModifier("upgrade-faction-burgundy",
 	{"HitPoints", 10},
 	{"Points", 10},
@@ -65,6 +199,24 @@ DefineModifier("upgrade-faction-burgundy",
 
 DefineModifier("upgrade-faction-gothia",
 	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-gothic-horse-rider"}, {"apply-to", "unit-gothic-horse-lord"}
+)
+
+DefineModifier("upgrade-faction-ostrogothia",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-gothic-horse-rider"}, {"apply-to", "unit-gothic-horse-lord"}
+)
+
+DefineModifier("upgrade-faction-vandalia",
+	{"Speed", 1},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-kogge"}
+)
+
+DefineModifier("upgrade-faction-visigothia",
+	{"Speed", 1},
 	{"Points", 10},
 	{"apply-to", "unit-gothic-horse-rider"}, {"apply-to", "unit-gothic-horse-lord"}
 )
@@ -82,5 +234,17 @@ DefineDependency("upgrade-faction-burgundy",
 )
 
 DefineDependency("upgrade-faction-gothia",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-ostrogothia",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-vandalia",
+	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+)
+
+DefineDependency("upgrade-faction-visigothia",
 	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
 )

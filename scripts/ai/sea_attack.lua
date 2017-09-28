@@ -146,7 +146,7 @@ local sea_funcs = {
 	function() return AiResearch(GetAiUnitType("writing")) end, -- research writing to become a polity
 
 	function() -- certain civilizations acquire serfdom when it becomes available
-		if (AiGetRace() == "teuton" or AiGetRace() == "anglo-saxon" or AiGetRace() == "english" or AiGetRace() == "frankish" or AiGetRace() == "suebi") then
+		if (AiGetRace() == "teuton" or AiGetRace() == "anglo-saxon" or AiGetRace() == "english" or AiGetRace() == "frankish" or AiGetRace() == "suebi" or AiGetRace() == "goth") then
 			return AiResearch("upgrade-serfdom");
 		end
 		return false;

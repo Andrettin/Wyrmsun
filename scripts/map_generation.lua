@@ -1763,6 +1763,9 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("germanic")) > 0 and (TechLevel[i + 1] == "" or TechLevel[i + 1] == "Agrarian (Bronze)" or TechLevel[i + 1] == "Civilized (Bronze)")) then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "germanic")
 			end
+			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("goth")) > 0 and TechLevel[i + 1] == "Agrarian (Iron)") then -- allow germanic humans in elven forests since there is no elven civilization yet
+				table.insert(possible_civilizations, "goth")
+			end
 			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("suebi")) > 0 and TechLevel[i + 1] == "Agrarian (Iron)") then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "suebi")
 			end
@@ -5966,7 +5969,7 @@ function GetTerrainCivilizations(terrain)
 	if (terrain == "dry-mud" or terrain == "cave-floor") then
 		return {"dwarf", "gnome", "goblin", "kobold", "ettin"}
 	elseif (terrain == "dirt" or terrain == "grass") then
-		return {"anglo-saxon", "english", "frankish", "germanic", "suebi", "teuton"}
+		return {"anglo-saxon", "english", "frankish", "germanic", "goth", "suebi", "teuton"}
 	end
 
 	return {}

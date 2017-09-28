@@ -39,7 +39,10 @@ DefineFaction("bastarnae-tribe", {
 	Name = "Bastarnae Tribe",
 	Civilization = "goth",
 	Type = "tribe",
-	Colors = {"blue"}
+	Colors = {"blue"},
+	FactionUpgrade = "upgrade-faction-bastarnae-tribe",
+	Icon = "icon-flag-blue-lion-on-yellow",
+	DevelopsFrom = {"goth-tribe"}
 })
 
 DefineFaction("burgundian-tribe", {
@@ -56,56 +59,80 @@ DefineFaction("gepidae-tribe", {
 	Name = "Gepidae Tribe",
 	Civilization = "goth",
 	Type = "tribe",
-	Colors = {"black"}
+	Colors = {"black"},
+	FactionUpgrade = "upgrade-faction-gepidae-tribe",
+	Icon = "icon-flag-five-red-birds-on-yellow",
+	DevelopsFrom = {"goth-tribe"}
 })
 
 DefineFaction("herulian-tribe", {
 	Name = "Herulian Tribe",
 	Civilization = "goth",
 	Type = "tribe",
-	Colors = {"green"}
+	Colors = {"green"},
+	FactionUpgrade = "upgrade-faction-herulian-tribe",
+	Icon = "icon-flag-cyan-lion-on-red",
+	DevelopsFrom = {"goth-tribe"}
 })
 
 DefineFaction("lugii-tribe", {
 	Name = "Lugii Tribe",
 	Civilization = "goth",
 	Type = "tribe",
-	Colors = {"purple"}
+	Colors = {"purple"},
+	FactionUpgrade = "upgrade-faction-lugii-tribe",
+	Icon = "icon-flag-five-purple-birds-on-green",
+	DevelopsFrom = {"goth-tribe"}
 })
 
 DefineFaction("ostrogoth-tribe", {
 	Name = "Ostrogoth Tribe",
 	Civilization = "goth",
 	Type = "tribe",
-	Colors = {"red"}
+	Colors = {"red"},
+	FactionUpgrade = "upgrade-faction-ostrogoth-tribe",
+	Icon = "icon-flag-five-black-birds-on-purple",
+	DevelopsFrom = {"goth-tribe"}
 })
 
 DefineFaction("rugian-tribe", {
 	Name = "Rugian Tribe",
 	Civilization = "goth",
 	Type = "tribe",
-	Colors = {"red", "orange"}
+	Colors = {"red", "orange"},
+	FactionUpgrade = "upgrade-faction-rugian-tribe",
+	Icon = "icon-flag-five-white-birds-on-red",
+	DevelopsFrom = {"goth-tribe"}
 })
 
 DefineFaction("silingae-tribe", {
 	Name = "Silingae Tribe",
 	Civilization = "goth",
 	Type = "tribe",
-	Colors = {"orange"}
+	Colors = {"orange"},
+	FactionUpgrade = "upgrade-faction-silingae-tribe",
+	Icon = "icon-flag-green-lion-on-purple",
+	DevelopsFrom = {"goth-tribe"}
 })
 
 DefineFaction("turcilingian-tribe", {
 	Name = "Turcilingian Tribe",
 	Civilization = "goth",
 	Type = "tribe",
-	Colors = {"blue"}
+	Colors = {"blue"},
+	FactionUpgrade = "upgrade-faction-turcilingian-tribe",
+	Icon = "icon-flag-green-lion-on-orange",
+	DevelopsFrom = {"goth-tribe"}
 })
 
 DefineFaction("vandal-tribe", {
 	Name = "Vandal Tribe",
 	Civilization = "goth",
 	Type = "tribe",
-	Colors = {"cyan", "blue"}
+	Colors = {"cyan", "blue"},
+	FactionUpgrade = "upgrade-faction-vandal-tribe",
+	Icon = "icon-flag-five-blue-birds-on-orange",
+	DevelopsFrom = {"goth-tribe"}
 })
 
 DefineFaction("visigoth-tribe", {
@@ -113,6 +140,9 @@ DefineFaction("visigoth-tribe", {
 	Civilization = "goth",
 	Type = "tribe",
 	Colors = {"pink"},
+	FactionUpgrade = "upgrade-faction-visigoth-tribe",
+	Icon = "icon-flag-five-orange-birds-on-black",
+	DevelopsFrom = {"goth-tribe"},
 	HistoricalUpgrades = {
 		573, "upgrade-teuton-coinage", true -- Visigothic gold tremissis coined in 573 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 188.
 	}
@@ -144,7 +174,7 @@ DefineFaction("gothia", {
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-gothia",
 	Icon = "icon-flag-yellow-lion-on-cyan",
-	DevelopsFrom = {"goth-tribe"}
+	DevelopsFrom = {"goth-tribe", "herulian-tribe"}
 })
 
 DefineFaction("ostrogothia", {
@@ -153,6 +183,9 @@ DefineFaction("ostrogothia", {
 	Type = "polity",
 	Colors = {"red"},
 	DefaultTier = "kingdom",
+	FactionUpgrade = "upgrade-faction-ostrogothia",
+	Icon = "icon-flag-five-black-birds-on-purple",
+	DevelopsFrom = {"ostrogoth-tribe", "bastarnae-tribe", "gepidae-tribe"},
 	HistoricalUpgrades = {
 		0, "upgrade-teuton-writing", true, -- polities must have writing
 		0, "upgrade-teuton-masonry", true
@@ -165,6 +198,9 @@ DefineFaction("vandalia", {
 	Type = "polity",
 	Colors = {"cyan", "blue"},
 	DefaultTier = "kingdom",
+	FactionUpgrade = "upgrade-faction-vandalia",
+	Icon = "icon-flag-five-blue-birds-on-orange",
+	DevelopsFrom = {"vandal-tribe", "lugii-tribe", "rugian-tribe", "silingae-tribe", "turcilingian-tribe"},
 	HistoricalUpgrades = {
 		0, "upgrade-teuton-writing", true, -- polities must have writing
 		0, "upgrade-teuton-masonry", true
@@ -177,6 +213,9 @@ DefineFaction("visigothia", {
 	Type = "polity",
 	Colors = {"pink"},
 	DefaultTier = "kingdom",
+	FactionUpgrade = "upgrade-faction-visigothia",
+	Icon = "icon-flag-five-orange-birds-on-black",
+	DevelopsFrom = {"visigoth-tribe"},
 	HistoricalUpgrades = {
 		0, "upgrade-teuton-writing", true, -- polities must have writing
 		0, "upgrade-teuton-masonry", true
