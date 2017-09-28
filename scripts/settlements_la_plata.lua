@@ -33,12 +33,16 @@ DefineSettlement("asuncion", {
 	CulturalNames = {
 		"castillian", "Asuncion" -- "Asunción"
 	},
+	Cores = {
+		"paraguay"
+	},
 	HistoricalOwners = {
 		1536, "spain", -- Asunción was founded in 1536; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
 		1811, "paraguay" -- Paraguay became independent in 1811; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
 	},
 	HistoricalBuildings = {
-		1536, 0, "town-hall"
+		1536, 0, "town-hall",
+		1776, 0, "university" -- College or seminary founded in Asuncion in 1776. Source: Enrique Martínez Ruiz; Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 226.
 	},
 	Regions = {"america", "south-america"}
 })
@@ -47,8 +51,12 @@ DefineSettlement("bahia-blanca", {
 	Name = "Bahia Blanca",
 	MapTemplate = "earth",
 	Position = {2418, 2928},
+	Major = true,
 	CulturalNames = {
 		"castillian", "Bahia Blanca"
+	},
+	Cores = {
+		"argentina"
 	},
 	HistoricalOwners = {
 		1863, "argentina" -- Bahia Blanca was founded in 1863; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
@@ -67,12 +75,16 @@ DefineSettlement("buenos-aires", {
 	CulturalNames = {
 		"castillian", "Buenos Aires"
 	},
+	Cores = {
+		"argentina"
+	},
 	HistoricalOwners = {
 		1535, "spain", -- Buenos Ayres was founded by the Spanish in 1535/1580; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 107-110.
 		1810, "argentina" -- Argentina became independent in 1810/1816; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
 	},
 	HistoricalBuildings = {
-		1535, 0, "town-hall"
+		1535, 0, "town-hall",
+		1784, 0, "university" -- College or seminary founded in Buenos Aires in 1784. Source: Enrique Martínez Ruiz; Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 226.
 	},
 	Regions = {"america", "south-america"}
 })
@@ -81,8 +93,12 @@ DefineSettlement("corrientes", {
 	Name = "Corrientes",
 	MapTemplate = "earth",
 	Position = {2501, 2673},
+	Major = true,
 	CulturalNames = {
 		"castillian", "Corrientes"
+	},
+	Cores = {
+		"argentina"
 	},
 	HistoricalOwners = {
 		1588, "spain", -- Corrientes was founded in 1588; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
@@ -102,6 +118,9 @@ DefineSettlement("montevideo", {
 	CulturalNames = {
 		"castillian", "Montevideo"
 	},
+	Cores = {
+		"uruguay"
+	},
 	HistoricalOwners = {
 		1723, "spain", -- Montevideo was founded in 1723; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
 		1814, "uruguay", -- Uruguay became independent of Spain in 1814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
@@ -118,8 +137,12 @@ DefineSettlement("santa-fe", {
 	Name = "Santa Fe",
 	MapTemplate = "earth",
 	Position = {2457, 2768},
+	Major = true,
 	CulturalNames = {
 		"castillian", "Santa Fe" -- "Santa Fé"
+	},
+	Cores = {
+		"argentina"
 	},
 	HistoricalOwners = {
 		1573, "spain", -- Santa Fé was founded in 1573; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.

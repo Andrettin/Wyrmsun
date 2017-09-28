@@ -197,6 +197,7 @@ DefineUnitType("unit-teuton-swordsman", {
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
 			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"upgrade-forbidden", "upgrade-gothic-civilization",
 			"weight", 4
 		},
 		{
@@ -208,6 +209,7 @@ DefineUnitType("unit-teuton-swordsman", {
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
 			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"upgrade-forbidden", "upgrade-gothic-civilization",
 			"weight", 2
 		},
 		{
@@ -219,6 +221,7 @@ DefineUnitType("unit-teuton-swordsman", {
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
 			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"upgrade-forbidden", "upgrade-gothic-civilization",
 			"weight", 4
 		},
 		{
@@ -230,6 +233,7 @@ DefineUnitType("unit-teuton-swordsman", {
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
 			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"upgrade-forbidden", "upgrade-gothic-civilization",
 			"weight", 4
 		},
 		{
@@ -411,6 +415,7 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
 			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"upgrade-forbidden", "upgrade-gothic-civilization",
 			"weight", 4
 		},
 		{
@@ -422,6 +427,7 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
 			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"upgrade-forbidden", "upgrade-gothic-civilization",
 			"weight", 2
 		},
 		{
@@ -433,6 +439,7 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
 			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"upgrade-forbidden", "upgrade-gothic-civilization",
 			"weight", 4
 		},
 		{
@@ -444,6 +451,7 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
 			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"upgrade-forbidden", "upgrade-gothic-civilization",
 			"weight", 4
 		},
 		{
@@ -627,6 +635,7 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
 			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"upgrade-forbidden", "upgrade-gothic-civilization",
 			"weight", 4
 		},
 		{
@@ -638,6 +647,7 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
 			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"upgrade-forbidden", "upgrade-gothic-civilization",
 			"weight", 2
 		},
 		{
@@ -649,6 +659,7 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
 			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"upgrade-forbidden", "upgrade-gothic-civilization",
 			"weight", 4
 		},
 		{
@@ -660,6 +671,7 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
 			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"upgrade-forbidden", "upgrade-gothic-civilization",
 			"weight", 4
 		},
 		{
@@ -922,7 +934,8 @@ DefineUnitType("unit-teuton-archer", {
 			"type-name", "Archer",
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization"
+			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"upgrade-forbidden", "upgrade-gothic-civilization"
 		}
 	},
 	Sounds = {
@@ -979,7 +992,8 @@ DefineUnitType("unit-teuton-ritter", {
 			"type-name", "Horseman",
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization"
+			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"upgrade-forbidden", "upgrade-gothic-civilization"
 		}
 	},
 	Sounds = {
@@ -1033,7 +1047,8 @@ DefineUnitType("unit-teuton-knight-lord", {
 			"type-name", "Horselord",
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization"
+			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"upgrade-forbidden", "upgrade-gothic-civilization"
 		}
 	},
 	Sounds = {
@@ -1093,7 +1108,8 @@ DefineUnitType("unit-teuton-priest", {
 			"upgrade-forbidden", "upgrade-deity-christian-god",
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization"
+			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"upgrade-forbidden", "upgrade-gothic-civilization"
 		}
 	},
 	Sounds = {
@@ -1152,7 +1168,8 @@ DefineUnitType("unit-teuton-kogge", {
 			"type-name", "Transport",
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization"
+			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"upgrade-forbidden", "upgrade-gothic-civilization"
 		}
 	},
 	Sounds = {
@@ -1196,7 +1213,8 @@ DefineUnitType("unit-teuton-town-hall", {
 --			"upgrade-required", "upgrade-teuton-masonry",
 --			"upgrade-forbidden", "upgrade-frankish-civilization",
 --			"upgrade-forbidden", "upgrade-suebi-civilization",
---			"upgrade-forbidden", "upgrade-teuton-civilization"
+--			"upgrade-forbidden", "upgrade-teuton-civilization",
+--			"upgrade-forbidden", "upgrade-gothic-civilization"
 --		}
 	},
 	Sounds = {
@@ -1229,7 +1247,8 @@ DefineUnitType("unit-teuton-stronghold", {
 			"type-name", "Stronghold",
 			"upgrade-forbidden", "upgrade-frankish-civilization",
 			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization"
+			"upgrade-forbidden", "upgrade-teuton-civilization",
+			"upgrade-forbidden", "upgrade-gothic-civilization"
 		}
 	},
 	Sounds = {

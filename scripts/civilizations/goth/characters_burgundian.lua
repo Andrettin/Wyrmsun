@@ -28,7 +28,7 @@
 DefineCharacter("gibica", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 91; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
 	Name = "Gibica", -- known as Gjuki in the Norse myths; married to Grimhild
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-gothic-horse-lord",
 	Civilization = "goth",
 	Faction = "burgundian-tribe",
 	DeathDate = 411,
@@ -48,7 +48,7 @@ DefineCharacter("grimhild", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 DefineCharacter("gundahar", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-94; Source: Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
 	Name = "Gundahar", -- also known as Gunnar in Norse myths, as Günter in the Nibelungenlied, and as Gunthere in the Anglo-Saxon poem Widsith
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-gothic-horse-lord", -- king
 	Civilization = "goth",
 	Faction = "burgundy",
 	Trait = "upgrade-generous", -- in the Anglo-Saxon poem "Widsith", Gundahar (Gunthere) gave the poet "a shining treasure" for his songs
@@ -137,19 +137,10 @@ DefineCharacter("gotthorm", { -- Source: Source: Kevin Crossley-Holland, "The No
 	Mother = "grimhild"
 })
 
-DefineCharacter("brynhild", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
-	Name = "Brynhild", -- requested Gotthorm to kill Sigurd
-	Gender = "female",
-	Type = "unit-teuton-swordsman",
-	Civilization = "goth", -- put her as a Burgundian until we have better information
-	Faction = "burgundy"
-	-- comes from the same generation as Gunnar/Gundahar
-})
-
 DefineCharacter("gundioc", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 94-96.
 	Name = "Gundioc", -- Burgundian king after Gundahar; also known as Gunderic
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-gothic-horse-lord", -- king
 	Civilization = "goth",
 	Faction = "burgundy",
 	Date = 437, -- Gundioc became king of the Burgundians in 437 AD
@@ -164,7 +155,7 @@ DefineCharacter("gundioc", { -- Source: Norman Davies, "Vanished Kingdoms", 2012
 DefineCharacter("chilperic", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
 	Name = "Chilperic", -- Burgundian king after Gundioc
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-gothic-horse-lord", -- king
 	Civilization = "goth",
 	Faction = "burgundy",
 	Date = 474, -- beginning of Chilperic's reign over the Burgundians in 474 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
@@ -190,7 +181,7 @@ DefineCharacter("clothilda", { -- Source: Norman Davies, "Vanished Kingdoms", 20
 DefineCharacter("gundobad", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 96-97.
 	Name = "Gundobad", -- Burgundian king after Chilperic; name means "bold in battle"; had the title of Roman patrician; wrote two law codes, the "Lex Romana Burgundionum" and the "Lex Gundobada"
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-gothic-horse-lord", -- king
 	Civilization = "goth",
 	Faction = "burgundy",
 	Trait = "upgrade-wise",
@@ -205,7 +196,7 @@ DefineCharacter("gundobad", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 DefineCharacter("sigismund", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 96, 98.
 	Name = "Sigismund", -- Burgundian king after Gundobad; converted to Catholic Christianity and later became a saint
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-gothic-horse-lord", -- king
 	Civilization = "goth",
 	Faction = "burgundy",
 	Trait = "upgrade-pious",
@@ -220,7 +211,7 @@ DefineCharacter("sigismund", { -- Source: Norman Davies, "Vanished Kingdoms", 20
 DefineCharacter("gundimar", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 96, 99.
 	Name = "Gundimar", -- Burgundian king after Sigismund; also known as Godomar; name means "celebrated in battle"
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-gothic-horse-lord", -- king
 	Civilization = "goth",
 	Faction = "burgundy",
 	Date = 523, -- beginning of Gundimar's reign over the Burgundians in 523 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.

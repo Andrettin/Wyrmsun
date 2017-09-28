@@ -95,6 +95,8 @@ Units = {
 	"upgrade-faction-austrasia", "upgrade-faction-burgundia", "upgrade-faction-east-francia", "upgrade-faction-francia", "upgrade-faction-neustria", "upgrade-faction-salia",
 	"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman", "unit-frank-spearman",
 	"unit-frank-horseman", "unit-frank-knight-lord",
+	"upgrade-gothic-civilization",
+	"unit-gothic-horse-rider", "unit-gothic-horse-lord",
 	"unit-celt-farm",
 	"upgrade-celt-civilization",
 	"upgrade-faction-norlund-clan", "upgrade-faction-oinling-clan", "upgrade-faction-shadowcharm-clan", "upgrade-faction-shinsplitter-clan", "upgrade-faction-shorbear-clan", "upgrade-faction-whitesteel-clan", 
@@ -4371,6 +4373,7 @@ Load("scripts/civilizations/frankish/units.lua")
 Load("scripts/civilizations/germanic/units.lua")
 Load("scripts/civilizations/gnome/units.lua")
 Load("scripts/civilizations/goblin/units.lua")
+Load("scripts/civilizations/goth/units.lua")
 Load("scripts/civilizations/kobold/units.lua")
 Load("scripts/civilizations/suebi/units.lua")
 Load("scripts/civilizations/teuton/units.lua")

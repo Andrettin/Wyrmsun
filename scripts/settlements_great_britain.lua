@@ -159,7 +159,8 @@ DefineSettlement("bristol", {
 		1560, "england" -- Bristol's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		802, 0, "farm"
+		802, 1909, "farm",
+		1909, 0, "university" -- University founded in Bristol in 1909; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })

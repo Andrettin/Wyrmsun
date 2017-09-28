@@ -3607,9 +3607,6 @@ DefineProvince("Somerset", {
 	HistoricalClaims = {
 		43, "latin", "rome"
 	},
-	HistoricalModifiers = {
-		1909, "upgrade-university", true -- University founded in Bristol in 1909; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
-	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 

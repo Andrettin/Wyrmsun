@@ -28,7 +28,7 @@
 DefineCharacter("hraudung", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 59.
 	Name = "Hraudung", -- king of the Goths in the Lay of Grimnir
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-gothic-horse-lord", -- king
 	Civilization = "goth",
 	Faction = "goth-tribe"
 })
@@ -65,7 +65,7 @@ DefineCharacter("agnar-ii", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 DefineCharacter("airmanareiks", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 225-226, 536, 552; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 22; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18.
 	Name = "Airmanareiks", -- king of the East Goths; also known as Ermanaric or Ermanarich; known as Ermenrich in High German; known as Jormunrek in the Norse myths; in Norse tradition, slew his own sons; in the Norse myths married with Sigurd's daughter Svanhild and slew her (it would, however, have been impossible for Sigurd to be a contemporary of Gundahar/Gunnar and his daughter and Ermanaric have married); in the Dietrich saga, was the uncle of Dietrich who expelled him from his possessions (he could not have been a contemporary of Dietrich/Theodoric, however)
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-gothic-horse-lord", -- king
 	Civilization = "goth",
 	Faction = "ostrogoth-tribe",
 	Trait = "upgrade-cruel", -- described as generous, cruel, wrathful, faithless, savage; Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxx.
@@ -89,7 +89,7 @@ DefineCharacter("walamer-amelung", { -- Source: F. E. Sandbach, "The Heroic Saga
 	Name = "Walamer", -- king of the Ostrogoths; invaded Illyria in 462 AD
 	FamilyName = "Amelung",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-gothic-horse-lord", -- king
 	Civilization = "goth",
 	Faction = "ostrogoth-tribe",
 	Date = 453, -- ruled over the Ostrogoths when Attila died and his Hunnic empire collapsed in 453 AD
@@ -128,7 +128,7 @@ DefineCharacter("thiudareiks-amelung", { -- Source: F. E. Sandbach, "The Heroic 
 	Name = "Thiudareiks", -- "Þiudareiks"; tentative rendering of the name in Gothic, based on the cognates of the German version of the name, "Dietrich"; also known as "Theoderic"
 	FamilyName = "Amelung",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-gothic-horse-lord", -- king
 	Civilization = "goth",
 	Faction = "ostrogoth-tribe",
 	Date = 454, -- born (was 8 years old in 462 AD)
@@ -142,7 +142,7 @@ DefineCharacter("thiudareiks-amelung", { -- Source: F. E. Sandbach, "The Heroic 
 DefineCharacter("odoacer", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 7-9.
 	Name = "Odoacer",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-gothic-horse-lord",
 	Civilization = "goth",
 	Date = 480, -- Odoacer deposed Romulus Augustus in 480 AD, going then on to rule Italy as an independent king
 	DeathDate = 493, -- was put to death by Theoderic in 493 AD
@@ -164,8 +164,18 @@ DefineCharacter("vulfshardus", { -- Source: F. E. Sandbach, "The Heroic Saga-Cyc
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "ostrogoth-tribe",
-	-- contemporary of Theoderic
+	Faction = "ostrogoth-tribe"
+})
+
+DefineCharacter("brunichilde", { -- daughter of the Visigothic king Athanagild; refined, attractive, good-mannered, intelligent and socially affable; became Brünhild in the myths; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, pp. 328, 330.
+	Name = "Brunichilde",
+	Gender = "female",
+	Type = "unit-gothic-horse-rider",
+	Civilization = "goth",
+	Faction = "visigothia",
+	Trait = "upgrade-intelligent",
+	DeathDate = 613 -- died in 613
+	-- in the Norse myths, Brynhild requested Gotthorm to kill Sigurd; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
 })
 
 Load("scripts/civilizations/goth/characters_burgundian.lua")

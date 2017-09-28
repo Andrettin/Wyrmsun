@@ -38,6 +38,12 @@ DefineSettlement("aarhus", {
 		"charude-tribe",
 		"jute-tribe"
 	},
+	HistoricalOwners = {
+		1560, "denmark" -- Aarhuus was a part of Denmark in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		1560, 0, "town-hall"
+	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 

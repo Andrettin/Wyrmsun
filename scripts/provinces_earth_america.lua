@@ -33,7 +33,6 @@ DefineProvince("Argentina", {
 	Coastal = true,
 	HistoricalModifiers = {
 		1700, "upgrade-college", true, -- College or seminary founded in Cordoba in 1700(?). Source: Enrique Martínez Ruiz; Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 226.
-		1784, "upgrade-college", true, -- College or seminary founded in Buenos Aires in 1784. Source: Enrique Martínez Ruiz; Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 226.
 --		1795, "upgrade-college", false -- College or seminary abolished in Cordoba in 1795(?). Source: Enrique Martínez Ruiz; Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 226.
 	},
 	Regions = {"america", "south-america"}
@@ -175,32 +174,6 @@ DefineProvince("Ontario", {
 	Regions = {"america", "north-america"}
 })
 
-DefineProvince("Paraguay", {
-	World = "earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
-	HistoricalModifiers = {
-		1776, "upgrade-college", true -- College or seminary founded in Asuncion in 1776. Source: Enrique Martínez Ruiz; Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 226.
-	},
-	Regions = {"america", "south-america"}
-})
-
-DefineProvince("Pernambuco", {
-	World = "earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
-	Coastal = true,
-	Claims = {
-		"portuguese", "brazil"
-	},
-	HistoricalModifiers = {
-		1828, "upgrade-college", true -- Law college founded in Olinda in 1828. Source: Jeffrey D. Needell, “Party Formation and State-Making: The Conservative Party and the Reconstruction of the Brazilian State, 1831-1840”, Hispanic American Historical Review, vol. 81, 2001, p. 293.
-	},
-	Regions = {"america", "south-america"}
-})
-
 DefineProvince("Peru", {
 	World = "earth",
 	Tiles = {},
@@ -224,15 +197,7 @@ DefineProvince("Rio de Janeiro", {
 	Claims = {
 		"portuguese", "brazil"
 	},
-	HistoricalPopulation = {
-		-- In 1872, the population of the city of Rio de Janeiro was 274,972; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 4.
-		-- In 1890, the population of the city of Rio de Janeiro was 522,651; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 4.
-		-- In 1900, the population of the city of Rio de Janeiro was 691,565; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 4.
-		-- In 1906, the population of the city of Rio de Janeiro was 811,444; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 4.
-	},
 	HistoricalModifiers = {
-		1859, "upgrade-tramway-network", true, -- the tramway line of the "Companhia de Carris de Ferro da Cidade à Boavista" (tramway company) began operations in 1859; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 6.
-		1862, "upgrade-college", true, -- Instituto Politécnico Brasileiro founded in Rio de Janeiro in 1862. Source: Silvia Fernanda de Mendonça Figueirôa, "Ciência e tecnologia no Brasil Imperial: Guilherme Schüch, Barão de Capanema (1824-1908)", 2005, p. 446.
 		1865, "upgrade-tramway-network", true, -- the "Companhia Locomotora" (tramway company) was founded in 1865; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 12.
 		1868, "upgrade-tramway-network", true, -- first part of the tramway line of the "Companhia do Caminho de Carris de Ferro do Jardim Botânico" (tramway company) was completed in 1868; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", pp. 7-9.
 		1873, "upgrade-tramway-network", true, -- first part of the tramway lines of the "Companhia Ferro-Carril de Sao Cristovao" (tramway company) began operations in 1873; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", pp. 9-10.
@@ -255,22 +220,6 @@ DefineProvince("Santo Domingo", {
 		1538, "upgrade-university", true -- University C. Sto. Tomás founded in Santo Domingo in 1538. Source: Enrique Martínez Ruiz; Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 226.
 	},
 	Regions = {"america", "caribbean"}
-})
-
-DefineProvince("Sao Paulo", {
-	World = "earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
-	Coastal = true,
-	Claims = {
-		"portuguese", "brazil"
-	},
-	HistoricalModifiers = {
-		1827, "upgrade-college", true, -- Law college existent in São Paulo in 1827. Source: Otávio Tarquínio de Sousa, "Bernardo Pereira de Vasconcelos", p. 66.
-		1904, "upgrade-tramway-network", true -- the "Sao Paulo Tramway Light and Power Co. Ltd." (tramway and electricity generation company) already existed by 1904; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", pp. 20-21.
-	},
-	Regions = {"america", "south-america"}
 })
 
 DefineProvince("Venezuela", {

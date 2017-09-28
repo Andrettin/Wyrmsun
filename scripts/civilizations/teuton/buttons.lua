@@ -62,7 +62,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-3",
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-teuton-coinage",
 	Action = "harvest",
-	Allowed = "check-upgrade-or", AllowArg = {"upgrade-germanic-civilization", "upgrade-anglo-saxon-civilization", "upgrade-english-civilization", "upgrade-frankish-civilization", "upgrade-suebi-civilization", "upgrade-teuton-civilization", "upgrade-celt-civilization"},
+	Allowed = "check-upgrade-or", AllowArg = {"upgrade-germanic-civilization", "upgrade-anglo-saxon-civilization", "upgrade-english-civilization", "upgrade-frankish-civilization", "upgrade-suebi-civilization", "upgrade-teuton-civilization", "upgrade-gothic-civilization", "upgrade-celt-civilization"},
 	Key = "t", Hint = "~!Trade", Popup = "popup-commands",
 	Description = "Trade with foreign markets",
 	ForUnit = {
@@ -348,6 +348,7 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-christianity",
 		"unit-teuton-spearman", "unit-frank-spearman", "unit-teuton-archer",
 		"unit-teuton-ritter", "unit-teuton-knight-lord",
 		"unit-frank-horseman", "unit-frank-knight-lord",
+		"unit-gothic-horse-rider", "unit-gothic-horse-lord",
 		"unit-teuton-priest"
 	}
 })
@@ -362,6 +363,7 @@ DefineButton( { Pos = 10, Level = 0, Icon = "icon-odin",
 		"unit-teuton-spearman", "unit-frank-spearman", "unit-teuton-archer",
 		"unit-teuton-ritter", "unit-teuton-knight-lord",
 		"unit-frank-horseman", "unit-frank-knight-lord",
+		"unit-gothic-horse-rider", "unit-gothic-horse-lord",
 		"unit-teuton-priest"
 	}
 })
@@ -376,6 +378,7 @@ DefineButton( { Pos = 11, Level = 0, Icon = "icon-thor",
 		"unit-teuton-spearman", "unit-frank-spearman", "unit-teuton-archer",
 		"unit-teuton-ritter", "unit-teuton-knight-lord",
 		"unit-frank-horseman", "unit-frank-knight-lord",
+		"unit-gothic-horse-rider", "unit-gothic-horse-lord",
 		"unit-teuton-priest"
 	}
 })

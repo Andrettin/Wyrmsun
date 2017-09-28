@@ -69,6 +69,7 @@ DefineSettlement("lisbon", {
 	Name = "Lisbon",
 	MapTemplate = "earth",
 	Position = {3632, 1166},
+	Major = true,
 	CulturalNames = {
 		"latin", "Olisipo", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		"portuguese", "Lisbon"
@@ -89,6 +90,7 @@ DefineSettlement("oporto", {
 	Name = "Oporto",
 	MapTemplate = "earth",
 	Position = {3645, 1113},
+	Major = true,
 	CulturalNames = {
 		"portuguese", "Oporto"
 	},
