@@ -55,7 +55,8 @@ DefineFaction("geat-tribe", {
 	Civilization = "norse",
 	Type = "tribe",
 	Colors = {"teal"},
-	DefaultAI = "sea-attack"
+	DefaultAI = "sea-attack",
+--	DevelopsFrom = {"goth-tribe"}
 })
 
 DefineFaction("gute-tribe", {

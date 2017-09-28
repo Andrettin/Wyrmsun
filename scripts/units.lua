@@ -96,6 +96,8 @@ Units = {
 	"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman", "unit-frank-spearman",
 	"unit-frank-horseman", "unit-frank-knight-lord",
 	"upgrade-gothic-civilization",
+	"upgrade-faction-burgundian-tribe", "upgrade-faction-goth-tribe",
+	"upgrade-faction-burgundy", "upgrade-faction-gothia",
 	"unit-gothic-horse-rider", "unit-gothic-horse-lord",
 	"unit-celt-farm",
 	"upgrade-celt-civilization",

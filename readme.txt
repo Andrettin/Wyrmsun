@@ -65,6 +65,7 @@ https://github.com/Andrettin/Wyrmsun
 - Stone piles are now always generated with 400 stone (previously they were randomly generated with 200 or 400 stone).
 - Fixed issue which caused Germanic AI players to not automatically pick a faction in custom games.
 - Fixed issue which caused the required settlements for a faction to be displayed even outside of the Scenario mode.
+- The Gothic civilization is now playable.
 
 * Units
 - Added dwarven Thunderer (icon by Jinn and unit graphics by Jinn and b_o).
