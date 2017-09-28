@@ -25,6 +25,15 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+-- Buildings -----------------------------------------------------
+
+DefineButton( { Pos = 1, Level = 1,
+	Action = "build", Value = "unit-ettin-town-hall",
+	Key = "h", Hint = "Build Mead ~!Hall", Popup = "popup-building",
+	ForUnit = {
+	}
+})
+
 -- Mercenaries
 
 DefineButton( { Pos = 1, Level = 0,

@@ -65,3 +65,22 @@ DefineUnitType("unit-ettin", {
 		"miss", "attack-miss"
 	}
 } )
+
+DefineUnitType("unit-ettin-town-hall", {
+	Name = "Mead Hall",
+	Parent = "unit-template-town-hall",
+	Civilization = "ettin",
+	Image = {"file", "dwarf/buildings/town_hall.png", "size", {128, 128}},
+	Shadow = {"file", "dwarf/buildings/town_hall_shadow.png", "size", {128, 128}},
+	Icon = "icon-dwarven-town-hall",
+	Costs = {"lumber", 0, "stone", 2400},
+	RepairCosts = {"lumber", 0, "stone", 1},
+	FireResistance = 20,
+	ButtonHint = "Build Mead ~!Hall",
+	Drops = {"unit-stone-pile"},
+	AiDrops = {"unit-boots"},
+	SpawnUnits = {"unit-ettin"},
+	Sounds = {
+		"help", "basic-dwarf-voices-help-town"
+	}
+})

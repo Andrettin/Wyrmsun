@@ -40,7 +40,7 @@ DefineSettlement("geirrods-hall", { -- Source: Carolyne Larrington, "The Norse M
 		-1101, "geirrodung-clan" -- should be present for Thialfi's scenario
 	},
 	HistoricalBuildings = {
---		-1101, 0, "town-hall"
+		-1101, 0, "town-hall"
 	},
 	Regions = {}
 })
