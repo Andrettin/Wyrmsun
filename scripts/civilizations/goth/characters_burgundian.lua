@@ -34,7 +34,13 @@ DefineCharacter("gibica", { -- Source: Norman Davies, "Vanished Kingdoms", 2012,
 	DeathDate = 411,
 	HistoricalTitles = {
 		"head-of-state", 0, 411, "burgundian-tribe"
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("grimhild", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 226, 519.
@@ -42,7 +48,13 @@ DefineCharacter("grimhild", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "goth",
-	Faction = "burgundian-tribe"
+	Faction = "burgundian-tribe",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("gundahar", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-94; Source: Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
@@ -59,7 +71,13 @@ DefineCharacter("gundahar", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	Mother = "grimhild",
 	HistoricalTitles = {
 		"head-of-state", 411, 437, "burgundy" -- Kingdom of the Burgundians established by Gundahar (a Burgundian tribal chief) in 411 AD, with its center in Borbetomagus (Worms); Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-93.
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe" or GetPlayerData(trigger_player, "Faction") == "burgundy") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("glaumvor", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 502.
@@ -67,8 +85,13 @@ DefineCharacter("glaumvor", { -- Source: Henry Adams Bellows (transl.), "The Poe
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "goth",
-	Faction = "burgundy"
-	-- comes from the same generation as Gunnar/Gundahar
+	Faction = "burgundy",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe" or GetPlayerData(trigger_player, "Faction") == "burgundy") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("gudrun", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94; Source: Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
@@ -78,7 +101,13 @@ DefineCharacter("gudrun", { -- Source: Norman Davies, "Vanished Kingdoms", 2012,
 	Civilization = "goth",
 	Faction = "burgundy",
 	Father = "gibica",
-	Mother = "grimhild"
+	Mother = "grimhild",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe" or GetPlayerData(trigger_player, "Faction") == "burgundy") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("hogni", { -- Source: Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
@@ -88,7 +117,13 @@ DefineCharacter("hogni", { -- Source: Source: Kevin Crossley-Holland, "The Norse
 	Civilization = "goth",
 	Faction = "burgundy",
 	Father = "gibica",
-	Mother = "grimhild"
+	Mother = "grimhild",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe" or GetPlayerData(trigger_player, "Faction") == "burgundy") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("kostbera", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 502-503.
@@ -97,7 +132,13 @@ DefineCharacter("kostbera", { -- Source: Henry Adams Bellows (transl.), "The Poe
 	Type = "unit-teuton-archer",
 	Civilization = "goth",
 	Faction = "burgundy",
-	Trait = "upgrade-wise" -- kind; wise and cunning in rune-craft
+	Trait = "upgrade-wise", -- kind; wise and cunning in rune-craft
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe" or GetPlayerData(trigger_player, "Faction") == "burgundy") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("orkning", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 509-510.
@@ -105,7 +146,13 @@ DefineCharacter("orkning", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "burgundy"
+	Faction = "burgundy",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe" or GetPlayerData(trigger_player, "Faction") == "burgundy") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("snaevar", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 509, 517.
@@ -115,7 +162,13 @@ DefineCharacter("snaevar", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Civilization = "goth",
 	Faction = "burgundy",
 	Father = "hogni",
-	Mother = "kostbera"
+	Mother = "kostbera",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "burgundy") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("solar", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 509, 517.
@@ -125,7 +178,13 @@ DefineCharacter("solar", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 	Civilization = "goth",
 	Faction = "burgundy",
 	Father = "hogni",
-	Mother = "kostbera"
+	Mother = "kostbera",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "burgundy") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("gotthorm", { -- Source: Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 226, 533.
@@ -134,7 +193,13 @@ DefineCharacter("gotthorm", { -- Source: Source: Kevin Crossley-Holland, "The No
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
 	Faction = "burgundy",
-	Mother = "grimhild"
+	Mother = "grimhild",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe" or GetPlayerData(trigger_player, "Faction") == "burgundy") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("gundioc", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 94-96.
@@ -149,7 +214,13 @@ DefineCharacter("gundioc", { -- Source: Norman Davies, "Vanished Kingdoms", 2012
 	Mother = "glaumvor", -- if he was a child of Gundahar's, then his mother would likely be Glaumvor
 	HistoricalTitles = {
 		"head-of-state", 437, 474, "burgundy"
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "burgundy") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("chilperic", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
@@ -163,7 +234,13 @@ DefineCharacter("chilperic", { -- Source: Norman Davies, "Vanished Kingdoms", 20
 	Father = "gundioc", -- from Gibica's line (so presumably a child of Gundioc's)
 	HistoricalTitles = {
 		"head-of-state", 474, 480, "burgundy"
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "burgundy") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("clothilda", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 97.
@@ -175,7 +252,13 @@ DefineCharacter("clothilda", { -- Source: Norman Davies, "Vanished Kingdoms", 20
 	Trait = "upgrade-pious",
 	Date = 474, -- born
 	DeathDate = 545, -- died
-	Father = "chilperic"
+	Father = "chilperic",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "burgundy") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("gundobad", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 96-97.
@@ -190,7 +273,13 @@ DefineCharacter("gundobad", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	Father = "gundioc", -- was Chilperic's brother, so presumably a child of Gundioc's
 	HistoricalTitles = {
 		"head-of-state", 480, 516, "burgundy"
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "burgundy") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("sigismund", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 96, 98.
@@ -205,7 +294,13 @@ DefineCharacter("sigismund", { -- Source: Norman Davies, "Vanished Kingdoms", 20
 	Father = "gundobad", -- son of Gundobad
 	HistoricalTitles = {
 		"head-of-state", 516, 523, "burgundy"
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "burgundy") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("gundimar", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 96, 99.
@@ -220,5 +315,11 @@ DefineCharacter("gundimar", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	Father = "sigismund", -- from Gibica's line (so presumably a child of Sigismund's)
 	HistoricalTitles = {
 		"head-of-state", 523, 534, "burgundy"
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "burgundy") then
+			return true
+		end
+		return false
+	end
 })

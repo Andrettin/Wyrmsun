@@ -72,7 +72,13 @@ DefineCharacter("airmanareiks", { -- Source: Henry Adams Bellows (transl.), "The
 	DeathDate = 376, -- died
 	HistoricalTitles = {
 		"head-of-state", 0, 376, "ostrogoth-tribe"
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "ostrogoth-tribe") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("frithareiks", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 26.
@@ -82,7 +88,13 @@ DefineCharacter("frithareiks", { -- Source: F. E. Sandbach, "The Heroic Saga-Cyc
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
 	Faction = "ostrogoth-tribe",
-	Father = "airmanareiks"
+	Father = "airmanareiks",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "ostrogoth-tribe") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("walamer-amelung", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
@@ -96,7 +108,13 @@ DefineCharacter("walamer-amelung", { -- Source: F. E. Sandbach, "The Heroic Saga
 	DeathDate = 472, -- died
 	HistoricalTitles = {
 		"head-of-state", 453, 472, "ostrogoth-tribe"
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "ostrogoth-tribe") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("theodemer-amelung", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7.
@@ -110,7 +128,13 @@ DefineCharacter("theodemer-amelung", { -- Source: F. E. Sandbach, "The Heroic Sa
 	DeathDate = 474, -- died
 	HistoricalTitles = {
 		"head-of-state", 472, 474, "ostrogoth-tribe" -- by 472 AD Theodemer has become king of the Ostrogoths; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7.
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "ostrogoth-tribe") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("widemer-amelung", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
@@ -119,8 +143,13 @@ DefineCharacter("widemer-amelung", { -- Source: F. E. Sandbach, "The Heroic Saga
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "ostrogoth-tribe"
-	-- same generation as Walamer
+	Faction = "ostrogoth-tribe",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "ostrogoth-tribe") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("thiudareiks-amelung", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7, 9.
@@ -136,7 +165,13 @@ DefineCharacter("thiudareiks-amelung", { -- Source: F. E. Sandbach, "The Heroic 
 	Father = "theodemer-amelung",
 	HistoricalTitles = {
 		"head-of-state", 474, 526, "ostrogoth-tribe" -- In 474 AD the Ostrogoths left Pannonia to settle in Macedonia under the aegis of the Eastern Roman Emperor, and in that same year Theodemer died, being succeeded by Theoderic; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 7.
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "ostrogoth-tribe" or GetPlayerData(trigger_player, "Faction") == "ostrogothia") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("odoacer", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 7-9.
@@ -164,7 +199,13 @@ DefineCharacter("vulfshardus", { -- Source: F. E. Sandbach, "The Heroic Saga-Cyc
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "ostrogoth-tribe"
+	Faction = "ostrogoth-tribe",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "ostrogoth-tribe" or GetPlayerData(trigger_player, "Faction") == "ostrogothia") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("brunichilde", { -- daughter of the Visigothic king Athanagild; refined, attractive, good-mannered, intelligent and socially affable; became Brünhild in the myths; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, pp. 328, 330.
@@ -174,8 +215,14 @@ DefineCharacter("brunichilde", { -- daughter of the Visigothic king Athanagild; 
 	Civilization = "goth",
 	Faction = "visigothia",
 	Trait = "upgrade-intelligent",
-	DeathDate = 613 -- died in 613
+	DeathDate = 613, -- died in 613
 	-- in the Norse myths, Brynhild requested Gotthorm to kill Sigurd; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "visigoth-tribe" or GetPlayerData(trigger_player, "Faction") == "visigothia") then
+			return true
+		end
+		return false
+	end
 })
 
 Load("scripts/civilizations/goth/characters_burgundian.lua")
