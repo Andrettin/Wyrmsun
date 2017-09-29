@@ -39,10 +39,11 @@ DefineSettlement("aarhus", {
 		"jute-tribe"
 	},
 	HistoricalOwners = {
+		-1599, "jarling-tribe",
 		1560, "denmark" -- Aarhuus was a part of Denmark in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		1560, 0, "town-hall"
+		-1599, 0, "town-hall"
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
@@ -58,7 +59,7 @@ DefineSettlement("brodrene-gram", {
 		-1500, "jarling-tribe"
 	},
 	HistoricalBuildings = {
-		-1500, -1300, "town-hall" -- a longhouse existed in Brødrene Gram (in southern Jutland) in the period II of the Nordic Bronze Age (1500-1300 BC), interpreted as a chiefly residence; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 73, 77-78.
+		-1500, -1300, "farm" -- a longhouse existed in Brødrene Gram (in southern Jutland) in the period II of the Nordic Bronze Age (1500-1300 BC), interpreted as a chiefly residence; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 73, 77-78.
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })

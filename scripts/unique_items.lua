@@ -370,9 +370,10 @@ DefineUniqueItem("shorbear-hold", {
 DefineUniqueItem("skidbladnir", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 101.
 	Name = "Skidbladnir",
 	Type = "unit-dwarven-transport-ship",
-	Prefix = "upgrade-item-prefix-impregnable",
-	Suffix = "upgrade-item-suffix-of-swiftness",
-	Description = "Skidbladnir was a ship built by the sons of Ivaldi for Modsognir. Its magnificent sail provided the sleek ship with great speed.",
+	Prefix = "upgrade-item-prefix-swift-boots",
+--	Suffix = "upgrade-item-suffix-of-swiftness",
+	Suffix = "upgrade-item-suffix-of-ethereal-vision",
+	Description = "Skidbladnir was a ship built by the sons of Ivaldi for Modsognir. Its magnificent sail provided the sleek ship with great speed. Some say that it is capable of travelling between worlds...",
 	Quote = "\"In days of old did Ivaldi's sons\nSkidbladnir fashion fair,\nThe best of ships for the bright god Frey,\nThe noble son of Njord.\"\n- Grimnismol",
 	Background = "Skidbladnir appeared in Norse mythology as a ship crafted by the sons of Ivaldi for Norse god Frey. The vessel was said to always have fair wind, and could be folded up until it fit into a pocket. The ship's name means \"wooden-bladed\" in Old Norse."
 } )

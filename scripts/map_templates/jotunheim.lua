@@ -27,3 +27,5 @@
 
 JotunheimStartX = 0
 JotunheimStartY = 0
+
+SetMapTemplateLayerConnector("jotunheim", "unit-portal", {723, 335}, "earth")

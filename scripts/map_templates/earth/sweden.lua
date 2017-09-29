@@ -112,3 +112,9 @@ SetMapTemplateHero("earth", "thialfi", "thielung-tribe", {4218, 734}, -1101, -11
 SetMapTemplateUnit("earth", "unit-germanic-worker", "thielung-tribe", {4218, 734}, -1101, -1100)
 SetMapTemplateUnit("earth", "unit-germanic-worker", "thielung-tribe", {4218, 734}, -1101, -1100)
 SetMapTemplateUnit("earth", "unit-germanic-transport-ship", "thielung-tribe", {4218, 734}, -1101, -1100)
+
+
+
+
+-- portal near Gotland for Thialfi to use
+SetMapTemplateLayerConnector("earth", "unit-portal", {4270, 723}, "jotunheim")

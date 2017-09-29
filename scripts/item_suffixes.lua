@@ -75,6 +75,13 @@ DefineUpgrade("upgrade-item-suffix-of-diligence", {
 	MagicLevel = 1
 })
 
+DefineUpgrade("upgrade-item-suffix-of-ethereal-vision", {
+	Name = "of Ethereal Vision",
+	MagicSuffix = true,
+--	ItemSuffix = {"amulet", true, "ring", true},
+	MagicLevel = 4
+})
+
 DefineUpgrade("upgrade-item-suffix-of-extinguishment", {
 	Name = "of Extinguishment",
 	MagicSuffix = true,
@@ -291,6 +298,10 @@ DefineModifier("upgrade-item-suffix-of-diligence",
 	{"TimeEfficiencyBonus", 10}
 )
 
+DefineModifier("upgrade-item-suffix-of-ethereal-vision",
+	{"EtherealVision", 1}
+)
+
 DefineModifier("upgrade-item-suffix-of-extinguishment",
 	{"FireResistance", 30}
 )
@@ -424,6 +435,10 @@ DefineDependency("upgrade-item-suffix-of-the-colossus",
 
 DefineDependency("upgrade-item-suffix-of-diligence",
 	{"upgrade-deity-domain-temperance"}
+)
+
+DefineDependency("upgrade-item-suffix-of-ethereal-vision",
+	{"upgrade-deity-domain-aether"}, "or", {"upgrade-deity-domain-magic"}
 )
 
 DefineDependency("upgrade-item-suffix-of-extinguishment",

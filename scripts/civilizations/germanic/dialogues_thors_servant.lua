@@ -60,7 +60,7 @@ DefineDialogue("thors-servant-temple-complete", {
 	Nodes = {
 		{
 			"speaker", "character", "thialfi",
-			"text", "The temple to Thunraz is finished. The god's "
+			"text", "The temple to Thunraz is finished. The god's might shall now protect this island."
 		},
 		{
 			"speaker", "character", "thialfi",
@@ -83,3 +83,27 @@ DefineDialogue("berserker-brides-arrive-on-hlesey", { -- Source: Kevin Crossley-
 		}
 	}
 })
+
+DefineDialogue("thors-servant-berserker-brides-killed", {
+	Nodes = {
+		{
+			"speaker", "character", "thialfi",
+			"text", "How foolish those wild folk were, to think they could attack ships without fearing revenge."
+		},
+		{
+			"speaker", "character", "thialfi",
+			"text", "The priests have brought me something exquisite... a true beauty, she is."
+		},
+		{
+			"speaker", "character", "thialfi",
+			"text", "A ship, they say of dwarven making, and used by the gods themselves. I had never seen such a sturdy vessel before... The sacred men tell me that its purpose is to take me to another world, the realm of the giants, through a magic passage near my island that can only be seen with the ship's magic. Once there I shall slay the ettin Geirrod, who has given much trouble to the few friends the gods have in the giants' realm. I, Thunraz's hammer, shall bring the monster his end!",
+			"option-effects", {
+				function(s)
+					unit = CreateUnit("unit-dwarven-transport-ship", trigger_player, {Players[trigger_player].StartPos.x, Players[trigger_player].StartPos.y})
+					SetUnitVariable(unit, "Unique", "skidbladnir")
+				end
+			}
+		}
+	}
+})
+

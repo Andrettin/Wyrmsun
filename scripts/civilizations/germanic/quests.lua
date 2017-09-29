@@ -440,7 +440,7 @@ DefineQuest("thors-servant-thors-temple", {
 	BuildSettlementUnits = {"visby", "unit-germanic-temple", 1},
 	ResearchUpgrades = {"upgrade-deity-thor"},
 	Unobtainable = true,
-	Unfailable = true, -- to prevent the mission failing from a lack of a Carpenter's Shop
+	Unfailable = true, -- to prevent the mission failing due to a lack of a Carpenter's Shop
 	Competitive = true
 })
 
@@ -470,6 +470,7 @@ DefineQuest("slay-the-berserker-brides-at-hlesey", { -- Source: Kevin Crossley-H
 					SetUnitVariable(thialfi_unit, "Xp", xp_required)
 				end
 			end
+			CallDialogue("thors-servant-berserker-brides-killed", trigger_player)
 		end
 	end,
 	Objectives = {"- Destroy the Hlesings"},
