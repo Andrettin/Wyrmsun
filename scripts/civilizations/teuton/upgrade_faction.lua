@@ -126,7 +126,7 @@ DefineUpgrade("upgrade-faction-drenthe", {
 
 DefineUpgrade("upgrade-faction-franconia", {
 	Name = "Franconia",
-	EffectsString = "+10 HP for Ritters",
+	EffectsString = "+10 HP for Knights",
 	RequirementsString = "Writing and Masonry"
 })
 
@@ -150,13 +150,13 @@ DefineUpgrade("upgrade-faction-holland", {
 
 DefineUpgrade("upgrade-faction-holy-rome", {
 	Name = "Holy Rome",
-	EffectsString = "+2 Armor for Ritters",
+	EffectsString = "+2 Armor for Knights",
 	RequirementsString = "Writing, Masonry, Christianity, no other Frankish, Suebi or Teuton faction exists, no other faction is Rome"
 })
 
 DefineUpgrade("upgrade-faction-lombardy", {
 	Name = "Lombardy",
-	EffectsString = "+2 Damage for Ritters",
+	EffectsString = "+2 Damage for Knights",
 	RequirementsString = "Writing and Masonry"
 })
 
@@ -174,7 +174,7 @@ DefineUpgrade("upgrade-faction-mecklenburg", {
 
 DefineUpgrade("upgrade-faction-netherlands", {
 	Name = "Netherlands",
-	EffectsString = "+5% Copper Processing for Rathauses and Burgs",
+	EffectsString = "+5% Copper Processing for Town Halls and Strongholds",
 	RequirementsString = "Writing, Masonry, no other faction is Brabant, Drenthe, Holland or Overijssel"
 })
 
@@ -186,7 +186,7 @@ DefineUpgrade("upgrade-faction-overijssel", {
 
 DefineUpgrade("upgrade-faction-prussia", {
 	Name = "Prussia",
-	EffectsString = "+2 Damage for Ritters",
+	EffectsString = "+2 Damage for Knights",
 	RequirementsString = "Writing, Masonry, Burg and Barracks"
 })
 

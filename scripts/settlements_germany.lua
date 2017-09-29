@@ -415,7 +415,7 @@ DefineSettlement("mittelberg", {
 })
 
 DefineSettlement("munster", {
-	Name = "Münster",
+	Name = "Munster",
 	MapTemplate = "earth",
 	Position = {3992, 865},
 	Major = true,

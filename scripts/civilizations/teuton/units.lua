@@ -761,11 +761,12 @@ DefineUnitType("unit-teuton-archer", {
 } )
 
 DefineUnitType("unit-teuton-ritter", {
-	Name = "Ritter",
+--	Name = "Ritter",
+	Name = "Knight",
 	Parent = "unit-template-cavalry",
 	Civilization = "teuton",
 	Description = "The Teutons excel in mounted combat. Their well-armored and trained heavy cavalry strikes fear in the hearts of their enemies whenever they are seen upon the battlefield.",
-	Background = "\"Ritter\" is the German word for \"knight\".",
+--	Background = "\"Ritter\" is the German word for \"knight\".",
 	Image = {"file", "teuton/units/ritter.png", "size", {72, 72}},
 	LayerImages = {
 		{"layer", "shield", "file", "teuton/units/ritter_shield.png"}
@@ -785,28 +786,11 @@ DefineUnitType("unit-teuton-ritter", {
 	HackDamage = true,
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
-	ButtonKey = "t",
-	ButtonHint = "Train Ri~!tter",
+	ButtonKey = "k",
+	ButtonHint = "Train ~!Knight",
 	RequirementsString = "Smithy and Stables",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Corpse = "unit-human-dead-body",
-	Variations = {
-		{
-			"variation-id", "brown-hair",
-			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-english-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization"
-		},
-		-- English type name for when owned by another civilizations (i.e. Latins)
-		{
-			"variation-id", "brown-hair",
-			"type-name", "Horseman",
-			"upgrade-forbidden", "upgrade-frankish-civilization",
-			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization",
-			"upgrade-forbidden", "upgrade-gothic-civilization"
-		}
-	},
 	Sounds = {
 --		"selected", "basic-teuton-voices-selected-group",
 --		"acknowledge", "basic-teuton-voices-acknowledge",
@@ -819,11 +803,12 @@ DefineUnitType("unit-teuton-ritter", {
 } )
 
 DefineUnitType("unit-teuton-knight-lord", {
-	Name = "Landesherr",
+--	Name = "Landesherr",
+	Name = "Knight Lord",
 	Parent = "unit-template-heroic-cavalry",
 	Civilization = "teuton",
 	Description = "Heavily-armored and possessing years of martial and horse-riding training, Teuton lords sweep the battlefield cutting down their foes.",
-	Background = "\"Landesherr\" is a German word for \"landed lord\".",
+--	Background = "\"Landesherr\" is a German word for \"landed lord\".",
 	Image = {"file", "teuton/units/ritter.png", "size", {72, 72}},
 	LayerImages = {
 		{"layer", "shield", "file", "teuton/units/ritter_shield.png"}
@@ -845,23 +830,6 @@ DefineUnitType("unit-teuton-knight-lord", {
 	InvertedSoutheastArms = true,
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing", "unit-elixir-of-strength"},
 	Corpse = "unit-human-dead-body",
-	Variations = {
-		{
-			"variation-id", "brown-hair",
-			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-english-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization"
-		},
-		-- English type name for when owned by another civilizations (i.e. Latins)
-		{
-			"variation-id", "brown-hair",
-			"type-name", "Horselord",
-			"upgrade-forbidden", "upgrade-frankish-civilization",
-			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization",
-			"upgrade-forbidden", "upgrade-gothic-civilization"
-		}
-	},
 	Sounds = {
 --		"selected", "basic-teuton-voices-selected-group",
 --		"acknowledge", "basic-teuton-voices-acknowledge",
@@ -972,11 +940,12 @@ DefineUnitType("unit-teuton-kogge", {
 })
 
 DefineUnitType("unit-teuton-town-hall", {
-	Name = "Rathaus",
+	Name = "Town Hall",
 	Parent = "unit-template-town-hall",
 	Civilization = "teuton",
-	Description = _("The rathaus, or town hall, is the political center of teuton settlements."),
-	Background = _("The appearance of the Rathaus is based on the Tallinn Town Hall, which was originally built by Hanseatic merchants."),
+	Description = "The rathaus, or town hall, is the political center of Teuton settlements.",
+--	Background = "The appearance of the Rathaus is based on the Tallinn Town Hall, which was originally built by Hanseatic merchants.",
+	Background = "The appearance of the Town Hall is based on the Tallinn Town Hall, which was originally built by Hanseatic merchants.",
 	Image = {"file", "teuton/buildings/town_hall.png", "size", {128, 128}},
 	Shadow = {"file", "teuton/buildings/town_hall_shadow.png", "size", {128, 128}},
 	Icon = "icon-teuton-town-hall",
@@ -996,20 +965,8 @@ DefineUnitType("unit-teuton-town-hall", {
 		},
 		{
 			"variation-id", "town-hall",
-			"upgrade-required", "upgrade-teuton-masonry",
---			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
---			"upgrade-forbidden", "upgrade-english-civilization"
-		},
-		-- English type name for when owned by other civilizations
---		{
---			"variation-id", "town-hall",
---			"type-name", "Town Hall",
---			"upgrade-required", "upgrade-teuton-masonry",
---			"upgrade-forbidden", "upgrade-frankish-civilization",
---			"upgrade-forbidden", "upgrade-suebi-civilization",
---			"upgrade-forbidden", "upgrade-teuton-civilization",
---			"upgrade-forbidden", "upgrade-gothic-civilization"
---		}
+			"upgrade-required", "upgrade-teuton-masonry"
+		}
 	},
 	Sounds = {
 --		"help", "basic-teuton-voices-help-town"
@@ -1017,7 +974,8 @@ DefineUnitType("unit-teuton-town-hall", {
 } )
 
 DefineUnitType("unit-teuton-stronghold", {
-	Name = "Burg",
+--	Name = "Burg",
+	Name = "Stronghold",
 	Parent = "unit-template-stronghold",
 	Civilization = "teuton",
 	Description = "These tall and sturdy structures are built on strategic positions, allowing for easier control and protection of their environs.",
@@ -1028,23 +986,6 @@ DefineUnitType("unit-teuton-stronghold", {
 	RequirementsString = "Barracks and Masonry",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	DropSpells = {"spell-anglo-saxon-allegiance", "spell-frank-allegiance", "spell-goth-allegiance", "spell-suebi-allegiance", "spell-teuton-allegiance"},
-	Variations = {
-		{
-			"variation-id", "stronghold",
-			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-english-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization"
-		},
-		-- English type name for when owned by other civilizations (i.e. Latins)
-		{
-			"variation-id", "stronghold",
-			"type-name", "Stronghold",
-			"upgrade-forbidden", "upgrade-frankish-civilization",
-			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization",
-			"upgrade-forbidden", "upgrade-gothic-civilization"
-		}
-	},
 	Sounds = {
 --		"help", "basic-teuton-voices-help-town"
 	}

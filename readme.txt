@@ -73,6 +73,8 @@ https://github.com/Andrettin/Wyrmsun
 - Added Gothic Horse Rider (icon by Exidelo).
 - Renamed Teuton Kriegers to Swordsmen, Adels to Veteran Swordsmen and Truhtins to Warlords.
 - Renamed Teuton Schutzes to Archers.
+- Renamed Teuton Ritters to Knights and Landesherrs to Knight Lords.
+- Renamed the Teuton Rathaus to Town Hall, and the Burg to Stronghold.
 
 * Upgrades
 - Added the Gunpowder upgrade (researchable at the Academy/University), which unlocks gunpowder units.

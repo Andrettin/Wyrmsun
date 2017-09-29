@@ -45,7 +45,7 @@ DefineUpgrade("upgrade-serfdom", {
 	Icon = "icon-serfdom",
 --	Description = ".\n\nEffect: -25% worker cost, -1 worker gathering rate.",
 	Costs = {"time", 200, "copper", 1200},
-	RequirementsString = "Stronghold/Bastion/Burg"
+	RequirementsString = "Stronghold/Bastion"
 })
 
 DefineModifier("upgrade-serfdom",

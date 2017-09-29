@@ -113,7 +113,7 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-germanic-town-hall",
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-teuton-town-hall",
 	Action = "build", Value = "unit-teuton-town-hall",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-masonry"},
-	Key = "h", Hint = "Build Rat~!haus", Popup = "popup-building",
+	Key = "h", Hint = "Build Town ~!Hall", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
@@ -284,7 +284,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-masonry",
 	Action = "research", Value = "upgrade-teuton-masonry",
 	Allowed = "check-single-research",
 	Key = "m", Hint = "Research ~!Masonry", Popup = "popup-research",
-	Description = "+20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road and Wall construction, and allows Watch Towers to be upgraded to Guard Towers and Rathauses to Burgs.",
+	Description = "+20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road and Wall construction, and allows Watch Towers to be upgraded to Guard Towers and Town Halls to Strongholds.",
 	ForUnit = {"unit-teuton-lumber-mill"}
 } )
 
@@ -393,7 +393,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-guard-tower",
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-stronghold",
 	Action = "upgrade-to", Value = "unit-teuton-stronghold",
 	Allowed = "check-upgrade-to",
-	Key = "u", Hint = "Upgrade to B~!urg", Popup = "popup-building",
+	Key = "h", Hint = "Upgrade to Strong~!hold", Popup = "popup-building",
 	ForUnit = {"unit-teuton-town-hall", "unit-latin-town-hall"}
 } )
 
@@ -405,18 +405,18 @@ DefineButton( { Pos = 1, Level = 2,
 
 DefineButton( { Pos = 1, Level = 2,
 	Action = "experience-upgrade-to", Value = "unit-teuton-heroic-swordsman",
-	Key = "c", Hint = "Upgrade to ~!Chieftain", Popup = "popup-unit",
+	Key = "w", Hint = "Upgrade to ~!Warlord", Popup = "popup-unit",
 	ForUnit = {"unit-teuton-veteran-swordsman"}
 } )
 
 DefineButton( { Pos = 2, Level = 2, Icon = "icon-teuton-ritter",
 	Action = "experience-upgrade-to", Value = "unit-teuton-ritter",
-	Key = "t", Hint = "Upgrade to Ri~!tter", Popup = "popup-unit",
+	Key = "k", Hint = "Upgrade to ~!Knight", Popup = "popup-unit",
 	ForUnit = {"unit-teuton-swordsman", "unit-suebi-swordsman"}
 } )
 
 DefineButton( { Pos = 1, Level = 2,
 	Action = "experience-upgrade-to", Value = "unit-teuton-knight-lord",
-	Key = "l", Hint = "Upgrade to ~!Landesherr", Popup = "popup-unit",
+	Key = "k", Hint = "Upgrade to ~!Knight Lord", Popup = "popup-unit",
 	ForUnit = {"unit-teuton-ritter"}
 } )
