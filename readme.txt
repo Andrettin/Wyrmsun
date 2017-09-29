@@ -71,6 +71,8 @@ https://github.com/Andrettin/Wyrmsun
 - Added dwarven Thunderer (icon by Jinn and unit graphics by Jinn and b_o).
 - Added goblin Gunpowder Infantry (icon by Jinn and unit graphics by Jinn and b_o).
 - Added Gothic Horse Rider (icon by Exidelo).
+- Renamed Teuton Kriegers to Swordsmen, Adels to Veteran Swordsmen and Truhtins to Warlords.
+- Renamed Teuton Schutzes to Archers.
 
 * Upgrades
 - Added the Gunpowder upgrade (researchable at the Academy/University), which unlocks gunpowder units.

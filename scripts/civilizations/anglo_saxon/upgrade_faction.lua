@@ -85,7 +85,7 @@ DefineUpgrade("upgrade-faction-mierce-tribe", {
 
 DefineUpgrade("upgrade-faction-teuton-tribe", {
 	Name = "Teuton Tribe",
-	EffectsString = "+3 Damage, -1 Armor for Kriegers",
+	EffectsString = "+3 Damage, -1 Armor for Swordsmen",
 	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
 })
 

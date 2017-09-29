@@ -63,7 +63,7 @@ DefineUpgrade("upgrade-germanic-barbed-arrow", {
 	Parent = "upgrade-ranged-projectile-1",
 	Icon = "icon-germanic-barbed-arrow",
 	Civilization = "germanic",
-	Description = "An improvement over the basic triangular-shaped arrow, the barbed arrow is much harder to be removed from the wound after puncturing an enemy.\n\nEffect: +2 Damage for Skutans and Schutzes. Allows Barbed Arrows to be sold at the Market.",
+	Description = "An improvement over the basic triangular-shaped arrow, the barbed arrow is much harder to be removed from the wound after puncturing an enemy.\n\nEffect: +2 Damage for archers. Allows Barbed Arrows to be sold at the Market.",
 	Arrows = true,
 	Item = "unit-barbed-arrows"
 })

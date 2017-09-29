@@ -114,11 +114,11 @@ DefineUnitType("unit-teuton-worker", {
 } )
 
 DefineUnitType("unit-teuton-swordsman", {
-	Name = "Krieger",
+	Name = "Swordsman",
 	Parent = "unit-template-infantry",
 	Civilization = "teuton",
 	Description = "The dauntless West Germanic swordsmen ravage the battlefield with their longswords, being second to few other warriors in combat.",
-	Background = "\"Krieger\" is the German word for \"warrior\".",
+--	Background = "\"Krieger\" is the German word for \"warrior\".",
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {
@@ -147,16 +147,13 @@ DefineUnitType("unit-teuton-swordsman", {
 	NightSightRangeBonus = -1,
 	WeaponClasses = {"sword", "thrusting-sword"},
 	HackDamage = true,
-	ButtonKey = "k",
-	ButtonHint = "Train ~!Krieger",
+	ButtonKey = "w",
+	ButtonHint = "Train S~!wordsman",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "brown-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-english-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization",
 			"weight", 4
 		},
 		{
@@ -164,9 +161,6 @@ DefineUnitType("unit-teuton-swordsman", {
 			"icon", "icon-saxon-swordsman-black-hair",
 			"hair-color", "black",
 			"upgrade-forbidden", "upgrade-old",
-			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-english-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization",
 			"weight", 2
 		},
 		{
@@ -174,9 +168,6 @@ DefineUnitType("unit-teuton-swordsman", {
 			"icon", "icon-saxon-swordsman-blond-hair",
 			"hair-color", "blond",
 			"upgrade-forbidden", "upgrade-old",
-			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-english-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization",
 			"weight", 4
 		},
 		{
@@ -184,56 +175,6 @@ DefineUnitType("unit-teuton-swordsman", {
 			"icon", "icon-saxon-swordsman-red-hair",
 			"hair-color", "red",
 			"upgrade-forbidden", "upgrade-old",
-			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-english-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization",
-			"weight", 4
-		},
-		-- variations with an English unit type name for when belonging to another civilization
-		{
-			"variation-id", "brown-hair",
-			"type-name", "Swordsman",
-			"upgrade-forbidden", "upgrade-old",
-			"upgrade-forbidden", "upgrade-frankish-civilization",
-			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization",
-			"upgrade-forbidden", "upgrade-gothic-civilization",
-			"weight", 4
-		},
-		{
-			"variation-id", "black-hair",
-			"type-name", "Swordsman",
-			"icon", "icon-saxon-swordsman-black-hair",
-			"hair-color", "black",
-			"upgrade-forbidden", "upgrade-old",
-			"upgrade-forbidden", "upgrade-frankish-civilization",
-			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization",
-			"upgrade-forbidden", "upgrade-gothic-civilization",
-			"weight", 2
-		},
-		{
-			"variation-id", "blond-hair",
-			"type-name", "Swordsman",
-			"icon", "icon-saxon-swordsman-blond-hair",
-			"hair-color", "blond",
-			"upgrade-forbidden", "upgrade-old",
-			"upgrade-forbidden", "upgrade-frankish-civilization",
-			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization",
-			"upgrade-forbidden", "upgrade-gothic-civilization",
-			"weight", 4
-		},
-		{
-			"variation-id", "red-hair",
-			"type-name", "Swordsman",
-			"icon", "icon-saxon-swordsman-red-hair",
-			"hair-color", "red",
-			"upgrade-forbidden", "upgrade-old",
-			"upgrade-forbidden", "upgrade-frankish-civilization",
-			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization",
-			"upgrade-forbidden", "upgrade-gothic-civilization",
 			"weight", 4
 		},
 		{
@@ -335,11 +276,11 @@ DefineUnitType("unit-teuton-swordsman", {
 } )
 
 DefineUnitType("unit-teuton-veteran-swordsman", {
-	Name = "Adel",
+	Name = "Veteran Swordsman",
 	Parent = "unit-template-veteran-infantry",
 	Civilization = "teuton",
 	Description = "These high-ranking swordsmen have honed their combat skills to a greater degree than many of their counterparts.",
-	Background = "\"Adel\" is the German word for \"noble\".",
+--	Background = "\"Adel\" is the German word for \"noble\".",
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {
@@ -372,9 +313,6 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 		{
 			"variation-id", "brown-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-english-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization",
 			"weight", 4
 		},
 		{
@@ -382,9 +320,6 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 			"icon", "icon-veteran-saxon-swordsman-black-hair",
 			"hair-color", "black",
 			"upgrade-forbidden", "upgrade-old",
-			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-english-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization",
 			"weight", 2
 		},
 		{
@@ -392,9 +327,6 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 			"icon", "icon-veteran-saxon-swordsman-blond-hair",
 			"hair-color", "blond",
 			"upgrade-forbidden", "upgrade-old",
-			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-english-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization",
 			"weight", 4
 		},
 		{
@@ -402,56 +334,6 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 			"icon", "icon-veteran-saxon-swordsman-red-hair",
 			"hair-color", "red",
 			"upgrade-forbidden", "upgrade-old",
-			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-english-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization",
-			"weight", 4
-		},
-		-- English type name
-		{
-			"variation-id", "brown-hair",
-			"type-name", "Veteran Swordsman",
-			"upgrade-forbidden", "upgrade-old",
-			"upgrade-forbidden", "upgrade-frankish-civilization",
-			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization",
-			"upgrade-forbidden", "upgrade-gothic-civilization",
-			"weight", 4
-		},
-		{
-			"variation-id", "black-hair",
-			"type-name", "Veteran Swordsman",
-			"icon", "icon-veteran-saxon-swordsman-black-hair",
-			"hair-color", "black",
-			"upgrade-forbidden", "upgrade-old",
-			"upgrade-forbidden", "upgrade-frankish-civilization",
-			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization",
-			"upgrade-forbidden", "upgrade-gothic-civilization",
-			"weight", 2
-		},
-		{
-			"variation-id", "blond-hair",
-			"type-name", "Veteran Swordsman",
-			"icon", "icon-veteran-saxon-swordsman-blond-hair",
-			"hair-color", "blond",
-			"upgrade-forbidden", "upgrade-old",
-			"upgrade-forbidden", "upgrade-frankish-civilization",
-			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization",
-			"upgrade-forbidden", "upgrade-gothic-civilization",
-			"weight", 4
-		},
-		{
-			"variation-id", "red-hair",
-			"type-name", "Veteran Swordsman",
-			"icon", "icon-veteran-saxon-swordsman-red-hair",
-			"hair-color", "red",
-			"upgrade-forbidden", "upgrade-old",
-			"upgrade-forbidden", "upgrade-frankish-civilization",
-			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization",
-			"upgrade-forbidden", "upgrade-gothic-civilization",
 			"weight", 4
 		},
 		{
@@ -553,11 +435,11 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 } )
 
 DefineUnitType("unit-teuton-heroic-swordsman", {
-	Name = "Truhtin",
+	Name = "Warlord",
 	Parent = "unit-template-heroic-infantry",
 	Civilization = "teuton",
 	Description = "Amongst the most skilled in the land, these swordsmen often serve as retainers for chieftains and kings.",
-	Background = "\"Truhtîn\", or \"trohtîn\", is a Middle High German word for \"lord\" or \"warlord\".",
+--	Background = "\"Truhtîn\", or \"trohtîn\", is a Middle High German word for \"lord\" or \"warlord\".",
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {
@@ -592,9 +474,6 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 		{
 			"variation-id", "brown-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-english-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization",
 			"weight", 4
 		},
 		{
@@ -602,9 +481,6 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 			"icon", "icon-heroic-saxon-swordsman-black-hair",
 			"hair-color", "black",
 			"upgrade-forbidden", "upgrade-old",
-			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-english-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization",
 			"weight", 2
 		},
 		{
@@ -612,9 +488,6 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 			"icon", "icon-heroic-saxon-swordsman-blond-hair",
 			"hair-color", "blond",
 			"upgrade-forbidden", "upgrade-old",
-			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-english-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization",
 			"weight", 4
 		},
 		{
@@ -622,56 +495,6 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 			"icon", "icon-heroic-saxon-swordsman-red-hair",
 			"hair-color", "red",
 			"upgrade-forbidden", "upgrade-old",
-			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-english-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization",
-			"weight", 4
-		},
-		-- English type name
-		{
-			"variation-id", "brown-hair",
-			"type-name", "Warlord",
-			"upgrade-forbidden", "upgrade-old",
-			"upgrade-forbidden", "upgrade-frankish-civilization",
-			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization",
-			"upgrade-forbidden", "upgrade-gothic-civilization",
-			"weight", 4
-		},
-		{
-			"variation-id", "black-hair",
-			"type-name", "Warlord",
-			"icon", "icon-heroic-saxon-swordsman-black-hair",
-			"hair-color", "black",
-			"upgrade-forbidden", "upgrade-old",
-			"upgrade-forbidden", "upgrade-frankish-civilization",
-			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization",
-			"upgrade-forbidden", "upgrade-gothic-civilization",
-			"weight", 2
-		},
-		{
-			"variation-id", "blond-hair",
-			"type-name", "Warlord",
-			"icon", "icon-heroic-saxon-swordsman-blond-hair",
-			"hair-color", "blond",
-			"upgrade-forbidden", "upgrade-old",
-			"upgrade-forbidden", "upgrade-frankish-civilization",
-			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization",
-			"upgrade-forbidden", "upgrade-gothic-civilization",
-			"weight", 4
-		},
-		{
-			"variation-id", "red-hair",
-			"type-name", "Warlord",
-			"icon", "icon-heroic-saxon-swordsman-red-hair",
-			"hair-color", "red",
-			"upgrade-forbidden", "upgrade-old",
-			"upgrade-forbidden", "upgrade-frankish-civilization",
-			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization",
-			"upgrade-forbidden", "upgrade-gothic-civilization",
 			"weight", 4
 		},
 		{
@@ -776,7 +599,7 @@ DefineUnitType("unit-teuton-spearman", {
 	Name = "Spearman",
 	Parent = "unit-template-spearman",
 	Civilization = "teuton",
-	Description = "With spears in hand, these Teuton warriors stoically defend their homelands.",
+	Description = "With spears in hand, these warriors stoically defend their homelands.",
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {
@@ -882,12 +705,12 @@ DefineUnitType("unit-teuton-spearman", {
 
 DefineUnitType("unit-teuton-archer", {
 --	Name = "Scuzzo",
-	Name = "Schutze",
+	Name = "Archer",
 	Parent = "unit-template-archer",
 	Civilization = "teuton",
 	Description = "Teuton archers are a perilous lot. They excel at ambushing enemies in the forests of their homelands.",
 --	Background = "\"Scuzzo\" is an Old High German word for \"archer\".",
-	Background = "\"Schutze\" is a German word for \"archer\".",
+--	Background = "\"Schutze\" is a German word for \"archer\".",
 	Image = {"file", "human/units/body_archer.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow_archer.png", "size", {72, 72}},
 	LayerImages = {
@@ -917,25 +740,13 @@ DefineUnitType("unit-teuton-archer", {
 	PierceDamage = true,
 	CanCastSpell = {"spell-precise-shot"},
 	AutoCastActive = {"spell-precise-shot"},
-	ButtonKey = "s",
-	ButtonHint = "Train ~!Schutze",
+	ButtonKey = "a",
+	ButtonHint = "Train ~!Archer",
 	RequirementsString = "Carpenter's Shop/Lumber Mill",
 	AiDrops = {"unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Variations = {
 		{
-			"variation-id", "blond-hair",
-			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-english-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization"
-		},
-		-- English type name for when owned by another civilizations (i.e. Latins)
-		{
-			"variation-id", "blond-hair",
-			"type-name", "Archer",
-			"upgrade-forbidden", "upgrade-frankish-civilization",
-			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization",
-			"upgrade-forbidden", "upgrade-gothic-civilization"
+			"variation-id", "blond-hair"
 		}
 	},
 	Sounds = {
@@ -1155,23 +966,6 @@ DefineUnitType("unit-teuton-kogge", {
 	ButtonKey = "c",
 	ButtonHint = "Build ~!Cog",
 	RequirementsString = "Carpenter's Shop/Lumber Mill",
-	Variations = {
-		{
-			"variation-id", "kogge",
-			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-english-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization"
-		},
-		-- English type name for when owned by other civilizations (i.e. Latins)
-		{
-			"variation-id", "kogge",
-			"type-name", "Transport",
-			"upgrade-forbidden", "upgrade-frankish-civilization",
-			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization",
-			"upgrade-forbidden", "upgrade-gothic-civilization"
-		}
-	},
 	Sounds = {
 --		"help", "basic-teuton-voices-help"
 	}

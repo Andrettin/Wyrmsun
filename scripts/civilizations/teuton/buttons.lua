@@ -268,7 +268,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-bodkin-arrow",
 	Action = "research", Value = "upgrade-teuton-bodkin-arrow",
 	Allowed = "check-single-research",
 	Key = "a", Hint = _("Research Bodkin ~!Arrow"), Popup = "popup-research",
-	Description = "+2 Damage for Schutzes. Allows Bodkin Arrows to be sold at the Market.",
+	Description = "+2 Damage for Archers. Allows Bodkin Arrows to be sold at the Market.",
 	ForUnit = {"unit-teuton-lumber-mill"}
 } )
 
@@ -307,7 +307,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-norse-runewriting",
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-cauldron",
 	Action = "research", Value = "upgrade-teuton-alchemy",
 	Allowed = "check-single-research",
-	Description = "+1 Fire Damage for Schutzes, +5 Fire Damage for Catapults. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market.",
+	Description = "+1 Fire Damage for Archers, +5 Fire Damage for Catapults. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market.",
 	Key = "a", Hint = "Research ~!Alchemy", Popup = "popup-research",
 	ForUnit = {"unit-teuton-university"}
 } )
@@ -326,7 +326,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-odin",
 	Action = "research", Value = "upgrade-deity-odin",
 	Allowed = "check-single-research",
 	Key = "w", Hint = "Worship ~!Wodan", Popup = "popup-research",
-	Description = "Choose Wodan as your major deity. +2 Damage for Schutzes, enables Inspire spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Thunor major deity.",
+	Description = "Choose Wodan as your major deity. +2 Damage for Archers, enables Inspire spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Thunor major deity.",
 	ForUnit = {"unit-teuton-temple"}
 })
   
@@ -356,7 +356,7 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-christianity",
 DefineButton( { Pos = 10, Level = 0, Icon = "icon-odin",
 	Action = "learn-ability", Value = "upgrade-deity-odin",
 	Key = "w", Hint = "Worship ~!Wodan", Popup = "popup-research",
-	Description = "Choose Wodan as your hero's major deity. +2 Damage for Schutzes, enables Inspire spell for Gudjans. Incompatible with the Christianity religion or with the Thunor major deity.",
+	Description = "Choose Wodan as your hero's major deity. +2 Damage for Archers, enables Inspire spell for Gudjans. Incompatible with the Christianity religion or with the Thunor major deity.",
 	ForUnit = {
 		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
 		"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman",
@@ -399,13 +399,13 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-stronghold",
 
 DefineButton( { Pos = 1, Level = 2,
 	Action = "experience-upgrade-to", Value = "unit-teuton-veteran-swordsman",
-	Key = "a", Hint = "Upgrade to ~!Adel", Popup = "popup-unit",
+	Key = "w", Hint = "Upgrade to Veteran S~!wordsman", Popup = "popup-unit",
 	ForUnit = {"unit-teuton-swordsman", "unit-suebi-swordsman"}
 } )
 
 DefineButton( { Pos = 1, Level = 2,
 	Action = "experience-upgrade-to", Value = "unit-teuton-heroic-swordsman",
-	Key = "d", Hint = "Upgrade to ~!Truhtin", Popup = "popup-unit",
+	Key = "c", Hint = "Upgrade to ~!Chieftain", Popup = "popup-unit",
 	ForUnit = {"unit-teuton-veteran-swordsman"}
 } )
 

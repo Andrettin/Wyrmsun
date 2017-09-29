@@ -27,29 +27,29 @@
 
 DefineUpgrade("upgrade-faction-bastarnae-tribe", {
 	Name = "Bastarnae Tribe",
-	EffectsString = "+3 Damage and -1 Evasion for Kriegers"
+	EffectsString = "+3 Damage and -1 Evasion for Swordsmen"
 })
 
 DefineUpgrade("upgrade-faction-burgundian-tribe", {
 	Name = "Burgundian Tribe",
-	EffectsString = "+10 HP for Kriegers",
+	EffectsString = "+10 HP for Swordsmen",
 	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
 })
 
 DefineUpgrade("upgrade-faction-gepidae-tribe", {
 	Name = "Gepidae Tribe",
-	EffectsString = "+1 Speed for Kriegers"
+	EffectsString = "+1 Speed for Swordsmen"
 })
 
 DefineUpgrade("upgrade-faction-goth-tribe", {
 	Name = "Goth Tribe",
-	EffectsString = "+2 Damage for Kriegers",
+	EffectsString = "+2 Damage for Swordsmen",
 	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
 })
 
 DefineUpgrade("upgrade-faction-herulian-tribe", {
 	Name = "Herulian Tribe",
-	EffectsString = "Disembarkment Bonus for Kriegers and Spearmen"
+	EffectsString = "Disembarkment Bonus for Swordsmen and Spearmen"
 })
 
 DefineUpgrade("upgrade-faction-lugii-tribe", {
@@ -64,22 +64,22 @@ DefineUpgrade("upgrade-faction-ostrogoth-tribe", {
 
 DefineUpgrade("upgrade-faction-rugian-tribe", {
 	Name = "Rugian Tribe",
-	EffectsString = "+2 Accuracy for Kriegers"
+	EffectsString = "+2 Accuracy for Swordsmen"
 })
 
 DefineUpgrade("upgrade-faction-silingae-tribe", {
 	Name = "Silingae Tribe",
-	EffectsString = "+2 Accuracy for Schutzes"
+	EffectsString = "+2 Accuracy for Archers"
 })
 
 DefineUpgrade("upgrade-faction-turcilingian-tribe", {
 	Name = "Turcilingian Tribe",
-	EffectsString = "+2 Evasion for Schutzes"
+	EffectsString = "+2 Evasion for Archers"
 })
 
 DefineUpgrade("upgrade-faction-vandal-tribe", {
 	Name = "Vandal Tribe",
-	EffectsString = "+2 Damage for Schutzes"
+	EffectsString = "+2 Damage for Archers"
 })
 
 DefineUpgrade("upgrade-faction-visigoth-tribe", {

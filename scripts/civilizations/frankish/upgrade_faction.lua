@@ -57,7 +57,7 @@ DefineUpgrade("upgrade-faction-frank-tribe", {
 
 DefineUpgrade("upgrade-faction-sugambri-tribe", {
 	Name = "Sugambri Tribe",
-	EffectsString = "+2 Accuracy for Schutzes",
+	EffectsString = "+2 Accuracy for Archers",
 	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
 })
 

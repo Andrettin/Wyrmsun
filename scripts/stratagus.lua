@@ -601,6 +601,7 @@ function StandardTriggers()
 			)
 		end
 		
+		--[[
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Krieger") == false) then
 			AddTrigger("tip-krieger",
 				function()
@@ -619,6 +620,30 @@ function StandardTriggers()
 				end,
 				function()
 					Tip("Krieger", "The Krieger (or Kregar) is the melee infantry unit of the Anglo-Saxon, Frankish, Suebi and Teuton civilizations, replacing the Erala.")
+					return false
+				end
+			)
+		end
+		--]]
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Swordsman") == false) then
+			AddTrigger("tip-swordsman",
+				function()
+					if (
+						table.getn(GetSelectedUnits()) > 0
+						and (
+							GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-teuton-swordsman"
+							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-suebi-swordsman"
+							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-frank-swordsman"
+						)
+					) then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Swordsman", "The Swordsman is the melee infantry unit of the Anglo-Saxon, Frankish, Suebi and Teuton civilizations, replacing the Erala.")
 					return false
 				end
 			)
