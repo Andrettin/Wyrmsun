@@ -67,6 +67,9 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused the required settlements for a faction to be displayed even outside of the Scenario mode.
 - The Gothic civilization is now playable.
 
+* Scenarios
+- Added the Thunraz's Servant scenario.
+
 * Units
 - Added dwarven Thunderer (icon by Jinn and unit graphics by Jinn and b_o).
 - Added goblin Gunpowder Infantry (icon by Jinn and unit graphics by Jinn and b_o).

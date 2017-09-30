@@ -402,7 +402,7 @@ function StandardTriggers()
 					for unit1 = 1,table.getn(uncount) do 
 
 						-- make AI guard towers be filled with defenders
-						if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == "guard-tower"  and GetUnitVariable(uncount[unit1], "Transport") < 2) then
+						if ((GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == "guard-tower"  and GetUnitVariable(uncount[unit1], "Transport") < 2) or (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == "watch-tower"  and GetUnitVariable(uncount[unit1], "Transport") < 1)) then
 							unit = CreateUnitInTransporter(GetCivilizationClassUnitType("shooter", GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Civilization")), i, uncount[unit1])
 							SetUnitVariable(unit, "Active", false) -- set garrisoned unit to passive AI (so that they are not counted for attack participation)
 						end
@@ -1223,7 +1223,7 @@ end
 function GetNumRivals(player)
 	local rival_count = 0
 	for i=0,(PlayerMax - 2) do
-		if (player ~= i and (Players[i].Type == PlayerPerson or Players[i].Type == PlayerComputer) and (Players[player]:IsAllied(Players[i]) == false or Players[i]:IsAllied(Players[player]) == false) and (GetPlayerData(i, "Faction") == "" or GetFactionData(GetPlayerData(i, "Faction"), "Type") == "tribe" or GetFactionData(GetPlayerData(i, "Faction"), "Type") == "polity")) then
+		if (player ~= i and (Players[i].Type == PlayerPerson or Players[i].Type == PlayerComputer) and (Players[player]:IsAllied(Players[i]) == false or Players[i]:IsAllied(Players[player]) == false) and (GetPlayerData(i, "Faction") == "" or GetFactionData(GetPlayerData(i, "Faction"), "Type") == "tribe" or GetFactionData(GetPlayerData(i, "Faction"), "Type") == "polity") and GetPlayerData(player, "HasContactWith", i)) then
 			local total_units = GetPlayerData(i, "TotalNumUnitsConstructed") - GetPlayerData(i, "UnitTypesCount", "unit-goblin-glider")
 			total_units = total_units - GetPlayerData(i, "UnitTypesCount", "unit-gold-mine") - GetPlayerData(i, "UnitTypesCount", "unit-silver-mine") - GetPlayerData(i, "UnitTypesCount", "unit-copper-mine") - GetPlayerData(i, "UnitTypesCount", "unit-diamond-mine") - GetPlayerData(i, "UnitTypesCount", "unit-emerald-mine") - GetPlayerData(i, "UnitTypesCount", "unit-yale-hunting-lodge")
 			if (GetCivilizationClassUnitType("farm", GetPlayerData(i, "RaceName")) ~= nil) then

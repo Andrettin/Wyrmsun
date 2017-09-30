@@ -70,6 +70,8 @@ DefineDialogue("thors-servant-temple-complete", {
 					unit = CreateUnit("unit-revealer", trigger_player, {4089 - EarthStartX, 745 - EarthStartY})
 					SetUnitVariable(unit, "TTL", 600)
 					SetPlayerData(trigger_player, "AcceptQuest", "slay-the-berserker-brides-at-hlesey")
+					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("hlesing-tribe"))
+					SetDiplomacy(GetFactionPlayer("hlesing-tribe"), "enemy", trigger_player)
 				end
 			}
 		}
@@ -101,11 +103,30 @@ DefineDialogue("thors-servant-berserker-brides-killed", {
 				function(s)
 					unit = CreateUnit("unit-dwarven-transport-ship", trigger_player, {Players[trigger_player].StartPos.x, Players[trigger_player].StartPos.y})
 					SetUnitVariable(unit, "Unique", "skidbladnir")
+					SetPlayerData(trigger_player, "AcceptQuest", "slay-geirrod")
+					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("geirrodung-clan"))
+					SetDiplomacy(GetFactionPlayer("geirrodung-clan"), "enemy", trigger_player)
 				end
 			}
 		},
 		{
 			"text", "Hint: Scout around the island with the ship Skidbladnir to find the Portal. Portals can only be seen and used by units with Ethereal Vision, such as the unique ship you now possess."
+		}
+	}
+})
+
+DefineDialogue("thors-servant-geirrod-killed", {
+	Nodes = {
+		{
+			"speaker", "character", "thialfi",
+			"text", "Ha! I have done it, truly. Not without some wounds, but... Thialfi the Giantslayer, now that has a nice ring to it.",
+			"option-effects", {
+				function(s)
+					if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors-servant") then
+						CallDialogue("campaign-victory", trigger_player)
+					end
+				end
+			}
 		}
 	}
 })

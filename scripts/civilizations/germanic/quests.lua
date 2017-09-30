@@ -400,6 +400,11 @@ DefineQuest("the-discovery-of-gotland", {
 	Name = "The Discovery of Gotland",
 	Icon = "icon-germanic-transport-ship",
 	PlayerColor = "white",
+	FailEffects = function(s)
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors-servant") then
+			CallDialogue("campaign-defeat", trigger_player)
+		end
+	end,
 	CompletionEffects = function(s)
 		if (GetCurrentCampaign() == "thors-servant") then
 			local thialfi_unit = FindHero("thialfi", trigger_player)
@@ -423,6 +428,11 @@ DefineQuest("thors-servant-thors-temple", {
 	Name = "Thunraz's Temple",
 	Icon = "icon-germanic-temple",
 	PlayerColor = "white",
+	FailEffects = function(s)
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors-servant") then
+			CallDialogue("campaign-defeat", trigger_player)
+		end
+	end,
 	CompletionEffects = function(s)
 		if (GetCurrentCampaign() == "thors-servant") then
 			local thialfi_unit = FindHero("thialfi", trigger_player)
@@ -459,6 +469,11 @@ DefineQuest("slay-the-berserker-brides-at-hlesey", { -- Source: Kevin Crossley-H
 		end
 		return false
 	end,
+	FailEffects = function(s)
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors-servant") then
+			CallDialogue("campaign-defeat", trigger_player)
+		end
+	end,
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 1500)
 		if (GetCurrentCampaign() == "thors-servant") then
@@ -476,5 +491,23 @@ DefineQuest("slay-the-berserker-brides-at-hlesey", { -- Source: Kevin Crossley-H
 	Objectives = {"- Destroy the Hlesings"},
 	Rewards = "+1500 Copper",
 	DestroyFactions = {"hlesing-tribe"},
+	Competitive = true
+})
+
+DefineQuest("slay-geirrod", {
+	Name = "Slay Geirrod",
+	Icon = "icon-ettin",
+	PlayerColor = "red",
+	CompletionEffects = function(s)
+		CallDialogue("thors-servant-geirrod-killed", trigger_player)
+	end,
+	FailEffects = function(s)
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors-servant") then
+			CallDialogue("campaign-defeat", trigger_player)
+		end
+	end,
+	Objectives = {"- Kill Geirrod"},
+	DestroyCharacters = {"geirrod-ettin"},
+	Unobtainable = true,
 	Competitive = true
 })

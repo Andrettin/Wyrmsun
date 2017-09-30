@@ -81,7 +81,6 @@ DefineCampaign("heimdalls-progeny", {
 	MapSize = {256, 256}
 })
 
---[[
 DefineCampaign("thors-servant", {
 	Name = "Thunraz's Servant",
 	Description = "Terrified by a calamitous thunderstorm, Thialfi's parents pledged him to the service of the lightning god Thunraz when he was still a boy. Now a grown man, during a dream he heard the deity command him to sail to an undiscovered island...",
@@ -91,7 +90,6 @@ DefineCampaign("thors-servant", {
 	MapTemplateStartPos = {4022, 667},
 	MapSize = {256, 256}
 })
---]]
 
 --[[
 DefineCampaign("the-second-punic-war", {
