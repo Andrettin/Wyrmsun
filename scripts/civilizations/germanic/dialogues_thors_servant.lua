@@ -103,7 +103,9 @@ DefineDialogue("thors-servant-berserker-brides-killed", {
 					SetUnitVariable(unit, "Unique", "skidbladnir")
 				end
 			}
+		},
+		{
+			"text", "Hint: Scout around the island with the ship Skidbladnir to find the Portal. Portals can only be seen and used by units with Ethereal Vision, such as the unique ship you now possess."
 		}
 	}
 })
-

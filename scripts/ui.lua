@@ -1244,6 +1244,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {HydratingAura = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = "Hydrating Aura", Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {EtherealVision = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = "Ethereal Vision", Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {IncreasesLuxuryDemand = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = TypeLuxuryDemand("Type"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -1700,6 +1703,9 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {HydratingAura = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = "Hydrating Aura", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {EtherealVision = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = "Ethereal Vision", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {Trader = "only", UnitTypeType = "land", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Trades with foreign markets"), Font = wyr.preferences.PopupDescriptionFont}}

@@ -28,4 +28,4 @@
 JotunheimStartX = 0
 JotunheimStartY = 0
 
-SetMapTemplateLayerConnector("jotunheim", "unit-portal", {723, 335}, "earth")
+SetMapTemplateLayerConnector("jotunheim", "unit-water-portal", {723, 335}, "earth")

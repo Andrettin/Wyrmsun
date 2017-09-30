@@ -190,7 +190,7 @@ Units = {
 	"unit-yale-cave", "unit-yale-hunting-lodge",
 	"unit-mercenary-camp",
 --	"unit-cavern-entrance",
---	"unit-portal",
+	"unit-portal",
 	"unit-road", "unit-railroad",
 	"unit-carrots", "unit-cheese", "unit-wyrm-heart", "unit-potion-of-healing", "unit-elixir-of-dexterity", "unit-elixir-of-intelligence", "unit-elixir-of-strength", "unit-elixir-of-vitality",
 	"upgrade-free-workers", "upgrade-serfdom",
@@ -1333,7 +1333,7 @@ DefineUnitType("unit-portal", {
 	Description = "Portals establish a link between different worlds or planes, though they are invisible to all but those who have attuned themselves to that which is magical.",
 	NeutralMinimapColor = {128, 128, 0},
 	Costs = {"time", 150},
-	HitPoints = 25500,
+	HitPoints = 0,
 	DrawLevel = 10,
 	TileSize = {3, 3}, BoxSize = {95, 95},
 	SightRange = 1,
@@ -1344,9 +1344,33 @@ DefineUnitType("unit-portal", {
 	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 --	VisibleUnderFog = true,
 	Indestructible = true,
---	Building = true,
-	NonSolid = true,
 	Ethereal = true,
+	NonSolid = true,
+	Sounds = {
+		"selected", "click"
+	}
+} )
+
+DefineUnitType("unit-water-portal", {
+	Name = "Portal",
+	Image = {"file", "neutral/buildings/portal_frame.png", "size", {96, 96}},
+	LightImage = {"file", "neutral/buildings/portal.png"},
+	Animations = "animations-portal", Icon = "icon-portal",
+	NeutralMinimapColor = {128, 128, 0},
+	Costs = {"time", 150},
+	HitPoints = 0,
+	DrawLevel = 10,
+	TileSize = {3, 3}, BoxSize = {95, 95},
+	SightRange = 1,
+	Armor = 20, Missile = "missile-none",
+	Priority = 0,
+	Type = "naval",
+	NumDirections = 1,
+	BoardSize = 100, -- to prevent this unit from being loaded into transporters
+--	VisibleUnderFog = true,
+	Indestructible = true,
+	Ethereal = true,
+	NonSolid = true,
 	Sounds = {
 		"selected", "click"
 	}

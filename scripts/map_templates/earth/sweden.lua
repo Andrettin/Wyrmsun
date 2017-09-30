@@ -117,4 +117,4 @@ SetMapTemplateUnit("earth", "unit-germanic-transport-ship", "thielung-tribe", {4
 
 
 -- portal near Gotland for Thialfi to use
-SetMapTemplateLayerConnector("earth", "unit-portal", {4270, 723}, "jotunheim")
+SetMapTemplateLayerConnector("earth", "unit-water-portal", {4270, 723}, "jotunheim")
