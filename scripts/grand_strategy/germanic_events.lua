@@ -146,7 +146,6 @@ local GermanicEvents = {
 						SetProvinceCivilization("Astrakhan", "")
 						RemoveProvinceClaim("Astrakhan", "germanic", "asa-tribe")
 						SetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior", 8)
-						CenterGrandStrategyMapOnTile(WorldMapProvinces.Brandenburg.SettlementLocation[1], WorldMapProvinces.Brandenburg.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
 							if (IsOffensiveMilitaryUnit(unitName)) then
@@ -181,7 +180,6 @@ local GermanicEvents = {
 					RemoveProvinceClaim("Astrakhan", "germanic", "asa-tribe")
 					SetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior", 8) -- to make this province harder to conquer
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
-						CenterGrandStrategyMapOnTile(WorldMapProvinces.Brandenburg.SettlementLocation[1], WorldMapProvinces.Brandenburg.SettlementLocation[2])
 						GenericDialog("Westward Migration", "After passing through dangerous locales, we have arrived in a new area!")
 					end
 				end
@@ -262,7 +260,6 @@ local GermanicEvents = {
 						AcquireProvince(WorldMapProvinces.Zealand, EventFaction.Name)
 						AddProvinceClaim("Zealand", EventFaction.Civilization, EventFaction.Name)
 						SetProvinceCivilization("Zealand", "germanic")
-						CenterGrandStrategyMapOnTile(WorldMapProvinces.Jutland.SettlementLocation[1], WorldMapProvinces.Jutland.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
 							if (IsOffensiveMilitaryUnit(unitName)) then
@@ -298,7 +295,6 @@ local GermanicEvents = {
 					AddProvinceClaim("Zealand", EventFaction.Civilization, EventFaction.Name)
 					SetProvinceCivilization("Zealand", "germanic")					
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
-						CenterGrandStrategyMapOnTile(WorldMapProvinces.Jutland.SettlementLocation[1], WorldMapProvinces.Jutland.SettlementLocation[2])
 						GenericDialog("Northwards to the Sea", "The natives were no match for us. The peninsula is ours!")
 					end
 
@@ -369,7 +365,6 @@ local GermanicEvents = {
 						end
 						SetProvinceSettlementBuilding("Sweden", "unit-germanic-town-hall", true)
 						
-						CenterGrandStrategyMapOnTile(WorldMapProvinces.Sweden.SettlementLocation[1], WorldMapProvinces.Sweden.SettlementLocation[2])
 						ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 25)
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
@@ -411,7 +406,6 @@ local GermanicEvents = {
 					SetProvinceSettlementBuilding("Sweden", "unit-germanic-town-hall", true)
 					ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 25)
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
-						CenterGrandStrategyMapOnTile(WorldMapProvinces.Sweden.SettlementLocation[1], WorldMapProvinces.Sweden.SettlementLocation[2])
 						GenericDialog("Gylve's Realm", "Gylve has been defeated, and subsequently swore an oath of fealty to us. We moved north... and came upon a lake with fair fields spread around it. We founded a hall by the lake, Sigtun, from which we shall rule for untold generations!")
 					end
 				end

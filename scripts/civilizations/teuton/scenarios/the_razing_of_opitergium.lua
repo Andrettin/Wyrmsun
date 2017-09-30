@@ -37,26 +37,16 @@ if (LoadedGame == false) then
 	SetPlayerData(1, "Resources", "stone", 1000)
 	SetPlayerData(1, "Resources", "oil", 0)
 	SetAiType(1, "land-attack")
-	if (GrandStrategy == false) then
-		local rome_player = GetFactionPlayer("Rome")
-		SetPlayerData(rome_player, "Allow", "upgrade-teuton-masonry", "R")
-		SetPlayerData(0, "Faction", "marcomanni-tribe")
 
-	--	unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y}) -- add Ballomar here later
-	
-		unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-teuton-archer", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-	elseif (GrandStrategyEventMap) then
-		-- Marcomanni units
-		CreateProvinceUnits("Carinthia", 0)
-		CreateProvinceCustomHero("Carinthia", 0)
-	--	unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y}) -- add Ballomar here later
-		
-		-- Roman units
-		CreateProvinceUnits("Venetia", 1, 4)
-		CreateProvinceCustomHero("Venetia", 1)
-	end
+	local rome_player = GetFactionPlayer("Rome")
+	SetPlayerData(rome_player, "Allow", "upgrade-teuton-masonry", "R")
+	SetPlayerData(0, "Faction", "marcomanni-tribe")
+
+--	unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y}) -- add Ballomar here later
+
+	unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+	unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+	unit = CreateUnit("unit-teuton-archer", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 end
 
 -- The Razing of Opitergium introduction

@@ -83,55 +83,29 @@ if (LoadedGame == false) then
 	end
 	
 	-- create allied Germanic forces
-	if (GrandStrategy == false) then
-		-- Vandals (Lugii)
-		local player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, Map.Info.MapHeight - 1)
-		SetStartView(2, player_spawn_point[1], player_spawn_point[2])
-		unit = CreateUnit("unit-teuton-swordsman", 2, {Players[2].StartPos.x, Players[2].StartPos.y})
-		unit = CreateUnit("unit-teuton-swordsman", 2, {Players[2].StartPos.x, Players[2].StartPos.y})
-		unit = CreateUnit("unit-teuton-archer", 2, {Players[2].StartPos.x, Players[2].StartPos.y})
-		unit = CreateUnit("unit-teuton-ritter", 2, {Players[2].StartPos.x, Players[2].StartPos.y})
+	-- Vandals (Lugii)
+	local player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, Map.Info.MapHeight - 1)
+	SetStartView(2, player_spawn_point[1], player_spawn_point[2])
+	unit = CreateUnit("unit-teuton-swordsman", 2, {Players[2].StartPos.x, Players[2].StartPos.y})
+	unit = CreateUnit("unit-teuton-swordsman", 2, {Players[2].StartPos.x, Players[2].StartPos.y})
+	unit = CreateUnit("unit-teuton-archer", 2, {Players[2].StartPos.x, Players[2].StartPos.y})
+	unit = CreateUnit("unit-teuton-ritter", 2, {Players[2].StartPos.x, Players[2].StartPos.y})
 
-		-- Suebi (Semnones)
-		player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, Map.Info.MapHeight - 1)
-		SetStartView(3, player_spawn_point[1], player_spawn_point[2])
-		unit = CreateUnit("unit-suebi-swordsman", 3, {Players[3].StartPos.x, Players[3].StartPos.y})
-		unit = CreateUnit("unit-suebi-swordsman", 3, {Players[3].StartPos.x, Players[3].StartPos.y})
-		unit = CreateUnit("unit-teuton-archer", 3, {Players[3].StartPos.x, Players[3].StartPos.y})
-		unit = CreateUnit("unit-teuton-ritter", 3, {Players[3].StartPos.x, Players[3].StartPos.y})
+	-- Suebi (Semnones)
+	player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, Map.Info.MapHeight - 1)
+	SetStartView(3, player_spawn_point[1], player_spawn_point[2])
+	unit = CreateUnit("unit-suebi-swordsman", 3, {Players[3].StartPos.x, Players[3].StartPos.y})
+	unit = CreateUnit("unit-suebi-swordsman", 3, {Players[3].StartPos.x, Players[3].StartPos.y})
+	unit = CreateUnit("unit-teuton-archer", 3, {Players[3].StartPos.x, Players[3].StartPos.y})
+	unit = CreateUnit("unit-teuton-ritter", 3, {Players[3].StartPos.x, Players[3].StartPos.y})
 
-		-- Lombards
-		player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, Map.Info.MapHeight - 1)
-		SetStartView(4, player_spawn_point[1], player_spawn_point[2])
-		unit = CreateUnit("unit-teuton-swordsman", 4, {Players[4].StartPos.x, Players[4].StartPos.y})
-		unit = CreateUnit("unit-teuton-swordsman", 4, {Players[4].StartPos.x, Players[4].StartPos.y})
-		unit = CreateUnit("unit-teuton-archer", 4, {Players[4].StartPos.x, Players[4].StartPos.y})
-		unit = CreateUnit("unit-teuton-ritter", 4, {Players[4].StartPos.x, Players[4].StartPos.y})
-	elseif (GrandStrategyEventMap) then
-		local player_spawn_point
-		local units_to_be_created = {}
-		
-		-- Vandals (Lugii)
-		if (GetProvinceOwner("Mazovia") == "vandal-tribe") then
-			player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, Map.Info.MapHeight - 1)
-			SetStartView(2, player_spawn_point[1], player_spawn_point[2])
-			CreateProvinceUnits("Mazovia", 2, 4)
-		end
-
-		-- Suebi (Semnones)
-		if (GetProvinceOwner("Brandenburg") == "suebi-tribe") then
-			player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, Map.Info.MapHeight - 1)
-			SetStartView(3, player_spawn_point[1], player_spawn_point[2])
-			CreateProvinceUnits("Brandenburg", 3, 4)
-		end
-
-		-- Lombards
-		if (GetProvinceOwner("Hanover") == "lombard-tribe") then
-			player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, Map.Info.MapHeight - 1)
-			SetStartView(4, player_spawn_point[1], player_spawn_point[2])
-			CreateProvinceUnits("Hanover", 4, 4)
-		end
-	end
+	-- Lombards
+	player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, Map.Info.MapHeight - 1)
+	SetStartView(4, player_spawn_point[1], player_spawn_point[2])
+	unit = CreateUnit("unit-teuton-swordsman", 4, {Players[4].StartPos.x, Players[4].StartPos.y})
+	unit = CreateUnit("unit-teuton-swordsman", 4, {Players[4].StartPos.x, Players[4].StartPos.y})
+	unit = CreateUnit("unit-teuton-archer", 4, {Players[4].StartPos.x, Players[4].StartPos.y})
+	unit = CreateUnit("unit-teuton-ritter", 4, {Players[4].StartPos.x, Players[4].StartPos.y})
 end
 
 -- The Home of the Boii introduction

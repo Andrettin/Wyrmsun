@@ -89,7 +89,6 @@ local TeutonEvents = {
 					if (GameResult == GameVictory) then
 						AcquireProvince(WorldMapProvinces.Alsace, "suebi-tribe")
 						SetProvinceUnitQuantity("Burgundy", "unit-germanic-warrior", 6) -- to give the Aedui something of a defense
-						CenterGrandStrategyMapOnTile(WorldMapProvinces.Alsace.SettlementLocation[1], WorldMapProvinces.Alsace.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
 					end
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "suebi-tribe" or wyr.preferences.AutomaticBattles)) then
@@ -105,7 +104,6 @@ local TeutonEvents = {
 						SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 4) -- to give them something of a defense
 					end
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
-						CenterGrandStrategyMapOnTile(WorldMapProvinces.Alsace.SettlementLocation[1], WorldMapProvinces.Alsace.SettlementLocation[2])
 						GenericDialog("The Battle of Magetobria", "The Aedui have been crushed! We were granted land in Gaul by the Sequani and the Arverni. However, our chieftain Ariovistus wanted more, and took much of the Sequani's lands for settlement.")
 					end
 				end
@@ -153,7 +151,6 @@ local TeutonEvents = {
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
 						AcquireProvince(WorldMapProvinces.Bohemia, "marcomanni-tribe")
-						CenterGrandStrategyMapOnTile(WorldMapProvinces.Bohemia.SettlementLocation[1], WorldMapProvinces.Bohemia.SettlementLocation[2])
 						AcquireFactionTechnologies(Factions.suebi_tribe.Civilization, Factions.suebi_tribe.Name, Factions.marcomanni_tribe.Civilization, "marcomanni-tribe")
 					end
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "suebi-tribe" or wyr.preferences.AutomaticBattles)) then
@@ -171,7 +168,6 @@ local TeutonEvents = {
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						GrandStrategyFaction = Factions.marcomanni_tribe
 						SetPlayerFaction("teuton", "marcomanni-tribe")
-						CenterGrandStrategyMapOnTile(WorldMapProvinces.Bohemia.SettlementLocation[1], WorldMapProvinces.Bohemia.SettlementLocation[2])
 						GenericDialog("The Home of the Boii", "The Boii's capital has become naught but a burning ruin. On its ashes we shall build our own settlement of Bubienum, the center of our new Marcomannic kingdom!")
 					end
 				end
@@ -230,7 +226,6 @@ local TeutonEvents = {
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
 						AcquireProvince(WorldMapProvinces.Salzburg, "marcomanni-tribe")
-						CenterGrandStrategyMapOnTile(WorldMapProvinces.Salzburg.SettlementLocation[1], WorldMapProvinces.Salzburg.SettlementLocation[2])
 					end
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "marcomanni-tribe" or wyr.preferences.AutomaticBattles)) then
 					AcquireProvince(WorldMapProvinces.Salzburg, "marcomanni-tribe")
@@ -242,7 +237,6 @@ local TeutonEvents = {
 					end
 					
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
-						CenterGrandStrategyMapOnTile(WorldMapProvinces.Salzburg.SettlementLocation[1], WorldMapProvinces.Salzburg.SettlementLocation[2])
 						GenericDialog("The Sack of Iuvavum", "All that was of worth in Iuvavum has been pillaged...")
 					end
 				end
@@ -279,7 +273,6 @@ local TeutonEvents = {
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
 						AcquireProvince(WorldMapProvinces.Venetia, "marcomanni-tribe")
-						CenterGrandStrategyMapOnTile(WorldMapProvinces.Venetia.SettlementLocation[1], WorldMapProvinces.Venetia.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
 					end
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "marcomanni-tribe" or wyr.preferences.AutomaticBattles)) then
@@ -291,7 +284,6 @@ local TeutonEvents = {
 						end
 					end
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
-						CenterGrandStrategyMapOnTile(WorldMapProvinces.Venetia.SettlementLocation[1], WorldMapProvinces.Venetia.SettlementLocation[2])
 						GenericDialog("The Razing of Opitergium", "Opitergium became naught but ashes.")
 					end
 				end

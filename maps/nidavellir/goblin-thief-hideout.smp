@@ -1,5 +1,0 @@
--- Stratagus Map Presentation
-
-DefinePlayerTypes("person","computer")
-PresentMap("Goblin Thief Hideout", 2, 64, 64, 1)
-MapWorld = "None"

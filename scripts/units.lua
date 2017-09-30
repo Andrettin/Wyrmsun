@@ -190,7 +190,7 @@ Units = {
 	"unit-yale-cave", "unit-yale-hunting-lodge",
 	"unit-mercenary-camp",
 --	"unit-cavern-entrance",
-	"unit-portal",
+--	"unit-portal",
 	"unit-road", "unit-railroad",
 	"unit-carrots", "unit-cheese", "unit-wyrm-heart", "unit-potion-of-healing", "unit-elixir-of-dexterity", "unit-elixir-of-intelligence", "unit-elixir-of-strength", "unit-elixir-of-vitality",
 	"upgrade-free-workers", "upgrade-serfdom",

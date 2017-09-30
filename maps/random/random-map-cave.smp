@@ -1,10 +1,5 @@
 -- Stratagus Map Presentation
 
-if (GrandStrategy == false) then
-	DefinePlayerTypes("person","person","person","person")
-	PresentMap("Random Cave", 4, 128, 128, 1)
-else
-	DefinePlayerTypes("person","person")
-	PresentMap("Random Cave", 2, 64, 64, 1)
-end
+DefinePlayerTypes("person","person","person","person")
+PresentMap("Random Cave", 4, 128, 128, 1)
 MapWorld = "Random"

@@ -140,16 +140,6 @@ unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {5, 53})
 unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {5, 53})
 	
 if (GrandStrategy == false) then
-	--[[
-	if (MaxTechLevel[GetThisPlayer() + 1] == "") then
-		for i=0,15 do
-			if (MaxTechLevel[i + 1] == "" and i ~= GetThisPlayer()) then
-				MaxTechLevel[i + 1] = "Agrarian (Bronze)"
-			end
-		end
-	end
-	--]]
-
 	unit = CreateUnit("unit-dwarven-town-hall", 0, {46, 6})
 	unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {40, 20})
 	unit = CreateUnit("unit-dwarven-miner", 0, {46, 10})
