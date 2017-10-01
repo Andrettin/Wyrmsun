@@ -60,6 +60,7 @@ DefineFaction("hlesing-tribe", {
 	Type = "tribe",
 	Colors = {"black"},
 	FactionUpgrade = "upgrade-faction-jarling-tribe",
+	DefaultAI = "passive",
 	Background = "In Norse mythology, Thor (accompanied by Thialfi) slew a group of savage brides of berserkers at the island of Hlesey."
 })
 

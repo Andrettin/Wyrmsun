@@ -29,7 +29,8 @@ DefineFaction("geirrodung-clan", {
 	Name = "Geirrodung Clan",
 	Civilization = "ettin",
 	Type = "tribe",
-	Colors = {"red", "orange", "fire"}
+	Colors = {"red", "orange", "fire"},
+	DefaultAI = "passive"
 })
 
 -- Mercenary Companies

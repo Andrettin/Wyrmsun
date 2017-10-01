@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 - 2.8.4
 -----------------------------------------------------------------------
 
+* Map Editor
+- Fixed crash when placing a Settlement Site in the editor.
+
 * Miscellaneous
 - Unit and building encyclopedia entries now contain their costs and stats.
 - Stone piles are now always generated with 400 stone (previously they were randomly generated with 200 or 400 stone).
@@ -67,6 +70,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused the required settlements for a faction to be displayed even outside of the Scenario mode.
 - The Gothic civilization is now playable.
 - Added buttons in the minimap interface area to change between different map layers in Scenario mode.
+- Fixed a save game crash which could happen if a hero was within a transport or building when the game was saved.
 
 * Scenarios
 - Added the Thunraz's Servant scenario.
@@ -81,7 +85,7 @@ https://github.com/Andrettin/Wyrmsun
 - Renamed the Teuton Rathaus to Town Hall, and the Burg to Stronghold.
 
 * Upgrades
-- Added the Gunpowder upgrade (researchable at the Academy/University), which unlocks gunpowder units.
+- Added Gunpowder upgrade (researchable at the Academy/University), which unlocks gunpowder units.
 
 -----------------------------------------------------------------------
 - 2.8.3

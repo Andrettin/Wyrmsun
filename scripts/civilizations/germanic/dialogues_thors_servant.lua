@@ -122,8 +122,8 @@ DefineDialogue("thors-servant-geirrod-killed", {
 			"text", "Ha! I have done it, truly. Not without some wounds, but... Thialfi the Giantslayer, now that has a nice ring to it.",
 			"option-effects", {
 				function(s)
-					if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors-servant") then
-						CallDialogue("campaign-victory", trigger_player)
+					if (GetPlayerData(trigger_player, "HasQuest", "thors-servant")) then
+						SetPlayerData(trigger_player, "CompleteQuest", "thors-servant")
 					end
 				end
 			}

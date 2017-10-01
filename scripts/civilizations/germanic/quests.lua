@@ -385,6 +385,11 @@ DefineQuest("thors-servant", {
 	World = "earth",
 	Civilization = "germanic",
 	PlayerColor = "white",
+	CompletionEffects = function(s)
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors-servant") then
+			CallDialogue("campaign-victory", trigger_player)
+		end
+	end,
 	FailEffects = function(s)
 		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors-servant") then
 			CallDialogue("campaign-defeat", trigger_player)
