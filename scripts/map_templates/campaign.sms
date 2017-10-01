@@ -8,24 +8,13 @@ end
 
 --ApplyMapTemplate("earth", 3766, 667) -- once the game has more human civilizations, and if performance is improved enough to allow a 2048x1024 map, this could be changed to the coordinates {3281, 427}, delimiting the map at the end of Iceland to the west, and at the end Scandinavia to the north; thus allowing the map to contain all of Europe and a significant part of the the areas adjacent to it
 
-if (GetCampaignData(GetCurrentCampaign(), "MapTemplate") == "nidavellir") then
-	NidavellirStartX = GetCampaignData(GetCurrentCampaign(), "MapTemplateStartPosX")
-	NidavellirStartY = GetCampaignData(GetCurrentCampaign(), "MapTemplateStartPosY")
-elseif (GetCampaignData(GetCurrentCampaign(), "MapTemplate") == "earth") then
-	EarthStartX = GetCampaignData(GetCurrentCampaign(), "MapTemplateStartPosX")
-	EarthStartY = GetCampaignData(GetCurrentCampaign(), "MapTemplateStartPosY")
-end
+ApplyCampaignMap(GetCurrentCampaign())
 
-ApplyMapTemplate(GetCampaignData(GetCurrentCampaign(), "MapTemplate"), GetCampaignData(GetCurrentCampaign(), "MapTemplateStartPosX"), GetCampaignData(GetCurrentCampaign(), "MapTemplateStartPosY"))
-
-if (GetCurrentCampaign() == "thors-servant") then
-	ApplyMapTemplate("jotunheim", 710 - ((GetCampaignData(GetCurrentCampaign(), "MapWidth") - 1) / 2), 335 - ((GetCampaignData(GetCurrentCampaign(), "MapHeight") - 1) / 2), 0, 0, 1)
-elseif (GetCurrentCampaign() == "island-of-the-lizard-god") then
-	ApplyMapTemplate("nidavellir-underground", GetCampaignData(GetCurrentCampaign(), "MapTemplateStartPosX"), GetCampaignData(GetCurrentCampaign(), "MapTemplateStartPosY"), 0, 0, 1)
-end
-
---ApplyMapTemplate("nidavellir", NidavellirStartX, NidavellirStartY, 0, 0, 1)
---ApplyMapTemplate("nidavellir-underground", NidavellirStartX, NidavellirStartY, 0, 0, 2)
---ApplyMapTemplate("asgard", 0, 0, 0, 0, 3)
+EarthStartX = GetMapTemplateData("earth", "CurrentStartPosX")
+EarthStartY = GetMapTemplateData("earth", "CurrentStartPosY")
+JotunheimStartX = GetMapTemplateData("jotunheim", "CurrentStartPosX")
+JotunheimStartY = GetMapTemplateData("jotunheim", "CurrentStartPosY")
+NidavellirStartX = GetMapTemplateData("nidavellir", "CurrentStartPosX")
+NidavellirStartY = GetMapTemplateData("nidavellir", "CurrentStartPosY")
 
 SetPlayerData(PlayerNumNeutral, "RaceName", "neutral")

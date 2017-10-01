@@ -66,6 +66,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused Germanic AI players to not automatically pick a faction in custom games.
 - Fixed issue which caused the required settlements for a faction to be displayed even outside of the Scenario mode.
 - The Gothic civilization is now playable.
+- Added buttons in the minimap interface area to change between different map layers in Scenario mode.
 
 * Scenarios
 - Added the Thunraz's Servant scenario.

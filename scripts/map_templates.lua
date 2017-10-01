@@ -108,10 +108,10 @@ DefineMapTemplate("jotunheim", {
 	TerrainImage = "scripts/map_templates/jotunheim.png",
 	OverlayTerrainImage = "scripts/map_templates/jotunheim_overlay.png",
 	GeneratedNeutralUnits = {
-		"unit-gold-deposit", 4,
-		"unit-silver-deposit", 4,
-		"unit-copper-deposit", 4,
-		"unit-tree-stump", 16
+		"unit-gold-deposit", 1,
+		"unit-silver-deposit", 1,
+		"unit-copper-deposit", 1,
+		"unit-tree-stump", 4
 	},
 	PlayerLocationGeneratedNeutralUnits = {
 		"unit-copper-deposit", 1,

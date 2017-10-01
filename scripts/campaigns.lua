@@ -53,6 +53,7 @@ DefineCampaign("a-home-in-the-fields-of-sand", {
 	StartYear = -2800,
 	MapTemplate = "nidavellir",
 	MapTemplateStartPos = {655, 155},
+	MapSize = {256, 256}
 })
 
 --[[
@@ -86,9 +87,10 @@ DefineCampaign("thors-servant", {
 	Description = "Terrified by a calamitous thunderstorm, Thialfi's parents pledged him to the service of the lightning god Thunraz when he was still a boy. Now a grown man, during a dream he heard the deity command him to sail to an undiscovered island...",
 	Faction = "thielung-tribe",
 	StartYear = -1101, -- 1100 BC was the first occupation of Gotland (by presumably pre-Germanic or Germanic speakers) we have found through research so far, so we place the campaign start at just before that
-	MapTemplate = "earth",
-	MapTemplateStartPos = {4022, 667},
-	MapSize = {256, 256}
+	MapTemplates = {
+		"earth", {4022, 667}, {256, 256},
+		"jotunheim", {679, 304}, {64, 64}
+	}
 })
 
 --[[
@@ -156,9 +158,10 @@ DefineCampaign("island-of-the-lizard-god", { -- based on Will Doyle's "Island of
 	Description = "Shipwrecked on a remote island, a group of dwarves face off against a kobold cult and their primal god!",
 	Faction = "lyr",
 	StartYear = 600, -- approximate date; a seafaring dwarven lordship should already exist
-	MapTemplate = "nidavellir",
-	MapTemplateStartPos = {700, 472},
-	MapSize = {256, 256}
+	MapTemplates = {
+		"nidavellir", {700, 472}, {256, 256},
+		"nidavellir-underground", {700, 472}, {256, 256}
+	}
 })
 
 DefineCampaign("the-heirs-return", {
