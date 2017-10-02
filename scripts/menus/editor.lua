@@ -589,20 +589,6 @@ function RunEditorMapProperties()
 --	menu:addLabel(" x ", 130, 36 * 3, nil, false)
 --	local sizeY = menu:addTextInputField(Map.Info.MapHeight, 160, 36 * 3, 50)
 
-	menu:addLabel("Tileset: ", 45, 36 * 4, nil, false)
-
-	local list = {}
-	for i=table.getn(list)+1, table.getn(editor_tilesets) do
-		table.insert(list, FullyCapitalizeString(string.gsub(editor_tilesets[i], "_", " ")))
-	end
-	local dropDownTileset = menu:addDropDown(list, 130, 36 * 4, function() end)
-	for i = 0,table.getn(list)-1 do
-		if (list[1 + i] == Map.Tileset.Name) then dropDownTileset:setSelected(i)
-		end
-	end
-	dropDownTileset:setEnabled(false) -- TODO : manage this properties
-	dropDownTileset:setSize(152, 20)
-
 	menu:addHalfButton("~!OK", "o", 1 * (sizeX / 3) - 106 - 10, sizeY - 16 - 27,
 		function()
 			Map.Info.Description = desc:getText()
