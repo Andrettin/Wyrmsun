@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 - 2.8.4
 -----------------------------------------------------------------------
 
+* AI
+- Improved the performance of AI worker resource gathering assignment.
+
 * Map Editor
 - Fixed crash when placing a Settlement Site in the editor.
 
@@ -71,6 +74,10 @@ https://github.com/Andrettin/Wyrmsun
 - The Gothic civilization is now playable.
 - Added buttons in the minimap interface area to change between different map layers in Scenario mode.
 - Fixed a save game crash which could happen if a hero was within a transport or building when the game was saved.
+
+* Multiplayer
+- Fixed issue which could cause a desync if the "Computer Opponents" option had been selected by the host before a player had joined.
+- Added option to select AI difficulty, if the "Computer Opponents" option is active.
 
 * Scenarios
 - Added the Thunraz's Servant scenario.

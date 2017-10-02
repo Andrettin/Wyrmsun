@@ -112,131 +112,145 @@ end
 
 
 function RunJoiningMapMenu(s)
-  local menu
-  local listener
-  local sx = Video.Width / 20
-  local sy = Video.Height / 20
-  local numplayers = 3
-  local state
-  local d
+	local menu
+	local listener
+	local sx = Video.Width / 20
+	local sy = Video.Height / 20
+	local numplayers = 3
+	local state
+	local d
 
 
-  menu = WarMenu("Joining Game: Map")
+	menu = WarMenu("Joining Game: Map")
 
-  menu:writeLargeText("Map", sx, sy*3)
-  menu:writeText(_("Name:"), sx, sy*3+30)
-  descr = menu:writeText(description, sx+70, sy*3+30)
-  menu:writeText(_("File:"), sx, sy*3+50)
-  maptext = menu:writeText(string.sub(NetworkMapName, 6), sx+70, sy*3+50)
-  menu:writeText(_("Players:"), sx, sy*3+70)
-  players = menu:writeText(numplayers, sx+70, sy*3+70)
+	menu:writeLargeText("Map", sx, sy*3)
+	menu:writeText(_("Name:"), sx, sy*3+30)
+	descr = menu:writeText(description, sx+70, sy*3+30)
+	menu:writeText(_("File:"), sx, sy*3+50)
+	maptext = menu:writeText(string.sub(NetworkMapName, 6), sx+70, sy*3+50)
+	menu:writeText(_("Players:"), sx, sy*3+70)
+	players = menu:writeText(numplayers, sx+70, sy*3+70)
 
-  local fow = menu:addImageCheckBox("Fog of War", sx, sy*3+120, function() end)
-  fow:setMarked(true)
-  ServerSetupState.FogOfWar = 1
-  fow:setEnabled(true)
-  fow:setMarked(int2bool(ServerSetupState.FogOfWar))
-  local revealmap = menu:addImageCheckBox("Reveal Map", sx, sy*3+150, function() end)
-  revealmap:setEnabled(true)
-  revealmap:setMarked(int2bool(ServerSetupState.RevealMap))
-  local no_randomness = menu:addImageCheckBox("No Randomness", sx, sy*3+180, function() end)
-  no_randomness:setEnabled(true)
-  no_randomness:setMarked(int2bool(ServerSetupState.NoRandomness))
-  local computer_opponents = menu:addImageCheckBox("Computer Opponents", sx, sy*3+210, function() end)
-  computer_opponents:setEnabled(true)
-  computer_opponents:setMarked(ServerSetupState.Opponents > 0)
+	local fow = menu:addImageCheckBox("Fog of War", sx, sy*3+120, function() end)
+	fow:setMarked(true)
+	ServerSetupState.FogOfWar = 1
+	fow:setEnabled(true)
+	fow:setMarked(int2bool(ServerSetupState.FogOfWar))
+	local revealmap = menu:addImageCheckBox("Reveal Map", sx, sy*3+150, function() end)
+	revealmap:setEnabled(true)
+	revealmap:setMarked(int2bool(ServerSetupState.RevealMap))
+	local no_randomness = menu:addImageCheckBox("No Randomness", sx, sy*3+180, function() end)
+	no_randomness:setEnabled(true)
+	no_randomness:setMarked(int2bool(ServerSetupState.NoRandomness))
+	local computer_opponents = menu:addImageCheckBox("Computer Opponents", sx, sy*3+210, function() end)
+	computer_opponents:setEnabled(true)
+	computer_opponents:setMarked(ServerSetupState.Opponents > 0)
 
-  menu:writeText("Civilization:", sx, sy*11)
-  local civilization_list = {_("Map Default"), _("Dwarf"), _("Goblin"), _("Human - Germanic")}
-  local race = menu:addDropDown(civilization_list, sx + 100, sy*11,
-    function(dd)
-	  if (civilization_list[dd:getSelected() + 1] ~= _("Map Default")) then
-			local chosen_civilization = civilization_list[dd:getSelected() + 1]
-			chosen_civilization = string.gsub(chosen_civilization, "Human %- ", "")
-			chosen_civilization = string.lower(chosen_civilization)
-			GameSettings.Presets[NetLocalHostsSlot].Race = GetCivilizationID(chosen_civilization)
-			LocalSetupState.Race[NetLocalHostsSlot] = GetCivilizationID(chosen_civilization)
-	  else
-			GameSettings.Presets[NetLocalHostsSlot].Race = -1
-			LocalSetupState.Race[NetLocalHostsSlot] = -1
-	  end
-    end)
-  race:setSize(190, 20)
+	menu:writeText("Civilization:", sx, sy*11)
+	local civilization_list = {_("Map Default"), _("Dwarf"), _("Goblin"), _("Human - Germanic")}
+	local race = menu:addDropDown(civilization_list, sx + 100, sy*11,
+		function(dd)
+			if (civilization_list[dd:getSelected() + 1] ~= _("Map Default")) then
+				local chosen_civilization = civilization_list[dd:getSelected() + 1]
+				chosen_civilization = string.gsub(chosen_civilization, "Human %- ", "")
+				chosen_civilization = string.lower(chosen_civilization)
+				GameSettings.Presets[NetLocalHostsSlot].Race = GetCivilizationID(chosen_civilization)
+				LocalSetupState.Race[NetLocalHostsSlot] = GetCivilizationID(chosen_civilization)
+			else
+				GameSettings.Presets[NetLocalHostsSlot].Race = -1
+				LocalSetupState.Race[NetLocalHostsSlot] = -1
+			end
+		end)
+	race:setSize(190, 20)
 
-  menu:writeText("Units:", sx, sy*11+25)
-  local units = menu:addDropDown({_("Map Default"), _("1 Worker"), _("Town Hall + Workers"), _("Basic Squad"), _("Improved Squad"), _("Advanced Squad")}, sx + 100, sy*11+25,
-    function(dd) end)
-  units:setSize(190, 20)
-  units:setEnabled(false)
+	menu:writeText("Units:", sx, sy*11+25)
+	local units = menu:addDropDown({_("Map Default"), _("1 Worker"), _("Town Hall + Workers"), _("Basic Squad"), _("Improved Squad"), _("Advanced Squad")}, sx + 100, sy*11+25,
+		function(dd) end)
+	units:setSize(190, 20)
+	units:setEnabled(false)
 
-  menu:writeText("Resources:", sx, sy*11+50)
-  local resources = menu:addDropDown({"Map Default", "Low", "Medium", "High"}, sx + 100, sy*11+50,
-    function(dd) end)
-  resources:setSize(190, 20)
-  resources:setEnabled(false)
+	menu:writeText("Resources:", sx, sy*11+50)
+	local resources = menu:addDropDown({"Map Default", "Low", "Medium", "High"}, sx + 100, sy*11+50,
+		function(dd) end)
+	resources:setSize(190, 20)
+	resources:setEnabled(false)
 
-  local OldPresentMap = PresentMap
-  PresentMap = function(desc, nplayers, w, h, id)
-    numplayers = nplayers
-    players:setCaption(""..nplayers)
-    players:adjustSize()
-    descr:setCaption(desc)
-    descr:adjustSize()
-    OldPresentMap(desc, nplayers, w, h, id)
-  end
+	local difficulty_label = menu:writeText("Difficulty:", sx, sy * 11 + 75)
+	local difficulty = menu:addDropDown({"Easy", "Normal", "Hard", "Brutal"}, sx + 100, sy * 11 + 75,
+		function(dd) end)
+	difficulty:setSize(190, 20)
+	difficulty:setEnabled(false)
+	difficulty:setVisible(false)
+	difficulty_label:setVisible(false)
+	difficulty:setSelected(1)
+	GameSettings.Difficulty = 2
 
-  -- Security: The map name is checked by the stratagus engine.
-  Load(NetworkMapName)
-  local function readycb(dd)
-     LocalSetupState.Ready[NetLocalHostsSlot] = bool2int(dd:isMarked())
-  end
-  menu:addImageCheckBox("Ready", sx*11,  sy*14, readycb)
+	local OldPresentMap = PresentMap
+	PresentMap = function(desc, nplayers, w, h, id)
+		numplayers = nplayers
+		players:setCaption(""..nplayers)
+		players:adjustSize()
+		descr:setCaption(desc)
+		descr:adjustSize()
+		OldPresentMap(desc, nplayers, w, h, id)
+	end
 
-  local updatePlayersList = addPlayersList(menu, numplayers)
+	-- Security: The map name is checked by the stratagus engine.
+	Load(NetworkMapName)
+	local function readycb(dd)
+		LocalSetupState.Ready[NetLocalHostsSlot] = bool2int(dd:isMarked())
+	end
+	menu:addImageCheckBox("Ready", sx*11, sy*14, readycb)
 
-  local joincounter = 0
-  local function listen()
-    NetworkProcessClientRequest()
-    fow:setMarked(int2bool(ServerSetupState.FogOfWar))
-    GameSettings.NoFogOfWar = not int2bool(ServerSetupState.FogOfWar)
-    revealmap:setMarked(int2bool(ServerSetupState.RevealMap))
-    GameSettings.RevealMap = ServerSetupState.RevealMap
-    no_randomness:setMarked(int2bool(ServerSetupState.NoRandomness))
-    GameSettings.NoRandomness = int2bool(ServerSetupState.NoRandomness)
-    computer_opponents:setMarked(ServerSetupState.Opponents > 0)
-    units:setSelected(ServerSetupState.UnitsOption)
-    GameSettings.NumUnits = ServerSetupState.UnitsOption
-    resources:setSelected(ServerSetupState.ResourcesOption)
-    GameSettings.Resources = ServerSetupState.ResourcesOption
---    GameSettings.Inside = int2bool(ServerSetupState.Inside)
-    updatePlayersList()
-    state = GetNetworkState()
-    -- FIXME: don't use numbers
-    if (state == 15) then -- ccs_started, server started the game
-      SetThisPlayer(1)
-      joincounter = joincounter + 1
-      if (joincounter == 30) then
-        SetFogOfWar(fow:isMarked())
-        if revealmap:isMarked() == true then
-          RevealMap()
-        end
-        NetworkGamePrepareGameSettings()
-        RunMap(NetworkMapName)
-        PresentMap = OldPresentMap
-        menu:stop()
-      end
-    elseif (state == 10) then -- ccs_unreachable
-      ErrorMenu("Cannot reach server")
-      menu:stop()
-    end
-  end
-  listener = LuaActionListener(listen)
-  menu:addLogicCallback(listener)
+	local updatePlayersList = addPlayersList(menu, numplayers)
 
-  menu:addFullButton(_("~!Cancel"), "c", Video.Width / 2 - 100, Video.Height - 100,
-    function() NetworkDetachFromServer(); menu:stop() end)
+	local joincounter = 0
+	local function listen()
+		NetworkProcessClientRequest()
+		fow:setMarked(int2bool(ServerSetupState.FogOfWar))
+		GameSettings.NoFogOfWar = not int2bool(ServerSetupState.FogOfWar)
+		revealmap:setMarked(int2bool(ServerSetupState.RevealMap))
+		GameSettings.RevealMap = ServerSetupState.RevealMap
+		no_randomness:setMarked(int2bool(ServerSetupState.NoRandomness))
+		GameSettings.NoRandomness = int2bool(ServerSetupState.NoRandomness)
+		computer_opponents:setMarked(ServerSetupState.Opponents > 0)
+		units:setSelected(ServerSetupState.UnitsOption)
+		GameSettings.NumUnits = ServerSetupState.UnitsOption
+		resources:setSelected(ServerSetupState.ResourcesOption)
+		GameSettings.Resources = ServerSetupState.ResourcesOption
+		difficulty:setSelected(ServerSetupState.Difficulty - 1)
+		GameSettings.Difficulty = ServerSetupState.Difficulty
+		difficulty:setVisible(ServerSetupState.Opponents > 0)
+		difficulty_label:setVisible(ServerSetupState.Opponents > 0)
+--		GameSettings.Inside = int2bool(ServerSetupState.Inside)
+		updatePlayersList()
+		state = GetNetworkState()
+		-- FIXME: don't use numbers
+		if (state == 15) then -- ccs_started, server started the game
+			SetThisPlayer(1)
+			joincounter = joincounter + 1
+			if (joincounter == 30) then
+				SetFogOfWar(fow:isMarked())
+				if revealmap:isMarked() == true then
+					RevealMap()
+				end
+				NetworkGamePrepareGameSettings()
+				RunMap(NetworkMapName)
+				PresentMap = OldPresentMap
+				menu:stop()
+			end
+		elseif (state == 10) then -- ccs_unreachable
+			ErrorMenu("Cannot reach server")
+			menu:stop()
+		end
+	end
+	listener = LuaActionListener(listen)
+	menu:addLogicCallback(listener)
 
-  menu:run()
+	menu:addFullButton(_("~!Cancel"), "c", Video.Width / 2 - 100, Video.Height - 100,
+		function() NetworkDetachFromServer(); menu:stop() end)
+
+	menu:run()
 end
 
 function RunJoiningGameMenu(server_address, s)
@@ -324,130 +338,142 @@ function RunJoinIpMenu()
 end
 
 function RunServerMultiGameMenu(map, description, numplayers)
-  local menu
-  local sx = Video.Width / 20
-  local sy = Video.Height / 20
-  local startgame
-  local d
+	local menu
+	local sx = Video.Width / 20
+	local sy = Video.Height / 20
+	local startgame
+	local difficulty
+	local difficulty_label
+	local d
 
-  menu = WarMenu("Create Multiplayer game")
+	menu = WarMenu("Create Multiplayer game")
 
-  menu:writeLargeText("Map", sx, sy*3)
-  menu:writeText(_("Name:"), sx, sy*3+30)
-  descr = menu:writeText(description, sx+70, sy*3+30)
-  menu:writeText(_("File:"), sx, sy*3+50)
-  maptext = menu:writeText(string.sub(map, 6), sx+70, sy*3+50)
-  menu:writeText(_("Players:"), sx, sy*3+70)
-  players = menu:writeText(numplayers, sx+70, sy*3+70)
+	menu:writeLargeText("Map", sx, sy*3)
+	menu:writeText(_("Name:"), sx, sy*3+30)
+	descr = menu:writeText(description, sx+70, sy*3+30)
+	menu:writeText(_("File:"), sx, sy*3+50)
+	maptext = menu:writeText(string.sub(map, 6), sx+70, sy*3+50)
+	menu:writeText(_("Players:"), sx, sy*3+70)
+	players = menu:writeText(numplayers, sx+70, sy*3+70)
 
-  local function fowCb(dd)
-    ServerSetupState.FogOfWar = bool2int(dd:isMarked())
-    NetworkServerResyncClients()
-    GameSettings.NoFogOfWar = not dd:isMarked()
-  end
-  local fow = menu:addImageCheckBox("Fog of War", sx, sy*3+120, fowCb)
-  fow:setMarked(true)
-  local function revealMapCb(dd)
-    ServerSetupState.RevealMap = bool2int(dd:isMarked())
-    NetworkServerResyncClients()
-    GameSettings.RevealMap = bool2int(dd:isMarked())
-  end
-  local revealmap = menu:addImageCheckBox("Reveal Map", sx, sy*3+150, revealMapCb)
-  local function no_randomnessCb(dd)
-    ServerSetupState.NoRandomness = bool2int(dd:isMarked())
-    NetworkServerResyncClients()
-    GameSettings.NoRandomness = dd:isMarked()
-  end
-  local no_randomness = menu:addImageCheckBox("No Randomness", sx, sy*3+180, no_randomnessCb)
-  no_randomness:setMarked(false)
-  
-  ServerSetupState.Opponents = 0
-  local function computer_opponentsCb(dd)
-	if (dd:isMarked()) then
-		local connected_players = 0
-		for i=2,8 do
-			if (Hosts[i-1].PlyName ~= "") then
-				connected_players = connected_players + 1
-			end
-		end
-		ServerSetupState.Opponents = numplayers - 1 - connected_players
-	else
-		ServerSetupState.Opponents = 0
+	local function fowCb(dd)
+		ServerSetupState.FogOfWar = bool2int(dd:isMarked())
+		NetworkServerResyncClients()
+		GameSettings.NoFogOfWar = not dd:isMarked()
 	end
-    NetworkServerResyncClients()
-  end
-  local computer_opponents = menu:addImageCheckBox("Computer Opponents", sx, sy*3+210, computer_opponentsCb)
-  computer_opponents:setMarked(false)
+	local fow = menu:addImageCheckBox("Fog of War", sx, sy*3+120, fowCb)
+	fow:setMarked(true)
+	local function revealMapCb(dd)
+		ServerSetupState.RevealMap = bool2int(dd:isMarked())
+		NetworkServerResyncClients()
+		GameSettings.RevealMap = bool2int(dd:isMarked())
+	end
+	local revealmap = menu:addImageCheckBox("Reveal Map", sx, sy*3+150, revealMapCb)
+	local function no_randomnessCb(dd)
+		ServerSetupState.NoRandomness = bool2int(dd:isMarked())
+		NetworkServerResyncClients()
+		GameSettings.NoRandomness = dd:isMarked()
+	end
+	local no_randomness = menu:addImageCheckBox("No Randomness", sx, sy*3+180, no_randomnessCb)
+	no_randomness:setMarked(false)
+	
+	ServerSetupState.Opponents = 0
+	local function computer_opponentsCb(dd)
+		if (dd:isMarked()) then
+			ServerSetupState.Opponents = 1
+		else
+			ServerSetupState.Opponents = 0
+		end
+		NetworkServerResyncClients()
+		difficulty:setVisible(ServerSetupState.Opponents > 0)
+		difficulty_label:setVisible(ServerSetupState.Opponents > 0)
+	end
+	local computer_opponents = menu:addImageCheckBox("Computer Opponents", sx, sy*3+210, computer_opponentsCb)
+	computer_opponents:setMarked(false)
 
-  menu:writeText("Civilization:", sx, sy*11)
-   local civilization_list = {_("Map Default"), _("Dwarf"), _("Goblin"), _("Human - Germanic")}
-   d = menu:addDropDown(civilization_list, sx + 100, sy*11,
-    function(dd)
-	  if (civilization_list[dd:getSelected() + 1] ~= _("Map Default")) then
-			local chosen_civilization = civilization_list[dd:getSelected() + 1]
-			chosen_civilization = string.gsub(chosen_civilization, "Human %- ", "")
-			chosen_civilization = string.lower(chosen_civilization)
-			GameSettings.Presets[0].Race = GetCivilizationID(chosen_civilization)
-			ServerSetupState.Race[0] = GetCivilizationID(chosen_civilization)
-	  else
-			GameSettings.Presets[0].Race = -1
-			ServerSetupState.Race[0] = -1
-	  end
-      NetworkServerResyncClients()
-    end)
-  d:setSize(190, 20)
+	menu:writeText("Civilization:", sx, sy*11)
+	local civilization_list = {_("Map Default"), _("Dwarf"), _("Goblin"), _("Human - Germanic")}
+	d = menu:addDropDown(civilization_list, sx + 100, sy*11,
+		function(dd)
+			if (civilization_list[dd:getSelected() + 1] ~= _("Map Default")) then
+				local chosen_civilization = civilization_list[dd:getSelected() + 1]
+				chosen_civilization = string.gsub(chosen_civilization, "Human %- ", "")
+				chosen_civilization = string.lower(chosen_civilization)
+				GameSettings.Presets[0].Race = GetCivilizationID(chosen_civilization)
+				ServerSetupState.Race[0] = GetCivilizationID(chosen_civilization)
+			else
+				GameSettings.Presets[0].Race = -1
+				ServerSetupState.Race[0] = -1
+			end
+			NetworkServerResyncClients()
+		end)
+	d:setSize(190, 20)
 
-  menu:writeText("Units:", sx, sy*11+25)
-  d = menu:addDropDown({_("Map Default"), _("1 Worker"), _("Town Hall + Workers"), _("Basic Squad"), _("Improved Squad"), _("Advanced Squad")}, sx + 100, sy*11+25,
-    function(dd)
-      GameSettings.NumUnits = dd:getSelected()
-      ServerSetupState.UnitsOption = GameSettings.NumUnits
-      NetworkServerResyncClients()
-    end)
-  d:setSize(190, 20)
+	menu:writeText("Units:", sx, sy*11+25)
+	d = menu:addDropDown({_("Map Default"), _("1 Worker"), _("Town Hall + Workers"), _("Basic Squad"), _("Improved Squad"), _("Advanced Squad")}, sx + 100, sy*11+25,
+		function(dd)
+			GameSettings.NumUnits = dd:getSelected()
+			ServerSetupState.UnitsOption = GameSettings.NumUnits
+			NetworkServerResyncClients()
+		end)
+	d:setSize(190, 20)
 
-  menu:writeText("Resources:", sx, sy*11+50)
-  d = menu:addDropDown({_("Map Default"), _("Low"), _("Medium"), _("High")}, sx + 100, sy*11+50,
-    function(dd)
-      GameSettings.Resources = dd:getSelected()
-      ServerSetupState.ResourcesOption = GameSettings.Resources
-      NetworkServerResyncClients()
-    end)
-  d:setSize(190, 20)
+	menu:writeText("Resources:", sx, sy*11+50)
+	d = menu:addDropDown({_("Map Default"), _("Low"), _("Medium"), _("High")}, sx + 100, sy*11+50,
+		function(dd)
+			GameSettings.Resources = dd:getSelected()
+			ServerSetupState.ResourcesOption = GameSettings.Resources
+			NetworkServerResyncClients()
+		end)
+	d:setSize(190, 20)
 
-  local updatePlayers = addPlayersList(menu, numplayers)
+	difficulty_label = menu:writeText("Difficulty:", sx, sy * 11 + 75)
+	difficulty = menu:addDropDown({_("Easy"), _("Normal"), _("Hard"), _("Brutal")}, sx + 100, sy * 11 + 75,
+		function(dd)
+			GameSettings.Difficulty = dd:getSelected() + 1
+			ServerSetupState.Difficulty = GameSettings.Difficulty
+			NetworkServerResyncClients()
+		end)
+	difficulty:setSize(190, 20)
+	difficulty:setSelected(1)
+	difficulty:setVisible(false)
+	difficulty_label:setVisible(false)
+	GameSettings.Difficulty = 2
+	ServerSetupState.Difficulty = GameSettings.Difficulty
 
-  NetworkMapName = map
-  NetworkInitServerConnect(numplayers)
-  ServerSetupState.FogOfWar = 1
---  ServerSetupState.Inside = 0
-  GameSettings.Inside = false
-  startgame = menu:addFullButton(_("~!Start Game"), "s", sx * 11,  sy*14,
-    function(s)
-      SetFogOfWar(fow:isMarked())
-      if revealmap:isMarked() == true then
-        RevealMap()
-      end
-      NetworkServerStartGame()
-      NetworkGamePrepareGameSettings()
-      RunMap(map)
-      menu:stop()
-    end
-  )
-  startgame:setVisible(false)
-  local waitingtext = menu:writeText(_("Waiting for players"), sx*11, sy*14)
-  local function updateStartButton(ready)
-    startgame:setVisible(ready)
-    waitingtext:setVisible(not ready)
-  end
+	local updatePlayers = addPlayersList(menu, numplayers)
 
-  local listener = LuaActionListener(function(s) updateStartButton(updatePlayers()) end)
-  menu:addLogicCallback(listener)
+	NetworkMapName = map
+	NetworkInitServerConnect(numplayers)
+	ServerSetupState.FogOfWar = 1
+--	ServerSetupState.Inside = 0
+	GameSettings.Inside = false
+	startgame = menu:addFullButton(_("~!Start Game"), "s", sx * 11,  sy*14,
+		function(s)
+			SetFogOfWar(fow:isMarked())
+			if revealmap:isMarked() == true then
+				RevealMap()
+			end
+			NetworkServerStartGame()
+			NetworkGamePrepareGameSettings()
+			RunMap(map)
+			menu:stop()
+		end
+	)
+	startgame:setVisible(false)
+	local waitingtext = menu:writeText(_("Waiting for players"), sx*11, sy*14)
+	local function updateStartButton(ready)
+		startgame:setVisible(ready)
+		waitingtext:setVisible(not ready)
+	end
 
-  menu:addFullButton(_("~!Cancel"), "c", Video.Width / 2 - 100, Video.Height - 100,
-    function() InitGameSettings(); menu:stop() end)
+	local listener = LuaActionListener(function(s) updateStartButton(updatePlayers()) end)
+	menu:addLogicCallback(listener)
 
-  menu:run()
+	menu:addFullButton(_("~!Cancel"), "c", Video.Width / 2 - 100, Video.Height - 100,
+		function() InitGameSettings(); menu:stop() end)
+
+	menu:run()
 end
 
 function RunCreateMultiGameMenu(s)
