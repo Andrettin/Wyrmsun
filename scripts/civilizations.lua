@@ -1991,6 +1991,12 @@ DefineCivilization("frankish", {
 	},
 	SettlementNames = {
 		"Haim" -- the French settlement names "Le Hamel", "Hamelet", "Hamelin" and "Hem" come from or have the same origin as the Old French "ham", which in turn comes from Old Frankish "haim"; Source: http://www.cnrtl.fr/definition/hameau
+	},
+	UIFillers = {
+		"dlcs/frankish_faction_flair/graphics/ui/filler_bottom.png", 380, -181,
+		"germanic/ui/resource.png", 0, 0,
+		"dlcs/frankish_faction_flair/graphics/ui/buttonpanel.png", -256, -200,
+		"dlcs/frankish_faction_flair/graphics/ui/infopanel.png", 0, -200
 	}
 })
 

@@ -25,23 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("frank-tribe", {
-	Name = "Frank Tribe",
-	Civilization = "frankish",
-	Type = "tribe",
-	Colors = {"green", "orange"},
-	FactionUpgrade = "upgrade-faction-frank-tribe",
-	Icon = "icon-flag-old-austria",
-	Description = "The Franks are one of the most powerful Germanic tribes to have existed. From their humble beginnings in their dwellings along the Rhine, they eventually managed to conquer the entirety of Gaul and much of Central Europe.",
-	DevelopsFrom = {"asa-tribe", "hersing-tribe", "istaevone-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"},
-	UIFillers = {
-		"dlcs/frankish_faction_flair/graphics/ui/filler_bottom.png", 380, -181,
-		"dwarf/ui/resource.png", 0, 0,
-		"dlcs/frankish_faction_flair/graphics/ui/buttonpanel.png", -256, -200,
-		"dlcs/frankish_faction_flair/graphics/ui/infopanel.png", 0, -200
-	}
-})
-
 DefineFaction("ampsivarii-tribe", {
 	Name = "Ampsivarii Tribe",
 	Civilization = "frankish", -- accurate?
@@ -101,6 +84,17 @@ DefineFaction("ubii-tribe", { -- Source: H. H. Howorth, "The Ethnology of German
 	Icon = "icon-flag-habsburg",
 	Description = "The Ubii were a West Germanic tribe who lived by the Rhine, north of the Main river. Due to their location in a central trading spot, they were more advanced than other Germanic tribes. Being allies of Rome, many of them eventually migrated west of the Rhine, dwelling around Colonia Agrippinenses (the modern Cologne). The ones who remained possibly became the Chatti.",
 	DevelopsFrom = {"asa-tribe", "hersing-tribe", "istaevone-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"}
+})
+
+DefineFaction("frank-tribe", {
+	Name = "Frank Tribe",
+	Civilization = "frankish",
+	Type = "tribe",
+	Colors = {"green", "orange"},
+	FactionUpgrade = "upgrade-faction-frank-tribe",
+	Icon = "icon-flag-old-austria",
+	Description = "The Franks are one of the most powerful Germanic tribes to have existed. From their humble beginnings in their dwellings along the Rhine, they eventually managed to conquer the entirety of Gaul and much of Central Europe.",
+	DevelopsFrom = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "sugambri-tribe", "ubii-tribe"}
 })
 
 DefineFaction("francia", {
