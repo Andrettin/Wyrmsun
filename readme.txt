@@ -75,6 +75,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added buttons in the minimap interface area to change between different map layers in Scenario mode.
 - Fixed a save game crash which could happen if a hero was within a transport or building when the game was saved.
 
+* Maps
+- Added Italy map.
+
 * Multiplayer
 - Fixed issue which could cause a desync if the "Computer Opponents" option had been selected by the host before a player had joined.
 - Added option to select AI difficulty, if the "Computer Opponents" option is active.
@@ -90,6 +93,7 @@ https://github.com/Andrettin/Wyrmsun
 - Renamed Teuton Schutzes to Archers.
 - Renamed Teuton Ritters to Knights and Landesherrs to Knight Lords.
 - Renamed the Teuton Rathaus to Town Hall, and the Burg to Stronghold.
+- Fixed issue which caused caravans and transport ships to not automatically re-engage in trading after returning from a foreign market/dock.
 
 * Upgrades
 - Added Gunpowder upgrade (researchable at the Academy/University), which unlocks gunpowder units.

@@ -1,0 +1,11 @@
+if (SyncRand(2) == 0) then
+	LoadTileModels("scripts/tilesets/conifer_forest_summer.lua")
+else
+	LoadTileModels("scripts/tilesets/conifer_forest_autumn.lua")
+end
+
+ApplyMapTemplate("earth", 4010, 980)
+
+SetPlayerData(PlayerNumNeutral, "RaceName", "neutral")
+
+CreatePlayers(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1, true, true, false, true, nil, nil, false, true)
