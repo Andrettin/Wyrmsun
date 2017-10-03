@@ -1743,6 +1743,16 @@ function CreateDecorations()
 end
 
 function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_halls, symmetric, starting_gold_mine, player_civilizations, player_buildings, water_map, no_raw_tile)
+	local settlement_units = {}
+	local uncount = GetUnits(PlayerNumNeutral)
+	for unit1 = 1,table.getn(uncount) do 
+		if (uncount[unit1]) then
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-settlement-site") then
+				table.insert(settlement_units, uncount[unit1])
+			end
+		end
+	end
+
 	-- create player units
 	local symmetric_starting_location = {0, 0}
 	for i=0,(PlayerMax - 2) do
@@ -1784,6 +1794,17 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 				local WhileCount = 0
 				local player_spawn_point
 				local starting_point_found = false
+				local has_settlement_site = false
+				
+				if (table.getn(settlement_units) > 0) then
+					starting_point_found = true
+					has_settlement_site = true
+					local settlement_site = settlement_units[SyncRand(table.getn(settlement_units)) + 1]
+					RemoveElementFromArray(settlement_units, settlement_site)
+					unit = CreateUnitOnTop("unit-germanic-town-hall", i, settlement_site)
+					player_spawn_point = {GetUnitVariable(unit, "PosX"), GetUnitVariable(unit, "PosY")}
+				end
+				
 				while (starting_point_found == false and WhileCount < 10000) do
 					if (Players[i].StartPos.x > 0 and Players[i].StartPos.y > 0) then -- if the player already has a custom starting location set, then see if that area (or failing that the one surrounding it) is actually free
 						local second_min_x = Players[i].StartPos.x - WhileCount
@@ -1853,7 +1874,9 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 						SetPlayerData(i, "RaceName", possible_civilizations[SyncRand(table.getn(possible_civilizations)) + 1])
 					end
 					if (no_raw_tile) then
-						unit = CreateUnit("unit-germanic-town-hall", i, {player_spawn_point[1], player_spawn_point[2]})
+						if (has_settlement_site == false) then
+							unit = CreateUnit("unit-germanic-town-hall", i, {player_spawn_point[1], player_spawn_point[2]})
+						end
 						unit = CreateUnit("unit-germanic-worker", i, {player_spawn_point[1], player_spawn_point[2]})
 						unit = CreateUnit("unit-germanic-worker", i, {player_spawn_point[1], player_spawn_point[2]})
 						unit = CreateUnit("unit-germanic-worker", i, {player_spawn_point[1], player_spawn_point[2]})
