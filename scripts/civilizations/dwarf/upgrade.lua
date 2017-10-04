@@ -279,7 +279,7 @@ DefineModifier("upgrade-dwarven-masonry",
 
 DefineModifier("upgrade-dwarven-coinage",
 	{"improve-production", "copper", 10},
-	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"}
+	{"apply-to", "unit-dwarven-smithy"}, {"apply-to", "unit-brising-smithy"}
 )
 
 DefineModifier("upgrade-dwarven-coinage",

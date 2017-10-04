@@ -210,7 +210,7 @@ DefineModifier("upgrade-faction-norlund-clan",
 
 DefineModifier("upgrade-faction-oinling-clan",
 	{"improve-production", "copper", 5},
-	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"}
+	{"apply-to", "unit-dwarven-smithy"}
 )
 
 DefineModifier("upgrade-faction-shadowcharm-clan",

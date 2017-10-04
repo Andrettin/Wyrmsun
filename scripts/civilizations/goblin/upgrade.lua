@@ -237,7 +237,7 @@ DefineModifier("upgrade-goblin-iron-tipped-wood-plow",
 
 DefineModifier("upgrade-goblin-coinage",
 	{"improve-production", "copper", 10},
-	{"apply-to", "unit-goblin-town-hall"}, {"apply-to", "unit-goblin-stronghold"}
+	{"apply-to", "unit-goblin-smithy"}
 )
 
 DefineModifier("upgrade-goblin-coinage",

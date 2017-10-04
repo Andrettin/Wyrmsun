@@ -380,7 +380,7 @@ DefineModifier("upgrade-faction-mecklenburg",
 
 DefineModifier("upgrade-faction-netherlands",
 	{"improve-production", "copper", 5},
-	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"}
+	{"apply-to", "unit-teuton-smithy"}
 )
 
 DefineModifier("upgrade-faction-overijssel",

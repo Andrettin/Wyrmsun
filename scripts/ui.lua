@@ -1247,6 +1247,24 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {EtherealVision = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = "Ethereal Vision", Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {TownHall = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Stores Resources"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {TownHall = "false", CanStore = "copper"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Stores Copper"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {TownHall = "false", CanStore = "lumber"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Stores Lumber"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {TownHall = "false", CanStore = "stone"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Stores Stone"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {TownHall = "false", CanStore = "leather"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Stores Leather"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {TownHall = "false", ImproveIncome = "copper"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Copper Processing Bonus"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {IncreasesLuxuryDemand = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = TypeLuxuryDemand("Type"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -1715,6 +1733,21 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {Rail = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Can only move over railroads"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {TownHall = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Stores Resources"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {TownHall = "false", CanStore = "copper", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Stores Copper"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {TownHall = "false", CanStore = "lumber", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Stores Lumber"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {TownHall = "false", CanStore = "stone", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Stores Stone"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {TownHall = "false", CanStore = "leather", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Stores Leather"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "editor-unit"}, 

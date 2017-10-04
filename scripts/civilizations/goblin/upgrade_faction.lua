@@ -181,7 +181,7 @@ DefineModifier("upgrade-faction-myridia",
 
 DefineModifier("upgrade-faction-stilgar",
 	{"improve-production", "copper", 5},
-	{"apply-to", "unit-goblin-town-hall"}, {"apply-to", "unit-goblin-stronghold"}
+	{"apply-to", "unit-goblin-smithy"}
 )
 
 DefineModifier("upgrade-faction-tenebris",
