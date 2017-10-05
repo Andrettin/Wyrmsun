@@ -64,7 +64,7 @@ https://github.com/Andrettin/Wyrmsun
 - Improved the performance of AI worker resource gathering assignment.
 
 * Buildings
-- Building construction buttons now display whether the building can store resources.
+- Building construction buttons now display whether the building can store resources, as well as resource processing bonuses.
 
 * Map Editor
 - Fixed crash when placing a Settlement Site in the editor.

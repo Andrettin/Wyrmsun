@@ -1262,8 +1262,8 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {TownHall = "false", CanStore = "leather"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Stores Leather"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {TownHall = "false", ImproveIncome = "copper"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Copper Processing Bonus"), Font = wyr.preferences.PopupDescriptionFont}}
+				{ 	Condition = {ImproveIncomes = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = TypeImproveIncomes("Type"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {IncreasesLuxuryDemand = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = TypeLuxuryDemand("Type"), Font = wyr.preferences.PopupDescriptionFont}}
