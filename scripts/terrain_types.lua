@@ -718,6 +718,7 @@ DefineTerrainType("cave-wall", {
 	Overlay = true,
 	Flags = {"land", "rock", "unpassable", "air-unpassable"},
 	Graphics = "terrain/cave_wall.png",
+	Resource = "stone",
 	SolidTiles = {18},
 	DestroyedTiles = {16},
 	TransitionTiles = {

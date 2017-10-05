@@ -92,6 +92,9 @@ https://github.com/Andrettin/Wyrmsun
 * Scenarios
 - Added the Thunraz's Servant scenario.
 
+* Terrain
+- Fixed issue which prevented stone from being gathered from cave walls.
+
 * Units
 - Added dwarven Thunderer (icon by Jinn and unit graphics by Jinn and b_o).
 - Added goblin Gunpowder Infantry (icon by Jinn and unit graphics by Jinn and b_o).
