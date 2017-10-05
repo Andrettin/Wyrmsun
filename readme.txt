@@ -62,12 +62,16 @@ https://github.com/Andrettin/Wyrmsun
 
 * AI
 - Improved the performance of AI worker resource gathering assignment.
+- Fixed issue which caused the AI to waste resources on farms and other buildings before building a town hall, if it didn't start with one.
 
 * Buildings
 - Building construction buttons now display whether the building can store resources, as well as resource processing bonuses.
 
 * Map Editor
 - Fixed crash when placing a Settlement Site in the editor.
+
+* Maps
+- Fixed issue which caused neutral mercenary camps to start with a worker (like normal players) if the "1 Worker" option is active.
 
 * Miscellaneous
 - Unit and building encyclopedia entries now contain their costs and stats.

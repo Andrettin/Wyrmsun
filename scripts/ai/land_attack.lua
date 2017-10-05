@@ -78,6 +78,8 @@ local land_funcs = {
 	function() return AiSet(GetAiUnitType("worker"), 1) end,
 	function() return AiWait(GetAiUnitType("worker")) end, -- start hangs if nothing available
 
+	function() return AiWait(GetAiUnitType("town-hall")) end, -- don't spend resources on other buildings if the AI player doesn't have a town hall yet
+
 	function() return AiSet(GetAiUnitType("worker"), 4) end, -- 4
 
 	function() return AiNeed(GetAiUnitType("barracks")) end,

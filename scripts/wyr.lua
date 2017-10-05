@@ -60,6 +60,7 @@ function CreateUnit(unittype, player, pos, z)
 		GameSettings.NumUnits >= 1
 		and player ~= PlayerNumNeutral
 		and Players[player].Type ~= PlayerNeutral
+		and Players[player]:HasNeutralFactionType() == false
 	) then
 		if (GameSettings.NumUnits == 1 and GetUnitTypeData(unittype, "TownHall")) then -- if starting with 1 worker, replace town halls with settlement sites
 			unittype = "unit-settlement-site"
@@ -121,13 +122,11 @@ function SetPlayerData(player, data, arg1, arg2)
 	-- If this is 1 worker mode add the worker now
 	if (data == "RaceName") then
 		if (GameCycle == 0) then
-			if (GameSettings.NumUnits == 1) then -- 1 Worker
-				if (player ~= PlayerNumNeutral and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
+			if (player ~= PlayerNumNeutral and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral and Players[player]:HasNeutralFactionType() == false) then
+				if (GameSettings.NumUnits == 1) then -- 1 Worker
 					local unittype = ConvertUnitType("unit-dwarven-miner", GetPlayerData(player, "RaceName"))
 					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				end
-			elseif (GameSettings.NumUnits == 2) then -- Town Hall and 5 Workers
-				if (player ~= PlayerNumNeutral and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
+				elseif (GameSettings.NumUnits == 2) then -- Town Hall and 5 Workers
 					local unittype = ConvertUnitType("unit-dwarven-town-hall", GetPlayerData(player, "RaceName"))
 					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
 					unittype = ConvertUnitType("unit-dwarven-miner", GetPlayerData(player, "RaceName"))
@@ -136,16 +135,12 @@ function SetPlayerData(player, data, arg1, arg2)
 					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
 					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
 					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				end
-			elseif (GameSettings.NumUnits == 3) then -- Basic Squad
-				if (player ~= PlayerNumNeutral and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
+				elseif (GameSettings.NumUnits == 3) then -- Basic Squad
 					local unittype = ConvertUnitType("unit-dwarven-axefighter", GetPlayerData(player, "RaceName"))
 					for i = 1, 4 do
 						OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
 					end
-				end
-			elseif (GameSettings.NumUnits == 4) then -- Improved Squad
-				if (player ~= PlayerNumNeutral and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
+				elseif (GameSettings.NumUnits == 4) then -- Improved Squad
 					local unittype = ConvertUnitType("unit-dwarven-axefighter", GetPlayerData(player, "RaceName"))
 					for i = 1, 3 do
 						OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
@@ -154,9 +149,7 @@ function SetPlayerData(player, data, arg1, arg2)
 					for i = 1, 2 do
 						OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
 					end
-				end
-			elseif (GameSettings.NumUnits == 5) then -- Advanced Squad
-				if (player ~= PlayerNumNeutral and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
+				elseif (GameSettings.NumUnits == 5) then -- Advanced Squad
 					local unittype = ConvertUnitType("unit-dwarven-axefighter", GetPlayerData(player, "RaceName"))
 					for i = 1, 5 do
 						OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
