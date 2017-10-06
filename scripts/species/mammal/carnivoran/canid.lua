@@ -41,6 +41,7 @@ DefineSpecies("osteoborus", {
 DefineSpecies("wolf", {
 	Name = "Wolf",
 	Homeworld = "earth",
+	Terrains = {"grass", "dirt", "snow"},
 	EvolvesFrom = {"osteoborus"},
 	ChildUpgrade = "upgrade-child"
 })

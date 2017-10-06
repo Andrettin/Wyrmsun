@@ -1466,7 +1466,8 @@ DefineUnitType("unit-flowers", {
 		{
 			"variation-id", "forest",
 			"terrain", "grass",
-			"terrain", "dirt"
+			"terrain", "dirt",
+			"terrain", "snow"
 		},
 		{
 			"variation-id", "swamp",
@@ -1518,19 +1519,22 @@ DefineUnitType("unit-large-flower", {
 		{
 			"variation-id", "forest",
 			"terrain", "grass",
-			"terrain", "dirt"
+			"terrain", "dirt",
+			"terrain", "snow"
 		},
 		{
 			"variation-id", "forest",
 			"file", "neutral/decorations/large_flower_2.png",
 			"terrain", "grass",
-			"terrain", "dirt"
+			"terrain", "dirt",
+			"terrain", "snow"
 		},
 		{
 			"variation-id", "forest",
 			"file", "neutral/decorations/large_flower_3.png",
 			"terrain", "grass",
-			"terrain", "dirt"
+			"terrain", "dirt",
+			"terrain", "snow"
 		},
 		{
 			"variation-id", "swamp",
@@ -1653,7 +1657,8 @@ DefineUnitType("unit-fern", { Name = "Fern",
 		{
 			"variation-id", "forest",
 			"terrain", "grass",
-			"terrain", "dirt"
+			"terrain", "dirt",
+			"terrain", "snow"
 		},
 		{
 			"variation-id", "swamp",

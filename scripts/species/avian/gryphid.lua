@@ -47,7 +47,7 @@ DefineSpecies("gryphon", {
 	Genus = "gryphus",
 	Species = "leo", -- "lion" in Latin
 	Homeworld = "nidavellir",
-	Terrains = {"dry-mud", "mud", "flamefood-tree", "rock"}, -- should be dark dirt instead of dry mud and mud
+	Terrains = {"dry-mud", "mud", "flamefood-tree", "rock", "snow"}, -- should be dark dirt instead of dry mud and mud
 	EvolvesFrom = {"hoatzin"}, -- the Gryphon has a common ancestor with eagles
 	Era = "holocene",
 	ChildUpgrade = "upgrade-gryphon-child"

@@ -277,11 +277,40 @@ DefineTerrainType("desert-sand", {
 	}
 })
 
+DefineTerrainType("snow", {
+	Name = "Snow",
+	Character = "s",
+	Color = {255, 255, 255},
+	Buildable = true,
+	Flags = {"land"},
+	OuterBorderTerrains = {"grass", "dirt", "dry-mud", "mud", "desert-sand", "cave-floor", "rockbound-cave-floor"},
+	Graphics = "terrain/snow.png",
+	SolidTiles = {17, 20, 23},
+	AdjacentTransitionTiles = {
+		"any", "north", 33,
+		"any", "south", 1,
+		"any", "west", 18,
+		"any", "east", 16,
+		"any", "northwest-outer", 65,
+		"any", "northeast-outer", 64,
+		"any", "southwest-outer", 49,
+		"any", "southeast-outer", 48,
+		"any", "northwest-inner", 34,
+		"any", "northeast-inner", 32,
+		"any", "southwest-inner", 2,
+		"any", "southeast-inner", 0,
+		"any", "northwest-southeast-inner", 80,
+		"any", "northwest-southeast-inner", 96,
+		"any", "northeast-southwest-inner", 81,
+		"any", "northeast-southwest-inner", 97
+	}
+})
+
 DefineTerrainType("shallow-water", {
 	Name = "Shallow Water",
 	Character = "w",
 	Color = {0, 128, 255},
-	BaseTerrains = {"dirt", "mud", "rockbound-cave-floor", "cave-floor"},
+	BaseTerrains = {"dirt", "mud", "rockbound-cave-floor", "cave-floor", "snow"},
 	Overlay = true,
 	Flags = {"water"},
 	AllowSingle = true,
@@ -363,7 +392,7 @@ DefineTerrainType("shallow-water", {
 DefineTerrainType("gray-shallow-water", {
 	Name = "Gray Shallow Water",
 	Character = "y",
-	BaseTerrains = {"rockbound-cave-floor", "cave-floor", "mud", "dirt"},
+	BaseTerrains = {"rockbound-cave-floor", "cave-floor", "mud", "dirt", "snow"},
 	Overlay = true,
 	Flags = {"water"},
 	Graphics = "terrain/gray_shallow_water.png",
@@ -410,7 +439,7 @@ DefineTerrainType("floor", {
 	Character = "f",
 	Buildable = true,
 	Flags = {"land", "stone-floor"},
-	OuterBorderTerrains = {"rockbound-cave-floor", "cave-floor", "dirt", "grass", "dry-mud"},
+	OuterBorderTerrains = {"rockbound-cave-floor", "cave-floor", "dirt", "grass", "dry-mud", "snow"},
 	Graphics = "terrain/floor.png",
 	SolidTiles = {17, 20, 23, 26},
 	AdjacentTransitionTiles = {
@@ -714,7 +743,7 @@ DefineTerrainType("cave-wall", {
 	Name = "Cave Wall",
 	Character = "v",
 	Color = {32, 32, 32},
-	BaseTerrains = {"rockbound-cave-floor", "cave-floor"},
+	BaseTerrains = {"rockbound-cave-floor", "cave-floor", "snow"},
 	Overlay = true,
 	Flags = {"land", "rock", "unpassable", "air-unpassable"},
 	Graphics = "terrain/cave_wall.png",
@@ -757,7 +786,7 @@ DefineTerrainType("rock", {
 	Name = "Rock",
 	Character = "k",
 	Color = {128, 128, 128},
-	BaseTerrains = {"dirt", "mud", "dry-mud", "rockbound-cave-floor", "cave-floor", "desert-sand"},
+	BaseTerrains = {"dirt", "mud", "dry-mud", "rockbound-cave-floor", "cave-floor", "desert-sand", "snow"},
 	Overlay = true,
 	Flags = {"land", "rock", "unpassable"},
 	Graphics = "terrain/rock.png",
@@ -802,7 +831,7 @@ DefineTerrainType("rock", {
 
 DefineTerrainType("limestone-rock", {
 	Name = "Limestone Rock",
-	BaseTerrains = {"dirt", "mud", "dry-mud", "rockbound-cave-floor", "cave-floor", "desert-sand"},
+	BaseTerrains = {"dirt", "mud", "dry-mud", "rockbound-cave-floor", "cave-floor", "desert-sand", "snow"},
 	Overlay = true,
 	Flags = {"land", "rock", "unpassable"},
 	Graphics = "terrain/limestone_rock.png",
@@ -941,9 +970,37 @@ DefineTerrainType("pine-tree", {
 	}
 })
 
+DefineTerrainType("pine-tree-snow", {
+	Name = "Pine Tree (Snow)",
+	Color = {64, 128, 64},
+	BaseTerrains = {"snow"},
+	Overlay = true,
+	Flags = {"land", "forest", "unpassable"},
+	Graphics = "terrain/pine_tree_snow.png",
+	Resource = "lumber",
+	SolidTiles = {18},
+	DestroyedTiles = {16, 32, 48},
+	TransitionTiles = {
+		"any", "north", 2,
+		"any", "south", 34,
+		"any", "west", 17,
+		"any", "east", 19,
+		"any", "northwest-outer", 1,
+		"any", "northeast-outer", 3,
+		"any", "southwest-outer", 33,
+		"any", "southeast-outer", 35,
+		"any", "northwest-inner", 10,
+		"any", "northeast-inner", 11,
+		"any", "southwest-inner", 26,
+		"any", "southeast-inner", 27,
+		"any", "northwest-southeast-inner", 30,
+		"any", "northeast-southwest-inner", 14
+	}
+})
+
 DefineTerrainType("road", {
 	Name = "Road",
-	BaseTerrains = {"dirt", "grass", "dry-mud", "cave-floor"},
+	BaseTerrains = {"dirt", "grass", "dry-mud", "cave-floor", "snow"},
 	Overlay = true,
 	Flags = {"land", "road", "gravel"},
 	AllowSingle = true,
@@ -1004,7 +1061,7 @@ DefineTerrainType("road", {
 
 DefineTerrainType("railroad", { -- also represents tramways when linking a settlement's buildings
 	Name = "Railroad",
-	BaseTerrains = {"dirt", "grass", "dry-mud", "cave-floor"},
+	BaseTerrains = {"dirt", "grass", "dry-mud", "cave-floor", "snow"},
 	Overlay = true,
 	Flags = {"land", "railroad"},
 	AllowSingle = true,
@@ -1065,7 +1122,7 @@ DefineTerrainType("railroad", { -- also represents tramways when linking a settl
 
 DefineTerrainType("dwarven-wall", {
 	Name = "Wall",
-	BaseTerrains = {"dirt", "grass", "dry-mud", "cave-floor", "floor"},
+	BaseTerrains = {"dirt", "grass", "dry-mud", "cave-floor", "floor", "snow"},
 	Overlay = true,
 	Flags = {"land", "wall", "unpassable"},
 	AllowSingle = true,
@@ -1129,7 +1186,7 @@ DefineTerrainType("dwarven-wall", {
 DefineTerrainType("goblin-wall", {
 	Name = "Wall",
 	Color = {160, 128, 128},
-	BaseTerrains = {"dirt", "grass", "dry-mud", "cave-floor", "floor"},
+	BaseTerrains = {"dirt", "grass", "dry-mud", "cave-floor", "floor", "snow"},
 	Overlay = true,
 	Flags = {"land", "wall", "unpassable"},
 	AllowSingle = true,
@@ -1192,7 +1249,7 @@ DefineTerrainType("goblin-wall", {
 
 DefineTerrainType("teuton-wall", {
 	Name = "Wall",
-	BaseTerrains = {"dirt", "grass", "dry-mud", "cave-floor", "floor"},
+	BaseTerrains = {"dirt", "grass", "dry-mud", "cave-floor", "floor", "snow"},
 	Overlay = true,
 	Flags = {"land", "wall", "unpassable"},
 	AllowSingle = true,
@@ -1255,7 +1312,7 @@ DefineTerrainType("teuton-wall", {
 
 DefineTerrainType("border", {
 	Name = "Border",
-	BaseTerrains = {"dirt", "mud", "rockbound-cave-floor", "cave-floor", "dry-mud", "grass"},
+	BaseTerrains = {"dirt", "mud", "rockbound-cave-floor", "cave-floor", "dry-mud", "grass", "snow"},
 	Overlay = true,
 	AllowSingle = true,
 	Hidden = true,

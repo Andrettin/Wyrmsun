@@ -111,7 +111,7 @@ DefineSpecies("yale", {
 	Name = "Yale",
 	Genus = "eale",
 	Homeworld = "nidavellir",
-	Terrains = {"dry-mud"},
+	Terrains = {"dry-mud", "snow"},
 	EvolvesFrom = {"aragoral"}, -- oldest member of the Caprinae subfamily
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"
