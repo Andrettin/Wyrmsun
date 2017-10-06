@@ -1791,6 +1791,14 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 			if (table.getn(possible_civilizations) < 1) then
 				Map.Info.PlayerType[i] = PlayerNobody
 			else
+				if (Map.Info.PlayerType[i] ~= PlayerNobody) then
+					if (player_civilizations ~= nil and player_civilizations[i + 1] ~= nil) then
+						SetPlayerData(i, "RaceName", player_civilizations[i + 1])
+					else
+						SetPlayerData(i, "RaceName", possible_civilizations[SyncRand(table.getn(possible_civilizations)) + 1])
+					end
+				end
+				
 				local WhileCount = 0
 				local player_spawn_point
 				local starting_point_found = false
@@ -1868,11 +1876,6 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 				if (Map.Info.PlayerType[i] ~= PlayerNobody) then
 					SetStartView(i, player_spawn_point[1], player_spawn_point[2])
 
-					if (player_civilizations ~= nil and player_civilizations[i + 1] ~= nil) then
-						SetPlayerData(i, "RaceName", player_civilizations[i + 1])
-					else
-						SetPlayerData(i, "RaceName", possible_civilizations[SyncRand(table.getn(possible_civilizations)) + 1])
-					end
 					if (no_raw_tile) then
 						if (has_settlement_site == false) then
 							unit = CreateUnit("unit-germanic-town-hall", i, {player_spawn_point[1], player_spawn_point[2]})

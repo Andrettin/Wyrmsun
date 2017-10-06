@@ -31,6 +31,10 @@ if (OldCreateUnit == nil) then
 	OldCreateUnit = CreateUnit
 end
 
+if (OldCreateUnitOnTop == nil) then
+	OldCreateUnitOnTop = CreateUnitOnTop
+end
+
 -- Convert a unit type to the equivalent for a different race
 function ConvertUnitType(unittype, civilization)
 	local equiv
@@ -46,7 +50,7 @@ function ConvertUnitType(unittype, civilization)
 	return unittype
 end
 
--- Convert unit type to the player's race
+-- Convert unit type to the player's civilization
 function CreateUnit(unittype, player, pos, z)
 	if (z == nil) then
 		z = 0
@@ -84,6 +88,32 @@ function CreateUnit(unittype, player, pos, z)
 	end
 
 	return OldCreateUnit(unittype, player, pos, z)
+end
+
+function CreateUnitOnTop(unittype, player, on_top)
+	if (GameCycle ~= 0) then
+		return OldCreateUnitOnTop(unittype, player, on_top)
+	end
+
+	-- Don't add any units if the player setup the units to use
+	if (
+		GameSettings.NumUnits >= 1
+		and player ~= PlayerNumNeutral
+		and Players[player].Type ~= PlayerNeutral
+		and Players[player]:HasNeutralFactionType() == false
+	) then
+		return nil
+	end
+
+	if (Players[player].Type == PlayerNobody) then
+		return nil
+	end
+
+	if (Players[player].Type ~= PlayerNeutral) then
+		unittype = ConvertUnitType(unittype, GetPlayerData(player, "RaceName"))
+	end
+
+	return OldCreateUnitOnTop(unittype, player, on_top)
 end
 
 if (OldSetPlayerData == nil) then
