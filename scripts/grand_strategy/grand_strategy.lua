@@ -299,7 +299,6 @@ function EndTurn()
 	if (GrandStrategyFaction ~= nil) then
 		for key, value in pairs(Factions) do
 			if (GetFactionDiplomacyStateProposal(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, Factions[key].Civilization, Factions[key].Name) == "peace" and GetFactionDiplomacyState(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, Factions[key].Civilization, Factions[key].Name) == "peace") then
-				GrandStrategyGamePaused = true
 				local menu = WarGrandStrategyGameMenu(panel(1))
 				menu:setDrawMenusUnder(true)
 
@@ -315,13 +314,11 @@ function EndTurn()
 				menu:addFullButton("~!OK", "o", 16, 248,
 					function()
 						SetFactionDiplomacyStateProposal(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, Factions[key].Civilization, Factions[key].Name, "")
-						GrandStrategyGamePaused = false
 						menu:stop()
 					end)
 
 				menu:run()
 			elseif (GetFactionDiplomacyStateProposal(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, Factions[key].Civilization, Factions[key].Name) == "peace" and GetFactionDiplomacyState(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, Factions[key].Civilization, Factions[key].Name) == "war") then
-				GrandStrategyGamePaused = true
 				local menu = WarGrandStrategyGameMenu(panel(1))
 				menu:setDrawMenusUnder(true)
 
@@ -337,7 +334,6 @@ function EndTurn()
 				menu:addFullButton("~!OK", "o", 16, 248,
 					function()
 						SetFactionDiplomacyStateProposal(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, Factions[key].Civilization, Factions[key].Name, "")
-						GrandStrategyGamePaused = false
 						menu:stop()
 					end)
 
@@ -531,7 +527,6 @@ function DeclareWar(faction_from, faction_to)
 	end
 
 	if (faction_to == GrandStrategyFaction.Name) then -- if the player was declared war on, notify him
-		GrandStrategyGamePaused = true
 		local menu = WarGrandStrategyGameMenu(panel(1))
 		menu:setDrawMenusUnder(true)
 
@@ -546,7 +541,6 @@ function DeclareWar(faction_from, faction_to)
 
 		menu:addFullButton("~!OK", "o", 16, 248,
 			function()
-				GrandStrategyGamePaused = false
 				menu:stop()
 			end)
 
@@ -560,7 +554,6 @@ function OfferPeace(faction_from, faction_to)
 	end
 
 	if (faction_to == GrandStrategyFaction.Name) then -- if the player was declared war on, notify him
-		GrandStrategyGamePaused = true
 		local menu = WarGrandStrategyGameMenu(panel(1))
 		menu:setDrawMenusUnder(true)
 
@@ -576,13 +569,11 @@ function OfferPeace(faction_from, faction_to)
 		menu:addFullButton("~!Accept", "a", 16, 248 - (36 * 1),
 			function()
 				RespondPeaceOffer(faction_from, faction_to, true)
-				GrandStrategyGamePaused = false
 				menu:stop()
 			end)
 		menu:addFullButton("~!Reject", "r", 16, 248 - (36 * 0),
 			function()
 				RespondPeaceOffer(faction_from, faction_to, false)
-				GrandStrategyGamePaused = false
 				menu:stop()
 			end)
 
@@ -769,7 +760,6 @@ end
 function GrandStrategyEvent(faction, event)
 	EventFaction = faction
 	if (faction == GrandStrategyFaction) then
-		GrandStrategyGamePaused = true
 		local menu = WarGrandStrategyGameMenu(panel(5))
 		menu:resize(352, 352)
 		menu:setDrawMenusUnder(true)
@@ -860,8 +850,6 @@ function GrandStrategyEvent(faction, event)
 						GameResult = GameNoResult -- this is because many events start scenarios
 						CleanPlayers()
 						SetPlayerData(GetThisPlayer(), "RaceName", GrandStrategyFaction.Civilization)
-						GrandStrategyGamePaused = false
-						
 					end
 				)
 				if (event_option_tooltips ~= nil and event_option_tooltips[i] ~= nil) then
@@ -888,7 +876,6 @@ function GrandStrategyEvent(faction, event)
 					GameResult = GameNoResult -- this is because many events start scenarios
 					CleanPlayers()
 					SetPlayerData(GetThisPlayer(), "RaceName", GrandStrategyFaction.Civilization)
-					GrandStrategyGamePaused = false
 				end,
 				{0, 0}
 			)
