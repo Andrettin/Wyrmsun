@@ -1807,7 +1807,26 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 				if (table.getn(settlement_units) > 0) then
 					starting_point_found = true
 					has_settlement_site = true
-					local settlement_site = settlement_units[SyncRand(table.getn(settlement_units)) + 1]
+					local settlement_site
+					if (i == 0) then -- for the first player, pick a random settlement site
+						settlement_site = settlement_units[SyncRand(table.getn(settlement_units)) + 1]
+					else -- for the rest, pick one as distant from other players as possible
+						local best_settlement_site_distance = 0
+						for j = 1, table.getn(settlement_units) do
+							local settlement_site_distance
+							for k = 0, (i - 1) do -- every player before this one
+								if (settlement_site_distance) then
+									settlement_site_distance = math.min(settlement_site_distance, math.abs(GetUnitVariable(settlement_units[j], "PosX") - Players[k].StartPos.x) + math.abs(GetUnitVariable(settlement_units[j], "PosY") - Players[k].StartPos.y))
+								else
+									settlement_site_distance = math.abs(GetUnitVariable(settlement_units[j], "PosX") - Players[k].StartPos.x) + math.abs(GetUnitVariable(settlement_units[j], "PosY") - Players[k].StartPos.y)
+								end
+							end
+							if (settlement_site_distance > best_settlement_site_distance) then
+								settlement_site = settlement_units[j]
+								best_settlement_site_distance = settlement_site_distance
+							end
+						end
+					end
 					RemoveElementFromArray(settlement_units, settlement_site)
 					unit = CreateUnitOnTop("unit-germanic-town-hall", i, settlement_site)
 					player_spawn_point = {GetUnitVariable(unit, "PosX"), GetUnitVariable(unit, "PosY")}
