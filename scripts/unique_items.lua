@@ -188,6 +188,14 @@ DefineUniqueItem("hippopotamus-head", { -- Source: Richard Hinckley Allen, "Star
 	Description = "This helmet is named after a star in the Egyptian constellation of the Hippopotamus, and is said to derive power from it."
 } )
 
+DefineUniqueItem("the-iron-crown-of-lombardy", {
+	Name = "The Iron Crown of Lombardy",
+	Type = "unit-crown",
+	Prefix = "upgrade-item-prefix-impregnable",
+	Suffix = "upgrade-item-suffix-of-the-colossus",
+	Description = "This crown is a relic of the Lombardic kingdom."
+} )
+
 -- Boots
 
 DefineUniqueItem("alsvids-hooves", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 778.
