@@ -30,7 +30,7 @@ DefineProvince("Alentejo", {
 	FactionCulturalNames = {
 		"portuguese", "portugal", "Alentejo"
 	},
-	SettlementLocation = {457, 146}, -- Evora
+--	SettlementLocation = {457, 146}, -- Evora
 	Claims = {
 --		"portuguese", "portugal"
 	},
@@ -50,7 +50,6 @@ DefineProvince("Alsace", {
 	CulturalNames = {
 		"teuton", "Alsace" -- Elsass
 	},
-	SettlementLocation = {501, 118}, -- Strasburg
 	Claims = {
 		"gaul", "tribocci-tribe",
 		"suebi", "alamanni-tribe",
@@ -89,7 +88,7 @@ DefineProvince("Andalusia", {
 		"portuguese", "portugal", "Andalusia",
 		"castillian", "spain", "Andalusia"
 	},
-	SettlementLocation = {466, 148}, -- Cordoba
+--	SettlementLocation = {466, 148}, -- Cordoba
 	HistoricalOwners = {
 		-218, "phoenician", "carthage", -- Carthaginian territory in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 32.
 		-197, "latin", "rome", -- Hispania Tarraconensis and (most of) Farther Baetica acquired by Rome in 197 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -112,7 +111,7 @@ DefineProvince("Apulia", {
 	CulturalNames = {
 		"latin", "Apulia" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 30-31.
 	},
-	SettlementLocation = {527, 139}, -- Bari
+--	SettlementLocation = {527, 139}, -- Bari
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
@@ -124,7 +123,7 @@ DefineProvince("Aquitaine", {
 	FactionCulturalNames = {
 		"french", "france", "Aquitaine"
 	},
-	SettlementLocation = {484, 131}, -- Toulouse
+--	SettlementLocation = {484, 131}, -- Toulouse
 	Claims = {
 		"gaul", "arverni-tribe"
 --		"french", "france"
@@ -162,7 +161,7 @@ DefineProvince("Aragon", {
 		"portuguese", "portugal", "Aragon",
 		"castillian", "spain", "Aragon"
 	},
-	SettlementLocation = {477, 137}, -- Zaragoza
+--	SettlementLocation = {477, 137}, -- Zaragoza
 	Claims = {
 		"basque", "cardialware-tribe"
 	},
@@ -192,7 +191,7 @@ DefineProvince("Argolis", {
 	CulturalNames = {
 		"greek", "Argolis"
 	},
-	SettlementLocation = {544, 148}, -- Argos
+--	SettlementLocation = {544, 148}, -- Argos
 	Claims = {
 		"greek", "argos",
 		"greek", "mycenae"
@@ -209,7 +208,7 @@ DefineProvince("Astrakhan", {
 	CulturalNames = {
 		"germanic", "Ansulanda" -- rendering of "Asaland" in Proto-Germanic, as in the Ynglinga saga's story Asaland is the region in "Asia" in which Odin's people (here understood as the Indo-Europeans who went on to settle Scandinavia and become speakers of Proto-Germanic) used to live until they migrated to Scandinavia; alternatively called "Asaheim"; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
 	},
-	SettlementLocation = {618, 124}, -- Astrakhan
+--	SettlementLocation = {618, 124}, -- Astrakhan
 	Claims = {
 		"germanic", "asa-tribe",
 		"persian", "aorsi-tribe",
@@ -234,7 +233,7 @@ DefineProvince("Asturias", {
 	FactionCulturalNames = {
 		"castillian", "spain", "Asturias"
 	},
-	SettlementLocation = {463, 132}, -- Oviedo
+--	SettlementLocation = {463, 132}, -- Oviedo
 	Claims = {
 		"gaul", "cantabri-tribe"
 	},
@@ -264,7 +263,6 @@ DefineProvince("Attica", {
 	CulturalNames = {
 		"greek", "Attica"
 	},
-	SettlementLocation = {547, 147}, -- Athens
 	Claims = {
 		"greek", "athens"
 	},
@@ -277,7 +275,7 @@ DefineProvince("Augsburg", {
 		"latin", "Augusta Vindelicorum",
 		"teuton", "Augsburg"
 	},
-	SettlementLocation = {510, 118}, -- Augsburg
+--	SettlementLocation = {510, 118}, -- Augsburg
 	Claims = {
 		"suebi", "alamanni-tribe",
 		"teuton", "swabia", -- Part of the Duchy of Swabia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
@@ -295,7 +293,7 @@ DefineProvince("Baden", {
 		"latin", "Agri Decumates", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		"teuton", "Baden"
 	},
-	SettlementLocation = {503, 117}, -- Rastatt
+--	SettlementLocation = {503, 117}, -- Rastatt
 	Claims = {
 		"suebi", "alamanni-tribe",
 		"teuton", "baden",
@@ -323,7 +321,7 @@ DefineProvince("Bavaria", {
 		"teuton", "bavaria", "Bavaria",
 		"teuton", "bavarian-tribe", "Bavaria"
 	},
-	SettlementLocation = {514, 116}, -- Regensburg
+--	SettlementLocation = {514, 116}, -- Regensburg
 	Claims = {
 		"teuton", "bavarian-tribe",
 		"teuton", "holy-rome"
@@ -363,7 +361,7 @@ DefineProvince("Beira", {
 	FactionCulturalNames = {
 		"portuguese", "portugal", "Beira"
 	},
-	SettlementLocation = {453, 145}, -- Lisbon
+--	SettlementLocation = {453, 145}, -- Lisbon
 	Claims = {
 --		"portuguese", "portugal"
 	},
@@ -388,7 +386,7 @@ DefineProvince("Belgium", {
 		"frankish", "francia", "Austrasia",
 		"frankish", "frank-tribe", "Austrasia"
 	},
-	SettlementLocation = {492, 111}, -- Brussels
+--	SettlementLocation = {492, 111}, -- Brussels
 	Claims = {
 		"frankish", "austrasia" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 	},
@@ -417,7 +415,7 @@ DefineProvince("Berry", {
 	FactionCulturalNames = {
 		"french", "france", "Berry" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
-	SettlementLocation = {487, 122}, -- Bourges
+--	SettlementLocation = {487, 122}, -- Bourges
 	Claims = {
 --		"french", "france"
 	},
@@ -432,7 +430,7 @@ DefineProvince("Berry", {
 
 DefineProvince("Bessarabia", {
 	World = "earth",
-	SettlementLocation = {562, 122}, -- Kishinev
+--	SettlementLocation = {562, 122}, -- Kishinev
 	Claims = {
 		"goth", "bastarnae-tribe"
 --		"romanian", "moldavia"
@@ -460,7 +458,7 @@ DefineProvince("Boeotia", {
 	CulturalNames = {
 		"greek", "Boeotia"
 	},
-	SettlementLocation = {546, 146}, -- Thebes
+--	SettlementLocation = {546, 146}, -- Thebes
 	Claims = {
 		"greek", "thebes"
 	},
@@ -485,7 +483,7 @@ DefineProvince("Bohemia", {
 		"suebi", "marcomanni-tribe", "Marcomannia",
 		"suebi", "suebi-tribe", "Marcomannia"
 	},
-	SettlementLocation = {520, 113}, -- Prague
+--	SettlementLocation = {520, 113}, -- Prague
 	Claims = {
 		"basque", "linearware-tribe",
 		"gaul", "boii-tribe",
@@ -528,7 +526,7 @@ DefineProvince("Bornholm", {
 		"goth", "Burgundarholm",
 		"norse", "Burgundarholm" -- Old Norse name of the island; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 89.
 	},
-	SettlementLocation = {522, 99},
+--	SettlementLocation = {522, 99},
 	Claims = {
 		"goth", "burgundian-tribe"
 	},
@@ -537,7 +535,7 @@ DefineProvince("Bornholm", {
 
 DefineProvince("Bosnia", {
 	World = "earth",
-	SettlementLocation = {532, 131}, -- Sarajevo
+--	SettlementLocation = {532, 131}, -- Sarajevo
 	Regions = {"europe", "roman-danube", "west-and-central-europe"}
 })
 
@@ -550,7 +548,7 @@ DefineProvince("Brandenburg", {
 		"suebi", "semnone-tribe", "Semnonia",
 		"suebi", "suebi-tribe", "Semnonia"
 	},
-	SettlementLocation = {518, 106}, -- Berlin
+--	SettlementLocation = {518, 106}, -- Berlin
 	Claims = {
 		"suebi", "semnone-tribe",
 		"suebi", "suebi-tribe",
@@ -576,7 +574,7 @@ DefineProvince("Bremen", {
 	CulturalNames = {
 		"teuton", "Bremen"
 	},
-	SettlementLocation = {504, 104}, -- Bremen
+--	SettlementLocation = {504, 104}, -- Bremen
 	Claims = {
 		"basque", "funnelbeaker-tribe",
 		"teuton", "chauci-tribe",
@@ -609,7 +607,7 @@ DefineProvince("Brittany", {
 	FactionCulturalNames = {
 		"french", "france", "Brittany"
 	},
-	SettlementLocation = {475, 119}, -- Rennes
+--	SettlementLocation = {475, 119}, -- Rennes
 	HistoricalModifiers = {
 		1789, "upgrade-courthouse", true, -- Chambre des comptes existent in Nantes in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 		1789, "upgrade-courthouse", true, -- Parlement or conseil souverain, court of admiralty and prévôt des maréchaux existent in Rennes in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
@@ -622,7 +620,7 @@ DefineProvince("Brunswick", {
 	CulturalNames = {
 		"teuton", "Brunswick" -- Braunschweig
 	},
-	SettlementLocation = {509, 107}, -- Brunswick
+--	SettlementLocation = {509, 107}, -- Brunswick
 	Claims = {
 		"teuton", "cherusci-tribe",
 		"teuton", "brunswick",
@@ -647,7 +645,7 @@ DefineProvince("Bukowina", {
 	CulturalNames = {
 		"teuton", "Bukowina"
 	},
-	SettlementLocation = {552, 119}, -- Czernowitz / Chernivtsi
+--	SettlementLocation = {552, 119}, -- Czernowitz / Chernivtsi
 	Claims = {
 		"slav", "poland",
 		"thracian", "costoboci-tribe"
@@ -667,7 +665,7 @@ DefineProvince("Bulgaria", {
 	CulturalNames = {
 		"latin", "Lower Moesia" -- Lower Moesia encompassed most of Bulgaria, but left out large parts of its south, including Sofia, which were part of the Thrace province of Rome; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	},
-	SettlementLocation = {546, 134}, -- Sofia
+--	SettlementLocation = {546, 134}, -- Sofia
 	Claims = {
 		"greek", "thrace",
 		"thracian", "odrysae-tribe"
@@ -684,7 +682,7 @@ DefineProvince("Burgundy", {
 	FactionCulturalNames = {
 		"french", "france", "Bourgogne"
 	},
-	SettlementLocation = {494, 121}, -- Dijon
+--	SettlementLocation = {494, 121}, -- Dijon
 	Claims = {
 		"gaul", "aedui-tribe"
 --		"french", "france"
@@ -716,7 +714,7 @@ DefineProvince("Calabria", {
 	FactionCulturalNames = {
 		"italian", "italy", "Calabria"
 	},
-	SettlementLocation = {526, 145}, -- Catanzaro
+--	SettlementLocation = {526, 145}, -- Catanzaro
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
@@ -725,7 +723,7 @@ DefineProvince("Carinthia", {
 	CulturalNames = {
 		"teuton", "Carinthia"
 	},
-	SettlementLocation = {520, 123}, -- Klagenfurt
+--	SettlementLocation = {520, 123}, -- Klagenfurt
 	Claims = {
 		"gaul", "norici-tribe",
 		"teuton", "austria",
@@ -753,7 +751,7 @@ DefineProvince("Carniola", {
 	CulturalNames = {
 		"teuton", "Krain"
 	},
-	SettlementLocation = {521, 125}, -- Laibach/Ljubljana
+--	SettlementLocation = {521, 125}, -- Laibach/Ljubljana
 	Regions = {"cisleithania", "europe", "roman-danube", "west-and-central-europe"}
 })
 
@@ -766,7 +764,7 @@ DefineProvince("Castille", {
 		"portuguese", "portugal", "Castille",
 		"castillian", "spain", "Castille"
 	},
-	SettlementLocation = {469, 141}, -- Madrid
+--	SettlementLocation = {469, 141}, -- Madrid
 	HistoricalOwners = {
 		-- Interior "mesetas" of Iberia settled by farmers c. 4000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 157.
 		-197, "latin", "rome", -- Hispania Tarraconensis and (most of) Farther Baetica acquired by Rome in 197 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -807,7 +805,7 @@ DefineProvince("Champagne", { -- includes Brie
 	FactionCulturalNames = {
 		"french", "france", "Champagne"
 	},
-	SettlementLocation = {491, 118}, -- Troyes
+--	SettlementLocation = {491, 118}, -- Troyes
 	Claims = {
 		"frankish", "neustria", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 --		"french", "france"
@@ -829,7 +827,7 @@ DefineProvince("Connaught", {
 	FactionCulturalNames = {
 		"english", "england", "Connaught"
 	},
-	SettlementLocation = {456, 103}, -- Roscommon
+--	SettlementLocation = {456, 103}, -- Roscommon
 	Claims = {
 		"gael", "gangani-tribe"
 	},
@@ -848,7 +846,7 @@ DefineProvince("Corinth", {
 	CulturalNames = {
 		"greek", "Corinth"
 	},
-	SettlementLocation = {545, 148}, -- Corinth
+--	SettlementLocation = {545, 148}, -- Corinth
 	Claims = {
 		"greek", "corinth"
 	},
@@ -864,7 +862,7 @@ DefineProvince("Cornwall", {
 	FactionCulturalNames = {
 		"english", "england", "Cornwall"
 	},
-	SettlementLocation = {465, 113}, -- Falmouth
+--	SettlementLocation = {465, 113}, -- Falmouth
 	Claims = {
 		"briton", "dumnonii-tribe",
 		"english", "england"
@@ -888,7 +886,7 @@ DefineProvince("Corsica", {
 	CulturalNames = {
 		"latin", "Corsica"
 	},
-	SettlementLocation = {506, 136},
+--	SettlementLocation = {506, 136},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
@@ -897,7 +895,7 @@ DefineProvince("Courland", {
 	CulturalNames = {
 		"teuton", "Kurland"
 	},
-	SettlementLocation = {547, 95},
+--	SettlementLocation = {547, 95},
 	Claims = {
 		"uralic", "uralic-tribe"
 	},
@@ -917,7 +915,7 @@ DefineProvince("Crete", {
 	CulturalNames = {
 		"greek", "Crete"
 	},
-	SettlementLocation = {551, 155}, -- Knossos
+--	SettlementLocation = {551, 155}, -- Knossos
 	Claims = {
 		"minoan", "minoan-tribe",
 		"minoan", "crete",
@@ -935,7 +933,7 @@ DefineProvince("Crimea", {
 		"greek", "Tauric Chersonese",
 		"latin", "Tauric Chersonese" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	},
-	SettlementLocation = {576, 128}, -- Simferopol
+--	SettlementLocation = {576, 128}, -- Simferopol
 	Claims = {
 		"greek", "cimmerian-bosphorus"
 --		"turkish", "crimea"
@@ -956,7 +954,7 @@ DefineProvince("Cumbria", {
 	FactionCulturalNames = {
 		"english", "england", "Cumbria"
 	},
-	SettlementLocation = {471, 100}, -- Carlisle
+--	SettlementLocation = {471, 100}, -- Carlisle
 	Claims = {
 		"briton", "brigantes-tribe",
 		"briton", "selgovae-tribe",
@@ -983,7 +981,7 @@ DefineProvince("Dalmatia", {
 		"latin", "Illyricum",
 		"teuton", "Dalmatia"
 	},
-	SettlementLocation = {523, 130}, -- Zara
+--	SettlementLocation = {523, 130}, -- Zara
 	Claims = {
 		"illyrian", "illyrian-tribe"
 	},
@@ -1010,7 +1008,7 @@ DefineProvince("Dauphiny", {
 	FactionCulturalNames = {
 		"french", "france", "Dauphiny" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
-	SettlementLocation = {496, 128}, -- Grenoble
+--	SettlementLocation = {496, 128}, -- Grenoble
 	Claims = {
 --		"french", "france"
 	},
@@ -1041,7 +1039,7 @@ DefineProvince("Devon", {
 		"anglo-saxon", "angle-tribe", "Devon",
 		"english", "england", "Devon"
 	},
-	SettlementLocation = {470, 111}, -- Exeter
+--	SettlementLocation = {470, 111}, -- Exeter
 	Claims = {
 		"basque", "bellbeaker-tribe",
 		"briton", "dumnonii-tribe",
@@ -1068,7 +1066,7 @@ DefineProvince("Dobruja", {
 	CulturalNames = {
 		"latin", "Lesser Scythia"
 	},
-	SettlementLocation = {560, 130}, -- Constanta
+--	SettlementLocation = {560, 130}, -- Constanta
 	Claims = {
 		"greek", "thrace",
 		"thracian", "getae-tribe"
@@ -1087,7 +1085,7 @@ DefineProvince("Don", {
 	FactionCulturalNames = {
 		"celt", "vana-tribe", "Vanaland" -- alternatively called "Vanaheim"; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
 	},
-	SettlementLocation = {592, 121}, -- Rostov-on-Don
+--	SettlementLocation = {592, 121}, -- Rostov-on-Don
 	Claims = {
 		"celt", "vana-tribe"
 	},
@@ -1106,7 +1104,7 @@ DefineProvince("Douro", {
 	FactionCulturalNames = {
 		"portuguese", "portugal", "Douro"
 	},
-	SettlementLocation = {456, 137}, -- Braga
+--	SettlementLocation = {456, 137}, -- Braga
 	Claims = {
 --		"portuguese", "portugal"
 	},
@@ -1127,7 +1125,7 @@ DefineProvince("Drenthe", {
 	FactionCulturalNames = {
 		"teuton", "netherlands", "Drenthe" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	},
-	SettlementLocation = {498, 105}, -- Assen
+--	SettlementLocation = {498, 105}, -- Assen
 	Claims = {
 		"basque", "funnelbeaker-tribe",
 		"frankish", "ampsivarii-tribe",
@@ -1159,7 +1157,7 @@ DefineProvince("Durham", {
 	FactionCulturalNames = {
 		"english", "england", "Durham"
 	},
-	SettlementLocation = {475, 100}, -- Durham
+--	SettlementLocation = {475, 100}, -- Durham
 	Claims = {
 		"english", "england",
 		"anglo-saxon", "northumbria"
@@ -1185,7 +1183,7 @@ DefineProvince("Dyfed", {
 		"welsh", "Dyfed",
 		"latin", "Demetia" -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
 	},
-	SettlementLocation = {466, 108}, -- Arberth
+--	SettlementLocation = {466, 108}, -- Arberth
 	Claims = {
 		"basque", "bellbeaker-tribe",
 		"briton", "demetae-tribe", -- The main settlement of the Demetae was Moridunum (modern Carmarthen); Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
@@ -1210,7 +1208,7 @@ DefineProvince("East Anglia", {
 	FactionCulturalNames = {
 		"english", "england", "East Anglia"
 	},
-	SettlementLocation = {484, 106}, -- Yarmouth
+--	SettlementLocation = {484, 106}, -- Yarmouth
 	Claims = {
 		"briton", "iceni-tribe",
 		"english", "england"
@@ -1242,7 +1240,7 @@ DefineProvince("East Friesland", { -- also includes Osnabrück
 		"teuton", "frisian-tribe", "East Friesland",
 		"teuton", "netherlands", "East Friesland"
 	},
-	SettlementLocation = {500, 104}, -- Emden
+--	SettlementLocation = {500, 104}, -- Emden
 	Claims = {
 		"basque", "funnelbeaker-tribe",
 		"teuton", "frisian-tribe",
@@ -1266,7 +1264,7 @@ DefineProvince("Epirus", {
 	CulturalNames = {
 		"greek", "Epirus"
 	},
-	SettlementLocation = {538, 144}, -- Nicopolis
+--	SettlementLocation = {538, 144}, -- Nicopolis
 	Claims = {
 		"greek", "chaoni-tribe",
 		"greek", "epirus"
@@ -1280,7 +1278,7 @@ DefineProvince("Essex", {
 		"anglo-saxon", "angle-tribe", "Essex",
 		"english", "england", "Essex"
 	},
-	SettlementLocation = {480, 109}, -- London
+--	SettlementLocation = {480, 109}, -- London
 	Claims = {
 		"briton", "trinobantes-tribe",
 		"anglo-saxon", "gumeninga-tribe", -- the Gumeningas were present in Harrow on the Hill (which was in Old English called "Gumeninga hearh"); Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
@@ -1307,7 +1305,7 @@ DefineProvince("Estonia", {
 	CulturalNames = {
 		"teuton", "Estland"
 	},
-	SettlementLocation = {550, 87}, -- Tallinn
+--	SettlementLocation = {550, 87}, -- Tallinn
 	Claims = {
 		"uralic", "uralic-tribe"
 	},
@@ -1327,7 +1325,7 @@ DefineProvince("Euboea", { -- to make this island appear separated from Attica, 
 	CulturalNames = {
 		"greek", "Euboea"
 	},
-	SettlementLocation = {548, 145}, -- Chalcis
+--	SettlementLocation = {548, 145}, -- Chalcis
 	Claims = {
 		"minoan", "impressedware-tribe"
 	},
@@ -1339,7 +1337,7 @@ DefineProvince("Farther Pomerania", {
 	CulturalNames = {
 		"teuton", "Farther Pomerania" -- Hinterpommern
 	},
-	SettlementLocation = {523, 102}, -- Kolberg
+--	SettlementLocation = {523, 102}, -- Kolberg
 	Claims = {
 		"goth", "rugian-tribe",
 		"goth", "turcilingian-tribe"
@@ -1361,7 +1359,7 @@ DefineProvince("Finland", {
 		"finnish", "Finland",
 		"norse", "Finland"
 	},
-	SettlementLocation = {550, 84}, -- Helsinki
+--	SettlementLocation = {550, 84}, -- Helsinki
 	Claims = {
 		"finnish", "fenni-tribe",
 		"uralic", "uralic-tribe"
@@ -1385,7 +1383,7 @@ DefineProvince("France", {
 		"frankish", "francia", "Neustria", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 53-55.
 		"frankish", "frank-tribe", "Neustria"
 	},
-	SettlementLocation = {486, 117}, -- Paris
+--	SettlementLocation = {486, 117}, -- Paris
 	Claims = {
 		"frankish", "neustria", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 --		"french", "france"
@@ -1424,7 +1422,7 @@ DefineProvince("Franche Comte", {
 	FactionCulturalNames = {
 		"french", "france", "Franche Comté"
 	},
-	SettlementLocation = {497, 121}, -- Besançon
+--	SettlementLocation = {497, 121}, -- Besançon
 	Claims = {
 		"gaul", "sequani-tribe"
 --		"french", "france"
@@ -1465,7 +1463,7 @@ DefineProvince("Franconia", {
 		"frankish", "frank-tribe", "Franconia",
 		"teuton", "netherlands", "Franconia"
 	},
-	SettlementLocation = {508, 114}, -- Würzburg
+--	SettlementLocation = {508, 114}, -- Würzburg
 	Claims = {
 		"basque", "linearware-tribe",
 		"gaul", "turone-tribe",
@@ -1507,7 +1505,7 @@ DefineProvince("Friesland", {
 		"teuton", "frisian-tribe", "Frisia",
 		"teuton", "netherlands", "Friesland" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	},
-	SettlementLocation = {496, 104}, -- Leeuwarden
+--	SettlementLocation = {496, 104}, -- Leeuwarden
 	Claims = {
 		"basque", "funnelbeaker-tribe",
 		"teuton", "frisian-tribe",
@@ -1539,7 +1537,7 @@ DefineProvince("Galicia", {
 	CulturalNames = {
 		"suebi", "Galicia"
 	},
-	SettlementLocation = {547, 114}, -- Lvov / Lemberg
+--	SettlementLocation = {547, 114}, -- Lvov / Lemberg
 	Claims = {
 		"goth", "bastarnae-tribe",
 		"goth", "gepidae-tribe",
@@ -1568,7 +1566,7 @@ DefineProvince("Gallaecia", {
 		"portuguese", "portugal", "Galicia",
 		"castillian", "spain", "Galicia"
 	},
-	SettlementLocation = {456, 132}, -- Corunna
+--	SettlementLocation = {456, 132}, -- Corunna
 	Claims = {
 		"suebi", "galicia"
 	},
@@ -1592,7 +1590,7 @@ DefineProvince("Galloway", {
 	FactionCulturalNames = {
 		"english", "england", "Galloway"
 	},
-	SettlementLocation = {469, 99}, -- Dumfries
+--	SettlementLocation = {469, 99}, -- Dumfries
 	Claims = {
 		"briton", "sovantae-tribe",
 		"english", "scotland"
@@ -1618,7 +1616,7 @@ DefineProvince("Gotaland", {
 		"goth", "Gothland",
 		"norse", "Gotaland"
 	},
-	SettlementLocation = {513, 91}, -- Gothenburg
+--	SettlementLocation = {513, 91}, -- Gothenburg
 	Claims = {
 		"goth", "goth-tribe",
 		"norse", "geat-tribe"
@@ -1646,7 +1644,7 @@ DefineProvince("Gotland", {
 	CulturalNames = {
 		"goth", "Gotland"
 	},
-	SettlementLocation = {532, 92},
+--	SettlementLocation = {532, 92},
 	HistoricalOwners = {
 		-325, "goth", "goth-tribe", -- maybe should be later?
 		200, "", "", -- Goths migrated south about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
@@ -1667,7 +1665,7 @@ DefineProvince("Gwynedd", { -- also includes Clwyd
 	CulturalNames = {
 		"welsh", "Gwynedd"
 	},
-	SettlementLocation = {467, 105}, -- Caernafon
+--	SettlementLocation = {467, 105}, -- Caernafon
 	Claims = {
 		"basque", "bellbeaker-tribe",
 		"briton", "ordovices-tribe",
@@ -1694,7 +1692,7 @@ DefineProvince("Hanover", {
 	CulturalNames = {
 		"teuton", "Hannover"
 	},
-	SettlementLocation = {507, 107}, -- Hanover
+--	SettlementLocation = {507, 107}, -- Hanover
 	Claims = {
 		"teuton", "lombard-tribe",
 		"teuton", "holy-rome"
@@ -1718,7 +1716,7 @@ DefineProvince("Hedmark", {
 	CulturalNames = {
 		"norse", "Hedmark"
 	},
-	SettlementLocation = {512, 83}, -- Hamar
+--	SettlementLocation = {512, 83}, -- Hamar
 	Claims = {
 		"norse", "norway"
 	},
@@ -1730,7 +1728,7 @@ DefineProvince("Hesse", {
 	CulturalNames = {
 		"teuton", "Hesse" -- Hessen
 	},
-	SettlementLocation = {506, 109}, -- Kassel
+--	SettlementLocation = {506, 109}, -- Kassel
 	Claims = {
 		"frankish", "chatti-tribe",
 		"frankish", "ubii-tribe",
@@ -1772,7 +1770,7 @@ DefineProvince("Highland Scotland", {
 		"gael", "scot-tribe", "Highland Scotland",
 		"english", "scotland", "Highland Scotland"
 	},
-	SettlementLocation = {473, 93}, -- Aberdeen
+--	SettlementLocation = {473, 93}, -- Aberdeen
 	Claims = {
 		"briton", "caledonii-tribe",
 		"briton", "pict-tribe",
@@ -1799,7 +1797,7 @@ DefineProvince("Hither Pomerania", {
 	CulturalNames = {
 		"teuton", "Hither Pomerania" -- Vorpommern
 	},
-	SettlementLocation = {521, 103}, -- Stettin
+--	SettlementLocation = {521, 103}, -- Stettin
 	Claims = {
 		"basque", "funnelbeaker-tribe",
 		"goth", "rugian-tribe",
@@ -1831,7 +1829,7 @@ DefineProvince("Holland", {
 		"frankish", "batavian-tribe", "Batavia",
 		"teuton", "netherlands", "Holland"
 	},
-	SettlementLocation = {493, 107}, -- Amsterdam
+--	SettlementLocation = {493, 107}, -- Amsterdam
 	Claims = {
 		"frankish", "batavian-tribe",
 		"frankish", "frank-tribe",
@@ -1866,7 +1864,7 @@ DefineProvince("Holstein", {
 	CulturalNames = {
 		"teuton", "Holstein"
 	},
-	SettlementLocation = {508, 101}, -- Kiel
+--	SettlementLocation = {508, 101}, -- Kiel
 	Claims = {
 		"basque", "funnelbeaker-tribe",
 		"teuton", "saxon-tribe",
@@ -1897,7 +1895,7 @@ DefineProvince("Hordaland", {
 	CulturalNames = {
 		"norse", "Hordaland"
 	},
-	SettlementLocation = {495, 84}, -- Bergen
+--	SettlementLocation = {495, 84}, -- Bergen
 	Claims = {
 		"norse", "hordaland",
 		"norse", "norway"
@@ -1910,7 +1908,7 @@ DefineProvince("Hungary", {
 	FactionCulturalNames = {
 		"magyar", "hungary", "Hungary"
 	},
-	SettlementLocation = {535, 120}, -- Pest
+--	SettlementLocation = {535, 120}, -- Pest
 	Claims = {
 		"magyar", "hungary",
 		"persian", "iazyge-tribe"
@@ -1936,7 +1934,7 @@ DefineProvince("Hungary", {
 
 DefineProvince("Iceland", {
 	World = "earth",
-	SettlementLocation = {418, 73}, -- Reykjavik
+--	SettlementLocation = {418, 73}, -- Reykjavik
 	Regions = {"europe", "west-and-central-europe"}
 })
 
@@ -1946,7 +1944,7 @@ DefineProvince("Ingria", {
 		"norse", "Ingermanland",
 		"slav", "Ingria"
 	},
-	SettlementLocation = {566, 86}, -- Saint Petersburg
+--	SettlementLocation = {566, 86}, -- Saint Petersburg
 	Claims = {
 		"slav", "russia",
 		"uralic", "uralic-tribe"
@@ -1967,7 +1965,7 @@ DefineProvince("Istria", {
 		"latin", "Istria",
 		"teuton", "Küstenland"
 	},
-	SettlementLocation = {519, 126}, -- Trieste
+--	SettlementLocation = {519, 126}, -- Trieste
 	Claims = {
 		"basque", "castelnovian-tribe",
 		"teuton", "holy-rome"
@@ -1996,7 +1994,7 @@ DefineProvince("Jutland", {
 	FactionCulturalNames = {
 		"anglo-saxon", "jute-tribe", "Jutland"
 	},
-	SettlementLocation = {508, 96}, -- Aarhus
+--	SettlementLocation = {508, 96}, -- Aarhus
 	Claims = {
 		"germanic", "skeldung-tribe",
 		"norse", "dane-tribe",
@@ -2032,7 +2030,7 @@ DefineProvince("Kent", {
 		"anglo-saxon", "angle-tribe", "Kent",
 		"english", "england", "Kent"
 	},
-	SettlementLocation = {483, 110}, -- Dover
+--	SettlementLocation = {483, 110}, -- Dover
 	Claims = {
 		"briton", "cantii-tribe",
 		"english", "england"
@@ -2058,7 +2056,7 @@ DefineProvince("Khersonska", {
 	CulturalNames = {
 		"slav", "Khersons'ka"
 	},
-	SettlementLocation = {572, 123}, -- Kherson
+--	SettlementLocation = {572, 123}, -- Kherson
 	Claims = {
 		"persian", "alazone-tribe"
 	},
@@ -2078,7 +2076,7 @@ DefineProvince("Lacedaemonia", {
 	CulturalNames = {
 		"greek", "Lacedaemonia"
 	},
-	SettlementLocation = {543, 150}, -- Sparta
+--	SettlementLocation = {543, 150}, -- Sparta
 	Claims = {
 		"greek", "sparta"
 	},
@@ -2094,7 +2092,7 @@ DefineProvince("Latium", {
 	CulturalNames = {
 		"latin", "Latium"
 	},
-	SettlementLocation = {515, 136}, -- Rome
+--	SettlementLocation = {515, 136}, -- Rome
 	Claims = {
 		"latin", "latin-tribe",
 		"latin", "rome"
@@ -2121,7 +2119,7 @@ DefineProvince("Latvia", {
 	CulturalNames = {
 		"teuton", "Lettland"
 	},
-	SettlementLocation = {548, 94}, -- Riga
+--	SettlementLocation = {548, 94}, -- Riga
 	Claims = {
 		"uralic", "uralic-tribe"
 	},
@@ -2144,7 +2142,7 @@ DefineProvince("Leinster", {
 	FactionCulturalNames = {
 		"english", "england", "Leinster"
 	},
-	SettlementLocation = {462, 104}, -- Dublin
+--	SettlementLocation = {462, 104}, -- Dublin
 	Claims = {
 		"gael", "cauci-tribe",
 		"gael", "scot-tribe"
@@ -2165,7 +2163,7 @@ DefineProvince("Liege", { -- also includes Namur and Belgian Limburg
 	FactionCulturalNames = {
 		"french", "france", "Liège"
 	},
-	SettlementLocation = {495, 112}, -- Liège
+--	SettlementLocation = {495, 112}, -- Liège
 	Claims = {
 		"gaul", "caerasi-tribe", -- The Caerasi inhabited the Pagus Caroascus/Carascus in 54 BC (was that actually within the boundaries of this province?); Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
 		"gaul", "condrusi-tribe", -- The Condrusi inhabited the strip of land from Namur towards Lüttich called Condruz/le Condros/Pagus Condrosius/Condruscus/Condrust/Condorusts in 54 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
@@ -2202,7 +2200,7 @@ DefineProvince("Liguria", {
 		"gaul", "Liguria",
 		"latin", "Liguria"
 	},
-	SettlementLocation = {505, 129}, -- Genoa
+--	SettlementLocation = {505, 129}, -- Genoa
 	Claims = {
 		"gaul", "ligurian-tribe"
 	},
@@ -2214,7 +2212,7 @@ DefineProvince("Lincoln", {
 	FactionCulturalNames = {
 		"english", "england", "Lincoln"
 	},
-	SettlementLocation = {478, 104}, -- Lincoln
+--	SettlementLocation = {478, 104}, -- Lincoln
 	Claims = {
 		"briton", "coritani-tribe",
 		"english", "england"
@@ -2244,7 +2242,7 @@ DefineProvince("Lithuania", {
 	CulturalNames = {
 		"teuton", "Litauen"
 	},
-	SettlementLocation = {552, 100}, -- Vilnius
+--	SettlementLocation = {552, 100}, -- Vilnius
 	Claims = {
 		"baltic", "aestui-tribe"
 	},
@@ -2257,7 +2255,7 @@ DefineProvince("Lombardy", {
 		"gaul", "Transpadane Gaul",
 		"latin", "Transpadane Gaul"
 	},
-	SettlementLocation = {506, 126}, -- Milan
+--	SettlementLocation = {506, 126}, -- Milan
 	Claims = {
 		"basque", "castelnovian-tribe"
 	},
@@ -2284,7 +2282,7 @@ DefineProvince("Lorraine", {
 	FactionCulturalNames = {
 		"french", "france", "Lorraine"
 	},
-	SettlementLocation = {496, 118}, -- Nancy
+--	SettlementLocation = {496, 118}, -- Nancy
 	Claims = {
 		"teuton", "holy-rome"
 	},
@@ -2302,7 +2300,7 @@ DefineProvince("Lothian", { -- includes Borders
 	FactionCulturalNames = {
 		"english", "england", "Lothian"
 	},
-	SettlementLocation = {470, 97}, -- Edinburgh
+--	SettlementLocation = {470, 97}, -- Edinburgh
 	Claims = {
 		"briton", "otalini-tribe",
 		"english", "scotland"
@@ -2327,7 +2325,7 @@ DefineProvince("Lower Austria", {
 	CulturalNames = {
 		"teuton", "Lower Austria"
 	},
-	SettlementLocation = {526, 118}, -- Vienna
+--	SettlementLocation = {526, 118}, -- Vienna
 	Claims = {
 		"basque", "linearware-tribe",
 		"gaul", "norici-tribe",
@@ -2360,7 +2358,7 @@ DefineProvince("Lower Lusatia", {
 	CulturalNames = {
 		"teuton", "Lower Lusatia"
 	},
-	SettlementLocation = {521, 108}, -- Guben
+--	SettlementLocation = {521, 108}, -- Guben
 	Claims = {
 		"suebi", "suebi-tribe",
 		"teuton", "holy-rome"
@@ -2381,7 +2379,7 @@ DefineProvince("Lower Lusatia", {
 
 DefineProvince("Lower Rhine", {
 	World = "earth",
-	SettlementLocation = {498, 111}, -- Cologne
+--	SettlementLocation = {498, 111}, -- Cologne
 	Claims = {
 		"frankish", "austrasia", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		"teuton", "holy-rome"
@@ -2402,7 +2400,7 @@ DefineProvince("Luxemburg", {
 	FactionCulturalNames = {
 		"french", "france", "Luxembourg"
 	},
-	SettlementLocation = {497, 115}, -- Luxemburg
+--	SettlementLocation = {497, 115}, -- Luxemburg
 	Claims = {
 		"frankish", "austrasia" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 	},
@@ -2428,7 +2426,7 @@ DefineProvince("Lyonnais", {
 	FactionCulturalNames = {
 		"french", "france", "Lyonnais" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
-	SettlementLocation = {493, 125}, -- Lyons
+--	SettlementLocation = {493, 125}, -- Lyons
 	Claims = {
 --		"french", "france"
 	},
@@ -2449,7 +2447,7 @@ DefineProvince("Macedonia", {
 	CulturalNames = {
 		"greek", "Macedonia"
 	},
-	SettlementLocation = {542, 140}, -- Aegae
+--	SettlementLocation = {542, 140}, -- Aegae
 	Claims = {
 		"greek", "macedon",
 		"thracian", "edoni-tribe", -- inhabited the region between Stryinon and Nestus rivers
@@ -2463,7 +2461,7 @@ DefineProvince("Magdeburg", {
 	CulturalNames = {
 		"teuton", "Magdeburg"
 	},
-	SettlementLocation = {513, 107}, -- Magdeburg
+--	SettlementLocation = {513, 107}, -- Magdeburg
 	Claims = {
 		"teuton", "cherusci-tribe",
 		"teuton", "magdeburg",
@@ -2492,7 +2490,7 @@ DefineProvince("Malta", {
 	CulturalNames = {
 		"latin", "Melita" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	},
-	SettlementLocation = {521, 153},
+--	SettlementLocation = {521, 153},
 	Regions = {"europe", "west-and-central-europe"}
 })
 
@@ -2501,7 +2499,7 @@ DefineProvince("Marche", {
 	FactionCulturalNames = {
 		"french", "france", "Marche" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
-	SettlementLocation = {485, 124}, -- Guéret
+--	SettlementLocation = {485, 124}, -- Guéret
 	Claims = {
 --		"french", "france"
 	},
@@ -2519,7 +2517,7 @@ DefineProvince("Mazovia", {
 	CulturalNames = {
 		"slav", "Mazovia"
 	},
-	SettlementLocation = {538, 107}, -- Warsaw
+--	SettlementLocation = {538, 107}, -- Warsaw
 	Claims = {
 		"goth", "vandal-tribe",
 		"slav", "poland"
@@ -2540,7 +2538,7 @@ DefineProvince("Mecklenburg", {
 	CulturalNames = {
 		"teuton", "Mecklenburg"
 	},
-	SettlementLocation = {512, 103}, -- Schwerin
+--	SettlementLocation = {512, 103}, -- Schwerin
 	Claims = {
 		"basque", "ertebolle-tribe",
 		"basque", "funnelbeaker-tribe",
@@ -2572,7 +2570,7 @@ DefineProvince("Mercia", {
 		"anglo-saxon", "angle-tribe", "Mercia",
 		"english", "england", "Mercia"
 	},
-	SettlementLocation = {475, 106}, -- Tamworth
+--	SettlementLocation = {475, 106}, -- Tamworth
 	Claims = {
 		"briton", "coritani-tribe",
 		"english", "england"
@@ -2609,7 +2607,7 @@ DefineProvince("Mercia", {
 
 DefineProvince("Modena", {
 	World = "earth",
-	SettlementLocation = {511, 129}, -- Modena
+--	SettlementLocation = {511, 129}, -- Modena
 	HistoricalModifiers = {
 		1250, "upgrade-university", true -- University existent in Reggio in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
 	},
@@ -2621,7 +2619,7 @@ DefineProvince("Moldavia", {
 	CulturalNames = {
 		"latin", "Northern Lower Dacia"
 	},
-	SettlementLocation = {557, 121}, -- Jassy/Iași
+--	SettlementLocation = {557, 121}, -- Jassy/Iași
 	Claims = {
 --		"romanian", "moldavia",
 		"thracian", "costoboci-tribe"
@@ -2649,7 +2647,7 @@ DefineProvince("Moldavia", {
 
 DefineProvince("Montenegro", {
 	World = "earth",
-	SettlementLocation = {534, 135}, -- Podgorica
+--	SettlementLocation = {534, 135}, -- Podgorica
 	Regions = {"europe", "roman-danube", "west-and-central-europe"}
 })
 
@@ -2659,7 +2657,7 @@ DefineProvince("Moravia", {
 		"slav", "Moravia",
 		"teuton", "Moravia" -- Mähren
 	},
-	SettlementLocation = {527, 116}, -- Brünn
+--	SettlementLocation = {527, 116}, -- Brünn
 	Claims = {
 		"basque", "linearware-tribe",
 		"slav", "moravia",
@@ -2698,7 +2696,7 @@ DefineProvince("Moravia", {
 
 DefineProvince("Moselle", {
 	World = "earth",
-	SettlementLocation = {496, 116}, -- Metz
+--	SettlementLocation = {496, 116}, -- Metz
 	Claims = {
 		"teuton", "holy-rome"
 	},
@@ -2716,7 +2714,7 @@ DefineProvince("Munster", {
 	FactionCulturalNames = {
 		"english", "england", "Munster"
 	},
-	SettlementLocation = {458, 106}, -- Clonmel
+--	SettlementLocation = {458, 106}, -- Clonmel
 	Claims = {
 		"gael", "gangani-tribe",
 		"gael", "hibernii-tribe",
@@ -2739,7 +2737,7 @@ DefineProvince("Naples", {
 		"greek", "Magna Graecia",
 		"latin", "Campania" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 30-31.
 	},
-	SettlementLocation = {520, 139}, -- Naples
+--	SettlementLocation = {520, 139}, -- Naples
 	HistoricalSettlementBuildings = {
 		768, "unit-teuton-temple", true -- Monastery or abbey existent in Monte Cassino during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
@@ -2754,7 +2752,7 @@ DefineProvince("Neumark", {
 	CulturalNames = {
 		"teuton", "Neumark" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 134-135.
 	},
-	SettlementLocation = {522, 106}, -- Küstrin
+--	SettlementLocation = {522, 106}, -- Küstrin
 	Claims = {
 		"suebi", "suebi-tribe",
 		"teuton", "brandenburg"
@@ -2774,7 +2772,7 @@ DefineProvince("Nordland", {
 	CulturalNames = {
 		"norse", "Nordland"
 	},
-	SettlementLocation = {521, 64}, -- Bodø
+--	SettlementLocation = {521, 64}, -- Bodø
 	Claims = {
 		"norse", "halogaland",
 		"norse", "norway"
@@ -2790,7 +2788,7 @@ DefineProvince("Normandy", {
 	FactionCulturalNames = {
 		"french", "france", "Normandy"
 	},
-	SettlementLocation = {482, 115}, -- Rouen
+--	SettlementLocation = {482, 115}, -- Rouen
 	Claims = {
 		"basque", "bellbeaker-tribe"
 	},
@@ -2825,7 +2823,7 @@ DefineProvince("Norrland", {
 	CulturalNames = {
 		"norse", "Norrland"
 	},
-	SettlementLocation = {530, 77}, -- Härnösand
+--	SettlementLocation = {530, 77}, -- Härnösand
 	Claims = {
 		"norse", "sitone-tribe"
 	},
@@ -2844,7 +2842,7 @@ DefineProvince("North Brabant", {
 	FactionCulturalNames = {
 		"teuton", "netherlands", "Noord-Brabant"
 	},
-	SettlementLocation = {494, 109}, -- 's-Hertogenbosch
+--	SettlementLocation = {494, 109}, -- 's-Hertogenbosch
 	Claims = {
 		"gaul", "menapii-tribe",
 		"teuton", "brabant",
@@ -2874,7 +2872,7 @@ DefineProvince("North Trondelag", {
 	CulturalNames = {
 		"norse", "Nørd-Trøndelag"
 	},
-	SettlementLocation = {512, 73}, -- Steinkjet
+--	SettlementLocation = {512, 73}, -- Steinkjet
 	Claims = {
 		"norse", "norway"
 	},
@@ -2887,7 +2885,7 @@ DefineProvince("Northumberland", {
 		"anglo-saxon", "angle-tribe", "Bernicia",
 		"english", "england", "Northumberland"
 	},
-	SettlementLocation = {475, 98}, -- Bamburgh; was the chief stronghold of the Bernice people, who lived in the region; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
+--	SettlementLocation = {475, 98}, -- Bamburgh; was the chief stronghold of the Bernice people, who lived in the region; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 	Claims = {
 		"anglo-saxon", "bernice-tribe", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 		"english", "england",
@@ -2917,7 +2915,7 @@ DefineProvince("Odeska", {
 	CulturalNames = {
 		"slav", "Odes'ka"
 	},
-	SettlementLocation = {567, 123}, -- Odesa
+--	SettlementLocation = {567, 123}, -- Odesa
 	Claims = {
 		"goth", "bastarnae-tribe",
 		"persian", "scythian-tribe"
@@ -2939,7 +2937,7 @@ DefineProvince("Oldenburg", {
 	CulturalNames = {
 		"teuton", "Oldenburg"
 	},
-	SettlementLocation = {503, 104}, -- Oldenburg
+--	SettlementLocation = {503, 104}, -- Oldenburg
 	Claims = {
 		"basque", "funnelbeaker-tribe",
 		"teuton", "holy-rome"
@@ -2965,7 +2963,7 @@ DefineProvince("Oppland", {
 	CulturalNames = {
 		"norse", "Oppland"
 	},
-	SettlementLocation = {510, 81}, -- Lillehammar
+--	SettlementLocation = {510, 81}, -- Lillehammar
 	Claims = {
 		"norse", "norway"
 	},
@@ -2974,7 +2972,7 @@ DefineProvince("Oppland", {
 
 DefineProvince("Orkney", {
 	World = "earth",
-	SettlementLocation = {470, 87},
+--	SettlementLocation = {470, 87},
 	Claims = {
 		"norse", "orkney",
 		"english", "scotland"
@@ -2991,7 +2989,7 @@ DefineProvince("Ostfold", {
 	CulturalNames = {
 		"norse", "Østfold"
 	},
-	SettlementLocation = {511, 86}, -- Oslo
+--	SettlementLocation = {511, 86}, -- Oslo
 	Claims = {
 		"norse", "norway"
 	},
@@ -3003,7 +3001,7 @@ DefineProvince("Overijssel", {
 	FactionCulturalNames = {
 		"teuton", "netherlands", "Overijssel" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	},
-	SettlementLocation = {497, 106}, -- Zwolle
+--	SettlementLocation = {497, 106}, -- Zwolle
 	Claims = {
 		"frankish", "chamavi-tribe",
 		"teuton", "overijssel",
@@ -3032,7 +3030,7 @@ DefineProvince("Palatinate", {
 	CulturalNames = {
 		"teuton", "Pfalz"
 	},
-	SettlementLocation = {502, 115}, -- Kaiserslautern
+--	SettlementLocation = {502, 115}, -- Kaiserslautern
 	Claims = {
 		"teuton", "franconia", -- Part of the Duchy of Franconia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		"teuton", "holy-rome"
@@ -3049,7 +3047,7 @@ DefineProvince("Palermo", {
 		"greek", "Panormus",
 		"latin", "Panormus"
 	},
-	SettlementLocation = {517, 147}, -- Palermo
+--	SettlementLocation = {517, 147}, -- Palermo
 	Coastal = true, -- this variable is calculated automatically, but we place it here anyway for the random map generation (this will mean that this province is generated near a water body)
 	Claims = {
 		"latin", "elymian-tribe",
@@ -3078,7 +3076,7 @@ DefineProvince("Pannonia", {
 	CulturalNames = {
 		"latin", "Pannonia"
 	},
-	SettlementLocation = {534, 120}, -- Buda
+--	SettlementLocation = {534, 120}, -- Buda
 	Claims = {
 		"basque", "linearware-tribe",
 		"magyar", "hungary"
@@ -3111,7 +3109,7 @@ DefineProvince("Parma", {
 	CulturalNames = {
 		"latin", "Aemilia"
 	},
-	SettlementLocation = {509, 128}, -- Parma
+--	SettlementLocation = {509, 128}, -- Parma
 	HistoricalSettlementBuildings = {
 		768, "unit-teuton-temple", true -- Monastery or abbey existent in Bobbio during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
@@ -3123,7 +3121,7 @@ DefineProvince("Picardy", { -- also includes French Flanders, Hainaut and Artois
 	FactionCulturalNames = {
 		"french", "france", "Picardy" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
-	SettlementLocation = {486, 114}, -- Amiens
+--	SettlementLocation = {486, 114}, -- Amiens
 	Claims = {
 		"frankish", "austrasia", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 --		"french", "france"
@@ -3154,7 +3152,7 @@ DefineProvince("Picardy", { -- also includes French Flanders, Hainaut and Artois
 
 DefineProvince("Piedmont", {
 	World = "earth",
-	SettlementLocation = {502, 127}, -- Turin
+--	SettlementLocation = {502, 127}, -- Turin
 	HistoricalModifiers = {
 		1228, "upgrade-university", true, -- University founded in Vercelli in 1228; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1405, "upgrade-university", true -- University founded in Turin in 1405; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
@@ -3167,7 +3165,7 @@ DefineProvince("Poitou", {
 	FactionCulturalNames = {
 		"french", "france", "Poitou"
 	},
-	SettlementLocation = {480, 123}, -- Poitiers
+--	SettlementLocation = {480, 123}, -- Poitiers
 	Claims = {
 --		"french", "france"
 	},
@@ -3190,7 +3188,7 @@ DefineProvince("Pomerelia", {
 		"slav", "Pomerelia",
 		"teuton", "West Prussia" -- Westpreussen
 	},
-	SettlementLocation = {532, 101}, -- Danzig
+--	SettlementLocation = {532, 101}, -- Danzig
 	Claims = {
 		"slav", "poland",
 		"teuton", "prussia"
@@ -3219,7 +3217,7 @@ DefineProvince("Posen", {
 	CulturalNames = {
 		"teuton", "Posen"
 	},
-	SettlementLocation = {528, 107}, -- Posen
+--	SettlementLocation = {528, 107}, -- Posen
 	Claims = {
 		"goth", "vandal-tribe",
 		"slav", "poland"
@@ -3232,7 +3230,7 @@ DefineProvince("Provence", {
 	FactionCulturalNames = {
 		"french", "france", "Provence"
 	},
-	SettlementLocation = {495, 132}, -- Marseilles
+--	SettlementLocation = {495, 132}, -- Marseilles
 	Claims = {
 --		"french", "france"
 	},
@@ -3260,7 +3258,7 @@ DefineProvince("Prussia", {
 	CulturalNames = {
 		"teuton", "East Prussia" -- Ostpreussen
 	},
-	SettlementLocation = {537, 100}, -- Königsberg
+--	SettlementLocation = {537, 100}, -- Königsberg
 	Claims = {
 		"teuton", "prussia"
 	},
@@ -3272,7 +3270,7 @@ DefineProvince("Rhodes", {
 	CulturalNames = {
 		"greek", "Rhodes"
 	},
-	SettlementLocation = {559, 152}, -- Ialysus
+--	SettlementLocation = {559, 152}, -- Ialysus
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
@@ -3281,7 +3279,7 @@ DefineProvince("Rhodope", {
 	CulturalNames = {
 		"greek", "Rodópi"
 	},
-	SettlementLocation = {552, 139}, -- Komotini
+--	SettlementLocation = {552, 139}, -- Komotini
 	Claims = {
 		"greek", "thrace"
 	},
@@ -3308,7 +3306,7 @@ DefineProvince("Rogaland", {
 	CulturalNames = {
 		"norse", "Rogaland"
 	},
-	SettlementLocation = {496, 88}, -- Stavanger
+--	SettlementLocation = {496, 88}, -- Stavanger
 	Claims = {
 		"norse", "norway"
 	},
@@ -3321,7 +3319,7 @@ DefineProvince("Romagna", {
 		"gaul", "Cispadane Gaul",
 		"latin", "Cispadane Gaul"
 	},
-	SettlementLocation = {512, 129}, -- Bologna
+--	SettlementLocation = {512, 129}, -- Bologna
 	HistoricalModifiers = {
 		1391, "upgrade-university", true -- University founded in Ferrara in 1391; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
@@ -3338,7 +3336,7 @@ DefineProvince("Russia", {
 		"slav", "muscovy", "Russia",
 		"slav", "russia", "Russia"
 	},
-	SettlementLocation = {587, 97}, -- Moscow
+--	SettlementLocation = {587, 97}, -- Moscow
 	Claims = {
 		"norse", "holmgard",
 		"slav", "budini-tribe",
@@ -3362,7 +3360,7 @@ DefineProvince("Salzburg", {
 	CulturalNames = {
 		"teuton", "Salzburg"
 	},
-	SettlementLocation = {516, 119}, -- Salzburg
+--	SettlementLocation = {516, 119}, -- Salzburg
 	Claims = {
 		"gaul", "norici-tribe",
 		"teuton", "austria",
@@ -3391,7 +3389,7 @@ DefineProvince("Sardinia", {
 	CulturalNames = {
 		"latin", "Sardinia"
 	},
-	SettlementLocation = {505, 144}, -- Cagliari
+--	SettlementLocation = {505, 144}, -- Cagliari
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
@@ -3400,7 +3398,7 @@ DefineProvince("Savoy", {
 	CulturalNames = {
 		"latin", "Pennine Alps"
 	},
-	SettlementLocation = {496, 126}, -- Chambéry
+--	SettlementLocation = {496, 126}, -- Chambéry
 	Claims = {
 --		"french", "france",
 --		"italian", "savoy"
@@ -3430,7 +3428,7 @@ DefineProvince("Scania", {
 	FactionCulturalNames = {
 		"basque", "gylfing-tribe", "Gylveland"
 	},
-	SettlementLocation = {517, 97}, -- Malmö
+--	SettlementLocation = {517, 97}, -- Malmö
 	Claims = {
 		"basque", "ertebolle-tribe",
 		"basque", "gylfing-tribe",
@@ -3465,7 +3463,7 @@ DefineProvince("Schleswig", {
 	CulturalNames = {
 		"teuton", "Schleswig"
 	},
-	SettlementLocation = {506, 100}, -- Flensburg
+--	SettlementLocation = {506, 100}, -- Flensburg
 	Claims = {
 		"anglo-saxon", "angle-tribe",
 		"anglo-saxon", "avione-tribe"
@@ -3486,7 +3484,7 @@ DefineProvince("Serbia", {
 	CulturalNames = {
 		"latin", "Upper Moesia"
 	},
-	SettlementLocation = {538, 129}, -- Belgrade
+--	SettlementLocation = {538, 129}, -- Belgrade
 	Claims = {
 		"minoan", "lepenskivir-tribe",
 		"thracian", "triballi-tribe"
@@ -3515,7 +3513,7 @@ DefineProvince("Silesia", {
 	CulturalNames = {
 		"teuton", "Silesia" -- Schlesien
 	},
-	SettlementLocation = {526, 110}, -- Breslau
+--	SettlementLocation = {526, 110}, -- Breslau
 	Claims = {
 		"goth", "lugii-tribe",
 		"goth", "silingae-tribe"
@@ -3539,7 +3537,7 @@ DefineProvince("Skopje", {
 	CulturalNames = {
 		"latin", "Scupi"
 	},
-	SettlementLocation = {540, 136}, -- Skopje
+--	SettlementLocation = {540, 136}, -- Skopje
 	Claims = {
 		"phrygian", "bryges-tribe"
 	},
@@ -3551,7 +3549,7 @@ DefineProvince("Slovakia", {
 	CulturalNames = {
 		"slav", "Slovakia"
 	},
-	SettlementLocation = {528, 118}, -- Bratislava
+--	SettlementLocation = {528, 118}, -- Bratislava
 	Claims = {
 		"basque", "linearware-tribe",
 		"gaul", "cotini-tribe",
@@ -3588,7 +3586,7 @@ DefineProvince("Somerset", {
 		"anglo-saxon", "angle-tribe", "Somerset",
 		"english", "england", "Somerset"
 	},
-	SettlementLocation = {473, 110}, -- Wells
+--	SettlementLocation = {473, 110}, -- Wells
 	Claims = {
 		"basque", "bellbeaker-tribe",
 		"briton", "belgae-tribe",
@@ -3615,7 +3613,7 @@ DefineProvince("South Trondelag", {
 	CulturalNames = {
 		"norse", "Sør-Trøndelag"
 	},
-	SettlementLocation = {509, 75}, -- Trondheim
+--	SettlementLocation = {509, 75}, -- Trondheim
 	Claims = {
 		"norse", "norway"
 	},
@@ -3630,7 +3628,7 @@ DefineProvince("Strathclyde", {
 	FactionCulturalNames = {
 		"english", "england", "Strathclyde"
 	},
-	SettlementLocation = {467, 97}, -- Glasgow
+--	SettlementLocation = {467, 97}, -- Glasgow
 	Claims = {
 		"briton", "damnii-tribe",
 		"briton", "strathclyde",
@@ -3656,7 +3654,7 @@ DefineProvince("Styria", {
 	CulturalNames = {
 		"teuton", "Styria" -- Steiermark
 	},
-	SettlementLocation = {523, 121}, -- Graz
+--	SettlementLocation = {523, 121}, -- Graz
 	Claims = {
 		"gaul", "norici-tribe",
 		"teuton", "austria",
@@ -3685,7 +3683,7 @@ DefineProvince("Sussex", {
 		"anglo-saxon", "angle-tribe", "Sussex",
 		"english", "england", "Sussex"
 	},
-	SettlementLocation = {480, 111}, -- Newhaven
+--	SettlementLocation = {480, 111}, -- Newhaven
 	Claims = {
 		"english", "england"
 	},
@@ -3708,7 +3706,7 @@ DefineProvince("Sweden", {
 	CulturalNames = {
 		"norse", "Sweden"
 	},
-	SettlementLocation = {531, 87}, -- Stockholm / Sigtun
+--	SettlementLocation = {531, 87}, -- Stockholm / Sigtun
 	Claims = {
 		"germanic", "yngling-tribe",
 		"norse", "swede-tribe"
@@ -3736,7 +3734,7 @@ DefineProvince("Switzerland", {
 		"latin", "Helvetia",
 		"teuton", "Switzerland"
 	},
-	SettlementLocation = {501, 122}, -- Bern
+--	SettlementLocation = {501, 122}, -- Bern
 	Claims = {
 		"gaul", "helvetii-tribe",
 		"teuton", "switzerland",
@@ -3757,7 +3755,7 @@ DefineProvince("Switzerland", {
 
 DefineProvince("Syracuse", {
 	World = "earth",
-	SettlementLocation = {522, 150}, -- Syracuse
+--	SettlementLocation = {522, 150}, -- Syracuse
 	Claims = {
 		"latin", "sicel-tribe"
 --		"italian", "sicily"
@@ -3787,7 +3785,7 @@ DefineProvince("Thessaly", {
 	CulturalNames = {
 		"greek", "Thessaly"
 	},
-	SettlementLocation = {543, 143}, -- Larissa
+--	SettlementLocation = {543, 143}, -- Larissa
 	Claims = {
 		"minoan", "impressedware-tribe"
 	},
@@ -3796,7 +3794,7 @@ DefineProvince("Thessaly", {
 
 DefineProvince("Thrace", {
 	World = "earth",
-	SettlementLocation = {561, 138}, -- Constantinople
+--	SettlementLocation = {561, 138}, -- Constantinople
 	Claims = {
 		"thracian", "apsinthii-tribe",
 		"greek", "thrace"
@@ -3809,7 +3807,7 @@ DefineProvince("Thuringia", {
 	CulturalNames = {
 		"teuton", "Thuringia" -- Thüringen
 	},
-	SettlementLocation = {511, 110}, -- Erfurt
+--	SettlementLocation = {511, 110}, -- Erfurt
 	Claims = {
 		"suebi", "hermunduri-tribe",
 		"teuton", "holy-rome"
@@ -3834,7 +3832,7 @@ DefineProvince("Touraine", {
 	FactionCulturalNames = {
 		"french", "france", "Touraine" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
-	SettlementLocation = {482, 121}, -- Tours
+--	SettlementLocation = {482, 121}, -- Tours
 	Claims = {
 --		"french", "france"
 	},
@@ -3859,7 +3857,7 @@ DefineProvince("Transylvania", {
 		"latin", "Upper Dacia",
 		"teuton", "Siebenbürgen"
 	},
-	SettlementLocation = {545, 122}, -- Cluj/Klausenburg
+--	SettlementLocation = {545, 122}, -- Cluj/Klausenburg
 	Claims = {
 --		"romanian", "transylvania"
 		"minoan", "paintedware-tribe",
@@ -3894,7 +3892,7 @@ DefineProvince("Tuscany", {
 		"latin", "Etruria",
 		"etruscan", "Etruria"
 	},
-	SettlementLocation = {512, 131}, -- Florence
+--	SettlementLocation = {512, 131}, -- Florence
 	Claims = {
 		"etruscan", "etruscan-tribe",
 		"etruscan", "etruria"
@@ -3912,7 +3910,7 @@ DefineProvince("Tyrol", {
 	CulturalNames = {
 		"teuton", "Tyrol"
 	},
-	SettlementLocation = {512, 121}, -- Innsbruck
+--	SettlementLocation = {512, 121}, -- Innsbruck
 	Claims = {
 		"basque", "sauveterrian-tribe",
 		"gaul", "norici-tribe",
@@ -3952,7 +3950,7 @@ DefineProvince("Ukraine", {
 		"slav", "poland", "Ukraine",
 		"slav", "russia", "Ukraine"
 	},
-	SettlementLocation = {566, 112}, -- Kiev
+--	SettlementLocation = {566, 112}, -- Kiev
 	Claims = {
 		"persian", "navari-tribe",
 		"persian", "roxolani-tribe",
@@ -3982,7 +3980,7 @@ DefineProvince("Ulster", {
 	FactionCulturalNames = {
 		"english", "england", "Ulster"
 	},
-	SettlementLocation = {463, 100}, -- Belfast
+--	SettlementLocation = {463, 100}, -- Belfast
 	Claims = {
 		"gael", "darini-tribe",
 		"gael", "scot-tribe"
@@ -4005,7 +4003,7 @@ DefineProvince("Umbria", {
 	CulturalNames = {
 		"latin", "Umbria"
 	},
-	SettlementLocation = {515, 134}, -- Perugia
+--	SettlementLocation = {515, 134}, -- Perugia
 	Claims = {
 		"latin", "aequian-tribe",
 		"latin", "picentian-tribe",
@@ -4024,7 +4022,7 @@ DefineProvince("Upper Austria", {
 	CulturalNames = {
 		"teuton", "Upper Austria"
 	},
-	SettlementLocation = {520, 118}, -- Linz
+--	SettlementLocation = {520, 118}, -- Linz
 	Claims = {
 		"gaul", "norici-tribe",
 		"teuton", "austria",
@@ -4052,7 +4050,7 @@ DefineProvince("Upper Lusatia", {
 	CulturalNames = {
 		"teuton", "Upper Lusatia"
 	},
-	SettlementLocation = {520, 109}, -- Bautzen
+--	SettlementLocation = {520, 109}, -- Bautzen
 	Claims = {
 		"suebi", "suebi-tribe",
 		"teuton", "holy-rome"
@@ -4074,7 +4072,7 @@ DefineProvince("Upper Saxony", {
 	CulturalNames = {
 		"teuton", "Upper Saxony" -- Obersachsen
 	},
-	SettlementLocation = {515, 109}, -- Leipzig
+--	SettlementLocation = {515, 109}, -- Leipzig
 	Claims = {
 		"suebi", "hermunduri-tribe",
 		"suebi", "suebi-tribe",
@@ -4101,7 +4099,7 @@ DefineProvince("Varmland", {
 	CulturalNames = {
 		"norse", "Värmland"
 	},
-	SettlementLocation = {518, 86}, -- Karlstad
+--	SettlementLocation = {518, 86}, -- Karlstad
 	Claims = {
 		"norse", "swede-tribe"
 	},
@@ -4120,7 +4118,6 @@ DefineProvince("Venetia", {
 	CulturalNames = {
 		"latin", "Venetia"
 	},
-	SettlementLocation = {515, 126}, -- Venice
 	Claims = {
 		"basque", "castelnovian-tribe",
 		"basque", "sauveterrian-tribe",
@@ -4155,7 +4152,7 @@ DefineProvince("Vestfold", {
 	CulturalNames = {
 		"norse", "Vestfold"
 	},
-	SettlementLocation = {509, 87}, -- Tønsberg
+--	SettlementLocation = {509, 87}, -- Tønsberg
 	Claims = {
 		"norse", "norway"
 	},
@@ -4167,7 +4164,7 @@ DefineProvince("Viborg", {
 	CulturalNames = {
 		"norse", "Viborg"
 	},
-	SettlementLocation = {561, 83}, -- Viborg
+--	SettlementLocation = {561, 83}, -- Viborg
 	Claims = {
 		"finnish", "finland",
 		"uralic", "uralic-tribe"
@@ -4188,7 +4185,7 @@ DefineProvince("Vinnytska", {
 	CulturalNames = {
 		"slav", "Vinnyts'ka"
 	},
-	SettlementLocation = {561, 116}, -- Vinnytsya
+--	SettlementLocation = {561, 116}, -- Vinnytsya
 	Claims = {
 		"goth", "bastarnae-tribe",
 		"persian", "navari-tribe"
@@ -4207,7 +4204,7 @@ DefineProvince("Vinnytska", {
 
 DefineProvince("Vojvodina", {
 	World = "earth",
-	SettlementLocation = {536, 127}, -- Novi Sad
+--	SettlementLocation = {536, 127}, -- Novi Sad
 	Claims = {
 		"minoan", "starcevo-tribe"
 	},
@@ -4234,7 +4231,7 @@ DefineProvince("Wales", {
 	FactionCulturalNames = {
 		"english", "england", "Wales"
 	},
-	SettlementLocation = {470, 109}, -- Cardiff
+--	SettlementLocation = {470, 109}, -- Cardiff
 	Claims = {
 		"basque", "bellbeaker-tribe",
 		"briton", "silures-tribe",
@@ -4265,7 +4262,7 @@ DefineProvince("Wallachia", {
 	CulturalNames = {
 		"latin", "Southern Lower Dacia"
 	},
-	SettlementLocation = {554, 129}, -- Bucharest
+--	SettlementLocation = {554, 129}, -- Bucharest
 	Claims = {
 --		"romanian", "wallachia",
 		"minoan", "paintedware-tribe",
@@ -4299,7 +4296,7 @@ DefineProvince("Wessex", {
 		"anglo-saxon", "angle-tribe", "Wessex",
 		"english", "england", "Wessex"
 	},
-	SettlementLocation = {476, 110}, -- Winchester
+--	SettlementLocation = {476, 110}, -- Winchester
 	Claims = {
 		"basque", "bellbeaker-tribe",
 		"briton", "regni-tribe",
@@ -4328,7 +4325,7 @@ DefineProvince("West Galicia", {
 	CulturalNames = {
 		"teuton", "Westgalizien"
 	},
-	SettlementLocation = {543, 110}, -- Lublin
+--	SettlementLocation = {543, 110}, -- Lublin
 	Claims = {
 		"slav", "venedae-tribe",
 		"slav", "poland"
@@ -4350,7 +4347,7 @@ DefineProvince("Westphalia", {
 	CulturalNames = {
 		"teuton", "Westphalia" -- Westfalen
 	},
-	SettlementLocation = {500, 109}, -- Düsseldorf
+--	SettlementLocation = {500, 109}, -- Düsseldorf
 	Claims = {
 		"frankish", "sugambri-tribe",
 		"teuton", "westphalia",
@@ -4380,7 +4377,7 @@ DefineProvince("White Russia", {
 	CulturalNames = {
 		"slav", "White Russia"
 	},
-	SettlementLocation = {559, 102}, -- Minsk
+--	SettlementLocation = {559, 102}, -- Minsk
 	Claims = {
 		"finnish", "fenni-tribe",
 		"slav", "venedae-tribe",
@@ -4402,7 +4399,7 @@ DefineProvince("Wurtemberg", {
 	CulturalNames = {
 		"teuton", "Württemberg"
 	},
-	SettlementLocation = {506, 117}, -- Stuttgart
+--	SettlementLocation = {506, 117}, -- Stuttgart
 	Claims = {
 		"suebi", "alamanni-tribe",
 		"teuton", "swabia", -- Part of the Duchy of Swabia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
@@ -4425,7 +4422,6 @@ DefineProvince("York", {
 		"anglo-saxon", "angle-tribe", "Deira",
 		"english", "england", "York"
 	},
-	SettlementLocation = {477, 102}, -- York
 	Claims = {
 		"briton", "brigantes-tribe",
 		"anglo-saxon", "dere-tribe", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
@@ -4461,7 +4457,7 @@ DefineProvince("Zealand", {
 	CulturalNames = {
 		"norse", "Sjaelland"
 	},
-	SettlementLocation = {515, 97}, -- Copenhagen
+--	SettlementLocation = {515, 97}, -- Copenhagen
 	Claims = {
 		"basque", "ertebolle-tribe",
 		"basque", "funnelbeaker-tribe",

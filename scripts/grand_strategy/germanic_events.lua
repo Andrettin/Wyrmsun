@@ -102,9 +102,6 @@ local GermanicEvents = {
 				and GetProvinceOwner("Astrakhan") == EventFaction.Name
 				and GetProvinceOwner("Russia") ~= EventFaction.Name
 				and GetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior") >= 8 -- event only happens if player has enough warriors to successfully migrate
-				and ProvinceHasBorderWith(WorldMapProvinces.Astrakhan, WorldMapProvinces.Russia)
-				and WorldMapProvinces.Russia.SettlementLocation[1] < WorldMapProvinces.Astrakhan.SettlementLocation[1] -- Russia must be to the west of Astrakhan, or else the event's name and description don't make sense
-				and WorldMapProvinces.Brandenburg.SettlementLocation[1] < WorldMapProvinces.Russia.SettlementLocation[1] -- Brandenburg must be to the west of Russia
 				and SyncRand(100) < 33
 			) then
 				return true
@@ -123,35 +120,12 @@ local GermanicEvents = {
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
 						AcquireProvince(WorldMapProvinces.Brandenburg, "asa-tribe")
-						for i, unitName in ipairs(Units) do
-							if (IsOffensiveMilitaryUnit(unitName)) then
-								SetProvinceUnitQuantity("Brandenburg", unitName, GetProvinceUnitQuantity("Astrakhan", unitName) + math.ceil(GetPlayerData(0, "UnitTypesStartingNonHeroCount", unitName) / BattalionMultiplier))
-								ChangeProvinceUnitQuantity("Russia", unitName, math.ceil(GetPlayerData(1, "UnitTypesStartingNonHeroCount", unitName) / BattalionMultiplier))
-							elseif (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Class") == "worker") then
-								ChangeProvinceUnitQuantity("Brandenburg", unitName, GetProvinceUnitQuantity("Astrakhan", unitName))
-								SetProvinceUnitQuantity("Astrakhan", unitName, 0)
-							end
-						end
-						local all_heroes = GetGrandStrategyHeroes()
-						local faction_heroes = GetPlayerData(0, "Heroes")
-						for i = 1, table.getn(all_heroes) do
-							if (GetArrayIncludes(faction_heroes, all_heroes[i])) then
-								SetProvinceHero("Brandenburg", all_heroes[i], 2)
-							elseif (GetProvinceHero("Astrakhan", all_heroes[i]) == 2) then
-								SetProvinceHero("Astrakhan", all_heroes[i], 0)
-							end
-						end
 						SetProvinceUnitQuantity("Astrakhan", "unit-germanic-worker", 1) -- keep one worker there, so that the province won't be entirely depopulated and the population will be able to regrow
 						AcquireProvince(WorldMapProvinces.Astrakhan, "")
 						SetProvinceCivilization("Astrakhan", "")
 						RemoveProvinceClaim("Astrakhan", "germanic", "asa-tribe")
 						SetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior", 8)
 					elseif (GameResult == GameDefeat) then
-						for i, unitName in ipairs(Units) do
-							if (IsOffensiveMilitaryUnit(unitName)) then
-								ChangeProvinceUnitQuantity("Russia", unitName, math.ceil(GetPlayerData(1, "UnitTypesStartingNonHeroCount", unitName) / BattalionMultiplier))
-							end
-						end
 						AcquireProvince(WorldMapProvinces.Astrakhan, "")
 						SetProvinceCivilization("Astrakhan", "")
 						RemoveProvinceClaim("Astrakhan", "germanic", "asa-tribe")
@@ -186,7 +160,6 @@ local GermanicEvents = {
 			end,
 			function(s) -- if refused to migrate, then a part of the tribe splits and does so
 				AcquireProvince(WorldMapProvinces.Brandenburg, "asa-tribe")
-				EqualizeProvinceUnits(EventFaction)
 				SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 8) -- give them enough units to continue migrating
 				SetProvinceUnitQuantity("Brandenburg", "unit-germanic-worker", GetProvinceUnitQuantity("Astrakhan", "unit-germanic-worker") / 2)
 				ChangeProvinceUnitQuantity("Astrakhan", "unit-germanic-worker", - GetProvinceUnitQuantity("Brandenburg", "unit-germanic-worker"))
@@ -233,16 +206,6 @@ local GermanicEvents = {
 					if (GameResult == GameVictory) then
 						AcquireProvince(WorldMapProvinces.Jutland, EventFaction.Name)
 						AddProvinceClaim("Jutland", EventFaction.Civilization, EventFaction.Name)
-						for i, unitName in ipairs(Units) do
-							if (IsOffensiveMilitaryUnit(unitName)) then
-								SetProvinceUnitQuantity("Jutland", unitName, GetProvinceUnitQuantity("Brandenburg", unitName) + math.ceil(GetPlayerData(4, "UnitTypesStartingNonHeroCount", unitName) / BattalionMultiplier))
-								SetProvinceUnitQuantity("Brandenburg", unitName, 0)
-							elseif (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Class") == "worker") then
-								ChangeProvinceUnitQuantity("Jutland", unitName, GetProvinceUnitQuantity("Brandenburg", unitName) / 5)
-								ChangeProvinceUnitQuantity("Zealand", unitName, GetProvinceUnitQuantity("Brandenburg", unitName) - GetProvinceUnitQuantity("Jutland", unitName))
-								SetProvinceUnitQuantity("Brandenburg", unitName, 0)
-							end
-						end
 						local all_heroes = GetGrandStrategyHeroes()
 						local faction_heroes = GetPlayerData(4, "Heroes")
 						for i = 1, table.getn(all_heroes) do
@@ -260,12 +223,6 @@ local GermanicEvents = {
 						AcquireProvince(WorldMapProvinces.Zealand, EventFaction.Name)
 						AddProvinceClaim("Zealand", EventFaction.Civilization, EventFaction.Name)
 						SetProvinceCivilization("Zealand", "germanic")
-					elseif (GameResult == GameDefeat) then
-						for i, unitName in ipairs(Units) do
-							if (IsOffensiveMilitaryUnit(unitName)) then
-								SetProvinceUnitQuantity("Jutland", unitName, math.ceil(GetPlayerData(1, "UnitTypesStartingNonHeroCount", unitName) / BattalionMultiplier))
-							end
-						end
 					end
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= EventFaction.Name or wyr.preferences.AutomaticBattles)) then
 					AcquireProvince(WorldMapProvinces.Jutland, EventFaction.Name)
@@ -344,34 +301,9 @@ local GermanicEvents = {
 						AddProvinceClaim("Gotaland", EventFaction.Civilization, EventFaction.Name)
 						AddProvinceClaim("Sweden", EventFaction.Civilization, EventFaction.Name)
 						
-						for i, unitName in ipairs(Units) do
-							if (IsOffensiveMilitaryUnit(unitName)) then
-								SetProvinceUnitQuantity("Sweden", unitName, math.ceil(GetPlayerData(0, "UnitTypesStartingNonHeroCount", unitName) / BattalionMultiplier))
-							elseif (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Class") == "worker") then
-								ChangeProvinceUnitQuantity("Sweden", unitName, GetProvinceUnitQuantity("Zealand", unitName) / 4)
-								ChangeProvinceUnitQuantity("Gotaland", unitName, GetProvinceUnitQuantity("Zealand", unitName) / 4)
-								ChangeProvinceUnitQuantity("Scania", unitName, GetProvinceUnitQuantity("Zealand", unitName) / 4)
-								ChangeProvinceUnitQuantity("Zealand", unitName, - GetProvinceUnitQuantity("Sweden", unitName) - GetProvinceUnitQuantity("Gotaland", unitName) - GetProvinceUnitQuantity("Scania", unitName))
-							end
-						end
-						local all_heroes = GetGrandStrategyHeroes()
-						local faction_heroes = GetPlayerData(0, "Heroes")
-						for i = 1, table.getn(all_heroes) do
-							if (GetArrayIncludes(faction_heroes, all_heroes[i])) then
-								SetProvinceHero("Sweden", all_heroes[i], 2)
-							elseif (GetProvinceHero("Jutland", all_heroes[i]) == 2) then
-								SetProvinceHero("Jutland", all_heroes[i], 0)
-							end
-						end
 						SetProvinceSettlementBuilding("Sweden", "unit-germanic-town-hall", true)
 						
 						ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 25)
-					elseif (GameResult == GameDefeat) then
-						for i, unitName in ipairs(Units) do
-							if (IsOffensiveMilitaryUnit(unitName)) then
-								SetProvinceUnitQuantity("Scania", unitName, math.ceil(GetPlayerData(1, "UnitTypesStartingNonHeroCount", unitName) / BattalionMultiplier))
-							end
-						end
 					end
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= EventFaction.Name or wyr.preferences.AutomaticBattles)) then
 					AcquireProvince(WorldMapProvinces.Scania, EventFaction.Name)
@@ -504,7 +436,6 @@ local GermanicEvents = {
 		Options = {"~!OK", "Play as ~!Skeldu"},
 		OptionEffects = {
 			function(s)
-				EqualizeProvinceUnits(EventFaction)
 				if (GetProvinceOwner("Jutland") == EventFaction.Name) then
 					AcquireProvince(WorldMapProvinces.Jutland, "skeldung-tribe")
 					RemoveProvinceClaim("Jutland", EventFaction.Civilization, EventFaction.Name)
@@ -519,7 +450,6 @@ local GermanicEvents = {
 				SetFactionMinister("germanic", "skeldung-tribe", "head-of-state", "Skeldu")
 			end,
 			function(s)
-				EqualizeProvinceUnits(EventFaction)
 				if (GetProvinceOwner("Jutland") == EventFaction.Name) then
 					AcquireProvince(WorldMapProvinces.Jutland, "skeldung-tribe")
 					RemoveProvinceClaim("Jutland", EventFaction.Civilization, EventFaction.Name)
@@ -673,20 +603,17 @@ local GermanicEvents = {
 		Options = {"~!OK", "This means ~!war!", "Play as ~!Beldeg"},
 		OptionEffects = {
 			function(s)
-				EqualizeProvinceUnits(EventFaction) -- distribute the military units of the faction equally between the newly forming faction and the old one, to prevent one of them from easily conquering the other just by happening to have more units in their province
 				AcquireProvince(WorldMapProvinces.Westphalia, "saxon-tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.saxon_tribe.Civilization, "saxon-tribe")
 				SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 1) -- if Westphalia has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
 			end,
 			function(s)
-				EqualizeProvinceUnits(EventFaction) -- distribute the military units of the faction equally between the newly forming faction and the old one, to prevent one of them from easily conquering the other just by happening to have more units in their province
 				AcquireProvince(WorldMapProvinces.Westphalia, "saxon-tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.saxon_tribe.Civilization, "saxon-tribe")
 				SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 1) -- if Westphalia has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
 				SetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, Factions.saxon_tribe.Civilization, "saxon-tribe", "war")
 			end,
 			function(s)
-				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.Westphalia, "saxon-tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.saxon_tribe.Civilization, "saxon-tribe")
 				GrandStrategyFaction = Factions.saxon_tribe
@@ -713,18 +640,15 @@ local GermanicEvents = {
 		Options = {"~!OK", "This means ~!war!", "Play as ~!Sigi"},
 		OptionEffects = {
 			function(s)
-				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.Holland, "frank-tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.frank_tribe.Civilization, "frank-tribe")
 			end,
 			function(s)
-				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.Holland, "frank-tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.frank_tribe.Civilization, "frank-tribe")
 				SetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, Factions.frank_tribe.Civilization, "frank-tribe", "war")
 			end,
 			function(s)
-				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.Holland, "frank-tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.frank_tribe.Civilization, "frank-tribe")
 				GrandStrategyFaction = Factions.frank_tribe
@@ -750,18 +674,15 @@ local GermanicEvents = {
 		Options = {"~!OK", "This means ~!war!", "Play as ~!Vegdeg"},
 		OptionEffects = {
 			function(s)
-				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.Brandenburg, "suebi-tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.suebi_tribe.Civilization, "suebi-tribe")
 			end,
 			function(s)
-				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.Brandenburg, "suebi-tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.suebi_tribe.Civilization, "suebi-tribe")
 				SetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, Factions.suebi_tribe.Civilization, "suebi-tribe", "war")
 			end,
 			function(s)
-				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.Brandenburg, "suebi-tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.suebi_tribe.Civilization, "suebi-tribe")
 				GrandStrategyFaction = Factions.suebi_tribe

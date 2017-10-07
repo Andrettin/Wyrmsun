@@ -48,7 +48,7 @@ DefineWorldMapTile({50, 13}, {
 
 DefineWorldMapTile({-1, -1}, { -- a cave called the Wyrm's Den (in Among the Gnomes it was called Dragon's Den), where in older times a wyrm lived (and devoured many sentient beings); the Wyrm's Den is 5800 feet above the sea level; Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 26, 50.
 	World = "nidavellir",
-	Province = "Untersberg", -- is the surface of the Untersberg itself
+--	Province = "Untersberg", -- is the surface of the Untersberg itself
 	Terrain = "Mountains",
 	CulturalTerrainNames = {
 		"Mountains", "gnome", "Wyrm's Den"

@@ -112,13 +112,11 @@ SetPlayerData(PlayerNumNeutral, "RaceName", "neutral")
 -- Knalgan outpost
 unit = CreateUnit("unit-dwarven-town-hall", 0, {8, 60})
 unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {9, 56})
-if (GrandStrategy == false) then
-	unit = CreateUnit("unit-dwarven-miner", 0, {8, 60})
-	unit = CreateUnit("unit-dwarven-miner", 0, {8, 60})
-	unit = CreateUnit("unit-dwarven-miner", 0, {8, 60})
-	unit = CreateUnit("unit-dwarven-miner", 0, {8, 60})
-	unit = CreateUnit("unit-dwarven-miner", 0, {8, 60})
-end
+unit = CreateUnit("unit-dwarven-miner", 0, {8, 60})
+unit = CreateUnit("unit-dwarven-miner", 0, {8, 60})
+unit = CreateUnit("unit-dwarven-miner", 0, {8, 60})
+unit = CreateUnit("unit-dwarven-miner", 0, {8, 60})
+unit = CreateUnit("unit-dwarven-miner", 0, {8, 60})
 
 unit = CreateUnit("unit-copper-deposit", PlayerNumNeutral, {14, 52})
 SetResourcesHeld(unit, 50000)
@@ -128,30 +126,11 @@ unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {15, 53})
 unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {15, 53})
 unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {15, 53})
 
-if (GrandStrategy and GrandStrategyBattleBaseBuilding) then
-	unit = CreateUnit("unit-copper-deposit", PlayerNumNeutral, {25, 33})
-	SetResourcesHeld(unit, 50000)
-end
-
-if (GrandStrategy == false) then
-	if (GetPlayerData(0, "Name") ~= "Shorbear Clan" and GetPlayerData(0, "Name") ~= "Shinsplitter Clan" and (GetThisPlayer() ~= 0 or (PlayerFaction ~= "Shorbear Clan" and PlayerFaction ~= "Shinsplitter Clan"))) then
-		unit = CreateUnit("unit-dwarven-axefighter", 0, {8, 60})
-		SetUnitVariable(unit, "Character", "rugnur")
-		unit = CreateUnit("unit-dwarven-steelclad", 0, {8, 60})
-		SetUnitVariable(unit, "Character", "baglur")
-	end
-elseif (GrandStrategyEventMap) then
-	-- Rugnur
-	if (GetProvinceHero("Caverns of Chaincolt", "Rugnur") == 2) then
-		unit = CreateUnit(GetGrandStrategyHeroUnitType("Rugnur"), 0, {8, 60})
-		SetUnitVariable(unit, "Character", "rugnur")
-	end
-
-	-- Baglur
-	if (GetProvinceHero("Caverns of Chaincolt", "Baglur") == 2) then
-		unit = CreateUnit(GetGrandStrategyHeroUnitType("Baglur"), 0, {8, 60})
-		SetUnitVariable(unit, "Character", "baglur")
-	end
+if (GetPlayerData(0, "Name") ~= "Shorbear Clan" and GetPlayerData(0, "Name") ~= "Shinsplitter Clan" and (GetThisPlayer() ~= 0 or (PlayerFaction ~= "Shorbear Clan" and PlayerFaction ~= "Shinsplitter Clan"))) then
+	unit = CreateUnit("unit-dwarven-axefighter", 0, {8, 60})
+	SetUnitVariable(unit, "Character", "rugnur")
+	unit = CreateUnit("unit-dwarven-steelclad", 0, {8, 60})
+	SetUnitVariable(unit, "Character", "baglur")
 end
 
 unit = CreateUnit("unit-dwarven-sentry-tower", 0, {14, 46})
@@ -160,30 +139,6 @@ unit = CreateUnit("unit-dwarven-sentry-tower", 0, {23, 43})
 unit = CreateUnit("unit-dwarven-sentry-tower", 0, {26, 45})
 unit = CreateUnit("unit-dwarven-sentry-tower", 0, {28, 53})
 unit = CreateUnit("unit-dwarven-sentry-tower", 0, {28, 57})
-
-if (GrandStrategyEventMap) then
-	local units_to_be_created = {}
-	for i, unitName in ipairs(Units) do
-		if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then
-			units_to_be_created[string.gsub(unitName, "-", "_")] = 0
-			if (unitName ~= "unit-gnomish-duelist") then
-				units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(GetProvinceUnitQuantity("Caverns of Chaincolt", unitName) / 2) -- half of Norlund forces in the Cavern of Chaincolt sent to the mission
-			else -- special case for the gnomish recruit which must always be present
-				units_to_be_created[string.gsub(unitName, "-", "_")] = 1
-			end
-			ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, - units_to_be_created[string.gsub(unitName, "-", "_")])
-		end
-	end
-	for i, unitName in ipairs(Units) do
-		if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then
-			if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
-				for i=1,(units_to_be_created[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
-					unit = OldCreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-				end
-			end
-		end
-	end
-end
 
 -- Put Thursagan's home in one of five random locations
 if (LoadedGame == false) then
@@ -295,19 +250,17 @@ function NorthernWastelandsEnemy(enemy_x, enemy_y)
 	end
 end
 
-if (GrandStrategy == false or GrandStrategyEventMap) then
-	if (LoadedGame == false) then
-		NorthernWastelandsEnemy(8, 11)
-		NorthernWastelandsEnemy(25, 33)
-		NorthernWastelandsEnemy(40, 53) --NorthernWastelandsEnemy(42, 54)
-		NorthernWastelandsEnemy(42, 22)
+if (LoadedGame == false) then
+	NorthernWastelandsEnemy(8, 11)
+	NorthernWastelandsEnemy(25, 33)
+	NorthernWastelandsEnemy(40, 53) --NorthernWastelandsEnemy(42, 54)
+	NorthernWastelandsEnemy(42, 22)
 		
-		if (GameSettings.Difficulty == 3) then -- if difficulty is hard
-			NorthernWastelandsEnemy(50, 44)
-		elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
-			NorthernWastelandsEnemy(50, 44)
-			NorthernWastelandsEnemy(34, 8)
-		end
+	if (GameSettings.Difficulty == 3) then -- if difficulty is hard
+		NorthernWastelandsEnemy(50, 44)
+	elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+		NorthernWastelandsEnemy(50, 44)
+		NorthernWastelandsEnemy(34, 8)
 	end
 end
 
@@ -320,12 +273,4 @@ if (LoadedGame == false) then
 	CreateRoamingFog((Map.Info.MapWidth * Map.Info.MapHeight) / 1024) -- should be particularly foggy
 
 	CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
-end
-
--- in a grand strategy battle, give the defender two guard towers if a stronghold is built
-if (GrandStrategy and GrandStrategyEventMap == false and ProvinceHasBuildingClass(AttackedProvince.Name, "stronghold")) then
-	if (GetCivilizationClassUnitType("guard-tower", GetProvinceCivilization(AttackedProvince.Name)) ~= nil) then
-		unit = OldCreateUnit(GetCivilizationClassUnitType("guard-tower", GetProvinceCivilization(AttackedProvince.Name)), MapDefender, {18, 44})
-		unit = OldCreateUnit(GetCivilizationClassUnitType("guard-tower", GetProvinceCivilization(AttackedProvince.Name)), MapDefender, {29, 53})
-	end
 end

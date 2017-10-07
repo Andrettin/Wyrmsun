@@ -29,40 +29,6 @@ WorldMapProvinces = {}
 WorldMapWaterProvinces = {}
 
 function LoadProvinces(world)
-	WorldMapProvinces = nil
-	WorldMapProvinces = {}
-	WorldMapWaterProvinces = nil
-	WorldMapWaterProvinces = {}
-	
-	local provinces = GetGrandStrategyProvinces()
-	for i = 1,table.getn(provinces) do
-		local province_key = string.gsub(provinces[i], " ", "")
-		province_key = string.gsub(province_key, "'", "")
-		if (GetGrandStrategyProvinceData(provinces[i], "Water") == false) then
-			WorldMapProvinces[province_key] = {}
-			WorldMapProvinces[province_key]["Name"] = provinces[i]
-						
-			local tiles = GetProvinceData(provinces[i], "Tiles")
-			WorldMapProvinces[province_key]["Tiles"] = {}
-			for j=1,table.getn(tiles),2 do
-				table.insert(WorldMapProvinces[province_key].Tiles, {tiles[j], tiles[j + 1]})
-			end
-
-			WorldMapProvinces[province_key]["SettlementLocation"] = {GetGrandStrategyProvinceData(provinces[i], "SettlementX"), GetGrandStrategyProvinceData(provinces[i], "SettlementY")}
-			
-			WorldMapProvinces[province_key]["Coastal"] = GetProvinceData(provinces[i], "Coastal")
-		else
-			WorldMapWaterProvinces[province_key] = {}
-			WorldMapWaterProvinces[province_key]["Name"] = provinces[i]
-
-			local tiles = GetProvinceData(provinces[i], "Tiles")
-			WorldMapWaterProvinces[province_key]["Tiles"] = {}
-			for j=1,table.getn(tiles),2 do
-				table.insert(WorldMapWaterProvinces[province_key].Tiles, {tiles[j], tiles[j + 1]})
-			end
-		end
-	end
-
 	local EarthProvinces = {
 		Jutland = {
 			Name = "Jutland",
@@ -202,11 +168,6 @@ function LoadProvinces(world)
 				unit_goblin_spearman = 4
 			}
 		},
-		Svarinshaug = {
-			Name = "Svarinshaug",
-			Owner = "brising-clan",
-			Civilization = "dwarf"
-		},
 		Untersberg = {
 			Name = "Untersberg",
 			Units = {
@@ -214,26 +175,4 @@ function LoadProvinces(world)
 			}
 		}
 	}
-	
-	local function AddProvinceTable(province_table)
-		for key, value in pairs(province_table) do
-			if (province_table[key].Owner ~= nil) then
-				SetProvinceOwner(province_table[key].Name, GetFactionFromName(province_table[key].Owner).Civilization, province_table[key].Owner)
-			end
-			if (province_table[key].Units ~= nil) then
-				for second_key, second_value in pairs(province_table[key].Units) do
-					SetProvinceUnitQuantity(WorldMapProvinces[key].Name, string.gsub(second_key, "_", "-"), province_table[key].Units[second_key])
-				end
-			end
-		end
-	end
-	
-	if (world == "Earth") then
-		AddProvinceTable(EarthProvinces)
-	elseif (world == "Nidavellir") then
-		AddProvinceTable(NidavellirProvinces)
-	elseif (world == "Random") then
-		AddProvinceTable(EarthProvinces)
-		AddProvinceTable(NidavellirProvinces)
-	end
 end

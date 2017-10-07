@@ -27,9 +27,6 @@
 
 DefineProvince("Argentina", {
 	World = "earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
 	Coastal = true,
 	HistoricalModifiers = {
 		1700, "upgrade-college", true, -- College or seminary founded in Cordoba in 1700(?). Source: Enrique Martínez Ruiz; Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 226.
@@ -40,9 +37,6 @@ DefineProvince("Argentina", {
 
 DefineProvince("Bolivia", {
 	World = "earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
 	HistoricalModifiers = {
 		1621, "upgrade-university", true -- University founded in Chuquisaca (Charcas) in 1621. Source: Enrique Martínez Ruiz; Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 226.
 	},
@@ -51,9 +45,6 @@ DefineProvince("Bolivia", {
 
 DefineProvince("Chile", {
 	World = "earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
 	Coastal = true,
 	HistoricalModifiers = {
 		1738, "upgrade-university", true -- University founded in Santiago in 1738. Source: Enrique Martínez Ruiz; Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 226.
@@ -63,9 +54,6 @@ DefineProvince("Chile", {
 
 DefineProvince("Colombia", {
 	World = "earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
 	Coastal = true,
 	HistoricalModifiers = {
 		1626, "upgrade-university", true, -- University Sto. Tomás founded in Bogota in 1626. Source: Enrique Martínez Ruiz; Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 226.
@@ -77,9 +65,6 @@ DefineProvince("Colombia", {
 
 DefineProvince("Cuba", {
 	World = "earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
 	Coastal = true,
 	HistoricalModifiers = {
 		1721, "upgrade-college", true -- College or seminary founded in Havana in 1721 or 1728. Source: Enrique Martínez Ruiz; Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 226.
@@ -89,9 +74,6 @@ DefineProvince("Cuba", {
 
 DefineProvince("Ecuador", {
 	World = "earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
 	Coastal = true,
 	HistoricalModifiers = {
 		1769, "upgrade-university", true, -- University S. Gregorio founded in Quito in 1769. Source: Enrique Martínez Ruiz; Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 226.
@@ -101,9 +83,6 @@ DefineProvince("Ecuador", {
 
 DefineProvince("Guatemala", {
 	World = "earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
 	Coastal = true,
 	HistoricalModifiers = {
 		1676, "upgrade-university", true -- University founded in Guatemala in 1676. Source: Enrique Martínez Ruiz; Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 226.
@@ -113,9 +92,6 @@ DefineProvince("Guatemala", {
 
 DefineProvince("Massachusetts", {
 	World = "earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
 	Coastal = true,
 	HistoricalModifiers = {
 		1636, "upgrade-university", true -- Harvard university founded in 1636. Source: "Atlas de História Mundial", 2001, p. 23.
@@ -125,9 +101,6 @@ DefineProvince("Massachusetts", {
 
 DefineProvince("Mexico", {
 	World = "earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
 	Coastal = true,
 	HistoricalModifiers = {
 		1551, "upgrade-university", true, -- University founded in Mexico City in 1551. Source: Enrique Martínez Ruiz; Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 226.
@@ -139,9 +112,6 @@ DefineProvince("Mexico", {
 
 DefineProvince("Minas Gerais", {
 	World = "earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Hills",
 	Claims = {
 		"portuguese", "brazil"
 	},
@@ -155,9 +125,6 @@ DefineProvince("Minas Gerais", {
 
 DefineProvince("Nicaragua", {
 	World = "earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
 	Coastal = true,
 	HistoricalModifiers = {
 		1812, "upgrade-university", true -- University founded in Leon in 1812. Source: Enrique Martínez Ruiz; Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 226.
@@ -167,18 +134,12 @@ DefineProvince("Nicaragua", {
 
 DefineProvince("Ontario", {
 	World = "earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
 	Coastal = true,
 	Regions = {"america", "north-america"}
 })
 
 DefineProvince("Peru", {
 	World = "earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
 	Coastal = true,
 	HistoricalModifiers = {
 		1551, "upgrade-university", true, -- University founded in Lima in 1551. Source: Enrique Martínez Ruiz; Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 226.
@@ -190,9 +151,6 @@ DefineProvince("Peru", {
 
 DefineProvince("Rio de Janeiro", {
 	World = "earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
 		"portuguese", "brazil"
@@ -212,9 +170,6 @@ DefineProvince("Rio de Janeiro", {
 
 DefineProvince("Santo Domingo", {
 	World = "earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
 	Coastal = true,
 	HistoricalModifiers = {
 		1538, "upgrade-university", true -- University C. Sto. Tomás founded in Santo Domingo in 1538. Source: Enrique Martínez Ruiz; Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 226.
@@ -224,9 +179,6 @@ DefineProvince("Santo Domingo", {
 
 DefineProvince("Venezuela", {
 	World = "earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
 	Coastal = true,
 	HistoricalModifiers = {
 		1721, "upgrade-university", true, -- University founded in Caracas in 1721. Source: Enrique Martínez Ruiz; Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 226.

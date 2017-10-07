@@ -27,9 +27,6 @@
 
 DefineProvince("Anatolia", {
 	World = "earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
 	HistoricalSettlementBuildings = {
 		161, "unit-latin-barracks", true, -- Legionary base present in Satala in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		161, "unit-latin-barracks", true, -- Legionary base present in Melitene in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -40,9 +37,6 @@ DefineProvince("Anatolia", {
 
 DefineProvince("Arabia", {
 	World = "earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
 	Claims = {
 		"persian", "agraei-tribe",
 		"persian", "arab-tribe",
@@ -58,9 +52,6 @@ DefineProvince("Arabia", {
 
 DefineProvince("Armenia", {
 	World = "earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
 	Claims = {
 		"greek", "armenia"
 	},
@@ -73,12 +64,6 @@ DefineProvince("Armenia", {
 
 DefineProvince("Asia Minor", {
 	World = "earth",
-	Tiles = {
-		{554, 142} -- Troy
-	},
-	SettlementLocation = {554, 142}, -- Troy
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
 		"hittite", "troy"
@@ -88,9 +73,6 @@ DefineProvince("Asia Minor", {
 
 DefineProvince("Caucasus", {
 	World = "earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
 	Claims = {
 		"persian", "abasgi-tribe",
 		"persian", "alan-tribe"
@@ -108,9 +90,6 @@ DefineProvince("Caucasus", {
 
 DefineProvince("India", {
 	World = "earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
 	Coastal = true,
 	HistoricalModifiers = {
 		1817, "upgrade-college", true -- Hindu College founded in Calcutta in 1817. Source: "Atlas de História Mundial", 2001, p. 24.
@@ -120,25 +99,16 @@ DefineProvince("India", {
 
 DefineProvince("Lebanon", {
 	World = "earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
 	Regions = {"asia"}
 })
 
 DefineProvince("Mesopotamia", {
 	World = "earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
 	Regions = {"asia"}
 })
 
 DefineProvince("Palestine", {
 	World = "earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
 	HistoricalSettlementBuildings = {
 		161, "unit-latin-barracks", true -- Legionary base present in Hierosolyma in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
@@ -147,9 +117,6 @@ DefineProvince("Palestine", {
 
 DefineProvince("Philippines", {
 	World = "earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
 	Coastal = true,
 	HistoricalModifiers = {
 		1645, "upgrade-university", true -- University Sto Tomás founded in Manila in 1645. Source: Enrique Martínez Ruiz; Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 226.
@@ -159,9 +126,6 @@ DefineProvince("Philippines", {
 
 DefineProvince("Syria", {
 	World = "earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
 	HistoricalOwners = {
 		161, "persian", "parthia", -- in 161 the Parthians invaded Syria and afterwards defeated the armies stationed there; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},

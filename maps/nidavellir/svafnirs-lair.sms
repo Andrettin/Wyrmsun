@@ -88,11 +88,7 @@ AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 ApplyRawTiles()
 
 -- Player Setup
-if (GrandStrategy and GrandStrategyEventMap == false) then
-	SetStartView(0, 31, 49)
-else
-	SetStartView(0, 16, 16)
-end
+SetStartView(0, 16, 16)
 SetPlayerData(0, "RaceName", "dwarf")
 SetPlayerData(0, "Resources", "copper", 5000)
 SetPlayerData(0, "Resources", "lumber", 5000)
@@ -141,265 +137,138 @@ unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {5, 12})
 unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {5, 12})
 unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {5, 12})
 
-if (GrandStrategy and GrandStrategyBattleBaseBuilding) then
-	unit = CreateUnit("unit-copper-deposit", PlayerNumNeutral, {31, 49})
-	SetResourcesHeld(unit, 50000)
+if (GetPlayerData(0, "Name") ~= "Shorbear Clan" and GetPlayerData(0, "Name") ~= "Shinsplitter Clan" and (GetThisPlayer() ~= 0 or (PlayerFaction ~= "Shorbear Clan" and PlayerFaction ~= "Shinsplitter Clan"))) then
+	unit = CreateUnit("unit-dwarven-axefighter", 0, {16, 16})
+	SetUnitVariable(unit, "Character", "rugnur")
+	unit = CreateUnit("unit-dwarven-axefighter", 0, {16, 16})
+	SetUnitVariable(unit, "Character", "baglur")
+	unit = CreateUnit("unit-dwarven-axefighter", 0, {16, 16})
+	SetUnitVariable(unit, "Character", "thursagan")
+	unit = CreateUnit("unit-dwarven-gryphon-rider", 0, {16, 16}) -- Krawg
+	IncreaseUnitLevel(unit, 1)
+	AcquireAbility(unit, "upgrade-critical-strike")
 end
-	
-if (GrandStrategy == false) then
-	if (GetPlayerData(0, "Name") ~= "Shorbear Clan" and GetPlayerData(0, "Name") ~= "Shinsplitter Clan" and (GetThisPlayer() ~= 0 or (PlayerFaction ~= "Shorbear Clan" and PlayerFaction ~= "Shinsplitter Clan"))) then
-		unit = CreateUnit("unit-dwarven-axefighter", 0, {16, 16})
-		SetUnitVariable(unit, "Character", "rugnur")
-		unit = CreateUnit("unit-dwarven-axefighter", 0, {16, 16})
-		SetUnitVariable(unit, "Character", "baglur")
-		unit = CreateUnit("unit-dwarven-axefighter", 0, {16, 16})
-		SetUnitVariable(unit, "Character", "thursagan")
-		unit = CreateUnit("unit-dwarven-gryphon-rider", 0, {16, 16}) -- Krawg
-		IncreaseUnitLevel(unit, 1)
-		AcquireAbility(unit, "upgrade-critical-strike")
-	end
 
-	-- base for the Shinsplitters
-	unit = CreateUnit("unit-dwarven-town-hall", 1, {1, 19})
-	unit = CreateUnit("unit-dwarven-mushroom-farm", 1, {12, 0})
-	unit = CreateUnit("unit-dwarven-mushroom-farm", 1, {10, 1})
+-- base for the Shinsplitters
+unit = CreateUnit("unit-dwarven-town-hall", 1, {1, 19})
+unit = CreateUnit("unit-dwarven-mushroom-farm", 1, {12, 0})
+unit = CreateUnit("unit-dwarven-mushroom-farm", 1, {10, 1})
 
-	unit = CreateUnit("unit-dwarven-thane", 1, {4, 20}) -- Crintil
-	SetUnitVariable(unit, "Active", false)
+unit = CreateUnit("unit-dwarven-thane", 1, {4, 20}) -- Crintil
+SetUnitVariable(unit, "Active", false)
 
-	-- create a few more steelclads, to make the Shinsplitters have more of a fighting force
-	unit = CreateUnit("unit-dwarven-steelclad", 1, {4, 28})
-	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-dwarven-steelclad", 1, {4, 28})
-	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-dwarven-steelclad", 1, {4, 28})
-	SetUnitVariable(unit, "Active", false)
+-- create a few more steelclads, to make the Shinsplitters have more of a fighting force
+unit = CreateUnit("unit-dwarven-steelclad", 1, {4, 28})
+SetUnitVariable(unit, "Active", false)
+unit = CreateUnit("unit-dwarven-steelclad", 1, {4, 28})
+SetUnitVariable(unit, "Active", false)
+unit = CreateUnit("unit-dwarven-steelclad", 1, {4, 28})
+SetUnitVariable(unit, "Active", false)
 
-	unit = CreateUnit("unit-dwarven-miner", 1, {4, 20})
-	unit = CreateUnit("unit-dwarven-miner", 1, {4, 20})
-	unit = CreateUnit("unit-dwarven-miner", 1, {4, 20})
-	unit = CreateUnit("unit-dwarven-miner", 1, {4, 20})
-	unit = CreateUnit("unit-dwarven-miner", 1, {4, 20})
+unit = CreateUnit("unit-dwarven-miner", 1, {4, 20})
+unit = CreateUnit("unit-dwarven-miner", 1, {4, 20})
+unit = CreateUnit("unit-dwarven-miner", 1, {4, 20})
+unit = CreateUnit("unit-dwarven-miner", 1, {4, 20})
+unit = CreateUnit("unit-dwarven-miner", 1, {4, 20})
 
-	-- the enemy gets mercenaries
+-- the enemy gets mercenaries
+unit = CreateUnit("unit-surghan-mercenary-steelclad", 1, {4, 28})
+SetUnitVariable(unit, "Active", false)
+unit = CreateUnit("unit-surghan-mercenary-steelclad", 1, {4, 28})
+SetUnitVariable(unit, "Active", false)
+unit = CreateUnit("unit-surghan-mercenary-steelclad", 1, {4, 28})
+SetUnitVariable(unit, "Active", false)
+
+-- extra mercenary for hard difficulty and beyond
+if (GameSettings.Difficulty == 3) then -- if difficulty is hard
 	unit = CreateUnit("unit-surghan-mercenary-steelclad", 1, {4, 28})
-	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-surghan-mercenary-steelclad", 1, {4, 28})
-	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-surghan-mercenary-steelclad", 1, {4, 28})
-	SetUnitVariable(unit, "Active", false)
-
-	-- extra mercenary for hard difficulty and beyond
-	if (GameSettings.Difficulty == 3) then -- if difficulty is hard
-		unit = CreateUnit("unit-surghan-mercenary-steelclad", 1, {4, 28})
-		SetUnitVariable(unit, "Active", false)
-	end
-
-	-- two extra mercenaries for brutal difficulty
-	if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
-		unit = CreateUnit("unit-surghan-mercenary-steelclad", 1, {4, 28})
-		SetUnitVariable(unit, "Active", false)
-	end
-
-	unit = CreateUnit("unit-surghan-mercenary-thane", 1, {4, 28})
-	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-surghan-mercenary-thane", 1, {4, 28})
-	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-surghan-mercenary-thane", 1, {4, 28})
-	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-dwarven-explorer", 1, {4, 28})
-	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-dwarven-explorer", 1, {4, 28})
-	SetUnitVariable(unit, "Active", false)
-
-	-- abandoned dwarven buildings
-	unit = CreateUnit("unit-brising-smithy", 3, {31, 49})
-
-	unit = CreateUnit("unit-dwarven-guard-tower", 3, {20, 12}) -- add some rescuable dwarven guard towers to buy some time from the attackers, so that Rugnur and his companions can reach the forge
-	if (unit) then
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
-	end
-	unit = CreateUnit("unit-dwarven-guard-tower", 3, {22, 17})
-	if (unit) then
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
-	end
-	unit = CreateUnit("unit-dwarven-guard-tower", 3, {24, 13})
-	if (unit) then
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
-	end
-	unit = CreateUnit("unit-dwarven-guard-tower", 3, {41, 10}) -- having this tower next to the other one was creating to much of an impediment for later Shinsplitter attacks
-	if (unit) then
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
-	end
-	unit = CreateUnit("unit-dwarven-guard-tower", 3, {41, 14})
-	if (unit) then
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
-	end
-	unit = CreateUnit("unit-dwarven-guard-tower", 3, {37, 26})
-	if (unit) then
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
-	end
-	unit = CreateUnit("unit-dwarven-guard-tower", 3, {32, 34})
-	if (unit) then
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
-	end
-	unit = CreateUnit("unit-dwarven-guard-tower", 3, {31, 36})
-	if (unit) then
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
-	end
-	unit = CreateUnit("unit-dwarven-guard-tower", 3, {43, 37})
-	if (unit) then
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
-	end
-	unit = CreateUnit("unit-dwarven-guard-tower", 3, {57, 34})
-	if (unit) then
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
-	end
-	unit = CreateUnit("unit-dwarven-guard-tower", 3, {41, 47})
-	if (unit) then
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
-	end
-	unit = CreateUnit("unit-dwarven-guard-tower", 3, {41, 49})
-	if (unit) then
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
-	end
-	unit = CreateUnit("unit-dwarven-guard-tower", 3, {37, 50})
-	if (unit) then
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
-	end
-	
-	SetDiplomacy(0, "enemy", 1)
-	SetDiplomacy(0, "enemy", 2)
-	SetDiplomacy(1, "enemy", 0)
-	SetDiplomacy(1, "enemy", 2)
-	SetDiplomacy(2, "enemy", 0)
-	SetDiplomacy(2, "enemy", 1)
-
---	unit = CreateUnit("unit-wyrm", 2, {8, 34}) -- Khrakrahs / Svafnir
-	unit = CreateUnit("unit-wyrm", 2, {26, 31}) -- moved Svafnir here, so that he is accessible
-	SetUnitVariable(unit, "Name", "Svafnir")
-	SetUnitVariable(unit, "Active", false)
-elseif (GrandStrategyEventMap) then
-	SetPlayerData(0, "Resources", "copper", 0)
-	SetPlayerData(0, "Resources", "lumber", 0)
-	SetPlayerData(0, "Resources", "stone", 0)
-	
-	unit = CreateUnit("unit-copper-deposit", PlayerNumNeutral, {4, 11}) -- Shinsplitter Camp Gold Mine
-	SetResourcesHeld(unit, 100000)
-	unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {5, 12})
-	unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {5, 12})
-	unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {5, 12})
-	unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {5, 12})
-	unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {5, 12})
-	
-	-- Rugnur
-	if (GetProvinceHero("Caverns of Chaincolt", "Rugnur") == 2) then
-		unit = CreateUnit(GetGrandStrategyHeroUnitType("Rugnur"), 0, {16, 16})
-		SetUnitVariable(unit, "Character", "rugnur")
-	end
-
-	-- Baglur
-	if (GetProvinceHero("Caverns of Chaincolt", "Baglur") == 2) then
-		unit = CreateUnit(GetGrandStrategyHeroUnitType("Baglur"), 0, {16, 16})
-		SetUnitVariable(unit, "Character", "baglur")
-	end
-
-	-- Thursagan
-	if (GetProvinceHero("Caverns of Chaincolt", "Thursagan") == 2) then
-		unit = CreateUnit(GetGrandStrategyHeroUnitType("Thursagan"), 0, {16, 16})
-		SetUnitVariable(unit, "Character", "thursagan")
-	end
-
-	-- Norlund units
-	CreateProvinceUnits("Caverns of Chaincolt", 0, 1, false, true)
-	CreateProvinceCustomHero("Caverns of Chaincolt", 0)
-
-	-- Shinsplitters
-	CreateProvinceUnits("Southern Tunnels", 1, 2, false, true)
-	CreateProvinceCustomHero("Southern Tunnels", 1)
-	if (GetNumUnitsAt(GetFactionPlayer("Shinsplitter Clan"), "unit-dwarven-thane", {0, 0}, {256, 256}) < 1 and GetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane") >= 1) then
-		unit = CreateUnit("unit-dwarven-thane", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-		SetUnitVariable(unit, "Active", false)
-		ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane", -1)
-	end
-
-	-- abandoned dwarven buildings
-	local abandoned_building_player = 3
-	if (GrandStrategyFaction.Name ~= "Shinsplitter Clan") then
-		unit = CreateUnit("unit-dwarven-guard-tower", abandoned_building_player, {20, 12}) -- add some rescuable dwarven guard towers to buy some time from the attackers, so that Rugnur and his companions can reach the forge
-		if (unit) then
-			unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
-		end
-		unit = CreateUnit("unit-dwarven-guard-tower", abandoned_building_player, {22, 17})
-		if (unit) then
-			unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
-		end
-		unit = CreateUnit("unit-dwarven-guard-tower", abandoned_building_player, {24, 13})
-		if (unit) then
-			unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
-		end
-		unit = CreateUnit("unit-dwarven-guard-tower", abandoned_building_player, {41, 10}) -- having this tower next to the other one was creating to much of an impediment for later Shinsplitter attacks
-		if (unit) then
-			unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
-		end
-		unit = CreateUnit("unit-dwarven-guard-tower", abandoned_building_player, {41, 14})
-		if (unit) then
-			unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
-		end
-		unit = CreateUnit("unit-dwarven-guard-tower", abandoned_building_player, {37, 26})
-		if (unit) then
-			unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
-		end
-		unit = CreateUnit("unit-dwarven-guard-tower", abandoned_building_player, {32, 34})
-		if (unit) then
-			unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
-		end
-		unit = CreateUnit("unit-dwarven-guard-tower", abandoned_building_player, {31, 36})
-		if (unit) then
-			unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
-		end
-		unit = CreateUnit("unit-dwarven-guard-tower", abandoned_building_player, {43, 37})
-		if (unit) then
-			unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
-		end
-		unit = CreateUnit("unit-dwarven-guard-tower", abandoned_building_player, {57, 34})
-		if (unit) then
-			unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
-		end
-		unit = CreateUnit("unit-dwarven-guard-tower", abandoned_building_player, {41, 47})
-		if (unit) then
-			unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
-		end
-		unit = CreateUnit("unit-dwarven-guard-tower", abandoned_building_player, {41, 49})
-		if (unit) then
-			unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
-		end
-		unit = CreateUnit("unit-dwarven-guard-tower", abandoned_building_player, {37, 50})
-		if (unit) then
-			unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
-		end
-	else
-		abandoned_building_player = 0
-	end
-	
-	unit = CreateUnit("unit-brising-smithy", abandoned_building_player, {31, 49})
-
-	SetDiplomacy(0, "enemy", 1)
-	SetDiplomacy(0, "enemy", 2)
-	SetDiplomacy(1, "enemy", 0)
-	SetDiplomacy(1, "enemy", 2)
-	SetDiplomacy(2, "enemy", 0)
-	SetDiplomacy(2, "enemy", 1)
-
-	if (GrandStrategyFaction.Name == "Shinsplitter Clan") then
-		SetDiplomacy(0, "neutral", 2)
-		SetDiplomacy(2, "neutral", 0)
-	end
-
-	unit = CreateUnit("unit-wyrm", 2, {26, 31}) -- moved Svafnir here, so that he is accessible
-	SetUnitVariable(unit, "Name", "Svafnir")
 	SetUnitVariable(unit, "Active", false)
 end
+
+-- two extra mercenaries for brutal difficulty
+if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+	unit = CreateUnit("unit-surghan-mercenary-steelclad", 1, {4, 28})
+	SetUnitVariable(unit, "Active", false)
+end
+
+unit = CreateUnit("unit-surghan-mercenary-thane", 1, {4, 28})
+SetUnitVariable(unit, "Active", false)
+unit = CreateUnit("unit-surghan-mercenary-thane", 1, {4, 28})
+SetUnitVariable(unit, "Active", false)
+unit = CreateUnit("unit-surghan-mercenary-thane", 1, {4, 28})
+SetUnitVariable(unit, "Active", false)
+unit = CreateUnit("unit-dwarven-explorer", 1, {4, 28})
+SetUnitVariable(unit, "Active", false)
+unit = CreateUnit("unit-dwarven-explorer", 1, {4, 28})
+SetUnitVariable(unit, "Active", false)
+
+-- abandoned dwarven buildings
+unit = CreateUnit("unit-brising-smithy", 3, {31, 49})
+
+unit = CreateUnit("unit-dwarven-guard-tower", 3, {20, 12}) -- add some rescuable dwarven guard towers to buy some time from the attackers, so that Rugnur and his companions can reach the forge
+if (unit) then
+	unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+end
+unit = CreateUnit("unit-dwarven-guard-tower", 3, {22, 17})
+if (unit) then
+	unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+end
+unit = CreateUnit("unit-dwarven-guard-tower", 3, {24, 13})
+if (unit) then
+	unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+end
+unit = CreateUnit("unit-dwarven-guard-tower", 3, {41, 10}) -- having this tower next to the other one was creating to much of an impediment for later Shinsplitter attacks
+if (unit) then
+	unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+end
+unit = CreateUnit("unit-dwarven-guard-tower", 3, {41, 14})
+if (unit) then
+	unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+end
+unit = CreateUnit("unit-dwarven-guard-tower", 3, {37, 26})
+if (unit) then
+	unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+end
+unit = CreateUnit("unit-dwarven-guard-tower", 3, {32, 34})
+if (unit) then
+	unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+end
+unit = CreateUnit("unit-dwarven-guard-tower", 3, {31, 36})
+if (unit) then
+	unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+end
+unit = CreateUnit("unit-dwarven-guard-tower", 3, {43, 37})
+if (unit) then
+	unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+end
+unit = CreateUnit("unit-dwarven-guard-tower", 3, {57, 34})
+if (unit) then
+	unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+end
+unit = CreateUnit("unit-dwarven-guard-tower", 3, {41, 47})
+if (unit) then
+	unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+end
+unit = CreateUnit("unit-dwarven-guard-tower", 3, {41, 49})
+if (unit) then
+	unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+end
+unit = CreateUnit("unit-dwarven-guard-tower", 3, {37, 50})
+if (unit) then
+	unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+end
+	
+SetDiplomacy(0, "enemy", 1)
+SetDiplomacy(0, "enemy", 2)
+SetDiplomacy(1, "enemy", 0)
+SetDiplomacy(1, "enemy", 2)
+SetDiplomacy(2, "enemy", 0)
+SetDiplomacy(2, "enemy", 1)
+
+-- unit = CreateUnit("unit-wyrm", 2, {8, 34}) -- Khrakrahs / Svafnir
+unit = CreateUnit("unit-wyrm", 2, {26, 31}) -- moved Svafnir here, so that he is accessible
+SetUnitVariable(unit, "Name", "Svafnir")
+SetUnitVariable(unit, "Active", false)
 
 if (LoadedGame == false) then
 	CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)

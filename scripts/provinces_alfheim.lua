@@ -27,22 +27,16 @@
 
 DefineProvince("Aethenwood", { -- from Wesnoth
 	World = "alfheim",
-	Tiles = {},
 	CulturalNames = {
 		"elf", "Aethenwood"
-	},
-	Map = "maps/random/random-map-fairlimbed-forest.smp",
-	SettlementTerrain = "Conifer Forest"
+	}
 })
 
 DefineProvince("Annwn", {
 	World = "alfheim",
-	Tiles = {},
 	CulturalNames = {
 		"elf", "Annwn"
 	},
-	Map = "maps/random/random-map-fairlimbed-forest.smp",
-	SettlementTerrain = "Plains",
 	Claims = {
 		"elf", "annwn"
 	}
@@ -50,12 +44,9 @@ DefineProvince("Annwn", {
 
 DefineProvince("Lintanir", { -- from Wesnoth
 	World = "alfheim",
-	Tiles = {},
 	CulturalNames = {
 		"elf", "Lintanir"
 	},
-	Map = "maps/random/random-map-fairlimbed-forest.smp",
-	SettlementTerrain = "Conifer Forest",
 	Claims = {
 		"elf", "lintanir"
 	}
@@ -63,12 +54,9 @@ DefineProvince("Lintanir", { -- from Wesnoth
 
 DefineProvince("Ulfdalir", {
 	World = "alfheim",
-	Tiles = {},
 	CulturalNames = {
 		"elf", "Ulfdalir"
 	},
-	Map = "maps/random/random-map-fairlimbed-forest.smp",
-	SettlementTerrain = "Plains",
 	Claims = {
 		"elf", "ulfdalir"
 	}
@@ -76,12 +64,9 @@ DefineProvince("Ulfdalir", {
 
 DefineProvince("Wesmere", { -- from Wesnoth
 	World = "alfheim",
-	Tiles = {},
 	CulturalNames = {
 		"elf", "Wesmere"
 	},
-	Map = "maps/random/random-map-fairlimbed-forest.smp",
-	SettlementTerrain = "Conifer Forest",
 	Claims = {
 		"elf", "wesmere"
 	}

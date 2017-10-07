@@ -1790,8 +1790,6 @@ local defaultPreferences = {
 	NoTimeOfDay = false,
 	AutomaticBattles = false,
 	Difficulty = 2,
-	GrandStrategyBattalionMultiplier = 1,
-	GrandStrategyBattleBaseBuilding = false,
 	TipsShown = {},
 	LastVersionPlayed = "0.0.0",
 	EnabledMods = {},
@@ -1886,8 +1884,5 @@ Load("scripts/events.lua")
 Load("scripts/achievements.lua")
 Load("scripts/texts.lua")
 Load("scripts/ui.lua")
-Load("scripts/grand_strategy/grand_strategy_factions.lua")
-Load("scripts/grand_strategy/grand_strategy_provinces.lua")
-Load("scripts/grand_strategy/grand_strategy_events.lua")
 
 DebugPrint("... ready!\n")

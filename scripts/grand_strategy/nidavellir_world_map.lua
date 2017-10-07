@@ -1,12 +1,4 @@
 
-SetWorldMapSize(64, 48)
-
-local dark_plains_id = GetWorldMapTerrainTypeId("Dark Plains")
-local water_id = GetWorldMapTerrainTypeId("Water")
-local hills_id = GetWorldMapTerrainTypeId("Hills")
-local mountains_id = GetWorldMapTerrainTypeId("Mountains")
-local scrub_forest_id = GetWorldMapTerrainTypeId("Scrub Forest")
-
 SetWorldMapTileTerrain(12, 3, dark_plains_id)
 SetWorldMapTileTerrain(12, 4, dark_plains_id)
 SetWorldMapTileTerrain(13, 2, dark_plains_id)

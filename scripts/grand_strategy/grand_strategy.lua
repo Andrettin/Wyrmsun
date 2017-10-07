@@ -33,22 +33,13 @@ EventFaction = nil
 EventProvince = nil
 SecondEventProvince = nil
 GrandStrategyWorld = ""
-BattalionMultiplier = wyr.preferences.GrandStrategyBattalionMultiplier
-GrandStrategyBattleBaseBuilding = wyr.preferences.GrandStrategyBattleBaseBuilding
-GrandStrategyMapWidthIndent = 0
-GrandStrategyMapHeightIndent = 0
 PopulationGrowthThreshold = 2000
 MonthsPerTurn = 12
 
 function RunGrandStrategyGameSetupMenu()
-	GrandStrategyMapWidth = Video.Width + 64
-	GrandStrategyMapHeight = Video.Height - 16 - 186
-	WorldMapOffsetX = 0
-	WorldMapOffsetY = 0
 	GrandStrategyYear = 0
 	GrandStrategyMonth = 0
 	GrandStrategyFaction = nil
-	SelectedHero = ""
 	Attacker = ""
 	Defender = ""
 	GrandStrategyEventMap = false
@@ -57,10 +48,6 @@ function RunGrandStrategyGameSetupMenu()
 	EventProvince = nil
 	SecondEventProvince = nil
 	GrandStrategyWorld = ""
-	BattalionMultiplier = wyr.preferences.GrandStrategyBattalionMultiplier
-	GrandStrategyBattleBaseBuilding = wyr.preferences.GrandStrategyBattleBaseBuilding
-	GrandStrategyMapWidthIndent = 0
-	GrandStrategyMapHeightIndent = 0
 	ProcessingEndTurn = false
 
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
@@ -151,17 +138,6 @@ function RunGrandStrategyGameSetupMenu()
 		function(dd) FactionChanged(); end)
 	faction:setSize(152, 20)
 
-	menu:addLabel(_("Tactical Unit Multiplier:"), offx + 40, offy + (10 + 180) - 20, Fonts["game"], false)
-	battalions = menu:addDropDown({"1x", "2x", "3x", "4x", "5x"}, offx + 40, offy + 10 + 180,
-		function(dd)
-			wyr.preferences.GrandStrategyBattalionMultiplier = battalions:getSelected() + 1
-			SavePreferences()
-			BattalionMultiplier = wyr.preferences.GrandStrategyBattalionMultiplier
-		end)
-	battalions:setSize(152, 20)
-	battalions:setSelected(wyr.preferences.GrandStrategyBattalionMultiplier - 1)
-	battalions:setTooltip(_("Multiplier for the quantity of units in battle (relative to the quantity of strategic map units)"))
-
 	menu:addLabel(_("Custom Hero:"), offx + 220, offy + (10 + 180) - 20, Fonts["game"], false)
 	hero_dd = menu:addDropDown(hero_list, offx + 220, offy + 10 + 180,
 		function(dd)
@@ -170,42 +146,6 @@ function RunGrandStrategyGameSetupMenu()
 	)
 	hero_dd:setSize(152, 20)
 	
-	automatic_battles = menu:addImageCheckBox(_("Automatic Battles"), offx + 640 - 224 - 16, offy + 10 + 180 + 3,
-		function()
-			wyr.preferences.AutomaticBattles = automatic_battles:isMarked()
-			SavePreferences()
-			battle_base_building:setVisible(wyr.preferences.AutomaticBattles == false)
-		end
-	)
-	automatic_battles:setMarked(wyr.preferences.AutomaticBattles)
-  
-	battle_base_building = menu:addImageCheckBox(_("Battle Base Building"), offx + 640 - 224 - 16, offy + 10 + 220 + 3,
-		function()
-			wyr.preferences.GrandStrategyBattleBaseBuilding = battle_base_building:isMarked()
-			SavePreferences()
-			GrandStrategyBattleBaseBuilding = wyr.preferences.GrandStrategyBattleBaseBuilding
-		end
-	)
-	battle_base_building:setMarked(wyr.preferences.GrandStrategyBattleBaseBuilding)
-	battle_base_building:setVisible(wyr.preferences.AutomaticBattles == false)
-  
-	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 40, offy + 10 + 220 + 3,
-		function()
-			wyr.preferences.NoRandomness = no_randomness:isMarked()
-			SavePreferences()
-		end
-	)
-	no_randomness:setMarked(wyr.preferences.NoRandomness)
-  
-	no_time_of_day = menu:addImageCheckBox(_("No Day/Night Cycle"), offx + 220, offy + 10 + 220 + 3,
-		function()
-			wyr.preferences.NoTimeOfDay = no_time_of_day:isMarked()
-			SavePreferences()
-		end
-	)
-	no_time_of_day:setMarked(wyr.preferences.NoTimeOfDay)
-  
-
 	local date_label = Label(_("Date: ") .. GetYearString(GrandStrategyYear))
 	date_label:setFont(CFont:Get("game"))
 	date_label:adjustSize();
@@ -233,8 +173,6 @@ function RunGrandStrategyGameSetupMenu()
 
 	function DateChanged(ignore_mouse_state)
 		if (IsMouseLeftButtonPressed() == false or ignore_mouse_state) then
-			CleanGrandStrategyGame()
-			
 			local old_world = GrandStrategyWorld
 			SetGrandStrategyWorld(world_list[world:getSelected() + 1])
 			InitializeGrandStrategyGame(false)
@@ -435,18 +373,6 @@ function GetFactionProvinceCountPreGame(faction)
 	return province_count
 end
 
-function GetFactionUnitTypeCount(faction, unit_type, include_under_construction)
-	local unit_count = 0
-	for province_i, key in ipairs(faction.OwnedProvinces) do
-		unit_count = unit_count + GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unit_type)
-		if (include_under_construction) then
-			unit_count = unit_count + GetProvinceUnderConstructionUnitQuantity(WorldMapProvinces[key].Name, unit_type)
-			unit_count = unit_count + GetProvinceMovingUnitQuantity(WorldMapProvinces[key].Name, unit_type)
-		end
-	end
-	return unit_count
-end
-
 function FactionHasTechnologyType(faction, technology_type)
 	for i, unitName in ipairs(Units) do
 		if (string.find(unitName, "upgrade-") ~= nil) then
@@ -551,35 +477,7 @@ function FactionHasCulture(faction, civilization)
 end
 
 function AIDoTurn(ai_faction)
-	
 	AIConsiderOffers(ai_faction)
-
-	-- conduct attacks and build military units
-	local base_military_score = 740 -- 8 infantry, 4 shooters and 1 siege engine
-	if (FactionHasTechnologyType(ai_faction, "melee-weapon-1")) then
-		base_military_score = base_military_score + 80
-	end
-	if (FactionHasTechnologyType(ai_faction, "melee-weapon-2")) then
-		base_military_score = base_military_score + 80
-	end
-	if (FactionHasTechnologyType(ai_faction, "bronze-shield")) then
-		base_military_score = base_military_score + 80
-	end
-	if (FactionHasTechnologyType(ai_faction, "iron-shield")) then
-		base_military_score = base_military_score + 80
-	end
-	if (FactionHasTechnologyType(ai_faction, "ranged-projectile-1")) then
-		base_military_score = base_military_score + 40
-	end
-	if (FactionHasTechnologyType(ai_faction, "ranged-projectile-2")) then
-		base_military_score = base_military_score + 40
-	end
-	if (FactionHasTechnologyType(ai_faction, "siege-projectile-1")) then
-		base_military_score = base_military_score + 10
-	end
-	if (FactionHasTechnologyType(ai_faction, "siege-projectile-2")) then
-		base_military_score = base_military_score + 10
-	end
 end
 
 function AIDoDiplomacy(ai_faction)
@@ -1029,23 +927,6 @@ function DoEvents()
 				EventFaction = nil
 				EventProvince = nil
 				SecondEventProvince = nil
-			end
-		end
-	end
-end
-
-function EqualizeProvinceUnits(faction)
-	for i, unitName in ipairs(Units) do
-		if (IsMilitaryUnit(unitName)) then
-			local unit_count = GetFactionUnitTypeCount(faction, unitName, false)
-			if (unit_count > 0) then
-				for province_i, province_key in ipairs(faction.OwnedProvinces) do
-					SetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName, math.floor(unit_count / GetFactionProvinceCount(faction)))
-				end
-			end
-			local new_unit_count = GetFactionUnitTypeCount(faction, unitName, false)
-			if (unit_count > new_unit_count) then -- if the total unit count is smaller after the redistribution of units, add the missing units to the oldest province
-				SetProvinceUnitQuantity(WorldMapProvinces[faction.OwnedProvinces[1]].Name, unitName, GetProvinceUnitQuantity(WorldMapProvinces[faction.OwnedProvinces[1]].Name, unitName) + (unit_count - new_unit_count))
 			end
 		end
 	end
