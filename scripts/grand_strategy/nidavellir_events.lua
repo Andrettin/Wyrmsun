@@ -711,26 +711,6 @@ local NidavellirEvents = {
 		end,
 		Persistent = true,
 		Options = {"~!Root them out", "~!Better let them be"},
-		OptionConditions = {
-			function(s)
-				for i, unitName in ipairs(Units) do
-					if (IsOffensiveMilitaryUnit(unitName)) then
-						if (GetProvinceUnitQuantity(EventProvince.Name, unitName) > 0) then
-							return true
-						end
-					end
-				end
-				local grand_strategy_heroes = GetGrandStrategyHeroes()
-				for i = 1, table.getn(grand_strategy_heroes) do
-					if (GetProvinceHero(EventProvince.Name, grand_strategy_heroes[i]) == 2) then
-						return true
-					end
-				end
-			end,
-			function(s)
-				return true
-			end
-		},
 		OptionEffects = {
 			function(s)
 				if (EventFaction.Name == GrandStrategyFaction.Name and wyr.preferences.AutomaticBattles == false) then
@@ -757,13 +737,6 @@ local NidavellirEvents = {
 						end
 						ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "copper", -500)
 						ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", -1)
-						for i, unitName in ipairs(Units) do
-							if (IsOffensiveMilitaryUnit(unitName)) then
-								if (GetProvinceUnitQuantity(EventProvince.Name, unitName) > 0) then
-									SetProvinceUnitQuantity(EventProvince.Name, unitName, 0)
-								end
-							end
-						end
 					end
 				end
 			end,

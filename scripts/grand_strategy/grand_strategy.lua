@@ -28,7 +28,6 @@
 Attacker = ""
 Defender = ""
 GrandStrategyEventMap = false
-GrandStrategyBattle = false
 EventFaction = nil
 EventProvince = nil
 SecondEventProvince = nil
@@ -43,7 +42,6 @@ function RunGrandStrategyGameSetupMenu()
 	Attacker = ""
 	Defender = ""
 	GrandStrategyEventMap = false
-	GrandStrategyBattle = false
 	EventFaction = nil
 	EventProvince = nil
 	SecondEventProvince = nil
@@ -80,26 +78,6 @@ function RunGrandStrategyGameSetupMenu()
 	local no_randomness
 	local no_time_of_day
 
-	local function FactionChanged()
-		hero_list = nil
-		hero_list = {}
-		local custom_heroes = GetCustomHeroes()
-		for i=1,table.getn(custom_heroes) do
-			if (
-				GetCustomHeroData(custom_heroes[i], "Civilization") == faction_civilization_list[faction:getSelected() + 1]
-				or GetCivilizationData(GetCustomHeroData(custom_heroes[i], "Civilization"), "ParentCivilization") == faction_civilization_list[faction:getSelected() + 1]
-				or GetCustomHeroData(custom_heroes[i], "Civilization") == GetCivilizationData(faction_civilization_list[faction:getSelected() + 1], "ParentCivilization")
-			) then
-				table.insert(hero_list, custom_heroes[i])
-			end
-		end
-		table.sort(hero_list)
-		table.insert(hero_list, "") -- to allow players to choose having no custom hero selected
-		hero_dd:setList(hero_list)
-		hero_dd:setSize(152, 20)
-		hero_dd:setSelected(table.getn(hero_list) - 1)
-	end
-	
 	menu:addLabel(_("~<Grand Strategy Game Setup~>"), offx + 640/2 + 12, offy + 72)
 
 	menu:addFullButton(_("~!Start Game"), "s", offx + 208, offy + 212 + (36 * 4),
@@ -109,7 +87,6 @@ function RunGrandStrategyGameSetupMenu()
 	menu:addFullButton(_("~!Cancel Game"), "c", offx + 208, offy + 212 + (36 * 6),
 		function()
 			menu:stop();
-			SetCurrentCustomHero("")
 			SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 		end)
 
@@ -135,17 +112,9 @@ function RunGrandStrategyGameSetupMenu()
 	
 	menu:addLabel(_("Faction:"), offx + 640 - 224 - 16, offy + (10 + 120) - 20, Fonts["game"], false)
 	faction = menu:addDropDown(faction_name_list, offx + 640 - 224 - 16, offy + 10 + 120,
-		function(dd) FactionChanged(); end)
+		function(dd) end)
 	faction:setSize(152, 20)
 
-	menu:addLabel(_("Custom Hero:"), offx + 220, offy + (10 + 180) - 20, Fonts["game"], false)
-	hero_dd = menu:addDropDown(hero_list, offx + 220, offy + 10 + 180,
-		function(dd)
-			SetCurrentCustomHero(hero_list[hero_dd:getSelected() + 1])
-		end
-	)
-	hero_dd:setSize(152, 20)
-	
 	local date_label = Label(_("Date: ") .. GetYearString(GrandStrategyYear))
 	date_label:setFont(CFont:Get("game"))
 	date_label:adjustSize();
@@ -240,7 +209,6 @@ function RunGrandStrategyGameSetupMenu()
 			faction:setList(faction_name_list)
 			faction:setSize(152, 20)
 			faction:setSelected(0)
-			FactionChanged()
 			
 			bookmark:setList(bookmark_list)
 			bookmark:setSize(152, 20)
@@ -285,8 +253,6 @@ function EndTurn()
 			GrandStrategyYear = GrandStrategyYear + 1;
 		end
 	end
-
-	DoEvents()
 
 	-- AI diplomacy
 	for key, value in pairs(Factions) do
@@ -692,18 +658,6 @@ function CanTriggerEvent(faction, event)
 		return false
 	end
 	
-	if (event.Provinces ~= nil and event.SettlementBuildings ~= nil) then
-		for key, value in pairs(event.Provinces) do
-			for i, unitName in ipairs(Units) do
-				if (IsGrandStrategyBuilding(unitName)) then
-					if (event.SettlementBuildings[string.gsub(unitName, "-", "_")] ~= nil and event.Provinces[key] == true and GetProvinceOwner(WorldMapProvinces[key].Name) == faction.Name and GetProvinceSettlementBuilding(WorldMapProvinces[key].Name, unitName) ~= event.SettlementBuildings[string.gsub(unitName, "-", "_")]) then
-						return false
-					end
-				end
-			end
-		end
-	end
-
 	if (event.Provinces ~= nil and event.Units ~= nil) then
 		for key, value in pairs(event.Provinces) do
 			for i, unitName in ipairs(Units) do
@@ -902,47 +856,6 @@ function GrandStrategyEvent(faction, event)
 	end
 end
 
-function DoEvents()
-	-- process events
-	for key, value in pairs(Factions) do
-		if (GetFactionProvinceCount(Factions[key]) > 0) then
-			for event_key, event_value in pairs(GrandStrategyEvents) do
-				EventFaction = Factions[key]
-				if (CanTriggerEvent(Factions[key], GrandStrategyEvents[event_key])) then
-					GrandStrategyEvent(Factions[key], GrandStrategyEvents[event_key])
-				end
-				EventFaction = nil
-				EventProvince = nil
-				SecondEventProvince = nil
-			end
-		end
-	end
-end
-
-function IsGrandStrategyBuilding(unit_type)
-	if (string.find(unit_type, "upgrade-") == nil and GetUnitTypeData(unit_type, "Building") and GetUnitTypeData(unit_type, "Class") ~= "farm" and GetUnitTypeData(unit_type, "Class") ~= "watch-tower" and GetUnitTypeData(unit_type, "Class") ~= "guard-tower" and GetUnitTypeData(unit_type, "Class") ~= "") then
-		return true
-	else
-		return false
-	end
-end
-
-function IsOffensiveMilitaryUnit(unit_type)
-	if (IsMilitaryUnit(unit_type) and GetUnitTypeData(unit_type, "Class") ~= "militia") then
-		return true
-	else
-		return false
-	end
-end
-
-function IsMilitaryUnit(unit_type)
-	if (string.find(unit_type, "upgrade-") == nil and GetUnitTypeData(unit_type, "Building") == false and GetUnitTypeData(unit_type, "Demand") > 0 and GetUnitTypeData(unit_type, "Class") ~= "worker" and GetUnitTypeData(unit_type, "Class") ~= "caravan") then
-		return true
-	else
-		return false
-	end
-end
-
 function CanDeclareWar(faction_from, faction_to)
 	if (FactionHasBorderWith(faction_from, faction_to) == false and (FactionHasCoast(faction_from) and FactionHasCoast(faction_to)) == false) then
 		return false
@@ -951,18 +864,6 @@ function CanDeclareWar(faction_from, faction_to)
 		return false
 	end
 	return true
-end
-
-function GetTerrainName(terrain)
-	return terrain
-end
-
-function ChangeProvinceOwner(province, faction) -- used to change the owner and pass the information to the engine
-	if (faction ~= nil) then
-		SetProvinceOwner(province.Name, faction.Civilization, faction.Name)
-	else
-		SetProvinceOwner(province.Name, "", "")
-	end
 end
 
 function GetYearString(year, civilization)

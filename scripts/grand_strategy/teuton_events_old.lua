@@ -93,13 +93,6 @@ local TeutonEvents = {
 					end
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "suebi-tribe" or wyr.preferences.AutomaticBattles)) then
 					AcquireProvince(WorldMapProvinces.Alsace, "suebi-tribe")
-					for i, unitName in ipairs(Units) do
-						if (IsOffensiveMilitaryUnit(unitName)) then
-							SetProvinceUnitQuantity("Burgundy", unitName, math.floor(GetProvinceUnitQuantity("Brandenburg", unitName) * 3 / 4)) -- to give them something of a defense
-							SetProvinceUnitQuantity("Alsace", unitName, GetProvinceUnitQuantity("Brandenburg", unitName))
-							SetProvinceUnitQuantity("Brandenburg", unitName, 0)
-						end
-					end
 					if (GrandStrategyFaction.Name ~= "suebi-tribe") then
 						SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 4) -- to give them something of a defense
 					end
@@ -130,12 +123,6 @@ local TeutonEvents = {
 		OptionEffects = {
 			function(s)
 				AcquireProvince(WorldMapProvinces.Bohemia, "marcomanni-tribe")
-				for i, unitName in ipairs(Units) do
-					if (IsOffensiveMilitaryUnit(unitName)) then
-						SetProvinceUnitQuantity("Bohemia", unitName, math.floor(GetProvinceUnitQuantity("Brandenburg", unitName) / 2))
-						SetProvinceUnitQuantity("Brandenburg", unitName, math.floor(GetProvinceUnitQuantity("Brandenburg", unitName) / 2))
-					end
-				end
 				SetProvinceHero("Bohemia", "Marbod", 2)
 				AcquireFactionTechnologies(Factions.suebi_tribe.Civilization, Factions.suebi_tribe.Name, Factions.marcomanni_tribe.Civilization, "marcomanni-tribe")
 				SetProvinceCivilization("Bohemia", "teuton")
@@ -155,12 +142,6 @@ local TeutonEvents = {
 					end
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "suebi-tribe" or wyr.preferences.AutomaticBattles)) then
 					AcquireProvince(WorldMapProvinces.Bohemia, "marcomanni-tribe")
-					for i, unitName in ipairs(Units) do
-						if (IsOffensiveMilitaryUnit(unitName)) then
-							SetProvinceUnitQuantity("Bohemia", unitName, math.floor(GetProvinceUnitQuantity("Brandenburg", unitName) / 2))
-							SetProvinceUnitQuantity("Brandenburg", unitName, math.floor(GetProvinceUnitQuantity("Brandenburg", unitName) / 2))
-						end
-					end
 					SetProvinceHero("Bohemia", "Marbod", 2)
 					SetProvinceCivilization("Bohemia", "teuton")
 					AcquireFactionTechnologies(Factions.suebi_tribe.Civilization, Factions.suebi_tribe.Name, Factions.marcomanni_tribe.Civilization, "marcomanni-tribe")
@@ -229,13 +210,6 @@ local TeutonEvents = {
 					end
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "marcomanni-tribe" or wyr.preferences.AutomaticBattles)) then
 					AcquireProvince(WorldMapProvinces.Salzburg, "marcomanni-tribe")
-					for i, unitName in ipairs(Units) do
-						if (IsOffensiveMilitaryUnit(unitName)) then
-							SetProvinceUnitQuantity("Salzburg", unitName, GetProvinceUnitQuantity("Bohemia", unitName))
-							SetProvinceUnitQuantity("Bohemia", unitName, 0)
-						end
-					end
-					
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						GenericDialog("The Sack of Iuvavum", "All that was of worth in Iuvavum has been pillaged...")
 					end
@@ -277,12 +251,6 @@ local TeutonEvents = {
 					end
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "marcomanni-tribe" or wyr.preferences.AutomaticBattles)) then
 					AcquireProvince(WorldMapProvinces.Venetia, "marcomanni-tribe")
-					for i, unitName in ipairs(Units) do
-						if (IsOffensiveMilitaryUnit(unitName)) then
-							SetProvinceUnitQuantity("Venetia", unitName, GetProvinceUnitQuantity("Carinthia", unitName))
-							SetProvinceUnitQuantity("Carinthia", unitName, 0)
-						end
-					end
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						GenericDialog("The Razing of Opitergium", "Opitergium became naught but ashes.")
 					end

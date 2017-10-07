@@ -61,7 +61,7 @@ function RunEncyclopediaMenu()
 		function() RunEncyclopediaFactionsCivilizationMenu() end)
 
 	menu:addFullButton(_("~!Game Concepts"), "g", offx + 208 + (113 * -1), offy + 104 + 36*3,
-		function() RunEncyclopediaGameConceptsMenu(false) end)
+		function() RunEncyclopediaGameConceptsMenu() end)
 
 	menu:addFullButton(_("~!Heroes"), "h", offx + 208 + (113 * -1), offy + 104 + 36*4,
 		function() RunEncyclopediaUnitsMenu("heroes") end)
@@ -1662,7 +1662,7 @@ function OpenEncyclopediaWorldEntry(world)
 	encyclopedia_entry_menu:run()
 end
 
-function RunEncyclopediaGameConceptsMenu(grand_strategy)
+function RunEncyclopediaGameConceptsMenu()
 
 	if (RunningScenario == false) then
 		if not (IsMusicPlaying()) then
@@ -1699,7 +1699,7 @@ function RunEncyclopediaGameConceptsMenu(grand_strategy)
 			game_concept_hotkey = string.lower(game_concept_hotkey)
 		end
 		menu:addFullButton(_(game_concepts[game_concept_key].Name), game_concept_hotkey, offx + 208 + (113 * game_concept_x), offy + 104 + (36 * (game_concept_y + height_offset)),
-			function() OpenEncyclopediaGameConceptEntry(game_concept_key, grand_strategy); end)
+			function() OpenEncyclopediaGameConceptEntry(game_concept_key); end)
 
 		if (game_concept_y > 5) then
 			game_concept_x = game_concept_x + 2
@@ -1716,7 +1716,7 @@ function RunEncyclopediaGameConceptsMenu(grand_strategy)
 	menu:run()
 end
 
-function OpenEncyclopediaGameConceptEntry(game_concept_key, grand_strategy)
+function OpenEncyclopediaGameConceptEntry(game_concept_key)
 	if (RunningScenario == false) then
 		if not (IsMusicPlaying()) then
 			PlayMusicName("MenuTheme")
