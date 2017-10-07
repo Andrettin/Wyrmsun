@@ -26,114 +26,114 @@
 --
 
 DefineUpgrade("upgrade-axe-mastery", {
-	Name = _("Axe Mastery"),
+	Name = "Axe Mastery",
 	Icon = "icon-axe-mastery",
 	Ability = true,
 	WeaponClasses = {"axe"}
 })
 
 DefineUpgrade("upgrade-critical-strike", {
-	Name = _("Critical Strike"),
+	Name = "Critical Strike",
 	Icon = "icon-critical-strike",
 	Ability = true
 })
 
 DefineUpgrade("upgrade-deadly-precision", {
-	Name = _("Deadly Precision"),
+	Name = "Deadly Precision",
 	Icon = "icon-deadly-precision",
 	RequiredAbilities = {"upgrade-critical-strike"},
 	Ability = true
 })
 
 DefineUpgrade("upgrade-eagle-eye", {
-	Name = _("Eagle Eye"),
+	Name = "Eagle Eye",
 	Icon = "icon-eagle-eye",
 	Ability = true
 })
 
 DefineUpgrade("upgrade-ethereal-vision", {
-	Name = _("Ethereal Vision"),
+	Name = "Ethereal Vision",
 	Icon = "icon-ethereal-vision",
 	Ability = true
 })
 
 DefineUpgrade("upgrade-healing", {
-	Name = _("Healing"),
+	Name = "Healing",
 	Icon = "icon-healing",
 	Ability = true
 })
 
 DefineUpgrade("upgrade-inspire", {
-	Name = _("Inspire"),
+	Name = "Inspire",
 	Icon = "icon-inspire",
 	Ability = true
 })
 
 DefineUpgrade("upgrade-leadership", {
-	Name = _("Leadership"),
+	Name = "Leadership",
 	Icon = "icon-leadership",
 	Ability = true
 })
 
 DefineUpgrade("upgrade-mace-mastery", {
-	Name = _("Mace Mastery"),
+	Name = "Mace Mastery",
 	Icon = "icon-mace-mastery",
 	Ability = true,
 	WeaponClasses = {"mace"}
 })
 
 DefineUpgrade("upgrade-portent", {
-	Name = _("Portent"),
+	Name = "Portent",
 	Icon = "icon-portent",
 	Ability = true
 })
 
 DefineUpgrade("upgrade-precise-shot", {
-	Name = _("Precise Shot"),
+	Name = "Precise Shot",
 	Icon = "icon-precise-shot",
 	Ability = true
 })
 
 DefineUpgrade("upgrade-precision", {
-	Name = _("Precision"),
+	Name = "Precision",
 	Icon = "icon-precision",
 	Ability = true
 })
 
 DefineUpgrade("upgrade-puncture", {
-	Name = _("Puncture"),
+	Name = "Puncture",
 	Icon = "icon-puncture",
 	Ability = true
 })
 
 DefineUpgrade("upgrade-scouting", {
-	Name = _("Scouting"),
+	Name = "Scouting",
 	Icon = "icon-scouting",
 	Ability = true
 })
 
 DefineUpgrade("upgrade-spear-mastery", {
-	Name = _("spear Mastery"),
+	Name = "Spear Mastery",
 	Icon = "icon-spear-mastery",
 	Ability = true,
 	WeaponClasses = {"spear"}
 })
 
 DefineUpgrade("upgrade-stun", {
-	Name = _("Stun"),
+	Name = "Stun",
 	Icon = "icon-stun",
 	Ability = true
 })
 
 DefineUpgrade("upgrade-sword-mastery", {
-	Name = _("Sword Mastery"),
+	Name = "Sword Mastery",
 	Icon = "icon-sword-mastery",
 	Ability = true,
 	WeaponClasses = {"sword", "thrusting-sword"}
 })
 
 DefineUpgrade("upgrade-terror", {
-	Name = _("Terror"),
+	Name = "Terror",
 	Icon = "icon-terror",
 	Ability = true
 })
