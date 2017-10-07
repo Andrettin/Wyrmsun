@@ -105,9 +105,10 @@ https://github.com/Andrettin/Wyrmsun
 - Renamed Teuton Ritters to Knights and Landesherrs to Knight Lords.
 - Renamed the Teuton Rathaus to Town Hall, and the Burg to Stronghold.
 - Fixed issue which caused caravans and transport ships to not automatically re-engage in trading after returning from a foreign market/dock.
+- Fixed issue which caused the Suebi Kregar to be available to other human civilizations.
 
 * Upgrades
-- Added Gunpowder upgrade (researchable at the Academy/University), which unlocks gunpowder units.
+- Added Gunpowder upgrade (researchable at the Academy/University), which unlocks gunpowder infantry units.
 
 -----------------------------------------------------------------------
 - 2.8.3
