@@ -29,7 +29,7 @@
 
 function RunGameVideoOptionsMenu()
 	local menu = WarGameMenu(panel(1))
-	local resolution_width_list = {"800", "1024", "1280", "1360", "1366", "1400", "1440", "1600", "1680", "1920"}
+	local resolution_width_list = {"800", "1024", "1066", "1280", "1360", "1366", "1400", "1440", "1600", "1680", "1920"}
 	local resolution_width_dd
 	local resolution_height_list = {"600", "720", "768", "800", "864", "900", "960", "1024", "1050", "1080", "1200"}
 	local resolution_height_dd
@@ -617,7 +617,7 @@ function RunVideoOptionsMenu()
 	local checkTexture
 	local checkOpenGL
 	local b
-	local resolution_width_list = {"800", "1024", "1280", "1360", "1366", "1400", "1440", "1600", "1680", "1920"}
+	local resolution_width_list = {"800", "1024", "1066", "1280", "1360", "1366", "1400", "1440", "1600", "1680", "1920"}
 	local resolution_width_dd
 	local resolution_height_list = {"600", "720", "768", "800", "864", "900", "960", "1024", "1050", "1080", "1200"}
 	local resolution_height_dd

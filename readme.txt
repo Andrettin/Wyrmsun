@@ -84,6 +84,8 @@ https://github.com/Andrettin/Wyrmsun
 - The Gothic civilization is now playable.
 - Added buttons in the minimap interface area to change between different map layers in Scenario mode.
 - Fixed a save game crash which could happen if a hero was within a transport or building when the game was saved.
+- Added the option to set the resolution width to 1066.
+- The default resolution is now 1066x600.
 
 * Maps
 - Added Italy map.
