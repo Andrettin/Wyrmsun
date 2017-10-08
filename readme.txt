@@ -67,6 +67,9 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Building construction buttons now display whether the building can store resources, as well as resource processing bonuses.
 
+* Deities
+- When playing an Anglo-Saxon faction, the button for worshipping Wodan/Odin now says "Worship Woden".
+
 * Items
 - Added The Iron Crown of Lombardy unique crown.
 

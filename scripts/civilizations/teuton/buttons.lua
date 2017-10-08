@@ -324,15 +324,21 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-christianity",
   
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-odin",
 	Action = "research", Value = "upgrade-deity-odin",
-	Allowed = "check-single-research",
 	Key = "w", Hint = "Worship ~!Wodan", Popup = "popup-research",
 	Description = "Choose Wodan as your major deity. +2 Damage for Archers, enables Inspire spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Thunor major deity.",
 	ForUnit = {"unit-teuton-temple"}
 })
   
+DefineButton( { Pos = 6, Level = 0, Icon = "icon-odin",
+	Action = "research", Value = "upgrade-deity-odin",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-anglo-saxon-civilization"},
+	Key = "w", Hint = "Worship ~!Woden", Popup = "popup-research",
+	Description = "Choose Woden as your major deity. +2 Damage for Archers, enables Inspire spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Thunor major deity.",
+	ForUnit = {"unit-teuton-temple"}
+})
+  
 DefineButton( { Pos = 7, Level = 0, Icon = "icon-thor",
 	Action = "research", Value = "upgrade-deity-thor",
-	Allowed = "check-single-research",
 	Key = "t", Hint = "Worship ~!Thunor", Popup = "popup-research",
 	Description = "Choose Thunor as your major deity. +2 Damage for sword infantry, enables Precision spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Wodan major deity.",
 	ForUnit = {"unit-teuton-temple"}
