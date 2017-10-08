@@ -1546,6 +1546,378 @@ DefineCivilization("orc", {
 		"dwarf/ui/buttonpanel.png", -256, -200,
 		"dwarf/ui/infopanel.png", 0, -200
 	},
+	PersonalNames = {
+		"male", "Badush", -- from Battle for Wesnoth
+		"male", "Bagar", -- from Battle for Wesnoth
+		"male", "Bagdish", -- from Battle for Wesnoth
+		"male", "Barag", -- from Battle for Wesnoth
+		"male", "Barbag", -- from Battle for Wesnoth
+		"male", "Bart", -- from Battle for Wesnoth
+		"male", "Bashnak", -- from Battle for Wesnoth
+		"male", "Bidish", -- from Battle for Wesnoth
+		"male", "Bidush", -- from Battle for Wesnoth
+		"male", "Bik", -- from Battle for Wesnoth
+		"male", "Bilg", -- from Battle for Wesnoth
+		"male", "Bilo", -- from Battle for Wesnoth
+		"male", "Binak", -- from Battle for Wesnoth
+		"male", "Bink", -- from Battle for Wesnoth
+		"male", "Biol", -- from Battle for Wesnoth
+		"male", "Birt", -- from Battle for Wesnoth
+		"male", "Bogar", -- from Battle for Wesnoth
+		"male", "Bogdish", -- from Battle for Wesnoth
+		"male", "Bogdush", -- from Battle for Wesnoth
+		"male", "Bogor", -- from Battle for Wesnoth
+		"male", "Bok", -- from Battle for Wesnoth
+		"male", "Bolg", -- from Battle for Wesnoth
+		"male", "Bong", -- from Battle for Wesnoth
+		"male", "Borg", -- from Battle for Wesnoth
+		"male", "Bork", -- from Battle for Wesnoth
+		"male", "Bort", -- from Battle for Wesnoth
+		"male", "Boshnak", -- from Battle for Wesnoth
+		"male", "Budush", -- from Battle for Wesnoth
+		"male", "Bugdish", -- from Battle for Wesnoth
+		"male", "Buk", -- from Battle for Wesnoth
+		"male", "Bunak", -- from Battle for Wesnoth
+		"male", "Bung", -- from Battle for Wesnoth
+		"male", "Bunk", -- from Battle for Wesnoth
+		"male", "Burag", -- from Battle for Wesnoth
+		"male", "Burg", -- from Battle for Wesnoth
+		"male", "Burk", -- from Battle for Wesnoth
+		"male", "Buurk", -- from Battle for Wesnoth
+		"male", "Eradash", -- from Battle for Wesnoth
+		"male", "Eradish", -- from Battle for Wesnoth
+		"male", "Eragdish", -- from Battle for Wesnoth
+		"male", "Eragdush", -- from Battle for Wesnoth
+		"male", "Eragor", -- from Battle for Wesnoth
+		"male", "Eranak", -- from Battle for Wesnoth
+		"male", "Erang", -- from Battle for Wesnoth
+		"male", "Erarag", -- from Battle for Wesnoth
+		"male", "Erarg", -- from Battle for Wesnoth
+		"male", "Erart", -- from Battle for Wesnoth
+		"male", "Erigdush", -- from Battle for Wesnoth
+		"male", "Erik", -- from Battle for Wesnoth
+		"male", "Erinak", -- from Battle for Wesnoth
+		"male", "Eriol", -- from Battle for Wesnoth
+		"male", "Erirag", -- from Battle for Wesnoth
+		"male", "Erirbag", -- from Battle for Wesnoth
+		"male", "Erirg", -- from Battle for Wesnoth
+		"male", "Erirt", -- from Battle for Wesnoth
+		"male", "Erishnak", -- from Battle for Wesnoth
+		"male", "Eriurk", -- from Battle for Wesnoth
+		"male", "Erogdish", -- from Battle for Wesnoth
+		"male", "Erogdush", -- from Battle for Wesnoth
+		"male", "Erok", -- from Battle for Wesnoth
+		"male", "Erong", -- from Battle for Wesnoth
+		"male", "Eronk", -- from Battle for Wesnoth
+		"male", "Erorbag", -- from Battle for Wesnoth
+		"male", "Erudish", -- from Battle for Wesnoth
+		"male", "Erudush", -- from Battle for Wesnoth
+		"male", "Erugar", -- from Battle for Wesnoth
+		"male", "Erugdush", -- from Battle for Wesnoth
+		"male", "Erulo", -- from Battle for Wesnoth
+		"male", "Erunk", -- from Battle for Wesnoth
+		"male", "Eruol", -- from Battle for Wesnoth
+		"male", "Erurag", -- from Battle for Wesnoth
+		"male", "Eruurk", -- from Battle for Wesnoth
+		"male", "Gadash", -- from Battle for Wesnoth
+		"male", "Gagar", -- from Battle for Wesnoth
+		"male", "Gagdush", -- from Battle for Wesnoth
+		"male", "Gagor", -- from Battle for Wesnoth
+		"male", "Galo", -- from Battle for Wesnoth
+		"male", "Ganak", -- from Battle for Wesnoth
+		"male", "Gank", -- from Battle for Wesnoth
+		"male", "Gaol", -- from Battle for Wesnoth
+		"male", "Garag", -- from Battle for Wesnoth
+		"male", "Gashnak", -- from Battle for Wesnoth
+		"male", "Gigor", -- from Battle for Wesnoth
+		"male", "Ginak", -- from Battle for Wesnoth
+		"male", "Ging", -- from Battle for Wesnoth
+		"male", "Gink", -- from Battle for Wesnoth
+		"male", "Girt", -- from Battle for Wesnoth
+		"male", "Gogdish", -- from Battle for Wesnoth
+		"male", "Gogdush", -- from Battle for Wesnoth
+		"male", "Gong", -- from Battle for Wesnoth
+		"male", "Gork", -- from Battle for Wesnoth
+		"male", "Gort", -- from Battle for Wesnoth
+		"male", "Goshnak", -- from Battle for Wesnoth
+		"male", "Gradash", -- from Battle for Wesnoth
+		"male", "Gragar", -- from Battle for Wesnoth
+		"male", "Gragor", -- from Battle for Wesnoth
+		"male", "Grak", -- from Battle for Wesnoth
+		"male", "Gralg", -- from Battle for Wesnoth
+		"male", "Gralo", -- from Battle for Wesnoth
+		"male", "Granak", -- from Battle for Wesnoth
+		"male", "Graol", -- from Battle for Wesnoth
+		"male", "Grarbag", -- from Battle for Wesnoth
+		"male", "Gridash", -- from Battle for Wesnoth
+		"male", "Gridish", -- from Battle for Wesnoth
+		"male", "Gridush", -- from Battle for Wesnoth
+		"male", "Grigar", -- from Battle for Wesnoth
+		"male", "Grigor", -- from Battle for Wesnoth
+		"male", "Grilg", -- from Battle for Wesnoth
+		"male", "Grilo", -- from Battle for Wesnoth
+		"male", "Grink", -- from Battle for Wesnoth
+		"male", "Grirag", -- from Battle for Wesnoth
+		"male", "Grirg", -- from Battle for Wesnoth
+		"male", "Grirk", -- from Battle for Wesnoth
+		"male", "Grishnak", -- from Battle for Wesnoth
+		"male", "Grodish", -- from Battle for Wesnoth
+		"male", "Grogar", -- from Battle for Wesnoth
+		"male", "Grogdish", -- from Battle for Wesnoth
+		"male", "Grok", -- from Battle for Wesnoth
+		"male", "Grolg", -- from Battle for Wesnoth
+		"male", "Grong", -- from Battle for Wesnoth
+		"male", "Gronk", -- from Battle for Wesnoth
+		"male", "Grorag", -- from Battle for Wesnoth
+		"male", "Grorg", -- from Battle for Wesnoth
+		"male", "Grork", -- from Battle for Wesnoth
+		"male", "Grort", -- from Battle for Wesnoth
+		"male", "Groshnak", -- from Battle for Wesnoth
+		"male", "Grudash", -- from Battle for Wesnoth
+		"male", "Grugar", -- from Battle for Wesnoth
+		"male", "Grugdish", -- from Battle for Wesnoth
+		"male", "Grugdush", -- from Battle for Wesnoth
+		"male", "Gruk", -- from Battle for Wesnoth
+		"male", "Grulo", -- from Battle for Wesnoth
+		"male", "Grunk", -- from Battle for Wesnoth
+		"male", "Gruol", -- from Battle for Wesnoth
+		"male", "Grurg", -- from Battle for Wesnoth
+		"male", "Grurk", -- from Battle for Wesnoth
+		"male", "Grurt", -- from Battle for Wesnoth
+		"male", "Gruurk", -- from Battle for Wesnoth
+		"male", "Gugdish", -- from Battle for Wesnoth
+		"male", "Gugdush", -- from Battle for Wesnoth
+		"male", "Gulg", -- from Battle for Wesnoth
+		"male", "Gulo", -- from Battle for Wesnoth
+		"male", "Gunak", -- from Battle for Wesnoth
+		"male", "Gurbag", -- from Battle for Wesnoth
+		"male", "Gurt", -- from Battle for Wesnoth
+		"male", "Gushnak", -- from Battle for Wesnoth
+		"male", "Hadash", -- from Battle for Wesnoth
+		"male", "Hadish", -- from Battle for Wesnoth
+		"male", "Hadush", -- from Battle for Wesnoth
+		"male", "Hagar", -- from Battle for Wesnoth
+		"male", "Hagdush", -- from Battle for Wesnoth
+		"male", "Hagor", -- from Battle for Wesnoth
+		"male", "Hak", -- from Battle for Wesnoth
+		"male", "Halg", -- from Battle for Wesnoth
+		"male", "Hank", -- from Battle for Wesnoth
+		"male", "Hashnak", -- from Battle for Wesnoth
+		"male", "Hidash", -- from Battle for Wesnoth
+		"male", "Hidish", -- from Battle for Wesnoth
+		"male", "Hidush", -- from Battle for Wesnoth
+		"male", "Higdush", -- from Battle for Wesnoth
+		"male", "Hilg", -- from Battle for Wesnoth
+		"male", "Hinak", -- from Battle for Wesnoth
+		"male", "Hing", -- from Battle for Wesnoth
+		"male", "Hink", -- from Battle for Wesnoth
+		"male", "Hiol", -- from Battle for Wesnoth
+		"male", "Hirag", -- from Battle for Wesnoth
+		"male", "Hirg", -- from Battle for Wesnoth
+		"male", "Hodush", -- from Battle for Wesnoth
+		"male", "Hogar", -- from Battle for Wesnoth
+		"male", "Hogor", -- from Battle for Wesnoth
+		"male", "Hong", -- from Battle for Wesnoth
+		"male", "Hool", -- from Battle for Wesnoth
+		"male", "Horbag", -- from Battle for Wesnoth
+		"male", "Hork", -- from Battle for Wesnoth
+		"male", "Hort", -- from Battle for Wesnoth
+		"male", "Hoshnak", -- from Battle for Wesnoth
+		"male", "Hudash", -- from Battle for Wesnoth
+		"male", "Hudish", -- from Battle for Wesnoth
+		"male", "Hugor", -- from Battle for Wesnoth
+		"male", "Huk", -- from Battle for Wesnoth
+		"male", "Hulg", -- from Battle for Wesnoth
+		"male", "Hulo", -- from Battle for Wesnoth
+		"male", "Hunk", -- from Battle for Wesnoth
+		"male", "Huol", -- from Battle for Wesnoth
+		"male", "Hurag", -- from Battle for Wesnoth
+		"male", "Hurbag", -- from Battle for Wesnoth
+		"male", "Hurk", -- from Battle for Wesnoth
+		"male", "Hushnak", -- from Battle for Wesnoth
+		"male", "Huurk", -- from Battle for Wesnoth
+		"male", "Pagdish", -- from Battle for Wesnoth
+		"male", "Pagor", -- from Battle for Wesnoth
+		"male", "Palg", -- from Battle for Wesnoth
+		"male", "Palo", -- from Battle for Wesnoth
+		"male", "Paol", -- from Battle for Wesnoth
+		"male", "Parag", -- from Battle for Wesnoth
+		"male", "Pashnak", -- from Battle for Wesnoth
+		"male", "Pidush", -- from Battle for Wesnoth
+		"male", "Pigdish", -- from Battle for Wesnoth
+		"male", "Pigdush", -- from Battle for Wesnoth
+		"male", "Pilg", -- from Battle for Wesnoth
+		"male", "Pinak", -- from Battle for Wesnoth
+		"male", "Pink", -- from Battle for Wesnoth
+		"male", "Pirbag", -- from Battle for Wesnoth
+		"male", "Podash", -- from Battle for Wesnoth
+		"male", "Podish", -- from Battle for Wesnoth
+		"male", "Podush", -- from Battle for Wesnoth
+		"male", "Pogdish", -- from Battle for Wesnoth
+		"male", "Polg", -- from Battle for Wesnoth
+		"male", "Porbag", -- from Battle for Wesnoth
+		"male", "Porg", -- from Battle for Wesnoth
+		"male", "Pork", -- from Battle for Wesnoth
+		"male", "Port", -- from Battle for Wesnoth
+		"male", "Poshnak", -- from Battle for Wesnoth
+		"male", "Pradish", -- from Battle for Wesnoth
+		"male", "Pragdush", -- from Battle for Wesnoth
+		"male", "Pragor", -- from Battle for Wesnoth
+		"male", "Pralg", -- from Battle for Wesnoth
+		"male", "Pralo", -- from Battle for Wesnoth
+		"male", "Prang", -- from Battle for Wesnoth
+		"male", "Praol", -- from Battle for Wesnoth
+		"male", "Prarag", -- from Battle for Wesnoth
+		"male", "Prarbag", -- from Battle for Wesnoth
+		"male", "Prarg", -- from Battle for Wesnoth
+		"male", "Prark", -- from Battle for Wesnoth
+		"male", "Prart", -- from Battle for Wesnoth
+		"male", "Prashnak", -- from Battle for Wesnoth
+		"male", "Praurk", -- from Battle for Wesnoth
+		"male", "Pridish", -- from Battle for Wesnoth
+		"male", "Prigar", -- from Battle for Wesnoth
+		"male", "Prigdish", -- from Battle for Wesnoth
+		"male", "Prigor", -- from Battle for Wesnoth
+		"male", "Prilg", -- from Battle for Wesnoth
+		"male", "Prilo", -- from Battle for Wesnoth
+		"male", "Prinak", -- from Battle for Wesnoth
+		"male", "Priol", -- from Battle for Wesnoth
+		"male", "Prirbag", -- from Battle for Wesnoth
+		"male", "Prirg", -- from Battle for Wesnoth
+		"male", "Prirt", -- from Battle for Wesnoth
+		"male", "Priurk", -- from Battle for Wesnoth
+		"male", "Prodash", -- from Battle for Wesnoth
+		"male", "Prodish", -- from Battle for Wesnoth
+		"male", "Prodush", -- from Battle for Wesnoth
+		"male", "Prolg", -- from Battle for Wesnoth
+		"male", "Prolo", -- from Battle for Wesnoth
+		"male", "Pronak", -- from Battle for Wesnoth
+		"male", "Prong", -- from Battle for Wesnoth
+		"male", "Pronk", -- from Battle for Wesnoth
+		"male", "Prool", -- from Battle for Wesnoth
+		"male", "Prourk", -- from Battle for Wesnoth
+		"male", "Prudish", -- from Battle for Wesnoth
+		"male", "Prugar", -- from Battle for Wesnoth
+		"male", "Prugdish", -- from Battle for Wesnoth
+		"male", "Pruk", -- from Battle for Wesnoth
+		"male", "Prunak", -- from Battle for Wesnoth
+		"male", "Prunk", -- from Battle for Wesnoth
+		"male", "Prurg", -- from Battle for Wesnoth
+		"male", "Prurk", -- from Battle for Wesnoth
+		"male", "Pruurk", -- from Battle for Wesnoth
+		"male", "Puk", -- from Battle for Wesnoth
+		"male", "Pulg", -- from Battle for Wesnoth
+		"male", "Pulo", -- from Battle for Wesnoth
+		"male", "Punak", -- from Battle for Wesnoth
+		"male", "Pung", -- from Battle for Wesnoth
+		"male", "Punk", -- from Battle for Wesnoth
+		"male", "Purag", -- from Battle for Wesnoth
+		"male", "Purbag", -- from Battle for Wesnoth
+		"male", "Purg", -- from Battle for Wesnoth
+		"male", "Puurk", -- from Battle for Wesnoth
+		"male", "Radash", -- from Battle for Wesnoth
+		"male", "Ragar", -- from Battle for Wesnoth
+		"male", "Ragdish", -- from Battle for Wesnoth
+		"male", "Rak", -- from Battle for Wesnoth
+		"male", "Rang", -- from Battle for Wesnoth
+		"male", "Rank", -- from Battle for Wesnoth
+		"male", "Raol", -- from Battle for Wesnoth
+		"male", "Rarag", -- from Battle for Wesnoth
+		"male", "Rarbag", -- from Battle for Wesnoth
+		"male", "Rark", -- from Battle for Wesnoth
+		"male", "Rashnak", -- from Battle for Wesnoth
+		"male", "Raurk", -- from Battle for Wesnoth
+		"male", "Rigor", -- from Battle for Wesnoth
+		"male", "Rik", -- from Battle for Wesnoth
+		"male", "Rilg", -- from Battle for Wesnoth
+		"male", "Rinak", -- from Battle for Wesnoth
+		"male", "Rink", -- from Battle for Wesnoth
+		"male", "Rirg", -- from Battle for Wesnoth
+		"male", "Rirk", -- from Battle for Wesnoth
+		"male", "Rodish", -- from Battle for Wesnoth
+		"male", "Rodush", -- from Battle for Wesnoth
+		"male", "Rogdish", -- from Battle for Wesnoth
+		"male", "Rok", -- from Battle for Wesnoth
+		"male", "Rolo", -- from Battle for Wesnoth
+		"male", "Ronak", -- from Battle for Wesnoth
+		"male", "Rudash", -- from Battle for Wesnoth
+		"male", "Rugar", -- from Battle for Wesnoth
+		"male", "Rugdish", -- from Battle for Wesnoth
+		"male", "Ruk", -- from Battle for Wesnoth
+		"male", "Rung", -- from Battle for Wesnoth
+		"male", "Ruol", -- from Battle for Wesnoth
+		"male", "Rurag", -- from Battle for Wesnoth
+		"male", "Rushnak", -- from Battle for Wesnoth
+		"male", "Vadash", -- from Battle for Wesnoth
+		"male", "Vadish", -- from Battle for Wesnoth
+		"male", "Vadush", -- from Battle for Wesnoth
+		"male", "Vak", -- from Battle for Wesnoth
+		"male", "Valo", -- from Battle for Wesnoth
+		"male", "Vank", -- from Battle for Wesnoth
+		"male", "Varag", -- from Battle for Wesnoth
+		"male", "Varbag", -- from Battle for Wesnoth
+		"male", "Vigar", -- from Battle for Wesnoth
+		"male", "Vigdish", -- from Battle for Wesnoth
+		"male", "Vigor", -- from Battle for Wesnoth
+		"male", "Vilg", -- from Battle for Wesnoth
+		"male", "Vilo", -- from Battle for Wesnoth
+		"male", "Vink", -- from Battle for Wesnoth
+		"male", "Virag", -- from Battle for Wesnoth
+		"male", "Virt", -- from Battle for Wesnoth
+		"male", "Vishnak", -- from Battle for Wesnoth
+		"male", "Vogdish", -- from Battle for Wesnoth
+		"male", "Vogor", -- from Battle for Wesnoth
+		"male", "Vonak", -- from Battle for Wesnoth
+		"male", "Vong", -- from Battle for Wesnoth
+		"male", "Vorg", -- from Battle for Wesnoth
+		"male", "Vork", -- from Battle for Wesnoth
+		"male", "Voshnak", -- from Battle for Wesnoth
+		"male", "Vourk", -- from Battle for Wesnoth
+		"male", "Vradash", -- from Battle for Wesnoth
+		"male", "Vragar", -- from Battle for Wesnoth
+		"male", "Vragdush", -- from Battle for Wesnoth
+		"male", "Vragor", -- from Battle for Wesnoth
+		"male", "Vralo", -- from Battle for Wesnoth
+		"male", "Vrang", -- from Battle for Wesnoth
+		"male", "Vrarbag", -- from Battle for Wesnoth
+		"male", "Vrarg", -- from Battle for Wesnoth
+		"male", "Vrart", -- from Battle for Wesnoth
+		"male", "Vraurk", -- from Battle for Wesnoth
+		"male", "Vridash", -- from Battle for Wesnoth
+		"male", "Vridish", -- from Battle for Wesnoth
+		"male", "Vrigor", -- from Battle for Wesnoth
+		"male", "Vrik", -- from Battle for Wesnoth
+		"male", "Vrinak", -- from Battle for Wesnoth
+		"male", "Vring", -- from Battle for Wesnoth
+		"male", "Vrirt", -- from Battle for Wesnoth
+		"male", "Vrishnak", -- from Battle for Wesnoth
+		"male", "Vriurk", -- from Battle for Wesnoth
+		"male", "Vrodash", -- from Battle for Wesnoth
+		"male", "Vrodish", -- from Battle for Wesnoth
+		"male", "Vrogar", -- from Battle for Wesnoth
+		"male", "Vrogor", -- from Battle for Wesnoth
+		"male", "Vrolo", -- from Battle for Wesnoth
+		"male", "Vrong", -- from Battle for Wesnoth
+		"male", "Vrorg", -- from Battle for Wesnoth
+		"male", "Vrork", -- from Battle for Wesnoth
+		"male", "Vrudish", -- from Battle for Wesnoth
+		"male", "Vrugdush", -- from Battle for Wesnoth
+		"male", "Vrulg", -- from Battle for Wesnoth
+		"male", "Vrung", -- from Battle for Wesnoth
+		"male", "Vruol", -- from Battle for Wesnoth
+		"male", "Vrurg", -- from Battle for Wesnoth
+		"male", "Vrurt", -- from Battle for Wesnoth
+		"male", "Vruurk", -- from Battle for Wesnoth
+		"male", "Vudish", -- from Battle for Wesnoth
+		"male", "Vuk", -- from Battle for Wesnoth
+		"male", "Vulg", -- from Battle for Wesnoth
+		"male", "Vulo", -- from Battle for Wesnoth
+		"male", "Vunak", -- from Battle for Wesnoth
+		"male", "Vurag", -- from Battle for Wesnoth
+		"male", "Vurbag", -- from Battle for Wesnoth
+		"male", "Vurg", -- from Battle for Wesnoth
+		"male", "Vushnak"
+	},
 	SettlementNames = {
 		"Barag Gór", -- from Battle for Wesnoth
 		"Bitok", -- from Battle for Wesnoth
@@ -2134,7 +2506,64 @@ DefineCivilization("ogre", {
 	ParentCivilization = "goblin",
 	Adjective = "Ogre",
 	Playable = false,
-	DefaultColor = "red"
+	DefaultColor = "red",
+	PersonalNames = {
+		"male", "Akoark", -- from Battle for Wesnoth
+		"male", "Akort", -- from Battle for Wesnoth
+		"male", "Akzalk", -- from Battle for Wesnoth
+		"male", "Arkarm", -- from Battle for Wesnoth
+		"male", "Barkuk", -- from Battle for Wesnoth
+		"male", "Blokkar", -- from Battle for Wesnoth
+		"male", "Borkuk", -- from Battle for Wesnoth
+		"male", "Bukkak", -- from Battle for Wesnoth
+		"male", "Bulruk", -- from Battle for Wesnoth
+		"male", "Corkkar", -- from Battle for Wesnoth
+		"male", "Delkkak", -- from Battle for Wesnoth
+		"male", "Garkuk", -- from Battle for Wesnoth
+		"male", "Gnukk", -- from Battle for Wesnoth
+		"male", "Goruk", -- from Battle for Wesnoth
+		"male", "Grak", -- from Battle for Wesnoth
+		"male", "Gurk", -- from Battle for Wesnoth
+		"male", "Gurm", -- from Battle for Wesnoth
+		"male", "Kalknix", -- from Battle for Wesnoth
+		"male", "Karak", -- from Battle for Wesnoth
+		"male", "Karbuk", -- from Battle for Wesnoth
+		"male", "Kargnak", -- from Battle for Wesnoth
+		"male", "Karterak", -- from Battle for Wesnoth
+		"male", "Kayrak", -- from Battle for Wesnoth
+		"male", "Kelkrar", -- from Battle for Wesnoth
+		"male", "Kerta", -- from Battle for Wesnoth
+		"male", "Kilkrar", -- from Battle for Wesnoth
+		"male", "Kingrok", -- from Battle for Wesnoth
+		"male", "Kirk", -- from Battle for Wesnoth
+		"male", "Klud", -- from Battle for Wesnoth
+		"male", "Kokkan", -- from Battle for Wesnoth
+		"male", "Kolk", -- from Battle for Wesnoth
+		"male", "Komak", -- from Battle for Wesnoth
+		"male", "Korgnak", -- from Battle for Wesnoth
+		"male", "Kork", -- from Battle for Wesnoth
+		"male", "Koruck", -- from Battle for Wesnoth
+		"male", "Kramak", -- from Battle for Wesnoth
+		"male", "Krog", -- from Battle for Wesnoth
+		"male", "Krukrak", -- from Battle for Wesnoth
+		"male", "Krumuk", -- from Battle for Wesnoth
+		"male", "Kuknuk", -- from Battle for Wesnoth
+		"male", "Kurkur", -- from Battle for Wesnoth
+		"male", "Kurmak", -- from Battle for Wesnoth
+		"male", "Makron", -- from Battle for Wesnoth
+		"male", "Markaak", -- from Battle for Wesnoth
+		"male", "Markuk", -- from Battle for Wesnoth
+		"male", "Merknik", -- from Battle for Wesnoth
+		"male", "Nargak", -- from Battle for Wesnoth
+		"male", "Olk", -- from Battle for Wesnoth
+		"male", "Orkut", -- from Battle for Wesnoth
+		"male", "Reknak", -- from Battle for Wesnoth
+		"male", "Takolak", -- from Battle for Wesnoth
+		"male", "Trabuk", -- from Battle for Wesnoth
+		"male", "Trakkon", -- from Battle for Wesnoth
+		"male", "Urkar", -- from Battle for Wesnoth
+		"male", "Urkark" -- from Battle for Wesnoth
+	}
 })
 
 DefineCivilization("troll", {
@@ -2144,7 +2573,67 @@ DefineCivilization("troll", {
 	ParentCivilization = "goblin",
 	Adjective = "Troll",
 	Playable = false,
-	DefaultColor = "green"
+	DefaultColor = "green",
+	PersonalNames = {
+		"male", "Äg", -- from Battle for Wesnoth
+		"male", "Agh", -- from Battle for Wesnoth
+		"male", "Bog Äh", -- from Battle for Wesnoth
+		"male", "Borb", -- from Battle for Wesnoth
+		"male", "Brag", -- from Battle for Wesnoth
+		"male", "Brag Goh", -- from Battle for Wesnoth
+		"male", "Brok", -- from Battle for Wesnoth
+		"male", "Dak", -- from Battle for Wesnoth
+		"male", "Drog", -- from Battle for Wesnoth
+		"male", "Frok", -- from Battle for Wesnoth
+		"male", "Ga", -- from Battle for Wesnoth
+		"male", "Gah", -- from Battle for Wesnoth
+		"male", "Gark", -- from Battle for Wesnoth
+		"male", "Gnarf", -- from Battle for Wesnoth
+		"male", "Grar", -- from Battle for Wesnoth
+		"male", "Grokk", -- from Battle for Wesnoth
+		"male", "Grumph", -- from Battle for Wesnoth
+		"male", "Gulk", -- from Battle for Wesnoth
+		"male", "Hak", -- from Battle for Wesnoth
+		"male", "Hask", -- from Battle for Wesnoth
+		"male", "Hoth", -- from Battle for Wesnoth
+		"male", "Hug Bah", -- from Battle for Wesnoth
+		"male", "Hu Kah", -- from Battle for Wesnoth
+		"male", "Kak", -- from Battle for Wesnoth
+		"male", "Krak", -- from Battle for Wesnoth
+		"male", "Krug", -- from Battle for Wesnoth
+		"male", "Kub", -- from Battle for Wesnoth
+		"male", "Kuh", -- from Battle for Wesnoth
+		"male", "Lok", -- from Battle for Wesnoth
+		"male", "Luk", -- from Battle for Wesnoth
+		"male", "Nak", -- from Battle for Wesnoth
+		"male", "Nuk Kar", -- from Battle for Wesnoth
+		"male", "Pag", -- from Battle for Wesnoth
+		"male", "Reck", -- from Battle for Wesnoth
+		"male", "Rok", -- from Battle for Wesnoth
+		"male", "Ruk", -- from Battle for Wesnoth
+		"male", "Sark", -- from Battle for Wesnoth
+		"male", "Shak", -- from Battle for Wesnoth
+		"male", "Shuf", -- from Battle for Wesnoth
+		"male", "Stuh", -- from Battle for Wesnoth
+		"male", "Targ", -- from Battle for Wesnoth
+		"male", "Thog", -- from Battle for Wesnoth
+		"male", "Thruf", -- from Battle for Wesnoth
+		"male", "Thur", -- from Battle for Wesnoth
+		"male", "Tohg", -- from Battle for Wesnoth
+		"male", "Torg", -- from Battle for Wesnoth
+		"male", "Trok", -- from Battle for Wesnoth
+		"male", "Tsok", -- from Battle for Wesnoth
+		"male", "Tuh", -- from Battle for Wesnoth
+		"male", "Tuk Ruh", -- from Battle for Wesnoth
+		"male", "Ugg", -- from Battle for Wesnoth
+		"male", "Üh", -- from Battle for Wesnoth
+		"male", "Urg", -- from Battle for Wesnoth
+		"male", "Urgh", -- from Battle for Wesnoth
+		"male", "Urk", -- from Battle for Wesnoth
+		"male", "Vak", -- from Battle for Wesnoth
+		"male", "Zog", -- from Battle for Wesnoth
+		"male", "Zuug" -- from Battle for Wesnoth
+	}
 })
 
 DefineCivilization("latin", {
@@ -2286,7 +2775,11 @@ DefineCivilization("italian", {
 	Species = "human",
 	ParentCivilization = "latin",
 	Adjective = "Italian",
-	Playable = false
+	Playable = false,
+	PersonalNames = {
+		"male", "Alessandro",
+		"male", "Giovanni"
+	}
 })
 
 DefineCivilization("portuguese", {
@@ -2783,7 +3276,68 @@ DefineCivilization("wose", {
 	ParentCivilization = "neutral",
 	Adjective = "Wose",
 	Playable = false,
-	DefaultColor = "green"
+	DefaultColor = "green",
+	PersonalNames = {
+		"male", "Bludebalmen", -- from Battle for Wesnoth
+		"male", "Boladrumbadrum", -- from Battle for Wesnoth
+		"male", "Bolwuldelman", -- from Battle for Wesnoth
+		"male", "Bombempomgontor", -- from Battle for Wesnoth
+		"male", "Bomtanbomkenton", -- from Battle for Wesnoth
+		"male", "Bomtanbomtonum", -- from Battle for Wesnoth
+		"male", "Bregalad", -- from Battle for Wesnoth
+		"male", "Bremdebubde", -- from Battle for Wesnoth
+		"male", "Brenbasnudnem", -- from Battle for Wesnoth
+		"male", "Brendumadoak", -- from Battle for Wesnoth
+		"male", "Brommantendronnor", -- from Battle for Wesnoth
+		"male", "Brumbendublun", -- from Battle for Wesnoth
+		"male", "Brumennarunom", -- from Battle for Wesnoth
+		"male", "Brummdlebroak", -- from Battle for Wesnoth
+		"male", "Bumbadadabum", -- from Battle for Wesnoth
+		"male", "Buomdumdenlol", -- from Battle for Wesnoth
+		"male", "Carnimirië", -- from Battle for Wesnoth
+		"male", "Dabumdabumtam", -- from Battle for Wesnoth
+		"male", "Dammantongonnur", -- from Battle for Wesnoth
+		"male", "Danmonlulbam", -- from Battle for Wesnoth
+		"male", "Debundbemun", -- from Battle for Wesnoth
+		"male", "Delmduelmdelom", -- from Battle for Wesnoth
+		"male", "Diblembumnde", -- from Battle for Wesnoth
+		"male", "Dolmannumbil", -- from Battle for Wesnoth
+		"male", "Drongnoblemdu", -- from Battle for Wesnoth
+		"male", "Dulmandarook", -- from Battle for Wesnoth
+		"male", "Dulwulmendom", -- from Battle for Wesnoth
+		"male", "Dumdumdumatum", -- from Battle for Wesnoth
+		"male", "Elmaroomadrum", -- from Battle for Wesnoth
+		"male", "Grelmadrumbumadum", -- from Battle for Wesnoth
+		"male", "Gulladroamadoak", -- from Battle for Wesnoth
+		"male", "Gumabeladrelm", -- from Battle for Wesnoth
+		"male", "Laffalialomdium", -- from Battle for Wesnoth
+		"male", "Landunwonbam", -- from Battle for Wesnoth
+		"male", "Lassemista", -- from Battle for Wesnoth
+		"male", "Lefnublemdde", -- from Battle for Wesnoth
+		"male", "Libleddnumm", -- from Battle for Wesnoth
+		"male", "Lolmandindel", -- from Battle for Wesnoth
+		"male", "Monlamwimdan", -- from Battle for Wesnoth
+		"male", "Muldondindal", -- from Battle for Wesnoth
+		"male", "Mundionalafla", -- from Battle for Wesnoth
+		"male", "Mundumblemdum", -- from Battle for Wesnoth
+		"male", "Munnamdulbon", -- from Battle for Wesnoth
+		"male", "Nanmildaldum", -- from Battle for Wesnoth
+		"male", "Nunmaldildun", -- from Battle for Wesnoth
+		"male", "Orofarnië", -- from Battle for Wesnoth
+		"male", "Pambedrumne", -- from Battle for Wesnoth
+		"male", "Pomtamkomtrobum", -- from Battle for Wesnoth
+		"male", "Rithramcamhan", -- from Battle for Wesnoth
+		"male", "Tantondernintan", -- from Battle for Wesnoth
+		"male", "Temtundembenn", -- from Battle for Wesnoth
+		"male", "Temtunnongetem", -- from Battle for Wesnoth
+		"male", "Tondenkontenkon", -- from Battle for Wesnoth
+		"male", "Troombadoom", -- from Battle for Wesnoth
+		"male", "Tumtentantarun", -- from Battle for Wesnoth
+		"male", "Tumtonnongatum", -- from Battle for Wesnoth
+		"male", "Tumtumgamtomtom", -- from Battle for Wesnoth
+		"male", "Wonrunmaldin", -- from Battle for Wesnoth
+		"male", "Wudadoonopl"
+	}
 })
 
 -- Cyclops names: Arges ("Vivid"), Brontes ("Thunderer"), Polyphemus (name means "many-voiced"), Steropes ("Lightner"), Tepegoz (an ogre with a single eye from Turkic mythology; apparently derived from the Greek Polyphemus myth; Tepe means "top, crown of the head" and Göz means "eye"), Depeghoz (Depêghöz, same as Tepegoz, given by Jacob Grimm in Teutonic Mythology, p. 424)
