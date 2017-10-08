@@ -452,7 +452,7 @@ DefineQuest("thors-servant-thors-temple", {
 		CallDialogue("thors-servant-temple-complete", trigger_player)
 	end,
 	Objectives = {"- Build a Temple in Gotland", "- Worship Thunraz"},
-	BuildSettlementUnits = {"visby", "unit-germanic-temple", 1},
+	BuildSettlementUnitsOfClass = {"visby", "temple", 1},
 	ResearchUpgrades = {"upgrade-deity-thor"},
 	Unobtainable = true,
 	Unfailable = true, -- to prevent the mission failing due to a lack of a Carpenter's Shop

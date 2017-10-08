@@ -643,10 +643,10 @@ DefinePanelContents(
 	},
 
 	-- Time Efficiency Bonus
-	{ Pos = {9, 130}, Condition = {ShowOpponent = false, TimeEfficiencyBonus = "only", GiveResource = "only", Build = "false", Training = "false", UpgradeTo = "false"},
+	{ Pos = {9, 130}, Condition = {ShowOpponent = false, TimeEfficiencyBonus = "only", GiveResource = "only", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
 		More = {"Text", {Text = "Time Eff.:"}}
 	},
-	{ Pos = {115, 130}, Condition = {ShowOpponent = false, TimeEfficiencyBonus = "only", GiveResource = "only", Build = "false", Training = "false", UpgradeTo = "false"},
+	{ Pos = {115, 130}, Condition = {ShowOpponent = false, TimeEfficiencyBonus = "only", GiveResource = "only", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
 		More = {"Text", {Text = Concat(
 			If(GreaterThan(ActiveUnitVar("TimeEfficiencyBonus", "Value"), 0), "+", ""),
 			Concat(String(ActiveUnitVar("TimeEfficiencyBonus", "Value")), "%")
