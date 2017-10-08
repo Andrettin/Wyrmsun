@@ -199,7 +199,7 @@ DefineButton( { Pos = 16, Level = 0, Icon = "icon-garrison",
 
 DefineButton( { Pos = 16, Level = 0, Icon = "icon-salvage",
 	Action = "salvage",
-	Key = "s", Hint = "~!Salvage Building", Popup = "popup-commands",
+	Key = "delete", Hint = "Salvage Building (~<Del~>)", Popup = "popup-commands",
 	ForUnit = {
 		"unit-latin-town-hall", "unit-latin-farm", "unit-latin-barracks", "unit-latin-smithy", "unit-latin-stables",
 		"unit-germanic-town-hall",
