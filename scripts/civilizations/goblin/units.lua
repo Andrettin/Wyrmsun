@@ -493,8 +493,6 @@ DefineUnitType("unit-goblin-gunpowder-infantry", {
 	DaySightRangeBonus = -1,
 	NightSightRangeBonus = 1,
 	Corpse = "unit-goblin-dead-body",
---	WeaponClasses = {"throwing-axe"},
-	PierceDamage = true,
 --	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Sounds = {

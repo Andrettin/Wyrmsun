@@ -890,8 +890,6 @@ DefineUnitType("unit-dwarven-thunderer", {
 		{"boots", "unit-boots"}
 	},
 	Corpse = "unit-dwarven-dead-body",
---	WeaponClasses = {"throwing-axe"},
-	PierceDamage = true,
 --	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Sounds = {

@@ -3498,6 +3498,8 @@ DefineUnitType("unit-template-gunpowder-infantry", {
 	Accuracy = 7,
 	Priority = 55,
 	Points = 95,
+	PierceDamage = true,
+	WeaponClasses = {"gun"},
 	Gender = "male",
 	RequirementsString = "Smithy and Gunpowder"
 } )
