@@ -32,7 +32,7 @@ DefineFaction("saxon-tribe", {
 	Colors = {"pink"},
 	FactionUpgrade = "upgrade-faction-saxon-tribe",
 	Icon = "icon-flag-red-lion-on-green",
-	DevelopsFrom = {"asa-tribe", "hersing-tribe", "hlesing-tribe", "ingaevone-tribe", "jarling-tribe", "karling-tribe", "skeldung-tribe", "thielung-tribe", "thralling-tribe", "yngling-tribe"},
+	DevelopsFrom = {"asa-tribe", "hersing-tribe", "hlesing-tribe", "ingaevone-tribe", "jarling-tribe", "karling-tribe", "thielung-tribe", "thralling-tribe"},
 	DevelopsTo = {"gumeninga-tribe", "essex", "middlesex", "sussex", "wessex"},
 	SettlementNames = {
 		"Hardego", -- one of the pagi in Eastphalia in 852; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 610.
@@ -68,7 +68,7 @@ DefineFaction("frisian-tribe", {
 	Colors = {"violet", "purple"},
 	FactionUpgrade = "upgrade-faction-frisian-tribe",
 	Icon = "icon-flag-green-lion-on-orange",
-	DevelopsFrom = {"asa-tribe", "hersing-tribe", "hlesing-tribe", "ingaevone-tribe", "jarling-tribe", "karling-tribe", "skeldung-tribe", "thielung-tribe", "thralling-tribe", "yngling-tribe"}
+	DevelopsFrom = {"asa-tribe", "hersing-tribe", "hlesing-tribe", "ingaevone-tribe", "jarling-tribe", "karling-tribe", "thielung-tribe", "thralling-tribe"}
 })
 
 DefineFaction("lombard-tribe", {

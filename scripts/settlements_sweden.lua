@@ -35,7 +35,7 @@ DefineSettlement("goteborg", {
 		"norse", "Goteborg" -- "Göteborg"
 	},
 	Cores = {
-		"goth-tribe"
+--		"goth-tribe"
 	},
 	HistoricalOwners = {
 		-2800, "yngling-tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; the Ynglings were the dynasty founded by Odin's son Yngve, who ruled the Swedish lands

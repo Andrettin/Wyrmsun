@@ -32,7 +32,7 @@ DefineFaction("angle-tribe", {
 	Colors = {"white"},
 	FactionUpgrade = "upgrade-faction-angle-tribe",
 	Icon = "icon-flag-cyan-lion-on-red",
-	DevelopsFrom = {"asa-tribe", "hersing-tribe", "hlesing-tribe", "ingaevone-tribe", "jarling-tribe", "karling-tribe", "skeldung-tribe", "thielung-tribe", "thralling-tribe", "yngling-tribe"}
+	DevelopsFrom = {"asa-tribe", "hersing-tribe", "hlesing-tribe", "ingaevone-tribe", "jarling-tribe", "karling-tribe", "skeldung-tribe", "thielung-tribe", "thralling-tribe"}
 })
 
 DefineFaction("avione-tribe", {
@@ -62,7 +62,7 @@ DefineFaction("jute-tribe", {
 	Colors = {"red", "white"},
 	FactionUpgrade = "upgrade-faction-jute-tribe",
 	Icon = "icon-flag-five-purple-birds-on-green",
-	DevelopsFrom = {"asa-tribe", "hersing-tribe", "hlesing-tribe", "ingaevone-tribe", "jarling-tribe", "karling-tribe", "skeldung-tribe", "thielung-tribe", "thralling-tribe", "yngling-tribe"},
+	DevelopsFrom = {"asa-tribe", "hersing-tribe", "hlesing-tribe", "ingaevone-tribe", "jarling-tribe", "karling-tribe", "skeldung-tribe", "thielung-tribe", "thralling-tribe"},
 })
 
 DefineFaction("teuton-tribe", {
@@ -72,7 +72,7 @@ DefineFaction("teuton-tribe", {
 	Colors = {"orange"},
 	FactionUpgrade = "upgrade-faction-teuton-tribe",
 	Icon = "icon-flag-five-red-birds-on-yellow",
-	DevelopsFrom = {"asa-tribe", "hersing-tribe", "hlesing-tribe", "ingaevone-tribe", "jarling-tribe", "karling-tribe", "skeldung-tribe", "thielung-tribe", "thralling-tribe", "yngling-tribe"}
+	DevelopsFrom = {"asa-tribe", "hersing-tribe", "hlesing-tribe", "ingaevone-tribe", "jarling-tribe", "karling-tribe", "skeldung-tribe", "thielung-tribe", "thralling-tribe"}
 })
 
 DefineFaction("bernice-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
