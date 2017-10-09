@@ -41,7 +41,6 @@ DefineUpgrade("upgrade-critical-strike", {
 DefineUpgrade("upgrade-deadly-precision", {
 	Name = "Deadly Precision",
 	Icon = "icon-deadly-precision",
-	RequiredAbilities = {"upgrade-critical-strike"},
 	Ability = true
 })
 
@@ -176,4 +175,8 @@ DefineModifier("upgrade-spear-mastery",
 
 DefineModifier("upgrade-sword-mastery",
 	{"BasicDamage", 2}
+)
+
+DefinePredependency("upgrade-deadly-precision",
+	{"upgrade-critical-strike"}
 )
