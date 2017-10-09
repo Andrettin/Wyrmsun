@@ -60,3 +60,39 @@ DefineIcon({
 	Size = {46, 38},
 	File = "goth/icons/horse_rider_orange_hair.png"
 })
+
+DefineIcon({
+	Name = "icon-gothic-horse-lord-beardless",
+	Size = {46, 38},
+	File = "goth/icons/horse_lord_beardless.png"
+})
+
+DefineIcon({
+	Name = "icon-gothic-horse-lord-black-hair",
+	Size = {46, 38},
+	File = "goth/icons/horse_lord_black_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-gothic-horse-lord-blond-hair",
+	Size = {46, 38},
+	File = "goth/icons/horse_lord_blond_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-gothic-horse-lord-brown-hair",
+	Size = {46, 38},
+	File = "goth/icons/horse_lord_brown_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-gothic-horse-lord-gray-hair",
+	Size = {46, 38},
+	File = "goth/icons/horse_lord_gray_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-gothic-horse-lord-orange-hair",
+	Size = {46, 38},
+	File = "goth/icons/horse_lord_orange_hair.png"
+})

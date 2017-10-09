@@ -75,7 +75,7 @@ DefineUnitType("unit-gothic-horse-lord", {
 	Parent = "unit-template-heroic-cavalry",
 	Civilization = "goth",
 	Description = "Covered in their war-glory, Gothic horse lords lead savage charges against the armies of their foes.",
-	Icon = "icon-gothic-horse-rider-brown-hair",
+	Icon = "icon-gothic-horse-lord-brown-hair",
 	Image = {"file", "teuton/units/ritter.png", "size", {72, 72}},
 	LayerImages = {
 		{"layer", "shield", "file", "teuton/units/ritter_shield.png"}
