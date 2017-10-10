@@ -181,6 +181,18 @@ DefineMapTemplate("nidavellir-underground", {
 	}
 })
 
+DefineMapTemplate("niflheim", {
+	Name = "Niflheim",
+	Plane = "niflheim",
+	Width = 256,
+	Height = 256,
+	TerrainImage = "scripts/map_templates/niflheim.png",
+	OverlayTerrainImage = "scripts/map_templates/niflheim_overlay.png",
+	GeneratedNeutralUnits = {
+		"unit-wyrm", 8
+	}
+})
+
 -- Subtemplates that have subtemplates of their own
 
 DefineMapTemplate("island-of-the-lizard-god", {
