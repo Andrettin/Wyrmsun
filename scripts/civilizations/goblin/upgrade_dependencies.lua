@@ -46,7 +46,7 @@ DefinePredependency("unit-goblin-gunpowder-infantry",
 )
 
 DefineDependency("unit-goblin-gunpowder-infantry",
-	{"unit-goblin-smithy", "upgrade-gunpowder"}
+	{"unit-goblin-smithy", "upgrade-gunpowder", "upgrade-engineering"}
 )
 
 DefineDependency("upgrade-goblin-long-sword",

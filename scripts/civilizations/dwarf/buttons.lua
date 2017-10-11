@@ -874,14 +874,14 @@ DefineButton( { Pos = 2, Level = 2,
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-stronghold",
 	Action = "upgrade-to", Value = "unit-dwarven-stronghold",
 	Allowed = "check-upgrade-to",
-	Key = "b", Hint = _("Upgrade to ~!Bastion"), Popup = "popup-building",
+	Key = "b", Hint = "Upgrade to ~!Bastion", Popup = "popup-building",
 	ForUnit = {"unit-dwarven-town-hall"}
 } )
   
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-guard-tower",
 	Action = "upgrade-to", Value = "unit-dwarven-guard-tower",
 	Allowed = "check-upgrade-to",
-	Key = "g", Hint = _("Upgrade to ~!Guard Tower"), Popup = "popup-building",
+	Key = "g", Hint = "Upgrade to ~!Guard Tower", Popup = "popup-building",
 	ForUnit = {"unit-dwarven-sentry-tower"}
 } )
 

@@ -3501,7 +3501,7 @@ DefineUnitType("unit-template-gunpowder-infantry", {
 	PierceDamage = true,
 	WeaponClasses = {"gun"},
 	Gender = "male",
-	RequirementsString = "Smithy and Gunpowder"
+	RequirementsString = "Smithy, Gunpowder and Engineering"
 } )
 
 DefineUnitType("unit-template-thief", {
@@ -3873,6 +3873,7 @@ DefineUnitType("unit-template-stronghold", {
 	Drops = {"unit-stone-pile"},
 	AiDrops = {}, -- worker-related items, as well as those we would expect a center of administration to have; and military ones, since this is a stronghold
 	Affixes = {"upgrade-item-suffix-of-the-colossus"},
+	RequirementsString = "Barracks and Masonry",
 	Sounds = {
 		"selected", "fortress-selected",
 --		"acknowledge", "town-hall-acknowledge",

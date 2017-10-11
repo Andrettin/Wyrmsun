@@ -391,16 +391,17 @@ DefineButton( { Pos = 11, Level = 0, Icon = "icon-thor",
 
 -- Upgrades ---------------------------------------------------------
 
-DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-guard-tower",
-  Action = "upgrade-to", Value = "unit-teuton-guard-tower",
-  Key = "g", Hint = "Upgrade to ~!Guard Tower", Popup = "popup-building",
-  ForUnit = {"unit-teuton-watch-tower"} } )
-
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-stronghold",
 	Action = "upgrade-to", Value = "unit-teuton-stronghold",
 	Allowed = "check-upgrade-to",
 	Key = "h", Hint = "Upgrade to Strong~!hold", Popup = "popup-building",
 	ForUnit = {"unit-teuton-town-hall", "unit-latin-town-hall"}
+} )
+
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-guard-tower",
+	Action = "upgrade-to", Value = "unit-teuton-guard-tower",
+	Key = "g", Hint = "Upgrade to ~!Guard Tower", Popup = "popup-building",
+	ForUnit = {"unit-teuton-watch-tower"}
 } )
 
 DefineButton( { Pos = 1, Level = 2,

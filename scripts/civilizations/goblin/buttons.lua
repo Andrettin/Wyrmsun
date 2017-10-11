@@ -364,14 +364,14 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-gathaarl",
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-goblin-stronghold",
 	Action = "upgrade-to", Value = "unit-goblin-stronghold",
 	Allowed = "check-upgrade-to",
-	Key = "s", Hint = _("Upgrade to ~!Stronghold"), Popup = "popup-building",
+	Key = "s", Hint = "Upgrade to ~!Stronghold", Popup = "popup-building",
 	ForUnit = {"unit-goblin-town-hall"}
 } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-guard-tower",
 	Action = "upgrade-to", Value = "unit-goblin-guard-tower",
 	Allowed = "check-upgrade-to",
-	Key = "g", Hint = _("Upgrade to ~!Guard Tower"), Popup = "popup-building",
+	Key = "g", Hint = "Upgrade to ~!Guard Tower", Popup = "popup-building",
 	ForUnit = {"unit-goblin-watch-tower"}
 } )
 
