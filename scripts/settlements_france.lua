@@ -287,6 +287,22 @@ DefineSettlement("dijon", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
+DefineSettlement("ferrieres", {
+	Name = "Ferrieres",
+	MapTemplate = "earth",
+	Position = {3898, 956},
+	CulturalNames = {
+		"french", "Ferrieres" -- "Ferrières"
+	},
+	HistoricalOwners = {
+		782, "francia"
+	},
+	HistoricalBuildings = {
+		782, 0, "temple" -- Alcuin moved from England to the court of Charlemagne in 782, and received the abbey of Ferrières; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 188-189.
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
 DefineSettlement("langres", {
 	Name = "Langres",
 	MapTemplate = "earth",
@@ -797,10 +813,12 @@ DefineSettlement("tours", {
 		395, "rome", -- Tours was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		486, "visigothia", -- Tours was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		526, "francia", -- Tours' area was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-		561, "neustria" -- Turones went to Charibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+		561, "neustria", -- Turones went to Charibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+		796, "francia"
 	},
 	HistoricalBuildings = {
 		395, 0, "temple" -- Tours was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		-- Alcuin received the greater abbey of St. Martin at Tours from Charlemagne in 796; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 188-189.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -814,10 +832,12 @@ DefineSettlement("troyes", {
 		"french", "Troyes" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	HistoricalOwners = {
-		561, "burgundia" -- Trecae went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+		561, "burgundia", -- Trecae went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+		782, "francia"
 	},
 	HistoricalBuildings = {
-		561, 0, "farm"
+		561, 782, "farm",
+		782, 0, "temple" -- Alcuin moved from England to the court of Charlemagne in 782, and received the abbey of St. Lupus at Troyes; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 188-189.
 		-- Chief court of the salt tax existent in Troyes in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}

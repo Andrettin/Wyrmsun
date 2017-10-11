@@ -1436,7 +1436,7 @@ DefineCharacter("offa-of-northumbria", { -- Source: Frank Stenton, "Anglo-Saxon 
 	end
 })
 
-DefineCharacter("egbert", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 92, 145, 160-161.
+DefineCharacter("egbert", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 92, 145, 160-161, 188-189.
 	Name = "Egbert",
 	Gender = "male",
 	Type = "unit-teuton-priest", -- bishop, and later archbishop
@@ -1446,6 +1446,7 @@ DefineCharacter("egbert", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	-- was Eadberht of Northumbria's brother
 	Date = 734, -- was bishop of York in 734, when Bede wrote a letter to him
 	-- became archbishop of York in 735, having been previously bishop of York
+	DeathDate = 767, -- his kinsman Æthelberht became archbishop of York in 767
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
 			return true
@@ -1585,22 +1586,61 @@ DefineCharacter("aluberht", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	end
 })
 
-DefineCharacter("willehad", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 175-176.
-	Name = "Willehad",
+DefineCharacter("aethelberht-of-york", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 188-189.
+	Name = "Aethelberht", -- "Æthelberht"
 	Gender = "male",
-	Type = "unit-teuton-priest", -- bishop
+	Type = "unit-teuton-priest", -- archbishop
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
+	Date = 767, -- became archbishop of York in 767
+	DeathDate = 780, -- resigned as archbishop in 780
 	Deities = {"christian-god"},
-	Date = 780, -- went to preach to the Saxons between the Elbe and the Weser at the behest of Charlemagne in 780
-	-- became bishop of Bremen in 785
-	DeathDate = 789,
+	HistoricalLocations = {
+		767, "earth", "york"
+	},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "northumbria" or GetPlayerData(trigger_player, "Faction") == "englaland") then
+		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
 			return true
 		end
 		return false
 	end
+})
+
+DefineCharacter("alcuin", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 90, 188-189.
+	Name = "Alcuin", -- Northumbrian scholar who made the school of York famous
+	Gender = "male",
+	Type = "unit-teuton-priest",
+	Civilization = "anglo-saxon",
+	Faction = "francia",
+	Deities = {"christian-god"},
+	Date = 767, -- became encharged with the direction of the school of York in 767
+	-- moved from England to the court of Charlemagne in 782, and received the abbeys of Ferrières and St. Lupus at Troyes
+	-- received the greater abbey of St. Martin at Tours from Charlemagne in 796
+	DeathDate = 804, -- died in 804
+	HistoricalLocations = {
+		767, "earth", "york"
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("torhtmund", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 90.
+	Name = "Torhtmund", -- Minister of the Northumbrian king Æthelred Moll, Torhtmund killed the king's murderer
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "anglo-saxon",
+	Faction = "northumbria",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
+			return true
+		end
+		return false
+	end
+	-- was introduced by Alcuin to Charlemagne
 })
 
 DefineCharacter("aethelred-moll", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 93-94.
@@ -1648,6 +1688,24 @@ DefineCharacter("aelfwald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	end
 })
 
+DefineCharacter("willehad", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 175-176.
+	Name = "Willehad",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- bishop
+	Civilization = "anglo-saxon",
+	Faction = "northumbria",
+	Deities = {"christian-god"},
+	Date = 780, -- went to preach to the Saxons between the Elbe and the Weser at the behest of Charlemagne in 780
+	-- became bishop of Bremen in 785
+	DeathDate = 789,
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "northumbria" or GetPlayerData(trigger_player, "Faction") == "englaland") then
+			return true
+		end
+		return false
+	end
+})
+
 DefineCharacter("offa-of-mercia", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 93.
 	Name = "Offa",
 	Gender = "male",
@@ -1664,37 +1722,6 @@ DefineCharacter("offa-of-mercia", { -- Source: Frank Stenton, "Anglo-Saxon Engla
 		end
 		return false
 	end
-})
-
-DefineCharacter("alcuin", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 90.
-	Name = "Alcuin", -- Northumbrian scholar who made the school of York famous
-	Gender = "male",
-	Type = "unit-teuton-priest", -- correct?
-	Civilization = "anglo-saxon",
-	Faction = "francia",
-	Deities = {"christian-god"},
-	Date = 782, -- moved from England to the court of Charlemagne
-	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
-			return true
-		end
-		return false
-	end
-})
-
-DefineCharacter("torhtmund", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 90.
-	Name = "Torhtmund", -- Minister of the Northumbrian king Æthelred Moll, Torhtmund killed the king's murderer
-	Gender = "male",
-	Type = "unit-teuton-swordsman",
-	Civilization = "anglo-saxon",
-	Faction = "northumbria",
-	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
-			return true
-		end
-		return false
-	end
-	-- was introduced by Alcuin to Charlemagne
 })
 
 DefineCharacter("eardwulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 94-95.
@@ -1729,6 +1756,44 @@ DefineCharacter("cenwulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "mercia") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("sigulf-of-ferrieres", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 189.
+	Name = "Sigulf", -- Northumbrian pupil of Alcuin
+	Gender = "male",
+	Type = "unit-teuton-priest",
+	Civilization = "anglo-saxon",
+	Faction = "francia",
+	Deities = {"christian-god"},
+	Date = 804, -- succeeded Alcuin to the abbey of Ferrières when he died in 804
+	HistoricalLocations = {
+		804, "earth", "ferrieres"
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("frithugisl", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 189.
+	Name = "Frithugisl", -- Anglo-Saxon pupil of Alcuin
+	Gender = "male",
+	Type = "unit-teuton-priest",
+	Civilization = "anglo-saxon",
+	Faction = "francia",
+	Deities = {"christian-god"},
+	Date = 804, -- succeeded Alcuin to the greater abbey of St. Martin at Tours when he died in 804
+	HistoricalLocations = {
+		804, "earth", "tours"
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then -- Alcuin's place of origin
 			return true
 		end
 		return false
