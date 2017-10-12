@@ -30,7 +30,8 @@ DefineFaction("geirrodung-clan", {
 	Civilization = "ettin",
 	Type = "tribe",
 	Colors = {"red", "orange", "fire"},
-	DefaultAI = "passive"
+	DefaultAI = "passive",
+	Description = "The brutal ettin Geirrod possesses a magnificent hall in Jotunheim, where he, his kin and his followers dwell."
 })
 
 -- Mercenary Companies
