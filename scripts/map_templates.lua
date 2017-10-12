@@ -68,9 +68,7 @@ DefineMapTemplate("earth", {
 	TerrainImage = "scripts/map_templates/earth.png",
 	GeneratedTerrains = {
 		"rock", "low",
---		"limestone-rock", "very-low",
-		"grass", "extremely-high",
-		"dirt", "medium"
+--		"limestone-rock", "very-low"
 	},
 	GeneratedNeutralUnits = {
 		"unit-diamond-deposit", 1,
