@@ -776,6 +776,15 @@ DefineUnitType("unit-teuton-gunpowder-infantry", {
 	NightSightRangeBonus = -1,
 --	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	AiDrops = {"unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	Variations = {
+		{
+			"variation-id", "1"
+		},
+		{
+			"variation-id", "2",
+			"file", "teuton/units/austrian_musketeer_extra_1.png"
+		}
+	},
 	Sounds = {
 --		"selected", "basic-teuton-voices-selected-group",
 --		"acknowledge", "basic-teuton-voices-acknowledge",
@@ -897,23 +906,7 @@ DefineUnitType("unit-teuton-priest", {
 			"variation-id", "gudjan",
 			"file", "germanic/units/priest.png",
 			"icon", "icon-germanic-priest",
-			"type-name", "Gudjan",
-			"upgrade-forbidden", "upgrade-deity-christian-god",
-			"upgrade-forbidden", "upgrade-anglo-saxon-civilization",
-			"upgrade-forbidden", "upgrade-english-civilization",
-			"upgrade-forbidden", "upgrade-latin-civilization"
-		},
-		-- English type name
-		{
-			"variation-id", "pagan-priest",
-			"file", "germanic/units/priest.png",
-			"icon", "icon-germanic-priest",
-			"type-name", "Priest",
-			"upgrade-forbidden", "upgrade-deity-christian-god",
-			"upgrade-forbidden", "upgrade-frankish-civilization",
-			"upgrade-forbidden", "upgrade-suebi-civilization",
-			"upgrade-forbidden", "upgrade-teuton-civilization",
-			"upgrade-forbidden", "upgrade-gothic-civilization"
+			"type-name", "Gudjan"
 		}
 	},
 	Sounds = {
