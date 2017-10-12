@@ -760,6 +760,31 @@ DefineUnitType("unit-teuton-archer", {
 	}
 } )
 
+DefineUnitType("unit-teuton-gunpowder-infantry", {
+	Name = "Gunpowder Infantry",
+	Parent = "unit-template-gunpowder-infantry",
+	Civilization = "teuton",
+	Description = "With the invention of gunpowder Teuton craftsmen were able to construct formidable weapons of war, bringing fire and desolation.",
+	Image = {"file", "teuton/units/austrian_musketeer.png", "size", {72, 72}},
+	Animations = "animations-gunpowder-infantry", Icon = "icon-austrian-musketeer",
+	DefaultEquipment = {
+--		{"weapon", "unit-throwing-axe"},
+		{"boots", "unit-boots"}
+	},
+	Corpse = "unit-human-dead-body",
+	DaySightRangeBonus = 1,
+	NightSightRangeBonus = -1,
+--	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	AiDrops = {"unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	Sounds = {
+--		"selected", "basic-teuton-voices-selected-group",
+--		"acknowledge", "basic-teuton-voices-acknowledge",
+--		"ready", "basic-teuton-voices-ready",
+--		"help", "basic-teuton-voices-help",
+		"dead", "basic-human-voices-dead"
+	}
+} )
+
 DefineUnitType("unit-teuton-ritter", {
 --	Name = "Ritter",
 	Name = "Knight",

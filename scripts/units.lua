@@ -61,7 +61,9 @@ Units = {
 	"upgrade-faction-lombardy",
 	"upgrade-faction-holy-rome",
 	"unit-teuton-worker", "unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman",
-	"unit-teuton-spearman", "unit-teuton-archer",
+	"unit-teuton-spearman",
+	"unit-teuton-archer",
+	"unit-teuton-gunpowder-infantry",
 	"unit-teuton-ritter", "unit-teuton-knight-lord",
 	"unit-teuton-priest", 
 	"unit-teuton-catapult",
@@ -3500,6 +3502,7 @@ DefineUnitType("unit-template-gunpowder-infantry", {
 	Points = 95,
 	PierceDamage = true,
 	WeaponClasses = {"gun"},
+	Mana = {Enable = true, Max = 75, Value = 75, Increase = 1},
 	Gender = "male",
 	RequirementsString = "Smithy, Gunpowder and Engineering"
 } )

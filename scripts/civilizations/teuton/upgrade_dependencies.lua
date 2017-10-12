@@ -29,6 +29,10 @@ DefineDependency("unit-teuton-archer",
 	{"unit-teuton-lumber-mill"}
 )
 
+DefineDependency("unit-teuton-gunpowder-infantry",
+	{"unit-teuton-smithy", "upgrade-gunpowder"}, "or", {"upgrade-mercenary-company", "upgrade-gunpowder"}
+)
+
 DefineDependency("unit-teuton-guard-tower",
 	{"unit-teuton-lumber-mill", "upgrade-teuton-masonry"}
 )

@@ -62,7 +62,7 @@ DefinePredependency("unit-dwarven-thunderer",
 )
 
 DefineDependency("unit-dwarven-thunderer",
-	{"unit-dwarven-smithy", "upgrade-gunpowder", "upgrade-engineering"}, "or", {"unit-brising-smithy", "upgrade-gunpowder", "upgrade-engineering"}, "or", {"upgrade-mercenary-company", "upgrade-gunpowder", "upgrade-engineering"}
+	{"unit-dwarven-smithy", "upgrade-gunpowder"}, "or", {"unit-brising-smithy", "upgrade-gunpowder"}, "or", {"upgrade-mercenary-company", "upgrade-gunpowder"}
 )
 
 DefineDependency("upgrade-dwarven-great-axe",

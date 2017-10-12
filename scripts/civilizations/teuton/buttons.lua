@@ -82,6 +82,12 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-teuton-coinage",
 
 -- Units ---------------------------------------------------------
 
+DefineButton( { Pos = 7, Level = 0,
+	Action = "train-unit", Value = "unit-teuton-gunpowder-infantry",
+	Key = "p", Hint = "Train Gun~!powder Infantry", Popup = "popup-unit",
+	ForUnit = {"unit-teuton-barracks"}
+})
+
 DefineButton( { Pos = 1, Level = 0,
 	Action = "train-unit", Value = "unit-teuton-priest",
 	Key = "g", Hint = "Train ~!Gudjan", Popup = "popup-unit",
@@ -101,6 +107,16 @@ DefineButton( { Pos = 1, Level = 0,
 	Key = "l", Hint = "Hire C~!leric", Popup = "popup-unit",
 	ForUnit = {"unit-teuton-temple"}
 })
+
+-- Mercenaries ---------------------------------------------------------
+
+--[[
+DefineButton( { Pos = 7, Level = 0,
+	Action = "train-unit", Value = "unit-teuton-gunpowder-infantry",
+	Key = "p", Hint = "Hire Gun~!powder Infantry", Popup = "popup-unit",
+	ForUnit = {"unit-mercenary-camp"}
+})
+--]]
 
 -- Buildings -----------------------------------------------------
 
@@ -351,7 +367,9 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-christianity",
 	ForUnit = {
 		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
 		"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman",
-		"unit-teuton-spearman", "unit-frank-spearman", "unit-teuton-archer",
+		"unit-teuton-spearman", "unit-frank-spearman",
+		"unit-teuton-archer",
+		"unit-teuton-gunpowder-infantry",
 		"unit-teuton-ritter", "unit-teuton-knight-lord",
 		"unit-frank-horseman", "unit-frank-knight-lord",
 		"unit-gothic-horse-rider", "unit-gothic-horse-lord",
@@ -366,7 +384,9 @@ DefineButton( { Pos = 10, Level = 0, Icon = "icon-odin",
 	ForUnit = {
 		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
 		"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman",
-		"unit-teuton-spearman", "unit-frank-spearman", "unit-teuton-archer",
+		"unit-teuton-spearman", "unit-frank-spearman",
+		"unit-teuton-archer",
+		"unit-teuton-gunpowder-infantry",
 		"unit-teuton-ritter", "unit-teuton-knight-lord",
 		"unit-frank-horseman", "unit-frank-knight-lord",
 		"unit-gothic-horse-rider", "unit-gothic-horse-lord",
@@ -381,7 +401,9 @@ DefineButton( { Pos = 11, Level = 0, Icon = "icon-thor",
 	ForUnit = {
 		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
 		"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman",
-		"unit-teuton-spearman", "unit-frank-spearman", "unit-teuton-archer",
+		"unit-teuton-spearman", "unit-frank-spearman",
+		"unit-teuton-archer",
+		"unit-teuton-gunpowder-infantry",
 		"unit-teuton-ritter", "unit-teuton-knight-lord",
 		"unit-frank-horseman", "unit-frank-knight-lord",
 		"unit-gothic-horse-rider", "unit-gothic-horse-lord",

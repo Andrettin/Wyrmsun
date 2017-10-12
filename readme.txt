@@ -105,9 +105,10 @@ https://github.com/Andrettin/Wyrmsun
 - Added Snow and Pine Tree (Snow) tiles.
 
 * Units
-- Added dwarven Thunderer (icon by Jinn and unit graphics by Jinn and b_o).
-- Added goblin Gunpowder Infantry (icon by Jinn and unit graphics by Jinn and b_o).
-- Added Gothic Horse Rider (icon by Exidelo).
+- Added Dwarven Thunderer (icon by Jinn and unit graphics by Jinn and b_o).
+- Added Goblin Gunpowder Infantry (icon by Jinn and unit graphics by Jinn and b_o).
+- Added Teuton Gunpowder Infantry (icon by Jinn and unit graphics by Jinn and b_o).
+- Added Gothic Horse Rider and Horse Lord (icons by Exidelo).
 - Renamed Teuton Kriegers to Swordsmen, Adels to Veteran Swordsmen and Truhtins to Warlords.
 - Renamed Teuton Schutzes to Archers.
 - Renamed Teuton Ritters to Knights and Landesherrs to Knight Lords.
