@@ -1067,15 +1067,15 @@ DefineIcon({
 	File = "neutral/icons/railroad.png"
 })
 
+DefineIcon({
+	Name = "icon-glyph",
+	Size = {46, 38},
+	File = "neutral/icons/glyph.png"
+})
+
 -- tileset-dependent icons
 
 if (GetCurrentTileset() == "swamp" or GetCurrentTileset() == "dungeon") then
-	DefineIcon({
-		Name = "icon-glyph",
-		Size = {46, 38},
-		File = "tilesets/swamp/neutral/icons/glyph.png"
-	})
-
 	DefineIcon({
 		Name = "icon-fern",
 		Size = {46, 38},
@@ -1131,12 +1131,6 @@ if (GetCurrentTileset() == "swamp" or GetCurrentTileset() == "dungeon") then
 	})
 elseif (GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest") then
 	DefineIcon({
-		Name = "icon-glyph",
-		Size = {46, 38},
-		File = "tilesets/forest/neutral/icons/glyph.png"
-	})
-
-	DefineIcon({
 		Name = "icon-fern",
 		Size = {46, 38},
 		File = "tilesets/forest/neutral/icons/fern.png"
@@ -1190,12 +1184,6 @@ elseif (GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() ==
 		File = "tilesets/forest/neutral/icons/wyrm_skeleton.png"
 	})
 else	
-	DefineIcon({
-		Name = "icon-glyph",
-		Size = {46, 38},
-		File = "tilesets/swamp/neutral/icons/glyph.png"
-	})
-
 	DefineIcon({
 		Name = "icon-fern",
 		Size = {46, 38},

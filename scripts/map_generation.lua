@@ -1678,17 +1678,17 @@ function CreateDecorations()
 						unit = CreateUnit("unit-mushroom-patch", PlayerNumNeutral, {RandomX, RandomY})
 						Count = Count - 1
 					elseif (RandomNumber >= 200 and RandomNumber < 300) then
-						if (GetCurrentTileset() ~= "dungeon" and GetCurrentTileset() ~= "cave") then
+						if (GetTileTerrainName(RandomX, RandomY) ~= "cave-floor" and GetTileTerrainName(RandomX, RandomY) ~= "rockbound-cave-floor" and GetTileTerrainName(RandomX, RandomY) ~= "floor" and GetTileTerrainName(RandomX, RandomY) ~= "rug" and GetTileTerrainName(RandomX, RandomY) ~= "gold-pile") then
 							unit = CreateUnit("unit-flowers", PlayerNumNeutral, {RandomX, RandomY})
 							Count = Count - 1
 						end
 					elseif (RandomNumber >= 300 and RandomNumber < 400) then
-						if (GetCurrentTileset() ~= "dungeon" and GetCurrentTileset() ~= "cave") then
+						if (GetTileTerrainName(RandomX, RandomY) ~= "cave-floor" and GetTileTerrainName(RandomX, RandomY) ~= "rockbound-cave-floor" and GetTileTerrainName(RandomX, RandomY) ~= "floor" and GetTileTerrainName(RandomX, RandomY) ~= "rug" and GetTileTerrainName(RandomX, RandomY) ~= "gold-pile") then
 							unit = CreateUnit("unit-large-flower", PlayerNumNeutral, {RandomX, RandomY})
 							Count = Count - 1
 						end
 					elseif (RandomNumber >= 400 and RandomNumber < 600) then
-						if (GetCurrentTileset() == "cave" and SyncRand(2) == 0) then
+						if ((GetTileTerrainName(RandomX, RandomY) == "cave-floor" or GetTileTerrainName(RandomX, RandomY) == "rockbound-cave-floor") and SyncRand(2) == 0) then
 							unit = CreateUnit("unit-stalagmites", PlayerNumNeutral, {RandomX, RandomY})
 							Count = Count - 1
 						else
@@ -1696,20 +1696,20 @@ function CreateDecorations()
 							Count = Count - 1
 						end
 					elseif (RandomNumber >= 600 and RandomNumber < 800) then
-						if (GetCurrentTileset() ~= "dungeon" and GetCurrentTileset() ~= "cave") then
+						if (GetTileTerrainName(RandomX, RandomY) ~= "cave-floor" and GetTileTerrainName(RandomX, RandomY) ~= "rockbound-cave-floor" and GetTileTerrainName(RandomX, RandomY) ~= "floor" and GetTileTerrainName(RandomX, RandomY) ~= "rug" and GetTileTerrainName(RandomX, RandomY) ~= "gold-pile") then
 							unit = CreateUnit("unit-twigs", PlayerNumNeutral, {RandomX, RandomY})
 							Count = Count - 1
-						elseif (GetCurrentTileset() == "dungeon" and GetTileTerrainName(RandomX, RandomY) == "floor") then
+						elseif (GetTileTerrainName(RandomX, RandomY) == "floor") then
 							unit = CreateUnit("unit-floor-decoration", PlayerNumNeutral, {RandomX, RandomY})
 							Count = Count - 1
 						end
 					elseif (RandomNumber >= 800 and RandomNumber < 875) then
-						if (GetCurrentTileset() ~= "dungeon" and GetCurrentTileset() ~= "cave") then
+						if (GetTileTerrainName(RandomX, RandomY) ~= "cave-floor" and GetTileTerrainName(RandomX, RandomY) ~= "rockbound-cave-floor" and GetTileTerrainName(RandomX, RandomY) ~= "floor" and GetTileTerrainName(RandomX, RandomY) ~= "rug" and GetTileTerrainName(RandomX, RandomY) ~= "gold-pile") then
 							unit = CreateUnit("unit-fern", PlayerNumNeutral, {RandomX, RandomY})
 							Count = Count - 1
 						end
 					elseif (RandomNumber >= 875 and RandomNumber < 900) then
-						if (GetCurrentTileset() ~= "dungeon" and GetCurrentTileset() ~= "cave") then
+						if (GetTileTerrainName(RandomX, RandomY) ~= "cave-floor" and GetTileTerrainName(RandomX, RandomY) ~= "rockbound-cave-floor" and GetTileTerrainName(RandomX, RandomY) ~= "floor" and GetTileTerrainName(RandomX, RandomY) ~= "rug" and GetTileTerrainName(RandomX, RandomY) ~= "gold-pile") then
 							unit = CreateUnit("unit-log", PlayerNumNeutral, {RandomX, RandomY})
 							Count = Count - 1
 						end
@@ -1717,7 +1717,7 @@ function CreateDecorations()
 						unit = CreateUnit("unit-bones", PlayerNumNeutral, {RandomX, RandomY})
 						Count = Count - 1
 					elseif (RandomNumber >= 999) then
-						if (GetCurrentTileset() == "swamp") then
+						if (GetTileTerrainName(RandomX, RandomY) == "dry-mud" or GetTileTerrainName(RandomX, RandomY) == "mud") then
 							unit = CreateUnit("unit-wyrm-skeleton", PlayerNumNeutral, {RandomX, RandomY})
 							Count = Count - 1
 						else
@@ -3980,15 +3980,7 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 	
 --	GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8)
 
-	if (GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest") then
---		GenerateDarkRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, "Rough")
-	end
-
 	GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
-
-	if (GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest") then
---		GenerateDarkLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
-	end
 
 	ApplyRawTiles()
 
