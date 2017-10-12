@@ -157,6 +157,11 @@ function HandleCheats(str)
 	elseif (string.sub(str, 0, 19) == "numunitsconstructed") then
 		local message_player = tonumber(string.sub(str, 21))
 		AddMessage("Player " .. message_player .. " has " .. Players[message_player].NumBuildingsUnderConstruction .. " under construction buildings.")
+	elseif (str == "fire and blood") then
+		local gunpowder_infantry_type = GetFactionClassUnitType("gunpowder-infantry", GetPlayerData(GetThisPlayer(), "Faction"))
+		if (gunpowder_infantry_type) then
+			unit = CreateUnit(gunpowder_infantry_type, GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
+		end
 	else
 		return false
 	end
