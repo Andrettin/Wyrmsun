@@ -119,6 +119,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Upgrades
 - Added Gunpowder upgrade (researchable at the Academy/University), which unlocks gunpowder infantry units.
+- Researching Writing upgrades now increases only research speed.
 
 -----------------------------------------------------------------------
 - 2.8.3

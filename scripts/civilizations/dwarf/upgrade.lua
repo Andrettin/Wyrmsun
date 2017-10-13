@@ -143,7 +143,7 @@ DefineUpgrade("upgrade-dwarven-runewriting", {
 	Name = "Dvalic Runewriting",
 	Parent = "upgrade-writing",
 	Civilization = "dwarf",
-	Description = "The dwarven system of runewriting is said to have been invented by the dwarven scholar, Dvalin.\n\nEffect: +10% Time Efficiency for all buildings. Allows Scrolls and Books to be sold at the Market.",
+	Description = "The dwarven system of runewriting is said to have been invented by the dwarven scholar, Dvalin.\n\nEffect: +10% Research Speed for buildings. Allows Scrolls and Books to be sold at the Market.",
 	Background = "In the Poetic Edda's ~<Hovamol~>, Dvalin is mentioned as the one who bestowed the knowledge of runes upon the dwarves.",
 	Icon = "icon-norse-runewriting"
 })
@@ -288,17 +288,15 @@ DefineModifier("upgrade-dwarven-coinage",
 )
 
 DefineModifier("upgrade-dwarven-runewriting",
-	{"TimeEfficiencyBonus", 10},
+	{"ResearchSpeedBonus", 10},
 	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"},
-	{"apply-to", "unit-dwarven-mushroom-farm"}, {"apply-to", "unit-dwarven-barracks"},
+	{"apply-to", "unit-dwarven-barracks"},
 	{"apply-to", "unit-dwarven-lumber-mill"}, {"apply-to", "unit-dwarven-smithy"}, {"apply-to", "unit-brising-smithy"},
 	{"apply-to", "unit-dwarven-masons-shop"},
-	{"apply-to", "unit-dwarven-yale-pen"}, {"apply-to", "unit-joruvellir-yale-pen"},
-	{"apply-to", "unit-dwarven-temple"},
-	{"apply-to", "unit-dwarven-market"},
-	{"apply-to", "unit-dwarven-academy"},
-	{"apply-to", "unit-dwarven-sentry-tower"}, {"apply-to", "unit-dwarven-guard-tower"},
-	{"apply-to", "unit-dwarven-dock"}
+--	{"apply-to", "unit-dwarven-yale-pen"}, {"apply-to", "unit-joruvellir-yale-pen"},
+--	{"apply-to", "unit-dwarven-market"},
+	{"apply-to", "unit-dwarven-temple"}, {"apply-to", "unit-dwarven-academy"}
+--	{"apply-to", "unit-dwarven-dock"}
 )
 
 DefineModifier("upgrade-dwarven-alchemy",

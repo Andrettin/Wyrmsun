@@ -62,7 +62,7 @@ DefineUpgrade("upgrade-faction-driftwood", {
 
 DefineUpgrade("upgrade-faction-ezmarria", {
 	Name = "Ezmarria",
-	EffectsString = "+50% Time Efficiency for Lumber Mills and Fugla Forges",
+	EffectsString = "+50% Research Speed for Lumber Mills and Fugla Forges",
 	RequirementsString = "Writing and Masonry"
 })
 
@@ -168,7 +168,7 @@ DefineModifier("upgrade-faction-driftwood",
 )
 
 DefineModifier("upgrade-faction-ezmarria",
-	{"TimeEfficiencyBonus", 50},
+	{"ResearchSpeedBonus", 50},
 	{"apply-to", "unit-goblin-lumber-mill"}, {"apply-to", "unit-goblin-smithy"}
 )
 

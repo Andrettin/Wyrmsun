@@ -27,7 +27,7 @@
 
 DefineUpgrade("upgrade-faction-brising-clan", {
 	Name = "Brising Clan",
-	EffectsString = "+10 HP for Miners, +1 Damage for Axefighters, +50% Time Efficiency for Smithies"
+	EffectsString = "+10 HP for Miners, +1 Damage for Axefighters, +50% Research Speed for Smithies"
 })
 
 DefineUpgrade("upgrade-faction-eikinskjaldi-clan", {
@@ -97,7 +97,7 @@ DefineUpgrade("upgrade-faction-knalga", {
 
 DefineUpgrade("upgrade-faction-lyr", {
 	Name = "Lyr",
-	EffectsString = "+10 HP for Miners, +5 Armor for Towers, +50% Time Efficiency for Smithies",
+	EffectsString = "+10 HP for Miners, +5 Armor for Towers, +50% Research Speed for Smithies",
 	RequirementsString = "Writing and Masonry"
 })
 

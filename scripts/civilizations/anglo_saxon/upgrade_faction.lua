@@ -44,7 +44,7 @@ DefineUpgrade("upgrade-faction-bernice-tribe", {
 
 DefineUpgrade("upgrade-faction-cantware-tribe", {
 	Name = "Cantware Tribe",
-	EffectsString = "+10% Time Efficiency for all buildings",
+	EffectsString = "+10% Research Speed for buildings",
 	RequirementsString = "Spatha and Iron Shield"
 })
 
@@ -127,7 +127,7 @@ DefineUpgrade("upgrade-faction-jutland", {
 
 DefineUpgrade("upgrade-faction-kent", {
 	Name = "Kent",
-	EffectsString = "+10% Time Efficiency for all buildings",
+	EffectsString = "+10% Research Speed for buildings",
 	RequirementsString = "Writing and Masonry"
 })
 
@@ -187,14 +187,14 @@ DefineModifier("upgrade-faction-bernice-tribe",
 )
 
 DefineModifier("upgrade-faction-cantware-tribe",
-	{"TimeEfficiencyBonus", 10},
+	{"ResearchSpeedBonus", 10},
 	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"},
-	{"apply-to", "unit-teuton-farm"}, {"apply-to", "unit-teuton-barracks"},
+	{"apply-to", "unit-teuton-barracks"},
 	{"apply-to", "unit-teuton-lumber-mill"}, {"apply-to", "unit-teuton-smithy"},
 --	{"apply-to", "unit-teuton-stables"},
-	{"apply-to", "unit-teuton-temple"}, {"apply-to", "unit-teuton-university"},
-	{"apply-to", "unit-teuton-watch-tower"}, {"apply-to", "unit-teuton-guard-tower"},
-	{"apply-to", "unit-teuton-dock"}
+--	{"apply-to", "unit-teuton-market"},
+	{"apply-to", "unit-teuton-temple"}, {"apply-to", "unit-teuton-university"}
+--	{"apply-to", "unit-teuton-dock"}
 )
 
 DefineModifier("upgrade-faction-charude-tribe",
@@ -277,14 +277,14 @@ DefineModifier("upgrade-faction-jutland",
 )
 
 DefineModifier("upgrade-faction-kent",
-	{"TimeEfficiencyBonus", 10},
+	{"ResearchSpeedBonus", 10},
 	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"},
-	{"apply-to", "unit-teuton-farm"}, {"apply-to", "unit-teuton-barracks"},
+	{"apply-to", "unit-teuton-barracks"},
 	{"apply-to", "unit-teuton-lumber-mill"}, {"apply-to", "unit-teuton-smithy"},
 --	{"apply-to", "unit-teuton-stables"},
-	{"apply-to", "unit-teuton-temple"}, {"apply-to", "unit-teuton-university"},
-	{"apply-to", "unit-teuton-watch-tower"}, {"apply-to", "unit-teuton-guard-tower"},
-	{"apply-to", "unit-teuton-dock"}
+--	{"apply-to", "unit-teuton-market"},
+	{"apply-to", "unit-teuton-temple"}, {"apply-to", "unit-teuton-university"}
+--	{"apply-to", "unit-teuton-dock"}
 )
 
 DefineModifier("upgrade-faction-mercia",

@@ -315,7 +315,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-coinage",
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-norse-runewriting",
 	Action = "research", Value = "upgrade-teuton-writing",
 	Allowed = "check-single-research",
-	Description = "+10% Time Efficiency for all buildings. Allows Scrolls and Books to be sold at the Market.",
+	Description = "+10% Research Speed for buildings. Allows Scrolls and Books to be sold at the Market.",
 	Key = "w", Hint = "Research ~!Writing", Popup = "popup-research",
 	ForUnit = {"unit-teuton-stronghold"}
 } )

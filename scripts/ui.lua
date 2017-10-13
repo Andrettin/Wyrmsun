@@ -1207,19 +1207,6 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {Supply = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Food Supply:"), " "), Variable = "Supply", Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {TimeEfficiencyBonus = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = Concat(
-							Concat(
-								Concat(
-									_("Time Efficiency: "),
-									If(GreaterThan(TypeVar("TimeEfficiencyBonus", "Value"), 0), "+", "")
-								),
-								String(TypeVar("TimeEfficiencyBonus", "Value"))
-							),
-							"%"
-						),
-						Font = wyr.preferences.PopupDescriptionFont}}
-				},
 				{ 	Condition = {SpeedBonus = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Speed Bonus: "), Variable = "SpeedBonus", Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -1231,6 +1218,12 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {AttackRange = "only", AttackFromTransporter = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Range Bonus: +"), Variable = "AttackRange", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {TimeEfficiencyBonus = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Time Efficiency Bonus: "), Variable = "TimeEfficiencyBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {ResearchSpeedBonus = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Research Speed Bonus: "), Variable = "ResearchSpeedBonus", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {DehydrationImmunity = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = "Dehydration Immunity", Font = wyr.preferences.PopupDescriptionFont}}
@@ -1686,6 +1679,12 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {FurnitureGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Furniture Production Bonus: "), Variable = "FurnitureGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {TimeEfficiencyBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Time Efficiency Bonus: "), Variable = "TimeEfficiencyBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {ResearchSpeedBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Research Speed Bonus: "), Variable = "ResearchSpeedBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {UnitTypeClass = "merchant", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Text", {Text = _("Trade Capacity: 100"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -1754,6 +1753,9 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {TownHall = "false", CanStore = "leather", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Stores Leather"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {ImproveIncomes = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Text", {Text = TypeImproveIncomes("Type"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "editor-unit"}, 

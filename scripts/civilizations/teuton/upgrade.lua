@@ -205,18 +205,16 @@ DefineModifier("upgrade-teuton-coinage",
 )
 
 DefineModifier("upgrade-teuton-writing",
-	{"TimeEfficiencyBonus", 10},
+	{"ResearchSpeedBonus", 10},
 	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"},
-	{"apply-to", "unit-teuton-farm"}, {"apply-to", "unit-teuton-barracks"},
+	{"apply-to", "unit-teuton-barracks"},
 	{"apply-to", "unit-teuton-lumber-mill"}, {"apply-to", "unit-teuton-smithy"},
 --	{"apply-to", "unit-teuton-stables"},
-	{"apply-to", "unit-teuton-temple"},
-	{"apply-to", "unit-teuton-market"},
-	{"apply-to", "unit-teuton-university"},
-	{"apply-to", "unit-teuton-watch-tower"}, {"apply-to", "unit-teuton-guard-tower"},
-	{"apply-to", "unit-teuton-dock"},
+--	{"apply-to", "unit-teuton-market"},
+	{"apply-to", "unit-teuton-temple"}, {"apply-to", "unit-teuton-university"},
+--	{"apply-to", "unit-teuton-dock"},
 	{"apply-to", "unit-latin-town-hall"},
-	{"apply-to", "unit-latin-farm"}, {"apply-to", "unit-latin-barracks"},
+	{"apply-to", "unit-latin-barracks"},
 	{"apply-to", "unit-latin-smithy"}
 --	{"apply-to", "unit-latin-stables"}
 )

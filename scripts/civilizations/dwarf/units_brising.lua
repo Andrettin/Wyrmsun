@@ -78,6 +78,6 @@ DefineUnitType("unit-brising-smithy", {
 	Image = {"file", "dlcs/brising_faction_flair/graphics/buildings/brising_smithy.png", "size", {96, 96}},
 	Shadow = {"file", "dlcs/brising_faction_flair/graphics/buildings/brising_smithy_shadow.png", "size", {96, 96}},
 	Icon = "icon-brising-smithy",
-	TimeEfficiencyBonus = 50, -- +50% Time Efficiency Bonus
+	ResearchSpeedBonus = 50, -- +50% Research Speed Bonus
 	AiDrops = {"unit-brising-round-shield"}
 } )
