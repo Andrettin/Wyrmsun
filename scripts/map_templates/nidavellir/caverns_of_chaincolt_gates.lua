@@ -47,8 +47,8 @@ DefineMapTemplate("caverns-of-chaincolt-gates-underground", { -- From Battle for
 	}
 })
 
-SetMapTemplateLayerConnector("nidavellir", "unit-cavern-entrance", {461, 228}, 1)
-SetMapTemplateLayerConnector("nidavellir-underground", "unit-cavern-entrance", {462, 227}, 0)
+SetMapTemplateLayerConnector("nidavellir", "unit-cavern-entrance", {459, 228}, 1)
+SetMapTemplateLayerConnector("nidavellir-underground", "unit-cavern-entrance", {459, 228}, 0)
 
 -- stepping on all the glyphs should deactivate (or reactivate) the connection between the cavern entrances
 SetMapTemplateUnit("nidavellir-underground", "unit-glyph", "", {450 + 3, 213 + 5})
@@ -71,3 +71,18 @@ SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-goblin-swords
 SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-goblin-swordsman", "", {30, 25}, 24, 25)
 SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-goblin-swordsman", "", {30, 25}, 24, 25)
 SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-goblin-swordsman", "", {30, 25}, 24, 25)
+
+-- Road present in 25, as seen in Battle for Wesnoth: The Sceptre of Fire (Closing the Gates)
+SetMapTemplateTileTerrain("nidavellir", "road", {460, 230}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {460, 231}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {460, 232}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {460, 233}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {460, 234}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {460, 235}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {460, 236}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {460, 237}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {460, 238}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {460, 239}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {461, 239}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {462, 239}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {462, 240}, 25)
