@@ -69,6 +69,13 @@ DefineUpgrade("upgrade-item-suffix-of-the-colossus", {
 	MagicLevel = 2
 })
 
+DefineUpgrade("upgrade-item-suffix-of-the-day", {
+	Name = "of the Day",
+	MagicSuffix = true,
+	ItemSuffix = {"helmet", true, "amulet", true, "ring", true},
+	MagicLevel = 1
+})
+
 DefineUpgrade("upgrade-item-suffix-of-diligence", {
 	Name = "of Diligence",
 	MagicSuffix = true,
@@ -127,6 +134,13 @@ DefineUpgrade("upgrade-item-suffix-of-lightning", {
 	MagicSuffix = true,
 	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
 	MagicLevel = 2
+})
+
+DefineUpgrade("upgrade-item-suffix-of-the-night", {
+	Name = "of the Night",
+	MagicSuffix = true,
+	ItemSuffix = {"helmet", true, "amulet", true, "ring", true},
+	MagicLevel = 1
 })
 
 DefineUpgrade("upgrade-item-suffix-of-perfuration", {
@@ -243,7 +257,7 @@ DefineUpgrade("upgrade-item-suffix-of-victory", {
 DefineUpgrade("upgrade-item-suffix-of-vision", {
 	Name = "of Vision",
 	MagicSuffix = true,
-	ItemSuffix = {"amulet", true, "ring", true},
+	ItemSuffix = {"helmet", true, "amulet", true, "ring", true},
 	MagicLevel = 2
 })
 
@@ -294,6 +308,10 @@ DefineModifier("upgrade-item-suffix-of-the-colossus",
 	{"Armor", 2}
 )
 
+DefineModifier("upgrade-item-suffix-of-the-day",
+	{"DaySightRangeBonus", 1}
+)
+
 DefineModifier("upgrade-item-suffix-of-diligence",
 	{"TimeEfficiencyBonus", 10}
 )
@@ -324,6 +342,10 @@ DefineModifier("upgrade-item-suffix-of-the-jinn",
 
 DefineModifier("upgrade-item-suffix-of-lightning",
 	{"LightningDamage", 1}
+)
+
+DefineModifier("upgrade-item-suffix-of-the-night",
+	{"NightSightRangeBonus", 1}
 )
 
 DefineModifier("upgrade-item-suffix-of-perfuration",
@@ -433,6 +455,10 @@ DefineDependency("upgrade-item-suffix-of-the-colossus",
 	{"upgrade-deity-domain-earth"}, "or", {"upgrade-deity-domain-metal"}, "or", {"upgrade-deity-domain-metalworking"}, "or", {"upgrade-deity-domain-warfare"}
 )
 
+DefineDependency("upgrade-item-suffix-of-the-day",
+	{"upgrade-deity-domain-light"}, "or", {"upgrade-deity-domain-sun"}, "or", {"upgrade-deity-domain-order"}
+)
+
 DefineDependency("upgrade-item-suffix-of-diligence",
 	{"upgrade-deity-domain-temperance"}
 )
@@ -459,6 +485,10 @@ DefineDependency("upgrade-item-suffix-of-the-jinn",
 
 DefineDependency("upgrade-item-suffix-of-lightning",
 	{"upgrade-deity-domain-lightning"}
+)
+
+DefineDependency("upgrade-item-suffix-of-the-night",
+	{"upgrade-deity-domain-darkness"}, "or", {"upgrade-deity-domain-moon"}, "or", {"upgrade-deity-domain-chaos"}
 )
 
 DefineDependency("upgrade-item-suffix-of-perfuration",

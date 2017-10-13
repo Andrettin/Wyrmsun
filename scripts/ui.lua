@@ -1361,6 +1361,12 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {SightRange = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Sight:"), " "), Variable = "SightRange", Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {DaySightRangeBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Day Sight Bonus:"), " "), Variable = "DaySightRangeBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {NightSightRangeBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Night Sight Bonus:"), " "), Variable = "NightSightRangeBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {AttackRange = "only", BasicDamage = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Range:"), " "), Variable = "AttackRange", Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -2275,6 +2281,12 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {SightRange = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Sight:"), " "), Variable = "SightRange", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {DaySightRangeBonus = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Day Sight Bonus:"), " "), Variable = "DaySightRangeBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {NightSightRangeBonus = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Night Sight Bonus:"), " "), Variable = "NightSightRangeBonus", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {HitPointHealing = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Healing: "), Variable = "HitPointHealing", Font = wyr.preferences.PopupDescriptionFont}}

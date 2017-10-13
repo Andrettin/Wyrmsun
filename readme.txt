@@ -72,6 +72,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Items
 - Added The Iron Crown of Lombardy unique crown.
+- Added the magic affixes "of the Day" (+1 day sight bonus) and "of the Night" (+1 night sight bonus).
 
 * Map Editor
 - Fixed crash when placing a Settlement Site in the editor.
