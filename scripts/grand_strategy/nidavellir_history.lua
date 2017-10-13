@@ -43,8 +43,7 @@ if (GrandStrategyYear >= -1) then
 	SetProvinceHero("Caverns of Chaincolt", "Thursagan", 2) -- Thursagan could be in the Caverns of Chaincolt at this time
 end
 
-if (GrandStrategyYear >= 25) then -- at this time Rugnur was already in charge of the outpost in the Chaincolt Foothills, Baglur was at the Caverns of Chaincolt gate, Thursagan was living in the Northern Wastelands and Durstorn was the chief of the Norlund clan
-	SetProvinceHero("Caverns of Chaincolt", "Rugnur", 2)
+if (GrandStrategyYear >= 25) then -- at this time Baglur was at the Caverns of Chaincolt gate, Thursagan was living in the Northern Wastelands and Durstorn was the chief of the Norlund clan
 	SetProvinceHero("Northern Wastelands", "Thursagan", 2) -- by this point, Thursagan had gone away to the north
 	GrandStrategyEvents.TheSagesDeparture = nil
 end

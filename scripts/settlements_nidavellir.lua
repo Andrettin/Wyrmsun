@@ -187,6 +187,44 @@ DefineSettlement("lggi", { -- Lggi tribe settlement site; this is the name of a 
 	Regions = {}
 })
 
+DefineSettlement("pypos-camp", { -- from Battle for Wesnoth: The Sceptre of Fire (A Bargain is Struck)
+	Name = "Pypo's Camp",
+	MapTemplate = "nidavellir",
+	Position = {442, 263},
+	CulturalNames = {
+		"gnome", "Pypo's Camp"
+	},
+	Cores = {
+	},
+	HistoricalOwners = {
+		25, "untersberg",
+		{25, 12, 30}, ""
+	},
+	HistoricalBuildings = {
+	},
+	Regions = {}
+})
+
+DefineSettlement("rugnurs-outpost", { -- from Battle for Wesnoth: The Sceptre of Fire (A Bargain is Struck)
+	Name = "Rugnur's Outpost",
+	MapTemplate = "nidavellir",
+	Position = {465, 239},
+	CulturalNames = {
+		"dwarf", "Rugnur's Outpost"
+	},
+	Cores = {
+--		"norlund-clan"
+	},
+	HistoricalOwners = {
+		25, "norlund-clan", -- at this time Rugnur was already in charge of the outpost in the Chaincolt Foothills
+		{25, 12, 30}, "shinsplitter-clan" -- conquered during 25 by the Shinsplitters
+	},
+	HistoricalBuildings = {
+		25, 0, "watch-tower"
+	},
+	Regions = {}
+})
+
 DefineSettlement("shorbear-hold", { -- From Battle for Wesnoth: The Sceptre of Fire (Hills of the Shorbear Clan, Towards the Caves)
 	Name = "Shorbear Hold",
 	MapTemplate = "nidavellir",

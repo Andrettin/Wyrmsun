@@ -37,6 +37,9 @@ DefineCharacter("pypo", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, p
 	HistoricalTitles = {
 		"head-of-state", -1, 40, "untersberg"
 	},
+	HistoricalLocations = {
+		25, "nidavellir", "pypos-camp"
+	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "untersberg") then
 			return true

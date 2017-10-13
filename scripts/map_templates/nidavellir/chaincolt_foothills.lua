@@ -25,22 +25,64 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineMapTemplate("chaincolt-foothills", { -- from Battle for Wesnoth: The Sceptre of Fire (A Bargain is Struck)
-	Name = "Chaincolt Foothills",
-	MainTemplate = "nidavellir",
-	Width = 34,
-	Height = 33,
-	SubtemplatePosition = {453, 252},
-	GeneratedNeutralUnits = {
-		"unit-copper-deposit", 2
-	}
-})
+SetMapTemplateUnit("nidavellir", "unit-dwarven-guard-tower", "shinsplitter-clan", {462, 264}, 25)
+SetMapTemplateUnit("nidavellir", "unit-dwarven-steelclad", "shinsplitter-clan", {462, 264}, 25) -- Glildur
 
-SetMapTemplateUnit("chaincolt-foothills", "unit-dwarven-guard-tower", "norlund-clan", {28, 3}, 24, 25)
-SetMapTemplateHero("chaincolt-foothills", "rugnur", "norlund-clan", {28, 3}, 24, 25)
-SetMapTemplateUnit("chaincolt-foothills", "unit-dwarven-guard-tower", "shinsplitter-clan", {28, 3}, 25)
-
-SetMapTemplateUnit("chaincolt-foothills", "unit-dwarven-guard-tower", "shinsplitter-clan", {25, 28}, 24)
-SetMapTemplateUnit("chaincolt-foothills", "unit-dwarven-steelclad", "shinsplitter-clan", {25, 28}, 24)
-
-SetMapTemplateUnit("chaincolt-foothills", "unit-gnomish-master-at-arms", "untersberg", {5, 27}, 24, 25)
+-- Road present in 25, as seen in Battle for Wesnoth: The Sceptre of Fire (A Bargain is Struck)
+SetMapTemplateTileTerrain("nidavellir", "road", {437, 267}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {437, 268}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {438, 266}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {438, 267}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {438, 268}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {439, 266}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {440, 264}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {440, 265}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {440, 266}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {441, 264}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {442, 264}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {443, 264}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {444, 262}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {444, 263}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {444, 264}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {445, 262}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {446, 261}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {446, 262}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {447, 261}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {448, 260}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {448, 261}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {449, 260}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {450, 259}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {450, 260}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {451, 258}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {451, 259}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {452, 257}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {452, 258}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {453, 255}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {453, 256}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {453, 257}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {454, 251}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {454, 252}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {454, 253}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {454, 254}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {454, 255}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {455, 251}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {456, 249}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {456, 250}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {456, 251}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {457, 249}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {458, 249}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {459, 249}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {460, 249}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {461, 249}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {462, 240}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {462, 241}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {462, 242}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {462, 243}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {462, 245}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {462, 249}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {463, 240}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {463, 245}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {463, 246}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {463, 247}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {463, 248}, 25)
+SetMapTemplateTileTerrain("nidavellir", "road", {463, 249}, 25)

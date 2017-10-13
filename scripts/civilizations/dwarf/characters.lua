@@ -25,8 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- Dwarven heroes
-
 DefineCharacter("modsognir", { -- one of the earliest dwarven leaders
 	Name = "Modsognir",
 	Gender = "male",
@@ -266,6 +264,9 @@ DefineCharacter("glonoin", { -- from Battle for Wesnoth: The Sceptre of Fire; ch
 	HistoricalTitles = {
 		"head-of-state", -1, 29, "shorbear-clan"
 	},
+	HistoricalLocations = {
+		-1, "nidavellir", "shorbear-hold"
+	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "shorbear-clan") then
 			return true
@@ -288,7 +289,10 @@ DefineCharacter("rugnur", { -- from Battle for Wesnoth: The Sceptre of Fire; lea
 	Date = 25,
 	DeathDate = 40, -- died in 40 AD of a violent death
 	ViolentDeath = true,
-	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
+	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
+	HistoricalLocations = {
+		25, "nidavellir", "rugnurs-outpost" -- at this time Rugnur was already in charge of the outpost in the Chaincolt Foothills
+	}
 })
 
 Load("scripts/civilizations/dwarf/characters_joruvellir.lua")

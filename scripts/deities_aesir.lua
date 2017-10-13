@@ -87,7 +87,7 @@ DefineDeity("frigg", { -- First among the goddesses; Source: Kevin Crossley-Holl
 
 DefineDeity("seaxneat", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 98.
 	Name = "Seaxneat",
-	Pantheon = "Aesir", -- Seaxneat was a Germanic (Anglo-Saxon) deity, but was he actually considered one of the Aesir?
+	Pantheon = "Aesir", -- Seaxneat was a Germanic (Anglo-Saxon) deity, but we don't know if he was actually considered one of the Aesir
 	Civilizations = {"anglo-saxon"},
 	Religions = {"paganism"},
 	Gender = "male",
