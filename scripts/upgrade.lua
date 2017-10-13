@@ -193,7 +193,7 @@ DefineUpgrade("upgrade-alchemy", {
 	Class = "alchemy",
 	Icon = "icon-cauldron",
 	Description = "Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.",
-	RequirementsString = "Writing and Mathematics",
+	RequirementsString = "Philosophy and Mathematics",
 	Costs = {"time", 250, "copper", 4000}
 })
 
@@ -213,7 +213,7 @@ DefineUpgrade("upgrade-mathematics", {
 	Icon = "icon-mathematics",
 	Description = "The understanding of even a basic level of mathematics has significant benefits for a civilization, particularly in matters such as keeping account of trade.",
 	RequirementsString = "Writing",
-	Costs = {"time", 250, "copper", 2000, "lumber", 2000}
+	Costs = {"time", 250, "copper", 2000}
 })
 
 DefineUpgrade("upgrade-engineering", {
@@ -231,9 +231,19 @@ DefineUpgrade("upgrade-architecture", {
 	Class = "architecture",
 	Civilization = "neutral",
 	Icon = "icon-architecture",
-	Description = "The development of architecture as an area of knowledge results in better construction techniques.",
+	Description = "The development of architecture as an area of knowledge results in better construction techniques.\n\nEffect: +20% Hit Points, +5 Armor and -25% Salvage Factor for buildings.",
 	RequirementsString = "Writing and Masonry",
 	Costs = {"time", 250, "copper", 2000, "lumber", 2000}
+})
+
+DefineUpgrade("upgrade-philosophy", {
+	Name = "Philosophy",
+	Class = "philosophy",
+	Civilization = "neutral",
+	Icon = "icon-philosophy",
+	Description = "The new modes of thinking fostered by the development of philosophy result in the improvement of the rate of technical and cultural advancement.\n\nEffect: +10% Research Speed for buildings.",
+	RequirementsString = "Writing",
+	Costs = {"time", 250, "copper", 2000}
 })
 
 DefineUpgrade("upgrade-gunpowder", {
@@ -295,6 +305,37 @@ DefineModifier("upgrade-architecture",
 	{"apply-to", "unit-latin-farm"}, {"apply-to", "unit-latin-barracks"},
 	{"apply-to", "unit-latin-smithy"},
 	{"apply-to", "unit-latin-stables"}
+)
+
+DefineModifier("upgrade-philosophy",
+	{"ResearchSpeedBonus", 10},
+	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"},
+	{"apply-to", "unit-dwarven-barracks"},
+	{"apply-to", "unit-dwarven-lumber-mill"}, {"apply-to", "unit-dwarven-smithy"}, {"apply-to", "unit-brising-smithy"},
+	{"apply-to", "unit-dwarven-masons-shop"},
+--	{"apply-to", "unit-dwarven-yale-pen"}, {"apply-to", "unit-joruvellir-yale-pen"},
+--	{"apply-to", "unit-dwarven-market"},
+	{"apply-to", "unit-dwarven-temple"}, {"apply-to", "unit-dwarven-academy"},
+--	{"apply-to", "unit-dwarven-dock"},
+	{"apply-to", "unit-ettin-town-hall"},
+	{"apply-to", "unit-goblin-town-hall"}, {"apply-to", "unit-goblin-stronghold"},
+	{"apply-to", "unit-goblin-mess-hall"},
+	{"apply-to", "unit-goblin-lumber-mill"}, {"apply-to", "unit-goblin-smithy"},
+--	{"apply-to", "unit-goblin-market"},
+	{"apply-to", "unit-goblin-temple"}, {"apply-to", "unit-goblin-academy"},
+--	{"apply-to", "unit-goblin-dock"},
+	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"},
+	{"apply-to", "unit-teuton-barracks"},
+	{"apply-to", "unit-teuton-lumber-mill"}, {"apply-to", "unit-teuton-smithy"},
+--	{"apply-to", "unit-teuton-stables"},
+--	{"apply-to", "unit-teuton-market"},
+	{"apply-to", "unit-teuton-temple"}, {"apply-to", "unit-teuton-university"},
+--	{"apply-to", "unit-teuton-dock"},
+	{"apply-to", "unit-latin-town-hall"},
+	{"apply-to", "unit-latin-barracks"},
+	{"apply-to", "unit-latin-smithy"},
+--	{"apply-to", "unit-latin-stables"},
+	{"apply-to", "unit-mercenary-camp"}
 )
 
 -- Load the faction type upgrades

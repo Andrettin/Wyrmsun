@@ -102,7 +102,7 @@ DefineDependency("upgrade-dwarven-coinage",
 )
 
 DefineDependency("upgrade-dwarven-alchemy",
-	{"upgrade-dwarven-runewriting", "upgrade-mathematics"}
+	{"upgrade-philosophy", "upgrade-mathematics"}
 )
 
 DefineDependency("unit-dwarven-guard-tower",

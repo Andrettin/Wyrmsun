@@ -118,8 +118,9 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused the Suebi Kregar to be available to other human civilizations.
 
 * Upgrades
-- Added Gunpowder upgrade (researchable at the Academy/University), which unlocks gunpowder infantry units.
-- Researching Writing upgrades now increases only research speed.
+- Added Gunpowder upgrade (icon by Exidelo), which is researchable at the Academy/University and unlocks gunpowder infantry units.
+- Writing upgrades now increase only research speed.
+- Added Philosophy upgrade (icon by Exidelo), which is researchable at the Academy/University and grants a +10% research speed bonus.
 
 -----------------------------------------------------------------------
 - 2.8.3

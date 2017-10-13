@@ -279,6 +279,8 @@ local land_funcs = {
 --	function() return AiResearch(AiUpgradeEliteShooter1()) end,
 --	function() return AiResearch(AiUpgradeEliteShooter2()) end,
 --	function() return AiResearch(AiUpgradeEliteShooter3()) end,
+	function() return AiResearch(GetAiUnitType("philosophy")) end, -- needed for alchemy
+	function() return AiWait(GetAiUnitType("philosophy")) end,	
 	function() return AiResearch(GetAiUnitType("alchemy")) end, -- research alchemy to improve shooters
 
 	function() return AiSet(GetAiUnitType("worker"), 40) end,

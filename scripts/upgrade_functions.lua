@@ -112,7 +112,8 @@ function ApplyTechLevels()
 		"upgrade-goblin-coinage", "upgrade-goblin-alchemy",
 		"upgrade-mathematics",
 		"upgrade-engineering",
-		"upgrade-architecture"
+		"upgrade-architecture",
+		"upgrade-philosophy"
 	}
 	local bronze_upgrades = {
 		"upgrade-dwarven-broad-axe", "upgrade-dwarven-long-spear", "upgrade-dwarven-shield-1", "upgrade-dwarven-sharp-throwing-axe",

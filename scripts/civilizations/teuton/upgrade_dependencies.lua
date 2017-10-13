@@ -94,7 +94,7 @@ DefineDependency("upgrade-teuton-coinage",
 )
 
 DefineDependency("upgrade-teuton-alchemy",
-	{"upgrade-teuton-writing", "upgrade-mathematics"}
+	{"upgrade-philosophy", "upgrade-mathematics"}
 )
 
 DefinePredependency("unit-teuton-stables",

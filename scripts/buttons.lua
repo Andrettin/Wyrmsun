@@ -1734,7 +1734,19 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-architecture",
 	}
 } )
 
-DefineButton( { Pos = 5, Level = 0, Icon = "icon-gunpowder",
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-philosophy",
+	Action = "research", Value = "upgrade-philosophy",
+	Allowed = "check-single-research",
+	Description = "+10% Research Speed for buildings.",
+	Key = "s", Hint = "Research Philo~!sophy", Popup = "popup-research",
+	ForUnit = {
+		"unit-dwarven-academy",
+		"unit-goblin-academy",
+		"unit-teuton-university"
+	}
+} )
+
+DefineButton( { Pos = 6, Level = 0, Icon = "icon-gunpowder",
 	Action = "research", Value = "upgrade-gunpowder",
 	Allowed = "check-single-research",
 	Description = "Allows gunpowder infantry.",
