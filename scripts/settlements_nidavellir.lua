@@ -69,6 +69,24 @@ DefineSettlement("aurvang", { -- Aurvang settlement site; Aurvang is a region ra
 	Regions = {}
 })
 
+DefineSettlement("chaincolt-gates", { -- from Battle for Wesnoth: The Sceptre of Fire (Closing the Gates)
+	Name = "Chaincolt Gates",
+	MapTemplate = "nidavellir-underground",
+	Position = {472, 225},
+	CulturalNames = {
+--		"dwarf", "Chaincolt Gates"
+	},
+	Cores = {
+	},
+	HistoricalOwners = {
+		25, "norlund-clan"
+	},
+	HistoricalBuildings = {
+		25, 0, "guard-tower"
+	},
+	Regions = {}
+})
+
 DefineSettlement("dreadskull", { -- Dreadskull tribe settlement site; this is the name of a tribe rather than a settlement, but we have no name for a settlement there yet
 	Name = "Dreadskull",
 	MapTemplate = "nidavellir",
@@ -213,7 +231,6 @@ DefineSettlement("rugnurs-outpost", { -- from Battle for Wesnoth: The Sceptre of
 		"dwarf", "Rugnur's Outpost"
 	},
 	Cores = {
---		"norlund-clan"
 	},
 	HistoricalOwners = {
 		25, "norlund-clan", -- at this time Rugnur was already in charge of the outpost in the Chaincolt Foothills

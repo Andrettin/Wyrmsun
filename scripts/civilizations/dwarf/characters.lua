@@ -230,7 +230,10 @@ DefineCharacter("baglur", { -- from Battle for Wesnoth: The Sceptre of Fire; vet
 	Date = -1,
 	DeathDate = 40, -- died in 40 AD of a violent death
 	ViolentDeath = true,
-	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
+	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
+	HistoricalLocations = {
+		25, "nidavellir-underground", "chaincolt-gates"
+	}
 })
 
 DefineCharacter("durstorn", { -- from Battle for Wesnoth: The Sceptre of Fire; chieftain of Rugnur's tribe

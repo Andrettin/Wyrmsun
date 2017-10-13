@@ -123,6 +123,19 @@ DefineCampaign("the-home-of-the-boii", {
 	MapTemplateStartPos = {4064, 881},
 	MapSize = {256, 256}
 })
+--]]
+
+--[[
+DefineCampaign("the-scepter-of-fire", {
+	Name = "The Scepter of Fire",
+	Description = "A clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home. Beset by hostile forces, can they survive for long?",
+	Faction = "norlund-clan",
+	StartYear = 25,
+	MapTemplates = {
+		"nidavellir", {199, 0}, {512, 512},
+		"nidavellir-underground", {199, 0}, {512, 512}
+	}
+})
 
 DefineCampaign("the-first-marcomannic-war", {
 	Name = "The First Marcomannic War",
