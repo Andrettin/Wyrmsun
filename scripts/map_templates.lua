@@ -158,6 +158,7 @@ DefineMapTemplate("nidavellir-underground", {
 		"unit-gold-deposit", 2,
 		"unit-silver-deposit", 2,
 		"unit-copper-deposit", 2,
+		--[[
 		"unit-wood-pile", 64,
 		"unit-wood-pile", 64,
 		"unit-wood-pile", 64,
@@ -166,6 +167,7 @@ DefineMapTemplate("nidavellir-underground", {
 		"unit-wood-pile", 64,
 		"unit-wood-pile", 64,
 		"unit-wood-pile", 64,
+		--]]
 		"unit-snigill", 64,
 		"unit-slime", 32,
 		"unit-blood-bat", 16,

@@ -71,8 +71,9 @@ DefineSettlement("aurvang", { -- Aurvang settlement site; Aurvang is a region ra
 
 DefineSettlement("chaincolt", { -- from Battle for Wesnoth: The Sceptre of Fire (In the Dwarven City)
 	Name = "Chaincolt",
-	MapTemplate = "nidavellir",
+	MapTemplate = "nidavellir-underground",
 	Position = {468, 193},
+	Major = true,
 	CulturalNames = {
 		"dwarf", "Chaincolt"
 	},
