@@ -84,7 +84,13 @@ DefineSettlement("chaincolt", { -- from Battle for Wesnoth: The Sceptre of Fire 
 		25, "norlund-clan"
 	},
 	HistoricalBuildings = {
-		25, 0, "stronghold"
+		25, 0, "stronghold",
+		25, 0, "farm",
+		25, 0, "farm",
+		25, 0, "farm"
+	},
+	HistoricalResources = {
+		0, 0, "unit-gold-deposit", 0
 	},
 	Regions = {}
 })
