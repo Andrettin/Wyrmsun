@@ -25,52 +25,29 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineMapTemplate("caverns-of-chaincolt-gates", { -- From Battle for Wesnoth: The Sceptre of Fire (Closing the Gates)
-	Name = "Caverns of Chaincolt Gates",
-	MainTemplate = "nidavellir",
-	Width = 34,
-	Height = 30,
-	SubtemplatePosition = {466, 227},
-	GeneratedNeutralUnits = {
-		"unit-copper-deposit", 1
-	}
-})
-
-DefineMapTemplate("caverns-of-chaincolt-gates-underground", { -- From Battle for Wesnoth: The Sceptre of Fire (Closing the Gates)
-	Name = "Caverns of Chaincolt Gates (Underground)",
-	MainTemplate = "nidavellir-underground",
-	Width = 34,
-	Height = 30,
-	SubtemplatePosition = {466, 227},
-	GeneratedNeutralUnits = {
-		"unit-copper-deposit", 1
-	}
-})
-
 SetMapTemplateLayerConnector("nidavellir", "unit-cavern-entrance", {459, 228}, 1)
 SetMapTemplateLayerConnector("nidavellir-underground", "unit-cavern-entrance", {459, 228}, 0)
 
 -- stepping on all the glyphs should deactivate (or reactivate) the connection between the cavern entrances
-SetMapTemplateUnit("nidavellir-underground", "unit-glyph", "", {450 + 3, 213 + 5})
-SetMapTemplateUnit("nidavellir-underground", "unit-glyph", "", {450 + 9, 213 + 11})
-SetMapTemplateUnit("nidavellir-underground", "unit-glyph", "", {450 + 14, 213 + 3})
-SetMapTemplateUnit("nidavellir-underground", "unit-glyph", "", {450 + 17, 213 + 15})
-SetMapTemplateUnit("nidavellir-underground", "unit-glyph", "", {450 + 23, 213 + 24})
-SetMapTemplateUnit("nidavellir-underground", "unit-glyph", "", {450 + 30, 213 + 19})
+SetMapTemplateUnit("nidavellir-underground", "unit-glyph", "", {453, 218})
+SetMapTemplateUnit("nidavellir-underground", "unit-glyph", "", {459, 224})
+SetMapTemplateUnit("nidavellir-underground", "unit-glyph", "", {464, 216})
+SetMapTemplateUnit("nidavellir-underground", "unit-glyph", "", {467, 228})
+SetMapTemplateUnit("nidavellir-underground", "unit-glyph", "", {473, 237})
+SetMapTemplateUnit("nidavellir-underground", "unit-glyph", "", {480, 232})
 
-SetMapTemplateUnit("nidavellir-underground", "unit-dwarven-guard", "norlund-clan", {450 + 10, 213 + 13}, 24)
-SetMapTemplateUnit("nidavellir-underground", "unit-dwarven-guard", "norlund-clan", {450 + 14, 213 + 15}, 24)
-SetMapTemplateUnit("nidavellir-underground", "unit-dwarven-guard", "norlund-clan", {450 + 12, 213 + 11}, 24)
-SetMapTemplateUnit("nidavellir-underground", "unit-dwarven-guard", "norlund-clan", {450 + 15, 213 + 13}, 24)
+SetMapTemplateUnit("nidavellir-underground", "unit-dwarven-guard", "norlund-clan", {460, 226}, 25)
+SetMapTemplateUnit("nidavellir-underground", "unit-dwarven-guard", "norlund-clan", {464, 228}, 25)
+SetMapTemplateUnit("nidavellir-underground", "unit-dwarven-guard", "norlund-clan", {462, 224}, 25)
+SetMapTemplateUnit("nidavellir-underground", "unit-dwarven-guard", "norlund-clan", {465, 226}, 25)
 
--- should give these goblins to a faction later
-SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-goblin-swordsman", "", {6, 3}, 24, 25)
-SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-goblin-swordsman", "", {6, 3}, 24, 25)
-SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-goblin-swordsman", "", {6, 3}, 24, 25)
-SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-goblin-swordsman", "", {30, 25}, 24, 25)
-SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-goblin-swordsman", "", {30, 25}, 24, 25)
-SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-goblin-swordsman", "", {30, 25}, 24, 25)
-SetMapTemplateUnit("caverns-of-chaincolt-gates-underground", "unit-goblin-swordsman", "", {30, 25}, 24, 25)
+SetMapTemplateUnit("nidavellir-underground", "unit-goblin-swordsman", "khag-tribe", {456, 216}, 25, {25, 12, 30})
+SetMapTemplateUnit("nidavellir-underground", "unit-goblin-swordsman", "khag-tribe", {456, 216}, 25, {25, 12, 30})
+SetMapTemplateUnit("nidavellir-underground", "unit-goblin-swordsman", "khag-tribe", {456, 216}, 25, {25, 12, 30})
+SetMapTemplateUnit("nidavellir-underground", "unit-goblin-swordsman", "khag-tribe", {480, 238}, 25, {25, 12, 30})
+SetMapTemplateUnit("nidavellir-underground", "unit-goblin-swordsman", "khag-tribe", {480, 238}, 25, {25, 12, 30})
+SetMapTemplateUnit("nidavellir-underground", "unit-goblin-swordsman", "khag-tribe", {480, 238}, 25, {25, 12, 30})
+SetMapTemplateUnit("nidavellir-underground", "unit-goblin-swordsman", "khag-tribe", {480, 238}, 25, {25, 12, 30})
 
 -- Road present in 25, as seen in Battle for Wesnoth: The Sceptre of Fire (Closing the Gates)
 SetMapTemplateTileTerrain("nidavellir", "road", {460, 230}, 25)

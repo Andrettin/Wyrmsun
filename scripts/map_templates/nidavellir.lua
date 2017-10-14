@@ -122,6 +122,6 @@ Load("scripts/map_templates/nidavellir/svarinshaug.lua")
 Load("scripts/map_templates/nidavellir/swamp_of_dread.lua")
 Load("scripts/map_templates/nidavellir/west_gate_of_kal_kartha.lua")
 Load("scripts/map_templates/nidavellir/wildlands.lua")
---Load("scripts/map_templates/nidavellir/caverns_of_chaincolt_city.lua")
+Load("scripts/map_templates/nidavellir/caverns_of_chaincolt_city.lua")
 
 Load("scripts/map_templates/nidavellir/island_of_the_lizard_god.lua")

@@ -69,6 +69,25 @@ DefineSettlement("aurvang", { -- Aurvang settlement site; Aurvang is a region ra
 	Regions = {}
 })
 
+DefineSettlement("chaincolt", { -- from Battle for Wesnoth: The Sceptre of Fire (In the Dwarven City)
+	Name = "Chaincolt",
+	MapTemplate = "nidavellir",
+	Position = {468, 193},
+	CulturalNames = {
+		"dwarf", "Chaincolt"
+	},
+	Cores = {
+--		"norlund-clan"
+	},
+	HistoricalOwners = {
+		25, "norlund-clan"
+	},
+	HistoricalBuildings = {
+		25, 0, "stronghold"
+	},
+	Regions = {}
+})
+
 DefineSettlement("chaincolt-gates", { -- from Battle for Wesnoth: The Sceptre of Fire (Closing the Gates)
 	Name = "Chaincolt Gates",
 	MapTemplate = "nidavellir-underground",

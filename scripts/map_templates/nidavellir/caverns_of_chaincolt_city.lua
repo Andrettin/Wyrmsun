@@ -25,29 +25,11 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineMapTemplate("caverns-of-chaincolt-city", { -- From Battle for Wesnoth: The Sceptre of Fire
-	Name = "Caverns of Chaincolt City",
-	MainTemplate = "nidavellir",
-	Width = 26,
-	Height = 26,
-	TerrainFile = "scripts/map_templates/nidavellir/caverns_of_chaincolt_city.map",
-	OverlayTerrainFile = "scripts/map_templates/nidavellir/caverns_of_chaincolt_city_overlay.map",
-	ExternalGeneratedTerrains = {
-		"rockbound-cave-floor", "medium",
-		"cave-wall", "high"
-	},
-	PlayerLocationGeneratedNeutralUnits = {
-		"unit-copper-deposit", 1,
-		"unit-wood-pile", 16,
-		"unit-stone-pile", 16
-	}
-})
+-- 457, 182
 
 -- Situation as of The Sceptre of Fire (which begins 25 YW)
 
 --[[
-SetMapTemplateUnit("caverns-of-chaincolt-city", "unit-dwarven-stronghold", "", {11, 11}, 25) -- main stronghold of Rugnur's clan
-
 -- villages
 --SetMapTemplateUnit("caverns-of-chaincolt-city", "unit-dwarven-mushroom-farm", "", {1, 7}, 25)
 --SetMapTemplateUnit("caverns-of-chaincolt-city", "unit-dwarven-mushroom-farm", "", {1, 17}, 25)
