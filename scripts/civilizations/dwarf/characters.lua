@@ -252,6 +252,9 @@ DefineCharacter("durstorn", { -- from Battle for Wesnoth: The Sceptre of Fire; c
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	HistoricalTitles = {
 		"head-of-state", -1, 35, "norlund-clan"
+	},
+	HistoricalLocations = {
+		25, "nidavellir-underground", "chaincolt"
 	}
 })
 
