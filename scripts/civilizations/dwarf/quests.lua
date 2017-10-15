@@ -455,7 +455,7 @@ DefineQuest("andvaris-gold", {
 	Conditions = function(s)
 		if (
 			GetFactionExists("oinling-clan") -- Andvari's clan must exist
-			and GetNumUnitsAt(trigger_player, "any", {490 - 256 - NidavellirStartX, 107 - 256 - NidavellirStartY}, {490 + 256 - NidavellirStartX, 107 + 256 - NidavellirStartY}, GetMapLayer("", "nidavellir", 0)) > 0 -- the player must be within a certain distance of Andvari's holding
+			and GetNumUnitsAt(trigger_player, "any", {490 - 256 - NidavellirStartX, 107 - 256 - NidavellirStartY}, {490 + 256 - NidavellirStartX, 107 + 256 - NidavellirStartY}, GetMapLayer("material-plane", "nidavellir", 0)) > 0 -- the player must be within a certain distance of Andvari's holding
 		) then
 			return true
 		end
@@ -463,20 +463,20 @@ DefineQuest("andvaris-gold", {
 	end,
 	AcceptEffects = function(s)
 		local oinling_player = GetFactionPlayer("oinling-clan")
-		unit = CreateUnit("unit-revealer", trigger_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "nidavellir", 0)) -- show the location of Andvari's holding
+		unit = CreateUnit("unit-revealer", trigger_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("material-plane", "nidavellir", 0)) -- show the location of Andvari's holding
 		SetUnitVariable(unit, "TTL", 600)
 	end,
 	CompletionEffects = function(s)
 		local oinling_player = GetFactionPlayer("oinling-clan")
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 10000)
-		unit = CreateUnit("unit-ring", PlayerNumNeutral, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "nidavellir", 0))
+		unit = CreateUnit("unit-ring", PlayerNumNeutral, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("material-plane", "nidavellir", 0))
 		if (GetUniqueItemData("andvaranaut", "CanDrop")) then
 			SetUnitVariable(unit, "Unique", "andvaranaut")
 		else
 			SetUnitVariable(unit, "GenerateSpecialProperties", oinling_player) -- if Andvaranaut cannot drop, then generate a magic ring
 		end
 		SetUnitVariable(unit, "Identified", false)
-		unit = CreateUnit("unit-revealer", trigger_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "nidavellir", 0)) -- show the location of the ring
+		unit = CreateUnit("unit-revealer", trigger_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("material-plane", "nidavellir", 0)) -- show the location of the ring
 		SetUnitVariable(unit, "TTL", 600)
 		CallDialogue("andvaris-gold-is-ours", trigger_player)
 	end,

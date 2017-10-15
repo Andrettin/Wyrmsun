@@ -291,7 +291,7 @@ DefineQuest("journey-to-heimdalls-stones", {
 	end,
 	AcceptEffects = function(s)
 		local heimdalls_stones_unit = FindUnique("heimdalls-stones")
-		unit = CreateUnit("unit-revealer", trigger_player, {GetUnitVariable(heimdalls_stones_unit, "PosX"), GetUnitVariable(heimdalls_stones_unit, "PosY")}, GetMapLayer("", "earth", 0))
+		unit = CreateUnit("unit-revealer", trigger_player, {GetUnitVariable(heimdalls_stones_unit, "PosX"), GetUnitVariable(heimdalls_stones_unit, "PosY")}, GetMapLayer("material-plane", "earth", 0))
 		SetUnitVariable(unit, "TTL", 600)
 	end,
 	CompletionEffects = function(s)
@@ -468,7 +468,7 @@ DefineQuest("slay-the-berserker-brides-at-hlesey", { -- Source: Kevin Crossley-H
 		if (
 			GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-dock") > 0 -- the player must have a dock
 			and GetPlayerData(trigger_player, "Allow", "upgrade-deity-thor") == "R" -- must be a worshipper of Thor/Thunraz
-			and GetNumUnitsAt(trigger_player, "buildings", {4089 - 128 - EarthStartX, 745 - 128 - EarthStartY}, {4089 + 128 - EarthStartX, 745 + 128 - EarthStartY}, GetMapLayer("", "earth", 0)) > 0 -- the player must have a building relatively close to Hlesey
+			and GetNumUnitsAt(trigger_player, "buildings", {4089 - 128 - EarthStartX, 745 - 128 - EarthStartY}, {4089 + 128 - EarthStartX, 745 + 128 - EarthStartY}, GetMapLayer("material-plane", "earth", 0)) > 0 -- the player must have a building relatively close to Hlesey
 		) then
 			return true
 		end

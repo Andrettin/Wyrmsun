@@ -489,7 +489,7 @@ end
 -- World Map Layer Buttons
 
 local earth_id = GetWorldData("earth", "ID")
-if (GetMapLayer("", "earth", 0) ~= -1) then
+if (GetMapLayer("material-plane", "earth", 0) ~= -1) then
 	UI.WorldButtons:at(earth_id).X = 16 + (19  * 0)
 	UI.WorldButtons:at(earth_id).Y = Video.Height - 23
 	UI.WorldButtons:at(earth_id).Style = FindButtonStyle("world-earth")
@@ -499,7 +499,7 @@ else
 end
 
 local nidavellir_id = GetWorldData("nidavellir", "ID")
-if (GetMapLayer("", "nidavellir", 0) ~= -1) then
+if (GetMapLayer("material-plane", "nidavellir", 0) ~= -1) then
 	UI.WorldButtons:at(nidavellir_id).X = 16 + (19  * 1)
 	UI.WorldButtons:at(nidavellir_id).Y = Video.Height - 23
 	UI.WorldButtons:at(nidavellir_id).Style = FindButtonStyle("world-nidavellir")
@@ -509,7 +509,7 @@ else
 end
 
 local jotunheim_id = GetWorldData("jotunheim", "ID")
-if (GetMapLayer("", "jotunheim", 0) ~= -1) then
+if (GetMapLayer("material-plane", "jotunheim", 0) ~= -1) then
 	UI.WorldButtons:at(jotunheim_id).X = 16 + (19  * 2)
 	UI.WorldButtons:at(jotunheim_id).Y = Video.Height - 23
 	UI.WorldButtons:at(jotunheim_id).Style = FindButtonStyle("world-jotunheim")

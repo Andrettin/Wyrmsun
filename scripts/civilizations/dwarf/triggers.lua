@@ -50,16 +50,16 @@ AddTrigger("oin-leaves",
 			return false
 		end
 		if ( -- if Andvari's Falls are empty, but there are certain Dwarven structures within a certain range of it
-			GetNumUnitsAt(-2, "any", {490 - 16 - NidavellirStartX, 107 - 16 - NidavellirStartY}, {490 + 16 - NidavellirStartX, 107 + 16 - NidavellirStartY}, GetMapLayer("", "nidavellir", 0)) == 0
+			GetNumUnitsAt(-2, "any", {490 - 16 - NidavellirStartX, 107 - 16 - NidavellirStartY}, {490 + 16 - NidavellirStartX, 107 + 16 - NidavellirStartY}, GetMapLayer("material-plane", "nidavellir", 0)) == 0
 			and (490 - NidavellirStartX) > 0
 			and (107 - NidavellirStartY) > 0
 			and (
-				GetNumUnitsAt(-2, "unit-dwarven-town-hall", {490 - 256 - NidavellirStartX, 107 - 256 - NidavellirStartY}, {490 + 256 - NidavellirStartX, 107 + 256 - NidavellirStartY}, GetMapLayer("", "nidavellir", 0)) > 0 -- a dwarven settlement from which Oin could have come from
-				or GetNumUnitsAt(-2, "unit-dwarven-stronghold", {490 - 256 - NidavellirStartX, 107 - 256 - NidavellirStartY}, {490 + 256 - NidavellirStartX, 107 + 256 - NidavellirStartY}, GetMapLayer("", "nidavellir", 0)) > 0
+				GetNumUnitsAt(-2, "unit-dwarven-town-hall", {490 - 256 - NidavellirStartX, 107 - 256 - NidavellirStartY}, {490 + 256 - NidavellirStartX, 107 + 256 - NidavellirStartY}, GetMapLayer("material-plane", "nidavellir", 0)) > 0 -- a dwarven settlement from which Oin could have come from
+				or GetNumUnitsAt(-2, "unit-dwarven-stronghold", {490 - 256 - NidavellirStartX, 107 - 256 - NidavellirStartY}, {490 + 256 - NidavellirStartX, 107 + 256 - NidavellirStartY}, GetMapLayer("material-plane", "nidavellir", 0)) > 0
 			)
 			and ( -- Oin's son Andvari had a golden ring, which means goldsmithing must have been developed
-				GetNumUnitsAt(-2, "unit-dwarven-smithy", {490 - 256 - NidavellirStartX, 107 - 256 - NidavellirStartY}, {490 + 256 - NidavellirStartX, 107 + 256 - NidavellirStartY}, GetMapLayer("", "nidavellir", 0)) > 0
-				or GetNumUnitsAt(-2, "unit-brising-smithy", {490 - 256 - NidavellirStartX, 107 - 256 - NidavellirStartY}, {490 + 256 - NidavellirStartX, 107 + 256 - NidavellirStartY}, GetMapLayer("", "nidavellir", 0)) > 0
+				GetNumUnitsAt(-2, "unit-dwarven-smithy", {490 - 256 - NidavellirStartX, 107 - 256 - NidavellirStartY}, {490 + 256 - NidavellirStartX, 107 + 256 - NidavellirStartY}, GetMapLayer("material-plane", "nidavellir", 0)) > 0
+				or GetNumUnitsAt(-2, "unit-brising-smithy", {490 - 256 - NidavellirStartX, 107 - 256 - NidavellirStartY}, {490 + 256 - NidavellirStartX, 107 + 256 - NidavellirStartY}, GetMapLayer("material-plane", "nidavellir", 0)) > 0
 			)
 		) then
 			return true
@@ -71,14 +71,14 @@ AddTrigger("oin-leaves",
 		if (oinling_player == -1) then
 			return false
 		end
-		SetStartView(oinling_player, 490 - NidavellirStartX, 107 - NidavellirStartY, GetMapLayer("", "nidavellir", 0))
-		unit = CreateUnit("unit-dwarven-mushroom-farm", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "nidavellir", 0))
+		SetStartView(oinling_player, 490 - NidavellirStartX, 107 - NidavellirStartY, GetMapLayer("material-plane", "nidavellir", 0))
+		unit = CreateUnit("unit-dwarven-mushroom-farm", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("material-plane", "nidavellir", 0))
 		local players_around = GetPlayersAroundUnit(unit, 256)
-		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "nidavellir", 0))
-		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "nidavellir", 0))
-		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "nidavellir", 0))
-		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "nidavellir", 0))
-		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("", "nidavellir", 0))
+		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("material-plane", "nidavellir", 0))
+		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("material-plane", "nidavellir", 0))
+		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("material-plane", "nidavellir", 0))
+		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("material-plane", "nidavellir", 0))
+		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("material-plane", "nidavellir", 0))
 		SetUnitVariable(unit, "Character", "andvari") -- Oin's son
 		
 		for i = 1, table.getn(players_around) do 
