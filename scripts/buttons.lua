@@ -365,7 +365,8 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-level-up",
 		"unit-goblin-magnate",
 		"unit-kobold-footpad", "unit-kobold-slasher", "unit-kobold-champion",
 		"unit-ettin",
-		"unit-elven-swordsman", "unit-elven-priest"
+		"unit-elven-swordsman", "unit-elven-priest",
+		"unit-wolf", "unit-wyrm", "unit-gryphon", "unit-bird", "unit-crow", "unit-bat", "unit-blood-bat", "unit-dread-bat"
 	}
 } )
 
@@ -483,7 +484,8 @@ DefineButton( { Pos = 5, Level = 2, Icon = "icon-critical-strike",
 		"unit-goblin-gunpowder-infantry",
 		"unit-kobold-champion",
 		"unit-ettin",
-		"unit-elven-swordsman"
+		"unit-elven-swordsman",
+		"unit-wolf", "unit-wyrm", "unit-bat", "unit-blood-bat", "unit-dread-bat"
 	}
 } )
 
@@ -510,7 +512,8 @@ DefineButton( { Pos = 5, Level = 2, Icon = "icon-deadly-precision",
 		"unit-goblin-gunpowder-infantry",
 		"unit-kobold-champion",
 		"unit-ettin",
-		"unit-elven-swordsman"
+		"unit-elven-swordsman",
+		"unit-wolf", "unit-wyrm", "unit-bat", "unit-blood-bat", "unit-dread-bat"
 	}
 } )
 
@@ -539,7 +542,8 @@ DefineButton( { Pos = 6, Level = 2, Icon = "icon-eagle-eye",
 		"unit-goblin-gunpowder-infantry",
 		"unit-kobold-champion",
 		"unit-ettin",
-		"unit-elven-swordsman"
+		"unit-elven-swordsman",
+		"unit-wolf", "unit-wyrm", "unit-gryphon", "unit-bird", "unit-crow", "unit-bat", "unit-blood-bat", "unit-dread-bat"
 	}
 } )
 
@@ -588,7 +592,8 @@ DefineButton( { Pos = 8, Level = 2, Icon = "icon-puncture",
 		"unit-dwarven-guard",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
 		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman",
-		"unit-elven-swordsman"
+		"unit-elven-swordsman",
+		"unit-wolf", "unit-wyrm", "unit-bat", "unit-blood-bat", "unit-dread-bat"
 	}
 } )
 
@@ -719,7 +724,8 @@ DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
 		"unit-goblin-magnate",
 		"unit-kobold-footpad", "unit-kobold-slasher", "unit-kobold-champion",
 		"unit-ettin",
-		"unit-elven-swordsman", "unit-elven-priest"
+		"unit-elven-swordsman", "unit-elven-priest",
+		"unit-wolf", "unit-wyrm", "unit-gryphon", "unit-bird", "unit-crow", "unit-bat", "unit-blood-bat", "unit-dread-bat"
 	} 
 } )
 
@@ -883,7 +889,8 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-puncture",
 		"unit-dwarven-guard",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
 		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman",
-		"unit-elven-swordsman"
+		"unit-elven-swordsman",
+		"unit-wolf", "unit-wyrm", "unit-bat", "unit-blood-bat", "unit-dread-bat"
 	}
 })
 

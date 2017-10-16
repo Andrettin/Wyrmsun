@@ -25,4 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+SetMapTemplateLayerConnector("niflheim", "unit-portal", {4, 181}, "earth")
+
 SetMapTemplateUnit("niflheim", "unit-dwarven-stronghold", "hel", {225, 132})

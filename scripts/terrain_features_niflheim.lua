@@ -46,6 +46,13 @@ DefineTerrainFeature("gjoll-river", { -- in Norse mythology a river that has its
 	Plane = "niflheim"
 })
 
+DefineTerrainFeature("gnipahellir", { -- cave in the entrance of Niflheim in Norse mythology, where the hound Garm is chained; name means "cliff cave"; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 242-243.
+	Name = "Gnipahellir",
+	TerrainType = "rock",
+	Color = {120, 144, 176},
+	Plane = "niflheim"
+})
+
 DefineTerrainFeature("gunnthra-river", { -- in Norse mythology a river that has its source in Hvergelmir, comprising one of the eleven rivers known as Elivagar; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 3.
 	Name = "Gunnthra River",
 	TerrainType = "shallow-water",

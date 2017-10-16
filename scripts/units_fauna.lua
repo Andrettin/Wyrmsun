@@ -52,7 +52,7 @@ DefineUnitType("unit-template-diminutive-fauna-unit", {
 })
 
 DefineUnitType("unit-bee", {
-	Name = _("Bee"),
+	Name = "Bee",
 	Parent = "unit-template-diminutive-fauna-unit",
 	Species = "bee",
 	Image = {"file", "neutral/units/bee.png", "size", {6, 6}},
@@ -87,7 +87,7 @@ DefineUnitType("unit-bee", {
 } )
 
 DefineUnitType("unit-fly", {
-	Name = _("Fly"),
+	Name = "Fly",
 	Parent = "unit-template-diminutive-fauna-unit",
 	Species = "fly",
 	Image = {"file", "neutral/units/fly.png", "size", {6, 6}},
@@ -121,7 +121,7 @@ DefineUnitType("unit-fly", {
 } )
 
 DefineUnitType("unit-bug", {
-	Name = _("Bug"),
+	Name = "Bug",
 	Parent = "unit-template-diminutive-fauna-unit",
 	Species = "bug",
 	Image = {"file", "neutral/units/bug.png", "size", {6, 6}},
@@ -154,7 +154,7 @@ DefineUnitType("unit-bug", {
 } )
 
 DefineUnitType("unit-worm", {
-	Name = _("Worm"),
+	Name = "Worm",
 	Parent = "unit-template-diminutive-fauna-unit",
 	Species = "worm",
 	Image = {"file", "neutral/units/worm.png", "size", {72, 72}},
@@ -188,7 +188,7 @@ DefineUnitType("unit-worm", {
 } )
 
 DefineUnitType("unit-snail", {
-	Name = _("Snail"),
+	Name = "Snail",
 	Parent = "unit-template-fauna-unit",
 	Species = "snail",
 	Image = {"file", "neutral/units/snail.png", "size", {32, 32}},
@@ -231,7 +231,7 @@ DefineUnitType("unit-snail", {
 } )
 
 DefineUnitType("unit-slug", {
-	Name = _("Slug"),
+	Name = "Slug",
 	Parent = "unit-template-fauna-unit",
 	Species = "slug",
 	Image = {"file", "neutral/units/slug.png", "size", {32, 32}},
@@ -293,7 +293,7 @@ DefineUnitType("unit-slug", {
 } )
 
 DefineUnitType("unit-snigill", {
-	Name = _("Baby Snigill"),
+	Name = "Baby Snigill",
 	Parent = "unit-template-fauna-unit",
 	Species = "snigill",
 	Image = {"file", "neutral/units/snail_blue_purple_shell.png", "size", {32, 32}},
@@ -336,11 +336,11 @@ DefineUnitType("unit-snigill", {
 } )
 
 DefineUnitType("unit-frog", {
-	Name = _("Frog"),
+	Name = "Frog",
 	Parent = "unit-template-fauna-unit",
 	Species = "frog",
-	--Description = _("Frog"),
-	--Background = _(" A \"Frog\" is a kind of \"Amphibian\"."),
+	--Description = "Frog",
+	--Background = " A \"Frog\" is a kind of \"Amphibian\".",
 	Image = {"file", "graphics/neutral/units/frog.png", "size", {18, 18}},
 	Animations = "animations-frog", Icon = "icon-slime",
 	Speed = 4,
@@ -409,7 +409,7 @@ DefineUnitType("unit-adelobasileus-cromptoni", {
 	Name = "Adelobasileus",
 	Parent = "unit-template-fauna-unit",
 	Species = "adelobasileus-cromptoni",
-	Description = _("The Adelobasileus was one of the earliest mammal-like animals to have lived, and is possibly a common ancestor of all mammals. It lived in trees, and its diet consisted of insects."),
+	Description = "The Adelobasileus was one of the earliest mammal-like animals to have lived, and is possibly a common ancestor of all mammals. It lived in trees, and its diet consisted of insects.",
 	Image = {"file", "neutral/units/rat_light_gray_fur_short_tail.png", "size", {72, 72}},
 	Animations = "animations-rat", Icon = "icon-adelobasileus-cromptoni",
 	Strength = 2, -- same as the rat
@@ -459,7 +459,7 @@ DefineUnitType("unit-galerix-exilis", {
 	Name = "Galerix",
 	Parent = "unit-template-fauna-unit",
 	Species = "galerix-exilis",
-	Description = _("The Galerix was an ancient small mammal who lived off insects."),
+	Description = "The Galerix was an ancient small mammal who lived off insects.",
 	Image = {"file", "neutral/units/rat_light_gray_fur_short_tail.png", "size", {72, 72}},
 	Animations = "animations-rat", Icon = "icon-galerix-exilis",
 	Strength = 2, -- same as the rat
@@ -510,7 +510,7 @@ DefineUnitType("unit-megacricetodon-collongensis", {
 	Name = "Megacricetodon",
 	Parent = "unit-template-fauna-unit",
 	Species = "megacricetodon-collongensis",
-	Description = _("The Megacricetodon was a prehistoric rodent who lived in Europe. It was omnivore, and ate mostly insects."),
+	Description = "The Megacricetodon was a prehistoric rodent who lived in Europe. It was omnivore, and ate mostly insects.",
 	Image = {"file", "neutral/units/rat_light_gray_fur.png", "size", {72, 72}},
 	Animations = "animations-rat", Icon = "icon-megacricetodon-collongensis",
 	Strength = 2, -- same as the rat
@@ -561,7 +561,7 @@ DefineUnitType("unit-rat", {
 	Name = "Rat",
 	Parent = "unit-template-fauna-unit",
 	Species = "rat",
-	Description = _("Rats are rodents of medium size and long tails. They usually live in forests or within human dwellings. They are often reviled due to carrying diseases."),
+	Description = "Rats are rodents of medium size and long tails. They usually live in forests or within human dwellings. They are often reviled due to carrying diseases.",
 	Image = {"file", "neutral/units/rat.png", "size", {72, 72}},
 	Animations = "animations-rat", Icon = "icon-rat",
 	Strength = 2,
@@ -708,7 +708,7 @@ DefineUnitType("unit-unicorn", {
 	Name = "Unicorn",
 	Parent = "unit-horse",
 	Species = "unicorn",
-	Description = _("Unicorns inhabit the woods of Alfheim, frequently being used by elves as mounts."),
+	Description = "Unicorns inhabit the woods of Alfheim, frequently being used by elves as mounts.",
 	Image = {"file", "neutral/units/unicorn.png", "size", {72, 72}},
 	Icon = "icon-unicorn",
 	Strength = 20,
@@ -725,7 +725,7 @@ DefineUnitType("unit-goat", {
 	Name = "Goat",
 	Parent = "unit-template-fauna-unit",
 	Species = "goat",
-	Description = _("Goats are one of the most common farm animals on Earth, being used both for dairy and meat."),
+	Description = "Goats are one of the most common farm animals on Earth, being used both for dairy and meat.",
 	Image = {"file", "neutral/units/goat.png", "size", {54, 54}},
 	Animations = "animations-yale", Icon = "icon-goat",
 	Strength = 13,
@@ -782,7 +782,7 @@ DefineUnitType("unit-yale", {
 	Name = "Yale",
 	Parent = "unit-goat",
 	Species = "yale",
-	Description = _("Yales are caprid creatures who inhabit Nidavellir. They have sturdy, golden tusks and horns, and their fur is covered by golden spots. Dwarves often use them as mounts or as beasts of carry."),
+	Description = "Yales are caprid creatures who inhabit Nidavellir. They have sturdy, golden tusks and horns, and their fur is covered by golden spots. Dwarves often use them as mounts or as beasts of carry.",
 	Image = {"file", "neutral/units/yale.png", "size", {72, 72}},
 	Animations = "animations-yale", Icon = "icon-yale",
 	Strength = 12, -- somewhat weaker than the horse
@@ -836,7 +836,7 @@ DefineUnitType("unit-boar", {
 	Name = "Boar",
 	Parent = "unit-template-fauna-unit",
 	Species = "boar",
-	Description = _("Boars live in woodlands, and are often hunted for meat."),
+	Description = "Boars live in woodlands, and are often hunted for meat.",
 	Image = {"file", "neutral/units/boar.png", "size", {72, 72}},
 	Animations = "animations-melee-unit-new-movement", Icon = "icon-boar",
 	Strength = 15,
@@ -890,7 +890,7 @@ DefineUnitType("unit-wolf", {
 	Name = "Wolf",
 	Parent = "unit-template-fauna-unit",
 	Species = "wolf",
-	Description = _("Wolves are pack hunters who dwell in temperate woodlands."),
+	Description = "Wolves are pack hunters who dwell in temperate woodlands.",
 	Image = {"file", "neutral/units/wolf.png", "size", {76, 76}},
 	Animations = "animations-melee-unit-new-movement", Icon = "icon-wolf",
 	Strength = 13,
@@ -923,7 +923,6 @@ DefineUnitType("unit-wolf", {
 	PersonalNames = {
 		"Fenrir", -- Fenrir is a massive wolf in Norse mythology, who was bound by the gods only with great effort; during Ragnarok he will kill Odin; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 193.
 		"Freki", -- Freki is one of Odin's wolves in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 61; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 31.
-		"Garm", -- Garm is a wolf-hound in Norse mythology, who dwells in a cave at the entrance of Niflheim, and who will kill Tyr during Ragnarok; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 193.
 		"Geri", -- Geri is one of Odin's wolves in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 61; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 31.
 		"Hati", -- Hati is the wolf who pursues the moon in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63.
 		"Hrodvitnir", -- alternative name for the wolf from Norse mythology, Fenrir; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 245.
@@ -947,11 +946,11 @@ DefineUnitType("unit-wolf", {
 })
 
 DefineUnitType("unit-gryphon", {
-	Name = _("Gryphon"),
+	Name = "Gryphon",
 	Parent = "unit-template-fauna-unit",
 	Species = "gryphon",
-	Description = _("Gryphons dwell in the dwarven homeworld of Nidavellir, predating smaller animals such as yales. Although many gryphons can be seen in the wild, dwarves have been domesticating the beasts for aeons, riding them into battle. The Gryphon Mountain is the greatest nesting area for wild gryphons."),
-	Quote = _("\"What's this? Gryphons in my castle? Remove the beasts!\" - Relgorn, Chieftain of the Norlund Clan"),
+	Description = "Gryphons dwell in the dwarven homeworld of Nidavellir, predating smaller animals such as yales. Although many gryphons can be seen in the wild, dwarves have been domesticating the beasts for aeons, riding them into battle. The Gryphon Mountain is the greatest nesting area for wild gryphons.",
+	Quote = "\"What's this? Gryphons in my castle? Remove the beasts!\" - Relgorn, Chieftain of the Norlund Clan",
 	Image = {"file", "neutral/units/gryphon.png", "size", {100, 100}},
 	Animations = "animations-gryphon", Icon = "icon-gryphon",
 	Strength = 18,
@@ -1153,10 +1152,10 @@ DefineUnitType("unit-wyrm", {
 } )
 
 DefineUnitType("unit-slime", {
-	Name = _("Slime"),
+	Name = "Slime",
 	Parent = "unit-template-fauna-unit",
 	Species = "slime",
-	Description = _("Slimes are amorphous organic beings which can be found throughout the dark plains and caves of Nidavellir. Little is known about their composition, except that they are acidic to the touch."),
+	Description = "Slimes are amorphous organic beings which can be found throughout the dark plains and caves of Nidavellir. Little is known about their composition, except that they are acidic to the touch.",
 	Image = {"file", "neutral/units/slime_small.png", "size", {32, 32}},
 	Animations = "animations-slime", Icon = "icon-slime",
 	Strength = 12,
@@ -1270,7 +1269,7 @@ DefineUnitType("unit-slime", {
 } )
 
 DefineUnitType("unit-bird", {
-	Name = _("Bird"),
+	Name = "Bird",
 	Parent = "unit-template-fauna-unit",
 	Species = "bird",
 	Image = {"file", "neutral/units/bird_brown.png", "size", {32, 32}},
@@ -1327,7 +1326,7 @@ DefineUnitType("unit-bird", {
 } )
 
 DefineUnitType("unit-crow", {
-	Name = _("Crow"),
+	Name = "Crow",
 	Parent = "unit-template-fauna-unit",
 	Species = "crow",
 	Image = {"file", "neutral/units/bird_black.png", "size", {32, 32}},
@@ -1372,7 +1371,7 @@ DefineUnitType("unit-crow", {
 } )
 
 DefineUnitType("unit-bat", {
-	Name = _("Bat"),
+	Name = "Bat",
 	Parent = "unit-template-fauna-unit",
 	Species = "bat",
 	Image = {"file", "neutral/units/bat.png", "size", {32, 32}},
@@ -1418,7 +1417,7 @@ DefineUnitType("unit-bat", {
 } )
 
 DefineUnitType("unit-blood-bat", {
-	Name = _("Blood Bat"),
+	Name = "Blood Bat",
 	Parent = "unit-template-fauna-unit",
 	Species = "blood-bat",
 	Image = {"file", "neutral/units/blood_bat.png", "size", {64, 64}},
@@ -1466,7 +1465,7 @@ DefineUnitType("unit-blood-bat", {
 } )
 
 DefineUnitType("unit-dread-bat", {
-	Name = _("Dread Bat"),
+	Name = "Dread Bat",
 	Parent = "unit-template-fauna-unit",
 	Species = "dread-bat",
 	Image = {"file", "neutral/units/dread_bat.png", "size", {64, 64}},

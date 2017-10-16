@@ -127,11 +127,51 @@ DefineCharacter("ganglot", { -- Hel's maidservant in Norse mythology; Source: Ke
 	end
 })
 
+DefineCharacter("garm", { -- Hel's wolf-hound in Norse mythology, who guards the entrance to Niflheim; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 147, 193.
+	Name = "Garm",
+	Gender = "male",
+	Type = "unit-wolf", -- wolf-hound
+	Faction = "hel",
+	Level = 3,
+	Date = -3000,
+	DeathDate = 3000,
+	Trait = "upgrade-vicious",
+	HistoricalLocations = {
+		-3000, "niflheim", {8, 181}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "hel") then
+			return true
+		end
+		return false
+	end
+	-- in Ragnarok Garm is fated to kill Tyr
+})
+
+DefineCharacter("groa", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 121-122.
+	Name = "Groa",
+	Gender = "female",
+	Type = "unit-teuton-priest", -- seeress
+	Civilization = "norse",
+	Faction = "hel", -- lives in Niflheim
+	Date = -3000,
+	DeathDate = 3000,
+	Trait = "upgrade-wise",
+	HistoricalLocations = {
+		-3000, "niflheim", "eljudnir"
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "hel") then
+			return true
+		end
+		return false
+	end
+})
+
 DefineCharacter("nidhogg", { -- wyrm/dragon in Norse mythology, who lived in Niflheim
 	Name = "Nidhogg",
 	Gender = "male",
 	Type = "unit-wyrm",
-	Civilization = "aesir",
 	Faction = "hel",
 	Date = -3000,
 	DeathDate = 3000,
