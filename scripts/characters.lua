@@ -87,8 +87,62 @@ DefineCharacter("gylve", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 
 -- Sphinx names: "Tutu" (a female sphinx from Egyptian mythology; the same as the Greek "Titoés"; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 86)
 
+DefineCharacter("ganglati", { -- Hel's manservant in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 33-34.
+	Name = "Ganglati",
+	Gender = "male",
+	Type = "unit-teuton-heroic-swordsman",
+	Civilization = "norse",
+	Faction = "hel",
+	Date = -3000,
+	DeathDate = 3000,
+	Trait = "upgrade-slow",
+	HistoricalLocations = {
+		-3000, "niflheim", "eljudnir"
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "hel") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("ganglot", { -- Hel's maidservant in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 33-34.
+	Name = "Ganglot",
+	Gender = "female",
+	Type = "unit-teuton-priest",
+	Civilization = "norse",
+	Faction = "hel",
+	Date = -3000,
+	DeathDate = 3000,
+	Trait = "upgrade-slow",
+	HistoricalLocations = {
+		-3000, "niflheim", "eljudnir"
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "hel") then
+			return true
+		end
+		return false
+	end
+})
+
 DefineCharacter("nidhogg", { -- wyrm/dragon in Norse mythology, who lived in Niflheim
 	Name = "Nidhogg",
 	Gender = "male",
-	Type = "unit-wyrm"
+	Type = "unit-wyrm",
+	Civilization = "aesir",
+	Faction = "hel",
+	Date = -3000,
+	DeathDate = 3000,
+	Trait = "upgrade-vicious",
+	HistoricalLocations = {
+		-3000, "niflheim", {101, 164}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "hel") then
+			return true
+		end
+		return false
+	end
 })

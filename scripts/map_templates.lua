@@ -36,7 +36,7 @@ DefineMapTemplate("alfheim", {
 		"unit-silver-deposit", 4,
 		"unit-copper-deposit", 4,
 		"unit-tree-stump", 16,
-		"unit-unicorn", 32,
+		"unit-unicorn", 32
 	},
 	PlayerLocationGeneratedNeutralUnits = {
 		"unit-copper-deposit", 1,
@@ -187,7 +187,8 @@ DefineMapTemplate("niflheim", {
 	TerrainImage = "scripts/map_templates/niflheim.png",
 	OverlayTerrainImage = "scripts/map_templates/niflheim_overlay.png",
 	GeneratedNeutralUnits = {
-		"unit-wyrm", 8
+		"unit-wyrm", 8,
+		"unit-roaming-fog", 64
 	}
 })
 

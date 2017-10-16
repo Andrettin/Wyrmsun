@@ -476,14 +476,35 @@ UI.NetworkDiplomacyButton:SetCallback(function() RunDiplomacyMenu() end)
 
 -- Plane Map Layer Buttons
 
+local material_plane_id = GetPlaneData("material-plane", "ID")
+--if (GetMapLayer("material-plane", "alfheim", 0) ~= -1 or GetMapLayer("material-plane", "earth", 0) ~= -1 or GetMapLayer("material-plane", "jotunheim", 0) ~= -1 or GetMapLayer("material-plane", "nidavellir", 0) ~= -1) then
+if (GetMapLayer("material-plane", "", 0) ~= -1) then
+	UI.PlaneButtons:at(material_plane_id).X = 16 + (19  * 0)
+	UI.PlaneButtons:at(material_plane_id).Y = Video.Height - 178
+	UI.PlaneButtons:at(material_plane_id).Style = FindButtonStyle("world-nidavellir")
+else
+	UI.PlaneButtons:at(material_plane_id).X = -1
+	UI.PlaneButtons:at(material_plane_id).Y = -1
+end
+
 local asgard_id = GetPlaneData("asgard", "ID")
 if (GetMapLayer("asgard", "", 0) ~= -1) then
-	UI.PlaneButtons:at(asgard_id).X = 16 + (19  * 0)
+	UI.PlaneButtons:at(asgard_id).X = 16 + (19  * 1)
 	UI.PlaneButtons:at(asgard_id).Y = Video.Height - 178
 	UI.PlaneButtons:at(asgard_id).Style = FindButtonStyle("world-earth")
 else
 	UI.PlaneButtons:at(asgard_id).X = -1
 	UI.PlaneButtons:at(asgard_id).Y = -1
+end
+
+local niflheim_id = GetPlaneData("niflheim", "ID")
+if (GetMapLayer("niflheim", "", 0) ~= -1) then
+	UI.PlaneButtons:at(niflheim_id).X = 16 + (19  * 2)
+	UI.PlaneButtons:at(niflheim_id).Y = Video.Height - 178
+	UI.PlaneButtons:at(niflheim_id).Style = FindButtonStyle("world-jotunheim")
+else
+	UI.PlaneButtons:at(niflheim_id).X = -1
+	UI.PlaneButtons:at(niflheim_id).Y = -1
 end
 
 -- World Map Layer Buttons

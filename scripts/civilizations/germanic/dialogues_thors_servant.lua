@@ -111,6 +111,9 @@ DefineDialogue("thors-servant-berserker-brides-killed", {
 		},
 		{
 			"text", "Hint: Scout around the island with the ship Skidbladnir to find the Portal. Portals can only be seen and used by units with Ethereal Vision, such as the unique ship you now possess."
+		},
+		{
+			"text", "Hint: If you find Geirrod to be more than a match for you, don't hesitate to flee aboard your ship back to Earth. The ettins cannot follow you back to your homeworld, allowing you to recover and regroup before staging a new attack."
 		}
 	}
 })

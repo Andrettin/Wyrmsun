@@ -25,4 +25,21 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-SetMapTemplateUnit("niflheim", "unit-dwarven-stronghold", "hel", {225, 132})
+DefineSettlement("eljudnir", { -- Hel's hall in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 33-34.
+	Name = "Eljudnir",
+	MapTemplate = "niflheim",
+	Position = {225, 132},
+	Major = true,
+	CulturalNames = {
+	},
+	Cores = {
+		"hel"
+	},
+	HistoricalOwners = {
+--		-3000, "hel"
+	},
+	HistoricalBuildings = {
+--		-3000, 0, "stronghold" -- the hall was fortified (possessed tall walls and impregnable gates)
+	},
+	Regions = {}
+})

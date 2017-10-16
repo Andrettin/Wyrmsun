@@ -1122,6 +1122,7 @@ DefineTerrainType("railroad", { -- also represents tramways when linking a settl
 
 DefineTerrainType("dwarven-wall", {
 	Name = "Wall",
+	Color = {128, 160, 160},
 	BaseTerrains = {"dirt", "grass", "dry-mud", "cave-floor", "floor", "snow"},
 	Overlay = true,
 	Flags = {"land", "wall", "unpassable"},
