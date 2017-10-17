@@ -1815,10 +1815,12 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 						for j = 1, table.getn(settlement_units) do
 							local settlement_site_distance
 							for k = 0, (i - 1) do -- every player before this one
+								local new_settlement_site_distance = math.sqrt(math.pow(GetUnitVariable(settlement_units[j], "PosX") - Players[k].StartPos.x, 2) + math.pow(GetUnitVariable(settlement_units[j], "PosY") - Players[k].StartPos.y, 2))
+								
 								if (settlement_site_distance) then
-									settlement_site_distance = math.min(settlement_site_distance, math.abs(GetUnitVariable(settlement_units[j], "PosX") - Players[k].StartPos.x) + math.abs(GetUnitVariable(settlement_units[j], "PosY") - Players[k].StartPos.y))
+									settlement_site_distance = math.min(settlement_site_distance, new_settlement_site_distance)
 								else
-									settlement_site_distance = math.abs(GetUnitVariable(settlement_units[j], "PosX") - Players[k].StartPos.x) + math.abs(GetUnitVariable(settlement_units[j], "PosY") - Players[k].StartPos.y)
+									settlement_site_distance = new_settlement_site_distance
 								end
 							end
 							if (settlement_site_distance > best_settlement_site_distance) then
