@@ -25,6 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineMapTemplate("aethermaw", {
+	Name = "Aethermaw",
+	Plane = "aethermaw",
+	Width = 51,
+	Height = 42,
+	TerrainImage = "scripts/map_templates/aethermaw.png"
+})
+
 DefineMapTemplate("alfheim", {
 	Name = "Alfheim",
 	World = "alfheim",
@@ -187,6 +195,7 @@ DefineMapTemplate("niflheim", {
 	TerrainImage = "scripts/map_templates/niflheim.png",
 	OverlayTerrainImage = "scripts/map_templates/niflheim_overlay.png",
 	GeneratedNeutralUnits = {
+		"unit-wolf", 64,
 		"unit-wyrm", 8,
 		"unit-roaming-fog", 64
 	}

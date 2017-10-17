@@ -25,6 +25,11 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefinePlane("aethermaw", { -- from Battle for Wesnoth
+	Name = "Aethermaw",
+--	Description = "The Aethermaw is a nexus of mystical energy of a rather chaotic nature. The cosmic forces of the plane make it a formidable prison for any immortal being bound to its center."
+})
+
 DefinePlane("asgard", { -- Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 116.
 	Name = "Asgard",
 	Description = _("The plane of Asgard is the home of the deities known as the Aesir. Their worshipers who died in battle go to Asgard in the afterlife, becoming einherjar at Valhalla and Folkvang.")

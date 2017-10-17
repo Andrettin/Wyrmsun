@@ -1352,7 +1352,15 @@ function RunEncyclopediaPlanesMenu()
 	end
 	menu:addLabel("~<Encyclopedia: Planes~>", offx + 320, offy + 104 + 36*(-4 + height_offset), nil, true)
 
-	local planes = GetPlanes()
+	local potential_planes = GetPlanes()
+	local planes = {}
+	
+	for i = 1, table.getn(potential_planes) do
+		if (GetPlaneData(potential_planes[i], "Description") ~= "") then
+			table.insert(planes, potential_planes[i])
+		end
+	end
+	table.sort(planes)
 
 	local plane_x = 0
 	if (GetTableSize(planes) > 20) then
@@ -1516,7 +1524,14 @@ function RunEncyclopediaWorldsMenu()
 	end
 	menu:addLabel("~<Encyclopedia: Worlds~>", offx + 320, offy + 104 + 36*(-4 + height_offset), nil, true)
 
-	local worlds = GetWorlds()
+	local potential_worlds = GetWorlds()
+	local worlds = {}
+	
+	for i = 1, table.getn(potential_worlds) do
+		if (GetWorldData(potential_worlds[i], "Description") ~= "") then
+			table.insert(worlds, potential_worlds[i])
+		end
+	end
 	table.sort(worlds)
 
 	local world_x = 0
