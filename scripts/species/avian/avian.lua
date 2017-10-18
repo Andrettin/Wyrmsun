@@ -102,7 +102,7 @@ DefineSpecies("bald-eagle", { -- Source: http://www.itis.gov/servlet/SingleRpt/S
 DefineSpecies("bird", {
 	Name = "Bird",
 	Homeworld = "earth",
-	Terrains = {"grass", "dirt", "pine-tree", "rock", "shallow-water", "dry-mud", "mud", "snow"}, -- correct?
+	Terrains = {"grass", "dirt", "pine-tree", "rock", "shallow-water", "dry-mud", "mud", "snow", "ice"}, -- correct?
 	EvolvesFrom = {"ichthyornis", "presbyornis"}, -- seems sensible, given the songbird is set to descend from these
 	ChildUpgrade = "upgrade-child"
 })

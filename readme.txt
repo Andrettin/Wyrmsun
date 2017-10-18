@@ -103,7 +103,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Terrain
 - Fixed issue which prevented stone from being gathered from cave walls.
-- Added Snow and Pine Tree (Snow) tiles.
+- Added Snow, Ice and Pine Tree (Snow) tiles.
 
 * Units
 - Added Dwarven Thunderer (icon by Jinn and unit graphics by Jinn and b_o).
