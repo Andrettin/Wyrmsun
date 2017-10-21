@@ -32,67 +32,68 @@ DefinePlane("aethermaw", { -- from Battle for Wesnoth
 
 DefinePlane("asgard", { -- Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 116.
 	Name = "Asgard",
-	Description = _("The plane of Asgard is the home of the deities known as the Aesir. Their worshipers who died in battle go to Asgard in the afterlife, becoming einherjar at Valhalla and Folkvang.")
+	Description = "The plane of Asgard is the home of the deities known as the Aesir. Their worshipers who died in battle go to Asgard in the afterlife, becoming einherjar at Valhalla and Folkvang.",
+	TimeOfDaySeconds = 0 -- always day
 })
 
 DefinePlane("duat", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 15.
 	Name = "Duat",
-	Description = _("Duat is the plane where those who believe in the Pharaonic pantheon experience their afterlife.")
+	Description = "Duat is the plane where those who believe in the Pharaonic pantheon experience their afterlife."
 })
 
 DefinePlane("elysium", { -- Source: Jenny March, "Dictionary of Classical Mythology", 2014, pp. 174-175.
 	Name = "Elysium",
-	Description = _("The verdant plane of Elysium is where those favored by the deities of the Olympian pantheon go after their death. Afterlife in Elysium is pleasurable, featuring neither toil nor tears.")
+	Description = "The verdant plane of Elysium is where those favored by the deities of the Olympian pantheon go after their death. Afterlife in Elysium is pleasurable, featuring neither toil nor tears."
 })
 
 DefinePlane("hades", { -- Source: Jenny March, "Dictionary of Classical Mythology", 2014, pp. 211-213.
 	Name = "Hades",
-	Description = _("The underworld plane of Hades looks much like the underground depths of many mortal worlds. The realm houses the souls of those who believed in the Olympian pantheon during their lives, and who were neither favored enough by the gods to be sent to Elysium, nor cruel enough to be sent to Tartarus. Afterlife in Hades is one of lamentation and sorrow. The plane is ruled by the deity of the same name.")
+	Description = "The underworld plane of Hades looks much like the underground depths of many mortal worlds. The realm houses the souls of those who believed in the Olympian pantheon during their lives, and who were neither favored enough by the gods to be sent to Elysium, nor cruel enough to be sent to Tartarus. Afterlife in Hades is one of lamentation and sorrow. The plane is ruled by the deity of the same name."
 })
 
 DefinePlane("heaven", {
 	Name = "Heaven",
-	Description = _("Within Heaven the monotheistic God dwells, served by a large host of angels. The forces of Heaven deplore those they deem to be false deities, such as the Aesir, a sentiment which sometimes erupts into open hostility. Their greatest enemies, however, are the demons of Hell.")
+	Description = "Within Heaven the monotheistic God dwells, served by a large host of angels. The forces of Heaven deplore those they deem to be false deities, such as the Aesir, a sentiment which sometimes erupts into open hostility. Their greatest enemies, however, are the demons of Hell."
 })
 
 DefinePlane("hell", {
 	Name = "Hell",
-	Description = _("Hell is the home to the sadistic creatures known as demons. Though its vicious inhabitants are powerful creatures, they are kept at bay by the forces of Heaven.")
+	Description = "Hell is the home to the sadistic creatures known as demons. Though its vicious inhabitants are powerful creatures, they are kept at bay by the forces of Heaven."
 })
 
 DefinePlane("material-plane", {
 	Name = "Material Plane",
-	Description = _("The material plane is the normal plane of existence, where worlds such as Earth and Nidavellir are located. As the other planes are made of pure magic, it is almost impossible for their inhabitants to travel to the material plane, as the difference in the composition of the realms would risk the traveller's very existence. The major exception being that particularly powerful mortal sorcerers are sometimes able to summon extraplanar beings for very short periods of time, maintaining their presence in a great effort of magical prowess. As more powerful extraplanar creatures are generally more rich in magic, they are also more difficult to summon.")
+	Description = "The material plane is the normal plane of existence, where worlds such as Earth and Nidavellir are located. As the other planes are made of pure magic, it is almost impossible for their inhabitants to travel to the material plane, as the difference in the composition of the realms would risk the traveller's very existence. The major exception being that particularly powerful mortal sorcerers are sometimes able to summon extraplanar beings for very short periods of time, maintaining their presence in a great effort of magical prowess. As more powerful extraplanar creatures are generally more rich in magic, they are also more difficult to summon."
 })
 
 DefinePlane("muspelheim", {
 	Name = "Muspelheim",
-	Description = _("A primordial realm of flame, Muspelheim is inhabited by fiery creatures."),
-	Background = _("Muspelheim was the fire world of Norse mythology, the encounter of its heat with Niflheim's cold resulting in the creation of the cosmos.")
+	Description = "A primordial realm of flame, Muspelheim is inhabited by fiery creatures.",
+	Background = "Muspelheim was the fire world of Norse mythology, the encounter of its heat with Niflheim's cold resulting in the creation of the cosmos."
 })
 
 DefinePlane("niflheim", {
 	Name = "Niflheim",
-	Description = _("A dark, cold plane, Niflheim is inhabited by icy beings who can thrive in its freezing conditions. The abode of the goddess Hel is located in Niflheim. The plane harbors the souls of the dead who worshiped the Aesir, and yet were deemed unworthy of entry into Asgard by virtue of not having died in battle. In Helheim lies one of the roots of the mighty interplanar tree, Yggdrasill, the root having been corrupted by the dark forces of the plane."),
-	Background = _("Niflheim was the ice world of Norse mythology, the encounter of its cold with Muspelheim's heat resulting in the creation of the cosmos. Hel was a part of Niflheim.")
+	Description = "A dark, cold plane, Niflheim is inhabited by icy beings who can thrive in its freezing conditions. The abode of the goddess Hel is located in Niflheim. The plane harbors the souls of the dead who worshiped the Aesir, and yet were deemed unworthy of entry into Asgard by virtue of not having died in battle. In Helheim lies one of the roots of the mighty interplanar tree, Yggdrasill, the root having been corrupted by the dark forces of the plane.",
+	Background = "Niflheim was the ice world of Norse mythology, the encounter of its cold with Muspelheim's heat resulting in the creation of the cosmos. Hel was a part of Niflheim."
 })
 
 DefinePlane("nun", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 50.
 	Name = "Nun",
-	Description = _("Nun is a primordial water plane, which is sometimes used as refuge by the deities of the Pharaonic pantheon.")
+	Description = "Nun is a primordial water plane, which is sometimes used as refuge by the deities of the Pharaonic pantheon."
 })
 
 DefinePlane("olympus", { -- Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 354.
 	Name = "Olympus",
-	Description = _("The realm of Olympus is the dwelling place of the pantheon of deities ruled by Zeus. Endless feasts succeed one another in the plane, nourishing the Olympian gods with ambrosia and nectar. The plane's weather is eternally sunny, so that it never winds, rains or snows, and clouds are entirely absent.")
+	Description = "The realm of Olympus is the dwelling place of the pantheon of deities ruled by Zeus. Endless feasts succeed one another in the plane, nourishing the Olympian gods with ambrosia and nectar. The plane's weather is eternally sunny, so that it never winds, rains or snows, and clouds are entirely absent."
 })
 
 DefinePlane("tartarus", { -- Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 456.
 	Name = "Tartarus",
-	Description = _("Tartarus is a dark, sinister realm. After defeat in their war with the Olympian deities, the Titans were imprisoned in Tartarus by Zeus. Particularly evil mortals who believe in the Olympian pantheon are sent to Tartarus after their death, suffering horrible punishments.")
+	Description = "Tartarus is a dark, sinister realm. After defeat in their war with the Olympian deities, the Titans were imprisoned in Tartarus by Zeus. Particularly evil mortals who believe in the Olympian pantheon are sent to Tartarus after their death, suffering horrible punishments."
 })
 
 DefinePlane("vanaheim", {
 	Name = "Vanaheim",
-	Description = _("Vanaheim is home to the deities known as the Vanir. In archaic times, the Vanir fought a war with the Aesir of Asgard. With the conflict ending inconclusively, the two pantheons agreed to a peace, it being decided that a few deities from each group should live in the other's realm, to ensure good behavior from both parties. Most of the worshippers of the Vanir are elves, though Germanic peoples also revere the Vanir who went to live in Asgard.")
+	Description = "Vanaheim is home to the deities known as the Vanir. In archaic times, the Vanir fought a war with the Aesir of Asgard. With the conflict ending inconclusively, the two pantheons agreed to a peace, it being decided that a few deities from each group should live in the other's realm, to ensure good behavior from both parties. Most of the worshippers of the Vanir are elves, though Germanic peoples also revere the Vanir who went to live in Asgard."
 })

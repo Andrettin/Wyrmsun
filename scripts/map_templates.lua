@@ -59,7 +59,6 @@ DefineMapTemplate("asgard", {
 	Width = 256,
 	Height = 256,
 	TerrainImage = "scripts/map_templates/asgard.png",
-	TimeOfDaySeconds = 0, -- always day
 	GeneratedNeutralUnits = {
 		"unit-yale", 4,
 		"unit-goat", 8,
