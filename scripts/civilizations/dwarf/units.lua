@@ -886,12 +886,11 @@ DefineUnitType("unit-dwarven-thunderer", {
 	Image = {"file", "dwarf/units/thunderer.png", "size", {72, 72}},
 	Animations = "animations-gunpowder-infantry", Icon = "icon-dwarven-thunderer",
 	DefaultEquipment = {
---		{"weapon", "unit-throwing-axe"},
+		{"weapon", "unit-hand-cannon"},
 		{"boots", "unit-boots"}
 	},
 	Corpse = "unit-dwarven-dead-body",
---	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
-	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-hand-cannon", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
 		"acknowledge", "basic-dwarf-voices-acknowledge",
@@ -1359,7 +1358,7 @@ DefineUnitType("unit-dwarven-stronghold", {
 	Costs = {"lumber", 0, "stone", 3600},
 	RepairCosts = {"lumber", 0},
 	FireResistance = 20,
-	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-hand-cannon", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
 	RequirementsString = "War Hall and Masonry",
 	DropSpells = {"spell-joruvellir-allegiance"},
 	Variations = {
@@ -1437,7 +1436,7 @@ DefineUnitType("unit-dwarven-barracks", {
 	ButtonKey = "w",
 	ButtonHint = "Build ~!War Hall",
 	Drops = {"unit-stone-pile"},
-	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-hand-cannon", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
@@ -1478,7 +1477,7 @@ DefineUnitType("unit-dwarven-smithy", {
 	RepairCosts = {"lumber", 0, "stone", 1},
 	FireResistance = 20,
 	Drops = {"unit-stone-pile"},
-	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-spatha"}, -- drops Spatha to allow dropping dwarven unique swords
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-hand-cannon", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-spatha"}, -- drops Spatha to allow dropping dwarven unique swords
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}

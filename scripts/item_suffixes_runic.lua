@@ -26,15 +26,15 @@
 --
 
 DefineUpgrade("upgrade-item-suffix-of-aedi", {
-	Name = _("of Aedi"), -- "Aedi" (untransliterated: "æði") is a Norse rune meaning "frenzy"; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 146.
+	Name = "of Aedi", -- "Aedi" (untransliterated: "æði") is a Norse rune meaning "frenzy"; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 146.
 	MagicSuffix = true,
 	RunicAffix = true,
-	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "horn", true},
+	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "gun", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "horn", true},
 	MagicLevel = 1
 })
 
 DefineUpgrade("upgrade-item-suffix-of-ergi", {
-	Name = _("of Ergi"), -- "Ergi" is a Norse rune meaning "lust"; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 146.
+	Name = "of Ergi", -- "Ergi" is a Norse rune meaning "lust"; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 146.
 	MagicSuffix = true,
 	RunicAffix = true,
 	ItemSuffix = {"horn", true, "amulet", true, "ring", true},
@@ -42,7 +42,7 @@ DefineUpgrade("upgrade-item-suffix-of-ergi", {
 })
 
 DefineUpgrade("upgrade-item-suffix-of-os", {
-	Name = _("of Os"), -- "Os" is an Anglo-Saxon rune meaning "mouth"; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 63.
+	Name = "of Os", -- "Os" is an Anglo-Saxon rune meaning "mouth"; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 63.
 	MagicSuffix = true,
 	RunicAffix = true,
 	ItemSuffix = {"armor", true, "shield", true, "horn", true, "helmet", true, "amulet", true, "ring", true},
@@ -50,15 +50,15 @@ DefineUpgrade("upgrade-item-suffix-of-os", {
 })
 
 DefineUpgrade("upgrade-item-suffix-of-othola", {
-	Name = _("of Othola"), -- "Othola" (untransliterated: "óþola") is a Norse rune meaning "restlessness"; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 146.
+	Name = "of Othola", -- "Othola" (untransliterated: "óþola") is a Norse rune meaning "restlessness"; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 146.
 	MagicSuffix = true,
 	RunicAffix = true,
-	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "horn", true},
+	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "gun", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "horn", true},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-suffix-of-sigel", {
-	Name = _("of Sigel"), -- Anglo-Saxon rune meaning "sun", but is also in a riddle indicated to mean "shield"; Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 119.
+	Name = "of Sigel", -- Anglo-Saxon rune meaning "sun", but is also in a riddle indicated to mean "shield"; Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 119.
 	MagicSuffix = true,
 	RunicAffix = true,
 	ItemSuffix = {"armor", true, "shield", true, "horn", true, "helmet", true, "amulet", true, "ring", true},
@@ -66,7 +66,7 @@ DefineUpgrade("upgrade-item-suffix-of-sigel", {
 })
 
 DefineUpgrade("upgrade-item-suffix-of-thurs", {
-	Name = _("of Thurs"), -- "Thurs" is a Norse rune meaning "giant"; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 146.
+	Name = "of Thurs", -- "Thurs" is a Norse rune meaning "giant"; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 146.
 	MagicSuffix = true,
 	RunicAffix = true,
 	ItemSuffix = {"armor", true, "shield", true, "horn", true, "helmet", true, "amulet", true, "ring", true},

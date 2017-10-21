@@ -258,6 +258,16 @@ DefineUnitType("unit-bearded-throwing-axe", {
 	BasicDamage = 4
 } )
 
+DefineUnitType("unit-hand-cannon", {
+	Name = "Hand Cannon",
+	Parent = "unit-template-item",
+	Costs = {"copper", 400},
+	Image = {"file", "teuton/items/hand_cannon.png", "size", {16, 16}},
+	Icon = "icon-teuton-hand-cannon",
+	ItemClass = "gun",
+	BasicDamage = 0
+} )
+
 DefineUnitType("unit-wooden-shield", {
 	Name = "Wooden Shield",
 	Parent = "unit-template-item",

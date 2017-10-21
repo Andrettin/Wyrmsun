@@ -32,10 +32,10 @@
 --
 
 DefineUnitType("unit-goblin-worker", {
-	Name = _("Drudge"),
+	Name = "Drudge",
 	Parent = "unit-template-worker",
 	Civilization = "goblin",
-	Description = _("Goblin drudges do not live an enviable life. Those that have the opportunity seek to become warriors instead, a position in which they can obtain much better food and everyday commodities by raiding."),
+	Description = "Goblin drudges do not live an enviable life. Those that have the opportunity seek to become warriors instead, a position in which they can obtain much better food and everyday commodities by raiding.",
 	Image = {"file", "goblin/units/goblin_worker.png", "size", {72, 72}},
 	Animations = "animations-gnomish-worker", Icon = "icon-goblin-worker",
 	DefaultEquipment = {
@@ -49,7 +49,7 @@ DefineUnitType("unit-goblin-worker", {
 	WeaponClasses = {"mace", "axe"},
 	BluntDamage = true,
 	ButtonKey = "d",
-	ButtonHint = _("Train ~!Drudge"),
+	ButtonHint = "Train ~!Drudge",
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
 	CanGatherResources = {
 		{
@@ -133,7 +133,7 @@ DefineUnitType("unit-goblin-worker", {
 DefineUnitType("unit-goblin-militia", {
 	Parent = "unit-template-militia",
 	Civilization = "goblin",
-	Description = _("Poorly-equipped and badly-trained, goblin militia are the last line of defense against enemy invasions."),
+	Description = "Poorly-equipped and badly-trained, goblin militia are the last line of defense against enemy invasions.",
 	Image = {"file", "goblin/units/goblin_worker.png", "size", {72, 72}},
 	Animations = "animations-gnomish-worker", Icon = "icon-goblin-militia",
 	DefaultEquipment = {
@@ -167,10 +167,10 @@ DefineUnitType("unit-goblin-militia", {
 } )
 
 DefineUnitType("unit-goblin-magnate", { 
-	Name = _("Magnate"),
+	Name = "Magnate",
 	Parent = "unit-template-heroic-merchant",
 	Civilization = "goblin",
-	Description = _("The Goblin syndicates always keen on profitable opportunities. Their leadership is largely drawn from magnates, extremely wealthy and savvy merchants whose scruples leave something to be desired. Engaging in trade with all sorts of people and in all kinds of goods, goblin traders often stradle the twilight zone between legality and illegality."),
+	Description = "The Goblin syndicates always keen on profitable opportunities. Their leadership is largely drawn from magnates, extremely wealthy and savvy merchants whose scruples leave something to be desired. Engaging in trade with all sorts of people and in all kinds of goods, goblin traders often stradle the twilight zone between legality and illegality.",
 	Image = {"file", "goblin/units/rogue.png", "size", {72, 72}},
 	Animations = "animations-goblin-rogue", Icon = "icon-goblin-magnate",
 	DefaultEquipment = {
@@ -196,10 +196,11 @@ DefineUnitType("unit-goblin-magnate", {
 	}
 } )
 
-DefineUnitType("unit-goblin-thief", { Name = _("Thief"),
+DefineUnitType("unit-goblin-thief", {
+	Name = "Thief",
 	Parent = "unit-template-thief",
 	Civilization = "goblin",
-	Description = _("With their light build, goblins make excellent thieves. Indeed, many goblins do partake in that profession, causing the malaise of goblin thievery to affect not only the local tribes, but even the dwarven and gnomish countryside. These bandits specialize in delivering fatal blows when a target has its back turned to them, and for such skills they are sometimes hired by enterprising leaders seeking to give their enemies a nasty surprise."),
+	Description = "With their light build, goblins make excellent thieves. Indeed, many goblins do partake in that profession, causing the malaise of goblin thievery to affect not only the local tribes, but even the dwarven and gnomish countryside. These bandits specialize in delivering fatal blows when a target has its back turned to them, and for such skills they are sometimes hired by enterprising leaders seeking to give their enemies a nasty surprise.",
 	Image = {"file", "goblin/units/goblin_thief.png", "size", {72, 72}},
 	Animations = "animations-goblin-thief", Icon = "icon-goblin-thief",
 	DefaultEquipment = {
@@ -215,7 +216,7 @@ DefineUnitType("unit-goblin-thief", { Name = _("Thief"),
 	WeaponClasses = {"dagger"},
 	PierceDamage = true,
 	ButtonKey = "t",
-	ButtonHint = _("Hire Goblin ~!Thief"),
+	ButtonHint = "Hire Goblin ~!Thief",
 	ButtonPos = 1,
 	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Sounds = {
@@ -231,11 +232,11 @@ DefineUnitType("unit-goblin-thief", { Name = _("Thief"),
 } )
 
 DefineUnitType("unit-goblin-swordsman", {
-	Name = _("Swordsman"),
+	Name = "Swordsman",
 	Parent = "unit-template-infantry",
 	Civilization = "goblin",
 	Image = {"file", "goblin/units/goblin_swordsman.png", "size", {72, 72}},
-	Description = _("Goblin swordsmen are amongst the most savage of their kind. With weapons in hand, they gleefully hack through their enemies' flesh."),
+	Description = "Goblin swordsmen are amongst the most savage of their kind. With weapons in hand, they gleefully hack through their enemies' flesh.",
 	Animations = "animations-goblin-swordsman", Icon = "icon-goblin-swordsman",
 	DefaultEquipment = {
 		{"weapon", "unit-goblin-short-sword"},
@@ -252,7 +253,7 @@ DefineUnitType("unit-goblin-swordsman", {
 	WeaponClasses = {"sword", "thrusting-sword"},
 	HackDamage = true,
 	ButtonKey = "s",
-	ButtonHint = _("Train ~!Swordsman"),
+	ButtonHint = "Train ~!Swordsman",
 	AiDrops = {"unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Corpse = "unit-goblin-dead-body",
 	Sounds = {
@@ -302,10 +303,10 @@ DefineUnitType("unit-goblin-barbarian", {
 })
 
 DefineUnitType("unit-goblin-warlord", {
-	Name = _("Warlord"),
+	Name = "Warlord",
 	Parent = "unit-template-heroic-infantry",
 	Civilization = "goblin",
-	Description = _("Goblin warlords lead their tribes with savage bloodlust into battle. These fearsome warriors seek to emulate the goblin deity, Gathaarl, and his love for combat."),
+	Description = "Goblin warlords lead their tribes with savage bloodlust into battle. These fearsome warriors seek to emulate the goblin deity, Gathaarl, and his love for combat.",
 	Image = {"file", "goblin/units/goblin_swordsman.png", "size", {72, 72}},
 	Animations = "animations-goblin-swordsman", Icon = "icon-goblin-warlord",
 	DefaultEquipment = {
@@ -341,7 +342,7 @@ DefineUnitType("unit-goblin-spearman", {
 	Parent = "unit-template-spearman",
 	Civilization = "goblin",
 	Image = {"file", "goblin/units/goblin_spearman.png", "size", {72, 72}},
-	Description = _("The spear is a common weapon of choice amongst goblins. It is easy to manufacture, and the spear's length helps keeping larger foes at bay."),
+	Description = "The spear is a common weapon of choice amongst goblins. It is easy to manufacture, and the spear's length helps keeping larger foes at bay.",
 	Animations = "animations-goblin-spearman", Icon = "icon-goblin-spearman",
 	DefaultEquipment = {
 		{"weapon", "unit-short-spear"},
@@ -356,7 +357,7 @@ DefineUnitType("unit-goblin-spearman", {
 	DaySightRangeBonus = -1,
 	NightSightRangeBonus = 1,
 	ButtonKey = "i",
-	ButtonHint = _("Train ~!Impaler"),
+	ButtonHint = "Train ~!Impaler",
 	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Corpse = "unit-goblin-dead-body",
 	Sounds = {
@@ -373,7 +374,7 @@ DefineUnitType("unit-goblin-archer", {
 	Name = "Archer",
 	Parent = "unit-template-archer",
 	Civilization = "goblin",
-	Description = _("Swift and deadly, the goblin archers hone above all the art of the ambush."),
+	Description = "Swift and deadly, the goblin archers hone above all the art of the ambush.",
 	Image = {"file", "goblin/units/goblin_archer.png", "size", {72, 72}},
 	Animations = "animations-goblin-archer", Icon = "icon-goblin-archer",
 	DefaultEquipment = {
@@ -391,7 +392,7 @@ DefineUnitType("unit-goblin-archer", {
 	WeaponClasses = {"bow"},
 	PierceDamage = true,
 	ButtonKey = "a",
-	ButtonHint = _("Train ~!Archer"),
+	ButtonHint = "Train ~!Archer",
 	AiDrops = {"unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Corpse = "unit-goblin-dead-body",
 	Sounds = {
@@ -407,10 +408,10 @@ DefineUnitType("unit-goblin-archer", {
 } )
 
 DefineUnitType("unit-goblin-headhunter", {
-	Name = _("Headhunter"),
+	Name = "Headhunter",
 	Parent = "unit-template-veteran-shooter",
 	Civilization = "goblin",
-	Description = _("Goblin headhunters are lethally accurate assassins, who revel in the suffering of their victims."),
+	Description = "Goblin headhunters are lethally accurate assassins, who revel in the suffering of their victims.",
 	Image = {"file", "goblin/units/goblin_archer.png", "size", {72, 72}},
 	Animations = "animations-goblin-archer", Icon = "icon-goblin-headhunter",
 	DefaultEquipment = {
@@ -442,10 +443,10 @@ DefineUnitType("unit-goblin-headhunter", {
 } )
 
 DefineUnitType("unit-goblin-shadowstalker", {
-	Name = _("Shadowstalker"),
+	Name = "Shadowstalker",
 	Parent = "unit-template-heroic-shooter",
 	Civilization = "goblin",
-	Description = _("Shadowstalkers are the most accomplished and deadly of goblin archers. Swift and stealthy, they finish their targets with sniping precision."),
+	Description = "Shadowstalkers are the most accomplished and deadly of goblin archers. Swift and stealthy, they finish their targets with sniping precision.",
 	Image = {"file", "goblin/units/goblin_archer.png", "size", {72, 72}},
 	Animations = "animations-goblin-archer", Icon = "icon-goblin-shadowstalker",
 	DefaultEquipment = {
@@ -484,7 +485,7 @@ DefineUnitType("unit-goblin-gunpowder-infantry", {
 	Image = {"file", "goblin/units/gunpowder_infantry.png", "size", {72, 72}},
 	Animations = "animations-gunpowder-infantry", Icon = "icon-goblin-gunpowder-infantry",
 	DefaultEquipment = {
---		{"weapon", "unit-throwing-axe"},
+		{"weapon", "unit-hand-cannon"},
 		{"boots", "unit-boots"}
 	},
 	HitPoints = 35,
@@ -493,8 +494,7 @@ DefineUnitType("unit-goblin-gunpowder-infantry", {
 	DaySightRangeBonus = -1,
 	NightSightRangeBonus = 1,
 	Corpse = "unit-goblin-dead-body",
---	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
-	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-hand-cannon", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "basic-goblin-voices-acknowledge",
@@ -506,10 +506,10 @@ DefineUnitType("unit-goblin-gunpowder-infantry", {
 } )
 
 DefineUnitType("unit-goblin-shaman", {
-	Name = _("Shaman"),
+	Name = "Shaman",
 	Parent = "unit-template-priest",
 	Civilization = "goblin",
-	Description = _("Adorned with skulls and bones, goblin shamans are steeped in the mysteries of life and death. Each shaman must choose his own path, whether it be taming the savage force of life or dealing in dark magics."),
+	Description = "Adorned with skulls and bones, goblin shamans are steeped in the mysteries of life and death. Each shaman must choose his own path, whether it be taming the savage force of life or dealing in dark magics.",
 	Image = {"file", "goblin/units/shaman.png", "size", {72, 72}},
 	Animations = "animations-gnomish-herbalist", Icon = "icon-goblin-shaman",
 	DefaultEquipment = {
@@ -525,7 +525,7 @@ DefineUnitType("unit-goblin-shaman", {
 	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	HackDamage = true,
 	ButtonKey = "s",
-	ButtonHint = _("Train ~!Shaman"),
+	ButtonHint = "Train ~!Shaman",
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "basic-goblin-voices-acknowledge",
@@ -539,10 +539,10 @@ DefineUnitType("unit-goblin-shaman", {
 } )
 
 DefineUnitType("unit-goblin-war-machine", {
-	Name = _("War Machine"),
+	Name = "War Machine",
 	Parent = "unit-template-siege-engine",
 	Civilization = "goblin",
-	Description = _("One recurring element of the goblin architectural style is the use of bones. With their siege weapons, it is no different: the goblin war machine displays a wyrm skull on its front, along with the beast's ribs on its sides. This siege weapon has the marks of goblin craftsmanship, combining brilliant plans and excellent initiative with lack of patience to perfect the machine and make it achieve its full potential. The war machine can hold its own even against warriors skilled in hand-to-hand combat, as the goblins within it won't hesitate to pierce them with their spears. This comes at a cost, however, as cramming a catapult and a couple of goblins in such a relatively small space reduces the structural integrity of the siege weapon. The use of wyrm bones in the construction of the war machine is considered to be something of a profanation by kobolds, who worship the ancient beasts as their progenitors."),
+	Description = "One recurring element of the goblin architectural style is the use of bones. With their siege weapons, it is no different: the goblin war machine displays a wyrm skull on its front, along with the beast's ribs on its sides. This siege weapon has the marks of goblin craftsmanship, combining brilliant plans and excellent initiative with lack of patience to perfect the machine and make it achieve its full potential. The war machine can hold its own even against warriors skilled in hand-to-hand combat, as the goblins within it won't hesitate to pierce them with their spears. This comes at a cost, however, as cramming a catapult and a couple of goblins in such a relatively small space reduces the structural integrity of the siege weapon. The use of wyrm bones in the construction of the war machine is considered to be something of a profanation by kobolds, who worship the ancient beasts as their progenitors.",
 	Image = {"file", "goblin/units/goblin_war_machine.png", "size", {72, 72}},
 	Animations = "animations-goblin-war-machine", Icon = "icon-goblin-war-machine",
 	HitPoints = 90,
@@ -551,7 +551,7 @@ DefineUnitType("unit-goblin-war-machine", {
 	CanCastSpell = {"spell-war-machine-spear-attack"},
 	AutoCastActive = {"spell-war-machine-spear-attack"},
 	ButtonKey = "m",
-	ButtonHint = _("Build War ~!Machine"),
+	ButtonHint = "Build War ~!Machine",
 	BluntDamage = true,
 	RequirementsString = "Lumber Mill and Fugla Forge",
 	Sounds = {
@@ -563,11 +563,11 @@ DefineUnitType("unit-goblin-war-machine", {
 } )
 
 DefineUnitType("unit-goblin-glider", {
-	Name = _("Glider"),
+	Name = "Glider",
 	Parent = "unit-template-unit",
 	Class = "glider",
 	Civilization = "goblin",
-	Description = _("A brainchild of goblin inventiveness, gliders are used to scout ahead and determine enemy positions."),
+	Description = "A brainchild of goblin inventiveness, gliders are used to scout ahead and determine enemy positions.",
 	Image = {"file", "goblin/units/glider.png", "size", {100, 100}},
 	Animations = "animations-goblin-glider", Icon = "icon-goblin-glider",
 	Costs = {"time", 65, "copper", 500, "lumber", 300},
@@ -595,7 +595,7 @@ DefineUnitType("unit-goblin-glider", {
 	Coward = true,
 	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	ButtonKey = "g",
-	ButtonHint = _("Build ~!Glider"),
+	ButtonHint = "Build ~!Glider",
 	ButtonPos = 7,
 	RequirementsString = "Lumber Mill",
 	Sounds = {
@@ -609,10 +609,10 @@ DefineUnitType("unit-goblin-glider", {
 } )
 
 DefineUnitType("unit-goblin-transport-ship", {
-	Name = _("Transport"),
+	Name = "Transport",
 	Parent = "unit-template-transport-ship",
 	Civilization = "goblin",
-	Description = _("The sleek goblin merchant ships are present in nearly every port of the Deep Sea. The origin of their cargoes is not always reputable, as goblin merchants are known for selling pirated or smuggled goods. The swiftness of these vessels makes them excellent blockade runners."),
+	Description = "The sleek goblin merchant ships are present in nearly every port of the Deep Sea. The origin of their cargoes is not always reputable, as goblin merchants are known for selling pirated or smuggled goods. The swiftness of these vessels makes them excellent blockade runners.",
 	Image = {"file", "goblin/units/transport.png", "size", {100, 100}},
 	LightImage = {"file", "goblin/units/transport_water.png"},
 	Icon = "icon-goblin-transport-ship",
@@ -622,10 +622,11 @@ DefineUnitType("unit-goblin-transport-ship", {
 	}
 })
 
-DefineUnitType("unit-goblin-town-hall", { Name = _("Town Hall"),
+DefineUnitType("unit-goblin-town-hall", {
+	Name = "Town Hall",
 	Parent = "unit-template-town-hall",
 	Civilization = "goblin",
-	Description = _("The town hall is the center of a goblin settlement's life."),
+	Description = "The town hall is the center of a goblin settlement's life.",
 	Image = {"file", "goblin/buildings/town_hall.png", "size", {128, 128}},
 	Shadow = {"file", "goblin/buildings/town_hall_shadow.png", "size", {128, 128}},
 	Icon = "icon-goblin-town-hall",
@@ -637,25 +638,26 @@ DefineUnitType("unit-goblin-town-hall", { Name = _("Town Hall"),
 } )
 
 DefineUnitType("unit-goblin-stronghold", {
-	Name = _("Stronghold"),
+	Name = "Stronghold",
 	Parent = "unit-template-stronghold",
 	Civilization = "goblin",
-	Description = _("When a goblin tribe becomes large enough, it will build a stronghold in its main settlement to ward off invasions from envious lesser tribes."),
+	Description = "When a goblin tribe becomes large enough, it will build a stronghold in its main settlement to ward off invasions from envious lesser tribes.",
 	Image = {"file", "goblin/buildings/stronghold.png", "size", {128, 128}},
 	Shadow = {"file", "goblin/buildings/stronghold_shadow.png", "size", {128, 128}},
 	Icon = "icon-goblin-stronghold",
 	Trains = {"unit-goblin-worker"},
 	RequirementsString = "Mess Hall and Masonry",
-	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
+	AiDrops = {"unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-hand-cannon", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
 	}
 })
 
-DefineUnitType("unit-goblin-farm", { Name = _("Farm"),
+DefineUnitType("unit-goblin-farm", {
+	Name = "Farm",
 	Parent = "unit-template-farm",
 	Civilization = "goblin",
-	Description = _("Goblin farms provide sustenance for their settlements. Due to their high population growth goblins seek to finish the construction of new farms as quickly as possible, although they sacrifice structural integrity in the process. Contrary to the dwarves, goblins tend to plant roots, rather than mushrooms, and they also breed livestock."),
+	Description = "Goblin farms provide sustenance for their settlements. Due to their high population growth goblins seek to finish the construction of new farms as quickly as possible, although they sacrifice structural integrity in the process. Contrary to the dwarves, goblins tend to plant roots, rather than mushrooms, and they also breed livestock.",
 	Image = {"file", "goblin/buildings/farm.png", "size", {64, 64}},
 	Shadow = {"file", "goblin/buildings/farm_shadow.png", "size", {64, 64}},
 	Icon = "icon-goblin-farm",
@@ -667,26 +669,27 @@ DefineUnitType("unit-goblin-farm", { Name = _("Farm"),
 } )
 
 DefineUnitType("unit-goblin-mess-hall", {
-	Name = _("Mess Hall"),
+	Name = "Mess Hall",
 	Parent = "unit-template-barracks",
 	Civilization = "goblin",
-	Description = _("Within mess halls goblin warriors gather to hone their skills and plan raids on nearby settlements."),
+	Description = "Within mess halls goblin warriors gather to hone their skills and plan raids on nearby settlements.",
 	Image = {"file", "goblin/buildings/mess_hall.png", "size", {96, 96}},
 	Shadow = {"file", "goblin/buildings/mess_hall_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-goblin-mess-hall",
 	Trains = {"unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-war-machine", "unit-goblin-glider"},
 	ButtonKey = "m",
-	ButtonHint = _("Build ~!Mess Hall"),
-	AiDrops = {"unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
+	ButtonHint = "Build ~!Mess Hall",
+	AiDrops = {"unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-hand-cannon", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
 	}
 } )
 
-DefineUnitType("unit-goblin-lumber-mill", { Name = _("Lumber Mill"),
+DefineUnitType("unit-goblin-lumber-mill", {
+	Name = "Lumber Mill",
 	Parent = "unit-template-lumber-mill",
 	Civilization = "goblin",
-	Description = _("Although exhibiting a crude exterior, the goblin lumber mills carry saws as technologically advanced as that of other societies."),
+	Description = "Although exhibiting a crude exterior, the goblin lumber mills carry saws as technologically advanced as that of other societies.",
 	Image = {"file", "goblin/buildings/lumber_mill.png", "size", {96, 96}},
 	Shadow = {"file", "goblin/buildings/lumber_mill_shadow.png", "size", {96, 96}},
 	Icon = "icon-goblin-lumber-mill",
@@ -697,27 +700,27 @@ DefineUnitType("unit-goblin-lumber-mill", { Name = _("Lumber Mill"),
 })
 
 DefineUnitType("unit-goblin-smithy", {
-	Name = _("Fugla Forge"),
+	Name = "Fugla Forge",
 	Parent = "unit-template-smithy",
 	Civilization = "goblin",
-	Description = _("Goblins construct their forges out of the skulls of massive birds found on Nidavellir."),
-	Background = _("The name 'Fugla' was taken from the Proto-Germanic language (the reconstructed ancestor to all Germanic languages), and means 'bird'."),
+	Description = "Goblins construct their forges out of the skulls of massive birds found on Nidavellir.",
+	Background = "The name 'Fugla' was taken from the Proto-Germanic language (the reconstructed ancestor to all Germanic languages), and means 'bird'.",
 	Image = {"file", "goblin/buildings/smithy.png", "size", {96, 96}},
 	Shadow = {"file", "goblin/buildings/smithy_shadow.png", "size", {96, 96}},
 	Icon = "icon-goblin-smithy",
 	ButtonKey = "o",
-	ButtonHint = _("Build Fugla F~!orge"),
-	AiDrops = {"unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield"},
+	ButtonHint = "Build Fugla F~!orge",
+	AiDrops = {"unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-hand-cannon", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield"},
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
 	}
 })
 
 DefineUnitType("unit-goblin-temple", {
-	Name = _("Temple"),
+	Name = "Temple",
 	Parent = "unit-template-temple",
 	Civilization = "goblin",
-	Description = _("Goblin temples are built on sites deemed to be particularly mystic for the green-skinned creatures, a wyrm's burial ground being an esteemed choice. Around the site massive runestones are placed, readying it for goblin shamans to chaint their rituals."),
+	Description = "Goblin temples are built on sites deemed to be particularly mystic for the green-skinned creatures, a wyrm's burial ground being an esteemed choice. Around the site massive runestones are placed, readying it for goblin shamans to chaint their rituals.",
 	Image = {"file", "goblin/buildings/temple.png", "size", {96, 96}},
 	Shadow = {"file", "goblin/buildings/temple_shadow.png", "size", {96, 96}},
 	Icon = "icon-goblin-temple",
@@ -728,10 +731,10 @@ DefineUnitType("unit-goblin-temple", {
 })
 
 DefineUnitType("unit-goblin-watch-tower", {
-	Name = _("Watch Tower"),
+	Name = "Watch Tower",
 	Parent = "unit-template-watch-tower",
 	Civilization = "goblin",
-	Description = _("Goblins are ever wary of being caught offguard by attacks from rival tribes or dwarven punitive expeditions. Their watch towers keep them informed if foes are approaching."),
+	Description = "Goblins are ever wary of being caught offguard by attacks from rival tribes or dwarven punitive expeditions. Their watch towers keep them informed if foes are approaching.",
 	Image = {"file", "goblin/buildings/watch_tower.png", "size", {64, 64}},
 	Shadow = {"file", "goblin/buildings/watch_tower_shadow.png", "size", {64, 64}},
 	Icon = "icon-goblin-watch-tower",
@@ -741,10 +744,10 @@ DefineUnitType("unit-goblin-watch-tower", {
 } )
 
 DefineUnitType("unit-goblin-guard-tower", {
-	Name = _("Guard Tower"),
+	Name = "Guard Tower",
 	Parent = "unit-template-guard-tower",
 	Civilization = "goblin",
-	Description = _("The more powerful goblin tribes protect their settlements with the placement of guard towers on their perimeters. The archers garrisoned in these structures greet approaching enemies with deadly arrows."),
+	Description = "The more powerful goblin tribes protect their settlements with the placement of guard towers on their perimeters. The archers garrisoned in these structures greet approaching enemies with deadly arrows.",
 	Image = {"file", "goblin/buildings/guard_tower.png", "size", {64, 64}},
 	Shadow = {"file", "goblin/buildings/guard_tower_shadow.png", "size", {64, 64}},
 	Icon = "icon-goblin-guard-tower",
@@ -784,7 +787,7 @@ DefineUnitType("unit-goblin-academy", {
 DefineUnitType("unit-goblin-dock", {
 	Parent = "unit-template-dock",
 	Civilization = "goblin",
-	Description = _("Goblins make for crafty shipwrights. Focusing in sleek and fast ships, goblin shipyards produce many vessels used by their kind for piracy."),
+	Description = "Goblins make for crafty shipwrights. Focusing in sleek and fast ships, goblin shipyards produce many vessels used by their kind for piracy.",
 	Image = {"file", "goblin/buildings/dock.png", "size", {96, 96}},
 	Shadow = {"file", "goblin/buildings/dock_shadow.png", "size", {96, 96}},
 	Icon = "icon-goblin-dock",

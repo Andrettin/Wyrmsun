@@ -228,6 +228,13 @@ DefineDependency("unit-bearded-throwing-axe",
 	{"unit-dwarven-lumber-mill", "upgrade-dwarven-bearded-throwing-axe"}
 )
 
+DefineDependency("unit-hand-cannon",
+	{"unit-brising-smithy", "upgrade-gunpowder"},
+	"or", {"unit-dwarven-smithy", "upgrade-gunpowder"},
+	"or", {"unit-goblin-smithy", "upgrade-gunpowder"},
+	"or", {"unit-teuton-smithy", "upgrade-gunpowder"}
+)
+
 DefineDependency("unit-wooden-shield",
 	{"unit-germanic-smithy"},
 	"or", {"unit-teuton-smithy"},

@@ -768,14 +768,13 @@ DefineUnitType("unit-teuton-gunpowder-infantry", {
 	Image = {"file", "teuton/units/austrian_musketeer.png", "size", {72, 72}},
 	Animations = "animations-gunpowder-infantry", Icon = "icon-austrian-musketeer",
 	DefaultEquipment = {
---		{"weapon", "unit-throwing-axe"},
+		{"weapon", "unit-hand-cannon"},
 		{"boots", "unit-boots"}
 	},
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
---	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
-	AiDrops = {"unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	AiDrops = {"unit-hand-cannon", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "1"
@@ -924,14 +923,14 @@ DefineUnitType("unit-teuton-catapult", {
 	Name = "Catapult",
 	Parent = "unit-template-siege-engine",
 	Civilization = "teuton",
-	Description = _("These engines of war can be of great use in battering enemy fortifications."),
+	Description = "These engines of war can be of great use in battering enemy fortifications.",
 	Image = {"file", "teuton/units/catapult.png", "size", {72, 72}},
 	Animations = "animations-teuton-catapult", Icon = "icon-teuton-catapult",
 	Missile = "missile-catapult-sandstone-rock",
 	FireMissile = "missile-flaming-catapult-rock",
 	BluntDamage = true,
 	ButtonKey = "c",
-	ButtonHint = _("Build ~!Catapult"),
+	ButtonHint = "Build ~!Catapult",
 	RequirementsString = "Carpenter's Shop/Lumber Mill, Smithy and Engineering",
 	Sounds = {
 --		"acknowledge", "ballista-acknowledge",
@@ -1002,7 +1001,7 @@ DefineUnitType("unit-teuton-stronghold", {
 	Icon = "icon-teuton-stronghold",
 	Trains = {"unit-teuton-worker"},
 	RequirementsString = "Barracks and Masonry",
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-hand-cannon", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	DropSpells = {"spell-anglo-saxon-allegiance", "spell-frank-allegiance", "spell-goth-allegiance", "spell-suebi-allegiance", "spell-teuton-allegiance"},
 	Sounds = {
 --		"help", "basic-teuton-voices-help-town"
@@ -1013,7 +1012,7 @@ DefineUnitType("unit-teuton-farm", {
 	Name = "Farm",
 	Parent = "unit-template-farm",
 	Civilization = "teuton",
-	Description = _("Farms are essential for supporting a settlement's population."),
+	Description = "Farms are essential for supporting a settlement's population.",
 	Image = {"file", "teuton/buildings/farm.png", "size", {64, 64}},
 	Shadow = {"file", "teuton/buildings/farm_shadow.png", "size", {64, 64}},
 	Icon = "icon-teuton-farm",
@@ -1041,12 +1040,12 @@ DefineUnitType("unit-teuton-farm", {
 DefineUnitType("unit-teuton-barracks", {
 	Parent = "unit-template-barracks",
 	Civilization = "teuton",
-	Description = _("Though they have always been fierce, as ages passed Teuton armies became more and more disciplined. In these structures their soldiers train for coming battles with their foes."),
+	Description = "Though they have always been fierce, as ages passed Teuton armies became more and more disciplined. In these structures their soldiers train for coming battles with their foes.",
 	Image = {"file", "teuton/buildings/barracks.png", "size", {96, 96}},
 	Shadow = {"file", "teuton/buildings/barracks_shadow.png", "size", {96, 96}},
 	Icon = "icon-teuton-barracks",
 	Trains = {"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman", "unit-teuton-spearman", "unit-frank-spearman", "unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman", "unit-teuton-catapult"},
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-hand-cannon", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	Variations = {
 		{
 			"variation-id", "barracks",
@@ -1070,7 +1069,7 @@ DefineUnitType("unit-teuton-lumber-mill", {
 	Name = "Lumber Mill",
 	Parent = "unit-template-lumber-mill",
 	Civilization = "teuton",
-	Description = _("A lumber mill provides a settlement with more advanced methods for processing timber, and it is also in this structure where woodworkers seek to improve arrows and construction techniques."),
+	Description = "A lumber mill provides a settlement with more advanced methods for processing timber, and it is also in this structure where woodworkers seek to improve arrows and construction techniques.",
 	Image = {"file", "teuton/buildings/lumber_mill.png", "size", {96, 96}},
 	Shadow = {"file", "teuton/buildings/lumber_mill_shadow.png", "size", {96, 96}},
 	Icon = "icon-teuton-lumber-mill",
@@ -1097,11 +1096,11 @@ DefineUnitType("unit-teuton-lumber-mill", {
 DefineUnitType("unit-teuton-smithy", {
 	Parent = "unit-template-smithy",
 	Civilization = "teuton",
-	Description = _("It is in these smithies that teuton craftsmen prepare and seek to continuously improve the arms warriors will wield into battle."),
+	Description = "It is in these smithies that teuton craftsmen prepare and seek to continuously improve the arms warriors will wield into battle.",
 	Image = {"file", "teuton/buildings/smithy.png", "size", {96, 96}},
 	Shadow = {"file", "teuton/buildings/smithy_shadow.png", "size", {96, 96}},
 	Icon = "icon-teuton-smithy",
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-hand-cannon", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield"},
 	Variations = {
 		{
 			"variation-id", "smithy",
@@ -1151,7 +1150,7 @@ DefineUnitType("unit-teuton-temple", {
 	Name = "Church",
 	Parent = "unit-template-temple",
 	Civilization = "teuton",
-	Description = _("In early times, Teutons professed faith in polytheistic deities in their houses of worship, the most important one being Woden. Eventually, Christian missionaries managed to expand their faith to the entirety of the Teutonic lands, overtaking the earlier paganism."),
+	Description = "In early times, Teutons professed faith in polytheistic deities in their houses of worship, the most important one being Woden. Eventually, Christian missionaries managed to expand their faith to the entirety of the Teutonic lands, overtaking the earlier paganism.",
 	Image = {"file", "teuton/buildings/church.png", "size", {96, 96}},
 	Shadow = {"file", "teuton/buildings/church_shadow.png", "size", {96, 96}},
 	Icon = "icon-teuton-church",
@@ -1218,10 +1217,11 @@ DefineUnitType("unit-teuton-university", {
 	}
 } )
 
-DefineUnitType("unit-teuton-watch-tower", { Name = _("Watch Tower"),
+DefineUnitType("unit-teuton-watch-tower", {
+	Name = "Watch Tower",
 	Parent = "unit-template-watch-tower",
 	Civilization = "teuton",
-	Description = _("These timber-made towers are built in frontier regions, keeping watch of possible attackers."),
+	Description = "These timber-made towers are built in frontier regions, keeping watch of possible attackers.",
 	Image = {"file", "teuton/buildings/watch_tower.png", "size", {64, 64}},
 	Shadow = {"file", "teuton/buildings/watch_tower_shadow.png", "size", {64, 64}},
 	Icon = "icon-teuton-watch-tower",
@@ -1248,7 +1248,7 @@ DefineUnitType("unit-teuton-dock", {
 	Name = "Dock",
 	Parent = "unit-template-dock",
 	Civilization = "teuton",
-	Description = _("Shipbuilding is an ancient craft in the Teuton shores. Already in antiquity they constructed sturdy ships, capable of assaulting the vulnerable coasts to the west. During medieval times, their shipbuilding flourished even further, as the Hanseatic League dominated commerce in the Baltic and North Seas."),
+	Description = "Shipbuilding is an ancient craft in the Teuton shores. Already in antiquity they constructed sturdy ships, capable of assaulting the vulnerable coasts to the west. During medieval times, their shipbuilding flourished even further, as the Hanseatic League dominated commerce in the Baltic and North Seas.",
 	Image = {"file", "teuton/buildings/dock.png", "size", {96, 96}},
 	Shadow = {"file", "teuton/buildings/dock_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-teuton-dock",
