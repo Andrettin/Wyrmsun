@@ -57,7 +57,7 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
-- 2.8.4
+- 2.9.0
 -----------------------------------------------------------------------
 
 * AI
@@ -121,7 +121,7 @@ https://github.com/Andrettin/Wyrmsun
 * Upgrades
 - Added Gunpowder upgrade (icon by Exidelo), which is researchable at the Academy/University and unlocks gunpowder infantry units.
 - Writing upgrades now increase only research speed.
-- Added Philosophy upgrade (icon by Exidelo), which is researchable at the Academy/University and grants a +10% research speed bonus.
+- Added Philosophy upgrade (icon by Exidelo), which is researchable at the Academy/University and grants a +10% research speed bonus. Alchemy now requires Philosophy.
 
 -----------------------------------------------------------------------
 - 2.8.3
