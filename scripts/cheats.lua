@@ -46,8 +46,10 @@ function HandleCheats(str)
 		AddMessage("Resources increased!")
 	elseif (str == "showpath") then -- reveals the map only to person players
 		RevealMap(true)
+		AddMessage("Map revealed")
 	elseif (str == "heimdall") then -- reveals the map to all players
 		RevealMap(false)
+		AddMessage("Map revealed to all players")
 	elseif (str == "fow on") then
 		SetFogOfWar(true)
 	elseif (str == "fow off") then
