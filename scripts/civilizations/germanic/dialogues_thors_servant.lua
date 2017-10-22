@@ -118,6 +118,22 @@ DefineDialogue("thors-servant-berserker-brides-killed", {
 	}
 })
 
+DefineDialogue("thors-servant-skidbladnir-destroyed", {
+	Nodes = {
+		{
+			"speaker", "character", "thialfi",
+			"text", "The ship Skidbladnir has been destroyed... there is no way for me to reach the world of the ettins now. I have failed Thunraz.",
+			"option-effects", {
+				function(s)
+					if (GetPlayerData(trigger_player, "HasQuest", "thors-servant")) then
+						SetPlayerData(trigger_player, "FailQuest", "thors-servant")
+					end
+				end
+			}
+		}
+	}
+})
+
 DefineDialogue("thors-servant-geirrod-killed", {
 	Nodes = {
 		{
