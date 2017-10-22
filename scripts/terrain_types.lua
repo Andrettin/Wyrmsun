@@ -993,6 +993,7 @@ DefineTerrainType("rock", {
 
 DefineTerrainType("limestone-rock", {
 	Name = "Limestone Rock",
+	Color = {128, 160, 128},
 	BaseTerrains = {"dirt", "mud", "dry-mud", "rockbound-cave-floor", "cave-floor", "desert-sand", "snow"},
 	Overlay = true,
 	Flags = {"land", "rock", "unpassable"},
