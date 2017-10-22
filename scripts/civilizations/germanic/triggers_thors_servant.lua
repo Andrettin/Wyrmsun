@@ -46,6 +46,9 @@ AddTrigger("berserker-brides-arrive-on-hlesey", -- Source: Kevin Crossley-Hollan
 		if (SyncRand(100) ~= 0) then -- 1% chance this will trigger every time it is checked
 			return false
 		end
+		if (GetFactionExists("hlesing-tribe")) then
+			return false
+		end
 		if ( -- if Hlesey is empty, but there are certain Germanic structures within a certain range of it
 			GetNumUnitsAt(-2, "any", {4088 - EarthStartX, 744 - EarthStartY}, {4092 - EarthStartX, 746 - EarthStartY}, GetMapLayer("material-plane", "earth", 0)) == 0
 			and GetNumUnitsAt(-2, "unit-germanic-barracks", {4089 - 128 - EarthStartX, 745 - 128 - EarthStartY}, {4089 + 128 - EarthStartX, 745 + 128 - EarthStartY}, GetMapLayer("material-plane", "earth", 0)) > 0 -- a barracks from which the warriors could have come from
