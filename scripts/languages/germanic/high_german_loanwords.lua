@@ -51,6 +51,13 @@ DefineLanguageWord("Hälfte", {
 	}
 })
 
+DefineLanguageWord("Kampf", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Fight", "Battle"},
+	DerivesFrom = {"middle-high-german", "noun", "Kampf"} -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 5.
+})
+
 DefineLanguageWord("Kirche", {
 	Language = "high-german",
 	Type = "noun",

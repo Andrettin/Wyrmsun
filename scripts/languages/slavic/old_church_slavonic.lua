@@ -39,6 +39,12 @@ DefineLanguageWord("Běžą", { -- source also gives the alternate form "Běžat
 	DerivesFrom = {"proto-indo-european", "verb", "Bheg"}
 })
 
+DefineLanguageWord("Bojĭ", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "old-church-slavonic",
+	Type = "noun",
+	Meanings = {"Battle"}
+})
+
 DefineLanguageWord("Brada", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	Language = "old-church-slavonic",
 	Type = "noun",
@@ -162,6 +168,12 @@ DefineLanguageWord("Sĭrebro", { -- Source: August Fick and Alf Torp, "Wortschat
 	Type = "noun",
 	Meanings = {"Silver"}, -- source gives the German "Silber" as the meaning
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Raziti", { -- source gives "(su-) raziti"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "old-church-slavonic",
+	Type = "verb",
+	Meanings = {"Strike"}
 })
 
 DefineLanguageWord("Stěna", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.

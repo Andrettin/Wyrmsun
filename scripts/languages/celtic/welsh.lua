@@ -55,6 +55,12 @@ DefineLanguageWord("Bryd", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch 
 	Meanings = {"Mind"} -- source gives the German "Sinn" as the meaning
 })
 
+DefineLanguageWord("Cad", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 6.
+	Language = "welsh",
+	Type = "noun",
+	Meanings = {"Battle"}
+})
+
 DefineLanguageWord("Cant", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
 	Language = "welsh",
 	Type = "numeral",
@@ -188,6 +194,12 @@ DefineLanguageWord("Tref", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch 
 	Language = "welsh",
 	Type = "noun",
 	Meanings = {"Homestead"} -- source gives the German "Gehöft" as the meaning
+})
+
+DefineLanguageWord("Trin", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 6.
+	Language = "welsh",
+	Type = "noun",
+	Meanings = {"Labor", "Trouble", "Action", "Battle"}
 })
 
 DefineLanguageWord("Troed", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 118.

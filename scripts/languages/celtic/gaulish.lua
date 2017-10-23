@@ -38,6 +38,11 @@ DefineLanguageWord("Briva", { -- Fick gives "brîva" instead; Source: Winfred P.
 	Meanings = {"Bridge"} -- as given by both Lehmann and Fick; Fick gives the German "Brücke" as the meaning
 })
 
+DefineLanguageWord("Caturīges", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 6.
+	Language = "gaulish",
+	Type = "noun",
+	Meanings = {"Battle"}
+})
 DefineLanguageWord("Dubnorix", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "gaulish",
 	Type = "adjective",

@@ -45,6 +45,11 @@ DefineLanguage("czech", {
 	Family = "slavic"
 })
 
+DefineLanguage("polish", {
+	Name = "Polish",
+	Family = "slavic"
+})
+
 DefineLanguage("old-church-slavonic", {
 	Name = "Old Church Slavonic",
 	Family = "slavic"
@@ -55,3 +60,7 @@ DefineLanguage("old-bulgarian", {
 	Family = "slavic"
 })
 
+DefineLanguage("serbo-croat", {
+	Name = "Serbo-Croat",
+	Family = "slavic"
+})

@@ -139,6 +139,11 @@ DefineLanguage("oscan", {
 	Family = "italic"
 })
 
+DefineLanguage("romanian", {
+	Name = "Romanian",
+	Family = "italic"
+})
+
 DefineLanguage("umbrian", {
 	Name = "Umbrian",
 	Family = "italic"

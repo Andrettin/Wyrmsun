@@ -120,10 +120,22 @@ DefineLanguageWord("Jéras", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Meanings = {"Yearling Lamb"}
 })
 
+DefineLanguageWord("Judinu", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 3.
+	Language = "lithuanian",
+	Type = "verb", -- presumably
+	Meanings = {"Move", "Shake"}
+})
+
 DefineLanguageWord("Kaimýnas", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 53.
 	Language = "lithuanian",
 	Type = "noun",
 	Meanings = {"Neighbor"} -- source gives the German "Nachbar" as the meaning
+})
+
+DefineLanguageWord("Kalti", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "lithuanian",
+	Type = "verb",
+	Meanings = {"Smite"}
 })
 
 DefineLanguageWord("Kaukarà", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
@@ -138,10 +150,10 @@ DefineLanguageWord("Kaũkas", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Meanings = {"Bump"} -- source gives the German "Beule" as the meaning
 })
 
-DefineLanguageWord("Káuti", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+DefineLanguageWord("Káuti", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
 	Language = "lithuanian",
 	Type = "verb",
-	Meanings = {"Strike"}
+	Meanings = {"Strike", "Smite", "Fight"}
 })
 
 DefineLanguageWord("Kë̃mas", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 53.
@@ -157,6 +169,18 @@ DefineLanguageWord("Liūdė", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Muszis", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "lithuanian",
+	Type = "noun",
+	Meanings = {"Battle"}
+})
+
+DefineLanguageWord("Muszti", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "lithuanian",
+	Type = "verb",
+	Meanings = {"Strike"}
+})
+
 DefineLanguageWord("Pẽkus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "lithuanian",
 	Type = "noun",
@@ -168,6 +192,12 @@ DefineLanguageWord("Perkúnas", { -- Source: H. Munro Chadwick, "The Oak and the
 	Type = "noun",
 	Meanings = {"Thunder"},
 	DerivesFrom = {"proto-indo-european", "noun", "Perkṷus"}
+})
+
+DefineLanguageWord("Peszti", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "lithuanian",
+	Type = "verb",
+	Meanings = {"Pull Hair"}
 })
 
 DefineLanguageWord("Pū́lias", { -- this is the plural; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.

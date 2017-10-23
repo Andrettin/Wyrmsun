@@ -98,6 +98,12 @@ DefineLanguageWord("Cairde", { -- Source: Bernhard Maier (trans.), "Das Sagenbuc
 	DerivesFrom = {"proto-celtic", "noun", "Karantion"}
 })
 
+DefineLanguageWord("Cath", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 6.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"Battle"}
+})
+
 DefineLanguageWord("Ceallach", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
 	Language = "irish",
 	Type = "noun",

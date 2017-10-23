@@ -30,3 +30,15 @@ DefineLanguageWord("Amraud", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Mind"}, -- source gives the Latin (?) "mens"
 })
+
+DefineLanguageWord("Iudmael", { -- Old Welsh proper name; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 3.
+	Language = "old-welsh",
+	Type = "noun",
+	Meanings = {}
+})
+
+DefineLanguageWord("Iudnerth", { -- Old Welsh proper name; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 3.
+	Language = "old-welsh",
+	Type = "noun",
+	Meanings = {}
+})

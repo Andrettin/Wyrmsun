@@ -25,6 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Cellach", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "middle-irish",
+	Type = "noun",
+	Meanings = {"War"}
+})
+
 DefineLanguageWord("Maccoímh", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 120.
 	Language = "middle-irish",
 	Type = "noun",

@@ -65,6 +65,12 @@ DefineLanguageWord("Ársēn", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	}
 })
 
+DefineLanguageWord("Ἀυτή", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 6.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Cry", "Battle-Cry", "Battle"}
+})
+
 DefineLanguageWord("Baínō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "verb",
@@ -257,6 +263,12 @@ DefineLanguageWord("Κώνωπες", { -- this is the plural; Source: Alaric Hal
 	}
 })
 
+DefineLanguageWord("Κότος", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 6.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Wrath"}
+})
+
 DefineLanguageWord("Kúrtos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "noun",
@@ -288,6 +300,18 @@ DefineLanguageWord("Lógos", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Type = "noun",
 	Meanings = {"Word"},
 	DerivesFrom = {"proto-indo-european", "noun", "Leg"}
+})
+
+DefineLanguageWord("Μάχη", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 3.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Battle"}
+})
+
+DefineLanguageWord("Μάχοαι", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 3.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Fight"}
 })
 
 DefineLanguageWord("Μάρη", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 167.
@@ -402,6 +426,12 @@ DefineLanguageWord("Orektós", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Language = "greek",
 	Type = "adjective",
 	Meanings = {"Straight"}
+})
+
+DefineLanguageWord("Ὄρνυμι", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 6.
+	Language = "greek",
+	Type = "verb",
+	Meanings = {"Stir Up", "Incite"}
 })
 
 DefineLanguageWord("Pan", { -- appears in the name of a goat
@@ -542,4 +572,10 @@ DefineLanguageWord("Τύρβα", { -- Source: August Fick and Alf Torp, "Wortsch
 	Language = "greek",
 	Type = "adjective",
 	Meanings = {"Confused"} -- source gives the German "Durcheinander, Verwirrt" as the meaning
+})
+
+DefineLanguageWord("Ὑσμίνη", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 2.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Battle"}
 })

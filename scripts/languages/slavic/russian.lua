@@ -31,6 +31,12 @@ DefineLanguageWord("Berlóga", { -- Source: August Fick and Alf Torp, "Wortschat
 	Meanings = {"Wild Camp", "Bear Camp"} -- source gives the German "Wildlager, Bärenlager" as the meaning
 })
 
+DefineLanguageWord("Boj", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "russian",
+	Type = "noun",
+	Meanings = {"Battle"}
+})
+
 DefineLanguageWord("Gnitŭ", { -- source also gives the alternative form "gnoj"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 76-77.
 	Language = "russian",
 	Type = "noun",
@@ -49,3 +55,16 @@ DefineLanguageWord("Perun", { -- Source: H. Munro Chadwick, "The Oak and the Thu
 	Type = "noun",
 	Meanings = {"Thunderbolt"}
 })
+
+DefineLanguageWord("Sražat'", { -- source also gives the alternative form "srazit"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "russian",
+	Type = "verb",
+	Meanings = {"Strike Down"}
+})
+
+DefineLanguageWord("Sraženie", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "russian",
+	Type = "noun",
+	Meanings = {"Battle"}
+})
+

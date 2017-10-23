@@ -25,6 +25,18 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Bitva", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "czech", -- source gives Bohemian
+	Type = "noun",
+	Meanings = {"Battle"}
+})
+
+DefineLanguageWord("Boj", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "czech", -- source gives Bohemian
+	Type = "noun",
+	Meanings = {"Battle"}
+})
+
 DefineLanguageWord("Perun", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 27.
 	Language = "czech", -- source gives "Čech."
 	Type = "noun",

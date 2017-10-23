@@ -65,16 +65,40 @@ DefineLanguageWord("Mīzhda", { -- Source: Sean Crist, "An Analysis of *z loss i
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Pəret", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 3.
+	Language = "avestan",
+	Type = "verb",
+	Meanings = {"Fight"}
+})
+
 DefineLanguageWord("Peretu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 121.
 	Language = "avestan",
 	Type = "noun",
 	Meanings = {"Bridge"} -- source gives the German "Brücke" as the meaning
 })
 
+DefineLanguageWord("Pəšana", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 3.
+	Language = "avestan",
+	Type = "noun",
+	Meanings = {"Battle"}
+})
+
 DefineLanguageWord("Peshu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 121.
 	Language = "avestan",
 	Type = "noun",
 	Meanings = {"Ford"} -- source gives the German "Furt" as the meaning
+})
+
+DefineLanguageWord("Rasman", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 5.
+	Language = "avestan",
+	Type = "noun",
+	Meanings = {"Battle Array"}
+})
+
+DefineLanguageWord("Raz", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 5.
+	Language = "avestan",
+	Type = "verb",
+	Meanings = {"Direct", "Arrange"}
 })
 
 DefineLanguageWord("Spaetō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
@@ -101,6 +125,12 @@ DefineLanguageWord("Yārə", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "avestan",
 	Type = "noun",
 	Meanings = {"Year"}
+})
+
+DefineLanguageWord("Yūiẟyeiti", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 2.
+	Language = "avestan",
+	Type = "noun",
+	Meanings = {"Fights"}
 })
 
 DefineLanguageWord("Zavaiti", { -- this is the past; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.

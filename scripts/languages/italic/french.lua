@@ -61,6 +61,13 @@ DefineLanguageWord("Barguigner", {
 	DerivesFrom = {"old-frankish", "verb", "Borganjan"} -- source also gives an alternative theory in which it derives from the Old Frankish verb "warbanjan"; Source: http://www.cnrtl.fr/definition/barguigner
 })
 
+DefineLanguageWord("Bataille", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 3.
+	Language = "french",
+	Type = "noun",
+	Meanings = {"Battle"},
+	DerivesFrom = {"latin", "noun", "Battālia"}
+})
+
 DefineLanguageWord("Bleu", {
 	Language = "french",
 	Type = "noun",

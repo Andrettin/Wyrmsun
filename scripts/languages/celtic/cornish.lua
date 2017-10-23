@@ -30,3 +30,9 @@ DefineLanguageWord("Argans", { -- Source: H. H. Howorth, "The Ethnology of Germa
 	Type = "noun",
 	Meanings = {"Silver"}
 })
+
+DefineLanguageWord("Caz", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 6.
+	Language = "cornish",
+	Type = "noun",
+	Meanings = {"Battle"}
+})

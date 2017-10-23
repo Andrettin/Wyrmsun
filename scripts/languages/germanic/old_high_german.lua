@@ -118,6 +118,12 @@ DefineLanguageWord("Barta", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	DerivesFrom = {"proto-germanic", "noun", "Barda"}
 })
 
+DefineLanguageWord("Batu", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, pp. 3-4.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {}
+})
+
 DefineLanguageWord("Bein", { -- source also gives the alternative form "pein"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
 	Language = "old-high-german",
 	Type = "noun",
@@ -471,6 +477,12 @@ DefineLanguageWord("Ezzan", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	Type = "verb",
 	Meanings = {"Eat"},
 	DerivesFrom = {"proto-germanic", "verb", "Etanan"} -- as given by Lehmann
+})
+
+DefineLanguageWord("Fehtan", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {}
 })
 
 DefineLanguageWord("Fehu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
@@ -834,11 +846,11 @@ DefineLanguageWord("Herza", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	Meanings = {"Heart"}
 })
 
-DefineLanguageWord("Hiltja", { -- source also gives the alternative form "hilta"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
+DefineLanguageWord("Hilta", { -- Fick also gives the alternative form "hiltja"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Fight", "Conflict"}, -- source gives the German "Kampf" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Heldî"}
+	Meanings = {"Battle"}, -- Buck gives "battle" as the meaning; Fick gives the German "Kampf" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Heldî"} -- as given by Fick
 })
 
 DefineLanguageWord("Hleib", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
@@ -1500,6 +1512,18 @@ DefineLanguageWord("Skuwo", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-indo-european", "verb", "Kwneχ"} -- presumably, since it is a cognate of Sanskrit "skunā́ti"
 })
 
+DefineLanguageWord("Slahan", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Smite"}
+})
+
+DefineLanguageWord("Slahta", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Slaughter", "Fight"}
+})
+
 DefineLanguageWord("Smaidar", { -- source also gives the alternative form "smeidar"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 263-264.
 	Language = "old-high-german",
 	Type = "noun",
@@ -1624,6 +1648,12 @@ DefineLanguageWord("Strāza", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Street"}
+})
+
+DefineLanguageWord("Strīt", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 6.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Battle", "War"}
 })
 
 DefineLanguageWord("Suht", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
@@ -1822,6 +1852,12 @@ DefineLanguageWord("West", { -- source also gives the alternative form "Westar";
 	Type = "noun", -- presumably, since it is listed next to the German masculine noun "West"
 	Meanings = {"West"}, -- source gives the German "West" as the meaning
 	DerivesFrom = {"proto-germanic", "adverb", "Vesta"}
+})
+
+DefineLanguageWord("Wīc", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Battle", "War"}
 })
 
 DefineLanguageWord("Wī̆r", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.

@@ -25,6 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Camp", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 5.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Contest", "Battle", "War"},
+	DerivesFrom = {"latin", "noun", "Campus"}
+})
+
 DefineLanguageWord("Cirice", { -- Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxxvi.
 	Language = "old-english",
 	Type = "noun",

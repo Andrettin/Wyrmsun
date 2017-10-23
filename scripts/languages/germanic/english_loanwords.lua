@@ -25,6 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Battle", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 3.
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Battle"},
+	DerivesFrom = {"french", "noun", "Bataille"}
+})
+
 DefineLanguageWord("Church", {
 	Language = "english",
 	Type = "noun",

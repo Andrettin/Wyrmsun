@@ -41,6 +41,10 @@ DefineLanguage("avestan", {
 	Name = "Avestan"
 })
 
+DefineLanguage("bengali", {
+	Name = "Bengali"
+})
+
 DefineLanguage("egyptian", {
 	Name = "Egyptian"
 })
@@ -49,8 +53,36 @@ DefineLanguage("coptic", {
 	Name = "Coptic"
 })
 
+DefineLanguage("hindustani", {
+	Name = "Hindustani"
+})
+
 DefineLanguage("illyrian", {
 	Name = "Illyrian"
+})
+
+DefineLanguage("kashmiri", {
+	Name = "Kashmiri"
+})
+
+DefineLanguage("mahratti", {
+	Name = "Mahratti"
+})
+
+DefineLanguage("modern-persian", {
+	Name = "Modern Persian"
+})
+
+DefineLanguage("old-persian", {
+	Name = "Old Persian"
+})
+
+DefineLanguage("parthian", {
+	Name = "Parthian"
+})
+
+DefineLanguage("persian", {
+	Name = "Persian"
 })
 
 DefineLanguage("phrygian", {
@@ -71,6 +103,10 @@ DefineLanguage("proto-uralic", {
 
 DefineLanguage("finnish", {
 	Name = "Finnish"
+})
+
+DefineLanguage("turkish", {
+	Name = "Turkish"
 })
 
 DefineLanguage("basque", {

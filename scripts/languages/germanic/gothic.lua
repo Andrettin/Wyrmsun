@@ -381,6 +381,12 @@ DefineLanguageWord("Dōnawi", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Meanings = {"Danube"}
 })
 
+DefineLanguageWord("Drauhtinōn", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "gothic",
+	Type = "verb",
+	Meanings = {"Wage War"}
+})
+
 DefineLanguageWord("Eisarn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
 	Language = "gothic",
 	Type = "noun",
@@ -491,6 +497,12 @@ DefineLanguageWord("Fūls", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Type = "adjective",
 	Meanings = {"Foul"}, -- derived from the Proto-Germanic "Fūla", which means "Foul"
 	DerivesFrom = {"proto-germanic", "adjective", "Fūla"}
+})
+
+DefineLanguageWord("Gadrauhts", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Soldier"}
 })
 
 DefineLanguageWord("Gaits", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
@@ -628,6 +640,12 @@ DefineLanguageWord("Hardus", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "adjective",
 	Meanings = {"Hard", "Strict"}, -- source gives the German "hart, streng" as the meaning
 	DerivesFrom = {"proto-germanic", "adjective", "Hardu"}
+})
+
+DefineLanguageWord("Harjis", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Army"}
 })
 
 DefineLanguageWord("Haubiþ", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
@@ -1351,6 +1369,12 @@ DefineLanguageWord("Vulfs", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Waihjō", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Battle", "War"}
+})
+
 DefineLanguageWord("Waíla", { -- Runge gives "Waila" instead; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
 	Language = "gothic",
 	Type = "adverb",
@@ -1379,11 +1403,23 @@ DefineLanguageWord("Waúrms", { -- as given by Lehmann; Runge gives "waurms", wh
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Weihan", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "gothic",
+	Type = "verb",
+	Meanings = {"Fight"}
+})
+
 DefineLanguageWord("Weis", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 5, Subsection 1.
 	Language = "gothic",
 	Type = "pronoun",
 	Meanings = {"We"},
 	Nominative = "Weis"
+})
+
+DefineLanguageWord("Wigans", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Battle", "War"}
 })
 
 DefineLanguageWord("Wigs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.

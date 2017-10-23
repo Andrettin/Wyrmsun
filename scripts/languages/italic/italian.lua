@@ -25,6 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Battaglia", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 3.
+	Language = "italian",
+	Type = "noun",
+	Meanings = {"Battle"},
+	DerivesFrom = {"latin", "noun", "Battālia"}
+})
+
 DefineLanguageWord("Borgese", { -- Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
 	Language = "italian",
 	Type = "noun", -- correct?

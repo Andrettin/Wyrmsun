@@ -62,6 +62,13 @@ DefineLanguageWord("Linda", { -- vernacular; Source: August Fick and Alf Torp, "
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Slag", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "swedish",
+	Type = "noun",
+	Meanings = {"Battle"},
+	DerivesFrom = {"old-norse", "noun", "Slag"} -- presumably
+})
+
 DefineLanguageWord("Somel", { -- vernacular; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
 	Language = "swedish",
 	Type = "noun",

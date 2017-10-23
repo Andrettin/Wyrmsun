@@ -121,6 +121,12 @@ DefineLanguageWord("Bân", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Beadu", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, pp. 3-4.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Battle", "War"}
+})
+
 DefineLanguageWord("Béam", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 134.
 	Language = "old-english",
 	Type = "noun",
@@ -572,6 +578,12 @@ DefineLanguageWord("Eormenþéod", { -- the first part of this compound derives 
 	Meanings = {"Wide Earth"} -- source gives the German "die weite Erde"
 })
 
+DefineLanguageWord("Eornost", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 6.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Earnestness", "Battle"}
+})
+
 DefineLanguageWord("Eorþe", { -- Runge gives "Eorþe", while Lehmann gives "Eorþ"; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-english",
 	Type = "noun",
@@ -598,6 +610,12 @@ DefineLanguageWord("Feoh", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Type = "noun",
 	Meanings = {"Cattle"},
 	DerivesFrom = {"proto-germanic", "noun", "Fehu"}
+})
+
+DefineLanguageWord("Feohtan", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "old-english",
+	Type = "verb",
+	Meanings = {"Fight"}
 })
 
 DefineLanguageWord("Feolu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
@@ -698,6 +716,12 @@ DefineLanguageWord("Geard", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-germanic", "noun", "Gárdiz"}
 })
 
+DefineLanguageWord("Gefeoht", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Fight", "Battle"}
+})
+
 DefineLanguageWord("Gengan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "old-english",
 	Type = "verb",
@@ -729,6 +753,12 @@ DefineLanguageWord("Gesihþ", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Type = "noun",
 	Meanings = {"Sight"},
 	DerivesFrom = {"proto-indo-european", "verb", "Sekʷ"}
+})
+
+DefineLanguageWord("Gesleht", { -- source also gives the alternative form "gesliht"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Fight", "Battle"}
 })
 
 DefineLanguageWord("Getæl", { -- source also gives the alternative form "tæl"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
@@ -1196,6 +1226,12 @@ DefineLanguageWord("Léoþian", { -- Source: August Fick and Alf Torp, "Wortscha
 	DerivesFrom = {"proto-germanic", "verb", "Leuþôn"}
 })
 
+DefineLanguageWord("Lindplega", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Swordplay"}
+})
+
 DefineLanguageWord("Long", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-english",
 	Type = "adjective",
@@ -1370,6 +1406,12 @@ DefineLanguageWord("Nest", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-germanic", "noun", "Nistǒs"}
 })
 
+DefineLanguageWord("Nīđ", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 7.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Hatred", "Spite", "Enmity", "Battle", "War"}
+})
+
 DefineLanguageWord("Niman", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "old-english",
 	Type = "verb",
@@ -1451,6 +1493,12 @@ DefineLanguageWord("Ræ̂d", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Ræs", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "old-english",
+	Type = "verb",
+	Meanings = {"Rush", "Attack"}
+})
+
 DefineLanguageWord("Ræsn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-english",
 	Type = "noun",
@@ -1505,6 +1553,12 @@ DefineLanguageWord("Rīdan", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "old-english",
 	Type = "verb",
 	Meanings = {"Travel"}
+})
+
+DefineLanguageWord("Sacu", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 6.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Strife", "Verbal Strife", "Battle", "War"}
 })
 
 DefineLanguageWord("Sæ̂", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
@@ -1750,6 +1804,12 @@ DefineLanguageWord("Stock", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"Stick", "Tree Trunk", "Tree Stump"}, -- source gives the German "Stock, Baumstamm, Baumstumpf"
 	Gender = "masculine",
 	DerivesFrom = {"proto-germanic", "noun", "Stukka"}
+})
+
+DefineLanguageWord("Strīđ", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 6.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Strife", "Struggle"}
 })
 
 DefineLanguageWord("Sumor", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
@@ -2098,6 +2158,18 @@ DefineLanguageWord("Wiella", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Spring"}
+})
+
+DefineLanguageWord("Wīg", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Battle", "War"}
+})
+
+DefineLanguageWord("Wigan", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "old-english",
+	Type = "verb",
+	Meanings = {"Fight"}
 })
 
 DefineLanguageWord("Wif", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 85.

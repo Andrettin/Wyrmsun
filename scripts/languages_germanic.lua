@@ -103,6 +103,11 @@ DefineLanguage("elfdalian", {
 	Family = "germanic"
 })
 
+DefineLanguage("icelandic", {
+	Name = "Icelandic",
+	Family = "germanic"
+})
+
 DefineLanguage("west-germanic", {
 	Name = "West Germanic",
 	Family = "germanic"

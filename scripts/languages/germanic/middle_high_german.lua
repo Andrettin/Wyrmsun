@@ -897,6 +897,13 @@ DefineLanguageWord("Stoc", { -- source gives "stoc (-ck-)"; Source: August Fick 
 	DerivesFrom = {"old-high-german", "noun", "Stoc"}
 })
 
+DefineLanguageWord("Strīt", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 6.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Battle", "War"},
+	DerivesFrom = {"old-high-german", "noun", "Strīt"}
+})
+
 DefineLanguageWord("Sumer", { -- source also gives the alternative form "Summer"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
 	Language = "middle-high-german",
 	Type = "noun",

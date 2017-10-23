@@ -25,33 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Batalla", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 3.
-	Language = "castillian",
+DefineLanguageWord("Razm", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 5.
+	Language = "parthian", -- source gives "Pahl."
 	Type = "noun",
-	Meanings = {"Battle"},
-	DerivesFrom = {"latin", "noun", "Battālia"}
-})
-
-DefineLanguageWord("Burges", { -- Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
-	Language = "castillian",
-	Type = "noun", -- correct?
-	Meanings = {},
-	DerivesFrom = {"late-latin", "noun", "Burgus"}
-})
-
-DefineLanguageWord("Burgo", { -- Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
-	Language = "castillian",
-	Type = "noun",
-	Meanings = {"Small Town", "Borough"},
-	DerivesFrom = {"gothic", "noun", "Baúrgs"}, -- the source gives it as being of Germanic origin (then going on to list a series of Germanic words including this Gothic one); presumably from the Gothic in Spanish since they were the Germanic people who settled in Spain
-	NumberCaseInflections = {
-		"plural", "nominative", "Burgos"
-	}
-})
-
-DefineLanguageWord("Rico", {
-	Language = "castillian",
-	Type = "adjective",
-	Meanings = {"Rich"},
-	DerivesFrom = {"gothic", "adjective", "Reiks"} -- Source: http://www.cnrtl.fr/definition/riche
+	Meanings = {"Battle"}
 })

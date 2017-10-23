@@ -57,10 +57,22 @@ DefineLanguageWord("Fer", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-G
 	DerivesFrom = {"proto-indo-european", "noun", "Wiros"}
 })
 
+DefineLanguageWord("Fichim", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	Language = "old-irish",
+	Type = "verb",
+	Meanings = {"Fight"}
+})
+
 DefineLanguageWord("Giús", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 	Language = "old-irish",
 	Type = "noun",
 	Meanings = {"Fir"}
+})
+
+DefineLanguageWord("Idnae", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 3.
+	Language = "old-irish",
+	Type = "noun",
+	Meanings = {"Weapons"}
 })
 
 DefineLanguageWord("Traig", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 118.
