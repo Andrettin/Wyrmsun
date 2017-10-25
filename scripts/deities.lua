@@ -60,6 +60,7 @@ DefineDeity("gathaarl", { -- from Tyrant, Goblin God of Battle
 	Civilizations = {"goblin"},
 	Religions = {"paganism"},
 	Domains = {"chaos", "earth", "wrath"},
+	CharacterUpgrade = "upgrade-character-deity",
 	Gender = "male",
 	Major = true,
 	Icon = "icon-gathaarl",

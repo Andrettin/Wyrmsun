@@ -39,6 +39,7 @@ function DefineCustomHero(character, data)
 end
 
 Load("scripts/characters_aesir.lua")
+Load("scripts/characters_deities.lua")
 Load("scripts/characters_vanir.lua")
 Load("scripts/civilizations/anglo_saxon/characters.lua")
 Load("scripts/civilizations/assyrian/characters.lua")
