@@ -615,7 +615,7 @@ DefineLanguageWord("Fechten", {
 	Language = "high-german",
 	Type = "verb",
 	Meanings = {"Fencing"},
-	DerivesFrom = {"old-high-german", "verb", "Fehtan"} -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	DerivesFrom = {"old-high-german", "verb", "Fehtan"} -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 })
 
 DefineLanguageWord("Feld", {
@@ -1240,6 +1240,18 @@ DefineLanguageWord("Kreuz", {
 	}
 })
 
+DefineLanguageWord("Krieg", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"War"}
+})
+
+DefineLanguageWord("Kriegen", {
+	Language = "high-german",
+	Type = "verb",
+	Meanings = {"Get"}
+})
+
 DefineLanguageWord("Kugel", {
 	Language = "high-german",
 	Type = "noun",
@@ -1648,7 +1660,7 @@ DefineLanguageWord("Schlacht", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Battle"},
-	DerivesFrom = {"old-high-german", "noun", "Slahta"} -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+	DerivesFrom = {"old-high-german", "noun", "Slahta"} -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 })
 
 DefineLanguageWord("Schloss", { -- Source: http://www.duden.de/rechtschreibung/Schloss

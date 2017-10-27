@@ -25,6 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Brissim", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "old-irish",
+	Type = "verb",
+	Meanings = {"Break", "Smash"}
+})
+
 DefineLanguageWord("Cacht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "old-irish",
 	Type = "noun",
@@ -57,7 +63,7 @@ DefineLanguageWord("Fer", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-G
 	DerivesFrom = {"proto-indo-european", "noun", "Wiros"}
 })
 
-DefineLanguageWord("Fichim", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+DefineLanguageWord("Fichim", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "old-irish",
 	Type = "verb",
 	Meanings = {"Fight"}
@@ -69,7 +75,7 @@ DefineLanguageWord("Giús", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Meanings = {"Fir"}
 })
 
-DefineLanguageWord("Idnae", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 3.
+DefineLanguageWord("Idnae", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 3.
 	Language = "old-irish",
 	Type = "noun",
 	Meanings = {"Weapons"}

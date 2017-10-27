@@ -65,7 +65,7 @@ DefineLanguageWord("Mīzhda", { -- Source: Sean Crist, "An Analysis of *z loss i
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Pəret", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 3.
+DefineLanguageWord("Pəret", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 3.
 	Language = "avestan",
 	Type = "verb",
 	Meanings = {"Fight"}
@@ -77,7 +77,7 @@ DefineLanguageWord("Peretu", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Meanings = {"Bridge"} -- source gives the German "Brücke" as the meaning
 })
 
-DefineLanguageWord("Pəšana", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 3.
+DefineLanguageWord("Pəšana", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 3.
 	Language = "avestan",
 	Type = "noun",
 	Meanings = {"Battle"}
@@ -89,13 +89,13 @@ DefineLanguageWord("Peshu", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"Ford"} -- source gives the German "Furt" as the meaning
 })
 
-DefineLanguageWord("Rasman", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 5.
+DefineLanguageWord("Rasman", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 5.
 	Language = "avestan",
 	Type = "noun",
 	Meanings = {"Battle Array"}
 })
 
-DefineLanguageWord("Raz", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 5.
+DefineLanguageWord("Raz", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 5.
 	Language = "avestan",
 	Type = "verb",
 	Meanings = {"Direct", "Arrange"}
@@ -114,6 +114,12 @@ DefineLanguageWord("Ushaçtara", { -- Source: August Fick and Alf Torp, "Wortsch
 	Meanings = {"To The East Of"} -- source gives the German "östlich von" as the meaning
 })
 
+DefineLanguageWord("Vayeiti", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "avestan",
+	Type = "verb",
+	Meanings = {"Pursue", "Chase", "Drive"}
+})
+
 DefineLanguageWord("Vehrka", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
 	Language = "avestan",
 	Type = "noun",
@@ -127,7 +133,7 @@ DefineLanguageWord("Yārə", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Meanings = {"Year"}
 })
 
-DefineLanguageWord("Yūiẟyeiti", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 2.
+DefineLanguageWord("Yūiẟyeiti", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 2.
 	Language = "avestan",
 	Type = "noun",
 	Meanings = {"Fights"}

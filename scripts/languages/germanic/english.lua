@@ -2053,6 +2053,13 @@ DefineLanguageWord("Wall", {
 	Gender = "neuter"
 })
 
+DefineLanguageWord("War", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"War"},
+	DerivesFrom = {"middle-english", "noun", "Werre"} -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+})
+
 DefineLanguageWord("Water", {
 	Language = "english",
 	Type = "noun",
@@ -2126,6 +2133,14 @@ DefineLanguageWord("Win", {
 	Type = "noun",
 	Meanings = {"Win"},
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Win", {
+	Language = "english",
+	Type = "verb",
+	Meanings = {"Win"},
+	Gender = "neuter",
+	DerivesFrom = {"old-english", "verb", "Winnan"} -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
 })
 
 DefineLanguageWord("Windmill", {

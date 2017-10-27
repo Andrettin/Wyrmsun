@@ -265,6 +265,12 @@ DefineLanguageWord("Note", { -- source also gives the alternative form "Not"; So
 	DerivesFrom = {"proto-germanic", "noun", "Hnut"}
 })
 
+DefineLanguageWord("Orloge", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"War"}
+})
+
 DefineLanguageWord("Sage", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
 	Language = "middle-low-german",
 	Type = "noun",

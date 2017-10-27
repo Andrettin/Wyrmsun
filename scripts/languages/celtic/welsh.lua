@@ -55,7 +55,7 @@ DefineLanguageWord("Bryd", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch 
 	Meanings = {"Mind"} -- source gives the German "Sinn" as the meaning
 })
 
-DefineLanguageWord("Cad", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 6.
+DefineLanguageWord("Cad", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 6.
 	Language = "welsh",
 	Type = "noun",
 	Meanings = {"Battle"}
@@ -178,6 +178,12 @@ DefineLanguageWord("Rhŷd", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"Ford"} -- source gives the German "Furt" as the meaning
 })
 
+DefineLanguageWord("Rhyfel", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 9.
+	Language = "welsh",
+	Type = "noun",
+	Meanings = {"War"}
+})
+
 DefineLanguageWord("Talaith", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 119.
 	Language = "welsh",
 	Type = "noun",
@@ -196,7 +202,7 @@ DefineLanguageWord("Tref", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch 
 	Meanings = {"Homestead"} -- source gives the German "Gehöft" as the meaning
 })
 
-DefineLanguageWord("Trin", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 6.
+DefineLanguageWord("Trin", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 6.
 	Language = "welsh",
 	Type = "noun",
 	Meanings = {"Labor", "Trouble", "Action", "Battle"}

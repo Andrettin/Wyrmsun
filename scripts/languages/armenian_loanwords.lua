@@ -25,8 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Yodha", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 2.
-	Language = "bengali",
+DefineLanguageWord("Paterazm", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 7.
+	Language = "armenian",
 	Type = "noun",
-	Meanings = {"Battle"}
+	Meanings = {"War", "Battle"},
+	DerivesFrom = {"parthian", "noun", "Pātrazm"}
 })

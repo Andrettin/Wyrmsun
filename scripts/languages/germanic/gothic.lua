@@ -381,7 +381,7 @@ DefineLanguageWord("Dōnawi", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Meanings = {"Danube"}
 })
 
-DefineLanguageWord("Drauhtinōn", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+DefineLanguageWord("Drauhtinōn", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {"Wage War"}
@@ -499,7 +499,7 @@ DefineLanguageWord("Fūls", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-germanic", "adjective", "Fūla"}
 })
 
-DefineLanguageWord("Gadrauhts", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+DefineLanguageWord("Gadrauhts", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Soldier"}
@@ -649,7 +649,7 @@ DefineLanguageWord("Hardus", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	DerivesFrom = {"proto-germanic", "adjective", "Hardu"}
 })
 
-DefineLanguageWord("Harjis", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+DefineLanguageWord("Harjis", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Army"}
@@ -881,6 +881,12 @@ DefineLanguageWord("Lein", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Linen"}
+})
+
+DefineLanguageWord("Liuga", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Marriage"}
 })
 
 DefineLanguageWord("Liuþareis", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
@@ -1376,7 +1382,7 @@ DefineLanguageWord("Vulfs", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Waihjō", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+DefineLanguageWord("Waihjō", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Battle", "War"}
@@ -1410,7 +1416,7 @@ DefineLanguageWord("Waúrms", { -- as given by Lehmann; Runge gives "waurms", wh
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Weihan", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+DefineLanguageWord("Weihan", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {"Fight"}
@@ -1423,7 +1429,7 @@ DefineLanguageWord("Weis", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Nominative = "Weis"
 })
 
-DefineLanguageWord("Wigans", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+DefineLanguageWord("Wigans", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Battle", "War"}

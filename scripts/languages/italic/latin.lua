@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Aciēs", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 5.
+DefineLanguageWord("Aciēs", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 5.
 	Language = "latin",
 	Type = "noun",
 	Meanings = {"Battle Array", "Battle"}
@@ -87,16 +87,22 @@ DefineLanguageWord("Basilica", { -- Source: D. H. Green, "From Germania to Europ
 	DerivesFrom = {"greek", "noun", "Basilikē"}
 })
 
-DefineLanguageWord("Battālia", { -- source gives "batt(u)ālia"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 3.
+DefineLanguageWord("Battālia", { -- source gives "batt(u)ālia"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 3.
 	Language = "latin",
 	Type = "noun",
 	Meanings = {}
 })
 
-DefineLanguageWord("Battuō", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 3.
+DefineLanguageWord("Battuō", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 3.
 	Language = "latin",
 	Type = "verb",
 	Meanings = {"Strike", "Beat"}
+})
+
+DefineLanguageWord("Bellum", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 9.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"War"}
 })
 
 DefineLanguageWord("Caesaries", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
@@ -105,7 +111,7 @@ DefineLanguageWord("Caesaries", { -- Source: Sean Crist, "An Analysis of *z loss
 	Meanings = {"Head Hair"}
 })
 
-DefineLanguageWord("Campus", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, pp. 5-6.
+DefineLanguageWord("Campus", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, pp. 5-6.
 	Language = "latin",
 	Type = "noun",
 	Meanings = {"Battlefield", "Duel"}
@@ -320,7 +326,7 @@ DefineLanguageWord("Hortus", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Meanings = {"Garden"}
 })
 
-DefineLanguageWord("Iubeō", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 3.
+DefineLanguageWord("Iubeō", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 3.
 	Language = "latin",
 	Type = "verb", -- presumably
 	Meanings = {"Move", "Shake"}
@@ -344,6 +350,12 @@ DefineLanguageWord("Longus", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "latin",
 	Type = "adjective",
 	Meanings = {"Long"} -- presumably, but it is not entirely clear from the source
+})
+
+DefineLanguageWord("Lucta", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 7.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Wrestling Match"}
 })
 
 DefineLanguageWord("Lupus", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
@@ -418,7 +430,7 @@ DefineLanguageWord("Pater", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Meanings = {"Father"}
 })
 
-DefineLanguageWord("Pectō", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+DefineLanguageWord("Pectō", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "latin",
 	Type = "verb",
 	Meanings = {"Pull Hair"}
@@ -430,7 +442,7 @@ DefineLanguageWord("Pecu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Meanings = {"Herd"}
 })
 
-DefineLanguageWord("Pugnus", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 3.
+DefineLanguageWord("Pugnus", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 3.
 	Language = "latin",
 	Type = "noun",
 	Meanings = {"Fist"}

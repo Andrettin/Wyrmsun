@@ -118,7 +118,7 @@ DefineLanguageWord("Barta", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	DerivesFrom = {"proto-germanic", "noun", "Barda"}
 })
 
-DefineLanguageWord("Batu", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, pp. 3-4.
+DefineLanguageWord("Batu", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, pp. 3-4.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {}
@@ -479,7 +479,7 @@ DefineLanguageWord("Ezzan", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	DerivesFrom = {"proto-germanic", "verb", "Etanan"} -- as given by Lehmann
 })
 
-DefineLanguageWord("Fehtan", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+DefineLanguageWord("Fehtan", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "old-high-german",
 	Type = "verb",
 	Meanings = {}
@@ -853,7 +853,7 @@ DefineLanguageWord("Herza", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	Meanings = {"Heart"}
 })
 
-DefineLanguageWord("Hilta", { -- Fick also gives the alternative form "hiltja"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
+DefineLanguageWord("Hilta", { -- Fick also gives the alternative form "hiltja"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Battle"}, -- Buck gives "battle" as the meaning; Fick gives the German "Kampf" as the meaning
@@ -1252,6 +1252,12 @@ DefineLanguageWord("Ôheim", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	DerivesFrom = {"proto-germanic", "noun", "Aban"}
 })
 
+DefineLanguageWord("Urliugi", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"War"}
+})
+
 DefineLanguageWord("Orlac", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
 	Language = "old-high-german",
 	Type = "noun",
@@ -1519,13 +1525,13 @@ DefineLanguageWord("Skuwo", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-indo-european", "verb", "Kwneχ"} -- presumably, since it is a cognate of Sanskrit "skunā́ti"
 })
 
-DefineLanguageWord("Slahan", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+DefineLanguageWord("Slahan", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "old-high-german",
 	Type = "verb",
 	Meanings = {"Smite"}
 })
 
-DefineLanguageWord("Slahta", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+DefineLanguageWord("Slahta", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Slaughter", "Fight"}
@@ -1657,7 +1663,7 @@ DefineLanguageWord("Strāza", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Meanings = {"Street"}
 })
 
-DefineLanguageWord("Strīt", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 6.
+DefineLanguageWord("Strīt", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 6.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Battle", "War"}
@@ -1854,6 +1860,12 @@ DefineLanguageWord("Werdan", { -- Source: Richard M. Runge, "The Phonetic Realiz
 	Meanings = {"Become"}
 })
 
+DefineLanguageWord("Werra", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Confusion", "Strife"}
+})
+
 DefineLanguageWord("West", { -- source also gives the alternative form "Westar"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
 	Language = "old-high-german",
 	Type = "noun", -- presumably, since it is listed next to the German masculine noun "West"
@@ -1861,7 +1873,7 @@ DefineLanguageWord("West", { -- source also gives the alternative form "Westar";
 	DerivesFrom = {"proto-germanic", "adverb", "Vesta"}
 })
 
-DefineLanguageWord("Wīc", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+DefineLanguageWord("Wīc", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Battle", "War"}

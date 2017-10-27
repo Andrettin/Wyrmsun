@@ -65,7 +65,7 @@ DefineLanguageWord("Ársēn", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	}
 })
 
-DefineLanguageWord("Ἀυτή", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 6.
+DefineLanguageWord("Ἀυτή", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 6.
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Cry", "Battle-Cry", "Battle"}
@@ -147,6 +147,12 @@ DefineLanguageWord("Dāḗr", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Type = "noun",
 	Meanings = {},
 	DerivesFrom = {"proto-indo-european", "noun", "Daxw"}
+})
+
+DefineLanguageWord("Δήιος", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 9.
+	Language = "greek",
+	Type = "adjective",
+	Meanings = {"Hostile"}
 })
 
 DefineLanguageWord("Δόλος", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
@@ -263,7 +269,7 @@ DefineLanguageWord("Κώνωπες", { -- this is the plural; Source: Alaric Hal
 	}
 })
 
-DefineLanguageWord("Κότος", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 6.
+DefineLanguageWord("Κότος", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 6.
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Wrath"}
@@ -302,13 +308,13 @@ DefineLanguageWord("Lógos", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	DerivesFrom = {"proto-indo-european", "noun", "Leg"}
 })
 
-DefineLanguageWord("Μάχη", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 3.
+DefineLanguageWord("Μάχη", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 3.
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Battle"}
 })
 
-DefineLanguageWord("Μάχοαι", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 3.
+DefineLanguageWord("Μάχοαι", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 3.
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Fight"}
@@ -428,7 +434,7 @@ DefineLanguageWord("Orektós", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Meanings = {"Straight"}
 })
 
-DefineLanguageWord("Ὄρνυμι", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 6.
+DefineLanguageWord("Ὄρνυμι", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 6.
 	Language = "greek",
 	Type = "verb",
 	Meanings = {"Stir Up", "Incite"}
@@ -440,10 +446,22 @@ DefineLanguageWord("Pan", { -- appears in the name of a goat
 	Meanings = {"All"} -- presumably, since "Aegipan" means "Goat-Pan" or "Goat-All"
 })
 
+DefineLanguageWord("Πάλλω", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 7.
+	Language = "greek",
+	Type = "verb",
+	Meanings = {"Swing", "Brandish"}
+})
+
 DefineLanguageWord("Patḗr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.3, 2.9.
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Father"}
+})
+
+DefineLanguageWord("Πελεμίζω", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 7.
+	Language = "greek",
+	Type = "verb", -- presumably
+	Meanings = {"Shake"}
 })
 
 DefineLanguageWord("Pénte", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
@@ -501,6 +519,12 @@ DefineLanguageWord("Podós", { -- this is the genitive; Source: Winfred P. Lehma
 	NumberCaseInflections = {
 		"singular", "genitive", "Podós"
 	}
+})
+
+DefineLanguageWord("Πόλεμος", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 7.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"War", "Fighting", "Battle"}
 })
 
 DefineLanguageWord("Πύργος", { -- Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
@@ -574,7 +598,7 @@ DefineLanguageWord("Τύρβα", { -- Source: August Fick and Alf Torp, "Wortsch
 	Meanings = {"Confused"} -- source gives the German "Durcheinander, Verwirrt" as the meaning
 })
 
-DefineLanguageWord("Ὑσμίνη", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 2.
+DefineLanguageWord("Ὑσμίνη", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 2.
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Battle"}

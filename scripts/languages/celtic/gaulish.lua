@@ -38,7 +38,7 @@ DefineLanguageWord("Briva", { -- Fick gives "brîva" instead; Source: Winfred P.
 	Meanings = {"Bridge"} -- as given by both Lehmann and Fick; Fick gives the German "Brücke" as the meaning
 })
 
-DefineLanguageWord("Caturīges", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 6.
+DefineLanguageWord("Caturīges", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 6.
 	Language = "gaulish",
 	Type = "noun",
 	Meanings = {"Battle"}

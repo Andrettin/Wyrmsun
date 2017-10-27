@@ -25,8 +25,26 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Razm", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 5.
+DefineLanguageWord("Pati", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 7.
+	Language = "parthian", -- source gives "Pahl."
+	Type = "affix",
+	Meanings = {}
+})
+
+DefineLanguageWord("Razm", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 5.
 	Language = "parthian", -- source gives "Pahl."
 	Type = "noun",
 	Meanings = {"Battle"}
+})
+
+-- Compounds
+
+DefineLanguageWord("Pātrazm", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 7.
+	Language = "parthian", -- source gives "Pahl."
+	Type = "noun",
+	Meanings = {},
+	CompoundElements = {
+		"prefix", "parthian", "affix", "Pati",
+		"suffix", "parthian", "noun", "Razm"
+	}
 })

@@ -904,7 +904,7 @@ DefineLanguageWord("Stoc", { -- source gives "stoc (-ck-)"; Source: August Fick 
 	DerivesFrom = {"old-high-german", "noun", "Stoc"}
 })
 
-DefineLanguageWord("Strīt", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 6.
+DefineLanguageWord("Strīt", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 6.
 	Language = "middle-high-german",
 	Type = "noun",
 	Meanings = {"Battle", "War"},
@@ -957,6 +957,19 @@ DefineLanguageWord("Truhtîn", { -- source also gives the alternative form "troh
 	Meanings = {"Lord", "Warlord", "Lord (God)"}, -- source gives the German "Herr, Kriegsherr, meist von Gott als Herrn der Heerscharen" as the meaning
 	DerivesFrom = {"old-high-german", "noun", "Truhtîn"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Urliuge", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"War"},
+	DerivesFrom = {"old-high-german", "noun", "Urliugi"}
+})
+
+DefineLanguageWord("Urlouge", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"War"}
 })
 
 DefineLanguageWord("Valz", { -- source also gives the alternative forms "valze" and "velze"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 124.

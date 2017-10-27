@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Battaglia", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 3.
+DefineLanguageWord("Battaglia", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 3.
 	Language = "italian",
 	Type = "noun",
 	Meanings = {"Battle"},
@@ -58,6 +58,19 @@ DefineLanguageWord("Bosco", {
 	Type = "noun",
 	Meanings = {"Wood"},
 	DerivesFrom = {"medieval-latin", "noun", "Buscus"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 143.
+})
+
+DefineLanguageWord("Guerra", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "italian",
+	Type = "noun",
+	Meanings = {"War"}
+})
+
+DefineLanguageWord("Lotta", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 7.
+	Language = "italian",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"latin", "noun", "Lucta"}
 })
 
 DefineLanguageWord("Ricco", {

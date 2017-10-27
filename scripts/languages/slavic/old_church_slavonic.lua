@@ -39,7 +39,13 @@ DefineLanguageWord("Běžą", { -- source also gives the alternate form "Běžat
 	DerivesFrom = {"proto-indo-european", "verb", "Bheg"}
 })
 
-DefineLanguageWord("Bojĭ", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+DefineLanguageWord("Biti", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 7.
+	Language = "old-church-slavonic",
+	Type = "verb", -- presumably
+	Meanings = {"Strike"}
+})
+
+DefineLanguageWord("Bojĭ", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "old-church-slavonic",
 	Type = "noun",
 	Meanings = {"Battle"}
@@ -139,6 +145,18 @@ DefineLanguageWord("Mozgŭ", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Meanings = {"Brain"}
 })
 
+DefineLanguageWord("Razbojĭ", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 7.
+	Language = "old-church-slavonic",
+	Type = "noun",
+	Meanings = {"Murder", "Robbery"}
+})
+
+DefineLanguageWord("Raziti", { -- source gives "(su-) raziti"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
+	Language = "old-church-slavonic",
+	Type = "verb",
+	Meanings = {"Strike"}
+})
+
 DefineLanguageWord("Sěčivo", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
 	Language = "old-church-slavonic",
 	Type = "noun",
@@ -170,12 +188,6 @@ DefineLanguageWord("Sĭrebro", { -- Source: August Fick and Alf Torp, "Wortschat
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Raziti", { -- source gives "(su-) raziti"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
-	Language = "old-church-slavonic",
-	Type = "verb",
-	Meanings = {"Strike"}
-})
-
 DefineLanguageWord("Stěna", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
 	Language = "old-church-slavonic",
 	Type = "noun",
@@ -205,6 +217,12 @@ DefineLanguageWord("Věkŭ", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Language = "old-church-slavonic",
 	Type = "noun",
 	Meanings = {"Strength", "Age"} -- source gives the German "Kraft, Lebensalter" as the meaning
+})
+
+DefineLanguageWord("Vojna", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "old-church-slavonic",
+	Type = "noun",
+	Meanings = {"War"}
 })
 
 DefineLanguageWord("Zĭrěti", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.

@@ -107,6 +107,12 @@ DefineLanguageWord("Klei", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	DerivesFrom = {"proto-germanic", "noun", "Klajja"}
 })
 
+DefineLanguageWord("Krijg", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "dutch",
+	Type = "noun",
+	Meanings = {"War"}
+})
+
 DefineLanguageWord("Land", {
 	Language = "dutch",
 	Type = "noun",
@@ -138,6 +144,12 @@ DefineLanguageWord("Oever", { -- Source: B. H. Slicher van Bath, "Dutch Tribal P
 	Language = "dutch",
 	Type = "noun",
 	Meanings = {"Bank of a River"}
+})
+
+DefineLanguageWord("Oorlog", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "dutch",
+	Type = "noun",
+	Meanings = {"War"}
 })
 
 DefineLanguageWord("Stap", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.

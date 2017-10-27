@@ -31,7 +31,7 @@ DefineLanguageWord("Berlóga", { -- Source: August Fick and Alf Torp, "Wortschat
 	Meanings = {"Wild Camp", "Bear Camp"} -- source gives the German "Wildlager, Bärenlager" as the meaning
 })
 
-DefineLanguageWord("Boj", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+DefineLanguageWord("Boj", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "russian",
 	Type = "noun",
 	Meanings = {"Battle"}
@@ -56,15 +56,20 @@ DefineLanguageWord("Perun", { -- Source: H. Munro Chadwick, "The Oak and the Thu
 	Meanings = {"Thunderbolt"}
 })
 
-DefineLanguageWord("Sražat'", { -- source also gives the alternative form "srazit"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+DefineLanguageWord("Sražat'", { -- source also gives the alternative form "srazit"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "russian",
 	Type = "verb",
 	Meanings = {"Strike Down"}
 })
 
-DefineLanguageWord("Sraženie", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+DefineLanguageWord("Sraženie", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "russian",
 	Type = "noun",
 	Meanings = {"Battle"}
 })
 
+DefineLanguageWord("Vojna", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "russian",
+	Type = "noun",
+	Meanings = {"War"}
+})

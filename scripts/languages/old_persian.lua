@@ -25,13 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Hamarana", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, pp. 3, 5.
+DefineLanguageWord("Hamarana", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, pp. 3, 5.
 	Language = "old-persian",
 	Type = "noun",
 	Meanings = {"Battle"}
 })
 
-DefineLanguageWord("Partara", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 3.
+DefineLanguageWord("Partara", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 3.
 	Language = "old-persian",
 	Type = "noun",
 	Meanings = {"Foe", "Battle"} -- the source gives "battle" only as a possible meaning

@@ -62,7 +62,7 @@ DefineLanguageWord("Linda", { -- vernacular; Source: August Fick and Alf Torp, "
 	Gender = "feminine"
 })
 
-DefineLanguageWord("Slag", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+DefineLanguageWord("Slag", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "swedish",
 	Type = "noun",
 	Meanings = {"Battle"},

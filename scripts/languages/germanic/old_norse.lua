@@ -302,7 +302,7 @@ DefineLanguageWord("Blŷ", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Bǫđ", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, pp. 3-4.
+DefineLanguageWord("Bǫđ", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, pp. 3-4.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Battle"}
@@ -1422,7 +1422,7 @@ DefineLanguageWord("Ormr", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Orrosta", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 6.
+DefineLanguageWord("Orrosta", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 6.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Battle"}
@@ -1584,7 +1584,7 @@ DefineLanguageWord("Skuggi", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	DerivesFrom = {"proto-indo-european", "verb", "Kwneχ"} -- presumably, since it is a cognate of Sanskrit "skunā́ti"
 })
 
-DefineLanguageWord("Slag", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+DefineLanguageWord("Slag", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "old-norse",
 	Type = "noun", -- correct?
 	Meanings = {"Blow", "Slaughter", "Fight"}
@@ -1661,7 +1661,7 @@ DefineLanguageWord("Stǫpull", { -- Source: August Fick and Alf Torp, "Wortschat
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Strīđ", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 6.
+DefineLanguageWord("Strīđ", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 6.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Woe", "Grief", "Struggle", "War"} -- according to the source, the meaning of "war" came to be in the end of the 13th century
@@ -1855,6 +1855,12 @@ DefineLanguageWord("Týr", { -- name of a god; Source: Peter Buchholz, "Perspect
 	DerivesFrom = {"proto-germanic", "noun", "Tīwaz"}
 })
 
+DefineLanguageWord("Úfriđr", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Unpeace", "War"}
+})
+
 DefineLanguageWord("Ulfr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
 	Language = "old-norse",
 	Type = "noun",
@@ -1940,7 +1946,7 @@ DefineLanguageWord("Viðr", { -- Source: Guus Kroonen, "Etymological Dictionary 
 	}
 })
 
-DefineLanguageWord("Vīg", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+DefineLanguageWord("Vīg", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Battle", "War"}

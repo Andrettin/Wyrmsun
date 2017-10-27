@@ -44,3 +44,9 @@ DefineLanguageWord("Sliper", { -- Source: Alaric Hall, "The Meanings of Elf and 
 	Type = "adjective",
 	Meanings = {"Deceitful", "False", "Treacherous"}
 })
+
+DefineLanguageWord("Werre", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "middle-english",
+	Type = "noun",
+	Meanings = {"War"}
+})

@@ -61,7 +61,7 @@ DefineLanguageWord("Barguigner", {
 	DerivesFrom = {"old-frankish", "verb", "Borganjan"} -- source also gives an alternative theory in which it derives from the Old Frankish verb "warbanjan"; Source: http://www.cnrtl.fr/definition/barguigner
 })
 
-DefineLanguageWord("Bataille", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 3.
+DefineLanguageWord("Bataille", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 3.
 	Language = "french",
 	Type = "noun",
 	Meanings = {"Battle"},
@@ -191,6 +191,12 @@ DefineLanguageWord("Gruyer", {
 	DerivesFrom = {"gallo-romance", "noun", "Grodiarius"} -- Source: http://www.cnrtl.fr/definition/gruyer
 })
 
+DefineLanguageWord("Guerre", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "french",
+	Type = "noun",
+	Meanings = {"War"}
+})
+
 DefineLanguageWord("Hameau", {
 	Language = "french",
 	Type = "noun",
@@ -233,6 +239,13 @@ DefineLanguageWord("Jardin", {
 	Type = "noun",
 	Meanings = {"Garden"},
 	DerivesFrom = {"old-frankish", "noun", "Gart"} -- Source: http://www.cnrtl.fr/definition/jardin
+})
+
+DefineLanguageWord("Lutte", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 7.
+	Language = "french",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"latin", "noun", "Lucta"}
 })
 
 DefineLanguageWord("Marais", {

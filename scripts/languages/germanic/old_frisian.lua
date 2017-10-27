@@ -447,6 +447,12 @@ DefineLanguageWord("Norther", { -- Source: August Fick and Alf Torp, "Wortschatz
 	DerivesFrom = {"proto-germanic", "adverb", "Nurþa"}
 })
 
+DefineLanguageWord("Orloge", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"War"}
+})
+
 DefineLanguageWord("Ord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-frisian",
 	Type = "noun",

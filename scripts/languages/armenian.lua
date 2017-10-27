@@ -56,7 +56,7 @@ DefineLanguageWord("Karer", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"Hard", "Strict"} -- source gives the German "hart, streng" as the meaning
 })
 
-DefineLanguageWord("Ṙazm", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 5.
+DefineLanguageWord("Ṙazm", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 5.
 	Language = "armenian",
 	Type = "noun",
 	Meanings = {"Battle"}

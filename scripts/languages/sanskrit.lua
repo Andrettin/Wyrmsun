@@ -133,7 +133,7 @@ DefineLanguageWord("Çárman", { -- Source: August Fick and Alf Torp, "Wortschat
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Çatru", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 6.
+DefineLanguageWord("Çatru", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 6.
 	Language = "sanskrit",
 	Type = "noun",
 	Meanings = {"Enemy"}
@@ -226,7 +226,7 @@ DefineLanguageWord("Gardhas", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	DerivesFrom = {"proto-indo-european", "noun", "Ghredh"}
 })
 
-DefineLanguageWord("Han", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+DefineLanguageWord("Han", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "sanskrit",
 	Type = "verb",
 	Meanings = {"Smite"}
@@ -389,13 +389,13 @@ DefineLanguageWord("Prî́ti", { -- Source: August Fick and Alf Torp, "Wortschat
 	Gender = "feminine"
 })
 
-DefineLanguageWord("Pṛt", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 3.
+DefineLanguageWord("Pṛt", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 3.
 	Language = "sanskrit",
 	Type = "noun",
 	Meanings = {"Battle"}
 })
 
-DefineLanguageWord("Pṛtanā", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 3.
+DefineLanguageWord("Pṛtanā", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 3.
 	Language = "sanskrit",
 	Type = "noun",
 	Meanings = {"Battle", "Fighting Body"}
@@ -421,7 +421,7 @@ DefineLanguageWord("Râjan", { -- source also gives the form "-râj-"; Source: A
 	DerivesFrom = {"proto-indo-european", "noun", "Reĝ"}
 })
 
-DefineLanguageWord("Raṇa", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 6.
+DefineLanguageWord("Raṇa", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 6.
 	Language = "sanskrit",
 	Type = "noun",
 	Meanings = {"Joy", "Battle"}
@@ -459,13 +459,25 @@ DefineLanguageWord("Sámâ", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Meanings = {"Semester", "Season", "Year"} -- source gives the German "Halbjahr, Jahreszeit, Jahr" as the meaning
 })
 
-DefineLanguageWord("Samaraṇa", { -- source gives "samaraṇa-", as well as the alternative form "samara-"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 5.
+DefineLanguageWord("Samaraṇa", { -- source gives "samaraṇa-", as well as the alternative form "samara-"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 5.
 	Language = "sanskrit",
 	Type = "noun",
 	Meanings = {"Meeting", "Hostile Meeting", "Fight"}
 })
 
-DefineLanguageWord("Samṛ", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 5.
+DefineLanguageWord("Samprahar", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "sanskrit",
+	Type = "verb",
+	Meanings = {"Hurl", "Cast", "Attack"}
+})
+
+DefineLanguageWord("Samprahāra", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"War"}
+})
+
+DefineLanguageWord("Samṛ", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 5.
 	Language = "sanskrit",
 	Type = "verb",
 	Meanings = {"Come Together"}
@@ -533,6 +545,12 @@ DefineLanguageWord("Váhanam", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Meanings = {"Vehicle"}
 })
 
+DefineLanguageWord("Vayati", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "sanskrit",
+	Type = "verb",
+	Meanings = {"Pursue", "Chase", "Drive"}
+})
+
 DefineLanguageWord("Vayim", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
 	Language = "sanskrit",
 	Type = "pronoun",
@@ -549,6 +567,12 @@ DefineLanguageWord("Vidma", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	}
 })
 
+DefineLanguageWord("Vigraha", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Separation", "Discord", "War"}
+})
+
 DefineLanguageWord("Vṛ́ká", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
 	Language = "sanskrit",
 	Type = "noun",
@@ -557,13 +581,13 @@ DefineLanguageWord("Vṛ́ká", { -- Source: August Fick and Alf Torp, "Wortscha
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Yudh", { -- source gives "yudh-"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 2.
+DefineLanguageWord("Yudh", { -- source gives "yudh-"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 2.
 	Language = "sanskrit",
 	Type = "noun",
 	Meanings = {"Fight", "Battle"}
 })
 
-DefineLanguageWord("Yudh", { -- source gives "yudh-"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 2.
+DefineLanguageWord("Yudh", { -- source gives "yudh-"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 2.
 	Language = "sanskrit",
 	Type = "verb",
 	Meanings = {"Fight"}

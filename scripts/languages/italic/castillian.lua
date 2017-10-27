@@ -25,7 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Batalla", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 3.
+DefineLanguageWord("Armada", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "castillian",
+	Type = "noun",
+	Meanings = {"Naval Force"}
+})
+
+DefineLanguageWord("Batalla", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 3.
 	Language = "castillian",
 	Type = "noun",
 	Meanings = {"Battle"},
@@ -47,6 +53,12 @@ DefineLanguageWord("Burgo", { -- Source: T. C. Donkin, "An Etymological Dictiona
 	NumberCaseInflections = {
 		"plural", "nominative", "Burgos"
 	}
+})
+
+DefineLanguageWord("Guerra", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "castillian",
+	Type = "noun",
+	Meanings = {"War"}
 })
 
 DefineLanguageWord("Rico", {

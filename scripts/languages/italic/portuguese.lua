@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Battalha", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 3.
+DefineLanguageWord("Battalha", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 3.
 	Language = "portuguese",
 	Type = "noun",
 	Meanings = {"Battle"},
@@ -51,6 +51,12 @@ DefineLanguageWord("Burgo", { -- Source: T. C. Donkin, "An Etymological Dictiona
 	Type = "noun",
 	Meanings = {"Small Town", "Borough"},
 	DerivesFrom = {"gothic", "noun", "Baúrgs"} -- the source gives it as being of Germanic origin (then going on to list a series of Germanic words including this Gothic one); presumably from the Gothic in Portuguese, since it seems likely it has the same origin as the Spanish word
+})
+
+DefineLanguageWord("Guerra", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "portuguese",
+	Type = "noun",
+	Meanings = {"War"}
 })
 
 DefineLanguageWord("Macaco", {

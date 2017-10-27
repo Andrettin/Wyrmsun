@@ -98,7 +98,7 @@ DefineLanguageWord("Cairde", { -- Source: Bernhard Maier (trans.), "Das Sagenbuc
 	DerivesFrom = {"proto-celtic", "noun", "Karantion"}
 })
 
-DefineLanguageWord("Cath", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 6.
+DefineLanguageWord("Cath", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, pp. 6, 8.
 	Language = "irish",
 	Type = "noun",
 	Meanings = {"Battle"}
@@ -129,6 +129,12 @@ DefineLanguageWord("Cnú", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Meanings = {"Nut"}, -- source gives the German "Nuß"
 	DerivesFrom = {"proto-indo-european", "noun", "Knud"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Co", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "irish",
+	Type = "affix",
+	Meanings = {} -- source gives the meaning as the English prefix "con-"
 })
 
 DefineLanguageWord("Corann", { -- source also gives the alternative form "coróin"; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 119.
@@ -215,6 +221,12 @@ DefineLanguageWord("Luad", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Talk", "Conversation"}, -- source gives the German "Gespräch, Rede" as the meaning
 	DerivesFrom = {"proto-indo-european", "noun", "Lēut"}
+})
+
+DefineLanguageWord("Luige", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"Oath"}
 })
 
 DefineLanguageWord("Máo", { -- this is the comparative, what is the normal version of the word? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
@@ -309,4 +321,26 @@ DefineLanguageWord("Úr", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	Language = "irish",
 	Type = "noun",
 	Meanings = {"Fire"} -- source gives "Feuer" as the meaning
+})
+
+-- Compounds
+
+DefineLanguageWord("Cocad", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"Battle"},
+	CompoundElements = {
+		"prefix", "irish", "affix", "Co",
+		"suffix", "irish", "noun", "Cath"
+	}
+})
+
+DefineLanguageWord("Cogadh", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"War"},
+	CompoundElements = {
+		"prefix", "irish", "affix", "Co",
+		"suffix", "irish", "noun", "Cath"
+	}
 })

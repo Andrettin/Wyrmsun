@@ -121,7 +121,7 @@ DefineLanguageWord("Bân", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Beadu", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, pp. 3-4.
+DefineLanguageWord("Beadu", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, pp. 3-4.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Battle", "War"}
@@ -198,6 +198,12 @@ DefineLanguageWord("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Type = "verb",
 	Meanings = {},
 	DerivesFrom = {"proto-germanic", "verb", "Beran"}
+})
+
+DefineLanguageWord("Berstan", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "old-english",
+	Type = "verb",
+	Meanings = {"Break", "Burst"}
 })
 
 DefineLanguageWord("Bītan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
@@ -578,7 +584,7 @@ DefineLanguageWord("Eormenþéod", { -- the first part of this compound derives 
 	Meanings = {"Wide Earth"} -- source gives the German "die weite Erde"
 })
 
-DefineLanguageWord("Eornost", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 6.
+DefineLanguageWord("Eornost", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 6.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Earnestness", "Battle"}
@@ -612,7 +618,7 @@ DefineLanguageWord("Feoh", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	DerivesFrom = {"proto-germanic", "noun", "Fehu"}
 })
 
-DefineLanguageWord("Feohtan", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+DefineLanguageWord("Feohtan", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "old-english",
 	Type = "verb",
 	Meanings = {"Fight"}
@@ -716,7 +722,7 @@ DefineLanguageWord("Geard", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-germanic", "noun", "Gárdiz"}
 })
 
-DefineLanguageWord("Gefeoht", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+DefineLanguageWord("Gefeoht", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Fight", "Battle"}
@@ -755,7 +761,7 @@ DefineLanguageWord("Gesihþ", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	DerivesFrom = {"proto-indo-european", "verb", "Sekʷ"}
 })
 
-DefineLanguageWord("Gesleht", { -- source also gives the alternative form "gesliht"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+DefineLanguageWord("Gesleht", { -- source also gives the alternative form "gesliht"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Fight", "Battle"}
@@ -774,6 +780,12 @@ DefineLanguageWord("Getæl", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "adjective",
 	Meanings = {"Swift"}, -- source gives the German "rasch" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Tala"} -- apparently, but not clear from source
+})
+
+DefineLanguageWord("Gewinn", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Toil", "Struggle", "Strife"}
 })
 
 DefineLanguageWord("Gierd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
@@ -1185,6 +1197,12 @@ DefineLanguageWord("Lǣran", { -- causative verb; Source: Sean Crist, "An Analys
 	Meanings = {"Teach"}
 })
 
+DefineLanguageWord("Lagu", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 9.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Law"}
+})
+
 DefineLanguageWord("Land", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
 	Language = "old-english",
 	Type = "noun",
@@ -1234,7 +1252,7 @@ DefineLanguageWord("Léoþian", { -- Source: August Fick and Alf Torp, "Wortscha
 	DerivesFrom = {"proto-germanic", "verb", "Leuþôn"}
 })
 
-DefineLanguageWord("Lindplega", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+DefineLanguageWord("Lindplega", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Swordplay"}
@@ -1414,7 +1432,7 @@ DefineLanguageWord("Nest", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-germanic", "noun", "Nistǒs"}
 })
 
-DefineLanguageWord("Nīđ", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 7.
+DefineLanguageWord("Nīđ", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 7.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Hatred", "Spite", "Enmity", "Battle", "War"}
@@ -1480,6 +1498,12 @@ DefineLanguageWord("Orlæg", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Orleg", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 9.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Strife", "War"}
+})
+
 DefineLanguageWord("Pāl", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.3.
 	Language = "old-english",
 	Type = "noun",
@@ -1501,7 +1525,7 @@ DefineLanguageWord("Ræ̂d", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Ræs", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+DefineLanguageWord("Ræs", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "old-english",
 	Type = "verb",
 	Meanings = {"Rush", "Attack"}
@@ -1563,7 +1587,7 @@ DefineLanguageWord("Rīdan", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Meanings = {"Travel"}
 })
 
-DefineLanguageWord("Sacu", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 6.
+DefineLanguageWord("Sacu", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 6.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Strife", "Verbal Strife", "Battle", "War"}
@@ -1814,7 +1838,7 @@ DefineLanguageWord("Stock", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	DerivesFrom = {"proto-germanic", "noun", "Stukka"}
 })
 
-DefineLanguageWord("Strīđ", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 6.
+DefineLanguageWord("Strīđ", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 6.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Strife", "Struggle"}
@@ -2168,13 +2192,13 @@ DefineLanguageWord("Wiella", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 	Meanings = {"Spring"}
 })
 
-DefineLanguageWord("Wīg", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+DefineLanguageWord("Wīg", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Battle", "War"}
 })
 
-DefineLanguageWord("Wigan", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and Soldier", 1919, p. 4.
+DefineLanguageWord("Wigan", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "old-english",
 	Type = "verb",
 	Meanings = {"Fight"}
@@ -2200,6 +2224,12 @@ DefineLanguageWord("Wihte", { -- this is the plural; Source: Alaric Hall, "The M
 	NumberCaseInflections = {
 		"plural", "nominative", "Wihte"
 	}
+})
+
+DefineLanguageWord("Winnan", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
+	Language = "old-english",
+	Type = "verb",
+	Meanings = {"Strive"}
 })
 
 DefineLanguageWord("Witan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
