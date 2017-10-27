@@ -627,6 +627,13 @@ DefineLanguageWord("Halbs", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	DerivesFrom = {"proto-germanic", "adjective", "Halba"}
 })
 
+DefineLanguageWord("Halja", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "noun", "Haljô"}
+})
+
 DefineLanguageWord("Hals", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
 	Language = "gothic",
 	Type = "noun",

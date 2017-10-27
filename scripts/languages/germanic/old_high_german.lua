@@ -818,6 +818,13 @@ DefineLanguageWord("Helfan", { -- Source: Richard M. Runge, "The Phonetic Realiz
 	Meanings = {"Help"}
 })
 
+DefineLanguageWord("Hella", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "noun", "Haljô"}
+})
+
 DefineLanguageWord("Helm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49; Source: http://www.cnrtl.fr/definition/heaume
 	Language = "old-high-german",
 	Type = "noun",

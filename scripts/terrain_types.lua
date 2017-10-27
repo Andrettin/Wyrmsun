@@ -948,7 +948,7 @@ DefineTerrainType("rock", {
 	Name = "Rock",
 	Character = "k",
 	Color = {128, 128, 128},
-	BaseTerrains = {"dirt", "mud", "dry-mud", "rockbound-cave-floor", "cave-floor", "desert-sand", "snow"},
+	BaseTerrains = {"dirt", "mud", "dry-mud", "rockbound-cave-floor", "cave-floor", "desert-sand"},
 	Overlay = true,
 	Flags = {"land", "rock", "unpassable"},
 	Graphics = "terrain/rock.png",
@@ -994,7 +994,7 @@ DefineTerrainType("rock", {
 DefineTerrainType("limestone-rock", {
 	Name = "Limestone Rock",
 	Color = {128, 160, 128},
-	BaseTerrains = {"dirt", "mud", "dry-mud", "rockbound-cave-floor", "cave-floor", "desert-sand", "snow"},
+	BaseTerrains = {"dirt", "mud", "dry-mud", "rockbound-cave-floor", "cave-floor", "desert-sand"},
 	Overlay = true,
 	Flags = {"land", "rock", "unpassable"},
 	Graphics = "terrain/limestone_rock.png",
@@ -1042,6 +1042,52 @@ DefineTerrainType("limestone-rock", {
 		"any", "northwest-southeast-inner", 52,
 		"any", "northeast-southwest-inner", 49,
 		"any", "northeast-southwest-inner", 50
+	}
+})
+
+DefineTerrainType("rock-snow", {
+	Name = "Rock (Snow)",
+	Color = {160, 128, 160},
+	BaseTerrains = {"snow"},
+	Overlay = true,
+	Flags = {"land", "rock", "unpassable"},
+	Graphics = "terrain/rock_snow.png",
+	Resource = "stone",
+	SolidTiles = {18, 21, 24},
+	DestroyedTiles = {16},
+	TransitionTiles = {
+		"any", "north", 2,
+		"any", "north", 5,
+		"any", "north", 8,
+		"any", "south", 34,
+		"any", "south", 37,
+		"any", "south", 40,
+		"any", "west", 17,
+		"any", "west", 20,
+		"any", "west", 23,
+		"any", "east", 19,
+		"any", "east", 22,
+		"any", "east", 25,
+		"any", "northwest-outer", 1,
+		"any", "northwest-outer", 4,
+		"any", "northeast-outer", 3,
+		"any", "northeast-outer", 6,
+		"any", "southwest-outer", 33,
+		"any", "southwest-outer", 36,
+		"any", "southeast-outer", 35,
+		"any", "southeast-outer", 38,
+		"any", "northwest-inner", 10,
+		"any", "northwest-inner", 12,
+		"any", "northeast-inner", 11,
+		"any", "northeast-inner", 13,
+		"any", "southwest-inner", 26,
+		"any", "southwest-inner", 28,
+		"any", "southeast-inner", 27,
+		"any", "southeast-inner", 29,
+		"any", "northwest-southeast-inner", 30,
+		"any", "northwest-southeast-inner", 31,
+		"any", "northeast-southwest-inner", 14,
+		"any", "northeast-southwest-inner", 15
 	}
 })
 

@@ -922,6 +922,14 @@ DefineLanguageWord("Hearth", {
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Hell", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Hell"},
+	Gender = "neuter",
+	DerivesFrom = {"old-english", "noun", "Hell"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49.
+})
+
 DefineLanguageWord("Helm", {
 	Language = "english",
 	Type = "noun",

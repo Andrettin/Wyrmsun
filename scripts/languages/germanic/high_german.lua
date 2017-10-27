@@ -1040,6 +1040,14 @@ DefineLanguageWord("Hof", {
 	}
 })
 
+DefineLanguageWord("Hölle", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Hell"},
+	DerivesFrom = {"middle-high-german", "noun", "Helle"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49.
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Horn", {
 	Language = "high-german",
 	Type = "noun",

@@ -25,8 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- Proto-Germanic
-
 -- Note: According to Sean Crist, the reconstructions by August Fick are out of date; as such, they should be replaced by more recent data as the opportunity arises
 
 DefineLanguageWord("Aχtō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
@@ -718,6 +716,13 @@ DefineLanguageWord("Haimanô", { -- Source: August Fick and Alf Torp, "Wortschat
 	Language = "proto-germanic",
 	Type = "adverb",
 	Meanings = {"Home"} -- source gives the German "von Hause" as the meaning
+})
+
+DefineLanguageWord("Haljô", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Hell", "Underworld", "Underworld Goddess"}, -- source gives the German "Hölle, Unterwelt, Unterweltsgöttin" as the meaning
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Halsa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.

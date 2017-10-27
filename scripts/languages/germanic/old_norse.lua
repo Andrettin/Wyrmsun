@@ -897,6 +897,14 @@ DefineLanguageWord("Helfđ", { -- source also gives the alternative form "helft"
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Hel", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Hel", "Underworld Goddess"}, -- source gives the German "Hel, Unterweltsgöttin" as the meaning
+	Gender = "feminine",
+	DerivesFrom = {"proto-germanic", "noun", "Haljô"}
+})
+
 DefineLanguageWord("Hildr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
 	Language = "old-norse",
 	Type = "noun",

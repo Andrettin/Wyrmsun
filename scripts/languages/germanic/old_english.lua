@@ -974,6 +974,14 @@ DefineLanguageWord("Hearpestre", { -- Source: Alaric Hall, "The Meanings of Elf 
 	Gender = "feminine" -- presumably, given the source is talking about occupations for women
 })
 
+DefineLanguageWord("Hell", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Underworld"}, -- source gives the German "Unterwelt" as the meaning
+	Gender = "feminine",
+	DerivesFrom = {"proto-germanic", "noun", "Haljô"}
+})
+
 DefineLanguageWord("Helm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49.
 	Language = "old-english",
 	Type = "noun",

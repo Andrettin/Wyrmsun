@@ -111,6 +111,12 @@ DefineLanguageWord("Ceallach", { -- Source: August Fick and Alf Torp, "Wortschat
 	DerivesFrom = {"proto-indo-european", "noun", "Keld"}
 })
 
+DefineLanguageWord("Cel", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"Death"} -- source gives the German "Tod" as the meaning
+})
+
 DefineLanguageWord("Cíall", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
 	Language = "irish",
 	Type = "noun",

@@ -103,6 +103,12 @@ DefineLanguageWord("Gletta", { -- vernacular; weak verb; Source: August Fick and
 	DerivesFrom = {"old-norse", "verb", "Glotta"} -- presumably?
 })
 
+DefineLanguageWord("Hulder", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49.
+	Language = "norwegian",
+	Type = "noun",
+	Meanings = {"Forest Nymph"} -- source gives the German "Waldnymphe" as the meaning
+})
+
 DefineLanguageWord("Kind", { -- dialectal; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
 	Language = "norwegian",
 	Type = "noun",

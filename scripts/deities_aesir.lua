@@ -29,7 +29,7 @@ DefineDeity("odin", { -- Known as Allfather, the Terrible One, One-eyed, Father 
 	Name = "Odin",
 	Pantheon = "Aesir",
 	HomePlane = "asgard",
-	Civilizations = {"anglo-saxon", "dwarf", "frankish", "germanic", "norse", "suebi", "teuton", "goth"},
+	Civilizations = {"anglo-saxon", "dwarf", "frankish", "germanic", "goth", "norse", "suebi", "teuton"},
 	Religions = {"paganism"},
 	Gender = "male",
 	Major = true,
@@ -52,7 +52,7 @@ DefineDeity("thor", { -- Son of Odin and Jord (Fjorgyn) and Sif's husband; known
 	Name = "Thor",
 	Pantheon = "Aesir",
 	HomePlane = "asgard",
-	Civilizations = {"anglo-saxon", "dwarf", "frankish", "germanic", "norse", "suebi", "teuton", "goth"},
+	Civilizations = {"anglo-saxon", "dwarf", "frankish", "germanic", "goth", "norse", "suebi", "teuton"},
 	Religions = {"paganism"},
 	Gender = "male",
 	Major = true,
@@ -230,7 +230,7 @@ DefineDeity("heimdall", { -- the horn Gjall belongs to him; identified with Rig 
 	Gender = "male",
 --	Domains = {"air"},
 	CulturalNames = {
-		"germanic", "Haimadala" -- tentative rendering of "Heimdall" in Proto-Germanic (assuming "dallr" to have the same etymological origin as "dalr", the Old Norse word for "valley")
+		"germanic", "Haimadala" -- tentative rendering of "Heimdall" in Proto-Germanic (assuming "dallr" to have the same etymological origin as "dalr", the Old Norse word for "valley"); see language data
 	},
 	Description = "Heimdall is the watchman of the Aesir, his hall Himinbjorg guarding the gates to Asgard. He is believed to be the son of nine mothers."
 })
@@ -239,10 +239,20 @@ DefineDeity("hel", { -- Source: Anders Andrén, "Behind Heathendom: Archaeologic
 	Name = "Hel",
 	Pantheon = "Aesir",
 	HomePlane = "niflheim",
-	Civilizations = {"norse"},
+	Civilizations = {"anglo-saxon", "frankish", "germanic", "goth", "norse", "suebi", "teuton"}, -- no attestation has been found of the Anglo-Saxons, Frisians, Goths, High Germans or Saxons worshipping the deity Hel, but their languages have cognates of Old Norse "Hel", and consequently also reflexes of Proto-Germanic "Haljô"
 	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {"death"},
+	CulturalNames = {
+		"anglo-saxon", "Hell", -- Old English cognate of Old Norse "Hel"; see language data
+		"frankish", "Hella",
+--		"frisian", "Helle", -- the alternative "hille" is also given; Old Frisian cognate of Old Norse "Hel"; see language data
+		"germanic", "Haljo", -- "Haljô", means both the underworld and the goddess of the underworld in Proto-Germanic, according to August Fick
+		"goth", "Halja", -- Gothic cognate of Old Norse "Hel"; see language data
+--		"saxon", "Hellja", -- the alternative form "hell" is also given; Old Saxon cognate of Old Norse "Hel"; see language data
+		"suebi", "Hella",
+		"teuton", "Hella" -- Old High German cognate of Old Norse "Hel"; see language data
+	},
 	Description = "Hel is a goddess of death who dwells in Niflheim."
 })
 
