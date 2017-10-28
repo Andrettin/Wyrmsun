@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015-2017 by Andrettin
+--      (c) Copyright 2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -29,4 +29,10 @@ DefineLanguageWord("Bôj", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,
 	Language = "serbo-croat",
 	Type = "noun",
 	Meanings = {"Battle"}
+})
+
+DefineLanguageWord("Vojska", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
+	Language = "serbo-croat",
+	Type = "noun",
+	Meanings = {"Army"}
 })

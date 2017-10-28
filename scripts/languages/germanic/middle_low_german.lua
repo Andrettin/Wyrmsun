@@ -162,6 +162,13 @@ DefineLanguageWord("Helfte", { -- source also gives the alternative form "helft"
 	DerivesFrom = {"proto-germanic", "noun", "Halbiþô"}
 })
 
+DefineLanguageWord("Here", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Army"},
+	DerivesFrom = {"old-saxon", "noun", "Heri"}
+})
+
 DefineLanguageWord("Kên", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 	Language = "middle-low-german",
 	Type = "noun",

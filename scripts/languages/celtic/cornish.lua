@@ -42,3 +42,19 @@ DefineLanguageWord("Caz", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,'
 	Type = "noun",
 	Meanings = {"Battle"}
 })
+
+DefineLanguageWord("Lu", { -- source also gives the alternative forms "luu" and "llu"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
+	Language = "cornish",
+	Type = "noun",
+	Meanings = {"Multitude", "Army"}
+})
+
+DefineLanguageWord("Teilu", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
+	Language = "cornish",
+	Type = "noun",
+	Meanings = {"Family"},
+	CompoundElements = {
+--		"prefix", ?
+		"suffix", "cornish", "noun", "Lu"
+	}
+})

@@ -25,6 +25,19 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Buiden", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
+	Language = "modern-irish",
+	Type = "noun",
+	Meanings = {"Band", "Troup"}
+})
+
+DefineLanguageWord("Sluagh", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
+	Language = "modern-irish",
+	Type = "noun",
+	Meanings = {"Army", "Multitude", "People"},
+	DerivesFrom = {"middle-irish", "noun", "Sluag"}
+})
+
 DefineLanguageWord("Teaghlach", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 121.
 	Language = "modern-irish",
 	Type = "noun",

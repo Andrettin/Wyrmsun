@@ -37,6 +37,12 @@ DefineLanguageWord("Dagis", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"Summer"} -- source gives the German "Sommer" as the meaning
 })
 
+DefineLanguageWord("Kragis", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 11.
+	Language = "old-prussian",
+	Type = "noun",
+	Meanings = {}
+})
+
 DefineLanguageWord("Lindan", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
 	Language = "old-prussian", -- source gives Prussian
 	Type = "noun",

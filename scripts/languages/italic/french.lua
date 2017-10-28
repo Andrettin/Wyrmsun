@@ -40,6 +40,12 @@ DefineLanguageWord("Amade", {
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Armée", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 13.
+	Language = "french",
+	Type = "noun",
+	Meanings = {"Army"}
+})
+
 DefineLanguageWord("Aud", { -- a suffix
 	Language = "french",
 	Type = "noun", -- correct?

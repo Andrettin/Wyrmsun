@@ -47,6 +47,13 @@ DefineLanguageWord("Brånad", { -- Source: August Fick and Alf Torp, "Wortschatz
 	DerivesFrom = {"proto-germanic", "noun", "Brunaþan"} -- apparently
 })
 
+DefineLanguageWord("Här", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
+	Language = "swedish",
+	Type = "noun",
+	Meanings = {"Army"},
+	DerivesFrom = {"old-norse", "noun", "Herr"}
+})
+
 DefineLanguageWord("Hög", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
 	Language = "swedish",
 	Type = "adjective",

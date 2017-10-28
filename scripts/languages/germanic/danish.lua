@@ -38,6 +38,13 @@ DefineLanguageWord("Hals", {
 	DerivesFrom = {"old-norse", "noun", "Hals"} -- presumably
 })
 
+DefineLanguageWord("Hær", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
+	Language = "danish",
+	Type = "noun",
+	Meanings = {"Army"},
+	DerivesFrom = {"old-norse", "noun", "Herr"}
+})
+
 DefineLanguageWord("Slag", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "danish",
 	Type = "noun",

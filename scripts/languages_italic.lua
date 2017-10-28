@@ -45,6 +45,11 @@ DefineLanguage("medieval-latin", {
 	Family = "italic"
 })
 
+DefineLanguage("old-italian", {
+	Name = "Old Italian",
+	Family = "italic"
+})
+
 DefineLanguage("italian", {
 	Name = "Italian",
 	Family = "italic"
@@ -102,6 +107,11 @@ DefineLanguage("provencal", {
 	Family = "italic"
 })
 
+DefineLanguage("old-castillian", {
+	Name = "Old Castillian",
+	Family = "italic"
+})
+
 DefineLanguage("castillian", {
 	Name = "Castillian",
 	Family = "italic",
@@ -117,6 +127,11 @@ DefineLanguage("castillian", {
 		"Toletum", "Toledo",
 		"Valentia", "Valencia"
 	}
+})
+
+DefineLanguage("old-portuguese", {
+	Name = "Old Portuguese",
+	Family = "italic"
 })
 
 DefineLanguage("portuguese", {

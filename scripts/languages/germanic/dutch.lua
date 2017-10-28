@@ -79,6 +79,13 @@ DefineLanguageWord("Grijs", { -- Source: http://www.cnrtl.fr/definition/gris
 	DerivesFrom = {"old-frankish", "adjective", "Grîs"} -- presumably
 })
 
+DefineLanguageWord("Heir", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 14.
+	Language = "dutch",
+	Type = "noun",
+	Meanings = {"Army"},
+	DerivesFrom = {"middle-dutch", "noun", "Here"}
+})
+
 DefineLanguageWord("Hertog", {
 	Language = "dutch",
 	Type = "noun",
@@ -117,6 +124,12 @@ DefineLanguageWord("Land", {
 	Language = "dutch",
 	Type = "noun",
 	Meanings = {"Land", "Country"} -- Source: http://www.vandale.nl/opzoeken?pattern=Land&lang=ne
+})
+
+DefineLanguageWord("Leger", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 14.
+	Language = "dutch",
+	Type = "noun",
+	Meanings = {"Resting Place", "Camp", "Army"}
 })
 
 DefineLanguageWord("Lied", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.

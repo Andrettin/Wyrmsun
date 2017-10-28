@@ -43,6 +43,12 @@ DefineLanguageWord("Perun", { -- Source: H. Munro Chadwick, "The Oak and the Thu
 	Meanings = {"Thunderbolt"}
 })
 
+DefineLanguageWord("Pluk", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 9.
+	Language = "czech", -- source gives Bohemian
+	Type = "noun",
+	Meanings = {"Regiment"}
+})
+
 DefineLanguageWord("Šemík", { -- name of Horymír's horse in the Praguer legend; Source: Alena Ježková, "77 Prague Legends", 2006, p. 154.
 	Language = "czech",
 	Type = "noun",
@@ -53,4 +59,10 @@ DefineLanguageWord("Vojna", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War
 	Language = "czech", -- source gives Bohemian
 	Type = "noun",
 	Meanings = {"War"}
+})
+
+DefineLanguageWord("Vojsko", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
+	Language = "czech", -- source gives Bohemian
+	Type = "noun",
+	Meanings = {"Army"}
 })

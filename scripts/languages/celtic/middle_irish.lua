@@ -37,8 +37,20 @@ DefineLanguageWord("Maccoímh", { -- Source: Bernhard Maier (trans.), "Das Sagen
 	Meanings = {"Squire"} -- source gives the German "Knappen" as the meaning
 })
 
-DefineLanguageWord("Teglach", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 121.
+DefineLanguageWord("Sluag", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
 	Language = "middle-irish",
 	Type = "noun",
-	Meanings = {}
+	Meanings = {"Band", "Army"}
+})
+
+-- Compounds
+
+DefineLanguageWord("Teglach", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 121; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
+	Language = "middle-irish",
+	Type = "noun",
+	Meanings = {"Household"}, -- as given by Buck
+	CompoundElements = {
+--		"prefix", ?
+		"suffix", "middle-irish", "noun", "Sluag" -- as given by Buck
+	}
 })

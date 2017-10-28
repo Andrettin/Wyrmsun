@@ -55,12 +55,17 @@ DefineLanguage("old-church-slavonic", {
 	Family = "slavic"
 })
 
+DefineLanguage("serbo-croat", {
+	Name = "Serbo-Croat",
+	Family = "slavic"
+})
+
 DefineLanguage("old-bulgarian", {
 	Name = "Old Bulgarian",
 	Family = "slavic"
 })
 
-DefineLanguage("serbo-croat", {
-	Name = "Serbo-Croat",
+DefineLanguage("bulgarian", {
+	Name = "Bulgarian",
 	Family = "slavic"
 })

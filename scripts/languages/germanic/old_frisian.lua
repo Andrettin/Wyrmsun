@@ -271,6 +271,12 @@ DefineLanguageWord("Herde", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	DerivesFrom = {"proto-germanic", "adjective", "Hardu"}
 })
 
+DefineLanguageWord("Here", { -- source also gives the alternative form "hiri"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Army"}
+})
+
 DefineLanguageWord("Herne", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 47.
 	Language = "old-frisian",
 	Type = "noun",

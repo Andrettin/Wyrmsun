@@ -38,3 +38,9 @@ DefineLanguageWord("Exfridare", { -- Source: http://www.cnrtl.fr/definition/effr
 	Meanings = {},
 	DerivesFrom = {"old-frankish", "noun", "Fridu"}
 })
+
+DefineLanguageWord("Hostis", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, pp. 9, 12.
+	Language = "late-latin", -- source gives Low Latin
+	Type = "noun",
+	Meanings = {"Army"}
+})

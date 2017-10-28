@@ -138,10 +138,16 @@ DefineLanguageWord("Kalti", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War
 	Meanings = {"Smite"}
 })
 
-DefineLanguageWord("Karas", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 9.
+DefineLanguageWord("Karas", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, pp. 9, 11.
 	Language = "lithuanian",
 	Type = "noun",
 	Meanings = {"War"}
+})
+
+DefineLanguageWord("Karis", { -- source also gives the alternative form "karias"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 11.
+	Language = "lithuanian",
+	Type = "noun",
+	Meanings = {"Army"}
 })
 
 DefineLanguageWord("Kaukarà", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.

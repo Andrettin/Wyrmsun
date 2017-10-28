@@ -39,6 +39,12 @@ DefineLanguageWord("Barez", { -- source also gives the alternative form "Bareza"
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Haēnā", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
+	Language = "avestan",
+	Type = "noun",
+	Meanings = {"Army", "Missile"}
+})
+
 DefineLanguageWord("Hama", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
 	Language = "avestan",
 	Type = "noun",
@@ -101,6 +107,12 @@ DefineLanguageWord("Raz", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,'
 	Meanings = {"Direct", "Arrange"}
 })
 
+DefineLanguageWord("Spāẟa", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
+	Language = "avestan",
+	Type = "noun",
+	Meanings = {"Army", "Host"}
+})
+
 DefineLanguageWord("Spaetō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "avestan",
 	Type = "adjective",
@@ -144,4 +156,10 @@ DefineLanguageWord("Zavaiti", { -- this is the past; Source: August Fick and Alf
 	Type = "verb",
 	Meanings = {"Align"}, -- source gives the German "flucht" as the meaning
 	DerivesFrom = {"proto-indo-european", "verb", "Ĝhutó"}
+})
+
+DefineLanguageWord("Zāvarə", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
+	Language = "avestan",
+	Type = "noun",
+	Meanings = {"Power", "Might"}
 })

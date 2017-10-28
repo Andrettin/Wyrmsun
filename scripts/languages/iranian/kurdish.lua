@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016-2017 by Andrettin
+--      (c) Copyright 2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,14 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Hamarana", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, pp. 3, 5.
-	Language = "old-persian",
+DefineLanguageWord("Gūnd", { -- source also gives the alternative form "jund"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
+	Language = "kurdish",
 	Type = "noun",
-	Meanings = {"Battle"}
-})
-
-DefineLanguageWord("Partara", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 3.
-	Language = "old-persian",
-	Type = "noun",
-	Meanings = {"Foe", "Battle"} -- the source gives "battle" only as a possible meaning
+	Meanings = {"Village"}
 })

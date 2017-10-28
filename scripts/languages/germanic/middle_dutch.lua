@@ -81,6 +81,12 @@ DefineLanguageWord("Herde", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Uncountable = true -- as a material, it is likely to be uncountable
 })
 
+DefineLanguageWord("Here", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 14.
+	Language = "middle-dutch",
+	Type = "noun",
+	Meanings = {"Army"}
+})
+
 DefineLanguageWord("Mersch", { -- source also gives the alternative form "Maersch"; Source: http://www.cnrtl.fr/definition/marais
 	Language = "middle-dutch",
 	Type = "noun",

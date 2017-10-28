@@ -56,6 +56,12 @@ DefineLanguageWord("Perun", { -- Source: H. Munro Chadwick, "The Oak and the Thu
 	Meanings = {"Thunderbolt"}
 })
 
+DefineLanguageWord("Polk", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 9.
+	Language = "russian",
+	Type = "noun",
+	Meanings = {"Regiment"}
+})
+
 DefineLanguageWord("Sražat'", { -- source also gives the alternative form "srazit"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "russian",
 	Type = "verb",
@@ -72,4 +78,10 @@ DefineLanguageWord("Vojna", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War
 	Language = "russian",
 	Type = "noun",
 	Meanings = {"War"}
+})
+
+DefineLanguageWord("Vojska", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
+	Language = "russian",
+	Type = "noun",
+	Meanings = {"Army"}
 })

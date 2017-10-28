@@ -146,6 +146,12 @@ DefineLanguageWord("Çṛṅga", { -- Source: August Fick and Alf Torp, "Wortsch
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Çvā", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
+	Language = "sanskrit",
+	Type = "verb",
+	Meanings = {"Swell"}
+})
+
 DefineLanguageWord("Dāhas", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "sanskrit",
 	Type = "noun",
@@ -487,6 +493,18 @@ DefineLanguageWord("Saptá", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "sanskrit",
 	Type = "numeral",
 	Number = 7
+})
+
+DefineLanguageWord("Sāyaka", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Missile"}
+})
+
+DefineLanguageWord("Senā", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Army", "Missile"}
 })
 
 DefineLanguageWord("Skunā́ti", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.

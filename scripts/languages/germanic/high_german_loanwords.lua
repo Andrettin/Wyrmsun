@@ -25,6 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Armee", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Army"},
+	DerivesFrom = {"french", "noun", "Armée"} -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 14.
+})
+
 DefineLanguageWord("Eimer", {
 	Language = "high-german",
 	Type = "noun",

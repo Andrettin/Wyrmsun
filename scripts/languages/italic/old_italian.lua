@@ -25,8 +25,15 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Jenk", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 7.
-	Language = "turkish", -- source gives Modern Turkish
+DefineLanguageWord("Armata", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 13.
+	Language = "old-italian",
 	Type = "noun",
-	Meanings = {"Battle", "War"}
+	Meanings = {"Naval Force", "Land Force"}
+})
+
+DefineLanguageWord("Oste", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 12.
+	Language = "old-italian",
+	Type = "noun",
+	Meanings = {"Army"},
+	DerivesFrom = {"late-latin", "noun", "Hostis"}
 })

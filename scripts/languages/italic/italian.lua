@@ -60,6 +60,13 @@ DefineLanguageWord("Bosco", {
 	DerivesFrom = {"medieval-latin", "noun", "Buscus"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 143.
 })
 
+DefineLanguageWord("Esercito", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 12.
+	Language = "italian",
+	Type = "noun",
+	Meanings = {"Army"},
+	DerivesFrom = {"latin", "noun", "Exercitus"}
+})
+
 DefineLanguageWord("Guerra", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
 	Language = "italian",
 	Type = "noun",

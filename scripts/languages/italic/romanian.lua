@@ -38,3 +38,10 @@ DefineLanguageWord("Luptă", { -- Source: Carl D. Buck, "Words for 'Battle,' 'Wa
 	Meanings = {},
 	DerivesFrom = {"latin", "noun", "Lucta"}
 })
+
+DefineLanguageWord("Oaste", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 12.
+	Language = "romanian",
+	Type = "noun",
+	Meanings = {"Army"},
+	DerivesFrom = {"late-latin", "noun", "Hostis"}
+})

@@ -519,6 +519,12 @@ DefineLanguageWord("Fluot", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"northwest-germanic", "noun", "Flodu"}
 })
 
+DefineLanguageWord("Folc", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 9.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"People", "Armed Band", "Army"}
+})
+
 DefineLanguageWord("Fridu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128; Source: http://www.cnrtl.fr/definition/effrayer
 	Language = "old-high-german",
 	Type = "noun",
@@ -838,6 +844,12 @@ DefineLanguageWord("Herd", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Meanings = {"Stove"}, -- source gives "Herd" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Herþa"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Hari", { -- source also gives the alternative form "heri"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Army"}
 })
 
 DefineLanguageWord("Hērro", { -- source gives ""Hēr(i)ro"; Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 201.

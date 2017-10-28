@@ -82,6 +82,11 @@ DefineLanguage("cornish", {
 	Family = "celtic"
 })
 
+DefineLanguage("old-breton", {
+	Name = "Old Breton",
+	Family = "celtic"
+})
+
 DefineLanguage("breton", {
 	Name = "Breton",
 	Family = "celtic"

@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2017 by Andrettin
+--      (c) Copyright 2015-2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,8 +25,32 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Jenk", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 7.
-	Language = "turkish", -- source gives Modern Turkish
-	Type = "noun",
-	Meanings = {"Battle", "War"}
+DefineLanguage("avestan", {
+	Name = "Avestan",
+	Family = "iranian"
+})
+
+DefineLanguage("old-persian", {
+	Name = "Old Persian",
+	Family = "iranian"
+})
+
+DefineLanguage("persian", {
+	Name = "Persian",
+	Family = "iranian"
+})
+
+DefineLanguage("modern-persian", {
+	Name = "Modern Persian",
+	Family = "iranian"
+})
+
+DefineLanguage("parthian", {
+	Name = "Parthian",
+	Family = "iranian"
+})
+
+DefineLanguage("kurdish", {
+	Name = "Kurdish",
+	Family = "iranian"
 })

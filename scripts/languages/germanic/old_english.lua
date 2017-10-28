@@ -638,6 +638,12 @@ DefineLanguageWord("Fiðelestre", { -- Source: Alaric Hall, "The Meanings of Elf
 	Gender = "feminine" -- presumably, given the source is talking about occupations for women
 })
 
+DefineLanguageWord("Fierd", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 14.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Military Expedition", "Campaign", "Army"}
+})
+
 DefineLanguageWord("Fīf", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
 	Language = "old-english",
 	Type = "numeral",
@@ -655,6 +661,12 @@ DefineLanguageWord("Fisc", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Fish"}
+})
+
+DefineLanguageWord("Folc", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 9.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"People", "Armed Band", "Army"}
 })
 
 DefineLanguageWord("Ford", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 120.
@@ -726,6 +738,12 @@ DefineLanguageWord("Gefeoht", { -- Source: Carl D. Buck, "Words for 'Battle,' 'W
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Fight", "Battle"}
+})
+
+DefineLanguageWord("Gefylce", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 9.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"People", "Armed Band", "Army"}
 })
 
 DefineLanguageWord("Gengan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
@@ -1038,6 +1056,12 @@ DefineLanguageWord("Heorþ", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Meanings = {"Fireplace", "Fire"}, -- source gives "Feuerstätte, Feuer" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Herþa"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Here", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10-11.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Army", "War", "Devastation"}
 })
 
 DefineLanguageWord("Hild", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
@@ -2149,11 +2173,11 @@ DefineLanguageWord("Weoh", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Meanings = {"Idol", "Shrine", "Sacred Precinct"}
 })
 
-DefineLanguageWord("Wer", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+DefineLanguageWord("Wer", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
 	Language = "old-english",
 	Type = "noun",
-	Meanings = {"Man"},
-	DerivesFrom = {"proto-indo-european", "noun", "Wiros"}
+	Meanings = {"Man"}, -- as given by both sources
+	DerivesFrom = {"proto-indo-european", "noun", "Wiros"} -- as given by Lehmann
 })
 
 DefineLanguageWord("Werig", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 94.
@@ -2274,3 +2298,14 @@ DefineLanguageWord("Mundbora", { -- Source: August Fick and Alf Torp, "Wortschat
 --		"suffix", -- ?
 	}
 })
+
+DefineLanguageWord("Werod", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Throng", "Band", "Army"},
+	CompoundElements = {
+		"prefix", "old-english", "noun", "Wer",
+--		"suffix", -- ?
+	}
+})
+

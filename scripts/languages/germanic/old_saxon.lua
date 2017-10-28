@@ -410,6 +410,12 @@ DefineLanguageWord("Hême", { -- dative; Source: August Fick and Alf Torp, "Wort
 	Dative = "Heimi"
 })
 
+DefineLanguageWord("Heri", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Army"}
+})
+
 DefineLanguageWord("Herta", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-saxon",
 	Type = "noun",

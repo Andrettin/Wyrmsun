@@ -38,6 +38,24 @@ DefineLanguageWord("Gnīde", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	DerivesFrom = {"proto-indo-european", "noun", "Ghni"}
 })
 
+DefineLanguageWord("Jauda", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 3.
+	Language = "latvian", -- source gives Lettish
+	Type = "noun", -- presumably
+	Meanings = {"Might"}
+})
+
+DefineLanguageWord("Karaspehks", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
+	Language = "latvian", -- source gives Lettish
+	Type = "noun",
+	Meanings = {"Army", "War Might"}
+})
+
+DefineLanguageWord("Karsch", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, pp. 9, 11.
+	Language = "latvian", -- source gives Lettish
+	Type = "noun",
+	Meanings = {"War"}
+})
+
 DefineLanguageWord("Kauja", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "latvian", -- source gives Lettish
 	Type = "noun",
@@ -48,18 +66,6 @@ DefineLanguageWord("Kaut", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,
 	Language = "latvian", -- source gives Lettish
 	Type = "verb",
 	Meanings = {"Smite", "Kill"}
-})
-
-DefineLanguageWord("Jauda", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 3.
-	Language = "latvian", -- source gives Lettish
-	Type = "noun", -- presumably
-	Meanings = {"Might"}
-})
-
-DefineLanguageWord("Karsch", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 9.
-	Language = "latvian", -- source gives Lettish
-	Type = "noun",
-	Meanings = {"War"}
 })
 
 DefineLanguageWord("Krina", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 60.

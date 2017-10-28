@@ -589,6 +589,12 @@ DefineLanguageWord("Fogl", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Meanings = {"Bird"}
 })
 
+DefineLanguageWord("Folk", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, pp. 9, 11.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"People", "Armed Band", "Army", "Battle"}
+})
+
 DefineLanguageWord("Fōtr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2, 3.2.1.
 	Language = "old-norse",
 	Type = "noun",
@@ -903,6 +909,12 @@ DefineLanguageWord("Hel", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	Meanings = {"Hel", "Underworld Goddess"}, -- source gives the German "Hel, Unterweltsgöttin" as the meaning
 	Gender = "feminine",
 	DerivesFrom = {"proto-germanic", "noun", "Haljô"}
+})
+
+DefineLanguageWord("Herr", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Army"}
 })
 
 DefineLanguageWord("Hildr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.

@@ -25,8 +25,26 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Jenk", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 7.
-	Language = "turkish", -- source gives Modern Turkish
+DefineLanguageWord("Hamarana", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, pp. 3, 5.
+	Language = "old-persian",
 	Type = "noun",
-	Meanings = {"Battle", "War"}
+	Meanings = {"Battle"}
+})
+
+DefineLanguageWord("Kāra", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 11.
+	Language = "old-persian",
+	Type = "noun",
+	Meanings = {"Army", "People"}
+})
+
+DefineLanguageWord("Partara", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 3.
+	Language = "old-persian",
+	Type = "noun",
+	Meanings = {"Foe", "Battle"} -- the source gives "battle" only as a possible meaning
+})
+
+DefineLanguageWord("Spāda", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
+	Language = "old-persian",
+	Type = "noun",
+	Meanings = {"Army"}
 })

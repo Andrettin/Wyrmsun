@@ -941,6 +941,13 @@ DefineLanguageWord("Haus", {
 	}
 })
 
+DefineLanguageWord("Heer", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Army"},
+	DerivesFrom = {"old-high-german", "noun", "Hari"} -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
+})
+
 DefineLanguageWord("Heilig", {
 	Language = "high-german",
 	Type = "adjective",

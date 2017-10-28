@@ -29,20 +29,28 @@ DefineLanguage("proto-indo-european", {
 	Name = "Proto-Indo-European"
 })
 
+DefineLanguage("illyrian", {
+	Name = "Illyrian"
+})
+
+DefineLanguage("phrygian", {
+	Name = "Phrygian"
+})
+
+DefineLanguage("thracian", {
+	Name = "Thracian"
+})
+
 DefineLanguage("albanian", {
 	Name = "Albanian"
 })
 
+DefineLanguage("old-armenian", {
+	Name = "Old Armenian"
+})
+
 DefineLanguage("armenian", {
 	Name = "Armenian"
-})
-
-DefineLanguage("avestan", {
-	Name = "Avestan"
-})
-
-DefineLanguage("bengali", {
-	Name = "Bengali"
 })
 
 DefineLanguage("egyptian", {
@@ -53,48 +61,8 @@ DefineLanguage("coptic", {
 	Name = "Coptic"
 })
 
-DefineLanguage("hindustani", {
-	Name = "Hindustani"
-})
-
-DefineLanguage("illyrian", {
-	Name = "Illyrian"
-})
-
-DefineLanguage("kashmiri", {
-	Name = "Kashmiri"
-})
-
-DefineLanguage("mahratti", {
-	Name = "Mahratti"
-})
-
-DefineLanguage("modern-persian", {
-	Name = "Modern Persian"
-})
-
-DefineLanguage("old-persian", {
-	Name = "Old Persian"
-})
-
-DefineLanguage("parthian", {
-	Name = "Parthian"
-})
-
-DefineLanguage("persian", {
-	Name = "Persian"
-})
-
-DefineLanguage("phrygian", {
-	Name = "Phrygian"
-})
-
-DefineLanguage("sanskrit", {
-	Name = "Sanskrit"
-})
-
-DefineLanguage("thracian", {
-	Name = "Thracian"
+DefineLanguage("arabic", {
+	Name = "Arabic"
 })
 
 DefineLanguage("proto-uralic", {
@@ -145,6 +113,8 @@ Load("scripts/languages_baltic.lua")
 Load("scripts/languages_celtic.lua")
 Load("scripts/languages_germanic.lua")
 Load("scripts/languages_hellenic.lua")
+Load("scripts/languages_indic.lua")
+Load("scripts/languages_iranian.lua")
 Load("scripts/languages_italic.lua")
 Load("scripts/languages_slavic.lua")
 

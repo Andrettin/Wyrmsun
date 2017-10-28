@@ -234,6 +234,12 @@ DefineLanguageWord("Egō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Nominative = "Egō"
 })
 
+DefineLanguageWord("Exercitus", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, pp. 10-11.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Trained Army", "Training"}
+})
+
 DefineLanguageWord("Fāgus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "latin",
 	Type = "noun",
@@ -285,6 +291,12 @@ DefineLanguageWord("Foris", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "latin",
 	Type = "noun",
 	Meanings = {"Door"}
+})
+
+DefineLanguageWord("Fossātum", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 14.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Ditch"}
 })
 
 DefineLanguageWord("Frāter", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
@@ -440,6 +452,18 @@ DefineLanguageWord("Pecu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "latin",
 	Type = "noun",
 	Meanings = {"Herd"}
+})
+
+DefineLanguageWord("Plēbs", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"People"}
+})
+
+DefineLanguageWord("Populus", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"People", "Folk Army"}
 })
 
 DefineLanguageWord("Pugnus", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 3.

@@ -89,6 +89,12 @@ DefineLanguageWord("Gniti", { -- source also gives the alternative form "gnoj"; 
 	DerivesFrom = {"proto-indo-european", "noun", "Ghni"}
 })
 
+DefineLanguageWord("Kara", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 11.
+	Language = "old-church-slavonic",
+	Type = "noun",
+	Meanings = {"Strife"}
+})
+
 DefineLanguageWord("Klasŭ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
 	Language = "old-church-slavonic",
 	Type = "noun",
@@ -145,6 +151,12 @@ DefineLanguageWord("Mozgŭ", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Meanings = {"Brain"}
 })
 
+DefineLanguageWord("Plŭkŭ", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 9.
+	Language = "old-church-slavonic",
+	Type = "noun",
+	Meanings = {"People", "Armed Band"}
+})
+
 DefineLanguageWord("Razbojĭ", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 7.
 	Language = "old-church-slavonic",
 	Type = "noun",
@@ -188,6 +200,12 @@ DefineLanguageWord("Sĭrebro", { -- Source: August Fick and Alf Torp, "Wortschat
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Sluga", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
+	Language = "old-church-slavonic",
+	Type = "noun",
+	Meanings = {"Servant"}
+})
+
 DefineLanguageWord("Stěna", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
 	Language = "old-church-slavonic",
 	Type = "noun",
@@ -223,6 +241,12 @@ DefineLanguageWord("Vojna", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War
 	Language = "old-church-slavonic",
 	Type = "noun",
 	Meanings = {"War"}
+})
+
+DefineLanguageWord("Vojsko", { -- source also gives the alternative form "vojska"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
+	Language = "old-church-slavonic",
+	Type = "noun",
+	Meanings = {"Army"}
 })
 
 DefineLanguageWord("Zĭrěti", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.

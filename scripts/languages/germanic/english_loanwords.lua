@@ -25,11 +25,20 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Battle", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 3.
+DefineLanguageWord("Army", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Army"},
+	DerivesFrom = {"french", "noun", "Armée"}, -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 13.
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Battle", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Battle"},
-	DerivesFrom = {"french", "noun", "Bataille"}
+	DerivesFrom = {"french", "noun", "Bataille"}, -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 3.
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Church", {
@@ -48,3 +57,9 @@ DefineLanguageWord("Hauberk", {
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Host", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Host"},
+	DerivesFrom = {"old-frisian", "noun", "Ost"} -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, pp. 9, 12.
+})

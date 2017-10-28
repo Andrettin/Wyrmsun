@@ -25,6 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Armada", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 13.
+	Language = "portuguese",
+	Type = "noun",
+	Meanings = {"Naval Force"}
+})
+
 DefineLanguageWord("Battalha", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 3.
 	Language = "portuguese",
 	Type = "noun",
@@ -53,10 +59,24 @@ DefineLanguageWord("Burgo", { -- Source: T. C. Donkin, "An Etymological Dictiona
 	DerivesFrom = {"gothic", "noun", "Baúrgs"} -- the source gives it as being of Germanic origin (then going on to list a series of Germanic words including this Gothic one); presumably from the Gothic in Portuguese, since it seems likely it has the same origin as the Spanish word
 })
 
+DefineLanguageWord("Exército", {
+	Language = "portuguese",
+	Type = "noun",
+	Meanings = {"Army"},
+	DerivesFrom = {"latin", "noun", "Exercitus"} -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 12.
+})
+
 DefineLanguageWord("Guerra", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
 	Language = "portuguese",
 	Type = "noun",
 	Meanings = {"War"}
+})
+
+DefineLanguageWord("Hoste", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 12.
+	Language = "portuguese",
+	Type = "noun",
+	Meanings = {"Army"},
+	DerivesFrom = {"late-latin", "noun", "Hostis"}
 })
 
 DefineLanguageWord("Macaco", {

@@ -551,6 +551,24 @@ DefineLanguageWord("Στῑ́α", { -- source also gives the alternative form "�
 	Meanings = {"Small Stone"} -- source gives the German "Steinchen" as the meaning
 })
 
+DefineLanguageWord("Στρατόπεδα", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 14.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Camp", "Army"}
+})
+
+DefineLanguageWord("Στρατός", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 14.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Encamped Army", "Army"}
+})
+
+DefineLanguageWord("Ταἑίδι", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Body of Soldiers"}
+})
+
 DefineLanguageWord("Téphra", { -- is this the plural form? Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "greek",
 	Type = "noun",

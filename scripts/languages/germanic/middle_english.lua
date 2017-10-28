@@ -32,11 +32,25 @@ DefineLanguageWord("Busch", { -- source also gives the alternative form "Busk"; 
 	DerivesFrom = {"proto-germanic", "noun", "Buska"} -- presumably
 })
 
+DefineLanguageWord("Fērd", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 14.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Army"},
+	DerivesFrom = {"old-english", "noun", "Fierd"}
+})
+
 DefineLanguageWord("Glenten", { -- weak verb; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 81.
 	Language = "middle-english",
 	Type = "verb",
 	Meanings = {"Seem", "Glance"}, -- source gives the German "scheinen, blicken" as the meaning
 	DerivesFrom = {"proto-germanic", "verb", "Glent"}
+})
+
+DefineLanguageWord("Hę̄re", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 14.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Army"},
+	DerivesFrom = {"old-english", "noun", "Here"}
 })
 
 DefineLanguageWord("Sliper", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 103.

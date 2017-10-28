@@ -25,9 +25,23 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Gund", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
+	Language = "armenian",
+	Type = "noun",
+	Meanings = {"Army"},
+	DerivesFrom = {"parthian", "noun", "Gund"}
+})
+
 DefineLanguageWord("Paterazm", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 7.
 	Language = "armenian",
 	Type = "noun",
 	Meanings = {"War", "Battle"},
 	DerivesFrom = {"parthian", "noun", "Pātrazm"}
+})
+
+DefineLanguageWord("Zor", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
+	Language = "armenian",
+	Type = "noun",
+	Meanings = {"Army"},
+	DerivesFrom = {"old-armenian", "noun", "Zaur"}
 })
