@@ -39,31 +39,43 @@ DefineLanguageWord("Gnīde", { -- Source: August Fick and Alf Torp, "Wortschatz 
 })
 
 DefineLanguageWord("Jauda", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 3.
-	Language = "latvian", -- source gives Lettish
+	Language = "latvian", -- source gives Lettic
 	Type = "noun", -- presumably
 	Meanings = {"Might"}
 })
 
 DefineLanguageWord("Karaspehks", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
-	Language = "latvian", -- source gives Lettish
+	Language = "latvian", -- source gives Lettic
 	Type = "noun",
 	Meanings = {"Army", "War Might"}
 })
 
+DefineLanguageWord("Karawihrs", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
+	Language = "latvian", -- source gives Lettic
+	Type = "noun",
+	Meanings = {"War Man", "Soldier"}
+})
+
+DefineLanguageWord("Kareiwis", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
+	Language = "latvian", -- source gives Lettic
+	Type = "noun",
+	Meanings = {"One Who Goes to War"}
+})
+
 DefineLanguageWord("Karsch", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, pp. 9, 11.
-	Language = "latvian", -- source gives Lettish
+	Language = "latvian", -- source gives Lettic
 	Type = "noun",
 	Meanings = {"War"}
 })
 
 DefineLanguageWord("Kauja", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
-	Language = "latvian", -- source gives Lettish
+	Language = "latvian", -- source gives Lettic
 	Type = "noun",
 	Meanings = {"Battle"}
 })
 
 DefineLanguageWord("Kaut", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
-	Language = "latvian", -- source gives Lettish
+	Language = "latvian", -- source gives Lettic
 	Type = "verb",
 	Meanings = {"Smite", "Kill"}
 })

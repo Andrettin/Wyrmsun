@@ -67,6 +67,12 @@ DefineLanguageWord("Cad", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,'
 	Meanings = {"Battle"}
 })
 
+DefineLanguageWord("Cadwar", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
+	Language = "welsh",
+	Type = "noun",
+	Meanings = {"Soldier"} -- gloss of Latin "miles"
+})
+
 DefineLanguageWord("Cant", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
 	Language = "welsh",
 	Type = "numeral",

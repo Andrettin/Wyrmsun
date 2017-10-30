@@ -31,3 +31,10 @@ DefineLanguageWord("Krig", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,
 	Meanings = {"War"},
 	DerivesFrom = {"high-german", "noun", "Krieg"}
 })
+
+DefineLanguageWord("Soldat", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 17.
+	Language = "swedish",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"french", "noun", "Soldat"}
+})

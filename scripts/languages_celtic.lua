@@ -77,6 +77,11 @@ DefineLanguage("modern-welsh", {
 	DialectOf = "welsh"
 })
 
+DefineLanguage("old-cornish", {
+	Name = "Old Cornish",
+	Family = "celtic"
+})
+
 DefineLanguage("cornish", {
 	Name = "Cornish",
 	Family = "celtic"

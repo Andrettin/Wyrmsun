@@ -31,4 +31,3 @@ DefineLanguageWord("Lashkar", { -- Source: Carl D. Buck, "Words for 'Battle,' 'W
 	Meanings = {},
 	DerivesFrom = {"arabic", "noun", "Askar"}
 })
-

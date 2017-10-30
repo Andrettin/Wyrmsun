@@ -463,6 +463,18 @@ DefineLanguageWord("Done", { -- appears in the field-name "Wedone"; Source: Fran
 	Meanings = {}
 })
 
+DefineLanguageWord("Drēogan", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
+	Language = "old-english",
+	Type = "verb",
+	Meanings = {"Perform", "Practice"}
+})
+
+DefineLanguageWord("Drygt", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Troop", "Company", "Army"}
+})
+
 DefineLanguageWord("Dryhten", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 113.
 	Language = "old-english",
 	Type = "noun",
@@ -732,6 +744,12 @@ DefineLanguageWord("Geard", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Type = "noun",
 	Meanings = {"Garden"}, -- derived from Proto-Germanic "Gárdiz", which has the meaning of "garden"
 	DerivesFrom = {"proto-germanic", "noun", "Gárdiz"}
+})
+
+DefineLanguageWord("Gedreag", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Crowd"}
 })
 
 DefineLanguageWord("Gefeoht", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
@@ -2241,6 +2259,18 @@ DefineLanguageWord("Wifmann", { -- Source: Alaric Hall, "The Meanings of Elf and
 	Meanings = {"Woman-Person"}
 })
 
+DefineLanguageWord("Wiga", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Fighter", "Warrior"}
+})
+
+DefineLanguageWord("Wīgan", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
+	Language = "old-english",
+	Type = "verb",
+	Meanings = {"Fight"}
+})
+
 DefineLanguageWord("Wihte", { -- this is the plural; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 102.
 	Language = "old-english",
 	Type = "noun",
@@ -2287,7 +2317,27 @@ DefineLanguageWord("Wyrm", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
--- compounds
+-- Compounds
+
+DefineLanguageWord("Heremaecg", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Soldier"},
+	CompoundElements = {
+		"prefix", "old-english", "noun", "Here", -- as given by the source
+--		"suffix", -- ?
+	}
+})
+
+DefineLanguageWord("Heremann", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Soldier"},
+	CompoundElements = {
+		"prefix", "old-english", "noun", "Here", -- as given by the source
+		"suffix", "old-english", "noun", "Mann" -- presumably
+	}
+})
 
 DefineLanguageWord("Mundbora", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 167.
 	Language = "old-english",

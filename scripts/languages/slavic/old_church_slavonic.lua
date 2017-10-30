@@ -76,6 +76,12 @@ DefineLanguageWord("Brŭvĭ", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Meanings = {"Brow"} -- source gives the German "Braue" as the meaning
 })
 
+DefineLanguageWord("Drugŭ", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
+	Language = "old-church-slavonic",
+	Type = "noun",
+	Meanings = {"Friend"}
+})
+
 DefineLanguageWord("Ględěti", { -- source also gives the alternative form "ględati"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 81.
 	Language = "old-church-slavonic",
 	Type = "verb",
@@ -235,6 +241,18 @@ DefineLanguageWord("Věkŭ", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Language = "old-church-slavonic",
 	Type = "noun",
 	Meanings = {"Strength", "Age"} -- source gives the German "Kraft, Lebensalter" as the meaning
+})
+
+DefineLanguageWord("Voji", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
+	Language = "old-church-slavonic",
+	Type = "noun",
+	Meanings = {"Soldiers"}
+})
+
+DefineLanguageWord("Vojinŭ", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
+	Language = "old-church-slavonic",
+	Type = "noun",
+	Meanings = {"Soldier"}
 })
 
 DefineLanguageWord("Vojna", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.

@@ -31,3 +31,10 @@ DefineLanguageWord("Vaiskas", { -- Source: Carl D. Buck, "Words for 'Battle,' 'W
 	Meanings = {"Army"},
 	DerivesFrom = {"polish", "noun", "Wojsko"}
 })
+
+DefineLanguageWord("Żalniėrius", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, pp. 17-18.
+	Language = "lithuanian",
+	Type = "noun",
+	Meanings = {"Soldier"},
+	DerivesFrom = {"polish", "noun", "Žolnierz"}
+})

@@ -37,3 +37,10 @@ DefineLanguageWord("Oste", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,
 	Meanings = {"Army"},
 	DerivesFrom = {"late-latin", "noun", "Hostis"}
 })
+
+DefineLanguageWord("Soldaniere", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 17.
+	Language = "old-italian",
+	Type = "noun",
+	Meanings = {"Soldier"},
+	DerivesFrom = {"latin", "noun", "Solidenarius"}
+})

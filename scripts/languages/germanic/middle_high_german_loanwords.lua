@@ -39,6 +39,13 @@ DefineLanguageWord("Phellel", { -- Source: Bernhard Maier (trans.), "Das Sagenbu
 	DerivesFrom = {"old-french", "noun", "Paile"}
 })
 
+DefineLanguageWord("Soldenaere", { -- source also gives the alternative forms "soldener" and "soltner"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 17.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Soldier"},
+	DerivesFrom = {"latin", "noun", "Solidenarius"}
+})
+
 DefineLanguageWord("Sîde", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 121.
 	Language = "middle-high-german",
 	Type = "noun",

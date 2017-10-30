@@ -314,11 +314,23 @@ DefineLanguageWord("Majján", { -- Source: Sean Crist, "An Analysis of *z loss i
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Mela", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Meeting", "Assembly"}
+})
+
 DefineLanguageWord("Mīḍhá", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Language = "sanskrit",
 	Type = "noun",
 	Meanings = {"Reward from a Battle", "Reward from a Competition"},
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Mil", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
+	Language = "sanskrit",
+	Type = "verb",
+	Meanings = {"Meet", "Assemble"}
 })
 
 DefineLanguageWord("Náktam", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
@@ -457,6 +469,12 @@ DefineLanguageWord("Sáhas", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Violence", "Victory"}, -- source gives the German "Gewalt, Sieg" as the meaning
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Sāinika", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Soldier"}
 })
 
 DefineLanguageWord("Sámâ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.

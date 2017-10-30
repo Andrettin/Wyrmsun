@@ -45,3 +45,15 @@ DefineLanguageWord("Oaste", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War
 	Meanings = {"Army"},
 	DerivesFrom = {"late-latin", "noun", "Hostis"}
 })
+
+DefineLanguageWord("Ostaś", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
+	Language = "romanian",
+	Type = "noun",
+	Meanings = {"Soldier"}
+})
+
+DefineLanguageWord("Soldat", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
+	Language = "romanian",
+	Type = "noun",
+	Meanings = {"Soldier"}
+})

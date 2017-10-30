@@ -32,3 +32,9 @@ DefineLanguageWord("Arme", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,
 	DerivesFrom = {"french", "noun", "Armée"}
 })
 
+DefineLanguageWord("Soudard", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 17.
+	Language = "breton",
+	Type = "noun",
+	Meanings = {"Soldier"},
+	DerivesFrom = {"old-french", "noun", "Soudoier"}
+})

@@ -291,6 +291,13 @@ DefineLanguageWord("Sénéchal", {
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Soldat", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 17.
+	Language = "french",
+	Type = "noun",
+	Meanings = {"Soldier"},
+	DerivesFrom = {"latin", "noun", "Solidatus"}
+})
+
 DefineLanguageWord("Sombrer", {
 	Language = "french",
 	Type = "verb",

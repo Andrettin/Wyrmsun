@@ -150,7 +150,7 @@ local EarthEvents = {
 	},
 	CelticAndAntediluvianAntiquities = { -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 17.
 		Name = "Celtic and Antediluvian Antiquities",
-		Description = "The French customs officer and amateur archaeologist, Jacques Boucher de Crèvecoeur de Perthes, after doing excavations in the Somme region, has published a his Celtic and Antediluvian Antiquities in three volumes. In his work, he established a stark division between ancient flaked tools (which he called Antediluvian) and the more recent polished ones (which he named Celtic).",
+		Description = "The French customs officer and amateur archaeologist, Jacques Boucher de CrÃ¨vecoeur de Perthes, after doing excavations in the Somme region, has published a his Celtic and Antediluvian Antiquities in three volumes. In his work, he established a stark division between ancient flaked tools (which he called Antediluvian) and the more recent polished ones (which he named Celtic).",
 		Conditions = function(s)
 			if (
 				GetProvinceOwner("France") == EventFaction.Name
@@ -196,8 +196,8 @@ local EarthEvents = {
 		OptionTooltips = {"+100 Research"}
 	},
 	MateriauxPourLHistoireDeLHomme = { -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 18.
-		Name = "Matériaux pour l'histoire de l'homme",
-		Description = "A new periodical has been founded in France, the Matériaux pour l'histoire positive et philosophique de l'homme, which preoccupies itself with research on prehistory.",
+		Name = "MatÃ©riaux pour l'histoire de l'homme",
+		Description = "A new periodical has been founded in France, the MatÃ©riaux pour l'histoire positive et philosophique de l'homme, which preoccupies itself with research on prehistory.",
 		Conditions = function(s)
 			if (
 				GetProvinceOwner("France") == EventFaction.Name

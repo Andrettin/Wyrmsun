@@ -94,6 +94,20 @@ DefineLanguageWord("Lied", { -- Source: http://www.duden.de/rechtschreibung/Lied
 	}
 })
 
+DefineLanguageWord("Soldat", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Soldier"},
+	DerivesFrom = {"italian", "noun", "Soldato"} -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 17.
+})
+
+DefineLanguageWord("Söldner", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Mercenary"},
+	DerivesFrom = {"middle-high-german", "noun", "Soldenaere"} -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 17.
+})
+
 DefineLanguageWord("Süd", {
 	Language = "high-german",
 	Type = "noun",

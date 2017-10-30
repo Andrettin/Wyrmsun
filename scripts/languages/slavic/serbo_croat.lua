@@ -31,6 +31,18 @@ DefineLanguageWord("Bôj", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,
 	Meanings = {"Battle"}
 })
 
+DefineLanguageWord("Vojak", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
+	Language = "serbo-croat",
+	Type = "noun",
+	Meanings = {"Soldier"}
+})
+
+DefineLanguageWord("Vojin", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
+	Language = "serbo-croat",
+	Type = "noun",
+	Meanings = {"Soldier"}
+})
+
 DefineLanguageWord("Vojska", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
 	Language = "serbo-croat",
 	Type = "noun",

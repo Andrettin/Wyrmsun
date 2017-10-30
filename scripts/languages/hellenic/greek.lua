@@ -408,6 +408,18 @@ DefineLanguageWord("Ōlénē", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Meanings = {"Elbow"}
 })
 
+DefineLanguageWord("Ὁμιλέω", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
+	Language = "greek",
+	Type = "verb",
+	Meanings = {"Consort With"}
+})
+
+DefineLanguageWord("Ὅμιλος", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Crowd"}
+})
+
 DefineLanguageWord("Omφḗ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "noun",
@@ -555,6 +567,13 @@ DefineLanguageWord("Στρατόπεδα", { -- Source: Carl D. Buck, "Words for
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Camp", "Army"}
+})
+
+DefineLanguageWord("Στρατιώτης", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Soldier"}
+	-- from στρατός, στρατιά
 })
 
 DefineLanguageWord("Στρατός", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 14.

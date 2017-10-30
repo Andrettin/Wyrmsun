@@ -33,3 +33,9 @@ DefineLanguageWord("Gourme", {
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Soldat", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 17.
+	Language = "french",
+	Type = "noun",
+	Meanings = {"Soldier"},
+	DerivesFrom = {"italian", "noun", "Soldato"}
+})

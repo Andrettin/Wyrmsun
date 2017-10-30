@@ -25,6 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Soudadier", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 17.
+	Language = "old-provencal",
+	Type = "noun",
+	Meanings = {"Soldier"},
+	DerivesFrom = {"latin", "noun", "Solidatarius"}
+})
+
 DefineLanguageWord("Vorm", { --  Source: http://www.cnrtl.fr/definition/gourme
 	Language = "old-provencal",
 	Type = "noun",

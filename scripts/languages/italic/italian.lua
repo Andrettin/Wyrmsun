@@ -86,3 +86,10 @@ DefineLanguageWord("Ricco", {
 	Meanings = {"Rich"},
 	DerivesFrom = {"gothic", "adjective", "Reiks"} -- Source: http://www.cnrtl.fr/definition/riche
 })
+
+DefineLanguageWord("Soldato", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 17.
+	Language = "italian",
+	Type = "noun",
+	Meanings = {"Soldier"},
+	DerivesFrom = {"latin", "noun", "Solidatus"}
+})

@@ -396,6 +396,15 @@ DefineLanguageWord("Merula", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Meanings = {"Blackbird", "Merl"} -- source gives the German "Amsel" as the meaning
 })
 
+DefineLanguageWord("Mīles", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Soldier"},
+	NumberCaseInflections = {
+		"plural", "nominative", "Mīlitēs"
+	}
+})
+
 DefineLanguageWord("Molere", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "latin",
 	Type = "verb",
@@ -512,6 +521,12 @@ DefineLanguageWord("Saeta", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch
 	Meanings = {}
 })
 
+DefineLanguageWord("Sagitta", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 17.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {}
+})
+
 DefineLanguageWord("Scrībere", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "latin",
 	Type = "verb",
@@ -535,6 +550,36 @@ DefineLanguageWord("Sōl", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "latin",
 	Type = "noun",
 	Meanings = {"Sun"}
+})
+
+DefineLanguageWord("Solidare", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 17.
+	Language = "latin",
+	Type = "verb",
+	Meanings = {"Pay the Soldier's Stipend"}
+})
+
+DefineLanguageWord("Solidarius", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 17.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Mercenary"}
+})
+
+DefineLanguageWord("Solidatarius", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 17.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Mercenary"}
+})
+
+DefineLanguageWord("Solidatus", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 17.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Mercenary"}
+})
+
+DefineLanguageWord("Solidenarius", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 17.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Mercenary"}
 })
 
 DefineLanguageWord("Spuō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.

@@ -381,10 +381,22 @@ DefineLanguageWord("Dōnawi", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Meanings = {"Danube"}
 })
 
-DefineLanguageWord("Drauhtinōn", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
+DefineLanguageWord("Drauhtinassus", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Warfare"}
+})
+
+DefineLanguageWord("Drauhtinōn", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, pp. 4, 16.
 	Language = "gothic",
 	Type = "verb",
-	Meanings = {"Wage War"}
+	Meanings = {"Wage War", "War"}
+})
+
+DefineLanguageWord("Drauhtiwitōþ", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Warfare"}
 })
 
 DefineLanguageWord("Eisarn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
@@ -499,7 +511,7 @@ DefineLanguageWord("Fūls", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-germanic", "adjective", "Fūla"}
 })
 
-DefineLanguageWord("Gadrauhts", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
+DefineLanguageWord("Gadrauhts", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, pp. 4, 16.
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Soldier"}

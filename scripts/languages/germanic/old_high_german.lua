@@ -1797,6 +1797,12 @@ DefineLanguageWord("Trūēn", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Meanings = {"Trust"}
 })
 
+DefineLanguageWord("Truht", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Troop", "Band"}
+})
+
 DefineLanguageWord("Truhtîn", { -- source also gives the alternative form "trohtîn"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 113.
 	Language = "old-high-german",
 	Type = "noun",

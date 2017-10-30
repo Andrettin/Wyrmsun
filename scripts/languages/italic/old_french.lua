@@ -73,6 +73,20 @@ DefineLanguageWord("Paile", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch
 	Meanings = {}
 })
 
+DefineLanguageWord("Saudenier", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 17.
+	Language = "old-french",
+	Type = "noun",
+	Meanings = {"Soldier"},
+	DerivesFrom = {"latin", "noun", "Solidenarius"}
+})
+
+DefineLanguageWord("Soudoier", { -- source also gives the alternative forms "soldoier", "sodoier", "saudoier" and "soldeier"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 17.
+	Language = "old-french",
+	Type = "noun",
+	Meanings = {"Soldier"},
+	DerivesFrom = {"latin", "noun", "Solidatarius"}
+})
+
 DefineLanguageWord("Vautre", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 118.
 	Language = "old-french",
 	Type = "noun",

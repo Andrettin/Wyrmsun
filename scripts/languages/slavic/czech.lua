@@ -55,6 +55,12 @@ DefineLanguageWord("Šemík", { -- name of Horymír's horse in the Praguer legen
 	Meanings = {}
 })
 
+DefineLanguageWord("Vojak", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
+	Language = "czech", -- source gives Bohemian
+	Type = "noun",
+	Meanings = {"Soldier"}
+})
+
 DefineLanguageWord("Vojna", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
 	Language = "czech", -- source gives Bohemian
 	Type = "noun",

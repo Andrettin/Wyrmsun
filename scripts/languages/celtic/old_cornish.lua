@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016-2017 by Andrettin
+--      (c) Copyright 2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,30 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Krig", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
-	Language = "danish",
+DefineLanguageWord("Cadwur", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
+	Language = "old-cornish",
 	Type = "noun",
-	Meanings = {"War"},
-	DerivesFrom = {"high-german", "noun", "Krieg"}
-})
-
-DefineLanguageWord("Orlog", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
-	Language = "danish",
-	Type = "noun",
-	Meanings = {"Naval War"},
-	DerivesFrom = {"middle-low-german", "noun", "Orloge"}
-})
-
-DefineLanguageWord("Soldat", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 17.
-	Language = "danish",
-	Type = "noun",
-	Meanings = {},
-	DerivesFrom = {"french", "noun", "Soldat"}
-})
-
-DefineLanguageWord("Soldener", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 17.
-	Language = "danish", -- source gives "early Danish"
-	Type = "noun",
-	Meanings = {"Soldier"},
-	DerivesFrom = {"latin", "noun", "Solidenarius"}
+	Meanings = {"Soldier"} -- gloss of Latin "miles"
 })

@@ -39,6 +39,13 @@ DefineLanguageWord("Niza", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,
 	-- according to the source, the word is of Turkish origin
 })
 
+DefineLanguageWord("Ushtār", { -- source also gives the alternative form "ushϵtār"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
+	Language = "albanian",
+	Type = "noun",
+	Meanings = {"Soldier"}
+	-- from "ushtrī"
+})
+
 DefineLanguageWord("Ushtrī", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 12.
 	Language = "albanian",
 	Type = "noun",

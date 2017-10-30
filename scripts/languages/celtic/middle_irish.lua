@@ -25,6 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Cathfer", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
+	Language = "middle-irish",
+	Type = "noun",
+	Meanings = {"Man of Battle", "Warrior"}
+})
+
 DefineLanguageWord("Cellach", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "middle-irish",
 	Type = "noun",

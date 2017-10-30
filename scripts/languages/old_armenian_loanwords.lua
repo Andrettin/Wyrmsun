@@ -31,3 +31,9 @@ DefineLanguageWord("Zaur", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,
 	Meanings = {"Army"}
 	-- Iranian loan word
 })
+
+DefineLanguageWord("Zaurakan", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
+	Language = "old-armenian",
+	Type = "noun",
+	Meanings = {"Soldier"}
+})

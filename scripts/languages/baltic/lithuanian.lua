@@ -102,6 +102,18 @@ DefineLanguageWord("Dë̂vas", { -- Source: H. Munro Chadwick, "The Oak and the 
 	Meanings = {"God"}
 })
 
+DefineLanguageWord("Draugas", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
+	Language = "lithuanian",
+	Type = "noun",
+	Meanings = {"Companion"}
+})
+
+DefineLanguageWord("Drauge", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
+	Language = "lithuanian",
+	Type = "adposition",
+	Meanings = {"With"}
+})
+
 DefineLanguageWord("Dubùs", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "lithuanian",
 	Type = "adjective",
@@ -112,6 +124,12 @@ DefineLanguageWord("Dvýlika", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Language = "lithuanian",
 	Type = "numeral",
 	Number = 12
+})
+
+DefineLanguageWord("Eiti", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
+	Language = "lithuanian",
+	Type = "verb",
+	Meanings = {"Go"}
 })
 
 DefineLanguageWord("Jéras", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
@@ -138,7 +156,7 @@ DefineLanguageWord("Kalti", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War
 	Meanings = {"Smite"}
 })
 
-DefineLanguageWord("Karas", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, pp. 9, 11.
+DefineLanguageWord("Karas", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, pp. 9, 11, 16.
 	Language = "lithuanian",
 	Type = "noun",
 	Meanings = {"War"}
@@ -338,4 +356,16 @@ DefineLanguageWord("Žìrnis", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Language = "lithuanian",
 	Type = "noun",
 	Meanings = {"Pea"}
+})
+
+-- Compounds
+
+DefineLanguageWord("Kareivis", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
+	Language = "lithuanian",
+	Type = "noun",
+	Meanings = {"One Who Goes to War", "Soldier"},
+	CompoundElements = {
+		"prefix", "lithuanian", "noun", "Karas",
+		"suffix", "lithuanian", "verb", "Eiti"
+	}
 })

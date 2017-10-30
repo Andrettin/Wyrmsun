@@ -63,3 +63,10 @@ DefineLanguageWord("Host", {
 	Meanings = {"Host"},
 	DerivesFrom = {"old-frisian", "noun", "Ost"} -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, pp. 9, 12.
 })
+
+DefineLanguageWord("Soldier", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Soldier"},
+	DerivesFrom = {"middle-english", "noun", "Soudoier"} -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 17.
+})

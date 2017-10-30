@@ -31,3 +31,10 @@ DefineLanguageWord("Armija", { -- Source: Carl D. Buck, "Words for 'Battle,' 'Wa
 	Meanings = {"Army"},
 	DerivesFrom = {"french", "noun", "Armée"}
 })
+
+DefineLanguageWord("Soldat", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, pp. 16-17.
+	Language = "russian",
+	Type = "noun",
+	Meanings = {"Soldier"},
+	DerivesFrom = {"french", "noun", "Soldat"}
+})

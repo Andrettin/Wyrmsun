@@ -2014,7 +2014,7 @@ DefineLanguageWord("Ylgr", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "feminine"
 })
 
--- compounds
+-- Compounds
 
 DefineLanguageWord("Aldrnari", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-norse",
@@ -2034,5 +2034,25 @@ DefineLanguageWord("Eindagi", { -- Source: August Fick and Alf Torp, "Wortschatz
 	CompoundElements = {
 --		"prefix", -- ?
 		"suffix", "old-norse", "noun", "Dagi"
+	}
+})
+
+DefineLanguageWord("Hermađr", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Soldier"},
+	CompoundElements = {
+		"prefix", "old-norse", "noun", "Herr", -- presumably
+--		"suffix", -- ?
+	}
+})
+
+DefineLanguageWord("Hermǫgr", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Soldier"},
+	CompoundElements = {
+		"prefix", "old-norse", "noun", "Herr", -- presumably
+--		"suffix", -- ?
 	}
 })

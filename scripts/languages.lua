@@ -109,7 +109,6 @@ DefineLanguage("kobold", {
 	Name = "Kobold"
 })
 
-Load("scripts/languages_baltic.lua")
 Load("scripts/languages_celtic.lua")
 Load("scripts/languages_germanic.lua")
 Load("scripts/languages_hellenic.lua")
@@ -117,6 +116,12 @@ Load("scripts/languages_indic.lua")
 Load("scripts/languages_iranian.lua")
 Load("scripts/languages_italic.lua")
 Load("scripts/languages_slavic.lua")
+Load("scripts/languages_baltic.lua")
+
+DefineLanguage("yakut", {
+	Name = "Yakut"
+})
+
 
 local languages = GetLanguages()
 

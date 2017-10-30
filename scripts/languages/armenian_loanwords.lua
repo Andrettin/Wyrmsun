@@ -39,6 +39,20 @@ DefineLanguageWord("Paterazm", { -- Source: Carl D. Buck, "Words for 'Battle,' '
 	DerivesFrom = {"parthian", "noun", "Pātrazm"}
 })
 
+DefineLanguageWord("Zēn", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
+	Language = "armenian",
+	Type = "noun",
+	Meanings = {"Arms", "Weapons"}
+	-- Iranian loan word
+})
+
+DefineLanguageWord("Zinvor", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
+	Language = "armenian",
+	Type = "noun",
+	Meanings = {"Soldier"}
+	-- from "zēn"
+})
+
 DefineLanguageWord("Zor", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
 	Language = "armenian",
 	Type = "noun",
