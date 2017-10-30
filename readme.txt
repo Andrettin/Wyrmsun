@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 - 2.9.1
 -----------------------------------------------------------------------
 
+* AI
+- The AI now builds docks in a more dynamic fashion.
+
 * Miscellaneous
 - Fixed issue which could cause a crash for maps that are smaller than the screen's "map area".
 
