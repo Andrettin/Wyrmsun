@@ -106,6 +106,9 @@ DefineDialogue("thors-servant-berserker-brides-killed", {
 					SetPlayerData(trigger_player, "AcceptQuest", "slay-geirrod")
 					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("geirrodung-clan"))
 					SetDiplomacy(GetFactionPlayer("geirrodung-clan"), "enemy", trigger_player)
+					unit = CreateUnit("unit-ethereal-revealer", trigger_player, {4270 - EarthStartX, 723 - EarthStartY})
+					SetUnitVariable(unit, "TTL", 600)
+					CenterMap(4270 - EarthStartX, 723 - EarthStartY)
 				end
 			}
 		},

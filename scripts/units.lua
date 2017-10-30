@@ -3045,7 +3045,8 @@ DefineUnitType("unit-destroyed-4x4-place", {
 	Sounds = {}
 })
 
-DefineUnitType("unit-revealer", { Name = "Revealer",
+DefineUnitType("unit-revealer", {
+	Name = "Revealer",
 	Animations = "animations-building", Icon = "icon-eagle-eye",
 	HitPoints = 1,
 	TileSize = {1, 1}, BoxSize = {1, 1},
@@ -3059,6 +3060,25 @@ DefineUnitType("unit-revealer", { Name = "Revealer",
 	Revealer = true,
 	DetectCloak = true,
 	HiddenInEditor = true,
+	Sounds = {}
+} )
+
+DefineUnitType("unit-ethereal-revealer", {
+	Name = "Ethereal Revealer",
+	Animations = "animations-building", Icon = "icon-eagle-eye",
+	HitPoints = 1,
+	TileSize = {1, 1}, BoxSize = {1, 1},
+	SightRange = 12,
+	Missile = "missile-none",
+	Priority = 0,
+	DecayRate = 1,
+	Type = "fly",
+	VisibleUnderFog = true,
+	NonSolid = true,
+	Revealer = true,
+	DetectCloak = true,
+	HiddenInEditor = true,
+	EtherealVision = 1,
 	Sounds = {}
 } )
 

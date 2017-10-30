@@ -57,6 +57,13 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 2.9.2
+-----------------------------------------------------------------------
+
+* Scenarios
+- The location of the portal to Jotunheim is now revealed for a short time after the "Slay Geirrod" quest is acquired. Furthermore, when that quest's introduction dialogue finishes, the map is now centered on the portal's location.
+
+-----------------------------------------------------------------------
 - 2.9.1
 -----------------------------------------------------------------------
 

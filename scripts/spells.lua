@@ -30,6 +30,7 @@
 --  Declare some unit types used in spells. This is quite accetable, the other
 --  way would be to define can-cast-spell outside unit definitions, not much of an improvement.
 DefineUnitType("unit-revealer", {})
+DefineUnitType("unit-ethereal-revealer", {})
 
 DefineSpell("spell-healing",
 	"showname", "Healing",
