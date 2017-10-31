@@ -293,7 +293,7 @@ DefineModifier("upgrade-deity-odin",
 	{"remove-upgrade", "upgrade-deity-thor"}, {"remove-upgrade", "upgrade-deity-christian-god"}
 )
 
-DefineModifier("upgrade-deity-odin",
+DefineModifier("upgrade-deity-odin", -- dummy upgrade modifier to change starting abilities/variations
 	{"apply-to", "unit-germanic-priest"}, {"apply-to", "unit-teuton-priest"}, {"apply-to", "unit-dwarven-witness"},
 	{"apply-to", "unit-teuton-temple"}
 )
@@ -317,7 +317,7 @@ DefineModifier("upgrade-deity-thor",
 	{"remove-upgrade", "upgrade-deity-odin"}, {"remove-upgrade", "upgrade-deity-christian-god"}
 )
 
-DefineModifier("upgrade-deity-thor",
+DefineModifier("upgrade-deity-thor", -- dummy upgrade modifier to change starting abilities/variations
 	{"apply-to", "unit-germanic-priest"}, {"apply-to", "unit-teuton-priest"}, {"apply-to", "unit-dwarven-witness"},
 	{"apply-to", "unit-teuton-temple"}
 )

@@ -626,7 +626,19 @@ DefineUnitType("unit-gold-mine", {
 	ButtonPos = 12,
 	ButtonKey = "g",
 	ButtonHint = "Build ~!Gold Mine",
-	BuildingRulesString = "Must be built on top of a Gold Deposit"
+	BuildingRulesString = "Must be built on top of a Gold Deposit",
+	Variations = {
+		{
+			"variation-id", "default",
+			"upgrade-forbidden", "upgrade-engineering"
+		},
+		{
+			"variation-id", "rail",
+			"file", "neutral/buildings/gold_mine_rail.png",
+			"light-file", "neutral/buildings/gold_mine_rail_light.png",
+			"upgrade-required", "upgrade-engineering"
+		}
+	}
 } )
 
 DefineUnitType("unit-silver-deposit", {

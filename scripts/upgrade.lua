@@ -272,6 +272,10 @@ DefineModifier("upgrade-mathematics",
 	{"apply-to", "unit-teuton-market"}
 )
 
+DefineModifier("upgrade-engineering", -- dummy upgrade modifier to change the variation
+	{"apply-to", "unit-gold-mine"}
+)
+
 DefineModifier("upgrade-architecture",
 	{"HitPoints", 20, "Percent"},
 	{"Armor", 5},
