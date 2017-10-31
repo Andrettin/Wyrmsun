@@ -28,35 +28,35 @@
 DefineUpgrade("upgrade-item-prefix-accurate", {
 	Name = "Accurate",
 	MagicPrefix = true,
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "gun", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "horn", true},
+	ItemPrefix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing-axe", "thrusting-sword", "horn"},
 	MagicLevel = 1
 })
 
 DefineUpgrade("upgrade-item-prefix-chiseling", {
 	Name = "Chiseling",
 	MagicPrefix = true,
-	ItemPrefix = {"mace", true},
+	ItemPrefix = {"mace"},
 	MagicLevel = 1
 })
 
 DefineUpgrade("upgrade-item-prefix-chopping", {
 	Name = "Chopping",
 	MagicPrefix = true,
-	ItemPrefix = {"axe", true},
+	ItemPrefix = {"axe"},
 	MagicLevel = 1
 })
 
 DefineUpgrade("upgrade-item-prefix-cold", { -- example: Cold Blade (from Wesnoth)
 	Name = "Cold",
 	MagicPrefix = true,
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "gun", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
+	ItemPrefix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing-axe", "thrusting-sword"},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-prefix-cruel", {
 	Name = "Cruel",
 	MagicPrefix = true,
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "gun", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
+	ItemPrefix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing-axe", "thrusting-sword"},
 	MagicLevel = 1
 })
 
@@ -69,56 +69,56 @@ DefineUpgrade("upgrade-item-prefix-dwindling", {
 DefineUpgrade("upgrade-item-prefix-extinguishing", {
 	Name = "Extinguishing",
 	MagicPrefix = true,
-	ItemPrefix = {"armor", true, "shield", true, "helmet", true},
+	ItemPrefix = {"armor", "cloak", "shield", "helmet"},
 	MagicLevel = 3
 })
 
 DefineUpgrade("upgrade-item-prefix-fiery", {
 	Name = "Fiery",
 	MagicPrefix = true,
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "gun", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "horn", true, "amulet", true, "ring", true}, -- so that Brisingamen and Draupnir can drop
+	ItemPrefix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing-axe", "thrusting-sword", "horn", "amulet", "ring"}, -- so that Brisingamen and Draupnir can drop
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-prefix-flaming", { -- example: Flaming Sword (from Wesnoth)
 	Name = "Flaming",
 	MagicPrefix = true,
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "gun", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "horn", true, "amulet", true, "ring", true}, -- so that Brisingamen and Draupnir can drop
+	ItemPrefix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing-axe", "thrusting-sword", "horn", "amulet", "ring"}, -- so that Brisingamen and Draupnir can drop
 	MagicLevel = 4
 })
 
 DefineUpgrade("upgrade-item-prefix-frail", {
 	Name = "Frail",
 	MagicPrefix = true,
-	ItemPrefix = {"armor", true, "shield", true, "helmet", true},
+	ItemPrefix = {"armor", "cloak", "shield", "helmet"},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-prefix-giants", {
 	Name = "Giant's",
 	MagicPrefix = true,
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
+	ItemPrefix = {"arrows", "axe", "dagger", "javelin", "mace", "spear", "sword", "throwing-axe", "thrusting-sword"},
 	MagicLevel = 3
 })
 
 DefineUpgrade("upgrade-item-prefix-giantsbane", {
 	Name = "Giantsbane",
 	MagicPrefix = true,
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "gun", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
+	ItemPrefix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing-axe", "thrusting-sword"},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-prefix-glacial", {
 	Name = "Glacial",
 	MagicPrefix = true,
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "gun", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
+	ItemPrefix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing-axe", "thrusting-sword"},
 	MagicLevel = 4
 })
 
 DefineUpgrade("upgrade-item-prefix-impregnable", {
 	Name = "Impregnable",
 	MagicPrefix = true,
-	ItemPrefix = {"armor", true, "shield", true, "helmet", true},
+	ItemPrefix = {"armor", "cloak", "shield", "helmet"},
 	MagicLevel = 2
 })
 
@@ -131,21 +131,21 @@ DefineUpgrade("upgrade-item-prefix-industrious", {
 DefineUpgrade("upgrade-item-prefix-jinns", {
 	Name = "Jinn's",
 	MagicPrefix = true,
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "gun", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "horn", true},
+	ItemPrefix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing-axe", "thrusting-sword", "horn"},
 	MagicLevel = 4
 })
 
 DefineUpgrade("upgrade-item-prefix-penetrating", {
 	Name = "Penetrating",
 	MagicPrefix = true,
-	ItemPrefix = {"arrows", true, "dagger", true, "gun", true, "javelin", true, "spear", true, "sword", true, "thrusting-sword", true},
+	ItemPrefix = {"arrows", "dagger", "gun", "javelin", "spear", "sword", "thrusting-sword"},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-prefix-quenching", {
 	Name = "Quenching",
 	MagicPrefix = true,
-	ItemPrefix = {"armor", true, "shield", true, "helmet", true},
+	ItemPrefix = {"armor", "cloak", "shield", "helmet"},
 	MagicLevel = 1
 })
 
@@ -158,63 +158,63 @@ DefineUpgrade("upgrade-item-prefix-replenishing", {
 DefineUpgrade("upgrade-item-prefix-sawing", {
 	Name = "Sawing",
 	MagicPrefix = true,
-	ItemPrefix = {"axe", true},
+	ItemPrefix = {"axe"},
 	MagicLevel = 3
 })
 
 DefineUpgrade("upgrade-item-prefix-storm", { -- example: Storm Trident (from Wesnoth)
 	Name = "Storm",
 	MagicPrefix = true,
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "gun", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
+	ItemPrefix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing-axe", "thrusting-sword"},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-prefix-sturdy", {
 	Name = "Sturdy",
 	MagicPrefix = true,
-	ItemPrefix = {"armor", true, "shield", true, "helmet", true},
+	ItemPrefix = {"armor", "cloak", "shield", "helmet"},
 	MagicLevel = 1
 })
 
 DefineUpgrade("upgrade-item-prefix-swift", {
 	Name = "Swift",
 	MagicPrefix = true,
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "gun", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
+	ItemPrefix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing-axe", "thrusting-sword"},
 	MagicLevel = 1
 })
 
 DefineUpgrade("upgrade-item-prefix-swift-boots", {
 	Name = "Swift",
 	MagicPrefix = true,
-	ItemPrefix = {"boots", true, "amulet", true, "ring", true, "horn", true},
+	ItemPrefix = {"boots", "amulet", "ring", "horn"},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-prefix-vicious", {
 	Name = "Vicious",
 	MagicPrefix = true,
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "gun", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "amulet", true, "ring", true, "horn", true},
+	ItemPrefix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing-axe", "thrusting-sword", "amulet", "ring", "horn"},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-prefix-vulnerable", {
 	Name = "Vulnerable",
 	MagicPrefix = true,
-	ItemPrefix = {"armor", true, "shield", true, "helmet", true},
+	ItemPrefix = {"armor", "cloak", "shield", "helmet"},
 	MagicLevel = 1
 })
 
 DefineUpgrade("upgrade-item-prefix-wolfs", {
 	Name = "Wolf's",
 	MagicPrefix = true,
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "gun", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
+	ItemPrefix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing-axe", "thrusting-sword"},
 	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-prefix-wounding", {
 	Name = "Wounding",
 	MagicPrefix = true,
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "gun", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
+	ItemPrefix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing-axe", "thrusting-sword"},
 	MagicLevel = 2
 })
 

@@ -49,12 +49,6 @@ DefineLanguageWord("Pluk", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,
 	Meanings = {"Regiment"}
 })
 
-DefineLanguageWord("Šemík", { -- name of Horymír's horse in the Praguer legend; Source: Alena Ježková, "77 Prague Legends", 2006, p. 154.
-	Language = "czech",
-	Type = "noun",
-	Meanings = {}
-})
-
 DefineLanguageWord("Vojak", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
 	Language = "czech", -- source gives Bohemian
 	Type = "noun",
