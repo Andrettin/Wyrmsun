@@ -63,6 +63,8 @@ https://github.com/Andrettin/Wyrmsun
 * Abilities
 - Added Bow Mastery, Gun Mastery and Throwing Mastery learnable abilities (icons by Jinn).
 - The "Choose Level Up Upgrade" submenu is now always available (abilities that cannot be acquired at the moment appear as transparent icons).
+- Weapon mastery abilities can now be acquired up to five times.
+- Eagle Eye can now be acquired up to five times.
 
 * Buildings
 - The Gold Mine now uses the rail gold mine graphics after Engineering is researched.

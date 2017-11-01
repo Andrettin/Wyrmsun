@@ -29,14 +29,16 @@ DefineUpgrade("upgrade-axe-mastery", {
 	Name = "Axe Mastery",
 	Icon = "icon-axe-mastery",
 	Ability = true,
-	WeaponClasses = {"axe"}
+	WeaponClasses = {"axe"},
+	MaxLimit = 5
 })
 
 DefineUpgrade("upgrade-bow-mastery", {
 	Name = "Bow Mastery",
 	Icon = "icon-bow-mastery",
 	Ability = true,
-	WeaponClasses = {"bow"}
+	WeaponClasses = {"bow"},
+	MaxLimit = 5
 })
 
 DefineUpgrade("upgrade-critical-strike", {
@@ -55,7 +57,8 @@ DefineUpgrade("upgrade-deadly-precision", {
 DefineUpgrade("upgrade-eagle-eye", {
 	Name = "Eagle Eye",
 	Icon = "icon-eagle-eye",
-	Ability = true
+	Ability = true,
+	MaxLimit = 5
 })
 
 DefineUpgrade("upgrade-ethereal-vision", {
@@ -68,7 +71,8 @@ DefineUpgrade("upgrade-gun-mastery", {
 	Name = "Gun Mastery",
 	Icon = "icon-gun-mastery",
 	Ability = true,
-	WeaponClasses = {"gun"}
+	WeaponClasses = {"gun"},
+	MaxLimit = 5
 })
 
 DefineUpgrade("upgrade-healing", {
@@ -93,7 +97,8 @@ DefineUpgrade("upgrade-mace-mastery", {
 	Name = "Mace Mastery",
 	Icon = "icon-mace-mastery",
 	Ability = true,
-	WeaponClasses = {"mace"}
+	WeaponClasses = {"mace"},
+	MaxLimit = 5
 })
 
 DefineUpgrade("upgrade-portent", {
@@ -130,7 +135,8 @@ DefineUpgrade("upgrade-spear-mastery", {
 	Name = "Spear Mastery",
 	Icon = "icon-spear-mastery",
 	Ability = true,
-	WeaponClasses = {"spear"}
+	WeaponClasses = {"spear"},
+	MaxLimit = 5
 })
 
 DefineUpgrade("upgrade-stun", {
@@ -143,7 +149,8 @@ DefineUpgrade("upgrade-sword-mastery", {
 	Name = "Sword Mastery",
 	Icon = "icon-sword-mastery",
 	Ability = true,
-	WeaponClasses = {"sword", "thrusting-sword"}
+	WeaponClasses = {"sword", "thrusting-sword"},
+	MaxLimit = 5
 })
 
 DefineUpgrade("upgrade-terror", {
@@ -156,7 +163,8 @@ DefineUpgrade("upgrade-throwing-mastery", {
 	Name = "Throwing Mastery",
 	Icon = "icon-throwing-mastery",
 	Ability = true,
-	WeaponClasses = {"javelin", "throwing-axe"}
+	WeaponClasses = {"javelin", "throwing-axe"},
+	MaxLimit = 5
 })
 
 DefineModifier("upgrade-axe-mastery",
