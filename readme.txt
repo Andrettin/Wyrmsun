@@ -67,7 +67,8 @@ https://github.com/Andrettin/Wyrmsun
 - The Gold Mine now uses the rail gold mine graphics after Engineering is researched.
 
 * Deities
-- Added the Heimdall, Hel and Tyr minor deities (icon by Jinn).
+- Added the Heimdall, Hel and Tyr minor deities (icons by Jinn).
+- Increased the copper and time cost of deities.
 
 * Scenarios
 - After the "Slay Geirrod" quest is acquired, the area around the portal to Jotunheim is now revealed for a short time (with a special revealer that can see ethereal objects such as portals). Additionally, the map is also centered on the portal's location.

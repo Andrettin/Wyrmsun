@@ -207,7 +207,7 @@ DefineUpgrade("upgrade-deity-christian-god", {
 --	Name = "Christian God",
 	Name = "Christianity",
 	Icon = "icon-christianity",
-	Costs = {"time", 120, "copper", 750},
+	Costs = {"time", 200, "copper", 1500},
 	RequirementsString = "Writing"
 })
 
@@ -216,33 +216,33 @@ DefineUpgrade("upgrade-deity-christian-god", {
 DefineUpgrade("upgrade-deity-odin", {
 	Name = "Odin",
 	Icon = "icon-odin",
-	Costs = {"time", 120, "copper", 750}
+	Costs = {"time", 200, "copper", 1500}
 })
 
 DefineUpgrade("upgrade-deity-thor", {
 	Name = "Thor",
 	Icon = "icon-thor",
-	Costs = {"time", 120, "copper", 750}
+	Costs = {"time", 200, "copper", 1500}
 })
 
 DefineUpgrade("upgrade-deity-heimdall", {
 	Name = "Heimdall",
 	Icon = "icon-heimdall",
-	Costs = {"time", 120, "copper", 750},
+	Costs = {"time", 200, "copper", 1500},
 	RequirementsString = "Odin or Thor"
 })
 
 DefineUpgrade("upgrade-deity-hel", {
 	Name = "Hel",
 	Icon = "icon-hel",
-	Costs = {"time", 120, "copper", 750},
+	Costs = {"time", 200, "copper", 1500},
 	RequirementsString = "Odin, Thor or Gathaarl"
 })
 
 DefineUpgrade("upgrade-deity-tyr", {
 	Name = "Tyr",
 	Icon = "icon-tyr",
-	Costs = {"time", 120, "copper", 750},
+	Costs = {"time", 200, "copper", 1500},
 	RequirementsString = "Odin or Thor"
 })
 
@@ -251,7 +251,7 @@ DefineUpgrade("upgrade-deity-tyr", {
 DefineUpgrade("upgrade-deity-gathaarl", {
 	Name = "Gathaarl",
 	Icon = "icon-gathaarl",
-	Costs = {"time", 120, "copper", 750}
+	Costs = {"time", 200, "copper", 1500}
 })
 
 -- Olympian Deities
@@ -259,19 +259,19 @@ DefineUpgrade("upgrade-deity-gathaarl", {
 DefineUpgrade("upgrade-deity-apollo", {
 	Name = "Apollo",
 	Icon = "icon-odin",
-	Costs = {"time", 120, "copper", 750}
+	Costs = {"time", 200, "copper", 1500}
 })
 
 DefineUpgrade("upgrade-deity-hermes", {
 	Name = "Hermes",
 	Icon = "icon-odin",
-	Costs = {"time", 120, "copper", 750}
+	Costs = {"time", 200, "copper", 1500}
 })
 
 DefineUpgrade("upgrade-deity-poseidon", {
 	Name = "Poseidon",
 	Icon = "icon-odin",
-	Costs = {"time", 120, "copper", 750}
+	Costs = {"time", 200, "copper", 1500}
 })
 
 -- Modifiers
