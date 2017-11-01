@@ -61,7 +61,7 @@ DefineDeity("ra", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp
 DefineDeity("akhsu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 85.
 	Name = "Akhsu",
 	Pantheon = "Netjer", -- apparently the word meaning "god" in Egyptian
-	Civilizations = {"egyptian", "wose"},
+	Civilizations = {"egyptian", "treant"},
 	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {},

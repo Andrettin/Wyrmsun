@@ -70,12 +70,12 @@ DefineTerrainFeature("lintanir-forest", { -- from Battle for Wesnoth
 	}
 })
 
-DefineTerrainFeature("oldwood-forest", { -- from Battle for Wesnoth: The Rise of Wesnoth; home to Wose
+DefineTerrainFeature("oldwood-forest", { -- from Battle for Wesnoth: The Rise of Wesnoth; home to Woses/Treants
 	Name = "Oldwood Forest",
 	TerrainType = "fairlimbed-tree",
 	World = "alfheim",
 	CulturalNames = {
-		"wose", "Oldwood Forest"
+		"treant", "Oldwood Forest"
 	}
 })
 

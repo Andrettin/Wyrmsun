@@ -3289,21 +3289,12 @@ DefineCivilization("thracian", {
 	Playable = false
 })
 
-DefineCivilization("turkish", {
-	Display = "Turkish",
+DefineCivilization("treant", {
+	Display = "Treant",
 	Visible = false,
-	Species = "human",
-	ParentCivilization = "greek", -- so that it can use Greek/Latin units and buildings
-	Adjective = "Turkish",
-	Playable = false
-})
-
-DefineCivilization("wose", {
-	Display = "Wose",
-	Visible = false,
-	Species = "wose",
+	Species = "treant",
 	ParentCivilization = "neutral",
-	Adjective = "Wose",
+	Adjective = "Treant",
 	Playable = false,
 	DefaultColor = "green",
 	PersonalNames = {
@@ -3367,6 +3358,15 @@ DefineCivilization("wose", {
 		"male", "Wonrunmaldin", -- from Battle for Wesnoth
 		"male", "Wudadoonopl"
 	}
+})
+
+DefineCivilization("turkish", {
+	Display = "Turkish",
+	Visible = false,
+	Species = "human",
+	ParentCivilization = "greek", -- so that it can use Greek/Latin units and buildings
+	Adjective = "Turkish",
+	Playable = false
 })
 
 -- Cyclops names: Arges ("Vivid"), Brontes ("Thunderer"), Polyphemus (name means "many-voiced"), Steropes ("Lightner"), Tepegoz (an ogre with a single eye from Turkic mythology; apparently derived from the Greek Polyphemus myth; Tepe means "top, crown of the head" and Göz means "eye"), Depeghoz (Depêghöz, same as Tepegoz, given by Jacob Grimm in Teutonic Mythology, p. 424)
