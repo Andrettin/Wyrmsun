@@ -48,7 +48,8 @@ DefineUpgrade("upgrade-critical-strike", {
 DefineUpgrade("upgrade-deadly-precision", {
 	Name = "Deadly Precision",
 	Icon = "icon-deadly-precision",
-	Ability = true
+	Ability = true,
+	RequirementsString = "Critical Strike"
 })
 
 DefineUpgrade("upgrade-eagle-eye", {

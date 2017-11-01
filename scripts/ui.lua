@@ -1327,6 +1327,18 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {RequirementsString = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(_("Requirements: "), TypeRequirementsString("Type")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Margin = {1, 1}, Condition = {ExperienceRequirementsString = "only"},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {ExperienceRequirementsString = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(_("Requirements: "), TypeExperienceRequirementsString("Type")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Margin = {1, 1}, Condition = {ButtonAction = "experience-upgrade-to"},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {ButtonAction = "experience-upgrade-to"}, HighlightColor = "yellow",
+					More = {"Text", {Text = _("Requires 1 Level Up Point"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {Opponent = "false", Neutral = "false"}, Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
@@ -2472,6 +2484,53 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {ButtonAction = "cast-spell", AutoCast = "only"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = _("~<CTRL~>-click on the button toggles autocast"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				}
+		}	
+	})
+	
+	DefinePopup({
+		Ident = "popup-learn-ability",
+		BackgroundColor = PopupBackgroundColor,
+		BorderColor = PopupBorderColor,
+		MinWidth = 128,
+		DefaultFont = wyr.preferences.PopupDescriptionFont,
+		Contents = {
+			{	HighlightColor = "yellow",
+				More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
+			}, 
+			-- Upgrade Requirements (if the upgrade is disallowed)
+			{ 	Margin = {1, 1}, Condition = {RequirementsString = "only", ResearchedUpgrade = "false"},
+				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+			},
+			{ 	Condition = {RequirementsString = "only", ResearchedUpgrade = "false"}, HighlightColor = "yellow",
+				More = {"Text", {Text = Concat(_("Requirements: "), UpgradeRequirementsString("Upgrade")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+			},
+			-- Other Information
+			{ 	Margin = {1, 1}, Condition = {ResearchedUpgrade = "false"}, 
+				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+			},
+			{ 	Condition = {ResearchedUpgrade = "false"}, HighlightColor = "yellow",
+				More = {"Text", {Text = _("Requires 1 Level Up Point"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+			},
+			{ 	Margin = {1, 1}, 
+				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+			},
+			{ 	HighlightColor = "yellow",
+				More = {"Text", {Text = Concat(
+						_("Max Limit: "),
+						Concat(
+							String(function() return GetUnitVariable(-1, "IndividualUpgrade", GetCurrentButtonValueStr()) end),
+							Concat("/", UpgradeMaxLimit("Upgrade"))
+						)
+					),
+					MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+			},
+			-- Description
+			{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
+				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+			}, 
+			{ 	Condition = {HasDescription = true}, HighlightColor = "yellow",
+				More = {"ButtonInfo", {InfoType = "Description", MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+			},
 		}	
 	})
 	

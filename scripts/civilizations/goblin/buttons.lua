@@ -357,7 +357,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-hel",
 
 DefineButton( { Pos = 9, Level = 0, Icon = "icon-gathaarl",
 	Action = "learn-ability", Value = "upgrade-deity-gathaarl",
-	Key = "g", Hint = "Worship ~!Gathaarl", Popup = "popup-research",
+	Key = "g", Hint = "Worship ~!Gathaarl", Popup = "popup-commands",
 	Description = "Choose Gathaarl as your hero's major deity. +2 Damage for Swordsmen, enables Terror spell for Shamans.",
 	ForUnit = {
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman",

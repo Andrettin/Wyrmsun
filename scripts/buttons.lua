@@ -330,7 +330,7 @@ DefineButton( { Pos = 16, Level = 0, Icon = "icon-cancel",
 
 DefineButton( { Pos = 13, Level = 0, Icon = "icon-level-up",
 	Action = "button", Value = 2,
-	Allowed = "check-unit-variable", AllowArg = {"LevelUp", "Value", ">=", "1"},
+	Allowed = "check-has-sub-buttons",
 	Key = "l", Hint = "Choose ~!Level-Up Upgrade", Popup = "popup-commands",
 	ForUnit = {
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
@@ -372,7 +372,7 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-level-up",
 
 DefineButton( { Pos = 14, Level = 0, Icon = "icon-level-up",
 	Action = "button", Value = 2,
-	Allowed = "check-unit-variable", AllowArg = {"LevelUp", "Value", ">=", "1"},
+	Allowed = "check-has-sub-buttons",
 	Key = "l", Hint = "Choose ~!Level-Up Upgrade", Popup = "popup-commands",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
@@ -385,7 +385,7 @@ DefineButton( { Pos = 14, Level = 0, Icon = "icon-level-up",
 
 DefineButton( { Pos = 1, Level = 2, Icon = "icon-mace-mastery",
 	Action = "learn-ability", Value = "upgrade-mace-mastery",
-	Key = "m", Hint = "Learn ~!Mace Mastery", Popup = "popup-commands",
+	Key = "m", Hint = "Learn ~!Mace Mastery", Popup = "popup-learn-ability",
 	Description = "Mace Mastery is a passive ability that increases damage with maces by 2",
 	ForUnit = {
 		"unit-dwarven-expert-miner", "unit-brising-expert-miner",
@@ -396,7 +396,7 @@ DefineButton( { Pos = 1, Level = 2, Icon = "icon-mace-mastery",
 
 DefineButton( { Pos = 1, Level = 2, Icon = "icon-bow-mastery",
 	Action = "learn-ability", Value = "upgrade-bow-mastery",
-	Key = "b", Hint = "Learn ~!Bow Mastery", Popup = "popup-commands",
+	Key = "b", Hint = "Learn ~!Bow Mastery", Popup = "popup-learn-ability",
 	Description = "Bow Mastery is a passive ability that increases damage with bows by 2",
 	ForUnit = {
 		"unit-germanic-archer",
@@ -407,7 +407,7 @@ DefineButton( { Pos = 1, Level = 2, Icon = "icon-bow-mastery",
 
 DefineButton( { Pos = 1, Level = 2, Icon = "icon-throwing-mastery",
 	Action = "learn-ability", Value = "upgrade-throwing-mastery",
-	Key = "t", Hint = "Learn ~!Throwing Mastery", Popup = "popup-commands",
+	Key = "t", Hint = "Learn ~!Throwing Mastery", Popup = "popup-learn-ability",
 	Description = "Throwing Mastery is a passive ability that increases damage with javelins and throwing axes by 2",
 	ForUnit = {
 		"unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
@@ -417,7 +417,7 @@ DefineButton( { Pos = 1, Level = 2, Icon = "icon-throwing-mastery",
 
 DefineButton( { Pos = 1, Level = 2, Icon = "icon-gun-mastery",
 	Action = "learn-ability", Value = "upgrade-gun-mastery",
-	Key = "g", Hint = "Learn ~!Gun Mastery", Popup = "popup-commands",
+	Key = "g", Hint = "Learn ~!Gun Mastery", Popup = "popup-learn-ability",
 	Description = "Gun Mastery is a passive ability that increases damage with guns by 2",
 	ForUnit = {
 		"unit-dwarven-thunderer",
@@ -428,7 +428,7 @@ DefineButton( { Pos = 1, Level = 2, Icon = "icon-gun-mastery",
 
 DefineButton( { Pos = 2, Level = 2, Icon = "icon-axe-mastery",
 	Action = "learn-ability", Value = "upgrade-axe-mastery",
-	Key = "x", Hint = "Learn A~!xe Mastery", Popup = "popup-commands",
+	Key = "x", Hint = "Learn A~!xe Mastery", Popup = "popup-learn-ability",
 	Description = "Axe Mastery is a passive ability that increases damage with axes by 2",
 	ForUnit = {
 		"unit-dwarven-thane",
@@ -438,9 +438,9 @@ DefineButton( { Pos = 2, Level = 2, Icon = "icon-axe-mastery",
 	}
 } )
 
-DefineButton( { Pos = 3, Level = 2, Icon = "icon-sword-mastery-bronze",
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-sword-mastery-bronze",
 	Action = "learn-ability", Value = "upgrade-sword-mastery",
-	Key = "w", Hint = "Learn S~!word Mastery", Popup = "popup-commands",
+	Key = "w", Hint = "Learn S~!word Mastery", Popup = "popup-learn-ability",
 	Description = "Sword Mastery is a passive ability that increases damage with swords by 2",
 	ForUnit = {
 		"unit-germanic-chieftain",
@@ -453,10 +453,10 @@ DefineButton( { Pos = 3, Level = 2, Icon = "icon-sword-mastery-bronze",
 	}
 } )
 
-DefineButton( { Pos = 3, Level = 2, Icon = "icon-sword-mastery",
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-sword-mastery",
 	Action = "learn-ability", Value = "upgrade-sword-mastery",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-spatha"},
-	Key = "w", Hint = "Learn S~!word Mastery", Popup = "popup-commands",
+	Key = "w", Hint = "Learn S~!word Mastery", Popup = "popup-learn-ability",
 	Description = "Sword Mastery is a passive ability that increases damage with swords by 2",
 	ForUnit = {
 		"unit-germanic-chieftain",
@@ -469,19 +469,19 @@ DefineButton( { Pos = 3, Level = 2, Icon = "icon-sword-mastery",
 	}
 } )
 
-DefineButton( { Pos = 3, Level = 2, Icon = "icon-sword-mastery",
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-sword-mastery",
 	Action = "learn-ability", Value = "upgrade-sword-mastery",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-frank-spatha"},
-	Key = "w", Hint = "Learn S~!word Mastery", Popup = "popup-commands",
+	Key = "w", Hint = "Learn S~!word Mastery", Popup = "popup-learn-ability",
 	Description = "Sword Mastery is a passive ability that increases damage with swords by 2",
 	ForUnit = {
 		"unit-frank-heroic-swordsman", "unit-frank-knight-lord"
 	}
 } )
 
-DefineButton( { Pos = 4, Level = 2, Icon = "icon-spear-mastery",
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-spear-mastery",
 	Action = "learn-ability", Value = "upgrade-spear-mastery",
-	Key = "p", Hint = "Learn S~!pear Mastery", Popup = "popup-commands",
+	Key = "p", Hint = "Learn S~!pear Mastery", Popup = "popup-learn-ability",
 	Description = "Spear Mastery is a passive ability that increases damage with spears by 2",
 	ForUnit = {
 		"unit-dwarven-guard",
@@ -490,9 +490,9 @@ DefineButton( { Pos = 4, Level = 2, Icon = "icon-spear-mastery",
 	}
 } )
 
-DefineButton( { Pos = 5, Level = 2, Icon = "icon-critical-strike",
+DefineButton( { Pos = 3, Level = 2, Icon = "icon-critical-strike",
 	Action = "learn-ability", Value = "upgrade-critical-strike",
-	Key = "c", Hint = "Learn ~!Critical Strike", Popup = "popup-commands",
+	Key = "c", Hint = "Learn ~!Critical Strike", Popup = "popup-learn-ability",
 	Description = "Critical Strike is a passive ability that provides a 10% chance to deal double damage in combat. In No Randomness mode it provides a 10% damage bonus instead",
 	ForUnit = {
 		"unit-dwarven-expert-miner", "unit-brising-expert-miner",
@@ -521,9 +521,9 @@ DefineButton( { Pos = 5, Level = 2, Icon = "icon-critical-strike",
 	}
 } )
 
-DefineButton( { Pos = 5, Level = 2, Icon = "icon-deadly-precision",
+DefineButton( { Pos = 4, Level = 2, Icon = "icon-deadly-precision",
 	Action = "learn-ability", Value = "upgrade-deadly-precision",
-	Key = "d", Hint = "Learn ~!Deadly Precision", Popup = "popup-commands",
+	Key = "d", Hint = "Learn ~!Deadly Precision", Popup = "popup-learn-ability",
 	Description = "Deadly Precision is a passive ability that increases critical strike chance by 10%. In No Randomness mode it provides a 10% damage bonus instead",
 	ForUnit = {
 		"unit-dwarven-thane",
@@ -549,9 +549,9 @@ DefineButton( { Pos = 5, Level = 2, Icon = "icon-deadly-precision",
 	}
 } )
 
-DefineButton( { Pos = 6, Level = 2, Icon = "icon-eagle-eye",
+DefineButton( { Pos = 5, Level = 2, Icon = "icon-eagle-eye",
 	Action = "learn-ability", Value = "upgrade-eagle-eye",
-	Key = "e", Hint = "Learn Eagle ~!Eye", Popup = "popup-commands",
+	Key = "e", Hint = "Learn Eagle ~!Eye", Popup = "popup-learn-ability",
 	Description = "Eagle Eye is a passive ability that increases accuracy by 2",
 	ForUnit = {
 		"unit-dwarven-thane",
@@ -579,9 +579,9 @@ DefineButton( { Pos = 6, Level = 2, Icon = "icon-eagle-eye",
 	}
 } )
 
-DefineButton( { Pos = 7, Level = 2, Icon = "icon-stun",
+DefineButton( { Pos = 6, Level = 2, Icon = "icon-stun",
 	Action = "learn-ability", Value = "upgrade-stun",
-	Key = "u", Hint = "Learn St~!un", Popup = "popup-commands",
+	Key = "u", Hint = "Learn St~!un", Popup = "popup-learn-ability",
 	Description = "Stun is an active ability which does a stunning attack on a target, leaving it paralyzed for a few moments",
 	ForUnit = {
 		"unit-dwarven-thane",
@@ -603,7 +603,7 @@ DefineButton( { Pos = 7, Level = 2, Icon = "icon-stun",
 
 DefineButton( { Pos = 7, Level = 2, Icon = "icon-scouting",
 	Action = "learn-ability", Value = "upgrade-scouting",
-	Key = "s", Hint = "Learn ~!Scouting", Popup = "popup-commands",
+	Key = "s", Hint = "Learn ~!Scouting", Popup = "popup-learn-ability",
 	Description = "Scouting is a passive ability that increases sight by 1",
 	ForUnit = {
 		"unit-dwarven-gryphon-rider",
@@ -615,7 +615,7 @@ DefineButton( { Pos = 7, Level = 2, Icon = "icon-scouting",
 
 DefineButton( { Pos = 8, Level = 2, Icon = "icon-puncture",
 	Action = "learn-ability", Value = "upgrade-puncture",
-	Key = "r", Hint = "Learn Punctu~!re", Popup = "popup-commands",
+	Key = "r", Hint = "Learn Punctu~!re", Popup = "popup-learn-ability",
 	Description = "Puncture is an active ability which makes the target bleed for a certain duration. Only usable with melee weapons capable of doing thrusting attacks",
 	ForUnit = {
 		"unit-germanic-chieftain", "unit-germanic-spearman",
@@ -629,9 +629,9 @@ DefineButton( { Pos = 8, Level = 2, Icon = "icon-puncture",
 	}
 } )
 
-DefineButton( { Pos = 8, Level = 2, Icon = "icon-precise-shot",
+DefineButton( { Pos = 9, Level = 2, Icon = "icon-precise-shot",
 	Action = "learn-ability", Value = "upgrade-precise-shot",
-	Key = "r", Hint = "Learn P~!recise Shot", Popup = "popup-commands",
+	Key = "r", Hint = "Learn P~!recise Shot", Popup = "popup-learn-ability",
 	Description = "Precise Shot is an active ability which deals a critical hit. Only usable with ranged weapons",
 	ForUnit = {
 		"unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
@@ -645,9 +645,9 @@ DefineButton( { Pos = 8, Level = 2, Icon = "icon-precise-shot",
 	}
 } )
 
-DefineButton( { Pos = 9, Level = 2, Icon = "icon-leadership",
+DefineButton( { Pos = 10, Level = 2, Icon = "icon-leadership",
 	Action = "learn-ability", Value = "upgrade-leadership",
-	Key = "l", Hint = "Learn ~!Leadership Aura", Popup = "popup-commands",
+	Key = "l", Hint = "Learn ~!Leadership Aura", Popup = "popup-learn-ability",
 	Description = "Leadership Aura is an aura ability that increases the damage of nearby friendly units by 10%",
 	ForUnit = {
 		"unit-dwarven-thane",
@@ -664,7 +664,7 @@ DefineButton( { Pos = 9, Level = 2, Icon = "icon-leadership",
 --[[
 DefineButton( { Pos = 13, Level = 2, Icon = "icon-ethereal-vision",
 	Action = "learn-ability", Value = "upgrade-ethereal-vision",
-	Key = "v", Hint = "Learn Ethereal ~!Vision", Popup = "popup-commands",
+	Key = "v", Hint = "Learn Ethereal ~!Vision", Popup = "popup-learn-ability",
 	Description = "Ethereal Vision is a passive ability that allows the unit to see ethereal objects, such as interplanar portals",
 	ForUnit = { -- allow only level 3 units to learn it, so that it isn't too easy to do so
 		"unit-dwarven-expert-miner", "unit-brising-expert-miner",
@@ -704,13 +704,13 @@ DefineButton( { Pos = 13, Level = 2, Icon = "icon-ethereal-vision",
 DefineButton( { Pos = 1, Level = 2, Icon = "icon-healing",
 	Action = "learn-ability", Value = "upgrade-healing",
 	Description = "Healing is an active ability that heals an organic unit",
-	Key = "h", Hint = "Learn ~!Healing", Popup = "popup-commands",
+	Key = "h", Hint = "Learn ~!Healing", Popup = "popup-learn-ability",
 	ForUnit = {"unit-dwarven-witness"}
 })
 
 DefineButton( { Pos = 2, Level = 2, Icon = "icon-precision",
 	Action = "learn-ability", Value = "upgrade-precision",
-	Key = "r", Hint = "Learn P~!recision", Popup = "popup-commands",
+	Key = "r", Hint = "Learn P~!recision", Popup = "popup-learn-ability",
 	Description = "Precision is an active ability that doubles the accuracy of an organic unit while in combat",
 	ForUnit = {"unit-germanic-priest", "unit-teuton-priest", "unit-elven-priest", "unit-dwarven-witness"}
 })

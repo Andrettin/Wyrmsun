@@ -53,7 +53,7 @@ DefineSpell("spell-healing",
 )
 
 DefineSpell("spell-herbal-cure",
-	"showname", _("Herbal Cure"),
+	"showname", "Herbal Cure",
 	"manacost", 1,
 	"range", 1,
 	"target", "unit",
@@ -72,7 +72,7 @@ DefineSpell("spell-herbal-cure",
 )
 
 DefineSpell("spell-portent",
-	"showname", _("Portent"),
+	"showname", "Portent",
 	"manacost", 70,
 	"range", "infinite",
 	"target", "position",
@@ -85,7 +85,7 @@ DefineSpell("spell-portent",
 )
 
 DefineSpell("spell-inspire",
-	"showname", _("Inspire"),
+	"showname", "Inspire",
 	"manacost", 25,
 	"range", 6,
 	"target", "unit",
@@ -104,7 +104,7 @@ DefineSpell("spell-inspire",
 )
 
 DefineSpell("spell-precision",
-	"showname", _("Precision"),
+	"showname", "Precision",
 	"manacost", 50,
 	"range", 6,
 	"target", "unit",
@@ -123,7 +123,7 @@ DefineSpell("spell-precision",
 )
 
 DefineSpell("spell-slow",
-	"showname", _("Slow"),
+	"showname", "Slow",
 	"manacost", 50,
 	"range", 10,
 	"target", "unit",
@@ -139,7 +139,7 @@ DefineSpell("spell-slow",
 )
 
 DefineSpell("spell-terror",
-	"showname", _("Terror"),
+	"showname", "Terror",
 	"manacost", 50,
 	"range", 6,
 	"target", "unit",
@@ -158,7 +158,7 @@ DefineSpell("spell-terror",
 )
 
 DefineSpell("spell-war-machine-spear-attack",
-	"showname", _("war machine spear attack"),
+	"showname", "war machine spear attack",
 	"manacost", 0,
 	"range", 1,
 	"target", "unit",
@@ -175,7 +175,7 @@ DefineSpell("spell-war-machine-spear-attack",
 )
 
 DefineSpell("spell-axe-twirl",
-	"showname", _("Axe Twirl"),
+	"showname", "Axe Twirl",
 	"manacost", 0,
 	"range", 0,
 	"target", "self",
@@ -194,7 +194,7 @@ DefineSpell("spell-axe-twirl",
 )
 
 DefineSpell("spell-stun",
-	"showname", _("Stun"),
+	"showname", "Stun",
 	"manacost", 50,
 	"range", 1,
 	"target", "unit",
@@ -213,7 +213,7 @@ DefineSpell("spell-stun",
 )
 
 DefineSpell("spell-precise-shot",
-	"showname", _("Precise Shot"),
+	"showname", "Precise Shot",
 	"manacost", 50,
 	"range", 5,
 	"target", "unit",
@@ -231,7 +231,7 @@ DefineSpell("spell-precise-shot",
 )
 
 DefineSpell("spell-puncture",
-	"showname", _("Puncture"),
+	"showname", "Puncture",
 	"manacost", 50,
 	"range", 1,
 	"target", "unit",
@@ -253,8 +253,8 @@ DefineSpell("spell-puncture",
 -- scroll/book spells
 
 DefineSpell("spell-forgetfulness",
-	"showname", _("Forgetfulness"),
-	"description", _("Allows the unit to repick its experience upgrades"),
+	"showname", "Forgetfulness",
+	"description", "Allows the unit to repick its experience upgrades",
 	"manacost", 0,
 	"range", 0,
 	"target", "self",
@@ -267,8 +267,8 @@ DefineSpell("spell-forgetfulness",
 )
 
 DefineSpell("spell-retraining",
-	"showname", _("Retraining"),
-	"description", _("Allows the unit to repick its experience upgrades"),
+	"showname", "Retraining",
+	"description", "Allows the unit to repick its experience upgrades",
 	"manacost", 0,
 	"range", 0,
 	"target", "self",
@@ -282,8 +282,8 @@ DefineSpell("spell-retraining",
 
 -- spells to change units to their faction equivalents
 DefineSpell("spell-acthnic-allegiance",
-	"showname", _("Acthnic Allegiance"),
-	"description", _("Changes the unit's type into its Acthnic faction-specific equivalent"),
+	"showname", "Acthnic Allegiance",
+	"description", "Changes the unit's type into its Acthnic faction-specific equivalent",
 	"manacost", 0,
 	"range", 0,
 	"target", "self",
@@ -397,8 +397,8 @@ DefineSpell("spell-teuton-allegiance",
 )
 
 DefineSpell("spell-detachment",
-	"showname", _("Detachment"),
-	"description", _("Changes the unit's type, if it is faction-specific, to the corresponding standard type for its civilization"),
+	"showname", "Detachment",
+	"description", "Changes the unit's type, if it is faction-specific, to the corresponding standard type for its civilization",
 	"manacost", 0,
 	"range", 0,
 	"target", "self",

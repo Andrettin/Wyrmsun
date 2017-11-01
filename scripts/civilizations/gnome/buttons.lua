@@ -56,7 +56,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-herbal-cure",
 
 DefineButton( { Pos = 1, Level = 2, Icon = "icon-portent",
 	Action = "learn-ability", Value = "upgrade-portent",
-	Key = "p", Hint = _("Learn ~!Portent"), Popup = "popup-commands",
+	Key = "p", Hint = "Learn ~!Portent", Popup = "popup-learn-ability",
 	ForUnit = {"unit-gnomish-herbalist", "unit-deep-gnomish-herbalist"}
 })
 

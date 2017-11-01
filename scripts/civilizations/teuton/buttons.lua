@@ -415,7 +415,7 @@ DefineButton( { Pos = 10, Level = 0, Icon = "icon-hel",
 
 DefineButton( { Pos = 9, Level = 0, Icon = "icon-christianity",
 	Action = "learn-ability", Value = "upgrade-deity-christian-god",
-	Key = "c", Hint = "Convert to ~!Christianity", Popup = "popup-research",
+	Key = "c", Hint = "Convert to ~!Christianity", Popup = "popup-commands",
 	Description = "Choose Christianity as your hero's religion. +10 HP , +20 Mana and enables Healing spell for Clerics. Incompatible with any pagan deities.",
 	ForUnit = {
 		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
@@ -432,7 +432,7 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-christianity",
   
 DefineButton( { Pos = 10, Level = 0, Icon = "icon-odin",
 	Action = "learn-ability", Value = "upgrade-deity-odin",
-	Key = "w", Hint = "Worship ~!Wodan", Popup = "popup-research",
+	Key = "w", Hint = "Worship ~!Wodan", Popup = "popup-commands",
 	Description = "Choose Wodan as your hero's major deity. +2 Damage for Archers, enables Inspire spell for Gudjans. Incompatible with the Christianity religion or with the Thunor major deity.",
 	ForUnit = {
 		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
@@ -449,7 +449,7 @@ DefineButton( { Pos = 10, Level = 0, Icon = "icon-odin",
   
 DefineButton( { Pos = 11, Level = 0, Icon = "icon-thor",
 	Action = "learn-ability", Value = "upgrade-deity-thor",
-	Key = "t", Hint = "Worship ~!Thunor", Popup = "popup-research",
+	Key = "t", Hint = "Worship ~!Thunor", Popup = "popup-commands",
 	Description = "Choose Thunor as your hero's major deity. +2 Damage for sword infantry, enables Precision spell for Gudjans. Incompatible with the Christianity religion or with the Wodan major deity.",
 	ForUnit = {
 		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
