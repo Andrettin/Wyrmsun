@@ -232,6 +232,20 @@ DefineUpgrade("upgrade-deity-heimdall", {
 	RequirementsString = "Odin or Thor"
 })
 
+DefineUpgrade("upgrade-deity-hel", {
+	Name = "Hel",
+	Icon = "icon-hel",
+	Costs = {"time", 120, "copper", 750},
+	RequirementsString = "Odin, Thor or Gathaarl"
+})
+
+DefineUpgrade("upgrade-deity-tyr", {
+	Name = "Tyr",
+	Icon = "icon-tyr",
+	Costs = {"time", 120, "copper", 750},
+	RequirementsString = "Odin or Thor"
+})
+
 -- Goblin Deities
 
 DefineUpgrade("upgrade-deity-gathaarl", {
@@ -271,7 +285,7 @@ DefineModifier("upgrade-deity-christian-god",
 
 DefineModifier("upgrade-deity-christian-god",
 	{"remove-upgrade", "upgrade-deity-apollo"}, {"remove-upgrade", "upgrade-deity-hermes"}, {"remove-upgrade", "upgrade-deity-poseidon"},
-	{"remove-upgrade", "upgrade-deity-odin"}, {"remove-upgrade", "upgrade-deity-thor"}, {"remove-upgrade", "upgrade-deity-heimdall"}
+	{"remove-upgrade", "upgrade-deity-odin"}, {"remove-upgrade", "upgrade-deity-thor"}, {"remove-upgrade", "upgrade-deity-heimdall"}, {"remove-upgrade", "upgrade-deity-hel"}, {"remove-upgrade", "upgrade-deity-tyr"}
 )
 
 DefineModifier("upgrade-deity-christian-god", -- dummy upgrade modifier to change variation
@@ -296,8 +310,28 @@ DefineModifier("upgrade-deity-heimdall",
 	{"apply-to", "unit-joruvellir-scout"}, {"apply-to", "unit-joruvellir-pathfinder"}, {"apply-to", "unit-joruvellir-explorer"}
 )
 
+DefineModifier("upgrade-deity-heimdall",
+	{"remove-upgrade", "upgrade-deity-hel"}, {"remove-upgrade", "upgrade-deity-tyr"}
+)
+
 DefineModifier("upgrade-deity-heimdall", -- dummy upgrade modifier to change starting abilities
-	{"apply-to", "unit-germanic-priest"}, {"apply-to", "unit-teuton-priest"}, {"apply-to", "unit-dwarven-witness"}
+	{"apply-to", "unit-germanic-priest"}, {"apply-to", "unit-teuton-priest"}
+)
+
+DefineModifier("upgrade-deity-hel",
+	{"Mana", 20},
+	{"Points", 10},
+	{"apply-to", "unit-germanic-priest"}, {"apply-to", "unit-teuton-priest"},
+	{"apply-to", "unit-dwarven-witness"},
+	{"apply-to", "unit-goblin-shaman"}
+)
+
+DefineModifier("upgrade-deity-hel",
+	{"remove-upgrade", "upgrade-deity-heimdall"}, {"remove-upgrade", "upgrade-deity-tyr"}
+)
+
+DefineModifier("upgrade-deity-hel", -- dummy upgrade modifier to change starting abilities
+	{"apply-to", "unit-germanic-priest"}, {"apply-to", "unit-teuton-priest"}, {"apply-to", "unit-dwarven-witness"}, {"apply-to", "unit-goblin-shaman"}
 )
 
 DefineModifier("upgrade-deity-odin",
@@ -339,4 +373,23 @@ DefineModifier("upgrade-deity-thor",
 DefineModifier("upgrade-deity-thor", -- dummy upgrade modifier to change starting abilities/variations
 	{"apply-to", "unit-germanic-priest"}, {"apply-to", "unit-teuton-priest"}, {"apply-to", "unit-dwarven-witness"},
 	{"apply-to", "unit-teuton-temple"}
+)
+
+DefineModifier("upgrade-deity-tyr",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-germanic-warrior"}, {"apply-to", "unit-germanic-veteran-warrior"}, {"apply-to", "unit-germanic-chieftain"},
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"},
+	{"apply-to", "unit-suebi-swordsman"},
+	{"apply-to", "unit-frank-swordsman"}, {"apply-to", "unit-frank-veteran-swordsman"}, {"apply-to", "unit-frank-heroic-swordsman"},
+	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
+	{"apply-to", "unit-surghan-mercenary-axefighter"}, {"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
+)
+
+DefineModifier("upgrade-deity-tyr",
+	{"remove-upgrade", "upgrade-deity-heimdall"}, {"remove-upgrade", "upgrade-deity-hel"}
+)
+
+DefineModifier("upgrade-deity-tyr", -- dummy upgrade modifier to change starting abilities
+	{"apply-to", "unit-germanic-priest"}, {"apply-to", "unit-teuton-priest"}, {"apply-to", "unit-dwarven-witness"}
 )

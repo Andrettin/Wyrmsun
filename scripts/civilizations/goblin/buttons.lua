@@ -347,6 +347,14 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-gathaarl",
 	ForUnit = {"unit-goblin-temple"}
 })
 
+DefineButton( { Pos = 6, Level = 0, Icon = "icon-hel",
+	Action = "research", Value = "upgrade-deity-hel",
+	Allowed = "check-single-research",
+	Key = "h", Hint = "Worship ~!Hel", Popup = "popup-research",
+	Description = "Choose Hel as a minor deity. +20 Mana and enables Wither spell for Shamans. Allows new magic affixes for items sold at the Market.",
+	ForUnit = {"unit-goblin-temple"}
+})
+
 DefineButton( { Pos = 9, Level = 0, Icon = "icon-gathaarl",
 	Action = "learn-ability", Value = "upgrade-deity-gathaarl",
 	Key = "g", Hint = "Worship ~!Gathaarl", Popup = "popup-research",

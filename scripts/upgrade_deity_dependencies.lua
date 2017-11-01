@@ -30,9 +30,33 @@ DefineDependency("upgrade-deity-christian-god",
 )
 
 DefinePredependency("upgrade-deity-heimdall",
-	{"upgrade-germanic-civilization"}, "or", {"upgrade-anglo-saxon-civilization"}, "or", {"upgrade-english-civilization"}
+	{"upgrade-germanic-civilization"}, "or", {"upgrade-anglo-saxon-civilization"}
 )
 
 DefineDependency("upgrade-deity-heimdall",
+	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}
+)
+
+DefinePredependency("upgrade-deity-hel",
+	{"upgrade-english-civilization", 0}
+)
+
+DefineDependency("upgrade-deity-hel",
+	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}, "or", {"upgrade-deity-gathaarl"}
+)
+
+DefinePredependency("upgrade-deity-odin",
+	{"upgrade-english-civilization", 0}
+)
+
+DefinePredependency("upgrade-deity-thor",
+	{"upgrade-english-civilization", 0}
+)
+
+DefinePredependency("upgrade-deity-tyr",
+	{"upgrade-english-civilization", 0}
+)
+
+DefineDependency("upgrade-deity-tyr",
 	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}
 )

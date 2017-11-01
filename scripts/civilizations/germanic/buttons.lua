@@ -162,11 +162,27 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-thor",
 	ForUnit = {"unit-germanic-temple"}
 })
 
-DefineButton( { Pos = 7, Level = 0, Icon = "icon-heimdall",
+DefineButton( { Pos = 7, Level = 0, Icon = "icon-tyr",
+	Action = "research", Value = "upgrade-deity-tyr",
+	Allowed = "check-single-research",
+	Key = "z", Hint = "Worship Tiwa~!z", Popup = "popup-research",
+	Description = "Choose Tiwaz as a minor deity. +2 Damage for Eralas, enables [...] spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Haimadala and Haljo minor deities.",
+	ForUnit = {"unit-germanic-temple"}
+})
+
+DefineButton( { Pos = 8, Level = 0, Icon = "icon-heimdall",
 	Action = "research", Value = "upgrade-deity-heimdall",
 	Allowed = "check-single-research",
-	Key = "h", Hint = "Worship ~!Haimadala", Popup = "popup-research",
-	Description = "Choose Haimadala as a minor deity. +1 Sight for Skutans, enables Far Sight spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Frankish, Gothic, Suebi and Teuton civilizations.",
+	Key = "d", Hint = "Worship Haima~!dala", Popup = "popup-research",
+	Description = "Choose Haimadala as a minor deity. +1 Sight for Skutans, enables Far Sight spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Frankish, Gothic, Suebi and Teuton civilizations, and with the Haljo and Tiwaz minor deities.",
+	ForUnit = {"unit-germanic-temple"}
+})
+
+DefineButton( { Pos = 9, Level = 0, Icon = "icon-hel",
+	Action = "research", Value = "upgrade-deity-hel",
+	Allowed = "check-single-research",
+	Key = "h", Hint = "Worship ~!Haljo", Popup = "popup-research",
+	Description = "Choose Haljo as a minor deity. +20 Mana and enables Wither spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Haimadala and Tiwaz minor deities.",
 	ForUnit = {"unit-germanic-temple"}
 })
 

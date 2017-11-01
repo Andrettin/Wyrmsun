@@ -360,11 +360,56 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-thor",
 	ForUnit = {"unit-teuton-temple"}
 })
 
-DefineButton( { Pos = 8, Level = 0, Icon = "icon-heimdall",
+DefineButton( { Pos = 8, Level = 0, Icon = "icon-tyr",
+	Action = "research", Value = "upgrade-deity-tyr",
+	Key = "y", Hint = "Worship T~!yr", Popup = "popup-research",
+	Description = "Choose Tyr as a minor deity. +2 Damage for sword infantry, enables [...] spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Heimdall and Hel minor deities.",
+	ForUnit = {"unit-teuton-temple"}
+})
+
+DefineButton( { Pos = 8, Level = 0, Icon = "icon-tyr",
+	Action = "research", Value = "upgrade-deity-tyr",
+	Key = "z", Hint = "Worship ~!Ziu", Popup = "popup-research",
+	Allowed = "check-upgrade-or", AllowArg = {"upgrade-frankish-civilization", "upgrade-suebi-civilization", "upgrade-teuton-civilization"},
+	Description = "Choose Ziu as a minor deity. +2 Damage for sword infantry, enables [...] spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Hella minor deity.",
+	ForUnit = {"unit-teuton-temple"}
+})
+
+DefineButton( { Pos = 8, Level = 0, Icon = "icon-tyr",
+	Action = "research", Value = "upgrade-deity-tyr",
+	Key = "w", Hint = "Worship Ti~!w", Popup = "popup-research",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-anglo-saxon-civilization"},
+	Description = "Choose Tiw as a minor deity. +2 Damage for sword infantry, enables [...] spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Heimdall and Hel minor deities.",
+	ForUnit = {"unit-teuton-temple"}
+})
+
+DefineButton( { Pos = 9, Level = 0, Icon = "icon-heimdall",
 	Action = "research", Value = "upgrade-deity-heimdall",
-	Allowed = "check-single-research",
 	Key = "h", Hint = "Worship ~!Heimdall", Popup = "popup-research",
-	Description = "Choose Heimdall as a minor deity. +1 Sight for Archers, enables Far Sight spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Frankish, Gothic, Suebi and Teuton civilizations.",
+	Description = "Choose Heimdall as a minor deity. +1 Sight for Archers, enables Far Sight spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Frankish, Gothic, Suebi and Teuton civilizations, and with the Hel and Tyr minor deities.",
+	ForUnit = {"unit-teuton-temple"}
+})
+
+DefineButton( { Pos = 10, Level = 0, Icon = "icon-hel",
+	Action = "research", Value = "upgrade-deity-hel",
+	Key = "h", Hint = "Worship ~!Hel", Popup = "popup-research",
+	Description = "Choose Hel as a minor deity. +20 Mana and enables Wither spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Heimdall and Tyr minor deities.",
+	ForUnit = {"unit-teuton-temple"}
+})
+
+DefineButton( { Pos = 10, Level = 0, Icon = "icon-hel",
+	Action = "research", Value = "upgrade-deity-hel",
+	Key = "h", Hint = "Worship ~!Hella", Popup = "popup-research",
+	Allowed = "check-upgrade-or", AllowArg = {"upgrade-frankish-civilization", "upgrade-suebi-civilization", "upgrade-teuton-civilization"},
+	Description = "Choose Hella as a minor deity. +20 Mana and enables Wither spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Ziu minor deity.",
+	ForUnit = {"unit-teuton-temple"}
+})
+
+DefineButton( { Pos = 10, Level = 0, Icon = "icon-hel",
+	Action = "research", Value = "upgrade-deity-hel",
+	Key = "h", Hint = "Worship ~!Halja", Popup = "popup-research",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-gothic-civilization"},
+	Description = "Choose Halja as a minor deity. +20 Mana and enables Wither spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Tyr minor deity.",
 	ForUnit = {"unit-teuton-temple"}
 })
 

@@ -527,6 +527,22 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-thor",
 	ForUnit = {"unit-dwarven-temple"}
 })
 
+DefineButton( { Pos = 7, Level = 0, Icon = "icon-tyr",
+	Action = "research", Value = "upgrade-deity-tyr",
+	Allowed = "check-single-research",
+	Key = "y", Hint = "Worship T~!yr", Popup = "popup-research",
+	Description = "Choose Tyr as a minor deity. +2 Damage for Axefighters and enables [...] spell for Witnesses. Allows new magic affixes for items sold at the Market. Incompatible with the Hel minor deity.",
+	ForUnit = {"unit-dwarven-temple"}
+})
+
+DefineButton( { Pos = 8, Level = 0, Icon = "icon-hel",
+	Action = "research", Value = "upgrade-deity-hel",
+	Allowed = "check-single-research",
+	Key = "h", Hint = "Worship ~!Hel", Popup = "popup-research",
+	Description = "Choose Hel as a minor deity. +20 Mana and enables Wither spell for Witnesses. Allows new magic affixes for items sold at the Market. Incompatible with the Tyr minor deity.",
+	ForUnit = {"unit-dwarven-temple"}
+})
+
 DefineButton( { Pos = 9, Level = 0, Icon = "icon-odin",
 	Action = "learn-ability", Value = "upgrade-deity-odin",
 	Key = "h", Hint = "Worship ~!Hroptatyr", Popup = "popup-research",

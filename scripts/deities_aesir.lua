@@ -114,7 +114,7 @@ DefineDeity("tyr", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980,
 	Name = "Tyr",
 	Pantheon = "Aesir",
 	HomePlane = "asgard",
-	Civilizations = {"anglo-saxon", "dwarf", "frankish", "germanic", "norse", "suebi", "teuton"}, -- available for the dwarves since he is connected to dwarves in Norse myths (though it is rather a small connection, with Tyr helping the gods bind Fenrir with the dwarven fetter Gleipnir)
+	Civilizations = {"anglo-saxon", "dwarf", "frankish", "germanic", "goth", "norse", "suebi", "teuton"}, -- available for the dwarves since he is connected to dwarves in Norse myths (though it is rather a small connection, with Tyr helping the gods bind Fenrir with the dwarven fetter Gleipnir); also allowed for the Goths since otherwise they would have too few minor deities
 	Religions = {"paganism"},
 	Gender = "male",
 	Icon = "icon-tyr",
@@ -241,13 +241,13 @@ DefineDeity("hel", { -- Source: Anders Andrén, "Behind Heathendom: Archaeologic
 	Name = "Hel",
 	Pantheon = "Aesir",
 	HomePlane = "niflheim",
-	Civilizations = {"anglo-saxon", "frankish", "germanic", "goth", "norse", "suebi", "teuton"}, -- no attestation has been found of the Anglo-Saxons, Frisians, Goths, High Germans or Saxons worshipping the deity Hel, but their languages have cognates of Old Norse "Hel", and consequently also reflexes of Proto-Germanic "Haljô"
+	Civilizations = {"anglo-saxon", "dwarf", "frankish", "germanic", "goblin", "goth", "norse", "suebi", "teuton"}, -- no attestation has been found of the Anglo-Saxons, Frisians, Goths, High Germans or Saxons worshipping the deity Hel, but their languages have cognates of Old Norse "Hel", and consequently also reflexes of Proto-Germanic "Haljô"; Hel is here also allowed for the dwarves and goblins (even though they have no interaction with her in myths/legends) to allow them to possess necromantic spells
 	Religions = {"paganism"},
 	Gender = "female",
 	Icon = "icon-hel",
 	Domains = {"death"},
 	CulturalNames = {
-		"anglo-saxon", "Hell", -- Old English cognate of Old Norse "Hel"; see language data
+--		"anglo-saxon", "Hell", -- Old English cognate of Old Norse "Hel"; see language data
 		"frankish", "Hella",
 --		"frisian", "Helle", -- the alternative "hille" is also given; Old Frisian cognate of Old Norse "Hel"; see language data
 		"germanic", "Haljo", -- "Haljô", means both the underworld and the goddess of the underworld in Proto-Germanic, according to August Fick
