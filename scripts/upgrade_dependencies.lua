@@ -347,10 +347,7 @@ DefineDependency("unit-ring",
 	"or", {"unit-teuton-smithy"}
 )
 
--- dependencies for deity upgrades that require a certain upgrade
-DefineDependency("upgrade-deity-christian-god",
-	{"upgrade-teuton-writing"}
-)
+Load("scripts/upgrade_deity_dependencies.lua")
 
 Load("scripts/civilizations/celt/upgrade_dependencies.lua")
 Load("scripts/civilizations/dwarf/upgrade_dependencies.lua")

@@ -60,8 +60,14 @@ https://github.com/Andrettin/Wyrmsun
 - 2.9.2
 -----------------------------------------------------------------------
 
+* Abilities
+- Added Bow Mastery, Gun Mastery and Throwing Mastery learnable abilities (icons by Jinn).
+
 * Buildings
 - The Gold Mine now uses the rail gold mine graphics after Engineering is researched.
+
+* Deities
+- Added the Heimdall deity (icon by Jinn).
 
 * Scenarios
 - After the "Slay Geirrod" quest is acquired, the area around the portal to Jotunheim is now revealed for a short time (with a special revealer that can see ethereal objects such as portals). Additionally, the map is also centered on the portal's location.

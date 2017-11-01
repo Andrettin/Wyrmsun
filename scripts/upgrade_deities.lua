@@ -225,6 +225,13 @@ DefineUpgrade("upgrade-deity-thor", {
 	Costs = {"time", 120, "copper", 750}
 })
 
+DefineUpgrade("upgrade-deity-heimdall", {
+	Name = "Heimdall",
+	Icon = "icon-heimdall",
+	Costs = {"time", 120, "copper", 750},
+	RequirementsString = "Odin or Thor"
+})
+
 -- Goblin Deities
 
 DefineUpgrade("upgrade-deity-gathaarl", {
@@ -264,7 +271,7 @@ DefineModifier("upgrade-deity-christian-god",
 
 DefineModifier("upgrade-deity-christian-god",
 	{"remove-upgrade", "upgrade-deity-apollo"}, {"remove-upgrade", "upgrade-deity-hermes"}, {"remove-upgrade", "upgrade-deity-poseidon"},
-	{"remove-upgrade", "upgrade-deity-odin"}, {"remove-upgrade", "upgrade-deity-thor"}
+	{"remove-upgrade", "upgrade-deity-odin"}, {"remove-upgrade", "upgrade-deity-thor"}, {"remove-upgrade", "upgrade-deity-heimdall"}
 )
 
 DefineModifier("upgrade-deity-christian-god", -- dummy upgrade modifier to change variation
@@ -279,6 +286,18 @@ DefineModifier("upgrade-deity-gathaarl",
 
 DefineModifier("upgrade-deity-gathaarl", -- dummy upgrade modifier to change starting abilities
 	{"apply-to", "unit-goblin-shaman"}
+)
+
+DefineModifier("upgrade-deity-heimdall",
+	{"SightRange", 1},
+	{"Points", 10},
+	{"apply-to", "unit-germanic-archer"}, {"apply-to", "unit-teuton-archer"},
+	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}, {"apply-to", "unit-dwarven-explorer"},
+	{"apply-to", "unit-joruvellir-scout"}, {"apply-to", "unit-joruvellir-pathfinder"}, {"apply-to", "unit-joruvellir-explorer"}
+)
+
+DefineModifier("upgrade-deity-heimdall", -- dummy upgrade modifier to change starting abilities
+	{"apply-to", "unit-germanic-priest"}, {"apply-to", "unit-teuton-priest"}, {"apply-to", "unit-dwarven-witness"}
 )
 
 DefineModifier("upgrade-deity-odin",
@@ -320,21 +339,4 @@ DefineModifier("upgrade-deity-thor",
 DefineModifier("upgrade-deity-thor", -- dummy upgrade modifier to change starting abilities/variations
 	{"apply-to", "unit-germanic-priest"}, {"apply-to", "unit-teuton-priest"}, {"apply-to", "unit-dwarven-witness"},
 	{"apply-to", "unit-teuton-temple"}
-)
-
--- Spell Upgrade Dependencies
-DefineDependency("upgrade-healing",
-	{"upgrade-deity-christian-god"}
-)
-
-DefineDependency("upgrade-inspire",
-	{"upgrade-deity-odin"}
-)
-
-DefineDependency("upgrade-precision",
-	{"upgrade-deity-thor"}
-)
-
-DefineDependency("upgrade-terror",
-	{"upgrade-deity-gathaarl"}
 )

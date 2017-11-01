@@ -100,3 +100,7 @@ DefineModifier("upgrade-gothic-civilization",
 DefineModifier("upgrade-gothic-civilization",
 	{"apply-to", "unit-germanic-transport-ship"}, {"convert-to", "unit-teuton-kogge"}
 )
+
+DefineModifier("upgrade-gothic-civilization",
+	{"remove-upgrade", "upgrade-deity-heimdall"}
+)

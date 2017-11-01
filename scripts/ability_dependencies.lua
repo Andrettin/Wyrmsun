@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016-2017 by Andrettin
+--      (c) Copyright 2014-2017 Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,38 +25,22 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineIcon({
-	Name = "icon-norse-runewriting",
-	Size = {46, 38},
-	File = "norse/icons/runewriting.png"
-})
+DefinePredependency("upgrade-deadly-precision",
+	{"upgrade-critical-strike"}
+)
 
-DefineIcon({
-	Name = "icon-heimdall",
-	Size = {46, 38},
-	File = "norse/icons/heimdall.png"
-})
+DefineDependency("upgrade-healing",
+	{"upgrade-deity-christian-god"}
+)
 
-DefineIcon({
-	Name = "icon-hel",
-	Size = {46, 38},
-	File = "norse/icons/hel.png"
-})
+DefineDependency("upgrade-inspire",
+	{"upgrade-deity-odin"}
+)
 
-DefineIcon({
-	Name = "icon-odin",
-	Size = {46, 38},
-	File = "norse/icons/odin.png"
-})
+DefineDependency("upgrade-precision",
+	{"upgrade-deity-thor"}
+)
 
-DefineIcon({
-	Name = "icon-thor",
-	Size = {46, 38},
-	File = "norse/icons/thor.png"
-})
-
-DefineIcon({
-	Name = "icon-tyr",
-	Size = {46, 38},
-	File = "norse/icons/tyr.png"
-})
+DefineDependency("upgrade-terror",
+	{"upgrade-deity-gathaarl"}
+)

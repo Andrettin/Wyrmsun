@@ -360,6 +360,14 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-thor",
 	ForUnit = {"unit-teuton-temple"}
 })
 
+DefineButton( { Pos = 8, Level = 0, Icon = "icon-heimdall",
+	Action = "research", Value = "upgrade-deity-heimdall",
+	Allowed = "check-single-research",
+	Key = "h", Hint = "Worship ~!Heimdall", Popup = "popup-research",
+	Description = "Choose Heimdall as a minor deity. +1 Sight for Archers, enables Far Sight spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Frankish, Gothic, Suebi and Teuton civilizations.",
+	ForUnit = {"unit-teuton-temple"}
+})
+
 DefineButton( { Pos = 9, Level = 0, Icon = "icon-christianity",
 	Action = "learn-ability", Value = "upgrade-deity-christian-god",
 	Key = "c", Hint = "Convert to ~!Christianity", Popup = "popup-research",

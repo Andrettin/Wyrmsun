@@ -234,6 +234,18 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-bow-mastery",
+	Size = {46, 38},
+	File = "neutral/icons/bow_mastery.png"
+})
+
+DefineIcon({
+	Name = "icon-gun-mastery",
+	Size = {46, 38},
+	File = "neutral/icons/gun_mastery.png"
+})
+
+DefineIcon({
 	Name = "icon-mace-mastery",
 	Size = {46, 38},
 	File = "neutral/icons/mace_mastery.png"
@@ -255,6 +267,12 @@ DefineIcon({
 	Name = "icon-sword-mastery-bronze",
 	Size = {46, 38},
 	File = "neutral/icons/sword_mastery_bronze.png"
+})
+
+DefineIcon({
+	Name = "icon-throwing-mastery",
+	Size = {46, 38},
+	File = "neutral/icons/throwing_mastery.png"
 })
 
 DefineIcon({

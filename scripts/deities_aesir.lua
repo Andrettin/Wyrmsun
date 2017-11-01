@@ -117,6 +117,7 @@ DefineDeity("tyr", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980,
 	Civilizations = {"anglo-saxon", "dwarf", "frankish", "germanic", "norse", "suebi", "teuton"}, -- available for the dwarves since he is connected to dwarves in Norse myths (though it is rather a small connection, with Tyr helping the gods bind Fenrir with the dwarven fetter Gleipnir)
 	Religions = {"paganism"},
 	Gender = "male",
+	Icon = "icon-tyr",
 	Domains = {"warfare"}, -- god of war, law and justice
 	CulturalNames = {
 		"anglo-saxon", "Tiw", -- "Tīw"; Old English name of the god; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115.
@@ -225,10 +226,11 @@ DefineDeity("gefion", { -- Name means "Giver"; Source: Kevin Crossley-Holland, "
 DefineDeity("heimdall", { -- the horn Gjall belongs to him; identified with Rig (the progenitor of the three races of man in Norse mythology); Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. xxvii-xxviii, 244.
 	Name = "Heimdall",
 	Pantheon = "Aesir",
-	Civilizations = {"germanic", "norse"},
+	Civilizations = {"germanic", "anglo-saxon", "norse"},
 	Religions = {"paganism"},
 	Gender = "male",
---	Domains = {"air"},
+	Icon = "icon-heimdall",
+	Domains = {"air"},
 	CulturalNames = {
 		"germanic", "Haimadala" -- tentative rendering of "Heimdall" in Proto-Germanic (assuming "dallr" to have the same etymological origin as "dalr", the Old Norse word for "valley"); see language data
 	},
@@ -241,7 +243,8 @@ DefineDeity("hel", { -- Source: Anders Andrén, "Behind Heathendom: Archaeologic
 	HomePlane = "niflheim",
 	Civilizations = {"anglo-saxon", "frankish", "germanic", "goth", "norse", "suebi", "teuton"}, -- no attestation has been found of the Anglo-Saxons, Frisians, Goths, High Germans or Saxons worshipping the deity Hel, but their languages have cognates of Old Norse "Hel", and consequently also reflexes of Proto-Germanic "Haljô"
 	Religions = {"paganism"},
-	Gender = "male",
+	Gender = "female",
+	Icon = "icon-hel",
 	Domains = {"death"},
 	CulturalNames = {
 		"anglo-saxon", "Hell", -- Old English cognate of Old Norse "Hel"; see language data

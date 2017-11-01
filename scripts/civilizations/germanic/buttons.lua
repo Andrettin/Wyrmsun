@@ -153,12 +153,20 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-odin",
 	Description = "Choose Wodanaz as your major deity. +2 Damage for Skutans, enables Inspire spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Thunraz major deity.",
 	ForUnit = {"unit-germanic-temple"}
 })
-  
+
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-thor",
 	Action = "research", Value = "upgrade-deity-thor",
 	Allowed = "check-single-research",
 	Key = "t", Hint = "Worship ~!Thunraz", Popup = "popup-research",
 	Description = "Choose Thunraz as your major deity. +2 Damage for Eralas, enables Precision spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Wodanaz major deity.",
+	ForUnit = {"unit-germanic-temple"}
+})
+
+DefineButton( { Pos = 7, Level = 0, Icon = "icon-heimdall",
+	Action = "research", Value = "upgrade-deity-heimdall",
+	Allowed = "check-single-research",
+	Key = "h", Hint = "Worship ~!Haimadala", Popup = "popup-research",
+	Description = "Choose Haimadala as a minor deity. +1 Sight for Skutans, enables Far Sight spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Frankish, Gothic, Suebi and Teuton civilizations.",
 	ForUnit = {"unit-germanic-temple"}
 })
 

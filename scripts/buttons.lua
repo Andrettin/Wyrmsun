@@ -394,6 +394,38 @@ DefineButton( { Pos = 1, Level = 2, Icon = "icon-mace-mastery",
 	}
 } )
 
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-bow-mastery",
+	Action = "learn-ability", Value = "upgrade-bow-mastery",
+	Key = "b", Hint = "Learn ~!Bow Mastery", Popup = "popup-commands",
+	Description = "Bow Mastery is a passive ability that increases damage with bows by 2",
+	ForUnit = {
+		"unit-germanic-archer",
+		"unit-teuton-archer",
+		"unit-goblin-shadowstalker"
+	}
+} )
+
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-throwing-mastery",
+	Action = "learn-ability", Value = "upgrade-throwing-mastery",
+	Key = "t", Hint = "Learn ~!Throwing Mastery", Popup = "popup-commands",
+	Description = "Throwing Mastery is a passive ability that increases damage with javelins and throwing axes by 2",
+	ForUnit = {
+		"unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
+		"unit-joruvellir-explorer"
+	}
+} )
+
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-gun-mastery",
+	Action = "learn-ability", Value = "upgrade-gun-mastery",
+	Key = "g", Hint = "Learn ~!Gun Mastery", Popup = "popup-commands",
+	Description = "Gun Mastery is a passive ability that increases damage with guns by 2",
+	ForUnit = {
+		"unit-dwarven-thunderer",
+		"unit-teuton-gunpowder-infantry",
+		"unit-goblin-gunpowder-infantry"
+	}
+} )
+
 DefineButton( { Pos = 2, Level = 2, Icon = "icon-axe-mastery",
 	Action = "learn-ability", Value = "upgrade-axe-mastery",
 	Key = "x", Hint = "Learn A~!xe Mastery", Popup = "popup-commands",

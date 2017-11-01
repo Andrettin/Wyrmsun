@@ -32,6 +32,13 @@ DefineUpgrade("upgrade-axe-mastery", {
 	WeaponClasses = {"axe"}
 })
 
+DefineUpgrade("upgrade-bow-mastery", {
+	Name = "Bow Mastery",
+	Icon = "icon-bow-mastery",
+	Ability = true,
+	WeaponClasses = {"bow"}
+})
+
 DefineUpgrade("upgrade-critical-strike", {
 	Name = "Critical Strike",
 	Icon = "icon-critical-strike",
@@ -54,6 +61,13 @@ DefineUpgrade("upgrade-ethereal-vision", {
 	Name = "Ethereal Vision",
 	Icon = "icon-ethereal-vision",
 	Ability = true
+})
+
+DefineUpgrade("upgrade-gun-mastery", {
+	Name = "Gun Mastery",
+	Icon = "icon-gun-mastery",
+	Ability = true,
+	WeaponClasses = {"gun"}
 })
 
 DefineUpgrade("upgrade-healing", {
@@ -137,7 +151,18 @@ DefineUpgrade("upgrade-terror", {
 	Ability = true
 })
 
+DefineUpgrade("upgrade-throwing-mastery", {
+	Name = "Throwing Mastery",
+	Icon = "icon-throwing-mastery",
+	Ability = true,
+	WeaponClasses = {"javelin", "throwing-axe"}
+})
+
 DefineModifier("upgrade-axe-mastery",
+	{"BasicDamage", 2}
+)
+
+DefineModifier("upgrade-bow-mastery",
 	{"BasicDamage", 2}
 )
 
@@ -155,6 +180,10 @@ DefineModifier("upgrade-eagle-eye",
 
 DefineModifier("upgrade-ethereal-vision",
 	{"EtherealVision", 1}
+)
+
+DefineModifier("upgrade-gun-mastery",
+	{"BasicDamage", 2}
 )
 
 DefineModifier("upgrade-leadership",
@@ -177,6 +206,6 @@ DefineModifier("upgrade-sword-mastery",
 	{"BasicDamage", 2}
 )
 
-DefinePredependency("upgrade-deadly-precision",
-	{"upgrade-critical-strike"}
+DefineModifier("upgrade-throwing-mastery",
+	{"BasicDamage", 2}
 )

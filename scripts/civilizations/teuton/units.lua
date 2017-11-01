@@ -905,7 +905,8 @@ DefineUnitType("unit-teuton-priest", {
 			"variation-id", "gudjan",
 			"file", "germanic/units/priest.png",
 			"icon", "icon-germanic-priest",
-			"type-name", "Gudjan"
+			"type-name", "Gudjan",
+			"upgrade-forbidden", "upgrade-deity-christian-god"
 		}
 	},
 	Sounds = {
