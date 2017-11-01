@@ -237,11 +237,11 @@ DefineDeity("heimdall", { -- the horn Gjall belongs to him; identified with Rig 
 	Description = "Heimdall is the watchman of the Aesir, his hall Himinbjorg guarding the gates to Asgard. He is believed to be the son of nine mothers."
 })
 
-DefineDeity("hel", { -- Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 116.
+DefineDeity("hel", { -- Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 116; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 551; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 244.
 	Name = "Hel",
 	Pantheon = "Aesir",
 	HomePlane = "niflheim",
-	Civilizations = {"anglo-saxon", "dwarf", "frankish", "germanic", "goblin", "goth", "norse", "suebi", "teuton"}, -- no attestation has been found of the Anglo-Saxons, Frisians, Goths, High Germans or Saxons worshipping the deity Hel, but their languages have cognates of Old Norse "Hel", and consequently also reflexes of Proto-Germanic "Haljô"; Hel is here also allowed for the dwarves and goblins (even though they have no interaction with her in myths/legends) to allow them to possess necromantic spells
+	Civilizations = {"anglo-saxon", "dwarf", "ettin", "frankish", "germanic", "goblin", "goth", "norse", "suebi", "teuton"}, -- no attestation has been found of the Anglo-Saxons, Frisians, Goths, High Germans or Saxons worshipping the deity Hel, but their languages have cognates of Old Norse "Hel", and consequently also reflexes of Proto-Germanic "Haljô"; Hel is here also included for the dwarves and goblins (even though they have no interaction with her in myths/legends) to allow them to possess necromantic spells; Hel is referred to as a giantess in the Hamthesmol, stanza 17, so it makes sense for her to be an ettin deity
 	Religions = {"paganism"},
 	Gender = "female",
 	Icon = "icon-hel",
@@ -256,7 +256,7 @@ DefineDeity("hel", { -- Source: Anders Andrén, "Behind Heathendom: Archaeologic
 		"suebi", "Hella",
 		"teuton", "Hella" -- Old High German cognate of Old Norse "Hel"; see language data
 	},
-	Description = "Hel is a goddess of death who dwells in Niflheim."
+	Description = "Hel is a goddess of death who dwells in Niflheim. Half of her is alive, while the other half is corpse-like. Hel is the daughter of Loki."
 })
 
 DefineDeity("hod", { -- Blind god, who through Loki's mischief killed his brother Balder; returns after Ragnarok; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 245.
