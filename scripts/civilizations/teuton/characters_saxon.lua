@@ -32,6 +32,7 @@ DefineCharacter("geirthiof", { -- Source: Snorri Sturlson, "Heimskringla", 1844,
 	Civilization = "teuton",
 	Faction = "saxon-tribe", -- was from "Saxonland"
 	-- Adils Yngling went on a viking expedition to raid Saxonland when Geirthiof was king there
+	Deities = {"odin", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "saxon-tribe" -- was king of "Saxonland"
 	},
@@ -51,6 +52,7 @@ DefineCharacter("alof-the-great", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Type = "unit-teuton-archer",
 	Civilization = "teuton",
 	Faction = "saxon-tribe", -- was from "Saxonland"
+	Deities = {"odin", "tyr"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "saxon-tribe") then
 			return true
@@ -70,6 +72,7 @@ DefineCharacter("yrsa", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	Mother = "alof-the-great", 
 	Children = {"rolf-krake-skjoldung"},
 	Trait = "upgrade-intelligent", -- described as intelligent, as speaking well and being in all respects well behaved
+	Deities = {"odin", "tyr"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "saxon-tribe") then
 			return true
@@ -87,6 +90,7 @@ DefineCharacter("widukind", { -- Saxon leader who resisted Charlemagne's forces 
 	Faction = "saxon-tribe",
 	Date = 772,
 	-- led a Saxon rising in 782; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 176.
+	Deities = {"odin", "tyr"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "saxon-tribe") then
 			return true
@@ -119,6 +123,7 @@ DefineCharacter("henry-of-saxony", { -- Source: Susan D. Fuller, "Pagan Charms i
 	Civilization = "teuton",
 	Date = 919, -- reign began
 	DeathDate = 936, -- reign ended
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 919, 936, "holy-rome",
 		"head-of-state", 919, 936, "saxony" -- duke of Saxony (from when until when? here we use the same dates as for his other title)
@@ -132,6 +137,7 @@ DefineCharacter("bernhard-of-saxony", { -- duke of Saxony (apparently a contempo
 	Type = "unit-teuton-heroic-swordsman", -- duke
 	Civilization = "teuton",
 	Faction = "saxony",
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "saxony") then
 			return true

@@ -38,6 +38,7 @@ DefineCharacter("modsognir", { -- one of the earliest dwarven leaders
 	Trait = "upgrade-mighty",
 	Date = -3000,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
+	Deities = {"odin", "tyr"},
 	HistoricalLocations = {
 		-3000, "nidavellir", "svarinshaug"
 	},
@@ -65,6 +66,7 @@ DefineCharacter("durin", {
 	Trait = "upgrade-dextrous",
 	Date = -3000,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
+	Deities = {"odin", "tyr"},
 	HistoricalLocations = {
 		-3000, "nidavellir", "svarinshaug"
 	},
@@ -87,6 +89,7 @@ DefineCharacter("fjalar", { -- dwarf from Norse mythology who, with the help of 
 	Trait = "upgrade-cruel",
 	Date = -3000,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
+	Deities = {"odin", "tyr"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "shadowcharm-clan") then
 			return true
@@ -106,6 +109,7 @@ DefineCharacter("galar", {
 	Trait = "upgrade-cruel",
 	Date = -3000,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
+	Deities = {"odin", "tyr"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "shadowcharm-clan") then
 			return true
@@ -125,6 +129,7 @@ DefineCharacter("thjodrorir", { -- dwarf from Norse mythology; Source: Kevin Cro
 	Trait = "upgrade-wise",
 	Date = -3000,
 	-- worships deities: Hroptatyr (Odin) and Delling
+	Deities = {"odin", "tyr"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") ~= "shadowcharm-clan") then
 			return true
@@ -138,7 +143,8 @@ DefineCharacter("gandalf", {
 	Gender = "male",
 	Type = "unit-dwarven-witness", -- his name means "magic elf", so it makes sense that he is a spellcaster
 	Civilization = "dwarf",
-	Background = "Gandalf is a dwarf from Norse mythology. His name means \"magic elf\"."
+	Background = "Gandalf is a dwarf from Norse mythology. His name means \"magic elf\".",
+	Deities = {"odin", "tyr"}
 })
 
 DefineCharacter("vindalf", {
@@ -147,7 +153,8 @@ DefineCharacter("vindalf", {
 	Type = "unit-dwarven-scout", -- his name means "wind elf", so it makes sense to make him a projectile thrower
 	Civilization = "dwarf",
 	Background = "Vindalf is a dwarf from Norse mythology. His name means \"wind elf\".",
-	ForbiddenUpgrades = {"unit-dwarven-explorer"}
+	ForbiddenUpgrades = {"unit-dwarven-explorer"},
+	Deities = {"thor", "tyr"}
 })
 
 DefineCharacter("alvis", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 144-145; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 183-194.
@@ -157,7 +164,8 @@ DefineCharacter("alvis", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 	Civilization = "dwarf",
 	Background = "In the ~<Alvismol~>, Alvis is an extremely knowledgeable dwarf who desires to marry Thor's daughter. His name means \"all-knowing\" or \"all-wise\".",
 	HairVariation = "gray-hair",
-	Trait = "upgrade-wise"
+	Trait = "upgrade-wise",
+	Deities = {"odin", "tyr"}
 })
 
 DefineCharacter("andvari", {
@@ -169,6 +177,7 @@ DefineCharacter("andvari", {
 	Description = "The son of Oin, Andvari is famous for his large hoard of gold.",
 	Trait = "upgrade-ambitious",
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
+	Deities = {"odin", "tyr"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "oinling-clan") then
 			return true
@@ -189,7 +198,8 @@ DefineCharacter("regin", {
 	Trait = "upgrade-intelligent",
 	Date = 561, -- Sigibert's campaign begins in 561; Sigibert's encounter with Regin (which causes the latter's death in the end) should take place between Sigibert's initial defeat of the Avars and Chilperich in 561-562, and Sigibert's marriage to Brunichilde in 566
 	DeathDate = 566,
-	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
+	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
+	Deities = {"odin", "tyr"}
 })
 
 DefineCharacter("thursagan", { -- from Battle for Wesnoth: The Sceptre of Fire; master runesmith who crafted the Sceptre of Fire
@@ -208,6 +218,7 @@ DefineCharacter("thursagan", { -- from Battle for Wesnoth: The Sceptre of Fire; 
 	DeathDate = 40, -- died in 40 AD of a violent death
 	ViolentDeath = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
+	Deities = {"odin", "tyr"},
 	Items = {
 		{
 			"unique", "the-hammer-of-thursagan",
@@ -231,6 +242,7 @@ DefineCharacter("baglur", { -- from Battle for Wesnoth: The Sceptre of Fire; vet
 	DeathDate = 40, -- died in 40 AD of a violent death
 	ViolentDeath = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
+	Deities = {"odin", "tyr"},
 	HistoricalLocations = {
 		25, "nidavellir-underground", "chaincolt-gates"
 	}
@@ -250,6 +262,7 @@ DefineCharacter("durstorn", { -- from Battle for Wesnoth: The Sceptre of Fire; c
 	DeathDate = 35, -- died in 35 AD of a violent death
 	ViolentDeath = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
+	Deities = {"odin", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", -1, 35, "norlund-clan"
 	},
@@ -267,6 +280,7 @@ DefineCharacter("glonoin", { -- from Battle for Wesnoth: The Sceptre of Fire; ch
 	Date = -1,
 	DeathDate = 29, -- Shorbear Hold conquered in 29 AD by Rugnur's and Durstorn's Clan
 	ViolentDeath = true,
+	Deities = {"odin", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", -1, 29, "shorbear-clan"
 	},
@@ -296,6 +310,7 @@ DefineCharacter("rugnur", { -- from Battle for Wesnoth: The Sceptre of Fire; lea
 	DeathDate = 40, -- died in 40 AD of a violent death
 	ViolentDeath = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
+	Deities = {"odin", "tyr"},
 	HistoricalLocations = {
 		25, "nidavellir", "rugnurs-outpost" -- at this time Rugnur was already in charge of the outpost in the Chaincolt Foothills
 	}

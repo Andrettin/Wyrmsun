@@ -32,6 +32,7 @@ DefineCharacter("gibica", { -- Source: Norman Davies, "Vanished Kingdoms", 2012,
 	Civilization = "goth",
 	Faction = "burgundian-tribe",
 	DeathDate = 411,
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 0, 411, "burgundian-tribe"
 	},
@@ -49,6 +50,7 @@ DefineCharacter("grimhild", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	Type = "unit-teuton-archer",
 	Civilization = "goth",
 	Faction = "burgundian-tribe",
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe") then
 			return true
@@ -69,6 +71,7 @@ DefineCharacter("gundahar", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	ViolentDeath = true, -- presumably
 	Father = "gibica",
 	Mother = "grimhild",
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 411, 437, "burgundy" -- Kingdom of the Burgundians established by Gundahar (a Burgundian tribal chief) in 411 AD, with its center in Borbetomagus (Worms); Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-93.
 	},
@@ -86,6 +89,7 @@ DefineCharacter("glaumvor", { -- Source: Henry Adams Bellows (transl.), "The Poe
 	Type = "unit-teuton-archer",
 	Civilization = "goth",
 	Faction = "burgundy",
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe" or GetPlayerData(trigger_player, "Faction") == "burgundy") then
 			return true
@@ -102,6 +106,7 @@ DefineCharacter("gudrun", { -- Source: Norman Davies, "Vanished Kingdoms", 2012,
 	Faction = "burgundy",
 	Father = "gibica",
 	Mother = "grimhild",
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe" or GetPlayerData(trigger_player, "Faction") == "burgundy") then
 			return true
@@ -118,6 +123,7 @@ DefineCharacter("hogni", { -- Source: Source: Kevin Crossley-Holland, "The Norse
 	Faction = "burgundy",
 	Father = "gibica",
 	Mother = "grimhild",
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe" or GetPlayerData(trigger_player, "Faction") == "burgundy") then
 			return true
@@ -133,6 +139,7 @@ DefineCharacter("kostbera", { -- Source: Henry Adams Bellows (transl.), "The Poe
 	Civilization = "goth",
 	Faction = "burgundy",
 	Trait = "upgrade-wise", -- kind; wise and cunning in rune-craft
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe" or GetPlayerData(trigger_player, "Faction") == "burgundy") then
 			return true
@@ -147,6 +154,7 @@ DefineCharacter("orkning", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
 	Faction = "burgundy",
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe" or GetPlayerData(trigger_player, "Faction") == "burgundy") then
 			return true
@@ -163,6 +171,7 @@ DefineCharacter("snaevar", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Faction = "burgundy",
 	Father = "hogni",
 	Mother = "kostbera",
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "burgundy") then
 			return true
@@ -179,6 +188,7 @@ DefineCharacter("solar", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 	Faction = "burgundy",
 	Father = "hogni",
 	Mother = "kostbera",
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "burgundy") then
 			return true
@@ -194,6 +204,7 @@ DefineCharacter("gotthorm", { -- Source: Source: Kevin Crossley-Holland, "The No
 	Civilization = "goth",
 	Faction = "burgundy",
 	Mother = "grimhild",
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe" or GetPlayerData(trigger_player, "Faction") == "burgundy") then
 			return true
@@ -212,6 +223,7 @@ DefineCharacter("gundioc", { -- Source: Norman Davies, "Vanished Kingdoms", 2012
 	DeathDate = 474, -- end of reign
 	Father = "gundahar", -- from Gibica's line (so presumably a child of Gundahar's)
 	Mother = "glaumvor", -- if he was a child of Gundahar's, then his mother would likely be Glaumvor
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 437, 474, "burgundy"
 	},
@@ -232,6 +244,7 @@ DefineCharacter("chilperic", { -- Source: Norman Davies, "Vanished Kingdoms", 20
 	Date = 474, -- beginning of Chilperic's reign over the Burgundians in 474 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
 	DeathDate = 480, -- end of reign
 	Father = "gundioc", -- from Gibica's line (so presumably a child of Gundioc's)
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 474, 480, "burgundy"
 	},
@@ -253,6 +266,7 @@ DefineCharacter("clothilda", { -- Source: Norman Davies, "Vanished Kingdoms", 20
 	Date = 474, -- born
 	DeathDate = 545, -- died
 	Father = "chilperic",
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "burgundy") then
 			return true
@@ -271,6 +285,7 @@ DefineCharacter("gundobad", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	Date = 480, -- beginning of Gundobad's reign over the Burgundians in 480 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
 	DeathDate = 516, -- end of reign
 	Father = "gundioc", -- was Chilperic's brother, so presumably a child of Gundioc's
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 480, 516, "burgundy"
 	},
@@ -292,6 +307,7 @@ DefineCharacter("sigismund", { -- Source: Norman Davies, "Vanished Kingdoms", 20
 	Date = 516, -- beginning of Sigismund's reign over the Burgundians in 516 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
 	DeathDate = 523, -- end of reign
 	Father = "gundobad", -- son of Gundobad
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 516, 523, "burgundy"
 	},
@@ -313,6 +329,7 @@ DefineCharacter("gundimar", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	DeathDate = 534, -- end of reign (was proscribed, pursued and executed by the Franks, and his realm was annexed by them)
 	ViolentDeath = true,
 	Father = "sigismund", -- from Gibica's line (so presumably a child of Sigismund's)
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 523, 534, "burgundy"
 	},

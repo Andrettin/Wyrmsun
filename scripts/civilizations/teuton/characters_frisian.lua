@@ -35,6 +35,7 @@ DefineCharacter("radbod", { -- Frisian ruler defeated by Charles Martel in 718; 
 	HistoricalTitles = {
 		"head-of-state", 704, 0, "frisian-tribe" -- king of the Frisians as of 716; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 168.
 	},
+	Deities = {"odin", "tyr"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "frisian-tribe") then
 			return true
@@ -49,6 +50,7 @@ DefineCharacter("bubo", { -- Frisian ruler defeated by Charles Martel in 736; So
 	Type = "unit-teuton-heroic-swordsman", -- chieftain
 	Civilization = "teuton",
 	Faction = "frisian-tribe",
+	Deities = {"odin", "tyr"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "frisian-tribe") then
 			return true

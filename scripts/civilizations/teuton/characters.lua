@@ -33,6 +33,7 @@ DefineCharacter("eylimi-othling", { -- Source: Kevin Crossley-Holland, "The Nors
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton", -- Norse?
 	Faction = "frank-tribe", -- what should it be instead, Dane Tribe?
+	Deities = {"odin", "tyr"}
 	-- he descends from Halfdan the Old of Denmark
 })
 
@@ -43,7 +44,8 @@ DefineCharacter("signy-volsung", { -- Source: C. Scott Littleton, "The Germanic 
 	Type = "unit-teuton-archer",
 	Civilization = "teuton",
 	Faction = "frank-tribe",
-	Father = "volsung"
+	Father = "volsung",
+	Deities = {"christian-god"}
 	-- wedded to Siggeir
 })
 
@@ -53,6 +55,7 @@ DefineCharacter("siggeir", { -- Source: C. Scott Littleton, "The Germanic Sword 
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
 	Faction = "frank-tribe",
+	Deities = {"christian-god"},
 	-- comes from the same generation as Signy Volsung
 	-- wedded to Signy
 })
@@ -64,7 +67,8 @@ DefineCharacter("siegmund-volsung", { -- Source: Norman Davies, "Vanished Kingdo
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
 	Faction = "frank-tribe",
-	Father = "volsung"
+	Father = "volsung",
+	Deities = {"christian-god"}
 })
 
 DefineCharacter("sieglind-hraudung", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
@@ -75,7 +79,8 @@ DefineCharacter("sieglind-hraudung", { -- Source: Norman Davies, "Vanished Kingd
 	Civilization = "teuton", -- Norse?
 	Faction = "frank-tribe", -- seems unlikely to be correct
 	-- he descends from Halfdan the Old of Denmark
-	Father = "eylimi-othling"
+	Father = "eylimi-othling",
+	Deities = {"christian-god"}
 })
 
 DefineCharacter("sinfiotli-volsung", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 3.
@@ -86,7 +91,8 @@ DefineCharacter("sinfiotli-volsung", { -- Source: C. Scott Littleton, "The Germa
 	Civilization = "teuton",
 	Faction = "frank-tribe",
 	Father = "siegmund-volsung",
-	Mother = "signy-volsung"
+	Mother = "signy-volsung",
+	Deities = {"christian-god"}
 })
 
 DefineCharacter("svanhild-volsung", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 226, 536, 538, 542, 546.
@@ -98,7 +104,8 @@ DefineCharacter("svanhild-volsung", { -- Source: Henry Adams Bellows (transl.), 
 	Civilization = "teuton",
 	Faction = "frank-tribe",
 --	Father = "siegfried-volsung", -- daughter of Siegfried/Sigurd in the myths
-	Mother = "gudrun"
+	Mother = "gudrun",
+	Deities = {"christian-god"}
 })
 --]]
 
@@ -108,7 +115,8 @@ DefineCharacter("ricimer", { -- Source: Norman Davies, "Vanished Kingdoms", 2012
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton", -- correct?
 	Date = 405, -- born
-	DeathDate = 472 -- died
+	DeathDate = 472, -- died
+	Deities = {"christian-god"}
 })
 
 DefineCharacter("adalbert", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 141.
@@ -127,6 +135,7 @@ DefineCharacter("judith-von-babenberg", { -- Source: James Westfall Thompson, "M
 	Gender = "female",
 	Type = "unit-teuton-priest", -- correct?
 	Civilization = "teuton",
+	Deities = {"christian-god"}
 	-- her brother was margrave of Nordgau
 	-- was abducted by and married to Duke Břetislav I of Bohemia
 })

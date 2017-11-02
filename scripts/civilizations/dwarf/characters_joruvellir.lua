@@ -36,6 +36,7 @@ DefineCharacter("draupnir", { -- Source: Henry Adams Bellows (transl.), "The Poe
 	Trait = "upgrade-dextrous",
 	Date = -2800,
 	ForbiddenUpgrades = {"unit-dwarven-gryphon-rider"},
+	Deities = {"thor", "tyr"},
 	HistoricalLocations = {
 		-2800, "nidavellir", {706, 222}
 	},
@@ -60,6 +61,7 @@ DefineCharacter("eikinskjaldi", { -- Source: Henry Adams Bellows (transl.), "The
 	Background = "In Norse mythology, Eikinskjaldi is one of the dwarves mentioned in the ~<Voluspo~> to have migrated from the rocks to Joruvellir. His name means \"oaken shield\".",
 	Trait = "upgrade-resilient",
 	Date = -2800,
+	Deities = {"odin", "tyr"},
 	HistoricalLocations = {
 		-2800, "nidavellir", {706, 222}
 	},
@@ -81,6 +83,7 @@ DefineCharacter("frosti", { -- Source: Henry Adams Bellows (transl.), "The Poeti
 	Background = "In Norse mythology, Eikinskjaldi is one of the dwarves mentioned in the ~<Voluspo~> to have migrated from the rocks to Joruvellir.",
 	Trait = "upgrade-resilient",
 	Date = -2800,
+	Deities = {"odin", "tyr"},
 	HistoricalLocations = {
 		-2800, "nidavellir", {706, 222}
 	},

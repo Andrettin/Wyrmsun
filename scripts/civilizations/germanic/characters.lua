@@ -33,6 +33,7 @@ DefineCharacter("lorikus", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 	Date = -3000, -- beginning of the process of the Indo-European migrations to Scandinavia
 	DeathDate = -3000 + 12, -- Trór becomes 12 years old and slays Lóríkus
 	ViolentDeath = true,
+	Deities = {"odin", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", -3000, -3000 + 12, "asa-tribe"
 	}
@@ -43,7 +44,8 @@ DefineCharacter("lora", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 	Gender = "female",
 	Type = "unit-germanic-archer",
 	Civilization = "germanic",
-	Date = -3000
+	Date = -3000,
+	Deities = {"odin", "tyr"}
 })
 
 DefineCharacter("troan", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 6.
@@ -52,7 +54,8 @@ DefineCharacter("troan", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Type = "unit-germanic-archer",
 	Civilization = "germanic",
 	Date = -3000,
-	DeathDate = -3000 + 10
+	DeathDate = -3000 + 10,
+	Deities = {"thor", "tyr"}
 })
 
 DefineCharacter("tror", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 6.
@@ -65,6 +68,7 @@ DefineCharacter("tror", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 	Date = -3000, -- born
 	DeathDate = -3000 + 12 + 10, -- 30 years is the default lifetime of a hero after having risen to prominence, but here we use 10 to make the genealogy fit from 3000 to 2800 BC, by when Scandinavia was settled by Indo-Europeans (in the Ynglinga Saga, with an euhemerized Odin leading the Asa there)
 	Mother = "troan",
+	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12, -3000 + 12 + 10, "asa-tribe" -- when Trór was 12 years old, he slew his foster-father Lóríkus and took his place
 	}
@@ -78,6 +82,7 @@ DefineCharacter("loridi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Date = -3000 + 12 + (10 * 1),
 	DeathDate = -3000 + 12 + (10 * 2),
 	Father = "tror",
+	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 1), -3000 + 12 + (10 * 2), "asa-tribe"
 	}
@@ -91,6 +96,7 @@ DefineCharacter("einridi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 	Date = -3000 + 12 + (10 * 2),
 	DeathDate = -3000 + 12 + (10 * 3),
 	Father = "loridi",
+	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 2), -3000 + 12 + (10 * 3), "asa-tribe"
 	}
@@ -104,6 +110,7 @@ DefineCharacter("vingethor", { -- Source: Snorri Sturlson, "The Prose Edda", 191
 	Date = -3000 + 12 + (10 * 3),
 	DeathDate = -3000 + 12 + (10 * 4),
 	Father = "einridi",
+	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 3), -3000 + 12 + (10 * 4), "asa-tribe"
 	}
@@ -117,6 +124,7 @@ DefineCharacter("vingener", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 	Date = -3000 + 12 + (10 * 4),
 	DeathDate = -3000 + 12 + (10 * 5),
 	Father = "vingethor",
+	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 4), -3000 + 12 + (10 * 5), "asa-tribe"
 	}
@@ -130,6 +138,7 @@ DefineCharacter("moda", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 	Date = -3000 + 12 + (10 * 5),
 	DeathDate = -3000 + 12 + (10 * 6),
 	Father = "vingener",
+	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 5), -3000 + 12 + (10 * 6), "asa-tribe"
 	}
@@ -143,6 +152,7 @@ DefineCharacter("magan", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Date = -3000 + 12 + (10 * 6),
 	DeathDate = -3000 + 12 + (10 * 7),
 	Father = "moda",
+	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 6), -3000 + 12 + (10 * 7), "asa-tribe"
 	}
@@ -156,6 +166,7 @@ DefineCharacter("seskef", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Date = -3000 + 12 + (10 * 7),
 	DeathDate = -3000 + 12 + (10 * 8),
 	Father = "magan",
+	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 7), -3000 + 12 + (10 * 8), "asa-tribe"
 	}
@@ -169,6 +180,7 @@ DefineCharacter("bedvig", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Date = -3000 + 12 + (10 * 8),
 	DeathDate = -3000 + 12 + (10 * 9),
 	Father = "seskef",
+	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 8), -3000 + 12 + (10 * 9), "asa-tribe"
 	}
@@ -182,6 +194,7 @@ DefineCharacter("athra", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Date = -3000 + 12 + (10 * 9),
 	DeathDate = -3000 + 12 + (10 * 10),
 	Father = "bedvig",
+	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 9), -3000 + 12 + (10 * 10), "asa-tribe"
 	}
@@ -195,6 +208,7 @@ DefineCharacter("itermann", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 	Date = -3000 + 12 + (10 * 10),
 	DeathDate = -3000 + 12 + (10 * 11),
 	Father = "athra",
+	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 10), -3000 + 12 + (10 * 11), "asa-tribe"
 	}
@@ -208,6 +222,7 @@ DefineCharacter("heremod", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 	Date = -3000 + 12 + (10 * 11),
 	DeathDate = -3000 + 12 + (10 * 12),
 	Father = "itermann",
+	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 11), -3000 + 12 + (10 * 12), "asa-tribe"
 	}
@@ -221,6 +236,7 @@ DefineCharacter("skjaldun", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 	Date = -3000 + 12 + (10 * 12),
 	DeathDate = -3000 + 12 + (10 * 13),
 	Father = "heremod",
+	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 12), -3000 + 12 + (10 * 13), "asa-tribe"
 	}
@@ -234,6 +250,7 @@ DefineCharacter("bjaf", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 	Date = -3000 + 12 + (10 * 13),
 	DeathDate = -3000 + 12 + (10 * 14),
 	Father = "skjaldun",
+	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 13), -3000 + 12 + (10 * 14), "asa-tribe"
 	}
@@ -247,6 +264,7 @@ DefineCharacter("jat", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 
 	Date = -3000 + 12 + (10 * 14),
 	DeathDate = -3000 + 12 + (10 * 15),
 	Father = "bjaf",
+	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 14), -3000 + 12 + (10 * 15), "asa-tribe"
 	}
@@ -260,6 +278,7 @@ DefineCharacter("gudawulfa", { -- Source: Snorri Sturlson, "The Prose Edda", 191
 	Date = -3000 + 12 + (10 * 15),
 	DeathDate = -3000 + 12 + (10 * 16),
 	Father = "jat",
+	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 15), -3000 + 12 + (10 * 16), "asa-tribe"
 	}
@@ -273,6 +292,7 @@ DefineCharacter("finn", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 	Date = -3000 + 12 + (10 * 16),
 	DeathDate = -3000 + 12 + (10 * 17),
 	Father = "gudawulfa",
+	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 16), -3000 + 12 + (10 * 17), "asa-tribe"
 	}
@@ -286,6 +306,7 @@ DefineCharacter("friallaf", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 	Date = -3000 + 12 + (10 * 17),
 	DeathDate = -3000 + 12 + (10 * 18),
 	Father = "finn",
+	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 17), -3000 + 12 + (10 * 18), "asa-tribe"
 	}
@@ -303,6 +324,7 @@ DefineCharacter("voden", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Date = -3000,
 	DeathDate = -2800,
 	Father = "friallaf",
+	Deities = {"odin", "tyr"},
 	HistoricalLocations = {
 		-3000, "earth", "azov"
 	},
@@ -318,7 +340,8 @@ DefineCharacter("frigida", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 	Civilization = "germanic",
 	Trait = "upgrade-wise",
 	Date = -3000 + 12 + (10 * 18),
-	DeathDate = -2800 + (30 * 1)
+	DeathDate = -2800 + (30 * 1),
+	Deities = {"odin", "tyr"}
 })
 
 DefineCharacter("yngve", { -- Source: Snorri Sturlson, "Heimskringla", 1844; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 9; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 221.
@@ -330,6 +353,7 @@ DefineCharacter("yngve", { -- Source: Snorri Sturlson, "Heimskringla", 1844; Sou
 	DeathDate = -2800 + (30 * 2),
 	Father = "voden", -- another account gives Yngve as the son of Halfdan the Old
 	Mother = "frigida", -- presumably, since she was Vóden's wife
+	Deities = {"odin", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", -2800 + (30 * 1), -2800 + (30 * 2), "yngling-tribe"
 	},
@@ -350,7 +374,8 @@ DefineCharacter("vegdeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Date = -2800,
 	DeathDate = -2800 + (30 * 2),
 	Father = "voden",
-	Mother = "frigida" -- presumably, since she was Vóden's wife
+	Mother = "frigida", -- presumably, since she was Vóden's wife
+	Deities = {"odin", "tyr"}
 })
 
 DefineCharacter("vitgils", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
@@ -359,7 +384,8 @@ DefineCharacter("vitgils", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	-- his father was in the Prose Edda set to rule over East Saxland
-	Father = "vegdeg"
+	Father = "vegdeg",
+	Deities = {"odin", "tyr"}
 })
 
 DefineCharacter("vitta", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
@@ -367,7 +393,8 @@ DefineCharacter("vitta", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
-	Father = "vitgils"
+	Father = "vitgils",
+	Deities = {"odin", "tyr"}
 })
 
 DefineCharacter("heingistr", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
@@ -375,7 +402,8 @@ DefineCharacter("heingistr", { -- Source: Snorri Sturlson, "The Prose Edda", 191
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
-	Father = "vitta"
+	Father = "vitta",
+	Deities = {"odin", "tyr"}
 })
 
 DefineCharacter("sigarr", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
@@ -384,7 +412,8 @@ DefineCharacter("sigarr", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
-	Father = "vitgils"
+	Father = "vitgils",
+	Deities = {"odin", "tyr"}
 })
 
 DefineCharacter("svebdeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
@@ -392,7 +421,8 @@ DefineCharacter("svebdeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
-	Father = "sigarr"
+	Father = "sigarr",
+	Deities = {"odin", "tyr"}
 })
 
 DefineCharacter("beldeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, pp. 7-8.
@@ -403,7 +433,8 @@ DefineCharacter("beldeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Date = -2800,
 	DeathDate = -2800 + (30 * 2),
 	Father = "voden",
-	Mother = "frigida" -- presumably, since she was Vóden's wife
+	Mother = "frigida", -- presumably, since she was Vóden's wife
+	Deities = {"odin", "tyr"}
 })
 
 DefineCharacter("branda", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
@@ -412,7 +443,8 @@ DefineCharacter("branda", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	-- his father was in the Prose Edda set to rule over Westphalia
-	Father = "beldeg"
+	Father = "beldeg",
+	Deities = {"odin", "tyr"}
 })
 
 DefineCharacter("frjodigar", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
@@ -420,7 +452,8 @@ DefineCharacter("frjodigar", { -- Source: Snorri Sturlson, "The Prose Edda", 191
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
-	Father = "branda"
+	Father = "branda",
+	Deities = {"odin", "tyr"}
 })
 
 DefineCharacter("freovin", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
@@ -428,7 +461,8 @@ DefineCharacter("freovin", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
-	Father = "frjodigar"
+	Father = "frjodigar",
+	Deities = {"odin", "tyr"}
 })
 
 DefineCharacter("uvigg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
@@ -436,7 +470,8 @@ DefineCharacter("uvigg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
-	Father = "freovin"
+	Father = "freovin",
+	Deities = {"odin", "tyr"}
 })
 
 DefineCharacter("gevis", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
@@ -444,7 +479,8 @@ DefineCharacter("gevis", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
-	Father = "uvigg"
+	Father = "uvigg",
+	Deities = {"odin", "tyr"}
 })
 
 DefineCharacter("sigi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
@@ -455,7 +491,8 @@ DefineCharacter("sigi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 	Date = -2800,
 	DeathDate = -2800 + (30 * 2),
 	Father = "voden",
-	Mother = "frigida" -- presumably, since she was Vóden's wife
+	Mother = "frigida", -- presumably, since she was Vóden's wife
+	Deities = {"odin", "tyr"}
 })
 
 DefineCharacter("rerir", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
@@ -464,7 +501,8 @@ DefineCharacter("rerir", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	-- his father was in the Prose Edda set to rule over Frankland
-	Father = "sigi"
+	Father = "sigi",
+	Deities = {"odin", "tyr"}
 })
 
 DefineCharacter("skeldu", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 221.
@@ -477,6 +515,7 @@ DefineCharacter("skeldu", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	DeathDate = -2800 + (30 * 2), -- 30 years is the default lifetime of a hero after having risen to prominence
 	Father = "voden",
 	Mother = "frigida", -- presumably, since she was Vóden's wife
+	Deities = {"odin", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", -2800, -2800 + (30 * 2), "skeldung-tribe"
 	},
@@ -497,6 +536,7 @@ DefineCharacter("fridleifr-skeldung", { -- Source: Snorri Sturlson, "The Prose E
 	Civilization = "germanic",
 	Faction = "skeldung-tribe",
 	Father = "skeldu",
+	Deities = {"odin", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "skeldung-tribe"
 	},
@@ -514,7 +554,8 @@ DefineCharacter("saemingr-yngling", { -- Source: Snorri Sturlson, "Heimskringla"
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	Father = "yngve"
+	Father = "yngve",
+	Deities = {"odin", "tyr"}
 })
 
 DefineCharacter("thrahila", {
@@ -525,7 +566,8 @@ DefineCharacter("thrahila", {
 	Faction = "thralling-tribe",
 	Description = "The robust Thrahila is a hard worker, constantly engaged in logging and other laborious activities.",
 	HairVariation = "black-hair", -- described as black-haired in the myths
-	Trait = "upgrade-dutiful"
+	Trait = "upgrade-dutiful",
+	Deities = {"odin", "heimdall"}
 })
 
 DefineCharacter("karla", {
@@ -535,7 +577,8 @@ DefineCharacter("karla", {
 	Civilization = "germanic",
 	Faction = "karling-tribe",
 	HairVariation = "brown-hair", -- described as brown-haired in the myths
-	Trait = "upgrade-intelligent"
+	Trait = "upgrade-intelligent",
+	Deities = {"odin", "heimdall"}
 })
 
 DefineCharacter("erala", {
@@ -549,6 +592,7 @@ DefineCharacter("erala", {
 	HairVariation = "blond-hair",
 	Trait = "upgrade-strong",
 	Date = -1600,
+	Deities = {"odin", "heimdall"},
 	HistoricalLocations = {
 		-1600, "earth", "vejle"
 	}
@@ -558,7 +602,8 @@ DefineCharacter("egill", { -- Source: Carolyne Larrington, "The Norse Myths: A G
 	Name = "Egill",
 	Gender = "male",
 	Type = "unit-germanic-worker",
-	Civilization = "germanic"
+	Civilization = "germanic",
+	Deities = {"thor", "tyr"}
 })
 
 DefineCharacter("thialfi", { -- Thor's servant in Norse mythology; associated by several scholars with Þieluar, the discoverer of Gotland; Source: "Guta Saga: The History of the Gotlanders", 1999, pp. xvii-xviii, 3; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 111.
@@ -570,6 +615,7 @@ DefineCharacter("thialfi", { -- Thor's servant in Norse mythology; associated by
 	Description = "Terrified by a calamitous thunderstorm, Thialfi's parents pledged him to the service of the lightning god Thunraz when he was still a boy. Years later as a grown up man, during a dream he heard his master command him to sail to an undiscovered island...",
 	Trait = "upgrade-quick",
 	Father = "egill",
+	Deities = {"thor", "tyr"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "thielung-tribe") then
 			return true
@@ -584,7 +630,8 @@ DefineCharacter("roskva", { -- Source: Carolyne Larrington, "The Norse Myths: A 
 	Type = "unit-germanic-worker",
 	Civilization = "germanic",
 	Faction = "thielung-tribe",
-	Father = "egill"
+	Father = "egill",
+	Deities = {"thor", "tyr"}
 	-- Thor's servant in Norse mythology
 })
 
@@ -596,6 +643,7 @@ DefineCharacter("hafthi", { -- Source: "Guta Saga: The History of the Gotlanders
 	Faction = "thielung-tribe",
 	Background = "In the Guta Saga, Hafthi was the son of Thieluar, and the first to settle the island of Gotland after his father discovered it.",
 	Father = "thialfi",
+	Deities = {"thor", "tyr"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "thielung-tribe") then
 			return true
@@ -612,6 +660,7 @@ DefineCharacter("huitastierna", { -- Source: "Guta Saga: The History of the Gotl
 	Civilization = "germanic",
 	Faction = "thielung-tribe",
 	Background = "In the Guta Saga, Huitastierna was the wife of Hafthi, and together they were the first to settle the island of Gotland.",
+	Deities = {"thor", "tyr"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "thielung-tribe") then
 			return true
@@ -630,6 +679,7 @@ DefineCharacter("guti", { -- Source: "Guta Saga: The History of the Gotlanders",
 	Background = "In the Guta Saga, Guti was the eldest son of Hafthi and Huitastierna, and he inherited the northern third of the island of Gotland from them.",
 	Father = "hafthi",
 	Mother = "huitastierna",
+	Deities = {"thor", "tyr"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "thielung-tribe") then
 			return true
@@ -647,6 +697,7 @@ DefineCharacter("graipr", { -- Source: "Guta Saga: The History of the Gotlanders
 	Background = "In the Guta Saga, Graip was the second son of Hafthi and Huitastierna, and he inherited the middle third of the island of Gotland from them.",
 	Father = "hafthi",
 	Mother = "huitastierna",
+	Deities = {"thor", "tyr"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "thielung-tribe") then
 			return true
@@ -664,6 +715,7 @@ DefineCharacter("gunfiaun", { -- Source: "Guta Saga: The History of the Gotlande
 	Background = "In the Guta Saga, Gunfiaun was the youngest son of Hafthi and Huitastierna, and he inherited the southern third of the island of Gotland from them.",
 	Father = "hafthi",
 	Mother = "huitastierna",
+	Deities = {"thor", "tyr"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "thielung-tribe") then
 			return true

@@ -31,6 +31,7 @@ DefineCharacter("alboin", { -- king of the Lombards (from 560 to 572); Source: "
 	Type = "unit-teuton-knight-lord", -- king
 	Civilization = "teuton",
 	Faction = "lombardy",
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "lombardy") then
 			return true
@@ -45,6 +46,7 @@ DefineCharacter("gisulf", { -- Lombardic duke and nephew of Alboin (king of the 
 	Type = "unit-teuton-knight-lord", -- duke
 	Civilization = "teuton",
 	Faction = "lombardy",
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "lombardy") then
 			return true
@@ -59,6 +61,7 @@ DefineCharacter("authari", { -- king of the Lombards (from 584 to 590); Source: 
 	Type = "unit-teuton-knight-lord", -- king
 	Civilization = "teuton",
 	Faction = "lombardy",
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "lombardy") then
 			return true
@@ -73,6 +76,7 @@ DefineCharacter("agilulf", { -- king of the Lombards (from 591 to 616); Source: 
 	Type = "unit-teuton-knight-lord", -- king
 	Civilization = "teuton",
 	Faction = "lombardy",
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "lombardy") then
 			return true
@@ -88,6 +92,7 @@ DefineCharacter("perctarit", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 	Civilization = "teuton",
 	Faction = "lombardy",
 	Date = 678, -- was king of the Lombards as of 678
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "lombardy") then
 			return true
@@ -102,6 +107,7 @@ DefineCharacter("liudprand", { -- given by Medieval Warfare as "Liutprand", and 
 	Type = "unit-teuton-knight-lord", -- king
 	Civilization = "teuton",
 	Faction = "lombardy",
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "lombardy") then
 			return true
@@ -116,6 +122,7 @@ DefineCharacter("aistulf", { -- king of the Lombards (from 749 to 756); Source: 
 	Type = "unit-teuton-knight-lord", -- king
 	Civilization = "teuton",
 	Faction = "lombardy",
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "lombardy") then
 			return true
@@ -131,6 +138,7 @@ DefineCharacter("desiderius", { -- Source: "Medieval Warfare V.2", 2013, p. 7.
 	Civilization = "teuton",
 	Faction = "lombardy",
 	Date = 772, -- was king of the Lombards in 772, when Carloman the Younger Carolingian's wife fled to his court
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 772, 0, "lombardy" -- was king of the Lombards in 772, when Carloman the Younger Carolingian's wife fled to his court
 	},
@@ -148,6 +156,7 @@ DefineCharacter("arichis", { -- Lombard duke of Benevento; Source: "Medieval War
 	Type = "unit-teuton-knight-lord", -- duke
 	Civilization = "teuton",
 	Faction = "lombardy",
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "lombardy") then
 			return true
@@ -162,6 +171,7 @@ DefineCharacter("ariulf", { -- Lombard duke of Spoleto; Source: "Medieval Warfar
 	Type = "unit-teuton-knight-lord", -- duke
 	Civilization = "teuton",
 	Faction = "lombardy",
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "lombardy") then
 			return true
@@ -176,6 +186,7 @@ DefineCharacter("nordulf", { -- Lombard mercenary who after years of service obt
 	Type = "unit-teuton-heroic-swordsman",
 	Civilization = "teuton",
 	Faction = "lombardy",
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "lombardy") then
 			return true

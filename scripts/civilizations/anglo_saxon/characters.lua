@@ -36,6 +36,7 @@ DefineCharacter("aelle", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	HistoricalTitles = {
 		"head-of-state", 0, 588, "deira" -- first recorded king of Deira
 	},
+	Deities = {"odin", "tyr"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "deira") then
 			return true
@@ -54,6 +55,7 @@ DefineCharacter("ida", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, 
 	HistoricalTitles = {
 		"head-of-state", 547, 0, "bernicia" -- first king of Bernicia
 	},
+	Deities = {"odin", "tyr"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "bernicia") then
 			return true
@@ -69,6 +71,7 @@ DefineCharacter("theodric-of-bernicia", { -- Source: Frank Stenton, "Anglo-Saxon
 	Civilization = "anglo-saxon",
 	Faction = "bernicia", -- his father was king of Bernicia
 	Father = "ida",
+	Deities = {"odin", "tyr"},
 	HistoricalTitles = {
 --		"head-of-state", 0, 0, "bernicia" -- presumably, since his father was king of Bernicia
 	},
@@ -88,6 +91,7 @@ DefineCharacter("aethelric", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 	Faction = "bernicia",
 	Date = 588, -- according to tradition, Æthelric acquired the kingdom of Deira upon Ælle's death in 588 AD
 	Father = "ida", -- the source says that his son Æthelfrith was grandson of Ida
+	Deities = {"odin", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", 588, 0, "bernicia", -- king of Bernicia
 		"head-of-state", 588, 0, "deira" -- according to tradition, Æthelric acquired the kingdom of Deira upon Ælle's death in 588 AD
@@ -111,6 +115,7 @@ DefineCharacter("aethelfrith", { -- Source: Frank Stenton, "Anglo-Saxon England"
 	ViolentDeath = true,
 	Father = "aethelric",
 	Description = "Aethelfrith was the king of Bernicia between 593 and 616. He simultaneously ruled over Deira, and is famed for his defeat of the Britons at Chester. Aethelfrith came to a tragic end at the hands of Raedwald of East Anglia in 616, being killed in battle.",
+	Deities = {"odin", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", 593, 616, "bernicia", -- king of Bernicia
 		"head-of-state", 593, 616, "deira"
@@ -131,6 +136,7 @@ DefineCharacter("ceawlin", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
 	Faction = "wessex",
+	Deities = {"odin", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "wessex" -- king of Wessex
 	},
@@ -153,6 +159,7 @@ DefineCharacter("edwin-of-deira", { -- Source: Frank Stenton, "Anglo-Saxon Engla
 	DeathDate = {632, 10, 12}, -- died on the 12th of October 632 in battle against Cadwallon of Gwynedd, at Hatfield
 	ViolentDeath = true,
 	-- married Æthelberg in 625
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 616, 632, "bernicia",
 		"head-of-state", 616, 632, "deira" -- was the heir to Deira, but also became the king of Bernicia after the battle against Æthelfrith in 616
@@ -172,6 +179,7 @@ DefineCharacter("raedwald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Civilization = "anglo-saxon",
 	Faction = "east-anglia",
 	Date = 616, -- in the summer or early fall of 616, Rædwald (supporting Edwin's claim to the Deiran throne; Edwin had taken refuge with him) engaged in a battle against Æthelfrith of Bernicia, with the location being at the southern border of Deira, where the Idle river crosses with the Lincoln-Doncaster Roman road
+	Deities = {"odin", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", 616, 0, "east-anglia" -- king of East Anglia
 	},
@@ -190,6 +198,7 @@ DefineCharacter("lilla", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Civilization = "anglo-saxon",
 	Faction = "deira",
 	Description = "Lilla was a thegn of Edwin of Deira. He saved his lord's life by stopping an assassin from Wessex just as he was about to strike Edwin.",
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "deira" or GetPlayerData(trigger_player, "Faction") == "bernicia") then -- Edwin also ruled over Bernicia
 			return true
@@ -207,6 +216,7 @@ DefineCharacter("aethelberht", { -- Source: Frank Stenton, "Anglo-Saxon England"
 	-- his daughter married Edwin of Deira
 	-- married Bertha of Paris before 588
 	DeathDate = 616,
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 597, 616, "kent" -- was king of Kent in 597
 	},
@@ -224,6 +234,7 @@ DefineCharacter("saberht", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
 	Faction = "essex",
+	Deities = {"odin", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", 604, 0, "essex" -- was king of Essex in 604
 	},
@@ -275,6 +286,7 @@ DefineCharacter("hereric", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Type = "unit-teuton-swordsman",
 	Civilization = "anglo-saxon",
 	Faction = "deira", -- presumably
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "deira" or GetPlayerData(trigger_player, "Faction") == "bernicia") then -- Edwin also ruled over Bernicia
 			return true
@@ -295,6 +307,7 @@ DefineCharacter("osfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Father = "edwin-of-deira",
 	DeathDate = 632, -- died in 632 in battle against Cadwallon of Gwynedd
 	ViolentDeath = true,
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "deira" or GetPlayerData(trigger_player, "Faction") == "bernicia") then -- Edwin also ruled over Bernicia
 			return true
@@ -312,6 +325,7 @@ DefineCharacter("penda", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Date = 632, -- in 632, Penda (still a noble belonging to the Mercian royal house with no throne) allied himself Cadwallon of Gwynedd against Edwin of Deira
 	DeathDate = 654, -- died fighting against Oswiu of Bernicia; died in the autumn of 654
 	ViolentDeath = true,
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 632, 654, "mercia" -- became king of Mercia in 632 after Edwin's demise
 	},
@@ -333,6 +347,7 @@ DefineCharacter("osric", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Date = 632,
 	DeathDate = 633, -- died fighting against Cadwallon in the summer of 633
 	ViolentDeath = true,
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 632, 633, "deira" -- king of Deira from Edwin's death to 633
 	},
@@ -354,6 +369,7 @@ DefineCharacter("eanfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Date = 632,
 	DeathDate = 633, -- killed in 633 while visiting Cadwallon to sue for peace
 	ViolentDeath = true,
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 632, 633, "bernicia" -- king of Bernicia from Edwin's death to 633
 	},
@@ -372,6 +388,7 @@ DefineCharacter("talorcan", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Civilization = "anglo-saxon",
 	Faction = "bernicia",
 	Father = "eanfrith",
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 632, 633, "pict-tribe" -- was king of the Picts
 	},
@@ -393,6 +410,7 @@ DefineCharacter("oswald-of-bernicia", { -- Source: Frank Stenton, "Anglo-Saxon E
 	Date = 633, -- destroyed Cadwallon at Rowley Burn (south of Hexham) in 633, becoming king of both Bernicia and Deira
 	DeathDate = 641, -- defeated and killed by Penda of Mercia at Maserfelth (likely Oswestry in Shropshire) on the 5h of August 641
 	ViolentDeath = true,
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 633, 641, "bernicia",
 		"head-of-state", 633, 641, "deira"
@@ -413,6 +431,7 @@ DefineCharacter("eadfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Civilization = "anglo-saxon",
 	Faction = "deira",
 	Father = "edwin-of-deira",
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "deira") then
 			return true
@@ -429,6 +448,7 @@ DefineCharacter("wuscfrea", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Civilization = "anglo-saxon",
 	Faction = "deira",
 	Father = "edwin-of-deira",
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "deira") then
 			return true
@@ -443,6 +463,7 @@ DefineCharacter("yffi", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971,
 	Type = "unit-teuton-swordsman",
 	Civilization = "anglo-saxon",
 	Faction = "deira",
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "deira") then
 			return true
@@ -458,7 +479,8 @@ DefineCharacter("eanflaed", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Type = "unit-teuton-archer",
 	Civilization = "anglo-saxon",
 	Faction = "deira",
-	Father = "edwin-of-deira"
+	Father = "edwin-of-deira",
+	Deities = {"christian-god"}
 	-- married to Oswiu, brother of Oswald of Bernicia
 })
 
@@ -472,6 +494,7 @@ DefineCharacter("oswiu", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Date = 641,
 	DeathDate = 670,
 	Background = "Oswiu unified the kingdoms of Bernicia and Deira into Northumbria in 654 AD.",
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 641, 654, "bernicia", -- became king of Bernicia on the death of his brother Oswald
 		"head-of-state", 654, 670, "northumbria" -- Northumbria unified in 654
@@ -496,6 +519,7 @@ DefineCharacter("cynegils", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	HistoricalTitles = {
 		"head-of-state", 635, 0, "wessex" -- king of Wessex
 	},
+	Deities = {"christian-god"}, -- baptized in 635 by Birinus
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "wessex") then
 			return true
@@ -513,6 +537,7 @@ DefineCharacter("eadbald", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Father = "aethelberht",
 	-- son of Bertha of Paris
 	DeathDate = 640, -- reign ended
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 616, 640, "kent" -- became king of Kent in 616, and ceased to be king in 640
 	},
@@ -553,6 +578,7 @@ DefineCharacter("oswine", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Date = 641,
 	DeathDate = 651, -- died as a result of Oswiu of Bernicia's invasion of Deira in 651 AD
 	ViolentDeath = true,
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 641, 651, "deira" -- became king of Deira on the death of Oswald of Bernicia
 	},
@@ -572,6 +598,7 @@ DefineCharacter("aethelwald", { -- Source: Frank Stenton, "Anglo-Saxon England",
 	Faction = "deira",
 	Father = "oswald-of-bernicia",
 	Date = 651,
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 651, 0, "deira" -- was chosen by the Deirans as their king upon the demise of Oswine; he was under the protection of Penda of Mercia (apparently) from his accession
 	},
@@ -592,6 +619,7 @@ DefineCharacter("aethelhere", { -- Source: Frank Stenton, "Anglo-Saxon England",
 	Date = 654,
 	DeathDate = 654, -- in 654 went with Penda to attack Oswiu of Bernicia, resulting in Æthelhere's death
 	ViolentDeath = true,
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 654, 654, "east-anglia" -- king of East Anglia; in 654 went with Penda to attack Oswiu of Bernicia, resulting in Æthelhere's death
 	},
@@ -609,6 +637,7 @@ DefineCharacter("sigeberht", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
 	Faction = "essex",
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "essex" -- king of Essex
 	},
@@ -628,6 +657,7 @@ DefineCharacter("cenwalh", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Faction = "wessex",
 	Father = "cynegils", -- second son of Cynegils
 	DeathDate = 645, -- reign ended
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 0, 645, "wessex" -- king of Wessex; was driven from his kingdom by Penda's Mercia in 645
 	},
@@ -672,6 +702,7 @@ DefineCharacter("peada", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Date = 653, -- was ruling the Middle Angles in 653 when he was baptized
 	DeathDate = 656, -- murdered in the spring of 656
 	ViolentDeath = true,
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 654, 656, "middle-anglia"
 	},
@@ -693,6 +724,7 @@ DefineCharacter("alhflaed", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Faction = "northumbria",
 	Father = "oswiu", -- Oswiu of Bernicia
 	Date = 653, -- married Peada in 653
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
 			return true
@@ -726,6 +758,7 @@ DefineCharacter("wulfhere", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Father = "penda",
 	Date = 657, -- beginning of reign
 	DeathDate = 674, -- died
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 657, 674, "mercia" -- became king of Mercia in 657; died in 674
 	},
@@ -803,6 +836,7 @@ DefineCharacter("egbert-of-kent", { -- Source: Frank Stenton, "Anglo-Saxon Engla
 	Civilization = "anglo-saxon",
 	Faction = "kent",
 	Date = 667, -- was king of Kent as of 667
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 667, 0, "kent" -- was king of Kent as of 667
 	},
@@ -859,6 +893,7 @@ DefineCharacter("ecgfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Date = 674, -- defeated Wulfhere of Mercia's invasion of Northumbria in 674
 	DeathDate = {685, 5, 20}, -- died in the 20th of May 685 at Duin Nechtain / Nechtanesmere while leading a raid against the Picts under their king Bruide
 	ViolentDeath = true,
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 674, 685, "northumbria" -- king of Northumbria
 	},
@@ -947,6 +982,7 @@ DefineCharacter("beornhaeth", { -- Source: Frank Stenton, "Anglo-Saxon England",
 	Type = "unit-teuton-heroic-swordsman", -- ealdorman
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
 			return true
@@ -963,6 +999,7 @@ DefineCharacter("aethelred-of-mercia", { -- Source: Frank Stenton, "Anglo-Saxon 
 	Faction = "mercia",
 	Father = "penda", -- presumably, since he was Wulfhere of Mercia's brother
 	Date = 678, -- defeated Ecgfrith of Northumbria in a battle close to the Trent river in 678
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "mercia") then
 			return true
@@ -979,6 +1016,7 @@ DefineCharacter("aethelwalh", { -- Source: Frank Stenton, "Anglo-Saxon England",
 	Faction = "sussex",
 	Date = 681, -- was king of the South Saxons as of 681
 	DeathDate = 686, -- died in 686, having been killed by Cædwalla
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 681, 686, "sussex"
 	},
@@ -1014,6 +1052,7 @@ DefineCharacter("berhtwald-of-mercia", { -- probably not the same Berhtwald as t
 	Faction = "mercia",
 	-- nephew of king Æthelred of Mercia
 	Date = 685, -- gave forty hides (a measure of land area) to abbot Aldhelm in 685
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "mercia") then
 			return true
@@ -1050,6 +1089,7 @@ DefineCharacter("aldfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Father = "oswiu",
 	Date = {685, 5, 20},
 	DeathDate = 704, -- died on 704.12
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", {685, 5, 20}, 704, "northumbria" -- succeeded his brother Ecgfrith as king of Northumbria on 685.5.20
 	},
@@ -1068,6 +1108,7 @@ DefineCharacter("caedwalla", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 	Civilization = "anglo-saxon",
 	Faction = "wessex", -- West Saxon exile
 	Date = 686, -- killed king Aethelwalh of Sussex in 686
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "wessex") then
 			return true
@@ -1152,6 +1193,7 @@ DefineCharacter("wihtred", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Civilization = "anglo-saxon",
 	Faction = "kent",
 	Date = 695,
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 695, 0, "kent" -- king of Kent as of 695
 	},
@@ -1174,6 +1216,7 @@ DefineCharacter("osred", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Date = 697, -- began to rule in 705, when he was eight years old
 	DeathDate = 716, -- murdered in 716
 	ViolentDeath = true,
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 705, 716, "northumbria" -- king of Northumbria; began to rule in 705
 	},
@@ -1208,6 +1251,7 @@ DefineCharacter("cenred", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Civilization = "anglo-saxon",
 	Faction = "mercia",
 	Date = 704,
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 704, 0, "mercia" -- king of Mercia as of 704/705
 	},
@@ -1243,6 +1287,7 @@ DefineCharacter("beorhtfrith", { -- Source: Frank Stenton, "Anglo-Saxon England"
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
 	Date = 711, -- defeated a Pictish army in the Scottish central plain in 711
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
 			return true
@@ -1321,6 +1366,7 @@ DefineCharacter("wynbald", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Date = 720, -- began a pilgrimage to the Middle East in 720 with his brother Willibald and their father
 	-- by 750 had become the head of a double monastery at Heidenheim together with his sister Waldburg
 	DeathDate = 761, -- died in 761
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "wessex" or GetPlayerData(trigger_player, "Faction") == "englaland") then
 			return true
@@ -1337,6 +1383,7 @@ DefineCharacter("ceolwulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Faction = "northumbria",
 	Date = 729,
 	DeathDate = 737,
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 729, 737, "northumbria" -- was king of Northumbria between 729 and 737
 	},
@@ -1391,6 +1438,7 @@ DefineCharacter("eadberht", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
 	Date = 737,
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 737, 758, "northumbria" -- succeeded Ceolwulf as king of Northumbria, withdrew from public life in 758, becoming a clerk under his brother Egbert, the archbishop of York
 	},
@@ -1410,6 +1458,7 @@ DefineCharacter("aethelbald", { -- Source: Frank Stenton, "Anglo-Saxon England",
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
 	Faction = "mercia",
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "mercia" -- was king of Mercia
 	},
@@ -1428,6 +1477,7 @@ DefineCharacter("offa-of-northumbria", { -- Source: Frank Stenton, "Anglo-Saxon 
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
 	Father = "aldfrith",
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
 			return true
@@ -1474,6 +1524,7 @@ DefineCharacter("oswulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Faction = "northumbria",
 	Father = "eadberht",
 	DeathDate = 758, -- killed by his retainers in the summer of 758
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
 			return true
@@ -1540,6 +1591,7 @@ DefineCharacter("aethelwald-moll", { -- Source: Frank Stenton, "Anglo-Saxon Engl
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
 	Date = 759,
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 759, 765, "northumbria" -- became king of Northumbria in 759, lost the throne to Alhred six years later
 	},
@@ -1559,6 +1611,7 @@ DefineCharacter("alhred", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Faction = "northumbria",
 	Date = 765,
 	DeathDate = 774, -- end of reign
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 765, 774, "northumbria" -- king of Northumbria between 765 and 774; in 774 lost the throne by a formal act of the nobility and his own household
 	},
@@ -1634,6 +1687,7 @@ DefineCharacter("torhtmund", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 	Type = "unit-teuton-swordsman",
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
+	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
 			return true
@@ -1655,6 +1709,7 @@ DefineCharacter("aethelred-moll", { -- Source: Frank Stenton, "Anglo-Saxon Engla
 	Date = 774,
 	DeathDate = 796, -- murdered
 	ViolentDeath = true,
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 774, 779, "northumbria", -- became king of Northumbria after Alhred was deposed, was expelled in 779 from Northumbria by Ælfwald
 		"head-of-state", 789, 796, "northumbria" -- was restored to the throne within a year after Ælfwald's reign ended
@@ -1677,6 +1732,7 @@ DefineCharacter("aelfwald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Faction = "northumbria",
 	Date = 779, -- expelled Æthelred Moll from Northumbria
 	DeathDate = 788,
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 779, 788, "northumbria" -- king of Northumbria between 779 and 788
 	},
@@ -1713,6 +1769,7 @@ DefineCharacter("offa-of-mercia", { -- Source: Frank Stenton, "Anglo-Saxon Engla
 	Civilization = "anglo-saxon",
 	Faction = "mercia",
 	Date = 792,
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 792, 0, "mercia" -- was king of Mercia in 792 when Æthelred Moll married a daughter of his
 	},
@@ -1732,6 +1789,7 @@ DefineCharacter("eardwulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Faction = "northumbria",
 	Date = 801,
 	DeathDate = 810, -- died
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 801, 808, "northumbria", -- was king of Northumbia in 801 when he invaded Mercia; in the spring of 808 he was expelled from Northumbria
 		"head-of-state", 808, 810, "northumbria" -- was restored as king in the same year of being expelled, with the support of Charlemagne and Pope Leo III; died in or before 810
@@ -1751,6 +1809,7 @@ DefineCharacter("cenwulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Civilization = "anglo-saxon",
 	Faction = "mercia",
 	Date = 801,
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 801, 0, "mercia" -- was king of Mercia in 801 when Eardwulf of Northumbria invaded it
 	},
@@ -1809,6 +1868,7 @@ DefineCharacter("eanred", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Father = "eardwulf",
 	Date = 810,
 	DeathDate = 840,
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 810, 840, "northumbria" -- succeeded Eardwulf as king of Northumbria, and ruled for thirty years
 	},
@@ -1843,6 +1903,7 @@ DefineCharacter("egbert-of-wessex", { -- Source: Frank Stenton, "Anglo-Saxon Eng
 	Civilization = "anglo-saxon",
 	Faction = "wessex",
 	Date = 829,
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 829, 0, "wessex" -- was king of Wessex in 829 when Eanred of Northumbria submitted to him
 	},
@@ -1877,6 +1938,7 @@ DefineCharacter("aethelbald-of-wessex", { -- Source: Frank Stenton, "Anglo-Saxon
 	Civilization = "anglo-saxon",
 	Faction = "wessex",
 	Date = 858,
+	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 858, 0, "wessex" -- was king of Wessex as of 858
 	},
@@ -1894,7 +1956,8 @@ DefineCharacter("ethelred", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "anglo-saxon",
-	Date = 1002 -- massacred the Danes in 1002
+	Date = 1002, -- massacred the Danes in 1002
+	Deities = {"christian-god"}
 })
 
 DefineCharacter("nicolas-breakspear", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 126.
