@@ -334,7 +334,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-christianity",
 	Action = "research", Value = "upgrade-deity-christian-god",
 	Allowed = "check-single-research",
 	Key = "c", Hint = "Convert to ~!Christianity", Popup = "popup-research",
-	Description = "Choose Christianity as your religion. +10 HP , +20 Mana and enables Healing spell for Clerics. Allows new magic affixes for items sold at the Market. Incompatible with any pagan deities.",
+	Description = "Choose Christianity as your religion. +10 HP, +20 Mana and enables Healing spell for Clerics. Allows new magic affixes for items sold at the Market. Incompatible with any pagan deities.",
 	ForUnit = {"unit-teuton-temple"}
 })
   
@@ -416,7 +416,7 @@ DefineButton( { Pos = 10, Level = 0, Icon = "icon-hel",
 DefineButton( { Pos = 9, Level = 2, Icon = "icon-christianity",
 	Action = "learn-ability", Value = "upgrade-deity-christian-god",
 	Key = "c", Hint = "Convert to ~!Christianity", Popup = "popup-learn-ability",
-	Description = "Choose Christianity as your hero's religion. +10 HP , +20 Mana and enables Healing spell for Clerics. Incompatible with any pagan deities.",
+	Description = "Choose Christianity as your hero's religion. +10 HP, +20 Mana and enables Healing spell for Clerics. Incompatible with any pagan deities.",
 	ForUnit = {
 		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
 		"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman",
