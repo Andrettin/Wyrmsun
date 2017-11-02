@@ -2504,17 +2504,24 @@ if not (ui_loaded_first_time) then
 			{ 	Condition = {RequirementsString = "only", ResearchedUpgrade = "false"}, HighlightColor = "yellow",
 				More = {"Text", {Text = Concat(_("Requirements: "), UpgradeRequirementsString("Upgrade")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
 			},
-			-- Other Information
-			{ 	Margin = {1, 1}, Condition = {ResearchedUpgrade = "false"}, 
+			-- Already Acquired
+			{ 	Margin = {1, 1}, Condition = {Ability = "false", ResearchedUpgrade = "only"},
 				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			},
-			{ 	Condition = {ResearchedUpgrade = "false"}, HighlightColor = "yellow",
+			{ 	Condition = {Ability = "false", ResearchedUpgrade = "only"}, HighlightColor = "yellow",
+				More = {"Text", {Text = _("Already acquired"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+			},
+			-- Other Information
+			{ 	Margin = {1, 1}, Condition = {Ability = "only", ResearchedUpgrade = "false"}, 
+				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+			},
+			{ 	Condition = {Ability = "only", ResearchedUpgrade = "false"}, HighlightColor = "yellow",
 				More = {"Text", {Text = _("Requires 1 Level Up Point"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 			},
-			{ 	Margin = {1, 1}, 
+			{ 	Condition = {Ability = "only"}, Margin = {1, 1}, 
 				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			},
-			{ 	HighlightColor = "yellow",
+			{ 	Condition = {Ability = "only"}, HighlightColor = "yellow",
 				More = {"Text", {Text = Concat(
 						_("Max Limit: "),
 						Concat(
