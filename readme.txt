@@ -76,6 +76,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Scenarios
 - After the "Slay Geirrod" quest is acquired, the area around the portal to Jotunheim is now revealed for a short time (with a special revealer that can see ethereal objects such as portals). Additionally, the map is also centered on the portal's location.
+- Added the "Temple to Haimadala" side-quest for the Haimadala's Progeny scenario. To complete it, a temple has to be built and Haimadala has to be chosen as a minor deity.
 
 -----------------------------------------------------------------------
 - 2.9.1

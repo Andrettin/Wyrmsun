@@ -245,6 +245,27 @@ DefineQuest("jarls-retainers", { -- based on the Song of Rig; Source: Kevin Cros
 	HeroesMustSurvive = {"erala"}
 })
 
+DefineQuest("temple-to-heimdall", {
+	Name = "Temple to Haimadala",
+	Icon = "icon-germanic-temple",
+	Description = "Our tribe's chieftain traces descent from the god Haimadala. We would do well to build a temple honoring the mighty deity.",
+	PlayerColor = "yellow",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "jarling-tribe" or GetPlayerData(trigger_player, "Faction") == "karling-tribe" or GetPlayerData(trigger_player, "Faction") == "thralling-tribe") then -- must belong to one of the three factions whose progenitor is a son of Heimdall in the Rigsthula: the Jarlings/Eralings, Karlings and Thrallings/Thrahilings
+			return true
+		end
+		return false
+	end,
+	CompletionEffects = function(s)
+		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 2000)
+	end,
+	Objectives = {"- Build a Temple", "- Worship Haimadala"},
+	BuildUnits = {"unit-germanic-temple", 1},
+	ResearchUpgrades = {"upgrade-deity-heimdall"},
+	Rewards = "+2000 Copper",
+	Hint = "Select a Bura, press the Build Structure button and then click on the Build Temple button to build the structure required for this quest. Once the Temple has been built, click on it, and the Worship Haimadala button will be visible. In order for Haimadala to be available, a major deity (such as Wodanaz or Thunraz) will have to be chosen for worship first."
+})
+
 DefineQuest("heimdalls-stones", {
 	Name = "Haimadala's Stones",
 	Icon = "icon-germanic-temple",
@@ -253,10 +274,7 @@ DefineQuest("heimdalls-stones", {
 	Conditions = function(s)
 		if (
 			GetUniqueItemData("heimdalls-stones", "CanDrop")
-			and ( -- must be pagan (in the future could just require having the Heimdall deity instead)
-				GetPlayerData(trigger_player, "Allow", "upgrade-deity-odin") == "R"
-				or GetPlayerData(trigger_player, "Allow", "upgrade-deity-thor") == "R"
-			)
+			and GetPlayerData(trigger_player, "Allow", "upgrade-deity-heimdall") == "R"
 		) then
 			return true
 		end
@@ -280,10 +298,6 @@ DefineQuest("journey-to-heimdalls-stones", {
 	Conditions = function(s)
 		if (
 			GetUniqueItemData("heimdalls-stones", "CanDrop") == false -- Heimdall's Stones must exist
-			and ( -- must be pagan (in the future could just require having the Heimdall deity instead)
-				GetPlayerData(trigger_player, "Allow", "upgrade-deity-odin") == "R"
-				or GetPlayerData(trigger_player, "Allow", "upgrade-deity-thor") == "R"
-			)
 		) then
 			return true
 		end

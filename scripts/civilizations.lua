@@ -517,7 +517,6 @@ DefineCivilization("dwarf", {
 		"male", "Karrag", -- dwarf from Battle for Wesnoth: The Hammer of Thursagan
 		"male", "Kili", -- dwarf from Norse mythology
 		"male", "Kinan", -- dwarf from Battle for Wesnoth: The Sceptre of Fire
-		"male", "Kuhnar", -- dwarf from Battle for Wesnoth: The Sceptre of Fire
 		"male", "Laurin", -- dwarf from German sagas
 		"male", "Lit", -- dwarf from Norse mythology
 		"male", "Lofar", -- dwarf from Norse mythology who was a descendant of the settlers of Joruvellir
@@ -561,7 +560,6 @@ DefineCivilization("dwarf", {
 		"male", "Nidi", -- dwarf from Norse mythology
 		"male", "Nidjung", -- dwarf from Norse mythology; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 454.
 		"male", "Niping", -- dwarf from Norse mythology
-		"male", "Noiraran", -- dwarf from Battle for Wesnoth: The Sceptre of Fire
 		"male", "Nordri", -- dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 101.
 		"male", "Nori", -- dwarf from Norse mythology
 		"male", "Nyi", -- dwarf from Norse mythology

@@ -230,7 +230,7 @@ DefineCharacter("thursagan", { -- from Battle for Wesnoth: The Sceptre of Fire; 
 DefineCharacter("baglur", { -- from Battle for Wesnoth: The Sceptre of Fire; veteran warrior and member of the party of dwarves who handled the crafting of the Sceptre of Fire
 	Name = "Baglur",
 	Gender = "male",
-	Type = "unit-dwarven-steelclad",
+	Type = "unit-dwarven-steelclad", -- Stalwart
 	Civilization = "dwarf",
 	Faction = "norlund-clan",
 	Description = "Baglur is an old and well-experienced warrior. He came back from retirement to help Rugnur defend their homeland against an attack from the Shinsplitter Clan.",
@@ -313,6 +313,41 @@ DefineCharacter("rugnur", { -- from Battle for Wesnoth: The Sceptre of Fire; lea
 	Deities = {"odin", "tyr"},
 	HistoricalLocations = {
 		25, "nidavellir", "rugnurs-outpost" -- at this time Rugnur was already in charge of the outpost in the Chaincolt Foothills
+	}
+})
+
+DefineCharacter("noiraran", { -- from Battle for Wesnoth: The Sceptre of Fire
+	Name = "Noiraran",
+	Gender = "male",
+	Type = "unit-dwarven-thunderer", -- Thunderguard
+	Civilization = "dwarf",
+	Faction = "norlund-clan",
+	Trait = "upgrade-intelligent",
+	Level = 2,
+	Date = 25,
+	DeathDate = 40, -- presumably died in 40 AD of a violent death
+	ViolentDeath = true,
+	Deities = {"thor", "tyr"},
+	Description = "Noiraran is a member of Durstorn's guard.",
+	HistoricalLocations = {
+		25, "nidavellir-underground", "chaincolt"
+	}
+})
+
+DefineCharacter("kuhnar", { -- from Battle for Wesnoth: The Sceptre of Fire
+	Name = "Kuhnar",
+	Gender = "male",
+	Type = "unit-dwarven-steelclad",
+	Civilization = "dwarf",
+	Faction = "norlund-clan",
+	Trait = "upgrade-strong",
+	Date = 25,
+	DeathDate = 40, -- presumably died in 40 AD of a violent death
+	ViolentDeath = true,
+	Deities = {"odin", "tyr"},
+	Description = "Kuhnar is a member of Durstorn's guard.",
+	HistoricalLocations = {
+		25, "nidavellir-underground", "chaincolt"
 	}
 })
 
