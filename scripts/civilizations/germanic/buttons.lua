@@ -210,6 +210,45 @@ DefineButton( { Pos = 10, Level = 0, Icon = "icon-thor",
 	}
 })
 
+DefineButton( { Pos = 9, Level = 0, Icon = "icon-tyr",
+	Action = "learn-ability", Value = "upgrade-deity-tyr",
+	Key = "z", Hint = "Worship Tiwa~!z", Popup = "popup-commands",
+	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
+	Description = "Choose Tiwaz as a minor deity for your hero. +2 Damage for Eralas and enables [...] spell for Gudjans. Incompatible with the Haimadala and Haljo minor deities.",
+	ForUnit = {
+		"unit-germanic-worker",
+		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",
+		"unit-germanic-spearman", "unit-germanic-archer",
+		"unit-germanic-priest"
+	}
+})
+  
+DefineButton( { Pos = 10, Level = 0, Icon = "icon-heimdall",
+	Action = "learn-ability", Value = "upgrade-deity-heimdall",
+	Key = "d", Hint = "Worship Haima~!dala", Popup = "popup-commands",
+	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
+	Description = "Choose Haimadala as a minor deity for your hero. +1 Sight for Skutans, enables Far Sight spell for Gudjans. Incompatible with the Haljo and Tiwaz minor deities.",
+	ForUnit = {
+		"unit-germanic-worker",
+		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",
+		"unit-germanic-spearman", "unit-germanic-archer",
+		"unit-germanic-priest"
+	}
+})
+  
+DefineButton( { Pos = 11, Level = 0, Icon = "icon-hel",
+	Action = "learn-ability", Value = "upgrade-deity-hel",
+	Key = "h", Hint = "Worship ~!Haljo", Popup = "popup-commands",
+	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
+	Description = "Choose Haljo as a minor deity for your hero. +20 Mana and enables Wither spell for Gudjans. Incompatible with the Haimadala and Tiwaz minor deities.",
+	ForUnit = {
+		"unit-germanic-worker",
+		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",
+		"unit-germanic-spearman", "unit-germanic-archer",
+		"unit-germanic-priest"
+	}
+})
+
 -- Upgrades ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 2,

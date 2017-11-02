@@ -366,7 +366,20 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-gathaarl",
 		"unit-goblin-shaman"
 	}
 })
-  
+
+DefineButton( { Pos = 9, Level = 0, Icon = "icon-hel",
+	Action = "learn-ability", Value = "upgrade-deity-hel",
+	Key = "h", Hint = "Worship ~!Hel", Popup = "popup-commands",
+	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-gathaarl"},
+	Description = "Choose Hel as a minor deity for your hero. +20 Mana and enables Wither spell for Shamans.",
+	ForUnit = {
+		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman",
+		"unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shadowstalker",
+		"unit-goblin-gunpowder-infantry",
+		"unit-goblin-shaman"
+	}
+})
+
 -- Upgrades ---------------------------------------------------------
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-goblin-stronghold",

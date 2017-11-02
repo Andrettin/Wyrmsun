@@ -464,6 +464,72 @@ DefineButton( { Pos = 11, Level = 0, Icon = "icon-thor",
 	}
 })
 
+DefineButton( { Pos = 9, Level = 0, Icon = "icon-tyr",
+	Action = "learn-ability", Value = "upgrade-deity-tyr",
+	Key = "z", Hint = "Worship ~!Ziu", Popup = "popup-commands",
+	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
+	Description = "Choose Ziu as a minor deity for your hero. +2 Damage for sword infantry and enables [...] spell for Gudjans. Incompatible with the Hella minor deity.",
+	ForUnit = {
+		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
+		"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman",
+		"unit-teuton-spearman", "unit-frank-spearman",
+		"unit-teuton-archer",
+		"unit-teuton-gunpowder-infantry",
+		"unit-teuton-ritter", "unit-teuton-knight-lord",
+		"unit-frank-horseman", "unit-frank-knight-lord",
+		"unit-teuton-priest"
+	}
+})
+
+DefineButton( { Pos = 9, Level = 0, Icon = "icon-tyr",
+	Action = "learn-ability", Value = "upgrade-deity-tyr",
+	Key = "y", Hint = "Worship T~!yr", Popup = "popup-commands",
+	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
+	Description = "Choose Tyr as a minor deity for your hero. +2 Damage for sword infantry and enables [...] spell for Gudjans. Incompatible with the Halja minor deity.",
+	ForUnit = {
+		"unit-gothic-horse-rider", "unit-gothic-horse-lord"
+	}
+})
+
+--[[
+DefineButton( { Pos = 10, Level = 0, Icon = "icon-heimdall",
+	Action = "learn-ability", Value = "upgrade-deity-heimdall",
+	Key = "d", Hint = "Worship Haima~!dala", Popup = "popup-commands",
+	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
+	Description = "Choose Heimdall as a minor deity for your hero. +1 Sight for Skutans, enables Far Sight spell for Gudjans. Incompatible with the Haljo and Tiwaz minor deities.",
+	ForUnit = {
+	}
+})
+--]]
+
+DefineButton( { Pos = 11, Level = 0, Icon = "icon-hel",
+	Action = "learn-ability", Value = "upgrade-deity-hel",
+	Key = "h", Hint = "Worship ~!Hella", Popup = "popup-commands",
+	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
+	Description = "Choose Hella as a minor deity for your hero. +20 Mana and enables Wither spell for Gudjans. Incompatible with the Ziu minor deity.",
+	ForUnit = {
+		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
+		"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman",
+		"unit-teuton-spearman", "unit-frank-spearman",
+		"unit-teuton-archer",
+		"unit-teuton-gunpowder-infantry",
+		"unit-teuton-ritter", "unit-teuton-knight-lord",
+		"unit-frank-horseman", "unit-frank-knight-lord",
+		"unit-gothic-horse-rider", "unit-gothic-horse-lord",
+		"unit-teuton-priest"
+	}
+})
+
+DefineButton( { Pos = 11, Level = 0, Icon = "icon-hel",
+	Action = "learn-ability", Value = "upgrade-deity-hel",
+	Key = "h", Hint = "Worship ~!Halja", Popup = "popup-commands",
+	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
+	Description = "Choose Halja as a minor deity for your hero. +20 Mana and enables Wither spell for Gudjans. Incompatible with the Tyr minor deity.",
+	ForUnit = {
+		"unit-gothic-horse-rider", "unit-gothic-horse-lord"
+	}
+})
+
 -- Upgrades ---------------------------------------------------------
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-stronghold",
