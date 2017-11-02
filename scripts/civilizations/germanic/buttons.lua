@@ -186,9 +186,9 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-hel",
 	ForUnit = {"unit-germanic-temple"}
 })
 
-DefineButton( { Pos = 9, Level = 0, Icon = "icon-odin",
+DefineButton( { Pos = 9, Level = 2, Icon = "icon-odin",
 	Action = "learn-ability", Value = "upgrade-deity-odin",
-	Key = "w", Hint = "Worship ~!Wodanaz", Popup = "popup-commands",
+	Key = "w", Hint = "Worship ~!Wodanaz", Popup = "popup-learn-ability",
 	Description = "Choose Wodanaz as your hero's major deity. +2 Damage for Skutans, enables Inspire spell for Gudjans. Incompatible with the Thunraz major deity.",
 	ForUnit = {
 		"unit-germanic-worker",
@@ -198,9 +198,9 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-odin",
 	}
 })
   
-DefineButton( { Pos = 10, Level = 0, Icon = "icon-thor",
+DefineButton( { Pos = 10, Level = 2, Icon = "icon-thor",
 	Action = "learn-ability", Value = "upgrade-deity-thor",
-	Key = "t", Hint = "Worship ~!Thunraz", Popup = "popup-commands",
+	Key = "t", Hint = "Worship ~!Thunraz", Popup = "popup-learn-ability",
 	Description = "Choose Thunraz as your hero's major deity. +2 Damage for Eralas, enables Precision spell for Gudjans. Incompatible with the Wodanaz major deity.",
 	ForUnit = {
 		"unit-germanic-worker",
@@ -210,9 +210,9 @@ DefineButton( { Pos = 10, Level = 0, Icon = "icon-thor",
 	}
 })
 
-DefineButton( { Pos = 9, Level = 0, Icon = "icon-tyr",
+DefineButton( { Pos = 11, Level = 2, Icon = "icon-tyr",
 	Action = "learn-ability", Value = "upgrade-deity-tyr",
-	Key = "z", Hint = "Worship Tiwa~!z", Popup = "popup-commands",
+	Key = "z", Hint = "Worship Tiwa~!z", Popup = "popup-learn-ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
 	Description = "Choose Tiwaz as a minor deity for your hero. +2 Damage for Eralas and enables [...] spell for Gudjans. Incompatible with the Haimadala and Haljo minor deities.",
 	ForUnit = {
@@ -223,9 +223,9 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-tyr",
 	}
 })
   
-DefineButton( { Pos = 10, Level = 0, Icon = "icon-heimdall",
+DefineButton( { Pos = 12, Level = 2, Icon = "icon-heimdall",
 	Action = "learn-ability", Value = "upgrade-deity-heimdall",
-	Key = "d", Hint = "Worship Haima~!dala", Popup = "popup-commands",
+	Key = "d", Hint = "Worship Haima~!dala", Popup = "popup-learn-ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
 	Description = "Choose Haimadala as a minor deity for your hero. +1 Sight for Skutans, enables Far Sight spell for Gudjans. Incompatible with the Haljo and Tiwaz minor deities.",
 	ForUnit = {
@@ -236,9 +236,9 @@ DefineButton( { Pos = 10, Level = 0, Icon = "icon-heimdall",
 	}
 })
   
-DefineButton( { Pos = 11, Level = 0, Icon = "icon-hel",
+DefineButton( { Pos = 13, Level = 2, Icon = "icon-hel",
 	Action = "learn-ability", Value = "upgrade-deity-hel",
-	Key = "h", Hint = "Worship ~!Haljo", Popup = "popup-commands",
+	Key = "h", Hint = "Worship ~!Haljo", Popup = "popup-learn-ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
 	Description = "Choose Haljo as a minor deity for your hero. +20 Mana and enables Wither spell for Gudjans. Incompatible with the Haimadala and Tiwaz minor deities.",
 	ForUnit = {

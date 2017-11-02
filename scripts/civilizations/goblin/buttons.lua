@@ -355,9 +355,9 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-hel",
 	ForUnit = {"unit-goblin-temple"}
 })
 
-DefineButton( { Pos = 9, Level = 0, Icon = "icon-gathaarl",
+DefineButton( { Pos = 9, Level = 2, Icon = "icon-gathaarl",
 	Action = "learn-ability", Value = "upgrade-deity-gathaarl",
-	Key = "g", Hint = "Worship ~!Gathaarl", Popup = "popup-commands",
+	Key = "g", Hint = "Worship ~!Gathaarl", Popup = "popup-learn-ability",
 	Description = "Choose Gathaarl as your hero's major deity. +2 Damage for Swordsmen, enables Terror spell for Shamans.",
 	ForUnit = {
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman",
@@ -367,9 +367,9 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-gathaarl",
 	}
 })
 
-DefineButton( { Pos = 9, Level = 0, Icon = "icon-hel",
+DefineButton( { Pos = 10, Level = 2, Icon = "icon-hel",
 	Action = "learn-ability", Value = "upgrade-deity-hel",
-	Key = "h", Hint = "Worship ~!Hel", Popup = "popup-commands",
+	Key = "h", Hint = "Worship ~!Hel", Popup = "popup-learn-ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-gathaarl"},
 	Description = "Choose Hel as a minor deity for your hero. +20 Mana and enables Wither spell for Shamans.",
 	ForUnit = {

@@ -543,9 +543,9 @@ DefineButton( { Pos = 8, Level = 0, Icon = "icon-hel",
 	ForUnit = {"unit-dwarven-temple"}
 })
 
-DefineButton( { Pos = 9, Level = 0, Icon = "icon-odin",
+DefineButton( { Pos = 9, Level = 2, Icon = "icon-odin",
 	Action = "learn-ability", Value = "upgrade-deity-odin",
-	Key = "o", Hint = "Worship Hr~!optatyr", Popup = "popup-commands",
+	Key = "o", Hint = "Worship Hr~!optatyr", Popup = "popup-learn-ability",
 	Description = "Choose Hroptatyr as your hero's major deity. +2 Damage for Axefighters, enables Inspire spell for Witnesses. Incompatible with the Thor major deity.",
 	ForUnit = {
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
@@ -561,9 +561,9 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-odin",
 	}
 })
   
-DefineButton( { Pos = 10, Level = 0, Icon = "icon-thor",
+DefineButton( { Pos = 10, Level = 2, Icon = "icon-thor",
 	Action = "learn-ability", Value = "upgrade-deity-thor",
-	Key = "t", Hint = "Worship ~!Thor", Popup = "popup-commands",
+	Key = "t", Hint = "Worship ~!Thor", Popup = "popup-learn-ability",
 	Description = "Choose Thor as your hero's major deity. +2 Damage for Scouts, enables Precision spell for Witnesses. Incompatible with the Hroptatyr major deity.",
 	ForUnit = {
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
@@ -579,9 +579,9 @@ DefineButton( { Pos = 10, Level = 0, Icon = "icon-thor",
 	}
 })
 
-DefineButton( { Pos = 9, Level = 0, Icon = "icon-tyr",
+DefineButton( { Pos = 11, Level = 2, Icon = "icon-tyr",
 	Action = "learn-ability", Value = "upgrade-deity-tyr",
-	Key = "y", Hint = "Worship T~!yr", Popup = "popup-commands",
+	Key = "y", Hint = "Worship T~!yr", Popup = "popup-learn-ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
 	Description = "Choose Tyr as a minor deity for your hero. +2 Damage for Axefighters and enables [...] spell for Witnesses. Incompatible with the Hel minor deity.",
 	ForUnit = {
@@ -598,9 +598,9 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-tyr",
 	}
 })
   
-DefineButton( { Pos = 10, Level = 0, Icon = "icon-hel",
+DefineButton( { Pos = 12, Level = 2, Icon = "icon-hel",
 	Action = "learn-ability", Value = "upgrade-deity-hel",
-	Key = "h", Hint = "Worship ~!Hel", Popup = "popup-commands",
+	Key = "h", Hint = "Worship ~!Hel", Popup = "popup-learn-ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
 	Description = "Choose Hel as a minor deity for your hero. +20 Mana and enables Wither spell for Witnesses. Incompatible with the Tyr minor deity.",
 	ForUnit = {

@@ -331,7 +331,7 @@ DefineButton( { Pos = 16, Level = 0, Icon = "icon-cancel",
 DefineButton( { Pos = 13, Level = 0, Icon = "icon-level-up",
 	Action = "button", Value = 2,
 	Allowed = "check-has-sub-buttons",
-	Key = "l", Hint = "Choose ~!Level-Up Upgrade", Popup = "popup-commands",
+	Key = "u", Hint = "Choose ~!Upgrade", Popup = "popup-commands",
 	ForUnit = {
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
 		"unit-dwarven-guard",
@@ -373,7 +373,7 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-level-up",
 DefineButton( { Pos = 14, Level = 0, Icon = "icon-level-up",
 	Action = "button", Value = 2,
 	Allowed = "check-has-sub-buttons",
-	Key = "l", Hint = "Choose ~!Level-Up Upgrade", Popup = "popup-commands",
+	Key = "u", Hint = "Choose ~!Upgrade", Popup = "popup-commands",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
@@ -579,6 +579,18 @@ DefineButton( { Pos = 5, Level = 2, Icon = "icon-eagle-eye",
 	}
 } )
 
+DefineButton( { Pos = 6, Level = 2, Icon = "icon-scouting",
+	Action = "learn-ability", Value = "upgrade-scouting",
+	Key = "s", Hint = "Learn ~!Scouting", Popup = "popup-learn-ability",
+	Description = "Scouting is a passive ability that increases sight by 1",
+	ForUnit = {
+		"unit-dwarven-gryphon-rider",
+		"unit-germanic-archer",
+		"unit-teuton-archer",
+		"unit-goblin-shadowstalker"
+	}
+} )
+
 DefineButton( { Pos = 6, Level = 2, Icon = "icon-stun",
 	Action = "learn-ability", Value = "upgrade-stun",
 	Key = "u", Hint = "Learn St~!un", Popup = "popup-learn-ability",
@@ -601,35 +613,7 @@ DefineButton( { Pos = 6, Level = 2, Icon = "icon-stun",
 	}
 } )
 
-DefineButton( { Pos = 7, Level = 2, Icon = "icon-scouting",
-	Action = "learn-ability", Value = "upgrade-scouting",
-	Key = "s", Hint = "Learn ~!Scouting", Popup = "popup-learn-ability",
-	Description = "Scouting is a passive ability that increases sight by 1",
-	ForUnit = {
-		"unit-dwarven-gryphon-rider",
-		"unit-germanic-archer",
-		"unit-teuton-archer",
-		"unit-goblin-shadowstalker"
-	}
-} )
-
-DefineButton( { Pos = 8, Level = 2, Icon = "icon-puncture",
-	Action = "learn-ability", Value = "upgrade-puncture",
-	Key = "r", Hint = "Learn Punctu~!re", Popup = "popup-learn-ability",
-	Description = "Puncture is an active ability which makes the target bleed for a certain duration. Only usable with melee weapons capable of doing thrusting attacks",
-	ForUnit = {
-		"unit-germanic-chieftain", "unit-germanic-spearman",
-		"unit-teuton-heroic-swordsman", "unit-frank-heroic-swordsman",
-		"unit-teuton-spearman", "unit-frank-spearman",
-		"unit-dwarven-guard",
-		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
-		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman",
-		"unit-elven-swordsman",
-		"unit-wolf", "unit-wyrm", "unit-bat", "unit-blood-bat", "unit-dread-bat"
-	}
-} )
-
-DefineButton( { Pos = 9, Level = 2, Icon = "icon-precise-shot",
+DefineButton( { Pos = 7, Level = 2, Icon = "icon-precise-shot",
 	Action = "learn-ability", Value = "upgrade-precise-shot",
 	Key = "r", Hint = "Learn P~!recise Shot", Popup = "popup-learn-ability",
 	Description = "Precise Shot is an active ability which deals a critical hit. Only usable with ranged weapons",
@@ -645,7 +629,23 @@ DefineButton( { Pos = 9, Level = 2, Icon = "icon-precise-shot",
 	}
 } )
 
-DefineButton( { Pos = 10, Level = 2, Icon = "icon-leadership",
+DefineButton( { Pos = 7, Level = 2, Icon = "icon-puncture",
+	Action = "learn-ability", Value = "upgrade-puncture",
+	Key = "r", Hint = "Learn Punctu~!re", Popup = "popup-learn-ability",
+	Description = "Puncture is an active ability which makes the target bleed for a certain duration. Only usable with melee weapons capable of doing thrusting attacks",
+	ForUnit = {
+		"unit-germanic-chieftain", "unit-germanic-spearman",
+		"unit-teuton-heroic-swordsman", "unit-frank-heroic-swordsman",
+		"unit-teuton-spearman", "unit-frank-spearman",
+		"unit-dwarven-guard",
+		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
+		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman",
+		"unit-elven-swordsman",
+		"unit-wolf", "unit-wyrm", "unit-bat", "unit-blood-bat", "unit-dread-bat"
+	}
+} )
+
+DefineButton( { Pos = 8, Level = 2, Icon = "icon-leadership",
 	Action = "learn-ability", Value = "upgrade-leadership",
 	Key = "l", Hint = "Learn ~!Leadership Aura", Popup = "popup-learn-ability",
 	Description = "Leadership Aura is an aura ability that increases the damage of nearby friendly units by 10%",
@@ -662,7 +662,7 @@ DefineButton( { Pos = 10, Level = 2, Icon = "icon-leadership",
 } )
 
 --[[
-DefineButton( { Pos = 13, Level = 2, Icon = "icon-ethereal-vision",
+DefineButton( { Pos = 10, Level = 2, Icon = "icon-ethereal-vision",
 	Action = "learn-ability", Value = "upgrade-ethereal-vision",
 	Key = "v", Hint = "Learn Ethereal ~!Vision", Popup = "popup-learn-ability",
 	Description = "Ethereal Vision is a passive ability that allows the unit to see ethereal objects, such as interplanar portals",
