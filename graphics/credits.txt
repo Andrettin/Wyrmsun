@@ -440,7 +440,6 @@
 /graphics/gnome/icons/duelist_gray_hair.png (by Exidelo and Jinn) (licensed under the CC0)
 /graphics/gnome/icons/herbal_cure.png (by J. W. Bjerk and Jinn) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/gnome/icons/herbalist.png (by Exidelo) (licensed under the CC0)
-/graphics/gnome/icons/king.png (by Jesse Crider) (licensed under the CC0)
 /graphics/gnome/icons/master_at_arms.png (by Exidelo and Jinn) (licensed under the CC0)
 /graphics/gnome/icons/master_at_arms_gray_hair.png (by Exidelo and Jinn) (licensed under the CC0)
 /graphics/gnome/icons/patrol_land.png (by Jinn) (licensed under the CC0)

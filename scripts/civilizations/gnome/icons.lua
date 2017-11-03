@@ -86,12 +86,6 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-gnomish-king",
-	Size = {46, 38},
-	File = "gnome/icons/king.png"
-})
-
-DefineIcon({
 	Name = "icon-gnomish-herbalist",
 	Size = {46, 38},
 	File = "gnome/icons/herbalist.png"
