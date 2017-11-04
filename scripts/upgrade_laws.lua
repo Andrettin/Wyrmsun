@@ -37,6 +37,11 @@ DefineUpgrade("upgrade-free-workers", {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker"
+	},
+	CivilizationPriorities = {
+		"dwarf", 200,
+		"germanic", 200,
+		"goblin", 200
 	}
 })
 
@@ -45,7 +50,15 @@ DefineUpgrade("upgrade-serfdom", {
 	Icon = "icon-serfdom",
 --	Description = ".\n\nEffect: -25% worker cost, -1 worker gathering rate.",
 	Costs = {"time", 200, "copper", 1200},
-	RequirementsString = "Stronghold/Bastion"
+	RequirementsString = "Stronghold/Bastion",
+	CivilizationPriorities = {
+		"anglo-saxon", 200,
+		"english", 200,
+		"frankish", 200,
+		"goth", 200,
+		"suebi", 200,
+		"teuton", 200
+	}
 })
 
 DefineModifier("upgrade-serfdom",

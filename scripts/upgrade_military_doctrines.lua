@@ -28,13 +28,26 @@
 DefineUpgrade("upgrade-shield-wall", {
 	Name = "Shield Wall",
 	Icon = "icon-shield-wall",
-	Costs = {"time", 250, "copper", 2400}
+	Costs = {"time", 250, "copper", 2400},
+	Description = "The shield wall is a rectangular infantry formation in which soldiers hold their shields up for mutual protection.\n\nEffects: +2 Armor for infantry.",
+	CivilizationPriorities = {
+		"anglo-saxon", 200,
+		"dwarf", 200,
+		"english", 200,
+		"frankish", 200,
+		"germanic", 200,
+		"goblin", 200,
+		"goth", 200,
+		"suebi", 200,
+		"teuton", 200
+	}
 })
 
 DefineUpgrade("upgrade-svinfylking", {
 	Name = "Svinfylking",
 	Icon = "icon-svinfylking",
-	Costs = {"time", 250, "copper", 2400}
+	Costs = {"time", 250, "copper", 2400},
+	Description = "The svinfylking is a wedge-shaped infantry formation in which soldiers hold their shields up for mutual protection. Due to its wedge-shaped nature, the formation can be quite effective in breaking enemy lines.\n\nEffects: +2 Damage for infantry."
 })
 
 DefineModifier("upgrade-shield-wall",

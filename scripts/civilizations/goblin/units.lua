@@ -553,7 +553,6 @@ DefineUnitType("unit-goblin-war-machine", {
 	ButtonKey = "m",
 	ButtonHint = "Build War ~!Machine",
 	BluntDamage = true,
-	RequirementsString = "Lumber Mill and Fugla Forge",
 	Sounds = {
 --		"acknowledge", "ballista-acknowledge",
 --		"ready", "dwarven-ballista-ready",

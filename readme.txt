@@ -67,6 +67,9 @@ https://github.com/Andrettin/Wyrmsun
 - Weapon mastery abilities can now be acquired up to five times.
 - Eagle Eye can now be acquired up to five times.
 
+* AI
+- The AI now researches upgrades in a more dynamic fashion.
+
 * Buildings
 - The Gold Mine now uses the rail gold mine graphics after Engineering is researched.
 

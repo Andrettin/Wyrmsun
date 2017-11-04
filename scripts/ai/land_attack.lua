@@ -86,11 +86,6 @@ local land_funcs = {
 	function() return AiSet(GetAiUnitType("worker"), 8) end, -- 8
 	function() return AiWait(GetAiUnitType("barracks")) end,
 	function() return AiSet(GetAiUnitType("smithy"), 1) end,
-	function() return AiResearch(GetAiUnitType("melee-weapon-1")) end,
-	function() return AiResearch(GetAiUnitType("bronze-shield")) end,
-	function() return AiResearch(GetAiUnitType("melee-weapon-2")) end,
-	function() return AiResearch(GetAiUnitType("iron-shield")) end,
-	function() return AiResearch("upgrade-shield-wall") end, -- acquire the shield wall military doctrine
 	
 
 -- FAST AND FURIOUS
@@ -117,35 +112,6 @@ local land_funcs = {
 
 	function() return AiNeed(GetAiUnitType("lumber-mill")) end, -- needed for the stronghold
 	function() return AiWait(GetAiUnitType("lumber-mill")) end,
-	function()
-		if (AiGetRace() == "germanic") then
-			return AiResearch(GetAiUnitType("wood-plow"));
-		end
-		return false;
-	end,
-	function()
-		if (AiGetRace() == "germanic") then
-			return AiResearch(GetAiUnitType("ranged-projectile-1"));
-		end
-		return false;
-	end,
-	function()
-		if (AiGetRace() == "germanic") then -- if is Germanic, wait until becomes Anglo-Saxon/Frankish/Suebi/Teuton for the next step
-			return true;
-		end
-	end,
-	function()
-		if (AiGetRace() == "anglo-saxon" or AiGetRace() == "frankish" or AiGetRace() == "suebi" or AiGetRace() == "teuton" or AiGetRace() == "goth") then
-			return AiResearch(GetAiUnitType("melee-weapon-2")); -- research this now, since Teutons couldn't before
-		end
-		return false;
-	end,
-	function()
-		if (AiGetRace() == "anglo-saxon" or AiGetRace() == "frankish" or AiGetRace() == "suebi" or AiGetRace() == "teuton" or AiGetRace() == "goth") then
-			return AiResearch(GetAiUnitType("iron-shield")); -- research this now, since Teutons couldn't before
-		end
-		return false;
-	end,
 	function() return AiNeed(GetAiUnitType("market")) end, -- seems like a good point to build it
 
 	function()
@@ -162,24 +128,22 @@ local land_funcs = {
 		return false;
 	end,
 
+	function()
+		if (AiGetRace() == "germanic") then -- if is Germanic, wait until becomes Anglo-Saxon/Frankish/Suebi/Teuton for the next step
+			return true;
+		end
+	end,
+
 	function() return AiResearch(GetAiUnitType("masonry")) end, -- needed for the stronghold
 	function() return AiWait(GetAiUnitType("masonry")) end,
 	
 	function() return AiUpgradeTo(GetAiUnitType("stronghold")) end,
 	function() return AiWait(GetAiUnitType("stronghold")) end,
 	function() return AiSet(GetAiUnitType("worker"), 25) end,
-	function() return AiResearch(GetAiUnitType("coinage")) end, -- research coinage to improve copper/silver/gold processing
 	function() return AiNeed(GetAiUnitType("stables")) end,
 	function() return AiResearch(GetAiUnitType("writing")) end, -- research writing to become a polity, and is needed for Engineering
 	function() return AiWait(GetAiUnitType("writing")) end,	
 
-	function() -- certain civilizations acquire serfdom when it becomes available
-		if (AiGetRace() == "teuton" or AiGetRace() == "anglo-saxon" or AiGetRace() == "english" or AiGetRace() == "frankish" or AiGetRace() == "suebi" or AiGetRace() == "goth") then
-			return AiResearch("upgrade-serfdom");
-		end
-		return false;
-	end,
-	
 -- BUILDING A DEFENSE
 	function() return AiForce(0, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("cavalry"), 2, GetAiUnitType("siege-engine"), 0}) end,
 
@@ -192,15 +156,9 @@ local land_funcs = {
 
 	function() return AiNeed(GetAiUnitType("temple")) end,
 --	function() return AiResearch(AiUpgradeCavalryMage()) end,
---	function() return AiResearch(AiCavalryMageSpell1()) end,
 	
 	-- MAGE TOWER
 --	function() return AiNeed(AiMageTower()) end,
---	function() return AiResearch(AiMageSpell1()) end,
---	function() return AiResearch(AiMageSpell2()) end,
---	function() return AiResearch(AiMageSpell3()) end,
---	function() return AiResearch(AiMageSpell4()) end,
---	function() return AiResearch(AiMageSpell5()) end,
 
 	function() return AiNeed(GetAiUnitType("university")) end, -- needed for engineering
 	function() return AiWait(GetAiUnitType("university")) end,
@@ -209,7 +167,6 @@ local land_funcs = {
 	function() return AiWait(GetAiUnitType("mathematics")) end,	
 	function() return AiResearch(GetAiUnitType("engineering")) end, -- needed for siege engines
 	function() return AiWait(GetAiUnitType("engineering")) end,	
-	function() return AiResearch(GetAiUnitType("architecture")) end, -- improve buildings
 
 -- PREPARING SECOND ATTACK
 
@@ -272,16 +229,6 @@ local land_funcs = {
 --	function() return AiNeed(GetAiUnitType("watch-tower")) end,
 --	function() return AiUpgradeTo(AiCannonTower()) end,
 	function() return AiNeed(GetAiUnitType("banner")) end,
-
--- UPGRADING SHOOTERS
-
---	function() return AiResearch(AiUpgradeEliteShooter()) end,
---	function() return AiResearch(AiUpgradeEliteShooter1()) end,
---	function() return AiResearch(AiUpgradeEliteShooter2()) end,
---	function() return AiResearch(AiUpgradeEliteShooter3()) end,
-	function() return AiResearch(GetAiUnitType("philosophy")) end, -- needed for alchemy
-	function() return AiWait(GetAiUnitType("philosophy")) end,	
-	function() return AiResearch(GetAiUnitType("alchemy")) end, -- research alchemy to improve shooters
 
 	function() return AiSet(GetAiUnitType("worker"), 40) end,
 	

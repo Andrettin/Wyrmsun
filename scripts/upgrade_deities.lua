@@ -208,7 +208,15 @@ DefineUpgrade("upgrade-deity-christian-god", {
 	Name = "Christianity",
 	Icon = "icon-christianity",
 	Costs = {"time", 200, "copper", 1500},
-	RequirementsString = "Writing"
+	RequirementsString = "Writing",
+	CivilizationPriorities = {
+		"anglo-saxon", 200,
+		"english", 200,
+		"frankish", 200,
+		"goth", 200,
+		"suebi", 200,
+		"teuton", 200
+	}
 })
 
 -- Aesir Deities
@@ -216,34 +224,62 @@ DefineUpgrade("upgrade-deity-christian-god", {
 DefineUpgrade("upgrade-deity-odin", {
 	Name = "Odin",
 	Icon = "icon-odin",
-	Costs = {"time", 200, "copper", 1500}
+	Costs = {"time", 200, "copper", 1500},
+	FactionPriorities = {
+		"dere-tribe", 150,
+		"skeldung-tribe", 200,
+		"deira", 150
+	}
 })
 
 DefineUpgrade("upgrade-deity-thor", {
 	Name = "Thor",
 	Icon = "icon-thor",
-	Costs = {"time", 200, "copper", 1500}
+	Costs = {"time", 200, "copper", 1500},
+	FactionPriorities = {
+		"hlesing-tribe", 50,
+		"thielung-tribe", 200
+	}
 })
 
 DefineUpgrade("upgrade-deity-heimdall", {
 	Name = "Heimdall",
 	Icon = "icon-heimdall",
 	Costs = {"time", 200, "copper", 1500},
-	RequirementsString = "Odin or Thor"
+	RequirementsString = "Odin or Thor",
+	FactionPriorities = {
+		"hersing-tribe", 125,
+		"jarling-tribe", 200,
+		"karling-tribe", 200,
+		"thralling-tribe", 200
+	}
 })
 
 DefineUpgrade("upgrade-deity-hel", {
 	Name = "Hel",
 	Icon = "icon-hel",
 	Costs = {"time", 200, "copper", 1500},
-	RequirementsString = "Odin, Thor or Gathaarl"
+	RequirementsString = "Odin, Thor or Gathaarl",
+	FactionPriorities = {
+		"kal-kartha", 200
+	}
 })
 
 DefineUpgrade("upgrade-deity-tyr", {
 	Name = "Tyr",
 	Icon = "icon-tyr",
 	Costs = {"time", 200, "copper", 1500},
-	RequirementsString = "Odin or Thor"
+	RequirementsString = "Odin or Thor",
+	CivilizationPriorities = {
+		"anglo-saxon", 150,
+		"dwarf", 150,
+		"english", 150,
+		"frankish", 150,
+		"germanic", 150,
+		"goth", 150,
+		"suebi", 150,
+		"teuton", 150
+	}
 })
 
 -- Goblin Deities
