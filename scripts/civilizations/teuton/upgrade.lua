@@ -36,17 +36,6 @@ DefineUpgrade("upgrade-teuton-spatha", {
 	Item = "unit-spatha"
 })
 
-DefineUpgrade("upgrade-frank-spatha", {
-	Name = "Spatha",
-	Parent = "upgrade-teuton-spatha",
-	Icon = "icon-frankish-spatha",
-	Civilization = "frankish",
-	RequirementsString = "Broad Sword",
-	Description = "With the development of iron working, the forging of longer swords became a practical possibility.\n\nEffect: +2 Damage for swordwielders. Allows Spathas to be sold at the Market.",
-	Background = "During the Migration Period, Germanic peoples - including West Germanics - used longswords such as these in combat.",
-	Item = "unit-frankish-spatha"
-})
-
 DefineUpgrade("upgrade-teuton-pike", {
 	Parent = "upgrade-pike",
 	Civilization = "teuton",
@@ -126,13 +115,6 @@ DefineModifier("upgrade-teuton-spatha",
 	{"apply-to", "unit-suebi-swordsman"},
 	{"apply-to", "unit-teuton-ritter"}, {"apply-to", "unit-teuton-knight-lord"},
 	{"apply-to", "unit-gothic-horse-rider"}, {"apply-to", "unit-gothic-horse-horse"}
-)
-
-DefineModifier("upgrade-frank-spatha",
-	{"BasicDamage", 2},
-	{"Points", 10},
-	{"apply-to", "unit-frank-swordsman"}, {"apply-to", "unit-frank-veteran-swordsman"}, {"apply-to", "unit-frank-heroic-swordsman"},
-	{"apply-to", "unit-frank-horseman"}, {"apply-to", "unit-frank-knight-lord"}
 )
 
 DefineModifier("upgrade-teuton-pike",

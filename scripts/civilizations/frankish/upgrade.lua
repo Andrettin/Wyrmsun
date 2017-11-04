@@ -29,6 +29,17 @@ DefineUpgrade("upgrade-frankish-civilization", {
 	Name = "Frankish Civilization"
 })
 
+DefineUpgrade("upgrade-frank-spatha", {
+	Name = "Spatha",
+	Parent = "upgrade-long-sword",
+	Icon = "icon-frankish-spatha",
+	Civilization = "frankish",
+	RequirementsString = "Broad Sword",
+	Description = "With the development of iron working, the forging of longer swords became a practical possibility.\n\nEffect: +2 Damage for swordwielders. Allows Spathas to be sold at the Market.",
+	Background = "During the Migration Period, Germanic peoples - including West Germanics - used longswords such as these in combat.",
+	Item = "unit-frankish-spatha"
+})
+
 DefineModifier("upgrade-frankish-civilization",
 	{"apply-to", "unit-germanic-town-hall"}, {"convert-to", "unit-teuton-town-hall"}
 )
@@ -119,4 +130,11 @@ DefineModifier("upgrade-frankish-civilization",
 
 DefineModifier("upgrade-frankish-civilization",
 	{"remove-upgrade", "upgrade-deity-heimdall"}
+)
+
+DefineModifier("upgrade-frank-spatha",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-frank-swordsman"}, {"apply-to", "unit-frank-veteran-swordsman"}, {"apply-to", "unit-frank-heroic-swordsman"},
+	{"apply-to", "unit-frank-horseman"}, {"apply-to", "unit-frank-knight-lord"}
 )
