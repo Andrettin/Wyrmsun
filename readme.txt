@@ -72,6 +72,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Buildings
 - The Gold Mine now uses the rail gold mine graphics after Engineering is researched.
+- Fixed a bug which could occur if a building was under construction while its unit type changed to another (for example, due to a civilization change).
 
 * Deities
 - Added the Heimdall, Hel and Tyr minor deities (icons by Jinn).
