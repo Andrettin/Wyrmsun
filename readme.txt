@@ -78,6 +78,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added the Heimdall, Hel and Tyr minor deities (icons by Jinn).
 - Increased the copper and time cost of deities.
 
+* Maps
+- Added Southern Baltic map for custom games (this is the same map used for the Haimadala's Progeny and Thunraz's Servant scenarios).
+
 * Scenarios
 - After the "Slay Geirrod" quest is acquired, the area around the portal to Jotunheim is now revealed for a short time (with a special revealer that can see ethereal objects such as portals). Additionally, the map is also centered on the portal's location.
 - Added the "Temple to Haimadala" side-quest for the Haimadala's Progeny scenario. To complete it, a temple has to be built and Haimadala has to be chosen as a minor deity.
