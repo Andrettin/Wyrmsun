@@ -35,10 +35,8 @@ if (LoadedGame == false) then
 	SetUnitVariable(unit, "Character", "pypo")
 
 	unit = CreateUnit("unit-dwarven-yale-rider", 1, {Players[1].StartPos.x, Players[1].StartPos.y}) -- dwarven noble
-	SetUnitVariable(unit, "Starting", false)
 	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-dwarven-witness", 1, {Players[1].StartPos.x, Players[1].StartPos.y}) -- old wise and faithful steward to the dwarven noble
-	SetUnitVariable(unit, "Starting", false)
 	SetUnitVariable(unit, "Active", false)
 	AcquireTrait(unit, "upgrade-old")
 	
