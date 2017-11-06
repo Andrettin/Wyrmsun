@@ -73,10 +73,14 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - The Gold Mine now uses the rail gold mine graphics after Engineering is researched.
 - Fixed a bug which could occur if a building was under construction while its unit type changed to another (for example, due to a civilization change).
+- Fixed issue which caused a building's unit/item stock to increase even if the unit/item isn't allowed yet.
 
 * Deities
 - Added the Heimdall, Hel and Tyr minor deities (icons by Jinn).
 - Increased the copper and time cost of deities.
+
+* Factions
+- Mercenary companies now have a chance to acquire technology when other factions hire troops from them.
 
 * Maps
 - Added Southern Baltic map for custom games (this is the same map used for the Haimadala's Progeny and Thunraz's Servant scenarios).

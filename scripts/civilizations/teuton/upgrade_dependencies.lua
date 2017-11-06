@@ -26,7 +26,7 @@
 --
 
 DefineDependency("unit-teuton-archer",
-	{"unit-teuton-lumber-mill"}
+	{"unit-teuton-lumber-mill"}, "or", {"upgrade-mercenary-company"}
 )
 
 DefineDependency("unit-teuton-gunpowder-infantry",
@@ -42,7 +42,7 @@ DefineDependency("unit-teuton-wall",
 )
 
 DefineDependency("unit-teuton-catapult",
-	{"unit-teuton-smithy", "unit-teuton-lumber-mill", "upgrade-engineering"}, "or", {"unit-latin-smithy", "unit-teuton-lumber-mill", "upgrade-engineering"}
+	{"unit-teuton-smithy", "unit-teuton-lumber-mill", "upgrade-engineering"}, "or", {"unit-latin-smithy", "unit-teuton-lumber-mill", "upgrade-engineering"}, "or", {"upgrade-mercenary-company", "upgrade-engineering"}
 )
 
 DefinePredependency("upgrade-teuton-spatha",
@@ -74,11 +74,11 @@ DefineDependency("upgrade-teuton-bodkin-arrow",
 )
 
 DefineDependency("upgrade-teuton-catapult-projectile-1",
-	{"unit-teuton-lumber-mill"}
+	{"unit-teuton-lumber-mill"}, "or", {"upgrade-mercenary-company"}
 )
 
 DefineDependency("upgrade-teuton-catapult-projectile-2",
-	{"upgrade-teuton-catapult-projectile-1", "unit-teuton-lumber-mill"}
+	{"unit-teuton-lumber-mill", "upgrade-teuton-catapult-projectile-1"}, "or", {"upgrade-mercenary-company", "upgrade-teuton-catapult-projectile-1"}
 )
 
 DefineDependency("upgrade-teuton-iron-tipped-wood-plow",
@@ -90,7 +90,7 @@ DefineDependency("unit-teuton-stronghold",
 )
 
 DefineDependency("upgrade-teuton-coinage",
-	{"unit-teuton-smithy"}, "or", {"unit-latin-smithy"}
+	{"unit-teuton-smithy"}, "or", {"unit-latin-smithy"}, "or", {"upgrade-mercenary-company"}
 )
 
 DefineDependency("upgrade-teuton-alchemy",
@@ -118,7 +118,7 @@ DefinePredependency("unit-teuton-ritter",
 )
 
 DefineDependency("unit-teuton-ritter",
-	{"unit-teuton-smithy", "unit-teuton-stables"}, "or", {"unit-latin-smithy", "unit-latin-stables"}
+	{"unit-teuton-smithy", "unit-teuton-stables"}, "or", {"unit-latin-smithy", "unit-latin-stables"}, "or", {"upgrade-mercenary-company"}
 )
 
 DefinePredependency("unit-teuton-town-hall",

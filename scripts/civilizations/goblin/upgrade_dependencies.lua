@@ -46,7 +46,7 @@ DefinePredependency("unit-goblin-gunpowder-infantry",
 )
 
 DefineDependency("unit-goblin-gunpowder-infantry",
-	{"unit-goblin-smithy", "upgrade-gunpowder"}
+	{"unit-goblin-smithy", "upgrade-gunpowder"}, "or", {"upgrade-mercenary-company", "upgrade-gunpowder"}
 )
 
 DefineDependency("upgrade-goblin-long-sword",
@@ -118,11 +118,11 @@ DefineDependency("upgrade-goblin-bodkin-arrow",
 )
 
 DefineDependency("upgrade-goblin-catapult-projectile-1",
-	{"unit-goblin-lumber-mill"}
+	{"unit-goblin-lumber-mill"}, "or", {"upgrade-mercenary-company"}
 )
 
 DefineDependency("upgrade-goblin-catapult-projectile-2",
-	{"upgrade-goblin-catapult-projectile-1", "unit-goblin-lumber-mill"}
+	{"unit-goblin-lumber-mill", "upgrade-goblin-catapult-projectile-1"}, "or", {"upgrade-mercenary-company", "upgrade-goblin-catapult-projectile-1"}
 )
 
 DefineDependency("upgrade-goblin-iron-tipped-wood-plow",
@@ -130,7 +130,7 @@ DefineDependency("upgrade-goblin-iron-tipped-wood-plow",
 )
 
 DefineDependency("upgrade-goblin-coinage",
-	{"unit-goblin-smithy"}
+	{"unit-goblin-smithy"}, "or", {"upgrade-mercenary-company"}
 )
 
 DefineDependency("upgrade-goblin-alchemy",
@@ -138,5 +138,5 @@ DefineDependency("upgrade-goblin-alchemy",
 )
 
 DefineDependency("unit-goblin-transport-ship",
-	{"unit-goblin-lumber-mill"}
+	{"unit-goblin-lumber-mill"}, "or", {"upgrade-trading-company"}
 )

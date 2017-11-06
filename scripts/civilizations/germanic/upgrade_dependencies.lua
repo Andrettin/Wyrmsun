@@ -46,7 +46,7 @@ DefinePredependency("unit-germanic-smithy",
 )
 
 DefineDependency("unit-germanic-archer",
-	{"unit-germanic-carpenters-shop"}
+	{"unit-germanic-carpenters-shop"}, "or", {"upgrade-mercenary-company"}
 )
 
 DefinePredependency("unit-germanic-temple",
@@ -78,7 +78,7 @@ DefineDependency("unit-germanic-dock",
 )
 
 DefineDependency("unit-germanic-transport-ship",
-	{"unit-germanic-carpenters-shop"}
+	{"unit-germanic-carpenters-shop"}, "or", {"upgrade-trading-company"}
 )
 
 DefineDependency("upgrade-teuton-civilization",

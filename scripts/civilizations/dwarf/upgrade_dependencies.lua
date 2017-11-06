@@ -82,11 +82,11 @@ DefineDependency("upgrade-dwarven-bearded-throwing-axe",
 )
 
 DefineDependency("upgrade-dwarven-ballista-bolt-1",
-	{"unit-dwarven-lumber-mill"}
+	{"unit-dwarven-lumber-mill"}, "or", {"upgrade-mercenary-company"}
 )
 
 DefineDependency("upgrade-dwarven-ballista-bolt-2",
-	{"upgrade-dwarven-ballista-bolt-1", "unit-dwarven-lumber-mill"}
+	{"unit-dwarven-lumber-mill", "upgrade-dwarven-ballista-bolt-1"}, "or", {"upgrade-mercenary-company", "upgrade-dwarven-ballista-bolt-1"}
 )
 
 DefineDependency("upgrade-dwarven-iron-tipped-wood-plow",
@@ -98,7 +98,7 @@ DefineDependency("unit-dwarven-stronghold",
 )
 
 DefineDependency("upgrade-dwarven-coinage",
-	{"unit-dwarven-smithy"}, "or", {"unit-brising-smithy"}
+	{"unit-dwarven-smithy"}, "or", {"unit-brising-smithy"}, "or", {"upgrade-mercenary-company"}
 )
 
 DefineDependency("upgrade-dwarven-alchemy",
@@ -180,7 +180,7 @@ DefineDependency("unit-dwarven-dock",
 )
 
 DefineDependency("unit-dwarven-transport-ship",
-	{"unit-dwarven-lumber-mill"}
+	{"unit-dwarven-lumber-mill"}, "or", {"upgrade-trading-company"}
 )
 
 DefineDependency("unit-dwarven-ballista-warship",
