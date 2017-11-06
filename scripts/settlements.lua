@@ -32,6 +32,7 @@
 Load("scripts/settlements_anatolia.lua")
 Load("scripts/settlements_asia_minor.lua")
 Load("scripts/settlements_austria.lua")
+Load("scripts/settlements_baltic_countries.lua")
 Load("scripts/settlements_belgium.lua")
 Load("scripts/settlements_bohemia.lua")
 Load("scripts/settlements_brazil.lua")

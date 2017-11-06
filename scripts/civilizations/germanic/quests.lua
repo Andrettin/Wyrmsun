@@ -55,6 +55,7 @@ DefineQuest("westward-migration", {
 	PlayerColor = "orange",
 	LoadingMusic = "GermanicLoading",
 	MapMusic = "GermanicTheme2",
+	Objectives = {"- Have a Bura stand next to the Riga Settlement Site to the southwest"},
 	Unobtainable = true
 })
 
