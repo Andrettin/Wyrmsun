@@ -35,6 +35,16 @@ DefineCampaign("on-the-vanaquisl", {
 	MapSize = {256, 256}
 })
 
+DefineCampaign("westward-migration", {
+	Name = "Westward Migration",
+	Description = "As food becomes scarce in our native steppes to feed our growing population, we must seek a migration route to the west.",
+	Faction = "asa-tribe",
+	StartYear = -2950,
+	MapTemplate = "earth",
+	MapTemplateStartPos = {4369, 609},
+	MapSize = {256, 256}
+})
+
 DefineCampaign("the-first-dwarves", {
 	Name = "The First Dwarves",
 	Description = "A clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home. Beset by hostile forces, can they survive for long?",

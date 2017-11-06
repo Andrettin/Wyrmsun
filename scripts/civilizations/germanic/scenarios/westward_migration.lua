@@ -36,36 +36,7 @@ if (LoadedGame == false) then
 	SetPlayerData(1, "Resources", "copper", 2000)
 	SetPlayerData(1, "Resources", "lumber", 2000)
 	SetPlayerData(1, "Resources", "stone", 1000)
-	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "upgrade-teuton-civilization", "F")
-	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-germanic-town-hall", "F")
-	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-germanic-farm", "F")
-	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-germanic-barracks", "F")
-	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-germanic-carpenters-shop", "F")
-	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-germanic-smithy", "F")
-	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-germanic-dock", "F")
-	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-germanic-temple", "F")
-	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-germanic-market", "F")
-	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-gold-mine", "F")
-	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-silver-mine", "F")
-	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-copper-mine", "F")
-	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-road", "F")
-	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-railroad", "F")
 	
-	if (GrandStrategy == false) then
-		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-	end
-
 	unit = CreateUnit("unit-germanic-town-hall", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 	unit = CreateUnit("unit-germanic-warrior", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 	SetUnitVariable(unit, "Active", false)
@@ -299,9 +270,7 @@ AddTrigger("westward-migration-victory",
 			{function(s)
 				if (player == GetThisPlayer()) then
 					ActionVictory()
-					if (GrandStrategy == false) then
-						SetQuestCompleted("westward-migration", GameSettings.Difficulty)
-					end
+					SetQuestCompleted("westward-migration", GameSettings.Difficulty)
 				end
 			end}
 		)

@@ -36,16 +36,37 @@ DefineSettlement("azov", {
 	},
 	HistoricalOwners = {
 		-3000, "asa-tribe",
-		-2800, "" -- Proto-Indo-Europeans who would give origin to the Germanic peoples concluded their migration to Scandinavia at this date
+		-2950, ""
+		-- the Proto-Indo-Europeans who would give origin to the Germanic peoples concluded their migration to Scandinavia by 2800 BC
 	},
 	HistoricalBuildings = {
-		-3000, -2800, "town-hall",
-		-3000, -2800, "barracks",
-		-3000, -2800, "farm"
+		-3000, -2950, "town-hall",
+		-3000, -2950, "barracks",
+		-3000, -2950, "farm"
 	},
 	HistoricalUnits = {
-		-3000, -2999, "unit-germanic-worker", 1000, "asa-tribe",
-		-3000, -2999, "unit-germanic-warrior", 8000, "asa-tribe" -- the great army assembled to fight the Vana
+		-3000, -2950, "unit-germanic-worker", 1000, "asa-tribe",
+		-3000, -2950, "unit-germanic-warrior", 8000, "asa-tribe" -- the great army assembled to fight the Vana
+	},
+	Regions = {"eurasia", "europe"}
+})
+
+DefineSettlement("novgorod", {
+	Name = "Novgorod",
+	MapTemplate = "earth",
+	Position = {4551, 714},
+	Major = true,
+	CulturalNames = {
+		"slav", "Novgorod"
+	},
+	HistoricalOwners = {
+		-2950, "asa-tribe",
+	},
+	HistoricalBuildings = {
+	},
+	HistoricalUnits = {
+		-2950, -2900, "unit-germanic-worker", 5000, "asa-tribe",
+		-2950, -2900, "unit-germanic-warrior", 12000, "asa-tribe"
 	},
 	Regions = {"eurasia", "europe"}
 })
@@ -72,7 +93,7 @@ DefineSettlement("rostov-on-don", {
 		-3000, -2800, "farm"
 	},
 	HistoricalUnits = {
-		-3000, -2999, "unit-germanic-warrior", 3000, "vana-tribe" -- Vana defensive forces
+		-3000, -2800, "unit-germanic-warrior", 3000, "vana-tribe" -- Vana defensive forces
 	},
 	Regions = {"eurasia", "europe"}
 })
