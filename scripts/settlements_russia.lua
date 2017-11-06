@@ -71,6 +71,23 @@ DefineSettlement("novgorod", {
 	Regions = {"eurasia", "europe"}
 })
 
+DefineSettlement("pskov", {
+	Name = "Pskov",
+	MapTemplate = "earth",
+	Position = {4480, 732},
+	Major = true,
+	CulturalNames = {
+		"slav", "Pskov"
+	},
+	HistoricalOwners = {
+	},
+	HistoricalBuildings = {
+	},
+	HistoricalUnits = {
+	},
+	Regions = {"eurasia", "europe"}
+})
+
 DefineSettlement("rostov-on-don", {
 	Name = "Rostov-on-Don",
 	MapTemplate = "earth",

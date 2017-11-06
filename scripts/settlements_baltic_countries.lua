@@ -25,6 +25,21 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSettlement("mitau", {
+	Name = "Mitau",
+	MapTemplate = "earth",
+	Position = {4378, 763},
+	Major = true,
+	CulturalNames = {
+		"teuton", "Mitau"
+	},
+	HistoricalOwners = {
+	},
+	HistoricalBuildings = {
+	},
+	Regions = {"europe", "west-and-central-europe"}
+})
+
 DefineSettlement("riga", {
 	Name = "Riga",
 	MapTemplate = "earth",
