@@ -28,24 +28,7 @@
 --
 
 if (LoadedGame == false) then
-	unit = CreateUnit("unit-germanic-town-hall", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-	unit = CreateUnit("unit-germanic-warrior", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-germanic-warrior", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-germanic-warrior", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-	SetUnitVariable(unit, "Active", false)
-		
 	CreateCreeps(PlayerNumNeutral, "unit-glyph", 1, 0, Map.Info.MapHeight / 3, Map.Info.MapWidth / 8, Map.Info.MapHeight)
-	if (GameSettings.Difficulty == 1) then -- if difficulty is easy
-		CreateCreeps(1, "unit-germanic-warrior", Map.Info.MapWidth * 1 / 8, 0, 0, Map.Info.MapWidth - 1, Map.Info.MapHeight - 1)
-	elseif (GameSettings.Difficulty == 2) then -- if difficulty is normal
-		CreateCreeps(1, "unit-germanic-warrior", Map.Info.MapWidth * 3 / 8, 0, 0, Map.Info.MapWidth - 1, Map.Info.MapHeight - 1)
-	elseif (GameSettings.Difficulty == 3) then -- if difficulty is hard
-		CreateCreeps(1, "unit-germanic-warrior", Map.Info.MapWidth * 6 / 8, 0, 0, Map.Info.MapWidth - 1, Map.Info.MapHeight - 1)
-	elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
-		CreateCreeps(1, "unit-germanic-warrior", Map.Info.MapWidth * 12 / 8, 0, 0, Map.Info.MapWidth - 1, Map.Info.MapHeight - 1)
-	end
 		
 	-- reveal area near the glyph
 	local uncount = 0

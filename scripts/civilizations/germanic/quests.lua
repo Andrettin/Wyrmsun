@@ -47,15 +47,16 @@ DefineQuest("on-the-vanaquisl", {
 DefineQuest("westward-migration", {
 	Name = "Westward Migration",
 	Icon = "icon-germanic-worker",
-	Description = "As food becomes scarce in our native steppes to feed our growing population, we must seek a migration route to the west.\n\nMap: Holmgard",
-	World = "earth",
 	Civilization = "germanic",
-	Map = "maps/earth/novgorod.smp",
-	Scenario = "scripts/civilizations/germanic/scenarios/westward_migration.lua",
 	PlayerColor = "orange",
-	LoadingMusic = "GermanicLoading",
-	MapMusic = "GermanicTheme2",
-	Objectives = {"- Have a Bura stand next to the Riga Settlement Site to the southwest"},
+	FailEffects = function(s)
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "westward-migration") then
+			CallDialogue("campaign-defeat", trigger_player)
+		end
+	end,
+	Objectives = {"- Have a Bura stand next to the Riga Settlement Site to the southwest", "- Wodanaz must survive"},
+	HeroesMustSurvive = {"voden"},
+	Uncompleteable = true,
 	Unobtainable = true
 })
 

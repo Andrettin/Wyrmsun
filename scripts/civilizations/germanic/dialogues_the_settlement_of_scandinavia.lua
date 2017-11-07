@@ -122,3 +122,27 @@ DefineDialogue("on-the-vanaquisl-victory", {
 		}
 	}
 })
+
+DefineDialogue("westward-migration-introduction", {
+	Nodes = {
+		{
+			"speaker", "character", "voden",
+			"text", "Our home steppes could scarce support our growing people. Competition for land with neighboring tribes as warlike as ours, too, wore us down. Thus I made my choice. To gather all our tribesfolk, leaving our homes behind, to seek new lands."
+		},
+		{
+			"speaker", "character", "voden",
+			"text", "Travelling north, we came to this land crossed by a great river. And yet, our journey is not yet ended. This area is filled with natives who are as troublesome as they are numerous. We hear of more docile peoples farther to the southwest, who will be more easily conquered... But before we get there, first we have to pass through the hostile natives around here... this will be a dangerous task.",
+			"option-effects", {
+				function(s)
+					SetPlayerData(trigger_player, "AcceptQuest", "westward-migration")
+					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("uralic-tribe"))
+					SetDiplomacy(GetFactionPlayer("uralic-tribe"), "enemy", trigger_player)
+					
+					unit = CreateUnit("unit-revealer", trigger_player, {4392 - EarthStartX, 750 - EarthStartY})
+					SetUnitVariable(unit, "TTL", 600)
+				end
+			}
+		}
+	}
+})
+

@@ -25,6 +25,21 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSettlement("antrea", {
+	Name = "Antrea",
+	MapTemplate = "earth",
+	Position = {4503, 661},
+	CulturalNames = {
+	},
+	HistoricalOwners = {
+		-8500, "uralic-tribe", -- a fishnet belonging to the ancestors of Finno-Ugric speaking peoples was found in Antrea (on the Karelian Isthmus), being dated c. 8500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
+	},
+	HistoricalBuildings = {
+		-8500, 0, "farm"
+	},
+	Regions = {"eurasia", "europe"}
+})
+
 DefineSettlement("azov", {
 	Name = "Azov",
 	MapTemplate = "earth",
@@ -80,10 +95,13 @@ DefineSettlement("pskov", {
 		"slav", "Pskov"
 	},
 	HistoricalOwners = {
+		-3000, "uralic-tribe"
 	},
 	HistoricalBuildings = {
+		-3000, 0, "town-hall"
 	},
 	HistoricalUnits = {
+		-3000, -2800, "unit-germanic-warrior", 3000, "uralic-tribe"
 	},
 	Regions = {"eurasia", "europe"}
 })

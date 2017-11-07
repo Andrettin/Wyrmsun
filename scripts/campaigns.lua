@@ -37,7 +37,7 @@ DefineCampaign("on-the-vanaquisl", {
 
 DefineCampaign("westward-migration", {
 	Name = "Westward Migration",
-	Description = "As food becomes scarce in our native steppes to feed our growing population, we must seek a migration route to the west.",
+	Description = "As food becomes scarce in the native steppes of the Asa, they must seek a migration route to the west.",
 	Faction = "asa-tribe",
 	StartYear = -2950,
 	MapTemplate = "earth",

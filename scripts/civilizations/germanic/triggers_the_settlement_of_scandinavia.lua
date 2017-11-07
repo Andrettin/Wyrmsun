@@ -81,3 +81,33 @@ AddTrigger("on-the-vanaquisl-vana-sighted",
 		return false
 	end
 )
+
+AddTrigger("westward-migration-introduction",
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		for i=0,(PlayerMax - 2) do
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "Faction") == "asa-tribe" and GetFactionExists("uralic-tribe")) then
+				trigger_player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function()
+		local gardarike_warrior_quantity = 0
+		if (GameSettings.Difficulty == 1) then -- if difficulty is easy
+			gardarike_warrior_quantity = 16
+		elseif (GameSettings.Difficulty == 2) then -- if difficulty is normal
+			gardarike_warrior_quantity = 48
+		elseif (GameSettings.Difficulty == 3) then -- if difficulty is hard
+			gardarike_warrior_quantity = 96
+		elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+			gardarike_warrior_quantity = 192
+		end
+		CreateCreeps(GetFactionPlayer("uralic-tribe"), "unit-germanic-warrior", gardarike_warrior_quantity, 4369 - EarthStartX, 643 - EarthStartY, 4547 - EarthStartX, 770 - EarthStartY)
+		CallDialogue("westward-migration-introduction", trigger_player)
+		return false
+	end
+)
