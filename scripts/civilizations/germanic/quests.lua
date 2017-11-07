@@ -41,10 +41,11 @@ DefineQuest("on-the-vanaquisl", {
 	Objectives = {"- Destroy Vanaland's Chieftain's Hall", "- Wodanaz must survive"},
 	DestroyUnits = {"unit-germanic-town-hall", "vana-tribe", 1},
 	HeroesMustSurvive = {"voden"},
+	Rewards = "Unlock the Westward Migration scenario",
 	Unobtainable = true
 })
 
-DefineQuest("westward-migration", {
+DefineQuest("westward-migration", { -- based on the Ynglinga saga and on the Indo-European migration according to the Kurgan hypothesis
 	Name = "Westward Migration",
 	Icon = "icon-germanic-worker",
 	Civilization = "germanic",
@@ -64,7 +65,6 @@ DefineQuest("northwards-to-the-sea", {
 	Name = "Northwards to the Sea",
 	Icon = "icon-germanic-town-hall",
 	Description = "After moving southwest, we now find ourselves near a peninsula which seems promising for settlement.\n\nMap: Jutland",
-	RequiredQuest = "westward-migration",
 	World = "earth",
 	Civilization = "germanic",
 	Map = "maps/earth/jutland.smp",

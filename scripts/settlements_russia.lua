@@ -28,7 +28,7 @@
 DefineSettlement("antrea", {
 	Name = "Antrea",
 	MapTemplate = "earth",
-	Position = {4503, 661},
+	Position = {4503, 660},
 	CulturalNames = {
 	},
 	HistoricalOwners = {

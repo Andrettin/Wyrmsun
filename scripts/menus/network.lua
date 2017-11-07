@@ -598,7 +598,6 @@ function RunCreateMultiGameMenu(s)
 
 	for i=1,table.getn(maps) do
 		MapWorld = ""
-		MapRequiredQuest = ""
 		Load(maps[i])
 		if (MapWorld == world_list[world:getSelected() + 1] or (MapWorld == "" and world_list[world:getSelected() + 1] == "Custom")) then
 			local map_description = _(description)

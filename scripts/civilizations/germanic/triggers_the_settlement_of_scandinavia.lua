@@ -107,6 +107,7 @@ AddTrigger("westward-migration-introduction",
 			gardarike_warrior_quantity = 192
 		end
 		CreateCreeps(GetFactionPlayer("uralic-tribe"), "unit-germanic-warrior", gardarike_warrior_quantity, 4369 - EarthStartX, 643 - EarthStartY, 4547 - EarthStartX, 770 - EarthStartY)
+		CreateCreeps(GetFactionPlayer("uralic-tribe"), "unit-germanic-archer", gardarike_warrior_quantity, 4369 - EarthStartX, 643 - EarthStartY, 4547 - EarthStartX, 770 - EarthStartY)
 		CallDialogue("westward-migration-introduction", trigger_player)
 		return false
 	end

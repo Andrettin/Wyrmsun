@@ -1190,17 +1190,14 @@ function RunSinglePlayerCustomGameMenu()
 
 		for i=1,table.getn(maps) do
 			MapWorld = ""
-			MapRequiredQuest = ""
 			GetMapInfo(maps[i])
 			if (MapWorld == world_list[world:getSelected() + 1] or (MapWorld == "" and world_list[world:getSelected() + 1] == "Custom")) then
-				if (MapRequiredQuest == "" or GetQuestData(MapRequiredQuest, "Completed")) then
-					if (mapinfo.npersonplayers > 0) then
-						local map_description = _(mapinfo.description)
-						if (map_description == "") then
-							map_description = string.gsub(string.gsub(maps[i], ".smp", ""), "(.*)/", "")
-						end
-						table.insert(scenario_list, map_description)
+				if (mapinfo.npersonplayers > 0) then
+					local map_description = _(mapinfo.description)
+					if (map_description == "") then
+						map_description = string.gsub(string.gsub(maps[i], ".smp", ""), "(.*)/", "")
 					end
+					table.insert(scenario_list, map_description)
 				end
 			end
 		end

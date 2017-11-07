@@ -75,9 +75,19 @@ function RunCampaignMenu()
 	local potential_campaigns = GetCampaigns()
 	local campaign_ident_list = {}
 	local campaign_list = {}
-	for i=1,table.getn(potential_campaigns) do
+	for i = 1, table.getn(potential_campaigns) do
 		if (GetCampaignData(potential_campaigns[i], "Hidden") == false) then
-			table.insert(campaign_ident_list, potential_campaigns[i])
+			local required_quests = GetCampaignData(potential_campaigns[i], "RequiredQuests")
+			local completed_prerequisites = true
+			for j = 1, table.getn(required_quests) do
+				if (GetQuestData(required_quests[j], "Completed") == false) then
+					completed_prerequisites = false
+					break
+				end
+			end
+			if (completed_prerequisites) then
+				table.insert(campaign_ident_list, potential_campaigns[i])
+			end
 		end
 	end
 	

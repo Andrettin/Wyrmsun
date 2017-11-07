@@ -32,7 +32,15 @@ DefineFaction("asa-tribe", {
 	Colors = {"orange", "red"},
 	FactionUpgrade = "upgrade-faction-asa-tribe",
 	Description = "The Asa are the legendary progenitors of the Germanic peoples.",
-	Background = "In the Ynglinga Saga, the Asa (another name for the Aesir) were Odin's people, who originally lived in Asaland (identified with Asia), a realm centered in the city of Asgard. They went forth from their original lands to Scandinavia and northern Central Europe, establishing themselves in those regions."
+	Background = "In the Ynglinga Saga, the Asa (another name for the Aesir) were Odin's people, who originally lived in Asaland (identified with Asia), a realm centered in the city of Asgard. They went forth from their original lands to Scandinavia and northern Central Europe, establishing themselves in those regions.",
+	HistoricalResources = {
+		-2950, "copper", 0, -- Westward Migration scenario
+		-2950, "lumber", 0, -- Westward Migration scenario
+		-2950, "stone", 0, -- Westward Migration scenario
+		-2900, "copper", 2500, -- Northwards to the Sea scenario
+		-2900, "lumber", 2500, -- Northwards to the Sea scenario
+		-2900, "stone", 2500 -- Northwards to the Sea scenario
+	}
 })
 
 DefineFaction("herminone-tribe", { -- according to Tacitus one of the earliest Germanic tribes; Source: Tacitus, "The Germany and the Agricola of Tacitus", 1897, section 2.

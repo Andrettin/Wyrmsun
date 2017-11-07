@@ -41,8 +41,6 @@ if (LoadedGame == false) then
 	end
 end
 
--- Westward Migration introduction
--- based on the Ynglinga saga and on the Indo-European migration according to the Kurgan hypothesis
 AddTrigger("westward-migration-introduction",
 	function()
 		if (GameCycle == 0) then

@@ -39,6 +39,7 @@ DefineCampaign("westward-migration", {
 	Name = "Westward Migration",
 	Description = "As food becomes scarce in the native steppes of the Asa, they must seek a migration route to the west.",
 	Faction = "asa-tribe",
+	RequiredQuests = {"on-the-vanaquisl"},
 	StartYear = -2950,
 	MapTemplate = "earth",
 	MapTemplateStartPos = {4369, 609},

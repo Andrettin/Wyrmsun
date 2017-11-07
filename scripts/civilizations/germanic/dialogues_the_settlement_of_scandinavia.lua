@@ -142,6 +142,9 @@ DefineDialogue("westward-migration-introduction", {
 					SetUnitVariable(unit, "TTL", 600)
 				end
 			}
+		},
+		{
+			"text", "Hint: This is a migration mission. You do not have any resources to build structures with."
 		}
 	}
 })
