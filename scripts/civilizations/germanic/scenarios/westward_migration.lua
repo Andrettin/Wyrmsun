@@ -213,39 +213,3 @@ AddTrigger("westward-migration-native-settlement-sighted",
 		return false
 	end
 )
-
-AddTrigger("westward-migration-victory",
-	function()
-		if (GameCycle == 0) then
-			return false
-		end
-		if (GetFactionPlayer("Asa Tribe") ~= nil) then
-			local uncount = 0
-			uncount = GetUnits(PlayerNumNeutral)
-			for unit1 = 1,table.getn(uncount) do 
-				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-glyph") then
-					if (GetNumUnitsAt(GetFactionPlayer("Asa Tribe"), "unit-germanic-worker", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}) > 0) then
-						player = GetFactionPlayer("Asa Tribe")
-						return true
-					end
-				end
-			end
-		end
-		return false
-	end,
-	function() 
-		Event(
-			"",
-			"Our buras have been safely led across these hostile lands. Onwards to a new realm!",
-			player,
-			{"~!Continue"},
-			{function(s)
-				if (player == GetThisPlayer()) then
-					ActionVictory()
-					SetQuestCompleted("westward-migration", GameSettings.Difficulty)
-				end
-			end}
-		)
-		return false
-	end
-)

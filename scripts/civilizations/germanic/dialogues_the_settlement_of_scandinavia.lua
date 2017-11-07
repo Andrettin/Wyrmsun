@@ -117,6 +117,7 @@ DefineDialogue("on-the-vanaquisl-victory", {
 					if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "on-the-vanaquisl") then
 						CallDialogue("campaign-victory", trigger_player)
 					end
+					SetPlayerData(trigger_player, "CompleteQuest", "on-the-vanaquisl")
 				end
 			}
 		}
@@ -149,3 +150,19 @@ DefineDialogue("westward-migration-introduction", {
 	}
 })
 
+DefineDialogue("westward-migration-victory", {
+	Nodes = {
+		{
+			"speaker", "character", "voden",
+			"text", "Our people has been safely led across these hostile lands. Onwards to a new realm!",
+			"option-effects", {
+				function(s)
+					if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "westward-migration") then
+						CallDialogue("campaign-victory", trigger_player)
+					end
+					SetPlayerData(trigger_player, "CompleteQuest", "westward-migration")
+				end
+			}
+		}
+	}
+})

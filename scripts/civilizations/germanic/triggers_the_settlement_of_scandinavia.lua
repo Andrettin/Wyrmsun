@@ -112,3 +112,29 @@ AddTrigger("westward-migration-introduction",
 		return false
 	end
 )
+
+AddTrigger("westward-migration-victory",
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		for i=0,(PlayerMax - 2) do
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "westward-migration")) then
+				local uncount = GetUnits(PlayerNumNeutral)
+				for unit1 = 1,table.getn(uncount) do 
+					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-settlement-site" and GetUnitVariable(uncount[unit1], "Settlement") == "riga") then
+						if (GetNumUnitsAt(i, "unit-germanic-worker", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}) > 0) then
+							trigger_player = i
+							return true
+						end
+					end
+				end
+			end
+		end
+		return false
+	end,
+	function() 
+		CallDialogue("westward-migration-victory", trigger_player)
+		return false
+	end
+)
