@@ -72,6 +72,7 @@ DefineSettlement("novgorod", {
 	Position = {4551, 714},
 	Major = true,
 	CulturalNames = {
+		"norse", "Holmgard",
 		"slav", "Novgorod"
 	},
 	HistoricalOwners = {
@@ -98,7 +99,10 @@ DefineSettlement("pskov", {
 		-3000, "uralic-tribe"
 	},
 	HistoricalBuildings = {
-		-3000, 0, "town-hall"
+		-3000, 0, "town-hall",
+		-3000, 0, "farm",
+		-3000, 0, "farm",
+		-3000, 0, "farm"
 	},
 	HistoricalUnits = {
 		-3000, -2800, "unit-germanic-warrior", 3000, "uralic-tribe"
