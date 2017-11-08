@@ -139,7 +139,7 @@ DefineDialogue("westward-migration-introduction", {
 					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("uralic-tribe"))
 					SetDiplomacy(GetFactionPlayer("uralic-tribe"), "enemy", trigger_player)
 					
-					unit = CreateUnit("unit-revealer", trigger_player, {4392 - EarthStartX, 750 - EarthStartY})
+					unit = CreateUnit("unit-revealer", trigger_player, {4369 - EarthStartX + 16, 749 - EarthStartY + 32}, GetMapLayer("material-plane", "earth", 0))
 					SetUnitVariable(unit, "TTL", 600)
 				end
 			}

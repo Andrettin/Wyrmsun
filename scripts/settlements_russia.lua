@@ -96,16 +96,10 @@ DefineSettlement("pskov", {
 		"slav", "Pskov"
 	},
 	HistoricalOwners = {
-		-3000, "uralic-tribe"
 	},
 	HistoricalBuildings = {
-		-3000, 0, "town-hall",
-		-3000, 0, "farm",
-		-3000, 0, "farm",
-		-3000, 0, "farm"
 	},
 	HistoricalUnits = {
-		-3000, -2800, "unit-germanic-warrior", 3000, "uralic-tribe"
 	},
 	Regions = {"eurasia", "europe"}
 })
@@ -146,8 +140,28 @@ DefineSettlement("saint-petersburg", {
 		"slav", "Saint Petersburg"
 	},
 	HistoricalOwners = {
+		-9000, "uralic-tribe", -- the ancestors of Finno-Ugric speaking peoples settled the Karelian Isthmus c. 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
 	},
 	HistoricalBuildings = {
+		-9000, 0, "town-hall"
+	},
+	Regions = {"eurasia", "europe"}
+})
+
+DefineSettlement("viborg", {
+	Name = "Viborg",
+	MapTemplate = "earth",
+	Position = {4495, 665},
+	Major = true,
+	CulturalNames = {
+		"norse", "Viborg"
+	},
+	HistoricalOwners = {
+		-9000, "uralic-tribe", -- the ancestors of Finno-Ugric speaking peoples settled the Karelian Isthmus c. 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
+		1560, "sweden" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		-9000, 0, "town-hall"
 	},
 	Regions = {"eurasia", "europe"}
 })

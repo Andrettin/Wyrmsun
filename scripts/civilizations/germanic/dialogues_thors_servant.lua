@@ -34,7 +34,7 @@ DefineDialogue("thialfi-commanded-to-gotland", {
 				function(s)
 					SetPlayerData(trigger_player, "AcceptQuest", "thors-servant")
 					SetPlayerData(trigger_player, "AcceptQuest", "the-discovery-of-gotland")
-					unit = CreateUnit("unit-revealer", trigger_player, {4265 - EarthStartX, 741 - EarthStartY})
+					unit = CreateUnit("unit-revealer", trigger_player, {4265 - EarthStartX, 741 - EarthStartY}, GetMapLayer("material-plane", "earth", 0))
 					SetUnitVariable(unit, "TTL", 600)
 				end
 			}
@@ -67,7 +67,7 @@ DefineDialogue("thors-servant-temple-complete", {
 			"text", "The priests of Thunraz I invited to take charge of the new temple have told me that a group of wild berserkers are living in the island of Hlesey. They attack the passing ships, and must be rooted out to restore safety to that sea passage. The island lies far to the west, beyond the great chain of isles where the Skeldungs dwell.",
 			"option-effects", {
 				function(s)
-					unit = CreateUnit("unit-revealer", trigger_player, {4089 - EarthStartX, 745 - EarthStartY})
+					unit = CreateUnit("unit-revealer", trigger_player, {4089 - EarthStartX, 745 - EarthStartY}, GetMapLayer("material-plane", "earth", 0))
 					SetUnitVariable(unit, "TTL", 600)
 					SetPlayerData(trigger_player, "AcceptQuest", "slay-the-berserker-brides-at-hlesey")
 					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("hlesing-tribe"))

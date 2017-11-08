@@ -55,7 +55,7 @@ DefineQuest("westward-migration", { -- based on the Ynglinga saga and on the Ind
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
-	Objectives = {"- Bring a Bura to the Riga Settlement Site in the southwest", "- Wodanaz must survive"},
+	Objectives = {"- Bring a Bura to the southwestern edge of the map", "- Wodanaz must survive"},
 	HeroesMustSurvive = {"voden"},
 	Uncompleteable = true,
 	Unobtainable = true
@@ -307,7 +307,7 @@ DefineQuest("journey-to-heimdalls-stones", {
 	end,
 	AcceptEffects = function(s)
 		local heimdalls_stones_unit = FindUnique("heimdalls-stones")
-		unit = CreateUnit("unit-revealer", trigger_player, {GetUnitVariable(heimdalls_stones_unit, "PosX"), GetUnitVariable(heimdalls_stones_unit, "PosY")}, GetMapLayer("material-plane", "earth", 0))
+		unit = CreateUnit("unit-revealer", trigger_player, {GetUnitVariable(heimdalls_stones_unit, "PosX"), GetUnitVariable(heimdalls_stones_unit, "PosY")}, GetUnitVariable(heimdalls_stones_unit, "MapLayer"))
 		SetUnitVariable(unit, "TTL", 600)
 	end,
 	CompletionEffects = function(s)

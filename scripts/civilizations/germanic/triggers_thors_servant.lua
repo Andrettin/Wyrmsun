@@ -81,7 +81,7 @@ AddTrigger("berserker-brides-arrive-on-hlesey", -- Source: Kevin Crossley-Hollan
 
 		for i = 1, table.getn(players_around) do 
 			CallDialogue("berserker-brides-arrive-on-hlesey", players_around[i])
-			unit = CreateUnit("unit-revealer", players_around[i], {4089 - EarthStartX, 745 - EarthStartY})
+			unit = CreateUnit("unit-revealer", players_around[i], {4089 - EarthStartX, 745 - EarthStartY}, GetMapLayer("material-plane", "earth", 0))
 			SetUnitVariable(unit, "TTL", 600)
 		end
 		return false

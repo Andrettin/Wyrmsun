@@ -39,18 +39,3 @@ DefineSettlement("helsinki", {
 	},
 	Regions = {"europe", "west-and-central-europe"}
 })
-
-DefineSettlement("viborg", {
-	Name = "Viborg",
-	MapTemplate = "earth",
-	Position = {4495, 665},
-	Major = true,
-	CulturalNames = {
-		"norse", "Viborg"
-	},
-	HistoricalOwners = {
-	},
-	HistoricalBuildings = {
-	},
-	Regions = {"europe", "west-and-central-europe"}
-})

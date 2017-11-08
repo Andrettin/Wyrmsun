@@ -1305,7 +1305,6 @@ DefineProvince("Estonia", {
 	CulturalNames = {
 		"teuton", "Estland"
 	},
---	SettlementLocation = {550, 87}, -- Tallinn
 	Claims = {
 		"uralic", "uralic-tribe"
 	},
@@ -1359,7 +1358,6 @@ DefineProvince("Finland", {
 		"finnish", "Finland",
 		"norse", "Finland"
 	},
---	SettlementLocation = {550, 84}, -- Helsinki
 	Claims = {
 		"finnish", "fenni-tribe",
 		"uralic", "uralic-tribe"
@@ -2119,7 +2117,6 @@ DefineProvince("Latvia", {
 	CulturalNames = {
 		"teuton", "Lettland"
 	},
---	SettlementLocation = {548, 94}, -- Riga
 	Claims = {
 		"uralic", "uralic-tribe"
 	},
@@ -4157,27 +4154,6 @@ DefineProvince("Vestfold", {
 		"norse", "norway"
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
-})
-
-DefineProvince("Viborg", {
-	World = "earth",
-	CulturalNames = {
-		"norse", "Viborg"
-	},
---	SettlementLocation = {561, 83}, -- Viborg
-	Claims = {
-		"finnish", "finland",
-		"uralic", "uralic-tribe"
-	},
-	HistoricalOwners = {
-		-9000, "uralic", "uralic-tribe", -- The ancestors of Finno-Ugric speaking peoples settled the Karelian Isthmus c. 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
-		1560, "norse", "sweden" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalCultures = {
-		-9000, "uralic" -- The ancestors of Finno-Ugric speaking peoples settled the Karelian Isthmus c. 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
-		-- A fishnet belonging to the ancestors of Finno-Ugric speaking peoples was found in Antrea (on the Karelian Isthmus), being dated c. 8500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
-	},
-	Regions = {"eurasia", "europe"}
 })
 
 DefineProvince("Vinnytska", {

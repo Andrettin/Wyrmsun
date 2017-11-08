@@ -34,8 +34,10 @@ DefineSettlement("mitau", {
 		"teuton", "Mitau"
 	},
 	HistoricalOwners = {
+		-9000, "uralic-tribe", -- the ancestors of Finno-Ugric speaking peoples settled the eastern Baltic (apparently meaning Estonia and Latvia) c. 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
 	},
 	HistoricalBuildings = {
+		-9000, 0, "town-hall"
 	},
 	Regions = {"europe", "west-and-central-europe"}
 })
@@ -50,8 +52,10 @@ DefineSettlement("riga", {
 		"teuton", "Riga"
 	},
 	HistoricalOwners = {
+		-9000, "uralic-tribe", -- the ancestors of Finno-Ugric speaking peoples settled the eastern Baltic (apparently meaning Estonia and Latvia) c. 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
 	},
 	HistoricalBuildings = {
+		-9000, 0, "town-hall"
 	},
 	Regions = {"europe", "west-and-central-europe"}
 })
@@ -66,8 +70,10 @@ DefineSettlement("tallinn", {
 		"teuton", "Reval"
 	},
 	HistoricalOwners = {
+		-9000, "uralic-tribe", -- the ancestors of Finno-Ugric speaking peoples settled the eastern Baltic (apparently meaning Estonia and Latvia) c. 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
 	},
 	HistoricalBuildings = {
+		-9000, 0, "town-hall"
 	},
 	Regions = {"europe", "west-and-central-europe"}
 })

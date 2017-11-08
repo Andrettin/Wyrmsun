@@ -170,14 +170,9 @@ AddTrigger("westward-migration-victory",
 	function()
 		for i=0,(PlayerMax - 2) do
 			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "westward-migration")) then
-				local uncount = GetUnits(PlayerNumNeutral)
-				for unit1 = 1,table.getn(uncount) do 
-					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-settlement-site" and GetUnitVariable(uncount[unit1], "Settlement") == "riga") then
-						if (GetNumUnitsAt(i, "unit-germanic-worker", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}, GetUnitVariable(uncount[unit1], "MapLayer")) > 0) then
-							trigger_player = i
-							return true
-						end
-					end
+				if (GetNumUnitsAt(i, "unit-germanic-worker", {4369 - EarthStartX, 749 - EarthStartY}, {4369 - EarthStartX + 32, 749 - EarthStartY + 116}, GetMapLayer("material-plane", "earth", 0)) > 0) then
+					trigger_player = i
+					return true
 				end
 			end
 		end
