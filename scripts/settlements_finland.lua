@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016-2017 by Andrettin
+--      (c) Copyright 2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,16 +25,32 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineWorldMapTile({550, 84}, {
-	World = "earth",
-	CulturalSettlementNames = {
+DefineSettlement("helsinki", {
+	Name = "Helsinki",
+	MapTemplate = "earth",
+	Position = {4407, 675},
+	Major = true,
+	CulturalNames = {
 		"finnish", "Helsinki"
-	}
+	},
+	HistoricalOwners = {
+	},
+	HistoricalBuildings = {
+	},
+	Regions = {"europe", "west-and-central-europe"}
 })
 
-DefineWorldMapTile({561, 83}, {
-	World = "earth",
-	CulturalSettlementNames = {
+DefineSettlement("viborg", {
+	Name = "Viborg",
+	MapTemplate = "earth",
+	Position = {4495, 665},
+	Major = true,
+	CulturalNames = {
 		"norse", "Viborg"
-	}
+	},
+	HistoricalOwners = {
+	},
+	HistoricalBuildings = {
+	},
+	Regions = {"europe", "west-and-central-europe"}
 })

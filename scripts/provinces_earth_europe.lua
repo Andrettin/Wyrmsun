@@ -1370,7 +1370,7 @@ DefineProvince("Finland", {
 		1560, "norse", "sweden" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
-		-7500, "uralic", -- The ancestors of Finno-Ugric speaking peoples (or their descendants) settled the coast of the Bothian Gulf in Finland 7500-6400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
+		-7500, "uralic", -- The ancestors of Finno-Ugric speaking peoples (or their descendants) settled the coast of the Bothnian Gulf in Finland 7500-6400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
 		-264, "finnish"
 	},
 	Regions = {"europe", "west-and-central-europe"}

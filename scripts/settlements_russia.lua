@@ -136,3 +136,18 @@ DefineSettlement("rostov-on-don", {
 	},
 	Regions = {"eurasia", "europe"}
 })
+
+DefineSettlement("saint-petersburg", {
+	Name = "Saint Petersburg",
+	MapTemplate = "earth",
+	Position = {4529, 682},
+	Major = true,
+	CulturalNames = {
+		"slav", "Saint Petersburg"
+	},
+	HistoricalOwners = {
+	},
+	HistoricalBuildings = {
+	},
+	Regions = {"eurasia", "europe"}
+})
