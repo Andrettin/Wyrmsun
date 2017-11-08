@@ -78,7 +78,7 @@ DefineDialogue("jarl-meets-the-thrallings", {
 					local uncount = GetUnits(GetFactionPlayer("thralling-tribe"))
 					for unit1 = 1,table.getn(uncount) do 
 						if (GetUnitVariable(uncount[unit1], "Ident") == "unit-germanic-worker") then
-							OrderUnit(GetFactionPlayer("thralling-tribe"), GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, {GetUnitVariable(erala_hero_unit, "PosX"), GetUnitVariable(erala_hero_unit, "PosY")}, "attack")
+							OrderUnit(GetFactionPlayer("thralling-tribe"), GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, GetUnitVariable(uncount[unit1], "MapLayer"), {GetUnitVariable(erala_hero_unit, "PosX"), GetUnitVariable(erala_hero_unit, "PosY")}, GetUnitVariable(erala_hero_unit, "MapLayer"), "attack")
 							attacker_count = attacker_count + 1
 							if (attacker_count >= 2) then
 								break
@@ -114,13 +114,13 @@ DefineDialogue("thrallings-subjugated", {
 						local nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 4, true)
 						for unit2 = 1,table.getn(nearby_uncount) do 
 							if (GetUnitVariable(nearby_uncount[unit2], "Player") == trigger_player) then
-								OrderUnit(trigger_player, GetUnitVariable(nearby_uncount[unit2], "Ident"), {GetUnitVariable(nearby_uncount[unit2], "PosX"), GetUnitVariable(nearby_uncount[unit2], "PosY")}, nil, "stop")
+								OrderUnit(trigger_player, GetUnitVariable(nearby_uncount[unit2], "Ident"), {GetUnitVariable(nearby_uncount[unit2], "PosX"), GetUnitVariable(nearby_uncount[unit2], "PosY")}, GetUnitVariable(nearby_uncount[unit2], "MapLayer"), nil, nil, "stop")
 							end
 						end
 						
 						-- change the unit's owner to the Eraling Tribe
 						ChangeUnitOwner(uncount[unit1], trigger_player)
-						OrderUnit(trigger_player, GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, nil, "stop")
+						OrderUnit(trigger_player, GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, GetUnitVariable(uncount[unit1], "MapLayer"), nil, nil, "stop")
 						if (GetUnitVariable(uncount[unit1], "Ident") ~= GetFactionClassUnitType(GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class"), GetPlayerData(trigger_player, "Faction"))) then
 							ConvertUnit(uncount[unit1], GetFactionClassUnitType(GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class"), GetPlayerData(trigger_player, "Faction")))
 						end
@@ -177,7 +177,7 @@ DefineDialogue("jarl-attacks-the-karlings", {
 					local uncount = GetUnits(GetFactionPlayer("karling-tribe"))
 					for unit1 = 1,table.getn(uncount) do 
 						if (GetUnitVariable(uncount[unit1], "Ident") == "unit-germanic-worker") then
-							OrderUnit(GetFactionPlayer("karling-tribe"), GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, {GetUnitVariable(erala_hero_unit, "PosX"), GetUnitVariable(erala_hero_unit, "PosY")}, "attack")
+							OrderUnit(GetFactionPlayer("karling-tribe"), GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, GetUnitVariable(uncount[unit1], "MapLayer"), {GetUnitVariable(erala_hero_unit, "PosX"), GetUnitVariable(erala_hero_unit, "PosY")}, GetUnitVariable(erala_hero_unit, "MapLayer"), "attack")
 						end
 					end
 					SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 2500)
@@ -214,13 +214,13 @@ DefineDialogue("karlings-subjugated", {
 						local nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 4, true)
 						for unit2 = 1,table.getn(nearby_uncount) do 
 							if (GetUnitVariable(nearby_uncount[unit2], "Player") == trigger_player) then
-								OrderUnit(trigger_player, GetUnitVariable(nearby_uncount[unit2], "Ident"), {GetUnitVariable(nearby_uncount[unit2], "PosX"), GetUnitVariable(nearby_uncount[unit2], "PosY")}, nil, "stop")
+								OrderUnit(trigger_player, GetUnitVariable(nearby_uncount[unit2], "Ident"), {GetUnitVariable(nearby_uncount[unit2], "PosX"), GetUnitVariable(nearby_uncount[unit2], "PosY")}, GetUnitVariable(nearby_uncount[unit2], "MapLayer"), nil, nil, "stop")
 							end
 						end
 						
 						-- change the unit's owner to the Eraling Tribe
 						ChangeUnitOwner(uncount[unit1], trigger_player)
-						OrderUnit(trigger_player, GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, nil, "stop")
+						OrderUnit(trigger_player, GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, GetUnitVariable(uncount[unit1], "MapLayer"), nil, nil, "stop")
 						if (GetUnitVariable(uncount[unit1], "Ident") ~= GetFactionClassUnitType(GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class"), GetPlayerData(trigger_player, "Faction"))) then
 							ConvertUnit(uncount[unit1], GetFactionClassUnitType(GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class"), GetPlayerData(trigger_player, "Faction")))
 						end

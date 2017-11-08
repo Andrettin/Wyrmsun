@@ -101,8 +101,8 @@ DefineDialogue("on-the-vanaquisl-victory", {
 					if (asa_warrior) then
 						local uncount = GetUnits(GetFactionPlayer("vana-tribe"))
 						for unit1 = 1,table.getn(uncount) do 
-							if (GetUnitVariable(uncount[unit1],"Ident") == "unit-germanic-warrior") then
-								OrderUnit(GetFactionPlayer("vana-tribe"), GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(asa_warrior,"PosX"), GetUnitVariable(asa_warrior,"PosY")}, "attack")
+							if (GetUnitVariable(uncount[unit1], "Ident") == "unit-germanic-warrior") then
+								OrderUnit(GetFactionPlayer("vana-tribe"), GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, GetUnitVariable(uncount[unit1], "MapLayer"), {GetUnitVariable(asa_warrior,"PosX"), GetUnitVariable(asa_warrior,"PosY")}, GetUnitVariable(asa_warrior, "MapLayer"), "attack")
 							end
 						end
 					end
@@ -146,6 +146,42 @@ DefineDialogue("westward-migration-introduction", {
 		},
 		{
 			"text", "Hint: This is a migration mission. You do not have any resources to build structures with."
+		}
+	}
+})
+
+DefineDialogue("westward-migration-natives-sighted", {
+	Nodes = {
+		{
+			"speaker", "unit", "unit-germanic-warrior",
+			"text", "Intruders! Get them!"
+		},
+		{
+			"speaker", "character", "voden",
+			"text", "Defend our people!"
+		}
+	}
+})
+
+DefineDialogue("westward-migration-native-settlement-sighted", {
+	Nodes = {
+		{
+			"speaker", "character", "voden",
+			"text", "What a shabby settlement..."
+		}
+	}
+})
+
+DefineDialogue("westward-migration-workers-killed", {
+	Nodes = {
+		{
+			"speaker", "character", "voden",
+			"text", "I have failed to protect my people, now my tribe is done for...",
+			"option-effects", {
+				function(s)
+					SetPlayerData(trigger_player, "FailQuest", "westward-migration")
+				end
+			}
 		}
 	}
 })

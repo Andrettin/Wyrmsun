@@ -258,7 +258,7 @@ AddTrigger("searching-for-the-runecrafter-move-gryphon-riders",
 		return false
 	end,
 	function()
-		OrderUnit(GetFactionPlayer("Gryphon Riders"), "unit-dwarven-gryphon-rider", {2, 35}, {8, 53}, "move")
+		OrderUnit(GetFactionPlayer("Gryphon Riders"), "unit-dwarven-gryphon-rider", {2, 35}, 0, {8, 53}, 0, "move")
 		return false
 	end
 )
@@ -334,7 +334,7 @@ AddTrigger("searching-for-the-runecrafter-gryphon-riders-found",
 											player,
 											{"~!Continue"},
 											{function(s)
-												OrderUnit(GetFactionPlayer("Gryphon Riders"), "unit-dwarven-gryphon-rider", {0, 34}, {6, 52}, "move")
+												OrderUnit(GetFactionPlayer("Gryphon Riders"), "unit-dwarven-gryphon-rider", {0, 34}, 0, {6, 52}, 0, "move")
 											end}
 										)
 										end},

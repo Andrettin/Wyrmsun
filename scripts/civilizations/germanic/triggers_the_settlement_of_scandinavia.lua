@@ -29,9 +29,6 @@
 -- based on the Ynglinga saga and on the Indo-European migration according to the Kurgan hypothesis
 AddTrigger("on-the-vanaquisl-introduction",
 	function()
-		if (GameCycle == 0) then
-			return false
-		end
 		for i=0,(PlayerMax - 2) do
 			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "Faction") == "asa-tribe" and GetFactionExists("vana-tribe")) then
 				trigger_player = i
@@ -65,7 +62,7 @@ AddTrigger("on-the-vanaquisl-vana-sighted",
 				local uncount = GetUnits(GetFactionPlayer("vana-tribe"))
 				for unit1 = 1,table.getn(uncount) do 
 					if (uncount[unit1] and GetUnitVariable(uncount[unit1], "Ident") == "unit-germanic-warrior") then
-						local unit_quantity = GetNumUnitsAt(i, "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3, GetUnitVariable(uncount[unit1],"PosY") + 3})
+						local unit_quantity = GetNumUnitsAt(i, "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3, GetUnitVariable(uncount[unit1],"PosY") + 3}, GetUnitVariable(uncount[unit1], "MapLayer"))
 						if (unit_quantity > 0) then
 							trigger_player = i
 							return true
@@ -84,9 +81,6 @@ AddTrigger("on-the-vanaquisl-vana-sighted",
 
 AddTrigger("westward-migration-introduction",
 	function()
-		if (GameCycle == 0) then
-			return false
-		end
 		for i=0,(PlayerMax - 2) do
 			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "Faction") == "asa-tribe" and GetFactionExists("uralic-tribe")) then
 				trigger_player = i
@@ -113,17 +107,73 @@ AddTrigger("westward-migration-introduction",
 	end
 )
 
+AddTrigger("westward-migration-natives-sighted",
+	function()
+		for i=0,(PlayerMax - 2) do
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "westward-migration") and GetFactionExists("uralic-tribe")) then
+				local uncount = GetUnits(GetFactionPlayer("uralic-tribe"))
+				for unit1 = 1,table.getn(uncount) do 
+					if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) then
+						local unit_quantity = GetNumUnitsAt(i, "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3, GetUnitVariable(uncount[unit1],"PosY") + 3}, GetUnitVariable(uncount[unit1], "MapLayer"))
+						if (unit_quantity > 0) then
+							trigger_player = i
+							return true
+						end
+					end
+				end
+			end
+		end
+		return false
+	end,
+	function() 
+		CallDialogue("westward-migration-natives-sighted", trigger_player)
+		return false
+	end
+)
+
+AddTrigger("westward-migration-native-settlement-sighted",
+	function()
+		for i = 0, (PlayerMax - 2) do
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "westward-migration") and GetFactionExists("uralic-tribe") and FindHero("voden", i) ~= nil) then
+				local voden_unit = FindHero("voden", i)
+				if (GetNumUnitsAt(GetFactionPlayer("uralic-tribe"), "buildings", {GetUnitVariable(voden_unit, "PosX") - 3, GetUnitVariable(voden_unit, "PosY") - 3}, {GetUnitVariable(voden_unit, "PosX") + 3, GetUnitVariable(voden_unit, "PosY") + 3}, GetUnitVariable(voden_unit, "MapLayer")) > 0) then
+					trigger_player = i
+					return true
+				end
+			end
+		end
+		return false
+	end,
+	function() 
+		CallDialogue("westward-migration-native-settlement-sighted", trigger_player)
+		return false
+	end
+)
+
+AddTrigger("westward-migration-workers-killed",
+	function()
+		for i=0,(PlayerMax - 2) do
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "westward-migration") and GetPlayerData(i, "UnitTypesCount", "unit-germanic-worker") < 1) then
+				trigger_player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function() 
+		CallDialogue("westward-migration-workers-killed", trigger_player)
+		return false
+	end
+)
+
 AddTrigger("westward-migration-victory",
 	function()
-		if (GameCycle == 0) then
-			return false
-		end
 		for i=0,(PlayerMax - 2) do
 			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "westward-migration")) then
 				local uncount = GetUnits(PlayerNumNeutral)
 				for unit1 = 1,table.getn(uncount) do 
 					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-settlement-site" and GetUnitVariable(uncount[unit1], "Settlement") == "riga") then
-						if (GetNumUnitsAt(i, "unit-germanic-worker", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}) > 0) then
+						if (GetNumUnitsAt(i, "unit-germanic-worker", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}, GetUnitVariable(uncount[unit1], "MapLayer")) > 0) then
 							trigger_player = i
 							return true
 						end

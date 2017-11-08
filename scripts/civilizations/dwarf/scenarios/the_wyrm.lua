@@ -233,7 +233,7 @@ AddTrigger("the-wyrm-shinsplitter-and-kobold-chase",
 			uncount = GetUnits(GetFactionPlayer("Shinsplitter Clan"))
 			for unit1 = 1,table.getn(uncount) do 
 				if (uncount[unit1] and GetUnitVariable(uncount[unit1], "Idle") and GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-miner" and GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-skilled-miner" and GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-expert-miner" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building") == false) then
-					OrderUnit(1, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {27, 63}, "attack")
+					OrderUnit(1, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, 0, {27, 63}, 0, "attack")
 				end
 			end
 			
@@ -242,7 +242,7 @@ AddTrigger("the-wyrm-shinsplitter-and-kobold-chase",
 				uncount = GetUnits(GetFactionPlayer("Svafnir"))
 				for unit1 = 1,table.getn(uncount) do 
 					if (GetUnitVariable(uncount[unit1], "Idle")) then
-						OrderUnit(2, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {27, 63}, "attack")
+						OrderUnit(2, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, 0, {27, 63}, 0, "attack")
 					end
 				end
 			end
@@ -285,9 +285,9 @@ AddTrigger("the-wyrm-norlunds-move-to-smithy",
 		for unit1 = 1,table.getn(uncount) do 
 			if (uncount[unit1] and GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-scout" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building") == false and GetUnitVariable(uncount[unit1], "Idle")) then
 				if (GetUnitVariable(uncount[unit1],"Character") ~= "thursagan") then
-					OrderUnit(GetFactionPlayer("Norlund Clan"), GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(thursagan,"PosX"), GetUnitVariable(thursagan,"PosY")}, "move")
+					OrderUnit(GetFactionPlayer("Norlund Clan"), GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, 0, {GetUnitVariable(thursagan,"PosX"), GetUnitVariable(thursagan,"PosY")}, 0, "move")
 				else
-					OrderUnit(GetFactionPlayer("Norlund Clan"), GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(smithy,"PosX"), GetUnitVariable(smithy,"PosY")}, "move")
+					OrderUnit(GetFactionPlayer("Norlund Clan"), GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, 0, {GetUnitVariable(smithy,"PosX"), GetUnitVariable(smithy,"PosY")}, 0, "move")
 				end
 			end
 		end

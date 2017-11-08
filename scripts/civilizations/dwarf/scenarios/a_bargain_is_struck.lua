@@ -244,12 +244,12 @@ AddTrigger("a-bargain-is-struck-introduction",
 																															SetUnitVariable(unit, "Active", false)
 																															if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
 																																-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
-																																OrderUnit(player, "unit-gnomish-duelist", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
+																																OrderUnit(player, "unit-gnomish-duelist", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, 0, {47, 8}, 0, "move")
 																															end
 																															unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
 																															if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
 																																-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
-																																OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
+																																OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, 0, {47, 8}, 0, "move")
 																															end
 																															local transporter = unit
 																															unit = CreateUnitInTransporter("unit-gold-chest", PlayerNumNeutral, transporter)
@@ -257,7 +257,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 																															unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
 																															if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
 																																-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
-																																OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
+																																OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, 0, {47, 8}, 0, "move")
 																															end
 																															transporter = unit
 																															unit = CreateUnitInTransporter("unit-gold-chest", PlayerNumNeutral, transporter)
@@ -265,7 +265,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 																															unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
 																															if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
 																																-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
-																																OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
+																																OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, 0, {47, 8}, 0, "move")
 																															end
 																															transporter = unit
 																															unit = CreateUnitInTransporter("unit-gold-chest", PlayerNumNeutral, transporter)
@@ -273,7 +273,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 																															unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
 																															if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
 																																-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
-																																OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
+																																OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, 0, {47, 8}, 0, "move")
 																															end
 																															transporter = unit
 																															unit = CreateUnitInTransporter("unit-gold-chest", PlayerNumNeutral, transporter)

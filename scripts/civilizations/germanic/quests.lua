@@ -55,7 +55,7 @@ DefineQuest("westward-migration", { -- based on the Ynglinga saga and on the Ind
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
-	Objectives = {"- Have a Bura stand next to the Riga Settlement Site to the southwest", "- Wodanaz must survive"},
+	Objectives = {"- Bring a Bura to the Riga Settlement Site in the southwest", "- Wodanaz must survive"},
 	HeroesMustSurvive = {"voden"},
 	Uncompleteable = true,
 	Unobtainable = true

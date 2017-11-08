@@ -477,7 +477,7 @@ AddTrigger("hills-of-the-shorbear-clan-shinsplitters-arrive",
 	end,
 	function()
 		if (GetFactionPlayer("Shinsplitter Clan") ~= GetThisPlayer()) then
-			OrderUnit(GetFactionPlayer("Shinsplitter Clan"), "unit-dwarven-thane", {2, 70}, {8, 64}, "move")
+			OrderUnit(GetFactionPlayer("Shinsplitter Clan"), "unit-dwarven-thane", {2, 70}, 0, {8, 64}, 0, "move")
 		end
 
 		local event_player = player
