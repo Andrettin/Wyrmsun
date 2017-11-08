@@ -879,7 +879,7 @@ DefineLanguageWord("Heima", { -- Source: August Fick and Alf Torp, "Wortschatz d
 DefineLanguageWord("Heimr", { -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 201; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
 	Language = "old-norse",
 	Type = "noun",
-	Meanings = {"Home", "World"}, -- as given by Kroonen; Fick likewise gives the German "Heimat, Welt" as the meaning
+	Meanings = {"Home", "World"}, -- as given by both Kroonen and Fick; Fick gives the German "Heimat, Welt" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Haima"},
 	Gender = "masculine", -- as given by both Kroonen and Fick
 	NumberCaseInflections = {
