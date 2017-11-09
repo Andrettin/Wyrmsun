@@ -166,6 +166,11 @@ function HandleCheats(str)
 		if (gunpowder_infantry_type) then
 			unit = CreateUnit(gunpowder_infantry_type, GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
 		end
+	elseif (str == "archimedes") then
+		local siege_engine_type = GetFactionClassUnitType("siege-engine", GetPlayerData(GetThisPlayer(), "Faction"))
+		if (siege_engine_type) then
+			unit = CreateUnit(siege_engine_type, GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
+		end
 	else
 		return false
 	end

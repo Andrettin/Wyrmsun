@@ -66,6 +66,7 @@ https://github.com/Andrettin/Wyrmsun
 - Renamed the "Choose Level-Up Upgrade" submenu to "Choose Upgrade", as the hero deity choices are now placed there.
 - Weapon mastery abilities can now be acquired up to five times.
 - Eagle Eye can now be acquired up to five times.
+- Added new Stun status effect icon (by Jinn).
 
 * AI
 - The AI now researches upgrades in a more dynamic fashion.

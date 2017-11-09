@@ -125,6 +125,11 @@ DefineMissileType("missile-impact-slime", {
 	DrawLevel = 44, Class = "missile-class-stay", Sleep = 4, Speed = 16, Range = 1
 })
 
+DefineMissileType("missile-impact-lightning", {
+	File = "missiles/lightning_impact_small_2.png", Size = {70, 70}, Frames = 4, NumDirections = 1,
+	DrawLevel = 44, Class = "missile-class-stay", Sleep = 3, Speed = 16, Range = 1
+})
+
 DefineMissileType("missile-axe-twirl", {
 	File = "missiles/axe_twirl.png", Size = {72, 72}, Frames = 8, NumDirections = 1,
 	DrawLevel = 50, Class = "missile-class-stay", Sleep = 3, Speed = 16, Range = 1
