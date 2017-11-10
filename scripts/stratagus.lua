@@ -1176,7 +1176,7 @@ end
 
 function GetFactionExists(faction)
 	for i=0,(PlayerMax - 2) do
-		if (Players[i].Type ~= PlayerNobody and (GetPlayerData(i, "Name") == faction or GetPlayerData(i, "Faction") == faction)) then
+		if (Players[i].Type ~= PlayerNobody and (GetPlayerData(i, "Name") == faction or GetPlayerData(i, "Faction") == faction) and GetPlayerData(i, "TotalNumUnitsConstructed") > 0) then
 			return true
 		end
 	end

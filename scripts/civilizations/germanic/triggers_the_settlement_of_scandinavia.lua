@@ -183,3 +183,65 @@ AddTrigger("westward-migration-victory",
 		return false
 	end
 )
+
+AddTrigger("the-settlement-of-scandinavia-introduction",
+	function()
+		for i=0,(PlayerMax - 2) do
+			if (
+				GetPlayerData(i, "TotalNumUnitsConstructed") > 0
+				and GetPlayerData(i, "Faction") == "asa-tribe"
+				and GetFactionExists("ertebolle-tribe")
+				and GetFactionExists("gylfing-tribe")
+				and GetNumUnitsAt(i, "any", {4068 - EarthStartX - 16, 811 - EarthStartY - 16}, {4068 - EarthStartX + 16, 811 - EarthStartY + 16}, GetMapLayer("material-plane", "earth", 0)) > 0 -- must have units near Kiel
+			) then
+				trigger_player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function()
+		CallDialogue("the-settlement-of-scandinavia-introduction", trigger_player)
+		return false
+	end
+)
+
+AddTrigger("northwards-to-the-sea-natives-sighted",
+	function()
+		for i=0,(PlayerMax - 2) do
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "the-settlement-of-scandinavia") and GetFactionExists("ertebolle-tribe")) then
+				local uncount = GetUnits(GetFactionPlayer("ertebolle-tribe"))
+				for unit1 = 1,table.getn(uncount) do 
+					if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) then
+						local unit_quantity = GetNumUnitsAt(i, "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3, GetUnitVariable(uncount[unit1],"PosY") + 3}, GetUnitVariable(uncount[unit1], "MapLayer"))
+						if (unit_quantity > 0) then
+							trigger_player = i
+							return true
+						end
+					end
+				end
+			end
+		end
+		return false
+	end,
+	function()
+		CallDialogue("northwards-to-the-sea-natives-sighted", trigger_player)
+		return false
+	end
+)
+
+AddTrigger("northwards-to-the-sea-victory",
+	function()
+		for i=0,(PlayerMax - 2) do
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "the-settlement-of-scandinavia") and GetFactionExists("ertebolle-tribe") == false and GetFactionExists("gylfing-tribe")) then
+				trigger_player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function()
+		CallDialogue("northwards-to-the-sea-victory", trigger_player)
+		return false
+	end
+)

@@ -61,17 +61,22 @@ DefineQuest("westward-migration", { -- based on the Ynglinga saga and on the Ind
 	Unobtainable = true
 })
 
-DefineQuest("northwards-to-the-sea", { -- based on the Ynglinga saga and on the Indo-European migration according to the Kurgan hypothesis
-	Name = "Northwards to the Sea",
+DefineQuest("the-settlement-of-scandinavia", { -- based on the Ynglinga saga and on the Indo-European migration according to the Kurgan hypothesis
+	Name = "The Settlement of Scandinavia",
 	Icon = "icon-germanic-town-hall",
-	Description = "After moving southwest, we now find ourselves near a peninsula which seems promising for settlement.\n\nMap: Jutland",
-	World = "earth",
 	Civilization = "germanic",
-	Map = "maps/earth/jutland.smp",
-	Scenario = "scripts/civilizations/germanic/scenarios/northwards_to_the_sea.lua",
 	PlayerColor = "orange",
-	LoadingMusic = "GermanicLoading",
-	MapMusic = "GermanicTheme3",
+	CompletionEffects = function(s)
+		CallDialogue("the-settlement-of-scandinavia-victory", trigger_player)
+	end,
+	FailEffects = function(s)
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "the-settlement-of-scandinavia") then
+			CallDialogue("campaign-defeat", trigger_player)
+		end
+	end,
+	Objectives = {"- Defeat the Ertebolle Tribe and the Gylfing Tribe", "- Wodanaz must survive"},
+	DestroyFactions = {"ertebolle-tribe", "gylfing-tribe"},
+	HeroesMustSurvive = {"voden"},
 	Unobtainable = true
 })
 
@@ -79,7 +84,6 @@ DefineQuest("gylves-realm", {
 	Name = "Gylve's Realm",
 	Icon = "icon-germanic-barbed-arrow",
 	Description = "After establishing ourselves in Jutland and the islands of Fyen and Zealand we journeyed north, but we do not seem welcome in these new shores...\n\nMap: Malmo",
-	RequiredQuest = "northwards-to-the-sea",
 	World = "earth",
 	Civilization = "germanic",
 	Map = "maps/earth/malmo.smp",

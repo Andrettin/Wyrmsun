@@ -37,9 +37,9 @@ DefineFaction("asa-tribe", {
 		-2900, "copper", 0, -- Westward Migration scenario
 		-2900, "lumber", 0, -- Westward Migration scenario
 		-2900, "stone", 0, -- Westward Migration scenario
-		-2800, "copper", 2500, -- Gylve's Realm scenario
-		-2800, "lumber", 2500, -- Gylve's Realm scenario
-		-2800, "stone", 2500 -- Gylve's Realm scenario
+		-2800, "copper", 2500, -- The Settlement of Scandinavia scenario
+		-2800, "lumber", 2500, -- The Settlement of Scandinavia scenario
+		-2800, "stone", 2500 -- The Settlement of Scandinavia scenario
 	}
 })
 

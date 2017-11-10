@@ -28,9 +28,9 @@
 DefineAchievement("the-settlement-of-scandinavia", {
 	Name = "The Settlement of Scandinavia",
 	Icon = "icon-germanic-warrior",
-	Description = "Complete the On the Vanaquisl, Westward Migration, Northwards to the Sea and Gylve's Realm missions.",
+	Description = "Complete the On the Vanaquisl, Westward Migration and The Settlement of Scandinavia scenarios.",
 	PlayerColor = "orange",
-	RequiredQuests = {"on-the-vanaquisl", "westward-migration", "northwards-to-the-sea", "gylves-realm"}
+	RequiredQuests = {"on-the-vanaquisl", "westward-migration", "the-settlement-of-scandinavia"}
 })
 
 DefineAchievement("heimdalls-progeny", {

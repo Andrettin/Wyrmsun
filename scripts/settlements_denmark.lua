@@ -48,6 +48,9 @@ DefineSettlement("aarhus", {
 	HistoricalBuildings = {
 		-5800, 0, "town-hall"
 	},
+	HistoricalUnits = {
+		-2800, {-2800, 12, 30}, "unit-germanic-warrior", 3000, "ertebolle-tribe"
+	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 

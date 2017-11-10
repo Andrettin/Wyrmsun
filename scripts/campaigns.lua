@@ -67,8 +67,8 @@ DefineCampaign("a-home-in-the-fields-of-sand", {
 	MapSize = {256, 256}
 })
 
-DefineCampaign("gylves-realm", {
-	Name = "Gylve's Realm",
+DefineCampaign("the-settlement-of-scandinavia", {
+	Name = "The Settlement of Scandinavia",
 	Description = "After a long journey, the Asa reach lands ripe for settlement.",
 	Faction = "asa-tribe",
 	RequiredQuests = {"westward-migration"},

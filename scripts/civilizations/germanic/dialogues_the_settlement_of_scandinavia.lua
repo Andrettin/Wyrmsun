@@ -128,16 +128,14 @@ DefineDialogue("westward-migration-introduction", {
 	Nodes = {
 		{
 			"speaker", "character", "voden",
-			"text", "Our home steppes could scarce support our growing people. Competition for land with neighboring tribes as warlike as ours, too, wore us down. Thus I made my choice. To gather all our tribesfolk, leaving our homes behind, to seek new lands."
+			"text", "Our home steppes could scarce support our growing people. Competition for land with neighboring tribes as warlike as ours, too, wore us down. Thus I made my choice. To gather all our tribesfolk, leaving our homes behind, to seek new lands. Our priests foretold that our future lies in the north..."
 		},
 		{
 			"speaker", "character", "voden",
-			"text", "Travelling north, we came to this land crossed by a great river. And yet, our journey is not yet ended. This area is filled with natives who are as troublesome as they are numerous. We hear of more docile peoples farther to the southwest, who will be more easily conquered... But before we get there, first we have to pass through the hostile natives around here... this will be a dangerous task.",
+			"text", "Travelling northwards, we came to this land crossed by a great river. And yet, the priests say that our journey is not yet ended, that the northern land of our destinity is not this one. Settlement here would certainly be difficult, for this area is filled with natives who are as troublesome as they are numerous. We hear of more docile peoples farther to the west, who will be more easily conquered... But before we get there, first we have to pass through the hostile natives around here... this will be a dangerous task.",
 			"option-effects", {
 				function(s)
 					SetPlayerData(trigger_player, "AcceptQuest", "westward-migration")
-					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("uralic-tribe"))
-					SetDiplomacy(GetFactionPlayer("uralic-tribe"), "enemy", trigger_player)
 					
 					unit = CreateUnit("unit-revealer", trigger_player, {4369 - EarthStartX + 16, 749 - EarthStartY + 32}, GetMapLayer("material-plane", "earth", 0))
 					SetUnitVariable(unit, "TTL", 600)
@@ -158,7 +156,13 @@ DefineDialogue("westward-migration-natives-sighted", {
 		},
 		{
 			"speaker", "character", "voden",
-			"text", "Defend our people!"
+			"text", "Defend our people!",
+			"option-effects", {
+				function(s)
+					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("uralic-tribe"))
+					SetDiplomacy(GetFactionPlayer("uralic-tribe"), "enemy", trigger_player)
+				end
+			}
 		}
 	}
 })
@@ -197,6 +201,98 @@ DefineDialogue("westward-migration-victory", {
 						CallDialogue("campaign-victory", trigger_player)
 					end
 					SetPlayerData(trigger_player, "CompleteQuest", "westward-migration")
+				end
+			}
+		}
+	}
+})
+
+DefineDialogue("the-settlement-of-scandinavia-introduction", {
+	Nodes = {
+		{
+			"speaker", "character", "voden",
+			"text", "Our journey has been long and harsh. But now we have reached the northern lands the priests saw in their visions, and the time has come to take it for ourselves! Subdue the natives and make their wives our own!"
+		},
+		{
+			"speaker", "character", "voden",
+			"text", "One tribe dwells in this peninsula, to our north, and another beyond the sea, a short distance to our east. Both need to be defeated. First, however, we must build a settlement here and gather our forces.",
+			"option-effects", {
+				function(s)
+					SetPlayerData(trigger_player, "AcceptQuest", "the-settlement-of-scandinavia")
+					
+					unit = CreateUnit("unit-revealer", trigger_player, {4064 - EarthStartX, 777 - EarthStartY}, GetMapLayer("material-plane", "earth", 0)) -- Aarhus
+					SetUnitVariable(unit, "TTL", 600)
+					
+					unit = CreateUnit("unit-revealer", trigger_player, {4112 - EarthStartX, 784 - EarthStartY}, GetMapLayer("material-plane", "earth", 0)) -- Leidre
+					SetUnitVariable(unit, "TTL", 600)
+					
+					unit = CreateUnit("unit-revealer", trigger_player, {4136 - EarthStartX, 783 - EarthStartY}, GetMapLayer("material-plane", "earth", 0)) -- Malmo
+					SetUnitVariable(unit, "TTL", 600)
+				end
+			}
+		},
+		{
+			"text", "Hint: You will need to build transport ships to defeat all your enemies."
+		}
+	}
+})
+
+DefineDialogue("northwards-to-the-sea-natives-sighted", {
+	Nodes = {
+		{
+			"speaker", "unit", "unit-germanic-warrior",
+			"text", "Who are you, strangers? And what do you seek here?"
+		},
+		{
+			"speaker", "character", "voden",
+			"text", "We are the Asa, and we seek a new home for our desolate people."
+		},
+		{
+			"speaker", "unit", "unit-germanic-warrior",
+			"text", "You are... too many! We do not have enough space here, you must turn away and go elsewhere."
+		},
+		{
+			"speaker", "character", "voden",
+			"text", "Our feet grow tired, long have we wandered. There is no turning back, and if you will not submit peacefully - then it is war that you have brought upon yourselves!",
+			"option-effects", {
+				function(s)
+					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("ertebolle-tribe"))
+					SetDiplomacy(GetFactionPlayer("ertebolle-tribe"), "enemy", trigger_player)
+				end
+			}
+		}
+	}
+})
+
+DefineDialogue("northwards-to-the-sea-victory", {
+	Nodes = {
+		{
+			"speaker", "character", "voden",
+			"text", "This tribe is now done for... when all of this is over, perhaps I should set my son Skeldu to rule upon their former lands."
+		},
+		{
+			"speaker", "character", "voden",
+			"text", "The time has come to set our eyes upon the lands to the east, beyond the sea... It is there that I shall build my new seat.",
+			"option-effects", {
+				function(s)
+					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("gylfing-tribe"))
+--					SetDiplomacy(GetFactionPlayer("gylfing-tribe"), "enemy", trigger_player)
+				end
+			}
+		}
+	}
+})
+
+DefineDialogue("the-settlement-of-scandinavia-victory", {
+	Nodes = {
+		{
+			"speaker", "character", "voden",
+			"text", "These lands are ours! My descendants shall rule them for untold generations...",
+			"option-effects", {
+				function(s)
+					if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "the-settlement-of-scandinavia") then
+						CallDialogue("campaign-victory", trigger_player)
+					end
 				end
 			}
 		}
