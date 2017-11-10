@@ -483,7 +483,7 @@ DefineQuest("andvaris-gold", {
 	Objectives = {"- Destroy the Oinling Clan"},
 	Rewards = "+10,000 Copper, Magic Ring",
 	DestroyFactions = {"oinling-clan"},
-	Competitive = true
+--	Competitive = true
 })
 
 DefineQuest("the-mead-of-poetry-brew-potions-of-invisibility", {

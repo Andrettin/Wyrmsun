@@ -502,7 +502,7 @@ DefineQuest("slay-the-berserker-brides-at-hlesey", { -- Source: Kevin Crossley-H
 	Objectives = {"- Destroy the Hlesings"},
 	Rewards = "+1500 Copper",
 	DestroyFactions = {"hlesing-tribe"},
-	Competitive = true
+--	Competitive = true
 })
 
 DefineQuest("slay-geirrod", {
