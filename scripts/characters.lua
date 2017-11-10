@@ -43,6 +43,7 @@ Load("scripts/characters_deities.lua")
 Load("scripts/characters_vanir.lua")
 Load("scripts/civilizations/anglo_saxon/characters.lua")
 Load("scripts/civilizations/assyrian/characters.lua")
+Load("scripts/civilizations/basque/characters.lua")
 Load("scripts/civilizations/dwarf/characters.lua")
 Load("scripts/civilizations/elf/characters.lua")
 Load("scripts/civilizations/ettin/characters.lua")
@@ -63,26 +64,6 @@ Load("scripts/civilizations/suebi/characters.lua")
 Load("scripts/civilizations/teuton/characters.lua")
 Load("scripts/civilizations/slav/characters.lua") -- define after Teuton ones, because some Slavic characters refer to Teutonic ones
 Load("scripts/civilizations/welsh/characters.lua")
-
--- Basque heroes
-
-DefineCharacter("gylve", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
-	Name = "Gylve", -- ruled over Scania; contemporary of Voden
-	Gender = "male",
-	Type = "unit-germanic-warrior",
-	Civilization = "basque",
-	Faction = "gylfing-tribe",
-	HistoricalTitles = {
-		"head-of-state", 0, 0, "gylfing-tribe"
-	},
-	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "gylfing-tribe") then
-			return true
-		end
-		return false
-	end
-	-- contemporary of Vóden
-})
 
 -- Hun personal names: "Attila" (known as Atli in Norse myths; invaded Gundahar's kingdom in 437 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 93-94; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6)
 

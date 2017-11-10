@@ -84,8 +84,8 @@ https://github.com/Andrettin/Wyrmsun
 - Mercenary companies now have a chance to acquire technology when other factions hire troops from them.
 
 * Maps
-- Added Southern Baltic map for custom games (this is the same map used for the Haimadala's Progeny and Thunraz's Servant scenarios). Since this map includes the Jutland peninsula, the 50x96 Jutland map has been removed.
-- Replaced the 128x128 Holmgard map with a new 256x256 Gardariki one.
+- Added a 256x256 Southern Baltic map for custom games (this is the same map used for the Haimadala's Progeny and Thunraz's Servant scenarios), replacing the 50x96 Jutland and the 128x128 Malmo maps.
+- Added a 256x256 Gardariki map, replacing the 128x128 Holmgard one.
 
 * Scenarios
 - After the "Slay Geirrod" quest is acquired, the area around the portal to Jotunheim is now revealed for a short time (with a special revealer that can see ethereal objects such as portals). Additionally, the map is also centered on the portal's location.

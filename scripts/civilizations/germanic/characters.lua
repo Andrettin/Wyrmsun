@@ -322,7 +322,7 @@ DefineCharacter("voden", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Trait = "upgrade-wise",
 	HairVariation = "gray-hair",
 	Date = -3000,
-	DeathDate = -2800 + 30,
+	DeathDate = {-2800, 12, 30},
 	Father = "friallaf",
 	Deities = {"odin", "tyr"},
 	HistoricalLocations = {

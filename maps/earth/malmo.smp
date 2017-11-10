@@ -1,7 +1,0 @@
--- Stratagus Map Presentation
-
-DefinePlayerTypes("person","person")
-PresentMap("Malmo", 2, 128, 112, 1)
-MapWorld = "Earth"
-MapAttacker = 0
-MapDefender = 1

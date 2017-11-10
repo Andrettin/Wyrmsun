@@ -272,11 +272,36 @@ DefineDialogue("northwards-to-the-sea-victory", {
 		},
 		{
 			"speaker", "character", "voden",
-			"text", "The time has come to set our eyes upon the lands to the east, beyond the sea... It is there that I shall build my new seat.",
+			"text", "The time has come to set our eyes upon the lands to the east, beyond the sea... It is there that I shall build my new seat."
+		}
+	}
+})
+
+DefineDialogue("the-settlement-of-scandinavia-gylfings-sighted", {
+	Nodes = {
+		{
+			"speaker", "character", "gylve",
+			"text", "Who might you be?"
+		},
+		{
+			"speaker", "character", "voden",
+			"text", "We are the Asa... long have we travelled to reach these lands."
+		},
+		{
+			"speaker", "character", "gylve",
+			"text", "And what is your purpose here, honored guests?"
+		},
+		{
+			"speaker", "character", "voden",
+			"text", "Our priests foretold that we were to settle here. We are a tribe of warriors, and if you submit to us, we will protect you from invaders, and allow you to live out your days peacefully farming, as you have until now."
+		},
+		{
+			"speaker", "character", "gylve",
+			"text", "You know little of us, stranger. And you ask us to become your subjects, vowing to protect us from invasion? You are the invaders! You may not have come in peace, but you will rest in it.",
 			"option-effects", {
 				function(s)
 					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("gylfing-tribe"))
---					SetDiplomacy(GetFactionPlayer("gylfing-tribe"), "enemy", trigger_player)
+					SetDiplomacy(GetFactionPlayer("gylfing-tribe"), "enemy", trigger_player)
 				end
 			}
 		}
@@ -287,7 +312,7 @@ DefineDialogue("the-settlement-of-scandinavia-victory", {
 	Nodes = {
 		{
 			"speaker", "character", "voden",
-			"text", "These lands are ours! My descendants shall rule them for untold generations...",
+			"text", "These lands are now ours! My descendants shall rule them for untold generations...",
 			"option-effects", {
 				function(s)
 					if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "the-settlement-of-scandinavia") then

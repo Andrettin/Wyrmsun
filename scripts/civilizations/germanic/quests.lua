@@ -80,20 +80,6 @@ DefineQuest("the-settlement-of-scandinavia", { -- based on the Ynglinga saga and
 	Unobtainable = true
 })
 
-DefineQuest("gylves-realm", {
-	Name = "Gylve's Realm",
-	Icon = "icon-germanic-barbed-arrow",
-	Description = "After establishing ourselves in Jutland and the islands of Fyen and Zealand we journeyed north, but we do not seem welcome in these new shores...\n\nMap: Malmo",
-	World = "earth",
-	Civilization = "germanic",
-	Map = "maps/earth/malmo.smp",
-	Scenario = "scripts/civilizations/germanic/scenarios/gylves_realm.lua",
-	PlayerColor = "orange",
-	LoadingMusic = "GermanicLoading",
---	MapMusic = "GermanicTheme4",
-	Unobtainable = true
-})
-
 DefineQuest("the-great-temple-at-upsal", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 225.
 	Name = "The Great Temple", -- the great temple built by Freyr (Yngve) in the Ynglinga saga in Upsal
 	Icon = "icon-germanic-temple",

@@ -72,6 +72,9 @@ DefineSettlement("malmo", {
 	HistoricalBuildings = {
 		-7000, 0, "town-hall"
 	},
+	HistoricalUnits = {
+		-3000, {-2800, 12, 30}, "unit-germanic-warrior", 3000, "gylfing-tribe"
+	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 

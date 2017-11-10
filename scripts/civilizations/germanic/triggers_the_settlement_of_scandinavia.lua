@@ -245,3 +245,27 @@ AddTrigger("northwards-to-the-sea-victory",
 		return false
 	end
 )
+
+AddTrigger("the-settlement-of-scandinavia-gylfings-sighted",
+	function()
+		for i=0,(PlayerMax - 2) do
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "the-settlement-of-scandinavia") and GetFactionExists("gylfing-tribe")) then
+				local uncount = GetUnits(GetFactionPlayer("gylfing-tribe"))
+				for unit1 = 1,table.getn(uncount) do 
+					if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) then
+						local unit_quantity = GetNumUnitsAt(i, "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3, GetUnitVariable(uncount[unit1],"PosY") + 3}, GetUnitVariable(uncount[unit1], "MapLayer"))
+						if (unit_quantity > 0) then
+							trigger_player = i
+							return true
+						end
+					end
+				end
+			end
+		end
+		return false
+	end,
+	function()
+		CallDialogue("the-settlement-of-scandinavia-gylfings-sighted", trigger_player)
+		return false
+	end
+)
