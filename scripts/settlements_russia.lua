@@ -51,17 +51,17 @@ DefineSettlement("azov", {
 	},
 	HistoricalOwners = {
 		-3000, "asa-tribe",
-		-2950, ""
+		-2900, ""
 		-- the Proto-Indo-Europeans who would give origin to the Germanic peoples concluded their migration to Scandinavia by 2800 BC
 	},
 	HistoricalBuildings = {
-		-3000, -2950, "town-hall",
-		-3000, -2950, "barracks",
-		-3000, -2950, "farm"
+		-3000, -2900, "town-hall",
+		-3000, -2900, "barracks",
+		-3000, -2900, "farm"
 	},
 	HistoricalUnits = {
-		-3000, -2950, "unit-germanic-worker", 1000, "asa-tribe",
-		-3000, -2950, "unit-germanic-warrior", 8000, "asa-tribe" -- the great army assembled to fight the Vana
+		-3000, -2900, "unit-germanic-worker", 1000, "asa-tribe",
+		-3000, -2900, "unit-germanic-warrior", 8000, "asa-tribe" -- the great army assembled to fight the Vana
 	},
 	Regions = {"eurasia", "europe"}
 })
@@ -77,13 +77,14 @@ DefineSettlement("novgorod", {
 		"slav", "Novgorod"
 	},
 	HistoricalOwners = {
-		-2950, "asa-tribe",
+		-2900, "asa-tribe",
+		-2800, ""
 	},
 	HistoricalBuildings = {
 	},
 	HistoricalUnits = {
-		-2950, -2900, "unit-germanic-worker", 5000, "asa-tribe",
-		-2950, -2900, "unit-germanic-warrior", 12000, "asa-tribe"
+		-2900, -2800, "unit-germanic-worker", 5000, "asa-tribe",
+		-2900, -2800, "unit-germanic-warrior", 12000, "asa-tribe"
 	},
 	Regions = {"eurasia", "europe"}
 })

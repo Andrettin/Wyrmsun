@@ -327,7 +327,7 @@ DefineCharacter("voden", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Deities = {"odin", "tyr"},
 	HistoricalLocations = {
 		-3000, "earth", "azov",
-		-2950, "earth", "novgorod"
+		-2900, "earth", "novgorod"
 	},
 	HistoricalTitles = {
 		"head-of-state", -3000, -2800, "asa-tribe"

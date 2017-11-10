@@ -126,7 +126,7 @@ DefineMissileType("missile-impact-slime", {
 })
 
 DefineMissileType("missile-impact-lightning", {
-	File = "missiles/lightning_impact_small_2.png", Size = {70, 70}, Frames = 4, NumDirections = 1,
+	File = "missiles/lightning_impact_medium.png", Size = {70, 70}, Frames = 4, NumDirections = 1,
 	DrawLevel = 44, Class = "missile-class-stay", Sleep = 3, Speed = 16, Range = 1
 })
 

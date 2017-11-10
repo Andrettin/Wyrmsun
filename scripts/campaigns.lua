@@ -35,17 +35,6 @@ DefineCampaign("on-the-vanaquisl", {
 	MapSize = {256, 256}
 })
 
-DefineCampaign("westward-migration", {
-	Name = "Westward Migration",
-	Description = "As food becomes scarce in the native steppes of the Asa, they must seek a migration route to the west.",
-	Faction = "asa-tribe",
-	RequiredQuests = {"on-the-vanaquisl"},
-	StartYear = -2950,
-	MapTemplate = "earth",
-	MapTemplateStartPos = {4369, 609},
-	MapSize = {256, 256}
-})
-
 DefineCampaign("the-first-dwarves", {
 	Name = "The First Dwarves",
 	Description = "A clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home. Beset by hostile forces, can they survive for long?",
@@ -57,6 +46,17 @@ DefineCampaign("the-first-dwarves", {
 	MapSize = {256, 256}
 })
 
+DefineCampaign("westward-migration", {
+	Name = "Westward Migration",
+	Description = "As food becomes scarce in the native steppes of the Asa, they must seek a migration route to the west.",
+	Faction = "asa-tribe",
+	RequiredQuests = {"on-the-vanaquisl"},
+	StartYear = -2900,
+	MapTemplate = "earth",
+	MapTemplateStartPos = {4369, 609},
+	MapSize = {256, 256}
+})
+
 DefineCampaign("a-home-in-the-fields-of-sand", {
 	Name = "A Home in the Fields of Sand",
 	Description = "As Svarinshaug proves too small for the growing dwarven population, the Goldhoof clan must move away and seek a new home.",
@@ -64,6 +64,17 @@ DefineCampaign("a-home-in-the-fields-of-sand", {
 	StartYear = -2800,
 	MapTemplate = "nidavellir",
 	MapTemplateStartPos = {655, 155},
+	MapSize = {256, 256}
+})
+
+DefineCampaign("gylves-realm", {
+	Name = "Gylve's Realm",
+	Description = "After a long journey, the Asa reach lands ripe for settlement.",
+	Faction = "asa-tribe",
+	RequiredQuests = {"westward-migration"},
+	StartYear = -2800,
+	MapTemplate = "earth",
+	MapTemplateStartPos = {4022, 667},
 	MapSize = {256, 256}
 })
 

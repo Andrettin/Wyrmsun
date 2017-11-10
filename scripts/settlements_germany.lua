@@ -276,6 +276,7 @@ DefineSettlement("kiel", {
 		"teuton-tribe"
 	},
 	HistoricalOwners = {
+		-2800, "asa-tribe",
 		-1600, "hersing-tribe", -- Hersir's tribe, from the Norse myth of Rig; in the myths, there was a boggy ground between Jarl's hall and that of Hersir
 		-264, "teuton-tribe", -- Kiel's area was territory of the Teutones in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1815, "denmark" -- Kiel was a possession of the Kingdom of Denmark in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
@@ -290,6 +291,13 @@ DefineSettlement("kiel", {
 --		-1600, 1815, "lumber-mill", -- remove to prevent them from changing faction
 		-1600, 1815, "watch-tower",
 		-1600, 1815, "watch-tower"
+	},
+	HistoricalUnits = {
+		-2800, {-2800, 12, 30}, "unit-germanic-worker", 5000, "asa-tribe",
+		-2800, {-2800, 12, 30}, "unit-germanic-warrior", 2000, "asa-tribe",
+		-2800, {-2800, 12, 30}, "unit-germanic-archer", 1000, "asa-tribe",
+		-1600, -1599, "unit-germanic-warrior", 6000, "hersing-tribe",
+		-1600, -1599, "unit-germanic-archer", 3000, "hersing-tribe"
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })

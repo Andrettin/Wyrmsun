@@ -30,17 +30,6 @@ SetMapTemplateResource("earth", "unit-gold-deposit", {4110, 819}) -- Amber; Sour
 -- Helmsdorf
 -- in c. 1800 BC a barrow was built near Helmsdorf (in Saxo-Thuringia in central Germany); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 23.
 
--- Kiel
-SetMapTemplateUnit("earth", "unit-germanic-warrior", "hersing-tribe", {4069, 811}, -1600, -1599)
-SetMapTemplateUnit("earth", "unit-germanic-warrior", "hersing-tribe", {4069, 811}, -1600, -1599)
-SetMapTemplateUnit("earth", "unit-germanic-warrior", "hersing-tribe", {4069, 811}, -1600, -1599)
-SetMapTemplateUnit("earth", "unit-germanic-warrior", "hersing-tribe", {4069, 811}, -1600, -1599)
-SetMapTemplateUnit("earth", "unit-germanic-warrior", "hersing-tribe", {4069, 811}, -1600, -1599)
-SetMapTemplateUnit("earth", "unit-germanic-warrior", "hersing-tribe", {4069, 811}, -1600, -1599)
-SetMapTemplateUnit("earth", "unit-germanic-archer", "hersing-tribe", {4069, 811}, -1600, -1599)
-SetMapTemplateUnit("earth", "unit-germanic-archer", "hersing-tribe", {4069, 811}, -1600, -1599)
-SetMapTemplateUnit("earth", "unit-germanic-archer", "hersing-tribe", {4069, 811}, -1600, -1599)
-
 -- Leubingen
 -- in c. 1900 BC a barrow was built at Leubingen (in Saxo-Thuringia in central Germany); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 23.
 

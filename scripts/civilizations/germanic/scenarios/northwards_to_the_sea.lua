@@ -29,18 +29,7 @@
 
 if (LoadedGame == false) then
 	SetPlayerData(4, "Faction", "asa-tribe")
-	if not (GrandStrategy) then
-		SetPlayerData(4, "Allow", "upgrade-teuton-civilization", "F")
-		SetPlayerData(1, "Allow", "upgrade-germanic-bronze-shield", "F")
-		SetPlayerData(1, "Allow", "upgrade-germanic-broad-sword", "F")
-		SetPlayerData(1, "Allow", "upgrade-germanic-barbed-arrow", "F")
-		SetPlayerData(1, "Allow", "upgrade-germanic-long-spear", "F")
-	end
-	if (GrandStrategy == false or GetProvinceOwner("Jutland") == "") then
-		SetPlayerData(1, "Faction", "ertebolle-tribe")
-	else
-		SetPlayerData(1, "Faction", GetProvinceOwner("Jutland"))
-	end
+	SetPlayerData(1, "Faction", "ertebolle-tribe")
 end
 
 -- Northwards to the Sea introduction
@@ -171,9 +160,7 @@ AddTrigger("northwards-to-the-sea-victory",
 			{function(s)
 				if (player == GetThisPlayer()) then
 					ActionVictory()
-					if (GrandStrategy == false) then
-						SetQuestCompleted("northwards-to-the-sea", GameSettings.Difficulty)
-					end
+					SetQuestCompleted("northwards-to-the-sea", GameSettings.Difficulty)
 				end
 			end}
 		)

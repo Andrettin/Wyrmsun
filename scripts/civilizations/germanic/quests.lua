@@ -61,7 +61,7 @@ DefineQuest("westward-migration", { -- based on the Ynglinga saga and on the Ind
 	Unobtainable = true
 })
 
-DefineQuest("northwards-to-the-sea", {
+DefineQuest("northwards-to-the-sea", { -- based on the Ynglinga saga and on the Indo-European migration according to the Kurgan hypothesis
 	Name = "Northwards to the Sea",
 	Icon = "icon-germanic-town-hall",
 	Description = "After moving southwest, we now find ourselves near a peninsula which seems promising for settlement.\n\nMap: Jutland",
