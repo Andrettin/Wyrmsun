@@ -64,9 +64,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Bow Mastery, Gun Mastery and Throwing Mastery learnable abilities (icons by Jinn).
 - The "Choose Level-Up Upgrade" submenu is now always available (abilities that cannot be acquired at the moment appear as transparent icons).
 - Renamed the "Choose Level-Up Upgrade" submenu to "Choose Upgrade", as the hero deity choices are now placed there.
-- Weapon mastery abilities can now be acquired up to five times.
-- Eagle Eye can now be acquired up to five times.
-- Added new Stun status effect icon (by Jinn).
+- Added support for abilities being acquired more than once. Weapon mastery abilities and Eagle Eye can now be acquired up to five times.
 
 * Achievements
 - Added achievements for completing the A Home in the Fields of Sand and Thunraz's Servant scenarios.
@@ -94,7 +92,7 @@ https://github.com/Andrettin/Wyrmsun
 - After the "Slay Geirrod" quest is acquired, the area around the portal to Jotunheim is now revealed for a short time (with a special revealer that can see ethereal objects such as portals). Additionally, the map is also centered on the portal's location.
 - Added the "Temple to Haimadala" side-quest for the Haimadala's Progeny scenario. To complete it, a temple has to be built and Haimadala has to be chosen as a minor deity.
 - Added the Westward Migration scenario, replacing the quest of the same name.
-- Added The Settlement of Scandinavia scenario, replacing the Northwards to the Sea and Gylve's Realm quests.
+- Added the The Settlement of Scandinavia scenario, replacing the Northwards to the Sea and Gylve's Realm quests.
 
 -----------------------------------------------------------------------
 - 2.9.1
