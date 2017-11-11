@@ -59,7 +59,7 @@ DefineCharacter("grimhild", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	end
 })
 
-DefineCharacter("gundahar", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-94; Source: Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
+DefineCharacter("gundahar", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-94; Source: Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
 	Name = "Gundahar", -- also known as Gunnar in Norse myths, as Günter in the Nibelungenlied, and as Gunthere in the Anglo-Saxon poem Widsith
 	Gender = "male",
 	Type = "unit-gothic-horse-lord", -- king
@@ -68,6 +68,7 @@ DefineCharacter("gundahar", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	Trait = "upgrade-generous", -- in the Anglo-Saxon poem "Widsith", Gundahar (Gunthere) gave the poet "a shining treasure" for his songs
 	Date = 406, -- Gundahar and his father Gibica brought the Burgundians over the Rhine in 406/407 AD
 	DeathDate = 437, -- invasion of Gundahar's kingdom in 437 AD by Attila's Huns
+	-- Fichtner gives him as dying in 436, however
 	ViolentDeath = true, -- presumably
 	Father = "gibica",
 	Mother = "grimhild",
@@ -75,6 +76,7 @@ DefineCharacter("gundahar", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	HistoricalTitles = {
 		"head-of-state", 411, 437, "burgundy" -- Kingdom of the Burgundians established by Gundahar (a Burgundian tribal chief) in 411 AD, with its center in Borbetomagus (Worms); Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-93.
 	},
+	-- became Gunnar/Gunther in the myths; as given by Fichtner
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe" or GetPlayerData(trigger_player, "Faction") == "burgundy") then
 			return true
@@ -106,6 +108,22 @@ DefineCharacter("gudrun", { -- Source: Norman Davies, "Vanished Kingdoms", 2012,
 	Faction = "burgundy",
 	Father = "gibica",
 	Mother = "grimhild",
+	Deities = {"christian-god"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe" or GetPlayerData(trigger_player, "Faction") == "burgundy") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("sarwa", { -- the Sörli of Norse mythology; Sörli is a reflex of Gothic "sarwa"; Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 118.
+	Name = "Sarwa",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "goth",
+	Faction = "burgundy",
+	Mother = "gudrun", -- son of Gudrun
 	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe" or GetPlayerData(trigger_player, "Faction") == "burgundy") then
@@ -213,15 +231,15 @@ DefineCharacter("gotthorm", { -- Source: Source: Kevin Crossley-Holland, "The No
 	end
 })
 
-DefineCharacter("gundioc", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 94-96.
-	Name = "Gundioc", -- Burgundian king after Gundahar; also known as Gunderic
+DefineCharacter("gundioc", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 94-96; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
+	Name = "Gundioc", -- Burgundian king after Gundahar; also known as Gunderic; as given by Davies
 	Gender = "male",
 	Type = "unit-gothic-horse-lord", -- king
 	Civilization = "goth",
 	Faction = "burgundy",
-	Date = 437, -- Gundioc became king of the Burgundians in 437 AD
-	DeathDate = 474, -- end of reign
-	Father = "gundahar", -- from Gibica's line (so presumably a child of Gundahar's)
+	Date = 437, -- Gundioc became king of the Burgundians in 437 AD; as given by both Davies and Fichtner
+	DeathDate = 474, -- end of reign; as given by both Davies and Fichtner
+	Father = "gundahar", -- from Gibica's line (so presumably a child of Gundahar's); as given by Davies
 	Mother = "glaumvor", -- if he was a child of Gundahar's, then his mother would likely be Glaumvor
 	Deities = {"christian-god"},
 	HistoricalTitles = {
@@ -245,6 +263,7 @@ DefineCharacter("chilperic", { -- Source: Norman Davies, "Vanished Kingdoms", 20
 	DeathDate = 480, -- end of reign
 	Father = "gundioc", -- from Gibica's line (so presumably a child of Gundioc's)
 	Deities = {"christian-god"},
+	-- brother of Gundobad according to Fichtner (though that author gives his name as "Chilperich" instead); Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
 	HistoricalTitles = {
 		"head-of-state", 474, 480, "burgundy"
 	},
@@ -275,6 +294,22 @@ DefineCharacter("clothilda", { -- Source: Norman Davies, "Vanished Kingdoms", 20
 	end
 })
 
+DefineCharacter("chrona", { --  Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 331.
+	Name = "Chrona",
+	Gender = "female",
+	Type = "unit-teuton-priest", -- became a nun
+	Civilization = "goth",
+	Faction = "burgundy",
+	Father = "chilperic", -- daughter of Chilperich
+	Deities = {"christian-god"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "burgundy") then
+			return true
+		end
+		return false
+	end
+})
+
 DefineCharacter("gundobad", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 96-97.
 	Name = "Gundobad", -- Burgundian king after Chilperic; name means "bold in battle"; had the title of Roman patrician; wrote two law codes, the "Lex Romana Burgundionum" and the "Lex Gundobada"
 	Gender = "male",
@@ -283,6 +318,7 @@ DefineCharacter("gundobad", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	Faction = "burgundy",
 	Trait = "upgrade-wise",
 	Date = 480, -- beginning of Gundobad's reign over the Burgundians in 480 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+	-- Fichtner gives his reign as beginning 474, however; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
 	DeathDate = 516, -- end of reign
 	Father = "gundioc", -- was Chilperic's brother, so presumably a child of Gundioc's
 	Deities = {"christian-god"},
@@ -297,7 +333,38 @@ DefineCharacter("gundobad", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	end
 })
 
-DefineCharacter("sigismund", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 96, 98.
+DefineCharacter("godegisel", { -- Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
+	Name = "Godegisel",
+	Gender = "male",
+	Type = "unit-gothic-horse-rider",
+	Civilization = "goth",
+	Faction = "burgundy",
+	Father = "gundioc", -- brother of Gundobad
+	Deities = {"christian-god"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "burgundy") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("aridius", { -- chief advisor to Gundobad (was he actually a Burgundian?); Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 331.
+	Name = "Aridius",
+	Gender = "male",
+	Type = "unit-gothic-horse-rider",
+	Civilization = "goth",
+	Faction = "burgundy",
+	Deities = {"christian-god"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "burgundy") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("sigismund", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 94, 96, 98; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 3.
 	Name = "Sigismund", -- Burgundian king after Gundobad; converted to Catholic Christianity and later became a saint
 	Gender = "male",
 	Type = "unit-gothic-horse-lord", -- king
@@ -305,12 +372,13 @@ DefineCharacter("sigismund", { -- Source: Norman Davies, "Vanished Kingdoms", 20
 	Faction = "burgundy",
 	Trait = "upgrade-pious",
 	Date = 516, -- beginning of Sigismund's reign over the Burgundians in 516 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
-	DeathDate = 523, -- end of reign
-	Father = "gundobad", -- son of Gundobad
+	DeathDate = 523, -- died in 523; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
+	Father = "gundobad", -- son of Gundobad; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 96, 98; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
 	Deities = {"christian-god"},
 	HistoricalTitles = {
-		"head-of-state", 516, 523, "burgundy"
+		"head-of-state", 516, 523, "burgundy" -- reigned from 516 to 523
 	},
+	-- became Sigmund (father of Sigurd) in the myths; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "burgundy") then
 			return true
@@ -326,6 +394,7 @@ DefineCharacter("gundimar", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	Civilization = "goth",
 	Faction = "burgundy",
 	Date = 523, -- beginning of Gundimar's reign over the Burgundians in 523 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+	-- Fichtner also gives him (as Godomar) as being the Burgundian king from 523 on; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
 	DeathDate = 534, -- end of reign (was proscribed, pursued and executed by the Franks, and his realm was annexed by them)
 	ViolentDeath = true,
 	Father = "sigismund", -- from Gibica's line (so presumably a child of Sigismund's)

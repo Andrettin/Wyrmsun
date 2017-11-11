@@ -31,7 +31,7 @@ DefineCharacter("eylimi-othling", { -- Source: Kevin Crossley-Holland, "The Nors
 	FamilyName = "Othling", -- dynasty name in the Norse myths
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
-	Civilization = "teuton", -- Norse?
+	Civilization = "frankish", -- Norse?
 	Faction = "frank-tribe", -- what should it be instead, Dane Tribe?
 	Deities = {"odin", "tyr"}
 	-- he descends from Halfdan the Old of Denmark
@@ -42,7 +42,7 @@ DefineCharacter("signy-volsung", { -- Source: C. Scott Littleton, "The Germanic 
 	FamilyName = "Volsung",
 	Gender = "female",
 	Type = "unit-teuton-archer",
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "frank-tribe",
 	Father = "volsung",
 	Deities = {"christian-god"}
@@ -53,22 +53,11 @@ DefineCharacter("siggeir", { -- Source: C. Scott Littleton, "The Germanic Sword 
 	Name = "Siggeir",
 	Gender = "male",
 	Type = "unit-frank-swordsman",
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "frank-tribe",
 	Deities = {"christian-god"},
 	-- comes from the same generation as Signy Volsung
 	-- wedded to Signy
-})
-
-DefineCharacter("siegmund-volsung", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 3.
-	Name = "Siegmund", -- also known as Sigmund in the Norse myths; tenth and youngest son of Volsung
-	FamilyName = "Volsung",
-	Gender = "male",
-	Type = "unit-frank-swordsman",
-	Civilization = "teuton",
-	Faction = "frank-tribe",
-	Father = "volsung",
-	Deities = {"christian-god"}
 })
 
 DefineCharacter("sieglind-hraudung", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
@@ -76,7 +65,7 @@ DefineCharacter("sieglind-hraudung", { -- Source: Norman Davies, "Vanished Kingd
 	FamilyName = "Hraudung", -- dynasty name in the Norse myths (would be better to know the German name to put here, since her given name is in German); she was also an Othling
 	Gender = "female",
 	Type = "unit-teuton-archer",
-	Civilization = "teuton", -- Norse?
+	Civilization = "frankish", -- Norse?
 	Faction = "frank-tribe", -- seems unlikely to be correct
 	-- he descends from Halfdan the Old of Denmark
 	Father = "eylimi-othling",
@@ -88,7 +77,7 @@ DefineCharacter("sinfiotli-volsung", { -- Source: C. Scott Littleton, "The Germa
 	FamilyName = "Volsung",
 	Gender = "male",
 	Type = "unit-frank-swordsman",
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "frank-tribe",
 	Father = "siegmund-volsung",
 	Mother = "signy-volsung",
@@ -101,7 +90,7 @@ DefineCharacter("svanhild-volsung", { -- Source: Henry Adams Bellows (transl.), 
 	FamilyName = "Volsung",
 	Gender = "female",
 	Type = "unit-teuton-archer",
-	Civilization = "teuton",
+	Civilization = "frankish",
 	Faction = "frank-tribe",
 --	Father = "siegfried-volsung", -- daughter of Siegfried/Sigurd in the myths
 	Mother = "gudrun",
