@@ -68,6 +68,9 @@ https://github.com/Andrettin/Wyrmsun
 - Eagle Eye can now be acquired up to five times.
 - Added new Stun status effect icon (by Jinn).
 
+* Achievements
+- Added achievements for completing the A Home in the Fields of Sand and Thunraz's Servant scenarios.
+
 * AI
 - The AI now researches upgrades in a more dynamic fashion.
 

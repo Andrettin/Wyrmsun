@@ -41,6 +41,14 @@ DefineAchievement("heimdalls-progeny", {
 	RequiredQuests = {"heimdalls-progeny"}
 })
 
+DefineAchievement("thors-servant", {
+	Name = "Thunraz's Servant",
+	Icon = "icon-thor",
+	Description = "Complete the Thunraz's Servant scenario.",
+	PlayerColor = "white",
+	RequiredQuests = {"thors-servant"}
+})
+
 DefineAchievement("the-first-marcomannic-war", {
 	Name = "The First Marcomannic War",
 	Icon = "icon-suebi-swordsman",
@@ -80,6 +88,14 @@ DefineAchievement("the-mightiest-made", {
 	PlayerColor = "red",
 	Character = "Modsognir",
 	CharacterLevel = 10
+})
+
+DefineAchievement("a-home-in-the-fields-of-sand", {
+	Name = "A Home in the Fields of Sand",
+	Icon = "icon-joruvellir-scout-black-hair",
+	Description = "Complete A Home in the Fields of Sand scenario.",
+	PlayerColor = "brown",
+	RequiredQuests = {"the-first-dwarves"}
 })
 
 DefineAchievement("the-lay-of-alvis", {
