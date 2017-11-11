@@ -52,7 +52,7 @@ DefineAchievement("thors-servant", {
 DefineAchievement("the-first-marcomannic-war", {
 	Name = "The First Marcomannic War",
 	Icon = "icon-suebi-swordsman",
-	Description = "Complete The Sack of Iuvavum and The Razing of Opitergium missions.",
+	Description = "Complete the The Sack of Iuvavum and The Razing of Opitergium missions.",
 	PlayerColor = "orange",
 	RequiredQuests = {"the-sack-of-iuvavum", "the-razing-of-opitergium"}
 })
@@ -68,7 +68,7 @@ DefineAchievement("the-conquest-of-galicia", {
 DefineAchievement("the-blue-danube", {
 	Name = "The Blue Danube",
 	Icon = "icon-saxon-swordsman",
-	Description = "Complete The Blue Danube mission.",
+	Description = "Complete the The Blue Danube mission.",
 	PlayerColor = "cyan",
 	RequiredQuests = {"the-blue-danube"}
 })
@@ -76,7 +76,7 @@ DefineAchievement("the-blue-danube", {
 DefineAchievement("the-first-dwarves", {
 	Name = "The First Dwarves",
 	Icon = "icon-brising-miner",
-	Description = "Complete The First Dwarves scenario.",
+	Description = "Complete the The First Dwarves scenario.",
 	PlayerColor = "red",
 	RequiredQuests = {"the-first-dwarves"}
 })
@@ -93,7 +93,7 @@ DefineAchievement("the-mightiest-made", {
 DefineAchievement("a-home-in-the-fields-of-sand", {
 	Name = "A Home in the Fields of Sand",
 	Icon = "icon-joruvellir-scout-black-hair",
-	Description = "Complete A Home in the Fields of Sand scenario.",
+	Description = "Complete the A Home in the Fields of Sand scenario.",
 	PlayerColor = "brown",
 	RequiredQuests = {"the-first-dwarves"}
 })
