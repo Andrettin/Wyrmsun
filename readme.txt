@@ -65,6 +65,7 @@ https://github.com/Andrettin/Wyrmsun
 - The "Choose Level-Up Upgrade" submenu is now always available (abilities that cannot be acquired at the moment appear as transparent icons).
 - Renamed the "Choose Level-Up Upgrade" submenu to "Choose Upgrade", as the hero deity choices are now placed there.
 - Added support for abilities being acquired more than once. Weapon mastery abilities and Eagle Eye can now be acquired up to five times.
+- Added the Toughness ability, which increases HP by 10 and can be acquired up to 100 times.
 
 * Achievements
 - Added achievements for completing the A Home in the Fields of Sand and Thunraz's Servant scenarios.

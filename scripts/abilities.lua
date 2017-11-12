@@ -167,6 +167,13 @@ DefineUpgrade("upgrade-throwing-mastery", {
 	MaxLimit = 5
 })
 
+DefineUpgrade("upgrade-toughness", {
+	Name = "Toughness",
+	Icon = "icon-toughness",
+	Ability = true,
+	MaxLimit = 100
+})
+
 DefineModifier("upgrade-axe-mastery",
 	{"BasicDamage", 2}
 )
@@ -217,4 +224,8 @@ DefineModifier("upgrade-sword-mastery",
 
 DefineModifier("upgrade-throwing-mastery",
 	{"BasicDamage", 2}
+)
+
+DefineModifier("upgrade-toughness",
+	{"HitPoints", 10}
 )

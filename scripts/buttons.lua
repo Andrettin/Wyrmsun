@@ -388,9 +388,7 @@ DefineButton( { Pos = 1, Level = 2, Icon = "icon-mace-mastery",
 	Key = "m", Hint = "Learn ~!Mace Mastery", Popup = "popup-learn-ability",
 	Description = "Mace Mastery is a passive ability that increases damage with maces by 2",
 	ForUnit = {
-		"unit-dwarven-expert-miner", "unit-brising-expert-miner",
-		"unit-dwarven-thane",
-		"unit-surghan-mercenary-thane"
+		"unit-dwarven-expert-miner", "unit-brising-expert-miner"
 	}
 } )
 
@@ -426,7 +424,7 @@ DefineButton( { Pos = 1, Level = 2, Icon = "icon-gun-mastery",
 	}
 } )
 
-DefineButton( { Pos = 2, Level = 2, Icon = "icon-axe-mastery",
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-axe-mastery",
 	Action = "learn-ability", Value = "upgrade-axe-mastery",
 	Key = "x", Hint = "Learn A~!xe Mastery", Popup = "popup-learn-ability",
 	Description = "Axe Mastery is a passive ability that increases damage with axes by 2",
@@ -490,7 +488,7 @@ DefineButton( { Pos = 1, Level = 2, Icon = "icon-spear-mastery",
 	}
 } )
 
-DefineButton( { Pos = 3, Level = 2, Icon = "icon-critical-strike",
+DefineButton( { Pos = 2, Level = 2, Icon = "icon-critical-strike",
 	Action = "learn-ability", Value = "upgrade-critical-strike",
 	Key = "c", Hint = "Learn ~!Critical Strike", Popup = "popup-learn-ability",
 	Description = "Critical Strike is a passive ability that provides a 10% chance to deal double damage in combat. In No Randomness mode it provides a 10% damage bonus instead",
@@ -521,7 +519,7 @@ DefineButton( { Pos = 3, Level = 2, Icon = "icon-critical-strike",
 	}
 } )
 
-DefineButton( { Pos = 4, Level = 2, Icon = "icon-deadly-precision",
+DefineButton( { Pos = 3, Level = 2, Icon = "icon-deadly-precision",
 	Action = "learn-ability", Value = "upgrade-deadly-precision",
 	Key = "d", Hint = "Learn ~!Deadly Precision", Popup = "popup-learn-ability",
 	Description = "Deadly Precision is a passive ability that increases critical strike chance by 10%. In No Randomness mode it provides a 10% damage bonus instead",
@@ -549,7 +547,7 @@ DefineButton( { Pos = 4, Level = 2, Icon = "icon-deadly-precision",
 	}
 } )
 
-DefineButton( { Pos = 5, Level = 2, Icon = "icon-eagle-eye",
+DefineButton( { Pos = 4, Level = 2, Icon = "icon-eagle-eye",
 	Action = "learn-ability", Value = "upgrade-eagle-eye",
 	Key = "e", Hint = "Learn Eagle ~!Eye", Popup = "popup-learn-ability",
 	Description = "Eagle Eye is a passive ability that increases accuracy by 2",
@@ -579,7 +577,7 @@ DefineButton( { Pos = 5, Level = 2, Icon = "icon-eagle-eye",
 	}
 } )
 
-DefineButton( { Pos = 6, Level = 2, Icon = "icon-scouting",
+DefineButton( { Pos = 5, Level = 2, Icon = "icon-scouting",
 	Action = "learn-ability", Value = "upgrade-scouting",
 	Key = "s", Hint = "Learn ~!Scouting", Popup = "popup-learn-ability",
 	Description = "Scouting is a passive ability that increases sight by 1",
@@ -591,7 +589,7 @@ DefineButton( { Pos = 6, Level = 2, Icon = "icon-scouting",
 	}
 } )
 
-DefineButton( { Pos = 6, Level = 2, Icon = "icon-stun",
+DefineButton( { Pos = 5, Level = 2, Icon = "icon-stun",
 	Action = "learn-ability", Value = "upgrade-stun",
 	Key = "u", Hint = "Learn St~!un", Popup = "popup-learn-ability",
 	Description = "Stun is an active ability which does a stunning attack on a target, leaving it paralyzed for a few moments",
@@ -613,7 +611,7 @@ DefineButton( { Pos = 6, Level = 2, Icon = "icon-stun",
 	}
 } )
 
-DefineButton( { Pos = 7, Level = 2, Icon = "icon-precise-shot",
+DefineButton( { Pos = 6, Level = 2, Icon = "icon-precise-shot",
 	Action = "learn-ability", Value = "upgrade-precise-shot",
 	Key = "r", Hint = "Learn P~!recise Shot", Popup = "popup-learn-ability",
 	Description = "Precise Shot is an active ability which deals a critical hit. Only usable with ranged weapons",
@@ -629,7 +627,7 @@ DefineButton( { Pos = 7, Level = 2, Icon = "icon-precise-shot",
 	}
 } )
 
-DefineButton( { Pos = 7, Level = 2, Icon = "icon-puncture",
+DefineButton( { Pos = 6, Level = 2, Icon = "icon-puncture",
 	Action = "learn-ability", Value = "upgrade-puncture",
 	Key = "r", Hint = "Learn Punctu~!re", Popup = "popup-learn-ability",
 	Description = "Puncture is an active ability which makes the target bleed for a certain duration. Only usable with melee weapons capable of doing thrusting attacks",
@@ -645,7 +643,7 @@ DefineButton( { Pos = 7, Level = 2, Icon = "icon-puncture",
 	}
 } )
 
-DefineButton( { Pos = 8, Level = 2, Icon = "icon-leadership",
+DefineButton( { Pos = 7, Level = 2, Icon = "icon-leadership",
 	Action = "learn-ability", Value = "upgrade-leadership",
 	Key = "l", Hint = "Learn ~!Leadership Aura", Popup = "popup-learn-ability",
 	Description = "Leadership Aura is an aura ability that increases the damage of nearby friendly units by 10%",
@@ -658,6 +656,43 @@ DefineButton( { Pos = 8, Level = 2, Icon = "icon-leadership",
 		"unit-teuton-heroic-swordsman", "unit-frank-heroic-swordsman",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms",
 		"unit-ettin"
+	}
+} )
+
+DefineButton( { Pos = 8, Level = 2, Icon = "icon-toughness",
+	Action = "learn-ability", Value = "upgrade-toughness",
+	Key = "o", Hint = "Learn T~!oughness", Popup = "popup-learn-ability",
+	Description = "Toughness is a passive ability that increases HP by 10",
+	ForUnit = {
+		"unit-dwarven-expert-miner", "unit-brising-expert-miner",
+		"unit-dwarven-thane",
+		"unit-dwarven-guard",
+		"unit-dwarven-yale-lord",
+		"unit-joruvellir-yale-lord",
+		"unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
+		"unit-joruvellir-explorer",
+		"unit-dwarven-thunderer",
+		"unit-dwarven-witness",
+		"unit-surghan-mercenary-thane",
+		"unit-germanic-chieftain", "unit-germanic-spearman", "unit-germanic-archer",
+		"unit-germanic-priest",
+		"unit-frank-heroic-swordsman", "unit-frank-spearman", "unit-frank-knight-lord",
+		"unit-teuton-heroic-swordsman", 
+		"unit-teuton-spearman",
+		"unit-teuton-archer",
+		"unit-teuton-gunpowder-infantry",
+		"unit-teuton-knight-lord",
+		"unit-teuton-priest",
+		"unit-gothic-horse-lord",
+		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
+		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-shadowstalker",
+		"unit-goblin-gunpowder-infantry",
+		"unit-goblin-shaman",
+		"unit-goblin-magnate",
+		"unit-kobold-champion",
+		"unit-ettin",
+		"unit-elven-swordsman", "unit-elven-priest",
+		"unit-wolf", "unit-wyrm", "unit-bat", "unit-blood-bat", "unit-dread-bat", "unit-gryphon"
 	}
 } )
 
@@ -894,7 +929,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-precision",
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-stun",
 	Action = "cast-spell", Value = "spell-stun",
 	Description = "Does a stunning attack on a target, leaving it paralyzed for a few moments",
-	Key = "u", Hint = "St~!un", Popup = "popup-commands",
+	Key = "n", Hint = "Stu~!n", Popup = "popup-commands",
 	ForUnit = {
 		"unit-dwarven-thane",
 		"unit-dwarven-yale-lord",
