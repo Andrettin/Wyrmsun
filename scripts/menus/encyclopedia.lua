@@ -797,7 +797,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			background = "Background: " .. GetUnitTypeData(unit_name, "Background") .. "\n\n"
 		end
 	elseif (string.find(unit_name, "upgrade") ~= nil) then
-		if (GetUpgradeData(unit_name, "Civilization") ~= "") then
+		if (GetUpgradeData(unit_name, "Civilization") ~= "" and GetUpgradeData(unit_name, "Civilization") ~= "neutral") then
 			civilization = "Civilization: " .. GetCivilizationData(GetUpgradeData(unit_name, "Civilization"), "Display") .. "\n\n"
 			if (GetUpgradeData(unit_name, "Faction") ~= "") then
 				faction = "Faction: " .. _(GetFactionData(GetUpgradeData(unit_name, "Faction"), "Name")) .. "\n\n"
