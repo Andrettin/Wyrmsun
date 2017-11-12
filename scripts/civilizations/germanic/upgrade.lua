@@ -68,11 +68,6 @@ DefineUpgrade("upgrade-germanic-barbed-arrow", {
 	Item = "unit-barbed-arrows"
 })
 
-DefineUpgrade("upgrade-germanic-wood-plow", {
-	Parent = "upgrade-wood-plow",
-	Civilization = "germanic"
-})
-
 DefineModifier("upgrade-germanic-broad-sword",
 	{"BasicDamage", 2},
 	{"Points", 10},
@@ -110,11 +105,6 @@ DefineModifier("upgrade-germanic-barbed-arrow",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-germanic-archer"}, {"apply-to", "unit-teuton-archer"}
-)
-
-DefineModifier("upgrade-germanic-wood-plow",
-	{"Supply", 1},
-	{"apply-to", "unit-germanic-farm"}, {"apply-to", "unit-teuton-farm"}, {"apply-to", "unit-latin-farm"}
 )
 
 DefineModifier("upgrade-teuton-civilization",

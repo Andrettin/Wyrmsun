@@ -150,6 +150,7 @@ DefineUpgrade("upgrade-penetrating-ballista-bolt", {
 DefineUpgrade("upgrade-wood-plow", {
 	Name = "Wood Plow",
 	Class = "wood-plow",
+	Civilization = "neutral",
 	Icon = "icon-wood-plow",
 	Description = "While at the dawn of agriculture seeds were simply spread over the soil, the invention of the plow allows farmers to more easily make furrows where seeds would be planted. This made way for the cultivation of heavier soils, and planting over larger areas became a more practical possibility.\n\nEffect: +1 Food supply for farms.",
 	Costs = {"time", 200, "copper", 300, "lumber", 900}
@@ -158,10 +159,21 @@ DefineUpgrade("upgrade-wood-plow", {
 DefineUpgrade("upgrade-iron-tipped-wood-plow", {
 	Name = "Iron-Tipped Wood Plow",
 	Class = "iron-tipped-wood-plow",
+	Civilization = "neutral",
 	Icon = "icon-iron-tipped-wood-plow",
 	Description = "The use of plowshares made of iron greatly increases the plow's strength, allowing it to penetrate more deeply into the soil.\n\nEffect: +1 Food supply for farms.",
 	Costs = {"time", 250, "copper", 900, "lumber", 1500},
-	RequirementsString = "Wood Plow"
+	RequirementsString = "Wood Plow and Smithy"
+})
+
+DefineUpgrade("upgrade-iron-plow", {
+	Name = "Iron Plow",
+	Class = "iron-plow",
+	Civilization = "neutral",
+	Icon = "icon-iron-plow",
+	Description = "The use of plows made entirely of iron makes for a significant improvement in farming productivity.\n\nEffect: +1 Food supply for farms.",
+	Costs = {"time", 250, "copper", 900, "lumber", 1500},
+	RequirementsString = "Iron-Tipped Wood Plow and Smithy"
 })
 
 DefineUpgrade("upgrade-masonry", {
@@ -200,6 +212,7 @@ DefineUpgrade("upgrade-alchemy", {
 DefineUpgrade("upgrade-printing-press", {
 	Name = "Printing Press",
 	Class = "printing-press",
+	Civilization = "neutral",
 	Description = "The invention of the printing press allowed knowledge to be more quickly and efficiently spread.",
 	Icon = "icon-printing-press",
 	Costs = {"time", 250, "copper", 2000, "lumber", 2000},
@@ -263,6 +276,27 @@ DefineUpgrade("upgrade-steam-engine", {
 	Icon = "icon-printing-press",
 	Costs = {"time", 250, "copper", 2000, "lumber", 2000}
 })
+
+DefineModifier("upgrade-wood-plow",
+	{"Supply", 1},
+	{"apply-to", "unit-dwarven-mushroom-farm"},
+	{"apply-to", "unit-germanic-farm"}, {"apply-to", "unit-latin-farm"}, {"apply-to", "unit-teuton-farm"},
+	{"apply-to", "unit-goblin-farm"}
+)
+
+DefineModifier("upgrade-iron-tipped-wood-plow",
+	{"Supply", 1},
+	{"apply-to", "unit-dwarven-mushroom-farm"},
+	{"apply-to", "unit-germanic-farm"}, {"apply-to", "unit-latin-farm"}, {"apply-to", "unit-teuton-farm"},
+	{"apply-to", "unit-goblin-farm"}
+)
+
+DefineModifier("upgrade-iron-plow",
+	{"Supply", 1},
+	{"apply-to", "unit-dwarven-mushroom-farm"},
+	{"apply-to", "unit-germanic-farm"}, {"apply-to", "unit-latin-farm"}, {"apply-to", "unit-teuton-farm"},
+	{"apply-to", "unit-goblin-farm"}
+)
 
 DefineModifier("upgrade-mathematics",
 	{"TradeCost", -5},

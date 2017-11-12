@@ -55,7 +55,7 @@ DefineFaction("funnelbeaker-tribe", { -- based on the Funnel Beaker culture of Z
 	Colors = {"violet"},
 	-- Ertebolle cultured ended and Funnel Beaker culture arose in Zealand in 3950 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
 	HistoricalUpgrades = {
-		-3600, "upgrade-germanic-wood-plow", true, -- Primitive ard (plow) appears in Northern Europe c. 3600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 297.
+		-3600, "upgrade-wood-plow", true, -- Primitive ard (plow) appears in Northern Europe c. 3600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 297.
 	}
 })
 
@@ -65,7 +65,7 @@ DefineFaction("gylfing-tribe", { -- Scandinavian pre-Indo-Europeans are very unl
 	Type = "tribe",
 	Colors = {"green", "teal"},
 	HistoricalUpgrades = {
-		-3600, "upgrade-germanic-wood-plow", true, -- Primitive ard (plow) appears in Northern Europe c. 3600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 297.
+		-3600, "upgrade-wood-plow", true, -- Primitive ard (plow) appears in Northern Europe c. 3600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 297.
 	}
 })
 

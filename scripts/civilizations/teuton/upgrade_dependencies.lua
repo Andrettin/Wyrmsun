@@ -81,10 +81,6 @@ DefineDependency("upgrade-teuton-catapult-projectile-2",
 	{"unit-teuton-lumber-mill", "upgrade-teuton-catapult-projectile-1"}, "or", {"upgrade-mercenary-company", "upgrade-teuton-catapult-projectile-1"}
 )
 
-DefineDependency("upgrade-teuton-iron-tipped-wood-plow",
-	{"upgrade-germanic-wood-plow"}
-)
-
 DefineDependency("unit-teuton-stronghold",
 	{"unit-teuton-barracks", "upgrade-teuton-masonry"}, "or", {"unit-latin-barracks", "upgrade-teuton-masonry"}
 )

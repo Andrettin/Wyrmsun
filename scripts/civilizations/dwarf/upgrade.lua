@@ -116,16 +116,6 @@ DefineUpgrade("upgrade-dwarven-ballista-bolt-2", {
 	Description = "Although the slicing power of broadhead ballista bolts was a great improvement over previous bolts, it was still far from ideal. Th penetrating ballista bolts instead do not slice their targets, but concentrate their might on a single point, maximizing puncturing power and thus their capability to breach enemy walls.\n\nEffect: +15 Damage for Ballistas."
 })
 
-DefineUpgrade("upgrade-dwarven-wood-plow", {
-	Parent = "upgrade-wood-plow",
-	Civilization = "dwarf"
-})
-
-DefineUpgrade("upgrade-dwarven-iron-tipped-wood-plow", {
-	Parent = "upgrade-iron-tipped-wood-plow",
-	Civilization = "dwarf"
-})
-
 DefineUpgrade("upgrade-dwarven-masonry", {
 	Parent = "upgrade-masonry",
 	Civilization = "dwarf",
@@ -248,16 +238,6 @@ DefineModifier("upgrade-dwarven-ballista-bolt-2",
 	{"BasicDamage", 5},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-ballista-warship"}
-)
-
-DefineModifier("upgrade-dwarven-wood-plow",
-	{"Supply", 1},
-	{"apply-to", "unit-dwarven-mushroom-farm"}
-)
-
-DefineModifier("upgrade-dwarven-iron-tipped-wood-plow",
-	{"Supply", 1},
-	{"apply-to", "unit-dwarven-mushroom-farm"}
 )
 
 DefineModifier("upgrade-dwarven-masonry",

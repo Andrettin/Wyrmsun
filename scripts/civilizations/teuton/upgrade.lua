@@ -78,11 +78,6 @@ DefineUpgrade("upgrade-teuton-catapult-projectile-2", {
 	Description = "Advances in metalworking make it possible to use metal balls as catapult projectiles, greatly magnifying the destructive power of those siege weapons.\n\nEffect: +15 Damage for Catapults."
 })
 
-DefineUpgrade("upgrade-teuton-iron-tipped-wood-plow", {
-	Parent = "upgrade-iron-tipped-wood-plow",
-	Civilization = "teuton"
-})
-
 DefineUpgrade("upgrade-teuton-masonry", {
 	Parent = "upgrade-masonry",
 	Civilization = "teuton",
@@ -151,11 +146,6 @@ DefineModifier("upgrade-teuton-catapult-projectile-2",
 	{"BasicDamage", 15},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-catapult"}
-)
-
-DefineModifier("upgrade-teuton-iron-tipped-wood-plow",
-	{"Supply", 1},
-	{"apply-to", "unit-teuton-farm"}, {"apply-to", "unit-latin-farm"}
 )
 
 DefineModifier("upgrade-teuton-masonry",

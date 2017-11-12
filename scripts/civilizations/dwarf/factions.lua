@@ -170,7 +170,7 @@ DefineFaction("joruvellir", { -- from Norse mythology, "Joruvellir" = "Fields of
 	},
 	HistoricalUpgrades = {
 		400, "upgrade-dwarven-runewriting", true, -- polities require writing
-		534, "upgrade-dwarven-iron-tipped-wood-plow", true -- Mushroom Farms existent in Knalga (so possibly also in other polities)
+		534, "upgrade-iron-tipped-wood-plow", true -- Mushroom Farms existent in Knalga (so possibly also in other polities)
 	}
 })
 
@@ -195,7 +195,7 @@ DefineFaction("kal-kartha", {
 	},
 	HistoricalUpgrades = {
 		400, "upgrade-dwarven-runewriting", true, -- polities require writing
-		534, "upgrade-dwarven-iron-tipped-wood-plow", true -- Mushroom Farms existent in Knalga (so possibly also in other polities)
+		534, "upgrade-iron-tipped-wood-plow", true -- Mushroom Farms existent in Knalga (so possibly also in other polities)
 	}
 })
 
@@ -220,7 +220,7 @@ DefineFaction("knalga", {
 	},
 	HistoricalUpgrades = {
 		400, "upgrade-dwarven-runewriting", true, -- polities require writing
-		534, "upgrade-dwarven-iron-tipped-wood-plow", true -- Mushroom Farms existent in Knalga
+		534, "upgrade-iron-tipped-wood-plow", true -- Mushroom Farms existent in Knalga
 	}
 })
 
@@ -248,7 +248,7 @@ DefineFaction("lyr", {
 	},
 	HistoricalUpgrades = {
 		400, "upgrade-dwarven-runewriting", true, -- polities require writing
-		534, "upgrade-dwarven-iron-tipped-wood-plow", true -- Mushroom Farms existent in Knalga (so possibly also in other polities)
+		534, "upgrade-iron-tipped-wood-plow", true -- Mushroom Farms existent in Knalga (so possibly also in other polities)
 	}
 })
 

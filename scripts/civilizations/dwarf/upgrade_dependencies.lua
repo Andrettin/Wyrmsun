@@ -89,10 +89,6 @@ DefineDependency("upgrade-dwarven-ballista-bolt-2",
 	{"unit-dwarven-lumber-mill", "upgrade-dwarven-ballista-bolt-1"}, "or", {"upgrade-mercenary-company", "upgrade-dwarven-ballista-bolt-1"}
 )
 
-DefineDependency("upgrade-dwarven-iron-tipped-wood-plow",
-	{"upgrade-dwarven-wood-plow"}
-)
-
 DefineDependency("unit-dwarven-stronghold",
 	{"unit-dwarven-barracks", "upgrade-dwarven-masonry"}, "or", {"unit-gnomish-barracks", "upgrade-dwarven-masonry"}
 )

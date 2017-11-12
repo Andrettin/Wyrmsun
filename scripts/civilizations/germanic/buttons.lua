@@ -136,14 +136,6 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-barbed-arrow",
 	ForUnit = {"unit-germanic-carpenters-shop", "unit-teuton-lumber-mill"}
 })
   
-DefineButton( { Pos = 5, Level = 0, Icon = "icon-wood-plow",
-	Action = "research", Value = "upgrade-germanic-wood-plow",
-	Allowed = "check-single-research",
-	Description = _("+1 Food supply for Farms."),
-	Key = "p", Hint = _("Research Wood ~!Plow"), Popup = "popup-research",
-	ForUnit = {"unit-germanic-carpenters-shop", "unit-teuton-lumber-mill"}
-})
-
 -- Deities ----------------------------------------------------------
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-odin",

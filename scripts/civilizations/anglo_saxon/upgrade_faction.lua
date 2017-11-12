@@ -324,7 +324,7 @@ DefineModifier("upgrade-faction-wessex",
 )
 
 DefineDependency("upgrade-faction-angle-tribe",
-	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
+	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-wood-plow"}
 )
 
 DefineDependency("upgrade-faction-bernice-tribe",
@@ -344,7 +344,7 @@ DefineDependency("upgrade-faction-gumeninga-tribe",
 )
 
 DefineDependency("upgrade-faction-jute-tribe",
-	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
+	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-wood-plow"}
 )
 
 DefineDependency("upgrade-faction-lindisfaran-tribe",
@@ -356,7 +356,7 @@ DefineDependency("upgrade-faction-mierce-tribe",
 )
 
 DefineDependency("upgrade-faction-teuton-tribe",
-	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
+	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-wood-plow"}
 )
 
 DefineDependency("upgrade-faction-bernicia",

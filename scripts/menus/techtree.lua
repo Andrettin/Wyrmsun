@@ -154,10 +154,10 @@ function RunTechTreeMenu(civilization_number)
 					tech_icon_y = 3
 				elseif (GetUnitTypeData(unitName, "Class") == "transport-ship") then
 					tech_icon_x = 6
-					tech_icon_y = 6
+					tech_icon_y = 7
 				elseif (GetUnitTypeData(unitName, "Class") == "siege-warship") then
 					tech_icon_x = 7
-					tech_icon_y = 6
+					tech_icon_y = 7
 				elseif (GetUnitTypeData(unitName, "Class") == "flying-rider") then
 					tech_icon_x = 8
 					tech_icon_y = 4
@@ -196,7 +196,7 @@ function RunTechTreeMenu(civilization_number)
 					tech_icon_y = 4
 				elseif (GetUnitTypeData(unitName, "Class") == "dock") then
 					tech_icon_x = 6
-					tech_icon_y = 5
+					tech_icon_y = 6
 				elseif (GetUnitTypeData(unitName, "Class") == "watch-tower") then
 					tech_icon_x = 9
 					tech_icon_y = 2
@@ -293,6 +293,9 @@ function RunTechTreeMenu(civilization_number)
 					if (GetCivilizationClassUnitType("university", civilization) == nil) then
 						tech_allowed = false
 					end
+				elseif (GetUpgradeData(unitName, "Class") == "gunpowder") then
+					tech_icon_x = 10
+					tech_icon_y = 8
 				else
 					tech_allowed = false
 				end

@@ -125,10 +125,6 @@ DefineDependency("upgrade-goblin-catapult-projectile-2",
 	{"unit-goblin-lumber-mill", "upgrade-goblin-catapult-projectile-1"}, "or", {"upgrade-mercenary-company", "upgrade-goblin-catapult-projectile-1"}
 )
 
-DefineDependency("upgrade-goblin-iron-tipped-wood-plow",
-	{"upgrade-goblin-wood-plow"}
-)
-
 DefineDependency("upgrade-goblin-coinage",
 	{"unit-goblin-smithy"}, "or", {"upgrade-mercenary-company"}
 )

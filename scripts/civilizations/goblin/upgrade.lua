@@ -111,16 +111,6 @@ DefineUpgrade("upgrade-goblin-catapult-projectile-2", {
 	Description = _("Advances in metalworking make it possible to use metal balls as catapult projectiles, greatly magnifying the destructive power of war machines.\n\nEffect: +15 Damage for War Machines.")
 })
 
-DefineUpgrade("upgrade-goblin-wood-plow", {
-	Parent = "upgrade-wood-plow",
-	Civilization = "goblin"
-})
-
-DefineUpgrade("upgrade-goblin-iron-tipped-wood-plow", {
-	Parent = "upgrade-iron-tipped-wood-plow",
-	Civilization = "goblin"
-})
-
 DefineUpgrade("upgrade-goblin-masonry", {
 	Parent = "upgrade-masonry",
 	Civilization = "goblin",
@@ -223,16 +213,6 @@ DefineModifier("upgrade-goblin-masonry",
 	{"apply-to", "unit-goblin-academy"},
 	{"apply-to", "unit-goblin-watch-tower"}, {"apply-to", "unit-goblin-guard-tower"},
 	{"apply-to", "unit-goblin-dock"}
-)
-
-DefineModifier("upgrade-goblin-wood-plow",
-	{"Supply", 1},
-	{"apply-to", "unit-goblin-farm"}
-)
-
-DefineModifier("upgrade-goblin-iron-tipped-wood-plow",
-	{"Supply", 1},
-	{"apply-to", "unit-goblin-farm"}
 )
 
 DefineModifier("upgrade-goblin-coinage",

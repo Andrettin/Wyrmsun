@@ -116,24 +116,20 @@ function ApplyTechLevels()
 		"upgrade-philosophy"
 	}
 	local bronze_upgrades = {
+		"upgrade-wood-plow",
 		"upgrade-dwarven-broad-axe", "upgrade-dwarven-long-spear", "upgrade-dwarven-shield-1", "upgrade-dwarven-sharp-throwing-axe",
 		"upgrade-germanic-broad-sword", "upgrade-germanic-long-spear", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow",
-		"upgrade-goblin-broad-sword", "upgrade-goblin-long-spear", "upgrade-goblin-rimmed-shield", "upgrade-goblin-barbed-arrow",
-		"upgrade-dwarven-wood-plow",
-		"upgrade-goblin-wood-plow",
-		"upgrade-germanic-wood-plow"
+		"upgrade-goblin-broad-sword", "upgrade-goblin-long-spear", "upgrade-goblin-rimmed-shield", "upgrade-goblin-barbed-arrow"
 	}
 	local iron_upgrades = {
+		"upgrade-iron-tipped-wood-plow", "upgrade-iron-plow",
 		"upgrade-teuton-spatha", "upgrade-teuton-pike", "upgrade-teuton-iron-shield", "upgrade-teuton-bodkin-arrow",
 		"upgrade-teuton-catapult-projectile-1", "upgrade-teuton-catapult-projectile-2",
-		"upgrade-teuton-iron-tipped-wood-plow",
 		"upgrade-frank-spatha",
 		"upgrade-dwarven-great-axe", "upgrade-dwarven-pike", "upgrade-dwarven-shield-2", "upgrade-dwarven-bearded-throwing-axe",
 		"upgrade-dwarven-ballista-bolt-1", "upgrade-dwarven-ballista-bolt-2",
-		"upgrade-dwarven-iron-tipped-wood-plow",
 		"upgrade-goblin-long-sword", "upgrade-goblin-pike", "upgrade-goblin-embossed-shield", "upgrade-goblin-bodkin-arrow",
-		"upgrade-goblin-catapult-projectile-1", "upgrade-goblin-catapult-projectile-2",
-		"upgrade-goblin-iron-tipped-wood-plow"
+		"upgrade-goblin-catapult-projectile-1", "upgrade-goblin-catapult-projectile-2"
 	}
 	local gunpowder_upgrades = {
 		"upgrade-gunpowder"
