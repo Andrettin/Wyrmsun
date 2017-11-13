@@ -28,7 +28,8 @@
 -- The Five Classical Elements
 
 DefineDeityDomain("air", {
-	Name = "Air"
+	Name = "Air",
+	Abilities = {"upgrade-precision"}
 })
 
 DefineDeityDomain("earth", {
@@ -64,7 +65,8 @@ DefineDeityDomain("ice", {
 })
 
 DefineDeityDomain("lightning", {
-	Name = "Lightning"
+	Name = "Lightning",
+	Abilities = {"upgrade-shocking-grasp"}
 })
 
 -- Chaos and Order
@@ -75,8 +77,7 @@ DefineDeityDomain("chaos", {
 })
 
 DefineDeityDomain("order", {
-	Name = "Order",
-	Abilities = {"upgrade-precision"}
+	Name = "Order"
 })
 
 -- Life and Death

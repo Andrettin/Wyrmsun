@@ -68,6 +68,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added the Toughness ability, which increases HP by 10 and can be acquired up to 100 times.
 - Added the Blessing ability, which increases damage and evasion by 50% (icon by Jinn). The ability is available for human priests if the Christianity upgrade has been acquired.
 - Added the Wither ability, which decreases damage by 50% (icon by Jinn). The ability is available for dwarven, goblin and human priests if Hel has been chosen as a minor deity.
+- Added the Shocking Grasp ability, which causes a bit of damage at melee range and leaves the target stunned (icon and lightning effect graphics by Jinn). The ability is available for dwarven and human priests if Thor as been chosen as the major deity. Thor's old spell, Precision, is now granted by Heimdall instead.
 
 * Achievements
 - Added achievements for completing the A Home in the Fields of Sand and Thunraz's Servant scenarios.

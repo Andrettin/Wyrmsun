@@ -1124,9 +1124,9 @@ DefineUnitType("unit-dwarven-witness", {
 	BluntDamage = true,
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
-	StartingAbilities = {"upgrade-inspire", "upgrade-precision", "upgrade-wither"},
-	CanCastSpell = {"spell-inspire", "spell-healing", "spell-precision", "spell-wither"},
-	AutoCastActive = {"spell-inspire", "spell-healing", "spell-precision", "spell-wither"},
+	StartingAbilities = {"upgrade-inspire", "upgrade-precision", "upgrade-shocking-grasp", "upgrade-wither"},
+	CanCastSpell = {"spell-inspire", "spell-healing", "spell-precision", "spell-shocking-grasp", "spell-wither"},
+	AutoCastActive = {"spell-inspire", "spell-healing", "spell-precision", "spell-shocking-grasp", "spell-wither"},
 	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",

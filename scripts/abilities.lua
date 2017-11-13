@@ -137,6 +137,12 @@ DefineUpgrade("upgrade-scouting", {
 	Ability = true
 })
 
+DefineUpgrade("upgrade-shocking-grasp", {
+	Name = "Shocking Grasp",
+	Icon = "icon-shocking-grasp",
+	Ability = true
+})
+
 DefineUpgrade("upgrade-spear-mastery", {
 	Name = "Spear Mastery",
 	Icon = "icon-spear-mastery",

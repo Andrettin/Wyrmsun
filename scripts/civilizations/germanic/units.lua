@@ -685,9 +685,9 @@ DefineUnitType("unit-germanic-priest", {
 	BluntDamage = true,
 	ButtonKey = "g",
 	ButtonHint = "Train ~!Gudjan",
-	StartingAbilities = {"upgrade-inspire", "upgrade-precision", "upgrade-wither"},
-	CanCastSpell = {"spell-inspire", "spell-healing", "spell-precision", "spell-wither"},
-	AutoCastActive = {"spell-inspire", "spell-healing", "spell-precision", "spell-wither"},
+	StartingAbilities = {"upgrade-inspire", "upgrade-precision", "upgrade-shocking-grasp", "upgrade-wither"},
+	CanCastSpell = {"spell-inspire", "spell-healing", "spell-precision", "spell-shocking-grasp", "spell-wither"},
+	AutoCastActive = {"spell-inspire", "spell-healing", "spell-precision", "spell-shocking-grasp", "spell-wither"},
 	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Sounds = {
 		"selected", "basic-germanic-voices-selected-group",

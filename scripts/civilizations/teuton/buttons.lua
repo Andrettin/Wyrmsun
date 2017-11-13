@@ -348,7 +348,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-odin",
 DefineButton( { Pos = 7, Level = 0, Icon = "icon-thor",
 	Action = "research", Value = "upgrade-deity-thor",
 	Key = "t", Hint = "Worship ~!Thunor", Popup = "popup-research",
-	Description = "Choose Thunor as your major deity. +2 Damage for sword infantry, enables Precision spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Wodan major deity.",
+	Description = "Choose Thunor as your major deity. +2 Damage for sword infantry, enables Shocking Grasp spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Wodan major deity.",
 	ForUnit = {"unit-teuton-temple"}
 })
 
@@ -378,7 +378,7 @@ DefineButton( { Pos = 8, Level = 0, Icon = "icon-tyr",
 DefineButton( { Pos = 9, Level = 0, Icon = "icon-heimdall",
 	Action = "research", Value = "upgrade-deity-heimdall",
 	Key = "h", Hint = "Worship ~!Heimdall", Popup = "popup-research",
-	Description = "Choose Heimdall as a minor deity. +1 Sight for Archers, enables Far Sight spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Frankish, Gothic, Suebi and Teuton civilizations, and with the Hel and Tyr minor deities.",
+	Description = "Choose Heimdall as a minor deity. +1 Sight for Archers, enables Precision spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Frankish, Gothic, Suebi and Teuton civilizations, and with the Hel and Tyr minor deities.",
 	ForUnit = {"unit-teuton-temple"}
 })
 
@@ -442,7 +442,7 @@ DefineButton( { Pos = 10, Level = 2, Icon = "icon-odin",
 DefineButton( { Pos = 11, Level = 2, Icon = "icon-thor",
 	Action = "learn-ability", Value = "upgrade-deity-thor",
 	Key = "t", Hint = "Worship ~!Thunor", Popup = "popup-learn-ability",
-	Description = "Choose Thunor as your hero's major deity. +2 Damage for sword infantry, enables Precision spell for Gudjans. Incompatible with the Christianity religion or with the Wodan major deity.",
+	Description = "Choose Thunor as your hero's major deity. +2 Damage for sword infantry, enables Shocking Grasp spell for Gudjans. Incompatible with the Christianity religion or with the Wodan major deity.",
 	ForUnit = {
 		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
 		"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman",
@@ -488,7 +488,7 @@ DefineButton( { Pos = 13, Level = 2, Icon = "icon-heimdall",
 	Action = "learn-ability", Value = "upgrade-deity-heimdall",
 	Key = "d", Hint = "Worship Haima~!dala", Popup = "popup-learn-ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
-	Description = "Choose Heimdall as a minor deity for your hero. +1 Sight for Skutans, enables Far Sight spell for Gudjans. Incompatible with the Haljo and Tiwaz minor deities.",
+	Description = "Choose Heimdall as a minor deity for your hero. +1 Sight for Skutans, enables Precision spell for Gudjans. Incompatible with the Haljo and Tiwaz minor deities.",
 	ForUnit = {
 	}
 })

@@ -306,6 +306,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-far-sight",
+	Size = {46, 38},
+	File = "neutral/icons/far_sight.png"
+})
+
+DefineIcon({
 	Name = "icon-healing",
 	Size = {46, 38},
 	File = "neutral/icons/healing.png"
@@ -333,6 +339,12 @@ DefineIcon({
 	Name = "icon-scouting",
 	Size = {46, 38},
 	File = "neutral/icons/scouting.png"
+})
+
+DefineIcon({
+	Name = "icon-shocking-grasp",
+	Size = {46, 38},
+	File = "neutral/icons/shocking_grasp.png"
 })
 
 DefineIcon({

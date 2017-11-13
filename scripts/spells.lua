@@ -90,19 +90,6 @@ DefineSpell("spell-herbal-cure",
 	"ai-cast", {"range", 6, "condition", {"alliance", "only", "HitPoints", {MaxValuePercent = 90}}}
 )
 
-DefineSpell("spell-portent",
-	"showname", "Portent",
-	"manacost", 70,
-	"range", "infinite",
-	"target", "position",
-	"action", {
-		{"summon", "unit-type", "unit-revealer", "time-to-live", 50},
-		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
-	},
-	"sound-when-cast", "magic-holy",
-	"depend-upgrade", "upgrade-portent"
-)
-
 DefineSpell("spell-inspire",
 	"showname", "Inspire",
 	"manacost", 25,
@@ -118,8 +105,21 @@ DefineSpell("spell-inspire",
 	},
 	"sound-when-cast", "magic-holy",
 	"depend-upgrade", "upgrade-inspire",
-	"autocast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "alliance", "only"}},
-	"ai-cast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "alliance", "only"}}
+	"autocast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "alliance", "only", "Blessing", {ExactValue = 0}}},
+	"ai-cast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "alliance", "only", "Blessing", {ExactValue = 0}}}
+)
+
+DefineSpell("spell-portent",
+	"showname", "Portent",
+	"manacost", 70,
+	"range", "infinite",
+	"target", "position",
+	"action", {
+		{"summon", "unit-type", "unit-revealer", "time-to-live", 50},
+		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
+	},
+	"sound-when-cast", "magic-holy",
+	"depend-upgrade", "upgrade-portent"
 )
 
 DefineSpell("spell-precision",
@@ -139,6 +139,24 @@ DefineSpell("spell-precision",
 	"depend-upgrade", "upgrade-precision",
 	"autocast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "alliance", "only"}},
 	"ai-cast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "alliance", "only"}}
+)
+
+DefineSpell("spell-shocking-grasp",
+	"showname", "Shocking Grasp",
+	"manacost", 50,
+	"range", 1,
+	"target", "unit",
+	"action", {
+		{"adjust-variable", {Stun = 200}},
+		{"spawn-missile", "missile", "missile-impact-lightning", "start-point", {"base", "target"}},
+		{"spawn-missile", "missile", "missile-always-hits", "start-point", {"base", "target"}, "lightning-damage", 7}
+	},
+	"condition", {
+		"Building", "false"
+	},
+	"autocast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only", "Stun", {ExactValue = 0}}},
+	"ai-cast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only", "Stun", {ExactValue = 0}}},
+	"depend-upgrade", "upgrade-shocking-grasp"
 )
 
 DefineSpell("spell-slow",

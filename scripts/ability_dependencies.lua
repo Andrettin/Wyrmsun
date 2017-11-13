@@ -42,6 +42,10 @@ DefineDependency("upgrade-inspire",
 )
 
 DefineDependency("upgrade-precision",
+	{"upgrade-deity-heimdall"}
+)
+
+DefineDependency("upgrade-shocking-grasp",
 	{"upgrade-deity-thor"}
 )
 

@@ -674,9 +674,11 @@ DefineButton( { Pos = 8, Level = 2, Icon = "icon-toughness",
 		"unit-dwarven-thunderer",
 		"unit-dwarven-witness",
 		"unit-surghan-mercenary-thane",
+		"unit-germanic-worker",
 		"unit-germanic-chieftain", "unit-germanic-spearman", "unit-germanic-archer",
 		"unit-germanic-priest",
 		"unit-frank-heroic-swordsman", "unit-frank-spearman", "unit-frank-knight-lord",
+		"unit-teuton-worker",
 		"unit-teuton-heroic-swordsman", 
 		"unit-teuton-spearman",
 		"unit-teuton-archer",
@@ -684,7 +686,9 @@ DefineButton( { Pos = 8, Level = 2, Icon = "icon-toughness",
 		"unit-teuton-knight-lord",
 		"unit-teuton-priest",
 		"unit-gothic-horse-lord",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
+		"unit-goblin-worker",
 		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-shadowstalker",
 		"unit-goblin-gunpowder-infantry",
 		"unit-goblin-shaman",
@@ -912,11 +916,18 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-terror",
 	ForUnit = {"unit-goblin-shaman"}
 })
 
-DefineButton( { Pos = 5, Level = 0, Icon = "icon-healing",
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-healing",
 	Action = "cast-spell", Value = "spell-healing",
 	Description = "Heals an organic unit",
 	Key = "h", Hint = "~!Healing", Popup = "popup-commands",
 	ForUnit = {"unit-germanic-priest", "unit-teuton-priest", "unit-elven-priest", "unit-dwarven-witness"}
+})
+
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-shocking-grasp",
+	Action = "cast-spell", Value = "spell-shocking-grasp",
+	Description = "Deals lightning damage at melee range to a unit, leaving it stunned for a few seconds",
+	Key = "k", Hint = "Shoc~!king Grasp", Popup = "popup-commands",
+	ForUnit = {"unit-germanic-priest", "unit-teuton-priest", "unit-dwarven-witness"}
 })
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-wither",
@@ -926,14 +937,14 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-wither",
 	ForUnit = {"unit-germanic-priest", "unit-teuton-priest", "unit-elven-priest", "unit-dwarven-witness", "unit-goblin-shaman"}
 })
 
-DefineButton( { Pos = 6, Level = 0, Icon = "icon-blessing",
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-blessing",
 	Action = "cast-spell", Value = "spell-blessing",
 	Description = "Blesses an organic unit to deal 50% more damage and to evade 50% better",
 	Key = "b", Hint = "~!Blessing", Popup = "popup-commands",
 	ForUnit = {"unit-germanic-priest", "unit-teuton-priest", "unit-elven-priest", "unit-dwarven-witness"}
 })
 
-DefineButton( { Pos = 6, Level = 0, Icon = "icon-precision",
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-precision",
 	Action = "cast-spell", Value = "spell-precision",
 	Description = "Doubles the accuracy of an organic unit while in combat",
 	Key = "r", Hint = "P~!recision", Popup = "popup-commands",

@@ -497,7 +497,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-thor",
 	Action = "research", Value = "upgrade-deity-thor",
 	Allowed = "check-single-research",
 	Key = "t", Hint = "Worship ~!Thor", Popup = "popup-research",
-	Description = "Choose Thor as your major deity. +2 Damage for Scouts, enables Precision spell for Witnesses. Allows new magic affixes for items sold at the Market. Incompatible with the Hroptatyr major deity.",
+	Description = "Choose Thor as your major deity. +2 Damage for Scouts, enables Shocking Grasp spell for Witnesses. Allows new magic affixes for items sold at the Market. Incompatible with the Hroptatyr major deity.",
 	ForUnit = {"unit-dwarven-temple"}
 })
 
@@ -538,7 +538,7 @@ DefineButton( { Pos = 9, Level = 2, Icon = "icon-odin",
 DefineButton( { Pos = 10, Level = 2, Icon = "icon-thor",
 	Action = "learn-ability", Value = "upgrade-deity-thor",
 	Key = "t", Hint = "Worship ~!Thor", Popup = "popup-learn-ability",
-	Description = "Choose Thor as your hero's major deity. +2 Damage for Scouts, enables Precision spell for Witnesses. Incompatible with the Hroptatyr major deity.",
+	Description = "Choose Thor as your hero's major deity. +2 Damage for Scouts, enables Shocking Grasp spell for Witnesses. Incompatible with the Hroptatyr major deity.",
 	ForUnit = {
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
 		"unit-dwarven-guard",

@@ -150,7 +150,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-thor",
 	Action = "research", Value = "upgrade-deity-thor",
 	Allowed = "check-single-research",
 	Key = "t", Hint = "Worship ~!Thunraz", Popup = "popup-research",
-	Description = "Choose Thunraz as your major deity. +2 Damage for Eralas, enables Precision spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Wodanaz major deity.",
+	Description = "Choose Thunraz as your major deity. +2 Damage for Eralas, enables Shocking Grasp spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Wodanaz major deity.",
 	ForUnit = {"unit-germanic-temple"}
 })
 
@@ -166,7 +166,7 @@ DefineButton( { Pos = 8, Level = 0, Icon = "icon-heimdall",
 	Action = "research", Value = "upgrade-deity-heimdall",
 	Allowed = "check-single-research",
 	Key = "d", Hint = "Worship Haima~!dala", Popup = "popup-research",
-	Description = "Choose Haimadala as a minor deity. +1 Sight for Skutans, enables Far Sight spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Frankish, Gothic, Suebi and Teuton civilizations, and with the Haljo and Tiwaz minor deities.",
+	Description = "Choose Haimadala as a minor deity. +1 Sight for Skutans, enables Precision spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Frankish, Gothic, Suebi and Teuton civilizations, and with the Haljo and Tiwaz minor deities.",
 	ForUnit = {"unit-germanic-temple"}
 })
 
@@ -193,7 +193,7 @@ DefineButton( { Pos = 9, Level = 2, Icon = "icon-odin",
 DefineButton( { Pos = 10, Level = 2, Icon = "icon-thor",
 	Action = "learn-ability", Value = "upgrade-deity-thor",
 	Key = "t", Hint = "Worship ~!Thunraz", Popup = "popup-learn-ability",
-	Description = "Choose Thunraz as your hero's major deity. +2 Damage for Eralas, enables Precision spell for Gudjans. Incompatible with the Wodanaz major deity.",
+	Description = "Choose Thunraz as your hero's major deity. +2 Damage for Eralas, enables Shocking Grasp spell for Gudjans. Incompatible with the Wodanaz major deity.",
 	ForUnit = {
 		"unit-germanic-worker",
 		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",
@@ -219,7 +219,7 @@ DefineButton( { Pos = 12, Level = 2, Icon = "icon-heimdall",
 	Action = "learn-ability", Value = "upgrade-deity-heimdall",
 	Key = "d", Hint = "Worship Haima~!dala", Popup = "popup-learn-ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
-	Description = "Choose Haimadala as a minor deity for your hero. +1 Sight for Skutans, enables Far Sight spell for Gudjans. Incompatible with the Haljo and Tiwaz minor deities.",
+	Description = "Choose Haimadala as a minor deity for your hero. +1 Sight for Skutans, enables Precision spell for Gudjans. Incompatible with the Haljo and Tiwaz minor deities.",
 	ForUnit = {
 		"unit-germanic-worker",
 		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",

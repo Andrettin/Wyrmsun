@@ -889,9 +889,9 @@ DefineUnitType("unit-teuton-priest", {
 	Corpse = "unit-human-dead-body",
 --	WeaponClasses = {"mace"},
 	BluntDamage = true,
-	StartingAbilities = {"upgrade-blessing", "upgrade-healing", "upgrade-inspire", "upgrade-precision", "upgrade-wither"},
-	CanCastSpell = {"spell-blessing", "spell-healing", "spell-inspire", "spell-precision", "spell-wither"},
-	AutoCastActive = {"spell-blessing", "spell-healing", "spell-inspire", "spell-precision", "spell-wither"},
+	StartingAbilities = {"upgrade-blessing", "upgrade-healing", "upgrade-inspire", "upgrade-precision", "upgrade-shocking-grasp", "upgrade-wither"},
+	CanCastSpell = {"spell-blessing", "spell-healing", "spell-inspire", "spell-precision", "spell-shocking-grasp", "spell-wither"},
+	AutoCastActive = {"spell-blessing", "spell-healing", "spell-inspire", "spell-precision", "spell-shocking-grasp", "spell-wither"},
 	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	RequirementsString = "Any Deity or Religion",
 	Variations = {
