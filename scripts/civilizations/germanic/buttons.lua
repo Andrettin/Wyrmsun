@@ -142,7 +142,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-odin",
 	Action = "research", Value = "upgrade-deity-odin",
 	Allowed = "check-single-research",
 	Key = "w", Hint = "Worship ~!Wodanaz", Popup = "popup-research",
-	Description = "Choose Wodanaz as your major deity. +2 Damage for Skutans, enables Inspire spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Thunraz major deity.",
+	Description = "Choose Wodanaz as your major deity. +2 Damage for Skutans, enables Far Sight spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Thunraz major deity.",
 	ForUnit = {"unit-germanic-temple"}
 })
 
@@ -158,7 +158,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-tyr",
 	Action = "research", Value = "upgrade-deity-tyr",
 	Allowed = "check-single-research",
 	Key = "z", Hint = "Worship Tiwa~!z", Popup = "popup-research",
-	Description = "Choose Tiwaz as a minor deity. +2 Damage for Eralas, enables [...] spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Haimadala and Haljo minor deities.",
+	Description = "Choose Tiwaz as a minor deity. +2 Damage for Eralas, enables Inspire spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Haimadala and Haljo minor deities.",
 	ForUnit = {"unit-germanic-temple"}
 })
 
@@ -181,7 +181,7 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-hel",
 DefineButton( { Pos = 9, Level = 2, Icon = "icon-odin",
 	Action = "learn-ability", Value = "upgrade-deity-odin",
 	Key = "w", Hint = "Worship ~!Wodanaz", Popup = "popup-learn-ability",
-	Description = "Choose Wodanaz as your hero's major deity. +2 Damage for Skutans, enables Inspire spell for Gudjans. Incompatible with the Thunraz major deity.",
+	Description = "Choose Wodanaz as your hero's major deity. +2 Damage for Skutans, enables Far Sight spell for Gudjans. Incompatible with the Thunraz major deity.",
 	ForUnit = {
 		"unit-germanic-worker",
 		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",
@@ -206,7 +206,7 @@ DefineButton( { Pos = 11, Level = 2, Icon = "icon-tyr",
 	Action = "learn-ability", Value = "upgrade-deity-tyr",
 	Key = "z", Hint = "Worship Tiwa~!z", Popup = "popup-learn-ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
-	Description = "Choose Tiwaz as a minor deity for your hero. +2 Damage for Eralas and enables [...] spell for Gudjans. Incompatible with the Haimadala and Haljo minor deities.",
+	Description = "Choose Tiwaz as a minor deity for your hero. +2 Damage for Eralas and enables Inspire spell for Gudjans. Incompatible with the Haimadala and Haljo minor deities.",
 	ForUnit = {
 		"unit-germanic-worker",
 		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",

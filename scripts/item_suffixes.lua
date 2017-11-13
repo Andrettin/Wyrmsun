@@ -556,7 +556,7 @@ DefineDependency("upgrade-item-suffix-of-victory",
 )
 
 DefineDependency("upgrade-item-suffix-of-vision",
-	{"upgrade-deity-domain-archery"}, "or", {"upgrade-deity-domain-faith"}, "or", {"upgrade-deity-domain-light"}
+	{"upgrade-deity-domain-archery"}, "or", {"upgrade-deity-domain-faith"}, "or", {"upgrade-deity-domain-light"}, "or", {"upgrade-deity-domain-watch"}
 )
 
 DefineDependency("upgrade-item-suffix-of-the-wolf",

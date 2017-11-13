@@ -902,10 +902,10 @@ DefineButton( { Pos = 16, Level = 3, Icon = "icon-cancel",
 
 -- Special Abilities ---------------------------------------------------
 
-DefineButton( { Pos = 4, Level = 0, Icon = "icon-inspire",
-	Action = "cast-spell", Value = "spell-inspire",
-	Description = "Inspires an organic unit to deal 50% more damage",
-	Key = "i", Hint = "~!Inspire", Popup = "popup-commands",
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-far-sight",
+	Action = "cast-spell", Value = "spell-far-sight",
+	Description = "Reveals an area",
+	Key = "f", Hint = "~!Far Sight", Popup = "popup-commands",
 	ForUnit = {"unit-germanic-priest", "unit-teuton-priest", "unit-dwarven-witness"}
 })
 
@@ -927,6 +927,13 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-shocking-grasp",
 	Action = "cast-spell", Value = "spell-shocking-grasp",
 	Description = "Deals lightning damage at melee range to a unit, leaving it stunned for a few seconds",
 	Key = "k", Hint = "Shoc~!king Grasp", Popup = "popup-commands",
+	ForUnit = {"unit-germanic-priest", "unit-teuton-priest", "unit-dwarven-witness"}
+})
+
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-inspire",
+	Action = "cast-spell", Value = "spell-inspire",
+	Description = "Inspires an organic unit to deal 50% more damage",
+	Key = "i", Hint = "~!Inspire", Popup = "popup-commands",
 	ForUnit = {"unit-germanic-priest", "unit-teuton-priest", "unit-dwarven-witness"}
 })
 

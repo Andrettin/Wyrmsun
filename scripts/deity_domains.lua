@@ -28,8 +28,7 @@
 -- The Five Classical Elements
 
 DefineDeityDomain("air", {
-	Name = "Air",
-	Abilities = {"upgrade-precision"}
+	Name = "Air"
 })
 
 DefineDeityDomain("earth", {
@@ -130,7 +129,8 @@ DefineDeityDomain("temperance", {
 })
 
 DefineDeityDomain("wisdom", {
-	Name = "Wisdom"
+	Name = "Wisdom",
+	Abilities = {"upgrade-far-sight"}
 })
 
 -- Three Theological Virtues
@@ -213,5 +213,11 @@ DefineDeityDomain("poetry", {
 })
 
 DefineDeityDomain("warfare", {
-	Name = "Warfare"
+	Name = "Warfare",
+	Abilities = {"upgrade-inspire"}
+})
+
+DefineDeityDomain("watch", {
+	Name = "Watch",
+	Abilities = {"upgrade-precision"}
 })

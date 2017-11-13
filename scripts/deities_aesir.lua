@@ -34,7 +34,7 @@ DefineDeity("odin", { -- Known as Allfather, the Terrible One, One-eyed, Father 
 	Gender = "male",
 	Major = true,
 	Icon = "icon-odin",
-	Domains = {"magic", "courage", "wisdom"},
+	Domains = {"aether", "magic", "wisdom"},
 	CharacterUpgrade = "upgrade-character-deity",
 	CulturalNames = {
 		"anglo-saxon", "Woden",
@@ -230,7 +230,7 @@ DefineDeity("heimdall", { -- the horn Gjall belongs to him; identified with Rig 
 	Religions = {"paganism"},
 	Gender = "male",
 	Icon = "icon-heimdall",
-	Domains = {"air"},
+	Domains = {"watch"},
 	CulturalNames = {
 		"germanic", "Haimadala" -- tentative rendering of "Heimdall" in Proto-Germanic (assuming "dallr" to have the same etymological origin as "dalr", the Old Norse word for "valley"); see language data
 	},

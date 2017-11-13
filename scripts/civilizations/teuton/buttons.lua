@@ -333,7 +333,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-christianity",
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-odin",
 	Action = "research", Value = "upgrade-deity-odin",
 	Key = "w", Hint = "Worship ~!Wodan", Popup = "popup-research",
-	Description = "Choose Wodan as your major deity. +2 Damage for Archers, enables Inspire spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Thunor major deity.",
+	Description = "Choose Wodan as your major deity. +2 Damage for Archers, enables Far Sight spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Thunor major deity.",
 	ForUnit = {"unit-teuton-temple"}
 })
   
@@ -341,7 +341,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-odin",
 	Action = "research", Value = "upgrade-deity-odin",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-anglo-saxon-civilization"},
 	Key = "w", Hint = "Worship ~!Woden", Popup = "popup-research",
-	Description = "Choose Woden as your major deity. +2 Damage for Archers, enables Inspire spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Thunor major deity.",
+	Description = "Choose Woden as your major deity. +2 Damage for Archers, enables Far Sight spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Thunor major deity.",
 	ForUnit = {"unit-teuton-temple"}
 })
   
@@ -355,7 +355,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-thor",
 DefineButton( { Pos = 8, Level = 0, Icon = "icon-tyr",
 	Action = "research", Value = "upgrade-deity-tyr",
 	Key = "y", Hint = "Worship T~!yr", Popup = "popup-research",
-	Description = "Choose Tyr as a minor deity. +2 Damage for sword infantry, enables [...] spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Heimdall and Hel minor deities.",
+	Description = "Choose Tyr as a minor deity. +2 Damage for sword infantry, enables Inspire spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Heimdall and Hel minor deities.",
 	ForUnit = {"unit-teuton-temple"}
 })
 
@@ -363,7 +363,7 @@ DefineButton( { Pos = 8, Level = 0, Icon = "icon-tyr",
 	Action = "research", Value = "upgrade-deity-tyr",
 	Key = "z", Hint = "Worship ~!Ziu", Popup = "popup-research",
 	Allowed = "check-upgrade-or", AllowArg = {"upgrade-frankish-civilization", "upgrade-suebi-civilization", "upgrade-teuton-civilization"},
-	Description = "Choose Ziu as a minor deity. +2 Damage for sword infantry, enables [...] spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Hella minor deity.",
+	Description = "Choose Ziu as a minor deity. +2 Damage for sword infantry, enables Inspire spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Hella minor deity.",
 	ForUnit = {"unit-teuton-temple"}
 })
 
@@ -371,7 +371,7 @@ DefineButton( { Pos = 8, Level = 0, Icon = "icon-tyr",
 	Action = "research", Value = "upgrade-deity-tyr",
 	Key = "w", Hint = "Worship Ti~!w", Popup = "popup-research",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-anglo-saxon-civilization"},
-	Description = "Choose Tiw as a minor deity. +2 Damage for sword infantry, enables [...] spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Heimdall and Hel minor deities.",
+	Description = "Choose Tiw as a minor deity. +2 Damage for sword infantry, enables Inspire spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Heimdall and Hel minor deities.",
 	ForUnit = {"unit-teuton-temple"}
 })
 
@@ -425,7 +425,7 @@ DefineButton( { Pos = 9, Level = 2, Icon = "icon-christianity",
 DefineButton( { Pos = 10, Level = 2, Icon = "icon-odin",
 	Action = "learn-ability", Value = "upgrade-deity-odin",
 	Key = "w", Hint = "Worship ~!Wodan", Popup = "popup-learn-ability",
-	Description = "Choose Wodan as your hero's major deity. +2 Damage for Archers, enables Inspire spell for Gudjans. Incompatible with the Christianity religion or with the Thunor major deity.",
+	Description = "Choose Wodan as your hero's major deity. +2 Damage for Archers, enables Far Sight spell for Gudjans. Incompatible with the Christianity religion or with the Thunor major deity.",
 	ForUnit = {
 		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
 		"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman",
@@ -460,7 +460,7 @@ DefineButton( { Pos = 12, Level = 2, Icon = "icon-tyr",
 	Action = "learn-ability", Value = "upgrade-deity-tyr",
 	Key = "z", Hint = "Worship ~!Ziu", Popup = "popup-learn-ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
-	Description = "Choose Ziu as a minor deity for your hero. +2 Damage for sword infantry and enables [...] spell for Gudjans. Incompatible with the Hella minor deity.",
+	Description = "Choose Ziu as a minor deity for your hero. +2 Damage for sword infantry and enables Inspire spell for Gudjans. Incompatible with the Hella minor deity.",
 	ForUnit = {
 		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
 		"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman",
@@ -477,7 +477,7 @@ DefineButton( { Pos = 12, Level = 2, Icon = "icon-tyr",
 	Action = "learn-ability", Value = "upgrade-deity-tyr",
 	Key = "y", Hint = "Worship T~!yr", Popup = "popup-learn-ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
-	Description = "Choose Tyr as a minor deity for your hero. +2 Damage for sword infantry and enables [...] spell for Gudjans. Incompatible with the Halja minor deity.",
+	Description = "Choose Tyr as a minor deity for your hero. +2 Damage for sword infantry and enables Inspire spell for Gudjans. Incompatible with the Halja minor deity.",
 	ForUnit = {
 		"unit-gothic-horse-rider", "unit-gothic-horse-lord"
 	}

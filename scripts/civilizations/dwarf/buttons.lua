@@ -489,7 +489,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-odin",
 	Action = "research", Value = "upgrade-deity-odin",
 	Allowed = "check-single-research",
 	Key = "o", Hint = "Worship Hr~!optatyr", Popup = "popup-research",
-	Description = "Choose Hroptatyr as your major deity. +2 Damage for Axefighters, enables Inspire spell for Witnesses. Allows new magic affixes for items sold at the Market. Incompatible with the Thor major deity.",
+	Description = "Choose Hroptatyr as your major deity. +2 Damage for Axefighters, enables Far Sight spell for Witnesses. Allows new magic affixes for items sold at the Market. Incompatible with the Thor major deity.",
 	ForUnit = {"unit-dwarven-temple"}
 })
   
@@ -505,7 +505,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-tyr",
 	Action = "research", Value = "upgrade-deity-tyr",
 	Allowed = "check-single-research",
 	Key = "y", Hint = "Worship T~!yr", Popup = "popup-research",
-	Description = "Choose Tyr as a minor deity. +2 Damage for Axefighters and enables [...] spell for Witnesses. Allows new magic affixes for items sold at the Market. Incompatible with the Hel minor deity.",
+	Description = "Choose Tyr as a minor deity. +2 Damage for Axefighters and enables Inspire spell for Witnesses. Allows new magic affixes for items sold at the Market. Incompatible with the Hel minor deity.",
 	ForUnit = {"unit-dwarven-temple"}
 })
 
@@ -520,7 +520,7 @@ DefineButton( { Pos = 8, Level = 0, Icon = "icon-hel",
 DefineButton( { Pos = 9, Level = 2, Icon = "icon-odin",
 	Action = "learn-ability", Value = "upgrade-deity-odin",
 	Key = "o", Hint = "Worship Hr~!optatyr", Popup = "popup-learn-ability",
-	Description = "Choose Hroptatyr as your hero's major deity. +2 Damage for Axefighters, enables Inspire spell for Witnesses. Incompatible with the Thor major deity.",
+	Description = "Choose Hroptatyr as your hero's major deity. +2 Damage for Axefighters, enables Far Sight spell for Witnesses. Incompatible with the Thor major deity.",
 	ForUnit = {
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
 		"unit-dwarven-guard",
@@ -557,7 +557,7 @@ DefineButton( { Pos = 11, Level = 2, Icon = "icon-tyr",
 	Action = "learn-ability", Value = "upgrade-deity-tyr",
 	Key = "y", Hint = "Worship T~!yr", Popup = "popup-learn-ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
-	Description = "Choose Tyr as a minor deity for your hero. +2 Damage for Axefighters and enables [...] spell for Witnesses. Incompatible with the Hel minor deity.",
+	Description = "Choose Tyr as a minor deity for your hero. +2 Damage for Axefighters and enables Inspire spell for Witnesses. Incompatible with the Hel minor deity.",
 	ForUnit = {
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
 		"unit-dwarven-guard",

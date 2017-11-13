@@ -51,6 +51,19 @@ DefineSpell("spell-blessing",
 	"ai-cast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "alliance", "only"}}
 )
 
+DefineSpell("spell-far-sight",
+	"showname", "Far Sight",
+	"manacost", 70,
+	"range", "infinite",
+	"target", "position",
+	"action", {
+		{"summon", "unit-type", "unit-revealer", "time-to-live", 50},
+		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
+	},
+	"sound-when-cast", "magic-holy",
+	"depend-upgrade", "upgrade-far-sight"
+)
+
 DefineSpell("spell-healing",
 	"showname", "Healing",
 	"manacost", 2,

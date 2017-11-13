@@ -33,12 +33,16 @@ DefineDependency("upgrade-deadly-precision",
 	{"upgrade-critical-strike"}
 )
 
+DefineDependency("upgrade-far-sight",
+	{"upgrade-deity-odin"}
+)
+
 DefineDependency("upgrade-healing",
 	{"upgrade-deity-christian-god"}
 )
 
 DefineDependency("upgrade-inspire",
-	{"upgrade-deity-odin"}
+	{"upgrade-deity-tyr"}
 )
 
 DefineDependency("upgrade-precision",

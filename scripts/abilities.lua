@@ -73,6 +73,12 @@ DefineUpgrade("upgrade-ethereal-vision", {
 	Ability = true
 })
 
+DefineUpgrade("upgrade-far-sight", {
+	Name = "Far Sight",
+	Icon = "icon-far-sight",
+	Ability = true
+})
+
 DefineUpgrade("upgrade-gun-mastery", {
 	Name = "Gun Mastery",
 	Icon = "icon-gun-mastery",

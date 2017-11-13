@@ -199,6 +199,10 @@ DefineUpgrade("upgrade-deity-domain-warfare", {
 	Name = "Warfare"
 })
 
+DefineUpgrade("upgrade-deity-domain-watch", {
+	Name = "Watch"
+})
+
 -- Deity Upgrades
 
 -- Christianity
