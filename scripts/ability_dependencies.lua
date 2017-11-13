@@ -25,6 +25,10 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineDependency("upgrade-blessing",
+	{"upgrade-deity-christian-god"}
+)
+
 DefineDependency("upgrade-deadly-precision",
 	{"upgrade-critical-strike"}
 )
@@ -43,4 +47,8 @@ DefineDependency("upgrade-precision",
 
 DefineDependency("upgrade-terror",
 	{"upgrade-deity-gathaarl"}
+)
+
+DefineDependency("upgrade-wither",
+	{"upgrade-deity-hel"}
 )

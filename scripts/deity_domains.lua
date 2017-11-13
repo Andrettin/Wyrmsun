@@ -83,7 +83,7 @@ DefineDeityDomain("order", {
 
 DefineDeityDomain("death", {
 	Name = "Death",
-	Abilities = {"upgrade-terror"}
+	Abilities = {"upgrade-wither"}
 })
 
 DefineDeityDomain("life", {
@@ -135,12 +135,13 @@ DefineDeityDomain("wisdom", {
 -- Three Theological Virtues
 
 DefineDeityDomain("charity", {
-	Name = "Charity"
+	Name = "Charity",
+	Abilities = {"upgrade-healing"}
 })
 
 DefineDeityDomain("faith", {
 	Name = "Faith",
-	Abilities = {"upgrade-healing"}
+	Abilities = {"upgrade-blessing"}
 })
 
 DefineDeityDomain("hope", {

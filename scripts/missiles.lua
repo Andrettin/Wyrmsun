@@ -126,7 +126,7 @@ DefineMissileType("missile-impact-slime", {
 })
 
 DefineMissileType("missile-impact-lightning", {
-	File = "missiles/lightning_impact_medium.png", Size = {70, 70}, Frames = 4, NumDirections = 1,
+	File = "missiles/lightning_impact.png", Size = {48, 50}, Frames = 4, NumDirections = 1,
 	DrawLevel = 44, Class = "missile-class-stay", Sleep = 3, Speed = 16, Range = 1
 })
 
@@ -136,7 +136,7 @@ DefineMissileType("missile-axe-twirl", {
 })
 
 DefineMissileType("missile-magic-effect", {
-	File = "missiles/magic.png", Size = {32, 32}, Frames = 9, NumDirections = 1,
+	File = "missiles/magic.png", Size = {32, 42}, Frames = 21, NumDirections = 1,
 	DrawLevel = 50, Class = "missile-class-stay", Sleep = 2, Speed = 16, Range = 1, Transparency = 25,
 	AlwaysHits = true
 })

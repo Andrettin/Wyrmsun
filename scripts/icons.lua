@@ -276,6 +276,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-blessing",
+	Size = {46, 38},
+	File = "neutral/icons/blessing.png"
+})
+
+DefineIcon({
 	Name = "icon-critical-strike",
 	Size = {46, 38},
 	File = "neutral/icons/critical_strike.png"
@@ -339,6 +345,12 @@ DefineIcon({
 	Name = "icon-toughness",
 	Size = {46, 38},
 	File = "neutral/icons/toughness.png"
+})
+
+DefineIcon({
+	Name = "icon-wither",
+	Size = {46, 38},
+	File = "neutral/icons/wither.png"
 })
 
 DefineIcon({

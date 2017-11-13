@@ -32,6 +32,25 @@
 DefineUnitType("unit-revealer", {})
 DefineUnitType("unit-ethereal-revealer", {})
 
+DefineSpell("spell-blessing",
+	"showname", "Blessing",
+	"manacost", 50,
+	"range", 6,
+	"target", "unit",
+	"action", {
+		{"adjust-variable", {Blessing = 1000, Wither = 0}},
+		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
+	},
+	"condition", {
+		"organic", "only",
+		"Blessing", {ExactValue = 0}
+	},
+	"sound-when-cast", "magic-holy",
+	"depend-upgrade", "upgrade-blessing",
+	"autocast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "alliance", "only"}},
+	"ai-cast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "alliance", "only"}}
+)
+
 DefineSpell("spell-healing",
 	"showname", "Healing",
 	"manacost", 2,
@@ -90,7 +109,7 @@ DefineSpell("spell-inspire",
 	"range", 6,
 	"target", "unit",
 	"action", {
-		{"adjust-variable", {Inspire = 1000}},
+		{"adjust-variable", {Inspire = 1000, Wither = 0}},
 		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
 	},
 	"condition", {
@@ -153,6 +172,25 @@ DefineSpell("spell-terror",
 	},
 	"sound-when-cast", "magic-holy",
 	"depend-upgrade", "upgrade-terror",
+	"autocast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only"}},
+	"ai-cast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only"}}
+)
+
+DefineSpell("spell-wither",
+	"showname", "Wither",
+	"manacost", 50,
+	"range", 6,
+	"target", "unit",
+	"action", {
+		{"adjust-variable", {Wither = 1000, Blessing = 0, Inspire = 0}},
+		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
+	},
+	"condition", {
+		"organic", "only",
+		"Wither", {ExactValue = 0}
+	},
+	"sound-when-cast", "magic-holy",
+	"depend-upgrade", "upgrade-wither",
 	"autocast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only"}},
 	"ai-cast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only"}}
 )

@@ -74,6 +74,7 @@ if not (ui_loaded_first_time) then
 		DefineDecorations({Index = "CarryResource", HideNeutral = false, CenterX = true,OffsetPercent = {50, 100},Method = {"sprite", {"sprite-mana"}}})
 	end
 	DefineSprites({Name = "sprite-leadership", File = "ui/status_effects/leadership.png", Offset = {1, 1}, Size = {16, 16}})
+	DefineSprites({Name = "sprite-blessing", File = "ui/status_effects/blessing.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-inspire", File = "ui/status_effects/inspire.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-precision", File = "ui/status_effects/precision.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-slow", File = "ui/status_effects/slow.png", Offset = {1, 1}, Size = {16, 16}})
@@ -81,12 +82,15 @@ if not (ui_loaded_first_time) then
 	DefineSprites({Name = "sprite-bleeding", File = "ui/status_effects/bleeding.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-regeneration", File = "ui/status_effects/regeneration.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-terror", File = "ui/status_effects/terror.png", Offset = {1, 1}, Size = {16, 16}})
+	DefineSprites({Name = "sprite-wither", File = "ui/status_effects/wither.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-dehydration", File = "ui/status_effects/dehydration.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-level-up", File = "ui/status_effects/level_up.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-hero", File = "ui/icons/star.png", Offset = {1, 1}, Size = {14, 9}})
 
 	DefineDecorations({Index = "Leadership", ShowOpponent = true, ShowWhenMax = true,
 	  Offset = {0, 0}, Method = {"static-sprite", {"sprite-leadership", 0}}})
+	DefineDecorations({Index = "Blessing", ShowOpponent = true, ShowWhenMax = true,
+	  Offset = {0, 0}, Method = {"static-sprite", {"sprite-blessing", 0}}})
 	DefineDecorations({Index = "Inspire", ShowOpponent = true, ShowWhenMax = true,
 	  Offset = {0, 0}, Method = {"static-sprite", {"sprite-inspire", 0}}})
 	DefineDecorations({Index = "Precision", ShowOpponent = true, ShowWhenMax = true,
@@ -101,6 +105,8 @@ if not (ui_loaded_first_time) then
 	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-regeneration", 0}}})
 	DefineDecorations({Index = "Terror", ShowOpponent = true, ShowWhenMax = true,
 	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-terror", 0}}})
+	DefineDecorations({Index = "Wither", ShowOpponent = true, ShowWhenMax = true,
+	  Offset = {0, 0}, Method = {"static-sprite", {"sprite-wither", 0}}})
 	DefineDecorations({Index = "Dehydration", ShowOpponent = true, ShowWhenMax = true,
 	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-dehydration", 0}}})
 	DefineDecorations({Index = "LevelUp", ShowOpponent = false, HideAllied = true, HideNeutral = true, ShowWhenMax = true,

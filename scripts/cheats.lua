@@ -162,6 +162,11 @@ function HandleCheats(str)
 	elseif (string.sub(str, 0, 19) == "numunitsconstructed") then
 		local message_player = tonumber(string.sub(str, 21))
 		AddMessage("Player " .. message_player .. " has " .. Players[message_player].NumBuildingsUnderConstruction .. " under construction buildings.")
+	elseif (str == "piety") then
+		local priest_type = GetFactionClassUnitType("priest", GetPlayerData(GetThisPlayer(), "Faction"))
+		if (priest_type) then
+			unit = CreateUnit(priest_type, GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
+		end
 	elseif (str == "fire and blood") then
 		local gunpowder_infantry_type = GetFactionClassUnitType("gunpowder-infantry", GetPlayerData(GetThisPlayer(), "Faction"))
 		if (gunpowder_infantry_type) then
@@ -177,6 +182,8 @@ function HandleCheats(str)
 		if (transport_ship_type) then
 			unit = CreateUnit(transport_ship_type, GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
 		end
+	elseif (str == "jotun") then
+		unit = CreateUnit("unit-ettin", GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
 	else
 		return false
 	end

@@ -33,6 +33,12 @@ DefineUpgrade("upgrade-axe-mastery", {
 	MaxLimit = 5
 })
 
+DefineUpgrade("upgrade-blessing", {
+	Name = "Blessing",
+	Icon = "icon-blessing",
+	Ability = true
+})
+
 DefineUpgrade("upgrade-bow-mastery", {
 	Name = "Bow Mastery",
 	Icon = "icon-bow-mastery",
@@ -172,6 +178,12 @@ DefineUpgrade("upgrade-toughness", {
 	Icon = "icon-toughness",
 	Ability = true,
 	MaxLimit = 100
+})
+
+DefineUpgrade("upgrade-wither", {
+	Name = "Wither",
+	Icon = "icon-wither",
+	Ability = true
 })
 
 DefineModifier("upgrade-axe-mastery",

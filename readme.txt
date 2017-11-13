@@ -66,6 +66,8 @@ https://github.com/Andrettin/Wyrmsun
 - Renamed the "Choose Level-Up Upgrade" submenu to "Choose Upgrade", as the hero deity choices are now placed there.
 - Added support for abilities being acquired more than once. Weapon mastery abilities and Eagle Eye can now be acquired up to five times.
 - Added the Toughness ability, which increases HP by 10 and can be acquired up to 100 times.
+- Added the Blessing ability, which increases damage and evasion by 50% (icon by Jinn). The ability is available for human priests if the Christianity upgrade has been acquired.
+- Added the Wither ability, which decreases damage by 50% (icon by Jinn). The ability is available for dwarven, goblin and human priests if Hel has been chosen as a minor deity.
 
 * Achievements
 - Added achievements for completing the A Home in the Fields of Sand and Thunraz's Servant scenarios.
@@ -89,6 +91,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added a 256x256 Southern Baltic map for custom games (this is the same map used for the Haimadala's Progeny and Thunraz's Servant scenarios), replacing the 50x96 Jutland and the 128x128 Malmo maps.
 - Added a 256x256 Gardariki map, replacing the 128x128 Holmgard one.
 
+* Miscellaneous
+- Added new magic effect graphics (by Jinn).
+
 * Scenarios
 - After the "Slay Geirrod" quest is acquired, the area around the portal to Jotunheim is now revealed for a short time (with a special revealer that can see ethereal objects such as portals). Additionally, the map is also centered on the portal's location.
 - Added the "Temple to Haimadala" side-quest for the Haimadala's Progeny scenario. To complete it, a temple has to be built and Haimadala has to be chosen as a minor deity.
@@ -98,6 +103,7 @@ https://github.com/Andrettin/Wyrmsun
 * Upgrades
 - Added Iron Plow upgrade (+1 food supply for farms).
 - The Iron-Tipped Wood Plow now requires having a smithy.
+- The upgrade to convert to Christianity now costs more than it previously did, since it now allows a second spell as well.
 
 -----------------------------------------------------------------------
 - 2.9.1
