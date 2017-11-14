@@ -167,6 +167,11 @@ function HandleCheats(str)
 		if (priest_type) then
 			unit = CreateUnit(priest_type, GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
 		end
+	elseif (str == "artemis") then
+		local shooter_infantry_type = GetFactionClassUnitType("shooter", GetPlayerData(GetThisPlayer(), "Faction"))
+		if (shooter_infantry_type) then
+			unit = CreateUnit(shooter_infantry_type, GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
+		end
 	elseif (str == "fire and blood") then
 		local gunpowder_infantry_type = GetFactionClassUnitType("gunpowder-infantry", GetPlayerData(GetThisPlayer(), "Faction"))
 		if (gunpowder_infantry_type) then
