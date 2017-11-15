@@ -400,22 +400,17 @@ function StandardTriggers()
 					local uncount = 0
 					uncount = GetUnits(i)
 					for unit1 = 1,table.getn(uncount) do 
-
-						-- make AI guard towers be filled with defenders
+						-- make AI towers and strongholds be filled with defenders
 						if (
 							GetUnitVariable(uncount[unit1], "Built")
 							and (
 								(GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == "guard-tower" and GetUnitVariable(uncount[unit1], "Transport") < 2)
 								or (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == "watch-tower" and GetUnitVariable(uncount[unit1], "Transport") < 1)
+								or (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == "stronghold" and GetUnitVariable(uncount[unit1], "Transport") < 3)
 							)
+							and GetFactionClassUnitType("shooter", GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "Faction"))
 						) then
-							unit = CreateUnitInTransporter(GetCivilizationClassUnitType("shooter", GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Civilization")), i, uncount[unit1])
-							SetUnitVariable(unit, "Active", false) -- set garrisoned unit to passive AI (so that they are not counted for attack participation)
-						end
-						
-						-- make AI strongholds be filled with defenders
-						if (GetUnitVariable(uncount[unit1], "Built") and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == "stronghold" and GetUnitVariable(uncount[unit1], "Transport") < 3) then
-							unit = CreateUnitInTransporter(GetCivilizationClassUnitType("shooter", GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Civilization")), i, uncount[unit1])
+							unit = CreateUnitInTransporter(GetFactionClassUnitType("shooter", GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "Faction")), i, uncount[unit1])
 							SetUnitVariable(unit, "Active", false) -- set garrisoned unit to passive AI (so that they are not counted for attack participation)
 						end
 					end
