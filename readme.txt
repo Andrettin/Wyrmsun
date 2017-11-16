@@ -102,6 +102,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added the Westward Migration scenario, replacing the quest of the same name.
 - Added the The Settlement of Scandinavia scenario, replacing the Northwards to the Sea and Gylve's Realm quests.
 
+* Units
+- Workers now use their sack-carrying graphics for when they are carrying furniture.
+
 * Upgrades
 - Added Iron Plow upgrade (+1 food supply for farms).
 - The Iron-Tipped Wood Plow now requires having a smithy.

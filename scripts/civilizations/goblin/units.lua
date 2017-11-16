@@ -70,7 +70,7 @@ DefineUnitType("unit-goblin-worker", {
 		},
 		{
 			"resource-id", "furniture",
-			"file-when-loaded", "goblin/units/goblin_worker_with_lumber.png"
+			"file-when-loaded", "goblin/units/goblin_worker_with_gold.png"
 		},
 		{
 			"resource-id", "stone",
@@ -111,7 +111,7 @@ DefineUnitType("unit-goblin-worker", {
 			"file-when-loaded", "limestone", "goblin/units/goblin_worker_with_gold_spiky_hair.png",
 			"file-when-loaded", "coal", "goblin/units/goblin_worker_with_gold_spiky_hair.png",
 			"file-when-loaded", "lumber", "goblin/units/goblin_worker_with_lumber_spiky_hair.png",
-			"file-when-loaded", "furniture", "goblin/units/goblin_worker_with_lumber_spiky_hair.png",
+			"file-when-loaded", "furniture", "goblin/units/goblin_worker_with_gold_spiky_hair.png",
 			"file-when-loaded", "leather", "goblin/units/goblin_worker_with_gold_spiky_hair.png",
 			"file-when-loaded", "diamonds", "goblin/units/goblin_worker_with_gold_spiky_hair.png",
 			"file-when-loaded", "emeralds", "goblin/units/goblin_worker_with_gold_spiky_hair.png"

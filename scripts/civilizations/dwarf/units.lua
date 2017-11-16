@@ -86,7 +86,7 @@ DefineUnitType("unit-dwarven-miner", {
 		},
 		{
 			"resource-id", "furniture",
-			"file-when-loaded", "dwarf/units/miner_with_lumber.png"
+			"file-when-loaded", "dwarf/units/miner_with_gold.png"
 		},
 		{
 			"resource-id", "leather",
@@ -158,7 +158,7 @@ DefineUnitType("unit-dwarven-skilled-miner", {
 		},
 		{
 			"resource-id", "furniture",
-			"file-when-loaded", "dwarf/units/miner_with_lumber.png"
+			"file-when-loaded", "dwarf/units/miner_with_gold.png"
 		},
 		{
 			"resource-id", "leather",
@@ -230,7 +230,7 @@ DefineUnitType("unit-dwarven-expert-miner", {
 		},
 		{
 			"resource-id", "furniture",
-			"file-when-loaded", "dwarf/units/miner_with_lumber.png"
+			"file-when-loaded", "dwarf/units/miner_with_gold.png"
 		},
 		{
 			"resource-id", "leather",
