@@ -57,7 +57,7 @@ DefineSpell("spell-far-sight",
 	"range", "infinite",
 	"target", "position",
 	"action", {
-		{"summon", "unit-type", "unit-revealer", "time-to-live", 50},
+		{"summon", "unit-type", "unit-ethereal-revealer", "time-to-live", 50},
 		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
 	},
 	"sound-when-cast", "magic-holy",

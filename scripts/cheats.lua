@@ -172,7 +172,7 @@ function HandleCheats(str)
 		if (shooter_infantry_type) then
 			unit = CreateUnit(shooter_infantry_type, GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
 		end
-	elseif (str == "fire and blood") then
+	elseif (str == "fire and steel") then
 		local gunpowder_infantry_type = GetFactionClassUnitType("gunpowder-infantry", GetPlayerData(GetThisPlayer(), "Faction"))
 		if (gunpowder_infantry_type) then
 			unit = CreateUnit(gunpowder_infantry_type, GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
