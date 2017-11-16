@@ -7,6 +7,7 @@ dlcs/
 mods/
 wyr/
 crash.dmp
+launcher.exe
 oaml.log
 screen*.png
 SDL.dll
