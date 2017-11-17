@@ -104,6 +104,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Workers now use their sack-carrying graphics for when they are carrying furniture.
+- Goblin archers now have a bonus against air units, like human archers do.
 
 * Upgrades
 - Added Iron Plow upgrade (+1 food supply for farms).
