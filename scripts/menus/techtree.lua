@@ -278,7 +278,7 @@ function RunTechTreeMenu(civilization_number)
 						tech_allowed = false
 					end
 				elseif (GetUpgradeData(unitName, "Class") == "architecture") then
-					tech_icon_x = 9
+					tech_icon_x = 11
 					tech_icon_y = 5
 					if (GetCivilizationClassUnitType("university", civilization) == nil) then
 						tech_allowed = false
@@ -291,7 +291,7 @@ function RunTechTreeMenu(civilization_number)
 					end
 				elseif (GetUpgradeData(unitName, "Class") == "philosophy") then
 					tech_icon_x = 9
-					tech_icon_y = 6
+					tech_icon_y = 5
 					if (GetCivilizationClassUnitType("university", civilization) == nil) then
 						tech_allowed = false
 					end
