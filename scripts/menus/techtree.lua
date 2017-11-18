@@ -90,10 +90,15 @@ function RunTechTreeMenu(civilization_number)
 				tech_menu:setSize(352, 352)
 				tech_menu:setPosition((Video.Width - tech_menu:getWidth()) / 2, (Video.Height - tech_menu:getHeight()) / 2)
 				tech_menu:addLabel(unit_name, 176, 11)
-				local tech_menu_image = PlayerColorImageWidget(techicon, playercolor)
-				tech_menu_image:setImageOrigin(techicon_x_origin, techicon_y_origin)
-				tech_menu_image:setHairColor(hair_color)
+				local tech_menu_image = PlayerColorImageButton("", playercolor)
 				tech_menu:add(tech_menu_image, 153, 48)
+				tech_menu_image:setNormalImage(techicon)
+				tech_menu_image:setPressedImage(techicon)
+				tech_menu_image:setDisabledImage(techicon)
+				tech_menu_image:setSize(techicon:getWidth(), techicon:getHeight())
+				tech_menu_image:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
+				tech_menu_image:setFrameImage(Preference.IconFrameG)
+				tech_menu_image:setPressedFrameImage(Preference.PressedIconFrameG)
 
 				local l = MultiLineLabel()
 				l:setFont(Fonts["game"])
@@ -143,6 +148,9 @@ function RunTechTreeMenu(civilization_number)
 				elseif (GetUnitTypeData(unitName, "Class") == "shooter") then
 					tech_icon_x = 7
 					tech_icon_y = 3
+				elseif (GetUnitTypeData(unitName, "Class") == "gunpowder-infantry") then
+					tech_icon_x = 10
+					tech_icon_y = 8
 				elseif (GetUnitTypeData(unitName, "Class") == "cavalry") then
 					tech_icon_x = 0
 					tech_icon_y = 4
@@ -276,7 +284,7 @@ function RunTechTreeMenu(civilization_number)
 						tech_allowed = false
 					end
 				elseif (GetUpgradeData(unitName, "Class") == "engineering") then
-					tech_icon_x = 10
+					tech_icon_x = 11
 					tech_icon_y = 6
 					if (GetCivilizationClassUnitType("university", civilization) == nil) then
 						tech_allowed = false
@@ -289,13 +297,16 @@ function RunTechTreeMenu(civilization_number)
 					end
 				elseif (GetUpgradeData(unitName, "Class") == "alchemy") then
 					tech_icon_x = 10
-					tech_icon_y = 7
+					tech_icon_y = 6
 					if (GetCivilizationClassUnitType("university", civilization) == nil) then
 						tech_allowed = false
 					end
 				elseif (GetUpgradeData(unitName, "Class") == "gunpowder") then
 					tech_icon_x = 10
-					tech_icon_y = 8
+					tech_icon_y = 7
+					if (GetCivilizationClassUnitType("university", civilization) == nil or GetCivilizationClassUnitType("alchemy", civilization) == nil) then
+						tech_allowed = false
+					end
 				else
 					tech_allowed = false
 				end

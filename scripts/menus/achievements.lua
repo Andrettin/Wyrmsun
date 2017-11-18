@@ -77,8 +77,16 @@ function addAchievementIcon(achievement, menu, x, y)
 			achievement_menu:setSize(288, 256)
     		achievement_menu:setPosition((Video.Width - achievement_menu:getWidth()) / 2, (Video.Height - achievement_menu:getHeight()) / 2)
 			achievement_menu:addLabel(GetAchievementData(achievement, "Name"), 144, 11)
-			local achievement_menu_image = PlayerColorImageWidget(achievement_icon, GetAchievementData(achievement, "PlayerColor"))
+			
+			local achievement_menu_image = PlayerColorImageButton("", GetAchievementData(achievement, "PlayerColor"))
 			achievement_menu:add(achievement_menu_image, 121, 48)
+			achievement_menu_image:setNormalImage(achievement_icon)
+			achievement_menu_image:setPressedImage(achievement_icon)
+			achievement_menu_image:setDisabledImage(achievement_icon)
+			achievement_menu_image:setSize(achievement_icon:getWidth(), achievement_icon:getHeight())
+			achievement_menu_image:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
+			achievement_menu_image:setFrameImage(Preference.IconFrameG)
+			achievement_menu_image:setPressedFrameImage(Preference.PressedIconFrameG)
 
 			local l = MultiLineLabel()
 			l:setFont(Fonts["game"])

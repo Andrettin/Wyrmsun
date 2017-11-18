@@ -102,12 +102,14 @@ function RunCampaignMenu()
 	table.sort(campaign_ident_list, compare_campaign)
 
 	for i=1,table.getn(campaign_ident_list) do
-		table.insert(campaign_list, GetCampaignData(campaign_ident_list[i], "Name"))
+		local campaign_name = GetCampaignData(campaign_ident_list[i], "Name")
+		if not (GetQuestData(campaign_ident_list[i], "Completed")) then
+			campaign_name = campaign_name .. " ~<(!)~>"
+		end
+		table.insert(campaign_list, campaign_name)
 	end
-	campaign_dd = menu:addDropDown(campaign_list, (Video.Width / 2) - (240 / 2), offy + 104 + 36*0,
-		function(dd)
-			SetCurrentCampaign(campaign_ident_list[campaign_dd:getSelected() + 1])
-			
+	
+	local function UpdateCampaignDescription()
 			highest_completed_difficulty = "Highest Completed Difficulty: "
 			if (GetQuestData(campaign_ident_list[campaign_dd:getSelected() + 1], "HighestCompletedDifficulty") == 1) then
 				highest_completed_difficulty = highest_completed_difficulty .. "Easy"
@@ -123,6 +125,13 @@ function RunCampaignMenu()
 			
 			campaign_description:setCaption("Description: " .. GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Description") .. "\n\n" .. highest_completed_difficulty)
 			campaign_description:adjustSize()
+	end
+	
+	
+	campaign_dd = menu:addDropDown(campaign_list, (Video.Width / 2) - (240 / 2), offy + 104 + 36*0,
+		function(dd)
+			SetCurrentCampaign(campaign_ident_list[campaign_dd:getSelected() + 1])
+			UpdateCampaignDescription()
 		end
 	)
 	campaign_dd:setSize(240, 20)
@@ -133,20 +142,9 @@ function RunCampaignMenu()
 		SetCurrentCampaign(campaign_ident_list[1])
 	end
 	
-	highest_completed_difficulty = "Highest Completed Difficulty: "
-	if (GetQuestData(campaign_ident_list[campaign_dd:getSelected() + 1], "HighestCompletedDifficulty") == 1) then
-		highest_completed_difficulty = highest_completed_difficulty .. "Easy"
-	elseif (GetQuestData(campaign_ident_list[campaign_dd:getSelected() + 1], "HighestCompletedDifficulty") == 2) then
-		highest_completed_difficulty = highest_completed_difficulty .. "Normal"
-	elseif (GetQuestData(campaign_ident_list[campaign_dd:getSelected() + 1], "HighestCompletedDifficulty") == 3) then
-		highest_completed_difficulty = highest_completed_difficulty .. "Hard"
-	elseif (GetQuestData(campaign_ident_list[campaign_dd:getSelected() + 1], "HighestCompletedDifficulty") == 4) then
-		highest_completed_difficulty = highest_completed_difficulty .. "Brutal"
-	else
-		highest_completed_difficulty = highest_completed_difficulty .. "None"
-	end
-		
-	campaign_description = menu:addMultiLineLabel("Description: " .. GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Description") .. "\n\n" .. highest_completed_difficulty, ((Video.Width - 640) / 2) + 32, offy + 104 + 36*2, Fonts["game"], false, Video.Width - (Video.Width - 640) - 64)
+	campaign_description = menu:addMultiLineLabel("", ((Video.Width - 640) / 2) + 32, offy + 104 + 36*2, Fonts["game"], false, Video.Width - (Video.Width - 640) - 64)
+	
+	UpdateCampaignDescription()
 
 	menu:addFullButton(_("~!Start Scenario"), "s", offx + 208, offy + 212 + (36 * 4),
 		function()

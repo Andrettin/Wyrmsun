@@ -101,6 +101,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added the "Temple to Haimadala" side-quest for the Haimadala's Progeny scenario. To complete it, a temple has to be built and Haimadala has to be chosen as a minor deity.
 - Added the Westward Migration scenario, replacing the quest of the same name.
 - Added the The Settlement of Scandinavia scenario, replacing the Northwards to the Sea and Gylve's Realm quests.
+- Scenarios that have not been completed yet will now be marked with a highlighted "(!)" in the scenario selection drop-down.
 
 * Units
 - Workers now use their sack-carrying graphics for when they are carrying furniture.
