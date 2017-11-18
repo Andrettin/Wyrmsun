@@ -171,6 +171,16 @@ DefineCampaign("the-first-marcomannic-war", {
 --]]
 
 --[[
+DefineCampaign("the-founding-of-francia", {
+	Name = "The Founding of Francia",
+	Description = "The Frankish chieftain Chlodwig has come to power with the burning ambition to expand his lands. Bordering hardened Roman remnants and warlike tribes, the path he seeks will have to be paved in blood...",
+	Faction = "frank-tribe",
+	StartYear = 481,
+	MapTemplate = "earth",
+	MapTemplateStartPos = {3780, 852},
+	MapSize = {256, 256}
+})
+
 DefineCampaign("volunds-flight", { -- initial scenario for the Winter War storyline, could be changed later into a longer scenario containing the storyline in its entirety
 	Name = "Volund's Flight",
 	Description = "Imprisoned and humiliated, the elven prince Volund must seek to escape from his captors...",

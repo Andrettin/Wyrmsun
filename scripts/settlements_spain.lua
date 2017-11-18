@@ -28,18 +28,21 @@
 DefineSettlement("barcelona", {
 	Name = "Barcelona",
 	MapTemplate = "earth",
-	Position = {3889, 1106},
+	Position = {3887, 1104},
+	Major = true,
 	CulturalNames = {
 		"castillian", "Barcelona"
 	},
 	HistoricalOwners = {
+		395, "rome", -- Barcelona was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		481, "visigothia", -- Barcelona was a Visigothic possession in the 481-801 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		486, "visigothia", -- Barcelona was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		1560, "spain" -- Barcelona was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		486, 1430, "farm",
-		1430, 1717, "university", -- University founded in Barcelona in 1430; Source: "The Cambridge Modern History Atlas", 1912, p. 9; Source: "Atlas de História Mundial", 2001, p. 144. University abolished in Barcelona in 1717; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
-		1717, 0, "farm"
+		395, 0, "town-hall",
+		395, 0, "temple", -- Barcelona was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		1430, 1717, "university" -- University founded in Barcelona in 1430; Source: "The Cambridge Modern History Atlas", 1912, p. 9; Source: "Atlas de História Mundial", 2001, p. 144. University abolished in Barcelona in 1717; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 	},
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
@@ -293,7 +296,7 @@ DefineSettlement("seville", {
 DefineSettlement("tarragona", {
 	Name = "Tarragona",
 	MapTemplate = "earth",
-	Position = {3881, 1109},
+	Position = {3881, 1108},
 	CulturalNames = {
 		"castillian", "Tarragona",
 		"latin", "Tarraco"
@@ -304,7 +307,8 @@ DefineSettlement("tarragona", {
 		1560, "spain" -- Tarragona was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		-201, 0, "farm"
+		-201, 395, "farm",
+		395, 0, "temple" -- Tarragona was the seat of an archbishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })

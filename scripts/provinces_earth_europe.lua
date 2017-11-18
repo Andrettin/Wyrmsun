@@ -1022,7 +1022,6 @@ DefineProvince("Dauphiny", {
 		534, "frankish", "francia"
 	},
 	HistoricalSettlementBuildings = {
-		768, "unit-teuton-temple", true, -- Archbishopric existent in Vienne during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		768, "unit-teuton-temple", true -- Archbishopric existent in Embrun during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
@@ -2803,7 +2802,6 @@ DefineProvince("Normandy", {
 	},
 	HistoricalSettlementBuildings = {
 		768, "unit-teuton-temple", true, -- Monastery or abbey existent in St. Wandrille during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-		768, "unit-teuton-temple", true -- Archbishopric existent in Rouen during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
 		1437, "upgrade-university", true, -- University founded in Caen in 1437; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
@@ -3837,9 +3835,6 @@ DefineProvince("Touraine", {
 	},
 	HistoricalClaims = {
 		-50, "latin", "rome"
-	},
-	HistoricalSettlementBuildings = {
-		768, "unit-teuton-temple", true -- Archbishopric existent in Tours during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
 		1789, "upgrade-courthouse", true -- Chief court of the salt tax existent in Tours in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.

@@ -1011,8 +1011,8 @@ DefineSettlement("reculver", {
 		1560, "england" -- Reculver's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		410, 669, "farm",
 		-- the area is too small to accomodate the settlement's buildings, given the other more important settlements nearby
+--		410, 669, "farm",
 --		669, 0, "temple" -- a church was founded in Reculver in 669 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 111.
 	},
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}

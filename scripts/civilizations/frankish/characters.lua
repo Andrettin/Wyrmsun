@@ -71,7 +71,7 @@ DefineCharacter("merovech", { -- Source: "Medieval Warfare V.2", 2013, p. 6.
 })
 
 DefineCharacter("chlodwig", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 97, 99; Source: "Medieval Warfare V.2", 2013, p. 6; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328.
-	Name = "Chlodwig", -- Frankish king; married Clothilda (daughter of the Burgundian king Chilperic); he converted to Christianity; his reign began in 481 and he died in 511; also known as "Chlodovech", "Chlodoveus" or "Clovis"
+	Name = "Chlodwig", -- Frankish king; married Clothilda (daughter of the Burgundian king Chilperic); he converted to Christianity; also known as "Chlodovech", "Chlodoveus" or "Clovis"
 --	FamilyName = "Merovingian",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- king
@@ -79,6 +79,8 @@ DefineCharacter("chlodwig", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	Faction = "francia",
 	Description = "Chlodwig was the founder of the Frankish kingdom.",
 	Father = "merovech",
+	Date = 481, -- his reign began in 481
+	DeathDate = 511, -- died in 511
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "frank-tribe" or GetPlayerData(trigger_player, "Faction") == "francia") then
 			return true
