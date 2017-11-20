@@ -30,7 +30,7 @@
 AddTrigger("on-the-vanaquisl-introduction",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "Faction") == "asa-tribe" and GetFactionExists("vana-tribe")) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "Faction") == "asa-tribe" and GetFactionExists("vana-tribe", true)) then
 				trigger_player = i
 				return true
 			end
@@ -82,7 +82,7 @@ AddTrigger("on-the-vanaquisl-vana-sighted",
 AddTrigger("westward-migration-introduction",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "Faction") == "asa-tribe" and GetFactionExists("uralic-tribe")) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "Faction") == "asa-tribe" and GetFactionExists("uralic-tribe", true)) then
 				trigger_player = i
 				return true
 			end
@@ -190,8 +190,8 @@ AddTrigger("the-settlement-of-scandinavia-introduction",
 			if (
 				GetPlayerData(i, "TotalNumUnitsConstructed") > 0
 				and GetPlayerData(i, "Faction") == "asa-tribe"
-				and GetFactionExists("ertebolle-tribe")
-				and GetFactionExists("gylfing-tribe")
+				and GetFactionExists("ertebolle-tribe", true)
+				and GetFactionExists("gylfing-tribe", true)
 				and GetNumUnitsAt(i, "any", {4068 - EarthStartX - 16, 811 - EarthStartY - 16}, {4068 - EarthStartX + 16, 811 - EarthStartY + 16}, GetMapLayer("material-plane", "earth", 0)) > 0 -- must have units near Kiel
 			) then
 				trigger_player = i
@@ -233,7 +233,7 @@ AddTrigger("northwards-to-the-sea-natives-sighted",
 AddTrigger("northwards-to-the-sea-victory",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "the-settlement-of-scandinavia") and GetFactionExists("ertebolle-tribe") == false and GetFactionExists("gylfing-tribe")) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "the-settlement-of-scandinavia") and GetFactionExists("ertebolle-tribe", true) == false and GetFactionExists("gylfing-tribe", true)) then
 				trigger_player = i
 				return true
 			end

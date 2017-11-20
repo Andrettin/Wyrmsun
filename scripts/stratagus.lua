@@ -1175,9 +1175,9 @@ function GetCivilizationExists(civilization)
 	return false
 end
 
-function GetFactionExists(faction)
+function GetFactionExists(faction, only_living)
 	for i=0,(PlayerMax - 2) do
-		if (Players[i].Type ~= PlayerNobody and (GetPlayerData(i, "Name") == faction or GetPlayerData(i, "Faction") == faction) and GetPlayerData(i, "TotalNumUnitsConstructed") > 0) then
+		if (Players[i].Type ~= PlayerNobody and (GetPlayerData(i, "Name") == faction or GetPlayerData(i, "Faction") == faction) and (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 or not only_living)) then
 			return true
 		end
 	end

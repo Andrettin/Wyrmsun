@@ -454,7 +454,7 @@ DefineQuest("andvaris-gold", {
 	PlayerColor = "yellow",
 	Conditions = function(s)
 		if (
-			GetFactionExists("oinling-clan") -- Andvari's clan must exist
+			GetFactionExists("oinling-clan", true) -- Andvari's clan must exist
 			and GetNumUnitsAt(trigger_player, "any", {490 - 256 - NidavellirStartX, 107 - 256 - NidavellirStartY}, {490 + 256 - NidavellirStartX, 107 + 256 - NidavellirStartY}, GetMapLayer("material-plane", "nidavellir", 0)) > 0 -- the player must be within a certain distance of Andvari's holding
 		) then
 			return true
