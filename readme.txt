@@ -96,6 +96,7 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - Added new magic effect graphics (by Jinn).
 - Added Steam achievements for the game's Steam version. In order for the Steam achievements to work, the game is now started through a launcher on Steam.
+- Fixed mouse-jumping issue which happened in some systems while in fullscreen.
 
 * Scenarios
 - After the "Slay Geirrod" quest is acquired, the area around the portal to Jotunheim is now revealed for a short time (with a special revealer that can see ethereal objects such as portals). Additionally, the map is also centered on the portal's location.
