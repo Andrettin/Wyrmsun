@@ -224,7 +224,7 @@ DefineQuest("the-burner", { -- based on the lay of Alvis from Norse mythology; S
 	Civilization = "dwarf",
 	PlayerColor = "red",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "RaceName") == "dwarf" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-stronghold") > 0 and GetPlayerData(trigger_player, "Allow", "upgrade-dwarven-alchemy") == "A" and CheckDependency(trigger_player, "upgrade-dwarven-alchemy")) then -- should be made to require Alvis in the future, when he is added as a hero and there are more dwarven quests in general
+		if (GetPlayerData(trigger_player, "RaceName") == "dwarf" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-academy") > 0 and GetPlayerData(trigger_player, "Allow", "upgrade-dwarven-alchemy") == "A" and CheckDependency(trigger_player, "upgrade-dwarven-alchemy")) then -- should be made to require Alvis in the future, when he is added as a hero and there are more dwarven quests in general
 			return true
 		end
 		return false

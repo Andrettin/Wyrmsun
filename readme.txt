@@ -104,6 +104,8 @@ https://github.com/Andrettin/Wyrmsun
 - Added the Westward Migration scenario, replacing the quest of the same name.
 - Added the The Settlement of Scandinavia scenario, replacing the Northwards to the Sea and Gylve's Realm quests.
 - Scenarios that have not been completed yet will now be marked with a highlighted "(!)" in the scenario selection drop-down.
+- Scenarios now display the faction the player uses in them in their description.
+- Scenarios are now sorted by faction species (so that the dwarven scenarios are grouped together, as are human scenarios).
 
 * Units
 - Workers now use their sack-carrying graphics for when they are carrying furniture.

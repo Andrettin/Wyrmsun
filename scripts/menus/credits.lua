@@ -38,6 +38,7 @@ function RunShowCreditsMenu()
 		_("Programming and Scripting"),
 		"  Andrettin",
 		"  cybermind",
+		"  Franco514",
 		"  Francois Beerten",
 		"  Jimmy Salmon",
 		"  Joris Dauphin",

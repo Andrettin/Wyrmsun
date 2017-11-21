@@ -34,6 +34,7 @@ function RunCampaignMenu()
 
 	local campaign_description
 	local highest_completed_difficulty
+	local faction_name
 	local no_randomness
 	local no_time_of_day
 	local menu = WarMenu()
@@ -92,7 +93,9 @@ function RunCampaignMenu()
 	end
 	
 	local function compare_campaign(a, b)
-		if (GetCampaignData(a, "StartYear") ~= GetCampaignData(b, "StartYear")) then
+		if (GetCivilizationData(GetFactionData(GetCampaignData(a, "Faction"), "Civilization"), "Species") ~= GetCivilizationData(GetFactionData(GetCampaignData(b, "Faction"), "Civilization"), "Species")) then
+			return GetCivilizationData(GetFactionData(GetCampaignData(a, "Faction"), "Civilization"), "Species") < GetCivilizationData(GetFactionData(GetCampaignData(b, "Faction"), "Civilization"), "Species")
+		elseif (GetCampaignData(a, "StartYear") ~= GetCampaignData(b, "StartYear")) then
 			return GetCampaignData(a, "StartYear") < GetCampaignData(b, "StartYear")
 		else
 			return a < b
@@ -110,6 +113,8 @@ function RunCampaignMenu()
 	end
 	
 	local function UpdateCampaignDescription()
+			faction_name = "Faction: " .. GetFactionData(GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Faction"), "Name") .. " (" .. GetCivilizationData(GetFactionData(GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Faction"), "Civilization"), "Display") .. ")"
+	
 			highest_completed_difficulty = "Highest Completed Difficulty: "
 			if (GetQuestData(campaign_ident_list[campaign_dd:getSelected() + 1], "HighestCompletedDifficulty") == 1) then
 				highest_completed_difficulty = highest_completed_difficulty .. "Easy"
@@ -123,7 +128,7 @@ function RunCampaignMenu()
 				highest_completed_difficulty = highest_completed_difficulty .. "None"
 			end
 			
-			campaign_description:setCaption("Description: " .. GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Description") .. "\n\n" .. highest_completed_difficulty)
+			campaign_description:setCaption(faction_name .. "\n\n" .. "Description: " .. GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Description") .. "\n\n" .. highest_completed_difficulty)
 			campaign_description:adjustSize()
 	end
 	
@@ -142,7 +147,7 @@ function RunCampaignMenu()
 		SetCurrentCampaign(campaign_ident_list[1])
 	end
 	
-	campaign_description = menu:addMultiLineLabel("", ((Video.Width - 640) / 2) + 32, offy + 104 + 36*2, Fonts["game"], false, Video.Width - (Video.Width - 640) - 64)
+	campaign_description = menu:addMultiLineLabel("", ((Video.Width - 640) / 2) + 32, offy + 104 + 36*1.5, Fonts["game"], false, Video.Width - (Video.Width - 640) - 64)
 	
 	UpdateCampaignDescription()
 
