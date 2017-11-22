@@ -44,6 +44,24 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-dwarven-runesmith",
+	Size = {46, 38},
+	File = "dwarf/icons/runesmith.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-runemaster",
+	Size = {46, 38},
+	File = "dwarf/icons/runemaster.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-arcanister",
+	Size = {46, 38},
+	File = "dwarf/icons/arcanister.png"
+})
+
+DefineIcon({
 	Name = "icon-dwarven-militia",
 	Size = {46, 38},
 	File = "dwarf/icons/militia.png"
