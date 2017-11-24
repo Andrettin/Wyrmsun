@@ -811,7 +811,7 @@ DefineUnitType("unit-teuton-ritter", {
 		{"shield", "unit-wooden-shield"},
 		{"boots", "unit-boots"}
 	},
-	Armor = 3, BasicDamage = 13, -- +1 armor, +1 damage
+	Armor = 3, BasicDamage = 11, -- +1 armor, +1 damage
 	Points = 85, -- +10 points
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
@@ -853,7 +853,7 @@ DefineUnitType("unit-teuton-knight-lord", {
 		{"shield", "unit-wooden-shield"},
 		{"boots", "unit-boots"}
 	},
-	Armor = 3, BasicDamage = 15, -- +1 armor, +1 damage
+	Armor = 3, BasicDamage = 13, -- +1 armor, +1 damage
 	Points = 110, -- +10 points
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
