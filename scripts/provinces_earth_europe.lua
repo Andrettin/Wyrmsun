@@ -1021,14 +1021,6 @@ DefineProvince("Dauphiny", {
 		-121, "latin", "rome",
 		534, "frankish", "francia"
 	},
-	HistoricalSettlementBuildings = {
-		768, "unit-teuton-temple", true -- Archbishopric existent in Embrun during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-	},
-	HistoricalModifiers = {
-		1339, "upgrade-university", true, -- University founded in Grenoble in 1339; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		1789, "upgrade-courthouse", true, -- Chief court of the salt tax existent in Valence in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
-		1789, "upgrade-courthouse", true -- Parlement or conseil souverain, prévôt des maréchaux and chief court of the salt tax existent in Grenoble in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
-	},
 	Regions = {"europe", "france", "gaul", "northwest-europe", "west-and-central-europe"}
 })
 

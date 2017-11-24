@@ -294,6 +294,23 @@ DefineSettlement("dijon", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
+DefineSettlement("embrun", {
+	Name = "Embrun",
+	MapTemplate = "earth",
+	Position = {3985, 1033},
+	CulturalNames = {
+		"french", "Embrun"
+	},
+	HistoricalOwners = {
+		486, "burgundy", -- Embrun's area was a part of the Kingdom of the Burgundians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		561, "burgundia" -- Embrun's area went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		768, 0, "temple" -- Archbishopric existent in Embrun during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
 DefineSettlement("ferrieres", {
 	Name = "Ferrieres",
 	MapTemplate = "earth",
@@ -306,6 +323,24 @@ DefineSettlement("ferrieres", {
 	},
 	HistoricalBuildings = {
 		782, 0, "temple" -- Alcuin moved from England to the court of Charlemagne in 782, and received the abbey of Ferrières; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 188-189.
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
+DefineSettlement("grenoble", {
+	Name = "Grenoble",
+	MapTemplate = "earth",
+	Position = {3969, 1018},
+	CulturalNames = {
+		"french", "Grenoble"
+	},
+	HistoricalOwners = {
+		486, "burgundy", -- Grenoble's area was a part of the Kingdom of the Burgundians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		561, "burgundia" -- Grenoble's area went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		1339, 0, "university" -- University founded in Grenoble in 1339; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		-- Parlement or conseil souverain, prévôt des maréchaux and chief court of the salt tax existent in Grenoble in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -893,6 +928,7 @@ DefineSettlement("valence", {
 	HistoricalBuildings = {
 		561, 1459, "farm",
 		1459, 0, "university" -- University founded in Valence in 1459; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		-- Chief court of the salt tax existent in Valence in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })

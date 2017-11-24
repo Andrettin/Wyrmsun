@@ -162,7 +162,8 @@ DefineFaction("rome", {
 	HistoricalUpgrades = {
 		0, "upgrade-teuton-writing", true, -- polities must have writing
 		-264, "upgrade-teuton-masonry", true, -- Rome should already have masonry technology by then
-		-58, "upgrade-teuton-coinage", true -- Silver currency existent in the Roman Republic during Caesar's time, and he issued gold currency during his campaigns in Gaul; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 190.
+		-58, "upgrade-teuton-coinage", true, -- Silver currency existent in the Roman Republic during Caesar's time, and he issued gold currency during his campaigns in Gaul; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 190.
+		395, "upgrade-deity-christian-god", true -- Christianity was already widespread in the Roman Empire around 395 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
 	HistoricalDiplomacyStates = {
 		-54, "eburones-tribe", "war", -- the Eburones attacked the Romans in 54 BC (instigated by the Treviri, of whom they were clients); Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223-224.
