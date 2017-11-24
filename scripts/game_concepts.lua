@@ -36,7 +36,11 @@ GameConcepts = {
 	},
 	Backstab = {
 		Name = _("~!Backstab"),
-		Description = _("Thief units cause extra damage when attacking an organic unit from the back. Thieves attacking from the right or left rear sides will cause +50% damage, and +100% damage if attacking directly from behind.")
+		Description = _("Thief units deal extra damage when attacking an organic unit from the back. Thieves attacking from the right or left rear sides will cause +50% damage, and +100% damage if attacking directly from behind.")
+	},
+	ChargeBonus = {
+		Name = _("Charge Bonus"),
+		Description = _("Cavalry units deal extra damage depending on how many tiles they traversed before the attack. A unit that has a charge bonus of 5% will deal 5% extra damage for each tile passed through. The tile count is capped at 10.")
 	},
 	DisembarkmentBonus = {
 		Name = _("Disembarkment Bonus"),

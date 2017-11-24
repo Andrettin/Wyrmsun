@@ -120,6 +120,7 @@ local tips = {
 	"It is not safe to get close to a goblin war machine.",
 	"Spearmen deal extra damage to mounted units.",
 	"Organic ranged units can shoot from within towers, strongholds and transport ships, with extra range.",
+	"Cavalry units have a charge bonus, dealing extra damage depending on the number of tiles traversed before attacking.",
 
 	-- Building-related tips
 	"Temples regenerate the health of nearby organic units.",
@@ -133,7 +134,6 @@ local tips = {
 	"Your organic units can level up.",
 	"When a unit levels up, an exclamation point appears over it, and it can upgrade to a new unit type or learn new abilities.",
 	"Persistent heroes will carry over their experience level, items and abilities across scenarios and even game modes.",
-	"If a unit has exhausted its available level up upgrades, it will instead earn +15 Hit Points upon leveling up.",
 	
 	-- Resource-related tips
 	"Cave walls can be harvested for stone.",

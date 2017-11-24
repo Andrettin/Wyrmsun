@@ -57,6 +57,14 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 3.0.1
+-----------------------------------------------------------------------
+
+* Units
+- Cavalry units now have a 5% charge bonus to damage. This means that the damage they deal is increased by 5% for each step the unit took before attacking (the step count is capped at 10).
+- Gothic cavalry units now have a charge bonus of 7% instead of having extra damage.
+
+-----------------------------------------------------------------------
 - 3.0.0
 -----------------------------------------------------------------------
 

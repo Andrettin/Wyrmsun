@@ -3593,6 +3593,7 @@ DefineUnitType("unit-template-cavalry", {
 	MaxAttackRange = 1,
 	Accuracy = 10,
 	Evasion = 9,
+	ChargeBonus = 5,
 	Priority = 63,
 	Points = 75,
 	Demand = 2,

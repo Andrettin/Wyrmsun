@@ -1628,6 +1628,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {Evasion = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Evasion:"), " "), Variable = "Evasion", Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {ChargeBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Charge Bonus: "), Variable = "ChargeBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {Backstab = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Backstab Bonus: "), Variable = "Backstab", Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -1882,6 +1885,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {ThornsDamage = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Thorns Damage: "), Variable = "ThornsDamage", Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {ChargeBonus = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Charge Bonus: "), String(TypeVar("ChargeBonus","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {Backstab = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Backstab Bonus: "), String(TypeVar("Backstab","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -2086,6 +2092,19 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {ThornsDamage = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Thorns Damage: "), Variable = "ThornsDamage", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {ChargeBonus = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(
+							Concat(
+								Concat(
+									_("Charge Bonus: "),
+									If(GreaterThan(UnitVar("ChargeBonus", "Change"), 0), "+", "")
+								),
+								String(UnitVar("ChargeBonus", "Change"))
+							),
+							"%"
+						),
+						Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {Backstab = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
