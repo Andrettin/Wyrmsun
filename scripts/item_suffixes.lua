@@ -198,6 +198,13 @@ DefineUpgrade("upgrade-item-suffix-of-slowness", { -- example: Ring of Slowness 
 	MagicLevel = 2
 })
 
+DefineUpgrade("upgrade-item-suffix-of-smithing", {
+	Name = "of Smithing",
+	MagicSuffix = true,
+	ItemSuffix = {"mace", "amulet", "ring"},
+	MagicLevel = 1
+})
+
 DefineUpgrade("upgrade-item-suffix-of-the-snail", {
 	Name = "of the Snail",
 	MagicSuffix = true,
@@ -381,6 +388,10 @@ DefineModifier("upgrade-item-suffix-of-slowness",
 	{"Speed", -1}
 )
 
+DefineModifier("upgrade-item-suffix-of-smithing",
+	{"JewelryGatheringBonus", 1}
+)
+
 DefineModifier("upgrade-item-suffix-of-the-snail",
 	{"Speed", -1}
 )
@@ -521,6 +532,10 @@ DefineDependency("upgrade-item-suffix-of-slaughter",
 
 DefineDependency("upgrade-item-suffix-of-slowness",
 	{"upgrade-deity-domain-earth"}, "or", {"upgrade-deity-domain-sloth"}
+)
+
+DefineDependency("upgrade-item-suffix-of-smithing",
+	{"upgrade-deity-domain-metal"}, "or", {"upgrade-deity-domain-metalworking"}
 )
 
 DefineDependency("upgrade-item-suffix-of-the-snail",

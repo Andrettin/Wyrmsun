@@ -269,6 +269,18 @@ function DefineUnitType(unit_type, data)
 	elseif (smithy) then
 		data.BuildingRules = {
 			"and", {
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-settlement-site" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-stronghold" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-ettin-town-hall" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-town-hall" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-stronghold" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-latin-town-hall" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-town-hall" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-stronghold" },
+
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-deposit" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-silver-deposit" },
@@ -280,6 +292,7 @@ function DefineUnitType(unit_type, data)
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-diamond-mine" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-emerald-deposit" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-emerald-mine" },
+
 --				"distance", { Distance = 3, DistanceType = ">", Type = "unit-yale-cave" },
 --				"distance", { Distance = 3, DistanceType = ">", Type = "unit-yale-hunting-lodge" },
 --				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-lumber-mill" },
@@ -3172,6 +3185,13 @@ DefineUnitType("unit-template-worker", {
 			"wait-at-depot", 150
 		},
 		{
+			"resource-id", "jewelry",
+			"resource-capacity", 100,
+			"resource-step", 4,
+			"wait-at-resource", 12,
+			"wait-at-depot", 150
+		},
+		{
 			"resource-id", "furniture",
 			"resource-capacity", 100,
 			"resource-step", 4,
@@ -3638,6 +3658,68 @@ DefineUnitType("unit-template-heroic-cavalry", {
 	AiDrops = {"unit-crown"}
 } )
 
+DefineUnitType("unit-template-spear-cavalry", {
+	Name = "Spear Cavalry",
+	Parent = "unit-template-sapient-unit",
+	Class = "spear-cavalry",
+	Costs = {"time", 90, "copper", 900},
+	Strength = 12,
+	Dexterity = 11,
+	Intelligence = 11,
+	Charisma = 11,
+	Speed = 13,
+	HitPoints = 75,
+	TileSize = {1, 1}, BoxSize = {42, 42},
+	SightRange = 4,
+	Armor = 2, BasicDamage = 8, Missile = "missile-none",
+	MaxAttackRange = 1,
+	Accuracy = 10,
+	Evasion = 9,
+	ChargeBonus = 10,
+	Priority = 63,
+	Points = 75,
+	Demand = 2,
+	Gender = "male",
+	Level = 2,
+	Type = "land",
+	RightMouseAction = "attack",
+	CanAttack = true,
+	CanTargetLand = true,
+	Mounted = true,
+	Flesh = true,
+	Mana = {Enable = true, Max = 150, Value = 150, Increase = 1},
+	ButtonPos = 4,
+	AiDrops = {"unit-horn", "unit-amulet", "unit-ring"},
+	Sounds = {
+		"step", "step-dirt",
+		"step-dirt", "step-dirt",
+		"step-gravel", "step-gravel",
+		"step-mud", "step-mud",
+		"step-stone", "step-stone",
+		"step-grass", "step-leaves"
+	}
+} )
+
+DefineUnitType("unit-template-heroic-spear-cavalry", {
+	Name = "Heroic Spear Cavalry",
+	Parent = "unit-template-spear-cavalry",
+	Class = "heroic-spear-cavalry",
+	Costs = {"time", 120, "copper", 1200},
+	Strength = 13,
+	Dexterity = 12,
+	Intelligence = 12,
+	Charisma = 12,
+	HitPoints = 90,
+	BasicDamage = 10,
+	Points = 100,
+	Level = 3,
+	Inventory = true,
+	Mana = {Enable = true, Max = 225, Value = 225, Increase = 1},
+	CanCastSpell = {"spell-stun"},
+	AutoCastActive = {"spell-stun"},
+	AiDrops = {"unit-crown"}
+} )
+
 DefineUnitType("unit-template-priest", {
 	Name = "Priest",
 	Parent = "unit-template-sapient-unit",
@@ -3865,7 +3947,7 @@ DefineUnitType("unit-template-town-hall", {
 	BuilderOutside = true,
 	RecruitHeroes = true,
 	IncreasesLuxuryDemand = true,
-	CanStore = {"copper", "silver", "gold", "lumber", "stone", "limestone", "coal", "furniture", "leather", "diamonds", "emeralds"},
+	CanStore = {"copper", "silver", "gold", "lumber", "stone", "limestone", "coal", "jewelry", "furniture", "leather", "diamonds", "emeralds"},
 	Drops = {"unit-wood-pile"},
 	RightMouseAction = "rally-point",
 	BurnPercent = 50,
@@ -3873,7 +3955,7 @@ DefineUnitType("unit-template-town-hall", {
 	ButtonPos = 1,
 	ButtonKey = "h",
 	ButtonHint = "Build Town ~!Hall",
-	ResourceDemand = {"furniture", 5, "leather", 5},
+	ResourceDemand = {"jewelry", 5, "furniture", 5, "leather", 5},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-crown", "unit-amulet", "unit-ring", "unit-scroll", "unit-book"}, -- worker-related items, as well as those we would expect a center of administration to have
 	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},
@@ -4023,7 +4105,7 @@ DefineUnitType("unit-template-lumber-mill", {
 	ButtonPos = 4,
 	ButtonKey = "l",
 	ButtonHint = "Build ~!Lumber Mill",
-	ResourceDemand = {"furniture", 3, "leather", 3},
+	ResourceDemand = {"jewelry", 1, "furniture", 3, "leather", 3},
 	BuildingRulesString = "Cannot be built close to town halls",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
@@ -4054,8 +4136,11 @@ DefineUnitType("unit-template-smithy", {
 	ExplodeWhenKilled = "missile-explosion",
 	Type = "land",
 	BuilderOutside = true,
-	IncreasesLuxuryDemand = true,
 	MetalImprove = true,
+	CanHarvest = true, -- cannot produce a resource inherently, but can produce jewelry through a button
+	Inexhaustible = true,
+	IncreasesLuxuryDemand = true,
+	MaxHarvesters = 5,
 	CanStore = {"copper", "silver", "gold", "coal", "diamonds", "emeralds"},
 	Drops = {"unit-wood-pile"},
 	BurnPercent = 50,
@@ -4064,8 +4149,8 @@ DefineUnitType("unit-template-smithy", {
 	ButtonKey = "s",
 	ButtonHint = "Build ~!Smithy",
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-crown", "unit-amulet", "unit-ring"},
-	ResourceDemand = {"furniture", 3, "leather", 3},
-	BuildingRulesString = "Cannot be built close to mines",
+	ResourceDemand = {"jewelry", 1, "furniture", 3, "leather", 3},
+	BuildingRulesString = "Cannot be built close to town halls or mines",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 		"selected", "smithy-selected",
@@ -4102,7 +4187,7 @@ DefineUnitType("unit-template-masons-shop", {
 	Drops = {"unit-wood-pile", "unit-stone-pile"},
 	BurnPercent = 50,
 	BurnDamageRate = 1,
-	ResourceDemand = {"furniture", 3, "leather", 3},
+	ResourceDemand = {"jewelry", 1, "furniture", 3, "leather", 3},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 		"selected", "storehouse-selected",
@@ -4179,7 +4264,7 @@ DefineUnitType("unit-template-temple", {
 	ButtonKey = "p",
 	ButtonHint = "Build Tem~!ple",
 	UnitStock = {"unit-potion-of-healing", 6},
-	ResourceDemand = {"furniture", 4, "leather", 4},
+	ResourceDemand = {"jewelry", 4, "furniture", 4, "leather", 4},
 	RequirementsString = "Lumber Mill",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	AiDrops = {"unit-crown", "unit-amulet", "unit-ring", "unit-scroll", "unit-book", "unit-potion-of-healing", "unit-elixir-of-dexterity", "unit-elixir-of-intelligence", "unit-elixir-of-strength", "unit-elixir-of-vitality"},
@@ -4216,7 +4301,7 @@ DefineUnitType("unit-template-university", {
 	Drops = {"unit-wood-pile"},
 	BurnPercent = 50,
 	BurnDamageRate = 1,
-	ResourceDemand = {"furniture", 4, "leather", 4},
+	ResourceDemand = {"jewelry", 4, "furniture", 4, "leather", 4},
 	RequirementsString = "Lumber Mill",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	AiDrops = {"unit-amulet", "unit-ring", "unit-scroll", "unit-book", "unit-potion-of-healing", "unit-elixir-of-dexterity", "unit-elixir-of-intelligence", "unit-elixir-of-strength", "unit-elixir-of-vitality"},
@@ -4344,7 +4429,7 @@ DefineUnitType("unit-template-market", {
 	BurnPercent = 50,
 	BurnDamageRate = 1,
 	TradeCost = 30,
-	ResourceDemand = {"furniture", 3, "leather", 3},
+	ResourceDemand = {"jewelry", 3, "furniture", 3, "leather", 3},
 	RequirementsString = "Lumber Mill",
 	BuildingRulesString = "Cannot be built close to other markets",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
@@ -4392,7 +4477,7 @@ DefineUnitType("unit-template-dock", {
 	ButtonPos = 9,
 	ButtonKey = "d",
 	ButtonHint = "Build ~!Dock",
-	ResourceDemand = {"furniture", 3, "leather", 3},
+	ResourceDemand = {"jewelry", 3, "furniture", 3, "leather", 3},
 	RequirementsString = "Lumber Mill",
 	BuildingRulesString = "Cannot be built close to other docks",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},

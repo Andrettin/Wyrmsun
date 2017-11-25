@@ -39,15 +39,15 @@
 --
 
 DefineDefaultIncomes(
-	0, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100
+	0, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100
 )
 
 DefineDefaultActions(
-	"stop", "mine", "gather", "drill", "mine", "quarry", "mine", "produce", "gain", "mine", "mine", "quarry", "gather", "gather", "mine", "mine", "gain", "perform"
+	"stop", "mine", "gather", "drill", "mine", "quarry", "mine", "produce", "gain", "mine", "mine", "quarry", "produce", "produce", "gather", "mine", "mine", "gain", "perform"
 )
 
 DefineDefaultResourceNames(
-	"time", "copper", "lumber", "oil", "ore", "stone", "coal", "research", "prestige", "gold", "silver", "limestone", "furniture", "leather", "diamonds", "emeralds", "leadership", "trade"
+	"time", "copper", "lumber", "oil", "ore", "stone", "coal", "research", "prestige", "gold", "silver", "limestone", "jewelry", "furniture", "leather", "diamonds", "emeralds", "leadership", "trade"
 )
 
 DefineDefaultResourceAmounts(
@@ -62,9 +62,9 @@ DefineDefaultResourceAmounts(
 	"diamonds", 50000
 )
 
-DefineDefaultResourceMaxAmounts(-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1)
+DefineDefaultResourceMaxAmounts(-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1)
 
-DefineLuxuryResources("furniture", "leather")
+DefineLuxuryResources("jewelry", "furniture", "leather")
 
 SetResourceFinalResource("gold", "copper")
 SetResourceFinalResourceConversionRate("gold", 400)
@@ -80,6 +80,9 @@ SetResourceFinalResource("limestone", "stone")
 SetResourceFinalResourceConversionRate("limestone", 200)
 
 SetResourceBasePrice("coal", 100)
+
+SetResourceBasePrice("jewelry", 200)
+SetResourceInputResource("jewelry", "copper")
 
 SetResourceBasePrice("furniture", 200)
 SetResourceInputResource("furniture", "lumber")

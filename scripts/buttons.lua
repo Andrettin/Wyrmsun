@@ -1669,6 +1669,20 @@ DefineButton( { Pos = 15, Level = 2,
 
 -- Resource Production ------------------------------------------------
 
+DefineButton( { Pos = 9, Level = 0, Icon = "icon-ring",
+	Action = "produce-resource", Value = "jewelry",
+	Key = "j", Hint = "Produce ~!Jewelry", Popup = "popup-commands",
+	Description = "Allows workers to transform Copper into Jewelry in this building",
+	ForUnit = {
+		"unit-brising-smithy",
+		"unit-dwarven-smithy",
+		"unit-germanic-smithy",
+		"unit-goblin-smithy",
+		"unit-latin-smithy",
+		"unit-teuton-smithy"
+	}
+})
+
 DefineButton( { Pos = 9, Level = 0, Icon = "icon-furniture",
 	Action = "produce-resource", Value = "furniture",
 	Key = "f", Hint = "Produce ~!Furniture", Popup = "popup-commands",

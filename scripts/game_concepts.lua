@@ -76,7 +76,7 @@ GameConcepts = {
 	},
 	Industry = {
 		Name = "In~!dustry",
-		Description = "Lumber can be transformed into furniture in lumber mills. If the option to produce furniture is active, workers can use the lumber mill similar to how they would a mine, to transform lumber into furniture."
+		Description = "Resources can be transformed into others in industrial buildings. If the option to produce the resource is active, workers can use the industrial building similar to how they would a mine, to transform resources. Copper can be transformed into jewelry in smithies, and lumber can be transformed into furniture in lumber mills."
 	},
 	Items = {
 		Name = _("Ite~!ms"),
@@ -100,7 +100,7 @@ GameConcepts = {
 	},
 	Trade = {
 		Name = "~!Trade",
-		Description = "Resource trade is conducted in market buildings, where lumber and stone can be exchanged for copper. Luxury resources, such as furniture, are sold automatically if a market is present. The trade cost percentage is deducted from the copper received when a resource is sold, and from the quantity obtained when a resource is bought.\n\nTrader units can generate copper by trading with foreign markets or docks. The higher the resource price difference with the other player, the more profitable trade with their markets and docks is. When a unit conducts trade, it also converges the prices of both players."
+		Description = "Resource trade is conducted in market buildings, where lumber and stone can be exchanged for copper. Luxury resources, such as jewelry and furniture, are sold automatically if a market is present. The trade cost percentage is deducted from the copper received when a resource is sold, and from the quantity obtained when a resource is bought.\n\nTrader units can generate copper by trading with foreign markets or docks. The higher the resource price difference with the other player, the more profitable trade with their markets and docks is. When a unit conducts trade, it also converges the prices of both players."
 	},
 	Traits = {
 		Name = _("Tra~!its"),

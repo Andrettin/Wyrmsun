@@ -2676,6 +2676,7 @@ DefineCivilization("latin", {
 		"harvest", "stone", "basic-latin-voices-harvest",
 		"harvest", "limestone", "basic-latin-voices-harvest",
 		"harvest", "coal", "basic-latin-voices-harvest",
+		"harvest", "jewelry", "basic-latin-voices-harvest",
 		"harvest", "furniture", "basic-latin-voices-harvest",
 		"harvest", "leather", "basic-latin-voices-harvest",
 		"harvest", "diamonds", "basic-latin-voices-harvest",

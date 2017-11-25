@@ -85,6 +85,10 @@ DefineUnitType("unit-dwarven-miner", {
 			"file-when-loaded", "dwarf/units/miner_with_coal.png"
 		},
 		{
+			"resource-id", "jewelry",
+			"file-when-loaded", "dwarf/units/miner_with_gold.png"
+		},
+		{
 			"resource-id", "furniture",
 			"file-when-loaded", "dwarf/units/miner_with_gold.png"
 		},
@@ -157,6 +161,10 @@ DefineUnitType("unit-dwarven-skilled-miner", {
 			"file-when-loaded", "dwarf/units/miner_with_coal.png"
 		},
 		{
+			"resource-id", "jewelry",
+			"file-when-loaded", "dwarf/units/miner_with_gold.png"
+		},
+		{
 			"resource-id", "furniture",
 			"file-when-loaded", "dwarf/units/miner_with_gold.png"
 		},
@@ -227,6 +235,10 @@ DefineUnitType("unit-dwarven-expert-miner", {
 		{
 			"resource-id", "coal",
 			"file-when-loaded", "dwarf/units/miner_with_coal.png"
+		},
+		{
+			"resource-id", "jewelry",
+			"file-when-loaded", "dwarf/units/miner_with_gold.png"
 		},
 		{
 			"resource-id", "furniture",

@@ -1718,6 +1718,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {GemsGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Gem Mining Bonus: "), Variable = "GemsGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {JewelryGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Jewelry Production Bonus: "), Variable = "JewelryGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {FurnitureGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Furniture Production Bonus: "), Variable = "FurnitureGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -2374,6 +2377,9 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {GemsGatheringBonus = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Gem Mining Bonus: "), Variable = "GemsGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {JewelryGatheringBonus = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Jewelry Production Bonus: "), Variable = "JewelryGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {FurnitureGatheringBonus = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Furniture Production Bonus: "), Variable = "FurnitureGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}

@@ -79,6 +79,10 @@ DefineUnitType("unit-gnomish-worker", {
 			"file-when-loaded", "gnome/units/gnomish_worker_with_gold.png"
 		},
 		{
+			"resource-id", "jewelry",
+			"file-when-loaded", "gnome/units/gnomish_worker_with_gold.png"
+		},
+		{
 			"resource-id", "furniture",
 			"file-when-loaded", "gnome/units/gnomish_worker_with_gold.png"
 		},
@@ -112,6 +116,7 @@ DefineUnitType("unit-gnomish-worker", {
 			"file-when-loaded", "limestone", "gnome/units/gnomish_worker_with_gold_gray_hair.png",
 			"file-when-loaded", "coal", "gnome/units/gnomish_worker_with_gold_gray_hair.png",
 			"file-when-loaded", "lumber", "gnome/units/gnomish_worker_with_lumber_gray_hair.png",
+			"file-when-loaded", "jewelry", "gnome/units/gnomish_worker_with_gold_gray_hair.png",
 			"file-when-loaded", "furniture", "gnome/units/gnomish_worker_with_gold_gray_hair.png",
 			"file-when-loaded", "leather", "gnome/units/gnomish_worker_with_gold_gray_hair.png",
 			"file-when-loaded", "diamonds", "gnome/units/gnomish_worker_with_gold_gray_hair.png",
