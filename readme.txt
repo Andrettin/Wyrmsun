@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 - 3.0.1
 -----------------------------------------------------------------------
 
+* Buildings
+- Barracks, Lumber Mills, Smithies, Mason's Shops, Stables, Temples, Markets, Docks and Universities now have a (cumulative) cost modifier increase of 25% for each building of that type that you construct.
+
 * Items
 - Added "of Smithing" magic suffix, which increases the worker's jewelry production rate.
 
