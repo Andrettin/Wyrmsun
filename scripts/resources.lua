@@ -83,9 +83,11 @@ SetResourceBasePrice("coal", 100)
 
 SetResourceBasePrice("jewelry", 200)
 SetResourceInputResource("jewelry", "copper")
+SetResourceDemandElasticity("jewelry", 200)
 
 SetResourceBasePrice("furniture", 200)
 SetResourceInputResource("furniture", "lumber")
+SetResourceDemandElasticity("furniture", 125)
 
 SetResourceBasePrice("leather", 100)
 
