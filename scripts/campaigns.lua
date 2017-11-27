@@ -173,8 +173,10 @@ DefineCampaign("the-first-marcomannic-war", {
 DefineCampaign("the-founding-of-francia", {
 	Name = "The Founding of Francia",
 	Description = "The Frankish chieftain Chlodwig has come to power with the burning ambition to expand his lands. Bordering hardened Roman remnants and warlike tribes, the path he seeks will have to be paved in blood...",
-	Faction = "frank-tribe",
-	StartYear = 481,
+--	Faction = "frank-tribe",
+	Faction = "francia",
+--	StartYear = 481,
+	StartYear = 486,
 	MapTemplate = "earth",
 	MapTemplateStartPos = {3780, 852},
 	MapSize = {256, 256}

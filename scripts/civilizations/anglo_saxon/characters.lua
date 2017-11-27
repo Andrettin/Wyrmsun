@@ -1143,6 +1143,9 @@ DefineCharacter("swithberht", { -- Source: Frank Stenton, "Anglo-Saxon England",
 	Date = 692, -- was consecrated bishop with seat at Wijk bij Duurstede in 692/693
 	-- partook in a mission to Frisia
 	Deities = {"christian-god"},
+	HistoricalLocations = {
+		692, "earth", "wijk-bij-duurstede"
+	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria" or GetPlayerData(trigger_player, "Faction") == "englaland") then
 			return true

@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016-2017 by Andrettin
+--      (c) Copyright 2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,5 +25,27 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-Load("scripts/civilizations/frankish/dialogues_sigiberts_struggle.lua")
-Load("scripts/civilizations/frankish/dialogues_the_founding_of_francia.lua")
+DefineDialogue("chlodwig-meets-syagrius", {
+	Nodes = {
+		{
+			"speaker", "character", "chlodwig",
+			"text", "King Syagrius! At last we have come to give you a taste of Frankish axes, I hope you did not have to wait for too long!"
+		},
+		{
+			"speaker", "character", "syagrius",
+			"text", "I am no king, barbarian. I am a Roman governor, and we have faced worse than you before."
+		},
+		{
+			"speaker", "character", "chlodwig",
+			"text", "Rome? What Rome? The city of Rome lies in Odoacer's hands, and the Eastern Empire is so far away... You are but a meager remnant, and you shall not last for a fortnight."
+		},
+		{
+			"speaker", "character", "chlodwig",
+			"text", "My tribesmen! The riches of Rome lay before us! We shall take it, becoming the masters of vast lands and making the Romans our servants!"
+		},
+		{
+			"speaker", "character", "syagrius",
+			"text", "Fellow Romans! The barbarians are on our gates! The Day of Judgement is fast approaching, as the world around us swirls into chaos. The northern tribes have taken over much of the Empire, and it may be that we will be defeated. But not today! On this day we will fight for the glory of Rome, and send these pagans to the fires of Hell!"
+		}
+	}
+})

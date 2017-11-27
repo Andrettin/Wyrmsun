@@ -36,6 +36,7 @@ DefineSettlement("amsterdam", {
 	HistoricalOwners = {
 		-264, "batavian-tribe", -- Amsterdam's area was territory of the Batavians in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		481, "frisian-tribe", -- Amsterdam's area was territory of the Frisians in the 481-734 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		486, "frisian-tribe", -- Amsterdam's area was territory of the Frisians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		1815, "netherlands" -- Amsterdam was a part of the Kingdom of the Netherlands in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
@@ -54,6 +55,7 @@ DefineSettlement("franeker", {
 --		"dutch", "Franeker"
 	},
 	HistoricalOwners = {
+		486, "frisian-tribe", -- Franeker's area was territory of the Frisians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		1585, "netherlands"
 	},
 	HistoricalBuildings = {
@@ -72,6 +74,7 @@ DefineSettlement("leeuwarden", {
 	},
 	HistoricalOwners = {
 		-264, "frisian-tribe", -- Leeuwarden's area was territory of the Frisians in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		486, "frisian-tribe", -- Leeuwarden's area was territory of the Frisians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		1815, "netherlands" -- Leeuwarden's area was part of the Kingdom of the Netherlands in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
@@ -88,6 +91,7 @@ DefineSettlement("wijk-bij-duurstede", {
 --		"dutch", "Wijk bij Duurstede"
 	},
 	HistoricalOwners = {
+		486, "francia", -- Wijk bij Duurstede's area was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		692, "northumbria",
 		695, "francia", -- by 695 Pippin, who de facto ruled Francia, had taken the mission under his wing; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 166-167.
 		1560, "spain" -- Wijk bij Duurstede's area was a Spanish possession in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.

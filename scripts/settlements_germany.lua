@@ -626,7 +626,7 @@ DefineSettlement("trier", {
 	HistoricalOwners = {
 		395, "rome", -- Trèves was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		481, "frank-tribe", -- Trèves was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-		486, "francia", -- Trèves was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		486, "francia", -- Treves was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		561, "austrasia", -- Treveri went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 		1815, "prussia" -- Trier was a possession of the Kingdom of Prussia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
@@ -660,6 +660,22 @@ DefineSettlement("worms", {
 	HistoricalBuildings = {
 		395, 0, "town-hall",
 		395, 0, "temple" -- Worms was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+	},
+	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
+})
+
+DefineSettlement("zulpich", {
+	Name = "Zulpich",
+	MapTemplate = "earth",
+	Position = {3996, 896},
+	CulturalNames = {
+		"teuton", "Zulpich" -- "Zülpich"
+	},
+	HistoricalOwners = {
+		486, "francia" -- Zülpich was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+	},
+	HistoricalBuildings = {
+		486, 0, "farm"
 	},
 	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
 })

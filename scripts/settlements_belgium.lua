@@ -25,6 +25,19 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSettlement("duisburg", {
+	Name = "Duisburg",
+	MapTemplate = "earth",
+	Position = {3944, 890},
+	HistoricalOwners = {
+		486, "francia" -- Duisbury was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+	},
+	HistoricalBuildings = {
+		486, 0, "farm"
+	},
+	Regions = {"europe", "gaul", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
+})
+
 DefineSettlement("echternach", {
 	Name = "Echternach",
 	MapTemplate = "earth",
@@ -33,12 +46,13 @@ DefineSettlement("echternach", {
 		"teuton", "Echternach"
 	},
 	HistoricalOwners = {
+		486, "francia" -- Echternach's area was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		739, "francia"
 	},
 	HistoricalBuildings = {
 		739, 0, "temple" -- a monastery under the protection of Francia existed in Echternach as of 739; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 167.
 	},
-	Regions = {"europe", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
+	Regions = {"europe", "gaul", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
 })
 
 DefineSettlement("tongres", {
@@ -59,5 +73,5 @@ DefineSettlement("tongres", {
 	HistoricalBuildings = {
 		395, 0, "temple" -- Tongres was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
-	Regions = {"europe", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
+	Regions = {"europe", "gaul", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
 })

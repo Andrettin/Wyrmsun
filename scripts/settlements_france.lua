@@ -37,6 +37,7 @@ DefineSettlement("amiens", {
 		"latin", "Samarobriva" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	},
 	HistoricalOwners = {
+		486, "francia", -- Amiens' area became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		561, "salia" -- Ambiani went to Chilperich when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 	},
 	HistoricalBuildings = {
@@ -231,6 +232,22 @@ DefineSettlement("cahors", {
 	},
 	HistoricalBuildings = {
 		1332, 0, "university" -- University founded in Cahors in 1332; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+	},
+	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+})
+
+DefineSettlement("cambrai", {
+	Name = "Cambrai",
+	MapTemplate = "earth",
+	Position = {3917, 903},
+	CulturalNames = {
+		"french", "Cambrai"
+	},
+	HistoricalOwners = {
+		486, "francia" -- Cambray was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+	},
+	HistoricalBuildings = {
+		486, 0, "farm"
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -482,7 +499,7 @@ DefineSettlement("nantes", {
 	},
 	HistoricalOwners = {
 		395, "rome", -- Nantes was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		486, "francia", -- Nantes was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		486, "francia", -- Nantes became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		561, "neustria" -- Namnetes went to Charibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 	},
 	HistoricalBuildings = {
@@ -541,15 +558,17 @@ DefineSettlement("orleans", {
 	Name = "Orleans",
 	MapTemplate = "earth",
 	Position = {3884, 961},
+	Major = true,
 	CulturalNames = {
 		"frankish", "Aurehani",
 		"french", "Orleans" -- "Orléans"
 	},
 	HistoricalOwners = {
+		486, "francia", -- Orleans became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		561, "burgundia" -- Chlothar (Frankish king) died in 561, and Orléans/Aurehani went to his son Gunthram; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328; Gregory of Tours, "History of the Franks", IV.22.
 	},
 	HistoricalBuildings = {
-		561, 0, "town-hall",
+		481, 0, "town-hall",
 		1305, 0, "university" -- University founded in Orléans in 1305; Source: "Atlas de História Mundial", 2001, p. 144.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
@@ -569,7 +588,7 @@ DefineSettlement("paris", {
 	},
 	HistoricalOwners = {
 		161, "rome", -- Lutetia was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		486, "francia", -- Paris became a Frankish possession in 486; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		486, "francia", -- Paris became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51, 53.
 		561, "neustria" -- Parisii went to Charibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 	},
 	HistoricalBuildings = {
@@ -638,6 +657,7 @@ DefineSettlement("reims", {
 	},
 	HistoricalOwners = {
 		-50, "rome", -- Durocortorum was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		486, "francia", -- Reims became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		526, "francia", -- Reims was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		561, "austrasia" -- Chlothar (Frankish king) died in 561, and Reims/Remi went to his son Sigibert, becoming his capital; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328; Gregory of Tours, "History of the Franks", IV.22; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 	},
@@ -718,6 +738,7 @@ DefineSettlement("soissons", {
 	},
 	HistoricalOwners = {
 		395, "rome", -- Soissons was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		486, "francia", -- Soissons became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		526, "francia", -- Soissons was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		561, "salia" -- Chlothar (Frankish king) died in 561, and Soissons went to his son Chilperich; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328; Gregory of Tours, "History of the Franks", IV.22.
 	},
@@ -838,13 +859,14 @@ DefineSettlement("toulouse", {
 DefineSettlement("tournai", {
 	Name = "Tournai",
 	MapTemplate = "earth",
-	Position = {3917, 896},
+	Position = {3918, 896},
 	CulturalNames = {
 		"frankish", "Tornacum",
 		"french", "Tournai"
 	},
 	HistoricalOwners = {
 		481, "frank-tribe", -- Tournai was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		486, "francia", -- Tournai was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		561, "salia" -- Tornacum went to Chilperich when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 	},
 	HistoricalBuildings = {
@@ -886,11 +908,12 @@ DefineSettlement("troyes", {
 		"french", "Troyes" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	HistoricalOwners = {
+		486, "francia", -- Troyes became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		561, "burgundia", -- Trecae went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 		782, "francia"
 	},
 	HistoricalBuildings = {
-		561, 782, "farm",
+		486, 782, "farm",
 		782, 0, "temple" -- Alcuin moved from England to the court of Charlemagne in 782, and received the abbey of St. Lupus at Troyes; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 188-189.
 		-- Chief court of the salt tax existent in Troyes in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
