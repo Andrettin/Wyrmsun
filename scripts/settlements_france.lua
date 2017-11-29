@@ -93,6 +93,7 @@ DefineSettlement("autun", {
 	},
 	HistoricalOwners = {
 		481, "burgundy", -- Autun was a Burgundian possession in the 481-532 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		486, "burgundy", -- Autun was a part of the Kingdom of the Burgundians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		561, "burgundia" -- Augustodunum went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 	},
 	HistoricalBuildings = {
@@ -282,6 +283,7 @@ DefineSettlement("clermont-ferrand", {
 	HistoricalOwners = {
 		-71, "arverni-tribe", -- The Suebic king Ariovistus entered Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
 		481, "visigothia", -- Clermont-Ferrand's area was a Visigothic possession in the 481-507 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		486, "visigothia", -- Clermont was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		561, "austrasia" -- Arverni went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 	},
 	HistoricalBuildings = {
@@ -303,6 +305,7 @@ DefineSettlement("dijon", {
 	HistoricalOwners = {
 		-71, "aedui-tribe", -- The Suebic king Ariovistus entered Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
 		481, "burgundy", -- Dijon's area was a Burgundian possession in the 481-532 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		486, "burgundy", -- Dijon was a part of the Kingdom of the Burgundians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		561, "burgundia" -- Divio went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 	},
 	HistoricalBuildings = {
@@ -371,10 +374,11 @@ DefineSettlement("langres", {
 		"french", "Langres"
 	},
 	HistoricalOwners = {
+		486, "burgundy", -- Langres was a part of the Kingdom of the Burgundians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		561, "burgundia" -- Lingones went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 	},
 	HistoricalBuildings = {
-		561, 0, "farm"
+		486, 0, "farm"
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -394,7 +398,7 @@ DefineSettlement("lyon", {
 	HistoricalOwners = {
 		161, "rome", -- Lugdunum was a Roman provincial capital in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		481, "burgundy", -- Lyons was a Burgundian possession in the 481-532 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-		486, "burgundy", -- Lyon was a part of the Kingdom of the Burgundians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		486, "burgundy", -- Lyons was a part of the Kingdom of the Burgundians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		561, "burgundia" -- Lugdunum went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 	},
 	HistoricalBuildings = {

@@ -46,7 +46,7 @@ DefineSettlement("echternach", {
 		"teuton", "Echternach"
 	},
 	HistoricalOwners = {
-		486, "francia" -- Echternach's area was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		486, "francia", -- Echternach's area was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		739, "francia"
 	},
 	HistoricalBuildings = {

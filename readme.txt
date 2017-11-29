@@ -70,6 +70,7 @@ https://github.com/Andrettin/Wyrmsun
 - Cavalry units now have a 5% charge bonus to damage. This means that the damage they deal is increased by 5% for each step the unit took before attacking (the step count is capped at 10). To compensate, cavalry units' damage stat has been reduced.
 - Gothic cavalry units now have a charge bonus of 7% instead of having extra damage.
 - Workers can now produce the Jewelry luxury resource from Copper in Smithies. As with other luxury resources, Jewelry is sold automatically if a Market is present.
+- Dehydration no longer affects units if the desert tile lies within their player's territory.
 
 -----------------------------------------------------------------------
 - 3.0.0

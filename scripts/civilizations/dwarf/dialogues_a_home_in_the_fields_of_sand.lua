@@ -78,7 +78,7 @@ DefineDialogue("joruvellir-sighted", {
 			"text", "The sun is scorching in these parts, and it will be worse in the desert. It would be best to travel through it during the night."
 		},
 		{
-			"text", "Hint: Organic units suffer from dehydration in the desert, which slowly depletes their HP. The effect can be avoided by journeying through the desert at night, and some units (like wyrms) are immune to it."
+			"text", "Hint: Organic units suffer from dehydration in desert tiles, which slowly depletes their HP. The effect can be avoided by journeying through the desert at night, and some units (like wyrms) are immune to it. Units are not affected by dehydration in their player's own territory."
 		}
 	}
 })

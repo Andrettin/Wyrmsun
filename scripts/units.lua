@@ -3658,6 +3658,23 @@ DefineUnitType("unit-template-heroic-cavalry", {
 	AiDrops = {"unit-crown"}
 } )
 
+DefineUnitType("unit-template-desert-cavalry", {
+	Name = "Desert Cavalry",
+	Parent = "unit-template-cavalry",
+	Class = "desert-cavalry",
+	Speed = 12,
+	DehydrationImmunity = 1
+} )
+
+DefineUnitType("unit-template-heroic-desert-cavalry", {
+	Name = "Heroic Desert Cavalry",
+	Parent = "unit-template-heroic-cavalry",
+	Class = "heroic-desert-cavalry",
+	Costs = {"time", 120, "copper", 1200},
+	Speed = 12,
+	DehydrationImmunity = 1
+} )
+
 DefineUnitType("unit-template-spear-cavalry", {
 	Name = "Spear Cavalry",
 	Parent = "unit-template-sapient-unit",
