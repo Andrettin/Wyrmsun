@@ -41,7 +41,10 @@ DefineFaction("brising-clan", {
 		"dlcs/brising_faction_flair/graphics/ui/infopanel.png", 0, -200
 	},
 	Description = "The Brising clan was one of the first dwarven clans ever known. It made its home in Svarinshaug, where they tamed the fierce forces of nature.",
-	Background = "In Norse mythology, \"Brising\" was an appelation used for the dwarves in general, or more specifically for the ones who created the necklace Brisingamen. \"Brising\" means \"flame\" in Old Norse."
+	Background = "In Norse mythology, \"Brising\" was an appelation used for the dwarves in general, or more specifically for the ones who created the necklace Brisingamen. \"Brising\" means \"flame\" in Old Norse.",
+	HistoricalUpgrades = {
+--		-3000, "upgrade-deity-odin", true
+	}
 })
 
 DefineFaction("goldhoof-clan", {
@@ -61,7 +64,10 @@ DefineFaction("goldhoof-clan", {
 		"dlcs/joruvellir_faction_flair/graphics/ui/buttonpanel.png", -256, -200,
 		"dlcs/joruvellir_faction_flair/graphics/ui/infopanel.png", 0, -200
 	},
-	Description = "The Goldhoofs are an ancient clan, who split off from the other dwarves in Svarinshaug to migrate to Joruvellir. There, they gave rise to a multitude of desert dwarven clans, which eventually would unify into the Principality of Joruvellir."
+	Description = "The Goldhoofs are an ancient clan, who split off from the other dwarves in Svarinshaug to migrate to Joruvellir. There, they gave rise to a multitude of desert dwarven clans, which eventually would unify into the Principality of Joruvellir.",
+	HistoricalUpgrades = {
+		-2800, "upgrade-deity-odin", true
+	}
 })
 
 DefineFaction("eikinskjaldi-clan", {

@@ -66,6 +66,9 @@ https://github.com/Andrettin/Wyrmsun
 * Items
 - Added "of Smithing" magic suffix, which increases the worker's jewelry production rate.
 
+* Scenarios
+- The Goldhoof Clan now starts with the Odin/Hroptatyr major deity in the A Home in the Fields of Sand scenario, so that its starting Witness can actually cast a spell.
+
 * Units
 - Cavalry units now have a 5% charge bonus to damage. This means that the damage they deal is increased by 5% for each step the unit took before attacking (the step count is capped at 10). To compensate, cavalry units' damage stat has been reduced.
 - Gothic cavalry units now have a charge bonus of 7% instead of having extra damage.
