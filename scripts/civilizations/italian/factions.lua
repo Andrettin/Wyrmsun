@@ -63,7 +63,9 @@ DefineFaction("papal-states", {
 	Type = "polity",
 	Colors = {"brown"},
 	DefaultTier = "kingdom",
-	DefaultStartPos = {4126, 1096} -- Rome
+	HistoricalCapitals = {
+		0, "rome"
+	}
 })
 
 DefineFaction("parma", {

@@ -36,6 +36,8 @@ DefineDialogue("thialfi-commanded-to-gotland", {
 					SetPlayerData(trigger_player, "AcceptQuest", "the-discovery-of-gotland")
 					unit = CreateUnit("unit-revealer", trigger_player, {4265 - EarthStartX, 741 - EarthStartY}, GetMapLayer("material-plane", "earth", 0))
 					SetUnitVariable(unit, "TTL", 600)
+					ChangeCurrentMapLayer(GetMapLayer("material-plane", "earth", 0))
+					CenterMap(4265 - EarthStartX, 741 - EarthStartY)
 				end
 			}
 		}

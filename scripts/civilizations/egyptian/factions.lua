@@ -30,5 +30,7 @@ DefineFaction("egypt", {
 	Civilization = "egyptian",
 	Type = "polity",
 	Colors = {"green"},
-	DefaultStartPos = {4546, 1363} -- Memphis
+	HistoricalCapitals = {
+		0, "memphis"
+	}
 })

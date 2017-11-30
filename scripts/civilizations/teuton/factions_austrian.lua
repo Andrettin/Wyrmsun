@@ -33,7 +33,6 @@ DefineFaction("austria", {
 	DefaultTier = "duchy",
 	FactionUpgrade = "upgrade-faction-austria",
 	Icon = "icon-flag-old-austria",
-	DefaultStartPos = {4212, 952}, -- Vienna
 	DevelopsFrom = {"bavarian-tribe"},
 	Titles = {
 		"monarchy", "grand-duchy", "Archduchy"
@@ -43,6 +42,13 @@ DefineFaction("austria", {
 		"head-of-state", "female", "monarchy", "grand-duchy", "Archduchess",
 		"head-of-government", "no-gender", "monarchy", "no-faction-tier", "Minister-President", -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
 		"education-minister", "no-gender", "no-government-type", "no-faction-tier", "Education Director" -- Director of the Department of Education (Leiter des Unterrichtsdepartements); Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
+	},
+	HistoricalCapitals = {
+		0, "vienna"
+	},
+	HistoricalTiers = {
+		1560, "grand-duchy", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1815, "empire" -- Political situation in Central Europe, 1815-1866 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	ShipNames = {
 		"Achilles", -- steamship; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 38.
@@ -62,10 +68,6 @@ DefineFaction("austria", {
 		"Temes", -- river monitor; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 34.
 		"Traisen", -- hospital ship; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 38.
 		"Traun" -- steamship; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 38.
-	},
-	HistoricalTiers = {
-		1560, "grand-duchy", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-		1815, "empire" -- Political situation in Central Europe, 1815-1866 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	}
 	-- 04.03.1849: new constitution; Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 48.
 	-- 20.08.1851: ministerial responsibility removed; Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 48.

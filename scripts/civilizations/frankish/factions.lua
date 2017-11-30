@@ -141,11 +141,13 @@ DefineFaction("austrasia", {
 	DefaultTier = "kingdom", -- correct?
 	FactionUpgrade = "upgrade-faction-austrasia",
 	Icon = "icon-flag-five-black-birds-on-purple",
-	DefaultStartPos = {3930, 926}, -- Reims
 	DevelopsFrom = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "frank-tribe", "sugambri-tribe"},
 	DevelopsTo = {"francia"},
 	MinisterTitles = {
 		"head-of-government", "no-gender", "monarchy", "no-faction-tier", "Mayor of the Palace" -- Source: "Medieval Warfare V.2", 2013, p. 7.
+	},
+	HistoricalCapitals = {
+		0, "reims"
 	}
 })
 
@@ -179,11 +181,13 @@ DefineFaction("neustria", {
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-neustria",
 	Icon = "icon-flag-five-orange-birds-on-black",
-	DefaultStartPos = {3891, 937}, -- Paris
 	DevelopsFrom = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "frank-tribe", "sugambri-tribe"},
 	DevelopsTo = {"francia"},
 	MinisterTitles = {
 		"head-of-government", "no-gender", "monarchy", "no-faction-tier", "Mayor of the Palace" -- Source: "Medieval Warfare V.2", 2013, p. 7.
+	},
+	HistoricalCapitals = {
+		0, "paris"
 	}
 })
 
@@ -196,9 +200,11 @@ DefineFaction("salia", {
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-salia",
 	Icon = "icon-flag-five-red-birds-on-yellow",
-	DefaultStartPos = {3915, 923}, -- Soissons
 	DevelopsFrom = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "frank-tribe", "sugambri-tribe"},
-	DevelopsTo = {"francia"}
+	DevelopsTo = {"francia"},
+	HistoricalCapitals = {
+		0, "soissons"
+	}
 })
 
 DefineFaction("burgundia", { -- Frankish kingdom of Burgundy (not to be confused with the original Kingdom of the Burgundians - an East Germanic people - or the French region)
@@ -210,7 +216,9 @@ DefineFaction("burgundia", { -- Frankish kingdom of Burgundy (not to be confused
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-burgundia",
 	Icon = "icon-flag-five-purple-birds-on-green",
-	DefaultStartPos = {3884, 961}, -- Orléans
 	DevelopsFrom = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "frank-tribe", "sugambri-tribe"},
-	DevelopsTo = {"francia"}
+	DevelopsTo = {"francia"},
+	HistoricalCapitals = {
+		0, "orleans"
+	}
 })

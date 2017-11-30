@@ -151,7 +151,9 @@ DefineFaction("judah", {
 	Type = "polity",
 	Colors = {"blue"},
 	DefaultTier = "kingdom",
-	DefaultStartPos = {4642, 1327}, -- Jerusalem
+	HistoricalCapitals = {
+		0, "jerusalem"
+	},
 	HistoricalDiplomacyStates = {
 		-750, "assyria", "vassal" -- the Kingdom of Judah was tributary to Assyria in the 750-625 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	}

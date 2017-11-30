@@ -47,5 +47,7 @@ DefineFaction("phoenicia", {
 	Type = "polity",
 	Colors = {"black"},
 	DefaultAI = "sea-attack",
-	DefaultStartPos = {4642, 1290} -- Tyre
+	HistoricalCapitals = {
+		0, "tyre"
+	}
 })

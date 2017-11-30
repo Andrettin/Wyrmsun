@@ -299,8 +299,10 @@ DefineFaction("wessex", {
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-wessex",
 	Icon = "icon-flag-cyan-lion-on-red",
-	DefaultStartPos = {3810, 885}, -- Winchester
-	Description = ""
+	Description = "",
+	HistoricalCapitals = {
+		0, "winchester"
+	}
 })
 
 DefineFaction("englaland", {

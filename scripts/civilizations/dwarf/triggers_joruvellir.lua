@@ -36,10 +36,6 @@ AddTrigger("a-home-in-the-fields-of-sand-introduction",
 		return false
 	end,
 	function() 
-		unit = CreateUnit("unit-revealer", trigger_player, {784 - NidavellirStartX, 339 - NidavellirStartY}, GetMapLayer("material-plane", "nidavellir", 0))
-		SetUnitVariable(unit, "TTL", 600)
-		ChangeCurrentMapLayer(GetMapLayer("material-plane", "nidavellir", 0))
-		CenterMap(784 - NidavellirStartX, 339 - NidavellirStartY)
 		CallDialogue("a-home-in-the-fields-of-sand-introduction", trigger_player)
 		return false
 	end

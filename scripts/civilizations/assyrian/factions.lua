@@ -31,5 +31,7 @@ DefineFaction("assyria", {
 	Type = "polity",
 	Colors = {"brown"},
 	DefaultTier = "kingdom",
-	DefaultStartPos = {4828, 1214} -- Nineveh
+	HistoricalCapitals = {
+		0, "nineveh"
+	}
 })
