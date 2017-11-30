@@ -71,6 +71,9 @@ https://github.com/Andrettin/Wyrmsun
 - Gothic cavalry units now have a charge bonus of 7% instead of having extra damage.
 - Workers can now produce the Jewelry luxury resource from Copper in Smithies. As with other luxury resources, Jewelry is sold automatically if a Market is present.
 - Dehydration no longer affects units if the desert tile lies within their player's territory.
+- AI ranged units now try to maintain a certain distance between themselves and slower enemies with smaller range.
+- Fixed issue which caused units with minimum range (like catapults) to not move away and find a proper place to attack from, if ordered to attack an adjacent unit.
+- Fixed issue which caused the attack ground command to ignore minimum range.
 
 -----------------------------------------------------------------------
 - 3.0.0
