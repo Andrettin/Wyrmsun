@@ -52,7 +52,6 @@ DefineFaction("goldhoof-clan", {
 	FactionUpgrade = "upgrade-faction-goldhoof-clan",
 	Icon = "icon-flag-golden-yale-skull-on-green",
 	DevelopsFrom = {"brising-clan"},
-	DefaultStartPos = {784, 339},
 	ButtonIcons = {
 		"stop", "icon-joruvellir-shield"
 	},
@@ -166,7 +165,7 @@ DefineFaction("joruvellir", { -- from Norse mythology, "Joruvellir" = "Fields of
 		"head-of-state", "female", "monarchy", "barony", "Lady"
 	},
 	HistoricalCapitals = {
-		400, "Joruvellir"
+		400, "joruvellir"
 	},
 	HistoricalUpgrades = {
 		400, "upgrade-dwarven-runewriting", true, -- polities require writing
@@ -191,7 +190,7 @@ DefineFaction("kal-kartha", {
 		"head-of-state", "female", "monarchy", "barony", "Lady"
 	},
 	HistoricalCapitals = {
-		400, "Kal Kartha"
+		400, "kal-kartha"
 	},
 	HistoricalUpgrades = {
 		400, "upgrade-dwarven-runewriting", true, -- polities require writing
@@ -216,7 +215,7 @@ DefineFaction("knalga", {
 		"head-of-state", "female", "monarchy", "barony", "Lady"
 	},
 	HistoricalCapitals = {
-		400, "Southern Tunnels"
+		400, "knalga"
 	},
 	HistoricalUpgrades = {
 		400, "upgrade-dwarven-runewriting", true, -- polities require writing
@@ -244,7 +243,7 @@ DefineFaction("lyr", {
 		"head-of-state", "female", "monarchy", "barony", "Lady"
 	},
 	HistoricalCapitals = {
-		400, "Lyr"
+		400, "lyr"
 	},
 	HistoricalUpgrades = {
 		400, "upgrade-dwarven-runewriting", true, -- polities require writing

@@ -148,7 +148,6 @@ DefineFaction("rome", {
 	Colors = {"red", "yellow"},
 	DefaultTier = "kingdom",
 	DevelopsFrom = {"latin-tribe"},
-	DefaultStartPos = {4126, 1096}, -- Rome
 	HistoricalGovernmentTypes = {
 		-500, "republic", -- correct?
 		-27, "monarchy" -- Augustus assumed power in Rome; was this the date in which he actually became emperor?
@@ -157,7 +156,7 @@ DefineFaction("rome", {
 		-27, "empire" -- Rome was an empire under Augustus
 	},
 	HistoricalCapitals = {
-		-500, "Latium" -- Rome was Rome's capital by 500 BC (this may seem like a silly remark, but even city-states may happen to change their capitals from their namesake to other cities); Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+		-500, "rome" -- Rome was Rome's capital by 500 BC (this may seem like a silly remark, but even city-states may happen to change their capitals from their namesake to other cities); Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 	},
 	HistoricalUpgrades = {
 		0, "upgrade-teuton-writing", true, -- polities must have writing

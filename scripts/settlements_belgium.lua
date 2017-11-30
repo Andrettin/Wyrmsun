@@ -30,10 +30,11 @@ DefineSettlement("duisburg", {
 	MapTemplate = "earth",
 	Position = {3944, 890},
 	HistoricalOwners = {
-		486, "francia" -- Duisbury was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		481, "frank-tribe", -- Duisbury's area was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		{486, 12, 30}, "francia" -- Duisbury was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	},
 	HistoricalBuildings = {
-		486, 0, "farm"
+		{486, 12, 30}, 0, "farm"
 	},
 	Regions = {"europe", "gaul", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
 })
@@ -46,7 +47,8 @@ DefineSettlement("echternach", {
 		"teuton", "Echternach"
 	},
 	HistoricalOwners = {
-		486, "francia", -- Echternach's area was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		481, "frank-tribe", -- Echternach's area was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		{486, 12, 30}, "francia", -- Echternach's area was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		739, "francia"
 	},
 	HistoricalBuildings = {
@@ -67,11 +69,31 @@ DefineSettlement("tongres", {
 	HistoricalOwners = {
 		395, "rome", -- Tongres was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		481, "frank-tribe", -- Tongres' area was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-		486, "francia", -- Tongres' area was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		{486, 12, 30}, "francia", -- Tongres' area was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		561, "salia" -- Tongres' area went to Chilperich when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 	},
 	HistoricalBuildings = {
 		395, 0, "temple" -- Tongres was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+	},
+	Regions = {"europe", "gaul", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
+})
+
+DefineSettlement("tournai", {
+	Name = "Tournai",
+	MapTemplate = "earth",
+	Position = {3918, 896},
+	Major = true,
+	CulturalNames = {
+		"frankish", "Tornacum",
+		"french", "Tournai"
+	},
+	HistoricalOwners = {
+		481, "frank-tribe", -- Tournai was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		{486, 12, 30}, "francia", -- Tournai was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		561, "salia" -- Tornacum went to Chilperich when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+	},
+	HistoricalBuildings = {
+		481, 0, "town-hall"
 	},
 	Regions = {"europe", "gaul", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
 })

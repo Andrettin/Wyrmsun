@@ -119,7 +119,9 @@ DefineFaction("media", {
 	Type = "polity",
 	Colors = {"yellow"},
 	DefaultTier = "kingdom",
-	DefaultStartPos = {4958, 1246} -- Ecbatana was the capital of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+	HistoricalCapitals = {
+		-600, "ecbatana" -- Ecbatana was the capital of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+	}
 })
 
 DefineFaction("parthia", {

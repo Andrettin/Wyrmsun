@@ -94,7 +94,10 @@ DefineFaction("frank-tribe", {
 	FactionUpgrade = "upgrade-faction-frank-tribe",
 	Icon = "icon-flag-old-austria",
 	Description = "The Franks are one of the most powerful Germanic tribes to have existed. From their humble beginnings in their dwellings along the Rhine, they eventually managed to conquer the entirety of Gaul and much of Central Europe.",
-	DevelopsFrom = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "sugambri-tribe", "ubii-tribe"}
+	DevelopsFrom = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "sugambri-tribe", "ubii-tribe"},
+	HistoricalCapitals = {
+		481, "tournai"
+	}
 })
 
 DefineFaction("francia", {
@@ -116,7 +119,8 @@ DefineFaction("francia", {
 		565, "upgrade-teuton-coinage", true -- Merovingian Francia began to issue gold solidi at some point between 565 and 578 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 176.
 	},
 	HistoricalCapitals = {
-		768, "Lower Rhine" -- Aachen was Francia's capital during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		486, "tournai",
+--		768, "Lower Rhine" -- Aachen was Francia's capital during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	Conditions = function(s)
 		for i=0,(PlayerMax - 2) do

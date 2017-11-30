@@ -39,7 +39,9 @@ DefineFaction("lydia", {
 	Type = "polity",
 	Colors = {"teal"},
 	DefaultTier = "kingdom",
-	DefaultStartPos = {4474, 1170} -- Sardis was the capital of the Lydian Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+	HistoricalCapitals = {
+		-600, "sardis" -- Sardis was the capital of the Lydian Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+	}
 })
 
 DefineFaction("troy", {

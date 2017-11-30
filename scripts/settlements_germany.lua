@@ -120,7 +120,7 @@ DefineSettlement("cologne", {
 	HistoricalOwners = {
 		-50, "rome", -- Gaul (where Colonia Agrippina was located) was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		481, "frank-tribe", -- Cologne was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-		486, "francia", -- Cologne was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		{486, 12, 30}, "francia", -- Cologne was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		561, "austrasia", -- Colonia Agrippina went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 		1815, "prussia" -- Cologne was a possession of the Kingdom of Prussia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
@@ -626,7 +626,7 @@ DefineSettlement("trier", {
 	HistoricalOwners = {
 		395, "rome", -- Trèves was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		481, "frank-tribe", -- Trèves was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-		486, "francia", -- Treves was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		{486, 12, 30}, "francia", -- Treves was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		561, "austrasia", -- Treveri went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 		1815, "prussia" -- Trier was a possession of the Kingdom of Prussia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
@@ -672,10 +672,11 @@ DefineSettlement("zulpich", {
 		"teuton", "Zulpich" -- "Zülpich"
 	},
 	HistoricalOwners = {
-		486, "francia" -- Zülpich was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		481, "frank-tribe", -- Zülpich's area was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		{486, 12, 30}, "francia" -- Zülpich was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	},
 	HistoricalBuildings = {
-		486, 0, "farm"
+		{486, 12, 30}, 0, "farm"
 	},
 	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
 })

@@ -81,6 +81,10 @@ DefineCharacter("chlodwig", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	Father = "merovech",
 	Date = 481, -- his reign began in 481
 	DeathDate = 511, -- died in 511
+	HistoricalFactions = {
+		481, "frank-tribe",
+		{486, 12, 30}, "francia"
+	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "frank-tribe" or GetPlayerData(trigger_player, "Faction") == "francia") then
 			return true

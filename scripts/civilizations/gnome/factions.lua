@@ -77,7 +77,7 @@ DefineFaction("acthna", {
 	Colors = {"red"},
 	DefaultTier = "duchy",
 	HistoricalCapitals = {
-		-3000, "Acthna"
+		-3000, "acthna"
 	}
 })
 
@@ -92,7 +92,7 @@ DefineFaction("untersberg", { -- Source: Franz Hartmann, "Among the Gnomes", 189
 		"education-minister", "no-gender", "no-government-type", "no-faction-tier", "Superintendent of Public Schools" -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 201.
 	},
 	HistoricalCapitals = {
-		-3000, "Untersberg"
+		-3000, "gnana"
 	}
 	-- Untersberg had an "Order of the Bullfrog" in Among the Gnomes (should be changed to an animal which exists in Nidavellir); Source: Franz Hartmann, "Among the Gnomes", 1895, p. 201.
 })
