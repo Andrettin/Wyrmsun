@@ -78,7 +78,6 @@ https://github.com/Andrettin/Wyrmsun
 - AI ranged units now try to maintain a certain distance between themselves and slower enemies with smaller range.
 - Fixed issue which caused units with minimum range (like catapults) to not move away and find a proper place to attack from, if ordered to attack an adjacent unit.
 - Fixed issue which caused the attack ground command to ignore minimum range.
-- Ballista bolts no longer cause area damage. Instead, they now are able to pierce through small targets and damage units further on.
 
 -----------------------------------------------------------------------
 - 3.0.0
