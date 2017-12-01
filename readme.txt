@@ -68,6 +68,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Scenarios
 - The Goldhoof Clan now starts with the Odin/Hroptatyr major deity in the A Home in the Fields of Sand scenario, so that its starting Witness can actually cast a spell.
+- Added dialogue between two dwarven workers for the The First Dwarves scenario in which they discuss stone furniture.
 
 * Units
 - Cavalry units now have a 5% charge bonus to damage. This means that the damage they deal is increased by 5% for each step the unit took before attacking (the step count is capped at 10). To compensate, cavalry units' damage stat has been reduced.

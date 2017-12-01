@@ -175,3 +175,22 @@ AddTrigger("modsognirs-clan-destroys-the-grafvitnings",
 		return false
 	end
 )
+
+AddTrigger("worker-suggests-stone-furniture",
+	function()
+		if (SyncRand(10) ~= 0) then -- 10% chance this will trigger every time it is checked (and 10% for each player it is checked for, for a chance of 1% for a player that matches the conditions
+			return false
+		end
+		for i=0,(PlayerMax - 2) do
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "Faction") == "brising-clan" and SyncRand(10) == 0 and GetPlayerData(i, "UnitTypesCount", "unit-brising-miner") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-brising-expert-miner") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-masons-shop") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-market") >= 1) then
+				trigger_player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function()
+		CallDialogue("worker-suggests-stone-furniture", trigger_player)
+		return false
+	end
+)

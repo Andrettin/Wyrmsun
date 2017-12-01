@@ -76,15 +76,19 @@ DefineMissileType("missile-bullet", {
 DefineMissileType("missile-dwarven-ballista-bolt", {
 	File = "missiles/dwarven_ballista_bolt.png", Size = {64, 64}, Frames = 5, NumDirections = 9,
 	DrawLevel = 44, ImpactSound = "explosion",
-	Class = "missile-class-point-to-point", Sleep = 1, Speed = 8, Range = 2,
-	ImpactMissile = "missile-impact", SplashFactor = 4
+	Class = "missile-class-point-to-point", Sleep = 1, Speed = 8, Range = 1,
+	ImpactMissile = "missile-impact", Pierce = true, PierceOnce = true, ReduceFactor = 50,
+	FriendlyFire = true,
+	SplashFactor = 4
 })
 
 DefineMissileType("missile-flaming-dwarven-ballista-bolt", {
 	File = "missiles/flaming_dwarven_ballista_bolt.png", Size = {64, 64}, Frames = 5, NumDirections = 9,
 	DrawLevel = 44, ImpactSound = "explosion",
-	Class = "missile-class-point-to-point", Sleep = 1, Speed = 8, Range = 2,
-	ImpactMissile = "missile-impact", SplashFactor = 4
+	Class = "missile-class-point-to-point", Sleep = 1, Speed = 8, Range = 1,
+	ImpactMissile = "missile-impact", Pierce = true, PierceOnce = true, ReduceFactor = 50,
+	FriendlyFire = true,
+	SplashFactor = 4
 })
 
 DefineMissileType("missile-catapult-sandstone-rock", {

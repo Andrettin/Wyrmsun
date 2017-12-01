@@ -438,16 +438,16 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-pike",
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-sharp-throwing-axe",
 	Action = "research", Value = "upgrade-dwarven-sharp-throwing-axe",
 	Allowed = "check-single-research",
-	Key = "t", Hint = _("Research Sharp ~!Throwing Axe"), Popup = "popup-research",
-	Description = _("+2 Damage for Scouts and Gryphon Riders. Allows Sharp Throwing Axes to be sold at the Market."),
+	Key = "t", Hint = "Research Sharp ~!Throwing Axe", Popup = "popup-research",
+	Description = "+2 Damage for Scouts and Gryphon Riders. Allows Sharp Throwing Axes to be sold at the Market.",
 	ForUnit = {"unit-dwarven-lumber-mill"}
 } )
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-dwarven-bearded-throwing-axe",
 	Action = "research", Value = "upgrade-dwarven-bearded-throwing-axe",
 	Allowed = "check-single-research",
-	Key = "t", Hint = _("~!Research Bearded ~!Throwing Axe"), Popup = "popup-research",
-	Description = _("+1 Damage for Scouts and Gryphon Riders. Allows Bearded Throwing Axes to be sold at the Market."),
+	Key = "t", Hint = "Research Bearded ~!Throwing Axe", Popup = "popup-research",
+	Description = "+1 Damage for Scouts and Gryphon Riders. Allows Bearded Throwing Axes to be sold at the Market.",
 	ForUnit = {"unit-dwarven-lumber-mill"}
 } )
 
