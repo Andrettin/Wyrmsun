@@ -926,7 +926,7 @@ DefineUnitType("unit-teuton-priest", {
 
 DefineUnitType("unit-teuton-catapult", {
 	Name = "Catapult",
-	Parent = "unit-template-siege-engine",
+	Parent = "unit-template-catapult",
 	Civilization = "teuton",
 	Description = "These engines of war can be of great use in battering enemy fortifications.",
 	Image = {"file", "teuton/units/catapult.png", "size", {72, 72}},

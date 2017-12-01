@@ -3828,7 +3828,9 @@ DefineUnitType("unit-template-siege-engine", {
 	HitPoints = 110,
 	TileSize = {1, 1}, BoxSize = {63, 63},
 	SightRange = 9,
-	BasicDamage = 75, Missile = "missile-catapult-sandstone-rock",
+--	BasicDamage = 75,
+	BasicDamage = 60,
+	Missile = "missile-catapult-sandstone-rock",
 	MinAttackRange = 2, MaxAttackRange = 8,
 	Accuracy = 8,
 	Evasion = 2,
@@ -3853,7 +3855,20 @@ DefineUnitType("unit-template-siege-engine", {
 		"step-stone", "step-stone",
 		"step-grass", "step-leaves"
 	}
-} )
+})
+
+DefineUnitType("unit-template-catapult", {
+	Name = "Catapult",
+	Parent = "unit-template-siege-engine",
+	Accuracy = 7,
+	Missile = "missile-catapult-sandstone-rock",
+	BonusAgainstBuildings = 25
+})
+
+DefineUnitType("unit-template-ballista", {
+	Name = "Ballista",
+	Parent = "unit-template-siege-engine"
+})
 
 DefineUnitType("unit-template-ship", {
 	Name = "Ship",

@@ -1212,7 +1212,7 @@ DefineUnitType("unit-dwarven-gryphon-rider", {
 
 DefineUnitType("unit-dwarven-ballista", {
 	Name = "Ballista",
-	Parent = "unit-template-siege-engine",
+	Parent = "unit-template-ballista",
 	Civilization = "dwarf",
 	Description = "Dwarves employ heavy ballistas as their siege weapon of choice, with devastating effects on enemy fortifications.",
 	Image = {"file", "dwarf/units/dwarven_ballista.png", "size", {64, 64}},

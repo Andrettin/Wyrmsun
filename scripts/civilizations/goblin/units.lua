@@ -548,7 +548,7 @@ DefineUnitType("unit-goblin-shaman", {
 
 DefineUnitType("unit-goblin-war-machine", {
 	Name = "War Machine",
-	Parent = "unit-template-siege-engine",
+	Parent = "unit-template-catapult",
 	Civilization = "goblin",
 	Description = "One recurring element of the goblin architectural style is the use of bones. With their siege weapons, it is no different: the goblin war machine displays a wyrm skull on its front, along with the beast's ribs on its sides. This siege weapon has the marks of goblin craftsmanship, combining brilliant plans and excellent initiative with lack of patience to perfect the machine and make it achieve its full potential. The war machine can hold its own even against warriors skilled in hand-to-hand combat, as the goblins within it won't hesitate to pierce them with their spears. This comes at a cost, however, as cramming a catapult and a couple of goblins in such a relatively small space reduces the structural integrity of the siege weapon. The use of wyrm bones in the construction of the war machine is considered to be something of a profanation by kobolds, who worship the ancient beasts as their progenitors.",
 	Image = {"file", "goblin/units/goblin_war_machine.png", "size", {72, 72}},

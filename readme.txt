@@ -78,6 +78,9 @@ https://github.com/Andrettin/Wyrmsun
 - AI ranged units now try to maintain a certain distance between themselves and slower enemies with smaller range.
 - Fixed issue which caused units with minimum range (like catapults) to not move away and find a proper place to attack from, if ordered to attack an adjacent unit.
 - Fixed issue which caused the attack ground command to ignore minimum range.
+- Ballista bolts now move 50% faster, making them better at hitting units.
+- Catapults now have a small bonus against buildings, and are slightly less accurate.
+- Decreased siege engine base damage from 75 to 60.
 
 -----------------------------------------------------------------------
 - 3.0.0
