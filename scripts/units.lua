@@ -3916,7 +3916,7 @@ DefineUnitType("unit-template-siege-warship", {
 	Name = "Siege Warship",
 	Parent = "unit-template-ship",
 	Class = "siege-warship",
-	Animations = "animations-transport-ship", 
+	Animations = "animations-siege-warship", 
 	Costs = {"time", 90, "copper", 700, "lumber", 3150},
 	Speed = 10,
 	HitPoints = 100,

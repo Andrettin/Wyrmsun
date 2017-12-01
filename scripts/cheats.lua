@@ -187,6 +187,11 @@ function HandleCheats(str)
 		if (transport_ship_type) then
 			unit = CreateUnit(transport_ship_type, GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
 		end
+	elseif (str == "skidbladnir") then
+		local siege_warship_type = GetFactionClassUnitType("siege-warship", GetPlayerData(GetThisPlayer(), "Faction"))
+		if (siege_warship_type) then
+			unit = CreateUnit(siege_warship_type, GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
+		end
 	elseif (str == "jotun") then
 		unit = CreateUnit("unit-ettin", GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
 	else
