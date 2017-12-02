@@ -1,5 +1,0 @@
--- Stratagus Map Presentation
-
-DefinePlayerTypes("person","person","person","person","neutral")
-PresentMap("Scandinavia", 4, 128, 128, 1)
-MapWorld = "Earth"

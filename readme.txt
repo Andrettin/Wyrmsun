@@ -68,6 +68,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Maps
 - The Italy and Southern Baltic maps now support 8 players.
+- Removed the Scandinavia map, since its area is largely represented in the Southern Baltic map already.
 
 * Miscellaneous
 - Improved how the luxury resource automatic sale system works.
