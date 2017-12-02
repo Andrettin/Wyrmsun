@@ -1071,9 +1071,11 @@ if not (ui_loaded_first_time) then
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "produce-resource"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
+				--[[
 				{ 	Condition = {ButtonAction = "produce-resource"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Stored: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "Resources", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				--]]
 				{ 	Condition = {ButtonAction = "produce-resource"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Price: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "Prices", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},

@@ -69,6 +69,9 @@ https://github.com/Andrettin/Wyrmsun
 * Maps
 - The Italy and Southern Baltic maps now support 8 players.
 
+* Miscellaneous
+- Improved how the luxury resource automatic sale system works.
+
 * Scenarios
 - The Goldhoof Clan now starts with the Odin/Hroptatyr major deity in the A Home in the Fields of Sand scenario, so that its starting Witness can actually cast a spell.
 - Added dialogue between two dwarven workers for the The First Dwarves scenario in which they discuss stone furniture.
