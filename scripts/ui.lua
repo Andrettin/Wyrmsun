@@ -727,7 +727,7 @@ DefinePanelContents(
 		More = {"Text", {Text = "Trade Cost:"}}
 	},
 	{ Pos = {115, 103}, Condition = {ShowOpponent = false, TradeCost = "only", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
-		More = {"Text", {Text = Concat(String(ActiveUnitVar("TradeCost", "Value")), "%")}}
+		More = {"Text", {Text = Concat(String(PlayerData(ActiveUnitVar("Player", "Value"), "TradeCost")), "%")}}
 	},
 	
 	-- Construction
@@ -1079,6 +1079,12 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {ButtonAction = "produce-resource"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Price: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "Prices", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {ButtonAction = "produce-resource"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(Concat("Trade Cost: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "TradeCost"))), "%"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {ButtonAction = "produce-resource"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Effective Price: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "EffectiveResourceSellPrice", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {ButtonAction = "produce-resource", LuxuryResource = "only"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Demand: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "EffectiveResourceDemand", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -1105,7 +1111,7 @@ if not (ui_loaded_first_time) then
 					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Price: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "Prices", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {ButtonAction = "sell-resource"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = Concat("Trade Cost: ", Concat(String(ActiveUnitVar("TradeCost")), "%")), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = Concat("Trade Cost: ", Concat(String(PlayerData(ActiveUnitVar("Player", "Value"), "TradeCost")), "%")), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				-- Resource Buy
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "buy-resource"},
@@ -1130,7 +1136,7 @@ if not (ui_loaded_first_time) then
 					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Price: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "Prices", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {ButtonAction = "buy-resource"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = Concat("Trade Cost: ", Concat(String(ActiveUnitVar("TradeCost")), "%")), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = Concat("Trade Cost: ", Concat(String(PlayerData(ActiveUnitVar("Player", "Value"), "TradeCost")), "%")), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				-- Salvage Building
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "salvage"},
