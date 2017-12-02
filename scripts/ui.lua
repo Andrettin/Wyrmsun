@@ -1083,7 +1083,7 @@ if not (ui_loaded_first_time) then
 					More = {"Text", {Text = Concat(Concat("Trade Cost: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "TradeCost"))), "%"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {ButtonAction = "produce-resource"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Effective Price: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "EffectiveResourceSellPrice", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Effective Sell Price: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "EffectiveResourceSellPrice", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {ButtonAction = "produce-resource", LuxuryResource = "only"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Demand: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "EffectiveResourceDemand", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
@@ -1113,6 +1113,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {ButtonAction = "sell-resource"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = Concat("Trade Cost: ", Concat(String(PlayerData(ActiveUnitVar("Player", "Value"), "TradeCost")), "%")), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {ButtonAction = "sell-resource"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Effective Sell Price: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "EffectiveResourceSellPrice", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				-- Resource Buy
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "buy-resource"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
@@ -1137,6 +1140,9 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {ButtonAction = "buy-resource"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = Concat("Trade Cost: ", Concat(String(PlayerData(ActiveUnitVar("Player", "Value"), "TradeCost")), "%")), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {ButtonAction = "buy-resource"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Effective Buy Price: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "EffectiveResourceBuyPrice", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				-- Salvage Building
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "salvage"},
