@@ -67,7 +67,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added "of Smithing" magic suffix, which increases the worker's jewelry production rate.
 
 * Maps
-- The Italy map now supports 8 players.
+- The Italy and Southern Baltic maps now support 8 players.
 
 * Scenarios
 - The Goldhoof Clan now starts with the Odin/Hroptatyr major deity in the A Home in the Fields of Sand scenario, so that its starting Witness can actually cast a spell.
