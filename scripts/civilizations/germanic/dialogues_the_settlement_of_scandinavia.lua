@@ -117,7 +117,6 @@ DefineDialogue("on-the-vanaquisl-victory", {
 					if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "on-the-vanaquisl") then
 						CallDialogue("campaign-victory", trigger_player)
 					end
-					SetPlayerData(trigger_player, "CompleteQuest", "on-the-vanaquisl")
 				end
 			}
 		}
