@@ -26,35 +26,35 @@
 --
 
 DefinePredependency("unit-gnomish-worker",
-	{"upgrade-acthnic-tribe-faction", 0, "upgrade-derro-tribe-faction", 0}
+	{"upgrade-faction-acthnic-tribe", 0, "upgrade-faction-derro-tribe", 0}
 )
 
 DefinePredependency("unit-gnomish-recruit",
-	{"upgrade-acthnic-tribe-faction", 0, "upgrade-derro-tribe-faction", 0}
+	{"upgrade-faction-acthnic-tribe", 0, "upgrade-faction-derro-tribe", 0}
 )
 
 DefinePredependency("unit-gnomish-herbalist",
-	{"upgrade-acthnic-tribe-faction", 0}
+	{"upgrade-faction-acthnic-tribe", 0}
 )
 
 DefinePredependency("unit-deep-gnomish-worker",
-	{"upgrade-acthnic-tribe-faction"}
+	{"upgrade-faction-acthnic-tribe"}
 )
 
 DefinePredependency("unit-deep-gnomish-recruit",
-	{"upgrade-acthnic-tribe-faction"}
+	{"upgrade-faction-acthnic-tribe"}
 )
 
 DefinePredependency("unit-deep-gnomish-herbalist",
-	{"upgrade-acthnic-tribe-faction"}
+	{"upgrade-faction-acthnic-tribe"}
 )
 
 DefinePredependency("unit-derro-worker",
-	{"upgrade-derro-tribe-faction"}
+	{"upgrade-faction-derro-tribe"}
 )
 
 DefinePredependency("unit-derro-thug",
-	{"upgrade-derro-tribe-faction"}
+	{"upgrade-faction-derro-tribe"}
 )
 
 DefinePredependency("unit-gnomish-caravan",

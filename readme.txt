@@ -66,6 +66,9 @@ https://github.com/Andrettin/Wyrmsun
 * Items
 - Added "of Smithing" magic suffix, which increases the worker's jewelry production rate.
 
+* Maps
+- The Italy map now supports 8 players.
+
 * Scenarios
 - The Goldhoof Clan now starts with the Odin/Hroptatyr major deity in the A Home in the Fields of Sand scenario, so that its starting Witness can actually cast a spell.
 - Added dialogue between two dwarven workers for the The First Dwarves scenario in which they discuss stone furniture.

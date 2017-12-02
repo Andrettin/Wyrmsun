@@ -1154,16 +1154,38 @@ function StandardTriggers()
 	end
 end
 
-function GetCivilizationAvailableFactions(civilization)
-	local civilization_factions = GetFactions(civilization)
+function GetCivilizationAvailableFactions(civilization, faction_type)
+	if not (faction_type) then
+		faction_type = ""
+	end
+
+	local civilization_factions = GetFactions(civilization, faction_type)
 
 	-- remove faction names already in use
 	for i=0,(PlayerMax - 2) do
 		if (table.getn(civilization_factions) > 0 and GetPlayerData(i, "RaceName") == civilization) then
-			RemoveElementFromArray(civilization_factions, GetPlayerData(i, "Name"))
+			RemoveElementFromArray(civilization_factions, GetPlayerData(i, "Faction"))
 		end
 	end
 	return civilization_factions
+end
+
+function HasCivilizationAvailableFactions(civilization, faction_type)
+	local available_factions = GetCivilizationAvailableFactions(civilization, faction_type)
+	local players_without_faction = 0
+
+	-- remove faction names already in use
+	for i=0,(PlayerMax - 2) do
+		if (GetPlayerData(i, "RaceName") == civilization and GetPlayerData(i, "Faction") == "") then
+			players_without_faction = players_without_faction + 1
+		end
+	end
+	
+	if ((table.getn(available_factions) - players_without_faction) > 0) then
+		return true
+	else
+		return false
+	end
 end
 
 function GetCivilizationExists(civilization)

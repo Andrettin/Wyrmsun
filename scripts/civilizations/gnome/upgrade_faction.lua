@@ -25,50 +25,50 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUpgrade("upgrade-acthnic-tribe-faction", {
-	Name = _("Acthnic Tribe Faction")
+DefineUpgrade("upgrade-faction-acthnic-tribe", {
+	Name = "Acthnic Tribe Faction"
 })
 
-DefineUpgrade("upgrade-derro-tribe-faction", {
-	Name = _("Derro Tribe Faction")
+DefineUpgrade("upgrade-faction-derro-tribe", {
+	Name = "Derro Tribe Faction"
 })
 
-DefineUpgrade("upgrade-sagan-tribe-faction", {
-	Name = _("Sagan Tribe Faction")
+DefineUpgrade("upgrade-faction-sagan-tribe", {
+	Name = "Sagan Tribe Faction"
 })
 
-DefineModifier("upgrade-acthnic-tribe-faction",
+DefineModifier("upgrade-faction-acthnic-tribe",
 	{"apply-to", "unit-gnomish-worker"}, {"convert-to", "unit-deep-gnomish-worker"}
 )
 
-DefineModifier("upgrade-acthnic-tribe-faction",
+DefineModifier("upgrade-faction-acthnic-tribe",
 	{"apply-to", "unit-gnomish-recruit"}, {"convert-to", "unit-deep-gnomish-recruit"}
 )
 
-DefineModifier("upgrade-acthnic-tribe-faction",
+DefineModifier("upgrade-faction-acthnic-tribe",
 	{"apply-to", "unit-gnomish-duelist"}, {"convert-to", "unit-deep-gnomish-duelist"}
 )
 
-DefineModifier("upgrade-acthnic-tribe-faction",
+DefineModifier("upgrade-faction-acthnic-tribe",
 	{"apply-to", "unit-gnomish-master-at-arms"}, {"convert-to", "unit-deep-gnomish-master-at-arms"}
 )
 
-DefineModifier("upgrade-acthnic-tribe-faction",
+DefineModifier("upgrade-faction-acthnic-tribe",
 	{"apply-to", "unit-gnomish-herbalist"}, {"convert-to", "unit-deep-gnomish-herbalist"}
 )
 
-DefineModifier("upgrade-derro-tribe-faction",
+DefineModifier("upgrade-faction-derro-tribe",
 	{"apply-to", "unit-gnomish-worker"}, {"convert-to", "unit-derro-worker"}
 )
 
-DefineModifier("upgrade-derro-tribe-faction",
+DefineModifier("upgrade-faction-derro-tribe",
 	{"apply-to", "unit-gnomish-recruit"}, {"convert-to", "unit-derro-thug"}
 )
 
-DefineModifier("upgrade-derro-tribe-faction",
+DefineModifier("upgrade-faction-derro-tribe",
 	{"apply-to", "unit-gnomish-duelist"}, {"convert-to", "unit-derro-executioner"}
 )
 
-DefineModifier("upgrade-derro-tribe-faction",
+DefineModifier("upgrade-faction-derro-tribe",
 	{"apply-to", "unit-gnomish-master-at-arms"}, {"convert-to", "unit-derro-shadowguard"}
 )

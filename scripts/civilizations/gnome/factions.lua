@@ -30,7 +30,7 @@ DefineFaction("acthnic-tribe", { -- Source: Franz Hartmann, "Among the Gnomes", 
 	Civilization = "gnome",
 	Type = "tribe",
 	Colors = {"red"},
-	FactionUpgrade = "upgrade-acthnic-tribe-faction",
+	FactionUpgrade = "upgrade-faction-acthnic-tribe",
 	Description = "The Acthnic tribe lives deep underground, near the subterranean fires of their homelands. They're known for being dangerous and reckless, occasionally entering the territory of derros or goblins without invitation. Their sages are well-versed in the mysteries of lightning, but above all they are masters of the flame."
 })
 
@@ -48,7 +48,7 @@ DefineFaction("derro-tribe", {
 	Type = "tribe",
 	Colors = {"black", "purple", "violet"},
 	Playable = false,
-	FactionUpgrade = "upgrade-derro-tribe-faction",
+	FactionUpgrade = "upgrade-faction-derro-tribe",
 	Description = "The Derro are a cruel gnomish offshoot, which separated themselves from the rest of their kin aeons ago. They dwell in the dark depths of Nidavellir's tunnels, in caves isolated even from other underground denizens. These gnomish fiends think themselves uniquely gifted, being at the same time wary and disdainful of other peoples. They see individuals of other races trespassing on their territory as a great crime, and will gladly put them in their place with the most sadistic of measures."
 })
 
@@ -57,7 +57,7 @@ DefineFaction("sagan-tribe", { -- Source: Franz Hartmann, "Among the Gnomes", 18
 	Civilization = "gnome",
 	Type = "tribe",
 	Colors = {"green"},
-	FactionUpgrade = "upgrade-sagan-tribe-faction",
+	FactionUpgrade = "upgrade-faction-sagan-tribe",
 	Description = "Herbalists par excellence, the Sagans are devoted to tending to the body and soul of plants. The tribesfolk is known for being tall (for gnomes)."
 })
 

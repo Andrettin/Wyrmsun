@@ -95,6 +95,25 @@ DefineCharacter("tiberius-claudius-pompeianus", { -- Source: "Ancient Warfare VI
 	Faction = "rome"
 })
 
+DefineCharacter("syagrius", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51, 53.
+	Name = "Syagrius",
+	Gender = "male",
+	Type = "unit-teuton-knight-lord",
+	Civilization = "latin",
+	Faction = "rome",
+	Date = 486, -- was ruling his "kingdom" in 486
+	DeathDate = {486, 12, 30}, -- lost the "kingdom" to the Franks in 486
+	HistoricalLocations = {
+		486, "earth", "soissons"
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "rome") then
+			return true
+		end
+		return false
+	end
+})
+
 DefineCharacter("agatho", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 136.
 	Name = "Agatho",
 	Gender = "male",

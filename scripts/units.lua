@@ -137,6 +137,7 @@ Units = {
 	"upgrade-faction-surghan-mercenaries",
 	"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
 	"upgrade-gnomish-civilization",
+	"upgrade-faction-acthnic-tribe", "upgrade-faction-derro-tribe", "upgrade-faction-sagan-tribe",
 	"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist", "unit-gnomish-caravan",
 	"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
 	"unit-deep-gnomish-worker", "unit-deep-gnomish-recruit", "unit-deep-gnomish-duelist", "unit-deep-gnomish-master-at-arms", "unit-deep-gnomish-herbalist",
