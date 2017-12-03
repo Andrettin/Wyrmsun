@@ -259,16 +259,16 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-teuton-iron-shield",
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-catapult-projectile-2",
 	Action = "research", Value = "upgrade-teuton-catapult-projectile-1",
 	Allowed = "check-single-research",
-	Key = "c", Hint = _("Research Granite ~!Catapult Projectile"), Popup = "popup-research",
-	Description = "+15 Damage for Catapults.",
+	Key = "c", Hint = "Research Granite ~!Catapult Projectile", Popup = "popup-research",
+	Description = "+12 Damage for Catapults.",
 	ForUnit = {"unit-teuton-smithy", "unit-latin-smithy"}
 } )
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-catapult-projectile-3",
 	Action = "research", Value = "upgrade-teuton-catapult-projectile-2",
 	Allowed = "check-single-research",
-	Key = "c", Hint = _("Research Metal ~!Catapult Projectile"), Popup = "popup-research",
-	Description = "+15 Damage for Catapults.",
+	Key = "c", Hint = "Research Metal ~!Catapult Projectile", Popup = "popup-research",
+	Description = "+12 Damage for Catapults.",
 	ForUnit = {"unit-teuton-smithy", "unit-latin-smithy"}
 } )
 
@@ -315,7 +315,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-norse-runewriting",
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-cauldron",
 	Action = "research", Value = "upgrade-teuton-alchemy",
 	Allowed = "check-single-research",
-	Description = "+1 Fire Damage for Archers, +5 Fire Damage for Catapults. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market.",
+	Description = "+1 Fire Damage for Archers, +4 Fire Damage for Catapults. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market.",
 	Key = "a", Hint = "Research ~!Alchemy", Popup = "popup-research",
 	ForUnit = {"unit-teuton-university"}
 } )

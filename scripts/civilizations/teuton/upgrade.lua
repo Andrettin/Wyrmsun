@@ -68,14 +68,14 @@ DefineUpgrade("upgrade-teuton-catapult-projectile-1", {
 	Parent = "upgrade-catapult-granite-projectile",
 	Civilization = "teuton",
 	RequirementsString = "Carpenter's Shop/Lumber Mill",
-	Description = "As siegecrafting techniques develop, catapult rocks made out of sandstone are replaced by ones made of granite, increasing the damage catapults can cause.\n\nEffect: +15 Damage for Catapults."
+	Description = "As siegecrafting techniques develop, catapult rocks made out of sandstone are replaced by ones made of granite, increasing the damage catapults can cause.\n\nEffect: +12 Damage for Catapults."
 })
 
 DefineUpgrade("upgrade-teuton-catapult-projectile-2", {
 	Parent = "upgrade-catapult-metal-projectile",
 	Civilization = "teuton",
 	RequirementsString = "Carpenter's Shop/Lumber Mill and Catapult Granite Projectile",
-	Description = "Advances in metalworking make it possible to use metal balls as catapult projectiles, greatly magnifying the destructive power of those siege weapons.\n\nEffect: +15 Damage for Catapults."
+	Description = "Advances in metalworking make it possible to use metal balls as catapult projectiles, greatly magnifying the destructive power of those siege weapons.\n\nEffect: +12 Damage for Catapults."
 })
 
 DefineUpgrade("upgrade-teuton-masonry", {
@@ -100,7 +100,7 @@ DefineUpgrade("upgrade-teuton-writing", {
 DefineUpgrade("upgrade-teuton-alchemy", {
 	Parent = "upgrade-alchemy",
 	Civilization = "teuton",
-	Description = "Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Archers, +5 Fire Damage for Catapults. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market."
+	Description = "Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Archers, +4 Fire Damage for Catapults. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market."
 })
 
 DefineModifier("upgrade-teuton-spatha",
@@ -137,13 +137,13 @@ DefineModifier("upgrade-teuton-bodkin-arrow",
 )
 
 DefineModifier("upgrade-teuton-catapult-projectile-1",
-	{"BasicDamage", 15},
+	{"BasicDamage", 12},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-catapult"}
 )
 
 DefineModifier("upgrade-teuton-catapult-projectile-2",
-	{"BasicDamage", 15},
+	{"BasicDamage", 12},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-catapult"}
 )
@@ -198,7 +198,7 @@ DefineModifier("upgrade-teuton-alchemy",
 )
 
 DefineModifier("upgrade-teuton-alchemy",
-	{"FireDamage", 5},
+	{"FireDamage", 4},
 	{"Points", 5},
 	{"apply-to", "unit-teuton-catapult"}
 )

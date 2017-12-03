@@ -102,13 +102,13 @@ DefineUpgrade("upgrade-goblin-bodkin-arrow", {
 DefineUpgrade("upgrade-goblin-catapult-projectile-1", {
 	Parent = "upgrade-catapult-granite-projectile",
 	Civilization = "goblin",
-	Description = _("As siegecrafting techniques develop, catapult rocks made out of sandstone are replaced by ones made of granite, increasing the damage war machines can cause.\n\nEffect: +15 Damage for War Machines.")
+	Description = "As siegecrafting techniques develop, catapult rocks made out of sandstone are replaced by ones made of granite, increasing the damage war machines can cause.\n\nEffect: +12 Damage for War Machines."
 })
 
 DefineUpgrade("upgrade-goblin-catapult-projectile-2", {
 	Parent = "upgrade-catapult-metal-projectile",
 	Civilization = "goblin",
-	Description = _("Advances in metalworking make it possible to use metal balls as catapult projectiles, greatly magnifying the destructive power of war machines.\n\nEffect: +15 Damage for War Machines.")
+	Description = "Advances in metalworking make it possible to use metal balls as catapult projectiles, greatly magnifying the destructive power of war machines.\n\nEffect: +12 Damage for War Machines."
 })
 
 DefineUpgrade("upgrade-goblin-masonry", {
@@ -133,7 +133,7 @@ DefineUpgrade("upgrade-goblin-writing", {
 DefineUpgrade("upgrade-goblin-alchemy", {
 	Parent = "upgrade-alchemy",
 	Civilization = "goblin",
-	Description = "Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Archers and Headhunters, +5 Fire Damage for War Machines. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market."
+	Description = "Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Archers and Headhunters, +4 Fire Damage for War Machines. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market."
 })
 
 DefineModifier("upgrade-goblin-broad-sword",
@@ -191,13 +191,13 @@ DefineModifier("upgrade-goblin-bodkin-arrow",
 )
 
 DefineModifier("upgrade-goblin-catapult-projectile-1",
-	{"BasicDamage", 15},
+	{"BasicDamage", 12},
 	{"Points", 10},
 	{"apply-to", "unit-goblin-war-machine"}
 )
 
 DefineModifier("upgrade-goblin-catapult-projectile-2",
-	{"BasicDamage", 15},
+	{"BasicDamage", 12},
 	{"Points", 10},
 	{"apply-to", "unit-goblin-war-machine"}
 )
@@ -242,7 +242,7 @@ DefineModifier("upgrade-goblin-alchemy",
 )
 
 DefineModifier("upgrade-goblin-alchemy",
-	{"FireDamage", 5},
+	{"FireDamage", 4},
 	{"Points", 5},
 	{"apply-to", "unit-goblin-war-machine"}
 )

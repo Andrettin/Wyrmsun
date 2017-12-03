@@ -67,7 +67,7 @@ DefineUpgrade("upgrade-faction-shinsplitter-clan", {
 
 DefineUpgrade("upgrade-faction-shorbear-clan", {
 	Name = "Shorbear Clan",
-	EffectsString = "+15 Damage for Ballistas",
+	EffectsString = "+12 Damage for Ballistas",
 	RequirementsString = "Smithy"
 })
 
@@ -227,7 +227,7 @@ DefineModifier("upgrade-faction-shinsplitter-clan",
 )
 
 DefineModifier("upgrade-faction-shorbear-clan",
-	{"BasicDamage", 15},
+	{"BasicDamage", 12},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-ballista"}
 )
