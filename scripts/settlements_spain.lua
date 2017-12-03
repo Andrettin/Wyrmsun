@@ -86,6 +86,24 @@ DefineSettlement("cadiz", {
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
+DefineSettlement("calahorra", {
+	Name = "Calahorra",
+	MapTemplate = "earth",
+	Position = {3798, 1088},
+	CulturalNames = {
+		"castillian", "Calahorra"
+	},
+	HistoricalOwners = {
+		395, "rome", -- Calahorra was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		486, "visigothia", -- Calahorra's area was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		1560, "spain" -- Calahorra's area was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		395, 0, "temple" -- Calahorra was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+	},
+	Regions = {"europe", "iberia", "west-and-central-europe"}
+})
+
 DefineSettlement("cartagena", {
 	Name = "New Carthage",
 	MapTemplate = "earth",
@@ -102,7 +120,8 @@ DefineSettlement("cartagena", {
 		1560, "spain" -- Cartagena was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		-218, 0, "farm"
+		-218, 395, "farm",
+		395, 0, "temple" -- Cartagena was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
@@ -123,6 +142,25 @@ DefineSettlement("cordoba", {
 	HistoricalBuildings = {
 		-197, 1572, "farm",
 		1572, 0, "university" -- Minor university founded in Cordoba in 1572; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
+	},
+	Regions = {"europe", "iberia", "west-and-central-europe"}
+})
+
+DefineSettlement("gerona", {
+	Name = "Gerona",
+	MapTemplate = "earth",
+	Position = {3902, 1093},
+	CulturalNames = {
+		"castillian", "Gerona"
+	},
+	HistoricalOwners = {
+		395, "rome", -- Gerona was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		481, "visigothia", -- Gerona's area was a Visigothic possession in the 481-801 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		486, "visigothia", -- Gerona's area was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		1560, "spain" -- Gerona's area was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		395, 0, "temple" -- Gerona was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
@@ -379,15 +417,18 @@ DefineSettlement("zaragoza", {
 	Name = "Zaragoza",
 	MapTemplate = "earth",
 	Position = {3824, 1103},
+	Major = true,
 	CulturalNames = {
 		"castillian", "Zaragoza"
 	},
 	HistoricalOwners = {
+		395, "rome", -- Saragossa was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		486, "visigothia", -- Saragossa was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		1560, "spain" -- Saragossa was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		486, 1474, "farm",
+		395, 0, "town-hall",
+		395, 0, "temple", -- Saragossa was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		1474, 0, "university" -- University founded in Zaragoza in 1474; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	Regions = {"europe", "iberia", "west-and-central-europe"}
