@@ -89,6 +89,8 @@ https://github.com/Andrettin/Wyrmsun
 - Ballista bolts now move 50% faster, making them better at hitting units.
 - Catapults now have a small bonus against buildings, and are slightly less accurate.
 - Decreased siege engine base damage from 75 to 60.
+- Shift-clicking a unit training button will now train 5 units of that type.
+- If the same unit type is queued for training multiple times, it will now show as one icon with the number of trained units on it.
 
 -----------------------------------------------------------------------
 - 3.0.0
