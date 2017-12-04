@@ -62,6 +62,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Buildings
 - Barracks, Lumber Mills, Smithies, Mason's Shops, Stables, Temples, Markets, Docks and Universities now have a (cumulative) cost modifier increase of 25% for each building of that type that you construct.
+- Added encyclopedia entries for roads and railroads, clarifying that railroads' speed bonus apply to all land units, not just rail ones.
 
 * Items
 - Added "of Smithing" magic suffix, which increases the worker's jewelry production rate.
