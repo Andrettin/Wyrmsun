@@ -254,7 +254,7 @@ DefineUpgrade("upgrade-philosophy", {
 	Class = "philosophy",
 	Civilization = "neutral",
 	Icon = "icon-philosophy",
-	Description = "The new modes of thinking fostered by the development of philosophy result in the improvement of the rate of technical and cultural advancement.\n\nEffect: +10% Research Speed for buildings.",
+	Description = "The new modes of thinking fostered by the development of philosophy result in the improvement of the rate of technical and cultural advancement.\n\nEffect: +25% Research Speed for buildings.",
 	RequirementsString = "Writing",
 	Costs = {"time", 250, "copper", 2000}
 })
@@ -346,7 +346,7 @@ DefineModifier("upgrade-architecture",
 )
 
 DefineModifier("upgrade-philosophy",
-	{"ResearchSpeedBonus", 10},
+	{"ResearchSpeedBonus", 25},
 	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"},
 	{"apply-to", "unit-dwarven-barracks"},
 	{"apply-to", "unit-dwarven-lumber-mill"}, {"apply-to", "unit-dwarven-smithy"}, {"apply-to", "unit-brising-smithy"},

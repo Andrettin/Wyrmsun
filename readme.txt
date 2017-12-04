@@ -93,6 +93,9 @@ https://github.com/Andrettin/Wyrmsun
 - Shift-clicking a unit training button will now train 5 units of that type.
 - If the same unit type is queued for training multiple times, it will now show as one icon with the number of trained units on it.
 
+* Upgrades
+- Philosophy now grants +25% research speed instead of +10%.
+
 -----------------------------------------------------------------------
 - 3.0.0
 -----------------------------------------------------------------------
