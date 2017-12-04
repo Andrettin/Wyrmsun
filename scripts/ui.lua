@@ -1388,7 +1388,7 @@ if not (ui_loaded_first_time) then
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{	Condition = {ButtonAction = "train-unit"},
-					More = {"Text", {Text = _("Shift-click to train 5"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("~<SHIFT~>-click to train 5"), Font = wyr.preferences.PopupDescriptionFont}}
 				}, 
 				{ 	Condition = {ButtonAction = "train-unit"}, Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}

@@ -49,3 +49,12 @@ DefineDialogue("chlodwig-meets-syagrius", {
 		}
 	}
 })
+
+DefineDialogue("syagrius-dies", {
+	Nodes = {
+		{
+			"speaker", "character", "chlodwig",
+			"text", "A honorable warrior... my respects, Syagrius."
+		}
+	}
+})
