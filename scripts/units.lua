@@ -563,9 +563,9 @@ DefineUnitType("unit-settlement-site", {
 DefineUnitType("unit-template-base-mine", {
 	Name = "Mine",
 	Parent = "unit-template-building",
-	Animations = "animations-mine",
+	Animations = "animations-active-building",
 	NeutralMinimapColor = {255, 255, 0},
-	Construction = "construction-mine",
+	Construction = "construction-land-active",
 	RepairHp = 4,
 	RepairCosts = {"copper", 1, "lumber", 1},
 	HitPoints = 650,
@@ -716,7 +716,7 @@ DefineUnitType("unit-coal-mine", {
 	Parent = "unit-template-building",
 	Description = "Coal is a valuable heating material.",
 	Image = {"file", "neutral/buildings/coal_mine.png", "size", {96, 96}},
-	Animations = "animations-mine", Icon = "icon-coal-mine",
+	Animations = "animations-active-building", Icon = "icon-coal-mine",
 	NeutralMinimapColor = {255, 255, 0},
 	Costs = {"time", 150},
 	Construction = "construction-land2",
@@ -3264,6 +3264,43 @@ DefineUnitType("unit-template-expert-miner", {
 	GemsGatheringBonus = 4
 } )
 
+DefineUnitType("unit-template-journeyman-smith", {
+	Name = "Journeyman Smith",
+	Parent = "unit-template-worker",
+	Class = "journeyman-smith",
+	HitPoints = 40,
+	BasicDamage = 6,
+	Accuracy = 9,
+	Points = 45,
+	Level = 2,
+	JewelryGatheringBonus = 2
+} )
+
+DefineUnitType("unit-template-master-smith", {
+	Name = "Master Smith",
+	Parent = "unit-template-journeyman-smith",
+	Class = "master-smith",
+	HitPoints = 50,
+	BasicDamage = 7,
+	Accuracy = 10,
+	Points = 60,
+	Level = 3,
+	Inventory = true,
+	JewelryGatheringBonus = 4
+} )
+
+DefineUnitType("unit-template-grandmaster-smith", {
+	Name = "Grandmaster Smith",
+	Parent = "unit-template-master-smith",
+	Class = "master-smith",
+	HitPoints = 50,
+	BasicDamage = 7,
+	Accuracy = 10,
+	Points = 60,
+	Level = 4,
+	JewelryGatheringBonus = 6
+} )
+
 DefineUnitType("unit-template-militia", {
 	Name = "Militia",
 	Parent = "unit-template-sapient-unit",
@@ -4160,7 +4197,8 @@ DefineUnitType("unit-template-smithy", {
 	Costs = {"time", 200, "copper", 800, "lumber", 1650},
 	RepairHp = 4,
 	RepairCosts = {"copper", 1, "lumber", 1},
-	Construction = "construction-land",
+	Construction = "construction-land-active",
+	Animations = "animations-active-building",
 	HitPoints = 646, -- 775 with masonry
 	TileSize = {3, 3}, BoxSize = {95, 95},
 	OwnershipInfluenceRange = 2,

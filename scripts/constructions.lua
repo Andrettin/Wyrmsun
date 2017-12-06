@@ -26,19 +26,27 @@
 --
 
 DefineConstruction("construction-none", {
-  Files = {
-    File = "neutral/buildings/land_construction_site.png",
-    Size = {64, 64}},
-  Constructions = {
-   {Percent = 0,
-    File = "construction",
-    Frame = 0},
-   {Percent = 25,
-    File = "construction",
-    Frame = 1},
-   {Percent = 50,
-    File = "main",
-    Frame = 1}}
+	Files = {
+		File = "neutral/buildings/land_construction_site.png",
+		Size = {64, 64}
+	},
+	Constructions = {
+		{
+			Percent = 0,
+			File = "construction",
+			Frame = 0
+		},
+		{
+			Percent = 25,
+			File = "construction",
+			Frame = 1
+		},
+		{
+			Percent = 50,
+			File = "main",
+			Frame = 1
+		}
+	}
 })
 
 DefineConstruction("construction-land", {
@@ -84,7 +92,7 @@ DefineConstruction("construction-land-simple", {
 	}
 })
 
-DefineConstruction("construction-mine", {
+DefineConstruction("construction-land-active", {
 	Constructions = {
 		{
 			Percent = 0,

@@ -63,6 +63,7 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Barracks, Lumber Mills, Smithies, Mason's Shops, Stables, Temples, Markets, Docks and Universities now have a (cumulative) cost modifier increase of 25% for each building of that type that you construct.
 - Added encyclopedia entries for roads and railroads, clarifying that railroads' speed bonus apply to all land units, not just rail ones.
+- Smithies now have "active" graphics, used when resources are being produced in or delivered to them, or when they are researching an upgrade.
 
 * Items
 - Added "of Smithing" magic suffix, which increases the worker's jewelry production rate.
@@ -92,6 +93,7 @@ https://github.com/Andrettin/Wyrmsun
 - Decreased siege engine base damage from 75 to 60.
 - Shift-clicking a unit training button will now train 5 units of that type.
 - If the same unit type is queued for training multiple times, it will now show as one icon with the number of trained units on it.
+- Added the dwarven Runesmith (icon by Jinn, unit graphics by Jinn and b_o), an upgrade of the Miner that produces Jewelry faster and can handle itself in combat. The Runesmith can upgrade to Runemaster and then to Arcanister.
 
 * Upgrades
 - Philosophy now grants +25% research speed instead of +10%.

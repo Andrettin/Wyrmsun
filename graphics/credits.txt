@@ -239,6 +239,7 @@
 /graphics/dwarf/units/robe.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/units/rugnur.png (by b_o) (licensed under the GPL 2.0)
 /graphics/dwarf/units/runesmith.png (by Jinn and b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/runesmith_with_gold.png (by Jinn and b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/dwarf/units/thane.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/dwarf/units/thane_black_hair.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/dwarf/units/thane_blond_hair.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
