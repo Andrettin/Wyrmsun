@@ -179,6 +179,16 @@ DefineUnitType("unit-hammer", {
 	BasicDamage = 0
 } )
 
+DefineUnitType("unit-runesmiths-hammer", {
+	Name = "Runesmith's Hammer",
+	Parent = "unit-template-item",
+	Costs = {"copper", 100},
+	Image = {"file", "neutral/items/hammer.png", "size", {32, 32}},
+	Icon = "icon-dwarven-runesmiths-hammer",
+	ItemClass = "mace",
+	BasicDamage = 0
+} )
+
 DefineUnitType("unit-mining-pick", {
 	Name = "Mining Pick",
 	Parent = "unit-template-item",

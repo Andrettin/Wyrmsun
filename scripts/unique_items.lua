@@ -129,7 +129,7 @@ DefineUniqueItem("sigrljoma", { -- Source: Paul Beekman Taylor, "Searoniðas: Ol
 
 DefineUniqueItem("the-hammer-of-thursagan", {
 	Name = "The Hammer of Thursagan",
-	Type = "unit-hammer",
+	Type = "unit-runesmiths-hammer",
 	Prefix = "upgrade-item-prefix-flaming",
 	Suffix = "upgrade-item-suffix-of-victory",
 --	Quote = "\"The very tool with which our greatest runesmith made the Scepter of Fire. But it is ancient, far older than Thursagan; he was but the last to wield it, and our oldest histories hint that this very hammer was used to forge the dwarves themselves in the heart of the earth.\"\n- Angarthing"

@@ -85,6 +85,8 @@
 /graphics/dwarf/icons/rugnur_older.png (by Jinn) (licensed under the GPL 2.0)
 /graphics/dwarf/icons/runemaster.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/icons/runesmith.png (by Jinn) (licensed under the CC0)
+/graphics/dwarf/icons/runesmiths_hammer.png (by Jinn) (licensed under the CC0)
+/graphics/dwarf/icons/runesmiths_hammer_extra_1.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/icons/sharp_throwing_axe.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/icons/shield_1.png (by igoku and Jinn) (licensed under the GPL 2.0)
 /graphics/dwarf/icons/shield_2.png (by Exidelo) (licensed under the CC0)

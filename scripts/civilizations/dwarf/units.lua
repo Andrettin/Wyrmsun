@@ -277,13 +277,14 @@ DefineUnitType("unit-dwarven-runesmith", {
 	Image = {"file", "dwarf/units/runesmith.png", "size", {72, 72}},
 	Animations = "animations-dwarven-miner", Icon = "icon-dwarven-runesmith",
 	DefaultEquipment = {
+		{"weapon", "unit-runesmiths-hammer"},
 		{"boots", "unit-boots"}
 	},
 	Armor = 3,
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClasses = {"mace"},
 	BluntDamage = true,
-	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
+	AiDrops = {"unit-hammer", "unit-runesmiths-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
 	CanGatherResources = {
 		{
 			"resource-id", "gold",
@@ -354,13 +355,14 @@ DefineUnitType("unit-dwarven-runemaster", {
 	Image = {"file", "dwarf/units/runesmith.png", "size", {72, 72}},
 	Animations = "animations-dwarven-miner", Icon = "icon-dwarven-runemaster",
 	DefaultEquipment = {
+		{"weapon", "unit-runesmiths-hammer"},
 		{"boots", "unit-boots"}
 	},
 	Armor = 5,
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClasses = {"mace"},
 	BluntDamage = true,
-	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
+	AiDrops = {"unit-hammer", "unit-runesmiths-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
 	CanGatherResources = {
 		{
 			"resource-id", "gold",
@@ -431,13 +433,14 @@ DefineUnitType("unit-dwarven-arcanister", {
 	Image = {"file", "dwarf/units/runesmith.png", "size", {72, 72}},
 	Animations = "animations-dwarven-miner", Icon = "icon-dwarven-arcanister",
 	DefaultEquipment = {
+		{"weapon", "unit-runesmiths-hammer"},
 		{"boots", "unit-boots"}
 	},
 	Armor = 6,
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClasses = {"mace"},
 	BluntDamage = true,
-	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
+	AiDrops = {"unit-hammer", "unit-runesmiths-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
 	CanGatherResources = {
 		{
 			"resource-id", "gold",
@@ -601,6 +604,7 @@ DefineUnitType("unit-dwarven-axefighter", {
 			"variation-id", "axe",
 			"upgrade-forbidden", "upgrade-dwarven-great-axe",
 			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-runesmiths-hammer",
 			"item-not-equipped", "unit-mining-pick",
 			"item-not-equipped", "unit-great-axe"
 		},
@@ -610,6 +614,7 @@ DefineUnitType("unit-dwarven-axefighter", {
 			"file", "dwarf/units/weapons/double_axe.png",
 			"upgrade-required", "upgrade-dwarven-great-axe",
 			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-runesmiths-hammer",
 			"item-not-equipped", "unit-mining-pick",
 			"item-equipped", "unit-great-axe"
 		},
@@ -618,6 +623,7 @@ DefineUnitType("unit-dwarven-axefighter", {
 			"variation-id", "mace",
 			"file", "dwarf/units/weapons/mace.png",
 			"item-equipped", "unit-hammer",
+			"item-equipped", "unit-runesmiths-hammer",
 			"item-equipped", "unit-mining-pick"
 		},
 		{
@@ -739,6 +745,7 @@ DefineUnitType("unit-dwarven-steelclad", {
 			"variation-id", "axe",
 			"upgrade-forbidden", "upgrade-dwarven-great-axe",
 			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-runesmiths-hammer",
 			"item-not-equipped", "unit-mining-pick",
 			"item-not-equipped", "unit-great-axe"
 		},
@@ -748,6 +755,7 @@ DefineUnitType("unit-dwarven-steelclad", {
 			"file", "dwarf/units/weapons/double_axe.png",
 			"upgrade-required", "upgrade-dwarven-great-axe",
 			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-runesmiths-hammer",
 			"item-not-equipped", "unit-mining-pick",
 			"item-equipped", "unit-great-axe"
 		},
@@ -756,6 +764,7 @@ DefineUnitType("unit-dwarven-steelclad", {
 			"variation-id", "mace",
 			"file", "dwarf/units/weapons/mace.png",
 			"item-equipped", "unit-hammer",
+			"item-equipped", "unit-runesmiths-hammer",
 			"item-equipped", "unit-mining-pick"
 		},
 		{
@@ -1720,7 +1729,7 @@ DefineUnitType("unit-dwarven-smithy", {
 	RepairCosts = {"lumber", 0, "stone", 1},
 	FireResistance = 20,
 	Drops = {"unit-stone-pile"},
-	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-hand-cannon", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-spatha"}, -- drops Spatha to allow dropping dwarven unique swords
+	AiDrops = {"unit-runesmiths-hammer", "unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-hand-cannon", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-spatha"}, -- drops Spatha to allow dropping dwarven unique swords
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
@@ -1832,7 +1841,7 @@ DefineUnitType("unit-dwarven-market", {
 	Costs = {"lumber", 900, "stone", 450},
 	RepairCosts = {"copper", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
-	SoldUnits = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-thrusting-sword", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-wool-shoes", "unit-furry-wool-shoes"},
+	SoldUnits = {"unit-runesmiths-hammer", "unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-thrusting-sword", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-wool-shoes", "unit-furry-wool-shoes"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
@@ -1901,6 +1910,7 @@ DefineUnitType("unit-surghan-mercenary-axefighter", {
 			"variation-id", "axe",
 			"upgrade-forbidden", "upgrade-dwarven-great-axe",
 			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-runesmiths-hammer",
 			"item-not-equipped", "unit-mining-pick",
 			"item-not-equipped", "unit-great-axe"
 		},
@@ -1910,6 +1920,7 @@ DefineUnitType("unit-surghan-mercenary-axefighter", {
 			"file", "dwarf/units/weapons/double_axe.png",
 			"upgrade-required", "upgrade-dwarven-great-axe",
 			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-runesmiths-hammer",
 			"item-not-equipped", "unit-mining-pick",
 			"item-equipped", "unit-great-axe"
 		},
@@ -1918,6 +1929,7 @@ DefineUnitType("unit-surghan-mercenary-axefighter", {
 			"variation-id", "mace",
 			"file", "dwarf/units/weapons/mace.png",
 			"item-equipped", "unit-hammer",
+			"item-equipped", "unit-runesmiths-hammer",
 			"item-equipped", "unit-mining-pick"
 		},
 		{
@@ -1957,6 +1969,7 @@ DefineUnitType("unit-surghan-mercenary-steelclad", {
 			"variation-id", "axe",
 			"upgrade-forbidden", "upgrade-dwarven-great-axe",
 			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-runesmiths-hammer",
 			"item-not-equipped", "unit-mining-pick",
 			"item-not-equipped", "unit-great-axe"
 		},
@@ -1966,6 +1979,7 @@ DefineUnitType("unit-surghan-mercenary-steelclad", {
 			"file", "dwarf/units/weapons/double_axe.png",
 			"upgrade-required", "upgrade-dwarven-great-axe",
 			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-runesmiths-hammer",
 			"item-not-equipped", "unit-mining-pick",
 			"item-equipped", "unit-great-axe"
 		},
@@ -1974,6 +1988,7 @@ DefineUnitType("unit-surghan-mercenary-steelclad", {
 			"variation-id", "mace",
 			"file", "dwarf/units/weapons/mace.png",
 			"item-equipped", "unit-hammer",
+			"item-equipped", "unit-runesmiths-hammer",
 			"item-equipped", "unit-mining-pick"
 		},
 		{

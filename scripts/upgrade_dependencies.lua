@@ -205,6 +205,11 @@ DefineDependency("unit-hammer",
 	"or", {"unit-teuton-smithy"}
 )
 
+DefineDependency("unit-runesmiths-hammer",
+	{"unit-brising-smithy"},
+	"or", {"unit-dwarven-smithy"}
+)
+
 DefineDependency("unit-mining-pick",
 	{"unit-brising-smithy"},
 	"or", {"unit-dwarven-smithy"},

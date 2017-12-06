@@ -70,6 +70,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Items
 - Added "of Smithing" magic suffix, which increases the worker's jewelry production rate.
+- Added Runesmith's Hammer item (icon by Jinn).
 
 * Maps
 - The Italy and Southern Baltic maps now support 8 players.
