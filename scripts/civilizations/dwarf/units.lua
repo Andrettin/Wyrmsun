@@ -269,6 +269,237 @@ DefineUnitType("unit-dwarven-expert-miner", {
 	}
 } )
 
+DefineUnitType("unit-dwarven-runesmith", {
+	Name = "Runesmith",
+	Parent = "unit-template-journeyman-smith",
+	Civilization = "dwarf",
+	Description = "Dwarven runesmiths are renowned throughout Nidavellir for their craft. They carve arcane runes into the weapons and armor they make, infusing them with power.",
+	Image = {"file", "dwarf/units/runesmith.png", "size", {72, 72}},
+	Animations = "animations-dwarven-miner", Icon = "icon-dwarven-runesmith",
+	DefaultEquipment = {
+		{"boots", "unit-boots"}
+	},
+	Armor = 3,
+	Corpse = "unit-dwarven-dead-body",
+	WeaponClasses = {"mace"},
+	BluntDamage = true,
+	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
+	CanGatherResources = {
+		{
+			"resource-id", "gold",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "silver",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "copper",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "lumber",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "stone",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "limestone",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "coal",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "jewelry",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "furniture",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "leather",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "diamonds",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "emeralds",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		}
+	},
+	Sounds = {
+		"selected", "basic-dwarf-voices-selected-group",
+		"acknowledge", "dwarven-miner-acknowledge",
+		"attack", "basic-dwarf-voices-attack",
+		"ready", "dwarven-miner-ready",
+		"help", "basic-dwarf-voices-help",
+		"dead", "basic-dwarf-voices-dead",
+		"hit", "mace-attack",
+		"miss", "attack-miss"
+	}
+} )
+
+DefineUnitType("unit-dwarven-runemaster", {
+	Name = "Runemaster",
+	Parent = "unit-template-master-smith",
+	Civilization = "dwarf",
+	Description = "Except for those with almost supernatural skill, the highest rank a runecrafter can rise to is that of the runemaster.",
+	Image = {"file", "dwarf/units/runesmith.png", "size", {72, 72}},
+	Animations = "animations-dwarven-miner", Icon = "icon-dwarven-runemaster",
+	DefaultEquipment = {
+		{"boots", "unit-boots"}
+	},
+	Armor = 5,
+	Corpse = "unit-dwarven-dead-body",
+	WeaponClasses = {"mace"},
+	BluntDamage = true,
+	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
+	CanGatherResources = {
+		{
+			"resource-id", "gold",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "silver",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "copper",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "lumber",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "stone",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "limestone",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "coal",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "jewelry",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "furniture",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "leather",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "diamonds",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "emeralds",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		}
+	},
+	Sounds = {
+		"selected", "basic-dwarf-voices-selected-group",
+		"acknowledge", "dwarven-miner-acknowledge",
+		"attack", "basic-dwarf-voices-attack",
+		"ready", "dwarven-miner-ready",
+		"help", "basic-dwarf-voices-help",
+		"dead", "basic-dwarf-voices-dead",
+		"hit", "mace-attack",
+		"miss", "attack-miss"
+	}
+} )
+
+DefineUnitType("unit-dwarven-arcanister", {
+	Name = "Arcanister",
+	Parent = "unit-template-grandmaster-smith",
+	Civilization = "dwarf",
+	Description = "The most powerful of all the runecrafters, the dwarven arcanister's skill in runesmithing is unrivaled, and the glyphs he carves into  weapons and armor are imbued with tremendous power.",
+	Image = {"file", "dwarf/units/runesmith.png", "size", {72, 72}},
+	Animations = "animations-dwarven-miner", Icon = "icon-dwarven-arcanister",
+	DefaultEquipment = {
+		{"boots", "unit-boots"}
+	},
+	Armor = 6,
+	Corpse = "unit-dwarven-dead-body",
+	WeaponClasses = {"mace"},
+	BluntDamage = true,
+	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
+	CanGatherResources = {
+		{
+			"resource-id", "gold",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "silver",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "copper",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "lumber",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "stone",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "limestone",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "coal",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "jewelry",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "furniture",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "leather",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "diamonds",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "emeralds",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		}
+	},
+	Sounds = {
+		"selected", "basic-dwarf-voices-selected-group",
+		"acknowledge", "dwarven-miner-acknowledge",
+		"attack", "basic-dwarf-voices-attack",
+		"ready", "dwarven-miner-ready",
+		"help", "basic-dwarf-voices-help",
+		"dead", "basic-dwarf-voices-dead",
+		"hit", "mace-attack",
+		"miss", "attack-miss"
+	}
+} )
+
 DefineUnitType("unit-dwarven-militia", {
 	Parent = "unit-template-militia",
 	Civilization = "dwarf",

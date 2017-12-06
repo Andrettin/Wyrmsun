@@ -64,6 +64,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-repair",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker"
@@ -76,6 +77,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-harvest",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker",
@@ -89,6 +91,7 @@ DefineButton( { Pos = 5, Level = 0,
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker",
@@ -105,6 +108,7 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-build-basic-structure",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker"
@@ -377,6 +381,7 @@ DefineButton( { Pos = 14, Level = 0, Icon = "icon-level-up",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker"
@@ -388,7 +393,7 @@ DefineButton( { Pos = 1, Level = 2, Icon = "icon-mace-mastery",
 	Key = "m", Hint = "Learn ~!Mace Mastery", Popup = "popup-learn-ability",
 	Description = "Mace Mastery is a passive ability that increases damage with maces by 2",
 	ForUnit = {
-		"unit-dwarven-expert-miner", "unit-brising-expert-miner"
+		"unit-dwarven-expert-miner", "unit-brising-expert-miner", "unit-dwarven-arcanister"
 	}
 } )
 
@@ -493,7 +498,7 @@ DefineButton( { Pos = 2, Level = 2, Icon = "icon-critical-strike",
 	Key = "c", Hint = "Learn ~!Critical Strike", Popup = "popup-learn-ability",
 	Description = "Critical Strike is a passive ability that provides a 10% chance to deal double damage in combat. In No Randomness mode it provides a 10% damage bonus instead",
 	ForUnit = {
-		"unit-dwarven-expert-miner", "unit-brising-expert-miner",
+		"unit-dwarven-expert-miner", "unit-brising-expert-miner", "unit-dwarven-arcanister",
 		"unit-dwarven-thane",
 		"unit-dwarven-guard",
 		"unit-dwarven-yale-lord",
@@ -524,6 +529,7 @@ DefineButton( { Pos = 3, Level = 2, Icon = "icon-deadly-precision",
 	Key = "d", Hint = "Learn ~!Deadly Precision", Popup = "popup-learn-ability",
 	Description = "Deadly Precision is a passive ability that increases critical strike chance by 10%. In No Randomness mode it provides a 10% damage bonus instead",
 	ForUnit = {
+		"unit-dwarven-arcanister",
 		"unit-dwarven-thane",
 		"unit-dwarven-guard",
 		"unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
@@ -594,6 +600,7 @@ DefineButton( { Pos = 5, Level = 2, Icon = "icon-stun",
 	Key = "u", Hint = "Learn St~!un", Popup = "popup-learn-ability",
 	Description = "Stun is an active ability which does a stunning attack on a target, leaving it paralyzed for a few moments",
 	ForUnit = {
+		"unit-dwarven-arcanister",
 		"unit-dwarven-thane",
 		"unit-dwarven-yale-lord",
 		"unit-joruvellir-yale-lord",
@@ -664,7 +671,7 @@ DefineButton( { Pos = 8, Level = 2, Icon = "icon-toughness",
 	Key = "o", Hint = "Learn T~!oughness", Popup = "popup-learn-ability",
 	Description = "Toughness is a passive ability that increases HP by 10",
 	ForUnit = {
-		"unit-dwarven-expert-miner", "unit-brising-expert-miner",
+		"unit-dwarven-expert-miner", "unit-brising-expert-miner", "unit-dwarven-arcanister",
 		"unit-dwarven-thane",
 		"unit-dwarven-guard",
 		"unit-dwarven-yale-lord",
@@ -706,7 +713,7 @@ DefineButton( { Pos = 10, Level = 2, Icon = "icon-ethereal-vision",
 	Key = "v", Hint = "Learn Ethereal ~!Vision", Popup = "popup-learn-ability",
 	Description = "Ethereal Vision is a passive ability that allows the unit to see ethereal objects, such as interplanar portals",
 	ForUnit = { -- allow only level 3 units to learn it, so that it isn't too easy to do so
-		"unit-dwarven-expert-miner", "unit-brising-expert-miner",
+		"unit-dwarven-expert-miner", "unit-brising-expert-miner", "unit-dwarven-arcanister",
 		"unit-dwarven-thane",
 --		"unit-dwarven-guard",
 		"unit-dwarven-yale-lord",
@@ -760,6 +767,7 @@ DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
 	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
 	ForUnit = {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
 		"unit-dwarven-guard",
@@ -849,6 +857,7 @@ DefineButton( { Pos = 15, Level = 0, Icon = "icon-inventory",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker"
@@ -860,6 +869,7 @@ DefineButton( { Pos = 16, Level = 3, Icon = "icon-cancel",
 	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
 	ForUnit = {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
 		"unit-dwarven-guard",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer",
@@ -1044,6 +1054,7 @@ DefineButton( { Pos = 13, Level = 1, Icon = "icon-road",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker"
@@ -1056,6 +1067,7 @@ DefineButton( { Pos = 14, Level = 1, Icon = "icon-railroad",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker"
@@ -1068,6 +1080,7 @@ DefineButton( { Pos = 2, Level = 4, Icon = "icon-copper-mine",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker"
@@ -1080,6 +1093,7 @@ DefineButton( { Pos = 3, Level = 4, Icon = "icon-silver-mine",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker"
@@ -1092,6 +1106,7 @@ DefineButton( { Pos = 4, Level = 4, Icon = "icon-gold-mine",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker"
@@ -1104,6 +1119,7 @@ DefineButton( { Pos = 5, Level = 4, Icon = "icon-diamond-mine",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker"
@@ -1116,6 +1132,7 @@ DefineButton( { Pos = 6, Level = 10, Icon = "icon-emerald-mine", -- unreachable 
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker"
@@ -1128,6 +1145,7 @@ DefineButton( { Pos = 6, Level = 4,
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker"
@@ -1140,6 +1158,7 @@ DefineButton( { Pos = 15, Level = 1, Icon = "icon-right-arrow",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker"
@@ -1152,6 +1171,7 @@ DefineButton( { Pos = 15, Level = 4, Icon = "icon-left-arrow",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker"
@@ -1164,6 +1184,7 @@ DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker"
@@ -1176,6 +1197,7 @@ DefineButton( { Pos = 16, Level = 4, Icon = "icon-cancel",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker"

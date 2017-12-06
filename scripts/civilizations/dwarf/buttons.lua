@@ -86,6 +86,7 @@ DefineButton( { Pos = 1, Level = 1,
 	Key = "h", Hint = _("Build Mead ~!Hall"), Popup = "popup-building",
 	ForUnit = {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner"
 	}
 })
@@ -95,6 +96,7 @@ DefineButton( { Pos = 2, Level = 1, Icon = "icon-dwarven-mushroom-farm",
 	Key = "f", Hint = _("Build Mushroom ~!Farm"), Popup = "popup-building",
 	ForUnit = {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner"
 	}
 })
@@ -104,6 +106,7 @@ DefineButton( { Pos = 3, Level = 1, Icon = "icon-dwarven-barracks",
 	Key = "w", Hint = _("Build ~!War Hall"), Popup = "popup-building",
 	ForUnit = {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner"
 	}
 })
@@ -113,6 +116,7 @@ DefineButton( { Pos = 4, Level = 1, Icon = "icon-dwarven-lumber-mill",
 	Key = "l", Hint = "Build ~!Lumber Mill", Popup = "popup-building",
 	ForUnit = {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker"
 	}
@@ -123,6 +127,7 @@ DefineButton( { Pos = 5, Level = 1, Icon = "icon-dwarven-smithy",
 	Key = "s", Hint = _("Build ~!Smithy"), Popup = "popup-building",
 	ForUnit = {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker"
 	}
 })
@@ -138,6 +143,7 @@ DefineButton( { Pos = 6, Level = 1, Icon = "icon-dwarven-masons-shop",
 	Key = "n", Hint = "Build Maso~!n's Shop", Popup = "popup-building",
 	ForUnit = {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker"
 	}
@@ -148,6 +154,7 @@ DefineButton( { Pos = 7, Level = 1, Icon = "icon-dwarven-yale-pen",
 	Key = "y", Hint = _("Build ~!Yale Pen"), Popup = "popup-building",
 	ForUnit = {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
 	}
@@ -157,7 +164,8 @@ DefineButton( { Pos = 7, Level = 1, Icon = "icon-joruvellir-yale-pen",
 	Action = "build", Value = "unit-joruvellir-yale-pen",
 	Key = "y", Hint = _("Build ~!Yale Pen"), Popup = "popup-building",
 	ForUnit = {
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner"
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister"
 	}
 })
 
@@ -166,6 +174,7 @@ DefineButton( { Pos = 8, Level = 1, Icon = "icon-dwarven-temple",
 	Key = "p", Hint = _("Build Tem~!ple"), Popup = "popup-building",
 	ForUnit = {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker"
 	}
@@ -176,6 +185,7 @@ DefineButton( { Pos = 9, Level = 1, Icon = "icon-dwarven-market",
 	Key = "m", Hint = "Build ~!Market", Popup = "popup-building",
 	ForUnit = {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker"
 	}
@@ -186,6 +196,7 @@ DefineButton( { Pos = 10, Level = 1, Icon = "icon-dwarven-sentry-tower",
 	Key = "t", Hint = "Build Sentry ~!Tower", Popup = "popup-building",
 	ForUnit = {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker"
 	}
@@ -196,6 +207,7 @@ DefineButton( { Pos = 11, Level = 1, Icon = "icon-dwarven-dock",
 	Key = "d", Hint = "Build ~!Dock", Popup = "popup-building",
 	ForUnit = {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
 	}
@@ -206,6 +218,7 @@ DefineButton( { Pos = 12, Level = 1, Icon = "icon-dwarven-academy",
 	Key = "a", Hint = "Build ~!Academy", Popup = "popup-building",
 	ForUnit = {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker"
 	}
@@ -216,6 +229,7 @@ DefineButton( { Pos = 1, Level = 4, Icon = "icon-dwarven-wall",
 	Key = "w", Hint = "Build ~!Wall", Popup = "popup-building",
 	ForUnit = {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker"
 	}
@@ -595,26 +609,44 @@ DefineButton( { Pos = 12, Level = 2, Icon = "icon-hel",
 
 DefineButton( { Pos = 1, Level = 2, Icon = "icon-dwarven-skilled-miner",
 	Action = "experience-upgrade-to", Value = "unit-dwarven-skilled-miner",
-	Key = "u", Hint = _("~!Upgrade to Skilled Miner"), Popup = "popup-unit",
+	Key = "u", Hint = "~!Upgrade to Skilled Miner", Popup = "popup-unit",
 	ForUnit = {"unit-dwarven-miner"}
 } )
 
 DefineButton( { Pos = 1, Level = 2, Icon = "icon-dwarven-expert-miner",
 	Action = "experience-upgrade-to", Value = "unit-dwarven-expert-miner",
-	Key = "u", Hint = _("~!Upgrade to Expert Miner"), Popup = "popup-unit",
+	Key = "u", Hint = "~!Upgrade to Expert Miner", Popup = "popup-unit",
 	ForUnit = {"unit-dwarven-skilled-miner"}
 } )
 
 DefineButton( { Pos = 1, Level = 2, Icon = "icon-brising-skilled-miner",
 	Action = "experience-upgrade-to", Value = "unit-brising-skilled-miner",
-	Key = "u", Hint = _("~!Upgrade to Skilled Miner"), Popup = "popup-unit",
+	Key = "u", Hint = "~!Upgrade to Skilled Miner", Popup = "popup-unit",
 	ForUnit = {"unit-brising-miner"}
 } )
 
 DefineButton( { Pos = 1, Level = 2, Icon = "icon-brising-expert-miner",
 	Action = "experience-upgrade-to", Value = "unit-brising-expert-miner",
-	Key = "u", Hint = _("~!Upgrade to Expert Miner"), Popup = "popup-unit",
+	Key = "u", Hint = "~!Upgrade to Expert Miner", Popup = "popup-unit",
 	ForUnit = {"unit-brising-skilled-miner"}
+} )
+
+DefineButton( { Pos = 2, Level = 2, Icon = "icon-dwarven-runesmith",
+	Action = "experience-upgrade-to", Value = "unit-dwarven-runesmith",
+	Key = "r", Hint = "Upgrade to ~!Runesmith", Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-miner", "unit-brising-miner"}
+} )
+
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-dwarven-runemaster",
+	Action = "experience-upgrade-to", Value = "unit-dwarven-runemaster",
+	Key = "r", Hint = "Upgrade to ~!Runemaster", Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-runesmith"}
+} )
+
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-dwarven-arcanister",
+	Action = "experience-upgrade-to", Value = "unit-dwarven-arcanister",
+	Key = "a", Hint = "Upgrade to ~!Arcanister", Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-runemaster"}
 } )
 
 DefineButton( { Pos = 1, Level = 2, Icon = "icon-dwarven-steelclad",

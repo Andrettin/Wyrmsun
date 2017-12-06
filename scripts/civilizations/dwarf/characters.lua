@@ -171,7 +171,7 @@ DefineCharacter("alvis", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 DefineCharacter("andvari", {
 	Name = "Andvari",
 	Gender = "male",
-	Type = "unit-dwarven-steelclad",
+	Type = "unit-dwarven-runemaster",
 	Civilization = "dwarf",
 	Faction = "oinling-clan",
 	Description = "The son of Oin, Andvari is famous for his large hoard of gold.",
@@ -189,7 +189,7 @@ DefineCharacter("andvari", {
 DefineCharacter("regin", {
 	Name = "Regin",
 	Gender = "male",
-	Type = "unit-dwarven-thane", -- should be a runemaster
+	Type = "unit-dwarven-runemaster",
 	Civilization = "dwarf",
 	Faction = "brising-clan",
 	Description = "Regin is a dwarven mastersmith, unrivalled in his time. The mythical sword Gram was of his making, as were several other legendary blades.",
@@ -205,7 +205,7 @@ DefineCharacter("regin", {
 DefineCharacter("thursagan", { -- from Battle for Wesnoth: The Sceptre of Fire; master runesmith who crafted the Sceptre of Fire
 	Name = "Thursagan",
 	Gender = "male",
-	Type = "unit-dwarven-thane",
+	Type = "unit-dwarven-runemaster",
 	Civilization = "dwarf",
 	Faction = "norlund-clan",
 	Description = "Thursagan is an extremely skilled runemaster who has retired to live as a hermit in the Northern Wastelands. Due to his talents, he was contacted by Rugnur to craft of the Scepter of Fire. His hammer is considered legendary, and dwarves have sought to find it for centuries after his death.",

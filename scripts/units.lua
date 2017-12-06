@@ -105,7 +105,9 @@ Units = {
 	"upgrade-faction-norlund-clan", "upgrade-faction-oinling-clan", "upgrade-faction-shadowcharm-clan", "upgrade-faction-shinsplitter-clan", "upgrade-faction-shorbear-clan", "upgrade-faction-whitesteel-clan", 
 	"upgrade-faction-kal-kartha", "upgrade-faction-knalga",
 	"upgrade-dwarven-civilization",
-	"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner", "unit-dwarven-militia",
+	"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+	"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
+	"unit-dwarven-militia",
 	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
 	"unit-dwarven-guard",
 	"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer",
@@ -3268,22 +3270,24 @@ DefineUnitType("unit-template-journeyman-smith", {
 	Name = "Journeyman Smith",
 	Parent = "unit-template-worker",
 	Class = "journeyman-smith",
-	HitPoints = 40,
-	BasicDamage = 6,
-	Accuracy = 9,
-	Points = 45,
+	HitPoints = 55,
+	BasicDamage = 9,
+	Armor = 2,
+	Accuracy = 10,
+	Evasion = 10,
+	Points = 55,
 	Level = 2,
-	JewelryGatheringBonus = 2
+	JewelryGatheringBonus = 2,
+	Coward = false
 } )
 
 DefineUnitType("unit-template-master-smith", {
 	Name = "Master Smith",
 	Parent = "unit-template-journeyman-smith",
 	Class = "master-smith",
-	HitPoints = 50,
-	BasicDamage = 7,
-	Accuracy = 10,
-	Points = 60,
+	HitPoints = 65,
+	BasicDamage = 10,
+	Points = 70,
 	Level = 3,
 	Inventory = true,
 	JewelryGatheringBonus = 4
@@ -3293,10 +3297,9 @@ DefineUnitType("unit-template-grandmaster-smith", {
 	Name = "Grandmaster Smith",
 	Parent = "unit-template-master-smith",
 	Class = "master-smith",
-	HitPoints = 50,
-	BasicDamage = 7,
-	Accuracy = 10,
-	Points = 60,
+	HitPoints = 75,
+	BasicDamage = 12,
+	Points = 85,
 	Level = 4,
 	JewelryGatheringBonus = 6
 } )

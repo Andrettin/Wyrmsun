@@ -34,6 +34,7 @@ DefineUpgrade("upgrade-free-workers", {
 	ScaledCostUnits = {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker"
@@ -73,6 +74,7 @@ DefineModifier("upgrade-serfdom",
 	{"GatheringBonus", -1},
 	{"apply-to", "unit-dwarven-miner"}, {"apply-to", "unit-dwarven-skilled-miner"}, {"apply-to", "unit-dwarven-expert-miner"},
 	{"apply-to", "unit-brising-miner"}, {"apply-to", "unit-brising-skilled-miner"}, {"apply-to", "unit-brising-expert-miner"},
+	{"apply-to", "unit-dwarven-runesmith"}, {"apply-to", "unit-dwarven-runemaster"}, {"apply-to", "unit-dwarven-arcanister"},
 	{"apply-to", "unit-germanic-worker"}, {"apply-to", "unit-teuton-worker"},
 	{"apply-to", "unit-gnomish-worker"}, {"apply-to", "unit-deep-gnomish-worker"}, {"apply-to", "unit-derro-worker"},
 	{"apply-to", "unit-goblin-worker"}

@@ -57,13 +57,16 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
-- 3.0.1
+- 3.1.0
 -----------------------------------------------------------------------
 
 * Buildings
 - Barracks, Lumber Mills, Smithies, Mason's Shops, Stables, Temples, Markets, Docks and Universities now have a (cumulative) cost modifier increase of 25% for each building of that type that you construct.
 - Added encyclopedia entries for roads and railroads, clarifying that railroads' speed bonus apply to all land units, not just rail ones.
 - Smithies now have "active" graphics, used when resources are being produced in or delivered to them, or when they are researching an upgrade.
+
+* Heroes
+- The dwarven heroes Andvari, Regin, Thursagan now start off as Runemasters.
 
 * Items
 - Added "of Smithing" magic suffix, which increases the worker's jewelry production rate.
