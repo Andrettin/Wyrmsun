@@ -59,21 +59,6 @@ function CreateUnit(unittype, player, pos, z)
 		return OldCreateUnit(unittype, player, pos, z)
 	end
 
-	-- Don't add any units if the player setup the units to use
-	if (
-		GameSettings.NumUnits >= 1
-		and player ~= PlayerNumNeutral
-		and Players[player].Type ~= PlayerNeutral
-		and Players[player]:HasNeutralFactionType() == false
-	) then
-		if (GameSettings.NumUnits == 1 and GetUnitTypeData(unittype, "TownHall")) then -- if starting with 1 worker, replace town halls with settlement sites
-			unittype = "unit-settlement-site"
-			player = PlayerNumNeutral
-		else
-			return nil
-		end
-	end
-
 	-- Leave neutral the way it is
 --	if (player == PlayerNumNeutral) then
 --		return OldCreateUnit(unittype, player, pos)
@@ -93,16 +78,6 @@ end
 function CreateUnitOnTop(unittype, player, on_top)
 	if (GameCycle ~= 0) then
 		return OldCreateUnitOnTop(unittype, player, on_top)
-	end
-
-	-- Don't add any units if the player setup the units to use
-	if (
-		GameSettings.NumUnits >= 1
-		and player ~= PlayerNumNeutral
-		and Players[player].Type ~= PlayerNeutral
-		and Players[player]:HasNeutralFactionType() == false
-	) then
-		return nil
 	end
 
 	if (Players[player].Type == PlayerNobody) then
@@ -148,56 +123,6 @@ function SetPlayerData(player, data, arg1, arg2)
 	end
 
 	OldSetPlayerData(player, data, arg1, arg2)
-
-	-- If this is 1 worker mode add the worker now
-	if (data == "RaceName") then
-		if (GameCycle == 0) then
-			if (player ~= PlayerNumNeutral and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral and Players[player]:HasNeutralFactionType() == false) then
-				if (GameSettings.NumUnits == 1) then -- 1 Worker
-					local unittype = ConvertUnitType("unit-dwarven-miner", GetPlayerData(player, "RaceName"))
-					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				elseif (GameSettings.NumUnits == 2) then -- Town Hall and 5 Workers
-					local unittype = ConvertUnitType("unit-dwarven-town-hall", GetPlayerData(player, "RaceName"))
-					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-					unittype = ConvertUnitType("unit-dwarven-miner", GetPlayerData(player, "RaceName"))
-					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				elseif (GameSettings.NumUnits == 3) then -- Basic Squad
-					local unittype = ConvertUnitType("unit-dwarven-axefighter", GetPlayerData(player, "RaceName"))
-					for i = 1, 4 do
-						OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-					end
-				elseif (GameSettings.NumUnits == 4) then -- Improved Squad
-					local unittype = ConvertUnitType("unit-dwarven-axefighter", GetPlayerData(player, "RaceName"))
-					for i = 1, 3 do
-						OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-					end
-					unittype = ConvertUnitType("unit-dwarven-scout", GetPlayerData(player, "RaceName"))
-					for i = 1, 2 do
-						OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-					end
-				elseif (GameSettings.NumUnits == 5) then -- Advanced Squad
-					local unittype = ConvertUnitType("unit-dwarven-axefighter", GetPlayerData(player, "RaceName"))
-					for i = 1, 5 do
-						OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-					end
-					unittype = ConvertUnitType("unit-dwarven-scout", GetPlayerData(player, "RaceName"))
-					for i = 1, 3 do
-						OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-					end
-					unittype = ConvertUnitType("unit-dwarven-yale-rider", GetPlayerData(player, "RaceName"))
-					for i = 1, 2 do
-						OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-					end
-					unittype = ConvertUnitType("unit-dwarven-ballista", GetPlayerData(player, "RaceName"))
-					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				end
-			end
-		end
-	end
 end
 
 function LoadCivilizationUI(civilization)

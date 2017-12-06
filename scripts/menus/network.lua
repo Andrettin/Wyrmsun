@@ -163,12 +163,6 @@ function RunJoiningMapMenu(s)
 		end)
 	race:setSize(190, 20)
 
-	menu:writeText("Units:", sx, sy*11+25)
-	local units = menu:addDropDown({_("Map Default"), _("1 Worker"), _("Town Hall + Workers"), _("Basic Squad"), _("Improved Squad"), _("Advanced Squad")}, sx + 100, sy*11+25,
-		function(dd) end)
-	units:setSize(190, 20)
-	units:setEnabled(false)
-
 	menu:writeText("Resources:", sx, sy*11+50)
 	local resources = menu:addDropDown({"Map Default", "Low", "Medium", "High"}, sx + 100, sy*11+50,
 		function(dd) end)
@@ -214,8 +208,6 @@ function RunJoiningMapMenu(s)
 		no_randomness:setMarked(int2bool(ServerSetupState.NoRandomness))
 		GameSettings.NoRandomness = int2bool(ServerSetupState.NoRandomness)
 		computer_opponents:setMarked(ServerSetupState.Opponents > 0)
-		units:setSelected(ServerSetupState.UnitsOption)
-		GameSettings.NumUnits = ServerSetupState.UnitsOption
 		resources:setSelected(ServerSetupState.ResourcesOption)
 		GameSettings.Resources = ServerSetupState.ResourcesOption
 		difficulty:setSelected(ServerSetupState.Difficulty - 1)
@@ -405,15 +397,6 @@ function RunServerMultiGameMenu(map, description, numplayers)
 				GameSettings.Presets[0].Race = -1
 				ServerSetupState.Race[0] = -1
 			end
-			NetworkServerResyncClients()
-		end)
-	d:setSize(190, 20)
-
-	menu:writeText("Units:", sx, sy*11+25)
-	d = menu:addDropDown({_("Map Default"), _("1 Worker"), _("Town Hall + Workers"), _("Basic Squad"), _("Improved Squad"), _("Advanced Squad")}, sx + 100, sy*11+25,
-		function(dd)
-			GameSettings.NumUnits = dd:getSelected()
-			ServerSetupState.UnitsOption = GameSettings.NumUnits
 			NetworkServerResyncClients()
 		end)
 	d:setSize(190, 20)

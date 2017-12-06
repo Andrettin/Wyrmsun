@@ -962,7 +962,6 @@ function RunSinglePlayerCustomGameMenu()
 	local faction
 	local resources
 	local opponents
-	local numunits
 	local gametype
 	local mapl
 	local descriptionl
@@ -1070,7 +1069,6 @@ function RunSinglePlayerCustomGameMenu()
 				PlayerFaction = faction_ident_list[faction:getSelected() + 1]
 			end
 			GameSettings.Opponents = opponents:getSelected()
-			GameSettings.NumUnits = numunits:getSelected()
 			GameSettings.Difficulty = difficulty:getSelected() + 1
 			GameSettings.GameType = gametype:getSelected() - 1
 			if (tech_level:getSelected() > 0) then
@@ -1136,32 +1134,27 @@ function RunSinglePlayerCustomGameMenu()
 		function(dd) end)
 	resources:setSize(152, 20)
 
-	menu:addLabel(_("Units:"), offx + 40, offy + (10 + 240) - 20, Fonts["game"], false)
-	numunits = menu:addDropDown({_("Map Default"), _("1 Worker"), _("Town Hall + Workers"), _("Basic Squad"), _("Improved Squad"), _("Advanced Squad")}, offx + 40, offy + 10 + 240,
-		function(dd) end)
-	numunits:setSize(152, 20)
-
 	local opponents_list = {_("Map Default"), _("1 Opponent"), _("2 Opponents"), _("3 Opponents"), _("4 Opponents"), _("5 Opponents"), _("6 Opponents"), _("7 Opponents")}
 
-	menu:addLabel(_("Opponents:"), offx + 220, offy + (10 + 240) - 20, Fonts["game"], false)
-	opponents = menu:addDropDown(opponents_list, offx + 220, offy + 10 + 240,
+	menu:addLabel(_("Opponents:"), offx + 40, offy + (10 + 240) - 20, Fonts["game"], false)
+	opponents = menu:addDropDown(opponents_list, offx + 40, offy + 10 + 240,
 		function(dd) end)
 	opponents:setSize(152, 20)
 
-	menu:addLabel(_("Game Type:"), offx + 640 - 224 - 16, offy + (10 + 240) - 20, Fonts["game"], false)
-	gametype = menu:addDropDown(game_type_list, offx + 640 - 224 - 16, offy + 10 + 240, function(dd) end)
+	menu:addLabel(_("Game Type:"), offx + 220, offy + (10 + 240) - 20, Fonts["game"], false)
+	gametype = menu:addDropDown(game_type_list, offx + 220, offy + 10 + 240, function(dd) end)
 	gametype:setSize(152, 20)
 
-	menu:addLabel(_("Tech Level:"), offx + 40, offy + (10 + 300) - 20, Fonts["game"], false)
-	tech_level = menu:addDropDown(tech_level_list, offx + 40, offy + 10 + 300, function(dd) TechLevelChanged() end)
+	menu:addLabel(_("Tech Level:"), offx + 640 - 224 - 16, offy + (10 + 240) - 20, Fonts["game"], false)
+	tech_level = menu:addDropDown(tech_level_list, offx + 640 - 224 - 16, offy + 10 + 240, function(dd) TechLevelChanged() end)
 	tech_level:setSize(152, 20)
 
-	menu:addLabel(_("Max Tech Level:"), offx + 220, offy + (10 + 300) - 20, Fonts["game"], false)
-	max_tech_level = menu:addDropDown(max_tech_level_list, offx + 220, offy + 10 + 300, function(dd) end)
+	menu:addLabel(_("Max Tech Level:"), offx + 40, offy + (10 + 300) - 20, Fonts["game"], false)
+	max_tech_level = menu:addDropDown(max_tech_level_list, offx + 40, offy + 10 + 300, function(dd) end)
 	max_tech_level:setSize(152, 20)
 
-	menu:addLabel(_("Custom Hero:"), offx + 640 - 224 - 16, offy + (10 + 300) - 20, Fonts["game"], false)
-	hero_dd = menu:addDropDown(hero_list, offx + 640 - 224 - 16, offy + 10 + 300,
+	menu:addLabel(_("Custom Hero:"), offx + 220, offy + (10 + 300) - 20, Fonts["game"], false)
+	hero_dd = menu:addDropDown(hero_list, offx + 220, offy + 10 + 300,
 		function(dd)
 			SetCurrentCustomHero(hero_list[hero_dd:getSelected() + 1])
 		end
