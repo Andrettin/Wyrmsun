@@ -75,7 +75,7 @@ https://github.com/Andrettin/Wyrmsun
 * Maps
 - The Italy and Southern Baltic maps now support 8 players.
 - Removed the Scandinavia map, since its area is largely represented in the Southern Baltic map already.
-- Removed the "Units" option, since it didn't serve much of a purpose; almost all maps have as default a town hall with five workers, and the other options weren't very interesting.
+- Removed the "Units" option, since it didn't serve much of a purpose; almost all maps have as default a town hall with five workers, and the other options weren't interesting enough to keep supporting them. Additionally the "squad" unit options could cause issues with maps where players are separated by water.
 
 * Miscellaneous
 - Improved how the luxury resource automatic sale system works.
