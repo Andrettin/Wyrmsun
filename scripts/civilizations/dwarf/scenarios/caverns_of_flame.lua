@@ -762,6 +762,8 @@ AddTrigger("caverns-of-flame-ending",
 			KillUnitAt("unit-dwarven-axefighter", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-axefighter"), {0, 0}, {512, 512})
 			KillUnitAt("unit-dwarven-steelclad", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-steelclad"), {0, 0}, {512, 512})
 			KillUnitAt("unit-dwarven-thane", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-thane"), {0, 0}, {512, 512})
+			KillUnitAt("unit-dwarven-runemaster", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-runemaster"), {0, 0}, {512, 512})
+			KillUnitAt("unit-dwarven-arcanister", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-arcanister"), {0, 0}, {512, 512})
 			KillUnitAt("unit-dwarven-scout", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-scout"), {0, 0}, {512, 512})
 			KillUnitAt("unit-dwarven-pathfinder", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-pathfinder"), {0, 0}, {512, 512})
 			KillUnitAt("unit-dwarven-explorer", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-explorer"), {0, 0}, {512, 512})
