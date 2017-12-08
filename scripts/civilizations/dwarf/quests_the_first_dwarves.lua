@@ -125,8 +125,8 @@ DefineQuest("the-treasures-of-svarinshaug", {
 	end,
 	Objectives = {"- Gather 8000 Copper", "- Have 8000 Copper", "- Brokk and Eitri must survive"},
 	Rewards = "Magic Hammer, Magic Ring, Lose 8,000 Copper",
-	GatherResources = {"copper", 800},
-	HaveResources = {"copper", 800},
+	GatherResources = {"copper", 8000},
+	HaveResources = {"copper", 8000},
 	HeroesMustSurvive = {"brokk", "eitri"},
 	Competitive = true
 })
