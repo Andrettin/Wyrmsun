@@ -60,9 +60,17 @@ https://github.com/Andrettin/Wyrmsun
 - 3.1.1
 -----------------------------------------------------------------------
 
+* Heroes
+- The Runemasters Brokk and Eitri are now recruitable heroes.
+- Increased the maximum heroes to 4.
+
+* Interface
+* The Idle Worker button now displays the icon of one of the worker units that are idle, rather than the icon of the player's civilization's worker unit type.
+
 * Scenarios
 - Added an underground layer for the Nidavellir scenarios.
 - The Grafvitning kobolds now dwell in the underground layer, beneath Svarinshaug.
+- Added "The Mastersmith Brothers" dwarven side-quest, in which the player has the objective of recruiting Brokk and Eitri.
 
 -----------------------------------------------------------------------
 - 3.1.0

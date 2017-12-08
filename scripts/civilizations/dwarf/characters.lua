@@ -138,6 +138,24 @@ DefineCharacter("thjodrorir", { -- dwarf from Norse mythology; Source: Kevin Cro
 	end
 })
 
+DefineCharacter("brokk", {
+	Name = "Brokk",
+	Gender = "male",
+	Type = "unit-dwarven-runemaster",
+	Civilization = "dwarf",
+	Background = "Brokk is a dwarf from Norse mythology who was an expert smith. He is the brother of Eitri.",
+	Deities = {"odin", "tyr"}
+})
+
+DefineCharacter("eitri", {
+	Name = "Eitri",
+	Gender = "male",
+	Type = "unit-dwarven-runemaster",
+	Civilization = "dwarf",
+	Background = "Eitri is a dwarf from Norse mythology who was an expert smith. He is the brother of Brokk.",
+	Deities = {"odin", "tyr"}
+})
+
 DefineCharacter("gandalf", {
 	Name = "Gandalf",
 	Gender = "male",

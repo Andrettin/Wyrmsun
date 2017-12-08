@@ -377,7 +377,6 @@ DefineCivilization("dwarf", {
 		"male", "Bibung", -- dwarf from Norse mythology
 		"male", "Bifur", -- dwarf from Norse mythology
 		"male", "Bombor", -- dwarf from Norse mythology
-		"male", "Brokk", -- dwarf from Norse mythology who was an expert smith and brother of Eitri
 		"male", "Burin", -- dwarf from Battle for Wesnoth: The Rise of Wesnoth
 		"male", "Dain", -- dwarven mastersmith from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 100.
 		"male", "Delling", -- dwarf from Norse mythology
@@ -425,7 +424,6 @@ DefineCivilization("dwarf", {
 		"male", "Dursil", -- dwarf from Battle for Wesnoth: The Rise of Wesnoth
 		"male", "Dvalin", -- dwarf from Norse mythology; gave the knowledge of runes to the dwarves; one of the four who crafted the Necklace of the Brisings
 		"male", "Eggerich", -- dwarf from German sagas
-		"male", "Eitri", -- dwarf from Norse mythology; expert smith and brother of Brokk
 		"male", "Fal", -- dwarf from Norse mythology
 		"male", "Fid", -- dwarf from Norse mythology
 		"male", "Fili", -- dwarf from Norse mythology

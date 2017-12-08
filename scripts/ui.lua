@@ -298,23 +298,13 @@ b.Y = 16 + 12 + 38 + 24
 b.Style = FindButtonStyle("icon")
 UI.LevelUpUnitButton = b
 
-b = CUIButton:new()
-b.X = Video.Width - 12 - 46
-b.Y = 16 + 12 + (38 * 2) + (24 * 2)
-b.Style = FindButtonStyle("icon")
-UI.HeroUnitButtons[0] = b
-
-b = CUIButton:new()
-b.X = Video.Width - 12 - 46
-b.Y = 16 + 12 + (38 * 3) + (24 * 3)
-b.Style = FindButtonStyle("icon")
-UI.HeroUnitButtons[1] = b
-
-b = CUIButton:new()
-b.X = Video.Width - 12 - 46
-b.Y = 16 + 12 + (38 * 4) + (24 * 4)
-b.Style = FindButtonStyle("icon")
-UI.HeroUnitButtons[2] = b
+for i = 0, 3 do
+	b = CUIButton:new()
+	b.X = Video.Width - 12 - 46
+	b.Y = 16 + 12 + (38 * (2 + i)) + (24 * (2 + i))
+	b.Style = FindButtonStyle("icon")
+	UI.HeroUnitButtons[i] = b
+end
 
 UI.CompletedBarColorRGB = CColor(48, 100, 4)
 UI.CompletedBarShadow = false

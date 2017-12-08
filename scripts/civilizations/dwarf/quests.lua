@@ -25,98 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineQuest("the-first-dwarves", {
-	Name = "The First Dwarves",
-	Icon = "icon-modsognir",
-	World = "nidavellir",
-	Civilization = "dwarf",
-	PlayerColor = "red",
-	FailEffects = function(s)
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "the-first-dwarves") then
-			CallDialogue("campaign-defeat", trigger_player)
-		end
-	end,
-	Objectives = {"- Overcome Svarinshaug's perils", "- Modsognir must survive", "- Durin must survive"},
-	Uncompleteable = true,
-	Unobtainable = true,
-	HeroesMustSurvive = {"modsognir", "durin"}
-})
-
-DefineQuest("a-rocky-home", {
-	Name = "A Rocky Home",
-	Icon = "icon-modsognir",
-	Description = "A clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home. Beset by hostile natural forces on all sides, can they survive their first winter?",
-	World = "nidavellir",
-	Civilization = "dwarf",
-	PlayerColor = "red",
-	CompletionEffects = function(s)
-		CallDialogue("a-rocky-home-materials-collected", trigger_player)
-	end,
-	Objectives = {"- Build a Mead Hall", "- Build a Yale Hunting Lodge", "- Gather 800 Lumber and 2400 Stone"},
-	Unobtainable = true,
-	BuildUnits = {"unit-dwarven-town-hall", 1, "unit-yale-hunting-lodge", 1},
-	GatherResources = {"lumber", 800, "stone", 2400},
-	HeroesMustSurvive = {"modsognir", "durin"}
-})
-
-DefineQuest("the-mead-of-wisdom", {
-	Name = "The Mead of Wisdom",
-	Icon = "icon-durin",
-	Description = "The sage of Modsognir's clan has disappeared, taken by two dwarves called Fjalar and Galar. Modsognir has sent Durin to enter their hall, rescue the sage - or what remains of him - and bring the evil pair to justice.\n\nMap: Fjalar's and Galar's Hall",
-	World = "nidavellir",
-	Civilization = "dwarf",
-	Map = "maps/nidavellir/fjalars-and-galars-hall.smp",
-	Scenario = "scripts/civilizations/dwarf/scenarios/the_mead_of_wisdom.lua",
-	PlayerColor = "white",
-	LoadingMusic = "DwarfLoading",
-	MapMusic = "DwarfTheme2",
-	Unobtainable = true
-})
-
-DefineQuest("the-treasures-of-svarinshaug", {
-	Name = "The Treasures of Svarinshaug",
-	Icon = "icon-brising-smithy",
-	Description = "The dwarven smiths Brokk and Eitri are competing with the renowned sons of Ivaldi to craft the best artifacts for Modsognir. To obtain the necessary high quality ores will be perilous, however, as dangerous creatures abound in the deep mines where they lay...\n\nMap: Eastern Mines",
-	RequiredQuest = "the-mead-of-wisdom",
-	World = "nidavellir",
-	Civilization = "dwarf",
-	Map = "maps/nidavellir/eastern-mines.smp",
-	Scenario = "scripts/civilizations/dwarf/scenarios/the_treasures_of_svarinshaug.lua",
-	PlayerColor = "white",
-	LoadingMusic = "DwarfLoading",
---	MapMusic = "DwarfTheme3",
-	Unobtainable = true
-})
-
-DefineQuest("the-necklace-of-the-brisings", {
-	Name = "The Necklace of the Brisings",
-	Icon = "icon-dwarven-steelclad",
-	Description = "The necklace made for Modsognir's wife by a group of four dwarven smiths has been stolen! The culprits, a band of local dwarven thieves, sneaked away with the necklace last night, going back to their hideout. We must recover the necklace from these bandits!\n\nMap: Aurvang",
-	RequiredQuest = "the-treasures-of-svarinshaug",
-	World = "nidavellir",
-	Civilization = "dwarf",
-	Map = "maps/nidavellir/aurvang.smp",
-	Scenario = "scripts/civilizations/dwarf/scenarios/the_necklace_of_the_brisings.lua",
-	PlayerColor = "black",
-	LoadingMusic = "DwarfLoading",
---	MapMusic = "DwarfTheme4",
-	Unobtainable = true
-})
-
-DefineQuest("the-slaying-of-grafvitnir", {
-	Name = "The Slaying of Grafvitnir",
-	Icon = "icon-wyrm",
-	Description = "Svarinshaug has been discovered to house a kobold tribe, who will attack the dwarves on sight for trespassing on their sacred ground. Modsognir's clan must now slay the kobolds and the wyrm they worship, Grafvitnir.",
-	World = "nidavellir",
-	Civilization = "dwarf",
-	PlayerColor = "black",
-	Objectives = {"- Destroy the Grafvitning Tribe"},
-	Unobtainable = true,
-	Uncompleteable = true,
-	Unfailable = true,
-	HeroesMustSurvive = {"modsognir", "durin"}
-})
-
 DefineQuest("the-dripping-hall", { -- based on the lay of Alvis from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 144.
 	Name = "The Dripping Hall",
 	Icon = "icon-dwarven-gryphon-rider",
@@ -525,4 +433,5 @@ DefineQuest("island-of-the-lizard-god", {
 	HeroesMustSurvive = {"vindalf"}
 })
 
+Load("scripts/civilizations/dwarf/quests_the_first_dwarves.lua")
 Load("scripts/civilizations/dwarf/quests_joruvellir.lua")
