@@ -95,7 +95,7 @@ DefineAchievement("a-home-in-the-fields-of-sand", {
 	Icon = "icon-joruvellir-scout-black-hair",
 	Description = "Complete the A Home in the Fields of Sand scenario.",
 	PlayerColor = "brown",
-	RequiredQuests = {"the-first-dwarves"}
+	RequiredQuests = {"a-home-in-the-fields-of-sand"}
 })
 
 DefineAchievement("the-lay-of-alvis", {
