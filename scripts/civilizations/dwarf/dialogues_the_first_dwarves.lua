@@ -142,7 +142,7 @@ DefineDialogue("modsognirs-clan-kills-a-kobold", {
 		},
 		{
 			"speaker", "character", "modsognir",
-			"text", "It would be no use. If they attacked us on sight, they hold Svarinshaug to be sacred ground and would never let us live here. Many kobold tribes build their homes around a wyrm's lair, serving the colossal beast who resides within. This is likely the case here."
+			"text", "It would be no use. If they attacked us on sight, they hold Svarinshaug to be sacred ground and would never let us live here. Many kobold tribes build their homes around a wyrm's lair, serving the colossal beast who resides within. This is likely the case here, with these kobolds living somewhere below us. The entrance to the lower level should be nearby..."
 		},
 		{
 			"speaker", "character", "durin",
@@ -156,6 +156,9 @@ DefineDialogue("modsognirs-clan-kills-a-kobold", {
 					SetPlayerData(trigger_player, "AcceptQuest", "the-slaying-of-grafvitnir")
 				end
 			}
+		},
+		{
+			"text", "Hint: Some maps have multiple surface layers. Select a unit and then right-click on a Cavern Entrance to go to another surface layer."
 		}
 	}
 })

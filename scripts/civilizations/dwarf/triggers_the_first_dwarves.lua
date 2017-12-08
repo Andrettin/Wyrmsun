@@ -76,7 +76,7 @@ AddTrigger("a-rocky-home-yales-hunted",
 AddTrigger("grafvitning-kobolds-send-attacker",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "Faction") == "grafvitning-tribe" and FindHero("modsognir") ~= nil and FindHero("durin") ~= nil and FindHero("modsognir", i) == nil and FindHero("durin", i) == nil) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "Faction") == "grafvitning-tribe" and GetPlayerData(i, "UnitTypesAiActiveCount", "unit-kobold-footpad") >= 1 and FindHero("modsognir") ~= nil and FindHero("durin") ~= nil and FindHero("modsognir", i) == nil and FindHero("durin", i) == nil) then
 				local modsognir_player = GetUnitVariable(FindHero("modsognir"), "Player")
 				if (Players[modsognir_player].Type ~= PlayerNeutral and GetPlayerData(modsognir_player, "UnitTypesCount", "unit-dwarven-barracks") > 0) then
 					trigger_player = i
@@ -87,17 +87,35 @@ AddTrigger("grafvitning-kobolds-send-attacker",
 		return false
 	end,
 	function()
+		local attacker_unit = nil
+		local uncount = GetUnits(trigger_player)
+		for unit1 = 1,table.getn(uncount) do
+			if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic") and GetUnitVariable(uncount[unit1], "Ident") ~= "unit-wyrm" and GetUnitVariable(uncount[unit1], "Active") and GetUnitVariable(uncount[unit1], "Idle")) then
+				attacker_unit = uncount[unit1]
+				break
+			end
+		end
+		
+		if (attacker_unit == nil) then
+			return true
+		end
+	
 		local modsognir_player = GetUnitVariable(FindHero("modsognir"), "Player")
 		local modsognir_building = nil
+
+		unit = CreateUnit("unit-revealer", trigger_player, {704 - NidavellirStartX, 177 - NidavellirStartY}, GetMapLayer("material-plane", "nidavellir", 0))
+		SetUnitVariable(unit, "TTL", 600)
+		unit = CreateUnit("unit-revealer", trigger_player, {704 - NidavellirStartX, 177 - NidavellirStartY}, GetMapLayer("material-plane", "nidavellir", 1))
+		SetUnitVariable(unit, "TTL", 600)
 		
-		local uncount = GetUnits(modsognir_player)
+		uncount = GetUnits(modsognir_player)
 		for unit1 = 1,table.getn(uncount) do 
 			if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building")) then
 				if (modsognir_building == nil) then
 					modsognir_building = uncount[unit1]
 				else
-					local old_pos_difference = math.abs(GetUnitVariable(modsognir_building, "PosX") - Players[trigger_player].StartPos.x) + math.abs(GetUnitVariable(modsognir_building, "PosY") - Players[trigger_player].StartPos.y)
-					local new_pos_difference = math.abs(GetUnitVariable(uncount[unit1], "PosX") - Players[trigger_player].StartPos.x) + math.abs(GetUnitVariable(uncount[unit1], "PosY") - Players[trigger_player].StartPos.y)
+					local old_pos_difference = math.abs(GetUnitVariable(modsognir_building, "PosX") - (704 - NidavellirStartX)) + math.abs(GetUnitVariable(modsognir_building, "PosY") - (177 - NidavellirStartY))
+					local new_pos_difference = math.abs(GetUnitVariable(uncount[unit1], "PosX") - (704 - NidavellirStartX)) + math.abs(GetUnitVariable(uncount[unit1], "PosY") - (177 - NidavellirStartY))
 					if (new_pos_difference < old_pos_difference) then
 						modsognir_building = uncount[unit1]
 					end
@@ -106,16 +124,12 @@ AddTrigger("grafvitning-kobolds-send-attacker",
 		end
 		
 		if (modsognir_building ~= nil) then
-			uncount = GetUnits(trigger_player)
-			for unit1 = 1,table.getn(uncount) do 
-				if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic") and GetUnitVariable(uncount[unit1], "Ident") ~= "unit-wyrm") then
-					OrderUnit(trigger_player, GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, GetUnitVariable(uncount[unit1], "MapLayer"), {GetUnitVariable(modsognir_building, "PosX"), GetUnitVariable(modsognir_building, "PosY")}, GetUnitVariable(modsognir_building, "MapLayer"), "attack")
-					break
-				end
-			end
+			unit = CreateUnit("unit-revealer", trigger_player, {GetUnitVariable(modsognir_building, "PosX"), GetUnitVariable(modsognir_building, "PosY")}, GetUnitVariable(modsognir_building, "MapLayer"))
+			SetUnitVariable(unit, "TTL", 600)
+			OrderUnit(trigger_player, GetUnitVariable(attacker_unit, "Ident"), {GetUnitVariable(attacker_unit, "PosX"), GetUnitVariable(attacker_unit, "PosY")}, GetUnitVariable(attacker_unit, "MapLayer"), {GetUnitVariable(modsognir_building, "PosX"), GetUnitVariable(modsognir_building, "PosY")}, GetUnitVariable(modsognir_building, "MapLayer"), "attack")
 		end
 
-		return false
+		return true
 	end
 )
 

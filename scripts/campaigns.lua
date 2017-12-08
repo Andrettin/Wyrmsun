@@ -40,10 +40,10 @@ DefineCampaign("the-first-dwarves", {
 	Description = "A clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home. Beset by hostile forces, can they survive for long?",
 	Faction = "brising-clan",
 	StartYear = -3000,
-	MapTemplate = "nidavellir",
---	MapTemplateStartPos = {525, 132},
-	MapTemplateStartPos = {475, 90},
-	MapSize = {256, 256}
+	MapTemplates = {
+		"nidavellir", {475, 90}, {256, 256},
+		"nidavellir-underground", {475, 90}, {256, 256}
+	}
 })
 
 DefineCampaign("westward-migration", {
@@ -62,9 +62,10 @@ DefineCampaign("a-home-in-the-fields-of-sand", {
 	Description = "As Svarinshaug proves too small for the growing dwarven population, the Goldhoof clan must move away and seek a new home.",
 	Faction = "goldhoof-clan",
 	StartYear = -2800,
-	MapTemplate = "nidavellir",
-	MapTemplateStartPos = {655, 155},
-	MapSize = {256, 256}
+	MapTemplates = {
+		"nidavellir", {655, 155}, {256, 256},
+		"nidavellir-underground", {655, 155}, {256, 256}
+	}
 })
 
 DefineCampaign("the-settlement-of-scandinavia", {

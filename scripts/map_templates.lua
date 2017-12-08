@@ -173,11 +173,13 @@ DefineMapTemplate("nidavellir-underground", {
 		"unit-wood-pile", 64,
 		"unit-wood-pile", 64,
 		"unit-wood-pile", 64,
-		"unit-snigill", 64,
-		"unit-slime", 32,
-		"unit-blood-bat", 16,
-		"unit-dread-bat", 8,
-		"unit-wyrm", 4
+--		"unit-snigill", 64,
+--		"unit-slime", 32,
+--		"unit-blood-bat", 16,
+--		"unit-dread-bat", 8,
+--		"unit-wyrm", 4
+		"unit-snigill", 16,
+		"unit-slime", 4
 	},
 	PlayerLocationGeneratedNeutralUnits = {
 		"unit-copper-deposit", 1,

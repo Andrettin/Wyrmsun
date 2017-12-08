@@ -29,7 +29,7 @@ local ai_call_counter = {}
 
 local kobold_funcs = {
 	function()
-		unit = CreateUnit("unit-kobold-footpad", AiPlayer(), {Players[AiPlayer()].StartPos.x, Players[AiPlayer()].StartPos.y})
+		unit = CreateUnit("unit-kobold-footpad", AiPlayer(), {Players[AiPlayer()].StartPos.x, Players[AiPlayer()].StartPos.y}, Players[AiPlayer()].StartMapLayer)
 		return false;
 	end,
 	function() return AiForce(1, {GetAiUnitType("infantry"), 1}, true) end,
@@ -52,15 +52,12 @@ function AiKobolds()
 	if (ai_call_counter[AiPlayer()] == nil) then
 		ai_call_counter[AiPlayer()] = 0
 	end
+	
 	ai_call_counter[AiPlayer()] = ai_call_counter[AiPlayer()] + 1
 	if (GameSettings.Difficulty == 1 and (ai_call_counter[AiPlayer()] % 50) ~= 0) then -- on easy difficulty, the AI is slower to do things
 		return;
 	end
 	
-	if (GetCurrentCampaign() == "the-first-dwarves" and Players[AiPlayer()]:IsEnemy(Players[GetThisPlayer()]) == false and GetPlayerData(AiPlayer(), "Faction") == "grafvitning-tribe") then
-		return;
-	end
-
 	AiLoop(kobold_funcs, stratagus.gameData.AIState.index);
 end
 

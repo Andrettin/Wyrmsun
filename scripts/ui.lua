@@ -547,7 +547,7 @@ end
 
 -- Surface Layer Map Layer Buttons
 UI.SurfaceLayerButtons:at(0).Style = FindButtonStyle("world-earth")
-UI.SurfaceLayerButtons:at(1).Style = FindButtonStyle("world-nidavellir")
+UI.SurfaceLayerButtons:at(1).Style = FindButtonStyle("world-jotunheim")
 
 UpdateSurfaceLayerButtons()
 
@@ -1387,7 +1387,7 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {ButtonAction = "buy", Neutral = "false"}, Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
-				{	Condition = {ButtonAction = "train-unit"},
+				{	Condition = {ButtonAction = "train-unit"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = _("~<SHIFT~>-click to train 5"), Font = wyr.preferences.PopupDescriptionFont}}
 				}, 
 				{ 	Condition = {ButtonAction = "train-unit"}, Margin = {1, 1},
