@@ -242,7 +242,13 @@ DefineCharacter("thursagan", { -- from Battle for Wesnoth: The Sceptre of Fire; 
 			"unique", "the-hammer-of-thursagan",
 			"bound", true
 		}
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "norlund-clan") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("baglur", { -- from Battle for Wesnoth: The Sceptre of Fire; veteran warrior and member of the party of dwarves who handled the crafting of the Sceptre of Fire
@@ -263,7 +269,13 @@ DefineCharacter("baglur", { -- from Battle for Wesnoth: The Sceptre of Fire; vet
 	Deities = {"odin", "tyr"},
 	HistoricalLocations = {
 		25, "nidavellir-underground", "chaincolt-gates"
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "norlund-clan") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("durstorn", { -- from Battle for Wesnoth: The Sceptre of Fire; chieftain of Rugnur's tribe
@@ -286,7 +298,13 @@ DefineCharacter("durstorn", { -- from Battle for Wesnoth: The Sceptre of Fire; c
 	},
 	HistoricalLocations = {
 		25, "nidavellir-underground", "chaincolt"
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "norlund-clan") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("glonoin", { -- from Battle for Wesnoth: The Sceptre of Fire; chieftain of the Shorbear clan
@@ -331,7 +349,13 @@ DefineCharacter("rugnur", { -- from Battle for Wesnoth: The Sceptre of Fire; lea
 	Deities = {"odin", "tyr"},
 	HistoricalLocations = {
 		25, "nidavellir", "rugnurs-outpost" -- at this time Rugnur was already in charge of the outpost in the Chaincolt Foothills
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "norlund-clan") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("noiraran", { -- from Battle for Wesnoth: The Sceptre of Fire
@@ -349,7 +373,13 @@ DefineCharacter("noiraran", { -- from Battle for Wesnoth: The Sceptre of Fire
 	Description = "Noiraran is a member of Durstorn's guard.",
 	HistoricalLocations = {
 		25, "nidavellir-underground", "chaincolt"
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "norlund-clan") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("kuhnar", { -- from Battle for Wesnoth: The Sceptre of Fire
@@ -366,7 +396,13 @@ DefineCharacter("kuhnar", { -- from Battle for Wesnoth: The Sceptre of Fire
 	Description = "Kuhnar is a member of Durstorn's guard.",
 	HistoricalLocations = {
 		25, "nidavellir-underground", "chaincolt"
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "norlund-clan") then
+			return true
+		end
+		return false
+	end
 })
 
 Load("scripts/civilizations/dwarf/characters_joruvellir.lua")

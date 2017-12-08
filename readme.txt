@@ -63,6 +63,7 @@ https://github.com/Andrettin/Wyrmsun
 * Heroes
 - The Runemasters Brokk and Eitri are now recruitable heroes.
 - Increased the maximum heroes to 4.
+- Baglur, Durstorn, Kuhnar, Noiraran, Rugnur and Thursagan can now only be recruited by the Norlund Clan.
 
 * Interface
 * The Idle Worker button now displays the icon of one of the worker units that are idle, rather than the icon of the player's civilization's worker unit type.
