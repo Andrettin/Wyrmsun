@@ -28,8 +28,6 @@
 DefineQuest("the-first-dwarves", {
 	Name = "The First Dwarves",
 	Icon = "icon-modsognir",
-	World = "nidavellir",
-	Civilization = "dwarf",
 	PlayerColor = "red",
 	FailEffects = function(s)
 		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "the-first-dwarves") then
@@ -46,8 +44,6 @@ DefineQuest("a-rocky-home", {
 	Name = "A Rocky Home",
 	Icon = "icon-modsognir",
 	Description = "A clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home. Beset by hostile natural forces on all sides, can they survive their first winter?",
-	World = "nidavellir",
-	Civilization = "dwarf",
 	PlayerColor = "red",
 	CompletionEffects = function(s)
 		CallDialogue("a-rocky-home-materials-collected", trigger_player)
@@ -77,15 +73,19 @@ DefineQuest("the-mastersmith-brothers", {
 	Name = "The Mastersmith Brothers",
 	Icon = "icon-dwarven-runemaster",
 	Description = "The brothers Brokk and Eitri have come to renown for their remarkable smithing abilities. It would surely be a boon for us to have them under our employ.",
-	World = "nidavellir",
-	Civilization = "dwarf",
 	PlayerColor = "red",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-smithy") > 0 or GetPlayerData(trigger_player, "UnitTypesCount", "unit-brising-smithy") > 0) then
+			return true
+		end
+		return false
+	end,
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "jewelry", GetPlayerData(trigger_player, "Resources", "jewelry") + 1000)
 	end,
 	Objectives = {"- Recruit Brokk and Eitri"},
 	Rewards = "+1000 Jewelry",
-	Hint = "Heroes are available for recruitment at the Mead Hall.",
+	Hint = "A selection of heroes is available for recruitment at the Mead Hall.",
 	RecruitCharacters = {"brokk", "eitri"},
 	Competitive = true
 })
@@ -93,23 +93,49 @@ DefineQuest("the-mastersmith-brothers", {
 DefineQuest("the-treasures-of-svarinshaug", {
 	Name = "The Treasures of Svarinshaug",
 	Icon = "icon-brising-smithy",
-	Description = "The dwarven smiths Brokk and Eitri are competing with the renowned sons of Ivaldi to craft the best artifacts for Modsognir. To obtain the necessary high quality ores will be perilous, however, as dangerous creatures abound in the deep mines where they lay...\n\nMap: Eastern Mines",
-	RequiredQuest = "the-mead-of-wisdom",
-	World = "nidavellir",
-	Civilization = "dwarf",
-	Map = "maps/nidavellir/eastern-mines.smp",
-	Scenario = "scripts/civilizations/dwarf/scenarios/the_treasures_of_svarinshaug.lua",
+	Description = "Seeking Modsognir's favor, the mastersmiths Brokk and Eitri desire to craft wondrous artifacts for the dwarven chieftain. To do so they will require plenty of metal, however.",
 	PlayerColor = "white",
-	LoadingMusic = "DwarfLoading",
---	MapMusic = "DwarfTheme3",
-	Unobtainable = true
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-smithy") > 0 or GetPlayerData(trigger_player, "UnitTypesCount", "unit-brising-smithy") > 0) then
+			return true
+		end
+		return false
+	end,
+	CompletionEffects = function(s)
+		CallDialogue("brokk-and-eitri-create-their-artifacts", trigger_player)
+		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") - 8000)
+		local brokk_unit = FindHero("brokk", trigger_player)
+		if (brokk_unit) then
+			unit = CreateUnit("unit-runesmiths-hammer", PlayerNumNeutral, {GetUnitVariable(brokk_unit, "PosX"), GetUnitVariable(brokk_unit, "PosY")}, GetUnitVariable(brokk_unit, "MapLayer"))
+			if (GetUniqueItemData("mjollnir", "CanDrop")) then
+				SetUnitVariable(unit, "Unique", "mjollnir")
+			else
+				SetUnitVariable(unit, "GenerateSpecialProperties", trigger_player, true) -- if Mjollnir cannot drop, then generate a magic ring
+			end
+			SetUnitVariable(unit, "Identified", false)
+		
+			unit = CreateUnit("unit-ring", PlayerNumNeutral, {GetUnitVariable(brokk_unit, "PosX"), GetUnitVariable(brokk_unit, "PosY")}, GetUnitVariable(brokk_unit, "MapLayer"))
+			if (GetUniqueItemData("draupnir", "CanDrop")) then
+				SetUnitVariable(unit, "Unique", "draupnir")
+			else
+				SetUnitVariable(unit, "GenerateSpecialProperties", trigger_player, true) -- if Draupnir cannot drop, then generate a magic ring
+			end
+			SetUnitVariable(unit, "Identified", false)
+		end
+	end,
+	Objectives = {"- Gather 8000 Copper", "- Have 8000 Copper", "- Brokk and Eitri must survive"},
+	Rewards = "Magic Hammer, Magic Ring, Lose 8,000 Copper",
+	GatherResources = {"copper", 800},
+	HaveResources = {"copper", 800},
+	HeroesMustSurvive = {"brokk", "eitri"},
+	Competitive = true
 })
 
 DefineQuest("the-necklace-of-the-brisings", {
 	Name = "The Necklace of the Brisings",
 	Icon = "icon-dwarven-steelclad",
 	Description = "The necklace made for Modsognir's wife by a group of four dwarven smiths has been stolen! The culprits, a band of local dwarven thieves, sneaked away with the necklace last night, going back to their hideout. We must recover the necklace from these bandits!\n\nMap: Aurvang",
-	RequiredQuest = "the-treasures-of-svarinshaug",
+	RequiredQuest = "the-mead-of-wisdom",
 	World = "nidavellir",
 	Civilization = "dwarf",
 	Map = "maps/nidavellir/aurvang.smp",

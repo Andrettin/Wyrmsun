@@ -65,13 +65,20 @@ https://github.com/Andrettin/Wyrmsun
 - Increased the maximum heroes to 4.
 - Baglur, Durstorn, Kuhnar, Noiraran, Rugnur and Thursagan can now only be recruited by the Norlund Clan.
 
+* Items
+- Added "Shocking" magic prefix (+1 lightning damage).
+- The "Storm" magic prefix now gives +2 lightning damage instead of +1.
+- Added "of the Storm" magic suffix, which gives +2 lightning damage.
+- Added the Mjollnir unique hammer.
+
 * Interface
-* The Idle Worker button now displays the icon of one of the worker units that are idle, rather than the icon of the player's civilization's worker unit type.
+- The Idle Worker button now displays the icon of one of the worker units that are idle, rather than the icon of the player's civilization's worker unit type.
 
 * Scenarios
 - Added an underground layer for the Nidavellir scenarios.
 - The Grafvitning kobolds now dwell in the underground layer, beneath Svarinshaug.
 - Added "The Mastersmith Brothers" dwarven side-quest, in which the player has the objective of recruiting Brokk and Eitri.
+- The "Treasures of Svarinshaug" quest is now a dwarven side-quest accessible in the scenario mode, instead of a mission.
 
 -----------------------------------------------------------------------
 - 3.1.0

@@ -25,6 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+Load("scripts/civilizations/dwarf/quests_the_first_dwarves.lua")
+
 DefineQuest("the-dripping-hall", { -- based on the lay of Alvis from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 144.
 	Name = "The Dripping Hall",
 	Icon = "icon-dwarven-gryphon-rider",
@@ -381,7 +383,7 @@ DefineQuest("andvaris-gold", {
 		if (GetUniqueItemData("andvaranaut", "CanDrop")) then
 			SetUnitVariable(unit, "Unique", "andvaranaut")
 		else
-			SetUnitVariable(unit, "GenerateSpecialProperties", oinling_player) -- if Andvaranaut cannot drop, then generate a magic ring
+			SetUnitVariable(unit, "GenerateSpecialProperties", oinling_player, true) -- if Andvaranaut cannot drop, then generate a magic ring
 		end
 		SetUnitVariable(unit, "Identified", false)
 		unit = CreateUnit("unit-revealer", trigger_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("material-plane", "nidavellir", 0)) -- show the location of the ring
@@ -433,5 +435,4 @@ DefineQuest("island-of-the-lizard-god", {
 	HeroesMustSurvive = {"vindalf"}
 })
 
-Load("scripts/civilizations/dwarf/quests_the_first_dwarves.lua")
 Load("scripts/civilizations/dwarf/quests_joruvellir.lua")

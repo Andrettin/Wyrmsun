@@ -144,7 +144,8 @@ DefineCharacter("brokk", {
 	Type = "unit-dwarven-runemaster",
 	Civilization = "dwarf",
 	Background = "Brokk is a dwarf from Norse mythology who was an expert smith. He is the brother of Eitri.",
-	Deities = {"odin", "tyr"}
+	Deities = {"odin", "tyr"},
+	Trait = "upgrade-keen"
 })
 
 DefineCharacter("eitri", {
@@ -153,7 +154,8 @@ DefineCharacter("eitri", {
 	Type = "unit-dwarven-runemaster",
 	Civilization = "dwarf",
 	Background = "Eitri is a dwarf from Norse mythology who was an expert smith. He is the brother of Brokk.",
-	Deities = {"odin", "tyr"}
+	Deities = {"odin", "tyr"},
+	Trait = "upgrade-dextrous"
 })
 
 DefineCharacter("gandalf", {

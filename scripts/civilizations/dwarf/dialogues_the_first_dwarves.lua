@@ -195,3 +195,12 @@ DefineDialogue("worker-suggests-stone-furniture", {
 		}
 	}
 })
+
+DefineDialogue("brokk-and-eitri-create-their-artifacts", {
+	Nodes = {
+		{
+			"speaker", "character", "eitri",
+			"text", "We have gotten all the metal we need. To the forge!"
+		}
+	}
+})

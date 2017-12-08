@@ -127,6 +127,14 @@ DefineUniqueItem("sigrljoma", { -- Source: Paul Beekman Taylor, "Searoniðas: Ol
 
 -- Hammers
 
+DefineUniqueItem("mjollnir", {
+	Name = "Mjollnir",
+	Type = "unit-runesmiths-hammer", -- should be a throwing hammer
+	Prefix = "upgrade-item-prefix-storm",
+	Suffix = "upgrade-item-suffix-of-the-storm",
+	Description = "Mjollnir is a mighty iron hammer crafted by the dwarven brothers Brokk and Eitri. It is said to have been gifted to Thor, god of thunder."
+} )
+
 DefineUniqueItem("the-hammer-of-thursagan", {
 	Name = "The Hammer of Thursagan",
 	Type = "unit-runesmiths-hammer",
@@ -569,7 +577,6 @@ DefineUniqueItem("na-slovanech-monastery", { -- Alena Ježková, "77 Prague Lege
 -- Dainsleif (dwarven sword)
 -- Gleipnir (fetter made by dwarves to bind the wolf Fenrir)
 -- Gungnir (throwing spear made by the sons of Ivaldi)
--- Mjollnir (iron hammer made by the dwarven brothers Brokk and Eitri)
 -- Naglering (sword forged by the dwarf Alberich)
 -- Odrorir (cauldron which contained some of the mead of poetry)
 -- Son (jar which contained some of the mead of poetry)

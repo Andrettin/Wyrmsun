@@ -162,11 +162,18 @@ DefineUpgrade("upgrade-item-prefix-sawing", {
 	MagicLevel = 3
 })
 
+DefineUpgrade("upgrade-item-prefix-shocking", {
+	Name = "Shocking",
+	MagicPrefix = true,
+	ItemPrefix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing-axe", "thrusting-sword"},
+	MagicLevel = 2
+})
+
 DefineUpgrade("upgrade-item-prefix-storm", { -- example: Storm Trident (from Wesnoth)
 	Name = "Storm",
 	MagicPrefix = true,
 	ItemPrefix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing-axe", "thrusting-sword"},
-	MagicLevel = 2
+	MagicLevel = 4
 })
 
 DefineUpgrade("upgrade-item-prefix-sturdy", {
@@ -299,8 +306,12 @@ DefineModifier("upgrade-item-prefix-sawing",
 	{"FurnitureGatheringBonus", 1}
 )
 
-DefineModifier("upgrade-item-prefix-storm",
+DefineModifier("upgrade-item-prefix-shocking",
 	{"LightningDamage", 1}
+)
+
+DefineModifier("upgrade-item-prefix-storm",
+	{"LightningDamage", 2}
 )
 
 DefineModifier("upgrade-item-prefix-sturdy",
@@ -386,6 +397,10 @@ DefineDependency("upgrade-item-prefix-quenching",
 
 DefineDependency("upgrade-item-prefix-replenishing",
 	{"upgrade-deity-domain-life"}, "or", {"upgrade-deity-domain-hope"}
+)
+
+DefineDependency("upgrade-item-prefix-shocking",
+	{"upgrade-deity-domain-lightning"}
 )
 
 DefineDependency("upgrade-item-prefix-storm",

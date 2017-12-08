@@ -226,6 +226,14 @@ DefineUpgrade("upgrade-item-suffix-of-speed", { -- example: Ring of Speed (from 
 	MagicLevel = 2
 })
 
+DefineUpgrade("upgrade-item-suffix-of-the-storm", {
+	Name = "of the Storm",
+	MagicSuffix = true,
+	ItemSuffix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing-axe", "thrusting-sword"},
+	IncompatibleAffixes = {"upgrade-item-prefix-storm"},
+	MagicLevel = 4
+})
+
 DefineUpgrade("upgrade-item-suffix-of-strength", { -- example: Amulet of Strength (from Wesnoth)
 	Name = "of Strength",
 	MagicSuffix = true,
@@ -404,6 +412,10 @@ DefineModifier("upgrade-item-suffix-of-speed",
 	{"Speed", 1}
 )
 
+DefineModifier("upgrade-item-suffix-of-the-storm",
+	{"LightningDamage", 2}
+)
+
 DefineModifier("upgrade-item-suffix-of-strength",
 	{"BasicDamage", 2}
 )
@@ -548,6 +560,10 @@ DefineDependency("upgrade-item-suffix-of-the-snigill",
 
 DefineDependency("upgrade-item-suffix-of-speed",
 	{"upgrade-deity-domain-air"}, "or", {"upgrade-deity-domain-lightning"}
+)
+
+DefineDependency("upgrade-item-suffix-of-the-storm",
+	{"upgrade-deity-domain-lightning"}
 )
 
 DefineDependency("upgrade-item-suffix-of-strength",

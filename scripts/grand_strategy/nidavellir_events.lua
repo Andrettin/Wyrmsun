@@ -75,51 +75,6 @@ local NidavellirEvents = {
 		},
 		OptionTooltips = {"", "-10 Prestige"}
 	},
-	TheTreasuresOfSvarinshaug = {
-		Name = "The Treasures of Svarinshaug",
-		Description = "The dwarven smiths Brokk and Eitri are competing with the renowned sons of Ivaldi to craft the best artifacts for Modsognir. To obtain the necessary high quality ores will be perilous, however, as dangerous creatures abound in the deep mines where they lay...",
-		Heroes = {
-			Modsognir = true,
-			Durin = true
-		},
-		RequiredEvents = {
-			TheMeadOfWisdom = true
-		},
-		Conditions = function(s)
-			if (
-				EventFaction.Name == "brising-clan"
-				and SyncRand(100) < 20
-			) then
-				return true
-			else
-				return false
-			end
-		end,
-		Options = {"~!OK"},
-		OptionEffects = {
-			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "brising-clan" and wyr.preferences.AutomaticBattles == false) then
-					GrandStrategyEventMap = true
-					GetMapInfo("maps/nidavellir/eastern-mines.smp")
-					SetCurrentQuest("the-treasures-of-svarinshaug")
-					RunMap("maps/nidavellir/eastern-mines.smp")
-					GrandStrategyEventMap = false
-					
-					if (GameResult == GameVictory) then
-						ChangeFactionResource("dwarf", "brising-clan", "prestige", 30) -- prestige for obtaining the wondrous artifacts
-						ChangeFactionResource("dwarf", "brising-clan", "copper", 1000) -- copper value of Draupnir
-					end
-				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "brising-clan" or wyr.preferences.AutomaticBattles)) then
-					ChangeFactionResource("dwarf", "brising-clan", "prestige", 30) -- prestige for obtaining the wondrous artifacts
-					ChangeFactionResource("dwarf", "brising-clan", "copper", 1000) -- copper value of Draupnir
-					if (GrandStrategyFaction.Name == EventFaction.Name) then
-						GenericDialog("The Treasures of Svarinshaug", "Having gathered the necessary resources, Brokk and Eitri crafted their gifts for Modsognir. The sons of Ivaldi had presented the chieftain with a magnificent throwing spear, Gungnir, and a sleek ship, Skidbladnir. But Modsognir judged Brokk and Eitri's artifacts to be the better ones: they gave him a solid gold arm-ring, Draupnir, and a mighty hammer, Mjollnir.")
-					end
-				end
-			end
-		},
-		OptionTooltips = {""}
-	},
 	TheNecklaceOfTheBrisings = {
 		Name = "The Necklace of the Brisings",
 		Description = "The necklace made for Modsognir's wife by a group of four dwarven smiths has been stolen! The culprits, a band of local dwarven thieves, sneaked away with the necklace last night, going back to their hideout. We must avenge this dishonor to our clan, and recover the necklace from these bandits!",
@@ -128,7 +83,7 @@ local NidavellirEvents = {
 			Durin = true
 		},
 		RequiredEvents = {
-			TheTreasuresOfSvarinshaug = true
+			TheMeadOfWisdom = true
 		},
 		Conditions = function(s)
 			if (
