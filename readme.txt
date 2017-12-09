@@ -74,6 +74,9 @@ https://github.com/Andrettin/Wyrmsun
 * Interface
 - The Idle Worker button now displays the icon of one of the worker units that are idle, rather than the icon of the player's civilization's worker unit type.
 
+* Maps
+- The player now starts the Random Dungeon and Hall of Lyr maps with a small assortment of units besides the starting hero.
+
 * Scenarios
 - Added an underground layer for the Nidavellir scenarios.
 - The Grafvitning kobolds now dwell in the underground layer, beneath Svarinshaug.

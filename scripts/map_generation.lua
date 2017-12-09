@@ -5537,6 +5537,16 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 									end
 									SecondWhileCount = SecondWhileCount + 1
 								end
+								
+								if (player_hero == "random") then
+									for i = 1, 5 do
+										OldCreateUnit(ConvertUnitType("unit-dwarven-axefighter", player_civilization), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+									end
+									for i = 1, 3 do
+										OldCreateUnit(ConvertUnitType("unit-dwarven-scout", player_civilization), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+									end
+								end
+								
 								Count = Count - 1
 							end
 						end
@@ -5611,7 +5621,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 									SetUnitVariable(unit, "Character", chosen_hero)
 									SetUnitVariable(unit, "Active", false)
 								else
-									unit = CreateUnit(GetCharacterData(second_player_hero, "Type"), 0, {RandomX, RandomY})
+									unit = CreateUnit(GetCharacterData(second_player_hero, "Type"), 1, {RandomX, RandomY})
 									SetUnitVariable(unit, "Character", second_player_hero)
 									SetUnitVariable(unit, "Active", false)
 								end
@@ -5632,6 +5642,16 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 									end
 									SecondWhileCount = SecondWhileCount + 1
 								end
+								
+								if (second_player_hero == "random") then
+									for i = 1, 5 do
+										OldCreateUnit(ConvertUnitType("unit-dwarven-axefighter", second_player_civilization), 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+									end
+									for i = 1, 3 do
+										OldCreateUnit(ConvertUnitType("unit-dwarven-scout", second_player_civilization), 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+									end
+								end
+								
 								Count = Count - 1
 							end
 						end
