@@ -276,16 +276,16 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-pike",
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-barbed-arrow",
 	Action = "research", Value = "upgrade-goblin-barbed-arrow",
 	Allowed = "check-single-research",
-	Key = "a", Hint = _("Research Barbed ~!Arrow"), Popup = "popup-research",
-	Description = "+2 Damage for Archers. Allows Barbed Arrows to be sold at the Market.",
+	Key = "a", Hint = "Research Barbed ~!Arrow", Popup = "popup-research",
+	Description = "+2 Damage for Archers, Strongholds and Guard Towers. Allows Barbed Arrows to be sold at the Market.",
 	ForUnit = {"unit-goblin-lumber-mill"}
 } )
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-bodkin-arrow",
 	Action = "research", Value = "upgrade-goblin-bodkin-arrow",
 	Allowed = "check-single-research",
-	Key = "a", Hint = _("Research Bodkin ~!Arrow"), Popup = "popup-research",
-	Description = "+2 Damage for Archers. Allows Bodkin Arrows to be sold at the Market.",
+	Key = "a", Hint = "Research Bodkin ~!Arrow", Popup = "popup-research",
+	Description = "+2 Damage for Archers, Strongholds and Guard Towers. Allows Bodkin Arrows to be sold at the Market.",
 	ForUnit = {"unit-goblin-lumber-mill"}
 } )
 
@@ -316,7 +316,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-norse-runewriting",
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-cauldron",
 	Action = "research", Value = "upgrade-goblin-alchemy",
 	Allowed = "check-single-research",
-	Description = "+1 Fire Damage for Archers and Headhunters, +4 Fire Damage for War Machines. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market.",
+	Description = "+1 Fire Damage for Archers, Strongholds and Guard Towers, +4 Fire Damage for War Machines. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market.",
 	Key = "a", Hint = "Research ~!Alchemy", Popup = "popup-research",
 	ForUnit = {"unit-goblin-academy"}
 } )

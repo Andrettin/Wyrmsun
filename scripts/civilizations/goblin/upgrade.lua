@@ -41,7 +41,7 @@ DefineUpgrade("upgrade-goblin-long-sword", {
 	Parent = "upgrade-long-sword",
 	Icon = "icon-goblin-long-sword",
 	Civilization = "goblin",
-	Description = _("There are few sights more terrifying for dwarven frontier settlements than a charging goblin army entirely equipped with these deadly long swords.\n\nEffect: +2 Damage for Swordsmen. Allows Long Swords to be sold at the Market."),
+	Description = "There are few sights more terrifying for dwarven frontier settlements than a charging goblin army entirely equipped with these deadly long swords.\n\nEffect: +2 Damage for Swordsmen. Allows Long Swords to be sold at the Market.",
 	Item = "unit-goblin-long-sword"
 })
 
@@ -79,22 +79,22 @@ DefineUpgrade("upgrade-goblin-pike", {
 })
 
 DefineUpgrade("upgrade-goblin-barbed-arrow", {
-	Name = _("Barbed Arrow"),
+	Name = "Barbed Arrow",
 	Parent = "upgrade-ranged-projectile-1",
 	Icon = "icon-germanic-barbed-arrow",
 	Civilization = "goblin",
-	Description = _("An improvement over the basic triangular-shaped arrow, the barbed arrow is much harder to be removed from the wound after puncturing an enemy.\n\nEffect: +2 Damage for Archers. Allows Barbed Arrows to be sold at the Market."),
+	Description = "An improvement over the basic triangular-shaped arrow, the barbed arrow is much harder to be removed from the wound after puncturing an enemy.\n\nEffect: +2 Damage for Archers, Strongholds and Guard Towers. Allows Barbed Arrows to be sold at the Market.",
 	Arrows = true,
 	Item = "unit-barbed-arrows"
 })
 
 DefineUpgrade("upgrade-goblin-bodkin-arrow", {
-	Name = _("Bodkin Arrow"),
+	Name = "Bodkin Arrow",
 	Parent = "upgrade-ranged-projectile-2",
 	Icon = "icon-bodkin-arrow",
 	Civilization = "goblin",
 	RequirementsString = "Barbed Arrow",
-	Description = _("Bodkin arrows focus pressure on a single point, greatly enhancing their piercing capability.\n\nEffect: +2 Damage for Archers. Allows Bodkin Arrows to be sold at the Market."),
+	Description = "Bodkin arrows focus pressure on a single point, greatly enhancing their piercing capability.\n\nEffect: +2 Damage for Archers, Strongholds and Guard Towers. Allows Bodkin Arrows to be sold at the Market.",
 	Arrows = true,
 	Item = "unit-bodkin-arrows"
 })
@@ -133,7 +133,7 @@ DefineUpgrade("upgrade-goblin-writing", {
 DefineUpgrade("upgrade-goblin-alchemy", {
 	Parent = "upgrade-alchemy",
 	Civilization = "goblin",
-	Description = "Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Archers and Headhunters, +4 Fire Damage for War Machines. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market."
+	Description = "Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Archers, Strongholds and Guard Towers, +4 Fire Damage for War Machines. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market."
 })
 
 DefineModifier("upgrade-goblin-broad-sword",
@@ -181,13 +181,15 @@ DefineModifier("upgrade-goblin-pike",
 DefineModifier("upgrade-goblin-barbed-arrow",
 	{"BasicDamage", 2},
 	{"Points", 10},
-	{"apply-to", "unit-goblin-archer"}, {"apply-to", "unit-goblin-headhunter"}, {"apply-to", "unit-goblin-shadowstalker"}
+	{"apply-to", "unit-goblin-archer"}, {"apply-to", "unit-goblin-headhunter"}, {"apply-to", "unit-goblin-shadowstalker"},
+	{"apply-to", "unit-goblin-stronghold"}, {"apply-to", "unit-goblin-guard-tower"}
 )
 
 DefineModifier("upgrade-goblin-bodkin-arrow",
 	{"BasicDamage", 2},
 	{"Points", 10},
-	{"apply-to", "unit-goblin-archer"}, {"apply-to", "unit-goblin-headhunter"}, {"apply-to", "unit-goblin-shadowstalker"}
+	{"apply-to", "unit-goblin-archer"}, {"apply-to", "unit-goblin-headhunter"}, {"apply-to", "unit-goblin-shadowstalker"},
+	{"apply-to", "unit-goblin-stronghold"}, {"apply-to", "unit-goblin-guard-tower"}
 )
 
 DefineModifier("upgrade-goblin-catapult-projectile-1",
@@ -237,8 +239,9 @@ DefineModifier("upgrade-goblin-writing",
 
 DefineModifier("upgrade-goblin-alchemy",
 	{"FireDamage", 1},
-	{"Points", 8},
-	{"apply-to", "unit-goblin-archer"}, {"apply-to", "unit-goblin-headhunter"}, {"apply-to", "unit-goblin-shadowstalker"}
+	{"Points", 7},
+	{"apply-to", "unit-goblin-archer"}, {"apply-to", "unit-goblin-headhunter"}, {"apply-to", "unit-goblin-shadowstalker"},
+	{"apply-to", "unit-goblin-stronghold"}, {"apply-to", "unit-goblin-guard-tower"}
 )
 
 DefineModifier("upgrade-goblin-alchemy",

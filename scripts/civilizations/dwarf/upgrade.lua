@@ -86,7 +86,7 @@ DefineUpgrade("upgrade-dwarven-sharp-throwing-axe", {
 	Parent = "upgrade-ranged-projectile-1",
 	Icon = "icon-dwarven-sharp-throwing-axe",
 	Civilization = "dwarf",
-	Description = "As their craftsmanship progresses, dwarven artisans become capable of improving the basic throwing axe to have sharper blades.\n\nEffect: +2 Damage for Scouts and Gryphon Riders. Allows Sharp Throwing Axes to be sold at the Market.",
+	Description = "As their craftsmanship progresses, dwarven artisans become capable of improving the basic throwing axe to have sharper blades.\n\nEffect: +2 Damage for Scouts, Gryphon Riders, Bastions and Guard Towers. Allows Sharp Throwing Axes to be sold at the Market.",
 	Weapon = true,
 	Item = "unit-sharp-throwing-axe"
 })
@@ -97,7 +97,7 @@ DefineUpgrade("upgrade-dwarven-bearded-throwing-axe", {
 	Icon = "icon-dwarven-bearded-throwing-axe",
 	Civilization = "dwarf",
 	RequirementsString = "Sharp Throwing Axe",
-	Description = "The 'bearding' of throwing axes by extending the bottom of their blades is an innovation which makes them more deadly when thrown.\n\nEffect: +2 Damage for Scouts and Gryphon Riders. Allows Bearded Throwing Axes to be sold at the Market.",
+	Description = "The 'bearding' of throwing axes by extending the bottom of their blades is an innovation which makes them more deadly when thrown.\n\nEffect: +2 Damage for Scouts, Gryphon Riders, Bastions and Guard Towers. Allows Bearded Throwing Axes to be sold at the Market.",
 	Weapon = true,
 	Item = "unit-bearded-throwing-axe"
 })
@@ -141,7 +141,7 @@ DefineUpgrade("upgrade-dwarven-runewriting", {
 DefineUpgrade("upgrade-dwarven-alchemy", {
 	Parent = "upgrade-alchemy",
 	Civilization = "dwarf",
-	Description = "Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Scouts, Pathfinders, Explorers and Gryphon Riders, +4 Fire Damage for Ballistas and Ballista Warships. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market."
+	Description = "Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Scouts, Gryphon Riders, Bastions and Guard Towers, +4 Fire Damage for Ballistas and Ballista Warships. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market."
 })
 
 DefineModifier("upgrade-dwarven-broad-axe",
@@ -206,14 +206,16 @@ DefineModifier("upgrade-dwarven-sharp-throwing-axe",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}, {"apply-to", "unit-dwarven-explorer"}, {"apply-to", "unit-dwarven-gryphon-rider"},
-	{"apply-to", "unit-joruvellir-scout"}, {"apply-to", "unit-joruvellir-pathfinder"}, {"apply-to", "unit-joruvellir-explorer"}
+	{"apply-to", "unit-joruvellir-scout"}, {"apply-to", "unit-joruvellir-pathfinder"}, {"apply-to", "unit-joruvellir-explorer"},
+	{"apply-to", "unit-dwarven-stronghold"}, {"apply-to", "unit-dwarven-guard-tower"}
 )
 
 DefineModifier("upgrade-dwarven-bearded-throwing-axe",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}, {"apply-to", "unit-dwarven-explorer"}, {"apply-to", "unit-dwarven-gryphon-rider"},
-	{"apply-to", "unit-joruvellir-scout"}, {"apply-to", "unit-joruvellir-pathfinder"}, {"apply-to", "unit-joruvellir-explorer"}
+	{"apply-to", "unit-joruvellir-scout"}, {"apply-to", "unit-joruvellir-pathfinder"}, {"apply-to", "unit-joruvellir-explorer"},
+	{"apply-to", "unit-dwarven-stronghold"}, {"apply-to", "unit-dwarven-guard-tower"}
 )
 
 DefineModifier("upgrade-dwarven-ballista-bolt-1",
@@ -280,9 +282,10 @@ DefineModifier("upgrade-dwarven-runewriting",
 
 DefineModifier("upgrade-dwarven-alchemy",
 	{"FireDamage", 1},
-	{"Points", 10},
+	{"Points", 7},
 	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}, {"apply-to", "unit-dwarven-explorer"}, {"apply-to", "unit-dwarven-gryphon-rider"},
-	{"apply-to", "unit-joruvellir-scout"}, {"apply-to", "unit-joruvellir-pathfinder"}, {"apply-to", "unit-joruvellir-explorer"}
+	{"apply-to", "unit-joruvellir-scout"}, {"apply-to", "unit-joruvellir-pathfinder"}, {"apply-to", "unit-joruvellir-explorer"},
+	{"apply-to", "unit-dwarven-stronghold"}, {"apply-to", "unit-dwarven-guard-tower"}
 )
 
 DefineModifier("upgrade-dwarven-alchemy",

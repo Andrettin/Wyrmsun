@@ -59,11 +59,11 @@ DefineUpgrade("upgrade-germanic-bronze-shield", {
 })
 
 DefineUpgrade("upgrade-germanic-barbed-arrow", {
-	Name = _("Barbed Arrow"),
+	Name = "Barbed Arrow",
 	Parent = "upgrade-ranged-projectile-1",
 	Icon = "icon-germanic-barbed-arrow",
 	Civilization = "germanic",
-	Description = "An improvement over the basic triangular-shaped arrow, the barbed arrow is much harder to be removed from the wound after puncturing an enemy.\n\nEffect: +2 Damage for archers. Allows Barbed Arrows to be sold at the Market.",
+	Description = "An improvement over the basic triangular-shaped arrow, the barbed arrow is much harder to be removed from the wound after puncturing an enemy.\n\nEffect: +2 Damage for archers, strongholds and guard towers. Allows Barbed Arrows to be sold at the Market.",
 	Arrows = true,
 	Item = "unit-barbed-arrows"
 })
@@ -104,7 +104,8 @@ DefineModifier("upgrade-germanic-bronze-shield",
 DefineModifier("upgrade-germanic-barbed-arrow",
 	{"BasicDamage", 2},
 	{"Points", 10},
-	{"apply-to", "unit-germanic-archer"}, {"apply-to", "unit-teuton-archer"}
+	{"apply-to", "unit-germanic-archer"}, {"apply-to", "unit-teuton-archer"},
+	{"apply-to", "unit-teuton-stronghold"}, {"apply-to", "unit-teuton-guard-tower"}
 )
 
 DefineModifier("upgrade-teuton-civilization",

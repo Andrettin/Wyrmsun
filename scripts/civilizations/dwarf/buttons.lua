@@ -453,7 +453,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-sharp-throwing-axe",
 	Action = "research", Value = "upgrade-dwarven-sharp-throwing-axe",
 	Allowed = "check-single-research",
 	Key = "t", Hint = "Research Sharp ~!Throwing Axe", Popup = "popup-research",
-	Description = "+2 Damage for Scouts and Gryphon Riders. Allows Sharp Throwing Axes to be sold at the Market.",
+	Description = "+2 Damage for Scouts, Gryphon Riders, Bastions and Guard Towers. Allows Sharp Throwing Axes to be sold at the Market.",
 	ForUnit = {"unit-dwarven-lumber-mill"}
 } )
 
@@ -461,7 +461,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-dwarven-bearded-throwing-axe",
 	Action = "research", Value = "upgrade-dwarven-bearded-throwing-axe",
 	Allowed = "check-single-research",
 	Key = "t", Hint = "Research Bearded ~!Throwing Axe", Popup = "popup-research",
-	Description = "+1 Damage for Scouts and Gryphon Riders. Allows Bearded Throwing Axes to be sold at the Market.",
+	Description = "+1 Damage for Scouts, Gryphon Riders, Bastions and Guard Towers. Allows Bearded Throwing Axes to be sold at the Market.",
 	ForUnit = {"unit-dwarven-lumber-mill"}
 } )
 
@@ -492,7 +492,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-norse-runewriting",
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-cauldron",
 	Action = "research", Value = "upgrade-dwarven-alchemy",
 	Allowed = "check-single-research",
-	Description = "+1 Fire Damage for Scouts, Pathfinders, Explorers and Gryphon Riders, +4 Fire Damage for Ballistas and Ballista Warships. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market.",
+	Description = "+1 Fire Damage for Scouts, Gryphon Riders, Bastions and Guard Towers, +4 Fire Damage for Ballistas and Ballista Warships. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market.",
 	Key = "a", Hint = "Research ~!Alchemy", Popup = "popup-research",
 	ForUnit = {"unit-dwarven-academy"}
 } )

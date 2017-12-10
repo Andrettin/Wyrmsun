@@ -59,7 +59,7 @@ DefineUpgrade("upgrade-teuton-bodkin-arrow", {
 	Icon = "icon-bodkin-arrow",
 	Civilization = "teuton",
 	RequirementsString = "Barbed Arrow",
-	Description = "Bodkin arrows focus pressure on a single point, greatly enhancing their piercing capability.\n\nEffect: +2 Damage for Archers. Allows Bodkin Arrows to be sold at the Market.",
+	Description = "Bodkin arrows focus pressure on a single point, greatly enhancing their piercing capability.\n\nEffect: +2 Damage for Archers, Strongholds and Guard Towers. Allows Bodkin Arrows to be sold at the Market.",
 	Arrows = true,
 	Item = "unit-bodkin-arrows"
 })
@@ -100,7 +100,7 @@ DefineUpgrade("upgrade-teuton-writing", {
 DefineUpgrade("upgrade-teuton-alchemy", {
 	Parent = "upgrade-alchemy",
 	Civilization = "teuton",
-	Description = "Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Archers, +4 Fire Damage for Catapults. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market."
+	Description = "Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Archers, Strongholds and Guard Towers, +4 Fire Damage for Catapults. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market."
 })
 
 DefineModifier("upgrade-teuton-spatha",
@@ -133,7 +133,8 @@ DefineModifier("upgrade-teuton-iron-shield",
 DefineModifier("upgrade-teuton-bodkin-arrow",
 	{"BasicDamage", 2},
 	{"Points", 10},
-	{"apply-to", "unit-teuton-archer"}
+	{"apply-to", "unit-teuton-archer"},
+	{"apply-to", "unit-teuton-stronghold"}, {"apply-to", "unit-teuton-guard-tower"}
 )
 
 DefineModifier("upgrade-teuton-catapult-projectile-1",
@@ -193,8 +194,9 @@ DefineModifier("upgrade-teuton-writing",
 
 DefineModifier("upgrade-teuton-alchemy",
 	{"FireDamage", 1},
-	{"Points", 8},
-	{"apply-to", "unit-teuton-archer"}
+	{"Points", 7},
+	{"apply-to", "unit-teuton-archer"},
+	{"apply-to", "unit-teuton-stronghold"}, {"apply-to", "unit-teuton-guard-tower"}
 )
 
 DefineModifier("upgrade-teuton-alchemy",
