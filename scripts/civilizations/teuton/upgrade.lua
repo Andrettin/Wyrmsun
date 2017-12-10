@@ -194,7 +194,7 @@ DefineModifier("upgrade-teuton-writing",
 
 DefineModifier("upgrade-teuton-alchemy",
 	{"FireDamage", 1},
-	{"Points", 7},
+	{"Points", 10},
 	{"apply-to", "unit-teuton-archer"},
 	{"apply-to", "unit-teuton-stronghold"}, {"apply-to", "unit-teuton-guard-tower"}
 )

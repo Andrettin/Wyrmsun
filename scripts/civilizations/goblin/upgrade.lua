@@ -239,7 +239,7 @@ DefineModifier("upgrade-goblin-writing",
 
 DefineModifier("upgrade-goblin-alchemy",
 	{"FireDamage", 1},
-	{"Points", 7},
+	{"Points", 10},
 	{"apply-to", "unit-goblin-archer"}, {"apply-to", "unit-goblin-headhunter"}, {"apply-to", "unit-goblin-shadowstalker"},
 	{"apply-to", "unit-goblin-stronghold"}, {"apply-to", "unit-goblin-guard-tower"}
 )
