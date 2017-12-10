@@ -4051,12 +4051,13 @@ DefineUnitType("unit-template-stronghold", {
 	Name = "Stronghold",
 	Parent = "unit-template-town-hall",
 	Class = "stronghold",
+	Animations = "animations-stronghold",
 	Costs = {"time", 200, "copper", 2000, "lumber", 2100, "stone", 1500},
 	RepairCosts = {"copper", 1, "lumber", 1, "stone", 1},
 	HitPoints = 1167, -- 1400 with masonry
 	SightRange = 9,
 	OwnershipInfluenceRange = 8,
-	BasicDamage = 16,
+	BasicDamage = 9,
 	MaxAttackRange = 6,
 	GarrisonedRangeBonus = 1,
 	Accuracy = 10,
@@ -4079,7 +4080,8 @@ DefineUnitType("unit-template-stronghold", {
 		"selected", "fortress-selected",
 --		"acknowledge", "town-hall-acknowledge",
 		"ready", "fortress-ready",
---		"help", "basic-dwarf-voices-help"
+--		"help", "basic-dwarf-voices-help",
+		"fire-missile", "bow"
 	}
 } )
 
@@ -4454,6 +4456,7 @@ DefineUnitType("unit-template-guard-tower", {
 	Name = "Guard Tower",
 	Parent = "unit-template-building",
 	Class = "guard-tower",
+	Animations = "animations-guard-tower",
 	Costs = {"time", 140, "copper", 500, "lumber", 225, "stone", 225},
 	RepairHp = 4,
 	RepairCosts = {"copper", 1, "lumber", 1, "stone", 1},
@@ -4462,12 +4465,13 @@ DefineUnitType("unit-template-guard-tower", {
 	TileSize = {2, 2}, BoxSize = {63, 63},
 	SightRange = 9,
 	OwnershipInfluenceRange = 4,
-	Armor = 5, BasicDamage = 16,
+	Armor = 5,
+	BasicDamage = 9,
+	MaxAttackRange = 6,
 	Accuracy = 10,
+	GarrisonedRangeBonus = 1,
 	Missile = "missile-arrow",
 	FireMissile = "missile-flaming-arrow",
-	MaxAttackRange = 6,
-	GarrisonedRangeBonus = 1,
 	Priority = 50, AnnoyComputerFactor = 60,
 	Points = 200,
 	Corpse = "unit-destroyed-2x2-place",
@@ -4490,7 +4494,8 @@ DefineUnitType("unit-template-guard-tower", {
 --		"acknowledge", "dwarven-sentry-tower-acknowledge",
 		"ready", "tower-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "building-destroyed"
+		"dead", "building-destroyed",
+		"fire-missile", "bow"
 	}
 } )
 

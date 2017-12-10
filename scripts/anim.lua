@@ -900,6 +900,27 @@ DefineAnimations("animations-building", {
 	Attack = {"unbreakable begin", "frame 0", "attack", "wait 59", "frame 0", "unbreakable end", "wait 1",},
 })
 
+DefineAnimations("animations-stronghold", {
+	Still = BuildingStill,
+	Research = BuildingStill,
+	Train = BuildingStill,
+	Upgrade = {"frame 1", "wait 4", "frame 1", "wait 1",},
+	Attack = {"unbreakable begin", "frame 0", "attack", "wait 8", "frame 0", "attack", "wait 51", "frame 0", "unbreakable end", "wait 1",},
+})
+
+DefineAnimations("animations-fortress", {
+	Still = BuildingStill,
+	Research = BuildingStill,
+	Train = BuildingStill,
+	Upgrade = {"frame 1", "wait 4", "frame 1", "wait 1",},
+	Attack = {"unbreakable begin", "frame 0", "attack", "wait 8", "frame 0", "attack", "wait 8", "frame 0", "attack", "wait 43", "frame 0", "unbreakable end", "wait 1",},
+})
+
+DefineAnimations("animations-guard-tower", {
+	Still = BuildingStill,
+	Upgrade = {"frame 1", "wait 4", "frame 1", "wait 1",},
+	Attack = {"unbreakable begin", "frame 0", "attack", "wait 59", "frame 0", "unbreakable end", "wait 1",},
+})
 
 local ActiveBuildingStill = {
 	"label start",

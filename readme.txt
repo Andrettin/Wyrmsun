@@ -87,6 +87,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added "The Mastersmith Brothers" dwarven side-quest, in which the player has the objective of recruiting Brokk and Eitri.
 - The "Treasures of Svarinshaug" quest is now a dwarven side-quest accessible in the scenario mode, instead of a mission.
 
+* Units
+- Added +1 damage to the dwarven Scout, Pathfinder, Explorer and Gryphon Rider.
+
 -----------------------------------------------------------------------
 - 3.1.0
 -----------------------------------------------------------------------

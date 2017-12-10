@@ -943,7 +943,7 @@ DefineUnitType("unit-dwarven-scout", {
 		{"weapon", "unit-throwing-axe"},
 		{"boots", "unit-boots"}
 	},
-	BasicDamage = 10,
+	BasicDamage = 11,
 	Missile = "missile-throwing-axe",
 	FireMissile = "missile-flaming-throwing-axe",
 	MaxAttackRange = 4,
@@ -1029,7 +1029,7 @@ DefineUnitType("unit-dwarven-pathfinder", {
 		{"weapon", "unit-throwing-axe"},
 		{"boots", "unit-boots"}
 	},
-	BasicDamage = 11,
+	BasicDamage = 12,
 	Missile = "missile-throwing-axe",
 	FireMissile = "missile-flaming-throwing-axe",
 	MaxAttackRange = 4,
@@ -1085,7 +1085,7 @@ DefineUnitType("unit-dwarven-explorer", {
 		{"weapon", "unit-throwing-axe"},
 		{"boots", "unit-boots"}
 	},
-	BasicDamage = 12,
+	BasicDamage = 13,
 	Missile = "missile-throwing-axe",
 	FireMissile = "missile-flaming-throwing-axe",
 	MaxAttackRange = 4,
@@ -1406,7 +1406,7 @@ DefineUnitType("unit-dwarven-gryphon-rider", {
 	},
 	Missile = "missile-throwing-axe",
 	FireMissile = "missile-flaming-throwing-axe",
-	BasicDamage = 13,
+	BasicDamage = 14,
 	MaxAttackRange = 4,
 	WeaponClasses = {"throwing-axe"},
 	HackDamage = true,
@@ -1611,6 +1611,8 @@ DefineUnitType("unit-dwarven-stronghold", {
 	RepairCosts = {"lumber", 0},
 	Missile = "missile-throwing-axe",
 	FireMissile = "missile-flaming-throwing-axe",
+	BasicDamage = 11,
+	MaxAttackRange = 5,
 	FireResistance = 20,
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-hand-cannon", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
 	RequirementsString = "War Hall and Masonry",
@@ -1653,7 +1655,8 @@ DefineUnitType("unit-dwarven-stronghold", {
 		}
 	},
 	Sounds = {
-		"help", "basic-dwarf-voices-help-town"
+		"help", "basic-dwarf-voices-help-town",
+		"fire-missile", "throwing-axe"
 	}
 })
 
@@ -1823,15 +1826,18 @@ DefineUnitType("unit-dwarven-guard-tower", {
 	Description = "Often garrisoned by dwarven scouts, these towers are an essential part of a dwarven settlement's sturdy defenses.",
 	Image = {"file", "dwarf/buildings/guard_tower.png", "size", {64, 64}},
 	Shadow = {"file", "dwarf/buildings/guard_tower_shadow.png", "size", {64, 64}},
-	Animations = "animations-dwarven-guard-tower", Icon = "icon-dwarven-guard-tower",
+	Icon = "icon-dwarven-guard-tower",
 	Costs = {"lumber", 0, "stone", 450},
 	RepairCosts = {"lumber", 0},
 	Missile = "missile-throwing-axe",
 	FireMissile = "missile-flaming-throwing-axe",
+	BasicDamage = 11,
+	MaxAttackRange = 5,
 	FireResistance = 20,
 	HitPoints = 325, -- 390 with masonry
 	Sounds = {
-		"help", "basic-dwarf-voices-help-town"
+		"help", "basic-dwarf-voices-help-town",
+		"fire-missile", "throwing-axe"
 	}
 } )
 

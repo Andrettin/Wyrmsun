@@ -1227,6 +1227,61 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {AttackRange = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Range:"), " "), Variable = "AttackRange", Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {BasicDamage = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(
+						Concat(_("Damage:"), " "),
+						String(
+							Div(
+								Add(
+									Add(
+										Add(
+											TypeVar("PiercingDamage","Value"), TypeVar("BasicDamage","Value")
+										),
+										Add(
+											TypeVar("FireDamage","Value"), TypeVar("ColdDamage","Value")
+										)
+									),
+									Add(
+										Add(
+											TypeVar("ArcaneDamage","Value"), TypeVar("LightningDamage","Value")
+										),
+										Add(
+											Add(
+												TypeVar("AirDamage","Value"), TypeVar("EarthDamage","Value")
+											),
+											TypeVar("WaterDamage","Value")
+										)
+									)
+								),
+								2
+							)
+						),
+						"-",
+						String(
+							Add(
+								Add(
+									Add(
+										TypeVar("PiercingDamage","Value"), TypeVar("BasicDamage","Value")
+									),
+									Add(
+										TypeVar("FireDamage","Value"), TypeVar("ColdDamage","Value")
+									)
+								),
+								Add(
+									Add(
+										TypeVar("ArcaneDamage","Value"), TypeVar("LightningDamage","Value")
+									),
+									Add(
+										Add(
+											TypeVar("AirDamage","Value"), TypeVar("EarthDamage","Value")
+										),
+										TypeVar("WaterDamage","Value")
+									)
+								)
+							)
+						)
+					), Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {OwnershipInfluenceRange = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Influence Range:"), " "), Variable = "OwnershipInfluenceRange", Font = wyr.preferences.PopupDescriptionFont}}
 				},
