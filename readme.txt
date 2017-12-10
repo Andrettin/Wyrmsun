@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 - 3.1.1
 -----------------------------------------------------------------------
 
+* Buildings
+- Strongholds and Guard Towers now have an innate ranged attack, though garrisoned units can still attack from within them. Guard Towers now have a garrison capacity of 1 rather than 2.
+
 * Heroes
 - The Runemasters Brokk and Eitri are now recruitable heroes.
 - Increased the maximum heroes to 4.

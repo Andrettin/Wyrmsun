@@ -897,6 +897,7 @@ DefineAnimations("animations-building", {
 	Research = BuildingStill,
 	Train = BuildingStill,
 	Upgrade = {"frame 1", "wait 4", "frame 1", "wait 1",},
+	Attack = {"unbreakable begin", "frame 0", "attack", "wait 59", "frame 0", "unbreakable end", "wait 1",},
 })
 
 

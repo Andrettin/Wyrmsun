@@ -810,10 +810,10 @@ DefinePanelContents(
 		)}}
 	},
 	--]]
-	{ Pos = {9, 116}, Condition = {BasicDamage = "only"},
+	{ Pos = {9, 116}, Condition = {BasicDamage = "only", TownHall = "false"},
 		More = {"Text", {Text = _("Damage:")}}
 	},
-	{ Pos = {76, 116}, Condition = {BasicDamage = "only"},
+	{ Pos = {76, 116}, Condition = {BasicDamage = "only", TownHall = "false"},
 		More = {"Text", {Text = Concat(
 			String(min_damage),
 			"-",
@@ -826,10 +826,10 @@ DefinePanelContents(
 	{ Pos = {184, 116}, Condition = {Accuracy = "only", Building = "false"},
 		More = {"Text", {Text = String(ActiveUnitVar("Accuracy"))}}
 	},
-	{ Pos = {9, 144}, Condition = {AttackRange = "only", SaveCargo = "false", BasicDamage = "only"}, -- SaveCargo is used here as a proxy for knowing whether the unit is a transporter or not (transporters don't have their own range, with their range being used as a range bonus for the units in them instead)
+	{ Pos = {9, 144}, Condition = {AttackRange = "only", BasicDamage = "only", TownHall = "false"},
 		More = {"Text", {Text = _("Range:")}}
 	},
-	{ Pos = {76, 144}, Condition = {AttackRange = "only", SaveCargo = "false", BasicDamage = "only"},
+	{ Pos = {76, 144}, Condition = {AttackRange = "only", BasicDamage = "only", TownHall = "false"},
 		More = {"Text", {Text = String(ActiveUnitVar("AttackRange"))}}
 	},
 	{ Pos = {115, 144}, Condition = {SightRange = "only", Building = "false"},
@@ -1224,7 +1224,7 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {SightRange = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Sight:"), " "), Variable = "SightRange", Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {AttackRange = "only", AttackFromTransporter = "false"}, HighlightColor = "yellow",
+				{ 	Condition = {AttackRange = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Range:"), " "), Variable = "AttackRange", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {OwnershipInfluenceRange = "only"}, HighlightColor = "yellow",
@@ -1242,11 +1242,11 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {FireResistance = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Fire Resistance: "), String(TypeVar("FireResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {AttackFromTransporter = "only"}, HighlightColor = "yellow",
+				{ 	Condition = {Transport = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Garrison: "), String(TypeVar("Transport", "Max"))), Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {AttackRange = "only", AttackFromTransporter = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Range Bonus: +"), Variable = "AttackRange", Font = wyr.preferences.PopupDescriptionFont}}
+				{ 	Condition = {GarrisonedRangeBonus = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Garrisoned Range Bonus: "), Variable = "GarrisonedRangeBonus", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {TimeEfficiencyBonus = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Time Efficiency Bonus: "), Variable = "TimeEfficiencyBonus", Font = wyr.preferences.PopupDescriptionFont}}
@@ -1687,11 +1687,11 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {BluntResistance = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Blunt Resistance: "), Variable = "BluntResistance", Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {AttackFromTransporter = "only", BasicDamage = "false", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+				{ 	Condition = {Transport = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Transport: "), String(TypeVar("Transport", "Max"))), Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {AttackRange = "only", AttackFromTransporter = "only", BasicDamage = "false", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Range Bonus: +"), String(TypeVar("AttackRange", "Value"))), Font = wyr.preferences.PopupDescriptionFont}}
+				{ 	Condition = {GarrisonedRangeBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Garrisoned Range Bonus: +"), String(TypeVar("GarrisonedRangeBonus", "Value"))), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {Speed = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Speed:"), " "), Variable = "Speed", Font = wyr.preferences.PopupDescriptionFont}}

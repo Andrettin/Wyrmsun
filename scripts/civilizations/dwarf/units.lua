@@ -1609,6 +1609,8 @@ DefineUnitType("unit-dwarven-stronghold", {
 	Icon = "icon-dwarven-stronghold",
 	Costs = {"lumber", 0, "stone", 3600},
 	RepairCosts = {"lumber", 0},
+	Missile = "missile-throwing-axe",
+	FireMissile = "missile-flaming-throwing-axe",
 	FireResistance = 20,
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-hand-cannon", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
 	RequirementsString = "War Hall and Masonry",
@@ -1824,6 +1826,8 @@ DefineUnitType("unit-dwarven-guard-tower", {
 	Animations = "animations-dwarven-guard-tower", Icon = "icon-dwarven-guard-tower",
 	Costs = {"lumber", 0, "stone", 450},
 	RepairCosts = {"lumber", 0},
+	Missile = "missile-throwing-axe",
+	FireMissile = "missile-flaming-throwing-axe",
 	FireResistance = 20,
 	HitPoints = 325, -- 390 with masonry
 	Sounds = {
