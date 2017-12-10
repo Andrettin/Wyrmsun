@@ -387,39 +387,6 @@ end
 function StandardTriggers()
 	local RandomNumber = 0
 
-	AddTrigger("modify-units",
-		function()
-			if (GameCycle == 0) then
-				return false
-			end
-			return true
-		end,
-		function()
-			for i=0,(PlayerMax - 2) do
-				if (GetPlayerData(i, "AiEnabled")) then
-					local uncount = 0
-					uncount = GetUnits(i)
-					for unit1 = 1,table.getn(uncount) do 
-						-- make AI towers and strongholds be filled with defenders
-						if (
-							GetUnitVariable(uncount[unit1], "Built")
-							and (
-								(GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == "guard-tower" and GetUnitVariable(uncount[unit1], "Transport") < 2)
-								or (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == "watch-tower" and GetUnitVariable(uncount[unit1], "Transport") < 1)
-								or (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == "stronghold" and GetUnitVariable(uncount[unit1], "Transport") < 3)
-							)
-							and GetFactionClassUnitType("shooter", GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "Faction"))
-						) then
-							unit = CreateUnitInTransporter(GetFactionClassUnitType("shooter", GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "Faction")), i, uncount[unit1])
-							SetUnitVariable(unit, "Active", false) -- set garrisoned unit to passive AI (so that they are not counted for attack participation)
-						end
-					end
-				end
-			end
-			return true
-		end
-	)
-
 	-- Tips
 	if (wyr.preferences.ShowTips and not IsReplayGame() and not IsNetworkGame()) then
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Level Up") == false) then
