@@ -1614,6 +1614,8 @@ DefineUnitType("unit-dwarven-stronghold", {
 	BasicDamage = 11,
 	MaxAttackRange = 5,
 	FireResistance = 20,
+	HackDamage = true,
+	PierceDamage = false,
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-hand-cannon", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
 	RequirementsString = "War Hall and Masonry",
 	DropSpells = {"spell-joruvellir-allegiance"},
@@ -1835,6 +1837,8 @@ DefineUnitType("unit-dwarven-guard-tower", {
 	MaxAttackRange = 5,
 	FireResistance = 20,
 	HitPoints = 325, -- 390 with masonry
+	HackDamage = true,
+	PierceDamage = false,
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town",
 		"fire-missile", "throwing-axe"
