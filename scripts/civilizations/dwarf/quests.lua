@@ -45,7 +45,7 @@ DefineQuest("the-dripping-hall", { -- based on the lay of Alvis from Norse mytho
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
 		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
 	end,
-	Objectives = {"- Train a Gryphon Rider"}, -- could be changed to exploring a % of the skies? (or unpassable terrain)
+	ObjectiveStrings = {"- Train a Gryphon Rider"}, -- could be changed to exploring a % of the skies? (or unpassable terrain)
 	Rewards = "+1000 Copper, +1000 Lumber, +500 Stone",
 	Hint = "Select a War Hall and then click on the Train Gryphon Rider button to train the unit required for this quest.",
 	BuildUnits = {"unit-dwarven-gryphon-rider", 1}
@@ -70,10 +70,16 @@ DefineQuest("the-gleamer", { -- based on the lay of Alvis from Norse mythology; 
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
 		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
 	end,
-	Objectives = {"- Research Astrology"}, -- this technology could improve farm output, to represent better knowledge of the seasons which knowing about celestial bodies provided; that might make farms give too much food though, so it might be better for it to give a bonus to dwarven priests
 	Rewards = "+1000 Copper, +1000 Lumber, +500 Stone",
 	Hint = "Select a Temple and then click on the Research Astrology button to research the technology required for this quest.",
---	ResearchUpgrades = {"upgrade-dwarven-astrology"},
+--	Objectives = {
+--		{
+--			"objective-type", "research-upgrade",
+--			"objective-string", "Research Astrology",
+--			"upgrade", "upgrade-dwarven-astrology", -- this technology could improve farm output, to represent better knowledge of the seasons which knowing about celestial bodies provided; that might make farms give too much food though, so it might be better for it to give a bonus to dwarven priests
+--			"quantity", 1
+--		}
+--	},
 	Hidden = true
 })
 
@@ -95,10 +101,16 @@ DefineQuest("the-days-refuge", { -- based on the lay of Alvis from Norse mytholo
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
 		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
 	end,
-	Objectives = {"- Research Dvalic Runewriting"},
 	Rewards = "+1000 Copper, +1000 Lumber, +500 Stone",
 	Hint = "Select a Bastion and then click on the Research Dvalic Runewriting button to research the technology required for this quest.",
-	ResearchUpgrades = {"upgrade-dwarven-runewriting"},
+	Objectives = {
+		{
+			"objective-type", "research-upgrade",
+			"objective-string", "Research Dvalic Runewriting",
+			"upgrade", "upgrade-dwarven-runewriting",
+			"quantity", 1
+		}
+	},
 	Hidden = true
 })
 
@@ -120,7 +132,7 @@ DefineQuest("the-deep", { -- based on the lay of Alvis from Norse mythology; Sou
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
 		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
 	end,
-	Objectives = {"- Build a Transport"}, -- could be changed to be about exploring a % of the seas, or finding a certain neutral building in the seas or shores
+	ObjectiveStrings = {"- Build a Transport"}, -- could be changed to be about exploring a % of the seas, or finding a certain neutral building in the seas or shores
 	Rewards = "+1000 Copper, +1000 Lumber, +500 Stone",
 	Hint = "Select a Dock and then click on the Build Transport button to build the ship required for this quest.",
 	BuildUnits = {"unit-dwarven-transport-ship", 1}
@@ -144,10 +156,16 @@ DefineQuest("the-burner", { -- based on the lay of Alvis from Norse mythology; S
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
 		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
 	end,
-	Objectives = {"- Research Alchemy"},
 	Rewards = "+1000 Copper, +1000 Lumber, +500 Stone",
 	Hint = "Select an Academy and then click on the Research Alchemy button to research the technology required for this quest.",
-	ResearchUpgrades = {"upgrade-dwarven-alchemy"}
+	Objectives = {
+		{
+			"objective-type", "research-upgrade",
+			"objective-string", "Research Alchemy",
+			"upgrade", "upgrade-dwarven-alchemy",
+			"quantity", 1
+		}
+	}
 })
 
 DefineQuest("the-weaver-of-dreams", { -- based on the lay of Alvis from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 145.
@@ -168,7 +186,7 @@ DefineQuest("the-weaver-of-dreams", { -- based on the lay of Alvis from Norse my
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
 		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
 	end,
-	Objectives = {"- Build a Temple"},
+	ObjectiveStrings = {"- Build a Temple"},
 	Rewards = "+1000 Copper, +1000 Lumber, +500 Stone",
 	Hint = "Select a Miner, press the Build Structure button and then click on the Build Temple button to build the structure required for this quest.",
 	BuildUnits = {"unit-dwarven-temple", 1}
@@ -201,7 +219,7 @@ DefineQuest("shorbear-hold", {
 	CompletionEffects = function(s)
 		SetUnitVariable(FindUnit("unit-dwarven-stronghold", trigger_player, false, true, "shorbear-hold"), "Unique", "shorbear-hold")
 	end,
-	Objectives = {"- Build a Bastion for the Shorbear Hold"},
+	ObjectiveStrings = {"- Build a Bastion for the Shorbear Hold"},
 	Rewards = "The Bastion will become the Shorbear Hold unique building",
 	Hint = "Select the Mead Hall of the Shorbear Hold settlement and then click on the Upgrade to Bastion button to transform it into a bastion.",
 	BuildSettlementUnits = {"shorbear-hold", "unit-dwarven-stronghold", 1},
@@ -351,7 +369,7 @@ DefineQuest("mushroom-fields", { -- inspired by the dialogue in Battle for Wesno
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 1500)
 	end,
-	Objectives = {"- Build 3 Mushroom Farms"},
+	ObjectiveStrings = {"- Build 3 Mushroom Farms"},
 	Rewards = "+1500 Copper",
 	Hint = "Select a Miner, press the Build Structure button and then click on the Build Mushroom Farm button to build the structure required for this quest.",
 	BuildUnits = {"unit-dwarven-mushroom-farm", 3}
@@ -390,7 +408,7 @@ DefineQuest("andvaris-gold", {
 		SetUnitVariable(unit, "TTL", 600)
 		CallDialogue("andvaris-gold-is-ours", trigger_player)
 	end,
-	Objectives = {"- Destroy the Oinling Clan"},
+	ObjectiveStrings = {"- Destroy the Oinling Clan"},
 	Rewards = "+10,000 Copper, Magic Ring",
 	DestroyFactions = {"oinling-clan"},
 --	Competitive = true
@@ -404,7 +422,7 @@ DefineQuest("the-mead-of-poetry-brew-potions-of-invisibility", {
 	CompletionEffects = function(s)
 		CallDialogue("the-mead-of-poetry-potions-of-invisibility-ready", trigger_player)
 	end,
-	Objectives = {"- Collect 4 Gryphon Feathers", "- Collect 4 Wyrm Eyes"},
+	ObjectiveStrings = {"- Collect 4 Gryphon Feathers", "- Collect 4 Wyrm Eyes"},
 	DestroyUnits = {"unit-gryphon", "", 1}
 })
 
@@ -416,7 +434,7 @@ DefineQuest("the-mead-of-poetry-kill-kvasir", {
 	CompletionEffects = function(s)
 		CallDialogue("the-mead-of-poetry-kvasir-assassinated", trigger_player)
 	end,
-	Objectives = {"- Find your way to Asgard", "- Kill Kvasir", "- Fjalar and Galar must survive"},
+	ObjectiveStrings = {"- Find your way to Asgard", "- Kill Kvasir", "- Fjalar and Galar must survive"},
 	DestroyUnits = {"unit-dwarven-witness", "brising-clan", 1} -- placeholder
 })
 
@@ -429,7 +447,7 @@ DefineQuest("island-of-the-lizard-god", {
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
-	Objectives = {"- Find a way out of the island", "- Vindalf must survive"},
+	ObjectiveStrings = {"- Find a way out of the island", "- Vindalf must survive"},
 	Uncompleteable = true,
 	Unobtainable = true,
 	HeroesMustSurvive = {"vindalf"}

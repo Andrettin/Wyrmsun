@@ -38,7 +38,7 @@ DefineQuest("on-the-vanaquisl", {
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
-	Objectives = {"- Destroy Vanaland's Chieftain's Hall", "- Wodanaz must survive"},
+	ObjectiveStrings = {"- Destroy Vanaland's Chieftain's Hall", "- Wodanaz must survive"},
 	DestroyUnits = {"unit-germanic-town-hall", "vana-tribe", 1},
 	HeroesMustSurvive = {"voden"},
 	Rewards = "Unlock the Westward Migration scenario",
@@ -55,7 +55,7 @@ DefineQuest("westward-migration", { -- based on the Ynglinga saga and on the Ind
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
-	Objectives = {"- Bring a Bura to the southwestern edge of the map", "- Wodanaz must survive"},
+	ObjectiveStrings = {"- Bring a Bura to the southwestern edge of the map", "- Wodanaz must survive"},
 	HeroesMustSurvive = {"voden"},
 	Uncompleteable = true,
 	Unobtainable = true
@@ -74,7 +74,7 @@ DefineQuest("the-settlement-of-scandinavia", { -- based on the Ynglinga saga and
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
-	Objectives = {"- Defeat the Ertebolle Tribe and the Gylfing Tribe", "- Wodanaz must survive"},
+	ObjectiveStrings = {"- Defeat the Ertebolle Tribe and the Gylfing Tribe", "- Wodanaz must survive"},
 	DestroyFactions = {"ertebolle-tribe", "gylfing-tribe"},
 	HeroesMustSurvive = {"voden"},
 	Unobtainable = true
@@ -90,7 +90,7 @@ DefineQuest("the-great-temple-at-upsal", { -- Source: Snorri Sturlson, "Heimskri
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 2000)
 	end,
-	Objectives = {"- Build a Temple in Stukkahulma"},
+	ObjectiveStrings = {"- Build a Temple in Stukkahulma"},
 	Rewards = "+2000 Copper",
 	Hint = "Select a Bura, press the Build Structure button and then click on the Temple button to build the structure required for this quest. Make sure it is closer to Stukkahulma's Chieftain's Hall than to that of another settlement.",
 	BuildSettlementUnits = {"stockholm", "unit-germanic-temple", 1},
@@ -114,7 +114,7 @@ DefineQuest("the-good-seasons", { -- Source: Snorri Sturlson, "Heimskringla", 18
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 1000)
 	end,
-	Objectives = {"- Build 2 Farms"},
+	ObjectiveStrings = {"- Build 2 Farms"},
 	Rewards = "+1000 Copper",
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Farm button to build the structure required for this quest.",
 	BuildUnits = {"unit-germanic-farm", 2}
@@ -128,7 +128,7 @@ DefineQuest("thralls-logging", { -- based on the Song of Rig; Source: Kevin Cros
 	Civilization = "germanic",
 	PlayerColor = "orange",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "RaceName") == "germanic" and GetPlayerData(trigger_player, "Faction") == "thralling-tribe" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-worker") > 0) then
+		if (GetPlayerData(trigger_player, "HasHero", "thrahila")) then
 			return true
 		end
 		return false
@@ -136,10 +136,16 @@ DefineQuest("thralls-logging", { -- based on the Song of Rig; Source: Kevin Cros
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 1000)
 	end,
-	Objectives = {"- Gather 2000 Lumber"},
 	Rewards = "+1000 Copper",
 	Hint = "Select a Bura and right-click on a tree or wood pile to begin gathering lumber.",
-	GatherResources = {"lumber", 2000}
+	Objectives = {
+		{
+			"objective-type", "gather-resource",
+			"objective-string", "Gather 2000 Lumber",
+			"quantity", 2000,
+			"resource", "lumber"
+		}
+	}
 })
 
 DefineQuest("thralls-hut", { -- based on the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 19-20; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 206-207.
@@ -150,7 +156,7 @@ DefineQuest("thralls-hut", { -- based on the Song of Rig; Source: Kevin Crossley
 	Civilization = "germanic",
 	PlayerColor = "orange",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "RaceName") == "germanic" and GetPlayerData(trigger_player, "Faction") == "thralling-tribe" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-worker") > 0 and CheckDependency(trigger_player, "unit-germanic-farm")) then
+		if (GetPlayerData(trigger_player, "HasHero", "thrahila")) then
 			return true
 		end
 		return false
@@ -158,7 +164,7 @@ DefineQuest("thralls-hut", { -- based on the Song of Rig; Source: Kevin Crossley
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 750)
 	end,
-	Objectives = {"- Build a Farm"},
+	ObjectiveStrings = {"- Build a Farm"},
 	Rewards = "+750 Copper",
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Farm button to build the structure required for this quest.",
 	BuildUnits = {"unit-germanic-farm", 1}
@@ -180,7 +186,7 @@ DefineQuest("karls-farm", { -- based on the Song of Rig; Source: Kevin Crossley-
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 750)
 	end,
-	Objectives = {"- Build a Farm"},
+	ObjectiveStrings = {"- Build a Farm"},
 	Rewards = "+750 Copper",
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Farm button to build the structure required for this quest.",
 	BuildUnits = {"unit-germanic-farm", 1}
@@ -196,7 +202,7 @@ DefineQuest("heimdalls-progeny", {
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
-	Objectives = {"- Conquer all of your home peninsula", "- Erala must survive"},
+	ObjectiveStrings = {"- Conquer all of your home peninsula", "- Erala must survive"},
 	HeroesMustSurvive = {"erala"},
 	Uncompleteable = true,
 	Unobtainable = true
@@ -212,7 +218,7 @@ DefineQuest("jarls-hall", { -- based on the Song of Rig; Source: Kevin Crossley-
 	CompletionEffects = function(s)
 		CallDialogue("jarls-hall-is-complete", trigger_player)
 	end,
-	Objectives = {"- Acquire some Buras", "- Build a Chieftain's Hall"},
+	ObjectiveStrings = {"- Acquire some Buras", "- Build a Chieftain's Hall"},
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Chieftain's Hall button to build the structure required for this quest.",
 	BuildUnits = {"unit-germanic-town-hall", 1},
 	HeroesMustSurvive = {"erala"},
@@ -229,7 +235,7 @@ DefineQuest("jarls-retainers", { -- based on the Song of Rig; Source: Kevin Cros
 	PlayerColor = "yellow",
 	CompletionEffects = function(s)
 	end,
-	Objectives = {"- Train 5 Eralas"},
+	ObjectiveStrings = {"- Train 5 Eralas"},
 	Unobtainable = true,
 	Unfailable = true,
 	Hint = "Select a War Lodge and then click on the Train Erala button to train the unit required for this quest.",
@@ -251,11 +257,18 @@ DefineQuest("temple-to-heimdall", {
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 2000)
 	end,
-	Objectives = {"- Build a Temple", "- Worship Haimadala"},
+	ObjectiveStrings = {"- Build a Temple"},
 	BuildUnits = {"unit-germanic-temple", 1},
-	ResearchUpgrades = {"upgrade-deity-heimdall"},
 	Rewards = "+2000 Copper",
-	Hint = "Select a Bura, press the Build Structure button and then click on the Build Temple button to build the structure required for this quest. Once the Temple has been built, click on it, and the Worship Haimadala button will be visible. In order for Haimadala to be available, a major deity (such as Wodanaz or Thunraz) will have to be chosen for worship first."
+	Hint = "Select a Bura, press the Build Structure button and then click on the Build Temple button to build the structure required for this quest. Once the Temple has been built, click on it, and the Worship Haimadala button will be visible. In order for Haimadala to be available, a major deity (such as Wodanaz or Thunraz) will have to be chosen for worship first.",
+	Objectives = {
+		{
+			"objective-type", "research-upgrade",
+			"objective-string", "Worship Haimadala",
+			"upgrade", "upgrade-deity-heimdall",
+			"quantity", 1
+		}
+	}
 })
 
 DefineQuest("heimdalls-stones", {
@@ -275,7 +288,7 @@ DefineQuest("heimdalls-stones", {
 	CompletionEffects = function(s)
 		SetUnitVariable(FindUnit("unit-germanic-temple", trigger_player, false, true, "malmo"), "Unique", "heimdalls-stones")
 	end,
-	Objectives = {"- Build a Temple in Malmo"},
+	ObjectiveStrings = {"- Build a Temple in Malmo"},
 	Rewards = "The Temple will become the Haimadala's Stones unique building",
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Temple button to build the structure required for this quest.",
 	BuildSettlementUnits = {"malmo", "unit-germanic-temple", 1},
@@ -304,7 +317,7 @@ DefineQuest("journey-to-heimdalls-stones", {
 		SetUnitVariable(trigger_unit, "Xp", GetUnitVariable(trigger_unit, "Xp", "Max") + 500, "Max")
 		SetUnitVariable(trigger_unit, "Xp", GetUnitVariable(trigger_unit, "Xp", "Max"))
 	end,
-	Objectives = {"- Visit Haimadala's Stones with Erala"},
+	ObjectiveStrings = {"- Visit Haimadala's Stones with Erala"},
 	Rewards = "+500 XP for Erala",
 	Hint = "A transport ship will likely be needed for Erala to reach Haimadala's Stones.",
 	HeroesMustSurvive = {"erala"},
@@ -330,7 +343,7 @@ DefineQuest("master-of-metal", {
 		unit = CreateUnit("unit-germanic-worker", trigger_player, {Players[trigger_player].StartPos.x, Players[trigger_player].StartPos.y})
 		unit = CreateUnit("unit-germanic-worker", trigger_player, {Players[trigger_player].StartPos.x, Players[trigger_player].StartPos.y})
 	end,
-	Objectives = {"- Build a Smithy"},
+	ObjectiveStrings = {"- Build a Smithy"},
 	Rewards = "+1000 Copper, +2 Buras",
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Smithy button to build the structure required for this quest.",
 	BuildUnits = {"unit-germanic-smithy", 1}
@@ -342,7 +355,7 @@ DefineQuest("subjugate-the-karlings", {
 	World = "earth",
 	Civilization = "germanic",
 	PlayerColor = "yellow",
-	Objectives = {"- Subjugate the Karlings"},
+	ObjectiveStrings = {"- Subjugate the Karlings"},
 	HeroesMustSurvive = {"erala"},
 	Unobtainable = true,
 	Uncompleteable = true,
@@ -355,7 +368,7 @@ DefineQuest("neutralize-the-hersings", {
 	World = "earth",
 	Civilization = "germanic",
 	PlayerColor = "yellow",
-	Objectives = {"- Ally with or defeat the Hersings"},
+	ObjectiveStrings = {"- Ally with or defeat the Hersings"},
 	HeroesMustSurvive = {"erala"},
 	Unobtainable = true,
 	Uncompleteable = true,
@@ -379,10 +392,16 @@ DefineQuest("the-sun-shields", { -- Source: http://en.natmus.dk/historical-knowl
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 1000)
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 500)
 	end,
-	Objectives = {"- Research Bronze Shield"},
 	Rewards = "+1000 Copper, +500 Lumber",
 	Hint = "Select a Smithy and then click on the Research Bronze Shield button to research the technology required for this quest.",
-	ResearchUpgrades = {"upgrade-germanic-bronze-shield"}
+	Objectives = {
+		{
+			"objective-type", "research-upgrade",
+			"objective-string", "Research Bronze Shield",
+			"upgrade", "upgrade-germanic-bronze-shield",
+			"quantity", 1
+		}
+	}
 })
 
 DefineQuest("thors-servant", {
@@ -401,7 +420,7 @@ DefineQuest("thors-servant", {
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
-	Objectives = {"- Fulfill Thunraz's wishes", "- Thialfi must survive"},
+	ObjectiveStrings = {"- Fulfill Thunraz's wishes", "- Thialfi must survive"},
 	HeroesMustSurvive = {"thialfi"},
 	Uncompleteable = true,
 	Unobtainable = true
@@ -429,7 +448,7 @@ DefineQuest("the-discovery-of-gotland", {
 		end
 		CallDialogue("thialfi-settles-gotland", trigger_player)
 	end,
-	Objectives = {"- Build a Chieftain's Hall in Gotland"},
+	ObjectiveStrings = {"- Build a Chieftain's Hall in Gotland"},
 	BuildSettlementUnits = {"visby", "unit-germanic-town-hall", 1},
 	Unobtainable = true,
 	Competitive = true
@@ -457,9 +476,16 @@ DefineQuest("thors-servant-thors-temple", {
 		end
 		CallDialogue("thors-servant-temple-complete", trigger_player)
 	end,
-	Objectives = {"- Build a Temple in Gotland", "- Worship Thunraz"},
+	ObjectiveStrings = {"- Build a Temple in Gotland"},
 	BuildSettlementUnitsOfClass = {"visby", "temple", 1},
-	ResearchUpgrades = {"upgrade-deity-thor"},
+	Objectives = {
+		{
+			"objective-type", "research-upgrade",
+			"objective-string", "Worship Thunraz",
+			"upgrade", "upgrade-deity-thor",
+			"quantity", 1
+		}
+	},
 	Unobtainable = true,
 	Unfailable = true, -- to prevent the mission failing due to a lack of a Carpenter's Shop
 	Competitive = true
@@ -499,7 +525,7 @@ DefineQuest("slay-the-berserker-brides-at-hlesey", { -- Source: Kevin Crossley-H
 			CallDialogue("thors-servant-berserker-brides-killed", trigger_player)
 		end
 	end,
-	Objectives = {"- Destroy the Hlesings"},
+	ObjectiveStrings = {"- Destroy the Hlesings"},
 	Rewards = "+1500 Copper",
 	DestroyFactions = {"hlesing-tribe"},
 --	Competitive = true
@@ -517,7 +543,7 @@ DefineQuest("slay-geirrod", {
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
-	Objectives = {"- Kill Geirrod"},
+	ObjectiveStrings = {"- Kill Geirrod"},
 	DestroyCharacters = {"geirrod-ettin"},
 	Unobtainable = true,
 	Competitive = true

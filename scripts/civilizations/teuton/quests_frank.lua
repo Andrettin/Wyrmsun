@@ -31,7 +31,7 @@ DefineQuest("prevent-chilperichs-supremacy", {
 	PlayerColor = "pink",
 	Unobtainable = true,
 	Uncompleteable = true,
-	Objectives = {"- Prevent Chilperich from establishing supremacy over all of Francia", "- Sigibert must survive"}
+	ObjectiveStrings = {"- Prevent Chilperich from establishing supremacy over all of Francia", "- Sigibert must survive"}
 })
 
 DefineQuest("repel-the-avar-invasion", {
@@ -40,5 +40,5 @@ DefineQuest("repel-the-avar-invasion", {
 	PlayerColor = "green",
 	Unobtainable = true,
 	Uncompleteable = true,
-	Objectives = {"- Destroy the invading Avar forces"}
+	ObjectiveStrings = {"- Destroy the invading Avar forces"}
 })

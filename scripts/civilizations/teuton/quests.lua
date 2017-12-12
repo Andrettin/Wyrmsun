@@ -60,7 +60,7 @@ DefineQuest("the-first-marcomannic-war", {
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
-	Objectives = {"- Destroy Aquileia's Forum"},
+	ObjectiveStrings = {"- Destroy Aquileia's Forum"},
 	Uncompleteable = true,
 	Unobtainable = true
 })
@@ -84,7 +84,7 @@ DefineQuest("the-sack-of-iuvavum", {
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 5000)
 	end,
-	Objectives = {"- Destroy Iuvavum's Forum"},
+	ObjectiveStrings = {"- Destroy Iuvavum's Forum"},
 	Rewards = "+5000 Copper",
 	Hint = "Hint: Hover the mouse over a building to see the name of its settlement.",
 	Uncompleteable = true -- completed by trigger
@@ -108,7 +108,7 @@ DefineQuest("the-razing-of-opitergium", {
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 5000)
 	end,
-	Objectives = {"- Destroy Opitergium's Forum"},
+	ObjectiveStrings = {"- Destroy Opitergium's Forum"},
 	Rewards = "+5000 Copper",
 	Hint = "Hint: Hover the mouse over a building to see the name of its settlement.",
 	Uncompleteable = true -- completed by trigger

@@ -34,7 +34,7 @@ DefineQuest("the-first-dwarves", {
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
-	Objectives = {"- Overcome Svarinshaug's perils", "- Modsognir must survive", "- Durin must survive"},
+	ObjectiveStrings = {"- Overcome Svarinshaug's perils", "- Modsognir must survive", "- Durin must survive"},
 	Uncompleteable = true,
 	Unobtainable = true,
 	HeroesMustSurvive = {"modsognir", "durin"}
@@ -48,10 +48,23 @@ DefineQuest("a-rocky-home", {
 	CompletionEffects = function(s)
 		CallDialogue("a-rocky-home-materials-collected", trigger_player)
 	end,
-	Objectives = {"- Build a Mead Hall", "- Build a Yale Hunting Lodge", "- Gather 800 Lumber and 2400 Stone"},
+	ObjectiveStrings = {"- Build a Mead Hall", "- Build a Yale Hunting Lodge"},
 	Unobtainable = true,
 	BuildUnits = {"unit-dwarven-town-hall", 1, "unit-yale-hunting-lodge", 1},
-	GatherResources = {"lumber", 800, "stone", 2400},
+	Objectives = {
+		{
+			"objective-type", "gather-resource",
+			"objective-string", "Gather 800 Lumber",
+			"quantity", 800,
+			"resource", "lumber"
+		},
+		{
+			"objective-type", "gather-resource",
+			"objective-string", "Gather 2400 Stone",
+			"quantity", 2400,
+			"resource", "stone"
+		}
+	},
 	HeroesMustSurvive = {"modsognir", "durin"}
 })
 
@@ -83,7 +96,7 @@ DefineQuest("the-mastersmith-brothers", {
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "jewelry", GetPlayerData(trigger_player, "Resources", "jewelry") + 1000)
 	end,
-	Objectives = {"- Recruit Brokk and Eitri"},
+	ObjectiveStrings = {"- Recruit Brokk and Eitri"},
 	Rewards = "+1000 Jewelry",
 	Hint = "A selection of heroes is available for recruitment at the Mead Hall.",
 	RecruitCharacters = {"brokk", "eitri"},
@@ -114,10 +127,22 @@ DefineQuest("the-ring-of-riches", {
 			SetUnitVariable(unit, "Identified", false)
 		end
 	end,
-	Objectives = {"- Gather 1000 Gold", "- Have 4000 Copper", "- Brokk and Eitri must survive"},
+	ObjectiveStrings = {"- Brokk and Eitri must survive"},
 	Rewards = "Magic Ring, Lose 4000 Copper",
-	GatherResources = {"gold", 1000},
-	HaveResources = {"copper", 4000},
+	Objectives = {
+		{
+			"objective-type", "gather-resource",
+			"objective-string", "Gather 1000 Gold",
+			"quantity", 1000,
+			"resource", "gold"
+		},
+		{
+			"objective-type", "have-resource",
+			"objective-string", "Have 4000 Copper",
+			"quantity", 4000,
+			"resource", "copper"
+		}
+	},
 	HeroesMustSurvive = {"brokk", "eitri"},
 	Competitive = true
 })
@@ -147,10 +172,22 @@ DefineQuest("the-thunder-hammer", {
 			SetUnitVariable(unit, "Identified", false)
 		end
 	end,
-	Objectives = {"- Gather 4000 Copper", "- Have 4000 Copper", "- Brokk and Eitri must survive"},
+	ObjectiveStrings = {"- Brokk and Eitri must survive"},
 	Rewards = "Magic Hammer, Lose 4000 Copper",
-	GatherResources = {"copper", 4000},
-	HaveResources = {"copper", 4000},
+	Objectives = {
+		{
+			"objective-type", "gather-resource",
+			"objective-string", "Gather 4000 Copper",
+			"quantity", 4000,
+			"resource", "copper"
+		},
+		{
+			"objective-type", "have-resource",
+			"objective-string", "Have 4000 Copper",
+			"quantity", 4000,
+			"resource", "copper"
+		}
+	},
 	HeroesMustSurvive = {"brokk", "eitri"},
 	Competitive = true
 })
@@ -180,10 +217,34 @@ DefineQuest("the-magnificent-spear", {
 			SetUnitVariable(unit, "Identified", false)
 		end
 	end,
-	Objectives = {"- Gather 2000 Copper and 2000 Lumber", "- Have 2000 Copper and 2000 Lumber", "- Ivaldi must survive"},
+	ObjectiveStrings = {"- Ivaldi must survive"},
 	Rewards = "Magic Spear, Lose 2000 Copper and 2000 Lumber",
-	GatherResources = {"copper", 2000, "lumber", 2000},
-	HaveResources = {"copper", 2000, "lumber", 2000},
+	Objectives = {
+		{
+			"objective-type", "gather-resource",
+			"objective-string", "Gather 2000 Copper",
+			"quantity", 2000,
+			"resource", "copper"
+		},
+		{
+			"objective-type", "gather-resource",
+			"objective-string", "Gather 2000 Lumber",
+			"quantity", 2000,
+			"resource", "lumber"
+		},
+		{
+			"objective-type", "have-resource",
+			"objective-string", "Have 2000 Copper",
+			"quantity", 2000,
+			"resource", "copper"
+		},
+		{
+			"objective-type", "have-resource",
+			"objective-string", "Have 2000 Lumber",
+			"quantity", 2000,
+			"resource", "lumber"
+		}
+	},
 	HeroesMustSurvive = {"ivaldi"},
 	Competitive = true
 })
@@ -210,7 +271,7 @@ DefineQuest("the-slaying-of-grafvitnir", {
 	World = "nidavellir",
 	Civilization = "dwarf",
 	PlayerColor = "black",
-	Objectives = {"- Destroy the Grafvitning Tribe"},
+	ObjectiveStrings = {"- Destroy the Grafvitning Tribe"},
 	Unobtainable = true,
 	Uncompleteable = true,
 	Unfailable = true,

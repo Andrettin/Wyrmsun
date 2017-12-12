@@ -43,7 +43,7 @@ DefineQuest("gathaarls-children", { -- based on the description of Gathaarl in T
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
 		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
 	end,
-	Objectives = {"- Build 3 Farms"},
+	ObjectiveStrings = {"- Build 3 Farms"},
 	Rewards = "+1000 Copper, +1000 Lumber, +500 Stone",
 	Hint = "Select a Drudge, press the Build Structure button and then click on the Build Farm button to build the structure required for this quest.",
 	BuildUnits = {"unit-goblin-farm", 3}
@@ -66,7 +66,7 @@ DefineQuest("agniss-mysticism", { -- based on the description of Agniss Tenebris
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
 		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
 	end,
-	Objectives = {"- Build a Temple"},
+	ObjectiveStrings = {"- Build a Temple"},
 	Rewards = "+1000 Copper, +1000 Lumber, +500 Stone",
 	Hint = "Select a Drudge, press the Build Structure button and then click on the Build Temple button to build the structure required for this quest.",
 	BuildUnits = {"unit-goblin-temple", 1}
@@ -90,10 +90,16 @@ DefineQuest("dremacs-wealth", { -- based on the description of Dremac Paarsins b
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
 		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
 	end,
-	Objectives = {"- Research Coinage"},
 	Rewards = "+1000 Copper, +1000 Lumber, +500 Stone",
 	Hint = "Select a Stronghold and then click on the Research Coinage button to research the technology required for this quest.",
-	ResearchUpgrades = {"upgrade-goblin-coinage"},
+	Objectives = {
+		{
+			"objective-type", "research-upgrade",
+			"objective-string", "Research Coinage",
+			"upgrade", "upgrade-goblin-coinage",
+			"quantity", 1
+		}
+	}
 })
 
 DefineQuest("iouns-tactics", { -- based on the description of Ioun Stilgar by Jesse Crider
@@ -114,7 +120,7 @@ DefineQuest("iouns-tactics", { -- based on the description of Ioun Stilgar by Je
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
 		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
 	end,
-	Objectives = {"- Build a Mess Hall"},
+	ObjectiveStrings = {"- Build a Mess Hall"},
 	Rewards = "+1000 Copper, +1000 Lumber, +500 Stone",
 	Hint = "Select a Drudge, press the Build Structure button and then click on the Build Mess Hall button to build the structure required for this quest.",
 	BuildUnits = {"unit-goblin-mess-hall", 1}
@@ -138,8 +144,14 @@ DefineQuest("orzas-scholarship", { -- based on the description of Orza Chahax by
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
 		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
 	end,
-	Objectives = {"- Research Writing"},
 	Rewards = "+1000 Copper, +1000 Lumber, +500 Stone",
 	Hint = "Select a Stronghold and then click on the Research Writing button to research the technology required for this quest.",
-	ResearchUpgrades = {"upgrade-goblin-writing"},
+	Objectives = {
+		{
+			"objective-type", "research-upgrade",
+			"objective-string", "Research Writing",
+			"upgrade", "upgrade-goblin-writing",
+			"quantity", 1
+		}
+	}
 })

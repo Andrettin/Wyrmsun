@@ -91,6 +91,8 @@ https://github.com/Andrettin/Wyrmsun
 - Added "The Mastersmith Brothers" dwarven side-quest, in which the player has the objective of recruiting Brokk and Eitri.
 - The "Treasures of Svarinshaug" mission has been replaced with two dwarven side-quests accessible in the scenario mode, "The Ring of Riches" and "The Thunder Hammer". Those quests are available if the player has a smithy, and has recruited the heroes Brokk and Eitri.
 - Added "The Magnificent Spear" dwarven side-quest.
+- "Thrahila's Logging" and "Thrahila's Hut" can now be gotten as side-quests if the player controls Thrahila.
+- The quest objective display for the scenario mode now supports counters.
 
 * Units
 - Added +1 damage to the dwarven Scout, Pathfinder, Explorer and Gryphon Rider.

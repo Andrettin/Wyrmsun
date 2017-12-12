@@ -47,7 +47,7 @@ DefineQuest("volunds-flight", {
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
-	Objectives = {"- Escape Saevarstad", "- Volund must survive"},
+	ObjectiveStrings = {"- Escape Saevarstad", "- Volund must survive"},
 	Uncompleteable = true,
 	Unobtainable = true,
 	HeroesMustSurvive = {"volund"}
