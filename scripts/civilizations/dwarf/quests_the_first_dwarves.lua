@@ -90,10 +90,10 @@ DefineQuest("the-mastersmith-brothers", {
 	Competitive = true
 })
 
-DefineQuest("the-treasures-of-svarinshaug", {
-	Name = "The Treasures of Svarinshaug",
-	Icon = "icon-brising-smithy",
-	Description = "Seeking Modsognir's favor, the mastersmiths Brokk and Eitri desire to craft wondrous artifacts for the dwarven chieftain. To do so they will require plenty of metal, however.",
+DefineQuest("the-ring-of-riches", {
+	Name = "The Ring of Riches",
+	Icon = "icon-ring",
+	Description = "The mastersmith brothers Brokk and Eitri seek to create a gold ring the like of which none of us have seen before. They request to be provided with the necessary gold for the task.",
 	PlayerColor = "white",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-smithy") > 0 or GetPlayerData(trigger_player, "UnitTypesCount", "unit-brising-smithy") > 0) then
@@ -102,18 +102,9 @@ DefineQuest("the-treasures-of-svarinshaug", {
 		return false
 	end,
 	CompletionEffects = function(s)
-		CallDialogue("brokk-and-eitri-create-their-artifacts", trigger_player)
-		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") - 8000)
+		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") - 4000)
 		local brokk_unit = FindHero("brokk", trigger_player)
 		if (brokk_unit) then
-			unit = CreateUnit("unit-runesmiths-hammer", PlayerNumNeutral, {GetUnitVariable(brokk_unit, "PosX"), GetUnitVariable(brokk_unit, "PosY")}, GetUnitVariable(brokk_unit, "MapLayer"))
-			if (GetUniqueItemData("mjollnir", "CanDrop")) then
-				SetUnitVariable(unit, "Unique", "mjollnir")
-			else
-				SetUnitVariable(unit, "GenerateSpecialProperties", trigger_player, true) -- if Mjollnir cannot drop, then generate a magic ring
-			end
-			SetUnitVariable(unit, "Identified", false)
-		
 			unit = CreateUnit("unit-ring", PlayerNumNeutral, {GetUnitVariable(brokk_unit, "PosX"), GetUnitVariable(brokk_unit, "PosY")}, GetUnitVariable(brokk_unit, "MapLayer"))
 			if (GetUniqueItemData("draupnir", "CanDrop")) then
 				SetUnitVariable(unit, "Unique", "draupnir")
@@ -123,10 +114,43 @@ DefineQuest("the-treasures-of-svarinshaug", {
 			SetUnitVariable(unit, "Identified", false)
 		end
 	end,
-	Objectives = {"- Gather 8000 Copper", "- Have 8000 Copper", "- Brokk and Eitri must survive"},
-	Rewards = "Magic Hammer, Magic Ring, Lose 8,000 Copper",
-	GatherResources = {"copper", 8000},
-	HaveResources = {"copper", 8000},
+	Objectives = {"- Gather 1000 Gold", "- Have 4000 Copper", "- Brokk and Eitri must survive"},
+	Rewards = "Magic Ring, Lose 4000 Copper",
+	GatherResources = {"gold", 1000},
+	HaveResources = {"copper", 4000},
+	HeroesMustSurvive = {"brokk", "eitri"},
+	Competitive = true
+})
+
+DefineQuest("the-thunder-hammer", {
+	Name = "The Thunder Hammer",
+	Icon = "icon-brising-smithy",
+	Description = "The mastersmiths Brokk and Eitri have spoken of their desire to craft a magnificent hammer, stronger than any other. To do so they will require plenty of metal, however.",
+	PlayerColor = "white",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-smithy") > 0 or GetPlayerData(trigger_player, "UnitTypesCount", "unit-brising-smithy") > 0) then
+			return true
+		end
+		return false
+	end,
+	CompletionEffects = function(s)
+		CallDialogue("brokk-and-eitri-craft-mjollnir", trigger_player)
+		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") - 4000)
+		local brokk_unit = FindHero("brokk", trigger_player)
+		if (brokk_unit) then
+			unit = CreateUnit("unit-runesmiths-hammer", PlayerNumNeutral, {GetUnitVariable(brokk_unit, "PosX"), GetUnitVariable(brokk_unit, "PosY")}, GetUnitVariable(brokk_unit, "MapLayer"))
+			if (GetUniqueItemData("mjollnir", "CanDrop")) then
+				SetUnitVariable(unit, "Unique", "mjollnir")
+			else
+				SetUnitVariable(unit, "GenerateSpecialProperties", trigger_player, true) -- if Mjollnir cannot drop, then generate a magic hammer
+			end
+			SetUnitVariable(unit, "Identified", false)
+		end
+	end,
+	Objectives = {"- Gather 4000 Copper", "- Have 4000 Copper", "- Brokk and Eitri must survive"},
+	Rewards = "Magic Hammer, Lose 4000 Copper",
+	GatherResources = {"copper", 4000},
+	HaveResources = {"copper", 4000},
 	HeroesMustSurvive = {"brokk", "eitri"},
 	Competitive = true
 })

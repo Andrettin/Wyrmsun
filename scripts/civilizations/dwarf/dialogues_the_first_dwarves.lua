@@ -196,7 +196,7 @@ DefineDialogue("worker-suggests-stone-furniture", {
 	}
 })
 
-DefineDialogue("brokk-and-eitri-create-their-artifacts", {
+DefineDialogue("brokk-and-eitri-craft-mjollnir", {
 	Nodes = {
 		{
 			"speaker", "character", "eitri",

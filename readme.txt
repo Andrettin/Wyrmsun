@@ -63,6 +63,7 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Strongholds and Guard Towers now have an innate ranged attack, though garrisoned units can still attack from within them. Guard Towers now have a garrison capacity of 1 rather than 2.
 - Strongholds and Guard Towers are now affected by arrow/throwing axe upgrades, as well as by Alchemy.
+- Fixed issue which caused building ownership influence to not be applied properly when a building changed owner.
 
 * Heroes
 - The Runemasters Brokk and Eitri are now recruitable heroes.
@@ -77,6 +78,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Interface
 - The Idle Worker button now displays the icon of one of the worker units that are idle, rather than the icon of the player's civilization's worker unit type.
+- The track unit function now works properly when the unit changes its map layer.
 
 * Maps
 - The player now starts the Random Dungeon and Hall of Lyr maps with a small assortment of units besides the starting hero.
@@ -85,7 +87,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added an underground layer for the Nidavellir scenarios.
 - The Grafvitning kobolds now dwell in the underground layer, beneath Svarinshaug.
 - Added "The Mastersmith Brothers" dwarven side-quest, in which the player has the objective of recruiting Brokk and Eitri.
-- The "Treasures of Svarinshaug" quest is now a dwarven side-quest accessible in the scenario mode, instead of a mission.
+- The "Treasures of Svarinshaug" mission has been replaced with two dwarven side-quests accessible in the scenario mode, "The Ring of Riches" and "The Thunder Hammer". Those quests are available if the player has a smithy, and has recruited the heroes Brokk and Eitri.
 
 * Units
 - Added +1 damage to the dwarven Scout, Pathfinder, Explorer and Gryphon Rider.
