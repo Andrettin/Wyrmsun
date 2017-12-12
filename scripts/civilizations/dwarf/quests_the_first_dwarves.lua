@@ -106,10 +106,22 @@ DefineQuest("the-mastersmith-brothers", {
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "jewelry", GetPlayerData(trigger_player, "Resources", "jewelry") + 1000)
 	end,
-	ObjectiveStrings = {"- Recruit Brokk and Eitri"},
 	Rewards = "+1000 Jewelry",
 	Hint = "A selection of heroes is available for recruitment at the Mead Hall.",
-	RecruitCharacters = {"brokk", "eitri"},
+	Objectives = {
+		{
+			"objective-type", "recruit-hero",
+			"objective-string", "Recruit Brokk",
+			"quantity", 1,
+			"character", "brokk"
+		},
+		{
+			"objective-type", "recruit-hero",
+			"objective-string", "Recruit Eitri",
+			"quantity", 1,
+			"character", "eitri"
+		}
+	},
 	Competitive = true
 })
 
