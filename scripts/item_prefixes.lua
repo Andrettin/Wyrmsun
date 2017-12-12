@@ -115,6 +115,13 @@ DefineUpgrade("upgrade-item-prefix-glacial", {
 	MagicLevel = 4
 })
 
+DefineUpgrade("upgrade-item-prefix-impaling", {
+	Name = "Impaling",
+	MagicPrefix = true,
+	ItemPrefix = {"arrows", "dagger", "gun", "javelin", "spear", "sword", "thrusting-sword"},
+	MagicLevel = 4
+})
+
 DefineUpgrade("upgrade-item-prefix-impregnable", {
 	Name = "Impregnable",
 	MagicPrefix = true,
@@ -277,6 +284,10 @@ DefineModifier("upgrade-item-prefix-glacial",
 	{"ColdDamage", 2}
 )
 
+DefineModifier("upgrade-item-prefix-impaling",
+	{"PiercingDamage", 2}
+)
+
 DefineModifier("upgrade-item-prefix-impregnable",
 	{"Armor", 2}
 )
@@ -377,6 +388,10 @@ DefineDependency("upgrade-item-prefix-giantsbane",
 
 DefineDependency("upgrade-item-prefix-glacial",
 	{"upgrade-deity-domain-ice"}
+)
+
+DefineDependency("upgrade-item-prefix-impaling",
+	{"upgrade-deity-domain-warfare"}, "or", {"upgrade-deity-domain-wrath"}
 )
 
 DefineDependency("upgrade-item-prefix-impregnable",

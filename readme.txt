@@ -66,15 +66,17 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused building ownership influence to not be applied properly when a building changed owner.
 
 * Heroes
-- The Runemasters Brokk and Eitri are now recruitable heroes.
+- The Runemasters Brokk, Eitri and Ivaldi are now recruitable heroes.
 - Increased the maximum heroes to 4.
 - Baglur, Durstorn, Kuhnar, Noiraran, Rugnur and Thursagan can now only be recruited by the Norlund Clan.
 
 * Items
 - Added "Shocking" magic prefix (+1 lightning damage).
 - The "Storm" magic prefix now gives +2 lightning damage instead of +1.
-- Added "of the Storm" magic suffix, which gives +2 lightning damage.
+- Added "of the Storm" magic suffix (+2 lightning damage).
+- Added "Impaling" magic prefix (+2 piercing damage).
 - Added the Mjollnir unique hammer.
+- Added the Gungnir unique long spear.
 
 * Interface
 - The Idle Worker button now displays the icon of one of the worker units that are idle, rather than the icon of the player's civilization's worker unit type.
@@ -88,6 +90,7 @@ https://github.com/Andrettin/Wyrmsun
 - The Grafvitning kobolds now dwell in the underground layer, beneath Svarinshaug.
 - Added "The Mastersmith Brothers" dwarven side-quest, in which the player has the objective of recruiting Brokk and Eitri.
 - The "Treasures of Svarinshaug" mission has been replaced with two dwarven side-quests accessible in the scenario mode, "The Ring of Riches" and "The Thunder Hammer". Those quests are available if the player has a smithy, and has recruited the heroes Brokk and Eitri.
+- Added "The Magnificent Spear" dwarven side-quest.
 
 * Units
 - Added +1 damage to the dwarven Scout, Pathfinder, Explorer and Gryphon Rider.

@@ -155,6 +155,39 @@ DefineQuest("the-thunder-hammer", {
 	Competitive = true
 })
 
+DefineQuest("the-magnificent-spear", {
+	Name = "The Magnificent Spear",
+	Icon = "icon-long-spear",
+	Description = "Ivaldi and his sons are of a mind to craft a wondrous spear, for which they will need a significant amount of materials.",
+	PlayerColor = "white",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-smithy") > 0 or GetPlayerData(trigger_player, "UnitTypesCount", "unit-brising-smithy") > 0) then
+			return true
+		end
+		return false
+	end,
+	CompletionEffects = function(s)
+		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") - 2000)
+		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") - 2000)
+		local ivaldi_unit = FindHero("ivaldi", trigger_player)
+		if (ivaldi_unit) then
+			unit = CreateUnit("unit-long-spear", PlayerNumNeutral, {GetUnitVariable(ivaldi_unit, "PosX"), GetUnitVariable(ivaldi_unit, "PosY")}, GetUnitVariable(ivaldi_unit, "MapLayer"))
+			if (GetUniqueItemData("gungnir", "CanDrop")) then
+				SetUnitVariable(unit, "Unique", "gungnir")
+			else
+				SetUnitVariable(unit, "GenerateSpecialProperties", trigger_player, true) -- if Gungnir cannot drop, then generate a magic ring
+			end
+			SetUnitVariable(unit, "Identified", false)
+		end
+	end,
+	Objectives = {"- Gather 2000 Copper and 2000 Lumber", "- Have 2000 Copper and 2000 Lumber", "- Ivaldi must survive"},
+	Rewards = "Magic Spear, Lose 2000 Copper and 2000 Lumber",
+	GatherResources = {"copper", 2000, "lumber", 2000},
+	HaveResources = {"copper", 2000, "lumber", 2000},
+	HeroesMustSurvive = {"ivaldi"},
+	Competitive = true
+})
+
 DefineQuest("the-necklace-of-the-brisings", {
 	Name = "The Necklace of the Brisings",
 	Icon = "icon-dwarven-steelclad",

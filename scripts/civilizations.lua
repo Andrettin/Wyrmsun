@@ -510,7 +510,6 @@ DefineCivilization("dwarf", {
 		"male", "Ingi", -- dwarf from Norse mythology
 		"male", "Iri", -- dwarf from Norse mythology
 		"male", "Isuldan", -- from Dyson Logos' The Tomb of Durâhn Oakenshield, which the author agreed to release under the GPLv2
-		"male", "Ivaldi", -- dwarf from Norse mythology whose sons were mastersmiths; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63.
 		"male", "Jari", -- dwarf from Norse mythology
 		"male", "Karrag", -- dwarf from Battle for Wesnoth: The Hammer of Thursagan
 		"male", "Kili", -- dwarf from Norse mythology

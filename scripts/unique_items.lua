@@ -144,6 +144,16 @@ DefineUniqueItem("the-hammer-of-thursagan", {
 	Quote = "\"The very tool with which our greatest runesmith made the Scepter of Fire. But it is ancient, far older than Thursagan; he was but the last to wield it.\"\n- Angarthing"
 } )
 
+-- Spears
+
+DefineUniqueItem("gungnir", {
+	Name = "Gungnir",
+	Type = "unit-long-spear", -- should be a throwing spear / javelin
+	Prefix = "upgrade-item-prefix-impaling",
+	Suffix = "upgrade-item-suffix-of-victory",
+	Description = "Gungnir is a deadly spear made by dwarf Ivaldi and his sons. It is said to have been gifted to Hroptatyr, the highest of the Aesir."
+} )
+
 -- Throwing Axes
 
 DefineUniqueItem("toporik", { -- name means "hatchet" in Russian; renaming of the Axe of Perun (Perun is a god from Slavic mythology), here made into a dwarven unique throwing axe (since it wouldn't make much sense for the dwarves to have a throwing axe named after a god from a human mythology); was made a dwarven item under the following premise: many scholars associate the Axe of Perun with Thor's Mjollnir hammer in function and origin, and the latter was made by dwarves
@@ -576,7 +586,6 @@ DefineUniqueItem("na-slovanech-monastery", { -- Alena Ježková, "77 Prague Lege
 -- Bodn (jar which contained some of the mead of poetry)
 -- Dainsleif (dwarven sword)
 -- Gleipnir (fetter made by dwarves to bind the wolf Fenrir)
--- Gungnir (throwing spear made by the sons of Ivaldi)
 -- Naglering (sword forged by the dwarf Alberich)
 -- Odrorir (cauldron which contained some of the mead of poetry)
 -- Son (jar which contained some of the mead of poetry)

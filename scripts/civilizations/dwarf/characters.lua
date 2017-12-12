@@ -158,6 +158,15 @@ DefineCharacter("eitri", {
 	Trait = "upgrade-dextrous"
 })
 
+DefineCharacter("ivaldi", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63.
+	Name = "Ivaldi",
+	Gender = "male",
+	Type = "unit-dwarven-runemaster",
+	Civilization = "dwarf",
+	Background = "Ivaldi is a dwarf from Norse mythology whose sons were mastersmiths.",
+	Deities = {"odin", "tyr"}
+})
+
 DefineCharacter("gandalf", {
 	Name = "Gandalf",
 	Gender = "male",
