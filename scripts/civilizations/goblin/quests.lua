@@ -43,10 +43,16 @@ DefineQuest("gathaarls-children", { -- based on the description of Gathaarl in T
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
 		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
 	end,
-	ObjectiveStrings = {"- Build 3 Farms"},
 	Rewards = "+1000 Copper, +1000 Lumber, +500 Stone",
 	Hint = "Select a Drudge, press the Build Structure button and then click on the Build Farm button to build the structure required for this quest.",
-	BuildUnits = {"unit-goblin-farm", 3}
+	Objectives = {
+		{
+			"objective-type", "build-units",
+			"objective-string", "Build 3 Farms",
+			"quantity", 3,
+			"unit-type", "unit-goblin-farm"
+		}
+	}
 })
 DefineQuest("agniss-mysticism", { -- based on the description of Agniss Tenebris by Jesse Crider
 	Name = "Agniss' Mysticism",
@@ -66,10 +72,16 @@ DefineQuest("agniss-mysticism", { -- based on the description of Agniss Tenebris
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
 		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
 	end,
-	ObjectiveStrings = {"- Build a Temple"},
 	Rewards = "+1000 Copper, +1000 Lumber, +500 Stone",
 	Hint = "Select a Drudge, press the Build Structure button and then click on the Build Temple button to build the structure required for this quest.",
-	BuildUnits = {"unit-goblin-temple", 1}
+	Objectives = {
+		{
+			"objective-type", "build-units",
+			"objective-string", "Build a Temple",
+			"quantity", 1,
+			"unit-type", "unit-goblin-temple"
+		}
+	}
 })
 
 DefineQuest("dremacs-wealth", { -- based on the description of Dremac Paarsins by Jesse Crider
@@ -120,10 +132,16 @@ DefineQuest("iouns-tactics", { -- based on the description of Ioun Stilgar by Je
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
 		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
 	end,
-	ObjectiveStrings = {"- Build a Mess Hall"},
 	Rewards = "+1000 Copper, +1000 Lumber, +500 Stone",
 	Hint = "Select a Drudge, press the Build Structure button and then click on the Build Mess Hall button to build the structure required for this quest.",
-	BuildUnits = {"unit-goblin-mess-hall", 1}
+	Objectives = {
+		{
+			"objective-type", "build-units",
+			"objective-string", "Build a Mess Hall",
+			"quantity", 1,
+			"unit-type", "unit-goblin-mess-hall"
+		}
+	}
 })
 
 DefineQuest("orzas-scholarship", { -- based on the description of Orza Chahax by Jesse Crider

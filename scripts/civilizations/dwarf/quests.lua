@@ -45,10 +45,16 @@ DefineQuest("the-dripping-hall", { -- based on the lay of Alvis from Norse mytho
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
 		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
 	end,
-	ObjectiveStrings = {"- Train a Gryphon Rider"}, -- could be changed to exploring a % of the skies? (or unpassable terrain)
 	Rewards = "+1000 Copper, +1000 Lumber, +500 Stone",
 	Hint = "Select a War Hall and then click on the Train Gryphon Rider button to train the unit required for this quest.",
-	BuildUnits = {"unit-dwarven-gryphon-rider", 1}
+	Objectives = {
+		{
+			"objective-type", "build-units",
+			"objective-string", "Train a Gryphon Rider", -- could be changed to exploring a % of the skies? (or unpassable terrain)
+			"quantity", 1,
+			"unit-type", "unit-dwarven-gryphon-rider"
+		}
+	}
 })
 
 DefineQuest("the-gleamer", { -- based on the lay of Alvis from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 144.
@@ -132,10 +138,16 @@ DefineQuest("the-deep", { -- based on the lay of Alvis from Norse mythology; Sou
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
 		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
 	end,
-	ObjectiveStrings = {"- Build a Transport"}, -- could be changed to be about exploring a % of the seas, or finding a certain neutral building in the seas or shores
 	Rewards = "+1000 Copper, +1000 Lumber, +500 Stone",
 	Hint = "Select a Dock and then click on the Build Transport button to build the ship required for this quest.",
-	BuildUnits = {"unit-dwarven-transport-ship", 1}
+	Objectives = {
+		{
+			"objective-type", "build-units",
+			"objective-string", "Build a Transport", -- could be changed to be about exploring a % of the seas, or finding a certain neutral building in the seas or shores
+			"quantity", 1,
+			"unit-type", "unit-dwarven-transport-ship"
+		}
+	}
 })
 
 DefineQuest("the-burner", { -- based on the lay of Alvis from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 145.
@@ -186,10 +198,16 @@ DefineQuest("the-weaver-of-dreams", { -- based on the lay of Alvis from Norse my
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
 		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
 	end,
-	ObjectiveStrings = {"- Build a Temple"},
 	Rewards = "+1000 Copper, +1000 Lumber, +500 Stone",
 	Hint = "Select a Miner, press the Build Structure button and then click on the Build Temple button to build the structure required for this quest.",
-	BuildUnits = {"unit-dwarven-temple", 1}
+	Objectives = {
+		{
+			"objective-type", "build-units",
+			"objective-string", "Build a Temple",
+			"quantity", 1,
+			"unit-type", "unit-dwarven-temple"
+		}
+	}
 })
 
 DefineQuest("the-tomb-of-durahn-eikinskjaldi", {
@@ -219,10 +237,17 @@ DefineQuest("shorbear-hold", {
 	CompletionEffects = function(s)
 		SetUnitVariable(FindUnit("unit-dwarven-stronghold", trigger_player, false, true, "shorbear-hold"), "Unique", "shorbear-hold")
 	end,
-	ObjectiveStrings = {"- Build a Bastion for the Shorbear Hold"},
 	Rewards = "The Bastion will become the Shorbear Hold unique building",
 	Hint = "Select the Mead Hall of the Shorbear Hold settlement and then click on the Upgrade to Bastion button to transform it into a bastion.",
-	BuildSettlementUnits = {"shorbear-hold", "unit-dwarven-stronghold", 1},
+	Objectives = {
+		{
+			"objective-type", "build-units",
+			"objective-string", "Build a Bastion for the Shorbear Hold",
+			"quantity", 1,
+			"unit-type", "unit-dwarven-stronghold",
+			"settlement", "shorbear-hold"
+		}
+	},
 	Competitive = true
 })
 
@@ -369,10 +394,16 @@ DefineQuest("mushroom-fields", { -- inspired by the dialogue in Battle for Wesno
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 1500)
 	end,
-	ObjectiveStrings = {"- Build 3 Mushroom Farms"},
 	Rewards = "+1500 Copper",
 	Hint = "Select a Miner, press the Build Structure button and then click on the Build Mushroom Farm button to build the structure required for this quest.",
-	BuildUnits = {"unit-dwarven-mushroom-farm", 3}
+	Objectives = {
+		{
+			"objective-type", "build-units",
+			"objective-string", "Build 3 Mushroom Farms",
+			"quantity", 3,
+			"unit-type", "unit-dwarven-mushroom-farm"
+		}
+	}
 })
 
 DefineQuest("andvaris-gold", {

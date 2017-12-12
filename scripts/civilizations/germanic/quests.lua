@@ -90,10 +90,17 @@ DefineQuest("the-great-temple-at-upsal", { -- Source: Snorri Sturlson, "Heimskri
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 2000)
 	end,
-	ObjectiveStrings = {"- Build a Temple in Stukkahulma"},
 	Rewards = "+2000 Copper",
 	Hint = "Select a Bura, press the Build Structure button and then click on the Temple button to build the structure required for this quest. Make sure it is closer to Stukkahulma's Chieftain's Hall than to that of another settlement.",
-	BuildSettlementUnits = {"stockholm", "unit-germanic-temple", 1},
+	Objectives = {
+		{
+			"objective-type", "build-units",
+			"objective-string", "Build a Temple in Stukkahulma",
+			"quantity", 1,
+			"unit-type", "unit-germanic-temple",
+			"settlement", "stockholm"
+		}
+	},
 	Competitive = true
 })
 
@@ -114,10 +121,16 @@ DefineQuest("the-good-seasons", { -- Source: Snorri Sturlson, "Heimskringla", 18
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 1000)
 	end,
-	ObjectiveStrings = {"- Build 2 Farms"},
 	Rewards = "+1000 Copper",
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Farm button to build the structure required for this quest.",
-	BuildUnits = {"unit-germanic-farm", 2}
+	Objectives = {
+		{
+			"objective-type", "build-units",
+			"objective-string", "Build 2 Farms",
+			"quantity", 2,
+			"unit-type", "unit-germanic-farm"
+		}
+	}
 })
 
 DefineQuest("thralls-logging", { -- based on the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 19.
@@ -164,10 +177,16 @@ DefineQuest("thralls-hut", { -- based on the Song of Rig; Source: Kevin Crossley
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 750)
 	end,
-	ObjectiveStrings = {"- Build a Farm"},
 	Rewards = "+750 Copper",
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Farm button to build the structure required for this quest.",
-	BuildUnits = {"unit-germanic-farm", 1}
+	Objectives = {
+		{
+			"objective-type", "build-units",
+			"objective-string", "Build a Farm",
+			"quantity", 1,
+			"unit-type", "unit-germanic-farm"
+		}
+	}
 })
 
 DefineQuest("karls-farm", { -- based on the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 21.
@@ -186,10 +205,16 @@ DefineQuest("karls-farm", { -- based on the Song of Rig; Source: Kevin Crossley-
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 750)
 	end,
-	ObjectiveStrings = {"- Build a Farm"},
 	Rewards = "+750 Copper",
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Farm button to build the structure required for this quest.",
-	BuildUnits = {"unit-germanic-farm", 1}
+	Objectives = {
+		{
+			"objective-type", "build-units",
+			"objective-string", "Build a Farm",
+			"quantity", 1,
+			"unit-type", "unit-germanic-farm"
+		}
+	}
 })
 
 DefineQuest("heimdalls-progeny", {
@@ -218,9 +243,16 @@ DefineQuest("jarls-hall", { -- based on the Song of Rig; Source: Kevin Crossley-
 	CompletionEffects = function(s)
 		CallDialogue("jarls-hall-is-complete", trigger_player)
 	end,
-	ObjectiveStrings = {"- Acquire some Buras", "- Build a Chieftain's Hall"},
+	ObjectiveStrings = {"- Acquire some Buras"},
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Chieftain's Hall button to build the structure required for this quest.",
-	BuildUnits = {"unit-germanic-town-hall", 1},
+	Objectives = {
+		{
+			"objective-type", "build-units",
+			"objective-string", "Build a Chieftain's Hall",
+			"quantity", 1,
+			"unit-type", "unit-germanic-town-hall"
+		}
+	},
 	HeroesMustSurvive = {"erala"},
 	Unobtainable = true,
 	Unfailable = true
@@ -235,11 +267,17 @@ DefineQuest("jarls-retainers", { -- based on the Song of Rig; Source: Kevin Cros
 	PlayerColor = "yellow",
 	CompletionEffects = function(s)
 	end,
-	ObjectiveStrings = {"- Train 5 Eralas"},
 	Unobtainable = true,
 	Unfailable = true,
 	Hint = "Select a War Lodge and then click on the Train Erala button to train the unit required for this quest.",
-	BuildUnits = {"unit-germanic-warrior", 5},
+	Objectives = {
+		{
+			"objective-type", "build-units",
+			"objective-string", "Train 5 Eralas",
+			"quantity", 5,
+			"unit-type", "unit-germanic-warrior"
+		}
+	},
 	HeroesMustSurvive = {"erala"}
 })
 
@@ -257,11 +295,15 @@ DefineQuest("temple-to-heimdall", {
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 2000)
 	end,
-	ObjectiveStrings = {"- Build a Temple"},
-	BuildUnits = {"unit-germanic-temple", 1},
 	Rewards = "+2000 Copper",
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Temple button to build the structure required for this quest. Once the Temple has been built, click on it, and the Worship Haimadala button will be visible. In order for Haimadala to be available, a major deity (such as Wodanaz or Thunraz) will have to be chosen for worship first.",
 	Objectives = {
+		{
+			"objective-type", "build-units",
+			"objective-string", "Build a Temple",
+			"quantity", 1,
+			"unit-type", "unit-germanic-temple"
+		},
 		{
 			"objective-type", "research-upgrade",
 			"objective-string", "Worship Haimadala",
@@ -288,10 +330,17 @@ DefineQuest("heimdalls-stones", {
 	CompletionEffects = function(s)
 		SetUnitVariable(FindUnit("unit-germanic-temple", trigger_player, false, true, "malmo"), "Unique", "heimdalls-stones")
 	end,
-	ObjectiveStrings = {"- Build a Temple in Malmo"},
 	Rewards = "The Temple will become the Haimadala's Stones unique building",
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Temple button to build the structure required for this quest.",
-	BuildSettlementUnits = {"malmo", "unit-germanic-temple", 1},
+	Objectives = {
+		{
+			"objective-type", "build-units",
+			"objective-string", "Build a Temple in Malmo",
+			"quantity", 1,
+			"unit-type", "unit-germanic-temple",
+			"settlement", "malmo"
+		}
+	},
 	Competitive = true
 })
 
@@ -343,10 +392,16 @@ DefineQuest("master-of-metal", {
 		unit = CreateUnit("unit-germanic-worker", trigger_player, {Players[trigger_player].StartPos.x, Players[trigger_player].StartPos.y})
 		unit = CreateUnit("unit-germanic-worker", trigger_player, {Players[trigger_player].StartPos.x, Players[trigger_player].StartPos.y})
 	end,
-	ObjectiveStrings = {"- Build a Smithy"},
 	Rewards = "+1000 Copper, +2 Buras",
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Smithy button to build the structure required for this quest.",
-	BuildUnits = {"unit-germanic-smithy", 1}
+	Objectives = {
+		{
+			"objective-type", "build-units",
+			"objective-string", "Build a Smithy",
+			"quantity", 1,
+			"unit-type", "unit-germanic-smithy"
+		}
+	}
 })
 
 DefineQuest("subjugate-the-karlings", {
@@ -448,8 +503,15 @@ DefineQuest("the-discovery-of-gotland", {
 		end
 		CallDialogue("thialfi-settles-gotland", trigger_player)
 	end,
-	ObjectiveStrings = {"- Build a Chieftain's Hall in Gotland"},
-	BuildSettlementUnits = {"visby", "unit-germanic-town-hall", 1},
+	Objectives = {
+		{
+			"objective-type", "build-units",
+			"objective-string", "Build a Chieftain's Hall in Gotland",
+			"quantity", 1,
+			"unit-type", "unit-germanic-town-hall",
+			"settlement", "visby"
+		}
+	},
 	Unobtainable = true,
 	Competitive = true
 })
@@ -476,9 +538,14 @@ DefineQuest("thors-servant-thors-temple", {
 		end
 		CallDialogue("thors-servant-temple-complete", trigger_player)
 	end,
-	ObjectiveStrings = {"- Build a Temple in Gotland"},
-	BuildSettlementUnitsOfClass = {"visby", "temple", 1},
 	Objectives = {
+		{
+			"objective-type", "build-units-of-class",
+			"objective-string", "Build a Temple in Gotland",
+			"quantity", 1,
+			"unit-class", "temple",
+			"settlement", "visby"
+		},
 		{
 			"objective-type", "research-upgrade",
 			"objective-string", "Worship Thunraz",

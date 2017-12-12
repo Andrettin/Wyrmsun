@@ -123,9 +123,15 @@ DefineQuest("the-house-of-seven-fathers", { -- based on the "The Seventh Father 
 			SetUnitVariable(FindUnit("unit-teuton-farm", trigger_player, false, true), "Unique", "the-house-of-seven-fathers")
 		end
 	end,
-	ObjectiveStrings = {"- Build a Farm"},
 	Rewards = "+500 Copper, the Farm will become the The House of Seven Fathers unique building",
 	Hint = "Select a worker, press the Build Structure button and then click on the Build Farm button to build the structure required for this quest.",
-	BuildUnitsOfClass = {"farm", 1},
+	Objectives = {
+		{
+			"objective-type", "build-units-of-class",
+			"objective-string", "Build a Farm",
+			"quantity", 1,
+			"unit-class", "farm"
+		}
+	},
 	Competitive = true
 })

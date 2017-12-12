@@ -48,10 +48,14 @@ DefineQuest("a-rocky-home", {
 	CompletionEffects = function(s)
 		CallDialogue("a-rocky-home-materials-collected", trigger_player)
 	end,
-	ObjectiveStrings = {"- Build a Mead Hall", "- Build a Yale Hunting Lodge"},
 	Unobtainable = true,
-	BuildUnits = {"unit-dwarven-town-hall", 1, "unit-yale-hunting-lodge", 1},
 	Objectives = {
+		{
+			"objective-type", "build-units",
+			"objective-string", "Build a Mead Hall",
+			"quantity", 1,
+			"unit-type", "unit-dwarven-town-hall"
+		},
 		{
 			"objective-type", "gather-resource",
 			"objective-string", "Gather 800 Lumber",
@@ -63,6 +67,12 @@ DefineQuest("a-rocky-home", {
 			"objective-string", "Gather 2400 Stone",
 			"quantity", 2400,
 			"resource", "stone"
+		},
+		{
+			"objective-type", "build-units",
+			"objective-string", "Build a Yale Hunting Lodge",
+			"quantity", 1,
+			"unit-type", "unit-yale-hunting-lodge"
 		}
 	},
 	HeroesMustSurvive = {"modsognir", "durin"}
