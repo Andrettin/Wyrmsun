@@ -95,6 +95,7 @@ https://github.com/Andrettin/Wyrmsun
 - The "Thrahila's Logging", "Thrahila's Hut" and "Karla's Farm" side-quests can now be obtained if the player controls Thrahila/Karla.
 - The quest objective display for the scenario mode now supports counters.
 - Side-quest popups now display the highest difficulty you have completed that side-quest in.
+- Changed the player's objectives in "The Settlement of Scandinavia".
 
 * Units
 - Added +1 damage to the dwarven Scout, Pathfinder, Explorer and Gryphon Rider.

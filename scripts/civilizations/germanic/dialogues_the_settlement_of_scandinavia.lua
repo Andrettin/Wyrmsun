@@ -227,6 +227,9 @@ DefineDialogue("the-settlement-of-scandinavia-introduction", {
 					
 					unit = CreateUnit("unit-revealer", trigger_player, {4136 - EarthStartX, 783 - EarthStartY}, GetMapLayer("material-plane", "earth", 0)) -- Malmo
 					SetUnitVariable(unit, "TTL", 600)
+					
+					unit = CreateUnit("unit-revealer", trigger_player, {4253 - EarthStartX, 693 - EarthStartY}, GetMapLayer("material-plane", "earth", 0)) -- Stockholm
+					SetUnitVariable(unit, "TTL", 600)
 				end
 			}
 		},
