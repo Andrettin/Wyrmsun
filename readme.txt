@@ -94,6 +94,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added "The Magnificent Spear" dwarven side-quest.
 - "Thrahila's Logging" and "Thrahila's Hut" can now be gotten as side-quests if the player controls Thrahila.
 - The quest objective display for the scenario mode now supports counters.
+- Side-quest popups now display the highest difficulty you have completed that side-quest in.
 
 * Units
 - Added +1 damage to the dwarven Scout, Pathfinder, Explorer and Gryphon Rider.
