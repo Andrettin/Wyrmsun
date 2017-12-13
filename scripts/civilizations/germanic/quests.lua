@@ -38,8 +38,16 @@ DefineQuest("on-the-vanaquisl", {
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
-	ObjectiveStrings = {"- Destroy Vanaland's Chieftain's Hall", "- Wodanaz must survive"},
-	DestroyUnits = {"unit-germanic-town-hall", "vana-tribe", 1},
+	ObjectiveStrings = {"- Wodanaz must survive"},
+	Objectives = {
+		{
+			"objective-type", "destroy-units",
+			"objective-string", "Destroy Vanaland's Chieftain's Hall",
+			"quantity", 1,
+			"unit-type", "unit-germanic-town-hall",
+			"faction", "vana-tribe"
+		}
+	},
 	HeroesMustSurvive = {"voden"},
 	Rewards = "Unlock the Westward Migration scenario",
 	Unobtainable = true
@@ -610,8 +618,14 @@ DefineQuest("slay-geirrod", {
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
-	ObjectiveStrings = {"- Kill Geirrod"},
-	DestroyCharacters = {"geirrod-ettin"},
+	Objectives = {
+		{
+			"objective-type", "destroy-hero",
+			"objective-string", "Kill Geirrod",
+			"quantity", 1,
+			"character", "geirrod-ettin"
+		}
+	},
 	Unobtainable = true,
 	Competitive = true
 })
