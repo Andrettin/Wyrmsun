@@ -82,8 +82,7 @@ DefineQuest("the-gleamer", { -- based on the lay of Alvis from Norse mythology; 
 --		{
 --			"objective-type", "research-upgrade",
 --			"objective-string", "Research Astrology",
---			"upgrade", "upgrade-dwarven-astrology", -- this technology could improve farm output, to represent better knowledge of the seasons which knowing about celestial bodies provided; that might make farms give too much food though, so it might be better for it to give a bonus to dwarven priests
---			"quantity", 1
+--			"upgrade", "upgrade-dwarven-astrology" -- this technology could improve farm output, to represent better knowledge of the seasons which knowing about celestial bodies provided; that might make farms give too much food though, so it might be better for it to give a bonus to dwarven priests
 --		}
 --	},
 	Hidden = true
@@ -113,8 +112,7 @@ DefineQuest("the-days-refuge", { -- based on the lay of Alvis from Norse mytholo
 		{
 			"objective-type", "research-upgrade",
 			"objective-string", "Research Dvalic Runewriting",
-			"upgrade", "upgrade-dwarven-runewriting",
-			"quantity", 1
+			"upgrade", "upgrade-dwarven-runewriting"
 		}
 	},
 	Hidden = true
@@ -174,8 +172,7 @@ DefineQuest("the-burner", { -- based on the lay of Alvis from Norse mythology; S
 		{
 			"objective-type", "research-upgrade",
 			"objective-string", "Research Alchemy",
-			"upgrade", "upgrade-dwarven-alchemy",
-			"quantity", 1
+			"upgrade", "upgrade-dwarven-alchemy"
 		}
 	}
 })
@@ -439,10 +436,15 @@ DefineQuest("andvaris-gold", {
 		SetUnitVariable(unit, "TTL", 600)
 		CallDialogue("andvaris-gold-is-ours", trigger_player)
 	end,
-	ObjectiveStrings = {"- Destroy the Oinling Clan"},
 	Rewards = "+10,000 Copper, Magic Ring",
-	DestroyFactions = {"oinling-clan"},
---	Competitive = true
+	Objectives = {
+		{
+			"objective-type", "destroy-faction",
+			"objective-string", "Destroy the Oinling Clan",
+			"faction", "oinling-clan"
+		}
+	},
+	Competitive = true
 })
 
 DefineQuest("the-mead-of-poetry-brew-potions-of-invisibility", {

@@ -108,8 +108,7 @@ DefineQuest("dremacs-wealth", { -- based on the description of Dremac Paarsins b
 		{
 			"objective-type", "research-upgrade",
 			"objective-string", "Research Coinage",
-			"upgrade", "upgrade-goblin-coinage",
-			"quantity", 1
+			"upgrade", "upgrade-goblin-coinage"
 		}
 	}
 })
@@ -168,8 +167,7 @@ DefineQuest("orzas-scholarship", { -- based on the description of Orza Chahax by
 		{
 			"objective-type", "research-upgrade",
 			"objective-string", "Research Writing",
-			"upgrade", "upgrade-goblin-writing",
-			"quantity", 1
+			"upgrade", "upgrade-goblin-writing"
 		}
 	}
 })

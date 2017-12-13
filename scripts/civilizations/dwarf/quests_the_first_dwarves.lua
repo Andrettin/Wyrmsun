@@ -112,13 +112,11 @@ DefineQuest("the-mastersmith-brothers", {
 		{
 			"objective-type", "recruit-hero",
 			"objective-string", "Recruit Brokk",
-			"quantity", 1,
 			"character", "brokk"
 		},
 		{
 			"objective-type", "recruit-hero",
 			"objective-string", "Recruit Eitri",
-			"quantity", 1,
 			"character", "eitri"
 		}
 	},

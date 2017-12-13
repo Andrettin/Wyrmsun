@@ -82,8 +82,19 @@ DefineQuest("the-settlement-of-scandinavia", { -- based on the Ynglinga saga and
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
-	ObjectiveStrings = {"- Defeat the Ertebolle Tribe and the Gylfing Tribe", "- Wodanaz must survive"},
-	DestroyFactions = {"ertebolle-tribe", "gylfing-tribe"},
+	ObjectiveStrings = {"- Wodanaz must survive"},
+	Objectives = {
+		{
+			"objective-type", "destroy-faction",
+			"objective-string", "Destroy the Ertebolle Tribe",
+			"faction", "ertebolle-tribe"
+		},
+		{
+			"objective-type", "destroy-faction",
+			"objective-string", "Destroy the Gylfing Tribe",
+			"faction", "gylfing-tribe"
+		}
+	},
 	HeroesMustSurvive = {"voden"},
 	Unobtainable = true
 })
@@ -315,8 +326,7 @@ DefineQuest("temple-to-heimdall", {
 		{
 			"objective-type", "research-upgrade",
 			"objective-string", "Worship Haimadala",
-			"upgrade", "upgrade-deity-heimdall",
-			"quantity", 1
+			"upgrade", "upgrade-deity-heimdall"
 		}
 	}
 })
@@ -461,8 +471,7 @@ DefineQuest("the-sun-shields", { -- Source: http://en.natmus.dk/historical-knowl
 		{
 			"objective-type", "research-upgrade",
 			"objective-string", "Research Bronze Shield",
-			"upgrade", "upgrade-germanic-bronze-shield",
-			"quantity", 1
+			"upgrade", "upgrade-germanic-bronze-shield"
 		}
 	}
 })
@@ -557,8 +566,7 @@ DefineQuest("thors-servant-thors-temple", {
 		{
 			"objective-type", "research-upgrade",
 			"objective-string", "Worship Thunraz",
-			"upgrade", "upgrade-deity-thor",
-			"quantity", 1
+			"upgrade", "upgrade-deity-thor"
 		}
 	},
 	Unobtainable = true,
@@ -600,10 +608,15 @@ DefineQuest("slay-the-berserker-brides-at-hlesey", { -- Source: Kevin Crossley-H
 			CallDialogue("thors-servant-berserker-brides-killed", trigger_player)
 		end
 	end,
-	ObjectiveStrings = {"- Destroy the Hlesings"},
 	Rewards = "+1500 Copper",
-	DestroyFactions = {"hlesing-tribe"},
---	Competitive = true
+	Objectives = {
+		{
+			"objective-type", "destroy-faction",
+			"objective-string", "Destroy the Hlesings",
+			"faction", "hlesing-tribe"
+		}
+	},
+	Competitive = true
 })
 
 DefineQuest("slay-geirrod", {
@@ -622,7 +635,6 @@ DefineQuest("slay-geirrod", {
 		{
 			"objective-type", "destroy-hero",
 			"objective-string", "Kill Geirrod",
-			"quantity", 1,
 			"character", "geirrod-ettin"
 		}
 	},
