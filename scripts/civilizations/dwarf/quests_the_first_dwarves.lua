@@ -269,6 +269,35 @@ DefineQuest("the-magnificent-spear", {
 	Competitive = true
 })
 
+DefineQuest("the-sleek-ship", {
+	Name = "The Sleek Ship",
+	Icon = "icon-dwarven-transport-ship",
+	Description = "The master craftsman Ivaldi and his sons have laid out a project to build a magnificent ship of unrivalled speed.",
+	PlayerColor = "white",
+	Conditions = function(s)
+		if (GetUniqueItemData("skidbladnir", "CanDrop")) then
+			return true
+		end
+		return false
+	end,
+	CompletionEffects = function(s)
+		SetUnitVariable(FindUnit("unit-dwarven-transport-ship", trigger_player, false, true), "Unique", "skidbladnir")
+	end,
+	ObjectiveStrings = {"- Ivaldi must survive"},
+	Rewards = "The Transport will become the Skidbladnir unique ship",
+	Hint = "Select a Dock and then click on the Build Transport button to build the ship required for this quest.",
+	Objectives = {
+		{
+			"objective-type", "build-units",
+			"objective-string", "Build a Transport",
+			"quantity", 1,
+			"unit-type", "unit-dwarven-transport-ship"
+		}
+	},
+	HeroesMustSurvive = {"ivaldi"},
+	Competitive = true
+})
+
 DefineQuest("the-necklace-of-the-brisings", {
 	Name = "The Necklace of the Brisings",
 	Icon = "icon-dwarven-steelclad",

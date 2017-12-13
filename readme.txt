@@ -91,7 +91,7 @@ https://github.com/Andrettin/Wyrmsun
 - The Grafvitning kobolds now dwell in the underground layer, beneath Svarinshaug.
 - Added "The Mastersmith Brothers" dwarven side-quest, in which the player has the objective of recruiting Brokk and Eitri.
 - The "Treasures of Svarinshaug" mission has been replaced with two dwarven side-quests accessible in the scenario mode, "The Ring of Riches" and "The Thunder Hammer". Those quests are available if the player has a smithy, and has recruited the heroes Brokk and Eitri.
-- Added "The Magnificent Spear" dwarven side-quest.
+- Added "The Magnificent Spear" and "The Sleek Ship" dwarven side-quests.
 - The "Thrahila's Logging", "Thrahila's Hut" and "Karla's Farm" side-quests can now be obtained if the player controls Thrahila/Karla.
 - The quest objective display for the scenario mode now supports counters.
 - Side-quest popups now display the highest difficulty you have completed that side-quest in.
