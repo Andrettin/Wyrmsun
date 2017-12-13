@@ -1712,6 +1712,12 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {BonusAgainstBuildings = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Bonus vs. Buildings: "), Variable = "BonusAgainstBuildings", Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {Mugging = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Mugging: "), Variable = "Mugging", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Raiding = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Raiding: "), Variable = "Raiding", Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {FireResistance = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Fire Resistance: "), Variable = "FireResistance", Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -1956,6 +1962,12 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {Backstab = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Backstab Bonus: "), String(TypeVar("Backstab","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Mugging = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Mugging: "), String(TypeVar("Mugging","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Raiding = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Raiding: "), String(TypeVar("Raiding","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {Accuracy = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Accuracy:"), " "), Variable = "Accuracy", Font = wyr.preferences.PopupDescriptionFont}}
@@ -2258,6 +2270,32 @@ if not (ui_loaded_first_time) then
 									If(GreaterThan(UnitVar("BonusAgainstBuildings", "Change"), 0), "+", "")
 								),
 								String(UnitVar("BonusAgainstBuildings", "Change"))
+							),
+							"%"
+						),
+						Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Mugging = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(
+							Concat(
+								Concat(
+									_("Mugging: "),
+									If(GreaterThan(UnitVar("Mugging", "Change"), 0), "+", "")
+								),
+								String(UnitVar("Mugging", "Change"))
+							),
+							"%"
+						),
+						Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Raiding = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(
+							Concat(
+								Concat(
+									_("Raiding: "),
+									If(GreaterThan(UnitVar("Raiding", "Change"), 0), "+", "")
+								),
+								String(UnitVar("Raiding", "Change"))
 							),
 							"%"
 						),

@@ -194,6 +194,8 @@ function HandleCheats(str)
 		end
 	elseif (str == "jotun") then
 		unit = CreateUnit("unit-ettin", GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
+	elseif (str == "backstab") then
+		unit = CreateUnit("unit-goblin-thief", GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
 	else
 		return false
 	end

@@ -3620,6 +3620,7 @@ DefineUnitType("unit-template-thief", {
 	Backstab = 100,
 	Accuracy = 12,
 	Evasion = 12,
+	Mugging = 50,
 	Priority = 50,
 	Points = 30,
 	Demand = 1,

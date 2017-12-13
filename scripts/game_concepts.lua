@@ -94,6 +94,10 @@ GameConcepts = {
 		Name = "Mer~!cenaries",
 		Description = "Mercenaries can be hired at mercenary camps. They do not take any time to train, becoming ready instantly. However, mercenary camp unit stocks take some time to recover."
 	},
+	Mugging = {
+		Name = _("M~!ugging"),
+		Description = _("Whenever a unit with Mugging does damage to another unit, the mugging unit's player will gain resources. The obtained resources are a portion of the mugged unit's costs, based on the Mugging percentage and how much of the unit's maximum HP the damage dealt is. The other player also loses resources when this occurs.")
+	},
 	NoRandomness = {
 		Name = _("No Randomness"),
 		Description = _("In the No Randomness mode, damage does not randomly vary. There is also no random chance to miss attacks, with accuracy providing a bonus to damage instead, and evasion to armor. Furthermore, traits for non-hero units have no effect.")
