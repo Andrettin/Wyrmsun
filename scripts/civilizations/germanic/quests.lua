@@ -216,7 +216,7 @@ DefineQuest("karls-farm", { -- based on the Song of Rig; Source: Kevin Crossley-
 	Civilization = "germanic",
 	PlayerColor = "orange",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "RaceName") == "germanic" and GetPlayerData(trigger_player, "Faction") == "karling-tribe" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-worker") > 0 and CheckDependency(trigger_player, "unit-germanic-farm")) then
+		if (GetPlayerData(trigger_player, "HasHero", "karla")) then
 			return true
 		end
 		return false
