@@ -33,7 +33,7 @@ DefineUpgrade("upgrade-faction-bastarnae-tribe", {
 DefineUpgrade("upgrade-faction-burgundian-tribe", {
 	Name = "Burgundian Tribe",
 	EffectsString = "+10 HP for Swordsmen",
-	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
+	RequirementsString = "Ironworking"
 })
 
 DefineUpgrade("upgrade-faction-gepidae-tribe", {
@@ -44,7 +44,7 @@ DefineUpgrade("upgrade-faction-gepidae-tribe", {
 DefineUpgrade("upgrade-faction-goth-tribe", {
 	Name = "Goth Tribe",
 	EffectsString = "+2 Damage for Swordsmen",
-	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
+	RequirementsString = "Ironworking"
 })
 
 DefineUpgrade("upgrade-faction-herulian-tribe", {
@@ -222,11 +222,11 @@ DefineModifier("upgrade-faction-visigothia",
 )
 
 DefineDependency("upgrade-faction-burgundian-tribe",
-	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-wood-plow"}
+	{"upgrade-ironworking"}
 )
 
 DefineDependency("upgrade-faction-goth-tribe",
-	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-wood-plow"}
+	{"upgrade-ironworking"}
 )
 
 DefineDependency("upgrade-faction-burgundy",

@@ -44,7 +44,7 @@ DefineUpgrade("upgrade-faction-goldhoof-clan", {
 DefineUpgrade("upgrade-faction-norlund-clan", {
 	Name = "Norlund Clan",
 	EffectsString = "+1 Damage and +1 Armor for Axefighters",
-	RequirementsString = "Smithy"
+	RequirementsString = "Smithy and Ironworking"
 })
 
 DefineUpgrade("upgrade-faction-oinling-clan", {
@@ -62,19 +62,19 @@ DefineUpgrade("upgrade-faction-shadowcharm-clan", {
 DefineUpgrade("upgrade-faction-shinsplitter-clan", {
 	Name = "Shinsplitter Clan",
 	EffectsString = "+3 Damage and -1 Armor for Axefighters",
-	RequirementsString = "War Hall"
+	RequirementsString = "War Hall and Ironworking"
 })
 
 DefineUpgrade("upgrade-faction-shorbear-clan", {
 	Name = "Shorbear Clan",
 	EffectsString = "+12 Damage for Ballistas",
-	RequirementsString = "Smithy"
+	RequirementsString = "Smithy and Ironworking"
 })
 
 DefineUpgrade("upgrade-faction-whitesteel-clan", {
 	Name = "Whitesteel Clan",
 	EffectsString = "+2 Damage for Guards",
-	RequirementsString = "Smithy"
+	RequirementsString = "Smithy and Ironworking"
 })
 
 DefineUpgrade("upgrade-faction-joruvellir", {
@@ -358,7 +358,7 @@ DefineDependency("upgrade-faction-goldhoof-clan",
 )
 
 DefineDependency("upgrade-faction-norlund-clan",
-	{"unit-dwarven-smithy"}, "or", {"unit-brising-smithy"}
+	{"unit-dwarven-smithy", "upgrade-ironworking"}, "or", {"unit-brising-smithy", "upgrade-ironworking"}
 )
 
 DefineDependency("upgrade-faction-oinling-clan",
@@ -370,15 +370,15 @@ DefineDependency("upgrade-faction-shadowcharm-clan",
 )
 
 DefineDependency("upgrade-faction-shinsplitter-clan",
-	{"unit-dwarven-barracks"}
+	{"unit-dwarven-barracks", "upgrade-ironworking"}
 )
 
 DefineDependency("upgrade-faction-shorbear-clan",
-	{"unit-dwarven-smithy"}, "or", {"unit-brising-smithy"}
+	{"unit-dwarven-smithy", "upgrade-ironworking"}, "or", {"unit-brising-smithy", "upgrade-ironworking"}
 )
 
 DefineDependency("upgrade-faction-whitesteel-clan",
-	{"unit-dwarven-smithy"}, "or", {"unit-brising-smithy"}
+	{"unit-dwarven-smithy", "upgrade-ironworking"}, "or", {"unit-brising-smithy", "upgrade-ironworking"}
 )
 
 DefineDependency("upgrade-faction-joruvellir",

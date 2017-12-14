@@ -28,7 +28,7 @@
 DefineUpgrade("upgrade-faction-angle-tribe", {
 	Name = "Angle Tribe",
 	EffectsString = "+2 Damage for Swordsmen",
-	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
+	RequirementsString = "Ironworking"
 })
 
 DefineUpgrade("upgrade-faction-avione-tribe", {
@@ -68,7 +68,7 @@ DefineUpgrade("upgrade-faction-gumeninga-tribe", {
 DefineUpgrade("upgrade-faction-jute-tribe", {
 	Name = "Jute Tribe",
 	EffectsString = "+2 Food Supply for Docks",
-	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
+	RequirementsString = "Ironworking"
 })
 
 DefineUpgrade("upgrade-faction-lindisfaran-tribe", {
@@ -86,7 +86,7 @@ DefineUpgrade("upgrade-faction-mierce-tribe", {
 DefineUpgrade("upgrade-faction-teuton-tribe", {
 	Name = "Teuton Tribe",
 	EffectsString = "+3 Damage, -1 Armor for Swordsmen",
-	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
+	RequirementsString = "Ironworking"
 })
 
 DefineUpgrade("upgrade-faction-bernicia", {
@@ -324,7 +324,7 @@ DefineModifier("upgrade-faction-wessex",
 )
 
 DefineDependency("upgrade-faction-angle-tribe",
-	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-wood-plow"}
+	{"upgrade-ironworking"}
 )
 
 DefineDependency("upgrade-faction-bernice-tribe",
@@ -344,7 +344,7 @@ DefineDependency("upgrade-faction-gumeninga-tribe",
 )
 
 DefineDependency("upgrade-faction-jute-tribe",
-	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-wood-plow"}
+	{"upgrade-ironworking"}
 )
 
 DefineDependency("upgrade-faction-lindisfaran-tribe",
@@ -356,7 +356,7 @@ DefineDependency("upgrade-faction-mierce-tribe",
 )
 
 DefineDependency("upgrade-faction-teuton-tribe",
-	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-wood-plow"}
+	{"upgrade-ironworking"}
 )
 
 DefineDependency("upgrade-faction-bernicia",

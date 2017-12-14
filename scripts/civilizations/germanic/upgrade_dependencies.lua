@@ -82,6 +82,5 @@ DefineDependency("unit-germanic-transport-ship",
 )
 
 DefineDependency("upgrade-teuton-civilization",
---	{"upgrade-germanic-broad-sword", "upgrade-germanic-long-spear", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
-	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-wood-plow"}
+	{"upgrade-ironworking"}
 )

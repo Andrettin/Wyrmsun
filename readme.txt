@@ -72,6 +72,10 @@ https://github.com/Andrettin/Wyrmsun
 - Added Iron Deposit and Iron Mine (graphics by Jinn). Iron converts to Copper at a 100% rate. Iron Mines can only be built after the Ironworking technology has been researched.
 - Added Mithril Deposit and Mithril Mine (graphics by Jinn). Mithril converts to Copper at a 800% rate. Iron Mines can only be built after the Ironworking technology has been researched. Mithril Deposits are only present in Nidavellir maps.
 
+* Faction
+- Founding a Frankish/Teuton/etc. faction when playing as a Germanic faction now requires Ironworking having been researched, instead of Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow.
+- Some dwarven clans now require Ironworking to be founded.
+
 * Heroes
 - The Runemasters Brokk, Eitri and Ivaldi are now recruitable heroes.
 - Increased the maximum heroes to 4.

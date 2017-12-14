@@ -28,43 +28,43 @@
 DefineUpgrade("upgrade-faction-ampsivarii-tribe", {
 	Name = "Ampsivarii Tribe",
 	EffectsString = "+2 Damage for Kregars",
-	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
+	RequirementsString = "Ironworking"
 })
 
 DefineUpgrade("upgrade-faction-batavian-tribe", {
 	Name = "Batavian Tribe",
 	EffectsString = "+3 Damage, -1 Armor for Kregars",
-	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
+	RequirementsString = "Ironworking"
 })
 
 DefineUpgrade("upgrade-faction-chamavi-tribe", {
 	Name = "Chamavi Tribe",
 	EffectsString = "+2 Accuracy for Kregars",
-	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
+	RequirementsString = "Ironworking"
 })
 
 DefineUpgrade("upgrade-faction-chatti-tribe", {
 	Name = "Chatti Tribe",
 	EffectsString = "+2 Damage for Spearmen",
-	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
+	RequirementsString = "Ironworking"
 })
 
 DefineUpgrade("upgrade-faction-frank-tribe", {
 	Name = "Frank Tribe",
 	EffectsString = "+1 Damage and +1 Armor for Ritars",
-	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
+	RequirementsString = "Ironworking"
 })
 
 DefineUpgrade("upgrade-faction-sugambri-tribe", {
 	Name = "Sugambri Tribe",
 	EffectsString = "+2 Accuracy for Archers",
-	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
+	RequirementsString = "Ironworking"
 })
 
 DefineUpgrade("upgrade-faction-ubii-tribe", {
 	Name = "Ubii Tribe",
 	EffectsString = "+5% Copper Processing for Town Halls and Strongholds",
-	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
+	RequirementsString = "Ironworking"
 })
 
 DefineUpgrade("upgrade-faction-austrasia", {
@@ -185,31 +185,31 @@ DefineModifier("upgrade-faction-salia",
 )
 
 DefineDependency("upgrade-faction-ampsivarii-tribe",
-	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-wood-plow"}
+	{"upgrade-ironworking"}
 )
 
 DefineDependency("upgrade-faction-batavian-tribe",
-	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-wood-plow"}
+	{"upgrade-ironworking"}
 )
 
 DefineDependency("upgrade-faction-chamavi-tribe",
-	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-wood-plow"}
+	{"upgrade-ironworking"}
 )
 
 DefineDependency("upgrade-faction-chatti-tribe",
-	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-wood-plow"}
+	{"upgrade-ironworking"}
 )
 
 DefineDependency("upgrade-faction-frank-tribe",
-	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-wood-plow"}
+	{"upgrade-ironworking"}
 )
 
 DefineDependency("upgrade-faction-sugambri-tribe",
-	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-wood-plow"}
+	{"upgrade-ironworking"}
 )
 
 DefineDependency("upgrade-faction-ubii-tribe",
-	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-wood-plow"}
+	{"upgrade-ironworking"}
 )
 
 DefineDependency("upgrade-faction-francia",

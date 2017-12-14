@@ -44,19 +44,19 @@ DefineUpgrade("upgrade-faction-cherusci-tribe", {
 DefineUpgrade("upgrade-faction-frisian-tribe", {
 	Name = "Frisian Tribe",
 	EffectsString = "+5 HP and +1 Armor for Swordsmen",
-	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
+	RequirementsString = "Ironworking"
 })
 
 DefineUpgrade("upgrade-faction-lombard-tribe", {
 	Name = "Lombard Tribe",
 	EffectsString = "+2 Damage for Swordsmen",
-	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
+	RequirementsString = "Ironworking"
 })
 
 DefineUpgrade("upgrade-faction-saxon-tribe", {
 	Name = "Saxon Tribe",
 	EffectsString = "+5 HP and +1 Damage for Swordsmen",
-	RequirementsString = "Broad Sword, Bronze Shield, Barbed Arrow and Wood Plow"
+	RequirementsString = "Ironworking"
 })
 
 DefineUpgrade("upgrade-faction-varini-tribe", {
@@ -437,15 +437,15 @@ DefineDependency("upgrade-faction-bavarian-tribe",
 )
 
 DefineDependency("upgrade-faction-frisian-tribe",
-	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-wood-plow"}
+	{"upgrade-ironworking"}
 )
 
 DefineDependency("upgrade-faction-lombard-tribe",
-	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-wood-plow"}
+	{"upgrade-ironworking"}
 )
 
 DefineDependency("upgrade-faction-saxon-tribe",
-	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-wood-plow"}
+	{"upgrade-ironworking"}
 )
 
 DefineDependency("upgrade-faction-austria",
