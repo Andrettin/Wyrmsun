@@ -51,6 +51,8 @@ DefineUnitType("unit-dwarven-miner", {
 	CopperGatheringBonus = 1,
 	SilverGatheringBonus = 1,
 	GoldGatheringBonus = 1,
+	IronGatheringBonus = 1,
+	MithrilGatheringBonus = 1,
 	CoalGatheringBonus = 1,
 	LumberGatheringBonus = -1,
 	FurnitureGatheringBonus = -1,
@@ -66,6 +68,14 @@ DefineUnitType("unit-dwarven-miner", {
 		},
 		{
 			"resource-id", "copper",
+			"file-when-loaded", "dwarf/units/miner_with_gold.png"
+		},
+		{
+			"resource-id", "iron",
+			"file-when-loaded", "dwarf/units/miner_with_gold.png"
+		},
+		{
+			"resource-id", "mithril",
 			"file-when-loaded", "dwarf/units/miner_with_gold.png"
 		},
 		{
@@ -145,6 +155,14 @@ DefineUnitType("unit-dwarven-skilled-miner", {
 			"file-when-loaded", "dwarf/units/miner_with_gold.png"
 		},
 		{
+			"resource-id", "iron",
+			"file-when-loaded", "dwarf/units/miner_with_gold.png"
+		},
+		{
+			"resource-id", "mithril",
+			"file-when-loaded", "dwarf/units/miner_with_gold.png"
+		},
+		{
 			"resource-id", "lumber",
 			"file-when-loaded", "dwarf/units/miner_with_lumber.png"
 		},
@@ -218,6 +236,14 @@ DefineUnitType("unit-dwarven-expert-miner", {
 		},
 		{
 			"resource-id", "copper",
+			"file-when-loaded", "dwarf/units/miner_with_gold.png"
+		},
+		{
+			"resource-id", "iron",
+			"file-when-loaded", "dwarf/units/miner_with_gold.png"
+		},
+		{
+			"resource-id", "mithril",
 			"file-when-loaded", "dwarf/units/miner_with_gold.png"
 		},
 		{
@@ -299,6 +325,14 @@ DefineUnitType("unit-dwarven-runesmith", {
 			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
 		},
 		{
+			"resource-id", "iron",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "mithril",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
 			"resource-id", "lumber",
 			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
 		},
@@ -377,6 +411,14 @@ DefineUnitType("unit-dwarven-runemaster", {
 			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
 		},
 		{
+			"resource-id", "iron",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "mithril",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
 			"resource-id", "lumber",
 			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
 		},
@@ -452,6 +494,14 @@ DefineUnitType("unit-dwarven-arcanister", {
 		},
 		{
 			"resource-id", "copper",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "iron",
+			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
+		},
+		{
+			"resource-id", "mithril",
 			"file-when-loaded", "dwarf/units/runesmith_with_gold.png"
 		},
 		{

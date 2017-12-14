@@ -39,15 +39,15 @@
 --
 
 DefineDefaultIncomes(
-	0, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100
+	0, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100
 )
 
 DefineDefaultActions(
-	"stop", "mine", "gather", "drill", "mine", "quarry", "mine", "produce", "gain", "mine", "mine", "quarry", "produce", "produce", "gather", "mine", "mine", "gain", "perform"
+	"stop", "mine", "gather", "drill", "mine", "quarry", "mine", "produce", "gain", "mine", "mine", "mine", "quarry", "produce", "produce", "gather", "mine", "mine", "gain", "perform"
 )
 
 DefineDefaultResourceNames(
-	"time", "copper", "lumber", "oil", "ore", "stone", "coal", "research", "prestige", "gold", "silver", "limestone", "jewelry", "furniture", "leather", "diamonds", "emeralds", "leadership", "trade"
+	"time", "copper", "lumber", "oil", "iron", "stone", "coal", "research", "prestige", "gold", "silver", "mithril", "limestone", "jewelry", "furniture", "leather", "diamonds", "emeralds", "leadership", "trade"
 )
 
 DefineDefaultResourceAmounts(
@@ -59,6 +59,8 @@ DefineDefaultResourceAmounts(
 	"gold", 50000,
 	"silver", 50000,
 	"copper", 50000,
+	"iron", 50000,
+	"mithril", 50000,
 	"diamonds", 50000
 )
 
@@ -71,6 +73,12 @@ SetResourceFinalResourceConversionRate("gold", 400)
 
 SetResourceFinalResource("silver", "copper")
 SetResourceFinalResourceConversionRate("silver", 200)
+
+SetResourceFinalResource("iron", "copper")
+SetResourceFinalResourceConversionRate("iron", 100)
+
+SetResourceFinalResource("mithril", "copper")
+SetResourceFinalResourceConversionRate("mithril", 800)
 
 SetResourceBasePrice("lumber", 100)
 

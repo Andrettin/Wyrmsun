@@ -296,7 +296,7 @@ function SinglePlayerTriggers()
 	AddTrigger("default-defeat",
 		function()
 			local total_units = GetPlayerData(GetThisPlayer(), "TotalNumUnitsConstructed") - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-goblin-glider")
-			total_units = total_units - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-gold-mine") - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-silver-mine") - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-copper-mine") - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-diamond-mine") - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-emerald-mine") - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-yale-hunting-lodge")
+			total_units = total_units - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-gold-mine") - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-silver-mine") - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-copper-mine") - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-iron-mine") - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-mithril-mine") - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-diamond-mine") - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-emerald-mine") - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-yale-hunting-lodge")
 			if (GetCivilizationClassUnitType("farm", GetPlayerData(GetThisPlayer(), "RaceName")) ~= nil) then
 				total_units = total_units - GetPlayerData(GetThisPlayer(), "UnitTypesCount", GetCivilizationClassUnitType("farm", GetPlayerData(GetThisPlayer(), "RaceName")))
 			end
@@ -986,6 +986,38 @@ function StandardTriggers()
 				end,
 				function()
 					Tip("Copper Deposit", "Copper deposits are the most durable source of copper. Build a copper mine on top of it to harvest the copper within.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Iron Deposit") == false) then
+			AddTrigger("tip-iron-deposit",
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-iron-deposit") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Iron Deposit", "Iron deposits serve as a source of iron. Build an iron mine on top of it to harvest the iron within, which when processed is converted to copper at a 100% rate. Iron mines require the Ironworking technology.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Mithril Deposit") == false) then
+			AddTrigger("tip-mithril-deposit",
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-mithril-deposit") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Mithril Deposit", "Mithril deposits serve as a source of mithril. Build a mithril mine on top of it to harvest the mithril within, which when processed is converted to copper at a 800% rate. Mithril mines require the Ironworking technology.")
 					return false
 				end
 			)

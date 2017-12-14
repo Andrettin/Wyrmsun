@@ -53,6 +53,14 @@ DefineUnitType("unit-deep-gnomish-worker", {
 			"file-when-loaded", "gnome/units/deep_gnomish_worker_with_gold_red_hair.png"
 		},
 		{
+			"resource-id", "iron",
+			"file-when-loaded", "gnome/units/deep_gnomish_worker_with_gold_red_hair.png"
+		},
+		{
+			"resource-id", "mithril",
+			"file-when-loaded", "gnome/units/deep_gnomish_worker_with_gold_red_hair.png"
+		},
+		{
 			"resource-id", "lumber",
 			"file-when-loaded", "gnome/units/deep_gnomish_worker_with_lumber_red_hair.png"
 		},
@@ -102,6 +110,8 @@ DefineUnitType("unit-deep-gnomish-worker", {
 			"file-when-loaded", "gold", "gnome/units/deep_gnomish_worker_with_gold_blond_hair.png",
 			"file-when-loaded", "silver", "gnome/units/deep_gnomish_worker_with_gold_blond_hair.png",
 			"file-when-loaded", "copper", "gnome/units/deep_gnomish_worker_with_gold_blond_hair.png",
+			"file-when-loaded", "iron", "gnome/units/deep_gnomish_worker_with_gold_blond_hair.png",
+			"file-when-loaded", "mithril", "gnome/units/deep_gnomish_worker_with_gold_blond_hair.png",
 			"file-when-loaded", "stone", "gnome/units/deep_gnomish_worker_with_gold_blond_hair.png",
 			"file-when-loaded", "limestone", "gnome/units/deep_gnomish_worker_with_gold_blond_hair.png",
 			"file-when-loaded", "coal", "gnome/units/deep_gnomish_worker_with_gold_blond_hair.png",
@@ -119,6 +129,8 @@ DefineUnitType("unit-deep-gnomish-worker", {
 			"file-when-loaded", "gold", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png",
 			"file-when-loaded", "silver", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png",
 			"file-when-loaded", "copper", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png",
+			"file-when-loaded", "iron", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png",
+			"file-when-loaded", "mithril", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png",
 			"file-when-loaded", "stone", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png",
 			"file-when-loaded", "limestone", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png",
 			"file-when-loaded", "coal", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png",
@@ -137,6 +149,8 @@ DefineUnitType("unit-deep-gnomish-worker", {
 			"file-when-loaded", "gold", "gnome/units/deep_gnomish_worker_with_gold_green_hair.png",
 			"file-when-loaded", "silver", "gnome/units/deep_gnomish_worker_with_gold_green_hair.png",
 			"file-when-loaded", "copper", "gnome/units/deep_gnomish_worker_with_gold_green_hair.png",
+			"file-when-loaded", "iron", "gnome/units/deep_gnomish_worker_with_gold_green_hair.png",
+			"file-when-loaded", "mithril", "gnome/units/deep_gnomish_worker_with_gold_green_hair.png",
 			"file-when-loaded", "stone", "gnome/units/deep_gnomish_worker_with_gold_green_hair.png",
 			"file-when-loaded", "limestone", "gnome/units/deep_gnomish_worker_with_gold_green_hair.png",
 			"file-when-loaded", "coal", "gnome/units/deep_gnomish_worker_with_gold_green_hair.png",

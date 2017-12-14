@@ -64,6 +64,8 @@ https://github.com/Andrettin/Wyrmsun
 - Strongholds and Guard Towers now have an innate ranged attack, though garrisoned units can still attack from within them. Guard Towers now have a garrison capacity of 1 rather than 2.
 - Strongholds and Guard Towers are now affected by arrow/throwing axe upgrades, as well as by Alchemy.
 - Fixed issue which caused building ownership influence to not be applied properly when a building changed owner.
+- Added Iron Deposit and Iron Mine (graphics by Jinn). Iron converts to Copper at a 100% rate. Iron Mines can only be built after the Ironworking technology has been researched.
+- Added Mithril Deposit and Mithril Mine (graphics by Jinn). Mithril converts to Copper at a 800% rate. Iron Mines can only be built after the Ironworking technology has been researched. Mithril Deposits are only present in Nidavellir maps.
 
 * Heroes
 - The Runemasters Brokk, Eitri and Ivaldi are now recruitable heroes.
@@ -96,6 +98,7 @@ https://github.com/Andrettin/Wyrmsun
 - The quest objective display for the scenario mode now supports counters.
 - Side-quest popups now display the highest difficulty you have completed that side-quest in.
 - Changed the player's objectives in "The Settlement of Scandinavia".
+- The Copper Deposits in the Earth map that were placed to represent iron deposits are now Iron Deposits.
 
 * Units
 - Added +1 damage to the dwarven Scout, Pathfinder, Explorer and Gryphon Rider.

@@ -409,6 +409,8 @@ DefineAnimations("animations-worker", {
 	Harvest_gold = WorkerMetalMining,
 	Harvest_silver = WorkerMetalMining,
 	Harvest_copper = WorkerMetalMining,
+	Harvest_iron = WorkerMetalMining,
+	Harvest_mithril = WorkerMetalMining,
 	Harvest_lumber = WorkerLumberHarvesting,
 	Harvest_stone = WorkerStoneMining,
 	Harvest_limestone = WorkerStoneMining,

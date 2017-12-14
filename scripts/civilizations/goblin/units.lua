@@ -65,6 +65,14 @@ DefineUnitType("unit-goblin-worker", {
 			"file-when-loaded", "goblin/units/goblin_worker_with_gold.png"
 		},
 		{
+			"resource-id", "iron",
+			"file-when-loaded", "goblin/units/goblin_worker_with_gold.png"
+		},
+		{
+			"resource-id", "mithril",
+			"file-when-loaded", "goblin/units/goblin_worker_with_gold.png"
+		},
+		{
 			"resource-id", "lumber",
 			"file-when-loaded", "goblin/units/goblin_worker_with_lumber.png"
 		},
@@ -111,6 +119,8 @@ DefineUnitType("unit-goblin-worker", {
 			"file-when-loaded", "gold", "goblin/units/goblin_worker_with_gold_spiky_hair.png",
 			"file-when-loaded", "silver", "goblin/units/goblin_worker_with_gold_spiky_hair.png",
 			"file-when-loaded", "copper", "goblin/units/goblin_worker_with_gold_spiky_hair.png",
+			"file-when-loaded", "iron", "goblin/units/goblin_worker_with_gold_spiky_hair.png",
+			"file-when-loaded", "mithril", "goblin/units/goblin_worker_with_gold_spiky_hair.png",
 			"file-when-loaded", "stone", "goblin/units/goblin_worker_with_gold_spiky_hair.png",
 			"file-when-loaded", "limestone", "goblin/units/goblin_worker_with_gold_spiky_hair.png",
 			"file-when-loaded", "coal", "goblin/units/goblin_worker_with_gold_spiky_hair.png",

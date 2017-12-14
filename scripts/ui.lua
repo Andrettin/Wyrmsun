@@ -1775,6 +1775,12 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {GoldGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Gold Mining Bonus: "), Variable = "GoldGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {IronGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Iron Mining Bonus: "), Variable = "IronGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {MithrilGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Mithril Mining Bonus: "), Variable = "MithrilGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {LumberGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Lumber Gathering Bonus: "), Variable = "LumberGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -2466,6 +2472,12 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {GoldGatheringBonus = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Gold Mining Bonus: "), Variable = "GoldGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {IronGatheringBonus = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Iron Mining Bonus: "), Variable = "IronGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {MithrilGatheringBonus = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Mithril Mining Bonus: "), Variable = "MithrilGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {LumberGatheringBonus = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Lumber Gathering Bonus: "), Variable = "LumberGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}

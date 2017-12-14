@@ -25,4 +25,4 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-SetMapTemplateResource("earth", "unit-copper-deposit", {4571, 947}) -- Iron deposits; Source: "Philip's International School Atlas", 2006, p. 59.
+SetMapTemplateResource("earth", "unit-iron-deposit", {4571, 947}) -- Iron deposits; Source: "Philip's International School Atlas", 2006, p. 59.

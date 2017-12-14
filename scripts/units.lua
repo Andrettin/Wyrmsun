@@ -186,6 +186,8 @@ Units = {
 	"unit-gold-rock", "unit-gold-deposit", "unit-gold-mine",
 	"unit-silver-rock", "unit-silver-deposit", "unit-silver-mine",
 	"unit-copper-rock", "unit-copper-deposit", "unit-copper-mine",
+	"unit-iron-deposit", "unit-iron-mine",
+	"unit-mithril-deposit", "unit-mithril-mine",
 	"unit-coal-mine",
 	"unit-diamond-rock", "unit-diamond-deposit", "unit-diamond-mine",
 	"unit-emerald-rock", "unit-emerald-deposit", "unit-emerald-mine",
@@ -290,6 +292,10 @@ function DefineUnitType(unit_type, data)
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-silver-mine" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-deposit" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-mine" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-iron-deposit" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-iron-mine" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-mithril-deposit" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-mithril-mine" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-diamond-deposit" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-diamond-mine" },
@@ -419,6 +425,22 @@ DefineUnitType("unit-minecart", {
 		{
 			"resource-id", "copper",
 			"file-when-loaded", "teuton/units/minecart_with_copper.png",
+			"resource-capacity", 200,
+			"resource-step", 6,
+			"wait-at-resource", 12,
+			"wait-at-depot", 150
+		},
+		{
+			"resource-id", "iron",
+			"file-when-loaded", "teuton/units/minecart_with_iron.png",
+			"resource-capacity", 200,
+			"resource-step", 6,
+			"wait-at-resource", 12,
+			"wait-at-depot", 150
+		},
+		{
+			"resource-id", "mithril",
+			"file-when-loaded", "teuton/units/minecart_with_silver.png",
 			"resource-capacity", 200,
 			"resource-step", 6,
 			"wait-at-resource", 12,
@@ -711,6 +733,58 @@ DefineUnitType("unit-copper-mine", {
 	ButtonKey = "c",
 	ButtonHint = "Build ~!Copper Mine",
 	BuildingRulesString = "Must be built on top of a Copper Deposit"
+} )
+
+DefineUnitType("unit-iron-deposit", {
+	Name = "Iron Deposit",
+	Parent = "unit-template-deposit",
+	Description = "Iron deposits contain deep veins of iron, which can be gainfully mined after the proper infrastructure is put into place.",
+	Image = {"file", "neutral/buildings/iron_deposit.png", "size", {96, 96}},
+	Shadow = {"file", "neutral/buildings/iron_deposit_shadow.png", "size", {96, 96}},
+	Icon = "icon-iron-deposit",
+	GivesResource = "iron"
+} )
+
+DefineUnitType("unit-iron-mine", {
+	Name = "Iron Mine",
+	Parent = "unit-template-mine",
+	Class = "iron-mine",
+	Civilization = "neutral",
+	Description = "Iron is a relatively common metal, but working it requires a substantially higher degree of knowledge of metallurgy than working metals like copper, silver or gold.",
+	Image = {"file", "neutral/buildings/iron_mine.png", "size", {96, 96}},
+	Shadow = {"file", "neutral/buildings/iron_mine_shadow.png", "size", {96, 96}},
+	LightImage = {"file", "neutral/buildings/iron_mine_light.png"},
+	Icon = "icon-iron-mine",
+	Costs = {"time", 200, "lumber", 2050},
+	BuildingRules = { "and", { "ontop", { Type = "unit-iron-deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
+	GivesResource = "iron",
+	BuildingRulesString = "Must be built on top of a Iron Deposit"
+} )
+
+DefineUnitType("unit-mithril-deposit", {
+	Name = "Mithril Deposit",
+	Parent = "unit-template-deposit",
+	Description = "Mithril deposits contain deep veins of extremely valuable mithril, which can be gainfully mined after the proper infrastructure is put into place.",
+	Image = {"file", "neutral/buildings/mithril_deposit.png", "size", {96, 96}},
+	Shadow = {"file", "neutral/buildings/mithril_deposit_shadow.png", "size", {96, 96}},
+	Icon = "icon-mithril-deposit",
+	GivesResource = "mithril"
+} )
+
+DefineUnitType("unit-mithril-mine", {
+	Name = "Mithril Mine",
+	Parent = "unit-template-mine",
+	Class = "mithril-mine",
+	Civilization = "neutral",
+	Description = "Of the inhabited worlds, mithril is only found in Nidavellir, and even there it is an exceedingly rare metal. Both lighter and more resistant than iron, mithril is highly sought-after for crafting weapons and armor, though its enormous expense ensures that only very few can afford it.",
+	Image = {"file", "neutral/buildings/mithril_mine.png", "size", {96, 96}},
+	Shadow = {"file", "neutral/buildings/mithril_mine_shadow.png", "size", {96, 96}},
+	LightImage = {"file", "neutral/buildings/mithril_mine_light.png"},
+	Icon = "icon-mithril-mine",
+	Costs = {"time", 200, "lumber", 2050},
+	BuildingRules = { "and", { "ontop", { Type = "unit-mithril-deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
+	GivesResource = "mithril",
+	BuildingRulesString = "Must be built on top of a Mithril Deposit"
 } )
 
 DefineUnitType("unit-coal-mine", {
@@ -3160,6 +3234,20 @@ DefineUnitType("unit-template-worker", {
 			"wait-at-depot", 150
 		},
 		{
+			"resource-id", "iron",
+			"resource-capacity", 100,
+			"resource-step", 4,
+			"wait-at-resource", 12,
+			"wait-at-depot", 150
+		},
+		{
+			"resource-id", "mithril",
+			"resource-capacity", 100,
+			"resource-step", 4,
+			"wait-at-resource", 12,
+			"wait-at-depot", 150
+		},
+		{
 			"resource-id", "lumber",
 			"resource-capacity", 100,
 			"resource-step", 4,
@@ -3246,6 +3334,8 @@ DefineUnitType("unit-template-skilled-miner", {
 	CopperGatheringBonus = 2,
 	SilverGatheringBonus = 2,
 	GoldGatheringBonus = 2,
+	IronGatheringBonus = 2,
+	MithrilGatheringBonus = 2,
 	CoalGatheringBonus = 2,
 	GemsGatheringBonus = 2
 } )
@@ -3264,6 +3354,8 @@ DefineUnitType("unit-template-expert-miner", {
 	CopperGatheringBonus = 4,
 	SilverGatheringBonus = 4,
 	GoldGatheringBonus = 4,
+	IronGatheringBonus = 4,
+	MithrilGatheringBonus = 4,
 	CoalGatheringBonus = 4,
 	GemsGatheringBonus = 4
 } )
@@ -4026,7 +4118,7 @@ DefineUnitType("unit-template-town-hall", {
 	BuilderOutside = true,
 	RecruitHeroes = true,
 	IncreasesLuxuryDemand = true,
-	CanStore = {"copper", "silver", "gold", "lumber", "stone", "limestone", "coal", "jewelry", "furniture", "leather", "diamonds", "emeralds"},
+	CanStore = {"copper", "silver", "gold", "iron", "mithril", "lumber", "stone", "limestone", "coal", "jewelry", "furniture", "leather", "diamonds", "emeralds"},
 	Drops = {"unit-wood-pile"},
 	RightMouseAction = "rally-point",
 	BurnPercent = 50,
@@ -4233,7 +4325,7 @@ DefineUnitType("unit-template-smithy", {
 	Inexhaustible = true,
 	IncreasesLuxuryDemand = true,
 	MaxHarvesters = 5,
-	CanStore = {"copper", "silver", "gold", "coal", "diamonds", "emeralds"},
+	CanStore = {"copper", "silver", "gold", "iron", "mithril", "coal", "diamonds", "emeralds"},
 	Drops = {"unit-wood-pile"},
 	CostModifier = 25,
 	BurnPercent = 50,

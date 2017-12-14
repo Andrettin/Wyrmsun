@@ -101,11 +101,11 @@ AddTrigger("expert-miner",
 		for i=0,(PlayerMax - 2) do
 			local percent_chance = 0
 			-- this event can only trigger if the player owns a mine, and it is more probable that it will trigger if the player owns a more valuable mine
-			if (GetPlayerData(i, "UnitTypesCount", "unit-gold-mine") > 0 or GetPlayerData(i, "UnitTypesCount", "unit-diamond-mine") > 0 or GetPlayerData(i, "UnitTypesCount", "unit-emerald-mine") > 0) then
+			if (GetPlayerData(i, "UnitTypesCount", "unit-gold-mine") > 0 or GetPlayerData(i, "UnitTypesCount", "unit-diamond-mine") > 0 or GetPlayerData(i, "UnitTypesCount", "unit-emerald-mine") > 0 or GetPlayerData(i, "UnitTypesCount", "unit-mithril-mine") > 0) then
 				percent_chance = 4
 			elseif (GetPlayerData(i, "UnitTypesCount", "unit-silver-mine") > 0) then
 				percent_chance = 2
-			elseif (GetPlayerData(i, "UnitTypesCount", "unit-copper-mine") > 0) then
+			elseif (GetPlayerData(i, "UnitTypesCount", "unit-copper-mine") > 0 or GetPlayerData(i, "UnitTypesCount", "unit-iron-mine") > 0) then
 				percent_chance = 1
 			end
 			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and SyncRand(100) < percent_chance and GetFactionClassUnitType("expert-miner", GetPlayerData(i, "Faction")) ~= nil and GetPlayerData(i, "NumTownHalls") > 0 and GetPlayerData(i, "Resources", "copper") >= 600 and (GetPlayerData(i, "Supply") - GetPlayerData(i, "Demand")) >= GetUnitTypeData(GetFactionClassUnitType("expert-miner", GetPlayerData(i, "Faction")), "Demand")) then

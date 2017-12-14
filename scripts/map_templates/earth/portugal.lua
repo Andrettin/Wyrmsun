@@ -25,5 +25,5 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-SetMapTemplateResource("earth", "unit-copper-deposit", {3655, 1192}) -- Iron deposits; Source: http://www.lib.utexas.edu/maps/europe/portugal_econ_1972.jpg
-SetMapTemplateResource("earth", "unit-copper-deposit", {3680, 1109}) -- Iron deposits; Source: http://www.lib.utexas.edu/maps/europe/portugal_econ_1972.jpg
+SetMapTemplateResource("earth", "unit-iron-deposit", {3655, 1192}) -- Iron deposits; Source: http://www.lib.utexas.edu/maps/europe/portugal_econ_1972.jpg
+SetMapTemplateResource("earth", "unit-iron-deposit", {3680, 1109}) -- Iron deposits; Source: http://www.lib.utexas.edu/maps/europe/portugal_econ_1972.jpg

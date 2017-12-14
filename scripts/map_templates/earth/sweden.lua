@@ -90,19 +90,19 @@ SetMapTemplateTileTerrain("earth", "shallow-water", {4203, 713})
 SetMapTemplateTileTerrain("earth", "shallow-water", {4203, 714})
 SetMapTemplateTileTerrain("earth", "shallow-water", {4204, 714})
 
-SetMapTemplateResource("earth", "unit-copper-deposit", {4150, 669}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
-SetMapTemplateResource("earth", "unit-copper-deposit", {4159, 672}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
-SetMapTemplateResource("earth", "unit-copper-deposit", {4162, 664}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
-SetMapTemplateResource("earth", "unit-copper-deposit", {4162, 695}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
-SetMapTemplateResource("earth", "unit-copper-deposit", {4165, 698}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
-SetMapTemplateResource("earth", "unit-copper-deposit", {4197, 694}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
-SetMapTemplateResource("earth", "unit-copper-deposit", {4200, 667}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
-SetMapTemplateResource("earth", "unit-copper-deposit", {4201, 690}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
-SetMapTemplateResource("earth", "unit-copper-deposit", {4203, 694}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
-SetMapTemplateResource("earth", "unit-copper-deposit", {4205, 713}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
-SetMapTemplateResource("earth", "unit-copper-deposit", {4207, 663}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
-SetMapTemplateResource("earth", "unit-copper-deposit", {4208, 671}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
-SetMapTemplateResource("earth", "unit-copper-deposit", {4335, 547}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
+SetMapTemplateResource("earth", "unit-iron-deposit", {4150, 669}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
+SetMapTemplateResource("earth", "unit-iron-deposit", {4159, 672}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
+SetMapTemplateResource("earth", "unit-iron-deposit", {4162, 664}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
+SetMapTemplateResource("earth", "unit-iron-deposit", {4162, 695}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
+SetMapTemplateResource("earth", "unit-iron-deposit", {4165, 698}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
+SetMapTemplateResource("earth", "unit-iron-deposit", {4197, 694}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
+SetMapTemplateResource("earth", "unit-iron-deposit", {4200, 667}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
+SetMapTemplateResource("earth", "unit-iron-deposit", {4201, 690}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
+SetMapTemplateResource("earth", "unit-iron-deposit", {4203, 694}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
+SetMapTemplateResource("earth", "unit-iron-deposit", {4205, 713}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
+SetMapTemplateResource("earth", "unit-iron-deposit", {4207, 663}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
+SetMapTemplateResource("earth", "unit-iron-deposit", {4208, 671}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
+SetMapTemplateResource("earth", "unit-iron-deposit", {4335, 547}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
 
 -- Kivik
 -- a man was buried in the Bredarör cairn at Kivik in c. 1400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 84.

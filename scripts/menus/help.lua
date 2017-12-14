@@ -139,6 +139,7 @@ local tips = {
 	"Cave walls can be harvested for stone.",
 	"You can build gold mines on top of gold deposits.",
 	"Silver and gold are converted into copper when delivered, at a rate of 200% and 400%, respectively.",
+	"Iron and mithril are converted into copper when delivered, at a rate of 100% and 800%, respectively. In order to harvest them, the Ironworking technology is required.",
 	"If a worker unit is stuck between trees or rocks, it will drop the resources it is carrying to be able to harvest more and escape.",
 	
 	-- Fauna-related tips

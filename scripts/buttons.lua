@@ -237,7 +237,7 @@ DefineButton( { Pos = 16, Level = 0, Icon = "icon-salvage",
 		"unit-goblin-watch-tower", "unit-goblin-guard-tower",
 		"unit-goblin-dock",
 		"unit-goblin-banner",
-		"unit-gold-mine", "unit-silver-mine", "unit-copper-mine",
+		"unit-gold-mine", "unit-silver-mine", "unit-copper-mine", "unit-iron-mine", "unit-mithril-mine",
 --		"unit-coal-mine",
 		"unit-diamond-mine", "unit-emerald-mine",
 		"unit-yale-hunting-lodge",
@@ -1139,7 +1139,33 @@ DefineButton( { Pos = 6, Level = 10, Icon = "icon-emerald-mine", -- unreachable 
 	}
 })
 
-DefineButton( { Pos = 6, Level = 4,
+DefineButton( { Pos = 6, Level = 4, Icon = "icon-iron-mine",
+	Action = "build", Value = "unit-iron-mine",
+	Key = "i", Hint = "Build ~!Iron Mine", Popup = "popup-building",
+	ForUnit = {
+		"unit-germanic-worker", "unit-teuton-worker",
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
+		"unit-goblin-worker"
+	}
+})
+
+DefineButton( { Pos = 7, Level = 4, Icon = "icon-mithril-mine",
+	Action = "build", Value = "unit-mithril-mine",
+	Key = "m", Hint = "Build ~!Mithril Mine", Popup = "popup-building",
+	ForUnit = {
+		"unit-germanic-worker", "unit-teuton-worker",
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
+		"unit-goblin-worker"
+	}
+})
+
+DefineButton( { Pos = 8, Level = 4,
 	Action = "build", Value = "unit-yale-hunting-lodge",
 	Key = "y", Hint = "Build ~!Yale Hunting Lodge", Popup = "popup-building",
 	ForUnit = {
