@@ -98,10 +98,18 @@ DefineAchievement("a-home-in-the-fields-of-sand", {
 	RequiredQuests = {"a-home-in-the-fields-of-sand"}
 })
 
+DefineAchievement("the-treasures-of-svarinshaug", {
+	Name = "The Treasures of Svarinshaug",
+	Icon = "icon-dwarven-runemaster",
+	Description = "Complete the The Mastersmith Brothers, The Ring of Riches, The Thunder Hammer and The Magnificent Spear quests.", -- don't require "The Sleek Ship" here since players are unlikely to build a dock in the dwarven scenarios
+	PlayerColor = "red",
+	RequiredQuests = {"the-mastersmith-brothers", "the-ring-of-riches", "the-thunder-hammer", "the-magnificent-spear"}
+})
+
 DefineAchievement("the-lay-of-alvis", {
 	Name = "The Lay of Alvis",
 	Icon = "icon-dwarven-witness",
-	Description = "Complete all quests related to Alvis.",
+	Description = "Complete the The Dripping Hall, The Deep, The Burner and The Weaver of Dreams quests.",
 	PlayerColor = "red",
 	RequiredQuests = {"the-dripping-hall", "the-deep", "the-burner", "the-weaver-of-dreams"}
 })

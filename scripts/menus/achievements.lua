@@ -76,10 +76,10 @@ function addAchievementIcon(achievement, menu, x, y)
 			local achievement_menu = WarGameMenu(panel(2))
 			achievement_menu:setSize(288, 256)
     		achievement_menu:setPosition((Video.Width - achievement_menu:getWidth()) / 2, (Video.Height - achievement_menu:getHeight()) / 2)
-			achievement_menu:addLabel(GetAchievementData(achievement, "Name"), 144, 11)
+			achievement_menu:addLabel(GetAchievementData(achievement, "Name"), (achievement_menu:getWidth() / 2), 11)
 			
 			local achievement_menu_image = PlayerColorImageButton("", GetAchievementData(achievement, "PlayerColor"))
-			achievement_menu:add(achievement_menu_image, 121, 48)
+			achievement_menu:add(achievement_menu_image, (achievement_menu:getWidth() / 2) - 23, 48)
 			achievement_menu_image:setNormalImage(achievement_icon)
 			achievement_menu_image:setPressedImage(achievement_icon)
 			achievement_menu_image:setDisabledImage(achievement_icon)
@@ -90,12 +90,17 @@ function addAchievementIcon(achievement, menu, x, y)
 
 			local l = MultiLineLabel()
 			l:setFont(Fonts["game"])
-			l:setSize(260, 208)
-			l:setLineWidth(260)
+			l:setSize(achievement_menu:getWidth() - 28, achievement_menu:getHeight() - 48)
+			l:setLineWidth(achievement_menu:getWidth() - 28)
 			achievement_menu:add(l, 14, 112)
-			l:setCaption(GetAchievementData(achievement, "Description"))
 			
-			achievement_menu:addFullButton("~!Close", "c", 144 - (224 / 2), 256 - 40 * 1,
+			local description = GetAchievementData(achievement, "Description")
+			if (GetAchievementData(achievement, "ProgressMax") > 0) then
+				description = description .. "\n\nProgress: " .. GetAchievementData(achievement, "Progress") .. "/" .. GetAchievementData(achievement, "ProgressMax")
+			end
+			l:setCaption(description)
+			
+			achievement_menu:addFullButton("~!Close", "c", (achievement_menu:getWidth() / 2) - (224 / 2), achievement_menu:getHeight() - 40 * 1,
 				function()
 					achievement_menu:stop()
 				end)
