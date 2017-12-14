@@ -102,11 +102,14 @@ function ApplyTechLevels()
 		"upgrade-free-workers"
 	}
 	local agrarian_upgrades = {
-		"upgrade-dwarven-masonry", "upgrade-dwarven-runewriting",
-		"upgrade-teuton-masonry", "upgrade-teuton-writing",
-		"upgrade-goblin-masonry", "upgrade-goblin-writing"
+		"upgrade-dwarven-masonry",
+		"upgrade-teuton-masonry",
+		"upgrade-goblin-masonry"
 	}
 	local civilized_upgrades = {
+		"upgrade-dwarven-runewriting",
+		"upgrade-teuton-writing",
+		"upgrade-goblin-writing",
 		"upgrade-dwarven-coinage", "upgrade-dwarven-alchemy",
 		"upgrade-teuton-coinage", "upgrade-teuton-alchemy",
 		"upgrade-goblin-coinage", "upgrade-goblin-alchemy",
@@ -122,6 +125,7 @@ function ApplyTechLevels()
 		"upgrade-goblin-broad-sword", "upgrade-goblin-long-spear", "upgrade-goblin-rimmed-shield", "upgrade-goblin-barbed-arrow"
 	}
 	local iron_upgrades = {
+		"upgrade-ironworking",
 		"upgrade-iron-tipped-wood-plow", "upgrade-iron-plow",
 		"upgrade-teuton-spatha", "upgrade-teuton-pike", "upgrade-teuton-iron-shield", "upgrade-teuton-bodkin-arrow",
 		"upgrade-teuton-catapult-projectile-1", "upgrade-teuton-catapult-projectile-2",
@@ -138,9 +142,11 @@ function ApplyTechLevels()
 	local function IsTechnologyUnderMinimumTechLevel(technology, player)
 		if (GetArrayIncludes(default_law_upgrades, technology)) then
 			return true
-		elseif (GetArrayIncludes(bronze_upgrades, technology) and (TechLevel[player + 1] == "Agrarian (Iron)" or TechLevel[player + 1] == "Civilized (Iron)")) then -- if tech level is at least Agrarian (Iron), bronze technologies should begin researched
+		elseif ((GetArrayIncludes(bronze_upgrades, technology) or GetUpgradeData(technology, "Class") == "ironworking") and (TechLevel[player + 1] == "Agrarian (Iron)" or TechLevel[player + 1] == "Civilized (Iron)" or TechLevel[player + 1] == "Civilized (Gunpowder)")) then -- if tech level is at least Agrarian (Iron), bronze technologies should begin researched
 			return true
-		elseif (GetArrayIncludes(agrarian_upgrades, technology) and (TechLevel[player + 1] == "Civilized (Bronze)" or TechLevel[player + 1] == "Civilized (Iron)")) then
+		elseif ((GetArrayIncludes(agrarian_upgrades, technology) or GetUpgradeData(technology, "Class") == "writing") and (TechLevel[player + 1] == "Civilized (Bronze)" or TechLevel[player + 1] == "Civilized (Iron)" or TechLevel[player + 1] == "Civilized (Gunpowder)")) then
+			return true
+		elseif ((GetArrayIncludes(iron_upgrades, technology) or GetUpgradeData(technology, "Class") == "mathematics" or GetUpgradeData(technology, "Class") == "philosophy" or GetUpgradeData(technology, "Class") == "alchemy" or GetUpgradeData(technology, "Class") == "gunpowder") and TechLevel[player + 1] == "Civilized (Gunpowder)") then
 			return true
 		else
 			return false
@@ -151,6 +157,8 @@ function ApplyTechLevels()
 		if (GetArrayIncludes(iron_upgrades, technology) and (MaxTechLevel[player + 1] == "Agrarian (Bronze)" or MaxTechLevel[player + 1] == "Civilized (Bronze)")) then -- if max tech level is bronze or lower, iron technologies should not be researchable
 			return true
 		elseif (GetArrayIncludes(civilized_upgrades, technology) and (MaxTechLevel[player + 1] == "Agrarian (Bronze)" or MaxTechLevel[player + 1] == "Agrarian (Iron)")) then
+			return true
+		elseif (GetArrayIncludes(gunpowder_upgrades, technology) and (MaxTechLevel[player + 1] == "Agrarian (Bronze)" or MaxTechLevel[player + 1] == "Civilized (Bronze)" or MaxTechLevel[player + 1] == "Agrarian (Iron)" or MaxTechLevel[player + 1] == "Civilized (Iron)")) then
 			return true
 		else
 			return false

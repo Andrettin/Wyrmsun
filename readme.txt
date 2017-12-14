@@ -92,6 +92,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Maps
 - The player now starts the Random Dungeon and Hall of Lyr maps with a small assortment of units besides the starting hero.
+- Added new possible starting/max tech level for custom maps, "Civilized (Gunpowder)". If "Civilized (Iron)" is set as the max tech level, players will no longer be able to research Gunpowder.
 
 * Scenarios
 - Added an underground layer for the Nidavellir scenarios.

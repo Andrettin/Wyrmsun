@@ -980,7 +980,7 @@ function RunSinglePlayerCustomGameMenu()
 	local faction_list = {_("Map Default")}
 	local world_list = { }
 	local game_type_list = { }
-	local tech_level_list = {_("Map Default"), _("Agrarian (Bronze)"), _("Agrarian (Iron)"), _("Civilized (Bronze)"), _("Civilized (Iron)")}
+	local tech_level_list = {_("Map Default"), _("Agrarian (Bronze)"), _("Agrarian (Iron)"), _("Civilized (Bronze)"), _("Civilized (Iron)"), _("Civilized (Gunpowder)")}
 	local max_tech_level_list = {_("Map Default")}
 	local difficulty_list = {_("Easy"), _("Normal"), _("Hard"),_("Brutal")}
 	local difficulty = nil
@@ -1238,7 +1238,7 @@ function RunSinglePlayerCustomGameMenu()
 		
 		if (race:getSelected() > 0) then
 			for i=1,table.getn(GetFactions(new_civilization)) do
-				if ((GetFactionData(GetFactions(new_civilization)[i], "Type") == "tribe" and (tech_level:getSelected() - 1 == -1 or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)")) or (GetFactionData(GetFactions(new_civilization)[i], "Type") == "polity" and (tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)"))) then
+				if ((GetFactionData(GetFactions(new_civilization)[i], "Type") == "tribe" and (tech_level:getSelected() - 1 == -1 or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)")) or (GetFactionData(GetFactions(new_civilization)[i], "Type") == "polity" and (tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Gunpowder)"))) then
 					if (GetFactionData(GetFactions(new_civilization)[i], "Playable")) then
 						table.insert(faction_ident_list, GetFactions(new_civilization)[i])
 						table.insert(faction_list, _(GetFactionData(GetFactions(new_civilization)[i], "Name")))
@@ -1282,7 +1282,10 @@ function RunSinglePlayerCustomGameMenu()
 		if (tech_level:getSelected() - 1 == -1 or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)") then
 			table.insert(max_tech_level_list, _("Civilized (Bronze)"))
 		end
-		table.insert(max_tech_level_list, _("Civilized (Iron)"))
+		if (tech_level:getSelected() - 1 == -1 or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)") then
+			table.insert(max_tech_level_list, _("Civilized (Iron)"))
+		end
+		table.insert(max_tech_level_list, _("Civilized (Gunpowder)"))
 		
 		max_tech_level:setList(max_tech_level_list)
 		max_tech_level:setSize(152, 20)
@@ -1302,9 +1305,9 @@ function RunSinglePlayerCustomGameMenu()
 					and (civilizations[i] ~= "frankish" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)")
 					and (civilizations[i] ~= "goth" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)")
 					and (civilizations[i] ~= "suebi" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)")
-					and (civilizations[i] ~= "teuton" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)")
-					and (civilizations[i] ~= "dutch" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)")
-					and (civilizations[i] ~= "english" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)")
+					and (civilizations[i] ~= "teuton" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Gunpowder)")
+					and (civilizations[i] ~= "dutch" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Gunpowder)")
+					and (civilizations[i] ~= "english" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Gunpowder)")
 				) then
 					local playable_civilization_species = CapitalizeString(GetCivilizationData(civilizations[i], "Species"))
 					local playable_civilization = GetCivilizationData(civilizations[i], "Display")
