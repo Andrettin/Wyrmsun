@@ -1890,6 +1890,20 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-iron-plow",
 	ForUnit = {"unit-dwarven-lumber-mill", "unit-germanic-carpenters-shop", "unit-goblin-lumber-mill", "unit-teuton-lumber-mill"}
 } )
 
+DefineButton( { Pos = 7, Level = 0, Icon = "icon-anvil",
+	Action = "research", Value = "upgrade-ironworking",
+	Allowed = "check-single-research",
+	Description = "Allows Iron Mines and Mithril Mines.",
+	Key = "i", Hint = "Research ~!Ironworking", Popup = "popup-research",
+	ForUnit = {
+		"unit-dwarven-smithy", "unit-brising-smithy",
+		"unit-germanic-smithy",
+		"unit-goblin-smithy",
+		"unit-latin-smithy",
+		"unit-teuton-smithy"
+	}
+} )
+
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-mathematics",
 	Action = "research", Value = "upgrade-mathematics",
 	Allowed = "check-single-research",

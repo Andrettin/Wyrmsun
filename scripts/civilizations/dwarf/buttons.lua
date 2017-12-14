@@ -135,7 +135,10 @@ DefineButton( { Pos = 5, Level = 1, Icon = "icon-dwarven-smithy",
 DefineButton( { Pos = 5, Level = 1, Icon = "icon-brising-smithy",
 	Action = "build", Value = "unit-brising-smithy",
 	Key = "s", Hint = _("Build ~!Smithy"), Popup = "popup-building",
-	ForUnit = {"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner"}
+	ForUnit = {
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister"
+	}
 })
 
 DefineButton( { Pos = 6, Level = 1, Icon = "icon-dwarven-masons-shop",

@@ -692,6 +692,7 @@ DefineCivilization("dwarf", {
 		25, "upgrade-dwarven-masonry", true, -- dwarves already had castles built of stone masonry by then
 		25, "upgrade-gunpowder", true, -- dwarves already had gunpowder by then (as seen by them having thunderes in The Sceptre of Fire)
 		400, "upgrade-dwarven-coinage", true, -- the dwarves should already have Coinage technology by then
+		550, "upgrade-ironworking", true,
 		550, "upgrade-dwarven-great-axe", true, -- late iron age technologies already obtained by the dwarves by this point
 		550, "upgrade-dwarven-shield-2", true, -- late iron age technologies already obtained by the dwarves by this point
 		550, "upgrade-dwarven-bearded-throwing-axe", true, -- late iron age technologies already obtained by the dwarves by this point
@@ -3391,6 +3392,7 @@ DefineCivilization("aesir", {
 		"germanic/ui/infopanel.png", 0, -200
 	},
 	HistoricalUpgrades = { -- give the Aesir iron weapons and armor from the beginning
+		0, "upgrade-ironworking", true,
 		0, "upgrade-germanic-broad-sword", true,
 		0, "upgrade-teuton-spatha", true,
 		0, "upgrade-germanic-bronze-shield", true,

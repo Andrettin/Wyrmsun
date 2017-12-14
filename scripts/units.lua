@@ -30,6 +30,7 @@ UnitTypeFiles = {}
 Units = {
 	"upgrade-holy-order", "upgrade-mercenary-company", "upgrade-trading-company",
 	"upgrade-wood-plow", "upgrade-iron-tipped-wood-plow", "upgrade-iron-plow",
+	"upgrade-ironworking",
 	"upgrade-mathematics", "upgrade-engineering", "upgrade-architecture", "upgrade-philosophy", "upgrade-gunpowder",
 	"upgrade-egyptian-civilization",
 	"upgrade-latin-civilization",
@@ -758,7 +759,8 @@ DefineUnitType("unit-iron-mine", {
 	Costs = {"time", 200, "lumber", 2050},
 	BuildingRules = { "and", { "ontop", { Type = "unit-iron-deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
 	GivesResource = "iron",
-	BuildingRulesString = "Must be built on top of a Iron Deposit"
+	BuildingRulesString = "Must be built on top of a Iron Deposit",
+	RequirementsString = "Ironworking"
 } )
 
 DefineUnitType("unit-mithril-deposit", {
@@ -784,7 +786,8 @@ DefineUnitType("unit-mithril-mine", {
 	Costs = {"time", 200, "lumber", 2050},
 	BuildingRules = { "and", { "ontop", { Type = "unit-mithril-deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
 	GivesResource = "mithril",
-	BuildingRulesString = "Must be built on top of a Mithril Deposit"
+	BuildingRulesString = "Must be built on top of a Mithril Deposit",
+	RequirementsString = "Ironworking"
 } )
 
 DefineUnitType("unit-coal-mine", {

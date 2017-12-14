@@ -103,6 +103,10 @@ https://github.com/Andrettin/Wyrmsun
 * Units
 - Added +1 damage to the dwarven Scout, Pathfinder, Explorer and Gryphon Rider.
 - Goblin Thieves now have the (passive) "Mugging" ability. Whenever they attack another unit, the thieves' player now receives a portion of that unit's costs in resources.
+- Dwarven Runesmiths, Runemasters and Arcanisters can now build Brising Smithies if they belong to the Brising Clan or Lyr.
+
+* Upgrades
+- Added Ironworking upgrade (icon by Jinn). Researching Ironworking unlocks the construction of Iron and Mithril mines. Ironworking is now a requirement for level 2 melee weapon/shield/ranged projectile/siege projectile upgrades and for Iron-Tipped Plow, Engineering and Alchemy.
 
 -----------------------------------------------------------------------
 - 3.1.0

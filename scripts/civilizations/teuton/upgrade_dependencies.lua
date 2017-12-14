@@ -50,7 +50,7 @@ DefinePredependency("upgrade-teuton-spatha",
 )
 
 DefineDependency("upgrade-teuton-spatha",
-	{"upgrade-germanic-broad-sword"}
+	{"upgrade-germanic-broad-sword", "upgrade-ironworking"}
 )
 
 DefinePredependency("upgrade-frank-spatha",
@@ -58,19 +58,19 @@ DefinePredependency("upgrade-frank-spatha",
 )
 
 DefineDependency("upgrade-frank-spatha",
-	{"upgrade-germanic-broad-sword"}
+	{"upgrade-germanic-broad-sword", "upgrade-ironworking"}
 )
 
 DefineDependency("upgrade-teuton-pike",
-	{"upgrade-germanic-long-spear"}
+	{"upgrade-germanic-long-spear", "upgrade-ironworking"}
 )
 
 DefineDependency("upgrade-teuton-iron-shield",
-	{"upgrade-germanic-bronze-shield"}
+	{"upgrade-germanic-bronze-shield", "upgrade-ironworking"}
 )
 
 DefineDependency("upgrade-teuton-bodkin-arrow",
-	{"upgrade-germanic-barbed-arrow"}
+	{"upgrade-germanic-barbed-arrow", "upgrade-ironworking"}
 )
 
 DefineDependency("upgrade-teuton-catapult-projectile-1",
@@ -78,7 +78,7 @@ DefineDependency("upgrade-teuton-catapult-projectile-1",
 )
 
 DefineDependency("upgrade-teuton-catapult-projectile-2",
-	{"unit-teuton-lumber-mill", "upgrade-teuton-catapult-projectile-1"}, "or", {"upgrade-mercenary-company", "upgrade-teuton-catapult-projectile-1"}
+	{"unit-teuton-lumber-mill", "upgrade-teuton-catapult-projectile-1", "upgrade-ironworking"}, "or", {"upgrade-mercenary-company", "upgrade-teuton-catapult-projectile-1", "upgrade-ironworking"}
 )
 
 DefineDependency("unit-teuton-stronghold",
@@ -90,7 +90,7 @@ DefineDependency("upgrade-teuton-coinage",
 )
 
 DefineDependency("upgrade-teuton-alchemy",
-	{"upgrade-philosophy", "upgrade-mathematics"}
+	{"upgrade-philosophy", "upgrade-mathematics", "upgrade-ironworking"}
 )
 
 DefinePredependency("unit-teuton-stables",

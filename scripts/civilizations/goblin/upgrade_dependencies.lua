@@ -50,11 +50,11 @@ DefineDependency("unit-goblin-gunpowder-infantry",
 )
 
 DefineDependency("upgrade-goblin-long-sword",
-	{"upgrade-goblin-broad-sword"}
+	{"upgrade-goblin-broad-sword", "upgrade-ironworking"}
 )
 
 DefineDependency("upgrade-goblin-embossed-shield",
-	{"upgrade-goblin-rimmed-shield"}
+	{"upgrade-goblin-rimmed-shield", "upgrade-ironworking"}
 )
 
 DefineDependency("unit-goblin-guard-tower",
@@ -86,7 +86,7 @@ DefineDependency("unit-goblin-glider",
 )
 
 DefineDependency("upgrade-goblin-pike",
-	{"upgrade-goblin-long-spear"}
+	{"upgrade-goblin-long-spear", "upgrade-ironworking"}
 )
 
 DefineDependency("unit-goblin-temple",
@@ -114,7 +114,7 @@ DefineDependency("unit-goblin-stronghold",
 )
 
 DefineDependency("upgrade-goblin-bodkin-arrow",
-	{"upgrade-goblin-barbed-arrow"}
+	{"upgrade-goblin-barbed-arrow", "upgrade-ironworking"}
 )
 
 DefineDependency("upgrade-goblin-catapult-projectile-1",
@@ -122,7 +122,7 @@ DefineDependency("upgrade-goblin-catapult-projectile-1",
 )
 
 DefineDependency("upgrade-goblin-catapult-projectile-2",
-	{"unit-goblin-lumber-mill", "upgrade-goblin-catapult-projectile-1"}, "or", {"upgrade-mercenary-company", "upgrade-goblin-catapult-projectile-1"}
+	{"unit-goblin-lumber-mill", "upgrade-goblin-catapult-projectile-1", "upgrade-ironworking"}, "or", {"upgrade-mercenary-company", "upgrade-goblin-catapult-projectile-1", "upgrade-ironworking"}
 )
 
 DefineDependency("upgrade-goblin-coinage",
@@ -130,7 +130,7 @@ DefineDependency("upgrade-goblin-coinage",
 )
 
 DefineDependency("upgrade-goblin-alchemy",
-	{"upgrade-philosophy", "upgrade-mathematics"}
+	{"upgrade-philosophy", "upgrade-mathematics", "upgrade-ironworking"}
 )
 
 DefineDependency("unit-goblin-transport-ship",

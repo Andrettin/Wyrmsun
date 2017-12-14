@@ -106,7 +106,7 @@ local tips = {
 	"You can make units automatically cast spells by selecting a unit, holding down CTRL and clicking on the spell icon. CTRL click again to turn off.",
 
 	-- Shift tips
-	"You can give a unit an order which is executed after it finishes the current one, if you hold the SHIFT key.",
+	"If you hold the SHIFT key, you can give a unit an order which is executed after it finishes the current one.",
 	"You can give waypoints to units if you press the SHIFT key and then right-click for the move command.",
 	"You can order a worker to build one building after the other, if you hold the SHIFT key while you place the building.",
 	"You can build the same building many times, if you hold the ALT and SHIFT keys while you place the structures.",

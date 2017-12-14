@@ -26,6 +26,14 @@
 --
 
 -- dependencies for neutral units
+DefineDependency("unit-iron-mine",
+	{"upgrade-ironworking"}
+)
+
+DefineDependency("unit-mithril-mine",
+	{"upgrade-ironworking"}
+)
+
 DefineDependency("unit-road",
 	{"upgrade-dwarven-masonry"},
 	"or", {"upgrade-goblin-masonry"},
@@ -42,12 +50,12 @@ DefineDependency("unit-minecart",
 
 -- dependencies for neutral upgrades
 DefineDependency("upgrade-iron-tipped-wood-plow",
-	{"upgrade-wood-plow", "unit-brising-smithy"},
-	"or", {"upgrade-wood-plow", "unit-dwarven-smithy"},
-	"or", {"upgrade-wood-plow", "unit-germanic-smithy"},
-	"or", {"upgrade-wood-plow", "unit-goblin-smithy"},
-	"or", {"upgrade-wood-plow", "unit-latin-smithy"},
-	"or", {"upgrade-wood-plow", "unit-teuton-smithy"}
+	{"upgrade-wood-plow", "upgrade-ironworking", "unit-brising-smithy"},
+	"or", {"upgrade-wood-plow", "upgrade-ironworking", "unit-dwarven-smithy"},
+	"or", {"upgrade-wood-plow", "upgrade-ironworking", "unit-germanic-smithy"},
+	"or", {"upgrade-wood-plow", "upgrade-ironworking", "unit-goblin-smithy"},
+	"or", {"upgrade-wood-plow", "upgrade-ironworking", "unit-latin-smithy"},
+	"or", {"upgrade-wood-plow", "upgrade-ironworking", "unit-teuton-smithy"}
 )
 
 DefineDependency("upgrade-iron-plow",
@@ -66,9 +74,9 @@ DefineDependency("upgrade-mathematics",
 )
 
 DefineDependency("upgrade-engineering",
-	{"upgrade-mathematics", "upgrade-dwarven-masonry"},
-	"or", {"upgrade-mathematics", "upgrade-goblin-masonry"},
-	"or", {"upgrade-mathematics", "upgrade-teuton-masonry"}
+	{"upgrade-mathematics", "upgrade-dwarven-masonry", "upgrade-ironworking"},
+	"or", {"upgrade-mathematics", "upgrade-goblin-masonry", "upgrade-ironworking"},
+	"or", {"upgrade-mathematics", "upgrade-teuton-masonry", "upgrade-ironworking"}
 )
 
 DefineDependency("upgrade-architecture",

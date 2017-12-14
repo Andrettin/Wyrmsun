@@ -59,7 +59,7 @@ DefineUpgrade("upgrade-goblin-embossed-shield", {
 	Parent = "upgrade-iron-shield",
 	Icon = "icon-goblin-embossed-shield",
 	Civilization = "goblin",
-	RequirementsString = "Rimmed Shield",
+	RequirementsString = "Rimmed Shield and Ironworking",
 	Description = _("The shield boss, or metal centerpiece, made the shield better capable of deflecting attacks.\n\nEffect: +2 Armor for Swordsmen and Impalers. Allows Embossed Shields to be sold at the Market."),
 	Item = "unit-goblin-embossed-shield"
 })
@@ -93,7 +93,7 @@ DefineUpgrade("upgrade-goblin-bodkin-arrow", {
 	Parent = "upgrade-ranged-projectile-2",
 	Icon = "icon-bodkin-arrow",
 	Civilization = "goblin",
-	RequirementsString = "Barbed Arrow",
+	RequirementsString = "Barbed Arrow and Ironworking",
 	Description = "Bodkin arrows focus pressure on a single point, greatly enhancing their piercing capability.\n\nEffect: +2 Damage for Archers, Strongholds and Guard Towers. Allows Bodkin Arrows to be sold at the Market.",
 	Arrows = true,
 	Item = "unit-bodkin-arrows"

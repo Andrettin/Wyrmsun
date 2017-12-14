@@ -53,7 +53,7 @@ DefineUpgrade("upgrade-long-sword", {
 	Name = "Long Sword",
 	Parent = "upgrade-melee-weapon-2",
 	Costs = {"time", 250, "copper", 2400},
-	RequirementsString = "Broad Sword"
+	RequirementsString = "Broad Sword and Ironworking"
 })
 
 DefineUpgrade("upgrade-great-axe", {
@@ -78,7 +78,7 @@ DefineUpgrade("upgrade-pike", {
 	Icon = "icon-pike",
 	Weapon = true,
 	Costs = {"time", 250, "copper", 1200, "lumber", 1200},
-	RequirementsString = "Long Spear"
+	RequirementsString = "Long Spear and Ironworking"
 })
 
 DefineUpgrade("upgrade-bronze-shield", {
@@ -137,14 +137,14 @@ DefineUpgrade("upgrade-catapult-metal-projectile", {
 	Parent = "upgrade-siege-projectile-2",
 	Icon = "icon-catapult-projectile-3",
 	Costs = {"time", 250, "copper", 4000},
-	RequirementsString = "Lumber Mill and Catapult Granite Projectile"
+	RequirementsString = "Lumber Mill, Catapult Granite Projectile and Ironworking"
 })
 
 DefineUpgrade("upgrade-penetrating-ballista-bolt", {
 	Name = "Penetrating Ballista Bolt",
 	Parent = "upgrade-siege-projectile-2",
 	Costs = {"time", 250, "copper", 3000, "lumber", 1000},
-	RequirementsString = "Lumber Mill and Broadhead Ballista Bolt"
+	RequirementsString = "Lumber Mill, Broadhead Ballista Bolt and Ironworking"
 })
 
 DefineUpgrade("upgrade-wood-plow", {
@@ -163,7 +163,7 @@ DefineUpgrade("upgrade-iron-tipped-wood-plow", {
 	Icon = "icon-iron-tipped-wood-plow",
 	Description = "The use of plowshares made of iron greatly increases the plow's strength, allowing it to penetrate more deeply into the soil.\n\nEffect: +1 Food supply for farms.",
 	Costs = {"time", 250, "copper", 900, "lumber", 1500},
-	RequirementsString = "Wood Plow and Smithy"
+	RequirementsString = "Wood Plow, Ironworking and Smithy"
 })
 
 DefineUpgrade("upgrade-iron-plow", {
@@ -174,6 +174,15 @@ DefineUpgrade("upgrade-iron-plow", {
 	Description = "The use of plows made entirely of iron makes for a significant improvement in farming productivity.\n\nEffect: +1 Food supply for farms.",
 	Costs = {"time", 250, "copper", 900, "lumber", 1500},
 	RequirementsString = "Iron-Tipped Wood Plow and Smithy"
+})
+
+DefineUpgrade("upgrade-ironworking", {
+	Name = "Ironworking",
+	Class = "ironworking",
+	Civilization = "neutral",
+	Icon = "icon-anvil",
+	Description = "The development of ironworking has the potential to revolutionize a society, as it allows metal objects to be more commonly used, given the relative abundance of iron.\n\nEffect: Allows Iron Mines and Mithril Mines.",
+	Costs = {"time", 250, "copper", 2000}
 })
 
 DefineUpgrade("upgrade-masonry", {
@@ -205,7 +214,7 @@ DefineUpgrade("upgrade-alchemy", {
 	Class = "alchemy",
 	Icon = "icon-cauldron",
 	Description = "Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.",
-	RequirementsString = "Philosophy and Mathematics",
+	RequirementsString = "Philosophy, Mathematics and Ironworking",
 	Costs = {"time", 250, "copper", 4000}
 })
 
@@ -235,7 +244,7 @@ DefineUpgrade("upgrade-engineering", {
 	Civilization = "neutral",
 	Icon = "icon-engineering",
 	Description = "The development of engineering allows the creation of more complex mechanisms.\n\nEffect: Allows siege engines, railroads and minecarts.",
-	RequirementsString = "Mathematics and Masonry",
+	RequirementsString = "Mathematics, Masonry and Ironworking",
 	Costs = {"time", 250, "copper", 2000, "lumber", 2000}
 })
 

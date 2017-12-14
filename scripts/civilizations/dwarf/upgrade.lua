@@ -41,7 +41,7 @@ DefineUpgrade("upgrade-dwarven-great-axe", {
 	Parent = "upgrade-great-axe",
 	Icon = "icon-dwarven-great-axe",
 	Civilization = "dwarf",
-	RequirementsString = "Broad Axe",
+	RequirementsString = "Broad Axe and Ironworking",
 	Description = "Further innovations in dwarven smithing allow axes to be made sturdier, and often to carry double blades.\n\nEffect: +2 Damage for Axefighters and Yale Riders. Allows Great Axes to be sold at the Market.",
 	Item = "unit-great-axe"
 })
@@ -74,7 +74,7 @@ DefineUpgrade("upgrade-dwarven-shield-2", {
 	Parent = "upgrade-iron-shield",
 	Icon = "icon-dwarven-shield-3",
 	Civilization = "dwarf",
-	RequirementsString = "Heater Shield",
+	RequirementsString = "Heater Shield and Ironworking",
 	Description = "As shield-making techniques improved, the creation of thrymgjol shields became possible. These shields receive their name from the impregnable gate crafted by the sons of the dwarf Solblindi, due to the mighty protection they give their users.\n\nEffect: +2 Armor for Axefighters, Guards and Yale Riders. Allows Thrymgjol Shields to be sold at the Market.",
 	Background = "The Thrymgjol gate and its makers, the sons of the dwarf Solblindi, are mentioned in the ~<Svipdagsmol~> of Norse mythology. The name \"Thrymgjol\" means \"loud-clanging\".",
 	Quote = "\"Thrymgjol they call it; 'twas made by the three,\nThe sons of Solblindi;\nAnd fast as a fetter the farer it holds,\nWhoever shall lift the latch.\"\n- Dwarven Traditional Poetry (The Warder)",
@@ -96,7 +96,7 @@ DefineUpgrade("upgrade-dwarven-bearded-throwing-axe", {
 	Parent = "upgrade-ranged-projectile-2",
 	Icon = "icon-dwarven-bearded-throwing-axe",
 	Civilization = "dwarf",
-	RequirementsString = "Sharp Throwing Axe",
+	RequirementsString = "Sharp Throwing Axe and Ironworking",
 	Description = "The 'bearding' of throwing axes by extending the bottom of their blades is an innovation which makes them more deadly when thrown.\n\nEffect: +2 Damage for Scouts, Gryphon Riders, Bastions and Guard Towers. Allows Bearded Throwing Axes to be sold at the Market.",
 	Weapon = true,
 	Item = "unit-bearded-throwing-axe"
