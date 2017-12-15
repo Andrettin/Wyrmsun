@@ -30,9 +30,9 @@ DefineCampaign("on-the-vanaquisl", {
 	Description = "Having assembled a great army, the Asa decided to attack the people of Vanaland and take possession of their lands...",
 	Faction = "asa-tribe",
 	StartYear = -3000,
-	MapTemplate = "earth",
-	MapTemplateStartPos = {4588, 834},
-	MapSize = {256, 256}
+	MapTemplates = {
+		"earth", {4588, 834}, {256, 256}
+	}
 })
 
 DefineCampaign("the-first-dwarves", {
@@ -52,9 +52,9 @@ DefineCampaign("westward-migration", {
 	Faction = "asa-tribe",
 	RequiredQuests = {"on-the-vanaquisl"},
 	StartYear = -2900,
-	MapTemplate = "earth",
-	MapTemplateStartPos = {4369, 609},
-	MapSize = {256, 256}
+	MapTemplates = {
+		"earth", {4369, 609}, {256, 256}
+	}
 })
 
 DefineCampaign("a-home-in-the-fields-of-sand", {
@@ -74,9 +74,9 @@ DefineCampaign("the-settlement-of-scandinavia", {
 	Faction = "asa-tribe",
 	RequiredQuests = {"westward-migration"},
 	StartYear = -2800,
-	MapTemplate = "earth",
-	MapTemplateStartPos = {4022, 667},
-	MapSize = {256, 256}
+	MapTemplates = {
+		"earth", {4022, 667}, {256, 256}
+	}
 })
 
 --[[
@@ -100,9 +100,9 @@ DefineCampaign("heimdalls-progeny", {
 	Description = "The young warrior Erala believes his true father to be the god Haimadala. Feeling that his divine heritage has fated him to rule over vast lands, Erala sets off to establish a hall and gather followers...", -- in the original myth his parents were "Fathir" and "Mothir"; "Fadēr" is the word which gave origin to "Fathir", while "Môder" gave origin to "Mothir"
 	Faction = "jarling-tribe",
 	StartYear = -1600, -- the introduction of stronger social differentiation occurred in Scandinavia around 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 73. As such, it makes sense to make the Rig myth (in which the different Scandinavian social classes are originated) take place around this time
-	MapTemplate = "earth",
-	MapTemplateStartPos = {4022, 667},
-	MapSize = {256, 256}
+	MapTemplates = {
+		"earth", {4022, 667}, {256, 256}
+	}
 })
 
 DefineCampaign("thors-servant", {
@@ -122,9 +122,9 @@ DefineCampaign("the-second-punic-war", {
 	Description = "",
 	Faction = "rome",
 	StartYear = -218,
-	MapTemplate = "earth",
-	MapTemplateStartPos = {3766, 881},
-	MapSize = {512, 512}
+	MapTemplates = {
+		"earth", {3766, 881}, {512, 512}
+	}
 })
 
 DefineCampaign("ariovistus-ambition", {
@@ -132,9 +132,9 @@ DefineCampaign("ariovistus-ambition", {
 	Description = "Under the leadership of Ariovistus, the Suebi have crossed the Rhine to aid the Sequani and the Arverni in defeating the Aedui. The Suebi leader has, however, greater ambitions than his allies suppose... he wishes to conquer the entirety of Gaul.",
 	Faction = "suebi-tribe",
 	StartYear = -61,
-	MapTemplate = "earth",
-	MapTemplateStartPos = {3871, 821},
-	MapSize = {256, 256}
+	MapTemplates = {
+		"earth", {3871, 821}, {256, 256}
+	}
 })
 
 DefineCampaign("the-home-of-the-boii", {
@@ -142,9 +142,9 @@ DefineCampaign("the-home-of-the-boii", {
 	Description = "After a devastating conflict with the Romans, Marbod seeks to lead the tribe of the Marcomanni to safer lands.",
 	Faction = "marcomanni-tribe",
 	StartYear = -9,
-	MapTemplate = "earth",
-	MapTemplateStartPos = {4064, 881},
-	MapSize = {256, 256}
+	MapTemplates = {
+		"earth", {4064, 881}, {256, 256}
+	}
 })
 --]]
 
@@ -165,9 +165,9 @@ DefineCampaign("the-first-marcomannic-war", {
 	Description = "Under the leadership of Ballomar, the Marcomanni wage war with the mighty Roman Empire.",
 	Faction = "marcomanni-tribe",
 	StartYear = 170, -- beginning of the First Marcomannic War
-	MapTemplate = "earth",
-	MapTemplateStartPos = {4064, 881},
-	MapSize = {256, 256}
+	MapTemplates = {
+		"earth", {4064, 881}, {256, 256}
+	}
 })
 --]]
 
@@ -178,9 +178,9 @@ DefineCampaign("the-founding-of-francia", {
 	Faction = "frank-tribe",
 --	StartYear = 481,
 	StartYear = 486,
-	MapTemplate = "earth",
-	MapTemplateStartPos = {3780, 852},
-	MapSize = {256, 256}
+	MapTemplates = {
+		"earth", {3780, 852}, {256, 256}
+	}
 })
 
 DefineCampaign("volunds-flight", { -- initial scenario for the Winter War storyline, could be changed later into a longer scenario containing the storyline in its entirety
@@ -188,16 +188,19 @@ DefineCampaign("volunds-flight", { -- initial scenario for the Winter War storyl
 	Description = "Imprisoned and humiliated, the elven prince Volund must seek to escape from his captors...",
 	Faction = "ulfdalir",
 	StartYear = 600, -- arbitrary date, should be changed later
-	MapTemplate = "alfheim",
-	MapTemplateStartPos = {728, 0},
-	MapSize = {256, 256}
+	MapTemplates = {
+		"alfheim", {728, 0}, {256, 256}
+	}
 })
 
 DefineCampaign("sigiberts-struggle", {
 	Name = "Sigibert's Struggle",
 	Description = "Upon the death of the Frankish king Chlothar I, his realm was divided between his four sons: Charibert, Chilperich, Sigibert and Gunthram. The ambitious Chilperich desires to increase his share of the inheritance at his brothers' expense, his designs on Sigibert's lands threatening to throw Francia into a bitter civil war...",
 	Faction = "austrasia",
-	StartYear = 561 -- Sigibert's reign in his lands begins
+	StartYear = 561, -- Sigibert's reign in his lands begins
+	MapTemplates = {
+		"earth", {3780, 852}, {256, 256}
+	}
 })
 
 DefineCampaign("island-of-the-lizard-god", { -- based on Will Doyle's "Island of the Lizard God" adventure, which he agreed to license under the GPL 2.0; the adventure won the One-Page Dungeon contest in 2014: https://www.dungeoncontest.com/opdc-2014
@@ -216,9 +219,9 @@ DefineCampaign("the-heirs-return", {
 	Description = "Upon the death of Aelle of Deira, his kingdom was taken over by the monarch of Bernicia. Aelle's son Edwin, then only a child, was taken in secret to another realm for the sake of his survival. After nearly twenty years of exile, Edwin has gathered an army, seeking to recover his birthright...",
 	Faction = "deira",
 	StartYear = 616,
-	MapTemplate = "earth",
-	MapTemplateStartPos = {3627, 695},
-	MapSize = {256, 256}
+	MapTemplates = {
+		"earth", {3627, 695}, {256, 256}
+	}
 })
 
 DefineCampaign("the-fall-of-mercia", {
@@ -226,8 +229,8 @@ DefineCampaign("the-fall-of-mercia", {
 	Description = "For decades has Mercia enjoyed supremacy in England. Sensing an opportunity, king Egbert of Wessex desires to strike hard and fast into Mercian territory, and break their overlordship over the other southern English kingdoms forever.",
 	Faction = "wessex",
 	StartYear = 825,
-	MapTemplate = "earth",
-	MapTemplateStartPos = {3627, 695},
-	MapSize = {256, 256}
+	MapTemplates = {
+		"earth", {3627, 695}, {256, 256}
+	}
 })
 --]]
