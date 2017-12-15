@@ -29,7 +29,7 @@ DefineDialogue("on-the-vanaquisl-introduction", {
 	Nodes = {
 		{
 			"speaker", "character", "voden",
-			"text", "I have won every battle I have taken part in... but they were no more than squabbles compared to the aim I set before myself: the conquest of Vanaland. My great army has been assembled, and the time has come to make the river run red with their blood. Their lands shall be taken into our possession, providing our tribesfolk with the lands we much need to prosper. Onward to victory!",
+			"text", "I have won every battle I have taken part in... but they were no more than squabbles compared to the aim I set before myself: the conquest of Vanaland. That country is peopled by a strange group of elf-worshippers... My great army has been assembled, and the time has come to make the river run red with their blood. Their lands shall be taken into our possession, providing our tribesfolk with the lands we much need to prosper. Onward to victory!",
 			"option-effects", {
 				function(s)
 					SetPlayerData(trigger_player, "AcceptQuest", "on-the-vanaquisl")
@@ -81,7 +81,7 @@ DefineDialogue("on-the-vanaquisl-vana-sighted", {
 		{
 			"speaker", "unit", "unit-germanic-warrior",
 			"speaker-player", "vana-tribe",
-			"text", "You shall have our homelands... as your burial ground."
+			"text", "You shall have our homelands... as your burial grounds. For the Vanir!"
 		}
 	}
 })
