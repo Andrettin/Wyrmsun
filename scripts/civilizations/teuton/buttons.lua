@@ -412,6 +412,7 @@ DefineButton( { Pos = 9, Level = 2, Icon = "icon-christianity",
 	ForUnit = {
 		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
 		"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman",
+		"unit-latin-javelineer",
 		"unit-teuton-spearman", "unit-frank-spearman",
 		"unit-teuton-archer",
 		"unit-teuton-gunpowder-infantry",

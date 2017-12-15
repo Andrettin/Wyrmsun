@@ -598,6 +598,15 @@ SetSoundRange("throwing-axe", 32)
 SetSoundVolumePercent("throwing-axe", 75)
 MakeSound("throwing-axe-hit", "missiles/throwing_axe_hit.wav")
 SetSoundRange("throwing-axe-hit", 32)
+
+MakeSound("throw-weapon", {
+	"missiles/throw-1.wav",
+	"missiles/throw-2.wav",
+	"missiles/throw-3.wav",
+	"missiles/throw-4.wav"
+})
+SetSoundRange("throw-weapon", 32)
+
 MakeSound("catapult-attack", "neutral/onager_shooting.wav")
 SetSoundRange("catapult-attack", 32)
 

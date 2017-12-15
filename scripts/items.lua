@@ -229,6 +229,16 @@ DefineUnitType("unit-pike", {
 	BasicDamage = 4
 } )
 
+DefineUnitType("unit-pilum", {
+	Name = "Pilum",
+	Parent = "unit-template-item",
+	Costs = {"copper", 100},
+	Image = {"file", "latin/items/pilum.png", "size", {48, 48}},
+	Icon = "icon-latin-pilum",
+	ItemClass = "javelin",
+	BasicDamage = 0
+} )
+
 DefineUnitType("unit-throwing-axe", {
 	Name = "Throwing Axe",
 	Parent = "unit-template-item",

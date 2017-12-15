@@ -31,6 +31,32 @@
 --	NOTE: Save can generate this table.
 --
 
+DefineUnitType("unit-latin-javelineer", {
+	Name = "Javelineer",
+	Parent = "unit-template-archer",
+	Civilization = "latin",
+	Description = "Dwarven scouts use their speed to their advantage, ranging ahead of the main force and reporting back on troop movements and dispositions. Outside of battle, they are often used to relay messages between dwarven communities. However, they pay for their speed with the poorer protection provided by their lighter armor.",
+	Image = {"file", "latin/units/javelineer.png", "size", {72, 72}},
+	Animations = "animations-weapon-thrower", Icon = "icon-latin-javelineer",
+	DefaultEquipment = {
+		{"weapon", "unit-pilum"},
+		{"boots", "unit-boots"}
+	},
+	BasicDamage = 11,
+	Missile = "missile-javelin",
+	FireMissile = "missile-javelin",
+	MaxAttackRange = 4,
+	Corpse = "unit-human-dead-body",
+	WeaponClasses = {"javelin"},
+	PierceDamage = true,
+	RequirementsString = "Lumber Mill",
+	AiDrops = {"unit-pilum", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	Sounds = {
+		"fire-missile", "throw-weapon",
+		"dead", "basic-human-voices-dead"
+	}
+} )
+
 DefineUnitType("unit-latin-town-hall", {
 	Name = _("Forum"),
 	Parent = "unit-template-town-hall",
@@ -68,8 +94,8 @@ DefineUnitType("unit-latin-barracks", {
 	Image = {"file", "latin/buildings/barracks.png", "size", {96, 96}},
 	Shadow = {"file", "latin/buildings/barracks_shadow.png", "size", {96, 96}},
 	Icon = "icon-latin-barracks",
-	Trains = {"unit-teuton-swordsman", "unit-teuton-spearman", "unit-teuton-archer", "unit-teuton-ritter", "unit-teuton-catapult"},
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
+	Trains = {"unit-teuton-swordsman", "unit-teuton-spearman", "unit-teuton-ritter", "unit-teuton-catapult"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-pilum", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots"},
 	Sounds = {
 --		"help", "basic-germanic-voices-help-town"
 	}

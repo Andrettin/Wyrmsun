@@ -34,6 +34,7 @@ Units = {
 	"upgrade-mathematics", "upgrade-engineering", "upgrade-architecture", "upgrade-philosophy", "upgrade-gunpowder",
 	"upgrade-egyptian-civilization",
 	"upgrade-latin-civilization",
+	"unit-latin-javelineer",
 	"unit-latin-town-hall", "unit-latin-farm", "unit-latin-barracks", "unit-latin-smithy", "unit-latin-stables",
 	"upgrade-germanic-civilization",
 	"upgrade-faction-asa-tribe", "upgrade-faction-jarling-tribe", "upgrade-faction-karling-tribe", "upgrade-faction-skeldung-tribe", "upgrade-faction-thielung-tribe", "upgrade-faction-thralling-tribe", "upgrade-faction-yngling-tribe",
@@ -4740,7 +4741,7 @@ DefineUnitType("unit-orc-spearthrower", {
 	Civilization = "orc",
 --	Description = "Amongst orcs, throwing spears are often regarded as a cowardly weapon; but even orcs, especially youths and those of slight build, are pragmatic enough to use them in spite of this. Orcish spearthrowers are seldom well equipped, and have no semblance of training. Even as poorly handled as they are, their weapons can still be quite deadly, and the wielders thereof rarely march alone.",
 	Image = {"file", "dwarf/units/dwarven_scout.png", "size", {72, 72}},
-	Animations = "animations-dwarven-scout", Icon = "icon-orc-spearthrower",
+	Animations = "animations-weapon-thrower", Icon = "icon-orc-spearthrower",
 	Missile = "missile-javelin",
 	WeaponClasses = {"javelin"},
 	PierceDamage = true,
@@ -4901,6 +4902,7 @@ DefineUnitType("unit-mercenary-camp", {
 	BurnDamageRate = 1,
 	RecruitHeroes = true,
 	UnitStock = {
+		"unit-latin-javelineer", 3,
 		"unit-dwarven-axefighter", 4, "unit-surghan-mercenary-axefighter", 4, "unit-dwarven-guard", 4, "unit-dwarven-scout", 3, "unit-joruvellir-scout", 3, "unit-dwarven-thunderer", 3, "unit-dwarven-yale-rider", 2, "unit-joruvellir-yale-rider", 2, "unit-dwarven-ballista", 1, "unit-dwarven-gryphon-rider", 1,
 		"unit-goblin-thief", 6, "unit-goblin-swordsman", 4, "unit-goblin-spearman", 4, "unit-goblin-archer", 3, "unit-goblin-gunpowder-infantry", 3, "unit-goblin-war-machine", 1, "unit-goblin-glider", 1,
 		"unit-kobold-footpad", 4, "unit-ettin", 1

@@ -92,23 +92,6 @@ DefineAnimations("animations-dwarven-axefighter", {
 })
 
 --
--- Dwarven Scout
---
-
-DefineAnimations("animations-dwarven-scout", {
-	Still = UnitStill,
-	Move = UnitMove,
-	Attack = {
-		"unbreakable begin", 
-		"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
-		"frame 40", "attack", "sound throwing-axe", "wait 12",
-		"frame 0", "wait 18", "frame 0",
-		"unbreakable end", "wait 1",
-	},
-	Death = AlternativeArcherDeath
-})
-
---
 -- Dwarven Ballista
 --
 

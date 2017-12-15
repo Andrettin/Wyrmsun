@@ -48,11 +48,11 @@ SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4143, 1005}, 170, 
 SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4143, 1005}, 170, 171) -- troops to defend Aquileia for The First Marcomannic War scenario
 SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4143, 1005}, 170, 171) -- troops to defend Aquileia for The First Marcomannic War scenario
 SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4143, 1005}, 170, 171) -- troops to defend Aquileia for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4143, 1005}, 170, 171) -- troops to defend Aquileia for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4143, 1005}, 170, 171) -- troops to defend Aquileia for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4143, 1005}, 170, 171) -- troops to defend Aquileia for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4143, 1005}, 170, 171) -- troops to defend Aquileia for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4143, 1005}, 170, 171) -- troops to defend Aquileia for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-latin-javelineer", "rome", {4143, 1005}, 170, 171) -- troops to defend Aquileia for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-latin-javelineer", "rome", {4143, 1005}, 170, 171) -- troops to defend Aquileia for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-latin-javelineer", "rome", {4143, 1005}, 170, 171) -- troops to defend Aquileia for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-latin-javelineer", "rome", {4143, 1005}, 170, 171) -- troops to defend Aquileia for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-latin-javelineer", "rome", {4143, 1005}, 170, 171) -- troops to defend Aquileia for The First Marcomannic War scenario
 SetMapTemplateUnit("earth", "unit-teuton-ritter", "rome", {4143, 1005}, 170, 171) -- troops to defend Aquileia for The First Marcomannic War scenario
 SetMapTemplateUnit("earth", "unit-teuton-ritter", "rome", {4143, 1005}, 170, 171) -- troops to defend Aquileia for The First Marcomannic War scenario
 SetMapTemplateHero("earth", "marcus-aurelius", "rome", {4143, 1005}, 168, 169) -- Marcus Aurelius went north in the spring of 168, with the objective of reaching Aquileia; during the 168/169 winter he returned to Rome; Source: "Ancient Warfare VII.6", 2013, p. 28.
@@ -94,11 +94,11 @@ SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4122, 1005}, 170, 
 SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
 SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
 SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-latin-javelineer", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-latin-javelineer", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-latin-javelineer", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-latin-javelineer", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-latin-javelineer", "rome", {4122, 1005}, 170, 171) -- troops to defend Opitergium for The First Marcomannic War scenario
 
 -- Punta Milazzese
 --SetMapTemplateUnit("earth", "unit-latin-farm", "sicel-tribe", {4179, 1172}, -1700, -1350) -- the settlement of Punta Milazzese (located on the island of Lipari) was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC); it contained around fifty drystone huts; it was destroyed violently at the end of the Italian Middle Bronze Age; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 37.

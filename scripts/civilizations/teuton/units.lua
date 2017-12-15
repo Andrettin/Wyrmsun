@@ -1014,7 +1014,7 @@ DefineUnitType("unit-teuton-stronghold", {
 	Icon = "icon-teuton-stronghold",
 	Trains = {"unit-teuton-worker"},
 	RequirementsString = "Barracks and Masonry",
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-hand-cannon", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-hand-cannon", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-pilum"},
 	DropSpells = {"spell-anglo-saxon-allegiance", "spell-frank-allegiance", "spell-goth-allegiance", "spell-suebi-allegiance", "spell-teuton-allegiance"},
 	Sounds = {
 --		"help", "basic-teuton-voices-help-town"
@@ -1086,7 +1086,7 @@ DefineUnitType("unit-teuton-lumber-mill", {
 	Image = {"file", "teuton/buildings/lumber_mill.png", "size", {96, 96}},
 	Shadow = {"file", "teuton/buildings/lumber_mill_shadow.png", "size", {96, 96}},
 	Icon = "icon-teuton-lumber-mill",
-	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
+	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-pilum"},
 	Variations = {
 		{
 			"variation-id", "lumber-mill",
@@ -1197,7 +1197,7 @@ DefineUnitType("unit-teuton-market", {
 	Shadow = {"file", "teuton/buildings/market_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-teuton-market",
 	RequirementsString = "Carpenter's Shop/Lumber Mill",
-	SoldUnits = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
+	SoldUnits = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-pilum"},
 	Variations = {
 		{
 			"variation-id", "market",

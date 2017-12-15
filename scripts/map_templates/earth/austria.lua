@@ -36,8 +36,8 @@ SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4135, 960}, 170, 1
 SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
 SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
 SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-archer", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-latin-javelineer", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-latin-javelineer", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-latin-javelineer", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-latin-javelineer", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
+SetMapTemplateUnit("earth", "unit-latin-javelineer", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario

@@ -104,7 +104,11 @@ DefineModifier("upgrade-latin-civilization",
 )
 
 DefineModifier("upgrade-latin-civilization",
-	{"apply-to", "unit-germanic-archer"}, {"convert-to", "unit-teuton-archer"}
+	{"apply-to", "unit-germanic-archer"}, {"convert-to", "unit-latin-javelineer"}
+)
+
+DefineModifier("upgrade-latin-civilization",
+	{"apply-to", "unit-teuton-archer"}, {"convert-to", "unit-latin-javelineer"}
 )
 
 DefineModifier("upgrade-latin-civilization",

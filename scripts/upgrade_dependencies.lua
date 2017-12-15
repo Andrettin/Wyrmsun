@@ -247,6 +247,14 @@ DefineDependency("unit-pike",
 	"or", {"unit-teuton-lumber-mill", "upgrade-teuton-pike"}
 )
 
+DefinePredependency("unit-pilum",
+	{"upgrade-latin-civilization"}
+)
+
+DefineDependency("unit-pilum",
+	{"unit-teuton-lumber-mill"}
+)
+
 DefineDependency("unit-throwing-axe",
 	{"unit-dwarven-lumber-mill"}
 )

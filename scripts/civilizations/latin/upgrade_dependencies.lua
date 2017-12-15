@@ -25,6 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefinePredependency("unit-latin-javelineer",
+	{"upgrade-latin-civilization"}
+)
+
+DefineDependency("unit-latin-javelineer",
+	{"unit-teuton-lumber-mill"}, "or", {"upgrade-mercenary-company"}
+)
+
 DefinePredependency("unit-latin-town-hall",
 	{"upgrade-latin-civilization"}
 )

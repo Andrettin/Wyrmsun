@@ -988,7 +988,7 @@ DefineUnitType("unit-dwarven-scout", {
 	Description = "Dwarven scouts use their speed to their advantage, ranging ahead of the main force and reporting back on troop movements and dispositions. Outside of battle, they are often used to relay messages between dwarven communities. However, they pay for their speed with the poorer protection provided by their lighter armor.",
 --	Background = "In Norse mythology, there is a mention in the ~<Voluspo~> of a throng of dwarves led by Dvalin who moved away from the rocks and into the sands, these migrants being the ancestors of Lofar.", -- use this for the pathfinder
 	Image = {"file", "dwarf/units/dwarven_scout.png", "size", {72, 72}},
-	Animations = "animations-dwarven-scout", Icon = "icon-dwarven-scout",
+	Animations = "animations-weapon-thrower", Icon = "icon-dwarven-scout",
 	DefaultEquipment = {
 		{"weapon", "unit-throwing-axe"},
 		{"boots", "unit-boots"}
@@ -1063,6 +1063,7 @@ DefineUnitType("unit-dwarven-scout", {
 		"acknowledge", "basic-dwarf-voices-acknowledge",
 		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-scout-ready",
+		"fire-missile", "throwing-axe",
 		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"
 	}
@@ -1074,7 +1075,7 @@ DefineUnitType("unit-dwarven-pathfinder", {
 	Civilization = "dwarf",
 	Description = "These hardy dwarves are sometimes away from their caves for long periods, scouting and patrolling the borders. They spend this time watching for invaders, and fighting bandits and thieves who encroach on dwarven territory. Their deftly thrown axes can rival the power and accuracy of a gnomish marksman.",
 	Image = {"file", "dwarf/units/dwarven_scout.png", "size", {72, 72}},
-	Animations = "animations-dwarven-scout", Icon = "icon-dwarven-pathfinder",
+	Animations = "animations-weapon-thrower", Icon = "icon-dwarven-pathfinder",
 	DefaultEquipment = {
 		{"weapon", "unit-throwing-axe"},
 		{"boots", "unit-boots"}
@@ -1130,7 +1131,7 @@ DefineUnitType("unit-dwarven-explorer", {
 	Civilization = "dwarf",
 	Description = "Dwarven Explorers are peerless survivalists. Using only the equipment they carry, they can range for months around the forests and mountains looking for new seams of ore and deposits of minerals. Whilst their skill in a melee is less than some other dwarves, they are unmatched with throwing axes, having practiced this skill hunting in the mountains. Their maneuverability makes them dangerous and tricky foes.",
 	Image = {"file", "dwarf/units/dwarven_scout.png", "size", {72, 72}},
-	Animations = "animations-dwarven-scout", Icon = "icon-dwarven-explorer",
+	Animations = "animations-weapon-thrower", Icon = "icon-dwarven-explorer",
 	DefaultEquipment = {
 		{"weapon", "unit-throwing-axe"},
 		{"boots", "unit-boots"}
