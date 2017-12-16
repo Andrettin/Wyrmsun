@@ -63,7 +63,7 @@ DefineUpgrade("upgrade-faction-sugambri-tribe", {
 
 DefineUpgrade("upgrade-faction-ubii-tribe", {
 	Name = "Ubii Tribe",
-	EffectsString = "+5% Copper Processing for Town Halls and Strongholds",
+	EffectsString = "+5% Copper, Silver and Gold Processing for Smithies",
 	RequirementsString = "Ironworking"
 })
 
@@ -143,6 +143,8 @@ DefineModifier("upgrade-faction-sugambri-tribe",
 
 DefineModifier("upgrade-faction-ubii-tribe",
 	{"improve-production", "copper", 5}, -- the Ubii were in a central trading position, making them more advanced than other Germanic tribes
+	{"improve-production", "silver", 5},
+	{"improve-production", "gold", 5},
 	{"apply-to", "unit-teuton-smithy"}
 )
 

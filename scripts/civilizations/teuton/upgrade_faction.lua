@@ -174,7 +174,7 @@ DefineUpgrade("upgrade-faction-mecklenburg", {
 
 DefineUpgrade("upgrade-faction-netherlands", {
 	Name = "Netherlands",
-	EffectsString = "+5% Copper Processing for Town Halls and Strongholds",
+	EffectsString = "+5% Copper, Silver and Gold Processing for Smithies",
 	RequirementsString = "Writing, Masonry, no other faction is Brabant, Drenthe, Holland or Overijssel"
 })
 
@@ -380,6 +380,8 @@ DefineModifier("upgrade-faction-mecklenburg",
 
 DefineModifier("upgrade-faction-netherlands",
 	{"improve-production", "copper", 5},
+	{"improve-production", "silver", 5},
+	{"improve-production", "gold", 5},
 	{"apply-to", "unit-teuton-smithy"}
 )
 

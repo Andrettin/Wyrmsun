@@ -168,6 +168,8 @@ DefineModifier("upgrade-teuton-masonry",
 
 DefineModifier("upgrade-teuton-coinage",
 	{"improve-production", "copper", 10},
+	{"improve-production", "silver", 10},
+	{"improve-production", "gold", 10},
 	{"apply-to", "unit-teuton-smithy"},
 	{"apply-to", "unit-latin-smithy"}
 )

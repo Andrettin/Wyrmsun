@@ -181,7 +181,7 @@ DefineUpgrade("upgrade-ironworking", {
 	Class = "ironworking",
 	Civilization = "neutral",
 	Icon = "icon-anvil",
-	Description = "The development of ironworking has the potential to revolutionize a society, as it allows metal objects to be more commonly used, given the relative abundance of iron.\n\nEffect: Allows Iron Mines and Mithril Mines.",
+	Description = "The development of ironworking has the potential to revolutionize a society, as it allows metal objects to be more commonly used, given the relative abundance of iron.\n\nEffect: Allows Iron Mines and Mithril Mines, +10% Iron and Mithril Processing Bonus for Smithies.",
 	Costs = {"time", 250, "copper", 2000}
 })
 
@@ -196,7 +196,7 @@ DefineUpgrade("upgrade-masonry", {
 DefineUpgrade("upgrade-coinage", {
 	Name = "Coinage",
 	Class = "coinage",
-	Description = "While previously trade was conducted by trading one commodity for another, the introduction of currency provides a more practical means of exchange.\n\nEffect: +10% Copper, Silver and Gold Processing Bonus for Smithies. -5% Trade Cost for Markets.",
+	Description = "While previously trade was conducted by trading one commodity for another, the introduction of currency provides a more practical means of exchange.\n\nEffect: +10% Copper, Silver and Gold Processing Bonus for Smithies, -5% Trade Cost for Markets.",
 	Costs = {"time", 250, "copper", 1500},
 	RequirementsString = "Smithy"
 })
@@ -285,6 +285,16 @@ DefineUpgrade("upgrade-steam-engine", {
 	Icon = "icon-printing-press",
 	Costs = {"time", 250, "copper", 2000, "lumber", 2000}
 })
+
+DefineModifier("upgrade-ironworking",
+	{"improve-production", "iron", 10},
+	{"improve-production", "mithril", 10},
+	{"apply-to", "unit-dwarven-smithy"}, {"apply-to", "unit-brising-smithy"},
+	{"apply-to", "unit-goblin-smithy"},
+	{"apply-to", "unit-germanic-smithy"},
+	{"apply-to", "unit-teuton-smithy"},
+	{"apply-to", "unit-latin-smithy"}
+)
 
 DefineModifier("upgrade-wood-plow",
 	{"Supply", 1},

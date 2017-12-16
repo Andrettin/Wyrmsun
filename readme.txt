@@ -116,7 +116,7 @@ https://github.com/Andrettin/Wyrmsun
 - Dwarven Runesmiths, Runemasters and Arcanisters can now build Brising Smithies if they belong to the Brising Clan or Lyr.
 
 * Upgrades
-- Added Ironworking upgrade (icon by Jinn). Researching Ironworking unlocks the construction of Iron and Mithril mines. Ironworking is now a requirement for level 2 melee weapon/shield/ranged projectile/siege projectile upgrades and for Iron-Tipped Plow, Engineering and Alchemy.
+- Added Ironworking upgrade (icon by Jinn). Researching Ironworking unlocks the construction of Iron and Mithril mines, and grants a 10% Iron/Mithril processing bonus. Ironworking is now a requirement for level 2 melee weapon/shield/ranged projectile/siege projectile upgrades and for Iron-Tipped Plow, Engineering and Alchemy.
 
 -----------------------------------------------------------------------
 - 3.1.0

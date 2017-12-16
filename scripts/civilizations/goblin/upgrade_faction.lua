@@ -74,7 +74,7 @@ DefineUpgrade("upgrade-faction-myridia", {
 
 DefineUpgrade("upgrade-faction-stilgar", {
 	Name = "Stilgar",
-	EffectsString = "+5% Copper Processing for Town Halls and Strongholds",
+	EffectsString = "+5% Copper, Silver and Gold Processing for Smithies",
 	RequirementsString = "Writing and Masonry"
 })
 
@@ -181,6 +181,8 @@ DefineModifier("upgrade-faction-myridia",
 
 DefineModifier("upgrade-faction-stilgar",
 	{"improve-production", "copper", 5},
+	{"improve-production", "silver", 5},
+	{"improve-production", "gold", 5},
 	{"apply-to", "unit-goblin-smithy"}
 )
 

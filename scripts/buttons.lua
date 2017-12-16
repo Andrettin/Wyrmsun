@@ -1906,7 +1906,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-iron-plow",
 DefineButton( { Pos = 7, Level = 0, Icon = "icon-anvil",
 	Action = "research", Value = "upgrade-ironworking",
 	Allowed = "check-single-research",
-	Description = "Allows Iron Mines and Mithril Mines.",
+	Description = "Allows Iron Mines and Mithril Mines, +10% Iron and Mithril Processing Bonus for Smithies.",
 	Key = "i", Hint = "Research ~!Ironworking", Popup = "popup-research",
 	ForUnit = {
 		"unit-dwarven-smithy", "unit-brising-smithy",

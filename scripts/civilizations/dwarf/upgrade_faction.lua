@@ -49,7 +49,7 @@ DefineUpgrade("upgrade-faction-norlund-clan", {
 
 DefineUpgrade("upgrade-faction-oinling-clan", {
 	Name = "Oinling Clan",
-	EffectsString = "+5% Copper Processing for Mead Halls and Strongholds",
+	EffectsString = "+5% Copper, Silver and Gold Processing for Smithies",
 	RequirementsString = "Smithy"
 })
 
@@ -210,6 +210,8 @@ DefineModifier("upgrade-faction-norlund-clan",
 
 DefineModifier("upgrade-faction-oinling-clan",
 	{"improve-production", "copper", 5},
+	{"improve-production", "silver", 5},
+	{"improve-production", "gold", 5},
 	{"apply-to", "unit-dwarven-smithy"}
 )
 

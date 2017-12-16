@@ -219,6 +219,8 @@ DefineModifier("upgrade-goblin-masonry",
 
 DefineModifier("upgrade-goblin-coinage",
 	{"improve-production", "copper", 10},
+	{"improve-production", "silver", 10},
+	{"improve-production", "gold", 10},
 	{"apply-to", "unit-goblin-smithy"}
 )
 

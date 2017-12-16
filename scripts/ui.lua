@@ -779,6 +779,12 @@ DefinePanelContents(
 										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "copper"), 100)))),
 										"" ))}}
     },
+	{ Pos = {9, 130}, Condition = {MetalImprove = "only"}, More = {"Text", {Text = _("Iron:")}}},
+	{ Pos = {115, 130}, Condition = {MetalImprove = "only"}, HighlightColor = "yellow", More = { "Text", {Text = Concat("100",
+										If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "iron"), 100),
+										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "iron"), 100)))),
+										"" ))}}
+    },
 	{ Pos = {9, 116}, Condition = {LumberImprove = "only"}, More = {"Text", {Text = _("Lumber:")}}},
 	{ Pos = {115, 116}, Condition = {LumberImprove = "only"}, HighlightColor = "yellow", More = { "Text", {Text = Concat("100",
 										If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "lumber"), 100),
@@ -1330,6 +1336,18 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {TownHall = "false", CanStore = "copper"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Stores Copper"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {TownHall = "false", CanStore = "silver"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Stores Silver"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {TownHall = "false", CanStore = "gold"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Stores Gold"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {TownHall = "false", CanStore = "iron"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Stores Iron"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {TownHall = "false", CanStore = "mithril"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Stores Mithril"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {TownHall = "false", CanStore = "lumber"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Stores Lumber"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -1864,6 +1882,18 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {TownHall = "false", CanStore = "copper", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Stores Copper"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {TownHall = "false", CanStore = "silver", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Stores Silver"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {TownHall = "false", CanStore = "gold", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Stores Gold"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {TownHall = "false", CanStore = "iron", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Stores Iron"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {TownHall = "false", CanStore = "mithril", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Stores Mithril"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {TownHall = "false", CanStore = "lumber", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Stores Lumber"), Font = wyr.preferences.PopupDescriptionFont}}
