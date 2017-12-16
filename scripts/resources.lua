@@ -27,138 +27,169 @@
 
 --  Define default resources
 
--- FIXME: Must be removed: Use and write (define-resource)
---
---  (define-resource 'copper 'name "Copper"
---    'start-resource-default 2000
---    'start-resource-low 2000
---    'start-resource-medium 5000
---    'start-resource-high 10000
---    'income 100)
---  FIXME: Must describe how getting resources work.
---
-
-DefineDefaultIncomes(
-	0, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100
-)
-
-DefineDefaultActions(
-	"stop", "mine", "gather", "drill", "mine", "quarry", "mine", "produce", "gain", "mine", "mine", "mine", "quarry", "produce", "produce", "gather", "mine", "mine", "gain", "perform"
-)
-
 DefineDefaultResourceNames(
 	"time", "copper", "lumber", "oil", "iron", "stone", "coal", "research", "prestige", "gold", "silver", "mithril", "limestone", "jewelry", "furniture", "leather", "diamonds", "emeralds", "leadership", "trade"
 )
 
-DefineDefaultResourceAmounts(
-	"lumber", 400,
-	"oil", 50000,
-	"stone", 10000,
-	"limestone", 10000,
-	"coal", 50000,
-	"gold", 50000,
-	"silver", 50000,
-	"copper", 50000,
-	"iron", 50000,
-	"mithril", 50000,
-	"diamonds", 50000
-)
-
-DefineDefaultResourceMaxAmounts(-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1)
+DefineResource("time", {
+	Name = "Time",
+	DefaultIncome = 0,
+	ActionName = "stop"
+})
 
 DefineResource("copper", {
-	Name = "Copper"
+	Name = "Copper",
+	DefaultIncome = 100,
+	ActionName = "mine",
+	DefaultAmount = 50000
 })
 
 DefineResource("silver", {
 	Name = "Silver",
+	DefaultIncome = 100,
 	FinalResource = "copper",
-	FinalResourceConversionRate = 200
+	FinalResourceConversionRate = 200,
+	ActionName = "mine",
+	DefaultAmount = 50000
 })
 
 DefineResource("gold", {
 	Name = "Gold",
+	DefaultIncome = 100,
 	FinalResource = "copper",
-	FinalResourceConversionRate = 400
+	FinalResourceConversionRate = 400,
+	ActionName = "mine",
+	DefaultAmount = 50000
 })
 
 DefineResource("iron", {
 	Name = "Iron",
+	DefaultIncome = 100,
 	FinalResource = "copper",
-	FinalResourceConversionRate = 100
+	FinalResourceConversionRate = 100,
+	ActionName = "mine",
+	DefaultAmount = 50000
 })
 
 DefineResource("mithril", {
 	Name = "Mithril",
+	DefaultIncome = 100,
 	FinalResource = "copper",
-	FinalResourceConversionRate = 800
+	FinalResourceConversionRate = 800,
+	ActionName = "mine",
+	DefaultAmount = 50000
 })
 
 DefineResource("emeralds", {
 	Name = "Emeralds",
+	DefaultIncome = 100,
 	FinalResource = "copper",
 	FinalResourceConversionRate = 600,
-	Hidden = true
+	ActionName = "mine",
+	Hidden = true,
+	DefaultAmount = 50000
 })
 
 DefineResource("diamonds", {
 	Name = "Diamonds",
+	DefaultIncome = 100,
 	FinalResource = "copper",
-	FinalResourceConversionRate = 800
+	FinalResourceConversionRate = 800,
+	ActionName = "mine",
+	DefaultAmount = 50000
 })
 
 DefineResource("trade", {
 	Name = "Trade",
+	DefaultIncome = 100,
 	FinalResource = "copper",
-	FinalResourceConversionRate = 100
+	FinalResourceConversionRate = 100,
+	ActionName = "perform"
 })
 
 DefineResource("lumber", {
-	Name = "Lumber"
+	Name = "Lumber",
+	DefaultIncome = 100,
+	BasePrice = 100,
+	ActionName = "gather",
+	DefaultAmount = 400
 })
 
 DefineResource("stone", {
-	Name = "Stone"
+	Name = "Stone",
+	DefaultIncome = 100,
+	BasePrice = 100,
+	ActionName = "quarry",
+	DefaultAmount = 10000
 })
 
 DefineResource("limestone", {
 	Name = "Limestone",
+	DefaultIncome = 100,
 	FinalResource = "stone",
 	FinalResourceConversionRate = 200,
-	Hidden = true
+	ActionName = "quarry",
+	Hidden = true,
+	DefaultAmount = 10000
 })
 
 DefineResource("coal", {
-	Name = "Coal"
+	Name = "Coal",
+	DefaultIncome = 100,
+	BasePrice = 100,
+	ActionName = "mine",
+	DefaultAmount = 50000
+})
+
+DefineResource("oil", {
+	Name = "Oil",
+	DefaultIncome = 100,
+	ActionName = "drill",
+	DefaultAmount = 50000
 })
 
 DefineResource("jewelry", {
 	Name = "Jewelry",
-	LuxuryResource = true
+	LuxuryResource = true,
+	DefaultIncome = 100,
+	BasePrice = 200,
+	InputResource = "copper",
+	DemandElasticity = 200,
+	ActionName = "produce"
 })
 
 DefineResource("furniture", {
 	Name = "Furniture",
-	LuxuryResource = true
+	LuxuryResource = true,
+	DefaultIncome = 100,
+	BasePrice = 200,
+	InputResource = "lumber",
+	DemandElasticity = 125,
+	ActionName = "produce"
 })
 
 DefineResource("leather", {
 	Name = "Leather",
-	LuxuryResource = true
+	LuxuryResource = true,
+	DefaultIncome = 100,
+	BasePrice = 100,
+	ActionName = "gather"
 })
 
-SetResourceBasePrice("lumber", 100)
+DefineResource("research", {
+	Name = "Research",
+	DefaultIncome = 100,
+	ActionName = "produce"
+})
 
-SetResourceBasePrice("stone", 100)
+DefineResource("prestige", {
+	Name = "Prestige",
+	DefaultIncome = 100,
+	ActionName = "gain"
+})
 
-SetResourceBasePrice("coal", 100)
-
-SetResourceBasePrice("jewelry", 200)
-SetResourceInputResource("jewelry", "copper")
-SetResourceDemandElasticity("jewelry", 200)
-
-SetResourceBasePrice("furniture", 200)
-SetResourceInputResource("furniture", "lumber")
-SetResourceDemandElasticity("furniture", 125)
-
-SetResourceBasePrice("leather", 100)
+DefineResource("leadership", {
+	Name = "Leadership",
+	DefaultIncome = 100,
+	ActionName = "gain"
+})
