@@ -94,6 +94,7 @@ https://github.com/Andrettin/Wyrmsun
 - The track unit function now works properly when the unit changes its map layer.
 - The quest buttons now update properly when the available quests change while a town hall is selected.
 - The popup that appears when hovering over a resource icon now displays information about which resources convert to that one, and what is the resource's processing bonus.
+- Moved the position of the resource popups so that the cursor isn't on top of them.
 
 * Maps
 - The player now starts the Random Dungeon and Hall of Lyr maps with a small assortment of units besides the starting hero.
