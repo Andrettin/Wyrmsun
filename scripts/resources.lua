@@ -66,26 +66,90 @@ DefineDefaultResourceAmounts(
 
 DefineDefaultResourceMaxAmounts(-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1)
 
-DefineLuxuryResources("jewelry", "furniture", "leather")
+DefineResource("copper", {
+	Name = "Copper"
+})
 
-SetResourceFinalResource("gold", "copper")
-SetResourceFinalResourceConversionRate("gold", 400)
+DefineResource("silver", {
+	Name = "Silver",
+	FinalResource = "copper",
+	FinalResourceConversionRate = 200
+})
 
-SetResourceFinalResource("silver", "copper")
-SetResourceFinalResourceConversionRate("silver", 200)
+DefineResource("gold", {
+	Name = "Gold",
+	FinalResource = "copper",
+	FinalResourceConversionRate = 400
+})
 
-SetResourceFinalResource("iron", "copper")
-SetResourceFinalResourceConversionRate("iron", 100)
+DefineResource("iron", {
+	Name = "Iron",
+	FinalResource = "copper",
+	FinalResourceConversionRate = 100
+})
 
-SetResourceFinalResource("mithril", "copper")
-SetResourceFinalResourceConversionRate("mithril", 800)
+DefineResource("mithril", {
+	Name = "Mithril",
+	FinalResource = "copper",
+	FinalResourceConversionRate = 800
+})
+
+DefineResource("emeralds", {
+	Name = "Emeralds",
+	FinalResource = "copper",
+	FinalResourceConversionRate = 600,
+	Hidden = true
+})
+
+DefineResource("diamonds", {
+	Name = "Diamonds",
+	FinalResource = "copper",
+	FinalResourceConversionRate = 800
+})
+
+DefineResource("trade", {
+	Name = "Trade",
+	FinalResource = "copper",
+	FinalResourceConversionRate = 100
+})
+
+DefineResource("lumber", {
+	Name = "Lumber"
+})
+
+DefineResource("stone", {
+	Name = "Stone"
+})
+
+DefineResource("limestone", {
+	Name = "Limestone",
+	FinalResource = "stone",
+	FinalResourceConversionRate = 200,
+	Hidden = true
+})
+
+DefineResource("coal", {
+	Name = "Coal"
+})
+
+DefineResource("jewelry", {
+	Name = "Jewelry",
+	LuxuryResource = true
+})
+
+DefineResource("furniture", {
+	Name = "Furniture",
+	LuxuryResource = true
+})
+
+DefineResource("leather", {
+	Name = "Leather",
+	LuxuryResource = true
+})
 
 SetResourceBasePrice("lumber", 100)
 
 SetResourceBasePrice("stone", 100)
-
-SetResourceFinalResource("limestone", "stone")
-SetResourceFinalResourceConversionRate("limestone", 200)
 
 SetResourceBasePrice("coal", 100)
 
@@ -98,12 +162,3 @@ SetResourceInputResource("furniture", "lumber")
 SetResourceDemandElasticity("furniture", 125)
 
 SetResourceBasePrice("leather", 100)
-
-SetResourceFinalResource("diamonds", "copper")
-SetResourceFinalResourceConversionRate("diamonds", 800)
-
-SetResourceFinalResource("emeralds", "copper")
-SetResourceFinalResourceConversionRate("emeralds", 600)
-
-SetResourceFinalResource("trade", "copper")
-SetResourceFinalResourceConversionRate("trade", 100)

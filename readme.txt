@@ -93,6 +93,7 @@ https://github.com/Andrettin/Wyrmsun
 - The Idle Worker button now displays the icon of one of the worker units that are idle, rather than the icon of the player's civilization's worker unit type.
 - The track unit function now works properly when the unit changes its map layer.
 - The quest buttons now update properly when the available quests change while a town hall is selected.
+- The popup that appears when hovering over a resource icon now displays information about which resources convert to that one, and what is the resource's processing bonus.
 
 * Maps
 - The player now starts the Random Dungeon and Hall of Lyr maps with a small assortment of units besides the starting hero.
