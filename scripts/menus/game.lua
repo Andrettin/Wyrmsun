@@ -39,20 +39,17 @@ function RunGameMenu()
 	end)
 	menu:addFullButton("Help (~<F1~>)", "f1", 16, 40 + 34*1,
 		function() RunHelpMenu() end)
-	menu:addFullButton("~!Objectives", "o", 16, 40 + 34*2,
-		function() RunObjectivesMenu() end)
-		
-	local b = menu:addFullButton("Save (~<F11~>)", "f11", 16, 40 + 34*3,
+	local b = menu:addFullButton("Save (~<F11~>)", "f11", 16, 40 + 34*2,
 		function() RunSaveMenu() end
 	)
  
-	b = menu:addFullButton("Load (~<F12~>)", "f12", 16, 40 + 34*4,
+	b = menu:addFullButton("Load (~<F12~>)", "f12", 16, 40 + 34*3,
 		function() RunGameLoadGameMenu() end
 	)
 	
-	menu:addFullButton("~!End Mission", "e", 16, 40 + 34*5,
+	menu:addFullButton("~!End Mission", "e", 16, 40 + 34*4,
 		function() RunEndScenarioMenu() end)
-	menu:addFullButton("Return to Game (~<Esc~>)", "escape", 16, 40 + 34*6,
+	menu:addFullButton("Return to Game (~<Esc~>)", "escape", 16, 40 + 34*5,
 		function() menu:stop() end)
 
 	menu:run(false)

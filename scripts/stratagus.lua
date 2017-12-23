@@ -35,7 +35,7 @@ DebugPrint("Stratagus default config file loading ...\n")
 wyrmsun = {}
 
 wyrmsun.Name = "Wyrmsun"
-wyrmsun.Version = "3.2.0"
+wyrmsun.Version = "3.2.1"
 wyrmsun.Homepage = ""
 wyrmsun.Licence = "GPL 2.0"
 wyrmsun.Copyright = "Copyright (c) 2013-2017 by Andrettin"
@@ -1537,6 +1537,13 @@ function PersistencyUpdates()
 		Preference.HotkeySetup = wyr.preferences.HotkeySetup
 		SavePreferences()
 	end
+	
+	local last_version = tonumber(tostring(string.gsub(wyr.preferences.LastVersionPlayed, "%.", "")))
+	
+	if (wyr.preferences.LastVersionPlayed ~= wyrmsun.Version) then
+		wyr.preferences.LastVersionPlayed = wyrmsun.Version
+		SavePreferences()
+	end
 end
 
 function LoadHeroes()
@@ -1763,7 +1770,7 @@ local defaultPreferences = {
 	EnableMouseScrolling = true,    --  Enable/disable mouse scrolling.
 	FogOfWar = true,
 	FogOfWarOpacity = 128,
-	GameSpeed = 30,
+	GameSpeed = 60,
 	GameTranslation = "",
 	GrabMouse = false,              --  Enable/disable grabbing the mouse.
 	GroupKeys = "0123456789`",
