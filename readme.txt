@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 - 3.2.1
 -----------------------------------------------------------------------
 
+* Scenarios
+- Fixed issue which caused the Shorbear Hold side-quest to not function properly.
+
 * Units
 - Fixed issue which caused slimes to try to garrison a tower if the player selected an ungarrisoned tower and right-clicked the slime.
 
