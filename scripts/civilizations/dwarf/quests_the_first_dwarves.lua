@@ -326,3 +326,24 @@ DefineQuest("the-slaying-of-grafvitnir", {
 	Unfailable = true,
 	HeroesMustSurvive = {"modsognir", "durin"}
 })
+
+DefineQuest("dvalins-runes", {
+	Name = "Dvalin's Runes",
+	Icon = "icon-norse-runewriting",
+	Description = "The wise Dvalin seeks to devise a system of runes, and asks for our support in this endeavor. Dvalin claims that those runes are not only symbols of magic significance, but that they will also allow us to lay our thought down in fixed form for the future generations.",
+	PlayerColor = "red",
+	CompletionEffects = function(s)
+		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 2500)
+	end,
+	ObjectiveStrings = {"- Dvalin must survive"},
+	Rewards = "+2500 Copper",
+	Hint = "Select a Bastion and then click on the Research Runewriting button to research the technology required for this quest.",
+	Objectives = {
+		{
+			"objective-type", "research-upgrade",
+			"objective-string", "Research Runewriting",
+			"upgrade", "upgrade-dwarven-runewriting"
+		}
+	},
+	HeroesMustSurvive = {"dvalin"}
+})

@@ -432,7 +432,6 @@ DefineCivilization("dwarf", {
 		"male", "Dulthaus", -- from Battle for Wesnoth
 		"male", "Durahn", -- "Durâhn"; from Dyson Logos' The Tomb of Durâhn Oakenshield, which the author agreed to release under the GPLv2
 		"male", "Dursil", -- dwarf from Battle for Wesnoth: The Rise of Wesnoth
-		"male", "Dvalin", -- dwarf from Norse mythology; gave the knowledge of runes to the dwarves; one of the four who crafted the Necklace of the Brisings
 		"male", "Eggerich", -- dwarf from German sagas
 		"male", "Fal", -- dwarf from Norse mythology
 		"male", "Fid", -- dwarf from Norse mythology

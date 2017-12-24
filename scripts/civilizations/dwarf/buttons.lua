@@ -488,7 +488,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-norse-runewriting",
 	Action = "research", Value = "upgrade-dwarven-runewriting",
 	Allowed = "check-single-research",
 	Description = "+10% Research Speed for buildings. Allows Scrolls and Books to be sold at the Market.",
-	Key = "r", Hint = _("Research Dvalic ~!Runewriting"), Popup = "popup-research",
+	Key = "r", Hint = "Research ~!Runewriting", Popup = "popup-research",
 	ForUnit = {"unit-dwarven-stronghold"}
 } )
 

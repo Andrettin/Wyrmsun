@@ -95,23 +95,18 @@ DefineQuest("the-days-refuge", { -- based on the lay of Alvis from Norse mytholo
 	World = "nidavellir",
 	Civilization = "dwarf",
 	PlayerColor = "red",
-	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "RaceName") == "dwarf" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-stronghold") > 0 and GetPlayerData(trigger_player, "Allow", "upgrade-dwarven-runewriting") == "A" and CheckDependency(trigger_player, "upgrade-dwarven-runewriting")) then -- should be made to require Alvis in the future, when he is added as a hero and there are more dwarven quests in general
-			return true
-		end
-		return false
-	end,
+	-- should be made to require Alvis in the future, when he is added as a hero and there are more dwarven quests in general
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 1000)
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") + 1000)
 		SetPlayerData(trigger_player, "Resources", "stone", GetPlayerData(trigger_player, "Resources", "stone") + 500)
 	end,
 	Rewards = "+1000 Copper, +1000 Lumber, +500 Stone",
-	Hint = "Select a Bastion and then click on the Research Dvalic Runewriting button to research the technology required for this quest.",
+	Hint = "Select a Bastion and then click on the Research Runewriting button to research the technology required for this quest.",
 	Objectives = {
 		{
 			"objective-type", "research-upgrade",
-			"objective-string", "Research Dvalic Runewriting",
+			"objective-string", "Research Runewriting",
 			"upgrade", "upgrade-dwarven-runewriting"
 		}
 	},

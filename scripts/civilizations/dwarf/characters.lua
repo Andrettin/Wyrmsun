@@ -186,6 +186,18 @@ DefineCharacter("vindalf", {
 	Deities = {"thor", "tyr"}
 })
 
+DefineCharacter("dvalin", {
+	Name = "Dvalin",
+	Gender = "male",
+	Type = "unit-dwarven-witness",
+	Civilization = "dwarf",
+	Background = "In Norse mythology, Dvalin was a dwarf who taught knowledge of the runes to his fellow members of that kin.",
+	HairVariation = "gray-hair",
+	Trait = "upgrade-wise",
+	Deities = {"odin", "tyr"}
+	-- one of the four who crafted the Necklace of the Brisings (or was that another Dvalin?)
+})
+
 DefineCharacter("alvis", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 144-145; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 183-194.
 	Name = "Alvis",
 	Gender = "male",

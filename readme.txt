@@ -60,11 +60,18 @@ https://github.com/Andrettin/Wyrmsun
 - 3.2.1
 -----------------------------------------------------------------------
 
+* Heroes
+- Added Dvalin (Dwarven Witness) as a recruitable hero.
+
 * Scenarios
 - Fixed issue which caused the Shorbear Hold side-quest to not function properly.
+- Added the "Dvalin's Runes" side-quest, in which the player has to research Runewriting.
 
 * Units
 - Fixed issue which caused slimes to try to garrison a tower if the player selected an ungarrisoned tower and right-clicked the slime.
+
+* Upgrades
+- Changed the name of the dwarven writing upgrade from "Dvalic Runewriting" to "Runewriting".
 
 -----------------------------------------------------------------------
 - 3.2.0

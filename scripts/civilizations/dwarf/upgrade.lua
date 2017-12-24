@@ -130,7 +130,7 @@ DefineUpgrade("upgrade-dwarven-coinage", {
 })
 
 DefineUpgrade("upgrade-dwarven-runewriting", {
-	Name = "Dvalic Runewriting",
+	Name = "Runewriting",
 	Parent = "upgrade-writing",
 	Civilization = "dwarf",
 	Description = "The dwarven system of runewriting is said to have been invented by the dwarven scholar, Dvalin.\n\nEffect: +10% Research Speed for buildings. Allows Scrolls and Books to be sold at the Market.",
