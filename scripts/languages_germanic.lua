@@ -39,6 +39,7 @@ DefineLanguage("old-norse", {
 	Name = "Old Norse",
 	Family = "germanic",
 	NameTranslations = {
+		-- Gothic Personal Names
 		"Airmanareiks", "Jormunrek", -- "Jǫrmunrekr" is the Old Norse equivalent of the Gothic name "Airmanareiks; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18
 		-- Proto-Germanic Personal Names
 		"Aban", "Afi",
@@ -50,13 +51,15 @@ DefineLanguage("old-norse", {
 		"Karla", "Karl",
 		"Magan", "Magi",
 		"Moder", "Mothir",
-		"Skeldu", "Skjold",
+		"Skeldu", "Skjold", -- "Skjöldr"
 		"Thrahila", "Thrall",
 		-- Proto-Germanic Settlement Names
 		"Ansugardiz", "Asgard",
 		"Segiztuna", "Sigtun",
 		-- "Runic" (Northwest Germanic?) Personal Names
-		"Hlewagastiz", "Hliugast" -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.9.2b.
+		"Hlewagastiz", "Hliugast", -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.9.2b.
+		-- Old English Personal Names
+		"Scyld", "Skjold" -- "Skjöldr"
 	}
 })
 
@@ -232,7 +235,10 @@ DefineLanguage("old-english", {
 	Name = "Old English",
 	Family = "germanic",
 	NameTranslations = {
-		"Airmanareiks", "Eormenric" -- "Eormenrîc" is the Old English equivalent of the Gothic name "Airmanareiks"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18
+		-- Gothic
+		"Airmanareiks", "Eormenric", -- "Eormenrîc" is the Old English equivalent of the Gothic name "Airmanareiks"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18
+		-- Old Norse
+		"Skjold", "Scyld" -- "Skjöldr"
 	}
 })
 

@@ -510,6 +510,7 @@ DefineCharacter("rerir", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 DefineCharacter("skeldu", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 221.
 	-- ancestor of the Danish kings; from him spring the Skjoldungs
 	Name = "Skeldu", -- "Skjöldr" in the original; this is a Proto-Germanic rendering of the name
+	-- Danish king Scyld Scefing in Beowulf; Source: Stephen Mitchell, "Beowulf", 2017, p. 3.
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",

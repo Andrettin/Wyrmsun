@@ -59,6 +59,16 @@ DefineCharacter("froste", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	}
 })
 
+DefineCharacter("skialf", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 233-234.
+	Name = "Skialf",
+	Gender = "female",
+	Type = "unit-teuton-archer",
+	Civilization = "finnish", -- presumably
+	Father = "froste",
+	-- Skialf was married to Agne Yngling after he invaded Finland, killed her father and took her and her brother to Sweden
+	Quote = "\"How do ye like the high-souled maid,\nWho, with the grim Fate-goddess' aid,\nAvenged her sire? Made Swithiod's king\nThrough air in golden halter swing?\"\n- Thiodolf of Huine"
+})
+
 DefineCharacter("loge", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 233.
 	Name = "Loge",
 	Gender = "male",
