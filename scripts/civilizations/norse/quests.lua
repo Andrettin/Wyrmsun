@@ -115,7 +115,6 @@ DefineQuest("heorot", { -- Source: Stephen Mitchell, "Beowulf", 2017, p. 7.
 		SetUnitVariable(FindUnit("unit-teuton-town-hall", trigger_player, false, true, "leidre"), "Unique", "heorot")
 	end,
 	Rewards = "The Chieftain's Hall in Leidre will become the Heorot unique building, Lose 500 Lumber",
-	Hint = "Select a Bura, press the Build Structure button and then click on the Chieftain's Hall button to build the structure required for this quest. Place in on top of the Leidre Settlement Site.",
 	Objectives = {
 		{
 			"objective-type", "gather-resource",
