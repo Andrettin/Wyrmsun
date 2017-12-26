@@ -682,6 +682,13 @@ DefineLanguageWord("Friede", {
 	Uncountable = true
 })
 
+DefineLanguageWord("Fünf", {
+	Language = "high-german",
+	Type = "numeral",
+	Number = 5,
+	DerivesFrom = {"old-high-german", "numeral", "Fimf"} -- presumably
+})
+
 DefineLanguageWord("Fürst", {
 	Language = "high-german",
 	Type = "noun",
@@ -1380,6 +1387,12 @@ DefineLanguageWord("Marke", {
 	}
 })
 
+DefineLanguageWord("Mehr", {
+	Language = "high-german",
+	Type = "adverb",
+	Meanings = {"More"}
+})
+
 DefineLanguageWord("Meise", {
 	Language = "high-german",
 	Type = "noun",
@@ -1752,6 +1765,12 @@ DefineLanguageWord("Schütze", {
 	DerivesFrom = {"old-high-german", "noun", "Scuzzo"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 234.
 })
 
+DefineLanguageWord("Schwarz", {
+	Language = "high-german",
+	Type = "adjective",
+	Meanings = {"Black"}
+})
+
 DefineLanguageWord("Sechs", {
 	Language = "high-german",
 	Type = "numeral",
@@ -1768,6 +1787,12 @@ DefineLanguageWord("See", {
 		"singular", "genitive", "Sees",
 		"plural", "nominative", "Seen"
 	}
+})
+
+DefineLanguageWord("Sieben", {
+	Language = "high-german",
+	Type = "numeral",
+	Number = 7
 })
 
 DefineLanguageWord("Sieg", {
@@ -2100,6 +2125,12 @@ DefineLanguageWord("West", {
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Wild", {
+	Language = "high-german",
+	Type = "adjective",
+	Meanings = {"Wild"}
+})
+
 DefineLanguageWord("Wolf", {
 	Language = "high-german",
 	Type = "noun",
@@ -2200,37 +2231,6 @@ DefineLanguageWord("Zwölf", {
 	Language = "high-german",
 	Type = "numeral",
 	Number = 12
-})
-
-DefineLanguageWord("Schwarz", {
-	Language = "high-german",
-	Type = "adjective",
-	Meanings = {"Black"}
-})
-
-DefineLanguageWord("Wild", {
-	Language = "high-german",
-	Type = "adjective",
-	Meanings = {"Wild"}
-})
-
-DefineLanguageWord("Mehr", {
-	Language = "high-german",
-	Type = "adverb",
-	Meanings = {"More"}
-})
-
-DefineLanguageWord("Fünf", {
-	Language = "high-german",
-	Type = "numeral",
-	Number = 5,
-	DerivesFrom = {"old-high-german", "numeral", "Fimf"} -- presumably
-})
-
-DefineLanguageWord("Sieben", {
-	Language = "high-german",
-	Type = "numeral",
-	Number = 7
 })
 
 -- compounds
