@@ -99,6 +99,40 @@ DefineQuest("ottars-lineage", {
 	Hidden = true
 })
 
+DefineQuest("heorot", { -- Source: Stephen Mitchell, "Beowulf", 2017, p. 7.
+	Name = "Heorot",
+	Icon = "icon-germanic-town-hall",
+	Description = "A master builder has proposed to us to remake our hall in Leidre anew, replacing the existing structure with a magnificent hall. The construction of the new hall will, of course, necessitate a certain quantity of resources.",
+	PlayerColor = "red",
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Allow", "upgrade-teuton-masonry") ~= "R" and GetPlayerData(trigger_player, "HasSettlement", "leidre") and GetUniqueItemData("heorot", "CanDrop") and FindUnit("unit-teuton-town-hall", trigger_player, false, true, "leidre") ~= nil) then
+			return true
+		end
+		return false
+	end,
+	CompletionEffects = function(s)
+		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") - 500)
+		SetUnitVariable(FindUnit("unit-teuton-town-hall", trigger_player, false, true, "leidre"), "Unique", "heorot")
+	end,
+	Rewards = "The Chieftain's Hall in Leidre will become the Heorot unique building, Lose 500 Lumber",
+	Hint = "Select a Bura, press the Build Structure button and then click on the Chieftain's Hall button to build the structure required for this quest. Place in on top of the Leidre Settlement Site.",
+	Objectives = {
+		{
+			"objective-type", "gather-resource",
+			"objective-string", "Gather 500 Lumber",
+			"quantity", 500,
+			"resource", "lumber"
+		},
+		{
+			"objective-type", "have-resource",
+			"objective-string", "Have 500 Lumber",
+			"quantity", 500,
+			"resource", "lumber"
+		}
+	},
+	Competitive = true
+})
+
 DefineQuest("the-house-of-seven-fathers", { -- based on the "The Seventh Father of the House" Norwegian folktale; Source: Peter Christen Asbjørnsen and Jørgen Moe, "Norwegian Folktales", 1960, pp. 13-14.
 	Name = "The House of Seven Fathers",
 	Icon = "icon-teuton-farm", -- should be a norse farm

@@ -60,12 +60,16 @@ https://github.com/Andrettin/Wyrmsun
 - 3.2.1
 -----------------------------------------------------------------------
 
+* Building
+- Added the Heorot unique building.
+
 * Heroes
 - Added Dvalin (Dwarven Witness) as a recruitable hero.
 
 * Scenarios
 - Fixed issue which caused the Shorbear Hold side-quest to not function properly.
 - Added the "Dvalin's Runes" side-quest, in which the player has to research Runewriting.
+- Added the "Heorot" side-quest, the fulfillment of which transforms the player's Chieftain's Hall/Town Hall in Leidre into the unique building Heorot.
 
 * Units
 - Fixed issue which caused slimes to try to garrison a tower if the player selected an ungarrisoned tower and right-clicked the slime.

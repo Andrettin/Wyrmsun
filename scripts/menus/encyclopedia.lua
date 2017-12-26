@@ -521,8 +521,8 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 			tooltip_civilization = "(" ..  _(GetDeityData(unit_name, "Pantheon")) .. ")"
 		end
 	elseif (state == "unique_items") then
-		encyclopedia_icon = CIcon:Get(GetUnitTypeData(GetUniqueItemData(unit_name, "Type"), "Icon")).G
-		encyclopedia_icon_frame = CIcon:Get(GetUnitTypeData(GetUniqueItemData(unit_name, "Type"), "Icon")).Frame
+		encyclopedia_icon = CIcon:Get(GetUniqueItemData(unit_name, "Icon")).G
+		encyclopedia_icon_frame = CIcon:Get(GetUniqueItemData(unit_name, "Icon")).Frame
 		civilization = ""
 		faction = ""
 		tooltip_name = GetUniqueItemData(unit_name, "Name")
@@ -692,8 +692,8 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			tooltip_civilization = "(" ..  _(GetDeityData(unit_name, "Pantheon")) .. ")"
 		end
 	elseif (state == "unique_items") then
-		encyclopedia_icon = CIcon:Get(GetUnitTypeData(GetUniqueItemData(unit_name, "Type"), "Icon")).G
-		encyclopedia_icon_frame = CIcon:Get(GetUnitTypeData(GetUniqueItemData(unit_name, "Type"), "Icon")).Frame
+		encyclopedia_icon = CIcon:Get(GetUniqueItemData(unit_name, "Icon")).G
+		encyclopedia_icon_frame = CIcon:Get(GetUniqueItemData(unit_name, "Icon")).Frame
 		civilization = ""
 		faction = ""
 		tooltip_name = GetUniqueItemData(unit_name, "Name")

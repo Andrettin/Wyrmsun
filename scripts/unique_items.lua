@@ -374,6 +374,14 @@ DefineUniqueItem("heimdalls-stones", { -- Source: Nils-Axel Mörner, Bob G. Lind
 	Background = "Heimdall's Stones was a mystical site which during the Nordic Bronze Age was used to track the movements of the stars. Its name was given to it by modern archaeologists. \"Haimadala\" is a rendering of the deity's name in Proto-Germanic, which is closer to the language spoken in the period."
 } )
 
+DefineUniqueItem("heorot", { -- Source: Stephen Mitchell, "Beowulf", 2017, p. 7.
+	Name = "Heorot",
+	Type = "unit-teuton-town-hall",
+	Prefix = "upgrade-item-prefix-sturdy",
+	Suffix = "upgrade-item-suffix-of-plenty",
+	Background = "In the Anglo-Saxon poem \"Beowulf\", Heorot was the hall that the Danish king Hrothgar built."
+} )
+
 DefineUniqueItem("the-house-of-seven-fathers", { -- Source: Peter Christen Asbjørnsen and Jørgen Moe, "Norwegian Folktales", 1960, pp. 13-14.
 	Name = "The House of Seven Fathers",
 	Type = "unit-teuton-farm",

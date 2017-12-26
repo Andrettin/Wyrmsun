@@ -80,6 +80,7 @@ DefineCharacter("yrsa", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 		return false
 	end
 	-- captured during a viking expedition led by Adils Yngling (king of Sweden), and then taken to Sweden, where she was married to Adils and became queen; later captured by king Helge of Denmark during his invasion of Sweden and married to him
+	-- in Beowulf, she was named Yrse, and was the daughter of the Danish king Healfdene, and was married to Onela (apparently the same as Ali of the Upplands from the Heimskringla), a Swede who was a king; Source: Stephen Mitchell, "Beowulf", 2017, p. 5.
 })
 
 DefineCharacter("widukind", { -- Saxon leader who resisted Charlemagne's forces from 772 to 802; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 603.
