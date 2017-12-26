@@ -62,6 +62,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Building
 - Added the Heorot unique building.
+- Added Norse Chieftain's Hall (graphics by Jinn).
 
 * Heroes
 - Added Dvalin (Dwarven Witness) as a recruitable hero.

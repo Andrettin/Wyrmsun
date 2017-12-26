@@ -26,7 +26,7 @@
 --
 
 DefineCharacter("gudlog", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 237-238.
-	Name = "Gudlög",
+	Name = "Gudlog", -- "Gudlög"
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",

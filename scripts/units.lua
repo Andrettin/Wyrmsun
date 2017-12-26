@@ -48,6 +48,7 @@ Units = {
 	"upgrade-germanic-barbed-arrow",
 	"upgrade-greek-civilization",
 	"upgrade-norse-civilization",
+	"unit-norse-town-hall",
 	"upgrade-teuton-civilization",
 	"upgrade-faction-bavarian-tribe",
 	"upgrade-faction-saxon-tribe", "upgrade-faction-chauci-tribe", "upgrade-faction-cherusci-tribe", "upgrade-faction-varini-tribe",
@@ -269,6 +270,7 @@ function DefineUnitType(unit_type, data)
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-stronghold" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-latin-town-hall" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-norse-town-hall" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-town-hall" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-stronghold" }
 			}
@@ -285,6 +287,7 @@ function DefineUnitType(unit_type, data)
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-stronghold" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-latin-town-hall" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-norse-town-hall" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-town-hall" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-stronghold" },
 
@@ -4729,6 +4732,7 @@ Load("scripts/civilizations/gnome/units.lua")
 Load("scripts/civilizations/goblin/units.lua")
 Load("scripts/civilizations/goth/units.lua")
 Load("scripts/civilizations/kobold/units.lua")
+Load("scripts/civilizations/norse/units.lua")
 Load("scripts/civilizations/suebi/units.lua")
 Load("scripts/civilizations/teuton/units.lua")
 Load("scripts/civilizations/latin/units.lua")

@@ -3081,45 +3081,22 @@ DefineCivilization("norse", {
 	ParentCivilization = "teuton",
 	Adjective = "Norse",
 	Playable = false,
+	DefaultColor = "blue",
 	DevelopsFrom = {"germanic"},
 	CivilizationUpgrade = "upgrade-norse-civilization",
 	Description = "During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). While late antiquity saw intense migration of Germanic peoples, the Danes and Swedes remained largely in Scandinavia, well beyond the developments of the Mediterranean.",
+	UnitSounds = {
+		"selected", "basic-germanic-voices-selected-group",
+		"acknowledge", "basic-germanic-voices-acknowledge",
+--		"attack", "basic-germanic-voices-attack",
+		"ready", "basic-germanic-voices-ready",
+		"help", "basic-germanic-voices-help",
+		"help-town", "basic-germanic-voices-help-town"
+	},
 	PersonalNames = {
-		"female", "Alfhild", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 259.
-		"female", "Almveig", -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
-		"female", "Bera", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 235.
-		"female", "Hild", -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 223-224; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 257.
-		"male", "Alf", -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 222-223; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 142, 235-236.
-		"male", "Alfarin", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 259.
-		"male", "Alfgeir", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 260.
-		"male", "Ali", -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 245.
 		"male", "Biari", -- Old Swedish name; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
-		"male", "Brodd", -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
-		"male", "Dag", -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 231-233, 235, 259.
-		"male", "Dagrid", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 235.
-		"male", "Eymund", -- king of Holmgarth (i.e. Russia); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
-		"male", "Eystein", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 246, 257-258.
-		"male", "Fridfrode", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 226-227.
-		"male", "Fridleif", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 239.
-		"male", "Gandalf", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 260.
-		"male", "Gudlög", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 237-238.
-		"male", "Gudrod", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 254, 257, 259-260.
-		"male", "Half", -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
-		"male", "Halfdan", -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 221-223; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 239, 254-257, 259-262.
 		"male", "Hathuwulf", -- Hathuwulf is a chieftain whose name appeared in a runestone at Stentoften in Blekinge; Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 118.
-		"male", "Instein", -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 100-101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
-		"male", "Isulf", -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
-		"male", "Lytir", -- male name which means "lot-reader" or "speaker of truth"; Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 119.
-		"male", "Osulf", -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
-		"male", "Rathbard", -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 227.
-		"male", "Saefari", -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
-		"male", "Saekonung", -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101.
-		"male", "Sigtrygg", -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 257-258.
-		"male", "Sigurd", -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 227.
-		"male", "Skjold", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 258.
-		"male", "Svipdag", -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 236.
-		"male", "Ulf", -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 222, 224.
-		"male", "Vanland" -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 227-228.
+		"male", "Lytir" -- male name which means "lot-reader" or "speaker of truth"; Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 119.
 	},
 	SettlementNames = {
 		"Hals", -- Danish

@@ -82,6 +82,16 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-teuton-coinage",
 
 -- Units ---------------------------------------------------------
 
+DefineButton( { Pos = 1, Level = 0,
+	Action = "train-unit", Value = "unit-teuton-worker",
+	Key = "b", Hint = "Train ~!Bura", Popup = "popup-unit",
+	ForUnit = {
+		"unit-teuton-town-hall", "unit-teuton-stronghold",
+		"unit-latin-town-hall",
+		"unit-norse-town-hall"
+	}
+})
+
 DefineButton( { Pos = 7, Level = 0,
 	Action = "train-unit", Value = "unit-teuton-gunpowder-infantry",
 	Key = "p", Hint = "Train Gun~!powder Infantry", Popup = "popup-unit",
@@ -122,7 +132,7 @@ DefineButton( { Pos = 7, Level = 0,
 
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-germanic-town-hall",
 	Action = "build", Value = "unit-teuton-town-hall",
-	Key = "h", Hint = _("Build Chieftain's ~!Hall"), Popup = "popup-building",
+	Key = "h", Hint = "Build Chieftain's ~!Hall", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
@@ -132,22 +142,6 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-teuton-town-hall",
 	Key = "h", Hint = "Build Town ~!Hall", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
-
---[[
-DefineButton( { Pos = 1, Level = 1, Icon = "icon-teuton-town-hall",
-	Action = "build", Value = "unit-teuton-town-hall",
-	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-masonry", "upgrade-anglo-saxon-civilization"},
-	Key = "h", Hint = "Build Town ~!Hall", Popup = "popup-building",
-	ForUnit = {"unit-teuton-worker"}
-})
-
-DefineButton( { Pos = 1, Level = 1, Icon = "icon-teuton-town-hall",
-	Action = "build", Value = "unit-teuton-town-hall",
-	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-masonry", "upgrade-english-civilization"},
-	Key = "h", Hint = "Build Town ~!Hall", Popup = "popup-building",
-	ForUnit = {"unit-teuton-worker"}
-})
---]]
 
 DefineButton( { Pos = 2, Level = 1,
 	Action = "build", Value = "unit-teuton-farm",
@@ -529,7 +523,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-stronghold",
 	Action = "upgrade-to", Value = "unit-teuton-stronghold",
 	Allowed = "check-upgrade-to",
 	Key = "h", Hint = "Upgrade to Strong~!hold", Popup = "popup-building",
-	ForUnit = {"unit-teuton-town-hall", "unit-latin-town-hall"}
+	ForUnit = {"unit-teuton-town-hall", "unit-latin-town-hall", "unit-norse-town-hall"}
 } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-guard-tower",

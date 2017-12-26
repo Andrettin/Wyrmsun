@@ -48,8 +48,6 @@ DefineUnitType("unit-teuton-worker", {
 	NightSightRangeBonus = -1,
 	WeaponClasses = {"mace", "axe"},
 	BluntDamage = true,
-	ButtonKey = "b",
-	ButtonHint = "Train ~!Bura",
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese", "unit-carrots"},
 	CanGatherResources = {
 		{
@@ -979,7 +977,6 @@ DefineUnitType("unit-teuton-town-hall", {
 	Image = {"file", "teuton/buildings/town_hall.png", "size", {128, 128}},
 	Shadow = {"file", "teuton/buildings/town_hall_shadow.png", "size", {128, 128}},
 	Icon = "icon-teuton-town-hall",
-	Trains = {"unit-teuton-worker"},
 	AiDrops = {"unit-boots"},
 	DropSpells = {"spell-anglo-saxon-allegiance", "spell-frank-allegiance", "spell-goth-allegiance", "spell-suebi-allegiance", "spell-teuton-allegiance"},
 	Variations = {
@@ -1012,7 +1009,6 @@ DefineUnitType("unit-teuton-stronghold", {
 	Image = {"file", "teuton/buildings/stronghold.png", "size", {128, 128}},
 	Shadow = {"file", "teuton/buildings/stronghold_shadow.png", "size", {128, 128}},
 	Icon = "icon-teuton-stronghold",
-	Trains = {"unit-teuton-worker"},
 	RequirementsString = "Barracks and Masonry",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-hand-cannon", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-pilum"},
 	DropSpells = {"spell-anglo-saxon-allegiance", "spell-frank-allegiance", "spell-goth-allegiance", "spell-suebi-allegiance", "spell-teuton-allegiance"},

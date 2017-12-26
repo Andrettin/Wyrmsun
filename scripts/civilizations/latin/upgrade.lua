@@ -26,7 +26,7 @@
 --
 
 DefineUpgrade("upgrade-latin-civilization", {
-	Name = _("Latin Civilization"),
+	Name = "Latin Civilization",
 	Civilization = "latin",
 	Costs = {"time", 200}
 })

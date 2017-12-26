@@ -376,7 +376,7 @@ DefineUniqueItem("heimdalls-stones", { -- Source: Nils-Axel Mörner, Bob G. Lind
 
 DefineUniqueItem("heorot", { -- Source: Stephen Mitchell, "Beowulf", 2017, p. 7.
 	Name = "Heorot",
-	Type = "unit-teuton-town-hall",
+	Type = "unit-norse-town-hall",
 	Prefix = "upgrade-item-prefix-sturdy",
 	Suffix = "upgrade-item-suffix-of-plenty",
 	Background = "In the Anglo-Saxon poem \"Beowulf\", Heorot was the hall that the Danish king Hrothgar built."

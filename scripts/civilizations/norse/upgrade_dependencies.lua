@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016-2017 by Andrettin
+--      (c) Copyright 2017 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,44 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineIcon({
-	Name = "icon-norse-town-hall",
-	Size = {46, 38},
-	File = "norse/icons/town_hall.png"
-})
-
-DefineIcon({
-	Name = "icon-norse-runewriting",
-	Size = {46, 38},
-	File = "norse/icons/runewriting.png"
-})
-
-DefineIcon({
-	Name = "icon-heimdall",
-	Size = {46, 38},
-	File = "norse/icons/heimdall.png"
-})
-
-DefineIcon({
-	Name = "icon-hel",
-	Size = {46, 38},
-	File = "norse/icons/hel.png"
-})
-
-DefineIcon({
-	Name = "icon-odin",
-	Size = {46, 38},
-	File = "norse/icons/odin.png"
-})
-
-DefineIcon({
-	Name = "icon-thor",
-	Size = {46, 38},
-	File = "norse/icons/thor.png"
-})
-
-DefineIcon({
-	Name = "icon-tyr",
-	Size = {46, 38},
-	File = "norse/icons/tyr.png"
-})
+DefinePredependency("unit-norse-town-hall",
+	{"upgrade-norse-civilization"}
+)

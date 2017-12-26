@@ -28,3 +28,71 @@
 DefineUpgrade("upgrade-norse-civilization", {
 	Name = "Norse Civilization"
 })
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-germanic-town-hall"}, {"convert-to", "unit-norse-town-hall"}
+)
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-teuton-town-hall"}, {"convert-to", "unit-norse-town-hall"}
+)
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-germanic-farm"}, {"convert-to", "unit-teuton-farm"}
+)
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-germanic-barracks"}, {"convert-to", "unit-teuton-barracks"}
+)
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-germanic-carpenters-shop"}, {"convert-to", "unit-teuton-lumber-mill"}
+)
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-germanic-smithy"}, {"convert-to", "unit-teuton-smithy"}
+)
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-germanic-temple"}, {"convert-to", "unit-teuton-temple"}
+)
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-germanic-market"}, {"convert-to", "unit-teuton-market"}
+)
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-germanic-dock"}, {"convert-to", "unit-teuton-dock"}
+)
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-germanic-worker"}, {"convert-to", "unit-teuton-worker"}
+)
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-germanic-warrior"}, {"convert-to", "unit-teuton-swordsman"}
+)
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-germanic-veteran-warrior"}, {"convert-to", "unit-teuton-veteran-swordsman"}
+)
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-germanic-chieftain"}, {"convert-to", "unit-teuton-heroic-swordsman"}
+)
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-germanic-spearman"}, {"convert-to", "unit-teuton-spearman"}
+)
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-germanic-archer"}, {"convert-to", "unit-teuton-archer"}
+)
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-germanic-priest"}, {"convert-to", "unit-teuton-priest"}
+)
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-germanic-transport-ship"}, {"convert-to", "unit-teuton-kogge"}
+)

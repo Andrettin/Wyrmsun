@@ -426,6 +426,25 @@ DefineSpell("spell-goth-allegiance",
 	"sound-when-cast", "magic-holy"
 )
 
+DefineSpell("spell-norse-allegiance",
+	"showname", "Norse Allegiance",
+	"description", "Changes the unit's type into its Norse equivalent",
+	"manacost", 0,
+	"range", 0,
+	"target", "self",
+	"condition", {
+		"organic", "only",
+		"Building", "false",
+		"civilization-equivalent", "norse"
+	},
+	"action", {
+		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
+		{"polymorph", "civilization", "norse"}
+	},
+	"item-spell", "scroll",
+	"sound-when-cast", "magic-holy"
+)
+
 DefineSpell("spell-suebi-allegiance",
 	"showname", "Suebi Allegiance",
 	"description", "Changes the unit's type into its Suebi equivalent",
