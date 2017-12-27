@@ -74,6 +74,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Fixed issue which caused slimes to try to garrison a tower if the player selected an ungarrisoned tower and right-clicked the slime.
+- Added Norse Swordsman, Veteran Swordsman and Jarl (icons by Jinn).
 
 * Upgrades
 - Changed the name of the dwarven writing upgrade from "Dvalic Runewriting" to "Runewriting".

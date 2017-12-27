@@ -25,6 +25,16 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+-- Units ---------------------------------------------------------
+
+DefineButton( { Pos = 1, Level = 0,
+	Action = "train-unit", Value = "unit-norse-swordsman",
+	Key = "w", Hint = "Train S~!wordsman", Popup = "popup-unit",
+	ForUnit = {
+		"unit-teuton-barracks"
+	}
+})
+
 -- Buildings -----------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 1,
@@ -38,4 +48,85 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-teuton-town-hall",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-masonry"},
 	Key = "h", Hint = "Build Town ~!Hall", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
+})
+
+-- Deities ----------------------------------------------------------
+
+DefineButton( { Pos = 6, Level = 0, Icon = "icon-odin",
+	Action = "research", Value = "upgrade-deity-odin",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-norse-civilization"},
+	Key = "o", Hint = "Worship ~!Odin", Popup = "popup-research",
+	Description = "Choose Odin as your major deity. +2 Damage for Archers, enables Far Sight spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Thor major deity.",
+	ForUnit = {"unit-teuton-temple"}
+})
+
+DefineButton( { Pos = 7, Level = 0, Icon = "icon-thor",
+	Action = "research", Value = "upgrade-deity-thor",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-norse-civilization"},
+	Key = "t", Hint = "Worship ~!Thor", Popup = "popup-research",
+	Description = "Choose Thor as your major deity. +2 Damage for sword infantry, enables Shocking Grasp spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Odin major deity.",
+	ForUnit = {"unit-teuton-temple"}
+})
+
+DefineButton( { Pos = 10, Level = 2, Icon = "icon-odin",
+	Action = "learn-ability", Value = "upgrade-deity-odin",
+	Key = "o", Hint = "Worship ~!Odin", Popup = "popup-learn-ability",
+	Description = "Choose Odin as your hero's major deity. +2 Damage for Archers, enables Far Sight spell for Gudjans. Incompatible with the Christianity religion or with the Thor major deity.",
+	ForUnit = {
+		"unit-norse-swordsman", "unit-norse-veteran-swordsman", "unit-norse-heroic-swordsman"
+	}
+})
+
+DefineButton( { Pos = 11, Level = 2, Icon = "icon-thor",
+	Action = "learn-ability", Value = "upgrade-deity-thor",
+	Key = "t", Hint = "Worship ~!Thor", Popup = "popup-learn-ability",
+	Description = "Choose Thor as your hero's major deity. +2 Damage for sword infantry, enables Shocking Grasp spell for Gudjans. Incompatible with the Christianity religion or with the Odin major deity.",
+	ForUnit = {
+		"unit-norse-swordsman", "unit-norse-veteran-swordsman", "unit-norse-heroic-swordsman"
+	}
+})
+
+DefineButton( { Pos = 12, Level = 2, Icon = "icon-tyr",
+	Action = "learn-ability", Value = "upgrade-deity-tyr",
+	Key = "y", Hint = "Worship T~!yr", Popup = "popup-learn-ability",
+	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
+	Description = "Choose Tyr as a minor deity for your hero. +2 Damage for sword infantry and enables Inspire spell for Gudjans. Incompatible with the Heimdall and Hel minor deities.",
+	ForUnit = {
+		"unit-norse-swordsman", "unit-norse-veteran-swordsman", "unit-norse-heroic-swordsman",
+		"unit-gothic-horse-rider", "unit-gothic-horse-lord"
+	}
+})
+
+DefineButton( { Pos = 13, Level = 2, Icon = "icon-heimdall",
+	Action = "learn-ability", Value = "upgrade-deity-heimdall",
+	Key = "d", Hint = "Worship Heim~!dall", Popup = "popup-learn-ability",
+	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
+	Description = "Choose Heimdall as a minor deity for your hero. +1 Sight for Archers, enables Precision spell for Gudjans. Incompatible with the Hel and Tyr minor deities.",
+	ForUnit = {
+		"unit-norse-swordsman", "unit-norse-veteran-swordsman", "unit-norse-heroic-swordsman"
+	}
+})
+
+DefineButton( { Pos = 14, Level = 2, Icon = "icon-hel",
+	Action = "learn-ability", Value = "upgrade-deity-hel",
+	Key = "h", Hint = "Worship ~!Hel", Popup = "popup-learn-ability",
+	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
+	Description = "Choose Hel as a minor deity for your hero. +20 Mana and enables Wither spell for Gudjans. Incompatible with the Heimdall and Tyr minor deities.",
+	ForUnit = {
+		"unit-norse-swordsman", "unit-norse-veteran-swordsman", "unit-norse-heroic-swordsman"
+	}
+})
+
+-- Upgrades ---------------------------------------------------------
+
+DefineButton( { Pos = 1, Level = 2,
+	Action = "experience-upgrade-to", Value = "unit-norse-veteran-swordsman",
+	Key = "w", Hint = "Upgrade to Veteran S~!wordsman", Popup = "popup-unit",
+	ForUnit = {"unit-norse-swordsman"}
+})
+
+DefineButton( { Pos = 1, Level = 2,
+	Action = "experience-upgrade-to", Value = "unit-norse-heroic-swordsman",
+	Key = "j", Hint = "Upgrade to ~!Jarl", Popup = "popup-unit",
+	ForUnit = {"unit-norse-veteran-swordsman"}
 })

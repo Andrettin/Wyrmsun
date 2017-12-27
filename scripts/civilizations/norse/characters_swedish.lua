@@ -56,7 +56,7 @@ DefineCharacter("bera", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 DefineCharacter("hake", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 236-238.
 	Name = "Hake",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	-- described as being a murderous combatant
 	HistoricalTitles = {
@@ -69,7 +69,7 @@ DefineCharacter("hake", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 DefineCharacter("hagberd", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 236.
 	Name = "Hagberd",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse"
 	-- was king (of where?)
 	-- brother of Hake
@@ -78,7 +78,7 @@ DefineCharacter("hagberd", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 DefineCharacter("svipdag", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 236.
 	Name = "Svipdag",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Faction = "swede-tribe",
 	Trait = "upgrade-mighty", -- described as a powerful combatant
@@ -89,7 +89,7 @@ DefineCharacter("svipdag", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 DefineCharacter("geigad", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 236.
 	Name = "Geigad",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Trait = "upgrade-mighty", -- described as a powerful combatant
 	-- came to the assistance of king Hugleik of Sweden when he was attacked by Hake
@@ -100,7 +100,7 @@ DefineCharacter("starkod-the-old", { -- Source: Snorri Sturlson, "Heimskringla",
 	Name = "Starkod",
 	ExtraName = "the Old",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Trait = "upgrade-old",
 	-- was a champion of Hake's
@@ -118,7 +118,7 @@ DefineCharacter("ali-of-the-uplands", { -- Source: Snorri Sturlson, "Heimskringl
 	Name = "Ali",
 	ExtraName = "of the Uplands",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse"
 	-- fought against Adils Yngling, dying in battle
 	-- was king of the Uplands
@@ -127,7 +127,7 @@ DefineCharacter("ali-of-the-uplands", { -- Source: Snorri Sturlson, "Heimskringl
 DefineCharacter("yngvar", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 248, 250.
 	Name = "Yngvar",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse"
 	-- lived during the reign of Onund over Sweden
 	-- district-king of Fiadryndaland (in Sweden)
@@ -136,7 +136,7 @@ DefineCharacter("yngvar", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 DefineCharacter("alf-yngvarson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 248, 250.
 	Name = "Alf",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Father = "yngvar"
 })
@@ -144,7 +144,7 @@ DefineCharacter("alf-yngvarson", { -- Source: Snorri Sturlson, "Heimskringla", 1
 DefineCharacter("agnar-yngvarson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 248, 250.
 	Name = "Agnar",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Father = "yngvar"
 })
@@ -153,7 +153,7 @@ DefineCharacter("svipdag-the-blind", { -- Source: Snorri Sturlson, "Heimskringla
 	Name = "Svipdag",
 	ExtraName = "the Blind",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse"
 	-- presumably from Fiundaland, where Upsal is located
 	-- lived during the reign of Onund over Sweden
@@ -164,7 +164,7 @@ DefineCharacter("svipdag-the-blind", { -- Source: Snorri Sturlson, "Heimskringla
 DefineCharacter("gautvid", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 248, 253.
 	Name = "Gautvid",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Father = "svipdag-the-blind"
 	-- Ingiald Yngling's foster-brother
@@ -174,7 +174,7 @@ DefineCharacter("olaf-skygne", { -- Source: Snorri Sturlson, "Heimskringla", 184
 	Name = "Olaf",
 	ExtraName = "Skygne",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	-- king in Nerike
 })
@@ -191,7 +191,7 @@ DefineCharacter("alofa", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 DefineCharacter("gaut", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 248-249.
 	Name = "Gaut",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse"
 })
 
@@ -199,7 +199,7 @@ DefineCharacter("gautrek-the-mild", { -- Source: Snorri Sturlson, "Heimskringla"
 	Name = "Gautrek",
 	ExtraName = "the Mild",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Father = "gaut"
 })
@@ -207,7 +207,7 @@ DefineCharacter("gautrek-the-mild", { -- Source: Snorri Sturlson, "Heimskringla"
 DefineCharacter("algaut", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 248-249.
 	Name = "Algaut",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Faction = "geat-tribe",
 	Father = "gautrek-the-mild",
@@ -228,7 +228,7 @@ DefineCharacter("gauthild", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 DefineCharacter("spossniall", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 250.
 	Name = "Spossniall",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse"
 	-- lived during the reign of Ingiald the Evil-Adviser over Sweden
 	-- (district-)king of Nerike (in Sweden)
@@ -237,7 +237,7 @@ DefineCharacter("spossniall", { -- Source: Snorri Sturlson, "Heimskringla", 1844
 DefineCharacter("sighvat", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 250.
 	Name = "Sighvat",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse"
 	-- lived during the reign of Ingiald the Evil-Adviser over Sweden
 	-- (district-)king of Aattundaland (in Sweden)
@@ -246,7 +246,7 @@ DefineCharacter("sighvat", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 DefineCharacter("granmar", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 250-252.
 	Name = "Granmar",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse"
 	-- lived during the reign of Ingiald the Evil-Adviser over Sweden
 	-- (district-)king of Sondermanland (in Sweden)
@@ -256,7 +256,7 @@ DefineCharacter("granmar", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 DefineCharacter("hogne", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 252.
 	Name = "Hogne",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse"
 	-- lived during the reign of Ingiald the Evil-Adviser over Sweden
 	-- ruled over East Gotaland
@@ -265,7 +265,7 @@ DefineCharacter("hogne", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 DefineCharacter("hildur", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 252.
 	Name = "Hildur",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Father = "hogne"
 })
@@ -282,7 +282,7 @@ DefineCharacter("hilda", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 DefineCharacter("folkvid", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 251.
 	Name = "Folkvid",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	-- presumably from Fiundaland (where his father ruled), where Upsal is located
 	Father = "svipdag-the-blind"
@@ -291,7 +291,7 @@ DefineCharacter("folkvid", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 DefineCharacter("hylvid", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 251, 253.
 	Name = "Hylvid",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	-- presumably from Fiundaland (where his father ruled), where Upsal is located
 	Father = "svipdag-the-blind"
@@ -300,7 +300,7 @@ DefineCharacter("hylvid", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 DefineCharacter("ylfing", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 251.
 	Name = "Ylfing",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse"
 })
 
@@ -308,7 +308,7 @@ DefineCharacter("hiorvard-ylfing", { -- Source: Snorri Sturlson, "Heimskringla",
 	Name = "Hiorvard",
 	FamilyName = "Ylfing",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Father = "ylfing",
 	-- lived during the reign of Ingiald the Evil-Adviser over Sweden
@@ -330,7 +330,7 @@ DefineCharacter("hildigunna", { -- Source: Snorri Sturlson, "Heimskringla", 1844
 DefineCharacter("bove", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 253-254.
 	Name = "Bove",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	-- from West Gotaland
 	-- Gauthild sent her son to be fostered by Bove
@@ -340,7 +340,7 @@ DefineCharacter("savre-flettir", { -- Source: Snorri Sturlson, "Heimskringla", 1
 	Name = "Savre",
 	ExtraName = "Flettir",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	-- from West Gotaland
 	Father = "bove"
@@ -349,7 +349,7 @@ DefineCharacter("savre-flettir", { -- Source: Snorri Sturlson, "Heimskringla", 1
 DefineCharacter("arngrim", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102.
 	Name = "Arngrim", -- married to Eyfura
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse"
 	-- his sons were born in the island of Bolmsö off Smaland
 })
@@ -365,7 +365,7 @@ DefineCharacter("eyfura", { -- Source: Kevin Crossley-Holland, "The Norse Myths"
 DefineCharacter("hervard", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 225.
 	Name = "Hervard", -- berserk; born in the island of Bolmsö long before Ottar's time; also known as Hervarth
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Father = "arngrim",
 	Mother = "eyfura"
@@ -374,7 +374,7 @@ DefineCharacter("hervard", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 DefineCharacter("hjorvard", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 225, 227.
 	Name = "Hjorvard", -- berserk; born in the island of Bolmsö long before Ottar's time; also known as Hjorvarth
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Father = "arngrim",
 	Mother = "eyfura"
@@ -383,7 +383,7 @@ DefineCharacter("hjorvard", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 DefineCharacter("hrani", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 225.
 	Name = "Hrani", -- berserk; born in the island of Bolmsö long before Ottar's time
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Father = "arngrim",
 	Mother = "eyfura"
@@ -392,7 +392,7 @@ DefineCharacter("hrani", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 DefineCharacter("argantyr", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 225.
 	Name = "Argantyr", -- berserk; born in the island of Bolmsö long before Ottar's time
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Father = "arngrim",
 	Mother = "eyfura"
@@ -401,7 +401,7 @@ DefineCharacter("argantyr", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 DefineCharacter("bui", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 225.
 	Name = "Bui", -- berserk; born in the island of Bolmsö long before Ottar's time
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Father = "arngrim",
 	Mother = "eyfura"
@@ -410,7 +410,7 @@ DefineCharacter("bui", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1
 DefineCharacter("brami", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 225.
 	Name = "Brami", -- berserk; born in the island of Bolmsö long before Ottar's time
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Father = "arngrim",
 	Mother = "eyfura"
@@ -419,7 +419,7 @@ DefineCharacter("brami", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 DefineCharacter("barri", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 225.
 	Name = "Barri", -- berserk; born in the island of Bolmsö long before Ottar's time
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Father = "arngrim",
 	Mother = "eyfura"
@@ -428,7 +428,7 @@ DefineCharacter("barri", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 DefineCharacter("reifnir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 225.
 	Name = "Reifnir", -- berserk; born in the island of Bolmsö long before Ottar's time
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Father = "arngrim",
 	Mother = "eyfura"
@@ -437,7 +437,7 @@ DefineCharacter("reifnir", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 DefineCharacter("tind", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 225.
 	Name = "Tind", -- berserk; born in the island of Bolmsö long before Ottar's time
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Father = "arngrim",
 	Mother = "eyfura"
@@ -446,7 +446,7 @@ DefineCharacter("tind", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 DefineCharacter("tyrfing", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 225.
 	Name = "Tyrfing", -- berserk; born in the island of Bolmsö long before Ottar's time
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Father = "arngrim",
 	Mother = "eyfura"
@@ -455,7 +455,7 @@ DefineCharacter("tyrfing", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 DefineCharacter("hadding", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 225.
 	Name = "Hadding", -- berserk; born in the island of Bolmsö long before Ottar's time
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Father = "arngrim",
 	Mother = "eyfura"
@@ -464,7 +464,7 @@ DefineCharacter("hadding", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 DefineCharacter("hadding-ii", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 225.
 	Name = "Hadding", -- berserk; born in the island of Bolmsö long before Ottar's time
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Father = "arngrim",
 	Mother = "eyfura"
@@ -482,7 +482,7 @@ DefineCharacter("hvedna", { -- Source: Kevin Crossley-Holland, "The Norse Myths"
 DefineCharacter("haki", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 227.
 	Name = "Haki", -- the best of Hvedna's sons
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	-- his grandfather (if indeed the same as the previously-mentioned berserk) was born in the island of Bolmsö off Smaland
 	Mother = "hvedna"
@@ -492,7 +492,7 @@ DefineCharacter("hrorek-the-ring-giver", { -- Source: Kevin Crossley-Holland, "T
 	Name = "Hrorek", -- also known as Hrörek; was killed by his father-in-law Ivar
 	ExtraName = "the Ring Giver", -- or "Ring-Giver"
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse"
 	-- his father-in-law was king of Sweden
 })
@@ -500,7 +500,7 @@ DefineCharacter("hrorek-the-ring-giver", { -- Source: Kevin Crossley-Holland, "T
 DefineCharacter("ivar", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 227.
 	Name = "Ivar",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Faction = "sweden",
 	HistoricalTitles = {
@@ -523,7 +523,7 @@ DefineCharacter("harald-war-tooth", { -- Source: Kevin Crossley-Holland, "The No
 	Name = "Harald", -- had a warring career in Norway; died in Bravalla-field at the hands of his nephew, Sigurd Ring (son of Randver)
 	ExtraName = "War Tooth", -- or "Battle-Tooth"
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Faction = "sweden", -- his grandfather was king of Sweden
 	Father = "hrorek-the-ring-giver",

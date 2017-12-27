@@ -26,6 +26,24 @@
 --
 
 DefineIcon({
+	Name = "icon-norse-swordsman",
+	Size = {46, 38},
+	File = "norse/icons/swordsman.png"
+})
+
+DefineIcon({
+	Name = "icon-norse-veteran-swordsman",
+	Size = {46, 38},
+	File = "norse/icons/veteran_swordsman.png"
+})
+
+DefineIcon({
+	Name = "icon-norse-heroic-swordsman",
+	Size = {46, 38},
+	File = "norse/icons/heroic_swordsman.png"
+})
+
+DefineIcon({
 	Name = "icon-norse-town-hall",
 	Size = {46, 38},
 	File = "norse/icons/town_hall.png"

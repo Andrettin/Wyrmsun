@@ -29,7 +29,7 @@ DefineCharacter("snio-the-old", { -- Source: Snorri Sturlson, "Heimskringla", 18
 	Name = "Snio",
 	ExtraName = "the Old",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "finnish" -- presumably
 })
 
@@ -52,7 +52,7 @@ DefineCharacter("hulda", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 DefineCharacter("froste", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 233.
 	Name = "Froste",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "finnish", -- presumably
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "fenni-tribe" -- he was chieftain over the Finns, and the Fenni tribe seems like a fair enough representation of that
@@ -72,7 +72,7 @@ DefineCharacter("skialf", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 DefineCharacter("loge", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 233.
 	Name = "Loge",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "finnish", -- presumably
 	Father = "froste"
 })

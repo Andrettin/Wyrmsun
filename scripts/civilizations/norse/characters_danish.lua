@@ -29,7 +29,7 @@ DefineCharacter("fridfrode-skjoldung", { -- Source: Snorri Sturlson, "Heimskring
 	Name = "Fridfrode",
 	FamilyName = "Skjoldung", -- presumably
 	Gender = "male",
-	Type = "unit-teuton-heroic-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	-- ruled in Leidre
 	-- he was a friend of Fiölner's
@@ -43,7 +43,7 @@ DefineCharacter("beow-skjoldung", { -- Source: Stephen Mitchell, "Beowulf", 2017
 	Name = "Beow", -- name in Old English
 	FamilyName = "Skjoldung", -- Scylding
 	Gender = "male",
-	Type = "unit-teuton-heroic-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Faction = "dane-tribe",
 	-- Beow is Scyld's son and successor, and father of Healfdene in Beowulf; since Healfdene/Halfdan has different ancestry in the Heimskringla, here we put Beow as the father of Rig (the earliest person in Halfdan's genealogy in the Heimskringla) and as a descendant of Skjöldr/Scyld
@@ -56,7 +56,7 @@ DefineCharacter("rig-skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1
 	Name = "Rig",
 	FamilyName = "Skjoldung",
 	Gender = "male",
-	Type = "unit-teuton-heroic-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Faction = "dane-tribe",
 	Father = "beow-skjoldung", -- Beow is Scyld's son and successor, and father of Healfdene in Beowulf; since Healfdene/Halfdan has different ancestry in the Heimskringla, here we put Beow as the father of Rig (the earliest person in Halfdan's genealogy in the Heimskringla) and as a descendant of Skjöldr/Scyld
@@ -69,7 +69,7 @@ DefineCharacter("daup-skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Name = "Daup",
 	FamilyName = "Skjoldung",
 	Gender = "male",
-	Type = "unit-teuton-heroic-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Faction = "dane-tribe",
 	Father = "rig-skjoldung",
@@ -83,7 +83,7 @@ DefineCharacter("dan-mikillati-skjoldung", { -- Source: Snorri Sturlson, "Heimsk
 	ExtraName = "Mikillati",
 	FamilyName = "Skjoldung",
 	Gender = "male",
-	Type = "unit-teuton-heroic-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Father = "daup-skjoldung", -- presumably, since Dan Mikillati was Drott's brother, and she was a daughter of Daup
 	HistoricalTitles = {
@@ -106,7 +106,7 @@ DefineCharacter("halfdan-the-old-skjoldung", { -- Source: Henry Adams Bellows (t
 	ExtraName = "the Old",
 	FamilyName = "Skjoldung", -- the text gives Halfdan the Old both as "the foremost of the Skjoldungs", and as a progenitor of the Skjoldungs (along with the Skilfings, Othlings and Ynglings) himself
 	Gender = "male",
-	Type = "unit-teuton-heroic-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Faction = "dane-tribe",
 	HistoricalTitles = {
@@ -117,7 +117,7 @@ DefineCharacter("halfdan-the-old-skjoldung", { -- Source: Henry Adams Bellows (t
 DefineCharacter("authi", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 221-222.
 	Name = "Authi", -- son of Halfdan the Old, from whom the Othlings spring
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Faction = "dane-tribe", -- his father was king of Denmark
 	Father = "halfdan-the-old-skjoldung",
@@ -127,7 +127,7 @@ DefineCharacter("authi", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 DefineCharacter("ali", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Ali",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Faction = "dane-tribe",
 	-- his father was king of Denmark
@@ -139,7 +139,7 @@ DefineCharacter("dag-the-great", { -- Source: Henry Adams Bellows (transl.), "Th
 	Name = "Dag", -- ancestor of the Daglings; married to Thora
 	ExtraName = "the Great",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Faction = "dane-tribe", -- his father was king of Denmark
 	Father = "halfdan-the-old-skjoldung",
@@ -161,7 +161,7 @@ DefineCharacter("frathmar-dagling", { -- Source: Henry Adams Bellows (transl.), 
 	Name = "Frathmar",
 	FamilyName = "Dagling",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Faction = "dane-tribe", -- his ancestor was king of Denmark
 	Father = "dag-the-great",
@@ -172,7 +172,7 @@ DefineCharacter("gyrth-dagling", { -- Source: Henry Adams Bellows (transl.), "Th
 	Name = "Gyrth",
 	FamilyName = "Dagling",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Faction = "dane-tribe", -- his ancestor was king of Denmark
 	Father = "dag-the-great",
@@ -183,7 +183,7 @@ DefineCharacter("frekis-dagling", { -- Source: Henry Adams Bellows (transl.), "T
 	Name = "Frekis",
 	FamilyName = "Dagling",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Faction = "dane-tribe", -- his ancestor was king of Denmark
 	Father = "dag-the-great",
@@ -194,7 +194,7 @@ DefineCharacter("frekis-ii-dagling", { -- Source: Henry Adams Bellows (transl.),
 	Name = "Frekis",
 	FamilyName = "Dagling",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Faction = "dane-tribe", -- his ancestor was king of Denmark
 	Father = "dag-the-great",
@@ -205,7 +205,7 @@ DefineCharacter("am-dagling", { -- Source: Henry Adams Bellows (transl.), "The P
 	Name = "Am",
 	FamilyName = "Dagling",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Faction = "dane-tribe", -- his ancestor was king of Denmark
 	Father = "dag-the-great",
@@ -216,7 +216,7 @@ DefineCharacter("jofurmar-dagling", { -- Source: Henry Adams Bellows (transl.), 
 	Name = "Jofurmar",
 	FamilyName = "Dagling",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Faction = "dane-tribe", -- his ancestor was king of Denmark
 	Father = "dag-the-great",
@@ -228,7 +228,7 @@ DefineCharacter("alf-the-old-dagling", { -- Source: Henry Adams Bellows (transl.
 	ExtraName = "the Old",
 	FamilyName = "Dagling",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Faction = "dane-tribe", -- his ancestor was king of Denmark
 	Father = "dag-the-great",
@@ -251,7 +251,7 @@ DefineCharacter("frode-mikillati-skjoldung", { -- Source: Snorri Sturlson, "Heim
 	ExtraName = "Mikillati",
 	FamilyName = "Skjoldung",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Father = "dan-mikillati-skjoldung",
 	HistoricalTitles = {
@@ -265,7 +265,7 @@ DefineCharacter("halfdan-skjoldung", { -- Source: Snorri Sturlson, "Heimskringla
 	-- called Healfdene in Beowulf; Source: Stephen Mitchell, "Beowulf", 2017, p. 5.
 	FamilyName = "Skjoldung",
 	Gender = "male",
-	Type = "unit-teuton-heroic-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Father = "frode-mikillati-skjoldung", -- as given by the Heimskringla
 	-- in Beowulf, he was the son and successor of the Danish king Beow; Source: Stephen Mitchell, "Beowulf", 2017, p. 5.
@@ -279,7 +279,7 @@ DefineCharacter("fridleif-skjoldung", { -- Source: Snorri Sturlson, "Heimskringl
 	Name = "Fridleif",
 	FamilyName = "Skjoldung",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Father = "frode-mikillati-skjoldung",
 	HistoricalTitles = {
@@ -293,7 +293,7 @@ DefineCharacter("ole-the-bold-skjoldung", { -- Source: Snorri Sturlson, "Heimskr
 	ExtraName = "the Bold",
 	FamilyName = "Skjoldung",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Father = "fridleif-skjoldung",
 	HistoricalTitles = {
@@ -307,7 +307,7 @@ DefineCharacter("frode-the-bold-skjoldung", { -- Source: Snorri Sturlson, "Heims
 	ExtraName = "the Bold",
 	FamilyName = "Skjoldung",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	-- helped Egil Yngling to defeat Tunne's forces
 	HistoricalTitles = {
@@ -318,7 +318,7 @@ DefineCharacter("frode-the-bold-skjoldung", { -- Source: Snorri Sturlson, "Heims
 DefineCharacter("vatte", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 243.
 	Name = "Vätte",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Faction = "dane-tribe"
 	-- Vätte was an earl appointed by Frode the Bold to defend Denmark while he invaded Sweden
@@ -327,7 +327,7 @@ DefineCharacter("vatte", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 DefineCharacter("faste", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 243.
 	Name = "Faste",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Faction = "dane-tribe"
 	-- Faste was an earl appointed by Frode the Bold to defend Denmark while he invaded Sweden
@@ -337,7 +337,7 @@ DefineCharacter("heorogar-skjoldung", { -- Source: Stephen Mitchell, "Beowulf", 
 	Name = "Heorogar", -- name in Old English
 	FamilyName = "Skjoldung", -- Scylding
 	Gender = "male",
-	Type = "unit-teuton-heroic-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Faction = "dane-tribe",
 	Father = "halfdan-skjoldung", -- eldest son of the Danish king Healfdene
@@ -350,7 +350,7 @@ DefineCharacter("hrothgar-skjoldung", { -- Source: Stephen Mitchell, "Beowulf", 
 	Name = "Hrothgar", -- name in Old English
 	FamilyName = "Skjoldung", -- Scylding
 	Gender = "male",
-	Type = "unit-teuton-heroic-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Faction = "dane-tribe",
 	Father = "halfdan-skjoldung", -- second son of the Danish king Healfdene
@@ -365,7 +365,7 @@ DefineCharacter("helge-skjoldung", { -- Source: Snorri Sturlson, "Heimskringla",
 	ExtraName = "the Good",
 	FamilyName = "Skjoldung",
 	Gender = "male",
-	Type = "unit-teuton-heroic-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Faction = "dane-tribe",
 	Father = "halfdan-skjoldung", -- king Halfdan of Denmark was his father in the Heimskringla
@@ -380,7 +380,7 @@ DefineCharacter("rolf-krake-skjoldung", { -- Source: Snorri Sturlson, "Heimskrin
 	ExtraName = "Krake",
 	FamilyName = "Skjoldung",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Faction = "dane-tribe",
 	Father = "helge-skjoldung",

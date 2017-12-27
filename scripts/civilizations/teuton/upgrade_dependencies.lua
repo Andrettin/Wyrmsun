@@ -102,7 +102,7 @@ DefineDependency("unit-teuton-stables",
 )
 
 DefinePredependency("unit-teuton-swordsman",
-	{"upgrade-suebi-civilization", 0, "upgrade-frankish-civilization", 0}
+	{"upgrade-suebi-civilization", 0, "upgrade-frankish-civilization", 0, "upgrade-norse-civilization", 0}
 )
 
 DefinePredependency("unit-teuton-spearman",

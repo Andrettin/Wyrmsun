@@ -48,6 +48,7 @@ Units = {
 	"upgrade-germanic-barbed-arrow",
 	"upgrade-greek-civilization",
 	"upgrade-norse-civilization",
+	"unit-norse-swordsman", "unit-norse-veteran-swordsman", "unit-norse-heroic-swordsman",
 	"unit-norse-town-hall",
 	"upgrade-teuton-civilization",
 	"upgrade-faction-bavarian-tribe",

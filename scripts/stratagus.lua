@@ -603,6 +603,7 @@ function StandardTriggers()
 							GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-teuton-swordsman"
 							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-suebi-swordsman"
 							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-frank-swordsman"
+							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-norse-swordsman"
 						)
 					) then
 						return true
@@ -611,7 +612,7 @@ function StandardTriggers()
 					end
 				end,
 				function()
-					Tip("Swordsman", "The Swordsman is the melee infantry unit of the Anglo-Saxon, Frankish, Suebi and Teuton civilizations, replacing the Erala.")
+					Tip("Swordsman", "The Swordsman is the melee infantry unit of the Anglo-Saxon, Frankish, Norse, Suebi and Teuton civilizations, replacing the Erala.")
 					return false
 				end
 			)

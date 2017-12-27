@@ -28,7 +28,7 @@
 DefineCharacter("gudlog", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 237-238.
 	Name = "Gudlog", -- "Gudlög"
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	-- was captured in Denmark by Jorund and Eric Yngling, and then was killed by them
 	Quote = "\"By the fierce East-kings' cruel pride,\nGudlog must on the wild horse rider -\nThe wildest horse you e'er did see:\n'Tis Segur's steed - the gallows tree.\"\n- Eyvind Skaldaspiller",
@@ -40,7 +40,7 @@ DefineCharacter("gudlog", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 DefineCharacter("gylog", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 238.
 	Name = "Gylög",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Father = "gudlog",
 	HistoricalTitles = {
@@ -51,7 +51,7 @@ DefineCharacter("gylog", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 DefineCharacter("godgest", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 245.
 	Name = "Godgest",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Faction = "halogaland",
 	-- Adils Yngling sent Godgest the horse Raven as a gift
@@ -64,7 +64,7 @@ DefineCharacter("hogne-of-niardo", { -- Source: Snorri Sturlson, "Heimskringla",
 	Name = "Hogne",
 	ExtraName = "of Niardö",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	-- from Niardö, an island in "North Drontheim" (North Trondheim)
 })
@@ -72,7 +72,7 @@ DefineCharacter("hogne-of-niardo", { -- Source: Snorri Sturlson, "Heimskringla",
 DefineCharacter("solve", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 246.
 	Name = "Solve",
 	Gender = "male",
-	Type = "unit-teuton-swordsman", -- sea-king
+	Type = "unit-norse-heroic-swordsman", -- sea-king
 	Civilization = "norse",
 	-- from Niardö, an island in "North Drontheim" (North Trondheim)
 	Father = "hogne-of-niardo",
@@ -87,7 +87,7 @@ DefineCharacter("solve-the-old", { -- Source: Snorri Sturlson, "Heimskringla", 1
 	Name = "Solve",
 	ExtraName = "the Old",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	-- settled the Soloer Islands
 })
@@ -96,7 +96,7 @@ DefineCharacter("solve-solvesson", { -- Source: Snorri Sturlson, "Heimskringla",
 	Name = "Solve",
 	ExtraName = "Solvesson",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	-- from the Soloer Islands
 	Father = "solve-the-old"
@@ -106,7 +106,7 @@ DefineCharacter("halfdan-guldtand", { -- Source: Snorri Sturlson, "Heimskringla"
 	Name = "Halfdan",
 	ExtraName = "Guldtand",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	-- from the Soloer Islands
 	Father = "solve-solvesson"
@@ -126,7 +126,7 @@ DefineCharacter("eystein-the-severe", { -- Source: Snorri Sturlson, "Heimskringl
 	Name = "Eystein",
 	ExtraName = "the Severe",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse"
 	-- king of the Upland people (in Norway, so presumably Oppland)
 })
@@ -145,7 +145,7 @@ DefineCharacter("eric-agnarson", { -- Source: Snorri Sturlson, "Heimskringla", 1
 	Name = "Eric",
 	ExtraName = "Agnarson", -- to differentiate him
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	-- king in Westfold
 	Father = "agnar-sigtrygson"
@@ -164,7 +164,7 @@ DefineCharacter("hilde", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 DefineCharacter("alfarin", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 259.
 	Name = "Alfarin",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	-- king of Alfheim (the land between Glommen and Gotha rivers)
 })
@@ -182,7 +182,7 @@ DefineCharacter("harald-redbeard", { -- Source: Snorri Sturlson, "Heimskringla",
 	Name = "Harald",
 	ExtraName = "Redbeard",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	-- ruled over Agder
 	HairVariation = "red-hair" -- presumably, given his nickname
@@ -202,7 +202,7 @@ DefineCharacter("aasa", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 DefineCharacter("gyrder", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 259-260.
 	Name = "Gyrder",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Father = "harald-redbeard"
 })
@@ -210,7 +210,7 @@ DefineCharacter("gyrder", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 DefineCharacter("alfgeir", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 260.
 	Name = "Alfgeir",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse"
 	-- ruled over (at least) Vingulmark
 })
@@ -219,7 +219,7 @@ DefineCharacter("gandalf-of-vingulmark", { -- Source: Snorri Sturlson, "Heimskri
 	Name = "Gandalf",
 	ExtraName = "of Vingulmark", -- to differentiate him
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	-- ruled over Vingulmark
 	Father = "alfgeir"
@@ -230,16 +230,15 @@ DefineCharacter("eystein-the-great", { -- Source: Snorri Sturlson, "Heimskringla
 	Name = "Eystein",
 	ExtraName = "the Great",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse"
 	-- was king of Oppland
 })
 
 DefineCharacter("hogne-eysteinson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 261.
 	Name = "Hogne",
-	ExtraName = "Eysteinson", -- to differentiate him
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	-- his father was king of Oppland
 	Father = "eystein-the-great"
@@ -250,7 +249,7 @@ DefineCharacter("thiodolf-of-huine", { -- Source: Snorri Sturlson, "Heimskringla
 	Name = "Thiodolf",
 	ExtraName = "of Huine",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-teuton-priest",
 	Civilization = "norse",
 	-- composed the Ynglingatal for Rognvald Mountain-High Yngling of Vestfold
 	AuthoredWorks = {"upgrade-work-ynglingatal"}
@@ -260,7 +259,7 @@ DefineCharacter("svan-the-red", { -- Source: Kevin Crossley-Holland, "The Norse 
 	Name = "Svan",
 	ExtraName = "the Red",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse"
 	-- one of his descendants was a warrior of the king of Horthaland
 })
@@ -268,7 +267,7 @@ DefineCharacter("svan-the-red", { -- Source: Kevin Crossley-Holland, "The Norse 
 DefineCharacter("saefari", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Saefari",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	-- one of his descendants was a warrior of the king of Horthaland
 	Father = "svan-the-red"
@@ -277,7 +276,7 @@ DefineCharacter("saefari", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 DefineCharacter("ulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Ulf",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	-- his grandson was a warrior of the king of Horthaland
 	Father = "saefari"
@@ -287,7 +286,7 @@ DefineCharacter("alf-the-old", { -- Source: Kevin Crossley-Holland, "The Norse M
 	Name = "Alf",
 	ExtraName = "the Old",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	-- his son was a warrior of the king of Horthaland
 	Father = "ulf"
@@ -296,7 +295,7 @@ DefineCharacter("alf-the-old", { -- Source: Kevin Crossley-Holland, "The Norse M
 DefineCharacter("instein", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 100-101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Instein", -- one of the warriors of King Half of Horthaland
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Faction = "hordaland",
 	Father = "alf-the-old"
@@ -305,7 +304,7 @@ DefineCharacter("instein", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 DefineCharacter("saekonung", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101.
 	Name = "Saekonung",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse"
 	-- a kinsman was a warrior of the king of Horthaland
 })
@@ -321,7 +320,7 @@ DefineCharacter("svava", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 DefineCharacter("klypp", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
 	Name = "Klypp",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse"
 	-- a kinsman was a warrior of the king of Horthaland
 })
@@ -330,7 +329,7 @@ DefineCharacter("ketil-hortha-kari", { -- Source: Kevin Crossley-Holland, "The N
 	Name = "Ketil", -- married to Hildigun; the semi-mythical Ketil Hortha-Kari, ancestor of many Icelandic families
 	ExtraName = "Hortha-Kari",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	-- a kinsman was a warrior of the king of Horthaland
 	Father = "klypp"
@@ -349,7 +348,7 @@ DefineCharacter("hildigun", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 DefineCharacter("frodi", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Frodi",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse"
 	-- a kinsman was a warrior of the king of Horthaland
 })
@@ -379,7 +378,7 @@ DefineCharacter("hledis", { -- Source: Kevin Crossley-Holland, "The Norse Myths"
 DefineCharacter("ottar", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 100-101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Ottar", -- in the Norse myths, human lover of the goddess Freya; made a bet with Argantyr for who had the better lineage
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Faction = "hordaland", -- his father was a warrior of the king of Horthaland
 	Father = "instein",
@@ -389,7 +388,7 @@ DefineCharacter("ottar", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 DefineCharacter("nokkvi", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Nokkvi",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse"
 })
 
@@ -404,14 +403,14 @@ DefineCharacter("nanna", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 DefineCharacter("skekil", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Skekil", -- also known as Skekkil
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse"
 })
 
 DefineCharacter("olmod", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Olmod", -- married to Skurhold; also known as Olmoth
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Father = "ketil-hortha-kari"
 })
@@ -427,7 +426,7 @@ DefineCharacter("skurhold", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 DefineCharacter("isulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Isulf", -- also known as Isolf
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Father = "olmod",
 	Mother = "skurhold" -- presumably, since she was the wife of his father
@@ -436,7 +435,7 @@ DefineCharacter("isulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 DefineCharacter("osulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Osulf", -- also known as Osolf
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Father = "olmod",
 	Mother = "skurhold" -- presumably, since she was the wife of his father
@@ -452,7 +451,7 @@ DefineCharacter("hild", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 DefineCharacter("half", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Half", -- also known as Hoalf; king of Horthaland (the Halfsrekkar); Instein was one of his warriors
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Faction = "hordaland",
 	Mother = "hild"
@@ -461,7 +460,7 @@ DefineCharacter("half", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 DefineCharacter("swerre", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 115.
 	Name = "Swerre", -- king (presumably) of Norway
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Faction = "norway",
 	Date = 1177, -- reign began
@@ -475,7 +474,7 @@ DefineCharacter("magnus-the-saint", { -- Source: Snorri Sturlson, "Heimskringla"
 	Name = "Magnus", -- Earl (presumably) of Orkney, his sister was married to Koll; in his youth carried the dishes to the royal table
 	ExtraName = "the Saint",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Faction = "orkney",
 	DeathDate = 1129, -- presumably, since this is the date Kala was made Earl of Orkney
@@ -487,7 +486,7 @@ DefineCharacter("magnus-the-saint", { -- Source: Snorri Sturlson, "Heimskringla"
 DefineCharacter("koll", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 125.
 	Name = "Koll", -- husband of the sister of Earl Magnus the Saint
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Faction = "orkney" -- his son was Earl of Orkney
 })
@@ -495,7 +494,7 @@ DefineCharacter("koll", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 DefineCharacter("kala", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 125.
 	Name = "Kala", -- Earl of Orkney; was made earl under the name of Earl Rognvald
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Faction = "orkney",
 	Date = 1129, -- was made Earl of Orkney
@@ -508,7 +507,7 @@ DefineCharacter("kala", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 DefineCharacter("hakon", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
 	Name = "Hakon", -- his son was King of Norway, so presumably he was too
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Faction = "norway",
 	HistoricalTitles = {
@@ -519,7 +518,7 @@ DefineCharacter("hakon", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 DefineCharacter("hakon-hakonson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
 	Name = "Hakon", -- King of Norway
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Faction = "norway",
 	Date = 1261, -- annexed the Norse settlements in Greenland to Norway in 1261 AD

@@ -72,7 +72,7 @@ Load("scripts/civilizations/welsh/characters.lua")
 DefineCharacter("ganglati", { -- Hel's manservant in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 33-34.
 	Name = "Ganglati",
 	Gender = "male",
-	Type = "unit-teuton-heroic-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Faction = "hel",
 	Date = -3000,

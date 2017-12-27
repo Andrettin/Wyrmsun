@@ -70,15 +70,27 @@ DefineModifier("upgrade-norse-civilization",
 )
 
 DefineModifier("upgrade-norse-civilization",
-	{"apply-to", "unit-germanic-warrior"}, {"convert-to", "unit-teuton-swordsman"}
+	{"apply-to", "unit-germanic-warrior"}, {"convert-to", "unit-norse-swordsman"}
 )
 
 DefineModifier("upgrade-norse-civilization",
-	{"apply-to", "unit-germanic-veteran-warrior"}, {"convert-to", "unit-teuton-veteran-swordsman"}
+	{"apply-to", "unit-teuton-swordsman"}, {"convert-to", "unit-norse-swordsman"}
 )
 
 DefineModifier("upgrade-norse-civilization",
-	{"apply-to", "unit-germanic-chieftain"}, {"convert-to", "unit-teuton-heroic-swordsman"}
+	{"apply-to", "unit-germanic-veteran-warrior"}, {"convert-to", "unit-norse-veteran-swordsman"}
+)
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-teuton-veteran-swordsman"}, {"convert-to", "unit-norse-veteran-swordsman"}
+)
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-germanic-chieftain"}, {"convert-to", "unit-norse-heroic-swordsman"}
+)
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-teuton-heroic-swordsman"}, {"convert-to", "unit-norse-heroic-swordsman"}
 )
 
 DefineModifier("upgrade-norse-civilization",
@@ -91,6 +103,14 @@ DefineModifier("upgrade-norse-civilization",
 
 DefineModifier("upgrade-norse-civilization",
 	{"apply-to", "unit-germanic-priest"}, {"convert-to", "unit-teuton-priest"}
+)
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-gothic-horse-rider"}, {"convert-to", "unit-teuton-ritter"}
+)
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-gothic-horse-lord"}, {"convert-to", "unit-teuton-knight-lord"}
 )
 
 DefineModifier("upgrade-norse-civilization",

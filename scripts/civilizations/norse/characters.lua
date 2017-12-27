@@ -28,7 +28,7 @@
 DefineCharacter("eymund", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Eymund", -- king of Holmgarth (i.e. Russia); described as "the strongest of men"
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse", -- accurate?
 	Trait = "upgrade-strong"
 })
@@ -45,14 +45,14 @@ DefineCharacter("almveig", { -- Source: Henry Adams Bellows (transl.), "The Poet
 DefineCharacter("sigtrygg", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Sigtrygg", -- Halfdan the Old slew him with an ice-cold sword
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse"
 })
 
 DefineCharacter("gudrod", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 254.
 	Name = "Gudrod",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Faction = "scania",
 	-- lived during the reign of Ingiald the Evil-Adviser over Sweden
@@ -65,7 +65,7 @@ DefineCharacter("gudrod", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 DefineCharacter("halfdan", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 254.
 	Name = "Halfdan",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Faction = "scania"
 	-- Gudrod's brother
@@ -75,7 +75,7 @@ DefineCharacter("ivar-vidfadme", { -- Source: Snorri Sturlson, "Heimskringla", 1
 	Name = "Ivar",
 	ExtraName = "Vidfadme",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Faction = "scania",
 	Father = "halfdan",
@@ -88,7 +88,7 @@ DefineCharacter("ivar-vidfadme", { -- Source: Snorri Sturlson, "Heimskringla", 1
 DefineCharacter("sigtryg", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 257-258.
 	Name = "Sigtryg",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	-- was king in the "Vend district" (where?)
 })
@@ -97,7 +97,7 @@ DefineCharacter("agnar-sigtrygson", { -- Source: Snorri Sturlson, "Heimskringla"
 	Name = "Agnar",
 	ExtraName = "Sigtrygson", -- to differentiate him from the other Agnar
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	-- his father was king in the "Vend district" (where?)
 	Father = "sigtryg"
@@ -106,7 +106,7 @@ DefineCharacter("agnar-sigtrygson", { -- Source: Snorri Sturlson, "Heimskringla"
 DefineCharacter("skiold", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 258.
 	Name = "Skiold",
 	Gender = "male",
-	Type = "unit-teuton-swordsman", -- was a great warlock
+	Type = "unit-norse-heroic-swordsman", -- was a great warlock
 	Civilization = "norse",
 	-- lived in Varna (where?)
 	-- Eystein Yngling, son of Halfdan Huitbein, went with ships and raided Varna
@@ -117,7 +117,7 @@ DefineCharacter("dag-of-westmor", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Name = "Dag",
 	ExtraName = "of Westmor", -- to differentiate him
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	-- was king of Westmor (where?)
 })
@@ -135,7 +135,7 @@ DefineCharacter("hlif", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 DefineCharacter("rathbard", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 227.
 	Name = "Rathbard", -- king
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse" -- correct?
 	-- from Russia
 })
@@ -143,7 +143,7 @@ DefineCharacter("rathbard", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 DefineCharacter("randver", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 227.
 	Name = "Randver",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse", -- correct?
 	-- his father was a king from Russia
 	Father = "rathbard",
@@ -154,7 +154,7 @@ DefineCharacter("sigurd-ring", { -- Source: Henry Adams Bellows (transl.), "The 
 	Name = "Sigurd",
 	ExtraName = "Ring",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse", -- correct?
 	-- his grandfather was a king from Russia
 	Father = "randver"
@@ -163,7 +163,7 @@ DefineCharacter("sigurd-ring", { -- Source: Henry Adams Bellows (transl.), "The 
 DefineCharacter("skelfir", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 221.
 	Name = "Skelfir", -- a mythical king in "the East", from whom the Skilfings spring
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse"
 })
 
@@ -172,14 +172,14 @@ DefineCharacter("helgi-hundingsbane-ylfing", { -- Source: Henry Adams Bellows (t
 	ExtraName = "Hundingsbane",
 	FamilyName = "Ylfing",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse"
 })
 
 DefineCharacter("gautrek", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Gautrek",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse"
 	-- his son was king of Gautland
 })
@@ -188,7 +188,7 @@ DefineCharacter("hrolf-the-old", { -- Source: Henry Adams Bellows (transl.), "Th
 	Name = "Hrolf", -- King Hrolf Gautreksson of Gautland, also known as Hrolf the Old
 	ExtraName = "the Old",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Faction = "gautland",
 	Father = "gautrek",
@@ -201,7 +201,7 @@ DefineCharacter("gunnar-the-bulwark", { -- Source: Henry Adams Bellows (transl.)
 	Name = "Gunnar",
 	ExtraName = "the Bulwark",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Faction = "gautland" -- was in Hrolf the Old's household
 })
@@ -209,7 +209,7 @@ DefineCharacter("gunnar-the-bulwark", { -- Source: Henry Adams Bellows (transl.)
 DefineCharacter("thorkel", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Thorkel",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Faction = "gautland" -- his son was in Hrolf the Old's household
 })
@@ -218,7 +218,7 @@ DefineCharacter("grim-the-hardy", { -- Source: Henry Adams Bellows (transl.), "T
 	Name = "Grim",
 	ExtraName = "the Hardy",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Faction = "gautland", -- was in Hrolf the Old's household
 	Father = "thorkel"
@@ -228,7 +228,7 @@ DefineCharacter("thorir-the-iron-shield", { -- Source: Henry Adams Bellows (tran
 	Name = "Thorir",
 	ExtraName = "the Iron-Shield",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Faction = "gautland" -- was in Hrolf the Old's household
 })
@@ -237,7 +237,7 @@ DefineCharacter("ulf-the-gaper", { -- Source: Henry Adams Bellows (transl.), "Th
 	Name = "Ulf",
 	ExtraName = "the Gaper",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Faction = "gautland" -- was in Hrolf the Old's household
 })
@@ -245,7 +245,7 @@ DefineCharacter("ulf-the-gaper", { -- Source: Henry Adams Bellows (transl.), "Th
 DefineCharacter("brodd", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Brodd",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Faction = "gautland" -- was in Hrolf the Old's household
 })
@@ -253,7 +253,7 @@ DefineCharacter("brodd", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 DefineCharacter("horvir", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Hörvir",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Faction = "gautland" -- was in Hrolf the Old's household
 })
@@ -262,7 +262,7 @@ DefineCharacter("eric-red", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Name = "Eric",
 	ExtraName = "Red",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Date = 986 -- in the Spring of 986 Eric Red migrated from Iceland to Greenland with Heriulf Bardson, settling in Brattalid (in Ericsfiord)
 })
@@ -271,7 +271,7 @@ DefineCharacter("heriulf-bardson", { -- Source: Snorri Sturlson, "Heimskringla",
 	Name = "Heriulf",
 	ExtraName = "Bardson",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Date = 986 -- in the Spring of 986 migrated from Iceland to Greenland with Eric Red, settling in Heriulfsness
 })
@@ -279,7 +279,7 @@ DefineCharacter("heriulf-bardson", { -- Source: Snorri Sturlson, "Heimskringla",
 DefineCharacter("biorne", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 161.
 	Name = "Biorne",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Father = "heriulf-bardson",
 	Date = 986 -- was in Norway when his father Heriulf Bardson migrated from Iceland to Greenland in the Spring of 986
@@ -288,7 +288,7 @@ DefineCharacter("biorne", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 DefineCharacter("leif", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 162-163.
 	Name = "Leif",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Father = "eric-red",
 	Date = 1000 -- went forth from Greenland c. 1000 with a ship he bought from Biorne to find the lands Biorne had seen; Leif's crew had 35 men
@@ -298,7 +298,7 @@ DefineCharacter("leif", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 DefineCharacter("thorwald", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 163.
 	Name = "Thorwald",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Father = "eric-red", -- presumably, since he was Leif's brother
 	Date = 1002 -- went forth from Greenland in 1002 with Leif's ship to Vinland
@@ -368,7 +368,7 @@ DefineCharacter("askil", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 DefineCharacter("andreas", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
 	Name = "Andreas",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-norse-swordsman",
 	Civilization = "norse", -- presumably
 	-- his son was Bishop of Greenland
 })
