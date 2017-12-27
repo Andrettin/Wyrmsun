@@ -1794,6 +1794,9 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and HasCivilizationAvailableFactions("goth") and (TechLevel[i + 1] == "Agrarian (Iron)" or TechLevel[i + 1] == "Civilized (Iron)")) then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "goth")
 			end
+			if (GetPlayerData(i, "AiEnabled") and (GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and HasCivilizationAvailableFactions("norse") and (TechLevel[i + 1] == "Agrarian (Iron)" or TechLevel[i + 1] == "Civilized (Iron)" or TechLevel[i + 1] == "Civilized (Gunpowder)")) then -- allow germanic humans in elven forests since there is no elven civilization yet
+				table.insert(possible_civilizations, "norse")
+			end
 			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and HasCivilizationAvailableFactions("suebi") and (TechLevel[i + 1] == "Agrarian (Iron)" or TechLevel[i + 1] == "Civilized (Iron)")) then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "suebi")
 			end
@@ -6043,13 +6046,29 @@ function GenerateBuilding(building_type, player)
 end
 
 function GetTerrainCivilizations(terrain)
+	local terrain_civilizations = {}
 	if (terrain == "dry-mud" or terrain == "cave-floor") then
-		return {"dwarf", "gnome", "goblin", "kobold", "ettin"}
-	elseif (terrain == "dirt" or terrain == "grass" or terrain == "snow") then
-		return {"anglo-saxon", "english", "frankish", "germanic", "goth", "suebi", "teuton"}
+		table.insert(terrain_civilizations, "dwarf")
+		table.insert(terrain_civilizations, "gnome")
+		table.insert(terrain_civilizations, "goblin")
+		table.insert(terrain_civilizations, "kobold")
+		table.insert(terrain_civilizations, "ettin")
+	end
+	if (terrain == "dirt" or terrain == "grass" or terrain == "snow") then
+		table.insert(terrain_civilizations, "anglo-saxon")
+		table.insert(terrain_civilizations, "english")
+		table.insert(terrain_civilizations, "frankish")
+		table.insert(terrain_civilizations, "germanic")
+		table.insert(terrain_civilizations, "goth")
+		table.insert(terrain_civilizations, "norse")
+		table.insert(terrain_civilizations, "suebi")
+		table.insert(terrain_civilizations, "teuton")
+	end
+	if (terrain == "dirt" or terrain == "grass") then
+		table.insert(terrain_civilizations, "latin")
 	end
 
-	return {}
+	return terrain_civilizations
 end
 
 function CreatePlayerForFaction(faction, init_ai)

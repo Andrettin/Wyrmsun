@@ -28,7 +28,7 @@ function RunResultsMenu()
 			background = GetBackground("ui/backgrounds/yale.png")
 		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "kobold") then
 			background = GetBackground("ui/backgrounds/yale.png")
-		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "anglo-saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "english" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "goth" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
+		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "anglo-saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "english" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "goth" or GetPlayerData(GetThisPlayer(), "RaceName") == "norse" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
 			background = GetBackground("ui/backgrounds/wyrm.png")
 		else
 			background = GetBackground("ui/backgrounds/wyrm.png")

@@ -64,6 +64,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added the Heorot unique building.
 - Added Norse Chieftain's Hall (graphics by Jinn).
 
+* Civilizations
+- The Norse now appear as a NPC civilization in custom maps.
+
 * Heroes
 - Added Dvalin (Dwarven Witness) as a recruitable hero.
 
