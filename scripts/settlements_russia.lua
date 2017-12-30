@@ -124,7 +124,7 @@ DefineSettlement("rostov-on-don", {
 	},
 	HistoricalBuildings = {
 		-3000, -2800, "town-hall",
-		-3000, -2800, "barracks",
+--		-3000, -2800, "barracks", -- we don't want them to produce units and attack
 		-3000, -2800, "farm"
 	},
 	HistoricalUnits = {

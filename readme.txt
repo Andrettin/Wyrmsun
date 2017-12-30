@@ -60,12 +60,15 @@ https://github.com/Andrettin/Wyrmsun
 - 3.2.1
 -----------------------------------------------------------------------
 
+* AI
+- Fixed issue which could cause the game to freeze if the AI reached the end of its build order.
+
 * Building
 - Added the Heorot unique building.
 - Added Norse Chieftain's Hall (graphics by Jinn).
 
 * Civilizations
-- The Norse now appear as a NPC civilization in custom maps.
+- The Norse now appear as a NPC civilization in custom maps if the appropriate tech level has been chosen.
 
 * Heroes
 - Added Dvalin (Dwarven Witness) as a recruitable hero.

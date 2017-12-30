@@ -45,6 +45,63 @@ DefineCivilization("neutral", {
 		"dwarf/ui/buttonpanel.png", -256, -200,
 		"dwarf/ui/infopanel.png", 0, -200
 	},
+	ForceTemplates = {
+		{
+			"force-type", "land-force",
+			"priority", 120,
+			"unit-class", "infantry", 4,
+			"unit-class", "cavalry", 2,
+			"unit-class", "gunpowder-infantry", 3,
+			"unit-class", "priest", 1
+		},
+		{
+			"force-type", "land-force",
+			"priority", 120,
+			"unit-class", "infantry", 4,
+			"unit-class", "cavalry", 2,
+			"unit-class", "shooter", 3,
+			"unit-class", "priest", 1
+		},
+		{
+			"force-type", "land-force",
+			"priority", 115,
+			"unit-class", "infantry", 6,
+			"unit-class", "gunpowder-infantry", 3,
+			"unit-class", "priest", 1
+		},
+		{
+			"force-type", "land-force",
+			"priority", 115,
+			"unit-class", "infantry", 6,
+			"unit-class", "shooter", 3,
+			"unit-class", "priest", 1
+		},
+		{
+			"force-type", "land-force",
+			"priority", 115,
+			"unit-class", "infantry", 4,
+			"unit-class", "cavalry", 2,
+			"unit-class", "gunpowder-infantry", 3
+		},
+		{
+			"force-type", "land-force",
+			"priority", 115,
+			"unit-class", "infantry", 4,
+			"unit-class", "cavalry", 2,
+			"unit-class", "shooter", 3
+		},
+		{
+			"force-type", "land-force",
+			"priority", 110,
+			"unit-class", "infantry", 6,
+			"unit-class", "shooter", 3
+		},
+		{
+			"force-type", "land-force",
+			"priority", 100,
+			"unit-class", "infantry", 3
+		}
+	},
 	ShipNames = {
 		"Naglfar", -- ship of the giants in Norse mythology, whose helmsman is Hrym; made of dead men's nails; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 21.
 		"Ringhorn", -- Balder's ship in Norse mythology in which he was cremanted; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 155, 249.

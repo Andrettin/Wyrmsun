@@ -135,7 +135,29 @@ DefineFaction("shorbear-clan", {
 	FactionUpgrade = "upgrade-faction-shorbear-clan",
 	Icon = "icon-flag-green-hammer-on-blue",
 	DevelopsFrom = {"brising-clan"},
-	Description = "Contrary to many of the other dwarven clans, who prefer to live in mountains, the Shorbears have made their homes in the hills. They are known as excellent crafters of tools."
+	Description = "Contrary to many of the other dwarven clans, who prefer to live in mountains, the Shorbears make their homes in the hills. They are known as excellent crafters of tools.",
+	ForceTemplates = {
+		{ -- from Battle for Wesnoth: The Sceptre of Fire (Hills of the Shorbear Clan)
+			"force-type", "land-force",
+			"priority", 120,
+			"unit-class", "infantry", 2,
+			"unit-class", "spearman", 1,
+			"unit-class", "gunpowder-infantry", 1
+		},
+		{
+			"force-type", "land-force",
+			"priority", 110,
+			"unit-class", "infantry", 2,
+			"unit-class", "spearman", 1,
+			"unit-class", "shooter", 1
+		},
+		{
+			"force-type", "land-force",
+			"priority", 100,
+			"unit-class", "infantry", 2,
+			"unit-class", "spearman", 1
+		}
+	}
 })
 
 DefineFaction("whitesteel-clan", {
