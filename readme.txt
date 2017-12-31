@@ -60,9 +60,6 @@ https://github.com/Andrettin/Wyrmsun
 - 3.2.1
 -----------------------------------------------------------------------
 
-* AI
-- Fixed issue which could cause the game to freeze if the AI reached the end of its build order.
-
 * Building
 - Added the Heorot unique building.
 - Added Norse Chieftain's Hall (graphics by Jinn).

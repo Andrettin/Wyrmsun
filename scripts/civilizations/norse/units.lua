@@ -434,20 +434,6 @@ DefineUnitType("unit-norse-town-hall", {
 	Icon = "icon-norse-town-hall",
 	AiDrops = {"unit-boots"},
 	DropSpells = {"spell-norse-allegiance"},
-	Variations = {
-		{
-			"variation-id", "town-hall",
-			"upgrade-forbidden", "upgrade-teuton-masonry"
-		},
-		{
-			"variation-id", "town-hall",
-			"file", "teuton/buildings/town_hall.png",
-			"shadow-file", "teuton/buildings/town_hall_shadow.png",
-			"icon", "icon-teuton-town-hall",
-			"type-name", "Town Hall",
-			"upgrade-required", "upgrade-teuton-masonry"
-		}
-	},
 	Sounds = {
 --		"help", "basic-teuton-voices-help-town"
 	}

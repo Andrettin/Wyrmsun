@@ -43,13 +43,6 @@ DefineButton( { Pos = 1, Level = 1,
 	ForUnit = {"unit-teuton-worker"}
 })
 
-DefineButton( { Pos = 1, Level = 1, Icon = "icon-teuton-town-hall",
-	Action = "build", Value = "unit-norse-town-hall",
-	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-masonry"},
-	Key = "h", Hint = "Build Town ~!Hall", Popup = "popup-building",
-	ForUnit = {"unit-teuton-worker"}
-})
-
 -- Deities ----------------------------------------------------------
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-odin",
