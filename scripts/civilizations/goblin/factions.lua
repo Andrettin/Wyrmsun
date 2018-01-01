@@ -64,7 +64,19 @@ DefineFaction("khag-tribe", {
 	Civilization = "goblin",
 	Type = "tribe",
 	Colors = {"brown"},
-	FactionUpgrade = "upgrade-faction-khag-tribe"
+	FactionUpgrade = "upgrade-faction-khag-tribe",
+	ForceTemplates = {
+		{ -- from Battle for Wesnoth: Liberty (The Raid)
+			"force-type", "land-force",
+			"priority", 110,
+			"unit-class", "cavalry", 4
+		},
+		{
+			"force-type", "land-force",
+			"priority", 100,
+			"unit-class", "infantry", 4
+		}
+	}
 })
 
 DefineFaction("lggi-tribe", {
@@ -72,7 +84,21 @@ DefineFaction("lggi-tribe", {
 	Civilization = "goblin",
 	Type = "tribe",
 	Colors = {"violet"},
-	FactionUpgrade = "upgrade-faction-lggi-tribe"
+	FactionUpgrade = "upgrade-faction-lggi-tribe",
+	ForceTemplates = {
+		{ -- from Battle for Wesnoth: Descent into Darkness (Peaceful Valley)
+			"force-type", "land-force",
+			"priority", 110,
+			"unit-class", "cavalry", 1,
+			"unit-class", "spearman", 1
+		},
+		{
+			"force-type", "land-force",
+			"priority", 100,
+			"unit-class", "infantry", 1,
+			"unit-class", "spearman", 1
+		}
+	}
 })
 
 DefineFaction("mabom-tribe", { -- invented by Jesse Crider

@@ -239,6 +239,51 @@ DefineFaction("kal-kartha", {
 	HistoricalUpgrades = {
 		400, "upgrade-dwarven-runewriting", true, -- polities require writing
 		534, "upgrade-iron-tipped-wood-plow", true -- Mushroom Farms existent in Knalga (so possibly also in other polities)
+	},
+	ForceTemplates = {
+		{ -- from Battle for Wesnoth: The Hammer of Thursagan (The Siege of Kal Kartha)
+			"force-type", "land-force",
+			"priority", 120,
+			"unit-class", "infantry", 2,
+			"unit-class", "gunpowder-infantry", 1
+		},
+		{ -- from Battle for Wesnoth: The Hammer of Thursagan (The Court of Karrag)
+			"force-type", "land-force",
+			"priority", 120,
+			"unit-class", "infantry", 2, -- a fighter and an ulfserker
+			"unit-class", "gunpowder-infantry", 1
+		},
+		{ -- from Battle for Wesnoth: The Hammer of Thursagan (The Underlevels)
+			"force-type", "land-force",
+			"priority", 120,
+			"unit-class", "infantry", 1,
+			"unit-class", "spearman", 1,
+			"unit-class", "gunpowder-infantry", 1
+		},
+		{
+			"force-type", "land-force",
+			"priority", 110,
+			"unit-class", "infantry", 2,
+			"unit-class", "shooter", 1
+		},
+		{
+			"force-type", "land-force",
+			"priority", 110,
+			"unit-class", "infantry", 1,
+			"unit-class", "spearman", 1,
+			"unit-class", "shooter", 1
+		},
+		{
+			"force-type", "land-force",
+			"priority", 100,
+			"unit-class", "infantry", 2
+		},
+		{
+			"force-type", "land-force",
+			"priority", 100,
+			"unit-class", "infantry", 1,
+			"unit-class", "spearman", 1
+		}
 	}
 })
 

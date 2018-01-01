@@ -35,7 +35,7 @@ DefineUpgrade("upgrade-faction-khag-tribe", {
 
 DefineUpgrade("upgrade-faction-lggi-tribe", {
 	Name = "Lggi Tribe",
-	EffectsString = "+2 Armor and +1 Evasion for Impalers"
+	EffectsString = "+1 Armor and +1 Evasion for Impalers"
 })
 
 DefineUpgrade("upgrade-faction-prideblade-tribe", {
@@ -134,7 +134,7 @@ DefineModifier("upgrade-faction-khag-tribe",
 )
 
 DefineModifier("upgrade-faction-lggi-tribe",
-	{"Armor", 2},
+	{"Armor", 1},
 	{"Evasion", 1},
 	{"Points", 10},
 	{"apply-to", "unit-goblin-spearman"}

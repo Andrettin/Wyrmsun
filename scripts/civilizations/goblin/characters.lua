@@ -25,6 +25,106 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineCharacter("tshar-lggi", { -- from Battle for Wesnoth: Descent into Darkness (Peaceful Valley)
+	Name = "T'shar",
+	FamilyName = "Lggi",
+	Gender = "male",
+	Type = "unit-goblin-warlord", -- Goblin Knight
+	Civilization = "goblin",
+	Faction = "lggi-tribe",
+	Deities = {"gathaarl", "hel"},
+	HistoricalTitles = {
+--		"head-of-state", 0, 0, "lggi-tribe"
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "lggi-tribe") then
+			return true
+		end
+		return false
+	end
+	-- leader of the goblin village in the Peaceful Valley
+})
+
+DefineCharacter("fal-khag", { -- from Battle for Wesnoth: Liberty (The Raid)
+	Name = "Fal",
+	FamilyName = "Khag",
+	Gender = "male",
+	Type = "unit-goblin-warlord", -- Goblin Pillager
+	Civilization = "goblin",
+	Faction = "khag-tribe",
+	Deities = {"gathaarl", "hel"},
+	HistoricalTitles = {
+--		"head-of-state", 0, 0, "khag-tribe"
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "khag-tribe") then
+			return true
+		end
+		return false
+	end
+	-- raids villages
+})
+
+DefineCharacter("gatrakh", { -- from Battle for Wesnoth: Liberty (The Raid)
+	Name = "Gatrakh",
+	Gender = "male",
+	Type = "unit-goblin-warlord", -- Goblin Pillager
+	Civilization = "goblin",
+	Faction = "khag-tribe",
+	Deities = {"gathaarl", "hel"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "khag-tribe") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("thurg", { -- from Battle for Wesnoth: Liberty (The Raid)
+	Name = "Thurg",
+	Gender = "male",
+	Type = "unit-goblin-warlord", -- Goblin Pillager
+	Civilization = "goblin",
+	Faction = "khag-tribe",
+	Deities = {"gathaarl", "hel"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "khag-tribe") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("krung", { -- from Battle for Wesnoth: Liberty (The Raid)
+	Name = "Krung",
+	Gender = "male",
+	Type = "unit-goblin-warlord", -- Goblin Pillager
+	Civilization = "goblin",
+	Faction = "khag-tribe",
+	Deities = {"gathaarl", "hel"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "khag-tribe") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("gorokh", { -- from Battle for Wesnoth: Liberty (The Raid)
+	Name = "Gorokh",
+	Gender = "male",
+	Type = "unit-goblin-barbarian", -- Wolf Rider
+	Civilization = "goblin",
+	Faction = "khag-tribe",
+	Deities = {"gathaarl", "hel"},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "khag-tribe") then
+			return true
+		end
+		return false
+	end
+})
+
 DefineCharacter("agniss-tenebris", { -- invented by Jesse Crider
 	Name = "Agniss",
 	FamilyName = "Tenebris",

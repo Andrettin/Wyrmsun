@@ -285,9 +285,9 @@ DefineSettlement("kiel", {
 		-1600, 1815, "farm",
 		-1600, 1815, "farm",
 		-1600, 1815, "farm",
-		-1600, 1815, "barracks",
-		-1600, 1815, "smithy",
---		-1600, 1815, "lumber-mill", -- remove to prevent them from changing faction
+--		-1600, 1815, "barracks", -- remove to prevent them from training troops
+--		-1600, 1815, "smithy", -- remove to prevent them from changing faction
+		-1600, 1815, "lumber-mill",
 		-1600, 1815, "watch-tower",
 		-1600, 1815, "watch-tower"
 	},

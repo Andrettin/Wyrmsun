@@ -1531,15 +1531,11 @@ DefineCivilization("goblin", {
 		"male", "Belragor", -- invented by Jesse Crider
 		"male", "Dran",
 		"male", "Erdog",
-		"male", "Fal", -- Fal Khag, goblin from Battle for Wesnoth
 		"male", "Gashnok",
-		"male", "Gatrakh",
-		"male", "Gorokh",
 		"male", "Grogor-Tuk",
 		"male", "Hrugt",
 		"male", "Kardur",
 		"male", "Kartrog",
-		"male", "Krung",
 		"male", "Myrtos", -- invented by Jesse Crider
 		"male", "Odrun",
 		"male", "Orhtib",
@@ -1548,8 +1544,6 @@ DefineCivilization("goblin", {
 		"male", "Pruol",
 		"male", "Sbrak",
 		"male", "Sdrul",
-		"male", "Thurg",
-		"male", "T'shar", -- T'shar Lggi, goblin from Battle for Wesnoth
 		"male", "Uhmit",
 		"male", "Urdum",
 		"male", "Utrub",
