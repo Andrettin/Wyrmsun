@@ -638,6 +638,7 @@ DefineLanguageWord("Field", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Field"},
+	DerivesFrom = {"old-english", "noun", "Feld"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 124.
 	Gender = "neuter"
 })
 
@@ -1402,7 +1403,15 @@ DefineLanguageWord("Park", {
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Pen", {
+DefineLanguageWord("Pen", { -- in the sense of a place for animals
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Pen"},
+	Gender = "neuter",
+	DerivesFrom = {"old-english", "noun", "Penn"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 115.
+})
+
+DefineLanguageWord("Pen", { -- in the sense of the writing instrument
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Pen"},
@@ -1860,6 +1869,13 @@ DefineLanguageWord("Street", {
 	Type = "noun",
 	Meanings = {"Street"},
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Sty", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Sty"},
+	DerivesFrom = {"old-english", "noun", "Stig"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
 })
 
 DefineLanguageWord("Suf", {

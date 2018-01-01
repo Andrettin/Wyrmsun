@@ -250,6 +250,13 @@ DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/bord
 	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"}
 })
 
+DefineLanguageWord("Bós", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 135.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Cowshed"}, -- source gives the German "Kuhstall"
+	DerivesFrom = {"proto-germanic", "noun", "Bansa"}
+})
+
 DefineLanguageWord("Bred", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 135-136.
 	Language = "old-english",
 	Type = "noun",
@@ -623,6 +630,22 @@ DefineLanguageWord("Eþþa", { -- Also given as "Oþþe", are Eþþa and Oþþe 
 	Meanings = {"Or"}
 })
 
+DefineLanguageWord("Falod", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 123.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Sheepfold", "Ox Barn"}, -- source gives the German "Schafhürde, Ochsenstall"
+	DerivesFrom = {"proto-germanic", "noun", "Faluda"},
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Feld", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 124.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Field", "Area"}, -- source gives the German "Feld, Fläche" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Felþa"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Feoh", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238; Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2..
 	Language = "old-english",
 	Type = "noun",
@@ -927,6 +950,14 @@ DefineLanguageWord("Hād", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Hair"}
+})
+
+DefineLanguageWord("Hæfen", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 45.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Harbor"}, -- source (apparently) gives the German "Hafen" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Habanô"},
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Hæ̂man", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 52-53.
@@ -1552,6 +1583,14 @@ DefineLanguageWord("Pāl", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Meanings = {"Pole"}
 })
 
+DefineLanguageWord("Penn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 115.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Pen"}, -- source gives the German "Pferch"
+	DerivesFrom = {"proto-germanic", "noun", "Penna"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Plegestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
 	Language = "old-english",
 	Type = "noun",
@@ -1760,6 +1799,14 @@ DefineLanguageWord("Sēon", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	}
 })
 
+DefineLanguageWord("Set", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 214.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Army Camp", "Barn", "Pen", "Sunset"}, -- source gives the German "Heerlager, Stall, Pferch, Sonnenuntergang"
+	DerivesFrom = {"proto-germanic", "noun", "Seta"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Sib", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 25.
 	Language = "old-english",
 	Type = "noun",
@@ -1870,6 +1917,13 @@ DefineLanguageWord("Stīgan", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Type = "verb",
 	Meanings = {"Climb"},
 	DerivesFrom = {"proto-germanic", "verb", "Steig"}
+})
+
+DefineLanguageWord("Stig", { -- source also gives the alternative form "stî-"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Pigsty"}, -- source gives the German "Schweinestall"
+	DerivesFrom = {"proto-germanic", "noun", "Stijôn"}
 })
 
 DefineLanguageWord("Stock", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 247.
@@ -2080,7 +2134,7 @@ DefineLanguageWord("Trūwian", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 DefineLanguageWord("Tûn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 89.
 	Language = "old-english",
 	Type = "noun",
-	Meanings = {"Fence Around the House", "Garden", "Court", "Village", "City", "Town"}, -- source gives the German "Zaun um das Haus, Garten, Hof, Dorf, Stadt" as the meaning
+	Meanings = {"Fence Around the House", "Garden", "Farm", "Village", "City", "Town"}, -- source gives the German "Zaun um das Haus, Garten, Hof, Dorf, Stadt" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Tûna"},
 	Gender = "masculine"
 })

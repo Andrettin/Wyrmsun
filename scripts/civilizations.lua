@@ -48,11 +48,29 @@ DefineCivilization("neutral", {
 	ForceTemplates = {
 		{
 			"force-type", "land-force",
+			"priority", 130,
+			"unit-class", "infantry", 4,
+			"unit-class", "cavalry", 2,
+			"unit-class", "gunpowder-infantry", 3,
+			"unit-class", "priest", 2,
+			"unit-class", "siege-engine", 1
+		},
+		{
+			"force-type", "land-force",
+			"priority", 130,
+			"unit-class", "infantry", 4,
+			"unit-class", "cavalry", 2,
+			"unit-class", "shooter", 3,
+			"unit-class", "priest", 2,
+			"unit-class", "siege-engine", 1
+		},
+		{
+			"force-type", "land-force",
 			"priority", 120,
 			"unit-class", "infantry", 4,
 			"unit-class", "cavalry", 2,
 			"unit-class", "gunpowder-infantry", 3,
-			"unit-class", "priest", 1
+			"unit-class", "priest", 2
 		},
 		{
 			"force-type", "land-force",
@@ -60,21 +78,35 @@ DefineCivilization("neutral", {
 			"unit-class", "infantry", 4,
 			"unit-class", "cavalry", 2,
 			"unit-class", "shooter", 3,
-			"unit-class", "priest", 1
+			"unit-class", "priest", 2
 		},
 		{
 			"force-type", "land-force",
 			"priority", 115,
 			"unit-class", "infantry", 6,
 			"unit-class", "gunpowder-infantry", 3,
-			"unit-class", "priest", 1
+			"unit-class", "priest", 2
 		},
 		{
 			"force-type", "land-force",
 			"priority", 115,
 			"unit-class", "infantry", 6,
 			"unit-class", "shooter", 3,
-			"unit-class", "priest", 1
+			"unit-class", "priest", 2
+		},
+		{
+			"force-type", "land-force",
+			"priority", 115,
+			"unit-class", "infantry", 6,
+			"unit-class", "gunpowder-infantry", 3,
+			"unit-class", "siege-engine", 1
+		},
+		{
+			"force-type", "land-force",
+			"priority", 115,
+			"unit-class", "infantry", 6,
+			"unit-class", "shooter", 3,
+			"unit-class", "siege-engine", 1
 		},
 		{
 			"force-type", "land-force",

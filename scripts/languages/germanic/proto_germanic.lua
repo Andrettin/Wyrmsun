@@ -188,6 +188,13 @@ DefineLanguageWord("Baki", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Bansa", { -- source also gives the alternative form "bansti"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 135.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Manger", "Barn"}, -- source gives the German "Krippe, Stall, Scheune"
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Barda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -499,10 +506,24 @@ DefineLanguageWord("Falta", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Faluda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 123.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Fold", "Pen"}, -- source gives the German "Hürde, Pferch"
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Fehu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Cattle"}
+})
+
+DefineLanguageWord("Felþa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 124.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Field"}, -- source gives the German "Feld"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Ferþu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 120.
@@ -693,6 +714,13 @@ DefineLanguageWord("Gumō", { -- Lehmann also gives "gumn-" in another instance;
 		"plural", "dative", "Gumanmiz",
 		"plural", "genitive", "Gumanōn"
 	}
+})
+
+DefineLanguageWord("Habanô", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 45.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Harbor"}, -- source gives the German "Hafen"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Haima", { -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 201; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
@@ -1197,6 +1225,13 @@ DefineLanguageWord("Ôsa", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Penna", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 115.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Pointed Tack", "Pin"}, -- source gives the German "(Spitz) Zwecke, Pinne"
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Razdō", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -1308,6 +1343,13 @@ DefineLanguageWord("Segiz", { -- source gives "segiz(a)"; source also gives the 
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Victory"}, -- source gives the German "Sieg" as the meaning
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Seta", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 214.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Seat"}, -- source gives the German "Sitz"
 	Gender = "neuter"
 })
 
@@ -1437,6 +1479,13 @@ DefineLanguageWord("Steig", { -- source gives "steig-"; source also later gives 
 	Participles = {
 		"past", "Staig"
 	}
+})
+
+DefineLanguageWord("Stijôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Pen", "Small Barn"}, -- source gives the German "Pferch, kleiner Stall"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Stukka", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 247.
