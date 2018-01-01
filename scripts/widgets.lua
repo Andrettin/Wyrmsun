@@ -10,7 +10,7 @@
 --
 --      widgets.lua - Define the widgets
 --
---      (c) Copyright 2004-2017 by Jimmy Salmon and Andrettin
+--      (c) Copyright 2004-2018 by Jimmy Salmon and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by

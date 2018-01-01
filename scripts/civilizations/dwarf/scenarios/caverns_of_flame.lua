@@ -10,7 +10,7 @@
 --
 --      scepter_of_fire_events.lua - Defines events for the Scepter of Fire campaign.
 --
---      (c) Copyright 2014-2017 by Andrettin
+--      (c) Copyright 2014-2018 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by

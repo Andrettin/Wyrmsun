@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 - 3.2.1
 -----------------------------------------------------------------------
 
+* AI
+- Updated how AI troop recruitment works.
+
 * Building
 - Added the Heorot unique building.
 - Added Norse Chieftain's Hall (graphics by Jinn).

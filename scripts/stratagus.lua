@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 1998-2017 by Lutz Sammer, Pali Rohár and Andrettin
+--      (c) Copyright 1998-2018 by Lutz Sammer, Pali Rohár and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -38,7 +38,7 @@ wyrmsun.Name = "Wyrmsun"
 wyrmsun.Version = "3.2.1"
 wyrmsun.Homepage = ""
 wyrmsun.Licence = "GPL 2.0"
-wyrmsun.Copyright = "Copyright (c) 2013-2017 by Andrettin"
+wyrmsun.Copyright = "Copyright (c) 2013-2018 by Andrettin"
 
 -------------------------------------------------------------------------------
 --  Config-Part
