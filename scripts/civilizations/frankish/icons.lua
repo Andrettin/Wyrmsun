@@ -188,6 +188,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-frankish-cleric",
+	Size = {46, 38},
+	File = "frankish/icons/cleric.png"
+})
+
+DefineIcon({
 	Name = "icon-frankish-spatha",
 	Size = {46, 38},
 	File = "dlcs/frankish_faction_flair/graphics/icons/frankish_spatha.png"

@@ -43,6 +43,7 @@ DefineLanguageWord("Caturīges", { -- Source: Carl D. Buck, "Words for 'Battle,'
 	Type = "noun",
 	Meanings = {"Battle"}
 })
+
 DefineLanguageWord("Dubnorix", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "gaulish",
 	Type = "adjective",
@@ -56,6 +57,13 @@ DefineLanguageWord("Dûnum", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	-- appears in city names
 })
 
+DefineLanguageWord("Geneta", { -- source also gives the alternative forms "genata" and "gnata"; Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 288.
+	Language = "gaulish",
+	Type = "noun",
+	Meanings = {"Girl"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Longo", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "gaulish",
 	Type = "adjective",
@@ -66,6 +74,18 @@ DefineLanguageWord("Nemeton", { -- Source: H. Munro Chadwick, "The Oak and the T
 	Language = "gaulish",
 	Type = "noun",
 	Meanings = {"Temple", "Grove"}
+})
+
+DefineLanguageWord("Olca", { -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 125.
+	Language = "gaulish",
+	Type = "noun",
+	Meanings = {"Arable Land"}
+})
+
+DefineLanguageWord("Rêda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 175.
+	Language = "gaulish",
+	Type = "noun",
+	Meanings = {"Wagon"} -- source gives the German "Wagen" as the meaning
 })
 
 DefineLanguageWord("Ritu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 121.

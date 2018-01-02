@@ -35,4 +35,3 @@ DefineLanguageWord("Rîx", { -- Source: August Fick and Alf Torp, "Wortschatz de
 		"singular", "genitive", "Rîgis"
 	}
 })
-

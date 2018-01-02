@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016-2018 by Andrettin
+--      (c) Copyright 2018 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,8 +25,24 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Deifr", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
-	Language = "british",
-	Type = "noun",
-	Meanings = {"Waters"}
+DefineSettlement("pest", {
+	Name = "Pest",
+	MapTemplate = "earth",
+	Position = {4274, 968},
+	Major = true,
+	CulturalNames = {
+		"magyar", "Pest"
+	},
+	HistoricalOwners = {
+		-264, "iazyge-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		896, "magyar-tribe", -- Magyars held the lands between the Danube and the Theiss in 896; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 610.
+		919, "hungary", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		1560, "turkey" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalBuildings = {
+		-264, 0, "town-hall",
+		1389, 0, "university", -- University founded in Budapest in 1389; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		-- the Eötvös College was founded in Budapest in 1896 by baron Loránd Eötvös; Source: John Lukacs, "Budapest 1900: a historical portrait of a city and its culture", pp. 175-176.
+	},
+	Regions = {"europe", "west-and-central-europe"}
 })

@@ -122,7 +122,8 @@ DefineSettlement("Gossensass", {
 		1427, "austria"
 	},
 	HistoricalBuildings = {
-		1427, 0, "silver-mine" -- the silver-lead mine Gossensass was in existence in 1427; and in c. 1480 it had railways within it; Source: M. J. T. Lewis, "Railways in the Greek and Roman World", 2001, p. 16.
+		1427, 0, "silver-mine", -- the silver-lead mine Gossensass was in existence in 1427; and in c. 1480 it had railways within it; Source: M. J. T. Lewis, "Railways in the Greek and Roman World", 2001, p. 16.
+		1480, 0, "railroad"
 	},
 	HistoricalResources = {
 		0, 0, "unit-silver-deposit", 0
