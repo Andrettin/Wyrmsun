@@ -50,7 +50,7 @@ DefineSettlement("jilova", {
 		"slav", "Jilova"
 	},
 	HistoricalResources = {
-		0, 0, "unit-gold-deposit", "the-wedding-veil", 0 -- gold mine located in Jilova; Source: Alena Ježková, "77 Prague Legends", 2006, p. 31.
+		0, 0, "unit-gold-deposit", "the-wedding-veil", 0 -- the gold mine called "The Wedding Veil" was located in Jilova; Source: Alena Ježková, "77 Prague Legends", 2006, p. 31.
 	},
 	Regions = {"cisleithania", "czechoslovakia", "europe", "west-and-central-europe"}
 })
@@ -63,8 +63,8 @@ DefineSettlement("kutna-hora", {
 		"slav", "Kutna Hora" -- "Kutná Hora"
 	},
 	HistoricalResources = {
-		0, 0, "unit-silver-deposit", "esel", 0, -- silver mine located in Kutná Hora; Source: Alena Ježková, "22 Böhmische Legenden", 2007, pp. 82-83.
-		0, 0, "unit-silver-deposit", "smitna", 0 -- silver mine located in Kutná Hora; moved slightly to the south so that both it and Esel can coexist; Source: Alena Ježková, "22 Böhmische Legenden", 2007, p. 81.
+		0, 0, "unit-silver-deposit", "esel", 0, -- the silver mine of Esel was located in Kutná Hora; Source: Alena Ježková, "22 Böhmische Legenden", 2007, pp. 82-83.
+		0, 0, "unit-silver-deposit", "smitna", 0 -- the silver mine of Šmitna was located in Kutná Hora; Source: Alena Ježková, "22 Böhmische Legenden", 2007, p. 81.
 	},
 	Regions = {"cisleithania", "czechoslovakia", "europe", "west-and-central-europe"}
 })

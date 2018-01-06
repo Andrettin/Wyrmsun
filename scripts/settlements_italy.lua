@@ -546,7 +546,7 @@ DefineSettlement("verona", {
 	},
 	HistoricalBuildings = {
 		161, 1815, "farm",
-		1815, 0, "guard-tower" -- Verona had a fortress in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		1815, 0, "guard-tower" -- Verona had a fortress in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })

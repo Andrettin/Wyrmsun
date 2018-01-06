@@ -90,6 +90,7 @@ DefineFaction("netherlands", {
 		end
 		return true
 	end,
+	--[[
 	SettlementNames = {
 		"'s-Hertogenbosch",
 		"Beverwijk",
@@ -97,6 +98,7 @@ DefineFaction("netherlands", {
 		"Staphorst", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 		"Waalwijk"
 	},
+	--]]
 	ProvinceNames = {
 		"Flevoland",
 		"Friesland"

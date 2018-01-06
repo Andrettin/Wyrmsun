@@ -152,6 +152,7 @@ DefineSettlement("bristol", {
 	MapTemplate = "earth",
 	Position = {3782, 878},
 	CulturalNames = {
+		"anglo-saxon", "Brycgstow", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"english", "Bristol"
 	},
 	HistoricalOwners = {
@@ -265,7 +266,7 @@ DefineSettlement("chester", {
 		"briton", "Deva",
 		"celt", "Deva",
 		"english", "Chester", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-		"latin", "Deva" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"latin", "Deva" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
 		410, "rome", -- Deva/Chester was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
@@ -839,7 +840,7 @@ DefineSettlement("london", {
 		"briton", "Londinium",
 		"celt", "Londinium",
 		"english", "London",
-		"latin", "Londinium" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"latin", "Londinium" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
 		410, "rome", -- Londinium/London was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
@@ -982,6 +983,7 @@ DefineSettlement("reading", {
 	MapTemplate = "earth",
 	Position = {3817, 876},
 	CulturalNames = {
+		"anglo-saxon", "Readingum", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 		"english", "Reading"
 	},
 	HistoricalOwners = {
@@ -1110,7 +1112,7 @@ DefineSettlement("salisbury", {
 	Position = {3799, 886},
 	CulturalNames = {
 		"anglo-saxon", "Searoburg", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
-		"anglo-saxon", "Searuburh", -- Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 115.
+--		"anglo-saxon", "Searuburh", -- Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 115.
 		"briton", "Sorbidunom", -- Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 115.
 		"celt", "Sorbidunom",
 		"english", "Salisbury" -- Source: "Philip's International School Atlas", 2006, p. 64.
@@ -1302,6 +1304,7 @@ DefineSettlement("wilton", {
 	MapTemplate = "earth",
 	Position = {3796, 885},
 	CulturalNames = {
+		"anglo-saxon", "Wiltun", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 734.
 		"english", "Wilton"
 	},
 	HistoricalOwners = {
@@ -1385,7 +1388,7 @@ DefineSettlement("york", {
 		"briton", "Eboracum",
 		"celt", "Eboracum",
 		"english", "York",
-		"latin", "Eboracum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"latin", "Eboracum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	},
 	HistoricalOwners = {
 		-264, "brigantes-tribe", -- York's environs were territory of the Brigantes in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.

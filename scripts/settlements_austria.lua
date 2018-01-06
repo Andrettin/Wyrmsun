@@ -300,6 +300,9 @@ DefineSettlement("vienna", {
 		1759, 0, "market", "temisvarer-privilegierte-handelskompagnie" -- "Temisvarer privilegierte Handelskompagnie" founded in 1759, with triple direction in Vienna, Trieste and Temesvar; Source: Ivan Erceg, "Außenhandel der Nordadriatischen Seestädte als Faktor im Entstehen der kapitalistischen Beziehungen in Österreich im 18. und 19. Jahrhundert", 1968, pp. 477-478.
 		-- Imperial Polytechnic Institute of Vienna founded in 1815; Source: Silvia Fernanda de Mendonça Figueirôa, "Ciência e tecnologia no Brasil Imperial: Guilherme Schüch, Barão de Capanema (1824-1908)", 2005, p. 442.
 	},
+	HistoricalPopulation = {
+		1844, 374378, -- the Austrian Kreis of "Haupt- und Residenstadt Wien" had 374,378 inhabitants in 1844 (excluding military personnel); Source: "Tafeln zur Statistik der österreichischen Monarchie für das Jahr 1844", 1848, Tafel 50.
+	},
 	Regions = {"europe", "west-and-central-europe", "roman-danube", "germany-netherlands", "cisleithania"}
 })
 

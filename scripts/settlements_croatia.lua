@@ -31,7 +31,7 @@ DefineSettlement("fiume", {
 	Position = {4171, 1015},
 	Major = true,
 	CulturalNames = {
-		"slav", "Rijeka",
+		"slav", "Rijeka", -- Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 464.
 		"teuton", "Fiume"
 	},
 	HistoricalOwners = {

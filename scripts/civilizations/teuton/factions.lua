@@ -34,11 +34,13 @@ DefineFaction("saxon-tribe", {
 	Icon = "icon-flag-red-lion-on-green",
 	DevelopsFrom = {"asa-tribe", "hersing-tribe", "hlesing-tribe", "ingaevone-tribe", "jarling-tribe", "karling-tribe", "thielung-tribe", "thralling-tribe"},
 	DevelopsTo = {"gumeninga-tribe", "essex", "middlesex", "sussex", "wessex"},
+	--[[
 	SettlementNames = {
 		"Hardego", -- one of the pagi in Eastphalia in 852; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 610.
 		"Hohsingo", -- one of the pagi in Eastphalia in 852; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 610.
 		"Suabengo" -- one of the pagi in Eastphalia in 852; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 610.
 	}
+	--]]
 })
 
 DefineFaction("chauci-tribe", {

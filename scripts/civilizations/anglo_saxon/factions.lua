@@ -306,7 +306,7 @@ DefineFaction("wessex", {
 })
 
 DefineFaction("englaland", {
-	Name = "Englaland",
+	Name = "Englaland", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 211.
 	Civilization = "anglo-saxon",
 	Type = "polity",
 	Colors = {"red", "white"},

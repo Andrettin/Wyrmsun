@@ -763,12 +763,14 @@ DefineCivilization("dwarf", {
 		"male", "Virfir", -- dwarf from Norse mythology
 		"male", "Vit", -- dwarf from Norse mythology
 	},
+	--[[
 	SettlementNames = {
 		"Dwarven Doors", -- from Battle for Wesnoth
 		"Kal Kartha", -- from Battle for Wesnoth: The Hammer of Thursagan
 		"Knalga", -- from Battle for Wesnoth
 		"Lyr"
 	},
+	--]]
 	ShipNames = {
 --		"Skidbladnir" -- ship built by dwarves in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 101.
 	},
@@ -1386,11 +1388,13 @@ DefineCivilization("ettin", {
 		"male", "Suttung", -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 250.
 		"male", "Vafthrudnir" -- giant from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 252.
 	},
+	--[[
 	SettlementNames = {
 		"Hnitbjorg", -- mountain
 		"Lyfjaberg", -- hill
 		"Utgard"
 	},
+	--]]
 	ShipNames = {
 		"Naglfar" -- ship of the giants in Norse mythology, whose helmsman is Hrym; made of dead men's nails; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 21.
 	}
@@ -1551,20 +1555,6 @@ DefineCivilization("goblin", {
 		"male", "Vrunt",
 		"male", "Zhuk",
 		"male", "Zuzerd"
-	},
-	SettlementNames = {
-		-- ettin settlement names
-		"Hnitbjorg", -- mountain
-		"Lyfjaberg", -- hill
-		"Utgard",
-
-		-- orc settlement names
-		"Barag Gór", -- from Battle for Wesnoth
-		"Bitok", -- from Battle for Wesnoth
-		"Borstep", -- from Battle for Wesnoth
-		"Lmarig", -- from Battle for Wesnoth
-		"Prestim", -- from Battle for Wesnoth
-		"Tirigaz" -- from Battle for Wesnoth
 	}
 })
 
@@ -2008,6 +1998,7 @@ DefineCivilization("orc", {
 		"male", "Vurg", -- from Battle for Wesnoth
 		"male", "Vushnak"
 	},
+	--[[
 	SettlementNames = {
 		"Barag Gór", -- from Battle for Wesnoth
 		"Bitok", -- from Battle for Wesnoth
@@ -2016,6 +2007,7 @@ DefineCivilization("orc", {
 		"Prestim", -- from Battle for Wesnoth
 		"Tirigaz" -- from Battle for Wesnoth
 	}
+	--]]
 })
 
 DefineCivilization("teuton", {
@@ -2107,6 +2099,7 @@ DefineCivilization("teuton", {
 	FamilyNames = {
 		"Muhlhausen" -- "Mühlhausen"; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 104.
 	},
+	--[[
 	SettlementNames = {
 		"Altsohl",
 		"Blumenau",
@@ -2195,6 +2188,7 @@ DefineCivilization("teuton", {
 		"Zillertal",
 		"Zweibrücken"
 	},
+	--]]
 	ProvinceNames = {
 		"Altmark", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 134-135.
 		"Burgenland",
@@ -2276,6 +2270,7 @@ DefineCivilization("anglo-saxon", {
 		"november", "Blotmonath", -- eleventh month of the Anglo-Saxon year, "the month of sacrifice", in which animals were sacrificed to the gods
 		"december", "Giuli" -- last month of the Anglo-Saxon year; the modern Yule, the name was used for both the last and first month of the year
 	},
+	--[[
 	SettlementNames = {
 		"Abbandun",  -- Old English name of Abingdon; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Abbodesbyrig", -- Old English name of Abbotsbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p.
@@ -2294,6 +2289,7 @@ DefineCivilization("anglo-saxon", {
 		"Beamfleot", -- Old English name of Benfleet; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Gumeninga Hearh" -- Old English name of Harrow on the Hill; the name means "the holy place of the Gumeningas"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
 	},
+	--]]
 	UnitClassNames = {
 		"farm", "Wedone", -- Old English field-name; Wedone was near the location of Damerham; the first part of the name is formed by a variant of the Old English word "weoh"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
 		"farm", "Weoland" -- Old English field-name; Weoland was near the location of Wootton Bassett; the first part of the name is formed by a variant of the Old English word "weoh"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
@@ -2338,6 +2334,7 @@ DefineCivilization("english", {
 		"male", "Theodore",
 		"male", "William"
 	},
+	--[[
 	SettlementNames = {
 		"Ashford", -- Source: "Philip's International School Atlas", 2006, p. 64.
 		"Bedford", -- Source: "Philip's International School Atlas", 2006, p. 64.
@@ -2393,6 +2390,7 @@ DefineCivilization("english", {
 		"Wormshill",
 		"Yarmouth" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	},
+	--]]
 	ProvinceNames = {
 		"Berkshire",
 		"Cheshire",
@@ -2459,9 +2457,11 @@ DefineCivilization("frankish", {
 		"male", "Answald", -- Old Frankish name; Source: http://www.cnrtl.fr/definition/lourdaud//1
 		"male", "Grimwald" -- Old Frankish name; Source: http://www.cnrtl.fr/definition/lourdaud//1
 	},
+	--[[
 	SettlementNames = {
 		"Haim" -- the French settlement names "Le Hamel", "Hamelet", "Hamelin" and "Hem" come from or have the same origin as the Old French "ham", which in turn comes from Old Frankish "haim"; Source: http://www.cnrtl.fr/definition/hameau
 	},
+	--]]
 	UIFillers = {
 		"dlcs/frankish_faction_flair/graphics/ui/filler_bottom.png", 380, -181,
 		"germanic/ui/resource.png", 0, 0,
@@ -2504,7 +2504,6 @@ DefineCivilization("gaul", {
 	Playable = false,
 	DefaultColor = "black",
 	HistoricalUpgrades = {
-		-4000, "upgrade-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
 		-- swords appear in the Carpathian Basin c. 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 32.
 	}
 })
@@ -2521,14 +2520,15 @@ DefineCivilization("briton", {
 	PersonalNames = {
 		"male", "Cassivellaunus", -- ancient Celt; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 137.
 	},
+	--[[
 	SettlementNames = {
 		"Moridunum" -- the modern Carmarthen; main settlement of the Demetae (ancient Briton people); Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
 	},
+	--]]
 	ProvinceNames = {
 		"Demetia", -- land of the Demetae, an ancient Briton people; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
 	},
 	HistoricalUpgrades = {
-		-4000, "upgrade-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
 		-- metalworking begins in the British Isles at c. 2500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
 		-- bronzeworking begins in the British Isles at c. 2200 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
 		-- swords appear in the British Isles c. 1200 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 55.
@@ -2563,6 +2563,7 @@ DefineCivilization("welsh", {
 		"male", "Mynogan", -- Welsh; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 132.
 		"male", "Teyrnon" -- Welsh name; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 126.
 	},
+	--[[
 	SettlementNames = {
 		"Aber Menei", -- port near Caernarfon; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 134.
 		"Aberffraw", -- most important residence of the prince of Gwynedd, located in the southwest of the island of Anglesey; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 133.
@@ -2572,6 +2573,7 @@ DefineCivilization("welsh", {
 		"Harddlech", -- settlement in the Welsh region of Ardudwy; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 131.
 		"Pen Llwyn Diarwya" -- settlement in Dyfed (Wales); Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 118.
 	},
+	--]]
 	ProvinceNames = {
 		"Ardudwy", -- Welsh region; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 131.
 		"Arfon",  -- cantref (administrative division) of Gwynedd; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 142.
@@ -2598,7 +2600,6 @@ DefineCivilization("gael", {
 	Playable = false,
 	DefaultColor = "green",
 	HistoricalUpgrades = {
-		-4000, "upgrade-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
 		-- metalworking begins in the British Isles at c. 2500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
 		-- bronzeworking begins in the British Isles at c. 2200 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
 		-- swords appear in the British Isles c. 1200 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 55.
@@ -2777,6 +2778,9 @@ DefineCivilization("latin", {
 		"help", "basic-english-voices-help",
 		"help-town", "basic-english-voices-help-town"
 	},
+	HistoricalUpgrades = {
+		-4000, "upgrade-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
+	},
 	PersonalNames = {
 		"female", "Faustina", -- daughter of Emperor Antoninus Pius who married Marcus Aurelius; Source: "Ancient Warfare VII.6", 2013, pp. 6, 8.
 		"male", "Antoninus", -- Antoninus Pius, Roman emperor; Source: "Ancient Warfare VII.6", 2013, p. 6.
@@ -2790,6 +2794,7 @@ DefineCivilization("latin", {
 		"male", "Sidonius", -- Sidonius Apollinaris, Gallo-Roman writer; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
 		"male", "Zeno" -- Eastern Roman Emperor; was emperor by 480; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 7.
 	},
+	--[[
 	SettlementNames = {
 		"Agrigentum",
 		"Alba",
@@ -2846,6 +2851,7 @@ DefineCivilization("latin", {
 		"Vibo Valentia",
 		"Vulturnus"
 	}
+	--]]
 })
 
 DefineCivilization("castillian", {
@@ -2869,6 +2875,7 @@ DefineCivilization("french", {
 		"male", "Bonnaud", -- Source: http://www.cnrtl.fr/definition/lourdaud//1
 		"male", "Renaud" -- Source: http://www.cnrtl.fr/definition/lourdaud//1
 	},
+	--[[
 	SettlementNames = {
 		"Hamelet", -- Source: http://www.cnrtl.fr/definition/hameau
 		"Hamelin", -- Source: http://www.cnrtl.fr/definition/hameau
@@ -2876,6 +2883,7 @@ DefineCivilization("french", {
 		"Le Hamel", -- Source: http://www.cnrtl.fr/definition/hameau
 		"Luxembourg"
 	}
+	--]]
 })
 
 DefineCivilization("italian", {
@@ -2982,9 +2990,11 @@ DefineCivilization("greek", {
 		"help-town", "basic-english-voices-help-town"
 	},
 	HistoricalUpgrades = {
+		-4000, "upgrade-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
 		-1700, "upgrade-teuton-writing", true, -- Linear B tablets found in Mycenae belonging to the period between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
 		-1400, "upgrade-teuton-masonry", true -- Construction of palaces in continental Greece around 1400 BC; Source: "Atlas de História Mundial", 2001, p. 66.
-	},
+	}
+	--[[
 	SettlementNames = {
 		"Abdera",
 		"Abydus",
@@ -3061,6 +3071,7 @@ DefineCivilization("greek", {
 		"Zacynthus", -- Saguntum
 		"Zancle" -- Messana
 	}
+	--]]
 })
 
 DefineCivilization("assyrian", {
@@ -3133,7 +3144,10 @@ DefineCivilization("hittite", {
 --	Language = "hittite",
 	ParentCivilization = "greek",
 	Adjective = "Hittite",
-	Playable = false
+	Playable = false,
+	HistoricalUpgrades = {
+		-4000, "upgrade-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
+	}
 })
 
 DefineCivilization("illyrian", {
@@ -3143,7 +3157,10 @@ DefineCivilization("illyrian", {
 	Language = "illyrian",
 	ParentCivilization = "greek",
 	Adjective = "Illyrian",
-	Playable = false
+	Playable = false,
+	HistoricalUpgrades = {
+		-4000, "upgrade-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
+	}
 })
 
 DefineCivilization("minoan", {
@@ -3181,10 +3198,12 @@ DefineCivilization("norse", {
 		"male", "Hathuwulf", -- Hathuwulf is a chieftain whose name appeared in a runestone at Stentoften in Blekinge; Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 118.
 		"male", "Lytir" -- male name which means "lot-reader" or "speaker of truth"; Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 119.
 	},
+	--[[
 	SettlementNames = {
 		"Hals", -- Danish
 		"Sorgenfri" -- Danish
 	},
+	--]]
 	ProvinceNames = {
 		"Gardarike",
 		"Vestfold" -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
@@ -3201,7 +3220,10 @@ DefineCivilization("baltic", {
 --	Language = "lithuanian",
 	ParentCivilization = "norse",
 	Adjective = "Baltic",
-	Playable = false
+	Playable = false,
+	HistoricalUpgrades = {
+		-4000, "upgrade-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
+	}
 })
 
 DefineCivilization("uralic", {
@@ -3273,7 +3295,10 @@ DefineCivilization("phrygian", {
 	Language = "phrygian",
 	ParentCivilization = "greek",
 	Adjective = "Phrygian",
-	Playable = false
+	Playable = false,
+	HistoricalUpgrades = {
+		-4000, "upgrade-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
+	}
 })
 
 DefineCivilization("slav", {
@@ -3285,6 +3310,9 @@ DefineCivilization("slav", {
 	Adjective = "Slavic",
 	Playable = false,
 	DefaultColor = "blue",
+	HistoricalUpgrades = {
+		-4000, "upgrade-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
+	},
 	PersonalNames = {
 		-- Czech names
 		"female", "Judita", -- wife of Vladislav II; ordered Judita Bridge (across the Vltava river in Prague) built in 1158; Source: Alena Ježková, "77 Prague Legends", 2006, p. 45.
@@ -3341,7 +3369,10 @@ DefineCivilization("thracian", {
 	Language = "thracian",
 	ParentCivilization = "greek",
 	Adjective = "Thracian",
-	Playable = false
+	Playable = false,
+	HistoricalUpgrades = {
+		-4000, "upgrade-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
+	}
 })
 
 DefineCivilization("treant", {

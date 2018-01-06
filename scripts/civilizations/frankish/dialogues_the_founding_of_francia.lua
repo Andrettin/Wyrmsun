@@ -41,7 +41,7 @@ DefineDialogue("chlodwig-meets-syagrius", {
 		},
 		{
 			"speaker", "character", "chlodwig",
-			"text", "My tribesmen! The riches of Rome lay before us! We shall take it, becoming the masters of vast lands and making the Romans our servants!"
+			"text", "My tribesmen! Roman riches lay before us! We shall take them, becoming the masters of vast lands and making the Romans our servants!"
 		},
 		{
 			"speaker", "character", "syagrius",
