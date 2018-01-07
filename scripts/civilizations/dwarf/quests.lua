@@ -442,25 +442,6 @@ DefineQuest("andvaris-gold", {
 	Competitive = true
 })
 
-DefineQuest("the-mead-of-poetry-brew-potions-of-invisibility", {
-	Name = "Brew Potions of Invisibility",
-	Icon = "icon-red-potion",
-	PlayerColor = "black",
-	Unobtainable = true,
-	CompletionEffects = function(s)
-		CallDialogue("the-mead-of-poetry-potions-of-invisibility-ready", trigger_player)
-	end,
-	ObjectiveStrings = {"- Collect 4 Gryphon Feathers", "- Collect 4 Wyrm Eyes"},
-	Objectives = {
-		{
-			"objective-type", "destroy-units",
-			"objective-string", "Kill a Gryphon",
-			"quantity", 1,
-			"unit-type", "unit-gryphon"
-		}
-	}
-})
-
 DefineQuest("the-mead-of-poetry-kill-kvasir", {
 	Name = "Kill Kvasir",
 	Icon = "icon-dwarven-witness",
@@ -469,14 +450,12 @@ DefineQuest("the-mead-of-poetry-kill-kvasir", {
 	CompletionEffects = function(s)
 		CallDialogue("the-mead-of-poetry-kvasir-assassinated", trigger_player)
 	end,
-	ObjectiveStrings = {"- Find your way to Asgard", "- Kill Kvasir", "- Fjalar and Galar must survive"},
+	ObjectiveStrings = {"- Fjalar and Galar must survive"},
 	Objectives = {
 		{
-			"objective-type", "destroy-units",
+			"objective-type", "destroy-hero",
 			"objective-string", "Kill Kvasir",
-			"quantity", 1,
-			"unit-type", "unit-dwarven-witness", -- placeholder
-			"faction", "brising-clan"
+			"character", "kvasir"
 		}
 	}
 })

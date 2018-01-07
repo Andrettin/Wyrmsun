@@ -1914,10 +1914,6 @@ DefineProvince("Hungary", {
 		-264, "persian",
 --		161, "goth"
 	},
-	HistoricalModifiers = {
-		1389, "upgrade-university", true, -- University founded in Budapest in 1389; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
---		1896, "upgrade-college", true -- Eötvos College founded in Budapest in 1896; Source: John Lukacs, "Budapest 1900: a historical portrait of a city and its culture", pp. 175-176.
-	},
 	Regions = {"europe", "west-and-central-europe"}
 })
 

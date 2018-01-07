@@ -25,11 +25,48 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineDialogue("thjodrorir-speaks-of-kvasir", {
+	Nodes = {
+		{
+			"speaker", "character", "thjodrorir",
+			"text", "I had a fateful dream last night... in it, the mighty Hroptatyr told me of a wise elf, Kvasir."
+		},
+		{
+			"speaker", "character", "modsognir",
+			"text", "An elf...?"
+		},
+		{
+			"speaker", "character", "thjodrorir",
+			"text", "The elves are creatures whose body proportions are slender than those of gnomes, and yet they are incredibly tall... more so than the greatest of dwarves! They are not deities, but mortals like us, though they worship their own strange elf-gods. The elves live in their own world, Alfheim, which is secluded from ours. All this Hroptatyr showed to me."
+		},
+		{
+			"speaker", "character", "thjodrorir",
+			"text", "Some time ago our gods, the Aesir, fought a brutal war against the elf-gods, who are known as the Vanir. With neither side being able to achieve victory upon the other, they decided to make peace. To seal the agreement, the gods of both groups spat upon a sacred jar... and when all that was done, they decided to not waste the powerful assembly of divine saliva, and gave it to a wise elf - Kvasir - to drink."
+		},
+		{
+			"speaker", "character", "thjodrorir",
+			"text", "The result was that Kvasir became even wiser, perhaps the wisest of any mortal. Having drunk the divine mixture, Kvasir gained the ability to see the rifts that link the different worlds, and use them to go from one to another, and even beyond, to the realms of the gods... He became a planewalker! As an elf he was bound to the Vanir, and yet he was to live among the Aesir, thus symbolizing the peace."
+		},
+		{
+			"speaker", "character", "thjodrorir",
+			"text", "When Kvasir learned of our people, he decided to visit our homeworld, Nidavellir, and share his knowledge with dwarvenkind. He was invited by the brothers Fjalar and Galar to their hall, but ever since he has been missing. This does not bode well, and Hroptatyr desires us to seek the truth of Kvasir's fate."
+		},
+		{
+			"speaker", "character", "modsognir",
+			"text", "If the gods will it, then we must find out what happened to Kvasir."
+		},
+		{
+			"speaker", "character", "durin",
+			"text", "So it is decided, then. Modsognir, give me the order and I will lead a group of our warriors to the brothers' hall."
+		}
+	}
+})
+
 DefineDialogue("the-mead-of-poetry-fjalar-and-galar-conspire", {
 	Nodes = {
 		{
 			"speaker", "character", "fjalar",
-			"text", "Minstrels from far and wide have told us stories of Kvasir, the wisest of the gods."
+			"text", "Some of our people have met a strange being, who claims to be an elf called Kvasir. Already he has become famous for his wisdom, which he seeks to share with dwarvenkind."
 		},
 		{
 			"speaker", "character", "galar",
@@ -45,44 +82,12 @@ DefineDialogue("the-mead-of-poetry-fjalar-and-galar-conspire", {
 		},
 		{
 			"speaker", "character", "fjalar",
-			"text", "Aye! Then we should gain all his ancient wisdom. To kill a god... an immensely dangerous feat, but one which shall be extremely rewarding. First, however, we would need to reach Asgard, the realm of the race of gods known as Aesir. Many speak of the gateway to that plane, but who has actually seen it?"
-		},
-		{
-			"speaker", "character", "galar",
-			"text", "We must gather enough magical knowledge so that we can attune ourselves to that which is mystical. Then, although the rainbow bridge may remain invisible for others, we will be able to see it... And use it to reach Asgard."
-		},
-		{
-			"speaker", "character", "fjalar",
-			"text", "Once we are in the divine plane, we must act quickly - if the other deities realize what is happening and intervene as we slay Kvasir, then we shall face untold wrath. Thankfully we can brew potions of invisibility to help us with the task."
-		},
-		{
-			"speaker", "character", "galar",
-			"text", "We will need, then, the ingredients for the potions. Four gryphon feathers and four wyrm eyes should be enough for the potions of invisibility."
-		},
-		{
-			"text", "Hint: Train Scouts to attack the Gryphons. To see interplanar portals like the Rainbow Bridge, your heroes need to learn the Ethereal Vision ability, which will be first available to them at level 4. Complete optional quests available at your Mead Hall to better prepare your heroes for assassinating Kvasir.",
+			"text", "Aye! Then we should gain all his ancient wisdom. To kill such a powerful being... a dangerous feat, but one which shall be extremely rewarding. We must invite him, then, to our hall, and ask Kvasir to share his knowledge with us. He shall share more than he expects!",
 			"option-effects", {
 				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "the-mead-of-poetry-brew-potions-of-invisibility")
 					SetPlayerData(trigger_player, "AcceptQuest", "the-mead-of-poetry-kill-kvasir")
 				end
 			}
-		}
-	}
-})
-
-DefineDialogue("the-mead-of-poetry-potions-of-invisibility-ready", {
-	Nodes = {
-		{
-			"speaker", "character", "galar",
-			"text", "The gryphon feathers are ours! Now we can brew our potions of invisibility... We should use them just before entering Asgard. Remember, the potion's magic will wear off as soon as we attack Kvasir. I am preparing four potions for us - two to be used to get to Kvasir unseen, and another pair for us to drink in order to get out of there safely."
-		},
-		{
-			"speaker", "character", "fjalar",
-			"text", "The rainbow bridge is said to stand on the surface of Nidavellir. That's where we should begin our search."
-		},
-		{
-			"text", "Hint: Kvasir is a Vanir deity, and like the other deities of his group, he takes the form of an elf. Learning the Elfslayer ability with Fjalar will make it easier for you to kill him."
 		}
 	}
 })
@@ -116,7 +121,7 @@ DefineDialogue("the-mead-of-poetry-invitation-to-gilling", {
 		},
 		{
 			"speaker", "character", "fjalar",
-			"text", "Aye. The ettins of Jotunheim are a powerful people, their friendship would be most useful. I suggest we invite one of them we've come to know, the sturdy Gilling."
+			"text", "Aye. The ettins of Jotunheim are a powerful people, their friendship would be most useful. I suggest we invite one of them we have come to know, the sturdy Gilling."
 		},
 		{
 			"speaker", "character", "galar",
