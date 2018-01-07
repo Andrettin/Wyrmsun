@@ -48,6 +48,14 @@ DefineDialogue("thjodrorir-speaks-of-kvasir", {
 			"text", "The result was that Kvasir became even wiser, perhaps the wisest of any mortal. Having drunk the divine mixture, Kvasir gained the ability to see the rifts that link the different worlds, and use them to go from one to another, and even beyond, to the realms of the gods... He became a planewalker! As an elf he was bound to the Vanir, and yet he was to live among the Aesir, thus symbolizing the peace."
 		},
 		{
+			"speaker", "character", "modsognir",
+			"text", "He drank the saliva? This is the first time I learn of these elves, and already they seem disgusting..."
+		},
+		{
+			"speaker", "character", "thjodrorir",
+			"text", "A small price to pay for the great wisdom received!"
+		},
+		{
 			"speaker", "character", "thjodrorir",
 			"text", "When Kvasir learned of our people, he decided to visit our homeworld, Nidavellir, and share his knowledge with dwarvenkind. He was invited by the brothers Fjalar and Galar to their hall, but ever since he has been missing. This does not bode well, and Hroptatyr desires us to seek the truth of Kvasir's fate."
 		},
