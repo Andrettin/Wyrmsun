@@ -79,7 +79,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added the "Heorot" side-quest, the fulfillment of which transforms the player's Chieftain's Hall/Town Hall in Leidre into the unique building Heorot.
 
 * Units
-- Fixed issue which caused slimes to try to garrison a tower if the player selected an ungarrisoned tower and right-clicked the slime.
+- Fixed issue which caused slimes to try to garrison in a tower if the player selected an ungarrisoned tower and right-clicked the slime.
 - Added Norse Swordsman, Veteran Swordsman and Jarl (icons by Jinn).
 
 * Upgrades

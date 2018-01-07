@@ -291,10 +291,10 @@ DefineUnitType("unit-norse-veteran-swordsman", {
 } )
 
 DefineUnitType("unit-norse-heroic-swordsman", {
-	Name = "Jarl",
+	Name = "Hersir",
 	Parent = "unit-template-heroic-infantry",
 	Civilization = "norse",
-	Description = "The jarls compose Norse nobility, going forth into battle in their shining war-gear.",
+	Description = "The hersirs were the Norse chieftains, going forth into battle in their shining war-gear.",
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {
@@ -428,7 +428,7 @@ DefineUnitType("unit-norse-town-hall", {
 	Name = "Chieftain's Hall",
 	Parent = "unit-template-town-hall",
 	Civilization = "norse",
-	Description = "Built by mighty jarls, these halls serve as the center of Norse settlements.",
+	Description = "Built by mighty chieftains, these halls serve as the center of Norse settlements.",
 	Image = {"file", "norse/buildings/town_hall.png", "size", {128, 128}},
 	Shadow = {"file", "norse/buildings/town_hall_shadow.png", "size", {128, 128}},
 	Icon = "icon-norse-town-hall",
