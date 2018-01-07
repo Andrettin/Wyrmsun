@@ -73,6 +73,9 @@ https://github.com/Andrettin/Wyrmsun
 * Heroes
 - Added Dvalin (Dwarven Witness) as a recruitable hero.
 
+* Miscellaneous
+- Fixed new year Linux start-up crash.
+
 * Scenarios
 - Fixed issue which caused the Shorbear Hold side-quest to not function properly.
 - Added the "Dvalin's Runes" side-quest, in which the player has to research Runewriting.
