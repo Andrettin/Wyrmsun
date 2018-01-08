@@ -34,4 +34,3 @@ DefineCharacter("kvasir", {
 	Trait = "upgrade-wise",
 	Level = 25
 })
-
