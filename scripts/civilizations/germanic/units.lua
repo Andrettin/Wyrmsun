@@ -32,12 +32,12 @@
 --
 
 DefineUnitType("unit-germanic-worker", {
-	Name = _("Bura"), -- Bûra = "Bauer" in Proto-Germanic, according to the "Wortschatz der Germanischen Spracheinheit" by August Fick; another possibility of a name is "Theva", "Thrahila" or "Thregila", all of which mean "Knecht" or "Thrall"
+	Name = "Bura", -- Bûra = "Bauer" in Proto-Germanic, according to the "Wortschatz der Germanischen Spracheinheit" by August Fick; another possibility of a name is "Theva", "Thrahila" or "Thregila", all of which mean "Knecht" or "Thrall"
 	Parent = "unit-template-worker",
 	Civilization = "germanic",
-	Description = _("Hardworking and robust, buras are the lifeblood of Germanic society, tending the fields and performing most of the manual labor required."),
-	Quote = _("\"He began to grow, and to gain in strength,\nOxen he ruled, and plows made ready,\nHouses he built, and barns he fashioned,\nCarts he made, and the plow he managed.\"\n- Rigsthula"),
-	Background = _("\"Bûra\" is the Proto-Germanic word for \"peasant\" or \"farmer\"."),
+	Description = "Hardworking and robust, buras are the lifeblood of Germanic society, tending the fields and performing most of the manual labor required.",
+	Quote = "\"He began to grow, and to gain in strength,\nOxen he ruled, and plows made ready,\nHouses he built, and barns he fashioned,\nCarts he made, and the plow he managed.\"\n- Rigsthula",
+	Background = "\"Bûra\" is the Proto-Germanic word for \"peasant\" or \"farmer\".",
 	Image = {"file", "germanic/units/worker.png", "size", {72, 72}},
 	Animations = "animations-worker", Icon = "icon-germanic-worker",
 	DefaultEquipment = {
@@ -123,9 +123,9 @@ DefineUnitType("unit-germanic-warrior", {
 	Name = "Erala", -- Erala = "Warrior" in Proto-Germanic, according to the "Wortschatz der Germanischen Spracheinheit" by August Fick
 	Parent = "unit-template-infantry",
 	Civilization = "germanic",
-	Description = _("Germanic tribes are known for their fierceness in combat, and these sword-wielding warriors act accordingly."),
-	Quote = _("\"His spear he shook, his shield he brandished,\nHis horse he spurred, with his sword he hewed;\nWars he raised, and reddened the field,\nWarriors slew he, and land he won.\"\n- Rigsthula"),
-	Background = _("\"Erala\" is the Proto-Germanic word for \"warrior\"."),
+	Description = "Germanic tribes are known for their fierceness in combat, and these sword-wielding warriors act accordingly.",
+	Quote = "\"His spear he shook, his shield he brandished,\nHis horse he spurred, with his sword he hewed;\nWars he raised, and reddened the field,\nWarriors slew he, and land he won.\"\n- Rigsthula",
+	Background = "\"Erala\" is the Proto-Germanic word for \"warrior\". The warrior's helmet is based on the Nordic Bronze Age Viksø helmets, which were used for ceremonial occasions.",
 	Image = {"file", "germanic/units/warrior.png", "size", {72, 72}},
 	Animations = "animations-melee-unit", Icon = "icon-germanic-warrior",
 	DefaultEquipment = {
@@ -482,9 +482,9 @@ DefineUnitType("unit-germanic-spearman", {
 	Parent = "unit-template-spearman",
 	Civilization = "germanic",
 	Class = "", -- because the unit is not ready for being playable
---	Description = _("Germanic tribes are known for their fierceness in combat, and these sword-wielding warriors act accordingly."),
-	Quote = _("\"Soon grew up the sons of Jarl,\nBeasts they tamed, and bucklers rounded,\nShafts they fashioned, and spears they shook.\"\n- Rigsthula"),
---	Background = _("\"Erala\" is the Proto-Germanic word for \"warrior\"."),
+--	Description = "Germanic tribes are known for their fierceness in combat, and these sword-wielding warriors act accordingly.",
+	Quote = "\"Soon grew up the sons of Jarl,\nBeasts they tamed, and bucklers rounded,\nShafts they fashioned, and spears they shook.\"\n- Rigsthula",
+--	Background = "\"Erala\" is the Proto-Germanic word for \"warrior\".",
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {
@@ -715,7 +715,7 @@ DefineUnitType("unit-germanic-priest", {
 DefineUnitType("unit-germanic-transport-ship", {
 	Parent = "unit-template-transport-ship",
 	Civilization = "germanic",
-	Description = _("Seafaring was a major element of Germanic peoples' way of life, as they sailed throughout the Baltic and beyond. The ship was a status symbol, depicted in many of their drawings, and its form was used as inspiration for the \"stone ship\" tombs scattered throughout Scandinavia."),
+	Description = "Seafaring was a major element of Germanic peoples' way of life, as they sailed throughout the Baltic and beyond. The ship was a status symbol, depicted in many of their drawings, and its form was used as inspiration for the \"stone ship\" tombs scattered throughout Scandinavia.",
 	Image = {"file", "germanic/units/transport_ship.png", "size", {72, 72}},
 	LightImage = {"file", "germanic/units/transport_ship_water.png"},
 	Icon = "icon-germanic-transport-ship",
@@ -741,11 +741,11 @@ DefineUnitType("unit-germanic-town-hall", {
 } )
 
 DefineUnitType("unit-germanic-farm", {
-	Name = _("Farm"),
+	Name = "Farm",
 	Parent = "unit-template-farm",
 	Civilization = "germanic",
-	Description = _("Farms are essential for supporting a settlement's population."),
-	Background = _("The bronze age predecessors of the Germanic peoples had a variety of plants and animals in their farms. Wheat, millet and peas figured among the crops planted, while the most common animals were sheep and pigs. The animals bred by them were generally smaller than their modern counterparts, but they were sturdier."),
+	Description = "Farms are essential for supporting a settlement's population.",
+	Background = "The bronze age predecessors of the Germanic peoples had a variety of plants and animals in their farms. Wheat, millet and peas figured among the crops planted, while the most common animals were sheep and pigs. The animals bred by them were generally smaller than their modern counterparts, but they were sturdier.",
 	Image = {"file", "germanic/buildings/farm.png", "size", {64, 64}},
 	Shadow = {"file", "germanic/buildings/farm_shadow.png", "size", {64, 64}},
 	Icon = "icon-germanic-farm",
@@ -757,10 +757,11 @@ DefineUnitType("unit-germanic-farm", {
 	}
 } )
 
-DefineUnitType("unit-germanic-barracks", { Name = _("War Lodge"),
+DefineUnitType("unit-germanic-barracks", {
+	Name = "War Lodge",
 	Parent = "unit-template-barracks",
 	Civilization = "germanic",
-	Description = _("The Germanic war lodge serves as a gathering place for the tribe's warriors."),
+	Description = "The Germanic war lodge serves as a gathering place for the tribe's warriors.",
 	Image = {"file", "germanic/buildings/barracks.png", "size", {96, 96}},
 	Shadow = {"file", "germanic/buildings/barracks_shadow.png", "size", {96, 96}},
 	Icon = "icon-germanic-barracks",
@@ -779,7 +780,7 @@ DefineUnitType("unit-germanic-carpenters-shop", {
 	Shadow = {"file", "germanic/buildings/carpenters_shop_shadow.png", "size", {96, 96}},
 	Icon = "icon-germanic-carpenters-shop",
 	ButtonKey = "r",
-	ButtonHint = _("Build Carpente~!r's Shop"),
+	ButtonHint = "Build Carpente~!r's Shop",
 	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-arrows", "unit-barbed-arrows"},
 	Sounds = {
 		"help", "basic-germanic-voices-help-town"
@@ -833,7 +834,7 @@ DefineUnitType("unit-germanic-dock", {
 	Name = "Dock",
 	Parent = "unit-template-dock",
 	Civilization = "germanic",
-	Description = _("Germanic peoples were skilled shipwrights. They often lived close to the shore and built sturdy ships capable sailing the seas."),
+	Description = "Germanic peoples were skilled shipwrights. They often lived close to the shore and built sturdy ships capable sailing the seas.",
 	Image = {"file", "germanic/buildings/dock.png", "size", {96, 96}},
 	Shadow = {"file", "germanic/buildings/dock_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-germanic-dock",
