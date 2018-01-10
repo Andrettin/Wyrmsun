@@ -29,19 +29,19 @@
 
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-germanic-town-hall",
 	Action = "build", Value = "unit-germanic-town-hall",
-	Key = "h", Hint = _("Build Chieftain's ~!Hall"), Popup = "popup-building",
+	Key = "h", Hint = "Build Chieftain's ~!Hall", Popup = "popup-building",
 	ForUnit = {"unit-germanic-worker"}
 })
 
 DefineButton( { Pos = 2, Level = 1, Icon = "icon-germanic-farm",
 	Action = "build", Value = "unit-germanic-farm",
-	Key = "f", Hint = _("Build ~!Farm"), Popup = "popup-building",
+	Key = "f", Hint = "Build ~!Farm", Popup = "popup-building",
 	ForUnit = {"unit-germanic-worker"}
 })
 
 DefineButton( { Pos = 3, Level = 1, Icon = "icon-germanic-barracks",
 	Action = "build", Value = "unit-germanic-barracks",
-	Key = "w", Hint = _("Build ~!War Lodge"), Popup = "popup-building",
+	Key = "w", Hint = "Build ~!War Lodge", Popup = "popup-building",
 	ForUnit = {"unit-germanic-worker"}
 })
 
@@ -53,7 +53,7 @@ DefineButton( { Pos = 4, Level = 1, Icon = "icon-germanic-carpenters-shop",
 
 DefineButton( { Pos = 5, Level = 1, Icon = "icon-germanic-smithy",
 	Action = "build", Value = "unit-germanic-smithy",
-	Key = "s", Hint = _("Build ~!Smithy"), Popup = "popup-building",
+	Key = "s", Hint = "Build ~!Smithy", Popup = "popup-building",
 	ForUnit = {"unit-germanic-worker"}
 })
 
@@ -71,7 +71,7 @@ DefineButton( { Pos = 9, Level = 1, Icon = "icon-germanic-market",
 
 DefineButton( { Pos = 11, Level = 1, Icon = "icon-germanic-dock",
 	Action = "build", Value = "unit-germanic-dock",
-	Key = "d", Hint = _("Build ~!Dock"), Popup = "popup-building",
+	Key = "d", Hint = "Build ~!Dock", Popup = "popup-building",
 	ForUnit = {"unit-germanic-worker"}
 })
 
@@ -79,13 +79,13 @@ DefineButton( { Pos = 11, Level = 1, Icon = "icon-germanic-dock",
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-worker",
 	Action = "train-unit", Value = "unit-germanic-worker",
-	Key = "b", Hint = _("Train ~!Bura"), Popup = "popup-unit",
+	Key = "b", Hint = "Train ~!Bura", Popup = "popup-unit",
 	ForUnit = {"unit-germanic-town-hall"}
 })
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-warrior",
 	Action = "train-unit", Value = "unit-germanic-warrior",
-	Key = "e", Hint = _("Train ~!Erala"), Popup = "popup-unit",
+	Key = "e", Hint = "Train ~!Erala", Popup = "popup-unit",
 	ForUnit = {"unit-germanic-barracks"}
 })
 
@@ -97,7 +97,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-archer",
 
 DefineButton( { Pos = 1, Level = 0,
 	Action = "train-unit", Value = "unit-germanic-transport-ship",
-	Key = "t", Hint = _("Build ~!Transport"), Popup = "popup-unit",
+	Key = "t", Hint = "Build ~!Transport", Popup = "popup-unit",
 	ForUnit = {"unit-germanic-dock"}
 })
 
@@ -106,7 +106,7 @@ DefineButton( { Pos = 1, Level = 0,
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-broad-sword",
 	Action = "research", Value = "upgrade-germanic-broad-sword",
 	Allowed = "check-single-research",
-	Key = "w", Hint = _("Research Broad S~!word"), Popup = "popup-research",
+	Key = "w", Hint = "Research Broad S~!word", Popup = "popup-research",
 	Description = "+2 Damage for swordwielders. Allows Broad Swords to be sold at the Market.",
 	ForUnit = {"unit-germanic-smithy", "unit-teuton-smithy", "unit-latin-smithy"}
 })
@@ -114,7 +114,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-broad-sword",
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-bronze-shield",
 	Action = "research", Value = "upgrade-germanic-bronze-shield",
 	Allowed = "check-single-research",
-	Key = "s", Hint = _("Research Bronze ~!Shield"), Popup = "popup-research",
+	Key = "s", Hint = "Research Bronze ~!Shield", Popup = "popup-research",
 	Description = "+2 Armor for melee infantry and cavalry. Allows Bronze Shields to be sold at the Market.",
 	ForUnit = {"unit-germanic-smithy", "unit-teuton-smithy", "unit-latin-smithy"}
 })
@@ -245,12 +245,12 @@ DefineButton( { Pos = 13, Level = 2, Icon = "icon-hel",
 
 DefineButton( { Pos = 1, Level = 2,
 	Action = "experience-upgrade-to", Value = "unit-germanic-veteran-warrior",
-	Key = "k", Hint = _("Upgrade to ~!Kuni"), Popup = "popup-unit",
+	Key = "k", Hint = "Upgrade to ~!Kuni", Popup = "popup-unit",
 	ForUnit = {"unit-germanic-warrior"}
 })
 
 DefineButton( { Pos = 1, Level = 2,
 	Action = "experience-upgrade-to", Value = "unit-germanic-chieftain",
-	Key = "d", Hint = _("Upgrade to ~!Druhtana"), Popup = "popup-unit",
+	Key = "d", Hint = "Upgrade to ~!Druhtana", Popup = "popup-unit",
 	ForUnit = {"unit-germanic-veteran-warrior"}
 })

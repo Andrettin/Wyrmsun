@@ -384,7 +384,7 @@ DefineUniqueItem("heorot", { -- Source: Stephen Mitchell, "Beowulf", 2017, p. 7.
 
 DefineUniqueItem("the-house-of-seven-fathers", { -- Source: Peter Christen Asbjørnsen and Jørgen Moe, "Norwegian Folktales", 1960, pp. 13-14.
 	Name = "The House of Seven Fathers",
-	Type = "unit-teuton-farm",
+	Type = "unit-norse-farm",
 	Prefix = "upgrade-item-prefix-sturdy",
 	Suffix = "upgrade-item-suffix-of-plenty",
 	Description = "This imposing manor house lies along a road, and seven generations of fathers live together in it."
@@ -415,7 +415,7 @@ DefineUniqueItem("skidbladnir", { -- Source: Henry Adams Bellows (transl.), "The
 --[[
 DefineUniqueItem("varva", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 231-232.
 	Name = "Varva",
-	Type = "unit-teuton-farm", -- should be Norse
+	Type = "unit-norse-farm",
 	Prefix = "upgrade-item-prefix-sturdy", -- should be something more fitting?
 --	Suffix = ?,
 	Quote = "\"Varva was wasted with the sword,\nAnd vengeance taken for the bird,\nThe little bird that used to bring\nNews to the ear of the great king.\"\n- Thiodolf of Huine",

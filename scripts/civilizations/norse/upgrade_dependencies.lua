@@ -32,3 +32,11 @@ DefinePredependency("unit-norse-swordsman",
 DefinePredependency("unit-norse-town-hall",
 	{"upgrade-norse-civilization"}
 )
+
+DefinePredependency("unit-norse-farm",
+	{"upgrade-norse-civilization"}
+)
+
+DefinePredependency("unit-norse-barracks",
+	{"upgrade-norse-civilization"}
+)

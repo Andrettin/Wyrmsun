@@ -57,13 +57,21 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 3.2.2
+-----------------------------------------------------------------------
+
+* Buildings
+- Added Norse Farm (graphics by Jinn).
+- Added Norse War Lodge (graphics by Jinn).
+
+-----------------------------------------------------------------------
 - 3.2.1
 -----------------------------------------------------------------------
 
 * AI
 - Updated how AI troop recruitment works.
 
-* Building
+* Buildings
 - Added the Heorot unique building.
 - Added Norse Chieftain's Hall (graphics by Jinn).
 

@@ -299,21 +299,21 @@ DefineModifier("upgrade-ironworking",
 DefineModifier("upgrade-wood-plow",
 	{"Supply", 1},
 	{"apply-to", "unit-dwarven-mushroom-farm"},
-	{"apply-to", "unit-germanic-farm"}, {"apply-to", "unit-latin-farm"}, {"apply-to", "unit-teuton-farm"},
+	{"apply-to", "unit-germanic-farm"}, {"apply-to", "unit-latin-farm"}, {"apply-to", "unit-norse-farm"}, {"apply-to", "unit-teuton-farm"},
 	{"apply-to", "unit-goblin-farm"}
 )
 
 DefineModifier("upgrade-iron-tipped-wood-plow",
 	{"Supply", 1},
 	{"apply-to", "unit-dwarven-mushroom-farm"},
-	{"apply-to", "unit-germanic-farm"}, {"apply-to", "unit-latin-farm"}, {"apply-to", "unit-teuton-farm"},
+	{"apply-to", "unit-germanic-farm"}, {"apply-to", "unit-latin-farm"}, {"apply-to", "unit-norse-farm"}, {"apply-to", "unit-teuton-farm"},
 	{"apply-to", "unit-goblin-farm"}
 )
 
 DefineModifier("upgrade-iron-plow",
 	{"Supply", 1},
 	{"apply-to", "unit-dwarven-mushroom-farm"},
-	{"apply-to", "unit-germanic-farm"}, {"apply-to", "unit-latin-farm"}, {"apply-to", "unit-teuton-farm"},
+	{"apply-to", "unit-germanic-farm"}, {"apply-to", "unit-latin-farm"}, {"apply-to", "unit-norse-farm"}, {"apply-to", "unit-teuton-farm"},
 	{"apply-to", "unit-goblin-farm"}
 )
 
@@ -356,6 +356,7 @@ DefineModifier("upgrade-architecture",
 	{"apply-to", "unit-latin-smithy"},
 	{"apply-to", "unit-latin-stables"},
 	{"apply-to", "unit-norse-town-hall"},
+	{"apply-to", "unit-norse-farm"}, {"apply-to", "unit-norse-barracks"},
 	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"},
 	{"apply-to", "unit-teuton-farm"}, {"apply-to", "unit-teuton-barracks"},
 	{"apply-to", "unit-teuton-lumber-mill"}, {"apply-to", "unit-teuton-smithy"},
@@ -387,6 +388,7 @@ DefineModifier("upgrade-philosophy",
 	{"apply-to", "unit-latin-smithy"},
 --	{"apply-to", "unit-latin-stables"},
 	{"apply-to", "unit-norse-town-hall"},
+	{"apply-to", "unit-norse-barracks"},
 	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"},
 	{"apply-to", "unit-teuton-barracks"},
 	{"apply-to", "unit-teuton-lumber-mill"}, {"apply-to", "unit-teuton-smithy"},

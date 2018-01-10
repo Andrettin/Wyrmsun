@@ -140,14 +140,14 @@ DefineQuest("heorot", { -- Source: Stephen Mitchell, "Beowulf", 2017, p. 7.
 
 DefineQuest("the-house-of-seven-fathers", { -- based on the "The Seventh Father of the House" Norwegian folktale; Source: Peter Christen Asbjørnsen and Jørgen Moe, "Norwegian Folktales", 1960, pp. 13-14.
 	Name = "The House of Seven Fathers",
-	Icon = "icon-teuton-farm", -- should be a norse farm
+	Icon = "icon-norse-farm",
 	Description = "A gray-haired old man desires to build an imposing farm for his family, promising good rewards to those who help him build it.",
 	PlayerColor = "red",
 	Conditions = function(s)
 		if (
 			(GetPlayerData(trigger_player, "RaceName") == "germanic" or GetPlayerData(trigger_player, "RaceName") == "norse")
 			and (GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-worker") > 0 or GetPlayerData(trigger_player, "UnitTypesCount", "unit-teuton-worker") > 0)
-			and (CheckDependency(trigger_player, "unit-germanic-farm") or CheckDependency(trigger_player, "unit-teuton-farm"))
+			and (CheckDependency(trigger_player, "unit-germanic-farm") or CheckDependency(trigger_player, "unit-norse-farm"))
 			and GetUniqueItemData("the-house-of-seven-fathers", "CanDrop")
 		) then
 			return true
@@ -159,7 +159,7 @@ DefineQuest("the-house-of-seven-fathers", { -- based on the "The Seventh Father 
 		if (GetPlayerData(trigger_player, "RaceName") == "germanic") then
 			SetUnitVariable(FindUnit("unit-germanic-farm", trigger_player, false, true), "Unique", "the-house-of-seven-fathers")
 		else
-			SetUnitVariable(FindUnit("unit-teuton-farm", trigger_player, false, true), "Unique", "the-house-of-seven-fathers")
+			SetUnitVariable(FindUnit("unit-norse-farm", trigger_player, false, true), "Unique", "the-house-of-seven-fathers")
 		end
 	end,
 	Rewards = "+500 Copper, the Farm will become the The House of Seven Fathers unique building",

@@ -82,7 +82,7 @@ DefineDependency("upgrade-teuton-catapult-projectile-2",
 )
 
 DefineDependency("unit-teuton-stronghold",
-	{"unit-teuton-barracks", "upgrade-teuton-masonry"}, "or", {"unit-latin-barracks", "upgrade-teuton-masonry"}
+	{"unit-teuton-barracks", "upgrade-teuton-masonry"}, "or", {"unit-norse-barracks", "upgrade-teuton-masonry"}, "or", {"unit-latin-barracks", "upgrade-teuton-masonry"}
 )
 
 DefineDependency("upgrade-teuton-coinage",
@@ -122,11 +122,11 @@ DefinePredependency("unit-teuton-town-hall",
 )
 
 DefinePredependency("unit-teuton-farm",
-	{"upgrade-latin-civilization", 0}
+	{"upgrade-latin-civilization", 0, "upgrade-norse-civilization", 0}
 )
 
 DefinePredependency("unit-teuton-barracks",
-	{"upgrade-latin-civilization", 0}
+	{"upgrade-latin-civilization", 0, "upgrade-norse-civilization", 0}
 )
 
 DefinePredependency("unit-teuton-smithy",

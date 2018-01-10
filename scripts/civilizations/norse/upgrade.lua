@@ -38,11 +38,19 @@ DefineModifier("upgrade-norse-civilization",
 )
 
 DefineModifier("upgrade-norse-civilization",
-	{"apply-to", "unit-germanic-farm"}, {"convert-to", "unit-teuton-farm"}
+	{"apply-to", "unit-germanic-farm"}, {"convert-to", "unit-norse-farm"}
 )
 
 DefineModifier("upgrade-norse-civilization",
-	{"apply-to", "unit-germanic-barracks"}, {"convert-to", "unit-teuton-barracks"}
+	{"apply-to", "unit-teuton-farm"}, {"convert-to", "unit-norse-farm"}
+)
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-germanic-barracks"}, {"convert-to", "unit-norse-barracks"}
+)
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-teuton-barracks"}, {"convert-to", "unit-norse-barracks"}
 )
 
 DefineModifier("upgrade-norse-civilization",

@@ -166,7 +166,8 @@ DefineModifier("upgrade-teuton-masonry",
 	{"apply-to", "unit-latin-farm"}, {"apply-to", "unit-latin-barracks"},
 	{"apply-to", "unit-latin-smithy"},
 	{"apply-to", "unit-latin-stables"},
-	{"apply-to", "unit-norse-town-hall"}
+	{"apply-to", "unit-norse-town-hall"},
+	{"apply-to", "unit-norse-farm"}, {"apply-to", "unit-norse-barracks"}
 )
 
 DefineModifier("upgrade-teuton-coinage",
@@ -195,7 +196,8 @@ DefineModifier("upgrade-teuton-writing",
 	{"apply-to", "unit-latin-barracks"},
 	{"apply-to", "unit-latin-smithy"},
 --	{"apply-to", "unit-latin-stables"},
-	{"apply-to", "unit-norse-town-hall"}
+	{"apply-to", "unit-norse-town-hall"},
+	{"apply-to", "unit-norse-barracks"}
 )
 
 DefineModifier("upgrade-teuton-alchemy",

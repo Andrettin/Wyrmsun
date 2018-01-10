@@ -50,6 +50,7 @@ Units = {
 	"upgrade-norse-civilization",
 	"unit-norse-swordsman", "unit-norse-veteran-swordsman", "unit-norse-heroic-swordsman",
 	"unit-norse-town-hall",
+	"unit-norse-farm", "unit-norse-barracks",
 	"upgrade-teuton-civilization",
 	"upgrade-faction-bavarian-tribe",
 	"upgrade-faction-saxon-tribe", "upgrade-faction-chauci-tribe", "upgrade-faction-cherusci-tribe", "upgrade-faction-varini-tribe",
@@ -4733,9 +4734,9 @@ Load("scripts/civilizations/gnome/units.lua")
 Load("scripts/civilizations/goblin/units.lua")
 Load("scripts/civilizations/goth/units.lua")
 Load("scripts/civilizations/kobold/units.lua")
-Load("scripts/civilizations/norse/units.lua")
 Load("scripts/civilizations/suebi/units.lua")
 Load("scripts/civilizations/teuton/units.lua")
+Load("scripts/civilizations/norse/units.lua")
 Load("scripts/civilizations/latin/units.lua")
 
 -- Other civilizations' units

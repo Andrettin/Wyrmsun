@@ -148,10 +148,10 @@ DefineUnitType("unit-norse-swordsman", {
 		}
 	},
 	Sounds = {
---		"selected", "basic-teuton-voices-selected-group",
---		"acknowledge", "basic-teuton-voices-acknowledge",
---		"ready", "basic-teuton-voices-ready",
---		"help", "basic-teuton-voices-help",
+--		"selected", "basic-norse-voices-selected-group",
+--		"acknowledge", "basic-norse-voices-acknowledge",
+--		"ready", "basic-norse-voices-ready",
+--		"help", "basic-norse-voices-help",
 		"dead", "basic-human-voices-dead",
 		"hit", "sword-attack",
 		"miss", "attack-miss"
@@ -280,10 +280,10 @@ DefineUnitType("unit-norse-veteran-swordsman", {
 		}
 	},
 	Sounds = {
---		"selected", "basic-teuton-voices-selected-group",
---		"acknowledge", "basic-teuton-voices-acknowledge",
---		"ready", "basic-teuton-voices-ready",
---		"help", "basic-teuton-voices-help",
+--		"selected", "basic-norse-voices-selected-group",
+--		"acknowledge", "basic-norse-voices-acknowledge",
+--		"ready", "basic-norse-voices-ready",
+--		"help", "basic-norse-voices-help",
 		"dead", "basic-human-voices-dead",
 		"hit", "sword-attack",
 		"miss", "attack-miss"
@@ -414,10 +414,10 @@ DefineUnitType("unit-norse-heroic-swordsman", {
 		}
 	},
 	Sounds = {
---		"selected", "basic-teuton-voices-selected-group",
---		"acknowledge", "basic-teuton-voices-acknowledge",
---		"ready", "basic-teuton-voices-ready",
---		"help", "basic-teuton-voices-help",
+--		"selected", "basic-norse-voices-selected-group",
+--		"acknowledge", "basic-norse-voices-acknowledge",
+--		"ready", "basic-norse-voices-ready",
+--		"help", "basic-norse-voices-help",
 		"dead", "basic-human-voices-dead",
 		"hit", "sword-attack",
 		"miss", "attack-miss"
@@ -435,6 +435,34 @@ DefineUnitType("unit-norse-town-hall", {
 	AiDrops = {"unit-boots"},
 	DropSpells = {"spell-norse-allegiance"},
 	Sounds = {
---		"help", "basic-teuton-voices-help-town"
+--		"help", "basic-norse-voices-help-town"
+	}
+} )
+
+DefineUnitType("unit-norse-farm", {
+	Name = "Farm",
+	Parent = "unit-template-farm",
+	Civilization = "norse",
+	Description = "Farms are essential for supporting a settlement's population.",
+	Image = {"file", "norse/buildings/farm.png", "size", {64, 64}},
+	Shadow = {"file", "norse/buildings/farm_shadow.png", "size", {64, 64}},
+	Icon = "icon-norse-farm",
+	Sounds = {
+--		"help", "basic-norse-voices-help-town"
+	}
+} )
+
+DefineUnitType("unit-norse-barracks", {
+	Name = "War Lodge",
+	Parent = "unit-template-barracks",
+	Civilization = "norse",
+	Description = "In this structure Norse warriors are trained for battle.",
+	Image = {"file", "norse/buildings/barracks.png", "size", {96, 96}},
+	Shadow = {"file", "norse/buildings/barracks_shadow.png", "size", {96, 96}},
+	Icon = "icon-norse-barracks",
+	Trains = {"unit-teuton-spearman", "unit-teuton-archer", "unit-teuton-ritter", "unit-teuton-catapult"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-hand-cannon", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
+	Sounds = {
+--		"help", "basic-norse-voices-help-town"
 	}
 } )

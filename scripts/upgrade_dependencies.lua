@@ -112,13 +112,17 @@ DefineDependency("unit-scroll",
 
 DefineDependency("unit-carrots",
 	{"unit-germanic-farm"},
+	"or", {"unit-latin-farm"},
+	"or", {"unit-norse-farm"},
 	"or", {"unit-teuton-farm"}
 )
 
 DefineDependency("unit-cheese",
 	{"unit-germanic-farm"},
+	"or", {"unit-latin-farm"},
 	"or", {"unit-gnomish-farm"},
 	"or", {"unit-goblin-farm"},
+	"or", {"unit-norse-farm"},
 	"or", {"unit-teuton-farm"}
 )
 

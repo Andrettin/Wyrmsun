@@ -95,7 +95,7 @@ DefineButton( { Pos = 1, Level = 0,
 DefineButton( { Pos = 7, Level = 0,
 	Action = "train-unit", Value = "unit-teuton-gunpowder-infantry",
 	Key = "p", Hint = "Train Gun~!powder Infantry", Popup = "popup-unit",
-	ForUnit = {"unit-teuton-barracks"}
+	ForUnit = {"unit-teuton-barracks", "unit-norse-barracks"}
 })
 
 DefineButton( { Pos = 1, Level = 0,
@@ -145,20 +145,20 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-teuton-town-hall",
 
 DefineButton( { Pos = 2, Level = 1,
 	Action = "build", Value = "unit-teuton-farm",
-	Key = "f", Hint = _("Build ~!Farm"), Popup = "popup-building",
+	Key = "f", Hint = "Build ~!Farm", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
 DefineButton( { Pos = 3, Level = 1, Icon = "icon-germanic-barracks",
 	Action = "build", Value = "unit-teuton-barracks",
-	Key = "w", Hint = _("Build ~!War Lodge"), Popup = "popup-building",
+	Key = "w", Hint = "Build ~!War Lodge", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
   
 DefineButton( { Pos = 3, Level = 1, Icon = "icon-teuton-barracks",
 	Action = "build", Value = "unit-teuton-barracks",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-masonry"},
-	Key = "b", Hint = _("Build ~!Barracks"), Popup = "popup-building",
+	Key = "b", Hint = "Build ~!Barracks", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
   
