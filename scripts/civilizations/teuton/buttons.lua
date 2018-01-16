@@ -36,7 +36,7 @@
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-1",
 	Action = "attack",
-	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	Key = "a", Hint = "~!Attack", Popup = "popup-commands",
 	ForUnit = {
 		"unit-teuton-catapult"
 	}
@@ -45,7 +45,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-1",
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-2",
 	Action = "attack",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-catapult-projectile-1"},
-	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	Key = "a", Hint = "~!Attack", Popup = "popup-commands",
 	ForUnit = {
 		"unit-teuton-catapult"
 	}
@@ -54,7 +54,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-2",
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-3",
 	Action = "attack",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-catapult-projectile-2"},
-	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	Key = "a", Hint = "~!Attack", Popup = "popup-commands",
 	ForUnit = {
 		"unit-teuton-catapult"
 	}
@@ -171,19 +171,19 @@ DefineButton( { Pos = 4, Level = 1, Icon = "icon-germanic-carpenters-shop",
 DefineButton( { Pos = 4, Level = 1, Icon = "icon-teuton-lumber-mill",
 	Action = "build", Value = "unit-teuton-lumber-mill",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-masonry"},
-	Key = "l", Hint = _("Build ~!Lumber Mill"), Popup = "popup-building",
+	Key = "l", Hint = "Build ~!Lumber Mill", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
 DefineButton( { Pos = 5, Level = 1,
 	Action = "build", Value = "unit-teuton-smithy",
-	Key = "s", Hint = _("Build ~!Smithy"), Popup = "popup-building",
+	Key = "s", Hint = "Build ~!Smithy", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
   
 DefineButton( { Pos = 7, Level = 1,
 	Action = "build", Value = "unit-teuton-stables",
-	Key = "e", Hint = _("Build Stabl~!es"), Popup = "popup-building",
+	Key = "e", Hint = "Build Stabl~!es", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
@@ -208,13 +208,13 @@ DefineButton( { Pos = 9, Level = 1,
 
 DefineButton( { Pos = 10, Level = 1, Icon = "icon-teuton-watch-tower",
 	Action = "build", Value = "unit-teuton-watch-tower",
-	Key = "t", Hint = _("Build Watch ~!Tower"), Popup = "popup-building",
+	Key = "t", Hint = "Build Watch ~!Tower", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
 DefineButton( { Pos = 11, Level = 1,
 	Action = "build", Value = "unit-teuton-dock",
-	Key = "d", Hint = _("Build ~!Dock"), Popup = "popup-building",
+	Key = "d", Hint = "Build ~!Dock", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
@@ -269,7 +269,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-catapult-projectile-3",
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-pike",
 	Action = "research", Value = "upgrade-teuton-pike",
 	Allowed = "check-single-research",
-	Key = "k", Hint = _("Research Pi~!ke"), Popup = "popup-research",
+	Key = "k", Hint = "Research Pi~!ke", Popup = "popup-research",
 	Description = "+2 Damage for Spearmen. Allows Pikes to be sold at the Market.",
 	ForUnit = {"unit-teuton-lumber-mill"}
 } )

@@ -33,7 +33,7 @@ DefineCharacter("pypo", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, p
 	Faction = "untersberg",
 	Date = -1,
 	DeathDate = 40, -- last we hear of him
-	Quote = _("\"Know, you creeping worm of the earth, I am Pypo, the king of the gnomes.\"\n- Pypo, King of Untersberg"),
+	Quote = "\"Know, you creeping worm of the earth, I am Pypo, the king of the gnomes.\"\n- Pypo, King of Untersberg",
 	HistoricalTitles = {
 		"head-of-state", -1, 40, "untersberg"
 	},
@@ -94,7 +94,7 @@ DefineCharacter("adalga", { -- Source: Franz Hartmann, "Among the Gnomes", 1895,
 	Father = "bimbam",
 	HairVariation = "blond-hair", -- had long golden hair
 	-- simple in her way of thinking, pure in her affection, natural and sincere
-	Quote = _("\"My name is Adalga, I am the daughter of Bimbam I, king of the gnomes. But what are you?\"\n- Adalga, Princess of Untersberg"),
+	Quote = "\"My name is Adalga, I am the daughter of Bimbam I, king of the gnomes. But what are you?\"\n- Adalga, Princess of Untersberg",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "untersberg" or GetPlayerData(trigger_player, "Faction") == "sagan-tribe") then -- Adalga belonged to the Sagan tribe of Untersberg
 			return true

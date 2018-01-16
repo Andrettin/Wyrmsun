@@ -61,7 +61,7 @@ DefineFaction("eburones-tribe", { -- Source: H. H. Howorth, "The Ethnology of Ge
 	Civilization = "gaul",
 	Type = "tribe",
 	Colors = {"yellow"},
---	Description = _("The Eburones were a Gaulish tribe which dwelled largely between the Rhine and the Meuse. They fought fiercely against Caesar's Romans, but ended up being annihilated by them."),
+--	Description = "The Eburones were a Gaulish tribe which dwelled largely between the Rhine and the Meuse. They fought fiercely against Caesar's Romans, but ended up being annihilated by them.",
 	HistoricalCapitals = {
 		-54, "tongres" -- in 54 the capital of the Eburones was Aduatuca
 	}

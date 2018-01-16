@@ -26,113 +26,113 @@
 --
 
 DefineUpgrade("upgrade-work-adventures-of-horus-and-seth", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 17.
-	Name = _("Adventures of Horus and Seth"),
+	Name = "Adventures of Horus and Seth",
 	Work = "scroll"
 })
 
 DefineUpgrade("upgrade-work-book-of-caverns", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 15.
-	Name = _("Book of Caverns"),
+	Name = "Book of Caverns",
 	Work = "book"
 })
 
 DefineUpgrade("upgrade-work-book-of-the-celestial-cow", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 17.
-	Name = _("Book of the Celestial Cow"),
+	Name = "Book of the Celestial Cow",
 	Work = "book"
 })
 
 DefineUpgrade("upgrade-work-book-of-the-dead", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 15.
-	Name = _("Book of the Dead"),
+	Name = "Book of the Dead",
 	Work = "book"
 })
 
 DefineUpgrade("upgrade-work-book-of-doors", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 15.
-	Name = _("Book of Doors"),
+	Name = "Book of Doors",
 	Work = "book"
 })
 
 DefineUpgrade("upgrade-work-book-of-the-earth", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 93.
-	Name = _("Book of the Earth"),
+	Name = "Book of the Earth",
 	Work = "book"
 })
 
 DefineUpgrade("upgrade-work-book-of-fayum", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 18.
-	Name = _("Book of Fayum"),
+	Name = "Book of Fayum",
 	Work = "book"
 })
 
 DefineUpgrade("upgrade-work-book-of-imduat", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 15.
-	Name = _("Book of Imduat"),
+	Name = "Book of Imduat",
 	Work = "book"
 })
 
 DefineUpgrade("upgrade-work-book-of-nut", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 50.
-	Name = _("Book of Nut"),
+	Name = "Book of Nut",
 	Work = "book"
 })
 
 DefineUpgrade("upgrade-work-book-of-the-two-paths", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 84.
-	Name = _("Book of the Two Paths"),
+	Name = "Book of the Two Paths",
 	Work = "book"
 })
 
 DefineUpgrade("upgrade-work-great-hymn-to-the-nile", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 16.
-	Name = _("Great Hymn to the Nile"),
+	Name = "Great Hymn to the Nile",
 	Work = "scroll"
 })
 
 DefineUpgrade("upgrade-work-hymn-to-amon", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 49, 52.
-	Name = _("Hymn to Amon"),
+	Name = "Hymn to Amon",
 	Work = "scroll"
 })
 
 DefineUpgrade("upgrade-work-hymn-to-aton", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 55.
-	Name = _("Hymn to Aton"),
+	Name = "Hymn to Aton",
 	Work = "scroll"
 })
 
 DefineUpgrade("upgrade-work-naos-of-ismailia", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 52.
-	Name = _("Naos of Ismailia"),
+	Name = "Naos of Ismailia",
 	Work = "scroll"
 })
 
 DefineUpgrade("upgrade-work-prophecy-of-neferty", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 51.
-	Name = _("Prophecy of Neferty"),
+	Name = "Prophecy of Neferty",
 	Work = "scroll"
 })
 
 DefineUpgrade("upgrade-work-tale-of-the-god-of-the-sea", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 17.
-	Name = _("Tale of the God of the Sea"),
+	Name = "Tale of the God of the Sea",
 	Work = "scroll"
 })
 
 DefineUpgrade("upgrade-work-tale-of-the-ghost", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 52.
-	Name = _("Tale of the Ghost"),
+	Name = "Tale of the Ghost",
 	Work = "scroll"
 })
 
 DefineUpgrade("upgrade-work-tale-of-the-two-brothers", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 16-17.
-	Name = _("Tale of the Two Brothers"),
+	Name = "Tale of the Two Brothers",
 	Work = "scroll"
 })
 
 DefineUpgrade("upgrade-work-teachings-of-ani", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 57.
-	Name = _("Teachings of Ani"),
+	Name = "Teachings of Ani",
 	Work = "scroll"
 })
 
 DefineUpgrade("upgrade-work-teachings-to-merikara", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 102.
-	Name = _("Teachings to Merikara"),
+	Name = "Teachings to Merikara",
 	Work = "scroll",
 	Year = -2100 -- dated c. 2100 BC
 })
 
 DefineUpgrade("upgrade-work-texts-of-the-pyramids", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 49, 52.
-	Name = _("Texts of the Pyramids"),
+	Name = "Texts of the Pyramids",
 	Work = "book"
 })
 
 DefineUpgrade("upgrade-work-texts-of-the-sarcophaguses", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 48.
-	Name = _("Texts of the Sarcophaguses"),
+	Name = "Texts of the Sarcophaguses",
 	Work = "book"
 })
 

@@ -46,35 +46,35 @@ DefineUpgrade("upgrade-goblin-long-sword", {
 })
 
 DefineUpgrade("upgrade-goblin-rimmed-shield", {
-	Name = _("Rimmed Shield"),
+	Name = "Rimmed Shield",
 	Parent = "upgrade-bronze-shield",
 	Icon = "icon-goblin-rimmed-shield",
 	Civilization = "goblin",
-	Description = _("The addition of a metal rim to a wooden shield significantly improves its capability from fending off blows from swords and the like.\n\nEffect: +2 Armor for Swordsmen and Impalers. Allows Rimmed Shields to be sold at the Market."),
+	Description = "The addition of a metal rim to a wooden shield significantly improves its capability from fending off blows from swords and the like.\n\nEffect: +2 Armor for Swordsmen and Impalers. Allows Rimmed Shields to be sold at the Market.",
 	Item = "unit-goblin-rimmed-shield"
 })
 
 DefineUpgrade("upgrade-goblin-embossed-shield", {
-	Name = _("Embossed Shield"),
+	Name = "Embossed Shield",
 	Parent = "upgrade-iron-shield",
 	Icon = "icon-goblin-embossed-shield",
 	Civilization = "goblin",
 	RequirementsString = "Rimmed Shield and Ironworking",
-	Description = _("The shield boss, or metal centerpiece, made the shield better capable of deflecting attacks.\n\nEffect: +2 Armor for Swordsmen and Impalers. Allows Embossed Shields to be sold at the Market."),
+	Description = "The shield boss, or metal centerpiece, made the shield better capable of deflecting attacks.\n\nEffect: +2 Armor for Swordsmen and Impalers. Allows Embossed Shields to be sold at the Market.",
 	Item = "unit-goblin-embossed-shield"
 })
 
 DefineUpgrade("upgrade-goblin-long-spear", {
 	Parent = "upgrade-long-spear",
 	Civilization = "goblin",
-	Description = _("With the lengthening of spear shafts, soldiers who wield these weapons have greater reach against their enemies.\n\nEffect: +2 Damage for Impalers. Allows Long Spears to be sold at the Market."),
+	Description = "With the lengthening of spear shafts, soldiers who wield these weapons have greater reach against their enemies.\n\nEffect: +2 Damage for Impalers. Allows Long Spears to be sold at the Market.",
 	Item = "unit-long-spear"
 })
 
 DefineUpgrade("upgrade-goblin-pike", {
 	Parent = "upgrade-pike",
 	Civilization = "goblin",
-	Description = _("Much longer than previous spears, pikes can be deadly when used by disciplined groups of soldiers.\n\nEffect: +2 Damage for Impalers. Allows Pikes to be sold at the Market."),
+	Description = "Much longer than previous spears, pikes can be deadly when used by disciplined groups of soldiers.\n\nEffect: +2 Damage for Impalers. Allows Pikes to be sold at the Market.",
 	Item = "unit-pike"
 })
 

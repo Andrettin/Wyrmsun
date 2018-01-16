@@ -58,15 +58,15 @@ DefineUnitType("unit-latin-javelineer", {
 } )
 
 DefineUnitType("unit-latin-town-hall", {
-	Name = _("Forum"),
+	Name = "Forum",
 	Parent = "unit-template-town-hall",
 	Civilization = "latin",
-	Description = _("The forum is the main political gathering place in Latin communities."),
+	Description = "The forum is the main political gathering place in Latin communities.",
 	Image = {"file", "latin/buildings/forum.png", "size", {128, 128}},
 	Shadow = {"file", "latin/buildings/forum_shadow.png", "size", {128, 128}},
 	Icon = "icon-latin-forum",
 	Construction = "construction-land",
-	ButtonHint = _("Build Foru~!m"),
+	ButtonHint = "Build Foru~!m",
 	ButtonKey = "m",
 	AiDrops = {"unit-boots"},
 	Sounds = {
@@ -77,7 +77,7 @@ DefineUnitType("unit-latin-town-hall", {
 DefineUnitType("unit-latin-farm", {
 	Parent = "unit-template-farm",
 	Civilization = "latin",
-	Description = _("Farms are essential for supporting a settlement's population."),
+	Description = "Farms are essential for supporting a settlement's population.",
 	Image = {"file", "latin/buildings/farm.png", "size", {64, 64}},
 	Shadow = {"file", "latin/buildings/farm_shadow.png", "size", {64, 64}},
 	Icon = "icon-latin-farm",
@@ -89,7 +89,7 @@ DefineUnitType("unit-latin-farm", {
 DefineUnitType("unit-latin-barracks", {
 	Parent = "unit-template-barracks",
 	Civilization = "latin",
-	Description = _("The Latin barracks is the training place for their formidable legionary troops."),
+	Description = "The Latin barracks is the training place for their formidable legionary troops.",
 	Image = {"file", "latin/buildings/barracks.png", "size", {96, 96}},
 	Shadow = {"file", "latin/buildings/barracks_shadow.png", "size", {96, 96}},
 	Icon = "icon-latin-barracks",
@@ -103,7 +103,7 @@ DefineUnitType("unit-latin-barracks", {
 DefineUnitType("unit-latin-smithy", {
 	Parent = "unit-template-smithy",
 	Civilization = "latin",
-	Description = _("Latin smithies provide the javelins, swords and other equipment that legionaries require in battle."),
+	Description = "Latin smithies provide the javelins, swords and other equipment that legionaries require in battle.",
 	Image = {"file", "latin/buildings/smithy.png", "size", {96, 96}},
 	Shadow = {"file", "latin/buildings/smithy_shadow.png", "size", {96, 96}},
 	Icon = "icon-latin-smithy",
@@ -116,7 +116,7 @@ DefineUnitType("unit-latin-smithy", {
 DefineUnitType("unit-latin-stables", {
 	Parent = "unit-template-stables",
 	Civilization = "latin",
-	Description = _("Roman stables provide horses for their cavalry troops, as well as for several other uses, as in agriculture."),
+	Description = "Roman stables provide horses for their cavalry troops, as well as for several other uses, as in agriculture.",
 	Image = {"file", "latin/buildings/stables.png", "size", {96, 96}},
 	Shadow = {"file", "latin/buildings/stables_shadow.png", "size", {96, 96}},
 	Icon = "icon-latin-stables",

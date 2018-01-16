@@ -28,37 +28,37 @@
 --
 
 DefineUpgrade("upgrade-faction-asa-tribe", {
-	Name = _("Asa Tribe Faction"),
+	Name = "Asa Tribe",
 	EffectsString = "+5 HP and +1 Damage for Eralas"
 })
 
 DefineUpgrade("upgrade-faction-jarling-tribe", {
-	Name = _("Eraling Tribe Faction"),
+	Name = "Eraling Tribe",
 	EffectsString = "+2 Damage for Eralas"
 })
 
 DefineUpgrade("upgrade-faction-karling-tribe", {
-	Name = _("Karling Tribe Faction"),
+	Name = "Karling Tribe",
 	EffectsString = "+1 Food Supply for Farms"
 })
 
 DefineUpgrade("upgrade-faction-skeldung-tribe", {
-	Name = _("Skeldung Tribe Faction"),
+	Name = "Skeldung Tribe",
 	EffectsString = "+1 Damage and +1 Armor for Eralas"
 })
 
 DefineUpgrade("upgrade-faction-thielung-tribe", {
-	Name = _("Thielung Tribe Faction"),
+	Name = "Thielung Tribe",
 	EffectsString = "+1 Damage and +1 Accuracy for Eralas"
 })
 
 DefineUpgrade("upgrade-faction-thralling-tribe", {
-	Name = "Thrahiling Tribe Faction",
+	Name = "Thrahiling Tribe",
 	EffectsString = "+5% Lumber Processing for Carpenter's Shops"
 })
 
 DefineUpgrade("upgrade-faction-yngling-tribe", {
-	Name = _("Yngling Tribe Faction"),
+	Name = "Yngling Tribe",
 	EffectsString = "+2 Damage for Skutans"
 })
 

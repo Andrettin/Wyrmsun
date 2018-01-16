@@ -28,23 +28,23 @@
 -- Buildings
 
 DefineUpgrade("upgrade-college", {
-	Name = _("College")
+	Name = "College"
 })
 
 DefineUpgrade("upgrade-university", {
-	Name = _("University")
+	Name = "University"
 })
 
 DefineUpgrade("upgrade-courthouse", {
-	Name = _("Courthouse")
+	Name = "Courthouse"
 })
 
 DefineUpgrade("upgrade-tramway-network", { -- this modifier cannot be gotten yet; it is here to allow history to provinces as a preliminary thing for when we expand the game's technology tree to encompass the industrial era (in a few years from now?)
-	Name = _("Tramway Network")
+	Name = "Tramway Network"
 })
 
 -- Diseases
 
 DefineUpgrade("upgrade-smallpox", {
-	Name = _("Smallpox")
+	Name = "Smallpox"
 })

@@ -26,148 +26,148 @@
 --
 
 DefineUpgrade("upgrade-trait", {
-	Name = _("Trait"),
+	Name = "Trait",
 	Icon = "icon-level-up"
 })
 
 DefineUpgrade("upgrade-ambitious", {
 	Parent = "upgrade-trait",
-	Name = _("Ambitious")
+	Name = "Ambitious"
 })
 
 DefineUpgrade("upgrade-clumsy", {
 	Parent = "upgrade-trait",
-	Name = _("Clumsy")
+	Name = "Clumsy"
 })
 
 DefineUpgrade("upgrade-compassionate", { -- no current effect
 	Parent = "upgrade-trait",
-	Name = _("Compassionate")
+	Name = "Compassionate"
 })
 
 DefineUpgrade("upgrade-cruel", {
 	Parent = "upgrade-trait",
-	Name = _("Cruel"),
+	Name = "Cruel",
 	Epithets = {"the Cruel"}
 })
 
 DefineUpgrade("upgrade-dextrous", {
 	Parent = "upgrade-trait",
-	Name = _("Dextrous")
+	Name = "Dextrous"
 })
 
 DefineUpgrade("upgrade-dim", {
 	Parent = "upgrade-trait",
-	Name = _("Dim"),
+	Name = "Dim",
 	Epithets = {"the Dim"}
 })
 
 DefineUpgrade("upgrade-dutiful", {
 	Parent = "upgrade-trait",
-	Name = _("Dutiful")
+	Name = "Dutiful"
 })
 
 DefineUpgrade("upgrade-generous", { -- no current effect
 	Parent = "upgrade-trait",
-	Name = _("Generous"),
+	Name = "Generous",
 	Epithets = {"the Generous"}
 })
 
 DefineUpgrade("upgrade-genius", {
 	Parent = "upgrade-trait",
-	Name = _("Genius")
+	Name = "Genius"
 })
 
 DefineUpgrade("upgrade-harsh", {
 	Parent = "upgrade-trait",
-	Name = _("Harsh"),
+	Name = "Harsh",
 	Epithets = {"the Harsh"}
 })
 
 DefineUpgrade("upgrade-intelligent", {
 	Parent = "upgrade-trait",
-	Name = _("Intelligent"),
+	Name = "Intelligent",
 	Epithets = {"the Clever"}
 })
 
 DefineUpgrade("upgrade-keen", {
 	Parent = "upgrade-trait",
-	Name = _("Keen")
+	Name = "Keen"
 })
 
 DefineUpgrade("upgrade-limping", {
 	Parent = "upgrade-trait",
-	Name = _("Limping")
+	Name = "Limping"
 })
 
 DefineUpgrade("upgrade-mighty", {
 	Parent = "upgrade-trait",
-	Name = _("Mighty"),
+	Name = "Mighty",
 	Epithets = {"the Mighty"}
 })
 
 DefineUpgrade("upgrade-near-sighted", {
 	Parent = "upgrade-trait",
-	Name = _("Near-Sighted")
+	Name = "Near-Sighted"
 })
 
 DefineUpgrade("upgrade-old", {
 	Parent = "upgrade-trait",
-	Name = _("Old"),
+	Name = "Old",
 	Epithets = {"the Old"}
 })
 
 DefineUpgrade("upgrade-pious", {
 	Parent = "upgrade-trait",
-	Name = _("Pious"),
+	Name = "Pious",
 	Epithets = {"the Pious", "the Blessed"}
 })
 
 DefineUpgrade("upgrade-quick", {
 	Parent = "upgrade-trait",
-	Name = _("Quick"),
+	Name = "Quick",
 	Epithets = {"the Quick"}
 })
 
 DefineUpgrade("upgrade-reckless", {
 	Parent = "upgrade-trait",
-	Name = _("Reckless"),
+	Name = "Reckless",
 	Epithets = {"the Reckless"}
 })
 
 DefineUpgrade("upgrade-resilient", {
 	Parent = "upgrade-trait",
-	Name = _("Resilient"),
+	Name = "Resilient",
 	Epithets = {"the Bulwark", "the Hardy", "the Iron Shield"}
 })
 
 DefineUpgrade("upgrade-slow", {
 	Parent = "upgrade-trait",
-	Name = _("Slow"),
+	Name = "Slow",
 	Epithets = {"the Slow"}
 })
 
 DefineUpgrade("upgrade-strong", {
 	Parent = "upgrade-trait",
-	Name = _("Strong"),
+	Name = "Strong",
 	Epithets = {"the Strong"}
 })
 
 DefineUpgrade("upgrade-vicious", {
 	Parent = "upgrade-trait",
-	Name = _("Vicious"),
+	Name = "Vicious",
 	Epithets = {"the Vicious", "the Butcher", "the Chirurgeon"}
 })
 
 DefineUpgrade("upgrade-weak", {
 	Parent = "upgrade-trait",
-	Name = _("Weak"),
+	Name = "Weak",
 	Epithets = {"the Weak"}
 })
 
 DefineUpgrade("upgrade-wise", {
 	Parent = "upgrade-trait",
-	Name = _("Wise"),
+	Name = "Wise",
 	Epithets = {"the Wise", "the Sage"}
 })
 

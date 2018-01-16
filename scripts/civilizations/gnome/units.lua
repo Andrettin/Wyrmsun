@@ -47,7 +47,7 @@ DefineUnitType("unit-gnomish-worker", {
 	WeaponClasses = {"mace", "axe"},
 	BluntDamage = true,
 	ButtonKey = "s",
-	ButtonHint = _("Train ~!Scavenger"),
+	ButtonHint = "Train ~!Scavenger",
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-cheese", "unit-wool-shoes"},
 	CanGatherResources = {
 		{
@@ -202,7 +202,7 @@ DefineUnitType("unit-gnomish-duelist", {
 	Name = "Duelist",
 	Parent = "unit-template-veteran-infantry",
 	Civilization = "gnome",
-	Description = _("Veteran gnomish warriors have honed the art of fencing to a remarkable degree, making them formidable opponents in single combat."),
+	Description = "Veteran gnomish warriors have honed the art of fencing to a remarkable degree, making them formidable opponents in single combat.",
 	Image = {"file", "gnome/units/gnomish_recruit.png", "size", {72, 72}},
 	Animations = "animations-gnomish-recruit", Icon = "icon-gnomish-duelist",
 	DefaultEquipment = {
@@ -339,10 +339,10 @@ Load("scripts/civilizations/gnome/units_deep_gnome.lua")
 Load("scripts/civilizations/gnome/units_derro.lua")
 
 DefineUnitType("unit-gnomish-town-hall", {
-	Name = _("Town Hall"),
+	Name = "Town Hall",
 	Parent = "unit-template-town-hall",
 	Civilization = "gnome",
-	Description = _("The town hall is the center of a gnomish settlement's life."),
+	Description = "The town hall is the center of a gnomish settlement's life.",
 	Image = {"file", "gnome/buildings/town_hall.png", "size", {128, 128}},
 	Shadow = {"file", "gnome/buildings/town_hall_shadow.png", "size", {128, 128}},
 	Animations = "animations-building", Icon = "icon-gnomish-town-hall",
@@ -356,10 +356,10 @@ DefineUnitType("unit-gnomish-town-hall", {
 } )
 
 DefineUnitType("unit-gnomish-farm", {
-	Name = _("Farm"),
+	Name = "Farm",
 	Parent = "unit-template-farm",
 	Civilization = "gnome",
-	Description = _("Gnomish farms provide sustenance for their settlements. Contrary to the dwarves, the gnomes tend to plant vegetables, rather than mushrooms, and they also breed livestock."),
+	Description = "Gnomish farms provide sustenance for their settlements. Contrary to the dwarves, the gnomes tend to plant vegetables, rather than mushrooms, and they also breed livestock.",
 	Image = {"file", "gnome/buildings/farm.png", "size", {64, 64}},
 	Shadow = {"file", "gnome/buildings/farm_shadow.png", "size", {64, 64}},
 	Icon = "icon-gnomish-farm",
@@ -370,10 +370,10 @@ DefineUnitType("unit-gnomish-farm", {
 } )
 
 DefineUnitType("unit-gnomish-barracks", {
-	Name = _("Barracks"),
+	Name = "Barracks",
 	Parent = "unit-template-barracks",
 	Civilization = "gnome",
-	Description = _("The gnomish barracks serves as a place for military training and arregimentation for the gnomes."),
+	Description = "The gnomish barracks serves as a place for military training and arregimentation for the gnomes.",
 	Image = {"file", "gnome/buildings/barracks.png", "size", {96, 96}},
 	Shadow = {"file", "gnome/buildings/barracks_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-gnomish-barracks",

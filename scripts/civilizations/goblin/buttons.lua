@@ -36,7 +36,7 @@
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-1",
 	Action = "attack",
-	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	Key = "a", Hint = "~!Attack", Popup = "popup-commands",
 	ForUnit = {
 		"unit-goblin-war-machine"
 	}
@@ -45,7 +45,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-1",
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-2",
 	Action = "attack",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-goblin-catapult-projectile-1"},
-	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	Key = "a", Hint = "~!Attack", Popup = "popup-commands",
 	ForUnit = {
 		"unit-goblin-war-machine"
 	}
@@ -54,7 +54,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-2",
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-3",
 	Action = "attack",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-goblin-catapult-projectile-2"},
-	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	Key = "a", Hint = "~!Attack", Popup = "popup-commands",
 	ForUnit = {
 		"unit-goblin-war-machine"
 	}
@@ -135,37 +135,37 @@ DefineButton( { Pos = 8, Level = 0,
 
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-goblin-town-hall",
 	Action = "build", Value = "unit-goblin-town-hall",
-	Key = "h", Hint = _("Build Town ~!Hall"), Popup = "popup-building",
+	Key = "h", Hint = "Build Town ~!Hall", Popup = "popup-building",
 	ForUnit = {"unit-goblin-worker"}
 } )
 
 DefineButton( { Pos = 2, Level = 1, Icon = "icon-goblin-farm",
 	Action = "build", Value = "unit-goblin-farm",
-	Key = "f", Hint = _("Build ~!Farm"), Popup = "popup-building",
+	Key = "f", Hint = "Build ~!Farm", Popup = "popup-building",
 	ForUnit = {"unit-goblin-worker"}
 })
 
 DefineButton( { Pos = 3, Level = 1, Icon = "icon-goblin-mess-hall",
 	Action = "build", Value = "unit-goblin-mess-hall",
-	Key = "s", Hint = _("Build Me~!ss Hall"), Popup = "popup-building",
+	Key = "s", Hint = "Build Me~!ss Hall", Popup = "popup-building",
 	ForUnit = {"unit-goblin-worker"}
 })
 
 DefineButton( { Pos = 4, Level = 1, Icon = "icon-goblin-lumber-mill",
 	Action = "build", Value = "unit-goblin-lumber-mill",
-	Key = "l", Hint = _("Build ~!Lumber Mill"), Popup = "popup-building",
+	Key = "l", Hint = "Build ~!Lumber Mill", Popup = "popup-building",
 	ForUnit = {"unit-goblin-worker"}
 })
 
 DefineButton( { Pos = 5, Level = 1, Icon = "icon-goblin-smithy",
 	Action = "build", Value = "unit-goblin-smithy",
-	Key = "e", Hint = _("Build Fugla Forg~!e"), Popup = "popup-building",
+	Key = "e", Hint = "Build Fugla Forg~!e", Popup = "popup-building",
 	ForUnit = {"unit-goblin-worker"}
 })
 
 DefineButton( { Pos = 8, Level = 1, Icon = "icon-goblin-temple",
 	Action = "build", Value = "unit-goblin-temple",
-	Key = "p", Hint = _("Build Tem~!ple"), Popup = "popup-building",
+	Key = "p", Hint = "Build Tem~!ple", Popup = "popup-building",
 	ForUnit = {"unit-goblin-worker"}
 })
 
@@ -177,13 +177,13 @@ DefineButton( { Pos = 9, Level = 1, Icon = "icon-goblin-market",
 
 DefineButton( { Pos = 10, Level = 1, Icon = "icon-goblin-watch-tower",
 	Action = "build", Value = "unit-goblin-watch-tower",
-	Key = "t", Hint = _("Build Watch ~!Tower"), Popup = "popup-building",
+	Key = "t", Hint = "Build Watch ~!Tower", Popup = "popup-building",
 	ForUnit = {"unit-goblin-worker"}
 })
 
 DefineButton( { Pos = 11, Level = 1, Icon = "icon-goblin-dock",
 	Action = "build", Value = "unit-goblin-dock",
-	Key = "d", Hint = _("Build ~!Dock"), Popup = "popup-building",
+	Key = "d", Hint = "Build ~!Dock", Popup = "popup-building",
 	ForUnit = {"unit-goblin-worker"}
 })
 
@@ -212,32 +212,32 @@ DefineButton( { Pos = 1, Level = 4, Icon = "icon-goblin-wall",
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-broad-sword",
 	Action = "research", Value = "upgrade-goblin-broad-sword",
 	Allowed = "check-single-research",
-	Key = "w", Hint = _("Research Broad S~!word"), Popup = "popup-research",
-	Description = _("+2 Damage for Swordsmen. Allows Broad Swords to be sold at the Market."),
+	Key = "w", Hint = "Research Broad S~!word", Popup = "popup-research",
+	Description = "+2 Damage for Swordsmen. Allows Broad Swords to be sold at the Market.",
 	ForUnit = {"unit-goblin-smithy"}
 } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-goblin-long-sword",
 	Action = "research", Value = "upgrade-goblin-long-sword",
 	Allowed = "check-single-research",
-	Key = "w", Hint = _("Research Long S~!word"), Popup = "popup-research",
-	Description = _("+2 Damage for Swordsmen. Allows Long Swords to be sold at the Market."),
+	Key = "w", Hint = "Research Long S~!word", Popup = "popup-research",
+	Description = "+2 Damage for Swordsmen. Allows Long Swords to be sold at the Market.",
 	ForUnit = {"unit-goblin-smithy"}
 } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-goblin-rimmed-shield",
 	Action = "research", Value = "upgrade-goblin-rimmed-shield",
 	Allowed = "check-single-research",
-	Key = "s", Hint = _("Research Rimmed ~!Shield"), Popup = "popup-research",
-	Description = _("+2 Armor for Swordsmen and Impalers. Allows Rimmed Shields to be sold at the Market."),
+	Key = "s", Hint = "Research Rimmed ~!Shield", Popup = "popup-research",
+	Description = "+2 Armor for Swordsmen and Impalers. Allows Rimmed Shields to be sold at the Market.",
 	ForUnit = {"unit-goblin-smithy"}
 } )
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-goblin-embossed-shield",
 	Action = "research", Value = "upgrade-goblin-embossed-shield",
 	Allowed = "check-single-research",
-	Key = "s", Hint = _("Research Embossed ~!Shield"), Popup = "popup-research",
-	Description = _("+2 Armor for Swordsmen and Impalers. Allows Embossed Shields to be sold at the Market."),
+	Key = "s", Hint = "Research Embossed ~!Shield", Popup = "popup-research",
+	Description = "+2 Armor for Swordsmen and Impalers. Allows Embossed Shields to be sold at the Market.",
 	ForUnit = {"unit-goblin-smithy"}
 } )
 
@@ -260,16 +260,16 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-catapult-projectile-3",
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-long-spear",
 	Action = "research", Value = "upgrade-goblin-long-spear",
 	Allowed = "check-single-research",
-	Key = "s", Hint = _("Research Long ~!Spear"), Popup = "popup-research",
-	Description = _("+2 Damage for Impalers. Allows Long Spears to be sold at the Market."),
+	Key = "s", Hint = "Research Long ~!Spear", Popup = "popup-research",
+	Description = "+2 Damage for Impalers. Allows Long Spears to be sold at the Market.",
 	ForUnit = {"unit-goblin-lumber-mill"}
 } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-pike",
 	Action = "research", Value = "upgrade-goblin-pike",
 	Allowed = "check-single-research",
-	Key = "k", Hint = _("Research Pi~!ke"), Popup = "popup-research",
-	Description = _("+2 Damage for Impalers. Allows Pikes to be sold at the Market."),
+	Key = "k", Hint = "Research Pi~!ke", Popup = "popup-research",
+	Description = "+2 Damage for Impalers. Allows Pikes to be sold at the Market.",
 	ForUnit = {"unit-goblin-lumber-mill"}
 } )
 
@@ -309,7 +309,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-norse-runewriting",
 	Action = "research", Value = "upgrade-goblin-writing",
 	Allowed = "check-single-research",
 	Description = "+10% Research Speed for buildings. Allows Scrolls and Books to be sold at the Market.",
-	Key = "w", Hint = _("Research ~!Writing"), Popup = "popup-research",
+	Key = "w", Hint = "Research ~!Writing", Popup = "popup-research",
 	ForUnit = {"unit-goblin-stronghold"}
 } )
 
@@ -382,24 +382,24 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-guard-tower",
 
 DefineButton( { Pos = 1, Level = 2, Icon = "icon-goblin-barbarian",
 	Action = "experience-upgrade-to", Value = "unit-goblin-barbarian",
-	Key = "u", Hint = _("~!Upgrade to Barbarian"), Popup = "popup-unit",
+	Key = "u", Hint = "~!Upgrade to Barbarian", Popup = "popup-unit",
 	ForUnit = {"unit-goblin-swordsman"}
 } )
 
 DefineButton( { Pos = 1, Level = 2, Icon = "icon-goblin-warlord",
 	Action = "experience-upgrade-to", Value = "unit-goblin-warlord",
-	Key = "u", Hint = _("~!Upgrade to Warlord"), Popup = "popup-unit",
+	Key = "u", Hint = "~!Upgrade to Warlord", Popup = "popup-unit",
 	ForUnit = {"unit-goblin-barbarian"}
 } )
 
 DefineButton( { Pos = 1, Level = 2, Icon = "icon-goblin-headhunter",
 	Action = "experience-upgrade-to", Value = "unit-goblin-headhunter",
-	Key = "u", Hint = _("~!Upgrade to Headhunter"), Popup = "popup-unit",
+	Key = "u", Hint = "~!Upgrade to Headhunter", Popup = "popup-unit",
 	ForUnit = {"unit-goblin-archer"}
 } )
 
 DefineButton( { Pos = 1, Level = 2, Icon = "icon-goblin-shadowstalker",
 	Action = "experience-upgrade-to", Value = "unit-goblin-shadowstalker",
-	Key = "u", Hint = _("~!Upgrade to Shadowstalker"), Popup = "popup-unit",
+	Key = "u", Hint = "~!Upgrade to Shadowstalker", Popup = "popup-unit",
 	ForUnit = {"unit-goblin-headhunter"}
 } )

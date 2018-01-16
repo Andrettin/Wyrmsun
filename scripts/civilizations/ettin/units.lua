@@ -32,10 +32,10 @@
 --
 
 DefineUnitType("unit-ettin", {
-	Name = _("Ettin"),
+	Name = "Ettin",
 	Parent = "unit-template-heroic-infantry",
 	Civilization = "ettin",
-	Description = _("The massive ettins lord over Jotunheim, striking terror into the hearts of smaller creatures such as orcs and ogres."),
+	Description = "The massive ettins lord over Jotunheim, striking terror into the hearts of smaller creatures such as orcs and ogres.",
 	Image = {"file", "ettin/units/ettin.png", "size", {144, 144}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-ettin",
 	TileSize = {2, 2}, BoxSize = {63, 63},

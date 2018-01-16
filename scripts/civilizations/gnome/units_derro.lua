@@ -117,7 +117,7 @@ DefineUnitType("unit-derro-thug", {
 } )
 
 DefineUnitType("unit-derro-executioner", {
-	Name = _("Executioner"),
+	Name = "Executioner",
 	Parent = "unit-gnomish-duelist",
 	Civilization = "gnome",
 	Faction = "derro-tribe",
@@ -130,7 +130,7 @@ DefineUnitType("unit-derro-executioner", {
 } )
 
 DefineUnitType("unit-derro-shadowguard", {
-	Name = _("Shadowguard"),
+	Name = "Shadowguard",
 	Parent = "unit-gnomish-master-at-arms",
 	Civilization = "gnome",
 	Faction = "derro-tribe",

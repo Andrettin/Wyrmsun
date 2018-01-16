@@ -32,11 +32,11 @@
 --
 
 DefineUnitType("unit-elven-swordsman", {
-	Name = _("Swordsman"),
+	Name = "Swordsman",
 	Parent = "unit-template-infantry",
 	Civilization = "elf",
---	Description = _("Elves are not warlike by nature, but in times of need, their natural grace and agility serve them well, as does their skillful craftsmanship. An elf can grasp the basics of swordsmanship in a time uncannily short by the standards of other races, and put them to effective use on the battlefield."),
---	Quote = _("\"This he learned, the lord of Lintanir,\nThat Volund alone in Ulfdalir lay;\nBy night went his men, their mail-coats were studded,\nTheir shields in the waning moonlight shone.\"\n- The Lay of Volund"),
+--	Description = "Elves are not warlike by nature, but in times of need, their natural grace and agility serve them well, as does their skillful craftsmanship. An elf can grasp the basics of swordsmanship in a time uncannily short by the standards of other races, and put them to effective use on the battlefield.",
+--	Quote = "\"This he learned, the lord of Lintanir,\nThat Volund alone in Ulfdalir lay;\nBy night went his men, their mail-coats were studded,\nTheir shields in the waning moonlight shone.\"\n- The Lay of Volund",
 	Image = {"file", "elf/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {
@@ -68,7 +68,7 @@ DefineUnitType("unit-elven-swordsman", {
 	CanCastSpell = {"spell-puncture"},
 	AutoCastActive = {"spell-puncture"},
 	ButtonKey = "s",
-	ButtonHint = _("Train ~!Swordsman"),
+	ButtonHint = "Train ~!Swordsman",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Sounds = {
 --		"selected", "basic-germanic-voices-selected-group",
@@ -83,10 +83,10 @@ DefineUnitType("unit-elven-swordsman", {
 } )
 
 DefineUnitType("unit-elven-priest", {
-	Name = _("Priest"),
+	Name = "Priest",
 	Parent = "unit-template-priest",
 	Civilization = "elf",
---	Description = _("Teuton clerics attend to the spiritual needs of their congregation. They store religious and secular knowledge, including prayers and medicinal techniques."),
+--	Description = "Teuton clerics attend to the spiritual needs of their congregation. They store religious and secular knowledge, including prayers and medicinal techniques.",
 	Image = {"file", "elf/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {
@@ -112,7 +112,7 @@ DefineUnitType("unit-elven-priest", {
 --	WeaponClasses = {"mace"},
 	BluntDamage = true,
 	ButtonKey = "p",
-	ButtonHint = _("Train ~!Priest"),
+	ButtonHint = "Train ~!Priest",
 	StartingAbilities = {"upgrade-healing"},
 	CanCastSpell = {"spell-healing", "spell-precision"},
 	AutoCastActive = {"spell-healing", "spell-precision"},
