@@ -162,5 +162,6 @@ DefineFaction("sweden", {
 	Type = "polity",
 	Colors = {"blue", "yellow"},
 	DefaultTier = "kingdom",
-	DefaultAI = "sea-attack"
+	DefaultAI = "sea-attack",
+	Adjective = "Swedish"
 })

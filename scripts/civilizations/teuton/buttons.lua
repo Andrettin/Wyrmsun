@@ -60,7 +60,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-3",
 	}
 } )
 
-DefineButton( { Pos = 5, Level = 0, Icon = "icon-teuton-coinage",
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-suebi-coinage",
 	Action = "harvest",
 	Allowed = "check-upgrade-or", AllowArg = {"upgrade-germanic-civilization", "upgrade-anglo-saxon-civilization", "upgrade-english-civilization", "upgrade-frankish-civilization", "upgrade-suebi-civilization", "upgrade-teuton-civilization", "upgrade-gothic-civilization", "upgrade-celt-civilization"},
 	Key = "t", Hint = "~!Trade", Popup = "popup-commands",
@@ -70,7 +70,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-teuton-coinage",
 	}
 })
 
-DefineButton( { Pos = 5, Level = 0, Icon = "icon-teuton-coinage",
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-suebi-coinage",
 	Action = "harvest",
 	Key = "t", Hint = "~!Trade", Popup = "popup-commands",
 	Description = "Trade with foreign docks",
@@ -290,7 +290,7 @@ DefineButton( { Pos = 8, Level = 0, Icon = "icon-masonry",
 	ForUnit = {"unit-teuton-lumber-mill"}
 } )
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-coinage",
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-suebi-coinage",
 	Action = "research", Value = "upgrade-teuton-coinage",
 	Allowed = "check-single-research",
 	Description = "+10% Copper, Silver and Gold Processing Bonus for Smithies. -5% Trade Cost for Markets.",

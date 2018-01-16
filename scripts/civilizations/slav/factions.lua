@@ -110,5 +110,8 @@ DefineFaction("serbia", {
 	Civilization = "slav",
 	Type = "polity",
 	Colors = {"red"},
-	DefaultTier = "kingdom"
+	DefaultTier = "kingdom",
+	Titles = {
+		"monarchy", "duchy", "Principality"
+	}
 })

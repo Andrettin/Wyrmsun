@@ -242,12 +242,6 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-teuton-coinage",
-	Size = {46, 38},
-	File = "teuton/icons/coinage.png"
-})
-
-DefineIcon({
 	Name = "icon-flag-habsburg",
 	Size = {46, 38},
 	File = "teuton/icons/flag_habsburg.png"

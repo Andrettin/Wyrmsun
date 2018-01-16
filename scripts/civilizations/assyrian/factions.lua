@@ -31,6 +31,7 @@ DefineFaction("assyria", {
 	Type = "polity",
 	Colors = {"brown"},
 	DefaultTier = "kingdom",
+	Adjective = "Assyrian",
 	HistoricalCapitals = {
 		0, "nineveh"
 	}

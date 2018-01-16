@@ -94,6 +94,7 @@ DefineFaction("frank-tribe", {
 	FactionUpgrade = "upgrade-faction-frank-tribe",
 	Icon = "icon-flag-old-austria",
 	Description = "The Franks are one of the most powerful Germanic tribes to have existed. From their humble beginnings in their dwellings along the Rhine, they eventually managed to conquer the entirety of Gaul and much of Central Europe.",
+	Adjective = "Frankish",
 	DevelopsFrom = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "sugambri-tribe", "ubii-tribe"},
 	HistoricalCapitals = {
 		481, "tournai"

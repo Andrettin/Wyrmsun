@@ -89,7 +89,8 @@ DefineFaction("savoy", {
 	Civilization = "italian",
 	Type = "polity",
 	Colors = {"brown"},
-	DefaultTier = "duchy"
+	DefaultTier = "duchy",
+	Adjective = "Savoyard"
 })
 
 DefineFaction("sicily", {

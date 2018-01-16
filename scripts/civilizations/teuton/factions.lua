@@ -133,6 +133,7 @@ DefineFaction("brandenburg", {
 	DefaultTier = "duchy",
 	FactionUpgrade = "upgrade-faction-brandenburg",
 	Icon = "icon-flag-five-red-birds-on-yellow",
+	Adjective = "Brandenburgian",
 	DevelopsFrom = {"saxon-tribe"},
 	Titles = {
 		"monarchy", "duchy", "Margravate"
@@ -325,6 +326,7 @@ DefineFaction("holy-rome", {
 	FactionUpgrade = "upgrade-faction-holy-rome",
 	Icon = "icon-flag-holy-roman-empire",
 	DevelopsFrom = {"austria", "bavaria", "francia", "brandenburg", "cologne", "franconia", "hesse", "saxony", "swabia"}, -- must either be Francia, or one of the stem duchies, or a crownland that gave origin to a Holy Roman Emperor, or an electorate
+	Adjective = "Holy Roman",
 	HistoricalDiplomacyStates = {
 		985, "bohemia", "war", -- War between Otto II and Bohemia broke out in 985; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 616.
 		987, "bohemia", "overlord" -- Bohemia became again a vassal of the Holy Roman Empire in 987, under heavier subjection; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 616.

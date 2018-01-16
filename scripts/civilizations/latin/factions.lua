@@ -59,7 +59,8 @@ DefineFaction("latin-tribe", {
 	Name = "Latin Tribe",
 	Civilization = "latin",
 	Type = "tribe",
-	Colors = {"red", "yellow"}
+	Colors = {"red", "yellow"},
+	Adjective = "Latin"
 })
 
 DefineFaction("marsian-tribe", {

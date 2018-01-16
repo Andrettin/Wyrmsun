@@ -49,6 +49,7 @@ DefineFaction("argos", {
 	Type = "polity",
 	Colors = {"green"},
 	DefaultTier = "county",
+	Adjective = "Argoan",
 	Titles = {
 		"monarchy", "county", "City-State",
 		"republic", "county", "City-State"
@@ -62,6 +63,7 @@ DefineFaction("athens", {
 	Colors = {"red"},
 	DefaultTier = "county",
 	DefaultAI = "sea-attack",
+	Adjective = "Athenian",
 	Titles = {
 		"monarchy", "county", "City-State",
 		"republic", "county", "City-State"
@@ -87,6 +89,7 @@ DefineFaction("corinth", {
 	Colors = {"black"},
 	DefaultTier = "county",
 	DefaultAI = "sea-attack",
+	Adjective = "Corinthian",
 	Titles = {
 		"monarchy", "county", "City-State",
 		"republic", "county", "City-State"
